@@ -1,5 +1,5 @@
-T1	Condition 120 165	chronic thromboembolic pulmonary hypertension
-T2	Condition-Name 120 165	chronic thromboembolic pulmonary hypertension
+T1	Condition 128 165	thromboembolic pulmonary hypertension
+T2	Condition-Name 128 165	thromboembolic pulmonary hypertension
 E1	Condition:T1 Name:T2
 T3	Condition 72 103	Pulmonary arterial hypertension
 T4	Condition-Name 72 103	Pulmonary arterial hypertension
@@ -40,11 +40,27 @@ T25	Eq-Comparison 517 525	received
 E20	Eq-Comparison:T25 Temporal-Period:T26
 T26	Eq-Temporal-Period 517 525	received
 A5	Eq-Temporal-Period-Value T26 past
-T27	Eq-Comparison 211 216	prior
-E21	Eq-Comparison:T27 Temporal-Period:T28
-T28	Eq-Temporal-Period 211 216	prior
-A6	Eq-Temporal-Period-Value T28 past
 T29	Eq-Comparison 560 565	prior
 E22	Eq-Comparison:T29 Temporal-Period:T30
 T30	Eq-Temporal-Period 560 565	prior
 A7	Eq-Temporal-Period-Value T30 past
+T31	Eq-Comparison 40 53	over 18 years
+E2	Eq-Comparison:T31 Operator:T32 Value:T22 Temporal-Unit:T21
+T32	Eq-Operator 40 44	over
+A8	Eq-Operator-Value T32 GT
+T33	Age 48 53	years
+E4	Age:T33 Eq-Comparison:E2
+T34	Modifier 107 127	non-operable chronic
+E6	Modifier:T34 Modifies:T2
+T35	Or 104 106	or
+E7	Or:T35 Arg:E3 Arg2:E1
+T36	Procedure 181 210	right cardiac catheterization
+E9	Procedure:T36 Name:T37
+T37	Procedure-Name 181 210	right cardiac catheterization
+R1	Found-By Arg1:E1 Arg2:E9	
+R2	Found-By Arg1:E3 Arg2:E9	
+T27	Temporal-Connection 211 216	prior
+E11	Temporal-Connection:T27 Arg:E9 Arg2:E13
+A6	Temporal-Connection-Type-Value E11 before
+T28	Study 237 242	study
+E13	Study:T28 
