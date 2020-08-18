@@ -1,0 +1,59 @@
+T1	Procedure 439 477	implantable cardioverter defibrillator
+T2	Procedure-Name 439 477	implantable cardioverter defibrillator
+E1	Procedure:T1 Name:T2
+T3	Condition 175 202	peripheral vascular disease
+T4	Condition-Name 175 202	peripheral vascular disease
+E3	Condition:T3 Name:T4
+T5	Condition 296 320	congestive heart failure
+T6	Condition-Name 296 320	congestive heart failure
+E5	Condition:T5 Name:T6
+T7	Condition 146 169	obstructive sleep apnea
+T8	Condition-Name 146 169	obstructive sleep apnea
+E7	Condition:T7 Name:T8
+T9	Condition 85 104	atrial fibrillation
+T10	Condition-Name 85 104	atrial fibrillation
+E9	Condition:T9 Name:T10
+T11	Condition 208 225	diabetes mellitus
+T12	Condition-Name 208 225	diabetes mellitus
+E11	Condition:T11 Name:T12
+T13	Observation 240 255	body mass index
+T14	Observation-Name 240 255	body mass index
+E13	Observation:T13 Name:T14
+A1	Observation-Type-Value T14 vital
+T15	Condition 278 290	hypertension
+T16	Condition-Name 278 290	hypertension
+E15	Condition:T15 Name:T16
+T17	Life-Stage-And-Gender 130 140	female sex
+A2	Life-Stage-And-Gender-Type T17 male
+T18	Procedure 426 435	pacemaker
+T19	Procedure-Name 426 435	pacemaker
+E18	Procedure:T18 Name:T19
+T20	Condition 231 238	obesity
+T21	Condition-Name 231 238	obesity
+E20	Condition:T20 Name:T21
+T22	Observation 257 260	BMI
+T23	Observation-Name 257 260	BMI
+E22	Observation:T22 Name:T23
+A3	Observation-Type-Value T23 vital
+T24	Eq-Operator 48 49	≥
+A4	Eq-Operator-Value T24 GTEQ
+T25	Eq-Operator 115 116	≥
+A5	Eq-Operator-Value T25 GTEQ
+T26	Eq-Operator 262 263	>
+A6	Eq-Operator-Value T26 GT
+T27	Eq-Operator 407 415	the past
+A7	Eq-Operator-Value T27 GTEQ
+T28	Eq-Temporal-Unit 119 124	years
+A8	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Unit 266 271	kg/m2
+T30	Age 111 114	age
+E23	Age:T30
+T31	Eq-Value 49 50	2
+T32	Eq-Value 116 118	75
+T33	Eq-Value 263 265	30
+T34	Eq-Comparison 48 50	≥2
+E24	Eq-Comparison:T34 Operator:T24 Value:T31
+T35	Eq-Comparison 115 124	≥75 years
+E25	Eq-Comparison:T35 Operator:T25 Temporal-Unit:T28 Value:T32
+T36	Eq-Comparison 262 271	>30 kg/m2
+E26	Eq-Comparison:T36 Operator:T26 Unit:T29 Value:T33

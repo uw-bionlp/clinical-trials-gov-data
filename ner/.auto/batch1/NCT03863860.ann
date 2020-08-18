@@ -1,0 +1,43 @@
+T1	Procedure 303 323	chemotherapy regimen
+T2	Procedure-Name 303 323	chemotherapy regimen
+E1	Procedure:T1 Name:T2
+T3	Condition 763 779	pleural effusion
+T4	Condition-Name 763 779	pleural effusion
+E3	Condition:T3 Name:T4
+T5	Procedure 825 841	ascites drainage
+T6	Procedure-Name 825 841	ascites drainage
+E5	Procedure:T5 Name:T6
+T7	Condition 754 761	ascites
+T8	Condition-Name 754 761	ascites
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 175 176	≥
+A1	Eq-Operator-Value T9 GTEQ
+T10	Eq-Operator 384 385	≤
+A2	Eq-Operator-Value T10 LTEQ
+T11	Eq-Operator 574 580	within
+A3	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 623 624	<
+A4	Eq-Operator-Value T12 LT
+T13	Eq-Operator 842 848	within
+A5	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 387 392	weeks
+A6	Eq-Temporal-Unit-Value T14 week
+T15	Eq-Temporal-Unit 583 588	weeks
+A7	Eq-Temporal-Unit-Value T15 week
+T16	Eq-Temporal-Unit 851 857	months
+A8	Eq-Temporal-Unit-Value T16 month
+T17	Eq-Value 176 177	2
+T18	Eq-Value 385 386	8
+T19	Eq-Value 581 582	4
+T20	Eq-Value 625 626	5
+T21	Eq-Value 849 850	2
+T22	Eq-Comparison 175 177	≥2
+E8	Eq-Comparison:T22 Operator:T9 Value:T17
+T23	Eq-Comparison 384 392	≤8 weeks
+E9	Eq-Comparison:T23 Operator:T10 Temporal-Unit:T14 Value:T18
+T24	Eq-Comparison 574 588	within 4 weeks
+E10	Eq-Comparison:T24 Operator:T11 Temporal-Unit:T15 Value:T19
+T25	Eq-Comparison 623 626	< 5
+E11	Eq-Comparison:T25 Operator:T12 Value:T20
+T26	Eq-Comparison 842 857	within 2 months
+E12	Eq-Comparison:T26 Operator:T13 Temporal-Unit:T16 Value:T21

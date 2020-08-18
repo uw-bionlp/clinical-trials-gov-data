@@ -1,0 +1,112 @@
+T1	Language 25 28	Men
+T2	Observation 69 84	Body Mass Index
+T3	Observation-Name 69 84	Body Mass Index
+E2	Observation:T2 Name:T3
+A1	Observation-Type-Value T3 vital
+T4	Observation 86 89	BMI
+T5	Observation-Name 86 89	BMI
+E4	Observation:T4 Name:T5
+A2	Observation-Type-Value T5 vital
+T6	Condition 300 317	Diabetes Mellitus
+T7	Condition-Name 300 317	Diabetes Mellitus
+E6	Condition:T6 Name:T7
+T8	Observation 249 252	BMI
+T9	Observation-Name 249 252	BMI
+E8	Observation:T8 Name:T9
+A3	Observation-Type-Value T9 vital
+T10	Procedure 354 379	pharmacological treatment
+T11	Procedure-Name 354 379	pharmacological treatment
+E10	Procedure:T10 Name:T11
+T12	Procedure 415 440	pharmacological treatment
+T13	Procedure-Name 415 440	pharmacological treatment
+E12	Procedure:T12 Name:T13
+T14	Procedure 688 713	pharmacological treatment
+T15	Procedure-Name 688 713	pharmacological treatment
+E14	Procedure:T14 Name:T15
+T16	Condition 916 941	gastrointestinal diseases
+T17	Condition-Name 916 941	gastrointestinal diseases
+E16	Condition:T16 Name:T17
+T18	Procedure 844 860	weight loss diet
+T19	Procedure-Name 844 860	weight loss diet
+E18	Procedure:T18 Name:T19
+T20	Condition 1085 1100	menstrual cycle
+T21	Condition-Name 1085 1100	menstrual cycle
+E20	Condition:T20 Name:T21
+T22	Condition 399 411	hypertension
+T23	Condition-Name 399 411	hypertension
+E22	Condition:T22 Name:T23
+T24	Condition 958 967	digestion
+T25	Condition-Name 958 967	digestion
+E24	Condition:T24 Name:T25
+T26	Condition 492 500	disorder
+T27	Condition-Name 492 500	disorder
+E26	Condition:T26 Name:T27
+T28	Condition 633 638	glass
+T29	Condition-Name 633 638	glass
+E28	Condition:T28 Name:T29
+T30	Language 586 589	men
+T31	Condition 1342 1360	gluten intolerance
+T32	Condition-Name 1342 1360	gluten intolerance
+E31	Condition:T31 Name:T32
+T33	Condition 1322 1336	celiac disease
+T34	Condition-Name 1322 1336	celiac disease
+E33	Condition:T33 Name:T34
+T35	Condition 1276 1287	consumption
+T36	Condition-Name 1276 1287	consumption
+E35	Condition:T35 Name:T36
+T37	Eq-Operator 91 92	≥
+A4	Eq-Operator-Value T37 GTEQ
+T38	Eq-Operator 99 100	<
+A5	Eq-Operator-Value T38 LT
+T39	Eq-Operator 253 254	≥
+A6	Eq-Operator-Value T39 GTEQ
+T40	Eq-Operator 260 261	<
+A7	Eq-Operator-Value T40 LT
+T41	Eq-Operator 563 564	>
+A8	Eq-Operator-Value T41 GT
+T42	Eq-Operator 593 594	>
+A9	Eq-Operator-Value T42 GT
+T43	Eq-Temporal-Unit 53 58	years
+A10	Eq-Temporal-Unit-Value T43 year
+T44	Eq-Temporal-Unit 835 841	months
+A11	Eq-Temporal-Unit-Value T44 month
+T45	Eq-Temporal-Unit 1112 1118	months
+A12	Eq-Temporal-Unit-Value T45 month
+T46	Eq-Unit 103 108	kg/m2
+T47	Eq-Unit 264 270	kg /m2
+T48	Eq-Unit 803 805	kg
+T49	Age 59 62	old
+E36	Age:T49
+T50	Eq-Operator 47 49	to
+A13	Eq-Operator-Value T50 BETWEEN
+T51	Eq-Operator 566 567	-
+A14	Eq-Operator-Value T51 BETWEEN
+T52	Eq-Value 44 46	18
+T53	Eq-Value 50 52	65
+T54	Eq-Value 92 94	25
+T55	Eq-Value 100 102	30
+T56	Eq-Value 254 256	30
+T57	Eq-Value 261 263	25
+T58	Eq-Value 565 566	2
+T59	Eq-Value 567 568	3
+T60	Eq-Value 595 596	1
+T61	Eq-Value 631 632	1
+T62	Eq-Value 650 651	1
+T63	Eq-Value 801 802	4
+T64	Eq-Value 1110 1111	2
+T65	Eq-Comparison 91 94	≥25
+E37	Eq-Comparison:T65 Operator:T37 Value:T54
+T66	Eq-Comparison 99 108	<30 kg/m2
+E38	Eq-Comparison:T66 Operator:T38 Unit:T46 Value:T55
+T67	Eq-Comparison 253 256	≥30
+E39	Eq-Comparison:T67 Operator:T39 Value:T56
+T68	Eq-Comparison 260 270	<25 kg /m2
+E40	Eq-Comparison:T68 Operator:T40 Unit:T47 Value:T57
+T69	Eq-Comparison 563 566	> 2
+E41	Eq-Comparison:T69 Operator:T41 Value:T58
+T70	Eq-Comparison 593 596	> 1
+E42	Eq-Comparison:T70 Operator:T42 Value:T60
+T71	Eq-Comparison 44 49	18 to
+E43	Eq-Comparison:T71 Operator:T50 Value:T52
+T72	Eq-Comparison 565 567	2-
+E44	Eq-Comparison:T72 Operator:T51 Value:T58

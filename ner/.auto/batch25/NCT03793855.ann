@@ -1,0 +1,81 @@
+T1	Condition 240 276	latent autoimmune diabetes in adults
+T2	Condition-Name 240 276	latent autoimmune diabetes in adults
+E1	Condition:T1 Name:T2
+T3	Condition 566 589	Acute coronary syndrome
+T4	Condition-Name 566 589	Acute coronary syndrome
+E3	Condition:T3 Name:T4
+T5	Condition 334 356	Chronic kidney disease
+T6	Condition-Name 334 356	Chronic kidney disease
+E5	Condition:T5 Name:T6
+T7	Condition 395 414	Chemical dependence
+T8	Condition-Name 395 414	Chemical dependence
+E7	Condition:T7 Name:T8
+T9	Condition 451 469	Autoimmune disease
+T10	Condition-Name 451 469	Autoimmune disease
+E9	Condition:T9 Name:T10
+T11	Observation 662 677	body mass index
+T12	Observation-Name 662 677	body mass index
+E11	Observation:T11 Name:T12
+A1	Observation-Type-Value T12 vital
+T13	Condition 503 516	Gastroparesis
+T14	Condition-Name 503 516	Gastroparesis
+E13	Condition:T13 Name:T14
+T15	Condition 317 327	neuropathy
+T16	Condition-Name 317 327	neuropathy
+E15	Condition:T15 Name:T16
+T17	Condition 523 532	Pregnancy
+T18	Condition-Name 523 532	Pregnancy
+E17	Condition:T17 Name:T18
+T19	Condition 534 543	lactation
+T20	Condition-Name 534 543	lactation
+E19	Condition:T19 Name:T20
+T21	Condition 653 660	obesity
+T22	Condition-Name 653 660	obesity
+E21	Condition:T21 Name:T22
+T23	Condition 278 282	LADA
+T24	Condition-Name 278 282	LADA
+E23	Condition:T23 Name:T24
+T25	Condition 591 594	ACS
+T26	Condition-Name 591 594	ACS
+E25	Condition:T25 Name:T26
+T27	Observation 679 682	BMI
+T28	Observation-Name 679 682	BMI
+E27	Observation:T27 Name:T28
+A2	Observation-Type-Value T28 vital
+T29	Eq-Operator 20 21	>
+A3	Eq-Operator-Value T29 GT
+T30	Eq-Operator 94 95	≥
+A4	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 293 294	≥
+A5	Eq-Operator-Value T31 GTEQ
+T32	Eq-Operator 379 380	<
+A6	Eq-Operator-Value T32 LT
+T33	Eq-Operator 684 685	≥
+A7	Eq-Operator-Value T33 GTEQ
+T34	Eq-Temporal-Unit 24 29	years
+A8	Eq-Temporal-Unit-Value T34 year
+T35	Eq-Temporal-Unit 175 181	months
+A9	Eq-Temporal-Unit-Value T35 month
+T36	Eq-Temporal-Unit 382 388	months
+A10	Eq-Temporal-Unit-Value T36 month
+T37	Eq-Temporal-Unit 611 615	days
+A11	Eq-Temporal-Unit-Value T37 day
+T38	Eq-Unit 687 689	kg
+T39	Age 30 33	old
+E28	Age:T39
+T40	Eq-Value 21 23	30
+T41	Eq-Value 95 96	7
+T42	Eq-Value 172 174	06
+T43	Eq-Value 227 228	1
+T44	Eq-Value 300 302	12
+T45	Eq-Value 380 381	6
+T46	Eq-Value 608 610	60
+T47	Eq-Value 685 687	40
+T48	Eq-Comparison 20 29	>30 years
+E29	Eq-Comparison:T48 Operator:T29 Temporal-Unit:T34 Value:T40
+T49	Eq-Comparison 94 96	≥7
+E30	Eq-Comparison:T49 Operator:T30 Value:T41
+T50	Eq-Comparison 379 388	<6 months
+E31	Eq-Comparison:T50 Operator:T32 Temporal-Unit:T36 Value:T45
+T51	Eq-Comparison 684 687	≥40
+E32	Eq-Comparison:T51 Operator:T33 Value:T47

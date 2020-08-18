@@ -1,0 +1,22 @@
+T1	Procedure 70 87	gastric resection
+T2	Procedure-Name 70 87	gastric resection
+E1	Procedure:T1 Name:T2
+T3	Condition 142 150	recovery
+T4	Condition-Name 142 150	recovery
+E3	Condition:T3 Name:T4
+T5	Procedure 349 364	gastric surgery
+T6	Procedure-Name 349 364	gastric surgery
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 110 116	within
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Temporal-Unit 46 51	years
+A2	Eq-Temporal-Unit-Value T8 year
+T9	Age 55 58	age
+E6	Age:T9
+T10	Eq-Operator 220 221	-
+A3	Eq-Operator-Value T10 BETWEEN
+T11	Eq-Value 43 45	18
+T12	Eq-Value 219 220	0
+T13	Eq-Value 221 224	100
+T14	Eq-Comparison 219 221	0-
+E7	Eq-Comparison:T14 Operator:T10 Value:T12

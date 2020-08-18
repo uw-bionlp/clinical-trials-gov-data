@@ -1,0 +1,45 @@
+T1	Condition 25 50	Major Depressive Disorder
+T2	Condition-Name 25 50	Major Depressive Disorder
+E1	Condition:T1 Name:T2
+T3	Condition 277 295	psychotic disorder
+T4	Condition-Name 277 295	psychotic disorder
+E3	Condition:T3 Name:T4
+T5	Condition 393 411	psychotic disorder
+T6	Condition-Name 393 411	psychotic disorder
+E5	Condition:T5 Name:T6
+T7	Condition 550 567	Somatic disorders
+T8	Condition-Name 550 567	Somatic disorders
+E7	Condition:T7 Name:T8
+T9	Condition 342 358	bipolar disorder
+T10	Condition-Name 342 358	bipolar disorder
+E9	Condition:T9 Name:T10
+T11	Language 179 194	German language
+T12	Condition 496 509	breastfeeding
+T13	Condition-Name 496 509	breastfeeding
+E12	Condition:T12 Name:T13
+T14	Condition 667 680	alcohol abuse
+T15	Condition-Name 667 680	alcohol abuse
+E14	Condition:T14 Name:T15
+T16	Condition 483 492	Pregnancy
+T17	Condition-Name 483 492	Pregnancy
+E16	Condition:T16 Name:T17
+T18	Eq-Operator 131 132	>
+A1	Eq-Operator-Value T18 GT
+T19	Eq-Operator 220 221	<
+A2	Eq-Operator-Value T19 LT
+T20	Eq-Operator 713 714	<
+A3	Eq-Operator-Value T20 LT
+T21	Eq-Temporal-Unit 136 141	years
+A4	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 225 230	years
+A5	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Unit 718 720	kg
+T24	Eq-Value 133 135	25
+T25	Eq-Value 222 224	25
+T26	Eq-Value 715 717	42
+T27	Eq-Comparison 131 141	> 25 years
+E17	Eq-Comparison:T27 Operator:T18 Temporal-Unit:T21 Value:T24
+T28	Eq-Comparison 220 230	< 25 years
+E18	Eq-Comparison:T28 Operator:T19 Temporal-Unit:T22 Value:T25
+T29	Eq-Comparison 713 720	< 42 kg
+E19	Eq-Comparison:T29 Operator:T20 Unit:T23 Value:T26

@@ -1,0 +1,36 @@
+T1	Procedure 84 111	elective surgical procedure
+T2	Procedure-Name 84 111	elective surgical procedure
+E1	Procedure:T1 Name:T2
+T3	Procedure 112 134	mechanical ventilation
+T4	Procedure-Name 112 134	mechanical ventilation
+E3	Procedure:T3 Name:T4
+T5	Condition 403 416	alcohol abuse
+T6	Condition-Name 403 416	alcohol abuse
+E5	Condition:T5 Name:T6
+T7	Life-Stage-And-Gender 38 44	female
+A1	Life-Stage-And-Gender-Type T7 male
+T8	Life-Stage-And-Gender 48 52	male
+A2	Life-Stage-And-Gender-Type T8 male
+T9	Observation 163 166	BMI
+T10	Observation-Name 163 166	BMI
+E9	Observation:T9 Name:T10
+A3	Observation-Type-Value T10 vital
+T11	Condition 627 636	lactation
+T12	Condition-Name 627 636	lactation
+E11	Condition:T11 Name:T12
+T13	Procedure 704 726	respiratory management
+T14	Procedure-Name 704 726	respiratory management
+E13	Procedure:T13 Name:T14
+T15	Eq-Operator 827 833	within
+A4	Eq-Operator-Value T15 GTEQ
+T16	Eq-Temporal-Unit 31 36	years
+A5	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Temporal-Unit 419 424	years
+A6	Eq-Temporal-Unit-Value T17 year
+T18	Eq-Temporal-Unit 840 846	months
+A7	Eq-Temporal-Unit-Value T18 month
+T19	Eq-Unit 174 179	kg/m2
+T20	Eq-Value 25 27	18
+T21	Eq-Value 168 170	18
+T22	Eq-Value 417 418	2
+T23	Eq-Value 838 839	3

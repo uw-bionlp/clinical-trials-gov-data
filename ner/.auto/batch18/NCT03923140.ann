@@ -1,0 +1,41 @@
+T1	Condition 85 89	CAPS
+T2	Condition-Name 85 89	CAPS
+E1	Condition:T1 Name:T2
+T3	Condition 351 377	Sensorineural hearing loss
+T4	Condition-Name 351 377	Sensorineural hearing loss
+E3	Condition:T3 Name:T4
+T5	Condition 420 440	arthralgia/arthritis
+T6	Condition-Name 420 440	arthralgia/arthritis
+E5	Condition:T5 Name:T6
+T7	Condition 474 492	aseptic meningitis
+T8	Condition-Name 474 492	aseptic meningitis
+E7	Condition:T7 Name:T8
+T9	Condition 268 277	Urticaria
+T10	Condition-Name 268 277	Urticaria
+E9	Condition:T9 Name:T10
+T11	Condition 224 228	CAPS
+T12	Condition-Name 224 228	CAPS
+E11	Condition:T11 Name:T12
+T13	Condition 304 308	Cold
+T14	Condition-Name 304 308	Cold
+E13	Condition:T13 Name:T14
+T15	Condition 180 183	SAA
+T16	Condition-Name 180 183	SAA
+E15	Condition:T15 Name:T16
+T17	Procedure 719 736	biological agents
+T18	Procedure-Name 719 736	biological agents
+E17	Procedure:T17 Name:T18
+T19	Eq-Operator 216 217	≥
+A1	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 860 869	less than
+A2	Eq-Operator-Value T20 LT
+T21	Eq-Temporal-Unit 872 878	months
+A3	Eq-Temporal-Unit-Value T21 month
+T22	Eq-Value 217 218	2
+T23	Eq-Value 222 223	6
+T24	Eq-Value 700 701	1
+T25	Eq-Value 870 871	6
+T26	Eq-Comparison 216 218	≥2
+E18	Eq-Comparison:T26 Operator:T19 Value:T22
+T27	Eq-Comparison 860 878	less than 6 months
+E19	Eq-Comparison:T27 Operator:T20 Temporal-Unit:T21 Value:T25

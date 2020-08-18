@@ -1,0 +1,40 @@
+T1	Procedure 54 73	tracheal intubation
+T2	Procedure-Name 54 73	tracheal intubation
+E1	Procedure:T1 Name:T2
+T3	Procedure 83 92	insertion
+T4	Procedure-Name 83 92	insertion
+E3	Procedure:T3 Name:T4
+T5	Condition 118 125	trachea
+T6	Condition-Name 118 125	trachea
+E5	Condition:T5 Name:T6
+T7	Condition 93 97	cord
+T8	Condition-Name 93 97	cord
+E7	Condition:T7 Name:T8
+T9	Condition 513 527	coagulopathies
+T10	Condition-Name 513 527	coagulopathies
+E9	Condition:T9 Name:T10
+T11	Procedure 210 220	aspiration
+T12	Procedure-Name 210 220	aspiration
+E11	Procedure:T11 Name:T12
+T13	Condition 561 568	thyroid
+T14	Condition-Name 561 568	thyroid
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 169 170	<
+A1	Eq-Operator-Value T15 LT
+T16	Eq-Operator 279 280	<
+A2	Eq-Operator-Value T16 LT
+T17	Eq-Operator 405 406	>
+A3	Eq-Operator-Value T17 GT
+T18	Eq-Temporal-Unit 174 179	years
+A4	Eq-Temporal-Unit-Value T18 year
+T19	Age 165 168	Age
+E14	Age:T19
+T20	Eq-Value 171 173	18
+T21	Eq-Value 281 283	90
+T22	Eq-Value 407 408	3
+T23	Eq-Comparison 169 179	< 18 years
+E15	Eq-Comparison:T23 Operator:T15 Temporal-Unit:T18 Value:T20
+T24	Eq-Comparison 279 283	< 90
+E16	Eq-Comparison:T24 Operator:T16 Value:T21
+T25	Eq-Comparison 405 408	> 3
+E17	Eq-Comparison:T25 Operator:T17 Value:T22

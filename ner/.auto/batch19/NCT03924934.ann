@@ -1,0 +1,49 @@
+T1	Condition 1183 1196	renal failure
+T2	Condition-Name 1183 1196	renal failure
+E1	Condition:T1 Name:T2
+T3	Condition 1215 1228	liver disease
+T4	Condition-Name 1215 1228	liver disease
+E3	Condition:T3 Name:T4
+T5	Condition 1284 1293	pregnancy
+T6	Condition-Name 1284 1293	pregnancy
+E5	Condition:T5 Name:T6
+T7	Language 108 111	CRE
+T8	Language 201 204	CRE
+T9	Language 322 325	CRE
+T10	Language 519 522	CRE
+T11	Language 598 601	CRE
+T12	Language 811 814	CRE
+T13	Eq-Operator 213 219	within
+A1	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 531 537	within
+A2	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 823 829	within
+A3	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 1108 1109	<
+A4	Eq-Operator-Value T16 LT
+T17	Eq-Temporal-Unit 1112 1117	years
+A5	Eq-Temporal-Unit-Value T17 year
+T18	Age 1104 1107	Age
+E6	Age:T18
+T19	Eq-Value 29 30	1
+T20	Eq-Value 220 222	48
+T21	Eq-Value 280 281	2
+T22	Eq-Value 538 540	48
+T23	Eq-Value 569 570	3
+T24	Eq-Value 830 832	48
+T25	Eq-Value 890 891	4
+T26	Eq-Value 988 989	1
+T27	Eq-Value 997 998	3
+T28	Eq-Value 1109 1111	18
+T29	Eq-Value 1130 1131	1
+T30	Eq-Value 1319 1320	1
+T31	Eq-Value 1322 1323	3
+T32	Eq-Value 1328 1329	4
+T33	Eq-Comparison 213 222	within 48
+E7	Eq-Comparison:T33 Operator:T13 Value:T20
+T34	Eq-Comparison 531 540	within 48
+E8	Eq-Comparison:T34 Operator:T14 Value:T22
+T35	Eq-Comparison 823 832	within 48
+E9	Eq-Comparison:T35 Operator:T15 Value:T24
+T36	Eq-Comparison 1108 1117	<18 years
+E10	Eq-Comparison:T36 Operator:T16 Temporal-Unit:T17 Value:T28

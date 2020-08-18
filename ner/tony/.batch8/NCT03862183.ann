@@ -1,0 +1,57 @@
+T1	Condition 166 178	hypertension
+T2	Condition-Name 166 178	hypertension
+E1	Condition:T1 Name:T2
+T3	Condition 622 634	hypertension
+T4	Condition-Name 622 634	hypertension
+E3	Condition:T3 Name:T4
+T5	Condition 760 772	hypertension
+T6	Condition-Name 760 772	hypertension
+E5	Condition:T5 Name:T6
+T7	Condition 818 840	secondary hypertension
+T8	Condition-Name 818 840	secondary hypertension
+E7	Condition:T7 Name:T8
+T9	Condition 1015 1038	end-stage renal disease
+T10	Condition-Name 1015 1038	end-stage renal disease
+E9	Condition:T9 Name:T10
+T11	Condition 929 950	severe hypothyroidism
+T12	Condition-Name 929 950	severe hypothyroidism
+E11	Condition:T11 Name:T12
+T13	Procedure 1058 1077	peritoneal dialysis
+T14	Procedure-Name 1058 1077	peritoneal dialysis
+E13	Procedure:T13 Name:T14
+T15	Condition 909 927	nephrotic syndrome
+T16	Condition-Name 909 927	nephrotic syndrome
+E15	Condition:T15 Name:T16
+T17	Procedure 1040 1052	hemodialysis
+T18	Procedure-Name 1040 1052	hemodialysis
+E17	Procedure:T17 Name:T18
+T19	Eq-Operator 316 317	≥
+A1	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 337 338	≥
+A2	Eq-Operator-Value T20 GTEQ
+T21	Eq-Operator 481 482	≥
+A3	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 560 561	<
+A4	Eq-Operator-Value T22 LT
+T23	Eq-Temporal-Unit 485 490	weeks
+A5	Eq-Temporal-Unit-Value T23 week
+T24	Eq-Temporal-Unit 565 570	years
+A6	Eq-Temporal-Unit-Value T24 year
+T25	Eq-Unit 321 323	mm
+T26	Eq-Unit 341 343	mm
+T27	Age 571 574	old
+E18	Age:T27
+T28	Eq-Value 201 202	1
+T29	Eq-Value 317 320	140
+T30	Eq-Value 338 340	90
+T31	Eq-Value 352 353	2
+T32	Eq-Value 483 484	2
+T33	Eq-Value 562 564	18
+T34	Eq-Comparison 316 323	≥140 mm
+E19	Eq-Comparison:T34 Operator:T19 Unit:T25 Value:T29
+T35	Eq-Comparison 337 343	≥90 mm
+E20	Eq-Comparison:T35 Operator:T20 Unit:T26 Value:T30
+T36	Eq-Comparison 481 490	≥ 2 weeks
+E21	Eq-Comparison:T36 Operator:T21 Temporal-Unit:T23 Value:T32
+T37	Eq-Comparison 560 570	< 18 years
+E22	Eq-Comparison:T37 Operator:T22 Temporal-Unit:T24 Value:T33

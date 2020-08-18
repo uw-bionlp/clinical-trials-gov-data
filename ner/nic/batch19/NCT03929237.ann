@@ -1,0 +1,34 @@
+T1	Procedure 29 43	reconstruction
+T2	Procedure-Name 29 43	reconstruction
+E1	Procedure:T1 Name:T2
+T3	Procedure 228 232	MPFL
+T4	Procedure-Name 228 232	MPFL
+E3	Procedure:T3 Name:T4
+T5	Procedure 211 214	PCL
+T6	Procedure-Name 211 214	PCL
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 110 111	-
+A1	Eq-Operator-Value T7 BETWEEN
+T8	Eq-Value 109 110	6
+T9	Eq-Value 111 113	12
+T10	Eq-Comparison 109 111	6-
+E6	Eq-Comparison:T10 Operator:T7 Value:T8
+T11	Procedure 216 219	MCL
+E2	Procedure:T11 Name:T12
+T12	Procedure-Name 216 219	MCL
+T13	Procedure 221 224	LCL
+E4	Procedure:T13 Name:T14
+T14	Procedure-Name 221 224	LCL
+T15	Or 225 227	or
+E7	Or:T15 Arg:E4 Arg2:E3
+T16	Procedure 189 205	ligament surgery
+E8	Procedure:T16 Name:T17
+T17	Procedure-Name 189 205	ligament surgery
+R1	Example-Of Arg1:E5 Arg2:E8	
+R2	Example-Of Arg1:E2 Arg2:E8	
+R3	Example-Of Arg1:E4 Arg2:E8	
+R4	Example-Of Arg1:E3 Arg2:E8
+T18	Eq-Comparison 57 64	current
+E9	Eq-Comparison:T18 Temporal-Period:T19
+T19	Eq-Temporal-Period 57 64	current
+A2	Eq-Temporal-Period-Value T19 present

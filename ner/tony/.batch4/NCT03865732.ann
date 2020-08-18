@@ -1,0 +1,42 @@
+T1	Procedure 336 350	ketogenic diet
+T2	Procedure-Name 336 350	ketogenic diet
+E1	Procedure:T1 Name:T2
+T3	Procedure 365 376	Atkins diet
+T4	Procedure-Name 365 376	Atkins diet
+E3	Procedure:T3 Name:T4
+T5	Procedure 276 283	regimen
+T6	Procedure-Name 276 283	regimen
+E5	Procedure:T5 Name:T6
+T7	Condition 761 766	blind
+T8	Condition-Name 761 766	blind
+E7	Condition:T7 Name:T8
+T9	Condition 690 693	THC
+T10	Condition-Name 690 693	THC
+E9	Condition:T9 Name:T10
+T11	Condition 724 727	CBD
+T12	Condition-Name 724 727	CBD
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 492 493	>
+A1	Eq-Operator-Value T13 GT
+T14	Eq-Operator 821 827	within
+A2	Eq-Operator-Value T14 LTEQ
+T15	Eq-Temporal-Unit 403 409	months
+A3	Eq-Temporal-Unit-Value T15 month
+T16	Eq-Temporal-Unit 508 513	weeks
+A4	Eq-Temporal-Unit-Value T16 week
+T17	Eq-Temporal-Unit 547 552	weeks
+A5	Eq-Temporal-Unit-Value T17 week
+T18	Eq-Temporal-Unit 831 835	days
+A6	Eq-Temporal-Unit-Value T18 day
+T19	Eq-Value 141 142	2
+T20	Eq-Value 181 183	12
+T21	Eq-Value 200 202	12
+T22	Eq-Value 401 402	3
+T23	Eq-Value 494 495	8
+T24	Eq-Value 544 546	12
+T25	Eq-Value 828 830	30
+T26	Eq-Value 850 851	5
+T27	Eq-Comparison 492 495	> 8
+E12	Eq-Comparison:T27 Operator:T13 Value:T23
+T28	Eq-Comparison 821 835	within 30 days
+E13	Eq-Comparison:T28 Operator:T14 Temporal-Unit:T18 Value:T25

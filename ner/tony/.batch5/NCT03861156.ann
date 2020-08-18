@@ -1,0 +1,57 @@
+T3	Condition 187 206	disease progression
+T4	Condition-Name 187 206	disease progression
+E3	Condition:T3 Name:T4
+T5	Life-Stage-And-Gender 922 937	Female patients
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Condition 902 911	fertility
+T7	Condition-Name 902 911	fertility
+E6	Condition:T6 Name:T7
+T8	Condition 954 963	pregnancy
+T9	Condition-Name 954 963	pregnancy
+E8	Condition:T8 Name:T9
+T10	Condition 1004 1013	lactation
+T11	Condition-Name 1004 1013	lactation
+E10	Condition:T10 Name:T11
+T12	Condition 1250 1273	spinal cord compression
+T13	Condition-Name 1250 1273	spinal cord compression
+E12	Condition:T12 Name:T13
+T14	Condition 1359 1371	hypertension
+T15	Condition-Name 1359 1371	hypertension
+E14	Condition:T14 Name:T15
+T16	Condition 1495 1520	interstitial lung disease
+T17	Condition-Name 1495 1520	interstitial lung disease
+E16	Condition:T16 Name:T17
+T18	Condition 1466 1486	respiratory diseases
+T19	Condition-Name 1466 1486	respiratory diseases
+E18	Condition:T18 Name:T19
+T20	Procedure 1626 1639	immunotherapy
+T21	Procedure-Name 1626 1639	immunotherapy
+E20	Procedure:T20 Name:T21
+T22	Procedure 1610 1622	Chemotherapy
+T23	Procedure-Name 1610 1622	Chemotherapy
+E22	Procedure:T22 Name:T23
+T24	Eq-Operator 852 858	within
+A2	Eq-Operator-Value T24 LTEQ
+T26	Eq-Operator 1415 1416	>
+A4	Eq-Operator-Value T26 GT
+T27	Eq-Temporal-Unit 42 47	years
+A5	Eq-Temporal-Unit-Value T27 year
+T29	Eq-Temporal-Unit 582 587	weeks
+A7	Eq-Temporal-Unit-Value T29 week
+T30	Eq-Temporal-Unit 1112 1116	days
+A8	Eq-Temporal-Unit-Value T30 day
+T31	Age 25 29	Aged
+E23	Age:T31 
+T33	Eq-Value 39 41	18
+T36	Eq-Value 579 581	12
+T38	Eq-Value 859 860	6
+T39	Eq-Value 377 378	7
+T40	Eq-Value 1416 1419	470
+T42	Eq-Comparison 852 866	within 6 weeks
+E24	Eq-Comparison:T42 Operator:T24 Value:T38
+T43	Eq-Comparison 1103 1116	within 7 days
+E25	Eq-Comparison:T43 Temporal-Unit:T30
+T44	Eq-Comparison 1415 1419	>470
+E26	Eq-Comparison:T44 Operator:T26 Value:T40
+T45	Eq-Comparison 540 542	0-
+E27	Eq-Comparison:T45 

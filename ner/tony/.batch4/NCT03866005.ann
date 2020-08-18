@@ -1,0 +1,61 @@
+T1	Condition 35 52	diabetes mellitus
+T2	Condition-Name 35 52	diabetes mellitus
+E1	Condition:T1 Name:T2
+T3	Procedure 143 160	treatment regimen
+T4	Procedure-Name 143 160	treatment regimen
+E3	Procedure:T3 Name:T4
+T5	Procedure 100 107	therapy
+T6	Procedure-Name 100 107	therapy
+E5	Procedure:T5 Name:T6
+T7	Condition 108 111	per
+T8	Condition-Name 108 111	per
+E7	Condition:T7 Name:T8
+T9	Condition 593 627	proliferative diabetic retinopathy
+T10	Condition-Name 593 627	proliferative diabetic retinopathy
+E9	Condition:T9 Name:T10
+T11	Condition 671 703	age-related macular degeneration
+T12	Condition-Name 671 703	age-related macular degeneration
+E11	Condition:T11 Name:T12
+T13	Procedure 805 832	panretinal photocoagulation
+T14	Procedure-Name 805 832	panretinal photocoagulation
+E13	Procedure:T13 Name:T14
+T15	Procedure 867 891	keratorefractive surgery
+T16	Procedure-Name 867 891	keratorefractive surgery
+E15	Procedure:T15 Name:T16
+T17	Condition 655 669	ocular disease
+T18	Condition-Name 655 669	ocular disease
+E17	Condition:T17 Name:T18
+T19	Condition 705 713	glaucoma
+T20	Condition-Name 705 713	glaucoma
+E19	Condition:T19 Name:T20
+T21	Eq-Operator 269 270	>
+A1	Eq-Operator-Value T21 GT
+T22	Eq-Operator 347 348	>
+A2	Eq-Operator-Value T22 GT
+T23	Eq-Operator 454 455	>
+A3	Eq-Operator-Value T23 GT
+T24	Eq-Operator 533 534	<
+A4	Eq-Operator-Value T24 LT
+T25	Eq-Temporal-Unit 459 464	years
+A5	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Temporal-Unit 538 543	years
+A6	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Temporal-Unit 904 910	months
+A7	Eq-Temporal-Unit-Value T27 month
+T28	Age 450 453	age
+E20	Age:T28
+T29	Age 529 532	Age
+E21	Age:T29
+T30	Eq-Value 271 274	300
+T31	Eq-Value 349 352	250
+T32	Eq-Value 456 458	18
+T33	Eq-Value 535 537	18
+T34	Eq-Value 902 903	6
+T35	Eq-Comparison 269 274	> 300
+E22	Eq-Comparison:T35 Operator:T21 Value:T30
+T36	Eq-Comparison 347 352	> 250
+E23	Eq-Comparison:T36 Operator:T22 Value:T31
+T37	Eq-Comparison 454 464	> 18 years
+E24	Eq-Comparison:T37 Operator:T23 Temporal-Unit:T25 Value:T32
+T38	Eq-Comparison 533 543	< 18 years
+E25	Eq-Comparison:T38 Operator:T24 Temporal-Unit:T26 Value:T33

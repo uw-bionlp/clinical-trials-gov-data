@@ -1,0 +1,132 @@
+T1	Condition 233 250	diabetes mellitus
+T2	Condition-Name 233 250	diabetes mellitus
+E1	Condition:T1 Name:T2
+T3	Condition 303 315	hypertension
+T4	Condition-Name 303 315	hypertension
+E3	Condition:T3 Name:T4
+T9	Eq-Operator 202 203	≥
+A1	Eq-Operator-Value T9 GTEQ
+T10	Eq-Operator 273 274	>
+A2	Eq-Operator-Value T10 GT
+T11	Eq-Operator 320 321	>
+A3	Eq-Operator-Value T11 GT
+T12	Eq-Temporal-Unit 28 33	years
+A4	Eq-Temporal-Unit-Value T12 year
+T13	Eq-Temporal-Unit 531 537	months
+A5	Eq-Temporal-Unit-Value T13 month
+T14	Eq-Unit 330 334	mmHg
+T15	Eq-Value 25 27	19
+T16	Eq-Value 204 207	1.5
+T17	Eq-Value 274 277	160
+T18	Eq-Value 322 325	160
+T19	Eq-Comparison 202 213	≥ 1.5 mg/dL
+E6	Eq-Comparison:T19 Operator:T9 Value:T16 Unit:T38 Per:T39
+T20	Eq-Comparison 273 283	>160 mg/dL
+E7	Eq-Comparison:T20 Operator:T10 Value:T17 Unit:T41 Per:T42
+T21	Eq-Comparison 320 325	> 160
+E8	Eq-Comparison:T21 Operator:T11 Value:T18 Value2:T46 Unit:T14
+T22	Age 38 43	older
+E2	Age:T22 Eq-Comparison:E4
+T23	Eq-Comparison 25 43	19 years and older
+E4	Eq-Comparison:T23 Operator:T24 Temporal-Unit:T12 Value:T15
+T24	Eq-Operator 34 43	and older
+A6	Eq-Operator-Value T24 GTEQ
+T25	Observation 69 95	aspartate aminotransferase
+E9	Observation:T25 Name:T26
+T26	Observation-Name 69 95	aspartate aminotransferase
+A7	Observation-Type-Value T26 lab
+T7	Observation 97 100	AST
+E10	Observation:T7 Name:T27 Eq-Comparison:E14
+T27	Observation-Name 97 100	AST
+A8	Observation-Type-Value T27 lab
+R1	Abbrev-Of Arg1:E10 Arg2:E9	
+T28	Observation 105 129	alanine aminotransferase
+E11	Observation:T28 Name:T29
+T29	Observation-Name 105 129	alanine aminotransferase
+A9	Observation-Type-Value T29 lab
+T8	Observation 131 134	ALT
+E12	Observation:T8 Name:T30 Eq-Comparison:E14
+T30	Observation-Name 131 134	ALT
+A10	Observation-Type-Value T30 lab
+R2	Abbrev-Of Arg1:E12 Arg2:E11	
+T31	Or 102 104	or
+E13	Or:T31 Arg:E10 Arg2:E11
+T32	Eq-Comparison 136 179	more than twice the highest reference value
+E14	Eq-Comparison:T32 Operator:T33 Value:T34 Unit:T35
+T33	Eq-Operator 136 145	more than
+A11	Eq-Operator-Value T33 GTEQ
+T34	Eq-Value 146 151	twice
+T35	Eq-Unit 156 179	highest reference value
+A12	Eq-Unit-Value T35 ref-range-high
+T36	Observation 185 201	serum creatinine
+E15	Observation:T36 Name:T37 Eq-Comparison:E6
+T37	Observation-Name 185 201	serum creatinine
+A13	Observation-Type-Value T37 lab
+T38	Eq-Unit 208 210	mg
+T39	Eq-Unit 211 213	dL
+T40	Modifier 220 232	uncontrolled
+E16	Modifier:T40 Modifies:E1
+T5	Observation 254 269	fasting glucose
+E5	Observation:T5 Name:T6 Eq-Comparison:E7
+T6	Observation-Name 254 269	fasting glucose
+A14	Observation-Type-Value T6 lab
+T41	Eq-Unit 278 280	mg
+T42	Eq-Unit 281 283	dL
+R3	Equivalent-To Arg1:E5 Arg2:E1	
+T43	Modifier 290 302	uncontrolled
+E17	Modifier:T43 Modifies:E3
+T44	Observation 317 319	BP
+E18	Observation:T44 Name:T45 Eq-Comparison:E8
+T45	Observation-Name 317 319	BP
+A15	Observation-Type-Value T45 vital
+T46	Eq-Value 326 329	100
+R4	Equivalent-To Arg1:E18 Arg2:E3	
+T47	Condition 348 364	gastrointestinal
+E19	Condition:T47 Name:T48 Severity:T50
+T48	Condition-Name 348 364	gastrointestinal
+T49	Assertion 365 373	symptoms
+E20	Assertion:T49 Asserted:E19
+A16	Assertion-Type-Value E20 possible
+T50	Severity 341 347	severe
+A17	Severity-Value T50 severe
+T51	Observation 379 393	alcohol abuser
+E21	Observation:T51 Name:T52
+T52	Observation-Name 379 393	alcohol abuser
+A18	Observation-Type-Value T52 social-habit
+T53	Condition 399 407	pregnant
+E22	Condition:T53 Name:T54
+T54	Condition-Name 399 407	pregnant
+T55	Condition 411 420	lactating
+E23	Condition:T55 Name:T56
+T56	Condition-Name 411 420	lactating
+T57	Or 408 410	or
+E24	Or:T57 Arg:E22 Arg2:E23
+T58	Life-Stage-And-Gender 421 426	women
+A19	Life-Stage-And-Gender-Type T58 female
+R5	If-Then Arg1:T58 Arg2:E23	
+T59	Allergy 432 440	allergic
+E25	Allergy:T59 Name:E33
+T60	Condition 473 501	cardiocebrovascular diseases
+E26	Condition:T60 Name:T61
+T61	Condition-Name 473 501	cardiocebrovascular diseases
+T62	Condition 509 515	cancer
+E27	Condition:T62 Name:T63
+T63	Condition-Name 509 515	cancer
+T64	Or 502 504	or
+E28	Or:T64 Arg:E26 Arg2:E27
+T65	Study 547 552	study
+E29	Study:T65 
+T66	Eq-Comparison 527 537	six months
+E30	Eq-Comparison:T66 Temporal-Unit:T13 Value:T67
+T67	Eq-Value 527 530	six
+T68	Temporal-Connection 538 543	prior
+E31	Temporal-Connection:T68 Arg:E29 Arg2:E30
+A20	Temporal-Connection-Type-Value E31 before
+T69	Condition 558 564	smoker
+E32	Condition:T69 Name:T70
+T70	Condition-Name 558 564	smoker
+T71	Drug 448 458	ingredient
+E33	Drug:T71 
+T72	Temporal-Connection 516 522	during
+E34	Temporal-Connection:T72 Arg:E27 Arg2:E30
+A21	Temporal-Connection-Type-Value E34 during

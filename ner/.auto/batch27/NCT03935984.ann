@@ -1,0 +1,46 @@
+T1	Condition 1262 1298	familial hypocalciuric hypercalcemia
+T2	Condition-Name 1262 1298	familial hypocalciuric hypercalcemia
+E1	Condition:T1 Name:T2
+T3	Condition 1220 1249	Secondary hyperparathyroidism
+T4	Condition-Name 1220 1249	Secondary hyperparathyroidism
+E3	Condition:T3 Name:T4
+T5	Condition 38 65	primary hyperparathyroidism
+T6	Condition-Name 38 65	primary hyperparathyroidism
+E5	Condition:T5 Name:T6
+T7	Condition 814 835	Allergy to calcitonin
+T8	Condition-Name 814 835	Allergy to calcitonin
+E7	Condition:T7 Name:T8
+T9	Condition 892 912	Vitamin D deficiency
+T10	Condition-Name 892 912	Vitamin D deficiency
+E9	Condition:T9 Name:T10
+T11	Condition 601 617	end organ damage
+T12	Condition-Name 601 617	end organ damage
+E11	Condition:T11 Name:T12
+T13	Condition 841 853	Hypocalcemia
+T14	Condition-Name 841 853	Hypocalcemia
+E13	Condition:T13 Name:T14
+T15	Condition 568 579	parathyroid
+T16	Condition-Name 568 579	parathyroid
+E15	Condition:T15 Name:T16
+T17	Procedure 555 564	resection
+T18	Procedure-Name 555 564	resection
+E17	Procedure:T17 Name:T18
+T19	Condition 1543 1552	Pregnancy
+T20	Condition-Name 1543 1552	Pregnancy
+E19	Condition:T19 Name:T20
+T21	Eq-Operator 105 111	within
+A1	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 388 389	≥
+A2	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 1160 1166	within
+A3	Eq-Operator-Value T23 GTEQ
+T24	Eq-Temporal-Unit 116 120	days
+A4	Eq-Temporal-Unit-Value T24 day
+T25	Eq-Value 112 115	365
+T26	Eq-Value 256 258	99
+T27	Eq-Value 389 391	10
+T28	Eq-Value 711 713	99
+T29	Eq-Comparison 105 120	within 365 days
+E20	Eq-Comparison:T29 Operator:T21 Temporal-Unit:T24 Value:T25
+T30	Eq-Comparison 388 391	≥10
+E21	Eq-Comparison:T30 Operator:T22 Value:T27

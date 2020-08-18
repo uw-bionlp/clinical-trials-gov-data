@@ -1,0 +1,30 @@
+T1	Procedure 50 71	screening mammography
+T2	Procedure-Name 50 71	screening mammography
+E1	Procedure:T1 Name:T2
+T3	Procedure 367 379	intervention
+T4	Procedure-Name 367 379	intervention
+E3	Procedure:T3 Name:T4
+T5	Condition 301 310	pregnancy
+T6	Condition-Name 301 310	pregnancy
+E5	Condition:T5 Name:T6
+T7	Procedure 429 450	Screening mammography
+T8	Procedure-Name 429 450	Screening mammography
+E7	Procedure:T7 Name:T8
+T9	Life-Stage-And-Gender 495 508	Male patients
+A1	Life-Stage-And-Gender-Type T9 male
+T10	Eq-Operator 410 411	<
+A2	Eq-Operator-Value T10 LT
+T11	Eq-Operator 622 623	<
+A3	Eq-Operator-Value T11 LT
+T12	Eq-Temporal-Unit 414 419	years
+A4	Eq-Temporal-Unit-Value T12 year
+T13	Age 406 409	Age
+E8	Age:T13
+T14	Age 420 423	old
+E9	Age:T14
+T15	Eq-Value 411 413	30
+T16	Eq-Value 624 626	45
+T17	Eq-Comparison 410 419	<30 years
+E10	Eq-Comparison:T17 Operator:T10 Temporal-Unit:T12 Value:T15
+T18	Eq-Comparison 622 626	< 45
+E11	Eq-Comparison:T18 Operator:T11 Value:T16

@@ -1,0 +1,49 @@
+T1	Procedure 110 127	spinal anesthesia
+T2	Procedure-Name 110 127	spinal anesthesia
+E1	Procedure:T1 Name:T2
+T3	Life-Stage-And-Gender 44 59	female patients
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Procedure 132 141	surgeries
+T5	Procedure-Name 132 141	surgeries
+E4	Procedure:T4 Name:T5
+T6	Life-Stage-And-Gender 35 39	male
+A2	Life-Stage-And-Gender-Type T6 male
+T7	Language 31 34	III
+T8	Procedure 265 282	Immunosuppression
+T9	Procedure-Name 265 282	Immunosuppression
+E8	Procedure:T8 Name:T9
+T10	Procedure 346 363	spinal anesthesia
+T11	Procedure-Name 346 363	spinal anesthesia
+E10	Procedure:T10 Name:T11
+T12	Condition 414 423	psychosis
+T13	Condition-Name 414 423	psychosis
+E12	Condition:T12 Name:T13
+T14	Condition 485 505	cognitive impairment
+T15	Condition-Name 485 505	cognitive impairment
+E14	Condition:T14 Name:T15
+T16	Eq-Operator 150 159	less than
+A3	Eq-Operator-Value T16 LT
+T17	Eq-Operator 204 216	younger than
+A4	Eq-Operator-Value T17 LT
+T18	Eq-Operator 256 257	>
+A5	Eq-Operator-Value T18 GT
+T19	Eq-Temporal-Unit 82 87	years
+A6	Eq-Temporal-Unit-Value T19 year
+T20	Eq-Temporal-Unit 220 225	years
+A7	Eq-Temporal-Unit-Value T20 year
+T21	Age 60 64	aged
+E15	Age:T21
+T22	Age 226 229	old
+E16	Age:T22
+T23	Eq-Operator 76 78	to
+A8	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Value 73 75	18
+T25	Eq-Value 79 81	80
+T26	Eq-Value 217 219	18
+T27	Eq-Value 257 258	3
+T28	Eq-Comparison 204 225	younger than 18 years
+E17	Eq-Comparison:T28 Operator:T17 Temporal-Unit:T20 Value:T26
+T29	Eq-Comparison 256 258	>3
+E18	Eq-Comparison:T29 Operator:T18 Value:T27
+T30	Eq-Comparison 73 78	18 to
+E19	Eq-Comparison:T30 Operator:T23 Value:T24

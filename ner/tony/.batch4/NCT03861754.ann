@@ -1,0 +1,23 @@
+T1	Observation 25 40	Body mass Index
+T2	Observation-Name 25 40	Body mass Index
+E1	Observation:T1 Name:T2
+A1	Observation-Type-Value T2 vital
+T3	Condition 86 95	Pregnancy
+T4	Condition-Name 86 95	Pregnancy
+E3	Condition:T3 Name:T4
+T5	Condition 234 242	diabetes
+T6	Condition-Name 234 242	diabetes
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 41 42	>
+A2	Eq-Operator-Value T7 GT
+T8	Age 51 54	Age
+E6	Age:T8
+T9	Eq-Operator 57 58	-
+A3	Eq-Operator-Value T9 BETWEEN
+T10	Eq-Value 43 45	30
+T11	Eq-Value 55 57	18
+T12	Eq-Value 58 60	64
+T13	Eq-Comparison 41 45	> 30
+E7	Eq-Comparison:T13 Operator:T7 Value:T10
+T14	Eq-Comparison 55 58	18-
+E8	Eq-Comparison:T14 Operator:T9 Value:T11

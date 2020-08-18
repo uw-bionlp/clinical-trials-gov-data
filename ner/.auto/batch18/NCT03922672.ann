@@ -1,0 +1,47 @@
+T1	Condition 268 287	Parkinson's disease
+T2	Condition-Name 268 287	Parkinson's disease
+E1	Condition:T1 Name:T2
+T3	Language 221 228	English
+T4	Language 388 395	English
+T5	Life-Stage-And-Gender 86 91	adult
+A1	Life-Stage-And-Gender-Type T5 adult
+T6	Life-Stage-And-Gender 238 243	Adult
+A2	Life-Stage-And-Gender-Type T6 adult
+T7	Eq-Operator 160 169	less than
+A3	Eq-Operator-Value T7 LT
+T8	Eq-Operator 332 341	less than
+A4	Eq-Operator-Value T8 LT
+T9	Eq-Temporal-Unit 139 144	years
+A5	Eq-Temporal-Unit-Value T9 year
+T10	Eq-Temporal-Unit 172 177	years
+A6	Eq-Temporal-Unit-Value T10 year
+T11	Eq-Temporal-Unit 344 349	years
+A7	Eq-Temporal-Unit-Value T11 year
+T12	Age 126 129	age
+E2	Age:T12
+T13	Age 309 312	age
+E3	Age:T13
+T14	Eq-Operator 135 136	-
+A8	Eq-Operator-Value T14 BETWEEN
+T15	Eq-Operator 265 266	-
+A9	Eq-Operator-Value T15 BETWEEN
+T16	Eq-Operator 318 319	-
+A10	Eq-Operator-Value T16 BETWEEN
+T17	Eq-Value 133 135	40
+T18	Eq-Value 136 138	80
+T19	Eq-Value 170 171	5
+T20	Eq-Value 264 265	1
+T21	Eq-Value 266 267	3
+T22	Eq-Value 316 318	40
+T23	Eq-Value 319 321	80
+T24	Eq-Value 342 343	5
+T25	Eq-Comparison 160 177	less than 5 years
+E4	Eq-Comparison:T25 Operator:T7 Temporal-Unit:T10 Value:T19
+T26	Eq-Comparison 332 349	less than 5 years
+E5	Eq-Comparison:T26 Operator:T8 Temporal-Unit:T11 Value:T24
+T27	Eq-Comparison 133 136	40-
+E6	Eq-Comparison:T27 Operator:T14 Value:T17
+T28	Eq-Comparison 264 266	1-
+E7	Eq-Comparison:T28 Operator:T15 Value:T20
+T29	Eq-Comparison 316 319	40-
+E8	Eq-Comparison:T29 Operator:T16 Value:T22

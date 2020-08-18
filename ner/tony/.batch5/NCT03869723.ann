@@ -1,0 +1,20 @@
+T1	Procedure 69 94	mandibular reconstruction
+T2	Procedure-Name 69 94	mandibular reconstruction
+E1	Procedure:T1 Name:T2
+T3	Procedure 379 390	supervision
+T4	Procedure-Name 379 390	supervision
+E3	Procedure:T3 Name:T4
+T5	Life-Stage-And-Gender 337 342	Adult
+A1	Life-Stage-And-Gender-Type T5 adult
+T6	Eq-Operator 108 109	≥
+A2	Eq-Operator-Value T6 GTEQ
+T7	Eq-Temporal-Unit 112 117	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Eq-Temporal-Unit 143 149	months
+A4	Eq-Temporal-Unit-Value T8 month
+T9	Age 118 121	old
+E4	Age:T9
+T10	Eq-Value 109 111	18
+T11	Eq-Value 141 142	6
+T12	Eq-Comparison 108 117	≥18 years
+E5	Eq-Comparison:T12 Operator:T6 Temporal-Unit:T7 Value:T10

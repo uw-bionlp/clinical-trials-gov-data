@@ -1,0 +1,52 @@
+T1	Procedure 71 94	pancreaticoduodenectomy
+T2	Procedure-Name 71 94	pancreaticoduodenectomy
+E1	Procedure:T1 Name:T2
+T3	Procedure 237 260	pancreaticoduodenectomy
+T4	Procedure-Name 237 260	pancreaticoduodenectomy
+E3	Procedure:T3 Name:T4
+T5	Procedure 47 67	total pancreatectomy
+T6	Procedure-Name 47 67	total pancreatectomy
+E5	Procedure:T5 Name:T6
+T7	Procedure 213 233	total pancreatectomy
+T8	Procedure-Name 213 233	total pancreatectomy
+E7	Procedure:T7 Name:T8
+T9	Procedure 346 362	pancreas surgery
+T10	Procedure-Name 346 362	pancreas surgery
+E9	Procedure:T9 Name:T10
+T11	Condition 192 205	liver disease
+T12	Condition-Name 192 205	liver disease
+E11	Condition:T11 Name:T12
+T13	Procedure 151 160	procedure
+T14	Procedure-Name 151 160	procedure
+E13	Procedure:T13 Name:T14
+T15	Condition 369 378	Pregnancy
+T16	Condition-Name 369 378	Pregnancy
+E15	Condition:T15 Name:T16
+T17	Condition 272 277	NAFLD
+T18	Condition-Name 272 277	NAFLD
+E17	Condition:T17 Name:T18
+T19	Procedure 704 707	INR
+T20	Procedure-Name 704 707	INR
+E19	Procedure:T19 Name:T20
+T21	Eq-Operator 668 669	<
+A1	Eq-Operator-Value T21 LT
+T22	Eq-Operator 689 690	<
+A2	Eq-Operator-Value T22 LT
+T23	Eq-Operator 708 709	>
+A3	Eq-Operator-Value T23 GT
+T24	Eq-Operator 730 731	<
+A4	Eq-Operator-Value T24 LT
+T25	Eq-Unit 692 694	mm
+T26	Eq-Value 669 670	2
+T27	Eq-Value 690 691	6
+T28	Eq-Value 709 710	1
+T29	Eq-Value 731 733	40
+T30	Eq-Value 736 739	109
+T31	Eq-Comparison 668 670	<2
+E20	Eq-Comparison:T31 Operator:T21 Value:T26
+T32	Eq-Comparison 689 694	<6 mm
+E21	Eq-Comparison:T32 Operator:T22 Unit:T25 Value:T27
+T33	Eq-Comparison 708 710	>1
+E22	Eq-Comparison:T33 Operator:T23 Value:T28
+T34	Eq-Comparison 730 733	<40
+E23	Eq-Comparison:T34 Operator:T24 Value:T29

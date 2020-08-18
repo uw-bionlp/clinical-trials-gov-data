@@ -1,0 +1,25 @@
+T1	Condition 241 256	Type 2 Diabetes
+T2	Condition-Name 241 256	Type 2 Diabetes
+E1	Condition:T1 Name:T2
+T3	Procedure 416 423	regimen
+T4	Procedure-Name 416 423	regimen
+E3	Procedure:T3 Name:T4
+T5	Life-Stage-And-Gender 161 167	female
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Life-Stage-And-Gender 152 156	Male
+A2	Life-Stage-And-Gender-Type T6 male
+T7	Condition 589 601	hypoglycemia
+T8	Condition-Name 589 601	hypoglycemia
+E7	Condition:T7 Name:T8
+T9	Condition 654 662	diabetes
+T10	Condition-Name 654 662	diabetes
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 217 218	-
+A3	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 215 217	18
+T13	Eq-Value 218 220	69
+T14	Eq-Value 246 247	2
+T15	Eq-Value 306 309	500
+T16	Eq-Value 315 319	2000
+T17	Eq-Comparison 215 218	18-
+E10	Eq-Comparison:T17 Operator:T11 Value:T12

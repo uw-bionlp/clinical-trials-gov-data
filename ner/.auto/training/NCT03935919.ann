@@ -1,0 +1,44 @@
+T1	Procedure 672 693	isolation precautions
+T2	Procedure-Name 672 693	isolation precautions
+E1	Procedure:T1 Name:T2
+T3	Condition 597 614	immunosuppression
+T4	Condition-Name 597 614	immunosuppression
+E3	Condition:T3 Name:T4
+T5	Procedure 321 331	procedures
+T6	Procedure-Name 321 331	procedures
+E5	Procedure:T5 Name:T6
+T7	Procedure 263 272	procedure
+T8	Procedure-Name 263 272	procedure
+E7	Procedure:T7 Name:T8
+T9	Condition 728 737	Pregnancy
+T10	Condition-Name 728 737	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Procedure 136 144	elective
+T12	Procedure-Name 136 144	elective
+E11	Procedure:T11 Name:T12
+T13	Language 259 262	MRI
+T14	Eq-Operator 30 31	≥
+A1	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 217 218	>
+A2	Eq-Operator-Value T15 GT
+T16	Eq-Operator 643 644	<
+A3	Eq-Operator-Value T16 LT
+T17	Eq-Temporal-Unit 34 39	years
+A4	Eq-Temporal-Unit-Value T17 year
+T18	Age 25 29	Aged
+E12	Age:T18
+T19	Eq-Operator 68 69	-
+A5	Eq-Operator-Value T19 BETWEEN
+T20	Eq-Value 31 33	18
+T21	Eq-Value 65 66	5
+T22	Eq-Value 69 70	6
+T23	Eq-Value 218 219	2
+T24	Eq-Value 644 645	0
+T25	Eq-Comparison 30 39	≥18 years
+E13	Eq-Comparison:T25 Operator:T14 Temporal-Unit:T17 Value:T20
+T26	Eq-Comparison 217 219	>2
+E14	Eq-Comparison:T26 Operator:T15 Value:T23
+T27	Eq-Comparison 643 645	<0
+E15	Eq-Comparison:T27 Operator:T16 Value:T24
+T28	Eq-Comparison 68 70	-6
+E16	Eq-Comparison:T28 Operator:T19 Value:T22

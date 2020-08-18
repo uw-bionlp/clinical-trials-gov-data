@@ -1,0 +1,47 @@
+T1	Condition 85 105	rheumatoid arthritis
+T2	Condition-Name 85 105	rheumatoid arthritis
+E1	Condition:T1 Name:T2
+T3	Condition 454 471	diabetes mellitus
+T4	Condition-Name 454 471	diabetes mellitus
+E3	Condition:T3 Name:T4
+T5	Condition 551 575	congestive heart failure
+T6	Condition-Name 551 575	congestive heart failure
+E5	Condition:T5 Name:T6
+T7	Condition 651 664	severe anemia
+T8	Condition-Name 651 664	severe anemia
+E7	Condition:T7 Name:T8
+T9	Procedure 759 777	biological therapy
+T10	Procedure-Name 759 777	biological therapy
+E9	Procedure:T9 Name:T10
+T11	Condition 784 793	Pregnancy
+T12	Condition-Name 784 793	Pregnancy
+E11	Condition:T11 Name:T12
+T13	Condition 797 806	lactation
+T14	Condition-Name 797 806	lactation
+E13	Condition:T13 Name:T14
+T15	Life-Stage-And-Gender 964 971	females
+A1	Life-Stage-And-Gender-Type T15 male
+T16	Life-Stage-And-Gender 954 959	males
+A2	Life-Stage-And-Gender-Type T16 male
+T17	Eq-Operator 218 230	greater than
+A3	Eq-Operator-Value T17 GT
+T18	Eq-Operator 931 932	≥
+A4	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 940 941	≥
+A5	Eq-Operator-Value T19 GTEQ
+T20	Eq-Temporal-Unit 48 53	years
+A6	Eq-Temporal-Unit-Value T20 year
+T21	Eq-Temporal-Unit 338 344	months
+A7	Eq-Temporal-Unit-Value T21 month
+T22	Eq-Value 45 47	18
+T23	Eq-Value 131 135	2010
+T24	Eq-Value 207 209	28
+T25	Eq-Value 231 232	3
+T26	Eq-Value 932 933	1
+T27	Eq-Value 941 942	1
+T28	Eq-Comparison 218 232	greater than 3
+E14	Eq-Comparison:T28 Operator:T17 Value:T25
+T29	Eq-Comparison 931 933	≥1
+E15	Eq-Comparison:T29 Operator:T18 Value:T26
+T30	Eq-Comparison 940 942	≥1
+E16	Eq-Comparison:T30 Operator:T19 Value:T27

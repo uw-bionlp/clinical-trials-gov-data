@@ -1,0 +1,55 @@
+T1	Procedure 177 199	peripheral nerve block
+T2	Procedure-Name 177 199	peripheral nerve block
+E1	Procedure:T1 Name:T2
+T3	Condition 353 372	renal insufficiency
+T4	Condition-Name 353 372	renal insufficiency
+E3	Condition:T3 Name:T4
+E5	Procedure:T5 Name:T6
+T7	Observation 286 301	body mass index
+T8	Observation-Name 286 301	body mass index
+E7	Observation:T7 Name:T8
+A1	Observation-Type-Value T8 vital
+T9	Procedure 60 74	breast surgery
+T10	Procedure-Name 60 74	breast surgery
+E9	Procedure:T9 Name:T10
+T11	Condition 255 269	morbid obesity
+T12	Condition-Name 255 269	morbid obesity
+E11	Condition:T11 Name:T12
+T13	Condition 424 434	opioid use
+T14	Condition-Name 424 434	opioid use
+E13	Condition:T13 Name:T14
+T15	Procedure 167 176	injection
+T16	Procedure-Name 167 176	injection
+E15	Procedure:T15 Name:T16
+E17	Condition:T17 Name:T18
+T19	Condition 144 148	plan
+T20	Condition-Name 144 148	plan
+E19	Condition:T19 Name:T20
+T21	Observation 308 311	BMI
+T22	Observation-Name 308 311	BMI
+E21	Observation:T21 Name:T22
+A2	Observation-Type-Value T22 vital
+T23	Eq-Operator 302 303	>
+A3	Eq-Operator-Value T23 GT
+T24	Eq-Operator 398 399	>
+A4	Eq-Operator-Value T24 GT
+T25	Eq-Operator 446 452	within
+A5	Eq-Operator-Value T25 GTEQ
+T26	Eq-Operator 507 508	>
+A6	Eq-Operator-Value T26 GT
+T27	Eq-Temporal-Unit 215 220	years
+A7	Eq-Temporal-Unit-Value T27 year
+T28	Eq-Temporal-Unit 459 464	weeks
+A9	Eq-Temporal-Unit-Value T29 week
+T30	Eq-Unit 322 324	kg
+T31	Age 208 211	age
+E22	Age:T31
+T32	Eq-Value 212 214	18
+T33	Eq-Value 304 306	40
+T34	Eq-Value 400 401	1
+T35	Eq-Value 457 458	2
+T36	Eq-Value 509 510	4
+T37	Eq-Comparison 302 306	> 40
+E23	Eq-Comparison:T37 Operator:T23 Value:T33
+T38	Eq-Comparison 398 401	> 1
+E24	Eq-Comparison:T38 Operator:T24 Value:T34

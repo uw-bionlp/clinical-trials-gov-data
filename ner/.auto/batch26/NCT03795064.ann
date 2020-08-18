@@ -1,0 +1,40 @@
+T1	Procedure 312 325	sclerotherapy
+T2	Procedure-Name 312 325	sclerotherapy
+E1	Procedure:T1 Name:T2
+T3	Condition 25 37	Venous ulcer
+T4	Condition-Name 25 37	Venous ulcer
+E3	Condition:T3 Name:T4
+T5	Condition 219 229	Leg ulcers
+T6	Condition-Name 219 229	Leg ulcers
+E5	Condition:T5 Name:T6
+T7	Condition 262 271	Pregnancy
+T8	Condition-Name 262 271	Pregnancy
+E7	Condition:T7 Name:T8
+T9	Procedure 366 374	revision
+T10	Procedure-Name 366 374	revision
+E9	Procedure:T9 Name:T10
+T11	Procedure 307 311	foam
+T12	Procedure-Name 307 311	foam
+E11	Procedure:T11 Name:T12
+T13	Eq-Operator 38 39	>
+A1	Eq-Operator-Value T13 GT
+T14	Eq-Operator 64 65	>
+A2	Eq-Operator-Value T14 GT
+T15	Eq-Operator 122 123	>
+A3	Eq-Operator-Value T15 GT
+T16	Eq-Operator 149 150	>
+A4	Eq-Operator-Value T16 GT
+T17	Eq-Unit 67 69	cm
+T18	Eq-Unit 153 157	mmhg
+T19	Eq-Value 40 41	1
+T20	Eq-Value 66 67	1
+T21	Eq-Value 124 125	0
+T22	Eq-Value 151 153	70
+T23	Eq-Comparison 38 41	> 1
+E12	Eq-Comparison:T23 Operator:T13 Value:T19
+T24	Eq-Comparison 64 67	> 1
+E13	Eq-Comparison:T24 Operator:T14 Value:T20
+T25	Eq-Comparison 122 125	> 0
+E14	Eq-Comparison:T25 Operator:T15 Value:T21
+T26	Eq-Comparison 149 153	> 70
+E15	Eq-Comparison:T26 Operator:T16 Value:T22

@@ -1,0 +1,81 @@
+T1	Condition 301 310	disorders
+T2	Condition-Name 301 310	disorders
+E1	Condition:T1 Name:T2
+T3	Procedure 225 246	Effort oxygen therapy
+T4	Procedure-Name 225 246	Effort oxygen therapy
+E3	Procedure:T3 Name:T4
+T9	Condition 32 36	COPD
+T10	Condition-Name 32 36	COPD
+E9	Condition:T9 Name:T10 Severity:T12
+T11	Eq-Operator 112 113	<
+A1	Eq-Operator-Value T11 LT
+T14	Eq-Value 114 116	70
+T15	Eq-Value 128 130	50
+T16	Eq-Comparison 112 117	< 70%
+E10	Eq-Comparison:T16 Operator:T11 Value:T14 Unit:T24
+T17	Eq-Comparison 126 131	< 50%
+E11	Eq-Comparison:T17 Value:T15 Unit:T27 Operator:T28
+T12	Severity 25 31	Severe
+A2	Severity-Value T12 severe
+T13	Observation 38 42	FEV1
+E2	Observation:T13 Name:T18
+T18	Observation-Name 38 42	FEV1
+T5	Observation 44 80	forced expiratory volume in 1 second
+E4	Observation:T5 Name:T6
+T6	Observation-Name 44 80	forced expiratory volume in 1 second
+R1	Abbrev-Of Arg1:E4 Arg2:E2	
+T19	Observation 84 87	FVC
+E5	Observation:T19 Name:T20
+T20	Observation-Name 84 87	FVC
+T21	Or 82 83	/
+E6	Or:T21 Arg:E4 Arg2:E5
+T22	Observation 89 110	forced vital capacity
+E8	Observation:T22 Name:T23 Eq-Comparison:E10
+T23	Observation-Name 89 110	forced vital capacity
+R2	Abbrev-Of Arg1:E8 Arg2:E5	
+T24	Eq-Unit 116 117	%
+T25	Observation 121 125	FEV1
+E12	Observation:T25 Name:T26 Eq-Comparison:E11
+T26	Observation-Name 121 125	FEV1
+T27	Eq-Unit 130 131	%
+T28	Eq-Operator 126 127	<
+A3	Eq-Operator-Value T28 LT
+T7	Modifier 285 300	musculoskeletal
+E7	Modifier:T7 Modifies:T2
+T8	Modifier 268 281	neuromuscular
+E13	Modifier:T8 Modifies:T2
+T29	Modifier 252 266	Cardiovascular
+E14	Modifier:T29 Modifies:T2
+T30	Or 282 284	or
+E15	Or:T30 Arg:E13 Arg2:E7
+T31	Condition 340 347	dyspnea
+E16	Condition:T31 Name:T32 Severity:T33
+T32	Condition-Name 340 347	dyspnea
+T33	Severity 328 339	significant
+A4	Severity-Value T33 severe
+R3	Caused-By Arg1:E16 Arg2:E1	
+T35	Observation 357 365	exercise
+E18	Observation:T35 Name:T36 Stability:T34
+T36	Observation-Name 357 365	exercise
+T37	Or 348 350	or
+E19	Or:T37 Arg:E16 Arg2:T34
+R4	Caused-By Arg1:E18 Arg2:E1	
+T38	Condition 371 387	Legal incapacity
+E20	Condition:T38 Name:T39
+T39	Condition-Name 371 387	Legal incapacity
+A5	Observation-Type-Value T6 measurement
+A6	Observation-Type-Value T23 measurement
+T34	Stability 351 356	limit
+A7	Stability-Value T34 change
+T40	Assertion 415 426	anticipated
+E17	Assertion:T40 Asserted:E21
+A8	Assertion-Type-Value E17 hypothetical
+T41	Observation 403 414	cooperation
+E21	Observation:T41 Name:T42 Polarity:T44
+T42	Observation-Name 403 414	cooperation
+T43	Negation 400 402	no
+E22	Negation:T43 Negates:E21
+T44	Polarity 393 396	Low
+A9	Polarity-Value T44 low
+T45	Or 397 399	or
+E23	Or:T45 Arg:T44 Arg2:E22

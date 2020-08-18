@@ -1,0 +1,41 @@
+T1	Condition 35 44	gestation
+T2	Condition-Name 35 44	gestation
+E1	Condition:T1 Name:T2
+T3	Procedure 160 169	reduction
+T4	Procedure-Name 160 169	reduction
+E3	Procedure:T3 Name:T4
+T5	Eq-Operator 551 560	less than
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Operator 579 585	within
+A2	Eq-Operator-Value T6 GTEQ
+T7	Eq-Temporal-Unit 189 194	weeks
+A3	Eq-Temporal-Unit-Value T7 week
+T8	Eq-Temporal-Unit 197 201	days
+A4	Eq-Temporal-Unit-Value T8 day
+T9	Eq-Temporal-Unit 361 366	weeks
+A5	Eq-Temporal-Unit-Value T9 week
+T10	Eq-Temporal-Unit 369 373	days
+A6	Eq-Temporal-Unit-Value T10 day
+T11	Eq-Temporal-Unit 381 386	weeks
+A7	Eq-Temporal-Unit-Value T11 week
+T12	Eq-Temporal-Unit 389 393	days
+A8	Eq-Temporal-Unit-Value T12 day
+T13	Eq-Temporal-Unit 589 593	days
+A9	Eq-Temporal-Unit-Value T13 day
+T14	Eq-Unit 576 578	mm
+T15	Age 222 225	age
+E4	Age:T15
+T16	Age 329 332	age
+E5	Age:T16
+T17	Age 494 497	Age
+E6	Age:T17
+T18	Eq-Value 186 188	13
+T19	Eq-Value 195 196	6
+T20	Eq-Value 358 360	16
+T21	Eq-Value 367 368	0
+T22	Eq-Value 378 380	23
+T23	Eq-Value 387 388	6
+T24	Eq-Value 573 575	20
+T25	Eq-Value 586 588	10
+T26	Eq-Comparison 579 593	within 10 days
+E7	Eq-Comparison:T26 Operator:T6 Temporal-Unit:T13 Value:T25

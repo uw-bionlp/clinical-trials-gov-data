@@ -1,0 +1,30 @@
+T1	Condition 745 773	enterobacteriaceae infection
+T2	Condition-Name 745 773	enterobacteriaceae infection
+E1	Condition:T1 Name:T2
+T3	Condition 787 815	enterobacteriaceae infection
+T4	Condition-Name 787 815	enterobacteriaceae infection
+E3	Condition:T3 Name:T4
+T5	Condition 392 413	anaphylactic reaction
+T6	Condition-Name 392 413	anaphylactic reaction
+E5	Condition:T5 Name:T6
+T7	Condition 627 648	Pseudomonas infection
+T8	Condition-Name 627 648	Pseudomonas infection
+E7	Condition:T7 Name:T8
+T9	Condition 663 684	Pseudomonas infection
+T10	Condition-Name 663 684	Pseudomonas infection
+E9	Condition:T9 Name:T10
+T11	Condition 589 602	breastfeeding
+T12	Condition-Name 589 602	breastfeeding
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 34 39	years
+A2	Eq-Temporal-Unit-Value T14 year
+T15	Age 25 28	Age
+E12	Age:T15
+T16	Age 40 43	old
+E13	Age:T16
+T17	Eq-Value 31 33	18
+T18	Eq-Value 92 93	3
+T19	Eq-Comparison 29 39	≥ 18 years
+E14	Eq-Comparison:T19 Operator:T13 Temporal-Unit:T14 Value:T17

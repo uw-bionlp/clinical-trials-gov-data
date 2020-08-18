@@ -1,0 +1,25 @@
+T1	Life-Stage-And-Gender 25 31	Female
+A1	Life-Stage-And-Gender-Type T1 male
+T2	Language 117 120	MRI
+T3	Condition 272 281	lactation
+T4	Condition-Name 272 281	lactation
+E3	Condition:T3 Name:T4
+T5	Procedure 427 442	cardiac surgery
+T6	Procedure-Name 427 442	cardiac surgery
+E5	Procedure:T5 Name:T6
+T7	Condition 379 392	periarthritis
+T8	Condition-Name 379 392	periarthritis
+E7	Condition:T7 Name:T8
+T9	Procedure 473 480	therapy
+T10	Procedure-Name 473 480	therapy
+E9	Procedure:T9 Name:T10
+T11	Eq-Operator 157 163	within
+A2	Eq-Operator-Value T11 GTEQ
+T12	Eq-Temporal-Unit 47 52	years
+A3	Eq-Temporal-Unit-Value T12 year
+T13	Eq-Temporal-Unit 166 171	weeks
+A4	Eq-Temporal-Unit-Value T13 week
+T14	Eq-Value 44 46	35
+T15	Eq-Value 164 165	2
+T16	Eq-Comparison 157 171	within 2 weeks
+E10	Eq-Comparison:T16 Operator:T11 Temporal-Unit:T13 Value:T15

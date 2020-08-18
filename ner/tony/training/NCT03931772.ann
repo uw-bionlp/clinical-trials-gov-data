@@ -1,0 +1,121 @@
+T1	Condition 426 436	drug abuse
+T2	Condition-Name 426 436	drug abuse
+E1	Condition:T1 Name:T2
+T3	Language 76 83	English
+T4	Condition 591 604	brain disease
+T5	Condition-Name 591 604	brain disease
+E4	Condition:T4 Name:T5
+T6	Condition 611 620	psychosis
+T7	Condition-Name 611 620	psychosis
+E6	Condition:T6 Name:T7
+T8	Condition 657 665	dementia
+T9	Condition-Name 657 665	dementia
+E8	Condition:T8 Name:T9
+T10	Condition 622 628	stroke
+T11	Condition-Name 622 628	stroke
+E10	Condition:T10 Name:T11
+T14	Procedure 845 857	intervention
+T15	Procedure-Name 845 857	intervention
+E14	Procedure:T14 Name:T15
+T18	Eq-Operator 150 151	≥
+A1	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 357 358	≥
+A2	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 527 533	within
+A3	Eq-Operator-Value T20 LTEQ
+T21	Eq-Temporal-Unit 28 33	years
+A4	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 545 551	months
+A5	Eq-Temporal-Unit-Value T22 month
+T23	Eq-Value 25 27	18
+T24	Eq-Value 152 153	5
+T26	Eq-Value 185 187	10
+T27	Eq-Value 359 360	5
+T28	Eq-Value 543 544	3
+T29	Eq-Comparison 150 153	≥ 5
+E17	Eq-Comparison:T29 Operator:T18 Value:T24 Unit:T33 Unit2:T35
+T30	Eq-Comparison 357 360	≥ 5
+E18	Eq-Comparison:T30 Operator:T19 Value:T27
+T31	Eq-Comparison 25 42	18 years or older
+E2	Eq-Comparison:T31 Operator:T32 Temporal-Unit:T21 Value:T23
+T32	Eq-Operator 34 42	or older
+A6	Eq-Operator-Value T32 GTEQ
+T33	Eq-Unit 161 166	10 to
+A7	Eq-Unit-Value T33 ref-range-high
+T25	Observation 194 211	Likert-type scale
+E3	Observation:T25 
+T34	Observation-Name 194 211	Likert-type scale
+A8	Observation-Type-Value T34 measurement
+T35	Eq-Unit 188 193	point
+T36	Condition 308 314	smoker
+E5	Condition:T36 
+T37	Assertion 284 293	Reporting
+E7	Assertion:T37 Asserted:E5
+T38	Stability 302 307	daily
+A9	Stability-Value T38 stable
+T39	Eq-Comparison 319 336	at least one year
+E9	Eq-Comparison:T39 Operator:T40 Temporal-Unit:T42 Value:T41
+T40	Eq-Operator 319 327	at least
+A10	Eq-Operator-Value T40 GTEQ
+T41	Eq-Value 328 331	one
+T42	Eq-Temporal-Unit 332 336	year
+A11	Eq-Temporal-Unit-Value T42 year
+T43	Drug 440 451	depressants
+E11	Drug:T43 Name:T44
+T44	Drug-Name 440 451	depressants
+T45	Drug 453 477	dissociative anesthetics
+E13	Drug:T45 Name:T46
+T46	Drug-Name 453 477	dissociative anesthetics
+T47	Drug 479 492	hallucinogens
+E15	Drug:T47 Name:T48
+T48	Drug-Name 479 492	hallucinogens
+T49	Drug 494 501	opioids
+E19	Drug:T49 Name:T50
+T50	Drug-Name 494 501	opioids
+T51	Drug 503 510	cocaine
+E20	Drug:T51 Name:T52
+T52	Drug-Name 503 510	cocaine
+T53	Drug 515 526	amphetamine
+E21	Drug:T53 Name:T54
+T54	Drug-Name 515 526	amphetamine
+T55	Eq-Comparison 527 551	within the last 3 months
+E22	Eq-Comparison:T55 Operator:T20 Temporal-Unit:T22 Value:T28
+T56	Severity 558 564	Severe
+A12	Severity-Value T56 severe
+T57	Modifier 565 576	psychiatric
+E23	Modifier:T57 Modifies:T5
+T58	Modifier 580 590	structural
+E24	Modifier:T58 Modifies:E4
+T59	Condition 634 655	functional impairment
+E25	Condition:T59 Name:T60
+T60	Condition-Name 634 655	functional impairment
+T61	Eq-Temporal-Recency 671 685	current/recent
+A13	Eq-Temporal-Recency-Value T61 most-recent-time
+T62	Risk 686 690	risk
+E26	Risk:T62 
+T63	Condition 777 795	Hearing impairment
+E27	Condition:T63 Name:T64
+T64	Condition-Name 777 795	Hearing impairment
+T65	Modifier 836 844	auditory
+E28	Modifier:T65 Modifies:E14
+T66	Study 893 898	study
+E29	Study:T66 
+T67	Severity 863 868	Major
+A14	Severity-Value T67 severe
+T68	Condition 869 878	illnesses
+E30	Condition:T68 Name:T69 Severity:T67
+T69	Condition-Name 869 878	illnesses
+T70	Drug 929 939	Wellbutrin
+E31	Drug:T70 Name:T71
+T71	Drug-Name 929 939	Wellbutrin
+T72	Drug 941 948	Chantix
+E32	Drug:T72 Name:T73
+T73	Drug-Name 941 948	Chantix
+T74	Temporal-Connection 912 921	Currently
+E33	Temporal-Connection:T74 Arg:E34
+A15	Temporal-Connection-Type-Value E33 during
+T75	Study 1033 1038	study
+E34	Study:T75 
+T12	Drug 959 997	pharmacological smoking cessation aids
+E12	Drug:T12 Name:T13
+T13	Drug-Name 959 997	pharmacological smoking cessation aids

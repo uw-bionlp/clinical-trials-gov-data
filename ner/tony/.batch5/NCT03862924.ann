@@ -1,0 +1,37 @@
+T1	Condition 762 784	substance use disorder
+T2	Condition-Name 762 784	substance use disorder
+E1	Condition:T1 Name:T2
+T3	Condition 796 815	nicotine dependence
+T4	Condition-Name 796 815	nicotine dependence
+E3	Condition:T3 Name:T4
+T5	Procedure 407 422	pharmacotherapy
+T6	Procedure-Name 407 422	pharmacotherapy
+E5	Procedure:T5 Name:T6
+T7	Condition 630 645	unstable angina
+T8	Condition-Name 630 645	unstable angina
+E7	Condition:T7 Name:T8
+T9	Condition 660 672	hypertension
+T10	Condition-Name 660 672	hypertension
+E9	Condition:T9 Name:T10
+T11	Procedure 896 903	nursing
+T12	Procedure-Name 896 903	nursing
+E11	Procedure:T11 Name:T12
+T13	Eq-Operator 124 139	within the past
+A1	Eq-Operator-Value T13 LTEQ
+T14	Eq-Operator 294 306	greater than
+A2	Eq-Operator-Value T14 GT
+T15	Eq-Temporal-Unit 175 180	years
+A3	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Temporal-Unit 381 385	days
+A4	Eq-Temporal-Unit-Value T16 day
+T17	Eq-Temporal-Unit 500 504	days
+A5	Eq-Temporal-Unit-Value T17 day
+T18	Age 184 187	age
+E12	Age:T18
+T19	Eq-Value 172 174	18
+T20	Eq-Value 208 209	5
+T21	Eq-Value 307 308	5
+T22	Eq-Value 378 380	30
+T23	Eq-Value 498 499	2
+T24	Eq-Comparison 294 308	greater than 5
+E13	Eq-Comparison:T24 Operator:T14 Value:T21

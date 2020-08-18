@@ -1,0 +1,63 @@
+T1	Language 191 207	primary language
+T2	Condition 552 565	cardiac event
+T3	Condition-Name 552 565	cardiac event
+E2	Condition:T2 Name:T3
+T4	Procedure 489 501	chemotherapy
+T5	Procedure-Name 489 501	chemotherapy
+E4	Procedure:T4 Name:T5
+T6	Procedure 505 514	radiation
+T7	Procedure-Name 505 514	radiation
+E6	Procedure:T6 Name:T7
+T8	Condition 331 339	dementia
+T9	Condition-Name 331 339	dementia
+E8	Condition:T8 Name:T9
+T10	Condition 462 470	diabetes
+T11	Condition-Name 462 470	diabetes
+E10	Condition:T10 Name:T11
+T12	Language 180 187	English
+T13	Procedure 377 381	diet
+T14	Procedure-Name 377 381	diet
+E13	Procedure:T13 Name:T14
+T15	Condition 572 584	heart attack
+T16	Condition-Name 572 584	heart attack
+E15	Condition:T15 Name:T16
+T17	Condition 750 762	renal stones
+T18	Condition-Name 750 762	renal stones
+E17	Condition:T17 Name:T18
+T19	Procedure 586 597	angioplasty
+T20	Procedure-Name 586 597	angioplasty
+E19	Procedure:T19 Name:T20
+T21	Procedure 686 693	therapy
+T22	Procedure-Name 686 693	therapy
+E21	Procedure:T21 Name:T22
+T23	Eq-Operator 253 268	within the past
+A1	Eq-Operator-Value T23 LTEQ
+T24	Eq-Operator 515 530	within the past
+A2	Eq-Operator-Value T24 LTEQ
+T25	Eq-Operator 694 700	within
+A3	Eq-Operator-Value T25 LTEQ
+T26	Eq-Temporal-Unit 272 276	days
+A4	Eq-Temporal-Unit-Value T26 day
+T27	Eq-Temporal-Unit 533 538	years
+A5	Eq-Temporal-Unit-Value T27 year
+T28	Eq-Temporal-Unit 704 708	days
+A6	Eq-Temporal-Unit-Value T28 day
+T29	Age 213 216	Age
+E22	Age:T29
+T30	Eq-Operator 220 222	to
+A7	Eq-Operator-Value T30 BETWEEN
+T31	Eq-Value 101 102	0
+T32	Eq-Value 108 109	1
+T33	Eq-Value 217 219	50
+T34	Eq-Value 223 225	90
+T35	Eq-Value 269 271	30
+T36	Eq-Value 531 532	5
+T37	Eq-Value 701 703	30
+T38	Eq-Comparison 253 276	within the past 30 days
+E23	Eq-Comparison:T38 Operator:T23 Temporal-Unit:T26 Value:T35
+T39	Eq-Comparison 515 538	within the past 5 years
+E24	Eq-Comparison:T39 Operator:T24 Temporal-Unit:T27 Value:T36
+T40	Eq-Comparison 694 708	within 30 days
+E25	Eq-Comparison:T40 Operator:T25 Temporal-Unit:T28 Value:T37
+T41	Eq-Comparison 217 222	50 to
+E26	Eq-Comparison:T41 Operator:T30 Value:T33

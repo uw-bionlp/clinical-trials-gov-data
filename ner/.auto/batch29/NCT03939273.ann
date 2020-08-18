@@ -1,0 +1,67 @@
+T1	Procedure 76 91	cardiac surgery
+T2	Procedure-Name 76 91	cardiac surgery
+E1	Procedure:T1 Name:T2
+T3	Procedure 59 67	elective
+T4	Procedure-Name 59 67	elective
+E3	Procedure:T3 Name:T4
+T5	Condition 652 676	Haematological disorders
+T6	Condition-Name 652 676	Haematological disorders
+E5	Condition:T5 Name:T6
+T7	Procedure 521 542	organ transplantation
+T8	Procedure-Name 521 542	organ transplantation
+E7	Procedure:T7 Name:T8
+T9	Condition 377 397	short bowel syndrome
+T10	Condition-Name 377 397	short bowel syndrome
+E9	Condition:T9 Name:T10
+T11	Condition 462 480	hepatic impairment
+T12	Condition-Name 462 480	hepatic impairment
+E11	Condition:T11 Name:T12
+T13	Procedure 352 367	bowel resection
+T14	Procedure-Name 352 367	bowel resection
+E13	Procedure:T13 Name:T14
+T15	Condition 745 755	Leucopenia
+T16	Condition-Name 745 755	Leucopenia
+E15	Condition:T15 Name:T16
+T17	Procedure 180 189	procedure
+T18	Procedure-Name 180 189	procedure
+E17	Procedure:T17 Name:T18
+T19	Procedure 251 260	therapies
+T20	Procedure-Name 251 260	therapies
+E19	Procedure:T19 Name:T20
+T21	Condition 573 582	Pregnancy
+T22	Condition-Name 573 582	Pregnancy
+E21	Condition:T21 Name:T22
+T23	Procedure 1001 1020	drug administration
+T24	Procedure-Name 1001 1020	drug administration
+E23	Procedure:T23 Name:T24
+T25	Procedure 943 955	intervention
+T26	Procedure-Name 943 955	intervention
+E25	Procedure:T25 Name:T26
+T27	Eq-Operator 29 30	>
+A1	Eq-Operator-Value T27 GT
+T28	Eq-Operator 261 267	within
+A2	Eq-Operator-Value T28 GTEQ
+T29	Eq-Operator 438 439	<
+A3	Eq-Operator-Value T29 LT
+T30	Eq-Operator 971 977	within
+A4	Eq-Operator-Value T30 GTEQ
+T31	Eq-Temporal-Unit 34 39	years
+A5	Eq-Temporal-Unit-Value T31 year
+T32	Eq-Temporal-Unit 271 275	days
+A6	Eq-Temporal-Unit-Value T32 day
+T33	Eq-Temporal-Unit 981 985	days
+A7	Eq-Temporal-Unit-Value T33 day
+T34	Age 25 28	Age
+E26	Age:T34
+T35	Eq-Value 31 33	18
+T36	Eq-Value 268 270	30
+T37	Eq-Value 440 442	50
+T38	Eq-Value 978 980	30
+T39	Eq-Comparison 29 39	> 18 years
+E27	Eq-Comparison:T39 Operator:T27 Temporal-Unit:T31 Value:T35
+T40	Eq-Comparison 261 275	within 30 days
+E28	Eq-Comparison:T40 Operator:T28 Temporal-Unit:T32 Value:T36
+T41	Eq-Comparison 438 442	< 50
+E29	Eq-Comparison:T41 Operator:T29 Value:T37
+T42	Eq-Comparison 971 985	within 30 days
+E30	Eq-Comparison:T42 Operator:T30 Temporal-Unit:T33 Value:T38

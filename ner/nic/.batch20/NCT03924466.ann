@@ -1,0 +1,43 @@
+T1	Condition 630 656	gastrointestinal disorders
+T2	Condition-Name 630 656	gastrointestinal disorders
+E1	Condition:T1 Name:T2
+T3	Condition 579 593	breast feeding
+T4	Condition-Name 579 593	breast feeding
+E3	Condition:T3 Name:T4
+T5	Condition 807 818	dysfunction
+T6	Condition-Name 807 818	dysfunction
+E5	Condition:T5 Name:T6
+T7	Death 1212 1217	death
+E7	Death:T7 
+T9	Eq-Operator 620 621	<
+A1	Eq-Operator-Value T9 LT
+T10	Eq-Temporal-Unit 177 182	years
+A2	Eq-Temporal-Unit-Value T10 year
+T11	Eq-Unit 296 298	mm
+T12	Eq-Unit 387 389	mm
+T13	Eq-Unit 421 423	mm
+T14	Age 170 173	age
+E8	Age:T14 
+T15	Eq-Value 174 176	18
+T16	Eq-Value 272 273	1
+T17	Eq-Value 293 295	12
+T18	Eq-Value 384 386	15
+T19	Eq-Value 418 420	12
+T20	Eq-Value 622 623	1
+T21	Eq-Comparison 620 623	< 1
+E9	Eq-Comparison:T21 Operator:T9 Value:T20
+T22	Risk 1204 1208	risk
+E2	Risk:T22 Risk-For:E7
+T8	Modifier 1194 1203	increased
+E4	Modifier:T8 Modifies:E7
+T23	Condition 1249 1256	illness
+E6	Condition:T23 
+T24	Modifier 1238 1248	concurrent
+E10	Modifier:T24 Modifies:E6
+T25	Modifier 1225 1237	pre-existing
+E11	Modifier:T25 Modifies:E6
+R1	Caused-By Arg1:E7 Arg2:E6
+T26	Eq-Comparison 718 724	active
+E12	Eq-Comparison:T26 Temporal-Period:T27
+T27	Eq-Temporal-Period 718 724	active
+A3	Eq-Temporal-Period-Value T27 present

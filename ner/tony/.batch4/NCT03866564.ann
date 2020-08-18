@@ -1,0 +1,46 @@
+T1	Condition 477 488	Dysfunction
+T2	Condition-Name 477 488	Dysfunction
+E1	Condition:T1 Name:T2
+T3	Procedure 243 253	procedures
+T4	Procedure-Name 243 253	procedures
+E3	Procedure:T3 Name:T4
+T5	Procedure 760 770	procedures
+T6	Procedure-Name 760 770	procedures
+E5	Procedure:T5 Name:T6
+T7	Procedure 309 313	MoCA
+T8	Procedure-Name 309 313	MoCA
+E7	Procedure:T7 Name:T8
+T9	Eq-Operator 324 325	>
+A1	Eq-Operator-Value T9 GT
+T10	Eq-Operator 730 731	<
+A2	Eq-Operator-Value T10 LT
+T11	Eq-Operator 1166 1167	>
+A3	Eq-Operator-Value T11 GT
+T12	Eq-Operator 1248 1249	<
+A4	Eq-Operator-Value T12 LT
+T13	Eq-Unit 1171 1174	lbs
+T14	Age 25 28	Age
+E8	Age:T14
+T15	Eq-Operator 31 32	-
+A5	Eq-Operator-Value T15 BETWEEN
+T16	Eq-Value 29 31	24
+T17	Eq-Value 32 34	55
+T18	Eq-Value 79 83	1960
+T19	Eq-Value 325 327	20
+T20	Eq-Value 459 460	1
+T21	Eq-Value 490 491	2
+T22	Eq-Value 517 518	3
+T23	Eq-Value 541 542	4
+T24	Eq-Value 731 733	19
+T25	Eq-Value 1167 1170	450
+T26	Eq-Value 1249 1251	20
+T27	Eq-Comparison 324 327	>20
+E9	Eq-Comparison:T27 Operator:T9 Value:T19
+T28	Eq-Comparison 730 733	<19
+E10	Eq-Comparison:T28 Operator:T10 Value:T24
+T29	Eq-Comparison 1166 1174	>450 lbs
+E11	Eq-Comparison:T29 Operator:T11 Unit:T13 Value:T25
+T30	Eq-Comparison 1248 1251	<20
+E12	Eq-Comparison:T30 Operator:T12 Value:T26
+T31	Eq-Comparison 29 32	24-
+E13	Eq-Comparison:T31 Operator:T15 Value:T16

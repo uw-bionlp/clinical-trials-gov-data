@@ -1,0 +1,45 @@
+T1	Condition 394 413	respiratory disease
+T2	Condition-Name 394 413	respiratory disease
+E1	Condition:T1 Name:T2
+T3	Condition 431 446	cardiac disease
+T4	Condition-Name 431 446	cardiac disease
+E3	Condition:T3 Name:T4
+T5	Procedure 79 89	intubation
+T6	Procedure-Name 79 89	intubation
+E5	Procedure:T5 Name:T6
+T7	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T7 adult
+T8	Observation 362 365	BMI
+T9	Observation-Name 362 365	BMI
+E8	Observation:T8 Name:T9
+A2	Observation-Type-Value T9 vital
+T10	Condition 494 515	Neuromuscular disease
+T11	Condition-Name 494 515	Neuromuscular disease
+E10	Condition:T10 Name:T11
+T12	Condition 521 530	Pregnancy
+T13	Condition-Name 521 530	Pregnancy
+E12	Condition:T12 Name:T13
+T14	Eq-Operator 304 305	>
+A3	Eq-Operator-Value T14 GT
+T15	Eq-Operator 353 354	>
+A4	Eq-Operator-Value T15 GT
+T16	Eq-Operator 366 367	>
+A5	Eq-Operator-Value T16 GT
+T17	Eq-Operator 618 619	>
+A6	Eq-Operator-Value T17 GT
+T18	Eq-Temporal-Unit 44 49	years
+A7	Eq-Temporal-Unit-Value T18 year
+T19	Eq-Unit 371 376	kg/m2
+T20	Eq-Value 41 43	18
+T21	Eq-Value 306 307	3
+T22	Eq-Value 355 356	2
+T23	Eq-Value 368 370	30
+T24	Eq-Value 620 621	4
+T25	Eq-Comparison 304 307	> 3
+E13	Eq-Comparison:T25 Operator:T14 Value:T21
+T26	Eq-Comparison 353 356	> 2
+E14	Eq-Comparison:T26 Operator:T15 Value:T22
+T27	Eq-Comparison 366 376	> 30 kg/m2
+E15	Eq-Comparison:T27 Operator:T16 Unit:T19 Value:T23
+T28	Eq-Comparison 618 621	> 4
+E16	Eq-Comparison:T28 Operator:T17 Value:T24

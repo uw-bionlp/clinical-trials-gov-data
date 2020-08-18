@@ -1,0 +1,140 @@
+T1	Observation 105 120	Body Mass Index
+T2	Observation-Name 105 120	Body Mass Index
+E1	Observation:T1 Name:T2
+A1	Observation-Type-Value T2 vital
+T3	Condition 73 80	obesity
+T4	Condition-Name 73 80	obesity
+E3	Condition:T3 Name:T4
+T5	Observation 100 103	BMI
+T6	Observation-Name 100 103	BMI
+E5	Observation:T5 Name:T6
+A2	Observation-Type-Value T6 vital
+T7	Observation 140 143	BMI
+T8	Observation-Name 140 143	BMI
+E7	Observation:T7 Name:T8 Eq-Comparison:E6
+A3	Observation-Type-Value T8 vital
+T9	Condition 229 243	binge episodes
+T10	Condition-Name 229 243	binge episodes
+E9	Condition:T9 Name:T10
+T11	Language 289 296	Spanish
+T12	Condition 475 484	condition
+T13	Condition-Name 475 484	condition
+E12	Condition:T12 Name:T13
+T14	Condition 510 518	dementia
+T15	Condition-Name 510 518	dementia
+E14	Condition:T14 Name:T15
+T16	Condition 713 734	personality disorders
+T17	Condition-Name 713 734	personality disorders
+E16	Condition:T16 Name:T17
+T18	Condition 589 598	substance
+T19	Condition-Name 589 598	substance
+E18	Condition:T18 Name:T19
+T20	Condition 568 587	psychiatric illness
+T21	Condition-Name 568 587	psychiatric illness
+E20	Condition:T20 Name:T21 Severity:T67
+T22	Condition 654 673	psychotic disorders
+T23	Condition-Name 654 673	psychotic disorders
+E22	Condition:T22 Name:T23
+T24	Condition 693 709	anxiety disorder
+T25	Condition-Name 693 709	anxiety disorder
+E24	Condition:T24 Name:T25
+T28	Condition 753 769	delusional ideas
+T29	Condition-Name 753 769	delusional ideas
+E28	Condition:T28 Name:T29
+T30	Condition 773 787	hallucinations
+T31	Condition-Name 773 787	hallucinations
+E30	Condition:T30 Name:T31
+T32	Eq-Temporal-Unit 43 48	years
+A4	Eq-Temporal-Unit-Value T32 year
+T33	Age 25 28	Age
+E31	Age:T33 Eq-Comparison:E32
+T34	Eq-Operator 39 40	-
+A5	Eq-Operator-Value T34 BETWEEN
+T35	Eq-Value 37 39	45
+T36	Eq-Value 40 42	75
+T37	Eq-Value 147 149	25
+T38	Eq-Comparison 29 48	between 45-75 years
+E32	Eq-Comparison:T38 Operator:T34 Value:T35 Value2:T36 Temporal-Unit:T32
+T39	Eq-Comparison 620 627	history
+E33	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 620 627	history
+A6	Eq-Temporal-Period-Value T40 past
+T41	Condition 59 69	overweight
+E2	Condition:T41 Name:T42
+T42	Condition-Name 59 69	overweight
+T43	Or 70 72	or
+E4	Or:T43 Arg:E2 Arg2:E3
+R1	Abbrev-Of Arg1:E1 Arg2:E5	
+R2	Found-By Arg1:E3 Arg2:E5	
+T44	Eq-Comparison 147 157	25 or more
+E6	Eq-Comparison:T44 Value:T37 Operator:T45
+T45	Eq-Operator 150 157	or more
+A7	Eq-Operator-Value T45 GTEQ
+T46	Criteria-Count 169 187	two of these three
+E8	Criteria-Count:T46 Min-Value:E10 Max-Value:E11 Criteria:E13 Criteria2:E15 Criteria3:E9
+T47	Eq-Comparison 169 172	two
+E10	Eq-Comparison:T47 Value:T48
+T48	Eq-Value 169 172	two
+T49	Eq-Comparison 182 187	three
+E11	Eq-Comparison:T49 Value:T50
+T50	Eq-Value 182 187	three
+T51	Condition 194 213	sedentary lifestyle
+E13	Condition:T51 Name:T52
+T52	Condition-Name 194 213	sedentary lifestyle
+T53	Condition 215 224	poor diet
+E15	Condition:T53 Name:T54
+T54	Condition-Name 215 224	poor diet
+T55	Or 225 228	and
+E17	Or:T55 Arg:E15 Arg2:E9
+T56	Condition 417 424	disease
+E19	Condition:T56 Name:T57
+T57	Condition-Name 417 424	disease
+T58	Stability 434 440	affect
+A8	Stability-Value T58 change
+T59	Condition 445 467	central nervous system
+E21	Condition:T59 Name:T60 Stability:T58
+T60	Condition-Name 445 467	central nervous system
+T61	Assertion 430 433	may
+E23	Assertion:T61 Asserted:T58
+A9	Assertion-Type-Value E23 hypothetical
+R3	Caused-By Arg1:T58 Arg2:E19	
+T62	Modifier 469 474	brain
+E25	Modifier:T62 Modifies:T13
+R4	Example-Of Arg1:E12 Arg2:E21	
+T63	Condition 486 508	traumatic brain injury
+E27	Condition:T63 Name:T64
+T64	Condition-Name 486 508	traumatic brain injury
+R5	Example-Of Arg1:E27 Arg2:E21	
+R6	Example-Of Arg1:E14 Arg2:E21	
+T65	Condition 537 558	psychiatric diagnoses
+E29	Condition:T65 Name:T66
+T66	Condition-Name 537 558	psychiatric diagnoses
+T67	Severity 562 567	acute
+A10	Severity-Value T67 severe
+T68	Or 559 561	or
+E34	Or:T68 Arg:E29 Arg2:E20
+T69	Modifier 599 609	dependence
+E35	Modifier:T69 Modifies:T19
+T26	Modifier 613 618	abuse
+E26	Modifier:T26 Modifies:T19
+T27	Or 610 612	or
+E36	Or:T27 Arg:E35 Arg2:E26
+R7	Example-Of Arg1:E18 Arg2:E20	
+T70	Condition 631 644	schizophrenia
+E37	Condition:T70 Name:T71 Temporality:E33
+T71	Condition-Name 631 644	schizophrenia
+T72	Other 648 653	other
+E38	Other:T72 Is-Other:E22
+R8	Example-Of Arg1:E37 Arg2:E20	
+R9	Example-Of Arg1:E22 Arg2:E20	
+T73	Exception 682 692	except for
+E39	Exception:T73 From:E20 Except:E24 Except2:E16
+T74	Or 710 712	or
+E40	Or:T74 Arg:E24 Arg2:E16
+T75	Or 770 772	or
+E41	Or:T75 Arg:E28 Arg2:E30
+T76	Condition 830 837	Suicide
+E42	Condition:T76 Name:T77
+T77	Condition-Name 830 837	Suicide
+T78	Risk 838 842	risk
+E43	Risk:T78 Risk-For:E42

@@ -1,0 +1,57 @@
+T1	Procedure 76 80	open
+T2	Procedure-Name 76 80	open
+E1	Procedure:T1 Name:T2
+T3	Procedure 839 864	renal replacement therapy
+T4	Procedure-Name 839 864	renal replacement therapy
+E3	Procedure:T3 Name:T4
+T5	Condition 481 502	prostatic hypertrophy
+T6	Condition-Name 481 502	prostatic hypertrophy
+E5	Condition:T5 Name:T6
+T7	Procedure 1055 1073	inhalation therapy
+T8	Procedure-Name 1055 1073	inhalation therapy
+E7	Procedure:T7 Name:T8
+T9	Condition 805 822	renal dysfunction
+T10	Condition-Name 805 822	renal dysfunction
+E9	Condition:T9 Name:T10
+T11	Condition 934 946	acute stroke
+T12	Condition-Name 934 946	acute stroke
+E11	Condition:T11 Name:T12
+T13	Condition 680 690	Inhalation
+T14	Condition-Name 680 690	Inhalation
+E13	Condition:T13 Name:T14
+T15	Condition 506 514	glaucoma
+T16	Condition-Name 506 514	glaucoma
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 306 307	≥
+A1	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 405 406	≥
+A2	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 444 445	≤
+A3	Eq-Operator-Value T19 LTEQ
+T20	Eq-Operator 634 635	≥
+A4	Eq-Operator-Value T20 GTEQ
+T21	Eq-Operator 658 664	within
+A5	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 760 766	within
+A6	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 947 953	within
+A7	Eq-Operator-Value T23 GTEQ
+T24	Eq-Operator 1143 1149	within
+A8	Eq-Operator-Value T24 GTEQ
+T25	Eq-Temporal-Unit 35 40	years
+A9	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Temporal-Unit 960 966	months
+A10	Eq-Temporal-Unit-Value T26 month
+T27	Age 25 28	Age
+E16	Age:T27
+T28	Eq-Value 32 34	50
+T29	Eq-Value 188 189	2
+T30	Eq-Value 307 309	45
+T31	Eq-Value 446 448	24
+T32	Eq-Value 636 637	3
+T33	Eq-Comparison 306 309	≥45
+E17	Eq-Comparison:T33 Operator:T17 Value:T30
+T34	Eq-Comparison 444 448	≤ 24
+E18	Eq-Comparison:T34 Operator:T19 Value:T31
+T35	Eq-Comparison 634 637	≥ 3
+E19	Eq-Comparison:T35 Operator:T20 Value:T32

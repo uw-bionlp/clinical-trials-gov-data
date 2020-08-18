@@ -1,0 +1,18 @@
+T1	Procedure 79 93	reconstruction
+T2	Procedure-Name 79 93	reconstruction
+E1	Procedure:T1 Name:T2
+T3	Procedure 56 65	allograft
+T4	Procedure-Name 56 65	allograft
+E3	Procedure:T3 Name:T4
+T5	Procedure 69 78	autograft
+T6	Procedure-Name 69 78	autograft
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 131 132	>
+A1	Eq-Operator-Value T7 GT
+T8	Eq-Temporal-Unit 135 140	years
+A2	Eq-Temporal-Unit-Value T8 year
+T9	Age 141 144	old
+E6	Age:T9
+T10	Eq-Value 132 134	18
+T11	Eq-Comparison 131 140	>18 years
+E7	Eq-Comparison:T11 Operator:T7 Temporal-Unit:T8 Value:T10

@@ -1,0 +1,69 @@
+T1	Procedure 81 104	total knee arthroplasty
+T2	Procedure-Name 81 104	total knee arthroplasty
+E1	Procedure:T1 Name:T2
+T3	Condition 201 221	rheumatoid arthritis
+T4	Condition-Name 201 221	rheumatoid arthritis
+E3	Condition:T3 Name:T4
+T5	Condition 149 163	osteoarthritis
+T6	Condition-Name 149 163	osteoarthritis
+E5	Condition:T5 Name:T6
+T7	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T7 adult
+T8	Condition 513 539	Allergy to tranexamic acid
+T9	Condition-Name 513 539	Allergy to tranexamic acid
+E8	Condition:T8 Name:T9
+T10	Condition 606 628	deep venous thrombosis
+T11	Condition-Name 606 628	deep venous thrombosis
+E10	Condition:T10 Name:T11
+T12	Procedure 1050 1071	anticoagulant therapy
+T13	Procedure-Name 1050 1071	anticoagulant therapy
+E12	Procedure:T12 Name:T13
+T14	Condition 776 795	atrial fibrillation
+T15	Condition-Name 776 795	atrial fibrillation
+E14	Condition:T14 Name:T15
+T16	Condition 653 669	renal impairment
+T17	Condition-Name 653 669	renal impairment
+E16	Condition:T16 Name:T17
+T18	Procedure 1105 1117	fibrinolytic
+T19	Procedure-Name 1105 1117	fibrinolytic
+E18	Procedure:T18 Name:T19
+T20	Condition 1181 1193	coagulopathy
+T21	Condition-Name 1181 1193	coagulopathy
+E20	Condition:T20 Name:T21
+T22	Life-Stage-And-Gender 966 973	females
+A2	Life-Stage-And-Gender-Type T22 male
+T23	Condition 924 930	anemia
+T24	Condition-Name 924 930	anemia
+E23	Condition:T23 Name:T24
+T25	Life-Stage-And-Gender 990 995	males
+A3	Life-Stage-And-Gender-Type T25 male
+T26	Eq-Operator 954 955	<
+A4	Eq-Operator-Value T26 LT
+T27	Eq-Operator 978 979	<
+A5	Eq-Operator-Value T27 LT
+T28	Eq-Operator 1072 1078	within
+A6	Eq-Operator-Value T28 GTEQ
+T29	Eq-Operator 1245 1246	<
+A7	Eq-Operator-Value T29 LT
+T30	Eq-Operator 1296 1297	>
+A8	Eq-Operator-Value T30 GT
+T31	Eq-Operator 1351 1352	>
+A9	Eq-Operator-Value T31 GT
+T32	Eq-Temporal-Unit 1084 1088	days
+A10	Eq-Temporal-Unit-Value T32 day
+T33	Eq-Unit 1254 1257	mm3
+T34	Eq-Value 955 957	11
+T35	Eq-Value 979 981	12
+T36	Eq-Value 1246 1249	150
+T37	Eq-Value 1297 1298	1
+T38	Eq-Value 1352 1353	1
+T39	Eq-Comparison 954 957	<11
+E24	Eq-Comparison:T39 Operator:T26 Value:T34
+T40	Eq-Comparison 978 981	<12
+E25	Eq-Comparison:T40 Operator:T27 Value:T35
+T41	Eq-Comparison 1245 1249	<150
+E26	Eq-Comparison:T41 Operator:T29 Value:T36
+T42	Eq-Comparison 1296 1298	>1
+E27	Eq-Comparison:T42 Operator:T30 Value:T37
+T43	Eq-Comparison 1351 1353	>1
+E28	Eq-Comparison:T43 Operator:T31 Value:T38

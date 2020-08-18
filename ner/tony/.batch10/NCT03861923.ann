@@ -1,0 +1,48 @@
+T1	Condition 487 509	cervical radiculopathy
+T2	Condition-Name 487 509	cervical radiculopathy
+E1	Condition:T1 Name:T2
+T3	Condition 747 761	osteoarthritis
+T4	Condition-Name 747 761	osteoarthritis
+E3	Condition:T3 Name:T4
+T5	Procedure 806 818	dry needling
+T6	Procedure-Name 806 818	dry needling
+E5	Procedure:T5 Name:T6
+T7	Condition 511 522	radiculitis
+T8	Condition-Name 511 522	radiculitis
+E7	Condition:T7 Name:T8
+T9	Procedure 822 833	acupuncture
+T10	Procedure-Name 822 833	acupuncture
+E9	Procedure:T9 Name:T10
+T11	Language 433 440	English
+T12	Eq-Operator 350 362	greater than
+A1	Eq-Operator-Value T12 GT
+T13	Eq-Operator 834 849	within the past
+A2	Eq-Operator-Value T13 LTEQ
+T14	Eq-Operator 994 1003	less than
+A3	Eq-Operator-Value T14 LT
+T15	Eq-Operator 1011 1023	greater than
+A4	Eq-Operator-Value T15 GT
+T16	Eq-Temporal-Unit 305 310	years
+A5	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Temporal-Unit 852 858	months
+A6	Eq-Temporal-Unit-Value T17 month
+T18	Age 292 295	Age
+E10	Age:T18
+T19	Eq-Operator 299 301	to
+A7	Eq-Operator-Value T19 BETWEEN
+T20	Eq-Value 262 264	45
+T21	Eq-Value 276 278	90
+T22	Eq-Value 296 298	18
+T23	Eq-Value 302 304	65
+T24	Eq-Value 375 376	2
+T25	Eq-Value 850 851	6
+T26	Eq-Value 1004 1006	10
+T27	Eq-Value 1024 1026	90
+T28	Eq-Comparison 834 858	within the past 6 months
+E11	Eq-Comparison:T28 Operator:T13 Temporal-Unit:T17 Value:T25
+T29	Eq-Comparison 994 1006	less than 10
+E12	Eq-Comparison:T29 Operator:T14 Value:T26
+T30	Eq-Comparison 1011 1026	greater than 90
+E13	Eq-Comparison:T30 Operator:T15 Value:T27
+T31	Eq-Comparison 296 301	18 to
+E14	Eq-Comparison:T31 Operator:T19 Value:T22

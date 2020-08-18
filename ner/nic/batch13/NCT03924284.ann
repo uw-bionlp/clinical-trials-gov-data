@@ -1,0 +1,17 @@
+T1	Location 75 107	Queen Mary Hospital of Hong Kong
+A1	Location-Value T1 hospital
+T2	Observation-Specimen 25 39	Nasopharyngeal
+T3	Observation-Specimen 43 49	saliva
+T4	Observation 25 39	Nasopharyngeal
+E1	Observation:T4 Specimen:T2
+T5	Observation 43 49	saliva
+E2	Observation:T5 Specimen:T3
+T6	Or 40 42	or
+E3	Or:T6 Arg:E1 Arg2:E2
+T7	Observation 124 141	influenza A virus
+E4	Observation:T7 Name:T8 Location:T10 Location2:T9
+T8	Observation-Name 124 141	influenza A virus
+A2	Observation-Type-Value T8 lab
+T9	Location 233 242	Hong Kong
+T10	Location 189 229	Public Health Laboratory Services Branch
+A3	Location-Value T10 clinic

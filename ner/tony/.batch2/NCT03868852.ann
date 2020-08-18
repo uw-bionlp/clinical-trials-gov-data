@@ -1,0 +1,83 @@
+T1	Condition 187 204	measurable lesion
+T2	Condition-Name 187 204	measurable lesion
+E1	Condition:T1 Name:T2
+T3	Procedure 346 364	surgical treatment
+T4	Procedure-Name 346 364	surgical treatment
+E3	Procedure:T3 Name:T4
+T5	Procedure 293 305	radiotherapy
+T6	Procedure-Name 293 305	radiotherapy
+E5	Procedure:T5 Name:T6
+T7	Procedure 329 341	chemotherapy
+T8	Procedure-Name 329 341	chemotherapy
+E7	Procedure:T7 Name:T8
+T9	Procedure 380 398	anticancer therapy
+T10	Procedure-Name 380 398	anticancer therapy
+E9	Procedure:T9 Name:T10
+T11	Procedure 421 433	radiotherapy
+T12	Procedure-Name 421 433	radiotherapy
+E11	Procedure:T11 Name:T12
+T13	Procedure 583 600	blood transfusion
+T14	Procedure-Name 583 600	blood transfusion
+E13	Procedure:T13 Name:T14
+T15	Procedure 784 787	ALT
+T16	Procedure-Name 784 787	ALT
+E15	Procedure:T15 Name:T16
+T17	Language 792 795	AST
+T18	Eq-Operator 42 43	≥
+A1	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 50 51	≤
+A2	Eq-Operator-Value T19 LTEQ
+T20	Eq-Operator 601 607	within
+A3	Eq-Operator-Value T20 LTEQ
+T21	Eq-Operator 631 632	>
+A4	Eq-Operator-Value T21 GT
+T22	Eq-Operator 644 645	>
+A5	Eq-Operator-Value T22 GT
+T23	Eq-Operator 661 662	>
+A6	Eq-Operator-Value T23 GT
+T24	Eq-Operator 742 743	<
+A7	Eq-Operator-Value T24 LT
+T25	Eq-Operator 796 797	<
+A8	Eq-Operator-Value T25 LT
+T26	Eq-Operator 819 820	<
+A9	Eq-Operator-Value T26 LT
+T27	Eq-Operator 860 861	>
+A10	Eq-Operator-Value T27 GT
+T28	Eq-Temporal-Unit 55 60	years
+A11	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Temporal-Unit 119 125	months
+A12	Eq-Temporal-Unit-Value T29 month
+T30	Eq-Temporal-Unit 621 625	days
+A13	Eq-Temporal-Unit-Value T30 day
+T31	Age 64 67	age
+E16	Age:T31
+T32	Eq-Value 44 45	3
+T33	Eq-Value 52 54	18
+T34	Eq-Value 117 118	3
+T35	Eq-Value 160 161	1
+T36	Eq-Value 618 620	14
+T37	Eq-Value 632 634	90
+T38	Eq-Value 645 646	1
+T39	Eq-Value 662 664	80
+T40	Eq-Value 744 745	1
+T41	Eq-Value 798 799	2
+T42	Eq-Value 821 822	1
+T43	Eq-Value 862 864	50
+T44	Eq-Comparison 42 45	≥ 3
+E17	Eq-Comparison:T44 Operator:T18 Value:T32
+T45	Eq-Comparison 50 60	≤ 18 years
+E18	Eq-Comparison:T45 Operator:T19 Temporal-Unit:T28 Value:T33
+T46	Eq-Comparison 631 634	>90
+E19	Eq-Comparison:T46 Operator:T21 Value:T37
+T47	Eq-Comparison 644 646	>1
+E20	Eq-Comparison:T47 Operator:T22 Value:T38
+T48	Eq-Comparison 661 664	>80
+E21	Eq-Comparison:T48 Operator:T23 Value:T39
+T49	Eq-Comparison 742 745	< 1
+E22	Eq-Comparison:T49 Operator:T24 Value:T40
+T50	Eq-Comparison 796 799	< 2
+E23	Eq-Comparison:T50 Operator:T25 Value:T41
+T51	Eq-Comparison 819 822	< 1
+E24	Eq-Comparison:T51 Operator:T26 Value:T42
+T52	Eq-Comparison 860 864	> 50
+E25	Eq-Comparison:T52 Operator:T27 Value:T43

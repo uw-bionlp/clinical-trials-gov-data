@@ -1,0 +1,110 @@
+T1	Condition 266 279	liver disease
+T2	Condition-Name 266 279	liver disease
+E1	Condition:T1 Name:T2 Severity:T41
+T3	Condition 236 243	disease
+T4	Condition-Name 236 243	disease
+E3	Condition:T3 Name:T4 Severity:T39
+T5	Procedure 442 457	gastric surgery
+T6	Procedure-Name 442 457	gastric surgery
+E5	Procedure:T5 Name:T6 Temporality:E13
+T7	Condition 173 179	Anemia
+T8	Condition-Name 173 179	Anemia
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 149 150	<
+A1	Eq-Operator-Value T9 LT
+T10	Eq-Operator 157 158	>
+A2	Eq-Operator-Value T10 GT
+T11	Eq-Operator 204 205	<
+A3	Eq-Operator-Value T11 LT
+T12	Eq-Temporal-Unit 162 167	years
+A4	Eq-Temporal-Unit-Value T12 year
+T13	Age 145 148	Age
+E8	Age:T13 Eq-Comparison:E9 Eq-Comparison2:E10
+T14	Eq-Value 151 153	20
+T15	Eq-Value 159 161	70
+T16	Eq-Value 206 208	10
+T17	Eq-Comparison 149 153	< 20
+E9	Eq-Comparison:T17 Operator:T9 Value:T14
+T18	Eq-Comparison 157 167	> 70 years
+E10	Eq-Comparison:T18 Operator:T10 Temporal-Unit:T12 Value:T15
+T19	Eq-Comparison 204 213	< 10 g/dL
+E11	Eq-Comparison:T19 Operator:T11 Value:T16 Unit:T37 Unit2:T38
+T20	Eq-Comparison 393 400	History
+E12	Eq-Comparison:T20 Temporal-Period:T21
+T21	Eq-Temporal-Period 393 400	History
+A5	Eq-Temporal-Period-Value T21 past
+T22	Eq-Comparison 431 438	History
+E13	Eq-Comparison:T22 Temporal-Period:T23
+T23	Eq-Temporal-Period 431 438	History
+A6	Eq-Temporal-Period-Value T23 past
+T24	Eq-Comparison 470 477	history
+E14	Eq-Comparison:T24 Temporal-Period:T25
+T25	Eq-Temporal-Period 470 477	history
+A7	Eq-Temporal-Period-Value T25 past
+T26	Procedure 25 36	Gastroscopy
+E2	Procedure:T26 Name:T27
+T27	Procedure-Name 25 36	Gastroscopy
+T28	Assertion 37 43	can be
+E4	Assertion:T28 Asserted:E2
+A8	Assertion-Type-Value E4 hypothetical
+T29	Observation 87 103	serum pepsinogen
+E6	Observation:T29 Name:T30
+T30	Observation-Name 87 103	serum pepsinogen
+A9	Observation-Type-Value T30 lab
+T31	Observation 59 76	Serologic markers
+E15	Observation:T31 Name:T32
+T32	Observation-Name 59 76	Serologic markers
+A10	Observation-Type-Value T32 lab
+R1	Example-Of Arg1:E6 Arg2:E15	
+T33	Assertion 104 110	can be
+E16	Assertion:T33 Asserted:E15
+A11	Assertion-Type-Value E16 hypothetical
+T34	Or 154 156	or
+E17	Or:T34 Arg:E9 Arg2:E10
+T35	Observation 181 203	serum hemoglobin level
+E18	Observation:T35 Name:T36 Eq-Comparison:E11
+T36	Observation-Name 181 203	serum hemoglobin level
+A12	Observation-Type-Value T36 lab
+T37	Eq-Unit 209 210	g
+T38	Eq-Unit 211 213	dL
+R2	Equivalent-To Arg1:E18 Arg2:E7	
+T39	Severity 220 226	Severe
+A13	Severity-Value T39 severe
+T40	Modifier 227 235	systemic
+E19	Modifier:T40 Modifies:E3
+T41	Severity 249 257	Advanced
+A14	Severity-Value T41 severe
+T42	Modifier 258 265	chronic
+E20	Modifier:T42 Modifies:E1
+T43	Drug 300 311	medications
+E21	Drug:T43 Temporality:E24
+T44	Drug 323 345	proton pump inhibitors
+E22	Drug:T44 Name:T45
+T45	Drug-Name 323 345	proton pump inhibitors
+R3	Example-Of Arg1:E22 Arg2:E21	
+T46	Drug 347 371	H2- receptor antagonists
+E23	Drug:T46 Name:T47
+T47	Drug-Name 347 371	H2- receptor antagonists
+R4	Example-Of Arg1:E23 Arg2:E21	
+T48	Eq-Comparison 285 288	Use
+E24	Eq-Comparison:T48 Temporal-Period:T49
+T49	Eq-Temporal-Period 285 288	Use
+A15	Eq-Temporal-Period-Value T49 present
+T50	Drug 376 387	antibiotics
+E25	Drug:T50 Name:T51
+T51	Drug-Name 376 387	antibiotics
+T52	Or 373 375	or
+E26	Or:T52 Arg:E23 Arg2:E25
+R5	Example-Of Arg1:E25 Arg2:E21	
+T53	Organism 404 413	H. pylori
+E27	Organism:T53 Name:T54
+T54	Organism-Name 404 413	H. pylori
+T55	Condition 414 425	eradication
+E28	Condition:T55 Name:T56 Temporality:E12
+T56	Condition-Name 414 425	eradication
+R6	Caused-By Arg1:E28 Arg2:E27	
+T57	Condition 504 512	bleeding
+E29	Condition:T57 Name:T58 Temporality:E14
+T58	Condition-Name 504 512	bleeding
+T59	Modifier 481 503	upper gastrointestinal
+E30	Modifier:T59 Modifies:T58

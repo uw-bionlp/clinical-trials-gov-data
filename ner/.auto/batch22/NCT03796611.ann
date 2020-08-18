@@ -1,0 +1,42 @@
+T1	Condition 328 348	neurological disease
+T2	Condition-Name 328 348	neurological disease
+E1	Condition:T1 Name:T2
+T3	Procedure 565 576	transfusion
+T4	Procedure-Name 565 576	transfusion
+E3	Procedure:T3 Name:T4
+T5	Condition 747 756	pregnancy
+T6	Condition-Name 747 756	pregnancy
+E5	Condition:T5 Name:T6
+T7	Procedure 186 193	therapy
+T8	Procedure-Name 186 193	therapy
+E7	Procedure:T7 Name:T8
+T9	Procedure 481 488	therapy
+T10	Procedure-Name 481 488	therapy
+E9	Procedure:T9 Name:T10
+T11	Procedure 714 721	therapy
+T12	Procedure-Name 714 721	therapy
+E11	Procedure:T11 Name:T12
+T13	Eq-Operator 102 111	less than
+A1	Eq-Operator-Value T13 LT
+T14	Eq-Temporal-Unit 142 147	years
+A2	Eq-Temporal-Unit-Value T14 year
+T15	Eq-Temporal-Unit 419 424	years
+A3	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Temporal-Unit 652 657	years
+A4	Eq-Temporal-Unit-Value T16 year
+T17	Age 148 151	old
+E12	Age:T17
+T18	Age 425 428	old
+E13	Age:T18
+T19	Age 658 661	old
+E14	Age:T19
+T20	Eq-Value 61 65	2017
+T21	Eq-Value 112 113	1
+T22	Eq-Value 132 134	18
+T23	Eq-Value 139 141	60
+T24	Eq-Value 409 411	18
+T25	Eq-Value 416 418	60
+T26	Eq-Value 642 644	18
+T27	Eq-Value 649 651	60
+T28	Eq-Comparison 102 113	less than 1
+E15	Eq-Comparison:T28 Operator:T13 Value:T21

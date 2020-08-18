@@ -1,0 +1,69 @@
+T1	Procedure 306 325	regional anesthesia
+T2	Procedure-Name 306 325	regional anesthesia
+E1	Procedure:T1 Name:T2
+T3	Procedure 195 211	thoracic surgery
+T4	Procedure-Name 195 211	thoracic surgery
+E3	Procedure:T3 Name:T4
+T5	Condition 213 237	Renal or hepatic failure
+T6	Condition-Name 213 237	Renal or hepatic failure
+E5	Condition:T5 Name:T6
+T7	Condition 140 154	morbid obesity
+T8	Condition-Name 140 154	morbid obesity
+E7	Condition:T7 Name:T8
+T9	Procedure 95 106	thoracotomy
+T10	Procedure-Name 95 106	thoracotomy
+E9	Procedure:T9 Name:T10
+T11	Life-Stage-And-Gender 34 40	Female
+A1	Life-Stage-And-Gender-Type T11 male
+T12	Condition 239 245	anemia
+T13	Condition-Name 239 245	anemia
+E12	Condition:T12 Name:T13
+T14	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T14 male
+T17	Observation 155 158	BMI
+T18	Observation-Name 155 158	BMI
+E17	Observation:T17 Name:T18
+A3	Observation-Type-Value T18 vital
+T19	Eq-Operator 136 137	>
+A4	Eq-Operator-Value T19 GT
+T20	Eq-Operator 158 159	>
+A5	Eq-Operator-Value T20 GT
+T21	Eq-Temporal-Unit 60 65	years
+A6	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Operator 72 73	-
+A7	Eq-Operator-Value T22 BETWEEN
+T23	Eq-Value 50 52	18
+T24	Eq-Value 57 59	80
+T25	Eq-Value 71 72	1
+T26	Eq-Value 73 74	3
+T27	Eq-Value 137 138	3
+T28	Eq-Value 159 161	40
+T29	Eq-Comparison 136 138	>3
+E18	Eq-Comparison:T29 Operator:T19 Value:T27
+T30	Eq-Comparison 158 161	>40
+E19	Eq-Comparison:T30 Operator:T20 Value:T28
+T31	Eq-Comparison 71 73	1-
+E20	Eq-Comparison:T31 Operator:T22 Value:T25
+T32	Eq-Comparison 42 65	between 18 and 80 years
+E2	Eq-Comparison:T32 Operator:T33 Value:T23 Value2:T24 Temporal-Unit:T21
+T33	Eq-Operator 42 49	between
+A8	Eq-Operator-Value T33 BETWEEN
+T15	Modifier 90 94	open
+E4	Modifier:T15 Modifies:E9
+T16	Modifier 183 194	ipsilateral
+E6	Modifier:T16 
+R1	Abbrev-Of Arg1:E6 Arg2:E3	
+T34	Modifier 172 179	cardiac
+E8	Modifier:T34 Modifies:E3
+T35	Or 180 182	or
+E10	Or:T35 Arg:E8 Arg2:E6
+T36	Allergy 247 275	allergy to local anesthetics
+E11	Allergy:T36 
+T37	Drug 258 275	local anesthetics
+E13	Drug:T37 Name:T38
+T38	Drug-Name 258 275	local anesthetics
+T39	Contraindication 277 294	contraindications
+E14	Contraindication:T39 Contraindicates:E1
+T40	Condition 363 375	complication
+E15	Condition:T40 
+T41	Condition-Name 363 375	complication

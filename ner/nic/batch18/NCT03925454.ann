@@ -1,0 +1,246 @@
+T1	Procedure 35 38	HHD
+T2	Procedure-Name 35 38	HHD
+E1	Procedure:T1 Name:T2 Temporality:E6
+T3	Condition 507 530	Acute Coronary Syndrome
+T4	Condition-Name 507 530	Acute Coronary Syndrome
+E3	Condition:T3 Name:T4
+T5	Procedure 392 411	peritoneal dialysis
+T6	Procedure-Name 392 411	peritoneal dialysis
+E5	Procedure:T5 Name:T6 Stability:T9 Temporality:E38
+T7	Procedure 355 378	Living donor transplant
+T8	Procedure-Name 355 378	Living donor transplant
+E7	Procedure:T7 Name:T8 Temporality:E38
+T11	Condition 532 535	ACS
+T12	Condition-Name 532 535	ACS
+E11	Condition:T11 Name:T12 Temporality:E41
+T13	Condition 865 894	obstructive pulmonary disease
+T14	Condition-Name 865 894	obstructive pulmonary disease
+E13	Condition:T13 Name:T14 Severity:T112
+T15	Condition 752 779	Symptomatic aortic stenosis
+T16	Condition-Name 752 779	Symptomatic aortic stenosis
+E15	Condition:T15 Name:T16
+T17	Condition 655 675	cardiac dysrhythmias
+T18	Condition-Name 655 675	cardiac dysrhythmias
+E17	Condition:T17 Name:T18 Temporality:E31
+T19	Condition 932 952	pulmonary infarction
+T20	Condition-Name 932 952	pulmonary infarction
+E19	Condition:T19 Name:T20 Temporality:E59
+T21	Condition 1147 1167	swollen lymph glands
+T22	Condition-Name 1147 1167	swollen lymph glands
+E21	Condition:T21 Name:T22
+T23	Condition 1100 1109	infection
+T24	Condition-Name 1100 1109	infection
+E23	Condition:T23 Name:T24 Severity:T126
+T25	Condition 992 1009	acute myocarditis
+T26	Condition-Name 992 1009	acute myocarditis
+E25	Condition:T25 Name:T26 Temporality:E32
+T27	Condition 826 839	Heart failure
+T28	Condition-Name 826 839	Heart failure
+E27	Condition:T27 Name:T28 Stage:E55
+T29	Condition 1013 1025	pericarditis
+T30	Condition-Name 1013 1025	pericarditis
+E29	Condition:T29 Name:T30
+T31	Eq-Operator 75 84	less than
+A1	Eq-Operator-Value T31 LT
+T33	Eq-Operator 537 543	within
+A3	Eq-Operator-Value T33 LTEQ
+T34	Eq-Operator 1207 1216	less than
+A4	Eq-Operator-Value T34 LT
+T35	Eq-Temporal-Unit 64 70	months
+A5	Eq-Temporal-Unit-Value T35 month
+T36	Eq-Temporal-Unit 88 94	months
+A6	Eq-Temporal-Unit-Value T36 month
+T37	Eq-Temporal-Unit 555 561	months
+A7	Eq-Temporal-Unit-Value T37 month
+T38	Eq-Temporal-Unit 967 973	months
+A8	Eq-Temporal-Unit-Value T38 month
+T39	Eq-Temporal-Unit 1224 1230	months
+A9	Eq-Temporal-Unit-Value T39 month
+T40	Eq-Value 62 63	3
+T41	Eq-Value 85 87	36
+T42	Eq-Value 553 554	3
+T43	Eq-Value 965 966	3
+T44	Eq-Comparison 75 94	less than 36 months
+E30	Eq-Comparison:T44 Operator:T31 Temporal-Unit:T36 Value:T41
+T45	Eq-Comparison 634 641	current
+E31	Eq-Comparison:T45 Temporal-Period:T46
+T46	Eq-Temporal-Period 634 641	current
+A10	Eq-Temporal-Period-Value T46 present
+T47	Eq-Comparison 984 991	Current
+E32	Eq-Comparison:T47 Temporal-Period:T48
+T48	Eq-Temporal-Period 984 991	Current
+A11	Eq-Temporal-Period-Value T48 present
+T51	Procedure 42 47	ICHDF
+E2	Procedure:T51 Name:T52 Duration:E8
+T52	Procedure-Name 42 47	ICHDF
+T53	Or 39 41	or
+E4	Or:T53 Arg:E1 Arg2:E2
+T54	Eq-Comparison 25 34	Receiving
+E6	Eq-Comparison:T54 Temporal-Period:T55
+T55	Eq-Temporal-Period 25 34	Receiving
+A13	Eq-Temporal-Period-Value T55 present
+T56	Eq-Comparison 52 70	more than 3 months
+E8	Eq-Comparison:T56 Operator:T57 Temporal-Unit:T35 Value:T40
+T57	Eq-Operator 52 61	more than
+T58	And 71 74	and
+E10	And:T58 Arg:E8 Arg2:E30
+T59	Observation 101 112	Haemoglobin
+E12	Observation:T59 Name:T60 Eq-Comparison:E14
+T60	Observation-Name 101 112	Haemoglobin
+A14	Observation-Type-Value T60 lab
+T61	Eq-Comparison 113 144	equal to or greater than100 g/L
+E14	Eq-Comparison:T61 Operator:T62 Value:T32 Unit:T63 Per:T64
+T62	Eq-Operator 113 132	equal to or greater
+A15	Eq-Operator-Value T62 GTEQ
+T32	Eq-Value 137 140	100
+T63	Eq-Unit 141 142	g
+T64	Eq-Unit 143 144	L
+T65	Study 148 157	enrolment
+E16	Study:T65 
+T66	Temporal-Connection 145 147	at
+E18	Temporal-Connection:T66 Arg:E12 Arg2:E16
+A2	Temporal-Connection-Type-Value E18 during
+T67	Procedure 215 226	assessments
+E20	Procedure:T67 Name:T68
+T68	Procedure-Name 215 226	assessments
+T69	Procedure 227 232	tests
+E22	Procedure:T69 Name:T70
+T70	Procedure-Name 227 232	tests
+T71	Or 226 227	/
+E24	Or:T71 Arg:E20 Arg2:E22
+T72	Study 209 214	study
+E26	Study:T72 Study-Of:E20
+T73	Assertion 164 171	Willing
+E28	Assertion:T73 Asserted:E20
+T74	Assertion 187 191	able
+E34	Assertion:T74 Asserted:E20
+A16	Assertion-Type-Value E34 hypothetical
+A17	Assertion-Type-Value E28 hypothetical
+T75	And 172 175	and
+E35	And:T75 Arg:E28 Arg2:E34
+T76	Assertion 238 245	Willing
+E36	Assertion:T76 Asserted:E37
+A18	Assertion-Type-Value E36 hypothetical
+T77	Observation 257 262	blood
+E37	Observation:T77 Specimen:T78
+T78	Observation-Specimen 257 262	blood
+T9	Stability 382 388	change
+A19	Stability-Value T9 change
+T10	Or 379 381	or
+E9	Or:T10 Arg:E7 Arg2:T9
+T79	Eq-Comparison 412 419	planned
+E38	Eq-Comparison:T79 Temporal-Period:T80
+T80	Eq-Temporal-Period 412 419	planned
+A20	Eq-Temporal-Period-Value T80 future
+T81	Procedure 425 445	Physical assessments
+E39	Procedure:T81 Name:T82
+T82	Procedure-Name 425 445	Physical assessments
+T83	Contraindication 446 461	contraindicated
+E40	Contraindication:T83 Contraindicates:E39
+R1	Abbrev-Of Arg1:E11 Arg2:E3	
+T84	Eq-Comparison 537 561	within the last 3 months
+E41	Eq-Comparison:T84 Operator:T33 Temporal-Period:T85 Value:T42 Temporal-Unit:T37
+T85	Eq-Temporal-Period 548 552	last
+A21	Eq-Temporal-Period-Value T85 past
+T86	Modifier 563 568	chest
+E42	Modifier:T86 Modifies:T88
+T87	Condition 569 573	pain
+E43	Condition:T87 Name:T88
+T88	Condition-Name 569 573	pain
+T89	Procedure 575 578	ECG
+E44	Procedure:T89 Name:T90 Stability:T91
+T90	Procedure-Name 575 578	ECG
+T91	Stability 579 586	changes
+A22	Stability-Value T91 change
+T92	Observation 598 607	biomarker
+E45	Observation:T92 Name:T93 Polarity:T94
+T93	Observation-Name 598 607	biomarker
+T94	Polarity 608 617	elevation
+A23	Polarity-Value T94 high
+T95	Or 587 589	or
+E46	Or:T95 Arg2:E45 Arg:T91
+R2	Example-Of Arg1:E43 Arg2:E11	
+R3	Example-Of Arg1:E44 Arg2:E11	
+R4	Example-Of Arg1:E45 Arg2:E11	
+T96	Modifier 642 654	uncontrolled
+E47	Modifier:T96 Modifies:E17
+T49	Assertion 684 692	symptoms
+E33	Assertion:T49 Asserted:E17
+A12	Assertion-Type-Value E33 possible
+T50	Modifier 694 699	chest
+E48	Modifier:T50 Modifies:T98
+T97	Condition 700 704	pain
+E49	Condition:T97 Name:T98
+T98	Condition-Name 700 704	pain
+R5	Example-Of Arg1:E49 Arg2:E17	
+T99	Condition 706 718	palpitations
+E50	Condition:T99 Name:T100
+T100	Condition-Name 706 718	palpitations
+R6	Example-Of Arg1:E50 Arg2:E17	
+T101	Condition 720 727	syncope
+E51	Condition:T101 Name:T102
+T102	Condition-Name 720 727	syncope
+R7	Example-Of Arg1:E51 Arg2:E17	
+T103	Condition 731 740	dizziness
+E52	Condition:T103 Name:T104
+T104	Condition-Name 731 740	dizziness
+T105	Or 728 730	or
+E53	Or:T105 Arg:E51 Arg2:E52
+R8	Example-Of Arg1:E52 Arg2:E17	
+T106	Condition 790 816	New York Heart Association
+E54	Condition:T106 Name:T107 Stage:E55
+T107	Condition-Name 790 816	New York Heart Association
+T108	Eq-Comparison 817 825	grade IV
+E55	Eq-Comparison:T108 Unit:T109 Value:T110
+T109	Eq-Unit 817 822	grade
+T110	Eq-Value 823 825	IV
+T111	Modifier 857 864	chronic
+E56	Modifier:T111 Modifies:T14
+T112	Severity 850 856	Severe
+A24	Severity-Value T112 severe
+T113	Condition 911 928	pulmonary embolus
+E57	Condition:T113 Name:T114 Severity:T115
+T114	Condition-Name 911 928	pulmonary embolus
+T115	Severity 905 910	Acute
+A25	Severity-Value T115 severe
+T116	Or 929 931	or
+E58	Or:T116 Arg:E57 Arg2:E19
+T117	Eq-Comparison 960 973	last 3 months
+E59	Eq-Comparison:T117 Temporal-Period:T118 Value:T43 Temporal-Unit:T38
+T118	Eq-Temporal-Period 960 964	last
+A26	Eq-Temporal-Period-Value T118 past
+T119	Or 1010 1012	or
+E60	Or:T119 Arg:E25 Arg2:E29
+T120	Condition 1055 1074	dissecting aneurysm
+E61	Condition:T120 Name:T121
+T121	Condition-Name 1055 1074	dissecting aneurysm
+T122	Assertion 1036 1045	Suspected
+E62	Assertion:T122 Asserted:E61
+A27	Assertion-Type-Value E62 possible
+T123	Modifier 1049 1054	known
+E63	Modifier:T123 Modifies:T121
+T124	Or 1046 1048	or
+E64	Or:T124 Arg:E62 Arg2:E63
+T125	Modifier 1091 1099	systemic
+E65	Modifier:T125 Modifies:T24
+T126	Severity 1085 1090	Acute
+A28	Severity-Value T126 severe
+T127	Condition 1126 1131	fever
+E66	Condition:T127 Name:T128
+T128	Condition-Name 1126 1131	fever
+T129	Condition 1133 1143	body aches
+E67	Condition:T129 Name:T130
+T130	Condition-Name 1133 1143	body aches
+T131	Or 1144 1146	or
+E68	Or:T131 Arg:E67 Arg2:E21
+T132	And 1111 1125	accompanied by
+E69	And:T132 Arg:E23 Arg2:E66
+T133	Condition 1173 1182	Pregnancy
+E70	Condition:T133 Name:T134
+T134	Condition-Name 1173 1182	Pregnancy
+T135	Observation 1188 1203	Life expectancy
+E71	Observation:T135 Name:T136 Eq-Comparison:E72
+T136	Observation-Name 1188 1203	Life expectancy
+T137	Eq-Comparison 1207 1230	less than twelve months
+E72	Eq-Comparison:T137 Operator:T34
+T138	Eq-Value 1217 1223	twelve

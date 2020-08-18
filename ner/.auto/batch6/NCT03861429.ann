@@ -1,0 +1,49 @@
+T1	Condition 78 86	dementia
+T2	Condition-Name 78 86	dementia
+E1	Condition:T1 Name:T2
+T3	Language 436 443	English
+T4	Language 483 490	English
+T5	Condition 145 148	MDS
+T6	Condition-Name 145 148	MDS
+E5	Condition:T5 Name:T6
+T7	Condition 219 222	MDS
+T8	Condition-Name 219 222	MDS
+E7	Condition:T7 Name:T8
+T9	Condition 288 291	MDS
+T10	Condition-Name 288 291	MDS
+E9	Condition:T9 Name:T10
+T11	Language 735 742	English
+T12	Condition 900 908	Comatose
+T13	Condition-Name 900 908	Comatose
+E12	Condition:T12 Name:T13
+T14	Condition 886 893	aphasia
+T15	Condition-Name 886 893	aphasia
+E14	Condition:T14 Name:T15
+T16	Eq-Operator 215 216	<
+A1	Eq-Operator-Value T16 LT
+T17	Eq-Operator 284 285	<
+A2	Eq-Operator-Value T17 LT
+T18	Eq-Operator 414 415	>
+A3	Eq-Operator-Value T18 GT
+T19	Eq-Temporal-Unit 364 369	weeks
+A4	Eq-Temporal-Unit-Value T19 week
+T20	Eq-Temporal-Unit 418 423	years
+A5	Eq-Temporal-Unit-Value T20 year
+T21	Age 410 413	Age
+E15	Age:T21
+T22	Eq-Operator 139 140	-
+A6	Eq-Operator-Value T22 BETWEEN
+T23	Eq-Value 138 139	8
+T24	Eq-Value 140 142	15
+T25	Eq-Value 216 217	1
+T26	Eq-Value 285 286	1
+T27	Eq-Value 362 363	2
+T28	Eq-Value 415 417	65
+T29	Eq-Comparison 215 217	<1
+E16	Eq-Comparison:T29 Operator:T16 Value:T25
+T30	Eq-Comparison 284 286	<1
+E17	Eq-Comparison:T30 Operator:T17 Value:T26
+T31	Eq-Comparison 414 423	>65 years
+E18	Eq-Comparison:T31 Operator:T18 Temporal-Unit:T20 Value:T28
+T32	Eq-Comparison 138 140	8-
+E19	Eq-Comparison:T32 Operator:T22 Value:T23

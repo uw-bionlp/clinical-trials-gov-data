@@ -1,0 +1,68 @@
+T1	Condition 109 133	left bundle branch block
+T2	Condition-Name 109 133	left bundle branch block
+E1	Condition:T1 Name:T2
+T3	Procedure 174 189	medical therapy
+T4	Procedure-Name 174 189	medical therapy
+E3	Procedure:T3 Name:T4
+T5	Condition 37 50	Heart Failure
+T6	Condition-Name 37 50	Heart Failure
+E5	Condition:T5 Name:T6
+T7	Condition 808 829	myocardial infarction
+T8	Condition-Name 808 829	myocardial infarction
+E7	Condition:T7 Name:T8
+T9	Condition 1094 1114	ventricular thrombus
+T10	Condition-Name 1094 1114	ventricular thrombus
+E9	Condition:T9 Name:T10
+T11	Procedure 831 848	catheter ablation
+T12	Procedure-Name 831 848	catheter ablation
+E11	Procedure:T11 Name:T12
+T13	Condition 503 511	AV Block
+T14	Condition-Name 503 511	AV Block
+E13	Condition:T13 Name:T14
+T15	Procedure 746 754	ablation
+T16	Procedure-Name 746 754	ablation
+E15	Procedure:T15 Name:T16
+T17	Condition 1030 1034	plan
+T18	Condition-Name 1030 1034	plan
+E17	Condition:T17 Name:T18
+T19	Procedure 482 485	bpm
+T20	Procedure-Name 482 485	bpm
+E19	Procedure:T19 Name:T20
+T21	Procedure 940 943	CRT
+T22	Procedure-Name 940 943	CRT
+E21	Procedure:T21 Name:T22
+T23	Eq-Operator 339 340	≥
+A1	Eq-Operator-Value T23 GTEQ
+T24	Eq-Operator 423 424	≤
+A2	Eq-Operator-Value T24 LTEQ
+T25	Eq-Operator 476 477	>
+A3	Eq-Operator-Value T25 GT
+T26	Eq-Operator 796 797	<
+A4	Eq-Operator-Value T26 LT
+T27	Eq-Operator 890 896	within
+A5	Eq-Operator-Value T27 GTEQ
+T28	Eq-Temporal-Unit 214 219	years
+A6	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Temporal-Unit 800 806	months
+A7	Eq-Temporal-Unit-Value T29 month
+T30	Eq-Temporal-Unit 909 913	days
+A8	Eq-Temporal-Unit-Value T30 day
+T31	Age 223 226	age
+E22	Age:T31
+T32	Eq-Value 90 93	150
+T33	Eq-Value 146 148	35
+T34	Eq-Value 211 213	18
+T35	Eq-Value 341 344	150
+T36	Eq-Value 424 427	250
+T37	Eq-Value 478 481	100
+T38	Eq-Value 520 521	3
+T39	Eq-Value 798 799	3
+T40	Eq-Value 906 908	90
+T41	Eq-Comparison 339 344	≥ 150
+E23	Eq-Comparison:T41 Operator:T23 Value:T35
+T42	Eq-Comparison 423 427	≤250
+E24	Eq-Comparison:T42 Operator:T24 Value:T36
+T43	Eq-Comparison 476 481	> 100
+E25	Eq-Comparison:T43 Operator:T25 Value:T37
+T44	Eq-Comparison 796 806	< 3 months
+E26	Eq-Comparison:T44 Operator:T26 Temporal-Unit:T29 Value:T39

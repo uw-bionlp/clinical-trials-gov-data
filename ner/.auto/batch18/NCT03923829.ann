@@ -1,0 +1,49 @@
+T1	Condition 43 60	diabetes mellitus
+T2	Condition-Name 43 60	diabetes mellitus
+E1	Condition:T1 Name:T2
+T3	Condition 80 93	periodontitis
+T4	Condition-Name 80 93	periodontitis
+E3	Condition:T3 Name:T4
+T5	Procedure 130 140	attachment
+T6	Procedure-Name 130 140	attachment
+E5	Procedure:T5 Name:T6
+T7	Condition 182 191	bone loss
+T8	Condition-Name 182 191	bone loss
+E7	Condition:T7 Name:T8
+T9	Language 76 79	III
+T10	Condition 516 535	Acute renal failure
+T11	Condition-Name 516 535	Acute renal failure
+E10	Condition:T10 Name:T11
+T12	Procedure 492 510	diuretic treatment
+T13	Procedure-Name 492 510	diuretic treatment
+E12	Procedure:T12 Name:T13
+T14	Life-Stage-And-Gender 468 475	females
+A1	Life-Stage-And-Gender-Type T14 male
+T15	Eq-Operator 159 160	≥
+A2	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 263 264	≤
+A3	Eq-Operator-Value T16 LTEQ
+T17	Eq-Operator 272 273	≥
+A4	Eq-Operator-Value T17 GTEQ
+T18	Eq-Temporal-Unit 363 369	months
+A5	Eq-Temporal-Unit-Value T18 month
+T19	Eq-Temporal-Unit 434 440	months
+A6	Eq-Temporal-Unit-Value T19 month
+T20	Eq-Unit 153 155	mm
+T21	Eq-Unit 162 164	mm
+T22	Eq-Unit 266 268	mm
+T23	Eq-Unit 275 277	mm
+T24	Eq-Value 41 42	2
+T25	Eq-Value 108 109	2
+T26	Eq-Value 146 147	3
+T27	Eq-Value 151 152	4
+T28	Eq-Value 160 161	5
+T29	Eq-Value 192 194	15
+T30	Eq-Value 264 265	5
+T31	Eq-Value 273 274	6
+T32	Eq-Comparison 159 164	≥5 mm
+E13	Eq-Comparison:T32 Operator:T15 Unit:T21 Value:T28
+T33	Eq-Comparison 263 268	≤5 mm
+E14	Eq-Comparison:T33 Operator:T16 Unit:T22 Value:T30
+T34	Eq-Comparison 272 277	≥6 mm
+E15	Eq-Comparison:T34 Operator:T17 Unit:T23 Value:T31

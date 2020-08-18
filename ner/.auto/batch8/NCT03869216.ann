@@ -1,0 +1,23 @@
+T1	Condition 293 313	Cognitive impairment
+T2	Condition-Name 293 313	Cognitive impairment
+E1	Condition:T1 Name:T2
+T3	Procedure 409 421	intervention
+T4	Procedure-Name 409 421	intervention
+E3	Procedure:T3 Name:T4
+T5	Life-Stage-And-Gender 104 108	male
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Eq-Operator 422 428	within
+A2	Eq-Operator-Value T6 GTEQ
+T7	Eq-Temporal-Unit 125 130	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Eq-Temporal-Unit 190 195	years
+A4	Eq-Temporal-Unit-Value T8 year
+T9	Age 131 134	old
+E4	Age:T9
+T10	Eq-Operator 121 122	-
+A5	Eq-Operator-Value T10 BETWEEN
+T11	Eq-Value 119 121	40
+T12	Eq-Value 122 124	69
+T13	Eq-Value 187 189	10
+T14	Eq-Comparison 119 122	40-
+E5	Eq-Comparison:T14 Operator:T10 Value:T11

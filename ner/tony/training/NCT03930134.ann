@@ -1,0 +1,83 @@
+T1	Condition 404 435	intrauterine growth restriction
+T2	Condition-Name 404 435	intrauterine growth restriction
+E1	Condition:T1 Name:T2
+T3	Procedure 627 644	Caesarean section
+T4	Procedure-Name 627 644	Caesarean section
+E3	Procedure:T3 Name:T4
+T5	Procedure 94 110	vaginal delivery
+T6	Procedure-Name 94 110	vaginal delivery
+E5	Procedure:T5 Name:T6
+T7	Procedure 556 572	Cesarean section
+T8	Procedure-Name 556 572	Cesarean section
+E7	Procedure:T7 Name:T8
+T9	Procedure 179 189	myomectomy
+T10	Procedure-Name 179 189	myomectomy
+E9	Procedure:T9 Name:T10
+T11	Condition 35 44	pregnancy
+T12	Condition-Name 35 44	pregnancy
+E11	Condition:T11 Name:T12
+T13	Condition 50 68	Cicatricial uterus
+T14	Condition-Name 50 68	Cicatricial uterus
+E13	Condition:T13 Name:T14
+T15	Condition 112 118	uterus
+T16	Condition-Name 112 118	uterus
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 250 262	greater than
+A1	Eq-Operator-Value T17 GT
+T18	Eq-Unit 264 266	Kg
+T19	Eq-Value 263 264	4
+T20	Eq-Comparison 250 264	greater than 4
+E16	Eq-Comparison:T20 Operator:T17 Value:T19
+T21	Modifier 25 34	singleton
+E2	Modifier:T21 Modifies:E11
+T22	Contraindication 74 90	contraindication
+E4	Contraindication:T22 
+T23	Condition 119 142	bi or multi-cicatricial
+E6	Condition:T23 Name:T24
+T24	Condition-Name 119 142	bi or multi-cicatricial
+T25	Condition 144 166	corporal uterine scar,
+E8	Condition:T25 Name:T26
+T26	Condition-Name 144 165	corporal uterine scar
+T27	Modifier 167 178	intra-mural
+E10	Modifier:T27 Modifies:E9
+T28	Condition 191 199	dystocic
+E12	Condition:T28 Name:T29
+T29	Condition-Name 191 199	dystocic
+T30	Assertion 200 212	presentation
+E14	Assertion:T30 Asserted:E12
+A2	Assertion-Type-Value E14 possible
+T31	Condition 219 235	Fetal macrosomia
+E17	Condition:T31 Name:T32
+T32	Condition-Name 219 235	Fetal macrosomia
+T33	And 236 240	with
+E18	And:T33 Arg:E17 Arg2:E19
+T34	Observation 243 249	weight
+E19	Observation:T34 Name:T35 Eq-Comparison:E16
+T35	Observation-Name 243 249	weight
+A3	Observation-Type-Value T35 vital
+T36	Condition 272 287	Placenta previa
+E20	Condition:T36 Name:T37
+T37	Condition-Name 272 287	Placenta previa
+T39	Study 355 360	study
+E22	Study:T39 
+T38	Temporal-Connection 366 376	prenatally
+E21	Temporal-Connection:T38 
+A4	Temporal-Connection-Type-Value E21 before
+T40	Condition 387 402	fetal pathology
+E23	Condition:T40 Name:T41
+T41	Condition-Name 387 402	fetal pathology
+T42	Condition 437 449	malformation
+E24	Condition:T42 Name:T43
+T43	Condition-Name 437 449	malformation
+T44	Condition 451 469	genetics disorders
+E25	Condition:T44 
+T45	Condition-Name 451 469	genetics disorders
+R1	Example-Of Arg1:E1 Arg2:E23	
+R2	Example-Of Arg1:E24 Arg2:E23	
+R3	Example-Of Arg1:E25 Arg2:E23	
+T46	Condition 665 673	bleeding
+E26	Condition:T46 Name:T47
+T47	Condition-Name 665 673	bleeding
+T48	Risk 652 661	high risk
+E27	Risk:T48 Risk-For:E26
+R5	Caused-By Arg1:E27 Arg2:E3	

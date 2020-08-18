@@ -1,0 +1,27 @@
+T1	Procedure 764 783	maintenance therapy
+T2	Procedure-Name 764 783	maintenance therapy
+E1	Procedure:T1 Name:T2
+T3	Condition 109 118	pregnancy
+T4	Condition-Name 109 118	pregnancy
+E3	Condition:T3 Name:T4
+T5	Language 250 257	English
+T6	Language 711 714	car
+T7	Eq-Operator 25 26	>
+A1	Eq-Operator-Value T7 GT
+T8	Eq-Operator 219 220	<
+A2	Eq-Operator-Value T8 LT
+T9	Eq-Temporal-Unit 30 35	years
+A3	Eq-Temporal-Unit-Value T9 year
+T10	Eq-Temporal-Unit 148 152	days
+A4	Eq-Temporal-Unit-Value T10 day
+T11	Eq-Temporal-Unit 224 229	weeks
+A5	Eq-Temporal-Unit-Value T11 week
+T12	Age 39 42	age
+E4	Age:T12
+T13	Eq-Value 27 29	18
+T14	Eq-Value 146 147	7
+T15	Eq-Value 221 223	25
+T16	Eq-Comparison 25 35	> 18 years
+E5	Eq-Comparison:T16 Operator:T7 Temporal-Unit:T9 Value:T13
+T17	Eq-Comparison 219 229	< 25 weeks
+E6	Eq-Comparison:T17 Operator:T8 Temporal-Unit:T11 Value:T15

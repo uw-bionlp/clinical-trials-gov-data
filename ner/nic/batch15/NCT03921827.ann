@@ -1,0 +1,195 @@
+T1	Condition 185 191	stroke
+T2	Condition-Name 185 191	stroke
+E1	Condition:T1 Name:T2 Severity:T68
+T3	Condition 46 52	stroke
+T4	Condition-Name 46 52	stroke
+E3	Condition:T3 Name:T4 Temporality:E2
+T5	Condition 53 56	TIA
+T6	Condition-Name 53 56	TIA
+E5	Condition:T5 Name:T6
+T7	Condition 425 444	atrial fibrillation
+T8	Condition-Name 425 444	atrial fibrillation
+E7	Condition:T7 Name:T8
+T9	Condition 446 457	arrhythmias
+T10	Condition-Name 446 457	arrhythmias
+E9	Condition:T9 Name:T10
+T11	Condition 842 864	vaso-occlusive disease
+T12	Condition-Name 842 864	vaso-occlusive disease
+E11	Condition:T11 Name:T12 Severity:T110
+T13	Condition 735 753	Bleeding diathesis
+T14	Condition-Name 735 753	Bleeding diathesis
+E13	Condition:T13 Name:T14
+T15	Condition 784 798	venous disease
+T16	Condition-Name 784 798	venous disease
+E15	Condition:T15 Name:T16
+T17	Condition 572 585	heart failure
+T18	Condition-Name 572 585	heart failure
+E17	Condition:T17 Name:T18 Stage:E43
+T19	Condition 685 697	hypertension
+T20	Condition-Name 685 697	hypertension
+E19	Condition:T19 Name:T20 Stability:T97
+T21	Condition 895 910	aortic aneurysm
+T22	Condition-Name 895 910	aortic aneurysm
+E21	Condition:T21 Name:T22
+T23	Procedure 933 948	surgical repair
+T24	Procedure-Name 933 948	surgical repair
+E23	Procedure:T23 Name:T24
+T25	Procedure 912 922	dissection
+T26	Procedure-Name 912 922	dissection
+E25	Procedure:T25 Name:T26
+T27	Condition 954 963	Pregnancy
+T28	Condition-Name 954 963	Pregnancy
+E27	Condition:T27 Name:T28
+T29	Eq-Operator 121 127	within
+A1	Eq-Operator-Value T29 LTEQ
+T30	Eq-Operator 376 377	>
+A2	Eq-Operator-Value T30 GT
+T31	Eq-Operator 464 470	Within
+A3	Eq-Operator-Value T31 LTEQ
+T32	Eq-Operator 620 621	<
+A4	Eq-Operator-Value T32 LT
+T33	Eq-Operator 715 716	>
+A5	Eq-Operator-Value T33 GT
+T34	Eq-Temporal-Unit 143 149	months
+A6	Eq-Temporal-Unit-Value T34 month
+T35	Eq-Temporal-Unit 167 172	weeks
+A7	Eq-Temporal-Unit-Value T35 week
+T36	Eq-Temporal-Unit 380 385	years
+A8	Eq-Temporal-Unit-Value T36 year
+T37	Eq-Temporal-Unit 473 478	weeks
+A9	Eq-Temporal-Unit-Value T37 week
+T38	Eq-Unit 724 728	mmHg
+T39	Age 372 375	Age
+E28	Age:T39 Eq-Comparison:E29
+T40	Eq-Value 165 166	3
+T41	Eq-Value 377 379	21
+T42	Eq-Value 471 472	2
+T43	Eq-Value 602 603	3
+T44	Eq-Value 607 608	4
+T45	Eq-Value 621 623	30
+T46	Eq-Value 716 719	160
+T47	Eq-Comparison 376 385	>21 years
+E29	Eq-Comparison:T47 Operator:T30 Temporal-Unit:T36 Value:T41
+T48	Eq-Comparison 464 478	Within 2 weeks
+E30	Eq-Comparison:T48 Operator:T31 Temporal-Unit:T37 Value:T42
+T49	Eq-Comparison 620 624	<30%
+E31	Eq-Comparison:T49 Operator:T32 Value:T45
+T50	Eq-Comparison 715 728	>160/100 mmHg
+E32	Eq-Comparison:T50 Operator:T33 Value:T46 Value2:T102 Unit:T38
+T51	Eq-Comparison 39 45	recent
+E2	Eq-Comparison:T51 Temporal-Period:T52
+T52	Eq-Temporal-Period 39 45	recent
+A10	Eq-Temporal-Period-Value T52 recent
+T53	Or 52 53	/
+E4	Or:T53 Arg:E3 Arg2:E5
+T54	Condition 68 92	stenosis of intracranial
+E6	Condition:T54 Name:T55 Severity:T56
+T55	Condition-Name 68 92	stenosis of intracranial
+T56	Severity 61 67	severe
+A11	Severity-Value T56 severe
+T57	Modifier 93 96	ICA
+E8	Modifier:T57 Modifies:T55
+T58	Modifier 100 103	MCA
+E10	Modifier:T58 Modifies:T55
+T59	Or 97 99	or
+E12	Or:T59 Arg:E8 Arg2:E10
+T60	Condition 108 120	impaired CVR
+E14	Condition:T60 Name:T61 Temporality:E18
+T61	Condition-Name 108 120	impaired CVR
+T62	And 104 107	and
+E16	And:T62 Arg:E6 Arg2:E14
+T63	Eq-Comparison 121 149	within previous three months
+E18	Eq-Comparison:T63 Operator:T29 Temporal-Period:T64 Value:T65 Temporal-Unit:T34
+T64	Eq-Temporal-Period 128 136	previous
+A12	Eq-Temporal-Period-Value T64 past
+T65	Eq-Value 137 142	three
+T66	Eq-Comparison 165 172	3 weeks
+E20	Eq-Comparison:T66 Value:T40 Temporal-Unit:T35
+T67	Temporal-Connection 173 178	after
+E22	Temporal-Connection:T67 Arg:E20 Arg2:E1
+A13	Temporal-Connection-Type-Value E22 after
+T68	Severity 179 184	acute
+A14	Severity-Value T68 severe
+T69	Temporal-Connection 158 164	before
+E24	Temporal-Connection:T69 Arg:E26 Arg2:E20
+A15	Temporal-Connection-Type-Value E24 before
+T70	Negation 154 157	not
+E26	Negation:T70 
+T71	And 150 153	but
+E33	And:T71 Arg:E14 Arg2:E26
+T72	Condition 242 270	long-standing fixed-stenosis
+E34	Condition:T72 Name:T73
+T73	Condition-Name 242 270	long-standing fixed-stenosis
+T74	Condition 290 331	partially recanalized intracranial artery
+E35	Condition:T74 Name:T75
+T75	Condition-Name 290 331	partially recanalized intracranial artery
+T76	Condition 356 364	stenosis
+E36	Condition:T76 Name:T77 Severity:T78
+T77	Condition-Name 356 364	stenosis
+T78	Severity 349 355	severe
+A16	Severity-Value T78 severe
+R1	Equivalent-To Arg1:E36 Arg2:E35	
+T79	Or 444 445	/
+E37	Or:T79 Arg:E7 Arg2:E9
+T80	Procedure 482 505	cardiac catheterization
+E38	Procedure:T80 Name:T81 Temporality:E30
+T81	Procedure-Name 482 505	cardiac catheterization
+T82	Procedure 509 526	arterial puncture
+E39	Procedure:T82 Name:T83
+T83	Procedure-Name 509 526	arterial puncture
+T84	Modifier 530 551	femoral puncture site
+E40	Modifier:T84 Modifies:T83
+T85	Or 506 508	or
+E41	Or:T85 Arg:E38 Arg2:E39
+T86	Modifier 558 571	Decompensated
+E42	Modifier:T86 Modifies:T18
+T87	Eq-Comparison 602 608	3 or 4
+E43	Eq-Comparison:T87 Value:T43 Value2:T44
+T88	Observation 614 619	LV EF
+E44	Observation:T88 Name:T89 Eq-Comparison:E31
+T89	Observation-Name 614 619	LV EF
+A17	Observation-Type-Value T89 measurement
+T90	Eq-Unit 623 624	%
+T91	Condition 649 651	AR
+E45	Condition:T91 Name:T92 Severity:T94
+T92	Condition-Name 649 651	AR
+T93	Severity 630 638	Moderate
+A18	Severity-Value T93 moderate
+T94	Severity 642 648	severe
+A19	Severity-Value T94 severe
+T95	Or 639 641	or
+E46	Or:T95 Arg:T93 Arg2:T94
+T96	Modifier 672 684	uncontrolled
+E47	Modifier:T96 Modifies:E19
+T97	Stability 657 667	Persistent
+A20	Stability-Value T97 stable
+T98	Or 668 671	and
+E48	Or:T98 Arg:T97 Arg2:E47
+T99	Observation 699 701	BP
+E49	Observation:T99 Name:T100 Stability:T101 Eq-Comparison:E32
+T100	Observation-Name 699 701	BP
+A21	Observation-Type-Value T100 vital
+T101	Stability 702 714	persistently
+A22	Stability-Value T101 stable
+T102	Eq-Value 720 723	100
+T103	Condition 766 782	thrombophlebitis
+E50	Condition:T103 Name:T104 Temporality:E52
+T104	Condition-Name 766 782	thrombophlebitis
+T105	Or 782 783	/
+E51	Or:T105 Arg:E50 Arg2:E15
+T106	Eq-Comparison 759 765	Active
+E52	Eq-Comparison:T106 Temporal-Period:T107
+T107	Eq-Temporal-Period 759 765	Active
+A23	Eq-Temporal-Period-Value T107 present
+T108	Modifier 802 813	lower limbs
+E53	Modifier:T108 Modifies:T16
+T109	Modifier 826 841	lower extremity
+E54	Modifier:T109 Modifies:T12
+T110	Severity 819 825	Severe
+A24	Severity-Value T110 severe
+R2	Using Arg1:E25 Arg2:E23	
+T111	Assertion 923 932	requiring
+E55	Assertion:T111 Asserted:E23
+A25	Assertion-Type-Value E55 hypothetical
+T112	Or 910 911	/
+E56	Or:T112 Arg:E21 Arg2:E25

@@ -1,0 +1,70 @@
+T1	Condition 39 71	chronic suppurative otitis media
+T2	Condition-Name 39 71	chronic suppurative otitis media
+E1	Condition:T1 Name:T2
+T3	Condition 130 154	limited anterior remnant
+T4	Condition-Name 130 154	limited anterior remnant
+E3	Condition:T3 Name:T4
+T5	Procedure 282 291	Ossicular
+T6	Procedure-Name 282 291	Ossicular
+E5	Procedure:T5 Name:T6
+T7	Condition 408 416	diseases
+T8	Condition-Name 408 416	diseases
+E7	Condition:T7 Name:T8
+T9	Eq-Temporal-Unit 192 198	months
+A1	Eq-Temporal-Unit-Value T9 month
+T10	Eq-Value 190 191	3
+T11	Condition 95 124	tympanic membrane perforation
+E2	Condition:T11 Name:T12
+T12	Condition-Name 95 124	tympanic membrane perforation
+T13	Modifier 86 94	subtotal
+E4	Modifier:T13 Modifies:T12
+T14	Modifier 77 82	total
+E6	Modifier:T14 Modifies:T12
+T15	Or 83 85	or
+E8	Or:T15 Arg:E6 Arg2:E4
+T16	And 72 76	with
+E9	And:T16 Arg:E1 Arg2:E2
+T17	And 125 129	with
+E10	And:T17 Arg:E2 Arg2:E3
+T18	Condition 161 176	dry perforation
+E11	Condition:T18 Name:T19 Duration:E12
+T19	Condition-Name 161 176	dry perforation
+T20	Eq-Comparison 181 198	at least 3 months
+E12	Eq-Comparison:T20 Operator:T21 Value:T10 Temporal-Unit:T9
+T21	Eq-Operator 181 189	at least
+A2	Eq-Operator-Value T21 GTEQ
+T22	Condition 225 246	Recurrent perforation
+E13	Condition:T22 Name:T23
+T23	Condition-Name 225 246	Recurrent perforation
+T24	Procedure 262 275	myringoplasty
+E14	Procedure:T24 Name:T25 Temporality:E15
+T25	Procedure-Name 262 275	myringoplasty
+T26	Eq-Comparison 253 261	previous
+E15	Eq-Comparison:T26 Temporal-Period:T27
+T27	Eq-Temporal-Period 253 261	previous
+A3	Eq-Temporal-Period-Value T27 past
+T28	Temporal-Connection 247 252	after
+E16	Temporal-Connection:T28 Arg:E13 Arg2:E14
+A4	Temporal-Connection-Type-Value E16 during
+T29	Modifier 292 302	disruption
+E17	Modifier:T29 Modifies:T6
+T30	Modifier 306 314	fixation
+E18	Modifier:T30 Modifies:T6
+T31	Or 303 305	or
+E19	Or:T31 Arg:E17 Arg2:E18
+T32	Condition 321 339	immune-compromised
+E20	Condition:T32 Name:T33
+T33	Condition-Name 321 339	immune-compromised
+T34	Condition 372 381	diabetics
+E21	Condition:T34 Name:T35
+T35	Condition-Name 372 381	diabetics
+T36	Modifier 359 371	uncontrolled
+E22	Modifier:T36 Modifies:T35
+T37	Modifier 401 407	kidney
+E23	Modifier:T37 Modifies:T8
+T38	Modifier 383 396	chronic liver
+E24	Modifier:T38 Modifies:T8
+T39	Or 397 400	and
+E25	Or:T39 Arg:E24 Arg2:E23
+R1	Example-Of Arg1:E21 Arg2:E20	
+R2	Example-Of Arg1:E7 Arg2:E20	

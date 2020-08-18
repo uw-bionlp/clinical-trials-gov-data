@@ -1,0 +1,48 @@
+T1	Condition 68 77	pregnancy
+T2	Condition-Name 68 77	pregnancy
+E1	Condition:T1 Name:T2
+T3	Condition 230 233	per
+T4	Condition-Name 230 233	per
+E3	Condition:T3 Name:T4
+T5	Condition 277 296	gingival recessions
+T6	Condition-Name 277 296	gingival recessions
+E5	Condition:T5 Name:T6
+T7	Condition 328 336	anterior
+T8	Condition-Name 328 336	anterior
+E7	Condition:T7 Name:T8
+T9	Procedure 590 609	periodontal surgery
+T10	Procedure-Name 590 609	periodontal surgery
+E9	Procedure:T9 Name:T10
+T11	Condition 703 722	Gingival recessions
+T12	Condition-Name 703 722	Gingival recessions
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 106 107	≤
+A2	Eq-Operator-Value T14 LTEQ
+T15	Eq-Operator 200 201	≤
+A3	Eq-Operator-Value T15 LTEQ
+T16	Eq-Operator 297 298	≥
+A4	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 750 751	<
+A5	Eq-Operator-Value T17 LT
+T18	Eq-Temporal-Unit 33 38	years
+A6	Eq-Temporal-Unit-Value T18 year
+T19	Eq-Unit 301 303	mm
+T20	Age 25 28	Age
+E12	Age:T20
+T21	Eq-Value 30 32	18
+T22	Eq-Value 108 110	10
+T23	Eq-Value 202 204	10
+T24	Eq-Value 299 300	2
+T25	Eq-Value 752 753	1
+T26	Eq-Comparison 29 38	≥18 years
+E13	Eq-Comparison:T26 Operator:T13 Temporal-Unit:T18 Value:T21
+T27	Eq-Comparison 106 110	≤ 10
+E14	Eq-Comparison:T27 Operator:T14 Value:T22
+T28	Eq-Comparison 200 204	≤ 10
+E15	Eq-Comparison:T28 Operator:T15 Value:T23
+T29	Eq-Comparison 297 303	≥ 2 mm
+E16	Eq-Comparison:T29 Operator:T16 Unit:T19 Value:T24
+T30	Eq-Comparison 750 753	< 1
+E17	Eq-Comparison:T30 Operator:T17 Value:T25

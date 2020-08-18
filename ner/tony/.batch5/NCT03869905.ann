@@ -1,0 +1,34 @@
+T1	Condition 511 532	hemorrhagic disorders
+T2	Condition-Name 511 532	hemorrhagic disorders
+E1	Condition:T1 Name:T2
+T3	Procedure 167 186	maintenance therapy
+T4	Procedure-Name 167 186	maintenance therapy
+E3	Procedure:T3 Name:T4
+T5	Condition 25 43	Ulcerative colitis
+T6	Condition-Name 25 43	Ulcerative colitis
+E5	Condition:T5 Name:T6
+T7	Condition 427 441	Kidney disease
+T8	Condition-Name 427 441	Kidney disease
+E7	Condition:T7 Name:T8
+T9	Condition 472 485	hypercalcemia
+T10	Condition-Name 472 485	hypercalcemia
+E9	Condition:T9 Name:T10
+T11	Condition 487 499	Coagulopathy
+T12	Condition-Name 487 499	Coagulopathy
+E11	Condition:T11 Name:T12
+T13	Procedure 547 558	therapeutic
+T14	Procedure-Name 547 558	therapeutic
+E13	Procedure:T13 Name:T14
+T15	Procedure 149 156	therapy
+T16	Procedure-Name 149 156	therapy
+E15	Procedure:T15 Name:T16
+T17	Eq-Operator 714 720	within
+A1	Eq-Operator-Value T17 LTEQ
+T19	Eq-Temporal-Unit 126 132	months
+A3	Eq-Temporal-Unit-Value T19 month
+T20	Eq-Temporal-Unit 724 728	days
+A4	Eq-Temporal-Unit-Value T20 day
+T22	Eq-Value 124 125	3
+T23	Eq-Value 721 723	30
+T24	Eq-Comparison 714 728	within 30 days
+E16	Eq-Comparison:T24 Operator:T17 Temporal-Unit:T20 Value:T23

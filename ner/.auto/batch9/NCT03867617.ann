@@ -1,0 +1,44 @@
+T1	Procedure 588 601	contraception
+T2	Procedure-Name 588 601	contraception
+E1	Procedure:T1 Name:T2
+T3	Condition 611 620	pregnancy
+T4	Condition-Name 611 620	pregnancy
+E3	Condition:T3 Name:T4
+T5	Condition 869 892	chronic viral hepatitis
+T6	Condition-Name 869 892	chronic viral hepatitis
+E5	Condition:T5 Name:T6
+T7	Procedure 910 913	CMV
+T8	Procedure-Name 910 913	CMV
+E7	Procedure:T7 Name:T8
+T9	Procedure 972 975	CMV
+T10	Procedure-Name 972 975	CMV
+E9	Procedure:T9 Name:T10
+T11	Procedure 1097 1119	solid organ transplant
+T12	Procedure-Name 1097 1119	solid organ transplant
+E11	Procedure:T11 Name:T12
+T13	Procedure 1066 1083	kidney transplant
+T14	Procedure-Name 1066 1083	kidney transplant
+E13	Procedure:T13 Name:T14
+T15	Life-Stage-And-Gender 1371 1386	Female patients
+A1	Life-Stage-And-Gender-Type T15 male
+T16	Life-Stage-And-Gender 1416 1431	Female patients
+A2	Life-Stage-And-Gender-Type T16 male
+T17	Eq-Operator 650 655	up to
+A3	Eq-Operator-Value T17 LTEQ
+T18	Eq-Operator 1258 1264	within
+A4	Eq-Operator-Value T18 GTEQ
+T19	Eq-Temporal-Unit 91 96	years
+A5	Eq-Temporal-Unit-Value T19 year
+T20	Eq-Temporal-Unit 659 664	weeks
+A6	Eq-Temporal-Unit-Value T20 week
+T21	Eq-Temporal-Unit 1267 1272	years
+A7	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Unit 910 912	CM
+T23	Eq-Unit 972 974	CM
+T24	Eq-Value 88 90	18
+T25	Eq-Value 656 658	12
+T26	Eq-Value 1265 1266	5
+T27	Eq-Comparison 650 664	up to 12 weeks
+E14	Eq-Comparison:T27 Operator:T17 Temporal-Unit:T20 Value:T25
+T28	Eq-Comparison 1258 1272	within 5 years
+E15	Eq-Comparison:T28 Operator:T18 Temporal-Unit:T21 Value:T26

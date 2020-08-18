@@ -1,0 +1,20 @@
+T1	Condition 446 473	acute respiratory infection
+T2	Condition-Name 446 473	acute respiratory infection
+E1	Condition:T1 Name:T2
+T3	Procedure 88 110	Mechanical Ventilation
+T4	Procedure-Name 88 110	Mechanical Ventilation
+E3	Procedure:T3 Name:T4
+T5	Procedure 171 174	MPV
+T6	Procedure-Name 171 174	MPV
+E5	Procedure:T5 Name:T6
+T7	Procedure 428 431	MPV
+T8	Procedure-Name 428 431	MPV
+E7	Procedure:T7 Name:T8
+T9	Eq-Operator 366 367	>
+A1	Eq-Operator-Value T9 GT
+T10	Eq-Unit 369 373	mmHg
+T11	Eq-Value 127 131	2015
+T12	Eq-Value 145 149	2018
+T13	Eq-Value 367 369	49
+T14	Eq-Comparison 366 369	>49
+E8	Eq-Comparison:T14 Operator:T9 Value:T13

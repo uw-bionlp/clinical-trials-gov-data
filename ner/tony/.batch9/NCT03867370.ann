@@ -1,0 +1,42 @@
+T1	Condition 722 746	gastroesophageal varices
+T2	Condition-Name 722 746	gastroesophageal varices
+E1	Condition:T1 Name:T2
+T3	Procedure 631 654	radiofrequency ablation
+T4	Procedure-Name 631 654	radiofrequency ablation
+E3	Procedure:T3 Name:T4
+T5	Condition 149 158	evaluable
+T6	Condition-Name 149 158	evaluable
+E5	Condition:T5 Name:T6
+T7	Condition 314 319	death
+T8	Condition-Name 314 319	death
+E7	Condition:T7 Name:T8
+T9	Condition 364 369	death
+T10	Condition-Name 364 369	death
+E9	Condition:T9 Name:T10
+T11	Condition 413 418	death
+T12	Condition-Name 413 418	death
+E11	Condition:T11 Name:T12
+T13	Procedure 625 629	TACE
+T14	Procedure-Name 625 629	TACE
+E13	Procedure:T13 Name:T14
+T15	Procedure 926 929	HCC
+T16	Procedure-Name 926 929	HCC
+E15	Procedure:T15 Name:T16
+T17	Procedure 943 946	HCC
+T18	Procedure-Name 943 946	HCC
+E17	Procedure:T17 Name:T18
+T19	Procedure 979 982	HCC
+T20	Procedure-Name 979 982	HCC
+E19	Procedure:T19 Name:T20
+T21	Eq-Operator 869 875	within
+A1	Eq-Operator-Value T21 LTEQ
+T22	Eq-Value 190 191	1
+T23	Eq-Value 329 330	1
+T24	Eq-Value 335 336	1
+T25	Eq-Value 377 378	1
+T26	Eq-Value 426 427	2
+T27	Eq-Value 495 496	4
+T28	Eq-Value 503 504	4
+T29	Eq-Value 876 877	1
+T30	Eq-Comparison 869 877	within 1
+E20	Eq-Comparison:T30 Operator:T21 Value:T29

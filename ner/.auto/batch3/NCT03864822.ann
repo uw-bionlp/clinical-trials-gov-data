@@ -1,0 +1,44 @@
+T1	Procedure 495 511	active treatment
+T2	Procedure-Name 495 511	active treatment
+E1	Procedure:T1 Name:T2
+T3	Condition 459 471	menstruation
+T4	Condition-Name 459 471	menstruation
+E3	Condition:T3 Name:T4
+T5	Condition 329 340	recruitment
+T6	Condition-Name 329 340	recruitment
+E5	Condition:T5 Name:T6
+T7	Condition 414 423	Pregnancy
+T8	Condition-Name 414 423	Pregnancy
+E7	Condition:T7 Name:T8
+T9	Language 381 388	English
+T10	Language 43 46	men
+T11	Condition 706 725	faecal incontinence
+T12	Condition-Name 706 725	faecal incontinence
+E11	Condition:T11 Name:T12
+T13	Condition 759 773	Drug addiction
+T14	Condition-Name 759 773	Drug addiction
+E13	Condition:T13 Name:T14
+T15	Condition 796 804	cannabis
+T16	Condition-Name 796 804	cannabis
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 101 102	>
+A1	Eq-Operator-Value T17 GT
+T18	Eq-Temporal-Unit 73 78	years
+A2	Eq-Temporal-Unit-Value T18 year
+T19	Eq-Temporal-Unit 103 107	days
+A3	Eq-Temporal-Unit-Value T19 day
+T20	Eq-Temporal-Unit 146 152	months
+A4	Eq-Temporal-Unit-Value T20 month
+T21	Age 62 66	Aged
+E16	Age:T21
+T22	Eq-Operator 69 70	-
+A5	Eq-Operator-Value T22 BETWEEN
+T23	Eq-Value 67 69	18
+T24	Eq-Value 70 72	60
+T25	Eq-Value 102 103	3
+T26	Eq-Value 144 145	3
+T27	Eq-Value 262 264	12
+T28	Eq-Comparison 101 103	>3
+E17	Eq-Comparison:T28 Operator:T17 Value:T25
+T29	Eq-Comparison 67 70	18-
+E18	Eq-Comparison:T29 Operator:T22 Value:T23

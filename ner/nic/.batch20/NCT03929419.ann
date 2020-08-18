@@ -1,0 +1,69 @@
+T1	Condition 1072 1104	heparin-induced thrombocytopenia
+T2	Condition-Name 1072 1104	heparin-induced thrombocytopenia
+E1	Condition:T1 Name:T2
+T3	Procedure 187 209	hormonal contraception
+T4	Procedure-Name 187 209	hormonal contraception
+E3	Procedure:T3 Name:T4
+T5	Condition 329 351	temperature perception
+T6	Condition-Name 329 351	temperature perception
+E5	Condition:T5 Name:T6
+T7	Condition 423 445	Cardiovascular disease
+T8	Condition-Name 423 445	Cardiovascular disease
+E7	Condition:T7 Name:T8
+T9	Condition 464 486	coronary Heart disease
+T10	Condition-Name 464 486	coronary Heart disease
+E9	Condition:T9 Name:T10
+T11	Condition 934 955	psychiatric disorders
+T12	Condition-Name 934 955	psychiatric disorders
+E11	Condition:T11 Name:T12
+T13	Condition 646 660	claustrophobia
+T14	Condition-Name 646 660	claustrophobia
+E13	Condition:T13 Name:T14
+T15	Condition 488 501	heart failure
+T16	Condition-Name 488 501	heart failure
+E15	Condition:T15 Name:T16
+T17	Condition 723 732	Pregnancy
+T18	Condition-Name 723 732	Pregnancy
+E17	Condition:T17 Name:T18
+T19	Life-Stage-And-Gender 25 31	female
+A1	Life-Stage-And-Gender-Type T19 male
+T20	Life-Stage-And-Gender 42 48	adults
+A2	Life-Stage-And-Gender-Type T20 adult
+T21	Condition 1106 1109	HIT
+T22	Condition-Name 1106 1109	HIT
+E21	Condition:T21 Name:T22
+T23	Eq-Operator 60 61	<
+A3	Eq-Operator-Value T23 LT
+T24	Eq-Operator 502 514	greater than
+A4	Eq-Operator-Value T24 GT
+T25	Eq-Operator 769 778	less than
+A5	Eq-Operator-Value T25 LT
+T26	Eq-Operator 888 894	within
+A6	Eq-Operator-Value T26 LTEQ
+T27	Eq-Operator 989 990	<
+A7	Eq-Operator-Value T27 LT
+T28	Eq-Temporal-Unit 93 98	years
+A8	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Temporal-Unit 781 787	months
+A9	Eq-Temporal-Unit-Value T29 month
+T30	Eq-Temporal-Unit 906 911	weeks
+A10	Eq-Temporal-Unit-Value T30 week
+T31	Age 71 74	Age
+E22	Age:T31
+T32	Eq-Value 61 62	6
+T33	Eq-Value 83 85	18
+T34	Eq-Value 90 92	30
+T35	Eq-Value 520 521	2
+T36	Eq-Value 779 780	3
+T37	Eq-Value 904 905	4
+T38	Eq-Value 990 992	12
+T39	Eq-Comparison 60 62	<6
+E23	Eq-Comparison:T39 Operator:T23 Value:T32
+T40	Eq-Comparison 769 787	less than 3 months
+E24	Eq-Comparison:T40 Operator:T25 Temporal-Unit:T29 Value:T36
+T41	Eq-Comparison 989 992	<12
+E25	Eq-Comparison:T41 Operator:T27 Value:T38
+T42	Eq-Comparison 1061 1068	history
+E26	Eq-Comparison:T42 Temporal-Period:T43
+T43	Eq-Temporal-Period 1061 1068	history
+A11	Eq-Temporal-Period-Value T43 past

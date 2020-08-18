@@ -1,0 +1,37 @@
+T3	Condition 162 177	bulimia nervosa
+T4	Condition-Name 162 177	bulimia nervosa
+E3	Condition:T3 Name:T4
+T5	Language 205 212	English
+T6	Eq-Temporal-Unit 194 199	years
+A1	Eq-Temporal-Unit-Value T6 year
+T7	Age 183 187	Aged
+E4	Age:T7 Eq-Comparison:E5
+T8	Eq-Operator 190 191	-
+A2	Eq-Operator-Value T8 BETWEEN
+T9	Eq-Value 188 190	13
+T10	Eq-Value 191 193	50
+T11	Eq-Comparison 188 199	13-50 years
+E5	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6
+T12	Location 40 86	UNC Center for Excellence for Eating Disorders
+T13	Location 87 101	inpatient unit
+A3	Location-Value T13 unit
+T14	Location 105 122	outpatient clinic
+A4	Location-Value T14 clinic
+T15	Or 102 104	or
+E2	Or:T15 Arg:T13 Arg2:T14
+T16	Condition 142 158	anorexia nervosa
+E6	Condition:T16 Name:T17
+T17	Condition-Name 142 158	anorexia nervosa
+T18	Or 159 161	or
+E7	Or:T18 Arg:E6 Arg2:E3
+T19	Condition 247 268	Decisionally impaired
+E8	Condition:T19 Name:T20
+T20	Condition-Name 247 268	Decisionally impaired
+T1	Observation 416 439	Involuntarily committed
+E1	Observation:T1 Name:T2 Location:T21 Provider:E9
+T2	Observation-Name 416 439	Involuntarily committed
+T21	Location 447 464	inpatient service
+A5	Location-Value T21 unit
+T22	Provider 472 500	UNC Department of Psychiatry
+E9	Provider:T22 Type:T23
+T23	Provider-Type 490 500	Psychiatry

@@ -1,0 +1,42 @@
+T1	Procedure 227 239	chemotherapy
+T2	Procedure-Name 227 239	chemotherapy
+E1	Procedure:T1 Name:T2
+T3	Life-Stage-And-Gender 122 130	Children
+A1	Life-Stage-And-Gender-Type T3 child
+T4	Condition 477 489	hearing loss
+T5	Condition-Name 477 489	hearing loss
+E4	Condition:T4 Name:T5
+T6	Life-Stage-And-Gender 284 292	children
+A2	Life-Stage-And-Gender-Type T6 child
+T7	Life-Stage-And-Gender 430 438	Children
+A3	Life-Stage-And-Gender-Type T7 child
+T8	Eq-Temporal-Unit 146 152	months
+A4	Eq-Temporal-Unit-Value T8 month
+T9	Eq-Temporal-Unit 300 305	years
+A5	Eq-Temporal-Unit-Value T9 year
+T10	Age 139 143	aged
+E5	Age:T10 
+T11	Age 348 351	age
+E6	Age:T11 
+T12	Eq-Value 144 145	3
+T13	Eq-Value 298 299	8
+T14	Negation 405 414	Exclusion
+E2	Negation:T14 
+T15	Condition 136 138	RB
+E3	Condition:T15 Name:T16
+T16	Condition-Name 136 138	RB
+T17	Eq-Comparison 144 162	3 months and older
+E7	Eq-Comparison:T17 Value:T12 Operator:T18 Temporal-Unit:T8
+T18	Eq-Operator 153 162	and older
+A6	Eq-Operator-Value T18 GTEQ
+T19	Drug 212 226	IA carboplatin
+E8	Drug:T19 Name:T20
+T20	Drug-Name 212 226	IA carboplatin
+R1	Using Arg1:E1 Arg2:E8	
+T21	Condition 251 265	Retinoblastoma
+E9	Condition:T21 Name:T22
+T22	Condition-Name 251 265	Retinoblastoma
+T23	Eq-Comparison 293 309	over 8 years old
+E10	Eq-Comparison:T23 Temporal-Unit:T9 Operator:T24 Value:T13
+T24	Eq-Operator 293 297	over
+A7	Eq-Operator-Value T24 GT

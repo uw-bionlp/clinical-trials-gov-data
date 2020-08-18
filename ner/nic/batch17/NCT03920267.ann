@@ -1,0 +1,69 @@
+T3	Condition 800 812	tuberculosis
+T4	Condition-Name 800 812	tuberculosis
+E3	Condition:T3 Name:T4 Temporality:E20
+T5	Procedure 424 437	contraception
+T6	Procedure-Name 424 437	contraception
+E5	Procedure:T5 Name:T6
+T9	Condition 814 816	TB
+T10	Condition-Name 814 816	TB
+E9	Condition:T9 Name:T10
+T11	Eq-Comparison 234 253	currently receiving
+E10	Eq-Comparison:T11 Temporal-Period:T12
+T12	Eq-Temporal-Period 234 253	currently receiving
+A1	Eq-Temporal-Period-Value T12 present
+T1	Study 262 267	study
+E1	Study:T1 Study-Of:E2
+T2	Drug 268 272	drug
+E2	Drug:T2 Temporality:E10
+T7	Life-Stage-And-Gender 278 283	Women
+A2	Life-Stage-And-Gender-Type T7 female
+T8	Condition 287 309	childbearing potential
+E4	Condition:T8 Name:T13
+T13	Condition-Name 287 309	childbearing potential
+T14	And 284 286	of
+E6	And:T14 Arg:T7 Arg2:E4
+T15	Condition 311 316	WOCBP
+E7	Condition:T15 Name:T16
+T16	Condition-Name 311 316	WOCBP
+R1	Abbrev-Of Arg1:E7 Arg2:E4	
+T17	Observation 339 359	urine pregnancy test
+E8	Observation:T17 Name:T18 Polarity:T19
+T18	Observation-Name 339 359	urine pregnancy test
+A3	Observation-Type-Value T18 lab
+T19	Polarity 330 338	negative
+A4	Polarity-Value T19 negative
+T20	Procedure 458 467	treatment
+E11	Procedure:T20 
+T21	Study 473 478	study
+E12	Study:T21 Study-Of:E13
+T22	Drug 479 483	drug
+E13	Drug:T22 
+R2	Using Arg1:E11 Arg2:E13	
+T23	Temporal-Connection 446 454	duration
+E14	Temporal-Connection:T23 Arg:E5 Arg2:E11
+A5	Temporal-Connection-Type-Value E14 during
+T24	Assertion 369 377	agree to
+E15	Assertion:T24 Asserted:E5
+A6	Assertion-Type-Value E15 hypothetical
+T25	And 360 363	and
+E16	And:T25 Arg:E8 Arg2:E15
+T26	Condition 513 520	disease
+E17	Condition:T26 Name:T27
+T27	Condition-Name 513 520	disease
+T28	Condition 524 541	medical condition
+E18	Condition:T28 
+T29	Or 521 523	or
+E19	Or:T29 Arg:E17 Arg2:E18
+R3	Abbrev-Of Arg1:E9 Arg2:E3	
+T30	Eq-Comparison 793 799	active
+E20	Eq-Comparison:T30 Temporal-Period:T31
+T31	Eq-Temporal-Period 793 799	active
+A7	Eq-Temporal-Period-Value T31 present
+T32	Study 627 632	study
+E21	Study:T32 
+T33	Negation 607 617	unsuitable
+E22	Negation:T33 Negates:E21
+T34	Assertion 584 589	would
+E23	Assertion:T34 Asserted:E22
+A8	Assertion-Type-Value E23 hypothetical
+R4	Caused-By Arg1:E22 Arg2:E18	

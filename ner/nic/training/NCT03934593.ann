@@ -1,0 +1,48 @@
+T1	Life-Stage-And-Gender 110 115	adult
+A1	Life-Stage-And-Gender-Type T1 adult
+T8	Life-Stage-And-Gender 421 427	adults
+A2	Life-Stage-And-Gender-Type T8 adult
+T9	Condition 475 478	T2D
+T10	Condition-Name 475 478	T2D
+E9	Condition:T9 Name:T10
+T11	Life-Stage-And-Gender 505 513	Children
+A3	Life-Stage-And-Gender-Type T11 child
+T12	Life-Stage-And-Gender 515 521	adults
+A4	Life-Stage-And-Gender-Type T12 adult
+T13	Eq-Operator 435 444	and above
+A5	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 531 536	years
+A6	Eq-Temporal-Unit-Value T14 year
+T15	Age 428 431	age
+E10	Age:T15 Eq-Comparison:E11
+T17	Eq-Value 107 109	20
+T22	Eq-Value 432 434	21
+T23	Eq-Value 528 530	21
+T24	Eq-Comparison 432 444	21 and above
+E11	Eq-Comparison:T24 Operator:T13 Value:T22
+T26	Ethnicity 77 86	Hispanics
+T27	Eq-Comparison 98 115	at least 20 adult
+E1	Eq-Comparison:T27 Value:T17 Operator:T28
+T28	Eq-Operator 98 106	at least
+A8	Eq-Operator-Value T28 GTEQ
+T2	Eq-Comparison 522 536	under 21 years
+E2	Eq-Comparison:T2 Temporal-Unit:T14 Value:T23 Operator:T3
+T3	Eq-Operator 522 527	under
+A7	Eq-Operator-Value T3 LT
+T4	Age 540 543	age
+E3	Age:T4 Eq-Comparison:E2
+T5	Condition 549 557	pregnant
+E4	Condition:T5 Name:T6
+T6	Condition-Name 549 557	pregnant
+T16	Life-Stage-And-Gender 558 563	women
+A9	Life-Stage-And-Gender-Type T16 female
+T18	Condition 133 136	T2D
+E6	Condition:T18 Name:T19
+T19	Condition-Name 133 136	T2D
+T7	And 545 548	and
+E5	And:T7 Arg:E3 Arg2:E4
+R1	If-Then Arg1:T16 Arg2:E4	
+T20	And 450 459	have been
+E7	And:T20 Arg:E10 Arg2:E9
+T21	And 128 132	with
+E8	And:T21 Arg:T1 Arg2:E6

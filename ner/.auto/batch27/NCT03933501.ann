@@ -1,0 +1,39 @@
+T1	Procedure 139 142	BOP
+T2	Procedure-Name 139 142	BOP
+E1	Procedure:T1 Name:T2
+T3	Procedure 589 610	periodontal treatment
+T4	Procedure-Name 589 610	periodontal treatment
+E3	Procedure:T3 Name:T4
+T5	Condition 445 453	diabetes
+T6	Condition-Name 445 453	diabetes
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 107 108	>
+A1	Eq-Operator-Value T7 GT
+T8	Eq-Operator 163 164	>
+A2	Eq-Operator-Value T8 GT
+T9	Eq-Operator 298 299	<
+A3	Eq-Operator-Value T9 LT
+T10	Eq-Operator 611 617	within
+A4	Eq-Operator-Value T10 GTEQ
+T11	Eq-Temporal-Unit 302 307	years
+A5	Eq-Temporal-Unit-Value T11 year
+T12	Eq-Temporal-Unit 503 509	months
+A6	Eq-Temporal-Unit-Value T12 month
+T13	Eq-Temporal-Unit 629 635	months
+A7	Eq-Temporal-Unit-Value T13 month
+T14	Eq-Unit 110 112	mm
+T15	Age 311 314	age
+E6	Age:T15
+T16	Eq-Value 61 63	20
+T17	Eq-Value 108 109	5
+T18	Eq-Value 148 149	2
+T19	Eq-Value 164 165	7
+T20	Eq-Value 299 301	35
+T21	Eq-Value 501 502	3
+T22	Eq-Value 627 628	6
+T23	Eq-Comparison 107 112	>5 mm
+E7	Eq-Comparison:T23 Operator:T7 Unit:T14 Value:T17
+T24	Eq-Comparison 163 165	>7
+E8	Eq-Comparison:T24 Operator:T8 Value:T19
+T25	Eq-Comparison 298 307	<35 years
+E9	Eq-Comparison:T25 Operator:T9 Temporal-Unit:T11 Value:T20

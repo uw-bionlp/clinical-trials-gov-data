@@ -1,0 +1,37 @@
+T1	Condition 282 295	periodontitis
+T2	Condition-Name 282 295	periodontitis
+E1	Condition:T1 Name:T2 Stability:T21 Severity:T20
+T3	Condition 244 251	bruxism
+T4	Condition-Name 244 251	bruxism
+E3	Condition:T3 Name:T4
+T5	Eq-Temporal-Unit 33 38	years
+A1	Eq-Temporal-Unit-Value T5 year
+T6	Age 39 42	old
+E4	Age:T6 Eq-Comparison:E2
+T7	Eq-Value 30 32	18
+T8	Eq-Value 106 108	20
+T9	Eq-Comparison 25 38	over 18 years
+E2	Eq-Comparison:T9 Operator:T10 Value:T7 Temporal-Unit:T5
+T10	Eq-Operator 25 29	over
+A2	Eq-Operator-Value T10 GT
+T11	Condition 48 65	good oral hygiene
+E5	Condition:T11 Name:T12
+T12	Condition-Name 48 65	good oral hygiene
+T13	Eq-Comparison 97 108	at least 20
+E6	Eq-Comparison:T13 Operator:T14 Value:T8
+T14	Eq-Operator 97 105	at least
+A3	Eq-Operator-Value T14 GTEQ
+T15	Condition 109 130	teeth under occlusion
+E7	Condition:T15 Name:T16 Minimum-Count:E6
+T16	Condition-Name 109 130	teeth under occlusion
+T17	Condition 221 238	poor oral hygiene
+E8	Condition:T17 Name:T18
+T18	Condition-Name 221 238	poor oral hygiene
+T19	Negation 196 205	Exclusion
+E9	Negation:T19 
+T20	Severity 264 270	severe
+A4	Severity-Value T20 severe
+T21	Stability 274 281	chronic
+A5	Stability-Value T21 stable
+T22	Or 271 273	or
+E10	Or:T22 Arg:T20 Arg2:T21

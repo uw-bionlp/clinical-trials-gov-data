@@ -1,0 +1,74 @@
+T1	Life-Stage-And-Gender 25 29	Male
+A1	Life-Stage-And-Gender-Value T1 male
+T2	Or 30 32	or
+T3	Eq-Value 44 46	30
+T4	Eq-Operator 47 48	-
+A2	Eq-Operator-Value T4 BETWEEN
+T5	Eq-Value 49 51	69
+T6	Eq-Temporal-Unit 52 57	years
+A3	Eq-Temporal-Unit-Value T6 year
+T7	Observation-Name 66 69	BMI
+A4	Observation-Name-Value T7 vital
+T8	Eq-Value 70 72	25
+T9	Eq-Operator 73 74	-
+A5	Eq-Operator-Value T9 BETWEEN
+T10	Eq-Value 75 77	37
+T11	Eq-Unit 78 80	kg
+T12	Eq-Value 166 169	190
+T13	Observation-Name 258 270	 Body weight
+A6	Observation-Name-Value T13 vital
+T14	Observation-Name 259 270	Body weight
+A7	Observation-Name-Value T14 vital
+T15	Stability 271 277	stable
+A8	Stability-Value T15 stable
+T16	Eq-Value 282 283	3
+T17	Eq-Comparison 282 290	3 months
+T18	Eq-Temporal-Unit 284 290	months
+A9	Eq-Temporal-Unit-Value T18 month
+T19	Stability 311 317	Stable
+A10	Stability-Value T19 stable
+T20	Observation-Name 318 335	physical activity
+T21	Condition-Name 430 438	drinking
+T22	Eq-Operator 439 448	more than
+A11	Eq-Operator-Value T22 GT
+T23	Negation 548 551	Non
+T24	Condition-Name 554 562	pregnant
+T25	Assertion 608 627	willing and able to
+T26	Assertion 620 627	able to
+T27	Procedure-Name 651 656	diets
+T28	Eq-Value 729 731	30
+T29	Observation-Name 793 816	serum total cholesterol
+A12	Observation-Name-Value T29 lab
+T30	Eq-Operator 817 818	>
+A13	Eq-Operator-Value T30 GT
+T31	Eq-Value 819 822	260
+T32	Eq-Unit 823 825	mg
+T33	Eq-Operator 873 874	>
+A14	Eq-Operator-Value T33 GT
+T34	Eq-Value 875 878	189
+T35	Eq-Operator 899 900	>
+A15	Eq-Operator-Value T35 GT
+T36	Observation-Name 967 979	 Body weight
+A16	Observation-Name-Value T36 vital
+T37	Observation-Name 968 979	Body weight
+A17	Observation-Name-Value T37 vital
+T38	Stability 980 986	stable
+A18	Stability-Value T38 stable
+T39	Eq-Comparison 991 1001	< 3 months
+T40	Eq-Value 993 994	3
+T41	Eq-Temporal-Unit 995 1001	months
+A19	Eq-Temporal-Unit-Value T41 month
+T42	Stability 1022 1028	Stable
+A20	Stability-Value T42 stable
+T43	Observation-Name 1029 1046	physical activity
+T44	Drug 1076 1086	Medication
+T45	Eq-Operator 1166 1175	more than
+A21	Eq-Operator-Value T45 GT
+T46	Eq-Value 1176 1177	2
+T47	Condition-Name 1271 1292	cardiovascular events
+T48	Condition-Name 1295 1316	myocardial infarction
+T49	Or 1317 1319	or
+T50	Condition-Name 1320 1326	stroke
+T51	Unknown 1295 1316	myocardial infarction
+T52	Unknown 1271 1292	cardiovascular events
+R1	Example-Of Arg1:T51 Arg2:T52

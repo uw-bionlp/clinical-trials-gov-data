@@ -1,0 +1,39 @@
+T1	Procedure 157 169	chemotherapy
+T2	Procedure-Name 157 169	chemotherapy
+E1	Procedure:T1 Name:T2
+T3	Life-Stage-And-Gender 401 409	children
+A1	Life-Stage-And-Gender-Type T3 child
+T4	Condition 603 606	sex
+T5	Condition-Name 603 606	sex
+E4	Condition:T4 Name:T5
+T6	Procedure 891 913	bone marrow transplant
+T7	Procedure-Name 891 913	bone marrow transplant
+E6	Procedure:T6 Name:T7
+T8	Condition 1048 1063	chronic disease
+T9	Condition-Name 1048 1063	chronic disease
+E8	Condition:T8 Name:T9
+T10	Condition 961 964	sex
+T11	Condition-Name 961 964	sex
+E10	Condition:T10 Name:T11
+T12	Eq-Temporal-Unit 61 66	years
+A2	Eq-Temporal-Unit-Value T12 year
+T13	Eq-Temporal-Unit 420 425	years
+A3	Eq-Temporal-Unit-Value T13 year
+T14	Age 52 55	age
+E11	Age:T14
+T15	Age 67 70	old
+E12	Age:T15
+T16	Age 426 429	old
+E13	Age:T16
+T17	Eq-Operator 57 58	-
+A4	Eq-Operator-Value T17 BETWEEN
+T18	Eq-Operator 416 417	-
+A5	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Value 56 57	1
+T20	Eq-Value 58 60	18
+T21	Eq-Value 415 416	1
+T22	Eq-Value 417 419	18
+T23	Eq-Comparison 56 58	1-
+E14	Eq-Comparison:T23 Operator:T17 Value:T19
+T24	Eq-Comparison 415 417	1-
+E15	Eq-Comparison:T24 Operator:T18 Value:T21

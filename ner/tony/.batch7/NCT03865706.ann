@@ -1,0 +1,71 @@
+T1	Procedure 680 702	solid organ transplant
+T2	Procedure-Name 680 702	solid organ transplant
+E1	Procedure:T1 Name:T2
+T3	Condition 639 656	Immunosuppression
+T4	Condition-Name 639 656	Immunosuppression
+E3	Condition:T3 Name:T4
+T5	Procedure 456 468	intervention
+T6	Procedure-Name 456 468	intervention
+E5	Procedure:T5 Name:T6
+T7	Condition 595 607	Hyponatremia
+T8	Condition-Name 595 607	Hyponatremia
+E7	Condition:T7 Name:T8
+T9	Procedure 729 741	chemotherapy
+T10	Procedure-Name 729 741	chemotherapy
+E9	Procedure:T9 Name:T10
+T11	Condition 130 136	sepsis
+T12	Condition-Name 130 136	sepsis
+E11	Condition:T11 Name:T12
+T13	Condition 155 161	Sepsis
+T14	Condition-Name 155 161	Sepsis
+E13	Condition:T13 Name:T14
+T15	Procedure 1148 1151	LAR
+T16	Procedure-Name 1148 1151	LAR
+E15	Procedure:T15 Name:T16
+T17	Eq-Operator 74 75	≥
+A1	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 236 237	≥
+A2	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 302 308	within
+A3	Eq-Operator-Value T19 LTEQ
+T20	Eq-Operator 398 404	within
+A4	Eq-Operator-Value T20 LTEQ
+T21	Eq-Operator 469 475	within
+A5	Eq-Operator-Value T21 LTEQ
+T22	Eq-Operator 622 623	≤
+A6	Eq-Operator-Value T22 LTEQ
+T23	Eq-Operator 773 774	≥
+A7	Eq-Operator-Value T23 GTEQ
+T24	Eq-Operator 915 921	within
+A8	Eq-Operator-Value T24 LTEQ
+T25	Eq-Temporal-Unit 79 84	years
+A9	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Temporal-Unit 925 929	days
+A10	Eq-Temporal-Unit-Value T26 day
+T27	Age 70 73	Age
+E16	Age:T27
+T28	Age 85 88	old
+E17	Age:T28
+T29	Eq-Value 76 78	18
+T30	Eq-Value 162 163	3
+T31	Eq-Value 237 238	2
+T32	Eq-Value 318 320	24
+T33	Eq-Value 405 406	4
+T34	Eq-Value 476 477	6
+T35	Eq-Value 623 626	128
+T36	Eq-Value 774 775	5
+T37	Eq-Value 922 924	30
+T38	Eq-Comparison 74 84	≥ 18 years
+E18	Eq-Comparison:T38 Operator:T17 Temporal-Unit:T25 Value:T29
+T39	Eq-Comparison 236 238	≥2
+E19	Eq-Comparison:T39 Operator:T18 Value:T31
+T40	Eq-Comparison 398 406	within 4
+E20	Eq-Comparison:T40 Operator:T20 Value:T33
+T41	Eq-Comparison 469 477	within 6
+E21	Eq-Comparison:T41 Operator:T21 Value:T34
+T42	Eq-Comparison 622 626	≤128
+E22	Eq-Comparison:T42 Operator:T22 Value:T35
+T43	Eq-Comparison 773 775	≥5
+E23	Eq-Comparison:T43 Operator:T23 Value:T36
+T44	Eq-Comparison 915 929	within 30 days
+E24	Eq-Comparison:T44 Operator:T24 Temporal-Unit:T26 Value:T37

@@ -1,0 +1,18 @@
+T1	Life-Stage-And-Gender 364 371	females
+A1	Life-Stage-And-Gender-Type T1 male
+T2	Eq-Operator 52 53	>
+A2	Eq-Operator-Value T2 GT
+T3	Eq-Operator 82 83	≥
+A3	Eq-Operator-Value T3 GTEQ
+T4	Eq-Temporal-Unit 56 62	months
+A4	Eq-Temporal-Unit-Value T4 month
+T5	Eq-Temporal-Unit 87 92	years
+A5	Eq-Temporal-Unit-Value T5 year
+T6	Age 78 81	age
+E1	Age:T6
+T7	Eq-Value 54 55	6
+T8	Eq-Value 84 86	15
+T9	Eq-Comparison 52 62	> 6 months
+E2	Eq-Comparison:T9 Operator:T2 Temporal-Unit:T4 Value:T7
+T10	Eq-Comparison 82 92	≥ 15 years
+E3	Eq-Comparison:T10 Operator:T3 Temporal-Unit:T5 Value:T8

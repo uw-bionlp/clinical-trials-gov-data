@@ -1,0 +1,56 @@
+T1	Procedure 231 247	targeted therapy
+T2	Procedure-Name 231 247	targeted therapy
+E1	Procedure:T1 Name:T2
+T3	Procedure 551 564	major surgery
+T4	Procedure-Name 551 564	major surgery
+E3	Procedure:T3 Name:T4
+T5	Procedure 342 354	radiotherapy
+T6	Procedure-Name 342 354	radiotherapy
+E5	Procedure:T5 Name:T6
+T7	Procedure 363 375	radiotherapy
+T8	Procedure-Name 363 375	radiotherapy
+E7	Procedure:T7 Name:T8
+T9	Procedure 735 747	chemotherapy
+T10	Procedure-Name 735 747	chemotherapy
+E9	Procedure:T9 Name:T10
+T11	Procedure 794 806	chemotherapy
+T12	Procedure-Name 794 806	chemotherapy
+E11	Procedure:T11 Name:T12
+T13	Procedure 287 294	therapy
+T14	Procedure-Name 287 294	therapy
+E13	Procedure:T13 Name:T14
+T15	Procedure 140 146	fusion
+T16	Procedure-Name 140 146	fusion
+E15	Procedure:T15 Name:T16
+T17	Condition 663 668	birth
+T18	Condition-Name 663 668	birth
+E17	Condition:T17 Name:T18
+T19	Eq-Operator 582 588	within
+A1	Eq-Operator-Value T19 GTEQ
+T20	Eq-Temporal-Unit 330 335	weeks
+A2	Eq-Temporal-Unit-Value T20 week
+T21	Eq-Temporal-Unit 423 428	years
+A3	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 503 508	weeks
+A4	Eq-Temporal-Unit-Value T22 week
+T23	Eq-Temporal-Unit 591 596	weeks
+A5	Eq-Temporal-Unit-Value T23 week
+T24	Age 403 406	Age
+E18	Age:T24
+T25	Eq-Operator 419 420	-
+A6	Eq-Operator-Value T25 BETWEEN
+T26	Eq-Operator 460 461	-
+A7	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Value 328 329	3
+T28	Eq-Value 417 419	18
+T29	Eq-Value 420 422	25
+T30	Eq-Value 459 460	0
+T31	Eq-Value 461 462	2
+T32	Eq-Value 500 502	12
+T33	Eq-Value 589 590	4
+T34	Eq-Comparison 582 596	within 4 weeks
+E19	Eq-Comparison:T34 Operator:T19 Temporal-Unit:T23 Value:T33
+T35	Eq-Comparison 417 420	18-
+E20	Eq-Comparison:T35 Operator:T25 Value:T28
+T36	Eq-Comparison 459 461	0-
+E21	Eq-Comparison:T36 Operator:T26 Value:T30

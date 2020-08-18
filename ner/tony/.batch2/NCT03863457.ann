@@ -1,0 +1,27 @@
+T1	Language 202 205	MRI
+T2	Procedure 538 548	procedures
+T3	Procedure-Name 538 548	procedures
+E2	Procedure:T2 Name:T3
+T4	Condition 603 617	breast feeding
+T5	Condition-Name 603 617	breast feeding
+E4	Condition:T4 Name:T5
+T6	Life-Stage-And-Gender 575 582	Females
+A1	Life-Stage-And-Gender-Type T6 male
+T7	Condition 886 894	disorder
+T8	Condition-Name 886 894	disorder
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 46 47	≥
+A2	Eq-Operator-Value T9 GTEQ
+T10	Eq-Operator 150 151	≥
+A3	Eq-Operator-Value T10 GTEQ
+T11	Eq-Temporal-Unit 51 56	years
+A4	Eq-Temporal-Unit-Value T11 year
+T12	Eq-Unit 156 158	cm
+T13	Age 60 63	age
+E8	Age:T13
+T14	Eq-Value 48 50	18
+T15	Eq-Value 152 153	1
+T16	Eq-Comparison 46 56	≥ 18 years
+E9	Eq-Comparison:T16 Operator:T9 Temporal-Unit:T11 Value:T14
+T17	Eq-Comparison 150 153	≥ 1
+E10	Eq-Comparison:T17 Operator:T10 Value:T15

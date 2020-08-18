@@ -1,0 +1,53 @@
+T1	Condition 636 656	psychiatric disorder
+T2	Condition-Name 636 656	psychiatric disorder
+E1	Condition:T1 Name:T2
+T3	Condition 694 710	terminal illness
+T4	Condition-Name 694 710	terminal illness
+E3	Condition:T3 Name:T4
+T5	Condition 86 101	ischemic stroke
+T6	Condition-Name 86 101	ischemic stroke
+E5	Condition:T5 Name:T6
+T7	Condition 675 688	alcohol abuse
+T8	Condition-Name 675 688	alcohol abuse
+E7	Condition:T7 Name:T8
+T9	Procedure 266 278	intervention
+T10	Procedure-Name 266 278	intervention
+E9	Procedure:T9 Name:T10
+T11	Language 423 430	English
+T12	Condition 144 150	stroke
+T13	Condition-Name 144 150	stroke
+E12	Condition:T12 Name:T13
+T14	Condition 173 179	stroke
+T15	Condition-Name 173 179	stroke
+E14	Condition:T14 Name:T15
+T16	Condition 545 551	stroke
+T17	Condition-Name 545 551	stroke
+E16	Condition:T16 Name:T17
+T18	Eq-Operator 109 110	<
+A1	Eq-Operator-Value T18 LT
+T19	Eq-Operator 755 764	less than
+A2	Eq-Operator-Value T19 LT
+T20	Eq-Operator 909 921	greater than
+A3	Eq-Operator-Value T20 GT
+T21	Eq-Temporal-Unit 28 33	years
+A4	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 121 127	months
+A5	Eq-Temporal-Unit-Value T22 month
+T23	Eq-Temporal-Unit 133 138	years
+A6	Eq-Temporal-Unit-Value T23 year
+T24	Age 37 40	age
+E17	Age:T24
+T25	Eq-Value 25 27	55
+T26	Eq-Value 110 112	16
+T27	Eq-Value 119 120	3
+T28	Eq-Value 131 132	5
+T29	Eq-Value 765 767	23
+T30	Eq-Value 901 902	9
+T31	Eq-Value 922 924	19
+T32	Eq-Value 1015 1016	9
+T33	Eq-Comparison 109 112	<16
+E18	Eq-Comparison:T33 Operator:T18 Value:T26
+T34	Eq-Comparison 755 767	less than 23
+E19	Eq-Comparison:T34 Operator:T19 Value:T29
+T35	Eq-Comparison 909 924	greater than 19
+E20	Eq-Comparison:T35 Operator:T20 Value:T31

@@ -1,0 +1,54 @@
+T1	Procedure 690 709	drug administration
+T2	Procedure-Name 690 709	drug administration
+E1	Procedure:T1 Name:T2
+T3	Observation 44 59	Body Mass Index
+T4	Observation-Name 44 59	Body Mass Index
+E3	Observation:T3 Name:T4
+A1	Observation-Type-Value T4 vital
+T5	Condition 461 476	Mental handicap
+T6	Condition-Name 461 476	Mental handicap
+E5	Condition:T5 Name:T6
+T7	Condition 775 789	drug addiction
+T8	Condition-Name 775 789	drug addiction
+E7	Condition:T7 Name:T8
+T9	Condition 817 825	cannabis
+T10	Condition-Name 817 825	cannabis
+E9	Condition:T9 Name:T10
+T11	Condition 801 805	soft
+T12	Condition-Name 801 805	soft
+E11	Condition:T11 Name:T12
+T13	Observation 25 28	BMI
+T14	Observation-Name 25 28	BMI
+E13	Observation:T13 Name:T14
+A2	Observation-Type-Value T14 vital
+T15	Observation 61 64	BMI
+T16	Observation-Name 61 64	BMI
+E15	Observation:T15 Name:T16
+A3	Observation-Type-Value T16 vital
+T17	Procedure 214 217	tea
+T18	Procedure-Name 214 217	tea
+E17	Procedure:T17 Name:T18
+T19	Eq-Operator 589 595	within
+A4	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 666 672	within
+A5	Eq-Operator-Value T20 GTEQ
+T21	Eq-Temporal-Unit 599 603	days
+A6	Eq-Temporal-Unit-Value T21 day
+T22	Eq-Temporal-Unit 676 680	days
+A7	Eq-Temporal-Unit-Value T22 day
+T23	Eq-Unit 37 42	kg/m2
+T24	Eq-Unit 67 72	kg/m2
+T25	Eq-Unit 89 91	kg
+T26	Eq-Operator 33 34	-
+A8	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Value 31 33	18
+T28	Eq-Value 34 36	30
+T29	Eq-Value 276 278	48
+T30	Eq-Value 596 598	30
+T31	Eq-Value 673 675	60
+T32	Eq-Comparison 589 603	within 30 days
+E18	Eq-Comparison:T32 Operator:T19 Temporal-Unit:T21 Value:T30
+T33	Eq-Comparison 666 680	within 60 days
+E19	Eq-Comparison:T33 Operator:T20 Temporal-Unit:T22 Value:T31
+T34	Eq-Comparison 31 34	18-
+E20	Eq-Comparison:T34 Operator:T26 Value:T27

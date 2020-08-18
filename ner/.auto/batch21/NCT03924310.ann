@@ -1,0 +1,19 @@
+T1	Condition 334 349	of skin disease
+T2	Condition-Name 334 349	of skin disease
+E1	Condition:T1 Name:T2
+T3	Procedure 142 152	procedures
+T4	Procedure-Name 142 152	procedures
+E3	Procedure:T3 Name:T4
+T5	Procedure 289 299	prosthesis
+T6	Procedure-Name 289 299	prosthesis
+E5	Procedure:T5 Name:T6
+T7	Condition 505 510	abuse
+T8	Condition-Name 505 510	abuse
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 666 672	within
+A1	Eq-Operator-Value T9 GTEQ
+T10	Eq-Temporal-Unit 676 680	days
+A2	Eq-Temporal-Unit-Value T10 day
+T11	Eq-Value 673 675	30
+T12	Eq-Comparison 666 680	within 30 days
+E8	Eq-Comparison:T12 Operator:T9 Temporal-Unit:T10 Value:T11

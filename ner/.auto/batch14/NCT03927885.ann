@@ -1,0 +1,58 @@
+T1	Procedure 447 453	change
+T2	Procedure-Name 447 453	change
+E1	Procedure:T1 Name:T2
+T3	Procedure 926 940	pain relieving
+T4	Procedure-Name 926 940	pain relieving
+E3	Procedure:T3 Name:T4
+T5	Procedure 802 813	transfusion
+T6	Procedure-Name 802 813	transfusion
+E5	Procedure:T5 Name:T6
+T7	Procedure 941 951	procedures
+T8	Procedure-Name 941 951	procedures
+E7	Procedure:T7 Name:T8
+T9	Eq-Operator 146 148	>=
+A1	Eq-Operator-Value T9 GTEQ
+T10	Eq-Operator 455 456	>
+A2	Eq-Operator-Value T10 GT
+T11	Eq-Operator 742 744	>=
+A3	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 848 850	>=
+A4	Eq-Operator-Value T12 GTEQ
+T13	Eq-Operator 952 958	within
+A5	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 1115 1117	>=
+A6	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 1172 1173	>
+A7	Eq-Operator-Value T15 GT
+T16	Eq-Temporal-Unit 307 312	weeks
+A8	Eq-Temporal-Unit-Value T16 week
+T17	Eq-Temporal-Unit 961 966	weeks
+A9	Eq-Temporal-Unit-Value T17 week
+T18	Eq-Operator 214 215	-
+A10	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Value 149 150	4
+T20	Eq-Value 215 217	10
+T21	Eq-Value 305 306	2
+T22	Eq-Value 457 459	25
+T23	Eq-Value 475 477	48
+T24	Eq-Value 745 746	9
+T25	Eq-Value 851 852	9
+T26	Eq-Value 959 960	2
+T27	Eq-Value 1118 1119	2
+T28	Eq-Value 1174 1175	7
+T29	Eq-Comparison 146 150	>= 4
+E8	Eq-Comparison:T29 Operator:T9 Value:T19
+T30	Eq-Comparison 455 459	> 25
+E9	Eq-Comparison:T30 Operator:T10 Value:T22
+T31	Eq-Comparison 742 746	>= 9
+E10	Eq-Comparison:T31 Operator:T11 Value:T24
+T32	Eq-Comparison 848 852	>= 9
+E11	Eq-Comparison:T32 Operator:T12 Value:T25
+T33	Eq-Comparison 952 966	within 2 weeks
+E12	Eq-Comparison:T33 Operator:T13 Temporal-Unit:T17 Value:T26
+T34	Eq-Comparison 1115 1119	>= 2
+E13	Eq-Comparison:T34 Operator:T14 Value:T27
+T35	Eq-Comparison 1172 1175	> 7
+E14	Eq-Comparison:T35 Operator:T15 Value:T28
+T36	Eq-Comparison 214 217	-10
+E15	Eq-Comparison:T36 Operator:T18 Value:T20

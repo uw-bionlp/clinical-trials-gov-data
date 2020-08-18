@@ -1,0 +1,22 @@
+T1	Language 25 32	English
+T2	Observation 65 92	Spider Phobia Questionnaire
+E1	Observation:T2 Name:T3 Polarity:T6
+T3	Observation-Name 65 92	Spider Phobia Questionnaire
+T4	Observation 94 97	SPQ
+E2	Observation:T4 Name:T5
+T5	Observation-Name 94 97	SPQ
+R1	Abbrev-Of Arg1:E2 Arg2:E1	
+T6	Polarity 47 55	Elevated
+T7	Allergy 131 140	allergies
+E3	Allergy:T7 Name:T9 Name2:T10 Name3:T11 Severity:T8
+T9	Allergy-Name 144 148	bees
+T10	Allergy-Name 149 156	spiders
+T11	Allergy-Name 157 164	insects
+A2	Observation-Type-Value T3 survey-or-questionnaire
+T8	Severity 124 130	Severe
+A3	Severity-Value T8 severe
+A1	Polarity-Value T6 high
+T12	Or 148 149	/
+E4	Or:T12 Arg:T9 Arg2:T10
+T13	Or 156 157	/
+E5	Or:T13 Arg:T10 Arg2:T11

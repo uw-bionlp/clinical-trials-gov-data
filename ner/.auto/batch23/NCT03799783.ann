@@ -1,0 +1,19 @@
+T1	Condition 46 64	behavior disorders
+T2	Condition-Name 46 64	behavior disorders
+E1	Condition:T1 Name:T2
+T3	Procedure 83 92	procedure
+T4	Procedure-Name 83 92	procedure
+E3	Procedure:T3 Name:T4
+T5	Life-Stage-And-Gender 25 33	children
+A1	Life-Stage-And-Gender-Type T5 child
+T6	Procedure 98 106	sedation
+T7	Procedure-Name 98 106	sedation
+E6	Procedure:T6 Name:T7
+T8	Procedure 217 224	therapy
+T9	Procedure-Name 217 224	therapy
+E8	Procedure:T8 Name:T9
+T10	Eq-Operator 166 167	>
+A2	Eq-Operator-Value T10 GT
+T11	Eq-Value 168 169	2
+T12	Eq-Comparison 166 169	> 2
+E9	Eq-Comparison:T12 Operator:T10 Value:T11

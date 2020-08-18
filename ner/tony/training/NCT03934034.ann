@@ -1,0 +1,64 @@
+T1	Condition 47 68	NTM pulmonary disease
+T2	Condition-Name 47 68	NTM pulmonary disease
+E1	Condition:T1 Name:T2
+T3	Condition 447 468	NTM pulmonary disease
+T4	Condition-Name 447 468	NTM pulmonary disease
+E3	Condition:T3 Name:T4
+T5	Eq-Temporal-Unit 412 417	weeks
+A1	Eq-Temporal-Unit-Value T5 week
+T6	Eq-Value 410 411	4
+T7	Condition 98 119	NTM pulmonary disease
+E2	Condition:T7 Name:T8
+T8	Condition-Name 98 119	NTM pulmonary disease
+T9	Organism 130 146	M. avium complex
+E4	Organism:T9 Name:T10
+T10	Organism-Name 130 146	M. avium complex
+R1	Caused-By Arg1:E2 Arg2:E4	
+T12	Organism 151 184	M. abscessus subspecies abscessus
+E6	Organism:T12 Name:T11
+T11	Organism-Name 151 184	M. abscessus subspecies abscessus
+T13	Organism 189 224	M. abscessus subspecies massiliense
+E5	Organism:T13 Name:T14
+T14	Organism-Name 189 224	M. abscessus subspecies massiliense
+T15	Organism 229 240	M. kansasii
+E7	Organism:T15 Name:T16
+T16	Organism-Name 229 240	M. kansasii
+T17	Or 148 150	or
+E8	Or:T17 Arg:E4 Arg2:E6
+T18	Or 186 188	or
+E9	Or:T18 Arg:E6 Arg2:E5
+T19	Or 226 228	or
+E10	Or:T19 Arg:E5 Arg2:E7
+R2	Caused-By Arg1:E2 Arg2:E6	
+R3	Caused-By Arg1:E2 Arg2:E5	
+R4	Caused-By Arg1:E2 Arg2:E7	
+T20	Eq-Temporal-Recency 260 270	starts new
+A2	Eq-Temporal-Recency-Value T20 first-time
+T21	Procedure 271 280	treatment
+E11	Procedure:T21 Name:T22 Temporality:E12
+T22	Procedure-Name 271 280	treatment
+T23	Eq-Comparison 260 270	starts new
+E12	Eq-Comparison:T23 Temporal-Recency:T20
+T24	Eq-Comparison 400 417	more than 4 weeks
+E13	Eq-Comparison:T24 Operator:T25 Temporal-Unit:T5 Value:T6
+T25	Eq-Operator 400 409	more than
+A3	Eq-Operator-Value T25 GT
+T26	Procedure 388 395	treated
+E14	Procedure:T26 Name:T27 Temporality:E13
+T27	Procedure-Name 388 395	treated
+T28	Negation 472 476	none
+E15	Negation:T28 
+T29	Organism 480 496	M. avium complex
+E16	Organism:T29 Name:T33
+T30	Organism 498 531	M. abscessus subspecies abscessus
+E17	Organism:T30 Name:T34
+T31	Organism 533 568	M. abscessus subspecies massiliense
+E18	Organism:T31 Name:T35
+T32	Organism 573 584	M. kansasii
+E19	Organism:T32 Name:T36
+T33	Organism-Name 480 496	M. avium complex
+T34	Organism-Name 498 531	M. abscessus subspecies abscessus
+T35	Organism-Name 533 568	M. abscessus subspecies massiliense
+T36	Organism-Name 573 584	M. kansasii
+T37	Or 570 572	or
+E20	Or:T37 Arg:E18 Arg2:E19

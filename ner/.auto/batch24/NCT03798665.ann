@@ -1,0 +1,30 @@
+T1	Procedure 192 210	chemotherapy cycle
+T2	Procedure-Name 192 210	chemotherapy cycle
+E1	Procedure:T1 Name:T2
+T3	Procedure 237 255	chemotherapy cycle
+T4	Procedure-Name 237 255	chemotherapy cycle
+E3	Procedure:T3 Name:T4
+T5	Procedure 268 286	chemotherapy cycle
+T6	Procedure-Name 268 286	chemotherapy cycle
+E5	Procedure:T5 Name:T6
+T7	Procedure 124 136	chemotherapy
+T8	Procedure-Name 124 136	chemotherapy
+E7	Procedure:T7 Name:T8
+T9	Procedure 497 536	hematopoietic stem cell transplantation
+T10	Procedure-Name 497 536	hematopoietic stem cell transplantation
+E9	Procedure:T9 Name:T10
+T11	Procedure 540 567	bone marrow transplantation
+T12	Procedure-Name 540 567	bone marrow transplantation
+E11	Procedure:T11 Name:T12
+T13	Procedure 458 476	chemotherapy cycle
+T14	Procedure-Name 458 476	chemotherapy cycle
+E13	Procedure:T13 Name:T14
+T15	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T15 GTEQ
+T16	Eq-Temporal-Unit 34 39	years
+A2	Eq-Temporal-Unit-Value T16 year
+T17	Age 25 28	Age
+E14	Age:T17
+T18	Eq-Value 31 33	18
+T19	Eq-Comparison 29 39	≥ 18 years
+E15	Eq-Comparison:T19 Operator:T15 Temporal-Unit:T16 Value:T18

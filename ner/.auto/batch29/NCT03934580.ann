@@ -1,0 +1,26 @@
+T1	Condition 457 474	food intolerances
+T2	Condition-Name 457 474	food intolerances
+E1	Condition:T1 Name:T2
+T3	Condition 369 385	eating disorders
+T4	Condition-Name 369 385	eating disorders
+E3	Condition:T3 Name:T4
+T5	Observation 109 124	body mass index
+T6	Observation-Name 109 124	body mass index
+E5	Observation:T5 Name:T6
+A1	Observation-Type-Value T6 vital
+T7	Life-Stage-And-Gender 25 38	female gender
+A2	Life-Stage-And-Gender-Type T7 male
+T8	Procedure 94 102	hypnosis
+T9	Procedure-Name 94 102	hypnosis
+E8	Procedure:T8 Name:T9
+T10	Observation 126 129	BMI
+T11	Observation-Name 126 129	BMI
+E10	Observation:T10 Name:T11
+A3	Observation-Type-Value T11 vital
+T12	Eq-Unit 143 148	kg/m2
+T13	Eq-Operator 139 140	-
+A4	Eq-Operator-Value T13 BETWEEN
+T14	Eq-Value 137 139	20
+T15	Eq-Value 140 142	27
+T16	Eq-Comparison 137 140	20-
+E11	Eq-Comparison:T16 Operator:T13 Value:T14

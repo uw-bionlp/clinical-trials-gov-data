@@ -1,0 +1,25 @@
+T1	Procedure 44 66	mechanical ventilation
+T2	Procedure-Name 44 66	mechanical ventilation
+E1	Procedure:T1 Name:T2
+T3	Condition 175 196	neuromuscular disease
+T4	Condition-Name 175 196	neuromuscular disease
+E3	Condition:T3 Name:T4
+T5	Condition 386 391	death
+T6	Condition-Name 386 391	death
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Temporal-Unit 33 38	years
+A2	Eq-Temporal-Unit-Value T8 year
+T9	Eq-Temporal-Unit 326 331	years
+A3	Eq-Temporal-Unit-Value T9 year
+T10	Age 25 28	age
+E6	Age:T10
+T11	Age 313 316	age
+E7	Age:T11
+T12	Eq-Value 30 32	18
+T13	Eq-Value 89 91	48
+T14	Eq-Value 152 153	7
+T15	Eq-Value 323 325	18
+T16	Eq-Comparison 29 38	≥18 years
+E8	Eq-Comparison:T16 Operator:T7 Temporal-Unit:T8 Value:T12

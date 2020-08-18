@@ -1,0 +1,26 @@
+T1	Condition 450 472	neurological disorders
+T2	Condition-Name 450 472	neurological disorders
+E1	Condition:T1 Name:T2
+T3	Condition 422 431	endocrine
+T4	Condition-Name 422 431	endocrine
+E3	Condition:T3 Name:T4
+T5	Life-Stage-And-Gender 41 48	females
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Life-Stage-And-Gender 33 37	male
+A2	Life-Stage-And-Gender-Type T6 male
+T7	Eq-Operator 119 125	within
+A3	Eq-Operator-Value T7 LTEQ
+T8	Eq-Value 232 233	1
+T9	Eq-Value 239 240	1
+T10	Eq-Comparison 75 82	history
+E4	Eq-Comparison:T10 Temporal-Period:T11
+T11	Eq-Temporal-Period 75 82	history
+A4	Eq-Temporal-Period-Value T11 past
+T12	Eq-Comparison 337 344	history
+E5	Eq-Comparison:T12 Temporal-Period:T13
+T13	Eq-Temporal-Period 337 344	history
+A5	Eq-Temporal-Period-Value T13 past
+T14	Eq-Comparison 351 358	current
+E6	Eq-Comparison:T14 Temporal-Period:T15
+T15	Eq-Temporal-Period 351 358	current
+A6	Eq-Temporal-Period-Value T15 present

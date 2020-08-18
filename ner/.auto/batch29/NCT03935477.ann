@@ -1,0 +1,19 @@
+T1	Procedure 38 46	elective
+T2	Procedure-Name 38 46	elective
+E1	Procedure:T1 Name:T2
+T3	Procedure 341 365	urethral catheterisation
+T4	Procedure-Name 341 365	urethral catheterisation
+E3	Procedure:T3 Name:T4
+T5	Procedure 317 337	arterial cannulation
+T6	Procedure-Name 317 337	arterial cannulation
+E5	Procedure:T5 Name:T6
+T7	Condition 282 291	pregnancy
+T8	Condition-Name 282 291	pregnancy
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 273 274	<
+A1	Eq-Operator-Value T9 LT
+T10	Age 269 272	age
+E8	Age:T10
+T11	Eq-Value 274 276	18
+T12	Eq-Comparison 273 276	<18
+E9	Eq-Comparison:T12 Operator:T9 Value:T11

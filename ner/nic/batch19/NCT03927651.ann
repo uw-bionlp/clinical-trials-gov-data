@@ -1,0 +1,14 @@
+T1	Procedure 323 331	dialysis
+T2	Procedure-Name 323 331	dialysis
+E1	Procedure:T1 Name:T2
+T3	Condition 302 308	uremia
+T4	Condition-Name 302 308	uremia
+E3	Condition:T3 Name:T4
+T5	Eq-Comparison 230 237	history
+E4	Eq-Comparison:T5 Temporal-Period:T6
+T6	Eq-Temporal-Period 230 237	history
+A1	Eq-Temporal-Period-Value T6 past
+T7	Eq-Comparison 274 281	history
+E5	Eq-Comparison:T7 Temporal-Period:T8
+T8	Eq-Temporal-Period 274 281	history
+A2	Eq-Temporal-Period-Value T8 past

@@ -1,0 +1,221 @@
+T1	Condition 45 48	SCD
+T2	Condition-Name 45 48	SCD
+E1	Condition:T1 Name:T2
+T3	Condition 52 55	MCI
+T4	Condition-Name 52 55	MCI
+E3	Condition:T3 Name:T4
+T5	Condition 482 504	coronary heart disease
+T6	Condition-Name 482 504	coronary heart disease
+E5	Condition:T5 Name:T6 Stability:T77
+T7	Condition 426 439	brain disease
+T8	Condition-Name 426 439	brain disease
+E7	Condition:T7 Name:T8
+T9	Condition 508 521	heart failure
+T10	Condition-Name 508 521	heart failure
+E9	Condition:T9 Name:T10
+T11	Condition 457 467	depression
+T12	Condition-Name 457 467	depression
+E11	Condition:T11 Name:T12 Severity:T76
+T13	Condition 322 330	Dementia
+T14	Condition-Name 322 330	Dementia
+E13	Condition:T13 Name:T14
+T15	Condition 383 391	dementia
+T16	Condition-Name 383 391	dementia
+E15	Condition:T15 Name:T16
+T17	Procedure 701 714	chemo-therapy
+T18	Procedure-Name 701 714	chemo-therapy
+E17	Procedure:T17 Name:T18
+T19	Procedure 687 696	radiation
+T20	Procedure-Name 687 696	radiation
+E19	Procedure:T19 Name:T20 Temporality:E48
+T23	Eq-Operator 29 30	>
+A1	Eq-Operator-Value T23 GT
+T24	Eq-Operator 348 349	<
+A2	Eq-Operator-Value T24 LT
+T25	Eq-Operator 364 367	>/=
+A3	Eq-Operator-Value T25 GTEQ
+T26	Eq-Operator 807 808	<
+A4	Eq-Operator-Value T26 LT
+T27	Eq-Temporal-Unit 34 39	years
+A5	Eq-Temporal-Unit-Value T27 year
+T28	Eq-Temporal-Unit 267 273	months
+A6	Eq-Temporal-Unit-Value T28 month
+T29	Eq-Temporal-Unit 811 816	years
+A7	Eq-Temporal-Unit-Value T29 year
+T30	Eq-Temporal-Unit 925 931	months
+A8	Eq-Temporal-Unit-Value T30 month
+T32	Age 25 28	Age
+E22	Age:T32 Eq-Comparison:E23
+T33	Eq-Value 31 33	50
+T35	Eq-Value 265 266	3
+T36	Eq-Value 350 352	26
+T37	Eq-Value 368 369	1
+T38	Eq-Value 809 810	5
+T39	Eq-Value 849 850	2
+T41	Eq-Value 923 924	3
+T42	Eq-Comparison 29 39	> 50 years
+E23	Eq-Comparison:T42 Operator:T23 Temporal-Unit:T27 Value:T33
+T43	Eq-Comparison 348 352	< 26
+E24	Eq-Comparison:T43 Operator:T24 Value:T36
+T44	Eq-Comparison 807 816	< 5 years
+E25	Eq-Comparison:T44 Operator:T26 Temporal-Unit:T29 Value:T38
+T31	Or 49 51	or
+E2	Or:T31 Arg:E1 Arg2:E3
+T45	Condition 76 93	neurodegeneration
+E4	Condition:T45 Name:T46
+T46	Condition-Name 76 93	neurodegeneration
+T47	Negation 61 63	No
+E6	Negation:T47 Negates:E4
+T21	Observation 100 111	CSF phospho
+E8	Observation:T21 Name:T22 Eq-Comparison:E12
+T22	Observation-Name 100 111	CSF phospho
+A9	Observation-Type-Value T22 lab
+T48	Observation 116 132	total tau-levels
+E10	Observation:T48 Name:T49 Eq-Comparison:E12
+T49	Observation-Name 116 132	total tau-levels
+A10	Observation-Type-Value T49 lab
+T50	Eq-Comparison 133 146	below cut-off
+E12	Eq-Comparison:T50 Operator:T51 Unit:T52
+T51	Eq-Operator 133 138	below
+A11	Eq-Operator-Value T51 LT
+T52	Eq-Unit 139 146	cut-off
+A12	Eq-Unit-Value T52 ref-range-low
+T53	Or 112 115	and
+E14	Or:T53 Arg:E8 Arg2:E10
+R1	Example-Of Arg1:E8 Arg2:E4	
+T54	Language 153 165	Scandinavian
+T34	Study 223 228	study
+E16	Study:T34 
+T55	Other 219 222	DDI
+E18	Other:T55 Is-Other:E16
+T56	Eq-Comparison 195 201	2-year
+E20	Eq-Comparison:T56 Temporal-Unit:T58 Value:T57
+T57	Eq-Value 195 196	2
+T58	Eq-Temporal-Unit 197 201	year
+A13	Eq-Temporal-Unit-Value T58 year
+T59	Encounter 202 211	follow-up
+E21	Encounter:T59 Duration:E20
+T60	Temporal-Connection 212 214	in
+E26	Temporal-Connection:T60 Arg:E21 Arg2:E16
+A14	Temporal-Connection-Type-Value E26 during
+T61	Drug 241 251	medication
+E27	Drug:T61 Stability:T62 Temporality:E28
+T62	Stability 234 240	Stable
+A15	Stability-Value T62 stable
+T63	Eq-Comparison 256 273	at least 3 months
+E28	Eq-Comparison:T63 Operator:T64 Temporal-Unit:T28 Value:T35
+T64	Eq-Operator 256 264	at least
+A16	Eq-Operator-Value T64 GTEQ
+T65	Temporal-Connection 274 279	prior
+E29	Temporal-Connection:T65 Arg:E28 Arg2:E30
+A17	Temporal-Connection-Type-Value E29 before
+T66	Study 283 291	baseline
+E30	Study:T66 
+T67	Observation 343 347	MMSE
+E31	Observation:T67 Name:T68 Eq-Comparison:E24
+T68	Observation-Name 343 347	MMSE
+R2	Equivalent-To Arg1:E31 Arg2:E13	
+T69	Observation 360 363	CDR
+E32	Observation:T69 Name:T70 Eq-Comparison:E33
+T70	Observation-Name 360 363	CDR
+T71	Eq-Comparison 364 369	>/= 1
+E33	Eq-Comparison:T71 Operator:T25 Value:T37
+T72	Or 353 359	and/or
+E34	Or:T72 Arg:E31 Arg2:E32
+T73	Condition 412 414	AD
+E35	Condition:T73 Name:T74
+T74	Condition-Name 412 414	AD
+T75	Exception 407 411	than
+E36	Exception:T75 From:E15 Except:E35
+T76	Severity 445 456	Significant
+A20	Severity-Value T76 severe
+T77	Stability 473 481	Unstable
+A21	Stability-Value T77 change
+T78	Or 505 507	or
+E37	Or:T78 Arg:E5 Arg2:E9
+T79	Procedure 533 542	treatment
+E38	Procedure:T79 
+R3	Treatment-For Arg1:E38 Arg2:E9	
+T80	Assertion 525 532	need of
+E39	Assertion:T80 Asserted:E38
+A22	Assertion-Type-Value E39 hypothetical
+T81	Condition 557 578	inflammatory diseases
+E40	Condition:T81 Name:T82
+T82	Condition-Name 557 578	inflammatory diseases
+T83	Other 377 382	Other
+E41	Other:T83 Is-Other:E15
+T84	Other 420 425	Other
+E42	Other:T84 Is-Other:E7
+T85	Condition 584 599	Somatic disease
+E43	Condition:T85 Name:T86
+T86	Condition-Name 584 599	Somatic disease
+T87	Condition 618 636	cognitive function
+E44	Condition:T87 Name:T88
+T88	Condition-Name 618 636	cognitive function
+T89	Stability 611 617	affect
+A23	Stability-Value T89 change
+R4	Equivalent-To Arg1:E44 Arg2:T89	
+T90	Assertion 605 610	might
+E45	Assertion:T90 Asserted:T89
+A24	Assertion-Type-Value E45 hypothetical
+R5	Caused-By Arg1:T89 Arg2:E43	
+T91	Drug 661 675	anticoagulants
+E46	Drug:T91 Name:T92 Temporality:E47
+T92	Drug-Name 661 675	anticoagulants
+T93	Eq-Comparison 652 657	Usage
+E47	Eq-Comparison:T93 Temporal-Period:T94
+T94	Eq-Temporal-Period 652 657	Usage
+A25	Eq-Temporal-Period-Value T94 present
+T95	Eq-Comparison 681 686	Prior
+E48	Eq-Comparison:T95 Temporal-Period:T96
+T96	Eq-Temporal-Period 681 686	Prior
+A26	Eq-Temporal-Period-Value T96 past
+T97	Or 698 700	or
+E49	Or:T97 Arg:E19 Arg2:E17
+T98	Condition 734 737	CNS
+E50	Condition:T98 Name:T99
+T99	Condition-Name 734 737	CNS
+T100	Stability 724 733	affecting
+A27	Stability-Value T100 change
+R6	Equivalent-To Arg1:E50 Arg2:T100	
+T101	Assertion 715 723	possibly
+E51	Assertion:T101 Asserted:T100
+A28	Assertion-Type-Value E51 hypothetical
+R7	Caused-By Arg1:T100 Arg2:E17	
+T102	Condition 752 758	cancer
+E52	Condition:T102 Name:T103
+T103	Condition-Name 752 758	cancer
+T104	Condition 776 783	disease
+E53	Condition:T104 Name:T105 Severity:T106
+T105	Condition-Name 776 783	disease
+T106	Severity 768 775	serious
+A29	Severity-Value T106 severe
+T107	Other 762 767	other
+E54	Other:T107 Is-Other:E53
+T108	Observation 789 806	expected survival
+E55	Observation:T108 Name:T109 Eq-Comparison:E25
+T109	Observation-Name 789 806	expected survival
+T110	And 784 788	with
+E56	And:T110 Arg:E53 Arg2:E55
+T111	Drug 822 831	Fish meal
+E57	Drug:T111 Name:T112 Eq-Comparison:E58
+T112	Drug-Name 822 831	Fish meal
+T113	Eq-Comparison 839 863	more than 2 times a week
+E58	Eq-Comparison:T113 Operator:T114 Value:T39 Per:T115
+T114	Eq-Operator 839 848	more than
+A30	Eq-Operator-Value T114 GT
+T115	Eq-Temporal-Unit 859 863	week
+A31	Eq-Temporal-Unit-Value T115 week
+T40	Drug 889 908	Omega-3 supplements
+E59	Drug:T40 Name:T116 Temporality:E60 Temporality2:E61
+T116	Drug-Name 889 908	Omega-3 supplements
+T117	Eq-Comparison 869 878	Regularly
+E60	Eq-Comparison:T117 Temporal-Period:T118
+T118	Eq-Temporal-Period 869 878	Regularly
+A32	Eq-Temporal-Period-Value T118 present
+T119	Eq-Comparison 918 931	last 3 months
+E61	Eq-Comparison:T119 Temporal-Period:T120 Value:T41 Temporal-Unit:T30
+T120	Eq-Temporal-Period 918 922	last
+A33	Eq-Temporal-Period-Value T120 past
+T121	Modifier 548 556	Systemic
+E62	Modifier:T121 Modifies:T82

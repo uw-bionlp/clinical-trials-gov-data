@@ -1,0 +1,33 @@
+T1	Condition 49 64	Hunter syndrome
+T2	Condition-Name 49 64	Hunter syndrome
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 70 74	Male
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Procedure 296 309	contraception
+T5	Procedure-Name 296 309	contraception
+E4	Procedure:T4 Name:T5
+T6	Procedure 398 409	bronchotomy
+T7	Procedure-Name 398 409	bronchotomy
+E6	Procedure:T6 Name:T7
+T8	Procedure 378 381	ERT
+T9	Procedure-Name 378 381	ERT
+E8	Procedure:T8 Name:T9
+T10	Life-Stage-And-Gender 768 774	Female
+A2	Life-Stage-And-Gender-Type T10 male
+T11	Eq-Operator 89 90	≥
+A3	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 632 638	within
+A4	Eq-Operator-Value T12 GTEQ
+T13	Eq-Temporal-Unit 642 646	days
+A5	Eq-Temporal-Unit-Value T13 day
+T14	Age 82 85	age
+E9	Age:T14
+T15	Eq-Value 91 92	5
+T16	Eq-Value 128 129	6
+T17	Eq-Value 366 367	2
+T18	Eq-Value 639 641	30
+T19	Eq-Value 756 757	6
+T20	Eq-Comparison 89 92	≥ 5
+E10	Eq-Comparison:T20 Operator:T11 Value:T15
+T21	Eq-Comparison 632 646	within 30 days
+E11	Eq-Comparison:T21 Operator:T12 Temporal-Unit:T13 Value:T18

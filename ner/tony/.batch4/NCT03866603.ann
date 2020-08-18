@@ -1,0 +1,26 @@
+T1	Condition 126 145	Parkinson's disease
+T2	Condition-Name 126 145	Parkinson's disease
+E1	Condition:T1 Name:T2
+T3	Condition 211 223	parkinsonism
+T4	Condition-Name 211 223	parkinsonism
+E3	Condition:T3 Name:T4
+T5	Condition 457 476	Parkinson's disease
+T6	Condition-Name 457 476	Parkinson's disease
+E5	Condition:T5 Name:T6
+T7	Condition 546 558	parkinsonism
+T8	Condition-Name 546 558	parkinsonism
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 629 641	younger than
+A1	Eq-Operator-Value T9 LT
+T10	Eq-Temporal-Unit 339 344	years
+A2	Eq-Temporal-Unit-Value T10 year
+T11	Eq-Temporal-Unit 645 650	years
+A3	Eq-Temporal-Unit-Value T11 year
+T12	Age 345 348	old
+E8	Age:T12
+T13	Age 651 654	old
+E9	Age:T13
+T14	Eq-Value 336 338	18
+T15	Eq-Value 642 644	18
+T16	Eq-Comparison 629 650	younger than 18 years
+E10	Eq-Comparison:T16 Operator:T9 Temporal-Unit:T11 Value:T15

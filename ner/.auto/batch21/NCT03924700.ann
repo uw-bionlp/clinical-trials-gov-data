@@ -1,0 +1,50 @@
+T1	Condition 901 919	mental retardation
+T2	Condition-Name 901 919	mental retardation
+E1	Condition:T1 Name:T2
+T3	Condition 413 430	spondylolisthesis
+T4	Condition-Name 413 430	spondylolisthesis
+E3	Condition:T3 Name:T4
+T5	Procedure 386 402	Revision surgery
+T6	Procedure-Name 386 402	Revision surgery
+E5	Procedure:T5 Name:T6
+T7	Condition 455 471	lumbar scoliosis
+T8	Condition-Name 455 471	lumbar scoliosis
+E7	Condition:T7 Name:T8
+T9	Condition 527 542	spinal diseases
+T10	Condition-Name 527 542	spinal diseases
+E9	Condition:T9 Name:T10
+T11	Condition 566 577	spondylitis
+T12	Condition-Name 566 577	spondylitis
+E11	Condition:T11 Name:T12
+T13	Procedure 173 183	discectomy
+T14	Procedure-Name 173 183	discectomy
+E13	Procedure:T13 Name:T14
+T15	Condition 817 824	relapse
+T16	Condition-Name 817 824	relapse
+E15	Condition:T15 Name:T16
+T17	Procedure 95 98	VAS
+T18	Procedure-Name 95 98	VAS
+E17	Procedure:T17 Name:T18
+T19	Eq-Operator 99 101	>=
+A1	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 484 485	>
+A2	Eq-Operator-Value T20 GT
+T21	Eq-Operator 678 684	within
+A3	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 829 837	the past
+A4	Eq-Operator-Value T22 GTEQ
+T23	Eq-Temporal-Unit 701 706	years
+A5	Eq-Temporal-Unit-Value T23 year
+T24	Eq-Temporal-Unit 840 845	years
+A6	Eq-Temporal-Unit-Value T24 year
+T25	Age 34 38	aged
+E18	Age:T25
+T26	Eq-Value 47 49	20
+T27	Eq-Value 54 56	80
+T28	Eq-Value 485 487	20
+T29	Eq-Value 699 700	3
+T30	Eq-Value 838 839	5
+T31	Eq-Comparison 484 487	>20
+E19	Eq-Comparison:T31 Operator:T20 Value:T28
+T32	Eq-Comparison 829 845	the past 5 years
+E20	Eq-Comparison:T32 Operator:T22 Temporal-Unit:T24 Value:T30

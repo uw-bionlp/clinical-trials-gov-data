@@ -1,0 +1,87 @@
+T1	Observation 47 62	body mass index
+T2	Observation-Name 47 62	body mass index
+E1	Observation:T1 Name:T2
+A1	Observation-Type-Value T2 vital
+T3	Condition 94 109	menstrual cycle
+T4	Condition-Name 94 109	menstrual cycle
+E3	Condition:T3 Name:T4
+T5	Observation 64 67	BMI
+T6	Observation-Name 64 67	BMI
+E5	Observation:T5 Name:T6
+A2	Observation-Type-Value T6 vital
+T7	Language 130 133	AMH
+T10	Condition 618 639	recurrent miscarriage
+T11	Condition-Name 618 639	recurrent miscarriage
+E10	Condition:T10 Name:T11
+T12	Condition 525 543	autoimmune disease
+T13	Condition-Name 525 543	autoimmune disease
+E12	Condition:T12 Name:T13
+T14	Condition 315 332	metabolic disease
+T15	Condition-Name 315 332	metabolic disease
+E14	Condition:T14 Name:T15
+T16	Condition 360 376	genetic diseases
+T17	Condition-Name 360 376	genetic diseases
+E16	Condition:T16 Name:T17
+T18	Condition 394 407	heart disease
+T19	Condition-Name 394 407	heart disease
+E18	Condition:T18 Name:T19
+T20	Condition 425 438	heart failure
+T21	Condition-Name 425 438	heart failure
+E20	Condition:T20 Name:T21
+T22	Condition 468 481	liver failure
+T23	Condition-Name 468 481	liver failure
+E22	Condition:T22 Name:T23
+T24	Condition 574 587	endometriosis
+T25	Condition-Name 574 587	endometriosis
+E24	Condition:T24 Name:T25
+T26	Procedure 672 683	stimulation
+T27	Procedure-Name 672 683	stimulation
+E26	Procedure:T26 Name:T27
+T28	Condition 483 492	hepatitis
+T29	Condition-Name 483 492	hepatitis
+E28	Condition:T28 Name:T29
+T30	Condition 296 304	diabetes
+T31	Condition-Name 296 304	diabetes
+E30	Condition:T30 Name:T31
+T32	Condition 653 657	OHSS
+T33	Condition-Name 653 657	OHSS
+E32	Condition:T32 Name:T33
+T34	Eq-Operator 158 159	≥
+A3	Eq-Operator-Value T34 GTEQ
+T35	Eq-Operator 226 232	within
+A4	Eq-Operator-Value T35 GTEQ
+T36	Eq-Temporal-Unit 35 40	years
+A5	Eq-Temporal-Unit-Value T36 year
+T37	Eq-Temporal-Unit 119 123	days
+A6	Eq-Temporal-Unit-Value T37 day
+T38	Eq-Unit 74 79	kg/m2
+T39	Age 25 28	age
+E33	Age:T39
+T40	Age 141 144	age
+E34	Age:T40
+T41	Eq-Operator 31 32	-
+A7	Eq-Operator-Value T41 BETWEEN
+T42	Eq-Operator 71 72	-
+A8	Eq-Operator-Value T42 BETWEEN
+T43	Eq-Operator 115 116	-
+A9	Eq-Operator-Value T43 BETWEEN
+T44	Eq-Operator 249 250	-
+A10	Eq-Operator-Value T44 BETWEEN
+T45	Eq-Value 29 31	20
+T46	Eq-Value 32 34	34
+T47	Eq-Value 69 71	18
+T48	Eq-Value 72 74	29
+T49	Eq-Value 113 115	26
+T50	Eq-Value 116 118	35
+T51	Eq-Value 159 160	2
+T52	Eq-Value 250 252	12
+T53	Eq-Comparison 158 160	≥2
+E35	Eq-Comparison:T53 Operator:T34 Value:T51
+T54	Eq-Comparison 29 32	20-
+E36	Eq-Comparison:T54 Operator:T41 Value:T45
+T55	Eq-Comparison 69 72	18-
+E37	Eq-Comparison:T55 Operator:T42 Value:T47
+T56	Eq-Comparison 113 116	26-
+E38	Eq-Comparison:T56 Operator:T43 Value:T49
+T57	Eq-Comparison 249 252	-12
+E39	Eq-Comparison:T57 Operator:T44 Value:T52

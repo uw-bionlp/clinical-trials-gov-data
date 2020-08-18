@@ -1,0 +1,54 @@
+T1	Condition 476 496	degenerative disease
+T2	Condition-Name 476 496	degenerative disease
+E1	Condition:T1 Name:T2
+T3	Procedure 799 818	resistance training
+T4	Procedure-Name 799 818	resistance training
+E3	Procedure:T3 Name:T4
+T5	Condition 440 458	systemic infection
+T6	Condition-Name 440 458	systemic infection
+E5	Condition:T5 Name:T6
+T7	Procedure 536 554	orthopedic surgery
+T8	Procedure-Name 536 554	orthopedic surgery
+E7	Procedure:T7 Name:T8
+T9	Procedure 274 291	Mental State Exam
+T10	Procedure-Name 274 291	Mental State Exam
+E9	Procedure:T9 Name:T10
+T11	Condition 583 597	mental disease
+T12	Condition-Name 583 597	mental disease
+E11	Condition:T11 Name:T12
+T13	Procedure 513 526	spinal fusion
+T14	Procedure-Name 513 526	spinal fusion
+E13	Procedure:T13 Name:T14
+T15	Condition 427 436	pneumonia
+T16	Condition-Name 427 436	pneumonia
+E15	Condition:T15 Name:T16
+T17	Condition 598 607	psychosis
+T18	Condition-Name 598 607	psychosis
+E17	Condition:T17 Name:T18
+T19	Condition 904 913	pregnancy
+T20	Condition-Name 904 913	pregnancy
+E19	Condition:T19 Name:T20
+T21	Condition 616 624	dementia
+T22	Condition-Name 616 624	dementia
+E21	Condition:T21 Name:T22
+T23	Eq-Operator 317 329	Greater than
+A1	Eq-Operator-Value T23 GT
+T24	Eq-Operator 558 566	the past
+A2	Eq-Operator-Value T24 GTEQ
+T25	Eq-Operator 630 642	greater than
+A3	Eq-Operator-Value T25 GT
+T26	Eq-Operator 838 853	within the past
+A4	Eq-Operator-Value T26 GTEQ
+T27	Eq-Temporal-Unit 571 577	months
+A5	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Temporal-Unit 858 864	months
+A6	Eq-Temporal-Unit-Value T28 month
+T29	Eq-Operator 75 76	-
+A7	Eq-Operator-Value T29 BETWEEN
+T30	Eq-Value 74 75	1
+T31	Eq-Value 76 77	3
+T32	Eq-Value 145 147	50
+T33	Eq-Value 241 243	24
+T34	Eq-Value 336 337	3
+T35	Eq-Comparison 74 76	1-
+E22	Eq-Comparison:T35 Operator:T29 Value:T30

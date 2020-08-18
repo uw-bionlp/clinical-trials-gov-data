@@ -1,0 +1,109 @@
+T1	Condition 263 277	claustrophobia
+T2	Condition-Name 263 277	claustrophobia
+E1	Condition:T1 Name:T2 Severity:T34
+T3	Procedure 170 182	special diet
+T4	Procedure-Name 170 182	special diet
+E3	Procedure:T3 Name:T4
+T5	Condition 236 244	appetite
+T6	Condition-Name 236 244	appetite
+E5	Condition:T5 Name:T6
+T7	Observation 85 88	BMI
+T8	Observation-Name 85 88	BMI
+E7	Observation:T7 Name:T8
+A1	Observation-Type-Value T8 vital
+T9	Condition 301 317	mental disorders
+T10	Condition-Name 301 317	mental disorders
+E9	Condition:T9 Name:T10
+T11	Condition 483 504	middle ear prosthesis
+T12	Condition-Name 483 504	middle ear prosthesis
+E11	Condition:T11 Name:T12
+T13	Language 362 365	MRI
+T14	Language 800 803	MRI
+T15	Eq-Temporal-Unit 74 79	years
+A2	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Unit 95 100	kg/m2
+T17	Age 55 59	aged
+E12	Age:T17 Eq-Comparison:E13
+T18	Eq-Operator 68 70	to
+A3	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Operator 91 92	-
+A4	Eq-Operator-Value T19 BETWEEN
+T20	Eq-Value 65 67	18
+T21	Eq-Value 71 73	55
+T22	Eq-Value 89 91	25
+T23	Eq-Value 92 94	35
+T24	Eq-Comparison 65 79	18 to 55 years
+E13	Eq-Comparison:T24 Operator:T18 Value:T20 Value2:T21 Temporal-Unit:T15
+T25	Eq-Comparison 89 100	25-35 kg/m2
+E14	Eq-Comparison:T25 Operator:T19 Value:T22 Unit:T16
+T26	Condition 35 42	healthy
+E2	Condition:T26 Name:T27
+T27	Condition-Name 35 42	healthy
+T28	Procedure 155 166	weight-loss
+E4	Procedure:T28 Name:T29
+T29	Procedure-Name 155 166	weight-loss
+T30	Drug 199 210	medications
+E6	Drug:T30 Name:T31
+T31	Drug-Name 199 210	medications
+T32	Drug 214 219	drugs
+E8	Drug:T32 Name:T33
+T33	Drug-Name 214 219	drugs
+R1	Caused-By Arg1:E5 Arg2:E8	
+T34	Severity 255 262	serious
+A5	Severity-Value T34 severe
+T35	Assertion 319 330	self-report
+E10	Assertion:T35 Asserted:E9
+T36	Negation 340 348	excluded
+E15	Negation:T36 
+T37	Condition 388 418	metallic objects in their body
+E16	Condition:T37 Name:T38
+T38	Condition-Name 388 418	metallic objects in their body
+T39	Condition 430 481	surgical staples left in the body following surgery
+E17	Condition:T39 Name:T40
+T40	Condition-Name 430 481	surgical staples left in the body following surgery
+R2	Example-Of Arg1:E17 Arg2:E16	
+R3	Example-Of Arg1:E11 Arg2:E16	
+T41	Condition 506 525	permanent eye liner
+E18	Condition:T41 Name:T42
+T42	Condition-Name 506 525	permanent eye liner
+R4	Example-Of Arg1:E18 Arg2:E16	
+T43	Condition 527 570	metal foreign objects lodged inside the eye
+E19	Condition:T43 Name:T44
+T44	Condition-Name 527 570	metal foreign objects lodged inside the eye
+R5	Example-Of Arg1:E19 Arg2:E16	
+T45	Condition 572 588	heart pacemakers
+E20	Condition:T45 Name:T46
+T46	Condition-Name 572 588	heart pacemakers
+R6	Example-Of Arg1:E20 Arg2:E16	
+T47	Or 590 596	and/or
+E21	Or:T47 Arg:E20 Arg2:E22
+T48	Condition 597 633	pins inside the knee or other joints
+E22	Condition:T48 Name:T49
+T49	Condition-Name 597 633	pins inside the knee or other joints
+R7	Example-Of Arg1:E22 Arg2:E16	
+T50	Or 634 636	or
+E23	Or:T50 Arg:E16 Arg2:E24
+T51	Condition 645 653	pregnant
+E24	Condition:T51 Name:T52
+T52	Condition-Name 645 653	pregnant
+T53	Or 654 656	or
+E25	Or:T53 Arg:E24 Arg2:E26
+T54	Condition 666 674	pregnant
+E26	Condition:T54 Name:T55
+T55	Condition-Name 666 674	pregnant
+T56	Assertion 676 684	assessed
+E27	Assertion:T56 Asserted:E26
+A6	Assertion-Type-Value E27 possible
+T57	Observation 695 715	urine pregnancy test
+E28	Observation:T57 Name:T58
+T58	Observation-Name 695 715	urine pregnancy test
+A7	Observation-Type-Value T58 lab
+R8	Found-By Arg1:E26 Arg2:E28	
+T59	Negation 735 743	excluded
+E29	Negation:T59 
+T60	Study 754 759	study
+E30	Study:T60 
+T61	Risk 775 779	risk
+E31	Risk:T61 
+R9	Caused-By Arg1:E31 Arg2:T14	
+A8	Assertion-Type-Value E10 possible

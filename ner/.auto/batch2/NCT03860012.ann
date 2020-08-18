@@ -1,0 +1,20 @@
+T1	Eq-Operator 248 249	>
+A1	Eq-Operator-Value T1 GT
+T2	Eq-Operator 256 265	less than
+A2	Eq-Operator-Value T2 LT
+T3	Eq-Temporal-Unit 185 190	years
+A3	Eq-Temporal-Unit-Value T3 year
+T4	Age 244 247	age
+E1	Age:T4
+T5	Eq-Operator 181 182	-
+A4	Eq-Operator-Value T5 BETWEEN
+T6	Eq-Value 180 181	2
+T7	Eq-Value 182 184	21
+T8	Eq-Value 250 252	21
+T9	Eq-Value 266 267	2
+T10	Eq-Comparison 248 252	> 21
+E2	Eq-Comparison:T10 Operator:T1 Value:T8
+T11	Eq-Comparison 256 267	less than 2
+E3	Eq-Comparison:T11 Operator:T2 Value:T9
+T12	Eq-Comparison 180 182	2-
+E4	Eq-Comparison:T12 Operator:T5 Value:T6

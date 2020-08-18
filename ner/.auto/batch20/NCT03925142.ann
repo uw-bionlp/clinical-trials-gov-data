@@ -1,0 +1,148 @@
+T1	Procedure 321 328	regimen
+T2	Procedure-Name 321 328	regimen
+E1	Procedure:T1 Name:T2
+T3	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T4 male
+T5	Observation 66 69	BMI
+T6	Observation-Name 66 69	BMI
+E5	Observation:T5 Name:T6
+A3	Observation-Type-Value T6 vital
+T7	Condition 1263 1284	myocardial infarction
+T8	Condition-Name 1263 1284	myocardial infarction
+E7	Condition:T7 Name:T8
+T9	Condition 1192 1205	renal failure
+T10	Condition-Name 1192 1205	renal failure
+E9	Condition:T9 Name:T10
+T11	Condition 1216 1229	liver failure
+T12	Condition-Name 1216 1229	liver failure
+E11	Condition:T11 Name:T12
+T13	Procedure 759 766	Fasting
+T14	Procedure-Name 759 766	Fasting
+E13	Procedure:T13 Name:T14
+T15	Procedure 1009 1016	regimen
+T16	Procedure-Name 1009 1016	regimen
+E15	Procedure:T15 Name:T16
+T17	Condition 1288 1294	stroke
+T18	Condition-Name 1288 1294	stroke
+E17	Condition:T17 Name:T18
+T19	Observation 731 734	BMI
+T20	Observation-Name 731 734	BMI
+E19	Observation:T19 Name:T20
+A4	Observation-Type-Value T20 vital
+T21	Eq-Operator 105 106	<
+A5	Eq-Operator-Value T21 LT
+T22	Eq-Operator 157 158	<
+A6	Eq-Operator-Value T22 LT
+T23	Eq-Operator 181 182	<
+A7	Eq-Operator-Value T23 LT
+T24	Eq-Operator 231 232	<
+A8	Eq-Operator-Value T24 LT
+T25	Eq-Operator 705 706	<
+A9	Eq-Operator-Value T25 LT
+T26	Eq-Operator 712 713	>
+A10	Eq-Operator-Value T26 GT
+T27	Eq-Operator 735 736	<
+A11	Eq-Operator-Value T27 LT
+T28	Eq-Operator 744 745	>
+A12	Eq-Operator-Value T28 GT
+T29	Eq-Operator 791 792	>
+A13	Eq-Operator-Value T29 GT
+T30	Eq-Operator 844 845	>
+A14	Eq-Operator-Value T30 GT
+T31	Eq-Operator 868 869	>
+A15	Eq-Operator-Value T31 GT
+T32	Eq-Operator 918 919	>
+A16	Eq-Operator-Value T32 GT
+T33	Eq-Operator 955 956	<
+A17	Eq-Operator-Value T33 LT
+T34	Eq-Operator 1017 1018	<
+A18	Eq-Operator-Value T34 LT
+T35	Eq-Temporal-Unit 51 56	years
+A19	Eq-Temporal-Unit-Value T35 year
+T36	Eq-Temporal-Unit 270 276	months
+A20	Eq-Temporal-Unit-Value T36 month
+T37	Eq-Temporal-Unit 331 337	months
+A21	Eq-Temporal-Unit-Value T37 month
+T38	Eq-Temporal-Unit 377 383	months
+A22	Eq-Temporal-Unit-Value T38 month
+T39	Eq-Temporal-Unit 716 721	years
+A23	Eq-Temporal-Unit-Value T39 year
+T40	Eq-Temporal-Unit 958 964	months
+A24	Eq-Temporal-Unit-Value T40 month
+T41	Eq-Temporal-Unit 1021 1027	months
+A25	Eq-Temporal-Unit-Value T41 month
+T42	Eq-Temporal-Unit 1069 1075	months
+A26	Eq-Temporal-Unit-Value T42 month
+T43	Eq-Temporal-Unit 1309 1315	months
+A27	Eq-Temporal-Unit-Value T43 month
+T44	Eq-Unit 76 81	kg/m2
+T45	Eq-Unit 287 289	kg
+T46	Eq-Unit 748 753	kg/m2
+T47	Eq-Unit 975 977	kg
+T48	Age 57 60	old
+E20	Age:T48
+T49	Age 722 725	old
+E21	Age:T49
+T50	Eq-Operator 47 48	-
+A28	Eq-Operator-Value T50 BETWEEN
+T51	Eq-Operator 72 73	-
+A29	Eq-Operator-Value T51 BETWEEN
+T52	Eq-Value 45 47	30
+T53	Eq-Value 48 50	69
+T54	Eq-Value 70 72	25
+T55	Eq-Value 73 75	37
+T56	Eq-Value 106 109	260
+T57	Eq-Value 158 161	190
+T58	Eq-Value 182 185	110
+T59	Eq-Value 233 236	140
+T60	Eq-Value 268 269	3
+T61	Eq-Value 329 330	3
+T62	Eq-Value 375 376	6
+T63	Eq-Value 435 436	2
+T64	Eq-Value 706 708	30
+T65	Eq-Value 713 715	69
+T66	Eq-Value 736 738	25
+T67	Eq-Value 745 747	37
+T68	Eq-Value 793 796	260
+T69	Eq-Value 845 848	189
+T70	Eq-Value 869 872	110
+T71	Eq-Value 920 923	140
+T72	Eq-Value 956 957	3
+T73	Eq-Value 1019 1020	3
+T74	Eq-Value 1067 1068	6
+T75	Eq-Value 1141 1142	2
+T76	Eq-Value 1307 1308	6
+T77	Eq-Comparison 105 109	<260
+E22	Eq-Comparison:T77 Operator:T21 Value:T56
+T78	Eq-Comparison 157 161	<190
+E23	Eq-Comparison:T78 Operator:T22 Value:T57
+T79	Eq-Comparison 181 185	<110
+E24	Eq-Comparison:T79 Operator:T23 Value:T58
+T80	Eq-Comparison 231 236	< 140
+E25	Eq-Comparison:T80 Operator:T24 Value:T59
+T81	Eq-Comparison 705 708	<30
+E26	Eq-Comparison:T81 Operator:T25 Value:T64
+T82	Eq-Comparison 712 721	>69 years
+E27	Eq-Comparison:T82 Operator:T26 Temporal-Unit:T39 Value:T65
+T83	Eq-Comparison 735 738	<25
+E28	Eq-Comparison:T83 Operator:T27 Value:T66
+T84	Eq-Comparison 744 753	>37 kg/m2
+E29	Eq-Comparison:T84 Operator:T28 Unit:T46 Value:T67
+T85	Eq-Comparison 791 796	> 260
+E30	Eq-Comparison:T85 Operator:T29 Value:T68
+T86	Eq-Comparison 844 848	>189
+E31	Eq-Comparison:T86 Operator:T30 Value:T69
+T87	Eq-Comparison 868 872	>110
+E32	Eq-Comparison:T87 Operator:T31 Value:T70
+T88	Eq-Comparison 918 923	> 140
+E33	Eq-Comparison:T88 Operator:T32 Value:T71
+T89	Eq-Comparison 955 964	<3 months
+E34	Eq-Comparison:T89 Operator:T33 Temporal-Unit:T40 Value:T72
+T90	Eq-Comparison 1017 1027	< 3 months
+E35	Eq-Comparison:T90 Operator:T34 Temporal-Unit:T41 Value:T73
+T91	Eq-Comparison 45 48	30-
+E36	Eq-Comparison:T91 Operator:T50 Value:T52
+T92	Eq-Comparison 70 73	25-
+E37	Eq-Comparison:T92 Operator:T51 Value:T54

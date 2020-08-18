@@ -1,0 +1,18 @@
+T1	Procedure 57 65	surgical
+T2	Procedure-Name 57 65	surgical
+E1	Procedure:T1 Name:T2
+T3	Procedure 501 512	prophylaxis
+T4	Procedure-Name 501 512	prophylaxis
+E3	Procedure:T3 Name:T4
+T5	Procedure 480 488	Surgical
+T6	Procedure-Name 480 488	Surgical
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 250 252	>=
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Temporal-Unit 256 261	years
+A2	Eq-Temporal-Unit-Value T8 year
+T9	Age 265 268	age
+E6	Age:T9
+T10	Eq-Value 253 255	18
+T11	Eq-Comparison 250 261	>= 18 years
+E7	Eq-Comparison:T11 Operator:T7 Temporal-Unit:T8 Value:T10

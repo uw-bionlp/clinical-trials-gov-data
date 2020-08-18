@@ -1,0 +1,49 @@
+T1	Procedure 594 604	procedures
+T2	Procedure-Name 594 604	procedures
+E1	Procedure:T1 Name:T2
+T3	Condition 767 773	labour
+T4	Condition-Name 767 773	labour
+E3	Condition:T3 Name:T4
+T5	Life-Stage-And-Gender 35 40	adult
+A1	Life-Stage-And-Gender-Type T5 adult
+T6	Condition 901 917	renal impairment
+T7	Condition-Name 901 917	renal impairment
+E6	Condition:T6 Name:T7
+T8	Condition 1345 1368	hemodynamic instability
+T9	Condition-Name 1345 1368	hemodynamic instability
+E8	Condition:T8 Name:T9
+T10	Condition 1147 1169	malignant hyperthermia
+T11	Condition-Name 1147 1169	malignant hyperthermia
+E10	Condition:T10 Name:T11
+T12	Condition 1372 1375	per
+T13	Condition-Name 1372 1375	per
+E12	Condition:T12 Name:T13
+T14	Condition 1458 1461	per
+T15	Condition-Name 1458 1461	per
+E14	Condition:T14 Name:T15
+T16	Eq-Operator 51 52	≥
+A2	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 130 131	≥
+A3	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 1529 1535	within
+A4	Eq-Operator-Value T18 GTEQ
+T19	Eq-Temporal-Unit 56 61	years
+A5	Eq-Temporal-Unit-Value T19 year
+T20	Eq-Temporal-Unit 1538 1544	months
+A6	Eq-Temporal-Unit-Value T20 month
+T21	Age 65 68	age
+E15	Age:T21
+T22	Eq-Operator 126 127	-
+A7	Eq-Operator-Value T22 BETWEEN
+T23	Eq-Value 53 55	18
+T24	Eq-Value 127 129	10
+T25	Eq-Value 132 133	4
+T26	Eq-Value 1536 1537	3
+T27	Eq-Comparison 51 61	≥ 18 years
+E16	Eq-Comparison:T27 Operator:T16 Temporal-Unit:T19 Value:T23
+T28	Eq-Comparison 127 131	10 ≥
+E17	Eq-Comparison:T28 Operator:T17 Value:T24
+T29	Eq-Comparison 1529 1544	within 3 months
+E18	Eq-Comparison:T29 Operator:T18 Temporal-Unit:T20 Value:T26
+T30	Eq-Comparison 126 129	-10
+E19	Eq-Comparison:T30 Operator:T22 Value:T24

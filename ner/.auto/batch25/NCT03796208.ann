@@ -1,0 +1,41 @@
+T1	Condition 241 261	tobacco use disorder
+T2	Condition-Name 241 261	tobacco use disorder
+E1	Condition:T1 Name:T2
+T3	Condition 472 491	hypnotic dependence
+T4	Condition-Name 472 491	hypnotic dependence
+E3	Condition:T3 Name:T4
+T5	Condition 46 63	opioid dependence
+T6	Condition-Name 46 63	opioid dependence
+E5	Condition:T5 Name:T6
+T7	Condition 383 399	bipolar disorder
+T8	Condition-Name 383 399	bipolar disorder
+E7	Condition:T7 Name:T8
+T9	Condition 361 375	mental illness
+T10	Condition-Name 361 375	mental illness
+E9	Condition:T9 Name:T10
+T11	Procedure 514 526	intervention
+T12	Procedure-Name 514 526	intervention
+E11	Procedure:T11 Name:T12
+T13	Language 284 291	English
+T14	Condition 413 418	mania
+T15	Condition-Name 413 418	mania
+E14	Condition:T14 Name:T15
+T16	Eq-Operator 161 170	Less than
+A1	Eq-Operator-Value T16 LT
+T17	Eq-Temporal-Unit 174 179	weeks
+A2	Eq-Temporal-Unit-Value T17 week
+T18	Eq-Temporal-Unit 205 210	years
+A3	Eq-Temporal-Unit-Value T18 year
+T19	Age 195 198	Age
+E15	Age:T19
+T20	Age 211 214	old
+E16	Age:T20
+T21	Eq-Operator 201 202	-
+A4	Eq-Operator-Value T21 BETWEEN
+T22	Eq-Value 171 173	24
+T23	Eq-Value 199 201	18
+T24	Eq-Value 202 204	49
+T25	Eq-Comparison 161 179	Less than 24 weeks
+E17	Eq-Comparison:T25 Operator:T16 Temporal-Unit:T17 Value:T22
+T26	Eq-Comparison 199 202	18-
+E18	Eq-Comparison:T26 Operator:T21 Value:T23

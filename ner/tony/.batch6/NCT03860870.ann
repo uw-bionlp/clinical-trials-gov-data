@@ -1,0 +1,19 @@
+T1	Life-Stage-And-Gender 38 42	Male
+A1	Life-Stage-And-Gender-Type T1 male
+T2	Procedure 244 263	resistance training
+T3	Procedure-Name 244 263	resistance training
+E2	Procedure:T2 Name:T3
+T4	Condition 175 188	Steroid abuse
+T5	Condition-Name 175 188	Steroid abuse
+E4	Condition:T4 Name:T5
+T6	Eq-Temporal-Unit 54 59	years
+A2	Eq-Temporal-Unit-Value T6 year
+T7	Age 63 66	age
+E5	Age:T7
+T8	Eq-Operator 50 51	-
+A3	Eq-Operator-Value T8 BETWEEN
+T9	Eq-Value 48 50	18
+T10	Eq-Value 51 53	40
+T11	Eq-Value 274 275	2
+T12	Eq-Comparison 48 51	18-
+E6	Eq-Comparison:T12 Operator:T8 Value:T9

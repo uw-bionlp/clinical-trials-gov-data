@@ -1,0 +1,62 @@
+T1	Condition 195 206	Consumption
+T2	Condition-Name 195 206	Consumption
+E1	Condition:T1 Name:T2
+T3	Condition 323 332	posterior
+T4	Condition-Name 323 332	posterior
+E3	Condition:T3 Name:T4
+T5	Procedure 605 615	extraction
+T6	Procedure-Name 605 615	extraction
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 218 227	less than
+A1	Eq-Operator-Value T7 LT
+T8	Eq-Operator 520 525	up to
+A2	Eq-Operator-Value T8 LTEQ
+T9	Eq-Operator 869 881	greater than
+A3	Eq-Operator-Value T9 GT
+T10	Eq-Operator 905 914	less than
+A4	Eq-Operator-Value T10 LT
+T11	Eq-Operator 989 990	<
+A5	Eq-Operator-Value T11 LT
+T12	Eq-Operator 1022 1023	<
+A6	Eq-Operator-Value T12 LT
+T13	Eq-Temporal-Unit 593 599	months
+A7	Eq-Temporal-Unit-Value T13 month
+T14	Eq-Temporal-Unit 1031 1036	weeks
+A8	Eq-Temporal-Unit-Value T14 week
+T15	Eq-Unit 684 686	mm
+T16	Eq-Unit 706 708	mm
+T17	Eq-Unit 917 919	mm
+T18	Eq-Unit 1128 1130	mm
+T19	Eq-Operator 793 794	-
+A9	Eq-Operator-Value T19 BETWEEN
+T20	Eq-Operator 803 804	-
+A10	Eq-Operator-Value T20 BETWEEN
+T21	Eq-Value 228 229	5
+T22	Eq-Value 591 592	6
+T23	Eq-Value 682 683	4
+T24	Eq-Value 703 705	10
+T25	Eq-Value 791 793	13
+T26	Eq-Value 794 796	23
+T27	Eq-Value 801 803	33
+T28	Eq-Value 804 806	43
+T29	Eq-Value 833 834	5
+T30	Eq-Value 882 884	30
+T31	Eq-Value 915 916	2
+T32	Eq-Value 990 992	55
+T33	Eq-Value 1023 1025	55
+T34	Eq-Value 1029 1030	8
+T35	Eq-Value 1126 1127	1
+T36	Eq-Comparison 218 229	less than 5
+E6	Eq-Comparison:T36 Operator:T7 Value:T21
+T37	Eq-Comparison 869 884	greater than 30
+E7	Eq-Comparison:T37 Operator:T9 Value:T30
+T38	Eq-Comparison 905 919	less than 2 mm
+E8	Eq-Comparison:T38 Operator:T10 Unit:T17 Value:T31
+T39	Eq-Comparison 989 992	<55
+E9	Eq-Comparison:T39 Operator:T11 Value:T32
+T40	Eq-Comparison 1022 1025	<55
+E10	Eq-Comparison:T40 Operator:T12 Value:T33
+T41	Eq-Comparison 791 794	13-
+E11	Eq-Comparison:T41 Operator:T19 Value:T25
+T42	Eq-Comparison 801 804	33-
+E12	Eq-Comparison:T42 Operator:T20 Value:T27

@@ -1,0 +1,30 @@
+T1	Language 89 96	English
+T2	Life-Stage-And-Gender 39 45	Female
+A1	Life-Stage-And-Gender-Type T2 male
+T3	Condition 395 411	pelvic infection
+T4	Condition-Name 395 411	pelvic infection
+E3	Condition:T3 Name:T4
+T5	Procedure 373 386	IUD insertion
+T6	Procedure-Name 373 386	IUD insertion
+E5	Procedure:T5 Name:T6
+T7	Condition 560 573	stomach ulcer
+T8	Condition-Name 560 573	stomach ulcer
+E7	Condition:T7 Name:T8
+T9	Procedure 680 690	procedures
+T10	Procedure-Name 680 690	procedures
+E9	Procedure:T9 Name:T10
+T11	Condition 421 430	pregnancy
+T12	Condition-Name 421 430	pregnancy
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 29 30	≥
+A2	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 301 307	within
+A3	Eq-Operator-Value T14 LTEQ
+T15	Eq-Temporal-Unit 319 325	months
+A4	Eq-Temporal-Unit-Value T15 month
+T16	Age 25 28	Age
+E12	Age:T16
+T17	Eq-Value 31 33	18
+T18	Eq-Value 317 318	6
+T19	Eq-Comparison 29 33	≥ 18
+E13	Eq-Comparison:T19 Operator:T13 Value:T17

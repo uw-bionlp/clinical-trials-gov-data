@@ -1,0 +1,31 @@
+T1	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T1 male
+T2	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T2 male
+T3	Procedure 291 326	continuous positive airway pressure
+T4	Procedure-Name 291 326	continuous positive airway pressure
+E3	Procedure:T3 Name:T4
+T5	Procedure 265 287	mechanical ventilation
+T6	Procedure-Name 265 287	mechanical ventilation
+E5	Procedure:T5 Name:T6
+T7	Procedure 328 332	CPAP
+T8	Procedure-Name 328 332	CPAP
+E7	Procedure:T7 Name:T8
+T9	Condition 366 377	nasopharynx
+T10	Condition-Name 366 377	nasopharynx
+E9	Condition:T9 Name:T10
+T11	Procedure 422 433	application
+T12	Procedure-Name 422 433	application
+E11	Procedure:T11 Name:T12
+T13	Condition 462 472	arrhythmia
+T14	Condition-Name 462 472	arrhythmia
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 66 67	≤
+A3	Eq-Operator-Value T15 LTEQ
+T16	Eq-Temporal-Unit 71 75	days
+A4	Eq-Temporal-Unit-Value T16 day
+T17	Age 59 62	age
+E14	Age:T17
+T18	Eq-Value 68 70	28
+T19	Eq-Comparison 66 75	≤ 28 days
+E15	Eq-Comparison:T19 Operator:T15 Temporal-Unit:T16 Value:T18

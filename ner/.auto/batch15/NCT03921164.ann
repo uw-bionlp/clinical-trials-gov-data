@@ -1,0 +1,22 @@
+T1	Procedure 72 111	interventional neuroradiology procedure
+T2	Procedure-Name 72 111	interventional neuroradiology procedure
+E1	Procedure:T1 Name:T2
+T3	Procedure 63 71	elective
+T4	Procedure-Name 63 71	elective
+E3	Procedure:T3 Name:T4
+T5	Eq-Operator 34 35	>
+A1	Eq-Operator-Value T5 GT
+T6	Eq-Operator 246 247	<
+A2	Eq-Operator-Value T6 LT
+T7	Eq-Temporal-Unit 39 44	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Eq-Temporal-Unit 250 255	years
+A4	Eq-Temporal-Unit-Value T8 year
+T9	Age 242 245	age
+E4	Age:T9
+T10	Eq-Value 36 38	18
+T11	Eq-Value 247 249	18
+T12	Eq-Comparison 34 44	> 18 years
+E5	Eq-Comparison:T12 Operator:T5 Temporal-Unit:T7 Value:T10
+T13	Eq-Comparison 246 255	<18 years
+E6	Eq-Comparison:T13 Operator:T6 Temporal-Unit:T8 Value:T11

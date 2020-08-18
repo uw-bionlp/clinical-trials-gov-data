@@ -1,0 +1,21 @@
+T1	Procedure 332 348	thoracic surgery
+T2	Procedure-Name 332 348	thoracic surgery
+E1	Procedure:T1 Name:T2
+T3	Observation 25 40	Body mass index
+T4	Observation-Name 25 40	Body mass index
+E3	Observation:T3 Name:T4
+A1	Observation-Type-Value T4 vital
+T5	Condition 302 316	Coagulopathies
+T6	Condition-Name 302 316	Coagulopathies
+E5	Condition:T5 Name:T6
+T7	Condition 409 419	infectious
+T8	Condition-Name 409 419	infectious
+E7	Condition:T7 Name:T8
+T9	Condition 449 458	Pregnancy
+T10	Condition-Name 449 458	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 53 62	less than
+A2	Eq-Operator-Value T11 LT
+T12	Eq-Value 63 65	28
+T13	Eq-Comparison 53 65	less than 28
+E10	Eq-Comparison:T13 Operator:T11 Value:T12

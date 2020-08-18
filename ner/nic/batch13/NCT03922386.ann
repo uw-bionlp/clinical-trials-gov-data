@@ -1,0 +1,134 @@
+T1	Procedure 660 693	tricuspid replacement heart valve
+T2	Procedure-Name 660 693	tricuspid replacement heart valve
+E1	Procedure:T1 Name:T2
+T3	Procedure 1004 1024	contraceptive method
+T4	Procedure-Name 1004 1024	contraceptive method
+E3	Procedure:T3 Name:T4
+T5	Condition 630 656	Tricuspid valvular disease
+T6	Condition-Name 630 656	Tricuspid valvular disease
+E5	Condition:T5 Name:T6
+T7	Condition 764 775	myocarditis
+T8	Condition-Name 764 775	myocarditis
+E7	Condition:T7 Name:T8 Temporality:E29
+T9	Procedure 221 230	pacemaker
+T10	Procedure-Name 221 230	pacemaker
+E9	Procedure:T9 Name:T10 Temporality:E2
+T11	Procedure 739 751	DR pacemaker
+T12	Procedure-Name 739 751	DR pacemaker
+E11	Procedure:T11 Name:T12
+T13	Condition 930 939	pregnancy
+T14	Condition-Name 930 939	pregnancy
+E13	Condition:T13 Name:T14
+T15	Procedure 309 319	XFINE lead
+T16	Procedure-Name 309 319	XFINE lead
+E15	Procedure:T15 Name:T16
+T17	Eq-Operator 143 152	less than
+A1	Eq-Operator-Value T17 LT
+T18	Eq-Operator 815 824	less than
+A2	Eq-Operator-Value T18 LT
+T19	Eq-Operator 902 911	less than
+A3	Eq-Operator-Value T19 LT
+T20	Eq-Temporal-Unit 155 159	days
+A4	Eq-Temporal-Unit-Value T20 day
+T21	Eq-Temporal-Unit 828 833	years
+A5	Eq-Temporal-Unit-Value T21 year
+T22	Age 811 814	Age
+E16	Age:T22 Eq-Comparison:E19
+T25	Eq-Value 581 584	310
+T26	Eq-Value 825 827	18
+T27	Eq-Value 912 913	1
+T28	Eq-Comparison 815 833	less than 18 years
+E19	Eq-Comparison:T28 Operator:T18 Temporal-Unit:T21 Value:T26
+T29	Eq-Comparison 902 918	less than 1 year
+E20	Eq-Comparison:T29 Operator:T19 Value:T27
+T30	Eq-Comparison 143 159	less than10 days
+E2	Eq-Comparison:T30 Operator:T17 Temporal-Unit:T20 Value:T31
+T31	Eq-Value 152 154	10
+T32	Modifier 178 192	Single Chamber
+E4	Modifier:T32 Modifies:T10
+T33	Modifier 203 215	Dual Chamber
+E6	Modifier:T33 Modifies:T10
+T34	Or 198 200	or
+E8	Or:T34 Arg:E4 Arg2:E6
+T35	Modifier 271 283	right atrial
+E10	Modifier:T35 Modifies:T16
+T36	Modifier 291 308	right ventricular
+E12	Modifier:T36 Modifies:T16
+T37	Or 284 290	and/or
+E14	Or:T37 Arg:E10 Arg2:E12
+T38	Drug 588 618	Dexamethasone Sodium Phosphate
+E21	Drug:T38 Name:T39 Dose:E23
+T39	Drug-Name 588 618	Dexamethasone Sodium Phosphate
+T40	Drug 620 623	DSP
+E22	Drug:T40 Name:T41
+T41	Drug-Name 620 623	DSP
+R1	Abbrev-Of Arg1:E22 Arg2:E21	
+T42	Eq-Comparison 558 587	maximum single dose of 310 µg
+E23	Eq-Comparison:T42 Operator:T44 Value:T25 Unit:T43
+T43	Eq-Unit 585 587	µg
+T44	Eq-Operator 558 565	maximum
+A6	Eq-Operator-Value T44 LTEQ
+T45	Contraindication 536 552	Contraindication
+E24	Contraindication:T45 Contraindicates:E21
+T46	Modifier 695 705	mechanical
+E25	Modifier:T46 Modifies:T2
+T47	Modifier 709 715	tissue
+E26	Modifier:T47 Modifies:T2
+T48	Or 706 708	or
+E27	Or:T48 Arg:E25 Arg2:E26
+R2	If-Then Arg1:E11 Arg2:E1	
+T49	Or 657 659	or
+E28	Or:T49 Arg:E5 Arg2:E1
+T50	Eq-Comparison 757 763	Active
+E29	Eq-Comparison:T50 Temporal-Period:T51
+T51	Eq-Temporal-Period 757 763	Active
+A7	Eq-Temporal-Period-Value T51 present
+T52	Condition 796 805	infection
+E30	Condition:T52 Name:T53
+T53	Condition-Name 796 805	infection
+T54	Modifier 777 783	pocket
+E31	Modifier:T54 Modifies:T53
+T55	Modifier 791 795	lead
+E32	Modifier:T55 Modifies:T53
+T56	Or 784 790	and/or
+E33	Or:T56 Arg:E31 Arg2:E32
+T23	Observation 886 901	Life expectancy
+E17	Observation:T23 Name:T57 Eq-Comparison:E20
+T57	Observation-Name 886 901	Life expectancy
+T58	Eq-Temporal-Unit 914 918	year
+A8	Eq-Temporal-Unit-Value T58 year
+T59	Life-Stage-And-Gender 941 946	women
+A9	Life-Stage-And-Gender-Type T59 female
+T60	Condition 947 960	breastfeeding
+E34	Condition:T60 Name:T61
+T61	Condition-Name 947 960	breastfeeding
+R3	If-Then Arg1:T59 Arg2:E34	
+T24	Life-Stage-And-Gender 967 983	childbearing age
+A10	Life-Stage-And-Gender-Type T24 adult
+T62	Negation 984 991	without
+E18	Negation:T62 Negates:E3
+T63	Or 961 963	or
+E35	Or:T63 Arg:E34 Arg2:T24
+R4	If-Then Arg1:T24 Arg2:E18	
+T64	Modifier 217 219	DR
+E36	Modifier:T64 
+R5	Abbrev-Of Arg1:E36 Arg2:E6	
+T65	Modifier 194 196	SR
+E37	Modifier:T65 
+R6	Abbrev-Of Arg1:E37 Arg2:E4	
+T66	Study 432 437	study
+E38	Study:T66 
+T67	Other 415 422	another
+E39	Other:T67 Is-Other:E38
+T68	Procedure 510 530	intra-cardiac device
+E40	Procedure:T68 Name:T69
+T69	Procedure-Name 510 530	intra-cardiac device
+T70	Study 492 499	studies
+E41	Study:T70 Study-Of:E40
+T71	Study 478 483	study
+E42	Study:T71 Stability:T72
+T72	Stability 449 457	confound
+A11	Stability-Value T72 change
+T73	Assertion 443 448	could
+E43	Assertion:T73 Asserted:T72
+A12	Assertion-Type-Value E43 hypothetical

@@ -1,0 +1,97 @@
+T1	Procedure 105 127	mechanical ventilation
+T2	Procedure-Name 105 127	mechanical ventilation
+E1	Procedure:T1 Name:T2
+T3	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T3 adult
+T4	Procedure 276 298	mechanical ventilation
+T5	Procedure-Name 276 298	mechanical ventilation
+E4	Procedure:T4 Name:T5
+T6	Condition 476 498	esophageal ulcerations
+T7	Condition-Name 476 498	esophageal ulcerations
+E6	Condition:T6 Name:T7
+T8	Condition 203 220	pneumomediastinum
+T9	Condition-Name 203 220	pneumomediastinum
+E8	Condition:T8 Name:T9
+T10	Condition 624 640	thrombocytopenia
+T11	Condition-Name 624 640	thrombocytopenia
+E10	Condition:T10 Name:T11
+T12	Condition 508 522	diverticulitis
+T13	Condition-Name 508 522	diverticulitis
+E12	Condition:T12 Name:T13
+T14	Condition 187 199	Pneumothorax
+T15	Condition-Name 187 199	Pneumothorax
+E14	Condition:T14 Name:T15
+T16	Condition 666 678	coagulopathy
+T17	Condition-Name 666 678	coagulopathy
+E16	Condition:T16 Name:T17
+T18	Condition 380 390	esophageal
+T19	Condition-Name 380 390	esophageal
+E18	Condition:T18 Name:T19
+T20	Procedure 344 353	placement
+T21	Procedure-Name 344 353	placement
+E20	Procedure:T20 Name:T21
+T22	Procedure 430 439	insertion
+T23	Procedure-Name 430 439	insertion
+E22	Procedure:T22 Name:T23
+T24	Condition 561 570	sinusitis
+T25	Condition-Name 561 570	sinusitis
+E24	Condition:T24 Name:T25
+T26	Condition 533 540	varices
+T27	Condition-Name 533 540	varices
+E26	Condition:T26 Name:T27
+T28	Procedure 680 683	INR
+T29	Procedure-Name 680 683	INR
+E28	Procedure:T28 Name:T29
+T30	Procedure 879 891	intervention
+T31	Procedure-Name 879 891	intervention
+E30	Procedure:T30 Name:T31
+T32	Procedure 900 912	intervention
+T33	Procedure-Name 900 912	intervention
+E32	Procedure:T32 Name:T33
+T34	Procedure 997 1009	intervention
+T35	Procedure-Name 997 1009	intervention
+E34	Procedure:T34 Name:T35
+T36	Procedure 834 839	drain
+T37	Procedure-Name 834 839	drain
+E36	Procedure:T36 Name:T37
+T38	Eq-Operator 45 46	>
+A2	Eq-Operator-Value T38 GT
+T39	Eq-Operator 242 243	<
+A3	Eq-Operator-Value T39 LT
+T40	Eq-Operator 303 304	<
+A4	Eq-Operator-Value T40 LT
+T41	Eq-Operator 657 658	<
+A5	Eq-Operator-Value T41 LT
+T42	Eq-Operator 684 685	>
+A6	Eq-Operator-Value T42 GT
+T43	Eq-Operator 740 741	>
+A7	Eq-Operator-Value T43 GT
+T44	Eq-Operator 775 776	<
+A8	Eq-Operator-Value T44 LT
+T45	Eq-Operator 965 966	>
+A9	Eq-Operator-Value T45 GT
+T46	Eq-Unit 745 747	mm
+T47	Eq-Unit 780 782	mm
+T48	Eq-Unit 969 971	cm
+T49	Eq-Value 49 51	18
+T50	Eq-Value 244 246	24
+T51	Eq-Value 305 307	24
+T52	Eq-Value 659 661	30
+T53	Eq-Value 686 687	3
+T54	Eq-Value 742 744	20
+T55	Eq-Value 777 779	60
+T56	Eq-Value 967 968	2
+T57	Eq-Comparison 242 246	< 24
+E37	Eq-Comparison:T57 Operator:T39 Value:T50
+T58	Eq-Comparison 303 307	< 24
+E38	Eq-Comparison:T58 Operator:T40 Value:T51
+T59	Eq-Comparison 657 661	< 30
+E39	Eq-Comparison:T59 Operator:T41 Value:T52
+T60	Eq-Comparison 684 687	> 3
+E40	Eq-Comparison:T60 Operator:T42 Value:T53
+T61	Eq-Comparison 740 747	> 20 mm
+E41	Eq-Comparison:T61 Operator:T43 Unit:T46 Value:T54
+T62	Eq-Comparison 775 782	< 60 mm
+E42	Eq-Comparison:T62 Operator:T44 Unit:T47 Value:T55
+T63	Eq-Comparison 965 971	> 2 cm
+E43	Eq-Comparison:T63 Operator:T45 Unit:T48 Value:T56

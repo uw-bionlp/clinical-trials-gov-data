@@ -1,0 +1,61 @@
+T1	Condition 479 505	gastro-intestinal disorder
+T2	Condition-Name 479 505	gastro-intestinal disorder
+E1	Condition:T1 Name:T2
+T3	Condition 509 533	irritable bowel syndrome
+T4	Condition-Name 509 533	irritable bowel syndrome
+E3	Condition:T3 Name:T4
+T5	Condition 402 422	psychiatric disorder
+T6	Condition-Name 402 422	psychiatric disorder
+E5	Condition:T5 Name:T6
+T7	Condition 705 723	alcohol dependency
+T8	Condition-Name 705 723	alcohol dependency
+E7	Condition:T7 Name:T8
+T9	Condition 560 573	breastfeeding
+T10	Condition-Name 560 573	breastfeeding
+E9	Condition:T9 Name:T10
+T11	Condition 748 761	psychological
+T12	Condition-Name 748 761	psychological
+E11	Condition:T11 Name:T12
+T13	Condition 593 603	deficiency
+T14	Condition-Name 593 603	deficiency
+E13	Condition:T13 Name:T14
+T15	Procedure 324 333	injection
+T16	Procedure-Name 324 333	injection
+E15	Procedure:T15 Name:T16
+T17	Condition 547 556	pregnancy
+T18	Condition-Name 547 556	pregnancy
+E17	Condition:T17 Name:T18
+T19	Language 165 172	English
+T20	Procedure 354 361	implant
+T21	Procedure-Name 354 361	implant
+E20	Procedure:T20 Name:T21
+T22	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T22 male
+T23	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T23 male
+T24	Eq-Operator 811 817	within
+A3	Eq-Operator-Value T24 LTEQ
+T25	Eq-Operator 942 943	>
+A4	Eq-Operator-Value T25 GT
+T26	Eq-Operator 987 988	>
+A5	Eq-Operator-Value T26 GT
+T27	Eq-Temporal-Unit 56 61	years
+A6	Eq-Temporal-Unit-Value T27 year
+T28	Eq-Temporal-Unit 829 835	months
+A7	Eq-Temporal-Unit-Value T28 month
+T29	Age 45 49	Aged
+E21	Age:T29
+T30	Eq-Operator 52 53	-
+A8	Eq-Operator-Value T30 BETWEEN
+T31	Eq-Value 50 52	18
+T32	Eq-Value 53 55	40
+T33	Eq-Value 393 394	1
+T34	Eq-Value 827 828	3
+T35	Eq-Value 944 945	5
+T36	Eq-Value 989 990	6
+T37	Eq-Comparison 942 945	> 5
+E22	Eq-Comparison:T37 Operator:T25 Value:T35
+T38	Eq-Comparison 987 990	> 6
+E23	Eq-Comparison:T38 Operator:T26 Value:T36
+T39	Eq-Comparison 50 53	18-
+E24	Eq-Comparison:T39 Operator:T30 Value:T31

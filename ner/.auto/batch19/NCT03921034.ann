@@ -1,0 +1,48 @@
+T1	Condition 434 461	Chronic renal insufficiency
+T2	Condition-Name 434 461	Chronic renal insufficiency
+E1	Condition:T1 Name:T2
+T3	Procedure 60 83	total knee arthroplasty
+T4	Procedure-Name 60 83	total knee arthroplasty
+E3	Procedure:T3 Name:T4
+T5	Condition 682 703	peripheral neuropathy
+T6	Condition-Name 682 703	peripheral neuropathy
+E5	Condition:T5 Name:T6
+T7	Procedure 325 344	regional anesthesia
+T8	Procedure-Name 325 344	regional anesthesia
+E7	Procedure:T7 Name:T8
+T9	Observation 738 753	Body mass index
+T10	Observation-Name 738 753	Body mass index
+E9	Observation:T9 Name:T10
+A1	Observation-Type-Value T10 vital
+T11	Procedure 359 371	nerve blocks
+T12	Procedure-Name 359 371	nerve blocks
+E11	Procedure:T11 Name:T12
+T13	Condition 622 632	opioid use
+T14	Condition-Name 622 632	opioid use
+E13	Condition:T13 Name:T14
+T15	Procedure 170 178	epidural
+T16	Procedure-Name 170 178	epidural
+E15	Procedure:T15 Name:T16
+T17	Language 231 238	English
+T18	Language 122 125	III
+T19	Eq-Operator 470 471	>
+A2	Eq-Operator-Value T19 GT
+T20	Eq-Operator 483 484	<
+A3	Eq-Operator-Value T20 LT
+T21	Eq-Operator 754 766	greater than
+A4	Eq-Operator-Value T21 GT
+T22	Eq-Temporal-Unit 96 101	years
+A5	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 639 645	months
+A6	Eq-Temporal-Unit-Value T23 month
+T24	Age 89 92	Age
+E16	Age:T24
+T25	Eq-Value 93 95	18
+T26	Eq-Value 472 473	1
+T27	Eq-Value 485 487	60
+T28	Eq-Value 637 638	3
+T29	Eq-Value 779 781	40
+T30	Eq-Comparison 470 473	> 1
+E17	Eq-Comparison:T30 Operator:T19 Value:T26
+T31	Eq-Comparison 483 487	< 60
+E18	Eq-Comparison:T31 Operator:T20 Value:T27

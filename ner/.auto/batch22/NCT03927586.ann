@@ -1,0 +1,26 @@
+T1	Condition 437 459	neurological disorders
+T2	Condition-Name 437 459	neurological disorders
+E1	Condition:T1 Name:T2
+T3	Condition 362 375	heart failure
+T4	Condition-Name 362 375	heart failure
+E3	Condition:T3 Name:T4
+T5	Procedure 384 397	heart surgery
+T6	Procedure-Name 384 397	heart surgery
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 258 259	≥
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Temporal-Unit 71 76	years
+A2	Eq-Temporal-Unit-Value T8 year
+T9	Age 58 61	age
+E6	Age:T9
+T10	Eq-Operator 65 67	to
+A3	Eq-Operator-Value T10 BETWEEN
+T11	Eq-Value 62 64	55
+T12	Eq-Value 68 70	90
+T13	Eq-Value 120 121	0
+T14	Eq-Value 127 128	1
+T15	Eq-Value 260 262	70
+T16	Eq-Comparison 258 262	≥ 70
+E7	Eq-Comparison:T16 Operator:T7 Value:T15
+T17	Eq-Comparison 62 67	55 to
+E8	Eq-Comparison:T17 Operator:T10 Value:T11

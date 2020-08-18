@@ -1,0 +1,50 @@
+T1	Procedure 397 422	botulinum toxin injection
+T2	Procedure-Name 397 422	botulinum toxin injection
+E1	Procedure:T1 Name:T2
+T3	Condition 114 132	Spastic Hemiplegia
+T4	Condition-Name 114 132	Spastic Hemiplegia
+E3	Condition:T3 Name:T4
+T5	Condition 212 225	breastfeeding
+T6	Condition-Name 212 225	breastfeeding
+E5	Condition:T5 Name:T6
+T7	Condition 280 293	substance use
+T8	Condition-Name 280 293	substance use
+E7	Condition:T7 Name:T8
+T9	Condition 630 641	skin lesion
+T10	Condition-Name 630 641	skin lesion
+E9	Condition:T9 Name:T10
+T11	Condition 302 312	neuropathy
+T12	Condition-Name 302 312	neuropathy
+E11	Condition:T11 Name:T12
+T13	Condition 352 362	neuropathy
+T14	Condition-Name 352 362	neuropathy
+E13	Condition:T13 Name:T14
+T15	Procedure 567 576	Injection
+T16	Procedure-Name 567 576	Injection
+E15	Procedure:T15 Name:T16
+T17	Procedure 457 464	therapy
+T18	Procedure-Name 457 464	therapy
+E17	Procedure:T17 Name:T18
+T19	Eq-Operator 160 169	and above
+A1	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 230 242	younger than
+A2	Eq-Operator-Value T20 LT
+T21	Eq-Operator 465 471	within
+A3	Eq-Operator-Value T21 LTEQ
+T22	Eq-Temporal-Unit 246 251	years
+A4	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 483 489	months
+A5	Eq-Temporal-Unit-Value T23 month
+T24	Eq-Operator 53 54	-
+A6	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 51 53	18
+T26	Eq-Value 54 56	60
+T27	Eq-Value 158 159	2
+T28	Eq-Value 243 245	18
+T29	Eq-Value 481 482	6
+T30	Eq-Comparison 158 169	2 and above
+E18	Eq-Comparison:T30 Operator:T19 Value:T27
+T31	Eq-Comparison 230 251	younger than 18 years
+E19	Eq-Comparison:T31 Operator:T20 Temporal-Unit:T22 Value:T28
+T32	Eq-Comparison 51 54	18-
+E20	Eq-Comparison:T32 Operator:T24 Value:T25

@@ -1,0 +1,37 @@
+T1	Condition 490 505	mucosal disease
+T2	Condition-Name 490 505	mucosal disease
+E1	Condition:T1 Name:T2
+T3	Condition 829 867	human immunodeficiency virus infection
+T4	Condition-Name 829 867	human immunodeficiency virus infection
+E3	Condition:T3 Name:T4
+T5	Condition 776 798	Immunological diseases
+T6	Condition-Name 776 798	Immunological diseases
+E5	Condition:T5 Name:T6
+T7	Condition 946 967	hemorrhagic disorders
+T8	Condition-Name 946 967	hemorrhagic disorders
+E7	Condition:T7 Name:T8
+T9	Condition 664 683	renal insufficiency
+T10	Condition-Name 664 683	renal insufficiency
+E9	Condition:T9 Name:T10
+T11	Condition 808 827	autoimmune diseases
+T12	Condition-Name 808 827	autoimmune diseases
+E11	Condition:T11 Name:T12
+T13	Condition 702 719	diabetes mellitus
+T14	Condition-Name 702 719	diabetes mellitus
+E13	Condition:T13 Name:T14
+T15	Procedure 635 642	formula
+T16	Procedure-Name 635 642	formula
+E15	Procedure:T15 Name:T16
+T17	Condition 655 660	liver
+T18	Condition-Name 655 660	liver
+E17	Condition:T17 Name:T18
+T19	Eq-Operator 311 312	>
+A1	Eq-Operator-Value T19 GT
+T20	Eq-Temporal-Unit 315 319	days
+A2	Eq-Temporal-Unit-Value T20 day
+T21	Eq-Unit 147 149	CM
+T22	Eq-Value 199 203	2019
+T23	Eq-Value 213 217	2020
+T24	Eq-Value 312 314	28
+T25	Eq-Comparison 311 319	>28 days
+E18	Eq-Comparison:T25 Operator:T19 Temporal-Unit:T20 Value:T24

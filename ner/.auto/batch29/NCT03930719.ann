@@ -1,0 +1,14 @@
+T1	Condition 63 88	transient ischemic attack
+T2	Condition-Name 63 88	transient ischemic attack
+E1	Condition:T1 Name:T2
+T3	Condition 111 117	stroke
+T4	Condition-Name 111 117	stroke
+E3	Condition:T3 Name:T4
+T5	Eq-Operator 102 104	>=
+A1	Eq-Operator-Value T5 GTEQ
+T6	Eq-Operator 118 124	within
+A2	Eq-Operator-Value T6 GTEQ
+T7	Eq-Value 105 106	6
+T8	Eq-Value 134 136	24
+T9	Eq-Comparison 102 106	>= 6
+E4	Eq-Comparison:T9 Operator:T5 Value:T7

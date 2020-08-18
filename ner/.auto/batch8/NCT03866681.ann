@@ -1,0 +1,27 @@
+T1	Procedure 237 276	hematopoietic stem cell transplantation
+T2	Procedure-Name 237 276	hematopoietic stem cell transplantation
+E1	Procedure:T1 Name:T2
+T3	Procedure 127 149	conventional treatment
+T4	Procedure-Name 127 149	conventional treatment
+E3	Procedure:T3 Name:T4
+T5	Condition 61 64	PNH
+T6	Condition-Name 61 64	PNH
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 286 287	≤
+A1	Eq-Operator-Value T7 LTEQ
+T8	Eq-Temporal-Unit 35 40	years
+A2	Eq-Temporal-Unit-Value T8 year
+T9	Eq-Temporal-Unit 545 551	months
+A3	Eq-Temporal-Unit-Value T9 month
+T10	Age 25 28	age
+E6	Age:T10
+T11	Eq-Operator 31 32	-
+A4	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 29 31	18
+T13	Eq-Value 32 34	70
+T14	Eq-Value 287 288	2
+T15	Eq-Value 543 544	3
+T16	Eq-Comparison 286 288	≤2
+E7	Eq-Comparison:T16 Operator:T7 Value:T14
+T17	Eq-Comparison 29 32	18-
+E8	Eq-Comparison:T17 Operator:T11 Value:T12

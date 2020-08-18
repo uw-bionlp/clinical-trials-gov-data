@@ -1,0 +1,57 @@
+T1	Procedure 172 194	inguinal hernia repair
+T2	Procedure-Name 172 194	inguinal hernia repair
+E1	Procedure:T1 Name:T2
+T3	Procedure 207 224	spinal anesthesia
+T4	Procedure-Name 207 224	spinal anesthesia
+E3	Procedure:T3 Name:T4
+T5	Condition 387 401	skin infection
+T6	Condition-Name 387 401	skin infection
+E5	Condition:T5 Name:T6
+T7	Procedure 426 435	injection
+T8	Procedure-Name 426 435	injection
+E7	Procedure:T7 Name:T8
+T9	Procedure 147 155	Elective
+T10	Procedure-Name 147 155	Elective
+E9	Procedure:T9 Name:T10
+T11	Procedure 167 171	open
+T12	Procedure-Name 167 171	open
+E11	Procedure:T11 Name:T12
+T13	Condition 442 463	coagulation disorders
+T14	Condition-Name 442 463	coagulation disorders
+E13	Condition:T13 Name:T14
+T15	Observation 484 499	body mass index
+T16	Observation-Name 484 499	body mass index
+E15	Observation:T15 Name:T16
+A1	Observation-Type-Value T16 vital
+T17	Observation 501 504	BMI
+T18	Observation-Name 501 504	BMI
+E17	Observation:T17 Name:T18
+A2	Observation-Type-Value T18 vital
+T19	Eq-Operator 254 255	<
+A3	Eq-Operator-Value T19 LT
+T20	Eq-Operator 262 263	>
+A4	Eq-Operator-Value T20 GT
+T21	Eq-Operator 506 507	>
+A5	Eq-Operator-Value T21 GT
+T22	Eq-Temporal-Unit 53 58	years
+A6	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Unit 511 516	kg/m2
+T24	Age 35 38	age
+E18	Age:T24
+T25	Age 250 253	age
+E19	Age:T25
+T26	Eq-Operator 47 49	to
+A7	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Value 44 46	18
+T28	Eq-Value 50 52	60
+T29	Eq-Value 256 258	18
+T30	Eq-Value 264 266	60
+T31	Eq-Value 508 510	35
+T32	Eq-Comparison 254 258	< 18
+E20	Eq-Comparison:T32 Operator:T19 Value:T29
+T33	Eq-Comparison 262 266	> 60
+E21	Eq-Comparison:T33 Operator:T20 Value:T30
+T34	Eq-Comparison 506 516	> 35 kg/m2
+E22	Eq-Comparison:T34 Operator:T21 Unit:T23 Value:T31
+T35	Eq-Comparison 44 49	18 to
+E23	Eq-Comparison:T35 Operator:T26 Value:T27

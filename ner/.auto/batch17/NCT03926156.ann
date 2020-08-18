@@ -1,0 +1,34 @@
+T1	Condition 256 271	mitral stenosis
+T2	Condition-Name 256 271	mitral stenosis
+E1	Condition:T1 Name:T2
+T3	Procedure 391 406	anticoagulation
+T4	Procedure-Name 391 406	anticoagulation
+E3	Procedure:T3 Name:T4
+T5	Procedure 126 136	procedures
+T6	Procedure-Name 126 136	procedures
+E5	Procedure:T5 Name:T6
+T7	Language 189 192	Men
+T8	Condition 606 623	renal dysfunction
+T9	Condition-Name 606 623	renal dysfunction
+E8	Condition:T8 Name:T9
+T10	Procedure 484 499	oral medication
+T11	Procedure-Name 484 499	oral medication
+E10	Procedure:T10 Name:T11
+T12	Procedure 544 551	regimen
+T13	Procedure-Name 544 551	regimen
+E12	Procedure:T12 Name:T13
+T14	Eq-Operator 203 204	≥
+A1	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 350 356	within
+A2	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 653 654	<
+A3	Eq-Operator-Value T16 LT
+T17	Eq-Temporal-Unit 370 376	months
+A4	Eq-Temporal-Unit-Value T17 month
+T18	Eq-Value 205 207	18
+T19	Eq-Value 367 369	12
+T20	Eq-Value 654 656	15
+T21	Eq-Comparison 203 207	≥ 18
+E13	Eq-Comparison:T21 Operator:T14 Value:T18
+T22	Eq-Comparison 653 656	<15
+E14	Eq-Comparison:T22 Operator:T16 Value:T20

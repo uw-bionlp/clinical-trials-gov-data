@@ -1,0 +1,30 @@
+T1	Procedure 93 115	conservative treatment
+T2	Procedure-Name 93 115	conservative treatment
+E1	Procedure:T1 Name:T2
+T3	Procedure 321 336	ankle surgeries
+T4	Procedure-Name 321 336	ankle surgeries
+E3	Procedure:T3 Name:T4
+T5	Condition 183 196	osteomyelitis
+T6	Condition-Name 183 196	osteomyelitis
+E5	Condition:T5 Name:T6
+T7	Procedure 205 213	surgical
+T8	Procedure-Name 205 213	surgical
+E7	Procedure:T7 Name:T8
+T9	Language 42 45	MRI
+T10	Eq-Operator 149 150	<
+A1	Eq-Operator-Value T10 LT
+T11	Eq-Operator 281 282	>
+A2	Eq-Operator-Value T11 GT
+T12	Eq-Temporal-Unit 83 89	months
+A3	Eq-Temporal-Unit-Value T12 month
+T13	Eq-Temporal-Unit 153 158	years
+A4	Eq-Temporal-Unit-Value T13 year
+T14	Age 162 165	age
+E8	Age:T14
+T15	Eq-Value 81 82	3
+T16	Eq-Value 150 152	18
+T17	Eq-Value 282 283	8
+T18	Eq-Comparison 149 158	<18 years
+E9	Eq-Comparison:T18 Operator:T10 Temporal-Unit:T13 Value:T16
+T19	Eq-Comparison 281 283	>8
+E10	Eq-Comparison:T19 Operator:T11 Value:T17

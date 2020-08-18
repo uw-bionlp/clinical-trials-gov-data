@@ -1,0 +1,61 @@
+T1	Procedure 42 65	Total knee arthroplasty
+T2	Procedure-Name 42 65	Total knee arthroplasty
+E1	Procedure:T1 Name:T2 Provider:E4
+T3	Condition 78 92	osteoarthritis
+T4	Condition-Name 78 92	osteoarthritis
+E3	Condition:T3 Name:T4
+T5	Condition 385 399	kidney disease
+T6	Condition-Name 385 399	kidney disease
+E5	Condition:T5 Name:T6 Stage:E18
+T7	Condition 154 168	osteoarthritis
+T8	Condition-Name 154 168	osteoarthritis
+E7	Condition:T7 Name:T8
+T11	Age 25 28	Age
+E10	Age:T11 Eq-Comparison:E2
+T12	Eq-Value 34 36	18
+T13	Eq-Comparison 29 36	over 18
+E2	Eq-Comparison:T13 Value:T12
+R1	Treatment-For Arg1:E1 Arg2:E3	
+T14	Provider 106 121	Dr. Rick Wright
+E4	Provider:T14 
+T15	Condition 204 230	Diminished mental capacity
+E6	Condition:T15 Name:T16
+T16	Condition-Name 204 230	Diminished mental capacity
+T9	Drug 236 246	Vancomycin
+E8	Drug:T9 Name:T10
+T10	Drug-Name 236 246	Vancomycin
+T17	Allergy 247 254	allergy
+E9	Allergy:T17 Name:E8
+T18	Drug 260 270	Tobramycin
+E11	Drug:T18 Name:T19
+T19	Drug-Name 260 270	Tobramycin
+T20	Allergy 271 278	allergy
+E12	Allergy:T20 Name:E11
+T21	Drug 331 341	vancomycin
+E13	Drug:T21 Name:T22 Temporality:E19
+T22	Drug-Name 331 341	vancomycin
+T23	Drug 345 355	tobramycin
+E14	Drug:T23 Name:T24
+T24	Drug-Name 345 355	tobramycin
+T25	Or 342 344	or
+E15	Or:T25 Arg:E13 Arg2:E14
+T26	Procedure 360 371	operatively
+E16	Procedure:T26 
+T27	Temporal-Connection 356 360	peri
+E17	Temporal-Connection:T27 Arg:E14 Arg2:E16
+A1	Temporal-Connection-Type-Value E17 during
+T28	Eq-Comparison 400 422	stage III and stage IV
+E18	Eq-Comparison:T28 Unit:T31 Value:T30
+T29	Eq-Value 406 409	III
+T30	Eq-Value 420 422	IV
+T31	Eq-Unit 400 405	stage
+T32	Eq-Comparison 292 299	history
+E19	Eq-Comparison:T32 Temporal-Period:T33
+T33	Eq-Temporal-Period 292 299	history
+A2	Eq-Temporal-Period-Value T33 past
+T34	Modifier 377 384	Chronic
+E20	Modifier:T34 Modifies:E5
+T35	Modifier 70 77	primary
+E21	Modifier:T35 Modifies:T4
+T36	Modifier 149 153	knee
+E22	Modifier:T36 Modifies:T8

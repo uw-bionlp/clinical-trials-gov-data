@@ -1,0 +1,52 @@
+T1	Condition 538 557	Active tuberculosis
+T2	Condition-Name 538 557	Active tuberculosis
+E1	Condition:T1 Name:T2
+T5	Condition 641 650	psychosis
+T6	Condition-Name 641 650	psychosis
+E5	Condition:T5 Name:T6
+T7	Condition 929 938	pregnancy
+T8	Condition-Name 929 938	pregnancy
+E7	Condition:T7 Name:T8
+T9	Procedure 91 98	release
+T10	Procedure-Name 91 98	release
+E9	Procedure:T9 Name:T10
+T11	Language 192 199	English
+T12	Life-Stage-And-Gender 117 122	Adult
+A1	Life-Stage-And-Gender-Type T12 adult
+T13	Condition 634 639	mania
+T14	Condition-Name 634 639	mania
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 32 33	≥
+A2	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 157 163	within
+A3	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 219 225	within
+A4	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 957 963	within
+A5	Eq-Operator-Value T18 GTEQ
+T19	Eq-Temporal-Unit 167 171	days
+A6	Eq-Temporal-Unit-Value T19 day
+T20	Eq-Temporal-Unit 229 236	minutes
+A7	Eq-Temporal-Unit-Value T20 minute
+T21	Eq-Temporal-Unit 317 323	months
+A8	Eq-Temporal-Unit-Value T21 month
+T22	Eq-Temporal-Unit 977 982	weeks
+A9	Eq-Temporal-Unit-Value T22 week
+T23	Age 177 180	Age
+E14	Age:T23
+T24	Eq-Operator 183 184	-
+A10	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 34 35	1
+T26	Eq-Value 164 166	90
+T27	Eq-Value 181 183	18
+T28	Eq-Value 184 186	64
+T29	Eq-Value 226 228	20
+T30	Eq-Value 315 316	4
+T31	Eq-Comparison 32 35	≥ 1
+E15	Eq-Comparison:T31 Operator:T15 Value:T25
+T32	Eq-Comparison 157 171	within 90 days
+E16	Eq-Comparison:T32 Operator:T16 Temporal-Unit:T19 Value:T26
+T33	Eq-Comparison 219 236	within 20 minutes
+E17	Eq-Comparison:T33 Operator:T17 Temporal-Unit:T20 Value:T29
+T34	Eq-Comparison 181 184	18-
+E18	Eq-Comparison:T34 Operator:T24 Value:T27

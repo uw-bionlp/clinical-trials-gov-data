@@ -1,0 +1,136 @@
+T1	Procedure 48 79	coronary artery bypass grafting
+T2	Procedure-Name 48 79	coronary artery bypass grafting
+E1	Procedure:T1 Name:T2 Temporality:E2
+T3	Condition 739 766	acute myocardial infarction
+T4	Condition-Name 739 766	acute myocardial infarction
+E3	Condition:T3 Name:T4
+T5	Procedure 96 118	cardiopulmonary bypass
+T6	Procedure-Name 96 118	cardiopulmonary bypass
+E5	Procedure:T5 Name:T6
+T7	Drug 346 363	immunosuppression
+T8	Drug-Name 346 363	immunosuppression
+E7	Drug:T7 Name:T8
+T9	Condition 510 525	hepatic failure
+T10	Condition-Name 510 525	hepatic failure
+E9	Condition:T9 Name:T10
+T11	Condition 230 243	renal failure
+T12	Condition-Name 230 243	renal failure
+E11	Condition:T11 Name:T12
+T13	Condition 410 422	polycythemia
+T14	Condition-Name 410 422	polycythemia
+E13	Condition:T13 Name:T14
+T15	Condition 424 433	porphyria
+T16	Condition-Name 424 433	porphyria
+E15	Condition:T15 Name:T16
+T17	Eq-Comparison 27 34	planned
+E2	Eq-Comparison:T17 Temporal-Period:T18
+T18	Eq-Temporal-Period 27 34	planned
+R1	Using Arg1:E1 Arg2:E5	
+A1	Eq-Temporal-Period-Value T18 future
+T19	Condition 196 226	pathology of the urinary tract
+E4	Condition:T19 Name:T20
+T20	Condition-Name 196 226	pathology of the urinary tract
+T21	Or 227 229	or
+E6	Or:T21 Arg:E4 Arg2:E11
+T22	Procedure 154 164	operations
+E8	Procedure:T22 Name:T64
+T23	Procedure 168 181	re-operations
+E10	Procedure:T23 Name:T65
+T24	Or 165 167	or
+E12	Or:T24 Arg:E8 Arg2:E10
+T25	Encounter 144 153	emergency
+E14	Encounter:T25 Type:T26
+T26	Encounter-Type 144 153	emergency
+A2	Encounter-Type-Value T26 emergency
+T27	Drug 279 290	medications
+E16	Drug:T27 
+T28	Modifier 250 257	chronic
+E17	Modifier:T28 Modifies:E16
+T29	Drug-Name 292 296	iron
+T30	Drug 298 335	non-steroidal anti-inflammatory drugs
+E18	Drug:T30 Name:T31
+T31	Drug-Name 298 335	non-steroidal anti-inflammatory drugs
+T32	Drug 337 343	NSAIDs
+E19	Drug:T32 Name:T33
+T33	Drug-Name 337 343	NSAIDs
+R2	Abbrev-Of Arg1:E19 Arg2:E18	
+T34	Drug 292 296	iron
+E20	Drug:T34 Name:T29
+R3	Example-Of Arg1:E20 Arg2:E16	
+R4	Example-Of Arg1:E18 Arg2:E16	
+R5	Example-Of Arg1:E7 Arg2:E16	
+T35	Drug 368 376	steroids
+E21	Drug:T35 Name:T36
+T36	Drug-Name 368 376	steroids
+R6	Example-Of Arg1:E21 Arg2:E16	
+T37	Condition 437 481	pathological hemoglobin species in anamnesis
+E22	Condition:T37 Name:T38
+T38	Condition-Name 437 481	pathological hemoglobin species in anamnesis
+T39	Or 434 436	or
+E23	Or:T39 Arg:E15 Arg2:E22
+T40	Condition 564 572	diseases
+E24	Condition:T40 Name:T41 Temporality:E26
+T41	Condition-Name 564 572	diseases
+T42	Modifier 539 549	autoimmune
+E25	Modifier:T42 
+T44	Or 550 552	or
+E27	Or:T44 Arg:E25 Arg2:E28
+T45	Modifier 553 563	neoplastic
+E28	Modifier:T45 Modifies:E24
+T48	Condition 621 629	bleeding
+E30	Condition:T48 Name:T49 Severity:T63
+T49	Condition-Name 621 629	bleeding
+T50	Drug 631 651	anti-platelet agents
+E31	Drug:T50 Name:T51
+T51	Drug-Name 631 651	anti-platelet agents
+R7	Example-Of Arg1:E31 Arg2:E30	
+T52	Procedure 773 782	operation
+E32	Procedure:T52 Name:T66
+T53	Temporal-Connection 767 772	after
+E33	Temporal-Connection:T53 Arg:E3 Arg2:E32
+T43	Eq-Comparison 532 538	active
+E26	Eq-Comparison:T43 Temporal-Period:T55
+T55	Eq-Temporal-Period 532 538	active
+A5	Eq-Temporal-Period-Value T55 present
+T56	Condition 581 590	infection
+E34	Condition:T56 Name:T57 Temporality:E35
+T57	Condition-Name 581 590	infection
+T58	Eq-Comparison 574 580	active
+E35	Eq-Comparison:T58 Temporal-Period:T59
+T59	Eq-Temporal-Period 574 580	active
+A6	Eq-Temporal-Period-Value T59 present
+T46	Assertion 597 608	anticipated
+E29	Assertion:T46 Asserted:E30
+T60	Procedure 491 500	operative
+E36	Procedure:T60 
+T61	Temporal-Connection 488 491	pre
+E37	Temporal-Connection:T61 Arg:E36 Arg2:E9
+A7	Temporal-Connection-Type-Value E37 before
+A3	Assertion-Type-Value E29 hypothetical
+A4	Temporal-Connection-Type-Value E33 after
+T47	Procedure 387 396	operative
+E38	Procedure:T47 
+T54	Temporal-Connection 384 387	pre
+E39	Temporal-Connection:T54 Arg:E16 Arg2:E38
+A8	Temporal-Connection-Type-Value E39 before
+T62	Assertion 501 509	signs of
+E40	Assertion:T62 Asserted:E9
+A9	Assertion-Type-Value E40 possible
+T63	Severity 609 620	significant
+A10	Severity-Value T63 severe
+T64	Procedure-Name 154 164	operations
+T65	Procedure-Name 168 181	re-operations
+T66	Procedure-Name 773 782	operation
+T67	Procedure 710 719	operation
+E41	Procedure:T67 Name:T68
+T68	Procedure-Name 710 719	operation
+T69	Drug 676 698	blood-derived products
+E42	Drug:T69 Name:T70
+T70	Drug-Name 676 698	blood-derived products
+T71	Assertion 654 664	suggesting
+E43	Assertion:T71 Asserted:E42
+A11	Assertion-Type-Value E43 possible
+T72	Temporal-Connection 699 705	during
+E44	Temporal-Connection:T72 Arg:E42 Arg2:E41
+A12	Temporal-Connection-Type-Value E44 during
+R8	Caused-By Arg1:E30 Arg2:E42	

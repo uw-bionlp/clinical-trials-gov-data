@@ -1,0 +1,69 @@
+T1	Condition 25 44	curative malignancy
+E1	Condition:T1 Name:T2
+T2	Condition-Name 25 44	curative malignancy
+T3	Condition 53 59	cancer
+E2	Condition:T3 Name:T4 Stage:E3
+T4	Condition-Name 53 59	cancer
+R1	Equivalent-To Arg1:E2 Arg2:E1	
+T8	Procedure 150 162	chemotherapy
+E6	Procedure:T8 Name:T9 Temporality:E7
+T9	Procedure-Name 150 162	chemotherapy
+T10	Eq-Comparison 140 149	receiving
+E7	Eq-Comparison:T10 Temporal-Period:T11
+T11	Eq-Temporal-Period 140 149	receiving
+A1	Eq-Temporal-Period-Value T11 present
+T12	Age 186 189	old
+E8	Age:T12 Eq-Comparison:E9
+T13	Eq-Comparison 168 185	at least 18 years
+E9	Eq-Comparison:T13 Operator:T14 Temporal-Unit:T16 Value:T15
+T14	Eq-Operator 168 176	at least
+A2	Eq-Operator-Value T14 GTEQ
+T15	Eq-Value 177 179	18
+T16	Eq-Temporal-Unit 180 185	years
+A3	Eq-Temporal-Unit-Value T16 year
+T17	Observation 296 315	care clinic program
+E10	Observation:T17 Name:T18 Duration:E11 Minimum-Count:E13
+T18	Observation-Name 296 315	care clinic program
+T19	Eq-Comparison 282 295	six hours day
+E11	Eq-Comparison:T19 Temporal-Unit:T21 Value:T20 Per:T22
+T20	Eq-Value 282 285	six
+T21	Eq-Temporal-Unit 286 291	hours
+A4	Eq-Temporal-Unit-Value T21 hour
+T22	Eq-Temporal-Unit 292 295	day
+A5	Eq-Temporal-Unit-Value T22 day
+T23	Assertion 257 264	able to
+E12	Assertion:T23 Asserted:E10
+A6	Assertion-Type-Value E12 hypothetical
+T24	Eq-Comparison 316 328	eleven times
+E13	Eq-Comparison:T24 Value:T25
+T25	Eq-Value 316 322	eleven
+T26	Procedure 336 348	chemotherapy
+E14	Procedure:T26 Name:T27
+T27	Procedure-Name 336 348	chemotherapy
+T28	Temporal-Connection 329 335	during
+E15	Temporal-Connection:T28 Arg:E10 Arg2:E14
+A7	Temporal-Connection-Type-Value E15 during
+T29	Language 405 411	German
+T30	Negation 375 387	insufficient
+E16	Negation:T30 Negates:T29
+T31	Condition 445 457	disabilities
+E17	Condition:T31 Name:T32
+T32	Condition-Name 445 457	disabilities
+T33	Modifier 426 434	physical
+E18	Modifier:T33 Modifies:T32
+T34	Modifier 438 444	mental
+E19	Modifier:T34 Modifies:T32
+T35	Or 435 437	or
+E20	Or:T35 Arg:E18 Arg2:E19
+T5	Eq-Comparison 120 133	staging I-III
+E3	Eq-Comparison:T5 Unit:T6 Value:T7 Value2:T36
+T6	Eq-Unit 120 127	staging
+T7	Eq-Value 128 129	I
+T36	Eq-Value 130 133	III
+T37	Modifier 46 52	breast
+E4	Modifier:T37 Modifies:T4
+T38	Assertion 225 232	willing
+E5	Assertion:T38 
+A8	Assertion-Type-Value E5 hypothetical
+T39	And 233 236	and
+E21	And:T39 Arg:E5 Arg2:E12

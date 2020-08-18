@@ -1,0 +1,92 @@
+T1	Condition 1192 1214	ischemic heart disease
+T2	Condition-Name 1192 1214	ischemic heart disease
+E1	Condition:T1 Name:T2
+T3	Condition 875 894	Lactose intolerance
+T4	Condition-Name 875 894	Lactose intolerance
+E3	Condition:T3 Name:T4
+T5	Condition 1216 1235	cardiac dysrhythmia
+T6	Condition-Name 1216 1235	cardiac dysrhythmia
+E5	Condition:T5 Name:T6
+T7	Condition 1360 1378	Allergy to gelatin
+T8	Condition-Name 1360 1378	Allergy to gelatin
+E7	Condition:T7 Name:T8
+T9	Condition 1341 1354	alcohol abuse
+T10	Condition-Name 1341 1354	alcohol abuse
+E9	Condition:T9 Name:T10
+T11	Condition 815 826	Intolerance
+T12	Condition-Name 815 826	Intolerance
+E11	Condition:T11 Name:T12
+T13	Condition 298 308	neuropathy
+T14	Condition-Name 298 308	neuropathy
+E13	Condition:T13 Name:T14
+T15	Procedure 779 789	procedures
+T16	Procedure-Name 779 789	procedures
+E15	Procedure:T15 Name:T16
+T17	Condition 1282 1291	Pregnancy
+T18	Condition-Name 1282 1291	Pregnancy
+E17	Condition:T17 Name:T18
+T19	Condition 1237 1245	glaucoma
+T20	Condition-Name 1237 1245	glaucoma
+E19	Condition:T19 Name:T20
+T21	Procedure 259 266	genetic
+T22	Procedure-Name 259 266	genetic
+E21	Procedure:T21 Name:T22
+T23	Condition 206 210	RDEB
+T24	Condition-Name 206 210	RDEB
+E23	Condition:T23 Name:T24
+T25	Procedure 533 536	VAS
+T26	Procedure-Name 533 536	VAS
+E25	Procedure:T25 Name:T26
+T27	Procedure 659 662	VAS
+T28	Procedure-Name 659 662	VAS
+E27	Procedure:T27 Name:T28
+T29	Eq-Operator 30 31	>
+A1	Eq-Operator-Value T29 GT
+T30	Eq-Operator 410 411	>
+A2	Eq-Operator-Value T30 GT
+T31	Eq-Operator 516 517	>
+A3	Eq-Operator-Value T31 GT
+T32	Eq-Operator 642 643	>
+A4	Eq-Operator-Value T32 GT
+T33	Eq-Operator 950 956	within
+A5	Eq-Operator-Value T33 GTEQ
+T34	Eq-Temporal-Unit 39 44	years
+A6	Eq-Temporal-Unit-Value T34 year
+T35	Eq-Temporal-Unit 613 618	weeks
+A7	Eq-Temporal-Unit-Value T35 week
+T36	Eq-Temporal-Unit 739 744	weeks
+A8	Eq-Temporal-Unit-Value T36 week
+T37	Eq-Temporal-Unit 959 964	weeks
+A9	Eq-Temporal-Unit-Value T37 week
+T38	Eq-Operator 529 530	-
+A10	Eq-Operator-Value T38 BETWEEN
+T39	Eq-Operator 655 656	-
+A11	Eq-Operator-Value T39 BETWEEN
+T40	Eq-Value 32 33	8
+T41	Eq-Value 36 38	40
+T42	Eq-Value 403 405	14
+T43	Eq-Value 412 413	4
+T44	Eq-Value 490 492	15
+T45	Eq-Value 518 519	4
+T46	Eq-Value 528 529	0
+T47	Eq-Value 530 532	10
+T48	Eq-Value 611 612	2
+T49	Eq-Value 644 645	4
+T50	Eq-Value 654 655	0
+T51	Eq-Value 656 658	10
+T52	Eq-Value 737 738	2
+T53	Eq-Value 957 958	2
+T54	Eq-Comparison 30 33	> 8
+E28	Eq-Comparison:T54 Operator:T29 Value:T40
+T55	Eq-Comparison 410 413	> 4
+E29	Eq-Comparison:T55 Operator:T30 Value:T43
+T56	Eq-Comparison 516 519	> 4
+E30	Eq-Comparison:T56 Operator:T31 Value:T45
+T57	Eq-Comparison 642 645	> 4
+E31	Eq-Comparison:T57 Operator:T32 Value:T49
+T58	Eq-Comparison 950 964	within 2 weeks
+E32	Eq-Comparison:T58 Operator:T33 Temporal-Unit:T37 Value:T53
+T59	Eq-Comparison 528 530	0-
+E33	Eq-Comparison:T59 Operator:T38 Value:T46
+T60	Eq-Comparison 654 656	0-
+E34	Eq-Comparison:T60 Operator:T39 Value:T50

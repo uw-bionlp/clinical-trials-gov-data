@@ -1,0 +1,40 @@
+T1	Life-Stage-And-Gender 66 70	Male
+A1	Life-Stage-And-Gender-Type T1 male
+T2	Procedure 329 342	physiotherapy
+T3	Procedure-Name 329 342	physiotherapy
+E2	Procedure:T2 Name:T3
+T4	Eq-Temporal-Unit 55 60	years
+A2	Eq-Temporal-Unit-Value T4 year
+T5	Eq-Temporal-Unit 357 363	months
+A3	Eq-Temporal-Unit-Value T5 month
+T6	Eq-Value 52 54	18
+T7	Eq-Value 355 356	6
+T8	Eq-Operator 47 51	Over
+A4	Eq-Operator-Value T8 GT
+T9	Eq-Comparison 47 60	Over 18 years
+E1	Eq-Comparison:T9 Temporal-Unit:T4 Operator:T8 Value:T6
+T10	Condition 94 103	back pain
+E3	Condition:T10 Name:T11
+T11	Condition-Name 94 103	back pain
+T12	Modifier 81 93	non-specific
+E4	Modifier:T12 Modifies:E3
+T13	Condition 236 249	lumbar injury
+E5	Condition:T13 Name:T14
+T14	Condition-Name 236 249	lumbar injury
+T15	Negation 189 198	Exclusion
+E6	Negation:T15 
+T16	Observation 255 272	medical diagnosis
+E7	Observation:T16 
+R1	Found-By Arg1:E5 Arg2:E7	
+T17	Procedure 310 325	pharmacological
+E8	Procedure:T17 Name:T18
+T18	Procedure-Name 310 325	pharmacological
+T19	Eq-Comparison 343 363	in the last 6 months
+E9	Eq-Comparison:T19 Temporal-Unit:T5 Operator:T20 Value:T7
+T20	Eq-Operator 343 345	in
+A5	Eq-Operator-Value T20 LTEQ
+T21	Allergy 380 389	allergies
+E10	Allergy:T21 
+T22	Condition 393 416	alterations of the skin
+E11	Condition:T22 Name:T23
+T23	Condition-Name 393 416	alterations of the skin

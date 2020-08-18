@@ -1,0 +1,100 @@
+T1	Procedure 85 106	radical prostatectomy
+T2	Procedure-Name 85 106	radical prostatectomy
+E1	Procedure:T1 Name:T2
+T3	Condition 274 294	erectile dysfunction
+T4	Condition-Name 274 294	erectile dysfunction
+E3	Condition:T3 Name:T4
+T5	Condition 467 486	psychiatric disease
+T6	Condition-Name 467 486	psychiatric disease
+E5	Condition:T5 Name:T6
+T7	Procedure 454 461	therapy
+T8	Procedure-Name 454 461	therapy
+E7	Procedure:T7 Name:T8 Temporality:E28
+T9	Condition 226 238	incontinence
+T10	Condition-Name 226 238	incontinence
+E9	Condition:T9 Name:T10
+T11	Procedure 404 413	radiation
+T12	Procedure-Name 404 413	radiation
+E11	Procedure:T11 Name:T12 Temporality:E27
+T15	Eq-Operator 303 304	<
+A1	Eq-Operator-Value T15 BETWEEN
+T16	Eq-Value 301 302	5
+T17	Eq-Value 305 307	20
+T18	Eq-Comparison 301 307	5 < 20
+E14	Eq-Comparison:T18 Operator:T15 Value:T16
+T19	Indication 70 80	indication
+E2	Indication:T19 Indication-For:E1
+T20	Condition 58 64	cancer
+E4	Condition:T20 Name:T21
+T21	Condition-Name 58 64	cancer
+T22	Condition 143 149	cancer
+E6	Condition:T22 Name:T23
+T23	Condition-Name 143 149	cancer
+T24	Procedure 121 130	treatment
+E8	Procedure:T24 
+R1	Treatment-For Arg1:E8 Arg2:E6	
+T25	Negation 112 114	no
+E10	Negation:T25 Negates:E8
+T13	Temporal-Connection 213 216	pre
+E12	Temporal-Connection:T13 Arg:E9 Arg2:E13
+T26	Procedure 216 225	operative
+E13	Procedure:T26 
+T27	Observation 296 300	IIEF
+E15	Observation:T27 Name:T28
+T28	Observation-Name 296 300	IIEF
+R2	Equivalent-To Arg1:E15 Arg2:E14	
+R3	Equivalent-To Arg1:E15 Arg2:E3	
+T29	Temporal-Connection 261 264	pre
+E16	Temporal-Connection:T29 Arg:E3 Arg2:E17
+T31	Procedure 264 273	operative
+E17	Procedure:T31 
+T32	Condition 356 362	cancer
+E18	Condition:T32 Name:T33
+T33	Condition-Name 356 362	cancer
+T34	Modifier 314 326	metastasized
+E19	Modifier:T34 
+T35	Modifier 330 346	locally advanced
+E20	Modifier:T35 Modifies:T33
+T36	Or 327 329	or
+E21	Or:T36 Arg:E19 Arg2:E20
+T37	Observation 379 389	assessment
+E22	Observation:T37 Name:T38
+T38	Observation-Name 379 389	assessment
+R4	Found-By Arg1:E18 Arg2:E22	
+T39	Temporal-Connection 366 369	pre
+E23	Temporal-Connection:T39 Arg:E22 Arg2:E24
+T41	Procedure 369 378	operative
+E24	Procedure:T41 
+T42	Observation 240 254	24hrs pad-test
+E25	Observation:T42 Name:T43
+T43	Observation-Name 240 254	24hrs pad-test
+R5	Found-By Arg1:E9 Arg2:E25	
+A2	Temporal-Connection-Type-Value E12 before
+A3	Temporal-Connection-Type-Value E16 before
+A4	Temporal-Connection-Type-Value E23 before
+T14	Modifier 39 57	localized prostate
+E26	Modifier:T14 Modifies:E4
+T44	Eq-Comparison 395 403	previous
+E27	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 395 403	previous
+A5	Eq-Temporal-Period-Value T45 past
+T46	Eq-Comparison 429 437	previous
+E28	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 429 437	previous
+A6	Eq-Temporal-Period-Value T47 past
+T30	Other 115 120	other
+E29	Other:T30 Is-Other:E8
+T40	Modifier 134 142	prostate
+E30	Modifier:T40 Modifies:T23
+T48	Condition 447 453	cancer
+E31	Condition:T48 Name:T49
+T49	Condition-Name 447 453	cancer
+R6	Treatment-For Arg1:E7 Arg2:E31	
+T50	Modifier 438 446	prostate
+E32	Modifier:T50 Modifies:T49
+T51	Modifier 417 423	pelvis
+E33	Modifier:T51 Modifies:T12
+T52	Study 517 522	study
+E34	Study:T52 
+T53	Other 509 516	another
+E35	Other:T53 Is-Other:E34

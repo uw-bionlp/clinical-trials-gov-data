@@ -1,0 +1,50 @@
+T1	Condition 327 336	marijuana
+T2	Condition-Name 327 336	marijuana
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T4 male
+T5	Procedure 470 485	pain management
+T6	Procedure-Name 470 485	pain management
+E5	Procedure:T5 Name:T6
+T7	Condition 930 944	breast feeding
+T8	Condition-Name 930 944	breast feeding
+E7	Condition:T7 Name:T8
+T9	Procedure 518 528	nil per os
+T10	Procedure-Name 518 528	nil per os
+E9	Procedure:T9 Name:T10
+T11	Condition 917 926	Pregnancy
+T12	Condition-Name 917 926	Pregnancy
+E11	Condition:T11 Name:T12
+T13	Procedure 530 533	NPO
+T14	Procedure-Name 530 533	NPO
+E13	Procedure:T13 Name:T14
+T15	Procedure 586 589	NPO
+T16	Procedure-Name 586 589	NPO
+E15	Procedure:T15 Name:T16
+T17	Eq-Operator 162 163	≥
+A3	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 251 252	≥
+A4	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 590 596	within
+A5	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 713 719	within
+A6	Eq-Operator-Value T20 GTEQ
+T21	Eq-Temporal-Unit 44 49	years
+A7	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 56 61	years
+A8	Eq-Temporal-Unit-Value T22 year
+T23	Age 62 65	old
+E16	Age:T23
+T24	Eq-Value 41 43	18
+T25	Eq-Value 53 55	65
+T26	Eq-Value 164 166	90
+T27	Eq-Value 183 185	24
+T28	Eq-Value 253 254	5
+T29	Eq-Value 606 608	48
+T30	Eq-Value 729 731	48
+T31	Eq-Comparison 162 166	≥ 90
+E17	Eq-Comparison:T31 Operator:T17 Value:T26
+T32	Eq-Comparison 251 254	≥ 5
+E18	Eq-Comparison:T32 Operator:T18 Value:T28

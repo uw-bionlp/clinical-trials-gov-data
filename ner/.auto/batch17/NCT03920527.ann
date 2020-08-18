@@ -1,0 +1,92 @@
+T1	Condition 555 576	Aspergillus infection
+T2	Condition-Name 555 576	Aspergillus infection
+E1	Condition:T1 Name:T2
+T3	Condition 726 745	pulmonary disorders
+T4	Condition-Name 726 745	pulmonary disorders
+E3	Condition:T3 Name:T4
+T5	Condition 370 388	pleural thickening
+T6	Condition-Name 370 388	pleural thickening
+E5	Condition:T5 Name:T6
+T7	Condition 312 325	consolidation
+T8	Condition-Name 312 325	consolidation
+E7	Condition:T7 Name:T8
+T9	Condition 264 272	cavities
+T10	Condition-Name 264 272	cavities
+E9	Condition:T9 Name:T10
+T11	Condition 578 584	growth
+T12	Condition-Name 578 584	growth
+E11	Condition:T11 Name:T12
+T13	Condition 1106 1149	infection due to mycobacterium tuberculosis
+T14	Condition-Name 1106 1149	infection due to mycobacterium tuberculosis
+E13	Condition:T13 Name:T14
+T15	Condition 1257 1296	allergic bronchopulmonary aspergillosis
+T16	Condition-Name 1257 1296	allergic bronchopulmonary aspergillosis
+E15	Condition:T15 Name:T16
+T17	Condition 961 989	human immunodeficiency virus
+T18	Condition-Name 961 989	human immunodeficiency virus
+E17	Condition:T17 Name:T18
+T19	Condition 1232 1255	pulmonary aspergillosis
+T20	Condition-Name 1232 1255	pulmonary aspergillosis
+E19	Condition:T19 Name:T20
+T21	Condition 1342 1364	invasive aspergillosis
+T22	Condition-Name 1342 1364	invasive aspergillosis
+E21	Condition:T21 Name:T22
+T23	Condition 1318 1331	aspergillosis
+T24	Condition-Name 1318 1331	aspergillosis
+E23	Condition:T23 Name:T24
+T25	Condition 1177 1189	tuberculosis
+T26	Condition-Name 1177 1189	tuberculosis
+E25	Condition:T25 Name:T26
+T27	Condition 1371 1380	pregnancy
+T28	Condition-Name 1371 1380	pregnancy
+E27	Condition:T27 Name:T28
+T29	Condition 990 998	syndrome
+T30	Condition-Name 990 998	syndrome
+E29	Condition:T29 Name:T30
+T31	Eq-Operator 181 182	≥
+A1	Eq-Operator-Value T31 GTEQ
+T32	Eq-Operator 477 478	>
+A2	Eq-Operator-Value T32 GT
+T33	Eq-Operator 655 656	>
+A3	Eq-Operator-Value T33 GT
+T34	Eq-Operator 693 694	>
+A4	Eq-Operator-Value T34 GT
+T35	Eq-Operator 915 916	>
+A5	Eq-Operator-Value T35 GT
+T36	Eq-Operator 1033 1034	>
+A6	Eq-Operator-Value T36 GT
+T37	Eq-Temporal-Unit 184 190	months
+A7	Eq-Temporal-Unit-Value T37 month
+T38	Eq-Temporal-Unit 937 942	weeks
+A8	Eq-Temporal-Unit-Value T38 week
+T39	Eq-Temporal-Unit 1036 1041	weeks
+A9	Eq-Temporal-Unit-Value T39 week
+T40	Eq-Temporal-Unit 1063 1069	months
+A10	Eq-Temporal-Unit-Value T40 month
+T41	Eq-Value 182 183	3
+T42	Eq-Value 478 480	27
+T43	Eq-Value 656 657	0
+T44	Eq-Value 694 695	1
+T45	Eq-Value 916 918	10
+T46	Eq-Value 935 936	3
+T47	Eq-Value 1034 1035	3
+T48	Eq-Comparison 181 190	≥3 months
+E30	Eq-Comparison:T48 Operator:T31 Temporal-Unit:T37 Value:T41
+T49	Eq-Comparison 477 480	>27
+E31	Eq-Comparison:T49 Operator:T32 Value:T42
+T50	Eq-Comparison 655 657	>0
+E32	Eq-Comparison:T50 Operator:T33 Value:T43
+T51	Eq-Comparison 693 695	>1
+E33	Eq-Comparison:T51 Operator:T34 Value:T44
+T52	Eq-Comparison 915 921	>10 mg
+E34	Eq-Comparison:T52 Operator:T35 Value:T45
+T53	Eq-Comparison 1033 1041	>3 weeks
+E35	Eq-Comparison:T53 Operator:T36 Temporal-Unit:T39 Value:T47
+T54	Drug 876 882	intake
+E2	Drug:T54 Name:T55 Dose:E34 Duration:E4
+T55	Drug-Name 886 898	prednisolone
+T56	Eq-Unit 919 921	mg
+T57	Eq-Comparison 926 942	at least 3 weeks
+E4	Eq-Comparison:T57 Operator:T58 Temporal-Unit:T38 Value:T46
+T58	Eq-Operator 926 934	at least
+A11	Eq-Operator-Value T58 GTEQ

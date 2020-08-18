@@ -1,0 +1,45 @@
+T1	Condition 64 91	chronic renal insufficiency
+T2	Condition-Name 64 91	chronic renal insufficiency
+E1	Condition:T1 Name:T2
+T3	Condition 455 476	psychiatric disorders
+T4	Condition-Name 455 476	psychiatric disorders
+E3	Condition:T3 Name:T4 Severity:T26
+T5	Procedure 129 139	transplant
+T6	Procedure-Name 129 139	transplant
+E5	Procedure:T5 Name:T6
+T9	Procedure 25 33	Dialysis
+T10	Procedure-Name 25 33	Dialysis
+E9	Procedure:T9 Name:T10
+T11	Procedure 41 49	dialysis
+T12	Procedure-Name 41 49	dialysis
+E11	Procedure:T11 Name:T12
+T13	Condition 482 490	dementia
+T14	Condition-Name 482 490	dementia
+E13	Condition:T13 Name:T14
+T16	Eq-Operator 103 104	<
+A1	Eq-Operator-Value T16 LT
+T17	Eq-Operator 409 418	less than
+A2	Eq-Operator-Value T17 LT
+T18	Eq-Temporal-Unit 423 428	years
+A3	Eq-Temporal-Unit-Value T18 year
+T19	Eq-Value 105 107	20
+T20	Eq-Comparison 103 107	< 20
+E14	Eq-Comparison:T20 Operator:T16 Value:T19
+T7	Procedure 202 212	transplant
+E2	Procedure:T7 Name:T8
+T8	Procedure-Name 202 212	transplant
+T15	Negation 301 310	Exclusion
+E4	Negation:T15 
+T21	Condition 373 382	pathology
+E6	Condition:T21 Name:T22
+T22	Condition-Name 373 382	pathology
+T23	Observation 390 405	life expectancy
+E7	Observation:T23 Name:T24 Eq-Comparison:E8
+T24	Observation-Name 390 405	life expectancy
+A4	Observation-Type-Value T24 vital
+T25	Eq-Comparison 409 428	less than two years
+E8	Eq-Comparison:T25 Operator:T17 Temporal-Unit:T18
+T26	Severity 447 454	serious
+A5	Severity-Value T26 severe
+T27	Or 479 481	or
+E10	Or:T27 Arg:E3 Arg2:E13

@@ -1,0 +1,30 @@
+T1	Condition 105 132	full thickness macular hole
+T2	Condition-Name 105 132	full thickness macular hole
+E1	Condition:T1 Name:T2
+T3	Condition 29 42	macular holes
+T4	Condition-Name 29 42	macular holes
+E3	Condition:T3 Name:T4
+T5	Condition 291 307	retinal diseases
+T6	Condition-Name 291 307	retinal diseases
+E5	Condition:T5 Name:T6
+T7	Condition 225 236	maculopathy
+T8	Condition-Name 225 236	maculopathy
+E7	Condition:T7 Name:T8
+T9	Procedure 253 262	surgeries
+T10	Procedure-Name 253 262	surgeries
+E9	Procedure:T9 Name:T10
+T11	Eq-Operator 328 340	greater than
+A1	Eq-Operator-Value T11 GT
+T12	Eq-Temporal-Unit 385 391	months
+A2	Eq-Temporal-Unit-Value T12 month
+T13	Eq-Unit 346 348	mm
+T14	Eq-Operator 142 144	to
+A3	Eq-Operator-Value T14 BETWEEN
+T15	Eq-Value 140 141	2
+T16	Eq-Value 145 146	4
+T17	Eq-Value 341 343	26
+T18	Eq-Value 382 384	12
+T19	Eq-Comparison 328 343	greater than 26
+E10	Eq-Comparison:T19 Operator:T11 Value:T17
+T20	Eq-Comparison 140 144	2 to
+E11	Eq-Comparison:T20 Operator:T14 Value:T15

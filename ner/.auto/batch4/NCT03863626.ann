@@ -1,0 +1,22 @@
+T1	Condition 54 75	Chronic heart failure
+T2	Condition-Name 54 75	Chronic heart failure
+E1	Condition:T1 Name:T2
+T3	Condition 127 140	heart failure
+T4	Condition-Name 127 140	heart failure
+E3	Condition:T3 Name:T4
+T5	Condition 354 370	renal impairment
+T6	Condition-Name 354 370	renal impairment
+E5	Condition:T5 Name:T6
+T7	Condition 421 444	hemodynamic instability
+T8	Condition-Name 421 444	hemodynamic instability
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 386 387	<
+A1	Eq-Operator-Value T9 LT
+T10	Eq-Temporal-Unit 42 47	years
+A2	Eq-Temporal-Unit-Value T10 year
+T11	Age 25 28	Age
+E8	Age:T11
+T12	Eq-Value 39 41	18
+T13	Eq-Value 387 389	30
+T14	Eq-Comparison 386 389	<30
+E9	Eq-Comparison:T14 Operator:T9 Value:T13

@@ -1,0 +1,63 @@
+T1	Condition 0 15	Cystic Fibrosis
+T2	Condition-Name 0 15	Cystic Fibrosis
+E1	Condition:T1 Name:T2
+T3	Language 221 228	English
+T4	Life-Stage-And-Gender 285 288	Men
+T5	Eq-Operator 324 333	Less than
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Operator 405 410	up to
+A2	Eq-Operator-Value T6 LTEQ
+T7	Eq-Temporal-Unit 337 342	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Eq-Temporal-Unit 413 418	years
+A4	Eq-Temporal-Unit-Value T8 year
+T9	Age 346 349	age
+E2	Age:T9 Eq-Comparison:E3
+T10	Eq-Value 334 336	18
+T11	Eq-Value 411 412	5
+T12	Eq-Comparison 324 342	Less than 18 years
+E3	Eq-Comparison:T12 Operator:T5 Temporal-Unit:T7 Value:T10
+T13	Eq-Comparison 405 418	up to 5 years
+E4	Eq-Comparison:T13 Operator:T6 Temporal-Unit:T8 Value:T11
+T14	Condition 62 64	CF
+E5	Condition:T14 Name:T15
+T15	Condition-Name 62 64	CF
+T16	Observation 88 98	sweat test
+E6	Observation:T16 Name:T17
+T17	Observation-Name 88 98	sweat test
+T18	Procedure 102 119	genotype analysis
+E7	Procedure:T18 Name:T19
+T19	Procedure-Name 102 119	genotype analysis
+T20	Or 99 101	or
+E8	Or:T20 Arg:E6 Arg2:E7
+R1	Found-By Arg1:E5 Arg2:E6	
+T21	Condition 267 269	CF
+E9	Condition:T21 Name:T22
+T22	Condition-Name 267 269	CF
+T23	Negation 264 266	No
+E10	Negation:T23 Negates:E9
+T24	Life-Stage-And-Gender 292 297	women
+A5	Life-Stage-And-Gender-Type T24 female
+A6	Life-Stage-And-Gender-Type T4 male
+T25	Or 289 291	or
+E11	Or:T25 Arg:T4 Arg2:T24
+T26	Condition 306 318	osteoporosis
+E12	Condition:T26 Name:T27
+T27	Condition-Name 306 318	osteoporosis
+T28	Negation 298 305	without
+E13	Negation:T28 Negates:E12
+T29	Study 388 393	study
+E14	Study:T29 Duration:E4
+T30	Assertion 355 364	Unwilling
+E15	Assertion:T30 Asserted:E14
+A7	Assertion-Type-Value E15 hypothetical
+T31	Drug 466 475	denosumab
+E16	Drug:T31 Name:T32
+T32	Drug-Name 466 475	denosumab
+T33	Negation 451 457	unable
+E17	Negation:T33 Negates:E16
+T34	Assertion 424 433	Unwilling
+E18	Assertion:T34 Asserted:E16
+A8	Assertion-Type-Value E18 hypothetical
+T35	Or 434 440	and/or
+E19	Or:T35 Arg:E18 Arg2:E17

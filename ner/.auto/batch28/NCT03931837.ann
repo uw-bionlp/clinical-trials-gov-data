@@ -1,0 +1,37 @@
+T1	Condition 102 124	Inflammatory arthritis
+T2	Condition-Name 102 124	Inflammatory arthritis
+E1	Condition:T1 Name:T2
+T3	Condition 300 321	chronic renal failure
+T4	Condition-Name 300 321	chronic renal failure
+E3	Condition:T3 Name:T4
+T5	Observation 160 175	Body mass index
+T6	Observation-Name 160 175	Body mass index
+E5	Observation:T5 Name:T6
+A1	Observation-Type-Value T6 vital
+T7	Condition 45 59	osteoarthritis
+T8	Condition-Name 45 59	osteoarthritis
+E7	Condition:T7 Name:T8
+T9	Procedure 277 287	hemostasis
+T10	Procedure-Name 277 287	hemostasis
+E9	Procedure:T9 Name:T10
+T11	Condition 289 298	cirrhosis
+T12	Condition-Name 289 298	cirrhosis
+E11	Condition:T11 Name:T12
+T13	Life-Stage-And-Gender 25 30	Adult
+A2	Life-Stage-And-Gender-Type T13 adult
+T14	Eq-Operator 176 177	>
+A3	Eq-Operator-Value T14 GT
+T15	Eq-Operator 437 438	<
+A4	Eq-Operator-Value T15 LT
+T16	Eq-Operator 466 467	<
+A5	Eq-Operator-Value T16 LT
+T17	Eq-Unit 181 186	Kg/m2
+T18	Eq-Value 178 180	30
+T19	Eq-Value 438 440	10
+T20	Eq-Value 468 471	140
+T21	Eq-Comparison 176 186	> 30 Kg/m2
+E12	Eq-Comparison:T21 Operator:T14 Unit:T17 Value:T18
+T22	Eq-Comparison 437 440	<10
+E13	Eq-Comparison:T22 Operator:T15 Value:T19
+T23	Eq-Comparison 466 471	< 140
+E14	Eq-Comparison:T23 Operator:T16 Value:T20

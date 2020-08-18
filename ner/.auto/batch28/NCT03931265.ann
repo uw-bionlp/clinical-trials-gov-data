@@ -1,0 +1,18 @@
+T1	Procedure 190 220	surgery for endometrial cancer
+T2	Procedure-Name 190 220	surgery for endometrial cancer
+E1	Procedure:T1 Name:T2
+T3	Procedure 301 326	preoperative chemotherapy
+T4	Procedure-Name 301 326	preoperative chemotherapy
+E3	Procedure:T3 Name:T4
+T5	Procedure 330 347	radiation therapy
+T6	Procedure-Name 330 347	radiation therapy
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 25 26	>
+A1	Eq-Operator-Value T7 GT
+T8	Eq-Operator 224 232	the past
+A2	Eq-Operator-Value T8 GTEQ
+T9	Eq-Temporal-Unit 29 34	years
+A3	Eq-Temporal-Unit-Value T9 year
+T10	Eq-Value 26 28	20
+T11	Eq-Comparison 25 34	>20 years
+E6	Eq-Comparison:T11 Operator:T7 Temporal-Unit:T9 Value:T10

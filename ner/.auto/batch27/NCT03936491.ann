@@ -1,0 +1,21 @@
+T1	Life-Stage-And-Gender 102 110	Children
+A1	Life-Stage-And-Gender-Type T1 child
+T2	Condition 330 334	ADHD
+T3	Condition-Name 330 334	ADHD
+E2	Condition:T2 Name:T3
+T4	Condition 487 491	ADHD
+T5	Condition-Name 487 491	ADHD
+E4	Condition:T4 Name:T5
+T6	Eq-Operator 360 372	greater than
+A2	Eq-Operator-Value T6 GT
+T7	Eq-Operator 665 677	greater than
+A3	Eq-Operator-Value T7 GT
+T8	Eq-Temporal-Unit 144 149	years
+A4	Eq-Temporal-Unit-Value T8 year
+T9	Eq-Value 135 136	6
+T10	Eq-Value 141 143	18
+T11	Eq-Value 268 269	5
+T12	Eq-Value 378 379	4
+T13	Eq-Value 678 680	80
+T14	Eq-Comparison 665 680	greater than 80
+E5	Eq-Comparison:T14 Operator:T7 Value:T13

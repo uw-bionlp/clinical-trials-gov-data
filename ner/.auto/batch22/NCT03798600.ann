@@ -1,0 +1,38 @@
+T1	Procedure 187 203	targeted therapy
+T2	Procedure-Name 187 203	targeted therapy
+E1	Procedure:T1 Name:T2
+T3	Condition 59 72	Severe sepsis
+T4	Condition-Name 59 72	Severe sepsis
+E3	Condition:T3 Name:T4
+T5	Procedure 106 113	therapy
+T6	Procedure-Name 106 113	therapy
+E5	Procedure:T5 Name:T6
+T7	Procedure 151 158	therapy
+T8	Procedure-Name 151 158	therapy
+E7	Procedure:T7 Name:T8
+T9	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T9 adult
+T10	Procedure 269 276	therapy
+T11	Procedure-Name 269 276	therapy
+E10	Procedure:T10 Name:T11
+T12	Procedure 298 334	Continuous renal replacement therapy
+T13	Procedure-Name 298 334	Continuous renal replacement therapy
+E12	Procedure:T12 Name:T13
+T14	Condition 347 360	Liver failure
+T15	Condition-Name 347 360	Liver failure
+E14	Condition:T14 Name:T15
+T16	Condition 283 292	Pregnancy
+T17	Condition-Name 283 292	Pregnancy
+E16	Condition:T16 Name:T17
+T18	Life-Stage-And-Gender 362 367	Child
+A2	Life-Stage-And-Gender-Type T18 child
+T19	Eq-Operator 45 46	>
+A3	Eq-Operator-Value T19 GT
+T20	Eq-Operator 379 380	>
+A4	Eq-Operator-Value T20 GT
+T21	Eq-Value 46 48	18
+T22	Eq-Value 381 382	6
+T23	Eq-Comparison 45 48	>18
+E17	Eq-Comparison:T23 Operator:T19 Value:T21
+T24	Eq-Comparison 379 382	> 6
+E18	Eq-Comparison:T24 Operator:T20 Value:T22

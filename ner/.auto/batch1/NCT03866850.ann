@@ -1,0 +1,30 @@
+T1	Procedure 42 58	cochlear implant
+T2	Procedure-Name 42 58	cochlear implant
+E1	Procedure:T1 Name:T2
+T3	Procedure 85 101	cochlear implant
+T4	Procedure-Name 85 101	cochlear implant
+E3	Procedure:T3 Name:T4
+T5	Condition 215 227	implantation
+T6	Condition-Name 215 227	implantation
+E5	Condition:T5 Name:T6
+T7	Language 132 139	English
+T8	Life-Stage-And-Gender 398 403	child
+A1	Life-Stage-And-Gender-Type T8 child
+T9	Life-Stage-And-Gender 407 412	adult
+A2	Life-Stage-And-Gender-Type T9 adult
+T10	Eq-Operator 170 171	<
+A3	Eq-Operator-Value T10 LT
+T11	Eq-Operator 257 258	>
+A4	Eq-Operator-Value T11 GT
+T12	Eq-Temporal-Unit 174 179	years
+A5	Eq-Temporal-Unit-Value T12 year
+T13	Eq-Temporal-Unit 261 266	years
+A6	Eq-Temporal-Unit-Value T13 year
+T14	Age 208 211	age
+E6	Age:T14
+T15	Eq-Value 172 173	3
+T16	Eq-Value 259 260	3
+T17	Eq-Comparison 170 179	< 3 years
+E7	Eq-Comparison:T17 Operator:T10 Temporal-Unit:T12 Value:T15
+T18	Eq-Comparison 257 266	> 3 years
+E8	Eq-Comparison:T18 Operator:T11 Temporal-Unit:T13 Value:T16

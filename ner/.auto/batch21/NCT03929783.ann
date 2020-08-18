@@ -1,0 +1,42 @@
+T1	Procedure 460 486	percutaneous needle biopsy
+T2	Procedure-Name 460 486	percutaneous needle biopsy
+E1	Procedure:T1 Name:T2
+T3	Condition 911 933	chronic kidney disease
+T4	Condition-Name 911 933	chronic kidney disease
+E3	Condition:T3 Name:T4
+T5	Procedure 937 949	hemodialysis
+T6	Procedure-Name 937 949	hemodialysis
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 333 334	>
+A1	Eq-Operator-Value T7 GT
+T8	Eq-Operator 630 636	within
+A2	Eq-Operator-Value T8 GTEQ
+T9	Eq-Operator 689 690	<
+A3	Eq-Operator-Value T9 LT
+T10	Eq-Operator 830 831	<
+A4	Eq-Operator-Value T10 LT
+T11	Eq-Operator 873 879	within
+A5	Eq-Operator-Value T11 GTEQ
+T12	Eq-Temporal-Unit 640 644	days
+A6	Eq-Temporal-Unit-Value T12 day
+T13	Eq-Temporal-Unit 883 887	days
+A7	Eq-Temporal-Unit-Value T13 day
+T14	Eq-Unit 337 339	cm
+T15	Eq-Unit 693 695	cm
+T16	Eq-Value 149 150	4
+T17	Eq-Value 155 156	5
+T18	Eq-Value 335 336	1
+T19	Eq-Value 637 639	14
+T20	Eq-Value 691 692	1
+T21	Eq-Value 832 834	30
+T22	Eq-Value 880 882	30
+T23	Eq-Comparison 333 339	> 1 cm
+E6	Eq-Comparison:T23 Operator:T7 Unit:T14 Value:T18
+T24	Eq-Comparison 630 644	within 14 days
+E7	Eq-Comparison:T24 Operator:T8 Temporal-Unit:T12 Value:T19
+T25	Eq-Comparison 689 695	< 1 cm
+E8	Eq-Comparison:T25 Operator:T9 Unit:T15 Value:T20
+T26	Eq-Comparison 830 834	< 30
+E9	Eq-Comparison:T26 Operator:T10 Value:T21
+T27	Eq-Comparison 873 887	within 30 days
+E10	Eq-Comparison:T27 Operator:T11 Temporal-Unit:T13 Value:T22

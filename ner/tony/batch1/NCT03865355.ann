@@ -1,0 +1,78 @@
+T1	Procedure 147 156	resection
+T2	Procedure-Name 147 156	resection
+E1	Procedure:T1 Name:T2
+T4	Eq-Operator 358 364	within
+A1	Eq-Operator-Value T4 LTEQ
+T5	Eq-Temporal-Unit 190 195	years
+A2	Eq-Temporal-Unit-Value T5 year
+T6	Eq-Temporal-Unit 376 381	years
+A3	Eq-Temporal-Unit-Value T6 year
+T7	Age 182 186	aged
+E2	Age:T7 Eq-Comparison:E11
+T8	Eq-Value 187 189	18
+T9	Eq-Value 374 375	5
+T10	Eq-Value 460 461	6
+T11	Condition 69 75	glioma
+E3	Condition:T11 Name:T12
+T12	Condition-Name 69 75	glioma
+T13	Eq-Temporal-Recency 53 68	newly diagnosed
+A4	Eq-Temporal-Recency-Value T13 first-time
+T14	Assertion 43 52	suspected
+E4	Assertion:T14 Asserted:T12
+A5	Assertion-Type-Value E4 possible
+T15	Modifier 77 84	grade I
+E5	Modifier:T15 Modifies:T12
+T16	Modifier 86 88	II
+E6	Modifier:T16 Modifies:E3
+T3	Modifier 90 93	III
+E7	Modifier:T3 Modifies:E3
+T17	Condition 97 109	glioblastoma
+E8	Condition:T17 Name:T18
+T18	Condition-Name 97 109	glioblastoma
+T19	Procedure 124 145	surgical intervention
+E9	Procedure:T19 Name:T20
+T20	Procedure-Name 124 145	surgical intervention
+R1	Example-Of Arg1:E1 Arg2:E9	
+T21	Procedure 160 166	biopsy
+E10	Procedure:T21 Name:T22
+T22	Procedure-Name 160 166	biopsy
+R2	Example-Of Arg1:E10 Arg2:E9	
+T23	Eq-Comparison 187 204	18 years or older
+E11	Eq-Comparison:T23 Operator:T24 Temporal-Unit:T5 Value:T8
+T24	Eq-Operator 196 204	or older
+A6	Eq-Operator-Value T24 GTEQ
+T25	Negation 260 269	Exclusion
+E12	Negation:T25 
+T26	Procedure 291 303	Radiotherapy
+E13	Procedure:T26 Name:T27
+T27	Procedure-Name 291 303	Radiotherapy
+T28	Modifier 304 333	to the central nervous system
+E14	Modifier:T28 
+R3	Abbrev-Of Arg1:E14 Arg2:E13	
+T29	Temporal-Connection 285 290	Prior
+E15	Temporal-Connection:T29 Arg:E13
+A7	Temporal-Connection-Type-Value E15 before
+T30	Procedure 345 357	Chemotherapy
+E16	Procedure:T30 Name:T31
+T31	Procedure-Name 345 357	Chemotherapy
+T32	Eq-Comparison 358 381	within the last 5 years
+E17	Eq-Comparison:T32 Operator:T4 Temporal-Unit:T6 Value:T9
+T33	Temporal-Connection 339 344	Prior
+E18	Temporal-Connection:T33 
+A8	Temporal-Connection-Type-Value E18 before
+T34	Condition 397 430	central nervous system malignancy
+E19	Condition:T34 Name:T35
+T35	Condition-Name 397 430	central nervous system malignancy
+T36	Temporal-Connection 391 396	prior
+E20	Temporal-Connection:T36 Arg:E19
+A9	Temporal-Connection-Type-Value E20 before
+T37	Procedure 440 447	surgery
+E21	Procedure:T37 Name:T38
+T38	Procedure-Name 440 447	surgery
+T40	Temporal-Connection 448 467	during last 6 month
+E23	Temporal-Connection:T40 
+A10	Temporal-Connection-Type-Value E23 during
+T39	Eq-Temporal-Unit 462 467	month
+A11	Eq-Temporal-Unit-Value T39 month
+T41	Eq-Comparison 448 467	during last 6 month
+E22	Eq-Comparison:T41 Temporal-Unit:T39 Value:T10

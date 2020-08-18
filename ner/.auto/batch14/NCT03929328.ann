@@ -1,0 +1,75 @@
+T1	Procedure 90 113	endotracheal intubation
+T2	Procedure-Name 90 113	endotracheal intubation
+E1	Procedure:T1 Name:T2
+T3	Procedure 118 140	mechanical ventilation
+T4	Procedure-Name 118 140	mechanical ventilation
+E3	Procedure:T3 Name:T4
+T5	Condition 169 177	Recovery
+T6	Condition-Name 169 177	Recovery
+E5	Condition:T5 Name:T6
+T7	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T7 adult
+T8	Condition 604 623	myocardial ischemia
+T9	Condition-Name 604 623	myocardial ischemia
+E8	Condition:T8 Name:T9
+T10	Procedure 349 353	PEEP
+T11	Procedure-Name 349 353	PEEP
+E10	Procedure:T10 Name:T11
+T12	Condition 500 503	MIP
+T13	Condition-Name 500 503	MIP
+E12	Condition:T12 Name:T13
+T14	Language 745 748	min
+T15	Procedure 1128 1137	therapies
+T16	Procedure-Name 1128 1137	therapies
+E15	Procedure:T15 Name:T16
+T17	Eq-Operator 328 329	>
+A2	Eq-Operator-Value T17 GT
+T18	Eq-Operator 343 344	≤
+A3	Eq-Operator-Value T18 LTEQ
+T19	Eq-Operator 354 355	<
+A4	Eq-Operator-Value T19 LT
+T20	Eq-Operator 391 392	>
+A5	Eq-Operator-Value T20 GT
+T21	Eq-Operator 449 450	<
+A6	Eq-Operator-Value T21 LT
+T22	Eq-Operator 505 506	<
+A7	Eq-Operator-Value T22 LT
+T23	Eq-Operator 740 741	<
+A8	Eq-Operator-Value T23 LT
+T24	Eq-Operator 776 777	>
+A9	Eq-Operator-Value T24 GT
+T25	Eq-Operator 811 812	<
+A10	Eq-Operator-Value T25 LT
+T26	Eq-Temporal-Unit 48 53	years
+A11	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Unit 357 359	cm
+T28	Eq-Unit 511 513	cm
+T29	Age 40 44	aged
+E16	Age:T29
+T30	Eq-Value 45 47	18
+T31	Eq-Value 155 157	12
+T32	Eq-Value 329 332	150
+T33	Eq-Value 344 345	0
+T34	Eq-Value 355 356	8
+T35	Eq-Value 392 393	7
+T36	Eq-Value 451 454	105
+T37	Eq-Value 508 510	20
+T38	Eq-Value 741 744	140
+T39	Eq-Value 777 778	8
+T40	Eq-Value 812 814	38
+T41	Eq-Comparison 328 332	>150
+E17	Eq-Comparison:T41 Operator:T17 Value:T32
+T42	Eq-Comparison 343 345	≤0
+E18	Eq-Comparison:T42 Operator:T18 Value:T33
+T43	Eq-Comparison 354 359	<8 cm
+E19	Eq-Comparison:T43 Operator:T19 Unit:T27 Value:T34
+T44	Eq-Comparison 391 393	>7
+E20	Eq-Comparison:T44 Operator:T20 Value:T35
+T45	Eq-Comparison 449 454	< 105
+E21	Eq-Comparison:T45 Operator:T21 Value:T36
+T46	Eq-Comparison 740 744	<140
+E22	Eq-Comparison:T46 Operator:T23 Value:T38
+T47	Eq-Comparison 776 778	>8
+E23	Eq-Comparison:T47 Operator:T24 Value:T39
+T48	Eq-Comparison 811 814	<38
+E24	Eq-Comparison:T48 Operator:T25 Value:T40

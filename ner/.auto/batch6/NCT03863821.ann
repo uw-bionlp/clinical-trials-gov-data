@@ -1,0 +1,15 @@
+T1	Condition 176 197	neuromuscular disease
+T2	Condition-Name 176 197	neuromuscular disease
+E1	Condition:T1 Name:T2
+T3	Condition 109 122	heart failure
+T4	Condition-Name 109 122	heart failure
+E3	Condition:T3 Name:T4
+T5	Condition 30 34	COPD
+T6	Condition-Name 30 34	COPD
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 146 152	within
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Value 153 154	3
+T9	Eq-Value 221 222	6
+T10	Eq-Comparison 146 154	within 3
+E6	Eq-Comparison:T10 Operator:T7 Value:T8

@@ -1,0 +1,55 @@
+T1	Condition 178 181	CP1
+T2	Condition-Name 178 181	CP1
+E1	Condition:T1 Name:T2
+T3	Condition 723 743	gestational diabetes
+T4	Condition-Name 723 743	gestational diabetes
+E3	Condition:T3 Name:T4
+T5	Condition 804 819	type 1 diabetes
+T6	Condition-Name 804 819	type 1 diabetes
+E5	Condition:T5 Name:T6
+T7	Condition 768 779	prediabetes
+T8	Condition-Name 768 779	prediabetes
+E7	Condition:T7 Name:T8
+T9	Condition 903 912	pregnancy
+T10	Condition-Name 903 912	pregnancy
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 129 135	within
+A1	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 260 261	≥
+A2	Eq-Operator-Value T12 GTEQ
+T13	Eq-Operator 266 272	within
+A3	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 367 373	within
+A4	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 424 425	≥
+A5	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 614 623	less than
+A6	Eq-Operator-Value T16 LT
+T17	Eq-Operator 634 640	within
+A7	Eq-Operator-Value T17 GTEQ
+T18	Eq-Temporal-Unit 143 147	days
+A8	Eq-Temporal-Unit-Value T18 day
+T19	Eq-Temporal-Unit 276 280	days
+A9	Eq-Temporal-Unit-Value T19 day
+T20	Eq-Temporal-Unit 377 381	days
+A10	Eq-Temporal-Unit-Value T20 day
+T21	Eq-Temporal-Unit 927 931	days
+A11	Eq-Temporal-Unit-Value T21 day
+T22	Eq-Value 140 142	90
+T23	Eq-Value 261 262	6
+T24	Eq-Value 273 275	90
+T25	Eq-Value 374 376	90
+T26	Eq-Value 425 426	6
+T27	Eq-Value 624 626	60
+T28	Eq-Value 809 810	1
+T29	Eq-Value 924 926	90
+T30	Eq-Comparison 260 262	≥6
+E10	Eq-Comparison:T30 Operator:T12 Value:T23
+T31	Eq-Comparison 266 280	within 90 days
+E11	Eq-Comparison:T31 Operator:T13 Temporal-Unit:T19 Value:T24
+T32	Eq-Comparison 367 381	within 90 days
+E12	Eq-Comparison:T32 Operator:T14 Temporal-Unit:T20 Value:T25
+T33	Eq-Comparison 424 426	≥6
+E13	Eq-Comparison:T33 Operator:T15 Value:T26
+T34	Eq-Comparison 614 626	less than 60
+E14	Eq-Comparison:T34 Operator:T16 Value:T27

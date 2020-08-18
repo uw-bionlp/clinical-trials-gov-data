@@ -1,0 +1,92 @@
+T1	Condition-Name 50 52	UC
+T2	Eq-Operator 57 65	at least
+A1	Eq-Operator-Value T2 GTEQ
+T3	Eq-Comparison 57 74	at least 3 months
+T4	Eq-Value 66 67	3
+T5	Eq-Temporal-Unit 68 74	months
+A2	Eq-Temporal-Unit-Value T5 month
+T6	Temporal-Connection 75 80	prior
+T7	Temporal-Connection 75 83	prior to
+T8	Study 84 93	screening
+T9	And 96 100	with
+T10	Eq-Value 127 129	15
+T11	Eq-Unit 130 132	cm
+T12	Observation-Name 203 211	response
+T13	Procedure 223 232	treatment
+T14	Drug-Name 238 253	oral mesalamine
+T15	Eq-Operator 254 255	≥
+A3	Eq-Operator-Value T15 GTEQ
+T16	Eq-Comparison 254 267	≥ 2.4 g / day
+T17	Eq-Value 256 259	2.4
+T18	Eq-Unit 260 261	g
+T19	Eq-Temporal-Unit 264 267	day
+A4	Eq-Temporal-Unit-Value T19 day
+T20	Eq-Operator 272 273	≥
+A5	Eq-Operator-Value T20 GTEQ
+T21	Eq-Comparison 272 281	≥ 4 weeks
+T22	Eq-Value 274 275	4
+T23	Eq-Temporal-Unit 276 281	weeks
+A6	Eq-Temporal-Unit-Value T23 week
+T24	Assertion 329 337	Possible
+T25	Condition-Name 364 380	Crohn 's Disease
+T26	Or 381 383	or
+T27	Or 440 442	or
+T28	Eq-Temporal-Period 450 455	prior
+A7	Eq-Temporal-Period-Value T28 past
+T29	Procedure 456 465	treatment
+T30	Condition-Name 470 472	UC
+T31	Drug-Name 530 542	cyclosporine
+T32	Drug-Name 545 556	tofacitinib
+T33	Drug-Name 559 580	mycophenolate mofetil
+T34	Drug-Name 583 592	sirolimus
+T35	Drug-Name 595 604	rapamycin
+T36	Drug-Name 609 620	thalidomide
+T37	Drug-Name 623 633	tacrolimus
+T38	Drug-Name 636 644	FK - 506
+T39	Drug-Name 652 661	biologics
+T40	Drug-Name 671 696	TNF - alpha - antagonists
+T41	Drug-Name 699 724	anti - integrin therapies
+T42	Drug 730 736	agents
+T43	Or 755 757	or
+T44	Eq-Temporal-Period 864 871	History
+A8	Eq-Temporal-Period-Value T44 past
+T45	Eq-Temporal-Period 875 880	prior
+A9	Eq-Temporal-Period-Value T45 past
+T46	Procedure-Name 881 902	surgical intervention
+T47	Eq-Temporal-Period 979 984	Prior
+A10	Eq-Temporal-Period-Value T47 past
+T48	Modifier 1002 1016	cardiovascular
+T49	Modifier 1019 1024	renal
+T50	Modifier 1027 1034	hepatic
+T51	Modifier 1037 1046	endocrine
+T52	Modifier 1049 1059	infectious
+T53	Modifier 1062 1075	hematological
+T54	Modifier 1078 1087	oncologic
+T55	Modifier 1090 1095	neuro
+T56	Modifier 1090 1109	neuro - psychiatric
+T57	Or 1110 1112	or
+T58	Modifier 1113 1130	immune - mediated
+T59	Condition-Name 1131 1139	disorder
+T60	Procedure 1281 1290	Treatment
+T61	Other 1300 1305	other
+T62	Study 1306 1321	investigational
+T63	Drug 1322 1327	drugs
+T64	Condition 1389 1398	condition
+T65	Or 1399 1401	or
+T66	Condition 1410 1419	situation
+T67	Severity 1498 1509	significant
+A11	Severity-Value T67 severe
+T68	Risk 1510 1514	risk
+T69	Assertion 1517 1520	may
+T70	Stability 1521 1529	confound
+A12	Stability-Value T70 change
+T71	Study 1534 1539	study
+T72	Unknown 223 232	treatment
+T73	Unknown 238 253	oral mesalamine
+R1	Using Arg1:T72 Arg2:T73
+T74	Unknown 1280 1280	
+T75	Unknown 1322 1327	drugs
+R2	Using Arg1:T74 Arg2:T75
+T76	Unknown 1281 1290	Treatment
+T77	Unknown 1322 1327	drugs
+R3	Using Arg1:T76 Arg2:T77

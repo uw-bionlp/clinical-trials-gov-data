@@ -1,0 +1,115 @@
+T3	Condition 389 427	genetic cancer susceptibility syndrome
+T4	Condition-Name 389 427	genetic cancer susceptibility syndrome
+E3	Condition:T3 Name:T4
+T5	Condition 556 594	genetic cancer susceptibility syndrome
+T6	Condition-Name 556 594	genetic cancer susceptibility syndrome
+E5	Condition:T5 Name:T6
+T7	Life-Stage-And-Gender 738 746	children
+A1	Life-Stage-And-Gender-Type T7 child
+T8	Life-Stage-And-Gender 794 800	adults
+A2	Life-Stage-And-Gender-Type T8 adult
+T13	Eq-Comparison 289 296	history
+E12	Eq-Comparison:T13 Temporal-Period:T14
+T14	Eq-Temporal-Period 289 296	history
+A3	Eq-Temporal-Period-Value T14 past
+T15	Procedure 81 99	genetic evaluation
+E2	Procedure:T15 Name:T16
+T16	Procedure-Name 81 99	genetic evaluation
+T17	Modifier 72 80	research
+E4	Modifier:T17 Modifies:T16
+T18	Or 65 71	and/or
+E6	Or:T18 Arg:E7 Arg2:E4
+T19	Modifier 56 64	clinical
+E7	Modifier:T19 Modifies:T16
+T2	Condition 129 153	germline genetic variant
+E8	Condition:T2 Name:T1 Severity:T25
+T1	Condition-Name 129 153	germline genetic variant
+R1	Found-By Arg1:E8 Arg2:E2	
+T20	Modifier 155 165	pathogenic
+E1	Modifier:T20 Modifies:T1
+T21	Modifier 174 184	pathogenic
+E13	Modifier:T21 Modifies:E8
+T22	Assertion 167 173	likely
+E14	Assertion:T22 Asserted:E13
+A4	Assertion-Type-Value E14 possible
+T23	Modifier 236 242	benign
+E15	Modifier:T23 Modifies:T1
+T24	Assertion 229 235	likely
+E16	Assertion:T24 Asserted:E15
+A5	Assertion-Type-Value E16 possible
+T25	Severity 215 227	significance
+T26	Condition 327 334	lesions
+E17	Condition:T26 Name:T27
+T27	Condition-Name 327 334	lesions
+T28	Modifier 300 309	malignant
+E18	Modifier:T28 Modifies:T27
+T29	Modifier 313 326	pre-malignant
+E19	Modifier:T29 Modifies:T27
+T30	Or 310 312	or
+E20	Or:T30 Arg:E18 Arg2:E19
+T31	Assertion 373 383	suggestive
+E21	Assertion:T31 Asserted:E3
+A6	Assertion-Type-Value E21 possible
+T11	Eq-Temporal-Recency 456 461	onset
+A7	Eq-Temporal-Recency-Value T11 first-time
+T32	Eq-Comparison 456 461	onset
+E10	Eq-Comparison:T32 Temporal-Recency:T11
+T33	Age 449 452	age
+E22	Age:T33 Eq-Comparison:E10
+T34	And 428 437	including
+E23	And:T34 Arg:E3 Arg2:E22
+T35	Modifier 443 448	early
+E24	Modifier:T35 Modifies:E22
+T36	Condition 480 492	malignancies
+E25	Condition:T36 Name:T37
+T37	Condition-Name 480 492	malignancies
+T38	Modifier 463 479	multiple primary
+E26	Modifier:T38 Modifies:T37
+T39	Condition 503 511	features
+E27	Condition:T39 
+T40	Other 497 502	other
+E28	Other:T40 Is-Other:E27
+T41	Or 494 496	or
+E29	Or:T41 Arg:E25 Arg2:E27
+T42	Or 513 519	and/or
+E30	Or:T42 Arg:E27 Arg2:E32
+T43	Assertion 540 550	suggestive
+E31	Assertion:T43 Asserted:E5
+A8	Assertion-Type-Value E31 possible
+T44	Family-Member 523 539	family histories
+E32	Family-Member:T44 Has:E5
+T45	Condition 650 660	malignancy
+E33	Condition:T45 Name:T46
+T46	Condition-Name 650 660	malignancy
+T47	Assertion 617 627	suggesting
+E34	Assertion:T47 Asserted:E33
+A9	Assertion-Type-Value E34 possible
+T48	Condition 608 616	features
+E35	Condition:T48 
+T49	Other 602 607	other
+E36	Other:T49 Is-Other:E35
+R2	Caused-By Arg1:E35 Arg2:E33	
+T50	Family-Member 691 705	Family members
+E37	Family-Member:T50 
+T12	Or 790 793	and
+E11	Or:T12 Arg:T7 Arg2:T8
+T51	Family-Member 1075 1089	family members
+E38	Family-Member:T51 Has:E9
+T9	Death 1066 1074	deceased
+E9	Death:T9 
+T10	Negation 1244 1252	excluded
+E39	Negation:T10 Negates:E40
+T52	Study 1263 1268	study
+E40	Study:T52 
+T53	Condition 1318 1328	conditions
+E41	Condition:T53 Name:T54
+T54	Condition-Name 1318 1328	conditions
+T55	Modifier 1306 1317	psychiatric
+E42	Modifier:T55 Modifies:T54
+T56	Modifier 1293 1302	cognitive
+E43	Modifier:T56 Modifies:T54
+T57	Modifier 1283 1291	physical
+E44	Modifier:T57 Modifies:T54
+T58	Or 1303 1305	or
+E45	Or:T58 Arg:E43 Arg2:E42
+R3	If-Then Arg1:E41 Arg2:E40	

@@ -1,0 +1,52 @@
+T1	Procedure 286 294	sedation
+T2	Procedure-Name 286 294	sedation
+E1	Procedure:T1 Name:T2
+T3	Condition 636 643	stomach
+T4	Condition-Name 636 643	stomach
+E3	Condition:T3 Name:T4
+T5	Procedure 828 845	bowel preparation
+T6	Procedure-Name 828 845	bowel preparation
+E5	Procedure:T5 Name:T6
+T7	Condition 941 961	acute diverticulitis
+T8	Condition-Name 941 961	acute diverticulitis
+E7	Condition:T7 Name:T8
+T9	Condition 973 980	colitis
+T10	Condition-Name 973 980	colitis
+E9	Condition:T9 Name:T10
+T11	Condition 1037 1063	inflammatory bowel disease
+T12	Condition-Name 1037 1063	inflammatory bowel disease
+E11	Condition:T11 Name:T12
+T13	Procedure 1202 1219	mucosal resection
+T14	Procedure-Name 1202 1219	mucosal resection
+E13	Procedure:T13 Name:T14
+T15	Procedure 1238 1247	procedure
+T16	Procedure-Name 1238 1247	procedure
+E15	Procedure:T15 Name:T16
+T17	Condition 1294 1301	growths
+T18	Condition-Name 1294 1301	growths
+E17	Condition:T17 Name:T18
+T19	Procedure 1221 1224	EMR
+T20	Procedure-Name 1221 1224	EMR
+E19	Procedure:T19 Name:T20
+T21	Eq-Operator 39 40	≥
+A1	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 441 442	<
+A2	Eq-Operator-Value T22 LT
+T23	Eq-Operator 1113 1114	>
+A3	Eq-Operator-Value T23 GT
+T24	Eq-Temporal-Unit 44 49	years
+A4	Eq-Temporal-Unit-Value T24 year
+T25	Eq-Temporal-Unit 446 451	years
+A5	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Unit 1117 1119	cm
+T27	Age 436 440	aged
+E20	Age:T27
+T28	Eq-Value 41 43	22
+T29	Eq-Value 443 445	22
+T30	Eq-Value 1115 1116	2
+T31	Eq-Comparison 39 49	≥ 22 years
+E21	Eq-Comparison:T31 Operator:T21 Temporal-Unit:T24 Value:T28
+T32	Eq-Comparison 441 451	< 22 years
+E22	Eq-Comparison:T32 Operator:T22 Temporal-Unit:T25 Value:T29
+T33	Eq-Comparison 1113 1119	> 2 cm
+E23	Eq-Comparison:T33 Operator:T23 Unit:T26 Value:T30

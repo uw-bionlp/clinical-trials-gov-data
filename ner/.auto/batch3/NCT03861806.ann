@@ -1,0 +1,47 @@
+T1	Condition 45 51	stroke
+T2	Condition-Name 45 51	stroke
+E1	Condition:T1 Name:T2
+T3	Condition 366 388	neurological disorders
+T4	Condition-Name 366 388	neurological disorders
+E3	Condition:T3 Name:T4
+T5	Condition 785 806	Peripheral neuropathy
+T6	Condition-Name 785 806	Peripheral neuropathy
+E5	Condition:T5 Name:T6
+T7	Procedure 390 403	brain surgery
+T8	Procedure-Name 390 403	brain surgery
+E7	Procedure:T7 Name:T8
+T9	Procedure 349 358	pacemaker
+T10	Procedure-Name 349 358	pacemaker
+E9	Procedure:T9 Name:T10
+T11	Condition 441 450	pregnancy
+T12	Condition-Name 441 450	pregnancy
+E11	Condition:T11 Name:T12
+T13	Condition 339 347	epilepsy
+T14	Condition-Name 339 347	epilepsy
+E13	Condition:T13 Name:T14
+T15	Procedure 411 418	implant
+T16	Procedure-Name 411 418	implant
+E15	Procedure:T15 Name:T16
+T17	Procedure 315 318	TMS
+T18	Procedure-Name 315 318	TMS
+E17	Procedure:T17 Name:T18
+T19	Eq-Operator 102 103	<
+A1	Eq-Operator-Value T19 LT
+T20	Eq-Operator 537 552	within the past
+A2	Eq-Operator-Value T20 GTEQ
+T21	Eq-Temporal-Unit 120 126	months
+A3	Eq-Temporal-Unit-Value T21 month
+T22	Eq-Temporal-Unit 238 243	years
+A4	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 555 561	months
+A5	Eq-Temporal-Unit-Value T23 month
+T24	Age 226 229	Age
+E18	Age:T24
+T25	Eq-Value 104 106	60
+T26	Eq-Value 118 119	6
+T27	Eq-Value 235 237	18
+T28	Eq-Value 553 554	2
+T29	Eq-Comparison 102 106	< 60
+E19	Eq-Comparison:T29 Operator:T19 Value:T25
+T30	Eq-Comparison 537 561	within the past 2 months
+E20	Eq-Comparison:T30 Operator:T20 Temporal-Unit:T23 Value:T28

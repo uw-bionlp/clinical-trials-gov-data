@@ -1,0 +1,235 @@
+T1	Condition 63 79	Cerebral infarct
+T2	Condition-Name 63 79	Cerebral infarct
+E1	Condition:T1 Name:T2
+T8	Procedure 536 550	recanalization
+T9	Procedure-Name 536 550	recanalization
+E8	Procedure:T8 Name:T9
+T10	Procedure 566 578	thrombectomy
+T11	Procedure-Name 566 578	thrombectomy
+E10	Procedure:T10 Name:T11
+T12	Condition 785 801	cerebral infarct
+T13	Condition-Name 785 801	cerebral infarct
+E12	Condition:T12 Name:T13 Temporality:E43
+T14	Condition 807 825	functional deficit
+T15	Condition-Name 807 825	functional deficit
+E14	Condition:T14 Name:T15
+T16	Condition 831 837	stroke
+T17	Condition-Name 831 837	stroke
+E16	Condition:T16 Name:T17
+T18	Condition 1074 1095	psychiatric disorders
+T19	Condition-Name 1074 1095	psychiatric disorders
+E18	Condition:T18 Name:T19 Stage:E54
+T20	Condition 1048 1056	dementia
+T21	Condition-Name 1048 1056	dementia
+E20	Condition:T20 Name:T21
+T24	Eq-Operator 212 218	within
+A2	Eq-Operator-Value T24 LTEQ
+T25	Eq-Operator 353 354	>
+A3	Eq-Operator-Value T25 GT
+T26	Eq-Operator 395 396	<
+A4	Eq-Operator-Value T26 LT
+T27	Eq-Operator 503 512	less than
+A5	Eq-Operator-Value T27 LT
+T28	Eq-Operator 628 634	within
+A6	Eq-Operator-Value T28 LTEQ
+T29	Eq-Operator 866 867	≥
+A7	Eq-Operator-Value T29 GTEQ
+T30	Eq-Temporal-Unit 48 53	years
+A8	Eq-Temporal-Unit-Value T30 year
+T31	Eq-Unit 407 410	mm2
+T32	Age 54 57	old
+E21	Age:T32 Eq-Comparison:E2
+T33	Eq-Operator 404 405	-
+A9	Eq-Operator-Value T33 BETWEEN
+T34	Eq-Value 45 47	18
+T35	Eq-Value 229 231	24
+T36	Eq-Value 354 355	6
+T37	Eq-Value 396 399	600
+T38	Eq-Value 402 404	10
+T39	Eq-Value 405 406	6
+T41	Eq-Value 461 463	15
+T42	Eq-Value 513 515	70
+T43	Eq-Value 557 561	2b-3
+T45	Eq-Value 645 648	4.5
+T46	Eq-Value 867 868	1
+T47	Eq-Value 1072 1073	1
+T48	Eq-Comparison 353 355	>6
+E22	Eq-Comparison:T48 Operator:T25 Value:T36 Temporal-Unit:T68
+T49	Eq-Comparison 395 399	<600
+E23	Eq-Comparison:T49 Operator:T26 Value:T37
+T50	Eq-Comparison 503 518	less than 70 mL
+E24	Eq-Comparison:T50 Operator:T27 Value:T42 Unit:T87
+T51	Eq-Comparison 860 868	score ≥1
+E25	Eq-Comparison:T51 Operator:T29 Value:T46 Unit:T106
+T52	Eq-Comparison 402 412	10-6 mm2/s
+E26	Eq-Comparison:T52 Operator:T33 Value:T38 Value2:T39 Temporal-Unit:T40 Unit:T31
+T53	Eq-Comparison 34 53	older than 18 years
+E2	Eq-Comparison:T53 Operator:T54 Temporal-Unit:T30 Value:T34
+T54	Eq-Operator 34 44	older than
+A10	Eq-Operator-Value T54 GT
+T3	Modifier 91 111	anterior circulation
+E3	Modifier:T3 Modifies:T2
+T4	Condition 119 159	occlusion of intracranial carotid artery
+E4	Condition:T4 Name:T5
+T5	Condition-Name 119 159	occlusion of intracranial carotid artery
+R1	Caused-By Arg1:E1 Arg2:E4	
+T6	Condition 177 180	MCA
+E5	Condition:T6 Name:T23 Stage:E7
+T23	Condition-Name 177 180	MCA
+T55	Modifier 163 171	proximal
+E6	Modifier:T55 Modifies:T23
+T56	Eq-Comparison 173 175	M1
+E7	Eq-Comparison:T56 Value:T57
+T57	Eq-Value 173 175	M1
+T7	Procedure 198 201	MRI
+E9	Procedure:T7 Name:T58 Temporality:E11
+T58	Procedure-Name 198 201	MRI
+T59	Severity 192 197	acute
+A1	Severity-Value T59 severe
+T60	Eq-Comparison 212 232	within the first 24h
+E11	Eq-Comparison:T60 Operator:T24 Temporal-Recency:T62 Temporal-Unit:T61 Value:T35
+T61	Eq-Temporal-Unit 231 232	h
+A11	Eq-Temporal-Unit-Value T61 hour
+T62	Eq-Temporal-Recency 223 228	first
+A12	Eq-Temporal-Recency-Value T62 first-time
+T63	Condition 257 265	penumbra
+E13	Condition:T63 Name:T64 Severity:T65
+T64	Condition-Name 257 265	penumbra
+T65	Severity 245 256	significant
+A13	Severity-Value T65 severe
+T66	And 233 236	and
+E15	And:T66 Arg:E9 Arg2:E13
+T67	Observation 349 353	Tmax
+E17	Observation:T67 Name:T69 Eq-Comparison:E22
+T68	Eq-Temporal-Unit 355 356	s
+A14	Eq-Temporal-Unit-Value T68 second
+T69	Observation-Name 349 353	Tmax
+T76	Observation 392 395	ADC
+E29	Observation:T76 Name:T77 Eq-Comparison:E23 Eq-Comparison2:E26
+T77	Observation-Name 392 395	ADC
+T78	And 358 361	and
+E30	And:T78 Arg:E19 Arg2:E28
+T40	Eq-Temporal-Unit 411 412	s
+A16	Eq-Temporal-Unit-Value T40 second
+T79	Eq-Comparison 417 428	1.8 or more
+E31	Eq-Comparison:T79 Value:T80 Operator:T81
+T80	Eq-Value 417 420	1.8
+T81	Eq-Operator 421 428	or more
+A17	Eq-Operator-Value T81 GTEQ
+T73	Observation 277 302	ratio between the volumes
+E27	Observation:T73 Name:T82 Eq-Comparison:E31
+T82	Observation-Name 277 302	ratio between the volumes
+T70	Modifier 317 336	hypoperfused tissue
+E19	Modifier:T70 Modifies:T82
+R2	Equivalent-To Arg1:E17 Arg2:E19	
+T71	Modifier 366 379	ischemic core
+E28	Modifier:T71 
+R3	Equivalent-To Arg1:E29 Arg2:E28	
+T72	Observation 438 457	absolute difference
+E32	Observation:T72 Name:T74 Eq-Comparison:E33
+T74	Observation-Name 438 457	absolute difference
+A15	Observation-Type-Value T74 measurement
+A18	Observation-Type-Value T82 measurement
+T75	Eq-Comparison 461 474	15 mL or more
+E33	Eq-Comparison:T75 Value:T41 Unit:T83 Operator:T84
+T83	Eq-Unit 464 466	mL
+T84	Eq-Operator 467 474	or more
+A19	Eq-Operator-Value T84 GTEQ
+T85	Observation 479 499	ischemic core volume
+E34	Observation:T85 Name:T86 Eq-Comparison:E24
+T86	Observation-Name 479 499	ischemic core volume
+A20	Observation-Type-Value T86 measurement
+T87	Eq-Unit 516 518	mL
+T88	And 475 478	and
+E35	And:T88 Arg:E32 Arg2:E34
+T89	Condition 552 556	TICI
+E36	Condition:T89 Name:T90 Stage:E37
+T90	Condition-Name 552 556	TICI
+T44	Eq-Comparison 557 561	2b-3
+E37	Eq-Comparison:T44 Value:T43
+R4	Equivalent-To Arg1:E36 Arg2:E8	
+R5	Using Arg1:E8 Arg2:E10	
+T91	Modifier 579 584	alone
+E38	Modifier:T91 
+T93	Or 585 587	or
+E40	Or:T93 Arg:E38 Arg2:E39
+T92	Procedure 611 623	thrombolysis
+E39	Procedure:T92 Name:T95
+T94	Modifier 608 610	IV
+E41	Modifier:T94 Modifies:T95
+T95	Procedure-Name 611 623	thrombolysis
+T96	Eq-Comparison 628 649	within the first 4.5h
+E42	Eq-Comparison:T96 Operator:T28 Temporal-Recency:T97 Value:T45 Temporal-Unit:T98
+T97	Eq-Temporal-Recency 639 644	first
+A21	Eq-Temporal-Recency-Value T97 first-time
+T98	Eq-Temporal-Unit 648 649	h
+A22	Eq-Temporal-Unit-Value T98 hour
+R6	If-Then Arg1:E42 Arg2:E39	
+T99	Eq-Comparison 762 769	History
+E43	Eq-Comparison:T99 Temporal-Period:T100
+T100	Eq-Temporal-Period 762 769	History
+A23	Eq-Temporal-Period-Value T100 past
+T101	Assertion 773 784	symptomatic
+E44	Assertion:T101 Asserted:E12
+A24	Assertion-Type-Value E44 possible
+T102	And 802 806	with
+E45	And:T102 Arg:E12 Arg2:E14
+T103	Temporal-Connection 827 830	pre
+E46	Temporal-Connection:T103 Arg:E47 Arg2:E16
+A25	Temporal-Connection-Type-Value E46 before
+T104	Observation 838 859	modified Rankin Scale
+E47	Observation:T104 Name:T105 Eq-Comparison:E25
+T105	Observation-Name 838 859	modified Rankin Scale
+T106	Eq-Unit 860 865	score
+R7	Equivalent-To Arg1:E47 Arg2:E14	
+T107	Condition 899 906	infarct
+E48	Condition:T107 Name:T108 Stability:T109
+T108	Condition-Name 899 906	infarct
+T109	Stability 885 891	impact
+A26	Stability-Value T109 change
+T110	Condition 911 934	selective neuronal loss
+E49	Condition:T110 Name:T111
+T111	Condition-Name 911 934	selective neuronal loss
+T112	And 907 910	and
+E50	And:T112 Arg:E48 Arg2:E49
+T113	Assertion 870 880	to measure
+E51	Assertion:T113 Asserted:E48
+A27	Assertion-Type-Value E51 hypothetical
+T114	Severity 1019 1025	severe
+A28	Severity-Value T114 severe
+T115	Condition 1026 1046	cognitive impairment
+E52	Condition:T115 Name:T116 Severity:T114 Temporality:E53
+T116	Condition-Name 1026 1046	cognitive impairment
+T117	Eq-Comparison 1008 1015	History
+E53	Eq-Comparison:T117 Temporal-Period:T118
+T118	Eq-Temporal-Period 1008 1015	History
+A29	Eq-Temporal-Period-Value T118 past
+R8	Equivalent-To Arg1:E20 Arg2:E52	
+T119	Eq-Comparison 1061 1073	DSMIV axis 1
+E54	Eq-Comparison:T119 Unit:T120 Value:T47
+T120	Eq-Unit 1061 1071	DSMIV axis
+T121	Procedure 1120 1144	neurological evaluations
+E55	Procedure:T121 Name:T122 Stability:T123
+T122	Procedure-Name 1120 1144	neurological evaluations
+T123	Stability 1107 1115	confound
+A30	Stability-Value T123 change
+R9	Caused-By Arg1:T123 Arg2:E18	
+T124	Assertion 1101 1106	would
+E56	Assertion:T124 Asserted:T123
+A31	Assertion-Type-Value E56 hypothetical
+T125	Condition 1151 1159	Pregnant
+E57	Condition:T125 Name:T126
+T126	Condition-Name 1151 1159	Pregnant
+T127	Condition 1163 1177	breast-feeding
+E58	Condition:T127 Name:T128
+T128	Condition-Name 1163 1177	breast-feeding
+T129	Or 1160 1162	or
+E59	Or:T129 Arg:E57 Arg2:E58
+T130	Life-Stage-And-Gender 1178 1183	women
+A32	Life-Stage-And-Gender-Type T130 female
+R10	If-Then Arg1:T130 Arg2:E58	
+T22	Procedure 1211 1214	MRI
+E60	Procedure:T22 Name:T131
+T131	Procedure-Name 1211 1214	MRI
+T132	Contraindication 1190 1207	Contraindications
+E61	Contraindication:T132 Contraindicates:E60

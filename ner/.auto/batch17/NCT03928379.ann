@@ -1,0 +1,88 @@
+T1	Condition 30 46	Type II diabetes
+T2	Condition-Name 30 46	Type II diabetes
+E1	Condition:T1 Name:T2
+T3	Observation 52 67	Body mass index
+T4	Observation-Name 52 67	Body mass index
+E3	Observation:T3 Name:T4
+A1	Observation-Type-Value T4 vital
+T5	Observation 69 72	BMI
+T6	Observation-Name 69 72	BMI
+E5	Observation:T5 Name:T6
+A2	Observation-Type-Value T6 vital
+T7	Condition 93 96	per
+T8	Condition-Name 93 96	per
+E7	Condition:T7 Name:T8
+T9	Condition 592 628	latent autoimmune diabetes in adults
+T10	Condition-Name 592 628	latent autoimmune diabetes in adults
+E9	Condition:T9 Name:T10
+T11	Condition 573 588	Type 1 diabetes
+T12	Condition-Name 573 588	Type 1 diabetes
+E11	Condition:T11 Name:T12
+T13	Condition 686 698	ketoacidosis
+T14	Condition-Name 686 698	ketoacidosis
+E13	Condition:T13 Name:T14
+T15	Condition 814 826	hypoglycemia
+T16	Condition-Name 814 826	hypoglycemia
+E15	Condition:T15 Name:T16
+T17	Condition 1220 1232	hypertension
+T18	Condition-Name 1220 1232	hypertension
+E17	Condition:T17 Name:T18
+T19	Condition 652 660	diabetes
+T20	Condition-Name 652 660	diabetes
+E19	Condition:T19 Name:T20
+T21	Condition 929 937	recovery
+T22	Condition-Name 929 937	recovery
+E21	Condition:T21 Name:T22
+T23	Procedure 997 1001	lead
+T24	Procedure-Name 997 1001	lead
+E23	Procedure:T23 Name:T24
+T25	Condition 1384 1387	per
+T26	Condition-Name 1384 1387	per
+E25	Condition:T25 Name:T26
+T27	Eq-Operator 156 157	<
+A3	Eq-Operator-Value T27 LT
+T28	Eq-Operator 212 218	within
+A4	Eq-Operator-Value T28 GTEQ
+T29	Eq-Operator 494 500	within
+A5	Eq-Operator-Value T29 GTEQ
+T30	Eq-Operator 939 945	within
+A6	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 1290 1296	within
+A7	Eq-Operator-Value T31 GTEQ
+T32	Eq-Operator 1368 1369	<
+A8	Eq-Operator-Value T32 LT
+T33	Eq-Temporal-Unit 753 759	months
+A9	Eq-Temporal-Unit-Value T33 month
+T34	Eq-Temporal-Unit 948 954	months
+A10	Eq-Temporal-Unit-Value T34 month
+T35	Eq-Temporal-Unit 1300 1304	days
+A11	Eq-Temporal-Unit-Value T35 day
+T36	Eq-Unit 83 92	kilograms
+T37	Eq-Unit 111 113	kg
+T38	Eq-Unit 161 170	kilograms
+T39	Eq-Unit 172 174	kg
+T40	Eq-Operator 79 80	-
+A12	Eq-Operator-Value T40 BETWEEN
+T41	Eq-Value 77 79	25
+T42	Eq-Value 80 82	40
+T43	Eq-Value 157 160	150
+T44	Eq-Value 540 541	2
+T45	Eq-Value 578 579	1
+T46	Eq-Value 751 752	6
+T47	Eq-Value 946 947	6
+T48	Eq-Value 970 971	1
+T49	Eq-Value 994 996	12
+T50	Eq-Value 1051 1052	2
+T51	Eq-Value 1297 1299	30
+T52	Eq-Value 1369 1371	45
+T53	Eq-Value 1399 1400	1
+T54	Eq-Comparison 156 170	<150 kilograms
+E26	Eq-Comparison:T54 Operator:T27 Unit:T38 Value:T43
+T55	Eq-Comparison 939 954	within 6 months
+E27	Eq-Comparison:T55 Operator:T30 Temporal-Unit:T34 Value:T47
+T56	Eq-Comparison 1290 1304	within 30 days
+E28	Eq-Comparison:T56 Operator:T31 Temporal-Unit:T35 Value:T51
+T57	Eq-Comparison 1368 1371	<45
+E29	Eq-Comparison:T57 Operator:T32 Value:T52
+T58	Eq-Comparison 77 80	25-
+E30	Eq-Comparison:T58 Operator:T40 Value:T41

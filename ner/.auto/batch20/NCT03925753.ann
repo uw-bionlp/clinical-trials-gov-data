@@ -1,0 +1,34 @@
+T1	Procedure 83 95	hemodialysis
+T2	Procedure-Name 83 95	hemodialysis
+E1	Procedure:T1 Name:T2
+T3	Condition 256 276	autoimmune disorders
+T4	Condition-Name 256 276	autoimmune disorders
+E3	Condition:T3 Name:T4
+T5	Condition 278 297	severe malnutrition
+T6	Condition-Name 278 297	severe malnutrition
+E5	Condition:T5 Name:T6
+T7	Condition 211 224	heart disease
+T8	Condition-Name 211 224	heart disease
+E7	Condition:T7 Name:T8
+T9	Condition 229 242	liver disease
+T10	Condition-Name 229 242	liver disease
+E9	Condition:T9 Name:T10
+T11	Condition 337 346	nutrition
+T12	Condition-Name 337 346	nutrition
+E11	Condition:T11 Name:T12
+T13	Condition 400 409	Pregnancy
+T14	Condition-Name 400 409	Pregnancy
+E13	Condition:T13 Name:T14
+T15	Eq-Temporal-Unit 55 60	years
+A1	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Temporal-Unit 107 113	months
+A2	Eq-Temporal-Unit-Value T16 month
+T17	Age 36 40	aged
+E14	Age:T17
+T18	Eq-Operator 51 52	-
+A3	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Value 49 51	20
+T20	Eq-Value 52 54	90
+T21	Eq-Value 105 106	3
+T22	Eq-Comparison 49 52	20-
+E15	Eq-Comparison:T22 Operator:T18 Value:T19

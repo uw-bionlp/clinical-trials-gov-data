@@ -1,0 +1,181 @@
+T1	Procedure 471 481	transplant
+T2	Procedure-Name 471 481	transplant
+E1	Procedure:T1 Name:T2
+T3	Condition 414 423	Pregnancy
+T4	Condition-Name 414 423	Pregnancy
+E3	Condition:T3 Name:T4
+T5	Condition 511 532	myocardial infarction
+T6	Condition-Name 511 532	myocardial infarction
+E5	Condition:T5 Name:T6 Temporality:E31
+T7	Condition 564 591	Advanced pulmonary fibrosis
+T8	Condition-Name 564 591	Advanced pulmonary fibrosis
+E7	Condition:T7 Name:T8
+T9	Condition 613 642	cardiopulmonary resuscitation
+T10	Condition-Name 613 642	cardiopulmonary resuscitation
+E9	Condition:T9 Name:T10
+T11	Procedure 852 864	life support
+T12	Procedure-Name 852 864	life support
+E11	Procedure:T11 Name:T12
+T13	Condition 935 951	immunodeficiency
+T14	Condition-Name 935 951	immunodeficiency
+E13	Condition:T13 Name:T14
+T15	Condition 1021 1039	infectious factors
+T16	Condition-Name 1021 1039	infectious factors
+E15	Condition:T15 Name:T16
+T19	Condition 1092 1097	brain
+T20	Condition-Name 1092 1097	brain
+E19	Condition:T19 Name:T20
+T23	Condition 1261 1283	intestinal obstruction
+T24	Condition-Name 1261 1283	intestinal obstruction
+E23	Condition:T23 Name:T24
+T25	Eq-Operator 290 291	≥
+A1	Eq-Operator-Value T25 GTEQ
+T26	Eq-Operator 312 313	≤
+A2	Eq-Operator-Value T26 LTEQ
+T27	Eq-Operator 345 346	≥
+A3	Eq-Operator-Value T27 GTEQ
+T28	Eq-Operator 533 539	within
+A4	Eq-Operator-Value T28 LTEQ
+T29	Eq-Temporal-Unit 294 299	years
+A5	Eq-Temporal-Unit-Value T29 year
+T30	Eq-Temporal-Unit 315 320	years
+A6	Eq-Temporal-Unit-Value T30 year
+T31	Eq-Temporal-Unit 385 390	years
+A7	Eq-Temporal-Unit-Value T31 year
+T32	Eq-Temporal-Unit 402 407	years
+A8	Eq-Temporal-Unit-Value T32 year
+T33	Eq-Temporal-Unit 551 557	months
+A9	Eq-Temporal-Unit-Value T33 month
+T36	Age 286 289	Age
+E24	Age:T36 Eq-Comparison:E28
+T38	Age 308 311	age
+E26	Age:T38 Eq-Comparison:E29
+T41	Eq-Value 291 293	18
+T42	Eq-Value 313 315	80
+T43	Eq-Value 346 347	2
+T44	Eq-Value 549 550	3
+T45	Eq-Comparison 290 299	≥18 years
+E28	Eq-Comparison:T45 Operator:T25 Temporal-Unit:T29 Value:T41
+T46	Eq-Comparison 312 315	≤80
+E29	Eq-Comparison:T46 Operator:T26 Value:T42
+T47	Eq-Comparison 345 352	≥2ng/ml
+E30	Eq-Comparison:T47 Operator:T27 Value:T43 Unit:T51 Per:T52
+T48	Eq-Comparison 533 557	within the past 3 months
+E31	Eq-Comparison:T48 Operator:T28 Temporal-Unit:T33 Value:T44 Temporal-Period:T102
+T49	Condition 153 159	sepsis
+E2	Condition:T49 Name:T50 Stage:E55
+T50	Condition-Name 153 159	sepsis
+T37	And 304 307	and
+E4	And:T37 Arg:E24 Arg2:E26
+T39	Observation 331 344	Procalcitonin
+E6	Observation:T39 Name:T40 Eq-Comparison:E30
+T40	Observation-Name 331 344	Procalcitonin
+A10	Observation-Type-Value T40 lab
+T51	Eq-Unit 347 349	ng
+T52	Eq-Unit 350 352	ml
+T53	Age 378 381	Age
+E8	Age:T53 Eq-Comparison:E10
+T54	Eq-Comparison 381 390	＜18 years
+E10	Eq-Comparison:T54 Temporal-Unit:T31 Value:T56 Operator:T55
+T55	Eq-Operator 381 382	＜
+A11	Eq-Operator-Value T55 LT
+T56	Eq-Value 382 384	18
+T57	Age 395 398	age
+E12	Age:T57 Eq-Comparison:E14
+T58	Eq-Comparison 398 407	＞80 years
+E14	Eq-Comparison:T58 Temporal-Unit:T32 Value:T60 Operator:T59
+T59	Eq-Operator 398 399	＞
+A12	Eq-Operator-Value T59 GT
+T60	Eq-Value 399 401	80
+T61	Or 392 394	or
+E16	Or:T61 Arg:E8 Arg2:E12
+T62	Condition 427 436	lactating
+E18	Condition:T62 Name:T63
+T63	Condition-Name 427 436	lactating
+T64	Or 424 426	or
+E20	Or:T64 Arg:E3 Arg2:E18
+T65	Modifier 444 455	solid-organ
+E22	Modifier:T65 Modifies:T2
+T66	Modifier 459 470	bone marrow
+E25	Modifier:T66 Modifies:T2
+T67	Or 456 458	or
+E27	Or:T67 Arg:E22 Arg2:E25
+T68	Study 650 660	enrollment
+E32	Study:T68 
+T69	Temporal-Connection 643 649	before
+E33	Temporal-Connection:T69 Arg:E9 Arg2:E32
+A13	Temporal-Connection-Type-Value E33 before
+T70	Condition 667 670	HIV
+E34	Condition:T70 Name:T71 Polarity:T72
+T71	Condition-Name 667 670	HIV
+T72	Polarity 671 679	positive
+A14	Polarity-Value T72 positive
+T73	Condition 695 716	granulocyte-deficient
+E35	Condition:T73 Name:T74
+T74	Condition-Name 695 716	granulocyte-deficient
+T75	Modifier 770 779	remission
+E36	Modifier:T75 Modifies:E38
+T76	Modifier 732 737	blood
+E37	Modifier:T76 Modifies:T78
+T77	Condition 755 761	tumors
+E38	Condition:T77 Name:T78
+T78	Condition-Name 755 761	tumors
+T79	Modifier 738 754	lymphatic system
+E39	Modifier:T79 Modifies:T78
+T80	Or 737 738	/
+E40	Or:T80 Arg:E37 Arg2:E39
+T81	Negation 766 769	not
+E41	Negation:T81 Negates:E36
+T82	Observation 800 812	limited care
+E42	Observation:T82 Name:T83
+T83	Observation-Name 800 812	limited care
+T84	Assertion 822 835	commitment to
+E43	Assertion:T84 Asserted:E54
+A15	Assertion-Type-Value E43 hypothetical
+T85	Drug-Name 903 926	immunosuppressive drugs
+T86	Drug 903 926	immunosuppressive drugs
+E44	Drug:T86 Name:T85
+T87	Or 927 929	or
+E45	Or:T87 Arg:E44 Arg2:E13
+T88	Condition 972 987	advanced tumors
+E46	Condition:T88 Name:T89
+T89	Condition-Name 972 987	advanced tumors
+T90	Negation 1017 1020	non
+E47	Negation:T90 Negates:E15
+T17	Death 1055 1060	death
+E17	Death:T17 
+T18	Assertion 1040 1050	leading to
+E48	Assertion:T18 Asserted:E17
+A16	Assertion-Type-Value E48 hypothetical
+R2	Caused-By Arg1:E17 Arg2:E15	
+T91	Condition 1061 1090	uncontrollable major bleeding
+E49	Condition:T91 Name:T92
+T92	Condition-Name 1061 1090	uncontrollable major bleeding
+T93	Condition 1098 1104	hernia
+E50	Condition:T93 Name:T94
+T94	Condition-Name 1098 1104	hernia
+R3	Example-Of Arg1:E49 Arg2:E15	
+R4	Example-Of Arg1:E19 Arg2:E15	
+R5	Example-Of Arg1:E50 Arg2:E15	
+T95	Condition 1140 1149	infection
+E51	Condition:T95 Name:T96 Temporality:E52
+T96	Condition-Name 1140 1149	infection
+T97	Eq-Comparison 1129 1139	unresolved
+E52	Eq-Comparison:T97 Temporal-Period:T98
+T98	Eq-Temporal-Period 1129 1139	unresolved
+A17	Eq-Temporal-Period-Value T98 present
+T99	Condition 1171 1196	intraperitoneal infection
+E53	Condition:T99 Name:T100
+T100	Condition-Name 1171 1196	intraperitoneal infection
+R6	Example-Of Arg1:E53 Arg2:E51	
+T21	Allergy 1217 1225	allergic
+E21	Allergy:T21 Name:T22
+T22	Allergy-Name 1229 1240	granisetron
+T101	Negation 814 821	lack of
+E54	Negation:T101 Negates:E11
+R1	Equivalent-To Arg1:E54 Arg2:E42	
+T34	Eq-Comparison 160 161	3
+E55	Eq-Comparison:T34 Value:T35
+T35	Eq-Value 160 161	3
+T102	Eq-Temporal-Period 544 548	past
+A18	Eq-Temporal-Period-Value T102 past

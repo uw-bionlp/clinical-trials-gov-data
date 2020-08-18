@@ -1,0 +1,117 @@
+T1	Condition 140 154	blood pressure
+T2	Condition-Name 140 154	blood pressure
+E1	Condition:T1 Name:T2
+T3	Condition 356 383	acute myocardial infarction
+T4	Condition-Name 356 383	acute myocardial infarction
+E3	Condition:T3 Name:T4
+T5	Condition 441 466	transient ischemic attack
+T6	Condition-Name 441 466	transient ischemic attack
+E5	Condition:T5 Name:T6
+T7	Condition 783 806	coronary artery disease
+T8	Condition-Name 783 806	coronary artery disease
+E7	Condition:T7 Name:T8
+T9	Procedure 556 573	revascularization
+T10	Procedure-Name 556 573	revascularization
+E9	Procedure:T9 Name:T10
+T11	Condition 337 352	unstable angina
+T12	Condition-Name 337 352	unstable angina
+E11	Condition:T11 Name:T12
+T13	Condition 810 823	heart failure
+T14	Condition-Name 810 823	heart failure
+E13	Condition:T13 Name:T14
+T15	Condition 425 437	Acute stroke
+T16	Condition-Name 425 437	Acute stroke
+E15	Condition:T15 Name:T16
+T17	Condition 915 927	reproductive
+T18	Condition-Name 915 927	reproductive
+E17	Condition:T17 Name:T18
+T19	Condition 889 898	Pregnancy
+T20	Condition-Name 889 898	Pregnancy
+E19	Condition:T19 Name:T20
+T21	Condition 468 471	TIA
+T22	Condition-Name 468 471	TIA
+E21	Condition:T21 Name:T22
+T23	Condition 646 649	FMD
+T24	Condition-Name 646 649	FMD
+E23	Condition:T23 Name:T24
+T25	Condition 1140 1143	sex
+T26	Condition-Name 1140 1143	sex
+E25	Condition:T25 Name:T26
+T27	Eq-Operator 168 169	≤
+A1	Eq-Operator-Value T27 LTEQ
+T28	Eq-Operator 287 288	>
+A2	Eq-Operator-Value T28 GT
+T29	Eq-Operator 384 390	within
+A3	Eq-Operator-Value T29 GTEQ
+T30	Eq-Operator 473 479	within
+A4	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 514 523	Less than
+A5	Eq-Operator-Value T31 LT
+T32	Eq-Operator 583 584	≥
+A6	Eq-Operator-Value T32 GTEQ
+T33	Eq-Operator 650 651	<
+A7	Eq-Operator-Value T33 LT
+T34	Eq-Operator 657 658	>
+A8	Eq-Operator-Value T34 GT
+T35	Eq-Operator 712 713	>
+A9	Eq-Operator-Value T35 GT
+T36	Eq-Operator 872 873	≥
+A10	Eq-Operator-Value T36 GTEQ
+T37	Eq-Operator 972 981	less than
+A11	Eq-Operator-Value T37 LT
+T38	Eq-Operator 1072 1081	less than
+A12	Eq-Operator-Value T38 LT
+T39	Eq-Temporal-Unit 48 53	years
+A13	Eq-Temporal-Unit-Value T39 year
+T40	Eq-Temporal-Unit 393 399	months
+A14	Eq-Temporal-Unit-Value T40 month
+T41	Eq-Temporal-Unit 482 488	months
+A15	Eq-Temporal-Unit-Value T41 month
+T42	Eq-Temporal-Unit 528 534	months
+A16	Eq-Temporal-Unit-Value T42 month
+T43	Eq-Temporal-Unit 986 992	months
+A17	Eq-Temporal-Unit-Value T43 month
+T44	Eq-Temporal-Unit 1086 1092	months
+A18	Eq-Temporal-Unit-Value T44 month
+T45	Eq-Temporal-Unit 1144 1150	months
+A19	Eq-Temporal-Unit-Value T45 month
+T46	Eq-Unit 174 176	mm
+T47	Eq-Operator 99 101	to
+A20	Eq-Operator-Value T47 BETWEEN
+T48	Eq-Value 38 40	40
+T49	Eq-Value 45 47	70
+T50	Eq-Value 97 98	7
+T51	Eq-Value 102 103	9
+T52	Eq-Value 170 173	140
+T53	Eq-Value 238 240	70
+T54	Eq-Value 245 248	100
+T55	Eq-Value 289 290	9
+T56	Eq-Value 391 392	6
+T57	Eq-Value 480 481	6
+T58	Eq-Value 585 588	140
+T59	Eq-Value 591 593	90
+T60	Eq-Value 651 652	2
+T61	Eq-Value 659 661	10
+T62	Eq-Value 714 717	500
+T63	Eq-Value 874 875	5
+T64	Eq-Value 1125 1126	1
+T65	Eq-Comparison 168 176	≤ 140 mm
+E26	Eq-Comparison:T65 Operator:T27 Unit:T46 Value:T52
+T66	Eq-Comparison 287 290	> 9
+E27	Eq-Comparison:T66 Operator:T28 Value:T55
+T67	Eq-Comparison 384 399	within 6 months
+E28	Eq-Comparison:T67 Operator:T29 Temporal-Unit:T40 Value:T56
+T68	Eq-Comparison 473 488	within 6 months
+E29	Eq-Comparison:T68 Operator:T30 Temporal-Unit:T41 Value:T57
+T69	Eq-Comparison 583 588	≥ 140
+E30	Eq-Comparison:T69 Operator:T32 Value:T58
+T70	Eq-Comparison 650 652	<2
+E31	Eq-Comparison:T70 Operator:T33 Value:T60
+T71	Eq-Comparison 657 661	> 10
+E32	Eq-Comparison:T71 Operator:T34 Value:T61
+T72	Eq-Comparison 712 717	> 500
+E33	Eq-Comparison:T72 Operator:T35 Value:T62
+T73	Eq-Comparison 872 875	≥ 5
+E34	Eq-Comparison:T73 Operator:T36 Value:T63
+T74	Eq-Comparison 97 101	7 to
+E35	Eq-Comparison:T74 Operator:T47 Value:T50

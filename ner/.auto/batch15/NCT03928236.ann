@@ -1,0 +1,51 @@
+T1	Procedure 92 107	cardiac surgery
+T2	Procedure-Name 92 107	cardiac surgery
+E1	Procedure:T1 Name:T2
+T3	Procedure 45 53	surgical
+T4	Procedure-Name 45 53	surgical
+E3	Procedure:T3 Name:T4
+T5	Procedure 231 249	cardiac anesthesia
+T6	Procedure-Name 231 249	cardiac anesthesia
+E5	Procedure:T5 Name:T6
+T7	Life-Stage-And-Gender 273 278	adult
+A1	Life-Stage-And-Gender-Type T7 adult
+T8	Condition 307 310	per
+T9	Condition-Name 307 310	per
+E8	Condition:T8 Name:T9
+T10	Condition 442 464	postoperative delirium
+T11	Condition-Name 442 464	postoperative delirium
+E10	Condition:T10 Name:T11
+T12	Procedure 528 543	cardiac surgery
+T13	Procedure-Name 528 543	cardiac surgery
+E12	Procedure:T12 Name:T13
+T14	Condition 596 605	Confusion
+T15	Condition-Name 596 605	Confusion
+E14	Condition:T14 Name:T15
+T16	Condition 660 668	Delirium
+T17	Condition-Name 660 668	Delirium
+E16	Condition:T16 Name:T17
+T18	Procedure 629 632	CAM
+T19	Procedure-Name 629 632	CAM
+E18	Procedure:T18 Name:T19
+T20	Eq-Operator 213 214	≥
+A2	Eq-Operator-Value T20 GTEQ
+T21	Eq-Operator 293 294	>
+A3	Eq-Operator-Value T21 GT
+T22	Eq-Operator 427 428	>
+A4	Eq-Operator-Value T22 GT
+T23	Eq-Temporal-Unit 297 302	years
+A5	Eq-Temporal-Unit-Value T23 year
+T24	Eq-Temporal-Unit 431 436	years
+A6	Eq-Temporal-Unit-Value T24 year
+T25	Eq-Value 79 82	500
+T26	Eq-Value 215 217	95
+T27	Eq-Value 294 296	18
+T28	Eq-Value 428 430	18
+T29	Eq-Value 485 487	12
+T30	Eq-Value 513 515	72
+T31	Eq-Comparison 213 217	≥ 95
+E19	Eq-Comparison:T31 Operator:T20 Value:T26
+T32	Eq-Comparison 293 302	>18 years
+E20	Eq-Comparison:T32 Operator:T21 Temporal-Unit:T23 Value:T27
+T33	Eq-Comparison 427 436	>18 years
+E21	Eq-Comparison:T33 Operator:T22 Temporal-Unit:T24 Value:T28

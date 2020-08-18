@@ -1,0 +1,23 @@
+T1	Eq-Temporal-Unit 166 171	years
+A1	Eq-Temporal-Unit-Value T1 year
+T2	Eq-Value 163 165	18
+T3	Age 158 161	Age
+E1	Age:T3 Eq-Comparison:E2
+T4	Eq-Comparison 163 179	18 years or over
+E2	Eq-Comparison:T4 Value:T2 Temporal-Unit:T1 Operator:T5
+T5	Eq-Operator 172 179	or over
+A2	Eq-Operator-Value T5 GTEQ
+T6	Location 206 216	Sherbrooke
+A3	Location-Value T6 residence
+T7	Location 218 225	Moncton
+A4	Location-Value T7 residence
+T8	Location 229 249	Saguenay-Lac-St-Jean
+A5	Location-Value T8 residence
+T9	Or 226 228	or
+E3	Or:T9 Arg:T7 Arg2:T8
+T10	Eq-Comparison 53 61	previous
+E4	Eq-Comparison:T10 Temporal-Period:T11
+T11	Eq-Temporal-Period 53 61	previous
+A6	Eq-Temporal-Period-Value T11 past
+T12	Study 145 150	study
+E5	Study:T12 

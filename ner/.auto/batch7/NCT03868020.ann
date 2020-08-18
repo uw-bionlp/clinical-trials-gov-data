@@ -1,0 +1,32 @@
+T1	Condition 479 496	renal dysfunction
+T2	Condition-Name 479 496	renal dysfunction
+E1	Condition:T1 Name:T2
+T3	Condition 180 193	oropharyngeal
+T4	Condition-Name 180 193	oropharyngeal
+E3	Condition:T3 Name:T4
+T5	Condition 324 337	oropharyngeal
+T6	Condition-Name 324 337	oropharyngeal
+E5	Condition:T5 Name:T6
+T7	Condition 498 508	glomerular
+T8	Condition-Name 498 508	glomerular
+E7	Condition:T7 Name:T8
+T9	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T9 adult
+T10	Eq-Operator 524 530	within
+A2	Eq-Operator-Value T10 GTEQ
+T11	Eq-Operator 540 549	less than
+A3	Eq-Operator-Value T11 LT
+T12	Eq-Operator 621 626	up to
+A4	Eq-Operator-Value T12 LTEQ
+T13	Eq-Temporal-Unit 534 538	days
+A5	Eq-Temporal-Unit-Value T13 day
+T14	Eq-Value 240 242	18
+T15	Eq-Value 531 533	30
+T16	Eq-Value 550 552	30
+T17	Eq-Value 627 628	1
+T18	Eq-Comparison 524 538	within 30 days
+E8	Eq-Comparison:T18 Operator:T10 Temporal-Unit:T13 Value:T15
+T19	Eq-Comparison 540 552	less than 30
+E9	Eq-Comparison:T19 Operator:T11 Value:T16
+T20	Eq-Comparison 621 628	up to 1
+E10	Eq-Comparison:T20 Operator:T12 Value:T17

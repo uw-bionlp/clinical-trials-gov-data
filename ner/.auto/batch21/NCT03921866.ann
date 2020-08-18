@@ -1,0 +1,17 @@
+T1	Eq-Operator 243 244	≥
+A1	Eq-Operator-Value T1 GTEQ
+T2	Eq-Operator 497 498	≥
+A2	Eq-Operator-Value T2 GTEQ
+T3	Eq-Temporal-Unit 501 506	years
+A3	Eq-Temporal-Unit-Value T3 year
+T4	Age 492 496	aged
+E1	Age:T4
+T5	Age 507 510	old
+E2	Age:T5
+T6	Eq-Value 187 188	1
+T7	Eq-Value 244 245	1
+T8	Eq-Value 498 500	18
+T9	Eq-Comparison 243 245	≥1
+E3	Eq-Comparison:T9 Operator:T1 Value:T7
+T10	Eq-Comparison 497 506	≥18 years
+E4	Eq-Comparison:T10 Operator:T2 Temporal-Unit:T3 Value:T8

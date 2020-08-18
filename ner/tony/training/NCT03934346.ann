@@ -1,0 +1,76 @@
+T1	Observation 53 68	Body mass index
+T2	Observation-Name 53 68	Body mass index
+E1	Observation:T1 Name:T2
+A1	Observation-Type-Value T2 vital
+T3	Condition 226 240	acute diseases
+T4	Condition-Name 226 240	acute diseases
+E3	Condition:T3 Name:T4
+T5	Condition 269 282	alcohol abuse
+T6	Condition-Name 269 282	alcohol abuse
+E5	Condition:T5 Name:T6
+T7	Condition 318 329	consumption
+T8	Condition-Name 318 329	consumption
+E7	Condition:T7 Name:T8
+T9	Life-Stage-And-Gender 44 47	men
+T10	Eq-Unit 87 92	kg/m2
+T11	Eq-Value 77 79	18
+T12	Eq-Value 84 86	30
+T13	Eq-Value 156 157	2
+A2	Life-Stage-And-Gender-Type T9 adult
+T14	Life-Stage-And-Gender 44 47	men
+A3	Life-Stage-And-Gender-Type T14 male
+T15	Condition 36 43	healthy
+E2	Condition:T15 Name:T16
+T16	Condition-Name 36 43	healthy
+T17	Eq-Comparison 69 92	between 18 and 30 kg/m2
+E4	Eq-Comparison:T17 Operator:T18 Value:T11 Value2:T12 Unit:T10
+T18	Eq-Operator 69 76	between
+A4	Eq-Operator-Value T18 BETWEEN
+T19	Study 144 149	study
+E6	Study:T19 
+T20	Temporal-Connection 156 169	2 week period
+E8	Temporal-Connection:T20 
+A5	Temporal-Connection-Type-Value E8 during
+T21	Eq-Comparison 156 162	2 week
+E9	Eq-Comparison:T21 Value:T13
+T22	Negation 170 179	Exclusion
+E10	Negation:T22 
+T23	Stability 215 222	chronic
+A6	Stability-Value T23 stable
+T24	Or 223 225	or
+E11	Or:T24 Arg:T23 Arg2:E3
+T25	Allergy 242 256	food allergies
+E12	Allergy:T25 Name:T26
+T26	Allergy-Name 242 256	food allergies
+T27	Condition 258 265	smoking
+E13	Condition:T27 Name:T28
+T28	Condition-Name 258 265	smoking
+T29	Or 266 268	or
+E14	Or:T29 Arg:E13 Arg2:E5
+T30	Condition 288 308	Use of illicit drugs
+E15	Condition:T30 Name:T31
+T31	Condition-Name 288 308	Use of illicit drugs
+T32	Drug 333 344	medications
+E16	Drug:T32 Name:T33
+T33	Drug-Name 333 344	medications
+T34	Drug 346 371	micronutrient supplements
+E17	Drug:T34 Name:T35
+T35	Drug-Name 346 371	micronutrient supplements
+T36	Condition-Name 386 397	Vegetarians
+T37	Condition 386 397	Vegetarians
+E18	Condition:T37 Name:T36
+T38	Condition 408 426	unable to eat meat
+E19	Condition:T38 Name:T39
+T39	Condition-Name 408 426	unable to eat meat
+T40	Negation 437 445	excluded
+E20	Negation:T40 
+T41	Study 470 475	study
+E21	Study:T41 
+T42	Drug 524 535	medications
+E22	Drug:T42 Name:T43
+T43	Drug-Name 524 535	medications
+T44	Temporal-Connection 536 542	during
+E23	Temporal-Connection:T44 Arg:E24 Arg2:E22
+A7	Temporal-Connection-Type-Value E23 during
+T45	Study 547 559	study period
+E24	Study:T45 

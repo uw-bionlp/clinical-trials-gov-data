@@ -1,0 +1,115 @@
+T1	Condition 72 78	asthma
+T2	Condition-Name 72 78	asthma
+E1	Condition:T1 Name:T2
+T3	Condition 211 214	ICS
+T4	Condition-Name 211 214	ICS
+E3	Condition:T3 Name:T4
+T5	Condition 318 321	ICS
+T6	Condition-Name 318 321	ICS
+E5	Condition:T5 Name:T6
+T7	Condition 476 482	asthma
+T8	Condition-Name 476 482	asthma
+E7	Condition:T7 Name:T8
+T9	Condition 666 672	asthma
+T10	Condition-Name 666 672	asthma
+E9	Condition:T9 Name:T10
+T11	Condition 1147 1164	Pulmonary disease
+T12	Condition-Name 1147 1164	Pulmonary disease
+E11	Condition:T11 Name:T12
+T13	Condition 1176 1182	asthma
+T14	Condition-Name 1176 1182	asthma
+E13	Condition:T13 Name:T14
+T15	Condition 1054 1057	ICS
+T16	Condition-Name 1054 1057	ICS
+E15	Condition:T15 Name:T16
+T17	Condition 1352 1373	alcohol or drug abuse
+T18	Condition-Name 1352 1373	alcohol or drug abuse
+E17	Condition:T17 Name:T18
+T19	Condition 1437 1450	breastfeeding
+T20	Condition-Name 1437 1450	breastfeeding
+E19	Condition:T19 Name:T20
+T21	Condition 1397 1408	Hepatitis B
+T22	Condition-Name 1397 1408	Hepatitis B
+E21	Condition:T21 Name:T22
+T23	Procedure 1494 1510	biologic therapy
+T24	Procedure-Name 1494 1510	biologic therapy
+E23	Procedure:T23 Name:T24
+T25	Eq-Operator 323 324	≥
+A1	Eq-Operator-Value T25 GTEQ
+T26	Eq-Operator 627 628	<
+A2	Eq-Operator-Value T26 LT
+T27	Eq-Operator 742 743	≥
+A3	Eq-Operator-Value T27 GTEQ
+T28	Eq-Operator 751 752	≥
+A4	Eq-Operator-Value T28 GTEQ
+T29	Eq-Operator 841 842	≥
+A5	Eq-Operator-Value T29 GTEQ
+T30	Eq-Operator 850 851	≥
+A6	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 941 947	within
+A7	Eq-Operator-Value T31 GTEQ
+T32	Eq-Operator 1076 1077	≥
+A8	Eq-Operator-Value T32 GTEQ
+T33	Eq-Operator 1314 1315	≥
+A9	Eq-Operator-Value T33 GTEQ
+T34	Eq-Operator 1374 1380	within
+A10	Eq-Operator-Value T34 GTEQ
+T35	Eq-Temporal-Unit 95 101	months
+A11	Eq-Temporal-Unit-Value T35 month
+T36	Eq-Temporal-Unit 230 236	months
+A12	Eq-Temporal-Unit-Value T36 month
+T37	Eq-Temporal-Unit 427 433	months
+A13	Eq-Temporal-Unit-Value T37 month
+T38	Eq-Temporal-Unit 594 600	months
+A14	Eq-Temporal-Unit-Value T38 month
+T39	Eq-Temporal-Unit 778 784	months
+A15	Eq-Temporal-Unit-Value T39 month
+T40	Eq-Temporal-Unit 951 957	months
+A16	Eq-Temporal-Unit-Value T40 month
+T41	Eq-Temporal-Unit 1384 1390	months
+A17	Eq-Temporal-Unit-Value T41 month
+T42	Age 25 28	Age
+E24	Age:T42
+T43	Eq-Operator 32 33	-
+A18	Eq-Operator-Value T43 BETWEEN
+T44	Eq-Value 30 32	18
+T45	Eq-Value 33 35	80
+T46	Eq-Value 92 94	12
+T47	Eq-Value 228 229	6
+T48	Eq-Value 325 328	500
+T49	Eq-Value 425 426	3
+T50	Eq-Value 592 593	3
+T51	Eq-Value 628 630	80
+T52	Eq-Value 743 745	12
+T53	Eq-Value 752 755	200
+T54	Eq-Value 775 777	12
+T55	Eq-Value 842 844	12
+T56	Eq-Value 851 854	200
+T57	Eq-Value 912 913	2
+T58	Eq-Value 948 950	12
+T59	Eq-Value 1068 1069	6
+T60	Eq-Value 1077 1078	1
+T61	Eq-Value 1315 1317	10
+T62	Eq-Value 1381 1383	12
+T63	Eq-Comparison 323 328	≥ 500
+E25	Eq-Comparison:T63 Operator:T25 Value:T48
+T64	Eq-Comparison 627 630	<80
+E26	Eq-Comparison:T64 Operator:T26 Value:T51
+T65	Eq-Comparison 742 745	≥12
+E27	Eq-Comparison:T65 Operator:T27 Value:T52
+T66	Eq-Comparison 751 755	≥200
+E28	Eq-Comparison:T66 Operator:T28 Value:T53
+T67	Eq-Comparison 841 844	≥12
+E29	Eq-Comparison:T67 Operator:T29 Value:T55
+T68	Eq-Comparison 850 854	≥200
+E30	Eq-Comparison:T68 Operator:T30 Value:T56
+T69	Eq-Comparison 941 957	within 12 months
+E31	Eq-Comparison:T69 Operator:T31 Temporal-Unit:T40 Value:T58
+T70	Eq-Comparison 1076 1078	≥1
+E32	Eq-Comparison:T70 Operator:T32 Value:T60
+T71	Eq-Comparison 1314 1317	≥10
+E33	Eq-Comparison:T71 Operator:T33 Value:T61
+T72	Eq-Comparison 1374 1390	within 12 months
+E34	Eq-Comparison:T72 Operator:T34 Temporal-Unit:T41 Value:T62
+T73	Eq-Comparison 30 33	18-
+E35	Eq-Comparison:T73 Operator:T43 Value:T44

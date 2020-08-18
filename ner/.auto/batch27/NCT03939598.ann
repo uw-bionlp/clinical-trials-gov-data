@@ -1,0 +1,24 @@
+T1	Procedure 384 395	enlargement
+T2	Procedure-Name 384 395	enlargement
+E1	Procedure:T1 Name:T2
+T3	Condition 802 818	terminal disease
+T4	Condition-Name 802 818	terminal disease
+E3	Condition:T3 Name:T4
+T5	Condition 824 837	renal failure
+T6	Condition-Name 824 837	renal failure
+E5	Condition:T5 Name:T6
+T7	Procedure 1180 1189	procedure
+T8	Procedure-Name 1180 1189	procedure
+E7	Procedure:T7 Name:T8
+T9	Language 1471 1474	Men
+T10	Eq-Operator 397 398	>
+A1	Eq-Operator-Value T10 GT
+T11	Eq-Unit 400 402	mm
+T12	Eq-Operator 556 557	-
+A2	Eq-Operator-Value T12 BETWEEN
+T13	Eq-Value 398 399	3
+T14	Eq-Value 557 559	20
+T15	Eq-Comparison 397 402	>3 mm
+E8	Eq-Comparison:T15 Operator:T10 Unit:T11 Value:T13
+T16	Eq-Comparison 556 559	-20
+E9	Eq-Comparison:T16 Operator:T12 Value:T14

@@ -1,0 +1,71 @@
+T1	Condition 72 94	chronic kidney disease
+T2	Condition-Name 72 94	chronic kidney disease
+E1	Condition:T1 Name:T2
+T3	Procedure 131 152	renal transplantation
+T4	Procedure-Name 131 152	renal transplantation
+E3	Procedure:T3 Name:T4
+T5	Procedure 96 115	peritoneal dialysis
+T6	Procedure-Name 96 115	peritoneal dialysis
+E5	Procedure:T5 Name:T6
+T7	Condition 478 495	mental disability
+T8	Condition-Name 478 495	mental disability
+E7	Condition:T7 Name:T8
+T9	Procedure 117 129	hemodialysis
+T10	Procedure-Name 117 129	hemodialysis
+E9	Procedure:T9 Name:T10
+T13	Life-Stage-And-Gender 383 391	children
+A1	Life-Stage-And-Gender-Type T13 child
+T15	Life-Stage-And-Gender 29 34	adult
+A2	Life-Stage-And-Gender-Type T15 adult
+T16	Eq-Comparison 162 168	active
+E12	Eq-Comparison:T16 Temporal-Period:T17
+T17	Eq-Temporal-Period 162 168	active
+A3	Eq-Temporal-Period-Value T17 present
+T18	Eq-Comparison 246 252	active
+E13	Eq-Comparison:T18 Temporal-Period:T19
+T19	Eq-Temporal-Period 246 252	active
+A4	Eq-Temporal-Period-Value T19 present
+T11	Modifier 49 71	non-dialysis dependent
+E2	Modifier:T11 Modifies:T2
+T12	Provider 201 211	nephrology
+E4	Provider:T12 Type:T20 Role:T22
+T20	Provider-Type 201 211	nephrology
+T21	Provider 281 291	nephrology
+E6	Provider:T21 Role:T23 Type:T24
+T22	Provider-Role 169 179	physicians
+T23	Provider-Role 253 259	nurses
+T24	Provider-Type 281 291	nephrology
+T25	Provider 335 345	nephrology
+E8	Provider:T25 Type:T26
+T26	Provider-Type 335 345	nephrology
+T27	Condition 400 419	physical disability
+E10	Condition:T27 Name:T28
+T28	Condition-Name 400 419	physical disability
+T29	Negation 397 399	no
+E11	Negation:T29 Negates:E10
+T30	Procedure 452 469	exercise training
+E14	Procedure:T30 Name:T31
+T31	Procedure-Name 452 469	exercise training
+T32	Negation 430 440	impossible
+E15	Negation:T32 Negates:E14
+R1	Caused-By Arg1:E15 Arg2:E10	
+T33	Assertion 441 451	to conduct
+E16	Assertion:T33 Asserted:E15
+A5	Assertion-Type-Value E16 hypothetical
+T34	Negation 475 477	no
+E17	Negation:T34 Negates:E7
+T14	Condition 499 515	language problem
+E18	Condition:T14 Name:T35
+T35	Condition-Name 499 515	language problem
+T36	Or 496 498	or
+E19	Or:T36 Arg:E7 Arg2:E18
+T37	Observation 565 578	questionnaire
+E20	Observation:T37 Name:T38
+T38	Observation-Name 565 578	questionnaire
+A6	Observation-Type-Value T38 survey-or-questionnaire
+T39	Negation 526 536	impossible
+E21	Negation:T39 Negates:E20
+T40	Assertion 540 562	understand and fill in
+E22	Assertion:T40 Asserted:E21
+A7	Assertion-Type-Value E22 hypothetical
+R2	Caused-By Arg1:E21 Arg2:E18	

@@ -1,0 +1,45 @@
+T1	Procedure 94 114	laparoscopic surgery
+T2	Procedure-Name 94 114	laparoscopic surgery
+E1	Procedure:T1 Name:T2
+T3	Condition 395 410	Hyperthyroidism
+T4	Condition-Name 395 410	Hyperthyroidism
+E3	Condition:T3 Name:T4
+T5	Condition 157 170	renal disease
+T6	Condition-Name 157 170	renal disease
+E5	Condition:T5 Name:T6
+T7	Condition 475 485	absorption
+T8	Condition-Name 475 485	absorption
+E7	Condition:T7 Name:T8
+T9	Condition 176 185	Pregnancy
+T10	Condition-Name 176 185	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Condition 189 198	lactation
+T12	Condition-Name 189 198	lactation
+E11	Condition:T11 Name:T12
+T13	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T13 adult
+T14	Condition 147 152	liver
+T15	Condition-Name 147 152	liver
+E14	Condition:T14 Name:T15
+T16	Observation 289 292	BMI
+T17	Observation-Name 289 292	BMI
+E16	Observation:T16 Name:T17
+A2	Observation-Type-Value T17 vital
+T18	Eq-Operator 33 34	≥
+A3	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 261 262	<
+A4	Eq-Operator-Value T19 LT
+T20	Eq-Operator 293 294	>
+A5	Eq-Operator-Value T20 GT
+T21	Eq-Temporal-Unit 38 43	years
+A6	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Unit 297 302	kg/m2
+T23	Eq-Value 35 37	18
+T24	Eq-Value 263 264	1
+T25	Eq-Value 294 296	35
+T26	Eq-Comparison 33 43	≥ 18 years
+E17	Eq-Comparison:T26 Operator:T18 Temporal-Unit:T21 Value:T23
+T27	Eq-Comparison 261 264	< 1
+E18	Eq-Comparison:T27 Operator:T19 Value:T24
+T28	Eq-Comparison 293 302	>35 kg/m2
+E19	Eq-Comparison:T28 Operator:T20 Unit:T22 Value:T25

@@ -1,0 +1,59 @@
+T1	Procedure 580 600	stem cell transplant
+T2	Procedure-Name 580 600	stem cell transplant
+E1	Procedure:T1 Name:T2
+T3	Procedure 637 657	stem cell transplant
+T4	Procedure-Name 637 657	stem cell transplant
+E3	Procedure:T3 Name:T4
+T5	Condition 186 205	progressive disease
+T6	Condition-Name 186 205	progressive disease
+E5	Condition:T5 Name:T6
+T7	Condition 136 154	measurable disease
+T8	Condition-Name 136 154	measurable disease
+E7	Condition:T7 Name:T8
+T9	Procedure 506 520	T cell therapy
+T10	Procedure-Name 506 520	T cell therapy
+E9	Procedure:T9 Name:T10
+T11	Procedure 899 911	radiotherapy
+T12	Procedure-Name 899 911	radiotherapy
+E11	Procedure:T11 Name:T12
+T13	Procedure 839 846	therapy
+T14	Procedure-Name 839 846	therapy
+E13	Procedure:T13 Name:T14
+T15	Life-Stage-And-Gender 43 49	female
+A1	Life-Stage-And-Gender-Type T15 male
+T16	Life-Stage-And-Gender 35 39	male
+A2	Life-Stage-And-Gender-Type T16 male
+T17	Condition 207 209	PD
+T18	Condition-Name 207 209	PD
+E17	Condition:T17 Name:T18
+T19	Eq-Operator 29 30	≥
+A3	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 257 266	less than
+A4	Eq-Operator-Value T20 LT
+T21	Eq-Operator 658 664	within
+A5	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 925 931	within
+A6	Eq-Operator-Value T22 GTEQ
+T23	Eq-Temporal-Unit 269 275	months
+A7	Eq-Temporal-Unit-Value T23 month
+T24	Eq-Temporal-Unit 667 673	months
+A8	Eq-Temporal-Unit-Value T24 month
+T25	Eq-Temporal-Unit 934 939	weeks
+A9	Eq-Temporal-Unit-Value T25 week
+T26	Eq-Unit 88 91	 MM
+T27	Age 25 28	Age
+E18	Age:T27
+T28	Eq-Value 31 33	18
+T29	Eq-Value 267 268	6
+T30	Eq-Value 373 374	0
+T31	Eq-Value 665 666	3
+T32	Eq-Value 932 933	4
+T33	Eq-Value 943 944	5
+T34	Eq-Comparison 29 33	≥ 18
+E19	Eq-Comparison:T34 Operator:T19 Value:T28
+T35	Eq-Comparison 257 275	less than 6 months
+E20	Eq-Comparison:T35 Operator:T20 Temporal-Unit:T23 Value:T29
+T36	Eq-Comparison 658 673	within 3 months
+E21	Eq-Comparison:T36 Operator:T21 Temporal-Unit:T24 Value:T31
+T37	Eq-Comparison 925 939	within 4 weeks
+E22	Eq-Comparison:T37 Operator:T22 Temporal-Unit:T25 Value:T32

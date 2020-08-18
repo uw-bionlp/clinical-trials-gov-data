@@ -1,0 +1,178 @@
+T1	Procedure 62 80	neonatal screening
+T2	Procedure-Name 62 80	neonatal screening
+E1	Procedure:T1 Name:T2
+T3	Observation 99 115	Phenylalaninemia
+T4	Observation-Name 99 115	Phenylalaninemia
+E3	Observation:T3 Name:T4 Eq-Comparison:E20
+T5	Condition 974 989	Phenylketonuria
+T6	Condition-Name 974 989	Phenylketonuria
+E5	Condition:T5 Name:T6
+T7	Condition 853 872	pre-conception diet
+T8	Condition-Name 853 872	pre-conception diet
+E7	Condition:T7 Name:T8
+T9	Condition 818 827	Pregnancy
+T10	Condition-Name 818 827	Pregnancy
+E9	Condition:T9 Name:T10 Temporality:E22
+T11	Condition 874 883	pregnancy
+T12	Condition-Name 874 883	pregnancy
+E11	Condition:T11 Name:T12
+T17	Condition 337 340	PKU
+T18	Condition-Name 337 340	PKU
+E17	Condition:T17 Name:T18
+T21	Eq-Operator 116 117	≥
+A1	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 203 204	≥
+A2	Eq-Operator-Value T22 GTEQ
+T24	Eq-Temporal-Unit 661 665	days
+A4	Eq-Temporal-Unit-Value T24 day
+T25	Eq-Temporal-Unit 714 720	months
+A5	Eq-Temporal-Unit-Value T25 month
+T26	Eq-Temporal-Unit 806 812	months
+A6	Eq-Temporal-Unit-Value T26 month
+T27	Eq-Temporal-Unit 845 851	months
+A7	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Value 118 121	900
+T29	Eq-Value 204 207	900
+T30	Eq-Value 659 660	7
+T31	Eq-Value 712 713	6
+T32	Eq-Value 804 805	6
+T33	Eq-Value 843 844	6
+T34	Eq-Comparison 116 129	≥ 900μmol / L
+E20	Eq-Comparison:T34 Operator:T21 Value:T28 Unit:T39 Unit2:T40
+T35	Eq-Comparison 203 216	≥900 μmol / L
+E21	Eq-Comparison:T35 Operator:T22 Value:T29 Unit:T45 Per:T46
+T36	Eq-Comparison 836 851	within 6 months
+E22	Eq-Comparison:T36 Temporal-Unit:T27 Value:T33 Temporal-Period:T23
+T37	Condition 25 40	Phenylketonuric
+E2	Condition:T37 Name:T38
+T38	Condition-Name 25 40	Phenylketonuric
+R1	Found-By Arg1:E2 Arg2:E1	
+T39	Eq-Unit 121 125	μmol
+T40	Eq-Unit 128 129	L
+T41	Study 157 166	screening
+E4	Study:T41 
+T42	Temporal-Connection 146 152	during
+E6	Temporal-Connection:T42 Arg:E3 Arg2:E4
+A8	Temporal-Connection-Type-Value E6 during
+T43	Coreference 186 202	blotting results
+E8	Coreference:T43 Refers-To:E3
+T44	Observation 186 202	blotting results
+E10	Observation:T44 Eq-Comparison:E21 Minimum-Count:E16
+T45	Eq-Unit 208 212	μmol
+T46	Eq-Unit 215 216	L
+T47	Study 250 259	screening
+E12	Study:T47 
+T48	Temporal-Connection 239 245	during
+E14	Temporal-Connection:T48 Arg:E10 Arg2:E12
+A9	Temporal-Connection-Type-Value E14 during
+T49	Eq-Comparison 220 227	several
+E16	Eq-Comparison:T49 Operator:T50
+T50	Eq-Operator 220 227	several
+A10	Eq-Operator-Value T50 GT
+T51	Or 175 177	or
+E18	Or:T51 Arg:E3 Arg2:E10
+T52	Drug 307 328	amino acid supplement
+E23	Drug:T52 Name:T53 Temporality:E25
+T53	Drug-Name 307 328	amino acid supplement
+T54	Negation 292 295	not
+E24	Negation:T54 Negates:E23
+T55	Eq-Comparison 296 302	taking
+E25	Eq-Comparison:T55 Temporal-Period:T56
+T56	Eq-Temporal-Period 296 302	taking
+A11	Eq-Temporal-Period-Value T56 present
+R2	Treatment-For Arg1:E23 Arg2:E17	
+T13	Condition 405 415	court bail
+E13	Condition:T13 Name:T14
+T14	Condition-Name 405 415	court bail
+T57	Condition 417 428	curatorship
+E26	Condition:T57 Name:T58
+T58	Condition-Name 417 428	curatorship
+T59	Condition 430 442	guardianship
+E27	Condition:T59 Name:T60
+T60	Condition-Name 430 442	guardianship
+T61	Condition 461 481	concomitant diseases
+E28	Condition:T61 Name:T62
+T62	Condition-Name 461 481	concomitant diseases
+T63	Condition 484 494	conditions
+E29	Condition:T63 
+T64	Or 482 483	/
+E30	Or:T64 Arg:E28 Arg2:E29
+T65	Study 519 524	study
+E31	Study:T65 Stability:T66
+T66	Stability 504 514	compromise
+A12	Stability-Value T66 change
+T67	Assertion 500 503	may
+E32	Assertion:T67 Asserted:T66
+A13	Assertion-Type-Value E32 possible
+R3	Caused-By Arg1:T66 Arg2:E29	
+T68	Study 587 601	clinical trial
+E33	Study:T68 
+T69	Study 605 610	trial
+E34	Study:T69 Study-Of:E19
+T19	Condition 623 626	PKU
+E19	Condition:T19 Name:T20
+T20	Condition-Name 623 626	PKU
+T70	Procedure 636 646	treatments
+E35	Procedure:T70 Temporality:E36
+T71	Eq-Comparison 654 665	last 7 days
+E36	Eq-Comparison:T71 Temporal-Unit:T24 Temporal-Period:T72 Value:T30
+T72	Eq-Temporal-Period 654 658	last
+A14	Eq-Temporal-Period-Value T72 past
+R4	Treatment-For Arg1:E35 Arg2:E19	
+T73	Or 602 604	or
+E37	Or:T73 Arg:E33 Arg2:E34
+T74	Or 633 635	or
+E38	Or:T74 Arg:E19 Arg2:E35
+T75	Study 675 684	inclusion
+E39	Study:T75 
+T76	Temporal-Connection 666 671	prior
+E40	Temporal-Connection:T76 Arg:E36 Arg2:E39
+A15	Temporal-Connection-Type-Value E40 before
+T77	Eq-Comparison 707 720	next 6 months
+E41	Eq-Comparison:T77 Temporal-Unit:T25 Temporal-Period:T78 Value:T31
+T78	Eq-Temporal-Period 707 711	next
+A16	Eq-Temporal-Period-Value T78 future
+T79	Eq-Comparison 688 695	planned
+E42	Eq-Comparison:T79 Temporal-Period:T80
+T80	Eq-Temporal-Period 688 695	planned
+A17	Eq-Temporal-Period-Value T80 future
+T81	Temporal-Connection 696 702	during
+E43	Temporal-Connection:T81 Arg:E42 Arg2:E41
+A18	Temporal-Connection-Type-Value E43 during
+T82	Or 685 687	or
+E44	Or:T82 Arg:E39 Arg2:E42
+T83	Study 761 766	study
+E45	Study:T83 Study-Of:E46
+T84	Drug 772 787	health products
+E46	Drug:T84 
+T85	Eq-Comparison 799 812	next 6 months
+E47	Eq-Comparison:T85 Temporal-Unit:T26 Temporal-Period:T86 Value:T32
+T86	Eq-Temporal-Period 799 803	next
+A19	Eq-Temporal-Period-Value T86 future
+T87	Temporal-Connection 788 794	during
+E48	Temporal-Connection:T87 Arg:E45 Arg2:E47
+A20	Temporal-Connection-Type-Value E48 during
+T23	Eq-Temporal-Period 836 842	within
+A3	Eq-Temporal-Period-Value T23 past
+T15	Condition 887 900	breastfeeding
+E15	Condition:T15 Name:T16
+T16	Condition-Name 887 900	breastfeeding
+T88	Or 884 886	or
+E49	Or:T88 Arg:E11 Arg2:E15
+T89	Drug 1016 1019	BH4
+E50	Drug:T89 Name:T90
+T90	Drug-Name 1016 1019	BH4
+T91	Procedure 1001 1010	treatment
+E51	Procedure:T91 Temporality:E52
+R5	Using Arg1:E51 Arg2:E50	
+T92	Eq-Comparison 990 1000	undergoing
+E52	Eq-Comparison:T92 Temporal-Period:T93
+T93	Eq-Temporal-Period 990 1000	undergoing
+A21	Eq-Temporal-Period-Value T93 present
+R6	Treatment-For Arg1:E51 Arg2:E5	
+T94	Study 1054 1059	study
+E53	Study:T94 Study-Of:E54
+T95	Drug 1040 1047	product
+E54	Drug:T95 
+T96	Allergy 1025 1032	Allergy
+E55	Allergy:T96 Name:E54

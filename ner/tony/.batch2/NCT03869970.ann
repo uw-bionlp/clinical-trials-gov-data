@@ -1,0 +1,14 @@
+T1	Condition 319 338	Vestibular disorder
+T2	Condition-Name 319 338	Vestibular disorder
+E1	Condition:T1 Name:T2
+T3	Condition 263 278	Substance abuse
+T4	Condition-Name 263 278	Substance abuse
+E3	Condition:T3 Name:T4
+T5	Procedure 253 256	TBI
+T6	Procedure-Name 253 256	TBI
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 46 54	the past
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Value 55 57	48
+T9	Eq-Comparison 46 57	the past 48
+E6	Eq-Comparison:T9 Operator:T7 Value:T8

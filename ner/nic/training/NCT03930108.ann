@@ -1,0 +1,62 @@
+T1	Life-Stage-And-Gender 25 30	adult
+A1	Life-Stage-And-Gender-Type T1 adult
+T2	Eq-Operator 48 57	and above
+A2	Eq-Operator-Value T2 GTEQ
+T3	Eq-Operator 165 174	less than
+A3	Eq-Operator-Value T3 LT
+T4	Eq-Operator 238 244	within
+A4	Eq-Operator-Value T4 LTEQ
+T5	Eq-Temporal-Unit 248 252	days
+A5	Eq-Temporal-Unit-Value T5 day
+T6	Eq-Value 45 47	18
+T7	Eq-Value 175 177	24
+T8	Eq-Value 245 247	30
+T9	Eq-Comparison 45 57	18 and above
+E1	Eq-Comparison:T9 Operator:T2 Value:T6
+T10	Eq-Comparison 165 183	less than 24 hours
+E2	Eq-Comparison:T10 Operator:T3 Value:T7 Temporal-Unit:T19
+T11	Eq-Comparison 238 252	within 30 days
+E3	Eq-Comparison:T11 Operator:T4 Temporal-Unit:T5 Value:T8
+T12	Age 41 44	age
+E4	Age:T12 Eq-Comparison:E1
+R2	Equivalent-To Arg1:E4 Arg2:T1	
+T13	Encounter 63 71	admitted
+E5	Encounter:T13 Type:T14 Location:T15
+T14	Encounter-Type 63 71	admitted
+A6	Encounter-Type-Value T14 inpatient
+T15	Location 75 84	burn unit
+A7	Location-Value T15 unit
+T18	Temporal-Connection 85 91	during
+E7	Temporal-Connection:T18 Arg:E5 Arg2:E10
+T19	Eq-Temporal-Unit 178 183	hours
+A8	Eq-Temporal-Unit-Value T19 hour
+T20	Encounter 187 196	admission
+E8	Encounter:T20 Type:T21
+T21	Encounter-Type 187 196	admission
+A9	Encounter-Type-Value T21 inpatient
+T22	Encounter 142 152	discharged
+E9	Encounter:T22 Type:T23 Temporality:E2
+T23	Encounter-Type 142 152	discharged
+A10	Encounter-Type-Value T23 discharge
+T26	Temporal-Connection 184 186	of
+E11	Temporal-Connection:T26 Arg:E2 Arg2:E8
+T24	Death 156 164	deceased
+E12	Death:T24 Temporality:E2
+T29	Encounter 253 262	admission
+E13	Encounter:T29 Type:T30
+T30	Encounter-Type 253 262	admission
+A13	Encounter-Type-Value T30 inpatient
+T31	Encounter 211 219	referred
+E14	Encounter:T31 Type:T32 Location:T33 Temporality:E3
+T32	Encounter-Type 211 219	referred
+A14	Encounter-Type-Value T32 referral
+T33	Location 229 237	hospital
+A15	Location-Value T33 hospital
+T17	Or 153 155	or
+E6	Or:T17 Arg:E9 Arg2:E12
+A12	Temporal-Connection-Type-Value E7 during
+A11	Temporal-Connection-Type-Value E11 after
+T16	Study 92 100	sampling
+E10	Study:T16 
+T25	Other 223 228	other
+E15	Other:T25 Is-Other:T33

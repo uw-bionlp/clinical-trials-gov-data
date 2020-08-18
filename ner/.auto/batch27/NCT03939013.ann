@@ -1,0 +1,38 @@
+T1	Condition 345 373	Human Immunodeficiency Virus
+T2	Condition-Name 345 373	Human Immunodeficiency Virus
+E1	Condition:T1 Name:T2
+T3	Condition 447 466	Active tuberculosis
+T4	Condition-Name 447 466	Active tuberculosis
+E3	Condition:T3 Name:T4
+T5	Condition 477 496	active tuberculosis
+T6	Condition-Name 477 496	active tuberculosis
+E5	Condition:T5 Name:T6
+T7	Condition 196 209	HCV infection
+T8	Condition-Name 196 209	HCV infection
+E7	Condition:T7 Name:T8
+T9	Condition 226 237	recruitment
+T10	Condition-Name 226 237	recruitment
+E9	Condition:T9 Name:T10
+T11	Condition 163 166	HCV
+T12	Condition-Name 163 166	HCV
+E11	Condition:T11 Name:T12
+T13	Condition 326 329	HBV
+T14	Condition-Name 326 329	HBV
+E13	Condition:T13 Name:T14
+T15	Condition 503 506	per
+T16	Condition-Name 503 506	per
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 30 31	≥
+A1	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 438 439	<
+A2	Eq-Operator-Value T18 LT
+T19	Eq-Temporal-Unit 34 39	years
+A3	Eq-Temporal-Unit-Value T19 year
+T20	Age 25 29	Aged
+E16	Age:T20
+T21	Eq-Value 31 33	18
+T22	Eq-Value 439 441	30
+T23	Eq-Comparison 30 39	≥18 years
+E17	Eq-Comparison:T23 Operator:T17 Temporal-Unit:T19 Value:T21
+T24	Eq-Comparison 438 441	<30
+E18	Eq-Comparison:T24 Operator:T18 Value:T22

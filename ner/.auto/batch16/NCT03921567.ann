@@ -1,0 +1,23 @@
+T1	Language 97 100	III
+T2	Condition 321 342	psychiatric disorders
+T3	Condition-Name 321 342	psychiatric disorders
+E2	Condition:T2 Name:T3
+T4	Condition 399 416	Lidocaine allergy
+T5	Condition-Name 399 416	Lidocaine allergy
+E4	Condition:T4 Name:T5
+T6	Procedure 368 384	Organ transplant
+T7	Procedure-Name 368 384	Organ transplant
+E6	Procedure:T6 Name:T7
+T8	Condition 348 361	Heart failure
+T9	Condition-Name 348 361	Heart failure
+E8	Condition:T8 Name:T9
+T10	Eq-Temporal-Unit 59 64	years
+A1	Eq-Temporal-Unit-Value T10 year
+T11	Age 25 28	Age
+E9	Age:T11
+T12	Eq-Operator 53 55	to
+A2	Eq-Operator-Value T12 BETWEEN
+T13	Eq-Value 50 52	18
+T14	Eq-Value 56 58	75
+T15	Eq-Comparison 50 55	18 to
+E10	Eq-Comparison:T15 Operator:T12 Value:T13

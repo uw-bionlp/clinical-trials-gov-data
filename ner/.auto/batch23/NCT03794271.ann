@@ -1,0 +1,29 @@
+T1	Procedure 138 166	laparoscopic cholecystectomy
+T2	Procedure-Name 138 166	laparoscopic cholecystectomy
+E1	Procedure:T1 Name:T2
+T3	Condition 261 278	Horner's syndrome
+T4	Condition-Name 261 278	Horner's syndrome
+E3	Condition:T3 Name:T4
+T5	Condition 282 299	Sjogren's disease
+T6	Condition-Name 282 299	Sjogren's disease
+E5	Condition:T5 Name:T6
+T7	Condition 495 514	psychiatric disease
+T8	Condition-Name 495 514	psychiatric disease
+E7	Condition:T7 Name:T8
+T9	Condition 332 350	metabolic diseases
+T10	Condition-Name 332 350	metabolic diseases
+E9	Condition:T9 Name:T10
+T11	Condition 578 588	arrhythmia
+T12	Condition-Name 578 588	arrhythmia
+E11	Condition:T11 Name:T12
+T13	Procedure 565 574	pacemaker
+T14	Procedure-Name 565 574	pacemaker
+E13	Procedure:T13 Name:T14
+T15	Age 34 38	aged
+E14	Age:T15
+T16	Eq-Operator 42 44	to
+A1	Eq-Operator-Value T16 BETWEEN
+T17	Eq-Value 39 41	20
+T18	Eq-Value 45 47	65
+T19	Eq-Comparison 39 44	20 to
+E15	Eq-Comparison:T19 Operator:T16 Value:T17

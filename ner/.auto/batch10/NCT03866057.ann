@@ -1,0 +1,27 @@
+T1	Condition 637 657	psychiatric disorder
+T2	Condition-Name 637 657	psychiatric disorder
+E1	Condition:T1 Name:T2
+T3	Procedure 514 528	rehabilitation
+T4	Procedure-Name 514 528	rehabilitation
+E3	Procedure:T3 Name:T4
+T5	Condition 686 700	global aphasia
+T6	Condition-Name 686 700	global aphasia
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 78 84	within
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Temporal-Unit 88 92	days
+A2	Eq-Temporal-Unit-Value T8 day
+T9	Eq-Temporal-Unit 477 481	days
+A3	Eq-Temporal-Unit-Value T9 day
+T10	Age 25 28	age
+E6	Age:T10
+T11	Eq-Operator 31 32	-
+A4	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 29 31	18
+T13	Eq-Value 32 34	90
+T14	Eq-Value 85 87	30
+T15	Eq-Value 474 476	30
+T16	Eq-Comparison 78 92	within 30 days
+E7	Eq-Comparison:T16 Operator:T7 Temporal-Unit:T8 Value:T14
+T17	Eq-Comparison 29 32	18-
+E8	Eq-Comparison:T17 Operator:T11 Value:T12

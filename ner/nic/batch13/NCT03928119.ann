@@ -1,0 +1,20 @@
+T1	Condition 25 67	ST-Segment Elevation Myocardial Infarction
+T2	Condition-Name 25 67	ST-Segment Elevation Myocardial Infarction
+E1	Condition:T1 Name:T2 Temporality:E2 Temporality2:E4
+T3	Eq-Operator 77 83	within
+A1	Eq-Operator-Value T3 LTEQ
+T4	Eq-Temporal-Unit 87 91	days
+A2	Eq-Temporal-Unit-Value T4 day
+T5	Eq-Value 84 86	30
+T6	Eq-Comparison 77 91	within 30 days
+E2	Eq-Comparison:T6 Operator:T3 Temporal-Unit:T4 Value:T5
+T7	Assertion 98 106	symptoms
+E3	Assertion:T7 Asserted:E1
+A3	Assertion-Type-Value E3 possible
+T8	Eq-Comparison 107 112	onset
+E4	Eq-Comparison:T8 Temporal-Recency:T9
+T9	Eq-Temporal-Recency 107 112	onset
+A4	Eq-Temporal-Recency-Value T9 first-time
+T10	Temporal-Connection 92 97	since
+E5	Temporal-Connection:T10 Arg:E2 Arg2:E4
+A5	Temporal-Connection-Type-Value E5 after

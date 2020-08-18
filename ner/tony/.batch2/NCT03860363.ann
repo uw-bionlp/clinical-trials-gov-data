@@ -1,0 +1,22 @@
+T1	Condition 398 417	Atrial fibrillation
+T2	Condition-Name 398 417	Atrial fibrillation
+E1	Condition:T1 Name:T2
+T3	Procedure 79 94	cardiac surgery
+T4	Procedure-Name 79 94	cardiac surgery
+E3	Procedure:T3 Name:T4
+T5	Procedure 233 248	cardiac surgery
+T6	Procedure-Name 233 248	cardiac surgery
+E5	Procedure:T5 Name:T6
+T7	Condition 265 280	cardiac disease
+T8	Condition-Name 265 280	cardiac disease
+E7	Condition:T7 Name:T8
+T9	Condition 800 809	Pregnancy
+T10	Condition-Name 800 809	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T11 adult
+T12	Eq-Operator 36 37	≥
+A2	Eq-Operator-Value T12 GTEQ
+T13	Eq-Value 38 40	18
+T14	Eq-Comparison 36 40	≥ 18
+E10	Eq-Comparison:T14 Operator:T12 Value:T13

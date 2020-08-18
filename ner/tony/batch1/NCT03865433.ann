@@ -1,0 +1,156 @@
+T1	Condition 702 726	Post-Concussion Syndrome
+T2	Condition-Name 702 726	Post-Concussion Syndrome
+E1	Condition:T1 Name:T2
+T3	Condition 644 660	seizure disorder
+T4	Condition-Name 644 660	seizure disorder
+E3	Condition:T3 Name:T4
+T7	Procedure 610 623	brain surgery
+T8	Procedure-Name 610 623	brain surgery
+E7	Procedure:T7 Name:T8
+T9	Condition 920 933	heart disease
+T10	Condition-Name 920 933	heart disease
+E9	Condition:T9 Name:T10
+T11	Condition 572 580	disorder
+T12	Condition-Name 572 580	disorder
+E11	Condition:T11 Name:T12
+T13	Language 448 455	English
+T14	Condition 728 731	PCS
+T15	Condition-Name 728 731	PCS
+E14	Condition:T14 Name:T15
+T16	Condition 1402 1421	developmental delay
+T17	Condition-Name 1402 1421	developmental delay
+E16	Condition:T16 Name:T17
+T18	Eq-Operator 196 202	within
+A1	Eq-Operator-Value T18 LTEQ
+T19	Eq-Operator 1258 1259	>
+A2	Eq-Operator-Value T19 GT
+T20	Eq-Temporal-Unit 41 46	years
+A3	Eq-Temporal-Unit-Value T20 year
+T21	Eq-Temporal-Unit 207 211	days
+A4	Eq-Temporal-Unit-Value T21 day
+T22	Age 29 33	aged
+E17	Age:T22 Eq-Comparison:E20
+T23	Eq-Operator 36 37	-
+A5	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Operator 204 205	-
+A6	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 34 36	13
+T26	Eq-Value 37 39	17
+T27	Eq-Value 203 204	2
+T28	Eq-Value 205 206	7
+T29	Eq-Value 994 995	3
+T30	Eq-Value 1260 1263	140
+T31	Eq-Comparison 196 204	within 2
+E18	Eq-Comparison:T31 Operator:T18 Value:T27
+T32	Eq-Comparison 1258 1263	> 140
+E19	Eq-Comparison:T32 Operator:T19 Value:T30
+T33	Eq-Comparison 34 37	13-
+E20	Eq-Comparison:T33 Operator:T23 Value:T25 Temporal-Unit:T20
+T34	Eq-Comparison 203 205	2-
+E21	Eq-Comparison:T34 Operator:T24 Value:T27 Temporal-Unit:T21
+T35	Life-Stage-And-Gender 53 72	high school student
+T36	Condition 185 195	concussion
+E2	Condition:T36 Name:T37
+T37	Condition-Name 185 195	concussion
+T38	Study 254 259	study
+E4	Study:T38 
+T39	Provider 260 269	physician
+E6	Provider:T39 Role:T40
+T40	Provider-Role 260 269	physician
+T41	Negation 494 503	Exclusion
+E8	Negation:T41 
+T42	Condition 546 568	neurological condition
+E10	Condition:T42 Name:T43
+T43	Condition-Name 546 568	neurological condition
+T44	Or 569 571	or
+E12	Or:T44 Arg:E10 Arg2:E11
+R1	Example-Of Arg1:E7 Arg2:E10	
+T45	Procedure 625 642	special education
+E13	Procedure:T45 Name:T46
+T46	Procedure-Name 625 642	special education
+R2	Example-Of Arg1:E13 Arg2:E10	
+R3	Example-Of Arg1:E3 Arg2:E11	
+T47	Condition 662 678	speech pathology
+E15	Condition:T47 Name:T48
+T48	Condition-Name 662 678	speech pathology
+R4	Example-Of Arg1:E15 Arg2:E11	
+R5	Example-Of Arg1:E1 Arg2:E10	
+R6	Example-Of Arg1:E14 Arg2:E10	
+R7	Abbrev-Of Arg1:E14 Arg2:E1	
+T49	Condition 743 764	unwilling to exercise
+E22	Condition:T49 Name:T50
+T50	Condition-Name 743 764	unwilling to exercise
+T51	Condition 776 800	focal neurologic deficit
+E23	Condition:T51 Name:T52
+T52	Condition-Name 776 800	focal neurologic deficit
+T53	Risk 822 826	risk
+E24	Risk:T53 
+R8	Caused-By Arg1:E24 Arg2:E23	
+T54	Condition 877 898	inability to exercise
+E25	Condition:T54 Name:T55
+T55	Condition-Name 877 898	inability to exercise
+T56	Condition 906 912	injury
+E26	Condition:T56 Name:T57
+T57	Condition-Name 906 912	injury
+R9	Caused-By Arg1:E25 Arg2:E26	
+R10	Caused-By Arg1:E25 Arg2:E9	
+T58	Risk 938 960	increased cardiac risk
+E27	Risk:T58 
+R11	Caused-By Arg1:E25 Arg2:E27	
+T59	Eq-Comparison 984 995	more than 3
+E28	Eq-Comparison:T59 Operator:T60 Value:T29
+T60	Eq-Operator 984 993	more than
+A7	Eq-Operator-Value T60 GT
+T61	Condition 1005 1016	concussions
+E29	Condition:T61 Name:T62 Minimum-Count:E28
+T62	Condition-Name 1005 1016	concussions
+T63	Condition 1051 1062	comorbidity
+E30	Condition:T63 Name:T64 Severity:T65
+T64	Condition-Name 1051 1062	comorbidity
+T65	Severity 1039 1050	substantial
+A8	Severity-Value T65 severe
+T66	Condition 1067 1082	cervical injury
+E31	Condition:T66 Name:T67
+T67	Condition-Name 1067 1082	cervical injury
+R12	Example-Of Arg1:E31 Arg2:E30	
+T68	Drug 1107 1117	β-blockers
+E32	Drug:T68 Name:T69
+T69	Drug-Name 1107 1117	β-blockers
+T70	Drug 1119 1143	calcium channel blockers
+E33	Drug:T70 Name:T71
+T71	Drug-Name 1119 1143	calcium channel blockers
+T72	Drug 1148 1181	prophylactic headache medications
+E34	Drug:T72 Name:T73
+T73	Drug-Name 1148 1181	prophylactic headache medications
+T74	Or 1145 1147	or
+E35	Or:T74 Arg2:E34 Arg:E33
+T75	Drug 1189 1202	amitriptyline
+E36	Drug:T75 Name:T76
+T76	Drug-Name 1189 1202	amitriptyline
+R13	Example-Of Arg1:E36 Arg2:E34	
+T77	Drug 1204 1214	topiramate
+E37	Drug:T77 Name:T78
+T78	Drug-Name 1204 1214	topiramate
+R14	Example-Of Arg1:E37 Arg2:E34	
+T5	Observation 1240 1254	blood pressure
+E5	Observation:T5 Name:T6 Eq-Comparison:E19
+T6	Observation-Name 1240 1254	blood pressure
+A9	Observation-Type-Value T6 vital
+T79	Risk 1379 1384	risks
+E38	Risk:T79 
+T80	Study 1373 1378	study
+E39	Study:T80 
+T81	Study 1355 1360	study
+E40	Study:T81 
+T82	Condition 1324 1350	unable to fully understand
+E41	Condition:T82 Name:T83
+T83	Condition-Name 1324 1350	unable to fully understand
+T84	Condition 1392 1398	injury
+E42	Condition:T84 Name:T85
+T85	Condition-Name 1392 1398	injury
+R15	Caused-By Arg1:E41 Arg2:E42	
+R16	Caused-By Arg1:E41 Arg2:E16	
+T86	Negation 1457 1465	excluded
+E43	Negation:T86 
+T87	Study 1475 1480	study
+E44	Study:T87 

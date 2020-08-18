@@ -1,0 +1,14 @@
+T1	Condition 200 208	dementia
+T2	Condition-Name 200 208	dementia
+E1	Condition:T1 Name:T2
+T3	Eq-Temporal-Unit 50 55	years
+A1	Eq-Temporal-Unit-Value T3 year
+T4	Age 36 40	aged
+E2	Age:T4
+T5	Eq-Operator 44 46	to
+A2	Eq-Operator-Value T5 BETWEEN
+T6	Eq-Value 41 43	55
+T7	Eq-Value 47 49	74
+T8	Eq-Value 69 70	2
+T9	Eq-Comparison 41 46	55 to
+E3	Eq-Comparison:T9 Operator:T5 Value:T6

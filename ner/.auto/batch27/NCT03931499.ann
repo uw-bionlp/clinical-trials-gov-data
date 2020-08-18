@@ -1,0 +1,33 @@
+T1	Procedure 39 61	cardiopulmonary bypass
+T2	Procedure-Name 39 61	cardiopulmonary bypass
+E1	Procedure:T1 Name:T2
+T3	Condition 290 309	Parkinson's disease
+T4	Condition-Name 290 309	Parkinson's disease
+E3	Condition:T3 Name:T4
+T7	Condition 315 330	liver cirrhosis
+T8	Condition-Name 315 330	liver cirrhosis
+E7	Condition:T7 Name:T8
+T9	Procedure 125 136	replacement
+T10	Procedure-Name 125 136	replacement
+E9	Procedure:T9 Name:T10
+T11	Procedure 214 224	procedures
+T12	Procedure-Name 214 224	procedures
+E11	Procedure:T11 Name:T12
+T13	Condition 118 124	repair
+T14	Condition-Name 118 124	repair
+E13	Condition:T13 Name:T14
+T15	Procedure 87 91	CABG
+T16	Procedure-Name 87 91	CABG
+E15	Procedure:T15 Name:T16
+T17	Procedure 226 230	CABG
+T18	Procedure-Name 226 230	CABG
+E17	Procedure:T17 Name:T18
+T19	Eq-Operator 71 72	>
+A1	Eq-Operator-Value T19 GT
+T20	Eq-Temporal-Unit 76 81	years
+A2	Eq-Temporal-Unit-Value T20 year
+T21	Age 67 70	Age
+E18	Age:T21
+T22	Eq-Value 73 75	60
+T23	Eq-Comparison 71 81	> 60 years
+E19	Eq-Comparison:T23 Operator:T19 Temporal-Unit:T20 Value:T22

@@ -1,0 +1,12 @@
+T1	Condition 344 359	motion sickness
+T2	Condition-Name 344 359	motion sickness
+E1	Condition:T1 Name:T2
+T3	Eq-Operator 25 37	Greater than
+A1	Eq-Operator-Value T3 GT
+T4	Eq-Temporal-Unit 41 46	years
+A2	Eq-Temporal-Unit-Value T4 year
+T5	Age 50 53	age
+E2	Age:T5
+T6	Eq-Value 38 40	18
+T7	Eq-Comparison 25 46	Greater than 18 years
+E3	Eq-Comparison:T7 Operator:T3 Temporal-Unit:T4 Value:T6

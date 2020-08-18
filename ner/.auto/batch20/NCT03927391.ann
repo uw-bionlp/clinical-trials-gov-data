@@ -1,0 +1,84 @@
+T1	Condition 800 821	cognitive disturbance
+T2	Condition-Name 800 821	cognitive disturbance
+E1	Condition:T1 Name:T2
+T3	Condition 648 665	Nervous Disorders
+T4	Condition-Name 648 665	Nervous Disorders
+E3	Condition:T3 Name:T4
+T5	Condition 866 883	memory impairment
+T6	Condition-Name 866 883	memory impairment
+E5	Condition:T5 Name:T6
+T7	Life-Stage-And-Gender 32 45	male patients
+A1	Life-Stage-And-Gender-Type T7 male
+T8	Condition 885 896	hypersomnia
+T9	Condition-Name 885 896	hypersomnia
+E8	Condition:T8 Name:T9
+T10	Condition 823 830	amnesia
+T11	Condition-Name 823 830	amnesia
+E10	Condition:T10 Name:T11
+T12	Language 451 456	Dutch
+T13	Condition 1206 1227	psychiatric disorders
+T14	Condition-Name 1206 1227	psychiatric disorders
+E13	Condition:T13 Name:T14
+T15	Condition 1185 1204	Parkinson's disease
+T16	Condition-Name 1185 1204	Parkinson's disease
+E15	Condition:T15 Name:T16
+T17	Condition 1166 1183	Alzheimer disease
+T18	Condition-Name 1166 1183	Alzheimer disease
+E17	Condition:T17 Name:T18
+T19	Condition 1261 1271	depression
+T20	Condition-Name 1261 1271	depression
+E19	Condition:T19 Name:T20
+T21	Condition 1275 1282	anxiety
+T22	Condition-Name 1275 1282	anxiety
+E21	Condition:T21 Name:T22
+T23	Condition 1501 1508	anaemia
+T24	Condition-Name 1501 1508	anaemia
+E23	Condition:T23 Name:T24
+T25	Procedure 1441 1447	change
+T26	Procedure-Name 1441 1447	change
+E25	Procedure:T25 Name:T26
+T27	Eq-Operator 110 116	within
+A2	Eq-Operator-Value T27 GTEQ
+T28	Eq-Operator 396 397	>
+A3	Eq-Operator-Value T28 GT
+T29	Eq-Operator 601 602	≤
+A4	Eq-Operator-Value T29 LTEQ
+T30	Eq-Operator 627 628	≥
+A5	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 1062 1068	within
+A6	Eq-Operator-Value T31 GTEQ
+T32	Eq-Operator 1448 1454	within
+A7	Eq-Operator-Value T32 GTEQ
+T33	Eq-Operator 1525 1526	<
+A8	Eq-Operator-Value T33 LT
+T34	Eq-Temporal-Unit 144 149	years
+A9	Eq-Temporal-Unit-Value T34 year
+T35	Eq-Temporal-Unit 400 406	months
+A10	Eq-Temporal-Unit-Value T35 month
+T36	Eq-Temporal-Unit 989 994	weeks
+A11	Eq-Temporal-Unit-Value T36 week
+T37	Eq-Temporal-Unit 1457 1462	weeks
+A12	Eq-Temporal-Unit-Value T37 week
+T38	Age 128 131	Age
+E26	Age:T38
+T39	Eq-Value 141 143	18
+T40	Eq-Value 398 399	6
+T41	Eq-Value 602 604	14
+T42	Eq-Value 634 635	1
+T43	Eq-Value 987 988	2
+T44	Eq-Value 1069 1070	1
+T45	Eq-Value 1402 1406	2019
+T46	Eq-Value 1412 1413	7
+T47	Eq-Value 1417 1419	53
+T48	Eq-Value 1455 1456	4
+T49	Eq-Value 1526 1528	20
+T50	Eq-Comparison 396 406	> 6 months
+E27	Eq-Comparison:T50 Operator:T28 Temporal-Unit:T35 Value:T40
+T51	Eq-Comparison 601 604	≤14
+E28	Eq-Comparison:T51 Operator:T29 Value:T41
+T52	Eq-Comparison 1062 1070	within 1
+E29	Eq-Comparison:T52 Operator:T31 Value:T44
+T53	Eq-Comparison 1448 1462	within 4 weeks
+E30	Eq-Comparison:T53 Operator:T32 Temporal-Unit:T37 Value:T48
+T54	Eq-Comparison 1525 1528	<20
+E31	Eq-Comparison:T54 Operator:T33 Value:T49

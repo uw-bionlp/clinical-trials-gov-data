@@ -1,0 +1,41 @@
+T1	Procedure 320 340	regional nerve block
+T2	Procedure-Name 320 340	regional nerve block
+E1	Procedure:T1 Name:T2
+T3	Condition 543 560	attention deficit
+T4	Condition-Name 543 560	attention deficit
+E3	Condition:T3 Name:T4
+T5	Condition 578 593	Down's syndrome
+T6	Condition-Name 578 593	Down's syndrome
+E5	Condition:T5 Name:T6
+T7	Condition 435 449	kidney disease
+T8	Condition-Name 435 449	kidney disease
+E7	Condition:T7 Name:T8
+T9	Condition 562 576	cerebral palsy
+T10	Condition-Name 562 576	cerebral palsy
+E9	Condition:T9 Name:T10
+T11	Procedure 141 153	circumcision
+T12	Procedure-Name 141 153	circumcision
+E11	Procedure:T11 Name:T12
+T13	Condition 390 402	Coagulopathy
+T14	Condition-Name 390 402	Coagulopathy
+E13	Condition:T13 Name:T14
+T15	Procedure 132 140	elective
+T16	Procedure-Name 132 140	elective
+E15	Procedure:T15 Name:T16
+T17	Condition 426 431	liver
+T18	Condition-Name 426 431	liver
+E17	Condition:T17 Name:T18
+T19	Eq-Temporal-Unit 39 45	months
+A1	Eq-Temporal-Unit-Value T19 month
+T20	Eq-Temporal-Unit 51 56	years
+A2	Eq-Temporal-Unit-Value T20 year
+T21	Age 25 28	Age
+E18	Age:T21
+T22	Eq-Operator 113 114	-
+A3	Eq-Operator-Value T22 BETWEEN
+T23	Eq-Value 37 38	8
+T24	Eq-Value 49 50	7
+T25	Eq-Value 112 113	1
+T26	Eq-Value 114 115	3
+T27	Eq-Comparison 112 114	1-
+E19	Eq-Comparison:T27 Operator:T22 Value:T25

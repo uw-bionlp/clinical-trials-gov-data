@@ -1,0 +1,35 @@
+T1	Condition 195 224	gestational diabetes mellitus
+T2	Condition-Name 195 224	gestational diabetes mellitus
+E1	Condition:T1 Name:T2
+T3	Condition 439 450	consumption
+T4	Condition-Name 439 450	consumption
+E3	Condition:T3 Name:T4
+T5	Condition 145 154	pregnancy
+T6	Condition-Name 145 154	pregnancy
+E5	Condition:T5 Name:T6
+T7	Condition 64 67	GDM
+T8	Condition-Name 64 67	GDM
+E7	Condition:T7 Name:T8
+T9	Condition 230 233	GDM
+T10	Condition-Name 230 233	GDM
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 244 245	≥
+A1	Eq-Operator-Value T11 GTEQ
+T12	Eq-Temporal-Unit 96 101	weeks
+A2	Eq-Temporal-Unit-Value T12 week
+T13	Eq-Temporal-Unit 110 115	years
+A3	Eq-Temporal-Unit-Value T13 year
+T14	Eq-Temporal-Unit 261 266	weeks
+A4	Eq-Temporal-Unit-Value T14 week
+T15	Age 116 119	old
+E10	Age:T15
+T16	Eq-Operator 76 78	to
+A5	Eq-Operator-Value T16 BETWEEN
+T17	Eq-Value 73 75	13
+T18	Eq-Value 79 81	32
+T19	Eq-Value 107 109	18
+T20	Eq-Value 246 248	33
+T21	Eq-Comparison 244 248	≥ 33
+E11	Eq-Comparison:T21 Operator:T11 Value:T20
+T22	Eq-Comparison 73 78	13 to
+E12	Eq-Comparison:T22 Operator:T16 Value:T17

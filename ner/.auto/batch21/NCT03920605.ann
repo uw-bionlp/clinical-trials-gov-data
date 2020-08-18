@@ -1,0 +1,53 @@
+T1	Condition 239 242	kpa
+T2	Condition-Name 239 242	kpa
+E1	Condition:T1 Name:T2
+T3	Condition 631 669	Human immunodeficiency virus infection
+T4	Condition-Name 631 669	Human immunodeficiency virus infection
+E3	Condition:T3 Name:T4
+T5	Condition 492 515	Decompensated cirrhosis
+T6	Condition-Name 492 515	Decompensated cirrhosis
+E5	Condition:T5 Name:T6
+T7	Condition 691 710	deficiency diseases
+T8	Condition-Name 691 710	deficiency diseases
+E7	Condition:T7 Name:T8
+T9	Condition 734 753	autoimmune diseases
+T10	Condition-Name 734 753	autoimmune diseases
+E9	Condition:T9 Name:T10
+T11	Condition 610 624	liver diseases
+T12	Condition-Name 610 624	liver diseases
+E11	Condition:T11 Name:T12
+T13	Condition 568 577	Pregnancy
+T14	Condition-Name 568 577	Pregnancy
+E13	Condition:T13 Name:T14
+T15	Condition 581 590	lactation
+T16	Condition-Name 581 590	lactation
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 87 88	>
+A1	Eq-Operator-Value T17 GT
+T18	Eq-Operator 285 286	≤
+A2	Eq-Operator-Value T18 LTEQ
+T19	Eq-Operator 379 387	the past
+A3	Eq-Operator-Value T19 GTEQ
+T20	Eq-Temporal-Unit 122 127	years
+A4	Eq-Temporal-Unit-Value T20 year
+T21	Eq-Unit 290 292	mm
+T22	Age 104 107	Age
+E16	Age:T22
+T23	Eq-Operator 116 118	to
+A5	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Operator 233 235	to
+A6	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 89 90	0
+T26	Eq-Value 113 115	18
+T27	Eq-Value 119 121	55
+T28	Eq-Value 231 232	7
+T29	Eq-Value 236 238	14
+T30	Eq-Value 287 289	12
+T31	Eq-Comparison 87 90	> 0
+E17	Eq-Comparison:T31 Operator:T17 Value:T25
+T32	Eq-Comparison 285 292	≤ 12 mm
+E18	Eq-Comparison:T32 Operator:T18 Unit:T21 Value:T30
+T33	Eq-Comparison 113 118	18 to
+E19	Eq-Comparison:T33 Operator:T23 Value:T26
+T34	Eq-Comparison 231 235	7 to
+E20	Eq-Comparison:T34 Operator:T24 Value:T28

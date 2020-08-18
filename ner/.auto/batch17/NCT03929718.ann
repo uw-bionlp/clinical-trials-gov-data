@@ -1,0 +1,103 @@
+T1	Procedure 180 197	catheter ablation
+T2	Procedure-Name 180 197	catheter ablation
+E1	Procedure:T1 Name:T2
+T3	Condition 268 281	heart failure
+T4	Condition-Name 268 281	heart failure
+E3	Condition:T3 Name:T4
+T5	Condition 680 693	renal disease
+T6	Condition-Name 680 693	renal disease
+E5	Condition:T5 Name:T6
+T7	Condition 613 625	implantation
+T8	Condition-Name 613 625	implantation
+E7	Condition:T7 Name:T8
+T9	Procedure 125 134	pacemaker
+T10	Procedure-Name 125 134	pacemaker
+E9	Procedure:T9 Name:T10
+T11	Procedure 416 425	procedure
+T12	Procedure-Name 416 425	procedure
+E11	Procedure:T11 Name:T12
+T13	Procedure 407 415	ablation
+T14	Procedure-Name 407 415	ablation
+E13	Procedure:T13 Name:T14
+T15	Condition 466 471	AVNRT
+T16	Condition-Name 466 471	AVNRT
+E15	Condition:T15 Name:T16
+T17	Condition 138 141	ICD
+T18	Condition-Name 138 141	ICD
+E17	Condition:T17 Name:T18
+T19	Condition 260 263	HTN
+T20	Condition-Name 260 263	HTN
+E19	Condition:T19 Name:T20
+T21	Procedure 403 406	PVI
+T22	Procedure-Name 403 406	PVI
+E21	Procedure:T21 Name:T22
+T23	Condition 437 440	SVT
+T24	Condition-Name 437 440	SVT
+E23	Condition:T23 Name:T24
+T25	Language 710 713	men
+T26	Condition 283 285	HF
+T27	Condition-Name 283 285	HF
+E26	Condition:T26 Name:T27
+T28	Procedure 865 882	current treatment
+T29	Procedure-Name 865 882	current treatment
+E28	Procedure:T28 Name:T29
+T30	Procedure 1249 1262	birth control
+T31	Procedure-Name 1249 1262	birth control
+E30	Procedure:T30 Name:T31
+T32	Condition 804 815	intolerance
+T33	Condition-Name 804 815	intolerance
+E32	Condition:T32 Name:T33
+T34	Procedure 1114 1123	pacemaker
+T35	Procedure-Name 1114 1123	pacemaker
+E34	Procedure:T34 Name:T35
+T36	Life-Stage-And-Gender 1194 1199	child
+A1	Life-Stage-And-Gender-Type T36 child
+T37	Language 956 959	III
+T38	Condition 1127 1130	ICD
+T39	Condition-Name 1127 1130	ICD
+E38	Condition:T38 Name:T39
+T40	Eq-Operator 523 538	within the past
+A2	Eq-Operator-Value T40 GTEQ
+T41	Eq-Operator 655 656	>
+A3	Eq-Operator-Value T41 GT
+T42	Eq-Operator 698 699	>
+A4	Eq-Operator-Value T42 GT
+T43	Eq-Operator 716 717	>
+A5	Eq-Operator-Value T43 GT
+T44	Eq-Operator 739 740	<
+A6	Eq-Operator-Value T44 LT
+T45	Eq-Operator 781 782	<
+A7	Eq-Operator-Value T45 LT
+T46	Eq-Operator 1017 1023	within
+A8	Eq-Operator-Value T46 GTEQ
+T47	Eq-Temporal-Unit 541 547	months
+A9	Eq-Temporal-Unit-Value T47 month
+T48	Eq-Temporal-Unit 786 792	months
+A10	Eq-Temporal-Unit-Value T48 month
+T49	Eq-Temporal-Unit 1027 1031	days
+A11	Eq-Temporal-Unit-Value T49 day
+T50	Eq-Value 63 65	12
+T51	Eq-Value 539 540	3
+T52	Eq-Value 657 658	5
+T53	Eq-Value 699 700	2
+T54	Eq-Value 717 718	2
+T55	Eq-Value 741 743	30
+T56	Eq-Value 783 785	18
+T57	Eq-Value 1024 1026	30
+T58	Eq-Comparison 523 547	within the past 3 months
+E39	Eq-Comparison:T58 Operator:T40 Temporal-Unit:T47 Value:T51
+T59	Eq-Comparison 655 658	> 5
+E40	Eq-Comparison:T59 Operator:T41 Value:T52
+T60	Eq-Comparison 698 700	>2
+E41	Eq-Comparison:T60 Operator:T42 Value:T53
+T61	Eq-Comparison 716 718	>2
+E42	Eq-Comparison:T61 Operator:T43 Value:T54
+T62	Eq-Comparison 739 743	< 30
+E43	Eq-Comparison:T62 Operator:T44 Value:T55
+T63	Eq-Comparison 781 792	< 18 months
+E44	Eq-Comparison:T63 Operator:T45 Temporal-Unit:T48 Value:T56
+T64	Eq-Comparison 1017 1031	within 30 days
+E45	Eq-Comparison:T64 Operator:T46 Temporal-Unit:T49 Value:T57
+T65	Drug-Name 506 516	amiodarone
+T66	Drug 517 522	usage
+E2	Drug:T66 Name:T65 Temporality:E39

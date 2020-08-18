@@ -1,0 +1,60 @@
+T1	Condition 436 445	pregnancy
+T2	Condition-Name 436 445	pregnancy
+E1	Condition:T1 Name:T2
+T3	Eq-Operator 503 512	less than
+A1	Eq-Operator-Value T3 LT
+T4	Eq-Temporal-Unit 115 120	years
+A2	Eq-Temporal-Unit-Value T4 year
+T5	Age 121 124	old
+E2	Age:T5 Eq-Comparison:E4
+T6	Eq-Operator 111 112	-
+A3	Eq-Operator-Value T6 BETWEEN
+T7	Eq-Value 109 111	18
+T8	Eq-Value 112 114	55
+T9	Eq-Value 513 516	110
+T10	Eq-Comparison 503 523	less than 110 pounds
+E3	Eq-Comparison:T10 Operator:T3 Value:T9
+T11	Eq-Comparison 109 112	18-
+E4	Eq-Comparison:T11 Operator:T6 Value:T7 Temporal-Unit:T4
+T12	Condition 48 55	Healthy
+E5	Condition:T12 Name:T13
+T13	Condition-Name 48 55	Healthy
+T14	Assertion 57 82	determined by self-report
+E6	Assertion:T14 Asserted:E5
+A4	Assertion-Type-Value E6 possible
+T15	Age 101 105	ages
+E7	Age:T15 Eq-Comparison:E4
+T16	Condition 138 155	cigarette smokers
+E8	Condition:T16 Name:T17
+T17	Condition-Name 138 155	cigarette smokers
+T18	Study 342 347	study
+E9	Study:T18 
+T19	Study 220 231	lab session
+E10	Study:T19 
+T20	Life-Stage-And-Gender 382 387	Women
+T21	Condition 400 414	breast-feeding
+E11	Condition:T21 Name:T22
+T22	Condition-Name 400 414	breast-feeding
+T23	Observation 418 431	test positive
+E12	Observation:T23 Name:T24
+T24	Observation-Name 418 431	test positive
+A5	Observation-Type-Value T24 lab
+T25	Observation 450 460	urinalysis
+E13	Observation:T25 Name:T26
+T26	Observation-Name 450 460	urinalysis
+A6	Observation-Type-Value T26 lab
+R1	Found-By Arg1:E1 Arg2:E13	
+R2	Found-By Arg1:E1 Arg2:E12	
+T27	Or 415 417	or
+E14	Or:T27 Arg:E11 Arg2:E1
+T28	And 388 399	if they are
+E15	And:T28 Arg:T20 Arg2:E11
+T29	Observation 497 502	weigh
+E16	Observation:T29 Name:T30 Eq-Comparison:E3
+T30	Observation-Name 497 502	weigh
+A7	Observation-Type-Value T30 vital
+T31	Eq-Unit 517 523	pounds
+T32	Study 530 535	study
+E17	Study:T32 
+T33	Study 697 702	study
+E18	Study:T33 

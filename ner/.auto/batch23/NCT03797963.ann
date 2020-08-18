@@ -1,0 +1,22 @@
+T1	Procedure 182 193	replacement
+T2	Procedure-Name 182 193	replacement
+E1	Procedure:T1 Name:T2
+T3	Condition 267 276	sinusitis
+T4	Condition-Name 267 276	sinusitis
+E3	Condition:T3 Name:T4
+T5	Condition 288 293	cysts
+T6	Condition-Name 288 293	cysts
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 100 109	Less than
+A1	Eq-Operator-Value T7 LT
+T8	Eq-Operator 335 336	>
+A2	Eq-Operator-Value T8 GT
+T9	Eq-Temporal-Unit 338 344	months
+A3	Eq-Temporal-Unit-Value T9 month
+T10	Eq-Unit 112 114	mm
+T11	Eq-Value 110 111	5
+T12	Eq-Value 336 337	3
+T13	Eq-Comparison 100 114	Less than 5 mm
+E6	Eq-Comparison:T13 Operator:T7 Unit:T10 Value:T11
+T14	Eq-Comparison 335 344	>3 months
+E7	Eq-Comparison:T14 Operator:T8 Temporal-Unit:T9 Value:T12

@@ -1,0 +1,167 @@
+T1	Procedure 301 313	chemotherapy
+T2	Procedure-Name 301 313	chemotherapy
+E1	Procedure:T1 Name:T2 Temporality:E30 Minimum-Count:E31
+T3	Procedure 257 274	endocrine therapy
+T4	Procedure-Name 257 274	endocrine therapy
+E3	Procedure:T3 Name:T4
+T5	Procedure 372 389	endocrine therapy
+T6	Procedure-Name 372 389	endocrine therapy
+E5	Procedure:T5 Name:T6
+T7	Condition 666 693	acute myocardial infarction
+T8	Condition-Name 666 693	acute myocardial infarction
+E7	Condition:T7 Name:T8 Severity:T78 Temporality:E16
+T9	Condition 621 629	diseases
+T10	Condition-Name 621 629	diseases
+E9	Condition:T9 Name:T10 Severity:T76
+T11	Condition 756 780	Congestive heart failure
+T12	Condition-Name 756 780	Congestive heart failure
+E11	Condition:T11 Name:T12
+T13	Condition 831 853	ventricular arrhythmia
+T14	Condition-Name 831 853	ventricular arrhythmia
+E13	Condition:T13 Name:T14
+T15	Procedure 873 885	intervention
+T16	Procedure-Name 873 885	intervention
+E15	Procedure:T15 Name:T16
+T17	Eq-Operator 694 700	within
+A1	Eq-Operator-Value T17 LTEQ
+T18	Eq-Operator 822 823	>
+A2	Eq-Operator-Value T18 GT
+T19	Eq-Temporal-Unit 178 183	years
+A3	Eq-Temporal-Unit-Value T19 year
+T20	Eq-Temporal-Unit 703 709	months
+A4	Eq-Temporal-Unit-Value T20 month
+T21	Eq-Operator 439 440	-
+A5	Eq-Operator-Value T21 BETWEEN
+T22	Eq-Value 170 172	18
+T23	Eq-Value 175 177	75
+T24	Eq-Value 438 439	0
+T25	Eq-Value 440 441	1
+T26	Eq-Value 701 702	6
+T27	Eq-Value 824 825	2
+T28	Eq-Comparison 694 709	within 6 months
+E16	Eq-Comparison:T28 Operator:T17 Temporal-Unit:T20 Value:T26
+T29	Eq-Comparison 816 825	class > 2
+E17	Eq-Comparison:T29 Operator:T18 Value:T27 Unit:T90
+T30	Eq-Comparison 438 440	0-
+E18	Eq-Comparison:T30 Operator:T21 Value:T24 Value2:T25
+T33	Eq-Comparison 242 256	Received prior
+E21	Eq-Comparison:T33 Temporal-Period:T34
+T34	Eq-Temporal-Period 242 256	Received prior
+A8	Eq-Temporal-Period-Value T34 past
+T35	Eq-Comparison 480 494	received prior
+E22	Eq-Comparison:T35 Temporal-Period:T36
+T36	Eq-Temporal-Period 480 494	received prior
+A9	Eq-Temporal-Period-Value T36 past
+T31	Condition 152 158	Cancer
+E2	Condition:T31 Name:T32
+T32	Condition-Name 152 158	Cancer
+T41	Modifier 131 151	HER2 negative Breast
+E4	Modifier:T41 Modifies:T32
+T42	Modifier 104 129	hormone-receptor positive
+E6	Modifier:T42 Modifies:T32
+T43	Modifier 92 102	metastatic
+E8	Modifier:T43 Modifies:T32
+T44	Modifier 71 88	locally recurrent
+E10	Modifier:T44 Modifies:T32
+T45	Or 89 91	or
+E12	Or:T45 Arg:E10 Arg2:E8
+T46	Eq-Comparison 170 183	18 - 75 years
+E14	Eq-Comparison:T46 Operator:T47 Value:T22 Value2:T23 Temporal-Unit:T19
+T47	Eq-Operator 173 174	-
+A6	Eq-Operator-Value T47 BETWEEN
+T48	Age 165 168	Age
+E19	Age:T48 Eq-Comparison:E14
+T49	Condition 189 203	postmenopausal
+E20	Condition:T49 Name:T50
+T50	Condition-Name 189 203	postmenopausal
+T51	Life-Stage-And-Gender 204 209	women
+A7	Life-Stage-And-Gender-Type T51 female
+T52	Or 210 212	or
+E25	Or:T52 Arg:T51 Arg2:E26
+R1	If-Then Arg1:T51 Arg2:E20	
+T53	Condition 213 230	prepostmenopausal
+E26	Condition:T53 Name:T54
+T54	Condition-Name 213 230	prepostmenopausal
+T55	Life-Stage-And-Gender 231 236	women
+A12	Life-Stage-And-Gender-Type T55 female
+R2	If-Then Arg1:T55 Arg2:E26	
+T37	Condition 338 345	disease
+E23	Condition:T37 Name:T38
+T38	Condition-Name 338 345	disease
+T56	Modifier 327 337	metastatic
+E27	Modifier:T56 Modifies:T38
+T57	Modifier 318 326	advanced
+E28	Modifier:T57 Modifies:T38
+T58	Or 326 327	/
+E29	Or:T58 Arg:E28 Arg2:E27
+R3	Treatment-For Arg1:E1 Arg2:E23	
+T59	Eq-Comparison 284 292	previous
+E30	Eq-Comparison:T59 Temporal-Period:T60
+T60	Eq-Temporal-Period 284 292	previous
+A10	Eq-Temporal-Period-Value T60 past
+T61	Eq-Comparison 280 283	One
+E31	Eq-Comparison:T61 Value:T62
+T62	Eq-Value 280 283	One
+T63	And 357 368	in addition
+E32	And:T63 Arg:E1 Arg2:E5
+T64	Condition 396 430	Eastern Cooperative Oncology Group
+E33	Condition:T64 Name:T65
+T65	Condition-Name 396 430	Eastern Cooperative Oncology Group
+T66	Condition 432 436	ECOG
+E34	Condition:T66 Name:T67 Stage:E18
+T67	Condition-Name 432 436	ECOG
+R4	Abbrev-Of Arg1:E34 Arg2:E33	
+T39	Procedure 495 504	treatment
+E24	Procedure:T39 Temporality:E22
+T40	Drug 514 530	CDK4/6 inhibitor
+E35	Drug:T40 Name:T68
+T68	Drug-Name 514 530	CDK4/6 inhibitor
+T69	Drug 532 542	everolimus
+E36	Drug:T69 Name:T70
+T70	Drug-Name 532 542	everolimus
+T71	Drug 546 556	fulvestant
+E37	Drug:T71 Name:T72
+T72	Drug-Name 546 556	fulvestant
+T73	Or 543 545	or
+E38	Or:T73 Arg:E36 Arg2:E37
+R5	Using Arg1:E24 Arg2:E35	
+T74	Modifier 605 620	cerebrovascular
+E39	Modifier:T74 Modifies:T10
+T75	Modifier 586 600	cardiovascular
+E40	Modifier:T75 Modifies:T10
+T76	Severity 574 585	significant
+A11	Severity-Value T76 severe
+T77	Or 601 604	and
+E41	Or:T77 Arg:E40 Arg2:E39
+T78	Severity 659 665	severe
+A13	Severity-Value T78 severe
+R6	Example-Of Arg1:E7 Arg2:E9	
+T79	Study 717 727	enrollment
+E42	Study:T79 
+T80	Temporal-Connection 710 716	before
+E43	Temporal-Connection:T80 Arg:E16 Arg2:E42
+A14	Temporal-Connection-Type-Value E43 before
+T81	Condition 748 754	angina
+E44	Condition:T81 Name:T82 Severity:T83
+T82	Condition-Name 748 754	angina
+T83	Severity 741 747	severe
+A15	Severity-Value T83 severe
+T84	Modifier 729 737	unstable
+E45	Modifier:T84 Modifies:T82
+T85	Or 738 740	or
+E46	Or:T85 Arg:E45 Arg2:T83
+T86	Condition 782 808	New York heart association
+E47	Condition:T86 Name:T87
+T87	Condition-Name 782 808	New York heart association
+R7	Equivalent-To Arg1:E47 Arg2:E11	
+T88	Condition 810 814	NYHA
+E48	Condition:T88 Name:T89 Stage:E17
+T89	Condition-Name 810 814	NYHA
+R8	Abbrev-Of Arg1:E48 Arg2:E47	
+T90	Eq-Unit 816 821	class
+T91	Or 828 830	or
+E49	Or:T91 Arg:E48 Arg2:E13
+T92	Assertion 860 864	need
+E50	Assertion:T92 Asserted:E15
+A16	Assertion-Type-Value E50 hypothetical
+R9	Treatment-For Arg1:E15 Arg2:E13	

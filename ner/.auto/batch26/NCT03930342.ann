@@ -1,0 +1,36 @@
+T1	Procedure 25 40	Native American
+T2	Procedure-Name 25 40	Native American
+E1	Procedure:T1 Name:T2
+T3	Condition 83 94	recruitment
+T4	Condition-Name 83 94	recruitment
+E3	Condition:T3 Name:T4
+T5	Life-Stage-And-Gender 298 302	male
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Condition 287 290	sex
+T7	Condition-Name 287 290	sex
+E6	Condition:T6 Name:T7
+T8	Eq-Operator 252 260	the past
+A2	Eq-Operator-Value T8 GTEQ
+T9	Eq-Operator 314 322	the past
+A3	Eq-Operator-Value T9 GTEQ
+T10	Eq-Temporal-Unit 58 63	years
+A4	Eq-Temporal-Unit-Value T10 year
+T11	Eq-Temporal-Unit 264 268	days
+A5	Eq-Temporal-Unit-Value T11 day
+T12	Eq-Temporal-Unit 326 330	days
+A6	Eq-Temporal-Unit-Value T12 day
+T13	Age 64 67	old
+E7	Age:T13
+T14	Eq-Operator 54 55	-
+A7	Eq-Operator-Value T14 BETWEEN
+T15	Eq-Value 52 54	18
+T16	Eq-Value 55 57	44
+T17	Eq-Value 149 150	8
+T18	Eq-Value 261 263	90
+T19	Eq-Value 323 325	30
+T20	Eq-Comparison 252 268	the past 90 days
+E8	Eq-Comparison:T20 Operator:T8 Temporal-Unit:T11 Value:T18
+T21	Eq-Comparison 314 330	the past 30 days
+E9	Eq-Comparison:T21 Operator:T9 Temporal-Unit:T12 Value:T19
+T22	Eq-Comparison 52 55	18-
+E10	Eq-Comparison:T22 Operator:T14 Value:T15

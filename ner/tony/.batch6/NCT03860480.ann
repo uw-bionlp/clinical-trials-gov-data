@@ -1,0 +1,82 @@
+T1	Procedure 92 101	lobectomy
+T2	Procedure-Name 92 101	lobectomy
+E1	Procedure:T1 Name:T2
+T3	Procedure 83 87	VATS
+T4	Procedure-Name 83 87	VATS
+E3	Procedure:T3 Name:T4
+T5	Language 67 70	III
+T6	Condition 795 817	cardiovascular disease
+T7	Condition-Name 795 817	cardiovascular disease
+E6	Condition:T6 Name:T7
+T8	Condition 763 782	psychiatric illness
+T9	Condition-Name 763 782	psychiatric illness
+E8	Condition:T8 Name:T9
+T10	Procedure 362 380	Epidural analgesia
+T11	Procedure-Name 362 380	Epidural analgesia
+E10	Procedure:T10 Name:T11
+T12	Condition 553 570	bleeding disorder
+T13	Condition-Name 553 570	bleeding disorder
+E12	Condition:T12 Name:T13
+T14	Procedure 517 532	anticoagulation
+T15	Procedure-Name 517 532	anticoagulation
+E14	Procedure:T14 Name:T15
+T16	Condition 289 302	marijuana use
+T17	Condition-Name 289 302	marijuana use
+E16	Condition:T16 Name:T17
+T18	Procedure 600 613	sympathectomy
+T19	Procedure-Name 600 613	sympathectomy
+E18	Procedure:T18 Name:T19
+T20	Condition 823 836	Liver failure
+T21	Condition-Name 823 836	Liver failure
+E20	Condition:T20 Name:T21
+T22	Condition 842 855	Renal failure
+T23	Condition-Name 842 855	Renal failure
+E22	Condition:T22 Name:T23
+T24	Condition 588 595	empyema
+T25	Condition-Name 588 595	empyema
+E24	Condition:T24 Name:T25
+T26	Observation 161 164	BMI
+T27	Observation-Name 161 164	BMI
+E26	Observation:T26 Name:T27
+A1	Observation-Type-Value T27 vital
+T28	Language 902 905	min
+T29	Procedure 1078 1100	mechanical ventilation
+T30	Procedure-Name 1078 1100	mechanical ventilation
+E29	Procedure:T29 Name:T30
+T31	Procedure 983 994	thoracotomy
+T32	Procedure-Name 983 994	thoracotomy
+E31	Procedure:T31 Name:T32
+T33	Condition 920 929	Pregnancy
+T34	Condition-Name 920 929	Pregnancy
+E33	Condition:T33 Name:T34
+T35	Eq-Operator 31 32	>
+A2	Eq-Operator-Value T35 GT
+T36	Eq-Operator 141 142	<
+A3	Eq-Operator-Value T36 LT
+T37	Eq-Operator 165 166	>
+A4	Eq-Operator-Value T37 GT
+T38	Eq-Operator 894 895	<
+A5	Eq-Operator-Value T38 LT
+T39	Eq-Temporal-Unit 36 41	years
+A6	Eq-Temporal-Unit-Value T39 year
+T40	Eq-Temporal-Unit 146 151	years
+A7	Eq-Temporal-Unit-Value T40 year
+T41	Eq-Temporal-Unit 255 260	weeks
+A8	Eq-Temporal-Unit-Value T41 week
+T42	Age 42 45	old
+E34	Age:T42
+T43	Age 152 155	old
+E35	Age:T43
+T44	Eq-Value 33 35	18
+T45	Eq-Value 143 145	18
+T46	Eq-Value 167 169	35
+T47	Eq-Value 253 254	2
+T48	Eq-Value 895 897	15
+T49	Eq-Comparison 31 41	> 18 years
+E36	Eq-Comparison:T49 Operator:T35 Temporal-Unit:T39 Value:T44
+T50	Eq-Comparison 141 151	< 18 years
+E37	Eq-Comparison:T50 Operator:T36 Temporal-Unit:T40 Value:T45
+T51	Eq-Comparison 165 169	> 35
+E38	Eq-Comparison:T51 Operator:T37 Value:T46
+T52	Eq-Comparison 894 897	<15
+E39	Eq-Comparison:T52 Operator:T38 Value:T48

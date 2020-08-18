@@ -1,0 +1,55 @@
+T1	Condition 97 114	asthenozoospermia
+T2	Condition-Name 97 114	asthenozoospermia
+E1	Condition:T1 Name:T2
+T3	Condition 159 175	teratozoospermia
+T4	Condition-Name 159 175	teratozoospermia
+E3	Condition:T3 Name:T4
+T5	Condition 47 62	oligozoospermia
+T6	Condition-Name 47 62	oligozoospermia
+E5	Condition:T5 Name:T6
+T7	Life-Stage-And-Gender 25 29	male
+A1	Life-Stage-And-Gender-Type T7 male
+T8	Condition 450 479	sexually transmitted diseases
+T9	Condition-Name 450 479	sexually transmitted diseases
+E8	Condition:T8 Name:T9
+T10	Condition 525 543	testicular torsion
+T11	Condition-Name 525 543	testicular torsion
+E10	Condition:T10 Name:T11
+T12	Condition 597 607	epididymis
+T13	Condition-Name 597 607	epididymis
+E12	Condition:T12 Name:T13
+T14	Condition 286 295	fertility
+T15	Condition-Name 286 295	fertility
+E14	Condition:T14 Name:T15
+T16	Procedure 394 403	radiation
+T17	Procedure-Name 394 403	radiation
+E16	Procedure:T16 Name:T17
+T18	Condition 417 425	orchitis
+T19	Condition-Name 417 425	orchitis
+E18	Condition:T18 Name:T19
+T20	Condition 439 444	mumps
+T21	Condition-Name 439 444	mumps
+E20	Condition:T20 Name:T21
+T22	Eq-Operator 64 65	<
+A2	Eq-Operator-Value T22 LT
+T23	Eq-Operator 116 117	<
+A3	Eq-Operator-Value T23 LT
+T24	Eq-Operator 177 178	<
+A4	Eq-Operator-Value T24 LT
+T25	Eq-Temporal-Unit 36 41	years
+A5	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Operator 32 33	-
+A6	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Value 30 32	18
+T28	Eq-Value 33 35	50
+T29	Eq-Value 66 67	5
+T30	Eq-Value 118 120	32
+T31	Eq-Value 179 180	4
+T32	Eq-Comparison 64 67	< 5
+E21	Eq-Comparison:T32 Operator:T22 Value:T29
+T33	Eq-Comparison 116 120	< 32
+E22	Eq-Comparison:T33 Operator:T23 Value:T30
+T34	Eq-Comparison 177 180	< 4
+E23	Eq-Comparison:T34 Operator:T24 Value:T31
+T35	Eq-Comparison 30 33	18-
+E24	Eq-Comparison:T35 Operator:T26 Value:T27

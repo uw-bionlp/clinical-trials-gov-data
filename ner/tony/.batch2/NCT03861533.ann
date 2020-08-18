@@ -1,0 +1,40 @@
+T1	Condition 180 209	familial hypercholesterolemia
+T2	Condition-Name 180 209	familial hypercholesterolemia
+E1	Condition:T1 Name:T2
+T3	Condition 66 90	cardiovascular morbidity
+T4	Condition-Name 66 90	cardiovascular morbidity
+E3	Condition:T3 Name:T4
+T5	Condition 139 161	cardiovascular disease
+T6	Condition-Name 139 161	cardiovascular disease
+E5	Condition:T5 Name:T6
+T7	Procedure 296 310	statin therapy
+T8	Procedure-Name 296 310	statin therapy
+E7	Procedure:T7 Name:T8
+T9	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T9 adult
+T10	Procedure 371 388	Current treatment
+T11	Procedure-Name 371 388	Current treatment
+E10	Procedure:T10 Name:T11
+T12	Eq-Operator 32 33	≥
+A2	Eq-Operator-Value T12 GTEQ
+T13	Eq-Operator 221 236	within the past
+A3	Eq-Operator-Value T13 LTEQ
+T14	Eq-Operator 327 335	the past
+A4	Eq-Operator-Value T14 GTEQ
+T15	Eq-Temporal-Unit 37 42	years
+A5	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Temporal-Unit 239 245	months
+A6	Eq-Temporal-Unit-Value T16 month
+T17	Eq-Temporal-Unit 338 344	months
+A7	Eq-Temporal-Unit-Value T17 month
+T18	Age 43 46	old
+E11	Age:T18
+T19	Eq-Value 34 36	18
+T20	Eq-Value 237 238	6
+T21	Eq-Value 336 337	3
+T22	Eq-Comparison 32 42	≥ 18 years
+E12	Eq-Comparison:T22 Operator:T12 Temporal-Unit:T15 Value:T19
+T23	Eq-Comparison 221 245	within the past 6 months
+E13	Eq-Comparison:T23 Operator:T13 Temporal-Unit:T16 Value:T20
+T24	Eq-Comparison 327 344	the past 3 months
+E14	Eq-Comparison:T24 Operator:T14 Temporal-Unit:T17 Value:T21

@@ -1,0 +1,31 @@
+T1	Condition 472 491	psychiatric illness
+T2	Condition-Name 472 491	psychiatric illness
+E1	Condition:T1 Name:T2
+T3	Condition 496 514	mental retardation
+T4	Condition-Name 496 514	mental retardation
+E3	Condition:T3 Name:T4
+T5	Observation 141 156	body mass index
+T6	Observation-Name 141 156	body mass index
+E5	Observation:T5 Name:T6
+A1	Observation-Type-Value T6 vital
+T7	Condition 433 447	drug addiction
+T8	Condition-Name 433 447	drug addiction
+E7	Condition:T7 Name:T8
+T9	Condition 451 464	alcohol abuse
+T10	Condition-Name 451 464	alcohol abuse
+E9	Condition:T9 Name:T10
+T11	Observation 158 161	BMI
+T12	Observation-Name 158 161	BMI
+E11	Observation:T11 Name:T12
+A2	Observation-Type-Value T12 vital
+T13	Condition 565 568	PCA
+T14	Condition-Name 565 568	PCA
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 163 164	>
+A3	Eq-Operator-Value T15 GT
+T16	Eq-Operator 198 199	>
+A4	Eq-Operator-Value T16 GT
+T17	Eq-Unit 167 172	kg/m2
+T18	Eq-Value 164 166	30
+T19	Eq-Comparison 163 172	>30 kg/m2
+E14	Eq-Comparison:T19 Operator:T15 Unit:T17 Value:T18

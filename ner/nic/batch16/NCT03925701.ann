@@ -1,0 +1,21 @@
+T1	Condition 70 85	Viral hepatitis
+T2	Condition-Name 70 85	Viral hepatitis
+E1	Condition:T1 Name:T2
+T3	Condition 25 30	NAFLD
+T4	Condition-Name 25 30	NAFLD
+E3	Condition:T3 Name:T4
+T5	Condition 128 138	impairment
+T6	Condition-Name 128 138	impairment
+E5	Condition:T5 Name:T6
+T7	Life-Stage-And-Gender 92 97	Child
+A1	Life-Stage-And-Gender-Type T7 child
+T8	Condition 35 44	type 2 DM
+E2	Condition:T8 Name:T10
+T10	Condition-Name 35 44	type 2 DM
+T9	Eq-Comparison 104 115	more than 6
+E4	Eq-Comparison:T9 Operator:T11 Value:T12
+T11	Eq-Operator 104 113	more than
+A2	Eq-Operator-Value T11 GT
+T12	Eq-Value 114 115	6
+T13	Modifier 122 127	renal
+E6	Modifier:T13 Modifies:T6

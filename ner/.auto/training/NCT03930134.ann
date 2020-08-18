@@ -1,0 +1,30 @@
+T1	Condition 404 435	intrauterine growth restriction
+T2	Condition-Name 404 435	intrauterine growth restriction
+E1	Condition:T1 Name:T2
+T3	Procedure 627 644	Caesarean section
+T4	Procedure-Name 627 644	Caesarean section
+E3	Procedure:T3 Name:T4
+T5	Procedure 94 110	vaginal delivery
+T6	Procedure-Name 94 110	vaginal delivery
+E5	Procedure:T5 Name:T6
+T7	Procedure 556 572	Cesarean section
+T8	Procedure-Name 556 572	Cesarean section
+E7	Procedure:T7 Name:T8
+T9	Procedure 179 189	myomectomy
+T10	Procedure-Name 179 189	myomectomy
+E9	Procedure:T9 Name:T10
+T11	Condition 35 44	pregnancy
+T12	Condition-Name 35 44	pregnancy
+E11	Condition:T11 Name:T12
+T13	Condition 62 68	uterus
+T14	Condition-Name 62 68	uterus
+E13	Condition:T13 Name:T14
+T15	Condition 112 118	uterus
+T16	Condition-Name 112 118	uterus
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 250 262	greater than
+A1	Eq-Operator-Value T17 GT
+T18	Eq-Unit 264 266	Kg
+T19	Eq-Value 263 264	4
+T20	Eq-Comparison 250 264	greater than 4
+E16	Eq-Comparison:T20 Operator:T17 Value:T19

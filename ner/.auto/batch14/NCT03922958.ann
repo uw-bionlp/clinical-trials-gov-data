@@ -1,0 +1,59 @@
+T1	Procedure 47 62	cardiac surgery
+T2	Procedure-Name 47 62	cardiac surgery
+E1	Procedure:T1 Name:T2
+T3	Life-Stage-And-Gender 29 35	adults
+A1	Life-Stage-And-Gender-Type T3 adult
+T4	Procedure 649 674	renal replacement therapy
+T5	Procedure-Name 649 674	renal replacement therapy
+E4	Procedure:T4 Name:T5
+T6	Condition 481 504	urinary tract infection
+T7	Condition-Name 481 504	urinary tract infection
+E6	Condition:T6 Name:T7
+T8	Condition 728 750	Chronic Kidney Disease
+T9	Condition-Name 728 750	Chronic Kidney Disease
+E8	Condition:T8 Name:T9
+T10	Procedure 269 286	immunosuppression
+T11	Procedure-Name 269 286	immunosuppression
+E10	Procedure:T10 Name:T11
+T12	Condition 309 326	chronic infection
+T13	Condition-Name 309 326	chronic infection
+E12	Condition:T12 Name:T13
+T14	Procedure 353 369	organ transplant
+T15	Procedure-Name 353 369	organ transplant
+E14	Procedure:T14 Name:T15
+T16	Condition 425 440	acute infection
+T17	Condition-Name 425 440	acute infection
+E16	Condition:T16 Name:T17
+T18	Condition 339 350	Hepatitis C
+T19	Condition-Name 339 350	Hepatitis C
+E18	Condition:T18 Name:T19
+T20	Condition 470 479	pneumonia
+T21	Condition-Name 470 479	pneumonia
+E20	Condition:T20 Name:T21
+T22	Condition 634 638	ESRD
+T23	Condition-Name 634 638	ESRD
+E22	Condition:T22 Name:T23
+T24	Condition 171 174	AKI
+T25	Condition-Name 171 174	AKI
+E24	Condition:T24 Name:T25
+T26	Condition 597 600	AKI
+T27	Condition-Name 597 600	AKI
+E26	Condition:T26 Name:T27
+T28	Condition 779 782	CKD
+T29	Condition-Name 779 782	CKD
+E28	Condition:T28 Name:T29
+T30	Condition 783 786	EPI
+T31	Condition-Name 783 786	EPI
+E30	Condition:T30 Name:T31
+T32	Eq-Operator 446 454	the past
+A2	Eq-Operator-Value T32 GTEQ
+T33	Eq-Operator 561 576	within the past
+A3	Eq-Operator-Value T33 GTEQ
+T34	Eq-Operator 699 700	<
+A4	Eq-Operator-Value T34 LT
+T35	Eq-Value 455 456	1
+T36	Eq-Value 700 702	45
+T37	Eq-Comparison 446 456	the past 1
+E31	Eq-Comparison:T37 Operator:T32 Value:T35
+T38	Eq-Comparison 699 702	<45
+E32	Eq-Comparison:T38 Operator:T34 Value:T36

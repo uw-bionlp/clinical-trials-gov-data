@@ -1,0 +1,44 @@
+T1	Condition 449 475	inflammatory bowel disease
+T2	Condition-Name 449 475	inflammatory bowel disease
+E1	Condition:T1 Name:T2
+T3	Condition 383 408	gastrointestinal diseases
+T4	Condition-Name 383 408	gastrointestinal diseases
+E3	Condition:T3 Name:T4
+T5	Procedure 304 328	antimalarial prophylaxis
+T6	Procedure-Name 304 328	antimalarial prophylaxis
+E5	Procedure:T5 Name:T6
+T7	Condition 280 291	recruitment
+T8	Condition-Name 280 291	recruitment
+E7	Condition:T7 Name:T8
+T9	Procedure 477 486	resection
+T10	Procedure-Name 477 486	resection
+E9	Procedure:T9 Name:T10
+T11	Condition 516 525	Pregnancy
+T12	Condition-Name 516 525	Pregnancy
+E11	Condition:T11 Name:T12
+T13	Language 60 67	Chinese
+T14	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T14 adult
+T15	Eq-Operator 133 139	within
+A2	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 244 250	within
+A3	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 351 357	within
+A4	Eq-Operator-Value T17 GTEQ
+T18	Eq-Temporal-Unit 40 45	years
+A5	Eq-Temporal-Unit-Value T18 year
+T19	Eq-Temporal-Unit 155 161	months
+A6	Eq-Temporal-Unit-Value T19 month
+T20	Eq-Temporal-Unit 253 258	weeks
+A7	Eq-Temporal-Unit-Value T20 week
+T21	Eq-Temporal-Unit 360 366	months
+A8	Eq-Temporal-Unit-Value T21 month
+T22	Age 32 36	aged
+E12	Age:T22
+T23	Eq-Value 37 39	18
+T24	Eq-Value 251 252	4
+T25	Eq-Value 358 359	3
+T26	Eq-Comparison 244 258	within 4 weeks
+E13	Eq-Comparison:T26 Operator:T16 Temporal-Unit:T20 Value:T24
+T27	Eq-Comparison 351 366	within 3 months
+E14	Eq-Comparison:T27 Operator:T17 Temporal-Unit:T21 Value:T25

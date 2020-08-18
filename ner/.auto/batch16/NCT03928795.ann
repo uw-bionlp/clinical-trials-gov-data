@@ -1,0 +1,30 @@
+T1	Procedure 119 145	Elective caesarean section
+T2	Procedure-Name 119 145	Elective caesarean section
+E1	Procedure:T1 Name:T2
+T3	Condition 77 91	Term Pregnancy
+T4	Condition-Name 77 91	Term Pregnancy
+E3	Condition:T3 Name:T4
+T5	Condition 35 44	pregnancy
+T6	Condition-Name 35 44	pregnancy
+E5	Condition:T5 Name:T6
+T7	Procedure 313 320	genetic
+T8	Procedure-Name 313 320	genetic
+E7	Procedure:T7 Name:T8
+T9	Procedure 433 450	Caesarean section
+T10	Procedure-Name 433 450	Caesarean section
+E9	Procedure:T9 Name:T10
+T11	Procedure 520 530	anesthesia
+T12	Procedure-Name 520 530	anesthesia
+E11	Procedure:T11 Name:T12
+T13	Eq-Operator 92 93	≥
+A1	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 62 67	years
+A2	Eq-Temporal-Unit-Value T14 year
+T15	Age 50 53	Age
+E12	Age:T15
+T16	Age 68 71	old
+E13	Age:T16
+T17	Eq-Value 59 61	18
+T18	Eq-Value 94 96	37
+T19	Eq-Comparison 92 96	≥ 37
+E14	Eq-Comparison:T19 Operator:T13 Value:T18

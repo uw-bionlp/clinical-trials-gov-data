@@ -1,0 +1,19 @@
+T1	Procedure 59 78	total thyroidectomy
+T2	Procedure-Name 59 78	total thyroidectomy
+E1	Procedure:T1 Name:T2
+T3	Procedure 118 139	partial thyroidectomy
+T4	Procedure-Name 118 139	partial thyroidectomy
+E3	Procedure:T3 Name:T4
+T5	Procedure 166 183	parathyroidectomy
+T6	Procedure-Name 166 183	parathyroidectomy
+E5	Procedure:T5 Name:T6
+T7	Procedure 141 150	lobectomy
+T8	Procedure-Name 141 150	lobectomy
+E7	Procedure:T7 Name:T8
+T9	Eq-Operator 43 44	>
+A1	Eq-Operator-Value T9 GT
+T10	Age 39 42	age
+E8	Age:T10
+T11	Eq-Value 44 46	18
+T12	Eq-Comparison 43 46	>18
+E9	Eq-Comparison:T12 Operator:T9 Value:T11

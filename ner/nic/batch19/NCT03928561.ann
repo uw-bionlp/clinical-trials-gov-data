@@ -1,0 +1,98 @@
+T1	Condition 36 55	intermittent asthma
+T2	Condition-Name 36 55	intermittent asthma
+E1	Condition:T1 Name:T2
+T3	Condition 168 182	conjunctivitis
+T4	Condition-Name 168 182	conjunctivitis
+E3	Condition:T3 Name:T4
+T5	Condition 189 202	Sensitization
+T6	Condition-Name 189 202	Sensitization
+E5	Condition:T5 Name:T6
+T7	Condition 142 153	cat allergy
+T8	Condition-Name 142 153	cat allergy
+E7	Condition:T7 Name:T8
+T9	Condition 691 700	asthmatic
+T10	Condition-Name 691 700	asthmatic
+E9	Condition:T9 Name:T10
+T11	Procedure 206 209	cat
+T12	Procedure-Name 206 209	cat
+E11	Procedure:T11 Name:T12
+T13	Procedure 261 264	cat
+T14	Procedure-Name 261 264	cat
+E13	Procedure:T13 Name:T14
+T15	Condition 372 375	IgE
+T16	Condition-Name 372 375	IgE
+E15	Condition:T15 Name:T16
+T17	Condition 381 384	Fel
+T18	Condition-Name 381 384	Fel
+E17	Condition:T17 Name:T18
+T19	Language 726 729	cat
+T20	Condition 787 793	asthma
+T21	Condition-Name 787 793	asthma
+E20	Condition:T20 Name:T21
+T22	Condition 888 894	asthma
+T23	Condition-Name 888 894	asthma
+E22	Condition:T22 Name:T23
+T24	Procedure 1050 1053	cat
+T25	Procedure-Name 1050 1053	cat
+E24	Procedure:T24 Name:T25
+T26	Procedure 1059 1062	Cat
+T27	Procedure-Name 1059 1062	Cat
+E26	Procedure:T26 Name:T27
+T28	Eq-Operator 298 299	≥
+A1	Eq-Operator-Value T28 GTEQ
+T29	Eq-Operator 304 316	greater than
+A2	Eq-Operator-Value T29 GT
+T30	Eq-Operator 389 390	≥
+A3	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 455 456	≥
+A4	Eq-Operator-Value T31 GTEQ
+T32	Eq-Operator 830 836	within
+A5	Eq-Operator-Value T32 LTEQ
+T33	Eq-Operator 954 960	within
+A6	Eq-Operator-Value T33 LTEQ
+T34	Eq-Operator 1014 1015	>
+A7	Eq-Operator-Value T34 GT
+T35	Eq-Operator 1081 1087	within
+A8	Eq-Operator-Value T35 LTEQ
+T36	Eq-Temporal-Unit 843 848	weeks
+A9	Eq-Temporal-Unit-Value T36 week
+T37	Eq-Temporal-Unit 897 902	weeks
+A10	Eq-Temporal-Unit-Value T37 week
+T38	Eq-Temporal-Unit 967 972	weeks
+A11	Eq-Temporal-Unit-Value T38 week
+T39	Eq-Temporal-Unit 1103 1109	months
+A12	Eq-Temporal-Unit-Value T39 month
+T40	Eq-Unit 301 303	mm
+T41	Eq-Value 62 63	1
+T42	Eq-Value 103 107	2016
+T43	Eq-Value 299 300	3
+T44	Eq-Value 387 388	1
+T45	Eq-Value 391 392	0
+T46	Eq-Value 457 459	70
+T47	Eq-Value 652 654	12
+T48	Eq-Value 827 829	20
+T49	Eq-Value 841 842	4
+T50	Eq-Value 895 896	2
+T51	Eq-Value 965 966	2
+T52	Eq-Value 1021 1022	2
+T53	Eq-Value 1092 1093	6
+T54	Eq-Comparison 298 303	≥3 mm
+E27	Eq-Comparison:T54 Operator:T28 Unit:T40 Value:T43
+T55	Eq-Comparison 387 390	1 ≥
+E28	Eq-Comparison:T55 Operator:T30 Value:T44
+T56	Eq-Comparison 455 459	≥ 70
+E29	Eq-Comparison:T56 Operator:T31 Value:T46
+T57	Eq-Comparison 827 836	20 within
+E30	Eq-Comparison:T57 Operator:T32 Value:T48
+T58	Eq-Comparison 1094 1102	previous
+E31	Eq-Comparison:T58 Temporal-Period:T59
+T59	Eq-Temporal-Period 1094 1102	previous
+A13	Eq-Temporal-Period-Value T59 past
+T60	Eq-Comparison 1116 1122	Active
+E32	Eq-Comparison:T60 Temporal-Period:T61
+T61	Eq-Temporal-Period 1116 1122	Active
+A14	Eq-Temporal-Period-Value T61 present
+T62	Eq-Comparison 607 612	using
+E33	Eq-Comparison:T62 Temporal-Period:T63
+T63	Eq-Temporal-Period 607 612	using
+A15	Eq-Temporal-Period-Value T63 present

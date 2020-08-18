@@ -1,0 +1,70 @@
+T1	Procedure 25 48	Gynecological procedure
+T2	Procedure-Name 25 48	Gynecological procedure
+E1	Procedure:T1 Name:T2
+T3	Condition 258 281	cerebrovascular disease
+T4	Condition-Name 258 281	cerebrovascular disease
+E3	Condition:T3 Name:T4
+T5	Condition 232 254	Ischemic heart disease
+T6	Condition-Name 232 254	Ischemic heart disease
+E5	Condition:T5 Name:T6
+T7	Procedure 75 93	General anesthesia
+T8	Procedure-Name 75 93	General anesthesia
+E7	Procedure:T7 Name:T8
+T9	Condition 321 339	cardiac arrhythmia
+T10	Condition-Name 321 339	cardiac arrhythmia
+E9	Condition:T9 Name:T10
+T11	Condition 351 364	extrasystoles
+T12	Condition-Name 351 364	extrasystoles
+E11	Condition:T11 Name:T12
+T13	Condition 200 212	hypertension
+T14	Condition-Name 200 212	hypertension
+E13	Condition:T13 Name:T14
+T15	Condition 218 226	Diabetes
+T16	Condition-Name 218 226	Diabetes
+E15	Condition:T15 Name:T16
+T17	Condition 379 386	anaemia
+T18	Condition-Name 379 386	anaemia
+E17	Condition:T17 Name:T18
+T19	Condition 558 579	Illicit substance use
+T20	Condition-Name 558 579	Illicit substance use
+E19	Condition:T19 Name:T20
+T21	Condition 441 456	hepatic disease
+T22	Condition-Name 441 456	hepatic disease
+E21	Condition:T21 Name:T22
+T23	Observation 585 588	BMI
+T24	Observation-Name 585 588	BMI
+E23	Observation:T23 Name:T24
+A1	Observation-Type-Value T24 vital
+T25	Eq-Operator 131 132	<
+A2	Eq-Operator-Value T25 LT
+T26	Eq-Operator 146 147	<
+A3	Eq-Operator-Value T26 LT
+T27	Eq-Operator 589 590	<
+A4	Eq-Operator-Value T27 LT
+T28	Eq-Operator 596 597	>
+A5	Eq-Operator-Value T28 GT
+T29	Eq-Temporal-Unit 64 69	years
+A6	Eq-Temporal-Unit-Value T29 year
+T30	Eq-Unit 137 139	mm
+T31	Eq-Unit 600 605	kg/m2
+T32	Age 54 57	Age
+E24	Age:T32
+T33	Eq-Operator 60 61	-
+A7	Eq-Operator-Value T33 BETWEEN
+T34	Eq-Value 58 60	18
+T35	Eq-Value 61 63	50
+T36	Eq-Value 133 136	150
+T37	Eq-Value 148 151	100
+T38	Eq-Value 415 416	9
+T39	Eq-Value 590 592	20
+T40	Eq-Value 597 599	35
+T41	Eq-Comparison 131 139	< 150 mm
+E25	Eq-Comparison:T41 Operator:T25 Unit:T30 Value:T36
+T42	Eq-Comparison 146 151	< 100
+E26	Eq-Comparison:T42 Operator:T26 Value:T37
+T43	Eq-Comparison 589 592	<20
+E27	Eq-Comparison:T43 Operator:T27 Value:T39
+T44	Eq-Comparison 596 605	>35 kg/m2
+E28	Eq-Comparison:T44 Operator:T28 Unit:T31 Value:T40
+T45	Eq-Comparison 58 61	18-
+E29	Eq-Comparison:T45 Operator:T33 Value:T34

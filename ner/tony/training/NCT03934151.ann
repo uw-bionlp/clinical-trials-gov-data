@@ -1,0 +1,63 @@
+T1	Procedure 315 334	right hemicolectomy
+T2	Procedure-Name 315 334	right hemicolectomy
+E1	Procedure:T1 Name:T2
+T3	Procedure 275 283	elective
+T4	Procedure-Name 275 283	elective
+E3	Procedure:T3 Name:T4
+T5	Procedure 355 371	Thoracic Surgery
+T6	Procedure-Name 355 371	Thoracic Surgery
+E5	Procedure:T5 Name:T6
+T7	Procedure 546 577	Right laparotomic hemicolectomy
+T8	Procedure-Name 546 577	Right laparotomic hemicolectomy
+E7	Procedure:T7 Name:T8
+T9	Procedure 452 464	radiotherapy
+T10	Procedure-Name 452 464	radiotherapy
+E9	Procedure:T9 Name:T10
+T11	Observation 583 586	BMI
+T12	Observation-Name 583 586	BMI
+E11	Observation:T11 Name:T12
+A1	Observation-Type-Value T12 vital
+T13	Eq-Operator 586 587	>
+A2	Eq-Operator-Value T13 GT
+T14	Eq-Value 588 590	35
+T15	Eq-Comparison 586 590	> 35
+E12	Eq-Comparison:T15 Operator:T13 Value:T14
+T16	Modifier 284 296	laparoscopic
+E2	Modifier:T16 Modifies:E1
+T17	Modifier 300 314	video assisted
+E4	Modifier:T17 Modifies:T2
+T18	Or 297 299	or
+E6	Or:T18 Arg:E2 Arg2:E4
+T19	Condition 396 405	pathology
+E8	Condition:T19 Name:T20
+T20	Condition-Name 396 405	pathology
+T21	Modifier 389 395	bening
+E10	Modifier:T21 Modifies:E8
+T22	Modifier 376 385	malignant
+E13	Modifier:T22 Modifies:T20
+T23	Or 386 388	or
+E14	Or:T23 Arg:E13 Arg2:E10
+T24	Procedure 435 447	chemotherapy
+E15	Procedure:T24 Name:T25
+T25	Procedure-Name 435 447	chemotherapy
+T26	And 448 451	and
+E16	And:T26 Arg:E15 Arg2:E9
+T27	Temporal-Connection 429 434	prior
+E17	Temporal-Connection:T27 Arg:E15
+A3	Temporal-Connection-Type-Value E17 before
+T28	Condition 526 534	Pregnant
+E18	Condition:T28 Name:T29
+T29	Condition-Name 526 534	Pregnant
+T30	Life-Stage-And-Gender 535 540	women
+A4	Life-Stage-And-Gender-Type T30 adult
+T31	Life-Stage-And-Gender 535 540	women
+A5	Life-Stage-And-Gender-Type T31 female
+T32	Procedure 499 507	operated
+E19	Procedure:T32 Name:T33
+T33	Procedure-Name 499 507	operated
+T34	Encounter 511 520	emergency
+E20	Encounter:T34 Type:T35
+T35	Encounter-Type 511 520	emergency
+A6	Encounter-Type-Value T35 emergency
+T36	Negation 465 474	Exclusion
+E21	Negation:T36 

@@ -1,0 +1,23 @@
+T1	Condition 78 86	Vitiligo
+T2	Condition-Name 78 86	Vitiligo
+E1	Condition:T1 Name:T2
+T3	Condition 199 217	segmental vitiligo
+T4	Condition-Name 199 217	segmental vitiligo
+E3	Condition:T3 Name:T4
+T5	Eq-Temporal-Unit 31 36	years
+A1	Eq-Temporal-Unit-Value T5 year
+T6	Age 37 40	old
+E4	Age:T6 
+T7	Eq-Operator 27 28	-
+A2	Eq-Operator-Value T7 BETWEEN
+T8	Eq-Value 25 27	20
+T9	Eq-Value 28 30	75
+T10	Eq-Comparison 25 28	20-
+E5	Eq-Comparison:T10 Operator:T7 Value:T8
+T11	Condition 46 67	With skin type Ⅲ or Ⅳ
+E2	Condition:T11 Name:T12
+T12	Condition-Name 46 67	With skin type Ⅲ or Ⅳ
+T13	Study 242 257	clinical trials
+E6	Study:T13 
+T14	Negation 236 241	other
+E7	Negation:T14 Negates:E6

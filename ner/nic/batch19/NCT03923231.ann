@@ -1,0 +1,166 @@
+T3	Life-Stage-And-Gender 220 225	child
+A1	Life-Stage-And-Gender-Type T3 child
+T4	Observation 677 692	Body mass index
+T5	Observation-Name 677 692	Body mass index
+E4	Observation:T4 Name:T5 Eq-Comparison:E16 Eq-Comparison2:E17
+A2	Observation-Type-Value T5 vital
+T6	Life-Stage-And-Gender 722 727	Child
+A3	Life-Stage-And-Gender-Type T6 child
+T7	Procedure 477 490	ART treatment
+T8	Procedure-Name 477 490	ART treatment
+E7	Procedure:T7 Name:T8 Temporality:E26
+T9	Procedure 529 532	ART
+T10	Procedure-Name 529 532	ART
+E9	Procedure:T9 Name:T10 Temporality:E29
+T11	Eq-Operator 231 232	≥
+A4	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 263 264	≥
+A5	Eq-Operator-Value T12 GTEQ
+T14	Eq-Operator 656 657	>
+A7	Eq-Operator-Value T14 GT
+T15	Eq-Operator 693 694	>
+A8	Eq-Operator-Value T15 GT
+T16	Eq-Operator 700 701	<
+A9	Eq-Operator-Value T16 LT
+T17	Eq-Operator 747 748	<
+A10	Eq-Operator-Value T17 LT
+T18	Eq-Temporal-Unit 234 239	years
+A11	Eq-Temporal-Unit-Value T18 year
+T19	Eq-Temporal-Unit 266 271	years
+A12	Eq-Temporal-Unit-Value T19 year
+T20	Eq-Temporal-Unit 660 665	weeks
+A13	Eq-Temporal-Unit-Value T20 week
+T21	Eq-Temporal-Unit 751 756	years
+A14	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Unit 706 708	Kg
+T23	Age 226 230	aged
+E10	Age:T23 Eq-Comparison:E13
+T24	Age 258 262	aged
+E11	Age:T24 Eq-Comparison:E14
+T25	Age 742 746	aged
+E12	Age:T25 Eq-Comparison:E18
+T26	Eq-Value 232 233	7
+T27	Eq-Value 264 265	8
+T28	Eq-Value 657 659	20
+T29	Eq-Value 694 696	30
+T30	Eq-Value 701 703	18
+T31	Eq-Value 748 750	18
+T32	Eq-Comparison 231 239	≥7 years
+E13	Eq-Comparison:T32 Operator:T11 Temporal-Unit:T18 Value:T26
+T33	Eq-Comparison 263 271	≥8 years
+E14	Eq-Comparison:T33 Operator:T12 Temporal-Unit:T19 Value:T27
+T34	Eq-Comparison 656 665	>20 weeks
+E15	Eq-Comparison:T34 Operator:T14 Temporal-Unit:T20 Value:T28
+T35	Eq-Comparison 693 696	>30
+E16	Eq-Comparison:T35 Operator:T15 Value:T29
+T36	Eq-Comparison 700 711	<18.5 Kg/m2
+E17	Eq-Comparison:T36 Operator:T16 Value:T30 Per:T71
+T37	Eq-Comparison 747 756	<18 years
+E18	Eq-Comparison:T37 Operator:T17 Temporal-Unit:T21 Value:T31
+T38	Eq-Comparison 538 548	concurrent
+E19	Eq-Comparison:T38 Temporal-Period:T39
+T39	Eq-Temporal-Period 538 548	concurrent
+A15	Eq-Temporal-Period-Value T39 present
+T40	Location 241 253	South Africa
+A16	Location-Value T40 residence
+R1	If-Then Arg1:T40 Arg2:E10	
+T41	Or 255 257	or
+E2	Or:T41 Arg:E10 Arg2:E11
+T42	Location 273 279	Uganda
+A17	Location-Value T42 residence
+R2	If-Then Arg1:T42 Arg2:E11	
+T43	Encounter 384 390	visits
+E3	Encounter:T43 Type:T44 Temporality:E5
+T44	Encounter-Type 384 390	visits
+A18	Encounter-Type-Value T44 outpatient
+T45	Eq-Comparison 374 383	scheduled
+E5	Eq-Comparison:T45 Temporal-Period:T46
+T46	Eq-Temporal-Period 374 383	scheduled
+A19	Eq-Temporal-Period-Value T46 future
+T47	Observation 392 408	laboratory tests
+E6	Observation:T47 Name:T48
+T48	Observation-Name 392 408	laboratory tests
+A20	Observation-Type-Value T48 lab
+T1	Study 420 425	study
+E1	Study:T1 
+T2	And 410 413	and
+E8	And:T2 Arg:E6 Arg2:E1
+T49	Assertion 342 349	willing
+E20	Assertion:T49 Asserted:E3
+A21	Assertion-Type-Value E20 hypothetical
+T50	Assertion 354 358	able
+E21	Assertion:T50 Asserted:E3
+A22	Assertion-Type-Value E21 hypothetical
+T51	And 350 353	and
+E22	And:T51 Arg:E20 Arg2:E21
+T52	Condition 443 455	HIV-infected
+E23	Condition:T52 Name:T53
+T53	Condition-Name 443 455	HIV-infected
+T55	Condition 494 506	HIV-infected
+E25	Condition:T55 Name:T56
+T56	Condition-Name 494 506	HIV-infected
+T57	Eq-Comparison 457 466	receiving
+E26	Eq-Comparison:T57 Temporal-Period:T58
+T58	Eq-Temporal-Period 457 466	receiving
+A23	Eq-Temporal-Period-Value T58 present
+T59	Or 491 493	OR
+E27	Or:T59 Arg:E7 Arg2:E25
+T60	Modifier 517 528	second-line
+E28	Modifier:T60 Modifies:T10
+T54	Drug 467 470	ATV
+E24	Drug:T54 Name:T61
+T61	Drug-Name 467 470	ATV
+R3	Using Arg1:E7 Arg2:E24	
+T62	Eq-Comparison 507 516	receiving
+E29	Eq-Comparison:T62 Temporal-Period:T63
+T63	Eq-Temporal-Period 507 516	receiving
+A24	Eq-Temporal-Period-Value T63 present
+T64	And 533 537	with
+E30	And:T64 Arg:E9 Arg2:E32
+T65	Drug 549 558	rifamycin
+E31	Drug:T65 Name:T66
+T66	Drug-Name 549 558	rifamycin
+T67	Procedure 565 577	TB treatment
+E32	Procedure:T67 Name:T68 Temporality:E19
+T68	Procedure-Name 565 577	TB treatment
+R4	Using Arg1:E32 Arg2:E31	
+T13	Condition 646 654	Pregnant
+E33	Condition:T13 Name:T69 Duration:E15
+T69	Condition-Name 646 654	Pregnant
+T70	Or 697 699	or
+E34	Or:T70 Arg:E16 Arg2:E17
+T71	Eq-Unit 709 711	m2
+T72	Life-Stage-And-Gender 731 741	adolescent
+A6	Life-Stage-And-Gender-Type T72 child
+T73	Or 728 730	or
+E35	Or:T73 Arg:T6 Arg2:T72
+T74	Condition 816 825	condition
+E36	Condition:T74 
+T75	Modifier 806 815	obstetric
+E37	Modifier:T75 Modifies:E36
+T76	Modifier 791 802	psychiatric
+E38	Modifier:T76 Modifies:E36
+T77	Modifier 782 789	Medical
+E39	Modifier:T77 Modifies:E36
+T78	Or 803 805	or
+E40	Or:T78 Arg:E38 Arg2:E37
+T79	Study 865 869	stuy
+E41	Study:T79 Stability:T80
+T80	Stability 837 843	affect
+A25	Stability-Value T80 change
+R5	Caused-By Arg1:T80 Arg2:E36	
+T81	Location 955 961	Uganda
+A26	Location-Value T81 residence
+T82	Life-Stage-And-Gender 946 951	women
+A27	Life-Stage-And-Gender-Type T82 female
+T83	Condition 937 945	pregnant
+E42	Condition:T83 Name:T84
+T84	Condition-Name 937 945	pregnant
+R6	If-Then Arg1:T82 Arg2:E42	
+T85	And 952 954	in
+E43	And:T85 Arg:T82 Arg2:T81
+T86	Family-Member 973 980	husband
+E44	Family-Member:T86 
+A28	Family-Member-Type E44 spouse
+T87	And 963 968	where
+E45	And:T87 Arg:T81 Arg2:E44

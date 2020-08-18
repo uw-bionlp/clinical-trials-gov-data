@@ -1,0 +1,47 @@
+T1	Condition 127 161	Proliferative diabetic retinopathy
+T2	Condition-Name 127 161	Proliferative diabetic retinopathy
+E1	Condition:T1 Name:T2
+T3	Condition 212 228	Optic disc edema
+T4	Condition-Name 212 228	Optic disc edema
+E3	Condition:T3 Name:T4
+T5	Condition 162 170	Glaucoma
+T6	Condition-Name 162 170	Glaucoma
+E5	Condition:T5 Name:T6
+T7	Condition 174 182	glaucoma
+T8	Condition-Name 174 182	glaucoma
+E7	Condition:T7 Name:T8
+T9	Condition 229 236	Uveitis
+T10	Condition-Name 229 236	Uveitis
+E9	Condition:T9 Name:T10
+T11	Condition 255 279	Blurred of image clarity
+T12	Condition-Name 255 279	Blurred of image clarity
+E11	Condition:T11 Name:T12
+T13	Eq-Comparison 95 114	Previously received
+E12	Eq-Comparison:T13 Temporal-Period:T14
+T14	Eq-Temporal-Period 95 114	Previously received
+A1	Eq-Temporal-Period-Value T14 past
+T19	Procedure 53 75	intravitreal injection
+E2	Procedure:T19 Name:T20 Temporality:E4
+T20	Procedure-Name 53 75	intravitreal injection
+T21	Eq-Comparison 32 52	underwent first time
+E4	Eq-Comparison:T21 Temporal-Recency:T22 Temporal-Period:T17
+T22	Eq-Temporal-Recency 42 52	first time
+A4	Eq-Temporal-Recency-Value T22 first-time
+T23	Procedure 119 126	surgery
+E6	Procedure:T23 Name:T24 Temporality:E12
+T24	Procedure-Name 119 126	surgery
+T17	Eq-Temporal-Period 32 41	underwent
+A5	Eq-Temporal-Period-Value T17 past
+T15	Assertion 183 192	suspicion
+E8	Assertion:T15 Asserted:E7 Asserted2:E5
+A2	Assertion-Type-Value E8 possible
+T16	Or 171 173	or
+E10	Or:T16 Arg:E5 Arg2:E7
+T18	Condition 193 211	Optic disc fatigue
+E13	Condition:T18 Name:T25
+T25	Condition-Name 193 211	Optic disc fatigue
+T26	Condition 241 254	media opacity
+E14	Condition:T26 Name:T27
+T27	Condition-Name 241 254	media opacity
+T28	Or 237 240	and
+E15	Or:T28 Arg:E9 Arg2:E14

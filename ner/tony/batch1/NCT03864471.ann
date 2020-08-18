@@ -1,0 +1,21 @@
+T3	Condition 288 296	dementia
+T4	Condition-Name 288 296	dementia
+E3	Condition:T3 Name:T4
+T5	Eq-Temporal-Unit 63 69	months
+A1	Eq-Temporal-Unit-Value T5 month
+T6	Eq-Temporal-Unit 83 88	years
+A2	Eq-Temporal-Unit-Value T6 year
+T7	Age 89 92	old
+E4	Age:T7 
+T8	Eq-Value 80 82	65
+T9	Language 123 131	Mandarin
+T10	Language 135 144	Taiwanese
+T1	Observation 166 214	High-need Community Older Adults Screening Scale
+E1	Observation:T1 Name:T2
+T2	Observation-Name 166 214	High-need Community Older Adults Screening Scale
+A3	Observation-Type-Value T2 clinical-score
+T11	Observation 216 222	HCOASS
+E2	Observation:T11 Name:T12
+T12	Observation-Name 216 222	HCOASS
+A4	Observation-Type-Value T12 clinical-score
+R1	Abbrev-Of Arg1:E2 Arg2:E1	

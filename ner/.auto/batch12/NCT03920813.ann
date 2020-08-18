@@ -1,0 +1,46 @@
+T1	Procedure 238 257	maintenance therapy
+T2	Procedure-Name 238 257	maintenance therapy
+E1	Procedure:T1 Name:T2
+T3	Procedure 132 144	chemotherapy
+T4	Procedure-Name 132 144	chemotherapy
+E3	Procedure:T3 Name:T4
+T5	Procedure 189 201	chemotherapy
+T6	Procedure-Name 189 201	chemotherapy
+E5	Procedure:T5 Name:T6
+T7	Life-Stage-And-Gender 353 363	Children's
+A1	Life-Stage-And-Gender-Type T7 child
+T8	Language 345 352	Chinese
+T9	Eq-Operator 283 284	>
+A2	Eq-Operator-Value T9 GT
+T10	Eq-Operator 311 312	≥
+A3	Eq-Operator-Value T10 GTEQ
+T11	Eq-Operator 490 491	≥
+A4	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 513 514	<
+A5	Eq-Operator-Value T12 LT
+T13	Eq-Operator 556 557	≥
+A6	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 286 291	weeks
+A7	Eq-Temporal-Unit-Value T14 week
+T15	Eq-Temporal-Unit 315 321	months
+A8	Eq-Temporal-Unit-Value T15 month
+T16	Age 509 512	age
+E6	Age:T16
+T17	Eq-Value 277 278	6
+T18	Eq-Value 284 285	4
+T19	Eq-Value 313 314	6
+T20	Eq-Value 393 397	2015
+T21	Eq-Value 492 493	1
+T22	Eq-Value 498 500	46
+T23	Eq-Value 515 516	6
+T24	Eq-Value 558 561	300
+T25	Eq-Comparison 283 291	>4 weeks
+E7	Eq-Comparison:T25 Operator:T9 Temporal-Unit:T14 Value:T18
+T26	Eq-Comparison 311 321	≥ 6 months
+E8	Eq-Comparison:T26 Operator:T10 Temporal-Unit:T15 Value:T19
+T27	Eq-Comparison 490 493	≥ 1
+E9	Eq-Comparison:T27 Operator:T11 Value:T21
+T28	Eq-Comparison 513 516	< 6
+E10	Eq-Comparison:T28 Operator:T12 Value:T23
+T29	Eq-Comparison 556 561	≥ 300
+E11	Eq-Comparison:T29 Operator:T13 Value:T24

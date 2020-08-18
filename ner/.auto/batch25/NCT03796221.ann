@@ -1,0 +1,46 @@
+T1	Condition 379 397	endocrine disorder
+T2	Condition-Name 379 397	endocrine disorder
+E1	Condition:T1 Name:T2
+T3	Condition 72 89	pediatric obesity
+T4	Condition-Name 72 89	pediatric obesity
+E3	Condition:T3 Name:T4
+T5	Condition 351 367	genetic syndrome
+T6	Condition-Name 351 367	genetic syndrome
+E5	Condition:T5 Name:T6
+T7	Observation 113 128	body mass index
+T8	Observation-Name 113 128	body mass index
+E7	Observation:T7 Name:T8
+A1	Observation-Type-Value T8 vital
+T9	Language 267 274	Spanish
+T10	Condition 414 421	obesity
+T11	Condition-Name 414 421	obesity
+E10	Condition:T10 Name:T11
+T12	Life-Stage-And-Gender 102 107	Child
+A2	Life-Stage-And-Gender-Type T12 child
+T13	Life-Stage-And-Gender 339 344	Child
+A3	Life-Stage-And-Gender-Type T13 child
+T14	Life-Stage-And-Gender 427 432	Child
+A4	Life-Stage-And-Gender-Type T14 child
+T15	Observation 130 133	BMI
+T16	Observation-Name 130 133	BMI
+E15	Observation:T15 Name:T16
+A5	Observation-Type-Value T16 vital
+T17	Condition 180 183	sex
+T18	Condition-Name 180 183	sex
+E17	Condition:T17 Name:T18
+T19	Eq-Operator 135 147	greater than
+A6	Eq-Operator-Value T19 GT
+T20	Eq-Temporal-Unit 200 205	years
+A7	Eq-Temporal-Unit-Value T20 year
+T21	Eq-Unit 157 167	percentile
+T22	Age 172 175	age
+E18	Age:T22
+T23	Age 209 212	age
+E19	Age:T23
+T24	Eq-Operator 196 197	-
+A8	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 152 154	95
+T26	Eq-Value 195 196	4
+T27	Eq-Value 197 199	11
+T28	Eq-Comparison 195 197	4-
+E20	Eq-Comparison:T28 Operator:T24 Value:T26

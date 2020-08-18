@@ -1,0 +1,31 @@
+T1	Procedure 275 294	regional anesthesia
+T2	Procedure-Name 275 294	regional anesthesia
+E1	Procedure:T1 Name:T2
+T3	Condition 437 456	renal insufficiency
+T4	Condition-Name 437 456	renal insufficiency
+E3	Condition:T3 Name:T4
+T5	Procedure 99 117	general anesthesia
+T6	Procedure-Name 99 117	general anesthesia
+E5	Procedure:T5 Name:T6
+T7	Procedure 233 249	local anesthetic
+T8	Procedure-Name 233 249	local anesthetic
+E7	Procedure:T7 Name:T8
+T9	Procedure 66 81	cardiac surgery
+T10	Procedure-Name 66 81	cardiac surgery
+E9	Procedure:T9 Name:T10
+T11	Condition 348 360	coagulopathy
+T12	Condition-Name 348 360	coagulopathy
+E11	Condition:T11 Name:T12
+T13	Procedure 51 61	sternotomy
+T14	Procedure-Name 51 61	sternotomy
+E13	Procedure:T13 Name:T14
+T15	Procedure 375 385	hemostasis
+T16	Procedure-Name 375 385	hemostasis
+E15	Procedure:T15 Name:T16
+T17	Life-Stage-And-Gender 419 424	Child
+A1	Life-Stage-And-Gender-Type T17 child
+T18	Eq-Operator 461 462	<
+A2	Eq-Operator-Value T18 LT
+T19	Eq-Value 462 464	30
+T20	Eq-Comparison 461 464	<30
+E16	Eq-Comparison:T20 Operator:T18 Value:T19

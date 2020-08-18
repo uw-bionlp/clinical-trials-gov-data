@@ -1,0 +1,77 @@
+T1	Condition 360 375	Crohn's Disease
+T2	Condition-Name 360 375	Crohn's Disease
+E1	Condition:T1 Name:T2
+T3	Condition 407 422	bowel disorders
+T4	Condition-Name 407 422	bowel disorders
+E3	Condition:T3 Name:T4
+T5	Procedure 926 939	minor surgery
+T6	Procedure-Name 926 939	minor surgery
+E5	Procedure:T5 Name:T6
+T7	Condition 1012 1022	infectious
+T8	Condition-Name 1012 1022	infectious
+E7	Condition:T7 Name:T8
+T9	Procedure 689 698	therapies
+T10	Procedure-Name 689 698	therapies
+E9	Procedure:T9 Name:T10
+T11	Condition 1001 1010	endocrine
+T12	Condition-Name 1001 1010	endocrine
+E11	Condition:T11 Name:T12
+T13	Condition 1087 1095	disorder
+T14	Condition-Name 1087 1095	disorder
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 255 256	≥
+A1	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 270 271	≥
+A2	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 1282 1283	≤
+A3	Eq-Operator-Value T17 LTEQ
+T18	Eq-Temporal-Unit 68 74	months
+A4	Eq-Temporal-Unit-Value T18 month
+T19	Eq-Temporal-Unit 273 278	weeks
+A5	Eq-Temporal-Unit-Value T19 week
+T20	Eq-Temporal-Unit 1286 1291	weeks
+A6	Eq-Temporal-Unit-Value T20 week
+T21	Eq-Unit 129 131	cm
+T22	Eq-Value 66 67	3
+T23	Eq-Value 126 128	15
+T24	Eq-Value 256 257	2
+T25	Eq-Value 271 272	4
+T26	Eq-Value 507 508	6
+T27	Eq-Value 626 629	506
+T28	Eq-Value 723 725	12
+T29	Eq-Value 732 734	23
+T30	Eq-Value 1283 1285	12
+T31	Eq-Comparison 255 257	≥2
+E14	Eq-Comparison:T31 Operator:T15 Value:T24
+T32	Eq-Comparison 270 278	≥4 weeks
+E15	Eq-Comparison:T32 Operator:T16 Temporal-Unit:T19 Value:T25
+T33	Eq-Comparison 1282 1291	≤12 weeks
+E16	Eq-Comparison:T33 Operator:T17 Temporal-Unit:T20 Value:T30
+T34	Eq-Comparison 178 184	active
+E17	Eq-Comparison:T34 Temporal-Period:T35
+T35	Eq-Temporal-Period 178 184	active
+A7	Eq-Temporal-Period-Value T35 present
+T36	Eq-Comparison 832 839	History
+E18	Eq-Comparison:T36 Temporal-Period:T37
+T37	Eq-Temporal-Period 832 839	History
+A8	Eq-Temporal-Period-Value T37 past
+T38	Eq-Comparison 75 80	prior
+E19	Eq-Comparison:T38 Temporal-Period:T39
+T39	Eq-Temporal-Period 75 80	prior
+A9	Eq-Temporal-Period-Value T39 past
+T40	Eq-Comparison 446 451	prior
+E20	Eq-Comparison:T40 Temporal-Period:T41
+T41	Eq-Temporal-Period 446 451	prior
+A10	Eq-Temporal-Period-Value T41 past
+T42	Eq-Comparison 843 848	prior
+E21	Eq-Comparison:T42 Temporal-Period:T43
+T43	Eq-Temporal-Period 843 848	prior
+A11	Eq-Temporal-Period-Value T43 past
+T44	Eq-Comparison 946 951	Prior
+E22	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 946 951	Prior
+A12	Eq-Temporal-Period-Value T45 past
+T46	Eq-Comparison 1292 1297	prior
+E23	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 1292 1297	prior
+A13	Eq-Temporal-Period-Value T47 past

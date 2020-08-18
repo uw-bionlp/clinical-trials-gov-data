@@ -1,0 +1,89 @@
+T1	Procedure 608 626	protocol treatment
+T2	Procedure-Name 608 626	protocol treatment
+E1	Procedure:T1 Name:T2
+T3	Language 731 734	AST
+T4	Language 739 742	ALT
+T5	Condition 877 898	hepatitis C infection
+T6	Condition-Name 877 898	hepatitis C infection
+E5	Condition:T5 Name:T6
+T7	Condition 839 852	HIV infection
+T8	Condition-Name 839 852	HIV infection
+E7	Condition:T7 Name:T8
+T9	Condition 862 873	hepatitis B
+T10	Condition-Name 862 873	hepatitis B
+E9	Condition:T9 Name:T10
+T11	Condition 1180 1195	cardiac disease
+T12	Condition-Name 1180 1195	cardiac disease
+E11	Condition:T11 Name:T12
+T13	Procedure 1404 1426	solid organ transplant
+T14	Procedure-Name 1404 1426	solid organ transplant
+E13	Procedure:T13 Name:T14
+T15	Condition 1329 1349	Psychiatric disorder
+T16	Condition-Name 1329 1349	Psychiatric disorder
+E15	Condition:T15 Name:T16
+T17	Condition 1514 1531	immunosuppression
+T18	Condition-Name 1514 1531	immunosuppression
+E17	Condition:T17 Name:T18
+T19	Procedure 1537 1544	therapy
+T20	Procedure-Name 1537 1544	therapy
+E19	Procedure:T19 Name:T20
+T21	Condition 1532 1536	GVHD
+T22	Condition-Name 1532 1536	GVHD
+E21	Condition:T21 Name:T22
+T23	Condition 1449 1452	SCT
+T24	Condition-Name 1449 1452	SCT
+E23	Condition:T23 Name:T24
+T25	Eq-Operator 455 456	≤
+A1	Eq-Operator-Value T25 LTEQ
+T26	Eq-Operator 464 470	within
+A2	Eq-Operator-Value T26 LTEQ
+T27	Eq-Operator 576 577	≤
+A3	Eq-Operator-Value T27 LTEQ
+T28	Eq-Operator 674 675	≤
+A4	Eq-Operator-Value T28 LTEQ
+T29	Eq-Operator 714 715	≥
+A5	Eq-Operator-Value T29 GTEQ
+T30	Eq-Operator 743 744	≤
+A6	Eq-Operator-Value T30 LTEQ
+T31	Eq-Operator 770 771	≤
+A7	Eq-Operator-Value T31 LTEQ
+T32	Eq-Operator 999 1005	within
+A8	Eq-Operator-Value T32 LTEQ
+T33	Eq-Operator 1281 1287	within
+A9	Eq-Operator-Value T33 LTEQ
+T34	Eq-Temporal-Unit 474 478	days
+A10	Eq-Temporal-Unit-Value T34 day
+T35	Eq-Temporal-Unit 1008 1012	days
+A11	Eq-Temporal-Unit-Value T35 day
+T36	Eq-Temporal-Unit 1290 1295	years
+A12	Eq-Temporal-Unit-Value T36 year
+T37	Eq-Unit 345 347	CM
+T38	Eq-Value 129 130	1
+T39	Eq-Value 212 213	5
+T40	Eq-Value 457 460	200
+T41	Eq-Value 471 473	10
+T42	Eq-Value 578 581	200
+T43	Eq-Value 676 677	2
+T44	Eq-Value 716 718	50
+T45	Eq-Value 745 746	3
+T46	Eq-Value 772 773	3
+T47	Eq-Value 1006 1007	7
+T48	Eq-Value 1288 1289	2
+T49	Eq-Comparison 455 460	≤ 200
+E24	Eq-Comparison:T49 Operator:T25 Value:T40
+T50	Eq-Comparison 464 478	within 10 days
+E25	Eq-Comparison:T50 Operator:T26 Temporal-Unit:T34 Value:T41
+T51	Eq-Comparison 576 581	≤ 200
+E26	Eq-Comparison:T51 Operator:T27 Value:T42
+T52	Eq-Comparison 674 677	≤ 2
+E27	Eq-Comparison:T52 Operator:T28 Value:T43
+T53	Eq-Comparison 714 718	≥ 50
+E28	Eq-Comparison:T53 Operator:T29 Value:T44
+T54	Eq-Comparison 743 746	≤ 3
+E29	Eq-Comparison:T54 Operator:T30 Value:T45
+T55	Eq-Comparison 770 773	≤ 3
+E30	Eq-Comparison:T55 Operator:T31 Value:T46
+T56	Eq-Comparison 999 1012	within 7 days
+E31	Eq-Comparison:T56 Operator:T32 Temporal-Unit:T35 Value:T47
+T57	Eq-Comparison 1281 1295	within 2 years
+E32	Eq-Comparison:T57 Operator:T33 Temporal-Unit:T36 Value:T48

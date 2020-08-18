@@ -1,0 +1,47 @@
+T1	Condition 461 485	Cerebrovascular accident
+T2	Condition-Name 461 485	Cerebrovascular accident
+E1	Condition:T1 Name:T2
+T3	Procedure 231 253	surgical interventions
+T4	Procedure-Name 231 253	surgical interventions
+E3	Procedure:T3 Name:T4
+T5	Procedure 273 294	total hip replacement
+T6	Procedure-Name 273 294	total hip replacement
+E5	Procedure:T5 Name:T6
+T7	Condition 518 539	myocardial infarction
+T8	Condition-Name 518 539	myocardial infarction
+E7	Condition:T7 Name:T8
+T9	Condition 544 564	deep vein thrombosis
+T10	Condition-Name 544 564	deep vein thrombosis
+E9	Condition:T9 Name:T10
+T11	Procedure 255 271	hemiarthroplasty
+T12	Procedure-Name 255 271	hemiarthroplasty
+E11	Procedure:T11 Name:T12
+T13	Condition 501 517	coronary disease
+T14	Condition-Name 501 517	coronary disease
+E13	Condition:T13 Name:T14
+T15	Procedure 404 413	reduction
+T16	Procedure-Name 404 413	reduction
+E15	Procedure:T15 Name:T16
+T17	Procedure 320 328	fixation
+T18	Procedure-Name 320 328	fixation
+E17	Procedure:T17 Name:T18
+T19	Procedure 348 356	fixation
+T20	Procedure-Name 348 356	fixation
+E19	Procedure:T19 Name:T20
+T21	Condition 651 659	disorder
+T22	Condition-Name 651 659	disorder
+E21	Condition:T21 Name:T22
+T23	Condition 486 492	stroke
+T24	Condition-Name 486 492	stroke
+E23	Condition:T23 Name:T24
+T25	Eq-Operator 72 73	>
+A1	Eq-Operator-Value T25 GT
+T26	Eq-Operator 118 124	within
+A2	Eq-Operator-Value T26 GTEQ
+T27	Eq-Operator 582 588	within
+A3	Eq-Operator-Value T27 GTEQ
+T28	Eq-Temporal-Unit 85 90	years
+A4	Eq-Temporal-Unit-Value T28 year
+T29	Age 68 71	Age
+E24	Age:T29
+T30	Eq-Value 82 84	65

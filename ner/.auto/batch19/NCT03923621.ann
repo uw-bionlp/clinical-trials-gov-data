@@ -1,0 +1,21 @@
+T1	Procedure 97 118	incision and drainage
+T2	Procedure-Name 97 118	incision and drainage
+E1	Procedure:T1 Name:T2
+T3	Condition 42 59	Pilonidal disease
+T4	Condition-Name 42 59	Pilonidal disease
+E3	Condition:T3 Name:T4
+T5	Life-Stage-And-Gender 262 268	adults
+A1	Life-Stage-And-Gender-Type T5 adult
+T6	Eq-Operator 60 61	<
+A2	Eq-Operator-Value T6 LT
+T7	Eq-Operator 184 185	>
+A3	Eq-Operator-Value T7 GT
+T8	Eq-Temporal-Unit 140 145	years
+A4	Eq-Temporal-Unit-Value T8 year
+T9	Eq-Temporal-Unit 240 245	years
+A5	Eq-Temporal-Unit-Value T9 year
+T10	Eq-Value 61 62	3
+T11	Eq-Value 137 139	16
+T12	Eq-Value 237 239	16
+T13	Eq-Comparison 60 62	<3
+E4	Eq-Comparison:T13 Operator:T6 Value:T10

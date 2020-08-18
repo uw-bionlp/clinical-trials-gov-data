@@ -1,0 +1,71 @@
+T1	Condition 579 605	inflammatory bowel disease
+T2	Condition-Name 579 605	inflammatory bowel disease
+E1	Condition:T1 Name:T2
+T3	Condition 288 313	gastro-oesophageal reflux
+T4	Condition-Name 288 313	gastro-oesophageal reflux
+E3	Condition:T3 Name:T4
+T5	Condition 638 661	cardiopulmonary disease
+T6	Condition-Name 638 661	cardiopulmonary disease
+E5	Condition:T5 Name:T6
+T7	Procedure 611 632	immunological therapy
+T8	Procedure-Name 611 632	immunological therapy
+E7	Procedure:T7 Name:T8
+T9	Condition 265 282	malignant disease
+T10	Condition-Name 265 282	malignant disease
+E9	Condition:T9 Name:T10
+T11	Condition 556 573	diabetes mellitus
+T12	Condition-Name 556 573	diabetes mellitus
+E11	Condition:T11 Name:T12
+T13	Observation 351 366	body mass index
+T14	Observation-Name 351 366	body mass index
+E13	Observation:T13 Name:T14
+A1	Observation-Type-Value T14 vital
+T15	Condition 761 775	mental disease
+T16	Condition-Name 761 775	mental disease
+E15	Condition:T15 Name:T16
+T17	Procedure 160 173	colon surgery
+T18	Procedure-Name 160 173	colon surgery
+E17	Procedure:T17 Name:T18
+T19	Procedure 537 550	colon surgery
+T20	Procedure-Name 537 550	colon surgery
+E19	Procedure:T19 Name:T20
+T21	Condition 693 706	renal disease
+T22	Condition-Name 693 706	renal disease
+E21	Condition:T21 Name:T22
+T23	Procedure 335 345	aspiration
+T24	Procedure-Name 335 345	aspiration
+E23	Procedure:T23 Name:T24
+T25	Condition 826 836	drug abuse
+T26	Condition-Name 826 836	drug abuse
+E25	Condition:T25 Name:T26
+T27	Condition 746 755	pregnancy
+T28	Condition-Name 746 755	pregnancy
+E27	Condition:T27 Name:T28
+T29	Condition 221 226	colon
+T30	Condition-Name 221 226	colon
+E29	Condition:T29 Name:T30
+T31	Procedure 155 159	open
+T32	Procedure-Name 155 159	open
+E31	Procedure:T31 Name:T32
+T33	Eq-Operator 376 385	and above
+A2	Eq-Operator-Value T33 GTEQ
+T34	Eq-Operator 414 415	≥
+A3	Eq-Operator-Value T34 GTEQ
+T35	Eq-Temporal-Unit 95 100	years
+A4	Eq-Temporal-Unit-Value T35 year
+T36	Eq-Temporal-Unit 108 113	years
+A5	Eq-Temporal-Unit-Value T36 year
+T37	Eq-Unit 389 394	kg/m2
+T38	Age 79 83	aged
+E32	Age:T38
+T39	Eq-Value 92 94	18
+T40	Eq-Value 105 107	70
+T41	Eq-Value 373 375	20
+T42	Eq-Value 386 388	30
+T43	Eq-Value 415 416	3
+T44	Eq-Value 506 510	2002
+T45	Eq-Value 516 520	2002
+T46	Eq-Comparison 373 385	20 and above
+E33	Eq-Comparison:T46 Operator:T33 Value:T41
+T47	Eq-Comparison 414 416	≥3
+E34	Eq-Comparison:T47 Operator:T34 Value:T43

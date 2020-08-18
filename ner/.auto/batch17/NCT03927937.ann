@@ -1,0 +1,22 @@
+T1	Condition 111 127	systemic disease
+T2	Condition-Name 111 127	systemic disease
+E1	Condition:T1 Name:T2
+T3	Condition 226 242	systemic disease
+T4	Condition-Name 226 242	systemic disease
+E3	Condition:T3 Name:T4
+T5	Condition 192 201	Pregnancy
+T6	Condition-Name 192 201	Pregnancy
+E5	Condition:T5 Name:T6
+T7	Condition 202 211	Lactation
+T8	Condition-Name 202 211	Lactation
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 80 89	less than
+A1	Eq-Operator-Value T9 LT
+T10	Eq-Operator 142 151	Less than
+A2	Eq-Operator-Value T10 LT
+T11	Eq-Value 90 92	30
+T12	Eq-Value 152 154	20
+T13	Eq-Comparison 80 92	less than 30
+E8	Eq-Comparison:T13 Operator:T9 Value:T11
+T14	Eq-Comparison 142 154	Less than 20
+E9	Eq-Comparison:T14 Operator:T10 Value:T12

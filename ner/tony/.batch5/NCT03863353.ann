@@ -1,0 +1,22 @@
+T1	Procedure 39 66	elective surgical procedure
+T2	Procedure-Name 39 66	elective surgical procedure
+E1	Procedure:T1 Name:T2
+T3	Condition 169 177	recovery
+T4	Condition-Name 169 177	recovery
+E3	Condition:T3 Name:T4
+T5	Condition 251 271	Cognitive impairment
+T6	Condition-Name 251 271	Cognitive impairment
+E5	Condition:T5 Name:T6
+T7	Procedure 227 245	elective procedure
+T8	Procedure-Name 227 245	elective procedure
+E7	Procedure:T7 Name:T8
+T9	Condition 348 353	Liver
+T10	Condition-Name 348 353	Liver
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 506 507	<
+A1	Eq-Operator-Value T11 LT
+T12	Eq-Temporal-Unit 509 514	weeks
+A2	Eq-Temporal-Unit-Value T12 week
+T13	Eq-Value 507 508	2
+T14	Eq-Comparison 506 514	<2 weeks
+E10	Eq-Comparison:T14 Operator:T11 Temporal-Unit:T12 Value:T13

@@ -1,0 +1,64 @@
+T1	Condition 309 334	Peripheral artery disease
+T2	Condition-Name 309 334	Peripheral artery disease
+E1	Condition:T1 Name:T2
+T3	Condition 128 150	Secondary hypertension
+T4	Condition-Name 128 150	Secondary hypertension
+E3	Condition:T3 Name:T4
+T5	Condition 156 178	Hypertensive emergency
+T6	Condition-Name 156 178	Hypertensive emergency
+E5	Condition:T5 Name:T6
+T7	Condition 266 287	Myocardial infarction
+T8	Condition-Name 266 287	Myocardial infarction
+E7	Condition:T7 Name:T8
+T9	Condition 203 216	heart failure
+T10	Condition-Name 203 216	heart failure
+E9	Condition:T9 Name:T10
+T11	Condition 39 51	hypertension
+T12	Condition-Name 39 51	hypertension
+E11	Condition:T11 Name:T12
+T13	Condition 368 378	arrhythmia
+T14	Condition-Name 368 378	arrhythmia
+E13	Condition:T13 Name:T14
+T15	Language 223 226	III
+T16	Condition 385 408	ventricular tachycardia
+T17	Condition-Name 385 408	ventricular tachycardia
+E16	Condition:T16 Name:T17
+T18	Condition 427 446	atrial fibrillation
+T19	Condition-Name 427 446	atrial fibrillation
+E18	Condition:T18 Name:T19
+T20	Condition 816 834	alcohol dependence
+T21	Condition-Name 816 834	alcohol dependence
+E20	Condition:T20 Name:T21
+T22	Condition 469 478	Pregnancy
+T23	Condition-Name 469 478	Pregnancy
+E22	Condition:T22 Name:T23
+T24	Condition 490 495	labor
+T25	Condition-Name 490 495	labor
+E24	Condition:T24 Name:T25
+T26	Eq-Operator 288 294	within
+A1	Eq-Operator-Value T26 LTEQ
+T27	Eq-Operator 335 341	within
+A2	Eq-Operator-Value T27 LTEQ
+T28	Eq-Operator 632 647	within the past
+A3	Eq-Operator-Value T28 LTEQ
+T29	Eq-Operator 835 841	within
+A4	Eq-Operator-Value T29 LTEQ
+T30	Eq-Temporal-Unit 254 260	months
+A5	Eq-Temporal-Unit-Value T30 month
+T31	Eq-Temporal-Unit 297 303	months
+A6	Eq-Temporal-Unit-Value T31 month
+T32	Eq-Temporal-Unit 344 350	months
+A7	Eq-Temporal-Unit-Value T32 month
+T33	Eq-Temporal-Unit 844 850	months
+A8	Eq-Temporal-Unit-Value T33 month
+T34	Eq-Value 96 97	1
+T35	Eq-Value 252 253	6
+T36	Eq-Value 295 296	6
+T37	Eq-Value 342 343	6
+T38	Eq-Value 842 843	6
+T39	Eq-Comparison 288 303	within 6 months
+E25	Eq-Comparison:T39 Operator:T26 Temporal-Unit:T31 Value:T36
+T40	Eq-Comparison 335 350	within 6 months
+E26	Eq-Comparison:T40 Operator:T27 Temporal-Unit:T32 Value:T37
+T41	Eq-Comparison 835 850	within 6 months
+E27	Eq-Comparison:T41 Operator:T29 Temporal-Unit:T33 Value:T38

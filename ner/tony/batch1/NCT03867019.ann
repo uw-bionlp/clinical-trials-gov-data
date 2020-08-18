@@ -1,0 +1,146 @@
+T1	Condition 371 380	nystagmus
+T2	Condition-Name 371 380	nystagmus
+E1	Condition:T1 Name:T2
+T3	Condition 145 152	Vertigo
+T4	Condition-Name 145 152	Vertigo
+E3	Condition:T3 Name:T4
+T5	Condition 34 38	BPPV
+T6	Condition-Name 34 38	BPPV
+E5	Condition:T5 Name:T6
+T7	Condition 64 68	BPPV
+T8	Condition-Name 64 68	BPPV
+E7	Condition:T7 Name:T8
+T11	Condition 485 492	Vertigo
+T12	Condition-Name 485 492	Vertigo
+E11	Condition:T11 Name:T12
+T13	Condition 399 403	BPPV
+T14	Condition-Name 399 403	BPPV
+E13	Condition:T13 Name:T14
+T15	Condition 571 591	Postural Hypotension
+T16	Condition-Name 571 591	Postural Hypotension
+E15	Condition:T15 Name:T16
+T17	Condition 598 619	Familial Dysautonomia
+T18	Condition-Name 598 619	Familial Dysautonomia
+E17	Condition:T17 Name:T18
+T19	Condition 626 645	Diabetic Neuropathy
+T20	Condition-Name 626 645	Diabetic Neuropathy
+E19	Condition:T19 Name:T20
+T21	Procedure 699 702	TBI
+T22	Procedure-Name 699 702	TBI
+E21	Procedure:T21 Name:T22
+T23	Condition 779 805	Central Positional Vertigo
+T24	Condition-Name 779 805	Central Positional Vertigo
+E23	Condition:T23 Name:T24
+T25	Condition 752 770	Multiple Sclerosis
+T26	Condition-Name 752 770	Multiple Sclerosis
+E25	Condition:T25 Name:T26
+T27	Condition 738 744	Stroke
+T28	Condition-Name 738 744	Stroke
+E27	Condition:T27 Name:T28
+T29	Condition 746 749	CVA
+T30	Condition-Name 746 749	CVA
+E29	Condition:T29 Name:T30
+T31	Condition 772 774	MS
+T32	Condition-Name 772 774	MS
+E31	Condition:T31 Name:T32
+T33	Condition 892 921	Vertebrobasilar Insufficiency
+T34	Condition-Name 892 921	Vertebrobasilar Insufficiency
+E33	Condition:T33 Name:T34
+T35	Condition 812 834	Coronary Heart Disease
+T36	Condition-Name 812 834	Coronary Heart Disease
+E35	Condition:T35 Name:T36
+T37	Condition 871 890	Cardiac arrhythmias
+T38	Condition-Name 871 890	Cardiac arrhythmias
+E37	Condition:T37 Name:T38
+T39	Condition 842 863	Cardiac Heart Failure
+T40	Condition-Name 842 863	Cardiac Heart Failure
+E39	Condition:T39 Name:T40
+T43	Condition 865 868	CHF
+T44	Condition-Name 865 868	CHF
+E43	Condition:T43 Name:T44
+T45	Condition 923 926	VBI
+T46	Condition-Name 923 926	VBI
+E45	Condition:T45 Name:T46
+T47	Condition 974 991	Anxiety Disorders
+T48	Condition-Name 974 991	Anxiety Disorders
+E47	Condition:T47 Name:T48
+T49	Condition 1081 1115	Superior Canal Dehiscence Syndrome
+T50	Condition-Name 1081 1115	Superior Canal Dehiscence Syndrome
+E49	Condition:T49 Name:T50
+T51	Condition 998 1017	Vestibular Migraine
+T52	Condition-Name 998 1017	Vestibular Migraine
+E51	Condition:T51 Name:T52
+T53	Condition 1019 1038	Vestibular Neuritis
+T54	Condition-Name 1019 1038	Vestibular Neuritis
+E53	Condition:T53 Name:T54
+T55	Condition 1268 1288	Vestibular disorders
+T56	Condition-Name 1268 1288	Vestibular disorders
+E55	Condition:T55 Name:T56
+T57	Condition 125 143	spinning sensation
+E2	Condition:T57 Name:T58
+T58	Condition-Name 125 143	spinning sensation
+R1	Equivalent-To Arg1:E2 Arg2:E3	
+T9	Observation 304 344	Positive Dix-Hallpike / Supine Roll Test
+E4	Observation:T9 Name:T10
+T10	Observation-Name 304 344	Positive Dix-Hallpike / Supine Roll Test
+A1	Observation-Type-Value T10 clinical-score
+T59	Condition 453 462	dizziness
+E6	Condition:T59 Name:T60
+T60	Condition-Name 453 462	dizziness
+T61	Condition 465 483	spinning sensation
+E8	Condition:T61 Name:T62
+T62	Condition-Name 465 483	spinning sensation
+R2	Equivalent-To Arg1:E8 Arg2:E11	
+R3	Equivalent-To Arg1:E6 Arg2:E11	
+T63	Negation 495 504	Exclusion
+E9	Negation:T63 
+T64	Condition 535 539	pain
+E10	Condition:T64 Name:T65
+T65	Condition-Name 535 539	pain
+T66	Study 554 564	assessment
+E12	Study:T66 
+T67	Temporal-Connection 540 553	in the day of
+E14	Temporal-Connection:T67 Arg:E10 Arg2:E12
+A2	Temporal-Connection-Type-Value E14 during
+T68	Condition 663 671	Whiplash
+E16	Condition:T68 Name:T69
+T69	Condition-Name 663 671	Whiplash
+T70	Condition 675 697	Traumatic Brain Injury
+E18	Condition:T70 Name:T71
+T71	Condition-Name 675 697	Traumatic Brain Injury
+T72	Or 672 674	or
+E20	Or:T72 Arg:E16 Arg2:E18
+R4	Abbrev-Of Arg1:E21 Arg2:E18	
+T73	Eq-Temporal-Period 704 720	in the last year
+A3	Eq-Temporal-Period-Value T73 recent
+T41	Condition 836 839	CHD
+E22	Condition:T41 Name:T42
+T42	Condition-Name 836 839	CHD
+R5	Abbrev-Of Arg1:E22 Arg2:E35	
+R6	Abbrev-Of Arg1:E43 Arg2:E39	
+R7	Abbrev-Of Arg1:E45 Arg2:E33	
+T74	Condition 1040 1056	Menier's Disease
+E24	Condition:T74 Name:T75
+T75	Condition-Name 1040 1056	Menier's Disease
+T76	Condition 1058 1079	Perilymphatic Fistula
+E26	Condition:T76 Name:T77
+T77	Condition-Name 1058 1079	Perilymphatic Fistula
+T78	Condition 1122 1140	Medical conditions
+E28	Condition:T78 Name:T79
+T79	Condition-Name 1122 1140	Medical conditions
+T80	Risk 1146 1155	high risk
+E30	Risk:T80 
+T81	Condition 1159 1170	subluxation
+E32	Condition:T81 Name:T82
+T82	Condition-Name 1159 1170	subluxation
+T83	Condition 1173 1211	dislocation of the Atlanto-axial joint
+E34	Condition:T83 Name:T84
+T84	Condition-Name 1173 1211	dislocation of the Atlanto-axial joint
+R8	Caused-By Arg1:E32 Arg2:E28	
+R9	Caused-By Arg1:E34 Arg2:E28	
+T85	Provider 1298 1325	Vestibular physiotherapists
+E36	Provider:T85 
+T86	Provider-Role 1298 1325	Vestibular physiotherapists
+T87	Provider 1218 1238	Health professionals
+E38	Provider:T87 Role:T88
+T88	Provider-Role 1218 1238	Health professionals

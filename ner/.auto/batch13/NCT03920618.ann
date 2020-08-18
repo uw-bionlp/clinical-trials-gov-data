@@ -1,0 +1,50 @@
+T1	Condition 508 546	Human immunodeficiency virus infection
+T2	Condition-Name 508 546	Human immunodeficiency virus infection
+E1	Condition:T1 Name:T2
+T3	Condition 568 587	deficiency diseases
+T4	Condition-Name 568 587	deficiency diseases
+E3	Condition:T3 Name:T4
+T5	Condition 611 630	autoimmune diseases
+T6	Condition-Name 611 630	autoimmune diseases
+E5	Condition:T5 Name:T6
+T7	Condition 407 421	liver diseases
+T8	Condition-Name 407 421	liver diseases
+E7	Condition:T7 Name:T8
+T9	Condition 479 488	Pregnancy
+T10	Condition-Name 479 488	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Condition 492 501	lactation
+T12	Condition-Name 492 501	lactation
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 87 88	>
+A1	Eq-Operator-Value T13 GT
+T14	Eq-Operator 166 167	>
+A2	Eq-Operator-Value T14 GT
+T15	Eq-Operator 231 232	<
+A3	Eq-Operator-Value T15 LT
+T16	Eq-Operator 277 278	>
+A4	Eq-Operator-Value T16 GT
+T17	Eq-Operator 349 357	the past
+A5	Eq-Operator-Value T17 GTEQ
+T18	Eq-Temporal-Unit 122 127	years
+A6	Eq-Temporal-Unit-Value T18 year
+T19	Age 104 107	Age
+E12	Age:T19
+T20	Eq-Operator 116 118	to
+A7	Eq-Operator-Value T20 BETWEEN
+T21	Eq-Value 89 90	0
+T22	Eq-Value 113 115	18
+T23	Eq-Value 119 121	55
+T24	Eq-Value 168 170	10
+T25	Eq-Value 233 235	40
+T26	Eq-Value 279 280	1
+T27	Eq-Comparison 87 90	> 0
+E13	Eq-Comparison:T27 Operator:T13 Value:T21
+T28	Eq-Comparison 166 170	> 10
+E14	Eq-Comparison:T28 Operator:T14 Value:T24
+T29	Eq-Comparison 231 235	< 40
+E15	Eq-Comparison:T29 Operator:T15 Value:T25
+T30	Eq-Comparison 277 280	> 1
+E16	Eq-Comparison:T30 Operator:T16 Value:T26
+T31	Eq-Comparison 113 118	18 to
+E17	Eq-Comparison:T31 Operator:T20 Value:T22

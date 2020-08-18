@@ -1,0 +1,155 @@
+T4	Eq-Operator 227 228	>
+A1	Eq-Operator-Value T4 GT
+T5	Eq-Operator 257 258	<
+A2	Eq-Operator-Value T5 LT
+T6	Eq-Operator 295 296	<
+A3	Eq-Operator-Value T6 LT
+T7	Eq-Operator 350 351	>
+A4	Eq-Operator-Value T7 GT
+T8	Eq-Temporal-Unit 39 44	years
+A5	Eq-Temporal-Unit-Value T8 year
+T9	Eq-Temporal-Unit 414 421	minutes
+A6	Eq-Temporal-Unit-Value T9 minute
+T10	Age 48 51	age
+E3	Age:T10 Eq-Comparison:E8
+T11	Eq-Operator 35 36	-
+A7	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Operator 466 467	-
+A8	Eq-Operator-Value T12 BETWEEN
+T13	Eq-Value 33 35	18
+T14	Eq-Value 36 38	85
+T15	Eq-Value 228 230	10
+T16	Eq-Value 259 261	90
+T17	Eq-Value 297 299	25
+T18	Eq-Value 351 353	15
+T19	Eq-Value 412 413	5
+T20	Eq-Value 465 466	1
+T21	Eq-Value 467 468	6
+T22	Eq-Comparison 227 238	>10 degrees
+E4	Eq-Comparison:T22 Operator:T4 Value:T15 Unit:T33
+T23	Eq-Comparison 257 269	< 90 degrees
+E5	Eq-Comparison:T23 Operator:T5 Value:T16 Unit:T35
+T24	Eq-Comparison 295 307	< 25 degrees
+E6	Eq-Comparison:T24 Operator:T6 Value:T17 Unit:T43
+T25	Eq-Comparison 350 361	>15 degrees
+E7	Eq-Comparison:T25 Operator:T7 Value:T18 Unit:T47
+T26	Eq-Comparison 25 44	Between 18-85 years
+E8	Eq-Comparison:T26 Operator:T11 Value:T13 Value2:T14
+T27	Eq-Comparison 465 474	1-6 hours
+E9	Eq-Comparison:T27 Operator:T12 Value:T20 Temporal-Unit:T52
+T28	Eq-Operator 25 32	Between
+A9	Eq-Operator-Value T28 BETWEEN
+T29	Condition 76 86	capable of
+E1	Condition:T29 Name:T30
+T30	Condition-Name 76 86	capable of
+T31	Observation 199 223	knee flexion contracture
+E10	Observation:T31 Name:T32 Eq-Comparison:E4
+T32	Observation-Name 199 223	knee flexion contracture
+T33	Eq-Unit 231 238	degrees
+T1	Observation 240 256	knee flexion ROM
+E11	Observation:T1 Name:T34 Eq-Comparison:E5
+T34	Observation-Name 240 256	knee flexion ROM
+A10	Observation-Type-Value T34 measurement
+T35	Eq-Unit 262 269	degrees
+T36	Modifier 87 94	walking
+E12	Modifier:T36 Modifies:T30
+T37	Modifier 96 123	ascending/descending stairs
+E13	Modifier:T37 Modifies:T30
+T38	Condition 139 197	full capability in lower extremity passive range of motion
+E14	Condition:T38 Name:T39
+T39	Condition-Name 139 197	full capability in lower extremity passive range of motion
+T40	And 134 138	with
+E15	And:T40 Arg:E1 Arg2:E14
+R1	Equivalent-To Arg1:E10 Arg2:E14	
+A11	Observation-Type-Value T32 measurement
+R2	Equivalent-To Arg1:E11 Arg2:E14	
+T41	Observation 271 294	hip flexion contracture
+E16	Observation:T41 Name:T42 Eq-Comparison:E6
+T42	Observation-Name 271 294	hip flexion contracture
+A12	Observation-Type-Value T42 measurement
+T43	Eq-Unit 300 307	degrees
+T44	Observation 313 346	ankle plantar flexion contracture
+E17	Observation:T44 Name:T45 Eq-Comparison:E7
+T45	Observation-Name 313 346	ankle plantar flexion contracture
+A13	Observation-Type-Value T45 measurement
+T46	And 309 312	and
+E18	And:T46 Arg:E16 Arg2:E17
+T47	Eq-Unit 354 361	degrees
+R3	Equivalent-To Arg1:E17 Arg2:E14	
+R4	Equivalent-To Arg1:E16 Arg2:E14	
+T2	Condition 386 398	able to walk
+E2	Condition:T2 Name:T3 Duration:E19
+T3	Condition-Name 386 398	able to walk
+T48	Eq-Comparison 403 421	at least 5 minutes
+E19	Eq-Comparison:T48 Operator:T49 Temporal-Unit:T9 Value:T19
+T49	Eq-Operator 403 411	at least
+A14	Eq-Operator-Value T49 GTEQ
+T50	Condition 438 457	able to participate
+E20	Condition:T50 Name:T51 Duration:E9
+T51	Condition-Name 438 457	able to participate
+T52	Eq-Temporal-Unit 469 474	hours
+A15	Eq-Temporal-Unit-Value T52 hour
+T53	And 422 425	and
+E21	And:T53 Arg:E2 Arg2:E20
+T54	Condition 563 579	able to transfer
+E22	Condition:T54 Name:T55
+T55	Condition-Name 563 579	able to transfer
+T56	Condition 581 593	sit-to-stand
+E23	Condition:T56 Name:T57
+T57	Condition-Name 581 593	sit-to-stand
+T58	Condition 598 610	stand-to-sit
+E24	Condition:T58 Name:T59
+T59	Condition-Name 598 610	stand-to-sit
+T60	And 594 597	and
+E25	And:T60 Arg:E23 Arg2:E24
+R5	Equivalent-To Arg1:E23 Arg2:E22	
+R6	Equivalent-To Arg1:E24 Arg2:E22	
+T61	Condition 659 667	ambulate
+E26	Condition:T61 Name:T62
+T62	Condition-Name 659 667	ambulate
+T63	Eq-Comparison 687 696	3 degrees
+E27	Eq-Comparison:T63 Value:T64 Unit:T65
+T64	Eq-Value 687 688	3
+T65	Eq-Unit 689 696	degrees
+T66	Modifier 668 685	over small slopes
+E28	Modifier:T66 Modifies:T62
+R7	Equivalent-To Arg1:E27 Arg2:E28	
+T67	Modifier 708 713	steps
+E29	Modifier:T67 
+T68	And 698 701	and
+E30	And:T68 Arg:E28 Arg2:E29
+T69	Eq-Comparison 715 722	6 steps
+E31	Eq-Comparison:T69 Value:T70 Unit:T71
+T70	Eq-Value 715 716	6
+T71	Eq-Unit 717 722	steps
+R8	Equivalent-To Arg1:E31 Arg2:E29	
+T72	Condition 761 780	neurological injury
+E32	Condition:T72 Name:T73 Temporality:E33
+T73	Condition-Name 761 780	neurological injury
+T74	Eq-Comparison 750 757	History
+E33	Eq-Comparison:T74 Temporal-Period:T75
+T75	Eq-Temporal-Period 750 757	History
+A16	Eq-Temporal-Period-Value T75 past
+T76	Condition 782 796	gait pathology
+E34	Condition:T76 Name:T77
+T77	Condition-Name 782 796	gait pathology
+T78	Condition 801 825	cardiovascular condition
+E35	Condition:T78 Name:T79
+T79	Condition-Name 801 825	cardiovascular condition
+T80	Or 798 800	or
+E36	Or:T80 Arg:E34 Arg2:E35
+T81	Condition 848 867	ability to ambulate
+E37	Condition:T81 Name:T82 Duration:E38 Stability:T86
+T82	Condition-Name 848 867	ability to ambulate
+T83	Eq-Comparison 872 886	multiple hours
+E38	Eq-Comparison:T83 Operator:T84 Temporal-Unit:T85
+T84	Eq-Operator 872 880	multiple
+A17	Eq-Operator-Value T84 GT
+T85	Eq-Temporal-Unit 881 886	hours
+A18	Eq-Temporal-Unit-Value T85 hour
+T86	Stability 837 842	limit
+A19	Stability-Value T86 change
+T87	Assertion 831 836	would
+E39	Assertion:T87 Asserted:T86
+A20	Assertion-Type-Value E39 hypothetical
+R9	Caused-By Arg1:T86 Arg2:E35	

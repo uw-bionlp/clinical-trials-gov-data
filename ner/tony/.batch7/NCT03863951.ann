@@ -1,0 +1,37 @@
+T1	Condition 61 76	ischemic stroke
+T2	Condition-Name 61 76	ischemic stroke
+E1	Condition:T1 Name:T2
+T3	Language 130 133	MRI
+T4	Condition 720 746	Inflammatory bowel disease
+T5	Condition-Name 720 746	Inflammatory bowel disease
+E4	Condition:T4 Name:T5
+T6	Condition 581 605	irritable bowel syndrome
+T7	Condition-Name 581 605	irritable bowel syndrome
+E6	Condition:T6 Name:T7
+T8	Condition 427 442	mental disorder
+T9	Condition-Name 427 442	mental disorder
+E8	Condition:T8 Name:T9
+T10	Condition 355 368	heart failure
+T11	Condition-Name 355 368	heart failure
+E10	Condition:T10 Name:T11
+T12	Condition 407 417	depression
+T13	Condition-Name 407 417	depression
+E12	Condition:T12 Name:T13
+T14	Condition 570 580	dysarthria
+T15	Condition-Name 570 580	dysarthria
+E14	Condition:T14 Name:T15
+T16	Condition 559 566	aphasia
+T17	Condition-Name 559 566	aphasia
+E16	Condition:T16 Name:T17
+T18	Condition 606 612	asthma
+T19	Condition-Name 606 612	asthma
+E18	Condition:T18 Name:T19
+T20	Eq-Operator 87 93	within
+A1	Eq-Operator-Value T20 LTEQ
+T21	Eq-Temporal-Unit 96 101	weeks
+A2	Eq-Temporal-Unit-Value T21 week
+T22	Eq-Temporal-Unit 540 545	weeks
+A3	Eq-Temporal-Unit-Value T22 week
+T23	Eq-Value 94 95	2
+T24	Eq-Comparison 87 101	within 2 weeks
+E19	Eq-Comparison:T24 Operator:T20 Temporal-Unit:T21 Value:T23

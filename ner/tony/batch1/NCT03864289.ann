@@ -1,0 +1,70 @@
+T1	Life-Stage-And-Gender 25 33	Children
+A1	Life-Stage-And-Gender-Type T1 child
+T2	Condition 60 66	autism
+T3	Condition-Name 60 66	autism
+E2	Condition:T2 Name:T3
+T4	Life-Stage-And-Gender 219 224	child
+A2	Life-Stage-And-Gender-Type T4 child
+T5	Condition 39 42	ASD
+T6	Condition-Name 39 42	ASD
+E5	Condition:T5 Name:T6
+T7	Language 73 76	Han
+T8	Condition 602 628	connective tissue diseases
+T9	Condition-Name 602 628	connective tissue diseases
+E8	Condition:T8 Name:T9
+T10	Condition 421 442	Prader-Willi Syndrome
+T11	Condition-Name 421 442	Prader-Willi Syndrome
+E10	Condition:T10 Name:T11
+T12	Condition 338 356	metabolic diseases
+T13	Condition-Name 338 356	metabolic diseases
+E12	Condition:T12 Name:T13
+T14	Condition 382 400	Fragile X Syndrome
+T15	Condition-Name 382 400	Fragile X Syndrome
+E14	Condition:T14 Name:T15
+T16	Condition 402 419	Angelman Syndrome
+T17	Condition-Name 402 419	Angelman Syndrome
+E16	Condition:T16 Name:T17
+T18	Condition 550 566	chronic diseases
+T19	Condition-Name 550 566	chronic diseases
+E18	Condition:T18 Name:T19 Severity:T36
+T20	Condition 576 600	liver and kidney failure
+T21	Condition-Name 576 600	liver and kidney failure
+E20	Condition:T20 Name:T21
+T22	Condition 367 380	Rett Syndrome
+T23	Condition-Name 367 380	Rett Syndrome
+E22	Condition:T22 Name:T23
+T24	Life-Stage-And-Gender 265 273	Children
+A3	Life-Stage-And-Gender-Type T24 child
+T27	Condition 289 292	ASD
+T28	Condition-Name 289 292	ASD
+E27	Condition:T27 Name:T28
+T29	Eq-Value 161 163	20
+T30	Risk 46 55	high risk
+E1	Risk:T30 
+T31	Family-Member 89 96	Parents
+E3	Family-Member:T31 
+T32	Modifier 279 288	Syndromic
+E4	Modifier:T32 Modifies:E27
+T25	Condition 309 324	genetic defects
+E6	Condition:T25 Name:T26
+T26	Condition-Name 309 324	genetic defects
+R1	Caused-By Arg1:E27 Arg2:E6	
+T33	Modifier 328 337	inherited
+E7	Modifier:T33 Modifies:E12
+R2	Caused-By Arg1:E27 Arg2:E12	
+R3	Example-Of Arg1:E22 Arg2:E12	
+R4	Example-Of Arg1:E14 Arg2:E12	
+R5	Example-Of Arg1:E16 Arg2:E12	
+R6	Example-Of Arg1:E10 Arg2:E12	
+T34	Condition 444 462	tuberous sclerosis
+E9	Condition:T34 Name:T35
+T35	Condition-Name 444 462	tuberous sclerosis
+R7	Example-Of Arg1:E9 Arg2:E12	
+T36	Severity 542 549	serious
+A4	Severity-Value T36 severe
+R8	Example-Of Arg1:E20 Arg2:E18	
+R9	Example-Of Arg1:E8 Arg2:E18	
+T37	Condition 630 636	tumors
+E11	Condition:T37 Name:T38
+T38	Condition-Name 630 636	tumors
+R10	Example-Of Arg1:E11 Arg2:E18	

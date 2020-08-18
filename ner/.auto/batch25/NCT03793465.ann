@@ -1,0 +1,64 @@
+T1	Procedure 227 249	tricuspid valve repair
+T2	Procedure-Name 227 249	tricuspid valve repair
+E1	Procedure:T1 Name:T2
+T3	Procedure 134 153	mitral valve repair
+T4	Procedure-Name 134 153	mitral valve repair
+E3	Procedure:T3 Name:T4
+T5	Condition 308 327	atrial fibrillation
+T6	Condition-Name 308 327	atrial fibrillation
+E5	Condition:T5 Name:T6
+T7	Procedure 166 184	Cox MAZE procedure
+T8	Procedure-Name 166 184	Cox MAZE procedure
+E7	Procedure:T7 Name:T8
+T9	Condition 671 689	infectious disease
+T10	Condition-Name 671 689	infectious disease
+E9	Condition:T9 Name:T10
+T11	Life-Stage-And-Gender 35 50	female patients
+A1	Life-Stage-And-Gender-Type T11 male
+T12	Procedure 114 129	cardiac surgery
+T13	Procedure-Name 114 129	cardiac surgery
+E12	Procedure:T12 Name:T13
+T14	Procedure 487 502	cardiac surgery
+T15	Procedure-Name 487 502	cardiac surgery
+E14	Procedure:T14 Name:T15
+T16	Condition 422 435	paroxysmal AF
+T17	Condition-Name 422 435	paroxysmal AF
+E16	Condition:T16 Name:T17
+T18	Procedure 596 608	re-operation
+T19	Procedure-Name 596 608	re-operation
+E18	Procedure:T18 Name:T19
+T20	Procedure 456 465	procedure
+T21	Procedure-Name 456 465	procedure
+E20	Procedure:T20 Name:T21
+T22	Procedure 518 527	pacemaker
+T23	Procedure-Name 518 527	pacemaker
+E22	Procedure:T22 Name:T23
+T24	Procedure 105 113	elective
+T25	Procedure-Name 105 113	elective
+E24	Procedure:T24 Name:T25
+T26	Procedure 447 455	ablation
+T27	Procedure-Name 447 455	ablation
+E26	Procedure:T26 Name:T27
+T28	Life-Stage-And-Gender 25 30	Males
+A2	Life-Stage-And-Gender-Type T28 male
+T29	Procedure 215 219	CABG
+T30	Procedure-Name 215 219	CABG
+E29	Procedure:T29 Name:T30
+T31	Condition 719 737	autoimmune disease
+T32	Condition-Name 719 737	autoimmune disease
+E31	Condition:T31 Name:T32
+T33	Eq-Operator 371 372	≥
+A3	Eq-Operator-Value T33 GTEQ
+T34	Eq-Temporal-Unit 376 381	years
+A4	Eq-Temporal-Unit-Value T34 year
+T35	Age 367 370	Age
+E32	Age:T35
+T36	Eq-Operator 58 59	-
+A5	Eq-Operator-Value T36 BETWEEN
+T37	Eq-Value 56 58	50
+T38	Eq-Value 59 61	79
+T39	Eq-Value 373 375	80
+T40	Eq-Comparison 371 381	≥ 80 years
+E33	Eq-Comparison:T40 Operator:T33 Temporal-Unit:T34 Value:T39
+T41	Eq-Comparison 56 59	50-
+E34	Eq-Comparison:T41 Operator:T36 Value:T37

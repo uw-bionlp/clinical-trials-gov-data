@@ -1,0 +1,40 @@
+T1	Procedure 80 101	liver transplantation
+T2	Procedure-Name 80 101	liver transplantation
+E1	Procedure:T1 Name:T2
+T3	Procedure 139 160	liver transplantation
+T4	Procedure-Name 139 160	liver transplantation
+E3	Procedure:T3 Name:T4
+T5	Condition 203 224	Myocardial Infarction
+T6	Condition-Name 203 224	Myocardial Infarction
+E5	Condition:T5 Name:T6
+T7	Condition 372 391	allergy to propofol
+T8	Condition-Name 372 391	allergy to propofol
+E7	Condition:T7 Name:T8
+T9	Condition 39 54	liver cirrhosis
+T10	Condition-Name 39 54	liver cirrhosis
+E9	Condition:T9 Name:T10
+T11	Condition 169 184	unstable angina
+T12	Condition-Name 169 184	unstable angina
+E11	Condition:T11 Name:T12
+T13	Condition 335 349	severe obesity
+T14	Condition-Name 335 349	severe obesity
+E13	Condition:T13 Name:T14
+T15	Condition 247 259	hypertension
+T16	Condition-Name 247 259	hypertension
+E15	Condition:T15 Name:T16
+T17	Observation 351 354	BMI
+T18	Observation-Name 351 354	BMI
+E17	Observation:T17 Name:T18
+A1	Observation-Type-Value T18 vital
+T19	Eq-Operator 274 275	>
+A2	Eq-Operator-Value T19 GT
+T20	Eq-Operator 354 355	>
+A3	Eq-Operator-Value T20 GT
+T21	Eq-Unit 279 283	mmHg
+T22	Eq-Unit 357 362	kg/m2
+T23	Eq-Value 276 279	110
+T24	Eq-Value 355 357	30
+T25	Eq-Comparison 274 279	> 110
+E18	Eq-Comparison:T25 Operator:T19 Value:T23
+T26	Eq-Comparison 354 357	>30
+E19	Eq-Comparison:T26 Operator:T20 Value:T24

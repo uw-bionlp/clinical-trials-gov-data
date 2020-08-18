@@ -1,0 +1,27 @@
+T1	Procedure 383 399	cesarean section
+T2	Procedure-Name 383 399	cesarean section
+E1	Procedure:T1 Name:T2
+T3	Condition 41 55	Term pregnancy
+T4	Condition-Name 41 55	Term pregnancy
+E3	Condition:T3 Name:T4
+T5	Procedure 400 411	hysterotomy
+T6	Procedure-Name 400 411	hysterotomy
+E5	Procedure:T5 Name:T6
+T7	Condition 25 35	Nulliparas
+T8	Condition-Name 25 35	Nulliparas
+E7	Condition:T7 Name:T8
+T9	Procedure 412 422	myomectomy
+T10	Procedure-Name 412 422	myomectomy
+E9	Procedure:T9 Name:T10
+T11	Condition 269 278	pregnancy
+T12	Condition-Name 269 278	pregnancy
+E11	Condition:T11 Name:T12
+T13	Condition 184 189	labor
+T14	Condition-Name 184 189	labor
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 101 102	<
+A1	Eq-Operator-Value T15 LT
+T16	Eq-Value 75 77	37
+T17	Eq-Value 102 103	6
+T18	Eq-Comparison 101 103	<6
+E14	Eq-Comparison:T18 Operator:T15 Value:T17

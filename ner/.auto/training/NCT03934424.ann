@@ -1,0 +1,38 @@
+T1	Condition 263 277	claustrophobia
+T2	Condition-Name 263 277	claustrophobia
+E1	Condition:T1 Name:T2
+T3	Procedure 170 182	special diet
+T4	Procedure-Name 170 182	special diet
+E3	Procedure:T3 Name:T4
+T5	Condition 236 244	appetite
+T6	Condition-Name 236 244	appetite
+E5	Condition:T5 Name:T6
+T7	Observation 85 88	BMI
+T8	Observation-Name 85 88	BMI
+E7	Observation:T7 Name:T8
+A1	Observation-Type-Value T8 vital
+T9	Condition 301 317	mental disorders
+T10	Condition-Name 301 317	mental disorders
+E9	Condition:T9 Name:T10
+T11	Condition 483 493	middle ear
+T12	Condition-Name 483 493	middle ear
+E11	Condition:T11 Name:T12
+T13	Language 362 365	MRI
+T14	Language 800 803	MRI
+T15	Eq-Temporal-Unit 74 79	years
+A2	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Unit 95 100	kg/m2
+T17	Age 55 59	aged
+E12	Age:T17
+T18	Eq-Operator 68 70	to
+A3	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Operator 91 92	-
+A4	Eq-Operator-Value T19 BETWEEN
+T20	Eq-Value 65 67	18
+T21	Eq-Value 71 73	55
+T22	Eq-Value 89 91	25
+T23	Eq-Value 92 94	35
+T24	Eq-Comparison 65 70	18 to
+E13	Eq-Comparison:T24 Operator:T18 Value:T20
+T25	Eq-Comparison 89 92	25-
+E14	Eq-Comparison:T25 Operator:T19 Value:T22

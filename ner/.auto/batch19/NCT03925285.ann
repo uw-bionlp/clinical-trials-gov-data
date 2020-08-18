@@ -1,0 +1,64 @@
+T1	Procedure 85 103	surgical resection
+T2	Procedure-Name 85 103	surgical resection
+E1	Procedure:T1 Name:T2
+T3	Procedure 234 244	procedures
+T4	Procedure-Name 234 244	procedures
+E3	Procedure:T3 Name:T4
+T5	Procedure 953 982	monoclonal antibody therapies
+T6	Procedure-Name 953 982	monoclonal antibody therapies
+E5	Procedure:T5 Name:T6
+T7	Condition 654 678	cerebrovascular accident
+T8	Condition-Name 654 678	cerebrovascular accident
+E7	Condition:T7 Name:T8
+T9	Condition 745 760	unstable angina
+T10	Condition-Name 745 760	unstable angina
+E9	Condition:T9 Name:T10
+T11	Condition 701 714	heart failure
+T12	Condition-Name 701 714	heart failure
+E11	Condition:T11 Name:T12
+T13	Condition 728 741	liver disease
+T14	Condition-Name 728 741	liver disease
+E13	Condition:T13 Name:T14
+T15	Condition 827 839	hypertension
+T16	Condition-Name 827 839	hypertension
+E15	Condition:T15 Name:T16
+T17	Procedure 910 918	infusion
+T18	Procedure-Name 910 918	infusion
+E17	Procedure:T17 Name:T18
+T19	Procedure 1324 1342	surgical resection
+T20	Procedure-Name 1324 1342	surgical resection
+E19	Procedure:T19 Name:T20
+T21	Eq-Operator 114 115	≥
+A1	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 456 462	within
+A2	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 761 767	within
+A3	Eq-Operator-Value T23 GTEQ
+T24	Eq-Operator 1214 1223	less than
+A4	Eq-Operator-Value T24 LT
+T25	Eq-Operator 1365 1366	<
+A5	Eq-Operator-Value T25 LT
+T26	Eq-Temporal-Unit 119 124	years
+A6	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Temporal-Unit 466 470	days
+A7	Eq-Temporal-Unit-Value T27 day
+T28	Eq-Temporal-Unit 770 776	months
+A8	Eq-Temporal-Unit-Value T28 month
+T29	Eq-Temporal-Unit 1228 1233	years
+A9	Eq-Temporal-Unit-Value T29 year
+T30	Eq-Temporal-Unit 1370 1375	weeks
+A10	Eq-Temporal-Unit-Value T30 week
+T31	Age 110 113	Age
+E20	Age:T31
+T32	Eq-Value 116 118	18
+T33	Eq-Value 463 465	30
+T34	Eq-Value 768 769	6
+T35	Eq-Value 1367 1369	12
+T36	Eq-Comparison 114 124	≥ 18 years
+E21	Eq-Comparison:T36 Operator:T21 Temporal-Unit:T26 Value:T32
+T37	Eq-Comparison 456 470	within 30 days
+E22	Eq-Comparison:T37 Operator:T22 Temporal-Unit:T27 Value:T33
+T38	Eq-Comparison 761 776	within 6 months
+E23	Eq-Comparison:T38 Operator:T23 Temporal-Unit:T28 Value:T34
+T39	Eq-Comparison 1365 1375	< 12 weeks
+E24	Eq-Comparison:T39 Operator:T25 Temporal-Unit:T30 Value:T35

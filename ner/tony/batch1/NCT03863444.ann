@@ -1,0 +1,42 @@
+T1	Life-Stage-And-Gender 69 75	adults
+A1	Life-Stage-And-Gender-Type T1 adult
+T6	Eq-Temporal-Unit 54 59	weeks
+A2	Eq-Temporal-Unit-Value T6 week
+T7	Age 29 44	gestational age
+E5	Age:T7 Eq-Comparison:E6
+T8	Eq-Operator 48 50	to
+A3	Eq-Operator-Value T8 BETWEEN
+T9	Eq-Value 45 47	35
+T10	Eq-Value 51 53	39
+T11	Eq-Comparison 45 50	35 to
+E6	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6
+T12	Condition 85 94	primipara
+E1	Condition:T12 Name:T13
+T13	Condition-Name 85 94	primipara
+T14	Family-Member 105 112	spouses
+E3	Family-Member:T14 
+T15	Encounter 129 152	routine prenatal visits
+E7	Encounter:T15 Type:T16
+T16	Encounter-Type 129 152	routine prenatal visits
+A4	Encounter-Type-Value T16 observation
+T4	Birth 174 179	birth
+E4	Birth:T4 
+T2	Provider 187 201	medical center
+E2	Provider:T2 
+T3	Location 187 201	medical center
+A5	Location-Value T3 clinic
+T5	Language 236 244	Mandarin
+T17	Language 248 257	Taiwanese
+T18	Negation 342 351	Exclusion
+E8	Negation:T18 
+T19	Condition 378 400	fetus with abnormality
+E9	Condition:T19 Name:T20
+T20	Condition-Name 378 400	fetus with abnormality
+T21	Risk 410 419	high-risk
+E10	Risk:T21 
+T22	Condition 420 429	pregnancy
+E11	Condition:T22 Name:T23
+T23	Condition-Name 420 429	pregnancy
+T24	Condition 461 489	newborn's medical conditions
+E12	Condition:T24 Name:T25
+T25	Condition-Name 461 489	newborn's medical conditions

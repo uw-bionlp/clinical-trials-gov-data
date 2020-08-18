@@ -1,0 +1,47 @@
+T1	Condition 83 105	cardiovascular disease
+T2	Condition-Name 83 105	cardiovascular disease
+E1	Condition:T1 Name:T2
+T3	Condition 68 76	diabetes
+T4	Condition-Name 68 76	diabetes
+E3	Condition:T3 Name:T4
+T5	Condition 55 61	anemia
+T6	Condition-Name 55 61	anemia
+E5	Condition:T5 Name:T6
+T7	Eq-Temporal-Unit 172 178	months
+A1	Eq-Temporal-Unit-Value T7 month
+T8	Negation 38 45	absence
+E2	Negation:T8 Negates:E5 Negates2:E3 Negates3:E1 Negates4:E4
+T9	Condition 147 155	injuries
+E4	Condition:T9 Name:T10 Temporality:E9
+T10	Condition-Name 147 155	injuries
+T11	Modifier 116 126	upper limb
+E6	Modifier:T11 Modifies:T10
+T12	Modifier 131 146	spinal muscular
+E7	Modifier:T12 Modifies:T10
+T13	Or 127 130	and
+E8	Or:T13 Arg:E6 Arg2:E7
+T14	Eq-Comparison 163 178	last six months
+E9	Eq-Comparison:T14 Temporal-Period:T15 Temporal-Unit:T7 Value:T16
+T15	Eq-Temporal-Period 163 167	last
+A2	Eq-Temporal-Period-Value T15 past
+T16	Eq-Value 168 171	six
+T17	Study 219 224	study
+E10	Study:T17 
+T18	Negation 204 211	absence
+E11	Negation:T18 Negates:E10
+T19	Condition 285 291	injury
+E12	Condition:T19 Name:T20
+T20	Condition-Name 285 291	injury
+T21	Modifier 270 284	osteoarticular
+E13	Modifier:T21 Modifies:T20
+T22	Modifier 253 266	muscle-tendon
+E14	Modifier:T22 Modifies:T20
+T23	Or 267 269	or
+E15	Or:T23 Arg:E14 Arg2:E13
+T24	Modifier 299 310	upper limbs
+E16	Modifier:T24 Modifies:T20
+T25	Study 322 327	study
+E17	Study:T25 
+T26	Temporal-Connection 311 317	during
+E18	Temporal-Connection:T26 Arg:E12 Arg2:E17
+A3	Temporal-Connection-Type-Value E18 during

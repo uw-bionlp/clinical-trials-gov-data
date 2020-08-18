@@ -1,0 +1,69 @@
+T1	Life-Stage-And-Gender 18 24	Adults
+A1	Life-Stage-And-Gender-Type T1 adult
+T2	Condition 217 220	sex
+T3	Condition-Name 217 220	sex
+E2	Condition:T2 Name:T3
+T4	Language 761 764	III
+T5	Condition 925 948	neuromuscular disorders
+T6	Condition-Name 925 948	neuromuscular disorders
+E5	Condition:T5 Name:T6
+T7	Observation 1041 1056	body mass index
+T8	Observation-Name 1041 1056	body mass index
+E7	Observation:T7 Name:T8
+A2	Observation-Type-Value T8 vital
+T9	Condition 1340 1353	liver disease
+T10	Condition-Name 1340 1353	liver disease
+E9	Condition:T9 Name:T10
+T11	Condition 1024 1035	arrhythmias
+T12	Condition-Name 1024 1035	arrhythmias
+E11	Condition:T11 Name:T12
+T13	Condition 1151 1157	uremia
+T14	Condition-Name 1151 1157	uremia
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 26 27	≥
+A3	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 709 710	>
+A4	Eq-Operator-Value T16 GT
+T17	Eq-Operator 796 797	<
+A5	Eq-Operator-Value T17 LT
+T18	Eq-Operator 1057 1058	>
+A6	Eq-Operator-Value T18 GT
+T19	Eq-Operator 1111 1112	>
+A7	Eq-Operator-Value T19 GT
+T20	Eq-Operator 1240 1252	greater than
+A8	Eq-Operator-Value T20 GT
+T21	Eq-Operator 1296 1311	within the past
+A9	Eq-Operator-Value T21 GTEQ
+T22	Eq-Temporal-Unit 30 35	years
+A10	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 678 683	weeks
+A11	Eq-Temporal-Unit-Value T23 week
+T24	Eq-Temporal-Unit 712 718	months
+A12	Eq-Temporal-Unit-Value T24 month
+T25	Eq-Temporal-Unit 1120 1125	years
+A13	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Temporal-Unit 1314 1320	months
+A14	Eq-Temporal-Unit-Value T26 month
+T27	Eq-Unit 1061 1066	kg/m2
+T28	Age 209 212	age
+E14	Age:T28
+T29	Eq-Value 27 29	21
+T30	Eq-Value 676 677	6
+T31	Eq-Value 710 711	6
+T32	Eq-Value 797 799	15
+T33	Eq-Value 1058 1060	35
+T34	Eq-Value 1112 1114	15
+T35	Eq-Value 1265 1266	1
+T36	Eq-Value 1312 1313	6
+T37	Eq-Comparison 26 35	≥21 years
+E15	Eq-Comparison:T37 Operator:T15 Temporal-Unit:T22 Value:T29
+T38	Eq-Comparison 709 718	>6 months
+E16	Eq-Comparison:T38 Operator:T16 Temporal-Unit:T24 Value:T31
+T39	Eq-Comparison 796 799	<15
+E17	Eq-Comparison:T39 Operator:T17 Value:T32
+T40	Eq-Comparison 1057 1066	>35 kg/m2
+E18	Eq-Comparison:T40 Operator:T18 Unit:T27 Value:T33
+T41	Eq-Comparison 1111 1114	>15
+E19	Eq-Comparison:T41 Operator:T19 Value:T34
+T42	Eq-Comparison 1296 1320	within the past 6 months
+E20	Eq-Comparison:T42 Operator:T21 Temporal-Unit:T26 Value:T36

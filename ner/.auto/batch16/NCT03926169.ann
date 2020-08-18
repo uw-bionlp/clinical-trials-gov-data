@@ -1,0 +1,80 @@
+T1	Condition 61 85	Hidradenitis Suppurativa
+T2	Condition-Name 61 85	Hidradenitis Suppurativa
+E1	Condition:T1 Name:T2
+T3	Condition 87 89	HS
+T4	Condition-Name 87 89	HS
+E3	Condition:T3 Name:T4
+T5	Condition 271 280	abscesses
+T6	Condition-Name 271 280	abscesses
+E5	Condition:T5 Name:T6
+T7	Condition 483 494	intolerance
+T8	Condition-Name 483 494	intolerance
+E7	Condition:T7 Name:T8
+T9	Condition 714 733	active tuberculosis
+T10	Condition-Name 714 733	active tuberculosis
+E9	Condition:T9 Name:T10
+T11	Condition 819 836	hepatitis C virus
+T12	Condition-Name 819 836	hepatitis C virus
+E11	Condition:T11 Name:T12
+T13	Condition 618 630	skin disease
+T14	Condition-Name 618 630	skin disease
+E13	Condition:T13 Name:T14
+T15	Condition 859 869	deficiency
+T16	Condition-Name 859 869	deficiency
+E15	Condition:T15 Name:T16
+T17	Condition 811 814	HBV
+T18	Condition-Name 811 814	HBV
+E17	Condition:T17 Name:T18
+T19	Condition 838 841	HCV
+T20	Condition-Name 838 841	HCV
+E19	Condition:T19 Name:T20
+T21	Condition 735 737	TB
+T22	Condition-Name 735 737	TB
+E21	Condition:T21 Name:T22
+T23	Condition 774 776	TB
+T24	Condition-Name 774 776	TB
+E23	Condition:T23 Name:T24
+T25	Procedure 1097 1106	therapies
+T26	Procedure-Name 1097 1106	therapies
+E25	Procedure:T25 Name:T26
+T27	Procedure 1226 1244	biologic therapies
+T28	Procedure-Name 1226 1244	biologic therapies
+E27	Procedure:T27 Name:T28
+T29	Eq-Operator 236 238	<=
+A1	Eq-Operator-Value T29 LTEQ
+T30	Eq-Operator 312 314	>=
+A2	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 973 979	within
+A3	Eq-Operator-Value T31 GTEQ
+T32	Eq-Operator 1139 1145	within
+A4	Eq-Operator-Value T32 GTEQ
+T33	Eq-Operator 1279 1285	within
+A5	Eq-Operator-Value T33 GTEQ
+T34	Eq-Operator 1404 1410	within
+A6	Eq-Operator-Value T34 GTEQ
+T35	Eq-Temporal-Unit 982 988	months
+A7	Eq-Temporal-Unit-Value T35 month
+T36	Eq-Temporal-Unit 1149 1153	days
+A8	Eq-Temporal-Unit-Value T36 day
+T37	Eq-Temporal-Unit 1288 1293	weeks
+A9	Eq-Temporal-Unit-Value T37 week
+T38	Eq-Temporal-Unit 1413 1418	weeks
+A10	Eq-Temporal-Unit-Value T38 week
+T39	Eq-Value 315 316	5
+T40	Eq-Value 949 950	1
+T41	Eq-Value 960 961	1
+T42	Eq-Value 980 981	3
+T43	Eq-Value 992 993	5
+T44	Eq-Value 1146 1148	14
+T45	Eq-Value 1286 1287	4
+T46	Eq-Value 1411 1412	4
+T47	Eq-Comparison 312 316	>= 5
+E28	Eq-Comparison:T47 Operator:T30 Value:T39
+T48	Eq-Comparison 973 988	within 3 months
+E29	Eq-Comparison:T48 Operator:T31 Temporal-Unit:T35 Value:T42
+T49	Eq-Comparison 1139 1153	within 14 days
+E30	Eq-Comparison:T49 Operator:T32 Temporal-Unit:T36 Value:T44
+T50	Eq-Comparison 1279 1293	within 4 weeks
+E31	Eq-Comparison:T50 Operator:T33 Temporal-Unit:T37 Value:T45
+T51	Eq-Comparison 1404 1418	within 4 weeks
+E32	Eq-Comparison:T51 Operator:T34 Temporal-Unit:T38 Value:T46

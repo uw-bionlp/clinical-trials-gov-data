@@ -1,0 +1,80 @@
+T1	Condition 464 490	gastrointestinal disorders
+T2	Condition-Name 464 490	gastrointestinal disorders
+E1	Condition:T1 Name:T2
+T3	Condition 496 512	Chronic diarrhea
+T4	Condition-Name 496 512	Chronic diarrhea
+E3	Condition:T3 Name:T4
+T5	Procedure 571 587	aerobic exercise
+T6	Procedure-Name 571 587	aerobic exercise
+E5	Procedure:T5 Name:T6
+T7	Procedure 427 440	birth control
+T8	Procedure-Name 427 440	birth control
+E7	Procedure:T7 Name:T8
+T9	Condition 311 322	intolerance
+T10	Condition-Name 311 322	intolerance
+E9	Condition:T9 Name:T10
+T11	Condition 394 403	Pregnancy
+T12	Condition-Name 394 403	Pregnancy
+E11	Condition:T11 Name:T12
+T13	Condition 405 414	lactation
+T14	Condition-Name 405 414	lactation
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 66 67	>
+A1	Eq-Operator-Value T15 GT
+T16	Eq-Operator 100 101	<
+A2	Eq-Operator-Value T16 LT
+T17	Eq-Operator 133 134	>
+A3	Eq-Operator-Value T17 GT
+T18	Eq-Operator 152 153	>
+A4	Eq-Operator-Value T18 GT
+T19	Eq-Operator 186 187	>
+A5	Eq-Operator-Value T19 GT
+T20	Eq-Operator 371 377	within
+A6	Eq-Operator-Value T20 LTEQ
+T21	Eq-Operator 442 448	within
+A7	Eq-Operator-Value T21 LTEQ
+T22	Eq-Operator 546 547	>
+A8	Eq-Operator-Value T22 GT
+T23	Eq-Operator 589 590	>
+A9	Eq-Operator-Value T23 GT
+T24	Eq-Operator 660 661	>
+A10	Eq-Operator-Value T24 GT
+T25	Eq-Unit 74 76	cm
+T26	Eq-Unit 160 162	mm
+T27	Eq-Unit 244 246	kg
+T28	Eq-Unit 668 670	mm
+T29	Eq-Operator 42 43	-
+A11	Eq-Operator-Value T29 BETWEEN
+T30	Eq-Value 39 42	100
+T31	Eq-Value 43 46	126
+T32	Eq-Value 67 69	89
+T33	Eq-Value 101 103	50
+T34	Eq-Value 134 137	150
+T35	Eq-Value 153 156	130
+T36	Eq-Value 187 189	25
+T37	Eq-Value 258 259	3
+T38	Eq-Value 383 384	1
+T39	Eq-Value 449 450	6
+T40	Eq-Value 547 548	2
+T41	Eq-Value 590 591	5
+T42	Eq-Value 661 664	140
+T43	Eq-Comparison 66 69	>89
+E14	Eq-Comparison:T43 Operator:T15 Value:T32
+T44	Eq-Comparison 100 103	<50
+E15	Eq-Comparison:T44 Operator:T16 Value:T33
+T45	Eq-Comparison 133 137	>150
+E16	Eq-Comparison:T45 Operator:T17 Value:T34
+T46	Eq-Comparison 152 156	>130
+E17	Eq-Comparison:T46 Operator:T18 Value:T35
+T47	Eq-Comparison 186 189	>25
+E18	Eq-Comparison:T47 Operator:T19 Value:T36
+T48	Eq-Comparison 442 450	within 6
+E19	Eq-Comparison:T48 Operator:T21 Value:T39
+T49	Eq-Comparison 546 548	>2
+E20	Eq-Comparison:T49 Operator:T22 Value:T40
+T50	Eq-Comparison 589 591	>5
+E21	Eq-Comparison:T50 Operator:T23 Value:T41
+T51	Eq-Comparison 660 664	>140
+E22	Eq-Comparison:T51 Operator:T24 Value:T42
+T52	Eq-Comparison 39 43	100-
+E23	Eq-Comparison:T52 Operator:T29 Value:T30

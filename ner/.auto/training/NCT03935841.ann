@@ -1,0 +1,21 @@
+T1	Condition 135 150	Chronic disease
+T2	Condition-Name 135 150	Chronic disease
+E1	Condition:T1 Name:T2
+T3	Procedure 210 225	ketogenic diets
+T4	Procedure-Name 210 225	ketogenic diets
+E3	Procedure:T3 Name:T4
+T5	Language 254 260	Danish
+T6	Observation 41 44	BMI
+T7	Observation-Name 41 44	BMI
+E6	Observation:T6 Name:T7
+A1	Observation-Type-Value T7 vital
+T8	Eq-Operator 40 41	<
+A2	Eq-Operator-Value T8 LT
+T9	Eq-Operator 44 45	<
+A3	Eq-Operator-Value T9 LT
+T10	Eq-Value 38 40	19
+T11	Eq-Value 45 47	30
+T12	Eq-Comparison 38 41	19<
+E7	Eq-Comparison:T12 Operator:T8 Value:T10
+T13	Eq-Comparison 44 47	<30
+E8	Eq-Comparison:T13 Operator:T9 Value:T11

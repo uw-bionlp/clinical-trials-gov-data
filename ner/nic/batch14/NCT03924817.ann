@@ -1,0 +1,69 @@
+T1	Condition 272 291	central sleep apnea
+T2	Condition-Name 272 291	central sleep apnea
+E1	Condition:T1 Name:T2
+T4	Eq-Operator 92 93	≥
+A1	Eq-Operator-Value T4 GTEQ
+T5	Eq-Operator 304 305	>
+A2	Eq-Operator-Value T5 GT
+T6	Eq-Operator 563 572	less than
+A3	Eq-Operator-Value T6 LT
+T7	Eq-Temporal-Unit 97 102	years
+A4	Eq-Temporal-Unit-Value T7 year
+T8	Age 88 91	Age
+E2	Age:T8 Eq-Comparison:E3
+T9	Eq-Value 94 96	18
+T10	Eq-Value 306 307	5
+T11	Eq-Value 573 574	5
+T12	Eq-Comparison 92 102	≥ 18 years
+E3	Eq-Comparison:T12 Operator:T4 Temporal-Unit:T7 Value:T9
+T13	Eq-Comparison 304 312	> 5/hour
+E4	Eq-Comparison:T13 Operator:T5 Value:T10 Temporal-Unit:T19
+T14	Eq-Comparison 563 576	less than 5mm
+E5	Eq-Comparison:T14 Operator:T6 Value:T11 Unit:T34
+T15	Procedure 43 82	Narval CC mandibular advancement device
+E6	Procedure:T15 Name:T16
+T16	Procedure-Name 43 82	Narval CC mandibular advancement device
+T17	Observation 293 303	central AI
+E7	Observation:T17 Name:T18 Eq-Comparison:E4
+T18	Observation-Name 293 303	central AI
+T19	Eq-Temporal-Unit 308 312	hour
+A5	Eq-Temporal-Unit-Value T19 hour
+R1	Equivalent-To Arg1:E7 Arg2:E1	
+T20	Condition 333 344	loose teeth
+E8	Condition:T20 Name:T21
+T21	Condition-Name 333 344	loose teeth
+T22	Condition 356 368	parodontitis
+E9	Condition:T22 Name:T23 Severity:T24
+T23	Condition-Name 356 368	parodontitis
+T24	Severity 349 355	severe
+A6	Severity-Value T24 severe
+T25	Or 345 348	and
+E10	Or:T25 Arg:E8 Arg2:E9
+T26	Condition 399 412	missing teeth
+E11	Condition:T26 Name:T27
+T27	Condition-Name 399 412	missing teeth
+T28	Procedure 416 443	removable tooth replacement
+E12	Procedure:T28 Name:T29
+T29	Procedure-Name 416 443	removable tooth replacement
+T30	Or 413 415	or
+E13	Or:T30 Arg:E11 Arg2:E12
+T3	Condition 512 526	missing molars
+E14	Condition:T3 Name:T31
+T31	Condition-Name 512 526	missing molars
+T32	Observation 541 559	maximum protrusion
+E15	Observation:T32 Name:T33 Eq-Comparison:E5
+T33	Observation-Name 541 559	maximum protrusion
+T34	Eq-Unit 574 576	mm
+T35	Procedure 494 497	MAD
+E16	Procedure:T35 Name:T36
+T36	Procedure-Name 494 497	MAD
+T37	Negation 468 480	insufficient
+E17	Negation:T37 Negates:E16
+T38	Condition 455 467	teeth health
+E18	Condition:T38 Name:T39
+T39	Condition-Name 455 467	teeth health
+R2	Caused-By Arg1:E17 Arg2:E18	
+T40	Assertion 468 480	insufficient
+E19	Assertion:T40 Asserted:E16
+A7	Assertion-Type-Value E19 hypothetical
+A8	Observation-Type-Value T33 measurement

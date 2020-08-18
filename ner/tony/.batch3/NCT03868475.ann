@@ -1,0 +1,30 @@
+T1	Procedure 129 137	excision
+T2	Procedure-Name 129 137	excision
+E1	Procedure:T1 Name:T2
+T3	Condition 349 352	per
+T4	Condition-Name 349 352	per
+E3	Condition:T3 Name:T4
+T5	Procedure 1425 1442	surgical excision
+T6	Procedure-Name 1425 1442	surgical excision
+E5	Procedure:T5 Name:T6
+T7	Procedure 1417 1421	VAPE
+T8	Procedure-Name 1417 1421	VAPE
+E7	Procedure:T7 Name:T8
+T9	Eq-Operator 298 310	greater than
+A1	Eq-Operator-Value T9 GT
+T11	Eq-Operator 1037 1038	>
+A3	Eq-Operator-Value T11 GT
+T13	Eq-Unit 557 559	mm
+T14	Age 36 39	age
+E8	Age:T14 
+T15	Eq-Value 40 42	18
+T16	Eq-Value 311 313	25
+T17	Eq-Value 554 556	20
+T18	Eq-Value 587 589	30
+T20	Eq-Value 1039 1040	4
+T21	Eq-Comparison 298 313	greater than 25
+E9	Eq-Comparison:T21 Operator:T9 Value:T16
+T22	Eq-Comparison 574 592	greater than 30 mm
+E10	Eq-Comparison:T22 Unit:T13 Value:T18
+T23	Eq-Comparison 1037 1040	> 4
+E11	Eq-Comparison:T23 Operator:T11 Value:T20

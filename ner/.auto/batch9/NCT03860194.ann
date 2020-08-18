@@ -1,0 +1,48 @@
+T1	Condition 517 531	kidney failure
+T2	Condition-Name 517 531	kidney failure
+E1	Condition:T1 Name:T2
+T3	Condition 564 577	liver failure
+T4	Condition-Name 564 577	liver failure
+E3	Condition:T3 Name:T4
+T5	Language 126 129	men
+T6	Language 280 283	men
+T7	Eq-Operator 39 40	≥
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Operator 113 114	<
+A2	Eq-Operator-Value T8 LT
+T9	Eq-Operator 131 132	<
+A3	Eq-Operator-Value T9 LT
+T10	Eq-Operator 270 271	<
+A4	Eq-Operator-Value T10 LT
+T11	Eq-Operator 285 286	<
+A5	Eq-Operator-Value T11 LT
+T12	Eq-Operator 373 374	<
+A6	Eq-Operator-Value T12 LT
+T13	Eq-Temporal-Unit 44 49	years
+A7	Eq-Temporal-Unit-Value T13 year
+T14	Eq-Temporal-Unit 451 457	months
+A8	Eq-Temporal-Unit-Value T14 month
+T15	Eq-Unit 116 118	kg
+T16	Eq-Unit 136 138	kg
+T17	Eq-Unit 274 276	kg
+T18	Eq-Unit 289 291	kg
+T19	Eq-Value 41 43	65
+T20	Eq-Value 114 115	7
+T21	Eq-Value 132 133	5
+T22	Eq-Value 208 211	418
+T23	Eq-Value 271 273	26
+T24	Eq-Value 286 288	18
+T25	Eq-Value 374 375	1
+T26	Eq-Value 449 450	6
+T27	Eq-Comparison 39 49	≥ 65 years
+E4	Eq-Comparison:T27 Operator:T7 Temporal-Unit:T13 Value:T19
+T28	Eq-Comparison 113 118	<7 kg
+E5	Eq-Comparison:T28 Operator:T8 Unit:T15 Value:T20
+T29	Eq-Comparison 131 133	<5
+E6	Eq-Comparison:T29 Operator:T9 Value:T21
+T30	Eq-Comparison 270 276	<26 kg
+E7	Eq-Comparison:T30 Operator:T10 Unit:T17 Value:T23
+T31	Eq-Comparison 285 291	<18 kg
+E8	Eq-Comparison:T31 Operator:T11 Unit:T18 Value:T24
+T32	Eq-Comparison 373 375	<1
+E9	Eq-Comparison:T32 Operator:T12 Value:T25

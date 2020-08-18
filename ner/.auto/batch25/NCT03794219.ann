@@ -1,0 +1,45 @@
+T1	Procedure 275 282	stretch
+T2	Procedure-Name 275 282	stretch
+E1	Procedure:T1 Name:T2
+T3	Condition 544 570	nerve entrapment syndromes
+T4	Condition-Name 544 570	nerve entrapment syndromes
+E3	Condition:T3 Name:T4
+T5	Procedure 576 595	surgical treatments
+T6	Procedure-Name 576 595	surgical treatments
+E5	Procedure:T5 Name:T6
+T7	Condition 678 704	gastrointestinal disorders
+T8	Condition-Name 678 704	gastrointestinal disorders
+E7	Condition:T7 Name:T8
+T9	Condition 1137 1156	renal insufficiency
+T10	Condition-Name 1137 1156	renal insufficiency
+E9	Condition:T9 Name:T10
+T11	Procedure 780 797	steroid injection
+T12	Procedure-Name 780 797	steroid injection
+E11	Procedure:T11 Name:T12
+T13	Condition 1118 1135	diabetes mellitus
+T14	Condition-Name 1118 1135	diabetes mellitus
+E13	Condition:T13 Name:T14
+T15	Condition 1177 1194	rheumatic disease
+T16	Condition-Name 1177 1194	rheumatic disease
+E15	Condition:T15 Name:T16
+T17	Procedure 833 849	physical therapy
+T18	Procedure-Name 833 849	physical therapy
+E17	Procedure:T17 Name:T18
+T19	Condition 1059 1075	systemic disease
+T20	Condition-Name 1059 1075	systemic disease
+E19	Condition:T19 Name:T20
+T21	Condition 1034 1043	pregnancy
+T22	Condition-Name 1034 1043	pregnancy
+E21	Condition:T21 Name:T22
+T23	Condition 935 938	arc
+T24	Condition-Name 935 938	arc
+E23	Condition:T23 Name:T24
+T25	Eq-Operator 869 877	the past
+A1	Eq-Operator-Value T25 GTEQ
+T26	Eq-Temporal-Unit 93 99	months
+A2	Eq-Temporal-Unit-Value T26 month
+T27	Eq-Temporal-Unit 880 886	months
+A3	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Value 878 879	6
+T29	Eq-Comparison 869 886	the past 6 months
+E24	Eq-Comparison:T29 Operator:T25 Temporal-Unit:T27 Value:T28

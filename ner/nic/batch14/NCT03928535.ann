@@ -1,0 +1,86 @@
+T1	Observation 234 266	Positive End Expiratory Pressure
+T2	Observation-Name 234 266	Positive End Expiratory Pressure
+E1	Observation:T1 Name:T2
+T3	Procedure 59 69	Extubation
+T4	Procedure-Name 59 69	Extubation
+E3	Procedure:T3 Name:T4
+T5	Procedure 184 194	extubation
+T6	Procedure-Name 184 194	extubation
+E5	Procedure:T5 Name:T6
+T9	Observation 268 272	PEEP
+T10	Observation-Name 268 272	PEEP
+E9	Observation:T9 Name:T10 Eq-Comparison:E21
+T11	Procedure 363 377	Tracheostomies
+T12	Procedure-Name 363 377	Tracheostomies
+E11	Procedure:T11 Name:T12
+T13	Procedure 306 316	extubation
+T14	Procedure-Name 306 316	extubation
+E13	Procedure:T13 Name:T14
+T15	Procedure 394 404	extubation
+T16	Procedure-Name 394 404	extubation
+E15	Procedure:T15 Name:T16
+T17	Procedure 415 425	extubation
+T18	Procedure-Name 415 425	extubation
+E17	Procedure:T17 Name:T18
+T21	Eq-Operator 205 206	≥
+A1	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 274 275	≤
+A2	Eq-Operator-Value T22 LTEQ
+T23	Eq-Unit 208 212	mmHg
+T24	Eq-Unit 276 278	cm
+T27	Eq-Value 206 208	50
+T28	Eq-Value 275 276	8
+T29	Eq-Comparison 205 212	≥50mmHg
+E20	Eq-Comparison:T29 Operator:T21 Value:T27 Unit:T23
+T30	Eq-Comparison 274 276	≤8
+E21	Eq-Comparison:T30 Operator:T22 Value:T28 Unit:T47 Unit2:T24
+T31	Condition 47 53	AECOPD
+E2	Condition:T31 Name:T32
+T32	Condition-Name 47 53	AECOPD
+T26	Procedure 115 126	ventilation
+E4	Procedure:T26 Name:T33 Duration:E6
+T33	Procedure-Name 115 126	ventilation
+T34	Eq-Comparison 94 102	48 hours
+E6	Eq-Comparison:T34 Value:T35 Temporal-Unit:T36
+T35	Eq-Value 94 96	48
+T36	Eq-Temporal-Unit 97 102	hours
+A3	Eq-Temporal-Unit-Value T36 hour
+T37	Temporal-Connection 88 93	after
+E8	Temporal-Connection:T37 Arg:E3 Arg2:E6
+A4	Temporal-Connection-Type-Value E8 after
+T38	Procedure 166 170	HFNC
+E10	Procedure:T38 Name:T39
+T39	Procedure-Name 166 170	HFNC
+T40	Procedure 174 177	NIV
+E12	Procedure:T40 Name:T41
+T41	Procedure-Name 174 177	NIV
+T42	Or 171 173	or
+E14	Or:T42 Arg:E10 Arg2:E12
+T43	Temporal-Connection 178 183	after
+E16	Temporal-Connection:T43 Arg:E12 Arg2:E5
+A5	Temporal-Connection-Type-Value E16 after
+T44	Observation 200 205	PaCO2
+E18	Observation:T44 Name:T45 Eq-Comparison:E20
+T45	Observation-Name 200 205	PaCO2
+T7	Procedure-Name 218 228	extubation
+T8	Procedure 218 228	extubation
+E7	Procedure:T8 Name:T7
+T46	Temporal-Connection 213 217	when
+E22	Temporal-Connection:T46 Arg:E18 Arg2:E7
+A6	Temporal-Connection-Type-Value E22 during
+R1	Abbrev-Of Arg1:E9 Arg2:E1	
+T47	Eq-Unit 278 281	H2O
+T19	Temporal-Connection 301 305	when
+E19	Temporal-Connection:T19 Arg:E9 Arg2:E13
+A7	Temporal-Connection-Type-Value E19 during
+T20	Observation 342 357	Do-not-intubate
+E23	Observation:T20 Name:T25
+T25	Observation-Name 342 357	Do-not-intubate
+T48	Modifier 383 393	Accidental
+E24	Modifier:T48 Modifies:E15
+T49	Modifier 410 414	Self
+E25	Modifier:T49 Modifies:E17
+T50	Modifier 106 114	invasive
+E26	Modifier:T50 Modifies:T33
+A8	Observation-Type-Value T45 measurement
+A9	Observation-Type-Value T2 measurement

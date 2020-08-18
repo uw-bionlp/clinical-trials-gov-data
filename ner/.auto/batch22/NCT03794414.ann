@@ -1,0 +1,37 @@
+T1	Condition 273 305	chronic obstructive lung disease
+T2	Condition-Name 273 305	chronic obstructive lung disease
+E1	Condition:T1 Name:T2
+T3	Condition 145 167	valvular heart disease
+T4	Condition-Name 145 167	valvular heart disease
+E3	Condition:T3 Name:T4
+T5	Condition 187 207	pericardial effusion
+T6	Condition-Name 187 207	pericardial effusion
+E5	Condition:T5 Name:T6
+T7	Condition 436 456	esophageal stricture
+T8	Condition-Name 436 456	esophageal stricture
+E7	Condition:T7 Name:T8
+T9	Procedure 416 434	esophageal surgery
+T10	Procedure-Name 416 434	esophageal surgery
+E9	Procedure:T9 Name:T10
+T11	Condition 458 476	esophageal varices
+T12	Condition-Name 458 476	esophageal varices
+E11	Condition:T11 Name:T12
+T13	Procedure 45 57	lung surgery
+T14	Procedure-Name 45 57	lung surgery
+E13	Procedure:T13 Name:T14
+T15	Condition 506 518	coagulopathy
+T16	Condition-Name 506 518	coagulopathy
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 243 244	<
+A1	Eq-Operator-Value T17 LT
+T18	Eq-Operator 583 592	less than
+A2	Eq-Operator-Value T18 LT
+T19	Eq-Unit 595 597	kg
+T20	Eq-Unit 609 611	kg
+T21	Eq-Value 245 247	40
+T22	Eq-Value 593 595	50
+T23	Eq-Value 606 609	100
+T24	Eq-Comparison 243 247	< 40
+E16	Eq-Comparison:T24 Operator:T17 Value:T21
+T25	Eq-Comparison 583 595	less than 50
+E17	Eq-Comparison:T25 Operator:T18 Value:T22

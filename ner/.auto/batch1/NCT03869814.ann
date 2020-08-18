@@ -1,0 +1,80 @@
+T1	Condition 265 273	pancreas
+T2	Condition-Name 265 273	pancreas
+E1	Condition:T1 Name:T2
+T3	Condition 277 285	prostate
+T4	Condition-Name 277 285	prostate
+E3	Condition:T3 Name:T4
+T5	Condition 252 257	liver
+T6	Condition-Name 252 257	liver
+E5	Condition:T5 Name:T6
+T7	Condition 259 263	lung
+T8	Condition-Name 259 263	lung
+E7	Condition:T7 Name:T8
+T9	Procedure 332 340	surgical
+T10	Procedure-Name 332 340	surgical
+E9	Procedure:T9 Name:T10
+T11	Procedure 476 479	CAP
+T12	Procedure-Name 476 479	CAP
+E11	Procedure:T11 Name:T12
+T13	Procedure 649 657	surgical
+T14	Procedure-Name 649 657	surgical
+E13	Procedure:T13 Name:T14
+T15	Procedure 731 749	invasive procedure
+T16	Procedure-Name 731 749	invasive procedure
+E15	Procedure:T15 Name:T16
+T17	Procedure 800 810	anesthesia
+T18	Procedure-Name 800 810	anesthesia
+E17	Procedure:T17 Name:T18
+T21	Condition 906 923	immune modulation
+T22	Condition-Name 906 923	immune modulation
+E21	Condition:T21 Name:T22
+T23	Procedure 852 868	systemic therapy
+T24	Procedure-Name 852 868	systemic therapy
+E23	Procedure:T23 Name:T24
+T25	Condition 983 992	pregnancy
+T26	Condition-Name 983 992	pregnancy
+E25	Condition:T25 Name:T26
+T27	Procedure 1050 1072	tissue transplantation
+T28	Procedure-Name 1050 1072	tissue transplantation
+E27	Procedure:T27 Name:T28
+T29	Procedure 1107 1118	transfusion
+T30	Procedure-Name 1107 1118	transfusion
+E29	Procedure:T29 Name:T30
+T31	Eq-Operator 29 41	greater than
+A1	Eq-Operator-Value T31 GT
+T32	Eq-Operator 346 351	up to
+A2	Eq-Operator-Value T32 LTEQ
+T33	Eq-Operator 547 556	less than
+A3	Eq-Operator-Value T33 LT
+T34	Eq-Operator 682 688	within
+A4	Eq-Operator-Value T34 GTEQ
+T35	Eq-Operator 812 818	within
+A5	Eq-Operator-Value T35 GTEQ
+T36	Eq-Operator 993 999	within
+A6	Eq-Operator-Value T36 GTEQ
+T37	Eq-Operator 1119 1125	within
+A7	Eq-Operator-Value T37 GTEQ
+T38	Eq-Operator 1161 1167	within
+A8	Eq-Operator-Value T38 GTEQ
+T39	Eq-Temporal-Unit 57 62	years
+A9	Eq-Temporal-Unit-Value T39 year
+T40	Eq-Temporal-Unit 560 565	years
+A10	Eq-Temporal-Unit-Value T40 year
+T41	Eq-Temporal-Unit 699 705	months
+A11	Eq-Temporal-Unit-Value T41 month
+T42	Eq-Temporal-Unit 1016 1022	months
+A12	Eq-Temporal-Unit-Value T42 month
+T43	Eq-Temporal-Unit 1178 1184	months
+A13	Eq-Temporal-Unit-Value T43 month
+T44	Age 25 28	Age
+E30	Age:T44
+T45	Age 63 66	old
+E31	Age:T45
+T46	Age 543 546	Age
+E32	Age:T46
+T47	Age 566 569	old
+E33	Age:T47
+T48	Eq-Value 54 56	21
+T49	Eq-Value 557 559	21
+T50	Eq-Comparison 547 565	less than 21 years
+E34	Eq-Comparison:T50 Operator:T33 Temporal-Unit:T40 Value:T49

@@ -1,0 +1,84 @@
+T1	Eq-Comparison 24 28	 ≥ 1
+T2	Eq-Operator 25 26	≥
+A1	Eq-Operator-Value T2 GTEQ
+T3	Eq-Comparison 25 28	≥ 1
+T4	Eq-Value 27 28	1
+T5	And 52 56	with
+T6	Condition-Name 57 77	early carious lesion
+T7	Eq-Unit 80 85	Class
+T8	Eq-Comparison 80 87	Class V
+T9	Eq-Value 86 87	V
+T10	Eq-Unit 99 105	scores
+T11	Eq-Value 106 107	1
+T12	Eq-Operator 108 109	-
+A2	Eq-Operator-Value T12 BETWEEN
+T13	Family-Member 133 140	parents
+T14	Assertion 145 164	willing and able to
+T15	Assertion 157 164	able to
+T16	Procedure-Name 179 191	oral hygiene
+T17	Life-Stage-And-Gender 202 210	children
+A3	Life-Stage-And-Gender-Value T17 child
+T18	Study 222 227	study
+T19	Observation-Name 255 261	Saliva
+A4	Observation-Name-Value T19 lab
+T20	Observation-Name 272 282	flow rates
+T21	Eq-Value 285 287	30
+T22	Eq-Comparison 285 296	30 - 60 sec
+T23	Eq-Operator 288 289	-
+A5	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Value 290 292	60
+T25	Eq-Unit 293 296	sec
+T26	Eq-Value 327 331	6.75
+T27	Eq-Operator 332 333	-
+A6	Eq-Operator-Value T27 BETWEEN
+T28	Eq-Value 334 338	7.25
+T29	Age 354 358	aged
+T30	Eq-Operator 359 366	between
+A7	Eq-Operator-Value T30 BETWEEN
+T31	Eq-Value 367 368	3
+T32	Eq-Operator 369 370	-
+A8	Eq-Operator-Value T32 BETWEEN
+T33	Eq-Value 371 372	5
+T34	Eq-Temporal-Unit 373 378	years
+A9	Eq-Temporal-Unit-Value T34 year
+T35	Eq-Operator 401 408	minimum
+A10	Eq-Operator-Value T35 GTEQ
+T36	Eq-Operator 401 411	minimum of
+A11	Eq-Operator-Value T36 GTEQ
+T37	Eq-Comparison 401 413	minimum of 1
+T38	Eq-Value 412 413	1
+T39	And 414 417	and
+T40	Eq-Operator 420 430	maximum of
+A12	Eq-Operator-Value T40 GTEQ
+T41	Eq-Comparison 420 456	maximum of 12 primary anterior teeth
+T42	Eq-Value 431 433	12
+T43	Modifier 434 456	primary anterior teeth
+T44	And 457 461	with
+T45	Condition-Name 468 483	carious lesions
+T46	Eq-Unit 484 489	Class
+T47	Eq-Comparison 484 491	Class V
+T48	Eq-Value 490 491	V
+T49	Eq-Unit 501 506	score
+T50	Eq-Value 507 508	1
+T51	Modifier 540 563	 Primary anterior teeth
+T52	Modifier 541 563	Primary anterior teeth
+T53	Condition-Name 573 588	carious lesions
+T54	Eq-Operator 611 612	≥
+A13	Eq-Operator-Value T54 GTEQ
+T55	Eq-Comparison 611 614	≥ 3
+T56	Eq-Value 613 614	3
+T57	Eq-Temporal-Period 630 632	on
+A14	Eq-Temporal-Period-Value T57 present
+T58	Drug 633 643	medication
+T59	Stability 649 656	affects
+A15	Stability-Value T59 change
+T60	Observation-Name 720 733	salivary flow
+T61	Eq-Comparison 736 745	 > 60 sec
+T62	Eq-Operator 737 738	>
+A16	Eq-Operator-Value T62 GT
+T63	Eq-Comparison 737 745	> 60 sec
+T64	Eq-Value 739 741	60
+T65	Eq-Unit 742 745	sec
+T66	Unknown 649 656	affects
+T67	Unknown 633 643	medication
+R1	Caused-By Arg1:T66 Arg2:T67

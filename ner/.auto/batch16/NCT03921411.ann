@@ -1,0 +1,70 @@
+T1	Procedure 535 549	drug injection
+T2	Procedure-Name 535 549	drug injection
+E1	Procedure:T1 Name:T2
+T3	Procedure 462 475	contraception
+T4	Procedure-Name 462 475	contraception
+E3	Procedure:T3 Name:T4
+T5	Life-Stage-And-Gender 36 42	female
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Condition 145 151	Eczema
+T7	Condition-Name 145 151	Eczema
+E6	Condition:T6 Name:T7
+T8	Life-Stage-And-Gender 28 32	Male
+A2	Life-Stage-And-Gender-Type T8 male
+T9	Condition 813 824	anaphylaxis
+T10	Condition-Name 813 824	anaphylaxis
+E9	Condition:T9 Name:T10
+T11	Procedure 688 698	parenteral
+T12	Procedure-Name 688 698	parenteral
+E11	Procedure:T11 Name:T12
+T13	Eq-Operator 52 53	≥
+A3	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 60 61	<
+A4	Eq-Operator-Value T14 LT
+T15	Eq-Operator 189 190	≥
+A5	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 209 210	≥
+A6	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 233 234	≥
+A7	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 591 592	<
+A8	Eq-Operator-Value T18 LT
+T19	Eq-Operator 624 630	within
+A9	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 755 761	within
+A10	Eq-Operator-Value T20 GTEQ
+T21	Eq-Temporal-Unit 65 70	years
+A11	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 134 139	years
+A12	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 508 513	weeks
+A13	Eq-Temporal-Unit-Value T23 week
+T24	Eq-Unit 596 598	kg
+T25	Age 74 77	age
+E12	Age:T25
+T26	Eq-Value 54 56	12
+T27	Eq-Value 62 64	18
+T28	Eq-Value 132 133	2
+T29	Eq-Value 191 193	16
+T30	Eq-Value 211 212	3
+T31	Eq-Value 235 237	10
+T32	Eq-Value 505 507	12
+T33	Eq-Value 593 595	30
+T34	Eq-Value 631 632	1
+T35	Eq-Value 762 763	1
+T36	Eq-Comparison 52 56	≥ 12
+E13	Eq-Comparison:T36 Operator:T13 Value:T26
+T37	Eq-Comparison 60 70	< 18 years
+E14	Eq-Comparison:T37 Operator:T14 Temporal-Unit:T21 Value:T27
+T38	Eq-Comparison 189 193	≥ 16
+E15	Eq-Comparison:T38 Operator:T15 Value:T29
+T39	Eq-Comparison 209 212	≥ 3
+E16	Eq-Comparison:T39 Operator:T16 Value:T30
+T40	Eq-Comparison 233 237	≥ 10
+E17	Eq-Comparison:T40 Operator:T17 Value:T31
+T41	Eq-Comparison 591 598	< 30 kg
+E18	Eq-Comparison:T41 Operator:T18 Unit:T24 Value:T33
+T42	Eq-Comparison 624 632	within 1
+E19	Eq-Comparison:T42 Operator:T19 Value:T34
+T43	Eq-Comparison 755 763	within 1
+E20	Eq-Comparison:T43 Operator:T20 Value:T35

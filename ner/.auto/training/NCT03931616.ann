@@ -1,0 +1,72 @@
+T1	Condition 300 325	Transient Ischemic Attack
+T2	Condition-Name 300 325	Transient Ischemic Attack
+E1	Condition:T1 Name:T2
+T3	Condition 262 277	ischemic stroke
+T4	Condition-Name 262 277	ischemic stroke
+E3	Condition:T3 Name:T4
+T5	Condition 732 747	primary disease
+T6	Condition-Name 732 747	primary disease
+E5	Condition:T5 Name:T6
+T7	Procedure 843 856	Major surgery
+T8	Procedure-Name 843 856	Major surgery
+E7	Procedure:T7 Name:T8
+T9	Condition 35 47	acute stroke
+T10	Condition-Name 35 47	acute stroke
+E9	Condition:T9 Name:T10
+T11	Procedure 1009 1021	thrombectomy
+T12	Procedure-Name 1009 1021	thrombectomy
+E11	Procedure:T11 Name:T12
+T13	Condition 76 82	stroke
+T14	Condition-Name 76 82	stroke
+E13	Condition:T13 Name:T14
+T15	Condition 419 425	stroke
+T16	Condition-Name 419 425	stroke
+E15	Condition:T15 Name:T16
+T17	Condition 910 916	stroke
+T18	Condition-Name 910 916	stroke
+E17	Condition:T17 Name:T18
+T19	Condition 295 298	TIA
+T20	Condition-Name 295 298	TIA
+E19	Condition:T19 Name:T20
+T21	Condition 517 520	mRS
+T22	Condition-Name 517 520	mRS
+E21	Condition:T21 Name:T22
+T23	Eq-Operator 157 163	within
+A1	Eq-Operator-Value T23 GTEQ
+T24	Eq-Operator 388 389	≤
+A2	Eq-Operator-Value T24 LTEQ
+T25	Eq-Operator 448 449	≤
+A3	Eq-Operator-Value T25 LTEQ
+T26	Eq-Operator 521 526	up to
+A4	Eq-Operator-Value T26 LTEQ
+T27	Eq-Operator 769 770	<
+A5	Eq-Operator-Value T27 LT
+T28	Eq-Operator 857 863	within
+A6	Eq-Operator-Value T28 GTEQ
+T29	Eq-Operator 917 923	within
+A7	Eq-Operator-Value T29 GTEQ
+T30	Eq-Temporal-Unit 866 871	weeks
+A8	Eq-Temporal-Unit-Value T30 week
+T31	Eq-Temporal-Unit 926 932	months
+A9	Eq-Temporal-Unit-Value T31 month
+T32	Eq-Value 132 134	11
+T33	Eq-Value 283 285	10
+T34	Eq-Value 331 333	10
+T35	Eq-Value 390 391	4
+T36	Eq-Value 450 451	3
+T37	Eq-Value 527 528	3
+T38	Eq-Value 771 772	1
+T39	Eq-Value 864 865	4
+T40	Eq-Value 924 925	3
+T41	Eq-Comparison 388 391	≤ 4
+E22	Eq-Comparison:T41 Operator:T24 Value:T35
+T42	Eq-Comparison 448 451	≤ 3
+E23	Eq-Comparison:T42 Operator:T25 Value:T36
+T43	Eq-Comparison 521 528	up to 3
+E24	Eq-Comparison:T43 Operator:T26 Value:T37
+T44	Eq-Comparison 769 772	< 1
+E25	Eq-Comparison:T44 Operator:T27 Value:T38
+T45	Eq-Comparison 857 871	within 4 weeks
+E26	Eq-Comparison:T45 Operator:T28 Temporal-Unit:T30 Value:T39
+T46	Eq-Comparison 917 932	within 3 months
+E27	Eq-Comparison:T46 Operator:T29 Temporal-Unit:T31 Value:T40

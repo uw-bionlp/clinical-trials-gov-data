@@ -1,0 +1,31 @@
+T1	Procedure 39 57	general anesthesia
+T2	Procedure-Name 39 57	general anesthesia
+E1	Procedure:T1 Name:T2
+T3	Procedure 261 279	general anesthesia
+T4	Procedure-Name 261 279	general anesthesia
+E3	Procedure:T3 Name:T4
+T5	Condition 84 91	violent
+T6	Condition-Name 84 91	violent
+E5	Condition:T5 Name:T6
+T7	Procedure 682 700	general anesthesia
+T8	Procedure-Name 682 700	general anesthesia
+E7	Procedure:T7 Name:T8
+T9	Condition 617 625	demented
+T10	Condition-Name 617 625	demented
+E9	Condition:T9 Name:T10
+T11	Language 509 515	French
+T12	Eq-Operator 743 744	<
+A1	Eq-Operator-Value T12 LT
+T13	Eq-Temporal-Unit 204 210	months
+A2	Eq-Temporal-Unit-Value T13 month
+T14	Eq-Operator 198 200	to
+A3	Eq-Operator-Value T14 BETWEEN
+T15	Eq-Value 132 133	6
+T16	Eq-Value 196 197	6
+T17	Eq-Value 201 203	12
+T18	Eq-Value 298 300	48
+T19	Eq-Value 744 746	14
+T20	Eq-Comparison 743 746	<14
+E10	Eq-Comparison:T20 Operator:T12 Value:T19
+T21	Eq-Comparison 196 200	6 to
+E11	Eq-Comparison:T21 Operator:T14 Value:T16

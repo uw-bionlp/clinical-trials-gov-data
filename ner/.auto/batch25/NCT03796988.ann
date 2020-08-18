@@ -1,0 +1,26 @@
+T1	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T1 adult
+T2	Life-Stage-And-Gender 371 377	Adults
+A2	Life-Stage-And-Gender-Type T2 adult
+T3	Condition 593 620	peripheral arterial disease
+T4	Condition-Name 593 620	peripheral arterial disease
+E3	Condition:T3 Name:T4
+T5	Procedure 680 697	radiation therapy
+T6	Procedure-Name 680 697	radiation therapy
+E5	Procedure:T5 Name:T6
+T7	Condition 1077 1092	chronic illness
+T8	Condition-Name 1077 1092	chronic illness
+E7	Condition:T7 Name:T8
+T9	Eq-Temporal-Unit 46 51	years
+A3	Eq-Temporal-Unit-Value T9 year
+T10	Eq-Temporal-Unit 171 175	days
+A4	Eq-Temporal-Unit-Value T10 day
+T11	Age 55 58	age
+E8	Age:T11
+T12	Eq-Operator 40 42	to
+A5	Eq-Operator-Value T12 BETWEEN
+T13	Eq-Value 37 39	18
+T14	Eq-Value 43 45	90
+T15	Eq-Value 168 170	30
+T16	Eq-Comparison 37 42	18 to
+E9	Eq-Comparison:T16 Operator:T12 Value:T13

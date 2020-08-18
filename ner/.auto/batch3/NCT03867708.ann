@@ -1,0 +1,70 @@
+T1	Procedure 181 192	enlargement
+T2	Procedure-Name 181 192	enlargement
+E1	Procedure:T1 Name:T2
+T3	Procedure 67 74	closure
+T4	Procedure-Name 67 74	closure
+E3	Procedure:T3 Name:T4
+T5	Condition 63 66	ASD
+T6	Condition-Name 63 66	ASD
+E5	Condition:T5 Name:T6
+T7	Condition 256 276	Paradoxical embolism
+T8	Condition-Name 256 276	Paradoxical embolism
+E7	Condition:T7 Name:T8
+T9	Procedure 360 367	closure
+T10	Procedure-Name 360 367	closure
+E9	Procedure:T9 Name:T10
+T11	Condition 315 318	ASD
+T12	Condition-Name 315 318	ASD
+E11	Condition:T11 Name:T12
+T13	Procedure 491 498	closure
+T14	Procedure-Name 491 498	closure
+E13	Procedure:T13 Name:T14
+T15	Procedure 555 562	closure
+T16	Procedure-Name 555 562	closure
+E15	Procedure:T15 Name:T16
+T17	Condition 400 403	ASD
+T18	Condition-Name 400 403	ASD
+E17	Condition:T17 Name:T18
+T19	Condition 579 588	posterior
+T20	Condition-Name 579 588	posterior
+E19	Condition:T19 Name:T20
+T21	Condition 569 577	Anterior
+T22	Condition-Name 569 577	Anterior
+E21	Condition:T21 Name:T22
+T23	Procedure 715 730	cardiac surgery
+T24	Procedure-Name 715 730	cardiac surgery
+E23	Procedure:T23 Name:T24
+T25	Condition 691 704	heart disease
+T26	Condition-Name 691 704	heart disease
+E25	Condition:T25 Name:T26
+T27	Condition 753 784	pulmonary arterial hypertension
+T28	Condition-Name 753 784	pulmonary arterial hypertension
+E27	Condition:T27 Name:T28
+T29	Procedure 820 828	shunting
+T30	Procedure-Name 820 828	shunting
+E29	Procedure:T29 Name:T30
+T31	Condition 737 740	ASD
+T32	Condition-Name 737 740	ASD
+E31	Condition:T31 Name:T32
+T33	Eq-Operator 238 239	≥
+A1	Eq-Operator-Value T33 GTEQ
+T34	Eq-Operator 415 416	<
+A2	Eq-Operator-Value T34 LT
+T35	Eq-Operator 500 501	>
+A3	Eq-Operator-Value T35 GT
+T36	Eq-Operator 616 617	<
+A4	Eq-Operator-Value T36 LT
+T37	Eq-Unit 504 506	mm
+T38	Eq-Unit 619 621	mm
+T39	Eq-Value 239 240	1
+T40	Eq-Value 416 417	1
+T41	Eq-Value 501 503	38
+T42	Eq-Value 617 618	5
+T43	Eq-Comparison 238 240	≥1
+E32	Eq-Comparison:T43 Operator:T33 Value:T39
+T44	Eq-Comparison 415 417	<1
+E33	Eq-Comparison:T44 Operator:T34 Value:T40
+T45	Eq-Comparison 500 506	>38 mm
+E34	Eq-Comparison:T45 Operator:T35 Unit:T37 Value:T41
+T46	Eq-Comparison 616 621	<5 mm
+E35	Eq-Comparison:T46 Operator:T36 Unit:T38 Value:T42

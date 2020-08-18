@@ -1,0 +1,39 @@
+T1	Condition 115 133	Chronic bronchitis
+T2	Condition-Name 115 133	Chronic bronchitis
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 34 41	females
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Life-Stage-And-Gender 25 30	Males
+A2	Life-Stage-And-Gender-Type T4 male
+T5	Condition 218 222	COPD
+T6	Condition-Name 218 222	COPD
+E5	Condition:T5 Name:T6
+T7	Condition 304 313	emphysema
+T8	Condition-Name 304 313	emphysema
+E7	Condition:T7 Name:T8
+T9	Condition 524 544	respiratory diseases
+T10	Condition-Name 524 544	respiratory diseases
+E9	Condition:T9 Name:T10
+T11	Condition 508 514	Asthma
+T12	Condition-Name 508 514	Asthma
+E11	Condition:T11 Name:T12
+T13	Condition 625 648	acute COPD exacerbation
+T14	Condition-Name 625 648	acute COPD exacerbation
+E13	Condition:T13 Name:T14
+T15	Eq-Operator 144 145	<
+A3	Eq-Operator-Value T15 LT
+T16	Eq-Operator 163 164	<
+A4	Eq-Operator-Value T16 LT
+T17	Eq-Operator 49 50	-
+A5	Eq-Operator-Value T17 BETWEEN
+T18	Eq-Value 47 49	50
+T19	Eq-Value 50 52	80
+T20	Eq-Value 103 104	1
+T21	Eq-Value 145 147	80
+T22	Eq-Value 164 165	0
+T23	Eq-Comparison 144 147	<80
+E14	Eq-Comparison:T23 Operator:T15 Value:T21
+T24	Eq-Comparison 163 165	<0
+E15	Eq-Comparison:T24 Operator:T16 Value:T22
+T25	Eq-Comparison 47 50	50-
+E16	Eq-Comparison:T25 Operator:T17 Value:T18

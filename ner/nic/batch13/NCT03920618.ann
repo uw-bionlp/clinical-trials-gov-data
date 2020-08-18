@@ -1,0 +1,140 @@
+T1	Condition 508 546	Human immunodeficiency virus infection
+T2	Condition-Name 508 546	Human immunodeficiency virus infection
+E1	Condition:T1 Name:T2
+T3	Condition 550 587	congenital immune deficiency diseases
+T4	Condition-Name 550 587	congenital immune deficiency diseases
+E3	Condition:T3 Name:T4
+T5	Condition 611 630	autoimmune diseases
+T6	Condition-Name 611 630	autoimmune diseases
+E5	Condition:T5 Name:T6
+T7	Condition 407 421	liver diseases
+T8	Condition-Name 407 421	liver diseases
+E7	Condition:T7 Name:T8 Temporality:E23
+T9	Condition 479 488	Pregnancy
+T10	Condition-Name 479 488	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Condition 492 501	lactation
+T12	Condition-Name 492 501	lactation
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 87 88	>
+A1	Eq-Operator-Value T13 GT
+T14	Eq-Operator 166 167	>
+A2	Eq-Operator-Value T14 GT
+T15	Eq-Operator 231 232	<
+A3	Eq-Operator-Value T15 LT
+T16	Eq-Operator 277 278	>
+A4	Eq-Operator-Value T16 GT
+T18	Eq-Temporal-Unit 122 127	years
+A6	Eq-Temporal-Unit-Value T18 year
+T19	Age 104 107	Age
+E12	Age:T19 Eq-Comparison:E17
+T20	Eq-Operator 116 118	to
+A7	Eq-Operator-Value T20 BETWEEN
+T21	Eq-Value 89 90	0
+T22	Eq-Value 113 115	18
+T23	Eq-Value 119 121	55
+T24	Eq-Value 168 170	10
+T25	Eq-Value 233 235	40
+T26	Eq-Value 279 280	1
+T27	Eq-Comparison 87 97	> 0.5 year
+E13	Eq-Comparison:T27 Operator:T13 Value:T21 Temporal-Unit:T38
+T28	Eq-Comparison 166 198	> 10 times upper limit of normal
+E14	Eq-Comparison:T28 Operator:T14 Value:T24
+T29	Eq-Comparison 231 235	< 40
+E15	Eq-Comparison:T29 Operator:T15 Value:T25
+T30	Eq-Comparison 277 280	> 1
+E16	Eq-Comparison:T30 Operator:T16 Value:T26
+T31	Eq-Comparison 113 127	18 to 55 years
+E17	Eq-Comparison:T31 Operator:T20 Value:T22 Value2:T23 Value3:T23 Temporal-Unit:T18
+T32	Observation 34 61	hepatitis b surface antigen
+E2	Observation:T32 Name:T33 Polarity:T34
+T33	Observation-Name 34 61	hepatitis b surface antigen
+A8	Observation-Type-Value T33 lab
+T34	Polarity 25 33	Positive
+A9	Polarity-Value T34 positive
+T35	Observation 65 86	hepatitis b virus DNA
+E4	Observation:T35 Name:T36 Eq-Comparison:E13
+T36	Observation-Name 65 86	hepatitis b virus DNA
+A10	Observation-Type-Value T36 lab
+T37	Or 62 64	or
+E6	Or:T37 Arg:E2 Arg2:E4
+T38	Eq-Temporal-Unit 93 97	year
+A11	Eq-Temporal-Unit-Value T38 year
+T39	Observation 138 165	Serum total bilirubin level
+E8	Observation:T39 Name:T40
+T40	Observation-Name 138 165	Serum total bilirubin level
+T41	Eq-Unit 171 198	times upper limit of normal
+A12	Eq-Unit-Value T41 ref-range-high
+T42	Observation 205 230	Prothrombin time activity
+E10	Observation:T42 Name:T43 Eq-Comparison:E15
+A13	Observation-Type-Value T40 lab
+T43	Observation-Name 205 230	Prothrombin time activity
+A14	Observation-Type-Value T43 lab
+T44	Observation 240 276	prothrombin time international ratio
+E18	Observation:T44 Name:T45 Eq-Comparison:E16
+T45	Observation-Name 240 276	prothrombin time international ratio
+A15	Observation-Type-Value T45 lab
+T46	Or 237 239	or
+E19	Or:T46 Arg:E10 Arg2:E18
+T47	Procedure 326 345	analogues treatment
+E20	Procedure:T47 Name:T48 Temporality:E21
+T48	Procedure-Name 326 345	analogues treatment
+T49	Eq-Comparison 353 367	past half year
+E21	Eq-Comparison:T49 Value:T50 Temporal-Unit:T51 Temporal-Period:T17
+T50	Eq-Value 358 362	half
+T51	Eq-Temporal-Unit 363 367	year
+A16	Eq-Temporal-Unit-Value T51 year
+T52	Negation 292 295	not
+E22	Negation:T52 Negates:E20
+T53	Eq-Comparison 400 406	active
+E23	Eq-Comparison:T53 Temporal-Period:T54
+T54	Eq-Temporal-Period 400 406	active
+A17	Eq-Temporal-Period-Value T54 present
+T55	Condition 428 452	Hepatocellular carcinoma
+E24	Condition:T55 Name:T56
+T56	Condition-Name 428 452	Hepatocellular carcinoma
+T57	Condition 462 472	malignancy
+E25	Condition:T57 Name:T58
+T58	Condition-Name 462 472	malignancy
+T59	Or 453 455	or
+E26	Or:T59 Arg:E24 Arg2:E25
+T60	Or 489 491	or
+E27	Or:T60 Arg:E9 Arg2:E11
+T61	Or 547 549	or
+E28	Or:T61 Arg:E1 Arg2:E3
+T62	Condition 601 609	diabetes
+E29	Condition:T62 Name:T63 Severity:T64
+T63	Condition-Name 601 609	diabetes
+T64	Severity 594 600	Severe
+A18	Severity-Value T64 severe
+T65	Condition 653 671	organ dysfunctions
+E30	Condition:T65 Name:T66
+T66	Condition-Name 653 671	organ dysfunctions
+T67	Drug 684 698	glucocorticoid
+E31	Drug:T67 Name:T68 Temporality:E32
+T68	Drug-Name 684 698	glucocorticoid
+T69	Eq-Comparison 678 683	Using
+E32	Eq-Comparison:T69 Temporal-Period:T70
+T70	Eq-Temporal-Period 678 683	Using
+A19	Eq-Temporal-Period-Value T70 present
+T71	Encounter 722 731	follow-up
+E33	Encounter:T71 
+T72	Negation 718 721	not
+E34	Negation:T72 Negates:E33
+T73	Assertion 714 717	can
+E35	Assertion:T73 Asserted:E34
+A20	Assertion-Type-Value E35 hypothetical
+T17	Eq-Temporal-Period 353 357	past
+A5	Eq-Temporal-Period-Value T17 past
+T74	Modifier 304 314	nucleotide
+E36	Modifier:T74 Modifies:T48
+T75	Or 314 315	/
+E37	Or:T75 Arg:E36 Arg2:E38
+T76	Modifier 315 325	nucleoside
+E38	Modifier:T76 Modifies:T48
+T77	Other 394 399	Other
+E39	Other:T77 Is-Other:E7
+T78	Other 456 461	other
+E40	Other:T78 Is-Other:E25
+T79	Other 637 642	Other
+E41	Other:T79 Is-Other:E30

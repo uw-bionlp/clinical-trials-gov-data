@@ -1,0 +1,18 @@
+T1	Life-Stage-And-Gender 69 75	adults
+A1	Life-Stage-And-Gender-Type T1 adult
+T2	Condition 174 179	birth
+T3	Condition-Name 174 179	birth
+E2	Condition:T2 Name:T3
+T4	Condition 157 161	plan
+T5	Condition-Name 157 161	plan
+E4	Condition:T4 Name:T5
+T6	Eq-Temporal-Unit 54 59	weeks
+A2	Eq-Temporal-Unit-Value T6 week
+T7	Age 41 44	age
+E5	Age:T7
+T8	Eq-Operator 48 50	to
+A3	Eq-Operator-Value T8 BETWEEN
+T9	Eq-Value 45 47	35
+T10	Eq-Value 51 53	39
+T11	Eq-Comparison 45 50	35 to
+E6	Eq-Comparison:T11 Operator:T8 Value:T9

@@ -1,0 +1,138 @@
+T1	Condition 300 325	Transient Ischemic Attack
+T2	Condition-Name 300 325	Transient Ischemic Attack
+E1	Condition:T1 Name:T2
+T3	Condition 262 277	ischemic stroke
+T4	Condition-Name 262 277	ischemic stroke
+E3	Condition:T3 Name:T4
+T5	Condition 732 747	primary disease
+T6	Condition-Name 732 747	primary disease
+E5	Condition:T5 Name:T6 Severity:T67
+T7	Procedure 843 856	Major surgery
+T8	Procedure-Name 843 856	Major surgery
+E7	Procedure:T7 Name:T8
+T9	Condition 35 47	acute stroke
+T10	Condition-Name 35 47	acute stroke
+E9	Condition:T9 Name:T10
+T11	Procedure 1009 1021	thrombectomy
+T12	Procedure-Name 1009 1021	thrombectomy
+E11	Procedure:T11 Name:T12
+T13	Condition 76 82	stroke
+T14	Condition-Name 76 82	stroke
+E13	Condition:T13 Name:T14
+T15	Condition 419 425	stroke
+T16	Condition-Name 419 425	stroke
+E15	Condition:T15 Name:T16
+T17	Condition 910 916	stroke
+T18	Condition-Name 910 916	stroke
+E17	Condition:T17 Name:T18 Temporality:E27
+T19	Condition 295 298	TIA
+T20	Condition-Name 295 298	TIA
+E19	Condition:T19 Name:T20
+T21	Condition 517 520	mRS
+T22	Condition-Name 517 520	mRS
+E21	Condition:T21 Name:T22
+T23	Eq-Operator 157 163	within
+A1	Eq-Operator-Value T23 LTEQ
+T24	Eq-Operator 388 389	≤
+A2	Eq-Operator-Value T24 LTEQ
+T25	Eq-Operator 448 449	≤
+A3	Eq-Operator-Value T25 LTEQ
+T26	Eq-Operator 521 526	up to
+A4	Eq-Operator-Value T26 LTEQ
+T27	Eq-Operator 769 770	<
+A5	Eq-Operator-Value T27 LT
+T28	Eq-Operator 857 863	within
+A6	Eq-Operator-Value T28 LTEQ
+T29	Eq-Operator 917 923	within
+A7	Eq-Operator-Value T29 LTEQ
+T30	Eq-Temporal-Unit 866 871	weeks
+A8	Eq-Temporal-Unit-Value T30 week
+T31	Eq-Temporal-Unit 926 932	months
+A9	Eq-Temporal-Unit-Value T31 month
+T32	Eq-Value 132 134	11
+T33	Eq-Value 283 285	10
+T34	Eq-Value 331 333	10
+T35	Eq-Value 390 391	4
+T36	Eq-Value 450 451	3
+T37	Eq-Value 527 528	3
+T38	Eq-Value 771 772	1
+T39	Eq-Value 864 865	4
+T40	Eq-Value 924 925	3
+T41	Eq-Comparison 388 391	≤ 4
+E22	Eq-Comparison:T41 Operator:T24 Value:T35 Temporal-Unit:T51
+T42	Eq-Comparison 448 451	≤ 3
+E23	Eq-Comparison:T42 Operator:T25 Value:T36
+T43	Eq-Comparison 521 528	up to 3
+E24	Eq-Comparison:T43 Operator:T26 Value:T37
+T44	Eq-Comparison 769 772	< 1
+E25	Eq-Comparison:T44 Operator:T27 Value:T38 Temporal-Unit:T69
+T45	Eq-Comparison 857 871	within 4 weeks
+E26	Eq-Comparison:T45 Operator:T28 Temporal-Unit:T30 Value:T39
+T46	Eq-Comparison 917 932	within 3 months
+E27	Eq-Comparison:T46 Operator:T29 Temporal-Unit:T31 Value:T40
+T47	Assertion 25 34	Suspected
+E2	Assertion:T47 Asserted:E9
+A10	Assertion-Type-Value E2 possible
+T48	Observation 83 107	identification algorithm
+E4	Observation:T48 Name:T49
+T49	Observation-Name 83 107	identification algorithm
+A11	Observation-Type-Value T49 measurement
+R1	Found-By Arg1:E4 Arg2:E9	
+T50	Study 212 225	primary study
+E6	Study:T50 
+T51	Eq-Temporal-Unit 392 397	hours
+A12	Eq-Temporal-Unit-Value T51 hour
+T52	Observation 435 447	Rankin scale
+E8	Observation:T52 Name:T53
+T53	Observation-Name 435 447	Rankin scale
+A13	Observation-Type-Value T53 measurement
+T54	Condition 459 475	able to ambulate
+E10	Condition:T54 Name:T55
+T55	Condition-Name 459 475	able to ambulate
+T56	Condition 548 567	suitable for tissue
+E12	Condition:T56 Name:T57
+T57	Condition-Name 548 567	suitable for tissue
+T58	Assertion 541 547	deemed
+E14	Assertion:T58 Asserted:E12
+A14	Assertion-Type-Value E14 possible
+T59	Encounter 477 501	in routine clinical care
+E16	Encounter:T59 Type:T60
+T60	Encounter-Type 477 501	in routine clinical care
+A15	Encounter-Type-Value T60 outpatient
+T61	Condition 639 657	disabling symptoms
+E18	Condition:T61 Name:T62 Stability:T65
+T62	Condition-Name 639 657	disabling symptoms
+T63	Encounter 664 700	arrival of emergency medical service
+E20	Encounter:T63 Type:T64
+T64	Encounter-Type 664 700	arrival of emergency medical service
+A16	Encounter-Type-Value T64 emergency
+T65	Stability 626 635	Remission
+A17	Stability-Value T65 change
+T66	Modifier 706 715	Malignant
+E28	Modifier:T66 Modifies:E5
+T67	Severity 725 731	severe
+A18	Severity-Value T67 severe
+T68	Study 812 825	primary study
+E29	Study:T68 
+T69	Eq-Temporal-Unit 773 777	year
+A19	Eq-Temporal-Unit-Value T69 year
+T70	Observation 753 768	life expectancy
+E30	Observation:T70 Name:T71
+T71	Observation-Name 753 768	life expectancy
+T72	Temporal-Connection 872 878	before
+E31	Temporal-Connection:T72 
+A20	Temporal-Connection-Type-Value E31 before
+T73	Study 879 884	study
+E32	Study:T73 
+T74	Temporal-Connection 933 939	before
+E33	Temporal-Connection:T74 Arg:E27 Arg2:E34
+A21	Temporal-Connection-Type-Value E33 before
+T75	Study 940 945	study
+E34	Study:T75 
+T76	Contraindication 970 987	contraindications
+E35	Contraindication:T76 Contraindicates:E36
+T77	Procedure 992 1004	thrombolysis
+E36	Procedure:T77 Name:T78
+T78	Procedure-Name 992 1004	thrombolysis
+T79	And 1005 1008	AND
+E37	And:T79 Arg:E36 Arg2:E11

@@ -1,0 +1,163 @@
+T1	Condition 636 652	eating disorders
+T2	Condition-Name 636 652	eating disorders
+E1	Condition:T1 Name:T2 Temporality:E35
+T3	Observation 46 61	body mass index
+T4	Observation-Name 46 61	body mass index
+E3	Observation:T3 Name:T4
+A1	Observation-Type-Value T4 vital
+T5	Life-Stage-And-Gender 33 39	female
+A2	Life-Stage-And-Gender-Type T5 female
+T6	Life-Stage-And-Gender 25 29	Male
+A3	Life-Stage-And-Gender-Type T6 male
+T7	Observation 63 66	BMI
+T8	Observation-Name 63 66	BMI
+E7	Observation:T7 Name:T8 Eq-Comparison:E4
+A4	Observation-Type-Value T8 vital
+T9	Eq-Operator 157 166	less than
+A5	Eq-Operator-Value T9 LT
+T10	Eq-Operator 264 265	>
+A6	Eq-Operator-Value T10 GT
+T11	Eq-Operator 324 325	<
+A7	Eq-Operator-Value T11 LT
+T12	Eq-Operator 460 461	>
+A8	Eq-Operator-Value T12 GT
+T13	Eq-Temporal-Unit 124 129	years
+A9	Eq-Temporal-Unit-Value T13 year
+T14	Eq-Temporal-Unit 267 273	months
+A10	Eq-Temporal-Unit-Value T14 month
+T15	Eq-Unit 90 92	kg
+T16	Eq-Unit 327 329	kg
+T17	Age 102 105	age
+E8	Age:T17 Eq-Comparison:E5
+T18	Eq-Operator 223 225	to
+A11	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Value 76 78	30
+T20	Eq-Value 85 87	49
+T21	Eq-Value 114 116	18
+T22	Eq-Value 121 123	65
+T23	Eq-Value 167 168	1
+T24	Eq-Value 221 222	1
+T25	Eq-Value 226 227	2
+T26	Eq-Value 265 266	3
+T27	Eq-Value 325 326	4
+T28	Eq-Value 461 463	20
+T30	Eq-Comparison 157 179	less than 1 h per week
+E9	Eq-Comparison:T30 Operator:T9 Value:T23 Temporal-Unit:T45 Per:T46
+T31	Eq-Comparison 264 273	>3 months
+E10	Eq-Comparison:T31 Operator:T10 Temporal-Unit:T14 Value:T26
+T32	Eq-Comparison 311 329	gain or loss <4 kg
+E11	Eq-Comparison:T32 Operator:T11 Unit:T16 Value:T27 Operator2:T59
+T33	Eq-Comparison 454 463	score >20
+E12	Eq-Comparison:T33 Operator:T12 Value:T28 Unit:T29
+T34	Eq-Comparison 221 238	1 to 2 h per week
+E13	Eq-Comparison:T34 Operator:T18 Value:T24 Value2:T25 Temporal-Unit:T51 Per:T52
+R1	Abbrev-Of Arg1:E7 Arg2:E3	
+T35	Or 30 32	or
+E2	Or:T35 Arg:T6 Arg2:T5
+T36	Eq-Comparison 68 95	between 30.0 and 49.9 kg/m2
+E4	Eq-Comparison:T36 Operator:T37 Value:T19 Value2:T20 Per:T38
+T37	Eq-Operator 68 75	between
+A12	Eq-Operator-Value T37 BETWEEN
+T38	Eq-Unit 93 95	m2
+T39	Eq-Comparison 106 129	between 18 and 65 years
+E5	Eq-Comparison:T39 Temporal-Unit:T13 Value:T21 Value2:T22 Operator:T40
+T40	Eq-Operator 106 113	between
+A13	Eq-Operator-Value T40 BETWEEN
+T41	Observation 131 140	sedentary
+E6	Observation:T41 Name:T42
+T42	Observation-Name 131 140	sedentary
+A14	Observation-Type-Value T42 social-habit
+T43	Observation 142 156	light exercise
+E14	Observation:T43 Name:T44
+T44	Observation-Name 142 156	light exercise
+A15	Observation-Type-Value T44 social-habit
+T45	Eq-Temporal-Unit 169 170	h
+A16	Eq-Temporal-Unit-Value T45 hour
+T46	Eq-Temporal-Unit 175 179	week
+A17	Eq-Temporal-Unit-Value T46 week
+T47	Observation 184 201	moderately active
+E15	Observation:T47 Name:T48
+T48	Observation-Name 184 201	moderately active
+A18	Observation-Type-Value T48 social-habit
+T49	Observation 203 220	moderate exercise
+E16	Observation:T49 Name:T50 Eq-Comparison:E13
+T50	Observation-Name 203 220	moderate exercise
+A19	Observation-Type-Value T50 social-habit
+R2	Equivalent-To Arg1:E14 Arg2:E6	
+R3	Equivalent-To Arg1:E16 Arg2:E15	
+T51	Eq-Temporal-Unit 228 229	h
+A20	Eq-Temporal-Unit-Value T51 hour
+T52	Eq-Temporal-Unit 234 238	week
+A21	Eq-Temporal-Unit-Value T52 week
+T53	Observation 246 252	weight
+E17	Observation:T53 Name:T54 Duration:E10 Stability:T55
+T54	Observation-Name 246 252	weight
+A22	Observation-Type-Value T54 vital
+T57	Temporal-Connection 274 282	prior to
+E19	Temporal-Connection:T57 Arg:E10 Arg2:E31
+T59	Eq-Operator 311 323	gain or loss
+A24	Eq-Operator-Value T59 PLUS-MINUS
+T60	Condition 400 406	Smoker
+E20	Condition:T60 Name:T61
+T62	Condition 408 416	diabetic
+E21	Condition:T62 Name:T63
+T63	Condition-Name 408 416	diabetic
+T64	Condition 434 452	alcohol dependance
+E22	Condition:T64 Name:T65 Temporality:E34
+T65	Condition-Name 434 452	alcohol dependance
+T66	Observation 469 503	Alcohol and Health Questionnaire 8
+E23	Observation:T66 Name:T67 Eq-Comparison:E12
+T67	Observation-Name 469 503	Alcohol and Health Questionnaire 8
+A26	Observation-Type-Value T67 survey-or-questionnaire
+T29	Eq-Unit 454 459	score
+R5	Equivalent-To Arg1:E23 Arg2:E22	
+T68	Drug 555 565	medication
+E24	Drug:T68 Name:T69 Temporality:E33
+T69	Drug-Name 555 565	medication
+T70	Observation 580 591	eating food
+E25	Observation:T70 Name:T71
+T71	Observation-Name 580 591	eating food
+A27	Observation-Type-Value T71 social-habit
+T72	Temporal-Connection 592 598	before
+E26	Temporal-Connection:T72 Arg:E25 Arg2:E27
+T74	Coreference 609 623	the medication
+E27	Coreference:T74 Refers-To:E24
+R6	Caused-By Arg1:E25 Arg2:E24	
+T75	Condition 685 699	perimenopausal
+E28	Condition:T75 Name:T76
+T76	Condition-Name 685 699	perimenopausal
+T77	Condition 706 714	pregnant
+E29	Condition:T77 Name:T78
+T78	Condition-Name 706 714	pregnant
+T79	Life-Stage-And-Gender 715 720	women
+A29	Life-Stage-And-Gender-Type T79 female
+R7	If-Then Arg1:T79 Arg2:E29	
+A23	Temporal-Connection-Type-Value E19 before
+A28	Temporal-Connection-Type-Value E26 before
+T58	Or 181 183	or
+E30	Or:T58 Arg:E6 Arg2:E15
+T56	Study 304 309	study
+E31	Study:T56 
+T55	Stability 253 259	stable
+R4	Equivalent-To Arg1:E11 Arg2:T55	
+T61	Condition-Name 400 406	Smoker
+T73	Eq-Comparison 511 517	taking
+E18	Eq-Comparison:T73 Temporal-Period:T80
+T80	Eq-Temporal-Period 511 517	taking
+A25	Eq-Temporal-Period-Value T80 present
+T81	Drug 518 541	weight loss medications
+E32	Drug:T81 Name:T82 Temporality:E18
+T82	Drug-Name 518 541	weight loss medications
+T83	Eq-Comparison 548 554	taking
+E33	Eq-Comparison:T83 Temporal-Period:T84
+T84	Eq-Temporal-Period 548 554	taking
+A30	Eq-Temporal-Period-Value T84 present
+A31	Stability-Value T55 stable
+T85	Eq-Comparison 423 430	history
+E34	Eq-Comparison:T85 Temporal-Period:T86
+T86	Eq-Temporal-Period 423 430	history
+A32	Eq-Temporal-Period-Value T86 past
+T87	Eq-Comparison 625 632	history
+E35	Eq-Comparison:T87 Temporal-Period:T88
+T88	Eq-Temporal-Period 625 632	history
+A33	Eq-Temporal-Period-Value T88 past

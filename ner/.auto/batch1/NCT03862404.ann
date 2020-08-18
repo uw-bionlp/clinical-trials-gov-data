@@ -1,0 +1,49 @@
+T1	Procedure 306 325	regional anesthesia
+T2	Procedure-Name 306 325	regional anesthesia
+E1	Procedure:T1 Name:T2
+T3	Procedure 195 211	thoracic surgery
+T4	Procedure-Name 195 211	thoracic surgery
+E3	Procedure:T3 Name:T4
+T5	Condition 222 237	hepatic failure
+T6	Condition-Name 222 237	hepatic failure
+E5	Condition:T5 Name:T6
+T7	Condition 140 154	morbid obesity
+T8	Condition-Name 140 154	morbid obesity
+E7	Condition:T7 Name:T8
+T9	Procedure 95 106	thoracotomy
+T10	Procedure-Name 95 106	thoracotomy
+E9	Procedure:T9 Name:T10
+T11	Life-Stage-And-Gender 34 40	Female
+A1	Life-Stage-And-Gender-Type T11 male
+T12	Condition 239 245	anemia
+T13	Condition-Name 239 245	anemia
+E12	Condition:T12 Name:T13
+T14	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T14 male
+T15	Procedure 90 94	open
+T16	Procedure-Name 90 94	open
+E15	Procedure:T15 Name:T16
+T17	Observation 155 158	BMI
+T18	Observation-Name 155 158	BMI
+E17	Observation:T17 Name:T18
+A3	Observation-Type-Value T18 vital
+T19	Eq-Operator 136 137	>
+A4	Eq-Operator-Value T19 GT
+T20	Eq-Operator 158 159	>
+A5	Eq-Operator-Value T20 GT
+T21	Eq-Temporal-Unit 60 65	years
+A6	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Operator 72 73	-
+A7	Eq-Operator-Value T22 BETWEEN
+T23	Eq-Value 50 52	18
+T24	Eq-Value 57 59	80
+T25	Eq-Value 71 72	1
+T26	Eq-Value 73 74	3
+T27	Eq-Value 137 138	3
+T28	Eq-Value 159 161	40
+T29	Eq-Comparison 136 138	>3
+E18	Eq-Comparison:T29 Operator:T19 Value:T27
+T30	Eq-Comparison 158 161	>40
+E19	Eq-Comparison:T30 Operator:T20 Value:T28
+T31	Eq-Comparison 71 73	1-
+E20	Eq-Comparison:T31 Operator:T22 Value:T25

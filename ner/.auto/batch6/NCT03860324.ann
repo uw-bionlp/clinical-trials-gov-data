@@ -1,0 +1,40 @@
+T1	Procedure 206 233	revision of hip replacement
+T2	Procedure-Name 206 233	revision of hip replacement
+E1	Procedure:T1 Name:T2
+T3	Condition 282 304	Chronic kidney disease
+T4	Condition-Name 282 304	Chronic kidney disease
+E3	Condition:T3 Name:T4
+T5	Procedure 43 64	total hip replacement
+T6	Procedure-Name 43 64	total hip replacement
+E5	Procedure:T5 Name:T6
+T7	Procedure 437 449	spinal block
+T8	Procedure-Name 437 449	spinal block
+E7	Procedure:T7 Name:T8
+T9	Procedure 25 33	Surgical
+T10	Procedure-Name 25 33	Surgical
+E9	Procedure:T9 Name:T10
+T11	Procedure 188 196	Surgical
+T12	Procedure-Name 188 196	Surgical
+E11	Procedure:T11 Name:T12
+T13	Condition 34 38	plan
+T14	Condition-Name 34 38	plan
+E13	Condition:T13 Name:T14
+T15	Condition 197 201	plan
+T16	Condition-Name 197 201	plan
+E15	Condition:T15 Name:T16
+T17	Observation 168 171	BMI
+T18	Observation-Name 168 171	BMI
+E17	Observation:T17 Name:T18
+A1	Observation-Type-Value T18 vital
+T19	Language 346 349	min
+T20	Eq-Operator 172 173	>
+A2	Eq-Operator-Value T20 GT
+T21	Eq-Operator 339 340	<
+A3	Eq-Operator-Value T21 LT
+T22	Eq-Unit 177 182	kg/m2
+T23	Eq-Value 174 176	40
+T24	Eq-Value 341 343	50
+T25	Eq-Comparison 172 182	> 40 kg/m2
+E18	Eq-Comparison:T25 Operator:T20 Unit:T22 Value:T23
+T26	Eq-Comparison 339 343	< 50
+E19	Eq-Comparison:T26 Operator:T21 Value:T24

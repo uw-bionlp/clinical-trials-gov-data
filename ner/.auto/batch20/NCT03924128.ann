@@ -1,0 +1,47 @@
+T1	Condition 146 160	Osteoarthritis
+T2	Condition-Name 146 160	Osteoarthritis
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 95 101	female
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Life-Stage-And-Gender 86 90	male
+A2	Life-Stage-And-Gender-Type T4 male
+T5	Language 168 171	III
+T6	Condition 531 554	cerebrovascular disease
+T7	Condition-Name 531 554	cerebrovascular disease
+E6	Condition:T6 Name:T7
+T8	Condition 427 449	cardiovascular disease
+T9	Condition-Name 427 449	cardiovascular disease
+E8	Condition:T8 Name:T9
+T10	Condition 513 529	terminal illness
+T11	Condition-Name 513 529	terminal illness
+E10	Condition:T10 Name:T11
+T12	Condition 478 492	morbid obesity
+T13	Condition-Name 478 492	morbid obesity
+E12	Condition:T12 Name:T13
+T14	Condition 464 476	hypertension
+T15	Condition-Name 464 476	hypertension
+E14	Condition:T14 Name:T15
+T16	Condition 556 564	dementia
+T17	Condition-Name 556 564	dementia
+E16	Condition:T16 Name:T17
+T18	Observation 503 506	BMI
+T19	Observation-Name 503 506	BMI
+E18	Observation:T18 Name:T19
+A3	Observation-Type-Value T19 vital
+T20	Eq-Operator 115 116	≥
+A4	Eq-Operator-Value T20 GTEQ
+T21	Eq-Operator 507 508	≥
+A5	Eq-Operator-Value T21 GTEQ
+T22	Eq-Temporal-Unit 120 125	years
+A6	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 286 292	months
+A7	Eq-Temporal-Unit-Value T23 month
+T24	Age 111 114	age
+E19	Age:T24
+T25	Eq-Value 117 119	20
+T26	Eq-Value 284 285	3
+T27	Eq-Value 509 511	40
+T28	Eq-Comparison 115 125	≥ 20 years
+E20	Eq-Comparison:T28 Operator:T20 Temporal-Unit:T22 Value:T25
+T29	Eq-Comparison 507 511	≥ 40
+E21	Eq-Comparison:T29 Operator:T21 Value:T27

@@ -1,0 +1,41 @@
+T1	Condition 75 99	type 2 diabetes mellitus
+T2	Condition-Name 75 99	type 2 diabetes mellitus
+E1	Condition:T1 Name:T2
+T3	Condition 190 209	renal insufficiency
+T4	Condition-Name 190 209	renal insufficiency
+E3	Condition:T3 Name:T4
+T5	Condition 523 542	Autoimmune diseases
+T6	Condition-Name 523 542	Autoimmune diseases
+E5	Condition:T5 Name:T6
+T7	Condition 121 137	renal impairment
+T8	Condition-Name 121 137	renal impairment
+E7	Condition:T7 Name:T8
+T9	Condition 458 472	renal diseases
+T10	Condition-Name 458 472	renal diseases
+E9	Condition:T9 Name:T10
+T11	Condition 503 517	kidney disease
+T12	Condition-Name 503 517	kidney disease
+E11	Condition:T11 Name:T12
+T13	Condition 627 636	Pregnancy
+T14	Condition-Name 627 636	Pregnancy
+E13	Condition:T13 Name:T14
+T15	Condition 641 650	lactation
+T16	Condition-Name 641 650	lactation
+E15	Condition:T15 Name:T16
+T17	Life-Stage-And-Gender 41 47	female
+A1	Life-Stage-And-Gender-Type T17 male
+T18	Life-Stage-And-Gender 33 37	male
+A2	Life-Stage-And-Gender-Type T18 male
+T19	Eq-Operator 28 29	≥
+A3	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 603 612	less than
+A4	Eq-Operator-Value T20 LT
+T21	Eq-Temporal-Unit 615 621	months
+A5	Eq-Temporal-Unit-Value T21 month
+T22	Eq-Value 29 31	18
+T23	Eq-Value 80 81	2
+T24	Eq-Value 613 614	6
+T25	Eq-Comparison 28 31	≥18
+E16	Eq-Comparison:T25 Operator:T19 Value:T22
+T26	Eq-Comparison 603 621	less than 6 months
+E17	Eq-Comparison:T26 Operator:T20 Temporal-Unit:T21 Value:T24

@@ -1,0 +1,146 @@
+T1	Condition 616 638	inflammatory arthritis
+T2	Condition-Name 616 638	inflammatory arthritis
+E1	Condition:T1 Name:T2
+T3	Condition 653 673	rheumatoid arthritis
+T4	Condition-Name 653 673	rheumatoid arthritis
+E3	Condition:T3 Name:T4
+T5	Condition 764 780	bipolar disorder
+T6	Condition-Name 764 780	bipolar disorder
+E5	Condition:T5 Name:T6 Temporality:E39
+T7	Condition 784 797	schizophrenia
+T8	Condition-Name 784 797	schizophrenia
+E7	Condition:T7 Name:T8
+T9	Condition 675 697	ankylosing spondylitis
+T10	Condition-Name 675 697	ankylosing spondylitis
+E9	Condition:T9 Name:T10
+T11	Condition 646 651	lupus
+T12	Condition-Name 646 651	lupus
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 561 562	≥
+A1	Eq-Operator-Value T13 GTEQ
+T15	Eq-Temporal-Unit 312 317	years
+A3	Eq-Temporal-Unit-Value T15 year
+T17	Eq-Value 278 279	5
+T19	Eq-Value 309 311	18
+T20	Eq-Value 563 565	20
+T21	Eq-Comparison 561 565	≥ 20
+E12	Eq-Comparison:T21 Operator:T13 Value:T20
+T22	Location 59 78	rheumatology clinic
+A4	Location-Value T22 clinic
+T23	Location 43 55	primary care
+A5	Location-Value T23 clinic
+T24	Or 56 58	or
+E2	Or:T24 Arg:T23 Arg2:T22
+T14	Eq-Comparison 99 117	6 months or longer
+E4	Eq-Comparison:T14 Operator:T26 Temporal-Unit:T25 Value:T16
+T16	Eq-Value 99 100	6
+T25	Eq-Temporal-Unit 101 107	months
+A2	Eq-Temporal-Unit-Value T25 month
+T26	Eq-Operator 108 117	or longer
+A6	Eq-Operator-Value T26 GTEQ
+T27	Condition 90 94	pain
+E6	Condition:T27 Name:T28 Duration:E4 Temporality:E38
+T28	Condition-Name 90 94	pain
+T29	Modifier 132 140	low back
+E8	Modifier:T29 Modifies:T28
+T30	Modifier 142 146	neck
+E10	Modifier:T30 Modifies:E6
+T31	Modifier 148 151	hip
+E13	Modifier:T31 Modifies:T28
+T32	Modifier 153 157	knee
+E14	Modifier:T32 Modifies:T28
+T33	Condition 161 176	widespread pain
+E15	Condition:T33 Name:T34
+T34	Condition-Name 161 176	widespread pain
+T35	Or 158 160	or
+E16	Or:T35 Arg:E6 Arg2:E15
+T36	And 79 83	with
+E17	And:T36 Arg:T22 Arg2:E6
+T37	Condition 212 216	pain
+E18	Condition:T37 Name:T38 Severity:T40
+T38	Condition-Name 212 216	pain
+T39	Eq-Comparison 183 200	at least moderate
+E19	Eq-Comparison:T39 Operator:T41 Value:T40
+T40	Severity 192 200	moderate
+A7	Severity-Value T40 moderate
+T41	Eq-Operator 183 191	at least
+A8	Eq-Operator-Value T41 GTEQ
+T42	Observation 255 274	pain severity score
+E20	Observation:T42 Name:T43 Eq-Comparison:E21
+T43	Observation-Name 255 274	pain severity score
+T18	Eq-Comparison 278 290	5 or greater
+E21	Eq-Comparison:T18 Operator:T44 Value:T17
+T44	Eq-Operator 280 290	or greater
+A9	Eq-Operator-Value T44 GTEQ
+R1	Equivalent-To Arg1:E20 Arg2:E18	
+T45	Eq-Comparison 300 317	at least 18 years
+E22	Eq-Comparison:T45 Operator:T46 Temporal-Unit:T15 Value:T19
+T46	Eq-Operator 300 308	at least
+A10	Eq-Operator-Value T46 GTEQ
+T47	Age 321 324	age
+E23	Age:T47 Eq-Comparison:E22
+T48	Procedure 467 474	surgery
+E24	Procedure:T48 Name:T49 Temporality:E27
+T49	Procedure-Name 467 474	surgery
+T50	Study 486 491	study
+E25	Study:T50 
+T51	Temporal-Connection 475 481	during
+E26	Temporal-Connection:T51 Arg:E24 Arg2:E25
+A11	Temporal-Connection-Type-Value E26 during
+T52	Eq-Comparison 450 457	planned
+E27	Eq-Comparison:T52 Temporal-Period:T53
+T53	Eq-Temporal-Period 450 457	planned
+A12	Eq-Temporal-Period-Value T53 future
+T54	Condition 529 539	depression
+E28	Condition:T54 Name:T55 Severity:T57
+T55	Condition-Name 529 539	depression
+T56	Assertion 517 525	symptoms
+E29	Assertion:T56 Asserted:E28
+A13	Assertion-Type-Value E29 possible
+T57	Severity 510 516	severe
+A14	Severity-Value T57 severe
+T58	Observation 547 551	PHQ8
+E30	Observation:T58 Name:T59 Eq-Comparison:E12
+T59	Observation-Name 547 551	PHQ8
+R2	Equivalent-To Arg1:E30 Arg2:E28	
+R3	Example-Of Arg1:E11 Arg2:E1	
+R4	Example-Of Arg1:E3 Arg2:E1	
+R5	Example-Of Arg1:E9 Arg2:E1	
+T60	Condition 711 717	cancer
+E31	Condition:T60 Name:T61
+T61	Condition-Name 711 717	cancer
+T62	Condition 742 746	pain
+E32	Condition:T62 Name:T63
+T63	Condition-Name 742 746	pain
+R6	Caused-By Arg1:E32 Arg2:E31	
+T64	Or 781 783	or
+E33	Or:T64 Arg:E5 Arg2:E7
+T65	Drug 820 826	opioid
+E34	Drug:T65 Name:T66 Dose:E36 Temporality:E35 Duration:E37
+T66	Drug-Name 820 826	opioid
+T67	Eq-Comparison 808 813	takes
+E35	Eq-Comparison:T67 Temporal-Period:T68
+T68	Eq-Temporal-Period 808 813	takes
+A15	Eq-Temporal-Period-Value T68 present
+T69	Eq-Comparison 814 819	daily
+E36	Eq-Comparison:T69 Per:T70
+T70	Eq-Temporal-Unit 814 819	daily
+A16	Eq-Temporal-Unit-Value T70 day
+T71	Eq-Comparison 831 849	more than one year
+E37	Eq-Comparison:T71 Operator:T72 Temporal-Unit:T74 Value:T73
+T72	Eq-Operator 831 840	more than
+A17	Eq-Operator-Value T72 GTEQ
+T73	Eq-Value 841 844	one
+T74	Eq-Temporal-Unit 845 849	year
+A18	Eq-Temporal-Unit-Value T74 year
+T75	Eq-Comparison 84 89	daily
+E38	Eq-Comparison:T75 Per:T76
+T76	Eq-Temporal-Unit 84 89	daily
+A19	Eq-Temporal-Unit-Value T76 day
+T77	Eq-Comparison 753 760	history
+E39	Eq-Comparison:T77 Temporal-Period:T78
+T78	Eq-Temporal-Period 753 760	history
+A20	Eq-Temporal-Period-Value T78 past
+A21	Observation-Type-Value T59 survey-or-questionnaire
+T79	Modifier 726 741	musculoskeletal
+E40	Modifier:T79 Modifies:T63

@@ -1,0 +1,80 @@
+T1	Condition 241 250	gestation
+T2	Condition-Name 241 250	gestation
+E1	Condition:T1 Name:T2
+T3	Condition 445 453	syndrome
+T4	Condition-Name 445 453	syndrome
+E3	Condition:T3 Name:T4
+T5	Condition 633 641	Oliguria
+T6	Condition-Name 633 641	Oliguria
+E5	Condition:T5 Name:T6
+T7	Condition 526 533	grade 3
+T8	Condition-Name 526 533	grade 3
+E7	Condition:T7 Name:T8
+T9	Condition 677 680	NEC
+T10	Condition-Name 677 680	NEC
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 41 42	<
+A1	Eq-Operator-Value T11 LT
+T12	Eq-Operator 69 70	<
+A2	Eq-Operator-Value T12 LT
+T13	Eq-Operator 86 95	less than
+A3	Eq-Operator-Value T13 LT
+T14	Eq-Operator 123 124	>
+A4	Eq-Operator-Value T14 GT
+T15	Eq-Operator 225 226	≥
+A5	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 255 256	≥
+A6	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 561 562	<
+A7	Eq-Operator-Value T17 LT
+T18	Eq-Operator 615 616	>
+A8	Eq-Operator-Value T18 GT
+T19	Eq-Operator 642 643	<
+A9	Eq-Operator-Value T19 LT
+T20	Eq-Temporal-Unit 46 51	weeks
+A10	Eq-Temporal-Unit-Value T20 week
+T21	Eq-Temporal-Unit 260 265	weeks
+A11	Eq-Temporal-Unit-Value T21 week
+T22	Eq-Unit 129 131	mm
+T23	Eq-Unit 570 573	mm3
+T24	Eq-Unit 648 650	kg
+T25	Age 37 40	age
+E10	Age:T25
+T26	Age 82 85	Age
+E11	Age:T26
+T27	Age 251 254	age
+E12	Age:T27
+T28	Eq-Operator 533 534	-
+A12	Eq-Operator-Value T28 BETWEEN
+T29	Eq-Value 43 45	32
+T30	Eq-Value 70 74	1500
+T31	Eq-Value 96 98	72
+T32	Eq-Value 125 126	1
+T33	Eq-Value 227 231	1500
+T34	Eq-Value 257 259	32
+T35	Eq-Value 510 512	48
+T36	Eq-Value 532 533	3
+T37	Eq-Value 534 535	4
+T38	Eq-Value 563 565	50
+T39	Eq-Value 617 620	110
+T40	Eq-Value 643 644	1
+T41	Eq-Comparison 41 51	< 32 weeks
+E13	Eq-Comparison:T41 Operator:T11 Temporal-Unit:T20 Value:T29
+T42	Eq-Comparison 69 74	<1500
+E14	Eq-Comparison:T42 Operator:T12 Value:T30
+T43	Eq-Comparison 86 98	less than 72
+E15	Eq-Comparison:T43 Operator:T13 Value:T31
+T44	Eq-Comparison 123 126	> 1
+E16	Eq-Comparison:T44 Operator:T14 Value:T32
+T45	Eq-Comparison 225 231	≥ 1500
+E17	Eq-Comparison:T45 Operator:T15 Value:T33
+T46	Eq-Comparison 255 265	≥ 32 weeks
+E18	Eq-Comparison:T46 Operator:T16 Temporal-Unit:T21 Value:T34
+T47	Eq-Comparison 561 565	< 50
+E19	Eq-Comparison:T47 Operator:T17 Value:T38
+T48	Eq-Comparison 615 620	> 110
+E20	Eq-Comparison:T48 Operator:T18 Value:T39
+T49	Eq-Comparison 642 644	<1
+E21	Eq-Comparison:T49 Operator:T19 Value:T40
+T50	Eq-Comparison 532 534	3-
+E22	Eq-Comparison:T50 Operator:T28 Value:T36

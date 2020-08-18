@@ -1,0 +1,19 @@
+T1	Condition 54 66	implantation
+T2	Condition-Name 54 66	implantation
+E1	Condition:T1 Name:T2
+T3	Condition 407 413	sepsis
+T4	Condition-Name 407 413	sepsis
+E3	Condition:T3 Name:T4
+T5	Eq-Operator 256 265	less than
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Temporal-Unit 36 42	months
+A2	Eq-Temporal-Unit-Value T6 month
+T7	Age 125 128	age
+E4	Age:T7
+T8	Age 153 156	age
+E5	Age:T8
+T9	Eq-Value 34 35	3
+T10	Eq-Value 129 131	18
+T11	Eq-Value 266 269	150
+T12	Eq-Comparison 256 269	less than 150
+E6	Eq-Comparison:T12 Operator:T5 Value:T11

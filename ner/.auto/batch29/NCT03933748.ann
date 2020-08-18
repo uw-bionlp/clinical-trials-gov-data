@@ -1,0 +1,21 @@
+T1	Procedure 99 110	therapeutic
+T2	Procedure-Name 99 110	therapeutic
+E1	Procedure:T1 Name:T2
+T3	Procedure 255 266	therapeutic
+T4	Procedure-Name 255 266	therapeutic
+E3	Procedure:T3 Name:T4
+T5	Procedure 456 467	therapeutic
+T6	Procedure-Name 456 467	therapeutic
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 130 131	≤
+A1	Eq-Operator-Value T7 LTEQ
+T8	Eq-Operator 531 537	within
+A2	Eq-Operator-Value T8 GTEQ
+T9	Eq-Temporal-Unit 134 139	years
+A3	Eq-Temporal-Unit-Value T9 year
+T10	Eq-Value 131 133	18
+T11	Eq-Value 538 540	24
+T12	Eq-Comparison 130 139	≤18 years
+E6	Eq-Comparison:T12 Operator:T7 Temporal-Unit:T9 Value:T10
+T13	Eq-Comparison 531 540	within 24
+E7	Eq-Comparison:T13 Operator:T8 Value:T11

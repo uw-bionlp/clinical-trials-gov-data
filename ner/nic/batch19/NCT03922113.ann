@@ -1,0 +1,91 @@
+T1	Procedure 115 133	colorectal surgery
+T2	Procedure-Name 115 133	colorectal surgery
+E1	Procedure:T1 Name:T2 Temporality:E4
+T3	Procedure 286 298	arthroplasty
+T4	Procedure-Name 286 298	arthroplasty
+E3	Procedure:T3 Name:T4
+T5	Condition 469 483	polyneuropathy
+T6	Condition-Name 469 483	polyneuropathy
+E5	Condition:T5 Name:T6
+T7	Condition 521 532	tetraplegia
+T8	Condition-Name 521 532	tetraplegia
+E7	Condition:T7 Name:T8
+T13	Condition 457 465	myopathy
+T14	Condition-Name 457 465	myopathy
+E13	Condition:T13 Name:T14 Temporality:E24
+T15	Condition 258 262	coma
+T16	Condition-Name 258 262	coma
+E15	Condition:T15 Name:T16
+T19	Eq-Operator 72 73	>
+A1	Eq-Operator-Value T19 GT
+T20	Eq-Operator 189 190	>
+A2	Eq-Operator-Value T20 GT
+T21	Eq-Operator 196 197	<
+A3	Eq-Operator-Value T21 LT
+T22	Eq-Value 74 76	48
+T23	Eq-Value 191 192	1
+T24	Eq-Value 198 200	-1
+T25	Eq-Comparison 72 77	> 48h
+E18	Eq-Comparison:T25 Operator:T19 Value:T22 Temporal-Unit:T29
+T26	Eq-Comparison 189 192	> 1
+E19	Eq-Comparison:T26 Operator:T20 Value:T23
+T27	Encounter 39 42	ICU
+E2	Encounter:T27 Type:T28 Duration:E18
+T28	Encounter-Type 39 42	ICU
+A4	Encounter-Type-Value T28 icu
+T29	Eq-Temporal-Unit 76 77	h
+A5	Eq-Temporal-Unit-Value T29 hour
+T30	Eq-Comparison 101 110	scheduled
+E4	Eq-Comparison:T30 Temporal-Period:T31
+T31	Eq-Temporal-Period 101 110	scheduled
+A6	Eq-Temporal-Period-Value T31 future
+T32	Condition 139 146	Healthy
+E6	Condition:T32 Name:T33
+T33	Condition-Name 139 146	Healthy
+T9	Observation 208 245	Richmond Agitation and Sedation Scale
+E8	Observation:T9 Name:T10 Eq-Comparison:E10 Eq-Comparison2:E19
+T10	Observation-Name 208 245	Richmond Agitation and Sedation Scale
+A7	Observation-Type-Value T10 clinical-score
+T34	Observation 247 251	RASS
+E9	Observation:T34 Name:T35
+T35	Observation-Name 247 251	RASS
+R1	Abbrev-Of Arg1:E9 Arg2:E8	
+T36	Eq-Comparison 196 200	< -1
+E10	Eq-Comparison:T36 Operator:T21 Value:T24
+T37	Or 193 195	or
+E12	Or:T37 Arg:E19 Arg2:E10
+T38	Modifier 281 285	knee
+E14	Modifier:T38 Modifies:T4
+T39	Modifier 268 277	total hip
+E16	Modifier:T39 Modifies:T4
+T40	Or 278 280	or
+E20	Or:T40 Arg:E16 Arg2:E14
+T41	Modifier 306 319	dominant limb
+E21	Modifier:T41 Modifies:T4
+T42	Condition 325 345	unauthorized support
+E22	Condition:T42 Name:T43
+T43	Condition-Name 325 345	unauthorized support
+T44	Modifier 353 365	dominant leg
+E23	Modifier:T44 Modifies:T43
+T11	Condition 371 381	open wound
+E11	Condition:T11 Name:T12
+T12	Condition-Name 371 381	open wound
+T17	Modifier 397 438	ankle's anterior face of the dominant leg
+E17	Modifier:T17 Modifies:T12
+T18	Eq-Comparison 444 456	pre-existing
+E24	Eq-Comparison:T18 Temporal-Period:T45
+T45	Eq-Temporal-Period 444 456	pre-existing
+A8	Eq-Temporal-Period-Value T45 past
+T46	Or 466 468	or
+E25	Or:T46 Arg:E13 Arg2:E5
+T47	Condition 498 510	tetraparesis
+E26	Condition:T47 Name:T48
+T48	Condition-Name 498 510	tetraparesis
+T49	Modifier 489 493	para
+E27	Modifier:T49 Modifies:T48
+T50	Or 495 497	or
+E28	Or:T50 Arg:E27
+T51	Modifier 512 516	para
+E29	Modifier:T51 Modifies:T8
+T52	Or 518 520	or
+E30	Or:T52 Arg:E29

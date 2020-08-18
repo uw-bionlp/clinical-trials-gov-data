@@ -1,0 +1,65 @@
+T1	Condition 450 465	Substance abuse
+T2	Condition-Name 450 465	Substance abuse
+E1	Condition:T1 Name:T2
+T3	Condition 207 220	Schizophrenia
+T4	Condition-Name 207 220	Schizophrenia
+E3	Condition:T3 Name:T4
+T5	Condition 230 238	disorder
+T6	Condition-Name 230 238	disorder
+E5	Condition:T5 Name:T6
+T7	Condition 592 600	movement
+T8	Condition-Name 592 600	movement
+E7	Condition:T7 Name:T8
+T9	Condition 661 669	dystonia
+T10	Condition-Name 661 669	dystonia
+E9	Condition:T9 Name:T10
+T11	Condition 624 630	stroke
+T12	Condition-Name 624 630	stroke
+E11	Condition:T11 Name:T12
+T13	Condition 807 826	ringing in the ears
+T14	Condition-Name 807 826	ringing in the ears
+E13	Condition:T13 Name:T14
+T15	Condition 737 745	Epilepsy
+T16	Condition-Name 737 745	Epilepsy
+E15	Condition:T15 Name:T16
+T17	Language 864 867	MRI
+T18	Procedure 881 884	TMS
+T19	Procedure-Name 881 884	TMS
+E18	Procedure:T18 Name:T19
+T20	Condition 907 921	claustrophobia
+T21	Condition-Name 907 921	claustrophobia
+E20	Condition:T20 Name:T21
+T22	Condition 1012 1026	breast feeding
+T23	Condition-Name 1012 1026	breast feeding
+E22	Condition:T22 Name:T23
+T24	Procedure 1127 1137	surgically
+T25	Procedure-Name 1127 1137	surgically
+E24	Procedure:T24 Name:T25
+T26	Life-Stage-And-Gender 1099 1105	Female
+A1	Life-Stage-And-Gender-Type T26 male
+T27	Procedure 946 949	TMS
+T28	Procedure-Name 946 949	TMS
+E27	Procedure:T27 Name:T28
+T29	Condition 1447 1467	psychiatric disorder
+T30	Condition-Name 1447 1467	psychiatric disorder
+E29	Condition:T29 Name:T30
+T31	Condition 1499 1512	schizophrenia
+T32	Condition-Name 1499 1512	schizophrenia
+E31	Condition:T31 Name:T32
+T33	Eq-Operator 419 421	>=
+A2	Eq-Operator-Value T33 GTEQ
+T34	Eq-Operator 963 971	the past
+A3	Eq-Operator-Value T34 GTEQ
+T35	Eq-Temporal-Unit 974 980	months
+A4	Eq-Temporal-Unit-Value T35 month
+T36	Eq-Temporal-Unit 1204 1209	years
+A5	Eq-Temporal-Unit-Value T36 year
+T37	Eq-Value 299 300	5
+T38	Eq-Value 306 307	5
+T39	Eq-Value 422 424	15
+T40	Eq-Value 972 973	3
+T41	Eq-Value 1202 1203	2
+T42	Eq-Comparison 419 424	>= 15
+E32	Eq-Comparison:T42 Operator:T33 Value:T39
+T43	Eq-Comparison 963 980	the past 3 months
+E33	Eq-Comparison:T43 Operator:T34 Temporal-Unit:T35 Value:T40

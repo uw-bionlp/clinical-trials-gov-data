@@ -1,0 +1,58 @@
+T1	Observation 173 188	Body mass index
+T2	Observation-Name 173 188	Body mass index
+E1	Observation:T1 Name:T2
+A1	Observation-Type-Value T2 vital
+T3	Procedure 582 597	cholecystectomy
+T4	Procedure-Name 582 597	cholecystectomy
+E3	Procedure:T3 Name:T4
+T5	Procedure 545 557	appendectomy
+T6	Procedure-Name 545 557	appendectomy
+E5	Procedure:T5 Name:T6
+T7	Condition 469 479	absorption
+T8	Condition-Name 469 479	absorption
+E7	Condition:T7 Name:T8
+T9	Condition 495 505	metabolism
+T10	Condition-Name 495 505	metabolism
+E9	Condition:T9 Name:T10
+T11	Procedure 562 572	herniotomy
+T12	Procedure-Name 562 572	herniotomy
+E11	Procedure:T11 Name:T12
+T13	Condition 787 797	Narcolepsy
+T14	Condition-Name 787 797	Narcolepsy
+E13	Condition:T13 Name:T14
+T15	Condition 847 857	narcolepsy
+T16	Condition-Name 847 857	narcolepsy
+E15	Condition:T15 Name:T16
+T17	Procedure 77 86	procedure
+T18	Procedure-Name 77 86	procedure
+E17	Procedure:T17 Name:T18
+T19	Condition 861 870	cataplexy
+T20	Condition-Name 861 870	cataplexy
+E19	Condition:T19 Name:T20
+T21	Procedure 373 381	surgical
+T22	Procedure-Name 373 381	surgical
+E21	Procedure:T21 Name:T22
+T23	Life-Stage-And-Gender 100 104	male
+A2	Life-Stage-And-Gender-Type T23 male
+T24	Observation 190 193	BMI
+T25	Observation-Name 190 193	BMI
+E24	Observation:T24 Name:T25
+A3	Observation-Type-Value T25 vital
+T26	Eq-Operator 816 817	<
+A4	Eq-Operator-Value T26 LT
+T27	Eq-Temporal-Unit 137 142	years
+A5	Eq-Temporal-Unit-Value T27 year
+T28	Eq-Unit 211 216	kg/m2
+T29	Age 114 118	aged
+E25	Age:T29
+T30	Eq-Operator 203 205	to
+A6	Eq-Operator-Value T30 BETWEEN
+T31	Eq-Value 127 129	18
+T32	Eq-Value 134 136	45
+T33	Eq-Value 198 200	18
+T34	Eq-Value 206 208	28
+T35	Eq-Value 818 819	0
+T36	Eq-Comparison 816 819	< 0
+E26	Eq-Comparison:T36 Operator:T26 Value:T35
+T37	Eq-Comparison 203 208	to 28
+E27	Eq-Comparison:T37 Operator:T30 Value:T34

@@ -1,0 +1,66 @@
+T1	Procedure 98 129	invasive hemodynamic monitoring
+T2	Procedure-Name 98 129	invasive hemodynamic monitoring
+E1	Procedure:T1 Name:T2
+T3	Condition 391 420	pulmonary artery hypertension
+T4	Condition-Name 391 420	pulmonary artery hypertension
+E3	Condition:T3 Name:T4
+T5	Condition 446 469	Tricuspid insufficiency
+T6	Condition-Name 446 469	Tricuspid insufficiency
+E5	Condition:T5 Name:T6
+T7	Condition 1032 1055	Inability to understand
+T8	Condition-Name 1032 1055	Inability to understand
+E7	Condition:T7 Name:T8
+T9	Procedure 694 716	mechanical ventilation
+T10	Procedure-Name 694 716	mechanical ventilation
+E9	Procedure:T9 Name:T10
+T11	Condition 1370 1389	atrial fibrillation
+T12	Condition-Name 1370 1389	atrial fibrillation
+E11	Condition:T11 Name:T12
+T13	Procedure 64 79	cardiac surgery
+T14	Procedure-Name 64 79	cardiac surgery
+E13	Procedure:T13 Name:T14
+T15	Language 1081 1096	French language
+T16	Condition 1280 1294	pulse pressure
+T17	Condition-Name 1280 1294	pulse pressure
+E16	Condition:T16 Name:T17
+T18	Procedure 559 569	Dilatation
+T19	Procedure-Name 559 569	Dilatation
+E18	Procedure:T18 Name:T19
+T20	Condition 422 425	PAH
+T21	Condition-Name 422 425	PAH
+E20	Condition:T20 Name:T21
+T22	Eq-Operator 236 237	>
+A1	Eq-Operator-Value T22 GT
+T23	Eq-Operator 294 295	<
+A2	Eq-Operator-Value T23 LT
+T24	Eq-Operator 351 352	<
+A3	Eq-Operator-Value T24 LT
+T25	Eq-Operator 426 427	>
+A4	Eq-Operator-Value T25 GT
+T26	Eq-Operator 469 470	>
+A5	Eq-Operator-Value T26 GT
+T27	Eq-Operator 542 543	<
+A6	Eq-Operator-Value T27 LT
+T28	Eq-Temporal-Unit 33 38	years
+A7	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Unit 431 433	mm
+T30	Eq-Unit 546 548	mm
+T31	Eq-Value 30 32	18
+T32	Eq-Value 238 240	10
+T33	Eq-Value 295 297	40
+T34	Eq-Value 352 354	50
+T35	Eq-Value 428 430	50
+T36	Eq-Value 471 472	3
+T37	Eq-Value 543 545	16
+T38	Eq-Comparison 236 240	> 10
+E21	Eq-Comparison:T38 Operator:T22 Value:T32
+T39	Eq-Comparison 294 297	<40
+E22	Eq-Comparison:T39 Operator:T23 Value:T33
+T40	Eq-Comparison 351 354	<50
+E23	Eq-Comparison:T40 Operator:T24 Value:T34
+T41	Eq-Comparison 426 433	> 50 mm
+E24	Eq-Comparison:T41 Operator:T25 Unit:T29 Value:T35
+T42	Eq-Comparison 469 472	> 3
+E25	Eq-Comparison:T42 Operator:T26 Value:T36
+T43	Eq-Comparison 542 548	<16 mm
+E26	Eq-Comparison:T43 Operator:T27 Unit:T30 Value:T37

@@ -1,0 +1,68 @@
+T1	Condition 40 57	Myasthenia Gravis
+T2	Condition-Name 40 57	Myasthenia Gravis
+E1	Condition:T1 Name:T2
+T3	Condition 357 381	meningococcal infections
+T4	Condition-Name 357 381	meningococcal infections
+E3	Condition:T3 Name:T4
+T5	Condition 470 493	meningococcal infection
+T6	Condition-Name 470 493	meningococcal infection
+E5	Condition:T5 Name:T6
+T7	Procedure 759 769	thymectomy
+T8	Procedure-Name 759 769	thymectomy
+E7	Procedure:T7 Name:T8
+T9	Procedure 996 1011	plasma exchange
+T10	Procedure-Name 996 1011	plasma exchange
+E9	Procedure:T9 Name:T10
+T11	Eq-Operator 289 290	≥
+A1	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 382 388	within
+A2	Eq-Operator-Value T12 GTEQ
+T13	Eq-Operator 715 716	≥
+A3	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 770 776	within
+A4	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 879 885	within
+A5	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 947 953	within
+A6	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 1012 1018	within
+A7	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 1071 1077	within
+A8	Eq-Operator-Value T18 GTEQ
+T19	Eq-Temporal-Unit 69 75	months
+A9	Eq-Temporal-Unit-Value T19 month
+T20	Eq-Temporal-Unit 81 85	days
+A10	Eq-Temporal-Unit-Value T20 day
+T21	Eq-Temporal-Unit 391 396	years
+A11	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 719 724	years
+A12	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 784 790	months
+A13	Eq-Temporal-Unit-Value T23 month
+T24	Eq-Temporal-Unit 956 961	weeks
+A14	Eq-Temporal-Unit-Value T24 week
+T25	Eq-Temporal-Unit 1021 1026	weeks
+A15	Eq-Temporal-Unit-Value T25 week
+T26	Eq-Temporal-Unit 1080 1086	months
+A16	Eq-Temporal-Unit-Value T26 month
+T27	Eq-Value 67 68	6
+T28	Eq-Value 291 292	6
+T29	Eq-Value 329 330	1
+T30	Eq-Value 389 390	3
+T31	Eq-Value 717 718	5
+T32	Eq-Value 781 783	12
+T33	Eq-Value 954 955	4
+T34	Eq-Value 1019 1020	4
+T35	Eq-Value 1078 1079	6
+T36	Eq-Comparison 289 292	≥ 6
+E10	Eq-Comparison:T36 Operator:T11 Value:T28
+T37	Eq-Comparison 382 396	within 3 years
+E11	Eq-Comparison:T37 Operator:T12 Temporal-Unit:T21 Value:T30
+T38	Eq-Comparison 715 724	≥ 5 years
+E12	Eq-Comparison:T38 Operator:T13 Temporal-Unit:T22 Value:T31
+T39	Eq-Comparison 947 961	within 4 weeks
+E13	Eq-Comparison:T39 Operator:T16 Temporal-Unit:T24 Value:T33
+T40	Eq-Comparison 1012 1026	within 4 weeks
+E14	Eq-Comparison:T40 Operator:T17 Temporal-Unit:T25 Value:T34
+T41	Eq-Comparison 1071 1086	within 6 months
+E15	Eq-Comparison:T41 Operator:T18 Temporal-Unit:T26 Value:T35

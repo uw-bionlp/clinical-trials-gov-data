@@ -1,0 +1,67 @@
+T1	Condition 47 70	urinary tract infection
+T2	Condition-Name 47 70	urinary tract infection
+E1	Condition:T1 Name:T2
+T3	Condition 396 407	bacteriuria
+T4	Condition-Name 396 407	bacteriuria
+E3	Condition:T3 Name:T4
+T5	Condition 330 339	confusion
+T6	Condition-Name 330 339	confusion
+E5	Condition:T5 Name:T6
+T7	Condition 72 75	UTI
+T8	Condition-Name 72 75	UTI
+E7	Condition:T7 Name:T8
+T9	Language 153 156	sus
+T10	Condition 533 536	CTX
+T11	Condition-Name 533 536	CTX
+E10	Condition:T10 Name:T11
+T12	Condition 787 810	Hemodynamic instability
+T13	Condition-Name 787 810	Hemodynamic instability
+E12	Condition:T12 Name:T13
+T14	Condition 592 613	allergy to fosfomycin
+T15	Condition-Name 592 613	allergy to fosfomycin
+E14	Condition:T14 Name:T15
+T16	Condition 816 837	Chronic renal failure
+T17	Condition-Name 816 837	Chronic renal failure
+E16	Condition:T16 Name:T17
+T18	Condition 761 781	Acute pyelonephritis
+T19	Condition-Name 761 781	Acute pyelonephritis
+E18	Condition:T18 Name:T19
+T20	Condition 714 733	Chronic prostatitis
+T21	Condition-Name 714 733	Chronic prostatitis
+E20	Condition:T20 Name:T21
+T22	Procedure 872 890	antibiotic therapy
+T23	Procedure-Name 872 890	antibiotic therapy
+E22	Procedure:T22 Name:T23
+T24	Condition 691 708	immunosuppression
+T25	Condition-Name 691 708	immunosuppression
+E24	Condition:T24 Name:T25
+T26	Procedure 839 848	clearance
+T27	Procedure-Name 839 848	clearance
+E26	Procedure:T26 Name:T27
+T28	Condition 739 747	Prostate
+T29	Condition-Name 739 747	Prostate
+E28	Condition:T28 Name:T29
+T30	Condition 748 755	abscess
+T31	Condition-Name 748 755	abscess
+E30	Condition:T30 Name:T31
+T32	Eq-Operator 139 140	>
+A1	Eq-Operator-Value T32 GT
+T33	Eq-Operator 384 385	>
+A2	Eq-Operator-Value T33 GT
+T34	Eq-Operator 408 409	>
+A3	Eq-Operator-Value T34 GT
+T35	Eq-Operator 849 850	<
+A4	Eq-Operator-Value T35 LT
+T36	Eq-Unit 391 393	mm
+T37	Eq-Value 141 143	38
+T38	Eq-Value 386 388	10
+T39	Eq-Value 410 412	10
+T40	Eq-Value 850 852	60
+T41	Eq-Comparison 139 143	> 38
+E31	Eq-Comparison:T41 Operator:T32 Value:T37
+T42	Eq-Comparison 384 388	> 10
+E32	Eq-Comparison:T42 Operator:T33 Value:T38
+T43	Eq-Comparison 408 412	> 10
+E33	Eq-Comparison:T43 Operator:T34 Value:T39
+T44	Eq-Comparison 849 852	<60
+E34	Eq-Comparison:T44 Operator:T35 Value:T40

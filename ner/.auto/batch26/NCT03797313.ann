@@ -1,0 +1,112 @@
+T1	Condition 294 319	acute respiratory failure
+T2	Condition-Name 294 319	acute respiratory failure
+E1	Condition:T1 Name:T2
+T3	Condition 329 352	Obstructive Sleep Apnea
+T4	Condition-Name 329 352	Obstructive Sleep Apnea
+E3	Condition:T3 Name:T4
+T5	Procedure 151 173	Mechanical ventilation
+T6	Procedure-Name 151 173	Mechanical ventilation
+E5	Procedure:T5 Name:T6
+T7	Condition 45 64	Respiratory failure
+T8	Condition-Name 45 64	Respiratory failure
+E7	Condition:T7 Name:T8
+T9	Condition 91 110	respiratory failure
+T10	Condition-Name 91 110	respiratory failure
+E9	Condition:T9 Name:T10
+T11	Procedure 250 255	BiPAP
+T12	Procedure-Name 250 255	BiPAP
+E11	Procedure:T11 Name:T12
+T13	Procedure 244 248	CPAP
+T14	Procedure-Name 244 248	CPAP
+E13	Procedure:T13 Name:T14
+T15	Condition 1484 1509	acute respiratory failure
+T16	Condition-Name 1484 1509	acute respiratory failure
+E15	Condition:T15 Name:T16
+T17	Procedure 699 721	Mechanical ventilation
+T18	Procedure-Name 699 721	Mechanical ventilation
+E17	Procedure:T17 Name:T18
+T19	Procedure 737 759	mechanical ventilation
+T20	Procedure-Name 737 759	mechanical ventilation
+E19	Procedure:T19 Name:T20
+T21	Condition 1350 1367	end stage disease
+T22	Condition-Name 1350 1367	end stage disease
+E21	Condition:T21 Name:T22
+T23	Condition 1000 1013	mild dementia
+T24	Condition-Name 1000 1013	mild dementia
+E23	Condition:T23 Name:T24
+T25	Condition 1388 1401	heart failure
+T26	Condition-Name 1388 1401	heart failure
+E25	Condition:T25 Name:T26
+T27	Condition 1059 1067	dementia
+T28	Condition-Name 1059 1067	dementia
+E27	Condition:T27 Name:T28
+T29	Language 977 984	English
+T30	Condition 1664 1673	Pregnancy
+T31	Condition-Name 1664 1673	Pregnancy
+E30	Condition:T30 Name:T31
+T32	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T32 GTEQ
+T33	Eq-Operator 125 126	≥
+A2	Eq-Operator-Value T33 GTEQ
+T34	Eq-Operator 199 200	≥
+A3	Eq-Operator-Value T34 GTEQ
+T35	Eq-Operator 257 258	≥
+A4	Eq-Operator-Value T35 GTEQ
+T36	Eq-Operator 416 417	≥
+A5	Eq-Operator-Value T36 GTEQ
+T37	Eq-Operator 436 437	≥
+A6	Eq-Operator-Value T37 GTEQ
+T38	Eq-Operator 449 450	≥
+A7	Eq-Operator-Value T38 GTEQ
+T39	Eq-Operator 506 507	≤
+A8	Eq-Operator-Value T39 LTEQ
+T40	Eq-Operator 683 684	<
+A9	Eq-Operator-Value T40 LT
+T41	Eq-Operator 1079 1080	>
+A10	Eq-Operator-Value T41 GT
+T42	Eq-Operator 1118 1119	>
+A11	Eq-Operator-Value T42 GT
+T43	Eq-Temporal-Unit 34 39	years
+A12	Eq-Temporal-Unit-Value T43 year
+T44	Eq-Temporal-Unit 1123 1128	years
+A13	Eq-Temporal-Unit-Value T44 year
+T45	Eq-Temporal-Unit 1455 1461	months
+A14	Eq-Temporal-Unit-Value T45 month
+T46	Age 25 28	Age
+E31	Age:T46
+T47	Age 1129 1132	old
+E32	Age:T47
+T48	Eq-Value 31 33	18
+T49	Eq-Value 126 127	1
+T50	Eq-Value 201 203	24
+T51	Eq-Value 259 261	24
+T52	Eq-Value 418 419	0
+T53	Eq-Value 438 440	30
+T54	Eq-Value 451 453	24
+T55	Eq-Value 508 509	1
+T56	Eq-Value 685 687	24
+T57	Eq-Value 1081 1082	3
+T58	Eq-Value 1120 1122	50
+T59	Eq-Value 1453 1454	6
+T60	Eq-Comparison 29 39	≥ 18 years
+E33	Eq-Comparison:T60 Operator:T32 Temporal-Unit:T43 Value:T48
+T61	Eq-Comparison 125 127	≥1
+E34	Eq-Comparison:T61 Operator:T33 Value:T49
+T62	Eq-Comparison 199 203	≥ 24
+E35	Eq-Comparison:T62 Operator:T34 Value:T50
+T63	Eq-Comparison 257 261	≥ 24
+E36	Eq-Comparison:T63 Operator:T35 Value:T51
+T64	Eq-Comparison 416 419	≥ 0
+E37	Eq-Comparison:T64 Operator:T36 Value:T52
+T65	Eq-Comparison 436 440	≥ 30
+E38	Eq-Comparison:T65 Operator:T37 Value:T53
+T66	Eq-Comparison 449 453	≥ 24
+E39	Eq-Comparison:T66 Operator:T38 Value:T54
+T67	Eq-Comparison 506 509	≤ 1
+E40	Eq-Comparison:T67 Operator:T39 Value:T55
+T68	Eq-Comparison 683 687	< 24
+E41	Eq-Comparison:T68 Operator:T40 Value:T56
+T69	Eq-Comparison 1079 1082	> 3
+E42	Eq-Comparison:T69 Operator:T41 Value:T57
+T70	Eq-Comparison 1118 1128	> 50 years
+E43	Eq-Comparison:T70 Operator:T42 Temporal-Unit:T44 Value:T58

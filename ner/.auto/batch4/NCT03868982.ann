@@ -1,0 +1,29 @@
+T1	Procedure 233 245	tracheostomy
+T2	Procedure-Name 233 245	tracheostomy
+E1	Procedure:T1 Name:T2
+T3	Condition 200 209	Pregnancy
+T4	Condition-Name 200 209	Pregnancy
+E3	Condition:T3 Name:T4
+T5	Condition 38 42	ARDS
+T6	Condition-Name 38 42	ARDS
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 131 137	within
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Operator 172 181	Less than
+A2	Eq-Operator-Value T8 LT
+T9	Eq-Temporal-Unit 185 190	years
+A3	Eq-Temporal-Unit-Value T9 year
+T10	Age 191 194	old
+E6	Age:T10
+T11	Eq-Operator 90 91	-
+A4	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 87 90	100
+T13	Eq-Value 91 94	300
+T14	Eq-Value 138 140	48
+T15	Eq-Value 182 184	18
+T16	Eq-Comparison 131 140	within 48
+E7	Eq-Comparison:T16 Operator:T7 Value:T14
+T17	Eq-Comparison 172 190	Less than 18 years
+E8	Eq-Comparison:T17 Operator:T8 Temporal-Unit:T9 Value:T15
+T18	Eq-Comparison 87 91	100-
+E9	Eq-Comparison:T18 Operator:T11 Value:T12

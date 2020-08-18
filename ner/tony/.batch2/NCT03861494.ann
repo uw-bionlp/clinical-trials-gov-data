@@ -1,0 +1,28 @@
+T1	Condition 91 119	ischemic cerebral infarction
+T2	Condition-Name 91 119	ischemic cerebral infarction
+E1	Condition:T1 Name:T2
+T3	Language 155 162	English
+T4	Condition 436 443	obesity
+T5	Condition-Name 436 443	obesity
+E4	Condition:T4 Name:T5
+T6	Condition 406 409	HTN
+T7	Condition-Name 406 409	HTN
+E6	Condition:T6 Name:T7
+T8	Condition 697 725	ischemic cerebral infarction
+T9	Condition-Name 697 725	ischemic cerebral infarction
+E8	Condition:T8 Name:T9
+T10	Condition 593 618	transient ischemic attack
+T11	Condition-Name 593 618	transient ischemic attack
+E10	Condition:T10 Name:T11
+T12	Eq-Operator 344 356	greater than
+A1	Eq-Operator-Value T12 GT
+T13	Eq-Temporal-Unit 128 133	years
+A2	Eq-Temporal-Unit-Value T13 year
+T14	Eq-Temporal-Unit 359 365	months
+A3	Eq-Temporal-Unit-Value T14 month
+T15	Age 137 140	age
+E11	Age:T15
+T16	Eq-Value 125 127	18
+T17	Eq-Value 357 358	6
+T18	Eq-Comparison 344 365	greater than 6 months
+E12	Eq-Comparison:T18 Operator:T12 Temporal-Unit:T14 Value:T17

@@ -1,0 +1,45 @@
+T1	Condition 78 105	peripheral vascular disease
+T2	Condition-Name 78 105	peripheral vascular disease
+E1	Condition:T1 Name:T2
+T3	Condition 375 396	myocardial infarction
+T4	Condition-Name 375 396	myocardial infarction
+E3	Condition:T3 Name:T4
+T5	Condition 541 560	infectious diseases
+T6	Condition-Name 541 560	infectious diseases
+E5	Condition:T5 Name:T6
+T7	Condition 340 355	unstable angina
+T8	Condition-Name 340 355	unstable angina
+E7	Condition:T7 Name:T8
+T9	Condition 447 460	heart failure
+T10	Condition-Name 447 460	heart failure
+E9	Condition:T9 Name:T10
+T11	Condition 501 514	renal failure
+T12	Condition-Name 501 514	renal failure
+E11	Condition:T11 Name:T12
+T13	Procedure 520 528	dialysis
+T14	Procedure-Name 520 528	dialysis
+E13	Procedure:T13 Name:T14
+T15	Condition 421 427	stroke
+T16	Condition-Name 421 427	stroke
+E15	Condition:T15 Name:T16
+T17	Condition 492 497	liver
+T18	Condition-Name 492 497	liver
+E17	Condition:T17 Name:T18
+T19	Condition 398 400	MI
+T20	Condition-Name 398 400	MI
+E19	Condition:T19 Name:T20
+T21	Eq-Operator 159 164	up to
+A1	Eq-Operator-Value T21 LTEQ
+T22	Eq-Temporal-Unit 50 56	months
+A2	Eq-Temporal-Unit-Value T22 month
+T23	Eq-Temporal-Unit 314 320	months
+A3	Eq-Temporal-Unit-Value T23 month
+T24	Eq-Operator 140 141	-
+A4	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 48 49	3
+T26	Eq-Value 137 138	0
+T27	Eq-Value 141 142	1
+T28	Eq-Value 171 172	2
+T29	Eq-Value 312 313	3
+T30	Eq-Comparison 140 142	-1
+E20	Eq-Comparison:T30 Operator:T24 Value:T27

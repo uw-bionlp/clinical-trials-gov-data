@@ -1,0 +1,20 @@
+T1	Condition 65 88	neurocognitive disorder
+T2	Condition-Name 65 88	neurocognitive disorder
+E1	Condition:T1 Name:T2
+T3	Condition 141 149	Delirium
+T4	Condition-Name 141 149	Delirium
+E3	Condition:T3 Name:T4
+T5	Language 25 31	French
+T7	Condition 161 171	depressive
+E2	Condition:T7 Name:T8 Severity:T9
+T8	Condition-Name 161 171	depressive
+T9	Severity 155 160	Major
+A1	Severity-Value T9 severe
+T10	Assertion 172 180	symptoms
+E4	Assertion:T10 Asserted:E2
+A2	Assertion-Type-Value E4 possible
+T11	Contraindication 190 206	contraindication
+E5	Contraindication:T11 
+T6	Procedure 186 189	MRI
+E6	Procedure:T6 Name:T12
+T12	Procedure-Name 186 189	MRI

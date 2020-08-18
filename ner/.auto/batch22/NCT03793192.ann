@@ -1,0 +1,55 @@
+T1	Condition 444 466	Chronic Airway Disease
+T2	Condition-Name 444 466	Chronic Airway Disease
+E1	Condition:T1 Name:T2
+T3	Condition 328 345	COPD exacerbation
+T4	Condition-Name 328 345	COPD exacerbation
+E3	Condition:T3 Name:T4
+T5	Procedure 819 833	discharge home
+T6	Procedure-Name 819 833	discharge home
+E5	Procedure:T5 Name:T6
+T7	Condition 400 413	heart failure
+T8	Condition-Name 400 413	heart failure
+E7	Condition:T7 Name:T8
+T9	Procedure 125 136	observation
+T10	Procedure-Name 125 136	observation
+E9	Procedure:T9 Name:T10
+T11	Procedure 283 292	Reduction
+T12	Procedure-Name 283 292	Reduction
+E11	Procedure:T11 Name:T12
+T13	Condition 424 433	Pneumonia
+T14	Condition-Name 424 433	Pneumonia
+E13	Condition:T13 Name:T14
+T15	Procedure 368 375	overlap
+T16	Procedure-Name 368 375	overlap
+E15	Procedure:T15 Name:T16
+T17	Language 1102 1109	English
+T18	Condition 356 362	Asthma
+T19	Condition-Name 356 362	Asthma
+E18	Condition:T18 Name:T19
+T20	Condition 76 80	COPD
+T21	Condition-Name 76 80	COPD
+E20	Condition:T20 Name:T21
+T22	Condition 363 367	COPD
+T23	Condition-Name 363 367	COPD
+E22	Condition:T22 Name:T23
+T24	Eq-Operator 571 572	<
+A1	Eq-Operator-Value T24 LT
+T25	Eq-Operator 922 923	<
+A2	Eq-Operator-Value T25 LT
+T26	Eq-Temporal-Unit 32 37	years
+A3	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Temporal-Unit 721 727	months
+A4	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Temporal-Unit 925 931	months
+A5	Eq-Temporal-Unit-Value T28 month
+T29	Age 25 28	Age
+E23	Age:T29
+T30	Eq-Value 29 31	18
+T31	Eq-Value 117 119	23
+T32	Eq-Value 572 574	90
+T33	Eq-Value 719 720	6
+T34	Eq-Value 923 924	3
+T35	Eq-Comparison 571 574	<90
+E24	Eq-Comparison:T35 Operator:T24 Value:T32
+T36	Eq-Comparison 922 931	<3 months
+E25	Eq-Comparison:T36 Operator:T25 Temporal-Unit:T28 Value:T34

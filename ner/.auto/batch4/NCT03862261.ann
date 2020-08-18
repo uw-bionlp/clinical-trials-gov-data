@@ -1,0 +1,21 @@
+T1	Life-Stage-And-Gender 25 33	Children
+A1	Life-Stage-And-Gender-Type T1 child
+T2	Condition 85 97	pulmonary TB
+T3	Condition-Name 85 97	pulmonary TB
+E2	Condition:T2 Name:T3
+T4	Condition 175 194	infectious diseases
+T5	Condition-Name 175 194	infectious diseases
+E4	Condition:T4 Name:T5
+T6	Life-Stage-And-Gender 375 380	child
+A2	Life-Stage-And-Gender-Type T6 child
+T7	Life-Stage-And-Gender 435 443	Children
+A3	Life-Stage-And-Gender-Type T7 child
+T8	Eq-Operator 34 35	<
+A4	Eq-Operator-Value T8 LT
+T9	Eq-Temporal-Unit 38 43	years
+A5	Eq-Temporal-Unit-Value T9 year
+T10	Age 44 47	old
+E5	Age:T10
+T11	Eq-Value 36 37	5
+T12	Eq-Comparison 34 43	< 5 years
+E6	Eq-Comparison:T12 Operator:T8 Temporal-Unit:T9 Value:T11

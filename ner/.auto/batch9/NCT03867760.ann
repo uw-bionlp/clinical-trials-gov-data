@@ -1,0 +1,44 @@
+T1	Condition 579 601	paranoid schizophrenia
+T2	Condition-Name 579 601	paranoid schizophrenia
+E1	Condition:T1 Name:T2
+T3	Procedure 343 362	maintenance therapy
+T4	Procedure-Name 343 362	maintenance therapy
+E3	Procedure:T3 Name:T4
+T5	Condition 621 640	delusional thoughts
+T6	Condition-Name 621 640	delusional thoughts
+E5	Condition:T5 Name:T6
+T7	Procedure 315 331	cancer treatment
+T8	Procedure-Name 315 331	cancer treatment
+E7	Procedure:T7 Name:T8
+T9	Language 419 426	English
+T10	Eq-Operator 97 98	>
+A1	Eq-Operator-Value T10 GT
+T11	Eq-Operator 208 216	the past
+A2	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 374 375	>
+A3	Eq-Operator-Value T12 GT
+T13	Eq-Operator 839 845	within
+A4	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 200 204	days
+A5	Eq-Temporal-Unit-Value T14 day
+T15	Eq-Temporal-Unit 219 224	weeks
+A6	Eq-Temporal-Unit-Value T15 week
+T16	Eq-Temporal-Unit 379 384	years
+A7	Eq-Temporal-Unit-Value T16 year
+T17	Age 388 391	age
+E8	Age:T17
+T18	Eq-Operator 107 108	-
+A8	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Value 99 100	3
+T20	Eq-Value 106 107	0
+T21	Eq-Value 108 110	10
+T22	Eq-Value 217 218	4
+T23	Eq-Value 376 378	18
+T24	Eq-Comparison 97 100	> 3
+E9	Eq-Comparison:T24 Operator:T10 Value:T19
+T25	Eq-Comparison 208 224	the past 4 weeks
+E10	Eq-Comparison:T25 Operator:T11 Temporal-Unit:T15 Value:T22
+T26	Eq-Comparison 374 384	> 18 years
+E11	Eq-Comparison:T26 Operator:T12 Temporal-Unit:T16 Value:T23
+T27	Eq-Comparison 106 108	0-
+E12	Eq-Comparison:T27 Operator:T18 Value:T20

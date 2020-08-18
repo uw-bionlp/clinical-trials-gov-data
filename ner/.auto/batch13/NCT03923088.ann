@@ -1,0 +1,24 @@
+T1	Life-Stage-And-Gender 25 33	Children
+A1	Life-Stage-And-Gender-Type T1 child
+T2	Life-Stage-And-Gender 52 60	children
+A2	Life-Stage-And-Gender-Type T2 child
+T3	Procedure 154 171	local anaesthesia
+T4	Procedure-Name 154 171	local anaesthesia
+E3	Procedure:T3 Name:T4
+T5	Procedure 85 101	dental treatment
+T6	Procedure-Name 85 101	dental treatment
+E5	Procedure:T5 Name:T6
+T7	Life-Stage-And-Gender 127 135	Children
+A3	Life-Stage-And-Gender-Type T7 child
+T8	Life-Stage-And-Gender 252 260	children
+A4	Life-Stage-And-Gender-Type T8 child
+T9	Eq-Temporal-Unit 42 47	years
+A5	Eq-Temporal-Unit-Value T9 year
+T10	Age 48 51	old
+E6	Age:T10
+T11	Eq-Operator 37 39	to
+A6	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 35 36	6
+T13	Eq-Value 40 41	9
+T14	Eq-Comparison 35 39	6 to
+E7	Eq-Comparison:T14 Operator:T11 Value:T12

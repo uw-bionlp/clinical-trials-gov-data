@@ -1,0 +1,24 @@
+T1	Language 25 28	Men
+T2	Condition 571 592	Chronic pain syndrome
+T3	Condition-Name 571 592	Chronic pain syndrome
+E2	Condition:T2 Name:T3
+T4	Eq-Operator 173 185	greater than
+A1	Eq-Operator-Value T4 GT
+T5	Eq-Operator 321 322	<
+A2	Eq-Operator-Value T5 LT
+T6	Eq-Temporal-Unit 324 329	weeks
+A3	Eq-Temporal-Unit-Value T6 week
+T7	Age 38 41	age
+E3	Age:T7
+T8	Eq-Operator 44 45	-
+A4	Eq-Operator-Value T8 BETWEEN
+T9	Eq-Value 42 44	18
+T10	Eq-Value 45 47	64
+T11	Eq-Value 186 187	5
+T12	Eq-Value 322 323	2
+T13	Eq-Comparison 173 187	greater than 5
+E4	Eq-Comparison:T13 Operator:T4 Value:T11
+T14	Eq-Comparison 321 329	<2 weeks
+E5	Eq-Comparison:T14 Operator:T5 Temporal-Unit:T6 Value:T12
+T15	Eq-Comparison 42 45	18-
+E6	Eq-Comparison:T15 Operator:T8 Value:T9

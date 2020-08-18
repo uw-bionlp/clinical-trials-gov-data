@@ -1,0 +1,12 @@
+T1	Procedure 58 61	PCI
+T2	Procedure-Name 58 61	PCI
+E1	Procedure:T1 Name:T2
+T3	Eq-Operator 34 35	≥
+A1	Eq-Operator-Value T3 GTEQ
+T4	Eq-Temporal-Unit 38 43	years
+A2	Eq-Temporal-Unit-Value T4 year
+T5	Age 44 47	old
+E2	Age:T5
+T6	Eq-Value 35 37	18
+T7	Eq-Comparison 34 43	≥18 years
+E3	Eq-Comparison:T7 Operator:T3 Temporal-Unit:T4 Value:T6

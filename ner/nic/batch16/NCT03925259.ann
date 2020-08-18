@@ -1,0 +1,186 @@
+T3	Condition 241 261	somatoform disorders
+T4	Condition-Name 241 261	somatoform disorders
+E3	Condition:T3 Name:T4
+T5	Condition 304 328	body dysmorphic disorder
+T6	Condition-Name 304 328	body dysmorphic disorder
+E5	Condition:T5 Name:T6
+T7	Condition 283 302	conversion disorder
+T8	Condition-Name 283 302	conversion disorder
+E7	Condition:T7 Name:T8
+T9	Condition 330 345	hypochondriasis
+T10	Condition-Name 330 345	hypochondriasis
+E9	Condition:T9 Name:T10
+T11	Condition 268 281	pain disorder
+T12	Condition-Name 268 281	pain disorder
+E11	Condition:T11 Name:T12
+T13	Condition 351 379	functional somatic syndromes
+T14	Condition-Name 351 379	functional somatic syndromes
+E13	Condition:T13 Name:T14
+T15	Condition 386 410	irritable bowel syndrome
+T16	Condition-Name 386 410	irritable bowel syndrome
+E15	Condition:T15 Name:T16
+T17	Condition 412 436	chronic fatigue syndrome
+T18	Condition-Name 412 436	chronic fatigue syndrome
+E17	Condition:T17 Name:T18
+T19	Condition 476 498	non-epileptic seizures
+T20	Condition-Name 476 498	non-epileptic seizures
+E19	Condition:T19 Name:T20
+T21	Condition 438 450	fibromyalgia
+T22	Condition-Name 438 450	fibromyalgia
+E21	Condition:T21 Name:T22
+T23	Condition 555 565	depression
+T24	Condition-Name 555 565	depression
+E23	Condition:T23 Name:T24
+T25	Condition 544 551	anxiety
+T26	Condition-Name 544 551	anxiety
+E25	Condition:T25 Name:T26
+T27	Condition 572 592	personality disorder
+T28	Condition-Name 572 592	personality disorder
+E27	Condition:T27 Name:T28
+T29	Condition 594 610	bipolar disorder
+T30	Condition-Name 594 610	bipolar disorder
+E29	Condition:T29 Name:T30
+T31	Procedure 1041 1054	psychotherapy
+T32	Procedure-Name 1041 1054	psychotherapy
+E31	Procedure:T31 Name:T32
+T33	Condition 614 623	psychosis
+T34	Condition-Name 614 623	psychosis
+E33	Condition:T33 Name:T34
+T35	Condition 712 720	suicidal
+T36	Condition-Name 712 720	suicidal
+E35	Condition:T35 Name:T36 Temporality:E4
+T39	Eq-Operator 948 954	within
+A1	Eq-Operator-Value T39 LTEQ
+T40	Eq-Temporal-Unit 969 974	years
+A2	Eq-Temporal-Unit-Value T40 year
+T41	Age 101 104	Age
+E38	Age:T41 Eq-Comparison:E8
+T42	Eq-Value 105 107	16
+T43	Risk 721 725	risk
+E2	Risk:T43 Risk-For:E35
+T44	Eq-Comparison 704 711	current
+E4	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 704 711	current
+T46	Modifier 692 703	Significant
+E6	Modifier:T46 Modifies:E35
+A3	Eq-Temporal-Period-Value T45 present
+T47	Eq-Comparison 630 639	Currently
+E39	Eq-Comparison:T47 Temporal-Period:T48
+T48	Eq-Temporal-Period 630 639	Currently
+A4	Eq-Temporal-Period-Value T48 present
+T49	Eq-Comparison 731 738	Current
+E40	Eq-Comparison:T49 Temporal-Period:T50
+T50	Eq-Temporal-Period 731 738	Current
+A5	Eq-Temporal-Period-Value T50 present
+T51	Eq-Comparison 761 769	Previous
+E41	Eq-Comparison:T51 Temporal-Period:T52
+T52	Eq-Temporal-Period 761 769	Previous
+A6	Eq-Temporal-Period-Value T52 past
+T53	Eq-Comparison 980 987	History
+E42	Eq-Comparison:T53 Temporal-Period:T54
+T54	Eq-Temporal-Period 980 987	History
+A7	Eq-Temporal-Period-Value T54 past
+T55	Eq-Comparison 830 835	prior
+E43	Eq-Comparison:T55 Temporal-Period:T56
+T56	Eq-Temporal-Period 830 835	prior
+A8	Eq-Temporal-Period-Value T56 past
+T57	Eq-Comparison 105 108	16+
+E8	Eq-Comparison:T57 Operator:T58 Value:T42
+T58	Eq-Operator 107 108	+
+A9	Eq-Operator-Value T58 GT
+T59	Condition 35 60	physical health condition
+E10	Condition:T59 Name:T60
+T60	Condition-Name 35 60	physical health condition
+T61	Modifier 25 34	Long term
+E12	Modifier:T61 Modifies:T60
+T62	Condition 65 95	comorbid mental health problem
+E14	Condition:T62 Name:T63
+T63	Condition-Name 65 95	comorbid mental health problem
+T64	Or 61 64	and
+E16	Or:T64 Arg:E10 Arg2:E14
+T65	Encounter 114 122	Referred
+E18	Encounter:T65 Type:T66 Provider:E1
+T66	Encounter-Type 114 122	Referred
+A10	Encounter-Type-Value T66 referral
+T67	Condition 199 229	medically unexplained symptoms
+E20	Condition:T67 Name:T68
+T68	Condition-Name 199 229	medically unexplained symptoms
+R2	Example-Of Arg1:E3 Arg2:E20	
+R3	Example-Of Arg1:E11 Arg2:E3	
+R4	Example-Of Arg1:E7 Arg2:E3	
+R5	Example-Of Arg1:E5 Arg2:E3	
+R6	Example-Of Arg1:E9 Arg2:E3	
+R7	Example-Of Arg1:E13 Arg2:E20	
+R8	Example-Of Arg1:E15 Arg2:E13	
+R9	Example-Of Arg1:E17 Arg2:E13	
+R10	Example-Of Arg1:E21 Arg2:E13	
+T69	Condition 470 474	pain
+E22	Condition:T69 Name:T70
+T70	Condition-Name 470 474	pain
+T71	Modifier 452 469	non-cardiac chest
+E24	Modifier:T71 Modifies:T70
+R11	Example-Of Arg1:E22 Arg2:E13	
+R12	Example-Of Arg1:E19 Arg2:E13	
+T72	Condition 505 518	Mental health
+E26	Condition:T72 Name:T73
+T73	Condition-Name 505 518	Mental health
+T74	Or 529 543	in addition to
+E28	Or:T74 Arg:E26 Arg2:E25
+T75	Or 552 554	or
+E30	Or:T75 Arg:E25 Arg2:E23
+R13	Example-Of Arg1:E27 Arg2:E26	
+R14	Example-Of Arg1:E29 Arg2:E26	
+T76	Or 611 613	or
+E32	Or:T76 Arg:E29 Arg2:E33
+R15	Example-Of Arg1:E33 Arg2:E26	
+T77	Encounter 640 648	accesses
+E34	Encounter:T77 Temporality:E39 Provider:E36
+T78	Provider 664 686	mental health services
+E36	Provider:T78 Type:T79
+T79	Provider-Type 664 686	mental health services
+T1	Provider 128 159	psychological therapies service
+E1	Provider:T1 Type:T2
+T2	Provider-Type 128 159	psychological therapies service
+T80	Condition 739 755	substance misuse
+E44	Condition:T80 Name:T81 Temporality:E40
+T81	Condition-Name 739 755	substance misuse
+T82	Provider 783 805	mental health services
+E45	Provider:T82 Type:T83
+T83	Provider-Type 783 805	mental health services
+T84	Encounter 770 777	contact
+E46	Encounter:T84 Temporality:E41 Provider:E45
+T85	Eq-Comparison 818 829	two or more
+E47	Eq-Comparison:T85 Value:T86 Operator:T87
+T86	Eq-Value 818 821	two
+T87	Eq-Operator 822 829	or more
+A11	Eq-Operator-Value T87 GTEQ
+T88	Encounter 848 863	service contact
+E48	Encounter:T88 Temporality:E43 Minimum-Count:E47
+T37	Stability 884 890	change
+A12	Stability-Value T37 change
+T38	Severity 872 883	significant
+A13	Severity-Value T38 severe
+T89	Negation 864 871	without
+E37	Negation:T89 Negates:T37
+R1	Equivalent-To Arg1:E48 Arg2:E46	
+T90	Encounter 897 916	Inpatient admission
+E49	Encounter:T90 Type:T91 Temporality:E51
+T91	Encounter-Type 897 916	Inpatient admission
+A14	Encounter-Type-Value T91 inpatient
+T92	Condition 921 947	mental health difficulties
+E50	Condition:T92 Name:T93
+T93	Condition-Name 921 947	mental health difficulties
+R16	Treatment-For Arg1:E49 Arg2:E50	
+T94	Eq-Comparison 948 974	within the last five years
+E51	Eq-Comparison:T94 Operator:T39 Temporal-Period:T95 Temporal-Unit:T40 Value:T96
+T95	Eq-Temporal-Period 959 963	last
+A15	Eq-Temporal-Period-Value T95 past
+T96	Eq-Value 964 968	five
+T97	Condition 991 1002	self-injury
+E52	Condition:T97 Name:T98 Temporality:E42
+T98	Condition-Name 991 1002	self-injury
+T99	Negation 1017 1027	reluctance
+E53	Negation:T99 Negates:E31
+T100	Assertion 1017 1027	reluctance
+E54	Assertion:T100 Asserted:E53
+A16	Assertion-Type-Value E54 hypothetical

@@ -1,0 +1,65 @@
+T1	Condition 170 184	blood pressure
+T2	Condition-Name 170 184	blood pressure
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 25 29	Male
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Condition 186 188	BP
+T5	Condition-Name 186 188	BP
+E4	Condition:T4 Name:T5
+T6	Observation 272 287	Body mass index
+T7	Observation-Name 272 287	Body mass index
+E6	Observation:T6 Name:T7
+A2	Observation-Type-Value T7 vital
+T8	Observation 289 292	BMI
+T9	Observation-Name 289 292	BMI
+E8	Observation:T8 Name:T9
+A3	Observation-Type-Value T9 vital
+T10	Condition 448 476	human immunodeficiency virus
+T11	Condition-Name 448 476	human immunodeficiency virus
+E10	Condition:T10 Name:T11
+T12	Condition 389 414	immunodeficiency disorder
+T13	Condition-Name 389 414	immunodeficiency disorder
+E12	Condition:T12 Name:T13
+T14	Condition 542 558	immunodeficiency
+T15	Condition-Name 542 558	immunodeficiency
+E14	Condition:T14 Name:T15
+T16	Condition 657 675	chronic infections
+T17	Condition-Name 657 675	chronic infections
+E16	Condition:T16 Name:T17
+T18	Condition 580 591	hepatitis B
+T19	Condition-Name 580 591	hepatitis B
+E18	Condition:T18 Name:T19
+T20	Condition 937 953	illicit drug use
+T21	Condition-Name 937 953	illicit drug use
+E20	Condition:T20 Name:T21
+T22	Condition 957 967	dependence
+T23	Condition-Name 957 967	dependence
+E22	Condition:T22 Name:T23
+T24	Eq-Operator 341 342	>
+A4	Eq-Operator-Value T24 GT
+T25	Eq-Operator 968 974	within
+A5	Eq-Operator-Value T25 GTEQ
+T26	Eq-Operator 1047 1053	within
+A6	Eq-Operator-Value T26 GTEQ
+T27	Eq-Temporal-Unit 977 983	months
+A7	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Temporal-Unit 1056 1062	months
+A8	Eq-Temporal-Unit-Value T28 month
+T29	Eq-Unit 310 315	kg/m2
+T30	Eq-Unit 345 347	kg
+T31	Eq-Operator 302 304	to
+A9	Eq-Operator-Value T31 BETWEEN
+T32	Eq-Value 223 225	12
+T33	Eq-Value 297 299	17
+T34	Eq-Value 305 307	30
+T35	Eq-Value 342 344	50
+T36	Eq-Value 975 976	6
+T37	Eq-Value 1054 1055	3
+T38	Eq-Comparison 341 347	>50 kg
+E23	Eq-Comparison:T38 Operator:T24 Unit:T30 Value:T35
+T39	Eq-Comparison 968 983	within 6 months
+E24	Eq-Comparison:T39 Operator:T25 Temporal-Unit:T27 Value:T36
+T40	Eq-Comparison 1047 1062	within 3 months
+E25	Eq-Comparison:T40 Operator:T26 Temporal-Unit:T28 Value:T37
+T41	Eq-Comparison 302 307	to 30
+E26	Eq-Comparison:T41 Operator:T31 Value:T34

@@ -1,0 +1,106 @@
+T1	Condition 311 328	metabolic disease
+T2	Condition-Name 311 328	metabolic disease
+E1	Condition:T1 Name:T2
+T3	Condition 361 375	hypothyroidism
+T4	Condition-Name 361 375	hypothyroidism
+E3	Condition:T3 Name:T4
+T5	Observation 164 167	BMI
+T6	Observation-Name 164 167	BMI
+E5	Observation:T5 Name:T6 Eq-Comparison:E16
+A1	Observation-Type-Value T6 vital
+T7	Eq-Operator 246 255	less than
+A2	Eq-Operator-Value T7 LT
+T8	Eq-Temporal-Unit 123 128	years
+A3	Eq-Temporal-Unit-Value T8 year
+T9	Eq-Temporal-Unit 225 231	months
+A4	Eq-Temporal-Unit-Value T9 month
+T10	Eq-Temporal-Unit 259 266	minutes
+A5	Eq-Temporal-Unit-Value T10 minute
+T11	Eq-Unit 186 188	kg
+T12	Age 102 105	age
+E6	Age:T12 Eq-Comparison:E11
+T13	Eq-Value 114 116	50
+T14	Eq-Value 120 122	65
+T15	Eq-Value 176 178	25
+T16	Eq-Value 183 185	30
+T17	Eq-Value 223 224	6
+T18	Eq-Value 256 258	20
+T19	Eq-Comparison 246 266	less than 20 minutes
+E7	Eq-Comparison:T19 Operator:T7 Temporal-Unit:T10 Value:T18
+T20	Condition 25 39	postmenopausal
+E2	Condition:T20 Name:T21
+T21	Condition-Name 25 39	postmenopausal
+T22	Observation 52 65	blood glucose
+E4	Observation:T22 Name:T23 Polarity:T24
+T23	Observation-Name 52 65	blood glucose
+A6	Observation-Type-Value T23 lab
+T24	Polarity 45 51	normal
+A7	Polarity-Value T24 normal
+T25	Condition 74 85	cholesterol
+E8	Condition:T25 Name:T26
+T26	Condition-Name 74 85	cholesterol
+T27	Drug 86 96	medication
+E9	Drug:T27 
+R1	Treatment-For Arg1:E9 Arg2:E8	
+T28	Negation 71 73	no
+E10	Negation:T28 Negates:E9
+T29	Eq-Comparison 106 128	between 50 an 65 years
+E11	Eq-Comparison:T29 Operator:T30 Value:T13 Value2:T14 Temporal-Unit:T8
+T30	Eq-Operator 106 113	between
+A8	Eq-Operator-Value T30 BETWEEN
+T31	Condition 134 144	overweight
+E12	Condition:T31 Name:T32
+T32	Condition-Name 134 144	overweight
+T33	Condition 153 158	obese
+E13	Condition:T33 Name:T34
+T34	Condition-Name 153 158	obese
+T35	Negation 149 152	not
+E14	Negation:T35 Negates:E13
+T36	And 145 148	but
+E15	And:T36 Arg:E12 Arg2:E14
+T37	Eq-Comparison 168 191	between 25 and 30 kg/m2
+E16	Eq-Comparison:T37 Operator:T38 Value:T15 Value2:T16 Unit:T11 Per:T39
+T38	Eq-Operator 168 175	between
+A9	Eq-Operator-Value T38 BETWEEN
+T39	Eq-Unit 189 191	m2
+T40	Observation 197 203	weight
+E17	Observation:T40 Name:T41 Stability:T42
+T41	Observation-Name 197 203	weight
+A10	Observation-Type-Value T41 vital
+T42	Stability 204 210	stable
+A11	Stability-Value T42 stable
+T43	Eq-Comparison 218 231	past 6 months
+E18	Eq-Comparison:T43 Temporal-Period:T44 Value:T17 Temporal-Unit:T9
+T44	Eq-Temporal-Period 218 222	past
+A12	Eq-Temporal-Period-Value T44 past
+T45	Observation 237 245	exercise
+E19	Observation:T45 Name:T46 Duration:E7 Minimum-Count:E20
+T46	Observation-Name 237 245	exercise
+A13	Observation-Type-Value T46 social-habit
+T47	Eq-Comparison 267 285	three times a week
+E20	Eq-Comparison:T47 Value:T48 Per:T49
+T48	Eq-Value 267 272	three
+T49	Eq-Temporal-Unit 281 285	week
+A14	Eq-Temporal-Unit-Value T49 week
+T50	Modifier 340 360	hormonally-corrected
+E21	Modifier:T50 Modifies:T4
+T51	Exception 329 339	other than
+E22	Exception:T51 From:E1 Except:E3
+T52	Condition 381 408	musculo-skeletal disability
+E23	Condition:T52 Name:T53
+T53	Condition-Name 381 408	musculo-skeletal disability
+T54	Observation 429 437	exercise
+E24	Observation:T54 Name:T55
+T55	Observation-Name 429 437	exercise
+T56	Negation 420 428	preclude
+E25	Negation:T56 Negates:E24
+T57	Assertion 414 419	would
+E26	Assertion:T57 Asserted:E25
+A15	Assertion-Type-Value E26 hypothetical
+R2	Caused-By Arg1:E25 Arg2:E23	
+T58	Condition 443 449	smoker
+E27	Condition:T58 Name:T59
+T59	Condition-Name 443 449	smoker
+T60	Temporal-Connection 211 217	during
+E28	Temporal-Connection:T60 Arg:E17 Arg2:E18
+A16	Temporal-Connection-Type-Value E28 during

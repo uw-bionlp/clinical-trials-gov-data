@@ -1,0 +1,20 @@
+T3	Condition 98 107	Pregnancy
+T4	Condition-Name 98 107	Pregnancy
+E3	Condition:T3 Name:T4
+T5	Eq-Value 49 50	4
+T6	Eq-Comparison 43 50	stage 4
+E2	Eq-Comparison:T6 Unit:T10 Value:T5
+T7	Condition 36 42	cancer
+E4	Condition:T7 Name:T8 Stage:E2
+T8	Condition-Name 36 42	cancer
+T9	Modifier 25 35	Colorectal
+E5	Modifier:T9 Modifies:T8
+T10	Eq-Unit 43 48	stage
+T11	Condition 77 92	Agranulocytosis
+E6	Condition:T11 Name:T12
+T12	Condition-Name 77 92	Agranulocytosis
+T1	Allergy 113 120	Allergy
+E1	Allergy:T1 Name:E7
+T2	Drug-Name 124 135	mebendazole
+T13	Drug 124 135	mebendazole
+E7	Drug:T13 Name:T2

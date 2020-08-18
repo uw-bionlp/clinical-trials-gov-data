@@ -1,0 +1,61 @@
+T1	Life-Stage-And-Gender 25 30	adult
+A1	Life-Stage-And-Gender-Type T1 adult
+T3	Eq-Operator 165 174	less than
+A3	Eq-Operator-Value T3 LT
+T4	Eq-Operator 238 244	within
+A4	Eq-Operator-Value T4 LTEQ
+T5	Eq-Temporal-Unit 248 252	days
+A5	Eq-Temporal-Unit-Value T5 day
+T7	Eq-Value 175 177	24
+T8	Eq-Value 245 247	30
+T10	Eq-Comparison 165 183	less than 24 hours
+E2	Eq-Comparison:T10 Operator:T3 Value:T7 Temporal-Unit:T24
+T11	Eq-Comparison 238 252	within 30 days
+E3	Eq-Comparison:T11 Operator:T4 Temporal-Unit:T5 Value:T8
+T2	Eq-Comparison 45 57	18 and above
+E1	Eq-Comparison:T2 Operator:T9 Value:T6
+T6	Eq-Value 45 47	18
+T9	Eq-Operator 48 57	and above
+A2	Eq-Operator-Value T9 GTEQ
+T12	Age 41 44	age
+E4	Age:T12 Eq-Comparison:E1
+T13	Encounter 63 71	admitted
+E5	Encounter:T13 Type:T14 Location:T15
+T14	Encounter-Type 63 71	admitted
+A6	Encounter-Type-Value T14 inpatient
+T15	Location 75 84	burn unit
+A7	Location-Value T15 unit
+T16	Study 92 107	sampling period
+E6	Study:T16 
+T17	Temporal-Connection 85 91	during
+E7	Temporal-Connection:T17 Arg2:E5 Arg:E6
+A8	Temporal-Connection-Type-Value E7 during
+T18	Death 156 164	deceased
+E8	Death:T18 Temporality:E2
+T19	Encounter-Type 142 152	discharged
+A9	Encounter-Type-Value T19 discharge
+T20	Encounter 142 152	discharged
+E9	Encounter:T20 Type:T19 Temporality:E2
+T21	Or 153 155	or
+E10	Or:T21 Arg:E9 Arg2:E8
+T22	Encounter 187 196	admission
+E11	Encounter:T22 Type:T23
+T23	Encounter-Type 187 196	admission
+A10	Encounter-Type-Value T23 inpatient
+T24	Eq-Temporal-Unit 178 183	hours
+A11	Eq-Temporal-Unit-Value T24 hour
+T25	Temporal-Connection 184 186	of
+E12	Temporal-Connection:T25 Arg:E2 Arg2:E11
+A12	Temporal-Connection-Type-Value E12 after
+T26	Encounter 211 219	referred
+E13	Encounter:T26 Type:T27 Location:T28 Temporality:E3
+T27	Encounter-Type 211 219	referred
+A13	Encounter-Type-Value T27 outpatient
+T28	Location 229 237	hospital
+A14	Location-Value T28 hospital
+T29	Modifier 223 228	other
+E14	Modifier:T29 Modifies:T28
+T30	Encounter 253 262	admission
+E15	Encounter:T30 Type:T31
+T31	Encounter-Type 253 262	admission
+A15	Encounter-Type-Value T31 inpatient

@@ -1,0 +1,33 @@
+T1	Eq-Comparison 2 9	history
+E1	Eq-Comparison:T1 Temporal-Period:T2
+T2	Eq-Temporal-Period 2 9	history
+A1	Eq-Temporal-Period-Value T2 past
+T3	Condition 52 59	disease
+E2	Condition:T3 Name:T4 Temporality:E1
+T4	Condition-Name 52 59	disease
+T5	Modifier 41 51	cadiologic
+E3	Modifier:T5 Modifies:T4
+T6	Modifier 25 36	psychiatric
+E4	Modifier:T6 Modifies:T4
+T7	Modifier 13 23	neurologic
+E5	Modifier:T7 Modifies:T4
+T8	Or 38 40	or
+E6	Or:T8 Arg:E4 Arg2:E3
+T9	Procedure 62 71	treatment
+E7	Procedure:T9 
+T10	Stability 84 90	impact
+A2	Stability-Value T10 change
+T11	Assertion 78 83	could
+E8	Assertion:T11 Asserted:T10
+A3	Assertion-Type-Value E8 hypothetical
+R1	Caused-By Arg1:T10 Arg2:E7	
+T12	Observation 91 101	parameters
+E9	Observation:T12 Name:T13 Stability:T10
+T13	Observation-Name 91 101	parameters
+A4	Observation-Type-Value T13 measurement
+T14	Modifier 105 127	brain tissue pulsality
+E10	Modifier:T14 Modifies:T13
+T15	Modifier 132 157	peripheral nervous system
+E11	Modifier:T15 Modifies:T13
+T16	Or 128 131	and
+E12	Or:T16 Arg:E10 Arg2:E11

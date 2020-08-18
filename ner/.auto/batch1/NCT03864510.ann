@@ -1,0 +1,21 @@
+T1	Condition 25 40	Diabetes type 2
+T2	Condition-Name 25 40	Diabetes type 2
+E1	Condition:T1 Name:T2
+T3	Condition 159 174	liver cirrhosis
+T4	Condition-Name 159 174	liver cirrhosis
+E3	Condition:T3 Name:T4
+T5	Condition 197 210	liver disease
+T6	Condition-Name 197 210	liver disease
+E5	Condition:T5 Name:T6
+T7	Condition 223 234	fatty liver
+T8	Condition-Name 223 234	fatty liver
+E7	Condition:T7 Name:T8
+T9	Age 46 49	Age
+E8	Age:T9
+T10	Eq-Operator 52 53	-
+A1	Eq-Operator-Value T10 BETWEEN
+T11	Eq-Value 39 40	2
+T12	Eq-Value 50 52	35
+T13	Eq-Value 53 55	75
+T14	Eq-Comparison 50 53	35-
+E9	Eq-Comparison:T14 Operator:T10 Value:T12

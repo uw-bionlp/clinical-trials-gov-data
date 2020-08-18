@@ -1,0 +1,92 @@
+T1	Procedure 248 271	oral antibiotic therapy
+T2	Procedure-Name 248 271	oral antibiotic therapy
+E1	Procedure:T1 Name:T2
+T3	Condition 99 102	CDI
+T4	Condition-Name 99 102	CDI
+E3	Condition:T3 Name:T4
+T5	Condition 103 106	per
+T6	Condition-Name 103 106	per
+E5	Condition:T5 Name:T6
+T7	Condition 319 322	CDI
+T8	Condition-Name 319 322	CDI
+E7	Condition:T7 Name:T8
+T9	Condition 570 573	CDI
+T10	Condition-Name 570 573	CDI
+E9	Condition:T9 Name:T10
+T11	Condition 635 638	CDI
+T12	Condition-Name 635 638	CDI
+E11	Condition:T11 Name:T12
+T13	Condition 781 784	CDI
+T14	Condition-Name 781 784	CDI
+E13	Condition:T13 Name:T14
+T15	Condition 850 853	CDI
+T16	Condition-Name 850 853	CDI
+E15	Condition:T15 Name:T16
+T17	Procedure 888 906	antibiotic therapy
+T18	Procedure-Name 888 906	antibiotic therapy
+E17	Procedure:T17 Name:T18
+T19	Procedure 961 971	transplant
+T20	Procedure-Name 961 971	transplant
+E19	Procedure:T19 Name:T20
+T21	Condition 934 937	CDI
+T22	Condition-Name 934 937	CDI
+E21	Condition:T21 Name:T22
+T23	Procedure 973 976	FMT
+T24	Procedure-Name 973 976	FMT
+E23	Procedure:T23 Name:T24
+T25	Procedure 1084 1093	procedure
+T26	Procedure-Name 1084 1093	procedure
+E25	Procedure:T25 Name:T26
+T27	Procedure 1009 1012	FMT
+T28	Procedure-Name 1009 1012	FMT
+E27	Procedure:T27 Name:T28
+T29	Procedure 1069 1072	FMT
+T30	Procedure-Name 1069 1072	FMT
+E29	Procedure:T29 Name:T30
+T33	Condition 1114 1117	CDI
+T34	Condition-Name 1114 1117	CDI
+E33	Condition:T33 Name:T34
+T35	Condition 1302 1315	breastfeeding
+T36	Condition-Name 1302 1315	breastfeeding
+E35	Condition:T35 Name:T36
+T37	Eq-Operator 25 26	≥
+A1	Eq-Operator-Value T37 GTEQ
+T38	Eq-Operator 445 451	within
+A2	Eq-Operator-Value T38 GTEQ
+T39	Eq-Operator 668 669	<
+A3	Eq-Operator-Value T39 LT
+T40	Eq-Operator 978 993	within the past
+A4	Eq-Operator-Value T40 GTEQ
+T41	Eq-Operator 1153 1159	within
+A5	Eq-Operator-Value T41 GTEQ
+T42	Eq-Operator 1190 1191	<
+A6	Eq-Operator-Value T42 LT
+T43	Eq-Operator 1254 1255	<
+A7	Eq-Operator-Value T43 LT
+T44	Eq-Temporal-Unit 30 35	years
+A8	Eq-Temporal-Unit-Value T44 year
+T45	Eq-Temporal-Unit 455 459	days
+A9	Eq-Temporal-Unit-Value T45 day
+T46	Eq-Temporal-Unit 996 1002	months
+A10	Eq-Temporal-Unit-Value T46 month
+T47	Eq-Unit 1195 1198	mm3
+T48	Age 36 39	old
+E36	Age:T48
+T49	Eq-Value 27 29	18
+T50	Eq-Value 452 454	30
+T51	Eq-Value 669 670	3
+T52	Eq-Value 994 995	6
+T53	Eq-Value 1191 1194	200
+T54	Eq-Value 1255 1259	1000
+T55	Eq-Comparison 25 35	≥ 18 years
+E37	Eq-Comparison:T55 Operator:T37 Temporal-Unit:T44 Value:T49
+T56	Eq-Comparison 445 459	within 30 days
+E38	Eq-Comparison:T56 Operator:T38 Temporal-Unit:T45 Value:T50
+T57	Eq-Comparison 668 670	<3
+E39	Eq-Comparison:T57 Operator:T39 Value:T51
+T58	Eq-Comparison 978 1002	within the past 6 months
+E40	Eq-Comparison:T58 Operator:T40 Temporal-Unit:T46 Value:T52
+T59	Eq-Comparison 1190 1198	<200/mm3
+E41	Eq-Comparison:T59 Operator:T42 Unit:T47 Value:T53
+T60	Eq-Comparison 1254 1259	<1000
+E42	Eq-Comparison:T60 Operator:T43 Value:T54

@@ -1,0 +1,24 @@
+T1	Condition 132 155	coronary artery disease
+T2	Condition-Name 132 155	coronary artery disease
+E1	Condition:T1 Name:T2
+T3	Condition 108 120	hypertension
+T4	Condition-Name 108 120	hypertension
+E3	Condition:T3 Name:T4
+T5	Procedure 243 253	surgically
+T6	Procedure-Name 243 253	surgically
+E5	Procedure:T5 Name:T6
+T7	Condition 122 130	diabetes
+T8	Condition-Name 122 130	diabetes
+E7	Condition:T7 Name:T8
+T9	Condition 29 34	obese
+T10	Condition-Name 29 34	obese
+E9	Condition:T9 Name:T10
+T11	Observation 36 39	BMI
+T12	Observation-Name 36 39	BMI
+E11	Observation:T11 Name:T12
+A1	Observation-Type-Value T12 vital
+T13	Eq-Operator 40 41	<
+A2	Eq-Operator-Value T13 LT
+T14	Eq-Value 42 44	30
+T15	Eq-Comparison 40 44	< 30
+E12	Eq-Comparison:T15 Operator:T13 Value:T14

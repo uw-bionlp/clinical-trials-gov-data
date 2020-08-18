@@ -1,0 +1,19 @@
+T1	Condition 61 85	myofascial pain syndrome
+T2	Condition-Name 61 85	myofascial pain syndrome
+E1	Condition:T1 Name:T2
+T3	Condition 214 234	Cognitive impairment
+T4	Condition-Name 214 234	Cognitive impairment
+E3	Condition:T3 Name:T4
+T5	Procedure 344 361	injection therapy
+T6	Procedure-Name 344 361	injection therapy
+E5	Procedure:T5 Name:T6
+T7	Eq-Temporal-Unit 31 36	years
+A1	Eq-Temporal-Unit-Value T7 year
+T8	Age 37 40	old
+E6	Age:T8
+T9	Eq-Operator 27 28	-
+A2	Eq-Operator-Value T9 BETWEEN
+T10	Eq-Value 25 27	20
+T11	Eq-Value 28 30	70
+T12	Eq-Comparison 25 28	20-
+E7	Eq-Comparison:T12 Operator:T9 Value:T10

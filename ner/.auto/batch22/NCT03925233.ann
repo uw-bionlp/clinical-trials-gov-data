@@ -1,0 +1,24 @@
+T1	Condition 446 462	acute infections
+T2	Condition-Name 446 462	acute infections
+E1	Condition:T1 Name:T2
+T3	Condition 204 209	liver
+T4	Condition-Name 204 209	liver
+E3	Condition:T3 Name:T4
+T5	Eq-Operator 79 80	≥
+A1	Eq-Operator-Value T5 GTEQ
+T6	Eq-Temporal-Unit 128 133	years
+A2	Eq-Temporal-Unit-Value T6 year
+T7	Eq-Unit 82 84	cm
+T8	Age 118 121	age
+E4	Age:T8
+T9	Age 134 137	old
+E5	Age:T9
+T10	Eq-Operator 124 125	-
+A3	Eq-Operator-Value T10 BETWEEN
+T11	Eq-Value 81 82	3
+T12	Eq-Value 122 124	18
+T13	Eq-Value 125 127	65
+T14	Eq-Comparison 79 82	≥ 3
+E6	Eq-Comparison:T14 Operator:T5 Value:T11
+T15	Eq-Comparison 122 125	18-
+E7	Eq-Comparison:T15 Operator:T10 Value:T12

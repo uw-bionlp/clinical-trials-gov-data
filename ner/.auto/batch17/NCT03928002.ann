@@ -1,0 +1,51 @@
+T1	Procedure 552 569	cochlear implants
+T2	Procedure-Name 552 569	cochlear implants
+E1	Procedure:T1 Name:T2
+T3	Condition 474 488	claustrophobia
+T4	Condition-Name 474 488	claustrophobia
+E3	Condition:T3 Name:T4
+T5	Condition 650 663	renal failure
+T6	Condition-Name 650 663	renal failure
+E5	Condition:T5 Name:T6
+T7	Procedure 524 533	pacemaker
+T8	Procedure-Name 524 533	pacemaker
+E7	Procedure:T7 Name:T8
+T9	Procedure 630 639	injection
+T10	Procedure-Name 630 639	injection
+E9	Procedure:T9 Name:T10
+T11	Life-Stage-And-Gender 149 155	adults
+A1	Life-Stage-And-Gender-Type T11 adult
+T12	Condition 195 198	PAH
+T13	Condition-Name 195 198	PAH
+E12	Condition:T12 Name:T13
+T14	Language 281 284	MRI
+T15	Condition 319 322	PAH
+T16	Condition-Name 319 322	PAH
+E15	Condition:T15 Name:T16
+T17	Language 469 472	MRI
+T18	Eq-Operator 33 34	≥
+A2	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 399 400	<
+A3	Eq-Operator-Value T19 LT
+T20	Eq-Operator 673 674	<
+A4	Eq-Operator-Value T20 LT
+T21	Eq-Temporal-Unit 37 42	years
+A5	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 403 408	years
+A6	Eq-Temporal-Unit-Value T22 year
+T23	Age 43 46	old
+E16	Age:T23
+T24	Age 409 412	old
+E17	Age:T24
+T25	Age 571 574	old
+E18	Age:T25
+T26	Eq-Value 35 36	7
+T27	Eq-Value 278 279	2
+T28	Eq-Value 401 402	7
+T29	Eq-Value 675 677	30
+T30	Eq-Comparison 33 42	≥ 7 years
+E19	Eq-Comparison:T30 Operator:T18 Temporal-Unit:T21 Value:T26
+T31	Eq-Comparison 399 408	< 7 years
+E20	Eq-Comparison:T31 Operator:T19 Temporal-Unit:T22 Value:T28
+T32	Eq-Comparison 673 677	< 30
+E21	Eq-Comparison:T32 Operator:T20 Value:T29

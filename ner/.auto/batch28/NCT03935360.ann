@@ -1,0 +1,20 @@
+T1	Condition 91 118	Bright red blood per rectum
+T2	Condition-Name 91 118	Bright red blood per rectum
+E1	Condition:T1 Name:T2
+T3	Condition 662 689	bright red blood per rectum
+T4	Condition-Name 662 689	bright red blood per rectum
+E3	Condition:T3 Name:T4
+T5	Condition 621 643	iron deficiency anemia
+T6	Condition-Name 621 643	iron deficiency anemia
+E5	Condition:T5 Name:T6
+T7	Procedure 269 275	toilet
+T8	Procedure-Name 269 275	toilet
+E7	Procedure:T7 Name:T8
+T9	Eq-Operator 311 312	≤
+A1	Eq-Operator-Value T9 LTEQ
+T10	Age 307 310	Age
+E8	Age:T10
+T11	Eq-Value 313 315	18
+T12	Eq-Value 794 796	28
+T13	Eq-Comparison 311 315	≤ 18
+E9	Eq-Comparison:T13 Operator:T9 Value:T11

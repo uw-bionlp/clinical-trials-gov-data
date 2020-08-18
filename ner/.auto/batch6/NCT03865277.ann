@@ -1,0 +1,47 @@
+T1	Procedure 377 394	radiochemotherapy
+T2	Procedure-Name 377 394	radiochemotherapy
+E1	Procedure:T1 Name:T2
+T3	Procedure 650 663	contraception
+T4	Procedure-Name 650 663	contraception
+E3	Procedure:T3 Name:T4
+T5	Procedure 443 455	chemotherapy
+T6	Procedure-Name 443 455	chemotherapy
+E5	Procedure:T5 Name:T6
+T7	Condition 623 635	reproductive
+T8	Condition-Name 623 635	reproductive
+E7	Condition:T7 Name:T8
+T9	Procedure 400 408	curative
+T10	Procedure-Name 400 408	curative
+E9	Procedure:T9 Name:T10
+T11	Procedure 561 568	therapy
+T12	Procedure-Name 561 568	therapy
+E11	Procedure:T11 Name:T12
+T13	Condition 184 187	IVA
+T14	Condition-Name 184 187	IVA
+E13	Condition:T13 Name:T14
+T15	Language 616 619	men
+T16	Procedure 1454 1471	radiochemotherapy
+T17	Procedure-Name 1454 1471	radiochemotherapy
+E16	Procedure:T16 Name:T17
+T18	Procedure 1398 1414	cancer treatment
+T19	Procedure-Name 1398 1414	cancer treatment
+E18	Procedure:T18 Name:T19
+T20	Procedure 985 997	radiotherapy
+T21	Procedure-Name 985 997	radiotherapy
+E20	Procedure:T20 Name:T21
+T22	Procedure 1102 1114	intervention
+T23	Procedure-Name 1102 1114	intervention
+E22	Procedure:T22 Name:T23
+T24	Eq-Operator 1229 1235	within
+A1	Eq-Operator-Value T24 GTEQ
+T25	Eq-Operator 1323 1332	less than
+A2	Eq-Operator-Value T25 LT
+T26	Eq-Temporal-Unit 44 49	years
+A3	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Operator 86 87	-
+A4	Eq-Operator-Value T27 BETWEEN
+T28	Eq-Value 41 43	18
+T29	Eq-Value 85 86	0
+T30	Eq-Value 87 88	2
+T31	Eq-Comparison 85 87	0-
+E23	Eq-Comparison:T31 Operator:T27 Value:T29

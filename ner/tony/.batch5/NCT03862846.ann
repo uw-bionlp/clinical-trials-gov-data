@@ -1,0 +1,27 @@
+T1	Condition 430 451	mitochondrial disease
+T2	Condition-Name 430 451	mitochondrial disease
+E1	Condition:T1 Name:T2
+T3	Condition 227 235	myopathy
+T4	Condition-Name 227 235	myopathy
+E3	Condition:T3 Name:T4
+T5	Procedure 629 636	nursing
+T6	Procedure-Name 629 636	nursing
+E5	Procedure:T5 Name:T6
+T7	Life-Stage-And-Gender 637 644	females
+A1	Life-Stage-And-Gender-Type T7 male
+T8	Eq-Operator 496 502	within
+A2	Eq-Operator-Value T8 LTEQ
+T9	Eq-Operator 545 551	within
+A3	Eq-Operator-Value T9 LTEQ
+T10	Eq-Temporal-Unit 505 511	months
+A4	Eq-Temporal-Unit-Value T10 month
+T11	Eq-Temporal-Unit 554 560	months
+A5	Eq-Temporal-Unit-Value T11 month
+T12	Eq-Value 136 140	2016
+T13	Eq-Value 503 504	3
+T14	Eq-Value 525 526	1
+T15	Eq-Value 552 553	3
+T16	Eq-Comparison 496 511	within 3 months
+E6	Eq-Comparison:T16 Operator:T8 Temporal-Unit:T10 Value:T13
+T17	Eq-Comparison 545 560	within 3 months
+E7	Eq-Comparison:T17 Operator:T9 Temporal-Unit:T11 Value:T15

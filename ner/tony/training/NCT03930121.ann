@@ -1,0 +1,226 @@
+T1	Procedure 697 725	placement of tDCS electrodes
+T2	Procedure-Name 697 725	placement of tDCS electrodes
+E1	Procedure:T1 Name:T2
+T3	Condition 155 162	aphasia
+T4	Condition-Name 155 162	aphasia
+E3	Condition:T3 Name:T4
+T5	Condition 65 71	stroke
+T6	Condition-Name 65 71	stroke
+E5	Condition:T5 Name:T6
+T7	Condition 142 148	stroke
+T8	Condition-Name 142 148	stroke
+E7	Condition:T7 Name:T8 Temporality:E21
+T11	Language 594 600	German
+T16	Observation 397 420	AAT subscale Token Test
+T17	Observation-Name 397 420	AAT subscale Token Test
+E16	Observation:T16 Name:T17 Eq-Comparison:E31
+T18	Observation 515 546	AAT subscale Spontaneous Speech
+T19	Observation-Name 515 546	AAT subscale Spontaneous Speech
+E18	Observation:T18 Name:T19 Eq-Comparison:E9
+T20	Condition 1460 1475	impaired vision
+T21	Condition-Name 1460 1475	impaired vision
+E20	Condition:T20 Name:T21
+T22	Condition 1119 1140	alcohol or drug abuse
+T23	Condition-Name 1119 1140	alcohol or drug abuse
+E22	Condition:T22 Name:T23 Severity:T107
+T24	Condition 1337 1355	cognitive deficits
+T25	Condition-Name 1337 1355	cognitive deficits
+E24	Condition:T24 Name:T25
+T26	Condition 1162 1172	depression
+T27	Condition-Name 1162 1172	depression
+E26	Condition:T26 Name:T27
+T28	Condition 1255 1272	apraxia of speech
+T29	Condition-Name 1255 1272	apraxia of speech
+E28	Condition:T28 Name:T29
+T30	Condition 1187 1196	psychosis
+T31	Condition-Name 1187 1196	psychosis
+E30	Condition:T30 Name:T31
+T32	Condition 1049 1057	epilepsy
+T33	Condition-Name 1049 1057	epilepsy
+E32	Condition:T32 Name:T33
+T36	Procedure 847 851	tDCS
+T37	Procedure-Name 847 851	tDCS
+E36	Procedure:T36 Name:T37
+T38	Eq-Operator 1581 1587	within
+A1	Eq-Operator-Value T38 LTEQ
+T39	Eq-Temporal-Unit 121 127	months
+A2	Eq-Temporal-Unit-Value T39 month
+T40	Eq-Temporal-Unit 1590 1595	weeks
+A3	Eq-Temporal-Unit-Value T40 week
+T41	Eq-Value 119 120	6
+T42	Eq-Value 217 219	13
+T43	Eq-Value 277 279	60
+T44	Eq-Value 353 354	1
+T45	Eq-Value 474 475	1
+T46	Eq-Value 1588 1589	2
+T47	Eq-Comparison 1581 1595	within 2 weeks
+E37	Eq-Comparison:T47 Operator:T38 Temporal-Unit:T40 Value:T46
+T48	Modifier 53 64	subcortical
+E2	Modifier:T48 Modifies:T6
+T49	Modifier 41 49	cortical
+E4	Modifier:T49 Modifies:T6
+T50	Or 50 52	or
+E6	Or:T50 Arg:E4 Arg2:E2
+T51	Modifier 25 40	left-hemisphere
+E8	Modifier:T51 Modifies:E4
+T52	And 72 76	with
+E10	And:T52 Arg:E5 Arg2:E13
+T53	Eq-Comparison 77 87	first-ever
+E11	Eq-Comparison:T53 Temporal-Recency:T54
+T54	Eq-Temporal-Recency 77 87	first-ever
+A4	Eq-Temporal-Recency-Value T54 first-time
+T55	Condition 88 95	aphasic
+E13	Condition:T55 Temporality:E11 Name:T57
+T56	Assertion 96 104	symptoms
+E15	Assertion:T56 Asserted:E13
+A5	Assertion-Type-Value E15 possible
+T57	Condition-Name 88 95	aphasic
+T58	Eq-Operator 110 118	at least
+A6	Eq-Operator-Value T58 GTEQ
+T59	Eq-Comparison 110 127	at least 6 months
+E17	Eq-Comparison:T59 Operator:T58 Value:T41 Temporal-Unit:T39
+T60	Temporal-Connection 128 132	post
+E19	Temporal-Connection:T60 Arg:E17 Arg2:E21
+A7	Temporal-Connection-Type-Value E19 after
+T61	Eq-Comparison 133 138	onset
+E21	Eq-Comparison:T61 Temporal-Recency:T62
+T62	Eq-Temporal-Recency 133 138	onset
+A8	Eq-Temporal-Recency-Value T62 first-time
+T66	Condition 239 264	word finding difficulties
+E27	Condition:T66 Name:T67
+T67	Condition-Name 239 264	word finding difficulties
+T68	Observation 206 209	AAT
+E29	Observation:T68 Name:T14
+T14	Observation-Name 206 209	AAT
+T15	Observation 185 204	Aachen Aphasia Test
+E14	Observation:T15 Name:T63
+T63	Observation-Name 185 204	Aachen Aphasia Test
+R1	Abbrev-Of Arg1:E14 Arg2:E29	
+R2	Found-By Arg1:E3 Arg2:E14	
+T64	Modifier 220 238	moderate-to-severe
+E23	Modifier:T64 Modifies:E27
+T70	Eq-Comparison 344 371	at least 1 correct reaction
+E31	Eq-Comparison:T70 Operator:T71 Value:T44 Unit:T72
+T71	Eq-Operator 344 352	at least
+A9	Eq-Operator-Value T71 GTEQ
+T72	Eq-Unit 355 371	correct reaction
+T9	Eq-Operator 465 473	at least
+T10	Eq-Unit 476 481	point
+T65	Eq-Comparison 465 481	at least 1 point
+E9	Eq-Comparison:T65 Operator:T9 Value2:T45 Unit:T10
+T69	Language 610 618	language
+R3	Example-Of Arg1:T11 Arg2:T69	
+T12	Observation 743 769	magnetic resonance imaging
+E12	Observation:T12 Name:T13
+T13	Observation-Name 743 769	magnetic resonance imaging
+T73	Observation 773 798	computer tomography scans
+E25	Observation:T73 Name:T74
+T74	Observation-Name 773 798	computer tomography scans
+T75	Condition 674 692	prefrontal lesions
+E33	Condition:T75 Name:T76
+T76	Condition-Name 674 692	prefrontal lesions
+T77	Modifier 668 673	right
+E35	Modifier:T77 Modifies:E33
+T78	Condition 632 659	left-hemisphere "hand knob"
+E38	Condition:T78 Name:T79
+T79	Condition-Name 632 659	left-hemisphere "hand knob"
+T80	Modifier 625 631	intact
+E39	Modifier:T80 Modifies:T79
+R4	Found-By Arg1:E38 Arg2:E12	
+R5	Found-By Arg1:E38 Arg2:E25	
+T81	Or 770 772	or
+E40	Or:T81 Arg:E12 Arg2:E25
+T82	Contraindication 825 842	contraindications
+E41	Contraindication:T82 Contraindicates:E36
+T83	Contraindication 859 876	cardiac pacemaker
+E42	Contraindication:T83 Contraindicates:E36
+T84	Contraindication 878 897	history of seizures
+E43	Contraindication:T84 Contraindicates:E36
+T85	Contraindication 899 930	implanted metal inside the head
+E44	Contraindication:T85 Contraindicates:E36
+R6	Example-Of Arg1:E42 Arg2:E41	
+R7	Example-Of Arg1:E43 Arg2:E41	
+R8	Example-Of Arg1:E44 Arg2:E41	
+T86	Eq-Comparison 938 978	more than one clinically apparent stroke
+E45	Eq-Comparison:T86 Operator:T87 Value:T88
+T87	Eq-Operator 938 947	more than
+A10	Eq-Operator-Value T87 GT
+T88	Eq-Value 948 951	one
+T34	Condition 972 978	stroke
+E34	Condition:T34 Name:T35 Minimum-Count:E45
+T35	Condition-Name 972 978	stroke
+T89	Negation 660 667	without
+E46	Negation:T89 Negates:E33
+T90	Modifier 952 971	clinically apparent
+E47	Modifier:T90 Modifies:E34
+T91	Condition 984 991	aphasic
+E48	Condition:T91 Name:T92
+T92	Condition-Name 984 991	aphasic
+T93	And 979 983	with
+E49	And:T93 Arg:E34
+T94	Assertion 992 1000	symptoms
+E50	Assertion:T94 Asserted:E48
+A11	Assertion-Type-Value E50 possible
+T95	Condition 859 876	cardiac pacemaker
+E51	Condition:T95 Name:T96
+T96	Condition-Name 859 876	cardiac pacemaker
+T97	Condition 889 897	seizures
+E52	Condition:T97 Name:T98
+T98	Condition-Name 889 897	seizures
+T99	Condition 899 930	implanted metal inside the head
+E53	Condition:T99 
+T100	Condition 1020 1041	neurological diseases
+E54	Condition:T100 Name:T101 Severity:T102
+T101	Condition-Name 1020 1041	neurological diseases
+T103	Condition 1059 1070	brain tumor
+E56	Condition:T103 Name:T104
+T104	Condition-Name 1059 1070	brain tumor
+T105	Condition 1076 1093	subdural hematoma
+E57	Condition:T105 Name:T106
+T106	Condition-Name 1076 1093	subdural hematoma
+R9	Example-Of Arg1:E32 Arg2:E54	
+R10	Example-Of Arg1:E56 Arg2:E54	
+R11	Example-Of Arg1:E57 Arg2:E54	
+T102	Severity 1013 1019	severe
+T107	Severity 1112 1118	severe
+A12	Observation-Type-Value T19 measurement
+A13	Eq-Operator-Value T9 GTEQ
+A14	Observation-Type-Value T17 measurement
+T108	Severity 1155 1161	severe
+A15	Severity-Value T108 severe
+A16	Severity-Value T107 severe
+A17	Severity-Value T102 severe
+T109	Condition 1215 1236	psychiatric condition
+E55	Condition:T109 
+T110	Condition-Name 1215 1236	psychiatric condition
+T111	Eq-Temporal-Period 1179 1186	current
+A18	Eq-Temporal-Period-Value T111 present
+T112	Severity 1248 1254	severe
+A19	Severity-Value T112 severe
+T113	Observation 1289 1312	Hierarchical Word Lists
+E58	Observation:T113 Name:T114
+T114	Observation-Name 1289 1312	Hierarchical Word Lists
+A20	Observation-Type-Value T114 measurement
+R12	Found-By Arg1:E28 Arg2:E58	
+T115	Modifier 1326 1336	non-verbal
+E59	Modifier:T115 Modifies:E24
+T116	Severity 1319 1325	severe
+A21	Severity-Value T116 severe
+T117	Observation 1377 1401	Corsi Block-Tapping Task
+E60	Observation:T117 Name:T118
+T118	Observation-Name 1377 1401	Corsi Block-Tapping Task
+A22	Observation-Type-Value T118 measurement
+R13	Found-By Arg1:E24 Arg2:E60	
+T119	Severity 1451 1459	severely
+A23	Severity-Value T119 severe
+T120	Condition 1479 1486	hearing
+E61	Condition:T120 
+T121	Temporal-Connection 1596 1601	prior
+E62	Temporal-Connection:T121 Arg:E64
+A24	Temporal-Connection-Type-Value E62 before
+T122	Drug 1568 1580	active drugs
+E63	Drug:T122 
+T123	Study 1605 1610	study
+E64	Study:T123 
+T124	Stability 1547 1554	changes
+A25	Stability-Value T124 change

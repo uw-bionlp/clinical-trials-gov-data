@@ -1,0 +1,23 @@
+T1	Condition 424 451	hypertrophic cardiomyopathy
+T2	Condition-Name 424 451	hypertrophic cardiomyopathy
+E1	Condition:T1 Name:T2
+T3	Procedure 59 72	physiotherapy
+T4	Procedure-Name 59 72	physiotherapy
+E3	Procedure:T3 Name:T4
+T5	Condition 453 466	heart failure
+T6	Condition-Name 453 466	heart failure
+E5	Condition:T5 Name:T6
+T7	Condition 401 411	arrhythmia
+T8	Condition-Name 401 411	arrhythmia
+E7	Condition:T7 Name:T8
+T9	Condition 290 299	Pregnancy
+T10	Condition-Name 290 299	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 471 472	<
+A1	Eq-Operator-Value T11 LT
+T12	Age 275 278	age
+E10	Age:T12
+T13	Eq-Value 282 284	18
+T14	Eq-Value 472 474	40
+T15	Eq-Comparison 471 474	<40
+E11	Eq-Comparison:T15 Operator:T11 Value:T14

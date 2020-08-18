@@ -1,0 +1,15 @@
+T1	Condition 111 124	endometriosis
+T2	Condition-Name 111 124	endometriosis
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 204 208	male
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Eq-Operator 64 65	>
+A2	Eq-Operator-Value T4 GT
+T5	Eq-Operator 181 182	<
+A3	Eq-Operator-Value T5 LT
+T6	Eq-Value 66 68	10
+T7	Eq-Value 183 184	3
+T8	Eq-Comparison 64 68	> 10
+E2	Eq-Comparison:T8 Operator:T4 Value:T6
+T9	Eq-Comparison 181 184	< 3
+E3	Eq-Comparison:T9 Operator:T5 Value:T7

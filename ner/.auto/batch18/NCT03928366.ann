@@ -1,0 +1,37 @@
+T1	Condition 246 268	neurological disorders
+T2	Condition-Name 246 268	neurological disorders
+E1	Condition:T1 Name:T2
+T3	Condition 216 229	Psychological
+T4	Condition-Name 216 229	Psychological
+E3	Condition:T3 Name:T4
+T5	Condition 270 281	Consumption
+T6	Condition-Name 270 281	Consumption
+E5	Condition:T5 Name:T6
+T7	Condition 373 392	Allergy to propofol
+T8	Condition-Name 373 392	Allergy to propofol
+E7	Condition:T7 Name:T8
+T9	Observation 437 452	Body mass index
+T10	Observation-Name 437 452	Body mass index
+E9	Observation:T9 Name:T10
+A1	Observation-Type-Value T10 vital
+T11	Observation 454 457	BMI
+T12	Observation-Name 454 457	BMI
+E11	Observation:T11 Name:T12
+A2	Observation-Type-Value T12 vital
+T13	Condition 484 493	Pregnancy
+T14	Condition-Name 484 493	Pregnancy
+E13	Condition:T13 Name:T14
+T15	Life-Stage-And-Gender 556 561	adult
+A3	Life-Stage-And-Gender-Type T15 adult
+T16	Eq-Operator 464 465	<
+A4	Eq-Operator-Value T16 LT
+T17	Eq-Operator 470 471	>
+A5	Eq-Operator-Value T17 GT
+T18	Eq-Unit 475 482	kg / m2
+T19	Eq-Value 55 56	1
+T20	Eq-Value 465 467	18
+T21	Eq-Value 472 474	30
+T22	Eq-Comparison 464 467	<18
+E14	Eq-Comparison:T22 Operator:T16 Value:T20
+T23	Eq-Comparison 470 482	> 30 kg / m2
+E15	Eq-Comparison:T23 Operator:T17 Unit:T18 Value:T21

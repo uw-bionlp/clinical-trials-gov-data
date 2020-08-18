@@ -1,0 +1,50 @@
+T1	Condition 866 888	coronary heart disease
+T2	Condition-Name 866 888	coronary heart disease
+E1	Condition:T1 Name:T2
+T3	Procedure 1096 1114	general anesthesia
+T4	Procedure-Name 1096 1114	general anesthesia
+E3	Procedure:T3 Name:T4
+T5	Condition 121 137	menstrual cycles
+T6	Condition-Name 121 137	menstrual cycles
+E5	Condition:T5 Name:T6
+T7	Condition 35 48	endometriosis
+T8	Condition-Name 35 48	endometriosis
+E7	Condition:T7 Name:T8
+T9	Condition 568 581	liver disease
+T10	Condition-Name 568 581	liver disease
+E9	Condition:T9 Name:T10
+T11	Procedure 98 107	resection
+T12	Procedure-Name 98 107	resection
+E11	Procedure:T11 Name:T12
+T13	Condition 583 592	cirrhosis
+T14	Condition-Name 583 592	cirrhosis
+E13	Condition:T13 Name:T14
+T15	Procedure 1304 1313	procedure
+T16	Procedure-Name 1304 1313	procedure
+E15	Procedure:T15 Name:T16
+T17	Procedure 485 493	chemical
+T18	Procedure-Name 485 493	chemical
+E17	Procedure:T17 Name:T18
+T19	Procedure 1127 1135	surgical
+T20	Procedure-Name 1127 1135	surgical
+E19	Procedure:T19 Name:T20
+T21	Condition 803 809	uremia
+T22	Condition-Name 803 809	uremia
+E21	Condition:T21 Name:T22
+T23	Eq-Operator 172 184	younger than
+A1	Eq-Operator-Value T23 LT
+T24	Eq-Operator 829 830	>
+A2	Eq-Operator-Value T24 GT
+T25	Eq-Temporal-Unit 188 193	years
+A3	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Temporal-Unit 212 217	years
+A4	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Value 185 187	18
+T28	Eq-Value 209 211	50
+T29	Eq-Value 688 689	1
+T30	Eq-Value 771 772	2
+T31	Eq-Value 831 832	2
+T32	Eq-Comparison 172 193	younger than 18 years
+E22	Eq-Comparison:T32 Operator:T23 Temporal-Unit:T25 Value:T27
+T33	Eq-Comparison 829 832	> 2
+E23	Eq-Comparison:T33 Operator:T24 Value:T31

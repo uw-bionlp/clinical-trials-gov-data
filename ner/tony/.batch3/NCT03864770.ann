@@ -1,0 +1,15 @@
+T1	Condition 490 514	musculoskeletal diseases
+T2	Condition-Name 490 514	musculoskeletal diseases
+E1	Condition:T1 Name:T2
+T3	Procedure 530 543	spine surgery
+T4	Procedure-Name 530 543	spine surgery
+E3	Procedure:T3 Name:T4
+T5	Eq-Operator 25 26	≥
+A1	Eq-Operator-Value T5 GTEQ
+T6	Eq-Temporal-Unit 79 84	weeks
+A2	Eq-Temporal-Unit-Value T6 week
+T7	Eq-Value 27 29	20
+T8	Eq-Value 58 59	4
+T9	Eq-Value 77 78	2
+T10	Eq-Comparison 25 29	≥ 20
+E4	Eq-Comparison:T10 Operator:T5 Value:T7

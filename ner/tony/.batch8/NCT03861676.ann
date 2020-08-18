@@ -1,0 +1,41 @@
+T1	Condition 572 591	psychiatric illness
+T2	Condition-Name 572 591	psychiatric illness
+E1	Condition:T1 Name:T2
+T3	Procedure 532 549	radiation therapy
+T4	Procedure-Name 532 549	radiation therapy
+E3	Procedure:T3 Name:T4
+T5	Language 217 220	MRI
+T6	Language 260 263	MRI
+T7	Procedure 372 375	DCF
+T8	Procedure-Name 372 375	DCF
+E7	Procedure:T7 Name:T8
+T9	Condition 376 379	Pyl
+T10	Condition-Name 376 379	Pyl
+E9	Condition:T9 Name:T10
+T11	Condition 829 843	claustrophobia
+T12	Condition-Name 829 843	claustrophobia
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 80 81	<
+A1	Eq-Operator-Value T13 LT
+T14	Eq-Operator 205 206	<
+A2	Eq-Operator-Value T14 LT
+T15	Eq-Operator 968 983	within the past
+A3	Eq-Operator-Value T15 LTEQ
+T16	Eq-Temporal-Unit 986 991	years
+A4	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Operator 174 175	-
+A5	Eq-Operator-Value T17 BETWEEN
+T18	Eq-Value 82 83	2
+T19	Eq-Value 173 174	6
+T20	Eq-Value 175 176	7
+T21	Eq-Value 207 209	60
+T22	Eq-Value 337 339	20
+T23	Eq-Value 984 985	3
+T24	Eq-Comparison 80 83	< 2
+E12	Eq-Comparison:T24 Operator:T13 Value:T18
+T25	Eq-Comparison 205 209	< 60
+E13	Eq-Comparison:T25 Operator:T14 Value:T21
+T26	Eq-Comparison 968 991	within the past 3 years
+E14	Eq-Comparison:T26 Operator:T15 Temporal-Unit:T16 Value:T23
+T27	Eq-Comparison 173 175	6-
+E15	Eq-Comparison:T27 Operator:T17 Value:T19

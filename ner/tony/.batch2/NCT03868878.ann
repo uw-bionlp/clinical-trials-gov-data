@@ -1,0 +1,21 @@
+T1	Condition 152 174	cardiovascular disease
+T2	Condition-Name 152 174	cardiovascular disease
+E1	Condition:T1 Name:T2
+T3	Condition 231 252	neuromuscular disease
+T4	Condition-Name 231 252	neuromuscular disease
+E3	Condition:T3 Name:T4
+T5	Condition 176 190	kidney disease
+T6	Condition-Name 176 190	kidney disease
+E5	Condition:T5 Name:T6
+T7	Condition 192 205	liver disease
+T8	Condition-Name 192 205	liver disease
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 29 41	greater than
+A1	Eq-Operator-Value T9 GT
+T10	Eq-Temporal-Unit 45 50	years
+A2	Eq-Temporal-Unit-Value T10 year
+T11	Age 25 28	age
+E8	Age:T11
+T12	Eq-Value 42 44	60
+T13	Eq-Comparison 29 50	greater than 60 years
+E9	Eq-Comparison:T13 Operator:T9 Temporal-Unit:T10 Value:T12

@@ -1,0 +1,53 @@
+T1	Condition 429 455	inflammatory bowel disease
+T2	Condition-Name 429 455	inflammatory bowel disease
+E1	Condition:T1 Name:T2
+T3	Condition 496 517	indeterminate colitis
+T4	Condition-Name 496 517	indeterminate colitis
+E3	Condition:T3 Name:T4
+T7	Condition 553 573	short bowel syndrome
+T8	Condition-Name 553 573	short bowel syndrome
+E7	Condition:T7 Name:T8
+T9	Condition 409 427	ulcerative colitis
+T10	Condition-Name 409 427	ulcerative colitis
+E9	Condition:T9 Name:T10
+T11	Procedure 264 280	biologic therapy
+T12	Procedure-Name 264 280	biologic therapy
+E11	Procedure:T11 Name:T12
+T13	Condition 533 549	perianal abscess
+T14	Condition-Name 533 549	perianal abscess
+E13	Condition:T13 Name:T14
+T15	Procedure 618 633	bowel resection
+T16	Procedure-Name 618 633	bowel resection
+E15	Procedure:T15 Name:T16
+T17	Procedure 326 339	contraception
+T18	Procedure-Name 326 339	contraception
+E17	Procedure:T17 Name:T18
+T19	Condition 189 200	intolerance
+T20	Condition-Name 189 200	intolerance
+E19	Condition:T19 Name:T20
+T21	Life-Stage-And-Gender 296 302	female
+A1	Life-Stage-And-Gender-Type T21 male
+T22	Procedure 595 601	ostomy
+T23	Procedure-Name 595 601	ostomy
+E22	Procedure:T22 Name:T23
+T24	Condition 470 473	IBD
+T25	Condition-Name 470 473	IBD
+E24	Condition:T24 Name:T25
+T26	Eq-Operator 634 640	within
+A2	Eq-Operator-Value T26 GTEQ
+T27	Eq-Operator 709 715	within
+A3	Eq-Operator-Value T27 GTEQ
+T28	Eq-Temporal-Unit 56 62	months
+A4	Eq-Temporal-Unit-Value T28 month
+T29	Eq-Temporal-Unit 643 649	months
+A5	Eq-Temporal-Unit-Value T29 month
+T30	Eq-Temporal-Unit 718 724	months
+A6	Eq-Temporal-Unit-Value T30 month
+T31	Eq-Value 54 55	3
+T32	Eq-Value 641 642	6
+T33	Eq-Value 716 717	3
+T34	Eq-Value 798 800	23
+T35	Eq-Comparison 634 649	within 6 months
+E25	Eq-Comparison:T35 Operator:T26 Temporal-Unit:T29 Value:T32
+T36	Eq-Comparison 709 724	within 3 months
+E26	Eq-Comparison:T36 Operator:T27 Temporal-Unit:T30 Value:T33

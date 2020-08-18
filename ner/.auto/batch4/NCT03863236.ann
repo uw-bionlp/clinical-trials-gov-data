@@ -1,0 +1,67 @@
+T1	Procedure 369 378	resection
+T2	Procedure-Name 369 378	resection
+E1	Procedure:T1 Name:T2
+T3	Condition 406 415	pregnancy
+T4	Condition-Name 406 415	pregnancy
+E3	Condition:T3 Name:T4
+T5	Procedure 82 90	Curative
+T6	Procedure-Name 82 90	Curative
+E5	Procedure:T5 Name:T6
+T7	Procedure 640 660	emergency procedures
+T8	Procedure-Name 640 660	emergency procedures
+E7	Procedure:T7 Name:T8
+T9	Condition 902 922	short bowel syndrome
+T10	Condition-Name 902 922	short bowel syndrome
+E9	Condition:T9 Name:T10
+T11	Condition 857 874	renal dysfunction
+T12	Condition-Name 857 874	renal dysfunction
+E11	Condition:T11 Name:T12
+T13	Procedure 933 944	gastrectomy
+T14	Procedure-Name 933 944	gastrectomy
+E13	Procedure:T13 Name:T14
+T15	Condition 957 968	dysfunction
+T16	Condition-Name 957 968	dysfunction
+E15	Condition:T15 Name:T16
+T17	Life-Stage-And-Gender 699 704	child
+A1	Life-Stage-And-Gender-Type T17 child
+T18	Condition 848 853	liver
+T19	Condition-Name 848 853	liver
+E18	Condition:T18 Name:T19
+T20	Observation 750 753	BMI
+T21	Observation-Name 750 753	BMI
+E20	Observation:T20 Name:T21
+A2	Observation-Type-Value T21 vital
+T22	Eq-Operator 573 579	within
+A3	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 736 737	<
+A4	Eq-Operator-Value T23 LT
+T24	Eq-Operator 742 743	>
+A5	Eq-Operator-Value T24 GT
+T25	Eq-Operator 827 836	less than
+A6	Eq-Operator-Value T25 LT
+T26	Eq-Temporal-Unit 28 33	years
+A7	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Temporal-Unit 163 169	months
+A8	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Temporal-Unit 582 587	years
+A9	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Temporal-Unit 801 807	months
+A10	Eq-Temporal-Unit-Value T29 month
+T30	Eq-Value 25 27	18
+T31	Eq-Value 160 162	12
+T32	Eq-Value 510 511	5
+T33	Eq-Value 580 581	5
+T34	Eq-Value 737 738	2
+T35	Eq-Value 743 744	5
+T36	Eq-Value 760 762	18
+T37	Eq-Value 782 784	15
+T38	Eq-Value 799 800	6
+T39	Eq-Value 837 839	30
+T40	Eq-Comparison 573 587	within 5 years
+E21	Eq-Comparison:T40 Operator:T22 Temporal-Unit:T28 Value:T33
+T41	Eq-Comparison 736 738	<2
+E22	Eq-Comparison:T41 Operator:T23 Value:T34
+T42	Eq-Comparison 742 744	>5
+E23	Eq-Comparison:T42 Operator:T24 Value:T35
+T43	Eq-Comparison 827 839	less than 30
+E24	Eq-Comparison:T43 Operator:T25 Value:T39

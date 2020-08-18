@@ -1,0 +1,42 @@
+T1	Condition 79 97	Metabolic Syndrome
+T2	Condition-Name 79 97	Metabolic Syndrome
+E1	Condition:T1 Name:T2
+T3	Condition 180 197	abdominal obesity
+T4	Condition-Name 180 197	abdominal obesity
+E3	Condition:T3 Name:T4
+T5	Language 46 54	Arkansas
+T6	Life-Stage-And-Gender 436 442	Female
+A1	Life-Stage-And-Gender-Type T6 male
+T7	Procedure 498 502	diet
+T8	Procedure-Name 498 502	diet
+E7	Procedure:T7 Name:T8
+T9	Language 269 272	men
+T10	Condition 702 717	type 2 diabetes
+T11	Condition-Name 702 717	type 2 diabetes
+E10	Condition:T10 Name:T11
+T12	Condition 685 698	heart disease
+T13	Condition-Name 685 698	heart disease
+E12	Condition:T12 Name:T13
+T14	Eq-Operator 250 251	<
+A2	Eq-Operator-Value T14 LT
+T15	Eq-Operator 397 398	>
+A3	Eq-Operator-Value T15 GT
+T16	Eq-Temporal-Unit 68 73	years
+A4	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Temporal-Unit 637 643	months
+A5	Eq-Temporal-Unit-Value T17 month
+T18	Eq-Unit 327 329	mm
+T19	Eq-Unit 367 369	mm
+T20	Age 60 63	Age
+E13	Age:T20
+T21	Eq-Value 64 66	18
+T22	Eq-Value 223 226	150
+T23	Eq-Value 257 259	40
+T24	Eq-Value 277 279	50
+T25	Eq-Value 323 326	130
+T26	Eq-Value 364 366	85
+T27	Eq-Value 399 402	100
+T28	Eq-Value 635 636	3
+T29	Eq-Value 707 708	2
+T30	Eq-Comparison 397 402	> 100
+E14	Eq-Comparison:T30 Operator:T15 Value:T27

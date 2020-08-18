@@ -1,0 +1,81 @@
+T1	Condition 417 444	inflammatory bowel diseases
+T2	Condition-Name 417 444	inflammatory bowel diseases
+E1	Condition:T1 Name:T2
+T3	Condition 334 353	active tuberculosis
+T4	Condition-Name 334 353	active tuberculosis
+E3	Condition:T3 Name:T4
+T5	Condition 360 379	autoimmune diseases
+T6	Condition-Name 360 379	autoimmune diseases
+E5	Condition:T5 Name:T6
+T7	Condition 494 512	metabolic diseases
+T8	Condition-Name 494 512	metabolic diseases
+E7	Condition:T7 Name:T8
+T9	Condition 544 562	pulmonary diseases
+T10	Condition-Name 544 562	pulmonary diseases
+E9	Condition:T9 Name:T10
+T11	Condition 69 86	Atopic Dermatitis
+T12	Condition-Name 69 86	Atopic Dermatitis
+E11	Condition:T11 Name:T12
+T13	Condition 386 402	immunodeficiency
+T14	Condition-Name 386 402	immunodeficiency
+E13	Condition:T13 Name:T14
+T15	Condition 179 194	skin infections
+T16	Condition-Name 179 194	skin infections
+E15	Condition:T15 Name:T16
+T17	Condition 472 487	cystic fibrosis
+T18	Condition-Name 472 487	cystic fibrosis
+E17	Condition:T17 Name:T18
+T19	Condition 451 465	celiac disease
+T20	Condition-Name 451 465	celiac disease
+E19	Condition:T19 Name:T20
+T21	Procedure 927 939	phototherapy
+T22	Procedure-Name 927 939	phototherapy
+E21	Procedure:T21 Name:T22
+T23	Condition 201 211	ichthyosis
+T24	Condition-Name 201 211	ichthyosis
+E23	Condition:T23 Name:T24
+T25	Life-Stage-And-Gender 25 33	Children
+A1	Life-Stage-And-Gender-Type T25 child
+T26	Eq-Operator 141 142	<
+A2	Eq-Operator-Value T26 LT
+T27	Eq-Operator 161 162	>
+A3	Eq-Operator-Value T27 GT
+T28	Eq-Operator 1281 1287	within
+A4	Eq-Operator-Value T28 LTEQ
+T29	Eq-Temporal-Unit 44 50	months
+A5	Eq-Temporal-Unit-Value T29 month
+T30	Eq-Temporal-Unit 145 151	months
+A6	Eq-Temporal-Unit-Value T30 month
+T31	Eq-Temporal-Unit 166 172	months
+A7	Eq-Temporal-Unit-Value T31 month
+T32	Eq-Temporal-Unit 728 733	weeks
+A8	Eq-Temporal-Unit-Value T32 week
+T33	Eq-Temporal-Unit 842 848	months
+A9	Eq-Temporal-Unit-Value T33 month
+T34	Eq-Temporal-Unit 958 963	weeks
+A10	Eq-Temporal-Unit-Value T34 week
+T35	Eq-Temporal-Unit 1029 1034	weeks
+A11	Eq-Temporal-Unit-Value T35 week
+T36	Eq-Temporal-Unit 1292 1297	weeks
+A12	Eq-Temporal-Unit-Value T36 week
+T37	Age 34 38	aged
+E24	Age:T37
+T38	Age 137 140	Age
+E25	Age:T38
+T39	Age 157 160	age
+E26	Age:T39
+T40	Eq-Operator 40 41	-
+A13	Eq-Operator-Value T40 BETWEEN
+T41	Eq-Value 39 40	6
+T42	Eq-Value 41 43	36
+T43	Eq-Value 143 144	6
+T44	Eq-Value 163 165	36
+T45	Eq-Value 726 727	4
+T46	Eq-Value 956 957	4
+T47	Eq-Value 1027 1028	4
+T48	Eq-Comparison 141 151	< 6 months
+E27	Eq-Comparison:T48 Operator:T26 Temporal-Unit:T30 Value:T43
+T49	Eq-Comparison 161 172	> 36 months
+E28	Eq-Comparison:T49 Operator:T27 Temporal-Unit:T31 Value:T44
+T50	Eq-Comparison 39 41	6-
+E29	Eq-Comparison:T50 Operator:T40 Value:T41

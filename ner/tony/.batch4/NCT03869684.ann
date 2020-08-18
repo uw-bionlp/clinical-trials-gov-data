@@ -1,0 +1,46 @@
+T1	Condition 305 308	AMD
+T2	Condition-Name 305 308	AMD
+E1	Condition:T1 Name:T2
+T3	Condition 344 360	vascular disease
+T4	Condition-Name 344 360	vascular disease
+E3	Condition:T3 Name:T4
+T5	Condition 396 399	AMD
+T6	Condition-Name 396 399	AMD
+E5	Condition:T5 Name:T6
+T7	Procedure 452 468	cataract surgery
+T8	Procedure-Name 452 468	cataract surgery
+E7	Procedure:T7 Name:T8
+T9	Procedure 472 477	LASIK
+T10	Procedure-Name 472 477	LASIK
+E9	Procedure:T9 Name:T10
+T11	Condition 713 727	ocular disease
+T12	Condition-Name 713 727	ocular disease
+E11	Condition:T11 Name:T12
+T13	Procedure 843 857	filter surgery
+T14	Procedure-Name 843 857	filter surgery
+E13	Procedure:T13 Name:T14
+T15	Condition 800 808	glaucoma
+T16	Condition-Name 800 808	glaucoma
+E15	Condition:T15 Name:T16
+T17	Condition 834 842	glaucoma
+T18	Condition-Name 834 842	glaucoma
+E17	Condition:T17 Name:T18
+T19	Eq-Operator 503 509	within
+A1	Eq-Operator-Value T19 LTEQ
+T20	Eq-Operator 621 627	within
+A2	Eq-Operator-Value T20 LTEQ
+T21	Eq-Operator 1245 1251	within
+A3	Eq-Operator-Value T21 LTEQ
+T22	Eq-Temporal-Unit 518 522	days
+A4	Eq-Temporal-Unit-Value T22 day
+T23	Eq-Temporal-Unit 631 635	days
+A5	Eq-Temporal-Unit-Value T23 day
+T24	Eq-Temporal-Unit 1255 1259	days
+A6	Eq-Temporal-Unit-Value T24 day
+T25	Eq-Value 515 517	90
+T26	Eq-Value 628 630	30
+T27	Eq-Value 1252 1254	90
+T28	Eq-Comparison 621 635	within 30 days
+E18	Eq-Comparison:T28 Operator:T20 Temporal-Unit:T23 Value:T26
+T29	Eq-Comparison 1245 1259	within 90 days
+E19	Eq-Comparison:T29 Operator:T21 Temporal-Unit:T24 Value:T27

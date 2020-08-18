@@ -1,0 +1,60 @@
+T1	Condition 325 341	systemic disease
+T2	Condition-Name 325 341	systemic disease
+E1	Condition:T1 Name:T2
+T3	Procedure 357 369	radiotherapy
+T4	Procedure-Name 357 369	radiotherapy
+E3	Procedure:T3 Name:T4 Temporality:E15
+T5	Procedure 400 412	Chemotherapy
+T6	Procedure-Name 400 412	Chemotherapy
+E5	Procedure:T5 Name:T6 Temporality:E8
+T7	Eq-Operator 136 148	younger than
+A1	Eq-Operator-Value T7 LT
+T8	Eq-Operator 413 419	within
+A2	Eq-Operator-Value T8 LTEQ
+T9	Eq-Temporal-Unit 152 157	years
+A3	Eq-Temporal-Unit-Value T9 year
+T10	Eq-Unit 267 269	mm
+T11	Age 158 161	old
+E6	Age:T11 Eq-Comparison:E7
+T12	Eq-Operator 263 264	-
+A4	Eq-Operator-Value T12 BETWEEN
+T13	Eq-Value 149 151	25
+T14	Eq-Value 261 263	15
+T15	Eq-Value 264 266	20
+T16	Eq-Value 429 431	12
+T17	Eq-Comparison 136 157	younger than 25 years
+E7	Eq-Comparison:T17 Operator:T7 Temporal-Unit:T9 Value:T13
+T18	Eq-Comparison 413 437	within the past 12-month
+E8	Eq-Comparison:T18 Operator:T8 Value:T16 Temporal-Unit:T31 Temporal-Period:T32
+T19	Eq-Comparison 261 264	15-
+E9	Eq-Comparison:T19 Operator:T12 Value:T14 Unit:T10
+T20	Condition 48 55	disease
+E2	Condition:T20 
+T21	Modifier 56 80	affecting bone formation
+E4	Modifier:T21 Modifies:E2
+T22	Negation 34 43	free from
+E10	Negation:T22 Negates:E2
+T23	Condition 204 225	hemifacial microsomia
+E11	Condition:T23 Name:T24
+T24	Condition-Name 204 225	hemifacial microsomia
+T25	Observation 231 248	Distraction range
+E12	Observation:T25 Name:T26
+T26	Observation-Name 231 248	Distraction range
+A5	Observation-Type-Value T26 measurement
+T27	Modifier 312 324	uncontrolled
+E13	Modifier:T27 Modifies:E1
+T28	Modifier 370 393	on head and neck region
+E14	Modifier:T28 Modifies:E3
+T29	Eq-Comparison 348 356	Previous
+E15	Eq-Comparison:T29 Temporal-Period:T30
+T30	Eq-Temporal-Period 348 356	Previous
+A6	Eq-Temporal-Period-Value T30 past
+T31	Eq-Temporal-Unit 432 437	month
+A7	Eq-Temporal-Unit-Value T31 month
+T32	Eq-Temporal-Period 424 428	past
+A8	Eq-Temporal-Period-Value T32 past
+T33	Condition 461 470	infection
+E16	Condition:T33 Name:T34
+T34	Condition-Name 461 470	infection
+T35	Modifier 478 494	distraction site
+E17	Modifier:T35 Modifies:E16

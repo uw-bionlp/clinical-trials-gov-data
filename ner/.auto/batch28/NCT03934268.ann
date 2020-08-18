@@ -1,0 +1,15 @@
+T1	Condition 309 318	syndromes
+T2	Condition-Name 309 318	syndromes
+E1	Condition:T1 Name:T2
+T3	Condition 383 386	HIE
+T4	Condition-Name 383 386	HIE
+E3	Condition:T3 Name:T4
+T5	Eq-Operator 74 75	<
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Temporal-Unit 78 82	days
+A2	Eq-Temporal-Unit-Value T6 day
+T7	Age 70 73	age
+E4	Age:T7
+T8	Eq-Value 75 77	28
+T9	Eq-Comparison 74 82	<28 days
+E5	Eq-Comparison:T9 Operator:T5 Temporal-Unit:T6 Value:T8

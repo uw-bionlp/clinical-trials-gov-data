@@ -1,0 +1,78 @@
+T1	Condition 258 280	malignant hyperthermia
+T2	Condition-Name 258 280	malignant hyperthermia
+E1	Condition:T1 Name:T2 Temporality:E22
+T3	Condition 307 327	neurological disease
+T4	Condition-Name 307 327	neurological disease
+E3	Condition:T3 Name:T4
+T5	Condition 226 245	psychiatric disease
+T6	Condition-Name 226 245	psychiatric disease
+E5	Condition:T5 Name:T6
+T7	Condition 206 224	mental retardation
+T8	Condition-Name 206 224	mental retardation
+E7	Condition:T7 Name:T8
+T9	Condition 329 343	morbid obesity
+T10	Condition-Name 329 343	morbid obesity
+E9	Condition:T9 Name:T10
+T11	Eq-Value 45 46	1
+T12	Eq-Value 51 52	2
+T13	Eq-Value 198 199	3
+T14	Eq-Value 203 204	4
+T15	Condition 25 44	ASA physical status
+E2	Condition:T15 Name:T16 Stage:E4
+T16	Condition-Name 25 44	ASA physical status
+T17	Eq-Comparison 45 52	1 and 2
+E4	Eq-Comparison:T17 Operator:T18 Value:T11 Value2:T12
+T18	Eq-Operator 47 50	and
+A1	Eq-Operator-Value T18 BETWEEN
+T19	Procedure 64 97	gynicological laparotomic surgery
+E6	Procedure:T19 Name:T20 Temporality:E20
+T20	Procedure-Name 64 97	gynicological laparotomic surgery
+T21	Procedure 104 122	general anesthesia
+E8	Procedure:T21 Name:T22
+T22	Procedure-Name 104 122	general anesthesia
+R1	Using Arg1:E6 Arg2:E8	
+T23	Location 139 143	PACU
+A2	Location-Value T23 unit
+T24	Location 144 167	postoperative care unit
+A3	Location-Value T24 unit
+R2	Abbrev-Of Arg1:T23 Arg2:T24	
+T27	Condition 194 197	ASA
+E11	Condition:T27 Name:T28 Stage:E12
+T28	Condition-Name 194 197	ASA
+T29	Eq-Comparison 198 204	3 or 4
+E12	Eq-Comparison:T29 Operator:T30 Value:T13 Value2:T14
+T30	Eq-Operator 200 202	or
+A5	Eq-Operator-Value T30 BETWEEN
+T31	Family-Member 299 305	family
+E13	Family-Member:T31 Has:E1
+T32	Condition 356 362	asthma
+E14	Condition:T32 Name:T33 Temporality:E21
+T33	Condition-Name 356 362	asthma
+T34	Location 384 403	intensive care unit
+A6	Location-Value T34 unit
+T25	Encounter 124 135	followed up
+E10	Encounter:T25 Location:T23
+T26	Temporal-Connection 124 132	followed
+E15	Temporal-Connection:T26 Arg:E10 Arg2:E6
+T36	Encounter 367 376	follow-up
+E16	Encounter:T36 Location:T34
+T37	And 363 366	and
+E17	And:T37 Arg:E14 Arg2:E16
+T38	Family-Member 284 291	patient
+E18	Family-Member:T38 Has:E1
+A7	Family-Member-Type E18 patient
+T39	Or 292 294	or
+E19	Or:T39 Arg:E18 Arg2:E13
+A4	Temporal-Connection-Type-Value E15 after
+T35	Eq-Comparison 54 63	underwent
+E20	Eq-Comparison:T35 Temporal-Period:T40
+T40	Eq-Temporal-Period 54 63	underwent
+A8	Eq-Temporal-Period-Value T40 past
+T41	Eq-Comparison 345 352	history
+E21	Eq-Comparison:T41 Temporal-Period:T42
+T42	Eq-Temporal-Period 345 352	history
+A9	Eq-Temporal-Period-Value T42 past
+T43	Eq-Comparison 247 254	history
+E22	Eq-Comparison:T43 Temporal-Period:T44
+T44	Eq-Temporal-Period 247 254	history
+A10	Eq-Temporal-Period-Value T44 past

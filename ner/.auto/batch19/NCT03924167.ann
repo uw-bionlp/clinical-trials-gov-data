@@ -1,0 +1,41 @@
+T1	Condition 77 80	CHR
+T2	Condition-Name 77 80	CHR
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 211 219	children
+A1	Life-Stage-And-Gender-Type T3 child
+T4	Life-Stage-And-Gender 411 417	adults
+A2	Life-Stage-And-Gender-Type T4 adult
+T5	Life-Stage-And-Gender 541 546	child
+A3	Life-Stage-And-Gender-Type T5 child
+T6	Condition 673 676	IPV
+T7	Condition-Name 673 676	IPV
+E6	Condition:T6 Name:T7
+T8	Eq-Operator 84 85	>
+A4	Eq-Operator-Value T8 GT
+T9	Eq-Operator 85 86	>
+A5	Eq-Operator-Value T9 GT
+T10	Eq-Operator 266 275	less than
+A6	Eq-Operator-Value T10 LT
+T11	Eq-Temporal-Unit 89 94	years
+A7	Eq-Temporal-Unit-Value T11 year
+T12	Age 98 101	age
+E7	Age:T12
+T13	Age 548 552	aged
+E8	Age:T13
+T14	Eq-Operator 449 450	-
+A8	Eq-Operator-Value T14 BETWEEN
+T15	Eq-Operator 555 556	-
+A9	Eq-Operator-Value T15 BETWEEN
+T16	Eq-Value 86 88	18
+T17	Eq-Value 447 449	12
+T18	Eq-Value 450 452	17
+T19	Eq-Value 553 555	12
+T20	Eq-Value 556 558	18
+T21	Eq-Comparison 84 94	>>18 years
+E9	Eq-Comparison:T21 Operator:T8 Temporal-Unit:T11 Value:T16
+T22	Eq-Comparison 85 94	>18 years
+E10	Eq-Comparison:T22 Operator:T9 Temporal-Unit:T11 Value:T16
+T23	Eq-Comparison 447 450	12-
+E11	Eq-Comparison:T23 Operator:T14 Value:T17
+T24	Eq-Comparison 553 556	12-
+E12	Eq-Comparison:T24 Operator:T15 Value:T19

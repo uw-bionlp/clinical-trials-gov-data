@@ -1,0 +1,33 @@
+T1	Procedure 160 172	chemotherapy
+T2	Procedure-Name 160 172	chemotherapy
+E1	Procedure:T1 Name:T2
+T3	Condition 304 316	malnourished
+T4	Condition-Name 304 316	malnourished
+E3	Condition:T3 Name:T4
+T5	Procedure 249 260	application
+T6	Procedure-Name 249 260	application
+E5	Procedure:T5 Name:T6
+T7	Observation 178 181	BMI
+T8	Observation-Name 178 181	BMI
+E7	Observation:T7 Name:T8
+A1	Observation-Type-Value T8 vital
+T9	Observation 318 321	BMI
+T10	Observation-Name 318 321	BMI
+E9	Observation:T9 Name:T10
+A2	Observation-Type-Value T10 vital
+T11	Condition 439 465	inflammatory bowel disease
+T12	Condition-Name 439 465	inflammatory bowel disease
+E11	Condition:T11 Name:T12
+T13	Condition 521 539	intestinal disease
+T14	Condition-Name 521 539	intestinal disease
+E13	Condition:T13 Name:T14
+T15	Condition 467 470	IBD
+T16	Condition-Name 467 470	IBD
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 261 267	within
+A3	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 296 297	≥
+A4	Eq-Operator-Value T18 GTEQ
+T19	Eq-Value 297 299	25
+T20	Eq-Comparison 296 299	≥25
+E16	Eq-Comparison:T20 Operator:T18 Value:T19

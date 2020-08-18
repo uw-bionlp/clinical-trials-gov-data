@@ -1,0 +1,61 @@
+T1	Life-Stage-And-Gender 33 39	Female
+A1	Life-Stage-And-Gender-Type T1 male
+T2	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T2 male
+T3	Condition 322 331	esophagus
+T4	Condition-Name 322 331	esophagus
+E3	Condition:T3 Name:T4
+T5	Condition 372 381	esophagus
+T6	Condition-Name 372 381	esophagus
+E5	Condition:T5 Name:T6
+T7	Condition 405 413	disorder
+T8	Condition-Name 405 413	disorder
+E7	Condition:T7 Name:T8
+T9	Condition 311 318	stomach
+T10	Condition-Name 311 318	stomach
+E9	Condition:T9 Name:T10
+T11	Condition 363 370	stomach
+T12	Condition-Name 363 370	stomach
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 45 46	≥
+A3	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 50 55	years
+A4	Eq-Temporal-Unit-Value T14 year
+T15	Eq-Temporal-Unit 88 94	months
+A5	Eq-Temporal-Unit-Value T15 month
+T16	Eq-Temporal-Unit 172 176	days
+A6	Eq-Temporal-Unit-Value T16 day
+T17	Eq-Temporal-Unit 203 207	days
+A7	Eq-Temporal-Unit-Value T17 day
+T18	Age 40 44	aged
+E12	Age:T18
+T19	Eq-Value 47 49	19
+T20	Eq-Value 86 87	3
+T21	Eq-Value 170 171	2
+T22	Eq-Value 201 202	7
+T23	Eq-Comparison 45 55	≥ 19 years
+E13	Eq-Comparison:T23 Operator:T13 Temporal-Unit:T14 Value:T19
+T24	Eq-Comparison 300 307	history
+E14	Eq-Comparison:T24 Temporal-Period:T25
+T25	Eq-Temporal-Period 300 307	history
+A8	Eq-Temporal-Period-Value T25 past
+T26	Eq-Comparison 337 343	Active
+E15	Eq-Comparison:T26 Temporal-Period:T27
+T27	Eq-Temporal-Period 337 343	Active
+A9	Eq-Temporal-Period-Value T27 present
+T28	Eq-Comparison 352 359	history
+E16	Eq-Comparison:T28 Temporal-Period:T29
+T29	Eq-Temporal-Period 352 359	history
+A10	Eq-Temporal-Period-Value T29 past
+T30	Eq-Comparison 457 463	taking
+E17	Eq-Comparison:T30 Temporal-Period:T31
+T31	Eq-Temporal-Period 457 463	taking
+A11	Eq-Temporal-Period-Value T31 present
+T32	Eq-Comparison 110 115	prior
+E18	Eq-Comparison:T32 Temporal-Period:T33
+T33	Eq-Temporal-Period 110 115	prior
+A12	Eq-Temporal-Period-Value T33 past
+T34	Eq-Comparison 208 213	prior
+E19	Eq-Comparison:T34 Temporal-Period:T35
+T35	Eq-Temporal-Period 208 213	prior
+A13	Eq-Temporal-Period-Value T35 past

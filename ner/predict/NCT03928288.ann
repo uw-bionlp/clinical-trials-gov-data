@@ -1,0 +1,111 @@
+T1	Life-Stage-And-Gender 25 31	Female
+A1	Life-Stage-And-Gender-Value T1 female
+T2	And 32 36	with
+T3	Condition-Name 60 73	endometriosis
+T4	Procedure-Name 90 101	laparoscopy
+T5	Eq-Operator 112 118	within
+A2	Eq-Operator-Value T5 LTEQ
+T6	Eq-Value 119 120	3
+T7	Study 132 137	study
+T8	Age 151 154	Age
+T9	Eq-Value 155 157	15
+T10	Eq-Temporal-Unit 158 163	years
+A3	Eq-Temporal-Unit-Value T10 year
+T11	Eq-Operator 164 166	to
+A4	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Temporal-Period 180 187	Current
+A5	Eq-Temporal-Period-Value T12 present
+T13	Eq-Operator 192 193	≥
+A6	Eq-Operator-Value T13 GTEQ
+T14	Eq-Comparison 192 202	≥ 2 months
+T15	Eq-Value 194 195	2
+T16	Eq-Temporal-Unit 196 202	months
+A7	Eq-Temporal-Unit-Value T16 month
+T17	Procedure-Name 215 231	hormonal therapy
+T18	Drug-Name 240 268	combined oral contraceptives
+T19	Drug-Name 271 292	norethindrone acetate
+T20	Eq-Temporal-Period 337 344	Current
+A8	Eq-Temporal-Period-Value T20 present
+T21	Condition-Name 345 356	pelvic pain
+T22	Eq-Unit 359 364	score
+T23	Eq-Comparison 359 368	score ≥ 3
+T24	Eq-Operator 365 366	≥
+A9	Eq-Operator-Value T24 GTEQ
+T25	Eq-Comparison 365 368	≥ 3
+T26	Eq-Value 367 368	3
+T27	Observation-Name 372 391	Visual Analog Scale
+T28	Negation 413 420	absence
+T29	Condition-Name 424 428	pain
+T30	Eq-Value 433 435	10
+T31	Condition-Name 446 461	unbearable pain
+T32	Condition-Name 457 461	pain
+T33	Eq-Operator 476 477	≥
+A10	Eq-Operator-Value T33 GTEQ
+T34	Eq-Comparison 476 485	≥ 14 days
+T35	Eq-Comparison 476 493	≥ 14 days / month
+T36	Eq-Value 478 480	14
+T37	Eq-Temporal-Unit 481 485	days
+A11	Eq-Temporal-Unit-Value T37 day
+T38	Eq-Temporal-Unit 488 493	month
+A12	Eq-Temporal-Unit-Value T38 month
+T39	Drug 662 679	Contraindications
+T40	Drug-Name 683 694	cabergoline
+T41	Condition-Name 704 726	cardiac valve disorder
+T42	Modifier 729 738	pulmonary
+T43	Modifier 741 752	pericardial
+T44	Modifier 755 770	retroperitoneal
+T45	Condition-Name 791 807	hypersensitivity
+T46	Drug-Name 811 828	ergot derivatives
+T47	Modifier 875 881	mental
+T48	Or 882 884	or
+T49	Modifier 885 892	chronic
+T50	Modifier 893 901	systemic
+T51	Condition 902 909	illness
+T52	Assertion 915 920	might
+T53	Condition-Name 998 1011	breastfeeding
+T54	Condition-Name 1069 1093	 Impaired liver function
+T55	Condition-Name 1070 1093	Impaired liver function
+T56	Observation-Name 1096 1099	ALT
+A13	Observation-Name-Value T56 lab
+T57	Eq-Operator 1100 1101	>
+A14	Eq-Operator-Value T57 GT
+T58	Eq-Value 1102 1103	2
+T59	Other 1232 1237	other
+T60	Drug 1238 1243	drugs
+T61	Stability 1249 1255	affect
+A15	Stability-Value T61 change
+T62	Drug-Name 1256 1264	dopamine
+T63	Drug-Name 1274 1288	phenothiazines
+T64	Unknown 240 268	combined oral contraceptives
+T65	Unknown 215 231	hormonal therapy
+R1	Example-Of Arg1:T64 Arg2:T65
+T66	Unknown 271 292	norethindrone acetate
+T67	Unknown 215 231	hormonal therapy
+R2	Example-Of Arg1:T66 Arg2:T67
+T68	Unknown 704 726	cardiac valve disorder
+T69	Unknown 661 661	
+R3	Example-Of Arg1:T68 Arg2:T69
+T70	Unknown 704 726	cardiac valve disorder
+T71	Unknown 662 679	Contraindications
+R4	Example-Of Arg1:T70 Arg2:T71
+T72	Unknown 791 807	hypersensitivity
+T73	Unknown 661 661	
+R5	Example-Of Arg1:T72 Arg2:T73
+T74	Unknown 791 807	hypersensitivity
+T75	Unknown 662 679	Contraindications
+R6	Example-Of Arg1:T74 Arg2:T75
+T76	Unknown 885 892	chronic
+T77	Unknown 902 909	illness
+R7	Abbrev-Of Arg1:T76 Arg2:T77
+T78	Unknown 893 901	systemic
+T79	Unknown 902 909	illness
+R8	Abbrev-Of Arg1:T78 Arg2:T79
+T80	Unknown 1249 1255	affect
+T81	Unknown 1238 1243	drugs
+R9	Caused-By Arg1:T80 Arg2:T81
+T82	Unknown 1249 1255	affect
+T83	Unknown 1256 1264	dopamine
+R10	Caused-By Arg1:T82 Arg2:T83
+T84	Unknown 1274 1288	phenothiazines
+T85	Unknown 1238 1243	drugs
+R11	Example-Of Arg1:T84 Arg2:T85

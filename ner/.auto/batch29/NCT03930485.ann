@@ -1,0 +1,24 @@
+T1	Condition 47 51	PPPD
+T2	Condition-Name 47 51	PPPD
+E1	Condition:T1 Name:T2
+T3	Condition 201 205	PPPD
+T4	Condition-Name 201 205	PPPD
+E3	Condition:T3 Name:T4
+T5	Eq-Operator 216 217	<
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Temporal-Unit 98 103	years
+A2	Eq-Temporal-Unit-Value T6 year
+T7	Eq-Temporal-Unit 220 225	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Age 84 88	Aged
+E4	Age:T8
+T9	Age 104 107	old
+E5	Age:T9
+T10	Age 211 215	Aged
+E6	Age:T10
+T11	Age 226 229	old
+E7	Age:T11
+T12	Eq-Value 95 97	18
+T13	Eq-Value 217 219	18
+T14	Eq-Comparison 216 225	<18 years
+E8	Eq-Comparison:T14 Operator:T5 Temporal-Unit:T7 Value:T13

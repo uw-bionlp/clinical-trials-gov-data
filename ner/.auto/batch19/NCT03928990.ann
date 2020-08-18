@@ -1,0 +1,45 @@
+T1	Condition 63 81	Multiple sclerosis
+T2	Condition-Name 63 81	Multiple sclerosis
+E1	Condition:T1 Name:T2
+T3	Condition 377 395	multiple sclerosis
+T4	Condition-Name 377 395	multiple sclerosis
+E3	Condition:T3 Name:T4
+T5	Procedure 452 464	Introduction
+T6	Procedure-Name 452 464	Introduction
+E5	Procedure:T5 Name:T6
+T7	Condition 660 666	effort
+T8	Condition-Name 660 666	effort
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 315 321	within
+A1	Eq-Operator-Value T9 GTEQ
+T10	Eq-Operator 406 412	within
+A2	Eq-Operator-Value T10 GTEQ
+T11	Eq-Operator 512 518	within
+A3	Eq-Operator-Value T11 GTEQ
+T12	Eq-Temporal-Unit 48 53	years
+A4	Eq-Temporal-Unit-Value T12 year
+T13	Eq-Temporal-Unit 415 421	months
+A5	Eq-Temporal-Unit-Value T13 month
+T14	Age 34 38	aged
+E8	Age:T14
+T15	Age 54 57	old
+E9	Age:T15
+T16	Eq-Operator 42 44	to
+A6	Eq-Operator-Value T16 BETWEEN
+T17	Eq-Value 39 41	18
+T18	Eq-Value 45 47	80
+T19	Eq-Value 168 169	0
+T20	Eq-Value 174 175	6
+T21	Eq-Value 322 324	60
+T22	Eq-Value 413 414	6
+T23	Eq-Value 519 521	30
+T24	Eq-Value 681 682	3
+T25	Eq-Value 724 725	3
+T26	Eq-Comparison 315 324	within 60
+E10	Eq-Comparison:T26 Operator:T9 Value:T21
+T27	Eq-Comparison 406 421	within 6 months
+E11	Eq-Comparison:T27 Operator:T10 Temporal-Unit:T13 Value:T22
+T28	Eq-Comparison 512 521	within 30
+E12	Eq-Comparison:T28 Operator:T11 Value:T23
+T29	Eq-Comparison 39 44	18 to
+E13	Eq-Comparison:T29 Operator:T16 Value:T17

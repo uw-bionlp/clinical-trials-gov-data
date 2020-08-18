@@ -1,0 +1,46 @@
+T1	Condition 72 93	gonococcal urethritis
+T2	Condition-Name 72 93	gonococcal urethritis
+E1	Condition:T1 Name:T2
+T3	Condition 59 68	gonorrhea
+T4	Condition-Name 59 68	gonorrhea
+E3	Condition:T3 Name:T4
+T5	Condition 359 386	chronic renal insufficiency
+T6	Condition-Name 359 386	chronic renal insufficiency
+E5	Condition:T5 Name:T6
+T7	Condition 267 287	allergy to aztreonam
+T8	Condition-Name 267 287	allergy to aztreonam
+E7	Condition:T7 Name:T8
+T9	Condition 473 482	Pregnancy
+T10	Condition-Name 473 482	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Condition 446 454	syphilis
+T12	Condition-Name 446 454	syphilis
+E11	Condition:T11 Name:T12
+T13	Procedure 490 497	nursing
+T14	Procedure-Name 490 497	nursing
+E13	Procedure:T13 Name:T14
+T15	Eq-Operator 197 206	less than
+A1	Eq-Operator-Value T15 LT
+T16	Eq-Operator 247 248	≤
+A2	Eq-Operator-Value T16 LTEQ
+T17	Eq-Temporal-Unit 210 215	years
+A3	Eq-Temporal-Unit-Value T17 year
+T18	Eq-Temporal-Unit 251 255	days
+A4	Eq-Temporal-Unit-Value T18 day
+T19	Eq-Temporal-Unit 546 550	days
+A5	Eq-Temporal-Unit-Value T19 day
+T20	Age 193 196	Age
+E14	Age:T20
+T21	Eq-Operator 543 544	-
+A6	Eq-Operator-Value T21 BETWEEN
+T22	Eq-Value 207 209	16
+T23	Eq-Value 248 250	30
+T24	Eq-Value 542 543	4
+T25	Eq-Value 544 545	7
+T26	Eq-Value 556 557	1
+T27	Eq-Comparison 197 215	less than 16 years
+E15	Eq-Comparison:T27 Operator:T15 Temporal-Unit:T17 Value:T22
+T28	Eq-Comparison 247 255	≤30 days
+E16	Eq-Comparison:T28 Operator:T16 Temporal-Unit:T18 Value:T23
+T29	Eq-Comparison 542 544	4-
+E17	Eq-Comparison:T29 Operator:T21 Value:T24

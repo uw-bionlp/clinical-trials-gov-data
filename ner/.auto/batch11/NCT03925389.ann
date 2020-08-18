@@ -1,0 +1,23 @@
+T1	Procedure 83 99	septorhinoplasty
+T2	Procedure-Name 83 99	septorhinoplasty
+E1	Procedure:T1 Name:T2
+T3	Condition 588 599	cocaine use
+T4	Condition-Name 588 599	cocaine use
+E3	Condition:T3 Name:T4
+T5	Eq-Operator 454 455	<
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Operator 563 571	the past
+A2	Eq-Operator-Value T6 GTEQ
+T7	Eq-Operator 603 611	the past
+A3	Eq-Operator-Value T7 GTEQ
+T8	Eq-Temporal-Unit 37 42	years
+A4	Eq-Temporal-Unit-Value T8 year
+T9	Eq-Temporal-Unit 459 464	years
+A5	Eq-Temporal-Unit-Value T9 year
+T10	Age 43 46	old
+E4	Age:T10
+T11	Eq-Value 34 36	18
+T12	Eq-Value 236 237	1
+T13	Eq-Value 456 458	18
+T14	Eq-Comparison 454 464	< 18 years
+E5	Eq-Comparison:T14 Operator:T5 Temporal-Unit:T9 Value:T13

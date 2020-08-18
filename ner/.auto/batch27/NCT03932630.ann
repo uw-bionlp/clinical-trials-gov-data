@@ -1,0 +1,77 @@
+T1	Condition 78 102	Diabetes mellitus Type 1
+T2	Condition-Name 78 102	Diabetes mellitus Type 1
+E1	Condition:T1 Name:T2
+T3	Procedure 253 260	therapy
+T4	Procedure-Name 253 260	therapy
+E3	Procedure:T3 Name:T4
+T5	Life-Stage-And-Gender 25 31	Female
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Life-Stage-And-Gender 36 40	male
+A2	Life-Stage-And-Gender-Type T6 male
+T7	Procedure 375 379	diet
+T8	Procedure-Name 375 379	diet
+E7	Procedure:T7 Name:T8
+T9	Condition 380 384	plan
+T10	Condition-Name 380 384	plan
+E9	Condition:T9 Name:T10
+T11	Condition 423 436	psychological
+T12	Condition-Name 423 436	psychological
+E11	Condition:T11 Name:T12
+T13	Condition 809 824	Nephrolithiasis
+T14	Condition-Name 809 824	Nephrolithiasis
+E13	Condition:T13 Name:T14
+T15	Condition 859 874	Liver steatosis
+T16	Condition-Name 859 874	Liver steatosis
+E15	Condition:T15 Name:T16
+T17	Condition 693 707	breast feeding
+T18	Condition-Name 693 707	breast feeding
+E17	Condition:T17 Name:T18
+T19	Condition 680 689	pregnancy
+T20	Condition-Name 680 689	pregnancy
+E19	Condition:T19 Name:T20
+T21	Language 626 629	men
+T22	Eq-Operator 166 167	<
+A3	Eq-Operator-Value T22 LT
+T23	Eq-Operator 209 210	>
+A4	Eq-Operator-Value T23 GT
+T24	Eq-Operator 309 311	<=
+A5	Eq-Operator-Value T24 LTEQ
+T25	Eq-Operator 608 609	>
+A6	Eq-Operator-Value T25 GT
+T26	Eq-Operator 631 632	>
+A7	Eq-Operator-Value T26 GT
+T27	Eq-Operator 791 792	>
+A8	Eq-Operator-Value T27 GT
+T28	Eq-Temporal-Unit 58 63	years
+A9	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Temporal-Unit 137 142	years
+A10	Eq-Temporal-Unit-Value T29 year
+T30	Eq-Temporal-Unit 291 297	months
+A11	Eq-Temporal-Unit-Value T30 month
+T31	Eq-Unit 213 215	mm
+T32	Eq-Unit 797 799	kg
+T33	Age 50 54	aged
+E20	Age:T33
+T34	Eq-Value 55 57	18
+T35	Eq-Value 101 102	1
+T36	Eq-Value 135 136	2
+T37	Eq-Value 167 170	100
+T38	Eq-Value 211 212	4
+T39	Eq-Value 270 273	670
+T40	Eq-Value 289 290	2
+T41	Eq-Value 312 313	9
+T42	Eq-Value 610 611	3
+T43	Eq-Value 633 634	2
+T44	Eq-Value 792 793	2
+T45	Eq-Comparison 166 170	<100
+E21	Eq-Comparison:T45 Operator:T22 Value:T37
+T46	Eq-Comparison 209 215	> 4 mm
+E22	Eq-Comparison:T46 Operator:T23 Unit:T31 Value:T38
+T47	Eq-Comparison 309 313	<= 9
+E23	Eq-Comparison:T47 Operator:T24 Value:T41
+T48	Eq-Comparison 608 611	> 3
+E24	Eq-Comparison:T48 Operator:T25 Value:T42
+T49	Eq-Comparison 631 634	> 2
+E25	Eq-Comparison:T49 Operator:T26 Value:T43
+T50	Eq-Comparison 791 793	>2
+E26	Eq-Comparison:T50 Operator:T27 Value:T44

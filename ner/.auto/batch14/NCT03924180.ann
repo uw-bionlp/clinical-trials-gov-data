@@ -1,0 +1,56 @@
+T1	Procedure 62 80	neonatal screening
+T2	Procedure-Name 62 80	neonatal screening
+E1	Procedure:T1 Name:T2
+T3	Condition 99 115	Phenylalaninemia
+T4	Condition-Name 99 115	Phenylalaninemia
+E3	Condition:T3 Name:T4
+T5	Condition 974 989	Phenylketonuria
+T6	Condition-Name 974 989	Phenylketonuria
+E5	Condition:T5 Name:T6
+T7	Condition 857 867	conception
+T8	Condition-Name 857 867	conception
+E7	Condition:T7 Name:T8
+T9	Condition 818 827	Pregnancy
+T10	Condition-Name 818 827	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Condition 874 883	pregnancy
+T12	Condition-Name 874 883	pregnancy
+E11	Condition:T11 Name:T12
+T13	Procedure 356 360	diet
+T14	Procedure-Name 356 360	diet
+E13	Procedure:T13 Name:T14
+T15	Procedure 868 872	diet
+T16	Procedure-Name 868 872	diet
+E15	Procedure:T15 Name:T16
+T17	Condition 337 340	PKU
+T18	Condition-Name 337 340	PKU
+E17	Condition:T17 Name:T18
+T19	Condition 623 626	PKU
+T20	Condition-Name 623 626	PKU
+E19	Condition:T19 Name:T20
+T21	Eq-Operator 116 117	≥
+A1	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 203 204	≥
+A2	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 836 842	within
+A3	Eq-Operator-Value T23 GTEQ
+T24	Eq-Temporal-Unit 661 665	days
+A4	Eq-Temporal-Unit-Value T24 day
+T25	Eq-Temporal-Unit 714 720	months
+A5	Eq-Temporal-Unit-Value T25 month
+T26	Eq-Temporal-Unit 806 812	months
+A6	Eq-Temporal-Unit-Value T26 month
+T27	Eq-Temporal-Unit 845 851	months
+A7	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Value 118 121	900
+T29	Eq-Value 204 207	900
+T30	Eq-Value 659 660	7
+T31	Eq-Value 712 713	6
+T32	Eq-Value 804 805	6
+T33	Eq-Value 843 844	6
+T34	Eq-Comparison 116 121	≥ 900
+E20	Eq-Comparison:T34 Operator:T21 Value:T28
+T35	Eq-Comparison 203 207	≥900
+E21	Eq-Comparison:T35 Operator:T22 Value:T29
+T36	Eq-Comparison 836 851	within 6 months
+E22	Eq-Comparison:T36 Operator:T23 Temporal-Unit:T27 Value:T33

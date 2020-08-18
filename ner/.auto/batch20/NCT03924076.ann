@@ -1,0 +1,34 @@
+T1	Life-Stage-And-Gender 25 33	children
+A1	Life-Stage-And-Gender-Type T1 child
+T2	Observation 88 91	BMI
+T3	Observation-Name 88 91	BMI
+E2	Observation:T2 Name:T3
+A2	Observation-Type-Value T3 vital
+T4	Condition 310 321	consumption
+T5	Condition-Name 310 321	consumption
+E4	Condition:T4 Name:T5
+T6	Eq-Operator 101 102	≤
+A3	Eq-Operator-Value T6 LTEQ
+T7	Eq-Operator 111 112	<
+A4	Eq-Operator-Value T7 LT
+T8	Eq-Operator 150 151	<
+A5	Eq-Operator-Value T8 LT
+T9	Eq-Operator 191 192	>
+A6	Eq-Operator-Value T9 GT
+T10	Eq-Temporal-Unit 48 53	years
+A7	Eq-Temporal-Unit-Value T10 year
+T11	Eq-Temporal-Unit 344 349	weeks
+A8	Eq-Temporal-Unit-Value T11 week
+T12	Age 37 40	age
+E5	Age:T12
+T13	Eq-Operator 45 46	-
+A9	Eq-Operator-Value T13 BETWEEN
+T14	Eq-Value 44 45	7
+T15	Eq-Value 46 47	9
+T16	Eq-Value 99 100	2
+T17	Eq-Value 194 195	3
+T18	Eq-Value 342 343	2
+T19	Eq-Comparison 99 102	2 ≤
+E6	Eq-Comparison:T19 Operator:T6 Value:T16
+T20	Eq-Comparison 44 46	7-
+E7	Eq-Comparison:T20 Operator:T13 Value:T14

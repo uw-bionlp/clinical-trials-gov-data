@@ -1,0 +1,46 @@
+T1	Condition 95 113	Headache Disorders
+T2	Condition-Name 95 113	Headache Disorders
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Life-Stage-And-Gender 25 29	male
+A2	Life-Stage-And-Gender-Type T4 male
+T5	Condition 769 798	amyotrophic lateral sclerosis
+T6	Condition-Name 769 798	amyotrophic lateral sclerosis
+E5	Condition:T5 Name:T6
+T7	Condition 735 752	myasthenia gravis
+T8	Condition-Name 735 752	myasthenia gravis
+E7	Condition:T7 Name:T8
+T9	Condition 603 618	substance abuse
+T10	Condition-Name 603 618	substance abuse
+E9	Condition:T9 Name:T10
+T11	Condition 502 516	breast feeding
+T12	Condition-Name 502 516	breast feeding
+E11	Condition:T11 Name:T12
+T13	Condition 619 629	dependence
+T14	Condition-Name 619 629	dependence
+E13	Condition:T13 Name:T14
+T15	Condition 491 500	pregnancy
+T16	Condition-Name 491 500	pregnancy
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 191 203	greater than
+A3	Eq-Operator-Value T17 GT
+T18	Eq-Operator 297 309	greater than
+A4	Eq-Operator-Value T18 GT
+T19	Eq-Operator 560 566	within
+A5	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 903 909	within
+A6	Eq-Operator-Value T20 GTEQ
+T21	Eq-Temporal-Unit 916 922	months
+A7	Eq-Temporal-Unit-Value T21 month
+T22	Age 45 48	age
+E16	Age:T22
+T23	Eq-Operator 51 52	-
+A8	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Value 49 51	18
+T25	Eq-Value 52 54	65
+T26	Eq-Value 204 205	4
+T27	Eq-Comparison 191 205	greater than 4
+E17	Eq-Comparison:T27 Operator:T17 Value:T26
+T28	Eq-Comparison 49 52	18-
+E18	Eq-Comparison:T28 Operator:T23 Value:T24

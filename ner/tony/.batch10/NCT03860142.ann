@@ -1,0 +1,35 @@
+T1	Condition 288 301	developmental
+T2	Condition-Name 288 301	developmental
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 25 33	Children
+A1	Life-Stage-And-Gender-Type T3 child
+T4	Life-Stage-And-Gender 169 177	Children
+A2	Life-Stage-And-Gender-Type T4 child
+T5	Life-Stage-And-Gender 257 265	Children
+A3	Life-Stage-And-Gender-Type T5 child
+T6	Life-Stage-And-Gender 344 352	Children
+A4	Life-Stage-And-Gender-Type T6 child
+T7	Condition 82 86	term
+T8	Condition-Name 82 86	term
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 44 45	≥
+A5	Eq-Operator-Value T9 GTEQ
+T10	Eq-Operator 60 61	≤
+A6	Eq-Operator-Value T10 LTEQ
+T11	Eq-Operator 108 109	<
+A7	Eq-Operator-Value T11 LT
+T12	Eq-Temporal-Unit 49 55	months
+A8	Eq-Temporal-Unit-Value T12 month
+T13	Eq-Temporal-Unit 65 71	months
+A9	Eq-Temporal-Unit-Value T13 month
+T14	Age 40 43	age
+E8	Age:T14
+T15	Eq-Value 46 48	24
+T16	Eq-Value 62 64	36
+T17	Eq-Value 109 111	33
+T18	Eq-Comparison 44 55	≥ 24 months
+E9	Eq-Comparison:T18 Operator:T9 Temporal-Unit:T12 Value:T15
+T19	Eq-Comparison 60 71	≤ 36 months
+E10	Eq-Comparison:T19 Operator:T10 Temporal-Unit:T13 Value:T16
+T20	Eq-Comparison 108 111	<33
+E11	Eq-Comparison:T20 Operator:T11 Value:T17

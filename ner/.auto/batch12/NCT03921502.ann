@@ -1,0 +1,98 @@
+T1	Condition 165 185	obstructive jaundice
+T2	Condition-Name 165 185	obstructive jaundice
+E1	Condition:T1 Name:T2
+T3	Condition 37 56	choledocholithiasis
+T4	Condition-Name 37 56	choledocholithiasis
+E3	Condition:T3 Name:T4
+T5	Condition 58 77	choledocholithiasis
+T6	Condition-Name 58 77	choledocholithiasis
+E5	Condition:T5 Name:T6
+T7	Condition 260 279	choledocholithiasis
+T8	Condition-Name 260 279	choledocholithiasis
+E7	Condition:T7 Name:T8
+T9	Condition 144 161	acute cholangitis
+T10	Condition-Name 144 161	acute cholangitis
+E9	Condition:T9 Name:T10
+T11	Procedure 352 370	surgical treatment
+T12	Procedure-Name 352 370	surgical treatment
+E11	Procedure:T11 Name:T12
+T13	Condition 594 607	cholecystitis
+T14	Condition-Name 594 607	cholecystitis
+E13	Condition:T13 Name:T14
+T15	Condition 568 580	pancreatitis
+T16	Condition-Name 568 580	pancreatitis
+E15	Condition:T15 Name:T16
+T17	Condition 555 566	cholangitis
+T18	Condition-Name 555 566	cholangitis
+E17	Condition:T17 Name:T18
+T19	Procedure 715 723	sedation
+T20	Procedure-Name 715 723	sedation
+E19	Procedure:T19 Name:T20
+T21	Condition 818 830	Coagulopathy
+T22	Condition-Name 818 830	Coagulopathy
+E21	Condition:T21 Name:T22
+T23	Procedure 836 839	INR
+T24	Procedure-Name 836 839	INR
+E23	Procedure:T23 Name:T24
+T25	Condition 980 999	acute cholecystitis
+T26	Condition-Name 980 999	acute cholecystitis
+E25	Condition:T25 Name:T26
+T27	Condition 1001 1019	acute pancreatitis
+T28	Condition-Name 1001 1019	acute pancreatitis
+E27	Condition:T27 Name:T28
+T29	Condition 1054 1077	Hemodynamic instability
+T30	Condition-Name 1054 1077	Hemodynamic instability
+E29	Condition:T29 Name:T30
+T31	Procedure 1084 1100	Urgent procedure
+T32	Procedure-Name 1084 1100	Urgent procedure
+E31	Procedure:T31 Name:T32
+T33	Procedure 1234 1250	biliary drainage
+T34	Procedure-Name 1234 1250	biliary drainage
+E33	Procedure:T33 Name:T34
+T35	Eq-Operator 430 431	>
+A1	Eq-Operator-Value T35 GT
+T36	Eq-Operator 508 509	<
+A2	Eq-Operator-Value T36 LT
+T37	Eq-Operator 873 874	>
+A3	Eq-Operator-Value T37 GT
+T38	Eq-Operator 915 916	<
+A4	Eq-Operator-Value T38 LT
+T39	Eq-Operator 1351 1352	<
+A5	Eq-Operator-Value T39 LT
+T40	Eq-Operator 1417 1418	>
+A6	Eq-Operator-Value T40 GT
+T41	Eq-Operator 1451 1452	<
+A7	Eq-Operator-Value T41 LT
+T42	Eq-Operator 1554 1555	>
+A8	Eq-Operator-Value T42 GT
+T43	Eq-Temporal-Unit 434 439	years
+A9	Eq-Temporal-Unit-Value T43 year
+T44	Eq-Temporal-Unit 1454 1460	months
+A10	Eq-Temporal-Unit-Value T44 month
+T45	Eq-Unit 924 926	mm
+T46	Eq-Unit 1355 1357	mm
+T47	Eq-Unit 1557 1559	cm
+T48	Age 504 507	age
+E34	Age:T48
+T49	Eq-Value 431 433	75
+T50	Eq-Value 509 510	4
+T51	Eq-Value 875 876	1
+T52	Eq-Value 916 921	50000
+T53	Eq-Value 1352 1354	10
+T54	Eq-Value 1421 1422	4
+T55	Eq-Value 1452 1453	6
+T56	Eq-Value 1556 1557	1
+T57	Eq-Comparison 430 439	>75 years
+E35	Eq-Comparison:T57 Operator:T35 Temporal-Unit:T43 Value:T49
+T58	Eq-Comparison 508 510	<4
+E36	Eq-Comparison:T58 Operator:T36 Value:T50
+T59	Eq-Comparison 873 876	> 1
+E37	Eq-Comparison:T59 Operator:T37 Value:T51
+T60	Eq-Comparison 915 921	<50000
+E38	Eq-Comparison:T60 Operator:T38 Value:T52
+T61	Eq-Comparison 1351 1357	<10 mm
+E39	Eq-Comparison:T61 Operator:T39 Unit:T46 Value:T53
+T62	Eq-Comparison 1451 1460	<6 months
+E40	Eq-Comparison:T62 Operator:T41 Temporal-Unit:T44 Value:T55
+T63	Eq-Comparison 1554 1557	> 1
+E41	Eq-Comparison:T63 Operator:T42 Value:T56

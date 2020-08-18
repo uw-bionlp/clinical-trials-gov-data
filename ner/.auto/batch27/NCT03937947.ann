@@ -1,0 +1,40 @@
+T1	Procedure 171 184	resuscitation
+T2	Procedure-Name 171 184	resuscitation
+E1	Procedure:T1 Name:T2
+T3	Condition 281 284	USS
+T4	Condition-Name 281 284	USS
+E3	Condition:T3 Name:T4
+T5	Condition 590 613	blood clotting disorder
+T6	Condition-Name 590 613	blood clotting disorder
+E5	Condition:T5 Name:T6
+T7	Condition 617 630	thrombophilia
+T8	Condition-Name 617 630	thrombophilia
+E7	Condition:T7 Name:T8
+T9	Condition 697 706	Pregnancy
+T10	Condition-Name 697 706	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 210 211	≤
+A2	Eq-Operator-Value T12 LTEQ
+T13	Eq-Operator 238 239	≤
+A3	Eq-Operator-Value T13 LTEQ
+T14	Eq-Operator 285 291	within
+A4	Eq-Operator-Value T14 GTEQ
+T15	Eq-Temporal-Unit 34 39	years
+A5	Eq-Temporal-Unit-Value T15 year
+T16	Age 25 28	Age
+E10	Age:T16
+T17	Eq-Value 31 33	16
+T18	Eq-Value 211 213	12
+T19	Eq-Value 239 240	5
+T20	Eq-Value 292 294	72
+T21	Eq-Value 395 397	24
+T22	Eq-Comparison 29 39	≥ 16 years
+E11	Eq-Comparison:T22 Operator:T11 Temporal-Unit:T15 Value:T17
+T23	Eq-Comparison 210 213	≤12
+E12	Eq-Comparison:T23 Operator:T12 Value:T18
+T24	Eq-Comparison 238 240	≤5
+E13	Eq-Comparison:T24 Operator:T13 Value:T19
+T25	Eq-Comparison 285 294	within 72
+E14	Eq-Comparison:T25 Operator:T14 Value:T20

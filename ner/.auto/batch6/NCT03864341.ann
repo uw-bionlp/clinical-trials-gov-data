@@ -1,0 +1,22 @@
+T1	Condition 235 243	drug use
+T2	Condition-Name 235 243	drug use
+E1	Condition:T1 Name:T2
+T3	Condition 317 331	critically ill
+T4	Condition-Name 317 331	critically ill
+E3	Condition:T3 Name:T4
+T5	Condition 426 443	cognitive deficit
+T6	Condition-Name 426 443	cognitive deficit
+E5	Condition:T5 Name:T6
+T7	Language 545 552	English
+T8	Condition 797 806	addiction
+T9	Condition-Name 797 806	addiction
+E8	Condition:T8 Name:T9
+T10	Eq-Operator 82 83	≥
+A1	Eq-Operator-Value T10 GTEQ
+T11	Eq-Temporal-Unit 86 91	years
+A2	Eq-Temporal-Unit-Value T11 year
+T12	Age 92 95	old
+E9	Age:T12
+T13	Eq-Value 83 85	18
+T14	Eq-Comparison 82 91	≥18 years
+E10	Eq-Comparison:T14 Operator:T10 Temporal-Unit:T11 Value:T13

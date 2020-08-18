@@ -1,0 +1,76 @@
+T1	Procedure 39 42	CPM
+T2	Procedure-Name 39 42	CPM
+E1	Procedure:T1 Name:T2
+T3	Condition 962 985	bone marrow suppression
+T4	Condition-Name 962 985	bone marrow suppression
+E3	Condition:T3 Name:T4
+T5	Procedure 199 220	systemic chemotherapy
+T6	Procedure-Name 199 220	systemic chemotherapy
+E5	Procedure:T5 Name:T6
+T7	Procedure 253 274	systemic chemotherapy
+T8	Procedure-Name 253 274	systemic chemotherapy
+E7	Procedure:T7 Name:T8
+T9	Procedure 383 404	systemic chemotherapy
+T10	Procedure-Name 383 404	systemic chemotherapy
+E9	Procedure:T9 Name:T10
+T11	Procedure 840 861	systemic chemotherapy
+T12	Procedure-Name 840 861	systemic chemotherapy
+E11	Procedure:T11 Name:T12
+T13	Procedure 710 729	general anaesthesia
+T14	Procedure-Name 710 729	general anaesthesia
+E13	Procedure:T13 Name:T14
+T15	Condition 794 811	Bowel obstruction
+T16	Condition-Name 794 811	Bowel obstruction
+E15	Condition:T15 Name:T16
+T17	Procedure 489 501	chemotherapy
+T18	Procedure-Name 489 501	chemotherapy
+E17	Procedure:T17 Name:T18
+T19	Procedure 881 893	chemotherapy
+T20	Procedure-Name 881 893	chemotherapy
+E19	Procedure:T19 Name:T20
+T21	Procedure 993 1005	chemotherapy
+T22	Procedure-Name 993 1005	chemotherapy
+E21	Procedure:T21 Name:T22
+T23	Procedure 739 750	laparoscopy
+T24	Procedure-Name 739 750	laparoscopy
+E23	Procedure:T23 Name:T24
+T25	Condition 1035 1046	neutropenia
+T26	Condition-Name 1035 1046	neutropenia
+E25	Condition:T25 Name:T26
+T27	Procedure 289 296	FOLFIRI
+T28	Procedure-Name 289 296	FOLFIRI
+E27	Procedure:T27 Name:T28
+T29	Condition 781 788	ascites
+T30	Condition-Name 781 788	ascites
+E29	Condition:T29 Name:T30
+T31	Procedure 298 304	FOLFOX
+T32	Procedure-Name 298 304	FOLFOX
+E31	Procedure:T31 Name:T32
+T33	Procedure 600 605	PIPAC
+T34	Procedure-Name 600 605	PIPAC
+E33	Procedure:T33 Name:T34
+T35	Procedure 927 932	PIPAC
+T36	Procedure-Name 927 932	PIPAC
+E35	Procedure:T35 Name:T36
+T37	Eq-Operator 76 77	>
+A1	Eq-Operator-Value T37 GT
+T38	Eq-Operator 514 515	>
+A2	Eq-Operator-Value T38 GT
+T39	Eq-Operator 548 549	<
+A3	Eq-Operator-Value T39 LT
+T40	Eq-Temporal-Unit 80 86	months
+A4	Eq-Temporal-Unit-Value T40 month
+T41	Age 544 547	Age
+E36	Age:T41
+T42	Eq-Value 78 79	6
+T43	Eq-Value 138 139	0
+T44	Eq-Value 143 144	1
+T45	Eq-Value 151 153	15
+T46	Eq-Value 515 516	1
+T47	Eq-Value 549 551	18
+T48	Eq-Comparison 76 86	> 6 months
+E37	Eq-Comparison:T48 Operator:T37 Temporal-Unit:T40 Value:T42
+T49	Eq-Comparison 514 516	>1
+E38	Eq-Comparison:T49 Operator:T38 Value:T46
+T50	Eq-Comparison 548 551	<18
+E39	Eq-Comparison:T50 Operator:T39 Value:T47

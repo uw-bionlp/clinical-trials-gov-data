@@ -1,0 +1,20 @@
+T1	Procedure 137 144	therapy
+T2	Procedure-Name 137 144	therapy
+E1	Procedure:T1 Name:T2
+T3	Condition 150 157	inhaled
+T4	Condition-Name 150 157	inhaled
+E3	Condition:T3 Name:T4
+T5	Condition 115 121	Asthma
+T6	Condition-Name 115 121	Asthma
+E5	Condition:T5 Name:T6
+T7	Condition 320 357	Chronic Obstructive Pulmonary Disease
+T8	Condition-Name 320 357	Chronic Obstructive Pulmonary Disease
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 176 177	≥
+A1	Eq-Operator-Value T9 GTEQ
+T10	Eq-Temporal-Unit 180 184	days
+A2	Eq-Temporal-Unit-Value T10 day
+T11	Eq-Value 177 179	30
+T12	Eq-Value 399 400	6
+T13	Eq-Comparison 176 184	≥30 days
+E8	Eq-Comparison:T13 Operator:T9 Temporal-Unit:T10 Value:T11

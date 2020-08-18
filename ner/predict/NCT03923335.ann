@@ -1,0 +1,41 @@
+T1	Eq-Unit 26 35	TNM stage
+T2	Eq-Unit 30 35	stage
+T3	Eq-Value 36 37	I
+T4	Eq-Value 40 42	II
+T5	Eq-Comparison 45 51	T1 - 4
+T6	Eq-Value 50 51	4
+T7	Condition-Name 151 165	tumor location
+T8	Condition-Name 240 245	tumor
+T9	Condition-Name 275 301	microsatellite instability
+T10	Condition-Name 304 307	MSI
+T11	Modifier 417 421	BRAF
+T12	Modifier 463 467	KRAS
+T13	Eq-Operator 531 539	at least
+A1	Eq-Operator-Value T13 GTEQ
+T14	Eq-Comparison 531 547	at least 4 years
+T15	Eq-Value 540 541	4
+T16	Eq-Temporal-Unit 542 547	years
+A2	Eq-Temporal-Unit-Value T16 year
+T17	Procedure 653 662	treatment
+T18	Temporal-Connection 685 688	pre
+T19	Procedure 691 700	operative
+T20	Condition-Name 711 733	intestinal obstruction
+T21	Or 734 736	or
+T22	Condition-Name 737 748	perforation
+T23	Observation-Name 751 754	IOP
+T24	Eq-Temporal-Period 850 858	previous
+A3	Eq-Temporal-Period-Value T24 past
+T25	Condition-Name 876 882	cancer
+T26	Or 883 885	or
+T27	Condition 902 907	tumor
+T28	Exception 908 918	other than
+T29	Condition-Name 1033 1063	Familial adenomatous polyposis
+T30	Condition-Name 1066 1071	mutyh
+T31	Condition-Name 1074 1077	MYH
+T32	Condition-Name 1106 1130	Peutz - Jeghers syndrome
+T33	Condition-Name 1133 1156	Juvenile polyposis coli
+T34	Condition-Name 1225 1252	tumor - hamartoma syndromes
+T35	Condition-Name 1255 1269	Lynch Syndrome
+T36	Unknown 1255 1269	Lynch Syndrome
+T37	Unknown 982 1020	hereditary colorectal cancer syndromes
+R1	Example-Of Arg1:T36 Arg2:T37

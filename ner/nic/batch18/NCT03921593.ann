@@ -1,0 +1,15 @@
+T1	Observation 154 183	Pancreas Transplant Wait List
+T2	Observation-Name 154 183	Pancreas Transplant Wait List
+E1	Observation:T1 Name:T2 Temporality:E2
+T3	Language 223 230	English
+T4	Eq-Comparison 144 150	Active
+E2	Eq-Comparison:T4 Temporal-Period:T5
+T5	Eq-Temporal-Period 144 150	Active
+A1	Eq-Temporal-Period-Value T5 present
+T6	Condition 121 129	Diabetic
+E3	Condition:T6 Name:T7
+T7	Condition-Name 121 129	Diabetic
+T8	Modifier 103 120	Insulin Dependent
+E4	Modifier:T8 Modifies:T7
+T9	Negation 209 212	Not
+E5	Negation:T9 Negates:T3

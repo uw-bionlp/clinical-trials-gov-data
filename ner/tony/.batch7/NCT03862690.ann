@@ -1,0 +1,50 @@
+T1	Condition 516 531	type 2 diabetes
+T2	Condition-Name 516 531	type 2 diabetes
+E1	Condition:T1 Name:T2
+T3	Procedure 586 596	injections
+T4	Procedure-Name 586 596	injections
+E3	Procedure:T3 Name:T4
+T5	Procedure 119 128	procedure
+T6	Procedure-Name 119 128	procedure
+E5	Procedure:T5 Name:T6
+T7	Life-Stage-And-Gender 414 420	female
+A1	Life-Stage-And-Gender-Type T7 male
+T8	Procedure 572 577	bolus
+T9	Procedure-Name 572 577	bolus
+E8	Procedure:T8 Name:T9
+T10	Life-Stage-And-Gender 406 410	Male
+A2	Life-Stage-And-Gender-Type T10 male
+T11	Condition 1311 1320	Pregnancy
+T12	Condition-Name 1311 1320	Pregnancy
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 422 434	greater than
+A3	Eq-Operator-Value T13 GT
+T14	Eq-Operator 695 704	less than
+A4	Eq-Operator-Value T14 LT
+T15	Eq-Operator 1121 1127	within
+A5	Eq-Operator-Value T15 LTEQ
+T16	Eq-Temporal-Unit 450 455	years
+A6	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Temporal-Unit 621 626	weeks
+A7	Eq-Temporal-Unit-Value T17 week
+T18	Eq-Temporal-Unit 720 725	weeks
+A8	Eq-Temporal-Unit-Value T18 week
+T19	Eq-Temporal-Unit 1131 1136	weeks
+A9	Eq-Temporal-Unit-Value T19 week
+T20	Eq-Operator 569 570	-
+A10	Eq-Operator-Value T20 BETWEEN
+T21	Eq-Value 262 264	30
+T22	Eq-Value 447 449	19
+T23	Eq-Value 521 522	2
+T24	Eq-Value 568 569	1
+T25	Eq-Value 570 571	3
+T26	Eq-Value 618 620	24
+T27	Eq-Value 717 719	12
+T28	Eq-Value 758 760	30
+T29	Eq-Value 1128 1130	24
+T30	Eq-Value 1169 1171	30
+T31	Eq-Value 1275 1277	30
+T32	Eq-Comparison 1121 1136	within 24 weeks
+E12	Eq-Comparison:T32 Operator:T15 Temporal-Unit:T19 Value:T29
+T33	Eq-Comparison 568 570	1-
+E13	Eq-Comparison:T33 Operator:T20 Value:T24

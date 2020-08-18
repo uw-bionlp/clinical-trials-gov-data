@@ -1,0 +1,57 @@
+T1	Procedure 76 111	Immune checkpoint inhibitor therapy
+T2	Procedure-Name 76 111	Immune checkpoint inhibitor therapy
+E1	Procedure:T1 Name:T2 Temporality:E4
+T5	Procedure 240 275	Immune checkpoint inhibitor therapy
+T6	Procedure-Name 240 275	Immune checkpoint inhibitor therapy
+E5	Procedure:T5 Name:T6 Temporality:E8
+T7	Eq-Operator 122 128	within
+A1	Eq-Operator-Value T7 LTEQ
+T8	Eq-Operator 147 148	>
+A2	Eq-Operator-Value T8 GT
+T9	Eq-Operator 286 287	>
+A3	Eq-Operator-Value T9 GT
+T10	Age 143 146	Age
+E6	Age:T10 Eq-Comparison:E7
+T11	Eq-Operator 163 164	-
+A4	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 133 134	2
+T13	Eq-Value 148 150	18
+T14	Eq-Value 162 163	0
+T15	Eq-Value 164 165	3
+T16	Eq-Value 288 289	2
+T17	Eq-Comparison 147 150	>18
+E7	Eq-Comparison:T17 Operator:T8 Value:T13 Temporal-Unit:T26
+T18	Eq-Comparison 286 289	> 2
+E8	Eq-Comparison:T18 Operator:T9 Value:T16 Temporal-Unit:T3
+T19	Eq-Comparison 162 164	0-
+E9	Eq-Comparison:T19 Operator:T11 Value:T14 Value2:T15
+T20	Condition 63 70	cancers
+E2	Condition:T20 Name:T21 Severity:T22
+T21	Condition-Name 63 70	cancers
+T22	Severity 54 62	Advanced
+A5	Severity-Value T22 severe
+T23	Eq-Comparison 122 137	within +/- 2wks
+E4	Eq-Comparison:T23 Operator:T7 Operator2:T24 Value:T12 Temporal-Unit:T25
+T24	Eq-Operator 129 132	+/-
+A6	Eq-Operator-Value T24 PLUS-MINUS
+T25	Eq-Temporal-Unit 134 137	wks
+A7	Eq-Temporal-Unit-Value T25 week
+T26	Eq-Temporal-Unit 150 151	y
+A8	Eq-Temporal-Unit-Value T26 year
+T27	Observation 157 161	ECOG
+E10	Observation:T27 Name:T28 Eq-Comparison:E9
+T28	Observation-Name 157 161	ECOG
+A9	Observation-Type-Value T28 measurement
+T3	Eq-Temporal-Unit 289 292	wks
+A10	Eq-Temporal-Unit-Value T3 week
+T4	Temporal-Connection 293 296	ago
+E3	Temporal-Connection:T4 Arg:E8
+A11	Temporal-Connection-Type-Value E3 before
+T29	Condition 302 323	General vulnerability
+E11	Condition:T29 Name:T30
+T30	Condition-Name 302 323	General vulnerability
+T31	Study 359 364	trial
+E12	Study:T31 Stability:T32
+T32	Stability 324 333	affecting
+A12	Stability-Value T32 change
+R1	Caused-By Arg1:T32 Arg2:E11	

@@ -1,0 +1,65 @@
+T1	Condition 412 428	anxiety disorder
+T2	Condition-Name 412 428	anxiety disorder
+E1	Condition:T1 Name:T2
+T3	Condition 127 142	menstrual cycle
+T4	Condition-Name 127 142	menstrual cycle
+E3	Condition:T3 Name:T4
+T5	Procedure 228 239	application
+T6	Procedure-Name 228 239	application
+E5	Procedure:T5 Name:T6
+T7	Condition 316 326	depression
+T8	Condition-Name 316 326	depression
+E7	Condition:T7 Name:T8
+T9	Condition 664 673	pregnancy
+T10	Condition-Name 664 673	pregnancy
+E9	Condition:T9 Name:T10
+T11	Condition 699 708	lactation
+T12	Condition-Name 699 708	lactation
+E11	Condition:T11 Name:T12
+T13	Condition 287 295	disorder
+T14	Condition-Name 287 295	disorder
+E13	Condition:T13 Name:T14
+T15	Condition 304 311	anxiety
+T16	Condition-Name 304 311	anxiety
+E15	Condition:T15 Name:T16
+T17	Life-Stage-And-Gender 25 31	Female
+A1	Life-Stage-And-Gender-Type T17 male
+T18	Condition 715 719	plan
+T19	Condition-Name 715 719	plan
+E18	Condition:T18 Name:T19
+T20	Eq-Operator 546 547	>
+A2	Eq-Operator-Value T20 GT
+T21	Eq-Operator 612 613	≥
+A3	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 818 819	>
+A4	Eq-Operator-Value T22 GT
+T23	Eq-Temporal-Unit 48 53	years
+A5	Eq-Temporal-Unit-Value T23 year
+T24	Eq-Temporal-Unit 149 153	days
+A6	Eq-Temporal-Unit-Value T24 day
+T25	Age 37 41	Aged
+E19	Age:T25
+T26	Eq-Operator 44 45	-
+A7	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Operator 145 146	-
+A8	Eq-Operator-Value T27 BETWEEN
+T28	Eq-Value 42 44	18
+T29	Eq-Value 45 47	35
+T30	Eq-Value 143 145	21
+T31	Eq-Value 146 148	35
+T32	Eq-Value 278 279	5
+T33	Eq-Value 285 286	1
+T34	Eq-Value 391 392	5
+T35	Eq-Value 547 548	0
+T36	Eq-Value 614 615	6
+T37	Eq-Value 820 822	80
+T38	Eq-Comparison 546 548	>0
+E20	Eq-Comparison:T38 Operator:T20 Value:T35
+T39	Eq-Comparison 612 615	≥ 6
+E21	Eq-Comparison:T39 Operator:T21 Value:T36
+T40	Eq-Comparison 818 822	> 80
+E22	Eq-Comparison:T40 Operator:T22 Value:T37
+T41	Eq-Comparison 42 45	18-
+E23	Eq-Comparison:T41 Operator:T26 Value:T28
+T42	Eq-Comparison 143 146	21-
+E24	Eq-Comparison:T42 Operator:T27 Value:T30

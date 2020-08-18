@@ -1,0 +1,28 @@
+T1	Procedure 106 115	insertion
+T2	Procedure-Name 106 115	insertion
+E1	Procedure:T1 Name:T2
+T3	Condition 895 914	obstructive disease
+T4	Condition-Name 895 914	obstructive disease
+E3	Condition:T3 Name:T4
+T5	Procedure 1020 1038	catheter insertion
+T6	Procedure-Name 1020 1038	catheter insertion
+E5	Procedure:T5 Name:T6
+T7	Procedure 969 980	irradiation
+T8	Procedure-Name 969 980	irradiation
+E7	Procedure:T7 Name:T8
+T9	Condition 679 688	pregnancy
+T10	Condition-Name 679 688	pregnancy
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 656 657	<
+A1	Eq-Operator-Value T11 LT
+T12	Eq-Temporal-Unit 407 411	days
+A2	Eq-Temporal-Unit-Value T12 day
+T13	Eq-Temporal-Unit 661 666	years
+A3	Eq-Temporal-Unit-Value T13 year
+T14	Age 652 655	Age
+E10	Age:T14
+T15	Eq-Value 350 352	48
+T16	Eq-Value 658 660	18
+T17	Eq-Value 860 861	2
+T18	Eq-Comparison 656 666	< 18 years
+E11	Eq-Comparison:T18 Operator:T11 Temporal-Unit:T13 Value:T16

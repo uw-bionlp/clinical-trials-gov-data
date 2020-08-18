@@ -1,0 +1,53 @@
+T1	Condition 259 282	neuromuscular scoliosis
+T2	Condition-Name 259 282	neuromuscular scoliosis
+E1	Condition:T1 Name:T2
+T3	Condition 430 453	Obstructive sleep apnea
+T4	Condition-Name 430 453	Obstructive sleep apnea
+E3	Condition:T3 Name:T4
+T5	Condition 197 218	mild systemic disease
+T6	Condition-Name 197 218	mild systemic disease
+E5	Condition:T5 Name:T6
+T7	Condition 376 395	Developmental delay
+T8	Condition-Name 376 395	Developmental delay
+E7	Condition:T7 Name:T8
+T9	Observation 459 474	Body mass index
+T10	Observation-Name 459 474	Body mass index
+E9	Observation:T9 Name:T10
+A1	Observation-Type-Value T10 vital
+T11	Condition 410 424	kidney disease
+T12	Condition-Name 410 424	kidney disease
+E11	Condition:T11 Name:T12
+T13	Procedure 168 181	spinal fusion
+T14	Procedure-Name 168 181	spinal fusion
+E13	Procedure:T13 Name:T14
+T15	Condition 158 167	posterior
+T16	Condition-Name 158 167	posterior
+E15	Condition:T15 Name:T16
+T17	Procedure 149 157	elective
+T18	Procedure-Name 149 157	elective
+E17	Procedure:T17 Name:T18
+T19	Condition 401 406	Liver
+T20	Condition-Name 401 406	Liver
+E19	Condition:T19 Name:T20
+T21	Eq-Operator 353 361	the past
+A2	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 475 476	>
+A3	Eq-Operator-Value T22 GT
+T23	Eq-Temporal-Unit 39 44	years
+A4	Eq-Temporal-Unit-Value T23 year
+T24	Eq-Temporal-Unit 364 370	months
+A5	Eq-Temporal-Unit-Value T24 month
+T25	Age 28 32	aged
+E20	Age:T25
+T26	Eq-Operator 35 36	-
+A6	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Value 33 35	10
+T28	Eq-Value 36 38	18
+T29	Eq-Value 362 363	6
+T30	Eq-Value 476 478	40
+T31	Eq-Comparison 353 370	the past 6 months
+E21	Eq-Comparison:T31 Operator:T21 Temporal-Unit:T24 Value:T29
+T32	Eq-Comparison 475 478	>40
+E22	Eq-Comparison:T32 Operator:T22 Value:T30
+T33	Eq-Comparison 33 36	10-
+E23	Eq-Comparison:T33 Operator:T26 Value:T27

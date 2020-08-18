@@ -1,0 +1,24 @@
+T1	Eq-Operator 39 40	≥
+A1	Eq-Operator-Value T1 GTEQ
+T2	Eq-Operator 48 49	<
+A2	Eq-Operator-Value T2 LT
+T3	Eq-Operator 121 122	≥
+A3	Eq-Operator-Value T3 GTEQ
+T4	Eq-Operator 433 434	≤
+A4	Eq-Operator-Value T4 LTEQ
+T5	Eq-Temporal-Unit 52 57	years
+A5	Eq-Temporal-Unit-Value T5 year
+T6	Age 34 38	aged
+E1	Age:T6
+T7	Eq-Value 40 42	18
+T8	Eq-Value 49 51	80
+T9	Eq-Value 123 124	6
+T10	Eq-Value 435 436	5
+T11	Eq-Comparison 39 42	≥18
+E2	Eq-Comparison:T11 Operator:T1 Value:T7
+T12	Eq-Comparison 48 57	<80 years
+E3	Eq-Comparison:T12 Operator:T2 Temporal-Unit:T5 Value:T8
+T13	Eq-Comparison 121 124	≥ 6
+E4	Eq-Comparison:T13 Operator:T3 Value:T9
+T14	Eq-Comparison 433 436	≤ 5
+E5	Eq-Comparison:T14 Operator:T4 Value:T10

@@ -1,0 +1,102 @@
+T1	Condition 86 101	Graves' disease
+T2	Condition-Name 86 101	Graves' disease
+E1	Condition:T1 Name:T2
+T3	Condition 107 122	hyperthyroidism
+T4	Condition-Name 107 122	hyperthyroidism
+E3	Condition:T3 Name:T4
+T5	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T6 male
+T7	Condition 201 204	CAS
+T8	Condition-Name 201 204	CAS
+E7	Condition:T7 Name:T8
+T9	Condition 572 581	proptosis
+T10	Condition-Name 572 581	proptosis
+E9	Condition:T9 Name:T10
+T11	Condition 387 392	sight
+T12	Condition-Name 387 392	sight
+E11	Condition:T11 Name:T12
+T13	Condition 967 974	inhaled
+T14	Condition-Name 967 974	inhaled
+E13	Condition:T13 Name:T14
+T15	Condition 1070 1086	immunomodulation
+T16	Condition-Name 1070 1086	immunomodulation
+E15	Condition:T15 Name:T16
+T17	Condition 1303 1319	optic neuropathy
+T18	Condition-Name 1303 1319	optic neuropathy
+E17	Condition:T17 Name:T18
+T19	Condition 1442 1453	optic nerve
+T20	Condition-Name 1442 1453	optic nerve
+E19	Condition:T19 Name:T20
+T21	Condition 1348 1354	vision
+T22	Condition-Name 1348 1354	vision
+E21	Condition:T21 Name:T22
+T23	Procedure 1527 1538	irradiation
+T24	Procedure-Name 1527 1538	irradiation
+E23	Procedure:T23 Name:T24
+T25	Eq-Operator 40 41	≥
+A3	Eq-Operator-Value T25 GTEQ
+T26	Eq-Operator 206 207	≥
+A4	Eq-Operator-Value T26 GTEQ
+T27	Eq-Operator 318 324	within
+A5	Eq-Operator-Value T27 GTEQ
+T28	Eq-Operator 520 521	≥
+A6	Eq-Operator-Value T28 GTEQ
+T29	Eq-Operator 582 583	≥
+A7	Eq-Operator-Value T29 GTEQ
+T30	Eq-Operator 854 860	within
+A8	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 1087 1102	within the past
+A9	Eq-Operator-Value T31 GTEQ
+T32	Eq-Operator 1152 1153	<
+A10	Eq-Operator-Value T32 LT
+T33	Eq-Operator 1204 1205	<
+A11	Eq-Operator-Value T33 LT
+T34	Eq-Operator 1466 1472	within
+A12	Eq-Operator-Value T34 GTEQ
+T35	Eq-Temporal-Unit 45 50	years
+A13	Eq-Temporal-Unit-Value T35 year
+T36	Eq-Temporal-Unit 327 333	months
+A14	Eq-Temporal-Unit-Value T36 month
+T37	Eq-Temporal-Unit 863 868	weeks
+A15	Eq-Temporal-Unit-Value T37 week
+T38	Eq-Temporal-Unit 1105 1111	months
+A16	Eq-Temporal-Unit-Value T38 month
+T39	Eq-Temporal-Unit 1484 1490	months
+A17	Eq-Temporal-Unit-Value T39 month
+T40	Eq-Unit 524 526	mm
+T41	Eq-Unit 586 588	mm
+T42	Eq-Unit 1216 1219	mm3
+T43	Age 54 57	age
+E24	Age:T43
+T44	Eq-Value 42 44	18
+T45	Eq-Value 208 209	4
+T46	Eq-Value 279 280	7
+T47	Eq-Value 325 326	9
+T48	Eq-Value 522 523	2
+T49	Eq-Value 584 585	3
+T50	Eq-Value 861 862	3
+T51	Eq-Value 1103 1104	9
+T52	Eq-Value 1154 1155	6
+T53	Eq-Value 1205 1209	1500
+T54	Eq-Value 1358 1359	2
+T55	Eq-Value 1482 1483	6
+T56	Eq-Comparison 40 50	≥ 18 years
+E25	Eq-Comparison:T56 Operator:T25 Temporal-Unit:T35 Value:T44
+T57	Eq-Comparison 206 209	≥ 4
+E26	Eq-Comparison:T57 Operator:T26 Value:T45
+T58	Eq-Comparison 318 333	within 9 months
+E27	Eq-Comparison:T58 Operator:T27 Temporal-Unit:T36 Value:T47
+T59	Eq-Comparison 520 526	≥ 2 mm
+E28	Eq-Comparison:T59 Operator:T28 Unit:T40 Value:T48
+T60	Eq-Comparison 582 588	≥ 3 mm
+E29	Eq-Comparison:T60 Operator:T29 Unit:T41 Value:T49
+T61	Eq-Comparison 854 868	within 3 weeks
+E30	Eq-Comparison:T61 Operator:T30 Temporal-Unit:T37 Value:T50
+T62	Eq-Comparison 1087 1111	within the past 9 months
+E31	Eq-Comparison:T62 Operator:T31 Temporal-Unit:T38 Value:T51
+T63	Eq-Comparison 1152 1155	< 6
+E32	Eq-Comparison:T63 Operator:T32 Value:T52
+T64	Eq-Comparison 1204 1209	<1500
+E33	Eq-Comparison:T64 Operator:T33 Value:T53

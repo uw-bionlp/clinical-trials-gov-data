@@ -1,0 +1,17 @@
+T1	Life-Stage-And-Gender 43 49	adults
+A1	Life-Stage-And-Gender-Type T1 adult
+T2	Procedure 28 31	EMR
+T3	Procedure-Name 28 31	EMR
+E2	Procedure:T2 Name:T3
+T4	Eq-Operator 324 325	<
+A2	Eq-Operator-Value T4 LT
+T5	Eq-Temporal-Unit 328 333	years
+A3	Eq-Temporal-Unit-Value T5 year
+T6	Age 320 323	Age
+E3	Age:T6
+T7	Age 334 337	old
+E4	Age:T7
+T8	Eq-Value 80 82	18
+T9	Eq-Value 325 327	18
+T10	Eq-Comparison 324 333	<18 years
+E5	Eq-Comparison:T10 Operator:T4 Temporal-Unit:T5 Value:T9

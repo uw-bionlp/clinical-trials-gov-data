@@ -1,0 +1,24 @@
+T1	Eq-Temporal-Period 58 68	Undergoing
+A1	Eq-Temporal-Period-Value T1 present
+T2	Procedure-Name 78 85	surgery
+T3	Eq-Temporal-Period 158 165	History
+A2	Eq-Temporal-Period-Value T3 past
+T4	Eq-Temporal-Period 207 214	History
+A3	Eq-Temporal-Period-Value T4 past
+T5	Condition-Name 218 240	upper airway pathology
+T6	Condition-Name 243 248	tumor
+T7	Condition-Name 251 270	cleft palate - lips
+T8	Eq-Temporal-Period 285 292	History
+A4	Eq-Temporal-Period-Value T8 past
+T9	Modifier 296 300	head
+T10	Or 301 304	and
+T11	Modifier 305 309	neck
+T12	Condition-Name 310 316	trauma
+T13	Condition-Name 319 327	fracture
+T14	Condition-Name 330 338	swelling
+T15	Unknown 319 327	fracture
+T16	Unknown 310 316	trauma
+R1	Example-Of Arg1:T15 Arg2:T16
+T17	Unknown 330 338	swelling
+T18	Unknown 310 316	trauma
+R2	Example-Of Arg1:T17 Arg2:T18

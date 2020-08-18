@@ -1,0 +1,47 @@
+T1	Procedure 148 182	percutaneous coronary intervention
+T2	Procedure-Name 148 182	percutaneous coronary intervention
+E1	Procedure:T1 Name:T2
+T3	Condition 73 96	coronary artery disease
+T4	Condition-Name 73 96	coronary artery disease
+E3	Condition:T3 Name:T4
+T5	Procedure 321 342	renal transplantation
+T6	Procedure-Name 321 342	renal transplantation
+E5	Procedure:T5 Name:T6
+T7	Condition 361 382	hepatic insufficiency
+T8	Condition-Name 361 382	hepatic insufficiency
+E7	Condition:T7 Name:T8
+T9	Condition 208 227	renal insufficiency
+T10	Condition-Name 208 227	renal insufficiency
+E9	Condition:T9 Name:T10
+T11	Condition 521 539	bleeding disorders
+T12	Condition-Name 521 539	bleeding disorders
+E11	Condition:T11 Name:T12
+T13	Procedure 597 610	haemodialysis
+T14	Procedure-Name 597 610	haemodialysis
+E13	Procedure:T13 Name:T14
+T15	Condition 492 501	cirrhosis
+T16	Condition-Name 492 501	cirrhosis
+E15	Condition:T15 Name:T16
+T17	Procedure 346 354	dialysis
+T18	Procedure-Name 346 354	dialysis
+E17	Procedure:T17 Name:T18
+T19	Language 47 54	Chinese
+T20	Language 55 58	Han
+T21	Eq-Operator 271 272	>
+A1	Eq-Operator-Value T21 GT
+T22	Eq-Operator 428 429	>
+A2	Eq-Operator-Value T22 GT
+T23	Eq-Temporal-Unit 36 41	years
+A3	Eq-Temporal-Unit-Value T23 year
+T24	Eq-Operator 32 33	-
+A4	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 30 32	18
+T26	Eq-Value 33 35	80
+T27	Eq-Value 273 274	2
+T28	Eq-Value 430 431	2
+T29	Eq-Comparison 271 274	> 2
+E18	Eq-Comparison:T29 Operator:T21 Value:T27
+T30	Eq-Comparison 428 431	> 2
+E19	Eq-Comparison:T30 Operator:T22 Value:T28
+T31	Eq-Comparison 30 33	18-
+E20	Eq-Comparison:T31 Operator:T24 Value:T25

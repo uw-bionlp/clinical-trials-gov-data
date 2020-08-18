@@ -1,0 +1,85 @@
+T1	Life-Stage-And-Gender 26 32	Female
+A1	Life-Stage-And-Gender-Value T1 female
+T2	Age 35 38	age
+T3	Eq-Operator 39 40	≥
+A2	Eq-Operator-Value T3 GTEQ
+T4	Eq-Comparison 39 49	≥ 18 years
+T5	Eq-Comparison 39 64	≥ 18 years and ≤ 70 years
+T6	Eq-Value 41 43	18
+T7	Eq-Temporal-Unit 44 49	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Or 50 53	and
+T9	Eq-Operator 54 55	≤
+A4	Eq-Operator-Value T9 LTEQ
+T10	Eq-Comparison 54 64	≤ 70 years
+T11	Eq-Value 56 58	70
+T12	Eq-Temporal-Unit 59 64	years
+A5	Eq-Temporal-Unit-Value T12 year
+T13	Modifier 98 112	Histologically
+T14	Or 113 115	or
+T15	Modifier 154 164	epithelial
+T16	Condition-Name 165 174	carcinoma
+T17	Modifier 195 213	Platinum resistant
+T18	Modifier 214 221	ovarian
+T19	Condition-Name 222 228	cancer
+T20	Eq-Comparison 242 267	relapsing within 6 months
+T21	Eq-Operator 252 258	within
+A6	Eq-Operator-Value T21 LTEQ
+T22	Eq-Comparison 252 267	within 6 months
+T23	Eq-Value 259 260	6
+T24	Eq-Temporal-Unit 261 267	months
+A7	Eq-Temporal-Unit-Value T24 month
+T25	Temporal-Connection 268 273	after
+T26	Procedure-Name 318 330	chemotherapy
+T27	Or 333 335	OR
+T28	Modifier 336 355	platinum refractory
+T29	Modifier 356 363	ovarian
+T30	Condition-Name 364 370	cancer
+T31	Eq-Temporal-Period 384 395	progressing
+A8	Eq-Temporal-Period-Value T31 present
+T32	Temporal-Connection 396 401	while
+T33	Eq-Operator 444 452	At least
+A9	Eq-Operator-Value T33 GTEQ
+T34	Procedure 453 460	treated
+T35	Eq-Value 466 469	one
+T36	Eq-Unit 470 474	line
+T37	Condition-Name 513 547	Eastern Cooperative Oncology Group
+T38	Observation-Name 550 554	ECOG
+T39	Condition-Name 587 605	Measurable disease
+T40	Eq-Temporal-Period 843 848	prior
+A10	Eq-Temporal-Period-Value T40 past
+T41	Drug-Name 861 870	anlotinib
+T42	Eq-Temporal-Period 962 969	History
+A11	Eq-Temporal-Period-Value T42 past
+T43	Condition-Name 973 994	myocardial infarction
+T44	Or 997 999	or
+T45	Condition-Name 1000 1015	unstable angina
+T46	Condition-Name 1021 1047	New York Heart Association
+T47	Condition-Name 1050 1054	NYHA
+T48	Eq-Unit 1057 1062	Grade
+T49	Eq-Comparison 1057 1071	Grade III - IV
+T50	Eq-Value 1063 1066	III
+T51	Eq-Value 1069 1071	IV
+T52	Eq-Temporal-Period 1110 1117	History
+A12	Eq-Temporal-Period-Value T52 past
+T53	Condition-Name 1121 1138	abdominal fistula
+T54	Procedure-Name 1212 1230	surgical procedure
+T55	Eq-Operator 1231 1237	within
+A13	Eq-Operator-Value T55 LTEQ
+T56	Eq-Comparison 1231 1245	within 28 days
+T57	Eq-Comparison 1231 1260	within 28 days prior to Day 1
+T58	Eq-Value 1238 1240	28
+T59	Eq-Temporal-Unit 1241 1245	days
+A14	Eq-Temporal-Unit-Value T59 day
+T60	Temporal-Connection 1246 1254	prior to
+T61	Condition-Name 1273 1292	non - healing wound
+T62	Eq-Temporal-Period 1295 1301	active
+A15	Eq-Temporal-Period-Value T62 present
+T63	Condition-Name 1302 1307	ulcer
+T64	Condition-Name 1310 1327	bowel obstruction
+T65	Unknown 550 554	ECOG
+T66	Unknown 513 547	Eastern Cooperative Oncology Group
+R1	Abbrev-Of Arg1:T65 Arg2:T66
+T67	Unknown 1050 1054	NYHA
+T68	Unknown 1021 1047	New York Heart Association
+R2	Abbrev-Of Arg1:T67 Arg2:T68

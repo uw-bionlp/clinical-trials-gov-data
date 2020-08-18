@@ -1,0 +1,29 @@
+T1	Condition 374 397	hemodynamic instability
+T2	Condition-Name 374 397	hemodynamic instability
+E1	Condition:T1 Name:T2
+T3	Condition 431 451	cognitive impairment
+T4	Condition-Name 431 451	cognitive impairment
+E3	Condition:T3 Name:T4
+T5	Procedure 95 114	replacement therapy
+T6	Procedure-Name 95 114	replacement therapy
+E5	Procedure:T5 Name:T6
+T7	Condition 471 490	acute renal failure
+T8	Condition-Name 471 490	acute renal failure
+E7	Condition:T7 Name:T8
+T9	Procedure 128 140	hemodialysis
+T10	Procedure-Name 128 140	hemodialysis
+E9	Procedure:T9 Name:T10
+T11	Procedure 116 124	dialysis
+T12	Procedure-Name 116 124	dialysis
+E11	Procedure:T11 Name:T12
+T13	Condition 204 212	diuresis
+T14	Condition-Name 204 212	diuresis
+E13	Condition:T13 Name:T14
+T15	Language 70 73	min
+T16	Eq-Operator 52 61	less than
+A1	Eq-Operator-Value T16 LT
+T17	Eq-Value 62 64	30
+T18	Eq-Value 76 77	1
+T19	Eq-Value 177 180	100
+T20	Eq-Comparison 52 64	less than 30
+E14	Eq-Comparison:T20 Operator:T16 Value:T17

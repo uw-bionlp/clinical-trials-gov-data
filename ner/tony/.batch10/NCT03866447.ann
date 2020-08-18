@@ -1,0 +1,30 @@
+T1	Condition 39 43	Acne
+T2	Condition-Name 39 43	Acne
+E1	Condition:T1 Name:T2
+T3	Condition 214 230	systemic illness
+T4	Condition-Name 214 230	systemic illness
+E3	Condition:T3 Name:T4
+T5	Condition 322 331	Pregnancy
+T6	Condition-Name 322 331	Pregnancy
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 144 153	and above
+A1	Eq-Operator-Value T7 GTEQ
+T8	Eq-Operator 283 289	within
+A2	Eq-Operator-Value T8 LTEQ
+T9	Eq-Temporal-Unit 90 95	years
+A3	Eq-Temporal-Unit-Value T9 year
+T10	Eq-Temporal-Unit 156 161	years
+A4	Eq-Temporal-Unit-Value T10 year
+T11	Eq-Temporal-Unit 292 297	weeks
+A5	Eq-Temporal-Unit-Value T11 week
+T12	Age 96 99	old
+E6	Age:T12
+T13	Eq-Value 80 82	18
+T14	Eq-Value 87 89	45
+T15	Eq-Value 141 143	18
+T16	Eq-Value 154 156	45
+T17	Eq-Value 290 291	4
+T18	Eq-Comparison 141 153	18 and above
+E7	Eq-Comparison:T18 Operator:T7 Value:T15
+T19	Eq-Comparison 283 297	within 4 weeks
+E8	Eq-Comparison:T19 Operator:T8 Temporal-Unit:T11 Value:T17

@@ -1,0 +1,68 @@
+T1	Condition 64 81	Myasthenia Gravis
+T2	Condition-Name 64 81	Myasthenia Gravis
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T4 male
+T5	Condition 120 123	IVa
+T6	Condition-Name 120 123	IVa
+E5	Condition:T5 Name:T6
+T7	Procedure 435 451	immunomodulation
+T8	Procedure-Name 435 451	immunomodulation
+E7	Procedure:T7 Name:T8
+T9	Procedure 578 593	plasma exchange
+T10	Procedure-Name 578 593	plasma exchange
+E9	Procedure:T9 Name:T10
+T11	Procedure 563 577	plasmapheresis
+T12	Procedure-Name 563 577	plasmapheresis
+E11	Procedure:T11 Name:T12
+T13	Procedure 637 647	Thymectomy
+T14	Procedure-Name 637 647	Thymectomy
+E13	Procedure:T13 Name:T14
+T15	Eq-Operator 40 41	≥
+A3	Eq-Operator-Value T15 GTEQ
+T16	Eq-Operator 239 240	≥
+A4	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 452 458	within
+A5	Eq-Operator-Value T17 LTEQ
+T18	Eq-Operator 599 605	within
+A6	Eq-Operator-Value T18 LTEQ
+T19	Eq-Operator 658 659	<
+A7	Eq-Operator-Value T19 LT
+T20	Eq-Operator 711 712	<
+A8	Eq-Operator-Value T20 LT
+T21	Eq-Operator 765 766	<
+A9	Eq-Operator-Value T21 LT
+T22	Eq-Temporal-Unit 45 50	years
+A10	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 461 467	months
+A11	Eq-Temporal-Unit-Value T23 month
+T24	Eq-Temporal-Unit 608 613	weeks
+A12	Eq-Temporal-Unit-Value T24 week
+T25	Eq-Temporal-Unit 663 669	months
+A13	Eq-Temporal-Unit-Value T25 month
+T26	Eq-Unit 777 780	mm3
+T27	Age 54 57	age
+E14	Age:T27
+T28	Eq-Value 42 44	18
+T29	Eq-Value 240 242	12
+T30	Eq-Value 459 460	6
+T31	Eq-Value 606 607	4
+T32	Eq-Value 660 662	12
+T33	Eq-Value 712 713	6
+T34	Eq-Value 766 770	1500
+T35	Eq-Comparison 40 50	≥ 18 years
+E15	Eq-Comparison:T35 Operator:T15 Temporal-Unit:T22 Value:T28
+T36	Eq-Comparison 239 242	≥12
+E16	Eq-Comparison:T36 Operator:T16 Value:T29
+T37	Eq-Comparison 452 467	within 6 months
+E17	Eq-Comparison:T37 Operator:T17 Temporal-Unit:T23 Value:T30
+T38	Eq-Comparison 599 613	within 4 weeks
+E18	Eq-Comparison:T38 Operator:T18 Temporal-Unit:T24 Value:T31
+T39	Eq-Comparison 658 669	< 12 months
+E19	Eq-Comparison:T39 Operator:T19 Temporal-Unit:T25 Value:T32
+T40	Eq-Comparison 711 713	<6
+E20	Eq-Comparison:T40 Operator:T20 Value:T33
+T41	Eq-Comparison 765 770	<1500
+E21	Eq-Comparison:T41 Operator:T21 Value:T34

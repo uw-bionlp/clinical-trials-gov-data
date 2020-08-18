@@ -1,0 +1,80 @@
+T1	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T1 male
+T2	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T2 male
+T3	Condition 582 604	neurological disorders
+T4	Condition-Name 582 604	neurological disorders
+E3	Condition:T3 Name:T4
+T5	Condition 556 572	seizure disorder
+T6	Condition-Name 556 572	seizure disorder
+E5	Condition:T5 Name:T6
+T7	Procedure 272 282	extubation
+T8	Procedure-Name 272 282	extubation
+E7	Procedure:T7 Name:T8
+T9	Life-Stage-And-Gender 379 385	female
+A3	Life-Stage-And-Gender-Type T9 male
+T10	Language 711 714	CES
+T11	Condition 1089 1110	neurological disorder
+T12	Condition-Name 1089 1110	neurological disorder
+E11	Condition:T11 Name:T12
+T13	Condition 830 848	psychotic disorder
+T14	Condition-Name 830 848	psychotic disorder
+E13	Condition:T13 Name:T14
+T15	Condition 1056 1073	Heavy alcohol use
+T16	Condition-Name 1056 1073	Heavy alcohol use
+E15	Condition:T15 Name:T16
+T17	Condition 1173 1189	Seizure disorder
+T18	Condition-Name 1173 1189	Seizure disorder
+E17	Condition:T17 Name:T18
+T19	Condition 938 948	opioid use
+T20	Condition-Name 938 948	opioid use
+E19	Condition:T19 Name:T20
+T21	Condition 1015 1025	opioid use
+T22	Condition-Name 1015 1025	opioid use
+E21	Condition:T21 Name:T22
+T23	Condition 894 903	psychotic
+T24	Condition-Name 894 903	psychotic
+E23	Condition:T23 Name:T24
+T25	Life-Stage-And-Gender 810 817	females
+A4	Life-Stage-And-Gender-Type T25 male
+T26	Procedure 1120 1127	implant
+T27	Procedure-Name 1120 1127	implant
+E26	Procedure:T26 Name:T27
+T28	Condition 1114 1119	brain
+T29	Condition-Name 1114 1119	brain
+E28	Condition:T28 Name:T29
+T30	Eq-Operator 237 243	within
+A5	Eq-Operator-Value T30 GTEQ
+T31	Eq-Operator 670 671	>
+A6	Eq-Operator-Value T31 GT
+T32	Eq-Operator 723 724	<
+A7	Eq-Operator-Value T32 LT
+T33	Eq-Operator 949 955	within
+A8	Eq-Operator-Value T33 GTEQ
+T34	Eq-Temporal-Unit 50 55	years
+A9	Eq-Temporal-Unit-Value T34 year
+T35	Eq-Temporal-Unit 959 963	days
+A10	Eq-Temporal-Unit-Value T35 day
+T36	Age 59 62	age
+E29	Age:T36
+T37	Eq-Operator 44 46	to
+A11	Eq-Operator-Value T37 BETWEEN
+T38	Eq-Value 41 43	18
+T39	Eq-Value 47 49	65
+T40	Eq-Value 234 236	15
+T41	Eq-Value 244 246	24
+T42	Eq-Value 400 402	60
+T43	Eq-Value 662 663	9
+T44	Eq-Value 671 672	4
+T45	Eq-Value 724 726	36
+T46	Eq-Value 956 958	30
+T47	Eq-Comparison 234 243	15 within
+E30	Eq-Comparison:T47 Operator:T30 Value:T40
+T48	Eq-Comparison 670 672	>4
+E31	Eq-Comparison:T48 Operator:T31 Value:T44
+T49	Eq-Comparison 723 726	<36
+E32	Eq-Comparison:T49 Operator:T32 Value:T45
+T50	Eq-Comparison 949 963	within 30 days
+E33	Eq-Comparison:T50 Operator:T33 Temporal-Unit:T35 Value:T46
+T51	Eq-Comparison 41 46	18 to
+E34	Eq-Comparison:T51 Operator:T37 Value:T38

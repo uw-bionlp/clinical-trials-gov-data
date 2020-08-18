@@ -1,0 +1,71 @@
+T1	Condition 322 341	fibrillation atrial
+T2	Condition-Name 322 341	fibrillation atrial
+E1	Condition:T1 Name:T2
+T3	Condition 120 133	heart disease
+T4	Condition-Name 120 133	heart disease
+E3	Condition:T3 Name:T4
+T5	Procedure 309 317	ablation
+T6	Procedure-Name 309 317	ablation
+E5	Procedure:T5 Name:T6
+T7	Procedure 382 390	ablation
+T8	Procedure-Name 382 390	ablation
+E7	Procedure:T7 Name:T8
+T9	Procedure 465 473	ablation
+T10	Procedure-Name 465 473	ablation
+E9	Procedure:T9 Name:T10
+T11	Procedure 783 806	cardiac transplantation
+T12	Procedure-Name 783 806	cardiac transplantation
+E11	Procedure:T11 Name:T12
+T13	Condition 898 916	systemic infection
+T14	Condition-Name 898 916	systemic infection
+E13	Condition:T13 Name:T14
+T15	Procedure 816 831	cardiac surgery
+T16	Procedure-Name 816 831	cardiac surgery
+E15	Procedure:T15 Name:T16
+T17	Condition 948 963	atrial thrombus
+T18	Condition-Name 948 963	atrial thrombus
+E17	Condition:T17 Name:T18
+T19	Condition 969 984	Unstable angina
+T20	Condition-Name 969 984	Unstable angina
+E19	Condition:T19 Name:T20
+T21	Condition 654 667	severe anemia
+T22	Condition-Name 654 667	severe anemia
+E21	Condition:T21 Name:T22
+T23	Condition 874 887	Acute disease
+T24	Condition-Name 874 887	Acute disease
+E23	Condition:T23 Name:T24
+T25	Condition 1003 1016	heart failure
+T26	Condition-Name 1003 1016	heart failure
+E25	Condition:T25 Name:T26
+T27	Procedure 1218 1230	introduction
+T28	Procedure-Name 1218 1230	introduction
+E27	Procedure:T27 Name:T28
+T29	Procedure 705 714	procedure
+T30	Procedure-Name 705 714	procedure
+E29	Procedure:T29 Name:T30
+T31	Procedure 509 517	ablation
+T32	Procedure-Name 509 517	ablation
+E31	Procedure:T31 Name:T32
+T33	Condition 674 680	sepsis
+T34	Condition-Name 674 680	sepsis
+E33	Condition:T33 Name:T34
+T35	Procedure 698 704	Bypass
+T36	Procedure-Name 698 704	Bypass
+E35	Procedure:T35 Name:T36
+T37	Condition 920 926	sepsis
+T38	Condition-Name 920 926	sepsis
+E37	Condition:T37 Name:T38
+T39	Eq-Operator 1041 1050	less than
+A1	Eq-Operator-Value T39 LT
+T40	Eq-Temporal-Unit 188 193	years
+A2	Eq-Temporal-Unit-Value T40 year
+T41	Eq-Temporal-Unit 763 769	months
+A3	Eq-Temporal-Unit-Value T41 month
+T42	Eq-Temporal-Unit 1054 1060	months
+A4	Eq-Temporal-Unit-Value T42 month
+T43	Age 166 169	Age
+E38	Age:T43
+T44	Eq-Value 185 187	18
+T45	Eq-Value 1051 1053	12
+T46	Eq-Comparison 1041 1060	less than 12 months
+E39	Eq-Comparison:T46 Operator:T39 Temporal-Unit:T42 Value:T45

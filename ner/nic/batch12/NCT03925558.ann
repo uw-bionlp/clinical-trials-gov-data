@@ -1,0 +1,47 @@
+T1	Condition 173 190	Failure to thrive
+T2	Condition-Name 173 190	Failure to thrive
+E1	Condition:T1 Name:T2
+T3	Condition 152 167	Chronic disease
+T4	Condition-Name 152 167	Chronic disease
+E3	Condition:T3 Name:T4
+T5	Eq-Temporal-Unit 57 61	days
+A1	Eq-Temporal-Unit-Value T5 day
+T6	Age 47 51	aged
+E4	Age:T6 Eq-Comparison:E5
+T7	Eq-Operator 53 54	-
+A2	Eq-Operator-Value T7 BETWEEN
+T8	Eq-Value 52 53	3
+T9	Eq-Value 54 56	95
+T10	Eq-Comparison 52 54	3-
+E5	Eq-Comparison:T10 Operator:T7 Value:T8 Value2:T9 Temporal-Unit:T5
+T11	Condition 32 39	healthy
+E2	Condition:T11 Name:T12
+T12	Condition-Name 32 39	healthy
+T13	Life-Stage-And-Gender 40 46	infant
+A3	Life-Stage-And-Gender-Type T13 infant
+T14	Condition 87 98	Prematurity
+E6	Condition:T14 Name:T15
+T15	Condition-Name 87 98	Prematurity
+T16	Observation 108 120	birth weight
+E7	Observation:T16 Name:T17 Polarity:T18
+T17	Observation-Name 108 120	birth weight
+A4	Observation-Type-Value T17 vital
+T18	Polarity 104 107	Low
+A5	Polarity-Value T18 low
+T19	Condition 126 146	Congenital anomalies
+E8	Condition:T19 Name:T20
+T20	Condition-Name 126 146	Congenital anomalies
+T21	Allergy 196 203	Allergy
+E9	Allergy:T21 
+T22	Condition 207 221	atopic disease
+E10	Condition:T22 Name:T23
+T23	Condition-Name 207 221	atopic disease
+T24	Or 204 206	or
+E11	Or:T24 Arg:E9 Arg2:E10
+T25	Eq-Comparison 227 233	Recent
+E12	Eq-Comparison:T25 Temporal-Period:T26
+T26	Eq-Temporal-Period 227 233	Recent
+A6	Eq-Temporal-Period-Value T26 recent
+T27	Drug 246 257	antibiotics
+E13	Drug:T27 Name:T28 Temporality:E12
+T28	Drug-Name 246 257	antibiotics

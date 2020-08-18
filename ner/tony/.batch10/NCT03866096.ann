@@ -1,0 +1,19 @@
+T1	Condition 463 482	vestibular disorder
+T2	Condition-Name 463 482	vestibular disorder
+E1	Condition:T1 Name:T2
+T3	Procedure 318 331	physiotherapy
+T4	Procedure-Name 318 331	physiotherapy
+E3	Procedure:T3 Name:T4
+T5	Life-Stage-And-Gender 49 55	Female
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Eq-Temporal-Unit 75 80	years
+A2	Eq-Temporal-Unit-Value T6 year
+T7	Eq-Temporal-Unit 421 427	months
+A3	Eq-Temporal-Unit-Value T7 month
+T8	Eq-Operator 69 71	to
+A4	Eq-Operator-Value T8 BETWEEN
+T9	Eq-Value 66 68	18
+T10	Eq-Value 72 74	25
+T11	Eq-Value 419 420	6
+T12	Eq-Comparison 66 71	18 to
+E4	Eq-Comparison:T12 Operator:T8 Value:T9

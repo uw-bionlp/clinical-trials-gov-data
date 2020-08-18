@@ -1,0 +1,194 @@
+T1	Condition 85 100	type 2 diabetes
+T2	Condition-Name 85 100	type 2 diabetes
+E1	Condition:T1 Name:T2
+T3	Condition 53 56	T2D
+T4	Condition-Name 53 56	T2D
+E3	Condition:T3 Name:T4
+T5	Condition 171 191	inflammatory disease
+T6	Condition-Name 171 191	inflammatory disease
+E5	Condition:T5 Name:T6
+T7	Procedure 213 222	treatment
+E7	Procedure:T7 Temporality:E8
+T9	Procedure 265 274	treatment
+E9	Procedure:T9 Temporality:E10
+T11	Procedure 314 323	treatment
+E11	Procedure:T11 Temporality:E14
+T13	Condition 140 155	type 2 diabetes
+T14	Condition-Name 140 155	type 2 diabetes
+E13	Condition:T13 Name:T14
+T15	Condition 228 243	Thyroid disease
+T16	Condition-Name 228 243	Thyroid disease
+E15	Condition:T15 Name:T16
+T17	Condition 280 292	Skin disease
+T18	Condition-Name 280 292	Skin disease
+E17	Condition:T17 Name:T18
+T19	Condition 547 556	Pregnancy
+T20	Condition-Name 547 556	Pregnancy
+E19	Condition:T19 Name:T20
+T21	Procedure 935 944	treatment
+E21	Procedure:T21 Temporality:E50
+T23	Observation 1032 1046	Blood pressure
+T24	Observation-Name 1032 1046	Blood pressure
+E23	Observation:T23 Name:T24 Severity:T96 Eq-Comparison:E55
+T25	Condition 714 726	hypertension
+T26	Condition-Name 714 726	hypertension
+E25	Condition:T25 Name:T26
+T27	Condition 901 913	Skin disease
+T28	Condition-Name 901 913	Skin disease
+E27	Condition:T27 Name:T28
+T29	Condition 1143 1152	Pregnancy
+T30	Condition-Name 1143 1152	Pregnancy
+E29	Condition:T29 Name:T30
+T31	Eq-Temporal-Unit 33 38	years
+A1	Eq-Temporal-Unit-Value T31 year
+T32	Eq-Value 30 32	18
+T35	Eq-Value 1066 1069	140
+T36	Eq-Comparison 25 38	Over 18 years
+E2	Eq-Comparison:T36 Operator:T37 Value:T32 Temporal-Unit:T31
+T37	Eq-Operator 25 29	Over
+A2	Eq-Operator-Value T37 GT
+R1	If-Then Arg1:E3 Arg2:E1	
+T33	Modifier 162 170	Systemic
+E4	Modifier:T33 Modifies:T6
+T34	Assertion 197 205	requires
+E6	Assertion:T34 Asserted:E7
+A3	Assertion-Type-Value E6 hypothetical
+T38	Eq-Comparison 206 212	active
+E8	Eq-Comparison:T38 Temporal-Period:T39
+T39	Eq-Temporal-Period 206 212	active
+A4	Eq-Temporal-Period-Value T39 present
+R2	Treatment-For Arg1:E7 Arg2:E5	
+T40	Eq-Comparison 258 264	active
+E10	Eq-Comparison:T40 Temporal-Period:T41
+T41	Eq-Temporal-Period 258 264	active
+A5	Eq-Temporal-Period-Value T41 present
+T42	Assertion 249 257	requires
+E12	Assertion:T42 Asserted:E9
+A6	Assertion-Type-Value E12 hypothetical
+R3	Treatment-For Arg1:E9 Arg2:E15	
+T8	Eq-Comparison 307 313	active
+E14	Eq-Comparison:T8 
+T10	Eq-Temporal-Period 307 313	active
+A7	Eq-Temporal-Period-Value T10 present
+T12	Assertion 298 306	requires
+E16	Assertion:T12 Asserted:E11
+A8	Assertion-Type-Value E16 hypothetical
+R4	Treatment-For Arg1:E11 Arg2:E17	
+T43	Condition 347 378	changes in the area of the skin
+E18	Condition:T43 Name:T44 Severity:T45
+T44	Condition-Name 347 378	changes in the area of the skin
+T45	Severity 335 346	significant
+A9	Severity-Value T45 severe
+R5	Caused-By Arg1:E18 Arg2:E17	
+T46	Drug 426 446	oral glucocorticoids
+E20	Drug:T46 Name:T47
+T47	Drug-Name 426 446	oral glucocorticoids
+T48	Procedure 411 420	Treatment
+E22	Procedure:T48 
+R6	Using Arg1:E22 Arg2:E20	
+T49	Observation 477 487	Hemoglobin
+E24	Observation:T49 Name:T50 Severity:T59 Polarity:T58
+T50	Observation-Name 477 487	Hemoglobin
+A10	Observation-Type-Value T50 lab
+T51	Observation 471 473	T4
+E26	Observation:T51 Name:T52
+T52	Observation-Name 471 473	T4
+A11	Observation-Type-Value T52 lab
+T53	Observation 466 469	TSH
+E28	Observation:T53 Name:T54
+T54	Observation-Name 466 469	TSH
+A12	Observation-Type-Value T54 lab
+T55	Observation 462 464	SR
+E30	Observation:T55 Name:T56
+T56	Observation-Name 462 464	SR
+A13	Observation-Type-Value T56 lab
+T57	Or 474 476	or
+E31	Or:T57 Arg:E26 Arg2:E24
+T58	Polarity 514 541	outside the reference range
+A14	Polarity-Value T58 abnormal
+T59	Severity 501 513	pronouncedly
+A15	Severity-Value T59 severe
+T60	Condition 595 602	disease
+E32	Condition:T60 Name:T61
+T61	Condition-Name 595 602	disease
+T62	Procedure 663 672	treatment
+E33	Procedure:T62 Temporality:E35
+T63	Modifier 654 662	systemic
+E34	Modifier:T63 Modifies:E33
+T64	Eq-Comparison 643 653	continuous
+E35	Eq-Comparison:T64 Temporal-Period:T65
+T65	Eq-Temporal-Period 643 653	continuous
+A16	Eq-Temporal-Period-Value T65 present
+T66	Assertion 634 642	requires
+E36	Assertion:T66 Asserted:E33
+A17	Assertion-Type-Value E36 hypothetical
+R7	Treatment-For Arg1:E33 Arg2:E32	
+T67	Modifier 703 713	controlled
+E37	Modifier:T67 Modifies:T26
+T68	Eq-Comparison 784 797	more than one
+E38	Eq-Comparison:T68 Unit:E39
+T69	Eq-Operator 784 793	more than
+A18	Eq-Operator-Value T69 GT
+T70	Eq-Value 794 797	one
+T71	Drug 798 819	antihypertensive drug
+E39	Drug:T71 Name:T72
+T72	Drug-Name 798 819	antihypertensive drug
+T73	Procedure 769 778	treatment
+E40	Procedure:T73 
+R8	Using Arg1:E40 Arg2:E39	
+T74	Negation 760 763	not
+E41	Negation:T74 Negates:E40
+R9	If-Then Arg1:E25 Arg2:E41	
+T75	Exception 674 683	Exception
+E42	Exception:T75 From:E32 Except:E25
+T76	Coreference 825 829	drug
+E43	Coreference:T76 Refers-To:E39 Refers-To2:E45
+T77	Drug 845 858	alpha-blocker
+E44	Drug:T77 Name:T78
+T78	Drug-Name 845 858	alpha-blocker
+T79	Negation 835 838	not
+E45	Negation:T79 Negates:E44
+T80	Drug 862 874	beta-blocker
+E46	Drug:T80 Name:T81
+T81	Drug-Name 862 874	beta-blocker
+T82	Or 859 861	or
+E47	Or:T82 Arg:E44 Arg2:E46
+T83	Drug 878 895	thiazide diuretic
+E48	Drug:T83 Name:T84
+T84	Drug-Name 878 895	thiazide diuretic
+T85	Or 875 877	or
+E49	Or:T85 Arg:E46 Arg2:E48
+T22	Eq-Comparison 928 934	active
+E50	Eq-Comparison:T22 Temporal-Period:T86
+T86	Eq-Temporal-Period 928 934	active
+A19	Eq-Temporal-Period-Value T86 present
+T87	Assertion 919 927	requires
+E51	Assertion:T87 Asserted:E21
+A20	Assertion-Type-Value E51 hypothetical
+R10	Treatment-For Arg1:E21 Arg2:E27	
+T88	Condition 968 999	changes in the area of the skin
+E52	Condition:T88 Name:T89 Severity:T90
+T89	Condition-Name 968 999	changes in the area of the skin
+T90	Severity 956 967	significant
+A21	Severity-Value T90 severe
+R11	Caused-By Arg1:E52 Arg2:E27	
+T91	And 324 327	and
+E53	And:T91 Arg:E11 Arg2:E18
+T92	And 945 948	and
+E54	And:T92 Arg:E21 Arg2:E52
+T93	Eq-Comparison 1060 1072	above 140/90
+E55	Eq-Comparison:T93 Value:T35 Unit:T94 Operator:T95
+T94	Eq-Unit 1070 1072	90
+T95	Eq-Operator 1060 1065	above
+A22	Eq-Operator-Value T95 GT
+T96	Severity 1047 1059	pronouncedly
+A23	Severity-Value T96 severe
+A24	Observation-Type-Value T24 vital
+T97	Observation 1078 1088	Blood test
+E56	Observation:T97 Name:T98 Severity:T100 Polarity:T99
+T98	Observation-Name 1078 1088	Blood test
+A25	Observation-Type-Value T98 lab
+T99	Polarity 1110 1137	outside the reference range
+A26	Polarity-Value T99 abnormal
+T100	Severity 1097 1109	pronouncedly
+A27	Severity-Value T100 severe

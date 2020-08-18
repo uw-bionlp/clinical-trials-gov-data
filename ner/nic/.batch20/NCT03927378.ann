@@ -1,0 +1,46 @@
+T1	Condition 83 93	depression
+T2	Condition-Name 83 93	depression
+E1	Condition:T1 Name:T2
+T3	Condition 604 626	cardiovascular disease
+T4	Condition-Name 604 626	cardiovascular disease
+E3	Condition:T3 Name:T4
+T5	Condition 188 207	psychiatric disease
+T6	Condition-Name 188 207	psychiatric disease
+E5	Condition:T5 Name:T6
+T7	Condition 668 683	hyperthyroidism
+T8	Condition-Name 668 683	hyperthyroidism
+E7	Condition:T7 Name:T8
+T9	Condition 209 222	schizophrenia
+T10	Condition-Name 209 222	schizophrenia
+E9	Condition:T9 Name:T10
+T11	Condition 291 301	childbirth
+T12	Condition-Name 291 301	childbirth
+E11	Condition:T11 Name:T12
+T13	Condition 457 465	syndrome
+T14	Condition-Name 457 465	syndrome
+E13	Condition:T13 Name:T14
+T15	Condition 397 402	HELLP
+T16	Condition-Name 397 402	HELLP
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 46 47	≥
+A1	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 106 107	≥
+A2	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 508 509	≥
+A3	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 658 659	≥
+A4	Eq-Operator-Value T20 GTEQ
+T21	Eq-Temporal-Unit 50 55	years
+A5	Eq-Temporal-Unit-Value T21 year
+T22	Age 42 45	age
+E16	Age:T22
+T23	Eq-Value 47 49	18
+T24	Eq-Value 107 109	10
+T25	Eq-Comparison 46 55	≥18 years
+E17	Eq-Comparison:T25 Operator:T17 Temporal-Unit:T21 Value:T23
+T26	Eq-Comparison 106 109	≥10
+E18	Eq-Comparison:T26 Operator:T18 Value:T24
+T27	Eq-Comparison 177 184	History
+E19	Eq-Comparison:T27 Temporal-Period:T28
+T28	Eq-Temporal-Period 177 184	History
+A6	Eq-Temporal-Period-Value T28 past

@@ -1,0 +1,66 @@
+T1	Procedure 562 574	chemotherapy
+T2	Procedure-Name 562 574	chemotherapy
+E1	Procedure:T1 Name:T2
+T3	Procedure 576 588	radiotherapy
+T4	Procedure-Name 576 588	radiotherapy
+E3	Procedure:T3 Name:T4
+T5	Condition 384 391	Group B
+T6	Condition-Name 384 391	Group B
+E5	Condition:T5 Name:T6
+T7	Procedure 645 661	hormonal therapy
+T8	Procedure-Name 645 661	hormonal therapy
+E7	Procedure:T7 Name:T8
+T9	Condition 723 732	Pregnancy
+T10	Condition-Name 723 732	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Procedure 784 796	chemotherapy
+T12	Procedure-Name 784 796	chemotherapy
+E11	Procedure:T11 Name:T12
+T13	Procedure 798 810	radiotherapy
+T14	Procedure-Name 798 810	radiotherapy
+E13	Procedure:T13 Name:T14
+T15	Condition 734 741	Group B
+T16	Condition-Name 734 741	Group B
+E15	Condition:T15 Name:T16
+T17	Procedure 867 883	hormonal therapy
+T18	Procedure-Name 867 883	hormonal therapy
+E17	Procedure:T17 Name:T18
+T19	Eq-Operator 268 276	the past
+A1	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 337 338	≥
+A2	Eq-Operator-Value T20 GTEQ
+T21	Eq-Temporal-Unit 56 61	years
+A3	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 181 186	years
+A4	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 214 219	years
+A5	Eq-Temporal-Unit-Value T23 year
+T24	Eq-Temporal-Unit 280 285	years
+A6	Eq-Temporal-Unit-Value T24 year
+T25	Eq-Temporal-Unit 418 423	years
+A7	Eq-Temporal-Unit-Value T25 year
+T26	Age 62 65	old
+E18	Age:T26
+T27	Age 424 427	old
+E19	Age:T27
+T28	Eq-Operator 50 52	to
+A8	Eq-Operator-Value T28 BETWEEN
+T29	Eq-Operator 412 414	to
+A9	Eq-Operator-Value T29 BETWEEN
+T30	Eq-Value 47 49	50
+T31	Eq-Value 53 55	77
+T32	Eq-Value 173 175	30
+T33	Eq-Value 211 213	20
+T34	Eq-Value 277 279	15
+T35	Eq-Value 310 311	6
+T36	Eq-Value 338 339	1
+T37	Eq-Value 409 411	50
+T38	Eq-Value 415 417	77
+T39	Eq-Comparison 268 285	the past 15 years
+E20	Eq-Comparison:T39 Operator:T19 Temporal-Unit:T24 Value:T34
+T40	Eq-Comparison 337 339	≥1
+E21	Eq-Comparison:T40 Operator:T20 Value:T36
+T41	Eq-Comparison 47 52	50 to
+E22	Eq-Comparison:T41 Operator:T28 Value:T30
+T42	Eq-Comparison 409 414	50 to
+E23	Eq-Comparison:T42 Operator:T29 Value:T37

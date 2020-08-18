@@ -1,0 +1,70 @@
+T1	Procedure 127 148	radical prostatectomy
+T2	Procedure-Name 127 148	radical prostatectomy
+E1	Procedure:T1 Name:T2
+T3	Procedure 939 952	brachytherapy
+T4	Procedure-Name 939 952	brachytherapy
+E3	Procedure:T3 Name:T4
+T5	Procedure 896 907	irradiation
+T6	Procedure-Name 896 907	irradiation
+E5	Procedure:T5 Name:T6
+T7	Procedure 924 935	cryotherapy
+T8	Procedure-Name 924 935	cryotherapy
+E7	Procedure:T7 Name:T8
+T9	Eq-Operator 205 207	<=
+A1	Eq-Operator-Value T9 LTEQ
+T10	Eq-Operator 290 296	within
+A2	Eq-Operator-Value T10 GTEQ
+T11	Eq-Operator 355 356	≥
+A3	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 382 383	≥
+A4	Eq-Operator-Value T12 GTEQ
+T13	Eq-Operator 412 413	≥
+A5	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 466 472	within
+A6	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 510 511	<
+A7	Eq-Operator-Value T15 LT
+T16	Eq-Operator 569 575	within
+A8	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 623 624	<
+A9	Eq-Operator-Value T17 LT
+T18	Eq-Operator 707 708	<
+A10	Eq-Operator-Value T18 LT
+T19	Eq-Temporal-Unit 299 305	months
+A11	Eq-Temporal-Unit-Value T19 month
+T20	Eq-Temporal-Unit 475 481	months
+A12	Eq-Temporal-Unit-Value T20 month
+T21	Eq-Temporal-Unit 578 584	months
+A13	Eq-Temporal-Unit-Value T21 month
+T22	Eq-Unit 368 371	mm3
+T23	Eq-Unit 397 400	mm3
+T24	Eq-Operator 248 249	-
+A14	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 191 192	0
+T26	Eq-Value 247 248	0
+T27	Eq-Value 249 250	1
+T28	Eq-Value 297 298	6
+T29	Eq-Value 357 361	1500
+T30	Eq-Value 384 386	50
+T31	Eq-Value 414 415	8
+T32	Eq-Value 473 474	6
+T33	Eq-Value 517 518	2
+T34	Eq-Value 576 577	6
+T35	Eq-Value 625 626	1
+T36	Eq-Value 714 715	2
+T37	Eq-Comparison 290 305	within 6 months
+E8	Eq-Comparison:T37 Operator:T10 Temporal-Unit:T19 Value:T28
+T38	Eq-Comparison 355 361	≥ 1500
+E9	Eq-Comparison:T38 Operator:T11 Value:T29
+T39	Eq-Comparison 382 386	≥ 50
+E10	Eq-Comparison:T39 Operator:T12 Value:T30
+T40	Eq-Comparison 412 415	≥ 8
+E11	Eq-Comparison:T40 Operator:T13 Value:T31
+T41	Eq-Comparison 466 481	within 6 months
+E12	Eq-Comparison:T41 Operator:T14 Temporal-Unit:T20 Value:T32
+T42	Eq-Comparison 569 584	within 6 months
+E13	Eq-Comparison:T42 Operator:T16 Temporal-Unit:T21 Value:T34
+T43	Eq-Comparison 623 626	< 1
+E14	Eq-Comparison:T43 Operator:T17 Value:T35
+T44	Eq-Comparison 247 249	0-
+E15	Eq-Comparison:T44 Operator:T24 Value:T26

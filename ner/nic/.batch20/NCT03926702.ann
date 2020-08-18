@@ -1,0 +1,75 @@
+T1	Condition 377 407	progressive supranuclear palsy
+T2	Condition-Name 377 407	progressive supranuclear palsy
+E1	Condition:T1 Name:T2
+T3	Condition 341 366	mild cognitive impairment
+T4	Condition-Name 341 366	mild cognitive impairment
+E3	Condition:T3 Name:T4
+T5	Condition 315 334	Alzheimer's disease
+T6	Condition-Name 315 334	Alzheimer's disease
+E5	Condition:T5 Name:T6
+T7	Condition 368 371	MCI
+T8	Condition-Name 368 371	MCI
+E7	Condition:T7 Name:T8
+T9	Condition 409 412	PSP
+T10	Condition-Name 409 412	PSP
+E9	Condition:T9 Name:T10
+T11	Condition 336 338	AD
+T12	Condition-Name 336 338	AD
+E11	Condition:T11 Name:T12
+T13	Condition 740 760	psychiatric disorder
+T14	Condition-Name 740 760	psychiatric disorder
+E13	Condition:T13 Name:T14
+T15	Condition 703 719	systemic disease
+T16	Condition-Name 703 719	systemic disease
+E15	Condition:T15 Name:T16
+T17	Condition 669 683	claustrophobia
+T18	Condition-Name 669 683	claustrophobia
+E17	Condition:T17 Name:T18
+T19	Procedure 492 501	pacemaker
+T20	Procedure-Name 492 501	pacemaker
+E19	Procedure:T19 Name:T20
+T21	Procedure 618 627	piercings
+T22	Procedure-Name 618 627	piercings
+E21	Procedure:T21 Name:T22
+T23	Language 1071 1078	English
+T24	Condition 522 527	brain
+T25	Condition-Name 522 527	brain
+E24	Condition:T24 Name:T25
+T26	Eq-Operator 830 845	within the past
+A1	Eq-Operator-Value T26 LTEQ
+T27	Eq-Operator 879 888	less than
+A2	Eq-Operator-Value T27 LT
+T28	Eq-Temporal-Unit 848 853	years
+A3	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Unit 892 901	kilograms
+T30	Age 62 66	aged
+E25	Age:T30
+T31	Age 246 250	aged
+E26	Age:T31
+T32	Age 979 982	age
+E27	Age:T32
+T33	Eq-Value 67 69	50
+T34	Eq-Value 251 253	50
+T35	Eq-Value 846 847	5
+T36	Eq-Value 889 891	45
+T37	Eq-Value 983 985	50
+T38	Eq-Comparison 830 853	within the past 5 years
+E28	Eq-Comparison:T38 Operator:T26 Temporal-Unit:T28 Value:T35
+T39	Eq-Comparison 879 901	less than 45 kilograms
+E29	Eq-Comparison:T39 Operator:T27 Unit:T29 Value:T36
+T40	Eq-Comparison 658 665	history
+E30	Eq-Comparison:T40 Temporal-Period:T41
+T41	Eq-Temporal-Period 658 665	history
+A4	Eq-Temporal-Period-Value T41 past
+T42	Eq-Comparison 727 734	history
+E31	Eq-Comparison:T42 Temporal-Period:T43
+T43	Eq-Temporal-Period 727 734	history
+A5	Eq-Temporal-Period-Value T43 past
+T44	Eq-Comparison 768 775	history
+E32	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 768 775	history
+A6	Eq-Temporal-Period-Value T45 past
+T46	Eq-Comparison 861 868	current
+E33	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 861 868	current
+A7	Eq-Temporal-Period-Value T47 present

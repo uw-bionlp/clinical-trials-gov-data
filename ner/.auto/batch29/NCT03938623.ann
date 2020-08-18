@@ -1,0 +1,23 @@
+T1	Language 96 105	Languedoc
+T2	Eq-Operator 771 780	less than
+A1	Eq-Operator-Value T2 LT
+T3	Eq-Operator 812 821	less than
+A2	Eq-Operator-Value T3 LT
+T4	Eq-Temporal-Unit 783 788	years
+A3	Eq-Temporal-Unit-Value T4 year
+T5	Eq-Temporal-Unit 824 829	years
+A4	Eq-Temporal-Unit-Value T5 year
+T6	Age 34 38	aged
+E1	Age:T6
+T7	Eq-Operator 42 44	to
+A5	Eq-Operator-Value T7 BETWEEN
+T8	Eq-Value 39 41	50
+T9	Eq-Value 45 47	74
+T10	Eq-Value 781 782	2
+T11	Eq-Value 822 823	5
+T12	Eq-Comparison 771 788	less than 2 years
+E2	Eq-Comparison:T12 Operator:T2 Temporal-Unit:T4 Value:T10
+T13	Eq-Comparison 812 829	less than 5 years
+E3	Eq-Comparison:T13 Operator:T3 Temporal-Unit:T5 Value:T11
+T14	Eq-Comparison 39 44	50 to
+E4	Eq-Comparison:T14 Operator:T7 Value:T8

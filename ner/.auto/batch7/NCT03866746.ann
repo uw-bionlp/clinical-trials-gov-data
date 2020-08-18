@@ -1,0 +1,50 @@
+T1	Procedure 387 414	panretinal photocoagulation
+T2	Procedure-Name 387 414	panretinal photocoagulation
+E1	Procedure:T1 Name:T2
+T3	Procedure 273 289	cataract surgery
+T4	Procedure-Name 273 289	cataract surgery
+E3	Procedure:T3 Name:T4
+T5	Condition 416 419	PRP
+T6	Condition-Name 416 419	PRP
+E5	Condition:T5 Name:T6
+T7	Condition 589 606	vascular diseases
+T8	Condition-Name 589 606	vascular diseases
+E7	Condition:T7 Name:T8
+T9	Procedure 525 533	traction
+T10	Procedure-Name 525 533	traction
+E9	Procedure:T9 Name:T10
+T11	Condition 540 548	syndrome
+T12	Condition-Name 540 548	syndrome
+E11	Condition:T11 Name:T12
+T13	Condition 561 569	glaucoma
+T14	Condition-Name 561 569	glaucoma
+E13	Condition:T13 Name:T14
+T15	Condition 535 538	VMT
+T16	Condition-Name 535 538	VMT
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 290 296	within
+A1	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 352 358	within
+A2	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 421 427	within
+A3	Eq-Operator-Value T19 GTEQ
+T20	Eq-Temporal-Unit 39 44	years
+A4	Eq-Temporal-Unit-Value T20 year
+T21	Eq-Temporal-Unit 299 305	months
+A5	Eq-Temporal-Unit-Value T21 month
+T22	Eq-Temporal-Unit 375 381	months
+A6	Eq-Temporal-Unit-Value T22 month
+T23	Eq-Temporal-Unit 441 447	months
+A7	Eq-Temporal-Unit-Value T23 month
+T24	Eq-Unit 105 107	CM
+T25	Age 45 48	old
+E16	Age:T25
+T26	Eq-Value 36 38	18
+T27	Eq-Value 120 123	250
+T28	Eq-Value 192 194	20
+T29	Eq-Value 203 205	20
+T30	Eq-Value 297 298	6
+T31	Eq-Value 373 374	6
+T32	Eq-Value 439 440	4
+T33	Eq-Comparison 290 305	within 6 months
+E17	Eq-Comparison:T33 Operator:T17 Temporal-Unit:T21 Value:T30

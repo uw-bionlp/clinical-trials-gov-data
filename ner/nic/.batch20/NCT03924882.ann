@@ -1,0 +1,117 @@
+T1	Life-Stage-And-Gender 25 31	Female
+A1	Life-Stage-And-Gender-Type T1 male
+T2	Condition 566 584	Measurable disease
+T3	Condition-Name 566 584	Measurable disease
+E2	Condition:T2 Name:T3
+T4	Condition 1111 1139	gastrointestinal perforation
+T5	Condition-Name 1111 1139	gastrointestinal perforation
+E4	Condition:T4 Name:T5
+T6	Procedure 1181 1199	surgical procedure
+T7	Procedure-Name 1181 1199	surgical procedure
+E6	Procedure:T6 Name:T7
+T8	Condition 1273 1290	bowel obstruction
+T9	Condition-Name 1273 1290	bowel obstruction
+E8	Condition:T8 Name:T9
+T10	Condition 975 990	unstable angina
+T11	Condition-Name 975 990	unstable angina
+E10	Condition:T10 Name:T11
+T12	Condition 920 932	hypertension
+T13	Condition-Name 920 932	hypertension
+E12	Condition:T12 Name:T13
+T14	Eq-Operator 37 38	≥
+A2	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 51 52	≤
+A3	Eq-Operator-Value T15 LTEQ
+T16	Eq-Operator 244 250	within
+A4	Eq-Operator-Value T16 LTEQ
+T17	Eq-Operator 1042 1048	within
+A5	Eq-Operator-Value T17 LTEQ
+T18	Eq-Operator 1140 1146	within
+A6	Eq-Operator-Value T18 LTEQ
+T19	Eq-Operator 1200 1206	within
+A7	Eq-Operator-Value T19 LTEQ
+T20	Eq-Operator 1291 1297	within
+A8	Eq-Operator-Value T20 LTEQ
+T21	Eq-Temporal-Unit 41 46	years
+A9	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 55 60	years
+A10	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Temporal-Unit 253 259	months
+A11	Eq-Temporal-Unit-Value T23 month
+T24	Eq-Temporal-Unit 734 740	months
+A12	Eq-Temporal-Unit-Value T24 month
+T25	Eq-Temporal-Unit 1051 1057	months
+A13	Eq-Temporal-Unit-Value T25 month
+T26	Eq-Temporal-Unit 1150 1154	days
+A14	Eq-Temporal-Unit-Value T26 day
+T27	Eq-Temporal-Unit 1210 1214	days
+A15	Eq-Temporal-Unit-Value T27 day
+T28	Eq-Temporal-Unit 1301 1305	days
+A16	Eq-Temporal-Unit-Value T28 day
+T29	Age 33 36	age
+E13	Age:T29
+T30	Eq-Operator 558 559	-
+A17	Eq-Operator-Value T30 BETWEEN
+T31	Eq-Value 38 40	18
+T32	Eq-Value 52 54	70
+T33	Eq-Value 251 252	6
+T34	Eq-Value 557 558	0
+T35	Eq-Value 559 560	2
+T36	Eq-Value 657 658	1
+T37	Eq-Value 732 733	3
+T38	Eq-Value 1049 1050	6
+T39	Eq-Value 1071 1072	1
+T40	Eq-Value 1147 1149	28
+T41	Eq-Value 1168 1169	1
+T42	Eq-Value 1207 1209	28
+T43	Eq-Value 1228 1229	1
+T44	Eq-Value 1298 1300	28
+T45	Eq-Value 1319 1320	1
+T46	Eq-Comparison 37 46	≥18 years
+E14	Eq-Comparison:T46 Operator:T14 Temporal-Unit:T21 Value:T31
+T47	Eq-Comparison 51 60	≤70 years
+E15	Eq-Comparison:T47 Operator:T15 Temporal-Unit:T22 Value:T32
+T48	Eq-Comparison 244 259	within 6 months
+E16	Eq-Comparison:T48 Operator:T16 Temporal-Unit:T23 Value:T33
+T49	Eq-Comparison 1042 1057	within 6 months
+E17	Eq-Comparison:T49 Operator:T17 Temporal-Unit:T25 Value:T38
+T50	Eq-Comparison 1140 1154	within 28 days
+E18	Eq-Comparison:T50 Operator:T18 Temporal-Unit:T26 Value:T40
+T51	Eq-Comparison 1200 1214	within 28 days
+E19	Eq-Comparison:T51 Operator:T19 Temporal-Unit:T27 Value:T42
+T52	Eq-Comparison 1291 1305	within 28 days
+E20	Eq-Comparison:T52 Operator:T20 Temporal-Unit:T28 Value:T44
+T53	Eq-Comparison 557 559	0-
+E21	Eq-Comparison:T53 Operator:T30 Value:T34
+T54	Eq-Comparison 938 945	History
+E22	Eq-Comparison:T54 Temporal-Period:T55
+T55	Eq-Temporal-Period 938 945	History
+A18	Eq-Temporal-Period-Value T55 past
+T56	Eq-Comparison 1079 1086	History
+E23	Eq-Comparison:T56 Temporal-Period:T57
+T57	Eq-Temporal-Period 1079 1086	History
+A19	Eq-Temporal-Period-Value T57 past
+T58	Eq-Comparison 1259 1265	active
+E24	Eq-Comparison:T58 Temporal-Period:T59
+T59	Eq-Temporal-Period 1259 1265	active
+A20	Eq-Temporal-Period-Value T59 present
+T60	Eq-Comparison 820 825	prior
+E25	Eq-Comparison:T60 Temporal-Period:T61
+T61	Eq-Temporal-Period 820 825	prior
+A21	Eq-Temporal-Period-Value T61 past
+T62	Eq-Comparison 1058 1063	prior
+E26	Eq-Comparison:T62 Temporal-Period:T63
+T63	Eq-Temporal-Period 1058 1063	prior
+A22	Eq-Temporal-Period-Value T63 past
+T64	Eq-Comparison 1155 1160	prior
+E27	Eq-Comparison:T64 Temporal-Period:T65
+T65	Eq-Temporal-Period 1155 1160	prior
+A23	Eq-Temporal-Period-Value T65 past
+T66	Eq-Comparison 1215 1220	prior
+E28	Eq-Comparison:T66 Temporal-Period:T67
+T67	Eq-Temporal-Period 1215 1220	prior
+A24	Eq-Temporal-Period-Value T67 past
+T68	Eq-Comparison 1306 1311	prior
+E29	Eq-Comparison:T68 Temporal-Period:T69
+T69	Eq-Temporal-Period 1306 1311	prior
+A25	Eq-Temporal-Period-Value T69 past

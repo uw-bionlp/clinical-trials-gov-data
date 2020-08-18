@@ -1,0 +1,32 @@
+T1	Condition 641 668	Allergy to local anesthetic
+T2	Condition-Name 641 668	Allergy to local anesthetic
+E1	Condition:T1 Name:T2
+T3	Condition 214 234	Psychiatric disorder
+T4	Condition-Name 214 234	Psychiatric disorder
+E3	Condition:T3 Name:T4
+T5	Condition 413 424	heart block
+T6	Condition-Name 413 424	heart block
+E5	Condition:T5 Name:T6
+T7	Procedure 49 58	lobectomy
+T8	Procedure-Name 49 58	lobectomy
+E7	Procedure:T7 Name:T8
+T9	Condition 370 378	epilepsy
+T10	Condition-Name 370 378	epilepsy
+E9	Condition:T9 Name:T10
+T11	Procedure 59 63	VATS
+T12	Procedure-Name 59 63	VATS
+E11	Procedure:T11 Name:T12
+T13	Eq-Operator 75 76	>
+A1	Eq-Operator-Value T13 GT
+T14	Eq-Temporal-Unit 80 85	years
+A2	Eq-Temporal-Unit-Value T14 year
+T15	Eq-Operator 127 129	to
+A3	Eq-Operator-Value T15 BETWEEN
+T16	Eq-Value 77 79	18
+T17	Eq-Value 125 126	1
+T18	Eq-Value 130 131	3
+T19	Eq-Value 384 385	3
+T20	Eq-Comparison 75 85	> 18 years
+E12	Eq-Comparison:T20 Operator:T13 Temporal-Unit:T14 Value:T16
+T21	Eq-Comparison 125 129	1 to
+E13	Eq-Comparison:T21 Operator:T15 Value:T17

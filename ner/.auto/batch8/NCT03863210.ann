@@ -1,0 +1,74 @@
+T1	Condition 531 556	peripheral artery disease
+T2	Condition-Name 531 556	peripheral artery disease
+E1	Condition:T1 Name:T2
+T3	Procedure 387 411	antihypertensive therapy
+T4	Procedure-Name 387 411	antihypertensive therapy
+E3	Procedure:T3 Name:T4
+T5	Condition 477 499	cardiovascular disease
+T6	Condition-Name 477 499	cardiovascular disease
+E5	Condition:T5 Name:T6
+T7	Condition 507 529	ischemic heart disease
+T8	Condition-Name 507 529	ischemic heart disease
+E7	Condition:T7 Name:T8
+T9	Condition 209 228	high blood pressure
+T10	Condition-Name 209 228	high blood pressure
+E9	Condition:T9 Name:T10
+T11	Observation 123 138	body mass index
+T12	Observation-Name 123 138	body mass index
+E11	Observation:T11 Name:T12
+A1	Observation-Type-Value T12 vital
+T13	Life-Stage-And-Gender 25 35	female sex
+A2	Life-Stage-And-Gender-Type T13 male
+T14	Condition 108 115	obesity
+T15	Condition-Name 108 115	obesity
+E14	Condition:T14 Name:T15
+T16	Condition 562 568	stroke
+T17	Condition-Name 562 568	stroke
+E16	Condition:T16 Name:T17
+T18	Observation 140 143	BMI
+T19	Observation-Name 140 143	BMI
+E18	Observation:T18 Name:T19
+A3	Observation-Type-Value T19 vital
+T20	Condition 501 504	CVD
+T21	Condition-Name 501 504	CVD
+E20	Condition:T20 Name:T21
+T22	Eq-Operator 145 146	≥
+A4	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 201 202	≥
+A5	Eq-Operator-Value T23 GTEQ
+T24	Eq-Operator 254 255	≥
+A6	Eq-Operator-Value T24 GTEQ
+T25	Eq-Operator 297 298	≥
+A7	Eq-Operator-Value T25 GTEQ
+T26	Eq-Operator 333 334	≥
+A8	Eq-Operator-Value T26 GTEQ
+T27	Eq-Temporal-Unit 54 59	years
+A9	Eq-Temporal-Unit-Value T27 year
+T28	Eq-Unit 149 154	kg/m2
+T29	Eq-Unit 205 207	cm
+T30	Eq-Unit 259 261	mm
+T31	Eq-Unit 301 303	mm
+T32	Eq-Unit 338 340	mm
+T33	Age 41 44	age
+E21	Age:T33
+T34	Eq-Operator 48 50	to
+A10	Eq-Operator-Value T34 BETWEEN
+T35	Eq-Value 45 47	45
+T36	Eq-Value 51 53	60
+T37	Eq-Value 146 148	25
+T38	Eq-Value 202 204	88
+T39	Eq-Value 255 258	140
+T40	Eq-Value 298 300	90
+T41	Eq-Value 334 335	5
+T42	Eq-Comparison 145 154	≥25 kg/m2
+E22	Eq-Comparison:T42 Operator:T22 Unit:T28 Value:T37
+T43	Eq-Comparison 201 207	≥88 cm
+E23	Eq-Comparison:T43 Operator:T23 Unit:T29 Value:T38
+T44	Eq-Comparison 254 261	≥140 mm
+E24	Eq-Comparison:T44 Operator:T24 Unit:T30 Value:T39
+T45	Eq-Comparison 297 303	≥90 mm
+E25	Eq-Comparison:T45 Operator:T25 Unit:T31 Value:T40
+T46	Eq-Comparison 333 335	≥5
+E26	Eq-Comparison:T46 Operator:T26 Value:T41
+T47	Eq-Comparison 45 50	45 to
+E27	Eq-Comparison:T47 Operator:T34 Value:T35

@@ -1,0 +1,63 @@
+T1	Observation 29 45	reproductive age
+T2	Observation-Name 29 45	reproductive age
+E1	Observation:T1 Name:T2
+T3	Condition 465 474	Pregnancy
+T4	Condition-Name 465 474	Pregnancy
+E3	Condition:T3 Name:T4
+T5	Condition 451 459	migraine
+T6	Condition-Name 451 459	migraine
+E5	Condition:T5 Name:T6
+T7	Life-Stage-And-Gender 53 58	woman
+A1	Life-Stage-And-Gender-Type T7 female
+T8	Condition 64 76	Blood reflux
+E2	Condition:T8 Name:T9
+T9	Condition-Name 64 76	Blood reflux
+T10	Modifier 84 94	parametric
+E4	Modifier:T10 Modifies:T9
+T11	Modifier 96 103	uterine
+E6	Modifier:T11 Modifies:T9
+T12	Modifier 105 118	gonadal veins
+E7	Modifier:T12 Modifies:T9
+T13	Condition 155 164	pathology
+E8	Condition:T13 Name:T14
+T14	Condition-Name 155 164	pathology
+T15	Negation 128 135	absence
+E9	Negation:T15 Negates:E8
+T16	Condition 189 200	pelvic pain
+E10	Condition:T16 Name:T17
+T17	Condition-Name 189 200	pelvic pain
+T18	And 166 177	accompanied
+E11	And:T18 Arg2:E10 Arg:E9
+T19	Condition 241 253	blood reflux
+E12	Condition:T19 Name:T20
+T20	Condition-Name 241 253	blood reflux
+T21	Modifier 264 274	parametric
+E13	Modifier:T21 Modifies:T20
+T22	Modifier 276 283	uterine
+E14	Modifier:T22 Modifies:T20
+T23	Modifier 285 298	gonadal veins
+E15	Modifier:T23 Modifies:T20
+T24	Negation 230 237	absence
+E16	Negation:T24 Negates:E12
+T25	Condition 320 328	diseases
+E17	Condition:T25 Name:T26
+T26	Condition-Name 320 328	diseases
+T27	Assertion 359 367	suggests
+E18	Assertion:T27 Asserted:E20
+A2	Assertion-Type-Value E18 possible
+T28	Modifier 181 188	chronic
+E19	Modifier:T28 Modifies:E10
+T29	Condition 392 403	pelvic pain
+E20	Condition:T29 Name:T30
+T30	Condition-Name 392 403	pelvic pain
+T31	Modifier 384 391	chronic
+E21	Modifier:T31 Modifies:E20
+T32	Condition 435 439	pain
+E22	Condition:T32 Name:T33
+T33	Condition-Name 435 439	pain
+T34	Modifier 427 434	chronic
+E23	Modifier:T34 Modifies:E22
+T35	And 404 407	and
+E24	And:T35 Arg:E20 Arg2:E22
+R1	Example-Of Arg1:E5 Arg2:E22	
+R2	Caused-By Arg1:E20 Arg2:E17	

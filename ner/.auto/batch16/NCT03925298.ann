@@ -1,0 +1,96 @@
+T1	Condition 117 132	ischemic stroke
+T2	Condition-Name 117 132	ischemic stroke
+E1	Condition:T1 Name:T2
+T3	Procedure 217 237	thrombolytic therapy
+T4	Procedure-Name 217 237	thrombolytic therapy
+E3	Procedure:T3 Name:T4
+T5	Condition 382 409	acute myocardial infarction
+T6	Condition-Name 382 409	acute myocardial infarction
+E5	Condition:T5 Name:T6
+T7	Condition 411 433	cerebrovascular stroke
+T8	Condition-Name 411 433	cerebrovascular stroke
+E7	Condition:T7 Name:T8
+T9	Condition 539 543	lung
+T10	Condition-Name 539 543	lung
+E9	Condition:T9 Name:T10
+T11	Procedure 623 636	major surgery
+T12	Procedure-Name 623 636	major surgery
+E11	Procedure:T11 Name:T12
+T13	Condition 1188 1199	dysfunction
+T14	Condition-Name 1188 1199	dysfunction
+E13	Condition:T13 Name:T14
+T15	Condition 1134 1143	pregnancy
+T16	Condition-Name 1134 1143	pregnancy
+E15	Condition:T15 Name:T16
+T17	Condition 1160 1164	lung
+T18	Condition-Name 1160 1164	lung
+E17	Condition:T17 Name:T18
+T19	Eq-Operator 149 150	≤
+A1	Eq-Operator-Value T19 LTEQ
+T20	Eq-Operator 576 582	within
+A2	Eq-Operator-Value T20 GTEQ
+T21	Eq-Operator 637 643	within
+A3	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 728 734	within
+A4	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 773 779	within
+A5	Eq-Operator-Value T23 GTEQ
+T24	Eq-Operator 844 856	greater than
+A6	Eq-Operator-Value T24 GT
+T25	Eq-Operator 907 908	>
+A7	Eq-Operator-Value T25 GT
+T26	Eq-Operator 940 941	>
+A8	Eq-Operator-Value T26 GT
+T27	Eq-Operator 971 972	<
+A9	Eq-Operator-Value T27 LT
+T28	Eq-Operator 978 979	>
+A10	Eq-Operator-Value T28 GT
+T29	Eq-Operator 1065 1066	>
+A11	Eq-Operator-Value T29 GT
+T30	Eq-Operator 1090 1091	>
+A12	Eq-Operator-Value T30 GT
+T31	Eq-Operator 1114 1115	<
+A13	Eq-Operator-Value T31 LT
+T32	Eq-Operator 1260 1261	>
+A14	Eq-Operator-Value T32 GT
+T33	Eq-Temporal-Unit 456 462	months
+A15	Eq-Temporal-Unit-Value T33 month
+T34	Eq-Temporal-Unit 511 517	months
+A16	Eq-Temporal-Unit-Value T34 month
+T35	Eq-Temporal-Unit 593 598	weeks
+A17	Eq-Temporal-Unit-Value T35 week
+T36	Eq-Temporal-Unit 661 666	weeks
+A18	Eq-Temporal-Unit-Value T36 week
+T37	Eq-Unit 913 915	mm
+T38	Eq-Unit 946 948	mm
+T39	Eq-Unit 1124 1127	mm3
+T40	Eq-Value 151 152	4
+T41	Eq-Value 780 782	48
+T42	Eq-Value 909 912	185
+T43	Eq-Value 942 945	110
+T44	Eq-Value 972 974	50
+T45	Eq-Value 980 983	400
+T46	Eq-Value 1067 1068	1
+T47	Eq-Value 1091 1093	15
+T48	Eq-Value 1116 1119	100
+T49	Eq-Value 1262 1263	4
+T50	Eq-Comparison 149 152	≤ 4
+E18	Eq-Comparison:T50 Operator:T19 Value:T40
+T51	Eq-Comparison 773 782	within 48
+E19	Eq-Comparison:T51 Operator:T23 Value:T41
+T52	Eq-Comparison 907 915	> 185 mm
+E20	Eq-Comparison:T52 Operator:T25 Unit:T37 Value:T42
+T53	Eq-Comparison 940 948	> 110 mm
+E21	Eq-Comparison:T53 Operator:T26 Unit:T38 Value:T43
+T54	Eq-Comparison 971 974	<50
+E22	Eq-Comparison:T54 Operator:T27 Value:T44
+T55	Eq-Comparison 978 983	> 400
+E23	Eq-Comparison:T55 Operator:T28 Value:T45
+T56	Eq-Comparison 1065 1068	> 1
+E24	Eq-Comparison:T56 Operator:T29 Value:T46
+T57	Eq-Comparison 1090 1093	>15
+E25	Eq-Comparison:T57 Operator:T30 Value:T47
+T58	Eq-Comparison 1114 1119	< 100
+E26	Eq-Comparison:T58 Operator:T31 Value:T48
+T59	Eq-Comparison 1260 1263	> 4
+E27	Eq-Comparison:T59 Operator:T32 Value:T49

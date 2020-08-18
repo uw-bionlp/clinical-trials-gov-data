@@ -1,0 +1,55 @@
+T1	Language 222 225	iii
+T2	Condition 475 484	bone loss
+T3	Condition-Name 475 484	bone loss
+E2	Condition:T2 Name:T3
+T4	Language 384 387	iii
+T5	Life-Stage-And-Gender 491 499	Children
+A1	Life-Stage-And-Gender-Type T5 child
+T6	Language 640 643	iii
+T7	Condition 851 860	pregnancy
+T8	Condition-Name 851 860	pregnancy
+E7	Condition:T7 Name:T8
+T9	Condition 864 873	lactation
+T10	Condition-Name 864 873	lactation
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 42 51	less than
+A2	Eq-Operator-Value T11 LT
+T12	Eq-Operator 164 165	>
+A3	Eq-Operator-Value T12 GT
+T13	Eq-Operator 201 202	>
+A4	Eq-Operator-Value T13 GT
+T14	Eq-Operator 444 445	>
+A5	Eq-Operator-Value T14 GT
+T15	Eq-Temporal-Unit 55 60	years
+A6	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Temporal-Unit 601 606	years
+A7	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Temporal-Unit 799 805	months
+A8	Eq-Temporal-Unit-Value T17 month
+T18	Age 61 64	old
+E10	Age:T18
+T19	Age 610 613	age
+E11	Age:T19
+T20	Eq-Operator 595 597	to
+A9	Eq-Operator-Value T20 BETWEEN
+T21	Eq-Value 52 54	35
+T22	Eq-Value 96 97	8
+T23	Eq-Value 166 167	5
+T24	Eq-Value 185 186	2
+T25	Eq-Value 203 204	7
+T26	Eq-Value 236 238	20
+T27	Eq-Value 350 352	20
+T28	Eq-Value 446 447	4
+T29	Eq-Value 593 594	6
+T30	Eq-Value 598 600	12
+T31	Eq-Value 797 798	6
+T32	Eq-Comparison 42 60	less than 35 years
+E12	Eq-Comparison:T32 Operator:T11 Temporal-Unit:T15 Value:T21
+T33	Eq-Comparison 164 167	> 5
+E13	Eq-Comparison:T33 Operator:T12 Value:T23
+T34	Eq-Comparison 201 204	> 7
+E14	Eq-Comparison:T34 Operator:T13 Value:T25
+T35	Eq-Comparison 444 447	> 4
+E15	Eq-Comparison:T35 Operator:T14 Value:T28
+T36	Eq-Comparison 593 597	6 to
+E16	Eq-Comparison:T36 Operator:T20 Value:T29

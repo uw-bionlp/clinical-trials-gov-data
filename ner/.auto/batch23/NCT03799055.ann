@@ -1,0 +1,37 @@
+T1	Procedure 78 105	elective surgical procedure
+T2	Procedure-Name 78 105	elective surgical procedure
+E1	Procedure:T1 Name:T2
+T3	Procedure 116 139	endotracheal intubation
+T4	Procedure-Name 116 139	endotracheal intubation
+E3	Procedure:T3 Name:T4
+T5	Procedure 45 56	Anaesthesia
+T6	Procedure-Name 45 56	Anaesthesia
+E5	Procedure:T5 Name:T6
+T7	Observation 172 175	BMI
+T8	Observation-Name 172 175	BMI
+E7	Observation:T7 Name:T8
+A1	Observation-Type-Value T8 vital
+T9	Condition 372 381	Pregnancy
+T10	Condition-Name 372 381	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Observation 426 429	BMI
+T12	Observation-Name 426 429	BMI
+E11	Observation:T11 Name:T12
+A2	Observation-Type-Value T12 vital
+T13	Eq-Operator 176 185	less than
+A3	Eq-Operator-Value T13 LT
+T14	Eq-Temporal-Unit 156 161	years
+A4	Eq-Temporal-Unit-Value T14 year
+T15	Eq-Unit 188 190	kg
+T16	Eq-Unit 443 445	kg
+T17	Age 146 149	Age
+E12	Age:T17
+T18	Age 162 165	old
+E13	Age:T18
+T19	Eq-Value 63 64	1
+T20	Eq-Value 70 71	3
+T21	Eq-Value 150 152	18
+T22	Eq-Value 186 188	40
+T23	Eq-Value 440 442	40
+T24	Eq-Comparison 176 188	less than 40
+E14	Eq-Comparison:T24 Operator:T13 Value:T22

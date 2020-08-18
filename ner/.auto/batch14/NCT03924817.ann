@@ -1,0 +1,23 @@
+T1	Condition 272 291	central sleep apnea
+T2	Condition-Name 272 291	central sleep apnea
+E1	Condition:T1 Name:T2
+T3	Language 494 497	MAD
+T4	Eq-Operator 92 93	≥
+A1	Eq-Operator-Value T4 GTEQ
+T5	Eq-Operator 304 305	>
+A2	Eq-Operator-Value T5 GT
+T6	Eq-Operator 563 572	less than
+A3	Eq-Operator-Value T6 LT
+T7	Eq-Temporal-Unit 97 102	years
+A4	Eq-Temporal-Unit-Value T7 year
+T8	Age 88 91	Age
+E2	Age:T8
+T9	Eq-Value 94 96	18
+T10	Eq-Value 306 307	5
+T11	Eq-Value 573 574	5
+T12	Eq-Comparison 92 102	≥ 18 years
+E3	Eq-Comparison:T12 Operator:T4 Temporal-Unit:T7 Value:T9
+T13	Eq-Comparison 304 307	> 5
+E4	Eq-Comparison:T13 Operator:T5 Value:T10
+T14	Eq-Comparison 563 574	less than 5
+E5	Eq-Comparison:T14 Operator:T6 Value:T11

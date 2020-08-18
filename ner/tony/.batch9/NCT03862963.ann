@@ -1,0 +1,42 @@
+T1	Condition 145 153	diabetes
+T2	Condition-Name 145 153	diabetes
+E1	Condition:T1 Name:T2
+T3	Condition 208 216	Diabetes
+T4	Condition-Name 208 216	Diabetes
+E3	Condition:T3 Name:T4
+T5	Condition 130 133	T2D
+T6	Condition-Name 130 133	T2D
+E5	Condition:T5 Name:T6
+T7	Condition 513 535	coronary heart disease
+T8	Condition-Name 513 535	coronary heart disease
+E7	Condition:T7 Name:T8
+T9	Condition 467 482	unstable angina
+T10	Condition-Name 467 482	unstable angina
+E9	Condition:T9 Name:T10
+T11	Procedure 428 440	intervention
+T12	Procedure-Name 428 440	intervention
+E11	Procedure:T11 Name:T12
+T13	Procedure 590 602	intervention
+T14	Procedure-Name 590 602	intervention
+E13	Procedure:T13 Name:T14
+T15	Condition 307 315	diabetes
+T16	Condition-Name 307 315	diabetes
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 105 106	≥
+A1	Eq-Operator-Value T17 GTEQ
+T18	Eq-Operator 284 285	≤
+A2	Eq-Operator-Value T18 LTEQ
+T19	Eq-Temporal-Unit 88 93	years
+A3	Eq-Temporal-Unit-Value T19 year
+T20	Eq-Temporal-Unit 287 293	months
+A4	Eq-Temporal-Unit-Value T20 month
+T21	Age 75 79	Aged
+E16	Age:T21
+T22	Eq-Value 80 82	18
+T23	Eq-Value 85 87	75
+T24	Eq-Value 107 108	8
+T25	Eq-Value 285 286	3
+T26	Eq-Comparison 105 108	≥ 8
+E17	Eq-Comparison:T26 Operator:T17 Value:T24
+T27	Eq-Comparison 284 293	≤3 months
+E18	Eq-Comparison:T27 Operator:T18 Temporal-Unit:T20 Value:T25

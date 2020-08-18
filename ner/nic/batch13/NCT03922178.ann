@@ -1,0 +1,98 @@
+T1	Procedure 81 97	coronary surgery
+T2	Procedure-Name 81 97	coronary surgery
+E1	Procedure:T1 Name:T2 Location:T19 Temporality:E4
+T3	Condition 386 413	Hypertrophic cardiomyopathy
+T4	Condition-Name 386 413	Hypertrophic cardiomyopathy
+E3	Condition:T3 Name:T4
+T5	Condition 531 551	cardiac valvulopathy
+T6	Condition-Name 531 551	cardiac valvulopathy
+E5	Condition:T5 Name:T6
+T7	Procedure 650 669	valvular prosthesis
+T8	Procedure-Name 650 669	valvular prosthesis
+E7	Procedure:T7 Name:T8
+T9	Condition 705 714	Pregnancy
+T10	Condition-Name 705 714	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 441 442	>
+A1	Eq-Operator-Value T11 GT
+T12	Eq-Operator 509 510	<
+A2	Eq-Operator-Value T12 LT
+T13	Eq-Unit 446 448	mm
+T14	Eq-Value 356 358	50
+T15	Eq-Value 443 445	15
+T16	Eq-Value 510 512	50
+T17	Eq-Comparison 441 448	> 15 mm
+E10	Eq-Comparison:T17 Operator:T11 Unit:T13 Value:T15
+T18	Eq-Comparison 509 513	<50%
+E11	Eq-Comparison:T18 Operator:T12 Value:T16 Unit:T44
+T19	Location 40 61	CHU Brugmann Hospital
+A3	Location-Value T19 hospital
+T20	Modifier 72 80	elective
+E2	Modifier:T20 Modifies:E1
+T21	Eq-Comparison 62 71	receiving
+E4	Eq-Comparison:T21 Temporal-Period:T22
+T22	Eq-Temporal-Period 62 71	receiving
+A4	Eq-Temporal-Period-Value T22 present
+T23	Coreference 141 150	operation
+E6	Coreference:T23 Refers-To:E1
+T24	Condition 115 129	sinusal rhythm
+E8	Condition:T24 Name:T25
+T25	Condition-Name 115 129	sinusal rhythm
+T26	Temporal-Connection 130 136	before
+E12	Temporal-Connection:T26 Arg:E8 Arg2:E6
+A5	Temporal-Connection-Type-Value E12 before
+T27	Condition 217 252	conserved left ventricular function
+E13	Condition:T27 Name:T28
+T28	Condition-Name 217 252	conserved left ventricular function
+T29	Observation 263 297	left ventricular ejection fraction
+E14	Observation:T29 Name:T30 Eq-Comparison:E15
+T30	Observation-Name 263 297	left ventricular ejection fraction
+A6	Observation-Type-Value T30 measurement
+T31	Eq-Comparison 344 359	superior to 50%
+E15	Eq-Comparison:T31 Operator:T33 Value:T14 Unit:T32
+T32	Eq-Unit 358 359	%
+T33	Eq-Operator 344 352	superior
+A7	Eq-Operator-Value T33 GT
+T34	Procedure 313 322	operative
+E16	Procedure:T34 
+T35	Temporal-Connection 310 313	pre
+E17	Temporal-Connection:T35 Arg:E14 Arg2:E16
+A8	Temporal-Connection-Type-Value E17 before
+T36	Procedure 323 339	echocardiography
+E18	Procedure:T36 Name:T37
+T37	Procedure-Name 323 339	echocardiography
+R1	Found-By Arg1:E14 Arg2:E18	
+T38	Observation 415 441	diastolic septal thickness
+E19	Observation:T38 Name:T39 Eq-Comparison:E10
+T39	Observation-Name 415 441	diastolic septal thickness
+A9	Observation-Type-Value T39 measurement
+R2	Equivalent-To Arg1:E19 Arg2:E3	
+T40	Condition 455 468	Heart failure
+E20	Condition:T40 Name:T41
+T41	Condition-Name 455 468	Heart failure
+T42	Observation 474 508	left ventricular ejection fraction
+E21	Observation:T42 Name:T43 Eq-Comparison:E11
+T43	Observation-Name 474 508	left ventricular ejection fraction
+A10	Observation-Type-Value T43 measurement
+T44	Eq-Unit 512 513	%
+T45	And 469 473	with
+E22	And:T45 Arg:E20 Arg2:E21
+T46	Modifier 569 574	right
+E23	Modifier:T46 Modifies:E25
+T47	Modifier 579 583	left
+E24	Modifier:T47 Modifies:E25
+T48	Modifier 584 601	atrio-ventricular
+E25	Modifier:T48 Modifies:T6
+T49	Modifier 606 632	ventriculo-arterial valves
+E26	Modifier:T49 Modifies:T6
+T50	And 602 605	and
+E27	And:T50 Arg:E25 Arg2:E26
+T51	And 575 578	and
+E28	And:T51 Arg:E23 Arg2:E24
+T52	Condition 675 699	Congenital heart disease
+E29	Condition:T52 Name:T53
+T53	Condition-Name 675 699	Congenital heart disease
+T54	Study 754 759	study
+E30	Study:T54 
+T55	Other 737 744	another
+E31	Other:T55 Is-Other:E30

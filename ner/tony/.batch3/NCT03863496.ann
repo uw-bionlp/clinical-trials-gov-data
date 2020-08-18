@@ -1,0 +1,42 @@
+T1	Condition 929 949	Kidney insufficiency
+T2	Condition-Name 929 949	Kidney insufficiency
+E1	Condition:T1 Name:T2
+T3	Procedure 190 200	procedures
+T4	Procedure-Name 190 200	procedures
+E3	Procedure:T3 Name:T4
+T5	Procedure 493 503	procedures
+T6	Procedure-Name 493 503	procedures
+E5	Procedure:T5 Name:T6
+T7	Condition 330 338	thoracic
+T8	Condition-Name 330 338	thoracic
+E7	Condition:T7 Name:T8
+T9	Life-Stage-And-Gender 122 127	child
+A1	Life-Stage-And-Gender-Type T9 child
+T10	Life-Stage-And-Gender 593 598	child
+A2	Life-Stage-And-Gender-Type T10 child
+T11	Procedure 870 873	ALT
+T12	Procedure-Name 870 873	ALT
+E11	Procedure:T11 Name:T12
+T13	Language 875 878	AST
+T14	Eq-Operator 765 774	less than
+A3	Eq-Operator-Value T14 LT
+T15	Eq-Operator 808 809	>
+A4	Eq-Operator-Value T15 GT
+T16	Eq-Operator 833 834	<
+A5	Eq-Operator-Value T16 LT
+T17	Eq-Operator 972 973	<
+A6	Eq-Operator-Value T17 LT
+T18	Eq-Temporal-Unit 837 843	months
+A7	Eq-Temporal-Unit-Value T18 month
+T19	Eq-Value 775 777	40
+T20	Eq-Value 809 811	20
+T21	Eq-Value 834 836	12
+T22	Eq-Value 973 975	60
+T23	Eq-Comparison 765 777	less than 40
+E12	Eq-Comparison:T23 Operator:T14 Value:T19
+T24	Eq-Comparison 808 811	>20
+E13	Eq-Comparison:T24 Operator:T15 Value:T20
+T25	Eq-Comparison 833 843	<12 months
+E14	Eq-Comparison:T25 Operator:T16 Temporal-Unit:T18 Value:T21
+T26	Eq-Comparison 972 975	<60
+E15	Eq-Comparison:T26 Operator:T17 Value:T22

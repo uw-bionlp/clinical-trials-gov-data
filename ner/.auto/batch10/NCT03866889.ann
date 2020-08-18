@@ -1,0 +1,21 @@
+T1	Procedure 330 343	physiotherapy
+T2	Procedure-Name 330 343	physiotherapy
+E1	Procedure:T1 Name:T2
+T3	Procedure 344 356	intervention
+T4	Procedure-Name 344 356	intervention
+E3	Procedure:T3 Name:T4
+T5	Life-Stage-And-Gender 90 94	male
+A1	Life-Stage-And-Gender-Type T5 male
+T6	Eq-Temporal-Unit 124 129	years
+A2	Eq-Temporal-Unit-Value T6 year
+T7	Eq-Temporal-Unit 181 187	months
+A3	Eq-Temporal-Unit-Value T7 month
+T8	Age 108 111	age
+E4	Age:T8
+T9	Eq-Operator 118 120	to
+A4	Eq-Operator-Value T9 BETWEEN
+T10	Eq-Value 115 117	25
+T11	Eq-Value 121 123	45
+T12	Eq-Value 179 180	3
+T13	Eq-Comparison 115 120	25 to
+E5	Eq-Comparison:T13 Operator:T9 Value:T10

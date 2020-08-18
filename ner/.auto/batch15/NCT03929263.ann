@@ -1,0 +1,60 @@
+T1	Condition 826 866	attention-deficit/hyperactivity disorder
+T2	Condition-Name 826 866	attention-deficit/hyperactivity disorder
+E1	Condition:T1 Name:T2
+T3	Condition 787 816	obsessive-compulsive disorder
+T4	Condition-Name 787 816	obsessive-compulsive disorder
+E3	Condition:T3 Name:T4
+T5	Condition 480 501	psychiatric diagnosis
+T6	Condition-Name 480 501	psychiatric diagnosis
+E5	Condition:T5 Name:T6
+T7	Condition 727 745	psychotic disorder
+T8	Condition-Name 727 745	psychotic disorder
+E7	Condition:T7 Name:T8
+T9	Language 59 66	English
+T10	Life-Stage-And-Gender 143 149	female
+A1	Life-Stage-And-Gender-Type T10 male
+T11	Life-Stage-And-Gender 193 198	Adult
+A2	Life-Stage-And-Gender-Type T11 adult
+T12	Life-Stage-And-Gender 262 267	Adult
+A3	Life-Stage-And-Gender-Type T12 adult
+T13	Life-Stage-And-Gender 330 335	Adult
+A4	Life-Stage-And-Gender-Type T13 adult
+T14	Condition 868 872	ADHD
+T15	Condition-Name 868 872	ADHD
+E14	Condition:T14 Name:T15
+T16	Observation 98 101	BMI
+T17	Observation-Name 98 101	BMI
+E16	Observation:T16 Name:T17
+A5	Observation-Type-Value T17 vital
+T18	Observation 349 352	BMI
+T19	Observation-Name 349 352	BMI
+E18	Observation:T18 Name:T19
+A6	Observation-Type-Value T19 vital
+T20	Observation 436 439	BMI
+T21	Observation-Name 436 439	BMI
+E20	Observation:T20 Name:T21
+A7	Observation-Type-Value T21 vital
+T22	Condition 818 821	OCD
+T23	Condition-Name 818 821	OCD
+E22	Condition:T22 Name:T23
+T24	Eq-Operator 299 300	>
+A8	Eq-Operator-Value T24 GT
+T25	Eq-Temporal-Unit 178 182	days
+A9	Eq-Temporal-Unit-Value T25 day
+T26	Eq-Temporal-Unit 400 405	years
+A10	Eq-Temporal-Unit-Value T26 year
+T27	Age 390 393	Age
+E23	Age:T27
+T28	Eq-Operator 396 397	-
+A11	Eq-Operator-Value T28 BETWEEN
+T29	Eq-Value 104 106	40
+T30	Eq-Value 176 177	4
+T31	Eq-Value 301 303	50
+T32	Eq-Value 355 357	18
+T33	Eq-Value 394 396	13
+T34	Eq-Value 397 399	17
+T35	Eq-Value 442 444	16
+T36	Eq-Comparison 299 303	> 50
+E24	Eq-Comparison:T36 Operator:T24 Value:T31
+T37	Eq-Comparison 394 397	13-
+E25	Eq-Comparison:T37 Operator:T28 Value:T33

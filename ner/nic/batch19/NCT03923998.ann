@@ -1,0 +1,57 @@
+T3	Procedure 380 392	radiotherapy
+T4	Procedure-Name 380 392	radiotherapy
+E3	Procedure:T3 Name:T4
+T5	Condition 435 457	ischemic heart disease
+T6	Condition-Name 435 457	ischemic heart disease
+E5	Condition:T5 Name:T6
+T7	Condition 413 431	vascular disorders
+T8	Condition-Name 413 431	vascular disorders
+E7	Condition:T7 Name:T8
+T9	Eq-Comparison 217 225	previous
+E8	Eq-Comparison:T9 Temporal-Period:T10
+T10	Eq-Temporal-Period 217 225	previous
+A1	Eq-Temporal-Period-Value T10 past
+T11	Procedure 25 39	Histologically
+E2	Procedure:T11 Name:T12
+T12	Procedure-Name 25 39	Histologically
+T13	Condition 60 83	squamous cell carcinoma
+E4	Condition:T13 Name:T14 Stage:E6
+T14	Condition-Name 60 83	squamous cell carcinoma
+T15	Eq-Comparison 50 59	stage IVa
+E6	Eq-Comparison:T15 Unit:T16 Value:T17
+T16	Eq-Unit 50 55	stage
+T17	Eq-Value 56 59	IVa
+R1	Found-By Arg1:E4 Arg2:E2	
+T18	Modifier 91 102	oral cavity
+E9	Modifier:T18 Modifies:T14
+T1	Condition 136 154	squamous carcinoma
+E1	Condition:T1 Name:T2
+T2	Condition-Name 136 154	squamous carcinoma
+T19	Modifier 109 135	Surgically resectable oral
+E10	Modifier:T19 Modifies:T2
+T20	Modifier 160 180	invasion of mandible
+E11	Modifier:T20 Modifies:T2
+T21	Modifier 184 191	maxilla
+E12	Modifier:T21 Modifies:T2
+T22	Or 181 183	or
+E13	Or:T22 Arg:E11 Arg2:E12
+T23	Eq-Comparison 198 203	Newly
+E14	Eq-Comparison:T23 Temporal-Recency:T24
+T24	Eq-Temporal-Recency 198 203	Newly
+A2	Eq-Temporal-Recency-Value T24 first-time
+T25	Or 214 216	or
+E15	Or:T25 Arg:E14 Arg2:E8
+T26	Condition 238 261	squamous cell carcinoma
+E16	Condition:T26 Name:T27 Temporality:E8
+T27	Condition-Name 238 261	squamous cell carcinoma
+T28	Modifier 228 237	untreated
+E17	Modifier:T28 Modifies:T27
+T29	Modifier 269 280	oral cavity
+E18	Modifier:T29 Modifies:T27
+T30	Condition 321 339	distant metastases
+E19	Condition:T30 Name:T31
+T31	Condition-Name 321 339	distant metastases
+T32	Contraindication 360 376	contraindication
+E20	Contraindication:T32 Contraindicates:E3
+T33	Or 432 434	or
+E21	Or:T33 Arg:E7 Arg2:E5

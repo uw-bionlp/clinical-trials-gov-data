@@ -1,0 +1,49 @@
+T1	Procedure 869 899	ossicular chain reconstruction
+T2	Procedure-Name 869 899	ossicular chain reconstruction
+E1	Procedure:T1 Name:T2
+T3	Condition 182 210	tympanic membrane retraction
+T4	Condition-Name 182 210	tympanic membrane retraction
+E3	Condition:T3 Name:T4
+T5	Condition 429 456	Eustachian tube dysfunction
+T6	Condition-Name 429 456	Eustachian tube dysfunction
+E5	Condition:T5 Name:T6
+T7	Condition 146 172	otitis media with effusion
+T8	Condition-Name 146 172	otitis media with effusion
+E7	Condition:T7 Name:T8
+T9	Procedure 845 865	cranial base surgery
+T10	Procedure-Name 845 865	cranial base surgery
+E9	Procedure:T9 Name:T10
+T11	Condition 211 228	retraction pocket
+T12	Condition-Name 211 228	retraction pocket
+E11	Condition:T11 Name:T12
+T13	Procedure 704 717	adenoidectomy
+T14	Procedure-Name 704 717	adenoidectomy
+E13	Procedure:T13 Name:T14
+T15	Procedure 613 625	palatoplasty
+T16	Procedure-Name 613 625	palatoplasty
+E15	Procedure:T15 Name:T16
+T17	Procedure 796 805	radiation
+T18	Procedure-Name 796 805	radiation
+E17	Procedure:T17 Name:T18
+T19	Procedure 660 668	revision
+T20	Procedure-Name 660 668	revision
+E19	Procedure:T19 Name:T20
+T21	Condition 1014 1022	syndrome
+T22	Condition-Name 1014 1022	syndrome
+E21	Condition:T21 Name:T22
+T23	Condition 174 177	OME
+T24	Condition-Name 174 177	OME
+E23	Condition:T23 Name:T24
+T25	Eq-Operator 335 343	the past
+A1	Eq-Operator-Value T25 GTEQ
+T26	Eq-Temporal-Unit 30 35	years
+A2	Eq-Temporal-Unit-Value T26 year
+T27	Age 36 39	old
+E24	Age:T27
+T28	Eq-Operator 26 27	-
+A3	Eq-Operator-Value T28 BETWEEN
+T29	Eq-Value 25 26	6
+T30	Eq-Value 27 29	17
+T31	Eq-Value 308 309	2
+T32	Eq-Comparison 25 27	6-
+E25	Eq-Comparison:T32 Operator:T28 Value:T29

@@ -1,0 +1,52 @@
+T1	Procedure 197 209	chemotherapy
+T2	Procedure-Name 197 209	chemotherapy
+E1	Procedure:T1 Name:T2
+T5	Condition 563 593	Diabetic peripheral neuropathy
+T6	Condition-Name 563 593	Diabetic peripheral neuropathy
+E5	Condition:T5 Name:T6
+T7	Condition 886 913	peripheral vascular disease
+T8	Condition-Name 886 913	peripheral vascular disease
+E7	Condition:T7 Name:T8
+T9	Condition 595 618	entrapment neuropathies
+T10	Condition-Name 595 618	entrapment neuropathies
+E9	Condition:T9 Name:T10
+T11	Condition 932 954	vitamin B12 deficiency
+T12	Condition-Name 932 954	vitamin B12 deficiency
+E11	Condition:T11 Name:T12
+T13	Condition 540 561	peripheral neuropathy
+T14	Condition-Name 540 561	peripheral neuropathy
+E13	Condition:T13 Name:T14
+T15	Condition 751 771	neurological disease
+T16	Condition-Name 751 771	neurological disease
+E15	Condition:T15 Name:T16
+T17	Condition 855 868	HIV infection
+T18	Condition-Name 855 868	HIV infection
+E17	Condition:T17 Name:T18
+T19	Condition 839 849	Alcoholism
+T20	Condition-Name 839 849	Alcoholism
+E19	Condition:T19 Name:T20
+T21	Eq-Operator 173 174	≥
+A1	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 357 358	≥
+A2	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 809 810	>
+A3	Eq-Operator-Value T23 GT
+T24	Eq-Temporal-Unit 360 366	months
+A4	Eq-Temporal-Unit-Value T24 month
+T25	Eq-Temporal-Unit 812 817	years
+A5	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Operator 446 447	-
+A6	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Value 174 175	3
+T28	Eq-Value 358 359	6
+T29	Eq-Value 445 446	0
+T30	Eq-Value 447 448	2
+T31	Eq-Value 810 811	3
+T32	Eq-Comparison 173 175	≥3
+E20	Eq-Comparison:T32 Operator:T21 Value:T27
+T33	Eq-Comparison 357 366	≥6 months
+E21	Eq-Comparison:T33 Operator:T22 Temporal-Unit:T24 Value:T28
+T34	Eq-Comparison 809 817	>3 years
+E22	Eq-Comparison:T34 Operator:T23 Temporal-Unit:T25 Value:T31
+T35	Eq-Comparison 445 447	0-
+E23	Eq-Comparison:T35 Operator:T26 Value:T29

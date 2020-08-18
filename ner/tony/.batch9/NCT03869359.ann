@@ -1,0 +1,36 @@
+T1	Condition 288 315	inflammatory bowel diseases
+T2	Condition-Name 288 315	inflammatory bowel diseases
+E1	Condition:T1 Name:T2
+T3	Condition 233 257	gastrointestinal disease
+T4	Condition-Name 233 257	gastrointestinal disease
+E3	Condition:T3 Name:T4
+T5	Condition 126 145	intolerance to food
+T6	Condition-Name 126 145	intolerance to food
+E5	Condition:T5 Name:T6
+T7	Condition 200 219	psychiatric disease
+T8	Condition-Name 200 219	psychiatric disease
+E7	Condition:T7 Name:T8
+T9	Condition 342 359	bowel dysfunction
+T10	Condition-Name 342 359	bowel dysfunction
+E9	Condition:T9 Name:T10
+T11	Condition 269 283	celiac disease
+T12	Condition-Name 269 283	celiac disease
+E11	Condition:T11 Name:T12
+T13	Condition 328 336	diabetes
+T14	Condition-Name 328 336	diabetes
+E13	Condition:T13 Name:T14
+T15	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T15 adult
+T16	Condition 45 48	IBS
+T17	Condition-Name 45 48	IBS
+E16	Condition:T16 Name:T17
+T18	Condition 317 320	IBD
+T19	Condition-Name 317 320	IBD
+E18	Condition:T18 Name:T19
+T20	Eq-Operator 447 453	within
+A2	Eq-Operator-Value T20 LTEQ
+T21	Eq-Temporal-Unit 456 461	weeks
+A3	Eq-Temporal-Unit-Value T21 week
+T22	Eq-Value 454 455	4
+T23	Eq-Comparison 447 461	within 4 weeks
+E19	Eq-Comparison:T23 Operator:T20 Temporal-Unit:T21 Value:T22

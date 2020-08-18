@@ -1,0 +1,180 @@
+T1	Condition 826 866	attention-deficit/hyperactivity disorder
+T2	Condition-Name 826 866	attention-deficit/hyperactivity disorder
+E1	Condition:T1 Name:T2
+T3	Condition 787 816	obsessive-compulsive disorder
+T4	Condition-Name 787 816	obsessive-compulsive disorder
+E3	Condition:T3 Name:T4 Temporality:E29
+T5	Condition 480 501	psychiatric diagnosis
+T6	Condition-Name 480 501	psychiatric diagnosis
+E5	Condition:T5 Name:T6 Temporality:E26
+T7	Condition 737 745	disorder
+T8	Condition-Name 737 745	disorder
+E7	Condition:T7 Name:T8 Temporality:E41
+T9	Language 59 66	English
+T10	Life-Stage-And-Gender 143 149	female
+A1	Life-Stage-And-Gender-Type T10 male
+T11	Life-Stage-And-Gender 193 198	Adult
+A2	Life-Stage-And-Gender-Type T11 adult
+T12	Life-Stage-And-Gender 262 267	Adult
+A3	Life-Stage-And-Gender-Type T12 adult
+T13	Life-Stage-And-Gender 330 335	Adult
+A4	Life-Stage-And-Gender-Type T13 adult
+T14	Condition 868 872	ADHD
+T15	Condition-Name 868 872	ADHD
+E14	Condition:T14 Name:T15
+T16	Observation 98 101	BMI
+T17	Observation-Name 98 101	BMI
+E16	Observation:T16 Name:T17 Eq-Comparison:E6
+A5	Observation-Type-Value T17 vital
+T18	Observation 349 352	BMI
+T19	Observation-Name 349 352	BMI
+E18	Observation:T18 Name:T19 Eq-Comparison:E19
+A6	Observation-Type-Value T19 vital
+T20	Observation 436 439	BMI
+T21	Observation-Name 436 439	BMI
+E20	Observation:T20 Name:T21 Eq-Comparison:E21
+A7	Observation-Type-Value T21 vital
+T22	Condition 818 821	OCD
+T23	Condition-Name 818 821	OCD
+E22	Condition:T22 Name:T23
+T24	Eq-Operator 299 300	>
+A8	Eq-Operator-Value T24 GT
+T25	Eq-Temporal-Unit 178 182	days
+A9	Eq-Temporal-Unit-Value T25 day
+T26	Eq-Temporal-Unit 400 405	years
+A10	Eq-Temporal-Unit-Value T26 year
+T27	Age 390 393	Age
+E23	Age:T27 Eq-Comparison:E25
+T28	Eq-Operator 396 397	-
+A11	Eq-Operator-Value T28 BETWEEN
+T29	Eq-Value 104 108	40.0
+T30	Eq-Value 176 177	4
+T31	Eq-Value 301 303	50
+T32	Eq-Value 355 359	18.0
+T33	Eq-Value 394 396	13
+T34	Eq-Value 397 399	17
+T35	Eq-Value 442 446	16.0
+T36	Eq-Comparison 299 304	> 50%
+E24	Eq-Comparison:T36 Operator:T24 Value:T31
+T37	Eq-Comparison 394 405	13-17 years
+E25	Eq-Comparison:T37 Operator:T28 Value:T33 Value2:T34 Temporal-Unit:T26
+T38	Eq-Comparison 472 479	Current
+E26	Eq-Comparison:T38 Temporal-Period:T39
+T39	Eq-Temporal-Period 472 479	Current
+A12	Eq-Temporal-Period-Value T39 present
+T42	Eq-Comparison 776 783	History
+E29	Eq-Comparison:T42 Temporal-Period:T43
+T43	Eq-Temporal-Period 776 783	History
+A15	Eq-Temporal-Period-Value T43 past
+T44	Procedure 38 42	fMRI
+E2	Procedure:T44 Name:T45
+T45	Procedure-Name 38 42	fMRI
+T46	Assertion 25 33	Eligible
+E4	Assertion:T46 Asserted:E2
+A14	Assertion-Type-Value E4 hypothetical
+T47	Eq-Comparison 102 108	≦ 40.0
+E6	Eq-Comparison:T47 Operator:T48 Value:T29
+T48	Eq-Operator 102 103	≦
+A16	Eq-Operator-Value T48 LTEQ
+T49	Condition 114 126	Right-handed
+E8	Condition:T49 Name:T50
+T50	Condition-Name 114 126	Right-handed
+T51	Modifier 132 142	Biological
+E9	Modifier:T51 Modifies:T10
+T52	Observation 155 166	Co-residing
+E10	Observation:T52 Name:T53 Eq-Comparison:E11
+T53	Observation-Name 155 166	Co-residing
+A17	Observation-Type-Value T53 social-habit
+T54	Eq-Comparison 167 187	at least 4 days/week
+E11	Eq-Comparison:T54 Operator:T55 Temporal-Unit:T25 Value:T30 Per:T56
+T55	Eq-Operator 167 175	at least
+A18	Eq-Operator-Value T55 GTEQ
+T56	Eq-Temporal-Unit 183 187	week
+A19	Eq-Temporal-Unit-Value T56 week
+T57	Family-Member 224 230	mother
+E12	Family-Member:T57 Has:T58
+A20	Family-Member-Type E12 mother
+T58	Life-Stage-And-Gender 234 244	adolescent
+A21	Life-Stage-And-Gender-Type T58 child
+R1	If-Then Arg1:T11 Arg2:E12	
+T59	Family-Member 281 298	Primary caregiver
+E13	Family-Member:T59 Has:E15
+A22	Family-Member-Type E13 parent
+T60	Family-Member 308 313	child
+E15	Family-Member:T60 Has:E17
+A23	Family-Member-Type E15 child
+T61	Observation 316 324	lifespan
+E17	Observation:T61 Name:T62 Eq-Comparison:E24
+T62	Observation-Name 316 324	lifespan
+T63	Eq-Unit 303 304	%
+R2	If-Then Arg1:T12 Arg2:E13	
+T64	Eq-Comparison 353 359	≧ 18.0
+E19	Eq-Comparison:T64 Value:T32 Operator:T65
+T65	Eq-Operator 353 354	≧
+A24	Eq-Operator-Value T65 GT
+R3	If-Then Arg1:T13 Arg2:E18	
+T66	Life-Stage-And-Gender 365 375	Adolescent
+A25	Life-Stage-And-Gender-Type T66 child
+R4	If-Then Arg1:T66 Arg2:E23	
+T67	Life-Stage-And-Gender 411 421	Adolescent
+A26	Life-Stage-And-Gender-Type T67 child
+R5	If-Then Arg1:T67 Arg2:E20	
+T68	Eq-Comparison 440 446	≧ 16.0
+E21	Eq-Comparison:T68 Operator:T69 Value:T35
+T69	Eq-Operator 440 441	≧
+A27	Eq-Operator-Value T69 GTEQ
+T70	Drug 507 518	Medications
+E28	Drug:T70 
+T71	Procedure 531 535	fMRI
+E30	Procedure:T71 Name:T72 Stability:T73
+T72	Procedure-Name 531 535	fMRI
+T73	Stability 519 530	influencing
+A28	Stability-Value T73 change
+R6	Caused-By Arg1:T73 Arg2:E28	
+T74	Condition 541 559	Medical conditions
+E31	Condition:T74 
+T75	Procedure 572 576	fMRI
+E32	Procedure:T75 Name:T76 Stability:T77
+T76	Procedure-Name 572 576	fMRI
+T77	Stability 560 571	influencing
+A29	Stability-Value T77 change
+R7	Caused-By Arg1:T77 Arg2:E31	
+T40	Drug 593 610	psychoactive drug
+E27	Drug:T40 Name:T41
+T41	Drug-Name 593 610	psychoactive drug
+T78	Drug 582 589	Alcohol
+E33	Drug:T78 Name:T79
+T79	Drug-Name 582 589	Alcohol
+T80	Or 590 592	or
+E34	Or:T80 Arg:E33 Arg2:E27
+T81	Study 614 618	scan
+E35	Study:T81 
+T82	Temporal-Connection 611 613	on
+E36	Temporal-Connection:T82 Arg:E27 Arg2:E35
+A13	Temporal-Connection-Type-Value E36 during
+T83	Condition 653 677	Neurodevelopmental delay
+E37	Condition:T83 Name:T84
+T84	Condition-Name 653 677	Neurodevelopmental delay
+T85	Life-Stage-And-Gender 628 638	Adolescent
+A30	Life-Stage-And-Gender-Type T85 child
+R8	If-Then Arg1:T85 Arg2:E37	
+T86	Life-Stage-And-Gender 683 693	Adolescent
+A31	Life-Stage-And-Gender-Type T86 child
+T87	Modifier 727 736	psychotic
+E38	Modifier:T87 Modifies:T8
+T88	Modifier 719 723	mood
+E39	Modifier:T88 Modifies:T8
+T89	Or 724 726	or
+E40	Or:T89 Arg:E39 Arg2:E38
+T90	Eq-Comparison 708 715	History
+E41	Eq-Comparison:T90 Temporal-Period:T91
+T91	Eq-Temporal-Period 708 715	History
+A32	Eq-Temporal-Period-Value T91 past
+R9	If-Then Arg1:T86 Arg2:E7	
+R10	Abbrev-Of Arg1:E22 Arg2:E3	
+R11	Abbrev-Of Arg1:E14 Arg2:E1	
+T92	Or 823 825	or
+E42	Or:T92 Arg:E22 Arg2:E1
+T93	Life-Stage-And-Gender 751 761	Adolescent
+A33	Life-Stage-And-Gender-Type T93 child
+R12	If-Then Arg1:T93 Arg2:E3	

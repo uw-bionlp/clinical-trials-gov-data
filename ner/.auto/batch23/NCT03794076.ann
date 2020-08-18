@@ -1,0 +1,66 @@
+T1	Condition 108 132	schizoaffective disorder
+T2	Condition-Name 108 132	schizoaffective disorder
+E1	Condition:T1 Name:T2
+T3	Condition 92 105	Schizophrenia
+T4	Condition-Name 92 105	Schizophrenia
+E3	Condition:T3 Name:T4
+T5	Procedure 147 159	Treated with
+T6	Procedure-Name 147 159	Treated with
+E5	Procedure:T5 Name:T6
+T7	Condition 423 432	psychosis
+T8	Condition-Name 423 432	psychosis
+E7	Condition:T7 Name:T8
+T9	Condition 354 362	syndrome
+T10	Condition-Name 354 362	syndrome
+E9	Condition:T9 Name:T10
+T11	Condition 477 492	Substance abuse
+T12	Condition-Name 477 492	Substance abuse
+E11	Condition:T11 Name:T12
+T13	Condition 511 521	dependence
+T14	Condition-Name 511 521	dependence
+E13	Condition:T13 Name:T14
+T15	Condition 636 644	epilepsy
+T16	Condition-Name 636 644	epilepsy
+E15	Condition:T15 Name:T16
+T17	Condition 651 660	Pregnancy
+T18	Condition-Name 651 660	Pregnancy
+E17	Condition:T17 Name:T18
+T19	Condition 678 694	immune disorders
+T20	Condition-Name 678 694	immune disorders
+E19	Condition:T19 Name:T20
+T21	Condition 696 709	HIV infection
+T22	Condition-Name 696 709	HIV infection
+E21	Condition:T21 Name:T22
+T23	Condition 867 890	Intellectual disability
+T24	Condition-Name 867 890	Intellectual disability
+E23	Condition:T23 Name:T24
+T25	Eq-Operator 218 219	>
+A1	Eq-Operator-Value T25 GT
+T26	Eq-Operator 433 442	less than
+A2	Eq-Operator-Value T26 LT
+T27	Eq-Operator 496 504	the past
+A3	Eq-Operator-Value T27 GTEQ
+T28	Eq-Temporal-Unit 81 86	years
+A4	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Temporal-Unit 189 193	days
+A5	Eq-Temporal-Unit-Value T29 day
+T30	Eq-Temporal-Unit 445 450	years
+A6	Eq-Temporal-Unit-Value T30 year
+T31	Eq-Temporal-Unit 529 535	months
+A7	Eq-Temporal-Unit-Value T31 month
+T32	Eq-Operator 77 78	-
+A8	Eq-Operator-Value T32 BETWEEN
+T33	Eq-Value 75 77	18
+T34	Eq-Value 78 80	60
+T35	Eq-Value 186 188	60
+T36	Eq-Value 220 221	1
+T37	Eq-Value 287 289	60
+T38	Eq-Value 300 301	4
+T39	Eq-Value 443 444	7
+T40	Eq-Value 527 528	6
+T41	Eq-Comparison 218 221	> 1
+E24	Eq-Comparison:T41 Operator:T25 Value:T36
+T42	Eq-Comparison 433 450	less than 7 years
+E25	Eq-Comparison:T42 Operator:T26 Temporal-Unit:T30 Value:T39
+T43	Eq-Comparison 75 78	18-
+E26	Eq-Comparison:T43 Operator:T32 Value:T33

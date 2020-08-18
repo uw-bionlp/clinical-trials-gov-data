@@ -1,0 +1,76 @@
+T1	Condition 485 504	Renal insufficiency
+T2	Condition-Name 485 504	Renal insufficiency
+E1	Condition:T1 Name:T2
+T3	Condition 522 540	autoimmune disease
+T4	Condition-Name 522 540	autoimmune disease
+E3	Condition:T3 Name:T4
+T5	Condition 366 381	chronic disease
+T6	Condition-Name 366 381	chronic disease
+E5	Condition:T5 Name:T6
+T7	Condition 545 560	viral hepatitis
+T8	Condition-Name 545 560	viral hepatitis
+E7	Condition:T7 Name:T8
+T9	Condition 330 343	Acute disease
+T10	Condition-Name 330 343	Acute disease
+E9	Condition:T9 Name:T10
+T11	Condition 565 574	cirrhosis
+T12	Condition-Name 565 574	cirrhosis
+E11	Condition:T11 Name:T12
+T13	Condition 64 69	Obese
+T14	Condition-Name 64 69	Obese
+E13	Condition:T13 Name:T14
+T15	Observation 71 74	BMI
+T16	Observation-Name 71 74	BMI
+E15	Observation:T15 Name:T16
+A1	Observation-Type-Value T16 vital
+T17	Condition 103 106	GPs
+T18	Condition-Name 103 106	GPs
+E17	Condition:T17 Name:T18
+T19	Eq-Operator 75 76	≥
+A2	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 268 269	≥
+A3	Eq-Operator-Value T20 GTEQ
+T21	Eq-Operator 301 302	≥
+A4	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 383 384	<
+A5	Eq-Operator-Value T22 LT
+T23	Eq-Operator 468 469	<
+A6	Eq-Operator-Value T23 LT
+T24	Eq-Operator 671 672	<
+A7	Eq-Operator-Value T24 LT
+T25	Eq-Temporal-Unit 53 58	years
+A8	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Temporal-Unit 387 393	months
+A9	Eq-Temporal-Unit-Value T26 month
+T27	Eq-Temporal-Unit 472 478	months
+A10	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Unit 79 81	kg
+T29	Eq-Unit 273 275	mm
+T30	Age 34 38	aged
+E18	Age:T30
+T31	Eq-Operator 47 49	to
+A11	Eq-Operator-Value T31 BETWEEN
+T32	Eq-Value 44 46	18
+T33	Eq-Value 50 52	80
+T34	Eq-Value 77 79	30
+T35	Eq-Value 270 272	27
+T36	Eq-Value 303 304	3
+T37	Eq-Value 385 386	2
+T38	Eq-Value 470 471	2
+T39	Eq-Value 511 512	4
+T40	Eq-Value 516 517	5
+T41	Eq-Value 673 674	1
+T42	Eq-Comparison 75 79	≥ 30
+E19	Eq-Comparison:T42 Operator:T19 Value:T34
+T43	Eq-Comparison 268 275	≥ 27 mm
+E20	Eq-Comparison:T43 Operator:T20 Unit:T29 Value:T35
+T44	Eq-Comparison 301 304	≥ 3
+E21	Eq-Comparison:T44 Operator:T21 Value:T36
+T45	Eq-Comparison 383 393	< 2 months
+E22	Eq-Comparison:T45 Operator:T22 Temporal-Unit:T26 Value:T37
+T46	Eq-Comparison 468 478	< 2 months
+E23	Eq-Comparison:T46 Operator:T23 Temporal-Unit:T27 Value:T38
+T47	Eq-Comparison 671 674	< 1
+E24	Eq-Comparison:T47 Operator:T24 Value:T41
+T48	Eq-Comparison 44 49	18 to
+E25	Eq-Comparison:T48 Operator:T31 Value:T32

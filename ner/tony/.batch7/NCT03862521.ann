@@ -1,0 +1,48 @@
+T1	Procedure 207 228	low carbohydrate diet
+T2	Procedure-Name 207 228	low carbohydrate diet
+E1	Procedure:T1 Name:T2
+T3	Procedure 268 289	low carbohydrate diet
+T4	Procedure-Name 268 289	low carbohydrate diet
+E3	Procedure:T3 Name:T4
+T5	Condition 319 337	metabolic disorder
+T6	Condition-Name 319 337	metabolic disorder
+E5	Condition:T5 Name:T6
+T7	Condition 98 113	Type 1 diabetes
+T8	Condition-Name 98 113	Type 1 diabetes
+E7	Condition:T7 Name:T8
+T9	Condition 392 406	hypothyroidism
+T10	Condition-Name 392 406	hypothyroidism
+E9	Condition:T9 Name:T10
+T11	Condition 306 315	endocrine
+T12	Condition-Name 306 315	endocrine
+E11	Condition:T11 Name:T12
+T13	Life-Stage-And-Gender 36 44	children
+A1	Life-Stage-And-Gender-Type T13 child
+T14	Procedure 177 184	therapy
+T15	Procedure-Name 177 184	therapy
+E14	Procedure:T14 Name:T15
+T16	Eq-Operator 50 51	<
+A2	Eq-Operator-Value T16 LT
+T17	Eq-Operator 458 459	≥
+A3	Eq-Operator-Value T17 GTEQ
+T18	Eq-Temporal-Unit 54 59	years
+A4	Eq-Temporal-Unit-Value T18 year
+T19	Eq-Temporal-Unit 129 135	months
+A5	Eq-Temporal-Unit-Value T19 month
+T20	Eq-Temporal-Unit 461 467	months
+A6	Eq-Temporal-Unit-Value T20 month
+T21	Eq-Temporal-Unit 572 578	months
+A7	Eq-Temporal-Unit-Value T21 month
+T22	Age 60 63	old
+E15	Age:T22
+T23	Eq-Value 45 46	2
+T24	Eq-Value 51 53	12
+T25	Eq-Value 78 80	12
+T26	Eq-Value 103 104	1
+T27	Eq-Value 127 128	6
+T28	Eq-Value 459 460	3
+T29	Eq-Value 570 571	3
+T30	Eq-Comparison 50 59	<12 years
+E16	Eq-Comparison:T30 Operator:T16 Temporal-Unit:T18 Value:T24
+T31	Eq-Comparison 458 467	≥3 months
+E17	Eq-Comparison:T31 Operator:T17 Temporal-Unit:T20 Value:T28

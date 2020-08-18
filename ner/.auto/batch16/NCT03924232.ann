@@ -1,0 +1,21 @@
+T1	Procedure 100 122	mechanical ventilation
+T2	Procedure-Name 100 122	mechanical ventilation
+E1	Procedure:T1 Name:T2
+T3	Eq-Operator 74 75	<
+A1	Eq-Operator-Value T3 LT
+T4	Eq-Operator 268 277	less than
+A2	Eq-Operator-Value T4 LT
+T5	Eq-Temporal-Unit 138 142	days
+A3	Eq-Temporal-Unit-Value T5 day
+T6	Eq-Temporal-Unit 280 284	days
+A4	Eq-Temporal-Unit-Value T6 day
+T7	Age 38 42	aged
+E2	Age:T7
+T8	Eq-Value 43 45	18
+T9	Eq-Value 75 77	48
+T10	Eq-Value 136 137	3
+T11	Eq-Value 278 279	3
+T12	Eq-Comparison 74 77	<48
+E3	Eq-Comparison:T12 Operator:T3 Value:T9
+T13	Eq-Comparison 268 284	less than 3 days
+E4	Eq-Comparison:T13 Operator:T4 Temporal-Unit:T6 Value:T11
