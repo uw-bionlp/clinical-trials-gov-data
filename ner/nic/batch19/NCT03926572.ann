@@ -9,14 +9,14 @@ T6	Procedure-Name 362 378	diuretic therapy
 E5	Procedure:T5 Name:T6
 T7	Life-Stage-And-Gender 25 30	Adult
 A1	Life-Stage-And-Gender-Type T7 adult
-T8	Condition 874 919	chronic thromboembolic pulmonary hypertension
-T9	Condition-Name 874 919	chronic thromboembolic pulmonary hypertension
+T8	Condition 897 919	pulmonary hypertension
+T9	Condition-Name 897 919	pulmonary hypertension
 E8	Condition:T8 Name:T9
-T10	Condition 638 675	post-capillary pulmonary hypertension
-T11	Condition-Name 638 675	post-capillary pulmonary hypertension
+T10	Condition 653 675	pulmonary hypertension
+T11	Condition-Name 653 675	pulmonary hypertension
 E10	Condition:T10 Name:T11
-T12	Condition 734 761	chronic respiratory disease
-T13	Condition-Name 734 761	chronic respiratory disease
+T12	Condition 742 761	respiratory disease
+T13	Condition-Name 742 761	respiratory disease
 E12	Condition:T12 Name:T13
 T14	Condition 1028 1042	breast feeding
 T15	Condition-Name 1028 1042	breast feeding
@@ -25,25 +25,12 @@ T16	Condition 1163 1176	breastfeeding
 T17	Condition-Name 1163 1176	breastfeeding
 E16	Condition:T16 Name:T17
 T18	Procedure 588 598	procedures
-T19	Procedure-Name 588 598	procedures
-E18	Procedure:T18 Name:T19
+E18	Procedure:T18 
 T20	Life-Stage-And-Gender 1054 1059	Adult
 A2	Life-Stage-And-Gender-Type T20 adult
 T21	Eq-Temporal-Unit 48 53	years
 A3	Eq-Temporal-Unit-Value T21 year
 T22	Eq-Value 45 47	18
-T23	Eq-Comparison 535 543	previous
-E19	Eq-Comparison:T23 Temporal-Period:T24
-T24	Eq-Temporal-Period 535 543	previous
-A4	Eq-Temporal-Period-Value T24 past
-T25	Eq-Comparison 517 525	received
-E20	Eq-Comparison:T25 Temporal-Period:T26
-T26	Eq-Temporal-Period 517 525	received
-A5	Eq-Temporal-Period-Value T26 past
-T29	Eq-Comparison 560 565	prior
-E22	Eq-Comparison:T29 Temporal-Period:T30
-T30	Eq-Temporal-Period 560 565	prior
-A7	Eq-Temporal-Period-Value T30 past
 T31	Eq-Comparison 40 53	over 18 years
 E2	Eq-Comparison:T31 Operator:T32 Value:T22 Temporal-Unit:T21
 T32	Eq-Operator 40 44	over
@@ -64,3 +51,95 @@ E11	Temporal-Connection:T27 Arg:E9 Arg2:E13
 A6	Temporal-Connection-Type-Value E11 before
 T28	Study 237 242	study
 E13	Study:T28 
+T38	Encounter 257 288	admitted in intensive care unit
+E15	Encounter:T38 Type:T39
+T39	Encounter-Type 257 288	admitted in intensive care unit
+A9	Encounter-Type-Value T39 icu
+T40	Modifier 299 313	decompensation
+E17	Modifier:T40 Modifies:T42
+T41	Condition 317 339	pulmonary hypertension
+E21	Condition:T41 Name:T42 Severity:T43
+T42	Condition-Name 317 339	pulmonary hypertension
+T43	Severity 293 298	acute
+A10	Severity-Value T43 severe
+R3	Treatment-For Arg1:E15 Arg2:E21	
+T44	Modifier 350 361	intravenous
+E23	Modifier:T44 Modifies:T6
+T46	Drug 388 397	inotropes
+E25	Drug:T46 Name:T45
+T45	Drug-Name 388 397	inotropes
+T47	Drug 401 413	vasopressors
+E24	Drug:T47 Name:T48
+T48	Drug-Name 401 413	vasopressors
+T49	Or 398 400	or
+E26	Or:T49 Arg:E25 Arg2:E24
+T50	Or 379 380	±
+E27	Or:T50 Arg:E5 Arg2:E25
+R4	Treatment-For Arg1:E5 Arg2:E21	
+R5	Treatment-For Arg1:E25 Arg2:E21	
+R6	Treatment-For Arg1:E24 Arg2:E21	
+T19	Study 573 578	study
+E19	Study:T19 Study-Of:E18
+T23	Study 498 503	study
+E20	Study:T23 
+T24	Modifier 638 652	post-capillary
+E22	Modifier:T24 Modifies:T11
+T25	Condition 695 717	pulmonary hypertension
+E28	Condition:T25 Name:T26
+T26	Condition-Name 695 717	pulmonary hypertension
+R7	Caused-By Arg1:E28 Arg2:E12	
+T29	Modifier 734 741	chronic
+E29	Modifier:T29 Modifies:T13
+T30	Condition 781 803	pulmonary hypertension
+E30	Condition:T30 Name:T51
+T51	Condition-Name 781 803	pulmonary hypertension
+T52	Modifier 809 816	unclear
+E31	Modifier:T52 Modifies:T51
+T53	Modifier 820 845	multifactorial mechanisms
+E32	Modifier:T53 Modifies:T51
+T54	Or 817 819	or
+E33	Or:T54 Arg:E31 Arg2:E32
+T55	Modifier 865 896	operable chronic thromboembolic
+E34	Modifier:T55 Modifies:T9
+T56	Condition 925 930	Shock
+E35	Condition:T56 Name:T57
+T57	Condition-Name 925 930	Shock
+T58	Condition 946 951	cause
+E36	Condition:T58 
+T59	Other 938 945	another
+E37	Other:T59 Is-Other:E36
+R8	Caused-By Arg1:E35 Arg2:E36	
+T60	Condition 981 1003	pulmonary hypertension
+E38	Condition:T60 Name:T62 Severity:T63
+T61	Modifier 963 977	decompensation
+E39	Modifier:T61 Modifies:T62
+T62	Condition-Name 981 1003	pulmonary hypertension
+T63	Severity 957 962	acute
+A4	Severity-Value T63 severe
+T64	Exception 952 956	than
+E40	Exception:T64 From:E36 Except:E38
+T65	Condition 1009 1017	Pregnant
+E41	Condition:T65 Name:T66
+T66	Condition-Name 1009 1017	Pregnant
+T67	Life-Stage-And-Gender 1018 1023	women
+A5	Life-Stage-And-Gender-Type T67 female
+R9	If-Then Arg1:T67 Arg2:E41	
+T68	Life-Stage-And-Gender 1043 1048	women
+A7	Life-Stage-And-Gender-Type T68 female
+R10	If-Then Arg1:T68 Arg2:E14	
+T69	Or 1025 1027	or
+E42	Or:T69 Arg:T67 Arg2:E14
+T70	Observation 1060 1076	protected person
+E43	Observation:T70 Name:T71
+T71	Observation-Name 1060 1076	protected person
+T72	Observation 1089 1108	deprived of liberty
+E44	Observation:T72 Name:T73
+T73	Observation-Name 1089 1108	deprived of liberty
+T74	Life-Stage-And-Gender 1177 1182	women
+A11	Life-Stage-And-Gender-Type T74 female
+R11	If-Then Arg1:T74 Arg2:E16	
+T75	Condition 1151 1159	Pregnant
+E45	Condition:T75 Name:T76
+T76	Condition-Name 1151 1159	Pregnant
+T77	Or 1160 1162	or
+E46	Or:T77 Arg:E45 Arg2:E16
