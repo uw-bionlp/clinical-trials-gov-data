@@ -1,47 +1,23 @@
-T1	Condition 36 55	intermittent asthma
-T2	Condition-Name 36 55	intermittent asthma
+T1	Condition 49 55	asthma
+T2	Condition-Name 49 55	asthma
 E1	Condition:T1 Name:T2
 T3	Condition 168 182	conjunctivitis
 T4	Condition-Name 168 182	conjunctivitis
 E3	Condition:T3 Name:T4
-T5	Condition 189 202	Sensitization
-T6	Condition-Name 189 202	Sensitization
-E5	Condition:T5 Name:T6
-T7	Condition 142 153	cat allergy
-T8	Condition-Name 142 153	cat allergy
-E7	Condition:T7 Name:T8
 T9	Condition 691 700	asthmatic
 T10	Condition-Name 691 700	asthmatic
 E9	Condition:T9 Name:T10
-T11	Procedure 206 209	cat
-T12	Procedure-Name 206 209	cat
-E11	Procedure:T11 Name:T12
-T13	Procedure 261 264	cat
-T14	Procedure-Name 261 264	cat
-E13	Procedure:T13 Name:T14
-T15	Condition 372 375	IgE
-T16	Condition-Name 372 375	IgE
-E15	Condition:T15 Name:T16
-T17	Condition 381 384	Fel
-T18	Condition-Name 381 384	Fel
-E17	Condition:T17 Name:T18
-T19	Language 726 729	cat
+T15	Observation 372 386	IgE anti Fel d
+T16	Observation-Name 372 386	IgE anti Fel d
+E15	Observation:T15 Name:T16 Eq-Comparison:E28
 T20	Condition 787 793	asthma
 T21	Condition-Name 787 793	asthma
 E20	Condition:T20 Name:T21
 T22	Condition 888 894	asthma
 T23	Condition-Name 888 894	asthma
 E22	Condition:T22 Name:T23
-T24	Procedure 1050 1053	cat
-T25	Procedure-Name 1050 1053	cat
-E24	Procedure:T24 Name:T25
-T26	Procedure 1059 1062	Cat
-T27	Procedure-Name 1059 1062	Cat
-E26	Procedure:T26 Name:T27
 T28	Eq-Operator 298 299	≥
 A1	Eq-Operator-Value T28 GTEQ
-T29	Eq-Operator 304 316	greater than
-A2	Eq-Operator-Value T29 GT
 T30	Eq-Operator 389 390	≥
 A3	Eq-Operator-Value T30 GTEQ
 T31	Eq-Operator 455 456	≥
@@ -63,36 +39,154 @@ A11	Eq-Temporal-Unit-Value T38 week
 T39	Eq-Temporal-Unit 1103 1109	months
 A12	Eq-Temporal-Unit-Value T39 month
 T40	Eq-Unit 301 303	mm
-T41	Eq-Value 62 63	1
-T42	Eq-Value 103 107	2016
 T43	Eq-Value 299 300	3
 T44	Eq-Value 387 388	1
-T45	Eq-Value 391 392	0
+T45	Eq-Value 391 394	0.7
 T46	Eq-Value 457 459	70
-T47	Eq-Value 652 654	12
 T48	Eq-Value 827 829	20
 T49	Eq-Value 841 842	4
 T50	Eq-Value 895 896	2
 T51	Eq-Value 965 966	2
 T52	Eq-Value 1021 1022	2
 T53	Eq-Value 1092 1093	6
-T54	Eq-Comparison 298 303	≥3 mm
-E27	Eq-Comparison:T54 Operator:T28 Unit:T40 Value:T43
-T55	Eq-Comparison 387 390	1 ≥
-E28	Eq-Comparison:T55 Operator:T30 Value:T44
-T56	Eq-Comparison 455 459	≥ 70
-E29	Eq-Comparison:T56 Operator:T31 Value:T46
-T57	Eq-Comparison 827 836	20 within
-E30	Eq-Comparison:T57 Operator:T32 Value:T48
-T58	Eq-Comparison 1094 1102	previous
-E31	Eq-Comparison:T58 Temporal-Period:T59
+T54	Eq-Comparison 298 333	≥3 mm greater than negative control
+E27	Eq-Comparison:T54 Operator:T28 Unit:T40 Value:T43 Operator2:T14 Unit2:T24
+T55	Eq-Comparison 387 399	1 ≥ 0.7 kU/L
+E28	Eq-Comparison:T55 Operator:T30 Value:T44 Value2:T45 Unit:T17 Unit2:T18
+T56	Eq-Comparison 455 460	≥ 70%
+E29	Eq-Comparison:T56 Operator:T31 Value:T46 Unit:T65
+T57	Eq-Comparison 815 829	inferior to 20
+E30	Eq-Comparison:T57 Value:T48 Operator2:T83
+T58	Eq-Comparison 1081 1109	within the 6 previous months
+E31	Eq-Comparison:T58 Temporal-Period:T59 Operator:T35 Value:T53 Temporal-Unit:T39
 T59	Eq-Temporal-Period 1094 1102	previous
 A13	Eq-Temporal-Period-Value T59 past
 T60	Eq-Comparison 1116 1122	Active
 E32	Eq-Comparison:T60 Temporal-Period:T61
 T61	Eq-Temporal-Period 1116 1122	Active
 A14	Eq-Temporal-Period-Value T61 present
-T62	Eq-Comparison 607 612	using
-E33	Eq-Comparison:T62 Temporal-Period:T63
-T63	Eq-Temporal-Period 607 612	using
-A15	Eq-Temporal-Period-Value T63 present
+T64	Modifier 25 48	Controlled intermittent
+E2	Modifier:T64 Modifies:T2
+T7	Modifier 162 167	rhino
+E4	Modifier:T7 Modifies:T4
+T8	And 109 113	with
+E6	And:T8 Arg:E1 Arg2:E7
+T41	Allergy-Name 142 145	cat
+T42	Allergy 146 153	allergy
+E7	Allergy:T42 Name:T41
+R1	Caused-By Arg1:E3 Arg2:E7	
+T5	Allergy 189 202	Sensitization
+E5	Allergy:T5 Name:T6
+T6	Allergy-Name 206 226	cat allergen extract
+T11	Observation 241 256	skin prick test
+E8	Observation:T11 Name:T12 Eq-Comparison:E27
+T12	Observation-Name 241 256	skin prick test
+A16	Observation-Type-Value T12 lab
+T13	Modifier 261 272	cat extract
+E10	Modifier:T13 Modifies:T12
+T14	Eq-Operator 304 316	greater than
+A2	Eq-Operator-Value T14 GT
+T24	Eq-Unit 317 333	negative control
+A17	Observation-Type-Value T16 lab
+T17	Eq-Unit 395 397	kU
+T18	Eq-Unit 398 399	L
+T25	Observation 450 454	FEV1
+E11	Observation:T25 Name:T29 Eq-Comparison:E29
+T29	Observation-Name 450 454	FEV1
+A18	Observation-Type-Value T29 lab
+A19	Eq-Unit-Value T24 ref-range-normal
+T65	Eq-Unit 459 460	%
+T66	Condition 493 505	cat exposure
+E12	Condition:T66 Name:T67 Location:T69
+T67	Condition-Name 493 505	cat exposure
+T68	Negation 490 492	No
+E13	Negation:T68 Negates:E12
+T69	Location 509 513	home
+A20	Location-Value T69 residence
+T70	Negation 517 524	outside
+E14	Negation:T70 Negates:T71
+T71	Location 532 536	home
+A21	Location-Value T71 residence
+T72	Or 514 516	or
+E16	Or:T72 Arg:T69 Arg2:E14
+T73	Study 548 553	study
+E17	Study:T73 
+T74	Temporal-Connection 537 543	during
+E18	Temporal-Connection:T74 Arg2:E17 Arg:E12
+A22	Temporal-Connection-Type-Value E18 during
+T75	Observation 569 596	methacholine challenge test
+E19	Observation:T75 Name:T76 Polarity:T77 Temporality:E23
+T76	Observation-Name 569 596	methacholine challenge test
+A23	Observation-Type-Value T76 lab
+T77	Polarity 560 568	Positive
+A24	Polarity-Value T77 positive
+T62	Modifier 616 646	AeroDoseur DTF-Atomisor ATO-AD
+E21	Modifier:T62 Modifies:T76
+T63	Eq-Comparison 597 606	performed
+E23	Eq-Comparison:T63 Temporal-Period:T78
+T78	Eq-Temporal-Period 597 606	performed
+A15	Eq-Temporal-Period-Value T78 past
+T19	Modifier 685 690	Early
+E24	Modifier:T19 Modifies:T10
+T47	Condition 726 747	cat allergen exposure
+E25	Condition:T47 Name:T79
+T79	Condition-Name 726 747	cat allergen exposure
+R2	Caused-By Arg1:E9 Arg2:E25	
+T80	Modifier 774 786	Uncontrolled
+E33	Modifier:T80 Modifies:T21
+T81	Observation 795 814	asthma control test
+E34	Observation:T81 Name:T82 Eq-Comparison:E30 Temporality:E35
+T82	Observation-Name 795 814	asthma control test
+A25	Observation-Type-Value T82 measurement
+T83	Eq-Operator 815 823	inferior
+A26	Eq-Operator-Value T83 LT
+T84	Eq-Comparison 830 848	within the 4 weeks
+E35	Eq-Comparison:T84 Operator:T32 Value:T49 Temporal-Unit:T36
+T85	Study 863 868	study
+E36	Study:T85 
+T86	Temporal-Connection 849 858	preceding
+E37	Temporal-Connection:T86 Arg:E35 Arg2:E36
+A27	Temporal-Connection-Type-Value E37 before
+T87	Modifier 875 887	Uncontrolled
+E38	Modifier:T87 Modifies:T23
+T88	Eq-Comparison 895 902	2 weeks
+E39	Eq-Comparison:T88 Value:T50 Temporal-Unit:T37
+T89	Procedure 923 932	treatment
+E40	Procedure:T89 
+T90	Drug 918 922	LABA
+E41	Drug:T90 Name:T91
+T91	Drug-Name 918 922	LABA
+R3	Using Arg1:E40 Arg2:E41	
+T92	Temporal-Connection 903 908	after
+E42	Temporal-Connection:T92 Arg:E39 Arg2:E40
+A28	Temporal-Connection-Type-Value E42 after
+T93	Procedure 944 953	treatment
+E43	Procedure:T93 Temporality:E45
+T94	Drug 939 943	LABA
+E44	Drug:T94 Name:T95
+T95	Drug-Name 939 943	LABA
+T96	Eq-Comparison 954 972	within the 2 weeks
+E45	Eq-Comparison:T96 Operator:T33 Value:T51 Temporal-Unit:T38
+T97	Study 987 992	study
+E46	Study:T97 
+T98	Temporal-Connection 973 982	preceding
+E47	Temporal-Connection:T98 Arg:E45 Arg2:E46
+A29	Temporal-Connection-Type-Value E47 before
+R4	Using Arg1:E43 Arg2:E44	
+T99	Condition 1006 1012	asthma
+E48	Condition:T99 Name:T100 Severity:T101
+T100	Condition-Name 1006 1012	asthma
+T101	Severity 999 1005	Severe
+A30	Severity-Value T101 severe
+T102	Observation 1016 1020	GINA
+E49	Observation:T102 Name:T103 Eq-Comparison:E50
+T103	Observation-Name 1016 1020	GINA
+T104	Eq-Comparison 1014 1015	>
+E50	Eq-Comparison:T104 Operator:T34 Value:T52
+R5	Equivalent-To Arg1:E49 Arg2:E48	
+T26	Condition 1059 1080	Cat desensibilisation
+E26	Condition:T26 Name:T27 Temporality:E31
+T27	Condition-Name 1059 1080	Cat desensibilisation
+T105	Condition 1123 1129	smoker
+E51	Condition:T105 Name:T106 Temporality:E32
+T106	Condition-Name 1123 1129	smoker

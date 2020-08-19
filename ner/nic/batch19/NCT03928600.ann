@@ -9,9 +9,9 @@ T6	Condition-Name 452 466	HELLP syndrome
 E5	Condition:T5 Name:T6
 T7	Condition 484 496	hypertension
 T8	Condition-Name 484 496	hypertension
-E7	Condition:T7 Name:T8
-T9	Condition 30 34	term
-T10	Condition-Name 30 34	term
+E7	Condition:T7 Name:T8 Severity:T59
+T9	Condition 25 34	full-term
+T10	Condition-Name 25 34	full-term
 E9	Condition:T9 Name:T10
 T11	Eq-Operator 36 37	≥
 A1	Eq-Operator-Value T11 GTEQ
@@ -31,11 +31,75 @@ T20	Eq-Comparison 200 203	< 7
 E11	Eq-Comparison:T20 Operator:T12 Value:T17
 T21	Eq-Comparison 226 231	≤2 cm
 E12	Eq-Comparison:T21 Operator:T13 Unit:T15 Value:T18
-T22	Eq-Comparison 295 302	history
+T22	Eq-Comparison 295 314	history of previous
 E13	Eq-Comparison:T22 Temporal-Period:T23
-T23	Eq-Temporal-Period 295 302	history
+T23	Eq-Temporal-Period 295 314	history of previous
 A5	Eq-Temporal-Period-Value T23 past
-T24	Eq-Comparison 306 314	previous
-E14	Eq-Comparison:T24 Temporal-Period:T25
-T25	Eq-Temporal-Period 306 314	previous
-A6	Eq-Temporal-Period-Value T25 past
+T26	Observation 50 59	gestation
+E2	Observation:T26 Name:T27 Eq-Comparison:E10
+T27	Observation-Name 50 59	gestation
+R1	Equivalent-To Arg1:E2 Arg2:E9	
+T28	Condition 66 75	singleton
+E4	Condition:T28 Name:T29
+T29	Condition-Name 66 75	singleton
+T30	Condition 81 109	vertex-presenting gestations
+E6	Condition:T30 Name:T31
+T31	Condition-Name 81 109	vertex-presenting gestations
+T32	Contraindication 123 139	contraindication
+E8	Contraindication:T32 Contraindicates:E3
+T33	Negation 120 122	no
+E15	Negation:T33 Negates:E8
+T34	Condition 165 181	intact membranes
+E16	Condition:T34 Name:T35
+T35	Condition-Name 165 181	intact membranes
+T36	Observation 187 199	Bishop score
+E17	Observation:T36 Name:T37 Eq-Comparison:E11
+T37	Observation-Name 187 199	Bishop score
+A7	Observation-Type-Value T37 clinical-score
+T38	Observation 208 225	cervical dilation
+E18	Observation:T38 Name:T39 Eq-Comparison:E12
+T39	Observation-Name 208 225	cervical dilation
+A8	Observation-Type-Value T39 measurement
+T40	And 204 207	and
+E19	And:T40 Arg:E17 Arg2:E18
+T41	Drug 278 289	misoprostol
+E20	Drug:T41 Name:T42
+T42	Drug-Name 278 289	misoprostol
+T43	Contraindication 257 273	contraindication
+E21	Contraindication:T43 Contraindicates:E20
+T44	Procedure 315 324	caesarean
+E22	Procedure:T44 Name:T45 Temporality:E13
+T45	Procedure-Name 315 324	caesarean
+T24	Condition 330 350	rupture of membranes
+E14	Condition:T24 Name:T25
+T25	Condition-Name 330 350	rupture of membranes
+T46	Condition 375 386	morbidities
+E23	Condition:T46 Name:T47
+T47	Condition-Name 375 386	morbidities
+T48	Modifier 366 374	maternal
+E24	Modifier:T48 Modifies:T47
+T49	Modifier 357 362	fetal
+E25	Modifier:T49 Modifies:T47
+T50	Or 363 365	or
+E26	Or:T50 Arg:E25 Arg2:E24
+T51	Condition 388 413	fetal major abnormalities
+E27	Condition:T51 Name:T52
+T52	Condition-Name 388 413	fetal major abnormalities
+R2	Example-Of Arg1:E27 Arg2:E23	
+T53	Condition 447 450	CTG
+E28	Condition:T53 Name:T54
+T54	Condition-Name 447 450	CTG
+T55	Modifier 434 446	pathological
+E29	Modifier:T55 Modifies:T54
+R3	Example-Of Arg1:E28 Arg2:E23	
+R4	Example-Of Arg1:E5 Arg2:E23	
+T56	Condition 468 480	preeclampsia
+E30	Condition:T56 Name:T57
+T57	Condition-Name 468 480	preeclampsia
+R5	Example-Of Arg1:E30 Arg2:E23	
+T58	Or 481 483	or
+E31	Or:T58 Arg:E30 Arg2:E7
+R6	Example-Of Arg1:E7 Arg2:E23	
+T59	Severity 502 508	severe
+A6	Severity-Value T59 severe
+R7	Example-Of Arg1:E1 Arg2:E23	
