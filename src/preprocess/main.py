@@ -43,8 +43,8 @@ def main():
 
     ## Split 
     np.random.seed(1)
-    train, test, dev = np.split(dygiepp, [int(.8*len(dygiepp)), int(.9*len(dygiepp))])
-    #dev, train, test = np.split(dygiepp, [ 0, int(.8*len(dygiepp))])
+    #train, test, dev = np.split(dygiepp, [int(.8*len(dygiepp)), int(.9*len(dygiepp))])
+    dev, train, test = np.split(dygiepp, [ 0, int(.8*len(dygiepp))])
 
     ## Save
     ner_path = os.path.join(Config.preprocess_dir, 'json')

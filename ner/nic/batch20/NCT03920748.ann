@@ -1,8 +1,6 @@
 T1	Procedure 97 107	intubation
 T2	Procedure-Name 97 107	intubation
 E1	Procedure:T1 Name:T2
-T3	Age 44 47	age
-E2	Age:T3
 T4	Eq-Comparison 158 165	History
 E3	Eq-Comparison:T4 Temporal-Period:T5
 T5	Eq-Temporal-Period 158 165	History
@@ -19,3 +17,56 @@ T10	Eq-Comparison 59 69	Undergoing
 E6	Eq-Comparison:T10 Temporal-Period:T11
 T11	Eq-Temporal-Period 59 69	Undergoing
 A4	Eq-Temporal-Period-Value T11 present
+T12	Life-Stage-And-Gender 25 32	Newborn
+A5	Life-Stage-And-Gender-Type T12 infant
+T13	Life-Stage-And-Gender 37 43	infant
+A6	Life-Stage-And-Gender-Type T13 infant
+T14	Or 33 36	and
+E7	Or:T14 Arg:T12 Arg2:T13
+T3	Procedure 79 86	surgery
+E2	Procedure:T3 Name:T15 Temporality:E6
+T15	Procedure-Name 79 86	surgery
+T16	Modifier 70 78	elective
+E8	Modifier:T16 Modifies:T15
+R1	Using Arg1:E2 Arg2:E1	
+T17	Procedure 114 132	general anesthesia
+E9	Procedure:T17 Name:T18
+T18	Procedure-Name 114 132	general anesthesia
+R2	Using Arg1:E2 Arg2:E9	
+T19	Condition 180 200	maxillofacial defect
+E10	Condition:T19 Name:T20 Temporality:E3
+T20	Condition-Name 180 200	maxillofacial defect
+T21	Modifier 169 179	congenital
+E11	Modifier:T21 Modifies:T20
+T22	Condition 218 240	upper airway pathology
+E12	Condition:T22 Name:T23 Temporality:E4
+T23	Condition-Name 218 240	upper airway pathology
+T24	Condition 242 247	tumor
+E13	Condition:T24 Name:T25
+T25	Condition-Name 242 247	tumor
+T26	Condition 249 266	cleft palate-lips
+E14	Condition:T26 Name:T27
+T27	Condition-Name 249 266	cleft palate-lips
+R3	Example-Of Arg1:E13 Arg2:E12	
+R4	Example-Of Arg1:E14 Arg2:E12	
+T28	Condition 304 310	trauma
+E15	Condition:T28 Name:T29 Temporality:E5
+T29	Condition-Name 304 310	trauma
+T30	Modifier 299 303	neck
+E16	Modifier:T30 Modifies:T29
+T31	Modifier 290 294	head
+E17	Modifier:T31 Modifies:T29
+T32	Or 295 298	and
+E18	Or:T32 Arg:E17 Arg2:E16
+T33	Condition 312 320	fracture
+E19	Condition:T33 Name:T34
+T34	Condition-Name 312 320	fracture
+R5	Example-Of Arg1:E19 Arg2:E15	
+T35	Condition 322 330	swelling
+E20	Condition:T35 Name:T36
+T36	Condition-Name 322 330	swelling
+R6	Example-Of Arg1:E20 Arg2:E15	
+T37	Condition 332 336	scar
+E21	Condition:T37 Name:T38
+T38	Condition-Name 332 336	scar
+R7	Example-Of Arg1:E21 Arg2:E15	
