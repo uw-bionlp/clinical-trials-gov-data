@@ -4,9 +4,9 @@ import json
 import numpy as np
 sys.path.append(os.path.join(os.getcwd(), 'src'))
 
-from ner.preprocess.brat_document import BratDocument
-from ner.preprocess.config import Config
-import ner.preprocess.utils as utils
+from preprocess.brat_document import BratDocument
+from preprocess.config import Config
+import preprocess.utils as utils
 
 
 def write_jsonl(objs, file_path):
@@ -43,8 +43,8 @@ def main():
 
     ## Split 
     np.random.seed(1)
-    #train, test, dev = np.split(dygiepp, [int(.8*len(dygiepp)), int(.9*len(dygiepp))])
-    dev, train, test = np.split(dygiepp, [ 0, int(.8*len(dygiepp))])
+    train, test, dev = np.split(dygiepp, [int(.8*len(dygiepp)), int(.9*len(dygiepp))])
+    #dev, train, test = np.split(dygiepp, [ 0, int(.8*len(dygiepp))])
 
     ## Save
     ner_path = os.path.join(Config.preprocess_dir, 'json')

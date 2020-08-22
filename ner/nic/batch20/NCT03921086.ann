@@ -1,27 +1,65 @@
-T1	Procedure 311 326	cardiac surgery
-T2	Procedure-Name 311 326	cardiac surgery
+T1	Procedure 319 326	surgery
+T2	Procedure-Name 319 326	surgery
 E1	Procedure:T1 Name:T2
-T3	Condition 192 204	Hypertension
-T4	Condition-Name 192 204	Hypertension
-E3	Condition:T3 Name:T4
 T5	Condition 353 365	hypertension
 T6	Condition-Name 353 365	hypertension
-E5	Condition:T5 Name:T6
-T7	Condition 414 426	Hypertension
-T8	Condition-Name 414 426	Hypertension
-E7	Condition:T7 Name:T8
+E5	Condition:T5 Name:T6 Severity:T38
 T9	Life-Stage-And-Gender 25 30	Adult
 A1	Life-Stage-And-Gender-Type T9 adult
 T10	Eq-Operator 367 368	>
 A2	Eq-Operator-Value T10 GT
 T11	Eq-Temporal-Unit 46 51	years
 A3	Eq-Temporal-Unit-Value T11 year
-T12	Eq-Unit 376 378	mm
+T12	Eq-Unit 376 380	mmHg
 T13	Eq-Value 43 45	18
 T14	Eq-Value 124 125	1
 T15	Eq-Value 136 137	2
-T16	Eq-Value 224 228	2014
 T17	Eq-Value 368 371	180
-T18	Eq-Value 446 450	2014
-T19	Eq-Comparison 367 371	>180
-E8	Eq-Comparison:T19 Operator:T10 Value:T17
+T19	Eq-Comparison 367 380	>180/110 mmHg
+E8	Eq-Comparison:T19 Operator:T10 Value:T17 Unit:T12 Per:T40
+T20	Eq-Comparison 32 51	older than 18 years
+E2	Eq-Comparison:T20 Operator:T21 Temporal-Unit:T11 Value:T13
+T21	Eq-Operator 32 42	older than
+A4	Eq-Operator-Value T21 GT
+T22	Age 32 37	older
+E4	Age:T22 Eq-Comparison:E2
+R1	Equivalent-To Arg1:E4 Arg2:T9	
+T23	Procedure 67 74	surgery
+E6	Procedure:T23 Name:T24
+T24	Procedure-Name 67 74	surgery
+T25	Modifier 58 66	Elective
+E9	Modifier:T25 Modifies:T24
+T26	Procedure 81 90	operative
+E10	Procedure:T26 Name:T27
+T27	Procedure-Name 81 90	operative
+T28	Temporal-Connection 78 81	pre
+E11	Temporal-Connection:T28 Arg:E12 Arg2:E10
+A5	Temporal-Connection-Type-Value E11 before
+T29	Encounter 91 108	in-hospital visit
+E12	Encounter:T29 Type:T30
+T30	Encounter-Type 91 108	in-hospital visit
+A6	Encounter-Type-Value T30 outpatient
+T31	Temporal-Connection 75 77	at
+E13	Temporal-Connection:T31 Arg:E6 Arg2:E10
+A7	Temporal-Connection-Type-Value E13 during
+T32	Eq-Comparison 124 137	1 and stage 2
+E14	Eq-Comparison:T32 Value:T14 Value2:T15
+T33	Condition 138 150	hypertensive
+E15	Condition:T33 Name:T34 Stage:E14
+T34	Condition-Name 138 150	hypertensive
+T3	Procedure 284 291	surgery
+E3	Procedure:T3 Name:T4
+T4	Procedure-Name 284 291	surgery
+T16	Modifier 275 283	Day case
+E16	Modifier:T16 Modifies:T4
+T35	Modifier 311 318	cardiac
+E17	Modifier:T35 Modifies:T2
+T36	Modifier 297 306	Obstetric
+E18	Modifier:T36 Modifies:T2
+T37	Or 307 310	and
+E19	Or:T37 Arg:E18 Arg2:E17
+T38	Severity 346 352	severe
+A8	Severity-Value T38 severe
+T39	Observation 353 365	hypertension
+E20	Observation:T39 Eq-Comparison:E8
+T40	Eq-Unit 372 375	110

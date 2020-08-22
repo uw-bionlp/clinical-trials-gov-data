@@ -13,9 +13,10 @@ class Config:
         os.path.join(annotation_dir, 'nic', 'batch16'),
         os.path.join(annotation_dir, 'nic', 'batch17'),
         os.path.join(annotation_dir, 'nic', 'batch18'),
+        os.path.join(annotation_dir, 'nic', 'batch19'),
         os.path.join(annotation_dir, 'tony', 'batch1'),
     ]
     annotation_test_dirs  = [ os.path.join(annotation_dir, 'training') ]
-    annotation_eval_dir   = os.path.join(annotation_dir, '.batch20')
+    annotation_eval_dir   = os.path.join(annotation_dir, 'tony', '.batch3')
     preprocess_dir        = os.path.join(home, 'data', 'ner')
         
