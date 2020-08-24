@@ -1,8 +1,8 @@
 T1	Procedure 72 88	cesarean section
 T2	Procedure-Name 72 88	cesarean section
 E1	Procedure:T1 Name:T2
-T3	Condition 206 214	delivery
-T4	Condition-Name 206 214	delivery
+T3	Condition 201 214	fast delivery
+T4	Condition-Name 201 214	fast delivery
 E3	Condition:T3 Name:T4
 T5	Procedure 389 408	regional anesthesia
 T6	Procedure-Name 389 408	regional anesthesia
@@ -15,3 +15,51 @@ T10	Eq-Value 564 566	50
 T11	Eq-Value 580 583	100
 T12	Eq-Comparison 554 566	less than 50
 E6	Eq-Comparison:T12 Operator:T7 Value:T10
+T13	Condition 35 43	pregnant
+E2	Condition:T13 Name:T14
+T14	Condition-Name 35 43	pregnant
+T15	Life-Stage-And-Gender 44 49	women
+A2	Life-Stage-And-Gender-Type T15 female
+T16	Study 97 102	study
+E4	Study:T16 
+T17	Condition 176 190	Fetal distress
+E7	Condition:T17 Name:T18
+T18	Condition-Name 176 190	Fetal distress
+R1	Treatment-For Arg1:E3 Arg2:E7	
+T19	Condition 235 251	hypersensitivity
+E8	Condition:T19 Name:T20
+T20	Condition-Name 235 251	hypersensitivity
+T21	Allergy 253 270	allergic response
+E9	Allergy:T21 
+T22	Condition 272 282	resistance
+E10	Condition:T22 Name:T23
+T23	Condition-Name 272 282	resistance
+T24	Drug 290 295	drugs
+E11	Drug:T24 
+T25	Drug 316 324	fentanyl
+E12	Drug:T25 Name:T26
+T26	Drug-Name 316 324	fentanyl
+T27	Drug 326 337	ropivacaine
+E13	Drug:T27 Name:T28
+T28	Drug-Name 326 337	ropivacaine
+T29	Drug 339 348	lidocaine
+E14	Drug:T29 Name:T30
+T30	Drug-Name 339 348	lidocaine
+R2	Example-Of Arg1:E12 Arg2:E11	
+R3	Example-Of Arg1:E13 Arg2:E11	
+R4	Example-Of Arg1:E14 Arg2:E11	
+T31	Study 309 314	study
+E15	Study:T31 
+R5	Using Arg1:E15 Arg2:E11	
+T32	Negation 372 384	not possible
+E16	Negation:T32 
+T33	Observation 544 550	weight
+E17	Observation:T33 Name:T34 Eq-Comparison:E6 Eq-Comparison2:E19
+T34	Observation-Name 544 550	weight
+A3	Observation-Type-Value T34 measurement
+T35	Or 569 571	or
+E18	Or:T35 Arg:E6 Arg2:E19
+T36	Eq-Comparison 572 585	exceeds 100kg
+E19	Eq-Comparison:T36 Operator:T37 Value:T11 Unit:T9
+T37	Eq-Operator 572 579	exceeds
+A4	Eq-Operator-Value T37 GT

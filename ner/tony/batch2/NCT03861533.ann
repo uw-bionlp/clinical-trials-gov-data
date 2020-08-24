@@ -9,12 +9,12 @@ T6	Condition-Name 139 161	cardiovascular disease
 E5	Condition:T5 Name:T6
 T7	Procedure 296 310	statin therapy
 T8	Procedure-Name 296 310	statin therapy
-E7	Procedure:T7 Name:T8
+E7	Procedure:T7 Name:T8 Temporality:E14
 T9	Life-Stage-And-Gender 25 31	Adults
 A1	Life-Stage-And-Gender-Type T9 adult
-T10	Procedure 371 388	Current treatment
-T11	Procedure-Name 371 388	Current treatment
-E10	Procedure:T10 Name:T11
+T10	Procedure 379 388	treatment
+T11	Procedure-Name 379 388	treatment
+E10	Procedure:T10 Name:T11 Temporality:E21
 T12	Eq-Operator 32 33	≥
 A2	Eq-Operator-Value T12 GTEQ
 T13	Eq-Operator 221 236	within the past
@@ -28,7 +28,7 @@ A6	Eq-Temporal-Unit-Value T16 month
 T17	Eq-Temporal-Unit 338 344	months
 A7	Eq-Temporal-Unit-Value T17 month
 T18	Age 43 46	old
-E11	Age:T18
+E11	Age:T18 
 T19	Eq-Value 34 36	18
 T20	Eq-Value 237 238	6
 T21	Eq-Value 336 337	3
@@ -38,3 +38,46 @@ T23	Eq-Comparison 221 245	within the past 6 months
 E13	Eq-Comparison:T23 Operator:T13 Temporal-Unit:T16 Value:T20
 T24	Eq-Comparison 327 344	the past 3 months
 E14	Eq-Comparison:T24 Operator:T14 Temporal-Unit:T17 Value:T21
+R1	Equivalent-To Arg1:E11 Arg2:E12	
+T25	Risk 52 61	High risk
+E2	Risk:T25 Risk-For:E3 Risk-For2:E4
+T26	Death 95 104	mortality
+E4	Death:T26 
+T27	And 91 94	and
+E6	And:T27 Arg:E3 Arg2:E4
+T28	Modifier 130 138	clinical
+E8	Modifier:T28 Modifies:T6
+T29	Or 162 168	and/or
+E9	Or:T29 Arg:E5 Arg2:T2
+T30	Observation 215 220	LDL-C
+E15	Observation:T30 Name:T31 Temporality:E13 Minimum-Count:E16
+T31	Observation-Name 215 220	LDL-C
+A8	Observation-Type-Value T31 lab
+T32	Eq-Comparison 246 269	above recommended level
+E16	Eq-Comparison:T32 Operator:T33 Value:T34
+T33	Eq-Operator 246 251	above
+A9	Eq-Operator-Value T33 GT
+T34	Eq-Value 252 269	recommended level
+T35	Drug 313 322	ezetimibe
+E17	Drug:T35 Name:T36
+T36	Drug-Name 313 322	ezetimibe
+R2	Using Arg1:E7 Arg2:E17	
+T37	Modifier 278 295	maximal tolerated
+E18	Modifier:T37 
+R3	Abbrev-Of Arg1:E18 Arg2:E7	
+T38	And 270 277	despite
+E19	And:T38 Arg:E15 Arg2:E7
+T39	Drug 394 409	PCSK9 inhibitor
+E20	Drug:T39 Name:T40
+T40	Drug-Name 394 409	PCSK9 inhibitor
+R4	Using Arg1:E10 Arg2:E20	
+T41	Eq-Comparison 371 378	Current
+E21	Eq-Comparison:T41 
+T42	Eq-Temporal-Period 371 378	Current
+A10	Eq-Temporal-Period-Value T42 present
+T43	Study 456 461	study
+E22	Study:T43 Temporality:E23
+T44	Eq-Comparison 415 422	Current
+E23	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 415 422	Current
+A11	Eq-Temporal-Period-Value T45 present
