@@ -2,10 +2,6 @@ T1	Language 220 227	English
 T2	Language 504 511	English
 T3	Eq-Operator 113 119	within
 A1	Eq-Operator-Value T3 LTEQ
-T4	Eq-Operator 357 363	within
-A2	Eq-Operator-Value T4 LTEQ
-T5	Eq-Operator 548 554	within
-A3	Eq-Operator-Value T5 LTEQ
 T6	Eq-Temporal-Unit 56 60	days
 A4	Eq-Temporal-Unit-Value T6 day
 T7	Eq-Temporal-Unit 122 128	months
@@ -14,3 +10,70 @@ T8	Eq-Value 54 55	4
 T9	Eq-Value 120 121	4
 T10	Eq-Comparison 113 128	within 4 months
 E1	Eq-Comparison:T10 Operator:T3 Temporal-Unit:T7 Value:T9
+T11	Encounter 68 71	ICU
+E2	Encounter:T11 Type:T12 Duration:E3
+T12	Encounter-Type 68 71	ICU
+A6	Encounter-Type-Value T12 icu
+T13	Eq-Comparison 44 60	more than 4 days
+E3	Eq-Comparison:T13 Operator:T14 Temporal-Unit:T6 Value:T8
+T14	Eq-Operator 44 53	more than
+A7	Eq-Operator-Value T14 GT
+T15	Encounter 83 93	discharged
+E4	Encounter:T15 Type:T16 Temporality:E1 Location:T21
+T16	Encounter-Type 83 93	discharged
+A8	Encounter-Type-Value T16 discharge
+T17	Encounter 132 155	transfer out of the ICU
+E5	Encounter:T17 Type:T18 Location:T19
+T18	Encounter-Type 132 140	transfer
+A9	Encounter-Type-Value T18 transfer
+T19	Location 152 155	ICU
+A10	Location-Value T19 unit
+T20	Temporal-Connection 129 131	of
+E6	Temporal-Connection:T20 Arg:E1 Arg2:E5
+A11	Temporal-Connection-Type-Value E6 after
+T21	Location 103 112	community
+A12	Location-Value T21 residence
+T22	Encounter-Type 188 196	hospital
+T24	Exception 157 166	excluding
+E8	Exception:T24 From:E5 Except:E17
+T25	Condition 285 296	psychiatric
+E9	Condition:T25 Name:T26 Temporality:E10
+T26	Condition-Name 285 296	psychiatric
+T27	Eq-Comparison 272 284	pre-existing
+E10	Eq-Comparison:T27 Temporal-Period:T28
+T28	Eq-Temporal-Period 272 284	pre-existing
+A14	Eq-Temporal-Period-Value T28 past
+T29	Negation 263 266	not
+E11	Negation:T29 Negates:E9
+T30	Encounter 325 337	ICU transfer
+E12	Encounter:T30 Type:T32 Location:T31
+T31	Location 325 328	ICU
+A15	Location-Value T31 unit
+T32	Encounter-Type 329 337	transfer
+A16	Encounter-Type-Value T32 transfer
+T33	Temporal-Connection 318 320	in
+E13	Temporal-Connection:T33 Arg:E9 Arg2:E12
+A17	Temporal-Connection-Type-Value E13 during
+T4	Observation 351 356	Lives
+E14	Observation:T4 Name:T34 Location:T35
+T34	Observation-Name 351 356	Lives
+T35	Location 379 386	Calgary
+A2	Location-Value T35 residence
+T5	Observation 542 547	Lives
+E15	Observation:T5 Name:T36 Location:T37
+T36	Observation-Name 542 547	Lives
+T37	Location 570 577	Calgary
+A3	Location-Value T37 residence
+T38	Encounter 624 632	hospital
+E16	Encounter:T38 Duration:E18
+T39	Encounter-Type 624 632	hospital
+A18	Encounter-Type-Value T39 inpatient
+A13	Encounter-Type-Value T22 inpatient
+T40	Encounter 188 196	hospital
+E17	Encounter:T40 Type:T22 Duration:E7
+T23	Eq-Comparison 197 206	long-term
+E7	Eq-Comparison:T23 Value:T41
+T41	Eq-Value 197 206	long-term
+T42	Eq-Comparison 614 623	Long-term
+E18	Eq-Comparison:T42 Value:T43
+T43	Eq-Value 614 623	Long-term
