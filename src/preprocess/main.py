@@ -38,13 +38,13 @@ def main():
     for d in Config.annotation_train_dirs:
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
-    dygiepp = [ ann.to_dygiepp_format() for ann in annotations ]
-    dygiepp_extended = [ ann.to_dygiepp_format_extended() for ann in annotations ]
+    #dygiepp = [ ann.to_dygiepp_format() for ann in annotations ]
+    dygiepp = [ ann.to_dygiepp_format2(debug=False) for ann in annotations ]
 
     ## Split 
     np.random.seed(1)
     train, test, dev = np.split(dygiepp, [int(.8*len(dygiepp)), int(.9*len(dygiepp))])
-    #dev, train, test = np.split(dygiepp, [ 0, int(.8*len(dygiepp))])
+    # dev, train, test = np.split(dygiepp, [ 0, int(.8*len(dygiepp))])
 
     ## Save
     ner_path = os.path.join(Config.preprocess_dir, 'json')

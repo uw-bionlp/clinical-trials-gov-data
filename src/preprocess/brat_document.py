@@ -4,6 +4,7 @@ import spacy
 tokenize = spacy.load('en_core_web_sm')
 
 
+
 def pretokenize(text):
     reg_num = r'\d'
     #common_numchars = [ ch.lower() for ch in [ 'CD4', 'B12', 'm2', 'm3', 'icd9', 'icd10' ] ]
@@ -12,7 +13,7 @@ def pretokenize(text):
     is_possible_code = lambda i: re.match(possible_code, lowered[i-2:i+2])
     is_numeric = False
     prec_numeric = False
-    dividers = { '<', '>', '=', '≥', '≤', '-', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧' }
+    dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧' }
     cleaned = []
     prev = ''
     prev_num = False
@@ -185,7 +186,7 @@ class BratDocument:
         self.Rs = Rs
 
 
-    def to_dygiepp_format(self):
+    def to_dygiepp_format(self, debug=False):
 
         output = { "doc_key": self.doc_id, "sentences": [ [ tok.text for tok in sent ] for sent in self.sents ], "ner": [], "relations": [], "clusters": [], "events": [] }
 
@@ -193,6 +194,7 @@ class BratDocument:
         #for i, sent in enumerate(self.sents):
         #    if len(sent) == 1 and any([ t for t in self.Ts.items() if t.sent_idx == i ]):
         #        x=1
+
 
         regex_trailing_num = r'[0-9]$'
 
@@ -249,7 +251,7 @@ class BratDocument:
             output['events'].append(curr_ev)
             min_tok_idx = max_tok_idx
 
-        if 1==0:
+        if debug:
             toks = []
             for sent in output['sentences']:
                 for t in sent:
@@ -273,10 +275,11 @@ class BratDocument:
 
         return output
 
-    def to_dygiepp_format_extended(self):
+    def to_dygiepp_format2(self, debug=False):
 
         output = { "doc_key": self.doc_id, "sentences": [ [ tok.text for tok in sent ] for sent in self.sents ], "ner": [], "relations": [], "clusters": [], "events": [] }
 
+        event_types = set([ v.args[0].type for k, v in self.Es.items() ])
         regex_trailing_num = r'[0-9]$'
 
         # For each sentence
@@ -287,45 +290,35 @@ class BratDocument:
 
             # NER
             for k, v in self.Ts.items():
-                if v.tok_beg_idx >= min_tok_idx and v.tok_end_idx <= max_tok_idx:
-                    a = [ a_v for a_k, a_v in self.As.items() if a_v.attr_of == v ]
-                    tp = f'T:{v.type}'
-                    if len(a):
-                        tp = f'{tp}___A:{a[0].type}___{a[0].val}'
-                    curr_ner.append([ v.tok_beg_idx, v.tok_end_idx, tp ])
+                if v.type not in event_types and \
+                   v.tok_beg_idx >= min_tok_idx and \
+                   v.tok_end_idx <= max_tok_idx:
+                    curr_ner.append([ v.tok_beg_idx, v.tok_end_idx, 'T:'+v.type ])
+
+            # Attributes
+            for k, v in self.As.items():
+                t = v.attr_of.get_T()
+                if t.tok_beg_idx >= min_tok_idx and t.tok_end_idx <= max_tok_idx:
+                    curr_ner.append([ t.tok_beg_idx, t.tok_end_idx, 'A:'+v.type+'___'+v.val ])
 
             # Relations & Clusters
             for k, v in self.Rs.items():
-                arg1 = v.arg1.args[0].val if isinstance(v.arg1, BratE) else v.arg1
-                arg2 = v.arg2.args[0].val if isinstance(v.arg2, BratE) else v.arg2
-                if  arg1.tok_beg_idx >= min_tok_idx and arg1.tok_end_idx <= max_tok_idx and \
-                    arg2.tok_beg_idx >= min_tok_idx and arg2.tok_end_idx <= max_tok_idx:
-
-                    if v.type == 'Coreference':
-                        curr_coref.append([ arg1.tok_beg_idx, arg1.tok_end_idx, arg2.tok_beg_idx, arg2.tok_end_idx ])
-                    else:
-                        tp = f'R:{v.type}'
-                        curr_rel.append([ arg1.tok_beg_idx, arg1.tok_end_idx, arg2.tok_beg_idx, arg2.tok_end_idx, v.type ])
+                arg1 = v.arg1.get_T()
+                arg2 = v.arg2.get_T()
+                if arg1.tok_beg_idx >= min_tok_idx and arg1.tok_end_idx <= max_tok_idx and \
+                   arg2.tok_beg_idx >= min_tok_idx and arg2.tok_end_idx <= max_tok_idx:
+                    curr_rel.append([ arg1.tok_beg_idx, arg1.tok_end_idx, arg2.tok_beg_idx, arg2.tok_end_idx, 'R:'+v.type ])
 
             # Events
             for k, v in self.Es.items():
-                trigger = v.args[0].val
+                trigger = v.get_T()
                 event_arrs = [ [ trigger.tok_beg_idx, trigger.type ] ]
                 for ev in v.args[1:]:
-                    if isinstance(ev.val, BratE):
-                        min_idx = ev.val.args[0].val.tok_beg_idx
-                        max_idx = ev.val.args[0].val.tok_end_idx
-                    else:
-                        min_idx = ev.val.tok_beg_idx
-                        max_idx = ev.val.tok_end_idx
-                    if min_idx == -1 or max_idx == -1:
-                        continue
-                    tp = f'E:{ev.type}'
+                    t = ev.get_T()
+                    tp = ev.type
                     if 'Arg' not in tp and any(re.findall(regex_trailing_num, tp)):
                         tp = re.sub(regex_trailing_num, '', tp)
-                    curr_rel.append([ trigger.tok_beg_idx, trigger.tok_end_idx, min_idx, max_idx, tp ])
-                    #event_arrs.append([ min_idx, max_idx, tp ])
-                #curr_ev.append(event_arrs)
+                    curr_rel.append([ trigger.tok_beg_idx, trigger.tok_end_idx, t.tok_beg_idx, t.tok_end_idx, 'E:'+tp ])
 
             output['ner'].append(curr_ner)
             output['clusters'].append(curr_coref)
@@ -333,7 +326,7 @@ class BratDocument:
             output['events'].append(curr_ev)
             min_tok_idx = max_tok_idx
 
-        if 1==0:
+        if debug:
             toks = []
             for sent in output['sentences']:
                 for t in sent:
@@ -348,12 +341,6 @@ class BratDocument:
             for rel in output['relations']:
                 for x in rel:
                     print(f'        "{" ".join([ str(toks[y]) for y in sorted(set(x[:2])) ])}" "{" ".join([ str(toks[y]) for y in sorted(set(x[2:-1])) ])}"  {x[4]} {x}')
-            print(f'    \nEvents:')
-            for ev in output['events']:
-                for x in ev:
-                    print(f'        "{toks[x[0][0]]}" {x[0][1]} {x}')
-                    for y in x[1:]:
-                        print(f'            "{" ".join([ str(toks[z]) for z in sorted(set(y[:2])) ])}" {y[2]}')
 
         return output
 
@@ -400,7 +387,7 @@ class BratEArgPair:
         self.val  = val
 
     def get_T(self):
-        return val
+        return self.val.get_T()
 
 class BratR:
     def __init__(self, tp, arg1, arg2, id, line):
