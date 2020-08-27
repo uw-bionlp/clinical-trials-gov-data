@@ -13,10 +13,7 @@ E7	Condition:T7 Name:T8
 T9	Condition 355 370	cardiac disease
 T10	Condition-Name 355 370	cardiac disease
 E9	Condition:T9 Name:T10
-T11	Procedure 124 130	urgent
-T12	Procedure-Name 124 130	urgent
-E11	Procedure:T11 Name:T12
-T13	Language 25 28	Men
+T13	Life-Stage-And-Gender 25 28	Men
 T14	Condition 377 398	mitral valve prolapse
 T15	Condition-Name 377 398	mitral valve prolapse
 E14	Condition:T14 Name:T15
@@ -59,9 +56,7 @@ A5	Eq-Temporal-Unit-Value T38 month
 T39	Eq-Temporal-Unit 873 879	months
 A6	Eq-Temporal-Unit-Value T39 month
 T40	Age 39 42	age
-E33	Age:T40 
-T41	Age 57 60	age
-E34	Age:T41 
+E33	Age:T40 Eq-Comparison:E35
 T42	Eq-Value 45 47	40
 T43	Eq-Value 578 580	12
 T44	Eq-Value 843 845	30
@@ -84,3 +79,22 @@ T53	Eq-Comparison 472 477	Prior
 E40	Eq-Comparison:T53 Temporal-Period:T54
 T54	Eq-Temporal-Period 472 477	Prior
 A9	Eq-Temporal-Period-Value T54 past
+A10	Life-Stage-And-Gender-Type T13 male
+T55	Life-Stage-And-Gender 33 38	women
+A11	Life-Stage-And-Gender-Type T55 female
+T56	Or 29 32	and
+E2	Or:T56 Arg:T13 Arg2:T55
+T41	Condition 79 83	pain
+E4	Condition:T41 Name:T57 Stability:T59
+T57	Condition-Name 79 83	pain
+T58	Modifier 73 78	chest
+E6	Modifier:T58 Modifies:T57
+T59	Stability 66 72	Stable
+A12	Stability-Value T59 stable
+T60	Modifier 87 97	equivalent
+E8	Modifier:T60 Modifies:T57
+T61	Assertion 98 106	symptoms
+E10	Assertion:T61 Asserted:E8
+A13	Assertion-Type-Value E10 possible
+T62	Or 84 86	or
+E12	Or:T62 Arg:E4 Arg2:E8

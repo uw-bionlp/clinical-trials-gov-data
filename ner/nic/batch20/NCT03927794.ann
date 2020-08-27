@@ -1,16 +1,11 @@
 T1	Condition 62 76	carious lesion
 T2	Condition-Name 62 76	carious lesion
-E1	Condition:T1 Name:T2
-T3	Condition 36 44	Anterior
-T4	Condition-Name 36 44	Anterior
-E3	Condition:T3 Name:T4
-T5	Life-Stage-And-Gender 197 205	children
-A1	Life-Stage-And-Gender-Type T5 child
-T6	Condition 432 440	anterior
-T7	Condition-Name 432 440	anterior
-E6	Condition:T6 Name:T7
-T8	Condition 535 543	anterior
-T9	Condition-Name 535 543	anterior
+E1	Condition:T1 Name:T2 Minimum-Count:E10 Stage:E4
+T6	Condition 458 473	carious lesions
+T7	Condition-Name 458 473	carious lesions
+E6	Condition:T6 Name:T7 Minimum-Count:E27 Minimum-Count2:E28 Stage:E31
+T8	Condition 559 574	carious lesions
+T9	Condition-Name 559 574	carious lesions
 E8	Condition:T8 Name:T9
 T10	Eq-Operator 25 26	≥
 A2	Eq-Operator-Value T10 GTEQ
@@ -21,14 +16,12 @@ A4	Eq-Operator-Value T12 GT
 T13	Eq-Temporal-Unit 363 368	years
 A5	Eq-Temporal-Unit-Value T13 year
 T14	Age 346 350	aged
-E9	Age:T14 
+E9	Age:T14 Eq-Comparison:E16
 T15	Eq-Operator 104 105	-
 A6	Eq-Operator-Value T15 BETWEEN
 T16	Eq-Operator 281 282	-
 A7	Eq-Operator-Value T16 BETWEEN
-T17	Eq-Operator 325 326	-
-A8	Eq-Operator-Value T17 BETWEEN
-T18	Eq-Operator 360 361	-
+T18	Eq-Operator 351 358	between
 A9	Eq-Operator-Value T18 BETWEEN
 T19	Eq-Operator 498 499	-
 A10	Eq-Operator-Value T19 BETWEEN
@@ -36,8 +29,6 @@ T20	Eq-Value 26 27	1
 T21	Eq-Value 103 104	1
 T22	Eq-Value 105 106	2
 T23	Eq-Value 282 284	60
-T24	Eq-Value 321 322	6
-T25	Eq-Value 326 327	7
 T26	Eq-Value 359 360	3
 T27	Eq-Value 361 362	5
 T28	Eq-Value 402 403	1
@@ -50,15 +41,131 @@ T34	Eq-Comparison 25 27	≥1
 E10	Eq-Comparison:T34 Operator:T10 Value:T20
 T35	Eq-Comparison 597 599	≥3
 E11	Eq-Comparison:T35 Operator:T11 Value:T32
-T36	Eq-Comparison 720 723	>60
-E12	Eq-Comparison:T36 Operator:T12 Value:T33
+T36	Eq-Comparison 720 727	>60 sec
+E12	Eq-Comparison:T36 Operator:T12 Value:T33 Temporal-Unit:T88
 T37	Eq-Comparison 103 105	1-
-E13	Eq-Comparison:T37 Operator:T15 Value:T21
-T38	Eq-Comparison 281 284	-60
-E14	Eq-Comparison:T38 Operator:T16 Value:T23
-T39	Eq-Comparison 325 327	-7
-E15	Eq-Comparison:T39 Operator:T17 Value:T25
-T40	Eq-Comparison 359 361	3-
-E16	Eq-Comparison:T40 Operator:T18 Value:T26
+E13	Eq-Comparison:T37 Operator:T15 Value:T21 Value2:T22
+T38	Eq-Comparison 279 287	30-60sec
+E14	Eq-Comparison:T38 Operator:T16 Value:T23 Value2:T59 Temporal-Unit:T60
+T40	Eq-Comparison 351 368	between 3-5 years
+E16	Eq-Comparison:T40 Operator:T18 Value:T26 Value2:T27 Value3:T27 Temporal-Unit:T13
 T41	Eq-Comparison 497 499	1-
-E17	Eq-Comparison:T41 Operator:T19 Value:T30
+E17	Eq-Comparison:T41 Operator:T19 Value:T30 Value2:T31
+T3	Modifier 28 50	Primary Anterior Teeth
+E2	Modifier:T3 Modifies:T2
+T4	Modifier 56 61	early
+E3	Modifier:T4 Modifies:T2
+T42	Eq-Comparison 78 85	Class V
+E4	Eq-Comparison:T42 Unit:T43 Value:T44
+T43	Eq-Unit 78 83	Class
+T44	Eq-Value 84 85	V
+T45	Observation 90 102	ICDAS scores
+E5	Observation:T45 Name:T46 Eq-Comparison:E13
+T46	Observation-Name 90 102	ICDAS scores
+A11	Observation-Type-Value T46 clinical-score
+T47	And 87 89	of
+E7	And:T47 Arg:E1 Arg2:E5
+T48	Condition 174 186	oral hygiene
+E18	Condition:T48 Name:T49 Polarity:T50 Stability:T51
+T49	Condition-Name 174 186	oral hygiene
+T50	Polarity 169 173	good
+A12	Polarity-Value T50 normal
+T51	Stability 160 168	maintain
+A13	Stability-Value T51 stable
+T52	Assertion 140 156	willing and able
+E19	Assertion:T52 Asserted:T51 Asserted2:E21
+A14	Assertion-Type-Value E19 hypothetical
+T5	Family-Member 197 205	children
+E20	Family-Member:T5 Has:E18
+A1	Family-Member-Type E20 child
+T53	Study 217 222	study
+E21	Study:T53 
+T54	And 206 209	and
+E22	And:T54 Arg:E20 Arg2:E21
+T55	Observation 250 256	Saliva
+E23	Observation:T55 Name:T56 Polarity:T57 Eq-Comparison:E14
+T56	Observation-Name 250 256	Saliva
+T57	Polarity 260 266	normal
+A15	Polarity-Value T57 normal
+T58	Modifier 267 277	flow rates
+E24	Modifier:T58 Modifies:T56
+T59	Eq-Value 279 281	30
+T60	Eq-Temporal-Unit 284 287	sec
+A16	Eq-Temporal-Unit-Value T60 second
+T61	Observation 306 315	saliva pH
+E25	Observation:T61 Name:T62 Polarity:T63 Eq-Comparison:E15
+T62	Observation-Name 306 315	saliva pH
+A17	Observation-Type-Value T62 lab
+A18	Observation-Type-Value T56 measurement
+T63	Polarity 298 305	healthy
+A19	Polarity-Value T63 normal
+T64	And 289 292	and
+E26	And:T64 Arg:E23 Arg2:E25
+T17	Eq-Comparison 316 325	6.75-7.25
+E15	Eq-Comparison:T17 Value:T24 Operator:T39 Value2:T25
+T24	Eq-Value 316 320	6.75
+T25	Eq-Value 321 325	7.25
+T39	Eq-Operator 320 321	-
+A8	Eq-Operator-Value T39 BETWEEN
+R1	Equivalent-To Arg1:E15 Arg2:T63	
+T65	Eq-Comparison 391 403	minimum of 1
+E27	Eq-Comparison:T65 Value:T28
+T66	Eq-Comparison 410 423	maximum of 12
+E28	Eq-Comparison:T66 Value:T29
+T67	Modifier 424 446	primary anterior teeth
+E29	Modifier:T67 Modifies:T7
+T68	Modifier 452 457	early
+E30	Modifier:T68 Modifies:T7
+T69	Eq-Comparison 474 481	Class V
+E31	Eq-Comparison:T69 Unit:T70 Value:T71
+T70	Eq-Unit 474 479	Class
+T71	Eq-Value 480 481	V
+T72	Observation 485 496	ICDAS score
+E32	Observation:T72 Name:T73 Eq-Comparison:E17
+T73	Observation-Name 485 496	ICDAS score
+A20	Observation-Type-Value T73 clinical-score
+T74	And 482 484	of
+E33	And:T74 Arg:E6 Arg2:E32
+T75	Modifier 527 549	Primary anterior teeth
+E34	Modifier:T75 Modifies:T9
+T76	Observation 591 596	ICDAS
+E35	Observation:T76 Name:T77 Eq-Comparison:E11
+T77	Observation-Name 591 596	ICDAS
+A21	Observation-Type-Value T77 clinical-score
+T78	And 586 590	with
+E36	And:T78 Arg:E8 Arg2:E35
+T79	Drug 618 628	medication
+E37	Drug:T79 Temporality:E38
+T80	Eq-Comparison 615 617	on
+E38	Eq-Comparison:T80 Temporal-Period:T81
+T81	Eq-Temporal-Period 615 617	on
+A22	Eq-Temporal-Period-Value T81 present
+T82	Observation 646 664	salivary flow rate
+E39	Observation:T82 Name:T83 Stability:T84
+T83	Observation-Name 646 664	salivary flow rate
+A23	Observation-Type-Value T83 measurement
+T84	Stability 634 641	affects
+A24	Stability-Value T84 change
+R2	Caused-By Arg1:T84 Arg2:E37	
+T85	Observation 705 718	salivary flow
+E40	Observation:T85 Name:T86 Polarity:T87 Eq-Comparison:E12
+T86	Observation-Name 705 718	salivary flow
+A25	Observation-Type-Value T86 measurement
+T87	Polarity 697 704	reduced
+A26	Polarity-Value T87 low
+T88	Eq-Temporal-Unit 724 727	sec
+A27	Eq-Temporal-Unit-Value T88 second
+R3	Equivalent-To Arg1:E12 Arg2:T87	
+T89	Observation 744 753	saliva pH
+E41	Observation:T89 Name:T90 Eq-Comparison:E43
+T90	Observation-Name 744 753	saliva pH
+A28	Observation-Type-Value T90 lab
+T91	Modifier 737 743	acidic
+E42	Modifier:T91 Modifies:T90
+T92	Eq-Comparison 753 757	˂5.8
+E43	Eq-Comparison:T92 Operator:T93 Value:T94
+T93	Eq-Operator 753 754	˂
+A29	Eq-Operator-Value T93 LT
+T94	Eq-Value 754 757	5.8
+T95	Or 729 731	or
+E44	Or:T95 Arg:E40 Arg2:E41
