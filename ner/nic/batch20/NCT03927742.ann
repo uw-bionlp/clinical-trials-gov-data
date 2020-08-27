@@ -2,16 +2,23 @@ T1	Condition 310 319	Pregnancy
 T2	Condition-Name 310 319	Pregnancy
 E1	Condition:T1 Name:T2
 T3	Language 156 163	English
-T4	Eq-Operator 89 95	within
-A1	Eq-Operator-Value T4 LTEQ
 T5	Eq-Temporal-Unit 31 36	years
 A2	Eq-Temporal-Unit-Value T5 year
 T6	Age 37 40	old
-E2	Age:T6
+E2	Age:T6 Eq-Comparison:E3
 T7	Eq-Operator 27 28	-
 A3	Eq-Operator-Value T7 BETWEEN
 T8	Eq-Value 25 27	18
 T9	Eq-Value 28 30	75
 T10	Eq-Value 124 128	2010
-T11	Eq-Comparison 25 28	18-
-E3	Eq-Comparison:T11 Operator:T7 Value:T8
+T11	Eq-Comparison 25 36	18-75 years
+E3	Eq-Comparison:T11 Operator:T7 Value:T8 Value2:T9 Temporal-Unit:T5
+T12	Condition 61 88	cutaneous invasive melanoma
+E4	Condition:T12 Name:T13 Location:T4 Temporality:E5
+T13	Condition-Name 61 88	cutaneous invasive melanoma
+T4	Location 96 110	HealthPartners
+A1	Location-Value T4 hospital
+T14	Eq-Comparison 118 128	since 2010
+E5	Eq-Comparison:T14 Operator:T15 Value:T10
+T15	Eq-Operator 118 123	since
+A4	Eq-Operator-Value T15 GTEQ
