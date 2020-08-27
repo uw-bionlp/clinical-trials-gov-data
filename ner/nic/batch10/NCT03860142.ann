@@ -1,5 +1,5 @@
-T1	Condition 288 301	developmental
-T2	Condition-Name 288 301	developmental
+T1	Condition 302 313	pathologies
+T2	Condition-Name 302 313	pathologies
 E1	Condition:T1 Name:T2
 T3	Life-Stage-And-Gender 25 33	Children
 A1	Life-Stage-And-Gender-Type T3 child
@@ -9,9 +9,6 @@ T5	Life-Stage-And-Gender 257 265	Children
 A3	Life-Stage-And-Gender-Type T5 child
 T6	Life-Stage-And-Gender 344 352	Children
 A4	Life-Stage-And-Gender-Type T6 child
-T7	Condition 82 86	term
-T8	Condition-Name 82 86	term
-E7	Condition:T7 Name:T8
 T9	Eq-Operator 44 45	≥
 A5	Eq-Operator-Value T9 GTEQ
 T10	Eq-Operator 60 61	≤
@@ -23,7 +20,7 @@ A8	Eq-Temporal-Unit-Value T12 month
 T13	Eq-Temporal-Unit 65 71	months
 A9	Eq-Temporal-Unit-Value T13 month
 T14	Age 40 43	age
-E8	Age:T14
+E8	Age:T14 Eq-Comparison:E9 Eq-Comparison2:E10
 T15	Eq-Value 46 48	24
 T16	Eq-Value 62 64	36
 T17	Eq-Value 109 111	33
@@ -33,3 +30,56 @@ T19	Eq-Comparison 60 71	≤ 36 months
 E10	Eq-Comparison:T19 Operator:T10 Temporal-Unit:T13 Value:T16
 T20	Eq-Comparison 108 111	<33
 E11	Eq-Comparison:T20 Operator:T11 Value:T17
+T21	And 34 39	whose
+E2	And:T21 Arg:T3 Arg2:E8
+T22	And 56 59	and
+E3	And:T22 Arg:E9 Arg2:E10
+T7	Birth 102 106	born
+E4	Birth:T7 Location:T27
+T8	Modifier 90 101	prematurely
+E5	Modifier:T8 Modifies:E4
+T23	Modifier 77 86	Full-term
+E6	Modifier:T23 Modifies:E4
+T24	Or 87 89	or
+E7	Or:T24 Arg:E6 Arg2:E5
+T25	Observation 112 114	SA
+E12	Observation:T25 Name:T26 Eq-Comparison:E11
+T26	Observation-Name 112 114	SA
+R1	Equivalent-To Arg1:E12 Arg2:E4	
+T27	Location 119 143	Nice University Hospital
+A10	Location-Value T27 hospital
+T28	Condition 183 205	congenital pathologies
+E13	Condition:T28 Name:T29
+T29	Condition-Name 183 205	congenital pathologies
+T30	Condition 212 225	malformations
+E14	Condition:T30 Name:T31
+T31	Condition-Name 212 225	malformations
+T32	Modifier 233 250	oro-facial sphere
+E15	Modifier:T32 Modifies:T31
+R2	Equivalent-To Arg1:E14 Arg2:E13	
+T33	And 178 182	with
+E16	And:T33 Arg:T4 Arg2:E13
+T34	Modifier 271 283	neurological
+E17	Modifier:T34 Modifies:T2
+T35	Modifier 288 301	developmental
+E18	Modifier:T35 Modifies:T2
+T36	Or 284 287	and
+E19	Or:T36 Arg:E17 Arg2:E18
+T37	Condition 327 338	prematurity
+E20	Condition:T37 Name:T38
+T38	Condition-Name 327 338	prematurity
+T39	And 266 270	with
+E21	And:T39 Arg:T5 Arg2:E1
+T40	Exception 314 326	unrelated to
+E22	Exception:T40 From:E1 Except:E20
+T41	Condition 358 373	ENT deformities
+E23	Condition:T41 Name:T42
+T42	Condition-Name 358 373	ENT deformities
+T43	And 353 357	with
+E24	And:T43 Arg:T6 Arg2:E23
+T44	Condition 388 403	langage barrier
+E25	Condition:T44 Name:T45
+T45	Condition-Name 388 403	langage barrier
+T46	Family-Member 379 387	Parental
+E26	Family-Member:T46 Has:E25
+A11	Family-Member-Type E26 parent
