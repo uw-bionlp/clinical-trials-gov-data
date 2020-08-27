@@ -1,11 +1,26 @@
-T1	Procedure 80 89	exercises
-T2	Procedure-Name 80 89	exercises
-E1	Procedure:T1 Name:T2
+T1	Observation 80 89	exercises
+T2	Observation-Name 80 89	exercises
+E1	Observation:T1 Name:T2 Duration:E3
 T3	Life-Stage-And-Gender 25 30	Males
 A1	Life-Stage-And-Gender-Type T3 male
-T4	Eq-Temporal-Unit 118 123	years
-A2	Eq-Temporal-Unit-Value T4 year
 T5	Age 91 94	age
-E2	Age:T5 
+E2	Age:T5 Eq-Comparison:E6
 T6	Eq-Value 103 105	20
-T7	Eq-Value 115 117	35
+T8	Eq-Comparison 37 52	at least a year
+E3	Eq-Comparison:T8 Operator:T4 Temporal-Unit:T7
+T4	Eq-Operator 37 45	at least
+A2	Eq-Operator-Value T4 GTEQ
+T7	Eq-Temporal-Unit 48 52	year
+A3	Eq-Temporal-Unit-Value T7 year
+T9	Modifier 70 79	heavylift
+E4	Modifier:T9 Modifies:T2
+A4	Observation-Type-Value T2 social-habit
+T10	And 32 36	with
+E5	And:T10 Arg:T3 Arg2:E1
+T11	Eq-Comparison 95 118	between 20 and 35 years
+E6	Eq-Comparison:T11 Operator:T12 Value:T6 Value2:T13 Temporal-Unit:T14
+T12	Eq-Operator 95 102	between
+A5	Eq-Operator-Value T12 BETWEEN
+T13	Eq-Value 110 112	35
+T14	Eq-Temporal-Unit 113 118	years
+A6	Eq-Temporal-Unit-Value T14 year

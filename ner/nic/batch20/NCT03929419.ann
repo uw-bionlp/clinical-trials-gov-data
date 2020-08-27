@@ -1,20 +1,20 @@
-T1	Condition 1072 1104	heparin-induced thrombocytopenia
-T2	Condition-Name 1072 1104	heparin-induced thrombocytopenia
-E1	Condition:T1 Name:T2
+T1	Condition 1088 1104	thrombocytopenia
+T2	Condition-Name 1088 1104	thrombocytopenia
+E1	Condition:T1 Name:T2 Temporality:E26
 T3	Procedure 187 209	hormonal contraception
 T4	Procedure-Name 187 209	hormonal contraception
 E3	Procedure:T3 Name:T4
 T5	Condition 329 351	temperature perception
 T6	Condition-Name 329 351	temperature perception
-E5	Condition:T5 Name:T6
+E5	Condition:T5 Name:T6 Polarity:T59
 T7	Condition 423 445	Cardiovascular disease
 T8	Condition-Name 423 445	Cardiovascular disease
 E7	Condition:T7 Name:T8
 T9	Condition 464 486	coronary Heart disease
 T10	Condition-Name 464 486	coronary Heart disease
 E9	Condition:T9 Name:T10
-T11	Condition 934 955	psychiatric disorders
-T12	Condition-Name 934 955	psychiatric disorders
+T11	Condition 946 955	disorders
+T12	Condition-Name 946 955	disorders
 E11	Condition:T11 Name:T12
 T13	Condition 646 660	claustrophobia
 T14	Condition-Name 646 660	claustrophobia
@@ -26,7 +26,7 @@ T17	Condition 723 732	Pregnancy
 T18	Condition-Name 723 732	Pregnancy
 E17	Condition:T17 Name:T18
 T19	Life-Stage-And-Gender 25 31	female
-A1	Life-Stage-And-Gender-Type T19 male
+A1	Life-Stage-And-Gender-Type T19 female
 T20	Life-Stage-And-Gender 42 48	adults
 A2	Life-Stage-And-Gender-Type T20 adult
 T21	Condition 1106 1109	HIT
@@ -49,7 +49,7 @@ A9	Eq-Temporal-Unit-Value T29 month
 T30	Eq-Temporal-Unit 906 911	weeks
 A10	Eq-Temporal-Unit-Value T30 week
 T31	Age 71 74	Age
-E22	Age:T31 
+E22	Age:T31 Eq-Comparison:E4
 T32	Eq-Value 61 62	6
 T33	Eq-Value 83 85	18
 T34	Eq-Value 90 92	30
@@ -57,13 +57,143 @@ T35	Eq-Value 520 521	2
 T36	Eq-Value 779 780	3
 T37	Eq-Value 904 905	4
 T38	Eq-Value 990 992	12
-T39	Eq-Comparison 60 62	<6
-E23	Eq-Comparison:T39 Operator:T23 Value:T32
-T40	Eq-Comparison 769 787	less than 3 months
-E24	Eq-Comparison:T40 Operator:T25 Temporal-Unit:T29 Value:T36
-T41	Eq-Comparison 989 992	<12
-E25	Eq-Comparison:T41 Operator:T27 Value:T38
+T39	Eq-Comparison 60 65	<6.0%
+E23	Eq-Comparison:T39 Operator:T23 Value:T32 Unit:T45
+T40	Eq-Comparison 769 791	less than 3 months ago
+E24	Eq-Comparison:T40 Operator:T25 Temporal-Unit:T29 Value:T36 Temporal-Period:T86
+T41	Eq-Comparison 989 998	<12g / dl
+E25	Eq-Comparison:T41 Operator:T27 Value:T38 Unit:T102 Per:T103
 T42	Eq-Comparison 1061 1068	history
 E26	Eq-Comparison:T42 Temporal-Period:T43
 T43	Eq-Temporal-Period 1061 1068	history
 A11	Eq-Temporal-Period-Value T43 past
+T44	Observation 54 59	HbA1c
+E2	Observation:T44 Name:T46 Eq-Comparison:E23
+T45	Eq-Unit 64 65	%
+T46	Observation-Name 54 59	HbA1c
+A12	Observation-Type-Value T46 lab
+T47	Eq-Comparison 75 98	between 18 and 30 years
+E4	Eq-Comparison:T47 Operator:T48 Value:T33 Value2:T34 Temporal-Unit:T28
+T48	Eq-Operator 75 82	between
+A13	Eq-Operator-Value T48 BETWEEN
+T49	Observation 121 131	laboratory
+E6	Observation:T49 Name:T50 Polarity:T52
+T50	Observation-Name 121 131	laboratory
+A14	Observation-Type-Value T50 lab
+T51	Modifier 113 120	routine
+E8	Modifier:T51 Modifies:T50
+T52	Polarity 104 112	Standard
+A15	Polarity-Value T52 normal
+T53	Condition 151 159	diseases
+E10	Condition:T53 Name:T54
+T54	Condition-Name 151 159	diseases
+T55	Negation 137 139	No
+E12	Negation:T55 Negates:E10
+T56	Negation 165 167	No
+E14	Negation:T56 Negates:E16
+T57	Drug 168 178	medication
+E16	Drug:T57 
+T58	Negation 184 186	No
+E18	Negation:T58 Negates:E3
+T59	Polarity 321 328	limited
+A16	Polarity-Value T59 low
+T60	Condition 371 394	temperature Sensitivity
+E19	Condition:T60 Name:T61 Polarity:T62
+T61	Condition-Name 371 394	temperature Sensitivity
+T62	Polarity 361 370	increased
+A17	Polarity-Value T62 high
+T63	Or 352 360	and / or
+E20	Or:T63 Arg:E5 Arg2:E19
+T64	Modifier 398 417	warming of the body
+E27	Modifier:T64 Modifies:T61
+R1	Example-Of Arg1:E9 Arg2:E7	
+R2	Example-Of Arg1:E15 Arg2:E7	
+T65	Eq-Comparison 502 521	greater than NYHA 2
+E28	Eq-Comparison:T65 Operator:T24 Value:T35
+T66	Condition 515 519	NYHA
+E29	Condition:T66 Name:T67 Stage:E28
+T67	Condition-Name 515 519	NYHA
+T68	Condition 530 551	myocardial infarction
+E30	Condition:T68 Name:T69 Temporality:E31
+T69	Condition-Name 530 551	myocardial infarction
+T70	Eq-Comparison 523 529	recent
+E31	Eq-Comparison:T70 Temporal-Period:T71
+T71	Eq-Temporal-Period 523 529	recent
+A18	Eq-Temporal-Period-Value T71 recent
+R3	Example-Of Arg1:E29 Arg2:E7	
+R4	Example-Of Arg1:E30 Arg2:E7	
+T72	Condition 571 587	hearing disorder
+E32	Condition:T72 Name:T73
+T73	Condition-Name 571 587	hearing disorder
+T74	Condition 601 627	sensitivity to loud Sounds
+E33	Condition:T74 Name:T75 Polarity:T76
+T75	Condition-Name 601 627	sensitivity to loud Sounds
+T76	Polarity 591 600	increased
+A19	Polarity-Value T76 high
+T77	Or 588 590	or
+E34	Or:T77 Arg:E32 Arg2:E33
+T78	Life-Stage-And-Gender 666 672	Minors
+A20	Life-Stage-And-Gender-Type T78 child
+T79	Negation 709 717	excluded
+E35	Negation:T79 Negates:T78
+T80	Condition 736 749	breastfeeding
+E36	Condition:T80 Name:T81
+T81	Condition-Name 736 749	breastfeeding
+T82	Or 733 735	or
+E37	Or:T82 Arg:E17 Arg2:E36
+T83	Life-Stage-And-Gender 750 755	women
+A21	Life-Stage-And-Gender-Type T83 female
+R5	If-Then Arg1:T83 Arg2:E36	
+T84	Procedure 761 768	Surgery
+E38	Procedure:T84 Name:T85 Temporality:E24
+T85	Procedure-Name 761 768	Surgery
+T86	Eq-Temporal-Period 788 791	ago
+A22	Eq-Temporal-Period-Value T86 past
+T87	Study 848 855	studies
+E39	Study:T87 
+T88	Other 827 832	other
+E40	Other:T88 Is-Other:E39
+T89	Condition 867 874	illness
+E41	Condition:T89 Name:T90 Severity:T94
+T90	Condition-Name 867 874	illness
+T91	Condition 878 887	infection
+E42	Condition:T91 Name:T92 Severity:T94 Temporality:E44
+T92	Condition-Name 878 887	infection
+T93	Or 875 877	or
+E43	Or:T93 Arg:E41 Arg2:E42
+T94	Severity 861 866	Acute
+A23	Severity-Value T94 severe
+T95	Eq-Comparison 888 911	within the last 4 weeks
+E44	Eq-Comparison:T95 Operator:T26 Temporal-Period:T96 Value:T37 Temporal-Unit:T30
+T96	Eq-Temporal-Period 899 903	last
+A24	Eq-Temporal-Period-Value T96 past
+T97	Modifier 917 929	Neurological
+E45	Modifier:T97 Modifies:T12
+T98	Modifier 934 945	psychiatric
+E46	Modifier:T98 Modifies:T12
+T99	Or 930 933	and
+E47	Or:T99 Arg:E45 Arg2:E46
+T100	Observation 975 988	hemoglobin Hb
+E48	Observation:T100 Name:T101 Eq-Comparison:E25
+T101	Observation-Name 975 988	hemoglobin Hb
+A25	Observation-Type-Value T101 lab
+T102	Eq-Unit 992 993	g
+T103	Eq-Unit 996 998	dl
+T104	Study 1003 1012	screening
+E49	Study:T104 
+T105	Temporal-Connection 1000 1002	at
+E50	Temporal-Connection:T105 Arg:E48 Arg2:E49
+A26	Temporal-Connection-Type-Value E50 during
+T106	Allergy 1019 1027	Allergic
+E51	Allergy:T106 
+T107	Condition 1028 1036	diseases
+E52	Condition:T107 Name:T108
+T108	Condition-Name 1028 1036	diseases
+R6	Caused-By Arg1:E51 Arg2:E52	
+T109	Drug 1072 1079	heparin
+E53	Drug:T109 Name:T110
+T110	Drug-Name 1072 1079	heparin
+R7	Caused-By Arg1:E1 Arg2:E53	
+T111	Modifier 1080 1087	induced
+E54	Modifier:T111 Modifies:T2
+R8	Abbrev-Of Arg1:E21 Arg2:E1	
