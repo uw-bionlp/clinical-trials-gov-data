@@ -5,7 +5,7 @@ T3	Life-Stage-And-Gender 25 30	Adult
 A1	Life-Stage-And-Gender-Type T3 adult
 T4	Procedure 276 298	mechanical ventilation
 T5	Procedure-Name 276 298	mechanical ventilation
-E4	Procedure:T4 Name:T5
+E4	Procedure:T4 Name:T5 Duration:E38
 T6	Condition 476 498	esophageal ulcerations
 T7	Condition-Name 476 498	esophageal ulcerations
 E6	Condition:T6 Name:T7
@@ -14,7 +14,7 @@ T9	Condition-Name 203 220	pneumomediastinum
 E8	Condition:T8 Name:T9
 T10	Condition 624 640	thrombocytopenia
 T11	Condition-Name 624 640	thrombocytopenia
-E10	Condition:T10 Name:T11
+E10	Condition:T10 Name:T11 Severity:T98
 T12	Condition 508 522	diverticulitis
 T13	Condition-Name 508 522	diverticulitis
 E12	Condition:T12 Name:T13
@@ -24,38 +24,26 @@ E14	Condition:T14 Name:T15
 T16	Condition 666 678	coagulopathy
 T17	Condition-Name 666 678	coagulopathy
 E16	Condition:T16 Name:T17
-T18	Condition 380 390	esophageal
-T19	Condition-Name 380 390	esophageal
-E18	Condition:T18 Name:T19
-T20	Procedure 344 353	placement
-T21	Procedure-Name 344 353	placement
+T20	Procedure 360 378	esophageal balloon
+T21	Procedure-Name 360 378	esophageal balloon
 E20	Procedure:T20 Name:T21
-T22	Procedure 430 439	insertion
-T23	Procedure-Name 430 439	insertion
-E22	Procedure:T22 Name:T23
 T24	Condition 561 570	sinusitis
 T25	Condition-Name 561 570	sinusitis
 E24	Condition:T24 Name:T25
-T26	Condition 533 540	varices
-T27	Condition-Name 533 540	varices
+T26	Condition 524 540	bleeding varices
+T27	Condition-Name 524 540	bleeding varices
 E26	Condition:T26 Name:T27
-T28	Procedure 680 683	INR
-T29	Procedure-Name 680 683	INR
-E28	Procedure:T28 Name:T29
-T30	Procedure 879 891	intervention
-T31	Procedure-Name 879 891	intervention
-E30	Procedure:T30 Name:T31
-T32	Procedure 900 912	intervention
-T33	Procedure-Name 900 912	intervention
-E32	Procedure:T32 Name:T33
+T28	Observation 680 683	INR
+T29	Observation-Name 680 683	INR
+E28	Observation:T28 Name:T29 Eq-Comparison:E40
 T34	Procedure 997 1009	intervention
 T35	Procedure-Name 997 1009	intervention
 E34	Procedure:T34 Name:T35
-T36	Procedure 834 839	drain
-T37	Procedure-Name 834 839	drain
-E36	Procedure:T36 Name:T37
-T38	Eq-Operator 45 46	>
-A2	Eq-Operator-Value T38 GT
+T36	Procedure 813 839	external ventricular drain
+T37	Procedure-Name 813 839	external ventricular drain
+E36	Procedure:T36 Name:T37 Stability:T120 Temporality:E63
+T38	Eq-Operator 45 48	>/=
+A2	Eq-Operator-Value T38 GTEQ
 T39	Eq-Operator 242 243	<
 A3	Eq-Operator-Value T39 LT
 T40	Eq-Operator 303 304	<
@@ -70,8 +58,8 @@ T44	Eq-Operator 775 776	<
 A8	Eq-Operator-Value T44 LT
 T45	Eq-Operator 965 966	>
 A9	Eq-Operator-Value T45 GT
-T46	Eq-Unit 745 747	mm
-T47	Eq-Unit 780 782	mm
+T46	Eq-Unit 745 750	mm Hg
+T47	Eq-Unit 780 785	mm Hg
 T48	Eq-Unit 969 971	cm
 T49	Eq-Value 49 51	18
 T50	Eq-Value 244 246	24
@@ -81,17 +69,184 @@ T53	Eq-Value 686 687	3
 T54	Eq-Value 742 744	20
 T55	Eq-Value 777 779	60
 T56	Eq-Value 967 968	2
-T57	Eq-Comparison 242 246	< 24
-E37	Eq-Comparison:T57 Operator:T39 Value:T50
-T58	Eq-Comparison 303 307	< 24
-E38	Eq-Comparison:T58 Operator:T40 Value:T51
+T57	Eq-Comparison 242 252	< 24 hours
+E37	Eq-Comparison:T57 Operator:T39 Value:T50 Temporal-Unit:T76
+T58	Eq-Comparison 303 313	< 24 hours
+E38	Eq-Comparison:T58 Operator:T40 Value:T51 Temporal-Unit:T78
 T59	Eq-Comparison 657 661	< 30
 E39	Eq-Comparison:T59 Operator:T41 Value:T52
 T60	Eq-Comparison 684 687	> 3
 E40	Eq-Comparison:T60 Operator:T42 Value:T53
-T61	Eq-Comparison 740 747	> 20 mm
+T61	Eq-Comparison 740 750	> 20 mm Hg
 E41	Eq-Comparison:T61 Operator:T43 Unit:T46 Value:T54
-T62	Eq-Comparison 775 782	< 60 mm
+T62	Eq-Comparison 775 785	< 60 mm Hg
 E42	Eq-Comparison:T62 Operator:T44 Unit:T47 Value:T55
-T63	Eq-Comparison 965 971	> 2 cm
-E43	Eq-Comparison:T63 Operator:T45 Unit:T48 Value:T56
+T63	Eq-Comparison 965 975	> 2 cm H2O
+E43	Eq-Comparison:T63 Operator:T45 Unit:T48 Value:T56 Unit2:T126
+T64	Eq-Comparison 45 51	>/= 18
+E2	Eq-Comparison:T64 Operator:T38 Value:T49
+T65	Age 41 44	age
+E3	Age:T65 Eq-Comparison:E2
+R1	Equivalent-To Arg1:E3 Arg2:T3	
+T66	Encounter 53 61	admitted
+E5	Encounter:T66 Type:T67 Location:T68 Location2:T69
+T67	Encounter-Type 53 61	admitted
+A10	Encounter-Type-Value T67 inpatient
+T68	Location 69 78	Neuro ICU
+A11	Location-Value T68 unit
+T69	Location 82 94	UNC Hospital
+A12	Location-Value T69 unit
+R2	Using Arg1:E5 Arg2:E1	
+T70	Procedure 137 151	ICP monitoring
+E7	Procedure:T70 Name:T71
+T71	Procedure-Name 137 151	ICP monitoring
+T72	And 128 131	and
+E9	And:T72 Arg:E1 Arg2:E7
+T73	Or 200 202	or
+E11	Or:T73 Arg:E14 Arg2:E8
+T74	Observation 226 241	Life expectancy
+E13	Observation:T74 Name:T75 Eq-Comparison:E37
+T75	Observation-Name 226 241	Life expectancy
+T76	Eq-Temporal-Unit 247 252	hours
+A13	Eq-Temporal-Unit-Value T76 hour
+T77	Assertion 256 267	expected to
+E15	Assertion:T77 Asserted:E4
+A14	Assertion-Type-Value E15 hypothetical
+T78	Eq-Temporal-Unit 308 313	hours
+A15	Eq-Temporal-Unit-Value T78 hour
+T79	Or 253 255	or
+E17	Or:T79 Arg:E13 Arg2:E4
+T80	Condition 319 328	Condition
+E19	Condition:T80 
+T81	Negation 334 343	precludes
+E21	Negation:T81 Negates:E20
+T82	Assertion 334 343	precludes
+E23	Assertion:T82 Asserted:E21
+A16	Assertion-Type-Value E23 hypothetical
+R3	Caused-By Arg1:E21 Arg2:E19	
+T83	Condition 409 418	pathology
+E25	Condition:T83 Name:T84
+T84	Condition-Name 409 418	pathology
+T18	Modifier 394 408	nasopharyngeal
+E18	Modifier:T18 Modifies:T84
+T19	Modifier 380 390	esophageal
+E27	Modifier:T19 Modifies:T84
+T85	Or 391 393	or
+E29	Or:T85 Arg:E27 Arg2:E18
+R4	Example-Of Arg1:E25 Arg2:E19	
+T86	Procedure 447 474	esophageal balloon catheter
+E31	Procedure:T86 Name:T22
+T22	Procedure-Name 447 474	esophageal balloon catheter
+T23	Negation 419 429	preventing
+E22	Negation:T23 Negates:E31
+T87	Assertion 419 429	preventing
+E33	Assertion:T87 Asserted:E22
+A17	Assertion-Type-Value E33 hypothetical
+R5	Caused-By Arg1:E22 Arg2:E25	
+R6	Example-Of Arg1:E6 Arg2:E25	
+T88	Condition 500 506	tumors
+E35	Condition:T88 Name:T89
+T89	Condition-Name 500 506	tumors
+R7	Example-Of Arg1:E35 Arg2:E25	
+R8	Example-Of Arg1:E12 Arg2:E25	
+R9	Example-Of Arg1:E26 Arg2:E25	
+T90	Or 541 543	or
+E44	Or:T90 Arg:E26 Arg2:E24
+R10	Example-Of Arg1:E24 Arg2:E25	
+T91	Condition 572 581	epistaxis
+E45	Condition:T91 Name:T92
+T92	Condition-Name 572 581	epistaxis
+R11	Example-Of Arg1:E45 Arg2:E25	
+T93	Procedure 592 614	nasopharyngeal surgery
+E46	Procedure:T93 Name:T94 Temporality:E47
+T94	Procedure-Name 592 614	nasopharyngeal surgery
+T95	Eq-Comparison 585 591	recent
+E47	Eq-Comparison:T95 Temporal-Period:T96
+T96	Eq-Temporal-Period 585 591	recent
+A18	Eq-Temporal-Period-Value T96 recent
+T97	Or 582 584	or
+E48	Or:T97 Arg:E45 Arg2:E46
+R12	Example-Of Arg1:E46 Arg2:E25	
+T98	Severity 617 623	severe
+A19	Severity-Value T98 severe
+T99	Observation 642 656	platelet count
+E49	Observation:T99 Name:T100 Eq-Comparison:E39
+T100	Observation-Name 642 656	platelet count
+A20	Observation-Type-Value T100 lab
+R13	Equivalent-To Arg1:E49 Arg2:E10	
+T101	Or 663 665	or
+E50	Or:T101 Arg:E10 Arg2:E16
+A21	Observation-Type-Value T29 lab
+R14	Equivalent-To Arg1:E28 Arg2:E16	
+T102	Drug 694 713	oral anticoagulants
+E51	Drug:T102 Name:T103 Temporality:E52
+T103	Drug-Name 694 713	oral anticoagulants
+T104	Eq-Comparison 691 693	on
+E52	Eq-Comparison:T104 Temporal-Period:T105
+T105	Eq-Temporal-Period 691 693	on
+A22	Eq-Temporal-Period-Value T105 present
+T106	Or 688 690	or
+E53	Or:T106 Arg:E28 Arg2:E51
+T107	Observation 736 739	ICP
+E54	Observation:T107 Name:T108 Eq-Comparison:E41
+T108	Observation-Name 736 739	ICP
+A23	Observation-Type-Value T108 lab
+T109	Study 725 735	enrollment
+E55	Study:T109 
+T110	Temporal-Connection 721 724	Pre
+E56	Temporal-Connection:T110 Arg:E55 Arg2:E54
+A24	Temporal-Connection-Type-Value E56 before
+T111	Observation 771 774	CPP
+E57	Observation:T111 Name:T112 Eq-Comparison:E42
+T112	Observation-Name 771 774	CPP
+A25	Observation-Type-Value T112 lab
+T113	Study 760 770	enrollment
+E58	Study:T113 
+T114	Temporal-Connection 756 759	Pre
+E59	Temporal-Connection:T114 Arg:E58 Arg2:E57
+A26	Temporal-Connection-Type-Value E59 before
+T115	Modifier 840 849	set point
+E60	Modifier:T115 Modifies:T37
+T116	Procedure 865 877	intervention
+E61	Procedure:T116 Name:T131
+T117	Temporal-Connection 861 864	pre
+E62	Temporal-Connection:T117 Arg:E61
+A27	Temporal-Connection-Type-Value E62 before
+T118	Eq-Comparison 791 798	Planned
+E63	Eq-Comparison:T118 Temporal-Period:T119
+T119	Eq-Temporal-Period 791 798	Planned
+A28	Eq-Temporal-Period-Value T119 future
+T120	Stability 799 805	change
+A29	Stability-Value T120 change
+T121	Temporal-Connection 850 856	during
+E64	Temporal-Connection:T121 Arg:E36 Arg2:E62
+A30	Temporal-Connection-Type-Value E64 during
+T122	Temporal-Connection 895 899	post
+E65	Temporal-Connection:T122 Arg:E32
+A31	Temporal-Connection-Type-Value E65 after
+T30	Procedure 879 891	intervention
+E30	Procedure:T30 Name:T132
+T31	Procedure 900 912	intervention
+E32	Procedure:T31 Name:T133
+T32	Or 892 894	or
+E66	Or:T32 Arg:E30 Arg2:E65
+T33	Observation 926 939	Incarceration
+E67	Observation:T33 Name:T123
+T123	Observation-Name 926 939	Incarceration
+T124	Observation 958 961	ICP
+E68	Observation:T124 Name:T125 Stability:T127 Eq-Comparison:E43 Temporality:E69
+T125	Observation-Name 958 961	ICP
+A32	Observation-Type-Value T125 lab
+T126	Eq-Unit 972 975	H2O
+T127	Stability 945 954	Variation
+A33	Stability-Value T127 change
+T128	Eq-Comparison 983 987	hour
+E69	Eq-Comparison:T128 Temporal-Unit:T129
+T129	Eq-Temporal-Unit 983 987	hour
+A34	Eq-Temporal-Unit-Value T129 hour
+T130	Temporal-Connection 988 996	prior to
+E70	Temporal-Connection:T130 Arg:E69 Arg2:E34
+A35	Temporal-Connection-Type-Value E70 before
+T131	Procedure-Name 865 877	intervention
+T132	Procedure-Name 879 891	intervention
+T133	Procedure-Name 900 912	intervention

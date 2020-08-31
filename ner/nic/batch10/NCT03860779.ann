@@ -5,5 +5,28 @@ T3	Procedure 116 124	sedation
 T4	Procedure-Name 116 124	sedation
 E3	Procedure:T3 Name:T4
 T5	Age 25 28	Age
-E4	Age:T5
+E4	Age:T5 Eq-Comparison:E2
 T6	Eq-Value 35 37	18
+T7	Eq-Comparison 29 37	above 18
+E2	Eq-Comparison:T7 Operator:T8 Value:T6
+T8	Eq-Operator 29 34	above
+A1	Eq-Operator-Value T8 GT
+T9	Condition 43 46	ASA
+E5	Condition:T9 Name:T10 Stage:E6
+T10	Condition-Name 43 46	ASA
+T11	Eq-Comparison 62 69	I to II
+E6	Eq-Comparison:T11 Value:T12 Operator:T14 Value2:T13
+T12	Eq-Value 62 63	I
+T13	Eq-Value 67 69	II
+T14	Eq-Operator 64 66	to
+A2	Eq-Operator-Value T14 BETWEEN
+T15	Procedure 90 101	colonoscopy
+E7	Procedure:T15 Name:T16
+T16	Procedure-Name 90 101	colonoscopy
+T17	Drug 107 115	propofol
+E8	Drug:T17 Name:T18
+T18	Drug-Name 107 115	propofol
+R1	Using Arg1:E3 Arg2:E8	
+R2	Using Arg1:E7 Arg2:E8	
+T19	Indication 75 85	Indication
+E9	Indication:T19 Indication-For:E7

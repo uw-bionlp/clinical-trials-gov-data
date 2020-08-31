@@ -1,38 +1,34 @@
-T1	Language 191 207	primary language
 T2	Condition 552 565	cardiac event
 T3	Condition-Name 552 565	cardiac event
-E2	Condition:T2 Name:T3
+E2	Condition:T2 Name:T3 Temporality:E30
 T4	Procedure 489 501	chemotherapy
 T5	Procedure-Name 489 501	chemotherapy
 E4	Procedure:T4 Name:T5
 T6	Procedure 505 514	radiation
 T7	Procedure-Name 505 514	radiation
-E6	Procedure:T6 Name:T7
-T8	Condition 331 339	dementia
-T9	Condition-Name 331 339	dementia
-E8	Condition:T8 Name:T9
+E6	Procedure:T6 Name:T7 Temporality:E24
 T10	Condition 462 470	diabetes
 T11	Condition-Name 462 470	diabetes
 E10	Condition:T10 Name:T11
 T12	Language 180 187	English
 T13	Procedure 377 381	diet
 T14	Procedure-Name 377 381	diet
-E13	Procedure:T13 Name:T14
+E13	Procedure:T13 Name:T14 Stability:T51
 T15	Condition 572 584	heart attack
 T16	Condition-Name 572 584	heart attack
 E15	Condition:T15 Name:T16
 T17	Condition 750 762	renal stones
 T18	Condition-Name 750 762	renal stones
-E17	Condition:T17 Name:T18
+E17	Condition:T17 Name:T18 Temporality:E42
 T19	Procedure 586 597	angioplasty
 T20	Procedure-Name 586 597	angioplasty
 E19	Procedure:T19 Name:T20
 T21	Procedure 686 693	therapy
 T22	Procedure-Name 686 693	therapy
 E21	Procedure:T21 Name:T22
-T23	Eq-Operator 253 268	within the past
+T23	Eq-Operator 253 259	within
 A1	Eq-Operator-Value T23 LTEQ
-T24	Eq-Operator 515 530	within the past
+T24	Eq-Operator 515 521	within
 A2	Eq-Operator-Value T24 LTEQ
 T25	Eq-Operator 694 700	within
 A3	Eq-Operator-Value T25 LTEQ
@@ -43,10 +39,10 @@ A5	Eq-Temporal-Unit-Value T27 year
 T28	Eq-Temporal-Unit 704 708	days
 A6	Eq-Temporal-Unit-Value T28 day
 T29	Age 213 216	Age
-E22	Age:T29
+E22	Age:T29 Eq-Comparison:E26
 T30	Eq-Operator 220 222	to
 A7	Eq-Operator-Value T30 BETWEEN
-T31	Eq-Value 101 102	0
+T31	Eq-Value 101 104	0.5
 T32	Eq-Value 108 109	1
 T33	Eq-Value 217 219	50
 T34	Eq-Value 223 225	90
@@ -54,10 +50,104 @@ T35	Eq-Value 269 271	30
 T36	Eq-Value 531 532	5
 T37	Eq-Value 701 703	30
 T38	Eq-Comparison 253 276	within the past 30 days
-E23	Eq-Comparison:T38 Operator:T23 Temporal-Unit:T26 Value:T35
+E23	Eq-Comparison:T38 Operator:T23 Temporal-Unit:T26 Value:T35 Temporal-Period:T48
 T39	Eq-Comparison 515 538	within the past 5 years
-E24	Eq-Comparison:T39 Operator:T24 Temporal-Unit:T27 Value:T36
+E24	Eq-Comparison:T39 Operator:T24 Temporal-Unit:T27 Value:T36 Temporal-Period:T65
 T40	Eq-Comparison 694 708	within 30 days
 E25	Eq-Comparison:T40 Operator:T25 Temporal-Unit:T28 Value:T37
-T41	Eq-Comparison 217 222	50 to
-E26	Eq-Comparison:T41 Operator:T30 Value:T33
+T41	Eq-Comparison 217 225	50 to 90
+E26	Eq-Comparison:T41 Operator:T30 Value:T33 Value2:T34
+T42	Condition 38 40	AD
+E1	Condition:T42 Name:T43
+T43	Condition-Name 38 40	AD
+T44	Observation 81 97	CDR global score
+E3	Observation:T44 Name:T45 Eq-Comparison:E5
+T45	Observation-Name 81 97	CDR global score
+A8	Observation-Type-Value T45 clinical-score
+T46	Eq-Comparison 101 109	0.5 or 1
+E5	Eq-Comparison:T46 Value:T31 Value2:T32
+T1	Drug 234 244	medication
+E7	Drug:T1 Stability:T47 Temporality:E23
+T47	Stability 245 252	changes
+A9	Stability-Value T47 change
+T48	Eq-Temporal-Period 264 268	past
+A10	Eq-Temporal-Period-Value T48 past
+T49	Negation 231 233	No
+E9	Negation:T49 Negates:E7
+T50	Location 315 327	nursing home
+A11	Location-Value T50 residence
+T8	Location 331 357	dementia special care unit
+A12	Location-Value T8 unit
+T9	Or 328 330	or
+E8	Or:T9 Arg:T50 Arg2:T8
+T51	Stability 369 376	control
+A13	Stability-Value T51 stable
+T52	Negation 362 368	cannot
+E11	Negation:T52 Negates:T51
+T53	Or 359 361	or
+E12	Or:T53 Arg:T8 Arg2:E11
+T54	Risk 429 433	risk
+E14	Risk:T54 Severity:T55 Stability:T56
+T55	Severity 413 420	serious
+A14	Severity-Value T55 severe
+T56	Stability 401 412	confounding
+A15	Stability-Value T56 change
+T57	Assertion 389 400	potentially
+E16	Assertion:T57 Asserted:T56
+A16	Assertion-Type-Value E16 hypothetical
+R1	Example-Of Arg1:E10 Arg2:E14	
+T59	Condition 472 478	cancer
+E20	Condition:T59 Name:T60
+T60	Condition-Name 472 478	cancer
+R2	Treatment-For Arg1:E4 Arg2:E20	
+T61	Assertion 479 488	requiring
+E27	Assertion:T61 Asserted:E4
+A17	Assertion-Type-Value E27 hypothetical
+T58	Drug 444 451	insulin
+E18	Drug:T58 Name:T62
+T62	Drug-Name 444 451	insulin
+R3	Treatment-For Arg1:E18 Arg2:E10	
+T63	Assertion 452 461	requiring
+E28	Assertion:T63 Asserted:E18
+A18	Assertion-Type-Value E28 hypothetical
+T64	Or 502 504	or
+E29	Or:T64 Arg:E4 Arg2:E6
+T65	Eq-Temporal-Period 526 530	past
+A19	Eq-Temporal-Period-Value T65 past
+T66	Eq-Comparison 545 551	recent
+E30	Eq-Comparison:T66 Temporal-Period:T67
+T67	Eq-Temporal-Period 545 551	recent
+A20	Eq-Temporal-Period-Value T67 recent
+T68	Or 540 542	or
+E31	Or:T68 Arg:E6 Arg2:E2
+R4	Example-Of Arg1:E15 Arg2:E2	
+R5	Example-Of Arg1:E19 Arg2:E2	
+T69	Study 635 649	clinical trial
+E32	Study:T69 Temporality:E34
+T70	Other 627 634	another
+E33	Other:T70 Is-Other:E32
+T71	Eq-Comparison 610 623	Participating
+E34	Eq-Comparison:T71 Temporal-Period:T72
+T72	Eq-Temporal-Period 610 623	Participating
+A21	Eq-Temporal-Period-Value T72 present
+T73	Study 662 677	investigational
+E35	Study:T73 Temporality:E38 Study-Of:E36 Study-Of2:E21 Temporality2:E25
+T74	Drug 678 682	drug
+E36	Drug:T74 
+T75	Or 650 652	or
+E37	Or:T75 Arg:E32 Arg2:E35
+T76	Eq-Comparison 653 658	using
+E38	Eq-Comparison:T76 Temporal-Period:T77
+T77	Eq-Temporal-Period 653 658	using
+A22	Eq-Temporal-Period-Value T77 present
+T78	Or 683 685	or
+E39	Or:T78 Arg:E36 Arg2:E21
+T79	Study 716 725	Screening
+E40	Study:T79 
+T80	Temporal-Connection 709 711	of
+E41	Temporal-Connection:T80 Arg:E25 Arg2:E40
+A23	Temporal-Connection-Type-Value E41 before
+T81	Eq-Comparison 739 746	history
+E42	Eq-Comparison:T81 Temporal-Period:T82
+T82	Eq-Temporal-Period 739 746	history
+A24	Eq-Temporal-Period-Value T82 past
