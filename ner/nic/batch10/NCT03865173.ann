@@ -1,13 +1,67 @@
 T1	Condition 116 122	stroke
 T2	Condition-Name 116 122	stroke
-E1	Condition:T1 Name:T2
+E1	Condition:T1 Name:T2 Temporality:E5 Temporality2:E7 Provider:E6
 T3	Condition 223 229	stroke
 T4	Condition-Name 223 229	stroke
 E3	Condition:T3 Name:T4
 T5	Eq-Temporal-Unit 47 52	years
 A1	Eq-Temporal-Unit-Value T5 year
 T6	Age 56 59	age
-E4	Age:T6
+E4	Age:T6 Eq-Comparison:E2
 T7	Eq-Value 44 46	18
 T8	Eq-Value 135 139	2019
-T9	Eq-Value 244 246	13
+T10	Eq-Comparison 39 52	over 18 years
+E2	Eq-Comparison:T10 Operator:T11 Value:T7 Temporal-Unit:T5
+T11	Eq-Operator 39 43	over
+A2	Eq-Operator-Value T11 GT
+T12	Location 70 89	metropolitan France
+A3	Location-Value T12 residence
+T13	Eq-Comparison 109 115	recent
+E5	Eq-Comparison:T13 Temporal-Period:T14
+T14	Eq-Temporal-Period 109 115	recent
+A4	Eq-Temporal-Period-Value T14 recent
+T16	Eq-Comparison 128 139	before 2019
+E7	Eq-Comparison:T16 Value:T8 Operator:T15
+T17	Negation 124 127	not
+E8	Negation:T17 Negates:E7
+T15	Eq-Operator 128 134	before
+A5	Eq-Operator-Value T15 LT
+T18	Provider 172 196	neuro-vascular physician
+E6	Provider:T18 Type:T19 Role:T20
+T19	Provider-Type 172 186	neuro-vascular
+T20	Provider-Role 187 196	physician
+T21	Procedure 211 218	managed
+E9	Procedure:T21 Location:T9
+R1	Treatment-For Arg1:E9 Arg2:E3	
+T9	Location 261 294	hospitals of the Aquitaine region
+A6	Location-Value T9 hospital
+T22	Observation 371 376	alive
+E10	Observation:T22 Name:T23
+T23	Observation-Name 371 376	alive
+T24	Assertion 365 370	to be
+E11	Assertion:T24 Asserted:E10
+A7	Assertion-Type-Value E11 hypothetical
+T25	Modifier 395 411	acute management
+E12	Modifier:T25 Modifies:E13
+T26	Encounter 412 425	hospital stay
+E13	Encounter:T26 Type:T27 Temporality:E14
+T27	Encounter-Type 412 425	hospital stay
+A8	Encounter-Type-Value T27 inpatient
+T28	Eq-Comparison 384 387	end
+E14	Eq-Comparison:T28 Temporal-Recency:T29
+T29	Eq-Temporal-Recency 384 387	end
+A9	Eq-Temporal-Recency-Value T29 most-recent-time
+T30	Temporal-Connection 377 383	at the
+E15	Temporal-Connection:T30 Arg:E10 Arg2:E14
+A10	Temporal-Connection-Type-Value E15 during
+T31	Death 506 510	died
+E16	Death:T31 
+T32	Encounter 530 534	stay
+E17	Encounter:T32 Temporality:E18
+T33	Eq-Comparison 522 529	initial
+E18	Eq-Comparison:T33 
+T34	Eq-Temporal-Recency 522 529	initial
+A11	Eq-Temporal-Recency-Value T34 first-time
+T35	Temporal-Connection 511 517	during
+E19	Temporal-Connection:T35 Arg:E16 Arg2:E18
+A12	Temporal-Connection-Type-Value E19 during
