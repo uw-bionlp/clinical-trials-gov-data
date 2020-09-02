@@ -1,2 +1,55 @@
-T1	Life-Stage-And-Gender 212 217	child
-A1	Life-Stage-And-Gender-Type T1 child
+T2	Eq-Comparison 40 49	currently
+E1	Eq-Comparison:T2 Temporal-Period:T3
+T3	Eq-Temporal-Period 40 49	currently
+A2	Eq-Temporal-Period-Value T3 present
+T4	Location 67 71	QECH
+A3	Location-Value T4 hospital
+T5	Procedure 56 63	treated
+E2	Procedure:T5 Temporality:E1 Location:T4 Location2:T6
+T6	Location 95 99	ward
+A4	Location-Value T6 unit
+T7	Modifier 79 87	neonatal
+E3	Modifier:T7 Modifies:T6
+T8	Modifier 91 94	KMC
+E4	Modifier:T8 Modifies:T6
+T9	Or 88 90	or
+E5	Or:T9 Arg:E3 Arg2:E4
+T1	Family-Member 162 171	caregiver
+E6	Family-Member:T1 
+A1	Family-Member-Type E6 parent
+T10	Modifier 354 358	skin
+E7	Modifier:T10 Modifies:T12
+T11	Condition 359 369	irritation
+E8	Condition:T11 Name:T12
+T12	Condition-Name 359 369	irritation
+T13	Risk 340 349	potential
+E9	Risk:T13 Risk-For:E8
+T14	Condition 392 401	condition
+E10	Condition:T14 
+T15	Condition 375 380	Cough
+E11	Condition:T15 Name:T16
+T16	Condition-Name 375 380	Cough
+T17	Other 386 391	other
+E12	Other:T17 Is-Other:E10
+T18	Procedure 431 447	temperature belt
+E13	Procedure:T18 Name:T19
+T19	Procedure-Name 431 447	temperature belt
+T20	Negation 411 419	preclude
+E14	Negation:T20 Negates:E13
+T21	Assertion 407 410	may
+E15	Assertion:T21 Asserted:E14
+A5	Assertion-Type-Value E15 hypothetical
+R1	Caused-By Arg1:E14 Arg2:E10	
+T22	Procedure 464 474	treatments
+E16	Procedure:T22 
+T23	Modifier 453 463	concurrent
+E17	Modifier:T23 Modifies:E16
+T24	Procedure 502 514	patient care
+E18	Procedure:T24 Name:T25 Polarity:T26
+T25	Procedure-Name 502 514	patient care
+T26	Polarity 492 501	increased
+A6	Polarity-Value T26 high
+T27	Assertion 480 483	may
+E19	Assertion:T27 Asserted:E18
+A7	Assertion-Type-Value E19 hypothetical
+R2	Using Arg1:E16 Arg2:E18	
