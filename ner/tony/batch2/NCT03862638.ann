@@ -1,7 +1,6 @@
 T1	Condition 104 122	headache disorders
 T2	Condition-Name 104 122	headache disorders
 E1	Condition:T1 Name:T2
-T3	Language 157 160	III
 T4	Condition 654 669	Substance abuse
 T5	Condition-Name 654 669	Substance abuse
 E4	Condition:T4 Name:T5
@@ -13,10 +12,10 @@ T9	Condition-Name 589 598	lactation
 E8	Condition:T8 Name:T9
 T10	Condition 537 542	liver
 T11	Condition-Name 537 542	liver
-E10	Condition:T10 Name:T11
+E10	Condition:T10 Name:T11 Severity:T49
 T12	Procedure 785 789	yoga
 T13	Procedure-Name 785 789	yoga
-E12	Procedure:T12 Name:T13
+E12	Procedure:T12 Name:T13 Temporality:E33
 T14	Eq-Temporal-Unit 184 189	years
 A1	Eq-Temporal-Unit-Value T14 year
 T15	Eq-Temporal-Unit 365 371	months
@@ -26,7 +25,7 @@ A3	Eq-Temporal-Unit-Value T16 month
 T17	Eq-Temporal-Unit 816 822	months
 A4	Eq-Temporal-Unit-Value T17 month
 T18	Age 173 177	Aged
-E13	Age:T18
+E13	Age:T18 Eq-Comparison:E14
 T19	Eq-Operator 180 181	-
 A5	Eq-Operator-Value T19 BETWEEN
 T20	Eq-Value 124 125	3
@@ -35,4 +34,87 @@ T22	Eq-Value 181 183	55
 T23	Eq-Value 363 364	3
 T24	Eq-Value 630 631	6
 T25	Eq-Comparison 178 181	18-
-E14	Eq-Comparison:T25 Operator:T19 Value:T21
+E14	Eq-Comparison:T25 Operator:T19 Value:T21 Temporal-Unit:T14
+T3	Observation 60 64	CTTH
+E2	Observation:T3 Name:T26
+T26	Observation-Name 60 64	CTTH
+A6	Observation-Type-Value T26 clinical-score
+T27	Condition 207 231	ability of understanding
+E3	Condition:T27 Name:T28
+T28	Condition-Name 207 231	ability of understanding
+T29	Condition 334 342	headache
+E5	Condition:T29 Name:T30
+T30	Condition-Name 334 342	headache
+T31	Condition 251 259	headache
+E7	Condition:T31 Name:T32
+T32	Condition-Name 251 259	headache
+T33	Eq-Comparison 354 371	pervious 3 months
+E9	Eq-Comparison:T33 Temporal-Period:T34 Temporal-Unit:T15 Value:T23
+T34	Eq-Temporal-Period 354 362	pervious
+A7	Eq-Temporal-Period-Value T34 past
+T35	Temporal-Connection 343 349	during
+E11	Temporal-Connection:T35 Arg:E5 Arg2:E9
+A8	Temporal-Connection-Type-Value E11 during
+T36	Drug 389 412	prophylactic medication
+E15	Drug:T36 Name:T37
+T37	Drug-Name 389 412	prophylactic medication
+T38	Eq-Comparison 424 442	previous one month
+E16	Eq-Comparison:T38 Temporal-Period:T41 Temporal-Unit:T40 Value:T39
+T39	Eq-Value 433 436	one
+T40	Eq-Temporal-Unit 437 442	month
+A9	Eq-Temporal-Unit-Value T40 month
+T41	Eq-Temporal-Period 424 432	previous
+A10	Eq-Temporal-Period-Value T41 past
+T42	Temporal-Connection 413 419	during
+E17	Temporal-Connection:T42 Arg:E15 Arg2:E16
+A11	Temporal-Connection-Type-Value E17 during
+T43	Negation 331 333	No
+E18	Negation:T43 Negates:E5
+T44	Condition 459 467	headache
+E19	Condition:T44 Name:T45
+T45	Condition-Name 459 467	headache
+T46	Modifier 449 458	Secondary
+E20	Modifier:T46 Modifies:E19
+T47	Condition 512 535	conditions of the heart
+E21	Condition:T47 Name:T48 Severity:T49
+T48	Condition-Name 512 535	conditions of the heart
+T49	Severity 504 511	serious
+A12	Severity-Value T49 severe
+T50	Condition 544 550	kidney
+E22	Condition:T50 Name:T51 Severity:T49
+T51	Condition-Name 544 550	kidney
+T52	Condition 560 566	organs
+E23	Condition:T52 Name:T53 Severity:T49
+T53	Condition-Name 560 566	organs
+T54	Or 551 553	or
+E24	Or:T54 Arg:E23 Arg2:E22
+T55	Or 586 588	or
+E25	Or:T55 Arg:E6 Arg2:E8
+T56	Condition 618 626	pregnant
+E26	Condition:T56 Name:T57 Temporality:E28
+T57	Condition-Name 618 626	pregnant
+T58	Assertion 603 611	planning
+E27	Assertion:T58 Asserted:E26
+A13	Assertion-Type-Value E27 intention
+T59	Eq-Comparison 627 638	in 6 months
+E28	Eq-Comparison:T59 Temporal-Unit:T16 Value:T24 Operator:T60
+T60	Eq-Operator 627 629	in
+A14	Eq-Operator-Value T60 LTEQ
+T61	Condition 645 649	Drug
+E29	Condition:T61 Name:T62
+T62	Condition-Name 645 649	Drug
+T63	Condition 685 706	psychiatric condition
+E30	Condition:T63 Name:T64
+T64	Condition-Name 685 706	psychiatric condition
+T65	Procedure 747 768	alternative medicines
+E31	Procedure:T65 Name:T66
+T66	Procedure-Name 747 768	alternative medicines
+T67	Modifier 729 742	complementary
+E32	Modifier:T67 Modifies:E31
+T68	Eq-Comparison 802 822	in last three months
+E33	Eq-Comparison:T68 Temporal-Unit:T17 Value:T70 Temporal-Period:T69 Operator:T71
+T69	Eq-Temporal-Period 805 809	last
+A15	Eq-Temporal-Period-Value T69 past
+T70	Eq-Value 810 815	three
+T71	Eq-Operator 802 804	in
+A16	Eq-Operator-Value T71 LTEQ
