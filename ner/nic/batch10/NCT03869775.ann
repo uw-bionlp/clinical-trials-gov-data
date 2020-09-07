@@ -9,6 +9,39 @@ A1	Eq-Temporal-Unit-Value T5 year
 T6	Eq-Temporal-Unit 216 221	years
 A2	Eq-Temporal-Unit-Value T6 year
 T7	Age 225 228	age
-E4	Age:T7
+E4	Age:T7 Eq-Comparison:E13
 T8	Eq-Value 87 89	18
 T9	Eq-Value 213 215	18
+T10	Eq-Comparison 37 44	will be
+E2	Eq-Comparison:T10 Temporal-Period:T11
+T11	Eq-Temporal-Period 37 44	will be
+A3	Eq-Temporal-Period-Value T11 future
+T12	Procedure 45 53	operated
+E5	Procedure:T12 Name:T13 Temporality:E2
+T13	Procedure-Name 45 53	operated
+R1	Using Arg1:E5 Arg2:E1	
+T14	Eq-Comparison 82 95	over 18 years
+E6	Eq-Comparison:T14 Operator:T15 Value:T8 Temporal-Unit:T5
+T15	Eq-Operator 82 86	over
+A4	Eq-Operator-Value T15 GT
+T16	Age 90 95	years
+E7	Age:T16 Eq-Comparison:E6
+T17	Condition 115 122	disease
+E8	Condition:T17 Name:T18
+T18	Condition-Name 115 122	disease
+T19	Negation 101 103	no
+E9	Negation:T19 Negates:E8
+T20	Condition 132 134	DM
+E10	Condition:T20 Name:T21
+T21	Condition-Name 132 134	DM
+T22	Exception 127 131	only
+E11	Exception:T22 From:E8 Except:E10
+T23	Condition 185 192	disease
+E12	Condition:T23 Name:T24
+T24	Condition-Name 185 192	disease
+T25	Eq-Comparison 207 221	under 18 years
+E13	Eq-Comparison:T25 Operator:T26 Value:T9 Temporal-Unit:T6
+T26	Eq-Operator 207 212	under
+A5	Eq-Operator-Value T26 LT
+T27	Contraindication 243 258	contraindicated
+E14	Contraindication:T27 Contraindicates:E3
