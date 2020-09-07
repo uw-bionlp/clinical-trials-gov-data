@@ -5,21 +5,18 @@ T3	Life-Stage-And-Gender 33 39	female
 A1	Life-Stage-And-Gender-Type T3 male
 T4	Life-Stage-And-Gender 25 29	Male
 A2	Life-Stage-And-Gender-Type T4 male
-T5	Condition 120 123	IVa
-T6	Condition-Name 120 123	IVa
-E5	Condition:T5 Name:T6
 T7	Procedure 435 451	immunomodulation
 T8	Procedure-Name 435 451	immunomodulation
 E7	Procedure:T7 Name:T8
 T9	Procedure 578 593	plasma exchange
 T10	Procedure-Name 578 593	plasma exchange
-E9	Procedure:T9 Name:T10
+E9	Procedure:T9 Name:T10 Temporality:E18
 T11	Procedure 563 577	plasmapheresis
 T12	Procedure-Name 563 577	plasmapheresis
 E11	Procedure:T11 Name:T12
 T13	Procedure 637 647	Thymectomy
 T14	Procedure-Name 637 647	Thymectomy
-E13	Procedure:T13 Name:T14
+E13	Procedure:T13 Name:T14 Temporality:E19
 T15	Eq-Operator 40 41	≥
 A3	Eq-Operator-Value T15 GTEQ
 T16	Eq-Operator 239 240	≥
@@ -44,7 +41,7 @@ T25	Eq-Temporal-Unit 663 669	months
 A13	Eq-Temporal-Unit-Value T25 month
 T26	Eq-Unit 777 780	mm3
 T27	Age 54 57	age
-E14	Age:T27
+E14	Age:T27 Eq-Comparison:E15
 T28	Eq-Value 42 44	18
 T29	Eq-Value 240 242	12
 T30	Eq-Value 459 460	6
@@ -62,7 +59,96 @@ T38	Eq-Comparison 599 613	within 4 weeks
 E18	Eq-Comparison:T38 Operator:T18 Temporal-Unit:T24 Value:T31
 T39	Eq-Comparison 658 669	< 12 months
 E19	Eq-Comparison:T39 Operator:T19 Temporal-Unit:T25 Value:T32
-T40	Eq-Comparison 711 713	<6
-E20	Eq-Comparison:T40 Operator:T20 Value:T33
-T41	Eq-Comparison 765 770	<1500
-E21	Eq-Comparison:T41 Operator:T21 Value:T34
+T40	Eq-Comparison 711 717	<6 g/L
+E20	Eq-Comparison:T40 Operator:T20 Value:T33 Unit:T82 Per:T83
+T41	Eq-Comparison 765 780	<1500 cells/mm3
+E21	Eq-Comparison:T41 Operator:T21 Value:T34 Unit:T86 Per:T26
+T5	Procedure 152 162	respirator
+E2	Procedure:T5 Name:T6
+T6	Procedure-Name 152 162	respirator
+T42	Negation 135 138	not
+E3	Negation:T42 Negates:E2
+T43	Study 187 192	study
+E4	Study:T43 
+T44	Temporal-Connection 163 179	for the duration
+E5	Temporal-Connection:T44 Arg:E2 Arg2:E4
+A14	Temporal-Connection-Type-Value E5 during
+T45	Assertion 193 222	as judged by the Investigator
+E6	Assertion:T45 Asserted:E3
+A15	Assertion-Type-Value E6 possible
+T46	Observation 229 232	QMG
+E8	Observation:T46 Name:T47 Eq-Comparison:E16
+T47	Observation-Name 229 232	QMG
+A16	Observation-Type-Value T47 clinical-score
+T48	Drug 371 380	rituximab
+E10	Drug:T48 Name:T49
+T49	Drug-Name 371 380	rituximab
+T50	Drug 382 391	belimumab
+E12	Drug:T50 Name:T51
+T51	Drug-Name 382 391	belimumab
+T52	Drug 393 403	eculizumab
+E22	Drug:T52 Name:T53
+T53	Drug-Name 393 403	eculizumab
+T54	Drug 411 430	monoclonal antibody
+E23	Drug:T54 Name:T55
+T55	Drug-Name 411 430	monoclonal antibody
+T56	Or 404 406	or
+E24	Or:T56 Arg:E22 Arg2:E23
+R1	Using Arg1:E7 Arg2:E23	
+R2	Using Arg1:E7 Arg2:E22	
+R3	Using Arg1:E7 Arg2:E12	
+R4	Using Arg1:E7 Arg2:E10	
+T57	Procedure 483 489	dosing
+E25	Procedure:T57 Name:T58 Temporality:E26
+T58	Procedure-Name 483 489	dosing
+T59	Eq-Temporal-Recency 477 482	first
+A17	Eq-Temporal-Recency-Value T59 first-time
+T60	Eq-Comparison 477 482	first
+E26	Eq-Comparison:T60 Temporal-Recency:T59
+T61	Temporal-Connection 468 473	prior
+E27	Temporal-Connection:T61 Arg:E7 Arg2:E25
+A18	Temporal-Connection-Type-Value E27 before
+T62	Drug 496 511	Immunoglobulins
+E28	Drug:T62 Name:T63
+T63	Drug-Name 496 511	Immunoglobulins
+T64	Procedure 521 523	SC
+E29	Procedure:T64 Name:T65
+T65	Procedure-Name 521 523	SC
+T66	Procedure 525 527	IV
+E30	Procedure:T66 Name:T67
+T67	Procedure-Name 525 527	IV
+T68	Procedure 529 533	IVIG
+E31	Procedure:T68 Name:T69
+T69	Procedure-Name 529 533	IVIG
+R5	Equivalent-To Arg1:E31 Arg2:E30	
+T70	Procedure 539 558	intramuscular route
+E32	Procedure:T70 Name:T71
+T71	Procedure-Name 539 558	intramuscular route
+T72	Or 536 538	or
+E33	Or:T72 Arg:E31 Arg2:T71
+T73	Or 560 562	or
+E34	Or:T73 Arg:E28 Arg2:E11
+T74	Procedure 595 597	PE
+E35	Procedure:T74 Name:T75
+T75	Procedure-Name 595 597	PE
+R6	Abbrev-Of Arg1:E35 Arg2:E9	
+T76	Temporal-Connection 614 620	before
+E36	Temporal-Connection:T76 Arg:E18 Arg2:E37
+A19	Temporal-Connection-Type-Value E36 before
+T77	Study 621 630	Screening
+E37	Study:T77 
+T78	Temporal-Connection 670 675	prior
+E38	Temporal-Connection:T78 Arg:E19 Arg2:E39
+A20	Temporal-Connection-Type-Value E38 before
+T79	Study 679 688	screening
+E39	Study:T79 
+T80	Observation 701 704	IgG
+E40	Observation:T80 Name:T81 Eq-Comparison:E20
+T81	Observation-Name 701 704	IgG
+A21	Observation-Type-Value T81 clinical-score
+T82	Eq-Unit 714 715	g
+T83	Eq-Unit 716 717	L
+T84	Observation 748 764	neutrophil count
+E41	Observation:T84 Name:T85 Eq-Comparison:E21
+T85	Observation-Name 748 764	neutrophil count
+T86	Eq-Unit 771 776	cells
