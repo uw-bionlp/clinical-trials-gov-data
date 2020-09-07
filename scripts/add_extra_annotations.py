@@ -7,7 +7,7 @@ from ner.preprocess.brat_document import BratDocument
 import ner.preprocess.utils as utils
 
 regex_temporal = r'(past|previous|prior|history|received|administered|underwent|current|active|using|taking|undergoing)'
-past = [ 'past', 'previous', 'prior', 'history', 'received', 'administered', 'underwent' ]
+past = [ 'past', 'previously', 'previous', 'prior', 'history', 'received', 'administered', 'underwent' ]
 cnt = 0
 
 def main():
