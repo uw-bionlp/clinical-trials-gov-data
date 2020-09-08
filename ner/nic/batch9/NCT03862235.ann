@@ -1,12 +1,11 @@
 T1	Condition 503 525	cardiovascular disease
 T2	Condition-Name 503 525	cardiovascular disease
 E1	Condition:T1 Name:T2
-T3	Procedure 130 147	strength training
-T4	Procedure-Name 130 147	strength training
-E3	Procedure:T3 Name:T4
-T5	Language 491 494	men
-T6	Condition 661 675	kidney disease
-T7	Condition-Name 661 675	kidney disease
+T3	Observation 130 147	strength training
+T4	Observation-Name 130 147	strength training
+E3	Observation:T3 Name:T4 Duration:E10
+T6	Condition 668 675	disease
+T7	Condition-Name 668 675	disease
 E6	Condition:T6 Name:T7
 T8	Eq-Temporal-Unit 163 168	years
 A1	Eq-Temporal-Unit-Value T8 year
@@ -24,7 +23,72 @@ T15	Eq-Value 305 307	12
 T16	Eq-Value 327 328	2
 T17	Eq-Value 340 341	2
 T18	Eq-Value 342 343	4
-T19	Eq-Comparison 300 304	8 to
-E7	Eq-Comparison:T19 Operator:T11 Value:T14
-T20	Eq-Comparison 340 342	2-
-E8	Eq-Comparison:T20 Operator:T12 Value:T17
+T19	Eq-Comparison 300 313	8 to 12 weeks
+E7	Eq-Comparison:T19 Operator:T11 Value:T14 Value2:T15 Temporal-Unit:T9
+T20	Eq-Comparison 340 359	2-4 cycles per year
+E8	Eq-Comparison:T20 Operator:T12 Value:T17 Value2:T18 Unit:T35 Per:T36
+T21	Drug 25 53	Anabolic androgenic steroids
+E2	Drug:T21 Name:T22
+T22	Drug-Name 25 53	Anabolic androgenic steroids
+T23	Drug 64 92	Anabolic androgenic steroids
+E4	Drug:T23 Name:T24
+T24	Drug-Name 64 92	Anabolic androgenic steroids
+T25	Or 60 63	and
+E5	Or:T25 Arg:E2 Arg2:E4
+T26	Negation 93 101	nonusers
+E9	Negation:T26 Negates:E4
+A6	Observation-Type-Value T4 social-habit
+T27	Eq-Comparison 152 168	at least 2 years
+E10	Eq-Comparison:T27 Operator:T28 Value:T13 Temporal-Unit:T8
+T28	Eq-Operator 152 160	at least
+A7	Eq-Operator-Value T28 GTEQ
+T29	Drug 175 203	Anabolic androgenic steroids
+E11	Drug:T29 Name:T30
+T30	Drug-Name 175 203	Anabolic androgenic steroids
+T31	Drug 239 267	anabolic androgenic steroids
+E12	Drug:T31 Name:T32 Temporality:E7 Duration:E13 Temporality2:E8
+T32	Drug-Name 239 267	anabolic androgenic steroids
+T33	Eq-Comparison 318 334	at least 2 years
+E13	Eq-Comparison:T33 Operator:T34 Value:T16 Temporal-Unit:T10
+T34	Eq-Operator 318 326	at least
+A8	Eq-Operator-Value T34 GTEQ
+T35	Eq-Unit 344 350	cycles
+T36	Eq-Temporal-Unit 355 359	year
+A9	Eq-Temporal-Unit-Value T36 year
+R1	If-Then Arg1:E11 Arg2:E12	
+T37	Drug 370 398	anabolic androgenic steroids
+E14	Drug:T37 Name:T38
+T38	Drug-Name 370 398	anabolic androgenic steroids
+T39	Study 444 449	study
+E15	Study:T39 
+T40	Temporal-Connection 421 436	over the course
+E16	Temporal-Connection:T40 Arg:E14 Arg2:E15
+A10	Temporal-Connection-Type-Value E16 during
+T41	Condition 481 490	sedentary
+E18	Condition:T41 Name:T5
+T5	Condition-Name 481 490	sedentary
+T42	Life-Stage-And-Gender 491 494	men
+A11	Life-Stage-And-Gender-Type T42 male
+T43	Negation 495 502	without
+E17	Negation:T43 Negates:E1
+T44	Condition 552 559	Smoking
+E19	Condition:T44 Name:T45
+T45	Condition-Name 552 559	Smoking
+T46	Observation 566 585	Alcohol consumption
+E20	Observation:T46 Name:T47
+T47	Observation-Name 566 585	Alcohol consumption
+A12	Observation-Type-Value T47 social-habit
+T48	Drug 599 608	diuretics
+E21	Drug:T48 Name:T49
+T49	Drug-Name 599 608	diuretics
+T50	Drug 616 644	antihypertensive medications
+E22	Drug:T50 Name:T51
+T51	Drug-Name 616 644	antihypertensive medications
+T52	Or 609 615	and/or
+E23	Or:T52 Arg:E21 Arg2:E22
+T53	Modifier 661 667	kidney
+E24	Modifier:T53 Modifies:T7
+T54	Modifier 651 656	Liver
+E25	Modifier:T54 Modifies:T7
+T55	Or 657 660	and
+E26	Or:T55 Arg:E25 Arg2:E24
