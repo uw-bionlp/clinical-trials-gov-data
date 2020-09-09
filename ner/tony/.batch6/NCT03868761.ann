@@ -1,40 +1,138 @@
-T1	Life-Stage-And-Gender 33 40	females
-A1	Life-Stage-And-Gender-Type T1 male
-T2	Language 346 353	English
-T3	Life-Stage-And-Gender 25 30	Males
-A2	Life-Stage-And-Gender-Type T3 male
-T4	Life-Stage-And-Gender 182 187	Child
-A3	Life-Stage-And-Gender-Type T4 child
+T1	Age 41 45	aged
+E1	Age:T1
+T2	Eq-Comparison 46 57	13-17 years
+E2	Eq-Comparison:T2 Value:T38 Operator:T39 Value:T40 Temporal-Unit:T41
+T3	Or 121 123	or
+E3	Or:T3
+T4	Condition 129 150	temporarily displaced
+E4	Condition:T4
 T5	Condition 176 180	PTSD
-T6	Condition-Name 176 180	PTSD
-E5	Condition:T5 Name:T6
-T7	Condition 647 655	Disorder
-T8	Condition-Name 647 655	Disorder
-E7	Condition:T7 Name:T8
-T9	Condition 831 838	anxiety
-T10	Condition-Name 831 838	anxiety
-E9	Condition:T9 Name:T10
-T11	Eq-Operator 585 586	<
-A4	Eq-Operator-Value T11 LT
-T12	Eq-Operator 772 781	less than
-A5	Eq-Operator-Value T12 LT
-T13	Eq-Temporal-Unit 52 57	years
-A6	Eq-Temporal-Unit-Value T13 year
-T14	Eq-Temporal-Unit 588 594	months
-A7	Eq-Temporal-Unit-Value T14 month
-T15	Eq-Temporal-Unit 787 792	weeks
-A8	Eq-Temporal-Unit-Value T15 week
-T16	Age 41 45	aged
-E10	Age:T16
-T17	Eq-Operator 48 49	-
-A9	Eq-Operator-Value T17 BETWEEN
-T18	Eq-Value 46 48	13
-T19	Eq-Value 49 51	17
-T20	Eq-Value 83 87	2017
-T21	Eq-Value 221 222	5
-T22	Eq-Value 586 587	6
-T23	Eq-Value 666 667	2
-T24	Eq-Comparison 585 594	<6 months
-E11	Eq-Comparison:T24 Operator:T11 Temporal-Unit:T14 Value:T22
-T25	Eq-Comparison 46 49	13-
-E12	Eq-Comparison:T25 Operator:T17 Value:T18
+E5	Condition:T5 Name:T46
+T6	Observation 182 218	Child Trauma Screening Questionnaire
+E6	Observation:T6 Name:T47
+T7	Eq-Comparison 219 232	= 5 or higher
+E7	Eq-Comparison:T7 Operator:T48 Value:T49 Operator:T50
+T8	Eq-Comparison 440 447	history
+E8	Eq-Comparison:T8 Temporal-Period:T53
+T9	Condition 451 460	psychosis
+E9	Condition:T9 Name:T54
+T10	Condition 462 469	bipolar
+E10	Condition:T10 Name:T55
+T11	Or 471 473	or
+E11	Or:T11
+T12	Condition 474 487	schizophrenia
+E12	Condition:T12 Name:T56
+T13	Condition 515 530	physical health
+E13	Condition:T13 Name:T58
+T14	Assertion 540 553	necessitating
+E14	Assertion:T14
+A1	Assertion-Type-Value E14 hypothetical
+T15	Procedure 554 561	surgery
+E15	Procedure:T15 Name:T59
+T16	Or 562 564	or
+E16	Or:T16
+T17	Observation 570 579	prognosis
+E17	Observation:T17
+T18	Eq-Comparison 585 594	<6 months
+E18	Eq-Comparison:T18 Operator:T60 Value:T61 Temporal-Unit:T62
+T19	Eq-Comparison 624 631	current
+E19	Eq-Comparison:T19 Temporal-Period:T64
+T20	Condition 632 655	Substance User Disorder
+E20	Condition:T20 Name:T65
+T21	Condition 657 663	CRAFFT
+E21	Condition:T21
+T22	Eq-Comparison 664 677	= 2 or higher
+E22	Eq-Comparison:T22 Operator:T67 Value:T68 Operator:T69
+T23	Eq-Comparison 684 691	Current
+E23	Eq-Comparison:T23 Temporal-Period:T70
+T24	Condition 706 723	suicidal ideation
+E24	Condition:T24 Name:T71
+T25	Modifier 729 742	Self-reported
+E25	Modifier:T25
+T26	Condition 743 752	pregnancy
+E26	Condition:T26 Name:T72
+T27	Eq-Comparison 772 792	less than four weeks
+E27	Eq-Comparison:T27 Operator:T73 Value:T74 Temporal-Unit:T75
+T28	Drug 816 826	medication
+E28	Drug:T28
+T29	Condition 831 838	anxiety
+E29	Condition:T29 Name:T77
+T30	Drug 840 855	anti-depressant
+E30	Drug:T30 Name:T78
+T31	Or 857 860	and
+E31	Or:T31
+T32	Drug 877 888	medications
+E32	Drug:T32
+T33	Temporal-Connection 889 894	prior
+E33	Temporal-Connection:T33
+A2	Temporal-Connection-Type-Value E33 before
+T34	Study 902 911	screening
+E34	Study:T34
+T35	Procedure 912 922	assessment
+E35	Procedure:T35
+T36	Life-Stage-And-Gender 25 30	Males
+A3	Life-Stage-And-Gender-Type T36 male
+T37	Life-Stage-And-Gender 33 40	females
+A4	Life-Stage-And-Gender-Type T37 female
+T38	Eq-Value 46 48	13
+T39	Eq-Operator 48 49	-
+A5	Eq-Operator-Value T39 BETWEEN
+T40	Eq-Value 49 51	17
+T41	Eq-Temporal-Unit 52 57	years
+A6	Eq-Temporal-Unit-Value T41 year
+T42	Stability 67 75	impacted
+A7	Stability-Value T42 change
+T43	Eq-Value 83 87	2017
+T44	Observation-Name 105 120	lost their home
+T45	Polarity 163 171	positive
+A8	Polarity-Value T45 positive
+T46	Condition-Name 176 180	PTSD
+T47	Observation-Name 182 218	Child Trauma Screening Questionnaire
+A9	Observation-Type-Value T47 survey-or-questionnaire
+T48	Eq-Operator 219 220	=
+A10	Eq-Operator-Value T48 GTEQ
+T49	Eq-Value 221 222	5
+T50	Eq-Operator 223 232	or higher
+A11	Eq-Operator-Value T50 GTEQ
+T51	Language 346 353	English
+T52	Polarity 417 425	positive
+A12	Polarity-Value T52 positive
+T53	Eq-Temporal-Period 440 447	history
+A13	Eq-Temporal-Period-Value T53 past
+T54	Condition-Name 451 460	psychosis
+T55	Condition-Name 462 469	bipolar
+T56	Condition-Name 474 487	schizophrenia
+T57	Severity 493 500	Serious
+A14	Severity-Value T57 severe
+T58	Condition-Name 515 530	physical health
+T59	Procedure-Name 554 561	surgery
+T60	Eq-Operator 585 586	<
+A15	Eq-Operator-Value T60 LT
+T61	Eq-Value 586 587	6
+T62	Eq-Temporal-Unit 588 594	months
+A16	Eq-Temporal-Unit-Value T62 month
+T63	Polarity 602 610	positive
+A17	Polarity-Value T63 positive
+T64	Eq-Temporal-Period 624 631	current
+A18	Eq-Temporal-Period-Value T64 present
+T65	Condition-Name 632 655	Substance User Disorder
+T66	Observation-Name 657 663	CRAFFT
+T67	Eq-Operator 664 665	=
+A19	Eq-Operator-Value T67 GTEQ
+T68	Eq-Value 666 667	2
+T69	Eq-Operator 668 677	or higher
+A20	Eq-Operator-Value T69 GTEQ
+T70	Eq-Temporal-Period 684 691	Current
+A21	Eq-Temporal-Period-Value T70 present
+T71	Condition-Name 706 723	suicidal ideation
+T72	Condition-Name 743 752	pregnancy
+T73	Eq-Operator 772 781	less than
+A22	Eq-Operator-Value T73 LT
+T74	Eq-Value 782 786	four
+T75	Eq-Temporal-Unit 787 792	weeks
+A23	Eq-Temporal-Unit-Value T75 week
+T76	Stability 796 802	stable
+A24	Stability-Value T76 stable
+T77	Condition-Name 831 838	anxiety
+T78	Drug-Name 840 855	anti-depressant
+T79	Drug-Name 861 888	sleep promoting medications

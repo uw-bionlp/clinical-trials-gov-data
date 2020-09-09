@@ -1,32 +1,98 @@
-T1	Condition 641 668	Allergy to local anesthetic
-T2	Condition-Name 641 668	Allergy to local anesthetic
-E1	Condition:T1 Name:T2
-T3	Condition 214 234	Psychiatric disorder
-T4	Condition-Name 214 234	Psychiatric disorder
-E3	Condition:T3 Name:T4
-T5	Condition 413 424	heart block
-T6	Condition-Name 413 424	heart block
-E5	Condition:T5 Name:T6
-T7	Procedure 49 58	lobectomy
-T8	Procedure-Name 49 58	lobectomy
-E7	Procedure:T7 Name:T8
-T9	Condition 370 378	epilepsy
-T10	Condition-Name 370 378	epilepsy
-E9	Condition:T9 Name:T10
-T11	Procedure 59 63	VATS
-T12	Procedure-Name 59 63	VATS
-E11	Procedure:T11 Name:T12
-T13	Eq-Operator 75 76	>
-A1	Eq-Operator-Value T13 GT
-T14	Eq-Temporal-Unit 80 85	years
-A2	Eq-Temporal-Unit-Value T14 year
-T15	Eq-Operator 127 129	to
-A3	Eq-Operator-Value T15 BETWEEN
-T16	Eq-Value 77 79	18
-T17	Eq-Value 125 126	1
-T18	Eq-Value 130 131	3
-T19	Eq-Value 384 385	3
-T20	Eq-Comparison 75 85	> 18 years
-E12	Eq-Comparison:T20 Operator:T13 Temporal-Unit:T14 Value:T16
-T21	Eq-Comparison 125 129	1 to
-E13	Eq-Comparison:T21 Operator:T15 Value:T17
+T1	Eq-Comparison 38 48	undergoing
+E1	Eq-Comparison:T1 Temporal-Period:T33
+T2	Procedure 49 63	lobectomy VATS
+E2	Procedure:T2 Name:T34
+T3	Age 69 74	Older
+E3	Age:T3
+T4	Eq-Comparison 75 85	> 18 years
+E4	Eq-Comparison:T4 Operator:T35 Value:T36 Temporal-Unit:T37
+T5	Condition 121 124	ASA
+E5	Condition:T5 Name:T38
+T6	Eq-Comparison 125 131	1 to 3
+E6	Eq-Comparison:T6 Value:T39 Operator:T40 Value:T41
+T7	Study 203 208	study
+E7	Study:T7
+T8	Condition 214 234	Psychiatric disorder
+E8	Condition:T8 Name:T43
+T9	Observation 302 322	juridical protection
+E9	Observation:T9 Name:T44
+T10	Other 340 345	other
+E10	Other:T10
+T11	Study 346 351	study
+E11	Study:T11
+T12	Modifier 357 369	Non balanced
+E12	Modifier:T12
+T13	Condition 370 378	epilepsy
+E13	Condition:T13
+T14	Eq-Comparison 384 391	3 grade
+E14	Eq-Comparison:T14 Value:T46 Unit:T47
+T15	Modifier 392 412	auriculo-ventricular
+E15	Modifier:T15
+T16	Condition 413 424	heart block
+E16	Condition:T16
+T17	Negation 425 432	without
+E17	Negation:T17
+T18	Modifier 433 439	pacing
+E18	Modifier:T18
+T19	Condition 452 480	hepatocellular insufficiency
+E19	Condition:T19 Name:T51
+T20	Procedure 491 511	arrhythmic treatment
+E20	Procedure:T20
+T21	Eq-Comparison 514 523	class III
+E21	Eq-Comparison:T21 Unit:T53 Value:T54
+T22	Condition 569 577	Pregnant
+E22	Condition:T22 Name:T55
+T23	Or 586 588	or
+E23	Or:T23
+T24	Or 588 589	/
+E24	Or:T24
+T25	Or 589 592	and
+E25	Or:T25
+T26	Condition 593 606	breastfeeding
+E26	Condition:T26 Name:T56
+T27	Eq-Comparison 612 619	History
+E27	Eq-Comparison:T27 Temporal-Period:T57
+T28	Condition 623 635	opioid abuse
+E28	Condition:T28 Name:T58
+T29	Allergy 641 648	Allergy
+E29	Allergy:T29
+T30	Drug 652 673	local anesthetic drug
+E30	Drug:T30 Name:T59
+T31	Or 674 676	or
+E31	Or:T31
+T32	Drug 677 684	opioids
+E32	Drug:T32 Name:T60
+T33	Eq-Temporal-Period 38 48	undergoing
+A1	Eq-Temporal-Period-Value T33 present
+T34	Procedure-Name 49 63	lobectomy VATS
+T35	Eq-Operator 75 76	>
+A2	Eq-Operator-Value T35 GT
+T36	Eq-Value 77 79	18
+T37	Eq-Temporal-Unit 80 85	years
+A3	Eq-Temporal-Unit-Value T37 year
+T38	Condition-Name 121 124	ASA
+T39	Eq-Value 125 126	1
+T40	Eq-Operator 127 129	to
+A4	Eq-Operator-Value T40 BETWEEN
+T41	Eq-Value 130 131	3
+T42	Eq-Unit 132 137	class
+T43	Condition-Name 214 234	Psychiatric disorder
+T44	Observation-Name 302 322	juridical protection
+T45	Condition-Name 361 378	balanced epilepsy
+T46	Eq-Value 384 385	3
+T47	Eq-Unit 386 391	grade
+T48	Eq-Value 392 400	auriculo
+T49	Condition-Name 401 424	ventricular heart block
+T50	Severity 445 451	Severe
+A5	Severity-Value T50 severe
+T51	Condition-Name 452 480	hepatocellular insufficiency
+T52	Condition-Name 486 501	Anti arrhythmic
+T53	Eq-Unit 514 519	class
+T54	Eq-Value 520 523	III
+T55	Condition-Name 569 577	Pregnant
+T56	Condition-Name 593 606	breastfeeding
+T57	Eq-Temporal-Period 612 619	History
+A6	Eq-Temporal-Period-Value T57 past
+T58	Condition-Name 623 635	opioid abuse
+T59	Drug-Name 652 673	local anesthetic drug
+T60	Drug-Name 677 684	opioids

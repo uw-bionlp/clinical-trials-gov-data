@@ -1,39 +1,264 @@
-T1	Procedure 191 212	functional activities
-T2	Procedure-Name 191 212	functional activities
-E1	Procedure:T1 Name:T2
-T3	Procedure 331 349	passive stretching
-T4	Procedure-Name 331 349	passive stretching
-E3	Procedure:T3 Name:T4
-T5	Condition 69 81	tennis elbow
-T6	Condition-Name 69 81	tennis elbow
-E5	Condition:T5 Name:T6
-T7	Condition 518 543	musculoskeletal disorders
-T8	Condition-Name 518 543	musculoskeletal disorders
-E7	Condition:T7 Name:T8
-T9	Condition 547 569	neurological disorders
-T10	Condition-Name 547 569	neurological disorders
-E9	Condition:T9 Name:T10
-T11	Condition 590 604	Drug addiction
-T12	Condition-Name 590 604	Drug addiction
-E11	Condition:T11 Name:T12
-T13	Condition 627 635	cannabis
-T14	Condition-Name 627 635	cannabis
-E13	Condition:T13 Name:T14
-T15	Procedure 1477 1490	Elbow surgery
-T16	Procedure-Name 1477 1490	Elbow surgery
-E15	Procedure:T15 Name:T16
-T17	Condition 914 925	Consumption
-T18	Condition-Name 914 925	Consumption
-E17	Condition:T17 Name:T18
-T19	Procedure 1243 1252	exercises
-T20	Procedure-Name 1243 1252	exercises
-E19	Procedure:T19 Name:T20
-T21	Condition 938 946	caffeine
-T22	Condition-Name 938 946	caffeine
-E21	Condition:T21 Name:T22
-T23	Procedure 1528 1531	TMS
-T24	Procedure-Name 1528 1531	TMS
-E23	Procedure:T23 Name:T24
-T25	Eq-Temporal-Unit 97 103	months
-A1	Eq-Temporal-Unit-Value T25 month
-T26	Eq-Value 95 96	3
+T1	Modifier 49 56	chronic
+E1	Modifier:T1 
+T2	Condition 57 61	pain
+E2	Condition:T2 Name:T101
+T3	Condition 69 81	tennis elbow
+E3	Condition:T3 Name:T102
+T4	Eq-Comparison 86 103	at least 3 months
+E4	Eq-Comparison:T4 Operator:T103 Value:T104 Temporal-Unit:T105
+T5	Modifier 133 140	chronic
+E5	Modifier:T5 
+T6	Condition 141 163	lateral epicondylalgia
+E6	Condition:T6 Name:T106
+T7	Condition 170 174	Pain
+E7	Condition:T7 Name:T107
+T8	Condition 191 212	functional activities
+E8	Condition:T8 
+T9	Condition 221 229	gripping
+E9	Condition:T9 
+T10	Or 230 233	and
+E10	Or:T10 
+T11	Condition 234 238	pain
+E11	Condition:T11 Name:T108
+T12	And 239 243	with
+E12	And:T12 
+T13	Condition 244 264	resisted contraction
+E13	Condition:T13 
+T14	Procedure 272 287	wrist extensors
+E14	Procedure:T14 
+T15	Or 288 290	or
+E15	Or:T15 
+T16	Modifier 291 305	extensor carpi
+E16	Modifier:T16 
+T17	Condition 306 321	radialis brevis
+E17	Condition:T17 Name:T110
+T18	Or 323 325	or
+E18	Or:T18 
+T19	Condition 331 349	passive stretching
+E19	Condition:T19 
+T20	Procedure 357 372	wrist extensors
+E20	Procedure:T20 
+T21	Modifier 421 428	chronic
+E21	Modifier:T21 
+T22	Condition 429 451	lateral epicondylalgia
+E22	Condition:T22 Name:T112
+T23	Modifier 455 465	both sides
+E23	Modifier:T23 
+T24	Modifier 467 489	cervicothoracic spinal
+E24	Modifier:T24 
+T25	Condition 490 499	pathology
+E25	Condition:T25 
+T26	Other 501 506	other
+E26	Other:T26 
+T27	Modifier 507 517	upper limb
+E27	Modifier:T27 
+T28	Condition 518 543	musculoskeletal disorders
+E28	Condition:T28 Name:T114
+T29	Or 544 546	or
+E29	Or:T29 
+T30	Modifier 547 559	neurological
+E30	Modifier:T30 
+T31	Condition 560 569	disorders
+E31	Condition:T31 
+T32	Condition 575 584	Pregnancy
+E32	Condition:T32 Name:T116
+T33	Condition 590 604	Drug addiction
+E33	Condition:T33 Name:T117
+T34	Drug 627 635	cannabis
+E34	Drug:T34 Name:T118
+T35	Drug 637 644	opioids
+E35	Drug:T35 Name:T119
+T36	Or 645 647	or
+E36	Or:T36 
+T37	Other 648 653	other
+E37	Other:T37 
+T38	Drug 654 659	drugs
+E38	Drug:T38 
+T39	Eq-Comparison 665 673	Previous
+E39	Eq-Comparison:T39 Temporal-Period:T120
+T40	Or 674 676	or
+E40	Or:T40 
+T41	Eq-Comparison 677 684	current
+E41	Eq-Comparison:T41 Temporal-Period:T121
+T42	Modifier 685 695	neurologic
+E42	Modifier:T42 
+T43	Modifier 697 712	musculoskeletal
+E43	Modifier:T43 
+T44	Or 713 715	or
+E44	Or:T44 
+T45	Modifier 716 722	mental
+E45	Modifier:T45 
+T46	Condition 723 732	illnesses
+E46	Condition:T46 Name:T122
+T47	Modifier 756 764	systemic
+E47	Modifier:T47 
+T48	Condition 765 774	condition
+E48	Condition:T48 
+T49	Negation 780 784	Lack
+E49	Negation:T49 
+T50	Condition 788 808	ability to cooperate
+E50	Condition:T50 
+T51	Eq-Comparison 814 821	Current
+E51	Eq-Comparison:T51 Temporal-Period:T124
+T52	Drug 829 840	medications
+E52	Drug:T52 
+T53	Assertion 846 849	may
+E53	Assertion:T53 
+A1	Assertion-Type-Value E53 hypothetical
+T54	Study 861 866	trial
+E54	Study:T54 
+T55	Drug 872 882	analgesics
+E55	Drug:T55 Name:T126
+T56	Drug 884 908	anti- inflammatory drugs
+E56	Drug:T56 Name:T127
+T57	Drug 929 936	alcohol
+E57	Drug:T57 Name:T128
+T58	Drug 938 946	caffeine
+E58	Drug:T58 Name:T129
+T59	Drug 948 956	nicotine
+E59	Drug:T59 Name:T130
+T60	Or 957 959	or
+E60	Or:T60 
+T61	Drug 960 971	painkillers
+E61	Drug:T61 Name:T131
+T62	Temporal-Connection 972 982	throughout
+E62	Temporal-Connection:T62 
+A2	Temporal-Connection-Type-Value E62 during
+T63	Study 987 992	study
+E63	Study:T63 
+T64	Eq-Comparison 1005 1017	Past history
+E64	Eq-Comparison:T64 Temporal-Period:T132
+T65	Modifier 1021 1028	chronic
+E65	Modifier:T65 
+T66	Condition 1029 1033	pain
+E66	Condition:T66 Name:T133
+T67	Modifier 1035 1047	neurological
+E67	Modifier:T67 
+T68	Or 1048 1050	or
+E68	Or:T68 
+T69	Modifier 1051 1062	psychiatric
+E69	Modifier:T69 
+T70	Condition 1063 1073	conditions
+E70	Condition:T70 
+T71	Other 1096 1101	other
+E71	Other:T71 
+T72	Condition 1102 1106	pain
+E72	Condition:T72 Name:T135
+T73	Temporal-Connection 1114 1124	throughout
+E73	Temporal-Connection:T73 
+A3	Temporal-Connection-Type-Value E73 during
+T74	Study 1129 1134	study
+E74	Study:T74 
+T75	And 1142 1145	and
+E75	And:T75 
+T76	Eq-Comparison 1146 1155	one month
+E76	Eq-Comparison:T76 Value:T136 Temporal-Unit:T137
+T77	Temporal-Connection 1156 1164	prior to
+E77	Temporal-Connection:T77 
+A4	Temporal-Connection-Type-Value E77 before
+T78	Study 1165 1178	participation
+E78	Study:T78 
+T79	Eq-Comparison 1201 1214	more than two
+E79	Eq-Comparison:T79 Operator:T138 Value:T139
+T80	Procedure 1227 1242	muscle training
+E80	Procedure:T80 
+T81	Eq-Comparison 1243 1261	exercises per week
+E81	Eq-Comparison:T81 Temporal-Unit:T140
+T82	Modifier 1276 1286	upper limb
+E82	Modifier:T82 
+T83	Or 1287 1293	and/or
+E83	Or:T83 
+T84	Modifier 1294 1304	lower back
+E84	Modifier:T84 
+T85	Other 1322 1327	other
+E85	Other:T85 
+T86	Modifier 1339 1344	elbow
+E86	Modifier:T86 
+T87	Condition 1345 1349	pain
+E87	Condition:T87 Name:T141
+T88	Condition 1374 1378	pain
+E88	Condition:T88 Name:T142
+T89	And 1379 1383	with
+E89	And:T89 
+T90	Modifier 1384 1388	neck
+E90	Modifier:T90 
+T91	Modifier 1389 1397	movement
+E91	Modifier:T91 
+T92	Or 1398 1400	or
+E92	Or:T92 
+T93	Modifier 1401 1407	manual
+E93	Modifier:T93 
+T94	Procedure 1408 1419	examination
+E94	Procedure:T94 Name:T144
+T95	Condition 1425 1445	Sensory disturbances
+E95	Condition:T95 Name:T145
+T96	Eq-Comparison 1451 1458	History
+E96	Eq-Comparison:T96 Temporal-Period:T146
+T97	Condition 1462 1471	fractures
+E97	Condition:T97 Name:T147
+T98	Procedure 1477 1490	Elbow surgery
+E98	Procedure:T98 Name:T148
+T99	Contraindication 1496 1513	Contraindications
+E99	Contraindication:T99 
+T100	Procedure 1528 1531	TMS
+E100	Procedure:T100 Name:T149
+T101	Condition-Name 57 61	pain
+T102	Condition-Name 69 81	tennis elbow
+T103	Eq-Operator 86 94	at least
+A5	Eq-Operator-Value T103 GTEQ
+T104	Eq-Value 95 96	3
+T105	Eq-Temporal-Unit 97 103	months
+A6	Eq-Temporal-Unit-Value T105 month
+T106	Condition-Name 141 163	lateral epicondylalgia
+T107	Condition-Name 170 174	Pain
+T108	Condition-Name 234 238	pain
+T109	Procedure-Name 253 287	contraction of the wrist extensors
+T110	Condition-Name 306 321	radialis brevis
+T111	Procedure-Name 331 372	passive stretching of the wrist extensors
+T112	Condition-Name 429 451	lateral epicondylalgia
+T113	Condition-Name 483 499	spinal pathology
+T114	Condition-Name 518 543	musculoskeletal disorders
+T115	Condition-Name 547 569	neurological disorders
+T116	Condition-Name 575 584	Pregnancy
+T117	Condition-Name 590 604	Drug addiction
+T118	Drug-Name 627 635	cannabis
+T119	Drug-Name 637 644	opioids
+T120	Eq-Temporal-Period 665 673	Previous
+A7	Eq-Temporal-Period-Value T120 past
+T121	Eq-Temporal-Period 677 684	current
+A8	Eq-Temporal-Period-Value T121 present
+T122	Condition-Name 723 732	illnesses
+T123	Condition-Name 750 774	going systemic condition
+T124	Eq-Temporal-Period 814 821	Current
+A9	Eq-Temporal-Period-Value T124 present
+T125	Stability 850 856	affect
+A10	Stability-Value T125 change
+T126	Drug-Name 872 882	analgesics
+T127	Drug-Name 884 908	anti- inflammatory drugs
+T128	Drug-Name 929 936	alcohol
+T129	Drug-Name 938 946	caffeine
+T130	Drug-Name 948 956	nicotine
+T131	Drug-Name 960 971	painkillers
+T132	Eq-Temporal-Period 1005 1017	Past history
+A11	Eq-Temporal-Period-Value T132 past
+T133	Condition-Name 1029 1033	pain
+T134	Condition-Name 1051 1073	psychiatric conditions
+T135	Condition-Name 1102 1106	pain
+T136	Eq-Value 1146 1149	one
+T137	Eq-Temporal-Unit 1150 1155	month
+A12	Eq-Temporal-Unit-Value T137 month
+T138	Eq-Operator 1201 1210	more than
+A13	Eq-Operator-Value T138 GT
+T139	Eq-Value 1211 1214	two
+T140	Eq-Temporal-Unit 1257 1261	week
+A14	Eq-Temporal-Unit-Value T140 week
+T141	Condition-Name 1345 1349	pain
+T142	Condition-Name 1374 1378	pain
+T143	Condition-Name 1384 1397	neck movement
+T144	Procedure-Name 1408 1419	examination
+T145	Condition-Name 1425 1445	Sensory disturbances
+T146	Eq-Temporal-Period 1451 1458	History
+A15	Eq-Temporal-Period-Value T146 past
+T147	Condition-Name 1462 1471	fractures
+T148	Procedure-Name 1483 1490	surgery
+T149	Procedure-Name 1528 1531	TMS

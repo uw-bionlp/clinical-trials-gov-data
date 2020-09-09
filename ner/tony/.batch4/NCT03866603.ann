@@ -1,26 +1,65 @@
 T1	Condition 126 145	Parkinson's disease
-T2	Condition-Name 126 145	Parkinson's disease
-E1	Condition:T1 Name:T2
-T3	Condition 211 223	parkinsonism
-T4	Condition-Name 211 223	parkinsonism
-E3	Condition:T3 Name:T4
-T5	Condition 457 476	Parkinson's disease
-T6	Condition-Name 457 476	Parkinson's disease
-E5	Condition:T5 Name:T6
-T7	Condition 546 558	parkinsonism
-T8	Condition-Name 546 558	parkinsonism
-E7	Condition:T7 Name:T8
-T9	Eq-Operator 629 641	younger than
-A1	Eq-Operator-Value T9 LT
-T10	Eq-Temporal-Unit 339 344	years
-A2	Eq-Temporal-Unit-Value T10 year
-T11	Eq-Temporal-Unit 645 650	years
-A3	Eq-Temporal-Unit-Value T11 year
-T12	Age 345 348	old
-E8	Age:T12
-T13	Age 651 654	old
-E9	Age:T13
-T14	Eq-Value 336 338	18
-T15	Eq-Value 642 644	18
-T16	Eq-Comparison 629 650	younger than 18 years
-E10	Eq-Comparison:T16 Operator:T9 Temporal-Unit:T11 Value:T15
+E1	Condition:T1 Name:T22
+T2	Or 146 148	or
+E2	Or:T2
+T3	Family-Member 169 182	family member
+E3	Family-Member:T3
+T4	Condition 211 223	parkinsonism
+E4	Condition:T4 Name:T23
+T5	Or 224 226	or
+E5	Or:T5
+T6	Risk 249 253	risk
+E6	Risk:T6
+T7	Modifier 273 278	early
+E7	Modifier:T7
+T8	Condition 279 281	PD
+E8	Condition:T8 Name:T25
+T9	Eq-Comparison 313 344	equal to or older than 18 years
+E9	Eq-Comparison:T9 Operator:T26 Operator:T27 Value:T28 Temporal-Unit:T29
+T10	Age 345 348	old
+E10	Age:T10
+T11	Negation 438 441	not
+E11	Negation:T11
+T12	Condition 457 476	Parkinson's disease
+E12	Condition:T12 Name:T30
+T13	Or 477 479	or
+E13	Or:T13
+T14	Family-Member 504 517	family member
+E14	Family-Member:T14
+T15	Condition 546 558	parkinsonism
+E15	Condition:T15 Name:T31
+T16	Or 559 561	or
+E16	Or:T16
+T17	Risk 588 592	risk
+E17	Risk:T17
+T18	Eq-Comparison 629 650	younger than 18 years
+E18	Eq-Comparison:T18 Operator:T33 Value:T34 Temporal-Unit:T35
+T19	Age 651 654	old
+E19	Age:T19
+T20	Eq-Comparison 661 671	Previously
+E20	Eq-Comparison:T20 Temporal-Period:T36
+T21	Study 688 693	study
+E21	Study:T21
+T22	Condition-Name 126 145	Parkinson's disease
+T23	Condition-Name 211 223	parkinsonism
+T24	Polarity 244 248	high
+A1	Polarity-Value T24 high
+T25	Condition-Name 279 281	PD
+T26	Eq-Operator 313 324	equal to or
+A2	Eq-Operator-Value T26 GTEQ
+T27	Eq-Operator 325 335	older than
+A3	Eq-Operator-Value T27 GT
+T28	Eq-Value 336 338	18
+T29	Eq-Temporal-Unit 339 344	years
+A4	Eq-Temporal-Unit-Value T29 year
+T30	Condition-Name 457 476	Parkinson's disease
+T31	Condition-Name 546 558	parkinsonism
+T32	Polarity 583 587	high
+A5	Polarity-Value T32 high
+T33	Eq-Operator 629 641	younger than
+A6	Eq-Operator-Value T33 LT
+T34	Eq-Value 642 644	18
+T35	Eq-Temporal-Unit 645 650	years
+A7	Eq-Temporal-Unit-Value T35 year
+T36	Eq-Temporal-Period 661 671	Previously
+A8	Eq-Temporal-Period-Value T36 past

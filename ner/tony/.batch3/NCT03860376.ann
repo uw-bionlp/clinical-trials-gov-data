@@ -1,21 +1,125 @@
-T1	Procedure 802 809	genetic
-T2	Procedure-Name 802 809	genetic
-E1	Procedure:T1 Name:T2
-T3	Eq-Operator 890 891	>
-A1	Eq-Operator-Value T3 GT
-T4	Eq-Temporal-Unit 42 47	years
-A2	Eq-Temporal-Unit-Value T4 year
-T5	Age 34 38	aged
-E2	Age:T5
-T6	Age 576 580	aged
-E3	Age:T6
-T7	Eq-Operator 583 585	to
-A3	Eq-Operator-Value T7 BETWEEN
-T8	Eq-Value 39 41	21
-T9	Eq-Value 581 582	7
-T10	Eq-Value 586 588	17
-T11	Eq-Value 891 893	90
-T12	Eq-Comparison 890 893	>90
-E4	Eq-Comparison:T12 Operator:T3 Value:T11
-T13	Eq-Comparison 581 585	7 to
-E5	Eq-Comparison:T13 Operator:T7 Value:T9
+T1	Age 34 38	aged
+E1	Age:T1 
+T2	Eq-Comparison 39 58	21 years or younger
+E2	Eq-Comparison:T2 Value:T46 Temporal-Unit:T47
+T3	Temporal-Connection 59 70	at the time
+E3	Temporal-Connection:T3 
+A1	Temporal-Connection-Type-Value E3 during
+T4	Study 74 84	enrollment
+E4	Study:T4 
+T5	Modifier 114 118	race
+E5	Modifier:T5 
+T6	Or 119 121	or
+E6	Or:T6 
+T7	Assertion 157 166	suspected
+E7	Assertion:T7 
+A2	Assertion-Type-Value E7 possible
+T8	Or 167 169	or
+E8	Or:T8 
+T9	Modifier 193 202	recurrent
+E9	Modifier:T9 
+T10	Or 203 205	or
+E10	Or:T10 
+T11	Modifier 206 216	refractory
+E11	Modifier:T11 
+T12	Condition 217 223	cancer
+E12	Condition:T12 Name:T48
+T13	Eq-Comparison 251 260	scheduled
+E13	Eq-Comparison:T13 Temporal-Period:T49
+T14	Or 265 267	or
+E14	Or:T14 
+T15	Procedure 286 292	biopsy
+E15	Procedure:T15 Name:T50
+T16	Or 293 295	or
+E16	Or:T16 
+T17	Procedure 296 309	tumor excised
+E17	Procedure:T17 
+T18	Modifier 311 323	solid tumors
+E18	Modifier:T18 
+T19	Or 325 327	or
+E19	Or:T19 
+T20	Modifier 328 339	bone marrow
+E20	Modifier:T20 
+T21	Condition 340 348	aspirate
+E21	Condition:T21 Name:T53
+T22	Condition 350 363	blood cancers
+E22	Condition:T22 Name:T54
+T23	Assertion 384 394	willing to
+E23	Assertion:T23 
+A3	Assertion-Type-Value E23 hypothetical
+T24	Observation 402 412	blood draw
+E24	Observation:T24 
+T25	Or 413 415	or
+E25	Or:T25 
+T26	Procedure 416 427	buccal swab
+E26	Procedure:T26 Name:T56
+T27	Assertion 428 436	done for
+E27	Assertion:T27 
+A4	Assertion-Type-Value E27 hypothetical
+T28	Procedure 453 468	genetic testing
+E28	Procedure:T28 
+T29	Age 576 580	aged
+E29	Age:T29 
+T30	Negation 653 656	not
+E30	Negation:T30 
+T31	Condition 662 678	malignant tissue
+E31	Condition:T31 Name:T60
+T32	Condition 723 747	excised malignant tissue
+E32	Condition:T32 Name:T61
+T33	Negation 751 754	not
+E33	Negation:T33 
+T34	Assertion 755 765	sufficient
+E34	Assertion:T34 
+A5	Assertion-Type-Value E34 hypothetical
+T35	Procedure 777 794	vivo drug testing
+E35	Procedure:T35 
+T36	Or 795 801	and/or
+E36	Or:T36 
+T37	Procedure 802 819	genetic profiling
+E37	Procedure:T37 
+T38	Modifier 856 862	tumors
+E38	Modifier:T38 
+T39	Or 863 866	and
+E39	Or:T39 
+T40	Condition 867 873	tumors
+E40	Condition:T40 Name:T64
+T41	Eq-Comparison 890 894	>90%
+E41	Eq-Comparison:T41 Operator:T66 Value:T67 Unit:T68
+T42	Observation 896 905	cure rate
+E42	Observation:T42 
+T43	And 906 910	with
+E43	And:T43 
+T44	Modifier 911 915	safe
+E44	Modifier:T44 
+T45	Procedure 916 932	standard therapy
+E45	Procedure:T45 Name:T69
+T46	Eq-Value 39 41	21
+T47	Eq-Temporal-Unit 42 47	years
+A6	Eq-Temporal-Unit-Value T47 year
+T48	Condition-Name 217 223	cancer
+T49	Eq-Temporal-Period 251 260	scheduled
+A7	Eq-Temporal-Period-Value T49 future
+T50	Procedure-Name 286 292	biopsy
+T51	Condition-Name 296 309	tumor excised
+T52	Condition-Name 311 323	solid tumors
+T53	Condition-Name 340 348	aspirate
+T54	Condition-Name 356 363	cancers
+T55	Observation-Specimen 402 407	blood
+T56	Procedure-Name 416 427	buccal swab
+T57	Eq-Value 581 582	7
+T58	Eq-Operator 583 585	to
+A8	Eq-Operator-Value T58 BETWEEN
+T59	Eq-Value 586 588	17
+T60	Condition-Name 662 678	malignant tissue
+T61	Condition-Name 731 747	malignant tissue
+T62	Observation-Name 777 794	vivo drug testing
+A9	Observation-Type-Value T62 lab
+T63	Condition-Name 856 862	tumors
+T64	Condition-Name 867 873	tumors
+T65	Polarity 884 888	high
+A10	Polarity-Value T65 high
+T66	Eq-Operator 890 891	>
+A11	Eq-Operator-Value T66 GT
+T67	Eq-Value 891 893	90
+T68	Eq-Unit 893 894	%
+T69	Procedure-Name 925 932	therapy

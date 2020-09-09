@@ -1,43 +1,155 @@
-T1	Condition 130 143	periodontitis
-T2	Condition-Name 130 143	periodontitis
-E1	Condition:T1 Name:T2
-T3	Language 151 154	III
-T4	Procedure 439 460	periodontal treatment
-T5	Procedure-Name 439 460	periodontal treatment
-E4	Procedure:T4 Name:T5
-T6	Procedure 665 689	antibiotic premedication
-T7	Procedure-Name 665 689	antibiotic premedication
-E6	Procedure:T6 Name:T7
-T8	Procedure 714 721	nursing
-T9	Procedure-Name 714 721	nursing
-E8	Procedure:T8 Name:T9
-T10	Procedure 788 795	therapy
-T11	Procedure-Name 788 795	therapy
-E10	Procedure:T10 Name:T11
-T12	Eq-Operator 80 89	less than
-A1	Eq-Operator-Value T12 LT
-T13	Eq-Temporal-Unit 43 48	years
-A2	Eq-Temporal-Unit-Value T13 year
-T14	Eq-Temporal-Unit 480 486	months
-A3	Eq-Temporal-Unit-Value T14 month
-T15	Eq-Temporal-Unit 542 548	months
-A4	Eq-Temporal-Unit-Value T15 month
-T16	Eq-Temporal-Unit 618 624	months
-A5	Eq-Temporal-Unit-Value T16 month
-T17	Eq-Unit 297 299	mm
-T18	Eq-Operator 39 40	-
-A6	Eq-Operator-Value T18 BETWEEN
-T19	Eq-Value 37 39	40
-T20	Eq-Value 40 42	70
-T21	Eq-Value 90 92	10
-T22	Eq-Value 191 193	20
-T23	Eq-Value 273 274	4
-T24	Eq-Value 295 296	6
-T25	Eq-Value 386 388	10
-T26	Eq-Value 477 479	12
-T27	Eq-Value 540 541	6
-T28	Eq-Value 616 617	3
-T29	Eq-Comparison 80 92	less than 10
-E11	Eq-Comparison:T29 Operator:T12 Value:T21
-T30	Eq-Comparison 37 40	40-
-E12	Eq-Comparison:T30 Operator:T18 Value:T19
+T1	Eq-Comparison 37 48	40-70 years
+E1	Eq-Comparison:T1 Value:T43 Operator:T44 Value:T45 Temporal-Unit:T46
+T2	Negation 55 57	No
+E2	Negation:T2 
+T3	Condition 58 65	smokers
+E3	Condition:T3 Name:T47
+T4	Or 66 68	or
+E4	Or:T4 
+T5	Condition 69 76	smokers
+E5	Condition:T5 Name:T48
+T6	Eq-Comparison 80 109	less than 10 cigarettes a day
+E6	Eq-Comparison:T6 Operator:T49 Value:T50 Unit:T51 Temporal-Unit:T52
+T7	Condition 130 143	periodontitis
+E7	Condition:T7 Name:T53
+T8	Eq-Comparison 144 168	stages III and IV grades
+E8	Eq-Comparison:T8 Unit:T54 Value:T55 Value:T56 Unit:T57
+T9	Eq-Comparison 191 193	20
+E9	Eq-Comparison:T9 Value:T58
+T10	Modifier 194 207	natural teeth
+E10	Modifier:T10 
+T11	Eq-Comparison 219 233	at least three
+E11	Eq-Comparison:T11 Operator:T60 Value:T61
+T12	Modifier 234 245	molar teeth
+E12	Modifier:T12 
+T13	Eq-Comparison 264 280	at least 4 sites
+E13	Eq-Comparison:T13 Operator:T63 Value:T64 Unit:T65
+T14	Eq-Comparison 286 299	at least 6 mm
+E14	Eq-Comparison:T14 Operator:T66 Value:T67 Unit:T68
+T15	Observation 300 313	probing depth
+E15	Observation:T15 
+T16	Condition 325 339	general health
+E16	Condition:T16 
+T17	Condition 365 372	Smokers
+E17	Condition:T17 
+T18	Eq-Comparison 376 405	more than 10 cigarettes a day
+E18	Eq-Comparison:T18 Operator:T69 Value:T70 Unit:T71 Temporal-Unit:T72
+T19	Eq-Comparison 430 438	received
+E19	Eq-Comparison:T19 Temporal-Period:T73
+T20	Procedure 439 460	periodontal treatment
+E20	Procedure:T20 Name:T74
+T21	Eq-Comparison 468 486	previous 12 months
+E21	Eq-Comparison:T21 Temporal-Period:T75 Value:T76 Temporal-Unit:T77
+T22	Eq-Comparison 511 515	used
+E22	Eq-Comparison:T22 
+T23	Drug 516 527	antibiotics
+E23	Drug:T23 Name:T78
+T24	Eq-Comparison 535 548	last 6 months
+E24	Eq-Comparison:T24 Temporal-Period:T79 Value:T80 Temporal-Unit:T81
+T25	Drug 570 586	oral antiseptics
+E25	Drug:T25 Name:T82
+T26	Or 587 592	and /
+E26	Or:T26 
+T27	Or 593 595	or
+E27	Or:T27 
+T28	Temporal-Connection 596 602	during
+E28	Temporal-Connection:T28 
+A1	Temporal-Connection-Type-Value E28 during
+T29	Eq-Comparison 607 624	previous 3 months
+E29	Eq-Comparison:T29 Temporal-Period:T83 Value:T84 Temporal-Unit:T85
+T30	Modifier 631 639	Systemic
+E30	Modifier:T30 
+T31	Condition 640 650	conditions
+E31	Condition:T31 
+T32	Procedure 665 689	antibiotic premedication
+E32	Procedure:T32 
+T33	Condition 702 710	pregnant
+E33	Condition:T33 Name:T88
+T34	Or 711 713	or
+E34	Or:T34 
+T35	Condition 714 721	nursing
+E35	Condition:T35 Name:T89
+T36	Drug 728 739	Medications
+E36	Drug:T36 
+T37	Assertion 745 750	could
+E37	Assertion:T37 
+A2	Assertion-Type-Value E37 hypothetical
+T38	Procedure 776 795	periodontal therapy
+E38	Procedure:T38 Name:T91
+T39	Allergy 812 821	allergies
+E39	Allergy:T39 
+T40	Study 829 833	test
+E40	Study:T40 
+T41	Drug 834 854	antimicrobial agents
+E41	Drug:T41 Name:T92
+T42	Condition 861 870	Diabetics
+E42	Condition:T42 Name:T93
+T43	Eq-Value 37 39	40
+T44	Eq-Operator 39 40	-
+A3	Eq-Operator-Value T44 BETWEEN
+T45	Eq-Value 40 42	70
+T46	Eq-Temporal-Unit 43 48	years
+A4	Eq-Temporal-Unit-Value T46 year
+T47	Condition-Name 58 65	smokers
+T48	Condition-Name 69 76	smokers
+T49	Eq-Operator 80 89	less than
+A5	Eq-Operator-Value T49 LT
+T50	Eq-Value 90 92	10
+T51	Eq-Unit 93 103	cigarettes
+T52	Eq-Temporal-Unit 106 109	day
+A6	Eq-Temporal-Unit-Value T52 day
+T53	Condition-Name 130 143	periodontitis
+T54	Eq-Unit 144 150	stages
+T55	Eq-Value 151 154	III
+T56	Eq-Value 159 161	IV
+T57	Eq-Unit 162 168	grades
+T58	Eq-Value 191 193	20
+T59	Condition-Name 194 207	natural teeth
+T60	Eq-Operator 219 227	at least
+A7	Eq-Operator-Value T60 GTEQ
+T61	Eq-Value 228 233	three
+T62	Condition-Name 234 245	molar teeth
+T63	Eq-Operator 264 272	at least
+A8	Eq-Operator-Value T63 GTEQ
+T64	Eq-Value 273 274	4
+T65	Eq-Unit 275 280	sites
+T66	Eq-Operator 286 294	at least
+A9	Eq-Operator-Value T66 GTEQ
+T67	Eq-Value 295 296	6
+T68	Eq-Unit 297 299	mm
+T69	Eq-Operator 376 385	more than
+A10	Eq-Operator-Value T69 GT
+T70	Eq-Value 386 388	10
+T71	Eq-Unit 389 399	cigarettes
+T72	Eq-Temporal-Unit 402 405	day
+A11	Eq-Temporal-Unit-Value T72 day
+T73	Eq-Temporal-Period 430 438	received
+A12	Eq-Temporal-Period-Value T73 past
+T74	Procedure-Name 439 460	periodontal treatment
+T75	Eq-Temporal-Period 468 476	previous
+A13	Eq-Temporal-Period-Value T75 past
+T76	Eq-Value 477 479	12
+T77	Eq-Temporal-Unit 480 486	months
+A14	Eq-Temporal-Unit-Value T77 month
+T78	Drug-Name 516 527	antibiotics
+T79	Eq-Temporal-Period 535 539	last
+A15	Eq-Temporal-Period-Value T79 past
+T80	Eq-Value 540 541	6
+T81	Eq-Temporal-Unit 542 548	months
+A16	Eq-Temporal-Unit-Value T81 month
+T82	Drug-Name 570 586	oral antiseptics
+T83	Eq-Temporal-Period 607 615	previous
+A17	Eq-Temporal-Period-Value T83 past
+T84	Eq-Value 616 617	3
+T85	Eq-Temporal-Unit 618 624	months
+A18	Eq-Temporal-Unit-Value T85 month
+T86	Drug-Name 665 689	antibiotic premedication
+T87	Life-Stage-And-Gender 696 701	Women
+A19	Life-Stage-And-Gender-Type T87 female
+T88	Condition-Name 702 710	pregnant
+T89	Condition-Name 714 721	nursing
+T90	Stability 751 760	influence
+A20	Stability-Value T90 change
+T91	Procedure-Name 776 795	periodontal therapy
+T92	Drug-Name 834 854	antimicrobial agents
+T93	Condition-Name 861 870	Diabetics

@@ -1,79 +1,259 @@
-T1	Procedure 340 350	procedures
-T2	Procedure-Name 340 350	procedures
-E1	Procedure:T1 Name:T2
-T3	Language 75 82	English
-T4	Language 361 364	MRI
-T5	Condition 924 964	attention-deficit hyperactivity disorder
-T6	Condition-Name 924 964	attention-deficit hyperactivity disorder
-E5	Condition:T5 Name:T6
-T7	Condition 894 919	major depressive disorder
-T8	Condition-Name 894 919	major depressive disorder
-E7	Condition:T7 Name:T8
-T9	Condition 1011 1036	mild cognitive impairment
-T10	Condition-Name 1011 1036	mild cognitive impairment
-E9	Condition:T9 Name:T10
-T11	Condition 740 762	nutritional deficiency
-T12	Condition-Name 740 762	nutritional deficiency
-E11	Condition:T11 Name:T12
-T13	Condition 813 834	psychiatric disorders
-T14	Condition-Name 813 834	psychiatric disorders
-E13	Condition:T13 Name:T14
-T15	Condition 1043 1063	Cognitive impairment
-T16	Condition-Name 1043 1063	Cognitive impairment
-E15	Condition:T15 Name:T16
-T17	Condition 572 591	Parkinson's disease
-T18	Condition-Name 572 591	Parkinson's disease
-E17	Condition:T17 Name:T18
-T19	Condition 593 611	multiple sclerosis
-T20	Condition-Name 593 611	multiple sclerosis
-E19	Condition:T19 Name:T20
-T21	Condition 694 711	diabetes mellitus
-T22	Condition-Name 694 711	diabetes mellitus
-E21	Condition:T21 Name:T22
-T23	Condition 858 874	bipolar disorder
-T24	Condition-Name 858 874	bipolar disorder
-E23	Condition:T23 Name:T24
-T25	Condition 876 892	anxiety disorder
-T26	Condition-Name 876 892	anxiety disorder
-E25	Condition:T25 Name:T26
-T27	Condition 779 794	thyroid disease
-T28	Condition-Name 779 794	thyroid disease
-E27	Condition:T27 Name:T28
-T29	Condition 1197 1212	substance abuse
-T30	Condition-Name 1197 1212	substance abuse
-E29	Condition:T29 Name:T30
-T31	Condition 843 856	schizophrenia
-T32	Condition-Name 843 856	schizophrenia
-E31	Condition:T31 Name:T32
-T33	Condition 726 738	hypertension
-T34	Condition-Name 726 738	hypertension
-E33	Condition:T33 Name:T34
-T35	Condition 613 623	brain cyst
-T36	Condition-Name 613 623	brain cyst
-E35	Condition:T35 Name:T36
-T37	Condition 999 1007	dementia
-T38	Condition-Name 999 1007	dementia
-E37	Condition:T37 Name:T38
-T39	Condition 1146 1149	SDs
-T40	Condition-Name 1146 1149	SDs
-E39	Condition:T39 Name:T40
-T41	Language 1275 1278	MRI
-T42	Life-Stage-And-Gender 1432 1439	Females
-A1	Life-Stage-And-Gender-Type T42 male
-T43	Condition 1576 1585	pregnancy
-T44	Condition-Name 1576 1585	pregnancy
-E43	Condition:T43 Name:T44
-T45	Eq-Operator 1227 1242	within the past
-A2	Eq-Operator-Value T45 LTEQ
-T46	Eq-Temporal-Unit 1245 1250	years
-A3	Eq-Temporal-Unit-Value T46 year
-T47	Age 1170 1173	age
-E44	Age:T47
-T48	Eq-Value 45 47	60
-T49	Eq-Value 52 54	85
-T50	Eq-Value 437 438	0
-T51	Eq-Value 484 486	27
-T52	Eq-Value 1142 1143	1
-T53	Eq-Value 1243 1244	2
-T54	Eq-Comparison 1227 1250	within the past 2 years
-E45	Eq-Comparison:T54 Operator:T45 Temporal-Unit:T46 Value:T53
+T1	Eq-Comparison 25 54	Between the ages of 60 and 85
+E1	Eq-Comparison:T1 Value:T89 Value:T90
+T2	Modifier 89 95	Visual
+E2	Modifier:T2
+T3	And 96 99	and
+E3	And:T3
+T4	Condition 100 115	auditory acuity
+E4	Condition:T4 Name:T92
+T5	Assertion 116 128	adequate for
+E5	Assertion:T5
+A1	Assertion-Type-Value E5 hypothetical
+T6	Procedure 129 147	neuropsychological
+E6	Procedure:T6
+T7	Procedure 152 172	computerized testing
+E7	Procedure:T7
+T8	Condition 179 198	Good general health
+E8	Condition:T8 Name:T93
+T9	Negation 204 206	no
+E9	Negation:T9
+T10	Condition 207 216	disease(s
+E10	Condition:T10
+T11	Assertion 218 229	expected to
+E11	Assertion:T11
+A2	Assertion-Type-Value E11 hypothetical
+T12	Study 249 254	study
+E12	Study:T12
+T13	Assertion 261 272	Willing and
+E13	Assertion:T13
+A3	Assertion-Type-Value E13 hypothetical
+T14	Assertion 273 280	able to
+E14	Assertion:T14
+A4	Assertion-Type-Value E14 hypothetical
+T15	Study 317 322	study
+E15	Study:T15
+T16	Study 334 339	study
+E16	Study:T16
+T17	Procedure 361 364	MRI
+E17	Procedure:T17 Name:T95
+T18	Or 365 368	and
+E18	Or:T18
+T19	Modifier 369 372	PET
+E19	Modifier:T19
+T20	Condition 379 395	Normal cognition
+E20	Condition:T20 Name:T97
+T21	Observation 409 426	Clinical Dementia
+E21	Observation:T21
+T22	Eq-Comparison 427 438	Rating of 0
+E22	Eq-Comparison:T22 Value:T99
+T23	Or 439 442	and
+E23	Or:T23
+T24	Observation 445 474	Mini-Mental State Examination
+E24	Observation:T24 Name:T100
+T25	Eq-Comparison 475 496	score of 27 or higher
+E25	Eq-Comparison:T25 Value:T102 Operator:T103
+T26	Modifier 535 544	co-morbid
+E26	Modifier:T26
+T27	Condition 545 563	neurologic disease
+E27	Condition:T27
+T28	Condition 572 591	Parkinson's disease
+E28	Condition:T28 Name:T106
+T29	Condition 593 611	multiple sclerosis
+E29	Condition:T29 Name:T107
+T30	Condition 613 623	brain cyst
+E30	Condition:T30 Name:T108
+T31	Condition 625 630	tumor
+E31	Condition:T31 Name:T109
+T32	Or 631 633	or
+E32	Or:T32
+T33	Condition 634 642	aneurysm
+E33	Condition:T33 Name:T110
+T34	Condition 655 672	health conditions
+E34	Condition:T34
+T35	Modifier 681 693	uncontrolled
+E35	Modifier:T35
+T36	Condition 694 711	diabetes mellitus
+E36	Condition:T36 Name:T112
+T37	Modifier 713 725	uncontrolled
+E37	Modifier:T37
+T38	Condition 726 738	hypertension
+E38	Condition:T38
+T39	Condition 740 762	nutritional deficiency
+E39	Condition:T39 Name:T114
+T40	Or 763 765	or
+E40	Or:T40
+T41	Modifier 766 778	uncontrolled
+E41	Modifier:T41
+T42	Condition 779 794	thyroid disease
+E42	Condition:T42 Name:T115
+T43	Condition 813 834	psychiatric disorders
+E43	Condition:T43 Name:T117
+T44	Condition 843 856	schizophrenia
+E44	Condition:T44 Name:T118
+T45	Condition 858 874	bipolar disorder
+E45	Condition:T45 Name:T119
+T46	Condition 876 892	anxiety disorder
+E46	Condition:T46 Name:T120
+T47	Condition 900 919	depressive disorder
+E47	Condition:T47 Name:T122
+T48	Or 921 923	or
+E48	Or:T48
+T49	Condition 924 964	attention-deficit hyperactivity disorder
+E49	Condition:T49 Name:T123
+T50	Condition 999 1007	dementia
+E50	Condition:T50 Name:T124
+T51	Or 1008 1010	or
+E51	Or:T51
+T52	Condition 1011 1036	mild cognitive impairment
+E52	Condition:T52 Name:T126
+T53	Condition 1043 1063	Cognitive impairment
+E53	Condition:T53 Name:T127
+T54	Temporal-Connection 1076 1078	at
+E54	Temporal-Connection:T54
+A5	Temporal-Connection-Type-Value E54 during
+T55	Study 1079 1087	baseline
+E55	Study:T55
+T56	Observation 1115 1138	neuropsychological test
+E56	Observation:T56 Name:T128
+T57	Eq-Comparison 1142 1157	1.5 SDs or more
+E57	Eq-Comparison:T57 Value:T129 Unit:T130 Operator:T131
+T58	Age 1170 1173	age
+E58	Age:T58
+T59	Modifier 1186 1193	Alcohol
+E59	Modifier:T59
+T60	Or 1194 1196	or
+E60	Or:T60
+T61	Condition 1197 1212	substance abuse
+E61	Condition:T61 Name:T132
+T62	Or 1213 1215	or
+E62	Or:T62
+T63	Condition 1216 1226	dependence
+E63	Condition:T63
+T64	Eq-Comparison 1227 1250	within the past 2 years
+E64	Eq-Comparison:T64 Operator:T133 Temporal-Period:T134 Value:T135 Temporal-Unit:T136
+T65	Procedure 1275 1278	MRI
+E65	Procedure:T65 Name:T137
+T66	Contraindication 1279 1296	contraindications
+E66	Contraindication:T66
+T67	Condition 1303 1313	pacemakers
+E67	Condition:T67
+T68	Procedure 1315 1329	aneurysm clips
+E68	Procedure:T68
+T69	Procedure 1331 1354	artificial heart valves
+E69	Procedure:T69 Name:T140
+T70	Procedure 1356 1368	ear implants
+E70	Procedure:T70 Name:T141
+T71	Modifier 1370 1385	metal fragments
+E71	Modifier:T71
+T72	Or 1386 1388	or
+E72	Or:T72
+T73	Modifier 1389 1396	foreign
+E73	Modifier:T73
+T74	Condition 1397 1416	objects in the eyes
+E74	Condition:T74
+T75	Modifier 1418 1422	skin
+E75	Modifier:T75
+T76	Or 1423 1425	or
+E76	Or:T76
+T77	Modifier 1426 1430	body
+E77	Modifier:T77
+T78	And 1440 1443	who
+E78	And:T78
+T79	Condition 1448 1456	pregnant
+E79	Condition:T79 Name:T144
+T80	Or 1457 1459	or
+E80	Or:T80
+T81	Assertion 1460 1469	trying to
+E81	Assertion:T81
+A6	Assertion-Type-Value E81 intention
+T82	Condition 1474 1482	pregnant
+E82	Condition:T82 Name:T145
+T83	Negation 1492 1500	excluded
+E83	Negation:T83
+T84	Contraindication 1511 1528	contraindications
+E84	Contraindication:T84
+T85	Eq-Comparison 1547 1552	prior
+E85	Eq-Comparison:T85 Temporal-Period:T147
+T86	Procedure 1553 1571	radiation exposure
+E86	Procedure:T86 Name:T148
+T87	Or 1572 1575	and
+E87	Or:T87
+T88	Condition 1576 1585	pregnancy
+E88	Condition:T88 Name:T149
+T89	Eq-Value 45 47	60
+T90	Eq-Value 52 54	85
+T91	Language 75 82	English
+T92	Condition-Name 100 115	auditory acuity
+T93	Condition-Name 179 198	Good general health
+T94	Stability 230 239	interfere
+A7	Stability-Value T94 change
+T95	Procedure-Name 361 364	MRI
+T96	Polarity 379 385	Normal
+A8	Polarity-Value T96 normal
+T97	Condition-Name 386 395	cognition
+T98	Observation-Name 409 433	Clinical Dementia Rating
+T99	Eq-Value 437 438	0
+T100	Observation-Name 445 450	Mini-
+T101	Observation-Name 450 480	Mental State Examination score
+A9	Observation-Type-Value T101 clinical-score
+T102	Eq-Value 484 486	27
+T103	Eq-Operator 487 496	or higher
+A10	Eq-Operator-Value T103 GTEQ
+T104	Severity 523 534	Significant
+A11	Severity-Value T104 severe
+T105	Condition-Name 538 563	morbid neurologic disease
+T106	Condition-Name 572 591	Parkinson's disease
+T107	Condition-Name 593 611	multiple sclerosis
+T108	Condition-Name 613 623	brain cyst
+T109	Condition-Name 625 630	tumor
+T110	Condition-Name 634 642	aneurysm
+T111	Severity 649 654	Major
+A12	Severity-Value T111 severe
+T112	Condition-Name 694 711	diabetes mellitus
+T113	Condition-Name 713 738	uncontrolled hypertension
+T114	Condition-Name 740 762	nutritional deficiency
+T115	Condition-Name 779 794	thyroid disease
+T116	Severity 801 812	Significant
+A13	Severity-Value T116 severe
+T117	Condition-Name 813 834	psychiatric disorders
+T118	Condition-Name 843 856	schizophrenia
+T119	Condition-Name 858 874	bipolar disorder
+T120	Condition-Name 876 892	anxiety disorder
+T121	Severity 894 899	major
+A14	Severity-Value T121 severe
+T122	Condition-Name 900 919	depressive disorder
+T123	Condition-Name 924 964	attention-deficit hyperactivity disorder
+T124	Condition-Name 999 1007	dementia
+T125	Severity 1011 1015	mild
+A15	Severity-Value T125 severe
+T126	Condition-Name 1016 1036	cognitive impairment
+T127	Condition-Name 1043 1063	Cognitive impairment
+T128	Observation-Name 1115 1138	neuropsychological test
+T129	Eq-Value 1142 1145	1.5
+T130	Eq-Unit 1146 1149	SDs
+T131	Eq-Operator 1150 1157	or more
+A16	Eq-Operator-Value T131 GTEQ
+T132	Condition-Name 1197 1212	substance abuse
+T133	Eq-Operator 1227 1233	within
+A17	Eq-Operator-Value T133 LTEQ
+T134	Eq-Temporal-Period 1238 1242	past
+A18	Eq-Temporal-Period-Value T134 past
+T135	Eq-Value 1243 1244	2
+T136	Eq-Temporal-Unit 1245 1250	years
+A19	Eq-Temporal-Unit-Value T136 year
+T137	Procedure-Name 1275 1278	MRI
+T138	Procedure-Name 1303 1313	pacemakers
+T139	Condition-Name 1315 1329	aneurysm clips
+T140	Procedure-Name 1331 1354	artificial heart valves
+T141	Procedure-Name 1356 1368	ear implants
+T142	Condition-Name 1370 1385	metal fragments
+T143	Life-Stage-And-Gender 1432 1439	Females
+A20	Life-Stage-And-Gender-Type T143 female
+T144	Condition-Name 1448 1456	pregnant
+T145	Condition-Name 1474 1482	pregnant
+T146	Severity 1535 1546	significant
+A21	Severity-Value T146 severe
+T147	Eq-Temporal-Period 1547 1552	prior
+A22	Eq-Temporal-Period-Value T147 past
+T148	Procedure-Name 1553 1562	radiation
+T149	Condition-Name 1576 1585	pregnancy

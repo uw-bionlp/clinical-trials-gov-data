@@ -1,71 +1,194 @@
-T1	Condition 322 341	fibrillation atrial
-T2	Condition-Name 322 341	fibrillation atrial
-E1	Condition:T1 Name:T2
-T3	Condition 120 133	heart disease
-T4	Condition-Name 120 133	heart disease
-E3	Condition:T3 Name:T4
-T5	Procedure 309 317	ablation
-T6	Procedure-Name 309 317	ablation
-E5	Procedure:T5 Name:T6
-T7	Procedure 382 390	ablation
-T8	Procedure-Name 382 390	ablation
-E7	Procedure:T7 Name:T8
-T9	Procedure 465 473	ablation
-T10	Procedure-Name 465 473	ablation
-E9	Procedure:T9 Name:T10
-T11	Procedure 783 806	cardiac transplantation
-T12	Procedure-Name 783 806	cardiac transplantation
-E11	Procedure:T11 Name:T12
-T13	Condition 898 916	systemic infection
-T14	Condition-Name 898 916	systemic infection
-E13	Condition:T13 Name:T14
-T15	Procedure 816 831	cardiac surgery
-T16	Procedure-Name 816 831	cardiac surgery
-E15	Procedure:T15 Name:T16
-T17	Condition 948 963	atrial thrombus
-T18	Condition-Name 948 963	atrial thrombus
-E17	Condition:T17 Name:T18
-T19	Condition 969 984	Unstable angina
-T20	Condition-Name 969 984	Unstable angina
-E19	Condition:T19 Name:T20
-T21	Condition 654 667	severe anemia
-T22	Condition-Name 654 667	severe anemia
-E21	Condition:T21 Name:T22
-T23	Condition 874 887	Acute disease
-T24	Condition-Name 874 887	Acute disease
-E23	Condition:T23 Name:T24
-T25	Condition 1003 1016	heart failure
-T26	Condition-Name 1003 1016	heart failure
-E25	Condition:T25 Name:T26
-T27	Procedure 1218 1230	introduction
-T28	Procedure-Name 1218 1230	introduction
-E27	Procedure:T27 Name:T28
-T29	Procedure 705 714	procedure
-T30	Procedure-Name 705 714	procedure
-E29	Procedure:T29 Name:T30
-T31	Procedure 509 517	ablation
-T32	Procedure-Name 509 517	ablation
-E31	Procedure:T31 Name:T32
-T33	Condition 674 680	sepsis
-T34	Condition-Name 674 680	sepsis
-E33	Condition:T33 Name:T34
-T35	Procedure 698 704	Bypass
-T36	Procedure-Name 698 704	Bypass
-E35	Procedure:T35 Name:T36
-T37	Condition 920 926	sepsis
-T38	Condition-Name 920 926	sepsis
-E37	Condition:T37 Name:T38
-T39	Eq-Operator 1041 1050	less than
-A1	Eq-Operator-Value T39 LT
-T40	Eq-Temporal-Unit 188 193	years
-A2	Eq-Temporal-Unit-Value T40 year
-T41	Eq-Temporal-Unit 763 769	months
-A3	Eq-Temporal-Unit-Value T41 month
-T42	Eq-Temporal-Unit 1054 1060	months
-A4	Eq-Temporal-Unit-Value T42 month
-T43	Age 166 169	Age
-E38	Age:T43
-T44	Eq-Value 185 187	18
-T45	Eq-Value 1051 1053	12
-T46	Eq-Comparison 1041 1060	less than 12 months
-E39	Eq-Comparison:T46 Operator:T39 Temporal-Unit:T42 Value:T45
+T1	Condition 25 35	paroxysmal
+E1	Condition:T1 Name:T70
+T2	Modifier 37 47	persistent
+E2	Modifier:T2
+T3	Or 48 51	and
+E3	Or:T3
+T4	Modifier 52 69	/or long standing
+E4	Modifier:T4
+T5	Condition 70 84	atrial flutter
+E5	Condition:T5 Name:T71
+T6	Modifier 109 119	structural
+E6	Modifier:T6
+T7	Condition 120 133	heart disease
+E7	Condition:T7 Name:T72
+T8	Age 166 169	Age
+E8	Age:T8
+T9	Eq-Comparison 170 193	equal or above 18 years
+E9	Eq-Comparison:T9 Operator:T73 Value:T74 Temporal-Unit:T75
+T10	Assertion 211 221	willing to
+E10	Assertion:T10
+A1	Assertion-Type-Value E10 hypothetical
+T11	Procedure 309 317	ablation
+E11	Procedure:T11 Name:T76
+T12	Condition 322 341	fibrillation atrial
+E12	Condition:T12 Name:T77
+T13	Procedure 366 390	typical flutter ablation
+E13	Procedure:T13 Name:T78
+T14	Assertion 424 431	will be
+E14	Assertion:T14
+A2	Assertion-Type-Value E14 hypothetical
+T15	Procedure 449 473	typical flutter ablation
+E15	Procedure:T15 Name:T79
+T16	Eq-Comparison 500 508	Previous
+E16	Eq-Comparison:T16 Temporal-Period:T80
+T17	Procedure 509 517	ablation
+E17	Procedure:T17 Name:T81
+T18	Condition 522 536	atrial flutter
+E18	Condition:T18 Name:T82
+T19	Condition 542 556	Atrial flutter
+E19	Condition:T19 Name:T83
+T20	Condition 570 591	electrolyte imbalance
+E20	Condition:T20 Name:T84
+T21	Condition 593 608	thyroid disease
+E21	Condition:T21 Name:T85
+T22	Or 609 611	or
+E22	Or:T22
+T23	Modifier 617 627	reversible
+E23	Modifier:T23
+T24	Or 628 630	or
+E24	Or:T24
+T25	Modifier 631 642	non-cardiac
+E25	Modifier:T25
+T26	Condition 643 648	cause
+E26	Condition:T26
+T27	Condition 661 667	anemia
+E27	Condition:T27 Name:T88
+T28	Condition 674 680	sepsis
+E28	Condition:T28 Name:T89
+T29	Modifier 684 692	progress
+E29	Modifier:T29
+T30	Modifier 695 704	- Bypass
+E30	Modifier:T30
+T31	Procedure 705 714	procedure
+E31	Procedure:T31
+T32	Condition 720 744	coronary arterial artery
+E32	Condition:T32 Name:T91
+T33	Eq-Comparison 752 769	last three months
+E33	Eq-Comparison:T33 Temporal-Period:T92 Value:T93 Temporal-Unit:T94
+T34	Eq-Comparison 775 782	Pending
+E34	Eq-Comparison:T34
+T35	Procedure 783 806	cardiac transplantation
+E35	Procedure:T35 Name:T95
+T36	Or 807 809	or
+E36	Or:T36
+T37	Other 810 815	other
+E37	Other:T37
+T38	Procedure 816 831	cardiac surgery
+E38	Procedure:T38 Name:T96
+T39	Condition 837 845	Pregnant
+E39	Condition:T39 Name:T97
+T40	Or 846 848	or
+E40	Or:T40
+T41	Condition 849 862	breastfeeding
+E41	Condition:T41 Name:T98
+T42	Condition 874 887	Acute disease
+E42	Condition:T42 Name:T100
+T43	Or 888 890	or
+E43	Or:T43
+T44	Eq-Comparison 891 897	active
+E44	Eq-Comparison:T44 Temporal-Period:T101
+T45	Modifier 898 906	systemic
+E45	Modifier:T45
+T46	Condition 907 916	infection
+E46	Condition:T46 Name:T102
+T47	Or 917 919	or
+E47	Or:T47
+T48	Condition 920 926	sepsis
+E48	Condition:T48 Name:T103
+T49	Modifier 943 947	left
+E49	Modifier:T49
+T50	Condition 948 963	atrial thrombus
+E50	Condition:T50 Name:T104
+T51	Condition 969 984	Unstable angina
+E51	Condition:T51 Name:T105
+T52	Modifier 990 1002	Uncontrolled
+E52	Modifier:T52
+T53	Condition 1003 1016	heart failure
+E53	Condition:T53 Name:T106
+T54	Observation 1022 1037	Life expectancy
+E54	Observation:T54 Name:T107
+T55	Eq-Comparison 1041 1060	less than 12 months
+E55	Eq-Comparison:T55 Operator:T108 Value:T109 Temporal-Unit:T110
+T56	Other 1086 1091	other
+E56	Other:T56
+T57	Study 1092 1097	study
+E57	Study:T57
+T58	Procedure 1109 1123	another device
+E58	Procedure:T58
+T59	Or 1124 1126	or
+E59	Or:T59
+T60	Drug 1127 1137	medication
+E60	Drug:T60
+T61	Condition 1155 1173	intramural thrombi
+E61	Condition:T61 Name:T111
+T62	Condition 1175 1180	tumor
+E62	Condition:T62 Name:T112
+T63	Or 1181 1183	or
+E63	Or:T63
+T64	Other 1184 1189	other
+E64	Other:T64
+T65	Condition 1190 1199	anomalies
+E65	Condition:T65 Name:T113
+T66	Assertion 1205 1213	preclude
+E66	Assertion:T66
+A3	Assertion-Type-Value E66 hypothetical
+T68	Procedure 1238 1267	catheter into the vein system
+E67	Procedure:T68 Name:T114
+T69	Negation 1205 1213	preclude
+E68	Negation:T69
+T70	Condition-Name 25 35	paroxysmal
+T71	Condition-Name 70 84	atrial flutter
+T72	Condition-Name 120 133	heart disease
+T73	Eq-Operator 170 184	equal or above
+A4	Eq-Operator-Value T73 GTEQ
+T74	Eq-Value 185 187	18
+T75	Eq-Temporal-Unit 188 193	years
+A5	Eq-Temporal-Unit-Value T75 year
+T76	Procedure-Name 309 317	ablation
+T77	Condition-Name 322 341	fibrillation atrial
+T78	Procedure-Name 366 390	typical flutter ablation
+T79	Procedure-Name 449 473	typical flutter ablation
+T80	Eq-Temporal-Period 500 508	Previous
+A6	Eq-Temporal-Period-Value T80 past
+T81	Procedure-Name 509 517	ablation
+T82	Condition-Name 522 536	atrial flutter
+T83	Condition-Name 542 556	Atrial flutter
+T84	Condition-Name 570 591	electrolyte imbalance
+T85	Condition-Name 593 608	thyroid disease
+T86	Condition-Name 635 648	cardiac cause
+T87	Severity 654 660	severe
+A7	Severity-Value T87 severe
+T88	Condition-Name 661 667	anemia
+T89	Condition-Name 674 680	sepsis
+T90	Procedure-Name 698 714	Bypass procedure
+T91	Condition-Name 720 744	coronary arterial artery
+T92	Eq-Temporal-Period 752 756	last
+A8	Eq-Temporal-Period-Value T92 past
+T93	Eq-Value 757 762	three
+T94	Eq-Temporal-Unit 763 769	months
+A9	Eq-Temporal-Unit-Value T94 month
+T95	Procedure-Name 783 806	cardiac transplantation
+T96	Procedure-Name 824 831	surgery
+T97	Condition-Name 837 845	Pregnant
+T98	Condition-Name 849 862	breastfeeding
+T99	Life-Stage-And-Gender 863 868	women
+A10	Life-Stage-And-Gender-Type T99 female
+T100	Condition-Name 874 887	Acute disease
+T101	Eq-Temporal-Period 891 897	active
+A11	Eq-Temporal-Period-Value T101 present
+T102	Condition-Name 907 916	infection
+T103	Condition-Name 920 926	sepsis
+T104	Condition-Name 948 963	atrial thrombus
+T105	Condition-Name 969 984	Unstable angina
+T106	Condition-Name 1003 1016	heart failure
+T107	Observation-Name 1022 1037	Life expectancy
+T108	Eq-Operator 1041 1050	less than
+A12	Eq-Operator-Value T108 LT
+T109	Eq-Value 1051 1053	12
+T110	Eq-Temporal-Unit 1054 1060	months
+A13	Eq-Temporal-Unit-Value T110 month
+T111	Condition-Name 1155 1173	intramural thrombi
+T112	Condition-Name 1175 1180	tumor
+T113	Condition-Name 1190 1199	anomalies
+T114	Procedure-Name 1238 1267	catheter into the vein system

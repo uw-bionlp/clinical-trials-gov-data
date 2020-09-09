@@ -1,46 +1,122 @@
-T1	Condition 307 332	Major depressive disorder
-T2	Condition-Name 307 332	Major depressive disorder
-E1	Condition:T1 Name:T2
-T3	Condition 528 553	neurodegenerative disease
-T4	Condition-Name 528 553	neurodegenerative disease
-E3	Condition:T3 Name:T4
-T5	Condition 661 686	musculoskeletal disorders
-T6	Condition-Name 661 686	musculoskeletal disorders
-E5	Condition:T5 Name:T6
-T7	Condition 562 581	Parkinson's disease
-T8	Condition-Name 562 581	Parkinson's disease
-E7	Condition:T7 Name:T8
-T9	Language 201 216	Native language
-T10	Condition 494 509	spatial neglect
-T11	Condition-Name 494 509	spatial neglect
-E10	Condition:T10 Name:T11
-T12	Language 220 228	Japanese
-T13	Life-Stage-And-Gender 59 66	females
-A1	Life-Stage-And-Gender-Type T13 male
-T14	Condition 463 470	aphasia
-T15	Condition-Name 463 470	aphasia
-E14	Condition:T14 Name:T15
-T16	Condition 189 195	stroke
-T17	Condition-Name 189 195	stroke
-E16	Condition:T16 Name:T17
-T18	Condition 349 355	stroke
-T19	Condition-Name 349 355	stroke
-E18	Condition:T18 Name:T19
-T20	Condition 387 393	Vision
-T21	Condition-Name 387 393	Vision
-E20	Condition:T20 Name:T21
-T22	Life-Stage-And-Gender 49 54	Males
-A2	Life-Stage-And-Gender-Type T22 male
-T23	Eq-Operator 128 129	≥
-A3	Eq-Operator-Value T23 GTEQ
-T24	Eq-Operator 173 174	≥
-A4	Eq-Operator-Value T24 GTEQ
-T25	Eq-Temporal-Unit 28 33	years
-A5	Eq-Temporal-Unit-Value T25 year
-T26	Eq-Value 25 27	40
-T27	Eq-Value 129 131	16
-T28	Eq-Value 175 177	24
-T29	Eq-Comparison 128 131	≥16
-E21	Eq-Comparison:T29 Operator:T23 Value:T27
-T30	Eq-Comparison 173 177	≥ 24
-E22	Eq-Comparison:T30 Operator:T24 Value:T28
+T1	Eq-Comparison 25 43	40 years and older
+E1	Eq-Comparison:T1 Value:T34 Temporal-Unit:T35 Operator:T36
+T2	Or 55 58	and
+E2	Or:T2 
+T3	Observation 97 121	Studies Depression Scale
+E3	Observation:T3 
+T4	Eq-Comparison 122 131	score ≥16
+E4	Eq-Comparison:T4 Operator:T40
+T5	Observation 137 172	Mini Mental State Examination score
+E5	Observation:T5 Name:T41
+T6	Eq-Comparison 173 174	≥
+E6	Eq-Comparison:T6 Operator:T42
+T7	Eq-Comparison 175 177	24
+E7	Eq-Comparison:T7 Value:T43
+T8	Eq-Comparison 183 188	First
+E8	Eq-Comparison:T8 
+T9	Condition 189 195	stroke
+E9	Condition:T9 Name:T45
+T10	Condition 313 332	depressive disorder
+E10	Condition:T10 Name:T47
+T11	Temporal-Connection 333 339	before
+E11	Temporal-Connection:T11 
+A1	Temporal-Connection-Type-Value E11 before
+T12	Eq-Comparison 340 345	onset
+E12	Eq-Comparison:T12 
+T13	Condition 349 355	stroke
+E13	Condition:T13 Name:T49
+T14	Modifier 361 370	Bilateral
+E14	Modifier:T14 
+T15	Condition 371 381	hemiplegia
+E15	Condition:T15 Name:T51
+T16	Modifier 387 393	Vision
+E16	Modifier:T16 
+T17	Or 394 396	or
+E17	Or:T17 
+T18	Condition 397 413	hearing deficits
+E18	Condition:T18 Name:T53
+T19	Condition 437 450	everyday life
+E19	Condition:T19 
+T20	Condition 463 470	aphasia
+E20	Condition:T20 Name:T58
+T21	Modifier 483 493	unilateral
+E21	Modifier:T21 
+T22	Condition 494 509	spatial neglect
+E22	Condition:T22 Name:T60
+T23	Condition 528 553	neurodegenerative disease
+E23	Condition:T23 Name:T61
+T24	Condition 562 581	Parkinson's disease
+E24	Condition:T24 Name:T62
+T25	Or 582 584	or
+E25	Or:T25 
+T26	Modifier 585 600	multiple system
+E26	Modifier:T26 
+T27	Condition 601 608	atrophy
+E27	Condition:T27 
+T28	Eq-Comparison 614 621	Current
+E28	Eq-Comparison:T28 Temporal-Period:T64
+T29	Condition 622 638	life-threatening
+E29	Condition:T29 
+T30	Condition 646 659	organ failure
+E30	Condition:T30 Name:T67
+T31	Condition 661 686	musculoskeletal disorders
+E31	Condition:T31 Name:T68
+T32	Or 688 690	or
+E32	Or:T32 
+T33	Condition 691 697	cancer
+E33	Condition:T33 Name:T69
+T34	Eq-Value 25 27	40
+T35	Eq-Temporal-Unit 28 33	years
+A2	Eq-Temporal-Unit-Value T35 year
+T36	Eq-Operator 34 43	and older
+A3	Eq-Operator-Value T36 GTEQ
+T37	Life-Stage-And-Gender 49 54	Males
+A4	Life-Stage-And-Gender-Type T37 male
+T38	Life-Stage-And-Gender 59 66	females
+A5	Life-Stage-And-Gender-Type T38 female
+T39	Observation-Name 83 127	Epidemiologic Studies Depression Scale score
+A6	Observation-Type-Value T39 clinical-score
+T40	Eq-Operator 128 131	≥16
+A7	Eq-Operator-Value T40 GTEQ
+T41	Observation-Name 137 172	Mini Mental State Examination score
+A8	Observation-Type-Value T41 clinical-score
+T42	Eq-Operator 173 174	≥
+A9	Eq-Operator-Value T42 GTEQ
+T43	Eq-Value 175 177	24
+T44	Eq-Temporal-Recency 183 188	First
+A10	Eq-Temporal-Recency-Value T44 first-time
+T45	Condition-Name 189 195	stroke
+T46	Severity 307 312	Major
+A11	Severity-Value T46 severe
+T47	Condition-Name 313 332	depressive disorder
+T48	Eq-Temporal-Recency 340 345	onset
+A12	Eq-Temporal-Recency-Value T48 first-time
+T49	Condition-Name 349 355	stroke
+T50	Eq-Temporal-Period 361 370	Bilateral
+A13	Eq-Temporal-Period-Value T50 present
+T51	Condition-Name 371 381	hemiplegia
+T52	Condition-Name 384 393	- Vision
+T53	Condition-Name 397 413	hearing deficits
+T54	Stability 419 429	negatively
+A14	Stability-Value T54 change
+T55	Stability 430 436	impact
+A15	Stability-Value T55 change
+T56	Observation-Name 437 450	everyday life
+T57	Severity 456 462	Severe
+A16	Severity-Value T57 severe
+T58	Condition-Name 463 470	aphasia
+T59	Severity 476 482	Severe
+A17	Severity-Value T59 severe
+T60	Condition-Name 494 509	spatial neglect
+T61	Condition-Name 528 553	neurodegenerative disease
+T62	Condition-Name 562 581	Parkinson's disease
+T63	Condition-Name 594 608	system atrophy
+T64	Eq-Temporal-Period 614 621	Current
+A18	Eq-Temporal-Period-Value T64 present
+T65	Severity 627 638	threatening
+A19	Severity-Value T65 severe
+T66	Severity 639 645	severe
+A20	Severity-Value T66 severe
+T67	Condition-Name 646 659	organ failure
+T68	Condition-Name 661 686	musculoskeletal disorders
+T69	Condition-Name 691 697	cancer

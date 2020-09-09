@@ -1,23 +1,58 @@
-T1	Condition 293 313	Cognitive impairment
-T2	Condition-Name 293 313	Cognitive impairment
-E1	Condition:T1 Name:T2
-T3	Procedure 409 421	intervention
-T4	Procedure-Name 409 421	intervention
-E3	Procedure:T3 Name:T4
-T5	Life-Stage-And-Gender 104 108	male
-A1	Life-Stage-And-Gender-Type T5 male
-T6	Eq-Operator 422 428	within
-A2	Eq-Operator-Value T6 LTEQ
-T7	Eq-Temporal-Unit 125 130	years
-A3	Eq-Temporal-Unit-Value T7 year
-T8	Eq-Temporal-Unit 190 195	years
-A4	Eq-Temporal-Unit-Value T8 year
-T9	Age 131 134	old
-E4	Age:T9
-T10	Eq-Operator 121 122	-
-A5	Eq-Operator-Value T10 BETWEEN
-T11	Eq-Value 119 121	40
-T12	Eq-Value 122 124	69
-T13	Eq-Value 187 189	10
-T14	Eq-Comparison 119 122	40-
-E5	Eq-Comparison:T14 Operator:T10 Value:T11
+T1	Eq-Comparison 33 42	Receiving
+E1	Eq-Comparison:T1 Temporal-Period:T16
+T2	Age 114 118	Ages
+E2	Age:T2
+T3	Eq-Comparison 119 130	40-69 years
+E3	Eq-Comparison:T3 Value:T19 Operator:T20 Value:T21 Temporal-Unit:T22
+T4	Age 131 134	old
+E4	Age:T4
+T5	Observation 159 174	life expectancy
+E5	Observation:T5 Name:T23
+T6	Eq-Comparison 178 195	at least 10 years
+E6	Eq-Comparison:T6 Operator:T24 Value:T25 Temporal-Unit:T26
+T7	Eq-Comparison 238 245	history
+E7	Eq-Comparison:T7 Temporal-Period:T27
+T8	Modifier 249 257	prostate
+E8	Modifier:T8
+T9	Condition 258 264	cancer
+E9	Condition:T9 Name:T28
+T10	Condition 293 313	Cognitive impairment
+E10	Condition:T10 Name:T29
+T11	Assertion 319 324	would
+E11	Assertion:T11
+A1	Assertion-Type-Value E11 hypothetical
+T12	Study 361 366	study
+E12	Study:T12
+T13	Negation 372 378	Unable
+E13	Negation:T13
+T14	Assertion 379 390	to complete
+E14	Assertion:T14
+A2	Assertion-Type-Value E14 hypothetical
+T15	Procedure 409 421	intervention
+E15	Procedure:T15 Name:T31
+T16	Eq-Temporal-Period 33 42	Receiving
+A3	Eq-Temporal-Period-Value T16 present
+T17	Ethnicity 87 103	African American
+T18	Life-Stage-And-Gender 104 108	male
+A4	Life-Stage-And-Gender-Type T18 male
+T19	Eq-Value 119 121	40
+T20	Eq-Operator 121 122	-
+A5	Eq-Operator-Value T20 BETWEEN
+T21	Eq-Value 122 124	69
+T22	Eq-Temporal-Unit 125 130	years
+A6	Eq-Temporal-Unit-Value T22 year
+T23	Observation-Name 159 174	life expectancy
+T24	Eq-Operator 178 186	at least
+A7	Eq-Operator-Value T24 GTEQ
+T25	Eq-Value 187 189	10
+T26	Eq-Temporal-Unit 190 195	years
+A8	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Temporal-Period 238 245	history
+A9	Eq-Temporal-Period-Value T27 past
+T28	Condition-Name 258 264	cancer
+T29	Condition-Name 293 313	Cognitive impairment
+T30	Stability 325 334	interfere
+A10	Stability-Value T30 change
+T31	Procedure-Name 409 421	intervention
+T32	Eq-Operator 422 428	within
+A11	Eq-Operator-Value T32 LTEQ

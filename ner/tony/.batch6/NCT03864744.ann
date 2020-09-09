@@ -1,52 +1,120 @@
-T1	Procedure 71 94	pancreaticoduodenectomy
-T2	Procedure-Name 71 94	pancreaticoduodenectomy
-E1	Procedure:T1 Name:T2
-T3	Procedure 237 260	pancreaticoduodenectomy
-T4	Procedure-Name 237 260	pancreaticoduodenectomy
-E3	Procedure:T3 Name:T4
-T5	Procedure 47 67	total pancreatectomy
-T6	Procedure-Name 47 67	total pancreatectomy
-E5	Procedure:T5 Name:T6
-T7	Procedure 213 233	total pancreatectomy
-T8	Procedure-Name 213 233	total pancreatectomy
-E7	Procedure:T7 Name:T8
-T9	Procedure 346 362	pancreas surgery
-T10	Procedure-Name 346 362	pancreas surgery
-E9	Procedure:T9 Name:T10
-T11	Condition 192 205	liver disease
-T12	Condition-Name 192 205	liver disease
-E11	Condition:T11 Name:T12
-T13	Procedure 151 160	procedure
-T14	Procedure-Name 151 160	procedure
-E13	Procedure:T13 Name:T14
-T15	Condition 369 378	Pregnancy
-T16	Condition-Name 369 378	Pregnancy
-E15	Condition:T15 Name:T16
-T17	Condition 272 277	NAFLD
-T18	Condition-Name 272 277	NAFLD
-E17	Condition:T17 Name:T18
-T19	Procedure 704 707	INR
-T20	Procedure-Name 704 707	INR
-E19	Procedure:T19 Name:T20
-T21	Eq-Operator 668 669	<
-A1	Eq-Operator-Value T21 LT
-T22	Eq-Operator 689 690	<
-A2	Eq-Operator-Value T22 LT
-T23	Eq-Operator 708 709	>
-A3	Eq-Operator-Value T23 GT
-T24	Eq-Operator 730 731	<
-A4	Eq-Operator-Value T24 LT
-T25	Eq-Unit 692 694	mm
-T26	Eq-Value 669 670	2
-T27	Eq-Value 690 691	6
-T28	Eq-Value 709 710	1
-T29	Eq-Value 731 733	40
-T30	Eq-Value 736 739	109
-T31	Eq-Comparison 668 670	<2
-E20	Eq-Comparison:T31 Operator:T21 Value:T26
-T32	Eq-Comparison 689 694	<6 mm
-E21	Eq-Comparison:T32 Operator:T22 Unit:T25 Value:T27
-T33	Eq-Comparison 708 710	>1
-E22	Eq-Comparison:T33 Operator:T23 Value:T28
-T34	Eq-Comparison 730 733	<40
-E23	Eq-Comparison:T34 Operator:T24 Value:T29
+T1	Eq-Comparison 33 42	scheduled
+E1	Eq-Comparison:T1 Temporal-Period:T38
+T2	Procedure 47 67	total pancreatectomy
+E2	Procedure:T2 Name:T39
+T3	Or 68 70	or
+E3	Or:T3
+T4	Procedure 71 94	pancreaticoduodenectomy
+E4	Procedure:T4
+T5	Temporal-Connection 124 132	prior to
+E5	Temporal-Connection:T5
+A1	Temporal-Connection-Type-Value E5 before
+T6	Study 137 142	study
+E6	Study:T6
+T7	Procedure 151 160	procedure
+E7	Procedure:T7
+T8	Condition 192 205	liver disease
+E8	Condition:T8 Name:T40
+T9	Temporal-Connection 206 212	before
+E9	Temporal-Connection:T9
+A2	Temporal-Connection-Type-Value E9 before
+T10	Procedure 213 233	total pancreatectomy
+E10	Procedure:T10
+T11	Or 234 236	or
+E11	Or:T11
+T12	Drug 237 260	pancreaticoduodenectomy
+E12	Drug:T12
+T13	Exception 262 271	excluding
+E13	Exception:T13
+T14	Condition 272 277	NAFLD
+E14	Condition:T14
+T15	Condition 291 308	co-morbid disease
+E15	Condition:T15 Name:T44
+T16	Indication 327 337	indication
+E16	Indication:T16
+T17	Procedure 346 362	pancreas surgery
+E17	Procedure:T17 Name:T45
+T18	Condition 369 378	Pregnancy
+E18	Condition:T18 Name:T46
+T19	Condition 388 397	condition
+E19	Condition:T19
+T20	Assertion 426 431	would
+E20	Assertion:T20
+A3	Assertion-Type-Value E20 hypothetical
+T21	Study 465 470	trial
+E21	Study:T21
+T22	Procedure 551 563	liver biopsy
+E22	Procedure:T22
+T23	Temporal-Connection 600 606	before
+E23	Temporal-Connection:T23
+A4	Temporal-Connection-Type-Value E23 before
+T24	Eq-Comparison 607 611	last
+E24	Eq-Comparison:T24
+T25	Encounter 612 617	visit
+E25	Encounter:T25
+T26	Observation 627 667	spectroscopy demonstrating lipid content
+E26	Observation:T26
+T27	Eq-Comparison 668 671	<2%
+E27	Eq-Comparison:T27 Operator:T50 Value:T51 Unit:T52
+T28	Observation 677 688	Haemoglobin
+E28	Observation:T28 Name:T53
+T29	Eq-Comparison 689 698	<6 mmol/L
+E29	Eq-Comparison:T29 Operator:T54 Value:T55 Unit:T56 Unit:T57
+T30	Observation 704 707	INR
+E30	Observation:T30 Name:T58
+T31	Eq-Comparison 708 712	>1.5
+E31	Eq-Comparison:T31 Operator:T59 Value:T60
+T32	Observation 718 729	Trombocytes
+E32	Observation:T32 Name:T61
+T33	Eq-Comparison 730 741	<40 × 109/L
+E33	Eq-Comparison:T33 Operator:T62 Value:T63 Unit:T64 Value:T65
+T34	Modifier 747 751	Skin
+E34	Modifier:T34
+T35	Condition 752 761	infection
+E35	Condition:T35 Name:T66
+T36	Procedure 776 782	biopsy
+E36	Procedure:T36 Name:T67
+T37	Assertion 783 790	will be
+E37	Assertion:T37
+A5	Assertion-Type-Value E37 hypothetical
+T38	Eq-Temporal-Period 33 42	scheduled
+A6	Eq-Temporal-Period-Value T38 future
+T39	Procedure-Name 47 67	total pancreatectomy
+T40	Condition-Name 192 205	liver disease
+T41	Condition-Name 219 233	pancreatectomy
+T42	Condition-Name 237 260	pancreaticoduodenectomy
+T43	Severity 284 290	Severe
+A7	Severity-Value T43 severe
+T44	Condition-Name 291 308	co-morbid disease
+T45	Procedure-Name 346 362	pancreas surgery
+T46	Condition-Name 369 378	Pregnancy
+T47	Stability 432 441	interfere
+A8	Stability-Value T47 change
+T48	Procedure-Name 538 563	Percutaneous liver biopsy
+T49	Observation-Name 624 667	MR spectroscopy demonstrating lipid content
+A9	Observation-Type-Value T49 lab
+T50	Eq-Operator 668 669	<
+A10	Eq-Operator-Value T50 LT
+T51	Eq-Value 669 670	2
+T52	Eq-Unit 670 671	%
+T53	Observation-Name 677 688	Haemoglobin
+A11	Observation-Type-Value T53 lab
+T54	Eq-Operator 689 690	<
+A12	Eq-Operator-Value T54 LT
+T55	Eq-Value 690 691	6
+T56	Eq-Unit 692 696	mmol
+T57	Eq-Unit 697 698	L
+T58	Observation-Name 704 707	INR
+A13	Observation-Type-Value T58 lab
+T59	Eq-Operator 708 709	>
+A14	Eq-Operator-Value T59 GT
+T60	Eq-Value 709 712	1.5
+T61	Observation-Name 718 729	Trombocytes
+A15	Observation-Type-Value T61 lab
+T62	Eq-Operator 730 731	<
+A16	Eq-Operator-Value T62 LT
+T63	Eq-Value 731 733	40
+T64	Eq-Unit 734 735	×
+T65	Eq-Value 736 741	109/L
+T66	Condition-Name 752 761	infection
+T67	Procedure-Name 776 782	biopsy

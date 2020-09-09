@@ -1,23 +1,58 @@
-T1	Condition 75 93	ulcerative colitis
-T2	Condition-Name 75 93	ulcerative colitis
-E1	Condition:T1 Name:T2
-T3	Procedure 56 63	therapy
-T4	Procedure-Name 56 63	therapy
-E3	Procedure:T3 Name:T4
-T5	Condition 222 243	indeterminate colitis
-T6	Condition-Name 222 243	indeterminate colitis
-E5	Condition:T5 Name:T6
-T7	Condition 273 292	parasitic infection
-T8	Condition-Name 273 292	parasitic infection
-E7	Condition:T7 Name:T8
-T9	Condition 205 220	Crohn's disease
-T10	Condition-Name 205 220	Crohn's disease
-E9	Condition:T9 Name:T10
-T11	Age 34 38	aged
-E10	Age:T11
-T12	Eq-Operator 41 42	-
-A1	Eq-Operator-Value T12 BETWEEN
-T13	Eq-Value 39 41	18
-T14	Eq-Value 42 44	74
-T15	Eq-Comparison 39 42	18-
-E11	Eq-Comparison:T15 Operator:T12 Value:T13
+T1	Age 34 38	aged
+E1	Age:T1
+T2	Eq-Comparison 39 42	18-
+E2	Eq-Comparison:T2 Value:T21 Operator:T22
+T3	Eq-Comparison 46 55	receiving
+E3	Eq-Comparison:T3 Temporal-Period:T24
+T4	Procedure 56 63	therapy
+E4	Procedure:T4 Name:T25
+T5	Eq-Comparison 68 74	active
+E5	Eq-Comparison:T5 Temporal-Period:T26
+T6	Condition 75 93	ulcerative colitis
+E6	Condition:T6 Name:T27
+T7	Procedure 107 128	Mayo Score assessment
+E7	Procedure:T7
+T8	And 130 133	and
+E8	And:T8
+T9	Condition 146 166	colonic inflammation
+E9	Condition:T9 Name:T28
+T10	Condition 205 220	Crohn's disease
+E10	Condition:T10 Name:T29
+T11	Condition 222 243	indeterminate colitis
+E11	Condition:T11 Name:T30
+T12	Or 245 247	or
+E12	Or:T12
+T13	Modifier 260 269	bacterial
+E13	Modifier:T13
+T14	Or 270 272	or
+E14	Or:T14
+T15	Modifier 273 282	parasitic
+E15	Modifier:T15
+T16	Condition 283 292	infection
+E16	Condition:T16 Name:T31
+T17	Eq-Comparison 308 317	receiving
+E17	Eq-Comparison:T17 Temporal-Period:T32
+T18	Drug 318 333	biologic agents
+E18	Drug:T18 Name:T33
+T19	Drug 338 357	experimental agents
+E19	Drug:T19 Name:T34
+T20	Negation 362 370	excluded
+E20	Negation:T20
+T21	Eq-Value 39 41	18
+T22	Eq-Operator 41 42	-
+A1	Eq-Operator-Value T22 BETWEEN
+T23	Eq-Value 42 44	74
+T24	Eq-Temporal-Period 46 55	receiving
+A2	Eq-Temporal-Period-Value T24 present
+T25	Procedure-Name 56 63	therapy
+T26	Eq-Temporal-Period 68 74	active
+A3	Eq-Temporal-Period-Value T26 present
+T27	Condition-Name 75 93	ulcerative colitis
+T28	Condition-Name 146 166	colonic inflammation
+T29	Condition-Name 205 220	Crohn's disease
+T30	Condition-Name 222 243	indeterminate colitis
+T31	Condition-Name 283 292	infection
+T32	Eq-Temporal-Period 308 317	receiving
+A4	Eq-Temporal-Period-Value T32 present
+T33	Drug-Name 318 333	biologic agents
+T34	Drug-Name 338 357	experimental agents

@@ -1,13 +1,50 @@
-T1	Procedure 248 258	procedures
-T2	Procedure-Name 248 258	procedures
-E1	Procedure:T1 Name:T2
-T3	Language 135 138	GAA
-T4	Language 156 159	GAA
-T5	Life-Stage-And-Gender 403 409	female
-A1	Life-Stage-And-Gender-Type T5 male
-T6	Life-Stage-And-Gender 484 490	female
-A2	Life-Stage-And-Gender-Type T6 male
-T7	Life-Stage-And-Gender 518 523	child
-A3	Life-Stage-And-Gender-Type T7 child
-T8	Life-Stage-And-Gender 476 480	male
-A4	Life-Stage-And-Gender-Type T8 male
+T1	Condition 58 62	LOPD
+E1	Condition:T1 Name:T18
+T2	Criteria-Count 89 109	one of the following
+E2	Criteria-Count:T2 
+T3	Condition 121 131	deficiency
+E3	Condition:T3 
+T4	Modifier 135 145	GAA enzyme
+E4	Modifier:T4 
+T5	Procedure 160 170	genotyping
+E5	Procedure:T5 
+T6	Study 234 239	study
+E6	Study:T6 
+T7	Assertion 312 324	eligible for
+E7	Assertion:T7 
+A1	Assertion-Type-Value E7 hypothetical
+T8	Condition 414 422	pregnant
+E8	Condition:T8 Name:T21
+T9	Or 423 425	or
+E9	Or:T9 
+T10	Condition 426 439	breastfeeding
+E10	Condition:T10 Name:T22
+T11	Temporal-Connection 440 442	at
+E11	Temporal-Connection:T11 
+A2	Temporal-Connection-Type-Value E11 during
+T12	Study 443 452	screening
+E12	Study:T12 
+T13	Or 481 483	or
+E13	Or:T13 
+T14	Assertion 495 503	planning
+E14	Assertion:T14 
+A3	Assertion-Type-Value E14 intention
+T15	Family-Member 518 523	child
+E15	Family-Member:T15 
+A4	Family-Member-Type E15 child
+T16	Temporal-Connection 524 530	during
+E16	Temporal-Connection:T16 
+A5	Temporal-Connection-Type-Value E16 during
+T17	Study 535 540	study
+E17	Study:T17 
+T18	Condition-Name 58 62	LOPD
+T19	Eq-Temporal-Period 342 349	ongoing
+A6	Eq-Temporal-Period-Value T19 present
+T20	Life-Stage-And-Gender 403 409	female
+A7	Life-Stage-And-Gender-Type T20 female
+T21	Condition-Name 414 422	pregnant
+T22	Condition-Name 426 439	breastfeeding
+T23	Life-Stage-And-Gender 476 480	male
+A8	Life-Stage-And-Gender-Type T23 male
+T24	Life-Stage-And-Gender 484 490	female
+A9	Life-Stage-And-Gender-Type T24 female

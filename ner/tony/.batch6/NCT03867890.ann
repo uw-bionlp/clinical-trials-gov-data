@@ -1,17 +1,74 @@
-T1	Condition 274 290	systemic disease
-T2	Condition-Name 274 290	systemic disease
-E1	Condition:T1 Name:T2
-T3	Condition 312 320	diabetes
-T4	Condition-Name 312 320	diabetes
-E3	Condition:T3 Name:T4
-T5	Condition 105 108	ten
-T6	Condition-Name 105 108	ten
-E5	Condition:T5 Name:T6
-T7	Eq-Temporal-Unit 149 154	weeks
-A1	Eq-Temporal-Unit-Value T7 week
-T8	Eq-Temporal-Unit 378 383	weeks
-A2	Eq-Temporal-Unit-Value T8 week
-T9	Eq-Temporal-Unit 441 446	years
-A3	Eq-Temporal-Unit-Value T9 year
-T10	Eq-Value 46 48	10
-T11	Eq-Value 146 148	24
+T1	Modifier 25 29	walk
+E1	Modifier:T1
+T2	Or 30 32	or
+E2	Or:T2
+T3	Modifier 33 36	run
+E3	Modifier:T3
+T4	Eq-Comparison 37 68	at least 10 kilometres per week
+E4	Eq-Comparison:T4 Operator:T23 Value:T24 Temporal-Unit:T25 Temporal-Unit:T26
+T5	Eq-Comparison 93 128	distance of ten kilometres per week
+E5	Eq-Comparison:T5 Value:T27 Temporal-Unit:T28 Temporal-Unit:T29
+T6	Eq-Comparison 136 154	period of 24 weeks
+E6	Eq-Comparison:T6 Value:T30 Temporal-Unit:T31
+T7	Modifier 177 195	same pair of shoes
+E7	Modifier:T7
+T8	Temporal-Connection 196 202	during
+E8	Temporal-Connection:T8
+A1	Temporal-Connection-Type-Value E8 during
+T9	Modifier 203 210	walking
+E9	Modifier:T9
+T10	Or 210 211	/
+E10	Or:T10
+T11	Temporal-Connection 230 236	during
+E11	Temporal-Connection:T11
+A2	Temporal-Connection-Type-Value E11 during
+T12	Condition 274 290	systemic disease
+E12	Condition:T12 Name:T32
+T13	Condition 292 308	cardiac problems
+E13	Condition:T13 Name:T33
+T14	Or 309 311	or
+E14	Or:T14
+T15	Condition 312 320	diabetes
+E15	Condition:T15 Name:T34
+T16	Modifier 344 361	lower extremities
+E16	Modifier:T16
+T17	Eq-Comparison 369 383	last two weeks
+E17	Eq-Comparison:T17 Temporal-Period:T35 Value:T36 Temporal-Unit:T37
+T18	Procedure 390 397	surgery
+E18	Procedure:T18 Name:T38
+T19	Modifier 405 422	lower extremities
+E19	Modifier:T19
+T20	Eq-Comparison 430 446	last three years
+E20	Eq-Comparison:T20 Temporal-Period:T39 Value:T40 Temporal-Unit:T41
+T21	Observation-Name 25 29	walk
+T22	Eq-Operator 30 36	or run
+A3	Eq-Operator-Value T22 GTEQ
+T23	Eq-Operator 37 45	at least
+A4	Eq-Operator-Value T23 GTEQ
+T24	Eq-Value 46 48	10
+T25	Eq-Temporal-Unit 49 59	kilometres
+A5	Eq-Temporal-Unit-Value T25 hour
+T26	Eq-Temporal-Unit 64 68	week
+A6	Eq-Temporal-Unit-Value T26 week
+T27	Eq-Value 105 108	ten
+T28	Eq-Temporal-Unit 109 119	kilometres
+A7	Eq-Temporal-Unit-Value T28 hour
+T29	Eq-Temporal-Unit 124 128	week
+A8	Eq-Temporal-Unit-Value T29 week
+T30	Eq-Value 146 148	24
+T31	Eq-Temporal-Unit 149 154	weeks
+A9	Eq-Temporal-Unit-Value T31 week
+T32	Condition-Name 274 290	systemic disease
+T33	Condition-Name 292 308	cardiac problems
+T34	Condition-Name 312 320	diabetes
+T35	Eq-Temporal-Period 369 373	last
+A10	Eq-Temporal-Period-Value T35 past
+T36	Eq-Value 374 377	two
+T37	Eq-Temporal-Unit 378 383	weeks
+A11	Eq-Temporal-Unit-Value T37 week
+T38	Procedure-Name 390 397	surgery
+T39	Eq-Temporal-Period 430 434	last
+A12	Eq-Temporal-Period-Value T39 past
+T40	Eq-Value 435 440	three
+T41	Eq-Temporal-Unit 441 446	years
+A13	Eq-Temporal-Unit-Value T41 year

@@ -1,22 +1,62 @@
-T1	Procedure 99 114	cardiac surgery
-T2	Procedure-Name 99 114	cardiac surgery
-E1	Procedure:T1 Name:T2
-T3	Life-Stage-And-Gender 118 128	Children's
-A1	Life-Stage-And-Gender-Type T3 child
-T4	Life-Stage-And-Gender 413 421	Children
-A2	Life-Stage-And-Gender-Type T4 child
-T5	Condition 430 438	deceased
-T6	Condition-Name 430 438	deceased
-E5	Condition:T5 Name:T6
-T7	Language 600 607	Spanish
-T8	Eq-Operator 196 205	less than
-A3	Eq-Operator-Value T8 LT
-T9	Eq-Temporal-Unit 164 169	weeks
-A4	Eq-Temporal-Unit-Value T9 week
-T10	Eq-Temporal-Unit 209 215	months
-A5	Eq-Temporal-Unit-Value T10 month
-T11	Age 219 222	age
-E6	Age:T11
-T12	Eq-Value 206 208	18
-T13	Eq-Comparison 196 215	less than 18 months
-E7	Eq-Comparison:T13 Operator:T8 Temporal-Unit:T10 Value:T12
+T1	Or 61 64	and
+E1	Or:T1
+T2	Family-Member 71 78	parents
+E2	Family-Member:T2
+A1	Family-Member-Type E2 parent
+T3	And 80 83	who
+E3	And:T3
+T4	Eq-Comparison 89 98	undergone
+E4	Eq-Comparison:T4 Temporal-Period:T22
+T5	Procedure 99 114	cardiac surgery
+E5	Procedure:T5 Name:T23
+T6	Eq-Comparison 154 169	first six weeks
+E6	Eq-Comparison:T6 Value:T24 Temporal-Unit:T25
+T7	And 178 181	and
+E7	And:T7
+T8	Eq-Comparison 186 195	currently
+E8	Eq-Comparison:T8 Temporal-Period:T26
+T9	Eq-Comparison 196 215	less than 18 months
+E9	Eq-Comparison:T9 Operator:T27 Value:T28 Temporal-Unit:T29
+T10	Age 219 222	age
+E10	Age:T10
+T11	Study 281 286	study
+E11	Study:T11
+T12	Family-Member 430 438	deceased
+E12	Family-Member:T12
+A2	Family-Member-Type E12 parent
+T13	Temporal-Connection 439 447	prior to
+E13	Temporal-Connection:T13
+A3	Temporal-Connection-Type-Value E13 before
+T14	Study 480 485	study
+E14	Study:T14
+T15	Condition 510 518	Neonates
+E15	Condition:T15 Name:T31
+T16	Negation 539 542	non
+E16	Negation:T16
+T17	Risk 563 572	potential
+E17	Risk:T17
+T18	Negation 579 582	non
+E18	Negation:T18
+T19	Condition 583 589	viable
+E19	Condition:T19
+T20	Condition 597 607	- Spanish
+E20	Condition:T20
+T21	Life-Stage-And-Gender 52 59	infants
+A4	Life-Stage-And-Gender-Type T21 infant
+T22	Eq-Temporal-Period 89 98	undergone
+A5	Eq-Temporal-Period-Value T22 past
+T23	Procedure-Name 99 114	cardiac surgery
+T24	Eq-Value 160 163	six
+T25	Eq-Temporal-Unit 164 169	weeks
+A6	Eq-Temporal-Unit-Value T25 week
+T26	Eq-Temporal-Period 186 195	currently
+A7	Eq-Temporal-Period-Value T26 present
+T27	Eq-Operator 196 205	less than
+A8	Eq-Operator-Value T27 LT
+T28	Eq-Value 206 208	18
+T29	Eq-Temporal-Unit 209 215	months
+A9	Eq-Temporal-Unit-Value T29 month
+T30	Life-Stage-And-Gender 413 421	Children
+A10	Life-Stage-And-Gender-Type T30 child
+T31	Condition-Name 510 518	Neonates
+T32	Language 600 607	Spanish

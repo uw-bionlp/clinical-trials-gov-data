@@ -1,27 +1,68 @@
-T1	Procedure 270 288	revision surgeries
-T2	Procedure-Name 270 288	revision surgeries
-E1	Procedure:T1 Name:T2
-T3	Procedure 63 79	septorhinoplasty
-T4	Procedure-Name 63 79	septorhinoplasty
-E3	Procedure:T3 Name:T4
-T5	Procedure 157 173	septorhinoplasty
-T6	Procedure-Name 157 173	septorhinoplasty
-E5	Procedure:T5 Name:T6
-T7	Procedure 122 135	nasal packing
-T8	Procedure-Name 122 135	nasal packing
-E7	Procedure:T7 Name:T8
-T9	Procedure 51 62	septoplasty
-T10	Procedure-Name 51 62	septoplasty
-E9	Procedure:T9 Name:T10
-T11	Procedure 145 156	septoplasty
-T12	Procedure-Name 145 156	septoplasty
-E11	Procedure:T11 Name:T12
-T13	Procedure 80 90	procedures
-T14	Procedure-Name 80 90	procedures
-E13	Procedure:T13 Name:T14
-T15	Procedure 174 184	procedures
-T16	Procedure-Name 174 184	procedures
-E15	Procedure:T15 Name:T16
-T17	Eq-Temporal-Unit 353 359	months
-A1	Eq-Temporal-Unit-Value T17 month
-T18	Eq-Value 351 352	6
+T1	Eq-Comparison 38 50	will undergo
+E1	Eq-Comparison:T1 Temporal-Period:T22
+T2	Procedure 51 62	septoplasty
+E2	Procedure:T2 Name:T23
+T3	Or 62 63	/
+E3	Or:T3
+T4	Procedure 63 90	septorhinoplasty procedures
+E4	Procedure:T4 Name:T24
+T5	Procedure 122 135	nasal packing
+E5	Procedure:T5 Name:T26
+T6	Negation 228 231	not
+E6	Negation:T6
+T7	Assertion 232 239	want to
+E7	Assertion:T7
+A1	Assertion-Type-Value E7 hypothetical
+T8	Study 259 264	study
+E8	Study:T8
+T9	Modifier 270 278	revision
+E9	Modifier:T9
+T10	Procedure 279 288	surgeries
+E10	Procedure:T10 Name:T27
+T11	Eq-Comparison 312 318	taking
+E11	Eq-Comparison:T11 Temporal-Period:T28
+T12	Drug 319 334	antidepressants
+E12	Drug:T12 Name:T29
+T13	Temporal-Connection 335 341	during
+E13	Temporal-Connection:T13
+A2	Temporal-Connection-Type-Value E13 during
+T14	Eq-Comparison 346 359	last 6 months
+E14	Eq-Comparison:T14 Temporal-Period:T30 Value:T31 Temporal-Unit:T32
+T15	Eq-Comparison 386 393	history
+E15	Eq-Comparison:T15 Temporal-Period:T33
+T16	Condition 399 406	disease
+E16	Condition:T16 Name:T34
+T17	Assertion 412 415	can
+E17	Assertion:T17
+A3	Assertion-Type-Value E17 hypothetical
+T18	Condition 423 430	anxiety
+E18	Condition:T18
+T19	Assertion 454 462	wants to
+E19	Assertion:T19
+A4	Assertion-Type-Value E19 hypothetical
+T20	Negation 466 474	excluded
+E20	Negation:T20
+T21	Study 484 489	study
+E21	Study:T21
+T22	Eq-Temporal-Period 38 50	will undergo
+A5	Eq-Temporal-Period-Value T22 future
+T23	Procedure-Name 51 62	septoplasty
+T24	Procedure-Name 63 90	septorhinoplasty procedures
+T25	Eq-Temporal-Period 109 121	will receive
+A6	Eq-Temporal-Period-Value T25 future
+T26	Procedure-Name 122 135	nasal packing
+T27	Procedure-Name 279 288	surgeries
+T28	Eq-Temporal-Period 312 318	taking
+A7	Eq-Temporal-Period-Value T28 present
+T29	Drug-Name 319 334	antidepressants
+T30	Eq-Temporal-Period 346 350	last
+A8	Eq-Temporal-Period-Value T30 past
+T31	Eq-Value 351 352	6
+T32	Eq-Temporal-Unit 353 359	months
+A9	Eq-Temporal-Unit-Value T32 month
+T33	Eq-Temporal-Period 386 393	history
+A10	Eq-Temporal-Period-Value T33 past
+T34	Condition-Name 399 406	disease
+T35	Stability 416 422	affect
+A11	Stability-Value T35 change
+T36	Observation-Name 423 437	anxiety levels

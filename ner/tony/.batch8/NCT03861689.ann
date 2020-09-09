@@ -1,21 +1,73 @@
-T1	Condition 72 96	perianal Crohn's disease
-T2	Condition-Name 72 96	perianal Crohn's disease
-E1	Condition:T1 Name:T2
-T3	Condition 224 239	Crohn's disease
-T4	Condition-Name 224 239	Crohn's disease
-E3	Condition:T3 Name:T4
-T5	Condition 478 487	pregnancy
-T6	Condition-Name 478 487	pregnancy
-E5	Condition:T5 Name:T6
-T7	Language 463 466	MRI
-T8	Eq-Operator 29 30	≥
-A1	Eq-Operator-Value T8 GTEQ
-T9	Eq-Temporal-Unit 34 39	years
-A2	Eq-Temporal-Unit-Value T9 year
-T10	Age 25 28	Age
-E6	Age:T10
-T11	Age 40 43	old
-E7	Age:T11
-T12	Eq-Value 31 33	18
-T13	Eq-Comparison 29 39	≥ 18 years
-E8	Eq-Comparison:T13 Operator:T8 Temporal-Unit:T9 Value:T12
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 29 30	≥
+E2	Eq-Comparison:T2 Operator:T29
+T3	Eq-Comparison 31 39	18 years
+E3	Eq-Comparison:T3 Value:T30 Temporal-Unit:T31
+T4	Age 40 43	old
+E4	Age:T4
+T5	Modifier 72 80	perianal
+E5	Modifier:T5
+T6	Condition 81 96	Crohn's disease
+E6	Condition:T6
+T7	Eq-Comparison 102 104	On
+E7	Eq-Comparison:T7 Temporal-Period:T33
+T8	Drug 105 114	biologics
+E8	Drug:T8
+T9	Or 115 117	or
+E9	Or:T9
+T10	Condition 182 198	perianal fistula
+E10	Condition:T10 Name:T34
+T11	Condition 206 212	causes
+E11	Condition:T11
+T12	Exception 213 223	other than
+E12	Exception:T12
+T13	Condition 224 239	Crohn's disease
+E13	Condition:T13 Name:T35
+T14	Other 262 267	other
+E14	Other:T14
+T15	Modifier 268 274	organs
+E15	Modifier:T15
+T16	Modifier 286 293	bladder
+E16	Modifier:T16
+T17	Or 294 297	and
+E17	Or:T17
+T18	Modifier 298 307	intestine
+E18	Modifier:T18
+T19	Allergy 331 339	allergic
+E19	Allergy:T19
+T20	Or 349 350	/
+E20	Or:T20
+T21	Contraindication 351 368	contraindications
+E21	Contraindication:T21
+T22	Drug 372 380	anti-TNF
+E22	Drug:T22 Name:T37
+T23	Eq-Comparison 404 410	active
+E23	Eq-Comparison:T23 Temporal-Period:T38
+T24	Condition 411 417	cancer
+E24	Condition:T24 Name:T39
+T25	Contraindication 441 458	contraindications
+E25	Contraindication:T25
+T26	Procedure 463 466	MRI
+E26	Procedure:T26 Name:T40
+T27	Condition 478 487	pregnancy
+E27	Condition:T27 Name:T41
+T28	Procedure 600 611	control arm
+E28	Procedure:T28
+T29	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T29 GTEQ
+T30	Eq-Value 31 33	18
+T31	Eq-Temporal-Unit 34 39	years
+A2	Eq-Temporal-Unit-Value T31 year
+T32	Condition-Name 72 96	perianal Crohn's disease
+T33	Eq-Temporal-Period 102 104	On
+A3	Eq-Temporal-Period-Value T33 present
+T34	Condition-Name 182 198	perianal fistula
+T35	Condition-Name 224 239	Crohn's disease
+T36	Condition-Name 245 261	Fistulation into
+T37	Drug-Name 372 380	anti-TNF
+T38	Eq-Temporal-Period 404 410	active
+A4	Eq-Temporal-Period-Value T38 present
+T39	Condition-Name 411 417	cancer
+T40	Procedure-Name 463 466	MRI
+T41	Condition-Name 478 487	pregnancy

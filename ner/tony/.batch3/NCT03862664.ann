@@ -1,29 +1,88 @@
-T1	Condition 87 102	chronic disease
-T2	Condition-Name 87 102	chronic disease
-E1	Condition:T1 Name:T2
-T3	Observation 150 165	Body mass index
-T4	Observation-Name 150 165	Body mass index
-E3	Observation:T3 Name:T4
-A1	Observation-Type-Value T4 vital
-T5	Condition 244 255	hepatitis B
-T6	Condition-Name 244 255	hepatitis B
-E5	Condition:T5 Name:T6
-T7	Observation 167 170	BMI
-T8	Observation-Name 167 170	BMI
-E7	Observation:T7 Name:T8
-A2	Observation-Type-Value T8 vital
-T9	Condition 384 402	mental retardation
-T10	Condition-Name 384 402	mental retardation
-E9	Condition:T9 Name:T10
-T11	Eq-Operator 172 173	<
-A3	Eq-Operator-Value T11 LT
-T12	Eq-Operator 345 346	>
-A4	Eq-Operator-Value T12 GT
-T13	Eq-Operator 359 360	>
-A5	Eq-Operator-Value T13 GT
-T14	Eq-Value 173 175	28
-T15	Eq-Value 360 362	28
-T16	Eq-Comparison 172 175	<28
-E10	Eq-Comparison:T16 Operator:T11 Value:T14
-T17	Eq-Comparison 359 362	>28
-E11	Eq-Comparison:T17 Operator:T13 Value:T15
+T1	Modifier 43 51	physical
+E1	Modifier:T1
+T2	Or 52 55	and
+E2	Or:T2
+T3	Condition 56 72	mental condition
+E3	Condition:T3 Name:T28
+T4	Condition 87 102	chronic disease
+E4	Condition:T4 Name:T29
+T5	Or 103 105	or
+E5	Or:T5
+T6	Eq-Comparison 111 119	Previous
+E6	Eq-Comparison:T6 Temporal-Period:T30
+T7	Procedure 126 143	abdominal surgery
+E7	Procedure:T7 Name:T32
+T8	Observation 150 165	Body mass index
+E8	Observation:T8 Name:T33
+T9	Observation 167 170	BMI
+E9	Observation:T9 Name:T34
+T10	Eq-Comparison 172 175	<28
+E10	Eq-Comparison:T10 Operator:T35 Value:T36
+T11	Observation 182 191	ABO blood
+E11	Observation:T11 Name:T37
+T12	Condition 244 255	hepatitis B
+E12	Condition:T12 Name:T39
+T13	Modifier 257 258	C
+E13	Modifier:T13
+T14	Or 259 262	and
+E14	Or:T14
+T15	Condition 263 293	human immunodeficiency viruses
+E15	Condition:T15 Name:T40
+T16	Condition 295 298	HIV
+E16	Condition:T16 Name:T41
+T17	Condition 326 329	ASA
+E17	Condition:T17 Name:T42
+T18	Eq-Comparison 345 349	> II
+E18	Eq-Comparison:T18 Operator:T43 Value:T44
+T19	Modifier 369 380	Psychiatric
+E19	Modifier:T19
+T20	Or 381 383	or
+E20	Or:T20
+T21	Modifier 384 390	mental
+E21	Modifier:T21
+T22	Condition 391 402	retardation
+E22	Condition:T22
+T23	Condition 409 417	pregnant
+E23	Condition:T23 Name:T47
+T24	Or 418 421	and
+E24	Or:T24
+T25	Condition 422 429	nursing
+E25	Condition:T25 Name:T48
+T26	Or 436 438	or
+E26	Or:T26
+T27	Observation 470 480	laboratory
+E27	Observation:T27
+T28	Condition-Name 56 72	mental condition
+T29	Condition-Name 87 102	chronic disease
+T30	Eq-Temporal-Period 111 119	Previous
+A1	Eq-Temporal-Period-Value T30 past
+T31	Severity 120 125	major
+A2	Severity-Value T31 severe
+T32	Procedure-Name 136 143	surgery
+T33	Observation-Name 150 165	Body mass index
+A3	Observation-Type-Value T33 vital
+T34	Observation-Name 167 170	BMI
+A4	Observation-Type-Value T34 vital
+T35	Eq-Operator 172 173	<
+A5	Eq-Operator-Value T35 LT
+T36	Eq-Value 173 175	28
+T37	Observation-Name 182 191	ABO blood
+A6	Observation-Type-Value T37 lab
+T38	Polarity 231 239	Negative
+A7	Polarity-Value T38 negative
+T39	Condition-Name 244 255	hepatitis B
+T40	Condition-Name 263 293	human immunodeficiency viruses
+T41	Condition-Name 295 298	HIV
+T42	Condition-Name 326 329	ASA
+T43	Eq-Operator 345 346	>
+A8	Eq-Operator-Value T43 GT
+T44	Eq-Value 347 349	II
+T45	Condition-Name 356 362	BMI>28
+T46	Condition-Name 384 402	mental retardation
+T47	Condition-Name 409 417	pregnant
+T48	Condition-Name 422 429	nursing
+T49	Life-Stage-And-Gender 430 435	women
+A9	Life-Stage-And-Gender-Type T49 female
+T50	Severity 458 469	significant
+A10	Severity-Value T50 severe
+T51	Condition-Name 470 494	laboratory abnormalities

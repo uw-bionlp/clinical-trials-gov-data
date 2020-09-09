@@ -1,27 +1,81 @@
-T1	Procedure 81 98	bariatric surgery
-T2	Procedure-Name 81 98	bariatric surgery
-E1	Procedure:T1 Name:T2
-T3	Procedure 72 80	elective
-T4	Procedure-Name 72 80	elective
-E3	Procedure:T3 Name:T4
-T5	Life-Stage-And-Gender 29 34	adult
-A1	Life-Stage-And-Gender-Type T5 adult
-T6	Procedure 465 482	bariatric surgery
-T7	Procedure-Name 465 482	bariatric surgery
-E6	Procedure:T6 Name:T7
-T8	Procedure 495 511	revision surgery
-T9	Procedure-Name 495 511	revision surgery
-E8	Procedure:T8 Name:T9
-T10	Eq-Operator 50 51	≥
-A2	Eq-Operator-Value T10 GTEQ
-T11	Eq-Temporal-Unit 54 59	years
-A3	Eq-Temporal-Unit-Value T11 year
-T12	Eq-Temporal-Unit 419 424	years
-A4	Eq-Temporal-Unit-Value T12 year
-T13	Age 428 431	age
-E9	Age:T13
-T14	Eq-Value 51 53	18
-T15	Eq-Value 244 246	30
-T16	Eq-Value 416 418	18
-T17	Eq-Comparison 50 59	≥18 years
-E10	Eq-Comparison:T17 Operator:T10 Temporal-Unit:T11 Value:T14
+T1	Age 45 49	aged
+E1	Age:T1 
+T2	Eq-Comparison 50 59	≥18 years
+E2	Eq-Comparison:T2 Operator:T27 Temporal-Unit:T28
+T3	Eq-Comparison 61 71	undergoing
+E3	Eq-Comparison:T3 Temporal-Period:T29
+T4	Procedure 81 98	bariatric surgery
+E4	Procedure:T4 Name:T30
+T5	And 99 102	and
+E5	And:T5 
+T6	Procedure 129 136	surgery
+E6	Procedure:T6 Name:T31
+T7	Procedure 142 154	laparoscopic
+E7	Procedure:T7 Name:T32
+T8	Modifier 156 164	assisted
+E8	Modifier:T8 
+T9	Procedure 165 186	laparoscopic approach
+E9	Procedure:T9 Name:T33
+T10	Or 187 189	or
+E10	Or:T10 
+T11	Procedure 190 203	open approach
+E11	Procedure:T11 Name:T34
+T12	Temporal-Connection 233 239	during
+E12	Temporal-Connection:T12 
+A1	Temporal-Connection-Type-Value E12 during
+T13	Eq-Comparison 244 250	30-day
+E13	Eq-Comparison:T13 
+T14	Study 251 257	cohort
+E14	Study:T14 
+T15	Eq-Comparison 272 279	planned
+E15	Eq-Comparison:T15 Temporal-Period:T36
+T16	Eq-Comparison 330 340	undergoing
+E16	Eq-Comparison:T16 Temporal-Period:T37
+T17	Procedure 341 358	emergency surgery
+E17	Procedure:T17 Name:T38
+T18	Procedure 369 390	Endoscopic procedures
+E18	Procedure:T18 Name:T39
+T19	Eq-Comparison 410 424	under 18 years
+E19	Eq-Comparison:T19 Operator:T40 Value:T41 Temporal-Unit:T42
+T20	Age 428 431	age
+E20	Age:T20 
+T21	Eq-Comparison 456 464	previous
+E21	Eq-Comparison:T21 Temporal-Period:T43
+T22	Procedure 465 482	bariatric surgery
+E22	Procedure:T22 Name:T44
+T23	And 483 486	who
+E23	And:T23 
+T24	Eq-Comparison 487 494	undergo
+E24	Eq-Comparison:T24 
+T25	Procedure 495 511	revision surgery
+E25	Procedure:T25 Name:T45
+T26	Life-Stage-And-Gender 29 34	adult
+A2	Life-Stage-And-Gender-Type T26 adult
+T27	Eq-Operator 50 53	≥18
+A3	Eq-Operator-Value T27 GTEQ
+T28	Eq-Temporal-Unit 54 59	years
+A4	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Temporal-Period 61 71	undergoing
+A5	Eq-Temporal-Period-Value T29 present
+T30	Procedure-Name 81 98	bariatric surgery
+T31	Procedure-Name 129 136	surgery
+T32	Procedure-Name 142 154	laparoscopic
+T33	Procedure-Name 165 186	laparoscopic approach
+T34	Procedure-Name 190 203	open approach
+T35	Location 224 232	hospital
+A6	Location-Value T35 hospital
+T36	Eq-Temporal-Period 272 279	planned
+A7	Eq-Temporal-Period-Value T36 future
+T37	Eq-Temporal-Period 330 340	undergoing
+A8	Eq-Temporal-Period-Value T37 present
+T38	Procedure-Name 351 358	surgery
+T39	Procedure-Name 369 390	Endoscopic procedures
+T40	Eq-Operator 410 415	under
+A9	Eq-Operator-Value T40 LT
+T41	Eq-Value 416 418	18
+T42	Eq-Temporal-Unit 419 424	years
+A10	Eq-Temporal-Unit-Value T42 year
+T43	Eq-Temporal-Period 456 464	previous
+A11	Eq-Temporal-Period-Value T43 past
+T44	Procedure-Name 465 482	bariatric surgery
+T45	Procedure-Name 504 511	surgery

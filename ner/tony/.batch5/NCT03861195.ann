@@ -1,58 +1,145 @@
-T1	Condition 892 915	inability to understand
-T2	Condition-Name 892 915	inability to understand
-E1	Condition:T1 Name:T2
-T3	Procedure 113 133	prophylactic surgery
-T4	Procedure-Name 113 133	prophylactic surgery
-E3	Procedure:T3 Name:T4
-T5	Procedure 179 199	radical hysterectomy
-T6	Procedure-Name 179 199	radical hysterectomy
-E5	Procedure:T5 Name:T6
-T7	Procedure 308 328	radical hysterectomy
-T8	Procedure-Name 308 328	radical hysterectomy
-E7	Procedure:T7 Name:T8
-T9	Procedure 243 258	lymphadenectomy
-T10	Procedure-Name 243 258	lymphadenectomy
-E9	Procedure:T9 Name:T10
-T11	Procedure 372 387	lymphadenectomy
-T12	Procedure-Name 372 387	lymphadenectomy
-E11	Procedure:T11 Name:T12
-T13	Procedure 707 721	electrosurgery
-T14	Procedure-Name 707 721	electrosurgery
-E13	Procedure:T13 Name:T14
-T15	Procedure 78 90	hysterectomy
-T16	Procedure-Name 78 90	hysterectomy
-E15	Procedure:T15 Name:T16
-T17	Procedure 776 786	hemostasis
-T18	Procedure-Name 776 786	hemostasis
-E17	Procedure:T17 Name:T18
-T19	Procedure 453 462	retrieval
-T20	Procedure-Name 453 462	retrieval
-E19	Procedure:T19 Name:T20
-T21	Procedure 673 682	pacemaker
-T22	Procedure-Name 673 682	pacemaker
-E21	Procedure:T21 Name:T22
-T23	Condition 424 430	uterus
-T24	Condition-Name 424 430	uterus
-E23	Condition:T23 Name:T24
-T25	Condition 435 441	vagina
-T26	Condition-Name 435 441	vagina
-E25	Condition:T25 Name:T26
-T27	Observation 44 47	BMI
-T28	Observation-Name 44 47	BMI
-E27	Observation:T27 Name:T28
-A1	Observation-Type-Value T28 vital
-T29	Eq-Operator 29 30	≥
-A2	Eq-Operator-Value T29 GTEQ
-T30	Eq-Operator 48 49	≤
-A3	Eq-Operator-Value T30 LTEQ
-T31	Eq-Temporal-Unit 33 38	years
-A4	Eq-Temporal-Unit-Value T31 year
-T32	Eq-Unit 52 57	kg/m2
-T33	Age 25 28	age
-E28	Age:T33
-T34	Eq-Value 30 32	18
-T35	Eq-Value 49 51	40
-T36	Eq-Comparison 29 38	≥18 years
-E29	Eq-Comparison:T36 Operator:T29 Temporal-Unit:T31 Value:T34
-T37	Eq-Comparison 48 57	≤40 kg/m2
-E30	Eq-Comparison:T37 Operator:T30 Unit:T32 Value:T35
+T1	Age 25 28	age
+E1	Age:T1
+T2	Eq-Comparison 29 38	≥18 years
+E2	Eq-Comparison:T2 Operator:T57 Temporal-Unit:T58
+T3	Observation 44 47	BMI
+E3	Observation:T3 Name:T59
+T4	Eq-Comparison 48 57	≤40 kg/m2
+E4	Eq-Comparison:T4 Operator:T60 Unit:T61 Unit:T62
+T5	Indication 63 73	indication
+E5	Indication:T5
+T6	Procedure 78 90	hysterectomy
+E6	Procedure:T6 Name:T63
+T7	Condition 95 109	benign disease
+E7	Condition:T7 Name:T64
+T8	Or 110 112	or
+E8	Or:T8
+T9	Procedure 113 133	prophylactic surgery
+E9	Procedure:T9 Name:T65
+T10	Modifier 141 151	hereditary
+E10	Modifier:T10
+T11	Condition 152 158	cancer
+E11	Condition:T11 Name:T66
+T12	Indication 164 174	indication
+E12	Indication:T12
+T13	Procedure 179 199	radical hysterectomy
+E13	Procedure:T13 Name:T67
+T14	Or 200 206	and/or
+E14	Or:T14
+T15	Modifier 207 226	pelvic-/para-aortic
+E15	Modifier:T15
+T16	Modifier 228 241	sentinel-node
+E16	Modifier:T16
+T17	Procedure 243 258	lymphadenectomy
+E17	Procedure:T17
+T18	Modifier 263 271	cervical
+E18	Modifier:T18
+T19	Condition 272 278	cancer
+E19	Condition:T19 Name:T70
+T20	Indication 284 294	indication
+E20	Indication:T20
+T21	Modifier 299 315	modified radical
+E21	Modifier:T21
+T22	Procedure 316 328	hysterectomy
+E22	Procedure:T22
+T23	Or 329 335	and/or
+E23	Or:T23
+T24	Modifier 336 355	pelvic-/para-aortic
+E24	Modifier:T24
+T25	Modifier 357 370	sentinel-node
+E25	Modifier:T25
+T26	Condition 372 387	lymphadenectomy
+E26	Condition:T26
+T27	Modifier 392 403	endometrial
+E27	Modifier:T27
+T28	Condition 404 410	cancer
+E28	Condition:T28 Name:T72
+T29	Modifier 424 430	uterus
+E29	Modifier:T29
+T30	Or 431 434	and
+E30	Or:T30
+T31	Modifier 435 441	vagina
+E31	Modifier:T31
+T32	Assertion 442 452	allows for
+E32	Assertion:T32
+A1	Assertion-Type-Value E32 hypothetical
+T33	Procedure 453 462	retrieval
+E33	Procedure:T33 Name:T73
+T34	Modifier 470 477	vaginal
+E34	Modifier:T34
+T35	Condition 487 493	cancer
+E35	Condition:T35 Name:T74
+T36	Modifier 574 589	intra-abdominal
+E36	Modifier:T36
+T37	Condition 590 599	adhesions
+E37	Condition:T37
+T38	Contraindication 605 623	anaesthesiological
+E38	Contraindication:T38
+T39	Contraindication 624 641	contraindications
+E39	Contraindication:T39
+T40	Procedure 645 656	laparoscopy
+E40	Procedure:T40 Name:T76
+T41	And 668 672	with
+E41	And:T41
+T42	Procedure 673 682	pacemaker
+E42	Procedure:T42 Name:T78
+T43	Or 683 685	or
+E43	Or:T43
+T44	Other 686 691	other
+E44	Other:T44
+T45	Procedure 692 700	implants
+E45	Procedure:T45 Name:T79
+T46	And 750 754	with
+E46	And:T46
+T47	Condition 761 768	defects
+E47	Condition:T47
+T48	Procedure 776 786	hemostasis
+E48	Procedure:T48 Name:T81
+T49	Condition 792 801	pregnancy
+E49	Condition:T49 Name:T82
+T50	Other 807 812	other
+E50	Other:T50
+T51	Modifier 813 821	internal
+E51	Modifier:T51
+T52	Or 822 824	or
+E52	Or:T52
+T53	Modifier 825 835	anatomical
+E53	Modifier:T53
+T54	Negation 850 858	preclude
+E54	Negation:T54
+T55	Condition 861 886	minimal invasive approach
+E55	Condition:T55
+T56	Negation 892 901	inability
+E56	Negation:T56
+T57	Eq-Operator 29 32	≥18
+A2	Eq-Operator-Value T57 GTEQ
+T58	Eq-Temporal-Unit 33 38	years
+A3	Eq-Temporal-Unit-Value T58 year
+T59	Observation-Name 44 47	BMI
+A4	Observation-Type-Value T59 vital
+T60	Eq-Operator 48 51	≤40
+A5	Eq-Operator-Value T60 GTEQ
+T61	Eq-Unit 52 54	kg
+T62	Eq-Unit 55 57	m2
+T63	Procedure-Name 78 90	hysterectomy
+T64	Condition-Name 95 109	benign disease
+T65	Procedure-Name 126 133	surgery
+T66	Condition-Name 152 158	cancer
+T67	Procedure-Name 179 199	radical hysterectomy
+T68	Procedure-Name 207 219	pelvic-/para
+T69	Condition-Name 228 241	sentinel-node
+T70	Condition-Name 272 278	cancer
+T71	Procedure-Name 308 328	radical hysterectomy
+T72	Condition-Name 404 410	cancer
+T73	Procedure-Name 453 462	retrieval
+T74	Condition-Name 487 493	cancer
+T75	Condition-Name 580 599	abdominal adhesions
+T76	Procedure-Name 645 656	laparoscopy
+T77	Life-Stage-And-Gender 662 667	women
+A6	Life-Stage-And-Gender-Type T77 female
+T78	Procedure-Name 673 682	pacemaker
+T79	Procedure-Name 692 700	implants
+T80	Life-Stage-And-Gender 744 749	women
+A7	Life-Stage-And-Gender-Type T80 female
+T81	Procedure-Name 776 786	hemostasis
+T82	Condition-Name 792 801	pregnancy

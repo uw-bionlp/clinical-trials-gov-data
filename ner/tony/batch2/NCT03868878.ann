@@ -1,21 +1,67 @@
-T1	Condition 152 174	cardiovascular disease
-T2	Condition-Name 152 174	cardiovascular disease
-E1	Condition:T1 Name:T2
-T3	Condition 231 252	neuromuscular disease
-T4	Condition-Name 231 252	neuromuscular disease
-E3	Condition:T3 Name:T4
-T5	Condition 176 190	kidney disease
-T6	Condition-Name 176 190	kidney disease
-E5	Condition:T5 Name:T6
-T7	Condition 192 205	liver disease
-T8	Condition-Name 192 205	liver disease
-E7	Condition:T7 Name:T8
-T9	Eq-Operator 29 41	greater than
-A1	Eq-Operator-Value T9 GT
-T10	Eq-Temporal-Unit 45 50	years
-A2	Eq-Temporal-Unit-Value T10 year
-T11	Age 25 28	age
-E8	Age:T11
-T12	Eq-Value 42 44	60
-T13	Eq-Comparison 29 50	greater than 60 years
-E9	Eq-Comparison:T13 Operator:T9 Temporal-Unit:T10 Value:T12
+T1	Age 25 28	age
+E1	Age:T1
+T2	Eq-Comparison 29 50	greater than 60 years
+E2	Eq-Comparison:T2 Operator:T23 Value:T24 Temporal-Unit:T25
+T3	Negation 60 63	not
+E3	Negation:T3
+T4	Procedure 75 92	physical exercise
+E4	Procedure:T4
+T5	Eq-Comparison 106 123	at least one year
+E5	Eq-Comparison:T5 Operator:T27 Value:T28 Temporal-Unit:T29
+T6	Negation 133 136	not
+E6	Negation:T6
+T7	Condition 152 174	cardiovascular disease
+E7	Condition:T7 Name:T31
+T8	Condition 176 190	kidney disease
+E8	Condition:T8 Name:T32
+T9	Condition 192 205	liver disease
+E9	Condition:T9 Name:T33
+T10	Or 206 208	or
+E10	Or:T10
+T11	Modifier 218 227	cognitive
+E11	Modifier:T11
+T12	Or 228 230	or
+E12	Or:T12
+T13	Condition 231 252	neuromuscular disease
+E13	Condition:T13 Name:T34
+T14	Negation 268 271	not
+E14	Negation:T14
+T15	Modifier 280 286	visual
+E15	Modifier:T15
+T16	Or 287 289	or
+E16	Or:T16
+T17	Condition 290 308	auditory inability
+E17	Condition:T17 Name:T35
+T18	Study 365 376	evaluations
+E18	Study:T18
+T19	Temporal-Connection 387 393	during
+E19	Temporal-Connection:T19
+A1	Temporal-Connection-Type-Value E19 during
+T20	Study 398 410	intervention
+E20	Study:T20
+T21	Negation 430 437	absence
+E21	Negation:T21
+T22	Eq-Comparison 441 453	five or more
+E22	Eq-Comparison:T22 Value:T36 Operator:T37
+T23	Eq-Operator 29 41	greater than
+A2	Eq-Operator-Value T23 GT
+T24	Eq-Value 42 44	60
+T25	Eq-Temporal-Unit 45 50	years
+A3	Eq-Temporal-Unit-Value T25 year
+T26	Observation-Name 75 92	physical exercise
+A4	Observation-Type-Value T26 social-habit
+T27	Eq-Operator 106 114	at least
+A5	Eq-Operator-Value T27 GTEQ
+T28	Eq-Value 115 118	one
+T29	Eq-Temporal-Unit 119 123	year
+A6	Eq-Temporal-Unit-Value T29 year
+T30	Severity 145 151	severe
+A7	Severity-Value T30 severe
+T31	Condition-Name 152 174	cardiovascular disease
+T32	Condition-Name 176 190	kidney disease
+T33	Condition-Name 192 205	liver disease
+T34	Condition-Name 231 252	neuromuscular disease
+T35	Condition-Name 290 308	auditory inability
+T36	Eq-Value 441 445	five
+T37	Eq-Operator 446 453	or more
+A8	Eq-Operator-Value T37 GTEQ

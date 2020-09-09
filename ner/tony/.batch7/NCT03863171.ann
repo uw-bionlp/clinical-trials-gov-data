@@ -1,53 +1,101 @@
-T1	Condition 112 144	Age-related macular degeneration
-T2	Condition-Name 112 144	Age-related macular degeneration
-E1	Condition:T1 Name:T2
-T3	Condition 192 224	age-related macular degeneration
-T4	Condition-Name 192 224	age-related macular degeneration
-E3	Condition:T3 Name:T4
-T5	Procedure 32 40	ischemia
-T6	Procedure-Name 32 40	ischemia
-E5	Procedure:T5 Name:T6
-T7	Condition 41 49	syndrome
-T8	Condition-Name 41 49	syndrome
-E7	Condition:T7 Name:T8
-T9	Procedure 88 96	ischemia
-T10	Procedure-Name 88 96	ischemia
-E9	Procedure:T9 Name:T10
-T11	Condition 97 105	syndrome
-T12	Condition-Name 97 105	syndrome
-E11	Condition:T11 Name:T12
-T13	Condition 25 31	Ocular
-T14	Condition-Name 25 31	Ocular
-E13	Condition:T13 Name:T14
-T15	Condition 81 87	ocular
-T16	Condition-Name 81 87	ocular
-E15	Condition:T15 Name:T16
-T17	Condition 254 257	Sex
-T18	Condition-Name 254 257	Sex
-E17	Condition:T17 Name:T18
-T19	Condition 677 696	cerebral infarction
-T20	Condition-Name 677 696	cerebral infarction
-E19	Condition:T19 Name:T20
-T21	Language 623 626	MRI
-T22	Eq-Operator 738 744	within
-A1	Eq-Operator-Value T22 LTEQ
-T23	Eq-Operator 815 821	within
-A2	Eq-Operator-Value T23 LTEQ
-T24	Eq-Temporal-Unit 242 247	years
-A3	Eq-Temporal-Unit-Value T24 year
-T25	Eq-Temporal-Unit 747 753	months
-A4	Eq-Temporal-Unit-Value T25 month
-T26	Eq-Temporal-Unit 824 830	months
-A5	Eq-Temporal-Unit-Value T26 month
-T27	Eq-Operator 238 239	-
-A6	Eq-Operator-Value T27 BETWEEN
-T28	Eq-Value 236 238	50
-T29	Eq-Value 239 241	80
-T30	Eq-Value 745 746	3
-T31	Eq-Value 822 823	3
-T32	Eq-Comparison 738 753	within 3 months
-E20	Eq-Comparison:T32 Operator:T22 Temporal-Unit:T25 Value:T30
-T33	Eq-Comparison 815 830	within 3 months
-E21	Eq-Comparison:T33 Operator:T23 Temporal-Unit:T26 Value:T31
-T34	Eq-Comparison 236 239	50-
-E22	Eq-Comparison:T34 Operator:T27 Value:T28
+T1	Condition 25 49	Ocular ischemia syndrome
+E1	Condition:T1 Name:T33
+T2	Condition 81 105	ocular ischemia syndrome
+E2	Condition:T2 Name:T34
+T3	Age 112 115	Age
+E3	Age:T3
+T4	Condition 124 144	macular degeneration
+E4	Condition:T4 Name:T35
+T5	Age 192 195	age
+E5	Age:T5
+T6	Condition 204 224	macular degeneration
+E6	Condition:T6 Name:T36
+T7	Age 231 234	Age
+E7	Age:T7
+T8	Eq-Comparison 236 247	50-80 years
+E8	Eq-Comparison:T8 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
+T9	Procedure 336 366	Fundus fluorescein angiography
+E9	Procedure:T9 Name:T41
+T10	Condition 368 371	FFA
+E10	Condition:T10
+T11	Negation 389 392	not
+E11	Negation:T11
+T12	Procedure 412 428	refractive media
+E12	Procedure:T12 Name:T42
+T13	Condition 429 442	problems(such
+E13	Condition:T13
+T14	Condition 446 465	corneal leukoplakia
+E14	Condition:T14 Name:T43
+T15	Condition 474 482	cataract
+E15	Condition:T15 Name:T45
+T16	Condition 484 503	vitreous hemorrhage
+E16	Condition:T16 Name:T46
+T17	Contraindication 532 549	contraindications
+E17	Contraindication:T17
+T18	Condition 554 557	FFA
+E18	Condition:T18 Name:T47
+T19	Negation 577 583	unable
+E19	Negation:T19
+T20	Procedure 595 621	magnetic resonance rmaging
+E20	Procedure:T20 Name:T48
+T21	Procedure 623 626	MRI
+E21	Procedure:T21 Name:T49
+T22	Eq-Comparison 653 660	history
+E22	Eq-Comparison:T22 Temporal-Period:T50
+T23	Condition 664 672	bleeding
+E23	Condition:T23 Name:T51
+T24	Or 673 676	and
+E24	Or:T24
+T25	Condition 677 696	cerebral infarction
+E25	Condition:T25 Name:T52
+T26	Eq-Comparison 719 726	history
+E26	Eq-Comparison:T26 Temporal-Period:T53
+T27	Procedure 730 737	surgery
+E27	Procedure:T27 Name:T54
+T28	Eq-Comparison 738 753	within 3 months
+E28	Eq-Comparison:T28 Operator:T55 Value:T56 Temporal-Unit:T57
+T29	Other 793 798	other
+E29	Other:T29
+T30	Study 799 814	clinical trials
+E30	Study:T30
+T31	Eq-Comparison 815 830	within 3 months
+E31	Eq-Comparison:T31 Operator:T58 Value:T59 Temporal-Unit:T60
+T32	Study 892 897	trial
+E32	Study:T32
+T33	Condition-Name 25 49	Ocular ischemia syndrome
+T34	Condition-Name 81 105	ocular ischemia syndrome
+T35	Condition-Name 124 144	macular degeneration
+T36	Condition-Name 204 224	macular degeneration
+T37	Eq-Value 236 238	50
+T38	Eq-Operator 238 239	-
+A1	Eq-Operator-Value T38 BETWEEN
+T39	Eq-Value 239 241	80
+T40	Eq-Temporal-Unit 242 247	years
+A2	Eq-Temporal-Unit-Value T40 year
+T41	Procedure-Name 336 366	Fundus fluorescein angiography
+T42	Procedure-Name 412 428	refractive media
+T43	Condition-Name 446 465	corneal leukoplakia
+T44	Severity 467 473	severe
+A3	Severity-Value T44 severe
+T45	Condition-Name 474 482	cataract
+T46	Condition-Name 484 503	vitreous hemorrhage
+T47	Condition-Name 554 557	FFA
+T48	Procedure-Name 595 621	magnetic resonance rmaging
+T49	Procedure-Name 623 626	MRI
+T50	Eq-Temporal-Period 653 660	history
+A4	Eq-Temporal-Period-Value T50 past
+T51	Condition-Name 664 672	bleeding
+T52	Condition-Name 677 696	cerebral infarction
+T53	Eq-Temporal-Period 719 726	history
+A5	Eq-Temporal-Period-Value T53 past
+T54	Procedure-Name 730 737	surgery
+T55	Eq-Operator 738 744	within
+A6	Eq-Operator-Value T55 LTEQ
+T56	Eq-Value 745 746	3
+T57	Eq-Temporal-Unit 747 753	months
+A7	Eq-Temporal-Unit-Value T57 month
+T58	Eq-Operator 815 821	within
+A8	Eq-Operator-Value T58 LTEQ
+T59	Eq-Value 822 823	3
+T60	Eq-Temporal-Unit 824 830	months
+A9	Eq-Temporal-Unit-Value T60 month

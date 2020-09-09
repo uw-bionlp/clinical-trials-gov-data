@@ -1,44 +1,158 @@
-T1	Procedure 816 833	cervical cerclage
-T2	Procedure-Name 816 833	cervical cerclage
-E1	Procedure:T1 Name:T2
-T3	Condition 755 771	chorioamnionitis
-T4	Condition-Name 755 771	chorioamnionitis
-E3	Condition:T3 Name:T4
-T5	Condition 556 571	Acute vaginitis
-T6	Condition-Name 556 571	Acute vaginitis
-E5	Condition:T5 Name:T6
-T7	Condition 575 585	cervicitis
-T8	Condition-Name 575 585	cervicitis
-E7	Condition:T7 Name:T8
-T9	Procedure 777 785	Cerclage
-T10	Procedure-Name 777 785	Cerclage
-E9	Procedure:T9 Name:T10
-T11	Condition 405 411	vagina
-T12	Condition-Name 405 411	vagina
-E11	Condition:T11 Name:T12
-T13	Condition 54 58	mono
-T14	Condition-Name 54 58	mono
-E13	Condition:T13 Name:T14
-T15	Eq-Operator 137 138	≥
-A1	Eq-Operator-Value T15 GTEQ
-T16	Eq-Operator 166 167	≤
-A2	Eq-Operator-Value T16 LTEQ
-T17	Eq-Temporal-Unit 100 105	weeks
-A3	Eq-Temporal-Unit-Value T17 week
-T18	Eq-Unit 170 172	mm
-T19	Age 133 136	age
-E14	Age:T19
-T20	Eq-Operator 90 92	to
-A4	Eq-Operator-Value T20 BETWEEN
-T21	Eq-Value 83 85	16
-T22	Eq-Value 86 87	0
-T23	Eq-Value 93 95	22
-T24	Eq-Value 96 97	0
-T25	Eq-Value 138 140	18
-T26	Eq-Value 167 169	28
-T27	Eq-Comparison 137 140	≥18
-E15	Eq-Comparison:T27 Operator:T15 Value:T25
-T28	Eq-Comparison 166 172	≤28 mm
-E16	Eq-Comparison:T28 Operator:T16 Unit:T18 Value:T26
-T29	Eq-Comparison 90 95	to 22
-E17	Eq-Comparison:T29 Operator:T20 Value:T23
+T1	And 31 35	with
+E1	And:T1
+T2	Modifier 38 42	twin
+E2	Modifier:T2
+T3	Condition 43 52	pregnancy
+E3	Condition:T3 Name:T57
+T4	Modifier 54 59	mono-
+E4	Modifier:T4
+T5	Or 60 63	and
+E5	Or:T5
+T6	Modifier 64 76	di-chorionic
+E6	Modifier:T6
+T7	Eq-Comparison 80 105	- 16 0/7 to 22 0/7 weeks
+E7	Eq-Comparison:T7 Value:T59 Unit:T60 Operator:T61 Value:T62 Unit:T63 Temporal-Unit:T64
+T8	Observation 109 118	gestation
+E8	Observation:T8 Name:T65
+T9	Age 133 136	age
+E9	Age:T9
+T10	Eq-Comparison 137 144	≥18 yrs
+E10	Eq-Comparison:T10 Operator:T66 Value:T67
+T11	Observation 150 165	Cervical length
+E11	Observation:T11 Name:T68
+T12	Eq-Comparison 166 172	≤28 mm
+E12	Eq-Comparison:T12 Operator:T69 Unit:T70
+T13	Negation 200 203	Not
+E13	Negation:T13
+T14	Other 221 228	another
+E14	Other:T14
+T15	Condition 229 236	preterm
+E15	Condition:T15
+T16	Birth 237 242	birth
+E16	Birth:T16
+T17	Study 243 248	study
+E17	Study:T17
+T18	Condition 291 308	Uterine anomalies
+E18	Condition:T18 Name:T71
+T19	Condition 314 331	Cervical dilation
+E19	Condition:T19 Name:T72
+T20	And 332 336	with
+E20	And:T20
+T21	Condition 337 363	visible amniotic membranes
+E21	Condition:T21 Name:T73
+T22	Or 364 366	or
+E22	Or:T22
+T23	Condition 367 395	amniotic membranes prolapsed
+E23	Condition:T23 Name:T74
+T24	Modifier 396 411	into the vagina
+E24	Modifier:T24
+T25	Modifier 417 429	Twin-to-twin
+E25	Modifier:T25
+T26	Condition 430 450	transfusion syndrome
+E26	Condition:T26 Name:T75
+T27	Condition 456 466	Stillbirth
+E27	Condition:T27 Name:T76
+T28	Or 467 469	or
+E28	Or:T28
+T29	Modifier 470 475	major
+E29	Modifier:T29
+T30	Condition 476 500	congenital abnormalities
+E30	Condition:T30 Name:T78
+T31	Condition 515 520	fetus
+E31	Condition:T31 Name:T79
+T32	Procedure 533 550	vaginal discharge
+E32	Procedure:T32
+T33	Condition 562 571	vaginitis
+E33	Condition:T33 Name:T83
+T34	Or 572 574	or
+E34	Or:T34
+T35	Modifier 575 585	cervicitis
+E35	Modifier:T35
+T36	Modifier 588 598	- Vaginal
+E36	Modifier:T36
+T37	Condition 599 607	bleeding
+E37	Condition:T37
+T38	Condition 613 630	Placental preavia
+E38	Condition:T38 Name:T86
+T39	Condition 636 648	Vasa preavia
+E39	Condition:T39 Name:T87
+T40	Condition 654 671	Premature rupture
+E40	Condition:T40
+T41	Modifier 675 684	membranes
+E41	Modifier:T41
+T42	Modifier 687 699	- Premature
+E42	Modifier:T42
+T43	Condition 700 705	labor
+E43	Condition:T43
+T44	And 710 711	/
+E44	And:T44
+T45	Negation 711 718	without
+E45	Negation:T45
+T46	Condition 719 736	ruptured membrane
+E46	Condition:T46 Name:T90
+T47	Assertion 742 751	Suspicion
+E47	Assertion:T47
+A1	Assertion-Type-Value E47 possible
+T48	Condition 755 771	chorioamnionitis
+E48	Condition:T48 Name:T91
+T49	Condition 774 785	- Cerclage
+E49	Condition:T49
+T50	Modifier 789 794	place
+E50	Modifier:T50
+T51	Or 795 797	or
+E51	Or:T51
+T52	Negation 798 804	unable
+E52	Negation:T52
+T53	Procedure 816 833	cervical cerclage
+E53	Procedure:T53
+T54	Or 834 836	or
+E54	Or:T54
+T55	Modifier 837 844	pessary
+E55	Modifier:T55
+T56	Life-Stage-And-Gender 25 30	Women
+A2	Life-Stage-And-Gender-Type T56 female
+T57	Condition-Name 43 52	pregnancy
+T58	Observation-Name 67 76	chorionic
+A3	Observation-Type-Value T58 lab
+T59	Eq-Value 83 85	16
+T60	Eq-Unit 86 89	0/7
+T61	Eq-Operator 90 92	to
+A4	Eq-Operator-Value T61 BETWEEN
+T62	Eq-Value 93 95	22
+T63	Eq-Unit 96 99	0/7
+T64	Eq-Temporal-Unit 100 105	weeks
+A5	Eq-Temporal-Unit-Value T64 week
+T65	Observation-Name 109 118	gestation
+T66	Eq-Operator 137 140	≥18
+A6	Eq-Operator-Value T66 GTEQ
+T67	Eq-Value 141 144	yrs
+T68	Observation-Name 150 165	Cervical length
+A7	Observation-Type-Value T68 measurement
+T69	Eq-Operator 166 169	≤28
+A8	Eq-Operator-Value T69 GTEQ
+T70	Eq-Unit 170 172	mm
+T71	Condition-Name 291 308	Uterine anomalies
+T72	Condition-Name 314 331	Cervical dilation
+T73	Condition-Name 345 363	amniotic membranes
+T74	Condition-Name 367 395	amniotic membranes prolapsed
+T75	Condition-Name 430 450	transfusion syndrome
+T76	Condition-Name 456 466	Stillbirth
+T77	Severity 470 475	major
+A9	Severity-Value T77 severe
+T78	Condition-Name 476 500	congenital abnormalities
+T79	Condition-Name 515 520	fetus
+T80	Severity 526 532	Severe
+A10	Severity-Value T80 severe
+T81	Condition-Name 533 550	vaginal discharge
+T82	Severity 556 561	Acute
+A11	Severity-Value T82 severe
+T83	Condition-Name 562 571	vaginitis
+T84	Condition-Name 575 585	cervicitis
+T85	Condition-Name 591 607	Vaginal bleeding
+T86	Condition-Name 613 630	Placental preavia
+T87	Condition-Name 636 648	Vasa preavia
+T88	Condition-Name 664 684	rupture of membranes
+T89	Condition-Name 690 705	Premature labor
+T90	Condition-Name 719 736	ruptured membrane
+T91	Condition-Name 755 771	chorioamnionitis
+T92	Condition-Name 816 833	cervical cerclage

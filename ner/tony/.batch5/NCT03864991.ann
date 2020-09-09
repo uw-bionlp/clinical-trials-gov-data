@@ -1,18 +1,63 @@
-T1	Life-Stage-And-Gender 364 371	females
-A1	Life-Stage-And-Gender-Type T1 male
-T2	Eq-Operator 52 53	>
-A2	Eq-Operator-Value T2 GT
-T3	Eq-Operator 82 83	≥
-A3	Eq-Operator-Value T3 GTEQ
-T4	Eq-Temporal-Unit 56 62	months
-A4	Eq-Temporal-Unit-Value T4 month
-T5	Eq-Temporal-Unit 87 92	years
-A5	Eq-Temporal-Unit-Value T5 year
-T6	Age 78 81	age
-E1	Age:T6
-T7	Eq-Value 54 55	6
-T8	Eq-Value 84 86	15
-T9	Eq-Comparison 52 62	> 6 months
-E2	Eq-Comparison:T9 Operator:T2 Temporal-Unit:T4 Value:T7
-T10	Eq-Comparison 82 92	≥ 15 years
-E3	Eq-Comparison:T10 Operator:T3 Temporal-Unit:T5 Value:T8
+T1	Observation 48 51	T1D
+E1	Observation:T1 Name:T19
+T2	Eq-Comparison 52 62	> 6 months
+E2	Eq-Comparison:T2 Operator:T20 Value:T21 Temporal-Unit:T22
+T3	Age 78 81	age
+E3	Age:T3
+T4	Eq-Comparison 82 83	≥
+E4	Eq-Comparison:T4 Operator:T23
+T5	Eq-Comparison 84 92	15 years
+E5	Eq-Comparison:T5 Value:T24 Temporal-Unit:T25
+T6	Family-Member 151 157	mother
+E6	Family-Member:T6
+A1	Family-Member-Type E6 parent
+T7	Or 158 160	or
+E7	Or:T7
+T8	Eq-Comparison 334 336	on
+E8	Eq-Comparison:T8 Temporal-Period:T27
+T9	Drug 337 344	insulin
+E9	Drug:T9 Name:T28
+T10	Condition 355 363	Pregnant
+E10	Condition:T10 Name:T29
+T11	Condition 391 415	neurodevelopmental delay
+E11	Condition:T11 Name:T31
+T12	Or 416 418	or
+E12	Or:T12
+T13	Condition 419 430	thalassemia
+E13	Condition:T13 Name:T32
+T14	Eq-Comparison 444 453	currently
+E14	Eq-Comparison:T14 Temporal-Period:T33
+T15	Procedure 482 490	e-device
+E15	Procedure:T15
+T16	Observation 495 505	step count
+E16	Observation:T16
+T17	Or 506 508	or
+E17	Or:T17
+T18	Observation 509 526	physical activity
+E18	Observation:T18 Name:T34
+T19	Observation-Name 48 51	T1D
+A2	Observation-Type-Value T19 lab
+T20	Eq-Operator 52 53	>
+A3	Eq-Operator-Value T20 GT
+T21	Eq-Value 54 55	6
+T22	Eq-Temporal-Unit 56 62	months
+A4	Eq-Temporal-Unit-Value T22 month
+T23	Eq-Operator 82 83	≥
+A5	Eq-Operator-Value T23 GTEQ
+T24	Eq-Value 84 86	15
+T25	Eq-Temporal-Unit 87 92	years
+A6	Eq-Temporal-Unit-Value T25 year
+T26	Eq-Temporal-Period 169 174	using
+A7	Eq-Temporal-Period-Value T26 present
+T27	Eq-Temporal-Period 334 336	on
+A8	Eq-Temporal-Period-Value T27 present
+T28	Drug-Name 337 344	insulin
+T29	Condition-Name 355 363	Pregnant
+T30	Life-Stage-And-Gender 364 371	females
+A9	Life-Stage-And-Gender-Type T30 female
+T31	Condition-Name 391 415	neurodevelopmental delay
+T32	Condition-Name 419 430	thalassemia
+T33	Eq-Temporal-Period 444 453	currently
+A10	Eq-Temporal-Period-Value T33 present
+T34	Observation-Name 509 526	physical activity
+A11	Observation-Type-Value T34 social-habit

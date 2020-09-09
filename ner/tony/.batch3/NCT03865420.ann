@@ -1,39 +1,94 @@
-T1	Condition 123 131	dementia
-T2	Condition-Name 123 131	dementia
-E1	Condition:T1 Name:T2
-T3	Language 25 28	Men
-T4	Condition 100 103	ALS
-T5	Condition-Name 100 103	ALS
-E4	Condition:T4 Name:T5
-T6	Condition 191 194	ALS
-T7	Condition-Name 191 194	ALS
-E6	Condition:T6 Name:T7
-T8	Condition 231 234	ALS
-T9	Condition-Name 231 234	ALS
-E8	Condition:T8 Name:T9
-T10	Condition 327 330	ALS
-T11	Condition-Name 327 330	ALS
-E10	Condition:T10 Name:T11
-T12	Procedure 546 556	procedures
-T13	Procedure-Name 546 556	procedures
-E12	Procedure:T12 Name:T13
-T14	Procedure 620 630	procedures
-T15	Procedure-Name 620 630	procedures
-E14	Procedure:T14 Name:T15
-T16	Condition 761 772	hepatitis B
-T17	Condition-Name 761 772	hepatitis B
-E16	Condition:T16 Name:T17
-T18	Condition 784 795	hepatitis C
-T19	Condition-Name 784 795	hepatitis C
-E18	Condition:T18 Name:T19
-T20	Eq-Temporal-Unit 529 535	months
-A1	Eq-Temporal-Unit-Value T20 month
-T21	Age 63 67	aged
-E19	Age:T21
-T22	Eq-Operator 525 526	-
-A2	Eq-Operator-Value T22 BETWEEN
-T23	Eq-Value 68 70	18
-T24	Eq-Value 524 525	6
-T25	Eq-Value 526 528	24
-T26	Eq-Comparison 524 526	6-
-E20	Eq-Comparison:T26 Operator:T22 Value:T24
+T1	Or 29 31	or
+E1	Or:T1
+T2	Or 50 52	or
+E2	Or:T2
+T3	Age 63 67	aged
+E3	Age:T3
+T4	Eq-Comparison 68 79	18 or older
+E4	Eq-Comparison:T4 Value:T32 Operator:T33
+T5	Negation 85 87	No
+E5	Negation:T5
+T6	Assertion 88 96	symptoms
+E6	Assertion:T6
+A1	Assertion-Type-Value E6 possible
+T7	Condition 100 103	ALS
+E7	Condition:T7 Name:T34
+T8	Or 104 106	or
+E8	Or:T8
+T9	Modifier 107 122	fronto-temporal
+E9	Modifier:T9
+T10	Condition 123 131	dementia
+E10	Condition:T10
+T11	Temporal-Connection 132 134	at
+E11	Temporal-Connection:T11
+A2	Temporal-Connection-Type-Value E11 during
+T12	Study 135 145	enrollment
+E12	Study:T12
+T13	Eq-Comparison 158 163	first
+E13	Eq-Comparison:T13
+T14	Condition 191 194	ALS
+E14	Condition:T14 Name:T37
+T15	Condition 231 257	ALS-spectrum gene mutation
+E15	Condition:T15 Name:T38 Name:T39
+T16	Or 259 261	or
+E16	Or:T16
+T17	Procedure 279 294	genetic testing
+E17	Procedure:T17
+T18	And 295 298	and
+E18	And:T18
+T19	Condition 327 330	ALS
+E19	Condition:T19 Name:T43
+T20	Condition 331 353	spectrum gene mutation
+E20	Condition:T20 Name:T44
+T21	Assertion 360 370	Willing to
+E21	Assertion:T21
+A3	Assertion-Type-Value E21 hypothetical
+T22	Procedure 379 394	genetic testing
+E22	Procedure:T22 Name:T45
+T23	Assertion 400 406	option
+E23	Assertion:T23
+A4	Assertion-Type-Value E23 hypothetical
+T24	Assertion 447 457	Willing to
+E24	Assertion:T24
+A5	Assertion-Type-Value E24 hypothetical
+T25	Eq-Comparison 518 535	every 6-24 months
+E25	Eq-Comparison:T25 Value:T46 Operator:T47 Value:T48 Temporal-Unit:T49
+T26	Study 540 545	study
+E26	Study:T26
+T27	Condition 746 749	HIV
+E27	Condition:T27 Name:T50
+T28	Condition 761 770	hepatitis
+E28	Condition:T28 Name:T51
+T29	Condition 784 793	hepatitis
+E29	Condition:T29
+T30	Life-Stage-And-Gender 25 28	Men
+A6	Life-Stage-And-Gender-Type T30 male
+T31	Life-Stage-And-Gender 32 37	women
+A7	Life-Stage-And-Gender-Type T31 female
+T32	Eq-Value 68 70	18
+T33	Eq-Operator 71 79	or older
+A8	Eq-Operator-Value T33 GTEQ
+T34	Condition-Name 100 103	ALS
+T35	Condition-Name 107 113	fronto
+T36	Condition-Name 114 131	temporal dementia
+T37	Condition-Name 191 194	ALS
+T38	Condition-Name 231 234	ALS
+T39	Condition-Name 235 257	spectrum gene mutation
+T40	Observation-Name 279 294	genetic testing
+A9	Observation-Type-Value T40 lab
+T41	Polarity 304 310	tested
+A10	Polarity-Value T41 positive
+T42	Polarity 311 319	positive
+A11	Polarity-Value T42 positive
+T43	Condition-Name 327 330	ALS
+T44	Condition-Name 331 353	spectrum gene mutation
+T45	Procedure-Name 379 394	genetic testing
+T46	Eq-Value 524 525	6
+T47	Eq-Operator 525 526	-
+A12	Eq-Operator-Value T47 BETWEEN
+T48	Eq-Value 526 528	24
+T49	Eq-Temporal-Unit 529 535	months
+A13	Eq-Temporal-Unit-Value T49 month
+T50	Condition-Name 746 749	HIV
+T51	Condition-Name 761 770	hepatitis
+T52	Condition-Name 784 795	hepatitis C

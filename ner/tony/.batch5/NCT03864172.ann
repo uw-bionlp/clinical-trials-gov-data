@@ -1,25 +1,118 @@
-T1	Life-Stage-And-Gender 184 189	girls
-A1	Life-Stage-And-Gender-Type T1 boy
-T2	Life-Stage-And-Gender 209 213	boys
-A2	Life-Stage-And-Gender-Type T2 boy
-T3	Condition 494 513	pancreatic diseases
-T4	Condition-Name 494 513	pancreatic diseases
-E3	Condition:T3 Name:T4
-T5	Condition 428 446	metabolic diseases
-T6	Condition-Name 428 446	metabolic diseases
-E5	Condition:T5 Name:T6
-T7	Condition 533 548	hyperthyroidism
-T8	Condition-Name 533 548	hyperthyroidism
-E7	Condition:T7 Name:T8
-T9	Condition 466 474	diabetes
-T10	Condition-Name 466 474	diabetes
-E9	Condition:T9 Name:T10
-T11	Condition 584 591	anaemia
-T12	Condition-Name 584 591	anaemia
-E11	Condition:T11 Name:T12
-T13	Procedure 611 618	therapy
-T14	Procedure-Name 611 618	therapy
-E13	Procedure:T13 Name:T14
-T15	Life-Stage-And-Gender 215 220	Girls
-A3	Life-Stage-And-Gender-Type T15 boy
-T16	Eq-Value 150 151	2
+T1	Condition 49 56	healthy
+E1	Condition:T1 Name:T45
+T2	Procedure 74 101	standard medical assessment
+E2	Procedure:T2
+T3	Modifier 105 113	physical
+E3	Modifier:T3
+T4	Or 114 117	and
+E4	Or:T4
+T5	Procedure 118 131	mental health
+E5	Procedure:T5
+T6	Eq-Comparison 144 151	stage 2
+E6	Eq-Comparison:T6
+T7	Procedure 161 179	breast development
+E7	Procedure:T7
+T8	Or 191 194	and
+E8	Or:T8
+T9	Modifier 195 205	pubic hair
+E9	Modifier:T9
+T10	Eq-Comparison 361 368	History
+E10	Eq-Comparison:T10 Temporal-Period:T47
+T11	Condition 380 398	medical conditions
+E11	Condition:T11
+T12	Modifier 407 417	intestinal
+E12	Modifier:T12
+T13	Or 418 420	or
+E13	Or:T13
+T14	Condition 428 446	metabolic diseases
+E14	Condition:T14 Name:T50
+T15	Condition 448 457	disorders
+E15	Condition:T15 Name:T51
+T16	Condition 466 474	diabetes
+E16	Condition:T16 Name:T52
+T17	Modifier 476 481	renal
+E17	Modifier:T17
+T18	Modifier 483 490	hepatic
+E18	Modifier:T18
+T19	Or 491 493	or
+E19	Or:T19
+T20	Modifier 494 504	pancreatic
+E20	Modifier:T20
+T21	Condition 505 513	diseases
+E21	Condition:T21
+T22	Condition 515 524	disorders
+E22	Condition:T22 Name:T54
+T23	Condition 526 531	ulcer
+E23	Condition:T23
+T24	Condition 533 548	hyperthyroidism
+E24	Condition:T24 Name:T55
+T25	Condition 550 560	malignance
+E25	Condition:T25 Name:T56
+T26	Condition 562 582	chronic malnutrition
+E26	Condition:T26 Name:T57
+T27	Condition 584 591	anaemia
+E27	Condition:T27 Name:T58
+T28	Eq-Comparison 597 604	History
+E28	Eq-Comparison:T28 Temporal-Period:T59
+T29	Or 605 607	or
+E29	Or:T29
+T30	Eq-Comparison 608 610	on
+E30	Eq-Comparison:T30 Temporal-Period:T60
+T31	Procedure 611 618	therapy
+E31	Procedure:T31 Name:T61
+T32	Drug 624 634	medication
+E32	Drug:T32
+T33	Condition 659 674	bone metabolism
+E33	Condition:T33
+T34	Drug 683 691	steroids
+E34	Drug:T34 Name:T63
+T35	Drug 693 701	hormones
+E35	Drug:T35 Name:T64
+T36	Drug 703 712	diuretics
+E36	Drug:T36 Name:T65
+T37	Drug 714 723	cortisone
+E37	Drug:T37 Name:T66
+T38	Or 724 726	or
+E38	Or:T38
+T39	Drug 727 750	anti-seizure medication
+E39	Drug:T39 Name:T67
+T40	Eq-Comparison 756 762	Taking
+E40	Eq-Comparison:T40
+T41	Procedure 777 800	nutritional supplements
+E41	Procedure:T41
+T42	And 801 804	and
+E42	And:T42
+T43	Assertion 805 814	unwilling
+E43	Assertion:T43
+A1	Assertion-Type-Value E43 hypothetical
+T44	Study 831 836	study
+E44	Study:T44
+T45	Condition-Name 49 56	healthy
+T46	Condition-Name 137 149	Tanner stage
+T47	Eq-Temporal-Period 361 368	History
+A2	Eq-Temporal-Period-Value T47 past
+T48	Severity 372 379	serious
+A3	Severity-Value T48 severe
+T49	Severity 421 427	severe
+A4	Severity-Value T49 severe
+T50	Condition-Name 428 446	metabolic diseases
+T51	Condition-Name 448 457	disorders
+T52	Condition-Name 466 474	diabetes
+T53	Condition-Name 494 513	pancreatic diseases
+T54	Condition-Name 515 524	disorders
+T55	Condition-Name 533 548	hyperthyroidism
+T56	Condition-Name 550 560	malignance
+T57	Condition-Name 570 582	malnutrition
+T58	Condition-Name 584 591	anaemia
+T59	Eq-Temporal-Period 597 604	History
+A5	Eq-Temporal-Period-Value T59 past
+T60	Eq-Temporal-Period 608 610	on
+A6	Eq-Temporal-Period-Value T60 present
+T61	Procedure-Name 611 618	therapy
+T62	Drug-Name 659 674	bone metabolism
+T63	Drug-Name 683 691	steroids
+T64	Drug-Name 693 701	hormones
+T65	Drug-Name 703 712	diuretics
+T66	Drug-Name 714 723	cortisone
+T67	Drug-Name 727 750	anti-seizure medication
+T68	Drug-Name 777 800	nutritional supplements

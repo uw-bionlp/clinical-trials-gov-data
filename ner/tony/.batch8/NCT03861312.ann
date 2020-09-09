@@ -1,22 +1,88 @@
-T1	Language 68 71	men
-T2	Condition 303 321	rheumatic diseases
-T3	Condition-Name 303 321	rheumatic diseases
-E2	Condition:T2 Name:T3
-T4	Procedure 368 382	neck surgeries
-T5	Procedure-Name 368 382	neck surgeries
-E4	Procedure:T4 Name:T5
-T6	Condition 358 366	syndrome
-T7	Condition-Name 358 366	syndrome
-E6	Condition:T6 Name:T7
-T8	Condition 435 441	vision
-T9	Condition-Name 435 441	vision
-E8	Condition:T8 Name:T9
-T10	Eq-Temporal-Unit 106 111	years
-A1	Eq-Temporal-Unit-Value T10 year
-T11	Eq-Temporal-Unit 184 190	months
-A2	Eq-Temporal-Unit-Value T11 month
-T12	Age 82 86	aged
-E9	Age:T12
-T13	Eq-Value 95 97	18
-T14	Eq-Value 103 105	65
-T15	Eq-Value 182 183	6
+T1	Or 72 75	and
+E1	Or:T1
+T2	Age 82 86	aged
+E2	Age:T2
+T3	Eq-Comparison 87 98	between 18-
+E3	Eq-Comparison:T3 Operator:T33 Value:T34
+T4	And 99 102	and
+E4	And:T4
+T5	Modifier 136 148	Non-Specific
+E5	Modifier:T5
+T6	Modifier 149 161	Chronic Neck
+E6	Modifier:T6
+T7	Condition 162 166	Pain
+E7	Condition:T7 Name:T35
+T8	And 167 171	with
+E8	And:T8
+T9	Eq-Comparison 172 190	more than 6 months
+E9	Eq-Comparison:T9 Operator:T36 Value:T37 Temporal-Unit:T38
+T10	Modifier 207 211	neck
+E10	Modifier:T10
+T11	Condition 212 216	pain
+E11	Condition:T11 Name:T39
+T12	Condition 303 321	rheumatic diseases
+E12	Condition:T12 Name:T40
+T13	Condition 323 338	cervical hernia
+E13	Condition:T13 Name:T41
+T14	Condition 340 366	cervical whiplash syndrome
+E14	Condition:T14 Name:T42
+T15	Procedure 368 382	neck surgeries
+E15	Procedure:T15 Name:T43
+T16	Or 383 385	or
+E16	Or:T16
+T17	Eq-Comparison 386 393	history
+E17	Eq-Comparison:T17 Temporal-Period:T44
+T18	Procedure 397 408	arthrodesis
+E18	Procedure:T18 Name:T45
+T19	Modifier 413 421	systemic
+E19	Modifier:T19
+T20	Condition 422 430	diseases
+E20	Condition:T20
+T21	Condition 432 433	c
+E21	Condition:T21
+T22	Condition 435 441	vision
+E22	Condition:T22
+T23	Modifier 443 450	hearing
+E23	Modifier:T23
+T24	Or 451 453	or
+E24	Or:T24
+T25	Condition 454 473	vestibular problems
+E25	Condition:T25 Name:T46
+T26	Condition 485 491	trauma
+E26	Condition:T26 Name:T48
+T27	Or 492 494	or
+E27	Or:T27
+T28	Modifier 495 502	traffic
+E28	Modifier:T28
+T29	Condition 503 511	accident
+E29	Condition:T29
+T30	Modifier 543 556	cervical area
+E30	Modifier:T30
+T31	Life-Stage-And-Gender 68 71	men
+A1	Life-Stage-And-Gender-Type T31 male
+T32	Life-Stage-And-Gender 76 81	women
+A2	Life-Stage-And-Gender-Type T32 female
+T33	Eq-Operator 87 94	between
+A3	Eq-Operator-Value T33 BETWEEN
+T34	Eq-Value 95 98	18-
+T35	Condition-Name 162 166	Pain
+T36	Eq-Operator 172 181	more than
+A4	Eq-Operator-Value T36 GT
+T37	Eq-Value 182 183	6
+T38	Eq-Temporal-Unit 184 190	months
+A5	Eq-Temporal-Unit-Value T38 month
+T39	Condition-Name 212 216	pain
+T40	Condition-Name 303 321	rheumatic diseases
+T41	Condition-Name 323 338	cervical hernia
+T42	Condition-Name 340 366	cervical whiplash syndrome
+T43	Procedure-Name 373 382	surgeries
+T44	Eq-Temporal-Period 386 393	history
+A6	Eq-Temporal-Period-Value T44 past
+T45	Procedure-Name 397 408	arthrodesis
+T46	Condition-Name 454 473	vestibular problems
+T47	Severity 478 484	Severe
+A7	Severity-Value T47 severe
+T48	Condition-Name 485 491	trauma
+T49	Condition-Name 495 511	traffic accident
+T50	Stability 529 535	impact
+A8	Stability-Value T50 change

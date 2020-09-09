@@ -1,27 +1,140 @@
-T1	Language 202 205	MRI
-T2	Procedure 538 548	procedures
-T3	Procedure-Name 538 548	procedures
-E2	Procedure:T2 Name:T3
-T4	Condition 603 617	breast feeding
-T5	Condition-Name 603 617	breast feeding
-E4	Condition:T4 Name:T5
-T6	Life-Stage-And-Gender 575 582	Females
-A1	Life-Stage-And-Gender-Type T6 male
-T7	Condition 886 894	disorder
-T8	Condition-Name 886 894	disorder
-E7	Condition:T7 Name:T8
-T9	Eq-Operator 46 47	≥
-A2	Eq-Operator-Value T9 GTEQ
-T10	Eq-Operator 150 151	≥
-A3	Eq-Operator-Value T10 GTEQ
-T11	Eq-Temporal-Unit 51 56	years
-A4	Eq-Temporal-Unit-Value T11 year
-T12	Eq-Unit 156 158	cm
-T13	Age 60 63	age
-E8	Age:T13
-T14	Eq-Value 48 50	18
-T15	Eq-Value 152 153	1
-T16	Eq-Comparison 46 56	≥ 18 years
-E9	Eq-Comparison:T16 Operator:T9 Temporal-Unit:T11 Value:T14
-T17	Eq-Comparison 150 153	≥ 1
-E10	Eq-Comparison:T17 Operator:T10 Value:T15
+T1	Eq-Comparison 46 56	≥ 18 years
+E1	Eq-Comparison:T1 Operator:T49 Value:T50 Temporal-Unit:T51
+T2	Age 60 63	age
+E2	Age:T2 
+T3	Or 75 77	or
+E3	Or:T3 
+T4	Assertion 78 87	suspected
+E4	Assertion:T4 
+A1	Assertion-Type-Value E4 possible
+T5	Modifier 88 95	primary
+E5	Modifier:T5 
+T6	Or 96 98	or
+E6	Or:T6 
+T7	Modifier 99 116	metastatic breast
+E7	Modifier:T7 
+T8	Condition 117 123	cancer
+E8	Condition:T8 Name:T52
+T9	Eq-Comparison 130 142	At least one
+E9	Eq-Comparison:T9 Operator:T53 Value:T54
+T10	Condition 143 149	lesion
+E10	Condition:T10 
+T11	Eq-Comparison 150 158	≥ 1.5 cm
+E11	Eq-Comparison:T11 Operator:T56 Value:T57 Unit:T58
+T12	Procedure 175 191	standard imaging
+E12	Procedure:T12 Name:T59
+T13	Procedure 198 200	CT
+E13	Procedure:T13 Name:T60
+T14	Procedure 202 205	MRI
+E14	Procedure:T14 Name:T61
+T15	Procedure 207 216	mammogram
+E15	Procedure:T15 Name:T62
+T16	Procedure 218 228	ultrasound
+E16	Procedure:T16 Name:T63
+T17	Procedure 230 237	FDG-PET
+E17	Procedure:T17 Name:T64
+T18	Or 237 238	/
+E18	Or:T18 
+T19	Procedure 238 240	CT
+E19	Procedure:T19 Name:T65
+T20	Procedure 252 267	type of imaging
+E20	Procedure:T20 Name:T66
+T21	Assertion 271 282	required to
+E21	Assertion:T21 
+A2	Assertion-Type-Value E21 hypothetical
+T22	Condition 290 296	lesion
+E22	Condition:T22 Name:T67
+T23	Temporal-Connection 514 522	prior to
+E23	Temporal-Connection:T23 
+A3	Temporal-Connection-Type-Value E23 before
+T24	Study 523 528	study
+E24	Study:T24 
+T25	Procedure 538 548	procedures
+E25	Procedure:T25 
+T26	And 583 586	who
+E26	And:T26 
+T27	Condition 591 599	pregnant
+E27	Condition:T27 Name:T69
+T28	Or 600 602	or
+E28	Or:T28 
+T29	Condition 603 617	breast feeding
+E29	Condition:T29 Name:T70
+T30	Temporal-Connection 618 629	at the time
+E30	Temporal-Connection:T30 
+A4	Temporal-Connection-Type-Value E30 during
+T31	Study 633 642	screening
+E31	Study:T31 
+T32	Observation 646 666	urine pregnancy test
+E32	Observation:T32 Name:T71
+T33	Assertion 667 674	will be
+E33	Assertion:T33 
+A5	Assertion-Type-Value E33 hypothetical
+T34	Modifier 697 720	child-bearing potential
+E34	Modifier:T34 
+T35	Temporal-Connection 721 723	at
+E35	Temporal-Connection:T35 
+A6	Temporal-Connection-Type-Value E35 during
+T36	Study 724 733	screening
+E36	Study:T36 
+T37	Negation 740 749	Inability
+E37	Negation:T37 
+T38	Procedure 762 780	imaging procedures
+E38	Procedure:T38 Name:T74
+T39	Or 815 817	or
+E39	Or:T39 
+T40	Eq-Comparison 847 854	current
+E40	Eq-Comparison:T40 Temporal-Period:T75
+T41	Condition 855 872	medical condition
+E41	Condition:T41 
+T42	Condition 874 881	illness
+E42	Condition:T42 
+T43	Or 883 885	or
+E43	Or:T43 
+T44	Condition 886 894	disorder
+E44	Condition:T44 Name:T76
+T45	Or 933 939	and/or
+E45	Or:T45 
+T46	Condition 1010 1019	condition
+E46	Condition:T46 
+T47	Assertion 1025 1030	could
+E47	Assertion:T47 
+A7	Assertion-Type-Value E47 hypothetical
+T48	Study 1096 1101	study
+E48	Study:T48 
+T49	Eq-Operator 46 47	≥
+A8	Eq-Operator-Value T49 GTEQ
+T50	Eq-Value 48 50	18
+T51	Eq-Temporal-Unit 51 56	years
+A9	Eq-Temporal-Unit-Value T51 year
+T52	Condition-Name 117 123	cancer
+T53	Eq-Operator 130 138	At least
+A10	Eq-Operator-Value T53 GTEQ
+T54	Eq-Value 139 142	one
+T55	Observation-Name 143 149	lesion
+A11	Observation-Type-Value T55 measurement
+T56	Eq-Operator 150 151	≥
+A12	Eq-Operator-Value T56 GTEQ
+T57	Eq-Value 152 155	1.5
+T58	Eq-Unit 156 158	cm
+T59	Procedure-Name 175 191	standard imaging
+T60	Procedure-Name 198 200	CT
+T61	Procedure-Name 202 205	MRI
+T62	Procedure-Name 207 216	mammogram
+T63	Procedure-Name 218 228	ultrasound
+T64	Procedure-Name 230 233	FDG
+T65	Procedure-Name 238 240	CT
+T66	Procedure-Name 260 267	imaging
+T67	Condition-Name 290 296	lesion
+T68	Life-Stage-And-Gender 575 582	Females
+A13	Life-Stage-And-Gender-Type T68 female
+T69	Condition-Name 591 599	pregnant
+T70	Condition-Name 603 617	breast feeding
+T71	Observation-Name 646 666	urine pregnancy test
+A14	Observation-Type-Value T71 lab
+T72	Life-Stage-And-Gender 688 693	women
+A15	Life-Stage-And-Gender-Type T72 female
+T73	Condition-Name 697 720	child-bearing potential
+T74	Procedure-Name 762 780	imaging procedures
+T75	Eq-Temporal-Period 847 854	current
+A16	Eq-Temporal-Period-Value T75 present
+T76	Condition-Name 886 894	disorder

@@ -1,58 +1,188 @@
-T1	Condition 86 106	deep vein thrombosis
-T2	Condition-Name 86 106	deep vein thrombosis
-E1	Condition:T1 Name:T2
-T3	Condition 1320 1340	deep vein thrombosis
-T4	Condition-Name 1320 1340	deep vein thrombosis
-E3	Condition:T3 Name:T4
-T5	Procedure 902 917	anticoagulation
-T6	Procedure-Name 902 917	anticoagulation
-E5	Procedure:T5 Name:T6
-T7	Procedure 992 1007	anticoagulation
-T8	Procedure-Name 992 1007	anticoagulation
-E7	Procedure:T7 Name:T8
-T9	Procedure 890 901	Therapeutic
-T10	Procedure-Name 890 901	Therapeutic
-E9	Procedure:T9 Name:T10
-T11	Condition 538 547	pregnancy
-T12	Condition-Name 538 547	pregnancy
-E11	Condition:T11 Name:T12
-T13	Condition 388 396	syndrome
-T14	Condition-Name 388 396	syndrome
-E13	Condition:T13 Name:T14
-T15	Procedure 452 459	regimen
-T16	Procedure-Name 452 459	regimen
-E15	Procedure:T15 Name:T16
-T17	Condition 242 245	DVT
-T18	Condition-Name 242 245	DVT
-E17	Condition:T17 Name:T18
-T19	Condition 313 316	DVT
-T20	Condition-Name 313 316	DVT
-E19	Condition:T19 Name:T20
-T21	Condition 1342 1345	DVT
-T22	Condition-Name 1342 1345	DVT
-E21	Condition:T21 Name:T22
-T23	Eq-Operator 29 31	>=
-A1	Eq-Operator-Value T23 GTEQ
-T24	Eq-Operator 1130 1139	less than
-A2	Eq-Operator-Value T24 LT
-T25	Eq-Temporal-Unit 35 40	years
-A3	Eq-Temporal-Unit-Value T25 year
-T26	Eq-Temporal-Unit 880 884	days
-A4	Eq-Temporal-Unit-Value T26 day
-T27	Eq-Temporal-Unit 952 956	days
-A5	Eq-Temporal-Unit-Value T27 day
-T28	Eq-Temporal-Unit 1042 1046	days
-A6	Eq-Temporal-Unit-Value T28 day
-T29	Eq-Temporal-Unit 1142 1148	months
-A7	Eq-Temporal-Unit-Value T29 month
-T30	Age 25 28	Age
-E22	Age:T30
-T31	Eq-Value 32 34	18
-T32	Eq-Value 877 879	10
-T33	Eq-Value 932 934	48
-T34	Eq-Value 1022 1024	48
-T35	Eq-Value 1140 1141	3
-T36	Eq-Comparison 29 40	>= 18 years
-E23	Eq-Comparison:T36 Operator:T23 Temporal-Unit:T25 Value:T31
-T37	Eq-Comparison 1130 1148	less than 3 months
-E24	Eq-Comparison:T37 Operator:T24 Temporal-Unit:T29 Value:T35
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 29 40	>= 18 years
+E2	Eq-Comparison:T2 Operator:T60 Value:T61 Temporal-Unit:T62
+T3	Eq-Comparison 52 59	history
+E3	Eq-Comparison:T3 Temporal-Period:T63
+T4	Condition 86 106	deep vein thrombosis
+E4	Condition:T4 Name:T64
+T5	Modifier 114 124	lower limb
+E5	Modifier:T5
+T6	And 126 130	with
+E6	And:T6
+T7	Or 131 133	or
+E7	Or:T7
+T8	Negation 134 141	without
+E8	Negation:T8
+T9	Condition 142 160	pulmonary embolism
+E9	Condition:T9 Name:T65
+T10	Assertion 204 213	suspected
+E10	Assertion:T10
+A1	Assertion-Type-Value E10 possible
+T11	Modifier 220 241	recurrent ipsilateral
+E11	Modifier:T11
+T12	Condition 242 245	DVT
+E12	Condition:T12
+T13	Modifier 253 263	lower limb
+E13	Modifier:T13
+T14	Assertion 291 299	symptoms
+E14	Assertion:T14
+A2	Assertion-Type-Value E14 possible
+T15	Assertion 304 309	signs
+E15	Assertion:T15
+A3	Assertion-Type-Value E15 possible
+T16	Condition 313 316	DVT
+E16	Condition:T16 Name:T68
+T17	Or 317 319	or
+E17	Or:T17
+T18	Assertion 336 344	symptoms
+E18	Assertion:T18
+A4	Assertion-Type-Value E18 possible
+T19	And 345 348	and
+E19	And:T19
+T20	Assertion 349 354	signs
+E20	Assertion:T20
+A5	Assertion-Type-Value E20 possible
+T21	Condition 372 396	post-thrombotic syndrome
+E21	Condition:T21 Name:T70
+T22	Eq-Comparison 530 537	current
+E22	Eq-Comparison:T22 Temporal-Period:T71
+T23	Condition 538 547	pregnancy
+E23	Condition:T23 Name:T72
+T24	Condition 557 566	condition
+E24	Condition:T24
+T25	Assertion 610 613	may
+E25	Assertion:T25
+A6	Assertion-Type-Value E25 hypothetical
+T26	Negation 614 621	prevent
+E26	Negation:T26
+T27	Procedure 646 676	colour doppler ultrasound test
+E27	Procedure:T27 Name:T73
+T28	Procedure 678 690	plaster cast
+E28	Procedure:T28
+T29	Procedure 692 717	inaccessible vein segment
+E29	Procedure:T29
+T30	Temporal-Connection 718 723	after
+E30	Temporal-Connection:T30
+A7	Temporal-Connection-Type-Value E30 after
+T31	Modifier 724 733	abdominal
+E31	Modifier:T31
+T32	Or 734 736	or
+E32	Or:T32
+T33	Modifier 737 743	pelvic
+E33	Modifier:T33
+T34	Procedure 744 751	surgery
+E34	Procedure:T34 Name:T75
+T35	Or 753 755	or
+E35	Or:T35
+T36	Other 756 761	other
+E36	Other:T36
+T37	Condition 762 768	causes
+E37	Condition:T37
+T38	Assertion 774 777	may
+E38	Assertion:T38
+A8	Assertion-Type-Value E38 hypothetical
+T39	Eq-Comparison 833 838	onset
+E39	Eq-Comparison:T39 Temporal-Recency:T76
+T40	Assertion 842 850	symptoms
+E40	Assertion:T40
+A9	Assertion-Type-Value E40 possible
+T41	Eq-Comparison 867 884	more than 10 days
+E41	Eq-Comparison:T41 Operator:T77 Value:T78 Temporal-Unit:T79
+T42	Procedure 890 917	Therapeutic anticoagulation
+E42	Procedure:T42 Name:T80
+T43	Eq-Comparison 922 940	more than 48 hours
+E43	Eq-Comparison:T43 Operator:T81 Value:T82 Temporal-Unit:T83
+T44	Eq-Comparison 948 956	two days
+E44	Eq-Comparison:T44 Value:T84 Temporal-Unit:T85
+T45	Temporal-Connection 957 965	prior to
+E45	Temporal-Connection:T45
+A10	Temporal-Connection-Type-Value E45 before
+T46	Contraindication 979 991	Prophylactic
+E46	Contraindication:T46
+T47	Procedure 992 1007	anticoagulation
+E47	Procedure:T47 Name:T86
+T48	Eq-Comparison 1012 1030	more than 48 hours
+E48	Eq-Comparison:T48 Operator:T87 Value:T88 Temporal-Unit:T89
+T49	Eq-Comparison 1038 1046	two days
+E49	Eq-Comparison:T49 Value:T90 Temporal-Unit:T91
+T50	Temporal-Connection 1047 1055	prior to
+E50	Temporal-Connection:T50
+A11	Temporal-Connection-Type-Value E50 before
+T51	Assertion 1078 1086	symptoms
+E51	Assertion:T51
+A12	Assertion-Type-Value E51 possible
+T52	Condition 1090 1108	pulmonary embolism
+E52	Condition:T52 Name:T92
+T53	Observation 1114 1129	Life expectancy
+E53	Observation:T53 Name:T93
+T54	Eq-Comparison 1130 1148	less than 3 months
+E54	Eq-Comparison:T54 Operator:T94 Value:T95 Temporal-Unit:T96
+T55	Observation 1248 1266	legal guardianship
+E55	Observation:T55 Name:T97
+T56	Or 1267 1269	or
+E56	Or:T56
+T57	Condition 1270 1284	incapacitation
+E57	Condition:T57 Name:T98
+T58	Condition 1320 1340	deep vein thrombosis
+E58	Condition:T58 Name:T99
+T59	Condition 1342 1345	DVT
+E59	Condition:T59 Name:T100
+T60	Eq-Operator 29 31	>=
+A13	Eq-Operator-Value T60 GTEQ
+T61	Eq-Value 32 34	18
+T62	Eq-Temporal-Unit 35 40	years
+A14	Eq-Temporal-Unit-Value T62 year
+T63	Eq-Temporal-Period 52 59	history
+A15	Eq-Temporal-Period-Value T63 past
+T64	Condition-Name 86 106	deep vein thrombosis
+T65	Condition-Name 142 160	pulmonary embolism
+T66	Severity 214 219	acute
+A16	Severity-Value T66 severe
+T67	Condition-Name 220 245	recurrent ipsilateral DVT
+T68	Condition-Name 313 316	DVT
+T69	Polarity 324 332	increase
+A17	Polarity-Value T69 high
+T70	Condition-Name 372 396	post-thrombotic syndrome
+T71	Eq-Temporal-Period 530 537	current
+A18	Eq-Temporal-Period-Value T71 present
+T72	Condition-Name 538 547	pregnancy
+T73	Procedure-Name 646 676	colour doppler ultrasound test
+T74	Condition-Name 705 717	vein segment
+T75	Procedure-Name 744 751	surgery
+T76	Eq-Temporal-Recency 833 838	onset
+A19	Eq-Temporal-Recency-Value T76 first-time
+T77	Eq-Operator 867 876	more than
+A20	Eq-Operator-Value T77 GT
+T78	Eq-Value 877 879	10
+T79	Eq-Temporal-Unit 880 884	days
+A21	Eq-Temporal-Unit-Value T79 day
+T80	Procedure-Name 902 917	anticoagulation
+T81	Eq-Operator 922 931	more than
+A22	Eq-Operator-Value T81 GT
+T82	Eq-Value 932 934	48
+T83	Eq-Temporal-Unit 935 940	hours
+A23	Eq-Temporal-Unit-Value T83 hour
+T84	Eq-Value 948 951	two
+T85	Eq-Temporal-Unit 952 956	days
+A24	Eq-Temporal-Unit-Value T85 day
+T86	Procedure-Name 992 1007	anticoagulation
+T87	Eq-Operator 1012 1021	more than
+A25	Eq-Operator-Value T87 GT
+T88	Eq-Value 1022 1024	48
+T89	Eq-Temporal-Unit 1025 1030	hours
+A26	Eq-Temporal-Unit-Value T89 hour
+T90	Eq-Value 1038 1041	two
+T91	Eq-Temporal-Unit 1042 1046	days
+A27	Eq-Temporal-Unit-Value T91 day
+T92	Condition-Name 1090 1108	pulmonary embolism
+T93	Observation-Name 1114 1129	Life expectancy
+T94	Eq-Operator 1130 1139	less than
+A28	Eq-Operator-Value T94 LT
+T95	Eq-Value 1140 1141	3
+T96	Eq-Temporal-Unit 1142 1148	months
+A29	Eq-Temporal-Unit-Value T96 month
+T97	Observation-Name 1248 1266	legal guardianship
+T98	Condition-Name 1270 1284	incapacitation
+T99	Condition-Name 1320 1340	deep vein thrombosis
+T100	Condition-Name 1342 1345	DVT

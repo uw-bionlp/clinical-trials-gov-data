@@ -1,9 +1,19 @@
-T1	Procedure 62 85	Total Ankle Replacement
-T2	Procedure-Name 62 85	Total Ankle Replacement
-E1	Procedure:T1 Name:T2
-T3	Condition 25 40	Ankle arthritis
-T4	Condition-Name 25 40	Ankle arthritis
-E3	Condition:T3 Name:T4
-T5	Eq-Temporal-Unit 127 132	years
-A1	Eq-Temporal-Unit-Value T5 year
-T6	Eq-Value 124 126	18
+T1	Modifier 25 30	Ankle
+E1	Modifier:T1
+T2	Condition 31 40	arthritis
+E2	Condition:T2 Name:T7
+T3	Modifier 54 61	Cadence
+E3	Modifier:T3
+T4	Procedure 62 85	Total Ankle Replacement
+E4	Procedure:T4
+T5	Eq-Comparison 118 132	Under 18 years
+E5	Eq-Comparison:T5 Operator:T9 Value:T10 Temporal-Unit:T11
+T6	Age 136 139	age
+E6	Age:T6
+T7	Condition-Name 31 40	arthritis
+T8	Procedure-Name 62 92	Total Ankle Replacement system
+T9	Eq-Operator 118 123	Under
+A1	Eq-Operator-Value T9 LT
+T10	Eq-Value 124 126	18
+T11	Eq-Temporal-Unit 127 132	years
+A2	Eq-Temporal-Unit-Value T11 year

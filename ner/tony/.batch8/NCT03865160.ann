@@ -1,31 +1,71 @@
-T1	Condition 171 184	anisometropia
-T2	Condition-Name 171 184	anisometropia
-E1	Condition:T1 Name:T2
-T3	Condition 125 136	eye disease
-T4	Condition-Name 125 136	eye disease
-E3	Condition:T3 Name:T4
-T5	Condition 150 161	astigmatism
-T6	Condition-Name 150 161	astigmatism
-E5	Condition:T5 Name:T6
+T1	Age 34 38	aged
+E1	Age:T1
+T2	Eq-Comparison 39 51	6 - 11 years
+E2	Eq-Comparison:T2 Value:T23 Operator:T24 Value:T25 Temporal-Unit:T26
+T3	And 52 56	with
+E3	And:T3
+T4	Eq-Comparison 57 76	-1- to -10 diopters
+E4	Eq-Comparison:T4 Operator:T27 Operator:T28 Value:T29
+T5	Condition 81 87	myopia
+E5	Condition:T5 Name:T30
+T6	Condition 117 136	organic eye disease
+E6	Condition:T6 Name:T31
 T7	Condition 138 148	strabismus
-T8	Condition-Name 138 148	strabismus
-E7	Condition:T7 Name:T8
-T9	Life-Stage-And-Gender 25 33	Children
-A1	Life-Stage-And-Gender-Type T9 child
-T10	Condition 81 87	myopia
-T11	Condition-Name 81 87	myopia
-E10	Condition:T10 Name:T11
-T12	Language 213 217	mono
-T13	Eq-Operator 185 186	>
-A2	Eq-Operator-Value T13 GT
-T14	Eq-Temporal-Unit 46 51	years
-A3	Eq-Temporal-Unit-Value T14 year
-T15	Age 34 38	aged
-E11	Age:T15
-T16	Eq-Value 39 40	6
-T17	Eq-Value 43 45	11
-T18	Eq-Value 58 59	1
-T19	Eq-Value 65 67	10
-T20	Eq-Value 186 187	1
-T21	Eq-Comparison 185 187	>1
-E12	Eq-Comparison:T21 Operator:T13 Value:T20
+E7	Condition:T7 Name:T32
+T8	Condition 150 161	astigmatism
+E8	Condition:T8 Name:T33
+T9	And 162 165	and
+E9	And:T9
+T10	Or 166 167	/
+E10	Or:T10
+T11	Or 168 170	or
+E11	Or:T11
+T12	Condition 171 184	anisometropia
+E12	Condition:T12 Name:T34
+T13	Eq-Comparison 185 191	>1.5 D
+E13	Eq-Comparison:T13 Operator:T35 Value:T36 Temporal-Unit:T37
+T14	Condition 193 204	prematurity
+E14	Condition:T14 Name:T38
+T15	Modifier 213 218	mono-
+E15	Modifier:T15
+T16	Or 219 220	/
+E16	Or:T16
+T17	Modifier 221 231	multifocal
+E17	Modifier:T17
+T18	Procedure 232 246	contact lenses
+E18	Procedure:T18
+T19	Temporal-Connection 248 251	pre
+E19	Temporal-Connection:T19
+A1	Temporal-Connection-Type-Value E19 before
+T20	Procedure 252 261	treatment
+E20	Procedure:T20
+T21	Drug 267 275	atropine
+E21	Drug:T21 Name:T41
+T22	Life-Stage-And-Gender 25 33	Children
+A2	Life-Stage-And-Gender-Type T22 child
+T23	Eq-Value 39 40	6
+T24	Eq-Operator 41 42	-
+A3	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 43 45	11
+T26	Eq-Temporal-Unit 46 51	years
+A4	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Operator 57 60	-1-
+A5	Eq-Operator-Value T27 GTEQ
+T28	Eq-Operator 61 63	to
+A6	Eq-Operator-Value T28 BETWEEN
+T29	Eq-Value 64 67	-10
+T30	Condition-Name 81 87	myopia
+T31	Condition-Name 117 136	organic eye disease
+T32	Condition-Name 138 148	strabismus
+T33	Condition-Name 150 161	astigmatism
+T34	Condition-Name 171 184	anisometropia
+T35	Eq-Operator 185 186	>
+A7	Eq-Operator-Value T35 GT
+T36	Eq-Value 186 189	1.5
+T37	Eq-Temporal-Unit 190 191	D
+A8	Eq-Temporal-Unit-Value T37 day
+T38	Condition-Name 193 204	prematurity
+T39	Eq-Temporal-Period 206 209	use
+A9	Eq-Temporal-Period-Value T39 present
+T40	Condition-Name 221 239	multifocal contact
+T41	Drug-Name 267 275	atropine

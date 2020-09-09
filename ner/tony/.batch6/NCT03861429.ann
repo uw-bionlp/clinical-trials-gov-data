@@ -1,49 +1,96 @@
-T1	Condition 78 86	dementia
-T2	Condition-Name 78 86	dementia
-E1	Condition:T1 Name:T2
-T3	Language 436 443	English
-T4	Language 483 490	English
-T5	Condition 145 148	MDS
-T6	Condition-Name 145 148	MDS
-E5	Condition:T5 Name:T6
-T7	Condition 219 222	MDS
-T8	Condition-Name 219 222	MDS
-E7	Condition:T7 Name:T8
-T9	Condition 288 291	MDS
-T10	Condition-Name 288 291	MDS
-E9	Condition:T9 Name:T10
-T11	Language 735 742	English
-T12	Condition 900 908	Comatose
-T13	Condition-Name 900 908	Comatose
-E12	Condition:T12 Name:T13
-T14	Condition 886 893	aphasia
-T15	Condition-Name 886 893	aphasia
-E14	Condition:T14 Name:T15
-T16	Eq-Operator 215 216	<
-A1	Eq-Operator-Value T16 LT
-T17	Eq-Operator 284 285	<
-A2	Eq-Operator-Value T17 LT
-T18	Eq-Operator 414 415	>
-A3	Eq-Operator-Value T18 GT
-T19	Eq-Temporal-Unit 364 369	weeks
-A4	Eq-Temporal-Unit-Value T19 week
-T20	Eq-Temporal-Unit 418 423	years
-A5	Eq-Temporal-Unit-Value T20 year
-T21	Age 410 413	Age
-E15	Age:T21
-T22	Eq-Operator 139 140	-
-A6	Eq-Operator-Value T22 BETWEEN
-T23	Eq-Value 138 139	8
-T24	Eq-Value 140 142	15
-T25	Eq-Value 216 217	1
-T26	Eq-Value 285 286	1
-T27	Eq-Value 362 363	2
-T28	Eq-Value 415 417	65
-T29	Eq-Comparison 215 217	<1
-E16	Eq-Comparison:T29 Operator:T16 Value:T25
-T30	Eq-Comparison 284 286	<1
-E17	Eq-Comparison:T30 Operator:T17 Value:T26
-T31	Eq-Comparison 414 423	>65 years
-E18	Eq-Comparison:T31 Operator:T18 Temporal-Unit:T20 Value:T28
-T32	Eq-Comparison 138 140	8-
-E19	Eq-Comparison:T32 Operator:T22 Value:T23
+T1	Condition 55 66	Alzheimer's
+E1	Condition:T1 Name:T25
+T2	Or 67 69	or
+E2	Or:T2
+T3	Condition 78 86	dementia
+E3	Condition:T3 Name:T26
+T4	Condition 109 129	cognitive impairment
+E4	Condition:T4 Name:T29
+T5	Condition 131 135	BIMS
+E5	Condition:T5
+T6	Eq-Comparison 136 140	= 8-
+E6	Eq-Comparison:T6 Operator:T31 Value:T32 Operator:T33
+T7	Eq-Comparison 215 217	<1
+E7	Eq-Comparison:T7 Operator:T36 Value:T37
+T8	Eq-Comparison 282 286	= <1
+E8	Eq-Comparison:T8 Operator:T38 Value:T39
+T9	Eq-Comparison 353 369	at least 2 weeks
+E9	Eq-Comparison:T9 Operator:T41 Value:T42 Temporal-Unit:T43
+T10	Modifier 386 395	long-term
+E10	Modifier:T10
+T11	Age 410 413	Age
+E11	Age:T11
+T12	Eq-Comparison 414 423	>65 years
+E12	Eq-Comparison:T12 Operator:T44 Value:T45 Temporal-Unit:T46
+T13	Assertion 496 507	Willing and
+E13	Assertion:T13
+A1	Assertion-Type-Value E13 hypothetical
+T14	Assertion 508 515	able to
+E14	Assertion:T14
+A2	Assertion-Type-Value E14 hypothetical
+T15	Assertion 538 548	Willing to
+E15	Assertion:T15
+A3	Assertion-Type-Value E15 hypothetical
+T16	Negation 579 585	unable
+E16	Negation:T16
+T17	Negation 658 661	not
+E17	Negation:T17
+T18	Assertion 748 758	Willing to
+E18	Assertion:T18
+A4	Assertion-Type-Value E18 hypothetical
+T19	Assertion 781 791	Willing to
+E19	Assertion:T19
+A5	Assertion-Type-Value E19 hypothetical
+T20	Observation 857 879	communication capacity
+E20	Observation:T20
+T21	Condition 886 893	aphasia
+E21	Condition:T21 Name:T51
+T22	Condition 900 908	Comatose
+E22	Condition:T22 Name:T52
+T23	Condition 914 932	Cognitively intact
+E23	Condition:T23 Name:T53
+T24	Condition 945 965	cognitive impairment
+E24	Condition:T24 Name:T55
+T25	Condition-Name 55 64	Alzheimer
+T26	Condition-Name 78 86	dementia
+T27	Severity 92 96	Mild
+A6	Severity-Value T27 mild
+T28	Severity 100 108	moderate
+A7	Severity-Value T28 moderate
+T29	Condition-Name 109 129	cognitive impairment
+T30	Observation-Name 131 135	BIMS
+T31	Eq-Operator 136 137	=
+A8	Eq-Operator-Value T31 GTEQ
+T32	Eq-Value 138 139	8
+T33	Eq-Operator 139 140	-
+A9	Eq-Operator-Value T33 BETWEEN
+T34	Eq-Value 140 142	15
+T35	Observation-Name 149 154	C0500
+T36	Eq-Operator 215 216	<
+A10	Eq-Operator-Value T36 LT
+T37	Eq-Value 216 217	1
+T38	Eq-Operator 284 285	<
+A11	Eq-Operator-Value T38 LT
+T39	Eq-Value 285 286	1
+T40	Location 344 352	facility
+A12	Location-Value T40 hospital
+T41	Eq-Operator 353 361	at least
+A13	Eq-Operator-Value T41 GTEQ
+T42	Eq-Value 362 363	2
+T43	Eq-Temporal-Unit 364 369	weeks
+A14	Eq-Temporal-Unit-Value T43 week
+T44	Eq-Operator 414 415	>
+A15	Eq-Operator-Value T44 GT
+T45	Eq-Value 415 417	65
+T46	Eq-Temporal-Unit 418 423	years
+A16	Eq-Temporal-Unit-Value T46 year
+T47	Language 436 443	English
+T48	Language 483 490	English
+T49	Language 735 742	English
+T50	Condition-Name 857 879	communication capacity
+T51	Condition-Name 886 893	aphasia
+T52	Condition-Name 900 908	Comatose
+T53	Condition-Name 914 932	Cognitively intact
+T54	Severity 938 944	Severe
+A17	Severity-Value T54 severe
+T55	Condition-Name 945 965	cognitive impairment

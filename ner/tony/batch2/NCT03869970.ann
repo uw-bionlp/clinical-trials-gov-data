@@ -1,14 +1,56 @@
-T1	Condition 319 338	Vestibular disorder
-T2	Condition-Name 319 338	Vestibular disorder
-E1	Condition:T1 Name:T2
-T3	Condition 263 278	Substance abuse
-T4	Condition-Name 263 278	Substance abuse
-E3	Condition:T3 Name:T4
-T5	Procedure 253 256	TBI
-T6	Procedure-Name 253 256	TBI
-E5	Procedure:T5 Name:T6
-T7	Eq-Operator 46 54	the past
-A1	Eq-Operator-Value T7 GTEQ
-T8	Eq-Value 55 57	48
-T9	Eq-Comparison 46 57	the past 48
-E6	Eq-Comparison:T9 Operator:T7 Value:T8
+T1	Condition 38 42	mTBI
+E1	Condition:T1 Name:T16
+T2	Eq-Comparison 50 63	past 48 hours
+E2	Eq-Comparison:T2 Temporal-Period:T17 Value:T18 Temporal-Unit:T19
+T3	Condition 105 115	conditions
+E3	Condition:T3
+T4	Observation 138 155	physical activity
+E4	Observation:T4 Name:T21
+T5	Or 156 158	or
+E5	Or:T5
+T6	Modifier 159 173	neurocognitive
+E6	Modifier:T6
+T7	Procedure 174 184	assessment
+E7	Procedure:T7 Name:T22
+T8	Negation 193 196	not
+E8	Negation:T8
+T9	Eq-Comparison 221 228	History
+E9	Eq-Comparison:T9 Temporal-Period:T23
+T10	Eq-Comparison 232 252	past moderate/severe
+E10	Eq-Comparison:T10 Temporal-Period:T24
+T11	Condition 253 256	TBI
+E11	Condition:T11 Name:T27
+T12	Condition 263 278	Substance abuse
+E12	Condition:T12 Name:T28
+T13	Condition 291 312	psychiatric condition
+E13	Condition:T13 Name:T30
+T14	Condition 319 338	Vestibular disorder
+E14	Condition:T14 Name:T31
+T15	Condition 345 362	Cardiac condition
+E15	Condition:T15 Name:T32
+T16	Condition-Name 38 42	mTBI
+T17	Eq-Temporal-Period 50 54	past
+A1	Eq-Temporal-Period-Value T17 past
+T18	Eq-Value 55 57	48
+T19	Eq-Temporal-Unit 58 63	hours
+A2	Eq-Temporal-Unit-Value T19 hour
+T20	Stability 132 137	limit
+A3	Stability-Value T20 change
+T21	Observation-Name 138 155	physical activity
+A4	Observation-Type-Value T21 social-habit
+T22	Procedure-Name 174 184	assessment
+T23	Eq-Temporal-Period 221 228	History
+A5	Eq-Temporal-Period-Value T23 past
+T24	Eq-Temporal-Period 232 236	past
+A6	Eq-Temporal-Period-Value T24 past
+T25	Severity 237 245	moderate
+A7	Severity-Value T25 moderate
+T26	Severity 246 252	severe
+A8	Severity-Value T26 severe
+T27	Condition-Name 253 256	TBI
+T28	Condition-Name 263 278	Substance abuse
+T29	Severity 285 290	Major
+A9	Severity-Value T29 severe
+T30	Condition-Name 291 312	psychiatric condition
+T31	Condition-Name 319 338	Vestibular disorder
+T32	Condition-Name 345 362	Cardiac condition

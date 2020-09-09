@@ -1,28 +1,61 @@
-T1	Procedure 198 211	contraception
-T2	Procedure-Name 198 211	contraception
-E1	Procedure:T1 Name:T2
-T3	Language 410 417	English
-T4	Life-Stage-And-Gender 25 31	female
-A1	Life-Stage-And-Gender-Type T4 male
-T5	Life-Stage-And-Gender 108 113	males
-A2	Life-Stage-And-Gender-Type T5 male
-T6	Condition 309 312	per
-T7	Condition-Name 309 312	per
-E6	Condition:T6 Name:T7
-T8	Eq-Operator 117 125	the past
-A3	Eq-Operator-Value T8 GTEQ
-T9	Eq-Temporal-Unit 76 81	years
-A4	Eq-Temporal-Unit-Value T9 year
-T10	Eq-Temporal-Unit 128 134	months
-A5	Eq-Temporal-Unit-Value T10 month
-T11	Age 66 69	age
-E7	Age:T11
-T12	Eq-Operator 72 73	-
-A6	Eq-Operator-Value T12 BETWEEN
-T13	Eq-Value 70 72	14
-T14	Eq-Value 73 75	19
-T15	Eq-Value 126 127	3
-T16	Eq-Comparison 117 134	the past 3 months
-E8	Eq-Comparison:T16 Operator:T8 Temporal-Unit:T10 Value:T15
-T17	Eq-Comparison 70 73	14-
-E9	Eq-Comparison:T17 Operator:T12 Value:T13
+T1	Age 66 69	age
+E1	Age:T1
+T2	Eq-Comparison 70 81	14-19 years
+E2	Eq-Comparison:T2 Value:T16 Operator:T17 Value:T18 Temporal-Unit:T19
+T3	Condition 87 95	sexually
+E3	Condition:T3 Name:T20
+T4	Eq-Comparison 96 134	active with males in the past 3 months
+E4	Eq-Comparison:T4 Temporal-Period:T21 Temporal-Period:T23 Value:T24 Temporal-Unit:T25
+T5	Eq-Comparison 160 169	currently
+E5	Eq-Comparison:T5 Temporal-Period:T26
+T6	Procedure 198 211	contraception
+E6	Procedure:T6 Name:T28
+T7	Negation 220 223	not
+E7	Negation:T7
+T8	Condition 265 273	pregnant
+E8	Condition:T8 Name:T29
+T9	Condition 346 366	cognitively impaired
+E9	Condition:T9 Name:T31
+T10	Negation 375 378	not
+E10	Negation:T10
+T11	Negation 400 403	not
+E11	Negation:T11
+T12	Assertion 423 430	want to
+E12	Assertion:T12
+A1	Assertion-Type-Value E12 hypothetical
+T13	Condition 439 447	pregnant
+E13	Condition:T13 Name:T33
+T14	Eq-Comparison 455 464	next year
+E14	Eq-Comparison:T14 Temporal-Period:T34 Temporal-Unit:T35
+T15	Life-Stage-And-Gender 25 31	female
+A2	Life-Stage-And-Gender-Type T15 female
+T16	Eq-Value 70 72	14
+T17	Eq-Operator 72 73	-
+A3	Eq-Operator-Value T17 BETWEEN
+T18	Eq-Value 73 75	19
+T19	Eq-Temporal-Unit 76 81	years
+A4	Eq-Temporal-Unit-Value T19 year
+T20	Condition-Name 87 95	sexually
+T21	Eq-Temporal-Period 96 102	active
+A5	Eq-Temporal-Period-Value T21 present
+T22	Life-Stage-And-Gender 108 113	males
+A6	Life-Stage-And-Gender-Type T22 male
+T23	Eq-Temporal-Period 121 125	past
+A7	Eq-Temporal-Period-Value T23 past
+T24	Eq-Value 126 127	3
+T25	Eq-Temporal-Unit 128 134	months
+A8	Eq-Temporal-Unit-Value T25 month
+T26	Eq-Temporal-Period 160 169	currently
+A9	Eq-Temporal-Period-Value T26 present
+T27	Eq-Temporal-Period 170 175	using
+A10	Eq-Temporal-Period-Value T27 present
+T28	Procedure-Name 198 211	contraception
+T29	Condition-Name 265 273	pregnant
+T30	Condition-Name 287 290	ill
+T31	Condition-Name 346 366	cognitively impaired
+T32	Language 410 417	English
+T33	Condition-Name 439 447	pregnant
+T34	Eq-Temporal-Period 455 459	next
+A11	Eq-Temporal-Period-Value T34 future
+T35	Eq-Temporal-Unit 460 464	year
+A12	Eq-Temporal-Unit-Value T35 year

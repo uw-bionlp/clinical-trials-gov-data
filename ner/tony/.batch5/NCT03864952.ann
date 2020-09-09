@@ -1,10 +1,38 @@
-T1	Procedure 290 297	removal
-T2	Procedure-Name 290 297	removal
-E1	Procedure:T1 Name:T2
-T3	Eq-Temporal-Unit 31 37	months
-A1	Eq-Temporal-Unit-Value T3 month
-T4	Eq-Temporal-Unit 231 236	years
-A2	Eq-Temporal-Unit-Value T4 year
-T5	Age 237 240	old
-E2	Age:T5
-T6	Eq-Value 228 230	18
+T1	Eq-Comparison 25 37	three months
+E1	Eq-Comparison:T1 Value:T12 Temporal-Unit:T13
+T2	Temporal-Connection 38 44	before
+E2	Temporal-Connection:T2
+A1	Temporal-Connection-Type-Value E2 before
+T3	Condition 58 66	infected
+E3	Condition:T3 Name:T14
+T4	Modifier 85 93	pathogen
+E4	Modifier:T4
+T5	Condition 104 113	infection
+E5	Condition:T5 Name:T16
+T6	Eq-Comparison 222 236	under 18 years
+E6	Eq-Comparison:T6 Operator:T17 Value:T18 Temporal-Unit:T19
+T7	Age 237 240	old
+E7	Age:T7
+T8	Negation 252 261	incapable
+E8	Negation:T8
+T9	Procedure 283 297	tartar removal
+E9	Procedure:T9
+T10	Temporal-Connection 298 303	since
+E10	Temporal-Connection:T10
+A2	Temporal-Connection-Type-Value E10 during
+T11	Condition 308 317	infection
+E11	Condition:T11 Name:T22
+T12	Eq-Value 25 30	three
+T13	Eq-Temporal-Unit 31 37	months
+A3	Eq-Temporal-Unit-Value T13 month
+T14	Condition-Name 58 66	infected
+T15	Condition-Name 85 93	pathogen
+T16	Condition-Name 104 113	infection
+T17	Eq-Operator 222 227	under
+A4	Eq-Operator-Value T17 LT
+T18	Eq-Value 228 230	18
+T19	Eq-Temporal-Unit 231 236	years
+A5	Eq-Temporal-Unit-Value T19 year
+T20	Condition-Name 252 275	incapable to consenting
+T21	Condition-Name 283 297	tartar removal
+T22	Condition-Name 308 317	infection

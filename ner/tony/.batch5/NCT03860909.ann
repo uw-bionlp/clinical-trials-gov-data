@@ -1,12 +1,41 @@
-T1	Condition 124 140	deep dyspareunia
-T2	Condition-Name 124 140	deep dyspareunia
-E1	Condition:T1 Name:T2
-T3	Life-Stage-And-Gender 25 40	Female patients
-A1	Life-Stage-And-Gender-Type T3 male
-T4	Condition 260 274	claustrophobia
-T5	Condition-Name 260 274	claustrophobia
-E4	Condition:T4 Name:T5
-T6	Condition 75 88	endometriosis
-T7	Condition-Name 75 88	endometriosis
-E6	Condition:T6 Name:T7
-T8	Language 214 217	MRI
+T1	And 41 44	who
+E1	And:T1
+T2	Assertion 50 58	symptoms
+E2	Assertion:T2
+A1	Assertion-Type-Value E2 possible
+T3	Condition 75 88	endometriosis
+E3	Condition:T3 Name:T17
+T4	Modifier 97 103	pelvic
+E4	Modifier:T4
+T5	Condition 104 108	pain
+E5	Condition:T5 Name:T18
+T6	Condition 110 122	dysmenorrhea
+E6	Condition:T6 Name:T19
+T7	Condition 124 140	deep dyspareunia
+E7	Condition:T7 Name:T20
+T8	Or 142 145	and
+E8	Or:T8
+T9	Condition 146 157	infertility
+E9	Condition:T9 Name:T21
+T10	Contraindication 194 210	contraindication
+E10	Contraindication:T10
+T11	Procedure 214 217	MRI
+E11	Procedure:T11 Name:T22
+T12	Condition 219 229	peacemaker
+E12	Condition:T12
+T13	Modifier 231 254	metallic foreign bodies
+E13	Modifier:T13
+T14	Or 256 259	and
+E14	Or:T14
+T15	Condition 260 274	claustrophobia
+E15	Condition:T15 Name:T24
+T16	Life-Stage-And-Gender 25 31	Female
+A2	Life-Stage-And-Gender-Type T16 female
+T17	Condition-Name 75 88	endometriosis
+T18	Condition-Name 104 108	pain
+T19	Condition-Name 110 122	dysmenorrhea
+T20	Condition-Name 124 140	deep dyspareunia
+T21	Condition-Name 146 157	infertility
+T22	Procedure-Name 214 217	MRI
+T23	Condition-Name 231 254	metallic foreign bodies
+T24	Condition-Name 260 274	claustrophobia

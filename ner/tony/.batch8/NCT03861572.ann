@@ -1,22 +1,69 @@
-T1	Procedure 141 156	surgical repair
-T2	Procedure-Name 141 156	surgical repair
-E1	Procedure:T1 Name:T2
-T3	Life-Stage-And-Gender 55 61	female
-A1	Life-Stage-And-Gender-Type T3 male
-T4	Life-Stage-And-Gender 46 50	male
-A2	Life-Stage-And-Gender-Type T4 male
-T5	Procedure 269 276	release
-T6	Procedure-Name 269 276	release
-E5	Procedure:T5 Name:T6
-T7	Procedure 388 411	surgical reconstruction
-T8	Procedure-Name 388 411	surgical reconstruction
-E7	Procedure:T7 Name:T8
-T9	Procedure 532 549	strength training
-T10	Procedure-Name 532 549	strength training
-E9	Procedure:T9 Name:T10
-T11	Procedure 467 474	release
-T12	Procedure-Name 467 474	release
-E11	Procedure:T11 Name:T12
-T13	Eq-Temporal-Unit 596 602	months
-A3	Eq-Temporal-Unit-Value T13 month
-T14	Eq-Value 594 595	6
+T1	Or 51 54	and
+E1	Or:T1
+T2	Modifier 84 95	total acute
+E2	Modifier:T2
+T3	Procedure 96 119	Achilles tendon rupture
+E3	Procedure:T3
+T4	And 121 124	and
+E4	And:T4
+T5	Eq-Comparison 131 140	underwent
+E5	Eq-Comparison:T5 Temporal-Period:T30
+T6	Procedure 141 156	surgical repair
+E6	Procedure:T6 Name:T31
+T7	Study 194 199	study
+E7	Study:T7
+T8	Modifier 281 289	physical
+E8	Modifier:T8
+T9	Or 289 290	/
+E9	Or:T9
+T10	Negation 363 366	not
+E10	Negation:T10
+T11	Procedure 372 411	Achilles tendon surgical reconstruction
+E11	Procedure:T11 Name:T32
+T12	Negation 422 425	not
+E12	Negation:T12
+T13	Modifier 434 441	medical
+E13	Modifier:T13
+T14	Or 442 448	and/or
+E14	Or:T14
+T15	Procedure 449 474	physiotherapeutic release
+E15	Procedure:T15
+T16	Modifier 479 487	physical
+E16	Modifier:T16
+T17	Or 487 488	/
+E17	Or:T17
+T18	And 507 510	who
+E18	And:T18
+T19	Procedure 532 549	strength training
+E19	Procedure:T19
+T20	Assertion 550 561	program for
+E20	Assertion:T20
+A1	Assertion-Type-Value E20 hypothetical
+T21	Procedure 566 581	plantar flexors
+E21	Procedure:T21 Name:T33
+T22	Eq-Comparison 589 602	last 6 months
+E22	Eq-Comparison:T22 Temporal-Period:T34 Value:T35 Temporal-Unit:T36
+T23	Condition 618 635	diabetic diseases
+E23	Condition:T23 Name:T37
+T24	Negation 659 669	difficulty
+E24	Negation:T24
+T25	Study 709 713	test
+E25	Study:T25
+T26	Life-Stage-And-Gender 46 50	male
+A2	Life-Stage-And-Gender-Type T26 male
+T27	Life-Stage-And-Gender 55 61	female
+A3	Life-Stage-And-Gender-Type T27 female
+T28	Severity 90 95	acute
+A4	Severity-Value T28 severe
+T29	Condition-Name 96 119	Achilles tendon rupture
+T30	Eq-Temporal-Period 131 140	underwent
+A5	Eq-Temporal-Period-Value T30 past
+T31	Procedure-Name 141 156	surgical repair
+T32	Procedure-Name 372 411	Achilles tendon surgical reconstruction
+T33	Procedure-Name 566 581	plantar flexors
+T34	Eq-Temporal-Period 589 593	last
+A6	Eq-Temporal-Period-Value T34 past
+T35	Eq-Value 594 595	6
+T36	Eq-Temporal-Unit 596 602	months
+A7	Eq-Temporal-Unit-Value T36 month
+T37	Condition-Name 618 635	diabetic diseases

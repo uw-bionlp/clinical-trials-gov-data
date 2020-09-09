@@ -1,12 +1,34 @@
-T1	Procedure 196 206	procedures
-T2	Procedure-Name 196 206	procedures
-E1	Procedure:T1 Name:T2
-T3	Condition 332 347	chronic disease
-T4	Condition-Name 332 347	chronic disease
-E3	Condition:T3 Name:T4
-T5	Condition 420 425	Abuse
-T6	Condition-Name 420 425	Abuse
-E5	Condition:T5 Name:T6
-T7	Eq-Value 298 299	1
-T8	Eq-Value 369 370	2
-T9	Eq-Value 417 418	3
+T1	Or 75 77	or
+E1	Or:T1
+T2	Modifier 78 85	chronic
+E2	Modifier:T2
+T3	Condition 86 117	synthetic cannabinoids toxicity
+E3	Condition:T3 Name:T15
+T4	Study 142 147	study
+E4	Study:T4
+T5	Study 266 271	study
+E5	Study:T5
+T6	Eq-Comparison 317 324	history
+E6	Eq-Comparison:T6 Temporal-Period:T17
+T7	Condition 332 347	chronic disease
+E7	Condition:T7 Name:T18
+T8	Modifier 349 354	renal
+E8	Modifier:T8
+T9	Or 355 358	and
+E9	Or:T9
+T10	Modifier 359 366	hepatic
+E10	Modifier:T10
+T11	Study 410 415	study
+E11	Study:T11
+T12	Other 429 434	other
+E12	Other:T12
+T13	Drug 435 440	drugs
+E13	Drug:T13
+T14	Severity 69 74	acute
+A1	Severity-Value T14 severe
+T15	Condition-Name 86 117	synthetic cannabinoids toxicity
+T16	Condition-Name 298 300	1-
+T17	Eq-Temporal-Period 317 324	history
+A2	Eq-Temporal-Period-Value T17 past
+T18	Condition-Name 332 347	chronic disease
+T19	Condition-Name 417 425	3- Abuse

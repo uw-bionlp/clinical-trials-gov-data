@@ -1,6 +1,20 @@
-T1	Condition 86 111	Major Depressive Disorder
-T2	Condition-Name 86 111	Major Depressive Disorder
-E1	Condition:T1 Name:T2
-T3	Procedure 62 80	joint arthroplasty
-T4	Procedure-Name 62 80	joint arthroplasty
-E3	Procedure:T3 Name:T4
+T1	Eq-Comparison 33 43	presenting
+E1	Eq-Comparison:T1
+T2	Modifier 48 55	primary
+E2	Modifier:T2
+T3	Procedure 56 80	total joint arthroplasty
+E3	Procedure:T3 Name:T7
+T4	Condition 92 111	Depressive Disorder
+E4	Condition:T4 Name:T9
+T5	Condition 137 145	Pregnant
+E5	Condition:T5 Name:T10
+T6	Condition 149 162	breastfeeding
+E6	Condition:T6 Name:T11
+T7	Procedure-Name 56 80	total joint arthroplasty
+T8	Severity 86 91	Major
+A1	Severity-Value T8 severe
+T9	Condition-Name 92 111	Depressive Disorder
+T10	Condition-Name 137 145	Pregnant
+T11	Condition-Name 149 162	breastfeeding
+T12	Life-Stage-And-Gender 163 168	women
+A2	Life-Stage-And-Gender-Type T12 female

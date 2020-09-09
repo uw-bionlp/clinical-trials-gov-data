@@ -1,70 +1,138 @@
-T1	Procedure 181 192	enlargement
-T2	Procedure-Name 181 192	enlargement
-E1	Procedure:T1 Name:T2
-T3	Procedure 67 74	closure
-T4	Procedure-Name 67 74	closure
-E3	Procedure:T3 Name:T4
-T5	Condition 63 66	ASD
-T6	Condition-Name 63 66	ASD
-E5	Condition:T5 Name:T6
-T7	Condition 256 276	Paradoxical embolism
-T8	Condition-Name 256 276	Paradoxical embolism
-E7	Condition:T7 Name:T8
-T9	Procedure 360 367	closure
-T10	Procedure-Name 360 367	closure
-E9	Procedure:T9 Name:T10
-T11	Condition 315 318	ASD
-T12	Condition-Name 315 318	ASD
-E11	Condition:T11 Name:T12
-T13	Procedure 491 498	closure
-T14	Procedure-Name 491 498	closure
-E13	Procedure:T13 Name:T14
-T15	Procedure 555 562	closure
-T16	Procedure-Name 555 562	closure
-E15	Procedure:T15 Name:T16
-T17	Condition 400 403	ASD
-T18	Condition-Name 400 403	ASD
-E17	Condition:T17 Name:T18
-T19	Condition 579 588	posterior
-T20	Condition-Name 579 588	posterior
-E19	Condition:T19 Name:T20
-T21	Condition 569 577	Anterior
-T22	Condition-Name 569 577	Anterior
-E21	Condition:T21 Name:T22
-T23	Procedure 715 730	cardiac surgery
-T24	Procedure-Name 715 730	cardiac surgery
-E23	Procedure:T23 Name:T24
-T25	Condition 691 704	heart disease
-T26	Condition-Name 691 704	heart disease
-E25	Condition:T25 Name:T26
-T27	Condition 753 784	pulmonary arterial hypertension
-T28	Condition-Name 753 784	pulmonary arterial hypertension
-E27	Condition:T27 Name:T28
-T29	Procedure 820 828	shunting
-T30	Procedure-Name 820 828	shunting
-E29	Procedure:T29 Name:T30
-T31	Condition 737 740	ASD
-T32	Condition-Name 737 740	ASD
-E31	Condition:T31 Name:T32
-T33	Eq-Operator 238 239	≥
-A1	Eq-Operator-Value T33 GTEQ
-T34	Eq-Operator 415 416	<
-A2	Eq-Operator-Value T34 LT
-T35	Eq-Operator 500 501	>
-A3	Eq-Operator-Value T35 GT
-T36	Eq-Operator 616 617	<
-A4	Eq-Operator-Value T36 LT
-T37	Eq-Unit 504 506	mm
-T38	Eq-Unit 619 621	mm
-T39	Eq-Value 239 240	1
-T40	Eq-Value 416 417	1
-T41	Eq-Value 501 503	38
-T42	Eq-Value 617 618	5
-T43	Eq-Comparison 238 240	≥1
-E32	Eq-Comparison:T43 Operator:T33 Value:T39
-T44	Eq-Comparison 415 417	<1
-E33	Eq-Comparison:T44 Operator:T34 Value:T40
-T45	Eq-Comparison 500 506	>38 mm
-E34	Eq-Comparison:T45 Operator:T35 Unit:T37 Value:T41
-T46	Eq-Comparison 616 621	<5 mm
-E35	Eq-Comparison:T46 Operator:T36 Unit:T38 Value:T42
+T1	Indication 48 58	indication
+E1	Indication:T1
+T2	Condition 63 66	ASD
+E2	Condition:T2 Name:T50
+T3	Condition 118 146	Impaired functional capacity
+E3	Condition:T3 Name:T52
+T4	Modifier 158 170	Right atrial
+E4	Modifier:T4
+T5	Or 171 177	and/or
+E5	Or:T5
+T6	Modifier 178 192	RV enlargement
+E6	Modifier:T6
+T7	Condition 204 223	Left-to-right shunt
+E7	Condition:T7
+T8	Condition 256 276	Paradoxical embolism
+E8	Condition:T8 Name:T54
+T9	Modifier 297 314	isolated secundum
+E9	Modifier:T9
+T10	Condition 315 318	ASD
+E10	Condition:T10
+T11	And 319 323	with
+E11	And:T11
+T12	Condition 324 339	sufficient rims
+E12	Condition:T12
+T13	Assertion 340 352	suitable for
+E13	Assertion:T13
+A1	Assertion-Type-Value E13 hypothetical
+T14	Procedure 353 367	device closure
+E14	Procedure:T14 Name:T56
+T15	Condition 400 403	ASD
+E15	Condition:T15 Name:T57
+T16	And 404 408	with
+E16	And:T16
+T17	Observation 409 411	Qp
+E17	Observation:T17 Name:T58
+T18	Or 411 412	/
+E18	Or:T18
+T19	Observation 412 414	Qs
+E19	Observation:T19 Name:T59
+T20	Eq-Comparison 415 421	<1.5:1
+E20	Eq-Comparison:T20 Operator:T60 Value:T61
+T21	Or 422 424	or
+E21	Or:T21
+T22	Negation 425 427	no
+E22	Negation:T22
+T23	Assertion 428 433	signs
+E23	Assertion:T23
+A2	Assertion-Type-Value E23 possible
+T24	Condition 437 455	RV volume overload
+E24	Condition:T24 Name:T62
+T25	Condition 463 476	single defect
+E25	Condition:T25
+T26	Observation 491 498	closure
+E26	Observation:T26 Name:T64
+T27	Eq-Comparison 500 506	>38 mm
+E27	Eq-Comparison:T27 Operator:T65 Value:T66 Unit:T67
+T28	Condition 522 526	ASDs
+E28	Condition:T28 Name:T68
+T29	Negation 527 537	unsuitable
+E29	Negation:T29
+T30	Procedure 542 562	percutaneous closure
+E30	Procedure:T30 Name:T69
+T31	Modifier 569 577	Anterior
+E31	Modifier:T31
+T32	Modifier 579 588	posterior
+E32	Modifier:T32
+T33	Modifier 590 598	superior
+E33	Modifier:T33
+T34	Or 600 602	or
+E34	Or:T34
+T35	Modifier 603 615	inferior rim
+E35	Modifier:T35
+T36	Eq-Comparison 616 621	<5 mm
+E36	Eq-Comparison:T36 Operator:T70 Value:T71 Unit:T72
+T37	Condition 637 662	pulmonary venous drainage
+E37	Condition:T37
+T38	Modifier 680 690	structural
+E38	Modifier:T38
+T39	Condition 691 704	heart disease
+E39	Condition:T39 Name:T74
+T40	Assertion 705 714	requiring
+E40	Assertion:T40
+A3	Assertion-Type-Value E40 hypothetical
+T41	Procedure 715 730	cardiac surgery
+E41	Procedure:T41 Name:T75
+T42	Condition 737 740	ASD
+E42	Condition:T42 Name:T76
+T43	Condition 753 784	pulmonary arterial hypertension
+E43	Condition:T43 Name:T78
+T44	And 785 788	and
+E44	And:T44
+T45	Modifier 789 802	bidirectional
+E45	Modifier:T45
+T46	Or 803 805	or
+E46	Or:T46
+T47	Modifier 806 828	right-to-left shunting
+E47	Modifier:T47
+T48	Condition 835 855	Intracardiac thrombi
+E48	Condition:T48 Name:T79
+T49	Procedure 869 885	echocardiography
+E49	Procedure:T49 Name:T80
+T50	Condition-Name 63 66	ASD
+T51	Eq-Temporal-Period 88 94	recent
+A4	Eq-Temporal-Period-Value T51 recent
+T52	Condition-Name 118 146	Impaired functional capacity
+T53	Condition-Name 158 170	Right atrial
+T54	Condition-Name 256 276	Paradoxical embolism
+T55	Condition-Name 297 318	isolated secundum ASD
+T56	Procedure-Name 353 367	device closure
+T57	Condition-Name 400 403	ASD
+T58	Observation-Name 409 411	Qp
+T59	Observation-Name 412 414	Qs
+A5	Observation-Type-Value T59 vital
+T60	Eq-Operator 415 416	<
+A6	Eq-Operator-Value T60 LT
+T61	Eq-Value 416 421	1.5:1
+T62	Condition-Name 437 455	RV volume overload
+T63	Condition-Name 461 476	A single defect
+T64	Observation-Name 491 498	closure
+T65	Eq-Operator 500 501	>
+A7	Eq-Operator-Value T65 GT
+T66	Eq-Value 501 503	38
+T67	Eq-Unit 504 506	mm
+T68	Condition-Name 522 526	ASDs
+T69	Procedure-Name 542 562	percutaneous closure
+T70	Eq-Operator 616 617	<
+A8	Eq-Operator-Value T70 LT
+T71	Eq-Value 617 618	5
+T72	Eq-Unit 619 621	mm
+T73	Condition-Name 628 662	Abnormal pulmonary venous drainage
+T74	Condition-Name 691 704	heart disease
+T75	Procedure-Name 715 730	cardiac surgery
+T76	Condition-Name 737 740	ASD
+T77	Severity 746 752	severe
+A9	Severity-Value T77 severe
+T78	Condition-Name 753 784	pulmonary arterial hypertension
+T79	Condition-Name 835 855	Intracardiac thrombi
+T80	Procedure-Name 869 885	echocardiography

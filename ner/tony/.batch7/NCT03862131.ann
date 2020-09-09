@@ -1,12 +1,67 @@
-T1	Procedure 350 367	radiation therapy
-T2	Procedure-Name 350 367	radiation therapy
-E1	Procedure:T1 Name:T2
-T3	Procedure 334 348	cancer therapy
-T4	Procedure-Name 334 348	cancer therapy
-E3	Procedure:T3 Name:T4
-T5	Language 455 458	MRI
-T6	Eq-Operator 567 576	less than
-A1	Eq-Operator-Value T6 LT
-T7	Eq-Value 577 578	1
-T8	Eq-Comparison 567 578	less than 1
-E4	Eq-Comparison:T8 Operator:T6 Value:T7
+T1	Modifier 137 142	early
+E1	Modifier:T1
+T2	Or 143 145	or
+E2	Or:T2
+T3	Modifier 146 163	metastatic breast
+E3	Modifier:T3
+T4	Condition 164 170	cancer
+E4	Condition:T4 Name:T24
+T5	Condition 172 180	lymphoma
+E5	Condition:T5 Name:T25
+T6	Condition 182 189	sarcoma
+E6	Condition:T6 Name:T26
+T7	Condition 191 199	leukemia
+E7	Condition:T7 Name:T27
+T8	Condition 201 208	myeloma
+E8	Condition:T8 Name:T28
+T9	Or 210 212	or
+E9	Or:T9
+T10	Modifier 213 217	lung
+E10	Modifier:T10
+T11	Condition 218 224	cancer
+E11	Condition:T11 Name:T29
+T12	Procedure 240 247	treated
+E12	Procedure:T12
+T13	And 248 251	and
+E13	And:T13
+T14	Modifier 263 275	stable brain
+E14	Modifier:T14
+T15	Condition 276 286	metastasis
+E15	Condition:T15 Name:T31
+T16	Eq-Comparison 308 317	Scheduled
+E16	Eq-Comparison:T16 Temporal-Period:T32
+T17	Procedure 329 348	anti-cancer therapy
+E17	Procedure:T17 Name:T33
+T18	Procedure 350 367	radiation therapy
+E18	Procedure:T18 Name:T34
+T19	Contraindication 407 423	Contraindication
+E19	Contraindication:T19
+T20	Procedure 427 453	magnetic resonance imaging
+E20	Procedure:T20 Name:T35
+T21	Procedure 455 458	MRI
+E21	Procedure:T21 Name:T36
+T22	Observation 551 566	Life expectancy
+E22	Observation:T22 Name:T37
+T23	Eq-Comparison 567 583	less than 1 year
+E23	Eq-Comparison:T23 Operator:T38 Value:T39 Temporal-Unit:T40
+T24	Condition-Name 164 170	cancer
+T25	Condition-Name 172 180	lymphoma
+T26	Condition-Name 182 189	sarcoma
+T27	Condition-Name 191 199	leukemia
+T28	Condition-Name 201 208	myeloma
+T29	Condition-Name 218 224	cancer
+T30	Stability 263 269	stable
+A1	Stability-Value T30 stable
+T31	Condition-Name 276 286	metastasis
+T32	Eq-Temporal-Period 308 317	Scheduled
+A2	Eq-Temporal-Period-Value T32 future
+T33	Procedure-Name 334 348	cancer therapy
+T34	Procedure-Name 350 367	radiation therapy
+T35	Procedure-Name 427 453	magnetic resonance imaging
+T36	Procedure-Name 455 458	MRI
+T37	Observation-Name 551 566	Life expectancy
+T38	Eq-Operator 567 576	less than
+A3	Eq-Operator-Value T38 LT
+T39	Eq-Value 577 578	1
+T40	Eq-Temporal-Unit 579 583	year
+A4	Eq-Temporal-Unit-Value T40 year

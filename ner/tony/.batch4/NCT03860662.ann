@@ -1,50 +1,118 @@
-T1	Procedure 397 422	botulinum toxin injection
-T2	Procedure-Name 397 422	botulinum toxin injection
-E1	Procedure:T1 Name:T2
+T1	Eq-Comparison 31 54	between the ages of 18-
+E1	Eq-Comparison:T1 Value:T39 Operator:T40
+T2	Study 103 108	study
+E2	Study:T2 
 T3	Condition 114 132	Spastic Hemiplegia
-T4	Condition-Name 114 132	Spastic Hemiplegia
-E3	Condition:T3 Name:T4
-T5	Condition 212 225	breastfeeding
-T6	Condition-Name 212 225	breastfeeding
-E5	Condition:T5 Name:T6
-T7	Condition 280 293	substance use
-T8	Condition-Name 280 293	substance use
-E7	Condition:T7 Name:T8
-T9	Condition 630 641	skin lesion
-T10	Condition-Name 630 641	skin lesion
-E9	Condition:T9 Name:T10
-T11	Condition 302 312	neuropathy
-T12	Condition-Name 302 312	neuropathy
-E11	Condition:T11 Name:T12
-T13	Condition 352 362	neuropathy
-T14	Condition-Name 352 362	neuropathy
-E13	Condition:T13 Name:T14
-T15	Procedure 567 576	Injection
-T16	Procedure-Name 567 576	Injection
-E15	Procedure:T15 Name:T16
-T17	Procedure 457 464	therapy
-T18	Procedure-Name 457 464	therapy
-E17	Procedure:T17 Name:T18
-T19	Eq-Operator 160 169	and above
-A1	Eq-Operator-Value T19 GTEQ
-T20	Eq-Operator 230 242	younger than
-A2	Eq-Operator-Value T20 LT
-T21	Eq-Operator 465 471	within
-A3	Eq-Operator-Value T21 LTEQ
-T22	Eq-Temporal-Unit 246 251	years
-A4	Eq-Temporal-Unit-Value T22 year
-T23	Eq-Temporal-Unit 483 489	months
-A5	Eq-Temporal-Unit-Value T23 month
-T24	Eq-Operator 53 54	-
-A6	Eq-Operator-Value T24 BETWEEN
-T25	Eq-Value 51 53	18
-T26	Eq-Value 54 56	60
-T27	Eq-Value 158 159	2
-T28	Eq-Value 243 245	18
-T29	Eq-Value 481 482	6
-T30	Eq-Comparison 158 169	2 and above
-E18	Eq-Comparison:T30 Operator:T19 Value:T27
-T31	Eq-Comparison 230 251	younger than 18 years
-E19	Eq-Comparison:T31 Operator:T20 Temporal-Unit:T22 Value:T28
-T32	Eq-Comparison 51 54	18-
-E20	Eq-Comparison:T32 Operator:T24 Value:T25
+E3	Condition:T3 Name:T42
+T4	Observation 134 157	Modified Ashworth Scale
+E4	Observation:T4 Name:T43
+T5	Eq-Comparison 158 169	2 and above
+E5	Eq-Comparison:T5 Value:T44 Operator:T45
+T6	Condition 196 204	Pregnant
+E6	Condition:T6 Name:T46
+T7	Condition 212 225	breastfeeding
+E7	Condition:T7 Name:T48
+T8	And 226 229	and
+E8	And:T8 
+T9	Eq-Comparison 230 251	younger than 18 years
+E9	Eq-Comparison:T9 Operator:T49 Value:T50 Temporal-Unit:T51
+T10	Drug 265 275	medication
+E10	Drug:T10 
+T11	And 276 279	and
+E11	And:T11 
+T12	Condition 280 293	substance use
+E12	Condition:T12 
+T13	Condition 302 312	neuropathy
+E13	Condition:T13 Name:T52
+T14	Eq-Comparison 320 327	history
+E14	Eq-Comparison:T14 Temporal-Period:T53
+T15	Condition 335 342	disease
+E15	Condition:T15 
+T16	Or 343 348	and /
+E16	Or:T16 
+T17	Or 349 351	or
+E17	Or:T17 
+T18	Condition 352 362	neuropathy
+E18	Condition:T18 Name:T55
+T19	Eq-Comparison 388 396	received
+E19	Eq-Comparison:T19 Temporal-Period:T56
+T20	Procedure 397 430	botulinum toxin injection therapy
+E20	Procedure:T20 Name:T57
+T21	And 431 434	and
+E21	And:T21 
+T22	Or 435 436	/
+E22	Or:T22 
+T23	Or 437 439	or
+E23	Or:T23 
+T24	Modifier 440 444	oral
+E24	Modifier:T24 
+T25	Procedure 445 464	antispastic therapy
+E25	Procedure:T25 
+T26	Eq-Comparison 465 489	within the last 6 months
+E26	Eq-Comparison:T26 Operator:T59 Temporal-Period:T60 Value:T61 Temporal-Unit:T62
+T27	Eq-Comparison 502 509	history
+E27	Eq-Comparison:T27 Temporal-Period:T63
+T28	Allergy 513 522	allergies
+E28	Allergy:T28 
+T29	Or 523 526	and
+E29	Or:T29 
+T30	Condition 527 543	hypersensitivity
+E30	Condition:T30 Name:T64
+T31	Drug 557 561	drug
+E31	Drug:T31 
+T32	Procedure 577 586	treatment
+E32	Procedure:T32 
+T33	Eq-Comparison 587 594	planned
+E33	Eq-Comparison:T33 Temporal-Period:T65
+T34	Procedure 595 616	purification hematoma
+E34	Procedure:T34 Name:T66
+T35	Modifier 618 626	cleaning
+E35	Modifier:T35 
+T36	Or 627 629	or
+E36	Or:T36 
+T37	Modifier 630 634	skin
+E37	Modifier:T37 
+T38	Condition 635 641	lesion
+E38	Condition:T38 Name:T67
+T39	Eq-Value 51 53	18
+T40	Eq-Operator 53 54	-
+A1	Eq-Operator-Value T40 BETWEEN
+T41	Eq-Value 54 56	60
+T42	Condition-Name 114 132	Spastic Hemiplegia
+T43	Observation-Name 134 157	Modified Ashworth Scale
+A2	Observation-Type-Value T43 clinical-score
+T44	Eq-Value 158 159	2
+T45	Eq-Operator 160 169	and above
+A3	Eq-Operator-Value T45 GTEQ
+T46	Condition-Name 196 204	Pregnant
+T47	Life-Stage-And-Gender 205 210	women
+A4	Life-Stage-And-Gender-Type T47 female
+T48	Condition-Name 212 225	breastfeeding
+T49	Eq-Operator 230 242	younger than
+A5	Eq-Operator-Value T49 LT
+T50	Eq-Value 243 245	18
+T51	Eq-Temporal-Unit 246 251	years
+A6	Eq-Temporal-Unit-Value T51 year
+T52	Condition-Name 302 312	neuropathy
+T53	Eq-Temporal-Period 320 327	history
+A7	Eq-Temporal-Period-Value T53 past
+T54	Condition-Name 328 342	of the disease
+T55	Condition-Name 352 362	neuropathy
+T56	Eq-Temporal-Period 388 396	received
+A8	Eq-Temporal-Period-Value T56 past
+T57	Procedure-Name 397 430	botulinum toxin injection therapy
+T58	Drug-Name 440 464	oral antispastic therapy
+T59	Eq-Operator 465 471	within
+A9	Eq-Operator-Value T59 LTEQ
+T60	Eq-Temporal-Period 476 480	last
+A10	Eq-Temporal-Period-Value T60 past
+T61	Eq-Value 481 482	6
+T62	Eq-Temporal-Unit 483 489	months
+A11	Eq-Temporal-Unit-Value T62 month
+T63	Eq-Temporal-Period 502 509	history
+A12	Eq-Temporal-Period-Value T63 past
+T64	Condition-Name 527 543	hypersensitivity
+T65	Eq-Temporal-Period 587 594	planned
+A13	Eq-Temporal-Period-Value T65 future
+T66	Procedure-Name 595 616	purification hematoma
+T67	Condition-Name 635 641	lesion

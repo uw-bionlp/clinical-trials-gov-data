@@ -1,33 +1,87 @@
-T1	Procedure 56 70	metastasectomy
-T2	Procedure-Name 56 70	metastasectomy
-E1	Procedure:T1 Name:T2
-T3	Procedure 136 145	resection
-T4	Procedure-Name 136 145	resection
-E3	Procedure:T3 Name:T4
-T5	Procedure 76 84	curative
-T6	Procedure-Name 76 84	curative
-E5	Procedure:T5 Name:T6
-T7	Procedure 243 261	surgical resection
-T8	Procedure-Name 243 261	surgical resection
-E7	Procedure:T7 Name:T8
-T9	Procedure 348 357	injection
-T10	Procedure-Name 348 357	injection
-E9	Procedure:T9 Name:T10
-T11	Procedure 554 572	surgical procedure
-T12	Procedure-Name 554 572	surgical procedure
-E11	Procedure:T11 Name:T12
-T13	Condition 436 445	emphysema
-T14	Condition-Name 436 445	emphysema
-E13	Condition:T13 Name:T14
-T15	Condition 532 536	lung
-T16	Condition-Name 532 536	lung
-E15	Condition:T15 Name:T16
-T17	Eq-Operator 156 157	>
-A1	Eq-Operator-Value T17 GT
-T18	Eq-Temporal-Unit 161 166	years
-A2	Eq-Temporal-Unit-Value T18 year
-T19	Age 152 155	Age
-E16	Age:T19
-T20	Eq-Value 158 160	18
-T21	Eq-Comparison 156 166	> 18 years
-E17	Eq-Comparison:T21 Operator:T17 Temporal-Unit:T18 Value:T20
+T1	Assertion 33 45	candidate to
+E1	Assertion:T1
+A1	Assertion-Type-Value E1 hypothetical
+T2	Condition 46 70	pulmonary metastasectomy
+E2	Condition:T2 Name:T28
+T3	Condition 76 91	curative intent
+E3	Condition:T3
+T4	Exception 95 99	mean
+E4	Exception:T4
+T5	Modifier 103 124	both major anatomical
+E5	Modifier:T5
+T6	Or 125 127	or
+E6	Or:T6
+T7	Modifier 128 135	limited
+E7	Modifier:T7
+T8	Procedure 136 145	resection
+E8	Procedure:T8 Name:T31
+T9	Age 152 155	Age
+E9	Age:T9
+T10	Eq-Comparison 156 166	> 18 years
+E10	Eq-Comparison:T10 Operator:T32 Value:T33 Temporal-Unit:T34
+T11	Condition 218 236	metastatic disease
+E11	Condition:T11 Name:T36
+T12	Procedure 243 261	surgical resection
+E12	Procedure:T12 Name:T37
+T13	Eq-Comparison 310 317	History
+E13	Eq-Comparison:T13 Temporal-Period:T38
+T14	Eq-Comparison 321 329	previous
+E14	Eq-Comparison:T14 Temporal-Period:T39
+T15	Procedure 330 357	intrapleural talc injection
+E15	Procedure:T15 Name:T40
+T16	Modifier 368 378	anatomical
+E16	Modifier:T16
+T17	Or 379 381	or
+E17	Or:T17
+T18	Modifier 382 394	pathological
+E18	Modifier:T18
+T19	Condition 395 404	condition
+E19	Condition:T19
+T20	Condition 410 427	diffuse adhesions
+E20	Condition:T20 Name:T43
+T21	Condition 436 445	emphysema
+E21	Condition:T21 Name:T45
+T22	Assertion 452 455	may
+E22	Assertion:T22
+A2	Assertion-Type-Value E22 hypothetical
+T23	Procedure 484 514	ultrasonographic investigation
+E23	Procedure:T23 Name:T47
+T24	Modifier 521 536	Incomplete lung
+E24	Modifier:T24
+T25	Negation 537 546	exclusion
+E25	Negation:T25
+T26	Temporal-Connection 547 553	during
+E26	Temporal-Connection:T26
+A3	Temporal-Connection-Type-Value E26 during
+T27	Procedure 554 572	surgical procedure
+E27	Procedure:T27 Name:T49
+T28	Condition-Name 46 70	pulmonary metastasectomy
+T29	Procedure-Name 76 84	curative
+T30	Severity 108 113	major
+A4	Severity-Value T30 severe
+T31	Procedure-Name 136 145	resection
+T32	Eq-Operator 156 157	>
+A5	Eq-Operator-Value T32 GT
+T33	Eq-Value 158 160	18
+T34	Eq-Temporal-Unit 161 166	years
+A6	Eq-Temporal-Unit-Value T34 year
+T35	Severity 207 217	widespread
+A7	Severity-Value T35 severe
+T36	Condition-Name 218 236	metastatic disease
+T37	Procedure-Name 243 261	surgical resection
+T38	Eq-Temporal-Period 310 317	History
+A8	Eq-Temporal-Period-Value T38 past
+T39	Eq-Temporal-Period 321 329	previous
+A9	Eq-Temporal-Period-Value T39 past
+T40	Procedure-Name 343 357	talc injection
+T41	Condition-Name 382 404	pathological condition
+T42	Condition-Name 406 408	eg
+T43	Condition-Name 410 427	diffuse adhesions
+T44	Severity 429 435	severe
+A10	Severity-Value T44 severe
+T45	Condition-Name 436 445	emphysema
+T46	Stability 456 465	interfere
+A11	Stability-Value T46 change
+T47	Procedure-Name 484 514	ultrasonographic investigation
+T48	Condition-Name 532 546	lung exclusion
+T49	Procedure-Name 554 572	surgical procedure

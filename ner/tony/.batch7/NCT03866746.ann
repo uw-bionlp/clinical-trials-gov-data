@@ -1,50 +1,124 @@
-T1	Procedure 387 414	panretinal photocoagulation
-T2	Procedure-Name 387 414	panretinal photocoagulation
-E1	Procedure:T1 Name:T2
-T3	Procedure 273 289	cataract surgery
-T4	Procedure-Name 273 289	cataract surgery
-E3	Procedure:T3 Name:T4
-T5	Condition 416 419	PRP
-T6	Condition-Name 416 419	PRP
-E5	Condition:T5 Name:T6
-T7	Condition 589 606	vascular diseases
-T8	Condition-Name 589 606	vascular diseases
-E7	Condition:T7 Name:T8
-T9	Procedure 525 533	traction
-T10	Procedure-Name 525 533	traction
-E9	Procedure:T9 Name:T10
-T11	Condition 540 548	syndrome
-T12	Condition-Name 540 548	syndrome
-E11	Condition:T11 Name:T12
-T13	Condition 561 569	glaucoma
-T14	Condition-Name 561 569	glaucoma
-E13	Condition:T13 Name:T14
-T15	Condition 535 538	VMT
-T16	Condition-Name 535 538	VMT
-E15	Condition:T15 Name:T16
-T17	Eq-Operator 290 296	within
-A1	Eq-Operator-Value T17 LTEQ
-T18	Eq-Operator 352 358	within
-A2	Eq-Operator-Value T18 LTEQ
-T19	Eq-Operator 421 427	within
-A3	Eq-Operator-Value T19 LTEQ
-T20	Eq-Temporal-Unit 39 44	years
-A4	Eq-Temporal-Unit-Value T20 year
-T21	Eq-Temporal-Unit 299 305	months
-A5	Eq-Temporal-Unit-Value T21 month
-T22	Eq-Temporal-Unit 375 381	months
-A6	Eq-Temporal-Unit-Value T22 month
-T23	Eq-Temporal-Unit 441 447	months
-A7	Eq-Temporal-Unit-Value T23 month
-T24	Eq-Unit 105 107	CM
-T25	Age 45 48	old
-E16	Age:T25
-T26	Eq-Value 36 38	18
-T27	Eq-Value 120 123	250
-T28	Eq-Value 192 194	20
-T29	Eq-Value 203 205	20
-T30	Eq-Value 297 298	6
-T31	Eq-Value 373 374	6
-T32	Eq-Value 439 440	4
-T33	Eq-Comparison 290 305	within 6 months
-E17	Eq-Comparison:T33 Operator:T17 Temporal-Unit:T21 Value:T30
+T1	Eq-Comparison 25 44	older than 18 years
+E1	Eq-Comparison:T1 Operator:T34 Value:T35 Temporal-Unit:T36
+T2	Age 45 48	old
+E2	Age:T2
+T3	Condition 69 72	DME
+E3	Condition:T3 Name:T37
+T4	Observation 78 103	central macular thickness
+E4	Observation:T4 Name:T38
+T5	Observation 105 108	CMT
+E5	Observation:T5 Name:T39
+T6	Eq-Comparison 110 126	more than 250 µm
+E6	Eq-Comparison:T6 Operator:T40 Value:T41 Unit:T42
+T7	Observation 139 142	OCT
+E7	Observation:T7
+T8	Observation 145 176	- best corrected visual acuity
+E8	Observation:T8
+T9	Observation 178 182	BCVA
+E9	Observation:T9 Name:T45
+T10	Eq-Comparison 184 198	between 20/400
+E10	Eq-Comparison:T10 Operator:T46 Value:T47
+T11	And 199 202	and
+E11	And:T11
+T12	Eq-Comparison 203 208	20/40
+E12	Eq-Comparison:T12
+T13	Modifier 249 261	intra-ocular
+E13	Modifier:T13
+T14	Procedure 262 269	surgery
+E14	Procedure:T14 Name:T49
+T15	Procedure 273 289	cataract surgery
+E15	Procedure:T15 Name:T50
+T16	Eq-Comparison 290 305	within 6 months
+E16	Eq-Comparison:T16 Operator:T51 Value:T52 Temporal-Unit:T53
+T17	Eq-Comparison 311 316	prior
+E17	Eq-Comparison:T17 Temporal-Period:T54
+T18	Procedure 317 339	intravitreal injection
+E18	Procedure:T18 Name:T55
+T19	Drug 347 351	drug
+E19	Drug:T19
+T20	Eq-Comparison 352 381	within the preceding 6 months
+E20	Eq-Comparison:T20 Operator:T56 Temporal-Period:T57 Value:T58 Temporal-Unit:T59
+T21	Procedure 387 414	panretinal photocoagulation
+E21	Procedure:T21 Name:T60
+T22	Procedure 416 419	PRP
+E22	Procedure:T22
+T23	Eq-Comparison 421 447	within the former 4 months
+E23	Eq-Comparison:T23 Operator:T62 Temporal-Period:T63 Value:T64 Temporal-Unit:T65
+T24	Eq-Comparison 468 476	previous
+E24	Eq-Comparison:T24 Temporal-Period:T66
+T25	Procedure 477 490	macular laser
+E25	Procedure:T25 Name:T67
+T26	Modifier 510 524	vitreo-macular
+E26	Modifier:T26
+T27	Condition 525 533	traction
+E27	Condition:T27
+T28	Observation 535 538	VMT
+E28	Observation:T28
+T29	Condition 540 548	syndrome
+E29	Condition:T29 Name:T70
+T30	Condition 561 569	glaucoma
+E30	Condition:T30 Name:T72
+T31	Other 575 580	other
+E31	Other:T31
+T32	Condition 581 606	retinal vascular diseases
+E32	Condition:T32 Name:T73
+T33	Condition 612 622	conditions
+E33	Condition:T33
+T34	Eq-Operator 25 35	older than
+A1	Eq-Operator-Value T34 GT
+T35	Eq-Value 36 38	18
+T36	Eq-Temporal-Unit 39 44	years
+A2	Eq-Temporal-Unit-Value T36 year
+T37	Condition-Name 69 72	DME
+T38	Observation-Name 78 103	central macular thickness
+A3	Observation-Type-Value T38 measurement
+T39	Observation-Name 105 108	CMT
+T40	Eq-Operator 110 119	more than
+A4	Eq-Operator-Value T40 GT
+T41	Eq-Value 120 123	250
+T42	Eq-Unit 124 126	µm
+T43	Condition-Name 139 142	OCT
+T44	Condition-Name 145 176	- best corrected visual acuity
+T45	Observation-Name 178 182	BCVA
+T46	Eq-Operator 184 191	between
+A5	Eq-Operator-Value T46 BETWEEN
+T47	Eq-Value 192 198	20/400
+T48	Condition-Name 203 208	20/40
+T49	Procedure-Name 262 269	surgery
+T50	Procedure-Name 273 289	cataract surgery
+T51	Eq-Operator 290 296	within
+A6	Eq-Operator-Value T51 LTEQ
+T52	Eq-Value 297 298	6
+T53	Eq-Temporal-Unit 299 305	months
+A7	Eq-Temporal-Unit-Value T53 month
+T54	Eq-Temporal-Period 311 316	prior
+A8	Eq-Temporal-Period-Value T54 past
+T55	Procedure-Name 317 339	intravitreal injection
+T56	Eq-Operator 352 358	within
+A9	Eq-Operator-Value T56 LTEQ
+T57	Eq-Temporal-Period 363 372	preceding
+A10	Eq-Temporal-Period-Value T57 past
+T58	Eq-Value 373 374	6
+T59	Eq-Temporal-Unit 375 381	months
+A11	Eq-Temporal-Unit-Value T59 month
+T60	Procedure-Name 398 414	photocoagulation
+T61	Drug-Name 416 419	PRP
+T62	Eq-Operator 421 427	within
+A12	Eq-Operator-Value T62 LTEQ
+T63	Eq-Temporal-Period 432 438	former
+A13	Eq-Temporal-Period-Value T63 past
+T64	Eq-Value 439 440	4
+T65	Eq-Temporal-Unit 441 447	months
+A14	Eq-Temporal-Unit-Value T65 month
+T66	Eq-Temporal-Period 468 476	previous
+A15	Eq-Temporal-Period-Value T66 past
+T67	Procedure-Name 477 490	macular laser
+T68	Condition-Name 510 533	vitreo-macular traction
+T69	Condition-Name 535 538	VMT
+T70	Condition-Name 540 548	syndrome
+T71	Severity 554 560	severe
+A16	Severity-Value T71 severe
+T72	Condition-Name 561 569	glaucoma
+T73	Condition-Name 581 606	retinal vascular diseases
+T74	Stability 628 634	impede
+A17	Stability-Value T74 change

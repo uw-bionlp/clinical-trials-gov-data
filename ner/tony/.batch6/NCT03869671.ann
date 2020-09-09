@@ -1,0 +1,59 @@
+T1	Risk 84 88	risk
+E1	Risk:T1
+T2	Risk 89 98	behaviors
+E2	Risk:T2
+T3	Condition 103 106	HIV
+E3	Condition:T3 Name:T19
+T4	Eq-Comparison 108 118	past-month
+E4	Eq-Comparison:T4 Temporal-Period:T20 Temporal-Unit:T21
+T5	Condition 129 144	syringe sharing
+E5	Condition:T5 Name:T22
+T6	Condition 146 163	transactional sex
+E6	Condition:T6
+T7	Condition 188 200	HIV-infected
+E7	Condition:T7 Name:T23 Name:T24
+T8	Assertion 366 378	eligible for
+E8	Assertion:T8
+A1	Assertion-Type-Value E8 hypothetical
+T9	Procedure 379 383	PrEP
+E9	Procedure:T9
+T10	Condition 395 398	HIV
+E10	Condition:T10 Name:T25
+T11	Condition 399 409	uninfected
+E11	Condition:T11 Name:T26
+T12	Condition 427 441	renal function
+E12	Condition:T12
+T13	Observation 453 473	creatinine clearance
+E13	Observation:T13
+T14	Eq-Comparison 474 484	≥60 ml/min
+E14	Eq-Comparison:T14 Value:T30 Unit:T31 Temporal-Unit:T32
+T15	Condition 502 519	hepatitis B virus
+E15	Condition:T15 Name:T33
+T16	Condition 521 524	HBV
+E16	Condition:T16 Name:T34
+T17	Life-Stage-And-Gender 44 49	adult
+A2	Life-Stage-And-Gender-Type T17 adult
+T18	Polarity 79 83	high
+A3	Polarity-Value T18 high
+T19	Condition-Name 103 106	HIV
+T20	Eq-Temporal-Period 108 112	past
+A4	Eq-Temporal-Period-Value T20 past
+T21	Eq-Temporal-Unit 113 118	month
+A5	Eq-Temporal-Unit-Value T21 month
+T22	Condition-Name 129 144	syringe sharing
+T23	Condition-Name 188 191	HIV
+T24	Condition-Name 192 200	infected
+T25	Condition-Name 395 398	HIV
+T26	Condition-Name 399 409	uninfected
+T27	Polarity 418 426	adequate
+A6	Polarity-Value T27 normal
+T28	Observation-Name 427 441	renal function
+A7	Observation-Type-Value T28 lab
+T29	Observation-Name 443 473	estimated creatinine clearance
+A8	Observation-Type-Value T29 lab
+T30	Eq-Value 474 477	≥60
+T31	Eq-Unit 478 480	ml
+T32	Eq-Temporal-Unit 481 484	min
+A9	Eq-Temporal-Unit-Value T32 minute
+T33	Condition-Name 502 519	hepatitis B virus
+T34	Condition-Name 521 524	HBV

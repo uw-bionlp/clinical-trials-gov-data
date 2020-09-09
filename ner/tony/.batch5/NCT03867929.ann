@@ -1,30 +1,64 @@
-T1	Condition 201 227	lipid metabolism disorders
-T2	Condition-Name 201 227	lipid metabolism disorders
-E1	Condition:T1 Name:T2
-T3	Condition 316 339	Urinary tract infection
-T4	Condition-Name 316 339	Urinary tract infection
-E3	Condition:T3 Name:T4
-T5	Condition 382 404	Chronic kidney failure
-T6	Condition-Name 382 404	Chronic kidney failure
-E5	Condition:T5 Name:T6
-T7	Condition 37 57	erectile dysfunction
-T8	Condition-Name 37 57	erectile dysfunction
-E7	Condition:T7 Name:T8
-T9	Condition 460 480	psychiatric diseases
-T10	Condition-Name 460 480	psychiatric diseases
-E9	Condition:T9 Name:T10
-T11	Condition 423 441	metabolic syndrome
-T12	Condition-Name 423 441	metabolic syndrome
-E11	Condition:T11 Name:T12
-T13	Condition 108 125	diabetes mellitus
-T14	Condition-Name 108 125	diabetes mellitus
-E13	Condition:T13 Name:T14
-T15	Procedure 553 568	cardiac surgery
-T16	Procedure-Name 553 568	cardiac surgery
-E15	Procedure:T15 Name:T16
-T17	Condition 157 169	hypertension
-T18	Condition-Name 157 169	hypertension
-E17	Condition:T17 Name:T18
-T19	Procedure 580 592	radiotherapy
-T20	Procedure-Name 580 592	radiotherapy
-E19	Procedure:T19 Name:T20
+T1	Condition 37 57	erectile dysfunction
+E1	Condition:T1 Name:T25
+T2	Modifier 95 107	uncontrolled
+E2	Modifier:T2
+T3	Condition 108 125	diabetes mellitus
+E3	Condition:T3 Name:T26
+T4	Modifier 144 156	uncontrolled
+E4	Modifier:T4
+T5	Condition 157 169	hypertension
+E5	Condition:T5 Name:T27
+T6	Modifier 188 200	uncontrolled
+E6	Modifier:T6
+T7	Condition 201 227	lipid metabolism disorders
+E7	Condition:T7 Name:T28
+T8	Condition 246 267	neurological diseases
+E8	Condition:T8 Name:T29
+T9	Condition 286 309	heamatological diseases
+E9	Condition:T9 Name:T30
+T10	Modifier 316 329	Urinary tract
+E10	Modifier:T10
+T11	Condition 330 339	infection
+E11	Condition:T11
+T12	Condition 363 375	malignencies
+E12	Condition:T12
+T13	Condition 382 404	Chronic kidney failure
+E13	Condition:T13 Name:T32
+T14	Condition 423 441	metabolic syndrome
+E14	Condition:T14 Name:T33
+T15	Condition 460 480	psychiatric diseases
+E15	Condition:T15 Name:T34
+T16	Or 481 487	and/or
+E16	Or:T16
+T17	Procedure 488 505	medical treatment
+E17	Procedure:T17
+T18	Condition 512 519	Smoking
+E18	Condition:T18 Name:T35
+T19	Eq-Comparison 526 533	History
+E19	Eq-Comparison:T19 Temporal-Period:T36
+T20	Procedure 537 551	pelvic surgery
+E20	Procedure:T20 Name:T37
+T21	Procedure 553 568	cardiac surgery
+E21	Procedure:T21 Name:T38
+T22	Or 569 572	and
+E22	Or:T22
+T23	Modifier 573 579	pelvic
+E23	Modifier:T23
+T24	Procedure 580 592	radiotherapy
+E24	Procedure:T24 Name:T39
+T25	Condition-Name 37 57	erectile dysfunction
+T26	Condition-Name 108 125	diabetes mellitus
+T27	Condition-Name 157 169	hypertension
+T28	Condition-Name 201 227	lipid metabolism disorders
+T29	Condition-Name 246 267	neurological diseases
+T30	Condition-Name 286 309	heamatological diseases
+T31	Condition-Name 316 339	Urinary tract infection
+T32	Condition-Name 390 404	kidney failure
+T33	Condition-Name 423 441	metabolic syndrome
+T34	Condition-Name 460 480	psychiatric diseases
+T35	Condition-Name 512 519	Smoking
+T36	Eq-Temporal-Period 526 533	History
+A1	Eq-Temporal-Period-Value T36 past
+T37	Procedure-Name 537 551	pelvic surgery
+T38	Procedure-Name 553 568	cardiac surgery
+T39	Procedure-Name 580 592	radiotherapy

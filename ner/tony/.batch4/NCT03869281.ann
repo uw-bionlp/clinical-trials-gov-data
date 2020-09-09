@@ -1,117 +1,251 @@
-T1	Condition 729 758	diabetes-related complication
-T2	Condition-Name 729 758	diabetes-related complication
-E1	Condition:T1 Name:T2
-T3	Condition 476 492	brittle diabetes
-T4	Condition-Name 476 492	brittle diabetes
-E3	Condition:T3 Name:T4
-T5	Condition 320 335	Type 1 diabetes
-T6	Condition-Name 320 335	Type 1 diabetes
-E5	Condition:T5 Name:T6
-T7	Condition 556 568	ketoacidosis
-T8	Condition-Name 556 568	ketoacidosis
-E7	Condition:T7 Name:T8
-T9	Condition 779 790	retinopathy
-T10	Condition-Name 779 790	retinopathy
-E9	Condition:T9 Name:T10
-T11	Condition 804 815	nephropathy
-T12	Condition-Name 804 815	nephropathy
-E11	Condition:T11 Name:T12
-T13	Condition 767 777	neuropathy
-T14	Condition-Name 767 777	neuropathy
-E13	Condition:T13 Name:T14
-T15	Procedure 690 697	therapy
-T16	Procedure-Name 690 697	therapy
-E15	Procedure:T15 Name:T16
-T17	Condition 1063 1107	severe chronic obstructive pulmonary disease
-T18	Condition-Name 1063 1107	severe chronic obstructive pulmonary disease
-E17	Condition:T17 Name:T18
-T19	Procedure 1353 1397	simultaneous pancreas kidney transplantation
-T20	Procedure-Name 1353 1397	simultaneous pancreas kidney transplantation
-E19	Procedure:T19 Name:T20
-T21	Procedure 1399 1431	pancreatic islet transplantation
-T22	Procedure-Name 1399 1431	pancreatic islet transplantation
-E21	Procedure:T21 Name:T22
-T23	Procedure 1255 1282	hormone replacement therapy
-T24	Procedure-Name 1255 1282	hormone replacement therapy
-E23	Procedure:T23 Name:T24
-T25	Condition 987 1013	inflammatory bowel disease
-T26	Condition-Name 987 1013	inflammatory bowel disease
-E25	Condition:T25 Name:T26
-T27	Condition 1109 1130	hepatic insufficiency
-T28	Condition-Name 1109 1130	hepatic insufficiency
-E27	Condition:T27 Name:T28
-T29	Condition 1027 1047	rheumatoid arthritis
-T30	Condition-Name 1027 1047	rheumatoid arthritis
-E29	Condition:T29 Name:T30
-T31	Condition 966 985	hyperparathyroidism
-T32	Condition-Name 966 985	hyperparathyroidism
-E31	Condition:T31 Name:T32
-T33	Condition 949 964	hyperthyroidism
-T34	Condition-Name 949 964	hyperthyroidism
-E33	Condition:T33 Name:T34
-T35	Condition 933 947	hypothyroidism
-T36	Condition-Name 933 947	hypothyroidism
-E35	Condition:T35 Name:T36
-T37	Condition 1049 1061	hypogonadism
-T38	Condition-Name 1049 1061	hypogonadism
-E37	Condition:T37 Name:T38
-T39	Observation 1471 1474	BMI
-T40	Observation-Name 1471 1474	BMI
-E39	Observation:T39 Name:T40
-A1	Observation-Type-Value T40 vital
-T41	Eq-Operator 133 139	within
-A2	Eq-Operator-Value T41 LTEQ
-T42	Eq-Operator 201 202	≥
-A3	Eq-Operator-Value T42 GTEQ
-T43	Eq-Operator 209 210	<
-A4	Eq-Operator-Value T43 LT
-T44	Eq-Operator 345 346	≥
-A5	Eq-Operator-Value T44 GTEQ
-T45	Eq-Operator 359 360	<
-A6	Eq-Operator-Value T45 LT
-T46	Eq-Operator 1147 1148	≥
-A7	Eq-Operator-Value T46 GTEQ
-T47	Eq-Operator 1475 1476	<
-A8	Eq-Operator-Value T47 LT
-T48	Eq-Operator 1484 1485	≥
-A9	Eq-Operator-Value T48 GTEQ
-T49	Eq-Temporal-Unit 214 219	years
-A10	Eq-Temporal-Unit-Value T49 year
-T50	Eq-Temporal-Unit 349 354	years
-A11	Eq-Temporal-Unit-Value T50 year
-T51	Eq-Temporal-Unit 364 369	years
-A12	Eq-Temporal-Unit-Value T51 year
-T52	Eq-Temporal-Unit 465 470	years
-A13	Eq-Temporal-Unit-Value T52 year
-T53	Eq-Unit 1489 1494	kg/m2
-T54	Age 197 200	age
-E40	Age:T54
-T55	Age 341 344	age
-E41	Age:T55
-T56	Eq-Value 156 157	2
-T57	Eq-Value 166 170	2005
-T58	Eq-Value 175 177	31
-T59	Eq-Value 187 191	2017
-T60	Eq-Value 202 204	18
-T61	Eq-Value 211 213	65
-T62	Eq-Value 325 326	1
-T63	Eq-Value 346 348	18
-T64	Eq-Value 361 363	65
-T65	Eq-Value 463 464	5
-T66	Eq-Value 1149 1150	3
-T67	Eq-Value 1476 1478	18
-T68	Eq-Value 1486 1488	30
-T69	Eq-Comparison 201 204	≥18
-E42	Eq-Comparison:T69 Operator:T42 Value:T60
-T70	Eq-Comparison 209 219	< 65 years
-E43	Eq-Comparison:T70 Operator:T43 Temporal-Unit:T49 Value:T61
-T71	Eq-Comparison 345 354	≥18 years
-E44	Eq-Comparison:T71 Operator:T44 Temporal-Unit:T50 Value:T63
-T72	Eq-Comparison 359 369	< 65 years
-E45	Eq-Comparison:T72 Operator:T45 Temporal-Unit:T51 Value:T64
-T73	Eq-Comparison 1147 1150	≥ 3
-E46	Eq-Comparison:T73 Operator:T46 Value:T66
-T74	Eq-Comparison 1475 1478	<18
-E47	Eq-Comparison:T74 Operator:T47 Value:T67
+T1	Condition 36 39	T1D
+E1	Condition:T1 Name:T76
+T2	Eq-Comparison 53 61	received
+E2	Eq-Comparison:T2 Temporal-Period:T77
+T3	Eq-Comparison 68 73	first
+E3	Eq-Comparison:T3
+T4	Condition 74 77	PTA
+E4	Condition:T4
+T5	Or 79 81	or
+E5	Or:T5
+T6	Modifier 82 88	second
+E6	Modifier:T6
+T7	Condition 89 92	PTA
+E7	Condition:T7
+T8	Eq-Comparison 107 112	first
+E8	Eq-Comparison:T8
+T9	Procedure 113 118	graft
+E9	Procedure:T9
+T10	Eq-Comparison 133 146	within a week
+E10	Eq-Comparison:T10 Operator:T78 Temporal-Unit:T79
+T11	Eq-Comparison 148 191	between 2 January 2005 and 31 December 2017
+E11	Eq-Comparison:T11 Operator:T80 Value:T81 Value:T82 Value:T83
+T12	Age 197 200	age
+E12	Age:T12
+T13	Eq-Comparison 201 204	≥18
+E13	Eq-Comparison:T13 Operator:T84
+T14	And 205 208	and
+E14	And:T14
+T15	Eq-Comparison 209 219	< 65 years
+E15	Eq-Comparison:T15 Operator:T85 Value:T86 Temporal-Unit:T87
+T16	Condition 320 335	Type 1 diabetes
+E16	Condition:T16 Name:T88
+T17	Age 341 344	age
+E17	Age:T17
+T18	Eq-Comparison 345 354	≥18 years
+E18	Eq-Comparison:T18 Operator:T89 Temporal-Unit:T90
+T19	And 355 358	and
+E19	And:T19
+T20	Eq-Comparison 359 369	< 65 years
+E20	Eq-Comparison:T20 Operator:T91 Value:T92 Temporal-Unit:T93
+T21	Assertion 375 389	willingness to
+E21	Assertion:T21
+A1	Assertion-Type-Value E21 hypothetical
+T22	Study 424 429	study
+E22	Study:T22
+T23	Observation 435 450	minimum disease
+E23	Observation:T23
+T24	Eq-Comparison 451 470	duration of 5 years
+E24	Eq-Comparison:T24 Value:T95 Temporal-Unit:T96
+T25	Condition 476 492	brittle diabetes
+E25	Condition:T25 Name:T97
+T26	Condition 541 554	complications
+E26	Condition:T26 Name:T100
+T27	Condition 556 568	ketoacidosis
+E27	Condition:T27 Name:T101
+T28	Or 569 571	or
+E28	Or:T28
+T29	Condition 579 592	hypoglycaemic
+E29	Condition:T29 Name:T103
+T30	Modifier 612 633	third-part assistance
+E30	Modifier:T30
+T31	Or 634 636	or
+E31	Or:T31
+T32	Procedure 682 697	insulin therapy
+E32	Procedure:T32 Name:T104
+T33	Eq-Comparison 716 728	at least one
+E33	Eq-Comparison:T33 Operator:T105 Value:T106
+T34	Condition 729 737	diabetes
+E34	Condition:T34 Name:T107
+T35	Condition 746 758	complication
+E35	Condition:T35 Name:T108
+T36	Condition 767 777	neuropathy
+E36	Condition:T36 Name:T109
+T37	Condition 779 790	retinopathy
+E37	Condition:T37 Name:T110
+T38	Condition 792 815	subclinical nephropathy
+E38	Condition:T38 Name:T111
+T39	Condition 856 866	conditions
+E39	Condition:T39
+T40	Exception 867 877	other than
+E40	Exception:T40
+T41	Condition 878 881	T1D
+E41	Condition:T41 Name:T112
+T42	Condition 898 909	bone health
+E42	Condition:T42 Name:T114
+T43	Modifier 917 932	non-compensated
+E43	Modifier:T43
+T44	Condition 933 947	hypothyroidism
+E44	Condition:T44 Name:T115
+T45	Condition 949 964	hyperthyroidism
+E45	Condition:T45 Name:T116
+T46	Condition 966 985	hyperparathyroidism
+E46	Condition:T46 Name:T117
+T47	Condition 987 1013	inflammatory bowel disease
+E47	Condition:T47 Name:T118
+T48	Condition 1015 1025	malignancy
+E48	Condition:T48 Name:T119
+T49	Condition 1027 1047	rheumatoid arthritis
+E49	Condition:T49 Name:T120
+T50	Condition 1049 1061	hypogonadism
+E50	Condition:T50 Name:T121
+T51	Modifier 1070 1077	chronic
+E51	Modifier:T51
+T52	Condition 1078 1107	obstructive pulmonary disease
+E52	Condition:T52 Name:T123
+T53	Condition 1109 1130	hepatic insufficiency
+E53	Condition:T53 Name:T124
+T54	Observation 1132 1146	alcohol intake
+E54	Observation:T54 Name:T125
+T55	Eq-Comparison 1147 1160	≥ 3 units/day
+E55	Eq-Comparison:T55 Operator:T126 Value:T127 Unit:T128 Temporal-Unit:T129
+T56	Drug 1176 1181	drugs
+E56	Drug:T56
+T57	Assertion 1187 1190	can
+E57	Assertion:T57
+A2	Assertion-Type-Value E57 hypothetical
+T58	Condition 1198 1213	bone metabolism
+E58	Condition:T58 Name:T132
+T59	Drug 1221 1236	bisphosphonates
+E59	Drug:T59 Name:T133
+T60	Drug 1238 1253	anticonvulsants
+E60	Drug:T60 Name:T134
+T61	Procedure 1255 1282	hormone replacement therapy
+E61	Procedure:T61 Name:T135
+T62	Exception 1284 1294	other than
+E62	Exception:T62
+T63	Drug 1295 1310	glucocorticoids
+E63	Drug:T63 Name:T136
+T64	Or 1311 1314	and
+E64	Or:T64
+T65	Drug 1315 1333	immunosuppressants
+E65	Drug:T65 Name:T137
+T66	Procedure 1366 1397	pancreas kidney transplantation
+E66	Procedure:T66 Name:T138
+T67	Procedure 1399 1431	pancreatic islet transplantation
+E67	Procedure:T67 Name:T139
+T68	Modifier 1433 1441	multiple
+E68	Modifier:T68
+T69	Condition 1442 1446	PTAs
+E69	Condition:T69 Name:T140
+T70	Other 1448 1453	other
+E70	Other:T70
+T71	Procedure 1454 1465	transplants
+E71	Procedure:T71 Name:T141
+T72	Observation 1471 1474	BMI
+E72	Observation:T72 Name:T142
+T73	Eq-Comparison 1475 1480	<18.5
+E73	Eq-Comparison:T73 Operator:T143 Value:T144
+T74	Or 1481 1483	or
+E74	Or:T74
 T75	Eq-Comparison 1484 1494	≥ 30 kg/m2
-E48	Eq-Comparison:T75 Operator:T48 Unit:T53 Value:T68
+E75	Eq-Comparison:T75 Operator:T145 Value:T146 Unit:T147 Unit:T148
+T76	Condition-Name 36 39	T1D
+T77	Eq-Temporal-Period 53 61	received
+A3	Eq-Temporal-Period-Value T77 past
+T78	Eq-Operator 133 139	within
+A4	Eq-Operator-Value T78 LTEQ
+T79	Eq-Temporal-Unit 142 146	week
+A5	Eq-Temporal-Unit-Value T79 week
+T80	Eq-Operator 148 155	between
+A6	Eq-Operator-Value T80 BETWEEN
+T81	Eq-Value 156 157	2
+T82	Eq-Value 158 170	January 2005
+T83	Eq-Value 175 191	31 December 2017
+T84	Eq-Operator 201 204	≥18
+A7	Eq-Operator-Value T84 GTEQ
+T85	Eq-Operator 209 210	<
+A8	Eq-Operator-Value T85 LT
+T86	Eq-Value 211 213	65
+T87	Eq-Temporal-Unit 214 219	years
+A9	Eq-Temporal-Unit-Value T87 year
+T88	Condition-Name 320 335	Type 1 diabetes
+T89	Eq-Operator 345 348	≥18
+A10	Eq-Operator-Value T89 GTEQ
+T90	Eq-Temporal-Unit 349 354	years
+A11	Eq-Temporal-Unit-Value T90 year
+T91	Eq-Operator 359 360	<
+A12	Eq-Operator-Value T91 LT
+T92	Eq-Value 361 363	65
+T93	Eq-Temporal-Unit 364 369	years
+A13	Eq-Temporal-Unit-Value T93 year
+T94	Condition-Name 435 450	minimum disease
+T95	Eq-Value 463 464	5
+T96	Eq-Temporal-Unit 465 470	years
+A14	Eq-Temporal-Unit-Value T96 year
+T97	Condition-Name 476 492	brittle diabetes
+T98	Severity 526 534	frequent
+A15	Severity-Value T98 severe
+T99	Severity 535 540	acute
+A16	Severity-Value T99 severe
+T100	Condition-Name 541 554	complications
+T101	Condition-Name 556 568	ketoacidosis
+T102	Severity 572 578	severe
+A17	Severity-Value T102 severe
+T103	Condition-Name 579 592	hypoglycaemic
+T104	Procedure-Name 682 697	insulin therapy
+T105	Eq-Operator 716 724	at least
+A18	Eq-Operator-Value T105 GTEQ
+T106	Eq-Value 725 728	one
+T107	Condition-Name 729 737	diabetes
+T108	Condition-Name 746 758	complication
+T109	Condition-Name 767 777	neuropathy
+T110	Condition-Name 779 790	retinopathy
+T111	Condition-Name 792 815	subclinical nephropathy
+T112	Condition-Name 878 881	T1D
+T113	Stability 891 897	affect
+A19	Stability-Value T113 change
+T114	Condition-Name 898 909	bone health
+T115	Condition-Name 933 947	hypothyroidism
+T116	Condition-Name 949 964	hyperthyroidism
+T117	Condition-Name 966 985	hyperparathyroidism
+T118	Condition-Name 987 1013	inflammatory bowel disease
+T119	Condition-Name 1015 1025	malignancy
+T120	Condition-Name 1027 1047	rheumatoid arthritis
+T121	Condition-Name 1049 1061	hypogonadism
+T122	Severity 1063 1069	severe
+A20	Severity-Value T122 severe
+T123	Condition-Name 1078 1107	obstructive pulmonary disease
+T124	Condition-Name 1109 1130	hepatic insufficiency
+T125	Observation-Name 1132 1146	alcohol intake
+A21	Observation-Type-Value T125 lab
+T126	Eq-Operator 1147 1148	≥
+A22	Eq-Operator-Value T126 GTEQ
+T127	Eq-Value 1149 1150	3
+T128	Eq-Unit 1151 1156	units
+T129	Eq-Temporal-Unit 1157 1160	day
+A23	Eq-Temporal-Unit-Value T129 day
+T130	Eq-Temporal-Period 1169 1172	use
+A24	Eq-Temporal-Period-Value T130 present
+T131	Stability 1191 1197	affect
+A25	Stability-Value T131 change
+T132	Condition-Name 1198 1213	bone metabolism
+T133	Drug-Name 1221 1236	bisphosphonates
+T134	Drug-Name 1238 1253	anticonvulsants
+T135	Procedure-Name 1255 1282	hormone replacement therapy
+T136	Drug-Name 1295 1310	glucocorticoids
+T137	Drug-Name 1315 1333	immunosuppressants
+T138	Procedure-Name 1366 1397	pancreas kidney transplantation
+T139	Procedure-Name 1399 1431	pancreatic islet transplantation
+T140	Condition-Name 1442 1446	PTAs
+T141	Procedure-Name 1454 1465	transplants
+T142	Observation-Name 1471 1474	BMI
+A26	Observation-Type-Value T142 vital
+T143	Eq-Operator 1475 1476	<
+A27	Eq-Operator-Value T143 LT
+T144	Eq-Value 1476 1480	18.5
+T145	Eq-Operator 1484 1485	≥
+A28	Eq-Operator-Value T145 GTEQ
+T146	Eq-Value 1486 1488	30
+T147	Eq-Unit 1489 1491	kg
+T148	Eq-Unit 1492 1494	m2

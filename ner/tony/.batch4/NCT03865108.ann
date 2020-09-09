@@ -1,41 +1,125 @@
-T1	Condition 35 44	gestation
-T2	Condition-Name 35 44	gestation
-E1	Condition:T1 Name:T2
-T3	Procedure 160 169	reduction
-T4	Procedure-Name 160 169	reduction
-E3	Procedure:T3 Name:T4
-T5	Eq-Operator 551 560	less than
-A1	Eq-Operator-Value T5 LT
-T6	Eq-Operator 579 585	within
-A2	Eq-Operator-Value T6 LTEQ
-T7	Eq-Temporal-Unit 189 194	weeks
-A3	Eq-Temporal-Unit-Value T7 week
-T8	Eq-Temporal-Unit 197 201	days
-A4	Eq-Temporal-Unit-Value T8 day
-T9	Eq-Temporal-Unit 361 366	weeks
-A5	Eq-Temporal-Unit-Value T9 week
-T10	Eq-Temporal-Unit 369 373	days
-A6	Eq-Temporal-Unit-Value T10 day
-T11	Eq-Temporal-Unit 381 386	weeks
-A7	Eq-Temporal-Unit-Value T11 week
-T12	Eq-Temporal-Unit 389 393	days
-A8	Eq-Temporal-Unit-Value T12 day
-T13	Eq-Temporal-Unit 589 593	days
-A9	Eq-Temporal-Unit-Value T13 day
-T14	Eq-Unit 576 578	mm
-T15	Age 222 225	age
-E4	Age:T15
-T16	Age 329 332	age
-E5	Age:T16
-T17	Age 494 497	Age
-E6	Age:T17
-T18	Eq-Value 186 188	13
-T19	Eq-Value 195 196	6
-T20	Eq-Value 358 360	16
-T21	Eq-Value 367 368	0
-T22	Eq-Value 378 380	23
-T23	Eq-Value 387 388	6
-T24	Eq-Value 573 575	20
-T25	Eq-Value 586 588	10
-T26	Eq-Comparison 579 593	within 10 days
-E7	Eq-Comparison:T26 Operator:T6 Temporal-Unit:T13 Value:T25
+T1	Modifier 25 34	Singleton
+E1	Modifier:T1
+T2	Condition 35 44	gestation
+E2	Condition:T2
+T3	Condition 56 70	Twin gestation
+E3	Condition:T3 Name:T37
+T4	Condition 71 91	reduced to singleton
+E4	Condition:T4
+T5	Condition 99 112	spontaneously
+E5	Condition:T5 Name:T38
+T6	Or 113 115	or
+E6	Or:T6
+T7	Procedure 116 131	therapeutically
+E7	Procedure:T7
+T8	Negation 136 139	not
+E8	Negation:T8
+T9	Assertion 140 148	eligible
+E9	Assertion:T9
+A1	Assertion-Type-Value E9 hypothetical
+T10	Negation 149 155	unless
+E10	Negation:T10
+T11	Study 160 169	reduction
+E11	Study:T11
+T12	Temporal-Connection 179 185	before
+E12	Temporal-Connection:T12
+A2	Temporal-Connection-Type-Value E12 before
+T13	Eq-Comparison 186 201	13 weeks 6 days
+E13	Eq-Comparison:T13 Value:T40 Temporal-Unit:T41 Value:T42 Temporal-Unit:T43
+T14	Observation 210 225	gestational age
+E14	Observation:T14 Name:T44
+T15	Condition 250 271	multifetal gestations
+E15	Condition:T15 Name:T46
+T16	Negation 298 301	not
+E16	Negation:T16
+T17	Assertion 302 310	eligible
+E17	Assertion:T17
+A3	Assertion-Type-Value E17 hypothetical
+T18	Observation 317 332	Gestational age
+E18	Observation:T18 Name:T47
+T19	Temporal-Connection 333 335	at
+E19	Temporal-Connection:T19
+A4	Temporal-Connection-Type-Value E19 during
+T20	Study 336 349	randomization
+E20	Study:T20
+T21	Eq-Comparison 350 373	between 16 weeks 0 days
+E21	Eq-Comparison:T21 Operator:T48 Value:T49 Temporal-Unit:T50 Value:T51 Temporal-Unit:T52
+T22	And 374 377	and
+E22	And:T22
+T23	Eq-Comparison 378 393	23 weeks 6 days
+E23	Eq-Comparison:T23 Value:T53 Temporal-Unit:T54 Value:T55 Temporal-Unit:T56
+T24	Procedure 455 465	ultrasound
+E24	Procedure:T24 Name:T57
+T25	Observation 482 497	Gestational Age
+E25	Observation:T25
+T26	Observation 504 519	Cervical length
+E26	Observation:T26 Name:T58
+T27	Procedure 523 547	transvaginal examination
+E27	Procedure:T27 Name:T59
+T28	Eq-Comparison 551 578	less than or equal to 20 mm
+E28	Eq-Comparison:T28 Operator:T60 Operator:T61 Value:T62 Unit:T63
+T29	Eq-Comparison 579 593	within 10 days
+E29	Eq-Comparison:T29 Operator:T64 Value:T65 Temporal-Unit:T66
+T30	Temporal-Connection 594 602	prior to
+E30	Temporal-Connection:T30
+A5	Temporal-Connection-Type-Value E30 before
+T31	Study 603 616	randomization
+E31	Study:T31
+T32	Study 622 627	study
+E32	Study:T32
+T33	Negation 660 662	no
+E33	Negation:T33
+T34	Observation 669 694	cervical length threshold
+E34	Observation:T34 Name:T68
+T35	And 727 730	who
+E35	And:T35
+T36	Condition-Name 25 44	Singleton gestation
+T37	Condition-Name 56 70	Twin gestation
+T38	Condition-Name 99 112	spontaneously
+T39	Drug-Name 116 131	therapeutically
+T40	Eq-Value 186 188	13
+T41	Eq-Temporal-Unit 189 194	weeks
+A6	Eq-Temporal-Unit-Value T41 week
+T42	Eq-Value 195 196	6
+T43	Eq-Temporal-Unit 197 201	days
+A7	Eq-Temporal-Unit-Value T43 day
+T44	Observation-Name 210 225	gestational age
+T45	Polarity 237 243	Higher
+A8	Polarity-Value T45 high
+T46	Condition-Name 250 271	multifetal gestations
+T47	Observation-Name 317 332	Gestational age
+T48	Eq-Operator 350 357	between
+A9	Eq-Operator-Value T48 BETWEEN
+T49	Eq-Value 358 360	16
+T50	Eq-Temporal-Unit 361 366	weeks
+A10	Eq-Temporal-Unit-Value T50 week
+T51	Eq-Value 367 368	0
+T52	Eq-Temporal-Unit 369 373	days
+A11	Eq-Temporal-Unit-Value T52 day
+T53	Eq-Value 378 380	23
+T54	Eq-Temporal-Unit 381 386	weeks
+A12	Eq-Temporal-Unit-Value T54 week
+T55	Eq-Value 387 388	6
+T56	Eq-Temporal-Unit 389 393	days
+A13	Eq-Temporal-Unit-Value T56 day
+T57	Procedure-Name 455 465	ultrasound
+T58	Observation-Name 504 519	Cervical length
+A14	Observation-Type-Value T58 measurement
+T59	Procedure-Name 523 547	transvaginal examination
+T60	Eq-Operator 551 560	less than
+A15	Eq-Operator-Value T60 LT
+T61	Eq-Operator 561 569	or equal
+A16	Eq-Operator-Value T61 GTEQ
+T62	Eq-Value 573 575	20
+T63	Eq-Unit 576 578	mm
+T64	Eq-Operator 579 585	within
+A17	Eq-Operator-Value T64 LTEQ
+T65	Eq-Value 586 588	10
+T66	Eq-Temporal-Unit 589 593	days
+A18	Eq-Temporal-Unit-Value T66 day
+T67	Polarity 663 668	lower
+A19	Polarity-Value T67 high
+T68	Observation-Name 669 684	cervical length
+A20	Observation-Type-Value T68 measurement
+T69	Life-Stage-And-Gender 721 726	Women
+A21	Life-Stage-And-Gender-Type T69 female

@@ -1,46 +1,171 @@
-T1	Procedure 115 131	knee replacement
-T2	Procedure-Name 115 131	knee replacement
-E1	Procedure:T1 Name:T2
-T3	Condition 323 335	incontinence
-T4	Condition-Name 323 335	incontinence
-E3	Condition:T3 Name:T4
-T5	Condition 507 519	narcotic use
-T6	Condition-Name 507 519	narcotic use
-E5	Condition:T5 Name:T6
-T7	Condition 534 545	consumption
-T8	Condition-Name 534 545	consumption
-E7	Condition:T7 Name:T8
-T9	Condition 650 661	intolerance
-T10	Condition-Name 650 661	intolerance
-E9	Condition:T9 Name:T10
-T11	Procedure 218 228	anesthesia
-T12	Procedure-Name 218 228	anesthesia
-E11	Procedure:T11 Name:T12
-T13	Procedure 599 609	parenteral
-T14	Procedure-Name 599 609	parenteral
-E13	Procedure:T13 Name:T14
-T15	Condition 431 440	Pregnancy
-T16	Condition-Name 431 440	Pregnancy
-E15	Condition:T15 Name:T16
-T17	Language 38 41	III
-T18	Observation 47 50	BMI
-T19	Observation-Name 47 50	BMI
-E18	Observation:T18 Name:T19
-A1	Observation-Type-Value T19 vital
-T20	Condition 318 321	UTI
-T21	Condition-Name 318 321	UTI
-E20	Condition:T20 Name:T21
-T22	Eq-Operator 546 552	within
-A2	Eq-Operator-Value T22 LTEQ
-T23	Eq-Temporal-Unit 145 150	years
-A3	Eq-Temporal-Unit-Value T23 year
-T24	Eq-Temporal-Unit 555 559	days
-A4	Eq-Temporal-Unit-Value T24 day
-T25	Eq-Unit 60 62	kg
-T26	Age 137 140	Age
-E21	Age:T26
-T27	Eq-Value 57 59	36
-T28	Eq-Value 141 143	18
-T29	Eq-Value 553 554	3
-T30	Eq-Comparison 546 559	within 3 days
-E22	Eq-Comparison:T30 Operator:T22 Temporal-Unit:T24 Value:T29
+T1	Condition 25 28	ASA
+E1	Condition:T1 Name:T59
+T2	Eq-Comparison 29 41	grade I- III
+E2	Eq-Comparison:T2 Unit:T60 Operator:T61 Value:T62
+T3	Observation 47 50	BMI
+E3	Observation:T3 Name:T63
+T4	Eq-Comparison 51 66	under 36 kg/m^2
+E4	Eq-Comparison:T4 Operator:T64 Value:T65 Unit:T66 Unit:T67
+T5	Eq-Comparison 72 81	Scheduled
+E5	Eq-Comparison:T5 Temporal-Period:T68
+T6	Procedure 82 89	surgery
+E6	Procedure:T6 Name:T69
+T7	Modifier 94 101	primary
+E7	Modifier:T7
+T8	Modifier 102 111	total hip
+E8	Modifier:T8
+T9	Or 112 114	or
+E9	Or:T9
+T10	Modifier 115 119	knee
+E10	Modifier:T10
+T11	Procedure 120 131	replacement
+E11	Procedure:T11 Name:T70
+T12	Age 137 140	Age
+E12	Age:T12
+T13	Eq-Comparison 141 150	18+ years
+E13	Eq-Comparison:T13 Value:T71 Temporal-Unit:T72
+T14	Contraindication 176 193	Contraindications
+E14	Contraindication:T14
+T15	Or 194 196	or
+E15	Or:T15
+T16	Procedure 208 228	neuraxial anesthesia
+E16	Procedure:T16 Name:T73
+T17	Negation 248 251	not
+E17	Negation:T17
+T18	Encounter 255 265	outpatient
+E18	Encounter:T18
+T19	Procedure 266 275	total hip
+E19	Procedure:T19 Name:T76
+T20	Or 276 278	or
+E20	Or:T20
+T21	Modifier 279 283	knee
+E21	Modifier:T21
+T22	Procedure 284 293	procedure
+E22	Procedure:T22
+T23	Procedure 305 321	intercurrent UTI
+E23	Procedure:T23
+T24	Condition 323 335	incontinence
+E24	Condition:T24 Name:T79
+T25	Or 337 339	or
+E25	Or:T25
+T26	Condition 340 357	urinary retention
+E26	Condition:T26 Name:T80
+T27	Negation 358 361	not
+E27	Negation:T27
+T28	Temporal-Connection 375 378	pre
+E28	Temporal-Connection:T28
+A1	Temporal-Connection-Type-Value E28 before
+T29	Procedure 379 388	operative
+E29	Procedure:T29
+T30	Procedure 389 410	urologic consultation
+E30	Procedure:T30
+T31	Or 411 414	and
+E31	Or:T31
+T32	Procedure 415 425	correction
+E32	Procedure:T32
+T33	Condition 431 440	Pregnancy
+E33	Condition:T33 Name:T82
+T34	Eq-Comparison 446 453	Current
+E34	Eq-Comparison:T34 Temporal-Period:T83
+T35	Drug 454 462	nicotine
+E35	Drug:T35 Name:T84
+T36	Drug 464 471	alcohol
+E36	Drug:T36 Name:T85
+T37	Or 472 474	or
+E37	Or:T37
+T38	Drug 475 479	drug
+E38	Drug:T38
+T39	Condition 480 487	abusers
+E39	Condition:T39
+T40	Temporal-Connection 493 496	Pre
+E40	Temporal-Connection:T40
+A2	Temporal-Connection-Type-Value E40 before
+T41	Procedure 497 506	operative
+E41	Procedure:T41
+T42	Condition 507 519	narcotic use
+E42	Condition:T42
+T43	Drug 525 545	narcotic consumption
+E43	Drug:T43 Name:T88
+T44	Eq-Comparison 546 559	within 3 days
+E44	Eq-Comparison:T44 Operator:T89 Value:T90 Temporal-Unit:T91
+T45	Temporal-Connection 560 568	prior to
+E45	Temporal-Connection:T45
+A3	Temporal-Connection-Type-Value E45 before
+T46	Procedure 569 576	surgery
+E46	Procedure:T46 Name:T92
+T47	Procedure 589 598	operative
+E47	Procedure:T47
+T48	Drug 610 618	narcotic
+E48	Drug:T48
+T49	Allergy 639 646	Allergy
+E49	Allergy:T49
+T50	Or 647 649	or
+E50	Or:T50
+T51	Condition 650 661	intolerance
+E51	Condition:T51 Name:T94
+T52	Drug 665 674	liposomal
+E52	Drug:T52
+T53	Drug 675 686	bupivacaine
+E53	Drug:T53
+T54	Drug 688 699	bupivacaine
+E54	Drug:T54 Name:T96
+T55	Drug 701 710	celecoxib
+E55	Drug:T55 Name:T97
+T56	Drug 712 725	dexamethasone
+E56	Drug:T56 Name:T98
+T57	Or 726 732	and/or
+E57	Or:T57
+T58	Drug 733 743	pregabalin
+E58	Drug:T58 Name:T99
+T59	Condition-Name 25 28	ASA
+T60	Eq-Unit 29 34	grade
+T61	Eq-Operator 35 37	I-
+A4	Eq-Operator-Value T61 GTEQ
+T62	Eq-Value 38 41	III
+T63	Observation-Name 47 50	BMI
+A5	Observation-Type-Value T63 vital
+T64	Eq-Operator 51 56	under
+A6	Eq-Operator-Value T64 LT
+T65	Eq-Value 57 59	36
+T66	Eq-Unit 60 62	kg
+T67	Eq-Unit 63 66	m^2
+T68	Eq-Temporal-Period 72 81	Scheduled
+A7	Eq-Temporal-Period-Value T68 future
+T69	Procedure-Name 82 89	surgery
+T70	Procedure-Name 120 131	replacement
+T71	Eq-Value 141 143	18
+T72	Eq-Temporal-Unit 145 150	years
+A8	Eq-Temporal-Unit-Value T72 year
+T73	Procedure-Name 208 228	neuraxial anesthesia
+T74	Eq-Temporal-Period 248 254	not be
+A9	Eq-Temporal-Period-Value T74 future
+T75	Encounter-Type 255 265	outpatient
+A10	Encounter-Type-Value T75 outpatient
+T76	Procedure-Name 266 275	total hip
+T77	Procedure-Name 279 293	knee procedure
+T78	Condition-Name 305 321	intercurrent UTI
+T79	Condition-Name 323 335	incontinence
+T80	Condition-Name 340 357	urinary retention
+T81	Procedure-Name 375 410	pre-operative urologic consultation
+T82	Condition-Name 431 440	Pregnancy
+T83	Eq-Temporal-Period 446 453	Current
+A11	Eq-Temporal-Period-Value T83 present
+T84	Drug-Name 454 462	nicotine
+T85	Drug-Name 464 471	alcohol
+T86	Eq-Temporal-Period 493 496	Pre
+A12	Eq-Temporal-Period-Value T86 past
+T87	Drug-Name 496 515	-operative narcotic
+T88	Drug-Name 525 545	narcotic consumption
+T89	Eq-Operator 546 552	within
+A13	Eq-Operator-Value T89 LTEQ
+T90	Eq-Value 553 554	3
+T91	Eq-Temporal-Unit 555 559	days
+A14	Eq-Temporal-Unit-Value T91 day
+T92	Procedure-Name 569 576	surgery
+T93	Drug-Name 610 633	narcotic administration
+T94	Condition-Name 650 661	intolerance
+T95	Drug-Name 665 686	liposomal bupivacaine
+T96	Drug-Name 688 699	bupivacaine
+T97	Drug-Name 701 710	celecoxib
+T98	Drug-Name 712 725	dexamethasone
+T99	Drug-Name 733 743	pregabalin

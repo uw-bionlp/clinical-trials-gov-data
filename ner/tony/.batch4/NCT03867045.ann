@@ -1,12 +1,32 @@
-T1	Procedure 102 109	therapy
-T2	Procedure-Name 102 109	therapy
-E1	Procedure:T1 Name:T2
-T3	Eq-Operator 29 30	>
-A1	Eq-Operator-Value T3 GT
-T4	Eq-Temporal-Unit 34 39	years
-A2	Eq-Temporal-Unit-Value T4 year
-T5	Age 43 46	age
-E2	Age:T5
-T6	Eq-Value 31 33	18
-T7	Eq-Comparison 29 39	> 18 years
-E3	Eq-Comparison:T7 Operator:T3 Temporal-Unit:T4 Value:T6
+T1	Eq-Comparison 29 39	> 18 years
+E1	Eq-Comparison:T1 Operator:T12 Value:T13 Temporal-Unit:T14
+T2	Age 43 46	age
+E2	Age:T2
+T3	Assertion 56 64	planning
+E3	Assertion:T3
+A1	Assertion-Type-Value E3 intention
+T4	Eq-Comparison 68 73	start
+E4	Eq-Comparison:T4
+T5	Procedure 74 83	treatment
+E5	Procedure:T5
+T6	Procedure 89 109	cabozantinib therapy
+E6	Procedure:T6 Name:T15
+T7	Modifier 114 119	renal
+E7	Modifier:T7
+T8	Condition 120 126	cancer
+E8	Condition:T8 Name:T16
+T9	Study 259 264	study
+E9	Study:T9
+T10	Negation 372 375	Non
+E10	Negation:T10
+T11	Condition 417 435	able to comprehend
+E11	Condition:T11 Name:T18
+T12	Eq-Operator 29 30	>
+A2	Eq-Operator-Value T12 GT
+T13	Eq-Value 31 33	18
+T14	Eq-Temporal-Unit 34 39	years
+A3	Eq-Temporal-Unit-Value T14 year
+T15	Procedure-Name 89 109	cabozantinib therapy
+T16	Condition-Name 120 126	cancer
+T17	Language 376 383	English
+T18	Condition-Name 417 435	able to comprehend

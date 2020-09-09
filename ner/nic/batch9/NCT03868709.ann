@@ -1,57 +1,235 @@
-T1	Procedure 76 80	open
-T2	Procedure-Name 76 80	open
-E1	Procedure:T1 Name:T2
-T3	Procedure 839 864	renal replacement therapy
-T4	Procedure-Name 839 864	renal replacement therapy
-E3	Procedure:T3 Name:T4
-T5	Condition 481 502	prostatic hypertrophy
-T6	Condition-Name 481 502	prostatic hypertrophy
-E5	Condition:T5 Name:T6
-T7	Procedure 1055 1073	inhalation therapy
-T8	Procedure-Name 1055 1073	inhalation therapy
-E7	Procedure:T7 Name:T8
-T9	Condition 805 822	renal dysfunction
-T10	Condition-Name 805 822	renal dysfunction
-E9	Condition:T9 Name:T10
-T11	Condition 934 946	acute stroke
-T12	Condition-Name 934 946	acute stroke
-E11	Condition:T11 Name:T12
-T13	Condition 680 690	Inhalation
-T14	Condition-Name 680 690	Inhalation
-E13	Condition:T13 Name:T14
-T15	Condition 506 514	glaucoma
-T16	Condition-Name 506 514	glaucoma
-E15	Condition:T15 Name:T16
-T17	Eq-Operator 306 307	≥
-A1	Eq-Operator-Value T17 GTEQ
-T18	Eq-Operator 405 406	≥
-A2	Eq-Operator-Value T18 GTEQ
-T19	Eq-Operator 444 445	≤
-A3	Eq-Operator-Value T19 LTEQ
-T20	Eq-Operator 634 635	≥
-A4	Eq-Operator-Value T20 GTEQ
-T21	Eq-Operator 658 664	within
-A5	Eq-Operator-Value T21 LTEQ
-T22	Eq-Operator 760 766	within
-A6	Eq-Operator-Value T22 LTEQ
-T23	Eq-Operator 947 953	within
-A7	Eq-Operator-Value T23 LTEQ
-T24	Eq-Operator 1143 1149	within
-A8	Eq-Operator-Value T24 LTEQ
-T25	Eq-Temporal-Unit 35 40	years
-A9	Eq-Temporal-Unit-Value T25 year
-T26	Eq-Temporal-Unit 960 966	months
-A10	Eq-Temporal-Unit-Value T26 month
-T27	Age 25 28	Age
-E16	Age:T27
-T28	Eq-Value 32 34	50
-T29	Eq-Value 188 189	2
-T30	Eq-Value 307 309	45
-T31	Eq-Value 446 448	24
-T32	Eq-Value 636 637	3
-T33	Eq-Comparison 306 309	≥45
-E17	Eq-Comparison:T33 Operator:T17 Value:T30
-T34	Eq-Comparison 444 448	≤ 24
-E18	Eq-Comparison:T34 Operator:T19 Value:T31
-T35	Eq-Comparison 634 637	≥ 3
-E19	Eq-Comparison:T35 Operator:T20 Value:T32
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 32 48	50 years or over
+E2	Eq-Comparison:T2 Value:T68 Temporal-Unit:T69 Operator:T70
+T3	Eq-Comparison 55 75	Scheduled to undergo
+E3	Eq-Comparison:T3 Temporal-Period:T71 Temporal-Period:T72
+T4	Procedure 76 80	open
+E4	Procedure:T4 Name:T73
+T5	Or 81 83	or
+E5	Or:T5
+T6	Procedure 84 95	laparoscope
+E6	Procedure:T6 Name:T74
+T7	Modifier 105 120	upper abdominal
+E7	Modifier:T7
+T8	Or 121 123	or
+E8	Or:T8
+T9	Procedure 124 145	intrathoracic surgery
+E9	Procedure:T9 Name:T75
+T10	Assertion 156 164	expected
+E10	Assertion:T10
+A1	Assertion-Type-Value E10 hypothetical
+T11	Procedure 177 184	surgery
+E11	Procedure:T11 Name:T76
+T12	Eq-Comparison 188 205	2 hours or longer
+E12	Eq-Comparison:T12 Value:T77 Temporal-Unit:T78 Operator:T79
+T13	Risk 231 235	risk
+E13	Risk:T13
+T14	Condition 239 243	PPCs
+E14	Condition:T14 Name:T81
+T15	Observation 261 279	ARISCAT risk score
+E15	Observation:T15 Name:T82
+T16	Eq-Comparison 300 309	score ≥45
+E16	Eq-Comparison:T16 Value:T84
+T17	Condition 337 374	American Society of Anesthesiologists
+E17	Condition:T17 Name:T85
+T18	Condition 376 379	ASA
+E18	Condition:T18 Name:T86
+T19	Eq-Comparison 390 409	classification ≥ IV
+E19	Eq-Comparison:T19 Unit:T87 Operator:T88 Value:T89
+T20	Or 410 412	or
+E20	Or:T20
+T21	Observation 417 434	expected survival
+E21	Observation:T21
+T22	Eq-Comparison 444 450	≤ 24 h
+E22	Eq-Comparison:T22 Operator:T90 Value:T91 Temporal-Unit:T92
+T23	Temporal-Connection 457 469	Preoperative
+E23	Temporal-Connection:T23
+A2	Temporal-Connection-Type-Value E23 before
+T24	Eq-Comparison 470 477	history
+E24	Eq-Comparison:T24 Temporal-Period:T93
+T25	Condition 481 502	prostatic hypertrophy
+E25	Condition:T25 Name:T94
+T26	Or 503 505	or
+E26	Or:T26
+T27	Condition 506 514	glaucoma
+E27	Condition:T27 Name:T95
+T28	Eq-Comparison 521 528	History
+E28	Eq-Comparison:T28 Temporal-Period:T96
+T29	Condition 532 553	myocardial infarction
+E29	Condition:T29 Name:T97
+T30	Condition 562 579	heart dysfunction
+E30	Condition:T30 Name:T99
+T31	Condition 581 618	New York Heart Association functional
+E31	Condition:T31
+T32	Eq-Comparison 619 637	classification ≥ 3
+E32	Eq-Comparison:T32 Operator:T101 Value:T102
+T33	Or 639 641	or
+E33	Or:T33
+T34	Condition 642 657	tachyarrhythmia
+E34	Condition:T34
+T35	Eq-Comparison 658 673	within one year
+E35	Eq-Comparison:T35 Operator:T103 Value:T104 Temporal-Unit:T105
+T36	Drug 694 715	β2-receptor activator
+E36	Drug:T36 Name:T106
+T37	Drug 717 736	M-receptor blockers
+E37	Drug:T37 Name:T107
+T38	Or 737 743	and/or
+E38	Or:T38
+T39	Drug 744 759	glucocorticoids
+E39	Drug:T39 Name:T108
+T40	Eq-Comparison 760 776	within one month
+E40	Eq-Comparison:T40 Operator:T109 Value:T110 Temporal-Unit:T111
+T41	Temporal-Connection 777 783	before
+E41	Temporal-Connection:T41
+A3	Temporal-Connection-Type-Value E41 before
+T42	Procedure 784 791	surgery
+E42	Procedure:T42 Name:T112
+T43	Condition 805 822	renal dysfunction
+E43	Condition:T43 Name:T114
+T44	Assertion 824 835	requirement
+E44	Assertion:T44
+A4	Assertion-Type-Value E44 hypothetical
+T45	Procedure 839 864	renal replacement therapy
+E45	Procedure:T45 Name:T115
+T46	Or 866 868	or
+E46	Or:T46
+T47	Condition 876 895	hepatic dysfunction
+E47	Condition:T47 Name:T117
+T48	Condition 897 907	Child-Pugh
+E48	Condition:T48 Name:T118
+T49	Eq-Comparison 908 915	grade C
+E49	Eq-Comparison:T49 Unit:T119 Value:T120
+T50	Eq-Comparison 923 930	History
+E50	Eq-Comparison:T50 Temporal-Period:T121
+T51	Condition 940 946	stroke
+E51	Condition:T51 Name:T123
+T52	Eq-Comparison 947 966	within three months
+E52	Eq-Comparison:T52 Operator:T124 Value:T125 Temporal-Unit:T126
+T53	Temporal-Connection 967 973	before
+E53	Temporal-Connection:T53
+A5	Temporal-Connection-Type-Value E53 before
+T54	Procedure 974 981	surgery
+E54	Procedure:T54 Name:T127
+T55	Assertion 988 997	Refuse to
+E55	Assertion:T55
+A6	Assertion-Type-Value E55 hypothetical
+T56	Study 1017 1022	study
+E56	Study:T56
+T57	Procedure 1055 1073	inhalation therapy
+E57	Procedure:T57 Name:T128
+T58	Other 1097 1102	other
+E58	Other:T58
+T59	Study 1103 1117	clinical trial
+E59	Study:T59
+T60	Temporal-Connection 1118 1124	during
+E60	Temporal-Connection:T60
+A7	Temporal-Connection-Type-Value E60 during
+T61	Eq-Comparison 1129 1139	last month
+E61	Eq-Comparison:T61 Temporal-Period:T129 Temporal-Unit:T130
+T62	Or 1140 1142	or
+E62	Or:T62
+T63	Eq-Comparison 1143 1167	within the six half-life
+E63	Eq-Comparison:T63 Value:T131 Unit:T132
+T64	Temporal-Connection 1168 1175	periods
+E64	Temporal-Connection:T64
+A8	Temporal-Connection-Type-Value E64 before
+T65	Study 1183 1188	study
+E65	Study:T65
+T66	Drug 1189 1193	drug
+E66	Drug:T66
+T67	Study 1211 1216	trial
+E67	Study:T67
+T68	Eq-Value 32 34	50
+T69	Eq-Temporal-Unit 35 40	years
+A9	Eq-Temporal-Unit-Value T69 year
+T70	Eq-Operator 41 48	or over
+A10	Eq-Operator-Value T70 GTEQ
+T71	Eq-Temporal-Period 55 64	Scheduled
+A11	Eq-Temporal-Period-Value T71 future
+T72	Eq-Temporal-Period 65 75	to undergo
+A12	Eq-Temporal-Period-Value T72 future
+T73	Procedure-Name 76 80	open
+T74	Procedure-Name 84 95	laparoscope
+T75	Procedure-Name 124 145	intrathoracic surgery
+T76	Procedure-Name 177 184	surgery
+T77	Eq-Value 188 189	2
+T78	Eq-Temporal-Unit 190 195	hours
+A13	Eq-Temporal-Unit-Value T78 hour
+T79	Eq-Operator 196 205	or longer
+A14	Eq-Operator-Value T79 GTEQ
+T80	Polarity 226 230	high
+A15	Polarity-Value T80 high
+T81	Condition-Name 239 243	PPCs
+T82	Observation-Name 261 279	ARISCAT risk score
+A16	Observation-Type-Value T82 clinical-score
+T83	Observation-Name 281 305	ARISCAT predictive score
+A17	Observation-Type-Value T83 clinical-score
+T84	Eq-Value 306 309	≥45
+T85	Condition-Name 337 374	American Society of Anesthesiologists
+T86	Condition-Name 376 379	ASA
+T87	Eq-Unit 390 404	classification
+T88	Eq-Operator 405 406	≥
+A18	Eq-Operator-Value T88 GTEQ
+T89	Eq-Value 407 409	IV
+T90	Eq-Operator 444 445	≤
+A19	Eq-Operator-Value T90 LTEQ
+T91	Eq-Value 446 448	24
+T92	Eq-Temporal-Unit 449 450	h
+A20	Eq-Temporal-Unit-Value T92 hour
+T93	Eq-Temporal-Period 470 477	history
+A21	Eq-Temporal-Period-Value T93 past
+T94	Condition-Name 481 502	prostatic hypertrophy
+T95	Condition-Name 506 514	glaucoma
+T96	Eq-Temporal-Period 521 528	History
+A22	Eq-Temporal-Period-Value T96 past
+T97	Condition-Name 532 553	myocardial infarction
+T98	Severity 555 561	severe
+A23	Severity-Value T98 severe
+T99	Condition-Name 562 579	heart dysfunction
+T100	Condition-Name 581 633	New York Heart Association functional classification
+T101	Eq-Operator 634 635	≥
+A24	Eq-Operator-Value T101 GTEQ
+T102	Eq-Value 636 637	3
+T103	Eq-Operator 658 664	within
+A25	Eq-Operator-Value T103 LTEQ
+T104	Eq-Value 665 668	one
+T105	Eq-Temporal-Unit 669 673	year
+A26	Eq-Temporal-Unit-Value T105 year
+T106	Drug-Name 694 715	β2-receptor activator
+T107	Drug-Name 717 736	M-receptor blockers
+T108	Drug-Name 744 759	glucocorticoids
+T109	Eq-Operator 760 766	within
+A27	Eq-Operator-Value T109 LTEQ
+T110	Eq-Value 767 770	one
+T111	Eq-Temporal-Unit 771 776	month
+A28	Eq-Temporal-Unit-Value T111 month
+T112	Procedure-Name 784 791	surgery
+T113	Severity 798 804	Severe
+A29	Severity-Value T113 severe
+T114	Condition-Name 805 822	renal dysfunction
+T115	Procedure-Name 839 864	renal replacement therapy
+T116	Severity 869 875	severe
+A30	Severity-Value T116 severe
+T117	Condition-Name 876 895	hepatic dysfunction
+T118	Condition-Name 897 907	Child-Pugh
+T119	Eq-Unit 908 913	grade
+T120	Eq-Value 914 915	C
+T121	Eq-Temporal-Period 923 930	History
+A31	Eq-Temporal-Period-Value T121 past
+T122	Severity 934 939	acute
+A32	Severity-Value T122 severe
+T123	Condition-Name 940 946	stroke
+T124	Eq-Operator 947 953	within
+A33	Eq-Operator-Value T124 LTEQ
+T125	Eq-Value 954 959	three
+T126	Eq-Temporal-Unit 960 966	months
+A34	Eq-Temporal-Unit-Value T126 month
+T127	Procedure-Name 974 981	surgery
+T128	Procedure-Name 1055 1073	inhalation therapy
+T129	Eq-Temporal-Period 1129 1133	last
+A35	Eq-Temporal-Period-Value T129 past
+T130	Eq-Temporal-Unit 1134 1139	month
+A36	Eq-Temporal-Unit-Value T130 month
+T131	Eq-Value 1154 1157	six
+T132	Eq-Unit 1158 1162	half

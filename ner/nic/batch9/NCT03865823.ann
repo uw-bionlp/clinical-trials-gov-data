@@ -1,12 +1,28 @@
-T1	Procedure 102 120	surgical treatment
-T2	Procedure-Name 102 120	surgical treatment
-E1	Procedure:T1 Name:T2
-T3	Condition 156 167	Suppuration
-T4	Condition-Name 156 167	Suppuration
-E3	Condition:T3 Name:T4
-T5	Condition 210 214	boil
-T6	Condition-Name 210 214	boil
-E5	Condition:T5 Name:T6
-T7	Age 42 45	age
-E6	Age:T7
-T8	Eq-Value 49 51	18
+T1	Eq-Comparison 33 51	over the age of 18
+E1	Eq-Comparison:T1 Value:T12
+T2	Modifier 69 73	anus
+E2	Modifier:T2 
+T3	Condition 74 81	fistula
+E3	Condition:T3 
+T4	And 82 86	with
+E4	And:T4 
+T5	Indication 87 97	indication
+E5	Indication:T5 
+T6	Procedure 102 120	surgical treatment
+E6	Procedure:T6 Name:T14
+T7	Condition 146 167	Cutaneous Suppuration
+E7	Condition:T7 Name:T15
+T8	Negation 169 176	without
+E8	Negation:T8 
+T9	Condition 177 184	fistula
+E9	Condition:T9 Name:T16
+T10	Condition 192 208	Verneuil disease
+E10	Condition:T10 Name:T17
+T11	Condition 210 214	boil
+E11	Condition:T11 
+T12	Eq-Value 49 51	18
+T13	Condition-Name 69 81	anus fistula
+T14	Procedure-Name 102 120	surgical treatment
+T15	Condition-Name 146 167	Cutaneous Suppuration
+T16	Condition-Name 177 184	fistula
+T17	Condition-Name 192 208	Verneuil disease

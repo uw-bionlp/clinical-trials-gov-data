@@ -1,12 +1,28 @@
-T1	Condition 85 97	pulmonary TB
-T2	Condition-Name 85 97	pulmonary TB
-E1	Condition:T1 Name:T2
-T3	Life-Stage-And-Gender 121 129	children
-A1	Life-Stage-And-Gender-Type T3 child
-T4	Life-Stage-And-Gender 103 109	Adults
-A2	Life-Stage-And-Gender-Type T4 adult
-T5	Condition 368 379	coinfection
-T6	Condition-Name 368 379	coinfection
-E5	Condition:T5 Name:T6
-T7	Age 134 137	age
-E6	Age:T7
+T1	Condition 60 65	smear
+E1	Condition:T1
+T2	Modifier 85 94	pulmonary
+E2	Modifier:T2
+T3	Condition 95 97	TB
+E3	Condition:T3 Name:T11
+T4	Encounter 237 248	transferred
+E4	Encounter:T4
+T5	Negation 270 273	not
+E5	Negation:T5
+T6	Condition 361 364	HIV
+E6	Condition:T6 Name:T14
+T7	Or 364 365	/
+E7	Or:T7
+T8	Condition 365 367	TB
+E8	Condition:T8 Name:T15
+T9	Condition 368 379	coinfection
+E9	Condition:T9 Name:T16
+T10	Polarity 66 74	positive
+A1	Polarity-Value T10 positive
+T11	Condition-Name 95 97	TB
+T12	Life-Stage-And-Gender 103 109	Adults
+A2	Life-Stage-And-Gender-Type T12 adult
+T13	Life-Stage-And-Gender 121 129	children
+A3	Life-Stage-And-Gender-Type T13 child
+T14	Condition-Name 361 364	HIV
+T15	Condition-Name 365 367	TB
+T16	Condition-Name 368 379	coinfection

@@ -1,29 +1,117 @@
-T1	Procedure 326 334	surgical
-T2	Procedure-Name 326 334	surgical
-E1	Procedure:T1 Name:T2
-T3	Condition 768 791	hemodynamic instability
-T4	Condition-Name 768 791	hemodynamic instability
-E3	Condition:T3 Name:T4
-T5	Eq-Operator 852 861	less than
-A1	Eq-Operator-Value T5 LT
-T6	Eq-Temporal-Unit 51 56	years
-A2	Eq-Temporal-Unit-Value T6 year
-T7	Eq-Temporal-Unit 864 870	months
-A3	Eq-Temporal-Unit-Value T7 month
-T8	Age 57 60	old
-E4	Age:T8
-T9	Eq-Operator 45 47	to
-A4	Eq-Operator-Value T9 BETWEEN
-T10	Eq-Value 42 44	18
-T11	Eq-Value 48 50	65
-T12	Eq-Value 86 87	1
-T13	Eq-Value 91 92	2
-T14	Eq-Value 98 99	1
-T15	Eq-Value 158 159	2
-T16	Eq-Value 424 425	9
-T17	Eq-Value 430 432	13
-T18	Eq-Value 862 863	3
-T19	Eq-Comparison 852 870	less than 3 months
-E5	Eq-Comparison:T19 Operator:T5 Temporal-Unit:T7 Value:T18
-T20	Eq-Comparison 42 47	18 to
-E6	Eq-Comparison:T20 Operator:T9 Value:T10
+T1	Eq-Comparison 34 56	between 18 to 65 years
+E1	Eq-Comparison:T1 Operator:T38 Value:T39 Operator:T40 Value:T41 Temporal-Unit:T42
+T2	Age 57 60	old
+E2	Age:T2
+T3	Condition 82 85	ASA
+E3	Condition:T3 Name:T43
+T4	Eq-Comparison 86 92	1 or 2
+E4	Eq-Comparison:T4 Value:T44 Value:T45
+T5	Condition 94 97	ASA
+E5	Condition:T5 Name:T46
+T6	Condition 149 152	ASA
+E6	Condition:T6 Name:T48
+T7	Modifier 178 198	moderate involvement
+E7	Modifier:T7
+T8	And 199 202	and
+E8	And:T8
+T9	Modifier 208 233	controlled organ function
+E9	Modifier:T9
+T10	Eq-Comparison 259 271	at least one
+E10	Eq-Comparison:T10 Operator:T51 Value:T52
+T11	Criteria-Count 272 288	of the following
+E11	Criteria-Count:T11
+T12	Condition 289 298	fractures
+E12	Condition:T12 Name:T53
+T13	Modifier 300 305	Basin
+E13	Modifier:T13
+T14	Or 306 309	and
+E14	Or:T14
+T15	Modifier 310 311	/
+E15	Modifier:T15
+T16	Or 312 314	or
+E16	Or:T16
+T17	Modifier 315 320	femur
+E17	Modifier:T17
+T18	Procedure 326 345	surgical indication
+E18	Procedure:T18
+T19	Or 358 360	or
+E19	Or:T19
+T20	Negation 361 364	not
+E20	Negation:T20
+T21	Other 370 375	other
+E21	Other:T21
+T22	Condition 376 385	fractures
+E22	Condition:T22 Name:T54
+T23	Observation 405 415	hemoglobin
+E23	Observation:T23 Name:T55
+T24	Eq-Comparison 416 439	between 9 and 13 g / dl
+E24	Eq-Comparison:T24 Operator:T56 Value:T57 Value:T58 Unit:T59 Unit:T60
+T25	Temporal-Connection 440 451	at the time
+E25	Temporal-Connection:T25
+A1	Temporal-Connection-Type-Value E25 during
+T26	Encounter 455 464	admission
+E26	Encounter:T26
+T27	Contraindication 524 540	contraindication
+E27	Contraindication:T27
+T28	Drug 544 568	synthetic erythropoietin
+E28	Drug:T28 Name:T62
+T29	Procedure 587 603	intravenous iron
+E29	Procedure:T29
+T30	Contraindication 604 620	contraindication
+E30	Contraindication:T30
+T31	Condition 626 634	pregnant
+E31	Condition:T31 Name:T64
+T32	Or 643 645	or
+E32	Or:T32
+T33	Risk 653 657	risk
+E33	Risk:T33
+T34	Condition 661 670	pregnancy
+E34	Condition:T34 Name:T65
+T35	Condition 768 791	hemodynamic instability
+E35	Condition:T35 Name:T66
+T36	Other 822 829	another
+E36	Other:T36
+T37	Eq-Comparison 852 870	less than 3 months
+E37	Eq-Comparison:T37 Operator:T67 Value:T68 Temporal-Unit:T69
+T38	Eq-Operator 34 41	between
+A2	Eq-Operator-Value T38 BETWEEN
+T39	Eq-Value 42 44	18
+T40	Eq-Operator 45 47	to
+A3	Eq-Operator-Value T40 BETWEEN
+T41	Eq-Value 48 50	65
+T42	Eq-Temporal-Unit 51 56	years
+A4	Eq-Temporal-Unit-Value T42 year
+T43	Condition-Name 82 85	ASA
+T44	Eq-Value 86 87	1
+T45	Eq-Value 91 92	2
+T46	Condition-Name 94 97	ASA
+T47	Eq-Value 98 99	1
+T48	Condition-Name 149 152	ASA
+T49	Severity 178 186	moderate
+A5	Severity-Value T49 moderate
+T50	Condition-Name 219 233	organ function
+T51	Eq-Operator 259 267	at least
+A6	Eq-Operator-Value T51 GTEQ
+T52	Eq-Value 268 271	one
+T53	Condition-Name 289 298	fractures
+T54	Condition-Name 376 385	fractures
+T55	Observation-Name 405 415	hemoglobin
+A7	Observation-Type-Value T55 lab
+T56	Eq-Operator 416 423	between
+A8	Eq-Operator-Value T56 BETWEEN
+T57	Eq-Value 424 425	9
+T58	Eq-Value 430 432	13
+T59	Eq-Unit 433 434	g
+T60	Eq-Unit 437 439	dl
+T61	Encounter-Type 455 464	admission
+A9	Encounter-Type-Value T61 inpatient
+T62	Drug-Name 544 568	synthetic erythropoietin
+T63	Drug-Name 587 620	intravenous iron contraindication
+T64	Condition-Name 626 634	pregnant
+T65	Condition-Name 661 670	pregnancy
+T66	Condition-Name 768 791	hemodynamic instability
+T67	Eq-Operator 852 861	less than
+A10	Eq-Operator-Value T67 LT
+T68	Eq-Value 862 863	3
+T69	Eq-Temporal-Unit 864 870	months
+A11	Eq-Temporal-Unit-Value T69 month

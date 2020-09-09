@@ -1,0 +1,81 @@
+T1	Negation 25 28	Non
+E1	Negation:T1 
+T2	Procedure 29 44	cardiac surgery
+E2	Procedure:T2 Name:T26
+T3	Age 65 68	Age
+E3	Age:T3 
+T4	Eq-Comparison 72 105	greater than or equal to 60 years
+E4	Eq-Comparison:T4 Operator:T27 Value:T28 Temporal-Unit:T29
+T5	Observation 129 142	mother tongue
+E5	Observation:T5 
+T6	Observation 155 164	④The MMSE
+E6	Observation:T6 
+T7	Eq-Comparison 185 219	greater than or equal to 17 points
+E7	Eq-Comparison:T7 Operator:T33 Value:T34
+T8	Observation 221 235	primary school
+E8	Observation:T8 
+T9	Eq-Comparison 239 273	greater than or equal to 20 points
+E9	Eq-Comparison:T9 Operator:T35 Value:T36 Unit:T37
+T10	Eq-Comparison 302 321	more than 24 points
+E10	Eq-Comparison:T10 Operator:T39 Value:T40
+T11	Temporal-Connection 402 414	preoperative
+E11	Temporal-Connection:T11 
+A1	Temporal-Connection-Type-Value E11 before
+T12	Condition 415 423	delirium
+E12	Condition:T12 
+T13	Modifier 449 475	Unstable hypertension（Such
+E13	Modifier:T13 
+T14	Condition 476 495	as：pheochromocytoma
+E14	Condition:T14 
+T15	Or 496 498	or
+E15	Or:T15 
+T16	Modifier 499 505	aortic
+E16	Modifier:T16 
+T17	Procedure 506 516	dissection
+E17	Procedure:T17 
+T18	Modifier 519 534	③Severe chronic
+E18	Modifier:T18 
+T19	Condition 535 564	obstructive pulmonary disease
+E19	Condition:T19 Name:T45
+T20	Or 565 567	or
+E20	Or:T20 
+T21	Condition 568 592	congestive heart failure
+E21	Condition:T21 Name:T46
+T22	Modifier 594 607	④Severe liver
+E22	Modifier:T22 
+T23	Or 608 611	and
+E23	Or:T23 
+T24	Modifier 612 618	kidney
+E24	Modifier:T24 
+T25	Condition 619 630	dysfunction
+E25	Condition:T25 Name:T47
+T26	Procedure-Name 37 44	surgery
+T27	Eq-Operator 72 93	greater than or equal
+A2	Eq-Operator-Value T27 GTEQ
+T28	Eq-Value 97 99	60
+T29	Eq-Temporal-Unit 100 105	years
+A3	Eq-Temporal-Unit-Value T29 year
+T30	Condition-Name 129 142	mother tongue
+T31	Language 146 153	chinese
+T32	Observation-Name 155 170	④The MMSE score
+A4	Observation-Type-Value T32 clinical-score
+T33	Eq-Operator 185 206	greater than or equal
+A5	Eq-Operator-Value T33 GTEQ
+T34	Eq-Value 210 212	17
+T35	Eq-Operator 239 260	greater than or equal
+A6	Eq-Operator-Value T35 GTEQ
+T36	Eq-Value 264 266	20
+T37	Eq-Unit 267 273	points
+T38	Polarity 275 281	higher
+A7	Polarity-Value T38 high
+T39	Eq-Operator 302 311	more than
+A8	Eq-Operator-Value T39 GT
+T40	Eq-Value 312 314	24
+T41	Condition-Name 402 423	preoperative delirium
+T42	Stability 449 457	Unstable
+A9	Stability-Value T42 change
+T43	Condition-Name 458 495	hypertension（Such as：pheochromocytoma
+T44	Condition-Name 499 516	aortic dissection
+T45	Condition-Name 535 564	obstructive pulmonary disease
+T46	Condition-Name 568 592	congestive heart failure
+T47	Condition-Name 619 630	dysfunction

@@ -1,16 +1,45 @@
-T1	Procedure 296 313	strength training
-T2	Procedure-Name 296 313	strength training
-E1	Procedure:T1 Name:T2
-T3	Condition 391 405	coagulopathies
-T4	Condition-Name 391 405	coagulopathies
-E3	Condition:T3 Name:T4
-T5	Eq-Temporal-Unit 46 51	years
-A1	Eq-Temporal-Unit-Value T5 year
-T6	Age 25 28	Age
-E4	Age:T6
-T7	Eq-Operator 40 42	to
-A2	Eq-Operator-Value T7 BETWEEN
-T8	Eq-Value 37 39	18
-T9	Eq-Value 43 45	25
-T10	Eq-Comparison 37 42	18 to
-E5	Eq-Comparison:T10 Operator:T7 Value:T8
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 29 51	between 18 to 25 years
+E2	Eq-Comparison:T2 Operator:T16 Value:T17 Operator:T18 Value:T19 Temporal-Unit:T20
+T3	Negation 121 124	Not
+E3	Negation:T3
+T4	Condition 136 142	injury
+E4	Condition:T4 Name:T21
+T5	Procedure 150 171	hamstring musculature
+E5	Procedure:T5
+T6	Temporal-Connection 172 183	at the time
+E6	Temporal-Connection:T6
+A1	Temporal-Connection-Type-Value E6 during
+T7	Study 191 196	study
+E7	Study:T7
+T8	Temporal-Connection 222 233	At the time
+E8	Temporal-Connection:T8
+A2	Temporal-Connection-Type-Value E8 during
+T9	Study 241 246	study
+E9	Study:T9
+T10	Modifier 317 328	lower limbs
+E10	Modifier:T10
+T11	Modifier 363 376	venous return
+E11	Modifier:T11
+T12	Or 377 379	or
+E12	Or:T12
+T13	Modifier 380 390	congenital
+E13	Modifier:T13
+T14	Condition 391 405	coagulopathies
+E14	Condition:T14
+T15	Condition 432 445	hypermobility
+E15	Condition:T15 Name:T25
+T16	Eq-Operator 29 36	between
+A3	Eq-Operator-Value T16 BETWEEN
+T17	Eq-Value 37 39	18
+T18	Eq-Operator 40 42	to
+A4	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Value 43 45	25
+T20	Eq-Temporal-Unit 46 51	years
+A5	Eq-Temporal-Unit-Value T20 year
+T21	Condition-Name 136 142	injury
+T22	Condition-Name 150 171	hamstring musculature
+T23	Condition-Name 363 376	venous return
+T24	Condition-Name 380 405	congenital coagulopathies
+T25	Condition-Name 432 445	hypermobility

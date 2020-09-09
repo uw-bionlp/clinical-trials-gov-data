@@ -1,32 +1,63 @@
-T3	Procedure 340 355	transplantation
-T4	Procedure-Name 340 355	transplantation
-E3	Procedure:T3 Name:T4
-T5	Procedure 120 137	kidney transplant
-T6	Procedure-Name 120 137	kidney transplant
-E5	Procedure:T5 Name:T6 Temporality:E1
-T7	Life-Stage-And-Gender 46 54	children
-A1	Life-Stage-And-Gender-Type T7 child
-T8	Condition 177 185	deceased
-T9	Condition-Name 177 185	deceased
-E8	Condition:T8 Name:T9
-T10	Life-Stage-And-Gender 35 41	adults
-A2	Life-Stage-And-Gender-Type T10 adult
-T11	Condition 148 152	lung
-T12	Condition-Name 148 152	lung
-E11	Condition:T11 Name:T12
-T13	Eq-Operator 275 276	>
-A3	Eq-Operator-Value T13 GT
-T14	Eq-Temporal-Unit 279 284	years
-A4	Eq-Temporal-Unit-Value T14 year
-T15	Eq-Operator 101 103	to
-A5	Eq-Operator-Value T15 BETWEEN
-T16	Eq-Value 96 100	2008
-T17	Eq-Value 104 108	2015
-T19	Eq-Comparison 275 284	> 2 years
-E12	Eq-Comparison:T19 Operator:T13 Temporal-Unit:T14
-T20	Eq-Comparison 96 103	2008 to
-E13	Eq-Comparison:T20 Operator:T15 Value:T16
-T1	Eq-Comparison 114 119	first
-E1	Eq-Comparison:T1 
-T2	Eq-Temporal-Recency 114 119	first
-A6	Eq-Temporal-Recency-Value T2 first-time
+T1	Or 42 45	and
+E1	Or:T1
+T2	Eq-Comparison 84 119	France from 2008 to 2015 of a first
+E2	Eq-Comparison:T2 Value:T23 Operator:T24 Value:T25 Temporal-Recency:T26
+T3	Procedure 120 137	kidney transplant
+E3	Procedure:T3 Name:T27
+T4	Or 138 139	/
+E4	Or:T4
+T5	Modifier 140 145	heart
+E5	Modifier:T5
+T6	Or 146 147	/
+E6	Or:T6
+T7	Modifier 148 152	lung
+E7	Modifier:T7
+T8	Or 153 154	/
+E8	Or:T8
+T9	Modifier 155 173	liver donor living
+E9	Modifier:T9
+T10	Or 174 176	or
+E10	Or:T10
+T11	Modifier 177 185	deceased
+E11	Modifier:T11
+T12	Negation 187 190	non
+E12	Negation:T12
+T13	Condition 206 209	HLA
+E13	Condition:T13 Name:T28
+T14	Temporal-Connection 210 216	before
+E14	Temporal-Connection:T14
+A1	Temporal-Connection-Type-Value E14 before
+T15	Procedure 221 231	transplant
+E15	Procedure:T15 Name:T29
+T16	Observation 269 274	graft
+E16	Observation:T16
+T17	Eq-Comparison 275 284	> 2 years
+E17	Eq-Comparison:T17 Operator:T30 Value:T31 Temporal-Unit:T32
+T18	Assertion 297 306	agreed to
+E18	Assertion:T18
+A2	Assertion-Type-Value E18 hypothetical
+T19	Procedure 340 355	transplantation
+E19	Procedure:T19 Name:T33
+T20	Observation 386 399	serum samples
+E20	Observation:T20 Name:T34
+T21	Life-Stage-And-Gender 35 41	adults
+A3	Life-Stage-And-Gender-Type T21 adult
+T22	Life-Stage-And-Gender 46 54	children
+A4	Life-Stage-And-Gender-Type T22 child
+T23	Eq-Value 96 100	2008
+T24	Eq-Operator 101 103	to
+A5	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 104 108	2015
+T26	Eq-Temporal-Recency 114 119	first
+A6	Eq-Temporal-Recency-Value T26 first-time
+T27	Procedure-Name 127 137	transplant
+T28	Condition-Name 206 209	HLA
+T29	Procedure-Name 221 231	transplant
+T30	Eq-Operator 275 276	>
+A7	Eq-Operator-Value T30 GT
+T31	Eq-Value 277 278	2
+T32	Eq-Temporal-Unit 279 284	years
+A8	Eq-Temporal-Unit-Value T32 year
+T33	Procedure-Name 340 355	transplantation
+T34	Observation-Name 386 399	serum samples
+A9	Observation-Type-Value T34 lab

@@ -1,22 +1,103 @@
-T1	Condition 407 419	hypertension
-T2	Condition-Name 407 419	hypertension
-E1	Condition:T1 Name:T2
-T3	Condition 467 478	recruitment
-T4	Condition-Name 467 478	recruitment
-E3	Condition:T3 Name:T4
-T5	Condition 394 402	diabetes
-T6	Condition-Name 394 402	diabetes
-E5	Condition:T5 Name:T6
-T7	Procedure 677 689	intervention
-T8	Procedure-Name 677 689	intervention
-E7	Procedure:T7 Name:T8
-T9	Eq-Operator 258 264	within
-A1	Eq-Operator-Value T9 LTEQ
-T10	Eq-Temporal-Unit 267 272	weeks
-A2	Eq-Temporal-Unit-Value T10 week
-T11	Age 115 119	aged
-E8	Age:T11
-T12	Eq-Value 120 122	18
-T13	Eq-Value 265 266	2
-T14	Eq-Comparison 258 272	within 2 weeks
-E9	Eq-Comparison:T14 Operator:T9 Temporal-Unit:T10 Value:T13
+T1	Condition 25 33	pregnant
+E1	Condition:T1 Name:T33
+T2	Encounter 55 60	visit
+E2	Encounter:T2
+T3	Observation 92 107	gestational age
+E3	Observation:T3 Name:T36
+T4	Age 115 119	aged
+E4	Age:T4
+T5	Eq-Comparison 120 131	18 or above
+E5	Eq-Comparison:T5 Value:T37 Operator:T38
+T6	Modifier 214 222	systemic
+E6	Modifier:T6
+T7	Or 223 225	or
+E7	Or:T7
+T8	Modifier 226 241	topical vaginal
+E8	Modifier:T8
+T9	Drug 242 253	antibiotics
+E9	Drug:T9
+T10	Eq-Comparison 258 272	within 2 weeks
+E10	Eq-Comparison:T10 Operator:T40 Value:T41 Temporal-Unit:T42
+T11	Temporal-Connection 273 281	prior to
+E11	Temporal-Connection:T11
+A1	Temporal-Connection-Type-Value E11 before
+T12	Encounter 302 307	visit
+E12	Encounter:T12
+T13	Condition 314 327	comorbidities
+E13	Condition:T13 Name:T44
+T14	Condition 368 377	pregnancy
+E14	Condition:T14 Name:T45
+T15	Condition 394 402	diabetes
+E15	Condition:T15 Name:T46
+T16	Or 403 406	and
+E16	Or:T16
+T17	Condition 407 419	hypertension
+E17	Condition:T17 Name:T47
+T18	Condition 445 454	pregnancy
+E18	Condition:T18 Name:T48
+T19	Temporal-Connection 464 466	at
+E19	Temporal-Connection:T19
+A2	Temporal-Connection-Type-Value E19 during
+T20	Study 467 478	recruitment
+E20	Study:T20
+T21	Condition 486 496	stillbirth
+E21	Condition:T21 Name:T49
+T22	And 505 509	with
+E22	And:T22
+T23	Eq-Comparison 512 528	previous history
+E23	Eq-Comparison:T23 Temporal-Period:T51
+T24	Procedure 532 534	CT
+E24	Procedure:T24 Name:T52
+T25	Or 535 537	or
+E25	Or:T25
+T26	Modifier 538 540	NG
+E26	Modifier:T26
+T27	Or 541 544	and
+E27	Or:T27
+T28	And 551 555	with
+E28	And:T28
+T29	Eq-Comparison 558 563	prior
+E29	Eq-Comparison:T29 Temporal-Period:T55
+T30	Negation 592 600	excluded
+E30	Negation:T30
+T31	Procedure 677 689	intervention
+E31	Procedure:T31 Name:T56
+T32	Condition 735 743	pregnant
+E32	Condition:T32 Name:T57
+T33	Condition-Name 25 33	pregnant
+T34	Life-Stage-And-Gender 34 39	women
+A3	Life-Stage-And-Gender-Type T34 female
+T35	Location 68 76	hospital
+A4	Location-Value T35 hospital
+T36	Observation-Name 92 107	gestational age
+T37	Eq-Value 120 122	18
+T38	Eq-Operator 123 131	or above
+A5	Eq-Operator-Value T38 GTEQ
+T39	Drug-Name 226 253	topical vaginal antibiotics
+T40	Eq-Operator 258 264	within
+A6	Eq-Operator-Value T40 LTEQ
+T41	Eq-Value 265 266	2
+T42	Eq-Temporal-Unit 267 272	weeks
+A7	Eq-Temporal-Unit-Value T42 week
+T43	Eq-Temporal-Recency 286 291	first
+A8	Eq-Temporal-Recency-Value T43 first-time
+T44	Condition-Name 314 327	comorbidities
+T45	Condition-Name 368 377	pregnancy
+T46	Condition-Name 394 402	diabetes
+T47	Condition-Name 407 419	hypertension
+T48	Condition-Name 445 454	pregnancy
+T49	Condition-Name 486 496	stillbirth
+T50	Life-Stage-And-Gender 499 504	Women
+A9	Life-Stage-And-Gender-Type T50 female
+T51	Eq-Temporal-Period 512 528	previous history
+A10	Eq-Temporal-Period-Value T51 past
+T52	Procedure-Name 532 534	CT
+T53	Procedure-Name 538 540	NG
+T54	Life-Stage-And-Gender 545 550	women
+A11	Life-Stage-And-Gender-Type T54 female
+T55	Eq-Temporal-Period 558 563	prior
+A12	Eq-Temporal-Period-Value T55 past
+T56	Procedure-Name 677 689	intervention
+T57	Condition-Name 735 743	pregnant
+T58	Life-Stage-And-Gender 744 749	women
+A13	Life-Stage-And-Gender-Type T58 female

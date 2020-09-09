@@ -1,65 +1,118 @@
-T1	Procedure 65 89	Gynecological procedures
-T2	Procedure-Name 65 89	Gynecological procedures
-E1	Procedure:T1 Name:T2
-T3	Condition 230 253	Cerebrovascular disease
-T4	Condition-Name 230 253	Cerebrovascular disease
-E3	Condition:T3 Name:T4
-T5	Condition 202 224	Ischemic heart disease
-T6	Condition-Name 202 224	Ischemic heart disease
-E5	Condition:T5 Name:T6
-T7	Condition 447 468	Illicit substance use
-T8	Condition-Name 447 468	Illicit substance use
-E7	Condition:T7 Name:T8
-T9	Procedure 95 113	General anesthesia
-T10	Procedure-Name 95 113	General anesthesia
-E9	Procedure:T9 Name:T10
-T11	Condition 293 311	cardiac arrhythmia
-T12	Condition-Name 293 311	cardiac arrhythmia
-E11	Condition:T11 Name:T12
-T13	Condition 340 355	hepatic disease
-T14	Condition-Name 340 355	hepatic disease
-E13	Condition:T13 Name:T14
-T15	Condition 152 164	hypertension
-T16	Condition-Name 152 164	hypertension
-E15	Condition:T15 Name:T16
-T17	Condition 170 178	Diabetes
-T18	Condition-Name 170 178	Diabetes
-E17	Condition:T17 Name:T18
-T19	Observation 474 477	BMI
-T20	Observation-Name 474 477	BMI
-E19	Observation:T19 Name:T20
-A1	Observation-Type-Value T20 vital
-T21	Eq-Operator 478 479	<
-A2	Eq-Operator-Value T21 LT
-T22	Eq-Operator 485 486	>
-A3	Eq-Operator-Value T22 GT
-T23	Eq-Operator 504 505	>
-A4	Eq-Operator-Value T23 GT
-T24	Eq-Operator 522 523	>
-A5	Eq-Operator-Value T24 GT
-T25	Eq-Temporal-Unit 54 59	years
-A6	Eq-Temporal-Unit-Value T25 year
-T26	Eq-Temporal-Unit 191 196	years
-A7	Eq-Temporal-Unit-Value T26 year
-T27	Eq-Unit 489 494	kg/m2
-T28	Eq-Unit 509 511	mm
-T29	Age 44 47	Age
-E20	Age:T29
-T30	Eq-Operator 50 51	-
-A8	Eq-Operator-Value T30 BETWEEN
-T31	Eq-Value 48 50	18
-T32	Eq-Value 51 53	50
-T33	Eq-Value 479 481	20
-T34	Eq-Value 486 488	35
-T35	Eq-Value 505 508	150
-T36	Eq-Value 523 526	100
-T37	Eq-Comparison 478 481	<20
-E21	Eq-Comparison:T37 Operator:T21 Value:T33
-T38	Eq-Comparison 485 494	>35 kg/m2
-E22	Eq-Comparison:T38 Operator:T22 Unit:T27 Value:T34
-T39	Eq-Comparison 504 511	>150 mm
-E23	Eq-Comparison:T39 Operator:T23 Unit:T28 Value:T35
-T40	Eq-Comparison 522 526	>100
-E24	Eq-Comparison:T40 Operator:T24 Value:T36
-T41	Eq-Comparison 48 51	18-
-E25	Eq-Comparison:T41 Operator:T30 Value:T31
+T1	Condition 25 32	Healthy
+E1	Condition:T1 Name:T34
+T2	Age 44 47	Age
+E2	Age:T2 
+T3	Eq-Comparison 48 59	18-50 years
+E3	Eq-Comparison:T3 Value:T36 Operator:T37 Value:T38 Temporal-Unit:T39
+T4	Procedure 65 89	Gynecological procedures
+E4	Procedure:T4 Name:T40
+T5	Procedure 95 113	General anesthesia
+E5	Procedure:T5 Name:T41
+T6	Eq-Comparison 139 151	Pre-existing
+E6	Eq-Comparison:T6 Temporal-Period:T42
+T7	Condition 152 164	hypertension
+E7	Condition:T7 Name:T43
+T8	Condition 170 178	Diabetes
+E8	Condition:T8 Name:T44
+T9	Eq-Comparison 183 196	several years
+E9	Eq-Comparison:T9 Temporal-Period:T45 Temporal-Unit:T46
+T10	Modifier 202 210	Ischemic
+E10	Modifier:T10 
+T11	Condition 211 224	heart disease
+E11	Condition:T11 
+T12	Condition 230 253	Cerebrovascular disease
+E12	Condition:T12 Name:T48
+T13	Condition 259 278	Heart valve disease
+E13	Condition:T13 Name:T49
+T14	Condition 293 311	cardiac arrhythmia
+E14	Condition:T14 Name:T50
+T15	Condition 317 324	Anaemia
+E15	Condition:T15 Name:T51
+T16	Modifier 330 336	Kidney
+E16	Modifier:T16 
+T17	Or 337 339	or
+E17	Or:T17 
+T18	Modifier 340 347	hepatic
+E18	Modifier:T18 
+T19	Condition 348 355	disease
+E19	Condition:T19 
+T20	Condition 361 377	Hypersensitivity
+E20	Condition:T20 Name:T53
+T21	Drug 382 386	soya
+E21	Drug:T21 
+T22	Or 393 395	or
+E22	Or:T22 
+T23	Condition 396 403	peanuts
+E23	Condition:T23 
+T24	Condition 409 418	Pregnancy
+E24	Condition:T24 Name:T54
+T25	Condition 424 435	Poor health
+E25	Condition:T25 
+T26	Condition 447 464	Illicit substance
+E26	Condition:T26 Name:T56
+T27	Observation 474 477	BMI
+E27	Observation:T27 Name:T57
+T28	Eq-Comparison 478 481	<20
+E28	Eq-Comparison:T28 Operator:T58 Value:T59
+T29	Or 482 484	or
+E29	Or:T29 
+T30	Eq-Comparison 485 494	>35 kg/m2
+E30	Eq-Comparison:T30 Operator:T60 Value:T61 Unit:T62 Unit:T63
+T31	Observation 500 503	SBP
+E31	Observation:T31 
+T32	Eq-Comparison 504 513	>150 mmHg
+E32	Eq-Comparison:T32 Operator:T65 Value:T66 Unit:T67
+T33	Eq-Comparison 522 536	>100 beats/min
+E33	Eq-Comparison:T33 Operator:T69 Value:T70 Unit:T71 Temporal-Unit:T72
+T34	Condition-Name 25 32	Healthy
+T35	Life-Stage-And-Gender 33 38	women
+A1	Life-Stage-And-Gender-Type T35 female
+T36	Eq-Value 48 50	18
+T37	Eq-Operator 50 51	-
+A2	Eq-Operator-Value T37 BETWEEN
+T38	Eq-Value 51 53	50
+T39	Eq-Temporal-Unit 54 59	years
+A3	Eq-Temporal-Unit-Value T39 year
+T40	Procedure-Name 65 89	Gynecological procedures
+T41	Procedure-Name 95 113	General anesthesia
+T42	Eq-Temporal-Period 139 151	Pre-existing
+A4	Eq-Temporal-Period-Value T42 past
+T43	Condition-Name 152 164	hypertension
+T44	Condition-Name 170 178	Diabetes
+T45	Eq-Temporal-Period 183 190	several
+A5	Eq-Temporal-Period-Value T45 past
+T46	Eq-Temporal-Unit 191 196	years
+A6	Eq-Temporal-Unit-Value T46 year
+T47	Condition-Name 202 224	Ischemic heart disease
+T48	Condition-Name 230 253	Cerebrovascular disease
+T49	Condition-Name 259 278	Heart valve disease
+T50	Condition-Name 293 311	cardiac arrhythmia
+T51	Condition-Name 317 324	Anaemia
+T52	Condition-Name 340 355	hepatic disease
+T53	Condition-Name 361 377	Hypersensitivity
+T54	Condition-Name 409 418	Pregnancy
+T55	Condition-Name 424 441	Poor health state
+T56	Condition-Name 455 464	substance
+T57	Observation-Name 474 477	BMI
+A7	Observation-Type-Value T57 vital
+T58	Eq-Operator 478 479	<
+A8	Eq-Operator-Value T58 LT
+T59	Eq-Value 479 481	20
+T60	Eq-Operator 485 486	>
+A9	Eq-Operator-Value T60 GT
+T61	Eq-Value 486 488	35
+T62	Eq-Unit 489 491	kg
+T63	Eq-Unit 492 494	m2
+T64	Eq-Unit 500 503	SBP
+T65	Eq-Operator 504 505	>
+A10	Eq-Operator-Value T65 GT
+T66	Eq-Value 505 508	150
+T67	Eq-Unit 509 513	mmHg
+T68	Eq-Operator 519 521	HR
+A11	Eq-Operator-Value T68 GT
+T69	Eq-Operator 522 523	>
+A12	Eq-Operator-Value T69 GT
+T70	Eq-Value 523 526	100
+T71	Eq-Unit 527 532	beats
+T72	Eq-Temporal-Unit 533 536	min
+A13	Eq-Temporal-Unit-Value T72 minute

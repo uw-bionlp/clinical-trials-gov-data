@@ -1,33 +1,112 @@
-T1	Procedure 131 144	immunotherapy
-T2	Procedure-Name 131 144	immunotherapy
-E1	Procedure:T1 Name:T2
-T3	Procedure 111 123	chemotherapy
-T4	Procedure-Name 111 123	chemotherapy
-E3	Procedure:T3 Name:T4
-T5	Condition 431 447	severe infection
-T6	Condition-Name 431 447	severe infection
-E5	Condition:T5 Name:T6
-T7	Condition 458 469	hepatitis A
-T8	Condition-Name 458 469	hepatitis A
-E7	Condition:T7 Name:T8
-T9	Condition 541 554	psychological
-T10	Condition-Name 541 554	psychological
-E9	Condition:T9 Name:T10
-T11	Eq-Operator 155 156	≥
-A1	Eq-Operator-Value T11 GTEQ
-T12	Eq-Temporal-Unit 159 164	years
-A2	Eq-Temporal-Unit-Value T12 year
-T13	Eq-Temporal-Unit 334 339	years
-A3	Eq-Temporal-Unit-Value T13 year
-T14	Age 151 154	Age
-E10	Age:T14
-T15	Eq-Operator 195 196	-
-A4	Eq-Operator-Value T15 BETWEEN
-T16	Eq-Value 156 158	18
-T17	Eq-Value 194 195	0
-T18	Eq-Value 196 197	2
-T19	Eq-Value 332 333	5
-T20	Eq-Comparison 155 164	≥18 years
-E11	Eq-Comparison:T20 Operator:T11 Temporal-Unit:T12 Value:T16
-T21	Eq-Comparison 194 196	0-
-E12	Eq-Comparison:T21 Operator:T15 Value:T17
+T1	Assertion 40 49	suspicion
+E1	Assertion:T1
+A1	Assertion-Type-Value E1 possible
+T2	Modifier 54 61	primary
+E2	Modifier:T2
+T3	Or 62 64	or
+E3	Or:T3
+T4	Modifier 65 74	recurrent
+E4	Modifier:T4
+T5	Condition 75 78	EOC
+E5	Condition:T5 Name:T41
+T6	And 79 83	with
+E6	And:T6
+T7	Indication 87 97	indication
+E7	Indication:T7
+T8	Procedure 102 109	surgery
+E8	Procedure:T8 Name:T42
+T9	Procedure 111 123	chemotherapy
+E9	Procedure:T9 Name:T43
+T10	Or 124 130	and/or
+E10	Or:T10
+T11	Procedure 131 144	immunotherapy
+E11	Procedure:T11 Name:T44
+T12	Age 151 154	Age
+E12	Age:T12
+T13	Eq-Comparison 155 164	≥18 years
+E13	Eq-Comparison:T13 Operator:T45 Temporal-Unit:T46
+T14	Observation 171 193	WHO performance status
+E14	Observation:T14
+T15	Eq-Comparison 194 196	0-
+E15	Eq-Comparison:T15 Value:T47 Operator:T48
+T16	Procedure 219 228	treatment
+E16	Procedure:T16
+T17	And 229 232	and
+E17	And:T17
+T18	Encounter 233 242	follow-up
+E18	Encounter:T18
+T19	Other 300 305	Other
+E19	Other:T19
+T20	Eq-Comparison 306 312	active
+E20	Eq-Comparison:T20 Temporal-Period:T50
+T21	Condition 313 323	malignancy
+E21	Condition:T21 Name:T51
+T22	Eq-Comparison 327 339	past 5 years
+E22	Eq-Comparison:T22 Temporal-Period:T52 Value:T53 Temporal-Unit:T54
+T23	Temporal-Connection 340 348	prior to
+E23	Temporal-Connection:T23
+A2	Temporal-Connection-Type-Value E23 before
+T24	Study 349 354	entry
+E24	Study:T24
+T25	Study 364 369	study
+E25	Study:T25
+T26	Exception 371 377	except
+E26	Exception:T26
+T27	Procedure 382 389	treated
+E27	Procedure:T27
+T28	Modifier 390 407	non-melanoma skin
+E28	Modifier:T28
+T29	Condition 408 414	cancer
+E29	Condition:T29 Name:T55
+T30	Condition 438 447	infection
+E30	Condition:T30 Name:T57
+T31	Condition 453 456	HIV
+E31	Condition:T31 Name:T58
+T32	Condition 458 469	hepatitis A
+E32	Condition:T32 Name:T59
+T33	Modifier 471 472	B
+E33	Modifier:T33
+T34	Or 473 476	and
+E34	Or:T34
+T35	Eq-Comparison 485 494	Receiving
+E35	Eq-Comparison:T35 Temporal-Period:T60
+T36	Procedure 495 523	immune suppressive treatment
+E36	Procedure:T36
+T37	Modifier 530 537	Medical
+E37	Modifier:T37
+T38	Or 538 540	or
+E38	Or:T38
+T39	Modifier 541 554	psychological
+E39	Modifier:T39
+T40	Condition 555 564	condition
+E40	Condition:T40
+T41	Condition-Name 75 78	EOC
+T42	Procedure-Name 102 109	surgery
+T43	Procedure-Name 111 123	chemotherapy
+T44	Procedure-Name 131 144	immunotherapy
+T45	Eq-Operator 155 158	≥18
+A3	Eq-Operator-Value T45 GTEQ
+T46	Eq-Temporal-Unit 159 164	years
+A4	Eq-Temporal-Unit-Value T46 year
+T47	Eq-Value 194 195	0
+T48	Eq-Operator 195 196	-
+A5	Eq-Operator-Value T48 BETWEEN
+T49	Eq-Value 196 197	2
+T50	Eq-Temporal-Period 306 312	active
+A6	Eq-Temporal-Period-Value T50 present
+T51	Condition-Name 313 323	malignancy
+T52	Eq-Temporal-Period 327 331	past
+A7	Eq-Temporal-Period-Value T52 past
+T53	Eq-Value 332 333	5
+T54	Eq-Temporal-Unit 334 339	years
+A8	Eq-Temporal-Unit-Value T54 year
+T55	Condition-Name 408 414	cancer
+T56	Severity 431 437	severe
+A9	Severity-Value T56 severe
+T57	Condition-Name 438 447	infection
+T58	Condition-Name 453 456	HIV
+T59	Condition-Name 458 469	hepatitis A
+T60	Eq-Temporal-Period 485 494	Receiving
+A10	Eq-Temporal-Period-Value T60 present
+T61	Drug-Name 495 513	immune suppressive
+T62	Condition-Name 541 564	psychological condition

@@ -1,33 +1,83 @@
-T1	Condition 327 357	tubulointerstitial nephropathy
-T2	Condition-Name 327 357	tubulointerstitial nephropathy
-E1	Condition:T1 Name:T2
-T3	Condition 369 387	Glomerulosclerosis
-T4	Condition-Name 369 387	Glomerulosclerosis
-E3	Condition:T3 Name:T4
-T5	Condition 218 229	nephropathy
-T6	Condition-Name 218 229	nephropathy
-E5	Condition:T5 Name:T6
-T7	Life-Stage-And-Gender 25 30	Adult
-A1	Life-Stage-And-Gender-Type T7 adult
-T8	Condition 628 646	Nephrotic syndrome
-T9	Condition-Name 628 646	Nephrotic syndrome
-E8	Condition:T8 Name:T9
-T10	Condition 559 572	Fabry Disease
-T11	Condition-Name 559 572	Fabry Disease
-E10	Condition:T10 Name:T11
-T12	Condition 721 734	nephropathies
-T13	Condition-Name 721 734	nephropathies
-E12	Condition:T12 Name:T13
-T14	Condition 665 676	nephropathy
-T15	Condition-Name 665 676	nephropathy
-E14	Condition:T14 Name:T15
-T16	Condition 654 664	Glomerular
-T17	Condition-Name 654 664	Glomerular
-E16	Condition:T16 Name:T17
-T18	Eq-Operator 40 41	>
-A2	Eq-Operator-Value T18 GT
-T19	Eq-Temporal-Unit 45 50	years
-A3	Eq-Temporal-Unit-Value T19 year
-T20	Eq-Value 42 44	18
-T21	Eq-Comparison 40 50	> 18 years
-E17	Eq-Comparison:T21 Operator:T18 Temporal-Unit:T19 Value:T20
+T1	Eq-Comparison 40 50	> 18 years
+E1	Eq-Comparison:T1 Operator:T30 Value:T31 Temporal-Unit:T32
+T2	Study 101 106	study
+E2	Study:T2
+T3	Criteria-Count 155 193	at least one of the following criteria
+E3	Criteria-Count:T3
+T4	Condition 218 229	nephropathy
+E4	Condition:T4 Name:T35
+T5	Eq-Comparison 230 237	despite
+E5	Eq-Comparison:T5
+T6	Procedure 238 250	renal biopsy
+E6	Procedure:T6 Name:T36
+T7	Procedure 262 282	Nephroangiosclerosis
+E7	Procedure:T7
+T8	Modifier 290 308	predominant lesion
+E8	Modifier:T8
+T9	Modifier 319 345	Chronic tubulointerstitial
+E9	Modifier:T9
+T10	Condition 346 357	nephropathy
+E10	Condition:T10
+T11	Condition 369 387	Glomerulosclerosis
+E11	Condition:T11 Name:T39
+T12	Modifier 399 408	Segmental
+E12	Modifier:T12
+T13	Or 409 412	and
+E13	Or:T13
+T14	Modifier 413 418	focal
+E14	Modifier:T14
+T15	Condition 419 429	hyalinosis
+E15	Condition:T15
+T16	Modifier 458 464	kidney
+E16	Modifier:T16
+T17	Or 465 467	or
+E17	Or:T17
+T18	Modifier 468 483	seat of minimal
+E18	Modifier:T18
+T19	Condition 484 491	lesions
+E19	Condition:T19 Name:T42
+T20	Condition 559 564	Fabry
+E20	Condition:T20
+T21	Criteria-Count 581 616	least one of the following criteria
+E21	Criteria-Count:T21
+T22	Condition 628 646	Nephrotic syndrome
+E22	Condition:T22 Name:T46
+T23	Or 647 653	and/or
+E23	Or:T23
+T24	Modifier 654 664	Glomerular
+E24	Modifier:T24
+T25	Condition 665 676	nephropathy
+E25	Condition:T25
+T26	Condition 713 734	certain nephropathies
+E26	Condition:T26 Name:T48
+T27	Modifier 736 751	specific kidney
+E27	Modifier:T27
+T28	Condition 752 759	lesions
+E28	Condition:T28
+T29	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T29 adult
+T30	Eq-Operator 40 41	>
+A2	Eq-Operator-Value T30 GT
+T31	Eq-Value 42 44	18
+T32	Eq-Temporal-Unit 45 50	years
+A3	Eq-Temporal-Unit-Value T32 year
+T33	Eq-Operator 155 163	at least
+A4	Eq-Operator-Value T33 GTEQ
+T34	Eq-Value 164 167	one
+T35	Condition-Name 218 229	nephropathy
+T36	Procedure-Name 244 250	biopsy
+T37	Condition-Name 262 282	Nephroangiosclerosis
+T38	Condition-Name 327 357	tubulointerstitial nephropathy
+T39	Condition-Name 369 387	Glomerulosclerosis
+T40	Condition-Name 413 429	focal hyalinosis
+T41	Polarity 451 457	normal
+A5	Polarity-Value T41 normal
+T42	Condition-Name 484 491	lesions
+T43	Condition-Name 559 572	Fabry Disease
+T44	Eq-Operator 578 586	At least
+A6	Eq-Operator-Value T44 GTEQ
+T45	Eq-Value 587 590	one
+T46	Condition-Name 628 646	Nephrotic syndrome
+T47	Condition-Name 654 676	Glomerular nephropathy
+T48	Condition-Name 721 734	nephropathies
+T49	Condition-Name 745 759	kidney lesions

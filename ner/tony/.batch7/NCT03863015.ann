@@ -1,74 +1,154 @@
-T1	Condition 536 545	Pregnancy
-T2	Condition-Name 536 545	Pregnancy
-E1	Condition:T1 Name:T2
-T3	Condition 615 624	pregnancy
-T4	Condition-Name 615 624	pregnancy
-E3	Condition:T3 Name:T4
-T5	Condition 462 470	asystole
-T6	Condition-Name 462 470	asystole
-E5	Condition:T5 Name:T6
-T7	Life-Stage-And-Gender 550 557	females
-A1	Life-Stage-And-Gender-Type T7 male
-T8	Condition 561 568	fertile
-T9	Condition-Name 561 568	fertile
-E8	Condition:T8 Name:T9
-T10	Condition 438 444	arrest
-T11	Condition-Name 438 444	arrest
-E10	Condition:T10 Name:T11
-T12	Condition 524 530	stroke
-T13	Condition-Name 524 530	stroke
-E12	Condition:T12 Name:T13
-T14	Condition 598 601	HCG
-T15	Condition-Name 598 601	HCG
-E14	Condition:T14 Name:T15
-T16	Procedure 854 861	therapy
-T17	Procedure-Name 854 861	therapy
-E16	Procedure:T16 Name:T17
-T18	Condition 877 883	arrest
-T19	Condition-Name 877 883	arrest
-E18	Condition:T18 Name:T19
-T20	Eq-Operator 108 109	≥
-A2	Eq-Operator-Value T20 GTEQ
-T21	Eq-Operator 205 206	<
-A3	Eq-Operator-Value T21 LT
-T22	Eq-Operator 399 400	≥
-A4	Eq-Operator-Value T22 GTEQ
-T23	Eq-Operator 625 631	within
-A5	Eq-Operator-Value T23 LTEQ
-T24	Eq-Operator 684 685	<
-A6	Eq-Operator-Value T24 LT
-T25	Eq-Operator 748 754	within
-A7	Eq-Operator-Value T25 LTEQ
-T26	Eq-Operator 929 930	>
-A8	Eq-Operator-Value T26 GT
-T27	Eq-Temporal-Unit 113 118	years
-A9	Eq-Temporal-Unit-Value T27 year
-T28	Eq-Temporal-Unit 246 253	minutes
-A10	Eq-Temporal-Unit-Value T28 minute
-T29	Eq-Temporal-Unit 935 942	minutes
-A11	Eq-Temporal-Unit-Value T29 minute
-T30	Age 104 107	Age
-E19	Age:T30
-T31	Eq-Operator 919 921	to
-A12	Eq-Operator-Value T31 BETWEEN
-T32	Eq-Value 110 112	18
-T33	Eq-Value 207 208	9
-T34	Eq-Value 243 245	20
-T35	Eq-Value 401 402	9
-T36	Eq-Value 686 688	30
-T37	Eq-Value 802 805	180
-T38	Eq-Value 917 918	3
-T39	Eq-Value 922 923	4
-T40	Eq-Value 931 934	240
-T41	Eq-Comparison 108 118	≥ 18 years
-E20	Eq-Comparison:T41 Operator:T20 Temporal-Unit:T27 Value:T32
-T42	Eq-Comparison 205 208	< 9
-E21	Eq-Comparison:T42 Operator:T21 Value:T33
-T43	Eq-Comparison 399 402	≥ 9
-E22	Eq-Comparison:T43 Operator:T22 Value:T35
-T44	Eq-Comparison 684 688	< 30
-E23	Eq-Comparison:T44 Operator:T24 Value:T36
-T45	Eq-Comparison 929 942	> 240 minutes
-E24	Eq-Comparison:T45 Operator:T26 Temporal-Unit:T29 Value:T40
-T46	Eq-Comparison 917 921	3 to
-E25	Eq-Comparison:T46 Operator:T31 Value:T38
+T1	Age 104 107	Age
+E1	Age:T1
+T2	Eq-Comparison 108 118	≥ 18 years
+E2	Eq-Comparison:T2 Operator:T44 Value:T45 Temporal-Unit:T46
+T3	Condition 143 156	cardiac cause
+E3	Condition:T3 Name:T47
+T4	Condition 162 177	Unconsciousness
+E4	Condition:T4 Name:T48
+T5	Temporal-Connection 178 182	upon
+E5	Temporal-Connection:T5
+A1	Temporal-Connection-Type-Value E5 during
+T6	Encounter 183 192	admission
+E6	Encounter:T6
+T7	Observation 201 204	GCS
+E7	Observation:T7 Name:T50
+T8	Eq-Comparison 205 208	< 9
+E8	Eq-Comparison:T8 Operator:T51 Value:T52
+T9	Condition 224 228	ROSC
+E9	Condition:T9 Name:T54
+T10	Eq-Comparison 233 253	more than 20 minutes
+E10	Eq-Comparison:T10 Operator:T55 Value:T56 Temporal-Unit:T57
+T11	Encounter 377 386	admission
+E11	Encounter:T11
+T12	Observation 395 398	GCS
+E12	Observation:T12 Name:T60
+T13	Eq-Comparison 399 402	≥ 9
+E13	Eq-Comparison:T13 Operator:T61 Value:T62
+T14	Negation 417 420	non
+E14	Negation:T14
+T15	Condition 421 434	cardiac cause
+E15	Condition:T15 Name:T63
+T16	Condition 438 444	arrest
+E16	Condition:T16
+T17	Condition 450 470	Unwitnessed asystole
+E17	Condition:T17 Name:T64
+T18	Assertion 476 485	Suspected
+E18	Assertion:T18
+A2	Assertion-Type-Value E18 possible
+T19	Or 486 488	or
+E19	Or:T19
+T20	Condition 499 520	intracranial bleeding
+E20	Condition:T20 Name:T65
+T21	Or 521 523	or
+E21	Or:T21
+T22	Condition 524 530	stroke
+E22	Condition:T22 Name:T66
+T23	Condition 536 545	Pregnancy
+E23	Condition:T23 Name:T67
+T24	Or 547 549	or
+E24	Or:T24
+T25	Age 569 572	age
+E25	Age:T25
+T26	Observation 592 601	serum HCG
+E26	Observation:T26 Name:T70
+T27	Assertion 602 610	can rule
+E27	Assertion:T27
+A3	Assertion-Type-Value E27 hypothetical
+T28	Condition 615 624	pregnancy
+E28	Condition:T28 Name:T71
+T29	Encounter 674 683	admission
+E29	Encounter:T29
+T30	Eq-Comparison 684 691	< 30 °C
+E30	Eq-Comparison:T30 Operator:T73 Value:T74
+T31	Condition 708 725	cardiogenic shock
+E31	Condition:T31 Name:T76
+T32	Negation 735 738	not
+E32	Negation:T32
+T33	Condition 787 794	disease
+E33	Condition:T33
+T34	Eq-Comparison 802 809	180 day
+E34	Eq-Comparison:T34 Value:T77 Temporal-Unit:T78
+T35	Condition 810 827	survival unlikely
+E35	Condition:T35
+T36	Procedure 854 861	therapy
+E36	Procedure:T36 Name:T79
+T37	Temporal-Connection 873 876	pre
+E37	Temporal-Connection:T37
+A4	Temporal-Connection-Type-Value E37 before
+T38	Observation 877 913	arrest Cerebral Performance Category
+E38	Observation:T38
+T39	Eq-Comparison 917 923	3 to 4
+E39	Eq-Comparison:T39 Value:T81 Operator:T82 Value:T83
+T40	Eq-Comparison 929 942	> 240 minutes
+E40	Eq-Comparison:T40 Operator:T84 Value:T85 Temporal-Unit:T86
+T41	Temporal-Connection 943 947	from
+E41	Temporal-Connection:T41
+A5	Temporal-Connection-Type-Value E41 after
+T42	Temporal-Connection 948 955	ROSC to
+E42	Temporal-Connection:T42
+A6	Temporal-Connection-Type-Value E42 before
+T43	Study 956 969	randomization
+E43	Study:T43
+T44	Eq-Operator 108 109	≥
+A7	Eq-Operator-Value T44 GTEQ
+T45	Eq-Value 110 112	18
+T46	Eq-Temporal-Unit 113 118	years
+A8	Eq-Temporal-Unit-Value T46 year
+T47	Condition-Name 143 156	cardiac cause
+T48	Condition-Name 162 177	Unconsciousness
+T49	Encounter-Type 183 192	admission
+A9	Encounter-Type-Value T49 inpatient
+T50	Observation-Name 201 204	GCS
+T51	Eq-Operator 205 206	<
+A10	Eq-Operator-Value T51 LT
+T52	Eq-Value 207 208	9
+T53	Severity 214 223	Sustained
+A11	Severity-Value T53 severe
+T54	Condition-Name 224 228	ROSC
+T55	Eq-Operator 233 242	more than
+A12	Eq-Operator-Value T55 GT
+T56	Eq-Value 243 245	20
+T57	Eq-Temporal-Unit 246 253	minutes
+A13	Eq-Temporal-Unit-Value T57 minute
+T58	Condition-Name 358 371	Consciousness
+T59	Encounter-Type 377 386	admission
+A14	Encounter-Type-Value T59 inpatient
+T60	Observation-Name 395 398	GCS
+T61	Eq-Operator 399 400	≥
+A15	Eq-Operator-Value T61 GTEQ
+T62	Eq-Value 401 402	9
+T63	Condition-Name 421 434	cardiac cause
+T64	Condition-Name 450 470	Unwitnessed asystole
+T65	Condition-Name 499 520	intracranial bleeding
+T66	Condition-Name 524 530	stroke
+T67	Condition-Name 536 545	Pregnancy
+T68	Life-Stage-And-Gender 550 557	females
+A16	Life-Stage-And-Gender-Type T68 female
+T69	Polarity 583 591	negative
+A17	Polarity-Value T69 negative
+T70	Observation-Name 592 601	serum HCG
+A18	Observation-Type-Value T70 lab
+T71	Condition-Name 615 624	pregnancy
+T72	Encounter-Type 674 683	admission
+A19	Encounter-Type-Value T72 inpatient
+T73	Eq-Operator 684 685	<
+A20	Eq-Operator-Value T73 LT
+T74	Eq-Value 686 688	30
+T75	Severity 697 707	Persistent
+A21	Severity-Value T75 severe
+T76	Condition-Name 708 725	cardiogenic shock
+T77	Eq-Value 802 805	180
+T78	Eq-Temporal-Unit 806 809	day
+A22	Eq-Temporal-Unit-Value T78 day
+T79	Procedure-Name 854 861	therapy
+T80	Condition-Name 884 904	Cerebral Performance
+T81	Eq-Value 917 918	3
+T82	Eq-Operator 919 921	to
+A23	Eq-Operator-Value T82 BETWEEN
+T83	Eq-Value 922 923	4
+T84	Eq-Operator 929 930	>
+A24	Eq-Operator-Value T84 GT
+T85	Eq-Value 931 934	240
+T86	Eq-Temporal-Unit 935 942	minutes
+A25	Eq-Temporal-Unit-Value T86 minute

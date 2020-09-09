@@ -1,22 +1,40 @@
 T1	Condition 43 72	microcytic hypochromic anemia
-T2	Condition-Name 43 72	microcytic hypochromic anemia
-E1	Condition:T1 Name:T2
-T3	Procedure 94 97	MCV
-T4	Procedure-Name 94 97	MCV
-E3	Procedure:T3 Name:T4
-T5	Condition 220 242	Beta thalassemia major
-T6	Condition-Name 220 242	Beta thalassemia major
-E5	Condition:T5 Name:T6
-T7	Condition 259 275	Chronic diseases
-T8	Condition-Name 259 275	Chronic diseases
-E7	Condition:T7 Name:T8
-T9	Condition 319 340	Sideroblastic anaemia
-T10	Condition-Name 319 340	Sideroblastic anaemia
-E9	Condition:T9 Name:T10
-T11	Eq-Operator 98 107	less than
-A1	Eq-Operator-Value T11 LT
-T12	Age 178 181	age
-E10	Age:T12
-T13	Eq-Value 108 110	80
-T14	Eq-Comparison 98 110	less than 80
-E11	Eq-Comparison:T14 Operator:T11 Value:T13
+E1	Condition:T1 Name:T14
+T2	Observation 94 97	MCV
+E2	Observation:T2
+T3	Eq-Comparison 98 113	less than 80 fl
+E3	Eq-Comparison:T3 Operator:T16 Value:T17 Unit:T18
+T4	And 114 117	and
+E4	And:T4
+T5	Observation 118 126	HB level
+E5	Observation:T5 Name:T19
+T6	Eq-Comparison 127 164	below the lower limit of normal value
+E6	Eq-Comparison:T6 Unit:T20
+T7	Age 178 181	age
+E7	Age:T7
+T8	Condition 220 236	Beta thalassemia
+E8	Condition:T8 Name:T21
+T9	Condition 259 275	Chronic diseases
+E9	Condition:T9 Name:T22
+T10	Or 276 278	or
+E10	Or:T10
+T11	Condition 279 289	infections
+E11	Condition:T11 Name:T23
+T12	Condition 302 311	poisoning
+E12	Condition:T12 Name:T24
+T13	Condition 319 340	Sideroblastic anaemia
+E13	Condition:T13 Name:T25
+T14	Condition-Name 43 72	microcytic hypochromic anemia
+T15	Condition-Name 94 97	MCV
+T16	Eq-Operator 98 107	less than
+A1	Eq-Operator-Value T16 LT
+T17	Eq-Value 108 110	80
+T18	Eq-Unit 111 113	fl
+T19	Observation-Name 118 120	HB
+T20	Eq-Unit 137 164	lower limit of normal value
+A2	Eq-Unit-Value T20 ref-range-high
+T21	Condition-Name 220 236	Beta thalassemia
+T22	Condition-Name 259 275	Chronic diseases
+T23	Condition-Name 279 289	infections
+T24	Condition-Name 302 311	poisoning
+T25	Condition-Name 319 340	Sideroblastic anaemia

@@ -1,17 +1,27 @@
-T1	Life-Stage-And-Gender 43 49	adults
-A1	Life-Stage-And-Gender-Type T1 adult
-T2	Procedure 28 31	EMR
-T3	Procedure-Name 28 31	EMR
-E2	Procedure:T2 Name:T3
-T4	Eq-Operator 324 325	<
-A2	Eq-Operator-Value T4 LT
-T5	Eq-Temporal-Unit 328 333	years
-A3	Eq-Temporal-Unit-Value T5 year
-T6	Age 320 323	Age
-E3	Age:T6
-T7	Age 334 337	old
-E4	Age:T7
-T8	Eq-Value 80 82	18
-T9	Eq-Value 325 327	18
-T10	Eq-Comparison 324 333	<18 years
-E5	Eq-Comparison:T10 Operator:T4 Temporal-Unit:T5 Value:T9
+T1	Condition 28 31	EMR
+E1	Condition:T1 Name:T7
+T2	Encounter 50 58	admitted
+E2	Encounter:T2
+T3	Age 75 79	ages
+E3	Age:T3
+T4	Eq-Comparison 80 92	18 and older
+E4	Eq-Comparison:T4 Value:T11 Operator:T12
+T5	Age 320 323	Age
+E5	Age:T5
+T6	Eq-Comparison 324 333	<18 years
+E6	Eq-Comparison:T6 Operator:T13 Value:T14 Temporal-Unit:T15
+T7	Condition-Name 28 31	EMR
+T8	Life-Stage-And-Gender 43 49	adults
+A1	Life-Stage-And-Gender-Type T8 adult
+T9	Encounter-Type 50 58	admitted
+A2	Encounter-Type-Value T9 inpatient
+T10	Location 66 74	hospital
+A3	Location-Value T10 hospital
+T11	Eq-Value 80 82	18
+T12	Eq-Operator 83 92	and older
+A4	Eq-Operator-Value T12 GTEQ
+T13	Eq-Operator 324 325	<
+A5	Eq-Operator-Value T13 LT
+T14	Eq-Value 325 327	18
+T15	Eq-Temporal-Unit 328 333	years
+A6	Eq-Temporal-Unit-Value T15 year

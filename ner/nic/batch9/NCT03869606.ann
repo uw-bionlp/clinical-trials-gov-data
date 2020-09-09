@@ -1,15 +1,48 @@
-T1	Condition 103 122	developmental delay
-T2	Condition-Name 103 122	developmental delay
-E1	Condition:T1 Name:T2
-T3	Procedure 206 219	leg elevation
-T4	Procedure-Name 206 219	leg elevation
-E3	Procedure:T3 Name:T4
-T5	Condition 233 253	aortic insufficiency
-T6	Condition-Name 233 253	aortic insufficiency
-E5	Condition:T5 Name:T6
-T7	Eq-Temporal-Unit 57 62	years
-A1	Eq-Temporal-Unit-Value T7 year
-T8	Age 66 69	age
-E6	Age:T8
-T9	Eq-Value 34 36	11
-T10	Eq-Value 54 56	17
+T1	Eq-Comparison 34 62	11 to no older than 17 years
+E1	Eq-Comparison:T1 Value:T16 Operator:T17 Value:T18 Temporal-Unit:T19
+T2	Age 66 69	age
+E2	Age:T2
+T3	Condition 95 122	severed developmental delay
+E3	Condition:T3 Name:T20
+T4	Procedure 129 139	orthopedic
+E4	Procedure:T4
+T5	Modifier 154 157	leg
+E5	Modifier:T5
+T6	Condition 158 166	injuries
+E6	Condition:T6 Name:T21
+T7	Condition 172 178	injury
+E7	Condition:T7 Name:T22
+T8	Assertion 184 189	would
+E8	Assertion:T8
+A1	Assertion-Type-Value E8 hypothetical
+T9	Negation 190 197	prevent
+E9	Negation:T9
+T10	Modifier 198 209	passive leg
+E10	Modifier:T10
+T11	Condition 233 253	aortic insufficiency
+E11	Condition:T11 Name:T25
+T12	Condition 267 289	anatomic abnormalities
+E12	Condition:T12 Name:T27
+T13	Modifier 297 311	thoracic aorta
+E13	Modifier:T13
+T14	Procedure 331 358	external cardiac pacemakers
+E14	Procedure:T14 Name:T28
+T15	Eq-Comparison 360 365	close
+E15	Eq-Comparison:T15
+T16	Eq-Value 34 36	11
+T17	Eq-Operator 43 53	older than
+A2	Eq-Operator-Value T17 GT
+T18	Eq-Value 54 56	17
+T19	Eq-Temporal-Unit 57 62	years
+A3	Eq-Temporal-Unit-Value T19 year
+T20	Condition-Name 95 122	severed developmental delay
+T21	Condition-Name 158 166	injuries
+T22	Condition-Name 172 178	injury
+T23	Condition-Name 198 209	passive leg
+T24	Severity 226 232	severe
+A4	Severity-Value T24 severe
+T25	Condition-Name 233 253	aortic insufficiency
+T26	Severity 260 266	severe
+A5	Severity-Value T26 severe
+T27	Condition-Name 267 289	anatomic abnormalities
+T28	Procedure-Name 331 358	external cardiac pacemakers

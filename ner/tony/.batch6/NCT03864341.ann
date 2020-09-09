@@ -1,22 +1,94 @@
-T1	Condition 235 243	drug use
-T2	Condition-Name 235 243	drug use
-E1	Condition:T1 Name:T2
-T3	Condition 317 331	critically ill
-T4	Condition-Name 317 331	critically ill
-E3	Condition:T3 Name:T4
-T5	Condition 426 443	cognitive deficit
-T6	Condition-Name 426 443	cognitive deficit
-E5	Condition:T5 Name:T6
-T7	Language 545 552	English
-T8	Condition 797 806	addiction
-T9	Condition-Name 797 806	addiction
-E8	Condition:T8 Name:T9
-T10	Eq-Operator 82 83	≥
-A1	Eq-Operator-Value T10 GTEQ
-T11	Eq-Temporal-Unit 86 91	years
-A2	Eq-Temporal-Unit-Value T11 year
-T12	Age 92 95	old
-E9	Age:T12
-T13	Eq-Value 83 85	18
-T14	Eq-Comparison 82 91	≥18 years
-E10	Eq-Comparison:T14 Operator:T10 Temporal-Unit:T11 Value:T13
+T1	Eq-Comparison 82 91	≥18 years
+E1	Eq-Comparison:T1 Operator:T33 Temporal-Unit:T34
+T2	Age 92 95	old
+E2	Age:T2
+T3	Condition 122 134	homelessness
+E3	Condition:T3 Name:T36
+T4	Risk 135 139	risk
+E4	Risk:T4
+T5	Eq-Comparison 140 145	using
+E5	Eq-Comparison:T5 Temporal-Period:T37
+T6	Procedure 148 180	homelessness risk screening tool
+E6	Procedure:T6
+T7	Procedure 182 186	HRST
+E7	Procedure:T7
+T8	Modifier 224 231	alcohol
+E8	Modifier:T8
+T9	Or 232 234	or
+E9	Or:T9
+T10	Condition 235 243	drug use
+E10	Condition:T10
+T11	Modifier 300 309	Medically
+E11	Modifier:T11
+T12	Condition 317 331	critically ill
+E12	Condition:T12 Name:T42
+T13	Or 333 335	or
+E13	Or:T13
+T14	Modifier 336 360	psychiatrically unstable
+E14	Modifier:T14
+T15	Condition 426 443	cognitive deficit
+E15	Condition:T15 Name:T44
+T16	Condition 445 466	profound intoxication
+E16	Condition:T16 Name:T45
+T17	Observation 474 486	Incarcerated
+E17	Observation:T17 Name:T46
+T18	Or 487 489	or
+E18	Or:T18
+T19	Negation 514 520	Unable
+E19	Negation:T19
+T20	Or 577 583	and/or
+E20	Or:T20
+T21	Negation 584 590	cannot
+E21	Negation:T21
+T22	Condition 617 633	Already homeless
+E22	Condition:T22 Name:T49
+T23	Negation 687 690	not
+E23	Negation:T23
+T24	Assertion 714 720	can be
+E24	Assertion:T24
+A1	Assertion-Type-Value E24 hypothetical
+T25	Encounter 733 742	follow-up
+E25	Encounter:T25
+T26	Eq-Comparison 761 769	received
+E26	Eq-Comparison:T26 Temporal-Period:T51
+T27	Procedure 782 796	peer navigator
+E27	Procedure:T27
+T28	Temporal-Connection 830 836	during
+E28	Temporal-Connection:T28
+A2	Temporal-Connection-Type-Value E28 during
+T29	Eq-Comparison 837 844	current
+E29	Eq-Comparison:T29 Temporal-Period:T52
+T30	Encounter 845 853	ED visit
+E30	Encounter:T30
+T31	Study 892 897	study
+E31	Study:T31
+T32	Location 45 72	Bellevue Hospital Center ED
+A3	Location-Value T32 hospital
+T33	Eq-Operator 82 85	≥18
+A4	Eq-Operator-Value T33 GTEQ
+T34	Eq-Temporal-Unit 86 91	years
+A5	Eq-Temporal-Unit-Value T34 year
+T35	Polarity 109 117	positive
+A6	Polarity-Value T35 positive
+T36	Condition-Name 122 134	homelessness
+T37	Eq-Temporal-Period 140 145	using
+A7	Eq-Temporal-Period-Value T37 present
+T38	Observation-Name 148 180	homelessness risk screening tool
+T39	Observation-Name 182 186	HRST
+T40	Polarity 201 209	positive
+A8	Polarity-Value T40 positive
+T41	Drug-Name 224 231	alcohol
+T42	Condition-Name 317 331	critically ill
+T43	Stability 352 360	unstable
+A9	Stability-Value T43 change
+T44	Condition-Name 426 443	cognitive deficit
+T45	Condition-Name 445 466	profound intoxication
+T46	Observation-Name 474 486	Incarcerated
+T47	Observation-Name 493 507	police custody
+T48	Language 545 552	English
+T49	Condition-Name 625 633	homeless
+T50	Observation-Name 649 656	shelter
+T51	Eq-Temporal-Period 761 769	received
+A10	Eq-Temporal-Period-Value T51 past
+T52	Eq-Temporal-Period 837 844	current
+A11	Eq-Temporal-Period-Value T52 present

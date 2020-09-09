@@ -1,42 +1,141 @@
-T1	Condition 722 746	gastroesophageal varices
-T2	Condition-Name 722 746	gastroesophageal varices
-E1	Condition:T1 Name:T2
-T3	Procedure 631 654	radiofrequency ablation
-T4	Procedure-Name 631 654	radiofrequency ablation
-E3	Procedure:T3 Name:T4
-T5	Condition 149 158	evaluable
-T6	Condition-Name 149 158	evaluable
-E5	Condition:T5 Name:T6
-T7	Condition 314 319	death
-T8	Condition-Name 314 319	death
-E7	Condition:T7 Name:T8
-T9	Condition 364 369	death
-T10	Condition-Name 364 369	death
-E9	Condition:T9 Name:T10
-T11	Condition 413 418	death
-T12	Condition-Name 413 418	death
-E11	Condition:T11 Name:T12
-T13	Procedure 625 629	TACE
-T14	Procedure-Name 625 629	TACE
-E13	Procedure:T13 Name:T14
-T15	Procedure 926 929	HCC
-T16	Procedure-Name 926 929	HCC
-E15	Procedure:T15 Name:T16
-T17	Procedure 943 946	HCC
-T18	Procedure-Name 943 946	HCC
-E17	Procedure:T17 Name:T18
-T19	Procedure 979 982	HCC
-T20	Procedure-Name 979 982	HCC
-E19	Procedure:T19 Name:T20
-T21	Eq-Operator 869 875	within
-A1	Eq-Operator-Value T21 LTEQ
-T22	Eq-Value 190 191	1
-T23	Eq-Value 329 330	1
-T24	Eq-Value 335 336	1
-T25	Eq-Value 377 378	1
-T26	Eq-Value 426 427	2
-T27	Eq-Value 495 496	4
-T28	Eq-Value 503 504	4
-T29	Eq-Value 876 877	1
-T30	Eq-Comparison 869 877	within 1
-E20	Eq-Comparison:T30 Operator:T21 Value:T29
+T1	Procedure 38 55	histopathological
+E1	Procedure:T1 
+T2	Or 56 58	or
+E2	Or:T2 
+T3	Procedure 59 82	cytological examination
+E3	Procedure:T3 Name:T46
+T4	Eq-Comparison 136 148	at least one
+E4	Eq-Comparison:T4 Operator:T47 Value:T48
+T5	Condition 149 165	evaluable lesion
+E5	Condition:T5 Name:T49
+T6	Eq-Comparison 215 223	received
+E6	Eq-Comparison:T6 Temporal-Period:T50
+T7	Procedure 224 239	local treatment
+E7	Procedure:T7 
+T8	Eq-Comparison 278 297	previously received
+E8	Eq-Comparison:T8 Temporal-Period:T51 Temporal-Period:T52
+T9	Modifier 298 313	anti-programmed
+E9	Modifier:T9 
+T10	Procedure 314 330	death receptor-1
+E10	Procedure:T10 
+T11	Drug 332 336	PD-1
+E11	Drug:T11 Name:T54
+T12	Modifier 338 346	antibody
+E12	Modifier:T12 
+T13	Modifier 348 363	anti-programmed
+E13	Modifier:T13 
+T14	Drug 370 378	ligand-1
+E14	Drug:T14 Name:T55
+T15	Observation 380 385	PD-L1
+E15	Observation:T15 Name:T56 Name:T57
+T16	Modifier 387 395	antibody
+E16	Modifier:T16 
+T17	Condition 397 427	anti-programmed death ligand-2
+E17	Condition:T17 
+T18	Observation 429 434	PD-L2
+E18	Observation:T18 Name:T60 Name:T61
+T19	Modifier 436 444	antibody
+E19	Modifier:T19 
+T20	Or 445 447	or
+E20	Or:T20 
+T21	Modifier 448 475	anti-cytotoxic T lymphocyte
+E21	Modifier:T21 
+T22	Drug 498 504	CTLA-4
+E22	Drug:T22 Name:T63
+T23	Drug 506 516	antibodies
+E23	Drug:T23 Name:T64
+T24	Study 576 581	study
+E24	Study:T24 
+T25	Eq-Comparison 601 620	previously received
+E25	Eq-Comparison:T25 Temporal-Period:T65
+T26	Procedure 625 629	TACE
+E26	Procedure:T26 Name:T66
+T27	Procedure 631 654	radiofrequency ablation
+E27	Procedure:T27 Name:T67
+T28	And 655 658	and
+E28	And:T28 
+T29	Other 659 664	other
+E29	Other:T29 
+T30	Procedure 665 688	liver cancer treatments
+E30	Procedure:T30 
+T31	Eq-Comparison 711 718	history
+E31	Eq-Comparison:T31 Temporal-Period:T69
+T32	Condition 722 746	gastroesophageal varices
+E32	Condition:T32 Name:T70
+T33	Or 747 749	or
+E33	Or:T33 
+T34	Eq-Comparison 750 756	active
+E34	Eq-Comparison:T34 Temporal-Period:T71
+T35	Condition 757 770	cardia ulcers
+E35	Condition:T35 Name:T72
+T36	Risk 794 798	risk
+E36	Risk:T36 
+T37	Condition 802 810	bleeding
+E37	Condition:T37 Name:T74
+T38	Condition 835 868	upper gastrointestinal hemorrhage
+E38	Condition:T38 Name:T75
+T39	Eq-Comparison 869 882	within 1 year
+E39	Eq-Comparison:T39 Operator:T76 Value:T77 Temporal-Unit:T78
+T40	Condition 912 929	fibrous layer HCC
+E40	Condition:T40 Name:T79
+T41	Condition 931 946	sarcomatoid HCC
+E41	Condition:T41 Name:T80
+T42	Or 947 949	or
+E42	Or:T42 
+T43	Condition 956 974	cholangiocarcinoma
+E43	Condition:T43 Name:T81
+T44	Condition 979 982	HCC
+E44	Condition:T44 Name:T82
+T45	Other 984 989	Other
+E45	Other:T45 
+T46	Procedure-Name 59 82	cytological examination
+T47	Eq-Operator 136 144	at least
+A1	Eq-Operator-Value T47 GTEQ
+T48	Eq-Value 145 148	one
+T49	Condition-Name 159 165	lesion
+T50	Eq-Temporal-Period 215 223	received
+A2	Eq-Temporal-Period-Value T50 past
+T51	Eq-Temporal-Period 278 288	previously
+A3	Eq-Temporal-Period-Value T51 past
+T52	Eq-Temporal-Period 289 297	received
+A4	Eq-Temporal-Period-Value T52 past
+T53	Drug-Name 320 330	receptor-1
+T54	Drug-Name 332 336	PD-1
+T55	Drug-Name 370 378	ligand-1
+T56	Observation-Name 380 382	PD
+A5	Observation-Type-Value T56 lab
+T57	Observation-Name 383 385	L1
+A6	Observation-Type-Value T57 lab
+T58	Drug-Name 397 412	anti-programmed
+T59	Drug-Name 419 427	ligand-2
+T60	Observation-Name 429 431	PD
+A7	Observation-Type-Value T60 lab
+T61	Observation-Name 432 434	L2
+A8	Observation-Type-Value T61 lab
+T62	Drug-Name 448 475	anti-cytotoxic T lymphocyte
+T63	Drug-Name 498 504	CTLA-4
+T64	Drug-Name 506 516	antibodies
+T65	Eq-Temporal-Period 601 620	previously received
+A9	Eq-Temporal-Period-Value T65 past
+T66	Procedure-Name 625 629	TACE
+T67	Procedure-Name 631 654	radiofrequency ablation
+T68	Condition-Name 671 677	cancer
+T69	Eq-Temporal-Period 711 718	history
+A10	Eq-Temporal-Period-Value T69 past
+T70	Condition-Name 722 746	gastroesophageal varices
+T71	Eq-Temporal-Period 750 756	active
+A11	Eq-Temporal-Period-Value T71 present
+T72	Condition-Name 757 770	cardia ulcers
+T73	Polarity 789 793	high
+A12	Polarity-Value T73 high
+T74	Condition-Name 802 810	bleeding
+T75	Condition-Name 858 868	hemorrhage
+T76	Eq-Operator 869 875	within
+A13	Eq-Operator-Value T76 LTEQ
+T77	Eq-Value 876 877	1
+T78	Eq-Temporal-Unit 878 882	year
+A14	Eq-Temporal-Unit-Value T78 year
+T79	Condition-Name 912 929	fibrous layer HCC
+T80	Condition-Name 931 946	sarcomatoid HCC
+T81	Condition-Name 956 974	cholangiocarcinoma
+T82	Condition-Name 979 982	HCC

@@ -1,16 +1,104 @@
-T1	Procedure 46 67	breast reconstruction
-T2	Procedure-Name 46 67	breast reconstruction
-E1	Procedure:T1 Name:T2
-T3	Procedure 800 814	breast surgery
-T4	Procedure-Name 800 814	breast surgery
-E3	Procedure:T3 Name:T4
-T5	Eq-Operator 25 26	≥
-A1	Eq-Operator-Value T5 GTEQ
-T6	Eq-Operator 233 234	>
-A2	Eq-Operator-Value T6 GT
-T7	Eq-Value 27 29	18
-T8	Eq-Value 235 237	15
-T9	Eq-Comparison 25 29	≥ 18
-E4	Eq-Comparison:T9 Operator:T5 Value:T7
-T10	Eq-Comparison 233 237	> 15
-E5	Eq-Comparison:T10 Operator:T6 Value:T8
+T1	Age 20 23	Age
+E1	Age:T1
+T2	Eq-Comparison 25 29	≥ 18
+E2	Eq-Comparison:T2 Operator:T39 Value:T40
+T3	Procedure 46 67	breast reconstruction
+E3	Procedure:T3 Name:T41
+T4	Modifier 94 100	breast
+E4	Modifier:T4
+T5	Condition 101 107	cancer
+E5	Condition:T5 Name:T42
+T6	Condition 109 121	precancerous
+E6	Condition:T6 Name:T43
+T7	Condition 122 129	lesions
+E7	Condition:T7 Name:T44
+T8	Condition 131 135	DCIS
+E8	Condition:T8 Name:T45
+T9	Condition 137 141	LCIS
+E9	Condition:T9 Name:T46
+T10	Condition 144 160	mutation carrier
+E10	Condition:T10 Name:T47
+T11	And 161 165	with
+E11	And:T11
+T12	Modifier 166 182	increased breast
+E12	Modifier:T12
+T13	Condition 183 189	cancer
+E13	Condition:T13 Name:T49
+T14	Risk 190 194	risk
+E14	Risk:T14
+T15	Family-Member 203 209	family
+E15	Family-Member:T15
+T16	Family-Member 210 217	history
+E16	Family-Member:T16
+T17	Observation 219 232	lifetime risk
+E17	Observation:T17
+T18	Eq-Comparison 233 238	> 15%
+E18	Eq-Comparison:T18 Operator:T51 Value:T52 Unit:T53
+T19	Assertion 255 265	capable to
+E19	Assertion:T19
+A1	Assertion-Type-Value E19 hypothetical
+T20	Observation 286 323	aims and possible consequences of the
+E20	Observation:T20
+T21	Observation 324 338	clinical trial
+E21	Observation:T21
+T22	Eq-Comparison 340 351	MPG §20.2.1
+E22	Eq-Comparison:T22 Value:T54
+T23	Modifier 465 482	Metastatic breast
+E23	Modifier:T23
+T24	Condition 483 489	cancer
+E24	Condition:T24 Name:T55
+T25	Contraindication 509 526	contraindications
+E25	Contraindication:T25
+T26	Modifier 535 548	mesh-assisted
+E26	Modifier:T26
+T27	Or 549 551	or
+E27	Or:T27
+T28	Modifier 552 574	plastic-reconstructive
+E28	Modifier:T28
+T29	Procedure 575 581	breast
+E29	Procedure:T29 Name:T57
+T30	Procedure 582 589	surgery
+E30	Procedure:T30 Name:T58
+T31	Eq-Comparison 701 705	20.3
+E31	Eq-Comparison:T31 Value:T60
+T32	Other 722 729	another
+E32	Other:T32
+T33	Procedure 730 739	operative
+E33	Procedure:T33
+T34	Study 740 754	clinical trial
+E34	Study:T34
+T35	Procedure 785 814	reconstructive breast surgery
+E35	Procedure:T35 Name:T61
+T36	Or 815 821	and/or
+E36	Or:T36
+T37	Procedure 837 853	primary endpoint
+E37	Procedure:T37
+T38	Study 870 875	trial
+E38	Study:T38
+T39	Eq-Operator 25 26	≥
+A2	Eq-Operator-Value T39 GTEQ
+T40	Eq-Value 27 29	18
+T41	Procedure-Name 46 67	breast reconstruction
+T42	Condition-Name 101 107	cancer
+T43	Condition-Name 109 121	precancerous
+T44	Condition-Name 122 129	lesions
+T45	Condition-Name 131 135	DCIS
+T46	Condition-Name 137 141	LCIS
+T47	Condition-Name 144 160	mutation carrier
+T48	Polarity 166 175	increased
+A3	Polarity-Value T48 high
+T49	Condition-Name 183 189	cancer
+T50	Eq-Temporal-Period 210 217	history
+A4	Eq-Temporal-Period-Value T50 past
+T51	Eq-Operator 233 234	>
+A5	Eq-Operator-Value T51 GT
+T52	Eq-Value 235 237	15
+T53	Eq-Unit 237 238	%
+T54	Eq-Value 345 351	20.2.1
+T55	Condition-Name 483 489	cancer
+T56	Procedure-Name 535 548	mesh-assisted
+T57	Procedure-Name 575 581	breast
+T58	Procedure-Name 582 589	surgery
+T59	Observation-Name 649 675	institution under judicial
+T60	Eq-Value 701 705	20.3
+T61	Procedure-Name 800 814	breast surgery

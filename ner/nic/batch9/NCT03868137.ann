@@ -1,30 +1,113 @@
-T1	Language 89 96	English
-T2	Life-Stage-And-Gender 39 45	Female
-A1	Life-Stage-And-Gender-Type T2 male
-T3	Condition 395 411	pelvic infection
-T4	Condition-Name 395 411	pelvic infection
-E3	Condition:T3 Name:T4
-T5	Procedure 373 386	IUD insertion
-T6	Procedure-Name 373 386	IUD insertion
-E5	Procedure:T5 Name:T6
-T7	Condition 560 573	stomach ulcer
-T8	Condition-Name 560 573	stomach ulcer
-E7	Condition:T7 Name:T8
-T9	Procedure 680 690	procedures
-T10	Procedure-Name 680 690	procedures
-E9	Procedure:T9 Name:T10
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 29 30	≥
+E2	Eq-Comparison:T2 Operator:T35
+T3	Eq-Comparison 31 33	18
+E3	Eq-Comparison:T3 Value:T36
+T4	Eq-Comparison 301 325	within the last 6 months
+E4	Eq-Comparison:T4 Operator:T40 Temporal-Period:T41 Value:T42 Temporal-Unit:T43
+T5	Contraindication 352 369	Contraindications
+E5	Contraindication:T5
+T6	Procedure 373 386	IUD insertion
+E6	Procedure:T6 Name:T44
+T7	Eq-Comparison 388 394	active
+E7	Eq-Comparison:T7 Temporal-Period:T45
+T8	Modifier 395 401	pelvic
+E8	Modifier:T8
+T9	Condition 402 411	infection
+E9	Condition:T9 Name:T46
+T10	Eq-Comparison 413 420	current
+E10	Eq-Comparison:T10 Temporal-Period:T47
 T11	Condition 421 430	pregnancy
-T12	Condition-Name 421 430	pregnancy
-E11	Condition:T11 Name:T12
-T13	Eq-Operator 29 30	≥
-A2	Eq-Operator-Value T13 GTEQ
-T14	Eq-Operator 301 307	within
-A3	Eq-Operator-Value T14 LTEQ
-T15	Eq-Temporal-Unit 319 325	months
-A4	Eq-Temporal-Unit-Value T15 month
-T16	Age 25 28	Age
-E12	Age:T16
-T17	Eq-Value 31 33	18
-T18	Eq-Value 317 318	6
-T19	Eq-Comparison 29 33	≥ 18
-E13	Eq-Comparison:T19 Operator:T13 Value:T17
+E11	Condition:T11 Name:T48
+T12	Contraindication 437 454	Contraindications
+E12	Contraindication:T12
+T13	Drug 458 464	NSAIDs
+E13	Drug:T13 Name:T49
+T14	Allergy 466 473	allergy
+E14	Allergy:T14
+T15	Eq-Comparison 475 482	history
+E15	Eq-Comparison:T15 Temporal-Period:T50
+T16	Condition 486 492	asthma
+E16	Condition:T16 Name:T51
+T17	Eq-Comparison 494 501	history
+E17	Eq-Comparison:T17 Temporal-Period:T52
+T18	Drug 505 512	aspirin
+E18	Drug:T18 Name:T53
+T19	Allergy 513 520	allergy
+E19	Allergy:T19
+T20	Eq-Comparison 522 529	history
+E20	Eq-Comparison:T20 Temporal-Period:T54
+T21	Condition 533 547	kidney disease
+E21	Condition:T21 Name:T55
+T22	Eq-Comparison 549 556	history
+E22	Eq-Comparison:T22 Temporal-Period:T56
+T23	Modifier 560 567	stomach
+E23	Modifier:T23
+T24	Condition 568 573	ulcer
+E24	Condition:T24
+T25	Eq-Comparison 575 582	history
+E25	Eq-Comparison:T25 Temporal-Period:T58
+T26	Eq-Comparison 586 592	active
+E26	Eq-Comparison:T26 Temporal-Period:T59
+T27	Modifier 593 595	GI
+E27	Modifier:T27
+T28	Condition 596 604	bleeding
+E28	Condition:T28
+T29	Eq-Comparison 606 613	history
+E29	Eq-Comparison:T29 Temporal-Period:T61
+T30	Condition 617 630	liver disease
+E30	Condition:T30 Name:T62
+T31	Negation 637 640	Not
+E31	Negation:T31
+T32	Eq-Comparison 641 651	undergoing
+E32	Eq-Comparison:T32 Temporal-Period:T63
+T33	Other 656 661	other
+E33	Other:T33
+T34	Procedure 673 690	office procedures
+E34	Procedure:T34
+T35	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T35 GTEQ
+T36	Eq-Value 31 33	18
+T37	Life-Stage-And-Gender 39 45	Female
+A2	Life-Stage-And-Gender-Type T37 female
+T38	Language 89 96	English
+T39	Stability 258 264	Stable
+A3	Stability-Value T39 stable
+T40	Eq-Operator 301 307	within
+A4	Eq-Operator-Value T40 LTEQ
+T41	Eq-Temporal-Period 312 316	last
+A5	Eq-Temporal-Period-Value T41 past
+T42	Eq-Value 317 318	6
+T43	Eq-Temporal-Unit 319 325	months
+A6	Eq-Temporal-Unit-Value T43 month
+T44	Procedure-Name 373 386	IUD insertion
+T45	Eq-Temporal-Period 388 394	active
+A7	Eq-Temporal-Period-Value T45 present
+T46	Condition-Name 402 411	infection
+T47	Eq-Temporal-Period 413 420	current
+A8	Eq-Temporal-Period-Value T47 present
+T48	Condition-Name 421 430	pregnancy
+T49	Drug-Name 458 464	NSAIDs
+T50	Eq-Temporal-Period 475 482	history
+A9	Eq-Temporal-Period-Value T50 past
+T51	Condition-Name 486 492	asthma
+T52	Eq-Temporal-Period 494 501	history
+A10	Eq-Temporal-Period-Value T52 past
+T53	Drug-Name 505 512	aspirin
+T54	Eq-Temporal-Period 522 529	history
+A11	Eq-Temporal-Period-Value T54 past
+T55	Condition-Name 533 547	kidney disease
+T56	Eq-Temporal-Period 549 556	history
+A12	Eq-Temporal-Period-Value T56 past
+T57	Condition-Name 560 573	stomach ulcer
+T58	Eq-Temporal-Period 575 582	history
+A13	Eq-Temporal-Period-Value T58 past
+T59	Eq-Temporal-Period 586 592	active
+A14	Eq-Temporal-Period-Value T59 present
+T60	Condition-Name 593 604	GI bleeding
+T61	Eq-Temporal-Period 606 613	history
+A15	Eq-Temporal-Period-Value T61 past
+T62	Condition-Name 617 630	liver disease
+T63	Eq-Temporal-Period 641 651	undergoing
+A16	Eq-Temporal-Period-Value T63 present

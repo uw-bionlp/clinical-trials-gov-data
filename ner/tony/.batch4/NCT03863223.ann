@@ -1,32 +1,180 @@
-T1	Condition 97 115	measurable disease
-T2	Condition-Name 97 115	measurable disease
-E1	Condition:T1 Name:T2
-T3	Procedure 297 306	procedure
-T4	Procedure-Name 297 306	procedure
-E3	Procedure:T3 Name:T4
-T5	Procedure 349 363	cancer therapy
-T6	Procedure-Name 349 363	cancer therapy
-E5	Procedure:T5 Name:T6
-T7	Procedure 413 420	regimen
-T8	Procedure-Name 413 420	regimen
-E7	Procedure:T7 Name:T8
-T9	Language 447 450	HER
-T10	Procedure 664 685	systemic chemotherapy
-T11	Procedure-Name 664 685	systemic chemotherapy
-E10	Procedure:T10 Name:T11
-T12	Procedure 881 889	curative
-T13	Procedure-Name 881 889	curative
-E12	Procedure:T12 Name:T13
-T14	Procedure 1006 1019	contraception
-T15	Procedure-Name 1006 1019	contraception
-E14	Procedure:T14 Name:T15
-T16	Eq-Operator 720 726	within
-A1	Eq-Operator-Value T16 LTEQ
-T17	Eq-Temporal-Unit 738 743	years
-A2	Eq-Temporal-Unit-Value T17 year
-T18	Eq-Temporal-Unit 1069 1075	months
-A3	Eq-Temporal-Unit-Value T18 month
-T19	Eq-Value 195 196	0
-T20	Eq-Value 200 201	1
-T21	Eq-Value 736 737	5
-T22	Eq-Value 1067 1068	7
+T1	Modifier 39 48	recurrent
+E1	Modifier:T1 
+T2	Or 49 51	or
+E2	Or:T2 
+T3	Modifier 52 69	metastasis breast
+E3	Modifier:T3 
+T4	Condition 70 76	cancer
+E4	Condition:T4 Name:T64
+T5	Condition 97 115	measurable disease
+E5	Condition:T5 Name:T65
+T6	Observation 135 174	Eastern Cooperative Oncology Group(ECOG
+E6	Observation:T6 Name:T66
+T7	Eq-Comparison 195 201	0 or 1
+E7	Eq-Comparison:T7 Value:T67
+T8	Condition 217 231	organ function
+E8	Condition:T8 Name:T69
+T9	Temporal-Connection 278 286	prior to
+E9	Temporal-Connection:T9 
+A1	Temporal-Connection-Type-Value E9 before
+T10	Study 291 296	study
+E10	Study:T10 
+T11	Eq-Comparison 333 340	History
+E11	Eq-Comparison:T11 Temporal-Period:T70
+T12	Modifier 344 355	anti-cancer
+E12	Modifier:T12 
+T13	Procedure 356 363	therapy
+E13	Procedure:T13 
+T14	Exception 381 390	exception
+E14	Exception:T14 
+T15	Eq-Comparison 398 403	prior
+E15	Eq-Comparison:T15 Temporal-Period:T74
+T16	Procedure 404 420	hormonal regimen
+E16	Procedure:T16 
+T17	Condition 425 428	MBC
+E17	Condition:T17 
+T18	Eq-Comparison 436 443	History
+E18	Eq-Comparison:T18 Temporal-Period:T75
+T19	Drug 451 477	tyrosine kinase inhibitors
+E19	Drug:T19 Name:T76
+T20	Or 478 480	or
+E20	Or:T20 
+T21	Drug 481 500	monoclonal antibody
+E21	Drug:T21 Name:T77
+T22	Modifier 505 511	breast
+E22	Modifier:T22 
+T23	Condition 512 518	cancer
+E23	Condition:T23 Name:T78
+T24	Procedure 526 535	treatment
+E24	Procedure:T24 
+T25	Drug 536 562	setting，except trastuzumab
+E25	Drug:T25 Name:T79
+T26	Modifier 575 587	neo-adjuvant
+E26	Modifier:T26 
+T27	Or 588 590	or
+E27	Or:T27 
+T28	Procedure 591 607	adjuvant setting
+E28	Procedure:T28 Name:T81
+T29	Negation 649 655	unable
+E29	Negation:T29 
+T30	Modifier 664 672	systemic
+E30	Modifier:T30 
+T31	Procedure 673 685	chemotherapy
+E31	Procedure:T31 Name:T82
+T32	Eq-Comparison 692 699	History
+E32	Eq-Comparison:T32 Temporal-Period:T83
+T33	Other 703 708	other
+E33	Other:T33 
+T34	Condition 709 719	malignancy
+E34	Condition:T34 Name:T84
+T35	Eq-Comparison 720 737	within the last 5
+E35	Eq-Comparison:T35 Operator:T85 Temporal-Period:T86 Value:T87
+T36	Condition 755 764	carcinoma
+E36	Condition:T36 Name:T88
+T37	Modifier 776 803	cervix，basal cell carcinoma
+E37	Modifier:T37 
+T38	Or 804 806	or
+E38	Or:T38 
+T39	Modifier 807 820	squamous cell
+E39	Modifier:T39 
+T40	Condition 821 830	carcinoma
+E40	Condition:T40 
+T41	Modifier 838 842	skin
+E41	Modifier:T41 
+T42	Eq-Comparison 857 867	previously
+E42	Eq-Comparison:T42 Temporal-Period:T91
+T43	Procedure 868 875	treated
+E43	Procedure:T43 
+T44	Procedure 881 896	curative intent
+E44	Procedure:T44 
+T45	Condition 903 911	Pregnant
+E45	Condition:T45 Name:T92
+T46	Or 912 914	or
+E46	Or:T46 
+T47	Condition 915 924	lactating
+E47	Condition:T47 Name:T93
+T48	Condition 947 959	childbearing
+E48	Condition:T48 Name:T95
+T49	Assertion 960 969	potential
+E49	Assertion:T49 
+A2	Assertion-Type-Value E49 hypothetical
+T50	Assertion 970 982	unwilling to
+E50	Assertion:T50 
+A3	Assertion-Type-Value E50 hypothetical
+T51	Modifier 989 1005	highly-effective
+E51	Modifier:T51 
+T52	Procedure 1006 1019	contraception
+E52	Procedure:T52 Name:T96
+T53	Temporal-Connection 1020 1026	during
+E53	Temporal-Connection:T53 
+A4	Temporal-Connection-Type-Value E53 during
+T54	Study 1034 1039	study
+E54	Study:T54 
+T55	Procedure 1040 1049	treatment
+E55	Procedure:T55 
+T56	And 1050 1053	and
+E56	And:T56 
+T57	Eq-Comparison 1058 1075	at least 7 months
+E57	Eq-Comparison:T57 Operator:T97 Value:T98 Temporal-Unit:T99
+T58	Temporal-Connection 1076 1081	after
+E58	Temporal-Connection:T58 
+A5	Temporal-Connection-Type-Value E58 after
+T59	Eq-Comparison 1086 1090	last
+E59	Eq-Comparison:T59 Temporal-Period:T100
+T60	Study 1099 1104	study
+E60	Study:T60 
+T61	Procedure 1105 1114	treatment
+E61	Procedure:T61 
+T62	Eq-Unit 25 29	HER2
+T63	Polarity 30 38	positive
+A6	Polarity-Value T63 positive
+T64	Condition-Name 70 76	cancer
+T65	Condition-Name 97 115	measurable disease
+T66	Observation-Name 135 174	Eastern Cooperative Oncology Group(ECOG
+A7	Observation-Type-Value T66 clinical-score
+T67	Eq-Value 195 196	0
+T68	Polarity 208 216	Adequate
+A8	Polarity-Value T68 normal
+T69	Condition-Name 217 231	organ function
+T70	Eq-Temporal-Period 333 340	History
+A9	Eq-Temporal-Period-Value T70 past
+T71	Procedure-Name 349 363	cancer therapy
+T72	Condition-Name 368 376	MBC（with
+T73	Eq-Value 394 397	one
+T74	Eq-Temporal-Period 398 403	prior
+A10	Eq-Temporal-Period-Value T74 past
+T75	Eq-Temporal-Period 436 443	History
+A11	Eq-Temporal-Period-Value T75 past
+T76	Drug-Name 451 477	tyrosine kinase inhibitors
+T77	Drug-Name 481 500	monoclonal antibody
+T78	Condition-Name 512 518	cancer
+T79	Drug-Name 536 562	setting，except trastuzumab
+T80	Drug-Name 575 587	neo-adjuvant
+T81	Procedure-Name 591 599	adjuvant
+T82	Procedure-Name 673 685	chemotherapy
+T83	Eq-Temporal-Period 692 699	History
+A12	Eq-Temporal-Period-Value T83 past
+T84	Condition-Name 709 719	malignancy
+T85	Eq-Operator 720 726	within
+A13	Eq-Operator-Value T85 LTEQ
+T86	Eq-Temporal-Period 731 735	last
+A14	Eq-Temporal-Period-Value T86 past
+T87	Eq-Value 736 737	5
+T88	Condition-Name 755 764	carcinoma
+T89	Condition-Name 776 803	cervix，basal cell carcinoma
+T90	Condition-Name 807 830	squamous cell carcinoma
+T91	Eq-Temporal-Period 857 867	previously
+A15	Eq-Temporal-Period-Value T91 past
+T92	Condition-Name 903 911	Pregnant
+T93	Condition-Name 915 924	lactating
+T94	Life-Stage-And-Gender 938 943	women
+A16	Life-Stage-And-Gender-Type T94 female
+T95	Condition-Name 947 959	childbearing
+T96	Procedure-Name 1006 1019	contraception
+T97	Eq-Operator 1058 1066	at least
+A17	Eq-Operator-Value T97 GTEQ
+T98	Eq-Value 1067 1068	7
+T99	Eq-Temporal-Unit 1069 1075	months
+A18	Eq-Temporal-Unit-Value T99 month
+T100	Eq-Temporal-Period 1086 1090	last
+A19	Eq-Temporal-Period-Value T100 past

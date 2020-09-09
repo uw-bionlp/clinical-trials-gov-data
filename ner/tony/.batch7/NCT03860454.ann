@@ -1,20 +1,94 @@
-T1	Procedure 201 222	heart transplantation
-T2	Procedure-Name 201 222	heart transplantation
-E1	Procedure:T1 Name:T2
-T3	Procedure 462 483	heart transplantation
-T4	Procedure-Name 462 483	heart transplantation
-E3	Procedure:T3 Name:T4
-T5	Condition 590 596	phobia
-T6	Condition-Name 590 596	phobia
-E5	Condition:T5 Name:T6
-T7	Language 766 769	MRI
-T8	Procedure 802 819	blood transfusion
-T9	Procedure-Name 802 819	blood transfusion
-E8	Procedure:T8 Name:T9
-T10	Procedure 862 875	haemodialysis
-T11	Procedure-Name 862 875	haemodialysis
-E10	Procedure:T10 Name:T11
-T12	Eq-Operator 820 826	within
-A1	Eq-Operator-Value T12 LTEQ
-T13	Eq-Unit 265 267	CM
-T14	Eq-Unit 398 400	CM
+T1	Condition 25 30	LMNA+
+E1	Condition:T1 Name:T31
+T2	Condition 42 67	pathogenic LMNA mutations
+E2	Condition:T2 Name:T32
+T3	Condition 72 77	LMNA+
+E3	Condition:T3 Name:T33
+T4	Or 78 81	and
+E4	Or:T4
+T5	Condition 82 106	heart myocardial samples
+E5	Condition:T5 Name:T34
+T6	Condition 116 141	explanted hearts of LMNA+
+E6	Condition:T6
+T7	Eq-Comparison 159 168	scheduled
+E7	Eq-Comparison:T7 Temporal-Period:T35
+T8	Procedure 201 222	heart transplantation
+E8	Procedure:T8 Name:T37
+T9	Condition 264 269	DCMWT
+E9	Condition:T9 Name:T39
+T10	Condition 291 311	heart muscle failure
+E10	Condition:T10 Name:T40
+T11	And 312 315	but
+E11	And:T11
+T12	Modifier 321 330	wild-type
+E12	Modifier:T12
+T13	Condition 331 341	lamin gene
+E13	Condition:T13
+T14	Observation 343 367	Heart myocardial samples
+E14	Observation:T14
+T15	Condition 377 402	explanted hearts of DCMWT
+E15	Condition:T15
+T16	Eq-Comparison 420 429	scheduled
+E16	Eq-Comparison:T16 Temporal-Period:T43
+T17	Procedure 462 483	heart transplantation
+E17	Procedure:T17 Name:T44
+T18	Procedure 583 589	Needle
+E18	Procedure:T18
+T19	Condition 590 596	phobia
+E19	Condition:T19 Name:T47
+T20	Assertion 602 607	would
+E20	Assertion:T20
+A1	Assertion-Type-Value E20 hypothetical
+T21	Negation 608 616	preclude
+E21	Negation:T21
+T22	Condition 617 630	blood-letting
+E22	Condition:T22 Name:T48
+T23	Contraindication 709 725	contraindication
+E23	Contraindication:T23
+T24	Procedure 730 764	cardiac magnetic resonance imaging
+E24	Procedure:T24 Name:T49
+T25	Procedure 766 769	MRI
+E25	Procedure:T25 Name:T50
+T26	Procedure 802 819	blood transfusion
+E26	Procedure:T26 Name:T51
+T27	Eq-Comparison 820 841	within the last month
+E27	Eq-Comparison:T27 Operator:T52 Temporal-Period:T53 Temporal-Unit:T54
+T28	And 842 845	and
+E28	And:T28
+T29	Procedure 862 875	haemodialysis
+E29	Procedure:T29 Name:T55
+T30	Negation 884 892	excluded
+E30	Negation:T30
+T31	Condition-Name 25 30	LMNA+
+T32	Condition-Name 42 67	pathogenic LMNA mutations
+T33	Condition-Name 72 77	LMNA+
+T34	Condition-Name 82 98	heart myocardial
+T35	Eq-Temporal-Period 159 168	scheduled
+A2	Eq-Temporal-Period-Value T35 future
+T36	Eq-Temporal-Period 169 179	to undergo
+A3	Eq-Temporal-Period-Value T36 future
+T37	Procedure-Name 201 222	heart transplantation
+T38	Location 230 251	Papworth Hospital NHS
+A4	Location-Value T38 hospital
+T39	Condition-Name 264 269	DCMWT
+T40	Condition-Name 291 311	heart muscle failure
+T41	Condition-Name 326 341	type lamin gene
+T42	Condition-Name 343 359	Heart myocardial
+T43	Eq-Temporal-Period 420 429	scheduled
+A5	Eq-Temporal-Period-Value T43 future
+T44	Procedure-Name 462 483	heart transplantation
+T45	Location 491 512	Papworth Hospital NHS
+A6	Location-Value T45 hospital
+T46	Condition-Name 583 589	Needle
+T47	Condition-Name 590 596	phobia
+T48	Condition-Name 617 630	blood-letting
+T49	Procedure-Name 730 764	cardiac magnetic resonance imaging
+T50	Procedure-Name 766 769	MRI
+T51	Procedure-Name 802 819	blood transfusion
+T52	Eq-Operator 820 826	within
+A7	Eq-Operator-Value T52 LTEQ
+T53	Eq-Temporal-Period 831 835	last
+A8	Eq-Temporal-Period-Value T53 past
+T54	Eq-Temporal-Unit 836 841	month
+A9	Eq-Temporal-Unit-Value T54 month
+T55	Procedure-Name 862 875	haemodialysis

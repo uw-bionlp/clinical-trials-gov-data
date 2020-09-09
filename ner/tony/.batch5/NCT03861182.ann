@@ -1,30 +1,118 @@
-T1	Condition 427 447	inflammatory disease
-T2	Condition-Name 427 447	inflammatory disease
-E1	Condition:T1 Name:T2
-T3	Procedure 232 240	surgical
-T4	Procedure-Name 232 240	surgical
-E3	Procedure:T3 Name:T4
-T5	Condition 595 601	anemia
-T6	Condition-Name 595 601	anemia
-E5	Condition:T5 Name:T6
-T7	Eq-Operator 602 603	<
-A1	Eq-Operator-Value T7 LT
-T8	Eq-Temporal-Unit 57 62	years
-A2	Eq-Temporal-Unit-Value T8 year
-T9	Eq-Temporal-Unit 116 120	days
-A3	Eq-Temporal-Unit-Value T9 day
-T10	Eq-Unit 180 182	kg
-T11	Age 66 69	age
-E6	Age:T11
-T12	Age 85 89	Aged
-E7	Age:T12
-T13	Eq-Value 54 56	18
-T14	Eq-Value 98 99	1
-T15	Eq-Value 113 115	28
-T16	Eq-Value 146 148	33
-T17	Eq-Value 170 171	1
-T18	Eq-Value 179 180	2
-T19	Eq-Value 545 547	48
-T20	Eq-Value 604 605	7
-T21	Eq-Comparison 602 605	< 7
-E8	Eq-Comparison:T21 Operator:T7 Value:T20
+T1	Eq-Comparison 49 62	Over 18 years
+E1	Eq-Comparison:T1 Operator:T35 Value:T36 Temporal-Unit:T37
+T2	Age 66 69	age
+E2	Age:T2
+T3	Condition 70 78	Neonates
+E3	Condition:T3 Name:T38
+T4	Age 85 89	Aged
+E4	Age:T4
+T5	Eq-Comparison 90 120	between 1h of life and 28 days
+E5	Eq-Comparison:T5 Operator:T39 Operator:T40 Value:T41 Temporal-Unit:T42
+T6	Observation 124 128	life
+E6	Observation:T6
+T7	Observation 131 138	- Born
+E7	Observation:T7
+T8	Eq-Comparison 139 153	beyond 33 Week
+E8	Eq-Comparison:T8 Value:T43 Temporal-Unit:T44
+T9	Condition 157 167	Amenorrhea
+E9	Condition:T9 Name:T45
+T10	And 168 169	+
+E10	And:T10
+T11	Modifier 170 174	1day
+E11	Modifier:T11
+T12	Or 175 178	and
+E12	Or:T12
+T13	Eq-Comparison 179 182	2kg
+E13	Eq-Comparison:T13 Value:T47 Unit:T48
+T14	Procedure 186 198	birth weight
+E14	Procedure:T14
+T15	Encounter 204 216	Hospitalized
+E15	Encounter:T15
+T16	Observation 308 320	blood sample
+E16	Observation:T16 Name:T54
+T17	Modifier 418 426	Systemic
+E17	Modifier:T17
+T18	Condition 427 447	inflammatory disease
+E18	Condition:T18 Name:T56
+T19	Condition 453 481	Transient inflammatory state
+E19	Condition:T19 Name:T57
+T20	Drug 491 495	drug
+E20	Drug:T20
+T21	Drug 514 533	coagulation cascade
+E21	Drug:T21
+T22	Temporal-Connection 534 540	during
+E22	Temporal-Connection:T22
+A1	Temporal-Connection-Type-Value E22 during
+T23	Eq-Comparison 545 548	48h
+E23	Eq-Comparison:T23 Value:T60
+T24	Temporal-Connection 549 558	preceding
+E24	Temporal-Connection:T24
+A2	Temporal-Connection-Type-Value E24 before
+T25	Study 563 571	sampling
+E25	Study:T25
+T26	Condition 572 580	Neonates
+E26	Condition:T26
+T27	Risk 587 591	Risk
+E27	Risk:T27
+T28	Condition 595 601	anemia
+E28	Condition:T28 Name:T61
+T29	Eq-Comparison 602 609	< 7g/DL
+E29	Eq-Comparison:T29 Operator:T62 Value:T63 Unit:T64
+T30	Eq-Comparison 615 622	Current
+E30	Eq-Comparison:T30 Temporal-Period:T65
+T31	Drug 623 636	anticoagulant
+E31	Drug:T31 Name:T66
+T32	Procedure 637 646	treatment
+E32	Procedure:T32
+T33	Life-Stage-And-Gender 20 25	Adult
+A3	Life-Stage-And-Gender-Type T33 adult
+T34	Condition-Name 26 33	Healthy
+T35	Eq-Operator 49 53	Over
+A4	Eq-Operator-Value T35 GT
+T36	Eq-Value 54 56	18
+T37	Eq-Temporal-Unit 57 62	years
+A5	Eq-Temporal-Unit-Value T37 year
+T38	Condition-Name 70 78	Neonates
+T39	Eq-Operator 90 97	between
+A6	Eq-Operator-Value T39 BETWEEN
+T40	Eq-Operator 98 100	1h
+A7	Eq-Operator-Value T40 GTEQ
+T41	Eq-Value 113 115	28
+T42	Eq-Temporal-Unit 116 120	days
+A8	Eq-Temporal-Unit-Value T42 day
+T43	Eq-Value 146 148	33
+T44	Eq-Temporal-Unit 149 153	Week
+A9	Eq-Temporal-Unit-Value T44 week
+T45	Condition-Name 157 167	Amenorrhea
+T46	Observation-Name 170 174	1day
+T47	Eq-Value 179 180	2
+T48	Eq-Unit 180 182	kg
+T49	Observation-Name 186 198	birth weight
+A10	Observation-Type-Value T49 vital
+T50	Encounter-Type 204 216	Hospitalized
+A11	Encounter-Type-Value T50 inpatient
+T51	Location 232 247	surgical centre
+A12	Location-Value T51 unit
+T52	Location 269 277	hospital
+A13	Location-Value T52 hospital
+T53	Location 281 291	Strasbourg
+A14	Location-Value T53 hospital
+T54	Observation-Name 308 320	blood sample
+A15	Observation-Type-Value T54 lab
+T55	Life-Stage-And-Gender 386 391	Adult
+A16	Life-Stage-And-Gender-Type T55 adult
+T56	Condition-Name 427 447	inflammatory disease
+T57	Condition-Name 453 475	Transient inflammatory
+T58	Stability 501 509	modifies
+A17	Stability-Value T58 change
+T59	Observation-Name 514 533	coagulation cascade
+A18	Observation-Type-Value T59 lab
+T60	Eq-Value 545 548	48h
+T61	Condition-Name 595 601	anemia
+T62	Eq-Operator 602 603	<
+A19	Eq-Operator-Value T62 LT
+T63	Eq-Value 604 606	7g
+T64	Eq-Unit 607 609	DL
+T65	Eq-Temporal-Period 615 622	Current
+A20	Eq-Temporal-Period-Value T65 present
+T66	Drug-Name 623 636	anticoagulant

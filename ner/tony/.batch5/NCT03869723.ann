@@ -1,20 +1,58 @@
-T1	Procedure 69 94	mandibular reconstruction
-T2	Procedure-Name 69 94	mandibular reconstruction
-E1	Procedure:T1 Name:T2
-T3	Procedure 379 390	supervision
-T4	Procedure-Name 379 390	supervision
-E3	Procedure:T3 Name:T4
-T5	Life-Stage-And-Gender 337 342	Adult
-A1	Life-Stage-And-Gender-Type T5 adult
-T6	Eq-Operator 108 109	≥
-A2	Eq-Operator-Value T6 GTEQ
-T7	Eq-Temporal-Unit 112 117	years
-A3	Eq-Temporal-Unit-Value T7 year
-T8	Eq-Temporal-Unit 143 149	months
-A4	Eq-Temporal-Unit-Value T8 month
-T9	Age 118 121	old
-E4	Age:T9
-T10	Eq-Value 109 111	18
-T11	Eq-Value 141 142	6
-T12	Eq-Comparison 108 117	≥18 years
-E5	Eq-Comparison:T12 Operator:T6 Temporal-Unit:T7 Value:T10
+T1	Eq-Comparison 38 47	underwent
+E1	Eq-Comparison:T1 Temporal-Period:T19
+T2	Procedure 48 64	fibula free flap
+E2	Procedure:T2 Name:T20
+T3	Procedure 69 94	mandibular reconstruction
+E3	Procedure:T3 Name:T21
+T4	Eq-Comparison 108 117	≥18 years
+E4	Eq-Comparison:T4 Operator:T22 Temporal-Unit:T23
+T5	Age 118 121	old
+E5	Age:T5
+T6	Eq-Comparison 135 149	alive 6 months
+E6	Eq-Comparison:T6 Value:T24 Temporal-Unit:T25
+T7	Temporal-Connection 150 155	after
+E7	Temporal-Connection:T7
+A1	Temporal-Connection-Type-Value E7 after
+T8	Procedure 170 179	treatment
+E8	Procedure:T8
+T9	Negation 213 220	without
+E9	Negation:T9
+T10	Temporal-Connection 221 225	post
+E10	Temporal-Connection:T10
+A2	Temporal-Connection-Type-Value E10 after
+T11	Procedure 226 235	operative
+E11	Procedure:T11
+T12	Procedure 236 251	scan evaluation
+E12	Procedure:T12 Name:T26
+T13	Procedure 272 300	chirurgical contraindication
+E13	Procedure:T13
+T14	Condition 306 314	Pregnant
+E14	Condition:T14 Name:T28
+T15	Or 315 317	or
+E15	Or:T15
+T16	Condition 318 325	nursing
+E16	Condition:T16 Name:T29
+T17	Observation 343 363	requiring protection
+E17	Observation:T17
+T18	Observation 365 377	guardianship
+E18	Observation:T18 Name:T32
+T19	Eq-Temporal-Period 38 47	underwent
+A3	Eq-Temporal-Period-Value T19 past
+T20	Procedure-Name 48 64	fibula free flap
+T21	Procedure-Name 69 94	mandibular reconstruction
+T22	Eq-Operator 108 111	≥18
+A4	Eq-Operator-Value T22 GTEQ
+T23	Eq-Temporal-Unit 112 117	years
+A5	Eq-Temporal-Unit-Value T23 year
+T24	Eq-Value 141 142	6
+T25	Eq-Temporal-Unit 143 149	months
+A6	Eq-Temporal-Unit-Value T25 month
+T26	Procedure-Name 236 251	scan evaluation
+T27	Condition-Name 272 300	chirurgical contraindication
+T28	Condition-Name 306 314	Pregnant
+T29	Condition-Name 318 325	nursing
+T30	Life-Stage-And-Gender 326 331	woman
+A7	Life-Stage-And-Gender-Type T30 female
+T31	Life-Stage-And-Gender 337 342	Adult
+A8	Life-Stage-And-Gender-Type T31 adult
+T32	Observation-Name 365 377	guardianship

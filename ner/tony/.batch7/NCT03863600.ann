@@ -1,6 +1,29 @@
-T1	Condition 142 151	pregnancy
-T2	Condition-Name 142 151	pregnancy
-E1	Condition:T1 Name:T2
-T3	Condition 162 167	birth
-T4	Condition-Name 162 167	birth
-E3	Condition:T3 Name:T4
+T1	Procedure 71 85	pregnancy care
+E1	Procedure:T1
+T2	Modifier 132 141	singleton
+E2	Modifier:T2
+T3	Condition 142 151	pregnancy
+E3	Condition:T3 Name:T11
+T4	Birth 162 167	birth
+E4	Birth:T4
+T5	Eq-Comparison 172 193	last one to six month
+E5	Eq-Comparison:T5 Temporal-Period:T12 Value:T13 Operator:T14 Value:T15 Temporal-Unit:T16
+T6	Modifier 253 261	multiple
+E6	Modifier:T6
+T7	Condition 262 271	pregnancy
+E7	Condition:T7 Name:T17
+T8	Negation 277 280	Not
+E8	Negation:T8
+T9	Procedure 296 310	antenatal care
+E9	Procedure:T9
+T10	Condition-Name 71 80	pregnancy
+T11	Condition-Name 142 151	pregnancy
+T12	Eq-Temporal-Period 172 176	last
+A1	Eq-Temporal-Period-Value T12 past
+T13	Eq-Value 177 180	one
+T14	Eq-Operator 181 183	to
+A2	Eq-Operator-Value T14 BETWEEN
+T15	Eq-Value 184 187	six
+T16	Eq-Temporal-Unit 188 193	month
+A3	Eq-Temporal-Unit-Value T16 month
+T17	Condition-Name 262 271	pregnancy

@@ -1,17 +1,50 @@
-T1	Condition 417 426	syndromes
-T2	Condition-Name 417 426	syndromes
-E1	Condition:T1 Name:T2
-T3	Life-Stage-And-Gender 34 39	girls
-A1	Life-Stage-And-Gender-Type T3 boy
-T4	Life-Stage-And-Gender 25 29	Boys
-A2	Life-Stage-And-Gender-Type T4 boy
-T5	Eq-Temporal-Unit 53 58	years
-A3	Eq-Temporal-Unit-Value T5 year
-T6	Age 59 62	old
-E2	Age:T6
-T7	Eq-Operator 47 49	to
-A4	Eq-Operator-Value T7 BETWEEN
-T8	Eq-Value 45 46	7
-T9	Eq-Value 50 52	12
-T10	Eq-Comparison 45 49	7 to
-E3	Eq-Comparison:T10 Operator:T7 Value:T8
+T1	Or 30 33	and
+E1	Or:T1 
+T2	Eq-Comparison 45 58	7 to 12 years
+E2	Eq-Comparison:T2 Value:T18 Operator:T19 Value:T20 Temporal-Unit:T21
+T3	Age 59 62	old
+E3	Age:T3 
+T4	Eq-Comparison 68 76	class II
+E4	Eq-Comparison:T4 Unit:T22 Value:T23
+T5	Eq-Comparison 272 280	previous
+E5	Eq-Comparison:T5 Temporal-Period:T24
+T6	Procedure 281 301	orthopedic treatment
+E6	Procedure:T6 Name:T25
+T7	Assertion 321 326	signs
+E7	Assertion:T7 
+A1	Assertion-Type-Value E7 possible
+T8	Modifier 330 337	condyle
+E8	Modifier:T8 
+T9	Condition 338 346	injuries
+E9	Condition:T9 
+T10	Modifier 371 376	Robin
+E10	Modifier:T10 
+T11	Or 377 379	or
+E11	Or:T11 
+T12	Condition 392 397	cleft
+E12	Condition:T12 
+T13	Condition 417 426	syndromes
+E13	Condition:T13 Name:T27
+T14	Condition 442 464	craniofacial anomalies
+E14	Condition:T14 Name:T28
+T15	Or 465 468	and
+E15	Or:T15 
+T16	Condition 469 487	muscle alterations
+E16	Condition:T16 Name:T29
+T17	Life-Stage-And-Gender 34 39	girls
+A2	Life-Stage-And-Gender-Type T17 child
+T18	Eq-Value 45 46	7
+T19	Eq-Operator 47 49	to
+A3	Eq-Operator-Value T19 BETWEEN
+T20	Eq-Value 50 52	12
+T21	Eq-Temporal-Unit 53 58	years
+A4	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Unit 68 73	class
+T23	Eq-Value 74 76	II
+T24	Eq-Temporal-Period 272 280	previous
+A5	Eq-Temporal-Period-Value T24 past
+T25	Procedure-Name 281 301	orthopedic treatment
+T26	Condition-Name 330 346	condyle injuries
+T27	Condition-Name 417 426	syndromes
+T28	Condition-Name 442 464	craniofacial anomalies
+T29	Condition-Name 469 487	muscle alterations

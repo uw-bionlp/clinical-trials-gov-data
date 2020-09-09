@@ -1,30 +1,53 @@
-T1	Procedure 226 244	interscalene block
-T2	Procedure-Name 226 244	interscalene block
-E1	Procedure:T1 Name:T2
-T3	Condition 270 287	Opioid dependence
-T4	Condition-Name 270 287	Opioid dependence
-E3	Condition:T3 Name:T4
-T5	Condition 501 518	Raynaud's disease
-T6	Condition-Name 501 518	Raynaud's disease
-E5	Condition:T5 Name:T6
-T7	Condition 534 546	Vasculopathy
-T8	Condition-Name 534 546	Vasculopathy
-E7	Condition:T7 Name:T8
-T9	Procedure 484 495	nerve block
-T10	Procedure-Name 484 495	nerve block
-E9	Procedure:T9 Name:T10
-T11	Procedure 467 476	placement
-T12	Procedure-Name 467 476	placement
-E11	Procedure:T11 Name:T12
-T13	Procedure 163 171	elective
-T14	Procedure-Name 163 171	elective
-E13	Procedure:T13 Name:T14
-T15	Eq-Operator 36 48	greater than
-A1	Eq-Operator-Value T15 GT
-T16	Eq-Temporal-Unit 52 57	years
-A2	Eq-Temporal-Unit-Value T16 year
-T17	Age 61 64	age
-E14	Age:T17
+T1	Eq-Comparison 36 57	greater than 18 years
+E1	Eq-Comparison:T1 Operator:T17 Value:T18 Temporal-Unit:T19
+T2	Age 61 64	age
+E2	Age:T2 
+T3	Eq-Comparison 142 151	scheduled
+E3	Eq-Comparison:T3 Temporal-Period:T20
+T4	Eq-Comparison 155 162	undergo
+E4	Eq-Comparison:T4 
+T5	Modifier 163 171	elective
+E5	Modifier:T5 
+T6	Procedure 172 192	rotator cuff surgery
+E6	Procedure:T6 Name:T22
+T7	Condition 270 287	Opioid dependence
+E7	Condition:T7 Name:T23
+T8	Modifier 322 329	chronic
+E8	Modifier:T8 
+T9	Condition 330 344	pain condition
+E9	Condition:T9 Name:T24
+T10	Eq-Comparison 351 356	daily
+E10	Eq-Comparison:T10 Temporal-Unit:T25
+T11	Drug 357 363	opioid
+E11	Drug:T11 Name:T26
+T12	Condition 383 406	Anatomical malformation
+E12	Condition:T12 Name:T27
+T13	Assertion 444 447	may
+E13	Assertion:T13 
+A1	Assertion-Type-Value E13 hypothetical
+T14	Modifier 484 495	nerve block
+E14	Modifier:T14 
+T15	Condition 501 518	Raynaud's disease
+E15	Condition:T15 Name:T29
+T16	Procedure 534 546	Vasculopathy
+E16	Procedure:T16 
+T17	Eq-Operator 36 48	greater than
+A2	Eq-Operator-Value T17 GT
 T18	Eq-Value 49 51	18
-T19	Eq-Comparison 36 57	greater than 18 years
-E15	Eq-Comparison:T19 Operator:T15 Temporal-Unit:T16 Value:T18
+T19	Eq-Temporal-Unit 52 57	years
+A3	Eq-Temporal-Unit-Value T19 year
+T20	Eq-Temporal-Period 142 151	scheduled
+A4	Eq-Temporal-Period-Value T20 future
+T21	Eq-Temporal-Period 152 162	to undergo
+A5	Eq-Temporal-Period-Value T21 future
+T22	Procedure-Name 172 192	rotator cuff surgery
+T23	Condition-Name 270 287	Opioid dependence
+T24	Condition-Name 330 334	pain
+T25	Eq-Temporal-Unit 351 356	daily
+A6	Eq-Temporal-Unit-Value T25 day
+T26	Drug-Name 357 363	opioid
+T27	Condition-Name 383 406	Anatomical malformation
+T28	Stability 448 457	interfere
+A7	Stability-Value T28 change
+T29	Condition-Name 501 518	Raynaud's disease
+T30	Condition-Name 534 546	Vasculopathy

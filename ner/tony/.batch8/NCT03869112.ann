@@ -1,38 +1,92 @@
-T1	Life-Stage-And-Gender 126 132	Female
-A1	Life-Stage-And-Gender-Type T1 male
-T2	Life-Stage-And-Gender 118 122	Male
-A2	Life-Stage-And-Gender-Type T2 male
-T3	Condition 181 185	COPD
-T4	Condition-Name 181 185	COPD
-E3	Condition:T3 Name:T4
-T5	Procedure 473 497	pulmonary rehabilitation
-T6	Procedure-Name 473 497	pulmonary rehabilitation
-E5	Procedure:T5 Name:T6
-T7	Language 416 423	English
-T8	Procedure 705 729	pulmonary rehabilitation
-T9	Procedure-Name 705 729	pulmonary rehabilitation
-E8	Procedure:T8 Name:T9
-T10	Eq-Operator 453 454	<
-A3	Eq-Operator-Value T10 LT
-T11	Eq-Temporal-Unit 142 147	years
-A4	Eq-Temporal-Unit-Value T11 year
-T12	Eq-Temporal-Unit 154 159	years
-A5	Eq-Temporal-Unit-Value T12 year
-T13	Eq-Temporal-Unit 341 346	weeks
-A6	Eq-Temporal-Unit-Value T13 week
-T14	Eq-Temporal-Unit 376 381	weeks
-A7	Eq-Temporal-Unit-Value T14 week
-T15	Eq-Temporal-Unit 600 606	months
-A8	Eq-Temporal-Unit-Value T15 month
-T16	Age 134 138	aged
-E9	Age:T16
-T17	Age 449 452	Age
-E10	Age:T17
-T18	Eq-Value 139 141	40
-T19	Eq-Value 151 153	85
-T20	Eq-Value 339 340	8
-T21	Eq-Value 374 375	8
-T22	Eq-Value 454 456	40
-T23	Eq-Value 598 599	6
-T24	Eq-Comparison 453 456	<40
-E11	Eq-Comparison:T24 Operator:T10 Value:T22
+T1	Study 107 112	study
+E1	Study:T1
+T2	Or 123 125	or
+E2	Or:T2
+T3	Age 134 138	aged
+E3	Age:T3
+T4	Eq-Comparison 139 159	40 years to 85 years
+E4	Eq-Comparison:T4 Value:T30 Temporal-Unit:T31 Operator:T32 Value:T33 Temporal-Unit:T34
+T5	Condition 181 185	COPD
+E5	Condition:T5 Name:T35
+T6	Assertion 298 308	willing to
+E6	Assertion:T6
+A1	Assertion-Type-Value E6 hypothetical
+T7	Encounter 316 322	visits
+E7	Encounter:T7
+T8	Study 326 334	baseline
+E8	Study:T8
+T9	Eq-Comparison 335 346	and 8 weeks
+E9	Eq-Comparison:T9 Value:T36 Temporal-Unit:T37
+T10	Modifier 348 357	sub-group
+E10	Modifier:T10
+T11	Study 359 367	baseline
+E11	Study:T11
+T12	Eq-Comparison 374 381	8 weeks
+E12	Eq-Comparison:T12 Value:T38 Temporal-Unit:T39
+T13	Age 449 452	Age
+E13	Age:T13
+T14	Eq-Comparison 453 456	<40
+E14	Eq-Comparison:T14 Operator:T41 Value:T42
+T15	Procedure 473 497	pulmonary rehabilitation
+E15	Procedure:T15 Name:T43
+T16	Or 508 510	or
+E16	Or:T16
+T17	Procedure 530 560	physical activity intervention
+E17	Procedure:T17 Name:T44
+T18	Study 561 566	study
+E18	Study:T18
+T19	Eq-Comparison 570 582	current time
+E19	Eq-Comparison:T19 Temporal-Period:T45
+T20	Or 583 585	or
+E20	Or:T20
+T21	Eq-Comparison 593 606	last 6 months
+E21	Eq-Comparison:T21 Temporal-Period:T46 Value:T47 Temporal-Unit:T48
+T22	Other 617 622	other
+E22	Other:T22
+T23	Condition 635 643	diseases
+E23	Condition:T23 Name:T50
+T24	Or 644 646	or
+E24	Or:T24
+T25	Condition 647 656	disorders
+E25	Condition:T25 Name:T51
+T26	Contraindication 668 684	contraindication
+E26	Contraindication:T26
+T27	Procedure 705 729	pulmonary rehabilitation
+E27	Procedure:T27 Name:T52
+T28	Life-Stage-And-Gender 118 122	Male
+A2	Life-Stage-And-Gender-Type T28 male
+T29	Life-Stage-And-Gender 126 132	Female
+A3	Life-Stage-And-Gender-Type T29 female
+T30	Eq-Value 139 141	40
+T31	Eq-Temporal-Unit 142 147	years
+A4	Eq-Temporal-Unit-Value T31 year
+T32	Eq-Operator 148 150	to
+A5	Eq-Operator-Value T32 BETWEEN
+T33	Eq-Value 151 153	85
+T34	Eq-Temporal-Unit 154 159	years
+A6	Eq-Temporal-Unit-Value T34 year
+T35	Condition-Name 181 185	COPD
+T36	Eq-Value 339 340	8
+T37	Eq-Temporal-Unit 341 346	weeks
+A7	Eq-Temporal-Unit-Value T37 week
+T38	Eq-Value 374 375	8
+T39	Eq-Temporal-Unit 376 381	weeks
+A8	Eq-Temporal-Unit-Value T39 week
+T40	Language 416 423	English
+T41	Eq-Operator 453 454	<
+A9	Eq-Operator-Value T41 LT
+T42	Eq-Value 454 456	40
+T43	Procedure-Name 473 497	pulmonary rehabilitation
+T44	Procedure-Name 530 560	physical activity intervention
+T45	Eq-Temporal-Period 570 577	current
+A10	Eq-Temporal-Period-Value T45 present
+T46	Eq-Temporal-Period 593 597	last
+A11	Eq-Temporal-Period-Value T46 past
+T47	Eq-Value 598 599	6
+T48	Eq-Temporal-Unit 600 606	months
+A12	Eq-Temporal-Unit-Value T48 month
+T49	Severity 623 634	significant
+A13	Severity-Value T49 severe
+T50	Condition-Name 635 643	diseases
+T51	Condition-Name 647 656	disorders
+T52	Procedure-Name 705 729	pulmonary rehabilitation

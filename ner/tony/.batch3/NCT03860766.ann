@@ -1,7 +1,80 @@
-T1	Condition 270 293	cardiovascular diseases
-T2	Condition-Name 270 293	cardiovascular diseases
-E1	Condition:T1 Name:T2
-T3	Eq-Temporal-Unit 257 263	months
-A1	Eq-Temporal-Unit-Value T3 month
-T4	Eq-Value 135 137	70
-T5	Eq-Value 355 357	72
+T1	Condition 48 55	Healthy
+E1	Condition:T1 Name:T24
+T2	Eq-Comparison 79 91	at least one
+E2	Eq-Comparison:T2 Operator:T25 Value:T26
+T3	Eq-Comparison 114 123	last year
+E3	Eq-Comparison:T3 Temporal-Period:T27 Temporal-Unit:T28
+T4	And 124 127	and
+E4	And:T4 
+T5	Eq-Comparison 135 138	70%
+E5	Eq-Comparison:T5 Value:T29 Unit:T30
+T6	Temporal-Connection 164 170	during
+E6	Temporal-Connection:T6 
+A1	Temporal-Connection-Type-Value E6 during
+T7	Eq-Comparison 175 189	current season
+E7	Eq-Comparison:T7 Temporal-Period:T31
+T8	Modifier 216 231	musculoskeletal
+E8	Modifier:T8 
+T9	Condition 232 238	injury
+E9	Condition:T9 Name:T32
+T10	Eq-Comparison 246 263	last three months
+E10	Eq-Comparison:T10 Temporal-Period:T33 Value:T34 Temporal-Unit:T35
+T11	Condition 270 293	cardiovascular diseases
+E11	Condition:T11 Name:T36
+T12	Eq-Comparison 300 303	use
+E12	Eq-Comparison:T12 Temporal-Period:T37
+T13	Drug 307 315	anabolic
+E13	Drug:T13 Name:T38
+T14	Drug 317 334	anti-inflammatory
+E14	Drug:T14 Name:T39
+T15	Or 335 338	and
+E15	Or:T15 
+T16	Drug 339 354	analgesic drugs
+E16	Drug:T16 Name:T40
+T17	Eq-Comparison 355 363	72 hours
+E17	Eq-Comparison:T17 Value:T41 Temporal-Unit:T42
+T18	Temporal-Connection 364 370	before
+E18	Temporal-Connection:T18 
+A2	Temporal-Connection-Type-Value E18 before
+T19	Study 375 386	evaluations
+E19	Study:T19 
+T20	Drug 400 407	alcohol
+E20	Drug:T20 Name:T44
+T21	Or 408 411	and
+E21	Or:T21 
+T22	Drug 412 425	illicit drugs
+E22	Drug:T22 Name:T45
+T23	Temporal-Connection 426 432	during
+E23	Temporal-Connection:T23 
+A3	Temporal-Connection-Type-Value E23 during
+T24	Condition-Name 48 55	Healthy
+T25	Eq-Operator 79 87	at least
+A4	Eq-Operator-Value T25 GTEQ
+T26	Eq-Value 88 91	one
+T27	Eq-Temporal-Period 114 118	last
+A5	Eq-Temporal-Period-Value T27 past
+T28	Eq-Temporal-Unit 119 123	year
+A6	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Value 135 137	70
+T30	Eq-Unit 137 138	%
+T31	Eq-Temporal-Period 175 182	current
+A7	Eq-Temporal-Period-Value T31 present
+T32	Condition-Name 232 238	injury
+T33	Eq-Temporal-Period 246 250	last
+A8	Eq-Temporal-Period-Value T33 past
+T34	Eq-Value 251 256	three
+T35	Eq-Temporal-Unit 257 263	months
+A9	Eq-Temporal-Unit-Value T35 month
+T36	Condition-Name 270 293	cardiovascular diseases
+T37	Eq-Temporal-Period 300 303	use
+A10	Eq-Temporal-Period-Value T37 present
+T38	Drug-Name 307 315	anabolic
+T39	Drug-Name 317 334	anti-inflammatory
+T40	Drug-Name 339 354	analgesic drugs
+T41	Eq-Value 355 357	72
+T42	Eq-Temporal-Unit 358 363	hours
+A11	Eq-Temporal-Unit-Value T42 hour
+T43	Eq-Temporal-Period 393 396	use
+A12	Eq-Temporal-Period-Value T43 present
+T44	Drug-Name 400 407	alcohol
+T45	Drug-Name 412 425	illicit drugs

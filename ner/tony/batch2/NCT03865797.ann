@@ -1,16 +1,37 @@
-T1	Procedure 225 237	intervention
-T2	Procedure-Name 225 237	intervention
-E1	Procedure:T1 Name:T2
-T3	Eq-Temporal-Unit 75 80	years
-A1	Eq-Temporal-Unit-Value T3 year
-T4	Eq-Temporal-Unit 344 350	months
-A2	Eq-Temporal-Unit-Value T4 month
-T5	Age 81 84	old
-E2	Age:T5
-T6	Eq-Operator 69 71	to
-A3	Eq-Operator-Value T6 BETWEEN
-T7	Eq-Value 66 68	18
-T8	Eq-Value 72 74	40
-T9	Eq-Value 342 343	3
-T10	Eq-Comparison 66 71	18 to
-E3	Eq-Comparison:T10 Operator:T6 Value:T7
+T1	Eq-Comparison 61 80	From 18 to 40 years
+E1	Eq-Comparison:T1 Value:T12 Operator:T13 Value:T14 Temporal-Unit:T15
+T2	Temporal-Connection 126 137	At the time
+E2	Temporal-Connection:T2 
+A1	Temporal-Connection-Type-Value E2 during
+T3	Study 145 150	study
+E3	Study:T3 
+T4	Condition 168 174	injury
+E4	Condition:T4 Name:T16
+T5	Negation 180 188	prevents
+E5	Negation:T5 
+T6	Procedure 225 237	intervention
+E6	Procedure:T6 Name:T17
+T7	Modifier 292 307	musculoskeletal
+E7	Modifier:T7 
+T8	Condition 308 316	injuries
+E8	Condition:T8 Name:T18
+T9	Modifier 324 329	ankle
+E9	Modifier:T9 
+T10	Eq-Comparison 337 350	last 3 months
+E10	Eq-Comparison:T10 Temporal-Period:T19 Value:T20 Temporal-Unit:T21
+T11	Life-Stage-And-Gender 25 30	Rugby
+A2	Life-Stage-And-Gender-Type T11 male
+T12	Eq-Value 66 68	18
+T13	Eq-Operator 69 71	to
+A3	Eq-Operator-Value T13 BETWEEN
+T14	Eq-Value 72 74	40
+T15	Eq-Temporal-Unit 75 80	years
+A4	Eq-Temporal-Unit-Value T15 year
+T16	Condition-Name 168 174	injury
+T17	Procedure-Name 225 237	intervention
+T18	Condition-Name 308 316	injuries
+T19	Eq-Temporal-Period 337 341	last
+A5	Eq-Temporal-Period-Value T19 past
+T20	Eq-Value 342 343	3
+T21	Eq-Temporal-Unit 344 350	months
+A6	Eq-Temporal-Unit-Value T21 month

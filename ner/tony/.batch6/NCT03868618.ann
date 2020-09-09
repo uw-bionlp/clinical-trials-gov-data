@@ -1,19 +1,59 @@
-T1	Procedure 427 445	general anesthesia
-T2	Procedure-Name 427 445	general anesthesia
-E1	Procedure:T1 Name:T2
-T3	Observation 25 40	Body mass index
-T4	Observation-Name 25 40	Body mass index
-E3	Observation:T3 Name:T4
-A1	Observation-Type-Value T4 vital
-T5	Condition 332 347	sleep disorders
-T6	Condition-Name 332 347	sleep disorders
-E5	Condition:T5 Name:T6
-T7	Observation 42 45	BMI
-T8	Observation-Name 42 45	BMI
-E7	Observation:T7 Name:T8
-A2	Observation-Type-Value T8 vital
-T9	Condition 102 105	OSA
-T10	Condition-Name 102 105	OSA
-E9	Condition:T9 Name:T10
-T11	Language 215 218	PAP
-T12	Language 359 362	OSA
+T1	Observation 25 40	Body mass index
+E1	Observation:T1 Name:T19
+T2	Observation 42 45	BMI
+E2	Observation:T2 Name:T20
+T3	Eq-Comparison 83 101	moderate to severe
+E3	Eq-Comparison:T3 Operator:T22
+T4	Condition 102 105	OSA
+E4	Condition:T4 Name:T24
+T5	Eq-Comparison 115 122	history
+E5	Eq-Comparison:T5 Temporal-Period:T25
+T6	Or 123 126	and
+E6	Or:T6
+T7	Modifier 127 135	physical
+E7	Modifier:T7
+T8	Negation 152 155	not
+E8	Negation:T8
+T9	Condition 198 213	airway pressure
+E9	Condition:T9 Name:T27
+T10	Procedure 215 218	PAP
+E10	Procedure:T10
+T11	Procedure 220 230	treatments
+E11	Procedure:T11
+T12	Condition 332 347	sleep disorders
+E12	Condition:T12 Name:T28
+T13	Exception 348 358	other than
+E13	Exception:T13
+T14	Condition 359 362	OSA
+E14	Condition:T14 Name:T29
+T15	Condition 380 394	co-morbidities
+E15	Condition:T15 Name:T31
+T16	Procedure 400 423	contraindicates surgery
+E16	Procedure:T16 Name:T32
+T17	Or 424 426	or
+E17	Or:T17
+T18	Procedure 427 445	general anesthesia
+E18	Procedure:T18 Name:T33
+T19	Observation-Name 25 40	Body mass index
+A1	Observation-Type-Value T19 vital
+T20	Observation-Name 42 45	BMI
+A2	Observation-Type-Value T20 vital
+T21	Severity 83 91	moderate
+A3	Severity-Value T21 moderate
+T22	Eq-Operator 92 94	to
+A4	Eq-Operator-Value T22 BETWEEN
+T23	Severity 95 101	severe
+A5	Severity-Value T23 severe
+T24	Condition-Name 102 105	OSA
+T25	Eq-Temporal-Period 115 122	history
+A6	Eq-Temporal-Period-Value T25 past
+T26	Polarity 189 197	positive
+A7	Polarity-Value T26 positive
+T27	Condition-Name 198 213	airway pressure
+T28	Condition-Name 332 347	sleep disorders
+T29	Condition-Name 359 362	OSA
+T30	Severity 368 379	Significant
+A8	Severity-Value T30 severe
+T31	Condition-Name 383 394	morbidities
+T32	Procedure-Name 400 423	contraindicates surgery
+T33	Procedure-Name 427 445	general anesthesia

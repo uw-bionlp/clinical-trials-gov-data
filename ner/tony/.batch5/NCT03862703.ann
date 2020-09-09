@@ -1,40 +1,92 @@
-T1	Condition 78 82	PTSD
-T2	Condition-Name 78 82	PTSD
-E1	Condition:T1 Name:T2
-T3	Condition 123 127	PTSD
-T4	Condition-Name 123 127	PTSD
-E3	Condition:T3 Name:T4
-T5	Condition 185 189	PTSD
-T6	Condition-Name 185 189	PTSD
-E5	Condition:T5 Name:T6
-T7	Condition 481 504	inability to understand
-T8	Condition-Name 481 504	inability to understand
-E7	Condition:T7 Name:T8
-T9	Condition 418 436	psychotic disorder
-T10	Condition-Name 418 436	psychotic disorder
-E9	Condition:T9 Name:T10
-T11	Condition 555 568	psychological
-T12	Condition-Name 555 568	psychological
-E11	Condition:T11 Name:T12
-T13	Condition 361 369	suicidal
-T14	Condition-Name 361 369	suicidal
-E13	Condition:T13 Name:T14
-T15	Language 517 523	Danish
-T16	Condition 450 455	abuse
-T17	Condition-Name 450 455	abuse
-E16	Condition:T16 Name:T17
-T18	Condition 582 586	PTSD
-T19	Condition-Name 582 586	PTSD
-E18	Condition:T18 Name:T19
-T20	Condition 602 605	CRD
-T21	Condition-Name 602 605	CRD
-E20	Condition:T20 Name:T21
-T22	Eq-Temporal-Unit 45 50	years
-A1	Eq-Temporal-Unit-Value T22 year
-T23	Age 51 54	old
-E21	Age:T23
-T24	Eq-Value 42 44	18
-T25	Eq-Value 76 77	5
-T26	Eq-Value 196 200	2017
-T27	Eq-Value 253 255	10
-T28	Eq-Value 287 288	5
+T1	Eq-Comparison 33 50	at least 18 years
+E1	Eq-Comparison:T1 Operator:T35 Value:T36 Temporal-Unit:T37
+T2	Age 51 54	old
+E2	Age:T2
+T3	Condition 78 82	PTSD
+E3	Condition:T3 Name:T38
+T4	Procedure 123 150	PTSD care package treatment
+E4	Procedure:T4
+T5	Drug 152 167	Danske regioner
+E5	Drug:T5
+T6	Drug 169 180	pakkeforløb
+E6	Drug:T6
+T7	Condition 185 189	PTSD
+E7	Condition:T7 Name:T39
+T8	Eq-Comparison 196 200	2017
+E8	Eq-Comparison:T8 Value:T40
+T9	Eq-Comparison 253 265	10 or higher
+E9	Eq-Comparison:T9
+T10	Or 267 269	or
+E10	Or:T10
+T11	Modifier 270 277	Android
+E11	Modifier:T11
+T12	Or 294 296	or
+E12	Or:T12
+T13	Eq-Comparison 297 303	higher
+E13	Eq-Comparison:T13
+T14	Condition 361 369	suicidal
+E14	Condition:T14 Name:T42
+T15	Risk 370 374	risk
+E15	Risk:T15
+T16	Eq-Comparison 380 387	ongoing
+E16	Eq-Comparison:T16 Temporal-Period:T43
+T17	Condition 399 414	bipolar disease
+E17	Condition:T17 Name:T44
+T18	Or 415 417	or
+E18	Or:T18
+T19	Condition 418 436	psychotic disorder
+E19	Condition:T19 Name:T45
+T20	Eq-Comparison 442 449	current
+E20	Eq-Comparison:T20 Temporal-Period:T46
+T21	Condition 450 455	abuse
+E21	Condition:T21
+T22	Modifier 459 466	alcohol
+E22	Modifier:T22
+T23	Or 467 469	or
+E23	Or:T23
+T24	Drug 470 475	drugs
+E24	Drug:T24
+T25	Condition 481 504	inability to understand
+E25	Condition:T25
+T26	Or 505 511	and/or
+E26	Or:T26
+T27	Modifier 540 551	psychiatric
+E27	Modifier:T27
+T28	Or 552 554	or
+E28	Or:T28
+T29	Modifier 555 568	psychological
+E29	Modifier:T29
+T30	Procedure 569 578	treatment
+E30	Procedure:T30
+T31	Condition 582 586	PTSD
+E31	Condition:T31 Name:T50
+T32	Other 587 594	outside
+E32	Other:T32
+T33	Condition 598 601	MHS
+E33	Condition:T33 Name:T51
+T34	Condition 602 605	CRD
+E34	Condition:T34 Name:T52
+T35	Eq-Operator 33 41	at least
+A1	Eq-Operator-Value T35 GTEQ
+T36	Eq-Value 42 44	18
+T37	Eq-Temporal-Unit 45 50	years
+A2	Eq-Temporal-Unit-Value T37 year
+T38	Condition-Name 78 82	PTSD
+T39	Condition-Name 185 189	PTSD
+T40	Eq-Value 196 200	2017
+T41	Eq-Operator 294 303	or higher
+A3	Eq-Operator-Value T41 GTEQ
+T42	Condition-Name 361 369	suicidal
+T43	Eq-Temporal-Period 380 387	ongoing
+A4	Eq-Temporal-Period-Value T43 present
+T44	Condition-Name 399 414	bipolar disease
+T45	Condition-Name 418 436	psychotic disorder
+T46	Eq-Temporal-Period 442 449	current
+A5	Eq-Temporal-Period-Value T46 present
+T47	Drug-Name 459 466	alcohol
+T48	Language 517 523	Danish
+T49	Eq-Temporal-Period 529 539	concurrent
+A6	Eq-Temporal-Period-Value T49 present
+T50	Condition-Name 582 586	PTSD
+T51	Condition-Name 598 601	MHS
+T52	Condition-Name 602 605	CRD

@@ -1,11 +1,64 @@
-T1	Life-Stage-And-Gender 414 419	child
-A1	Life-Stage-And-Gender-Type T1 child
-T2	Eq-Operator 169 178	less than
-A2	Eq-Operator-Value T2 LT
-T3	Eq-Temporal-Unit 182 186	days
-A3	Eq-Temporal-Unit-Value T3 day
-T4	Age 187 190	old
-E1	Age:T4
-T5	Eq-Value 179 181	28
-T6	Eq-Comparison 169 186	less than 28 days
-E2	Eq-Comparison:T6 Operator:T2 Temporal-Unit:T3 Value:T5
+T1	Eq-Comparison 40 49	currently
+E1	Eq-Comparison:T1 Temporal-Period:T22
+T2	Procedure 56 63	treated
+E2	Procedure:T2
+T3	Or 100 102	or
+E3	Or:T3
+T4	Encounter 103 109	Kamuzu
+E4	Encounter:T4
+T5	Eq-Comparison 169 186	less than 28 days
+E5	Eq-Comparison:T5 Operator:T26 Value:T27 Temporal-Unit:T28
+T6	Age 187 190	old
+E6	Age:T6
+T7	Modifier 192 199	neonate
+E7	Modifier:T7
+T8	Risk 238 242	risk
+E8	Risk:T8
+T9	Condition 247 255	jaundice
+E9	Condition:T9 Name:T29
+T10	Or 256 258	or
+E10	Or:T10
+T11	Eq-Comparison 274 284	undergoing
+E11	Eq-Comparison:T11 Temporal-Period:T30
+T12	Modifier 285 295	blue light
+E12	Modifier:T12
+T13	Procedure 296 308	phototherapy
+E13	Procedure:T13
+T14	Procedure 313 322	treatment
+E14	Procedure:T14
+T15	Condition 326 334	jaundice
+E15	Condition:T15 Name:T32
+T16	Family-Member 355 361	parent
+E16	Family-Member:T16
+A1	Family-Member-Type E16 parent
+T17	Family-Member 414 419	child
+E17	Family-Member:T17
+A2	Family-Member-Type E17 parent
+T18	Negation 552 558	unable
+E18	Negation:T18
+T19	Condition 572 582	blood draw
+E19	Condition:T19 Name:T33
+T20	Or 582 583	/
+E20	Or:T20
+T21	Modifier 583 593	heel stick
+E21	Modifier:T21
+T22	Eq-Temporal-Period 40 49	currently
+A3	Eq-Temporal-Period-Value T22 present
+T23	Location 67 99	Queen Elizabeth Central Hospital
+A4	Location-Value T23 hospital
+T24	Location 103 126	Kamuzu Central Hospital
+A5	Location-Value T24 hospital
+T25	Location 134 147	neonatal ward
+A6	Location-Value T25 unit
+T26	Eq-Operator 169 178	less than
+A7	Eq-Operator-Value T26 LT
+T27	Eq-Value 179 181	28
+T28	Eq-Temporal-Unit 182 186	days
+A8	Eq-Temporal-Unit-Value T28 day
+T29	Condition-Name 247 255	jaundice
+T30	Eq-Temporal-Period 274 284	undergoing
+A9	Eq-Temporal-Period-Value T30 present
+T31	Procedure-Name 290 308	light phototherapy
+T32	Condition-Name 326 334	jaundice
+T33	Condition-Name 572 582	blood draw
+T34	Condition-Name 583 593	heel stick

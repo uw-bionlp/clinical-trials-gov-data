@@ -1,7 +1,19 @@
 T1	Condition 34 42	dementia
-T2	Condition-Name 34 42	dementia
-E1	Condition:T1 Name:T2
-T3	Condition 172 180	dementia
-T4	Condition-Name 172 180	dementia
-E3	Condition:T3 Name:T4
-T5	Eq-Value 90 92	23
+E1	Condition:T1 Name:T7
+T2	Eq-Comparison 56 61	prior
+E2	Eq-Comparison:T2 Temporal-Period:T8
+T3	Or 72 78	and/or
+E3	Or:T3 
+T4	Eq-Comparison 90 100	23 or less
+E4	Eq-Comparison:T4 Value:T9 Operator:T10
+T5	Negation 157 159	No
+E5	Negation:T5 
+T6	Condition 172 180	dementia
+E6	Condition:T6 Name:T11
+T7	Condition-Name 34 42	dementia
+T8	Eq-Temporal-Period 56 61	prior
+A1	Eq-Temporal-Period-Value T8 past
+T9	Eq-Value 90 92	23
+T10	Eq-Operator 93 100	or less
+A2	Eq-Operator-Value T10 GTEQ
+T11	Condition-Name 172 180	dementia

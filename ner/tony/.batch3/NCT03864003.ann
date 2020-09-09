@@ -1,5 +1,26 @@
-T1	Condition 25 47	Bilateral hearing loss
-T2	Condition-Name 25 47	Bilateral hearing loss
-E1	Condition:T1 Name:T2
-T3	Eq-Operator 48 54	within
-A1	Eq-Operator-Value T3 LTEQ
+T1	Modifier 25 34	Bilateral
+E1	Modifier:T1
+T2	Condition 35 47	hearing loss
+E2	Condition:T2 Name:T11
+T3	Eq-Comparison 48 66	within the fitting
+E3	Eq-Comparison:T3
+T4	Study 76 81	study
+E4	Study:T4
+T5	Condition 82 94	hearing aids
+E5	Condition:T5 Name:T12
+T6	Negation 130 141	unqualified
+E6	Negation:T6
+T7	Condition 153 165	hearing aids
+E7	Condition:T7 Name:T13
+T8	Eq-Comparison 171 178	Current
+E8	Eq-Comparison:T8 Temporal-Period:T14
+T9	Condition 179 186	hearing
+E9	Condition:T9
+T10	Condition 201 221	Cognitively impaired
+E10	Condition:T10 Name:T15
+T11	Condition-Name 35 47	hearing loss
+T12	Condition-Name 82 94	hearing aids
+T13	Condition-Name 153 165	hearing aids
+T14	Eq-Temporal-Period 171 178	Current
+A1	Eq-Temporal-Period-Value T14 present
+T15	Condition-Name 201 221	Cognitively impaired

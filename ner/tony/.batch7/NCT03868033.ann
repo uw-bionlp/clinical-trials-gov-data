@@ -1,38 +1,83 @@
-T1	Language 51 54	Men
-T2	Procedure 262 289	hormone replacement therapy
-T3	Procedure-Name 262 289	hormone replacement therapy
-E2	Procedure:T2 Name:T3
-T4	Condition 401 427	allergy to Zoledronic acid
-T5	Condition-Name 401 427	allergy to Zoledronic acid
-E4	Condition:T4 Name:T5
-T6	Condition 154 176	secondary osteoporosis
-T7	Condition-Name 154 176	secondary osteoporosis
-E6	Condition:T6 Name:T7
-T8	Procedure 241 256	steroid therapy
-T9	Procedure-Name 241 256	steroid therapy
-E8	Procedure:T8 Name:T9
-T10	Condition 430 443	hypocalcaemia
-T11	Condition-Name 430 443	hypocalcaemia
-E10	Condition:T10 Name:T11
-T12	Condition 192 204	bone disease
-T13	Condition-Name 192 204	bone disease
-E12	Condition:T12 Name:T13
-T14	Eq-Operator 55 56	>
-A1	Eq-Operator-Value T14 GT
-T15	Eq-Operator 99 100	≥
-A2	Eq-Operator-Value T15 GTEQ
-T16	Eq-Operator 387 388	<
-A3	Eq-Operator-Value T16 LT
-T17	Eq-Temporal-Unit 103 108	years
-A4	Eq-Temporal-Unit-Value T17 year
-T18	Eq-Value 56 58	50
-T19	Eq-Value 101 102	2
-T20	Eq-Value 389 391	35
-T21	Eq-Value 399 400	7
-T22	Eq-Value 444 445	9
-T23	Eq-Comparison 55 58	>50
-E13	Eq-Comparison:T23 Operator:T14 Value:T18
-T24	Eq-Comparison 99 108	≥ 2 years
-E14	Eq-Comparison:T24 Operator:T15 Temporal-Unit:T17 Value:T19
-T25	Eq-Comparison 387 391	< 35
-E15	Eq-Comparison:T25 Operator:T16 Value:T20
+T1	Condition 25 39	Postmenopausal
+E1	Condition:T1 Name:T24
+T2	Eq-Comparison 55 63	>50-year
+E2	Eq-Comparison:T2 Operator:T27 Temporal-Unit:T28
+T3	Eq-Comparison 73 78	After
+E3	Eq-Comparison:T3
+T4	Drug 79 88	Denosumab
+E4	Drug:T4 Name:T29
+T5	Procedure 89 98	treatment
+E5	Procedure:T5
+T6	Eq-Comparison 99 108	≥ 2 years
+E6	Eq-Comparison:T6 Operator:T30 Value:T31 Temporal-Unit:T32
+T7	Condition 116 128	osteoporosis
+E7	Condition:T7
+T8	Condition 164 176	osteoporosis
+E8	Condition:T8 Name:T33
+T9	Condition 182 204	metabolic bone disease
+E9	Condition:T9 Name:T34
+T10	Condition 210 216	cancer
+E10	Condition:T10 Name:T35
+T11	Eq-Comparison 217 224	history
+E11	Eq-Comparison:T11 Temporal-Period:T36
+T12	Eq-Comparison 230 240	continuous
+E12	Eq-Comparison:T12 Temporal-Period:T37
+T13	Procedure 241 256	steroid therapy
+E13	Procedure:T13 Name:T38
+T14	Procedure 262 289	hormone replacement therapy
+E14	Procedure:T14 Name:T39
+T15	Eq-Comparison 295 299	ever
+E15	Eq-Comparison:T15
+T16	Other 309 314	other
+E16	Other:T16
+T17	Procedure 323 348	anti-resorptive treatment
+E17	Procedure:T17
+T18	Observation 349 387	6.estimated Glomerular filtration rate
+E18	Observation:T18 Name:T41
+T19	Eq-Comparison 387 398	< 35 mL/min
+E19	Eq-Comparison:T19 Operator:T42 Value:T43 Unit:T44 Temporal-Unit:T45
+T20	Drug 412 427	Zoledronic acid
+E20	Drug:T20 Name:T47
+T21	Drug 428 443	8.hypocalcaemia
+E21	Drug:T21 Name:T48
+T22	Contraindication 450 467	contraindications
+E22	Contraindication:T22
+T23	Drug 475 490	Zoledronic acid
+E23	Drug:T23 Name:T49
+T24	Condition-Name 25 39	Postmenopausal
+T25	Life-Stage-And-Gender 40 45	women
+A1	Life-Stage-And-Gender-Type T25 female
+T26	Life-Stage-And-Gender 51 54	Men
+A2	Life-Stage-And-Gender-Type T26 male
+T27	Eq-Operator 55 56	>
+A3	Eq-Operator-Value T27 GT
+T28	Eq-Temporal-Unit 56 63	50-year
+A4	Eq-Temporal-Unit-Value T28 year
+T29	Drug-Name 79 88	Denosumab
+T30	Eq-Operator 99 100	≥
+A5	Eq-Operator-Value T30 GTEQ
+T31	Eq-Value 101 102	2
+T32	Eq-Temporal-Unit 103 108	years
+A6	Eq-Temporal-Unit-Value T32 year
+T33	Condition-Name 164 176	osteoporosis
+T34	Condition-Name 182 204	metabolic bone disease
+T35	Condition-Name 210 216	cancer
+T36	Eq-Temporal-Period 217 224	history
+A7	Eq-Temporal-Period-Value T36 past
+T37	Eq-Temporal-Period 230 240	continuous
+A8	Eq-Temporal-Period-Value T37 present
+T38	Procedure-Name 241 256	steroid therapy
+T39	Procedure-Name 262 289	hormone replacement therapy
+T40	Drug-Name 323 338	anti-resorptive
+T41	Observation-Name 349 387	6.estimated Glomerular filtration rate
+A9	Observation-Type-Value T41 lab
+T42	Eq-Operator 387 388	<
+A10	Eq-Operator-Value T42 LT
+T43	Eq-Value 389 391	35
+T44	Eq-Unit 392 394	mL
+T45	Eq-Temporal-Unit 395 398	min
+A11	Eq-Temporal-Unit-Value T45 minute
+T46	Eq-Unit 399 408	7.allergy
+T47	Drug-Name 412 427	Zoledronic acid
+T48	Drug-Name 428 443	8.hypocalcaemia
+T49	Drug-Name 475 490	Zoledronic acid

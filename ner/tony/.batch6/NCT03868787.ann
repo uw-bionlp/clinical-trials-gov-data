@@ -1,30 +1,69 @@
-T1	Procedure 420 429	placement
-T2	Procedure-Name 420 429	placement
-E1	Procedure:T1 Name:T2
-T3	Language 160 167	English
-T4	Condition 441 445	TENS
-T5	Condition-Name 441 445	TENS
-E4	Condition:T4 Name:T5
-T6	Condition 455 472	Opioid dependence
-T7	Condition-Name 455 472	Opioid dependence
-E6	Condition:T6 Name:T7
-T8	Eq-Operator 31 32	≥
-A1	Eq-Operator-Value T8 GTEQ
-T9	Eq-Temporal-Unit 36 41	years
-A2	Eq-Temporal-Unit-Value T9 year
-T10	Eq-Temporal-Unit 81 86	weeks
-A3	Eq-Temporal-Unit-Value T10 week
-T11	Eq-Temporal-Unit 94 99	weeks
-A4	Eq-Temporal-Unit-Value T11 week
-T12	Eq-Temporal-Unit 102 106	days
-A5	Eq-Temporal-Unit-Value T12 day
-T13	Age 45 48	age
-E7	Age:T13
-T14	Age 66 69	age
-E8	Age:T14
-T15	Eq-Value 33 35	18
-T16	Eq-Value 78 80	14
-T17	Eq-Value 91 93	23
-T18	Eq-Value 100 101	6
-T19	Eq-Comparison 31 41	≥ 18 years
-E9	Eq-Comparison:T19 Operator:T8 Temporal-Unit:T9 Value:T15
+T1	Eq-Comparison 31 41	≥ 18 years
+E1	Eq-Comparison:T1 Operator:T22 Value:T23 Temporal-Unit:T24
+T2	Age 45 48	age
+E2	Age:T2
+T3	Observation 54 69	Gestational age
+E3	Observation:T3
+T4	Eq-Comparison 70 86	between 14 weeks
+E4	Eq-Comparison:T4 Operator:T26 Value:T27 Temporal-Unit:T28
+T5	And 87 90	and
+E5	And:T5
+T6	Eq-Comparison 91 106	23 weeks 6 days
+E6	Eq-Comparison:T6 Value:T29 Temporal-Unit:T30 Value:T31 Temporal-Unit:T32
+T7	Negation 173 175	No
+E7	Negation:T7
+T8	Contraindication 176 193	contraindications
+E8	Contraindication:T8
+T9	Observation 227 240	Incarceration
+E9	Observation:T9 Name:T34
+T10	Condition 246 271	Preterm Premature Rupture
+E10	Condition:T10 Name:T35
+T11	Modifier 275 284	Membranes
+E11	Modifier:T11
+T12	Or 285 287	or
+E12	Or:T12
+T13	Modifier 300 314	intra-amniotic
+E13	Modifier:T13
+T14	Condition 315 324	infection
+E14	Condition:T14
+T15	Procedure 342 366	implanted cardiac device
+E15	Procedure:T15 Name:T38
+T16	Negation 372 376	Lack
+E16	Negation:T16
+T17	Condition 380 389	sensation
+E17	Condition:T17 Name:T39
+T18	Procedure 410 429	electrode placement
+E18	Procedure:T18
+T19	Eq-Comparison 435 449	Prior TENS use
+E19	Eq-Comparison:T19 Temporal-Period:T40
+T20	Condition 455 472	Opioid dependence
+E20	Condition:T20 Name:T41
+T21	Life-Stage-And-Gender 25 30	Women
+A1	Life-Stage-And-Gender-Type T21 female
+T22	Eq-Operator 31 32	≥
+A2	Eq-Operator-Value T22 GTEQ
+T23	Eq-Value 33 35	18
+T24	Eq-Temporal-Unit 36 41	years
+A3	Eq-Temporal-Unit-Value T24 year
+T25	Condition-Name 54 65	Gestational
+T26	Eq-Operator 70 77	between
+A4	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Value 78 80	14
+T28	Eq-Temporal-Unit 81 86	weeks
+A5	Eq-Temporal-Unit-Value T28 week
+T29	Eq-Value 91 93	23
+T30	Eq-Temporal-Unit 94 99	weeks
+A6	Eq-Temporal-Unit-Value T30 week
+T31	Eq-Value 100 101	6
+T32	Eq-Temporal-Unit 102 106	days
+A7	Eq-Temporal-Unit-Value T32 day
+T33	Language 160 167	English
+T34	Observation-Name 227 240	Incarceration
+T35	Condition-Name 246 271	Preterm Premature Rupture
+T36	Condition-Name 275 284	Membranes
+T37	Condition-Name 306 324	amniotic infection
+T38	Procedure-Name 342 366	implanted cardiac device
+T39	Condition-Name 380 389	sensation
+T40	Eq-Temporal-Period 435 440	Prior
+A8	Eq-Temporal-Period-Value T40 past
+T41	Condition-Name 455 472	Opioid dependence

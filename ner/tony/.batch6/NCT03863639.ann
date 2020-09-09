@@ -1,81 +1,303 @@
-T1	Procedure 821 845	antihypertensive therapy
-T2	Procedure-Name 821 845	antihypertensive therapy
-E1	Procedure:T1 Name:T2
-T3	Condition 366 387	Altered mental status
-T4	Condition-Name 366 387	Altered mental status
-E3	Condition:T3 Name:T4
-T5	Condition 177 195	cortical blindness
-T6	Condition-Name 177 195	cortical blindness
-E5	Condition:T5 Name:T6
-T7	Procedure 343 360	analgesic therapy
-T8	Procedure-Name 343 360	analgesic therapy
-E7	Procedure:T7 Name:T8
-T9	Condition 1053 1066	renal disease
-T10	Condition-Name 1053 1066	renal disease
-E9	Condition:T9 Name:T10
-T11	Condition 91 102	dysfunction
-T12	Condition-Name 91 102	dysfunction
-E11	Condition:T11 Name:T12
-T13	Condition 155 164	Photopsia
-T14	Condition-Name 155 164	Photopsia
-E13	Condition:T13 Name:T14
-T15	Procedure 787 794	bedrest
-T16	Procedure-Name 787 794	bedrest
-E15	Procedure:T15 Name:T16
-T17	Language 1098 1105	English
-T18	Condition 1247 1252	labor
-T19	Condition-Name 1247 1252	labor
-E18	Condition:T18 Name:T19
-T20	Condition 1307 1330	cerebrovascular disease
-T21	Condition-Name 1307 1330	cerebrovascular disease
-E20	Condition:T20 Name:T21
-T22	Condition 1408 1427	psychiatric illness
-T23	Condition-Name 1408 1427	psychiatric illness
-E22	Condition:T22 Name:T23
-T24	Condition 1444 1458	claustrophobia
-T25	Condition-Name 1444 1458	claustrophobia
-E24	Condition:T24 Name:T25
-T26	Condition 1464 1477	Renal failure
-T27	Condition-Name 1464 1477	Renal failure
-E26	Condition:T26 Name:T27
-T28	Condition 1357 1364	deficit
-T29	Condition-Name 1357 1364	deficit
-E28	Condition:T28 Name:T29
-T30	Language 1674 1677	MRI
-T31	Eq-Operator 585 586	≥
-A1	Eq-Operator-Value T31 GTEQ
-T32	Eq-Operator 672 673	≥
-A2	Eq-Operator-Value T32 GTEQ
-T33	Eq-Operator 710 711	≥
-A3	Eq-Operator-Value T33 GTEQ
-T34	Eq-Operator 871 872	<
-A4	Eq-Operator-Value T34 LT
-T35	Eq-Operator 972 973	>
-A5	Eq-Operator-Value T35 GT
-T36	Eq-Operator 1490 1491	>
-A6	Eq-Operator-Value T36 GT
-T37	Eq-Operator 1522 1531	less than
-A7	Eq-Operator-Value T37 LT
-T38	Eq-Unit 677 679	mm
-T39	Eq-Unit 715 717	mm
-T40	Age 1173 1176	age
-E29	Age:T40
-T41	Age 1193 1196	age
-E30	Age:T41
-T42	Eq-Value 673 676	160
-T43	Eq-Value 711 714	110
-T44	Eq-Value 872 875	100
-T45	Eq-Value 973 974	1
-T46	Eq-Value 1095 1097	15
-T47	Eq-Value 1492 1493	2
-T48	Eq-Value 1534 1535	7
-T49	Eq-Comparison 672 679	≥160 mm
-E31	Eq-Comparison:T49 Operator:T32 Unit:T38 Value:T42
-T50	Eq-Comparison 710 717	≥110 mm
-E32	Eq-Comparison:T50 Operator:T33 Unit:T39 Value:T43
-T51	Eq-Comparison 871 875	<100
-E33	Eq-Comparison:T51 Operator:T34 Value:T44
-T52	Eq-Comparison 972 974	>1
-E34	Eq-Comparison:T52 Operator:T35 Value:T45
-T53	Eq-Comparison 1490 1493	> 2
-E35	Eq-Comparison:T53 Operator:T36 Value:T47
+T1	Temporal-Connection 26 29	Pre
+E1	Temporal-Connection:T1
+A1	Temporal-Connection-Type-Value E1 before
+T2	Condition 30 39	Eclampsia
+E2	Condition:T2 Name:T98
+T3	Condition 68 102	central nervous system dysfunction
+E3	Condition:T3 Name:T99
+T4	Eq-Comparison 108 113	onset
+E4	Eq-Comparison:T4
+T5	Modifier 114 122	cerebral
+E5	Modifier:T5
+T6	Or 123 125	or
+E6	Or:T6
+T7	Condition 126 144	visual disturbance
+E7	Condition:T7 Name:T101
+T8	Condition 155 164	Photopsia
+E8	Condition:T8 Name:T102
+T9	Condition 166 175	scotomata
+E9	Condition:T9 Name:T103
+T10	Condition 177 195	cortical blindness
+E10	Condition:T10 Name:T104
+T11	Condition 197 214	retinal vasospasm
+E11	Condition:T11 Name:T105
+T12	Condition 228 236	headache
+E12	Condition:T12 Name:T107
+T13	Condition 238 240	ie
+E13	Condition:T13 Name:T108
+T14	Condition 242 256	incapacitating
+E14	Condition:T14 Name:T109
+T15	Condition 269 277	headache
+E15	Condition:T15 Name:T111
+T16	Or 294 296	or
+E16	Or:T16
+T17	Condition 297 305	headache
+E17	Condition:T17 Name:T112
+T18	Condition 311 319	persists
+E18	Condition:T18
+T19	And 320 323	and
+E19	And:T19
+T20	Procedure 343 360	analgesic therapy
+E20	Procedure:T20 Name:T113
+T21	Condition 374 387	mental status
+E21	Condition:T21 Name:T114
+T22	Condition 393 412	Hepatic abnormality
+E22	Condition:T22 Name:T115
+T23	Modifier 421 437	persistent right
+E23	Modifier:T23
+T24	Modifier 438 452	upper quadrant
+E24	Modifier:T24
+T25	Or 453 455	or
+E25	Or:T25
+T26	Modifier 456 466	epigastric
+E26	Modifier:T26
+T27	Condition 467 471	pain
+E27	Condition:T27 Name:T118
+T28	Assertion 472 484	unresponsive
+E28	Assertion:T28
+A2	Assertion-Type-Value E28 hypothetical
+T30	Drug 488 498	medication
+E29	Drug:T30
+T31	And 499 502	and
+E30	And:T31
+T32	Negation 503 506	not
+E31	Negation:T32
+T33	Or 549 551	or
+E32	Or:T33
+T34	Observation 552 584	serum transaminase concentration
+E33	Observation:T34 Name:T119
+T35	Eq-Comparison 585 599	≥ twice normal
+E34	Eq-Comparison:T35 Operator:T120 Value:T121 Unit:T122
+T36	Or 601 603	or
+E35	Or:T36
+T37	Observation 622 636	blood pressure
+E36	Observation:T37 Name:T124
+T38	Observation 648 671	Systolic blood pressure
+E37	Observation:T38 Name:T125
+T39	Eq-Comparison 672 681	≥160 mmHg
+E38	Eq-Comparison:T39 Operator:T126 Unit:T127
+T40	Or 682 684	or
+E39	Or:T40
+T41	Observation 685 709	diastolic blood pressure
+E40	Observation:T41 Name:T128
+T42	Eq-Comparison 710 719	≥110 mmHg
+E41	Eq-Comparison:T42 Operator:T129 Unit:T130
+T43	Eq-Comparison 737 762	at least four hours apart
+E42	Eq-Comparison:T43 Operator:T132 Value:T133 Temporal-Unit:T134
+T44	Eq-Comparison 784 786	on
+E43	Eq-Comparison:T44
+T45	Procedure 787 794	bedrest
+E44	Procedure:T45
+T46	Exception 796 802	unless
+E45	Exception:T46
+T47	Eq-Comparison 818 820	on
+E46	Eq-Comparison:T47
+T48	Procedure 821 845	antihypertensive therapy
+E47	Procedure:T48 Name:T135
+T49	Condition 853 869	Thrombocytopenia
+E48	Condition:T49 Name:T136
+T50	Eq-Comparison 871 879	<100,000
+E49	Eq-Comparison:T50 Operator:T137 Value:T138
+T51	Modifier 880 889	platelets
+E50	Modifier:T51
+T52	Or 889 890	/
+E51	Or:T52
+T53	Modifier 890 896	microL
+E52	Modifier:T53
+T54	Modifier 903 908	Renal
+E53	Modifier:T54
+T55	Condition 909 920	abnormality
+E54	Condition:T55
+T56	Condition 922 953	Progressive renal insufficiency
+E55	Condition:T56 Name:T142
+T57	Observation 955 971	serum creatinine
+E56	Observation:T57 Name:T143
+T58	Eq-Comparison 972 982	>1.1 mg/dL
+E57	Eq-Comparison:T58 Operator:T144 Value:T145 Unit:T146 Unit:T147
+T59	Or 983 985	or
+E58	Or:T59
+T60	Observation 998 1028	serum creatinine concentration
+E59	Observation:T60 Name:T148
+T61	Negation 1036 1043	absence
+E60	Negation:T61
+T62	Other 1047 1052	other
+E61	Other:T62
+T63	Condition 1053 1066	renal disease
+E62	Condition:T63 Name:T149
+T64	Condition 1074 1089	Pulmonary edema
+E63	Condition:T64 Name:T150
+T65	Eq-Comparison 1095 1097	15
+E64	Eq-Comparison:T65 Value:T151
+T66	Condition 1115 1123	pregnant
+E65	Condition:T66 Name:T153
+T67	Modifier 1138 1151	uncomplicated
+E66	Modifier:T67
+T68	Condition 1152 1161	pregnancy
+E67	Condition:T68 Name:T154
+T69	Age 1173 1176	age
+E68	Age:T69
+T70	Or 1177 1180	and
+E69	Or:T70
+T71	Observation 1181 1196	gestational age
+E70	Observation:T71 Name:T155
+T72	Assertion 1197 1204	will be
+E71	Assertion:T72
+A3	Assertion-Type-Value E71 hypothetical
+T73	Or 1240 1242	or
+E72	Or:T73
+T74	Eq-Comparison 1284 1291	History
+E73	Eq-Comparison:T74 Temporal-Period:T157
+T75	Assertion 1295 1306	symptomatic
+E74	Assertion:T75
+A4	Assertion-Type-Value E74 possible
+T76	Condition 1307 1330	cerebrovascular disease
+E75	Condition:T76 Name:T158
+T77	And 1331 1335	with
+E76	And:T77
+T78	Condition 1336 1364	substantial residual deficit
+E77	Condition:T78 Name:T160
+T79	Eq-Comparison 1370 1377	History
+E78	Eq-Comparison:T79 Temporal-Period:T161
+T80	Condition 1381 1391	alcoholism
+E79	Condition:T80 Name:T162
+T81	Eq-Comparison 1397 1404	History
+E80	Eq-Comparison:T81 Temporal-Period:T163
+T82	Condition 1408 1427	psychiatric illness
+E81	Condition:T82 Name:T164
+T83	Eq-Comparison 1433 1440	History
+E82	Eq-Comparison:T83 Temporal-Period:T165
+T84	Condition 1444 1458	claustrophobia
+E83	Condition:T84 Name:T166
+T85	Condition 1464 1477	Renal failure
+E84	Condition:T85 Name:T167
+T86	Observation 1479 1489	creatinine
+E85	Observation:T86 Name:T168
+T87	Eq-Comparison 1490 1501	> 2.0 mg/dl
+E86	Eq-Comparison:T87 Operator:T169 Value:T170 Unit:T171 Unit:T172
+T88	Eq-Comparison 1522 1543	less than a 7th grade
+E87	Eq-Comparison:T88 Operator:T173 Value:T174 Unit:T175
+T89	Or 1554 1556	or
+E88	Or:T89
+T90	Condition 1557 1571	unable to read
+E89	Condition:T90
+T91	Negation 1581 1587	unable
+E90	Negation:T91
+T92	Procedure 1601 1627	neuropsychological testing
+E91	Procedure:T92
+T93	Procedure 1647 1662	bodily implants
+E92	Procedure:T93 Name:T176
+T94	Negation 1663 1669	unsafe
+E93	Negation:T94
+T95	Procedure 1674 1677	MRI
+E94	Procedure:T95 Name:T177
+T96	Negation 472 484	unresponsive
+E95	Negation:T96
+T97	Severity 19 25	Severe
+A5	Severity-Value T97 severe
+T98	Condition-Name 30 39	Eclampsia
+T99	Condition-Name 68 102	central nervous system dysfunction
+T100	Condition-Name 108 122	onset cerebral
+T101	Condition-Name 126 144	visual disturbance
+T102	Condition-Name 155 164	Photopsia
+T103	Condition-Name 166 175	scotomata
+T104	Condition-Name 177 195	cortical blindness
+T105	Condition-Name 197 214	retinal vasospasm
+T106	Severity 221 227	Severe
+A6	Severity-Value T106 severe
+T107	Condition-Name 228 236	headache
+T108	Condition-Name 238 240	ie
+T109	Condition-Name 242 256	incapacitating
+T110	Severity 263 268	worst
+A7	Severity-Value T110 severe
+T111	Condition-Name 269 277	headache
+T112	Condition-Name 297 305	headache
+T113	Procedure-Name 343 360	analgesic therapy
+T114	Condition-Name 374 387	mental status
+T115	Condition-Name 393 412	Hepatic abnormality
+T116	Severity 414 420	Severe
+A8	Severity-Value T116 severe
+T117	Condition-Name 432 452	right upper quadrant
+T118	Condition-Name 467 471	pain
+T119	Observation-Name 552 584	serum transaminase concentration
+A9	Observation-Type-Value T119 lab
+T120	Eq-Operator 585 586	≥
+A10	Eq-Operator-Value T120 GTEQ
+T121	Eq-Value 587 592	twice
+T122	Eq-Unit 593 599	normal
+A11	Eq-Unit-Value T122 ref-range-high
+T123	Severity 615 621	Severe
+A12	Severity-Value T123 severe
+T124	Observation-Name 622 636	blood pressure
+A13	Observation-Type-Value T124 vital
+T125	Observation-Name 648 671	Systolic blood pressure
+A14	Observation-Type-Value T125 vital
+T126	Eq-Operator 672 676	≥160
+A15	Eq-Operator-Value T126 GTEQ
+T127	Eq-Unit 677 681	mmHg
+T128	Observation-Name 685 709	diastolic blood pressure
+A16	Observation-Type-Value T128 vital
+T129	Eq-Operator 710 714	≥110
+A17	Eq-Operator-Value T129 GTEQ
+T130	Eq-Unit 715 719	mmHg
+T131	Eq-Value 723 726	two
+T132	Eq-Operator 737 745	at least
+A18	Eq-Operator-Value T132 GTEQ
+T133	Eq-Value 746 750	four
+T134	Eq-Temporal-Unit 751 756	hours
+A19	Eq-Temporal-Unit-Value T134 hour
+T135	Procedure-Name 821 845	antihypertensive therapy
+T136	Condition-Name 853 869	Thrombocytopenia
+T137	Eq-Operator 871 872	<
+A20	Eq-Operator-Value T137 LT
+T138	Eq-Value 872 879	100,000
+T139	Eq-Unit 880 889	platelets
+T140	Eq-Unit 890 896	microL
+T141	Condition-Name 903 920	Renal abnormality
+T142	Condition-Name 922 953	Progressive renal insufficiency
+T143	Observation-Name 955 971	serum creatinine
+A21	Observation-Type-Value T143 lab
+T144	Eq-Operator 972 973	>
+A22	Eq-Operator-Value T144 GT
+T145	Eq-Value 973 976	1.1
+T146	Eq-Unit 977 979	mg
+T147	Eq-Unit 980 982	dL
+T148	Observation-Name 998 1028	serum creatinine concentration
+A23	Observation-Type-Value T148 lab
+T149	Condition-Name 1053 1066	renal disease
+T150	Condition-Name 1074 1089	Pulmonary edema
+T151	Eq-Value 1095 1097	15
+T152	Language 1098 1105	English
+T153	Condition-Name 1115 1123	pregnant
+T154	Condition-Name 1152 1161	pregnancy
+T155	Observation-Name 1181 1196	gestational age
+T156	Location 1223 1239	antenatal clinic
+A24	Location-Value T156 clinic
+T157	Eq-Temporal-Period 1284 1291	History
+A25	Eq-Temporal-Period-Value T157 past
+T158	Condition-Name 1307 1330	cerebrovascular disease
+T159	Severity 1336 1347	substantial
+A26	Severity-Value T159 severe
+T160	Condition-Name 1348 1364	residual deficit
+T161	Eq-Temporal-Period 1370 1377	History
+A27	Eq-Temporal-Period-Value T161 past
+T162	Condition-Name 1381 1391	alcoholism
+T163	Eq-Temporal-Period 1397 1404	History
+A28	Eq-Temporal-Period-Value T163 past
+T164	Condition-Name 1408 1427	psychiatric illness
+T165	Eq-Temporal-Period 1433 1440	History
+A29	Eq-Temporal-Period-Value T165 past
+T166	Condition-Name 1444 1458	claustrophobia
+T167	Condition-Name 1464 1477	Renal failure
+T168	Observation-Name 1479 1489	creatinine
+A30	Observation-Type-Value T168 lab
+T169	Eq-Operator 1490 1491	>
+A31	Eq-Operator-Value T169 GT
+T170	Eq-Value 1492 1495	2.0
+T171	Eq-Unit 1496 1498	mg
+T172	Eq-Unit 1499 1501	dl
+T173	Eq-Operator 1522 1531	less than
+A32	Eq-Operator-Value T173 LT
+T174	Eq-Value 1534 1537	7th
+T175	Eq-Unit 1538 1543	grade
+T176	Procedure-Name 1647 1662	bodily implants
+T177	Procedure-Name 1674 1677	MRI

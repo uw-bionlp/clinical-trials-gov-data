@@ -1,14 +1,61 @@
-T1	Life-Stage-And-Gender 25 31	female
-A1	Life-Stage-And-Gender-Type T1 male
-T2	Life-Stage-And-Gender 37 42	adult
-A2	Life-Stage-And-Gender-Type T2 adult
-T3	Condition 343 363	cognitive impairment
-T4	Condition-Name 343 363	cognitive impairment
-E3	Condition:T3 Name:T4
-T5	Procedure 247 263	cancer treatment
-T6	Procedure-Name 247 263	cancer treatment
-E5	Procedure:T5 Name:T6
-T7	Language 318 325	English
-T8	Eq-Temporal-Unit 51 56	years
-A3	Eq-Temporal-Unit-Value T8 year
-T9	Eq-Value 48 50	18
+T1	Age 44 47	age
+E1	Age:T1 
+T2	Eq-Comparison 48 64	18 years or over
+E2	Eq-Comparison:T2 Value:T20 Temporal-Unit:T21 Operator:T22
+T3	Eq-Comparison 71 76	newly
+E3	Eq-Comparison:T3 Temporal-Period:T23
+T4	Modifier 92 104	early breast
+E4	Modifier:T4 
+T5	Condition 105 111	cancer
+E5	Condition:T5 Name:T25
+T6	Eq-Comparison 117 122	first
+E6	Eq-Comparison:T6 
+T7	Modifier 123 130	primary
+E7	Modifier:T7 
+T8	Condition 131 137	cancer
+E8	Condition:T8 Name:T27
+T9	Eq-Comparison 153 158	under
+E9	Eq-Comparison:T9 Temporal-Period:T28
+T10	Procedure 159 168	treatment
+E10	Procedure:T10 
+T11	Eq-Comparison 234 241	started
+E11	Eq-Comparison:T11 
+T12	Condition 247 253	cancer
+E12	Condition:T12 Name:T30
+T13	Procedure 254 263	treatment
+E13	Procedure:T13 
+T14	Negation 291 297	unable
+E14	Negation:T14 
+T15	Condition 343 363	cognitive impairment
+E15	Condition:T15 Name:T33
+T16	Condition 369 387	poor mental health
+E16	Condition:T16 Name:T34
+T17	Condition 443 461	metastatic disease
+E17	Condition:T17 Name:T35
+T18	Life-Stage-And-Gender 25 31	female
+A1	Life-Stage-And-Gender-Type T18 female
+T19	Life-Stage-And-Gender 37 42	adult
+A2	Life-Stage-And-Gender-Type T19 adult
+T20	Eq-Value 48 50	18
+T21	Eq-Temporal-Unit 51 56	years
+A3	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Operator 57 64	or over
+A4	Eq-Operator-Value T22 GTEQ
+T23	Eq-Temporal-Period 71 76	newly
+A5	Eq-Temporal-Period-Value T23 present
+T24	Eq-Temporal-Period 92 97	early
+A6	Eq-Temporal-Period-Value T24 past
+T25	Condition-Name 105 111	cancer
+T26	Eq-Temporal-Recency 117 122	first
+A7	Eq-Temporal-Recency-Value T26 first-time
+T27	Condition-Name 131 137	cancer
+T28	Eq-Temporal-Period 153 158	under
+A8	Eq-Temporal-Period-Value T28 present
+T29	Eq-Value 172 175	one
+T30	Condition-Name 247 253	cancer
+T31	Language 318 325	English
+T32	Severity 331 342	significant
+A9	Severity-Value T32 severe
+T33	Condition-Name 343 363	cognitive impairment
+T34	Condition-Name 369 387	poor mental health
+T35	Condition-Name 443 461	metastatic disease

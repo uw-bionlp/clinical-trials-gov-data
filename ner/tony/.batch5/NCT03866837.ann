@@ -1,39 +1,90 @@
 T1	Procedure 25 41	vaginal delivery
-T2	Procedure-Name 25 41	vaginal delivery
-E1	Procedure:T1 Name:T2
-T3	Condition 394 409	chronic illness
-T4	Condition-Name 394 409	chronic illness
-E3	Condition:T3 Name:T4
-T5	Eq-Operator 96 97	≥
-A1	Eq-Operator-Value T5 GTEQ
-T6	Eq-Operator 287 288	<
-A2	Eq-Operator-Value T6 LT
-T7	Eq-Operator 362 363	<
-A3	Eq-Operator-Value T7 LT
-T8	Eq-Operator 479 487	the past
-A4	Eq-Operator-Value T8 GTEQ
-T9	Eq-Temporal-Unit 66 72	months
-A5	Eq-Temporal-Unit-Value T9 month
-T10	Eq-Temporal-Unit 77 82	weeks
-A6	Eq-Temporal-Unit-Value T10 week
-T11	Eq-Temporal-Unit 100 105	years
-A7	Eq-Temporal-Unit-Value T11 year
-T12	Eq-Temporal-Unit 490 496	months
-A8	Eq-Temporal-Unit-Value T12 month
-T13	Age 57 60	age
-E4	Age:T13
-T14	Age 109 112	age
-E5	Age:T14
-T15	Eq-Value 64 65	6
-T16	Eq-Value 97 99	15
-T17	Eq-Value 289 291	70
-T18	Eq-Value 363 364	3
-T19	Eq-Value 488 489	2
-T20	Eq-Comparison 96 105	≥15 years
-E6	Eq-Comparison:T20 Operator:T5 Temporal-Unit:T11 Value:T16
-T21	Eq-Comparison 287 291	< 70
-E7	Eq-Comparison:T21 Operator:T6 Value:T17
-T22	Eq-Comparison 362 364	<3
-E8	Eq-Comparison:T22 Operator:T7 Value:T18
-T23	Eq-Comparison 479 496	the past 2 months
-E9	Eq-Comparison:T23 Operator:T8 Temporal-Unit:T12 Value:T19
+E1	Procedure:T1 Name:T27
+T2	Family-Member 50 56	infant
+E2	Family-Member:T2
+A1	Family-Member-Type E2 child
+T3	Eq-Comparison 57 72	age of 6 months
+E3	Eq-Comparison:T3 Value:T28 Temporal-Unit:T29
+T4	Eq-Comparison 74 82	±3 weeks
+E4	Eq-Comparison:T4 Temporal-Unit:T31
+T5	Birth 89 95	mother
+E5	Birth:T5
+T6	Eq-Comparison 96 105	≥15 years
+E6	Eq-Comparison:T6 Operator:T32 Temporal-Unit:T33
+T7	Age 109 112	age
+E7	Age:T7
+T8	Condition 131 144	breastfeeding
+E8	Condition:T8 Name:T35
+T9	Study 192 197	study
+E9	Study:T9
+T10	Observation 276 286	hemoglobin
+E10	Observation:T10 Name:T36
+T11	Eq-Comparison 287 295	< 70 g/L
+E11	Eq-Comparison:T11 Operator:T37 Value:T38 Unit:T39 Unit:T40
+T12	Age 325 328	age
+E12	Age:T12
+T13	Condition 330 333	WAZ
+E13	Condition:T13
+T14	Or 335 337	or
+E14	Or:T14
+T15	Observation 338 355	weight-for-height
+E15	Observation:T15 Name:T42
+T16	Observation 357 360	WHZ
+E16	Observation:T16 Name:T43
+T17	Modifier 375 383	maternal
+E17	Modifier:T17
+T18	Or 384 386	or
+E18	Or:T18
+T19	Modifier 387 401	infant chronic
+E19	Modifier:T19
+T20	Condition 402 409	illness
+E20	Condition:T20
+T21	Drug 437 451	infant vitamin
+E21	Drug:T21 Name:T46
+T22	Or 452 454	or
+E22	Or:T22
+T23	Drug 455 474	mineral supplements
+E23	Drug:T23 Name:T47
+T24	Eq-Comparison 483 496	past 2 months
+E24	Eq-Comparison:T24 Temporal-Period:T48 Value:T49 Temporal-Unit:T50
+T25	Eq-Comparison 506 513	history
+E25	Eq-Comparison:T25 Temporal-Period:T51
+T26	Procedure 517 544	infant antibiotic treatment
+E26	Procedure:T26
+T27	Procedure-Name 25 41	vaginal delivery
+T28	Eq-Value 64 65	6
+T29	Eq-Temporal-Unit 66 72	months
+A2	Eq-Temporal-Unit-Value T29 month
+T30	Observation-Name 74 76	±3
+T31	Eq-Temporal-Unit 77 82	weeks
+A3	Eq-Temporal-Unit-Value T31 week
+T32	Eq-Operator 96 99	≥15
+A4	Eq-Operator-Value T32 GTEQ
+T33	Eq-Temporal-Unit 100 105	years
+A5	Eq-Temporal-Unit-Value T33 year
+T34	Life-Stage-And-Gender 118 124	infant
+A6	Life-Stage-And-Gender-Type T34 infant
+T35	Condition-Name 131 144	breastfeeding
+T36	Observation-Name 276 286	hemoglobin
+A7	Observation-Type-Value T36 lab
+T37	Eq-Operator 287 288	<
+A8	Eq-Operator-Value T37 LT
+T38	Eq-Value 289 291	70
+T39	Eq-Unit 292 293	g
+T40	Eq-Unit 294 295	L
+T41	Observation-Name 330 333	WAZ
+T42	Observation-Name 338 344	weight
+A9	Observation-Type-Value T42 vital
+T43	Observation-Name 357 360	WHZ
+T44	Observation-Name 362 364	<3
+T45	Condition-Name 387 409	infant chronic illness
+T46	Drug-Name 437 451	infant vitamin
+T47	Drug-Name 455 474	mineral supplements
+T48	Eq-Temporal-Period 483 487	past
+A10	Eq-Temporal-Period-Value T48 past
+T49	Eq-Value 488 489	2
+T50	Eq-Temporal-Unit 490 496	months
+A11	Eq-Temporal-Unit-Value T50 month
+T51	Eq-Temporal-Period 506 513	history
+A12	Eq-Temporal-Period-Value T51 past
+T52	Drug-Name 517 534	infant antibiotic

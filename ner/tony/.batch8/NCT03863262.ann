@@ -1,24 +1,44 @@
-T1	Eq-Operator 471 480	less than
-A1	Eq-Operator-Value T1 LT
-T2	Eq-Temporal-Unit 350 354	days
-A2	Eq-Temporal-Unit-Value T2 day
-T3	Eq-Temporal-Unit 360 364	days
-A3	Eq-Temporal-Unit-Value T3 day
-T4	Eq-Temporal-Unit 372 376	days
-A4	Eq-Temporal-Unit-Value T4 day
-T5	Eq-Temporal-Unit 383 387	days
-A5	Eq-Temporal-Unit-Value T5 day
-T6	Eq-Temporal-Unit 395 399	days
-A6	Eq-Temporal-Unit-Value T6 day
-T7	Eq-Temporal-Unit 427 432	years
-A7	Eq-Temporal-Unit-Value T7 year
-T8	Eq-Temporal-Unit 484 489	years
-A8	Eq-Temporal-Unit-Value T8 year
-T9	Age 433 436	old
-E1	Age:T9
-T10	Age 490 493	old
-E2	Age:T10
-T11	Eq-Value 424 426	18
-T12	Eq-Value 481 483	18
-T13	Eq-Comparison 471 489	less than 18 years
-E3	Eq-Comparison:T13 Operator:T1 Temporal-Unit:T8 Value:T12
+T1	Temporal-Connection 283 291	prior to
+E1	Temporal-Connection:T1
+A1	Temporal-Connection-Type-Value E1 before
+T2	Eq-Comparison 323 343	scheduled every week
+E2	Eq-Comparison:T2 Temporal-Period:T12 Temporal-Unit:T13
+T3	Eq-Comparison 419 432	were 18 years
+E3	Eq-Comparison:T3 Value:T14 Temporal-Unit:T15
+T4	Eq-Comparison 471 489	less than 18 years
+E4	Eq-Comparison:T4 Operator:T16 Value:T17 Temporal-Unit:T18
+T5	Study 561 566	study
+E5	Study:T5
+T6	Negation 590 593	not
+E6	Negation:T6
+T7	Condition 722 736	acutely unwell
+E7	Condition:T7
+T8	Assertion 737 746	requiring
+E8	Assertion:T8
+A2	Assertion-Type-Value E8 hypothetical
+T9	Encounter 756 765	admission
+E9	Encounter:T9
+T10	Location 101 130	cardiology outpatient clinics
+A3	Location-Value T10 hospital
+T11	Encounter-Type 222 232	outpatient
+A4	Encounter-Type-Value T11 outpatient
+T12	Eq-Temporal-Period 323 332	scheduled
+A5	Eq-Temporal-Period-Value T12 future
+T13	Eq-Temporal-Unit 339 343	week
+A6	Eq-Temporal-Unit-Value T13 week
+T14	Eq-Value 424 426	18
+T15	Eq-Temporal-Unit 427 432	years
+A7	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Operator 471 480	less than
+A8	Eq-Operator-Value T16 LT
+T17	Eq-Value 481 483	18
+T18	Eq-Temporal-Unit 484 489	years
+A9	Eq-Temporal-Unit-Value T18 year
+T19	Encounter-Type 632 642	outpatient
+A10	Encounter-Type-Value T19 outpatient
+T20	Location 643 650	clinics
+A11	Location-Value T20 clinic
+T21	Location 747 755	hospital
+A12	Location-Value T21 hospital
+T22	Encounter-Type 756 765	admission
+A13	Encounter-Type-Value T22 inpatient

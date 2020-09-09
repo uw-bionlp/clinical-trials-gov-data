@@ -1,22 +1,64 @@
-T1	Condition 54 75	Chronic heart failure
-T2	Condition-Name 54 75	Chronic heart failure
-E1	Condition:T1 Name:T2
-T3	Condition 127 140	heart failure
-T4	Condition-Name 127 140	heart failure
-E3	Condition:T3 Name:T4
-T5	Condition 354 370	renal impairment
-T6	Condition-Name 354 370	renal impairment
-E5	Condition:T5 Name:T6
-T7	Condition 421 444	hemodynamic instability
-T8	Condition-Name 421 444	hemodynamic instability
-E7	Condition:T7 Name:T8
-T9	Eq-Operator 386 387	<
-A1	Eq-Operator-Value T9 LT
-T10	Eq-Temporal-Unit 42 47	years
-A2	Eq-Temporal-Unit-Value T10 year
-T11	Age 25 28	Age
-E8	Age:T11
-T12	Eq-Value 39 41	18
-T13	Eq-Value 387 389	30
-T14	Eq-Comparison 386 389	<30
-E9	Eq-Comparison:T14 Operator:T9 Value:T13
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 29 47	more than 18 years
+E2	Eq-Comparison:T2 Operator:T21 Value:T22 Temporal-Unit:T23
+T3	Condition 54 75	Chronic heart failure
+E3	Condition:T3 Name:T24
+T4	Eq-Comparison 76 81	prior
+E4	Eq-Comparison:T4 Temporal-Period:T25
+T5	Assertion 102 107	signs
+E5	Assertion:T5
+A1	Assertion-Type-Value E5 possible
+T6	And 108 111	and
+E6	And:T6
+T7	Or 112 114	or
+E7	Or:T7
+T8	Assertion 115 123	symptoms
+E8	Assertion:T8
+A2	Assertion-Type-Value E8 possible
+T9	Condition 127 140	heart failure
+E9	Condition:T9 Name:T26
+T10	Condition 164 178	decompensation
+E10	Condition:T10 Name:T28
+T11	Encounter 217 232	hospitalization
+E11	Encounter:T11
+T12	Drug 237 249	IV diuretics
+E12	Drug:T12 Name:T30
+T13	Study 305 310	study
+E13	Study:T13
+T14	Allergy 317 324	Allergy
+E14	Allergy:T14
+T15	Drug 328 340	IV frusemide
+E15	Drug:T15 Name:T32
+T16	Condition 354 370	renal impairment
+E16	Condition:T16 Name:T34
+T17	Eq-Comparison 382 393	eGFR<30ml/m
+E17	Eq-Comparison:T17
+T18	Condition 400 417	Cardiogenic shock
+E18	Condition:T18 Name:T35
+T19	Or 418 420	or
+E19	Or:T19
+T20	Condition 421 444	hemodynamic instability
+E20	Condition:T20 Name:T36
+T21	Eq-Operator 29 38	more than
+A3	Eq-Operator-Value T21 GT
+T22	Eq-Value 39 41	18
+T23	Eq-Temporal-Unit 42 47	years
+A4	Eq-Temporal-Unit-Value T23 year
+T24	Condition-Name 62 75	heart failure
+T25	Eq-Temporal-Period 76 81	prior
+A5	Eq-Temporal-Period-Value T25 past
+T26	Condition-Name 127 140	heart failure
+T27	Severity 158 163	acute
+A6	Severity-Value T27 severe
+T28	Condition-Name 164 178	decompensation
+T29	Encounter-Type 217 232	hospitalization
+A7	Encounter-Type-Value T29 inpatient
+T30	Drug-Name 240 249	diuretics
+T31	Eq-Value 328 330	IV
+T32	Drug-Name 331 340	frusemide
+T33	Severity 347 353	Severe
+A8	Severity-Value T33 severe
+T34	Condition-Name 354 370	renal impairment
+T35	Condition-Name 400 417	Cardiogenic shock
+T36	Condition-Name 421 444	hemodynamic instability

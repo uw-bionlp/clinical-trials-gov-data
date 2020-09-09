@@ -1,6 +1,64 @@
-T1	Life-Stage-And-Gender 33 41	children
-A1	Life-Stage-And-Gender-Type T1 child
-T2	Life-Stage-And-Gender 91 99	children
-A2	Life-Stage-And-Gender-Type T2 child
-T3	Eq-Value 193 194	1
-T4	Eq-Value 200 201	3
+T1	Condition 25 32	Healthy
+E1	Condition:T1 Name:T24
+T2	And 42 46	with
+E2	And:T2
+T3	Negation 47 49	no
+E3	Negation:T3
+T4	Modifier 50 58	systemic
+E4	Modifier:T4
+T5	Condition 59 67	diseases
+E5	Condition:T5 Name:T26
+T6	Condition 79 85	caries
+E6	Condition:T6
+T7	Risk 86 90	risk
+E7	Risk:T7
+T8	Family-Member 91 99	children
+E8	Family-Member:T8
+A1	Family-Member-Type E8 child
+T9	And 100 104	with
+E9	And:T9
+T10	Eq-Comparison 121 133	at least one
+E10	Eq-Comparison:T10 Operator:T30 Value:T31
+T11	Modifier 134 148	visible active
+E11	Modifier:T11
+T12	Condition 149 152	WSL
+E12	Condition:T12
+T13	Modifier 156 169	primary teeth
+E13	Modifier:T13
+T14	And 170 174	with
+E14	And:T14
+T15	Observation 175 189	ICDAS II score
+E15	Observation:T15
+T16	Eq-Comparison 193 201	1,2 or 3
+E16	Eq-Comparison:T16 Value:T32 Value:T33
+T17	Study 262 267	study
+E17	Study:T17
+T18	Modifier 294 308	Selected tooth
+E18	Modifier:T18
+T19	Condition 314 330	cavitated lesion
+E19	Condition:T19 Name:T34
+T20	Modifier 337 351	Selected tooth
+E20	Modifier:T20
+T21	Condition 357 371	enamel defects
+E21	Condition:T21 Name:T35
+T22	Allergy 391 399	allergic
+E22	Allergy:T22
+T23	Drug 403 416	milk products
+E23	Drug:T23
+T24	Condition-Name 25 32	Healthy
+T25	Life-Stage-And-Gender 33 41	children
+A2	Life-Stage-And-Gender-Type T25 child
+T26	Condition-Name 59 67	diseases
+T27	Polarity 74 78	High
+A3	Polarity-Value T27 high
+T28	Condition-Name 79 90	caries risk
+T29	Life-Stage-And-Gender 91 99	children
+A4	Life-Stage-And-Gender-Type T29 child
+T30	Eq-Operator 121 129	at least
+A5	Eq-Operator-Value T30 GTEQ
+T31	Eq-Value 130 133	one
+T32	Eq-Value 193 196	1,2
+T33	Eq-Value 200 201	3
+T34	Condition-Name 314 330	cavitated lesion
+T35	Condition-Name 357 371	enamel defects
+T36	Allergy-Name 403 407	milk

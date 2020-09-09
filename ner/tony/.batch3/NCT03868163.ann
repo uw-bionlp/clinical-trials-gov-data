@@ -1,31 +1,90 @@
-T1	Procedure 222 241	combination therapy
-T2	Procedure-Name 222 241	combination therapy
-E1	Procedure:T1 Name:T2
-T3	Condition 201 210	cirrhosis
-T4	Condition-Name 201 210	cirrhosis
-E3	Condition:T3 Name:T4
-T5	Procedure 268 275	regimen
-T6	Procedure-Name 268 275	regimen
-E5	Procedure:T5 Name:T6
-T7	Condition 105 108	PRS
-T8	Condition-Name 105 108	PRS
-E7	Condition:T7 Name:T8
-T9	Condition 137 140	CHC
-T10	Condition-Name 137 140	CHC
-E9	Condition:T9 Name:T10
-T11	Procedure 637 648	therapeutic
-T12	Procedure-Name 637 648	therapeutic
-E11	Procedure:T11 Name:T12
-T13	Eq-Operator 395 400	up to
-A1	Eq-Operator-Value T13 LTEQ
-T14	Eq-Temporal-Unit 403 408	weeks
-A2	Eq-Temporal-Unit-Value T14 week
-T15	Eq-Value 152 153	1
-T16	Eq-Value 155 156	2
-T17	Eq-Value 158 159	3
-T18	Eq-Value 161 162	4
-T19	Eq-Value 164 165	5
-T20	Eq-Value 170 171	6
-T21	Eq-Value 401 402	4
-T22	Eq-Comparison 395 408	up to 4 weeks
-E12	Eq-Comparison:T22 Operator:T13 Temporal-Unit:T14 Value:T21
+T1	Procedure 25 34	Treatment
+E1	Procedure:T1
+T2	Modifier 35 40	naïve
+E2	Modifier:T2
+T3	Or 41 43	or
+E3	Or:T3
+T4	Condition 46 52	pegIFN
+E4	Condition:T4
+T5	Or 54 56	or
+E5	Or:T5
+T6	Condition 57 60	IFN
+E6	Condition:T6 Name:T33
+T7	Or 63 69	and/or
+E7	Or:T7
+T8	Drug 70 79	Ribavirin
+E8	Drug:T8 Name:T34
+T9	Drug 81 84	RBV
+E9	Drug:T9 Name:T35
+T10	Or 86 92	and/or
+E10	Or:T10
+T11	Drug 93 103	sofosbuvir
+E11	Drug:T11 Name:T36
+T12	Condition 105 108	PRS
+E12	Condition:T12 Name:T37
+T13	Condition 137 140	CHC
+E13	Condition:T13 Name:T38
+T14	Condition 142 151	genotypes
+E14	Condition:T14
+T15	Eq-Comparison 158 171	3, 4, 5, or 6
+E15	Eq-Comparison:T15 Value:T40 Value:T41 Value:T42 Value:T43
+T16	And 173 177	with
+E16	And:T16
+T17	Or 178 180	or
+E17	Or:T17
+T18	Modifier 181 200	without compensated
+E18	Modifier:T18
+T19	Condition 201 210	cirrhosis
+E19	Condition:T19 Name:T44
+T20	Eq-Comparison 212 221	receiving
+E20	Eq-Comparison:T20 Temporal-Period:T45
+T21	Procedure 222 241	combination therapy
+E21	Procedure:T21 Name:T46
+T22	Procedure 255 263	oral GLE
+E22	Procedure:T22
+T23	Or 263 264	/
+E23	Or:T23
+T24	Drug 264 267	PIB
+E24	Drug:T24 Name:T48
+T25	Eq-Comparison 395 408	up to 4 weeks
+E25	Eq-Comparison:T25 Operator:T50 Value:T51 Temporal-Unit:T52
+T26	Temporal-Connection 409 414	after
+E26	Temporal-Connection:T26
+A1	Temporal-Connection-Type-Value E26 after
+T27	Procedure 415 424	treatment
+E27	Procedure:T27
+T28	Eq-Comparison 425 435	initiation
+E28	Eq-Comparison:T28
+T29	Temporal-Connection 504 509	prior
+E29	Temporal-Connection:T29
+A2	Temporal-Connection-Type-Value E29 before
+T30	Study 532 537	study
+E30	Study:T30
+T31	Negation 557 560	not
+E31	Negation:T31
+T32	Procedure 637 654	therapeutic trial
+E32	Procedure:T32
+T33	Condition-Name 57 60	IFN
+T34	Drug-Name 70 79	Ribavirin
+T35	Drug-Name 81 84	RBV
+T36	Drug-Name 93 103	sofosbuvir
+T37	Condition-Name 105 108	PRS
+T38	Condition-Name 137 140	CHC
+T39	Eq-Value 155 156	2
+T40	Eq-Value 158 159	3
+T41	Eq-Value 161 162	4
+T42	Eq-Value 164 165	5
+T43	Eq-Value 170 171	6
+T44	Condition-Name 201 210	cirrhosis
+T45	Eq-Temporal-Period 212 221	receiving
+A3	Eq-Temporal-Period-Value T45 present
+T46	Procedure-Name 222 241	combination therapy
+T47	Drug-Name 255 263	oral GLE
+T48	Drug-Name 264 267	PIB
+T49	Eq-Temporal-Period 353 360	current
+A4	Eq-Temporal-Period-Value T49 present
+T50	Eq-Operator 398 400	to
+A5	Eq-Operator-Value T50 BETWEEN
+T51	Eq-Value 401 402	4
+T52	Eq-Temporal-Unit 403 408	weeks
+A6	Eq-Temporal-Unit-Value T52 week

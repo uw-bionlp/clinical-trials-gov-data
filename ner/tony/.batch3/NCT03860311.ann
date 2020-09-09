@@ -1,21 +1,79 @@
-T1	Procedure 177 199	reconstructive surgery
-T2	Procedure-Name 177 199	reconstructive surgery
-E1	Procedure:T1 Name:T2
-T3	Procedure 361 382	genitourinary surgery
-T4	Procedure-Name 361 382	genitourinary surgery
-E3	Procedure:T3 Name:T4
-T5	Condition 388 409	Chronic renal disease
-T6	Condition-Name 388 409	Chronic renal disease
-E5	Condition:T5 Name:T6
-T7	Condition 248 262	Critically ill
-T8	Condition-Name 248 262	Critically ill
-E7	Condition:T7 Name:T8
-T9	Condition 225 234	Pregnancy
-T10	Condition-Name 225 234	Pregnancy
-E9	Condition:T9 Name:T10
-T11	Life-Stage-And-Gender 44 50	Female
-A1	Life-Stage-And-Gender-Type T11 male
-T12	Age 25 28	Age
-E10	Age:T12
-T13	Eq-Value 29 30	8
-T14	Eq-Value 33 35	18
+T1	Age 25 28	Age
+E1	Age:T1 
+T2	Eq-Comparison 29 38	8yr-18yrs
+E2	Eq-Comparison:T2 
+T3	Assertion 56 65	Likely to
+E3	Assertion:T3 
+A1	Assertion-Type-Value E3 hypothetical
+T4	Observation 71 83	order placed
+E4	Observation:T4 
+T5	Procedure 88 120	transabdominal pelvic ultrasound
+E5	Procedure:T5 Name:T34
+T6	Or 120 121	/
+E6	Or:T6 
+T7	Modifier 121 128	ovarian
+E7	Modifier:T7 
+T8	Procedure 129 139	ultrasound
+E8	Procedure:T8 Name:T35
+T9	Negation 145 147	No
+E9	Negation:T9 
+T10	Eq-Comparison 148 155	history
+E10	Eq-Comparison:T10 Temporal-Period:T36
+T11	Modifier 159 165	pelvic
+E11	Modifier:T11 
+T12	Or 166 168	or
+E12	Or:T12 
+T13	Modifier 169 176	bladder
+E13	Modifier:T13 
+T14	Procedure 177 199	reconstructive surgery
+E14	Procedure:T14 Name:T37
+T15	Condition 225 234	Pregnancy
+E15	Condition:T15 Name:T38
+T16	Condition 259 262	ill
+E16	Condition:T16 Name:T39
+T17	Modifier 297 302	renal
+E17	Modifier:T17 
+T18	Or 303 305	or
+E18	Or:T18 
+T19	Modifier 306 330	genitourinary structural
+E19	Modifier:T19 
+T20	Condition 331 344	abnormalities
+E20	Condition:T20 Name:T40
+T21	Or 345 347	or
+E21	Or:T21 
+T22	Eq-Comparison 348 353	prior
+E22	Eq-Comparison:T22 Temporal-Period:T41
+T23	Modifier 354 360	pelvic
+E23	Modifier:T23 
+T24	Or 360 361	/
+E24	Or:T24 
+T25	Modifier 361 374	genitourinary
+E25	Modifier:T25 
+T26	Procedure 375 382	surgery
+E26	Procedure:T26 Name:T42
+T27	Modifier 388 395	Chronic
+E27	Modifier:T27 
+T28	Condition 396 409	renal disease
+E28	Condition:T28 Name:T43
+T29	Eq-Comparison 424 434	presenting
+E29	Eq-Comparison:T29 
+T30	Other 435 442	outside
+E30	Other:T30 
+T31	Procedure 455 464	treatment
+E31	Procedure:T31 
+T32	Or 465 472	windows
+E32	Or:T32 
+T33	Life-Stage-And-Gender 44 50	Female
+A2	Life-Stage-And-Gender-Type T33 female
+T34	Procedure-Name 88 120	transabdominal pelvic ultrasound
+T35	Procedure-Name 129 139	ultrasound
+T36	Eq-Temporal-Period 148 155	history
+A3	Eq-Temporal-Period-Value T36 past
+T37	Procedure-Name 192 199	surgery
+T38	Condition-Name 225 234	Pregnancy
+T39	Condition-Name 259 262	ill
+T40	Condition-Name 331 344	abnormalities
+T41	Eq-Temporal-Period 348 353	prior
+A4	Eq-Temporal-Period-Value T41 past
+T42	Procedure-Name 375 382	surgery
+T43	Condition-Name 396 409	renal disease

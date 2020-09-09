@@ -1,91 +1,278 @@
-T1	Condition 44 55	anovulation
-T2	Condition-Name 44 55	anovulation
-E1	Condition:T1 Name:T2
-T3	Condition 194 200	menses
-T4	Condition-Name 194 200	menses
-E3	Condition:T3 Name:T4
-T5	Condition 356 374	Polycystic Ovaries
-T6	Condition-Name 356 374	Polycystic Ovaries
-E5	Condition:T5 Name:T6
-T7	Condition 227 243	Hyperandrogenism
-T8	Condition-Name 227 243	Hyperandrogenism
-E7	Condition:T7 Name:T8
-T9	Condition 541 559	Hyperprolactinemia
-T10	Condition-Name 541 559	Hyperprolactinemia
-E9	Condition:T9 Name:T10
-T11	Condition 727 757	congenital adrenal hyperplasia
-T12	Condition-Name 727 757	congenital adrenal hyperplasia
-E11	Condition:T11 Name:T12
-T13	Condition 659 684	21-hydroxylase deficiency
-T14	Condition-Name 659 684	21-hydroxylase deficiency
-E13	Condition:T13 Name:T14
-T15	Condition 694 711	enzyme deficiency
-T16	Condition-Name 694 711	enzyme deficiency
-E15	Condition:T15 Name:T16
-T17	Condition 847 862	thyroid disease
-T18	Condition-Name 847 862	thyroid disease
-E17	Condition:T17 Name:T18
-T19	Condition 866 869	per
-T20	Condition-Name 866 869	per
-E19	Condition:T19 Name:T20
-T21	Condition 1056 1074	Cushing's syndrome
-T22	Condition-Name 1056 1074	Cushing's syndrome
-E21	Condition:T21 Name:T22
-T23	Condition 1213 1228	type 2 diabetes
-T24	Condition-Name 1213 1228	type 2 diabetes
-E23	Condition:T23 Name:T24
-T25	Eq-Operator 123 135	greater than
-A1	Eq-Operator-Value T25 GT
-T26	Eq-Operator 170 179	less than
-A2	Eq-Operator-Value T26 LT
-T27	Eq-Operator 276 288	greater than
-A3	Eq-Operator-Value T27 GT
-T28	Eq-Operator 323 335	greater than
-A4	Eq-Operator-Value T28 GT
-T29	Eq-Operator 485 497	greater than
-A5	Eq-Operator-Value T29 GT
-T30	Eq-Operator 614 626	greater than
-A6	Eq-Operator-Value T30 GT
-T31	Eq-Operator 795 807	greater than
-A7	Eq-Operator-Value T31 GT
-T32	Eq-Operator 916 925	less than
-A8	Eq-Operator-Value T32 LT
-T33	Eq-Operator 941 953	greater than
-A9	Eq-Operator-Value T33 GT
-T34	Eq-Temporal-Unit 151 155	days
-A10	Eq-Temporal-Unit-Value T34 day
-T35	Eq-Unit 442 444	mm
-T36	Eq-Unit 501 503	cm
-T37	Eq-Operator 439 440	-
-A11	Eq-Operator-Value T37 BETWEEN
-T38	Eq-Value 148 150	45
-T39	Eq-Value 192 193	8
-T40	Eq-Value 289 291	50
-T41	Eq-Value 336 338	10
-T42	Eq-Value 407 409	12
-T43	Eq-Value 438 439	2
-T44	Eq-Value 440 441	9
-T45	Eq-Value 498 500	10
-T46	Eq-Value 571 572	2
-T47	Eq-Value 627 629	30
-T48	Eq-Value 659 661	21
-T49	Eq-Value 808 810	10
-T50	Eq-Value 926 927	0
-T51	Eq-Value 954 955	4
-T52	Eq-Value 1218 1219	2
-T53	Eq-Comparison 276 291	greater than 50
-E24	Eq-Comparison:T53 Operator:T27 Value:T40
-T54	Eq-Comparison 323 338	greater than 10
-E25	Eq-Comparison:T54 Operator:T28 Value:T41
-T55	Eq-Comparison 485 503	greater than 10 cm
-E26	Eq-Comparison:T55 Operator:T29 Unit:T36 Value:T45
-T56	Eq-Comparison 614 629	greater than 30
-E27	Eq-Comparison:T56 Operator:T30 Value:T47
-T57	Eq-Comparison 795 810	greater than 10
-E28	Eq-Comparison:T57 Operator:T31 Value:T49
-T58	Eq-Comparison 916 927	less than 0
-E29	Eq-Comparison:T58 Operator:T32 Value:T50
-T59	Eq-Comparison 941 955	greater than 4
-E30	Eq-Comparison:T59 Operator:T33 Value:T51
-T60	Eq-Comparison 438 440	2-
-E31	Eq-Comparison:T60 Operator:T37 Value:T43
+T1	And 31 35	with
+E1	And:T1
+T2	Modifier 36 43	chronic
+E2	Modifier:T2
+T3	Condition 44 55	anovulation
+E3	Condition:T3 Name:T78
+T4	Or 56 58	or
+E4	Or:T4
+T5	Condition 59 73	oligomenorrhea
+E5	Condition:T5 Name:T79
+T6	Condition 85 111	spontaneous intermenstrual
+E6	Condition:T6 Name:T80
+T7	Eq-Comparison 123 155	greater than or equal to 45 days
+E7	Eq-Comparison:T7 Operator:T81 Value:T82 Temporal-Unit:T83
+T8	Or 156 158	or
+E8	Or:T8
+T9	Eq-Comparison 170 209	less than or equal to 8 menses per year
+E9	Eq-Comparison:T9 Operator:T84 Operator:T85 Value:T86 Temporal-Unit:T88
+T10	And 222 226	with
+E10	And:T10
+T11	Condition 227 243	Hyperandrogenism
+E11	Condition:T11 Name:T90
+T12	Observation 257 275	total testosterone
+E12	Observation:T12 Name:T91
+T13	Eq-Comparison 276 297	greater than 50 ng/dL
+E13	Eq-Comparison:T13 Operator:T92 Value:T93 Unit:T94 Unit:T95
+T14	Or 298 300	or
+E14	Or:T14
+T15	Observation 303 322	free androgen index
+E15	Observation:T15 Name:T96
+T16	Eq-Comparison 323 338	greater than 10
+E16	Eq-Comparison:T16 Operator:T97 Value:T98
+T17	And 351 355	with
+E17	And:T17
+T18	Condition 356 374	Polycystic Ovaries
+E18	Condition:T18 Name:T100
+T19	Procedure 378 388	Ultrasound
+E19	Procedure:T19 Name:T101
+T20	Eq-Comparison 400 417	either 12 or more
+E20	Eq-Comparison:T20 Value:T102 Operator:T103
+T21	Observation 418 437	follicles measuring
+E21	Observation:T21 Name:T104
+T22	Eq-Comparison 438 444	2-9 mm
+E22	Eq-Comparison:T22 Value:T105 Operator:T106 Value:T107 Unit:T108
+T23	Modifier 448 456	diameter
+E23	Modifier:T23
+T24	Or 457 459	or
+E24	Or:T24
+T25	Observation 470 484	ovarian volume
+E25	Observation:T25 Name:T110
+T26	Eq-Comparison 485 503	greater than 10 cm
+E26	Eq-Comparison:T26 Operator:T111 Value:T112 Unit:T113
+T27	And 536 540	with
+E27	And:T27
+T28	Condition 541 559	Hyperprolactinemia
+E28	Condition:T28 Name:T115
+T29	Observation 573 589	prolactin levels
+E29	Observation:T29 Name:T116
+T30	Eq-Comparison 590 636	at least one week apart greater than 30 ng/mL.
+E30	Eq-Comparison:T30 Operator:T117 Value:T118 Temporal-Unit:T119 Operator:T120 Value:T121 Unit:T122 Unit:T123
+T31	And 648 652	with
+E31	And:T31
+T32	Condition 659 684	21-hydroxylase deficiency
+E32	Condition:T32 Name:T125
+T33	Or 685 687	or
+E33	Or:T33
+T34	Other 688 693	other
+E34	Other:T34
+T35	Condition 694 711	enzyme deficiency
+E35	Condition:T35 Name:T126
+T36	Exception 712 722	leading to
+E36	Exception:T36
+T37	Condition 727 757	congenital adrenal hyperplasia
+E37	Condition:T37 Name:T127
+T38	And 770 774	with
+E38	And:T38
+T39	Observation 784 794	FSH levels
+E39	Observation:T39 Name:T130
+T40	Eq-Comparison 795 818	greater than 10 mIU/mL.
+E40	Eq-Comparison:T40 Operator:T131 Value:T132 Unit:T133 Unit:T134
+T41	And 830 834	with
+E41	And:T41
+T42	Condition 835 862	uncorrected thyroid disease
+E42	Condition:T42 Name:T136
+T43	Observation 912 915	TSH
+E43	Observation:T43 Name:T138
+T44	Eq-Comparison 916 937	less than 0.45 mIU/mL
+E44	Eq-Comparison:T44 Operator:T139 Value:T140 Unit:T141 Unit:T142
+T45	Or 938 940	or
+E45	Or:T45
+T46	Eq-Comparison 941 964	greater than 4.5 MIU/mL
+E46	Eq-Comparison:T46 Operator:T143 Value:T144 Unit:T145 Unit:T146
+T47	And 978 982	with
+E47	And:T47
+T48	Assertion 985 994	suspected
+E48	Assertion:T48
+A1	Assertion-Type-Value E48 possible
+T49	Modifier 995 1002	adrenal
+E49	Modifier:T49
+T50	Or 1003 1005	or
+E50	Or:T50
+T51	Modifier 1006 1013	ovarian
+E51	Modifier:T51
+T52	Condition 1014 1019	tumor
+E52	Condition:T52 Name:T148
+T53	Drug 1020 1039	secreting androgens
+E53	Drug:T53 Name:T149
+T54	And 1051 1055	with
+E54	And:T54
+T55	Condition 1056 1074	Cushing's syndrome
+E55	Condition:T55 Name:T151
+T56	Eq-Comparison 1086 1088	on
+E56	Eq-Comparison:T56
+T57	Drug 1101 1112	medications
+E57	Drug:T57
+T58	Condition 1126 1142	ovarian function
+E58	Condition:T58 Name:T154
+T59	Drug 1153 1162	metformin
+E59	Drug:T59 Name:T155
+T60	Drug 1164 1187	hormonal contraceptives
+E60	Drug:T60 Name:T156
+T61	Or 1188 1190	or
+E61	Or:T61
+T62	Other 1191 1196	other
+E62	Other:T62
+T63	Drug 1197 1208	medications
+E63	Drug:T63
+T64	Condition 1213 1228	type 2 diabetes
+E64	Condition:T64 Name:T157
+T65	And 1240 1244	with
+E65	And:T65
+T66	Condition 1245 1263	medical conditions
+E66	Condition:T66
+T67	Contraindication 1273 1290	contraindications
+E67	Contraindication:T67
+T68	Drug 1294 1306	OTC inositol
+E68	Drug:T68 Name:T159
+T69	Or 1307 1309	or
+E69	Or:T69
+T70	Eq-Comparison 1310 1318	previous
+E70	Eq-Comparison:T70 Temporal-Period:T160
+T71	Allergy 1319 1327	allergic
+E71	Allergy:T71
+T72	Drug 1345 1355	supplement
+E72	Drug:T72
+T73	Or 1356 1358	or
+E73	Or:T73
+T74	Drug 1366 1386	placebo maltodextrin
+E74	Drug:T74 Name:T161
+T75	Or 1387 1389	or
+E75	Or:T75
+T76	Drug 1390 1396	inulin
+E76	Drug:T76 Name:T162
+T77	Life-Stage-And-Gender 25 30	Women
+A2	Life-Stage-And-Gender-Type T77 female
+T78	Condition-Name 44 55	anovulation
+T79	Condition-Name 59 73	oligomenorrhea
+T80	Condition-Name 85 111	spontaneous intermenstrual
+T81	Eq-Operator 123 144	greater than or equal
+A3	Eq-Operator-Value T81 GTEQ
+T82	Eq-Value 148 150	45
+T83	Eq-Temporal-Unit 151 155	days
+A4	Eq-Temporal-Unit-Value T83 day
+T84	Eq-Operator 170 179	less than
+A5	Eq-Operator-Value T84 LT
+T85	Eq-Operator 180 188	or equal
+A6	Eq-Operator-Value T85 GTEQ
+T86	Eq-Value 192 193	8
+T87	Observation-Name 194 200	menses
+A7	Observation-Type-Value T87 measurement
+T88	Eq-Temporal-Unit 205 209	year
+A8	Eq-Temporal-Unit-Value T88 year
+T89	Life-Stage-And-Gender 216 221	Women
+A9	Life-Stage-And-Gender-Type T89 female
+T90	Condition-Name 227 243	Hyperandrogenism
+T91	Observation-Name 257 275	total testosterone
+A10	Observation-Type-Value T91 lab
+T92	Eq-Operator 276 288	greater than
+A11	Eq-Operator-Value T92 GT
+T93	Eq-Value 289 291	50
+T94	Eq-Unit 292 294	ng
+T95	Eq-Unit 295 297	dL
+T96	Observation-Name 303 322	free androgen index
+A12	Observation-Type-Value T96 lab
+T97	Eq-Operator 323 335	greater than
+A13	Eq-Operator-Value T97 GT
+T98	Eq-Value 336 338	10
+T99	Life-Stage-And-Gender 345 350	Women
+A14	Life-Stage-And-Gender-Type T99 female
+T100	Condition-Name 356 374	Polycystic Ovaries
+T101	Procedure-Name 378 388	Ultrasound
+T102	Eq-Value 407 409	12
+T103	Eq-Operator 410 417	or more
+A15	Eq-Operator-Value T103 GTEQ
+T104	Observation-Name 418 437	follicles measuring
+A16	Observation-Type-Value T104 measurement
+T105	Eq-Value 438 439	2
+T106	Eq-Operator 439 440	-
+A17	Eq-Operator-Value T106 BETWEEN
+T107	Eq-Value 440 441	9
+T108	Eq-Unit 442 444	mm
+T109	Polarity 460 469	increased
+A18	Polarity-Value T109 high
+T110	Observation-Name 470 484	ovarian volume
+A19	Observation-Type-Value T110 measurement
+T111	Eq-Operator 485 497	greater than
+A20	Eq-Operator-Value T111 GT
+T112	Eq-Value 498 500	10
+T113	Eq-Unit 501 503	cm
+T114	Life-Stage-And-Gender 530 535	Women
+A21	Life-Stage-And-Gender-Type T114 female
+T115	Condition-Name 541 559	Hyperprolactinemia
+T116	Observation-Name 573 589	prolactin levels
+A22	Observation-Type-Value T116 lab
+T117	Eq-Operator 590 598	at least
+A23	Eq-Operator-Value T117 GTEQ
+T118	Eq-Value 599 602	one
+T119	Eq-Temporal-Unit 603 607	week
+A24	Eq-Temporal-Unit-Value T119 week
+T120	Eq-Operator 614 626	greater than
+A25	Eq-Operator-Value T120 GT
+T121	Eq-Value 627 629	30
+T122	Eq-Unit 630 632	ng
+T123	Eq-Unit 633 636	mL.
+T124	Life-Stage-And-Gender 642 647	Women
+A26	Life-Stage-And-Gender-Type T124 female
+T125	Condition-Name 659 684	21-hydroxylase deficiency
+T126	Condition-Name 694 711	enzyme deficiency
+T127	Condition-Name 727 757	congenital adrenal hyperplasia
+T128	Life-Stage-And-Gender 764 769	Women
+A27	Life-Stage-And-Gender-Type T128 female
+T129	Polarity 775 783	elevated
+A28	Polarity-Value T129 high
+T130	Observation-Name 784 794	FSH levels
+A29	Observation-Type-Value T130 lab
+T131	Eq-Operator 795 807	greater than
+A30	Eq-Operator-Value T131 GT
+T132	Eq-Value 808 810	10
+T133	Eq-Unit 811 814	mIU
+T134	Eq-Unit 815 818	mL.
+T135	Life-Stage-And-Gender 824 829	Women
+A31	Life-Stage-And-Gender-Type T135 female
+T136	Condition-Name 847 862	thyroid disease
+T137	Condition-Name 870 874	ASRM
+T138	Observation-Name 912 915	TSH
+A32	Observation-Type-Value T138 lab
+T139	Eq-Operator 916 925	less than
+A33	Eq-Operator-Value T139 LT
+T140	Eq-Value 926 930	0.45
+T141	Eq-Unit 931 934	mIU
+T142	Eq-Unit 935 937	mL
+T143	Eq-Operator 941 953	greater than
+A34	Eq-Operator-Value T143 GT
+T144	Eq-Value 954 957	4.5
+T145	Eq-Unit 958 961	MIU
+T146	Eq-Unit 962 964	mL
+T147	Life-Stage-And-Gender 972 977	Women
+A35	Life-Stage-And-Gender-Type T147 female
+T148	Condition-Name 1014 1019	tumor
+T149	Drug-Name 1020 1039	secreting androgens
+T150	Life-Stage-And-Gender 1045 1050	Women
+A36	Life-Stage-And-Gender-Type T150 female
+T151	Condition-Name 1056 1074	Cushing's syndrome
+T152	Life-Stage-And-Gender 1080 1085	Women
+A37	Life-Stage-And-Gender-Type T152 female
+T153	Stability 1119 1125	affect
+A38	Stability-Value T153 change
+T154	Condition-Name 1126 1142	ovarian function
+T155	Drug-Name 1153 1162	metformin
+T156	Drug-Name 1164 1187	hormonal contraceptives
+T157	Condition-Name 1213 1228	type 2 diabetes
+T158	Life-Stage-And-Gender 1234 1239	Women
+A39	Life-Stage-And-Gender-Type T158 female
+T159	Drug-Name 1294 1306	OTC inositol
+T160	Eq-Temporal-Period 1310 1318	previous
+A40	Eq-Temporal-Period-Value T160 past
+T161	Drug-Name 1366 1386	placebo maltodextrin
+T162	Drug-Name 1390 1396	inulin

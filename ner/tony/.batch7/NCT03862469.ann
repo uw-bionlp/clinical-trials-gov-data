@@ -1,65 +1,136 @@
-T1	Condition 412 428	anxiety disorder
-T2	Condition-Name 412 428	anxiety disorder
-E1	Condition:T1 Name:T2
-T3	Condition 127 142	menstrual cycle
-T4	Condition-Name 127 142	menstrual cycle
-E3	Condition:T3 Name:T4
-T5	Procedure 228 239	application
-T6	Procedure-Name 228 239	application
-E5	Procedure:T5 Name:T6
-T7	Condition 316 326	depression
-T8	Condition-Name 316 326	depression
-E7	Condition:T7 Name:T8
-T9	Condition 664 673	pregnancy
-T10	Condition-Name 664 673	pregnancy
-E9	Condition:T9 Name:T10
-T11	Condition 699 708	lactation
-T12	Condition-Name 699 708	lactation
-E11	Condition:T11 Name:T12
-T13	Condition 287 295	disorder
-T14	Condition-Name 287 295	disorder
-E13	Condition:T13 Name:T14
-T15	Condition 304 311	anxiety
-T16	Condition-Name 304 311	anxiety
-E15	Condition:T15 Name:T16
-T17	Life-Stage-And-Gender 25 31	Female
-A1	Life-Stage-And-Gender-Type T17 male
-T18	Condition 715 719	plan
-T19	Condition-Name 715 719	plan
-E18	Condition:T18 Name:T19
-T20	Eq-Operator 546 547	>
-A2	Eq-Operator-Value T20 GT
-T21	Eq-Operator 612 613	≥
-A3	Eq-Operator-Value T21 GTEQ
-T22	Eq-Operator 818 819	>
-A4	Eq-Operator-Value T22 GT
-T23	Eq-Temporal-Unit 48 53	years
-A5	Eq-Temporal-Unit-Value T23 year
-T24	Eq-Temporal-Unit 149 153	days
-A6	Eq-Temporal-Unit-Value T24 day
-T25	Age 37 41	Aged
-E19	Age:T25
-T26	Eq-Operator 44 45	-
-A7	Eq-Operator-Value T26 BETWEEN
-T27	Eq-Operator 145 146	-
-A8	Eq-Operator-Value T27 BETWEEN
-T28	Eq-Value 42 44	18
-T29	Eq-Value 45 47	35
-T30	Eq-Value 143 145	21
-T31	Eq-Value 146 148	35
-T32	Eq-Value 278 279	5
-T33	Eq-Value 285 286	1
-T34	Eq-Value 391 392	5
-T35	Eq-Value 547 548	0
-T36	Eq-Value 614 615	6
-T37	Eq-Value 820 822	80
-T38	Eq-Comparison 546 548	>0
-E20	Eq-Comparison:T38 Operator:T20 Value:T35
-T39	Eq-Comparison 612 615	≥ 6
-E21	Eq-Comparison:T39 Operator:T21 Value:T36
-T40	Eq-Comparison 818 822	> 80
-E22	Eq-Comparison:T40 Operator:T22 Value:T37
-T41	Eq-Comparison 42 45	18-
-E23	Eq-Comparison:T41 Operator:T26 Value:T28
-T42	Eq-Comparison 143 146	21-
-E24	Eq-Comparison:T42 Operator:T27 Value:T30
+T1	Age 37 41	Aged
+E1	Age:T1
+T2	Eq-Comparison 42 53	18-35 years
+E2	Eq-Comparison:T2 Value:T40 Operator:T41 Value:T42 Temporal-Unit:T43
+T3	Procedure 70 87	visual inspection
+E3	Procedure:T3
+T4	Observation 127 142	menstrual cycle
+E4	Observation:T4 Name:T44
+T5	Eq-Comparison 143 153	21-35 days
+E5	Eq-Comparison:T5 Value:T45 Operator:T46 Value:T47 Temporal-Unit:T48
+T6	Eq-Comparison 204 209	daily
+E6	Eq-Comparison:T6 Temporal-Unit:T49
+T7	Eq-Comparison 265 273	Lifetime
+E7	Eq-Comparison:T7
+T8	Condition 274 295	DSM-5 Axis 1 disorder
+E8	Condition:T8 Name:T50
+T9	Exception 297 303	except
+E9	Exception:T9
+T10	Condition 304 311	anxiety
+E10	Condition:T10 Name:T51
+T11	Or 312 315	and
+E11	Or:T11
+T12	Condition 316 326	depression
+E12	Condition:T12 Name:T52
+T13	Eq-Comparison 379 386	Current
+E13	Eq-Comparison:T13 Temporal-Period:T53
+T14	Condition 387 408	DSM-5 Axis depressive
+E14	Condition:T14 Name:T54
+T15	Or 409 411	or
+E15	Or:T15
+T16	Condition 412 428	anxiety disorder
+E16	Condition:T16 Name:T55
+T17	Procedure 495 511	drug screen test
+E17	Procedure:T17
+T18	Observation 517 545	Breath alcohol concentration
+E18	Observation:T18 Name:T58
+T19	Eq-Comparison 546 552	>0.00%
+E19	Eq-Comparison:T19 Operator:T59 Value:T60 Unit:T61
+T20	Condition 572 578	smoker
+E20	Condition:T20 Name:T62
+T21	Or 579 581	or
+E21	Or:T21
+T22	Observation 582 611	carbon monoxide concentration
+E22	Observation:T22 Name:T63
+T23	Eq-Comparison 612 619	≥ 6 ppm
+E23	Eq-Comparison:T23 Operator:T64 Value:T65 Unit:T66
+T24	Condition 625 650	Irregular menstrual cycle
+E24	Condition:T24 Name:T67
+T25	Eq-Comparison 656 663	Current
+E25	Eq-Comparison:T25 Temporal-Period:T68
+T26	Condition 664 673	pregnancy
+E26	Condition:T26 Name:T69
+T27	Observation 675 685	urine test
+E27	Observation:T27 Name:T70
+T28	Or 696 698	or
+E28	Or:T28
+T29	Condition 699 708	lactation
+E29	Condition:T29 Name:T71
+T30	Or 710 712	or
+E30	Or:T30
+T31	Assertion 715 722	plan to
+E31	Assertion:T31
+A1	Assertion-Type-Value E31 intention
+T32	Condition 730 738	pregnant
+E32	Condition:T32 Name:T72
+T33	Eq-Comparison 744 760	Moderate or high
+E33	Eq-Comparison:T33
+T34	Condition 761 768	suicide
+E34	Condition:T34 Name:T75
+T35	Risk 769 773	risk
+E35	Risk:T35
+T36	Observation 776 789	- Shipley IQ
+E36	Observation:T36 Name:T76
+T37	Eq-Comparison 818 822	> 80
+E37	Eq-Comparison:T37 Operator:T78 Value:T79
+T38	Drug 841 852	medications
+E38	Drug:T38
+T39	Life-Stage-And-Gender 25 31	Female
+A2	Life-Stage-And-Gender-Type T39 female
+T40	Eq-Value 42 44	18
+T41	Eq-Operator 44 45	-
+A3	Eq-Operator-Value T41 BETWEEN
+T42	Eq-Value 45 47	35
+T43	Eq-Temporal-Unit 48 53	years
+A4	Eq-Temporal-Unit-Value T43 year
+T44	Observation-Name 127 142	menstrual cycle
+T45	Eq-Value 143 145	21
+T46	Eq-Operator 145 146	-
+A5	Eq-Operator-Value T46 BETWEEN
+T47	Eq-Value 146 148	35
+T48	Eq-Temporal-Unit 149 153	days
+A6	Eq-Temporal-Unit-Value T48 day
+T49	Eq-Temporal-Unit 204 209	daily
+A7	Eq-Temporal-Unit-Value T49 day
+T50	Condition-Name 280 295	Axis 1 disorder
+T51	Condition-Name 304 311	anxiety
+T52	Condition-Name 316 326	depression
+T53	Eq-Temporal-Period 379 386	Current
+A8	Eq-Temporal-Period-Value T53 present
+T54	Condition-Name 387 408	DSM-5 Axis depressive
+T55	Condition-Name 412 428	anxiety disorder
+T56	Polarity 480 488	Positive
+A9	Polarity-Value T56 positive
+T57	Observation-Name 489 511	urine drug screen test
+A10	Observation-Type-Value T57 lab
+T58	Observation-Name 517 545	Breath alcohol concentration
+A11	Observation-Type-Value T58 lab
+T59	Eq-Operator 546 547	>
+A12	Eq-Operator-Value T59 GT
+T60	Eq-Value 547 551	0.00
+T61	Eq-Unit 551 552	%
+T62	Condition-Name 572 578	smoker
+T63	Observation-Name 582 611	carbon monoxide concentration
+A13	Observation-Type-Value T63 lab
+T64	Eq-Operator 612 613	≥
+A14	Eq-Operator-Value T64 GTEQ
+T65	Eq-Value 614 615	6
+T66	Eq-Unit 616 619	ppm
+T67	Condition-Name 625 650	Irregular menstrual cycle
+T68	Eq-Temporal-Period 656 663	Current
+A15	Eq-Temporal-Period-Value T68 present
+T69	Condition-Name 664 673	pregnancy
+T70	Observation-Name 675 685	urine test
+A16	Observation-Type-Value T70 lab
+T71	Condition-Name 699 708	lactation
+T72	Condition-Name 730 738	pregnant
+T73	Severity 744 752	Moderate
+A17	Severity-Value T73 moderate
+T74	Polarity 756 760	high
+A18	Polarity-Value T74 high
+T75	Condition-Name 761 768	suicide
+T76	Observation-Name 779 789	Shipley IQ
+T77	Observation-Name 791 816	vocabulary standard score
+T78	Eq-Operator 818 819	>
+A19	Eq-Operator-Value T78 GT
+T79	Eq-Value 820 822	80

@@ -1,18 +1,43 @@
-T1	Condition 125 137	hypertension
-T2	Condition-Name 125 137	hypertension
-E1	Condition:T1 Name:T2
-T3	Condition 46 55	gestation
-T4	Condition-Name 46 55	gestation
-E3	Condition:T3 Name:T4
-T5	Condition 177 181	IUGR
-T6	Condition-Name 177 181	IUGR
-E5	Condition:T5 Name:T6
-T7	Condition 117 120	GDM
-T8	Condition-Name 117 120	GDM
-E7	Condition:T7 Name:T8
-T9	Eq-Temporal-Unit 64 69	years
-A1	Eq-Temporal-Unit-Value T9 year
-T10	Eq-Temporal-Unit 76 81	years
-A2	Eq-Temporal-Unit-Value T10 year
-T11	Eq-Value 61 63	18
-T12	Eq-Value 73 75	50
+T1	And 31 35	with
+E1	And:T1 
+T2	Condition 36 55	singleton gestation
+E2	Condition:T2 
+T3	Eq-Comparison 61 81	18 years to 50 years
+E3	Eq-Comparison:T3 Value:T15 Temporal-Unit:T16 Operator:T17 Value:T18 Temporal-Unit:T19
+T4	Risk 92 96	risk
+E4	Risk:T4 
+T5	Condition 97 108	pregnancies
+E5	Condition:T5 Name:T21
+T6	Condition 110 112	DM
+E6	Condition:T6 Name:T22
+T7	Or 114 116	or
+E7	Or:T7 
+T8	Condition 117 120	GDM
+E8	Condition:T8 Name:T23
+T9	Or 122 124	or
+E9	Or:T9 
+T10	Condition 125 137	hypertension
+E10	Condition:T10 Name:T24
+T11	Or 139 141	or
+E11	Or:T11 
+T12	Condition 142 154	preeclampsia
+E12	Condition:T12 Name:T25
+T13	Life-Stage-And-Gender 25 30	Women
+A1	Life-Stage-And-Gender-Type T13 female
+T14	Observation-Name 46 55	gestation
+T15	Eq-Value 61 63	18
+T16	Eq-Temporal-Unit 64 69	years
+A2	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Operator 70 72	to
+A3	Eq-Operator-Value T17 BETWEEN
+T18	Eq-Value 73 75	50
+T19	Eq-Temporal-Unit 76 81	years
+A4	Eq-Temporal-Unit-Value T19 year
+T20	Polarity 87 91	High
+A5	Polarity-Value T20 high
+T21	Condition-Name 97 108	pregnancies
+T22	Condition-Name 110 112	DM
+T23	Condition-Name 117 120	GDM
+T24	Condition-Name 125 137	hypertension
+T25	Condition-Name 142 154	preeclampsia
+T26	Eq-Unit 177 181	IUGR

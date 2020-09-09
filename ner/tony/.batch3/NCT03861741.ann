@@ -1,38 +1,78 @@
-T1	Procedure 28 31	TAD
-T2	Procedure-Name 28 31	TAD
-E1	Procedure:T1 Name:T2
-T3	Language 221 228	English
-T4	Condition 366 394	Shprintzen-Goldberg syndrome
-T5	Condition-Name 366 394	Shprintzen-Goldberg syndrome
-E4	Condition:T4 Name:T5
-T6	Condition 430 458	arterial tortuosity syndrome
-T7	Condition-Name 430 458	arterial tortuosity syndrome
-E6	Condition:T6 Name:T7
-T8	Condition 342 364	Ehlers-Danlos Syndrome
-T9	Condition-Name 342 364	Ehlers-Danlos Syndrome
-E8	Condition:T8 Name:T9
-T10	Condition 320 340	Loeys-Dietz Syndrome
-T11	Condition-Name 320 340	Loeys-Dietz Syndrome
-E10	Condition:T10 Name:T11
-T12	Condition 303 318	Marfan Syndrome
-T13	Condition-Name 303 318	Marfan Syndrome
-E12	Condition:T12 Name:T13
-T14	Condition 405 419	osteoarthritis
-T15	Condition-Name 405 419	osteoarthritis
-E14	Condition:T14 Name:T15
-T16	Condition 464 474	cutis laxa
-T17	Condition-Name 464 474	cutis laxa
-E16	Condition:T16 Name:T17
-T18	Condition 420 428	syndrome
-T19	Condition-Name 420 428	syndrome
-E18	Condition:T18 Name:T19
-T20	Condition 475 483	syndrome
-T21	Condition-Name 475 483	syndrome
-E20	Condition:T20 Name:T21
-T22	Eq-Operator 87 96	and above
-A1	Eq-Operator-Value T22 GTEQ
-T23	Age 79 83	aged
-E21	Age:T23
-T24	Eq-Value 84 86	16
-T25	Eq-Comparison 84 96	16 and above
-E22	Eq-Comparison:T25 Operator:T22 Value:T24
+T1	Eq-Comparison 25 27	NS
+E1	Eq-Comparison:T1 Unit:T27
+T2	Condition 28 31	TAD
+E2	Condition:T2 
+T3	Modifier 32 40	probands
+E3	Modifier:T3 
+T4	Procedure 41 49	operated
+E4	Procedure:T4 
+T5	Age 79 83	aged
+E5	Age:T5 
+T6	Eq-Comparison 84 96	16 and above
+E6	Eq-Comparison:T6 Value:T31 Operator:T32
+T7	Eq-Comparison 108 120	At least two
+E7	Eq-Comparison:T7 Operator:T33 Value:T34
+T8	Assertion 131 141	willing to
+E8	Assertion:T8 
+A1	Assertion-Type-Value E8 hypothetical
+T9	Study 161 170	screening
+E9	Study:T9 
+T10	Assertion 202 209	able to
+E10	Assertion:T10 
+A2	Assertion-Type-Value E10 hypothetical
+T11	Condition 255 263	Probands
+E11	Condition:T11 
+T12	Condition 269 291	syndromic aortopathies
+E12	Condition:T12 Name:T36
+T13	Condition 303 318	Marfan Syndrome
+E13	Condition:T13 Name:T37
+T14	Condition 320 340	Loeys-Dietz Syndrome
+E14	Condition:T14 Name:T38
+T15	Condition 342 364	Ehlers-Danlos Syndrome
+E15	Condition:T15 Name:T39
+T16	Condition 366 394	Shprintzen-Goldberg syndrome
+E16	Condition:T16 Name:T40
+T17	Condition 396 404	aneurysm
+E17	Condition:T17 Name:T41
+T18	Condition 405 428	osteoarthritis syndrome
+E18	Condition:T18 Name:T42
+T19	Condition 430 458	arterial tortuosity syndrome
+E19	Condition:T19 Name:T43
+T20	Or 460 463	and
+E20	Or:T20 
+T21	Condition 464 483	cutis laxa syndrome
+E21	Condition:T21 Name:T44
+T22	Condition 490 498	Probands
+E22	Condition:T22 
+T23	Condition 504 518	aortic lesions
+E23	Condition:T23 Name:T45
+T24	Condition 535 541	trauma
+E24	Condition:T24 Name:T46
+T25	Or 542 545	and
+E25	Or:T25 
+T26	Condition 546 556	infections
+E26	Condition:T26 Name:T47
+T27	Eq-Unit 25 27	NS
+T28	Procedure-Name 28 49	TAD probands operated
+T29	Observation-Name 54 58	n=16
+T30	Eq-Operator 66 69	FDR
+A3	Eq-Operator-Value T30 GTEQ
+T31	Eq-Value 84 86	16
+T32	Eq-Operator 87 96	and above
+A4	Eq-Operator-Value T32 GTEQ
+T33	Eq-Operator 108 116	At least
+A5	Eq-Operator-Value T33 GTEQ
+T34	Eq-Value 117 120	two
+T35	Language 221 228	English
+T36	Condition-Name 269 291	syndromic aortopathies
+T37	Condition-Name 303 318	Marfan Syndrome
+T38	Condition-Name 320 340	Loeys-Dietz Syndrome
+T39	Condition-Name 342 364	Ehlers-Danlos Syndrome
+T40	Condition-Name 366 394	Shprintzen-Goldberg syndrome
+T41	Condition-Name 396 404	aneurysm
+T42	Condition-Name 405 428	osteoarthritis syndrome
+T43	Condition-Name 430 458	arterial tortuosity syndrome
+T44	Condition-Name 464 483	cutis laxa syndrome
+T45	Condition-Name 504 518	aortic lesions
+T46	Condition-Name 535 541	trauma
+T47	Condition-Name 546 556	infections

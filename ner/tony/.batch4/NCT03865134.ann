@@ -1,43 +1,84 @@
-T1	Condition 137 163	retinopathy of prematurity
-T2	Condition-Name 137 163	retinopathy of prematurity
-E1	Condition:T1 Name:T2
-T3	Condition 209 226	metabolic disease
-T4	Condition-Name 209 226	metabolic disease
-E3	Condition:T3 Name:T4
-T5	Procedure 512 527	eye examination
-T6	Procedure-Name 512 527	eye examination
-E5	Procedure:T5 Name:T6
-T7	Procedure 272 285	physiotherapy
-T8	Procedure-Name 272 285	physiotherapy
-E7	Procedure:T7 Name:T8
-T9	Procedure 531 544	physiotherapy
-T10	Procedure-Name 531 544	physiotherapy
-E9	Procedure:T9 Name:T10
-T11	Life-Stage-And-Gender 309 317	children
-A1	Life-Stage-And-Gender-Type T11 child
-T12	Life-Stage-And-Gender 568 576	children
-A2	Life-Stage-And-Gender-Type T12 child
-T13	Life-Stage-And-Gender 401 406	child
-A3	Life-Stage-And-Gender-Type T13 child
-T14	Eq-Temporal-Unit 47 52	years
-A4	Eq-Temporal-Unit-Value T14 year
-T15	Eq-Temporal-Unit 105 110	weeks
-A5	Eq-Temporal-Unit-Value T15 week
-T16	Age 25 28	Age
-E10	Age:T16
-T17	Age 56 59	age
-E11	Age:T17
-T18	Age 77 80	age
-E12	Age:T18
-T19	Eq-Operator 44 45	-
-A6	Eq-Operator-Value T19 BETWEEN
-T20	Eq-Operator 89 90	-
-A7	Eq-Operator-Value T20 BETWEEN
-T21	Eq-Value 43 44	2
-T22	Eq-Value 45 46	6
-T23	Eq-Value 87 89	26
-T24	Eq-Value 90 92	34
-T25	Eq-Comparison 43 45	2-
-E13	Eq-Comparison:T25 Operator:T19 Value:T21
-T26	Eq-Comparison 87 90	26-
-E14	Eq-Comparison:T26 Operator:T20 Value:T23
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 35 52	between 2-6 years
+E2	Eq-Comparison:T2 Operator:T27 Value:T28 Operator:T29 Value:T30 Temporal-Unit:T31
+T3	Age 56 59	age
+E3	Age:T3
+T4	Observation 65 80	Gestational age
+E4	Observation:T4
+T5	Eq-Comparison 87 90	26-
+E5	Eq-Comparison:T5 Value:T33 Operator:T34
+T6	Eq-Comparison 97 110	between weeks
+E6	Eq-Comparison:T6 Operator:T36 Temporal-Unit:T37
+T7	Condition 137 148	retinopathy
+E7	Condition:T7 Name:T38
+T8	Condition 152 163	prematurity
+E8	Condition:T8 Name:T39
+T9	Modifier 169 181	Neurological
+E9	Modifier:T9
+T10	Modifier 183 193	hereditary
+E10	Modifier:T10
+T11	Or 194 197	and
+E11	Or:T11
+T12	Negation 198 201	not
+E12	Negation:T12
+T13	Condition 209 226	metabolic disease
+E13	Condition:T13 Name:T40
+T14	Procedure 248 267	visual examinations
+E14	Procedure:T14 Name:T41
+T15	And 268 271	and
+E15	And:T15
+T16	Procedure 272 297	physiotherapy evaluations
+E16	Procedure:T16 Name:T42
+T17	Family-Member 401 406	child
+E17	Family-Member:T17
+A1	Family-Member-Type E17 child
+T18	And 407 410	who
+E18	And:T18
+T19	Procedure 432 460	Optical Kohlerans Tomography
+E19	Procedure:T19 Name:T43
+T20	Procedure 462 465	OCT
+E20	Procedure:T20
+T21	Negation 472 475	Not
+E21	Negation:T21
+T22	Procedure 512 527	eye examination
+E22	Procedure:T22 Name:T46
+T23	Or 528 530	or
+E23	Or:T23
+T24	Procedure 531 556	physiotherapy assessments
+E24	Procedure:T24 Name:T47
+T25	Assertion 600 608	agree to
+E25	Assertion:T25
+A2	Assertion-Type-Value E25 hypothetical
+T26	Study 628 633	study
+E26	Study:T26
+T27	Eq-Operator 35 42	between
+A3	Eq-Operator-Value T27 BETWEEN
+T28	Eq-Value 43 44	2
+T29	Eq-Operator 44 45	-
+A4	Eq-Operator-Value T29 BETWEEN
+T30	Eq-Value 45 46	6
+T31	Eq-Temporal-Unit 47 52	years
+A5	Eq-Temporal-Unit-Value T31 year
+T32	Condition-Name 65 76	Gestational
+T33	Eq-Value 87 89	26
+T34	Eq-Operator 89 90	-
+A6	Eq-Operator-Value T34 BETWEEN
+T35	Eq-Value 90 92	34
+T36	Eq-Operator 97 104	between
+A7	Eq-Operator-Value T36 BETWEEN
+T37	Eq-Temporal-Unit 105 110	weeks
+A8	Eq-Temporal-Unit-Value T37 week
+T38	Condition-Name 137 148	retinopathy
+T39	Condition-Name 152 163	prematurity
+T40	Condition-Name 209 226	metabolic disease
+T41	Procedure-Name 248 267	visual examinations
+T42	Procedure-Name 272 297	physiotherapy evaluations
+T43	Procedure-Name 432 460	Optical Kohlerans Tomography
+T44	Eq-Value 493 496	one
+T45	Eq-Operator 497 504	or more
+A9	Eq-Operator-Value T45 GTEQ
+T46	Procedure-Name 512 527	eye examination
+T47	Procedure-Name 531 544	physiotherapy
+T48	Life-Stage-And-Gender 568 576	children
+A10	Life-Stage-And-Gender-Type T48 child

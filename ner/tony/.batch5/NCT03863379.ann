@@ -1,25 +1,74 @@
-T1	Condition 487 520	non-alcoholic fatty liver disease
-T2	Condition-Name 487 520	non-alcoholic fatty liver disease
-E1	Condition:T1 Name:T2
-T3	Condition 47 70	cerebrovascular disease
-T4	Condition-Name 47 70	cerebrovascular disease
-E3	Condition:T3 Name:T4
-T5	Condition 465 485	muscular dystrophies
-T6	Condition-Name 465 485	muscular dystrophies
-E5	Condition:T5 Name:T6
+T1	Condition 38 44	stroke
+E1	Condition:T1 Name:T30
+T2	Or 45 46	/
+E2	Or:T2
+T3	Modifier 47 62	cerebrovascular
+E3	Modifier:T3
+T4	Condition 63 70	disease
+E4	Condition:T4
+T5	Modifier 86 91	brain
+E5	Modifier:T5
+T6	Condition 92 98	injury
+E6	Condition:T6
 T7	Condition 104 122	multiple sclerosis
-T8	Condition-Name 104 122	multiple sclerosis
-E7	Condition:T7 Name:T8
-T9	Condition 447 463	endocrinopathies
-T10	Condition-Name 447 463	endocrinopathies
-E9	Condition:T9 Name:T10
-T11	Condition 185 197	myelopathies
-T12	Condition-Name 185 197	myelopathies
-E11	Condition:T11 Name:T12
-T13	Condition 160 171	spinal cord
-T14	Condition-Name 160 171	spinal cord
-E13	Condition:T13 Name:T14
-T15	Condition 38 44	stroke
-T16	Condition-Name 38 44	stroke
-E15	Condition:T15 Name:T16
-T17	Language 321 324	fat
+E7	Condition:T7 Name:T33
+T8	Modifier 128 139	spinal cord
+E8	Modifier:T8
+T9	Condition 140 148	injuries
+E9	Condition:T9
+T10	Modifier 160 171	spinal cord
+E10	Modifier:T10
+T11	Condition 172 179	lesions
+E11	Condition:T11
+T12	Condition 185 197	myelopathies
+E12	Condition:T12
+T13	Condition 242 267	heterotopic ossifications
+E13	Condition:T13 Name:T36
+T14	Modifier 274 281	chronic
+E14	Modifier:T14
+T15	Drug 300 305	drugs
+E15	Drug:T15
+T16	Condition 313 333	promote fat increase
+E16	Condition:T16
+T17	Modifier 339 346	chronic
+E17	Modifier:T17
+T18	Drug 365 370	drugs
+E18	Drug:T18
+T19	Modifier 386 390	bone
+E19	Modifier:T19
+T20	Or 391 393	or
+E20	Or:T20
+T21	Modifier 394 400	muscle
+E21	Modifier:T21
+T22	Condition 401 405	loss
+E22	Condition:T22
+T23	Eq-Comparison 411 422	co-existing
+E23	Eq-Comparison:T23 Temporal-Period:T39
+T24	Other 423 428	other
+E24	Other:T24
+T25	Condition 429 437	diseases
+E25	Condition:T25 Name:T40
+T26	Condition 447 463	endocrinopathies
+E26	Condition:T26 Name:T41
+T27	Condition 465 485	muscular dystrophies
+E27	Condition:T27 Name:T42
+T28	Negation 487 490	non
+E28	Negation:T28
+T29	Condition 491 520	alcoholic fatty liver disease
+E29	Condition:T29 Name:T43
+T30	Condition-Name 38 44	stroke
+T31	Condition-Name 47 70	cerebrovascular disease
+T32	Condition-Name 76 98	traumatic brain injury
+T33	Condition-Name 104 122	multiple sclerosis
+T34	Condition-Name 128 148	spinal cord injuries
+T35	Condition-Name 160 179	spinal cord lesions
+T36	Condition-Name 242 267	heterotopic ossifications
+T37	Polarity 325 333	increase
+A1	Polarity-Value T37 high
+T38	Condition-Name 394 405	muscle loss
+T39	Eq-Temporal-Period 414 422	existing
+A2	Eq-Temporal-Period-Value T39 present
+T40	Condition-Name 429 437	diseases
+T41	Condition-Name 447 463	endocrinopathies
+T42	Condition-Name 465 485	muscular dystrophies
+T43	Condition-Name 501 520	fatty liver disease

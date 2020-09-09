@@ -1,25 +1,63 @@
-T1	Condition 436 459	Subarachnoid hemorrhage
-T2	Condition-Name 436 459	Subarachnoid hemorrhage
-E1	Condition:T1 Name:T2
-T3	Procedure 114 136	mechanical ventilation
-T4	Procedure-Name 114 136	mechanical ventilation
-E3	Procedure:T3 Name:T4
-T5	Condition 470 485	Ischemic stroke
-T6	Condition-Name 470 485	Ischemic stroke
-E5	Condition:T5 Name:T6
-T7	Eq-Operator 29 30	≥
-A1	Eq-Operator-Value T7 GTEQ
-T8	Eq-Operator 141 142	≥
-A2	Eq-Operator-Value T8 GTEQ
-T9	Eq-Temporal-Unit 33 38	years
-A3	Eq-Temporal-Unit-Value T9 year
-T10	Age 25 28	Age
-E6	Age:T10
-T11	Eq-Value 30 32	18
-T12	Eq-Value 66 67	1
-T13	Eq-Value 71 73	12
-T14	Eq-Value 143 145	48
-T15	Eq-Comparison 29 38	≥18 years
-E7	Eq-Comparison:T15 Operator:T7 Temporal-Unit:T9 Value:T11
-T16	Eq-Comparison 141 145	≥ 48
-E8	Eq-Comparison:T16 Operator:T8 Value:T14
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 29 38	≥18 years
+E2	Eq-Comparison:T2 Operator:T20 Temporal-Unit:T21
+T3	Age 39 42	old
+E3	Age:T3
+T4	Encounter 53 62	Admission
+E4	Encounter:T4
+T5	Eq-Comparison 66 87	1 of 12 participating
+E5	Eq-Comparison:T5 Value:T24 Value:T25
+T6	Procedure 88 92	ICUs
+E6	Procedure:T6
+T7	And 94 97	AND
+E7	And:T7
+T8	Procedure 114 136	mechanical ventilation
+E8	Procedure:T8 Name:T27
+T9	Eq-Comparison 141 151	≥ 48 hours
+E9	Eq-Comparison:T9 Operator:T28 Value:T29 Temporal-Unit:T30
+T10	Modifier 153 173	without interruption
+E10	Modifier:T10
+T11	And 176 179	AND
+E11	And:T11
+T12	Condition 194 216	independent ambulatory
+E12	Condition:T12
+T13	Condition 315 337	Cardiopulmonary arrest
+E13	Condition:T13 Name:T32
+T14	Condition 348 376	Raised intracranial pressure
+E14	Condition:T14 Name:T33
+T15	Modifier 393 405	neurological
+E15	Modifier:T15
+T16	Encounter 406 415	admission
+E16	Encounter:T16
+T17	Condition 436 459	Subarachnoid hemorrhage
+E17	Condition:T17 Name:T36
+T18	Modifier 470 478	Ischemic
+E18	Modifier:T18
+T19	Condition 479 485	stroke
+E19	Condition:T19
+T20	Eq-Operator 29 32	≥18
+A1	Eq-Operator-Value T20 GTEQ
+T21	Eq-Temporal-Unit 33 38	years
+A2	Eq-Temporal-Unit-Value T21 year
+T22	Encounter-Type 53 62	Admission
+A3	Encounter-Type-Value T22 inpatient
+T23	Eq-Operator 63 65	to
+A4	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Value 66 67	1
+T25	Eq-Value 71 73	12
+T26	Observation-Name 88 92	ICUs
+T27	Procedure-Name 114 136	mechanical ventilation
+T28	Eq-Operator 141 142	≥
+A5	Eq-Operator-Value T28 GTEQ
+T29	Eq-Value 143 145	48
+T30	Eq-Temporal-Unit 146 151	hours
+A6	Eq-Temporal-Unit-Value T30 hour
+T31	Observation-Name 161 173	interruption
+T32	Condition-Name 315 337	Cardiopulmonary arrest
+T33	Condition-Name 355 376	intracranial pressure
+T34	Severity 387 392	Acute
+A7	Severity-Value T34 severe
+T35	Condition-Name 393 415	neurological admission
+T36	Condition-Name 436 459	Subarachnoid hemorrhage
+T37	Condition-Name 470 485	Ischemic stroke

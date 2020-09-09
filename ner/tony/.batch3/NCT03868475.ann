@@ -1,30 +1,261 @@
-T1	Procedure 129 137	excision
-T2	Procedure-Name 129 137	excision
-E1	Procedure:T1 Name:T2
-T3	Condition 349 352	per
-T4	Condition-Name 349 352	per
-E3	Condition:T3 Name:T4
-T5	Procedure 1425 1442	surgical excision
-T6	Procedure-Name 1425 1442	surgical excision
-E5	Procedure:T5 Name:T6
-T7	Procedure 1417 1421	VAPE
-T8	Procedure-Name 1417 1421	VAPE
-E7	Procedure:T7 Name:T8
-T9	Eq-Operator 298 310	greater than
-A1	Eq-Operator-Value T9 GT
-T11	Eq-Operator 1037 1038	>
-A3	Eq-Operator-Value T11 GT
-T13	Eq-Unit 557 559	mm
-T14	Age 36 39	age
-E8	Age:T14 
-T15	Eq-Value 40 42	18
-T16	Eq-Value 311 313	25
-T17	Eq-Value 554 556	20
-T18	Eq-Value 587 589	30
-T20	Eq-Value 1039 1040	4
-T21	Eq-Comparison 298 313	greater than 25
-E9	Eq-Comparison:T21 Operator:T9 Value:T16
-T22	Eq-Comparison 574 592	greater than 30 mm
-E10	Eq-Comparison:T22 Unit:T13 Value:T18
-T23	Eq-Comparison 1037 1040	> 4
-E11	Eq-Comparison:T23 Operator:T11 Value:T20
+T1	Eq-Comparison 31 42	over age 18
+E1	Eq-Comparison:T1 Value:T95
+T2	And 43 47	with
+E2	And:T2
+T3	Procedure 55 61	biopsy
+E3	Procedure:T3 Name:T96
+T4	Condition 69 79	borderline
+E4	Condition:T4
+T5	Or 80 82	or
+E5	Or:T5
+T6	Risk 88 92	risk
+E6	Risk:T6
+T7	Condition 93 106	breast lesion
+E7	Condition:T7 Name:T98
+T8	Assertion 112 120	requires
+E8	Assertion:T8
+A1	Assertion-Type-Value E8 hypothetical
+T9	Procedure 129 152	excision for management
+E9	Procedure:T9 Name:T99
+T10	And 258 261	who
+E10	And:T10
+T11	Risk 282 286	risk
+E11	Risk:T11
+T12	Eq-Comparison 298 314	greater than 25%
+E12	Eq-Comparison:T12 Operator:T102 Value:T103 Unit:T104
+T13	Risk 324 328	risk
+E13	Risk:T13
+T14	Modifier 332 338	breast
+E14	Modifier:T14
+T15	Condition 339 345	cancer
+E15	Condition:T15 Name:T105
+T16	Modifier 357 361	IBIS
+E16	Modifier:T16
+T17	Modifier 363 383	International Breast
+E17	Modifier:T17
+T18	Condition 384 390	Cancer
+E18	Condition:T18
+T19	Study 404 409	Study
+E19	Study:T19
+T20	Modifier 411 417	Breast
+E20	Modifier:T20
+T21	Condition 418 424	Cancer
+E21	Condition:T21 Name:T106
+T22	Procedure 451 460	Pathology
+E22	Procedure:T22
+T23	Assertion 469 476	felt to
+E23	Assertion:T23
+A2	Assertion-Type-Value E23 hypothetical
+T24	Procedure 496 503	imaging
+E24	Procedure:T24 Name:T109
+T25	Eq-Comparison 509 518	Extensive
+E25	Eq-Comparison:T25
+T26	Condition 519 533	calcifications
+E26	Condition:T26
+T27	Eq-Comparison 544 559	more than 20 mm
+E27	Eq-Comparison:T27 Operator:T111 Value:T112 Unit:T113
+T28	Or 560 566	and/or
+E28	Or:T28
+T29	Observation 567 573	masses
+E29	Observation:T29
+T30	Eq-Comparison 574 592	greater than 30 mm
+E30	Eq-Comparison:T30 Operator:T114 Value:T115 Unit:T116
+T31	Condition 612 619	lesions
+E31	Condition:T31 Name:T117
+T32	Negation 628 636	excluded
+E32	Negation:T32
+T33	Risk 662 666	risk
+E33	Risk:T33
+T34	Condition 670 679	upstaging
+E34	Condition:T34
+T35	Condition 681 688	lesions
+E35	Condition:T35 Name:T119
+T36	Exception 690 700	other than
+E36	Exception:T36
+T37	Condition 701 714	fibroadenomas
+E37	Condition:T37 Name:T120
+T38	Condition 716 725	phyllodes
+E38	Condition:T38
+T39	Or 726 729	and
+E39	Or:T39
+T40	Condition 730 740	papillomas
+E40	Condition:T40 Name:T121
+T41	Condition 769 782	palpable mass
+E41	Condition:T41 Name:T122
+T42	Condition 784 787	ADH
+E42	Condition:T42 Name:T123
+T43	Condition 798 816	ductal hyperplasia
+E43	Condition:T43 Name:T124
+T44	And 818 822	with
+E44	And:T44
+T45	Modifier 823 832	high-risk
+E45	Modifier:T45
+T46	Condition 833 841	features
+E46	Condition:T46
+T47	Condition 843 846	ADH
+E47	Condition:T47 Name:T126
+T48	And 847 851	with
+E48	And:T48
+T49	Condition 852 866	zonal necrosis
+E49	Condition:T49 Name:T127
+T50	Condition 880 898	cytological atypia
+E50	Condition:T50 Name:T129
+T51	Or 899 901	or
+E51	Or:T51
+T52	Eq-Comparison 902 918	more than 2 foci
+E52	Eq-Comparison:T52 Operator:T130 Value:T131 Unit:T132
+T53	Procedure 921 925	LCIS
+E53	Procedure:T53
+T54	Modifier 927 934	lobular
+E54	Modifier:T54
+T55	Condition 935 944	carcinoma
+E55	Condition:T55 Name:T134
+T56	Procedure 948 952	situ
+E56	Procedure:T56
+T57	And 954 958	with
+E57	And:T57
+T58	Modifier 959 968	high-risk
+E58	Modifier:T58
+T59	Condition 969 977	features
+E59	Condition:T59
+T60	Condition 995 998	ADH
+E60	Condition:T60 Name:T136
+T61	Condition 1000 1016	pleomorphic LCIS
+E61	Condition:T61 Name:T137
+T62	Condition 1018 1032	zonal necrosis
+E62	Condition:T62 Name:T138
+T63	And 1033 1036	and
+E63	And:T63
+T64	Eq-Comparison 1037 1040	> 4
+E64	Eq-Comparison:T64 Operator:T139 Value:T140
+T65	Modifier 1041 1045	foci
+E65	Modifier:T65
+T66	Or 1047 1049	or
+E66	Or:T66
+T67	Modifier 1050 1060	discordant
+E67	Modifier:T67
+T68	Procedure 1066 1073	imaging
+E68	Procedure:T68 Name:T142
+T69	Condition 1075 1084	papilloma
+E69	Condition:T69
+T70	Modifier 1090 1096	atypia
+E70	Modifier:T70
+T71	Or 1098 1101	and
+E71	Or:T71
+T72	Modifier 1102 1114	spindle cell
+E72	Modifier:T72
+T73	Condition 1115 1121	lesion
+E73	Condition:T73
+T74	Condition 1160 1167	Lesions
+E74	Condition:T74 Name:T144
+T75	Assertion 1177 1187	suspicious
+E75	Assertion:T75
+A3	Assertion-Type-Value E75 possible
+T76	Condition 1192 1202	borderline
+E76	Condition:T76
+T77	Or 1203 1205	or
+E77	Or:T77
+T78	Modifier 1206 1215	malignant
+E78	Modifier:T78
+T79	Condition 1216 1225	Phyllodes
+E79	Condition:T79 Name:T145
+T80	Condition 1227 1231	DCIS
+E80	Condition:T80 Name:T146
+T81	Condition 1233 1249	ductal carcinoma
+E81	Condition:T81 Name:T147
+T82	Modifier 1253 1257	situ
+E82	Modifier:T82
+T83	Modifier 1260 1276	invasive mammary
+E83	Modifier:T83
+T84	Condition 1277 1286	carcinoma
+E84	Condition:T84
+T85	Or 1288 1290	or
+E85	Or:T85
+T86	Modifier 1291 1313	encapsulated papillary
+E86	Modifier:T86
+T87	Condition 1314 1323	carcinoma
+E87	Condition:T87
+T88	Condition 1333 1339	lesion
+E88	Condition:T88 Name:T150
+T89	Negation 1401 1404	not
+E89	Negation:T89
+T90	Assertion 1405 1413	amenable
+E90	Assertion:T90
+A4	Assertion-Type-Value E90 hypothetical
+T91	Modifier 1417 1421	VAPE
+E91	Modifier:T91
+T92	Or 1422 1424	or
+E92	Or:T92
+T93	Procedure 1425 1442	surgical excision
+E93	Procedure:T93 Name:T151
+T94	Life-Stage-And-Gender 25 30	Women
+A5	Life-Stage-And-Gender-Type T94 female
+T95	Eq-Value 40 42	18
+T96	Procedure-Name 55 61	biopsy
+T97	Polarity 83 87	high
+A6	Polarity-Value T97 high
+T98	Condition-Name 93 106	breast lesion
+T99	Procedure-Name 129 152	excision for management
+T100	Life-Stage-And-Gender 252 257	Women
+A7	Life-Stage-And-Gender-Type T100 female
+T101	Polarity 277 281	high
+A8	Polarity-Value T101 high
+T102	Eq-Operator 298 310	greater than
+A9	Eq-Operator-Value T102 GT
+T103	Eq-Value 311 313	25
+T104	Eq-Unit 313 314	%
+T105	Condition-Name 339 345	cancer
+T106	Condition-Name 418 424	Cancer
+T107	Procedure-Name 430 445	Evaluation Tool
+T108	Condition-Name 451 460	Pathology
+T109	Procedure-Name 496 503	imaging
+T110	Condition-Name 509 533	Extensive calcifications
+T111	Eq-Operator 544 553	more than
+A10	Eq-Operator-Value T111 GT
+T112	Eq-Value 554 556	20
+T113	Eq-Unit 557 559	mm
+T114	Eq-Operator 574 586	greater than
+A11	Eq-Operator-Value T114 GT
+T115	Eq-Value 587 589	30
+T116	Eq-Unit 590 592	mm
+T117	Condition-Name 612 619	lesions
+T118	Polarity 652 661	increased
+A12	Polarity-Value T118 high
+T119	Condition-Name 681 688	lesions
+T120	Condition-Name 701 714	fibroadenomas
+T121	Condition-Name 730 740	papillomas
+T122	Condition-Name 769 782	palpable mass
+T123	Condition-Name 784 787	ADH
+T124	Condition-Name 798 816	ductal hyperplasia
+T125	Polarity 823 827	high
+A13	Polarity-Value T125 high
+T126	Condition-Name 843 846	ADH
+T127	Condition-Name 852 866	zonal necrosis
+T128	Severity 868 879	significant
+A14	Severity-Value T128 severe
+T129	Condition-Name 880 898	cytological atypia
+T130	Eq-Operator 902 911	more than
+A15	Eq-Operator-Value T130 GT
+T131	Eq-Value 912 913	2
+T132	Eq-Unit 914 918	foci
+T133	Condition-Name 921 925	LCIS
+T134	Condition-Name 935 944	carcinoma
+T135	Polarity 959 963	high
+A16	Polarity-Value T135 high
+T136	Condition-Name 995 998	ADH
+T137	Condition-Name 1000 1016	pleomorphic LCIS
+T138	Condition-Name 1018 1032	zonal necrosis
+T139	Eq-Operator 1037 1038	>
+A17	Eq-Operator-Value T139 GT
+T140	Eq-Value 1039 1040	4
+T141	Eq-Unit 1041 1045	foci
+T142	Procedure-Name 1066 1073	imaging
+T143	Condition-Name 1102 1121	spindle cell lesion
+T144	Condition-Name 1160 1167	Lesions
+T145	Condition-Name 1216 1225	Phyllodes
+T146	Condition-Name 1227 1231	DCIS
+T147	Condition-Name 1233 1249	ductal carcinoma
+T148	Condition-Name 1269 1286	mammary carcinoma
+T149	Condition-Name 1304 1323	papillary carcinoma
+T150	Condition-Name 1333 1339	lesion
+T151	Procedure-Name 1425 1442	surgical excision

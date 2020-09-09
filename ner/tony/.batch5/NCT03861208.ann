@@ -1,5 +1,23 @@
-T1	Life-Stage-And-Gender 33 41	children
-A1	Life-Stage-And-Gender-Type T1 child
-T2	Condition 135 143	appetite
-T3	Condition-Name 135 143	appetite
-E2	Condition:T2 Name:T3
+T1	Negation 67 69	no
+E1	Negation:T1
+T2	Allergy 75 84	allergies
+E2	Allergy:T2
+T3	Negation 90 92	no
+E3	Negation:T3
+T4	Drug 93 104	medications
+E4	Drug:T4
+T5	Condition 117 125	behavior
+E5	Condition:T5
+T6	Or 125 126	/
+E6	Or:T6
+T7	Modifier 126 134	learning
+E7	Modifier:T7
+T8	Or 134 135	/
+E8	Or:T8
+T9	Condition 135 143	appetite
+E9	Condition:T9
+T10	Condition-Name 25 32	healthy
+T11	Life-Stage-And-Gender 33 41	children
+A1	Life-Stage-And-Gender-Type T11 child
+T12	Stability 110 116	affect
+A2	Stability-Value T12 change

@@ -1,29 +1,106 @@
-T1	Condition 68 98	idiopathic Parkinson's Disease
-T2	Condition-Name 68 98	idiopathic Parkinson's Disease
-E1	Condition:T1 Name:T2
-T3	Procedure 672 696	Mental State Examination
-T4	Procedure-Name 672 696	Mental State Examination
-E3	Procedure:T3 Name:T4
-T5	Condition 269 289	neurological disease
-T6	Condition-Name 269 289	neurological disease
-E5	Condition:T5 Name:T6
-T7	Condition 376 393	metabolic disease
-T8	Condition-Name 376 393	metabolic disease
-E7	Condition:T7 Name:T8
-T9	Condition 712 721	pregnancy
-T10	Condition-Name 712 721	pregnancy
-E9	Condition:T9 Name:T10
-T11	Language 176 183	English
-T12	Eq-Operator 139 148	less than
-A1	Eq-Operator-Value T12 LT
-T13	Eq-Operator 703 704	<
-A2	Eq-Operator-Value T13 LT
-T14	Eq-Temporal-Unit 28 33	years
-A3	Eq-Temporal-Unit-Value T14 year
-T15	Age 37 40	age
-E10	Age:T15
-T16	Eq-Value 25 27	18
-T17	Eq-Value 161 162	3
-T18	Eq-Value 704 706	24
-T19	Eq-Comparison 703 706	<24
-E11	Eq-Comparison:T19 Operator:T13 Value:T18
+T1	Eq-Comparison 25 49	18 years of age or older
+E1	Eq-Comparison:T1 Value:T35 Temporal-Unit:T36 Operator:T37
+T2	Modifier 68 78	idiopathic
+E2	Modifier:T2
+T3	Condition 79 98	Parkinson's Disease
+E3	Condition:T3
+T4	Observation 118 138	Hoehn and Yahr score
+E4	Observation:T4 Name:T41 Name:T42
+T5	Eq-Comparison 139 162	less than or equal to 3
+E5	Eq-Comparison:T5 Operator:T43 Operator:T44 Value:T45
+T6	Condition 189 205	able to ambulate
+E6	Condition:T6 Name:T47
+T7	Condition 269 289	neurological disease
+E7	Condition:T7 Name:T49
+T8	Exception 300 310	other than
+E8	Exception:T8
+T9	Condition 311 313	PD
+E9	Condition:T9 Name:T50
+T10	Modifier 319 331	uncontrolled
+E10	Modifier:T10
+T11	Modifier 332 346	cardiovascular
+E11	Modifier:T11
+T12	Modifier 348 357	pulmonary
+E12	Modifier:T12
+T13	Modifier 359 371	neurological
+E13	Modifier:T13
+T14	Or 373 375	or
+E14	Or:T14
+T15	Modifier 376 385	metabolic
+E15	Modifier:T15
+T16	Condition 386 393	disease
+E16	Condition:T16
+T17	Assertion 400 403	may
+E17	Assertion:T17
+A1	Assertion-Type-Value E17 hypothetical
+T18	Assertion 415 425	ability to
+E18	Assertion:T18
+A2	Assertion-Type-Value E18 hypothetical
+T19	Procedure 426 434	exercise
+E19	Procedure:T19
+T20	Or 435 437	or
+E20	Or:T20
+T21	Contraindication 459 474	contraindicated
+E21	Contraindication:T21
+T22	Drug 484 495	medications
+E22	Drug:T22
+T23	Drug 505 518	beta-blockers
+E23	Drug:T23 Name:T53
+T24	Assertion 525 528	may
+E24	Assertion:T24
+A3	Assertion-Type-Value E24 hypothetical
+T25	Modifier 535 537	HR
+E25	Modifier:T25
+T26	Or 538 540	or
+E26	Or:T26
+T27	Observation 541 555	metabolic data
+E27	Observation:T27
+T28	Modifier 561 570	cognitive
+E28	Modifier:T28
+T29	Or 571 573	or
+E29	Or:T29
+T30	Modifier 574 585	psychiatric
+E30	Modifier:T30
+T31	Condition 586 596	impairment
+E31	Condition:T31
+T32	Observation 667 696	mini-Mental State Examination
+E32	Observation:T32
+T33	Eq-Comparison 697 706	score <24
+E33	Eq-Comparison:T33 Operator:T57 Value:T58
+T34	Condition 712 721	pregnancy
+E34	Condition:T34 Name:T59
+T35	Eq-Value 25 27	18
+T36	Eq-Temporal-Unit 28 33	years
+A4	Eq-Temporal-Unit-Value T36 year
+T37	Eq-Operator 41 49	or older
+A5	Eq-Operator-Value T37 GTEQ
+T38	Condition-Name 68 98	idiopathic Parkinson's Disease
+T39	Severity 100 104	mild
+A6	Severity-Value T39 mild
+T40	Severity 108 116	moderate
+A7	Severity-Value T40 moderate
+T41	Observation-Name 118 123	Hoehn
+T42	Observation-Name 128 138	Yahr score
+A8	Observation-Type-Value T42 clinical-score
+T43	Eq-Operator 139 148	less than
+A9	Eq-Operator-Value T43 LT
+T44	Eq-Operator 149 157	or equal
+A10	Eq-Operator-Value T44 GTEQ
+T45	Eq-Value 161 162	3
+T46	Language 176 183	English
+T47	Condition-Name 189 205	able to ambulate
+T48	Procedure-Name 227 243	assistive device
+T49	Condition-Name 269 289	neurological disease
+T50	Condition-Name 311 313	PD
+T51	Condition-Name 376 393	metabolic disease
+T52	Stability 404 410	impact
+A11	Stability-Value T52 change
+T53	Drug-Name 505 518	beta-blockers
+T54	Observation-Name 529 537	alter HR
+T55	Condition-Name 574 596	psychiatric impairment
+T56	Observation-Name 667 702	mini-Mental State Examination score
+A12	Observation-Type-Value T56 clinical-score
+T57	Eq-Operator 703 704	<
+A13	Eq-Operator-Value T57 LT
+T58	Eq-Value 704 706	24
+T59	Condition-Name 712 721	pregnancy

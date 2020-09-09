@@ -1,58 +1,132 @@
-T1	Procedure 95 123	coronary artery bypass graft
-T2	Procedure-Name 95 123	coronary artery bypass graft
-E1	Procedure:T1 Name:T2
-T3	Procedure 420 442	cardiopulmonary bypass
-T4	Procedure-Name 420 442	cardiopulmonary bypass
-E3	Procedure:T3 Name:T4
-T5	Procedure 372 391	surgical procedures
-T6	Procedure-Name 372 391	surgical procedures
-E5	Procedure:T5 Name:T6
-T7	Condition 519 537	atrial tachycardia
-T8	Condition-Name 519 537	atrial tachycardia
-E7	Condition:T7 Name:T8
-T9	Procedure 693 711	surgical treatment
-T10	Procedure-Name 693 711	surgical treatment
-E9	Procedure:T9 Name:T10
-T11	Procedure 131 148	revascularization
-T12	Procedure-Name 131 148	revascularization
-E11	Procedure:T11 Name:T12
-T13	Procedure 770 784	Maze procedure
-T14	Procedure-Name 770 784	Maze procedure
-E13	Procedure:T13 Name:T14
-T15	Procedure 77 90	heart surgery
-T16	Procedure-Name 77 90	heart surgery
-E15	Procedure:T15 Name:T16
-T17	Procedure 402 415	heart surgery
-T18	Procedure-Name 402 415	heart surgery
-E17	Procedure:T17 Name:T18
-T19	Procedure 169 180	replacement
-T20	Procedure-Name 169 180	replacement
-E19	Procedure:T19 Name:T20
-T21	Procedure 217 228	replacement
-T22	Procedure-Name 217 228	replacement
-E21	Procedure:T21 Name:T22
-T23	Condition 657 668	arrhythmias
-T24	Condition-Name 657 668	arrhythmias
-E23	Condition:T23 Name:T24
-T25	Procedure 757 766	isolation
-T26	Procedure-Name 757 766	isolation
-E25	Procedure:T25 Name:T26
-T27	Procedure 159 165	repair
-T28	Procedure-Name 159 165	repair
-E27	Procedure:T27 Name:T28
-T29	Procedure 207 213	repair
-T30	Procedure-Name 207 213	repair
-E29	Procedure:T29 Name:T30
-T31	Condition 259 265	repair
-T32	Condition-Name 259 265	repair
-E31	Condition:T31 Name:T32
-T33	Procedure 72 76	open
-T34	Procedure-Name 72 76	open
-E33	Procedure:T33 Name:T34
-T35	Procedure 125 129	CABG
-T36	Procedure-Name 125 129	CABG
-E35	Procedure:T35 Name:T36
-T37	Procedure 191 195	CABG
-T38	Procedure-Name 191 195	CABG
-E37	Procedure:T37 Name:T38
-T39	Eq-Value 558 560	30
+T1	Eq-Comparison 34 43	scheduled
+E1	Eq-Comparison:T1 Temporal-Period:T45
+T2	Modifier 48 58	first-time
+E2	Modifier:T2
+T3	Modifier 59 76	non-emergent open
+E3	Modifier:T3
+T4	Procedure 77 90	heart surgery
+E4	Procedure:T4 Name:T46
+T5	Procedure 95 123	coronary artery bypass graft
+E5	Procedure:T5 Name:T47
+T6	Procedure 125 129	CABG
+E6	Procedure:T6 Name:T48
+T7	Procedure 131 148	revascularization
+E7	Procedure:T7 Name:T49
+T8	Procedure 150 165	valvular repair
+E8	Procedure:T8 Name:T50
+T9	Or 166 168	or
+E9	Or:T9
+T10	Procedure 169 180	replacement
+E10	Procedure:T10 Name:T51
+T11	Procedure 182 195	combined CABG
+E11	Procedure:T11 Name:T52
+T12	Procedure 201 213	valve repair
+E12	Procedure:T12 Name:T53
+T13	Or 214 216	or
+E13	Or:T13
+T14	Modifier 217 228	replacement
+E14	Modifier:T14
+T15	Or 230 232	or
+E15	Or:T15
+T16	Procedure 233 265	valve sparing aortic root repair
+E16	Procedure:T16 Name:T55
+T17	Condition 278 290	sinus rhythm
+E17	Condition:T17 Name:T57
+T18	Negation 296 298	No
+E18	Negation:T18
+T19	Eq-Comparison 310 317	history
+E19	Eq-Comparison:T19 Temporal-Period:T58
+T20	Condition 321 340	atrial fibrillation
+E20	Condition:T20 Name:T59
+T21	Eq-Comparison 366 371	Prior
+E21	Eq-Comparison:T21 Temporal-Period:T60
+T22	Procedure 372 391	surgical procedures
+E22	Procedure:T22 Name:T61
+T23	Procedure 402 415	heart surgery
+E23	Procedure:T23 Name:T62
+T24	Or 416 419	and
+E24	Or:T24
+T25	Procedure 420 442	cardiopulmonary bypass
+E25	Procedure:T25 Name:T63
+T26	Eq-Comparison 452 457	prior
+E26	Eq-Comparison:T26 Temporal-Period:T64
+T27	Eq-Comparison 469 476	history
+E27	Eq-Comparison:T27 Temporal-Period:T65
+T28	Condition 480 499	atrial fibrillation
+E28	Condition:T28 Name:T66
+T29	Condition 501 515	atrial flutter
+E29	Condition:T29 Name:T67
+T30	Or 516 518	or
+E30	Or:T30
+T31	Condition 519 537	atrial tachycardia
+E31	Condition:T31
+T32	Eq-Comparison 546 568	longer than 30 seconds
+E32	Eq-Comparison:T32 Operator:T69 Value:T70 Unit:T71
+T33	Eq-Comparison 574 587	Prior history
+E33	Eq-Comparison:T33 Temporal-Period:T72
+T34	Drug 591 601	Amiodarone
+E34	Drug:T34 Name:T73
+T35	Procedure 602 611	treatment
+E35	Procedure:T35
+T36	Condition 634 656	supraventricular tachy
+E36	Condition:T36 Name:T74
+T37	Condition 657 668	arrhythmias
+E37	Condition:T37 Name:T75
+T38	Assertion 683 692	requiring
+E38	Assertion:T38
+A1	Assertion-Type-Value E38 hypothetical
+T39	Procedure 693 711	surgical treatment
+E39	Procedure:T39 Name:T76
+T40	Condition 715 733	atrial arrhythmias
+E40	Condition:T40 Name:T77
+T41	Condition 742 766	pulmonary vein isolation
+E41	Condition:T41 Name:T78
+T42	Or 767 769	or
+E42	Or:T42
+T43	Modifier 770 774	Maze
+E43	Modifier:T43
+T44	Procedure 775 784	procedure
+E44	Procedure:T44
+T45	Eq-Temporal-Period 34 43	scheduled
+A2	Eq-Temporal-Period-Value T45 future
+T46	Procedure-Name 83 90	surgery
+T47	Procedure-Name 95 123	coronary artery bypass graft
+T48	Procedure-Name 125 129	CABG
+T49	Procedure-Name 131 148	revascularization
+T50	Procedure-Name 150 165	valvular repair
+T51	Procedure-Name 169 180	replacement
+T52	Procedure-Name 191 195	CABG
+T53	Procedure-Name 201 213	valve repair
+T54	Procedure-Name 217 228	replacement
+T55	Procedure-Name 247 265	aortic root repair
+T56	Polarity 271 277	Normal
+A3	Polarity-Value T56 normal
+T57	Condition-Name 278 290	sinus rhythm
+T58	Eq-Temporal-Period 310 317	history
+A4	Eq-Temporal-Period-Value T58 past
+T59	Condition-Name 321 340	atrial fibrillation
+T60	Eq-Temporal-Period 366 371	Prior
+A5	Eq-Temporal-Period-Value T60 past
+T61	Procedure-Name 372 391	surgical procedures
+T62	Procedure-Name 402 415	heart surgery
+T63	Procedure-Name 420 442	cardiopulmonary bypass
+T64	Eq-Temporal-Period 452 457	prior
+A6	Eq-Temporal-Period-Value T64 past
+T65	Eq-Temporal-Period 469 476	history
+A7	Eq-Temporal-Period-Value T65 past
+T66	Condition-Name 480 499	atrial fibrillation
+T67	Condition-Name 501 515	atrial flutter
+T68	Condition-Name 519 545	atrial tachycardia lasting
+T69	Eq-Operator 546 557	longer than
+A8	Eq-Operator-Value T69 GT
+T70	Eq-Value 558 560	30
+T71	Eq-Unit 561 568	seconds
+T72	Eq-Temporal-Period 574 587	Prior history
+A9	Eq-Temporal-Period-Value T72 past
+T73	Drug-Name 591 601	Amiodarone
+T74	Condition-Name 634 656	supraventricular tachy
+T75	Condition-Name 657 668	arrhythmias
+T76	Procedure-Name 693 711	surgical treatment
+T77	Condition-Name 715 733	atrial arrhythmias
+T78	Condition-Name 742 766	pulmonary vein isolation
+T79	Procedure-Name 770 784	Maze procedure

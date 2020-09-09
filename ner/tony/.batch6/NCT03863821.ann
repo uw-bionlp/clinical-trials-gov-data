@@ -1,15 +1,34 @@
-T1	Condition 176 197	neuromuscular disease
-T2	Condition-Name 176 197	neuromuscular disease
-E1	Condition:T1 Name:T2
-T3	Condition 109 122	heart failure
-T4	Condition-Name 109 122	heart failure
-E3	Condition:T3 Name:T4
-T5	Condition 30 34	COPD
-T6	Condition-Name 30 34	COPD
-E5	Condition:T5 Name:T6
-T7	Eq-Operator 146 152	within
-A1	Eq-Operator-Value T7 LTEQ
-T8	Eq-Value 153 154	3
-T9	Eq-Value 221 222	6
-T10	Eq-Comparison 146 154	within 3
-E6	Eq-Comparison:T10 Operator:T7 Value:T8
+T1	Condition 30 34	COPD
+E1	Condition:T1 Name:T12
+T2	And 35 39	with
+E2	And:T2
+T3	Observation 50 73	pulmonary function test
+E3	Observation:T3 Name:T13
+T4	Modifier 99 108	Left-side
+E4	Modifier:T4
+T5	Condition 109 122	heart failure
+E5	Condition:T5 Name:T14
+T6	Condition 128 145	COPD exacerbation
+E6	Condition:T6 Name:T15
+T7	Eq-Comparison 146 160	within 3 month
+E7	Eq-Comparison:T7 Operator:T16 Value:T17 Temporal-Unit:T18
+T8	Condition 176 197	neuromuscular disease
+E8	Condition:T8 Name:T19
+T9	Negation 203 209	Unable
+E9	Negation:T9
+T10	Observation 221 226	6-MWT
+E10	Observation:T10 Name:T20
+T11	Severity 25 29	Mild
+A1	Severity-Value T11 severe
+T12	Condition-Name 30 34	COPD
+T13	Observation-Name 50 73	pulmonary function test
+A2	Observation-Type-Value T13 lab
+T14	Condition-Name 109 122	heart failure
+T15	Condition-Name 128 145	COPD exacerbation
+T16	Eq-Operator 146 152	within
+A3	Eq-Operator-Value T16 LTEQ
+T17	Eq-Value 153 154	3
+T18	Eq-Temporal-Unit 155 160	month
+A4	Eq-Temporal-Unit-Value T18 month
+T19	Condition-Name 176 197	neuromuscular disease
+T20	Observation-Name 221 226	6-MWT

@@ -1,46 +1,173 @@
-T1	Condition 477 488	Dysfunction
-T2	Condition-Name 477 488	Dysfunction
-E1	Condition:T1 Name:T2
-T3	Procedure 243 253	procedures
-T4	Procedure-Name 243 253	procedures
-E3	Procedure:T3 Name:T4
-T5	Procedure 760 770	procedures
-T6	Procedure-Name 760 770	procedures
-E5	Procedure:T5 Name:T6
-T7	Procedure 309 313	MoCA
-T8	Procedure-Name 309 313	MoCA
-E7	Procedure:T7 Name:T8
-T9	Eq-Operator 324 325	>
-A1	Eq-Operator-Value T9 GT
-T10	Eq-Operator 730 731	<
-A2	Eq-Operator-Value T10 LT
-T11	Eq-Operator 1166 1167	>
-A3	Eq-Operator-Value T11 GT
-T12	Eq-Operator 1248 1249	<
-A4	Eq-Operator-Value T12 LT
-T13	Eq-Unit 1171 1174	lbs
-T14	Age 25 28	Age
-E8	Age:T14
-T15	Eq-Operator 31 32	-
-A5	Eq-Operator-Value T15 BETWEEN
-T16	Eq-Value 29 31	24
-T17	Eq-Value 32 34	55
-T18	Eq-Value 79 83	1960
-T19	Eq-Value 325 327	20
-T20	Eq-Value 459 460	1
-T21	Eq-Value 490 491	2
-T22	Eq-Value 517 518	3
-T23	Eq-Value 541 542	4
-T24	Eq-Value 731 733	19
-T25	Eq-Value 1167 1170	450
-T26	Eq-Value 1249 1251	20
-T27	Eq-Comparison 324 327	>20
-E9	Eq-Comparison:T27 Operator:T9 Value:T19
-T28	Eq-Comparison 730 733	<19
-E10	Eq-Comparison:T28 Operator:T10 Value:T24
-T29	Eq-Comparison 1166 1174	>450 lbs
-E11	Eq-Comparison:T29 Operator:T11 Unit:T13 Value:T25
-T30	Eq-Comparison 1248 1251	<20
-E12	Eq-Comparison:T30 Operator:T12 Value:T26
-T31	Eq-Comparison 29 32	24-
-E13	Eq-Comparison:T31 Operator:T15 Value:T16
+T1	Age 25 28	Age
+E1	Age:T1
+T2	Eq-Comparison 29 32	24-
+E2	Eq-Comparison:T2 Value:T57 Operator:T58
+T3	Eq-Comparison 101 106	Prior
+E3	Eq-Comparison:T3 Temporal-Period:T61
+T4	Procedure 276 305	Montreal Cognitive Assessment
+E4	Procedure:T4
+T5	Observation 307 313	T-MoCA
+E5	Observation:T5 Name:T65
+T6	Eq-Comparison 324 327	>20
+E6	Eq-Comparison:T6 Operator:T66 Value:T67
+T7	Criteria-Count 383 412	at least one of the following
+E7	Criteria-Count:T7
+T8	Condition 413 435	subjective afflictions
+E8	Condition:T8
+T9	Condition 462 488	Cardiovascular Dysfunction
+E9	Condition:T9 Name:T70
+T10	Condition 493 515	Neurocognitive Disease
+E10	Condition:T10 Name:T71
+T11	Modifier 520 527	Chronic
+E11	Modifier:T11
+T12	Condition 528 532	Pain
+E12	Condition:T12 Name:T73
+T13	Condition 544 555	Sleep Apnea
+E13	Condition:T13 Name:T74
+T14	Observation 717 723	T-MoCA
+E14	Observation:T14
+T15	Eq-Comparison 724 733	score <19
+E15	Eq-Comparison:T15 Operator:T76 Value:T77
+T16	Eq-Comparison 797 802	Prior
+E16	Eq-Comparison:T16 Temporal-Period:T78
+T17	Procedure 803 827	metallic device implants
+E17	Procedure:T17 Name:T79
+T18	Procedure 836 854	cardiac pacemakers
+E18	Procedure:T18 Name:T80
+T19	Or 854 855	/
+E19	Or:T19
+T20	Procedure 855 869	defibrillators
+E20	Procedure:T20 Name:T81
+T21	Or 870 872	or
+E21	Or:T21
+T22	Procedure 873 888	perfusion pumps
+E22	Procedure:T22 Name:T82
+T23	Assertion 894 897	can
+E23	Assertion:T23
+A1	Assertion-Type-Value E23 hypothetical
+T24	Negation 897 900	not
+E24	Negation:T24
+T25	Procedure 918 940	Ferromagnetic implants
+E25	Procedure:T25 Name:T83
+T26	Or 941 943	or
+E26	Or:T26
+T27	Procedure 944 951	objects
+E27	Procedure:T27
+T28	Assertion 957 963	cannot
+E28	Assertion:T28
+A2	Assertion-Type-Value E28 hypothetical
+T29	Procedure 967 974	removed
+E29	Procedure:T29
+T30	Procedure 983 997	aneurysm clips
+E30	Procedure:T30 Name:T84
+T31	Procedure 999 1013	surgical clips
+E31	Procedure:T31 Name:T85
+T32	Procedure 1015 1025	prostheses
+E32	Procedure:T32 Name:T86
+T33	Modifier 1027 1044	artificial hearts
+E33	Modifier:T33
+T34	Procedure 1046 1052	valves
+E34	Procedure:T34
+T35	Modifier 1058 1069	steel parts
+E35	Modifier:T35
+T36	Procedure 1071 1086	metal fragments
+E36	Procedure:T36
+T37	Condition 1088 1096	shrapnel
+E37	Condition:T37
+T38	Condition 1098 1105	tattoos
+E38	Condition:T38
+T39	Modifier 1106 1118	near the eye
+E39	Modifier:T39
+T40	Or 1120 1122	or
+E40	Or:T40
+T41	Modifier 1123 1137	steel implants
+E41	Modifier:T41
+T42	Or 1138 1140	or
+E42	Or:T42
+T43	Modifier 1141 1148	jewelry
+E43	Modifier:T43
+T44	Procedure 1154 1165	Body weight
+E44	Procedure:T44
+T45	Eq-Comparison 1166 1174	>450 lbs
+E45	Eq-Comparison:T45 Operator:T92 Value:T93 Unit:T94
+T46	Negation 1180 1189	Inability
+E46	Negation:T46
+T47	Observation 1206 1224	telephone screener
+E47	Observation:T47 Name:T95
+T48	Observation 1234 1246	T-MoCA score
+E48	Observation:T48
+T49	Eq-Comparison 1248 1251	<20
+E49	Eq-Comparison:T49 Operator:T97 Value:T98
+T50	Assertion 1300 1303	can
+E50	Assertion:T50
+A3	Assertion-Type-Value E50 hypothetical
+T51	Study 1356 1361	study
+E51	Study:T51
+T52	Modifier 1380 1390	behavioral
+E52	Modifier:T52
+T53	Or 1391 1393	or
+E53	Or:T53
+T54	Modifier 1394 1404	functional
+E54	Modifier:T54
+T55	Condition 1405 1415	disability
+E55	Condition:T55
+T56	Condition 1423 1443	cognitive impairment
+E56	Condition:T56 Name:T101
+T57	Eq-Value 29 31	24
+T58	Eq-Operator 31 32	-
+A4	Eq-Operator-Value T58 BETWEEN
+T59	Eq-Value 32 34	55
+T60	Observation-Name 60 73	football play
+T61	Eq-Temporal-Period 101 106	Prior
+A5	Eq-Temporal-Period-Value T61 past
+T62	Eq-Temporal-Recency 121 126	first
+A6	Eq-Temporal-Recency-Value T62 first-time
+T63	Observation-Name 127 160	Health and Wellness Questionnaire
+A7	Observation-Type-Value T63 survey-or-questionnaire
+T64	Observation-Name 276 305	Montreal Cognitive Assessment
+A8	Observation-Type-Value T64 clinical-score
+T65	Observation-Name 307 313	T-MoCA
+T66	Eq-Operator 324 325	>
+A9	Eq-Operator-Value T66 GT
+T67	Eq-Value 325 327	20
+T68	Eq-Operator 383 391	at least
+A10	Eq-Operator-Value T68 GTEQ
+T69	Eq-Value 392 395	one
+T70	Condition-Name 462 488	Cardiovascular Dysfunction
+T71	Condition-Name 493 515	Neurocognitive Disease
+T72	Eq-Value 517 518	3
+T73	Condition-Name 528 532	Pain
+T74	Condition-Name 544 555	Sleep Apnea
+T75	Observation-Name 717 729	T-MoCA score
+T76	Eq-Operator 730 731	<
+A11	Eq-Operator-Value T76 LT
+T77	Eq-Value 731 733	19
+T78	Eq-Temporal-Period 797 802	Prior
+A12	Eq-Temporal-Period-Value T78 past
+T79	Procedure-Name 803 827	metallic device implants
+T80	Procedure-Name 836 854	cardiac pacemakers
+T81	Procedure-Name 855 869	defibrillators
+T82	Procedure-Name 873 888	perfusion pumps
+T83	Procedure-Name 918 940	Ferromagnetic implants
+T84	Procedure-Name 983 997	aneurysm clips
+T85	Procedure-Name 999 1013	surgical clips
+T86	Procedure-Name 1015 1025	prostheses
+T87	Procedure-Name 1027 1044	artificial hearts
+T88	Condition-Name 1058 1069	steel parts
+T89	Condition-Name 1071 1086	metal fragments
+T90	Procedure-Name 1123 1137	steel implants
+T91	Observation-Name 1154 1165	Body weight
+A13	Observation-Type-Value T91 vital
+T92	Eq-Operator 1166 1167	>
+A14	Eq-Operator-Value T92 GT
+T93	Eq-Value 1167 1170	450
+T94	Eq-Unit 1171 1174	lbs
+T95	Observation-Name 1216 1224	screener
+T96	Observation-Name 1227 1246	- Low T-MoCA score
+T97	Eq-Operator 1248 1249	<
+A15	Eq-Operator-Value T97 LT
+T98	Eq-Value 1249 1251	20
+T99	Severity 1368 1379	Significant
+A16	Severity-Value T99 severe
+T100	Condition-Name 1394 1415	functional disability
+T101	Condition-Name 1423 1443	cognitive impairment

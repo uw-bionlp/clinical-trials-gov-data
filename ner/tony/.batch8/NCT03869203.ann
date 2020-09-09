@@ -1,32 +1,56 @@
-T1	Condition 155 184	osteonecrosis of femoral head
-T2	Condition-Name 155 184	osteonecrosis of femoral head
-E1	Condition:T1 Name:T2
-T3	Condition 65 92	degenerative osteoarthritis
-T4	Condition-Name 65 92	degenerative osteoarthritis
-E3	Condition:T3 Name:T4
-T5	Procedure 37 60	total knee arthroplasty
-T6	Procedure-Name 37 60	total knee arthroplasty
-E5	Procedure:T5 Name:T6
-T7	Procedure 110 132	total hip arthroplasty
-T8	Procedure-Name 110 132	total hip arthroplasty
-E7	Procedure:T7 Name:T8
-T9	Condition 271 293	inflammatory arthritis
-T10	Condition-Name 271 293	inflammatory arthritis
-E9	Condition:T9 Name:T10
-T11	Condition 304 324	rheumatoid arthritis
-T12	Condition-Name 304 324	rheumatoid arthritis
-E11	Condition:T11 Name:T12
-T13	Procedure 375 391	revision surgery
-T14	Procedure-Name 375 391	revision surgery
-E13	Procedure:T13 Name:T14
-T15	Condition 137 151	osteoarthritis
-T16	Condition-Name 137 151	osteoarthritis
-E15	Condition:T15 Name:T16
-T17	Procedure 101 109	elective
-T18	Procedure-Name 101 109	elective
-E17	Procedure:T17 Name:T18
-T19	Eq-Operator 223 224	>
-A1	Eq-Operator-Value T19 GT
-T20	Eq-Value 224 225	3
-T21	Eq-Comparison 223 225	>3
-E18	Eq-Comparison:T21 Operator:T19 Value:T20
+T1	Modifier 28 36	elective
+E1	Modifier:T1
+T2	Procedure 37 60	total knee arthroplasty
+E2	Procedure:T2 Name:T20
+T3	Modifier 65 77	degenerative
+E3	Modifier:T3
+T4	Condition 78 92	osteoarthritis
+E4	Condition:T4
+T5	Modifier 101 109	elective
+E5	Modifier:T5
+T6	Procedure 110 132	total hip arthroplasty
+E6	Procedure:T6 Name:T22
+T7	Condition 137 151	osteoarthritis
+E7	Condition:T7 Name:T23
+T8	Condition 155 184	osteonecrosis of femoral head
+E8	Condition:T8 Name:T24
+T9	Condition 213 216	ASA
+E9	Condition:T9 Name:T25
+T10	Eq-Comparison 217 225	class >3
+E10	Eq-Comparison:T10 Unit:T26 Operator:T27 Value:T28
+T11	Eq-Comparison 228 229	-
+E11	Eq-Comparison:T11
+T12	Condition 241 262	medical comorbidities
+E12	Condition:T12 Name:T30
+T13	Condition 271 293	inflammatory arthritis
+E13	Condition:T13 Name:T31
+T14	Condition 304 324	rheumatoid arthritis
+E14	Condition:T14 Name:T32
+T15	Condition 340 351	instability
+E15	Condition:T15
+T16	Modifier 355 359	knee
+E16	Modifier:T16
+T17	Or 360 362	or
+E17	Or:T17
+T18	Modifier 363 366	hip
+E18	Modifier:T18
+T19	Procedure 384 391	surgery
+E19	Procedure:T19 Name:T34
+T20	Procedure-Name 37 60	total knee arthroplasty
+T21	Condition-Name 65 92	degenerative osteoarthritis
+T22	Procedure-Name 110 132	total hip arthroplasty
+T23	Condition-Name 137 151	osteoarthritis
+T24	Condition-Name 155 179	osteonecrosis of femoral
+T25	Condition-Name 213 216	ASA
+T26	Eq-Unit 217 222	class
+T27	Eq-Operator 223 224	>
+A1	Eq-Operator-Value T27 GT
+T28	Eq-Value 224 225	3
+T29	Severity 234 240	severe
+A2	Severity-Value T29 severe
+T30	Condition-Name 249 262	comorbidities
+T31	Condition-Name 271 293	inflammatory arthritis
+T32	Condition-Name 304 324	rheumatoid arthritis
+T33	Severity 333 339	severe
+A3	Severity-Value T33 severe
+T34	Procedure-Name 384 391	surgery

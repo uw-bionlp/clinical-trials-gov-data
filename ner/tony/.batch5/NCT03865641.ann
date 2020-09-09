@@ -1,46 +1,158 @@
-T1	Procedure 94 104	skin graft
-T2	Procedure-Name 94 104	skin graft
-E1	Procedure:T1 Name:T2
-T3	Condition 698 724	peripheral nerve disorders
-T4	Condition-Name 698 724	peripheral nerve disorders
-E3	Condition:T3 Name:T4
-T5	Condition 543 567	musculoskeletal diseases
-T6	Condition-Name 543 567	musculoskeletal diseases
-E5	Condition:T5 Name:T6
-T7	Condition 590 610	rheumatoid arthritis
-T8	Condition-Name 590 610	rheumatoid arthritis
-E7	Condition:T7 Name:T8
-T9	Condition 795 815	cognitive impairment
-T10	Condition-Name 795 815	cognitive impairment
-E9	Condition:T9 Name:T10
-T11	Condition 629 643	joint diseases
-T12	Condition-Name 629 643	joint diseases
-E11	Condition:T11 Name:T12
-T13	Procedure 886 900	rehabilitation
-T14	Procedure-Name 886 900	rehabilitation
-E13	Procedure:T13 Name:T14
-T15	Procedure 841 853	intervention
-T16	Procedure-Name 841 853	intervention
-E15	Procedure:T15 Name:T16
-T17	Procedure 578 588	amputation
-T18	Procedure-Name 578 588	amputation
-E17	Procedure:T17 Name:T18
-T19	Condition 783 790	aphasia
-T20	Condition-Name 783 790	aphasia
-E19	Condition:T19 Name:T20
-T21	Eq-Operator 132 133	≥
-A1	Eq-Operator-Value T21 GTEQ
-T22	Eq-Operator 378 387	less than
-A2	Eq-Operator-Value T22 LT
-T23	Eq-Temporal-Unit 136 141	years
-A3	Eq-Temporal-Unit-Value T23 year
-T24	Eq-Temporal-Unit 390 396	months
-A4	Eq-Temporal-Unit-Value T24 month
-T25	Age 127 131	aged
-E20	Age:T25
-T26	Eq-Value 133 135	18
-T27	Eq-Value 388 389	6
-T28	Eq-Comparison 132 141	≥18 years
-E21	Eq-Comparison:T28 Operator:T21 Temporal-Unit:T23 Value:T26
-T29	Eq-Comparison 378 396	less than 6 months
-E22	Eq-Comparison:T29 Operator:T22 Temporal-Unit:T24 Value:T27
+T1	Condition 39 49	burn scars
+E1	Condition:T1 Name:T57
+T2	Modifier 54 71	re-epithelialized
+E2	Modifier:T2
+T3	Temporal-Connection 72 77	after
+E3	Temporal-Connection:T3
+A1	Temporal-Connection-Type-Value E3 after
+T4	Procedure 78 90	aseptic care
+E4	Procedure:T4 Name:T59
+T5	Or 91 93	or
+E5	Or:T5
+T6	Procedure 94 104	skin graft
+E6	Procedure:T6
+T7	Age 127 131	aged
+E7	Age:T7
+T8	Eq-Comparison 132 141	≥18 years
+E8	Eq-Comparison:T8 Operator:T60 Temporal-Unit:T61
+T9	Modifier 149 153	deep
+E9	Modifier:T9
+T10	Condition 154 171	partial-thickness
+E10	Condition:T10
+T11	Modifier 173 186	second-degree
+E11	Modifier:T11
+T12	Modifier 188 192	burn
+E12	Modifier:T12
+T13	Or 193 195	or
+E13	Or:T13
+T14	Condition 198 212	full thickness
+E14	Condition:T14
+T15	Modifier 214 226	third-degree
+E15	Modifier:T15
+T16	Condition 228 247	burn to their hands
+E16	Condition:T16 Name:T64
+T17	Condition 254 276	joint contracture(hand
+E17	Condition:T17
+T18	Or 277 280	and
+E18	Or:T18
+T19	Modifier 281 286	wrist
+E19	Modifier:T19
+T20	Encounter 301 312	transferred
+E20	Encounter:T20
+T21	Temporal-Connection 346 351	after
+E21	Temporal-Connection:T21
+A2	Temporal-Connection-Type-Value E21 after
+T22	Procedure 358 372	burn treatment
+E22	Procedure:T22 Name:T67
+T23	And 374 377	and
+E23	And:T23
+T24	Eq-Comparison 378 396	less than 6 months
+E24	Eq-Comparison:T24 Operator:T68 Value:T69 Temporal-Unit:T70
+T25	Temporal-Connection 397 402	since
+E25	Temporal-Connection:T25
+A3	Temporal-Connection-Type-Value E25 after
+T26	Eq-Comparison 407 412	onset
+E26	Eq-Comparison:T26 Temporal-Recency:T71
+T27	Modifier 420 424	burn
+E27	Modifier:T27
+T28	Condition 425 431	injury
+E28	Condition:T28 Name:T72
+T29	Eq-Comparison 475 488	fourth-degree
+E29	Eq-Comparison:T29
+T30	Condition 489 512	burns(involving muscles
+E30	Condition:T30 Name:T73
+T31	Modifier 514 521	tendons
+E31	Modifier:T31
+T32	Or 523 526	and
+E32	Or:T32
+T33	Modifier 527 531	bone
+E33	Modifier:T33
+T34	Condition 532 540	injuries
+E34	Condition:T34 Name:T74
+T35	Condition 543 576	musculoskeletal diseases(fracture
+E35	Condition:T35 Name:T75
+T36	Condition 578 588	amputation
+E36	Condition:T36
+T37	Condition 590 610	rheumatoid arthritis
+E37	Condition:T37 Name:T76
+T38	Or 612 615	and
+E38	Or:T38
+T39	Modifier 616 634	degenerative joint
+E39	Modifier:T39
+T40	Condition 635 643	diseases
+E40	Condition:T40
+T41	Modifier 652 663	burned hand
+E41	Modifier:T41
+T42	Or 665 667	or
+E42	Or:T42
+T43	Modifier 668 680	neurological
+E43	Modifier:T43
+T44	Condition 681 694	diseases(such
+E44	Condition:T44
+T45	Condition 698 724	peripheral nerve disorders
+E45	Condition:T45 Name:T78
+T46	Modifier 727 747	preexisting physical
+E46	Modifier:T46
+T47	Or 748 751	and
+E47	Or:T47
+T48	Modifier 752 763	psychologic
+E48	Modifier:T48
+T49	Condition 764 774	disability
+E49	Condition:T49
+T50	Condition 783 790	aphasia
+E50	Condition:T50 Name:T82
+T51	Or 791 794	and
+E51	Or:T51
+T52	Condition 795 815	cognitive impairment
+E52	Condition:T52 Name:T83
+T53	Assertion 821 826	could
+E53	Assertion:T53
+A4	Assertion-Type-Value E53 hypothetical
+T54	Procedure 841 853	intervention
+E54	Procedure:T54 Name:T85
+T55	And 856 859	and
+E55	And:T55
+T56	Procedure 867 900	pain impeding hand rehabilitation
+E56	Procedure:T56 Name:T88
+T57	Condition-Name 39 49	burn scars
+T58	Condition-Name 54 71	re-epithelialized
+T59	Procedure-Name 78 90	aseptic care
+T60	Eq-Operator 132 135	≥18
+A5	Eq-Operator-Value T60 GTEQ
+T61	Eq-Temporal-Unit 136 141	years
+A6	Eq-Temporal-Unit-Value T61 year
+T62	Eq-Unit 180 186	degree
+T63	Observation-Name 188 192	burn
+T64	Condition-Name 228 247	burn to their hands
+T65	Eq-Temporal-Period 301 312	transferred
+A7	Eq-Temporal-Period-Value T65 past
+T66	Severity 352 357	acute
+A8	Severity-Value T66 severe
+T67	Procedure-Name 358 372	burn treatment
+T68	Eq-Operator 378 387	less than
+A9	Eq-Operator-Value T68 LT
+T69	Eq-Value 388 389	6
+T70	Eq-Temporal-Unit 390 396	months
+A10	Eq-Temporal-Unit-Value T70 month
+T71	Eq-Temporal-Recency 407 412	onset
+A11	Eq-Temporal-Recency-Value T71 first-time
+T72	Condition-Name 425 431	injury
+T73	Condition-Name 489 512	burns(involving muscles
+T74	Condition-Name 532 540	injuries
+T75	Condition-Name 543 576	musculoskeletal diseases(fracture
+T76	Condition-Name 590 610	rheumatoid arthritis
+T77	Condition-Name 616 643	degenerative joint diseases
+T78	Condition-Name 698 724	peripheral nerve disorders
+T79	Condition-Name 727 747	preexisting physical
+T80	Condition-Name 752 774	psychologic disability
+T81	Severity 776 782	severe
+A12	Severity-Value T81 severe
+T82	Condition-Name 783 790	aphasia
+T83	Condition-Name 795 815	cognitive impairment
+T84	Stability 827 836	influence
+A13	Stability-Value T84 change
+T85	Procedure-Name 841 853	intervention
+T86	Severity 860 866	severe
+A14	Severity-Value T86 severe
+T87	Condition-Name 867 871	pain
+T88	Procedure-Name 886 900	rehabilitation

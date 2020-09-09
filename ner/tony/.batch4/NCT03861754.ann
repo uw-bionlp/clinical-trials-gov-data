@@ -1,23 +1,53 @@
 T1	Observation 25 40	Body mass Index
-T2	Observation-Name 25 40	Body mass Index
-E1	Observation:T1 Name:T2
-A1	Observation-Type-Value T2 vital
-T3	Condition 86 95	Pregnancy
-T4	Condition-Name 86 95	Pregnancy
-E3	Condition:T3 Name:T4
-T5	Condition 234 242	diabetes
-T6	Condition-Name 234 242	diabetes
-E5	Condition:T5 Name:T6
-T7	Eq-Operator 41 42	>
-A2	Eq-Operator-Value T7 GT
-T8	Age 51 54	Age
-E6	Age:T8
-T9	Eq-Operator 57 58	-
-A3	Eq-Operator-Value T9 BETWEEN
-T10	Eq-Value 43 45	30
-T11	Eq-Value 55 57	18
-T12	Eq-Value 58 60	64
-T13	Eq-Comparison 41 45	> 30
-E7	Eq-Comparison:T13 Operator:T7 Value:T10
-T14	Eq-Comparison 55 58	18-
-E8	Eq-Comparison:T14 Operator:T9 Value:T11
+E1	Observation:T1 Name:T19
+T2	Eq-Comparison 41 45	> 30
+E2	Eq-Comparison:T2 Operator:T20 Value:T21
+T3	Eq-Comparison 48 49	-
+E3	Eq-Comparison:T3 
+T4	Age 51 54	Age
+E4	Age:T4 
+T5	Eq-Comparison 55 58	18-
+E5	Eq-Comparison:T5 Value:T22 Operator:T23
+T6	Condition 86 95	Pregnancy
+E6	Condition:T6 Name:T25
+T7	Negation 108 115	reasons
+E7	Negation:T7 
+T8	Assertion 116 126	preventing
+E8	Assertion:T8 
+A1	Assertion-Type-Value E8 hypothetical
+T9	Observation 127 135	exercise
+E9	Observation:T9 
+T10	Or 136 139	and
+E10	Or:T10 
+T11	Observation 140 153	exercise test
+E11	Observation:T11 Name:T26
+T12	Drug 159 169	Medication
+E12	Drug:T12 
+T13	Negation 170 180	preventing
+E13	Negation:T13 
+T14	Observation 181 189	exercise
+E14	Observation:T14 
+T15	And 190 193	and
+E15	And:T15 
+T16	Observation 194 207	exercise test
+E16	Observation:T16 Name:T27
+T17	Eq-Comparison 213 223	Previously
+E17	Eq-Comparison:T17 Temporal-Period:T28
+T18	Condition 234 242	diabetes
+E18	Condition:T18 Name:T29
+T19	Observation-Name 25 40	Body mass Index
+A2	Observation-Type-Value T19 vital
+T20	Eq-Operator 41 42	>
+A3	Eq-Operator-Value T20 GT
+T21	Eq-Value 43 45	30
+T22	Eq-Value 55 57	18
+T23	Eq-Operator 57 58	-
+A4	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Value 58 60	64
+T25	Condition-Name 86 95	Pregnancy
+T26	Observation-Name 140 153	exercise test
+T27	Observation-Name 194 207	exercise test
+A5	Observation-Type-Value T27 lab
+T28	Eq-Temporal-Period 213 223	Previously
+A6	Eq-Temporal-Period-Value T28 past
+T29	Condition-Name 234 242	diabetes

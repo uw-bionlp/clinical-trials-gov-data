@@ -1,26 +1,79 @@
-T1	Condition 147 155	recovery
-T2	Condition-Name 147 155	recovery
-E1	Condition:T1 Name:T2
-T3	Procedure 248 267	peritoneal dialysis
-T4	Procedure-Name 248 267	peritoneal dialysis
-E3	Procedure:T3 Name:T4
-T5	Condition 300 315	liver cirrhosis
-T6	Condition-Name 300 315	liver cirrhosis
-E5	Condition:T5 Name:T6
-T7	Condition 319 332	heart failure
-T8	Condition-Name 319 332	heart failure
-E7	Condition:T7 Name:T8
-T9	Condition 401 407	cavity
-T10	Condition-Name 401 407	cavity
-E9	Condition:T9 Name:T10
-T11	Eq-Operator 29 30	>
-A1	Eq-Operator-Value T11 GT
-T12	Eq-Operator 177 186	less than
-A2	Eq-Operator-Value T12 LT
-T13	Eq-Temporal-Unit 33 38	years
-A3	Eq-Temporal-Unit-Value T13 year
-T14	Age 25 28	Age
-E10	Age:T14
-T15	Eq-Value 30 32	18
-T16	Eq-Comparison 29 38	>18 years
-E11	Eq-Comparison:T16 Operator:T11 Temporal-Unit:T13 Value:T15
+T1	Age 25 28	Age
+E1	Age:T1 
+T2	Eq-Comparison 29 38	>18 years
+E2	Eq-Comparison:T2 Operator:T26 Value:T27 Temporal-Unit:T28
+T3	Eq-Comparison 44 46	on
+E3	Eq-Comparison:T3 Temporal-Period:T29
+T4	Procedure 47 59	PD treatment
+E4	Procedure:T4 
+T5	Eq-Comparison 64 82	at least one month
+E5	Eq-Comparison:T5 Operator:T31 Value:T32 Temporal-Unit:T33
+T6	Condition 132 143	Peritonitis
+E6	Condition:T6 Name:T34
+T7	Or 144 146	or
+E7	Or:T7 
+T8	Condition 147 155	recovery
+E8	Condition:T8 
+T9	Condition 161 172	peritonitis
+E9	Condition:T9 Name:T35
+T10	Eq-Comparison 177 196	less than one month
+E10	Eq-Comparison:T10 Operator:T36 Value:T37 Temporal-Unit:T38
+T11	Eq-Comparison 210 215	intra
+E11	Eq-Comparison:T11 
+T12	Procedure 216 236	peritoneal treatment
+E12	Procedure:T12 Name:T40
+T13	Exception 237 242	apart
+E13	Exception:T13 
+T14	Procedure 248 267	peritoneal dialysis
+E14	Procedure:T14 Name:T41
+T15	Modifier 286 305	decompensated liver
+E15	Modifier:T15 
+T16	Condition 306 315	cirrhosis
+E16	Condition:T16 
+T17	Or 316 318	or
+E17	Or:T17 
+T18	Condition 319 332	heart failure
+E18	Condition:T18 Name:T43
+T19	Condition 351 375	extra peritoneal leakage
+E19	Condition:T19 Name:T44
+T20	Assertion 381 388	leakage
+E20	Assertion:T20 
+A1	Assertion-Type-Value E20 hypothetical
+T22	Procedure 392 407	thoracic cavity
+E21	Procedure:T22 Name:T45
+T23	Procedure 409 424	post peritoneal
+E22	Procedure:T23 Name:T46
+T24	Condition 426 432	hernia
+E23	Condition:T24 
+T25	Negation 381 388	leakage
+E24	Negation:T25 
+T26	Eq-Operator 29 30	>
+A2	Eq-Operator-Value T26 GT
+T27	Eq-Value 30 32	18
+T28	Eq-Temporal-Unit 33 38	years
+A3	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Temporal-Period 44 46	on
+A4	Eq-Temporal-Period-Value T29 present
+T30	Condition-Name 47 49	PD
+T31	Eq-Operator 64 72	at least
+A5	Eq-Operator-Value T31 GTEQ
+T32	Eq-Value 73 76	one
+T33	Eq-Temporal-Unit 77 82	month
+A6	Eq-Temporal-Unit-Value T33 month
+T34	Condition-Name 132 143	Peritonitis
+T35	Condition-Name 161 172	peritonitis
+T36	Eq-Operator 177 186	less than
+A7	Eq-Operator-Value T36 LT
+T37	Eq-Value 187 190	one
+T38	Eq-Temporal-Unit 191 196	month
+A8	Eq-Temporal-Unit-Value T38 month
+T39	Eq-Temporal-Period 203 205	On
+A9	Eq-Temporal-Period-Value T39 present
+T40	Procedure-Name 216 236	peritoneal treatment
+T41	Procedure-Name 248 267	peritoneal dialysis
+T42	Condition-Name 300 315	liver cirrhosis
+T43	Condition-Name 319 332	heart failure
+T44	Condition-Name 357 375	peritoneal leakage
+T45	Procedure-Name 392 407	thoracic cavity
+T46	Procedure-Name 414 424	peritoneal
+T47	Procedure-Name 426 432	hernia

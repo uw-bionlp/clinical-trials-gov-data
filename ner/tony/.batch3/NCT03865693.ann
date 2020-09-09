@@ -1,24 +1,78 @@
-T1	Condition 337 359	neuromuscular diseases
-T2	Condition-Name 337 359	neuromuscular diseases
-E1	Condition:T1 Name:T2
-T3	Condition 365 385	psychiatric disorder
-T4	Condition-Name 365 385	psychiatric disorder
-E3	Condition:T3 Name:T4
-T5	Condition 391 408	diabetes mellitus
-T6	Condition-Name 391 408	diabetes mellitus
-E5	Condition:T5 Name:T6
-T7	Condition 154 168	cardiac arrest
-T8	Condition-Name 154 168	cardiac arrest
-E7	Condition:T7 Name:T8
-T9	Procedure 214 227	brain surgery
-T10	Procedure-Name 214 227	brain surgery
-E9	Procedure:T9 Name:T10
-T11	Condition 242 255	heart disease
-T12	Condition-Name 242 255	heart disease
-E11	Condition:T11 Name:T12
-T13	Condition 472 481	pregnancy
-T14	Condition-Name 472 481	pregnancy
-E13	Condition:T13 Name:T14
-T15	Language 464 467	MRI
-T16	Eq-Value 82 83	5
-T17	Eq-Value 91 93	10
+T1	Condition 25 29	Burn
+E1	Condition:T1 Name:T27
+T2	Modifier 51 61	neuropatic
+E2	Modifier:T2
+T3	Condition 62 66	pain
+E3	Condition:T3
+T4	Eq-Comparison 73 83	at least 5
+E4	Eq-Comparison:T4 Operator:T30 Value:T31
+T5	Observation 124 127	NRS
+E5	Observation:T5 Name:T32
+T6	Condition 154 168	cardiac arrest
+E6	Condition:T6 Name:T33
+T7	Eq-Comparison 169 176	history
+E7	Eq-Comparison:T7 Temporal-Period:T34
+T8	Eq-Comparison 182 189	history
+E8	Eq-Comparison:T8 Temporal-Period:T35
+T9	Condition 193 210	neurologi disease
+E9	Condition:T9 Name:T36
+T10	Or 211 213	or
+E10	Or:T10
+T11	Modifier 214 219	brain
+E11	Modifier:T11
+T12	Procedure 220 227	surgery
+E12	Procedure:T12 Name:T37
+T13	Condition 242 255	heart disease
+E13	Condition:T13 Name:T39
+T14	Or 256 258	or
+E14	Or:T14
+T15	Procedure 273 290	cardiac pacemaker
+E15	Procedure:T15 Name:T40
+T16	Condition 296 310	pain resulting
+E16	Condition:T16 Name:T41
+T17	Other 316 321	other
+E17	Other:T17
+T18	Condition 322 328	causes
+E18	Condition:T18
+T19	Condition 337 359	neuromuscular diseases
+E19	Condition:T19 Name:T42
+T20	Condition 365 385	psychiatric disorder
+E20	Condition:T20 Name:T43
+T21	Condition 391 408	diabetes mellitus
+E21	Condition:T21 Name:T44
+T22	Condition 423 437	renal function
+E22	Condition:T22
+T23	Contraindication 443 459	contraindication
+E23	Contraindication:T23
+T24	Procedure 464 467	MRI
+E24	Procedure:T24 Name:T46
+T25	Or 469 471	or
+E25	Or:T25
+T26	Condition 472 481	pregnancy
+E26	Condition:T26 Name:T47
+T27	Condition-Name 25 29	Burn
+T28	Severity 44 50	severe
+A1	Severity-Value T28 severe
+T29	Condition-Name 51 66	neuropatic pain
+T30	Eq-Operator 73 81	at least
+A2	Eq-Operator-Value T30 GTEQ
+T31	Eq-Value 82 83	5
+T32	Observation-Name 124 127	NRS
+T33	Condition-Name 154 168	cardiac arrest
+T34	Eq-Temporal-Period 169 176	history
+A3	Eq-Temporal-Period-Value T34 past
+T35	Eq-Temporal-Period 182 189	history
+A4	Eq-Temporal-Period-Value T35 past
+T36	Condition-Name 193 210	neurologi disease
+T37	Procedure-Name 220 227	surgery
+T38	Stability 233 241	unstable
+A5	Stability-Value T38 change
+T39	Condition-Name 242 255	heart disease
+T40	Procedure-Name 273 290	cardiac pacemaker
+T41	Condition-Name 296 310	pain resulting
+T42	Condition-Name 337 359	neuromuscular diseases
+T43	Condition-Name 365 385	psychiatric disorder
+T44	Condition-Name 391 408	diabetes mellitus
+T45	Condition-Name 414 437	abnormal renal function
+T46	Procedure-Name 464 467	MRI
+T47	Condition-Name 472 481	pregnancy

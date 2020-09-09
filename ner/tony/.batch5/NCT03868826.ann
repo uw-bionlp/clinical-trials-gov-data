@@ -1,3 +1,26 @@
-T1	Procedure 70 78	avulsion
-T2	Procedure-Name 70 78	avulsion
-E1	Procedure:T1 Name:T2
+T1	Assertion 34 46	eligible for
+E1	Assertion:T1
+A1	Assertion-Type-Value E1 hypothetical
+T2	Procedure 47 56	treatment
+E2	Procedure:T2
+T3	Condition 60 78	hamstring avulsion
+E3	Condition:T3 Name:T11
+T4	Condition 104 114	Conditions
+E4	Condition:T4
+T5	Assertion 120 134	contraindicate
+E5	Assertion:T5
+A2	Assertion-Type-Value E5 hypothetical
+T6	Procedure 135 158	muscle strength testing
+E6	Procedure:T6
+T7	Condition 164 170	cancer
+E7	Condition:T7 Name:T12
+T8	Or 171 174	and
+E8	Or:T8
+T9	Modifier 175 187	neurological
+E9	Modifier:T9
+T10	Condition 188 198	conditions
+E10	Condition:T10
+T11	Condition-Name 60 78	hamstring avulsion
+T12	Condition-Name 164 170	cancer
+T13	Condition-Name 175 198	neurological conditions
+T14	Language 245 251	Danish

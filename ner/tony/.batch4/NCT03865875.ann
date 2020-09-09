@@ -1,83 +1,255 @@
-T1	Life-Stage-And-Gender 24 30	Adults
-A1	Life-Stage-And-Gender-Type T1 adult
-T2	Condition 165 169	PDAC
-T3	Condition-Name 165 169	PDAC
-E2	Condition:T2 Name:T3
-T4	Procedure 332 344	chemotherapy
-T5	Procedure-Name 332 344	chemotherapy
-E4	Procedure:T4 Name:T5
-T6	Procedure 320 331	neoadjuvant
-T7	Procedure-Name 320 331	neoadjuvant
-E6	Procedure:T6 Name:T7
-T8	Procedure 371 389	surgical resection
-T9	Procedure-Name 371 389	surgical resection
-E8	Procedure:T8 Name:T9
-T10	Language 429 436	English
-T11	Condition 393 397	PDAC
-T12	Condition-Name 393 397	PDAC
-E11	Condition:T11 Name:T12
-T13	Condition 722 726	aids
-T14	Condition-Name 722 726	aids
-E13	Condition:T13 Name:T14
-T15	Condition 922 945	widespread chronic pain
-T16	Condition-Name 922 945	widespread chronic pain
-E15	Condition:T15 Name:T16
-T17	Condition 845 865	rheumatoid arthritis
-T18	Condition-Name 845 865	rheumatoid arthritis
-E17	Condition:T17 Name:T18
-T19	Condition 827 841	osteoarthritis
-T20	Condition-Name 827 841	osteoarthritis
-E19	Condition:T19 Name:T20
-T21	Procedure 885 896	amputations
-T22	Procedure-Name 885 896	amputations
-E21	Procedure:T21 Name:T22
-T23	Condition 952 964	fibromyalgia
-T24	Condition-Name 952 964	fibromyalgia
-E23	Condition:T23 Name:T24
-T25	Condition 1028 1072	severe chronic obstructive pulmonary disease
-T26	Condition-Name 1028 1072	severe chronic obstructive pulmonary disease
-E25	Condition:T25 Name:T26
-T27	Condition 1114 1139	interstitial lung disease
-T28	Condition-Name 1114 1139	interstitial lung disease
-E27	Condition:T27 Name:T28
-T29	Condition 1074 1078	COPD
-T30	Condition-Name 1074 1078	COPD
-E29	Condition:T29 Name:T30
-T31	Condition 1276 1300	congestive heart failure
-T32	Condition-Name 1276 1300	congestive heart failure
-E31	Condition:T31 Name:T32
-T33	Condition 1325 1346	myocardial infarction
-T34	Condition-Name 1325 1346	myocardial infarction
-E33	Condition:T33 Name:T34
-T35	Procedure 1400 1404	diet
-T36	Procedure-Name 1400 1404	diet
-E35	Procedure:T35 Name:T36
-T37	Eq-Operator 69 75	within
-A2	Eq-Operator-Value T37 LTEQ
-T38	Eq-Operator 570 576	within
-A3	Eq-Operator-Value T38 LTEQ
-T39	Eq-Operator 1096 1097	≤
-A4	Eq-Operator-Value T39 LTEQ
-T40	Eq-Operator 1347 1353	within
-A5	Eq-Operator-Value T40 LTEQ
-T41	Eq-Temporal-Unit 38 43	years
-A6	Eq-Temporal-Unit-Value T41 year
-T42	Eq-Temporal-Unit 78 83	weeks
-A7	Eq-Temporal-Unit-Value T42 week
-T43	Eq-Temporal-Unit 579 584	years
-A8	Eq-Temporal-Unit-Value T43 year
-T44	Eq-Temporal-Unit 1365 1371	months
-A9	Eq-Temporal-Unit-Value T44 month
-T45	Age 31 34	age
-E36	Age:T45
-T46	Eq-Value 35 37	18
-T47	Eq-Value 76 77	8
-T48	Eq-Value 577 578	5
-T49	Eq-Value 1098 1100	50
-T50	Eq-Value 1363 1364	6
-T51	Eq-Comparison 69 83	within 8 weeks
-E37	Eq-Comparison:T51 Operator:T37 Temporal-Unit:T42 Value:T47
-T52	Eq-Comparison 570 584	within 5 years
-E38	Eq-Comparison:T52 Operator:T38 Temporal-Unit:T43 Value:T48
-T53	Eq-Comparison 1096 1100	≤ 50
-E39	Eq-Comparison:T53 Operator:T39 Value:T49
+T1	Age 31 34	age
+E1	Age:T1
+T2	Eq-Comparison 35 52	18 years or older
+E2	Eq-Comparison:T2 Value:T85 Temporal-Unit:T86 Operator:T87
+T3	Eq-Comparison 69 83	within 8 weeks
+E3	Eq-Comparison:T3 Operator:T88 Value:T89 Temporal-Unit:T90
+T4	Modifier 97 107	resectable
+E4	Modifier:T4
+T5	Modifier 109 130	borderline resectable
+E5	Modifier:T5
+T6	Or 132 134	or
+E6	Or:T6
+T7	Modifier 135 151	locally advanced
+E7	Modifier:T7
+T8	Condition 152 169	unresectable PDAC
+E8	Condition:T8
+T9	Assertion 239 247	Planning
+E9	Assertion:T9
+A1	Assertion-Type-Value E9 intention
+T10	Eq-Comparison 251 258	undergo
+E10	Eq-Comparison:T10
+T11	Drug 259 262	TNT
+E11	Drug:T11
+T12	Assertion 276 284	Planning
+E12	Assertion:T12
+A2	Assertion-Type-Value E12 intention
+T13	Drug 305 315	FOLFIRINOX
+E13	Drug:T13
+T14	Procedure 320 344	neoadjuvant chemotherapy
+E14	Procedure:T14 Name:T93
+T15	Assertion 351 359	Planning
+E15	Assertion:T15
+A3	Assertion-Type-Value E15 intention
+T16	Procedure 371 389	surgical resection
+E16	Procedure:T16 Name:T94
+T17	Procedure 393 397	PDAC
+E17	Procedure:T17 Name:T95
+T18	Procedure 401 404	MGH
+E18	Procedure:T18
+T19	Condition 462 480	Metastatic disease
+E19	Condition:T19 Name:T98
+T20	Eq-Comparison 487 495	Previous
+E20	Eq-Comparison:T20 Temporal-Period:T99
+T21	Procedure 496 505	treatment
+E21	Procedure:T21
+T22	Modifier 510 518	pancreas
+E22	Modifier:T22
+T23	Condition 519 533	adenocarcinoma
+E23	Condition:T23 Name:T100
+T24	And 534 537	and
+E24	And:T24
+T25	Negation 538 540	no
+E25	Negation:T25
+T26	Eq-Comparison 541 546	prior
+E26	Eq-Comparison:T26 Temporal-Period:T101
+T27	Procedure 547 554	therapy
+E27	Procedure:T27 Name:T102
+T28	Condition 563 569	cancer
+E28	Condition:T28 Name:T103
+T29	Eq-Comparison 570 584	within 5 years
+E29	Eq-Comparison:T29 Operator:T104 Value:T105 Temporal-Unit:T106
+T30	Eq-Comparison 597 604	history
+E30	Eq-Comparison:T30 Temporal-Period:T107
+T31	Modifier 608 617	cognitive
+E31	Modifier:T31
+T32	Or 618 620	or
+E32	Or:T32
+T33	Modifier 621 632	psychologic
+E33	Modifier:T33
+T34	Condition 633 643	impairment
+E34	Condition:T34
+T35	Eq-Comparison 656 663	history
+E35	Eq-Comparison:T35 Temporal-Period:T109
+T36	Condition 667 686	physical impairment
+E36	Condition:T36 Name:T110
+T37	Condition 695 705	immobility
+E37	Condition:T37 Name:T111
+T38	Condition 714 726	walking aids
+E38	Condition:T38 Name:T112
+T39	Or 728 730	or
+E39	Or:T39
+T40	Assertion 731 739	required
+E40	Assertion:T40
+A4	Assertion-Type-Value E40 hypothetical
+T41	Condition 740 754	wheelchair use
+E41	Condition:T41
+T42	Eq-Comparison 767 774	history
+E42	Eq-Comparison:T42 Temporal-Period:T113
+T43	Condition 792 816	orthopedic comorbidities
+E43	Condition:T43 Name:T114
+T44	Condition 818 841	advanced osteoarthritis
+E44	Condition:T44 Name:T115
+T45	Or 842 844	or
+E45	Or:T45
+T46	Modifier 845 855	rheumatoid
+E46	Modifier:T46
+T47	Condition 856 865	arthritis
+E47	Condition:T47 Name:T116
+T48	Modifier 867 884	mobility-limiting
+E48	Modifier:T48
+T49	Condition 885 896	amputations
+E49	Condition:T49
+T50	Modifier 898 908	orthopedic
+E50	Modifier:T50
+T51	Condition 909 917	injuries
+E51	Condition:T51
+T52	Or 919 921	or
+E52	Or:T52
+T53	Modifier 933 940	chronic
+E53	Modifier:T53
+T54	Condition 941 945	pain
+E54	Condition:T54 Name:T119
+T55	Condition 952 964	fibromyalgia
+E55	Condition:T55 Name:T120
+T56	Eq-Comparison 978 985	history
+E56	Eq-Comparison:T56 Temporal-Period:T121
+T57	Modifier 1003 1012	pulmonary
+E57	Modifier:T57
+T58	Condition 1013 1026	comorbidities
+E58	Condition:T58
+T59	Modifier 1035 1042	chronic
+E59	Modifier:T59
+T60	Condition 1043 1072	obstructive pulmonary disease
+E60	Condition:T60 Name:T124
+T61	Condition 1074 1078	COPD
+E61	Condition:T61 Name:T125
+T62	Observation 1091 1095	FEV1
+E62	Observation:T62 Name:T126
+T63	Eq-Comparison 1096 1101	≤ 50%
+E63	Eq-Comparison:T63 Operator:T127 Value:T128 Unit:T129
+T64	Condition 1103 1112	emphysema
+E64	Condition:T64 Name:T130
+T65	Condition 1114 1139	interstitial lung disease
+E65	Condition:T65 Name:T131
+T66	Or 1141 1147	and/or
+E66	Or:T66
+T67	Procedure 1155 1174	supplemental oxygen
+E67	Procedure:T67
+T68	Eq-Comparison 1187 1194	history
+E68	Eq-Comparison:T68 Temporal-Period:T132
+T69	Condition 1212 1240	cardiovascular comorbidities
+E69	Condition:T69 Name:T133
+T70	Modifier 1242 1254	uncontrolled
+E70	Modifier:T70
+T71	Condition 1255 1267	hypertension
+E71	Condition:T71 Name:T134
+T72	Condition 1276 1300	congestive heart failure
+E72	Condition:T72 Name:T136
+T73	Condition 1302 1306	NYHA
+E73	Condition:T73 Name:T137
+T74	Eq-Comparison 1307 1315	Class IV
+E74	Eq-Comparison:T74 Unit:T138 Value:T139
+T75	Or 1318 1324	and/or
+E75	Or:T75
+T76	Condition 1325 1346	myocardial infarction
+E76	Condition:T76 Name:T140
+T77	Eq-Comparison 1347 1371	within the last 6 months
+E77	Eq-Comparison:T77 Operator:T141 Temporal-Period:T142 Value:T143 Temporal-Unit:T144
+T78	Negation 1378 1387	Inability
+E78	Negation:T78
+T79	Modifier 1421 1432	oral routes
+E79	Modifier:T79
+T80	Or 1433 1439	and/or
+E80	Or:T80
+T81	Condition 1461 1485	nutritional restrictions
+E81	Condition:T81
+T82	Allergy 1487 1496	allergies
+E82	Allergy:T82
+T83	Or 1498 1504	and/or
+E83	Or:T83
+T84	Life-Stage-And-Gender 24 30	Adults
+A5	Life-Stage-And-Gender-Type T84 adult
+T85	Eq-Value 35 37	18
+T86	Eq-Temporal-Unit 38 43	years
+A6	Eq-Temporal-Unit-Value T86 year
+T87	Eq-Operator 44 52	or older
+A7	Eq-Operator-Value T87 GTEQ
+T88	Eq-Operator 69 75	within
+A8	Eq-Operator-Value T88 LTEQ
+T89	Eq-Value 76 77	8
+T90	Eq-Temporal-Unit 78 83	weeks
+A9	Eq-Temporal-Unit-Value T90 week
+T91	Condition-Name 109 130	borderline resectable
+T92	Location 266 269	MGH
+A10	Location-Value T92 hospital
+T93	Procedure-Name 332 344	chemotherapy
+T94	Procedure-Name 371 389	surgical resection
+T95	Procedure-Name 393 397	PDAC
+T96	Location 401 404	MGH
+A11	Location-Value T96 hospital
+T97	Language 429 436	English
+T98	Condition-Name 462 480	Metastatic disease
+T99	Eq-Temporal-Period 487 495	Previous
+A12	Eq-Temporal-Period-Value T99 past
+T100	Condition-Name 519 533	adenocarcinoma
+T101	Eq-Temporal-Period 541 546	prior
+A13	Eq-Temporal-Period-Value T101 past
+T102	Procedure-Name 547 554	therapy
+T103	Condition-Name 563 569	cancer
+T104	Eq-Operator 570 576	within
+A14	Eq-Operator-Value T104 LTEQ
+T105	Eq-Value 577 578	5
+T106	Eq-Temporal-Unit 579 584	years
+A15	Eq-Temporal-Unit-Value T106 year
+T107	Eq-Temporal-Period 597 604	history
+A16	Eq-Temporal-Period-Value T107 past
+T108	Condition-Name 621 643	psychologic impairment
+T109	Eq-Temporal-Period 656 663	history
+A17	Eq-Temporal-Period-Value T109 past
+T110	Condition-Name 667 686	physical impairment
+T111	Condition-Name 695 705	immobility
+T112	Condition-Name 714 726	walking aids
+T113	Eq-Temporal-Period 767 774	history
+A18	Eq-Temporal-Period-Value T113 past
+T114	Condition-Name 792 816	orthopedic comorbidities
+T115	Condition-Name 818 841	advanced osteoarthritis
+T116	Condition-Name 856 865	arthritis
+T117	Condition-Name 898 917	orthopedic injuries
+T118	Severity 922 932	widespread
+A19	Severity-Value T118 severe
+T119	Condition-Name 941 945	pain
+T120	Condition-Name 952 964	fibromyalgia
+T121	Eq-Temporal-Period 978 985	history
+A20	Eq-Temporal-Period-Value T121 past
+T122	Condition-Name 1003 1026	pulmonary comorbidities
+T123	Severity 1028 1034	severe
+A21	Severity-Value T123 severe
+T124	Condition-Name 1043 1072	obstructive pulmonary disease
+T125	Condition-Name 1074 1078	COPD
+T126	Observation-Name 1091 1095	FEV1
+A22	Observation-Type-Value T126 lab
+T127	Eq-Operator 1096 1097	≤
+A23	Eq-Operator-Value T127 LTEQ
+T128	Eq-Value 1098 1100	50
+T129	Eq-Unit 1100 1101	%
+T130	Condition-Name 1103 1112	emphysema
+T131	Condition-Name 1114 1139	interstitial lung disease
+T132	Eq-Temporal-Period 1187 1194	history
+A24	Eq-Temporal-Period-Value T132 past
+T133	Condition-Name 1212 1240	cardiovascular comorbidities
+T134	Condition-Name 1255 1267	hypertension
+T135	Severity 1269 1275	severe
+A25	Severity-Value T135 severe
+T136	Condition-Name 1276 1300	congestive heart failure
+T137	Condition-Name 1302 1306	NYHA
+T138	Eq-Unit 1307 1312	Class
+T139	Eq-Value 1313 1315	IV
+T140	Condition-Name 1325 1346	myocardial infarction
+T141	Eq-Operator 1347 1353	within
+A26	Eq-Operator-Value T141 LTEQ
+T142	Eq-Temporal-Period 1358 1362	last
+A27	Eq-Temporal-Period-Value T142 past
+T143	Eq-Value 1363 1364	6
+T144	Eq-Temporal-Unit 1365 1371	months
+A28	Eq-Temporal-Unit-Value T144 month

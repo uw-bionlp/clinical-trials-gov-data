@@ -1,0 +1,185 @@
+T1	Condition 25 32	Healthy
+E1	Condition:T1 Name:T56
+T2	Age 45 49	aged
+E2	Age:T2
+T3	Eq-Comparison 50 60	≥ 19 years
+E3	Eq-Comparison:T3 Operator:T59 Value:T60 Temporal-Unit:T61
+T4	And 61 64	and
+E4	And:T4
+T5	Eq-Comparison 65 75	≤ 50 years
+E5	Eq-Comparison:T5 Operator:T62 Value:T63 Temporal-Unit:T64
+T6	Observation 81 92	Body weight
+E6	Observation:T6 Name:T65
+T7	Eq-Comparison 96 105	≥ 55.0 kg
+E7	Eq-Comparison:T7 Operator:T66 Value:T67 Unit:T68
+T8	And 106 109	and
+E8	And:T8
+T9	Eq-Comparison 110 119	≤ 90.0 kg
+E9	Eq-Comparison:T9 Operator:T69 Value:T70 Unit:T71
+T10	And 121 125	with
+E10	And:T10
+T11	Observation 126 141	body mass index
+E11	Observation:T11 Name:T72
+T12	Observation 143 146	BMI
+E12	Observation:T12 Name:T73
+T13	Eq-Comparison 151 163	≥ 18.0 kg/m2
+E13	Eq-Comparison:T13 Operator:T74 Value:T75 Unit:T76 Unit:T77
+T14	And 164 167	and
+E14	And:T14
+T15	Eq-Comparison 168 180	≤ 27.0 kg/m2
+E15	Eq-Comparison:T15 Operator:T78 Value:T79 Unit:T80 Unit:T81
+T16	Temporal-Connection 181 192	at the time
+E16	Temporal-Connection:T16
+A1	Temporal-Connection-Type-Value E16 during
+T17	Study 196 205	screening
+E17	Study:T17
+T18	Organism 211 230	Helicobacter pylori
+E18	Organism:T18
+T19	Or 274 276	or
+E19	Or:T19
+T20	Eq-Comparison 277 284	history
+E20	Eq-Comparison:T20 Temporal-Period:T84
+T21	Condition 311 319	diseases
+E21	Condition:T21 Name:T86
+T22	Or 334 336	or
+E22	Or:T22
+T23	Eq-Comparison 337 344	history
+E23	Eq-Comparison:T23 Temporal-Period:T87
+T24	Condition 348 373	gastrointestinal disorder
+E24	Condition:T24 Name:T88
+T25	Modifier 375 382	gastric
+E25	Modifier:T25
+T26	Condition 383 388	ulcer
+E26	Condition:T26
+T27	Condition 390 394	GERD
+E27	Condition:T27 Name:T90
+T28	Condition 396 411	Crohn's disease
+E28	Condition:T28 Name:T91
+T29	Condition 424 440	Hypersensitivity
+E29	Condition:T29 Name:T92
+T30	Drug 444 449	drugs
+E30	Drug:T30
+T31	Study 461 466	study
+E31	Study:T31
+T32	Drug 467 471	drug
+E32	Drug:T32
+T33	Or 472 474	or
+E33	Or:T33
+T34	Drug 475 496	proton pump inhibitor
+E34	Drug:T34 Name:T93
+T35	Or 497 500	and
+E35	Or:T35
+T36	Other 501 506	other
+E36	Other:T36
+T37	Drug 507 512	drugs
+E37	Drug:T37
+T38	Drug 514 521	aspirin
+E38	Drug:T38 Name:T94
+T39	Drug 523 534	antibiotics
+E39	Drug:T39 Name:T95
+T40	Or 542 544	or
+E40	Or:T40
+T41	Eq-Comparison 545 552	history
+E41	Eq-Comparison:T41 Temporal-Period:T96
+T42	Condition 579 595	hypersensitivity
+E42	Condition:T42 Name:T98
+T43	Observation 601 615	Serologic test
+E43	Observation:T43 Name:T99
+T44	Assertion 639 650	obstacle to
+E44	Assertion:T44
+A2	Assertion-Type-Value E44 hypothetical
+T45	Procedure 651 660	insertion
+E45	Procedure:T45
+T46	And 661 664	and
+E46	And:T46
+T47	Procedure 680 697	pH meter catheter
+E47	Procedure:T47 Name:T102
+T48	Eq-Comparison 703 710	History
+E48	Eq-Comparison:T48 Temporal-Period:T103
+T49	Condition 714 724	drug abuse
+E49	Condition:T49 Name:T104
+T50	Condition 740 755	caffeine intake
+E50	Condition:T50
+T51	Or 756 758	or
+E51	Or:T51
+T52	Modifier 759 769	persistent
+E52	Modifier:T52
+T53	Condition 770 784	alcohol intake
+E53	Condition:T53
+T54	Negation 790 793	Not
+E54	Negation:T54
+T55	Procedure 834 847	contraception
+E55	Procedure:T55 Name:T106
+T56	Condition-Name 25 32	Healthy
+T57	Life-Stage-And-Gender 33 38	adult
+A3	Life-Stage-And-Gender-Type T57 adult
+T58	Life-Stage-And-Gender 39 44	males
+A4	Life-Stage-And-Gender-Type T58 male
+T59	Eq-Operator 50 51	≥
+A5	Eq-Operator-Value T59 GTEQ
+T60	Eq-Value 52 54	19
+T61	Eq-Temporal-Unit 55 60	years
+A6	Eq-Temporal-Unit-Value T61 year
+T62	Eq-Operator 65 66	≤
+A7	Eq-Operator-Value T62 LTEQ
+T63	Eq-Value 67 69	50
+T64	Eq-Temporal-Unit 70 75	years
+A8	Eq-Temporal-Unit-Value T64 year
+T65	Observation-Name 81 92	Body weight
+A9	Observation-Type-Value T65 vital
+T66	Eq-Operator 96 97	≥
+A10	Eq-Operator-Value T66 GTEQ
+T67	Eq-Value 98 102	55.0
+T68	Eq-Unit 103 105	kg
+T69	Eq-Operator 110 111	≤
+A11	Eq-Operator-Value T69 LTEQ
+T70	Eq-Value 112 116	90.0
+T71	Eq-Unit 117 119	kg
+T72	Observation-Name 126 141	body mass index
+A12	Observation-Type-Value T72 vital
+T73	Observation-Name 143 146	BMI
+A13	Observation-Type-Value T73 vital
+T74	Eq-Operator 151 152	≥
+A14	Eq-Operator-Value T74 GTEQ
+T75	Eq-Value 153 157	18.0
+T76	Eq-Unit 158 160	kg
+T77	Eq-Unit 161 163	m2
+T78	Eq-Operator 168 169	≤
+A15	Eq-Operator-Value T78 LTEQ
+T79	Eq-Value 170 174	27.0
+T80	Eq-Unit 175 177	kg
+T81	Eq-Unit 178 180	m2
+T82	Condition-Name 211 230	Helicobacter pylori
+T83	Polarity 231 239	negative
+A16	Polarity-Value T83 positive
+T84	Eq-Temporal-Period 277 284	history
+A17	Eq-Temporal-Period-Value T84 past
+T85	Severity 299 310	significant
+A18	Severity-Value T85 severe
+T86	Condition-Name 311 319	diseases
+T87	Eq-Temporal-Period 337 344	history
+A19	Eq-Temporal-Period-Value T87 past
+T88	Condition-Name 348 373	gastrointestinal disorder
+T89	Condition-Name 375 388	gastric ulcer
+T90	Condition-Name 390 394	GERD
+T91	Condition-Name 396 411	Crohn's disease
+T92	Condition-Name 424 440	Hypersensitivity
+T93	Drug-Name 475 496	proton pump inhibitor
+T94	Drug-Name 514 521	aspirin
+T95	Drug-Name 523 534	antibiotics
+T96	Eq-Temporal-Period 545 552	history
+A20	Eq-Temporal-Period-Value T96 past
+T97	Severity 567 578	significant
+A21	Severity-Value T97 severe
+T98	Condition-Name 579 595	hypersensitivity
+T99	Observation-Name 601 615	Serologic test
+A22	Observation-Type-Value T99 lab
+T100	Polarity 616 624	positive
+A23	Polarity-Value T100 positive
+T101	Condition-Name 630 647	Abnormal obstacle
+T102	Procedure-Name 680 697	pH meter catheter
+T103	Eq-Temporal-Period 703 710	History
+A24	Eq-Temporal-Period-Value T103 past
+T104	Condition-Name 714 724	drug abuse
+T105	Drug-Name 740 755	caffeine intake
+T106	Procedure-Name 834 847	contraception

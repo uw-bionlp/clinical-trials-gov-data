@@ -1,9 +1,30 @@
-T1	Procedure 105 126	liver transplantation
-T2	Procedure-Name 105 126	liver transplantation
-E1	Procedure:T1 Name:T2
-T3	Procedure 149 170	liver transplantation
-T4	Procedure-Name 149 170	liver transplantation
-E3	Procedure:T3 Name:T4
-T5	Eq-Temporal-Unit 39 44	years
-A1	Eq-Temporal-Unit-Value T5 year
-T6	Eq-Value 36 38	18
+T1	Eq-Comparison 25 44	older than 18 years
+E1	Eq-Comparison:T1 Operator:T11 Value:T12 Temporal-Unit:T13
+T2	Eq-Comparison 87 94	planned
+E2	Eq-Comparison:T2 Temporal-Period:T14
+T3	Procedure 105 126	liver transplantation
+E3	Procedure:T3 Name:T15
+T4	Modifier 132 141	recipient
+E4	Modifier:T4
+T5	Or 143 145	or
+E5	Or:T5
+T6	Modifier 146 147	b
+E6	Modifier:T6
+T7	Procedure 149 170	liver transplantation
+E7	Procedure:T7 Name:T16
+T8	Eq-Comparison 211 228	absolute/relative
+E8	Eq-Comparison:T8
+T9	Contraindication 229 245	contraindication
+E9	Contraindication:T9
+T10	Procedure 249 270	contrast-enhanced MRI
+E10	Procedure:T10 Name:T17
+T11	Eq-Operator 25 35	older than
+A1	Eq-Operator-Value T11 GT
+T12	Eq-Value 36 38	18
+T13	Eq-Temporal-Unit 39 44	years
+A2	Eq-Temporal-Unit-Value T13 year
+T14	Eq-Temporal-Period 87 94	planned
+A3	Eq-Temporal-Period-Value T14 future
+T15	Procedure-Name 105 126	liver transplantation
+T16	Procedure-Name 149 170	liver transplantation
+T17	Procedure-Name 267 270	MRI

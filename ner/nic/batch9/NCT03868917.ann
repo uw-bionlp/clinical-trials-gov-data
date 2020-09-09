@@ -1,34 +1,108 @@
-T1	Condition 676 700	congestive heart failure
-T2	Condition-Name 676 700	congestive heart failure
-E1	Condition:T1 Name:T2
-T3	Condition 575 596	Altered mental status
-T4	Condition-Name 575 596	Altered mental status
-E3	Condition:T3 Name:T4
-T5	Condition 659 674	unstable angina
-T6	Condition-Name 659 674	unstable angina
-E5	Condition:T5 Name:T6
-T7	Procedure 48 59	thoracotomy
-T8	Procedure-Name 48 59	thoracotomy
-E7	Procedure:T7 Name:T8
-T9	Procedure 464 475	therapeutic
-T10	Procedure-Name 464 475	therapeutic
-E9	Procedure:T9 Name:T10
-T11	Condition 340 350	opioid use
-T12	Condition-Name 340 350	opioid use
-E11	Condition:T11 Name:T12
-T13	Condition 398 408	opioid use
-T14	Condition-Name 398 408	opioid use
-E13	Condition:T13 Name:T14
-T15	Procedure 185 194	placement
-T16	Procedure-Name 185 194	placement
-E15	Procedure:T15 Name:T16
-T17	Procedure 39 47	elective
-T18	Procedure-Name 39 47	elective
-E17	Procedure:T17 Name:T18
-T19	Condition 198 206	thoracic
-T20	Condition-Name 198 206	thoracic
-E19	Condition:T19 Name:T20
-T21	Condition 651 657	sepsis
-T22	Condition-Name 651 657	sepsis
-E21	Condition:T21 Name:T22
-T23	Eq-Value 76 77	1
+T1	Eq-Comparison 25 34	Scheduled
+E1	Eq-Comparison:T1 Temporal-Period:T43
+T2	Modifier 39 47	elective
+E2	Modifier:T2
+T3	Procedure 48 59	thoracotomy
+E3	Procedure:T3 Name:T44
+T4	Condition 65 68	ASA
+E4	Condition:T4 Name:T45
+T5	Eq-Comparison 76 79	1,2
+E5	Eq-Comparison:T5 Unit:T46
+T6	Contraindication 161 177	contraindication
+E6	Contraindication:T6
+T7	Procedure 185 194	placement
+E7	Procedure:T7
+T8	Procedure 198 230	thoracic paravertebral catheters
+E8	Procedure:T8 Name:T47
+T9	Modifier 236 254	Unstable vertebral
+E9	Modifier:T9
+T10	Or 255 258	and
+E10	Or:T10
+T11	Modifier 259 277	transverse process
+E11	Modifier:T11
+T12	Condition 278 287	fractures
+E12	Condition:T12
+T13	Modifier 297 312	chronic painful
+E13	Modifier:T13
+T14	Condition 313 323	conditions
+E14	Condition:T14
+T15	Or 324 326	or
+E15	Or:T15
+T16	Modifier 327 339	preoperative
+E16	Modifier:T16
+T17	Drug 340 346	opioid
+E17	Drug:T17 Name:T51
+T18	Modifier 355 370	chronic painful
+E18	Modifier:T18
+T19	Condition 371 381	conditions
+E19	Condition:T19
+T20	Or 382 384	or
+E20	Or:T20
+T21	Temporal-Connection 385 397	preoperative
+E21	Temporal-Connection:T21
+A1	Temporal-Connection-Type-Value E21 before
+T22	Drug 398 404	opioid
+E22	Drug:T22
+T23	Modifier 405 408	use
+E23	Modifier:T23
+T24	Modifier 411 425	- Coagulation
+E24	Modifier:T24
+T25	Condition 426 439	abnormalities
+E25	Condition:T25
+T26	Or 440 442	or
+E26	Or:T26
+T27	Assertion 443 457	expectation to
+E27	Assertion:T27
+A2	Assertion-Type-Value E27 hypothetical
+T28	Eq-Comparison 461 463	on
+E28	Eq-Comparison:T28 Temporal-Period:T55
+T29	Drug 464 506	therapeutic anticoagulants postoperatively
+E29	Drug:T29 Name:T56
+T30	Allergy 512 519	Allergy
+E30	Allergy:T30
+T31	Drug 534 539	drugs
+E31	Drug:T31
+T32	Or 539 540	/
+E32	Or:T32
+T33	Drug 540 546	agents
+E33	Drug:T33
+T34	Study 555 560	study
+E34	Study:T34
+T35	Condition 583 596	mental status
+E35	Condition:T35
+T36	Or 597 599	or
+E36	Or:T36
+T37	Modifier 600 609	emergency
+E37	Modifier:T37
+T38	Procedure 610 617	surgery
+E38	Procedure:T38 Name:T58
+T39	Condition 623 642	Comorbid conditions
+E39	Condition:T39 Name:T59
+T40	Condition 651 657	sepsis
+E40	Condition:T40 Name:T60
+T41	Condition 659 674	unstable angina
+E41	Condition:T41 Name:T61
+T42	Condition 676 700	congestive heart failure
+E42	Condition:T42 Name:T62
+T43	Eq-Temporal-Period 25 34	Scheduled
+A3	Eq-Temporal-Period-Value T43 future
+T44	Procedure-Name 48 59	thoracotomy
+T45	Condition-Name 65 68	ASA
+T46	Eq-Unit 76 79	1,2
+T47	Procedure-Name 198 230	thoracic paravertebral catheters
+T48	Condition-Name 236 254	Unstable vertebral
+T49	Condition-Name 259 287	transverse process fractures
+T50	Condition-Name 305 323	painful conditions
+T51	Drug-Name 340 346	opioid
+T52	Condition-Name 363 381	painful conditions
+T53	Drug-Name 398 408	opioid use
+T54	Condition-Name 414 439	Coagulation abnormalities
+T55	Eq-Temporal-Period 461 463	on
+A4	Eq-Temporal-Period-Value T55 present
+T56	Drug-Name 464 506	therapeutic anticoagulants postoperatively
+T57	Condition-Name 575 596	Altered mental status
+T58	Procedure-Name 610 617	surgery
+T59	Condition-Name 623 642	Comorbid conditions
+T60	Condition-Name 651 657	sepsis
+T61	Condition-Name 659 674	unstable angina
+T62	Condition-Name 676 700	congestive heart failure

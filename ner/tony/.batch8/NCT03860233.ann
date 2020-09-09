@@ -1,21 +1,92 @@
-T1	Language 25 28	Men
-T2	Condition 190 205	sleep disorders
-T3	Condition-Name 190 205	sleep disorders
-E2	Condition:T2 Name:T3
-T4	Condition 340 349	pregnancy
-T5	Condition-Name 340 349	pregnancy
-E4	Condition:T4 Name:T5
+T1	Or 29 31	or
+E1	Or:T1
+T2	Eq-Comparison 38 62	18 years of age or older
+E2	Eq-Comparison:T2 Value:T35 Temporal-Unit:T36 Operator:T37
+T3	Negation 98 101	not
+E3	Negation:T3
+T4	Assertion 102 112	willing to
+E4	Assertion:T4
+A1	Assertion-Type-Value E4 hypothetical
+T5	Negation 126 132	unable
+E5	Negation:T5
 T6	Procedure 140 144	CPAP
-T7	Procedure-Name 140 144	CPAP
-E6	Procedure:T6 Name:T7
-T8	Language 162 165	OSA
-T9	Condition 546 564	infectious disease
-T10	Condition-Name 546 564	infectious disease
-E9	Condition:T9 Name:T10
-T11	Eq-Temporal-Unit 41 46	years
-A1	Eq-Temporal-Unit-Value T11 year
-T12	Age 50 53	age
-E10	Age:T12
-T13	Age 271 274	age
-E11	Age:T13
-T14	Eq-Value 38 40	18
+E6	Procedure:T6 Name:T38
+T7	Procedure 149 158	treatment
+E7	Procedure:T7
+T8	Condition 162 165	OSA
+E8	Condition:T8 Name:T39
+T9	Other 184 189	other
+E9	Other:T9
+T10	Condition 190 205	sleep disorders
+E10	Condition:T10 Name:T40
+T11	Condition 211 219	Pregnant
+E11	Condition:T11 Name:T41
+T12	Or 220 222	or
+E12	Or:T12
+T13	Condition 223 236	breastfeeding
+E13	Condition:T13 Name:T42
+T14	Condition 257 274	child-bearing age
+E14	Condition:T14
+T15	Condition 276 281	WOCBA
+E15	Condition:T15
+T16	Negation 283 286	not
+E16	Negation:T16
+T17	Assertion 287 294	willing
+E17	Assertion:T17
+A2	Assertion-Type-Value E17 hypothetical
+T18	Or 295 297	or
+E18	Or:T18
+T19	Negation 298 304	unable
+E19	Negation:T19
+T20	Negation 334 339	avoid
+E20	Negation:T20
+T21	Condition 340 349	pregnancy
+E21	Condition:T21 Name:T47
+T22	Study 381 386	study
+E22	Study:T22
+T23	Observation 392 401	Prisoners
+E23	Observation:T23 Name:T48
+T24	Modifier 484 490	detain
+E24	Modifier:T24
+T25	Or 491 493	or
+E25	Or:T25
+T26	Procedure 494 503	treatment
+E26	Procedure:T26
+T27	Modifier 516 527	psychiatric
+E27	Modifier:T27
+T28	Or 528 530	or
+E28	Or:T28
+T29	Modifier 531 539	physical
+E29	Modifier:T29
+T30	Condition 546 564	infectious disease
+E30	Condition:T30 Name:T50
+T31	Condition 566 573	illness
+E31	Condition:T31 Name:T51
+T32	Condition 624 640	language barrier
+E32	Condition:T32
+T33	Life-Stage-And-Gender 25 28	Men
+A3	Life-Stage-And-Gender-Type T33 male
+T34	Life-Stage-And-Gender 32 37	women
+A4	Life-Stage-And-Gender-Type T34 female
+T35	Eq-Value 38 40	18
+T36	Eq-Temporal-Unit 41 46	years
+A5	Eq-Temporal-Unit-Value T36 year
+T37	Eq-Operator 54 62	or older
+A6	Eq-Operator-Value T37 GTEQ
+T38	Procedure-Name 140 144	CPAP
+T39	Condition-Name 162 165	OSA
+T40	Condition-Name 190 205	sleep disorders
+T41	Condition-Name 211 219	Pregnant
+T42	Condition-Name 223 236	breastfeeding
+T43	Life-Stage-And-Gender 237 242	women
+A7	Life-Stage-And-Gender-Type T43 female
+T44	Life-Stage-And-Gender 248 253	Women
+A8	Life-Stage-And-Gender-Type T44 female
+T45	Life-Stage-And-Gender 257 262	child
+A9	Life-Stage-And-Gender-Type T45 child
+T46	Observation-Name 276 281	WOCBA
+T47	Condition-Name 340 349	pregnancy
+T48	Observation-Name 392 401	Prisoners
+T49	Observation-Name 422 448	involuntarily incarcerated
+T50	Condition-Name 546 564	infectious disease
+T51	Condition-Name 566 573	illness

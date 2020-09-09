@@ -1,37 +1,130 @@
-T1	Condition 490 505	mucosal disease
-T2	Condition-Name 490 505	mucosal disease
-E1	Condition:T1 Name:T2
-T3	Condition 829 867	human immunodeficiency virus infection
-T4	Condition-Name 829 867	human immunodeficiency virus infection
-E3	Condition:T3 Name:T4
-T5	Condition 776 798	Immunological diseases
-T6	Condition-Name 776 798	Immunological diseases
-E5	Condition:T5 Name:T6
-T7	Condition 946 967	hemorrhagic disorders
-T8	Condition-Name 946 967	hemorrhagic disorders
-E7	Condition:T7 Name:T8
-T9	Condition 664 683	renal insufficiency
-T10	Condition-Name 664 683	renal insufficiency
-E9	Condition:T9 Name:T10
-T11	Condition 808 827	autoimmune diseases
-T12	Condition-Name 808 827	autoimmune diseases
-E11	Condition:T11 Name:T12
-T13	Condition 702 719	diabetes mellitus
-T14	Condition-Name 702 719	diabetes mellitus
-E13	Condition:T13 Name:T14
-T15	Procedure 635 642	formula
-T16	Procedure-Name 635 642	formula
-E15	Procedure:T15 Name:T16
-T17	Condition 655 660	liver
-T18	Condition-Name 655 660	liver
-E17	Condition:T17 Name:T18
-T19	Eq-Operator 311 312	>
-A1	Eq-Operator-Value T19 GT
-T20	Eq-Temporal-Unit 315 319	days
-A2	Eq-Temporal-Unit-Value T20 day
-T21	Eq-Unit 147 149	CM
-T22	Eq-Value 199 203	2019
-T23	Eq-Value 213 217	2020
-T24	Eq-Value 312 314	28
-T25	Eq-Comparison 311 319	>28 days
-E18	Eq-Comparison:T25 Operator:T19 Temporal-Unit:T20 Value:T24
+T1	Encounter 34 42	admitted
+E1	Encounter:T1
+T2	Modifier 50 126	non-critical areas of the Instituto Nacional de Ciencias Médicas y Nutrición
+E2	Modifier:T2
+T3	Modifier 127 143	Salvador Zubirán
+E3	Modifier:T3
+T4	Observation 145 152	INCMNSZ
+E4	Observation:T4
+T5	And 154 158	with
+E5	And:T5
+T6	Observation 161 177	nutritional risk
+E6	Observation:T6
+T7	Eq-Comparison 178 193	between January
+E7	Eq-Comparison:T7 Operator:T49 Value:T50
+T8	Eq-Comparison 199 217	2019 and July 2020
+E8	Eq-Comparison:T8 Value:T51 Value:T52
+T9	Eq-Comparison 266 272	recent
+E9	Eq-Comparison:T9 Temporal-Period:T53
+T10	Modifier 289 296	type II
+E10	Modifier:T10
+T11	Eq-Comparison 311 319	>28 days
+E11	Eq-Comparison:T11 Operator:T55 Value:T56 Temporal-Unit:T57
+T12	Modifier 344 360	gastrointestinal
+E12	Modifier:T12
+T13	Or 361 363	or
+E13	Or:T13
+T14	Modifier 364 372	systemic
+E14	Modifier:T14
+T15	Condition 373 381	diseases
+E15	Condition:T15 Name:T58
+T16	Modifier 383 394	short bowel
+E16	Modifier:T16
+T17	Modifier 396 406	intestinal
+E17	Modifier:T17
+T18	Condition 407 414	fistula
+E18	Condition:T18
+T19	Condition 416 438	intestinal dysmotility
+E19	Condition:T19 Name:T60
+T20	Condition 440 462	mechanical obstruction
+E20	Condition:T20 Name:T61
+T21	Or 464 467	and
+E21	Or:T21
+T22	Condition 478 505	small bowel mucosal disease
+E22	Condition:T22
+T23	Contraindication 547 564	contraindications
+E23	Contraindication:T23
+T24	Condition 569 571	PN
+E24	Condition:T24 Name:T63
+T25	Allergy 597 606	allergies
+E25	Allergy:T25
+T26	Modifier 632 642	PN formula
+E26	Modifier:T26
+T27	Modifier 655 660	liver
+E27	Modifier:T27
+T28	Or 661 663	or
+E28	Or:T28
+T29	Modifier 664 669	renal
+E29	Modifier:T29
+T30	Condition 670 683	insufficiency
+E30	Condition:T30 Name:T65
+T31	Modifier 689 701	Uncontrolled
+E31	Modifier:T31
+T32	Condition 702 719	diabetes mellitus
+E32	Condition:T32 Name:T66
+T33	Or 739 742	and
+E33	Or:T33
+T34	Modifier 743 759	life-threatening
+E34	Modifier:T34
+T35	Condition 760 770	conditions
+E35	Condition:T35
+T36	Condition 776 798	Immunological diseases
+E36	Condition:T36 Name:T68
+T37	Condition 808 827	autoimmune diseases
+E37	Condition:T37 Name:T69
+T38	Condition 829 867	human immunodeficiency virus infection
+E38	Condition:T38 Name:T70
+T39	Condition 869 875	cancer
+E39	Condition:T39 Name:T71
+T40	Eq-Comparison 899 903	take
+E40	Eq-Comparison:T40
+T41	Drug 904 933	immunosuppressant medications
+E41	Drug:T41 Name:T72
+T42	Condition 946 967	hemorrhagic disorders
+E42	Condition:T42 Name:T74
+T43	Condition 973 981	Pregnant
+E43	Condition:T43 Name:T75
+T44	Or 982 984	or
+E44	Or:T44
+T45	Condition 985 994	lactating
+E45	Condition:T45 Name:T76
+T46	Encounter-Type 34 42	admitted
+A1	Encounter-Type-Value T46 inpatient
+T47	Severity 54 62	critical
+A2	Severity-Value T47 severe
+T48	Observation-Name 76 143	Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán
+T49	Eq-Operator 178 185	between
+A3	Eq-Operator-Value T49 BETWEEN
+T50	Eq-Value 186 193	January
+T51	Eq-Value 199 203	2019
+T52	Eq-Value 208 217	July 2020
+T53	Eq-Temporal-Period 266 272	recent
+A4	Eq-Temporal-Period-Value T53 recent
+T54	Eq-Value 294 296	II
+T55	Eq-Operator 311 312	>
+A5	Eq-Operator-Value T55 GT
+T56	Eq-Value 312 314	28
+T57	Eq-Temporal-Unit 315 319	days
+A6	Eq-Temporal-Unit-Value T57 day
+T58	Condition-Name 373 381	diseases
+T59	Condition-Name 396 414	intestinal fistula
+T60	Condition-Name 416 438	intestinal dysmotility
+T61	Condition-Name 440 462	mechanical obstruction
+T62	Condition-Name 468 505	extensive small bowel mucosal disease
+T63	Condition-Name 569 571	PN
+T64	Severity 648 654	Severe
+A7	Severity-Value T64 severe
+T65	Condition-Name 670 683	insufficiency
+T66	Condition-Name 702 719	diabetes mellitus
+T67	Severity 733 738	acute
+A8	Severity-Value T67 severe
+T68	Condition-Name 776 798	Immunological diseases
+T69	Condition-Name 808 827	autoimmune diseases
+T70	Condition-Name 829 867	human immunodeficiency virus infection
+T71	Condition-Name 869 875	cancer
+T72	Drug-Name 904 933	immunosuppressant medications
+T73	Severity 939 945	Severe
+A9	Severity-Value T73 severe
+T74	Condition-Name 946 967	hemorrhagic disorders
+T75	Condition-Name 973 981	Pregnant
+T76	Condition-Name 985 994	lactating

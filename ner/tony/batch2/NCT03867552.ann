@@ -1,38 +1,84 @@
-T1	Procedure 62 82	laparoscopic surgery
-T2	Procedure-Name 62 82	laparoscopic surgery
-E1	Procedure:T1 Name:T2
-T3	Condition 87 100	endometriosis
-T4	Condition-Name 87 100	endometriosis
-E3	Condition:T3 Name:T4
-T5	Procedure 119 131	hysterectomy
-T6	Procedure-Name 119 131	hysterectomy
-E5	Procedure:T5 Name:T6
-T7	Procedure 135 144	colpopexy
-T8	Procedure-Name 135 144	colpopexy
-E7	Procedure:T7 Name:T8
-T9	Condition 272 293	peripheral neuropathy
-T10	Condition-Name 272 293	peripheral neuropathy
-E9	Condition:T9 Name:T10
-T11	Condition 339 356	articular disease
-T12	Condition-Name 339 356	articular disease
-E11	Condition:T11 Name:T12
-T13	Life-Stage-And-Gender 197 202	Males
-A1	Life-Stage-And-Gender-Type T13 male
-T14	Eq-Operator 31 32	≥
-A2	Eq-Operator-Value T14 GTEQ
-T15	Eq-Operator 177 178	<
-A3	Eq-Operator-Value T15 LT
-T16	Eq-Temporal-Unit 36 41	years
-A4	Eq-Temporal-Unit-Value T16 year
-T17	Eq-Temporal-Unit 182 187	years
-A5	Eq-Temporal-Unit-Value T17 year
-T18	Age 42 45	old
-E12	Age:T18
-T19	Age 188 191	old
-E13	Age:T19
-T20	Eq-Value 33 35	18
-T21	Eq-Value 179 181	18
-T22	Eq-Comparison 31 41	≥ 18 years
-E14	Eq-Comparison:T22 Operator:T14 Temporal-Unit:T16 Value:T20
-T23	Eq-Comparison 177 187	< 18 years
-E15	Eq-Comparison:T23 Operator:T15 Temporal-Unit:T17 Value:T21
+T1	Age 25 30	Woman
+E1	Age:T1
+T2	Eq-Comparison 31 41	≥ 18 years
+E2	Eq-Comparison:T2 Operator:T28 Value:T29 Temporal-Unit:T30
+T3	Age 42 45	old
+E3	Age:T3
+T4	Eq-Comparison 51 61	undergoing
+E4	Eq-Comparison:T4 Temporal-Period:T31
+T5	Procedure 62 82	laparoscopic surgery
+E5	Procedure:T5 Name:T32
+T6	Condition 87 100	endometriosis
+E6	Condition:T6 Name:T33
+T7	Procedure 102 117	uterine myoma's
+E7	Procedure:T7
+T8	Procedure 119 131	hysterectomy
+E8	Procedure:T8 Name:T35
+T9	Or 132 134	or
+E9	Or:T9
+T10	Procedure 135 144	colpopexy
+E10	Procedure:T10 Name:T36
+T11	Eq-Comparison 177 187	< 18 years
+E11	Eq-Comparison:T11 Operator:T38 Value:T39 Temporal-Unit:T40
+T12	Age 188 191	old
+E12	Age:T12
+T13	Condition 208 217	Pregnancy
+E13	Condition:T13 Name:T42
+T14	Condition 223 233	Conditions
+E14	Condition:T14
+T15	Modifier 250 257	chronic
+E15	Modifier:T15
+T16	Condition 258 262	pain
+E16	Condition:T16 Name:T43
+T17	Condition 272 293	peripheral neuropathy
+E17	Condition:T17 Name:T44
+T18	Condition 295 304	pathology
+E18	Condition:T18 Name:T45
+T19	Modifier 312 328	vertebral column
+E19	Modifier:T19
+T20	Or 329 332	and
+E20	Or:T20
+T21	Modifier 333 348	osteo-articular
+E21	Modifier:T21
+T22	Condition 349 356	disease
+E22	Condition:T22
+T23	Condition 363 373	Conditions
+E23	Condition:T23
+T24	Condition 388 392	pain
+E24	Condition:T24 Name:T48
+T25	Modifier 398 407	abdominal
+E25	Modifier:T25
+T26	Condition 408 414	trauma
+E26	Condition:T26 Name:T49
+T27	Life-Stage-And-Gender 25 30	Woman
+A1	Life-Stage-And-Gender-Type T27 female
+T28	Eq-Operator 31 32	≥
+A2	Eq-Operator-Value T28 GTEQ
+T29	Eq-Value 33 35	18
+T30	Eq-Temporal-Unit 36 41	years
+A3	Eq-Temporal-Unit-Value T30 year
+T31	Eq-Temporal-Period 51 61	undergoing
+A4	Eq-Temporal-Period-Value T31 present
+T32	Procedure-Name 62 82	laparoscopic surgery
+T33	Condition-Name 87 100	endometriosis
+T34	Condition-Name 102 117	uterine myoma's
+T35	Procedure-Name 119 131	hysterectomy
+T36	Procedure-Name 135 144	colpopexy
+T37	Life-Stage-And-Gender 171 176	Women
+A5	Life-Stage-And-Gender-Type T37 female
+T38	Eq-Operator 177 178	<
+A6	Eq-Operator-Value T38 LT
+T39	Eq-Value 179 181	18
+T40	Eq-Temporal-Unit 182 187	years
+A7	Eq-Temporal-Unit-Value T40 year
+T41	Life-Stage-And-Gender 197 202	Males
+A8	Life-Stage-And-Gender-Type T41 male
+T42	Condition-Name 208 217	Pregnancy
+T43	Condition-Name 258 262	pain
+T44	Condition-Name 272 293	peripheral neuropathy
+T45	Condition-Name 295 304	pathology
+T46	Condition-Name 339 356	articular disease
+T47	Severity 382 387	acute
+A9	Severity-Value T47 severe
+T48	Condition-Name 388 392	pain
+T49	Condition-Name 408 414	trauma

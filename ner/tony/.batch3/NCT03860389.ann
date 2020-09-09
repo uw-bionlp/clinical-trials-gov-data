@@ -1,5 +1,12 @@
 T1	Condition 38 62	autism spectrum disorder
-T2	Condition-Name 38 62	autism spectrum disorder
-E1	Condition:T1 Name:T2
-T3	Life-Stage-And-Gender 129 134	child
-A1	Life-Stage-And-Gender-Type T3 child
+E1	Condition:T1 Name:T6
+T2	Condition 92 109	medical condition
+E2	Condition:T2 
+T3	Negation 116 124	excludes
+E3	Negation:T3 
+T4	Family-Member 129 134	child
+E4	Family-Member:T4 
+A1	Family-Member-Type E4 child
+T5	Observation 153 161	exercise
+E5	Observation:T5 
+T6	Condition-Name 38 62	autism spectrum disorder

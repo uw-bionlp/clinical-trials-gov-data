@@ -1,4 +1,27 @@
-T1	Procedure 221 236	transplantation
-T2	Procedure-Name 221 236	transplantation
-E1	Procedure:T1 Name:T2
-T3	Eq-Value 68 70	20
+T1	Observation 25 61	Estimated glomerular filtration rate
+E1	Observation:T1 Name:T9
+T2	Eq-Comparison 62 77	below 20 ml/min
+E2	Eq-Comparison:T2 Operator:T10 Value:T11 Unit:T12 Temporal-Unit:T13
+T3	Procedure 181 198	Conservative care
+E3	Procedure:T3
+T4	Procedure 221 236	transplantation
+E4	Procedure:T4 Name:T14
+T5	Procedure 244 256	living donor
+E5	Procedure:T5
+T6	Negation 262 265	Not
+E6	Negation:T6
+T7	Assertion 266 273	able to
+E7	Assertion:T7
+A1	Assertion-Type-Value E7 hypothetical
+T8	Condition 293 313	cognitive impairment
+E8	Condition:T8 Name:T15
+T9	Observation-Name 25 61	Estimated glomerular filtration rate
+A2	Observation-Type-Value T9 lab
+T10	Eq-Operator 62 67	below
+A3	Eq-Operator-Value T10 GT
+T11	Eq-Value 68 70	20
+T12	Eq-Unit 71 73	ml
+T13	Eq-Temporal-Unit 74 77	min
+A4	Eq-Temporal-Unit-Value T13 minute
+T14	Procedure-Name 221 236	transplantation
+T15	Condition-Name 293 313	cognitive impairment

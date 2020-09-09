@@ -1,30 +1,49 @@
-T1	Condition 124 127	per
-T2	Condition-Name 124 127	per
-E1	Condition:T1 Name:T2
-T3	Condition 314 328	BH4 deficiency
-T4	Condition-Name 314 328	BH4 deficiency
-E3	Condition:T3 Name:T4
-T5	Condition 329 332	per
-T6	Condition-Name 329 332	per
-E5	Condition:T5 Name:T6
+T1	Procedure 128 144	local regulation
+E1	Procedure:T1
+T2	Condition 314 328	BH4 deficiency
+E2	Condition:T2 Name:T16
+T3	Observation 354 359	KUVAN
+E3	Observation:T3
+T4	Eq-Comparison 359 360	®
+E4	Eq-Comparison:T4
+T5	Eq-Comparison 371 395	at least 1 dose to treat
+E5	Eq-Comparison:T5 Operator:T18 Value:T19
+T6	Condition 396 399	HPA
+E6	Condition:T6 Name:T20
 T7	Condition 410 424	BH4 deficiency
-T8	Condition-Name 410 424	BH4 deficiency
-E7	Condition:T7 Name:T8
-T9	Procedure 446 457	observation
-T10	Procedure-Name 446 457	observation
-E9	Procedure:T9 Name:T10
-T11	Condition 555 570	Phenylketonuria
-T12	Condition-Name 555 570	Phenylketonuria
-E11	Condition:T11 Name:T12
-T13	Procedure 692 703	observation
-T14	Procedure-Name 692 703	observation
-E13	Procedure:T13 Name:T14
-T15	Condition 572 575	PKU
-T16	Condition-Name 572 575	PKU
-E15	Condition:T15 Name:T16
-T17	Eq-Operator 491 492	≥
-A1	Eq-Operator-Value T17 GTEQ
-T18	Eq-Value 380 381	1
-T19	Eq-Value 493 496	450
-T20	Eq-Comparison 491 496	≥ 450
-E16	Eq-Comparison:T20 Operator:T17 Value:T19
+E7	Condition:T7 Name:T21
+T8	Temporal-Connection 425 431	during
+E8	Temporal-Connection:T8
+A1	Temporal-Connection-Type-Value E8 during
+T9	Study 446 457	observation
+E9	Study:T9
+T10	Observation 473 490	Phe concentration
+E10	Observation:T10 Name:T22 Name:T23
+T11	Eq-Comparison 491 503	≥ 450 µmol/L
+E11	Eq-Comparison:T11 Operator:T24 Value:T25 Unit:T26 Unit:T27
+T12	Condition 555 570	Phenylketonuria
+E12	Condition:T12 Name:T28
+T13	Condition 572 575	PKU
+E13	Condition:T13 Name:T29
+T14	Condition 590 599	condition
+E14	Condition:T14
+T15	Negation 707 710	not
+E15	Negation:T15
+T16	Condition-Name 314 328	BH4 deficiency
+T17	Condition-Name 354 359	KUVAN
+T18	Eq-Operator 371 379	at least
+A2	Eq-Operator-Value T18 GTEQ
+T19	Eq-Value 380 381	1
+T20	Condition-Name 396 399	HPA
+T21	Condition-Name 410 424	BH4 deficiency
+T22	Observation-Name 473 476	Phe
+A3	Observation-Type-Value T22 lab
+T23	Observation-Name 477 490	concentration
+A4	Observation-Type-Value T23 measurement
+T24	Eq-Operator 491 492	≥
+A5	Eq-Operator-Value T24 GTEQ
+T25	Eq-Value 493 496	450
+T26	Eq-Unit 497 501	µmol
+T27	Eq-Unit 502 503	L
+T28	Condition-Name 555 570	Phenylketonuria
+T29	Condition-Name 572 575	PKU

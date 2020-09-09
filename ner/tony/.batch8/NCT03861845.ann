@@ -1,9 +1,38 @@
-T1	Language 61 68	English
-T2	Condition 207 227	cognitive impairment
-T3	Condition-Name 207 227	cognitive impairment
-E2	Condition:T2 Name:T3
-T4	Eq-Temporal-Unit 28 33	years
-A1	Eq-Temporal-Unit-Value T4 year
-T5	Age 37 40	age
-E3	Age:T5
-T6	Eq-Value 25 27	18
+T1	Eq-Comparison 25 49	18 years of age or older
+E1	Eq-Comparison:T1 Value:T12 Temporal-Unit:T13 Operator:T14
+T2	Eq-Comparison 96 107	two or more
+E2	Eq-Comparison:T2 Value:T16 Operator:T17
+T3	Drug 108 119	medications
+E3	Drug:T3
+T4	Eq-Comparison 120 127	per day
+E4	Eq-Comparison:T4 Temporal-Unit:T18
+T5	And 129 132	and
+E5	And:T5
+T6	Assertion 133 145	manage their
+E6	Assertion:T6
+A1	Assertion-Type-Value E6 hypothetical
+T7	Drug 150 161	medications
+E7	Drug:T7
+T8	Condition 207 227	cognitive impairment
+E8	Condition:T8 Name:T20
+T9	Negation 233 242	unwilling
+E9	Negation:T9
+T10	Procedure 252 265	novel pillbox
+E10	Procedure:T10
+T11	Negation 271 277	unable
+E11	Negation:T11
+T12	Eq-Value 25 27	18
+T13	Eq-Temporal-Unit 28 33	years
+A2	Eq-Temporal-Unit-Value T13 year
+T14	Eq-Operator 41 49	or older
+A3	Eq-Operator-Value T14 GTEQ
+T15	Language 61 68	English
+T16	Eq-Value 96 99	two
+T17	Eq-Operator 100 107	or more
+A4	Eq-Operator-Value T17 GTEQ
+T18	Eq-Temporal-Unit 124 127	day
+A5	Eq-Temporal-Unit-Value T18 day
+T19	Severity 195 206	significant
+A6	Severity-Value T19 severe
+T20	Condition-Name 207 227	cognitive impairment
+T21	Condition-Name 252 265	novel pillbox

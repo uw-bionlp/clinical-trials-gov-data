@@ -1,63 +1,275 @@
-T1	Condition 72 81	cataracts
-T2	Condition-Name 72 81	cataracts
-E1	Condition:T1 Name:T2
-T3	Life-Stage-And-Gender 25 31	Adults
-A1	Life-Stage-And-Gender-Type T3 adult
-T4	Procedure 207 226	phacoemulsification
-T5	Procedure-Name 207 226	phacoemulsification
-E4	Procedure:T4 Name:T5
-T6	Procedure 156 172	cataract surgery
-T7	Procedure-Name 156 172	cataract surgery
-E6	Procedure:T6 Name:T7
-T8	Procedure 255 271	cataract surgery
-T9	Procedure-Name 255 271	cataract surgery
-E8	Procedure:T8 Name:T9
-T10	Condition 299 311	hypertension
-T11	Condition-Name 299 311	hypertension
-E10	Condition:T10 Name:T11
-T12	Condition 289 297	diabetes
-T13	Condition-Name 289 297	diabetes
-E12	Condition:T12 Name:T13
-T14	Procedure 408 421	birth control
-T15	Procedure-Name 408 421	birth control
-E14	Procedure:T14 Name:T15
-T16	Procedure 569 583	tubal ligation
-T17	Procedure-Name 569 583	tubal ligation
-E16	Procedure:T16 Name:T17
-T18	Procedure 477 490	birth control
-T19	Procedure-Name 477 490	birth control
-E18	Procedure:T18 Name:T19
-T20	Procedure 496 506	abstinence
-T21	Procedure-Name 496 506	abstinence
-E20	Procedure:T20 Name:T21
-T22	Procedure 587 596	vasectomy
-T23	Procedure-Name 587 596	vasectomy
-E22	Procedure:T22 Name:T23
-T24	Condition 902 918	menstrual period
-T25	Condition-Name 902 918	menstrual period
-E24	Condition:T24 Name:T25
-T26	Condition 1015 1039	Allergy to Phenylephrine
-T27	Condition-Name 1015 1039	Allergy to Phenylephrine
-E26	Condition:T26 Name:T27
-T28	Condition 1209 1222	vitreous loss
-T29	Condition-Name 1209 1222	vitreous loss
-E28	Condition:T28 Name:T29
-T30	Condition 1437 1441	lens
-T31	Condition-Name 1437 1441	lens
-E30	Condition:T30 Name:T31
-T32	Life-Stage-And-Gender 1523 1538	Female patients
-A2	Life-Stage-And-Gender-Type T32 male
-T33	Eq-Temporal-Unit 42 47	years
-A3	Eq-Temporal-Unit-Value T33 year
-T34	Eq-Temporal-Unit 876 880	days
-A4	Eq-Temporal-Unit-Value T34 day
-T35	Age 32 35	age
-E31	Age:T35
-T36	Eq-Operator 38 39	-
-A5	Eq-Operator-Value T36 BETWEEN
-T37	Eq-Value 36 38	55
-T38	Eq-Value 39 41	90
-T39	Eq-Value 873 875	10
-T40	Eq-Value 1287 1290	300
-T41	Eq-Comparison 36 39	55-
-E32	Eq-Comparison:T41 Operator:T36 Value:T37
+T1	Age 32 35	age
+E1	Age:T1 
+T2	Eq-Comparison 36 47	55-90 years
+E2	Eq-Comparison:T2 Value:T96 Operator:T97 Value:T98 Temporal-Unit:T99
+T3	And 48 52	with
+E3	And:T3 
+T4	Modifier 53 71	visual significant
+E4	Modifier:T4 
+T5	Condition 72 81	cataracts
+E5	Condition:T5 Name:T101
+T6	Modifier 85 88	one
+E6	Modifier:T6 
+T7	Or 89 91	or
+E7	Or:T7 
+T8	Modifier 92 101	both eyes
+E8	Modifier:T8 
+T9	Condition 108 115	Healthy
+E9	Condition:T9 Name:T102
+T10	Assertion 128 135	able to
+E10	Assertion:T10 
+A1	Assertion-Type-Value E10 hypothetical
+T11	Procedure 156 172	cataract surgery
+E11	Procedure:T11 Name:T103
+T12	Procedure 179 195	local anesthesia
+E12	Procedure:T12 Name:T104
+T13	Procedure 207 226	phacoemulsification
+E13	Procedure:T13 
+T14	Or 227 233	and/or
+E14	Or:T14 
+T15	Procedure 234 271	femtosecond assisted cataract surgery
+E15	Procedure:T15 Name:T105
+T16	Modifier 273 288	Well-controlled
+E16	Modifier:T16 
+T17	Condition 289 297	diabetes
+E17	Condition:T17 Name:T106
+T18	Condition 299 311	hypertension
+E18	Condition:T18 Name:T107
+T19	Condition 346 358	childbearing
+E19	Condition:T19 Name:T109
+T20	Assertion 359 368	potential
+E20	Assertion:T20 
+A2	Assertion-Type-Value E20 hypothetical
+T21	Assertion 374 382	agree to
+E21	Assertion:T21 
+A3	Assertion-Type-Value E21 hypothetical
+T22	Procedure 408 421	birth control
+E22	Procedure:T22 Name:T110
+T23	Temporal-Connection 422 427	while
+E23	Temporal-Connection:T23 
+A4	Temporal-Connection-Type-Value E23 during
+T24	Study 450 455	study
+E24	Study:T24 
+T25	Procedure 477 490	birth control
+E25	Procedure:T25 Name:T111
+T26	Modifier 496 506	abstinence
+E26	Modifier:T26 
+T27	Procedure 508 527	oral contraceptives
+E27	Procedure:T27 
+T28	Procedure 529 548	intrauterine device
+E28	Procedure:T28 Name:T113
+T29	Modifier 550 553	IUD
+E29	Modifier:T29 
+T30	Modifier 556 567	DepoProvera
+E30	Modifier:T30 
+T31	Procedure 569 583	tubal ligation
+E31	Procedure:T31 Name:T115
+T32	Or 584 586	or
+E32	Or:T32 
+T33	Procedure 587 596	vasectomy
+E33	Procedure:T33 Name:T116
+T34	And 613 617	with
+E34	And:T34 
+T35	Condition 637 649	sperm counts
+E35	Condition:T35 
+T36	Condition 654 677	monogamous relationship
+E36	Condition:T36 Name:T119
+T37	Procedure 768 775	condoms
+E37	Procedure:T37 
+T38	Or 776 779	and
+E38	Or:T38 
+T39	Procedure 780 796	spermicidal foam
+E39	Procedure:T39 Name:T120
+T40	Or 797 799	or
+E40	Or:T40 
+T41	Modifier 800 803	gel
+E41	Modifier:T41 
+T42	Or 804 810	and/or
+E42	Or:T42 
+T43	Modifier 811 823	cervical cap
+E43	Modifier:T43 
+T44	Or 824 826	or
+E44	Or:T44 
+T45	Modifier 827 833	sponge
+E45	Modifier:T45 
+T46	Condition 837 846	pregnancy
+E46	Condition:T46 
+T47	Eq-Comparison 864 880	at least 10 days
+E47	Eq-Comparison:T47 Operator:T124 Value:T125 Temporal-Unit:T126
+T48	Eq-Comparison 890 911	last normal menstrual
+E48	Eq-Comparison:T48 Temporal-Unit:T127
+T49	Eq-Comparison 949 955	active
+E49	Eq-Comparison:T49 Temporal-Period:T130
+T50	Condition 966 988	childbearing potential
+E50	Condition:T50 Name:T132
+T51	Allergy 1015 1022	Allergy
+E51	Allergy:T51 
+T52	Drug 1026 1039	Phenylephrine
+E52	Drug:T52 Name:T133
+T53	Or 1040 1042	or
+E53	Or:T53 
+T54	Drug 1043 1049	NSAIDs
+E54	Drug:T54 Name:T134
+T55	Assertion 1056 1065	Inability
+E55	Assertion:T55 
+A5	Assertion-Type-Value E55 hypothetical
+T57	Condition 1069 1079	sit steady
+E56	Condition:T57 
+T58	And 1080 1083	and
+E57	And:T58 
+T59	Modifier 1084 1091	upright
+E58	Modifier:T59 
+T60	Procedure 1100 1128	Optical Coherence Tomography
+E59	Procedure:T60 Name:T135
+T61	Procedure 1130 1133	OCT
+E60	Procedure:T61 
+T62	Condition 1141 1154	Complications
+E61	Condition:T62 
+T63	Temporal-Connection 1155 1161	during
+E62	Temporal-Connection:T63 
+A6	Temporal-Connection-Type-Value E62 during
+T64	Procedure 1162 1169	surgery
+E63	Procedure:T64 Name:T136
+T65	Condition 1181 1207	posterior capsular rupture
+E64	Condition:T65 Name:T137
+T66	Condition 1209 1222	vitreous loss
+E65	Condition:T66 Name:T138
+T67	Procedure 1224 1240	zonular dialysis
+E66	Procedure:T67 Name:T139
+T68	Or 1242 1244	or
+E67	Or:T68 
+T69	Modifier 1245 1249	iris
+E68	Modifier:T69 
+T70	Condition 1250 1256	trauma
+E69	Condition:T70 Name:T140
+T71	Observation 1263 1280	Macular thickness
+E70	Observation:T71 Name:T141
+T72	Eq-Comparison 1281 1298	above 300 microns
+E71	Eq-Comparison:T72 Operator:T142 Value:T143 Unit:T144
+T73	Temporal-Connection 1299 1301	at
+E72	Temporal-Connection:T73 
+A7	Temporal-Connection-Type-Value E72 during
+T74	Study 1302 1310	baseline
+E73	Study:T74 
+T75	Eq-Comparison 1316 1332	Currently taking
+E74	Eq-Comparison:T75 Temporal-Period:T145 Temporal-Period:T146
+T76	Drug 1335 1357	prostaglandin analogue
+E75	Drug:T76 Name:T147
+T77	Procedure 1378 1397	epiretinal membrane
+E76	Procedure:T77 
+T78	Temporal-Connection 1405 1417	preoperative
+E77	Temporal-Connection:T78 
+A8	Temporal-Connection-Type-Value E77 before
+T79	Procedure 1437 1450	lens fragment
+E78	Procedure:T79 
+T80	Temporal-Connection 1451 1455	post
+E79	Temporal-Connection:T80 
+A9	Temporal-Connection-Type-Value E79 after
+T81	Procedure 1456 1467	operatively
+E80	Procedure:T81 
+T82	Assertion 1474 1483	Inability
+E81	Assertion:T82 
+A10	Assertion-Type-Value E81 hypothetical
+T84	Procedure 1505 1517	appointments
+E82	Procedure:T84 
+T85	And 1539 1542	who
+E83	And:T85 
+T86	Condition 1547 1555	pregnant
+E84	Condition:T86 Name:T152
+T87	Condition 1557 1566	lactating
+E85	Condition:T87 Name:T153
+T88	Or 1567 1569	or
+E86	Or:T88 
+T89	Assertion 1570 1588	planning to become
+E87	Assertion:T89 
+A11	Assertion-Type-Value E87 intention
+T90	Condition 1589 1597	pregnant
+E88	Condition:T90 Name:T154
+T91	Temporal-Connection 1598 1604	during
+E89	Temporal-Connection:T91 
+A12	Temporal-Connection-Type-Value E89 during
+T92	Procedure 1619 1628	treatment
+E90	Procedure:T92 
+T93	Negation 1056 1065	Inability
+E91	Negation:T93 
+T94	Negation 1474 1483	Inability
+E92	Negation:T94 
+T95	Life-Stage-And-Gender 25 31	Adults
+A13	Life-Stage-And-Gender-Type T95 adult
+T96	Eq-Value 36 38	55
+T97	Eq-Operator 38 39	-
+A14	Eq-Operator-Value T97 BETWEEN
+T98	Eq-Value 39 41	90
+T99	Eq-Temporal-Unit 42 47	years
+A15	Eq-Temporal-Unit-Value T99 year
+T100	Severity 60 71	significant
+A16	Severity-Value T100 severe
+T101	Condition-Name 72 81	cataracts
+T102	Condition-Name 108 115	Healthy
+T103	Procedure-Name 156 172	cataract surgery
+T104	Procedure-Name 179 195	local anesthesia
+T105	Procedure-Name 234 271	femtosecond assisted cataract surgery
+T106	Condition-Name 289 297	diabetes
+T107	Condition-Name 299 311	hypertension
+T108	Life-Stage-And-Gender 335 342	Females
+A17	Life-Stage-And-Gender-Type T108 male
+T109	Condition-Name 346 358	childbearing
+T110	Procedure-Name 408 421	birth control
+T111	Procedure-Name 477 490	birth control
+T112	Drug-Name 508 527	oral contraceptives
+T113	Procedure-Name 529 548	intrauterine device
+T114	Procedure-Name 550 553	IUD
+T115	Procedure-Name 569 583	tubal ligation
+T116	Procedure-Name 587 596	vasectomy
+T117	Polarity 628 636	negative
+A18	Polarity-Value T117 negative
+T118	Observation-Name 637 649	sperm counts
+A19	Observation-Type-Value T118 lab
+T119	Condition-Name 654 677	monogamous relationship
+T120	Procedure-Name 780 796	spermicidal foam
+T121	Condition-Name 811 823	cervical cap
+T122	Condition-Name 827 833	sponge
+T123	Observation-Name 837 851	pregnancy test
+A20	Observation-Type-Value T123 lab
+T124	Eq-Operator 864 872	at least
+A21	Eq-Operator-Value T124 GTEQ
+T125	Eq-Value 873 875	10
+T126	Eq-Temporal-Unit 876 880	days
+A22	Eq-Temporal-Unit-Value T126 day
+T127	Eq-Temporal-Unit 890 894	last
+A23	Eq-Temporal-Unit-Value T127 week
+T128	Polarity 895 901	normal
+A24	Polarity-Value T128 normal
+T129	Condition-Name 940 948	sexually
+T130	Eq-Temporal-Period 949 955	active
+A25	Eq-Temporal-Period-Value T130 present
+T131	Life-Stage-And-Gender 956 962	female
+A26	Life-Stage-And-Gender-Type T131 female
+T132	Condition-Name 966 978	childbearing
+T133	Drug-Name 1026 1039	Phenylephrine
+T134	Drug-Name 1043 1049	NSAIDs
+T135	Procedure-Name 1100 1128	Optical Coherence Tomography
+T136	Procedure-Name 1162 1169	surgery
+T137	Condition-Name 1191 1207	capsular rupture
+T138	Condition-Name 1209 1222	vitreous loss
+T139	Procedure-Name 1224 1240	zonular dialysis
+T140	Condition-Name 1250 1256	trauma
+T141	Observation-Name 1263 1280	Macular thickness
+A27	Observation-Type-Value T141 measurement
+T142	Eq-Operator 1281 1286	above
+A28	Eq-Operator-Value T142 GT
+T143	Eq-Value 1287 1290	300
+T144	Eq-Unit 1291 1298	microns
+T145	Eq-Temporal-Period 1316 1325	Currently
+A29	Eq-Temporal-Period-Value T145 present
+T146	Eq-Temporal-Period 1326 1332	taking
+A30	Eq-Temporal-Period-Value T146 present
+T147	Drug-Name 1335 1357	prostaglandin analogue
+T148	Condition-Name 1378 1397	epiretinal membrane
+T149	Procedure-Name 1437 1455	lens fragment post
+T150	Condition-Name 1456 1467	operatively
+T151	Life-Stage-And-Gender 1523 1529	Female
+A31	Life-Stage-And-Gender-Type T151 female
+T152	Condition-Name 1547 1555	pregnant
+T153	Condition-Name 1557 1566	lactating
+T154	Condition-Name 1589 1597	pregnant

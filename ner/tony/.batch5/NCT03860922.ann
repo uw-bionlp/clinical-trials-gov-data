@@ -1,15 +1,53 @@
-T1	Condition 171 191	impingement syndrome
-T2	Condition-Name 171 191	impingement syndrome
-E1	Condition:T1 Name:T2
-T3	Condition 67 70	sex
-T4	Condition-Name 67 70	sex
-E3	Condition:T3 Name:T4
-T5	Condition 218 240	Inflammatory arthritis
-T6	Condition-Name 218 240	Inflammatory arthritis
-E5	Condition:T5 Name:T6
-T7	Condition 407 421	claustrophobia
-T8	Condition-Name 407 421	claustrophobia
-E7	Condition:T7 Name:T8
-T9	Language 353 356	MRI
-T10	Age 47 50	age
-E8	Age:T10
+T1	Age 47 50	age
+E1	Age:T1
+T2	And 114 118	with
+E2	And:T2
+T3	Modifier 119 132	chronic ankle
+E3	Modifier:T3
+T4	Condition 133 137	pain
+E4	Condition:T4 Name:T23
+T5	And 138 141	and
+E5	And:T5
+T6	Assertion 142 151	suspected
+E6	Assertion:T6
+A1	Assertion-Type-Value E6 possible
+T7	Condition 171 191	impingement syndrome
+E7	Condition:T7 Name:T24
+T8	Condition 218 240	Inflammatory arthritis
+E8	Condition:T8 Name:T25
+T9	Modifier 244 249	ankle
+E9	Modifier:T9
+T10	Condition 250 255	joint
+E10	Condition:T10
+T11	Condition 257 266	infection
+E11	Condition:T11 Name:T26
+T12	Modifier 270 281	ankle joint
+E12	Modifier:T12
+T13	Modifier 283 291	neoplasm
+E13	Modifier:T13
+T14	Modifier 292 310	around ankle joint
+E14	Modifier:T14
+T15	Contraindication 331 348	contraindications
+E15	Contraindication:T15
+T16	Procedure 353 356	MRI
+E16	Procedure:T16 Name:T27
+T17	Procedure 366 391	implanted magnetic device
+E17	Procedure:T17 Name:T28
+T18	Modifier 393 403	pacemakers
+E18	Modifier:T18
+T19	Or 404 406	or
+E19	Or:T19
+T20	Condition 407 421	claustrophobia
+E20	Condition:T20 Name:T30
+T21	Encounter-Type 96 106	outpatient
+A2	Encounter-Type-Value T21 outpatient
+T22	Location 107 113	clinic
+A3	Location-Value T22 clinic
+T23	Condition-Name 133 137	pain
+T24	Condition-Name 171 191	impingement syndrome
+T25	Condition-Name 218 240	Inflammatory arthritis
+T26	Condition-Name 257 266	infection
+T27	Procedure-Name 353 356	MRI
+T28	Procedure-Name 366 391	implanted magnetic device
+T29	Procedure-Name 393 403	pacemakers
+T30	Condition-Name 407 421	claustrophobia

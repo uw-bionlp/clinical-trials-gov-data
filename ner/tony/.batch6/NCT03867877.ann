@@ -1,54 +1,130 @@
-T1	Condition 476 496	degenerative disease
-T2	Condition-Name 476 496	degenerative disease
-E1	Condition:T1 Name:T2
-T3	Procedure 799 818	resistance training
-T4	Procedure-Name 799 818	resistance training
-E3	Procedure:T3 Name:T4
-T5	Condition 440 458	systemic infection
-T6	Condition-Name 440 458	systemic infection
-E5	Condition:T5 Name:T6
-T7	Procedure 536 554	orthopedic surgery
-T8	Procedure-Name 536 554	orthopedic surgery
-E7	Procedure:T7 Name:T8
-T9	Procedure 274 291	Mental State Exam
-T10	Procedure-Name 274 291	Mental State Exam
-E9	Procedure:T9 Name:T10
-T11	Condition 583 597	mental disease
-T12	Condition-Name 583 597	mental disease
-E11	Condition:T11 Name:T12
-T13	Procedure 513 526	spinal fusion
-T14	Procedure-Name 513 526	spinal fusion
-E13	Procedure:T13 Name:T14
-T15	Condition 427 436	pneumonia
-T16	Condition-Name 427 436	pneumonia
-E15	Condition:T15 Name:T16
-T17	Condition 598 607	psychosis
-T18	Condition-Name 598 607	psychosis
-E17	Condition:T17 Name:T18
-T19	Condition 904 913	pregnancy
-T20	Condition-Name 904 913	pregnancy
-E19	Condition:T19 Name:T20
-T21	Condition 616 624	dementia
-T22	Condition-Name 616 624	dementia
-E21	Condition:T21 Name:T22
-T23	Eq-Operator 317 329	Greater than
-A1	Eq-Operator-Value T23 GT
-T24	Eq-Operator 558 566	the past
-A2	Eq-Operator-Value T24 GTEQ
-T25	Eq-Operator 630 642	greater than
-A3	Eq-Operator-Value T25 GT
-T26	Eq-Operator 838 853	within the past
-A4	Eq-Operator-Value T26 LTEQ
-T27	Eq-Temporal-Unit 571 577	months
-A5	Eq-Temporal-Unit-Value T27 month
-T28	Eq-Temporal-Unit 858 864	months
-A6	Eq-Temporal-Unit-Value T28 month
-T29	Eq-Operator 75 76	-
-A7	Eq-Operator-Value T29 BETWEEN
-T30	Eq-Value 74 75	1
-T31	Eq-Value 76 77	3
-T32	Eq-Value 145 147	50
-T33	Eq-Value 241 243	24
-T34	Eq-Value 336 337	3
-T35	Eq-Comparison 74 76	1-
-E22	Eq-Comparison:T35 Operator:T29 Value:T30
+T1	Condition 25 30	Hoehn
+E1	Condition:T1
+T2	Or 31 32	&
+E2	Or:T2
+T3	Condition 56 66	Disability
+E3	Condition:T3 Name:T40
+T4	Eq-Comparison 68 76	stage 1-
+E4	Eq-Comparison:T4 Unit:T41 Value:T42 Operator:T43
+T5	Condition 83 95	can ambulate
+E5	Condition:T5 Name:T45
+T6	Or 101 103	or
+E6	Or:T6
+T7	Negation 104 111	without
+E7	Negation:T7
+T8	Procedure 115 131	assistive device
+E8	Procedure:T8 Name:T46
+T9	Eq-Comparison 136 152	at least 50 feet
+E9	Eq-Comparison:T9 Operator:T47 Value:T48 Unit:T49
+T10	Assertion 158 165	able to
+E10	Assertion:T10
+A1	Assertion-Type-Value E10 hypothetical
+T11	Observation 166 196	get up and down from the floor
+E11	Observation:T11
+T12	Eq-Comparison 241 252	24 or above
+E12	Eq-Comparison:T12 Value:T51 Operator:T52
+T13	Eq-Comparison 317 337	Greater than Stage 3
+E13	Eq-Comparison:T13 Operator:T54 Unit:T55 Value:T56
+T14	Condition 376 386	Disability
+E14	Condition:T14 Name:T57
+T15	Eq-Comparison 392 399	decline
+E15	Eq-Comparison:T15
+T16	Condition 403 418	immune function
+E16	Condition:T16 Name:T58
+T17	Condition 427 436	pneumonia
+E17	Condition:T17 Name:T59
+T18	Or 437 439	or
+E18	Or:T18
+T19	Modifier 440 448	systemic
+E19	Modifier:T19
+T20	Condition 449 458	infection
+E20	Condition:T20 Name:T60
+T21	Condition 464 496	progressive degenerative disease
+E21	Condition:T21 Name:T61
+T22	Modifier 505 507	PD
+E22	Modifier:T22
+T23	Modifier 510 526	- spinal fusion
+E23	Modifier:T23
+T24	Or 527 529	or
+E24	Or:T24
+T25	Other 530 535	other
+E25	Other:T25
+T26	Procedure 536 554	orthopedic surgery
+E26	Procedure:T26 Name:T64
+T27	Eq-Comparison 562 577	past six months
+E27	Eq-Comparison:T27 Temporal-Period:T65 Value:T66 Temporal-Unit:T67
+T28	Condition 583 597	mental disease
+E28	Condition:T28 Name:T68
+T29	Or 597 598	/
+E29	Or:T29
+T30	Condition 598 607	psychosis
+E30	Condition:T30 Name:T69
+T31	Condition 616 624	dementia
+E31	Condition:T31 Name:T70
+T32	Eq-Comparison 630 650	greater than minimal
+E32	Eq-Comparison:T32 Operator:T71
+T33	Modifier 675 679	gait
+E33	Modifier:T33
+T34	And 680 683	and
+E34	And:T34
+T35	Negation 699 708	inability
+E35	Negation:T35
+T36	Eq-Comparison 838 864	within the past six months
+E36	Eq-Comparison:T36 Operator:T75 Temporal-Period:T76 Value:T77 Temporal-Unit:T78
+T37	Condition 904 913	pregnancy
+E37	Condition:T37 Name:T79
+T38	Observation 921 929	prisoner
+E38	Observation:T38 Name:T80
+T39	Condition-Name 25 37	Hoehn & Yahr
+T40	Condition-Name 56 66	Disability
+T41	Eq-Unit 68 73	stage
+T42	Eq-Value 74 75	1
+T43	Eq-Operator 75 76	-
+A2	Eq-Operator-Value T43 BETWEEN
+T44	Eq-Value 76 77	3
+T45	Condition-Name 87 95	ambulate
+T46	Procedure-Name 115 131	assistive device
+T47	Eq-Operator 136 144	at least
+A3	Eq-Operator-Value T47 GTEQ
+T48	Eq-Value 145 147	50
+T49	Eq-Unit 148 152	feet
+T50	Condition-Name 158 169	able to get
+T51	Eq-Value 241 243	24
+T52	Eq-Operator 244 252	or above
+A4	Eq-Operator-Value T52 GTEQ
+T53	Observation-Name 260 291	Folstein Mini-Mental State Exam
+T54	Eq-Operator 317 329	Greater than
+A5	Eq-Operator-Value T54 GT
+T55	Eq-Unit 330 335	Stage
+T56	Eq-Value 336 337	3
+T57	Condition-Name 376 386	Disability
+T58	Condition-Name 403 418	immune function
+T59	Condition-Name 427 436	pneumonia
+T60	Condition-Name 449 458	infection
+T61	Condition-Name 464 496	progressive degenerative disease
+T62	Condition-Name 505 507	PD
+T63	Condition-Name 513 526	spinal fusion
+T64	Procedure-Name 547 554	surgery
+T65	Eq-Temporal-Period 562 566	past
+A6	Eq-Temporal-Period-Value T65 past
+T66	Eq-Value 567 570	six
+T67	Eq-Temporal-Unit 571 577	months
+A7	Eq-Temporal-Unit-Value T67 month
+T68	Condition-Name 583 597	mental disease
+T69	Condition-Name 598 607	psychosis
+T70	Condition-Name 616 624	dementia
+T71	Eq-Operator 630 642	greater than
+A8	Eq-Operator-Value T71 GT
+T72	Observation-Name 643 661	minimal assistance
+T73	Eq-Temporal-Period 749 758	scheduled
+A9	Eq-Temporal-Period-Value T73 future
+T74	Observation-Name 799 818	resistance training
+T75	Eq-Operator 838 844	within
+A10	Eq-Operator-Value T75 LTEQ
+T76	Eq-Temporal-Period 849 853	past
+A11	Eq-Temporal-Period-Value T76 past
+T77	Eq-Value 854 857	six
+T78	Eq-Temporal-Unit 858 864	months
+A12	Eq-Temporal-Unit-Value T78 month
+T79	Condition-Name 904 913	pregnancy
+T80	Observation-Name 921 929	prisoner

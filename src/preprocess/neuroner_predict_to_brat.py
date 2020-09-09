@@ -76,12 +76,13 @@ def main():
                     raw_args = [ ent for ent in ents if int(ent['beg_idx']) >= int(ev['beg_idx']) and int(ent['end_idx']) <= int(ev['end_idx']) ]
                     arg_strs = [ f"{ev['type']}:{ev['id']}" ]
                     for arg in raw_args:
-                        if ev['type'] in [ 'Condition', 'Procedure', 'Allergy', 'Observation', 'Drug' ] and arg['type'] == ev['type']+'-Name':
+                        arg_tp = arg['type'].split('---')[0]
+                        if ev['type'] in [ 'Condition', 'Procedure', 'Allergy', 'Observation', 'Drug' ] and arg_tp == ev['type']+'-Name':
                             arg_strs.append(f"{'Name'}:{arg['id']}")
                         elif ev['type'] == 'Eq-Comparison':
-                            if arg['type'] not in [ 'Eq-Operator', 'Eq-Temporal-Unit', 'Eq-Unit', 'Eq-Value' ]:
+                            if arg_tp not in [ 'Eq-Operator', 'Eq-Temporal-Unit', 'Eq-Unit', 'Eq-Value', 'Eq-Temporal-Period', 'Eq-Temporal-Recency' ]:
                                 continue
-                            arg_tp = arg['type'].replace('Eq-Operator-','').replace('Eq-Temporal-','').replace('Eq-','')
+                            arg_tp = arg_tp.replace('Eq-Operator-','').replace('Eq-','')
                             arg_strs.append(f"{arg_tp}:{arg['id']}")
                     E = f"E{E_i}\t{' '.join(arg_strs)}"
                     E_i += 1
@@ -107,10 +108,5 @@ def main():
 
                 to_write = '\n'.join(to_write)
                 f.write(to_write)
-
-
-
-                    
-                
 
 main()

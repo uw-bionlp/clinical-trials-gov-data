@@ -1,31 +1,55 @@
-T1	Procedure 445 464	drug administration
-T2	Procedure-Name 445 464	drug administration
-E1	Procedure:T1 Name:T2
-T3	Condition 465 469	plan
-T4	Condition-Name 465 469	plan
-E3	Condition:T3 Name:T4
-T5	Eq-Operator 199 204	up to
-A1	Eq-Operator-Value T5 LTEQ
-T6	Eq-Operator 258 263	up to
-A2	Eq-Operator-Value T6 LTEQ
-T7	Eq-Operator 303 309	within
-A3	Eq-Operator-Value T7 LTEQ
-T8	Eq-Temporal-Unit 313 317	days
-A4	Eq-Temporal-Unit-Value T8 day
-T9	Eq-Operator 253 254	-
-A5	Eq-Operator-Value T9 BETWEEN
-T10	Eq-Operator 658 659	-
-A6	Eq-Operator-Value T10 BETWEEN
-T11	Eq-Value 229 231	24
-T12	Eq-Value 254 257	004
-T13	Eq-Value 287 289	48
-T14	Eq-Value 310 312	30
-T15	Eq-Value 659 662	004
-T16	Eq-Comparison 254 263	004 up to
-E4	Eq-Comparison:T16 Operator:T6 Value:T12
-T17	Eq-Comparison 303 317	within 30 days
-E5	Eq-Comparison:T17 Operator:T7 Temporal-Unit:T8 Value:T14
-T18	Eq-Comparison 253 257	-004
-E6	Eq-Comparison:T18 Operator:T9 Value:T12
-T19	Eq-Comparison 658 662	-004
-E7	Eq-Comparison:T19 Operator:T10 Value:T15
+T1	Family-Member 35 41	parent
+E1	Family-Member:T1
+A1	Family-Member-Type E1 parent
+T2	Eq-Comparison 135 145	previously
+E2	Eq-Comparison:T2 Temporal-Period:T21
+T3	Study 178 183	study
+E3	Study:T3
+T4	Study 223 228	Month
+E4	Study:T4
+T5	Study 232 243	assessments
+E5	Study:T5
+T6	Or 245 247	OR
+E6	Or:T6
+T7	Age 254 257	004
+E7	Age:T7
+T8	Encounter 258 260	up
+E8	Encounter:T8
+T9	Study 290 301	assessments
+E9	Study:T9
+T10	Eq-Comparison 303 317	within 30 days
+E10	Eq-Comparison:T10 Operator:T22 Value:T23 Temporal-Unit:T24
+T11	Temporal-Connection 318 326	prior to
+E11	Temporal-Connection:T11
+A2	Temporal-Connection-Type-Value E11 before
+T12	Assertion 395 411	willing and able
+E12	Assertion:T12
+A3	Assertion-Type-Value E12 hypothetical
+T13	Encounter 492 501	follow-up
+E13	Encounter:T13
+T14	Or 607 609	or
+E14	Or:T14
+T15	Study 634 639	study
+E15	Study:T15
+T16	Or 650 652	or
+E16	Or:T16
+T17	Condition 659 662	004
+E17	Condition:T17
+T18	Or 874 880	and/or
+E18	Or:T18
+T19	Family-Member 881 887	parent
+E19	Family-Member:T19
+A4	Family-Member-Type E19 parent
+T20	Encounter 965 974	follow-up
+E20	Encounter:T20
+T21	Eq-Temporal-Period 135 145	previously
+A5	Eq-Temporal-Period-Value T21 past
+T22	Eq-Operator 303 309	within
+A6	Eq-Operator-Value T22 LTEQ
+T23	Eq-Value 310 312	30
+T24	Eq-Temporal-Unit 313 317	days
+A7	Eq-Temporal-Unit-Value T24 day
+T25	Severity 599 606	serious
+A8	Severity-Value T25 severe
+T26	Severity 610 616	severe
+A9	Severity-Value T26 severe

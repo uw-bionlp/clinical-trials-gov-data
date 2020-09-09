@@ -1,23 +1,77 @@
-T1	Condition 775 798	intellectual deficiency
-T2	Condition-Name 775 798	intellectual deficiency
-E1	Condition:T1 Name:T2
-T3	Condition 637 657	degenerative disease
-T4	Condition-Name 637 657	degenerative disease
-E3	Condition:T3 Name:T4
-T5	Condition 690 707	mental deficiency
-T6	Condition-Name 690 707	mental deficiency
-E5	Condition:T5 Name:T6
-T7	Condition 251 259	epilepsy
-T8	Condition-Name 251 259	epilepsy
-E7	Condition:T7 Name:T8
-T9	Procedure 167 174	regimen
-T10	Procedure-Name 167 174	regimen
-E9	Procedure:T9 Name:T10
-T11	Condition 261 266	BECTS
-T12	Condition-Name 261 266	BECTS
-E11	Condition:T11 Name:T12
-T13	Condition 268 272	ABPE
-T14	Condition-Name 268 272	ABPE
-E13	Condition:T13 Name:T14
-T15	Age 239 242	age
-E14	Age:T15
+T1	Condition 43 66	psychomotor development
+E1	Condition:T1 Name:T25
+T2	Condition 251 259	epilepsy
+E2	Condition:T2 Name:T27
+T3	Condition 261 266	BECTS
+E3	Condition:T3 
+T4	Condition 268 272	ABPE
+E4	Condition:T4 
+T5	Condition 274 279	ECSWS
+E5	Condition:T5 
+T6	Encounter 310 322	hospitalized
+E6	Encounter:T6 
+T7	Encounter 333 342	follow-up
+E7	Encounter:T7 
+T8	Procedure 355 367	neuroimaging
+E8	Procedure:T8 Name:T31
+T9	Procedure 368 375	Control
+E9	Procedure:T9 Name:T32
+T10	Encounter 392 404	hospitalized
+E10	Encounter:T10 
+T11	Other 411 414	non
+E11	Other:T11 
+T12	Condition 415 433	neurologic disease
+E12	Condition:T12 Name:T34
+T13	Condition 465 484	Psychiatric trouble
+E13	Condition:T13 Name:T35
+T14	Condition 493 510	Sensorial trouble
+E14	Condition:T14 Name:T36
+T15	Negation 511 518	without
+E15	Negation:T15 
+T16	Modifier 616 622	benign
+E16	Modifier:T16 
+T17	Condition 637 657	degenerative disease
+E17	Condition:T17 Name:T40
+T18	Procedure 672 684	neuroimaging
+E18	Procedure:T18 Name:T41
+T19	Condition 690 707	mental deficiency
+E19	Condition:T19 Name:T42
+T20	Condition 708 715	Control
+E20	Condition:T20 Name:T43
+T21	Condition 727 745	neurologic trouble
+E21	Condition:T21 Name:T44
+T22	Condition 760 769	sleep EEG
+E22	Condition:T22 
+T23	Condition 775 798	intellectual deficiency
+E23	Condition:T23 Name:T46
+T24	Polarity 36 42	normal
+A1	Polarity-Value T24 normal
+T25	Condition-Name 43 66	psychomotor development
+T26	Severity 199 205	severe
+A2	Severity-Value T26 severe
+T27	Condition-Name 251 259	epilepsy
+T28	Life-Stage-And-Gender 301 309	children
+A3	Life-Stage-And-Gender-Type T28 child
+T29	Encounter-Type 310 322	hospitalized
+A4	Encounter-Type-Value T29 inpatient
+T30	Polarity 348 354	normal
+A5	Polarity-Value T30 normal
+T31	Procedure-Name 355 367	neuroimaging
+T32	Procedure-Name 368 375	Control
+T33	Encounter-Type 392 404	hospitalized
+A6	Encounter-Type-Value T33 inpatient
+T34	Condition-Name 415 433	neurologic disease
+T35	Condition-Name 465 484	Psychiatric trouble
+T36	Condition-Name 493 510	Sensorial trouble
+T37	Language 546 552	French
+T38	Severity 562 567	Minor
+A7	Severity-Value T38 severe
+T39	Severity 603 609	severe
+A8	Severity-Value T39 severe
+T40	Condition-Name 637 657	degenerative disease
+T41	Procedure-Name 672 684	neuroimaging
+T42	Condition-Name 690 707	mental deficiency
+T43	Condition-Name 708 715	Control
+T44	Condition-Name 727 745	neurologic trouble
+T45	Condition-Name 751 769	abnormal sleep EEG
+T46	Condition-Name 775 798	intellectual deficiency

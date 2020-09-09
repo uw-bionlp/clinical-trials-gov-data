@@ -1,47 +1,177 @@
-T1	Condition 45 51	stroke
-T2	Condition-Name 45 51	stroke
-E1	Condition:T1 Name:T2
-T3	Condition 366 388	neurological disorders
-T4	Condition-Name 366 388	neurological disorders
-E3	Condition:T3 Name:T4
-T5	Condition 785 806	Peripheral neuropathy
-T6	Condition-Name 785 806	Peripheral neuropathy
-E5	Condition:T5 Name:T6
-T7	Procedure 390 403	brain surgery
-T8	Procedure-Name 390 403	brain surgery
-E7	Procedure:T7 Name:T8
-T9	Procedure 349 358	pacemaker
-T10	Procedure-Name 349 358	pacemaker
-E9	Procedure:T9 Name:T10
-T11	Condition 441 450	pregnancy
-T12	Condition-Name 441 450	pregnancy
-E11	Condition:T11 Name:T12
-T13	Condition 339 347	epilepsy
-T14	Condition-Name 339 347	epilepsy
-E13	Condition:T13 Name:T14
-T15	Procedure 411 418	implant
-T16	Procedure-Name 411 418	implant
-E15	Procedure:T15 Name:T16
-T17	Procedure 315 318	TMS
-T18	Procedure-Name 315 318	TMS
-E17	Procedure:T17 Name:T18
-T19	Eq-Operator 102 103	<
-A1	Eq-Operator-Value T19 LT
-T20	Eq-Operator 537 552	within the past
-A2	Eq-Operator-Value T20 LTEQ
-T21	Eq-Temporal-Unit 120 126	months
-A3	Eq-Temporal-Unit-Value T21 month
-T22	Eq-Temporal-Unit 238 243	years
-A4	Eq-Temporal-Unit-Value T22 year
-T23	Eq-Temporal-Unit 555 561	months
-A5	Eq-Temporal-Unit-Value T23 month
-T24	Age 226 229	Age
-E18	Age:T24
-T25	Eq-Value 104 106	60
-T26	Eq-Value 118 119	6
-T27	Eq-Value 235 237	18
-T28	Eq-Value 553 554	2
-T29	Eq-Comparison 102 106	< 60
-E19	Eq-Comparison:T29 Operator:T19 Value:T25
-T30	Eq-Comparison 537 561	within the past 2 months
-E20	Eq-Comparison:T30 Operator:T20 Temporal-Unit:T23 Value:T28
+T1	Modifier 25 44	Unilateral ischemic
+E1	Modifier:T1
+T2	Condition 45 51	stroke
+E2	Condition:T2
+T3	And 52 56	with
+E3	And:T3
+T4	Condition 57 78	residual arm weakness
+E4	Condition:T4 Name:T60
+T5	Condition 80 101	Fugl-Meyer Upper Limb
+E5	Condition:T5
+T6	Eq-Comparison 102 106	< 60
+E6	Eq-Comparison:T6 Operator:T62 Value:T63
+T7	Eq-Comparison 108 126	more than 6 months
+E7	Eq-Comparison:T7 Operator:T64 Value:T65 Temporal-Unit:T66
+T8	Temporal-Connection 127 135	prior to
+E8	Temporal-Connection:T8
+A1	Temporal-Connection-Type-Value E8 before
+T9	Study 136 146	enrollment
+E9	Study:T9
+T10	Age 226 229	Age
+E10	Age:T10
+T11	Eq-Comparison 230 243	over 18 years
+E11	Eq-Comparison:T11 Operator:T67 Value:T68 Temporal-Unit:T69
+T12	Modifier 270 281	Hemorrhagic
+E12	Modifier:T12
+T13	Condition 282 288	Stroke
+E13	Condition:T13
+T14	Contraindication 294 311	Contraindications
+E14	Contraindication:T14
+T15	Drug 315 318	TMS
+E15	Drug:T15 Name:T71
+T16	Eq-Comparison 320 327	history
+E16	Eq-Comparison:T16 Temporal-Period:T72
+T17	Condition 331 338	seizure
+E17	Condition:T17 Name:T73
+T18	Or 338 339	/
+E18	Or:T18
+T19	Condition 339 347	epilepsy
+E19	Condition:T19 Name:T74
+T20	Procedure 349 358	pacemaker
+E20	Procedure:T20 Name:T75
+T21	Other 360 365	other
+E21	Other:T21
+T22	Condition 366 388	neurological disorders
+E22	Condition:T22 Name:T76
+T23	Procedure 390 403	brain surgery
+E23	Procedure:T23 Name:T77
+T24	Procedure 405 418	metal implant
+E24	Procedure:T24 Name:T78
+T25	Or 418 419	/
+E25	Or:T25
+T26	Modifier 419 427	fragment
+E26	Modifier:T26
+T27	Modifier 435 439	head
+E27	Modifier:T27
+T28	Condition 441 450	pregnancy
+E28	Condition:T28 Name:T79
+T29	Eq-Comparison 456 462	Taking
+E29	Eq-Comparison:T29 Temporal-Period:T80
+T30	Drug 463 474	medications
+E30	Drug:T30
+T31	Or 475 477	or
+E31	Or:T31
+T32	Drug 478 488	substances
+E32	Drug:T32
+T33	Modifier 514 525	PAS-induced
+E33	Modifier:T33
+T34	Condition 526 536	plasticity
+E34	Condition:T34
+T35	Eq-Comparison 537 561	within the past 2 months
+E35	Eq-Comparison:T35 Operator:T83 Temporal-Period:T84 Value:T85 Temporal-Unit:T86
+T36	Drug 573 602	serotonin reuptake inhibitors
+E36	Drug:T36 Name:T87
+T37	Drug 604 612	dopamine
+E37	Drug:T37 Name:T88
+T38	Drug 614 631	dopamine agonists
+E38	Drug:T38 Name:T89
+T39	Drug 633 644	haloperidol
+E39	Drug:T39 Name:T90
+T40	Drug 646 653	lithium
+E40	Drug:T40 Name:T91
+T41	Drug 655 686	acetylcholinesterase inhibitors
+E41	Drug:T41 Name:T92
+T42	Drug 688 701	beta-blockers
+E42	Drug:T42 Name:T93
+T43	Drug 703 713	nimodipine
+E43	Drug:T43 Name:T94
+T44	Drug 715 728	levetiracetam
+E44	Drug:T44 Name:T95
+T45	Drug 730 742	ethosuximide
+E45	Drug:T45 Name:T96
+T46	Drug 744 759	benzodiazepines
+E46	Drug:T46 Name:T97
+T47	Drug 761 769	baclofen
+E47	Drug:T47 Name:T98
+T48	Modifier 771 779	nicotine
+E48	Modifier:T48
+T49	Modifier 782 795	- Peripheral
+E49	Modifier:T49
+T50	Condition 796 806	neuropathy
+E50	Condition:T50
+T51	Or 807 809	or
+E51	Or:T51
+T52	Eq-Comparison 810 817	history
+E52	Eq-Comparison:T52 Temporal-Period:T101
+T53	Condition 821 833	nerve injury
+E53	Condition:T53 Name:T102
+T54	Modifier 841 859	paretic upper limb
+E54	Modifier:T54
+T55	Or 873 879	and/or
+E55	Or:T55
+T56	Condition 880 902	personal circumstances
+E56	Condition:T56
+T57	Assertion 923 933	ability to
+E57	Assertion:T57
+A2	Assertion-Type-Value E57 hypothetical
+T58	Study 949 954	study
+E58	Study:T58
+T59	Condition-Name 36 51	ischemic stroke
+T60	Condition-Name 57 78	residual arm weakness
+T61	Observation-Name 85 101	Meyer Upper Limb
+A3	Observation-Type-Value T61 measurement
+T62	Eq-Operator 102 103	<
+A4	Eq-Operator-Value T62 LT
+T63	Eq-Value 104 106	60
+T64	Eq-Operator 108 117	more than
+A5	Eq-Operator-Value T64 GT
+T65	Eq-Value 118 119	6
+T66	Eq-Temporal-Unit 120 126	months
+A6	Eq-Temporal-Unit-Value T66 month
+T67	Eq-Operator 230 234	over
+A7	Eq-Operator-Value T67 GT
+T68	Eq-Value 235 237	18
+T69	Eq-Temporal-Unit 238 243	years
+A8	Eq-Temporal-Unit-Value T69 year
+T70	Condition-Name 270 288	Hemorrhagic Stroke
+T71	Drug-Name 315 318	TMS
+T72	Eq-Temporal-Period 320 327	history
+A9	Eq-Temporal-Period-Value T72 past
+T73	Condition-Name 331 338	seizure
+T74	Condition-Name 339 347	epilepsy
+T75	Procedure-Name 349 358	pacemaker
+T76	Condition-Name 366 388	neurological disorders
+T77	Procedure-Name 390 403	brain surgery
+T78	Procedure-Name 405 418	metal implant
+T79	Condition-Name 441 450	pregnancy
+T80	Eq-Temporal-Period 456 462	Taking
+A10	Eq-Temporal-Period-Value T80 present
+T81	Stability 507 513	affect
+A11	Stability-Value T81 change
+T82	Condition-Name 518 536	induced plasticity
+T83	Eq-Operator 537 543	within
+A12	Eq-Operator-Value T83 LTEQ
+T84	Eq-Temporal-Period 548 552	past
+A13	Eq-Temporal-Period-Value T84 past
+T85	Eq-Value 553 554	2
+T86	Eq-Temporal-Unit 555 561	months
+A14	Eq-Temporal-Unit-Value T86 month
+T87	Drug-Name 573 602	serotonin reuptake inhibitors
+T88	Drug-Name 604 612	dopamine
+T89	Drug-Name 614 631	dopamine agonists
+T90	Drug-Name 633 644	haloperidol
+T91	Drug-Name 646 653	lithium
+T92	Drug-Name 655 686	acetylcholinesterase inhibitors
+T93	Drug-Name 688 701	beta-blockers
+T94	Drug-Name 703 713	nimodipine
+T95	Drug-Name 715 728	levetiracetam
+T96	Drug-Name 730 742	ethosuximide
+T97	Drug-Name 744 759	benzodiazepines
+T98	Drug-Name 761 769	baclofen
+T99	Drug-Name 771 779	nicotine
+T100	Condition-Name 785 806	Peripheral neuropathy
+T101	Eq-Temporal-Period 810 817	history
+A15	Eq-Temporal-Period-Value T101 past
+T102	Condition-Name 827 833	injury
+T103	Stability 908 917	interfere
+A16	Stability-Value T103 change

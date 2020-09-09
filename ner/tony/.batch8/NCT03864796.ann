@@ -1,18 +1,51 @@
-T1	Condition 262 280	autoimmune disease
-T2	Condition-Name 262 280	autoimmune disease
-E1	Condition:T1 Name:T2
-T3	Condition 165 181	thrombocytopenia
-T4	Condition-Name 165 181	thrombocytopenia
-E3	Condition:T3 Name:T4
-T5	Condition 318 332	kidney disease
-T6	Condition-Name 318 332	kidney disease
-E5	Condition:T5 Name:T6
-T7	Condition 233 241	diabetes
-T8	Condition-Name 233 241	diabetes
-E7	Condition:T7 Name:T8
-T9	Condition 309 314	Liver
-T10	Condition-Name 309 314	Liver
-E9	Condition:T9 Name:T10
-T11	Condition 285 288	SLE
-T12	Condition-Name 285 288	SLE
-E11	Condition:T11 Name:T12
+T1	Modifier 41 55	primary immune
+E1	Modifier:T1
+T2	Condition 56 72	thrombocytopenic
+E2	Condition:T2
+T3	Other 141 146	other
+E3	Other:T3
+T4	Assertion 147 155	possible
+E4	Assertion:T4
+A1	Assertion-Type-Value E4 possible
+T5	Condition 156 161	cause
+E5	Condition:T5
+T6	Condition 165 181	thrombocytopenia
+E6	Condition:T6 Name:T23
+T7	Modifier 189 195	immune
+E7	Modifier:T7
+T8	Or 196 198	or
+E8	Or:T8
+T9	Modifier 199 209	non immune
+E9	Modifier:T9
+T10	Condition 233 241	diabetes
+E10	Condition:T10 Name:T25
+T11	Condition 247 250	HCV
+E11	Condition:T11 Name:T26
+T12	Other 256 261	other
+E12	Other:T12
+T13	Condition 262 280	autoimmune disease
+E13	Condition:T13 Name:T27
+T14	Condition 285 288	SLE
+E14	Condition:T14 Name:T28
+T15	Or 289 291	or
+E15	Or:T15
+T16	Modifier 292 294	RA
+E16	Modifier:T16
+T17	Modifier 301 314	Chronic Liver
+E17	Modifier:T17
+T18	Or 315 317	or
+E18	Or:T18
+T19	Modifier 318 324	kidney
+E19	Modifier:T19
+T20	Condition 325 332	disease
+E20	Condition:T20
+T21	Eq-Temporal-Recency 25 30	newly
+A2	Eq-Temporal-Recency-Value T21 first-time
+T22	Condition-Name 49 72	immune thrombocytopenic
+T23	Condition-Name 165 181	thrombocytopenia
+T24	Condition-Name 199 209	non immune
+T25	Condition-Name 233 241	diabetes
+T26	Condition-Name 247 250	HCV
+T27	Condition-Name 262 280	autoimmune disease
+T28	Condition-Name 285 288	SLE
+T29	Condition-Name 318 332	kidney disease

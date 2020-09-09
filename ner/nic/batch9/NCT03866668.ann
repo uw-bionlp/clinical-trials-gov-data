@@ -1,49 +1,129 @@
-T1	Condition 127 151	autism spectrum disorder
-T2	Condition-Name 127 151	autism spectrum disorder
-E1	Condition:T1 Name:T2
-T3	Procedure 288 299	Observation
-T4	Procedure-Name 288 299	Observation
-E3	Procedure:T3 Name:T4
-T5	Life-Stage-And-Gender 73 80	females
-A1	Life-Stage-And-Gender-Type T5 male
-T6	Condition 225 231	Autism
-T7	Condition-Name 225 231	Autism
-E6	Condition:T6 Name:T7
-T8	Condition 270 276	Autism
-T9	Condition-Name 270 276	Autism
-E8	Condition:T8 Name:T9
-T10	Life-Stage-And-Gender 63 68	males
-A2	Life-Stage-And-Gender-Type T10 male
-T11	Procedure 672 676	open
-T12	Procedure-Name 672 676	open
-E11	Procedure:T11 Name:T12
-T13	Condition 749 773	schizoaffective disorder
-T14	Condition-Name 749 773	schizoaffective disorder
-E13	Condition:T13 Name:T14
-T15	Condition 778 796	psychotic disorder
-T16	Condition-Name 778 796	psychotic disorder
-E15	Condition:T15 Name:T16
-T17	Condition 936 952	physical illness
-T18	Condition-Name 936 952	physical illness
-E17	Condition:T17 Name:T18
-T19	Condition 734 747	schizophrenia
-T20	Condition-Name 734 747	schizophrenia
-E19	Condition:T19 Name:T20
-T21	Condition 968 973	liver
-T22	Condition-Name 968 973	liver
-E21	Condition:T21 Name:T22
-T23	Eq-Temporal-Unit 44 49	years
-A3	Eq-Temporal-Unit-Value T23 year
-T24	Eq-Temporal-Unit 563 568	weeks
-A4	Eq-Temporal-Unit-Value T24 week
-T25	Eq-Temporal-Unit 572 577	weeks
-A5	Eq-Temporal-Unit-Value T25 week
-T26	Eq-Operator 39 41	to
-A6	Eq-Operator-Value T26 BETWEEN
-T27	Eq-Value 37 38	2
-T28	Eq-Value 42 43	6
-T29	Eq-Value 189 190	5
-T30	Eq-Value 561 562	2
-T31	Eq-Value 719 720	5
-T32	Eq-Comparison 37 41	2 to
-E22	Eq-Comparison:T32 Operator:T26 Value:T27
+T1	Encounter 25 36	outpatients
+E1	Encounter:T1 
+T2	Eq-Comparison 37 49	2 to 6 years
+E2	Eq-Comparison:T2 Value:T41 Operator:T42 Value:T43 Temporal-Unit:T44
+T3	Age 53 56	age
+E3	Age:T3 
+T4	Or 69 72	and
+E4	Or:T4 
+T5	And 81 84	who
+E5	And:T5 
+T6	Condition 89 107	physically healthy
+E6	Condition:T6 Name:T47
+T7	Condition 127 151	autism spectrum disorder
+E7	Condition:T7 Name:T48
+T8	And 201 204	and
+E8	And:T8 
+T9	Assertion 333 338	could
+E9	Assertion:T9 
+A1	Assertion-Type-Value E9 hypothetical
+T10	Assertion 380 385	could
+E10	Assertion:T10 
+A2	Assertion-Type-Value E10 hypothetical
+T11	Assertion 468 478	ability of
+E11	Assertion:T11 
+A3	Assertion-Type-Value E11 hypothetical
+T12	Assertion 479 489	subject to
+E12	Assertion:T12 
+A4	Assertion-Type-Value E12 hypothetical
+T13	Modifier 490 510	swallow the compound
+E13	Modifier:T13 
+T14	Drug 536 547	medications
+E14	Drug:T14 
+T15	Eq-Comparison 552 568	at least 2 weeks
+E15	Eq-Comparison:T15 Operator:T51 Value:T52 Temporal-Unit:T53
+T16	Eq-Comparison 570 577	4 weeks
+E16	Eq-Comparison:T16 Value:T54 Temporal-Unit:T55
+T17	Eq-Comparison 589 593	took
+E17	Eq-Comparison:T17 
+T18	Drug 594 604	fluoxetine
+E18	Drug:T18 Name:T56
+T19	Negation 612 614	no
+E19	Negation:T19 
+T20	Eq-Comparison 615 622	planned
+E20	Eq-Comparison:T20 Temporal-Period:T57
+T21	Procedure 634 660	psychosocial interventions
+E21	Procedure:T21 
+T22	Temporal-Connection 661 667	during
+E22	Temporal-Connection:T22 
+A5	Temporal-Connection-Type-Value E22 during
+T23	Modifier 672 682	open-label
+E23	Modifier:T23 
+T24	Study 683 688	trial
+E24	Study:T24 
+T25	Condition 734 747	schizophrenia
+E25	Condition:T25 Name:T60
+T26	Condition 749 773	schizoaffective disorder
+E26	Condition:T26 Name:T61
+T27	Or 775 777	or
+E27	Or:T27 
+T28	Condition 778 796	psychotic disorder
+E28	Condition:T28 Name:T62
+T29	Eq-Comparison 827 832	prior
+E29	Eq-Comparison:T29 Temporal-Period:T63
+T30	Drug 851 863	Esomeprazole
+E30	Drug:T30 Name:T64
+T31	Eq-Comparison 870 876	active
+E31	Eq-Comparison:T31 Temporal-Period:T65
+T32	Condition 877 893	medical problems
+E32	Condition:T32 
+T33	Condition 902 919	unstable seizures
+E33	Condition:T33 Name:T66
+T34	Or 921 923	or
+E34	Or:T34 
+T35	Condition 936 952	physical illness
+E35	Condition:T35 Name:T68
+T36	Modifier 968 973	liver
+E36	Modifier:T36 
+T37	Or 974 976	or
+E37	Or:T37 
+T38	Modifier 977 982	renal
+E38	Modifier:T38 
+T39	Condition 983 992	pathology
+E39	Condition:T39 Name:T70
+T40	Encounter-Type 25 36	outpatients
+A6	Encounter-Type-Value T40 inpatient
+T41	Eq-Value 37 38	2
+T42	Eq-Operator 39 41	to
+A7	Eq-Operator-Value T42 BETWEEN
+T43	Eq-Value 42 43	6
+T44	Eq-Temporal-Unit 44 49	years
+A8	Eq-Temporal-Unit-Value T44 year
+T45	Life-Stage-And-Gender 63 68	males
+A9	Life-Stage-And-Gender-Type T45 male
+T46	Life-Stage-And-Gender 73 80	females
+A10	Life-Stage-And-Gender-Type T46 female
+T47	Condition-Name 100 107	healthy
+T48	Condition-Name 127 151	autism spectrum disorder
+T49	Condition-Name 490 510	swallow the compound
+T50	Stability 517 523	stable
+A11	Stability-Value T50 stable
+T51	Eq-Operator 552 560	at least
+A12	Eq-Operator-Value T51 GTEQ
+T52	Eq-Value 561 562	2
+T53	Eq-Temporal-Unit 563 568	weeks
+A13	Eq-Temporal-Unit-Value T53 week
+T54	Eq-Value 570 571	4
+T55	Eq-Temporal-Unit 572 577	weeks
+A14	Eq-Temporal-Unit-Value T55 week
+T56	Drug-Name 594 604	fluoxetine
+T57	Eq-Temporal-Period 615 622	planned
+A15	Eq-Temporal-Period-Value T57 future
+T58	Stability 623 630	changes
+A16	Stability-Value T58 change
+T59	Condition-Name 715 720	DSM-5
+T60	Condition-Name 734 747	schizophrenia
+T61	Condition-Name 749 773	schizoaffective disorder
+T62	Condition-Name 778 796	psychotic disorder
+T63	Eq-Temporal-Period 827 832	prior
+A17	Eq-Temporal-Period-Value T63 past
+T64	Drug-Name 851 863	Esomeprazole
+T65	Eq-Temporal-Period 870 876	active
+A18	Eq-Temporal-Period-Value T65 present
+T66	Condition-Name 902 919	unstable seizures
+T67	Severity 924 935	significant
+A19	Severity-Value T67 severe
+T68	Condition-Name 936 952	physical illness
+T69	Severity 960 967	serious
+A20	Severity-Value T69 severe
+T70	Condition-Name 983 992	pathology

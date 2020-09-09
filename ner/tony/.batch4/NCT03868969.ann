@@ -1,67 +1,211 @@
-T1	Condition 47 70	urinary tract infection
-T2	Condition-Name 47 70	urinary tract infection
-E1	Condition:T1 Name:T2
-T3	Condition 396 407	bacteriuria
-T4	Condition-Name 396 407	bacteriuria
-E3	Condition:T3 Name:T4
-T5	Condition 330 339	confusion
-T6	Condition-Name 330 339	confusion
-E5	Condition:T5 Name:T6
-T7	Condition 72 75	UTI
-T8	Condition-Name 72 75	UTI
-E7	Condition:T7 Name:T8
-T9	Language 153 156	sus
-T10	Condition 533 536	CTX
-T11	Condition-Name 533 536	CTX
-E10	Condition:T10 Name:T11
-T12	Condition 787 810	Hemodynamic instability
-T13	Condition-Name 787 810	Hemodynamic instability
-E12	Condition:T12 Name:T13
-T14	Condition 592 613	allergy to fosfomycin
-T15	Condition-Name 592 613	allergy to fosfomycin
-E14	Condition:T14 Name:T15
-T16	Condition 816 837	Chronic renal failure
-T17	Condition-Name 816 837	Chronic renal failure
-E16	Condition:T16 Name:T17
-T18	Condition 761 781	Acute pyelonephritis
-T19	Condition-Name 761 781	Acute pyelonephritis
-E18	Condition:T18 Name:T19
-T20	Condition 714 733	Chronic prostatitis
-T21	Condition-Name 714 733	Chronic prostatitis
-E20	Condition:T20 Name:T21
-T22	Procedure 872 890	antibiotic therapy
-T23	Procedure-Name 872 890	antibiotic therapy
-E22	Procedure:T22 Name:T23
-T24	Condition 691 708	immunosuppression
-T25	Condition-Name 691 708	immunosuppression
-E24	Condition:T24 Name:T25
-T26	Procedure 839 848	clearance
-T27	Procedure-Name 839 848	clearance
-E26	Procedure:T26 Name:T27
-T28	Condition 739 747	Prostate
-T29	Condition-Name 739 747	Prostate
-E28	Condition:T28 Name:T29
-T30	Condition 748 755	abscess
-T31	Condition-Name 748 755	abscess
-E30	Condition:T30 Name:T31
-T32	Eq-Operator 139 140	>
-A1	Eq-Operator-Value T32 GT
-T33	Eq-Operator 384 385	>
-A2	Eq-Operator-Value T33 GT
-T34	Eq-Operator 408 409	>
-A3	Eq-Operator-Value T34 GT
-T35	Eq-Operator 849 850	<
-A4	Eq-Operator-Value T35 LT
-T36	Eq-Unit 391 393	mm
-T37	Eq-Value 141 143	38
-T38	Eq-Value 386 388	10
-T39	Eq-Value 410 412	10
-T40	Eq-Value 850 852	60
-T41	Eq-Comparison 139 143	> 38
-E31	Eq-Comparison:T41 Operator:T32 Value:T37
-T42	Eq-Comparison 384 388	> 10
-E32	Eq-Comparison:T42 Operator:T33 Value:T38
-T43	Eq-Comparison 408 412	> 10
-E33	Eq-Comparison:T43 Operator:T34 Value:T39
-T44	Eq-Comparison 849 852	<60
-E34	Eq-Comparison:T44 Operator:T35 Value:T40
+T1	Assertion 34 43	suspicion
+E1	Assertion:T1
+A1	Assertion-Type-Value E1 possible
+T2	Modifier 47 60	urinary tract
+E2	Modifier:T2
+T3	Condition 61 70	infection
+E3	Condition:T3
+T4	Condition 72 75	UTI
+E4	Condition:T4 Name:T73
+T5	Criteria-Count 104 125	at least one of these
+E5	Criteria-Count:T5
+T6	Assertion 126 131	signs
+E6	Assertion:T6
+A2	Assertion-Type-Value E6 possible
+T7	Condition 133 138	fever
+E7	Condition:T7
+T8	Eq-Comparison 139 143	> 38
+E8	Eq-Comparison:T8 Operator:T76 Value:T77
+T9	Modifier 144 145	C
+E9	Modifier:T9
+T10	Or 146 152	and/or
+E10	Or:T10
+T11	Modifier 153 162	sus-pubic
+E11	Modifier:T11
+T12	Condition 163 167	pain
+E12	Condition:T12
+T13	Or 168 174	and/or
+E13	Or:T13
+T14	Modifier 175 182	dysuria
+E14	Modifier:T14
+T15	Or 183 189	and/or
+E15	Or:T15
+T16	Modifier 190 201	pollakiuria
+E16	Modifier:T16
+T17	Or 202 208	and/or
+E17	Or:T17
+T18	Modifier 209 216	urinary
+E18	Modifier:T18
+T19	Condition 217 222	burns
+E19	Condition:T19
+T20	Or 223 229	and/or
+E20	Or:T20
+T21	Modifier 230 241	macroscopic
+E21	Modifier:T21
+T22	Condition 242 251	hematuria
+E22	Condition:T22
+T23	Or 252 258	and/or
+E23	Or:T23
+T24	Condition 265 282	urinary retention
+E24	Condition:T24 Name:T83
+T25	Or 283 289	and/or
+E25	Or:T25
+T26	Condition 290 294	pain
+E26	Condition:T26 Name:T84
+T27	Procedure 304 322	rectal examination
+E27	Procedure:T27 Name:T85
+T28	Or 323 329	and/or
+E28	Or:T28
+T29	Modifier 330 339	confusion
+E29	Modifier:T29
+T30	Observation 349 365	urinary analysis
+E30	Observation:T30 Name:T86
+T31	Observation 371 383	leukocyturia
+E31	Observation:T31 Name:T87
+T32	Eq-Comparison 384 394	> 10 / mm3
+E32	Eq-Comparison:T32 Operator:T88 Value:T89 Unit:T90
+T33	Condition 396 407	bacteriuria
+E33	Condition:T33
+T34	Eq-Comparison 408 421	> 10^3 CFU/mL
+E34	Eq-Comparison:T34 Operator:T91 Value:T92 Unit:T93 Value:T94 Unit:T95 Unit:T96
+T35	And 422 426	with
+E35	And:T35
+T36	Condition 427 460	ESBL producing enterobacteriaceae
+E36	Condition:T36 Name:T97
+T37	And 461 464	and
+E37	And:T37
+T38	Condition 465 475	resistance
+E38	Condition:T38
+T39	Drug 492 508	fluoroquinolones
+E39	Drug:T39 Name:T98
+T40	Drug 510 512	FQ
+E40	Drug:T40 Name:T99
+T41	Or 514 517	and
+E41	Or:T41
+T42	Drug 518 531	cotrimoxazole
+E42	Drug:T42 Name:T100
+T43	Condition 533 536	CTX
+E43	Condition:T43 Name:T101
+T44	And 538 541	but
+E44	And:T44
+T45	Drug 555 565	fosfomycin
+E45	Drug:T45 Name:T102
+T46	Allergy 592 599	allergy
+E46	Allergy:T46
+T47	Drug 603 613	fosfomycin
+E47	Drug:T47 Name:T103
+T48	Or 614 620	and/or
+E48	Or:T48
+T49	Drug 621 631	trometamol
+E49	Drug:T49 Name:T104
+T50	Modifier 665 678	urinary tract
+E50	Modifier:T50
+T51	Condition 691 708	immunosuppression
+E51	Condition:T51 Name:T106
+T52	Modifier 714 721	Chronic
+E52	Modifier:T52
+T53	Condition 722 733	prostatitis
+E53	Condition:T53 Name:T107
+T54	Condition 739 755	Prostate abscess
+E54	Condition:T54 Name:T108
+T55	Condition 767 781	pyelonephritis
+E55	Condition:T55 Name:T110
+T56	Condition 787 810	Hemodynamic instability
+E56	Condition:T56 Name:T111
+T57	Condition 816 837	Chronic renal failure
+E57	Condition:T57 Name:T112
+T58	Observation 839 848	clearance
+E58	Observation:T58
+T59	Eq-Comparison 849 859	<60 mL/min
+E59	Eq-Comparison:T59 Operator:T113 Value:T114 Unit:T115 Temporal-Unit:T116
+T60	Eq-Comparison 866 871	Prior
+E60	Eq-Comparison:T60 Temporal-Period:T117
+T61	Procedure 872 890	antibiotic therapy
+E61	Procedure:T61 Name:T118
+T62	And 892 896	with
+E62	And:T62
+T63	Drug 900 920	antibiotic sensitive
+E63	Drug:T63 Name:T119
+T64	Observation 928 958	antibiotic susceptibility test
+E64	Observation:T64 Name:T120
+T65	Exception 959 965	except
+E65	Exception:T65
+T66	Drug 967 996	amoxicillin - clavulanic acid
+E66	Drug:T66 Name:T121 Name:T122
+T67	Drug 998 1006	cefixime
+E67	Drug:T67 Name:T123
+T68	Drug 1008 1022	nitrofurantoin
+E68	Drug:T68 Name:T124
+T69	Drug 1029 1031	Co
+E69	Drug:T69
+T70	Procedure 1032 1041	treatment
+E70	Procedure:T70
+T71	Drug 1047 1061	metoclopramide
+E71	Drug:T71 Name:T125
+T72	Condition-Name 47 70	urinary tract infection
+T73	Condition-Name 72 75	UTI
+T74	Eq-Operator 104 112	at least
+A3	Eq-Operator-Value T74 GTEQ
+T75	Eq-Value 113 116	one
+T76	Eq-Operator 139 140	>
+A4	Eq-Operator-Value T76 GT
+T77	Eq-Value 141 143	38
+T78	Eq-Unit 143 144	°
+T79	Condition-Name 157 167	pubic pain
+T80	Condition-Name 209 222	urinary burns
+T81	Condition-Name 230 251	macroscopic hematuria
+T82	Severity 259 264	acute
+A5	Severity-Value T82 severe
+T83	Condition-Name 265 282	urinary retention
+T84	Condition-Name 290 294	pain
+T85	Procedure-Name 304 322	rectal examination
+T86	Observation-Name 349 365	urinary analysis
+A6	Observation-Type-Value T86 lab
+T87	Observation-Name 371 383	leukocyturia
+A7	Observation-Type-Value T87 lab
+T88	Eq-Operator 384 385	>
+A8	Eq-Operator-Value T88 GT
+T89	Eq-Value 386 388	10
+T90	Eq-Unit 391 394	mm3
+T91	Eq-Operator 408 409	>
+A9	Eq-Operator-Value T91 GT
+T92	Eq-Value 410 412	10
+T93	Eq-Unit 412 413	^
+T94	Eq-Value 413 414	3
+T95	Eq-Unit 415 418	CFU
+T96	Eq-Unit 419 421	mL
+T97	Condition-Name 427 460	ESBL producing enterobacteriaceae
+T98	Drug-Name 492 508	fluoroquinolones
+T99	Drug-Name 510 512	FQ
+T100	Drug-Name 518 531	cotrimoxazole
+T101	Condition-Name 533 536	CTX
+T102	Drug-Name 555 565	fosfomycin
+T103	Drug-Name 603 613	fosfomycin
+T104	Drug-Name 621 631	trometamol
+T105	Severity 684 690	Severe
+A10	Severity-Value T105 severe
+T106	Condition-Name 691 708	immunosuppression
+T107	Condition-Name 722 733	prostatitis
+T108	Condition-Name 739 755	Prostate abscess
+T109	Severity 761 766	Acute
+A11	Severity-Value T109 severe
+T110	Condition-Name 767 781	pyelonephritis
+T111	Condition-Name 787 810	Hemodynamic instability
+T112	Condition-Name 816 837	Chronic renal failure
+T113	Eq-Operator 849 850	<
+A12	Eq-Operator-Value T113 LT
+T114	Eq-Value 850 852	60
+T115	Eq-Unit 853 855	mL
+T116	Eq-Temporal-Unit 856 859	min
+A13	Eq-Temporal-Unit-Value T116 minute
+T117	Eq-Temporal-Period 866 871	Prior
+A14	Eq-Temporal-Period-Value T117 past
+T118	Procedure-Name 872 890	antibiotic therapy
+T119	Drug-Name 900 910	antibiotic
+T120	Observation-Name 939 958	susceptibility test
+A15	Observation-Type-Value T120 lab
+T121	Drug-Name 967 978	amoxicillin
+T122	Drug-Name 981 996	clavulanic acid
+T123	Drug-Name 998 1006	cefixime
+T124	Drug-Name 1008 1022	nitrofurantoin
+T125	Drug-Name 1047 1061	metoclopramide

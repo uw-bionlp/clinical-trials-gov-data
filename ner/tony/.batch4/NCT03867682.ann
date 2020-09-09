@@ -1,89 +1,329 @@
-T1	Procedure 608 626	protocol treatment
-T2	Procedure-Name 608 626	protocol treatment
-E1	Procedure:T1 Name:T2
-T3	Language 731 734	AST
-T4	Language 739 742	ALT
-T5	Condition 877 898	hepatitis C infection
-T6	Condition-Name 877 898	hepatitis C infection
-E5	Condition:T5 Name:T6
-T7	Condition 839 852	HIV infection
-T8	Condition-Name 839 852	HIV infection
-E7	Condition:T7 Name:T8
-T9	Condition 862 873	hepatitis B
-T10	Condition-Name 862 873	hepatitis B
-E9	Condition:T9 Name:T10
-T11	Condition 1180 1195	cardiac disease
-T12	Condition-Name 1180 1195	cardiac disease
-E11	Condition:T11 Name:T12
-T13	Procedure 1404 1426	solid organ transplant
-T14	Procedure-Name 1404 1426	solid organ transplant
-E13	Procedure:T13 Name:T14
-T15	Condition 1329 1349	Psychiatric disorder
-T16	Condition-Name 1329 1349	Psychiatric disorder
-E15	Condition:T15 Name:T16
-T17	Condition 1514 1531	immunosuppression
-T18	Condition-Name 1514 1531	immunosuppression
-E17	Condition:T17 Name:T18
-T19	Procedure 1537 1544	therapy
-T20	Procedure-Name 1537 1544	therapy
-E19	Procedure:T19 Name:T20
-T21	Condition 1532 1536	GVHD
-T22	Condition-Name 1532 1536	GVHD
-E21	Condition:T21 Name:T22
-T23	Condition 1449 1452	SCT
-T24	Condition-Name 1449 1452	SCT
-E23	Condition:T23 Name:T24
-T25	Eq-Operator 455 456	≤
-A1	Eq-Operator-Value T25 LTEQ
-T26	Eq-Operator 464 470	within
-A2	Eq-Operator-Value T26 LTEQ
-T27	Eq-Operator 576 577	≤
-A3	Eq-Operator-Value T27 LTEQ
-T28	Eq-Operator 674 675	≤
-A4	Eq-Operator-Value T28 LTEQ
-T29	Eq-Operator 714 715	≥
-A5	Eq-Operator-Value T29 GTEQ
-T30	Eq-Operator 743 744	≤
-A6	Eq-Operator-Value T30 LTEQ
-T31	Eq-Operator 770 771	≤
-A7	Eq-Operator-Value T31 LTEQ
-T32	Eq-Operator 999 1005	within
-A8	Eq-Operator-Value T32 LTEQ
-T33	Eq-Operator 1281 1287	within
-A9	Eq-Operator-Value T33 LTEQ
-T34	Eq-Temporal-Unit 474 478	days
-A10	Eq-Temporal-Unit-Value T34 day
-T35	Eq-Temporal-Unit 1008 1012	days
-A11	Eq-Temporal-Unit-Value T35 day
-T36	Eq-Temporal-Unit 1290 1295	years
-A12	Eq-Temporal-Unit-Value T36 year
-T37	Eq-Unit 345 347	CM
-T38	Eq-Value 129 130	1
-T39	Eq-Value 212 213	5
-T40	Eq-Value 457 460	200
-T41	Eq-Value 471 473	10
-T42	Eq-Value 578 581	200
-T43	Eq-Value 676 677	2
-T44	Eq-Value 716 718	50
-T45	Eq-Value 745 746	3
-T46	Eq-Value 772 773	3
-T47	Eq-Value 1006 1007	7
-T48	Eq-Value 1288 1289	2
-T49	Eq-Comparison 455 460	≤ 200
-E24	Eq-Comparison:T49 Operator:T25 Value:T40
-T50	Eq-Comparison 464 478	within 10 days
-E25	Eq-Comparison:T50 Operator:T26 Temporal-Unit:T34 Value:T41
-T51	Eq-Comparison 576 581	≤ 200
-E26	Eq-Comparison:T51 Operator:T27 Value:T42
-T52	Eq-Comparison 674 677	≤ 2
-E27	Eq-Comparison:T52 Operator:T28 Value:T43
-T53	Eq-Comparison 714 718	≥ 50
-E28	Eq-Comparison:T53 Operator:T29 Value:T44
-T54	Eq-Comparison 743 746	≤ 3
-E29	Eq-Comparison:T54 Operator:T30 Value:T45
-T55	Eq-Comparison 770 773	≤ 3
-E30	Eq-Comparison:T55 Operator:T31 Value:T46
-T56	Eq-Comparison 999 1012	within 7 days
-E31	Eq-Comparison:T56 Operator:T32 Temporal-Unit:T35 Value:T47
-T57	Eq-Comparison 1281 1295	within 2 years
-E32	Eq-Comparison:T57 Operator:T33 Temporal-Unit:T36 Value:T48
+T1	Modifier 25 35	Refractory
+E1	Modifier:T1
+T2	Or 36 38	or
+E2	Or:T2
+T3	Modifier 39 47	relapsed
+E3	Modifier:T3
+T4	Condition 48 51	AML
+E4	Condition:T4 Name:T104
+T5	Condition 82 100	Refractory disease
+E5	Condition:T5 Name:T105
+T6	Assertion 101 108	will be
+E6	Assertion:T6
+A1	Assertion-Type-Value E6 hypothetical
+T7	Eq-Comparison 120 136	at least 1 prior
+E7	Eq-Comparison:T7 Operator:T106 Value:T107 Temporal-Period:T108
+T8	Procedure 137 146	treatment
+E8	Procedure:T8
+T9	Negation 152 154	no
+E9	Negation:T9
+T10	Condition 155 164	remission
+E10	Condition:T10
+T11	Condition 176 192	Relapsed disease
+E11	Condition:T11 Name:T109
+T12	Assertion 193 200	will be
+E12	Assertion:T12
+A2	Assertion-Type-Value E12 hypothetical
+T13	Eq-Comparison 212 222	5% or more
+E13	Eq-Comparison:T13 Value:T110 Unit:T111 Operator:T112
+T14	Modifier 233 244	bone marrow
+E14	Modifier:T14
+T15	Temporal-Connection 245 249	seen
+E15	Temporal-Connection:T15
+A3	Temporal-Connection-Type-Value E15 during
+T16	Temporal-Connection 250 255	after
+E16	Temporal-Connection:T16
+A4	Temporal-Connection-Type-Value E16 after
+T17	Encounter 256 265	remission
+E17	Encounter:T17
+T18	Condition 291 294	AML
+E18	Condition:T18 Name:T115
+T19	Condition 308 333	myelodysplastic syndromes
+E19	Condition:T19 Name:T116
+T20	Condition 345 349	CMML
+E20	Condition:T20 Name:T117
+T21	Or 351 353	or
+E21	Or:T21
+T22	Condition 354 382	myeloproliferative neoplasms
+E22	Condition:T22 Name:T118
+T23	Modifier 384 393	secondary
+E23	Modifier:T23
+T24	Condition 394 397	AML
+E24	Condition:T24 Name:T119
+T25	Condition 399 405	ts-AML
+E25	Condition:T25 Name:T120
+T26	Observation 431 454	Circulating blast count
+E26	Observation:T26 Name:T121
+T27	Eq-Comparison 455 463	≤ 200/μL
+E27	Eq-Comparison:T27 Operator:T122 Value:T123
+T28	Eq-Comparison 464 478	within 10 days
+E28	Eq-Comparison:T28 Operator:T124 Value:T125 Temporal-Unit:T126
+T29	Temporal-Connection 479 487	prior to
+E29	Temporal-Connection:T29
+A5	Temporal-Connection-Type-Value E29 before
+T30	Eq-Comparison 488 493	first
+E30	Eq-Comparison:T30 Temporal-Recency:T127
+T31	Procedure 503 512	treatment
+E31	Procedure:T31
+T32	Procedure 514 525	Hydroxyurea
+E32	Procedure:T32 Name:T128
+T33	Assertion 526 535	should be
+E33	Assertion:T33
+A6	Assertion-Type-Value E33 hypothetical
+T34	Assertion 541 548	to keep
+E34	Assertion:T34
+A7	Assertion-Type-Value E34 hypothetical
+T35	Observation 553 575	peripheral blast count
+E35	Observation:T35
+T36	Eq-Comparison 576 584	≤ 200/μL
+E36	Eq-Comparison:T36 Operator:T129 Value:T130
+T37	Temporal-Connection 585 590	until
+E37	Temporal-Connection:T37
+A8	Temporal-Connection-Type-Value E37 before
+T38	Eq-Comparison 595 604	first day
+E38	Eq-Comparison:T38
+T39	Procedure 617 626	treatment
+E39	Procedure:T39
+T40	Assertion 655 663	possible
+E40	Assertion:T40
+A9	Assertion-Type-Value E40 hypothetical
+T41	Observation 669 673	ECOG
+E41	Observation:T41
+T42	Eq-Comparison 674 677	≤ 2
+E42	Eq-Comparison:T42
+T43	Observation 693 713	creatinine clearance
+E43	Observation:T43
+T44	Eq-Comparison 714 715	≥
+E44	Eq-Comparison:T44 Operator:T133
+T45	Eq-Comparison 716 725	50 mL/min
+E45	Eq-Comparison:T45 Value:T134 Unit:T135 Temporal-Unit:T136
+T46	Observation 731 734	AST
+E46	Observation:T46 Name:T137
+T47	And 735 738	and
+E47	And:T47
+T48	Observation 739 742	ALT
+E48	Observation:T48 Name:T138
+T49	Eq-Comparison 743 754	≤ 3.0 x ULN
+E49	Eq-Comparison:T49 Operator:T139 Value:T140
+T50	Observation 760 769	Bilirubin
+E50	Observation:T50 Name:T141
+T51	Eq-Comparison 770 781	≤ 3.0 x ULN
+E51	Eq-Comparison:T51 Operator:T142 Value:T143
+T52	Eq-Comparison 807 813	Active
+E52	Eq-Comparison:T52 Temporal-Period:T144
+T53	Modifier 814 817	CNS
+E53	Modifier:T53
+T54	Condition 818 826	Leukemia
+E54	Condition:T54
+T55	Condition 839 852	HIV infection
+E55	Condition:T55 Name:T146
+T56	Or 853 855	or
+E56	Or:T56
+T57	Condition 862 871	hepatitis
+E57	Condition:T57
+T58	Modifier 872 873	B
+E58	Modifier:T58
+T59	Or 874 876	or
+E59	Or:T59
+T60	Condition 877 898	hepatitis C infection
+E60	Condition:T60 Name:T148
+T61	And 900 904	with
+E61	And:T61
+T62	Condition 907 928	detectable viral load
+E62	Condition:T62
+T63	Eq-Comparison 952 960	received
+E63	Eq-Comparison:T63 Temporal-Period:T150
+T64	Or 968 974	and/or
+E64	Or:T64
+T65	Eq-Comparison 975 983	moderate
+E65	Eq-Comparison:T65
+T66	Drug 984 998	CYP3A inducers
+E66	Drug:T66 Name:T152
+T67	Eq-Comparison 999 1012	within 7 days
+E67	Eq-Comparison:T67 Operator:T153 Value:T154 Temporal-Unit:T155
+T68	Temporal-Connection 1013 1021	prior to
+E68	Temporal-Connection:T68
+A10	Temporal-Connection-Type-Value E68 before
+T69	Eq-Comparison 1026 1036	initiation
+E69	Eq-Comparison:T69 Temporal-Recency:T156
+T70	Study 1040 1045	study
+E70	Study:T70
+T71	Procedure 1046 1055	treatment
+E71	Procedure:T71
+T72	Eq-Comparison 1067 1081	received prior
+E72	Eq-Comparison:T72 Temporal-Period:T157
+T73	Procedure 1082 1091	radiation
+E73	Procedure:T73 Name:T158
+T74	Observation 1105 1121	tolerated levels
+E74	Observation:T74
+T75	Modifier 1138 1150	normal organ
+E75	Modifier:T75
+T76	Condition 1180 1195	cardiac disease
+E76	Condition:T76 Name:T162
+T77	Eq-Comparison 1202 1208	Active
+E77	Eq-Comparison:T77 Temporal-Period:T163
+T78	Modifier 1210 1222	uncontrolled
+E78	Modifier:T78
+T79	Condition 1231 1240	infection
+E79	Condition:T79 Name:T165
+T80	Other 1252 1257	other
+E80	Other:T80
+T81	Modifier 1258 1269	non-myeloid
+E81	Modifier:T81
+T82	Condition 1270 1280	malignancy
+E82	Condition:T82
+T83	Eq-Comparison 1281 1295	within 2 years
+E83	Eq-Comparison:T83 Operator:T167 Value:T168 Temporal-Unit:T169
+T84	Temporal-Connection 1296 1298	of
+E84	Temporal-Connection:T84
+A11	Temporal-Connection-Type-Value E84 before
+T85	Study 1299 1304	entry
+E85	Study:T85
+T86	Condition 1329 1349	Psychiatric disorder
+E86	Condition:T86 Name:T170
+T87	Assertion 1355 1360	would
+E87	Assertion:T87
+A12	Assertion-Type-Value E87 hypothetical
+T88	Negation 1361 1369	preclude
+E88	Negation:T88
+T89	Study 1370 1375	study
+E89	Study:T89
+T90	Eq-Comparison 1395 1403	Previous
+E90	Eq-Comparison:T90 Temporal-Period:T171
+T91	Modifier 1404 1409	solid
+E91	Modifier:T91
+T92	Procedure 1410 1426	organ transplant
+E92	Procedure:T92 Name:T172
+T93	Eq-Comparison 1428 1433	prior
+E93	Eq-Comparison:T93 Temporal-Period:T173
+T94	Procedure 1434 1443	treatment
+E94	Procedure:T94
+T95	Condition 1449 1452	SCT
+E95	Condition:T95 Name:T174
+T96	And 1464 1467	but
+E96	And:T96
+T97	Negation 1468 1471	not
+E97	Negation:T97
+T98	Condition 1487 1491	GVHD
+E98	Condition:T98 Name:T175
+T99	Or 1492 1494	or
+E99	Or:T99
+T100	Eq-Comparison 1504 1513	receiving
+E100	Eq-Comparison:T100 Temporal-Period:T176
+T101	Drug 1514 1531	immunosuppression
+E101	Drug:T101
+T102	Or 1531 1532	/
+E102	Or:T102
+T103	Procedure 1532 1544	GVHD therapy
+E103	Procedure:T103 Name:T178
+T104	Condition-Name 48 51	AML
+T105	Condition-Name 82 100	Refractory disease
+T106	Eq-Operator 120 128	at least
+A13	Eq-Operator-Value T106 GTEQ
+T107	Eq-Value 129 130	1
+T108	Eq-Temporal-Period 131 136	prior
+A14	Eq-Temporal-Period-Value T108 past
+T109	Condition-Name 176 192	Relapsed disease
+T110	Eq-Value 212 213	5
+T111	Eq-Unit 213 214	%
+T112	Eq-Operator 215 222	or more
+A15	Eq-Operator-Value T112 GTEQ
+T113	Eq-Temporal-Unit 223 229	blasts
+A16	Eq-Temporal-Unit-Value T113 week
+T114	Procedure-Name 233 244	bone marrow
+T115	Condition-Name 291 294	AML
+T116	Condition-Name 308 333	myelodysplastic syndromes
+T117	Condition-Name 345 349	CMML
+T118	Condition-Name 354 382	myeloproliferative neoplasms
+T119	Condition-Name 394 397	AML
+T120	Condition-Name 399 405	ts-AML
+T121	Observation-Name 431 454	Circulating blast count
+A17	Observation-Type-Value T121 lab
+T122	Eq-Operator 455 456	≤
+A18	Eq-Operator-Value T122 LTEQ
+T123	Eq-Value 457 463	200/μL
+T124	Eq-Operator 464 470	within
+A19	Eq-Operator-Value T124 LTEQ
+T125	Eq-Value 471 473	10
+T126	Eq-Temporal-Unit 474 478	days
+A20	Eq-Temporal-Unit-Value T126 day
+T127	Eq-Temporal-Recency 488 493	first
+A21	Eq-Temporal-Recency-Value T127 first-time
+T128	Procedure-Name 514 525	Hydroxyurea
+T129	Eq-Operator 576 577	≤
+A22	Eq-Operator-Value T129 LTEQ
+T130	Eq-Value 578 584	200/μL
+T131	Condition-Name 669 673	ECOG
+T132	Observation-Name 683 713	Estimated creatinine clearance
+A23	Observation-Type-Value T132 lab
+T133	Eq-Operator 714 715	≥
+A24	Eq-Operator-Value T133 GTEQ
+T134	Eq-Value 716 718	50
+T135	Eq-Unit 719 721	mL
+T136	Eq-Temporal-Unit 722 725	min
+A25	Eq-Temporal-Unit-Value T136 minute
+T137	Observation-Name 731 734	AST
+A26	Observation-Type-Value T137 lab
+T138	Observation-Name 739 742	ALT
+A27	Observation-Type-Value T138 lab
+T139	Eq-Operator 743 744	≤
+A28	Eq-Operator-Value T139 LTEQ
+T140	Eq-Value 745 748	3.0
+T141	Observation-Name 760 769	Bilirubin
+A29	Observation-Type-Value T141 lab
+T142	Eq-Operator 770 771	≤
+A30	Eq-Operator-Value T142 LTEQ
+T143	Eq-Value 772 775	3.0
+T144	Eq-Temporal-Period 807 813	Active
+A31	Eq-Temporal-Period-Value T144 present
+T145	Condition-Name 814 826	CNS Leukemia
+T146	Condition-Name 839 852	HIV infection
+T147	Condition-Name 862 873	hepatitis B
+T148	Condition-Name 877 898	hepatitis C infection
+T149	Observation-Name 907 928	detectable viral load
+A32	Observation-Type-Value T149 lab
+T150	Eq-Temporal-Period 952 960	received
+A33	Eq-Temporal-Period-Value T150 past
+T151	Severity 975 983	moderate
+A34	Severity-Value T151 moderate
+T152	Drug-Name 984 998	CYP3A inducers
+T153	Eq-Operator 999 1005	within
+A35	Eq-Operator-Value T153 LTEQ
+T154	Eq-Value 1006 1007	7
+T155	Eq-Temporal-Unit 1008 1012	days
+A36	Eq-Temporal-Unit-Value T155 day
+T156	Eq-Temporal-Recency 1026 1036	initiation
+A37	Eq-Temporal-Recency-Value T156 first-time
+T157	Eq-Temporal-Period 1067 1081	received prior
+A38	Eq-Temporal-Period-Value T157 past
+T158	Procedure-Name 1082 1091	radiation
+T159	Severity 1129 1137	critical
+A39	Severity-Value T159 severe
+T160	Polarity 1138 1144	normal
+A40	Polarity-Value T160 normal
+T161	Severity 1168 1179	significant
+A41	Severity-Value T161 severe
+T162	Condition-Name 1180 1195	cardiac disease
+T163	Eq-Temporal-Period 1202 1208	Active
+A42	Eq-Temporal-Period-Value T163 present
+T164	Severity 1223 1230	serious
+A43	Severity-Value T164 severe
+T165	Condition-Name 1231 1240	infection
+T166	Condition-Name 1262 1280	myeloid malignancy
+T167	Eq-Operator 1281 1287	within
+A44	Eq-Operator-Value T167 LTEQ
+T168	Eq-Value 1288 1289	2
+T169	Eq-Temporal-Unit 1290 1295	years
+A45	Eq-Temporal-Unit-Value T169 year
+T170	Condition-Name 1329 1349	Psychiatric disorder
+T171	Eq-Temporal-Period 1395 1403	Previous
+A46	Eq-Temporal-Period-Value T171 past
+T172	Procedure-Name 1410 1426	organ transplant
+T173	Eq-Temporal-Period 1428 1433	prior
+A47	Eq-Temporal-Period-Value T173 past
+T174	Condition-Name 1449 1452	SCT
+T175	Condition-Name 1487 1491	GVHD
+T176	Eq-Temporal-Period 1504 1513	receiving
+A48	Eq-Temporal-Period-Value T176 present
+T177	Procedure-Name 1514 1531	immunosuppression
+T178	Procedure-Name 1532 1544	GVHD therapy

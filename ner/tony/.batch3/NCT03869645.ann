@@ -1,32 +1,110 @@
-T1	Procedure 239 249	procedures
-T2	Procedure-Name 239 249	procedures
-E1	Procedure:T1 Name:T2
-T3	Procedure 549 572	mechanical thrombectomy
-T4	Procedure-Name 549 572	mechanical thrombectomy
-E3	Procedure:T3 Name:T4
-T5	Condition 374 395	anaphylactic reaction
-T6	Condition-Name 374 395	anaphylactic reaction
-E5	Condition:T5 Name:T6
-T7	Procedure 573 585	intervention
-T8	Procedure-Name 573 585	intervention
-E7	Procedure:T7 Name:T8
-T9	Life-Stage-And-Gender 591 597	Female
-A1	Life-Stage-And-Gender-Type T9 male
-T10	Eq-Operator 42 43	>
-A2	Eq-Operator-Value T10 GT
-T11	Eq-Operator 173 174	<
-A3	Eq-Operator-Value T11 LT
-T13	Eq-Temporal-Unit 47 52	years
-A5	Eq-Temporal-Unit-Value T13 year
-T14	Eq-Temporal-Unit 178 182	days
-A6	Eq-Temporal-Unit-Value T14 day
-T17	Age 56 59	age
-E9	Age:T17 
-T18	Eq-Value 44 46	18
-T19	Eq-Value 175 177	14
-T21	Eq-Comparison 42 52	> 18 years
-E10	Eq-Comparison:T21 Operator:T10 Temporal-Unit:T13 Value:T18
-T22	Eq-Comparison 173 182	< 14 days
-E11	Eq-Comparison:T22 Operator:T11 Temporal-Unit:T14 Value:T19
-T23	Eq-Comparison 344 354	< 18 years
-E12	Eq-Comparison:T23 
+T1	Eq-Comparison 42 52	> 18 years
+E1	Eq-Comparison:T1 Operator:T38 Value:T39 Temporal-Unit:T40
+T2	Age 56 59	age
+E2	Age:T2
+T3	Condition 79 93	clinical signs
+E3	Condition:T3
+T4	Assertion 95 103	symptoms
+E4	Assertion:T4
+A1	Assertion-Type-Value E4 possible
+T5	And 104 107	and
+E5	And:T5
+T6	Condition 108 120	presentation
+E6	Condition:T6
+T7	Condition 143 153	thrombosis
+E7	Condition:T7 Name:T42
+T8	Eq-Comparison 155 160	onset
+E8	Eq-Comparison:T8 Temporal-Recency:T43
+T9	Assertion 164 172	symptoms
+E9	Assertion:T9
+A2	Assertion-Type-Value E9 possible
+T10	Eq-Comparison 173 182	< 14 days
+E10	Eq-Comparison:T10 Operator:T44 Value:T45 Temporal-Unit:T46
+T11	Procedure 219 249	invasive endovenous procedures
+E11	Procedure:T11 Name:T47
+T12	Procedure 289 299	IVC filter
+E12	Procedure:T12
+T13	Procedure 314 321	treated
+E13	Procedure:T13
+T14	Eq-Comparison 344 354	< 18 years
+E14	Eq-Comparison:T14 Operator:T49 Value:T50 Temporal-Unit:T51
+T15	Age 358 361	age
+E15	Age:T15
+T16	Condition 374 386	anaphylactic
+E16	Condition:T16
+T17	Drug 399 427	radiographic contrast agents
+E17	Drug:T17 Name:T53
+T18	Assertion 433 436	can
+E18	Assertion:T18
+A3	Assertion-Type-Value E18 hypothetical
+T19	Negation 436 439	not
+E19	Negation:T19
+T20	Procedure 443 455	pre- treated
+E20	Procedure:T20
+T21	Procedure 461 468	Imaging
+E21	Procedure:T21 Name:T54
+T22	Or 478 480	or
+E22	Or:T22
+T23	Other 481 486	other
+E23	Other:T23
+T24	Negation 529 532	not
+E24	Negation:T24
+T25	Assertion 533 544	appropriate
+E25	Assertion:T25
+A4	Assertion-Type-Value E25 hypothetical
+T26	Procedure 549 585	mechanical thrombectomy intervention
+E26	Procedure:T26 Name:T55
+T27	And 598 601	who
+E27	And:T27
+T28	Condition 605 613	pregnant
+E28	Condition:T28 Name:T57
+T29	Or 614 616	or
+E29	Or:T29
+T30	Condition 617 624	nursing
+E30	Condition:T30 Name:T58
+T31	Eq-Comparison 630 640	Concurrent
+E31	Eq-Comparison:T31 Temporal-Period:T59
+T32	Other 658 665	another
+E32	Other:T32
+T33	Study 666 681	investigational
+E33	Study:T33
+T34	Drug 682 686	drug
+E34	Drug:T34
+T35	Or 687 689	or
+E35	Or:T35
+T36	Procedure 690 706	device treatment
+E36	Procedure:T36
+T37	Study 707 712	study
+E37	Study:T37
+T38	Eq-Operator 42 43	>
+A5	Eq-Operator-Value T38 GT
+T39	Eq-Value 44 46	18
+T40	Eq-Temporal-Unit 47 52	years
+A6	Eq-Temporal-Unit-Value T40 year
+T41	Severity 137 142	acute
+A7	Severity-Value T41 severe
+T42	Condition-Name 143 153	thrombosis
+T43	Eq-Temporal-Recency 155 160	onset
+A8	Eq-Temporal-Recency-Value T43 first-time
+T44	Eq-Operator 173 174	<
+A9	Eq-Operator-Value T44 LT
+T45	Eq-Value 175 177	14
+T46	Eq-Temporal-Unit 178 182	days
+A10	Eq-Temporal-Unit-Value T46 day
+T47	Procedure-Name 219 249	invasive endovenous procedures
+T48	Condition-Name 289 299	IVC filter
+T49	Eq-Operator 344 345	<
+A11	Eq-Operator-Value T49 LT
+T50	Eq-Value 346 348	18
+T51	Eq-Temporal-Unit 349 354	years
+A12	Eq-Temporal-Unit-Value T51 year
+T52	Condition-Name 374 395	anaphylactic reaction
+T53	Drug-Name 399 427	radiographic contrast agents
+T54	Procedure-Name 461 468	Imaging
+T55	Procedure-Name 549 585	mechanical thrombectomy intervention
+T56	Life-Stage-And-Gender 591 597	Female
+A13	Life-Stage-And-Gender-Type T56 female
+T57	Condition-Name 605 613	pregnant
+T58	Condition-Name 617 624	nursing
+T59	Eq-Temporal-Period 630 640	Concurrent
+A14	Eq-Temporal-Period-Value T59 present

@@ -1,60 +1,123 @@
 T1	Observation 25 40	Body mass index
-T2	Observation-Name 25 40	Body mass index
-E1	Observation:T1 Name:T2
-A1	Observation-Type-Value T2 vital
-T3	Condition 212 233	menstrual cycle phase
-T4	Condition-Name 212 233	menstrual cycle phase
-E3	Condition:T3 Name:T4
-T5	Procedure 158 168	procedures
-T6	Procedure-Name 158 168	procedures
-E5	Procedure:T5 Name:T6
-T7	Life-Stage-And-Gender 174 181	Females
-A2	Life-Stage-And-Gender-Type T7 male
-T8	Procedure 286 290	diet
-T9	Procedure-Name 286 290	diet
-E8	Procedure:T8 Name:T9
-T10	Procedure 344 348	diet
-T11	Procedure-Name 344 348	diet
-E10	Procedure:T10 Name:T11
-T12	Condition 588 605	metabolic disease
-T13	Condition-Name 588 605	metabolic disease
-E12	Condition:T12 Name:T13
-T14	Condition 622 637	type 2 diabetes
-T15	Condition-Name 622 637	type 2 diabetes
-E14	Condition:T14 Name:T15
-T16	Condition 782 797	substance abuse
-T17	Condition-Name 782 797	substance abuse
-E16	Condition:T16 Name:T17
-T18	Condition 841 846	sleep
-T19	Condition-Name 841 846	sleep
-E18	Condition:T18 Name:T19
-T20	Eq-Operator 904 905	<
-A3	Eq-Operator-Value T20 LT
-T21	Eq-Temporal-Unit 73 78	years
-A4	Eq-Temporal-Unit-Value T21 year
-T22	Eq-Temporal-Unit 336 340	days
-A5	Eq-Temporal-Unit-Value T22 day
-T23	Eq-Temporal-Unit 907 913	months
-A6	Eq-Temporal-Unit-Value T23 month
-T24	Eq-Unit 51 53	kg
-T25	Age 63 66	Age
-E19	Age:T25
-T26	Eq-Operator 45 46	-
-A7	Eq-Operator-Value T26 BETWEEN
-T27	Eq-Operator 69 70	-
-A8	Eq-Operator-Value T27 BETWEEN
-T28	Eq-Value 41 43	18
-T29	Eq-Value 46 48	29
-T30	Eq-Value 56 57	2
-T31	Eq-Value 67 69	18
-T32	Eq-Value 70 72	65
-T33	Eq-Value 617 618	1
-T34	Eq-Value 627 628	2
-T35	Eq-Value 905 906	6
-T36	Eq-Value 938 939	3
-T37	Eq-Comparison 904 913	<6 months
-E20	Eq-Comparison:T37 Operator:T20 Temporal-Unit:T23 Value:T35
-T38	Eq-Comparison 45 48	-29
-E21	Eq-Comparison:T38 Operator:T26 Value:T29
-T39	Eq-Comparison 67 70	18-
-E22	Eq-Comparison:T39 Operator:T27 Value:T31
+E1	Observation:T1 Name:T41
+T2	Eq-Comparison 41 57	18.5-29.9 kg∙m-2
+E2	Eq-Comparison:T2 Value:T42 Operator:T43 Value:T44 Unit:T45
+T3	Age 63 66	Age
+E3	Age:T3 
+T4	Eq-Comparison 67 78	18-65 years
+E4	Eq-Comparison:T4 Value:T46 Operator:T47 Value:T48 Temporal-Unit:T49
+T5	Study 152 157	study
+E5	Study:T5 
+T6	Procedure 158 168	procedures
+E6	Procedure:T6 
+T7	Assertion 182 193	to maintain
+E7	Assertion:T7 
+A1	Assertion-Type-Value E7 hypothetical
+T8	Procedure 212 233	menstrual cycle phase
+E8	Procedure:T8 Name:T51
+T9	Or 234 236	or
+E9	Or:T9 
+T10	Procedure 237 250	contraceptive
+E10	Procedure:T10 
+T11	Negation 260 262	No
+E11	Negation:T11 
+T12	Assertion 263 274	anticipated
+E12	Assertion:T12 
+A2	Assertion-Type-Value E12 hypothetical
+T13	Procedure 286 290	diet
+E13	Procedure:T13 
+T14	Or 290 291	/
+E14	Or:T14 
+T15	Observation 291 308	physical activity
+E15	Observation:T15 Name:T53
+T16	Temporal-Connection 309 315	during
+E16	Temporal-Connection:T16 
+A3	Temporal-Connection-Type-Value E16 during
+T17	Study 320 325	study
+E17	Study:T17 
+T18	Condition 467 476	condition
+E18	Condition:T18 
+T19	Or 477 479	or
+E19	Or:T19 
+T20	Risk 527 531	risk
+E20	Risk:T20 
+T21	Condition 588 605	metabolic disease
+E21	Condition:T21 Name:T54
+T22	Modifier 612 618	type 1
+E22	Modifier:T22 
+T23	Or 619 621	or
+E23	Or:T23 
+T24	Condition 622 637	type 2 diabetes
+E24	Condition:T24 Name:T57
+T25	Drug 664 674	substances
+E25	Drug:T25 
+T26	Assertion 681 684	may
+E26	Assertion:T26 
+A4	Assertion-Type-Value E26 hypothetical
+T27	Negation 685 689	pose
+E27	Negation:T27 
+T28	Negation 690 695	undue
+E28	Negation:T28 
+T29	Risk 705 709	risk
+E29	Risk:T29 
+T30	Study 757 767	experiment
+E30	Study:T30 
+T31	Condition 774 781	smoking
+E31	Condition:T31 
+T32	Or 781 782	/
+E32	Or:T32 
+T33	Condition 782 797	substance abuse
+E33	Condition:T33 Name:T58
+T34	Negation 814 817	not
+E34	Negation:T34 
+T35	Condition 818 846	conforming to standard sleep
+E35	Condition:T35 
+T36	Condition 847 857	wake cycle
+E36	Condition:T36 
+T37	Eq-Comparison 896 902	recent
+E37	Eq-Comparison:T37 Temporal-Period:T61
+T38	Eq-Comparison 904 913	<6 months
+E38	Eq-Comparison:T38 Operator:T62 Value:T63 Temporal-Unit:T64
+T39	Observation 925 934	body mass
+E39	Observation:T39 Name:T65
+T40	Eq-Comparison 936 940	± 3%
+E40	Eq-Comparison:T40 Value:T67 Unit:T68
+T41	Observation-Name 25 40	Body mass index
+A5	Observation-Type-Value T41 vital
+T42	Eq-Value 41 45	18.5
+T43	Eq-Operator 45 46	-
+A6	Eq-Operator-Value T43 BETWEEN
+T44	Eq-Value 46 50	29.9
+T45	Eq-Unit 51 57	kg∙m-2
+T46	Eq-Value 67 69	18
+T47	Eq-Operator 69 70	-
+A7	Eq-Operator-Value T47 BETWEEN
+T48	Eq-Value 70 72	65
+T49	Eq-Temporal-Unit 73 78	years
+A8	Eq-Temporal-Unit-Value T49 year
+T50	Life-Stage-And-Gender 174 181	Females
+A9	Life-Stage-And-Gender-Type T50 male
+T51	Procedure-Name 212 233	menstrual cycle phase
+T52	Stability 275 282	changes
+A10	Stability-Value T52 change
+T53	Observation-Name 291 308	physical activity
+A11	Observation-Type-Value T53 social-habit
+T54	Condition-Name 588 605	metabolic disease
+T55	Eq-Unit 612 616	type
+T56	Eq-Value 617 618	1
+T57	Condition-Name 622 637	type 2 diabetes
+T58	Condition-Name 782 797	substance abuse
+T59	Observation-Name 847 857	wake cycle
+T60	Observation-Name 864 876	shift worker
+T61	Eq-Temporal-Period 896 902	recent
+A12	Eq-Temporal-Period-Value T61 recent
+T62	Eq-Operator 904 905	<
+A13	Eq-Operator-Value T62 LT
+T63	Eq-Value 905 906	6
+T64	Eq-Temporal-Unit 907 913	months
+A14	Eq-Temporal-Unit-Value T64 month
+T65	Observation-Name 925 934	body mass
+A15	Observation-Type-Value T65 vital
+T66	Observation-Name 936 937	±
+T67	Eq-Value 938 939	3
+T68	Eq-Unit 939 940	%

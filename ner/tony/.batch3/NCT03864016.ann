@@ -1,39 +1,110 @@
-T1	Procedure 105 135	coronary artery bypass surgery
-T2	Procedure-Name 105 135	coronary artery bypass surgery
-E1	Procedure:T1 Name:T2
-T3	Procedure 180 190	sternotomy
-T4	Procedure-Name 180 190	sternotomy
-E3	Procedure:T3 Name:T4
-T5	Life-Stage-And-Gender 67 72	Adult
-A1	Life-Stage-And-Gender-Type T5 adult
-T6	Procedure 141 144	CEC
-T7	Procedure-Name 141 144	CEC
-E6	Procedure:T6 Name:T7
-T8	Condition 543 564	cognitive dysfunction
-T9	Condition-Name 543 564	cognitive dysfunction
-E8	Condition:T8 Name:T9
-T10	Condition 760 780	neurological disease
-T11	Condition-Name 760 780	neurological disease
-E10	Condition:T10 Name:T11
-T12	Condition 442 455	breastfeeding
-T13	Condition-Name 442 455	breastfeeding
-E12	Condition:T12 Name:T13
-T14	Condition 616 627	intolerance
-T15	Condition-Name 616 627	intolerance
-E14	Condition:T14 Name:T15
-T16	Condition 702 713	Eye disease
-T17	Condition-Name 702 713	Eye disease
-E16	Condition:T16 Name:T17
-T18	Life-Stage-And-Gender 467 472	Adult
-A2	Life-Stage-And-Gender-Type T18 adult
-T19	Eq-Operator 201 202	<
-A3	Eq-Operator-Value T19 LT
-T20	Eq-Operator 570 571	<
-A4	Eq-Operator-Value T20 LT
-T21	Eq-Value 202 203	4
-T22	Eq-Value 571 573	13
-T23	Eq-Value 585 586	6
-T24	Eq-Comparison 201 203	<4
-E17	Eq-Comparison:T24 Operator:T19 Value:T21
-T25	Eq-Comparison 570 573	<13
-E18	Eq-Comparison:T25 Operator:T20 Value:T22
+T1	Eq-Comparison 94 104	undergoing
+E1	Eq-Comparison:T1 Temporal-Period:T37
+T2	Procedure 105 135	coronary artery bypass surgery
+E2	Procedure:T2 Name:T38
+T3	Procedure 141 144	CEC
+E3	Procedure:T3 Name:T39
+T4	And 146 150	with
+E4	And:T4
+T5	Or 151 153	or
+E5	Or:T5
+T6	Modifier 154 161	without
+E6	Modifier:T6
+T7	Procedure 162 175	valve surgery
+E7	Procedure:T7 Name:T40
+T8	Procedure 180 190	sternotomy
+E8	Procedure:T8 Name:T41
+T9	Condition 197 200	ASA
+E9	Condition:T9 Name:T42
+T10	Eq-Comparison 201 203	<4
+E10	Eq-Comparison:T10 Operator:T43
+T11	Observation 315 331	legal protection
+E11	Observation:T11 Name:T44
+T12	Condition 392 412	mentally incompetent
+E12	Condition:T12 Name:T45
+T13	Condition 418 426	Pregnant
+E13	Condition:T13 Name:T46
+T14	Condition 428 438	parturient
+E14	Condition:T14 Name:T47
+T15	Or 439 441	or
+E15	Or:T15
+T16	Condition 442 455	breastfeeding
+E16	Condition:T16 Name:T48
+T17	Temporal-Connection 530 542	preoperative
+E17	Temporal-Connection:T17
+A1	Temporal-Connection-Type-Value E17 before
+T18	Condition 543 564	cognitive dysfunction
+E18	Condition:T18 Name:T51
+T19	Observation 566 569	MMS
+E19	Observation:T19 Name:T52
+T20	Eq-Comparison 570 573	<13
+E20	Eq-Comparison:T20 Operator:T53 Value:T54
+T21	Condition 576 584	APPENDIX
+E21	Condition:T21
+T22	Condition 607 627	morphine intolerance
+E22	Condition:T22 Name:T55
+T23	Modifier 645 654	long-term
+E23	Modifier:T23
+T24	Procedure 655 671	opioid treatment
+E24	Procedure:T24 Name:T57
+T25	Modifier 678 687	Emergency
+E25	Modifier:T25
+T26	Procedure 688 695	surgery
+E26	Procedure:T26 Name:T58
+T27	Condition 702 713	Eye disease
+E27	Condition:T27 Name:T59
+T28	Modifier 715 722	corneal
+E28	Modifier:T28
+T29	Condition 723 729	injury
+E29	Condition:T29 Name:T60
+T30	Or 731 733	or
+E30	Or:T30
+T31	Modifier 734 741	wearing
+E31	Modifier:T31
+T32	Condition 742 756	contact lenses
+E32	Condition:T32
+T33	Condition 760 780	neurological disease
+E33	Condition:T33 Name:T62
+T34	Assertion 786 789	can
+E34	Assertion:T34
+A2	Assertion-Type-Value E34 hypothetical
+T35	Modifier 804 820	pupillary reflex
+E35	Modifier:T35
+T36	Life-Stage-And-Gender 67 72	Adult
+A3	Life-Stage-And-Gender-Type T36 adult
+T37	Eq-Temporal-Period 94 104	undergoing
+A4	Eq-Temporal-Period-Value T37 present
+T38	Procedure-Name 105 135	coronary artery bypass surgery
+T39	Procedure-Name 141 144	CEC
+T40	Procedure-Name 162 175	valve surgery
+T41	Procedure-Name 180 190	sternotomy
+T42	Condition-Name 197 200	ASA
+T43	Eq-Operator 201 202	<
+A5	Eq-Operator-Value T43 LT
+T44	Observation-Name 315 331	legal protection
+T45	Condition-Name 392 412	mentally incompetent
+T46	Condition-Name 418 426	Pregnant
+T47	Condition-Name 428 438	parturient
+T48	Condition-Name 442 455	breastfeeding
+T49	Life-Stage-And-Gender 456 461	woman
+A6	Life-Stage-And-Gender-Type T49 female
+T50	Life-Stage-And-Gender 467 472	Adult
+A7	Life-Stage-And-Gender-Type T50 adult
+T51	Condition-Name 543 564	cognitive dysfunction
+T52	Observation-Name 566 569	MMS
+A8	Observation-Type-Value T52 lab
+T53	Eq-Operator 570 571	<
+A9	Eq-Operator-Value T53 LT
+T54	Eq-Value 571 573	13
+T55	Condition-Name 607 627	morphine intolerance
+T56	Eq-Temporal-Period 642 644	on
+A10	Eq-Temporal-Period-Value T56 present
+T57	Procedure-Name 655 671	opioid treatment
+T58	Procedure-Name 688 695	surgery
+T59	Condition-Name 702 713	Eye disease
+T60	Condition-Name 723 729	injury
+T61	Condition-Name 734 749	wearing contact
+T62	Condition-Name 760 780	neurological disease
+T63	Stability 790 799	influence
+A11	Stability-Value T63 change
+T64	Condition-Name 804 820	pupillary reflex

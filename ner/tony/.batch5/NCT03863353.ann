@@ -1,22 +1,87 @@
-T1	Procedure 39 66	elective surgical procedure
-T2	Procedure-Name 39 66	elective surgical procedure
-E1	Procedure:T1 Name:T2
-T3	Condition 169 177	recovery
-T4	Condition-Name 169 177	recovery
-E3	Condition:T3 Name:T4
-T5	Condition 251 271	Cognitive impairment
-T6	Condition-Name 251 271	Cognitive impairment
-E5	Condition:T5 Name:T6
-T7	Procedure 227 245	elective procedure
-T8	Procedure-Name 227 245	elective procedure
-E7	Procedure:T7 Name:T8
-T9	Condition 348 353	Liver
-T10	Condition-Name 348 353	Liver
-E9	Condition:T9 Name:T10
-T11	Eq-Operator 506 507	<
-A1	Eq-Operator-Value T11 LT
-T12	Eq-Temporal-Unit 509 514	weeks
-A2	Eq-Temporal-Unit-Value T12 week
-T13	Eq-Value 507 508	2
-T14	Eq-Comparison 506 514	<2 weeks
-E10	Eq-Comparison:T14 Operator:T11 Temporal-Unit:T12 Value:T13
+T1	Eq-Comparison 25 35	Undergoing
+E1	Eq-Comparison:T1 Temporal-Period:T30
+T2	Modifier 39 47	elective
+E2	Modifier:T2
+T3	Procedure 48 66	surgical procedure
+E3	Procedure:T3 Name:T31
+T4	Assertion 83 96	expected they
+E4	Assertion:T4
+A1	Assertion-Type-Value E4 hypothetical
+T5	Procedure 112 138	prescription pain medicine
+E5	Procedure:T5 Name:T32
+T6	Condition 157 161	pain
+E6	Condition:T6 Name:T33
+T7	Temporal-Connection 162 168	during
+E7	Temporal-Connection:T7
+A2	Temporal-Connection-Type-Value E7 during
+T8	Eq-Comparison 212 222	Undergoing
+E8	Eq-Comparison:T8 Temporal-Period:T34
+T9	Modifier 223 235	non-elective
+E9	Modifier:T9
+T10	Procedure 236 245	procedure
+E10	Procedure:T10 Name:T35
+T11	Condition 251 271	Cognitive impairment
+E11	Condition:T11 Name:T36
+T12	Negation 272 282	precluding
+E12	Negation:T12
+T13	Condition 301 305	pain
+E13	Condition:T13 Name:T38
+T14	Modifier 311 322	Hematologic
+E14	Modifier:T14
+T15	Or 322 323	/
+E15	Or:T15
+T16	Modifier 323 332	oncologic
+E16	Modifier:T16
+T17	Condition 333 342	condition
+E17	Condition:T17
+T18	Modifier 357 363	kidney
+E18	Modifier:T18
+T19	Condition 364 374	conditions
+E19	Condition:T19
+T20	Negation 375 385	precluding
+E20	Negation:T20
+T21	Drug 392 422	analgesic prescription patters
+E21	Drug:T21 Name:T41
+T22	Drug 424 430	opioid
+E22	Drug:T22
+T23	Drug 438 448	non-opioid
+E23	Drug:T23 Name:T43
+T24	Eq-Comparison 455 458	Use
+E24	Eq-Comparison:T24 Temporal-Period:T44
+T25	Drug 462 469	opioids
+E25	Drug:T25 Name:T45
+T26	Condition 484 488	pain
+E26	Condition:T26
+T27	Temporal-Connection 489 492	pre
+E27	Temporal-Connection:T27
+A3	Temporal-Connection-Type-Value E27 before
+T28	Drug 493 504	operatively
+E28	Drug:T28
+T29	Eq-Comparison 506 514	<2 weeks
+E29	Eq-Comparison:T29 Operator:T47 Value:T48 Temporal-Unit:T49
+T30	Eq-Temporal-Period 25 35	Undergoing
+A4	Eq-Temporal-Period-Value T30 present
+T31	Procedure-Name 48 66	surgical procedure
+T32	Procedure-Name 125 138	pain medicine
+T33	Condition-Name 157 161	pain
+T34	Eq-Temporal-Period 212 222	Undergoing
+A5	Eq-Temporal-Period-Value T34 present
+T35	Procedure-Name 236 245	procedure
+T36	Condition-Name 251 271	Cognitive impairment
+T37	Eq-Temporal-Period 288 297	reporting
+A6	Eq-Temporal-Period-Value T37 present
+T38	Condition-Name 301 305	pain
+T39	Condition-Name 323 342	oncologic condition
+T40	Condition-Name 357 374	kidney conditions
+T41	Drug-Name 392 422	analgesic prescription patters
+T42	Drug-Name 424 435	opioid plus
+T43	Drug-Name 438 448	non-opioid
+T44	Eq-Temporal-Period 455 458	Use
+A7	Eq-Temporal-Period-Value T44 present
+T45	Drug-Name 462 469	opioids
+T46	Observation-Name 474 504	prolonged pain pre-operatively
+T47	Eq-Operator 506 507	<
+A8	Eq-Operator-Value T47 LT
+T48	Eq-Value 507 508	2
+T49	Eq-Temporal-Unit 509 514	weeks
+A9	Eq-Temporal-Unit-Value T49 week

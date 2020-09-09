@@ -1,37 +1,140 @@
-T1	Procedure 200 204	lead
-T2	Procedure-Name 200 204	lead
-E1	Procedure:T1 Name:T2
-T3	Condition 504 535	Immune Thrombocytopenic Purpura
-T4	Condition-Name 504 535	Immune Thrombocytopenic Purpura
-E3	Condition:T3 Name:T4
-T5	Procedure 671 690	maintenance therapy
-T6	Procedure-Name 671 690	maintenance therapy
-E5	Procedure:T5 Name:T6
-T7	Condition 760 773	breastfeeding
-T8	Condition-Name 760 773	breastfeeding
-E7	Condition:T7 Name:T8
-T9	Condition 537 540	ITP
-T10	Condition-Name 537 540	ITP
-E9	Condition:T9 Name:T10
-T11	Condition 622 625	ITP
-T12	Condition-Name 622 625	ITP
-E11	Condition:T11 Name:T12
-T13	Eq-Temporal-Unit 83 88	years
-A1	Eq-Temporal-Unit-Value T13 year
-T14	Eq-Temporal-Unit 597 602	years
-A2	Eq-Temporal-Unit-Value T14 year
-T15	Eq-Temporal-Unit 637 643	months
-A3	Eq-Temporal-Unit-Value T15 month
-T16	Eq-Temporal-Unit 706 711	weeks
-A4	Eq-Temporal-Unit-Value T16 week
-T17	Eq-Operator 591 593	to
-A5	Eq-Operator-Value T17 BETWEEN
-T18	Eq-Value 73 75	18
-T19	Eq-Value 80 82	55
-T20	Eq-Value 197 199	12
-T21	Eq-Value 588 590	18
-T22	Eq-Value 594 596	64
-T23	Eq-Value 635 636	3
-T24	Eq-Value 704 705	4
-T25	Eq-Comparison 588 593	18 to
-E12	Eq-Comparison:T25 Operator:T17 Value:T21
+T1	Eq-Comparison 53 88	between the ages of 18 and 55 years
+E1	Eq-Comparison:T1 Value:T46 Value:T47 Temporal-Unit:T48
+T2	Condition 90 97	healthy
+E2	Condition:T2 Name:T49
+T3	Procedure 114 129	medical history
+E3	Procedure:T3
+T4	Procedure 131 151	physical examination
+E4	Procedure:T4 Name:T51
+T5	Condition 153 164	vital signs
+E5	Condition:T5
+T6	Procedure 175 191	laboratory tests
+E6	Procedure:T6
+T7	Or 193 196	and
+E7	Or:T7
+T8	Procedure 197 222	12-lead electrocardiogram
+E8	Procedure:T8 Name:T53
+T9	And 224 227	and
+E9	And:T9
+T10	Negation 266 269	not
+E10	Negation:T10
+T11	Study 300 312	Investigator
+E11	Study:T11
+T12	Negation 314 317	not
+E12	Negation:T12
+T13	Condition 318 326	pregnant
+E13	Condition:T13 Name:T55
+T14	Or 327 329	or
+E14	Or:T14
+T15	Condition 330 343	breastfeeding
+E15	Condition:T15 Name:T56
+T16	And 345 348	and
+E16	And:T16
+T17	Negation 349 351	no
+E17	Negation:T17
+T18	Other 352 357	other
+E18	Other:T18
+T19	Eq-Comparison 392 401	currently
+E19	Eq-Comparison:T19 Temporal-Period:T58
+T20	Or 402 404	or
+E20	Or:T20
+T21	Eq-Comparison 414 421	history
+E21	Eq-Comparison:T21 Temporal-Period:T59
+T22	Condition 504 535	Immune Thrombocytopenic Purpura
+E22	Condition:T22 Name:T60
+T23	Condition 537 540	ITP
+E23	Condition:T23 Name:T61
+T24	Eq-Comparison 568 575	between
+E24	Eq-Comparison:T24
+T25	Eq-Comparison 576 602	the ages of 18 to 64 years
+E25	Eq-Comparison:T25 Value:T62 Operator:T63 Value:T64 Temporal-Unit:T65
+T26	And 603 606	and
+E26	And:T26
+T27	Condition 622 625	ITP
+E27	Condition:T27 Name:T66
+T28	Eq-Comparison 626 643	at least 3 months
+E28	Eq-Comparison:T28 Operator:T67 Value:T68 Temporal-Unit:T69
+T29	Temporal-Connection 644 652	prior to
+E29	Temporal-Connection:T29
+A1	Temporal-Connection-Type-Value E29 before
+T30	Study 653 662	screening
+E30	Study:T30
+T31	Procedure 664 690	stable maintenance therapy
+E31	Procedure:T31 Name:T71
+T32	Eq-Comparison 695 711	at least 4 weeks
+E32	Eq-Comparison:T32 Operator:T72 Value:T73 Temporal-Unit:T74
+T33	Temporal-Connection 712 720	prior to
+E33	Temporal-Connection:T33
+A2	Temporal-Connection-Type-Value E33 before
+T34	Study 731 736	study
+E34	Study:T34
+T35	Negation 744 747	not
+E35	Negation:T35
+T36	Condition 748 756	pregnant
+E36	Condition:T36 Name:T75
+T37	Or 757 759	or
+E37	Or:T37
+T38	Condition 760 773	breastfeeding
+E38	Condition:T38 Name:T76
+T39	And 775 778	and
+E39	And:T39
+T40	Negation 779 781	no
+E40	Negation:T40
+T41	Other 782 787	other
+E41	Other:T41
+T42	Eq-Comparison 822 831	currently
+E42	Eq-Comparison:T42 Temporal-Period:T78
+T43	Or 832 834	or
+E43	Or:T43
+T44	Eq-Comparison 844 851	history
+E44	Eq-Comparison:T44 Temporal-Period:T79
+T45	Condition-Name 17 24	Healthy
+T46	Eq-Value 73 75	18
+T47	Eq-Value 80 82	55
+T48	Eq-Temporal-Unit 83 88	years
+A3	Eq-Temporal-Unit-Value T48 year
+T49	Condition-Name 90 97	healthy
+T50	Eq-Temporal-Period 122 129	history
+A4	Eq-Temporal-Period-Value T50 past
+T51	Procedure-Name 131 151	physical examination
+T52	Observation-Name 175 191	laboratory tests
+A5	Observation-Type-Value T52 lab
+T53	Procedure-Name 205 222	electrocardiogram
+T54	Severity 281 292	significant
+A6	Severity-Value T54 severe
+T55	Condition-Name 318 326	pregnant
+T56	Condition-Name 330 343	breastfeeding
+T57	Condition-Name 378 391	abnormalities
+T58	Eq-Temporal-Period 392 401	currently
+A7	Eq-Temporal-Period-Value T58 present
+T59	Eq-Temporal-Period 414 421	history
+A8	Eq-Temporal-Period-Value T59 past
+T60	Condition-Name 504 535	Immune Thrombocytopenic Purpura
+T61	Condition-Name 537 540	ITP
+T62	Eq-Value 588 590	18
+T63	Eq-Operator 591 593	to
+A9	Eq-Operator-Value T63 BETWEEN
+T64	Eq-Value 594 596	64
+T65	Eq-Temporal-Unit 597 602	years
+A10	Eq-Temporal-Unit-Value T65 year
+T66	Condition-Name 622 625	ITP
+T67	Eq-Operator 626 634	at least
+A11	Eq-Operator-Value T67 GTEQ
+T68	Eq-Value 635 636	3
+T69	Eq-Temporal-Unit 637 643	months
+A12	Eq-Temporal-Unit-Value T69 month
+T70	Stability 664 670	stable
+A13	Stability-Value T70 stable
+T71	Procedure-Name 671 690	maintenance therapy
+T72	Eq-Operator 695 703	at least
+A14	Eq-Operator-Value T72 GTEQ
+T73	Eq-Value 704 705	4
+T74	Eq-Temporal-Unit 706 711	weeks
+A15	Eq-Temporal-Unit-Value T74 week
+T75	Condition-Name 748 756	pregnant
+T76	Condition-Name 760 773	breastfeeding
+T77	Condition-Name 808 821	abnormalities
+T78	Eq-Temporal-Period 822 831	currently
+A16	Eq-Temporal-Period-Value T78 present
+T79	Eq-Temporal-Period 844 851	history
+A17	Eq-Temporal-Period-Value T79 past

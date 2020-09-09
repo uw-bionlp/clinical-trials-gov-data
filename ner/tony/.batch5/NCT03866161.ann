@@ -1,14 +1,27 @@
 T1	Condition 41 64	obstructive sleep apnea
-T2	Condition-Name 41 64	obstructive sleep apnea
-E1	Condition:T1 Name:T2
-T3	Procedure 104 111	therapy
-T4	Procedure-Name 104 111	therapy
-E3	Procedure:T3 Name:T4
-T5	Procedure 172 193	Psychiatric treatment
-T6	Procedure-Name 172 193	Psychiatric treatment
-E5	Procedure:T5 Name:T6
-T7	Eq-Operator 142 143	>
-A1	Eq-Operator-Value T7 GT
-T8	Eq-Value 144 146	15
-T9	Eq-Comparison 142 146	> 15
-E6	Eq-Comparison:T9 Operator:T7 Value:T8
+E1	Condition:T1 Name:T10
+T2	Indication 65 74	indicated
+E2	Indication:T2
+T3	Procedure 88 111	airway pressure therapy
+E3	Procedure:T3 Name:T12
+T4	Condition 118 123	Apnea
+E4	Condition:T4
+T5	Observation 124 142	Hypopnea index AHI
+E5	Observation:T5
+T6	Eq-Comparison 142 146	> 15
+E6	Eq-Comparison:T6 Operator:T14 Value:T15
+T7	Procedure 184 193	treatment
+E7	Procedure:T7
+T8	Procedure 199 208	Treatment
+E8	Procedure:T8
+T9	Drug 214 232	psychoactive drugs
+E9	Drug:T9 Name:T16
+T10	Condition-Name 41 64	obstructive sleep apnea
+T11	Polarity 79 87	positive
+A1	Polarity-Value T11 positive
+T12	Procedure-Name 88 111	airway pressure therapy
+T13	Observation-Name 118 142	Apnea-Hypopnea index AHI
+T14	Eq-Operator 142 143	>
+A2	Eq-Operator-Value T14 GT
+T15	Eq-Value 144 146	15
+T16	Drug-Name 214 232	psychoactive drugs

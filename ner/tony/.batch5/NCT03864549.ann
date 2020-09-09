@@ -1,35 +1,105 @@
-T1	Condition 195 224	gestational diabetes mellitus
-T2	Condition-Name 195 224	gestational diabetes mellitus
-E1	Condition:T1 Name:T2
-T3	Condition 439 450	consumption
-T4	Condition-Name 439 450	consumption
-E3	Condition:T3 Name:T4
-T5	Condition 145 154	pregnancy
-T6	Condition-Name 145 154	pregnancy
-E5	Condition:T5 Name:T6
-T7	Condition 64 67	GDM
-T8	Condition-Name 64 67	GDM
-E7	Condition:T7 Name:T8
-T9	Condition 230 233	GDM
-T10	Condition-Name 230 233	GDM
-E9	Condition:T9 Name:T10
-T11	Eq-Operator 244 245	≥
-A1	Eq-Operator-Value T11 GTEQ
-T12	Eq-Temporal-Unit 96 101	weeks
-A2	Eq-Temporal-Unit-Value T12 week
-T13	Eq-Temporal-Unit 110 115	years
-A3	Eq-Temporal-Unit-Value T13 year
-T14	Eq-Temporal-Unit 261 266	weeks
-A4	Eq-Temporal-Unit-Value T14 week
-T15	Age 116 119	old
-E10	Age:T15
-T16	Eq-Operator 76 78	to
-A5	Eq-Operator-Value T16 BETWEEN
-T17	Eq-Value 73 75	13
-T18	Eq-Value 79 81	32
-T19	Eq-Value 107 109	18
-T20	Eq-Value 246 248	33
-T21	Eq-Comparison 244 248	≥ 33
-E11	Eq-Comparison:T21 Operator:T11 Value:T20
-T22	Eq-Comparison 73 78	13 to
-E12	Eq-Comparison:T22 Operator:T16 Value:T17
+T1	Condition 25 33	Pregnant
+E1	Condition:T1 Name:T30
+T2	And 40 43	who
+E2	And:T2
+T3	Condition 64 67	GDM
+E3	Condition:T3 Name:T32
+T4	Eq-Comparison 73 83	13 to 32.6
+E4	Eq-Comparison:T4 Value:T33 Operator:T34 Value:T35
+T5	Observation 84 95	gestational
+E5	Observation:T5 Name:T36
+T6	Eq-Comparison 96 101	weeks
+E6	Eq-Comparison:T6 Temporal-Unit:T37
+T7	Eq-Comparison 104 129	- 18 years old and older
+E7	Eq-Comparison:T7 Value:T38 Temporal-Unit:T39 Operator:T40
+T8	Modifier 135 144	Singleton
+E8	Modifier:T8
+T9	Condition 145 154	pregnancy
+E9	Condition:T9 Name:T41
+T10	And 186 190	with
+E10	And:T10
+T11	Modifier 191 206	pre-gestational
+E11	Modifier:T11
+T12	Condition 207 224	diabetes mellitus
+E12	Condition:T12
+T13	Condition 230 233	GDM
+E13	Condition:T13 Name:T45
+T14	Eq-Comparison 244 248	≥ 33
+E14	Eq-Comparison:T14 Operator:T46 Value:T47
+T15	Observation 249 260	gestational
+E15	Observation:T15 Name:T48
+T16	Eq-Comparison 261 266	weeks
+E16	Eq-Comparison:T16 Temporal-Unit:T49
+T17	Eq-Comparison 278 283	using
+E17	Eq-Comparison:T17 Temporal-Period:T51
+T18	Procedure 284 296	prophylactic
+E18	Procedure:T18
+T19	Procedure 297 320	antimicrobial treatment
+E19	Procedure:T19
+T20	Condition 326 343	Immunocompromised
+E20	Condition:T20 Name:T53
+T21	Eq-Comparison 355 363	Multiple
+E21	Eq-Comparison:T21 Operator:T55
+T22	Condition 364 373	pregnancy
+E22	Condition:T22 Name:T56
+T23	Eq-Comparison 385 391	taking
+E23	Eq-Comparison:T23 Temporal-Period:T58
+T24	Drug 392 415	oral probiotic products
+E24	Drug:T24 Name:T59
+T25	And 416 419	who
+E25	And:T25
+T26	Assertion 420 429	refuse to
+E26	Assertion:T26
+A1	Assertion-Type-Value E26 hypothetical
+T27	Drug 439 450	consumption
+E27	Drug:T27
+T28	Drug 468 478	probiotics
+E28	Drug:T28
+T29	Negation 482 485	not
+E29	Negation:T29
+T30	Condition-Name 25 33	Pregnant
+T31	Life-Stage-And-Gender 34 39	women
+A2	Life-Stage-And-Gender-Type T31 female
+T32	Condition-Name 64 67	GDM
+T33	Eq-Value 73 75	13
+T34	Eq-Operator 76 78	to
+A3	Eq-Operator-Value T34 BETWEEN
+T35	Eq-Value 79 83	32.6
+T36	Observation-Name 84 95	gestational
+T37	Eq-Temporal-Unit 96 101	weeks
+A4	Eq-Temporal-Unit-Value T37 week
+T38	Eq-Value 107 109	18
+T39	Eq-Temporal-Unit 110 115	years
+A5	Eq-Temporal-Unit-Value T39 year
+T40	Eq-Operator 120 129	and older
+A6	Eq-Operator-Value T40 GTEQ
+T41	Condition-Name 145 154	pregnancy
+T42	Life-Stage-And-Gender 180 185	Women
+A7	Life-Stage-And-Gender-Type T42 female
+T43	Eq-Temporal-Period 191 194	pre
+A8	Eq-Temporal-Period-Value T43 past
+T44	Condition-Name 195 224	gestational diabetes mellitus
+T45	Condition-Name 230 233	GDM
+T46	Eq-Operator 244 245	≥
+A9	Eq-Operator-Value T46 GTEQ
+T47	Eq-Value 246 248	33
+T48	Observation-Name 249 260	gestational
+T49	Eq-Temporal-Unit 261 266	weeks
+A10	Eq-Temporal-Unit-Value T49 week
+T50	Life-Stage-And-Gender 272 277	Women
+A11	Life-Stage-And-Gender-Type T50 female
+T51	Eq-Temporal-Period 278 283	using
+A12	Eq-Temporal-Period-Value T51 present
+T52	Drug-Name 284 310	prophylactic antimicrobial
+T53	Condition-Name 326 343	Immunocompromised
+T54	Life-Stage-And-Gender 344 349	women
+A13	Life-Stage-And-Gender-Type T54 female
+T55	Eq-Operator 355 363	Multiple
+A14	Eq-Operator-Value T55 GT
+T56	Condition-Name 364 373	pregnancy
+T57	Life-Stage-And-Gender 379 384	Women
+A15	Life-Stage-And-Gender-Type T57 female
+T58	Eq-Temporal-Period 385 391	taking
+A16	Eq-Temporal-Period-Value T58 present
+T59	Drug-Name 392 406	oral probiotic
+T60	Drug-Name 452 478	food-containing probiotics

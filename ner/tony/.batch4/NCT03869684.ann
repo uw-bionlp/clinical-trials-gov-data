@@ -1,46 +1,214 @@
-T1	Condition 305 308	AMD
-T2	Condition-Name 305 308	AMD
-E1	Condition:T1 Name:T2
-T3	Condition 344 360	vascular disease
-T4	Condition-Name 344 360	vascular disease
-E3	Condition:T3 Name:T4
-T5	Condition 396 399	AMD
-T6	Condition-Name 396 399	AMD
-E5	Condition:T5 Name:T6
-T7	Procedure 452 468	cataract surgery
-T8	Procedure-Name 452 468	cataract surgery
-E7	Procedure:T7 Name:T8
-T9	Procedure 472 477	LASIK
-T10	Procedure-Name 472 477	LASIK
-E9	Procedure:T9 Name:T10
-T11	Condition 713 727	ocular disease
-T12	Condition-Name 713 727	ocular disease
-E11	Condition:T11 Name:T12
-T13	Procedure 843 857	filter surgery
-T14	Procedure-Name 843 857	filter surgery
-E13	Procedure:T13 Name:T14
-T15	Condition 800 808	glaucoma
-T16	Condition-Name 800 808	glaucoma
-E15	Condition:T15 Name:T16
-T17	Condition 834 842	glaucoma
-T18	Condition-Name 834 842	glaucoma
-E17	Condition:T17 Name:T18
-T19	Eq-Operator 503 509	within
-A1	Eq-Operator-Value T19 LTEQ
-T20	Eq-Operator 621 627	within
-A2	Eq-Operator-Value T20 LTEQ
-T21	Eq-Operator 1245 1251	within
-A3	Eq-Operator-Value T21 LTEQ
-T22	Eq-Temporal-Unit 518 522	days
-A4	Eq-Temporal-Unit-Value T22 day
-T23	Eq-Temporal-Unit 631 635	days
-A5	Eq-Temporal-Unit-Value T23 day
-T24	Eq-Temporal-Unit 1255 1259	days
-A6	Eq-Temporal-Unit-Value T24 day
-T25	Eq-Value 515 517	90
-T26	Eq-Value 628 630	30
-T27	Eq-Value 1252 1254	90
-T28	Eq-Comparison 621 635	within 30 days
-E18	Eq-Comparison:T28 Operator:T20 Temporal-Unit:T23 Value:T26
-T29	Eq-Comparison 1245 1259	within 90 days
-E19	Eq-Comparison:T29 Operator:T21 Temporal-Unit:T24 Value:T27
+T1	Study 119 124	study
+E1	Study:T1
+T2	Procedure 154 165	optic media
+E2	Procedure:T2
+T3	Study 173 178	study
+E3	Study:T3
+T4	Modifier 212 224	high-quality
+E4	Modifier:T4
+T5	Condition 225 238	fundus images
+E5	Condition:T5
+T6	Eq-Comparison 269 275	active
+E6	Eq-Comparison:T6 Temporal-Period:T81
+T7	Condition 276 279	CNV
+E7	Condition:T7 Name:T82
+T8	Condition 287 293	causes
+E8	Condition:T8
+T9	Exception 294 304	other than
+E9	Exception:T9
+T10	Condition 305 308	AMD
+E10	Condition:T10 Name:T83
+T11	Study 316 321	study
+E11	Study:T11
+T12	Condition 336 360	retinal vascular disease
+E12	Condition:T12 Name:T84
+T13	Or 361 363	or
+E13	Or:T13
+T14	Condition 364 384	retinal degeneration
+E14	Condition:T14 Name:T85
+T15	Exception 385 395	other than
+E15	Exception:T15
+T16	Condition 396 399	AMD
+E16	Condition:T16 Name:T86
+T17	Study 407 412	study
+E17	Study:T17
+T18	Procedure 431 450	intraocular surgery
+E18	Procedure:T18 Name:T87
+T19	Procedure 452 468	cataract surgery
+E19	Procedure:T19 Name:T88
+T20	Or 469 471	or
+E20	Or:T20
+T21	Procedure 472 485	LASIK surgery
+E21	Procedure:T21 Name:T89
+T22	Study 493 498	study
+E22	Study:T22
+T23	Modifier 499 502	eye
+E23	Modifier:T23
+T24	Eq-Comparison 503 509	within
+E24	Eq-Comparison:T24 Operator:T90
+T25	Eq-Comparison 515 522	90 days
+E25	Eq-Comparison:T25 Value:T91 Temporal-Unit:T92
+T26	Temporal-Connection 523 531	prior to
+E26	Temporal-Connection:T26
+A1	Temporal-Connection-Type-Value E26 before
+T27	Study 536 541	study
+E27	Study:T27
+T28	Procedure 556 579	yttrium aluminum garnet
+E28	Procedure:T28 Name:T93
+T29	Procedure 581 584	YAG
+E29	Procedure:T29 Name:T94
+T30	Procedure 586 603	laser capsulotomy
+E30	Procedure:T30 Name:T95
+T31	Study 611 616	study
+E31	Study:T31
+T32	Modifier 617 620	eye
+E32	Modifier:T32
+T33	Eq-Comparison 621 635	within 30 days
+E33	Eq-Comparison:T33 Operator:T96 Value:T97 Temporal-Unit:T98
+T34	Temporal-Connection 636 644	prior to
+E34	Temporal-Connection:T34
+A2	Temporal-Connection-Type-Value E34 before
+T35	Study 649 654	study
+E35	Study:T35
+T36	Eq-Comparison 665 671	active
+E36	Eq-Comparison:T36 Temporal-Period:T99
+T37	Condition 672 684	inflammation
+E37	Condition:T37 Name:T100
+T38	Condition 686 695	infection
+E38	Condition:T38 Name:T101
+T39	Or 697 699	or
+E39	Or:T39
+T40	Other 700 705	other
+E40	Other:T40
+T41	Condition 713 727	ocular disease
+E41	Condition:T41 Name:T103
+T42	Modifier 731 741	either eye
+E42	Modifier:T42
+T43	Condition 752 759	aphakia
+E43	Condition:T43
+T44	Modifier 787 799	uncontrolled
+E44	Modifier:T44
+T45	Condition 800 808	glaucoma
+E45	Condition:T45
+T46	Or 809 811	or
+E46	Or:T46
+T47	Eq-Comparison 814 821	history
+E47	Eq-Comparison:T47 Temporal-Period:T105
+T48	Eq-Comparison 825 833	previous
+E48	Eq-Comparison:T48 Temporal-Period:T106
+T49	Procedure 834 857	glaucoma filter surgery
+E49	Procedure:T49 Name:T107
+T50	Modifier 861 871	either eye
+E50	Modifier:T50
+T51	Procedure 883 902	contact lens wearer
+E51	Procedure:T51
+T52	And 903 906	and
+E52	And:T52
+T53	Negation 910 916	unable
+E53	Negation:T53
+T54	Negation 920 931	discontinue
+E54	Negation:T54
+T55	Modifier 945 954	both eyes
+E55	Modifier:T55
+T56	Temporal-Connection 955 971	for the duration
+E56	Temporal-Connection:T56
+A3	Temporal-Connection-Type-Value E56 during
+T57	Study 979 984	study
+E57	Study:T57
+T58	Allergy 1005 1012	allergy
+E58	Allergy:T58
+T59	Or 1017 1019	or
+E59	Or:T59
+T60	Condition 1020 1031	experienced
+E60	Condition:T60
+T61	Eq-Comparison 1034 1039	prior
+E61	Eq-Comparison:T61 Temporal-Period:T110
+T62	Contraindication 1060 1068	reaction
+E62	Contraindication:T62
+T63	Drug 1072 1083	fluorescein
+E63	Drug:T63
+T64	Procedure 1084 1095	angiography
+E64	Procedure:T64
+T65	Modifier 1097 1099	FA
+E65	Modifier:T65
+T66	Or 1101 1103	or
+E66	Or:T66
+T67	Modifier 1104 1115	indocyanine
+E67	Modifier:T67
+T68	Procedure 1116 1133	green angiography
+E68	Procedure:T68
+T69	Procedure 1135 1139	ICGA
+E69	Procedure:T69
+T70	Other 1171 1176	other
+E70	Other:T70
+T71	Study 1177 1191	clinical trial
+E71	Study:T71
+T72	Or 1192 1198	and/or
+E72	Or:T72
+T73	Study 1213 1228	investigational
+E73	Study:T73
+T74	Drug 1229 1233	drug
+E74	Drug:T74
+T75	Or 1234 1236	or
+E75	Or:T75
+T76	Drug 1237 1244	product
+E76	Drug:T76
+T77	Eq-Comparison 1245 1259	within 90 days
+E77	Eq-Comparison:T77 Operator:T115 Value:T116 Temporal-Unit:T117
+T78	Temporal-Connection 1260 1268	prior to
+E78	Temporal-Connection:T78
+A4	Temporal-Connection-Type-Value E78 before
+T79	Study 1273 1278	study
+E79	Study:T79
+T80	Condition-Name 154 165	optic media
+T81	Eq-Temporal-Period 269 275	active
+A5	Eq-Temporal-Period-Value T81 present
+T82	Condition-Name 276 279	CNV
+T83	Condition-Name 305 308	AMD
+T84	Condition-Name 336 360	retinal vascular disease
+T85	Condition-Name 364 384	retinal degeneration
+T86	Condition-Name 396 399	AMD
+T87	Procedure-Name 431 450	intraocular surgery
+T88	Procedure-Name 452 468	cataract surgery
+T89	Procedure-Name 472 485	LASIK surgery
+T90	Eq-Operator 503 509	within
+A6	Eq-Operator-Value T90 LTEQ
+T91	Eq-Value 515 517	90
+T92	Eq-Temporal-Unit 518 522	days
+A7	Eq-Temporal-Unit-Value T92 day
+T93	Procedure-Name 556 579	yttrium aluminum garnet
+T94	Procedure-Name 581 584	YAG
+T95	Procedure-Name 586 603	laser capsulotomy
+T96	Eq-Operator 621 627	within
+A8	Eq-Operator-Value T96 LTEQ
+T97	Eq-Value 628 630	30
+T98	Eq-Temporal-Unit 631 635	days
+A9	Eq-Temporal-Unit-Value T98 day
+T99	Eq-Temporal-Period 665 671	active
+A10	Eq-Temporal-Period-Value T99 present
+T100	Condition-Name 672 684	inflammation
+T101	Condition-Name 686 695	infection
+T102	Severity 706 712	severe
+A11	Severity-Value T102 severe
+T103	Condition-Name 713 727	ocular disease
+T104	Condition-Name 787 808	uncontrolled glaucoma
+T105	Eq-Temporal-Period 814 821	history
+A12	Eq-Temporal-Period-Value T105 past
+T106	Eq-Temporal-Period 825 833	previous
+A13	Eq-Temporal-Period-Value T106 past
+T107	Procedure-Name 834 857	glaucoma filter surgery
+T108	Condition-Name 891 902	lens wearer
+T109	Severity 997 1004	serious
+A14	Severity-Value T109 severe
+T110	Eq-Temporal-Period 1034 1039	prior
+A15	Eq-Temporal-Period-Value T110 past
+T111	Severity 1040 1051	significant
+A16	Severity-Value T111 severe
+T112	Procedure-Name 1072 1095	fluorescein angiography
+T113	Procedure-Name 1104 1133	indocyanine green angiography
+T114	Drug-Name 1135 1139	ICGA
+T115	Eq-Operator 1245 1251	within
+A17	Eq-Operator-Value T115 LTEQ
+T116	Eq-Value 1252 1254	90
+T117	Eq-Temporal-Unit 1255 1259	days
+A18	Eq-Temporal-Unit-Value T117 day

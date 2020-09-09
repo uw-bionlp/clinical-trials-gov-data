@@ -1,9 +1,95 @@
-T1	Procedure 178 200	rehabilitation program
-T2	Procedure-Name 178 200	rehabilitation program
-E1	Procedure:T1 Name:T2
-T3	Condition 368 377	pregnancy
-T4	Condition-Name 368 377	pregnancy
-E3	Condition:T3 Name:T4
-T5	Eq-Operator 460 466	within
-A1	Eq-Operator-Value T5 LTEQ
-T6	Eq-Value 81 82	1
+T1	Negation 44 54	persistent
+E1	Negation:T1
+T2	Modifier 55 63	low back
+E2	Modifier:T2
+T3	Condition 64 68	pain
+E3	Condition:T3
+T4	Eq-Comparison 72 88	at least 1 month
+E4	Eq-Comparison:T4 Operator:T39 Value:T40 Temporal-Unit:T41
+T5	Eq-Comparison 140 149	currently
+E5	Eq-Comparison:T5 Temporal-Period:T42
+T6	Modifier 166 174	exercise
+E6	Modifier:T6
+T7	Or 175 177	or
+E7	Or:T7
+T8	Procedure 178 200	rehabilitation program
+E8	Procedure:T8
+T9	Or 201 203	or
+E9	Or:T9
+T10	Other 216 223	another
+E10	Other:T10
+T11	Study 224 238	interventional
+E11	Study:T11
+T12	Study 239 253	clinical trial
+E12	Study:T12
+T13	Condition 274 296	nerve root involvement
+E13	Condition:T13 Name:T43
+T14	Assertion 298 307	suspected
+E14	Assertion:T14
+A1	Assertion-Type-Value E14 possible
+T15	Condition 316 325	pathology
+E15	Condition:T15 Name:T45
+T16	Condition 336 342	trauma
+E16	Condition:T16 Name:T47
+T17	Modifier 350 355	spine
+E17	Modifier:T17
+T18	Condition 368 377	pregnancy
+E18	Condition:T18 Name:T48
+T19	Or 378 380	or
+E19	Or:T19
+T20	Other 381 386	other
+E20	Other:T20
+T21	Condition 387 397	conditions
+E21	Condition:T21
+T22	Assertion 403 408	would
+E22	Assertion:T22
+A2	Assertion-Type-Value E22 hypothetical
+T23	Negation 409 416	prevent
+E23	Negation:T23
+T24	Study 443 448	trial
+E24	Study:T24
+T25	Eq-Comparison 460 493	within the prescribed time period
+E25	Eq-Comparison:T25
+T26	Condition 513 523	conditions
+E26	Condition:T26
+T27	Assertion 529 536	require
+E27	Assertion:T27
+A3	Assertion-Type-Value E27 hypothetical
+T28	Assertion 562 571	suspected
+E28	Assertion:T28
+A4	Assertion-Type-Value E28 possible
+T29	Or 605 607	or
+E29	Or:T29
+T30	Condition 613 623	conditions
+E30	Condition:T30
+T31	Assertion 629 634	would
+E31	Assertion:T31
+A5	Assertion-Type-Value E31 hypothetical
+T32	Condition 638 648	aggravated
+E32	Condition:T32
+T33	Or 649 651	or
+E33	Or:T33
+T34	Condition 652 660	worsened
+E34	Condition:T34
+T35	Procedure 664 671	treated
+E35	Procedure:T35
+T36	Procedure 679 692	interventions
+E36	Procedure:T36
+T37	Study 701 706	study
+E37	Study:T37
+T38	Condition-Name 55 68	low back pain
+T39	Eq-Operator 72 80	at least
+A6	Eq-Operator-Value T39 GTEQ
+T40	Eq-Value 81 82	1
+T41	Eq-Temporal-Unit 83 88	month
+A7	Eq-Temporal-Unit-Value T41 month
+T42	Eq-Temporal-Period 140 149	currently
+A8	Eq-Temporal-Period-Value T42 present
+T43	Condition-Name 274 284	nerve root
+T44	Severity 308 315	serious
+A9	Severity-Value T44 severe
+T45	Condition-Name 316 325	pathology
+T46	Stability 327 335	unstable
+A10	Stability-Value T46 change
+T47	Condition-Name 336 342	trauma
+T48	Condition-Name 368 377	pregnancy

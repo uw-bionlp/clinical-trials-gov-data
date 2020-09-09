@@ -1,78 +1,201 @@
-T1	Condition 268 297	obsessive-compulsive disorder
-T2	Condition-Name 268 297	obsessive-compulsive disorder
-E1	Condition:T1 Name:T2
-T3	Condition 738 763	ventricular extrasystoles
-T4	Condition-Name 738 763	ventricular extrasystoles
-E3	Condition:T3 Name:T4
-T5	Condition 421 444	obstructive sleep apnea
-T6	Condition-Name 421 444	obstructive sleep apnea
-E5	Condition:T5 Name:T6
-T7	Condition 307 326	somatoform disorder
-T8	Condition-Name 307 326	somatoform disorder
-E7	Condition:T7 Name:T8
-T9	Condition 229 245	bipolar disorder
-T10	Condition-Name 229 245	bipolar disorder
-E9	Condition:T9 Name:T10
-T11	Condition 473 488	sleep disorders
-T12	Condition-Name 473 488	sleep disorders
-E11	Condition:T11 Name:T12
-T13	Condition 214 227	schizophrenia
-T14	Condition-Name 214 227	schizophrenia
-E13	Condition:T13 Name:T14
-T15	Condition 790 803	alcohol abuse
-T16	Condition-Name 790 803	alcohol abuse
-E15	Condition:T15 Name:T16
-T17	Condition 511 523	hypersomnias
-T18	Condition-Name 511 523	hypersomnias
-E17	Condition:T17 Name:T18
-T19	Condition 558 569	parasomnias
-T20	Condition-Name 558 569	parasomnias
-E19	Condition:T19 Name:T20
-T21	Condition 247 257	depression
-T22	Condition-Name 247 257	depression
-E21	Condition:T21 Name:T22
-T23	Condition 500 510	narcolepsy
-T24	Condition-Name 500 510	narcolepsy
-E23	Condition:T23 Name:T24
-T25	Condition 585 595	dyskinesia
-T26	Condition-Name 585 595	dyskinesia
-E25	Condition:T25 Name:T26
-T27	Condition 259 266	anxiety
-T28	Condition-Name 259 266	anxiety
-E27	Condition:T27 Name:T28
-T29	Condition 299 305	phobia
-T30	Condition-Name 299 305	phobia
-E29	Condition:T29 Name:T30
-T31	Condition 446 449	OSA
-T32	Condition-Name 446 449	OSA
-E31	Condition:T31 Name:T32
-T33	Eq-Operator 858 864	within
-A1	Eq-Operator-Value T33 LTEQ
-T34	Eq-Operator 950 956	within
-A2	Eq-Operator-Value T34 LTEQ
-T35	Eq-Operator 1037 1043	within
-A3	Eq-Operator-Value T35 LTEQ
-T36	Eq-Temporal-Unit 72 77	years
-A4	Eq-Temporal-Unit-Value T36 year
-T37	Age 62 65	Age
-E32	Age:T37
-T38	Eq-Operator 68 69	-
-A5	Eq-Operator-Value T38 BETWEEN
-T39	Eq-Operator 943 944	-
-A6	Eq-Operator-Value T39 BETWEEN
-T40	Eq-Value 66 68	18
-T41	Eq-Value 69 71	80
-T42	Eq-Value 865 866	1
-T43	Eq-Value 944 945	6
-T44	Eq-Value 957 958	1
-T45	Eq-Value 1044 1045	1
-T46	Eq-Comparison 858 866	within 1
-E33	Eq-Comparison:T46 Operator:T33 Value:T42
-T47	Eq-Comparison 950 958	within 1
-E34	Eq-Comparison:T47 Operator:T34 Value:T44
-T48	Eq-Comparison 1037 1045	within 1
-E35	Eq-Comparison:T48 Operator:T35 Value:T45
-T49	Eq-Comparison 66 69	18-
-E36	Eq-Comparison:T49 Operator:T38 Value:T40
-T50	Eq-Comparison 943 945	-6
-E37	Eq-Comparison:T50 Operator:T39 Value:T43
+T1	Age 62 65	Age
+E1	Age:T1
+T2	Eq-Comparison 66 77	18-80 years
+E2	Eq-Comparison:T2 Value:T62 Operator:T63 Value:T64 Temporal-Unit:T65
+T3	Study 112 116	test
+E3	Study:T3
+T4	Eq-Comparison 182 189	History
+E4	Eq-Comparison:T4 Temporal-Period:T66
+T5	Condition 193 202	psychosis
+E5	Condition:T5 Name:T67
+T6	Condition 214 227	schizophrenia
+E6	Condition:T6 Name:T68
+T7	Condition 229 245	bipolar disorder
+E7	Condition:T7 Name:T69
+T8	Condition 247 257	depression
+E8	Condition:T8 Name:T70
+T9	Condition 259 266	anxiety
+E9	Condition:T9 Name:T71
+T10	Condition 268 297	obsessive-compulsive disorder
+E10	Condition:T10 Name:T72
+T11	Condition 299 305	phobia
+E11	Condition:T11 Name:T73
+T12	Condition 307 326	somatoform disorder
+E12	Condition:T12 Name:T74
+T13	Condition 328 352	stress-related disorders
+E13	Condition:T13 Name:T75
+T14	Eq-Comparison 358 365	History
+E14	Eq-Comparison:T14 Temporal-Period:T76
+T15	Condition 369 377	insomnia
+E15	Condition:T15 Name:T77
+T16	Eq-Comparison 379 388	currently
+E16	Eq-Comparison:T16 Temporal-Period:T78
+T17	Drug 394 404	medication
+E17	Drug:T17
+T18	Eq-Comparison 410 417	History
+E18	Eq-Comparison:T18 Temporal-Period:T79
+T19	Condition 421 444	obstructive sleep apnea
+E19	Condition:T19 Name:T80
+T20	Condition 446 449	OSA
+E20	Condition:T20 Name:T81
+T21	Eq-Comparison 456 463	History
+E21	Eq-Comparison:T21 Temporal-Period:T82
+T22	Other 467 472	other
+E22	Other:T22
+T23	Condition 473 488	sleep disorders
+E23	Condition:T23 Name:T83
+T24	Condition 500 510	narcolepsy
+E24	Condition:T24 Name:T84
+T25	Or 510 511	/
+E25	Or:T25
+T26	Condition 511 523	hypersomnias
+E26	Condition:T26 Name:T85
+T27	Condition 525 556	circadian rhythm sleep disorder
+E27	Condition:T27 Name:T86
+T28	Condition 558 569	parasomnias
+E28	Condition:T28 Name:T87
+T29	Modifier 571 584	sleep-related
+E29	Modifier:T29
+T30	Condition 585 595	dyskinesia
+E30	Condition:T30 Name:T88
+T31	Eq-Comparison 601 608	History
+E31	Eq-Comparison:T31 Temporal-Period:T89
+T32	Condition 612 625	heart failure
+E32	Condition:T32 Name:T90
+T33	Condition 635 661	New York heart association
+E33	Condition:T33 Name:T91
+T34	Condition 663 667	NYHA
+E34	Condition:T34 Name:T92
+T35	Eq-Comparison 669 678	Class Ⅲ-Ⅳ
+E35	Eq-Comparison:T35 Unit:T93 Value:T94
+T36	Eq-Comparison 684 691	History
+E36	Eq-Comparison:T36 Temporal-Period:T95
+T37	Condition 695 714	atrial fibrillation
+E37	Condition:T37 Name:T96
+T38	And 715 718	and
+E38	And:T38
+T39	Modifier 728 734	atrial
+E39	Modifier:T39
+T40	Or 735 737	or
+E40	Or:T40
+T41	Condition 738 763	ventricular extrasystoles
+E41	Condition:T41 Name:T98
+T42	Eq-Comparison 769 776	Ongoing
+E42	Eq-Comparison:T42 Temporal-Period:T99
+T43	Modifier 777 786	substance
+E43	Modifier:T43
+T44	Or 787 789	or
+E44	Or:T44
+T45	Modifier 790 797	alcohol
+E45	Modifier:T45
+T46	Condition 798 803	abuse
+E46	Condition:T46
+T47	Eq-Comparison 809 818	Currently
+E47	Eq-Comparison:T47 Temporal-Period:T101
+T48	Eq-Comparison 819 828	receiving
+E48	Eq-Comparison:T48 Temporal-Period:T102
+T49	Drug 829 857	sedative hypnotic medication
+E49	Drug:T49 Name:T103
+T50	Eq-Comparison 858 871	within 1 week
+E50	Eq-Comparison:T50 Operator:T104 Value:T105 Temporal-Unit:T106
+T51	Condition 877 885	Pregnant
+E51	Condition:T51 Name:T107
+T52	Eq-Comparison 897 904	Ongoing
+E52	Eq-Comparison:T52
+T53	Observation 905 936	involvement in night-shift work
+E53	Observation:T53
+T54	Eq-Comparison 938 948	22:00-6:00
+E54	Eq-Comparison:T54 Value:T109 Operator:T110 Value:T111
+T55	Eq-Comparison 950 963	within 1 week
+E55	Eq-Comparison:T55 Operator:T112 Value:T113 Temporal-Unit:T114
+T56	Assertion 977 984	need of
+E56	Assertion:T56
+A1	Assertion-Type-Value E56 hypothetical
+T57	Observation 985 1001	care of families
+E57	Observation:T57
+T58	Eq-Comparison 1015 1019	wake
+E58	Eq-Comparison:T58
+T59	Temporal-Connection 1020 1026	during
+E59	Temporal-Connection:T59
+A2	Temporal-Connection-Type-Value E59 during
+T60	Modifier 1031 1036	night
+E60	Modifier:T60
+T61	Eq-Comparison 1037 1050	within 1 week
+E61	Eq-Comparison:T61 Operator:T116 Value:T117 Temporal-Unit:T118
+T62	Eq-Value 66 68	18
+T63	Eq-Operator 68 69	-
+A3	Eq-Operator-Value T63 BETWEEN
+T64	Eq-Value 69 71	80
+T65	Eq-Temporal-Unit 72 77	years
+A4	Eq-Temporal-Unit-Value T65 year
+T66	Eq-Temporal-Period 182 189	History
+A5	Eq-Temporal-Period-Value T66 past
+T67	Condition-Name 193 202	psychosis
+T68	Condition-Name 214 227	schizophrenia
+T69	Condition-Name 229 245	bipolar disorder
+T70	Condition-Name 247 257	depression
+T71	Condition-Name 259 266	anxiety
+T72	Condition-Name 268 297	obsessive-compulsive disorder
+T73	Condition-Name 299 305	phobia
+T74	Condition-Name 307 326	somatoform disorder
+T75	Condition-Name 328 352	stress-related disorders
+T76	Eq-Temporal-Period 358 365	History
+A6	Eq-Temporal-Period-Value T76 past
+T77	Condition-Name 369 377	insomnia
+T78	Eq-Temporal-Period 379 388	currently
+A7	Eq-Temporal-Period-Value T78 present
+T79	Eq-Temporal-Period 410 417	History
+A8	Eq-Temporal-Period-Value T79 past
+T80	Condition-Name 421 444	obstructive sleep apnea
+T81	Condition-Name 446 449	OSA
+T82	Eq-Temporal-Period 456 463	History
+A9	Eq-Temporal-Period-Value T82 past
+T83	Condition-Name 473 488	sleep disorders
+T84	Condition-Name 500 510	narcolepsy
+T85	Condition-Name 511 523	hypersomnias
+T86	Condition-Name 525 556	circadian rhythm sleep disorder
+T87	Condition-Name 558 569	parasomnias
+T88	Condition-Name 585 595	dyskinesia
+T89	Eq-Temporal-Period 601 608	History
+A10	Eq-Temporal-Period-Value T89 past
+T90	Condition-Name 612 625	heart failure
+T91	Condition-Name 635 661	New York heart association
+T92	Condition-Name 663 667	NYHA
+T93	Eq-Unit 669 674	Class
+T94	Eq-Value 675 678	Ⅲ-Ⅳ
+T95	Eq-Temporal-Period 684 691	History
+A11	Eq-Temporal-Period-Value T95 past
+T96	Condition-Name 695 714	atrial fibrillation
+T97	Condition-Name 719 734	frequent atrial
+T98	Condition-Name 738 763	ventricular extrasystoles
+T99	Eq-Temporal-Period 769 776	Ongoing
+A12	Eq-Temporal-Period-Value T99 present
+T100	Condition-Name 790 803	alcohol abuse
+T101	Eq-Temporal-Period 809 818	Currently
+A13	Eq-Temporal-Period-Value T101 present
+T102	Eq-Temporal-Period 819 828	receiving
+A14	Eq-Temporal-Period-Value T102 present
+T103	Drug-Name 829 857	sedative hypnotic medication
+T104	Eq-Operator 858 864	within
+A15	Eq-Operator-Value T104 LTEQ
+T105	Eq-Value 865 866	1
+T106	Eq-Temporal-Unit 867 871	week
+A16	Eq-Temporal-Unit-Value T106 week
+T107	Condition-Name 877 885	Pregnant
+T108	Life-Stage-And-Gender 886 891	women
+A17	Life-Stage-And-Gender-Type T108 female
+T109	Eq-Value 938 943	22:00
+T110	Eq-Operator 943 944	-
+A18	Eq-Operator-Value T110 BETWEEN
+T111	Eq-Value 944 948	6:00
+T112	Eq-Operator 950 956	within
+A19	Eq-Operator-Value T112 LTEQ
+T113	Eq-Value 957 958	1
+T114	Eq-Temporal-Unit 959 963	week
+A20	Eq-Temporal-Unit-Value T114 week
+T115	Observation-Name 1015 1019	wake
+T116	Eq-Operator 1037 1043	within
+A21	Eq-Operator-Value T116 LTEQ
+T117	Eq-Value 1044 1045	1
+T118	Eq-Temporal-Unit 1046 1050	week
+A22	Eq-Temporal-Unit-Value T118 week

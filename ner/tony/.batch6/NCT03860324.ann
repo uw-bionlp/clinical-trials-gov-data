@@ -1,40 +1,89 @@
-T1	Procedure 206 233	revision of hip replacement
-T2	Procedure-Name 206 233	revision of hip replacement
-E1	Procedure:T1 Name:T2
-T3	Condition 282 304	Chronic kidney disease
-T4	Condition-Name 282 304	Chronic kidney disease
-E3	Condition:T3 Name:T4
-T5	Procedure 43 64	total hip replacement
-T6	Procedure-Name 43 64	total hip replacement
-E5	Procedure:T5 Name:T6
-T7	Procedure 437 449	spinal block
-T8	Procedure-Name 437 449	spinal block
-E7	Procedure:T7 Name:T8
-T9	Procedure 25 33	Surgical
-T10	Procedure-Name 25 33	Surgical
-E9	Procedure:T9 Name:T10
-T11	Procedure 188 196	Surgical
-T12	Procedure-Name 188 196	Surgical
-E11	Procedure:T11 Name:T12
-T13	Condition 34 38	plan
-T14	Condition-Name 34 38	plan
-E13	Condition:T13 Name:T14
-T15	Condition 197 201	plan
-T16	Condition-Name 197 201	plan
-E15	Condition:T15 Name:T16
-T17	Observation 168 171	BMI
-T18	Observation-Name 168 171	BMI
-E17	Observation:T17 Name:T18
-A1	Observation-Type-Value T18 vital
-T19	Language 346 349	min
-T20	Eq-Operator 172 173	>
-A2	Eq-Operator-Value T20 GT
-T21	Eq-Operator 339 340	<
-A3	Eq-Operator-Value T21 LT
-T22	Eq-Unit 177 182	kg/m2
-T23	Eq-Value 174 176	40
-T24	Eq-Value 341 343	50
-T25	Eq-Comparison 172 182	> 40 kg/m2
-E18	Eq-Comparison:T25 Operator:T20 Unit:T22 Value:T23
-T26	Eq-Comparison 339 343	< 50
-E19	Eq-Comparison:T26 Operator:T21 Value:T24
+T1	Procedure 25 38	Surgical plan
+E1	Procedure:T1
+T2	Procedure 43 64	total hip replacement
+E2	Procedure:T2 Name:T32
+T3	Observation 168 171	BMI
+E3	Observation:T3 Name:T33
+T4	Eq-Comparison 172 182	> 40 kg/m2
+E4	Eq-Comparison:T4 Operator:T34 Value:T35 Unit:T36 Unit:T37
+T5	Assertion 197 205	plan for
+E5	Assertion:T5
+A1	Assertion-Type-Value E5 hypothetical
+T6	Procedure 218 233	hip replacement
+E6	Procedure:T6 Name:T38
+T7	Negation 247 253	unable
+E7	Negation:T7
+T8	Condition 266 270	pain
+E8	Condition:T8
+T9	Modifier 271 276	level
+E9	Modifier:T9
+T10	Modifier 279 289	- Chronic
+E10	Modifier:T10
+T11	Condition 290 304	kidney disease
+E11	Condition:T11 Name:T40
+T12	And 305 309	with
+E12	And:T12
+T13	Observation 312 338	Glomerular Filtration Rate
+E13	Observation:T13 Name:T41
+T14	Eq-Comparison 339 349	< 50ml/min
+E14	Eq-Comparison:T14 Operator:T42 Value:T43 Temporal-Unit:T44
+T15	Eq-Comparison 355 365	Previously
+E15	Eq-Comparison:T15 Temporal-Period:T45
+T16	Procedure 366 375	medicated
+E16	Procedure:T16
+T17	Drug 381 388	opioids
+E17	Drug:T17 Name:T46
+T18	Negation 402 408	unable
+E18	Negation:T18
+T19	Procedure 424 431	surgery
+E19	Procedure:T19 Name:T47
+T20	Modifier 437 449	spinal block
+E20	Modifier:T20
+T21	Allergy 455 462	Allergy
+E21	Allergy:T21
+T22	Procedure 466 483	local anesthetics
+E22	Procedure:T22 Name:T49
+T23	Condition 489 498	Infection
+E23	Condition:T23 Name:T50
+T24	Modifier 506 510	site
+E24	Modifier:T24
+T25	Modifier 518 538	Erector Spinae Plane
+E25	Modifier:T25
+T26	Or 539 541	or
+E26	Or:T26
+T27	Modifier 542 561	Fascia Iliaca block
+E27	Modifier:T27
+T28	Allergy 567 574	Allergy
+E28	Allergy:T28
+T29	Or 575 577	or
+E29	Or:T29
+T30	Contraindication 578 594	contraindication
+E30	Contraindication:T30
+T31	Drug 609 617	morphine
+E31	Drug:T31 Name:T51
+T32	Procedure-Name 43 64	total hip replacement
+T33	Observation-Name 168 171	BMI
+A2	Observation-Type-Value T33 vital
+T34	Eq-Operator 172 173	>
+A3	Eq-Operator-Value T34 GT
+T35	Eq-Value 174 176	40
+T36	Eq-Unit 177 179	kg
+T37	Eq-Unit 180 182	m2
+T38	Procedure-Name 218 233	hip replacement
+T39	Condition-Name 266 276	pain level
+T40	Condition-Name 290 304	kidney disease
+T41	Observation-Name 312 338	Glomerular Filtration Rate
+A4	Observation-Type-Value T41 lab
+T42	Eq-Operator 339 340	<
+A5	Eq-Operator-Value T42 LT
+T43	Eq-Value 341 345	50ml
+T44	Eq-Temporal-Unit 346 349	min
+A6	Eq-Temporal-Unit-Value T44 minute
+T45	Eq-Temporal-Period 355 365	Previously
+A7	Eq-Temporal-Period-Value T45 past
+T46	Drug-Name 381 388	opioids
+T47	Procedure-Name 424 431	surgery
+T48	Condition-Name 437 449	spinal block
+T49	Procedure-Name 466 483	local anesthetics
+T50	Condition-Name 489 498	Infection
+T51	Drug-Name 609 617	morphine
