@@ -35,12 +35,4 @@ ssh $SERVER "cd $SERVER_DATA_DIR && rm ner/predict/*"                        && 
 
 # Copy new data
 scp $OUTPUT_DIR/brat/deploy/* $SERVER:$SERVER_DATA_DIR/ner/predict           && \
-cd $HERE
-
-#cd src &&
-#python3 main.py                                                     \
-#    --dataset_text_folder=../data/clinical-trials-gov               \
-#    --train_model=False                                             \
-#    --use_pretrained_model=True                                     \
-#    --pretrained_model_folder=../trained_models/clinical-trials-gov \
-#    --output_folder=../output
+cd $HEREbatch

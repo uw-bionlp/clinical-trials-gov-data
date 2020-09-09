@@ -370,6 +370,9 @@ class BratT:
     def get_T(self):
         return self
 
+    def to_brat(self):
+        return f'{self.id}\t{self.type} {self.char_beg_idx} {self.char_end_idx}\t{self.span}'
+
 class BratE:
     def __init__(self, id, line):
         self.id   = id
@@ -380,6 +383,9 @@ class BratE:
         if len(self.args):
             return self.args[0].val.get_T()
         return None
+
+    def to_brat(self):
+        return f'{self.id}\t{" ".join([ arg.type + ":" + arg.val.id for arg in self.args ])}'
 
 class BratEArgPair:
     def __init__(self, tp, val):
@@ -404,6 +410,9 @@ class BratA:
         self.id   = id
         self.line = line
         self.attr_of = attr_of
+
+    def to_brat(self):
+        return f'{self.id}\t{self.type} {self.attr_of.id} {self.val}'
 
 class FauxToken:
     def __init__(self, i, idx, text):
