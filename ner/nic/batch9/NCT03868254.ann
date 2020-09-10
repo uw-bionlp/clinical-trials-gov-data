@@ -1,39 +1,36 @@
-T1	Procedure 25 36	Eye treated
-E1	Procedure:T1
-T2	Procedure 42 45	XEN
-E2	Procedure:T2 Name:T14
-T3	Procedure 49 58	Gel Stent
-E3	Procedure:T3 Name:T15
+T1	Procedure 29 36	treated
+E1	Procedure:T1 
 T4	Modifier 63 81	primary open angle
-E4	Modifier:T4
+E4	Modifier:T4 Modifies:T16
 T5	Condition 82 90	glaucoma
 E5	Condition:T5 Name:T16
-T6	Procedure 96 116	standalone procedure
-E6	Procedure:T6 Name:T17
 T7	Or 117 119	or
-E7	Or:T7
+E7	Or:T7 Arg:E6 Arg2:E9
 T8	Modifier 120 134	in combination
-E8	Modifier:T8
+E8	Modifier:T8 Modifies:T18
 T9	Procedure 140 159	phacoemulsification
 E9	Procedure:T9 Name:T18
-T10	Procedure 162 168	- XEN
-E10	Procedure:T10 Name:T19
 T11	Procedure 172 181	Gel Stent
-E11	Procedure:T11 Name:T20
-T12	Procedure 186 195	implanted
-E12	Procedure:T12 Name:T21
+E11	Procedure:T11 Name:T20 Temporality:E13
 T13	Eq-Comparison 196 237	between 1 January 2014 and 1 October 2015
-E13	Eq-Comparison:T13 Operator:T22 Value:T23 Value:T24 Value:T25
-T14	Procedure-Name 42 45	XEN
+E13	Eq-Comparison:T13 Operator:T22 Value:T24 Value:T25
 T15	Procedure-Name 49 58	Gel Stent
 T16	Condition-Name 82 90	glaucoma
-T17	Procedure-Name 96 116	standalone procedure
 T18	Procedure-Name 140 159	phacoemulsification
-T19	Procedure-Name 165 168	XEN
 T20	Procedure-Name 172 181	Gel Stent
-T21	Procedure-Name 186 195	implanted
 T22	Eq-Operator 196 203	between
 A1	Eq-Operator-Value T22 BETWEEN
-T23	Eq-Value 204 205	1
-T24	Eq-Value 206 218	January 2014
-T25	Eq-Value 223 224	1
+T24	Eq-Value 204 218	1 January 2014
+T25	Eq-Value 223 237	1 October 2015
+T10	Modifier 25 28	Eye
+E10	Modifier:T10 Modifies:E1
+T3	Procedure 49 58	Gel Stent
+E3	Procedure:T3 Name:T15
+T2	Modifier 42 48	XEN 45
+E2	Modifier:T2 Modifies:T15
+R1	Using Arg1:E1 Arg2:E3	
+R2	Treatment-For Arg1:E1 Arg2:E5	
+T6	Coreference 96 116	standalone procedure
+E6	Coreference:T6 Refers-To:E3
+T14	Modifier 165 171	XEN 45
+E14	Modifier:T14 Modifies:T20
