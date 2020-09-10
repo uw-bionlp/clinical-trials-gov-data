@@ -1,134 +1,111 @@
 T1	Condition 38 51	periodontitis
-E1	Condition:T1 Name:T63
+E1	Condition:T1 Name:T63 Stage:E2
 T2	Eq-Comparison 53 69	stages III or IV
 E2	Eq-Comparison:T2 Unit:T64 Value:T65 Value:T66
-T3	Assertion 76 79	may
-E3	Assertion:T3
+T3	Assertion 76 87	may require
+E3	Assertion:T3 Asserted:E5
 A1	Assertion-Type-Value E3 hypothetical
-T4	Assertion 80 87	require
-E4	Assertion:T4
-A2	Assertion-Type-Value E4 hypothetical
 T5	Procedure 88 107	periodontal surgery
 E5	Procedure:T5 Name:T67
 T6	Eq-Comparison 118 129	at least 10
 E6	Eq-Comparison:T6 Operator:T68 Value:T69
-T7	Condition 130 147	teeth in function
-E7	Condition:T7
+T7	Condition 130 135	teeth
+E7	Condition:T7 Name:T4 Minimum-Count:E6
 T8	Exception 149 158	excluding
-E8	Exception:T8
+E8	Exception:T8 From:E7 Except:E9
 T9	Modifier 159 171	third molars
-E9	Modifier:T9
+E9	Modifier:T9 
 T10	Observation 201 214	probing depth
 E10	Observation:T10 Name:T71
 T11	Eq-Comparison 219 225	> 6 mm
 E11	Eq-Comparison:T11 Operator:T72 Value:T73 Unit:T74
 T12	Eq-Comparison 229 241	at least 30%
 E12	Eq-Comparison:T12 Operator:T75 Value:T76 Unit:T77
-T13	Modifier 249 254	teeth
-E13	Modifier:T13
-T14	Eq-Comparison 261 268	Present
-E14	Eq-Comparison:T14
 T15	Procedure 269 281	radiographic
 E15	Procedure:T15 Name:T78
 T16	Eq-Comparison 294 309	moderate-severe
-E16	Eq-Comparison:T16
+E16	Eq-Comparison:T16 
 T17	Condition 310 319	bone loss
-E17	Condition:T17 Name:T81
+E17	Condition:T17 Name:T81 Severity:T80
 T18	Eq-Comparison 323 335	at least 30%
 E18	Eq-Comparison:T18 Operator:T82 Value:T83 Unit:T84
 T19	Temporal-Connection 336 338	of
-E19	Temporal-Connection:T19
+E19	Temporal-Connection:T19 Arg:E17 Arg2:E20
 A3	Temporal-Connection-Type-Value E19 before
-T20	Modifier 343 352	dentition
-E20	Modifier:T20
 T21	Organism 372 385	P. gingivalis
-E21	Organism:T21
-T22	Procedure 389 408	subgingival samples
-E22	Procedure:T22
-T23	Temporal-Connection 409 414	taken
-E23	Temporal-Connection:T23
+E21	Organism:T21 
+T23	Temporal-Connection 409 417	taken at
+E23	Temporal-Connection:T23 Arg:E14 Arg2:E25
 A4	Temporal-Connection-Type-Value E23 during
-T24	Temporal-Connection 415 417	at
-E24	Temporal-Connection:T24
-A5	Temporal-Connection-Type-Value E24 during
 T25	Study 422 431	screening
-E25	Study:T25
-T26	Temporal-Connection 456 460	post
-E26	Temporal-Connection:T26
-A6	Temporal-Connection-Type-Value E26 after
+E25	Study:T25 
 T27	Modifier 473 486	root planning
-E27	Modifier:T27
+E27	Modifier:T27 Modifies:E28
 T28	Encounter 487 492	visit
-E28	Encounter:T28
+E28	Encounter:T28 
 T29	Modifier 524 536	Systemically
-E29	Modifier:T29
+E29	Modifier:T29 Modifies:T85
 T30	Condition 537 544	healthy
 E30	Condition:T30 Name:T85
 T31	Condition 580 588	Pregnant
 E31	Condition:T31 Name:T86
 T32	Or 589 591	or
-E32	Or:T32
+E32	Or:T32 Arg:E31 Arg2:E33
 T33	Condition 592 601	lactating
 E33	Condition:T33 Name:T87
 T34	Modifier 625 633	systemic
-E34	Modifier:T34
+E34	Modifier:T34 Modifies:T89
 T35	Condition 634 643	pathology
 E35	Condition:T35 Name:T89
-T36	Or 644 649	and /
-E36	Or:T36
-T37	Or 650 652	or
-E37	Or:T37
+T36	Or 644 652	and / or
+E36	Or:T36 Arg:E35 Arg2:E39
 T38	Eq-Comparison 653 659	taking
 E38	Eq-Comparison:T38 Temporal-Period:T90
 T39	Drug 660 670	medication
-E39	Drug:T39
+E39	Drug:T39 Temporality:E38
 T40	Assertion 676 679	may
-E40	Assertion:T40
+E40	Assertion:T40 Asserted:T91
 A7	Assertion-Type-Value E40 hypothetical
 T41	Condition 691 712	periodontal situation
-E41	Condition:T41 Name:T92
+E41	Condition:T41 Name:T92 Stability:T91
 T42	Assertion 731 740	requiring
-E42	Assertion:T42
+E42	Assertion:T42 Asserted:E43
 A8	Assertion-Type-Value E42 hypothetical
-T43	Drug 741 751	antibiotic
-E43	Drug:T43
-T44	Procedure 752 763	prophylaxis
-E44	Procedure:T44
+T43	Procedure 741 763	antibiotic prophylaxis
+E43	Procedure:T43 Name:T93
 T45	Eq-Comparison 775 783	received
 E45	Eq-Comparison:T45 Temporal-Period:T94
 T46	Modifier 784 792	systemic
-E46	Modifier:T46
+E46	Modifier:T46 Modifies:T44
 T47	Procedure 793 816	antimicrobial treatment
-E47	Procedure:T47
+E47	Procedure:T47 Name:T44 Temporality:E45 Temporality2:E48
 T48	Eq-Comparison 824 841	previous 6 months
 E48	Eq-Comparison:T48 Temporal-Period:T96 Value:T97 Temporal-Unit:T98
 T49	Eq-Comparison 853 861	received
 E49	Eq-Comparison:T49 Temporal-Period:T99
 T50	Procedure 862 883	periodontal treatment
-E50	Procedure:T50 Name:T100
+E50	Procedure:T50 Name:T100 Temporality:E51
 T51	Eq-Comparison 891 899	6 months
 E51	Eq-Comparison:T51 Value:T101 Temporal-Unit:T102
 T52	Temporal-Connection 900 908	prior to
-E52	Temporal-Connection:T52
+E52	Temporal-Connection:T52 Arg:E51 Arg2:E44
 A9	Temporal-Connection-Type-Value E52 before
 T53	Study 930 935	study
-E53	Study:T53
+E53	Study:T53 Temporality:E44
 T54	Allergy 951 959	allergic
-E54	Allergy:T54
+E54	Allergy:T54 Name:E55 Name2:E57
 T55	Drug 963 976	metronidazole
 E55	Drug:T55 Name:T103
 T56	Or 978 980	or
-E56	Or:T56
-T57	Modifier 1009 1040	commercial formulations thereof
-E57	Modifier:T57
+E56	Or:T56 Arg:E55 Arg2:E57
 T58	Allergy 1066 1074	allergic
-E58	Allergy:T58
+E58	Allergy:T58 Name:E59 Name2:E61
 T59	Drug 1078 1090	azithromycin
 E59	Drug:T59 Name:T104
 T60	Or 1092 1094	or
-E60	Or:T60
-T61	Modifier 1123 1154	commercial formulations thereof
-E61	Modifier:T61
+E60	Or:T60 Arg:E59 Arg2:E61
+T61	Coreference 1123 1154	commercial formulations thereof
+E61	Coreference:T61 Refers-To:E59
 T62	Drug 1156 1165	Zithromax
 E62	Drug:T62 Name:T105
 T63	Condition-Name 38 51	periodontitis
@@ -139,7 +116,6 @@ T67	Procedure-Name 88 107	periodontal surgery
 T68	Eq-Operator 118 126	at least
 A10	Eq-Operator-Value T68 GTEQ
 T69	Eq-Value 127 129	10
-T70	Eq-Unit 130 135	teeth
 T71	Observation-Name 201 214	probing depth
 A11	Observation-Type-Value T71 measurement
 T72	Eq-Operator 219 220	>
@@ -171,10 +147,9 @@ A18	Eq-Temporal-Period-Value T90 present
 T91	Stability 680 686	affect
 A19	Stability-Value T91 change
 T92	Condition-Name 691 712	periodontal situation
-T93	Drug-Name 741 763	antibiotic prophylaxis
+T93	Procedure-Name 741 763	antibiotic prophylaxis
 T94	Eq-Temporal-Period 775 783	received
 A20	Eq-Temporal-Period-Value T94 past
-T95	Drug-Name 793 806	antimicrobial
 T96	Eq-Temporal-Period 824 832	previous
 A21	Eq-Temporal-Period-Value T96 past
 T97	Eq-Value 833 834	6
@@ -189,3 +164,46 @@ A24	Eq-Temporal-Unit-Value T102 month
 T103	Drug-Name 963 976	metronidazole
 T104	Drug-Name 1078 1090	azithromycin
 T105	Drug-Name 1156 1165	Zithromax
+R1	Treatment-For Arg1:E5 Arg2:E1	
+T4	Condition-Name 130 135	teeth
+T70	Observation 216 218	PS
+E4	Observation:T70 Name:T106 Eq-Comparison:E11
+T106	Observation-Name 216 218	PS
+R2	Abbrev-Of Arg1:E4 Arg2:E10	
+T13	Condition 249 254	teeth
+E13	Condition:T13 Name:T107 Minimum-Count:E12
+T107	Condition-Name 249 254	teeth
+T108	Observation 310 319	bone loss
+E63	Observation:T108 Eq-Comparison:E18
+T20	Procedure 343 352	dentition
+E20	Procedure:T20 Name:T109
+T109	Procedure-Name 343 352	dentition
+R3	Found-By Arg1:E17 Arg2:E15	
+T14	Observation 389 408	subgingival samples
+E14	Observation:T14 Specimen:T22
+T22	Observation-Specimen 389 408	subgingival samples
+R4	Caused-By Arg1:E14 Arg2:E21	
+T24	Modifier 456 468	post-scaling
+E22	Modifier:T24 
+T26	Or 469 472	and
+E24	Or:T26 Arg:E22 Arg2:E27
+R5	Abbrev-Of Arg1:E22 Arg2:E28	
+T110	And 438 448	as well as
+E26	And:T110 Arg:E25 Arg2:E28
+R6	If-Then Arg1:T88 Arg2:E33	
+R7	Caused-By Arg1:T91 Arg2:E39	
+T37	Or 713 721	and / or
+E37	Or:T37 Arg:E41 Arg2:E42
+T44	Procedure-Name 793 816	antimicrobial treatment
+R8	Equivalent-To Arg1:E50 Arg2:E49	
+T95	Eq-Comparison 913 922	beginning
+E44	Eq-Comparison:T95 Temporal-Recency:T111
+T111	Eq-Temporal-Recency 913 922	beginning
+A2	Eq-Temporal-Recency-Value T111 first-time
+T57	Coreference 1009 1040	commercial formulations thereof
+E57	Coreference:T57 Refers-To:E55
+T112	Drug 1042 1048	Flagyl
+E64	Drug:T112 Name:T113
+T113	Drug-Name 1042 1048	Flagyl
+R9	Example-Of Arg1:E64 Arg2:E57	
+R10	Example-Of Arg1:E62 Arg2:E61	
