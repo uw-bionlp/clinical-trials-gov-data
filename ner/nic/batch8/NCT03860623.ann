@@ -1,40 +1,37 @@
 T1	Observation 25 28	BMI
-E1	Observation:T1 Name:T43
+E1	Observation:T1 Name:T43 Eq-Comparison:E2
 T2	Eq-Comparison 29 40	30-40 kg/m2
-E2	Eq-Comparison:T2 Value:T44 Operator:T45 Value:T46 Unit:T47 Unit:T48
+E2	Eq-Comparison:T2 Value:T44 Operator:T45 Value:T46 Unit:T47 Per:T48
 T3	Observation 46 49	BMI
-E3	Observation:T3 Name:T49
+E3	Observation:T3 Name:T49 Eq-Comparison:E4
 T4	Eq-Comparison 50 61	18-25 kg/m2
-E4	Eq-Comparison:T4 Value:T50 Operator:T51 Value:T52 Unit:T53 Unit:T54
+E4	Eq-Comparison:T4 Value:T50 Operator:T51 Value:T52 Unit:T53 Per:T54
 T5	Observation 74 77	BMI
-E5	Observation:T5 Name:T55
+E5	Observation:T5 Name:T55 Eq-Comparison:E6
 T6	Eq-Comparison 78 91	up to 28kg/m2
-E6	Eq-Comparison:T6 Operator:T56 Unit:T57
-T7	Assertion 92 99	will be
-E7	Assertion:T7
-A1	Assertion-Type-Value E7 hypothetical
+E6	Eq-Comparison:T6 Operator:T56 Per:T57 Value:T93 Unit:T94
 T8	Observation 112 131	waist circumference
-E8	Observation:T8 Name:T58
+E8	Observation:T8 Name:T58 Eq-Comparison:E9
 T9	Eq-Comparison 135 138	<96
 E9	Eq-Comparison:T9 Operator:T59 Value:T60
 T10	Age 158 162	Aged
-E10	Age:T10
+E10	Age:T10 Eq-Comparison:E11
 T11	Eq-Comparison 163 171	18-60yrs
-E11	Eq-Comparison:T11 Value:T63 Operator:T64 Value:T65
+E11	Eq-Comparison:T11 Value:T63 Operator:T64 Value:T65 Temporal-Unit:T7
 T12	Condition 203 210	illness
-E12	Condition:T12 Name:T67
+E12	Condition:T12 Name:T67 Severity:T66 Temporality:E13
 T13	Eq-Comparison 218 235	preceding 6 weeks
 E13	Eq-Comparison:T13 Temporal-Period:T68 Value:T69 Temporal-Unit:T70
 T14	Eq-Comparison 241 247	Taking
 E14	Eq-Comparison:T14 Temporal-Period:T71
 T15	Drug 256 266	medication
-E15	Drug:T15
+E15	Drug:T15 Temporality:E14
 T16	Eq-Comparison 272 279	History
 E16	Eq-Comparison:T16 Temporal-Period:T72
 T17	Condition 283 303	deep vein thrombosis
-E17	Condition:T17 Name:T73
+E17	Condition:T17 Name:T73 Temporality:E16
 T18	Or 304 306	or
-E18	Or:T18
+E18	Or:T18 Arg:E17 Arg2:E19
 T19	Condition 307 325	clotting disorders
 E19	Condition:T19 Name:T74
 T20	Condition 331 343	Hypertension
@@ -42,25 +39,23 @@ E20	Condition:T20 Name:T75
 T21	Condition 349 357	Diabetes
 E21	Condition:T21 Name:T76
 T22	Temporal-Connection 399 401	at
-E22	Temporal-Connection:T22
+E22	Temporal-Connection:T22 Arg:E7 Arg2:E23
 A2	Temporal-Connection-Type-Value E22 during
 T23	Study 402 411	screening
-E23	Study:T23
+E23	Study:T23 
 T24	Eq-Comparison 417 424	History
 E24	Eq-Comparison:T24 Temporal-Period:T78
 T25	Condition 428 443	substance abuse
-E25	Condition:T25 Name:T79
-T26	Negation 471 481	precluding
-E26	Negation:T26
+E25	Condition:T25 Name:T79 Temporality:E24
 T27	Procedure 487 490	MRI
 E27	Procedure:T27 Name:T80
 T28	Eq-Comparison 496 503	History
 E28	Eq-Comparison:T28 Temporal-Period:T81
 T29	Condition 507 542	gastrointestinal motility disorders
-E29	Condition:T29 Name:T82
+E29	Condition:T29 Name:T82 Temporality:E28
 T30	Condition 549 580	gastroesophageal reflux disease
 E30	Condition:T30 Name:T83
-T31	Condition 581 606	-irritable bowel syndrome
+T31	Condition 582 606	irritable bowel syndrome
 E31	Condition:T31 Name:T84
 T32	Condition 608 621	gastroparesis
 E32	Condition:T32 Name:T85
@@ -69,21 +64,19 @@ E33	Condition:T33 Name:T86
 T34	Eq-Comparison 665 673	Previous
 E34	Eq-Comparison:T34 Temporal-Period:T87
 T35	Modifier 674 682	thoracic
-E35	Modifier:T35
+E35	Modifier:T35 Modifies:T88
 T36	Or 683 685	or
-E36	Or:T36
+E36	Or:T36 Arg:E35 Arg2:E37
 T37	Modifier 686 695	abdominal
-E37	Modifier:T37
+E37	Modifier:T37 Modifies:T88
 T38	Procedure 696 703	surgery
-E38	Procedure:T38 Name:T88
-T39	Condition 737 752	bowel movements
-E39	Condition:T39
-T40	Eq-Comparison 752 757	/week
-E40	Eq-Comparison:T40 Temporal-Unit:T90
+E38	Procedure:T38 Name:T88 Temporality:E34
+T39	Observation 737 752	bowel movements
+E39	Observation:T39 Name:T89 Eq-Comparison:E44 Eq-Comparison2:E42
 T41	Or 758 760	or
-E41	Or:T41
+E41	Or:T41 Arg:E44 Arg2:E42
 T42	Eq-Comparison 761 767	>2/day
-E42	Eq-Comparison:T42 Operator:T91 Value:T92
+E42	Eq-Comparison:T42 Operator:T91 Value:T92 Per:T40
 T43	Observation-Name 25 28	BMI
 A3	Observation-Type-Value T43 vital
 T44	Eq-Value 29 31	30
@@ -102,7 +95,7 @@ T53	Eq-Unit 56 58	kg
 T54	Eq-Unit 59 61	m2
 T55	Observation-Name 74 77	BMI
 A7	Observation-Type-Value T55 vital
-T56	Eq-Operator 84 88	28kg
+T56	Eq-Operator 78 83	up to
 A8	Eq-Operator-Value T56 GTEQ
 T57	Eq-Unit 89 91	m2
 T58	Observation-Name 112 131	waist circumference
@@ -116,7 +109,7 @@ A11	Life-Stage-And-Gender-Type T62 male
 T63	Eq-Value 163 165	18
 T64	Eq-Operator 165 166	-
 A12	Eq-Operator-Value T64 BETWEEN
-T65	Eq-Value 166 171	60yrs
+T65	Eq-Value 166 168	60
 T66	Severity 197 202	Acute
 A13	Severity-Value T66 severe
 T67	Condition-Name 203 210	illness
@@ -143,15 +136,38 @@ T81	Eq-Temporal-Period 496 503	History
 A20	Eq-Temporal-Period-Value T81 past
 T82	Condition-Name 507 542	gastrointestinal motility disorders
 T83	Condition-Name 549 580	gastroesophageal reflux disease
-T84	Condition-Name 592 606	bowel syndrome
+T84	Condition-Name 582 606	irritable bowel syndrome
 T85	Condition-Name 608 621	gastroparesis
 T86	Condition-Name 623 652	sphincter of Oddi dysfunction
 T87	Eq-Temporal-Period 665 673	Previous
 A21	Eq-Temporal-Period-Value T87 past
 T88	Procedure-Name 696 703	surgery
-T89	Condition-Name 734 752	≤3 bowel movements
+T89	Observation-Name 737 752	bowel movements
 T90	Eq-Temporal-Unit 753 757	week
 A22	Eq-Temporal-Unit-Value T90 week
 T91	Eq-Operator 761 762	>
 A23	Eq-Operator-Value T91 GT
-T92	Eq-Value 762 767	2/day
+T92	Eq-Value 762 763	2
+T93	Eq-Value 84 86	28
+T94	Eq-Unit 86 88	kg
+R1	If-Then Arg1:E8 Arg2:E5	
+T7	Eq-Temporal-Unit 168 171	yrs
+A1	Eq-Temporal-Unit-Value T7 year
+T95	Condition 390 398	findings
+E7	Condition:T95 Severity:T77
+T96	Contraindication 471 481	precluding
+E43	Contraindication:T96 Contraindicates:E27
+T26	Condition 463 470	factors
+E26	Condition:T26 
+R2	Caused-By Arg1:E43 Arg2:E26	
+R3	Example-Of Arg1:E30 Arg2:E29	
+R4	Example-Of Arg1:E31 Arg2:E29	
+R5	Example-Of Arg1:E32 Arg2:E29	
+R6	Example-Of Arg1:E33 Arg2:E29	
+T97	Eq-Comparison 734 736	≤3
+E44	Eq-Comparison:T97 Operator:T98 Value:T99 Per:T90
+T98	Eq-Operator 734 735	≤
+A24	Eq-Operator-Value T98 LTEQ
+T99	Eq-Value 735 736	3
+T40	Eq-Temporal-Unit 764 767	day
+A25	Eq-Temporal-Unit-Value T40 day

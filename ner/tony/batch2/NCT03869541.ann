@@ -1,60 +1,60 @@
 T1	Encounter 56 64	admitted
-E1	Encounter:T1
+E1	Encounter:T1 
 T2	Eq-Comparison 84 93	receiving
 E2	Eq-Comparison:T2 Temporal-Period:T30
 T3	Drug 94 110	vasoactive drugs
 E3	Drug:T3 Name:T31
 T4	Age 117 120	Age
-E4	Age:T4
+E4	Age:T4 
 T5	Eq-Comparison 121 154	greater than or equal to 18 years
 E5	Eq-Comparison:T5 Operator:T32 Value:T33 Temporal-Unit:T34
 T6	Assertion 165 176	Expected to
-E6	Assertion:T6
+E6	Assertion:T6 
 A1	Assertion-Type-Value E6 hypothetical
 T7	Encounter 184 192	admitted
-E7	Encounter:T7
+E7	Encounter:T7 
 T8	Encounter 200 203	ICU
-E8	Encounter:T8
+E8	Encounter:T8 
 T9	Eq-Comparison 208 225	at least 24 hours
 E9	Eq-Comparison:T9 Operator:T36 Value:T37 Temporal-Unit:T38
 T10	Temporal-Connection 226 230	post
-E10	Temporal-Connection:T10
+E10	Temporal-Connection:T10 
 A2	Temporal-Connection-Type-Value E10 after
 T11	Assertion 286 297	expected to
-E11	Assertion:T11
+E11	Assertion:T11 
 A3	Assertion-Type-Value E11 hypothetical
 T12	Procedure 298 312	die imminently
-E12	Procedure:T12
+E12	Procedure:T12 
 T13	Contraindication 378 393	contraindicated
-E13	Contraindication:T13
+E13	Contraindication:T13 
 T14	Condition 426 434	injuries
 E14	Condition:T14 Name:T39
 T15	Observation 506 515	prisoners
 E15	Observation:T15 Name:T40
 T16	Encounter 532 541	probation
-E16	Encounter:T16
+E16	Encounter:T16 
 T17	Condition 562 583	neuromuscular disease
 E17	Condition:T17 Name:T42
 T18	Or 584 586	or
-E18	Or:T18
+E18	Or:T18 
 T19	Modifier 593 598	brain
-E19	Modifier:T19
+E19	Modifier:T19 
 T20	Condition 599 605	injury
-E20	Condition:T20
+E20	Condition:T20 
 T21	Or 606 608	or
-E21	Or:T21
+E21	Or:T21 
 T22	Modifier 609 620	spinal cord
-E22	Modifier:T22
+E22	Modifier:T22 
 T23	Condition 621 627	injury
 E23	Condition:T23 Name:T45
 T24	Negation 675 681	unable
-E24	Negation:T24
+E24	Negation:T24 
 T25	Encounter 901 909	admitted
-E25	Encounter:T25
+E25	Encounter:T25 
 T26	Procedure 1139 1162	physical rehabilitation
-E26	Procedure:T26
+E26	Procedure:T26 
 T27	Study 1207 1212	study
-E27	Study:T27
+E27	Study:T27 
 T28	Encounter-Type 56 64	admitted
 A4	Encounter-Type-Value T28 inpatient
 T29	Location 72 75	ICU

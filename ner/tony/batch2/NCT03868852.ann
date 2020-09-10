@@ -1,9 +1,9 @@
 T1	Eq-Comparison 42 60	≥ 3 and ≤ 18 years
 E1	Eq-Comparison:T1 Operator:T50 Value:T51 Operator:T52 Value:T53 Temporal-Unit:T54
 T2	Age 64 67	age
-E2	Age:T2
+E2	Age:T2 
 T3	Observation 78 96	predicted survival
-E3	Observation:T3
+E3	Observation:T3 
 T4	Eq-Comparison 107 125	more than 3 months
 E4	Eq-Comparison:T4 Operator:T55 Value:T56 Temporal-Unit:T57
 T5	Eq-Comparison 174 186	at least one
@@ -11,54 +11,54 @@ E5	Eq-Comparison:T5 Operator:T58 Value:T59
 T6	Condition 198 204	lesion
 E6	Condition:T6 Name:T60
 T7	Temporal-Connection 211 224	Postoperative
-E7	Temporal-Connection:T7
+E7	Temporal-Connection:T7 
 A1	Temporal-Connection-Type-Value E7 before
 T8	Condition 225 243	pathological stage
-E8	Condition:T8
+E8	Condition:T8 
 T9	Eq-Comparison 248 259	group II-IV
 E9	Eq-Comparison:T9 Value:T63 Operator:T64 Value:T65
 T10	Negation 280 283	not
-E10	Negation:T10
+E10	Negation:T10 
 T11	Eq-Comparison 284 292	received
 E11	Eq-Comparison:T11 Temporal-Period:T66
 T12	Procedure 293 305	radiotherapy
 E12	Procedure:T12 Name:T67
 T13	Temporal-Connection 306 312	before
-E13	Temporal-Connection:T13
+E13	Temporal-Connection:T13 
 A2	Temporal-Connection-Type-Value E13 before
 T14	And 314 317	and
-E14	And:T14
+E14	And:T14 
 T15	Assertion 318 328	can accept
-E15	Assertion:T15
+E15	Assertion:T15 
 A3	Assertion-Type-Value E15 hypothetical
 T16	Procedure 329 341	chemotherapy
 E16	Procedure:T16 Name:T68
 T17	Or 342 345	and
-E17	Or:T17
+E17	Or:T17 
 T18	Procedure 346 364	surgical treatment
 E18	Procedure:T18 Name:T69
 T19	Negation 371 373	No
-E19	Negation:T19
+E19	Negation:T19 
 T20	Other 374 379	other
-E20	Other:T20
+E20	Other:T20 
 T21	Procedure 380 398	anticancer therapy
 E21	Procedure:T21 Name:T70
 T22	Assertion 399 408	should be
-E22	Assertion:T22
+E22	Assertion:T22 
 A4	Assertion-Type-Value E22 hypothetical
 T23	Temporal-Connection 414 420	during
-E23	Temporal-Connection:T23
+E23	Temporal-Connection:T23 
 A5	Temporal-Connection-Type-Value E23 during
 T24	Procedure 421 433	radiotherapy
 E24	Procedure:T24 Name:T71
 T25	Condition 444 455	main organs
-E25	Condition:T25
+E25	Condition:T25 
 T26	Procedure 528 553	Blood routine examination
 E26	Procedure:T26 Name:T72
 T27	Negation 580 582	no
-E27	Negation:T27
+E27	Negation:T27 
 T28	Condition 583 600	blood transfusion
-E28	Condition:T28
+E28	Condition:T28 
 T29	Eq-Comparison 601 607	within
 E29	Eq-Comparison:T29 Operator:T74
 T30	Eq-Comparison 618 625	14 days
@@ -66,29 +66,29 @@ E30	Eq-Comparison:T30 Value:T75 Temporal-Unit:T76
 T31	Eq-Comparison 627 637	A.HB>90g/L
 E31	Eq-Comparison:T31 Unit:T77 Unit:T78
 T32	Eq-Comparison 648 654	*109/L
-E32	Eq-Comparison:T32
+E32	Eq-Comparison:T32 
 T33	Eq-Comparison 664 670	*109/L
-E33	Eq-Comparison:T33
+E33	Eq-Comparison:T33 
 T34	Criteria-Count 715 733	following criteria
-E34	Criteria-Count:T34
+E34	Criteria-Count:T34 
 T35	Observation 738 741	BIL
-E35	Observation:T35
+E35	Observation:T35 
 T36	Eq-Comparison 742 754	< 1.25 times
 E36	Eq-Comparison:T36 Operator:T80 Value:T81
 T37	Observation 762 773	upper limit
-E37	Observation:T37
+E37	Observation:T37 
 T38	Observation 775 778	ULN
 E38	Observation:T38 Name:T83
 T39	Observation 784 787	ALT
 E39	Observation:T39 Name:T84
 T40	And 788 791	and
-E40	And:T40
+E40	And:T40 
 T41	Observation 792 795	AST
 E41	Observation:T41 Name:T85
 T42	Eq-Comparison 796 805	< 2.5 ULN
 E42	Eq-Comparison:T42 Operator:T86 Value:T87 Unit:T88
 T43	Observation 810 818	Serum Cr
-E43	Observation:T43
+E43	Observation:T43 
 T44	Eq-Comparison 819 826	< 1 ULN
 E44	Eq-Comparison:T44 Operator:T90 Value:T91 Unit:T92
 T45	Observation 828 859	endogenous creatinine clearance
@@ -96,11 +96,11 @@ E45	Observation:T45 Name:T93
 T46	Eq-Comparison 860 871	> 50 ml/min
 E46	Eq-Comparison:T46 Operator:T94 Value:T95 Unit:T96 Temporal-Unit:T97
 T47	Encounter 1027 1036	follow-up
-E47	Encounter:T47
+E47	Encounter:T47 
 T48	Procedure 1064 1073	treatment
-E48	Procedure:T48
+E48	Procedure:T48 
 T49	Assertion 1074 1077	can
-E49	Assertion:T49
+E49	Assertion:T49 
 A6	Assertion-Type-Value E49 hypothetical
 T50	Eq-Operator 42 43	≥
 A7	Eq-Operator-Value T50 GTEQ

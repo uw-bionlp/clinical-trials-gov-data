@@ -1,43 +1,27 @@
 T1	Condition 25 39	Adenocarcinoma
 E1	Condition:T1 Name:T62
 T2	Modifier 47 55	prostate
-E2	Modifier:T2
+E2	Modifier:T2 Modifies:T62
 T3	Eq-Comparison 80 83	< 2
 E3	Eq-Comparison:T3 Operator:T63 Value:T64
-T4	Modifier 98 104	stages
-E4	Modifier:T4
 T5	Negation 106 109	not
-E5	Negation:T5
-T6	Procedure 110 128	radiographic stage
-E6	Procedure:T6
-T7	Observation 130 139	T1c - T2a
-E7	Observation:T7
-T8	Observation 141 143	Nx
-E8	Observation:T8
+E5	Negation:T5 Negates:E4
 T9	Or 144 146	or
-E9	Or:T9
-T10	Modifier 147 149	N0
-E10	Modifier:T10
-T11	Modifier 151 153	Mx
-E11	Modifier:T11
+E9	Or:T9 Arg:E7 Arg2:E8
 T12	Or 154 156	or
-E12	Or:T12
-T13	Modifier 157 159	M0
-E13	Modifier:T13
-T14	Modifier 162 172	- Gleason
-E14	Modifier:T14
+E12	Or:T12 Arg:E8 Arg2:E10
 T15	Eq-Comparison 173 176	6-7
-E15	Eq-Comparison:T15 Value:T72
+E15	Eq-Comparison:T15 Value:T72 Value2:T71 Operator:T104
 T16	Condition 177 183	cancer
 E16	Condition:T16 Name:T73
 T17	Observation 189 204	Prostate volume
-E17	Observation:T17 Name:T74
+E17	Observation:T17 Name:T74 Eq-Comparison:E18
 T18	Eq-Comparison 205 212	< 60 cc
 E18	Eq-Comparison:T18 Operator:T75 Value:T76 Unit:T77
 T19	Procedure 217 220	MRI
 E19	Procedure:T19 Name:T78
 T20	And 221 224	and
-E20	And:T20
+E20	And:T20 Arg:E19 Arg2:E21
 T21	Procedure 225 229	TRUS
 E21	Procedure:T21 Name:T79
 T22	Procedure 260 263	MRI
@@ -45,53 +29,47 @@ E22	Procedure:T22 Name:T80
 T23	Observation 293 329	International Prostate symptom score
 E23	Observation:T23 Name:T81
 T24	Observation 331 335	IPSS
-E24	Observation:T24 Name:T82
+E24	Observation:T24 Name:T82 Eq-Comparison:E25
 T25	Eq-Comparison 337 347	20 or less
 E25	Eq-Comparison:T25 Value:T83 Operator:T84
 T26	Assertion 353 363	Ability to
-E26	Assertion:T26
+E26	Assertion:T26 Asserted:E28
 A1	Assertion-Type-Value E26 hypothetical
-T27	Procedure 372 375	DCF
-E27	Procedure:T27
-T28	Procedure 376 388	Pyl PSMA PET
-E28	Procedure:T28
+T28	Procedure 372 388	DCF-Pyl PSMA PET
+E28	Procedure:T28 Name:T85
 T29	Eq-Comparison 508 521	Prior history
 E29	Eq-Comparison:T29 Temporal-Period:T86
 T30	Modifier 525 531	pelvic
-E30	Modifier:T30
+E30	Modifier:T30 Modifies:T87
 T31	Procedure 532 549	radiation therapy
-E31	Procedure:T31 Name:T87
+E31	Procedure:T31 Name:T87 Temporality:E29
 T32	Modifier 561 568	medical
-E32	Modifier:T32
+E32	Modifier:T32 Modifies:T89
 T33	Or 569 571	or
-E33	Or:T33
+E33	Or:T33 Arg:E32 Arg2:E34
 T34	Modifier 572 583	psychiatric
-E34	Modifier:T34
+E34	Modifier:T34 Modifies:T89
 T35	Condition 584 591	illness
-E35	Condition:T35
+E35	Condition:T35 Name:T89 Severity:T88
 T36	Assertion 630 635	would
-E36	Assertion:T36
+E36	Assertion:T36 Asserted:E37
 A2	Assertion-Type-Value E36 hypothetical
 T37	Negation 636 643	prevent
-E37	Negation:T37
+E37	Negation:T37 Negates:E38
 T38	Procedure 658 667	treatment
-E38	Procedure:T38
+E38	Procedure:T38 
 T39	And 668 671	and
-E39	And:T39
+E39	And:T39 Arg:E38 Arg2:E40
 T40	Assertion 672 677	would
-E40	Assertion:T40
+E40	Assertion:T40 Asserted:T107
 A3	Assertion-Type-Value E40 hypothetical
-T41	Procedure 709 725	Implanted device
+T41	Procedure 709 718	Implanted
 E41	Procedure:T41 Name:T90
 T42	Or 726 728	or
-E42	Or:T42
-T43	Procedure 729 738	apparatus
-E43	Procedure:T43 Name:T91
+E42	Or:T42 Arg:E43 Arg2:E62
 T44	Assertion 745 753	obstruct
-E44	Assertion:T44
+E44	Assertion:T44 Asserted:E60
 A4	Assertion-Type-Value E44 hypothetical
-T46	Procedure 772 781	implanted
-E45	Procedure:T46 Name:T92
 T47	Procedure 793 804	fluoroscopy
 E46	Procedure:T47 Name:T93
 T48	Procedure 810 827	Metallic implants
@@ -99,41 +77,32 @@ E47	Procedure:T48 Name:T94
 T49	Condition 829 843	claustrophobia
 E48	Condition:T49 Name:T95
 T50	Negation 844 847	not
-E49	Negation:T50
+E49	Negation:T50 Negates:E51
 T51	Assertion 848 856	amenable
-E50	Assertion:T51
+E50	Assertion:T51 Asserted:E49
 A5	Assertion-Type-Value E50 hypothetical
 T52	Drug 860 870	medication
-E51	Drug:T52
+E51	Drug:T52 
 T53	Or 872 874	or
-E52	Or:T53
+E52	Or:T53 Arg:E51 Arg2:E53
 T54	Contraindication 881 898	contraindications
-E53	Contraindication:T54
-T55	Eq-Comparison 902 912	undergoing
-E54	Eq-Comparison:T55 Temporal-Period:T96
+E53	Contraindication:T54 Contraindicates:E55
 T56	Procedure 913 924	MR scanning
 E55	Procedure:T56 Name:T97
 T57	Eq-Comparison 930 937	History
 E56	Eq-Comparison:T57 Temporal-Period:T98
 T58	Other 941 946	other
-E57	Other:T58
+E57	Other:T58 Is-Other:E58
 T59	Condition 947 957	malignancy
-E58	Condition:T59 Name:T99
+E58	Condition:T59 Name:T99 Temporality:E56 Temporality2:E59
 T60	Eq-Comparison 968 991	within the past 3 years
 E59	Eq-Comparison:T60 Operator:T100 Temporal-Period:T101 Value:T102 Temporal-Unit:T103
 T61	Negation 745 753	obstruct
-E60	Negation:T61
+E60	Negation:T61 Negates:E46
 T62	Condition-Name 25 39	Adenocarcinoma
 T63	Eq-Operator 80 81	<
 A6	Eq-Operator-Value T63 LT
 T64	Eq-Value 82 83	2
-T65	Eq-Unit 98 104	stages
-T66	Condition-Name 110 128	radiographic stage
-T67	Condition-Name 130 139	T1c - T2a
-T68	Condition-Name 147 149	N0
-T69	Condition-Name 151 153	Mx
-T70	Observation-Name 157 159	M0
-T71	Observation-Name 162 172	- Gleason
 T72	Eq-Value 173 174	6
 T73	Condition-Name 177 183	cancer
 T74	Observation-Name 189 204	Prostate volume
@@ -150,22 +119,18 @@ A9	Observation-Type-Value T81 clinical-score
 T82	Observation-Name 331 335	IPSS
 T83	Eq-Value 337 339	20
 T84	Eq-Operator 340 347	or less
-A10	Eq-Operator-Value T84 GTEQ
+A10	Eq-Operator-Value T84 LTEQ
 T85	Procedure-Name 372 388	DCF-Pyl PSMA PET
 T86	Eq-Temporal-Period 508 521	Prior history
 A11	Eq-Temporal-Period-Value T86 past
 T87	Procedure-Name 532 549	radiation therapy
 T88	Severity 555 560	Major
 A12	Severity-Value T88 severe
-T89	Condition-Name 572 591	psychiatric illness
-T90	Procedure-Name 709 725	Implanted device
-T91	Procedure-Name 729 738	apparatus
-T92	Procedure-Name 772 781	implanted
+T89	Condition-Name 584 591	illness
+T90	Procedure-Name 709 718	Implanted
 T93	Procedure-Name 793 804	fluoroscopy
 T94	Procedure-Name 810 827	Metallic implants
 T95	Condition-Name 829 843	claustrophobia
-T96	Eq-Temporal-Period 902 912	undergoing
-A13	Eq-Temporal-Period-Value T96 present
 T97	Procedure-Name 913 924	MR scanning
 T98	Eq-Temporal-Period 930 937	History
 A14	Eq-Temporal-Period-Value T98 past
@@ -177,3 +142,55 @@ A16	Eq-Temporal-Period-Value T101 past
 T102	Eq-Value 984 985	3
 T103	Eq-Temporal-Unit 986 991	years
 A17	Eq-Temporal-Unit-Value T103 year
+T14	Observation 61 79	Performance Status
+E14	Observation:T14 Name:T45 Eq-Comparison:E3
+T45	Observation-Name 61 79	Performance Status
+A18	Observation-Type-Value T45 clinical-score
+T4	Modifier 110 128	radiographic stage
+E4	Modifier:T4 
+T6	Coreference 89 104	Clinical stages
+E6	Coreference:T6 Refers-To:E1 Stage:E7 Stage2:E8 Stage3:E10
+T7	Eq-Comparison 130 143	T1c - T2a, Nx
+E7	Eq-Comparison:T7 Value:T8 Value2:T65 Operator:T66
+T8	Eq-Value 130 133	T1c
+T65	Eq-Value 136 139	T2a
+T66	Eq-Operator 134 135	-
+A19	Eq-Operator-Value T66 BETWEEN
+T10	Eq-Comparison 147 153	N0, Mx
+E8	Eq-Comparison:T10 Value:T11 Value2:T67
+T11	Eq-Value 147 149	N0
+T67	Eq-Value 151 153	Mx
+T13	Eq-Comparison 157 159	M0
+E10	Eq-Comparison:T13 Value:T68
+T68	Eq-Value 157 159	M0
+T69	Observation 165 172	Gleason
+E11	Observation:T69 Name:T70 Eq-Comparison:E15
+T70	Observation-Name 165 172	Gleason
+A20	Observation-Type-Value T70 clinical-score
+T71	Eq-Value 175 176	7
+T104	Eq-Operator 174 175	-
+A21	Eq-Operator-Value T104 BETWEEN
+R1	Equivalent-To Arg1:E11 Arg2:E16	
+R2	If-Then Arg1:E21 Arg2:E22	
+R3	Found-By Arg1:E17 Arg2:E19	
+R4	Found-By Arg1:E17 Arg2:E21	
+R5	Abbrev-Of Arg1:E24 Arg2:E23	
+T27	Procedure 403 412	treatment
+E13	Procedure:T27 
+T105	Temporal-Connection 400 403	pre
+E27	Temporal-Connection:T105 Arg:E13 Arg2:E28
+A22	Temporal-Connection-Type-Value E27 before
+R6	Caused-By Arg1:E37 Arg2:E35	
+T106	Encounter 693 702	follow up
+E61	Encounter:T106 Stability:T107
+T107	Stability 678 687	interfere
+A23	Stability-Value T107 change
+R7	Caused-By Arg1:T107 Arg2:E35	
+T43	Modifier 719 725	device
+E43	Modifier:T43 Modifies:T90
+T91	Modifier 729 738	apparatus
+E62	Modifier:T91 Modifies:T90
+T46	Modifier 772 789	implanted sources
+E45	Modifier:T46 Modifies:T93
+R8	Caused-By Arg1:E60 Arg2:E41	
+R9	Treatment-For Arg1:E51 Arg2:E48	

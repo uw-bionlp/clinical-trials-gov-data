@@ -1,142 +1,108 @@
 T1	Encounter 25 36	Outpatients
-E1	Encounter:T1
-T2	Modifier 57 67	Cardiology
-E2	Modifier:T2
-T3	Modifier 69 82	Endocrinology
-E3	Modifier:T3
-T4	Modifier 84 94	Nephrology
-E4	Modifier:T4
-T5	Modifier 96 105	Neurology
-E5	Modifier:T5
-T6	Modifier 107 117	Geriatrics
-E6	Modifier:T6
+E1	Encounter:T1 Provider:E2 Provider2:E3 Provider3:E4 Provider4:E5 Provider5:E6 Provider6:E8
 T7	Or 118 120	or
-E7	Or:T7
-T8	Modifier 121 128	General
-E8	Modifier:T8
-T9	Procedure 129 146	Internal Medicine
-E9	Procedure:T9
+E7	Or:T7 Arg:E6 Arg2:E8
 T10	Condition 166 178	hypertension
 E10	Condition:T10 Name:T56
 T11	Observation 214 216	BP
-E11	Observation:T11 Name:T57
+E11	Observation:T11 Name:T57 Minimum-Count:E15 Eq-Comparison:E9
 T12	Temporal-Connection 226 236	at the day
-E12	Temporal-Connection:T12
+E12	Temporal-Connection:T12 Arg:E11 Arg2:E13
 A1	Temporal-Connection-Type-Value E12 during
 T13	Encounter 240 245	visit
-E13	Encounter:T13
-T14	And 246 249	and
-E14	And:T14
+E13	Encounter:T13 
 T15	Eq-Comparison 250 267	at least one time
 E15	Eq-Comparison:T15 Operator:T59 Value:T60 Temporal-Unit:T61
 T16	Temporal-Connection 268 274	before
-E16	Temporal-Connection:T16
+E16	Temporal-Connection:T16 Arg:E15
 A2	Temporal-Connection-Type-Value E16 before
-T17	Modifier 299 313	cut-off values
-E17	Modifier:T17
 T18	Eq-Comparison 316 329	≥140 mmHg SBP
-E18	Eq-Comparison:T18 Value:T63 Unit:T64 Unit:T65
+E18	Eq-Comparison:T18 Value:T63 Unit:T64 Operator:T62
 T19	Or 330 336	and/or
-E19	Or:T19
+E19	Or:T19 Arg:E14 Arg2:E17
 T20	Eq-Comparison 337 349	≥90 mmHg DBP
-E20	Eq-Comparison:T20 Value:T66 Unit:T67 Unit:T68
-T21	Eq-Comparison 379 381	BP
-E21	Eq-Comparison:T21
+E20	Eq-Comparison:T20 Value:T66 Unit:T67 Operator:T102
 T22	Temporal-Connection 382 392	at the day
-E22	Temporal-Connection:T22
+E22	Temporal-Connection:T22 Arg:E21 Arg2:E23
 A3	Temporal-Connection-Type-Value E22 during
 T23	Encounter 396 401	visit
-E23	Encounter:T23
+E23	Encounter:T23 
 T24	Temporal-Connection 439 442	pre
-E24	Temporal-Connection:T24
+E24	Temporal-Connection:T24 Arg:E25 Arg2:E26
 A4	Temporal-Connection-Type-Value E24 before
 T25	Procedure 443 452	treatment
-E25	Procedure:T25
+E25	Procedure:T25 
 T26	Drug 458 480	antihypertensive drugs
-E26	Drug:T26 Name:T73
+E26	Drug:T26 Name:T73 Temporality:E55 Duration:E27
 T27	Eq-Comparison 481 490	≥ 2 weeks
 E27	Eq-Comparison:T27 Operator:T74 Value:T75 Temporal-Unit:T76
 T28	Age 556 560	aged
-E28	Age:T28
+E28	Age:T28 Eq-Comparison:E29
 T29	Eq-Comparison 560 570	< 18 years
 E29	Eq-Comparison:T29 Operator:T77 Value:T78 Temporal-Unit:T79
 T30	Negation 590 597	without
-E30	Negation:T30
-T31	Condition 622 638	hypertension（for
+E30	Negation:T30 Negates:E31
+T31	Condition 622 634	hypertension
 E31	Condition:T31 Name:T80
 T32	Eq-Comparison 673 679	taking
 E32	Eq-Comparison:T32 Temporal-Period:T81
 T33	Drug 680 702	antihypertensive drugs
-E33	Drug:T33 Name:T82
+E33	Drug:T33 Name:T82 Temporality:E32
 T34	Assertion 722 734	difficult to
-E34	Assertion:T34
+E34	Assertion:T34 Asserted:E35
 A5	Assertion-Type-Value E34 hypothetical
 T35	Condition 760 772	hypertension
 E35	Condition:T35 Name:T83
-T36	Condition 818 840	secondary hypertension
+T36	Condition 828 840	hypertension
 E36	Condition:T36 Name:T84
 T37	Condition 870 882	dyslipidemia
 E37	Condition:T37 Name:T85
-T38	And 883 887	with
-E38	And:T38
-T39	Condition 888 899	clear cause
-E39	Condition:T39 Name:T86
 T40	Condition 909 927	nephrotic syndrome
 E40	Condition:T40 Name:T87
 T41	Condition 936 950	hypothyroidism
-E41	Condition:T41 Name:T89
-T42	Condition 952 980	terminal stage of malignancy
-E42	Condition:T42 Name:T90
-T43	Modifier 1015 1024	end-stage
-E43	Modifier:T43
+E41	Condition:T41 Name:T89 Severity:T88
+T42	Condition 970 980	malignancy
+E42	Condition:T42 Name:T90 Stage:E39
 T44	Condition 1025 1038	renal disease
-E44	Condition:T44
+E44	Condition:T44 Name:T91 Stage:E43
 T45	Procedure 1040 1052	hemodialysis
 E45	Procedure:T45 Name:T92
 T46	Or 1054 1057	and
-E46	Or:T46
+E46	Or:T46 Arg:E45 Arg2:E47
 T47	Procedure 1058 1077	peritoneal dialysis
 E47	Procedure:T47 Name:T93
 T48	Condition 1117 1137	mental abnormalities
 E48	Condition:T48 Name:T94
 T49	And 1138 1141	who
-E49	And:T49
+E49	And:T49 Arg:E48 Arg2:E50
 T50	Negation 1146 1152	unable
-E50	Negation:T50
+E50	Negation:T50 Negates:E51
 T51	Observation 1169 1182	questionnaire
-E51	Observation:T51
+E51	Observation:T51 Name:T107
 T52	Study 1229 1237	research
-E52	Study:T52
+E52	Study:T52 Temporality:E58
 T53	Temporal-Connection 1238 1244	during
-E53	Temporal-Connection:T53
+E53	Temporal-Connection:T53 Arg:E52 Arg2:E54
 A6	Temporal-Connection-Type-Value E53 during
 T54	Study 1250 1255	study
-E54	Study:T54
+E54	Study:T54 
 T55	Encounter-Type 25 36	Outpatients
-A7	Encounter-Type-Value T55 inpatient
+A7	Encounter-Type-Value T55 outpatient
 T56	Condition-Name 166 178	hypertension
 T57	Observation-Name 214 216	BP
 A8	Observation-Type-Value T57 vital
-T58	Eq-Temporal-Unit 233 236	day
-A9	Eq-Temporal-Unit-Value T58 day
 T59	Eq-Operator 250 258	at least
 A10	Eq-Operator-Value T59 GTEQ
 T60	Eq-Value 259 262	one
 T61	Eq-Temporal-Unit 263 267	time
 A11	Eq-Temporal-Unit-Value T61 minute
-T62	Eq-Temporal-Unit 280 283	day
-A12	Eq-Temporal-Unit-Value T62 day
-T63	Eq-Value 316 320	≥140
+T63	Eq-Value 317 320	140
 T64	Eq-Unit 321 325	mmHg
-T65	Eq-Unit 326 329	SBP
-T66	Eq-Value 337 340	≥90
+T66	Eq-Value 338 340	90
 T67	Eq-Unit 341 345	mmHg
-T68	Eq-Unit 346 349	DBP
-T69	Condition-Name 352 357	2)for
 T70	Polarity 372 378	normal
 A13	Polarity-Value T70 normal
-T71	Observation-Name 379 381	BP
-T72	Eq-Temporal-Period 433 442	given pre
+T72	Eq-Temporal-Period 433 438	given
 A14	Eq-Temporal-Period-Value T72 past
 T73	Drug-Name 458 480	antihypertensive drugs
 T74	Eq-Operator 481 482	≥
@@ -149,20 +115,90 @@ A17	Eq-Operator-Value T77 LT
 T78	Eq-Value 562 564	18
 T79	Eq-Temporal-Unit 565 570	years
 A18	Eq-Temporal-Unit-Value T79 year
-T80	Condition-Name 622 638	hypertension（for
+T80	Condition-Name 622 634	hypertension
 T81	Eq-Temporal-Period 673 679	taking
 A19	Eq-Temporal-Period-Value T81 present
 T82	Drug-Name 680 702	antihypertensive drugs
 T83	Condition-Name 760 772	hypertension
-T84	Condition-Name 818 840	secondary hypertension
+T84	Condition-Name 828 840	hypertension
 T85	Condition-Name 870 882	dyslipidemia
-T86	Condition-Name 888 899	clear cause
 T87	Condition-Name 909 927	nephrotic syndrome
 T88	Severity 929 935	severe
 A20	Severity-Value T88 severe
 T89	Condition-Name 936 950	hypothyroidism
 T90	Condition-Name 970 980	malignancy
-T91	Condition-Name 1019 1038	stage renal disease
+T91	Condition-Name 1025 1038	renal disease
 T92	Procedure-Name 1040 1052	hemodialysis
 T93	Procedure-Name 1058 1077	peritoneal dialysis
 T94	Condition-Name 1117 1137	mental abnormalities
+T2	Provider 57 67	Cardiology
+E2	Provider:T2 Type:T3
+T3	Provider-Type 57 67	Cardiology
+T4	Provider 69 82	Endocrinology
+E3	Provider:T4 Type:T5
+T5	Provider-Type 69 82	Endocrinology
+T6	Provider 84 94	Nephrology
+E4	Provider:T6 Type:T8
+T8	Provider-Type 84 94	Nephrology
+T9	Provider 96 105	Neurology
+E5	Provider:T9 Type:T95
+T95	Provider-Type 96 105	Neurology
+T96	Provider 107 117	Geriatrics
+E6	Provider:T96 Type:T97
+T97	Provider-Type 107 117	Geriatrics
+T98	Provider 121 146	General Internal Medicine
+E8	Provider:T98 Type:T99
+T99	Provider-Type 121 146	General Internal Medicine
+T14	Eq-Comparison 289 313	above the cut-off values
+E9	Eq-Comparison:T14 Operator:T17 Unit:T58
+T17	Eq-Operator 289 294	above
+A9	Eq-Operator-Value T17 GT
+T58	Eq-Unit 299 313	cut-off values
+A12	Eq-Unit-Value T58 ref-range-normal
+T62	Eq-Operator 316 317	≥
+A21	Eq-Operator-Value T62 GTEQ
+T65	Observation 326 329	SBP
+E14	Observation:T65 Name:T100 Eq-Comparison:E18
+T100	Observation-Name 326 329	SBP
+A22	Observation-Type-Value T100 vital
+R1	Equivalent-To Arg1:E14 Arg2:E11	
+T68	Observation 346 349	DBP
+E17	Observation:T68 Name:T101 Eq-Comparison:E20
+T101	Observation-Name 346 349	DBP
+A23	Observation-Type-Value T101 vital
+T102	Eq-Operator 337 338	≥
+A24	Eq-Operator-Value T102 GTEQ
+R2	Equivalent-To Arg1:E17 Arg2:E11	
+T21	Observation 379 381	BP
+E21	Observation:T21 Name:T69 Polarity:T70
+T69	Observation-Name 379 381	BP
+A25	Observation-Type-Value T69 vital
+T71	Eq-Comparison 433 438	given
+E55	Eq-Comparison:T71 Temporal-Period:T72
+R3	If-Then Arg1:E33 Arg2:E34	
+R4	Example-Of Arg1:E33 Arg2:E31	
+T103	Modifier 818 827	secondary
+E56	Modifier:T103 Modifies:T84
+T38	Condition 894 899	cause
+E38	Condition:T38 
+R5	Caused-By Arg1:E37 Arg2:E38	
+R6	Example-Of Arg1:E40 Arg2:E38	
+R7	Example-Of Arg1:E41 Arg2:E38	
+T39	Eq-Comparison 952 966	terminal stage
+E39	Eq-Comparison:T39 Value:T86 Unit:T104
+T86	Eq-Value 952 960	terminal
+T104	Eq-Unit 961 966	stage
+R8	Example-Of Arg1:E42 Arg2:E38	
+T43	Eq-Comparison 1015 1024	end-stage
+E43	Eq-Comparison:T43 Value:T106 Unit:T105
+T105	Eq-Unit 1019 1024	stage
+T106	Eq-Value 1015 1018	end
+T107	Observation-Name 1169 1182	questionnaire
+A26	Observation-Type-Value T107 survey-or-questionnaire
+T108	Assertion 1146 1152	unable
+E57	Assertion:T108 Asserted:E50
+A27	Assertion-Type-Value E57 hypothetical
+T109	Eq-Comparison 1208 1220	participated
+E58	Eq-Comparison:T109 Temporal-Period:T110
+T110	Eq-Temporal-Period 1208 1220	participated
+A28	Eq-Temporal-Period-Value T110 past
