@@ -1,13 +1,13 @@
 T1	Observation 25 40	Body mass index
-E1	Observation:T1 Name:T41
+E1	Observation:T1 Name:T41 Eq-Comparison:E2
 T2	Eq-Comparison 41 57	18.5-29.9 kg∙m-2
-E2	Eq-Comparison:T2 Value:T42 Operator:T43 Value:T44 Unit:T45
+E2	Eq-Comparison:T2 Value:T42 Operator:T43 Value:T44 Unit:T45 Per:T69
 T3	Age 63 66	Age
-E3	Age:T3 
+E3	Age:T3 Eq-Comparison:E4
 T4	Eq-Comparison 67 78	18-65 years
 E4	Eq-Comparison:T4 Value:T46 Operator:T47 Value:T48 Temporal-Unit:T49
 T5	Study 152 157	study
-E5	Study:T5 
+E5	Study:T5 Study-Of:E6
 T6	Procedure 158 168	procedures
 E6	Procedure:T6 
 T7	Assertion 182 193	to maintain
@@ -22,73 +22,67 @@ E10	Procedure:T10
 T11	Negation 260 262	No
 E11	Negation:T11 
 T12	Assertion 263 274	anticipated
-E12	Assertion:T12 
+E12	Assertion:T12 Asserted:T52
 A2	Assertion-Type-Value E12 hypothetical
-T13	Procedure 286 290	diet
-E13	Procedure:T13 
+T13	Observation 286 290	diet
+E13	Observation:T13 Name:T70 Stability:T52
 T14	Or 290 291	/
-E14	Or:T14 
+E14	Or:T14 Arg:E13 Arg2:E15
 T15	Observation 291 308	physical activity
 E15	Observation:T15 Name:T53
 T16	Temporal-Connection 309 315	during
-E16	Temporal-Connection:T16 
+E16	Temporal-Connection:T16 Arg:E15 Arg2:E17
 A3	Temporal-Connection-Type-Value E16 during
 T17	Study 320 325	study
 E17	Study:T17 
 T18	Condition 467 476	condition
 E18	Condition:T18 
 T19	Or 477 479	or
-E19	Or:T19 
+E19	Or:T19 Arg:E18 Arg2:E43
 T20	Risk 527 531	risk
 E20	Risk:T20 
 T21	Condition 588 605	metabolic disease
 E21	Condition:T21 Name:T54
 T22	Modifier 612 618	type 1
-E22	Modifier:T22 
+E22	Modifier:T22 Modifies:T57
 T23	Or 619 621	or
-E23	Or:T23 
-T24	Condition 622 637	type 2 diabetes
+E23	Or:T23 Arg:E22 Arg2:E45
+T24	Condition 629 637	diabetes
 E24	Condition:T24 Name:T57
 T25	Drug 664 674	substances
 E25	Drug:T25 
 T26	Assertion 681 684	may
-E26	Assertion:T26 
+E26	Assertion:T26 Asserted:T27 Asserted2:T28
 A4	Assertion-Type-Value E26 hypothetical
-T27	Negation 685 689	pose
-E27	Negation:T27 
-T28	Negation 690 695	undue
-E28	Negation:T28 
 T29	Risk 705 709	risk
-E29	Risk:T29 
+E29	Risk:T29 Stability:T27
 T30	Study 757 767	experiment
-E30	Study:T30 
+E30	Study:T30 Stability:T28
 T31	Condition 774 781	smoking
-E31	Condition:T31 
+E31	Condition:T31 Name:T77
 T32	Or 781 782	/
-E32	Or:T32 
+E32	Or:T32 Arg:E31 Arg2:E33
 T33	Condition 782 797	substance abuse
 E33	Condition:T33 Name:T58
 T34	Negation 814 817	not
-E34	Negation:T34 
-T35	Condition 818 846	conforming to standard sleep
-E35	Condition:T35 
-T36	Condition 847 857	wake cycle
-E36	Condition:T36 
+E34	Negation:T34 Negates:E36
+T36	Condition 841 857	sleep-wake cycle
+E36	Condition:T36 Name:T59 Polarity:T35
 T37	Eq-Comparison 896 902	recent
 E37	Eq-Comparison:T37 Temporal-Period:T61
 T38	Eq-Comparison 904 913	<6 months
 E38	Eq-Comparison:T38 Operator:T62 Value:T63 Temporal-Unit:T64
 T39	Observation 925 934	body mass
-E39	Observation:T39 Name:T65
+E39	Observation:T39 Name:T65 Stability:T79 Temporality:E38 Eq-Comparison:E40
 T40	Eq-Comparison 936 940	± 3%
-E40	Eq-Comparison:T40 Value:T67 Unit:T68
+E40	Eq-Comparison:T40 Value:T67 Unit:T68 Operator:T66
 T41	Observation-Name 25 40	Body mass index
 A5	Observation-Type-Value T41 vital
 T42	Eq-Value 41 45	18.5
 T43	Eq-Operator 45 46	-
 A6	Eq-Operator-Value T43 BETWEEN
 T44	Eq-Value 46 50	29.9
-T45	Eq-Unit 51 57	kg∙m-2
+T45	Eq-Unit 51 53	kg
 T46	Eq-Value 67 69	18
 T47	Eq-Operator 69 70	-
 A7	Eq-Operator-Value T47 BETWEEN
@@ -103,11 +97,9 @@ A10	Stability-Value T52 change
 T53	Observation-Name 291 308	physical activity
 A11	Observation-Type-Value T53 social-habit
 T54	Condition-Name 588 605	metabolic disease
-T55	Eq-Unit 612 616	type
-T56	Eq-Value 617 618	1
-T57	Condition-Name 622 637	type 2 diabetes
+T57	Condition-Name 629 637	diabetes
 T58	Condition-Name 782 797	substance abuse
-T59	Observation-Name 847 857	wake cycle
+T59	Condition-Name 841 857	sleep-wake cycle
 T60	Observation-Name 864 876	shift worker
 T61	Eq-Temporal-Period 896 902	recent
 A12	Eq-Temporal-Period-Value T61 recent
@@ -118,6 +110,48 @@ T64	Eq-Temporal-Unit 907 913	months
 A14	Eq-Temporal-Unit-Value T64 month
 T65	Observation-Name 925 934	body mass
 A15	Observation-Type-Value T65 vital
-T66	Observation-Name 936 937	±
+T66	Eq-Operator 936 937	±
 T67	Eq-Value 938 939	3
 T68	Eq-Unit 939 940	%
+T69	Eq-Unit 54 57	m-2
+T70	Observation-Name 286 290	diet
+R1	Abbrev-Of Arg1:E11 Arg2:E13	
+T71	Assertion 349 354	plans
+E41	Assertion:T71 Asserted:E42
+A16	Assertion-Type-Value E41 intention
+A17	Observation-Type-Value T70 social-habit
+T72	Observation 344 348	diet
+E42	Observation:T72 Name:T73
+T73	Observation-Name 344 348	diet
+A18	Observation-Type-Value T73 social-habit
+R2	Example-Of Arg1:E42 Arg2:E13	
+T74	Condition 480 489	behaviour
+E43	Condition:T74 
+T75	Stability 554 563	introduce
+A19	Stability-Value T75 change
+T76	Or 551 553	or
+E44	Or:T76 Arg:E20 Arg2:T75
+R3	Caused-By Arg1:E20 Arg2:E43	
+R4	Caused-By Arg1:T75 Arg2:E43	
+T55	Modifier 622 628	type 2
+E45	Modifier:T55 Modifies:T57
+R5	Example-Of Arg1:E24 Arg2:E21	
+T27	Stability 685 689	pose
+A20	Stability-Value T27 change
+R6	Caused-By Arg1:T27 Arg2:E25	
+T28	Stability 733 742	introduce
+A21	Stability-Value T28 change
+T56	Or 730 732	or
+E27	Or:T56 Arg:E29 Arg2:T28
+T77	Condition-Name 774 781	smoking
+R7	Example-Of Arg1:E31 Arg2:E25	
+R8	Example-Of Arg1:E33 Arg2:E25	
+T35	Polarity 832 840	standard
+A22	Polarity-Value T35 normal
+T78	Observation 864 876	shift worker
+E28	Observation:T78 Name:T60
+R9	Example-Of Arg1:E28 Arg2:E36	
+R10	Equivalent-To Arg1:E38 Arg2:E37	
+T79	Stability 915 921	change
+A23	Stability-Value T79 change
+A24	Eq-Operator-Value T66 PLUS-MINUS
