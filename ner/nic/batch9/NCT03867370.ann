@@ -1,93 +1,83 @@
 T1	Procedure 38 55	histopathological
-E1	Procedure:T1 
+E1	Procedure:T1 Name:T83
 T2	Or 56 58	or
-E2	Or:T2 
+E2	Or:T2 Arg:E1 Arg2:E3
 T3	Procedure 59 82	cytological examination
 E3	Procedure:T3 Name:T46
 T4	Eq-Comparison 136 148	at least one
 E4	Eq-Comparison:T4 Operator:T47 Value:T48
-T5	Condition 149 165	evaluable lesion
-E5	Condition:T5 Name:T49
+T5	Condition 159 165	lesion
+E5	Condition:T5 Name:T49 Minimum-Count:E4
 T6	Eq-Comparison 215 223	received
 E6	Eq-Comparison:T6 Temporal-Period:T50
-T7	Procedure 224 239	local treatment
-E7	Procedure:T7 
+T7	Procedure 230 239	treatment
+E7	Procedure:T7 Temporality:E6
 T8	Eq-Comparison 278 297	previously received
-E8	Eq-Comparison:T8 Temporal-Period:T51 Temporal-Period:T52
-T9	Modifier 298 313	anti-programmed
-E9	Modifier:T9 
-T10	Procedure 314 330	death receptor-1
-E10	Procedure:T10 
+E8	Eq-Comparison:T8 Temporal-Period:T51
+T10	Drug 298 330	anti-programmed death receptor-1
+E10	Drug:T10 Name:T53 Temporality:E8
 T11	Drug 332 336	PD-1
 E11	Drug:T11 Name:T54
 T12	Modifier 338 346	antibody
-E12	Modifier:T12 
-T13	Modifier 348 363	anti-programmed
-E13	Modifier:T13 
-T14	Drug 370 378	ligand-1
+E12	Modifier:T12 Modifies:T53
+T14	Drug 348 378	anti-programmed death ligand-1
 E14	Drug:T14 Name:T55
-T15	Observation 380 385	PD-L1
-E15	Observation:T15 Name:T56 Name:T57
+T15	Drug 380 385	PD-L1
+E15	Drug:T15 Name:T56
 T16	Modifier 387 395	antibody
-E16	Modifier:T16 
-T17	Condition 397 427	anti-programmed death ligand-2
-E17	Condition:T17 
-T18	Observation 429 434	PD-L2
-E18	Observation:T18 Name:T60 Name:T61
+E16	Modifier:T16 Modifies:T55
+T18	Drug 429 434	PD-L2
+E18	Drug:T18 Name:T60
 T19	Modifier 436 444	antibody
 E19	Modifier:T19 
 T20	Or 445 447	or
-E20	Or:T20 
-T21	Modifier 448 475	anti-cytotoxic T lymphocyte
-E21	Modifier:T21 
+E20	Or:T20 Arg:E18 Arg2:E21
+T21	Drug 448 496	anti-cytotoxic T lymphocyte-associated antigen-4
+E21	Drug:T21 Name:T62
 T22	Drug 498 504	CTLA-4
 E22	Drug:T22 Name:T63
-T23	Drug 506 516	antibodies
-E23	Drug:T23 Name:T64
 T24	Study 576 581	study
 E24	Study:T24 
 T25	Eq-Comparison 601 620	previously received
 E25	Eq-Comparison:T25 Temporal-Period:T65
 T26	Procedure 625 629	TACE
-E26	Procedure:T26 Name:T66
+E26	Procedure:T26 Name:T66 Temporality:E25
 T27	Procedure 631 654	radiofrequency ablation
 E27	Procedure:T27 Name:T67
-T28	And 655 658	and
-E28	And:T28 
+T28	Or 655 658	and
+E28	Or:T28 Arg:E27 Arg2:E30
 T29	Other 659 664	other
-E29	Other:T29 
-T30	Procedure 665 688	liver cancer treatments
+E29	Other:T29 Is-Other:E30
+T30	Procedure 678 688	treatments
 E30	Procedure:T30 
 T31	Eq-Comparison 711 718	history
 E31	Eq-Comparison:T31 Temporal-Period:T69
 T32	Condition 722 746	gastroesophageal varices
-E32	Condition:T32 Name:T70
+E32	Condition:T32 Name:T70 Temporality:E31
 T33	Or 747 749	or
-E33	Or:T33 
+E33	Or:T33 Arg:E32 Arg2:E35
 T34	Eq-Comparison 750 756	active
 E34	Eq-Comparison:T34 Temporal-Period:T71
 T35	Condition 757 770	cardia ulcers
-E35	Condition:T35 Name:T72
+E35	Condition:T35 Name:T72 Temporality:E34
 T36	Risk 794 798	risk
-E36	Risk:T36 
+E36	Risk:T36 Polarity:T73 Risk-For:E37
 T37	Condition 802 810	bleeding
 E37	Condition:T37 Name:T74
-T38	Condition 835 868	upper gastrointestinal hemorrhage
-E38	Condition:T38 Name:T75
+T38	Condition 858 868	hemorrhage
+E38	Condition:T38 Name:T75 Temporality:E39
 T39	Eq-Comparison 869 882	within 1 year
 E39	Eq-Comparison:T39 Operator:T76 Value:T77 Temporal-Unit:T78
-T40	Condition 912 929	fibrous layer HCC
+T40	Condition 926 929	HCC
 E40	Condition:T40 Name:T79
-T41	Condition 931 946	sarcomatoid HCC
+T41	Condition 943 946	HCC
 E41	Condition:T41 Name:T80
 T42	Or 947 949	or
-E42	Or:T42 
+E42	Or:T42 Arg:E41 Arg2:E43
 T43	Condition 956 974	cholangiocarcinoma
 E43	Condition:T43 Name:T81
 T44	Condition 979 982	HCC
 E44	Condition:T44 Name:T82
-T45	Other 984 989	Other
-E45	Other:T45 
 T46	Procedure-Name 59 82	cytological examination
 T47	Eq-Operator 136 144	at least
 A1	Eq-Operator-Value T47 GTEQ
@@ -95,26 +85,16 @@ T48	Eq-Value 145 148	one
 T49	Condition-Name 159 165	lesion
 T50	Eq-Temporal-Period 215 223	received
 A2	Eq-Temporal-Period-Value T50 past
-T51	Eq-Temporal-Period 278 288	previously
+T51	Eq-Temporal-Period 278 297	previously received
 A3	Eq-Temporal-Period-Value T51 past
-T52	Eq-Temporal-Period 289 297	received
-A4	Eq-Temporal-Period-Value T52 past
-T53	Drug-Name 320 330	receptor-1
+T53	Drug-Name 298 330	anti-programmed death receptor-1
 T54	Drug-Name 332 336	PD-1
-T55	Drug-Name 370 378	ligand-1
-T56	Observation-Name 380 382	PD
-A5	Observation-Type-Value T56 lab
-T57	Observation-Name 383 385	L1
-A6	Observation-Type-Value T57 lab
-T58	Drug-Name 397 412	anti-programmed
-T59	Drug-Name 419 427	ligand-2
-T60	Observation-Name 429 431	PD
-A7	Observation-Type-Value T60 lab
-T61	Observation-Name 432 434	L2
-A8	Observation-Type-Value T61 lab
-T62	Drug-Name 448 475	anti-cytotoxic T lymphocyte
+T55	Drug-Name 348 378	anti-programmed death ligand-1
+T56	Drug-Name 380 385	PD-L1
+T58	Drug-Name 397 427	anti-programmed death ligand-2
+T60	Drug-Name 429 434	PD-L2
+T62	Drug-Name 448 496	anti-cytotoxic T lymphocyte-associated antigen-4
 T63	Drug-Name 498 504	CTLA-4
-T64	Drug-Name 506 516	antibodies
 T65	Eq-Temporal-Period 601 620	previously received
 A9	Eq-Temporal-Period-Value T65 past
 T66	Procedure-Name 625 629	TACE
@@ -135,7 +115,41 @@ A13	Eq-Operator-Value T76 LTEQ
 T77	Eq-Value 876 877	1
 T78	Eq-Temporal-Unit 878 882	year
 A14	Eq-Temporal-Unit-Value T78 year
-T79	Condition-Name 912 929	fibrous layer HCC
-T80	Condition-Name 931 946	sarcomatoid HCC
+T79	Condition-Name 926 929	HCC
+T80	Condition-Name 943 946	HCC
 T81	Condition-Name 956 974	cholangiocarcinoma
 T82	Condition-Name 979 982	HCC
+T83	Procedure-Name 38 55	histopathological
+T84	Negation 211 214	not
+E46	Negation:T84 Negates:E7
+T85	Modifier 224 229	local
+E47	Modifier:T85 Modifies:E7
+T86	Modifier 149 158	evaluable
+E48	Modifier:T86 Modifies:T49
+T87	And 203 206	and
+E49	And:T87 Arg:E5 Arg2:E46
+R1	Abbrev-Of Arg1:E11 Arg2:E10	
+R2	Abbrev-Of Arg1:E15 Arg2:E14	
+T9	Drug 397 427	anti-programmed death ligand-2
+E9	Drug:T9 Name:T58
+R3	Abbrev-Of Arg1:E18 Arg2:E9	
+R4	Abbrev-Of Arg1:E19 Arg2:E9	
+R5	Abbrev-Of Arg1:E22 Arg2:E21	
+T13	Modifier 506 516	antibodies
+E13	Modifier:T13 Modifies:T62
+T17	Condition 671 677	cancer
+E17	Condition:T17 Name:T68
+T23	Modifier 665 670	liver
+E23	Modifier:T23 Modifies:T68
+R6	Treatment-For Arg1:E30 Arg2:E17	
+R7	Caused-By Arg1:E36 Arg2:E35	
+T52	Modifier 835 857	upper gastrointestinal
+E50	Modifier:T52 Modifies:T75
+T57	Modifier 931 942	sarcomatoid
+E51	Modifier:T57 Modifies:T80
+T59	Modifier 912 925	fibrous layer
+E52	Modifier:T59 Modifies:T79
+T61	Modifier 950 955	mixed
+E53	Modifier:T61 Modifies:T81
+T64	And 975 978	and
+E54	And:T64 Arg:E43 Arg2:E44
