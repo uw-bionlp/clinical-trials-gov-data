@@ -1,15 +1,15 @@
 T1	Eq-Comparison 25 35	≥ 20 years
 E1	Eq-Comparison:T1 Operator:T24 Value:T25 Temporal-Unit:T26
 T2	Age 39 42	age
-E2	Age:T2
+E2	Age:T2 Eq-Comparison:E1
 T3	Condition 100 102	AF
 E3	Condition:T3 Name:T28
 T4	Procedure 108 115	treated
-E4	Procedure:T4
+E4	Procedure:T4 
 T5	Drug 121 129	warfarin
 E5	Drug:T5 Name:T29
 T6	Or 130 132	or
-E6	Or:T6
+E6	Or:T6 Arg:E5 Arg2:E7
 T7	Drug 133 138	NOACs
 E7	Drug:T7 Name:T30
 T8	Procedure 143 158	anticoagulation
@@ -17,29 +17,25 @@ E8	Procedure:T8 Name:T31
 T9	Condition 200 222	psychological diseases
 E9	Condition:T9 Name:T32
 T10	Modifier 243 255	uncontrolled
-E10	Modifier:T10
+E10	Modifier:T10 Modifies:T33
 T11	Condition 256 268	hypertension
 E11	Condition:T11 Name:T33
 T12	Condition 293 319	New York Heart Association
 E12	Condition:T12 Name:T34
 T13	Condition 321 325	NYHA
-E13	Condition:T13 Name:T35
+E13	Condition:T13 Name:T35 Stage:E14
 T14	Eq-Comparison 327 335	grade VI
 E14	Eq-Comparison:T14 Unit:T36 Value:T37
 T15	Condition 336 349	heart failure
 E15	Condition:T15 Name:T38
-T16	Procedure 355 364	implanted
-E16	Procedure:T16 Name:T39
-T17	And 365 369	with
-E17	And:T17
 T18	Procedure 372 389	cardiac pacemaker
 E18	Procedure:T18 Name:T40
 T19	Procedure 401 416	cardiac surgery
-E19	Procedure:T19 Name:T41
+E19	Procedure:T19 Name:T41 Temporality:E20
 T20	Eq-Comparison 424 441	past three months
 E20	Eq-Comparison:T20 Temporal-Period:T42 Value:T43 Temporal-Unit:T44
 T21	Encounter 447 459	hospitalized
-E21	Encounter:T21
+E21	Encounter:T21 Type:T45 Temporality:E23
 T22	Condition 464 466	AF
 E22	Condition:T22 Name:T46
 T23	Eq-Comparison 474 491	past three months
@@ -61,7 +57,6 @@ T35	Condition-Name 321 325	NYHA
 T36	Eq-Unit 327 332	grade
 T37	Eq-Value 333 335	VI
 T38	Condition-Name 336 349	heart failure
-T39	Procedure-Name 355 364	implanted
 T40	Procedure-Name 372 389	cardiac pacemaker
 T41	Procedure-Name 401 416	cardiac surgery
 T42	Eq-Temporal-Period 424 428	past
@@ -77,3 +72,11 @@ A6	Eq-Temporal-Period-Value T47 past
 T48	Eq-Value 479 484	three
 T49	Eq-Temporal-Unit 485 491	months
 A7	Eq-Temporal-Unit-Value T49 month
+T50	Language 70 79	Taiwanese
+T51	Or 67 69	or
+E24	Or:T51 Arg:T27 Arg2:T50
+R1	Using Arg1:E4 Arg2:E5	
+R2	Using Arg1:E4 Arg2:E8	
+R3	Using Arg1:E4 Arg2:E7	
+R4	Abbrev-Of Arg1:E13 Arg2:E12	
+R5	Treatment-For Arg1:E21 Arg2:E22	
