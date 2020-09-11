@@ -344,6 +344,46 @@ class BratDocument:
 
         return output
 
+    def to_r_bert_format(self, debug=False):
+
+        relation2id = {}
+        id2relation = []
+        sents = [ [ tok.text for tok in sent ] for sent in self.sents ]
+        data = []
+
+        # For each sentence
+        min_tok_idx, max_tok_idx = 0, 0
+        for idx, sent in enumerate(sents):
+            max_tok_idx += len(sent)-1
+
+            # Relations first
+            for k, R in self.Rs.items():
+                arg1, arg2 = R.arg1.get_T(), R.arg2.get_T()
+                if arg1.tok_beg_idx >= min_tok_idx and arg1.tok_end_idx <= max_tok_idx and \
+                   arg2.tok_beg_idx >= min_tok_idx and arg2.tok_end_idx <= max_tok_idx and not \
+                   (arg1.tok_beg_idx == arg2.tok_beg_idx and arg1.tok_end_idx == arg2.tok_end_idx):
+
+                    tokens = sent
+                    subj_start = arg1.tok_beg_idx
+                    subj_end = arg1.tok_end_idx
+                    subj_type = arg1.type
+                    obj_start = arg2.tok_beg_idx
+                    obj_end = arg2.tok_end_idx
+                    obj_type = arg2.type
+
+                    subject_first = (subj_start < obj_start)
+                    if subject_first:
+                        new_tokens = tokens[:subj_start] + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
+                            tokens[subj_end+1:obj_start] + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + \
+                            tokens[obj_end+1:]
+                    else:
+                        new_tokens = tokens[:obj_start] + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + \
+                            tokens[obj_end+1:subj_start] + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
+                            tokens[subj_end+1:]
+
+                    token_string = " ".join(new_tokens)
+                    data.append(f"{idx}\t{token_string}\t{relation_id}\t{subj_type}\t{obj_type}\n")
+
 
 class BratSentence:
     def __init__(self, idx, toks):
