@@ -1,55 +1,55 @@
 T1	Or 30 32	or
-E1	Or:T1
+E1	Or:T1 Arg:T25 Arg2:T26
 T2	Age 41 44	age
-E2	Age:T2
+E2	Age:T2 Eq-Comparison:E3
 T3	Eq-Comparison 45 56	21 or older
 E3	Eq-Comparison:T3 Value:T27 Operator:T28
 T4	Modifier 78 86	definite
-E4	Modifier:T4
-T5	Modifier 88 96	probable
-E5	Modifier:T5
+E4	Modifier:T4 Modifies:T29
+T5	Assertion 88 96	probable
+E5	Assertion:T5 Asserted:E8
 T6	Or 98 100	or
-E6	Or:T6
-T7	Modifier 101 109	possible
-E7	Modifier:T7
+E6	Or:T6 Arg:E5 Arg2:E7
+T7	Assertion 101 109	possible
+E7	Assertion:T7 Asserted:E8
 T8	Condition 110 113	ALS
 E8	Condition:T8 Name:T29
 T9	Eq-Comparison 169 190	score of 2 or greater
 E9	Eq-Comparison:T9 Value:T30 Operator:T31
 T10	Observation 198 229	speech question of the ALSFRS-R
-E10	Observation:T10
-T11	Condition 264 285	occasional repetition
-E11	Condition:T11
+E10	Observation:T10 Name:T37 Eq-Comparison:E9
+T11	Condition 236 242	speech
+E11	Condition:T11 Name:T38
 T12	Eq-Comparison 381 390	scheduled
 E12	Eq-Comparison:T12 Temporal-Period:T32
 T13	Encounter 391 397	visits
-E13	Encounter:T13
+E13	Encounter:T13 
 T14	Study 402 407	study
-E14	Study:T14
+E14	Study:T14 Study-Of:E28
 T15	Assertion 750 758	symptoms
-E15	Assertion:T15
+E15	Assertion:T15 Asserted:E16
 A1	Assertion-Type-Value E15 possible
 T16	Condition 762 798	frontotemporal cognitive dysfunction
 E16	Condition:T16 Name:T34
 T17	Condition 855 864	cognitive
-E17	Condition:T17
+E17	Condition:T17 Name:T35
 T18	Assertion 865 873	symptoms
-E18	Assertion:T18
+E18	Assertion:T18 Asserted:E17
 A2	Assertion-Type-Value E18 possible
 T19	Condition 1045 1054	condition
-E19	Condition:T19
+E19	Condition:T19 
 T20	Modifier 1056 1064	physical
-E20	Modifier:T20
+E20	Modifier:T20 Modifies:E19
 T21	Modifier 1066 1072	mental
-E21	Modifier:T21
+E21	Modifier:T21 Modifies:E19
 T22	Assertion 1093 1099	likely
-E22	Assertion:T22
+E22	Assertion:T22 Asserted:T36
 A3	Assertion-Type-Value E22 hypothetical
 T23	Assertion 1234 1246	candidate to
-E23	Assertion:T23
+E23	Assertion:T23 Asserted:E34
 A4	Assertion-Type-Value E23 hypothetical
 T24	Study 1287 1292	study
-E24	Study:T24
+E24	Study:T24 
 T25	Life-Stage-And-Gender 25 29	male
 A5	Life-Stage-And-Gender-Type T25 male
 T26	Life-Stage-And-Gender 33 39	female
@@ -63,8 +63,36 @@ T31	Eq-Operator 180 190	or greater
 A8	Eq-Operator-Value T31 GTEQ
 T32	Eq-Temporal-Period 381 390	scheduled
 A9	Eq-Temporal-Period-Value T32 future
-T33	Eq-Value 713 715	25
 T34	Condition-Name 762 798	frontotemporal cognitive dysfunction
-T35	Eq-Value 817 819	25
 T36	Stability 1103 1109	affect
 A10	Stability-Value T36 change
+A11	Assertion-Type-Value E5 possible
+A12	Assertion-Type-Value E7 possible
+T37	Observation-Name 198 229	speech question of the ALSFRS-R
+A13	Observation-Type-Value T37 clinical-score
+T38	Condition-Name 236 242	speech
+T39	Modifier 246 258	intelligible
+E25	Modifier:T39 Modifies:T38
+T40	Modifier 264 285	occasional repetition
+E26	Modifier:T40 Modifies:T38
+R1	Equivalent-To Arg1:E11 Arg2:E10	
+T41	Assertion 334 365	willingness and medical ability
+E27	Assertion:T41 Asserted:E13 Asserted2:E14
+A14	Assertion-Type-Value E27 hypothetical
+R2	Equivalent-To Arg1:E13 Arg2:E12	
+T42	Procedure 408 418	procedures
+E28	Procedure:T42 
+T43	And 398 401	and
+E29	And:T43 Arg:E13 Arg2:E14
+T33	Negation 741 743	NO
+E30	Negation:T33 Negates:E16
+T35	Condition-Name 855 864	cognitive
+T44	And 800 803	and
+E31	And:T44 Arg:E16 Arg2:E17
+T45	Modifier 1077 1083	social
+E32	Modifier:T45 Modifies:E19
+T46	Or 1074 1076	or
+E33	Or:T46 Arg:E21 Arg2:E32
+R3	Caused-By Arg1:T36 Arg2:E19	
+T47	Negation 1257 1267	unsuitable
+E34	Negation:T47 Negates:E24

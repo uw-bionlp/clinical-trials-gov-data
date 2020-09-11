@@ -1,72 +1,70 @@
 T1	Age 25 28	age
-E1	Age:T1
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 29 40	18-70 years
 E2	Eq-Comparison:T2 Value:T35 Operator:T36 Value:T37 Temporal-Unit:T38
 T3	Condition 61 64	PNH
 E3	Condition:T3 Name:T39
 T4	And 65 68	and
-E4	And:T4
+E4	And:T4 Arg:E3 Arg2:E5
 T5	Negation 69 71	no
-E5	Negation:T5
+E5	Negation:T5 Negates:E6
 T6	Condition 72 82	thrombosis
 E6	Condition:T6 Name:T40
 T7	Modifier 88 99	ineffective
-E7	Modifier:T7
+E7	Modifier:T7 Modifies:E11
 T8	Modifier 101 109	relapsed
-E8	Modifier:T8
+E8	Modifier:T8 Modifies:E11
 T9	Or 110 112	or
-E9	Or:T9
+E9	Or:T9 Arg:E8 Arg2:E10
 T10	Condition 113 123	intolerant
-E10	Condition:T10
+E10	Condition:T10 Name:T41
 T11	Procedure 127 149	conventional treatment
-E11	Procedure:T11
+E11	Procedure:T11 
 T12	Drug 154 169	glucocorticoids
-E12	Drug:T12
-T13	Modifier 175 179	iron
-E13	Modifier:T13
+E12	Drug:T12 Name:T42
 T14	Drug 181 191	folic acid
 E14	Drug:T14 Name:T43
-T15	Modifier 193 201	androgen
-E15	Modifier:T15
+T15	Drug 193 201	androgen
+E15	Drug:T15 Name:T44
 T16	Negation 214 217	not
-E16	Negation:T16
+E16	Negation:T16 Negates:E17
 T17	Assertion 218 227	available
-E17	Assertion:T17
+E17	Assertion:T17 Asserted:E18
 A1	Assertion-Type-Value E17 hypothetical
 T18	Procedure 232 271	hematopoietic stem cell transplantation
 E18	Procedure:T18 Name:T45
 T19	Modifier 354 359	heart
-E19	Modifier:T19
+E19	Modifier:T19 Modifies:T47
 T20	Modifier 361 366	liver
-E20	Modifier:T20
+E20	Modifier:T20 Modifies:T47
 T21	Or 367 370	and
-E21	Or:T21
+E21	Or:T21 Arg:E20 Arg2:E22
 T22	Modifier 371 377	kidney
-E22	Modifier:T22
+E22	Modifier:T22 Modifies:T47
 T23	Condition 378 389	dysfunction
-E23	Condition:T23 Name:T47
+E23	Condition:T23 Name:T47 Severity:T46
 T24	Modifier 409 419	thrombotic
-E24	Modifier:T24
+E24	Modifier:T24 Modifies:T48
 T25	Condition 420 433	complications
-E25	Condition:T25
+E25	Condition:T25 Name:T48
 T26	Condition 454 462	pregnant
 E26	Condition:T26 Name:T49
 T27	Or 463 466	and
-E27	Or:T27
+E27	Or:T27 Arg:E26 Arg2:E28
 T28	Condition 467 480	breastfeeding
 E28	Condition:T28 Name:T50
 T29	Eq-Comparison 486 493	history
 E29	Eq-Comparison:T29 Temporal-Period:T51
 T30	Other 497 502	other
-E30	Other:T30
+E30	Other:T30 Is-Other:E31
 T31	Drug 503 527	immunosuppressive agents
-E31	Drug:T31 Name:T52
+E31	Drug:T31 Name:T52 Temporality:E29 Temporality2:E32
 T32	Eq-Comparison 531 546	recent 3 months
 E32	Eq-Comparison:T32 Temporal-Period:T53 Value:T54 Temporal-Unit:T55
 T33	Negation 569 572	not
-E33	Negation:T33
+E33	Negation:T33 Negates:E34
 T34	Assertion 573 581	eligible
-E34	Assertion:T34
+E34	Assertion:T34 
 A2	Assertion-Type-Value E34 hypothetical
 T35	Eq-Value 29 31	18
 T36	Eq-Operator 31 32	-
@@ -76,15 +74,14 @@ T38	Eq-Temporal-Unit 35 40	years
 A4	Eq-Temporal-Unit-Value T38 year
 T39	Condition-Name 61 64	PNH
 T40	Condition-Name 72 82	thrombosis
-T41	Condition-Name 101 109	relapsed
-T42	Drug-Name 151 169	eg glucocorticoids
+T42	Drug-Name 154 169	glucocorticoids
 T43	Drug-Name 181 191	folic acid
 T44	Drug-Name 193 201	androgen
 T45	Procedure-Name 232 271	hematopoietic stem cell transplantation
 T46	Severity 347 353	severe
 A5	Severity-Value T46 severe
 T47	Condition-Name 378 389	dysfunction
-T48	Condition-Name 409 433	thrombotic complications
+T48	Condition-Name 420 433	complications
 T49	Condition-Name 454 462	pregnant
 T50	Condition-Name 467 480	breastfeeding
 T51	Eq-Temporal-Period 486 493	history
@@ -95,3 +92,20 @@ A7	Eq-Temporal-Period-Value T53 recent
 T54	Eq-Value 538 539	3
 T55	Eq-Temporal-Unit 540 546	months
 A8	Eq-Temporal-Unit-Value T55 month
+T41	Condition-Name 113 123	intolerant
+R1	Caused-By Arg1:E10 Arg2:E11	
+T13	Drug 175 179	iron
+E13	Drug:T13 Name:T56
+T56	Drug-Name 175 179	iron
+R2	Example-Of Arg1:E12 Arg2:E11	
+R3	Example-Of Arg1:E13 Arg2:E11	
+R4	Example-Of Arg1:E14 Arg2:E11	
+R5	Example-Of Arg1:E15 Arg2:E11	
+T57	Observation 277 281	ECOG
+E35	Observation:T57 Name:T58 Eq-Comparison:E36
+T58	Observation-Name 277 281	ECOG
+T59	Eq-Comparison 281 283	≤2
+E36	Eq-Comparison:T59 Operator:T60 Value:T61
+T60	Eq-Operator 281 282	≤
+A9	Eq-Operator-Value T60 LTEQ
+T61	Eq-Value 282 283	2

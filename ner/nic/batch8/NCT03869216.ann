@@ -1,35 +1,31 @@
 T1	Eq-Comparison 33 42	Receiving
 E1	Eq-Comparison:T1 Temporal-Period:T16
 T2	Age 114 118	Ages
-E2	Age:T2
+E2	Age:T2 Eq-Comparison:E3
 T3	Eq-Comparison 119 130	40-69 years
 E3	Eq-Comparison:T3 Value:T19 Operator:T20 Value:T21 Temporal-Unit:T22
-T4	Age 131 134	old
-E4	Age:T4
 T5	Observation 159 174	life expectancy
-E5	Observation:T5 Name:T23
+E5	Observation:T5 Name:T23 Eq-Comparison:E6
 T6	Eq-Comparison 178 195	at least 10 years
 E6	Eq-Comparison:T6 Operator:T24 Value:T25 Temporal-Unit:T26
 T7	Eq-Comparison 238 245	history
 E7	Eq-Comparison:T7 Temporal-Period:T27
 T8	Modifier 249 257	prostate
-E8	Modifier:T8
+E8	Modifier:T8 Modifies:T28
 T9	Condition 258 264	cancer
-E9	Condition:T9 Name:T28
+E9	Condition:T9 Name:T28 Temporality:E7
 T10	Condition 293 313	Cognitive impairment
 E10	Condition:T10 Name:T29
 T11	Assertion 319 324	would
-E11	Assertion:T11
+E11	Assertion:T11 Asserted:T30
 A1	Assertion-Type-Value E11 hypothetical
 T12	Study 361 366	study
-E12	Study:T12
+E12	Study:T12 Stability:T30
 T13	Negation 372 378	Unable
-E13	Negation:T13
-T14	Assertion 379 390	to complete
-E14	Assertion:T14
+E13	Negation:T13 Negates:E4
+T14	Assertion 372 378	Unable
+E14	Assertion:T14 Asserted:E13
 A2	Assertion-Type-Value E14 hypothetical
-T15	Procedure 409 421	intervention
-E15	Procedure:T15 Name:T31
 T16	Eq-Temporal-Period 33 42	Receiving
 A3	Eq-Temporal-Period-Value T16 present
 T17	Ethnicity 87 103	African American
@@ -53,6 +49,10 @@ T28	Condition-Name 258 264	cancer
 T29	Condition-Name 293 313	Cognitive impairment
 T30	Stability 325 334	interfere
 A10	Stability-Value T30 change
-T31	Procedure-Name 409 421	intervention
-T32	Eq-Operator 422 428	within
-A11	Eq-Operator-Value T32 LTEQ
+T33	Procedure 43 47	care
+E16	Procedure:T33 Location:T34 Temporality:E1
+T34	Location 55 69	clinical sites
+A12	Location-Value T34 clinic
+R1	Caused-By Arg1:T30 Arg2:E10	
+T4	Study 409 421	intervention
+E4	Study:T4 
