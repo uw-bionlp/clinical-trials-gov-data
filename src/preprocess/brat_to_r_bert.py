@@ -9,6 +9,11 @@ from preprocess.brat_document import BratDocument
 from preprocess.config import Config
 import preprocess.utils as utils
 
+def write_tsv(lines, file_path):
+    with open(file_path, 'w+') as f: 
+        for l in lines:
+            f.write(l)
+
 def main():
 
     # Get data
@@ -41,13 +46,22 @@ def main():
             id2relation.append(rel)
             relation2id[rel] = len(relation2id)
 
+    rels = []
     r_bert = [ ann.to_r_bert_format(relation2id, id2relation, known_rel_types, debug=False) for ann in annotations ]
-    x=1
-
+    for rel in r_bert:
+        rels += rel
 
     ## Split 
-    #np.random.seed(1)
-    #train, test, dev = np.split(dygiepp, [int(.8*len(dygiepp)), int(.9*len(dygiepp))])
+    np.random.seed(1)
+    train, test, dev = np.split(rels, [int(.8*len(rels)), int(.9*len(rels))])
+    
+    rel_path = os.path.join(Config.preprocess_dir, 'relations')
+    if not os.path.exists(rel_path): 
+        os.mkdir(rel_path)
+    write_tsv(train, os.path.join(rel_path, 'train.tsv'))
+    write_tsv(test, os.path.join(rel_path, 'test.tsv'))
+    write_tsv(dev, os.path.join(rel_path, 'dev.tsv'))
+
     
 if __name__ == '__main__':
     main()

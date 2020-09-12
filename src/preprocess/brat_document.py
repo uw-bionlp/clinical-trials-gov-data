@@ -189,13 +189,6 @@ class BratDocument:
     def to_dygiepp_format(self, debug=False):
 
         output = { "doc_key": self.doc_id, "sentences": [ [ tok.text for tok in sent ] for sent in self.sents ], "ner": [], "relations": [], "clusters": [], "events": [] }
-
-        # Check all sents have at least 2 tokens
-        #for i, sent in enumerate(self.sents):
-        #    if len(sent) == 1 and any([ t for t in self.Ts.items() if t.sent_idx == i ]):
-        #        x=1
-
-
         regex_trailing_num = r'[0-9]$'
 
         # For each sentence
@@ -398,13 +391,12 @@ class BratDocument:
                                 rel_type = re.sub(regex_trailing_num, '', rel_type)
 
                             rel = { 
-                                'subj': E.get_T(), 'subj_start': E.get_T().tok_beg_idx, 'subj_end': E.get_T().tok_end_idx, 'subj_type': E.args[0].type,
+                                'subj': E.get_T(), 'subj_start': E.get_T().tok_beg_idx, 'subj_end': E.get_T().tok_end_idx, 'subj_type': E.get_T().type,
                                 'obj': arg.val.get_T(), 'obj_start': arg.val.get_T().tok_beg_idx, 'obj_end': arg.val.get_T().tok_end_idx, 'obj_type': arg.type,
                                 'relation': (E.args[0].type, arg.val.get_T().type, 'Argument:'+rel_type)
                             }
                             sent['relations'].append(rel)
 
-            tokens = self.toks
             pad_back, pad_forw = 10, 3
             for ent1 in sent['entities']:
                 ent1_idxs = range(ent1.tok_beg_idx, ent1.tok_end_idx+1, 1)
@@ -413,7 +405,11 @@ class BratDocument:
                        (ent1.type, ent2.type) not in known_rel_types or \
                        ent2.tok_beg_idx <= ent1.tok_beg_idx or \
                        ent2.tok_beg_idx in ent1_idxs or \
-                       ent2.tok_end_idx in ent1_idxs:
+                       ent2.tok_end_idx in ent1_idxs or \
+                       ent2.type == ent1.type+'-Name' or \
+                       ent1.type == ent2.type+'-Name' or \
+                       (ent1.type == 'Eq-Comparison' and ent2.type.startswith('Eq-')) or \
+                       (ent2.type == 'Eq-Comparison' and ent1.type.startswith('Eq-')):
                         continue
 
                     idx += 1
@@ -433,7 +429,6 @@ class BratDocument:
                     
                     # Else 'Other' relation
                     else:
-                        continue
                         subj_start = ent1.tok_beg_idx
                         subj_end = ent1.tok_end_idx
                         subj_type = ent1.type
@@ -443,6 +438,7 @@ class BratDocument:
                         relation_id = relation2id[('Other', 'Other', 'Other')]
 
                     subject_first = subj_start < obj_start
+                    tokens = self.toks.copy()
                     if subject_first:
                         new_tokens = tokens[subj_start-pad_back:subj_start] + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
                             tokens[subj_end+1:obj_start] + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + \
@@ -452,7 +448,7 @@ class BratDocument:
                             tokens[obj_end+1:subj_start] + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
                             tokens[subj_end+1:subj_end+pad_forw]
 
-                    token_string = " ".join(new_tokens)
+                    token_string = " ".join([ str(t) for t in new_tokens ])
                     data.append(f"{idx}\t{token_string}\t{relation_id}\t{subj_type}\t{obj_type}\n")
                 
             min_tok_idx = max_tok_idx

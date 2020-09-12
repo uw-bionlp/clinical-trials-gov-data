@@ -1,11 +1,9 @@
 T1	Eq-Comparison 69 93	18 years of age or older
 E1	Eq-Comparison:T1 Value:T10 Temporal-Unit:T11 Operator:T12
-T2	Eq-Comparison 116 127	recommended
-E2	Eq-Comparison:T2 
 T3	Procedure 132 161	ultrasound core needle biopsy
 E3	Procedure:T3 Name:T13
 T4	Assertion 167 177	suspicious
-E4	Assertion:T4 
+E4	Assertion:T4 Asserted:E5
 A1	Assertion-Type-Value E4 possible
 T5	Condition 178 191	breast lesion
 E5	Condition:T5 Name:T14
@@ -24,3 +22,5 @@ T12	Eq-Operator 85 93	or older
 A4	Eq-Operator-Value T12 GTEQ
 T13	Procedure-Name 132 161	ultrasound core needle biopsy
 T14	Condition-Name 178 191	breast lesion
+T15	Age 81 84	age
+E9	Age:T15 Eq-Comparison:E1
