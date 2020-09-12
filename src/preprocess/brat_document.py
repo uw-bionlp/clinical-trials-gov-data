@@ -392,7 +392,7 @@ class BratDocument:
 
                             rel = { 
                                 'subj': E.get_T(), 'subj_start': E.get_T().tok_beg_idx, 'subj_end': E.get_T().tok_end_idx, 'subj_type': E.get_T().type,
-                                'obj': arg.val.get_T(), 'obj_start': arg.val.get_T().tok_beg_idx, 'obj_end': arg.val.get_T().tok_end_idx, 'obj_type': arg.type,
+                                'obj': arg.val.get_T(), 'obj_start': arg.val.get_T().tok_beg_idx, 'obj_end': arg.val.get_T().tok_end_idx, 'obj_type': arg.val.get_T().type,
                                 'relation': (E.args[0].type, arg.val.get_T().type, 'Argument:'+rel_type)
                             }
                             sent['relations'].append(rel)
@@ -406,6 +406,7 @@ class BratDocument:
                        ent2.tok_beg_idx <= ent1.tok_beg_idx or \
                        ent2.tok_beg_idx in ent1_idxs or \
                        ent2.tok_end_idx in ent1_idxs or \
+                       ent2.tok_end_idx > max_tok_idx or \
                        ent2.type == ent1.type+'-Name' or \
                        ent1.type == ent2.type+'-Name' or \
                        (ent1.type == 'Eq-Comparison' and ent2.type.startswith('Eq-')) or \
@@ -429,6 +430,7 @@ class BratDocument:
                     
                     # Else 'Other' relation
                     else:
+                        continue
                         subj_start = ent1.tok_beg_idx
                         subj_end = ent1.tok_end_idx
                         subj_type = ent1.type
@@ -438,17 +440,34 @@ class BratDocument:
                         relation_id = relation2id[('Other', 'Other', 'Other')]
 
                     subject_first = subj_start < obj_start
-                    tokens = self.toks.copy()
-                    if subject_first:
-                        new_tokens = tokens[subj_start-pad_back:subj_start] + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
-                            tokens[subj_end+1:obj_start] + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + \
-                            tokens[obj_end+1:obj_end+pad_forw]
-                    else:
-                        new_tokens = tokens[obj_start-pad_back:obj_start] + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + \
-                            tokens[obj_end+1:subj_start] + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
-                            tokens[subj_end+1:subj_end+pad_forw]
+                    tokens = [ str(t) for t in self.toks ]
 
-                    token_string = " ".join([ str(t) for t in new_tokens ])
+                    if subject_first:
+                        prec = tokens[subj_start-pad_back:subj_start]
+                        foll = tokens[obj_end+1:obj_end+pad_forw]
+                        relation_id = relation2id[(subj_type, obj_type, rel['relation'][2])]
+                    else:
+                        prec = tokens[obj_start-pad_back:obj_start]
+                        foll = tokens[subj_end+1:subj_end+pad_forw]
+                        relation_id = relation2id[(obj_type, subj_type, rel['relation'][2])]
+                    
+                    last_prec_newline = [ i for i,t in enumerate(prec) if t.replace(' ','') == '\n' ]
+                    first_foll_newline = [ i for i,t in enumerate(foll) if t.replace(' ','') == '\n' ]
+
+                    if len(last_prec_newline) > 0 :
+                        prec = prec[max(last_prec_newline)+1:]
+                    if len(first_foll_newline) > 0:
+                        foll = foll[:min(first_foll_newline)]
+
+                    if subject_first:
+                        new_tokens = prec + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
+                                     tokens[subj_end+1:obj_start] + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + foll
+                    else:
+                        new_tokens = prec + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + \
+                                     tokens[obj_end+1:subj_start] + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + foll
+
+                    token_string = " ".join([ str(t) for t in new_tokens ]).replace('\n','')
+                    print(f'\n{token_string}\n\t{id2relation[relation_id]}\n')
                     data.append(f"{idx}\t{token_string}\t{relation_id}\t{subj_type}\t{obj_type}\n")
                 
             min_tok_idx = max_tok_idx
