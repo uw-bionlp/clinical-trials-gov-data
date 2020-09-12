@@ -128,6 +128,9 @@ class BratDocument:
                 cands = [ tok for tok in final_toks if tok.idx >= idx_start and (tok.text.startswith(part) or part.startswith(tok.text)) ]
                 if len(cands) > 0:
                     best_match = sorted(cands, key=lambda x: x.idx)[0]
+                    if len(str(best_match)) == 1 and len(part) > 1:
+                        best_match = sorted(cands, key=lambda x: len(x), reverse=True)[0]
+                    #best_match = sorted(cands, key=lambda x: len(x), reverse=True)[0]
                     matches.append(best_match)
                     idx_start += len(str(best_match))
                 else:
@@ -344,9 +347,16 @@ class BratDocument:
 
     def to_r_bert_format(self, relation2id, id2relation, known_rel_types, debug=False):
 
-        regex_trailing_num = r'[0-9]$'
+        regex_trailing_num = r'\d'
         sents = [ { 'tokens': [ tok.text for tok in sent ], 'entities': [], 'relations': [] } for sent in self.sents ]
         data = []
+        clean_rel = lambda tp: re.sub(regex_trailing_num, '', tp) if ':Arg' not in tp and any(re.findall(regex_trailing_num, tp)) else tp
+
+        sent_idx_map, tok_idx = {}, 0
+        for sent_idx, sent in enumerate(sents):
+            for tok in sent['tokens']:
+                sent_idx_map[tok_idx] = sent_idx
+                tok_idx += 1
 
         # For each sentence
         min_tok_idx, max_tok_idx = 0, 0
@@ -356,7 +366,9 @@ class BratDocument:
 
             # Add named entities
             for k, v in self.Ts.items():
-                if v.tok_beg_idx >= min_tok_idx and v.tok_end_idx <= max_tok_idx:
+                #if v.tok_beg_idx >= min_tok_idx and v.tok_end_idx <= max_tok_idx:
+                if v.tok_beg_idx in sent_idx_map and v.tok_end_idx in sent_idx_map and \
+                   sent_idx_map[v.tok_beg_idx] == i and sent_idx_map[v.tok_end_idx] == i:
                     sent['entities'].append(v)
 
             # Add relations
@@ -373,7 +385,7 @@ class BratDocument:
                     rel = { 
                         'subj': arg1 ,'subj_start': arg1.tok_beg_idx, 'subj_end': arg1.tok_end_idx, 'subj_type': arg1.type,
                         'obj': arg2,'obj_start': arg2.tok_beg_idx, 'obj_end': arg2.tok_end_idx, 'obj_type': arg2.type,
-                        'relation': (arg1.type, arg2.type, 'Relation:'+rel_type)
+                        'relation': clean_rel('Relation:'+rel_type)
                     }
                     sent['relations'].append(rel)
 
@@ -393,7 +405,7 @@ class BratDocument:
                             rel = { 
                                 'subj': E.get_T(), 'subj_start': E.get_T().tok_beg_idx, 'subj_end': E.get_T().tok_end_idx, 'subj_type': E.get_T().type,
                                 'obj': arg.val.get_T(), 'obj_start': arg.val.get_T().tok_beg_idx, 'obj_end': arg.val.get_T().tok_end_idx, 'obj_type': arg.val.get_T().type,
-                                'relation': (E.args[0].type, arg.val.get_T().type, 'Argument:'+rel_type)
+                                'relation': clean_rel('Argument:'+rel_type)
                             }
                             sent['relations'].append(rel)
 
@@ -402,7 +414,7 @@ class BratDocument:
                 ent1_idxs = range(ent1.tok_beg_idx, ent1.tok_end_idx+1, 1)
                 for ent2 in sent['entities']:
                     if ent1 == ent2 or \
-                       (ent1.type, ent2.type) not in known_rel_types or \
+                       ((ent1.type, ent2.type) not in known_rel_types and (ent2.type, ent1.type) not in known_rel_types) or \
                        ent2.tok_beg_idx <= ent1.tok_beg_idx or \
                        ent2.tok_beg_idx in ent1_idxs or \
                        ent2.tok_end_idx in ent1_idxs or \
@@ -413,12 +425,12 @@ class BratDocument:
                        (ent2.type == 'Eq-Comparison' and ent1.type.startswith('Eq-')):
                         continue
 
-                    idx += 1
                     rel_ent1 = [ rel for rel in sent['relations'] if rel['subj'] in [ ent1, ent2 ] ]
                     rel_ent2 = [ rel for rel in sent['relations'] if rel['obj'] in [ ent1, ent2 ] ]
 
                     # If there's a gold relation
                     if len(rel_ent1) == 1 and len(rel_ent2) == 1 and rel_ent1[0] == rel_ent2[0]:
+                        is_other = False
                         rel = rel_ent1[0]
                         subj_start = rel['subj_start']
                         subj_end = rel['subj_end']
@@ -426,30 +438,34 @@ class BratDocument:
                         obj_start = rel['obj_start']
                         obj_end = rel['obj_end']
                         obj_type = rel['obj_type']
-                        relation_id = relation2id[rel['relation']]
+                        subject_first = subj_start < obj_start
+                        
+                        if subject_first:
+                            relation_id = relation2id[rel['relation']+'(E1,E2)']
+                        else:
+                            relation_id = relation2id[rel['relation']+'(E2,E1)']
                     
                     # Else 'Other' relation
                     else:
-                        continue
+                        is_other = True
                         subj_start = ent1.tok_beg_idx
                         subj_end = ent1.tok_end_idx
                         subj_type = ent1.type
                         obj_start = ent2.tok_beg_idx
                         obj_end = ent2.tok_end_idx
                         obj_type = ent2.type
-                        relation_id = relation2id[('Other', 'Other', 'Other')]
+                        relation_id = relation2id['Other']
+                        subject_first = subj_start < obj_start
 
-                    subject_first = subj_start < obj_start
                     tokens = [ str(t) for t in self.toks ]
+                    idx += 1
 
                     if subject_first:
                         prec = tokens[subj_start-pad_back:subj_start]
                         foll = tokens[obj_end+1:obj_end+pad_forw]
-                        relation_id = relation2id[(subj_type, obj_type, rel['relation'][2])]
                     else:
                         prec = tokens[obj_start-pad_back:obj_start]
                         foll = tokens[subj_end+1:subj_end+pad_forw]
-                        relation_id = relation2id[(obj_type, subj_type, rel['relation'][2])]
                     
                     last_prec_newline = [ i for i,t in enumerate(prec) if t.replace(' ','') == '\n' ]
                     first_foll_newline = [ i for i,t in enumerate(foll) if t.replace(' ','') == '\n' ]
@@ -460,15 +476,32 @@ class BratDocument:
                         foll = foll[:min(first_foll_newline)]
 
                     if subject_first:
+                        new_tokens = prec + ["[E11]"] + [subj_type] + ["[E12]"] + \
+                                     tokens[subj_end+1:obj_start] + ["[E21]"] + [obj_type] + ["[E22]"] + foll
+                        if " ".join(tokens[subj_start:subj_end+1]) != rel['subj'].span:
+                            continue
+                    else:
+                        new_tokens = prec + ["[E11]"] + [obj_type] + ["[E12]"] + \
+                                     tokens[obj_end+1:subj_start] + ["[E21]"] + [subj_type] + ["[E22]"] + foll
+                        if " ".join(tokens[obj_start:obj_end+1]) != rel['obj'].span:
+                            continue
+
+                    """
+                    if subject_first:
                         new_tokens = prec + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
                                      tokens[subj_end+1:obj_start] + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + foll
+                        if " ".join(tokens[subj_start:subj_end+1]) != rel['subj'].span:
+                            continue
                     else:
-                        new_tokens = prec + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + \
-                                     tokens[obj_end+1:subj_start] + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + foll
+                        new_tokens = prec + ["[E11]"] + tokens[obj_start:obj_end+1] + ["[E12]"] + \
+                                     tokens[obj_end+1:subj_start] + ["[E21]"] + tokens[subj_start:subj_end+1] + ["[E22]"] + foll
+                        if " ".join(tokens[obj_start:obj_end+1]) != rel['obj'].span:
+                            continue
+                    """
 
                     token_string = " ".join([ str(t) for t in new_tokens ]).replace('\n','')
                     print(f'\n{token_string}\n\t{id2relation[relation_id]}\n')
-                    data.append(f"{idx}\t{token_string}\t{relation_id}\t{subj_type}\t{obj_type}\n")
+                    data.append(f"{token_string}\t{relation_id}\t{id2relation[relation_id]}\n")
                 
             min_tok_idx = max_tok_idx
 
