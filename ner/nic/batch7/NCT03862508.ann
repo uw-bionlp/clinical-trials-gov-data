@@ -1,19 +1,19 @@
-T1	Condition 25 39	Height jumpers
-E1	Condition:T1
+T1	Observation 25 39	Height jumpers
+E1	Observation:T1 Name:T19
 T2	Age 45 48	Age
-E2	Age:T2
+E2	Age:T2 Eq-Comparison:E3
 T3	Eq-Comparison 49 72	between 18 and 40 years
 E3	Eq-Comparison:T3 Operator:T10 Value:T11 Value:T12 Temporal-Unit:T13
 T4	Modifier 179 194	musculoskeletal
-E4	Modifier:T4
+E4	Modifier:T4 Modifies:T15
 T5	Condition 195 204	pathology
 E5	Condition:T5 Name:T15
 T6	Negation 219 222	not
-E6	Negation:T6
+E6	Negation:T6 Negates:E8
 T7	Modifier 227 242	musculoskeletal
-E7	Modifier:T7
+E7	Modifier:T7 Modifies:T16
 T8	Condition 243 251	injuries
-E8	Condition:T8
+E8	Condition:T8 Name:T16 Temporality:E9
 T9	Eq-Comparison 259 269	last month
 E9	Eq-Comparison:T9 Temporal-Period:T17 Temporal-Unit:T18
 T10	Eq-Operator 49 56	between
@@ -22,11 +22,10 @@ T11	Eq-Value 57 59	18
 T12	Eq-Value 64 66	40
 T13	Eq-Temporal-Unit 67 72	years
 A2	Eq-Temporal-Unit-Value T13 year
-T14	Eq-Temporal-Period 78 87	Currently
-A3	Eq-Temporal-Period-Value T14 present
 T15	Condition-Name 195 204	pathology
-T16	Condition-Name 227 251	musculoskeletal injuries
+T16	Condition-Name 243 251	injuries
 T17	Eq-Temporal-Period 259 263	last
 A4	Eq-Temporal-Period-Value T17 past
 T18	Eq-Temporal-Unit 264 269	month
 A5	Eq-Temporal-Unit-Value T18 month
+T19	Observation-Name 25 39	Height jumpers

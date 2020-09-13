@@ -1,60 +1,46 @@
 T1	Condition 24 35	Prepubertal
-E1	Condition:T1
+E1	Condition:T1 Name:T63
 T2	Eq-Comparison 45 59	2 to <12 years
 E2	Eq-Comparison:T2 Value:T30 Operator:T31 Operator:T32 Value:T33 Temporal-Unit:T34
-T3	Temporal-Connection 71 77	before
-E3	Temporal-Connection:T3
-A1	Temporal-Connection-Type-Value E3 before
-T4	Condition 98 113	Type 1 diabetes
-E4	Condition:T4 Name:T35
+T4	Condition 105 113	diabetes
+E4	Condition:T4 Name:T35 Duration:E5
 T5	Eq-Comparison 118 135	at least 6 months
 E5	Eq-Comparison:T5 Operator:T36 Value:T37 Temporal-Unit:T38
-T6	Assertion 150 157	must be
-E6	Assertion:T6
-A2	Assertion-Type-Value E6 hypothetical
 T7	Eq-Comparison 158 163	using
 E7	Eq-Comparison:T7 Temporal-Period:T39
 T8	Procedure 164 184	insulin pump therapy
-E8	Procedure:T8 Name:T40
+E8	Procedure:T8 Name:T40 Temporality:E7
 T9	Negation 190 193	Not
-E9	Negation:T9
-T10	Procedure 211 228	carbohydrate diet
-E10	Procedure:T10
+E9	Negation:T9 Negates:E6
 T11	Or 260 262	or
-E11	Or:T11
-T12	Observation 272 289	carbohydrate diet
-E12	Observation:T12
+E11	Or:T11 Arg:T68 Arg2:T70
 T13	Eq-Comparison 295 302	History
 E13	Eq-Comparison:T13 Temporal-Period:T45
 T14	Modifier 306 315	endocrine
-E14	Modifier:T14
+E14	Modifier:T14 Modifies:T46
 T15	Or 316 318	or
-E15	Or:T15
+E15	Or:T15 Arg:E14 Arg2:E16
 T16	Modifier 319 328	metabolic
-E16	Modifier:T16
+E16	Modifier:T16 Modifies:T46
 T17	Condition 329 337	disorder
-E17	Condition:T17
+E17	Condition:T17 Name:T46 Temporality:E13
 T18	Assertion 343 348	could
-E18	Assertion:T18
+E18	Assertion:T18 Asserted:T47
 A3	Assertion-Type-Value E18 hypothetical
 T19	Condition 356 374	counter-regulation
 E19	Condition:T19 Name:T48
-T20	Modifier 376 391	well-controlled
-E20	Modifier:T20
 T21	Condition 392 406	hypothyroidism
-E21	Condition:T21 Name:T49
-T22	Eq-Comparison 442 443	l
-E22	Eq-Comparison:T22
-T23	Drug 444 453	thyroxine
-E23	Drug:T23
+E21	Condition:T21 Name:T49 Stability:T20
+T23	Drug 442 453	l-thyroxine
+E23	Drug:T23 Name:T52 Stability:T51 Temporality:E20
 T24	Eq-Comparison 458 467	≥3 months
-E24	Eq-Comparison:T24 Operator:T53 Temporal-Unit:T54
+E24	Eq-Comparison:T24 Operator:T53 Temporal-Unit:T54 Value:T22
 T25	Eq-Comparison 474 481	History
 E25	Eq-Comparison:T25 Temporal-Period:T55
-T26	Condition 485 530	metabolic disorder affection lipid metabolism
-E26	Condition:T26 Name:T56 Name:T57
+T26	Condition 485 503	metabolic disorder
+E26	Condition:T26 Name:T56 Temporality:E25
 T27	Condition 543 561	hypoglycemic event
-E27	Condition:T27 Name:T59
+E27	Condition:T27 Name:T59 Severity:T58 Temporality:E28
 T28	Eq-Comparison 565 578	past 3 months
 E28	Eq-Comparison:T28 Temporal-Period:T60 Value:T61 Temporal-Unit:T62
 T29	Life-Stage-And-Gender 36 44	children
@@ -67,7 +53,7 @@ A6	Eq-Operator-Value T32 LT
 T33	Eq-Value 51 53	12
 T34	Eq-Temporal-Unit 54 59	years
 A7	Eq-Temporal-Unit-Value T34 year
-T35	Condition-Name 98 113	Type 1 diabetes
+T35	Condition-Name 105 113	diabetes
 T36	Eq-Operator 118 126	at least
 A8	Eq-Operator-Value T36 GTEQ
 T37	Eq-Value 127 128	6
@@ -76,15 +62,11 @@ A9	Eq-Temporal-Unit-Value T38 month
 T39	Eq-Temporal-Period 158 163	using
 A10	Eq-Temporal-Period-Value T39 present
 T40	Procedure-Name 164 184	insulin pump therapy
-T41	Polarity 207 210	low
-A11	Polarity-Value T41 high
-T42	Drug-Name 211 228	carbohydrate diet
 T43	Eq-Temporal-Period 253 255	On
 A12	Eq-Temporal-Period-Value T43 present
-T44	Drug-Name 272 289	carbohydrate diet
 T45	Eq-Temporal-Period 295 302	History
 A13	Eq-Temporal-Period-Value T45 past
-T46	Condition-Name 319 337	metabolic disorder
+T46	Condition-Name 329 337	disorder
 T47	Stability 349 355	affect
 A14	Stability-Value T47 change
 T48	Condition-Name 356 374	counter-regulation
@@ -94,7 +76,7 @@ A15	Eq-Temporal-Period-Value T50 present
 T51	Stability 427 433	stable
 A16	Stability-Value T51 stable
 T52	Drug-Name 442 453	l-thyroxine
-T53	Eq-Operator 458 460	≥3
+T53	Eq-Operator 458 459	≥
 A17	Eq-Operator-Value T53 GTEQ
 T54	Eq-Temporal-Unit 461 467	months
 A18	Eq-Temporal-Unit-Value T54 month
@@ -110,3 +92,45 @@ A21	Eq-Temporal-Period-Value T60 past
 T61	Eq-Value 570 571	3
 T62	Eq-Temporal-Unit 572 578	months
 A22	Eq-Temporal-Unit-Value T62 month
+T63	Condition-Name 24 35	Prepubertal
+T64	Age 60 63	old
+E29	Age:T64 Eq-Comparison:E2
+T3	Modifier 98 104	Type 1
+E3	Modifier:T3 Modifies:T35
+T6	Observation 224 228	diet
+E6	Observation:T6 Name:T10 Eq-Comparison:E30 Polarity:T69
+T10	Observation-Name 224 228	diet
+A1	Observation-Type-Value T10 social-habit
+T41	Modifier 211 223	carbohydrate
+E10	Modifier:T41 Modifies:T10
+T42	Eq-Comparison 194 203	presently
+E30	Eq-Comparison:T42 Temporal-Period:T65
+T65	Eq-Temporal-Period 194 203	presently
+A2	Eq-Temporal-Period-Value T65 present
+T66	Eq-Comparison 253 255	On
+E31	Eq-Comparison:T66 Temporal-Period:T43
+T12	Observation 285 289	diet
+E12	Observation:T12 Name:T44 Polarity:T68 Polarity2:T70 Temporality:E31
+T44	Observation-Name 285 289	diet
+A11	Observation-Type-Value T44 social-habit
+T67	Modifier 272 284	carbohydrate
+E32	Modifier:T67 Modifies:T44
+T69	Polarity 207 210	low
+A23	Polarity-Value T69 low
+T68	Polarity 256 259	low
+A24	Polarity-Value T68 low
+T70	Polarity 263 271	very low
+A25	Polarity-Value T70 low
+R1	Caused-By Arg1:T47 Arg2:E17	
+T20	Stability 376 391	well-controlled
+A26	Stability-Value T20 stable
+T71	Eq-Comparison 424 426	on
+E20	Eq-Comparison:T71 Temporal-Period:T50
+R2	Equivalent-To Arg1:E23 Arg2:E24	
+T22	Eq-Value 459 460	3
+R3	If-Then Arg1:E23 Arg2:E21	
+T72	Condition 514 530	lipid metabolism
+E22	Condition:T72 Name:T57 Stability:T73
+T73	Stability 504 513	affection
+A27	Stability-Value T73 change
+R4	Caused-By Arg1:T73 Arg2:E26	
