@@ -3,9 +3,9 @@ E1	Eq-Comparison:T1 Operator:T42 Value:T43 Temporal-Unit:T44
 T2	Condition 85 105	rheumatoid arthritis
 E2	Condition:T2 Name:T45
 T3	Condition 119 122	ACR
-E3	Condition:T3
+E3	Condition:T3 
 T4	Or 123 124	/
-E4	Or:T4
+E4	Or:T4 
 T5	Eq-Comparison 166 182	moderate to high
 E5	Eq-Comparison:T5 Operator:T47
 T6	Observation 183 199	disease activity
@@ -21,7 +21,7 @@ E10	Procedure:T10 Name:T54
 T11	Eq-Comparison 286 297	one or more
 E11	Eq-Comparison:T11 Value:T55 Operator:T56
 T12	Procedure 298 317	conventional DMARDs
-E12	Procedure:T12
+E12	Procedure:T12 
 T13	Eq-Comparison 323 344	at least three months
 E13	Eq-Comparison:T13 Operator:T58 Value:T59 Temporal-Unit:T60
 T14	Condition 377 393	hypersensitivity
@@ -37,7 +37,7 @@ E18	Eq-Comparison:T18 Temporal-Period:T65
 T19	Drug 495 504	metformin
 E19	Drug:T19 Name:T66
 T20	Other 513 518	other
-E20	Other:T20
+E20	Other:T20 
 T21	Condition 551 575	congestive heart failure
 E21	Condition:T21 Name:T67
 T22	Eq-Comparison 598 605	history
@@ -51,9 +51,9 @@ E25	Eq-Comparison:T25 Temporal-Period:T72
 T26	Condition 692 702	infections
 E26	Condition:T26 Name:T73
 T27	Or 703 705	or
-E27	Or:T27
+E27	Or:T27 
 T28	Other 706 711	other
-E28	Other:T28
+E28	Other:T28 
 T29	Condition 712 733	inflammatory diseases
 E29	Condition:T29 Name:T74
 T30	Eq-Comparison 749 758	receiving
@@ -63,7 +63,7 @@ E31	Procedure:T31 Name:T76
 T32	Condition 784 793	Pregnancy
 E32	Condition:T32 Name:T77
 T33	Or 794 796	or
-E33	Or:T33
+E33	Or:T33 
 T34	Condition 797 806	lactation
 E34	Condition:T34 Name:T78
 T35	Condition 827 851	impaired liver functions
@@ -75,9 +75,9 @@ E37	Observation:T37 Name:T81
 T38	Eq-Comparison 931 950	≥1.5 and ≥1.4 mg/dL
 E38	Eq-Comparison:T38 Operator:T82 Value:T83 Unit:T84 Unit:T85
 T39	Or 960 963	and
-E39	Or:T39
+E39	Or:T39 
 T40	Eq-Comparison 972 984	respectively
-E40	Eq-Comparison:T40
+E40	Eq-Comparison:T40 
 T41	Condition 1006 1018	malignancies
 E41	Condition:T41 Name:T88
 T42	Eq-Operator 34 44	older than
@@ -148,3 +148,5 @@ A20	Life-Stage-And-Gender-Type T86 male
 T87	Life-Stage-And-Gender 964 971	females
 A21	Life-Stage-And-Gender-Type T87 female
 T88	Condition-Name 1006 1018	malignancies
+T89	Age 34 39	older
+E42	Age:T89 Eq-Comparison:E1
