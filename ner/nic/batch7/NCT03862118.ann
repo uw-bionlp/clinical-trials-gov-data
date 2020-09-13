@@ -1,92 +1,86 @@
 T1	Age 65 68	Age
-E1	Age:T1
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 70 73	20-
 E2	Eq-Comparison:T2 Value:T46 Operator:T47
 T3	Condition 100 116	Fitzpatrick skin
-E3	Condition:T3 Name:T49
+E3	Condition:T3 Name:T49 Stage:E4
 T4	Eq-Comparison 117 129	types III-IV
 E4	Eq-Comparison:T4 Value:T50 Operator:T51 Value:T52
 T5	Condition 177 206	platelet dysfunction syndrome
 E5	Condition:T5 Name:T53
-T6	Condition 208 233	critical thrombocytopenia
-E6	Condition:T6 Name:T55
+T6	Condition 217 233	thrombocytopenia
+E6	Condition:T6 Name:T55 Severity:T54
 T7	Eq-Comparison 235 245	<50,000/ul
-E7	Eq-Comparison:T7 Operator:T56 Value:T57
+E7	Eq-Comparison:T7 Operator:T56 Value:T57 Per:T90
 T8	Condition 252 275	hemodynamic instability
 E8	Condition:T8 Name:T58
 T9	Modifier 301 308	chronic
-E9	Modifier:T9
+E9	Modifier:T9 Modifies:E10
 T10	Condition 309 324	medical illness
-E10	Condition:T10 Name:T59
+E10	Condition:T10 
 T11	Condition 331 339	diabetes
 E11	Condition:T11 Name:T60
 T12	Modifier 341 348	chronic
-E12	Modifier:T12
+E12	Modifier:T12 Modifies:T61
 T13	Condition 349 359	infections
 E13	Condition:T13 Name:T61
 T14	Or 361 364	and
-E14	Or:T14
+E14	Or:T14 Arg:E13 Arg2:E16
 T15	Modifier 365 370	blood
-E15	Modifier:T15
+E15	Modifier:T15 Modifies:T62
 T16	Condition 371 381	dyscrasias
-E16	Condition:T16
-T17	Condition 408 441	local inflammatory skin disorders
+E16	Condition:T16 Name:T62
+T17	Condition 427 441	skin disorders
 E17	Condition:T17 Name:T63
 T18	Or 442 444	or
-E18	Or:T18
+E18	Or:T18 Arg:E17
 T19	Eq-Comparison 445 451	active
 E19	Eq-Comparison:T19 Temporal-Period:T64
 T20	Condition 452 468	herpes infection
-E20	Condition:T20 Name:T65
+E20	Condition:T20 Name:T65 Temporality:E19
 T21	Modifier 476 480	site
-E21	Modifier:T21
-T22	Procedure 488 497	procedure
-E22	Procedure:T22
+E21	Modifier:T21 Modifies:T65
 T23	Eq-Comparison 518 520	on
 E23	Eq-Comparison:T23 Temporal-Period:T66
 T24	Drug 539 554	anti-coagulants
-E24	Drug:T24 Name:T67
+E24	Drug:T24 Name:T67 Temporality:E23
 T25	Or 555 557	or
-E25	Or:T25
+E25	Or:T25 Arg:E24 Arg2:E26
 T26	Drug 558 595	non-steroidal anti-inflammatory drugs
 E26	Drug:T26 Name:T68
 T27	Drug 597 602	NSAID
-E27	Drug:T27 Name:T69
+E27	Drug:T27 Name:T69 Temporality:E28
 T28	Eq-Comparison 604 619	within 48 hours
 E28	Eq-Comparison:T28 Operator:T70 Value:T71 Temporal-Unit:T72
 T29	Temporal-Connection 620 622	of
-E29	Temporal-Connection:T29
+E29	Temporal-Connection:T29 Arg:E28 Arg2:E30
 A1	Temporal-Connection-Type-Value E29 before
 T30	Procedure 623 632	procedure
-E30	Procedure:T30 Name:T73
-T31	Observation 644 661	Haemoglobin level
-E31	Observation:T31 Name:T74
+E30	Procedure:T30 
+T31	Observation 644 655	Haemoglobin
+E31	Observation:T31 Name:T74 Eq-Comparison:E32
 T32	Eq-Comparison 661 670	< 10 g/dl
-E32	Eq-Comparison:T32 Operator:T75 Value:T76 Unit:T77 Unit:T78
+E32	Eq-Comparison:T32 Operator:T75 Value:T76 Unit:T77 Per:T78
 T33	Negation 681 689	excluded
-E33	Negation:T33
-T34	Condition 715 747	cancer- especially hematopoietic
+E33	Negation:T33 Negates:E31
+T34	Condition 715 721	cancer
 E34	Condition:T34 Name:T79
 T35	Or 748 750	or
-E35	Or:T35
+E35	Or:T35 Arg:E47 Arg2:E36
 T36	Modifier 754 758	bone
-E36	Modifier:T36
+E36	Modifier:T36 Modifies:T79
 T37	Condition 770 778	Pregnant
 E37	Condition:T37 Name:T80
 T38	Drug 812 827	corticosteroids
-E38	Drug:T38
-T39	Procedure 828 837	injection
-E39	Procedure:T39
+E38	Drug:T38 Name:T82
 T40	Procedure 841 850	treatment
-E40	Procedure:T40
+E40	Procedure:T40 Temporality:E41
 T41	Eq-Comparison 856 870	within 1 month
 E41	Eq-Comparison:T41 Operator:T83 Value:T84 Temporal-Unit:T85
 T42	Or 871 873	or
-E42	Or:T42
-T43	Modifier 874 882	systemic
-E43	Modifier:T43
+E42	Or:T42 Arg:E40 Arg2:E44
 T44	Drug 890 905	corticosteroids
-E44	Drug:T44 Name:T86
+E44	Drug:T44 Name:T86 Temporality:E45
 T45	Eq-Comparison 906 920	within 2 weeks
 E45	Eq-Comparison:T45 Operator:T87 Value:T88 Temporal-Unit:T89
 T46	Eq-Value 70 72	20
@@ -104,13 +98,12 @@ A4	Severity-Value T54 severe
 T55	Condition-Name 217 233	thrombocytopenia
 T56	Eq-Operator 235 236	<
 A5	Eq-Operator-Value T56 LT
-T57	Eq-Value 236 245	50,000/ul
+T57	Eq-Value 236 242	50,000
 T58	Condition-Name 252 275	hemodynamic instability
-T59	Condition-Name 309 324	medical illness
 T60	Condition-Name 331 339	diabetes
 T61	Condition-Name 349 359	infections
-T62	Condition-Name 365 381	blood dyscrasias
-T63	Condition-Name 408 441	local inflammatory skin disorders
+T62	Condition-Name 371 381	dyscrasias
+T63	Condition-Name 427 441	skin disorders
 T64	Eq-Temporal-Period 445 451	active
 A6	Eq-Temporal-Period-Value T64 present
 T65	Condition-Name 452 468	herpes infection
@@ -124,19 +117,18 @@ A8	Eq-Operator-Value T70 LTEQ
 T71	Eq-Value 611 613	48
 T72	Eq-Temporal-Unit 614 619	hours
 A9	Eq-Temporal-Unit-Value T72 hour
-T73	Procedure-Name 623 632	procedure
-T74	Observation-Name 644 661	Haemoglobin level
+T74	Observation-Name 644 655	Haemoglobin
 A10	Observation-Type-Value T74 lab
 T75	Eq-Operator 661 662	<
 A11	Eq-Operator-Value T75 LT
 T76	Eq-Value 663 665	10
 T77	Eq-Unit 666 667	g
 T78	Eq-Unit 668 670	dl
-T79	Condition-Name 715 747	cancer- especially hematopoietic
+T79	Condition-Name 715 721	cancer
 T80	Condition-Name 770 778	Pregnant
 T81	Life-Stage-And-Gender 779 786	females
 A12	Life-Stage-And-Gender-Type T81 female
-T82	Drug-Name 812 837	corticosteroids injection
+T82	Drug-Name 812 827	corticosteroids
 T83	Eq-Operator 856 862	within
 A13	Eq-Operator-Value T83 LTEQ
 T84	Eq-Value 863 864	1
@@ -148,3 +140,18 @@ A15	Eq-Operator-Value T87 LTEQ
 T88	Eq-Value 913 914	2
 T89	Eq-Temporal-Unit 915 920	weeks
 A16	Eq-Temporal-Unit-Value T89 week
+T90	Eq-Unit 243 245	ul
+R1	Example-Of Arg1:E11 Arg2:E10	
+R2	Example-Of Arg1:E13 Arg2:E10	
+R3	Example-Of Arg1:E16 Arg2:E10	
+T59	Modifier 408 426	local inflammatory
+E46	Modifier:T59 Modifies:T63
+R4	Abbrev-Of Arg1:E27 Arg2:E26	
+T22	Procedure 488 497	procedure
+E22	Procedure:T22 
+T73	Modifier 734 747	hematopoietic
+E47	Modifier:T73 Modifies:T79
+R5	If-Then Arg1:E37 Arg2:T81	
+R6	Using Arg1:E40 Arg2:E38	
+T39	Modifier 874 882	systemic
+E39	Modifier:T39 Modifies:T86

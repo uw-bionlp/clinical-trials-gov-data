@@ -1,5 +1,5 @@
 T1	Criteria-Count 48 67	≥2 of the following
-E1	Criteria-Count:T1 Min-Value:E8 Criteria:E4 Criteria2:E5 Criteria3:T30 Criteria4:E3 Criteria5:E9
+E1	Criteria-Count:T1 Min-Value:E8 Criteria:E4 Criteria2:E5 Criteria3:T30 Criteria4:E3 Criteria5:E9 Criteria6:E10 Criteria7:E11 Criteria8:E15 Criteria9:E16
 T2	Risk 68 80	risk factors
 E2	Risk:T2 Risk-For:E4
 T4	Condition 85 104	atrial fibrillation
@@ -17,9 +17,9 @@ E11	Condition:T11 Name:T34
 T12	Observation 240 255	body mass index
 E12	Observation:T12 Name:T35
 T13	Observation 257 260	BMI
-E13	Observation:T13 Name:T36
+E13	Observation:T13 Name:T36 Eq-Comparison:E14
 T14	Eq-Comparison 262 271	>30 kg/m2
-E14	Eq-Comparison:T14 Operator:T37 Value:T38 Unit:T39 Unit:T40
+E14	Eq-Comparison:T14 Operator:T37 Value:T38 Unit:T39 Per:T40
 T15	Condition 278 290	hypertension
 E15	Condition:T15 Name:T41
 T16	Condition 296 320	congestive heart failure
@@ -27,21 +27,17 @@ E16	Condition:T16 Name:T42
 T17	Eq-Comparison 346 351	prior
 E17	Eq-Comparison:T17 Temporal-Period:T43
 T18	Condition 365 367	AF
-E18	Condition:T18 Name:T44
-T19	Eq-Comparison 373 383	continuous
-E19	Eq-Comparison:T19 
+E18	Condition:T18 Name:T44 Temporality:E17
 T20	Procedure 384 401	rhythm monitoring
-E20	Procedure:T20 
-T21	Eq-Comparison 402 420	over the past year
+E20	Procedure:T20 Name:T45
+T21	Eq-Comparison 411 420	past year
 E21	Eq-Comparison:T21 Temporal-Period:T46 Temporal-Unit:T47
 T22	Procedure 426 435	pacemaker
 E22	Procedure:T22 Name:T48
 T23	Or 436 438	or
-E23	Or:T23 
+E23	Or:T23 Arg:E22 Arg2:E24
 T24	Procedure 439 477	implantable cardioverter defibrillator
 E24	Procedure:T24 Name:T49
-T25	Procedure 481 485	situ
-E25	Procedure:T25 Name:T50
 T26	Eq-Operator 48 49	≥
 A1	Eq-Operator-Value T26 GTEQ
 T27	Condition-Name 85 104	atrial fibrillation
@@ -69,14 +65,13 @@ T42	Condition-Name 296 320	congestive heart failure
 T43	Eq-Temporal-Period 346 351	prior
 A8	Eq-Temporal-Period-Value T43 past
 T44	Condition-Name 365 367	AF
-T45	Procedure-Name 373 401	continuous rhythm monitoring
+T45	Procedure-Name 384 401	rhythm monitoring
 T46	Eq-Temporal-Period 411 415	past
 A9	Eq-Temporal-Period-Value T46 past
 T47	Eq-Temporal-Unit 416 420	year
 A10	Eq-Temporal-Unit-Value T47 year
 T48	Procedure-Name 426 435	pacemaker
 T49	Procedure-Name 439 477	implantable cardioverter defibrillator
-T50	Procedure-Name 481 485	situ
 T8	Location 20 32	Nursing home
 A11	Location-Value T8 residence
 T51	Eq-Comparison 48 50	≥2
@@ -89,3 +84,11 @@ T7	Condition 146 169	obstructive sleep apnea
 E3	Condition:T7 Name:T31
 R3	Example-Of Arg1:E3 Arg2:E4	
 R4	Example-Of Arg1:E9 Arg2:E4	
+R5	Abbrev-Of Arg1:E13 Arg2:E12	
+T19	Temporal-Connection 402 406	over
+E7	Temporal-Connection:T19 Arg:E20 Arg2:E21
+A12	Temporal-Connection-Type-Value E7 during
+T53	Modifier 373 383	continuous
+E19	Modifier:T53 Modifies:T45
+T25	Modifier 478 485	in situ
+E25	Modifier:T25 Modifies:T49

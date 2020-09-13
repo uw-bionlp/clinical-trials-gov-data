@@ -1,37 +1,29 @@
 T1	Or 29 32	and
-E1	Or:T1 
+E1	Or:T1 Arg:T35 Arg2:T36
 T2	Age 39 43	aged
 E2	Age:T2 
 T3	Eq-Comparison 44 55	18-70 years
 E3	Eq-Comparison:T3 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
 T4	Observation 61 64	BMI
-E4	Observation:T4 Name:T41
+E4	Observation:T4 Name:T41 Eq-Comparison:E5
 T5	Eq-Comparison 65 78	18.5-50 kg/m2
 E5	Eq-Comparison:T5 Value:T42 Operator:T43 Value:T44 Unit:T45 Unit:T46
 T6	Negation 84 87	Not
-E6	Negation:T6 
+E6	Negation:T6 Negates:E8
 T7	Eq-Comparison 88 94	taking
 E7	Eq-Comparison:T7 Temporal-Period:T47
 T8	Drug 95 106	antibiotics
-E8	Drug:T8 Name:T48
+E8	Drug:T8 Name:T48 Temporality:E7
 T9	Or 107 110	and
-E9	Or:T9 
+E9	Or:T9 Arg:E8 Arg2:E10
 T10	Drug 111 130	antimicrobial drugs
-E10	Drug:T10 Name:T49
+E10	Drug:T10 Name:T49 Duration:E11
 T11	Eq-Comparison 135 156	at least three months
 E11	Eq-Comparison:T11 Operator:T50 Value:T51 Temporal-Unit:T52
-T12	Eq-Comparison 178 184	active
-E12	Eq-Comparison:T12 Temporal-Period:T53
 T13	Or 185 188	and
-E13	Or:T13 
+E13	Or:T13 Arg:E12 Arg2:E14
 T14	Condition 189 198	sedentary
-E14	Condition:T14 
-T15	Assertion 211 218	will be
-E15	Assertion:T15 
-A1	Assertion-Type-Value E15 hypothetical
-T16	Assertion 219 230	eligible to
-E16	Assertion:T16 
-A2	Assertion-Type-Value E16 hypothetical
+E14	Condition:T14 Name:T71
 T17	Study 248 253	study
 E17	Study:T17 
 T18	Eq-Comparison 274 278	±5kg
@@ -39,33 +31,33 @@ E18	Eq-Comparison:T18 Unit:T56
 T19	Eq-Comparison 284 301	at least 6 months
 E19	Eq-Comparison:T19 Operator:T57 Value:T58 Temporal-Unit:T59
 T20	Negation 326 328	No
-E20	Negation:T20 
+E20	Negation:T20 Negates:E21
 T21	Condition 329 344	cardiometabolic
 E21	Condition:T21 Name:T60
 T22	Condition 351 364	heart disease
 E22	Condition:T22 Name:T61
 T23	Condition 366 385	high blood pressure
-E23	Condition:T23 Name:T63
+E23	Condition:T23 Name:T63 Polarity:T62
 T24	Or 387 389	or
-E24	Or:T24 
+E24	Or:T24 Arg:E21 Arg2:E26
 T25	Modifier 390 402	inflammatory
-E25	Modifier:T25 
+E25	Modifier:T25 Modifies:E26
 T26	Condition 403 410	illness
-E26	Condition:T26 
+E26	Condition:T26 Name:T64
 T27	Condition 416 423	Smokers
 E27	Condition:T27 Name:T65
 T28	Drug 446 456	vaporisers
 E28	Drug:T28 Name:T66
 T29	Or 457 460	and
-E29	Or:T29 
+E29	Or:T29 Arg:E28 Arg2:E30
 T30	Drug 461 473	e-cigarettes
 E30	Drug:T30 Name:T67
 T31	Eq-Comparison 480 486	Taking
 E31	Eq-Comparison:T31 Temporal-Period:T68
 T32	Drug 487 510	anti-inflammatory drugs
-E32	Drug:T32 Name:T69
+E32	Drug:T32 Name:T69 Temporality:E31
 T33	Exception 512 521	excluding
-E33	Exception:T33 
+E33	Exception:T33 Except:E34 From:E32
 T34	Drug 522 529	aspirin
 E34	Drug:T34 Name:T70
 T35	Life-Stage-And-Gender 25 28	Men
@@ -95,8 +87,6 @@ A10	Eq-Operator-Value T50 GTEQ
 T51	Eq-Value 144 149	three
 T52	Eq-Temporal-Unit 150 156	months
 A11	Eq-Temporal-Unit-Value T52 month
-T53	Eq-Temporal-Period 178 184	active
-A12	Eq-Temporal-Period-Value T53 present
 T54	Stability 266 272	stable
 A13	Stability-Value T54 stable
 T55	Observation-Name 274 276	±5
@@ -119,3 +109,16 @@ T68	Eq-Temporal-Period 480 486	Taking
 A17	Eq-Temporal-Period-Value T68 present
 T69	Drug-Name 487 510	anti-inflammatory drugs
 T70	Drug-Name 522 529	aspirin
+R1	Equivalent-To Arg1:E2 Arg2:E3	
+T12	Condition 167 184	physically active
+E12	Condition:T12 Name:T53
+T53	Condition-Name 167 184	physically active
+T71	Condition-Name 189 198	sedentary
+T15	Observation 259 265	Weight
+E15	Observation:T15 Name:T16 Stability:T54 Eq-Comparison:E18 Duration:E19
+T16	Observation-Name 259 265	Weight
+A1	Observation-Type-Value T16 measurement
+R2	Example-Of Arg1:E22 Arg2:E21	
+R3	Example-Of Arg1:E23 Arg2:E21	
+R4	Example-Of Arg1:E28 Arg2:E27	
+R5	Example-Of Arg1:E30 Arg2:E27	

@@ -1,19 +1,18 @@
 T1	Condition 25 49	Type 2 diabetes mellitus
 E1	Condition:T1 Name:T6
-T2	Eq-Comparison 50 52	on
-E2	Eq-Comparison:T2 Temporal-Period:T7
 T3	Drug 53 62	metformin
-E3	Drug:T3 
+E3	Drug:T3 Name:T8
 T4	Procedure 63 70	therapy
-E4	Procedure:T4 
+E4	Procedure:T4 Name:T2 Duration:E5
 T5	Eq-Comparison 75 92	at least 3 months
 E5	Eq-Comparison:T5 Operator:T9 Value:T10 Temporal-Unit:T11
 T6	Condition-Name 25 49	Type 2 diabetes mellitus
-T7	Eq-Temporal-Period 50 52	on
-A1	Eq-Temporal-Period-Value T7 present
-T8	Drug-Name 53 70	metformin therapy
+T8	Drug-Name 53 62	metformin
 T9	Eq-Operator 75 83	at least
 A2	Eq-Operator-Value T9 GTEQ
 T10	Eq-Value 84 85	3
 T11	Eq-Temporal-Unit 86 92	months
 A3	Eq-Temporal-Unit-Value T11 month
+T2	Procedure-Name 63 70	therapy
+R1	Using Arg1:E4 Arg2:E3	
+R2	Treatment-For Arg1:E4 Arg2:E1	
