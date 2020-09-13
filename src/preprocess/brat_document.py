@@ -409,7 +409,7 @@ class BratDocument:
                             }
                             sent['relations'].append(rel)
 
-            pad_back, pad_forw = 10, 3
+            pad_back, pad_forw = 10, 10
             for ent1 in sent['entities']:
                 ent1_idxs = range(ent1.tok_beg_idx, ent1.tok_end_idx+1, 1)
                 for ent2 in sent['entities']:
@@ -447,6 +447,7 @@ class BratDocument:
                     
                     # Else 'Other' relation
                     else:
+                        continue
                         is_other = True
                         subj_start = ent1.tok_beg_idx
                         subj_end = ent1.tok_end_idx
@@ -476,15 +477,26 @@ class BratDocument:
                         foll = foll[:min(first_foll_newline)]
 
                     if subject_first:
-                        new_tokens = prec + ["[E11]"] + [subj_type] + ["[E12]"] + \
-                                     tokens[subj_end+1:obj_start] + ["[E21]"] + [obj_type] + ["[E22]"] + foll
-                        if " ".join(tokens[subj_start:subj_end+1]) != rel['subj'].span:
-                            continue
+                        new_tokens = prec + ["[E11]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
+                                     tokens[subj_end+1:obj_start] + ["[E21]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E22]"] + foll
+                        if not is_other:
+                            if " ".join(tokens[subj_start:subj_end+1]) != rel['subj'].span:
+                                continue
+                        if is_other:
+                            if " ".join(tokens[subj_start:subj_end+1]) != ent1.span:
+                                continue
                     else:
-                        new_tokens = prec + ["[E11]"] + [obj_type] + ["[E12]"] + \
-                                     tokens[obj_end+1:subj_start] + ["[E21]"] + [subj_type] + ["[E22]"] + foll
-                        if " ".join(tokens[obj_start:obj_end+1]) != rel['obj'].span:
-                            continue
+                        new_tokens = prec + ["[E11]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E12]"] + \
+                                     tokens[obj_end+1:subj_start] + ["[E21]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E22]"] + foll
+                        if not is_other:
+                            if " ".join(tokens[obj_start:obj_end+1]) != rel['obj'].span:
+                                continue
+                        if is_other:
+                            if " ".join(tokens[obj_start:obj_end+1]) != ent2.span:
+                                continue
+
+                    if len(new_tokens) > 100:
+                        continue
 
                     """
                     if subject_first:
