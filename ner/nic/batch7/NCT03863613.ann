@@ -1,21 +1,19 @@
 T1	And 31 35	with
-E1	And:T1
+E1	And:T1 Arg:T56 Arg2:E3
 T2	Modifier 38 42	twin
-E2	Modifier:T2
+E2	Modifier:T2 Modifies:T57
 T3	Condition 43 52	pregnancy
 E3	Condition:T3 Name:T57
 T4	Modifier 54 59	mono-
-E4	Modifier:T4
+E4	Modifier:T4 Modifies:T57
 T5	Or 60 63	and
-E5	Or:T5
+E5	Or:T5 Arg:E4 Arg2:E6
 T6	Modifier 64 76	di-chorionic
-E6	Modifier:T6
-T7	Eq-Comparison 80 105	- 16 0/7 to 22 0/7 weeks
-E7	Eq-Comparison:T7 Value:T59 Unit:T60 Operator:T61 Value:T62 Unit:T63 Temporal-Unit:T64
+E6	Modifier:T6 Modifies:T57
 T8	Observation 109 118	gestation
 E8	Observation:T8 Name:T65
 T9	Age 133 136	age
-E9	Age:T9
+E9	Age:T9 
 T10	Eq-Comparison 137 144	≥18 yrs
 E10	Eq-Comparison:T10 Operator:T66 Value:T67
 T11	Observation 150 165	Cervical length
@@ -23,97 +21,89 @@ E11	Observation:T11 Name:T68
 T12	Eq-Comparison 166 172	≤28 mm
 E12	Eq-Comparison:T12 Operator:T69 Unit:T70
 T13	Negation 200 203	Not
-E13	Negation:T13
+E13	Negation:T13 
 T14	Other 221 228	another
-E14	Other:T14
+E14	Other:T14 
 T15	Condition 229 236	preterm
-E15	Condition:T15
+E15	Condition:T15 
 T16	Birth 237 242	birth
-E16	Birth:T16
+E16	Birth:T16 
 T17	Study 243 248	study
-E17	Study:T17
+E17	Study:T17 
 T18	Condition 291 308	Uterine anomalies
 E18	Condition:T18 Name:T71
 T19	Condition 314 331	Cervical dilation
 E19	Condition:T19 Name:T72
 T20	And 332 336	with
-E20	And:T20
+E20	And:T20 
 T21	Condition 337 363	visible amniotic membranes
 E21	Condition:T21 Name:T73
 T22	Or 364 366	or
-E22	Or:T22
+E22	Or:T22 
 T23	Condition 367 395	amniotic membranes prolapsed
 E23	Condition:T23 Name:T74
 T24	Modifier 396 411	into the vagina
-E24	Modifier:T24
+E24	Modifier:T24 
 T25	Modifier 417 429	Twin-to-twin
-E25	Modifier:T25
+E25	Modifier:T25 
 T26	Condition 430 450	transfusion syndrome
 E26	Condition:T26 Name:T75
 T27	Condition 456 466	Stillbirth
 E27	Condition:T27 Name:T76
 T28	Or 467 469	or
-E28	Or:T28
+E28	Or:T28 
 T29	Modifier 470 475	major
-E29	Modifier:T29
+E29	Modifier:T29 
 T30	Condition 476 500	congenital abnormalities
 E30	Condition:T30 Name:T78
 T31	Condition 515 520	fetus
 E31	Condition:T31 Name:T79
 T32	Procedure 533 550	vaginal discharge
-E32	Procedure:T32
+E32	Procedure:T32 
 T33	Condition 562 571	vaginitis
 E33	Condition:T33 Name:T83
 T34	Or 572 574	or
-E34	Or:T34
+E34	Or:T34 
 T35	Modifier 575 585	cervicitis
-E35	Modifier:T35
-T36	Modifier 588 598	- Vaginal
-E36	Modifier:T36
+E35	Modifier:T35 
 T37	Condition 599 607	bleeding
-E37	Condition:T37
+E37	Condition:T37 
 T38	Condition 613 630	Placental preavia
 E38	Condition:T38 Name:T86
 T39	Condition 636 648	Vasa preavia
 E39	Condition:T39 Name:T87
 T40	Condition 654 671	Premature rupture
-E40	Condition:T40
+E40	Condition:T40 
 T41	Modifier 675 684	membranes
-E41	Modifier:T41
-T42	Modifier 687 699	- Premature
-E42	Modifier:T42
+E41	Modifier:T41 
 T43	Condition 700 705	labor
-E43	Condition:T43
+E43	Condition:T43 
 T44	And 710 711	/
-E44	And:T44
+E44	And:T44 
 T45	Negation 711 718	without
-E45	Negation:T45
+E45	Negation:T45 
 T46	Condition 719 736	ruptured membrane
 E46	Condition:T46 Name:T90
 T47	Assertion 742 751	Suspicion
-E47	Assertion:T47
+E47	Assertion:T47 
 A1	Assertion-Type-Value E47 possible
 T48	Condition 755 771	chorioamnionitis
 E48	Condition:T48 Name:T91
-T49	Condition 774 785	- Cerclage
-E49	Condition:T49
 T50	Modifier 789 794	place
-E50	Modifier:T50
+E50	Modifier:T50 
 T51	Or 795 797	or
-E51	Or:T51
+E51	Or:T51 
 T52	Negation 798 804	unable
-E52	Negation:T52
+E52	Negation:T52 
 T53	Procedure 816 833	cervical cerclage
-E53	Procedure:T53
+E53	Procedure:T53 
 T54	Or 834 836	or
-E54	Or:T54
+E54	Or:T54 
 T55	Modifier 837 844	pessary
-E55	Modifier:T55
+E55	Modifier:T55 
 T56	Life-Stage-And-Gender 25 30	Women
 A2	Life-Stage-And-Gender-Type T56 female
 T57	Condition-Name 43 52	pregnancy
-T58	Observation-Name 67 76	chorionic
-A3	Observation-Type-Value T58 lab
 T59	Eq-Value 83 85	16
 T60	Eq-Unit 86 89	0/7
 T61	Eq-Operator 90 92	to
@@ -156,3 +146,5 @@ T89	Condition-Name 690 705	Premature labor
 T90	Condition-Name 719 736	ruptured membrane
 T91	Condition-Name 755 771	chorioamnionitis
 T92	Condition-Name 816 833	cervical cerclage
+T7	Eq-Comparison 83 105	16 0/7 to 22 0/7 weeks
+E7	Eq-Comparison:T7 
