@@ -1,66 +1,66 @@
 T1	Modifier 63 94	locoregional oral squamous cell
-E1	Modifier:T1
+E1	Modifier:T1 Modifies:T53
 T2	Condition 95 104	carcinoma
-E2	Condition:T2
+E2	Condition:T2 Name:T53 Temporality:E53
 T3	Condition 106 110	OSCC
 E3	Condition:T3 Name:T54
 T4	Negation 112 119	without
-E4	Negation:T4
+E4	Negation:T4 Negates:E6
 T5	Modifier 132 139	distant
-E5	Modifier:T5
+E5	Modifier:T5 Modifies:T55
 T6	Condition 140 150	metastases
 E6	Condition:T6 Name:T55
 T7	Condition 152 156	OSCC
-E7	Condition:T7
+E7	Condition:T7 Name:T79
 T8	Modifier 170 193	subsites of oral tongue
-E8	Modifier:T8
+E8	Modifier:T8 
 T9	Modifier 195 209	floor of mouth
-E9	Modifier:T9
+E9	Modifier:T9 
 T10	Modifier 211 218	gingiva
-E10	Modifier:T10
+E10	Modifier:T10 
 T11	Modifier 220 238	retromolar trigone
-E11	Modifier:T11
+E11	Modifier:T11 
 T12	Or 239 242	and
-E12	Or:T12
+E12	Or:T12 
 T13	Modifier 243 256	buccal mucosa
-E13	Modifier:T13
+E13	Modifier:T13 
 T14	Or 257 259	OR
-E14	Or:T14
+E14	Or:T14 
 T15	Modifier 260 269	Recurrent
-E15	Modifier:T15
+E15	Modifier:T15 
 T16	Or 270 272	or
-E16	Or:T16
+E16	Or:T16 
 T17	Modifier 273 283	persistent
-E17	Modifier:T17
+E17	Modifier:T17 
 T18	Modifier 306 318	locoregional
-E18	Modifier:T18
+E18	Modifier:T18 
 T19	Condition 319 323	OSCC
-E19	Condition:T19
+E19	Condition:T19 
 T20	Eq-Comparison 333 342	initially
-E20	Eq-Comparison:T20
+E20	Eq-Comparison:T20 
 T21	Procedure 343 350	treated
-E21	Procedure:T21
+E21	Procedure:T21 
 T22	Procedure 356 363	surgery
 E22	Procedure:T22 Name:T59
 T23	Assertion 384 396	eligible for
-E23	Assertion:T23
+E23	Assertion:T23 
 A1	Assertion-Type-Value E23 hypothetical
 T24	Procedure 397 415	surgical resection
 E24	Procedure:T24 Name:T60
 T25	Eq-Comparison 421 442	greater than 18 years
 E25	Eq-Comparison:T25 Operator:T61 Value:T62 Temporal-Unit:T63
 T26	Age 446 449	age
-E26	Age:T26
+E26	Age:T26 
 T27	Eq-Comparison 475 480	prior
 E27	Eq-Comparison:T27 Temporal-Period:T64
 T28	Procedure 481 494	immunotherapy
 E28	Procedure:T28 Name:T65
 T29	Or 495 497	or
-E29	Or:T29
+E29	Or:T29 
 T30	Procedure 498 507	treatment
-E30	Procedure:T30
+E30	Procedure:T30 
 T31	Other 513 520	another
-E31	Other:T31
+E31	Other:T31 
 T32	Drug 521 536	anti PD-1 agent
 E32	Drug:T32 Name:T66
 T33	Drug 545 554	nivolumab
@@ -70,40 +70,40 @@ E34	Eq-Comparison:T34 Temporal-Period:T68
 T35	Procedure 566 578	chemotherapy
 E35	Procedure:T35 Name:T69
 T36	Drug 589 598	cetuximab
-E36	Drug:T36
+E36	Drug:T36 
 T37	Or 599 601	or
-E37	Or:T37
+E37	Or:T37 
 T38	Procedure 602 619	radiation therapy
 E38	Procedure:T38 Name:T71
 T39	Condition 625 649	concomitant malignancies
-E39	Condition:T39
+E39	Condition:T39 
 T40	Exception 650 656	except
-E40	Exception:T40
+E40	Exception:T40 
 T41	Modifier 657 680	cutaneous squamous cell
-E41	Modifier:T41
+E41	Modifier:T41 
 T42	Condition 681 690	carcinoma
-E42	Condition:T42
+E42	Condition:T42 
 T43	Or 691 693	or
-E43	Or:T43
+E43	Or:T43 
 T44	Modifier 694 704	basal cell
-E44	Modifier:T44
+E44	Modifier:T44 
 T45	Condition 705 714	carcinoma
-E45	Condition:T45
+E45	Condition:T45 
 T46	Modifier 720 740	unresectable primary
-E46	Modifier:T46
+E46	Modifier:T46 
 T47	Condition 741 746	tumor
 E47	Condition:T47 Name:T74
 T48	Or 747 749	or
-E48	Or:T48
+E48	Or:T48 
 T49	Condition 750 766	regional disease
 E49	Condition:T49 Name:T75
 T50	Or 767 769	or
-E50	Or:T50
+E50	Or:T50 
 T51	Modifier 770 777	distant
-E51	Modifier:T51
+E51	Modifier:T51 
 T52	Condition 778 788	metastases
 E52	Condition:T52 Name:T76
-T53	Condition-Name 81 104	squamous cell carcinoma
+T53	Condition-Name 95 104	carcinoma
 T54	Condition-Name 106 110	OSCC
 T55	Condition-Name 140 150	metastases
 T56	Condition-Name 182 193	oral tongue
@@ -131,3 +131,9 @@ T73	Condition-Name 694 714	basal cell carcinoma
 T74	Condition-Name 741 746	tumor
 T75	Condition-Name 750 766	regional disease
 T76	Condition-Name 778 788	metastases
+T77	Eq-Comparison 25 30	Newly
+E53	Eq-Comparison:T77 Temporal-Recency:T78
+T78	Eq-Temporal-Recency 25 30	Newly
+A6	Eq-Temporal-Recency-Value T78 first-time
+R1	Example-Of Arg1:E3 Arg2:E2	
+T79	Condition-Name 152 156	OSCC
