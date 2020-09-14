@@ -1,36 +1,36 @@
 T1	Eq-Comparison 37 40	≥18
-E1	Eq-Comparison:T1
+E1	Eq-Comparison:T1 
 T2	Procedure 60 71	colonoscopy
 E2	Procedure:T2 Name:T34
 T3	And 72 75	and
-E3	And:T3
+E3	And:T3 
 T4	Eq-Comparison 138 143	≥20mm
 E4	Eq-Comparison:T4 Operator:T35 Unit:T36
 T5	Modifier 144 160	non-pedunculated
-E5	Modifier:T5
+E5	Modifier:T5 
 T6	Procedure 161 177	colorectal polyp
-E6	Procedure:T6
+E6	Procedure:T6 
 T7	Condition 203 222	Pedunculated polyps
 E7	Condition:T7 Name:T38
 T8	Modifier 259 269	type Ip)32
-E8	Modifier:T8
+E8	Modifier:T8 
 T9	Assertion 275 284	Suspected
-E9	Assertion:T9
+E9	Assertion:T9 
 A1	Assertion-Type-Value E9 possible
 T10	Condition 285 299	adenocarcinoma
 E10	Condition:T10 Name:T39
 T11	Modifier 305 309	deep
-E11	Modifier:T11
+E11	Modifier:T11 
 T12	Condition 310 329	submucosal invasion
-E12	Condition:T12
+E12	Condition:T12 
 T13	Modifier 349 368	ulcerated depressed
-E13	Modifier:T13
+E13	Modifier:T13 
 T14	Condition 369 376	lesions
-E14	Condition:T14
+E14	Condition:T14 
 T15	Modifier 413 424	type III)32
-E15	Modifier:T15
+E15	Modifier:T15 
 T16	Or 425 427	or
-E16	Or:T16
+E16	Or:T16 
 T17	Condition 438 452	adenocarcinoma
 E17	Condition:T17 Name:T43
 T18	Condition 472 498	inflammatory bowel disease
@@ -38,7 +38,7 @@ E18	Condition:T18 Name:T44
 T19	Eq-Comparison 521 530	receiving
 E19	Eq-Comparison:T19 Temporal-Period:T45
 T20	Encounter 534 543	emergency
-E20	Encounter:T20
+E20	Encounter:T20 
 T21	Procedure 544 555	colonoscopy
 E21	Procedure:T21 Name:T46
 T22	Condition 561 580	Poor general health
@@ -48,22 +48,21 @@ E23	Condition:T23 Name:T48
 T24	Condition 614 626	coagulopathy
 E24	Condition:T24 Name:T49
 T25	Eq-Comparison 644 652	INR ≥1.5
-E25	Eq-Comparison:T25
+E25	Eq-Comparison:T25 
 T26	Or 654 656	or
-E26	Or:T26
+E26	Or:T26 
 T27	Observation 657 666	platelets
 E27	Observation:T27 Name:T51
 T28	Eq-Comparison 667 670	<50
 E28	Eq-Comparison:T28 Operator:T52 Value:T53
 T29	Procedure 687 704	bowel preparation
-E29	Procedure:T29
+E29	Procedure:T29 
 T30	Observation 706 729	Boston Bowel Prep Scale
 E30	Observation:T30 Name:T55
 T31	Eq-Comparison 731 748	total score ≤2)33
 E31	Eq-Comparison:T31 Value:T56
 T32	Condition 754 763	Pregnancy
 E32	Condition:T32 Name:T57
-T33	Condition-Name 37 40	≥18
 T34	Procedure-Name 60 71	colonoscopy
 T35	Eq-Operator 138 141	≥20
 A2	Eq-Operator-Value T35 GTEQ

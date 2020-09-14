@@ -1,171 +1,150 @@
 T1	Age 25 28	Age
-E1	Age:T1
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 30 49	older than 18 years
 E2	Eq-Comparison:T2 Operator:T83 Value:T84 Temporal-Unit:T85
 T3	Observation 60 64	ECOG
-E3	Observation:T3 Name:T86
+E3	Observation:T3 Name:T86 Eq-Comparison:E4
 T4	Eq-Comparison 85 87	0-
 E4	Eq-Comparison:T4 Value:T87 Operator:T88
 T5	Condition 114 119	HNSCC
 E5	Condition:T5 Name:T90
-T6	Condition 125 144	HPV negative tumors
-E6	Condition:T6 Name:T91
+T6	Condition 125 128	HPV
+E6	Condition:T6 Name:T91 Polarity:T94
 T7	Or 145 147	or
-E7	Or:T7
-T8	Condition 148 167	HPV positive tumors
-E8	Condition:T8 Name:T92 Name:T94
+E7	Or:T7 Arg:E6 Arg2:E8
+T8	Condition 148 151	HPV
+E8	Condition:T8 Name:T92 Polarity:T93
 T9	Eq-Comparison 173 182	Stage III
 E9	Eq-Comparison:T9 Unit:T95 Value:T96
-T10	Condition 184 187	IVA
-E10	Condition:T10
 T11	Or 188 190	or
-E11	Or:T11
+E11	Or:T11 Arg:E10 Arg2:E12
 T12	Modifier 191 194	IVB
-E12	Modifier:T12
+E12	Modifier:T12 Modifies:T97
 T13	Condition 195 200	HNSCC
-E13	Condition:T13
+E13	Condition:T13 Name:T97 Stage:E9
 T14	Modifier 264 276	irresectable
-E14	Modifier:T14
+E14	Modifier:T14 Modifies:T99
 T15	Or 277 279	or
-E15	Or:T15
+E15	Or:T15 Arg:E14 Arg2:E16
 T16	Modifier 288 298	inoperable
-E16	Modifier:T16
+E16	Modifier:T16 Modifies:T99
 T17	Or 299 301	or
-E17	Or:T17
-T18	Procedure 310 325	refused surgery
+E17	Or:T17 Arg:E84 Arg2:E85
+T18	Procedure 318 325	surgery
 E18	Procedure:T18 Name:T102
-T19	Procedure 331 346	Tumor extension
-E19	Procedure:T19 Name:T103
+T19	Condition 331 336	Tumor
+E19	Condition:T19 Name:T103
 T20	And 347 350	and
-E20	And:T20
-T21	Modifier 351 372	localization suitable
-E21	Modifier:T21
+E20	And:T20 Arg:E87 Arg2:E21
+T21	Modifier 351 363	localization
+E21	Modifier:T21 Modifies:T103
 T22	Procedure 377 394	radiochemotherapy
-E22	Procedure:T22
-T23	Procedure 400 415	curative intent
-E23	Procedure:T23 Name:T104
+E22	Procedure:T22 Name:T139
 T24	Modifier 421 442	Simultaneous standard
-E24	Modifier:T24
+E24	Modifier:T24 Modifies:T105
 T25	Procedure 443 455	chemotherapy
 E25	Procedure:T25 Name:T105
 T26	Drug 461 470	cisplatin
 E26	Drug:T26 Name:T106
 T27	Negation 483 485	no
-E27	Negation:T27
-T28	Drug 486 493	contra-
-E28	Drug:T28 Name:T107
-T29	Indication 493 504	indications
-E29	Indication:T29
-T30	Procedure 511 529	Dental examination
+E27	Negation:T27 Negates:E28
+T30	Procedure 511 517	Dental
 E30	Procedure:T30 Name:T108
 T31	And 530 533	and
-E31	And:T31
+E31	And:T31 Arg:E89 Arg2:E29
 T32	Temporal-Connection 545 551	before
-E32	Temporal-Connection:T32
+E32	Temporal-Connection:T32 Arg:E30 Arg2:E33
 A1	Temporal-Connection-Type-Value E32 before
 T33	Eq-Comparison 552 557	start
-E33	Eq-Comparison:T33
+E33	Eq-Comparison:T33 Temporal-Recency:T107
 T34	Procedure 561 568	therapy
-E34	Procedure:T34 Name:T109
+E34	Procedure:T34 Name:T109 Temporality:E33
 T35	And 584 588	with
-E35	And:T35
+E35	And:T35 Arg:T110 Arg2:E36
 T36	Condition 589 611	childbearing potential
 E36	Condition:T36 Name:T111
-T37	And 612 615	and
-E37	And:T37
+T37	Or 612 615	and
+E37	Or:T37 Arg:E36 Arg2:T112
 T38	Procedure 650 663	contraception
-E38	Procedure:T38 Name:T113
+E38	Procedure:T38 Name:T113 Polarity:T140
 T39	Temporal-Connection 812 818	before
-E39	Temporal-Connection:T39
+E39	Temporal-Connection:T39 Arg:E40
 A2	Temporal-Connection-Type-Value E39 before
 T40	Study 836 841	trial
-E40	Study:T40
-T41	Study 912 917	trial
-E41	Study:T41
+E40	Study:T40 
 T42	Modifier 935 942	distant
-E42	Modifier:T42
+E42	Modifier:T42 Modifies:T114
 T43	Condition 943 953	metastases
-E43	Condition:T43 Name:T114
-T44	Procedure 955 969	UICC stage IVC
-E44	Procedure:T44
+E43	Condition:T43 Name:T114 Temporality:E41
+T44	Condition 955 959	UICC
+E44	Condition:T44 Name:T115 Stage:E92
 T45	Eq-Comparison 976 984	Previous
 E45	Eq-Comparison:T45 Temporal-Period:T116
 T46	Procedure 985 997	radiotherapy
-E46	Procedure:T46 Name:T117
+E46	Procedure:T46 Name:T117 Temporality:E45
 T47	Modifier 1005 1009	head
-E47	Modifier:T47
+E47	Modifier:T47 Modifies:T117
 T48	Or 1010 1013	and
-E48	Or:T48
+E48	Or:T48 Arg:E47 Arg2:E49
 T49	Modifier 1014 1018	neck
-E49	Modifier:T49
-T50	Modifier 1019 1025	region
-E50	Modifier:T50
-T51	Modifier 1028 1037	- Second
-E51	Modifier:T51
+E49	Modifier:T49 Modifies:T117
 T52	Condition 1038 1048	malignancy
-E52	Condition:T52 Name:T118
+E52	Condition:T52 Name:T118 Minimum-Count:E50
 T53	Assertion 1057 1066	likely to
-E53	Assertion:T53
+E53	Assertion:T53 Asserted:E54
 A3	Assertion-Type-Value E53 hypothetical
 T54	Procedure 1075 1084	treatment
-E54	Procedure:T54
+E54	Procedure:T54 
 T55	Temporal-Connection 1085 1091	during
-E55	Temporal-Connection:T55
+E55	Temporal-Connection:T55 Arg:E54 Arg2:E56
 A4	Temporal-Connection-Type-Value E55 during
-T56	Study 1096 1101	trial
-E56	Study:T56
-T57	Study 1102 1114	intervention
-E57	Study:T57
+T56	Study 1096 1114	trial intervention
+E56	Study:T56 
 T58	Or 1115 1117	or
-E58	Or:T58
+E58	Or:T58 Arg:E56 Arg2:E57
 T59	Risk 1196 1200	risk
-E59	Risk:T59
+E59	Risk:T59 Risk-For:E62 Severity:T120
 T60	Modifier 1204 1214	recurrence
-E60	Modifier:T60
+E60	Modifier:T60 Modifies:T121
 T61	Or 1215 1217	or
-E61	Or:T61
+E61	Or:T61 Arg:E60 Arg2:E62
 T62	Condition 1218 1228	metastases
 E62	Condition:T62 Name:T121
 T63	Encounter 1240 1249	follow-up
-E63	Encounter:T63
+E63	Encounter:T63 
 T64	Condition 1270 1277	disease
-E64	Condition:T64 Name:T124
+E64	Condition:T64 Name:T124 Severity:T123
 T65	Or 1278 1280	or
-E65	Or:T65
+E65	Or:T65 Arg:E64 Arg2:E66
 T66	Condition 1281 1298	medical condition
-E66	Condition:T66
+E66	Condition:T66 
 T67	And 1299 1303	with
-E67	And:T67
+E67	And:T67 Arg:E66 Arg2:E68
 T68	Observation 1304 1319	life expectancy
-E68	Observation:T68 Name:T125
+E68	Observation:T68 Name:T125 Eq-Comparison:E69
 T69	Eq-Comparison 1323 1341	less than one year
 E69	Eq-Comparison:T69 Operator:T126 Value:T127 Temporal-Unit:T128
 T70	Study 1374 1394	interventional trial
-E70	Study:T70
-T71	Procedure 1398 1414	cancer treatment
-E71	Procedure:T71
-T72	Negation 1437 1440	not
-E72	Negation:T72
-T73	Assertion 1441 1449	suitable
-E73	Assertion:T73
-A5	Assertion-Type-Value E73 hypothetical
-T74	Condition 1454 1471	radiochemotherapy
-E74	Condition:T74 Name:T130
+E70	Study:T70 Study-Of:E71
+T71	Procedure 1405 1414	treatment
+E71	Procedure:T71 
+T74	Procedure 1454 1471	radiochemotherapy
+E74	Procedure:T74 Name:T130
 T75	Condition 1477 1485	Pregnant
 E75	Condition:T75 Name:T131
 T76	Or 1486 1488	or
-E76	Or:T76
+E76	Or:T76 Arg:E75 Arg2:E77
 T77	Condition 1489 1498	lactating
 E77	Condition:T77 Name:T132
 T78	Negation 1519 1522	not
-E78	Negation:T78
+E78	Negation:T78 Negates:E79
 T79	Assertion 1523 1530	able to
-E79	Assertion:T79
+E79	Assertion:T79 Asserted:E80
 A6	Assertion-Type-Value E79 hypothetical
 T80	Risk 1571 1583	consequences
-E80	Risk:T80
+E80	Risk:T80 
 T81	Study 1591 1596	trial
-E81	Study:T81
+E81	Study:T81 
 T82	Condition 1602 1627	Nasopharyngeal Carcinomas
 E82	Condition:T82 Name:T135
 T83	Eq-Operator 30 40	older than
@@ -179,25 +158,18 @@ T88	Eq-Operator 86 87	-
 A9	Eq-Operator-Value T88 BETWEEN
 T89	Eq-Value 87 88	2
 T90	Condition-Name 114 119	HNSCC
-T91	Condition-Name 125 144	HPV negative tumors
+T91	Condition-Name 125 128	HPV
 T92	Condition-Name 148 151	HPV
 T93	Polarity 152 160	positive
 A10	Polarity-Value T93 positive
-T94	Condition-Name 161 167	tumors
 T95	Eq-Unit 173 178	Stage
 T96	Eq-Value 179 182	III
-T97	Eq-Value 184 187	IVA
-T98	Condition-Name 191 194	IVB
 T99	Condition-Name 244 249	Tumor
-T100	Condition-Name 264 276	irresectable
-T101	Condition-Name 288 298	inoperable
 T102	Procedure-Name 318 325	surgery
-T103	Procedure-Name 331 346	Tumor extension
-T104	Procedure-Name 400 415	curative intent
+T103	Condition-Name 331 336	Tumor
 T105	Procedure-Name 443 455	chemotherapy
 T106	Drug-Name 461 470	cisplatin
-T107	Drug-Name 486 492	contra
-T108	Procedure-Name 511 529	Dental examination
+T108	Procedure-Name 511 517	Dental
 T109	Procedure-Name 561 568	therapy
 T110	Life-Stage-And-Gender 578 583	women
 A11	Life-Stage-And-Gender-Type T110 female
@@ -206,17 +178,14 @@ T112	Life-Stage-And-Gender 616 619	men
 A12	Life-Stage-And-Gender-Type T112 male
 T113	Procedure-Name 650 663	contraception
 T114	Condition-Name 943 953	metastases
-T115	Condition-Name 955 969	UICC stage IVC
+T115	Condition-Name 955 959	UICC
 T116	Eq-Temporal-Period 976 984	Previous
 A13	Eq-Temporal-Period-Value T116 past
 T117	Procedure-Name 985 997	radiotherapy
 T118	Condition-Name 1038 1048	malignancy
-T119	Procedure-Name 1102 1114	intervention
 T120	Severity 1183 1195	considerable
 A14	Severity-Value T120 severe
 T121	Condition-Name 1218 1228	metastases
-T122	Eq-Operator 1229 1235	within
-A15	Eq-Operator-Value T122 LTEQ
 T123	Severity 1262 1269	Serious
 A16	Severity-Value T123 severe
 T124	Condition-Name 1270 1277	disease
@@ -227,10 +196,79 @@ T127	Eq-Value 1333 1336	one
 T128	Eq-Temporal-Unit 1337 1341	year
 A18	Eq-Temporal-Unit-Value T128 year
 T129	Condition-Name 1398 1404	cancer
-T130	Condition-Name 1454 1471	radiochemotherapy
+T130	Procedure-Name 1454 1471	radiochemotherapy
 T131	Condition-Name 1477 1485	Pregnant
 T132	Condition-Name 1489 1498	lactating
 T133	Life-Stage-And-Gender 1499 1504	women
 A19	Life-Stage-And-Gender-Type T133 female
-T134	Condition-Name 1523 1555	able to understand the character
 T135	Condition-Name 1602 1627	Nasopharyngeal Carcinomas
+T51	Modifier 161 167	tumors
+E51	Modifier:T51 Modifies:T92
+T94	Polarity 129 137	negative
+A20	Polarity-Value T94 negative
+T136	Modifier 138 144	tumors
+E83	Modifier:T136 Modifies:T91
+T10	Modifier 184 187	IVA
+E10	Modifier:T10 Modifies:T97
+T97	Condition-Name 195 200	HNSCC
+T98	Condition 244 249	Tumor
+E84	Condition:T98 Name:T99
+T100	Negation 310 317	refused
+E85	Negation:T100 Negates:E18
+T101	Assertion 310 317	refused
+E86	Assertion:T101 Asserted:E85
+A21	Assertion-Type-Value E86 hypothetical
+T137	Modifier 337 346	extension
+E87	Modifier:T137 Modifies:T103
+T138	Assertion 364 376	suitable for
+E88	Assertion:T138 Asserted:E22
+A22	Assertion-Type-Value E88 hypothetical
+T139	Procedure-Name 377 394	radiochemotherapy
+R1	Treatment-For Arg1:E22 Arg2:E19	
+R2	Using Arg1:E25 Arg2:E26	
+T23	Assertion 471 481	applicable
+E23	Assertion:T23 Asserted:E25
+A23	Assertion-Type-Value E23 hypothetical
+T28	Contraindication 486 504	contra-indications
+E28	Contraindication:T28 Contraindicates:E25
+T29	Modifier 535 544	treatment
+E29	Modifier:T29 Modifies:T108
+T104	Modifier 518 529	examination
+E89	Modifier:T104 Modifies:T108
+T107	Eq-Temporal-Recency 552 557	start
+A24	Eq-Temporal-Recency-Value T107 first-time
+T140	Polarity 641 649	adequate
+A25	Polarity-Value T140 normal
+T141	Condition 623 640	reproductive ages
+E90	Condition:T141 Name:T142
+T142	Condition-Name 623 640	reproductive ages
+T143	And 620 622	in
+E91	And:T143 Arg:T112 Arg2:E90
+T41	Eq-Comparison 923 931	Presence
+E41	Eq-Comparison:T41 Temporal-Period:T144
+T144	Eq-Temporal-Period 923 931	Presence
+A26	Eq-Temporal-Period-Value T144 present
+T145	Eq-Comparison 960 969	stage IVC
+E92	Eq-Comparison:T145 Unit:T146 Value:T147
+T146	Eq-Unit 960 965	stage
+T147	Eq-Value 966 969	IVC
+R3	Equivalent-To Arg1:E44 Arg2:E43	
+T50	Eq-Comparison 1031 1037	Second
+E50	Eq-Comparison:T50 Value:T148
+T148	Eq-Value 1031 1037	Second
+R4	Treatment-For Arg1:E54 Arg2:E52	
+T57	Encounter 1118 1127	follow-up
+E57	Encounter:T57 
+R5	Caused-By Arg1:E59 Arg2:E52	
+T119	Temporal-Connection 1229 1235	within
+E93	Temporal-Connection:T119 Arg:E62 Arg2:E63
+A15	Temporal-Connection-Type-Value E93 during
+T122	Other 1364 1373	competing
+E94	Other:T122 Is-Other:E70
+T149	Condition 1398 1404	cancer
+E95	Condition:T149 Name:T129
+R6	Treatment-For Arg1:E71 Arg2:E95	
+T72	Contraindication 1437 1449	not suitable
+E72	Contraindication:T72 Contraindicates:E74
+R7	If-Then Arg1:T133 Arg2:E77	
+R8	Caused-By Arg1:E80 Arg2:E81	
