@@ -1,30 +1,26 @@
 T1	Age 66 69	age
-E1	Age:T1
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 70 81	14-19 years
 E2	Eq-Comparison:T2 Value:T16 Operator:T17 Value:T18 Temporal-Unit:T19
-T3	Condition 87 95	sexually
-E3	Condition:T3 Name:T20
-T4	Eq-Comparison 96 134	active with males in the past 3 months
-E4	Eq-Comparison:T4 Temporal-Period:T21 Temporal-Period:T23 Value:T24 Temporal-Unit:T25
-T5	Eq-Comparison 160 169	currently
+T3	Condition 87 102	sexually active
+E3	Condition:T3 Name:T20 Temporality:E4
+T4	Eq-Comparison 121 134	past 3 months
+E4	Eq-Comparison:T4 Temporal-Period:T23 Value:T24 Temporal-Unit:T25
+T5	Eq-Comparison 160 175	currently using
 E5	Eq-Comparison:T5 Temporal-Period:T26
 T6	Procedure 198 211	contraception
-E6	Procedure:T6 Name:T28
-T7	Negation 220 223	not
-E7	Negation:T7
+E6	Procedure:T6 Name:T28 Temporality:E5
 T8	Condition 265 273	pregnant
-E8	Condition:T8 Name:T29
+E8	Condition:T8 Name:T29 Temporality:E7
 T9	Condition 346 366	cognitively impaired
-E9	Condition:T9 Name:T31
-T10	Negation 375 378	not
-E10	Negation:T10
+E9	Condition:T9 Name:T31 Temporality:E20
 T11	Negation 400 403	not
-E11	Negation:T11
+E11	Negation:T11 Negates:T32
 T12	Assertion 423 430	want to
-E12	Assertion:T12
-A1	Assertion-Type-Value E12 hypothetical
+E12	Assertion:T12 Asserted:E13
+A1	Assertion-Type-Value E12 intention
 T13	Condition 439 447	pregnant
-E13	Condition:T13 Name:T33
+E13	Condition:T13 Name:T33 Temporality:E14
 T14	Eq-Comparison 455 464	next year
 E14	Eq-Comparison:T14 Temporal-Period:T34 Temporal-Unit:T35
 T15	Life-Stage-And-Gender 25 31	female
@@ -35,20 +31,14 @@ A3	Eq-Operator-Value T17 BETWEEN
 T18	Eq-Value 73 75	19
 T19	Eq-Temporal-Unit 76 81	years
 A4	Eq-Temporal-Unit-Value T19 year
-T20	Condition-Name 87 95	sexually
-T21	Eq-Temporal-Period 96 102	active
-A5	Eq-Temporal-Period-Value T21 present
-T22	Life-Stage-And-Gender 108 113	males
-A6	Life-Stage-And-Gender-Type T22 male
+T20	Condition-Name 87 102	sexually active
 T23	Eq-Temporal-Period 121 125	past
 A7	Eq-Temporal-Period-Value T23 past
 T24	Eq-Value 126 127	3
 T25	Eq-Temporal-Unit 128 134	months
 A8	Eq-Temporal-Unit-Value T25 month
-T26	Eq-Temporal-Period 160 169	currently
+T26	Eq-Temporal-Period 160 175	currently using
 A9	Eq-Temporal-Period-Value T26 present
-T27	Eq-Temporal-Period 170 175	using
-A10	Eq-Temporal-Period-Value T27 present
 T28	Procedure-Name 198 211	contraception
 T29	Condition-Name 265 273	pregnant
 T30	Condition-Name 287 290	ill
@@ -59,3 +49,30 @@ T34	Eq-Temporal-Period 455 459	next
 A11	Eq-Temporal-Period-Value T34 future
 T35	Eq-Temporal-Unit 460 464	year
 A12	Eq-Temporal-Unit-Value T35 year
+T36	Encounter 32 52	emergency department
+E15	Encounter:T36 Type:T37
+T37	Encounter-Type 32 52	emergency department
+A13	Encounter-Type-Value T37 emergency
+T21	Modifier 103 113	with males
+E16	Modifier:T21 Modifies:T20
+T7	Eq-Comparison 261 264	are
+E7	Eq-Comparison:T7 Temporal-Period:T22
+T22	Eq-Temporal-Period 261 264	are
+A5	Eq-Temporal-Period-Value T22 present
+T27	Eq-Comparison 279 282	are
+E17	Eq-Comparison:T27 Temporal-Period:T38
+T38	Eq-Temporal-Period 279 282	are
+A6	Eq-Temporal-Period-Value T38 present
+T39	Condition 287 290	ill
+E18	Condition:T39 Name:T30 Provider:E19 Temporality:E17
+T40	Provider 317 336	attending physician
+E19	Provider:T40 Role:T41
+T41	Provider-Role 317 336	attending physician
+T42	Eq-Comparison 342 345	are
+E20	Eq-Comparison:T42 Temporal-Period:T43
+T43	Eq-Temporal-Period 342 345	are
+A10	Eq-Temporal-Period-Value T43 present
+T10	Location 384 391	locally
+A14	Location-Value T10 residence
+T44	Negation 375 378	not
+E10	Negation:T44 Negates:T10
