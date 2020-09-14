@@ -3,13 +3,13 @@ E1	Eq-Comparison:T1 Value:T19 Temporal-Unit:T20 Operator:T21
 T2	Eq-Comparison 55 65	previously
 E2	Eq-Comparison:T2 Temporal-Period:T22
 T3	Condition 81 87	asthma
-E3	Condition:T3
+E3	Condition:T3 Name:T34 Temporality:E2
 T4	Eq-Comparison 113 120	Current
 E4	Eq-Comparison:T4 Temporal-Period:T23
 T5	Condition 121 127	smoker
-E5	Condition:T5 Name:T24
+E5	Condition:T5 Name:T24 Temporality:E4
 T6	Other 152 157	other
-E6	Other:T6
+E6	Other:T6 Is-Other:E7
 T7	Condition 158 177	respiratory disease
 E7	Condition:T7 Name:T25
 T8	Condition 186 192	asthma
@@ -17,25 +17,25 @@ E8	Condition:T8 Name:T26
 T9	Eq-Comparison 198 207	Receiving
 E9	Eq-Comparison:T9 Temporal-Period:T27
 T10	Drug 208 211	OMM
-E10	Drug:T10 Name:T28
+E10	Drug:T10 Name:T28 Temporality:E9 Provider:E21
 T11	Procedure 239 261	chiropractic treatment
 E11	Procedure:T11 Name:T29
 T12	Or 263 265	or
-E12	Or:T12
+E12	Or:T12 Arg:E11 Arg2:E13
 T13	Procedure 266 281	massage therapy
-E13	Procedure:T13 Name:T30
+E13	Procedure:T13 Name:T30 Duration:E14
 T14	Eq-Comparison 286 293	30 days
 E14	Eq-Comparison:T14 Value:T31 Temporal-Unit:T32
 T15	Temporal-Connection 294 302	prior to
-E15	Temporal-Connection:T15
+E15	Temporal-Connection:T15 Arg:E14
 A1	Temporal-Connection-Type-Value E15 before
-T16	And 303 306	and
-E16	And:T16
+T16	Or 303 306	and
+E16	Or:T16 Arg:E15 Arg2:E17
 T17	Temporal-Connection 307 313	during
-E17	Temporal-Connection:T17
+E17	Temporal-Connection:T17 Arg:E18
 A2	Temporal-Connection-Type-Value E17 during
 T18	Study 318 323	study
-E18	Study:T18
+E18	Study:T18 
 T19	Eq-Value 25 27	18
 T20	Eq-Temporal-Unit 28 33	years
 A3	Eq-Temporal-Unit-Value T20 year
@@ -56,3 +56,11 @@ T30	Procedure-Name 266 281	massage therapy
 T31	Eq-Value 286 288	30
 T32	Eq-Temporal-Unit 289 293	days
 A8	Eq-Temporal-Unit-Value T32 day
+T33	Age 37 40	age
+E19	Age:T33 Eq-Comparison:E1
+T34	Condition-Name 81 87	asthma
+T35	Exception 178 185	besides
+E20	Exception:T35 From:E7 Except:E8
+T36	Provider 228 237	physician
+E21	Provider:T36 Role:T37
+T37	Provider-Role 228 237	physician

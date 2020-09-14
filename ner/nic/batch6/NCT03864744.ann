@@ -3,57 +3,57 @@ E1	Eq-Comparison:T1 Temporal-Period:T38
 T2	Procedure 47 67	total pancreatectomy
 E2	Procedure:T2 Name:T39
 T3	Or 68 70	or
-E3	Or:T3
+E3	Or:T3 
 T4	Procedure 71 94	pancreaticoduodenectomy
-E4	Procedure:T4
+E4	Procedure:T4 
 T5	Temporal-Connection 124 132	prior to
-E5	Temporal-Connection:T5
+E5	Temporal-Connection:T5 
 A1	Temporal-Connection-Type-Value E5 before
 T6	Study 137 142	study
-E6	Study:T6
+E6	Study:T6 
 T7	Procedure 151 160	procedure
-E7	Procedure:T7
+E7	Procedure:T7 
 T8	Condition 192 205	liver disease
 E8	Condition:T8 Name:T40
 T9	Temporal-Connection 206 212	before
-E9	Temporal-Connection:T9
+E9	Temporal-Connection:T9 
 A2	Temporal-Connection-Type-Value E9 before
 T10	Procedure 213 233	total pancreatectomy
-E10	Procedure:T10
+E10	Procedure:T10 
 T11	Or 234 236	or
-E11	Or:T11
+E11	Or:T11 
 T12	Drug 237 260	pancreaticoduodenectomy
-E12	Drug:T12
+E12	Drug:T12 
 T13	Exception 262 271	excluding
-E13	Exception:T13
+E13	Exception:T13 
 T14	Condition 272 277	NAFLD
-E14	Condition:T14
+E14	Condition:T14 
 T15	Condition 291 308	co-morbid disease
 E15	Condition:T15 Name:T44
 T16	Indication 327 337	indication
-E16	Indication:T16
+E16	Indication:T16 
 T17	Procedure 346 362	pancreas surgery
 E17	Procedure:T17 Name:T45
 T18	Condition 369 378	Pregnancy
 E18	Condition:T18 Name:T46
 T19	Condition 388 397	condition
-E19	Condition:T19
+E19	Condition:T19 
 T20	Assertion 426 431	would
-E20	Assertion:T20
+E20	Assertion:T20 
 A3	Assertion-Type-Value E20 hypothetical
 T21	Study 465 470	trial
-E21	Study:T21
+E21	Study:T21 
 T22	Procedure 551 563	liver biopsy
-E22	Procedure:T22
+E22	Procedure:T22 
 T23	Temporal-Connection 600 606	before
-E23	Temporal-Connection:T23
+E23	Temporal-Connection:T23 
 A4	Temporal-Connection-Type-Value E23 before
 T24	Eq-Comparison 607 611	last
-E24	Eq-Comparison:T24
+E24	Eq-Comparison:T24 
 T25	Encounter 612 617	visit
-E25	Encounter:T25
+E25	Encounter:T25 
 T26	Observation 627 667	spectroscopy demonstrating lipid content
-E26	Observation:T26
+E26	Observation:T26 
 T27	Eq-Comparison 668 671	<2%
 E27	Eq-Comparison:T27 Operator:T50 Value:T51 Unit:T52
 T28	Observation 677 688	Haemoglobin
@@ -69,13 +69,13 @@ E32	Observation:T32 Name:T61
 T33	Eq-Comparison 730 741	<40 × 109/L
 E33	Eq-Comparison:T33 Operator:T62 Value:T63 Unit:T64 Value:T65
 T34	Modifier 747 751	Skin
-E34	Modifier:T34
+E34	Modifier:T34 
 T35	Condition 752 761	infection
 E35	Condition:T35 Name:T66
 T36	Procedure 776 782	biopsy
 E36	Procedure:T36 Name:T67
 T37	Assertion 783 790	will be
-E37	Assertion:T37
+E37	Assertion:T37 
 A5	Assertion-Type-Value E37 hypothetical
 T38	Eq-Temporal-Period 33 42	scheduled
 A6	Eq-Temporal-Period-Value T38 future
