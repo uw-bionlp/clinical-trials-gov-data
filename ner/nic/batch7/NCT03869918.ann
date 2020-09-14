@@ -1,26 +1,26 @@
 T1	Age 37 40	age
-E1	Age:T1
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 41 50	60+ years
-E2	Eq-Comparison:T2 Value:T18 Temporal-Unit:T19
+E2	Eq-Comparison:T2 Value:T18 Temporal-Unit:T19 Operator:T36
 T3	Eq-Comparison 80 98	Moderate to severe
 E3	Eq-Comparison:T3 Operator:T21
 T4	Condition 99 102	UUI
-E4	Condition:T4 Name:T23
+E4	Condition:T4 Name:T23 Severity:T22
 T5	Observation 119 186	International Consultation on Incontinence Questionnaire Short Form
 E5	Observation:T5 Name:T24
 T6	Observation 197 214	physical activity
-E6	Observation:T6 Name:T26
-T7	Observation 216 233	Physical Activity
-E7	Observation:T7
+E6	Observation:T6 Name:T26 Polarity:T25
+T7	Observation 216 255	Physical Activity Staging questionnaire
+E7	Observation:T7 Name:T27
 T8	Assertion 274 281	able to
-E8	Assertion:T8
+E8	Assertion:T8 Asserted:E9
 A1	Assertion-Type-Value E8 hypothetical
 T9	Study 295 300	study
-E9	Study:T9
+E9	Study:T9 
 T10	Eq-Comparison 346 355	currently
 E10	Eq-Comparison:T10 Temporal-Period:T29
 T11	Drug 359 386	anti-cholinergic medication
-E11	Drug:T11 Name:T30
+E11	Drug:T11 Name:T30 Temporality:E10
 T12	Condition 391 411	urinary incontinence
 E12	Condition:T12 Name:T31
 T13	Condition 486 506	cognitive impairment
@@ -29,8 +29,6 @@ T14	Procedure 628 647	surgical management
 E14	Procedure:T14 Name:T34
 T15	Condition 653 665	osteoporosis
 E15	Condition:T15 Name:T35
-T16	Procedure 679 696	medical clearance
-E16	Procedure:T16
 T17	Life-Stage-And-Gender 25 31	female
 A2	Life-Stage-And-Gender-Type T17 female
 T18	Eq-Value 41 43	60
@@ -43,9 +41,9 @@ A5	Eq-Operator-Value T21 BETWEEN
 T22	Severity 92 98	severe
 A6	Severity-Value T22 severe
 T23	Condition-Name 99 102	UUI
-T24	Observation-Name 149 186	Incontinence Questionnaire Short Form
+T24	Observation-Name 119 186	International Consultation on Incontinence Questionnaire Short Form
 T25	Polarity 193 196	low
-A7	Polarity-Value T25 high
+A7	Polarity-Value T25 low
 T26	Observation-Name 197 214	physical activity
 A8	Observation-Type-Value T26 social-habit
 T27	Observation-Name 216 255	Physical Activity Staging questionnaire
@@ -59,3 +57,22 @@ T32	Condition-Name 486 506	cognitive impairment
 T33	Language 604 611	English
 T34	Procedure-Name 628 647	surgical management
 T35	Condition-Name 653 665	osteoporosis
+T36	Eq-Operator 43 44	+
+A11	Eq-Operator-Value T36 GTEQ
+T37	Location 56 74	community dwelling
+A12	Location-Value T37 residence
+A13	Observation-Type-Value T24 survey-or-questionnaire
+R1	Found-By Arg1:E4 Arg2:E5	
+A14	Observation-Type-Value T27 survey-or-questionnaire
+R2	Found-By Arg1:E6 Arg2:E7	
+T38	Condition 262 273	cognitively
+E17	Condition:T38 Name:T39
+T39	Condition-Name 262 273	cognitively
+R3	Treatment-For Arg1:E11 Arg2:E12	
+R4	If-Then Arg1:T28 Arg2:E11	
+T40	Assertion 617 627	desire for
+E18	Assertion:T40 Asserted:E14
+A15	Assertion-Type-Value E18 intention
+T16	Provider 706 715	physician
+E16	Provider:T16 Role:T41
+T41	Provider-Role 706 715	physician

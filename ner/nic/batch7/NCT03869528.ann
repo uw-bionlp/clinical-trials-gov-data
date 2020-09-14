@@ -1,40 +1,38 @@
 T1	Eq-Comparison 36 44	≥ 18 yrs
 E1	Eq-Comparison:T1 Operator:T23 Value:T24 Temporal-Unit:T25
 T2	Age 48 51	age
-E2	Age:T2
+E2	Age:T2 Eq-Comparison:E1
 T3	Eq-Comparison 52 62	undergoing
 E3	Eq-Comparison:T3 Temporal-Period:T26
 T4	Procedure 72 84	bronchoscopy
-E4	Procedure:T4 Name:T27
+E4	Procedure:T4 Name:T27 Temporality:E3
 T5	Modifier 110 122	Uncontrolled
-E5	Modifier:T5
+E5	Modifier:T5 Modifies:T28
 T6	Condition 123 135	hypertension
 E6	Condition:T6 Name:T28
 T7	Observation 136 159	Systolic Blood Pressure
-E7	Observation:T7 Name:T29
+E7	Observation:T7 Name:T29 Eq-Comparison:E8
 T8	Eq-Comparison 160 170	>180 mm Hg
 E8	Eq-Comparison:T8 Operator:T30 Value:T31 Unit:T32
 T9	Assertion 176 187	Symptomatic
-E9	Assertion:T9
+E9	Assertion:T9 Asserted:E10
 A1	Assertion-Type-Value E9 possible
 T10	Condition 188 211	coronary artery disease
 E10	Condition:T10 Name:T33
 T11	Condition 217 226	Pregnancy
 E11	Condition:T11 Name:T34
-T12	Procedure 268 277	procedure
-E12	Procedure:T12 Name:T35
 T13	Condition 283 292	Hypoxemia
 E13	Condition:T13 Name:T36
-T14	Procedure 294 311	oxygen saturation
-E14	Procedure:T14
+T14	Observation 294 311	oxygen saturation
+E14	Observation:T14 Name:T37 Eq-Comparison:E16
 T15	Procedure 316 330	pulse oximetry
 E15	Procedure:T15 Name:T38
 T16	Eq-Comparison 332 337	< 92%
 E16	Eq-Comparison:T16 Operator:T39 Value:T40 Unit:T41
 T17	And 338 342	with
-E17	And:T17
+E17	And:T17 Arg:E14 Arg2:E18
 T18	Observation 343 347	Fio2
-E18	Observation:T18 Name:T42
+E18	Observation:T18 Name:T42 Eq-Comparison:E19
 T19	Eq-Comparison 351 356	≥ 0.3
 E19	Eq-Comparison:T19 Operator:T43 Value:T44
 T20	Procedure 362 374	Bronchoscopy
@@ -57,13 +55,12 @@ A6	Observation-Type-Value T29 vital
 T30	Eq-Operator 160 161	>
 A7	Eq-Operator-Value T30 GT
 T31	Eq-Value 161 164	180
-T32	Eq-Unit 165 167	mm
+T32	Eq-Unit 165 170	mm Hg
 T33	Condition-Name 188 211	coronary artery disease
 T34	Condition-Name 217 226	Pregnancy
-T35	Procedure-Name 268 277	procedure
 T36	Condition-Name 283 292	Hypoxemia
 T37	Observation-Name 294 311	oxygen saturation
-A8	Observation-Type-Value T37 lab
+A8	Observation-Type-Value T37 vital
 T38	Procedure-Name 316 330	pulse oximetry
 T39	Eq-Operator 332 333	<
 A9	Eq-Operator-Value T39 LT
@@ -75,3 +72,12 @@ A10	Eq-Operator-Value T43 GTEQ
 T44	Eq-Value 353 356	0.3
 T45	Procedure-Name 362 374	Bronchoscopy
 T46	Procedure-Name 396 413	artificial airway
+T47	Modifier 63 71	flexible
+E22	Modifier:T47 Modifies:T27
+R1	Equivalent-To Arg1:E7 Arg2:E6	
+T12	Coreference 264 277	the procedure
+E12	Coreference:T12 Refers-To:E4
+R2	Using Arg1:E14 Arg2:E15	
+R3	Equivalent-To Arg1:E14 Arg2:E13	
+A11	Observation-Type-Value T42 vital
+R4	Using Arg1:E20 Arg2:E21	
