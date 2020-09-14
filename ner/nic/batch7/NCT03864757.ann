@@ -1,106 +1,95 @@
 T1	Or 30 33	and
-E1	Or:T1
+E1	Or:T1 Arg:T50 Arg2:T51
 T2	Eq-Comparison 50 73	between 18 and 80 years
 E2	Eq-Comparison:T2 Operator:T52 Value:T53 Value:T54 Temporal-Unit:T55
 T3	Modifier 94 103	permanent
-E3	Modifier:T3
+E3	Modifier:T3 Modifies:T56
 T4	Condition 104 108	UVFP
 E4	Condition:T4 Name:T56
 T5	And 109 112	and
-E5	And:T5
-T6	Negation 113 125	insufficient
-E6	Negation:T6
+E5	And:T5 Arg:E4 Arg2:E7
 T7	Condition 126 141	glottal closure
 E7	Condition:T7 Name:T57
 T8	And 142 145	and
-E8	And:T8
+E8	And:T8 Arg:E7 Arg2:E11
 T9	Eq-Comparison 146 153	planned
 E9	Eq-Comparison:T9 Temporal-Period:T58
-T10	Eq-Comparison 159 160	I
-E10	Eq-Comparison:T10 Value:T59
-T11	Condition 161 172	thyroplasty
-E11	Condition:T11
+T11	Procedure 161 172	thyroplasty
+E11	Procedure:T11 Name:T10 Temporality:E9
 T12	Procedure 178 198	conventional implant
 E12	Procedure:T12 Name:T60
 T13	Other 333 338	other
-E13	Other:T13
+E13	Other:T13 Is-Other:E14
 T14	Condition 351 358	disease
-E14	Condition:T14 Name:T62
+E14	Condition:T14 Name:T62 Severity:T61
 T15	Or 359 361	or
-E15	Or:T15
+E15	Or:T15 Arg:E14 Arg2:E16
 T16	Condition 362 370	disorder
 E16	Condition:T16 Name:T63
 T17	Assertion 414 417	may
-E17	Assertion:T17
+E17	Assertion:T17 Asserted:E18
 A1	Assertion-Type-Value E17 hypothetical
 T18	Risk 448 452	risk
-E18	Risk:T18
+E18	Risk:T18 
 T19	Assertion 508 511	may
-E19	Assertion:T19
+E19	Assertion:T19 Asserted:T64
 A2	Assertion-Type-Value E19 hypothetical
 T20	Study 624 637	investigation
-E20	Study:T20
+E20	Study:T20 Stability:T64
 T21	Eq-Comparison 643 652	Scheduled
 E21	Eq-Comparison:T21 Temporal-Period:T65
 T22	Procedure 662 669	surgery
-E22	Procedure:T22 Name:T66
+E22	Procedure:T22 Name:T66 Temporality:E21
 T23	Or 670 672	or
-E23	Or:T23
+E23	Or:T23 Arg:E22 Arg2:E25
 T24	Other 673 678	other
-E24	Other:T24
+E24	Other:T24 Is-Other:E25
 T25	Procedure 679 689	procedures
-E25	Procedure:T25
+E25	Procedure:T25 
 T26	Procedure 700 719	general anaesthesia
 E26	Procedure:T26 Name:T67
 T27	Temporal-Connection 720 726	during
-E27	Temporal-Connection:T27
+E27	Temporal-Connection:T27 Arg:E26 Arg2:E28
 A3	Temporal-Connection-Type-Value E27 during
-T28	Study 727 735	clinical
-E28	Study:T28
+T28	Study 736 749	investigation
+E28	Study:T28 
 T29	Procedure 759 784	medialization thyroplasty
-E29	Procedure:T29 Name:T68
-T30	Temporal-Connection 785 791	before
-E30	Temporal-Connection:T30
-A4	Temporal-Connection-Type-Value E30 before
-T31	Procedure 801 810	injection
-E31	Procedure:T31
+E29	Procedure:T29 Name:T68 Temporality:E30
 T32	Procedure 811 838	medialization laryngoplasty
-E32	Procedure:T32
+E32	Procedure:T32 Name:T69 Temporality:E33
 T33	Eq-Comparison 846 860	past two years
 E33	Eq-Comparison:T33 Temporal-Period:T70 Value:T71 Temporal-Unit:T72
-T34	Modifier 879 889	structural
-E34	Modifier:T34
-T35	Condition 890 908	vocal fold lesions
+T34	Modifier 879 900	structural vocal fold
+E34	Modifier:T34 Modifies:T73
+T35	Condition 901 908	lesions
 E35	Condition:T35 Name:T73
-T36	Modifier 917 922	polyp
-E36	Modifier:T36
+T36	Condition 917 922	polyp
+E36	Condition:T36 Name:T87
 T37	Or 923 925	or
-E37	Or:T37
-T38	Modifier 926 933	nodules
-E38	Modifier:T38
-T39	Modifier 936 945	- Status
-E39	Modifier:T39
+E37	Or:T37 Arg:E36 Arg2:E38
+T38	Condition 926 933	nodules
+E38	Condition:T38 Name:T88
 T40	Temporal-Connection 946 950	post
-E40	Temporal-Connection:T40
+E40	Temporal-Connection:T40 Arg:E41
 A5	Temporal-Connection-Type-Value E40 after
 T41	Procedure 951 967	total cordectomy
 E41	Procedure:T41 Name:T74
 T42	Eq-Comparison 973 981	Previous
 E42	Eq-Comparison:T42 Temporal-Period:T75
 T43	Procedure 982 1009	laryngeal framework surgery
-E43	Procedure:T43 Name:T76
-T44	Procedure 1015 1034	type of thyroplasty
+E43	Procedure:T43 Name:T76 Temporality:E42
+T44	Procedure 1023 1034	thyroplasty
 E44	Procedure:T44 Name:T77
 T45	Procedure 1036 1055	arytenoid adduction
-E45	Procedure:T45
-T46	Modifier 1074 1094	non-laryngeal speech
-E46	Modifier:T46
+E45	Procedure:T45 Name:T78
+T46	Modifier 1078 1087	laryngeal
+E46	Modifier:T46 Modifies:T80
 T47	Condition 1095 1106	abnormality
-E47	Condition:T47
+E47	Condition:T47 Name:T80 Severity:T79
 T48	Condition 1115 1125	dysarthria
-E48	Condition:T48 Name:T82
+E48	Condition:T48 Name:T82 Severity:T81 Provider:E53
 T49	Condition 1190 1202	coagulopathy
-E49	Condition:T49 Name:T84
+E49	Condition:T49 Name:T84 Severity:T83
 T50	Life-Stage-And-Gender 25 29	Male
 A6	Life-Stage-And-Gender-Type T50 male
 T51	Life-Stage-And-Gender 34 40	female
@@ -115,7 +104,6 @@ T56	Condition-Name 104 108	UVFP
 T57	Condition-Name 126 141	glottal closure
 T58	Eq-Temporal-Period 146 153	planned
 A10	Eq-Temporal-Period-Value T58 future
-T59	Eq-Value 159 160	I
 T60	Procedure-Name 178 198	conventional implant
 T61	Severity 339 350	significant
 A11	Severity-Value T61 severe
@@ -128,25 +116,58 @@ A13	Eq-Temporal-Period-Value T65 future
 T66	Procedure-Name 662 669	surgery
 T67	Procedure-Name 700 719	general anaesthesia
 T68	Procedure-Name 759 784	medialization thyroplasty
-T69	Procedure-Name 801 838	injection medialization laryngoplasty
+T69	Procedure-Name 811 838	medialization laryngoplasty
 T70	Eq-Temporal-Period 846 850	past
 A14	Eq-Temporal-Period-Value T70 past
 T71	Eq-Value 851 854	two
 T72	Eq-Temporal-Unit 855 860	years
 A15	Eq-Temporal-Unit-Value T72 year
-T73	Condition-Name 890 908	vocal fold lesions
+T73	Condition-Name 901 908	lesions
 T74	Procedure-Name 951 967	total cordectomy
 T75	Eq-Temporal-Period 973 981	Previous
 A16	Eq-Temporal-Period-Value T75 past
 T76	Procedure-Name 982 1009	laryngeal framework surgery
 T77	Procedure-Name 1023 1034	thyroplasty
-T78	Condition-Name 1036 1055	arytenoid adduction
+T78	Procedure-Name 1036 1055	arytenoid adduction
 T79	Severity 1062 1073	Significant
 A17	Severity-Value T79 severe
-T80	Condition-Name 1078 1106	laryngeal speech abnormality
+T80	Condition-Name 1095 1106	abnormality
 T81	Severity 1108 1114	severe
 A18	Severity-Value T81 severe
 T82	Condition-Name 1115 1125	dysarthria
 T83	Severity 1183 1189	Severe
 A19	Severity-Value T83 severe
 T84	Condition-Name 1190 1202	coagulopathy
+T39	Age 68 73	years
+E39	Age:T39 Eq-Comparison:E2
+T6	Modifier 113 125	insufficient
+E6	Modifier:T6 Modifies:T57
+T10	Procedure-Name 161 172	thyroplasty
+T59	Modifier 154 160	type I
+E10	Modifier:T59 Modifies:T10
+R1	Using Arg1:E11 Arg2:E12	
+R2	Caused-By Arg1:E18 Arg2:E16	
+R3	Caused-By Arg1:T64 Arg2:E16	
+T85	Modifier 653 661	elective
+E50	Modifier:T85 Modifies:T66
+R4	Using Arg1:E25 Arg2:E26	
+T30	Eq-Comparison 785 791	before
+E30	Eq-Comparison:T30 Temporal-Period:T86
+T86	Eq-Temporal-Period 785 791	before
+A4	Eq-Temporal-Period-Value T86 past
+T31	Modifier 801 810	injection
+E31	Modifier:T31 Modifies:T69
+T87	Condition-Name 917 922	polyp
+T88	Condition-Name 926 933	nodules
+R5	Example-Of Arg1:E36 Arg2:E35	
+R6	Example-Of Arg1:E38 Arg2:E35	
+R7	Example-Of Arg1:E44 Arg2:E43	
+R8	Example-Of Arg1:E45 Arg2:E43	
+T89	Negation 1074 1077	non
+E51	Negation:T89 Negates:E46
+T90	Modifier 1088 1094	speech
+E52	Modifier:T90 Modifies:T80
+T91	Provider 1159 1176	speech therapists
+E53	Provider:T91 Type:T92
+T92	Provider-Type 1159 1176	speech therapists
+R9	Equivalent-To Arg1:E48 Arg2:E47	

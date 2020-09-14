@@ -1,48 +1,53 @@
 T1	Condition 46 66	cognitive impairment
-E1	Condition:T1 Name:T13
-T2	Condition 68 71	MCI
-E2	Condition:T2 Name:T14
-T3	Or 73 75	or
-E3	Or:T3
-T4	Or 86 88	to
-E4	Or:T4
-T5	Condition 89 102	mild dementia
-E5	Condition:T5 Name:T17
-T6	Observation 104 107	CDR
-E6	Observation:T6 Name:T18
-T7	Eq-Comparison 113 117	0.5-
-E7	Eq-Comparison:T7 Value:T19 Operator:T20
-T8	Eq-Comparison 160 178	moderate to severe
-E8	Eq-Comparison:T8 Operator:T23
-T9	Condition 179 187	dementia
-E9	Condition:T9 Name:T25
-T10	Condition 189 192	CDR
-E10	Condition:T10 Name:T26
-T11	Eq-Comparison 193 195	2-
-E11	Eq-Comparison:T11 Value:T27 Operator:T28
-T12	Severity 41 45	mild
-A1	Severity-Value T12 mild
-T13	Condition-Name 46 66	cognitive impairment
-T14	Condition-Name 68 71	MCI
-T15	Severity 81 85	mild
-A2	Severity-Value T15 mild
-T16	Severity 89 93	mild
-A3	Severity-Value T16 severe
-T17	Condition-Name 94 102	dementia
-T18	Observation-Name 104 107	CDR
-T19	Eq-Value 113 116	0.5
-T20	Eq-Operator 116 117	-
-A4	Eq-Operator-Value T20 BETWEEN
-T21	Eq-Value 117 118	1
-T22	Severity 160 168	moderate
-A5	Severity-Value T22 moderate
-T23	Eq-Operator 169 171	to
-A6	Eq-Operator-Value T23 BETWEEN
-T24	Severity 172 178	severe
-A7	Severity-Value T24 severe
-T25	Condition-Name 179 187	dementia
-T26	Condition-Name 189 192	CDR
-T27	Eq-Value 193 194	2
-T28	Eq-Operator 194 195	-
-A8	Eq-Operator-Value T28 BETWEEN
-T29	Eq-Value 195 196	3
+E1	Condition:T1 Name:T2 Severity:T3
+T2	Condition-Name 46 66	cognitive impairment
+T3	Severity 41 45	mild
+A1	Severity-Value T3 mild
+T4	Condition 68 71	MCI
+E2	Condition:T4 Name:T5
+T5	Condition-Name 68 71	MCI
+R1	Abbrev-Of Arg1:E2 Arg2:E1	
+T6	Eq-Comparison 81 93	mild to mild
+E3	Eq-Comparison:T6 Value:T7 Value2:T8 Operator:T9
+T7	Severity 81 85	mild
+A2	Severity-Value T7 mild
+T8	Severity 89 93	mild
+A3	Severity-Value T8 mild
+T9	Eq-Operator 86 88	to
+A4	Eq-Operator-Value T9 BETWEEN
+T10	Condition 94 102	dementia
+E4	Condition:T10 Name:T11 Severity:T8
+T11	Condition-Name 94 102	dementia
+T12	Or 73 75	or
+E5	Or:T12 Arg:E2 Arg2:E4
+T13	Observation 104 107	CDR
+E6	Observation:T13 Name:T14 Eq-Comparison:E7
+T14	Observation-Name 104 107	CDR
+T15	Eq-Comparison 108 113	0.5-1
+E7	Eq-Comparison:T15 Value:T16 Operator:T17 Value2:T18
+T16	Eq-Value 108 111	0.5
+T17	Eq-Operator 111 112	-
+A5	Eq-Operator-Value T17 BETWEEN
+T18	Eq-Value 112 113	1
+R2	Equivalent-To Arg1:E6 Arg2:E4	
+T19	Eq-Comparison 155 173	moderate to severe
+E8	Eq-Comparison:T19 Value:T20 Operator:T21 Value2:T22
+T20	Severity 155 163	moderate
+A6	Severity-Value T20 moderate
+T21	Eq-Operator 164 166	to
+A7	Eq-Operator-Value T21 BETWEEN
+T22	Severity 167 173	severe
+A8	Severity-Value T22 severe
+T23	Condition 174 182	dementia
+E9	Condition:T23 Name:T24 Severity:T22
+T24	Condition-Name 174 182	dementia
+T25	Observation 184 187	CDR
+E10	Observation:T25 Name:T26 Eq-Comparison:E11
+T26	Observation-Name 184 187	CDR
+T27	Eq-Comparison 188 191	2-3
+E11	Eq-Comparison:T27 Value:T28 Operator:T29 Value2:T30
+T28	Eq-Value 188 189	2
+T29	Eq-Operator 189 190	-
+A9	Eq-Operator-Value T29 BETWEEN
+T30	Eq-Value 190 191	3
+R3	Equivalent-To Arg1:E10 Arg2:E9	

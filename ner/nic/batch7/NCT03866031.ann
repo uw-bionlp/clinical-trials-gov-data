@@ -1,78 +1,64 @@
-T1	Assertion 37 46	should be
-E1	Assertion:T1
-A1	Assertion-Type-Value E1 hypothetical
-T2	Negation 47 57	completely
-E2	Negation:T2
-T3	Procedure 58 68	edentulous
-E3	Procedure:T3
+T3	Condition 58 68	edentulous
+E3	Condition:T3 Name:T39 Duration:E4
 T4	Eq-Comparison 73 90	at least 6 months
 E4	Eq-Comparison:T4 Operator:T40 Value:T41 Temporal-Unit:T42
-T5	Eq-Comparison 97 102	first
-E5	Eq-Comparison:T5
-T6	Modifier 103 112	class jaw
-E6	Modifier:T6
-T7	Condition 128 141	adequate bone
-E7	Condition:T7
+T7	Condition 137 141	bone
+E7	Condition:T7 Name:T1 Polarity:T2
 T8	Procedure 149 156	implant
-E8	Procedure:T8
+E8	Procedure:T8 Name:T5
 T9	Eq-Comparison 167 181	at least 10 mm
 E9	Eq-Comparison:T9 Operator:T44 Value:T45 Unit:T46
 T10	And 182 185	and
-E10	And:T10
+E10	And:T10 Arg:E9 Arg2:E11
 T11	Eq-Comparison 198 214	at least 2.75 mm
 E11	Eq-Comparison:T11 Operator:T47 Value:T48 Unit:T49
 T12	Eq-Comparison 315 323	received
 E12	Eq-Comparison:T12 Temporal-Period:T51
 T13	Procedure 324 336	radiotherapy
-E13	Procedure:T13 Name:T52
+E13	Procedure:T13 Name:T52 Temporality:E12
 T14	Modifier 344 348	head
-E14	Modifier:T14
+E14	Modifier:T14 Modifies:T52
 T15	Or 349 351	or
-E15	Or:T15
+E15	Or:T15 Arg:E14 Arg2:E16
 T16	Modifier 352 356	neck
-E16	Modifier:T16
+E16	Modifier:T16 Modifies:T52
 T17	Condition 368 374	tumors
 E17	Condition:T17 Name:T53
 T18	Eq-Comparison 382 389	history
 E18	Eq-Comparison:T18 Temporal-Period:T55
 T19	Procedure 393 405	chemotherapy
-E19	Procedure:T19 Name:T56
+E19	Procedure:T19 Name:T56 Temporality:E18
 T20	Modifier 423 432	long-term
-E20	Modifier:T20
+E20	Modifier:T20 Modifies:T59
 T21	Drug 433 441	steroids
-E21	Drug:T21 Name:T59
+E21	Drug:T21 Name:T59 Temporality:E6
 T22	Or 443 445	or
-E22	Or:T22
+E22	Or:T22 Arg:E21 Arg2:E23
 T23	Drug 446 461	bisphosphonates
 E23	Drug:T23 Name:T60
-T24	Condition 467 480	heavy smokers
-E24	Condition:T24 Name:T63
+T24	Condition 473 480	smokers
+E24	Condition:T24 Name:T63 Severity:T62
 T25	Modifier 500 508	physical
-E25	Modifier:T25
+E25	Modifier:T25 Modifies:T64
 T26	Or 509 512	and
-E26	Or:T26
+E26	Or:T26 Arg:E25 Arg2:E27
 T27	Modifier 513 519	mental
-E27	Modifier:T27
-T28	Condition 520 523	dis
-E28	Condition:T28
-T29	Modifier 524 534	-abilities
-E29	Modifier:T29
+E27	Modifier:T27 Modifies:T64
+T28	Condition 520 534	dis -abilities
+E28	Condition:T28 Name:T64
 T30	Procedure 574 582	implants
-E30	Procedure:T30 Name:T66
-T31	Modifier 588 600	uncontrolled
-E31	Modifier:T31
-T32	Condition 601 619	systematic disease
+E30	Procedure:T30 Name:T66 Stability:T65
+T31	Modifier 588 611	uncontrolled systematic
+E31	Modifier:T31 Modifies:T67
+T32	Condition 612 619	disease
 E32	Condition:T32 Name:T67
 T33	Assertion 625 630	could
-E33	Assertion:T33
+E33	Assertion:T33 Asserted:T29
 A2	Assertion-Type-Value E33 hypothetical
-T34	Assertion 631 641	compromise
-E34	Assertion:T34
-A3	Assertion-Type-Value E34 hypothetical
 T35	Procedure 642 657	implant surgery
-E35	Procedure:T35 Name:T68
+E35	Procedure:T35 Name:T68 Stability:T29
 T36	Condition 671 678	bruxism
-E36	Condition:T36 Name:T69
+E36	Condition:T36 Name:T69 Severity:T34
 T37	Condition 684 702	infectious disease
 E37	Condition:T37 Name:T70
 T38	Condition 708 743	temporomandibular joint dysfunction
@@ -83,8 +69,6 @@ A4	Eq-Operator-Value T40 GTEQ
 T41	Eq-Value 82 83	6
 T42	Eq-Temporal-Unit 84 90	months
 A5	Eq-Temporal-Unit-Value T42 month
-T43	Observation-Name 149 163	implant length
-A6	Observation-Type-Value T43 measurement
 T44	Eq-Operator 167 175	at least
 A7	Eq-Operator-Value T44 GTEQ
 T45	Eq-Value 176 178	10
@@ -98,16 +82,13 @@ T51	Eq-Temporal-Period 315 323	received
 A9	Eq-Temporal-Period-Value T51 past
 T52	Procedure-Name 324 336	radiotherapy
 T53	Condition-Name 368 374	tumors
-T54	Eq-Value 377 378	2
 T55	Eq-Temporal-Period 382 389	history
 A10	Eq-Temporal-Period-Value T55 past
 T56	Procedure-Name 393 405	chemotherapy
-T57	Eq-Value 408 409	3
 T58	Eq-Temporal-Period 420 422	on
 A11	Eq-Temporal-Period-Value T58 present
 T59	Drug-Name 433 441	steroids
 T60	Drug-Name 446 461	bisphosphonates
-T61	Eq-Value 464 465	4
 T62	Severity 467 472	heavy
 A12	Severity-Value T62 severe
 T63	Condition-Name 473 480	smokers
@@ -115,8 +96,28 @@ T64	Condition-Name 520 534	dis -abilities
 T65	Stability 540 549	interfere
 A13	Stability-Value T65 change
 T66	Procedure-Name 574 582	implants
-T67	Condition-Name 601 619	systematic disease
+T67	Condition-Name 612 619	disease
 T68	Procedure-Name 642 657	implant surgery
 T69	Condition-Name 671 678	bruxism
 T70	Condition-Name 684 702	infectious disease
 T71	Condition-Name 708 743	temporomandibular joint dysfunction
+T1	Condition-Name 137 141	bone
+T2	Polarity 128 136	adequate
+A1	Polarity-Value T2 normal
+T5	Procedure-Name 149 156	implant
+T6	Observation 137 141	bone
+E1	Observation:T6 Eq-Comparison:E9 Eq-Comparison2:E11
+R1	Treatment-For Arg1:E8 Arg2:E7	
+T43	Modifier 157 163	length
+E2	Modifier:T43 Modifies:E9
+T72	Modifier 186 194	diameter
+E5	Modifier:T72 Modifies:E11
+R2	Treatment-For Arg1:E13 Arg2:E17	
+T54	Eq-Comparison 420 422	on
+E6	Eq-Comparison:T54 Temporal-Period:T58
+R3	Caused-By Arg1:T65 Arg2:E28	
+T29	Stability 631 641	compromise
+A3	Stability-Value T29 change
+R4	Caused-By Arg1:T29 Arg2:E32	
+T34	Severity 663 670	extreme
+A6	Severity-Value T34 severe

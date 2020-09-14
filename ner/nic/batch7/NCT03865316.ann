@@ -1,27 +1,23 @@
 T1	Eq-Comparison 34 56	18 years old and older
 E1	Eq-Comparison:T1 Value:T31 Temporal-Unit:T32 Operator:T33
 T2	Condition 86 89	ASA
-E2	Condition:T2 Name:T34
+E2	Condition:T2 Name:T34 Stage:E3
 T3	Eq-Comparison 97 110	I, II, or III
 E3	Eq-Comparison:T3 Value:T35 Value:T36 Value:T37
 T4	Eq-Comparison 149 158	Scheduled
 E4	Eq-Comparison:T4 Temporal-Period:T39
-T5	Procedure 163 171	surgical
-E5	Procedure:T5
 T6	Or 172 175	and
-E6	Or:T6
-T7	Modifier 176 180	non-
-E7	Modifier:T7
-T8	Procedure 180 199	surgical procedures
-E8	Procedure:T8 Name:T40
+E6	Or:T6 Arg:E5 Arg2:E32
+T7	Modifier 180 188	surgical
+E7	Modifier:T7 Modifies:T40
+T8	Procedure 189 199	procedures
+E8	Procedure:T8 Name:T40 Temporality:E4 Temporality2:E9
 T9	Eq-Comparison 200 209	scheduled
 E9	Eq-Comparison:T9 Temporal-Period:T41
 T10	Procedure 216 234	general anesthesia
 E10	Procedure:T10 Name:T42
-T11	Procedure 236 253	Common procedures
-E11	Procedure:T11
-T12	Negation 270 273	not
-E12	Negation:T12
+T11	Coreference 236 253	Common procedures
+E11	Coreference:T11 Refers-To:E8
 T13	Procedure 288 301	tonsillectomy
 E13	Procedure:T13 Name:T43
 T14	Procedure 303 316	adenoidectomy
@@ -45,20 +41,20 @@ E22	Procedure:T22 Name:T52
 T23	Condition 485 496	deformities
 E23	Condition:T23 Name:T53
 T24	Or 497 499	or
-E24	Or:T24
-T25	Condition 500 507	devices
-E25	Condition:T25
+E24	Or:T24 Arg:E23 Arg2:E25
+T25	Procedure 500 507	devices
+E25	Procedure:T25 Name:T12
 T26	Assertion 513 516	may
-E26	Assertion:T26
+E26	Assertion:T26 Asserted:E27
 A1	Assertion-Type-Value E26 hypothetical
 T27	Negation 517 524	prevent
-E27	Negation:T27
+E27	Negation:T27 Negates:E28
 T28	Procedure 540 550	EEG Sensor
 E28	Procedure:T28 Name:T54
-T29	Modifier 551 562	to forehead
-E29	Modifier:T29
-T30	Negation 650 653	not
-E30	Negation:T30
+T29	Modifier 554 562	forehead
+E29	Modifier:T29 Modifies:T54
+T30	Negation 650 662	not suitable
+E30	Negation:T30 Negates:E33
 T31	Eq-Value 34 36	18
 T32	Eq-Temporal-Unit 37 42	years
 A2	Eq-Temporal-Unit-Value T32 year
@@ -71,7 +67,7 @@ T37	Eq-Value 107 110	III
 T38	Language 117 124	English
 T39	Eq-Temporal-Period 149 158	Scheduled
 A4	Eq-Temporal-Period-Value T39 future
-T40	Procedure-Name 180 199	surgical procedures
+T40	Procedure-Name 189 199	procedures
 T41	Eq-Temporal-Period 200 209	scheduled
 A5	Eq-Temporal-Period-Value T41 future
 T42	Procedure-Name 216 234	general anesthesia
@@ -87,3 +83,31 @@ T51	Procedure-Name 423 434	gastroscopy
 T52	Procedure-Name 436 447	colonoscopy
 T53	Condition-Name 485 496	deformities
 T54	Procedure-Name 540 550	EEG Sensor
+T55	Age 43 46	old
+E31	Age:T55 Eq-Comparison:E1
+T56	Negation 176 179	non
+E32	Negation:T56 Negates:E7
+T5	Modifier 163 171	surgical
+E5	Modifier:T5 Modifies:T40
+R1	Using Arg1:E8 Arg2:E10	
+R2	Example-Of Arg1:E13 Arg2:E11	
+R3	Example-Of Arg1:E14 Arg2:E11	
+R4	Example-Of Arg1:E15 Arg2:E11	
+R5	Example-Of Arg1:E16 Arg2:E11	
+R6	Example-Of Arg1:E17 Arg2:E11	
+R7	Example-Of Arg1:E18 Arg2:E11	
+R8	Example-Of Arg1:E19 Arg2:E11	
+R9	Example-Of Arg1:E20 Arg2:E11	
+R10	Example-Of Arg1:E21 Arg2:E11	
+R11	Example-Of Arg1:E22 Arg2:E11	
+T12	Procedure-Name 500 507	devices
+R12	Caused-By Arg1:E27 Arg2:E23	
+R13	Caused-By Arg1:E27 Arg2:E25	
+T57	Condition 604 627	developmentally delayed
+E12	Condition:T57 Name:T58
+T58	Condition-Name 604 627	developmentally delayed
+T59	Study 667 672	study
+E33	Study:T59 
+T60	Assertion 650 662	not suitable
+E34	Assertion:T60 Asserted:E30
+A6	Assertion-Type-Value E34 hypothetical

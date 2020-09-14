@@ -1,104 +1,90 @@
 T1	Encounter 25 37	Hospitalized
-E1	Encounter:T1
+E1	Encounter:T1 Location:T69
 T2	Assertion 44 52	eligible
-E2	Assertion:T2
+E2	Assertion:T2 Asserted:T69
 A1	Assertion-Type-Value E2 hypothetical
 T3	Age 70 73	Age
-E3	Age:T3
+E3	Age:T3 Eq-Comparison:E4
 T4	Eq-Comparison 74 84	≥ 18 years
 E4	Eq-Comparison:T4 Operator:T70 Value:T71 Temporal-Unit:T72
-T5	Age 85 88	old
-E5	Age:T5
 T6	Temporal-Connection 89 100	at the time
-E6	Temporal-Connection:T6
+E6	Temporal-Connection:T6 Arg2:E7 Arg:E3
 A2	Temporal-Connection-Type-Value E6 during
 T7	Encounter 104 119	hospitalization
-E7	Encounter:T7
+E7	Encounter:T7 
 T8	Condition 130 136	sepsis
 E8	Condition:T8 Name:T74
-T9	Study 155 163	Sepsis-3
-E9	Study:T9
 T10	Assertion 195 204	suspected
-E10	Assertion:T10
+E10	Assertion:T10 Asserted:E11
 A3	Assertion-Type-Value E10 possible
 T11	Condition 205 214	infection
 E11	Condition:T11 Name:T76
 T12	Observation 222 232	SOFA score
-E12	Observation:T12
-T13	Eq-Comparison 236 251	≥2 points above
-E13	Eq-Comparison:T13 Operator:T77
-T14	Study 252 260	baseline
-E14	Study:T14
+E12	Observation:T12 Name:T33 Eq-Comparison:E13
+T13	Eq-Comparison 236 260	≥2 points above baseline
+E13	Eq-Comparison:T13 Operator:T77 Value:T75 Unit:T122
 T15	Eq-Comparison 266 274	Received
 E15	Eq-Comparison:T15 Temporal-Period:T78
 T16	Modifier 275 289	broad-spectrum
-E16	Modifier:T16
+E16	Modifier:T16 Modifies:T79
 T17	Drug 290 301	antibiotics
-E17	Drug:T17
+E17	Drug:T17 Name:T79 Temporality:E15 Temporality2:E18
 T18	Eq-Comparison 302 326	within the last 24 hours
 E18	Eq-Comparison:T18 Operator:T80 Temporal-Period:T81 Value:T82 Temporal-Unit:T83
 T19	Or 327 329	or
-E19	Or:T19
-T20	Encounter 330 337	ordered
-E20	Encounter:T20
+E19	Or:T19 Arg:E17 Arg2:E20
 T21	Assertion 370 377	Able to
-E21	Assertion:T21
+E21	Assertion:T21 Asserted:E22
 A4	Assertion-Type-Value E21 hypothetical
 T22	Study 387 397	enrollment
-E22	Study:T22
+E22	Study:T22 Temporality:E23
 T23	Eq-Comparison 398 412	within 4 hours
 E23	Eq-Comparison:T23 Operator:T84 Value:T85 Temporal-Unit:T86
 T24	Temporal-Connection 413 415	of
-E24	Temporal-Connection:T24
+E24	Temporal-Connection:T24 Arg:E23 Arg2:E26
 A5	Temporal-Connection-Type-Value E24 after
-T25	Encounter 416 419	ICU
-E25	Encounter:T25
 T26	Encounter 420 429	admission
-E26	Encounter:T26
+E26	Encounter:T26 Location:T25
 T27	Study 456 468	intervention
-E27	Study:T27
+E27	Study:T27 Temporality:E28
 T28	Eq-Comparison 469 483	within 6 hours
 E28	Eq-Comparison:T28 Operator:T89 Value:T90 Temporal-Unit:T91
 T29	Temporal-Connection 484 486	of
-E29	Temporal-Connection:T29
+E29	Temporal-Connection:T29 Arg:E28 Arg2:E31
 A6	Temporal-Connection-Type-Value E29 after
-T30	Encounter 487 490	ICU
-E30	Encounter:T30
 T31	Encounter 491 500	admission
-E31	Encounter:T31
+E31	Encounter:T31 Location:T30
 T32	Assertion 526 535	Inability
-E32	Assertion:T32
+E32	Assertion:T32 Asserted:E66
 A7	Assertion-Type-Value E32 hypothetical
 T34	Modifier 547 551	oral
-E33	Modifier:T34
+E33	Modifier:T34 Modifies:T94
 T35	Or 552 554	or
-E34	Or:T35
-T36	Procedure 555 569	enteric fluids
-E35	Procedure:T36
-T37	Modifier 575 581	Inulin
-E36	Modifier:T37
+E34	Or:T35 Arg:E33 Arg2:E25
+T36	Procedure 563 569	fluids
+E35	Procedure:T36 Name:T94
 T38	Allergy 582 589	allergy
-E37	Allergy:T38
+E37	Allergy:T38 Name:E36
 T39	Condition 595 607	Hyponatremia
 E38	Condition:T39 Name:T95
 T40	Observation 609 621	serum sodium
-E39	Observation:T40 Name:T96
+E39	Observation:T40 Name:T96 Eq-Comparison:E40
 T41	Eq-Comparison 622 632	≤128 mEq/L
-E40	Eq-Comparison:T41 Value:T97 Unit:T98 Unit:T99
-T42	Procedure 639 656	Immunosuppression
-E41	Procedure:T42
+E40	Eq-Comparison:T41 Value:T97 Unit:T98 Operator:T125 Per:T99
+T42	Condition 639 656	Immunosuppression
+E41	Condition:T42 Name:T100
 T43	Eq-Comparison 669 676	history
 E42	Eq-Comparison:T43 Temporal-Period:T101
 T44	Procedure 680 702	solid organ transplant
-E43	Procedure:T44 Name:T102
+E43	Procedure:T44 Name:T102 Temporality:E42
 T45	Or 703 705	or
-E44	Or:T45
+E44	Or:T45 Arg:E43 Arg2:E45
 T46	Procedure 720 741	ablative chemotherapy
-E45	Procedure:T46 Name:T103
+E45	Procedure:T46 Name:T103 Temporality:E30
 T47	Drug 743 751	steroids
-E46	Drug:T47 Name:T104
+E46	Drug:T47 Name:T104 Dose:E47
 T48	Eq-Comparison 773 782	≥5 mg/day
-E47	Eq-Comparison:T48 Value:T105 Unit:T106 Temporal-Unit:T107
+E47	Eq-Comparison:T48 Value:T105 Unit:T106 Operator:T128 Per:T107
 T49	Drug 783 793	prednisone
 E48	Drug:T49 Name:T108
 T50	Drug 795 810	antimetabolites
@@ -108,39 +94,35 @@ E50	Drug:T51 Name:T110
 T52	Drug 830 852	calcineurin inhibitors
 E51	Drug:T52 Name:T111
 T53	Or 854 856	or
-E52	Or:T53
+E52	Or:T53 Arg:E51 Arg2:E53
 T54	Drug 857 870	mycophenolate
 E53	Drug:T54 Name:T112
 T55	Procedure 876 883	Surgery
-E54	Procedure:T55 Name:T113
-T56	Condition 898 914	intestinal lumen
-E55	Condition:T56
+E54	Procedure:T55 Name:T113 Temporality:E56
 T57	Eq-Comparison 915 929	within 30 days
 E56	Eq-Comparison:T57 Operator:T115 Value:T116 Temporal-Unit:T117
 T58	Or 930 932	or
-E57	Or:T58
+E57	Or:T58 Arg:E54 Arg2:E58
 T59	Condition 939 960	intestinal strictures
-E58	Condition:T59
+E58	Condition:T59 Name:T114
 T60	Observation 966 984	Do Not Resuscitate
 E59	Observation:T60 Name:T118
 T61	Observation 986 989	DNR
 E60	Observation:T61 Name:T119
 T62	Or 991 993	or
-E61	Or:T62
+E61	Or:T62 Arg:E60 Arg2:E62
 T63	Observation 994 1009	Do Not Intubate
 E62	Observation:T63 Name:T120
 T64	Observation 1011 1014	DNI
-E63	Observation:T64
+E63	Observation:T64 Name:T129
 T65	Or 1024 1026	or
-E64	Or:T65
-T66	Negation 1028 1030	no
-E65	Negation:T66
+E64	Or:T65 Arg:E63 Arg2:E65
 T67	Negation 526 535	Inability
-E66	Negation:T67
+E66	Negation:T67 Negates:E35
 T68	Encounter-Type 25 37	Hospitalized
 A8	Encounter-Type-Value T68 inpatient
 T69	Location 61 64	ICU
-A9	Location-Value T69 hospital
+A9	Location-Value T69 unit
 T70	Eq-Operator 74 75	≥
 A10	Eq-Operator-Value T70 GTEQ
 T71	Eq-Value 76 78	18
@@ -149,13 +131,12 @@ A11	Eq-Temporal-Unit-Value T72 year
 T73	Encounter-Type 104 119	hospitalization
 A12	Encounter-Type-Value T73 inpatient
 T74	Condition-Name 130 136	sepsis
-T75	Eq-Value 165 169	2016
 T76	Condition-Name 205 214	infection
-T77	Eq-Operator 236 238	≥2
+T77	Eq-Operator 236 237	≥
 A13	Eq-Operator-Value T77 GTEQ
 T78	Eq-Temporal-Period 266 274	Received
 A14	Eq-Temporal-Period-Value T78 past
-T79	Drug-Name 281 301	spectrum antibiotics
+T79	Drug-Name 290 301	antibiotics
 T80	Eq-Operator 302 308	within
 A15	Eq-Operator-Value T80 LTEQ
 T81	Eq-Temporal-Period 313 317	last
@@ -168,8 +149,6 @@ A18	Eq-Operator-Value T84 LTEQ
 T85	Eq-Value 405 406	4
 T86	Eq-Temporal-Unit 407 412	hours
 A19	Eq-Temporal-Unit-Value T86 hour
-T87	Encounter-Type 416 419	ICU
-A20	Encounter-Type-Value T87 icu
 T88	Encounter-Type 420 429	admission
 A21	Encounter-Type-Value T88 inpatient
 T89	Eq-Operator 469 475	within
@@ -177,24 +156,22 @@ A22	Eq-Operator-Value T89 LTEQ
 T90	Eq-Value 476 477	6
 T91	Eq-Temporal-Unit 478 483	hours
 A23	Eq-Temporal-Unit-Value T91 hour
-T92	Encounter-Type 487 490	ICU
-A24	Encounter-Type-Value T92 icu
 T93	Encounter-Type 491 500	admission
 A25	Encounter-Type-Value T93 inpatient
-T94	Drug-Name 555 569	enteric fluids
+T94	Procedure-Name 563 569	fluids
 T95	Condition-Name 595 607	Hyponatremia
 T96	Observation-Name 609 621	serum sodium
 A26	Observation-Type-Value T96 lab
-T97	Eq-Value 622 626	≤128
+T97	Eq-Value 623 626	128
 T98	Eq-Unit 627 630	mEq
 T99	Eq-Unit 631 632	L
 T100	Condition-Name 639 656	Immunosuppression
 T101	Eq-Temporal-Period 669 676	history
 A27	Eq-Temporal-Period-Value T101 past
-T102	Procedure-Name 686 702	organ transplant
+T102	Procedure-Name 680 702	solid organ transplant
 T103	Procedure-Name 720 741	ablative chemotherapy
 T104	Drug-Name 743 751	steroids
-T105	Eq-Value 773 775	≥5
+T105	Eq-Value 774 775	5
 T106	Eq-Unit 776 778	mg
 T107	Eq-Temporal-Unit 779 782	day
 A28	Eq-Temporal-Unit-Value T107 day
@@ -204,7 +181,6 @@ T110	Drug-Name 812 828	anti-TNFα agents
 T111	Drug-Name 830 852	calcineurin inhibitors
 T112	Drug-Name 857 870	mycophenolate
 T113	Procedure-Name 876 883	Surgery
-T114	Procedure-Name 898 914	intestinal lumen
 T115	Eq-Operator 915 921	within
 A29	Eq-Operator-Value T115 LTEQ
 T116	Eq-Value 922 924	30
@@ -213,5 +189,57 @@ A30	Eq-Temporal-Unit-Value T117 day
 T118	Observation-Name 966 984	Do Not Resuscitate
 T119	Observation-Name 986 989	DNR
 T120	Observation-Name 994 1009	Do Not Intubate
-T121	Stability 1031 1041	escalation
-A31	Stability-Value T121 change
+T5	Modifier 186 191	known
+E5	Modifier:T5 Modifies:T76
+T9	Or 192 194	or
+E9	Or:T9 Arg:E5 Arg2:E10
+R1	Equivalent-To Arg1:E11 Arg2:E8	
+T33	Observation-Name 222 232	SOFA score
+A32	Observation-Type-Value T33 clinical-score
+T75	Eq-Value 237 238	2
+T14	Eq-Operator 246 251	above
+A33	Eq-Operator-Value T14 GT
+T122	Eq-Unit 252 260	baseline
+A34	Eq-Unit-Value T122 ref-range-normal
+T123	And 215 219	with
+E14	And:T123 Arg:E11 Arg2:E12
+T20	Coreference 330 337	ordered
+E20	Coreference:T20 Refers-To:E17
+T124	Assertion 342 364	pending administration
+E67	Assertion:T124 Asserted:E20
+A35	Assertion-Type-Value E67 hypothetical
+T25	Location 416 419	ICU
+A20	Location-Value T25 unit
+T30	Location 487 490	ICU
+A24	Location-Value T30 unit
+T87	Modifier 555 562	enteric
+E25	Modifier:T87 Modifies:T94
+T37	Drug 575 581	Inulin
+E36	Drug:T37 Name:T92
+T92	Drug-Name 575 581	Inulin
+T125	Eq-Operator 622 623	≤
+A36	Eq-Operator-Value T125 LTEQ
+R2	Equivalent-To Arg1:E39 Arg2:E38	
+T126	Eq-Comparison 709 716	receipt
+E30	Eq-Comparison:T126 Temporal-Period:T127
+T127	Eq-Temporal-Period 709 716	receipt
+A37	Eq-Temporal-Period-Value T127 past
+R3	Equivalent-To Arg1:E43 Arg2:E41	
+R4	Equivalent-To Arg1:E45 Arg2:E41	
+T128	Eq-Operator 773 774	≥
+A38	Eq-Operator-Value T128 GTEQ
+R5	Equivalent-To Arg1:E46 Arg2:E41	
+R6	Equivalent-To Arg1:E48 Arg2:E41	
+R7	Equivalent-To Arg1:E49 Arg2:E41	
+R8	Equivalent-To Arg1:E50 Arg2:E41	
+R9	Equivalent-To Arg1:E51 Arg2:E41	
+R10	Equivalent-To Arg1:E53 Arg2:E41	
+T56	Modifier 898 914	intestinal lumen
+E55	Modifier:T56 Modifies:T113
+T114	Condition-Name 939 960	intestinal strictures
+R11	Abbrev-Of Arg1:E60 Arg2:E59	
+T129	Observation-Name 1011 1014	DNI
+R12	Abbrev-Of Arg1:E63 Arg2:E62	
+T66	Observation 1028 1049	no escalation of care
+E65	Observation:T66 Name:T121
+T121	Observation-Name 1028 1049	no escalation of care
