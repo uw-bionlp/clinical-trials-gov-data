@@ -1,31 +1,27 @@
 T1	Condition 42 62	pseudoachondroplasia
 E1	Condition:T1 Name:T72
-T2	Modifier 105 111	person
-E2	Modifier:T2
+T2	Modifier 102 111	in person
+E2	Modifier:T2 Modifies:T127
 T3	Or 112 114	or
-E3	Or:T3
-T4	Study 118 130	photographic
-E4	Study:T4
-T5	Procedure 141 170	skeletal dysplasia specialist
-E5	Procedure:T5 Name:T73
-T6	Condition 172 175	JTH
-E6	Condition:T6
+E3	Or:T3 Arg:E2 Arg2:E4
+T5	Provider 141 170	skeletal dysplasia specialist
+E5	Provider:T5 Type:T73
 T7	Condition 183 190	Healthy
 E7	Condition:T7 Name:T74
-T8	Negation 191 197	beyond
-E8	Negation:T8
+T8	Exception 191 197	beyond
+E8	Exception:T8 From:E7 Except:E9
 T9	Condition 198 218	pseudoachondroplasia
-E9	Condition:T9
+E9	Condition:T9 Name:T6
 T10	Condition 230 243	complications
 E10	Condition:T10 Name:T75
-T11	Eq-Comparison 270 281	Current use
+T11	Eq-Comparison 270 277	Current
 E11	Eq-Comparison:T11 Temporal-Period:T76
 T12	Drug 285 296	resveratrol
-E12	Drug:T12 Name:T77
-T13	Eq-Comparison 302 313	Current use
+E12	Drug:T12 Name:T77 Temporality:E11
+T13	Eq-Comparison 302 309	Current
 E13	Eq-Comparison:T13 Temporal-Period:T78
-T14	Procedure 317 331	blood thinners
-E14	Procedure:T14
+T14	Drug 317 331	blood thinners
+E14	Drug:T14 Name:T79 Temporality:E13
 T15	Drug 333 343	lovastatin
 E15	Drug:T15 Name:T80
 T16	Drug 345 357	ketoconazole
@@ -35,56 +31,56 @@ E17	Drug:T17 Name:T82
 T18	Drug 373 385	fexofenadine
 E18	Drug:T18 Name:T83
 T19	Or 386 389	and
-E19	Or:T19
+E19	Or:T19 Arg:E18 Arg2:E20
 T20	Drug 390 399	triazolam
 E20	Drug:T20 Name:T84
 T21	Other 406 411	Other
-E21	Other:T21
+E21	Other:T21 Is-Other:E24
 T22	Negation 412 415	non
-E22	Negation:T22
+E22	Negation:T22 Negates:E23
 T23	Condition 416 436	pseudoachondroplasia
 E23	Condition:T23 Name:T85
 T24	Condition 445 462	health conditions
-E24	Condition:T24
+E24	Condition:T24 
 T25	Condition 469 476	cancers
 E25	Condition:T25 Name:T86
 T26	Condition 483 492	Pregnancy
 E26	Condition:T26 Name:T87
 T27	Or 493 495	or
-E27	Or:T27
+E27	Or:T27 Arg:E26 Arg2:E28
 T28	Condition 496 509	breastfeeding
 E28	Condition:T28 Name:T88
 T29	Procedure 535 548	contraception
 E29	Procedure:T29 Name:T90
 T30	Temporal-Connection 549 555	during
-E30	Temporal-Connection:T30
+E30	Temporal-Connection:T30 Arg:E29 Arg2:E31
 A1	Temporal-Connection-Type-Value E30 during
 T31	Study 560 565	study
-E31	Study:T31
+E31	Study:T31 
 T32	Other 589 596	another
-E32	Other:T32
+E32	Other:T32 Is-Other:E33
 T33	Study 606 611	study
-E33	Study:T33
+E33	Study:T33 
 T34	Or 612 618	and/or
-E34	Or:T34
+E34	Or:T34 Arg:E33 Arg2:E36
 T35	Eq-Comparison 619 624	using
 E35	Eq-Comparison:T35 Temporal-Period:T91
 T36	Drug 625 647	investigational agents
-E36	Drug:T36
+E36	Drug:T36 Temporality:E35
 T37	Eq-Comparison 654 657	Use
 E37	Eq-Comparison:T37 Temporal-Period:T92
 T38	Drug 661 690	Non-steroid anti-inflammatory
-E38	Drug:T38 Name:T93
+E38	Drug:T38 Name:T93 Temporality:E37
 T39	Drug 692 698	NSAIDs
 E39	Drug:T39 Name:T94
 T40	Or 700 702	or
-E40	Or:T40
+E40	Or:T40 Arg:E39 Arg2:E41
 T41	Drug 703 710	aspirin
 E41	Drug:T41 Name:T95
-T42	Eq-Comparison 717 728	Current use
+T42	Eq-Comparison 717 724	Current
 E42	Eq-Comparison:T42 Temporal-Period:T96
 T43	Drug 732 742	Alfentanil
-E43	Drug:T43 Name:T97
+E43	Drug:T43 Name:T97 Temporality:E42
 T44	Drug 744 756	Cyclosporine
 E44	Drug:T44 Name:T98
 T45	Drug 758 775	Dihydroergotamine
@@ -124,25 +120,20 @@ E61	Drug:T61 Name:T115
 T62	Drug 973 982	Phenytoin
 E62	Drug:T62 Name:T116
 T63	Or 983 985	or
-E63	Or:T63
+E63	Or:T63 Arg:E62 Arg2:E64
 T64	Drug 986 994	Warfarin
 E64	Drug:T64 Name:T117
 T65	Condition 1019 1023	pain
 E65	Condition:T65 Name:T118
 T66	Eq-Comparison 1027 1038	2 or higher
 E66	Eq-Comparison:T66 Value:T119 Operator:T120
-T67	Modifier 1045 1056	point scale
-E67	Modifier:T67
 T68	Observation 1063 1077	Platelet count
-E68	Observation:T68 Name:T121
+E68	Observation:T68 Name:T121 Eq-Comparison:E69
 T69	Eq-Comparison 1078 1097	below 50,000 per ul
-E69	Eq-Comparison:T69 Operator:T122 Value:T123
-T70	Study 1101 1109	baseline
-E70	Study:T70
-T71	Observation 1119 1130	blood count
+E69	Eq-Comparison:T69 Operator:T122 Value:T123 Per:T129
+T71	Observation 1110 1130	complete blood count
 E71	Observation:T71 Name:T124
 T72	Condition-Name 42 62	pseudoachondroplasia
-T73	Procedure-Name 141 170	skeletal dysplasia specialist
 T74	Condition-Name 183 190	Healthy
 T75	Condition-Name 230 243	complications
 T76	Eq-Temporal-Period 270 277	Current
@@ -200,8 +191,35 @@ A8	Eq-Operator-Value T120 GTEQ
 T121	Observation-Name 1063 1077	Platelet count
 A9	Observation-Type-Value T121 lab
 T122	Eq-Operator 1078 1083	below
-A10	Eq-Operator-Value T122 GT
+A10	Eq-Operator-Value T122 LT
 T123	Eq-Value 1084 1090	50,000
-T124	Observation-Name 1119 1130	blood count
+T124	Observation-Name 1110 1130	complete blood count
 A11	Observation-Type-Value T124 lab
 T125	Observation-Name 1132 1135	CBC
+T126	Procedure 75 94	clinical assessment
+E72	Procedure:T126 Name:T127 Provider:E5
+T127	Procedure-Name 75 94	clinical assessment
+T4	Modifier 118 137	photographic review
+E4	Modifier:T4 Modifies:T127
+T73	Provider-Type 141 170	skeletal dysplasia specialist
+R1	Found-By Arg1:E1 Arg2:E72	
+T6	Condition-Name 198 218	pseudoachondroplasia
+R2	Caused-By Arg1:E10 Arg2:E9	
+R3	Caused-By Arg1:E24 Arg2:E23	
+R4	Example-Of Arg1:E25 Arg2:E24	
+R5	If-Then Arg1:T89 Arg2:E29	
+R6	Abbrev-Of Arg1:E39 Arg2:E38	
+T67	Modifier 1042 1056	10 point scale
+E6	Modifier:T67 Modifies:E66
+T128	Observation 1019 1023	pain
+E67	Observation:T128 Eq-Comparison:E66
+T129	Eq-Unit 1095 1097	ul
+T130	Temporal-Connection 1098 1100	on
+E73	Temporal-Connection:T130 Arg:E68 Arg2:E74
+A12	Temporal-Connection-Type-Value E73 during
+T70	Observation 1132 1135	CBC
+E70	Observation:T70 Name:T125
+R7	Abbrev-Of Arg1:E70 Arg2:E71	
+T131	Study 1101 1109	baseline
+E74	Study:T131 
+R8	Using Arg1:E74 Arg2:E71	
