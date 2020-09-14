@@ -1,29 +1,25 @@
 T1	And 32 36	with
-E1	And:T1 
+E1	And:T1 Arg:T30 Arg2:E4
 T2	Procedure 37 43	biopsy
 E2	Procedure:T2 Name:T31
 T3	Modifier 51 90	metastatic cervical nodal squamous cell
-E3	Modifier:T3 
+E3	Modifier:T3 Modifies:T32
 T4	Condition 91 100	carcinoma
-E4	Condition:T4 
+E4	Condition:T4 Name:T32
 T5	Procedure 106 108	CT
 E5	Procedure:T5 Name:T33
 T6	Modifier 116 120	neck
-E6	Modifier:T6 
+E6	Modifier:T6 Modifies:T33
 T7	And 121 125	with
-E7	And:T7 
-T8	Negation 145 148	not
-E8	Negation:T8 
+E7	And:T7 Arg:E6 Arg2:E30
 T9	Eq-Comparison 215 222	Planned
 E9	Eq-Comparison:T9 Temporal-Period:T34
-T10	Procedure 244 251	FDG PET
-E10	Procedure:T10 
-T11	Procedure 252 266	CT examination
-E11	Procedure:T11 
+T11	Procedure 248 266	PET CT examination
+E11	Procedure:T11 Name:T35 Temporality:E9
 T12	Eq-Comparison 272 279	Planned
 E12	Eq-Comparison:T12 Temporal-Period:T36
 T13	Procedure 292 301	care exam
-E13	Procedure:T13 
+E13	Procedure:T13 Name:T60 Temporality:E12
 T14	Procedure 308 318	anesthesia
 E14	Procedure:T14 Name:T37
 T15	Procedure 324 353	oropharyngeal surgical biopsy
@@ -31,39 +27,35 @@ E15	Procedure:T15 Name:T38
 T16	Condition 379 387	Pregnant
 E16	Condition:T16 Name:T39
 T17	Allergy 405 412	allergy
-E17	Allergy:T17 
+E17	Allergy:T17 Name:E18 Name2:E19 Name3:E22
 T18	Drug 416 419	FDG
 E18	Drug:T18 Name:T41
 T19	Drug 421 433	fluciclovine
 E19	Drug:T19 Name:T42
 T20	Or 435 437	or
-E20	Or:T20 
-T21	Drug 438 444	iodine
-E21	Drug:T21 Name:T43
-T22	Drug 460 466	agents
+E20	Or:T20 Arg:E19 Arg2:E22
+T22	Drug 451 466	contrast agents
 E22	Drug:T22 Name:T45
 T23	Condition 479 496	renal dysfunction
-E23	Condition:T23 Name:T47
+E23	Condition:T23 Name:T47 Severity:T46
 T24	Observation 498 522	glomerular filtrate rate
-E24	Observation:T24 Name:T48
+E24	Observation:T24 Name:T48 Temporality:E25 Eq-Comparison:E26
 T25	Eq-Comparison 524 538	within 30 days
 E25	Eq-Comparison:T25 Operator:T49 Value:T50 Temporal-Unit:T51
 T26	Eq-Comparison 540 552	less than 30
 E26	Eq-Comparison:T26 Operator:T52 Value:T53
 T27	Condition 559 593	Inability to tolerate lying supine
-E27	Condition:T27 Name:T54
-T28	Condition 595 616	relatively motionless
-E28	Condition:T28 
+E27	Condition:T27 Name:T54 Duration:E29
 T29	Eq-Comparison 621 633	up to 1 hour
-E29	Eq-Comparison:T29 Value:T55 Temporal-Unit:T56
+E29	Eq-Comparison:T29 Value:T55 Temporal-Unit:T56 Operator:T28
 T30	Life-Stage-And-Gender 25 31	Adults
 A1	Life-Stage-And-Gender-Type T30 adult
 T31	Procedure-Name 37 43	biopsy
-T32	Condition-Name 77 100	squamous cell carcinoma
+T32	Condition-Name 91 100	carcinoma
 T33	Procedure-Name 106 108	CT
 T34	Eq-Temporal-Period 215 222	Planned
 A2	Eq-Temporal-Period-Value T34 future
-T35	Procedure-Name 244 266	FDG PET CT examination
+T35	Procedure-Name 248 266	PET CT examination
 T36	Eq-Temporal-Period 272 279	Planned
 A3	Eq-Temporal-Period-Value T36 future
 T37	Procedure-Name 308 318	anesthesia
@@ -73,10 +65,7 @@ T40	Life-Stage-And-Gender 388 393	women
 A4	Life-Stage-And-Gender-Type T40 female
 T41	Drug-Name 416 419	FDG
 T42	Drug-Name 421 433	fluciclovine
-T43	Drug-Name 438 444	iodine
-T44	Polarity 451 459	contrast
-A5	Polarity-Value T44 negative
-T45	Drug-Name 460 466	agents
+T45	Drug-Name 451 466	contrast agents
 T46	Severity 472 478	Severe
 A6	Severity-Value T46 severe
 T47	Condition-Name 479 496	renal dysfunction
@@ -90,7 +79,32 @@ A9	Eq-Temporal-Unit-Value T51 day
 T52	Eq-Operator 540 549	less than
 A10	Eq-Operator-Value T52 LT
 T53	Eq-Value 550 552	30
-T54	Condition-Name 572 593	tolerate lying supine
+T54	Condition-Name 559 593	Inability to tolerate lying supine
 T55	Eq-Value 627 628	1
 T56	Eq-Temporal-Unit 629 633	hour
 A11	Eq-Temporal-Unit-Value T56 hour
+R1	Found-By Arg1:E4 Arg2:E2	
+T57	Modifier 126 134	contrast
+E30	Modifier:T57 Modifies:T33
+T8	Coreference 202 209	disease
+E8	Coreference:T8 Refers-To:E4
+T58	Modifier 172 198	primary oropharyngeal site
+E31	Modifier:T58 Modifies:E8
+T59	Negation 145 148	not
+E32	Negation:T59 Negates:E31
+R2	Treatment-For Arg1:E5 Arg2:E8	
+T10	Modifier 240 247	18F-FDG
+E10	Modifier:T10 Modifies:T35
+T60	Procedure-Name 292 301	care exam
+R3	Using Arg1:E13 Arg2:E14	
+T61	And 319 323	with
+E33	And:T61 Arg:E14 Arg2:E15
+R4	Using Arg1:E13 Arg2:E15	
+R5	If-Then Arg1:E16 Arg2:T40	
+T21	Modifier 438 450	iodine-based
+E21	Modifier:T21 Modifies:T45
+R6	Equivalent-To Arg1:E24 Arg2:E23	
+T28	Eq-Operator 621 626	up to
+A5	Eq-Operator-Value T28 LTEQ
+T43	Modifier 595 616	relatively motionless
+E28	Modifier:T43 Modifies:T54
