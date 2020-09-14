@@ -1,58 +1,54 @@
-T1	Modifier 25 29	walk
-E1	Modifier:T1
+T1	Observation 25 29	walk
+E1	Observation:T1 Name:T21 Eq-Comparison:E4
 T2	Or 30 32	or
-E2	Or:T2
-T3	Modifier 33 36	run
-E3	Modifier:T3
+E2	Or:T2 Arg:E1 Arg2:E3
+T3	Observation 33 36	run
+E3	Observation:T3 Name:T22 Eq-Comparison:E4
 T4	Eq-Comparison 37 68	at least 10 kilometres per week
-E4	Eq-Comparison:T4 Operator:T23 Value:T24 Temporal-Unit:T25 Temporal-Unit:T26
-T5	Eq-Comparison 93 128	distance of ten kilometres per week
-E5	Eq-Comparison:T5 Value:T27 Temporal-Unit:T28 Temporal-Unit:T29
-T6	Eq-Comparison 136 154	period of 24 weeks
+E4	Eq-Comparison:T4 Operator:T23 Value:T24 Unit:T25 Per:T26
+T5	Eq-Comparison 85 128	minimal distance of ten kilometres per week
+E5	Eq-Comparison:T5 Value:T27 Operator:T42 Unit:T28 Per:T29
+T6	Eq-Comparison 146 154	24 weeks
 E6	Eq-Comparison:T6 Value:T30 Temporal-Unit:T31
 T7	Modifier 177 195	same pair of shoes
-E7	Modifier:T7
+E7	Modifier:T7 Modifies:T46
 T8	Temporal-Connection 196 202	during
-E8	Temporal-Connection:T8
+E8	Temporal-Connection:T8 Arg:E22 Arg2:E9
 A1	Temporal-Connection-Type-Value E8 during
-T9	Modifier 203 210	walking
-E9	Modifier:T9
+T9	Observation 203 210	walking
+E9	Observation:T9 Name:T51
 T10	Or 210 211	/
-E10	Or:T10
+E10	Or:T10 Arg:E9 Arg2:E25
 T11	Temporal-Connection 230 236	during
-E11	Temporal-Connection:T11
+E11	Temporal-Connection:T11 Arg:E25
 A2	Temporal-Connection-Type-Value E11 during
 T12	Condition 274 290	systemic disease
 E12	Condition:T12 Name:T32
 T13	Condition 292 308	cardiac problems
 E13	Condition:T13 Name:T33
 T14	Or 309 311	or
-E14	Or:T14
+E14	Or:T14 Arg:E13 Arg2:E15
 T15	Condition 312 320	diabetes
 E15	Condition:T15 Name:T34
 T16	Modifier 344 361	lower extremities
-E16	Modifier:T16
+E16	Modifier:T16 Modifies:T54
 T17	Eq-Comparison 369 383	last two weeks
 E17	Eq-Comparison:T17 Temporal-Period:T35 Value:T36 Temporal-Unit:T37
 T18	Procedure 390 397	surgery
-E18	Procedure:T18 Name:T38
+E18	Procedure:T18 Name:T38 Temporality:E20
 T19	Modifier 405 422	lower extremities
-E19	Modifier:T19
+E19	Modifier:T19 Modifies:T38
 T20	Eq-Comparison 430 446	last three years
 E20	Eq-Comparison:T20 Temporal-Period:T39 Value:T40 Temporal-Unit:T41
 T21	Observation-Name 25 29	walk
-T22	Eq-Operator 30 36	or run
-A3	Eq-Operator-Value T22 GTEQ
 T23	Eq-Operator 37 45	at least
 A4	Eq-Operator-Value T23 GTEQ
 T24	Eq-Value 46 48	10
-T25	Eq-Temporal-Unit 49 59	kilometres
-A5	Eq-Temporal-Unit-Value T25 hour
+T25	Eq-Unit 49 59	kilometres
 T26	Eq-Temporal-Unit 64 68	week
 A6	Eq-Temporal-Unit-Value T26 week
 T27	Eq-Value 105 108	ten
-T28	Eq-Temporal-Unit 109 119	kilometres
-A7	Eq-Temporal-Unit-Value T28 hour
+T28	Eq-Unit 109 119	kilometres
 T29	Eq-Temporal-Unit 124 128	week
 A8	Eq-Temporal-Unit-Value T29 week
 T30	Eq-Value 146 148	24
@@ -72,3 +68,29 @@ A12	Eq-Temporal-Period-Value T39 past
 T40	Eq-Value 435 440	three
 T41	Eq-Temporal-Unit 441 446	years
 A13	Eq-Temporal-Unit-Value T41 year
+T22	Observation-Name 33 36	run
+A3	Observation-Type-Value T21 social-habit
+A14	Observation-Type-Value T22 social-habit
+T42	Eq-Operator 85 92	minimal
+A5	Eq-Operator-Value T42 GTEQ
+T43	Observation 74 82	maintain
+E21	Observation:T43 Name:T44 Eq-Comparison:E5 Duration:E6
+T44	Observation-Name 74 82	maintain
+T45	Observation 160 164	wear
+E22	Observation:T45 Name:T46 Minimum-Count:E23
+T46	Observation-Name 160 164	wear
+A7	Observation-Type-Value T46 social-habit
+T47	Eq-Comparison 165 168	one
+E23	Eq-Comparison:T47 Value:T49
+T48	And 169 172	and
+E24	And:T48 Arg:E23 Arg2:E7
+T49	Eq-Value 165 168	one
+T50	Observation 211 218	running
+E25	Observation:T50 Name:T52
+T51	Observation-Name 203 210	walking
+A15	Observation-Type-Value T51 social-habit
+T52	Observation-Name 211 218	running
+A16	Observation-Type-Value T52 social-habit
+T53	Condition 326 336	complaints
+E26	Condition:T53 Name:T54 Temporality:E17
+T54	Condition-Name 326 336	complaints

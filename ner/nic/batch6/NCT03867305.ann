@@ -1,148 +1,129 @@
 T1	Assertion 33 42	requiring
-E1	Assertion:T1
+E1	Assertion:T1 Asserted:E3
 A1	Assertion-Type-Value E1 hypothetical
-T2	Modifier 45 50	first
-E2	Modifier:T2
+T2	Eq-Comparison 45 50	first
+E2	Eq-Comparison:T2 Temporal-Recency:T121
 T3	Procedure 51 72	total knee prosthesis
-E3	Procedure:T3 Name:T76
-T4	Eq-Comparison 74 83	scheduled
-E4	Eq-Comparison:T4 Temporal-Period:T77
-T5	Temporal-Connection 84 91	between
-E5	Temporal-Connection:T5
-A2	Temporal-Connection-Type-Value E5 after
-T6	Encounter 92 99	Tuesday
-E6	Encounter:T6
-T7	And 100 103	and
-E7	And:T7
+E3	Procedure:T3 Name:T76 Temporality:E2 Temporality2:E4
+T4	Eq-Comparison 74 110	scheduled between Tuesday and Friday
+E4	Eq-Comparison:T4 Temporal-Period:T77 Value:T5 Value2:T6
 T8	Eq-Comparison 300 317	at least 18 years
 E8	Eq-Comparison:T8 Operator:T81 Value:T82 Temporal-Unit:T83
 T9	Age 318 321	old
-E9	Age:T9
-T10	Eq-Comparison 323 324	≥
-E10	Eq-Comparison:T10 Operator:T84
+E9	Age:T9 Eq-Comparison:E8 Eq-Comparison2:E12
 T11	And 326 329	and
-E11	And:T11
+E11	And:T11 Arg:E8 Arg2:E12
 T12	Eq-Comparison 330 344	under 90 years
 E12	Eq-Comparison:T12 Operator:T85 Value:T86 Temporal-Unit:T87
-T13	Age 345 348	old
-E13	Age:T13
 T14	Eq-Comparison 435 443	previous
 E14	Eq-Comparison:T14 Temporal-Period:T88
 T15	Study 444 449	study
-E15	Study:T15
+E15	Study:T15 Temporality:E14
 T16	Study 463 468	study
-E16	Study:T16
+E16	Study:T16 Study-Of:E5
 T17	Condition 667 675	pregnant
 E17	Condition:T17 Name:T91
 T18	Or 676 678	or
-E18	Or:T18
+E18	Or:T18 Arg:E17 Arg2:E19
 T19	Condition 679 692	breastfeeding
 E19	Condition:T19 Name:T92
 T20	Allergy 713 721	allergic
-E20	Allergy:T20
-T21	Procedure 725 739	latex bandages
-E21	Procedure:T21
+E20	Allergy:T20 Name:T21
 T22	Condition 762 786	contralateral amputation
 E22	Condition:T22 Name:T94
 T23	Condition 788 803	pressure ulcers
 E23	Condition:T23 Name:T95
 T24	Condition 812 836	Obstructive Arteriopathy
-E24	Condition:T24 Name:T97
+E24	Condition:T24 Name:T97 Severity:T96
 T25	Modifier 840 851	Lower Limbs
-E25	Modifier:T25
+E25	Modifier:T25 Modifies:T97
 T26	Modifier 853 864	lymphoedema
-E26	Modifier:T26
+E26	Modifier:T26 Modifies:T97
 T27	Or 865 867	or
-E27	Or:T27
-T28	Modifier 868 882	thromboembolic
-E28	Modifier:T28
-T29	Condition 883 888	event
-E29	Condition:T29
+E27	Or:T27 Arg:E24 Arg2:E28
+T28	Condition 868 888	thromboembolic event
+E28	Condition:T28 Name:T98
 T30	Modifier 896 906	lower limb
-E30	Modifier:T30
+E30	Modifier:T30 Modifies:T98
 T31	Modifier 908 919	ipsilateral
-E31	Modifier:T31
-T32	Or 920 923	and
-E32	Or:T32
-T33	Modifier 924 925	/
-E33	Modifier:T33
-T34	Or 926 928	or
-E34	Or:T34
+E31	Modifier:T31 Modifies:E30
+T32	Or 920 928	and / or
+E32	Or:T32 Arg:E31 Arg2:E35
 T35	Modifier 929 942	contralateral
-E35	Modifier:T35
+E35	Modifier:T35 Modifies:E30
 T36	Or 943 944	/
-E36	Or:T36
+E36	Or:T36 Arg:E35 Arg2:E37
 T37	Modifier 945 956	superficial
-E37	Modifier:T37
+E37	Modifier:T37 Modifies:E30
 T38	Or 957 959	or
-E38	Or:T38
+E38	Or:T38 Arg:E37 Arg2:E39
 T39	Modifier 960 964	deep
-E39	Modifier:T39
+E39	Modifier:T39 Modifies:E30
 T40	Or 965 967	or
-E40	Or:T40
-T41	Procedure 980 1001	postoperative Doppler
+E40	Or:T40 Arg:E39 Arg2:E41
+T41	Procedure 994 1001	Doppler
 E41	Procedure:T41 Name:T99
 T42	Modifier 1025 1032	chronic
-E42	Modifier:T42
+E42	Modifier:T42 Modifies:T101
 T43	Or 1033 1035	or
-E43	Or:T43
+E43	Or:T43 Arg:E42 Arg2:E44
 T44	Eq-Comparison 1036 1042	active
 E44	Eq-Comparison:T44 Temporal-Period:T100
 T45	Condition 1043 1049	wounds
-E45	Condition:T45 Name:T101
+E45	Condition:T45 Name:T101 Temporality:E44
 T46	Or 1050 1052	or
-E46	Or:T46
+E46	Or:T46 Arg:E45 Arg2:E47
 T47	Condition 1057 1062	cause
-E47	Condition:T47
+E47	Condition:T47 
 T48	Assertion 1068 1075	hinders
-E48	Assertion:T48
+E48	Assertion:T48 Asserted:T102
 A3	Assertion-Type-Value E48 hypothetical
 T49	Procedure 1083 1097	rehabilitation
-E49	Procedure:T49 Name:T104
+E49	Procedure:T49 Name:T104 Polarity:T103 Stability:T102
 T50	Or 1098 1100	or
-E50	Or:T50
+E50	Or:T50 Arg:E49 Arg2:E51
 T51	Procedure 1122 1129	bandage
-E51	Procedure:T51
+E51	Procedure:T51 Name:T93
 T52	Condition 1151 1157	stroke
 E52	Condition:T52 Name:T105
 T53	Or 1158 1159	/
-E53	Or:T53
+E53	Or:T53 Arg:E52 Arg2:E55
 T54	Modifier 1160 1169	Disabling
-E54	Modifier:T54
-T55	Procedure 1170 1192	Neurological Pathology
-E55	Procedure:T55
-T56	Modifier 1194 1225	Chronic Immunological Pathology
-E56	Modifier:T56
+E54	Modifier:T54 Modifies:T106
+T55	Condition 1170 1192	Neurological Pathology
+E55	Condition:T55 Name:T106
+T56	Modifier 1194 1201	Chronic
+E56	Modifier:T56 Modifies:T107
 T57	Or 1226 1227	/
-E57	Or:T57
+E57	Or:T57 Arg:E29 Arg2:E59
 T58	Modifier 1228 1236	Systemic
-E58	Modifier:T58
+E58	Modifier:T58 Modifies:T108
 T59	Condition 1237 1244	Disease
-E59	Condition:T59
+E59	Condition:T59 Name:T108
 T60	Condition 1264 1285	Hepatic insufficiency
 E60	Condition:T60 Name:T109
 T61	Condition 1305 1325	Venous insufficiency
-E61	Condition:T61 Name:T110
+E61	Condition:T61 Name:T110 Stage:E62
 T62	Eq-Comparison 1327 1341	stages 3 and 4
 E62	Eq-Comparison:T62 Value:T111 Value:T112
 T63	Eq-Comparison 1364 1366	on
-E63	Eq-Comparison:T63
+E63	Eq-Comparison:T63 Temporal-Period:T123
 T64	Procedure 1367 1375	dialysis
-E64	Procedure:T64 Name:T113
+E64	Procedure:T64 Name:T113 Temporality:E63
 T65	Modifier 1398 1407	cognitive
-E65	Modifier:T65
+E65	Modifier:T65 Modifies:T114
 T66	Or 1408 1410	or
-E66	Or:T66
+E66	Or:T66 Arg:E65 Arg2:E67
 T67	Modifier 1411 1421	behavioral
-E67	Modifier:T67
+E67	Modifier:T67 Modifies:T114
 T68	Condition 1422 1431	disorders
-E68	Condition:T68
+E68	Condition:T68 Name:T114
 T69	Condition 1433 1452	Parkinson's disease
 E69	Condition:T69 Name:T115
 T70	Condition 1454 1473	cerebellar syndrome
 E70	Condition:T70 Name:T116
-T71	Modifier 1475 1485	opposition
-E71	Modifier:T71
+T71	Condition 1475 1485	opposition
+E71	Condition:T71 Name:T124
 T72	Condition 1487 1496	agitation
 E72	Condition:T72 Name:T117
 T73	Condition 1498 1506	dementia
@@ -150,23 +131,17 @@ E73	Condition:T73 Name:T118
 T74	Eq-Comparison 1532 1539	history
 E74	Eq-Comparison:T74 Temporal-Period:T119
 T75	Procedure 1543 1555	knee surgery
-E75	Procedure:T75 Name:T120
+E75	Procedure:T75 Name:T120 Temporality:E74
 T76	Procedure-Name 51 72	total knee prosthesis
 T77	Eq-Temporal-Period 74 83	scheduled
 A4	Eq-Temporal-Period-Value T77 future
 T78	Eq-Operator 84 91	between
 A5	Eq-Operator-Value T78 BETWEEN
-T79	Eq-Temporal-Unit 92 99	Tuesday
-A6	Eq-Temporal-Unit-Value T79 week
-T80	Eq-Temporal-Unit 104 110	Friday
-A7	Eq-Temporal-Unit-Value T80 week
 T81	Eq-Operator 300 308	at least
 A8	Eq-Operator-Value T81 GTEQ
 T82	Eq-Value 309 311	18
 T83	Eq-Temporal-Unit 312 317	years
 A9	Eq-Temporal-Unit-Value T83 year
-T84	Eq-Operator 323 324	≥
-A10	Eq-Operator-Value T84 GTEQ
 T85	Eq-Operator 330 335	under
 A11	Eq-Operator-Value T85 LT
 T86	Eq-Value 336 338	90
@@ -178,13 +153,12 @@ T89	Observation-Name 598 624	under safeguard of justice
 T90	Observation-Name 628 646	state guardianship
 T91	Condition-Name 667 675	pregnant
 T92	Condition-Name 679 692	breastfeeding
-T93	Drug-Name 725 739	latex bandages
 T94	Condition-Name 762 786	contralateral amputation
 T95	Condition-Name 788 803	pressure ulcers
 T96	Severity 805 811	severe
 A14	Severity-Value T96 severe
 T97	Condition-Name 812 836	Obstructive Arteriopathy
-T98	Condition-Name 868 882	thromboembolic
+T98	Condition-Name 868 888	thromboembolic event
 T99	Procedure-Name 994 1001	Doppler
 T100	Eq-Temporal-Period 1036 1042	active
 A15	Eq-Temporal-Period-Value T100 present
@@ -197,17 +171,52 @@ T104	Procedure-Name 1083 1097	rehabilitation
 T105	Condition-Name 1151 1157	stroke
 T106	Condition-Name 1170 1192	Neurological Pathology
 T107	Condition-Name 1202 1225	Immunological Pathology
-T108	Condition-Name 1228 1244	Systemic Disease
+T108	Condition-Name 1237 1244	Disease
 T109	Condition-Name 1264 1285	Hepatic insufficiency
 T110	Condition-Name 1305 1325	Venous insufficiency
 T111	Eq-Value 1334 1335	3
 T112	Eq-Value 1340 1341	4
 T113	Procedure-Name 1367 1375	dialysis
-T114	Condition-Name 1411 1431	behavioral disorders
+T114	Condition-Name 1422 1431	disorders
 T115	Condition-Name 1433 1452	Parkinson's disease
 T116	Condition-Name 1454 1473	cerebellar syndrome
 T117	Condition-Name 1487 1496	agitation
 T118	Condition-Name 1498 1506	dementia
 T119	Eq-Temporal-Period 1532 1539	history
 A18	Eq-Temporal-Period-Value T119 past
-T120	Procedure-Name 1548 1555	surgery
+T120	Procedure-Name 1543 1555	knee surgery
+T121	Eq-Temporal-Recency 45 50	first
+A19	Eq-Temporal-Recency-Value T121 first-time
+T5	Eq-Value 92 99	Tuesday
+T6	Eq-Value 104 110	Friday
+T7	Insurance 258 279	health insurance plan
+T10	Procedure 451 462	therapeutic
+E5	Procedure:T10 Name:T13
+T13	Procedure-Name 451 462	therapeutic
+T79	Observation 598 624	under safeguard of justice
+E6	Observation:T79 Name:T89
+T80	Observation 628 646	state guardianship
+E7	Observation:T80 Name:T90
+T84	Or 625 627	or
+E10	Or:T84 Arg:E6 Arg2:E7
+T21	Allergy-Name 725 739	latex bandages
+T29	Temporal-Connection 980 984	post
+E13	Temporal-Connection:T29 Arg:E41 Arg2:E21
+A2	Temporal-Connection-Type-Value E13 after
+T33	Procedure 984 993	operative
+E21	Procedure:T33 Name:T34
+T34	Procedure-Name 984 993	operative
+R1	Found-By Arg1:E28 Arg2:E41	
+R2	Caused-By Arg1:T102 Arg2:E47	
+R3	Caused-By Arg1:T102 Arg2:E45	
+T93	Procedure-Name 1122 1129	bandage
+T122	Condition 1202 1225	Immunological Pathology
+E29	Condition:T122 Name:T107
+T123	Eq-Temporal-Period 1364 1366	on
+A6	Eq-Temporal-Period-Value T123 present
+R4	Example-Of Arg1:E69 Arg2:E68	
+R5	Example-Of Arg1:E70 Arg2:E68	
+T124	Condition-Name 1475 1485	opposition
+R6	Example-Of Arg1:E71 Arg2:E68	
+R7	Example-Of Arg1:E72 Arg2:E68	
+R8	Example-Of Arg1:E73 Arg2:E68	

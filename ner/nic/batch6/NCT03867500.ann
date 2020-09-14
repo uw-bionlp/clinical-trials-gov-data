@@ -1,19 +1,19 @@
 T1	Or 31 34	and
-E1	Or:T1
+E1	Or:T1 Arg:T48 Arg2:T49
 T2	Condition 46 59	premenopausal
 E2	Condition:T2 Name:T51
 T3	Observation 66 69	BMI
-E3	Observation:T3 Name:T52
+E3	Observation:T3 Name:T52 Eq-Comparison:E4
 T4	Eq-Comparison 70 73	29-
 E4	Eq-Comparison:T4 Value:T53 Operator:T54
 T5	Observation 81 87	Weight
-E5	Observation:T5 Name:T56
+E5	Observation:T5 Name:T56 Stability:T57
 T6	Negation 100 103	Not
-E6	Negation:T6
+E6	Negation:T6 Negates:E7 Negates2:E26
 T7	Condition 104 112	pregnant
 E7	Condition:T7 Name:T58
 T8	Or 112 113	/
-E8	Or:T8
+E8	Or:T8 Arg:E7 Arg2:E26
 T9	Condition 146 168	Ischemic heart disease
 E9	Condition:T9 Name:T59
 T10	Condition 174 206	Atherosclerotic valvular disease
@@ -21,76 +21,68 @@ E10	Condition:T10 Name:T60
 T11	Condition 212 219	Smokers
 E11	Condition:T11 Name:T61
 T12	Eq-Comparison 221 244	>20 cigarettes per week
-E12	Eq-Comparison:T12 Operator:T62 Value:T63 Unit:T64 Temporal-Unit:T65
-T13	Condition 261 273	oophorectomy
-E13	Condition:T13 Name:T67
-T14	Negation 279 290	Concomitant
-E14	Negation:T14
+E12	Eq-Comparison:T12 Operator:T62 Value:T63 Unit:T64 Per:T65
+T13	Procedure 261 273	oophorectomy
+E13	Procedure:T13 Name:T67
+T14	Modifier 279 290	Concomitant
+E14	Modifier:T14 Modifies:E15
 T15	Drug 298 309	medications
-E15	Drug:T15
-T16	Assertion 315 324	can alter
-E16	Assertion:T16
+E15	Drug:T15 
+T16	Assertion 315 318	can
+E16	Assertion:T16 Asserted:T68
 A1	Assertion-Type-Value E16 hypothetical
 T17	Observation 325 344	serum lipid profile
-E17	Observation:T17 Name:T69
-T18	Drug 371 374	oil
-E18	Drug:T18
+E17	Observation:T17 Name:T69 Stability:T68
+T18	Drug 366 374	fish oil
+E18	Drug:T18 Name:T98 Dose:T70 Dose2:E19
 T19	Eq-Comparison 376 387	>3g per day
-E19	Eq-Comparison:T19 Operator:T71 Value:T72 Unit:T73 Temporal-Unit:T74
+E19	Eq-Comparison:T19 Operator:T71 Value:T72 Unit:T73 Per:T74
 T20	Drug 400 407	STATINS
 E20	Drug:T20 Name:T75
 T21	Eq-Comparison 416 432	hold for 6 weeks
 E21	Eq-Comparison:T21 Value:T76 Temporal-Unit:T77
-T22	And 433 436	and
-E22	And:T22
-T23	Drug 445 448	PCP
-E23	Drug:T23 Name:T78
-T24	Modifier 448 459	's approval
-E24	Modifier:T24
 T25	Drug 472 478	Niacin
 E25	Drug:T25 Name:T79
-T26	Drug 486 497	- Fibrates
-E26	Drug:T26 Name:T80
 T27	Drug 508 526	thiazolidinediones
 E27	Drug:T27 Name:T81
 T28	Drug 537 550	Beta-blockers
 E28	Drug:T28 Name:T82
 T29	Drug 570 584	antipsychotics
-E29	Drug:T29
+E29	Drug:T29 Name:T102
 T30	Drug 590 599	Lidocaine
 E30	Drug:T30 Name:T84
 T31	Or 600 602	or
-E31	Or:T31
+E31	Or:T31 Arg:E30 Arg2:E32
 T32	Drug 603 609	Niacin
 E32	Drug:T32 Name:T85
 T33	Or 609 610	/
-E33	Or:T33
+E33	Or:T33 Arg:E32 Arg2:E34
 T34	Drug 610 617	Niaspan
 E34	Drug:T34 Name:T86
 T35	Allergy 618 625	allergy
-E35	Allergy:T35
+E35	Allergy:T35 Name:E30 Name2:E32 Name3:E34
 T36	Eq-Comparison 645 676	1.5 times upper limit of normal
 E36	Eq-Comparison:T36 Value:T87 Unit:T88
 T37	Observation 680 696	serum creatinine
-E37	Observation:T37 Name:T89
-T38	Drug 698 718	Alkaline phosphatase
-E38	Drug:T38
-T39	Drug 720 746	Aspartate aminotransferase
-E39	Drug:T39
+E37	Observation:T37 Name:T89 Eq-Comparison:E36
+T38	Observation 698 718	Alkaline phosphatase
+E38	Observation:T38 Name:T90 Eq-Comparison:E36
+T39	Observation 720 746	Aspartate aminotransferase
+E39	Observation:T39 Name:T91 Eq-Comparison:E36
 T40	Observation 748 751	AST
 E40	Observation:T40 Name:T92
 T41	Observation 754 778	Alanine aminotransferase
-E41	Observation:T41 Name:T93
+E41	Observation:T41 Name:T93 Eq-Comparison:E36
 T42	Observation 780 783	ALT
 E42	Observation:T42 Name:T94
 T43	Exception 785 791	unless
-E43	Exception:T43
+E43	Exception:T43 From:E42 Except:E44 Except2:E45
 T44	Condition 808 827	fatty liver disease
 E44	Condition:T44 Name:T95
-T45	Condition 829 844	Total bilirubin
-E45	Condition:T45
+T45	Observation 829 844	Total bilirubin
+E45	Observation:T45 Name:T96
 T46	Exception 846 852	unless
-E46	Exception:T46
+E46	Exception:T46 From:E45 Except:E47
 T47	Condition 880 898	Gilbert's syndrome
 E47	Condition:T47 Name:T97
 T48	Life-Stage-And-Gender 25 30	Women
@@ -112,7 +104,7 @@ T57	Stability 88 94	stable
 A8	Stability-Value T57 stable
 T58	Condition-Name 104 112	pregnant
 T59	Condition-Name 146 168	Ischemic heart disease
-T60	Condition-Name 190 206	valvular disease
+T60	Condition-Name 174 206	Atherosclerotic valvular disease
 T61	Condition-Name 212 219	Smokers
 T62	Eq-Operator 221 222	>
 A9	Eq-Operator-Value T62 GT
@@ -120,9 +112,7 @@ T63	Eq-Value 222 224	20
 T64	Eq-Unit 225 235	cigarettes
 T65	Eq-Temporal-Unit 240 244	week
 A10	Eq-Temporal-Unit-Value T65 week
-T66	Eq-Temporal-Period 251 260	Bilateral
-A11	Eq-Temporal-Period-Value T66 present
-T67	Condition-Name 261 273	oophorectomy
+T67	Procedure-Name 261 273	oophorectomy
 T68	Stability 319 324	alter
 A12	Stability-Value T68 change
 T69	Observation-Name 325 344	serum lipid profile
@@ -139,18 +129,15 @@ T75	Drug-Name 400 407	STATINS
 T76	Eq-Value 425 426	6
 T77	Eq-Temporal-Unit 427 432	weeks
 A17	Eq-Temporal-Unit-Value T77 week
-T78	Drug-Name 445 448	PCP
 T79	Drug-Name 472 478	Niacin
-T80	Drug-Name 486 497	- Fibrates
 T81	Drug-Name 508 526	thiazolidinediones
 T82	Drug-Name 537 550	Beta-blockers
-T83	Drug-Name 558 584	- Atypical antipsychotics
 T84	Drug-Name 590 599	Lidocaine
 T85	Drug-Name 603 609	Niacin
 T86	Drug-Name 610 617	Niaspan
 T87	Eq-Value 645 648	1.5
 T88	Eq-Unit 655 676	upper limit of normal
-A18	Eq-Unit-Value T88 ref-range-high
+A18	Eq-Unit-Value T88 ref-range-normal
 T89	Observation-Name 680 696	serum creatinine
 A19	Observation-Type-Value T89 lab
 T90	Observation-Name 698 718	Alkaline phosphatase
@@ -167,3 +154,28 @@ T95	Condition-Name 808 827	fatty liver disease
 T96	Observation-Name 829 844	Total bilirubin
 A25	Observation-Type-Value T96 lab
 T97	Condition-Name 880 898	Gilbert's syndrome
+R1	If-Then Arg1:T50 Arg2:E2	
+T26	Condition 113 120	nursing
+E26	Condition:T26 Name:T80
+T80	Condition-Name 113 120	nursing
+T83	Observation 212 219	Smokers
+E48	Observation:T83 Eq-Comparison:E12
+T66	Modifier 251 260	Bilateral
+E49	Modifier:T66 Modifies:T67
+R2	Caused-By Arg1:T68 Arg2:E15	
+T98	Drug-Name 366 374	fish oil
+R3	Equivalent-To Arg1:E19 Arg2:T70	
+T22	Drug 489 497	Fibrates
+E22	Drug:T22 Name:T23
+T23	Drug-Name 489 497	Fibrates
+T24	Provider 445 448	PCP
+E23	Provider:T24 Role:T78
+T78	Provider-Role 445 448	PCP
+T99	Observation 451 459	approval
+E24	Observation:T99 Name:T100 Provider:E23
+T100	Observation-Name 451 459	approval
+T101	Modifier 561 569	Atypical
+E50	Modifier:T101 Modifies:T102
+T102	Drug-Name 570 584	antipsychotics
+R4	Abbrev-Of Arg1:E40 Arg2:E39	
+R5	Abbrev-Of Arg1:E42 Arg2:E41	
