@@ -1,96 +1,91 @@
 T1	Age 25 28	age
-E1	Age:T1
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 29 39	> 18 years
 E2	Eq-Comparison:T2 Operator:T59 Value:T60 Temporal-Unit:T61
 T3	Condition 69 80	prediabetes
 E3	Condition:T3 Name:T62
 T4	Or 81 83	or
-E4	Or:T4
+E4	Or:T4 Arg:E3 Arg2:E5
 T5	Condition 84 87	T2D
-E5	Condition:T5
+E5	Condition:T5 Name:T63
 T6	Observation 100 103	A1c
-E6	Observation:T6 Name:T64
+E6	Observation:T6 Name:T64 Eq-Comparison:E7
 T7	Eq-Comparison 107 113	≥ 5.7%
 E7	Eq-Comparison:T7 Operator:T65 Value:T66 Unit:T67
-T8	Eq-Comparison 115 121	2-hour
-E8	Eq-Comparison:T8
-T9	Temporal-Connection 122 126	post
-E9	Temporal-Connection:T9
-A1	Temporal-Connection-Type-Value E9 after
-T10	Observation 127 139	load glucose
-E10	Observation:T10 Name:T68
+T10	Observation 115 139	2-hour post-load glucose
+E10	Observation:T10 Name:T68 Eq-Comparison:E11
 T11	Eq-Comparison 143 147	>140
 E11	Eq-Comparison:T11 Operator:T69 Value:T70
 T12	Or 149 151	or
-E12	Or:T12
+E12	Or:T12 Arg:E10 Arg2:E13
 T13	Observation 152 155	FBG
-E13	Observation:T13 Name:T71
+E13	Observation:T13 Name:T71 Eq-Comparison:E14
 T14	Eq-Comparison 159 163	>100
 E14	Eq-Comparison:T14 Operator:T72 Value:T73
 T15	Family-Member 173 179	family
-E15	Family-Member:T15
+E15	Family-Member:T15 Has:E8
 A2	Family-Member-Type E15 parent
 T16	Assertion 195 205	willing to
-E16	Assertion:T16
+E16	Assertion:T16 Asserted:E8
 A3	Assertion-Type-Value E16 hypothetical
 T17	Eq-Comparison 297 309	at least one
 E17	Eq-Comparison:T17 Operator:T75 Value:T76
-T18	Condition 401 416	type 1 diabetes
+T18	Condition 408 416	diabetes
 E18	Condition:T18 Name:T77
 T19	Or 417 419	or
-E19	Or:T19
+E19	Or:T19 Arg:E18 Arg2:E20
 T20	Condition 420 428	diabetes
 E20	Condition:T20 Name:T78
 T21	Other 442 447	other
-E21	Other:T21
+E21	Other:T21 Is-Other:E22
 T22	Condition 448 458	conditions
-E22	Condition:T22
+E22	Condition:T22 
 T23	Drug 465 472	steroid
 E23	Drug:T23 Name:T79
 T24	Modifier 473 480	induced
-E24	Modifier:T24
+E24	Modifier:T24 Modifies:T80
 T25	Modifier 482 492	pancreatic
-E25	Modifier:T25
+E25	Modifier:T25 Modifies:T80
 T26	Condition 493 506	insufficiency
-E26	Condition:T26
+E26	Condition:T26 Name:T80
 T27	Or 508 510	or
-E27	Or:T27
+E27	Or:T27 Arg:E26 Arg2:E28
 T28	Procedure 511 523	chemotherapy
 E28	Procedure:T28 Name:T81
 T29	Modifier 524 531	induced
-E29	Modifier:T29
+E29	Modifier:T29 Modifies:T80
 T30	Condition 539 549	malignancy
 E30	Condition:T30 Name:T83
 T31	Or 550 552	or
-E31	Or:T31
-T32	Modifier 553 569	life-threatening
-E32	Modifier:T32
+E31	Or:T31 Arg:E30 Arg2:E32
+T32	Risk 553 569	life-threatening
+E32	Risk:T32 Risk-For:E59
 T33	Condition 570 577	illness
-E33	Condition:T33
+E33	Condition:T33 
 T34	And 578 582	with
-E34	And:T34
+E34	And:T34 Arg:E33 Arg2:E35
 T35	Observation 583 598	life expectancy
-E35	Observation:T35 Name:T85
+E35	Observation:T35 Name:T85 Eq-Comparison:E36
 T36	Eq-Comparison 602 610	<5 years
 E36	Eq-Comparison:T36 Operator:T86 Value:T87 Temporal-Unit:T88
-T37	Condition 617 634	end-stage disease
+T37	Condition 627 634	disease
 E37	Condition:T37 Name:T90
 T38	Or 635 637	or
-E38	Or:T38
+E38	Or:T38 Arg:E37 Arg2:E39
 T39	Condition 646 653	illness
-E39	Condition:T39 Name:T92
+E39	Condition:T39 Name:T92 Severity:T91
 T40	Modifier 689 698	end-stage
-E40	Modifier:T40
+E40	Modifier:T40 Modifies:T93
 T41	Condition 699 712	renal disease
-E41	Condition:T41
+E41	Condition:T41 Name:T93
 T42	Or 713 715	or
-E42	Or:T42
+E42	Or:T42 Arg:E41 Arg2:E44
 T43	Eq-Comparison 716 724	class IV
 E43	Eq-Comparison:T43 Unit:T94 Value:T95
 T44	Condition 725 749	congestive heart failure
-E44	Condition:T44 Name:T96
+E44	Condition:T44 Name:T96 Stage:E43
 T45	Assertion 757 766	inability
-E45	Assertion:T45
+E45	Assertion:T45 Asserted:E57
 A4	Assertion-Type-Value E45 hypothetical
 T47	Observation 791 808	physical activity
 E46	Observation:T47 Name:T97
@@ -99,37 +94,37 @@ E47	Condition:T48 Name:T98
 T49	Condition 841 859	cognitive deficits
 E48	Condition:T49 Name:T99
 T50	Or 860 862	or
-E49	Or:T50
+E49	Or:T50 Arg:E48 Arg2:E50
 T51	Condition 871 895	decision-making capacity
-E50	Condition:T51
+E50	Condition:T51 Polarity:T107 Name:T100
 T52	Modifier 902 909	alcohol
-E51	Modifier:T52
+E51	Modifier:T52 Modifies:T101
 T53	Or 910 912	or
-E52	Or:T53
-T54	Condition 913 928	substance abuse
+E52	Or:T53 Arg:E51 Arg2:E65
+T54	Condition 923 928	abuse
 E53	Condition:T54 Name:T101
 T55	Condition 935 947	homelessness
 E54	Condition:T55 Name:T102
 T56	Or 948 950	or
-E55	Or:T56
+E55	Or:T56 Arg:E54 Arg2:E56
 T57	Negation 951 953	no
-E56	Negation:T57
+E56	Negation:T57 Negates:T109
 T58	Negation 757 766	inability
-E57	Negation:T58
+E57	Negation:T58 Negates:E46
 T59	Eq-Operator 29 30	>
 A5	Eq-Operator-Value T59 GT
 T60	Eq-Value 31 33	18
 T61	Eq-Temporal-Unit 34 39	years
 A6	Eq-Temporal-Unit-Value T61 year
 T62	Condition-Name 69 80	prediabetes
-T63	Observation-Name 84 87	T2D
+T63	Condition-Name 84 87	T2D
 T64	Observation-Name 100 103	A1c
 A7	Observation-Type-Value T64 lab
 T65	Eq-Operator 107 108	≥
 A8	Eq-Operator-Value T65 GTEQ
 T66	Eq-Value 109 112	5.7
 T67	Eq-Unit 112 113	%
-T68	Observation-Name 127 139	load glucose
+T68	Observation-Name 115 139	2-hour post-load glucose
 A9	Observation-Type-Value T68 lab
 T69	Eq-Operator 143 144	>
 A10	Eq-Operator-Value T69 GT
@@ -142,26 +137,23 @@ T74	Language 286 293	English
 T75	Eq-Operator 297 305	at least
 A12	Eq-Operator-Value T75 GTEQ
 T76	Eq-Value 306 309	one
-T77	Condition-Name 401 416	type 1 diabetes
+T77	Condition-Name 408 416	diabetes
 T78	Condition-Name 420 428	diabetes
 T79	Drug-Name 465 472	steroid
-T80	Condition-Name 482 506	pancreatic insufficiency
+T80	Condition-Name 493 506	insufficiency
 T81	Procedure-Name 511 523	chemotherapy
-T82	Condition-Name 524 531	induced
 T83	Condition-Name 539 549	malignancy
-T84	Condition-Name 553 577	life-threatening illness
 T85	Observation-Name 583 598	life expectancy
 T86	Eq-Operator 602 603	<
 A13	Eq-Operator-Value T86 LT
 T87	Eq-Value 603 604	5
 T88	Eq-Temporal-Unit 605 610	years
 A14	Eq-Temporal-Unit-Value T88 year
-T89	Eq-Value 614 615	3
-T90	Condition-Name 617 634	end-stage disease
+T90	Condition-Name 627 634	disease
 T91	Severity 638 645	serious
 A15	Severity-Value T91 severe
 T92	Condition-Name 646 653	illness
-T93	Condition-Name 693 712	stage renal disease
+T93	Condition-Name 699 712	renal disease
 T94	Eq-Unit 716 721	class
 T95	Eq-Value 722 724	IV
 T96	Condition-Name 725 749	congestive heart failure
@@ -169,6 +161,44 @@ T97	Observation-Name 791 808	physical activity
 A16	Observation-Type-Value T97 social-habit
 T98	Condition-Name 815 824	pregnancy
 T99	Condition-Name 841 859	cognitive deficits
-T100	Condition-Name 863 879	limited decision
-T101	Condition-Name 913 928	substance abuse
+T100	Condition-Name 871 895	decision-making capacity
+T101	Condition-Name 923 928	abuse
 T102	Condition-Name 935 947	homelessness
+R1	Equivalent-To Arg1:E6 Arg2:E3	
+R2	Equivalent-To Arg1:E10 Arg2:E3	
+R3	Equivalent-To Arg1:E13 Arg2:E3	
+T8	Procedure 233 241	sessions
+E8	Procedure:T8 Name:T9
+T9	Procedure-Name 233 241	sessions
+T46	Modifier 401 407	type 1
+E9	Modifier:T46 Modifies:T77
+T103	Modifier 429 438	secondary
+E58	Modifier:T103 Modifies:T78
+R4	Caused-By Arg1:E20 Arg2:E22	
+R5	Caused-By Arg1:E26 Arg2:E23	
+R6	Example-Of Arg1:E26 Arg2:E22	
+R7	Caused-By Arg1:E26 Arg2:E28	
+T82	Death 553 569	life-threatening
+E59	Death:T82 
+R8	Caused-By Arg1:E32 Arg2:E33	
+T84	Modifier 617 626	end-stage
+E60	Modifier:T84 Modifies:T90
+T89	Study 669 682	participation
+E61	Study:T89 
+T104	Negation 659 668	prohibits
+E62	Negation:T104 Negates:E61
+T105	Assertion 659 668	prohibits
+E63	Assertion:T105 Asserted:E62
+A1	Assertion-Type-Value E63 hypothetical
+R9	Caused-By Arg1:E62 Arg2:E39	
+R10	Caused-By Arg1:E62 Arg2:E37	
+R11	Example-Of Arg1:E41 Arg2:E39	
+R12	Example-Of Arg1:E44 Arg2:E39	
+T106	Modifier 778 790	unsupervised
+E64	Modifier:T106 Modifies:T97
+T107	Polarity 863 870	limited
+A17	Polarity-Value T107 low
+T108	Modifier 913 922	substance
+E65	Modifier:T108 Modifies:T101
+T109	Location 954 967	fixed address
+A18	Location-Value T109 residence
