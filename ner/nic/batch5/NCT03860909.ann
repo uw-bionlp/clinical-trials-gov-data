@@ -1,12 +1,12 @@
 T1	And 41 44	who
-E1	And:T1
+E1	And:T1 Arg:T16 Arg2:E2
 T2	Assertion 50 58	symptoms
-E2	Assertion:T2
+E2	Assertion:T2 Asserted:E3
 A1	Assertion-Type-Value E2 possible
 T3	Condition 75 88	endometriosis
 E3	Condition:T3 Name:T17
 T4	Modifier 97 103	pelvic
-E4	Modifier:T4
+E4	Modifier:T4 Modifies:T18
 T5	Condition 104 108	pain
 E5	Condition:T5 Name:T18
 T6	Condition 110 122	dysmenorrhea
@@ -14,19 +14,19 @@ E6	Condition:T6 Name:T19
 T7	Condition 124 140	deep dyspareunia
 E7	Condition:T7 Name:T20
 T8	Or 142 145	and
-E8	Or:T8
+E8	Or:T8 Arg:E7 Arg2:E9
 T9	Condition 146 157	infertility
 E9	Condition:T9 Name:T21
 T10	Contraindication 194 210	contraindication
-E10	Contraindication:T10
+E10	Contraindication:T10 Contraindicates:E11
 T11	Procedure 214 217	MRI
 E11	Procedure:T11 Name:T22
-T12	Condition 219 229	peacemaker
-E12	Condition:T12
-T13	Modifier 231 254	metallic foreign bodies
-E13	Modifier:T13
+T12	Procedure 219 229	peacemaker
+E12	Procedure:T12 Name:T25
+T13	Condition 231 254	metallic foreign bodies
+E13	Condition:T13 Name:T23
 T14	Or 256 259	and
-E14	Or:T14
+E14	Or:T14 Arg:E13 Arg2:E15
 T15	Condition 260 274	claustrophobia
 E15	Condition:T15 Name:T24
 T16	Life-Stage-And-Gender 25 31	Female
@@ -39,3 +39,11 @@ T21	Condition-Name 146 157	infertility
 T22	Procedure-Name 214 217	MRI
 T23	Condition-Name 231 254	metallic foreign bodies
 T24	Condition-Name 260 274	claustrophobia
+R1	Example-Of Arg1:E5 Arg2:E3	
+R2	Example-Of Arg1:E6 Arg2:E3	
+R3	Example-Of Arg1:E7 Arg2:E3	
+R4	Example-Of Arg1:E9 Arg2:E3	
+T25	Procedure-Name 219 229	peacemaker
+R5	Example-Of Arg1:E12 Arg2:E10	
+R6	Example-Of Arg1:E13 Arg2:E10	
+R7	Example-Of Arg1:E15 Arg2:E10	
