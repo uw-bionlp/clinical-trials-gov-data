@@ -1,135 +1,127 @@
-T1	Observation 25 42	Skeletal maturity
-E1	Observation:T1 Name:T63
+T1	Condition 25 42	Skeletal maturity
+E1	Condition:T1 Name:T63
 T2	Eq-Comparison 48 57	AO/OTA 42
-E2	Eq-Comparison:T2 Value:T65
+E2	Eq-Comparison:T2 Value:T65 Value2:T60
 T3	Modifier 58 68	open tibia
-E3	Modifier:T3
+E3	Modifier:T3 Modifies:T66
 T4	Condition 69 78	fractures
-E4	Condition:T4 Name:T66
-T5	Modifier 84 99	Wound primarily
-E5	Modifier:T5
-T6	Condition 100 109	closeable
-E6	Condition:T6
+E4	Condition:T4 Name:T66 Stage:E2
+T5	Modifier 90 109	primarily closeable
+E5	Modifier:T5 Modifies:T64
+T6	Condition 84 89	Wound
+E6	Condition:T6 Name:T64
 T7	Negation 111 113	no
-E7	Negation:T7
+E7	Negation:T7 Negates:E10
 T8	Modifier 114 118	flap
-E8	Modifier:T8
+E8	Modifier:T8 Modifies:T107
 T9	Or 119 121	or
-E9	Or:T9
-T10	Condition 122 138	delay in closure
-E10	Condition:T10
-T11	Procedure 146 166	contamination needed
-E11	Procedure:T11
-T12	Condition 182 194	pedal pulses
-E12	Condition:T12
+E9	Or:T9 Arg:E8 Arg2:E62
+T10	Procedure 131 138	closure
+E10	Procedure:T10 Name:T107
+T11	Condition 146 159	contamination
+E11	Condition:T11 Name:T108
+T12	Observation 182 194	pedal pulses
+E12	Observation:T12 Name:T67
 T13	Negation 196 198	no
-E13	Negation:T13
-T14	Condition 199 224	vascular injury sustained
+E13	Negation:T13 Negates:E14
+T14	Condition 199 214	vascular injury
 E14	Condition:T14 Name:T68
 T15	Eq-Comparison 244 259	within 24 hours
 E15	Eq-Comparison:T15 Operator:T69 Value:T70 Temporal-Unit:T71
 T16	Temporal-Connection 260 264	from
-E16	Temporal-Connection:T16
+E16	Temporal-Connection:T16 Arg:E15 Arg2:E17
 A1	Temporal-Connection-Type-Value E16 after
 T17	Condition 265 271	injury
-E17	Condition:T17
+E17	Condition:T17 Name:T111
 T18	Eq-Comparison 297 304	Current
 E18	Eq-Comparison:T18 Temporal-Period:T72
 T19	Condition 305 311	injury
-E19	Condition:T19 Name:T73
-T20	Condition 317 336	pathologic fracture
+E19	Condition:T19 Name:T73 Temporality:E18
+T20	Condition 328 336	fracture
 E20	Condition:T20 Name:T74
-T21	Modifier 352 361	bilateral
-E21	Modifier:T21
-T22	Condition 362 376	tibia fracture
-E22	Condition:T22
-T23	Modifier 382 402	Sustained comminuted
-E23	Modifier:T23
-T24	Condition 403 417	femur fracture
-E24	Condition:T24
+T21	Modifier 352 367	bilateral tibia
+E21	Modifier:T21 Modifies:T76
+T22	Condition 368 376	fracture
+E22	Condition:T22 Name:T76
+T23	Modifier 392 408	comminuted femur
+E23	Modifier:T23 Modifies:T78
+T24	Condition 409 417	fracture
+E24	Condition:T24 Name:T78
 T25	Condition 440 462	Traumatic Brain Injury
-E25	Condition:T25 Name:T81
-T26	Condition 464 470	GCS<12
-E26	Condition:T26 Name:T82
-T27	Eq-Comparison 472 473	*
-E27	Eq-Comparison:T27
-T28	Eq-Comparison 473 475	**
-E28	Eq-Comparison:T28
-T29	Eq-Comparison 478 479	5
-E29	Eq-Comparison:T29
+E25	Condition:T25 Name:T81 Severity:T80
+T26	Observation 464 467	GCS
+E26	Observation:T26 Name:T82 Eq-Comparison:E27
 T30	Modifier 498 509	spinal cord
-E30	Modifier:T30
+E30	Modifier:T30 Modifies:T85
 T31	Condition 510 516	injury
-E31	Condition:T31
+E31	Condition:T31 Name:T85 Severity:T84
 T32	Modifier 518 533	lower extremity
-E32	Modifier:T32
+E32	Modifier:T32 Modifies:T86 Modifies2:T87
 T33	Condition 534 541	paresis
 E33	Condition:T33 Name:T86
 T34	Or 541 542	/
-E34	Or:T34
+E34	Or:T34 Arg:E33 Arg2:E35
 T35	Condition 542 551	paralysis
 E35	Condition:T35 Name:T87
 T36	Condition 575 580	burns
-E36	Condition:T36 Name:T90
+E36	Condition:T36 Name:T90 Severity:T89
 T37	Eq-Comparison 582 586	>10%
 E37	Eq-Comparison:T37 Operator:T91 Value:T92 Unit:T93
-T38	Observation 593 610	body surface area
-E38	Observation:T38
+T38	Observation 587 610	total body surface area
+E38	Observation:T38 Name:T29 Eq-Comparison:E37
 T39	Observation 612 616	TBSA
 E39	Observation:T39 Name:T94
 T40	Or 618 620	or
-E40	Or:T40
+E40	Or:T40 Arg:E39 Arg2:E28
 T41	Eq-Comparison 621 629	>5% TBSA
-E41	Eq-Comparison:T41 Operator:T95 Value:T96 Unit:T97 Unit:T98
+E41	Eq-Comparison:T41 Operator:T95 Value:T96 Unit:T97
 T42	And 630 634	with
-E42	And:T42
+E42	And:T42 Arg:E28 Arg2:E46
 T43	Modifier 635 649	full thickness
-E43	Modifier:T43
+E43	Modifier:T43 Modifies:T99
 T44	Or 650 652	or
-E44	Or:T44
+E44	Or:T44 Arg:E43 Arg2:E45
 T45	Modifier 653 668	circumferential
-E45	Modifier:T45
+E45	Modifier:T45 Modifies:T99
 T46	Condition 669 675	injury
 E46	Condition:T46 Name:T99
 T47	Eq-Comparison 682 687	Prior
 E47	Eq-Comparison:T47 Temporal-Period:T100
 T48	Modifier 688 703	ipsilateral leg
-E48	Modifier:T48
+E48	Modifier:T48 Modifies:T101
 T49	Condition 704 710	injury
-E49	Condition:T49 Name:T101
+E49	Condition:T49 Name:T101 Temporality:E47
 T50	Assertion 711 720	requiring
-E50	Assertion:T50
+E50	Assertion:T50 Asserted:E51
 A2	Assertion-Type-Value E50 hypothetical
 T51	Procedure 721 728	surgery
 E51	Procedure:T51 Name:T102
 T52	Eq-Comparison 734 739	Prior
 E52	Eq-Comparison:T52 Temporal-Period:T103
 T53	Or 740 742	or
-E53	Or:T53
+E53	Or:T53 Arg:E52 Arg2:E54
 T54	Eq-Comparison 743 750	current
 E54	Eq-Comparison:T54 Temporal-Period:T104
 T55	Modifier 751 761	lower limb
-E55	Modifier:T55
+E55	Modifier:T55 Modifies:T105
 T56	Condition 762 771	deformity
-E56	Condition:T56 Name:T105
+E56	Condition:T56 Name:T105 Temporality:E52 Temporality2:E54
 T57	Or 772 774	or
-E57	Or:T57
+E57	Or:T57 Arg:E56 Arg2:E58
 T58	Condition 775 786	abnormality
-E58	Condition:T58 Name:T106
+E58	Condition:T58 Name:T106 Temporality:E52 Temporality2:E54
 T59	Assertion 792 798	Unable
-E59	Assertion:T59
+E59	Assertion:T59 Asserted:E61
 A3	Assertion-Type-Value E59 hypothetical
 T61	Encounter 811 827	follow-up visits
-E60	Encounter:T61
+E60	Encounter:T61 
 T62	Negation 792 798	Unable
-E61	Negation:T62
-T63	Observation-Name 25 42	Skeletal maturity
-A4	Observation-Type-Value T63 measurement
-T64	Observation-Name 51 54	OTA
-T65	Eq-Value 55 57	42
+E61	Negation:T62 Negates:E60
+T63	Condition-Name 25 42	Skeletal maturity
+T65	Eq-Value 51 57	OTA 42
 T66	Condition-Name 69 78	fractures
-T67	Condition-Name 173 194	Palpable pedal pulses
-T68	Condition-Name 199 224	vascular injury sustained
+T67	Observation-Name 182 194	pedal pulses
+T68	Condition-Name 199 214	vascular injury
 T69	Eq-Operator 244 250	within
 A5	Eq-Operator-Value T69 LTEQ
 T70	Eq-Value 251 253	24
@@ -139,27 +131,17 @@ T72	Eq-Temporal-Period 297 304	Current
 A7	Eq-Temporal-Period-Value T72 present
 T73	Condition-Name 305 311	injury
 T74	Condition-Name 328 336	fracture
-T75	Severity 342 351	Sustained
-A8	Severity-Value T75 severe
-T76	Condition-Name 352 376	bilateral tibia fracture
-T77	Severity 382 391	Sustained
-A9	Severity-Value T77 severe
-T78	Condition-Name 392 417	comminuted femur fracture
-T79	Severity 423 432	Sustained
-A10	Severity-Value T79 severe
+T76	Condition-Name 368 376	fracture
+T78	Condition-Name 409 417	fracture
 T80	Severity 433 439	severe
 A11	Severity-Value T80 severe
 T81	Condition-Name 440 462	Traumatic Brain Injury
-T82	Condition-Name 464 470	GCS<12
-T83	Severity 481 490	Sustained
-A12	Severity-Value T83 severe
+T82	Observation-Name 464 467	GCS
 T84	Severity 491 497	severe
 A13	Severity-Value T84 severe
-T85	Condition-Name 498 516	spinal cord injury
+T85	Condition-Name 510 516	injury
 T86	Condition-Name 534 541	paresis
 T87	Condition-Name 542 551	paralysis
-T88	Severity 558 567	Sustained
-A14	Severity-Value T88 severe
 T89	Severity 568 574	severe
 A15	Severity-Value T89 severe
 T90	Condition-Name 575 580	burns
@@ -172,7 +154,7 @@ T95	Eq-Operator 621 622	>
 A17	Eq-Operator-Value T95 GT
 T96	Eq-Value 622 623	5
 T97	Eq-Unit 623 624	%
-T98	Eq-Unit 625 629	TBSA
+T98	Observation-Name 625 629	TBSA
 T99	Condition-Name 669 675	injury
 T100	Eq-Temporal-Period 682 687	Prior
 A18	Eq-Temporal-Period-Value T100 past
@@ -184,3 +166,36 @@ T104	Eq-Temporal-Period 743 750	current
 A20	Eq-Temporal-Period-Value T104 present
 T105	Condition-Name 762 771	deformity
 T106	Condition-Name 775 786	abnormality
+T60	Eq-Value 48 50	AO
+T64	Condition-Name 84 89	Wound
+T107	Procedure-Name 131 138	closure
+T108	Condition-Name 146 159	contamination
+T109	Modifier 122 127	delay
+E62	Modifier:T109 Modifies:T107
+R1	Caused-By Arg1:E10 Arg2:E11	
+R2	Equivalent-To Arg1:E7 Arg2:E5	
+T110	Modifier 173 181	Palpable
+E63	Modifier:T110 Modifies:T67
+A4	Observation-Type-Value T67 vital
+R3	Equivalent-To Arg1:E13 Arg2:E12	
+T111	Condition-Name 265 271	injury
+T112	Modifier 317 327	pathologic
+E64	Modifier:T112 Modifies:T74
+R4	Equivalent-To Arg1:E20 Arg2:E19	
+A8	Observation-Type-Value T82 clinical-score
+T27	Eq-Comparison 467 470	<12
+E27	Eq-Comparison:T27 Operator:T28 Value:T75
+T28	Eq-Operator 467 468	<
+A9	Eq-Operator-Value T28 LT
+T75	Eq-Value 468 470	12
+R5	Equivalent-To Arg1:E26 Arg2:E25	
+R6	Example-Of Arg1:E33 Arg2:E31	
+R7	Example-Of Arg1:E35 Arg2:E31	
+T29	Observation-Name 587 610	total body surface area
+A10	Observation-Type-Value T29 measurement
+R8	Abbrev-Of Arg1:E39 Arg2:E38	
+R9	Equivalent-To Arg1:E38 Arg2:E36	
+T77	Observation 625 629	TBSA
+E28	Observation:T77 Name:T98 Eq-Comparison:E41
+R10	Treatment-For Arg1:E51 Arg2:E49	
+R11	Abbrev-Of Arg1:E55 Arg2:E58	
