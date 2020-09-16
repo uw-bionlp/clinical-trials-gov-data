@@ -1,69 +1,69 @@
 T1	Condition 49 56	healthy
 E1	Condition:T1 Name:T45
 T2	Procedure 74 101	standard medical assessment
-E2	Procedure:T2
+E2	Procedure:T2 Name:T69
 T3	Modifier 105 113	physical
-E3	Modifier:T3
+E3	Modifier:T3 Modifies:T69
 T4	Or 114 117	and
-E4	Or:T4
-T5	Procedure 118 131	mental health
-E5	Procedure:T5
+E4	Or:T4 Arg:E3 Arg2:E5
+T5	Modifier 118 131	mental health
+E5	Modifier:T5 Modifies:T69
 T6	Eq-Comparison 144 151	stage 2
-E6	Eq-Comparison:T6
-T7	Procedure 161 179	breast development
-E7	Procedure:T7
+E6	Eq-Comparison:T6 Unit:T71 Value:T72
+T7	Condition 161 179	breast development
+E7	Condition:T7 Name:T73
 T8	Or 191 194	and
-E8	Or:T8
-T9	Modifier 195 205	pubic hair
-E9	Modifier:T9
+E8	Or:T8 Arg:T74 Arg2:T76
+T9	Condition 195 205	pubic hair
+E9	Condition:T9 Name:T75
 T10	Eq-Comparison 361 368	History
 E10	Eq-Comparison:T10 Temporal-Period:T47
 T11	Condition 380 398	medical conditions
-E11	Condition:T11
+E11	Condition:T11 Severity:T48 Temporality:E10
 T12	Modifier 407 417	intestinal
-E12	Modifier:T12
+E12	Modifier:T12 Modifies:T50
 T13	Or 418 420	or
-E13	Or:T13
+E13	Or:T13 Arg:E12 Arg2:T49
 T14	Condition 428 446	metabolic diseases
-E14	Condition:T14 Name:T50
+E14	Condition:T14 Name:T50 Severity:T49
 T15	Condition 448 457	disorders
 E15	Condition:T15 Name:T51
 T16	Condition 466 474	diabetes
 E16	Condition:T16 Name:T52
 T17	Modifier 476 481	renal
-E17	Modifier:T17
+E17	Modifier:T17 Modifies:T53
 T18	Modifier 483 490	hepatic
-E18	Modifier:T18
+E18	Modifier:T18 Modifies:T53
 T19	Or 491 493	or
-E19	Or:T19
+E19	Or:T19 Arg:E18 Arg2:E20
 T20	Modifier 494 504	pancreatic
-E20	Modifier:T20
+E20	Modifier:T20 Modifies:T53
 T21	Condition 505 513	diseases
-E21	Condition:T21
+E21	Condition:T21 Name:T53
 T22	Condition 515 524	disorders
 E22	Condition:T22 Name:T54
 T23	Condition 526 531	ulcer
-E23	Condition:T23
+E23	Condition:T23 Name:T80
 T24	Condition 533 548	hyperthyroidism
 E24	Condition:T24 Name:T55
 T25	Condition 550 560	malignance
 E25	Condition:T25 Name:T56
-T26	Condition 562 582	chronic malnutrition
+T26	Condition 570 582	malnutrition
 E26	Condition:T26 Name:T57
 T27	Condition 584 591	anaemia
 E27	Condition:T27 Name:T58
 T28	Eq-Comparison 597 604	History
 E28	Eq-Comparison:T28 Temporal-Period:T59
 T29	Or 605 607	or
-E29	Or:T29
+E29	Or:T29 Arg:E28 Arg2:E30
 T30	Eq-Comparison 608 610	on
 E30	Eq-Comparison:T30 Temporal-Period:T60
 T31	Procedure 611 618	therapy
-E31	Procedure:T31 Name:T61
+E31	Procedure:T31 Name:T61 Temporality:E28 Temporality2:E30
 T32	Drug 624 634	medication
-E32	Drug:T32
+E32	Drug:T32 
 T33	Condition 659 674	bone metabolism
-E33	Condition:T33
+E33	Condition:T33 Name:T62 Stability:T82
 T34	Drug 683 691	steroids
 E34	Drug:T34 Name:T63
 T35	Drug 693 701	hormones
@@ -73,22 +73,20 @@ E36	Drug:T36 Name:T65
 T37	Drug 714 723	cortisone
 E37	Drug:T37 Name:T66
 T38	Or 724 726	or
-E38	Or:T38
-T39	Drug 727 750	anti-seizure medication
-E39	Drug:T39 Name:T67
+E38	Or:T38 Arg:E37 Arg2:E39
 T40	Eq-Comparison 756 762	Taking
-E40	Eq-Comparison:T40
-T41	Procedure 777 800	nutritional supplements
-E41	Procedure:T41
+E40	Eq-Comparison:T40 Temporal-Period:T85
+T41	Drug 777 800	nutritional supplements
+E41	Drug:T41 Name:T68 Temporality:E40
 T42	And 801 804	and
-E42	And:T42
+E42	And:T42 Arg:E41 Arg2:E43
 T43	Assertion 805 814	unwilling
-E43	Assertion:T43
+E43	Assertion:T43 Asserted:E50
 A1	Assertion-Type-Value E43 hypothetical
 T44	Study 831 836	study
-E44	Study:T44
+E44	Study:T44 
 T45	Condition-Name 49 56	healthy
-T46	Condition-Name 137 149	Tanner stage
+T46	Condition-Name 137 143	Tanner
 T47	Eq-Temporal-Period 361 368	History
 A2	Eq-Temporal-Period-Value T47 past
 T48	Severity 372 379	serious
@@ -98,7 +96,7 @@ A4	Severity-Value T49 severe
 T50	Condition-Name 428 446	metabolic diseases
 T51	Condition-Name 448 457	disorders
 T52	Condition-Name 466 474	diabetes
-T53	Condition-Name 494 513	pancreatic diseases
+T53	Condition-Name 505 513	diseases
 T54	Condition-Name 515 524	disorders
 T55	Condition-Name 533 548	hyperthyroidism
 T56	Condition-Name 550 560	malignance
@@ -109,10 +107,69 @@ A5	Eq-Temporal-Period-Value T59 past
 T60	Eq-Temporal-Period 608 610	on
 A6	Eq-Temporal-Period-Value T60 present
 T61	Procedure-Name 611 618	therapy
-T62	Drug-Name 659 674	bone metabolism
+T62	Condition-Name 659 674	bone metabolism
 T63	Drug-Name 683 691	steroids
 T64	Drug-Name 693 701	hormones
 T65	Drug-Name 703 712	diuretics
 T66	Drug-Name 714 723	cortisone
-T67	Drug-Name 727 750	anti-seizure medication
 T68	Drug-Name 777 800	nutritional supplements
+T69	Procedure-Name 74 101	standard medical assessment
+R1	Found-By Arg1:E1 Arg2:E2	
+T70	Condition 137 143	Tanner
+E45	Condition:T70 Name:T46 Stage:E6
+T71	Eq-Unit 144 149	stage
+T72	Eq-Value 150 151	2
+T73	Condition-Name 161 179	breast development
+T74	Life-Stage-And-Gender 184 189	girls
+A7	Life-Stage-And-Gender-Type T74 girl
+R2	If-Then Arg1:T74 Arg2:E7	
+T75	Condition-Name 195 205	pubic hair
+T76	Life-Stage-And-Gender 209 213	boys
+A8	Life-Stage-And-Gender-Type T76 boy
+R3	If-Then Arg1:T76 Arg2:E9	
+R4	Found-By Arg1:E45 Arg2:E7	
+R5	Found-By Arg1:E45 Arg2:E9	
+T77	Life-Stage-And-Gender 215 220	Girls
+A9	Life-Stage-And-Gender-Type T77 girl
+T78	Condition 237 250	premenarcheal
+E46	Condition:T78 Name:T79
+T79	Condition-Name 237 250	premenarcheal
+R6	If-Then Arg1:T77 Arg2:E46	
+R7	Example-Of Arg1:E14 Arg2:E11	
+R8	Example-Of Arg1:E15 Arg2:E11	
+R9	Example-Of Arg1:E16 Arg2:E15	
+R10	Example-Of Arg1:E21 Arg2:E11	
+R11	Example-Of Arg1:E22 Arg2:E11	
+T80	Condition-Name 526 531	ulcer
+R12	Example-Of Arg1:E23 Arg2:E11	
+R13	Example-Of Arg1:E24 Arg2:E11	
+R14	Example-Of Arg1:E25 Arg2:E11	
+T81	Modifier 562 569	chronic
+E47	Modifier:T81 Modifies:T57
+R15	Example-Of Arg1:E26 Arg2:E11	
+R16	Example-Of Arg1:E27 Arg2:E11	
+R17	Using Arg1:E31 Arg2:E32	
+T82	Stability 644 653	interfere
+A10	Stability-Value T82 change
+T83	Assertion 635 643	known to
+E48	Assertion:T83 Asserted:T82
+A11	Assertion-Type-Value E48 hypothetical
+R18	Caused-By Arg1:T82 Arg2:E32	
+R19	Example-Of Arg1:E34 Arg2:E32	
+R20	Example-Of Arg1:E35 Arg2:E32	
+R21	Example-Of Arg1:E36 Arg2:E32	
+R22	Example-Of Arg1:E37 Arg2:E32	
+T39	Drug 740 750	medication
+E39	Drug:T39 
+T67	Condition 732 739	seizure
+E49	Condition:T67 Name:T84
+T84	Condition-Name 732 739	seizure
+R23	Treatment-For Arg1:E39 Arg2:E49	
+R24	Example-Of Arg1:E39 Arg2:E32	
+T85	Eq-Temporal-Period 756 762	Taking
+A12	Eq-Temporal-Period-Value T85 present
+T86	Negation 818 822	stop
+E50	Negation:T86 Negates:E41
+T87	Temporal-Connection 823 830	for the
+E51	Temporal-Connection:T87 Arg:E50 Arg2:E44
+A13	Temporal-Connection-Type-Value E51 during
