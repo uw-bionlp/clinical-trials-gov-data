@@ -1,42 +1,35 @@
 T1	Condition 39 56	Spondyloarthritis
-E1	Condition:T1
+E1	Condition:T1 Name:T27
 T2	Condition 58 61	SpA
-E2	Condition:T2
-T3	Condition 157 161	ASAS
-E3	Condition:T3
+E2	Condition:T2 Name:T28
 T4	Indication 168 178	Indication
-E4	Indication:T4
+E4	Indication:T4 Indication-For:E5
 T5	Procedure 182 202	standard radiography
 E5	Procedure:T5 Name:T21
 T6	Encounter 211 220	follow-up
-E6	Encounter:T6
+E6	Encounter:T6 
 T7	Contraindication 281 297	contraindication
-E7	Contraindication:T7
+E7	Contraindication:T7 Contraindicates:E8 Contraindicates2:E11
 T8	Procedure 320 344	conventional radiography
 E8	Procedure:T8 Name:T22
-T9	Modifier 346 348	CR
-E9	Modifier:T9
+T9	Procedure 346 348	CR
+E9	Procedure:T9 Name:T3
 T10	Or 350 352	or
-E10	Or:T10
+E10	Or:T10 Arg:E9 Arg2:E11
 T11	Procedure 353 364	EOS imaging
 E11	Procedure:T11 Name:T23
 T12	Condition 374 381	disease
-E12	Condition:T12
+E12	Condition:T12 Name:T20
 T13	Condition 392 401	cognition
-E13	Condition:T13 Name:T25
+E13	Condition:T13 Name:T25 Stability:T24
 T14	Procedure 429 436	surgery
-E14	Procedure:T14 Name:T26
+E14	Procedure:T14 Name:T26 Temporality:E3
 T15	Modifier 444 449	spine
-E15	Modifier:T15
-T16	Or 450 453	and
-E16	Or:T16
-T17	Modifier 454 455	/
-E17	Modifier:T17
-T18	Or 456 458	or
-E18	Or:T18
+E15	Modifier:T15 Modifies:T26
+T16	Or 450 458	and / or
+E16	Or:T16 Arg:E15 Arg2:E19
 T19	Modifier 459 462	hip
-E19	Modifier:T19
-T20	Observation-Name 157 161	ASAS
+E19	Modifier:T19 Modifies:T26
 T21	Procedure-Name 182 202	standard radiography
 T22	Procedure-Name 320 344	conventional radiography
 T23	Procedure-Name 353 364	EOS imaging
@@ -44,3 +37,15 @@ T24	Stability 382 391	affecting
 A1	Stability-Value T24 change
 T25	Condition-Name 392 401	cognition
 T26	Procedure-Name 429 436	surgery
+T27	Condition-Name 39 56	Spondyloarthritis
+T28	Condition-Name 58 61	SpA
+R1	Abbrev-Of Arg1:E2 Arg2:E1	
+R2	Using Arg1:E6 Arg2:E5	
+T3	Procedure-Name 346 348	CR
+R3	Abbrev-Of Arg1:E9 Arg2:E8	
+T20	Condition-Name 374 381	disease
+R4	Caused-By Arg1:T24 Arg2:E12	
+T29	Eq-Comparison 425 428	had
+E3	Eq-Comparison:T29 Temporal-Period:T30
+T30	Eq-Temporal-Period 425 428	had
+A2	Eq-Temporal-Period-Value T30 past
