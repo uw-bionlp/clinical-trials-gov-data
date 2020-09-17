@@ -1,22 +1,22 @@
 T1	Eq-Comparison 39 57	moderate to severe
 E1	Eq-Comparison:T1 Operator:T26
 T2	Condition 58 70	sleep apnoea
-E2	Condition:T2 Name:T28
+E2	Condition:T2 Name:T28 Severity:T27
 T3	And 71 74	who
-E3	And:T3
+E3	And:T3 Arg:E2 Arg2:E6
 T4	Assertion 75 82	require
-E4	Assertion:T4
+E4	Assertion:T4 Asserted:E5
 A1	Assertion-Type-Value E4 hypothetical
 T5	Procedure 83 87	CPAP
 E5	Procedure:T5 Name:T29
 T6	Procedure 91 104	standard care
-E6	Procedure:T6
+E6	Procedure:T6 
 T7	Observation 106 109	AHI
-E7	Observation:T7
+E7	Observation:T7 Name:T47 Eq-Comparison:E8
 T8	Eq-Comparison 110 113	>15
 E8	Eq-Comparison:T8 Operator:T30 Value:T31
 T9	Eq-Comparison 129 157	between the age of 18 and 75
-E9	Eq-Comparison:T9 Value:T32 Value:T33
+E9	Eq-Comparison:T9 Value:T32 Value:T33 Operator:T48
 T10	Condition 212 231	atrial fibrillation
 E10	Condition:T10 Name:T34
 T11	Condition 233 235	AF
@@ -24,29 +24,27 @@ E11	Condition:T11 Name:T35
 T12	Condition 238 252	atrial flutter
 E12	Condition:T12 Name:T36
 T13	Or 253 259	and/or
-E13	Or:T13
+E13	Or:T13 Arg:E12 Arg2:E14
 T14	Condition 260 283	ventricular tachycardia
 E14	Condition:T14 Name:T37
 T15	Condition 285 287	VT
 E15	Condition:T15 Name:T38
-T16	Condition 311 314	ILR
-E16	Condition:T16 Name:T39
-T17	Procedure 326 330	situ
-E17	Procedure:T17 Name:T40
+T16	Procedure 311 314	ILR
+E16	Procedure:T16 Name:T39 Temporality:E17
 T18	Or 331 333	or
-E18	Or:T18
+E18	Or:T18 Arg:E16 Arg2:E19
 T19	Indication 349 359	indication
-E19	Indication:T19
-T20	Condition 364 367	ILR
-E20	Condition:T20 Name:T41
+E19	Indication:T19 Indication-For:E20
+T20	Procedure 364 367	ILR
+E20	Procedure:T20 Name:T41
 T21	Condition 389 399	palliative
-E21	Condition:T21
+E21	Condition:T21 Name:T51
 T22	Observation 415 430	life expectancy
-E22	Observation:T22 Name:T42
+E22	Observation:T22 Name:T42 Eq-Comparison:E23
 T23	Eq-Comparison 431 448	less than 3 years
 E23	Eq-Comparison:T23 Operator:T43 Value:T44 Temporal-Unit:T45
 T24	Condition 467 480	lack capacity
-E24	Condition:T24
+E24	Condition:T24 Name:T46
 T25	Severity 39 47	moderate
 A2	Severity-Value T25 moderate
 T26	Eq-Operator 48 50	to
@@ -65,13 +63,29 @@ T35	Condition-Name 233 235	AF
 T36	Condition-Name 238 252	atrial flutter
 T37	Condition-Name 260 283	ventricular tachycardia
 T38	Condition-Name 285 287	VT
-T39	Condition-Name 311 314	ILR
-T40	Procedure-Name 326 330	situ
-T41	Condition-Name 364 367	ILR
+T39	Procedure-Name 311 314	ILR
+T41	Procedure-Name 364 367	ILR
 T42	Observation-Name 415 430	life expectancy
 T43	Eq-Operator 431 440	less than
 A6	Eq-Operator-Value T43 LT
 T44	Eq-Value 441 442	3
 T45	Eq-Temporal-Unit 443 448	years
 A7	Eq-Temporal-Unit-Value T45 year
-T46	Observation-Name 467 480	lack capacity
+T46	Condition-Name 467 480	lack capacity
+R1	Using Arg1:E6 Arg2:E5	
+T47	Observation-Name 106 109	AHI
+R2	Treatment-For Arg1:E6 Arg2:E2	
+T48	Eq-Operator 129 136	between
+A8	Eq-Operator-Value T48 BETWEEN
+T49	Age 141 144	age
+E25	Age:T49 Eq-Comparison:E9
+R3	Abbrev-Of Arg1:E11 Arg2:E10	
+R4	Abbrev-Of Arg1:E15 Arg2:E14	
+T17	Eq-Comparison 315 322	already
+E17	Eq-Comparison:T17 Temporal-Period:T40
+T40	Eq-Temporal-Period 315 322	already
+A9	Eq-Temporal-Period-Value T40 past
+T50	Modifier 323 330	in-situ
+E26	Modifier:T50 Modifies:T39
+T51	Condition-Name 389 399	palliative
+R5	Example-Of Arg1:E22 Arg2:E21	

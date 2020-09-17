@@ -1,27 +1,37 @@
 T1	Condition 41 64	obstructive sleep apnea
-E1	Condition:T1 Name:T10
+E1	Condition:T1 Name:T10 Temporality:E10
 T2	Indication 65 74	indicated
-E2	Indication:T2
+E2	Indication:T2 Indication-For:E3
 T3	Procedure 88 111	airway pressure therapy
-E3	Procedure:T3 Name:T12
-T4	Condition 118 123	Apnea
-E4	Condition:T4
-T5	Observation 124 142	Hypopnea index AHI
-E5	Observation:T5
+E3	Procedure:T3 Name:T12 Polarity:T11
+T5	Observation 118 138	Apnea-Hypopnea index
+E5	Observation:T5 Name:T13
 T6	Eq-Comparison 142 146	> 15
 E6	Eq-Comparison:T6 Operator:T14 Value:T15
-T7	Procedure 184 193	treatment
-E7	Procedure:T7
+T7	Procedure 172 193	Psychiatric treatment
+E7	Procedure:T7 Name:T20
 T8	Procedure 199 208	Treatment
-E8	Procedure:T8
+E8	Procedure:T8 
 T9	Drug 214 232	psychoactive drugs
 E9	Drug:T9 Name:T16
 T10	Condition-Name 41 64	obstructive sleep apnea
 T11	Polarity 79 87	positive
 A1	Polarity-Value T11 positive
 T12	Procedure-Name 88 111	airway pressure therapy
-T13	Observation-Name 118 142	Apnea-Hypopnea index AHI
+T13	Observation-Name 118 138	Apnea-Hypopnea index
 T14	Eq-Operator 142 143	>
 A2	Eq-Operator-Value T14 GT
 T15	Eq-Value 144 146	15
 T16	Drug-Name 214 232	psychoactive drugs
+T17	Eq-Comparison 25 30	Newly
+E10	Eq-Comparison:T17 Temporal-Recency:T18
+T18	Eq-Temporal-Recency 25 30	Newly
+A3	Eq-Temporal-Recency-Value T18 first-time
+R1	Treatment-For Arg1:E3 Arg2:E1	
+A4	Observation-Type-Value T13 clinical-score
+T4	Observation 139 142	AHI
+E4	Observation:T4 Name:T19 Eq-Comparison:E6
+T19	Observation-Name 139 142	AHI
+R2	Abbrev-Of Arg1:E4 Arg2:E5	
+T20	Procedure-Name 172 193	Psychiatric treatment
+R3	Using Arg1:E8 Arg2:E9	
