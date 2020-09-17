@@ -1,50 +1,50 @@
 T1	Condition 58 64	Cancer
 E1	Condition:T1 Name:T24
 T2	Or 171 173	or
-E2	Or:T2
+E2	Or:T2 Arg:T27 Arg2:T28
 T3	Eq-Comparison 192 199	history
 E3	Eq-Comparison:T3 Temporal-Period:T29
 T4	Condition 203 209	cancer
-E4	Condition:T4 Name:T30
+E4	Condition:T4 Name:T30 Temporality:E3
 T5	Condition 326 332	cancer
 E5	Condition:T5 Name:T31
 T6	Condition 492 498	cancer
 E6	Condition:T6 Name:T32
 T7	Or 635 637	or
-E7	Or:T7
+E7	Or:T7 Arg:T35 Arg2:T36
 T8	Eq-Comparison 654 665	stage I-III
 E8	Eq-Comparison:T8 Unit:T37 Value:T38 Operator:T39 Value:T40
 T9	Modifier 666 676	colorectal
-E9	Modifier:T9
+E9	Modifier:T9 Modifies:T41
 T10	Modifier 678 682	lung
-E10	Modifier:T10
+E10	Modifier:T10 Modifies:T41
 T11	Or 684 686	or
-E11	Or:T11
+E11	Or:T11 Arg:E10 Arg2:E12
 T12	Modifier 687 692	liver
-E12	Modifier:T12
+E12	Modifier:T12 Modifies:T41
 T13	Condition 693 699	cancer
-E13	Condition:T13 Name:T41
+E13	Condition:T13 Name:T41 Stage:E8
 T14	Negation 705 708	not
-E14	Negation:T14
+E14	Negation:T14 Negates:E16
 T15	Eq-Comparison 713 722	undergone
 E15	Eq-Comparison:T15 Temporal-Period:T42
 T16	Procedure 723 732	treatment
-E16	Procedure:T16
+E16	Procedure:T16 Temporality:E15
 T17	Assertion 776 786	willing to
-E17	Assertion:T17
+E17	Assertion:T17 Asserted:E18
 A1	Assertion-Type-Value E17 hypothetical
 T18	Study 799 804	study
-E18	Study:T18
+E18	Study:T18 Duration:E19
 T19	Eq-Comparison 809 819	six months
 E19	Eq-Comparison:T19 Value:T43 Temporal-Unit:T44
 T20	Modifier 849 856	medical
-E20	Modifier:T20
+E20	Modifier:T20 Modifies:E23
 T21	Or 857 859	or
-E21	Or:T21
+E21	Or:T21 Arg:E20 Arg2:E22
 T22	Modifier 860 873	psychological
-E22	Modifier:T22
+E22	Modifier:T22 Modifies:E23
 T23	Condition 874 884	conditions
-E23	Condition:T23
+E23	Condition:T23 
 T24	Condition-Name 58 64	Cancer
 T25	Language 141 148	English
 T26	Language 150 158	Mandarin
@@ -70,3 +70,19 @@ A4	Eq-Temporal-Period-Value T42 past
 T43	Eq-Value 809 812	six
 T44	Eq-Temporal-Unit 813 819	months
 A5	Eq-Temporal-Unit-Value T44 month
+T45	Ethnicity 94 108	Asian American
+T46	Location 119 132	San Francisco
+A6	Location-Value T46 residence
+T47	Ethnicity 311 325	Asian American
+T48	Provider 401 411	physicians
+E24	Provider:T48 Role:T49
+T49	Provider-Role 401 411	physicians
+T50	Provider 422 442	health professionals
+E25	Provider:T50 
+T51	Ethnicity 463 477	Asian American
+T52	And 487 491	with
+E26	And:T52 Arg:T51 Arg2:E6
+T53	Ethnicity 558 572	Asian American
+T54	Location 583 596	San Francisco
+A7	Location-Value T54 residence
+R1	Treatment-For Arg1:E16 Arg2:E13	

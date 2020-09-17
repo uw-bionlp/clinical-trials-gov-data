@@ -1,42 +1,42 @@
 T1	Eq-Comparison 25 34	≥18 years
-E1	Eq-Comparison:T1 Operator:T20 Temporal-Unit:T21
+E1	Eq-Comparison:T1 Operator:T20 Temporal-Unit:T21 Value:T46
 T2	Age 38 41	age
-E2	Age:T2
+E2	Age:T2 Eq-Comparison:E1
 T3	Eq-Comparison 47 56	Currently
 E3	Eq-Comparison:T3 Temporal-Period:T22
 T4	Procedure 57 64	treated
-E4	Procedure:T4
+E4	Procedure:T4 Temporality:E3
 T5	Procedure 70 89	peritoneal dialysis
 E5	Procedure:T5 Name:T23
 T6	Procedure 91 94	APD
 E6	Procedure:T6 Name:T24
 T7	Or 95 97	or
-E7	Or:T7
+E7	Or:T7 Arg:E6 Arg2:E8
 T8	Procedure 98 102	CAPD
-E8	Procedure:T8
+E8	Procedure:T8 Name:T25
 T9	Observation 109 130	Serum ionized calcium
-E9	Observation:T9 Name:T26
+E9	Observation:T9 Name:T26 Eq-Comparison:E10 Duration:E11
 T10	Eq-Comparison 131 159	between 1.10 and 1.40 mmol/L
-E10	Eq-Comparison:T10 Operator:T27 Value:T28 Value:T29 Unit:T30 Unit:T31
+E10	Eq-Comparison:T10 Operator:T27 Value:T28 Value:T29 Unit:T30 Per:T31
 T11	Eq-Comparison 164 173	>3 months
 E11	Eq-Comparison:T11 Operator:T32 Value:T33 Temporal-Unit:T34
 T12	Observation 179 195	Plasma phosphate
-E12	Observation:T12 Name:T35
+E12	Observation:T12 Name:T35 Eq-Comparison:E13 Duration:E14
 T13	Eq-Comparison 196 222	between 0.7 and 3.0 mmol/L
-E13	Eq-Comparison:T13 Operator:T36 Value:T37 Value:T38 Unit:T39 Unit:T40
+E13	Eq-Comparison:T13 Operator:T36 Value:T37 Value:T38 Unit:T39 Per:T40
 T14	Eq-Comparison 227 236	>3 months
 E14	Eq-Comparison:T14 Operator:T41 Value:T42 Temporal-Unit:T43
 T15	Eq-Comparison 262 269	Earlier
-E15	Eq-Comparison:T15
+E15	Eq-Comparison:T15 Temporal-Period:T47
 T16	Condition 270 290	parathyroidectomized
-E16	Condition:T16 Name:T44
+E16	Condition:T16 Name:T44 Temporality:E15
 T17	Other 296 301	Other
-E17	Other:T17
+E17	Other:T17 Is-Other:E18
 T18	Condition 302 312	conditions
-E18	Condition:T18
+E18	Condition:T18 
 T19	Study 353 358	trial
-E19	Study:T19
-T20	Eq-Operator 25 28	≥18
+E19	Study:T19 Stability:T45
+T20	Eq-Operator 25 26	≥
 A1	Eq-Operator-Value T20 GTEQ
 T21	Eq-Temporal-Unit 29 34	years
 A2	Eq-Temporal-Unit-Value T21 year
@@ -44,8 +44,7 @@ T22	Eq-Temporal-Period 47 56	Currently
 A3	Eq-Temporal-Period-Value T22 present
 T23	Procedure-Name 70 89	peritoneal dialysis
 T24	Procedure-Name 91 94	APD
-T25	Observation-Name 98 102	CAPD
-A4	Observation-Type-Value T25 lab
+T25	Procedure-Name 98 102	CAPD
 T26	Observation-Name 109 130	Serum ionized calcium
 A5	Observation-Type-Value T26 lab
 T27	Eq-Operator 131 138	between
@@ -75,3 +74,10 @@ A12	Eq-Temporal-Unit-Value T43 month
 T44	Condition-Name 270 290	parathyroidectomized
 T45	Stability 320 327	hinders
 A13	Stability-Value T45 change
+T46	Eq-Value 26 28	18
+R1	Using Arg1:E4 Arg2:E5	
+R2	Abbrev-Of Arg1:E6 Arg2:E5	
+R3	Abbrev-Of Arg1:E8 Arg2:E5	
+T47	Eq-Temporal-Period 262 269	Earlier
+A4	Eq-Temporal-Period-Value T47 past
+R4	Caused-By Arg1:T45 Arg2:E18	

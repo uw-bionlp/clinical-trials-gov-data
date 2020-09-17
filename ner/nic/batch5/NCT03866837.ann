@@ -4,61 +4,52 @@ T2	Family-Member 50 56	infant
 E2	Family-Member:T2 
 A1	Family-Member-Type E2 child
 T3	Eq-Comparison 57 72	age of 6 months
-E3	Eq-Comparison:T3 Value:T28 Temporal-Unit:T29
+E3	Eq-Comparison:T3 Value:T28 Temporal-Unit:T29 Operator:T54
 T4	Eq-Comparison 74 82	±3 weeks
-E4	Eq-Comparison:T4 Temporal-Unit:T31
-T5	Birth 89 95	mother
-E5	Birth:T5 
+E4	Eq-Comparison:T4 Temporal-Unit:T31 Operator:T30 Value:T55
+T5	Family-Member 89 95	mother
+E5	Family-Member:T5 Has:E7
 T6	Eq-Comparison 96 105	≥15 years
-E6	Eq-Comparison:T6 Operator:T32 Temporal-Unit:T33
+E6	Eq-Comparison:T6 Operator:T32 Temporal-Unit:T33 Value:T56
 T7	Age 109 112	age
-E7	Age:T7 
+E7	Age:T7 Eq-Comparison:E6
 T8	Condition 131 144	breastfeeding
 E8	Condition:T8 Name:T35
 T9	Study 192 197	study
 E9	Study:T9 
 T10	Observation 276 286	hemoglobin
-E10	Observation:T10 Name:T36
+E10	Observation:T10 Name:T36 Eq-Comparison:E11
 T11	Eq-Comparison 287 295	< 70 g/L
-E11	Eq-Comparison:T11 Operator:T37 Value:T38 Unit:T39 Unit:T40
-T12	Age 325 328	age
-E12	Age:T12 
-T13	Condition 330 333	WAZ
-E13	Condition:T13 
+E11	Eq-Comparison:T11 Operator:T37 Value:T38 Unit:T40 Per:T39
+T13	Observation 330 333	WAZ
+E13	Observation:T13 Name:T41 Eq-Comparison:E28
 T14	Or 335 337	or
-E14	Or:T14 
+E14	Or:T14 Arg:E13 Arg2:E15
 T15	Observation 338 355	weight-for-height
 E15	Observation:T15 Name:T42
 T16	Observation 357 360	WHZ
-E16	Observation:T16 Name:T43
-T17	Modifier 375 383	maternal
-E17	Modifier:T17 
+E16	Observation:T16 Name:T43 Eq-Comparison:E28
+T17	Family-Member 375 383	maternal
+E17	Family-Member:T17 Has:E20
 T18	Or 384 386	or
-E18	Or:T18 
-T19	Modifier 387 401	infant chronic
-E19	Modifier:T19 
+E18	Or:T18 Arg:E17 Arg2:E29
 T20	Condition 402 409	illness
-E20	Condition:T20 
-T21	Drug 437 451	infant vitamin
-E21	Drug:T21 Name:T46
-T22	Or 452 454	or
-E22	Or:T22 
-T23	Drug 455 474	mineral supplements
-E23	Drug:T23 Name:T47
+E20	Condition:T20 Name:T45
+T23	Drug 463 474	supplements
+E23	Drug:T23 Name:T47 Temporality:E24
 T24	Eq-Comparison 483 496	past 2 months
 E24	Eq-Comparison:T24 Temporal-Period:T48 Value:T49 Temporal-Unit:T50
 T25	Eq-Comparison 506 513	history
 E25	Eq-Comparison:T25 Temporal-Period:T51
-T26	Procedure 517 544	infant antibiotic treatment
-E26	Procedure:T26 
+T26	Drug 524 534	antibiotic
+E26	Drug:T26 Name:T52
 T27	Procedure-Name 25 41	vaginal delivery
 T28	Eq-Value 64 65	6
 T29	Eq-Temporal-Unit 66 72	months
 A2	Eq-Temporal-Unit-Value T29 month
-T30	Observation-Name 74 76	±3
 T31	Eq-Temporal-Unit 77 82	weeks
 A3	Eq-Temporal-Unit-Value T31 week
-T32	Eq-Operator 96 99	≥15
+T32	Eq-Operator 96 97	≥
 A4	Eq-Operator-Value T32 GTEQ
 T33	Eq-Temporal-Unit 100 105	years
 A5	Eq-Temporal-Unit-Value T33 year
@@ -73,13 +64,11 @@ T38	Eq-Value 289 291	70
 T39	Eq-Unit 292 293	g
 T40	Eq-Unit 294 295	L
 T41	Observation-Name 330 333	WAZ
-T42	Observation-Name 338 344	weight
-A9	Observation-Type-Value T42 vital
+T42	Observation-Name 338 355	weight-for-height
+A9	Observation-Type-Value T42 measurement
 T43	Observation-Name 357 360	WHZ
-T44	Observation-Name 362 364	<3
-T45	Condition-Name 387 409	infant chronic illness
-T46	Drug-Name 437 451	infant vitamin
-T47	Drug-Name 455 474	mineral supplements
+T45	Condition-Name 402 409	illness
+T47	Drug-Name 463 474	supplements
 T48	Eq-Temporal-Period 483 487	past
 A10	Eq-Temporal-Period-Value T48 past
 T49	Eq-Value 488 489	2
@@ -87,4 +76,45 @@ T50	Eq-Temporal-Unit 490 496	months
 A11	Eq-Temporal-Unit-Value T50 month
 T51	Eq-Temporal-Period 506 513	history
 A12	Eq-Temporal-Period-Value T51 past
-T52	Drug-Name 517 534	infant antibiotic
+T52	Drug-Name 524 534	antibiotic
+T53	Age 57 60	age
+E27	Age:T53 Eq-Comparison:E3 Eq-Comparison2:E4
+T54	Eq-Operator 61 63	of
+A13	Eq-Operator-Value T54 EQ
+T30	Eq-Operator 74 75	±
+A14	Eq-Operator-Value T30 PLUS-MINUS
+T55	Eq-Value 75 76	3
+A15	Family-Member-Type E5 mother
+T56	Eq-Value 97 99	15
+T12	Observation 301 328	Z scores for weight-for-age
+E12	Observation:T12 Name:T57
+T57	Observation-Name 301 328	Z scores for weight-for-age
+A16	Observation-Type-Value T57 measurement
+R1	Abbrev-Of Arg1:E13 Arg2:E12	
+R2	Abbrev-Of Arg1:E16 Arg2:E15	
+T44	Eq-Comparison 362 364	<3
+E28	Eq-Comparison:T44 Operator:T58 Value:T59
+T58	Eq-Operator 362 363	<
+A17	Eq-Operator-Value T58 LT
+T59	Eq-Value 363 364	3
+A18	Family-Member-Type E17 mother
+T60	Modifier 394 401	chronic
+E19	Modifier:T60 Modifies:T45
+T19	Family-Member 387 393	infant
+E29	Family-Member:T19 Has:E20
+A19	Family-Member-Type E29 child
+T61	Procedure 535 544	treatment
+E30	Procedure:T61 Temporality:E25
+R3	Using Arg1:E30 Arg2:E26	
+T62	Family-Member 517 523	infant
+E31	Family-Member:T62 Has:E30
+A20	Family-Member-Type E31 child
+T21	Modifier 455 462	mineral
+E21	Modifier:T21 Modifies:T47
+T22	Modifier 444 451	vitamin
+E22	Modifier:T22 Modifies:T47
+T46	Or 452 454	or
+E32	Or:T46 Arg:E22 Arg2:E21
+T63	Family-Member 437 443	infant
+E33	Family-Member:T63 Has:E23
+A21	Family-Member-Type E33 child

@@ -1,31 +1,31 @@
 T1	Family-Member 83 90	parents
-E1	Family-Member:T1
+E1	Family-Member:T1 
 A1	Family-Member-Type E1 parent
 T2	Temporal-Connection 91 97	before
-E2	Temporal-Connection:T2
+E2	Temporal-Connection:T2 Arg:E1 Arg2:E3
 A2	Temporal-Connection-Type-Value E2 before
 T3	Study 102 107	study
-E3	Study:T3
+E3	Study:T3 Study-Of:E18
 T4	Eq-Comparison 158 177	older than 6 months
 E4	Eq-Comparison:T4 Operator:T14 Value:T15 Temporal-Unit:T16
 T5	And 178 181	and
-E5	And:T5
+E5	And:T5 Arg:E4 Arg2:E6
 T6	Eq-Comparison 182 203	younger than 80 years
 E6	Eq-Comparison:T6 Operator:T17 Value:T18 Temporal-Unit:T19
-T7	Condition 240 250	Wilson dis
-E7	Condition:T7
+T7	Condition 240 255	Wilson dis-ease
+E7	Condition:T7 Name:T28
 T8	Family-Member 325 332	parents
-E8	Family-Member:T8
+E8	Family-Member:T8 
 A3	Family-Member-Type E8 parent
 T9	Temporal-Connection 333 339	before
-E9	Temporal-Connection:T9
+E9	Temporal-Connection:T9 Arg:E8 Arg2:E10
 A4	Temporal-Connection-Type-Value E9 before
 T10	Study 344 349	study
-E10	Study:T10
-T11	Eq-Comparison 399 444	younger than 6 months and older than 80 years
-E11	Eq-Comparison:T11 Operator:T20 Value:T21 Temporal-Unit:T22 Operator:T23 Value:T24 Temporal-Unit:T25
+E10	Study:T10 Study-Of:E19
+T11	Eq-Comparison 399 420	younger than 6 months
+E11	Eq-Comparison:T11 Operator:T20 Value:T21 Temporal-Unit:T22
 T12	Negation 450 452	No
-E12	Negation:T12
+E12	Negation:T12 Negates:E13
 T13	Condition 466 480	Wilson disease
 E13	Condition:T13 Name:T26
 T14	Eq-Operator 158 168	older than
@@ -49,3 +49,16 @@ T24	Eq-Value 436 438	80
 T25	Eq-Temporal-Unit 439 444	years
 A12	Eq-Temporal-Unit-Value T25 year
 T26	Condition-Name 466 480	Wilson disease
+T27	Age 158 163	older
+E14	Age:T27 Eq-Comparison:E4 Eq-Comparison2:E6
+T28	Condition-Name 240 255	Wilson dis-ease
+T29	Age 425 430	older
+E15	Age:T29 Eq-Comparison:E16 Eq-Comparison2:E11
+T30	Eq-Comparison 425 444	older than 80 years
+E16	Eq-Comparison:T30 Operator:T23 Value:T24 Temporal-Unit:T25
+T31	And 421 424	and
+E17	And:T31 Arg:E11 Arg2:E16
+T32	Procedure 116 126	procedures
+E18	Procedure:T32 
+T33	Procedure 358 368	procedures
+E19	Procedure:T33 

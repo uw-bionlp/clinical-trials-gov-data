@@ -1,7 +1,7 @@
 T1	Condition 41 77	American Society of Anesthesiologist
 E1	Condition:T1 Name:T38
 T2	Condition 79 82	ASA
-E2	Condition:T2 Name:T39
+E2	Condition:T2 Name:T39 Stage:E3
 T3	Eq-Comparison 84 91	I or II
 E3	Eq-Comparison:T3 Value:T40 Value:T41
 T4	Observation 141 156	body mass index
@@ -17,61 +17,61 @@ E8	Eq-Comparison:T8 Operator:T49 Value:T50
 T9	Condition 213 222	illnesses
 E9	Condition:T9 Name:T52
 T10	Modifier 230 237	cardiac
-E10	Modifier:T10
+E10	Modifier:T10 
 T11	Modifier 239 250	respiratory
-E11	Modifier:T11
+E11	Modifier:T11 
 T12	Modifier 252 257	renal
-E12	Modifier:T12
+E12	Modifier:T12 
 T13	Modifier 259 266	hepatic
-E13	Modifier:T13
+E13	Modifier:T13 
 T14	Or 267 269	or
-E14	Or:T14
+E14	Or:T14 
 T15	Modifier 270 282	neurological
-E15	Modifier:T15
+E15	Modifier:T15 
 T16	Modifier 289 300	Coagulation
-E16	Modifier:T16
+E16	Modifier:T16 
 T17	Condition 301 314	abnormalities
-E17	Condition:T17
+E17	Condition:T17 
 T18	Condition 320 329	Infection
 E18	Condition:T18 Name:T54
 T19	Procedure 337 346	injection
-E19	Procedure:T19
+E19	Procedure:T19 
 T20	Allergy 357 364	Allergy
-E20	Allergy:T20
+E20	Allergy:T20 
 T21	Or 365 367	or
-E21	Or:T21
+E21	Or:T21 
 T22	Contraindication 368 385	contraindications
-E22	Contraindication:T22
+E22	Contraindication:T22 
 T23	Drug 393 398	drugs
-E23	Drug:T23
+E23	Drug:T23 
 T24	Study 411 416	study
-E24	Study:T24
+E24	Study:T24 
 T25	Eq-Comparison 422 429	History
 E25	Eq-Comparison:T25 Temporal-Period:T55
 T26	Condition 433 447	drug addiction
 E26	Condition:T26 Name:T56
 T27	Or 448 450	or
-E27	Or:T27
+E27	Or:T27 
 T28	Modifier 451 458	alcohol
-E28	Modifier:T28
+E28	Modifier:T28 
 T29	Condition 459 464	abuse
-E29	Condition:T29
+E29	Condition:T29 
 T30	Condition 472 491	psychiatric illness
 E30	Condition:T30 Name:T58
 T31	Or 493 495	or
-E31	Or:T31
+E31	Or:T31 
 T32	Modifier 496 502	mental
-E32	Modifier:T32
+E32	Modifier:T32 
 T33	Condition 503 514	retardation
-E33	Condition:T33
+E33	Condition:T33 
 T34	Negation 515 526	interfering
-E34	Negation:T34
+E34	Negation:T34 
 T35	Condition 550 554	pain
 E35	Condition:T35 Name:T61
 T36	Or 562 564	or
-E36	Or:T36
+E36	Or:T36 
 T37	Modifier 565 568	PCA
-E37	Modifier:T37
+E37	Modifier:T37 
 T38	Condition-Name 41 77	American Society of Anesthesiologist
 T39	Condition-Name 79 82	ASA
 T40	Eq-Value 84 85	I
@@ -103,3 +103,4 @@ T59	Condition-Name 496 514	mental retardation
 T60	Stability 515 526	interfering
 A7	Stability-Value T60 change
 T61	Condition-Name 550 554	pain
+R1	Abbrev-Of Arg1:E2 Arg2:E1	
