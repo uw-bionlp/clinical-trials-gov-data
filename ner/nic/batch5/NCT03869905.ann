@@ -1,93 +1,81 @@
 T1	Condition 25 43	Ulcerative colitis
 E1	Condition:T1 Name:T55
 T2	Procedure 72 81	histology
-E2	Procedure:T2
+E2	Procedure:T2 Name:T90
 T3	Or 82 85	and
-E3	Or:T3
+E3	Or:T3 Arg:E2 Arg2:E4
 T4	Procedure 86 95	endoscopy
 E4	Procedure:T4 Name:T56
 T5	And 96 99	AND
-E5	And:T5
-T6	Modifier 103 119	stable remission
-E6	Modifier:T6
+E5	And:T5 Arg:E1 Arg2:E6
+T6	Condition 110 119	remission
+E6	Condition:T6 Name:T91 Stability:T57 Duration:E7
 T7	Eq-Comparison 124 140	3 months or more
 E7	Eq-Comparison:T7 Value:T58 Temporal-Unit:T59 Operator:T60
 T8	Negation 141 148	without
-E8	Negation:T8
+E8	Negation:T8 Negates:E9
 T9	Procedure 149 156	therapy
 E9	Procedure:T9 Name:T61
 T10	Or 157 159	or
-E10	Or:T10
+E10	Or:T10 Arg:E9 Arg2:E55
 T11	Procedure 167 186	maintenance therapy
 E11	Procedure:T11 Name:T62
 T12	Exception 188 194	except
-E12	Exception:T12
+E12	Exception:T12 From:E11 Except:E13 Except2:E15
 T13	Drug 195 203	steroids
 E13	Drug:T13 Name:T63
 T14	Or 204 207	and
-E14	Or:T14
+E14	Or:T14 Arg:E13 Arg2:E15
 T15	Drug 208 219	antibiotics
-E15	Drug:T15 Name:T64
+E15	Drug:T15 Name:T64 Duration:E16
 T16	Eq-Comparison 224 232	3 months
 E16	Eq-Comparison:T16 Value:T65 Temporal-Unit:T66
 T17	Observation 250 264	pregnancy test
-E17	Observation:T17 Name:T68
+E17	Observation:T17 Name:T68 Polarity:T67
 T18	Negation 290 292	No
-E18	Negation:T18
+E18	Negation:T18 Negates:E21
 T19	Eq-Comparison 293 300	history
 E19	Eq-Comparison:T19 Temporal-Period:T69
-T20	Or 301 303	or
-E20	Or:T20
 T21	Condition 338 348	conditions
-E21	Condition:T21
+E21	Condition:T21 Temporality:E19
 T22	Condition 350 365	Chron's disease
 E22	Condition:T22 Name:T70
 T23	Condition 367 385	bleeding disorders
 E23	Condition:T23 Name:T71
 T24	Modifier 387 403	gastrointestinal
-E24	Modifier:T24
+E24	Modifier:T24 Modifies:T72
 T25	Or 404 406	or
-E25	Or:T25
+E25	Or:T25 Arg:E24 Arg2:E26
 T26	Modifier 407 414	colonic
-E26	Modifier:T26
+E26	Modifier:T26 Modifies:T72
 T27	Condition 415 425	malignancy
 E27	Condition:T27 Name:T72
 T28	Condition 427 441	Kidney disease
 E28	Condition:T28 Name:T73
-T29	Modifier 453 459	kidney
-E29	Modifier:T29
-T30	Modifier 461 467	stones
-E30	Modifier:T30
 T31	Or 469 471	or
-E31	Or:T31
+E31	Or:T31 Arg:E20 Arg2:E32
 T32	Condition 472 485	hypercalcemia
 E32	Condition:T32 Name:T74
 T33	Condition 487 499	Coagulopathy
 E33	Condition:T33 Name:T75
 T34	Or 499 500	/
-E34	Or:T34
+E34	Or:T34 Arg:E33 Arg2:E36
 T35	Modifier 500 510	hereditary
-E35	Modifier:T35
-T36	Condition 511 522	hemorrhagic
-E36	Condition:T36
-T37	Modifier 523 533	disorders/
-E37	Modifier:T37
+E35	Modifier:T35 Modifies:T76
+T36	Condition 511 532	hemorrhagic disorders
+E36	Condition:T36 Name:T76
 T38	Or 534 536	or
-E38	Or:T38
+E38	Or:T38 Arg:E36 Arg2:E29
 T39	Eq-Comparison 537 546	receiving
 E39	Eq-Comparison:T39 Temporal-Period:T77
-T40	Drug 547 564	therapeutic doses
-E40	Drug:T40 Name:T78
 T41	Drug 568 576	Coumadin
 E41	Drug:T41 Name:T79
 T42	Or 577 579	or
-E42	Or:T42
+E42	Or:T42 Arg:E41 Arg2:E43
 T43	Drug 580 587	heparin
 E43	Drug:T43 Name:T80
-T44	Drug 594 602	Ingested
-E44	Drug:T44
 T45	Drug 611 622	medications
-E45	Drug:T45
+E45	Drug:T45 Temporality:E30 Temporality2:E52
 T46	Drug 624 631	Calcium
 E46	Drug:T46 Name:T82
 T47	Drug 633 642	Vitamin D
@@ -95,7 +83,7 @@ E47	Drug:T47 Name:T83
 T48	Drug 644 661	fiber supplements
 E48	Drug:T48 Name:T84
 T49	Or 662 665	and
-E49	Or:T49
+E49	Or:T49 Arg:E48 Arg2:E50
 T50	Drug 666 703	Non-steroidal anti-inflammatory drugs
 E50	Drug:T50 Name:T85
 T51	Drug 706 712	NSAIDs
@@ -103,10 +91,10 @@ E51	Drug:T51 Name:T86
 T52	Eq-Comparison 714 728	within 30 days
 E52	Eq-Comparison:T52 Operator:T87 Value:T88 Temporal-Unit:T89
 T53	Temporal-Connection 729 731	of
-E53	Temporal-Connection:T53
+E53	Temporal-Connection:T53 Arg:E52 Arg2:E37
 A1	Temporal-Connection-Type-Value E53 before
 T54	Study 732 737	study
-E54	Study:T54
+E54	Study:T54 Temporality:E37
 T55	Condition-Name 25 43	Ulcerative colitis
 T56	Procedure-Name 86 95	endoscopy
 T57	Stability 103 109	stable
@@ -135,13 +123,11 @@ T72	Condition-Name 415 425	malignancy
 T73	Condition-Name 427 441	Kidney disease
 T74	Condition-Name 472 485	hypercalcemia
 T75	Condition-Name 487 499	Coagulopathy
-T76	Condition-Name 511 533	hemorrhagic disorders/
+T76	Condition-Name 511 532	hemorrhagic disorders
 T77	Eq-Temporal-Period 537 546	receiving
 A9	Eq-Temporal-Period-Value T77 present
-T78	Drug-Name 547 558	therapeutic
 T79	Drug-Name 568 576	Coumadin
 T80	Drug-Name 580 587	heparin
-T81	Drug-Name 594 622	Ingested certain medications
 T82	Drug-Name 624 631	Calcium
 T83	Drug-Name 633 642	Vitamin D
 T84	Drug-Name 644 661	fiber supplements
@@ -152,3 +138,38 @@ A10	Eq-Operator-Value T87 LTEQ
 T88	Eq-Value 721 723	30
 T89	Eq-Temporal-Unit 724 728	days
 A11	Eq-Temporal-Unit-Value T89 day
+T90	Procedure-Name 72 81	histology
+R1	Found-By Arg1:E1 Arg2:E2	
+R2	Found-By Arg1:E1 Arg2:E4	
+T91	Condition-Name 110 119	remission
+T92	And 160 164	with
+E55	And:T92 Arg:E11
+R3	Example-Of Arg1:E22 Arg2:E21	
+R4	Example-Of Arg1:E23 Arg2:E21	
+R5	Example-Of Arg1:E27 Arg2:E21	
+R6	Example-Of Arg1:E28 Arg2:E21	
+T20	Condition 453 468	kidney "stones"
+E20	Condition:T20 Name:T29
+T29	Condition-Name 453 468	kidney "stones"
+R7	Example-Of Arg1:E20 Arg2:E28	
+R8	Example-Of Arg1:E32 Arg2:E28	
+R9	Example-Of Arg1:E33 Arg2:E21	
+R10	Example-Of Arg1:E36 Arg2:E21	
+T30	Procedure 547 558	therapeutic
+E29	Procedure:T30 Name:T37 Temporality:E39
+T37	Procedure-Name 547 558	therapeutic
+R11	Using Arg1:E29 Arg2:E41	
+R12	Using Arg1:E29 Arg2:E43	
+T40	Eq-Comparison 594 602	Ingested
+E30	Eq-Comparison:T40 Temporal-Period:T44
+T44	Eq-Temporal-Period 594 602	Ingested
+A12	Eq-Temporal-Period-Value T44 past
+R13	Example-Of Arg1:E46 Arg2:E45	
+R14	Example-Of Arg1:E47 Arg2:E45	
+R15	Example-Of Arg1:E48 Arg2:E45	
+R16	Example-Of Arg1:E50 Arg2:E45	
+R17	Abbrev-Of Arg1:E51 Arg2:E50	
+T78	Eq-Comparison 738 743	start
+E37	Eq-Comparison:T78 Temporal-Recency:T81
+T81	Eq-Temporal-Recency 738 743	start
+A13	Eq-Temporal-Recency-Value T81 first-time
