@@ -1,40 +1,38 @@
 T1	Observation 25 40	Body mass Index
-E1	Observation:T1 Name:T19
+E1	Observation:T1 Name:T19 Eq-Comparison:E2
 T2	Eq-Comparison 41 45	> 30
 E2	Eq-Comparison:T2 Operator:T20 Value:T21
-T3	Eq-Comparison 48 49	-
-E3	Eq-Comparison:T3 
 T4	Age 51 54	Age
-E4	Age:T4 
+E4	Age:T4 Eq-Comparison:E5
 T5	Eq-Comparison 55 58	18-
 E5	Eq-Comparison:T5 Value:T22 Operator:T23
 T6	Condition 86 95	Pregnancy
 E6	Condition:T6 Name:T25
-T7	Negation 108 115	reasons
-E7	Negation:T7 
+T7	Condition 101 115	Health reasons
+E7	Condition:T7 
 T8	Assertion 116 126	preventing
-E8	Assertion:T8 
+E8	Assertion:T8 Asserted:E3
 A1	Assertion-Type-Value E8 hypothetical
 T9	Observation 127 135	exercise
-E9	Observation:T9 
+E9	Observation:T9 Name:T3
 T10	Or 136 139	and
-E10	Or:T10 
-T11	Observation 140 153	exercise test
-E11	Observation:T11 Name:T26
+E10	Or:T10 Arg:E9 Arg2:E11
+T11	Procedure 140 153	exercise test
+E11	Procedure:T11 Name:T26
 T12	Drug 159 169	Medication
 E12	Drug:T12 
 T13	Negation 170 180	preventing
-E13	Negation:T13 
+E13	Negation:T13 Negates:E14 Negates2:E16
 T14	Observation 181 189	exercise
-E14	Observation:T14 
-T15	And 190 193	and
-E15	And:T15 
-T16	Observation 194 207	exercise test
-E16	Observation:T16 Name:T27
+E14	Observation:T14 Name:T32
+T15	Or 190 193	and
+E15	Or:T15 Arg:E14 Arg2:E16
+T16	Procedure 194 207	exercise test
+E16	Procedure:T16 Name:T27
 T17	Eq-Comparison 213 223	Previously
 E17	Eq-Comparison:T17 Temporal-Period:T28
 T18	Condition 234 242	diabetes
-E18	Condition:T18 Name:T29
+E18	Condition:T18 Name:T29 Temporality:E17
 T19	Observation-Name 25 40	Body mass Index
 A2	Observation-Type-Value T19 vital
 T20	Eq-Operator 41 42	>
@@ -45,9 +43,19 @@ T23	Eq-Operator 57 58	-
 A4	Eq-Operator-Value T23 BETWEEN
 T24	Eq-Value 58 60	64
 T25	Condition-Name 86 95	Pregnancy
-T26	Observation-Name 140 153	exercise test
-T27	Observation-Name 194 207	exercise test
-A5	Observation-Type-Value T27 lab
+T26	Procedure-Name 140 153	exercise test
+T27	Procedure-Name 194 207	exercise test
 T28	Eq-Temporal-Period 213 223	Previously
 A6	Eq-Temporal-Period-Value T28 past
 T29	Condition-Name 234 242	diabetes
+T3	Observation-Name 127 135	exercise
+A7	Observation-Type-Value T3 social-habit
+T30	Negation 116 126	preventing
+E3	Negation:T30 Negates:E9 Negates2:E11
+R1	Caused-By Arg1:E3 Arg2:E7	
+T31	Assertion 170 180	preventing
+E19	Assertion:T31 Asserted:E13
+A8	Assertion-Type-Value E19 hypothetical
+T32	Observation-Name 181 189	exercise
+A9	Observation-Type-Value T32 social-habit
+R2	Caused-By Arg1:E13 Arg2:E12	
