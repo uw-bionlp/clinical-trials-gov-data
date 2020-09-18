@@ -1,59 +1,43 @@
-T1	Encounter 77 80	ICU
-E1	Encounter:T1 
-T2	Encounter 99 108	emergency
-E2	Encounter:T2 
-T3	Provider 110 112	ED
-E3	Provider:T3 
 T4	Condition 137 146	headaches
-E4	Condition:T4 Name:T49
+E4	Condition:T4 Name:T49 Minimum-Count:E5
 T5	Eq-Comparison 147 178	more than three times per month
-E5	Eq-Comparison:T5 Operator:T50 Value:T51 Temporal-Unit:T52
+E5	Eq-Comparison:T5 Operator:T50 Value:T51 Per:T52
 T6	Condition 197 205	headache
 E6	Condition:T6 Name:T53
 T7	Condition 209 217	migraine
 E7	Condition:T7 Name:T54
 T8	Or 218 220	or
-E8	Or:T8 
-T9	Condition 230 246	episodic tension
-E9	Condition:T9 Name:T56
-T10	Condition 247 260	type headache
+E8	Or:T8 Arg:E7 Arg2:E10
+T10	Condition 252 260	headache
 E10	Condition:T10 Name:T57
-T11	Condition 286 294	Headache
-E11	Condition:T11 
-T12	Condition 327 357	International Headache Society
-E12	Condition:T12 
 T13	Assertion 366 374	symptoms
-E13	Assertion:T13 
+E13	Assertion:T13 Asserted:E14
 A1	Assertion-Type-Value E13 possible
 T14	Condition 380 388	headache
 E14	Condition:T14 Name:T58
-T15	Risk 440 449	potential
-E15	Risk:T15 
 T16	Eq-Comparison 527 534	Current
 E16	Eq-Comparison:T16 Temporal-Period:T59
 T17	Other 543 548	other
-E17	Other:T17 
-T18	Procedure 558 572	essential oils
-E18	Procedure:T18 
-T19	Procedure 584 604	external application
-E19	Procedure:T19 
-T20	Modifier 608 612	skin
-E20	Modifier:T20 
+E17	Other:T17 Is-Other:E18
+T18	Drug 558 572	essential oils
+E18	Drug:T18 Name:T76 Temporality:E16
+T20	Modifier 584 612	external application on skin
+E20	Modifier:T20 Modifies:T76
 T21	And 625 628	and
-E21	And:T21 
+E21	And:T21 Arg:E18 Arg2:E22
 T22	Negation 632 635	not
-E22	Negation:T22 
+E22	Negation:T22 Negates:E19
 T23	Assertion 636 646	willing to
-E23	Assertion:T23 
+E23	Assertion:T23 Asserted:E19
 A2	Assertion-Type-Value E23 hypothetical
 T24	Eq-Comparison 671 681	nine weeks
 E24	Eq-Comparison:T24 Value:T60 Temporal-Unit:T61
 T25	Condition 742 751	Pregnancy
 E25	Condition:T25 Name:T62
 T26	Or 752 754	or
-E26	Or:T26 
+E26	Or:T26 Arg:E25 Arg2:E27
 T27	Assertion 755 764	preparing
-E27	Assertion:T27 
+E27	Assertion:T27 Asserted:E28
 A3	Assertion-Type-Value E27 intention
 T28	Condition 769 778	pregnancy
 E28	Condition:T28 Name:T63
@@ -63,27 +47,25 @@ T30	Condition 817 825	headache
 E30	Condition:T30 Name:T65
 T31	Condition 838 846	migraine
 E31	Condition:T31 Name:T66
-T32	Condition 860 876	episodic tension
-E32	Condition:T32 Name:T67
-T33	Condition 877 890	type headache
+T33	Condition 882 890	headache
 E33	Condition:T33 Name:T68
 T34	Temporal-Connection 891 896	after
-E34	Temporal-Connection:T34 
+E34	Temporal-Connection:T34 Arg:E30 Arg2:E52
 A4	Temporal-Connection-Type-Value E34 after
 T35	Modifier 937 944	hepatic
-E35	Modifier:T35 
+E35	Modifier:T35 Modifies:T69
 T36	Or 945 947	or
-E36	Or:T36 
+E36	Or:T36 Arg:E35 Arg2:E37
 T37	Modifier 948 953	renal
-E37	Modifier:T37 
+E37	Modifier:T37 Modifies:T69
 T38	Condition 954 962	diseases
 E38	Condition:T38 Name:T69
 T39	Eq-Comparison 969 975	taking
 E39	Eq-Comparison:T39 Temporal-Period:T70
-T40	Procedure 976 984	medicine
-E40	Procedure:T40 
+T40	Drug 976 984	medicine
+E40	Drug:T40 Temporality:E39
 T41	Modifier 989 998	long-term
-E41	Modifier:T41 
+E41	Modifier:T41 Modifies:E40
 T42	Drug 1008 1015	Aspirin
 E42	Drug:T42 Name:T71
 T43	Drug 1017 1031	anti-coagulant
@@ -94,10 +76,8 @@ T45	Condition 1048 1064	mental disorders
 E45	Condition:T45 Name:T73
 T46	Drug 1066 1080	contraceptives
 E46	Drug:T46 
-T47	Location 77 80	ICU
-A5	Location-Value T47 hospital
-T48	Location 99 108	emergency
-A6	Location-Value T48 hospital
+T48	Location 85 108	department of emergency
+A6	Location-Value T48 emergency-dept
 T49	Condition-Name 137 146	headaches
 T50	Eq-Operator 147 156	more than
 A7	Eq-Operator-Value T50 GT
@@ -106,10 +86,7 @@ T52	Eq-Temporal-Unit 173 178	month
 A8	Eq-Temporal-Unit-Value T52 month
 T53	Condition-Name 197 205	headache
 T54	Condition-Name 209 217	migraine
-T55	Severity 221 229	frequent
-A9	Severity-Value T55 severe
-T56	Condition-Name 230 246	episodic tension
-T57	Condition-Name 247 260	type headache
+T57	Condition-Name 252 260	headache
 T58	Condition-Name 380 388	headache
 T59	Eq-Temporal-Period 527 534	Current
 A10	Eq-Temporal-Period-Value T59 present
@@ -121,11 +98,66 @@ T63	Condition-Name 769 778	pregnancy
 T64	Condition-Name 785 798	Breastfeeding
 T65	Condition-Name 817 825	headache
 T66	Condition-Name 838 846	migraine
-T67	Condition-Name 860 876	episodic tension
-T68	Condition-Name 877 890	type headache
+T68	Condition-Name 882 890	headache
 T69	Condition-Name 954 962	diseases
 T70	Eq-Temporal-Period 969 975	taking
 A12	Eq-Temporal-Period-Value T70 present
 T71	Drug-Name 1008 1015	Aspirin
 T72	Drug-Name 1017 1031	anti-coagulant
 T73	Condition-Name 1048 1064	mental disorders
+T3	Location 55 75	intensive care units
+A13	Location-Value T3 unit
+T47	Provider 36 42	nurses
+E3	Provider:T47 Role:T74
+T74	Provider-Role 36 42	nurses
+T2	Location 110 112	ED
+A5	Location-Value T2 emergency-dept
+R1	Abbrev-Of Arg1:T2 Arg2:T48	
+T1	Location 77 80	ICU
+A14	Location-Value T1 unit
+R2	Abbrev-Of Arg1:T1 Arg2:T3	
+T75	Or 82 84	or
+E1	Or:T75 Arg:T1 Arg2:T48
+R3	Equivalent-To Arg1:E7 Arg2:E6	
+T9	Modifier 221 251	frequent episodic tension-type
+E2	Modifier:T9 Modifies:T57
+T11	Provider 467 478	neurologist
+E9	Provider:T11 Type:T12
+T12	Provider-Type 467 478	neurologist
+T15	Encounter 430 435	refer
+E11	Encounter:T15 Type:T55 Provider:E9
+T55	Encounter-Type 430 435	refer
+A9	Encounter-Type-Value T55 referral
+T56	Assertion 425 429	will
+E12	Assertion:T56 Asserted:E11
+A15	Assertion-Type-Value E12 hypothetical
+T76	Drug-Name 558 572	essential oils
+T19	Modifier 614 622	sniffing
+E15	Modifier:T19 Modifies:T76
+T77	Negation 659 666	suspend
+E19	Negation:T77 Negates:E18 Duration:E24
+T78	Condition 695 714	sensitive responses
+E47	Condition:T78 Name:T79
+T79	Condition-Name 695 714	sensitive responses
+T80	Drug 722 735	essential oil
+E48	Drug:T80 Name:T81
+T81	Drug-Name 722 735	essential oil
+R4	Caused-By Arg1:E47 Arg2:E48	
+T82	Negation 830 837	neither
+E49	Negation:T82 Negates:E31
+R5	Equivalent-To Arg1:E31 Arg2:E30	
+T83	Negation 847 850	nor
+E50	Negation:T83 Negates:E33
+T32	Modifier 851 881	frequent episodic tension-type
+E32	Modifier:T32 Modifies:T68
+R6	Equivalent-To Arg1:E33 Arg2:E30	
+T67	Provider 914 925	neurologist
+E51	Provider:T67 Type:T84
+T84	Provider-Type 914 925	neurologist
+T85	Coreference 897 906	diagnosed
+E52	Coreference:T85 Refers-To:E30 Provider:E51
+R7	Example-Of Arg1:E42 Arg2:E40	
+R8	Example-Of Arg1:E43 Arg2:E40	
+R9	Treatment-For Arg1:E44 Arg2:E45	
+R10	Example-Of Arg1:E44 Arg2:E40	
+R11	Example-Of Arg1:E46 Arg2:E40	
