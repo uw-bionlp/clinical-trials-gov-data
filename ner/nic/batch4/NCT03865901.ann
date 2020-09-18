@@ -1,12 +1,12 @@
 T1	Eq-Comparison 31 55	18 years of age or older
 E1	Eq-Comparison:T1 Value:T31 Temporal-Unit:T32 Operator:T33
 T2	Temporal-Connection 56 58	at
-E2	Temporal-Connection:T2
+E2	Temporal-Connection:T2 Arg:E30 Arg2:E3
 A1	Temporal-Connection-Type-Value E2 during
 T3	Study 59 69	enrollment
-E3	Study:T3
+E3	Study:T3 
 T4	Modifier 94 110	viable singleton
-E4	Modifier:T4
+E4	Modifier:T4 Modifies:T34
 T5	Condition 111 120	pregnancy
 E5	Condition:T5 Name:T34
 T6	Procedure 153 166	GDM screening
@@ -14,52 +14,52 @@ E6	Procedure:T6 Name:T35
 T7	Eq-Comparison 167 186	between 24-28 weeks
 E7	Eq-Comparison:T7 Operator:T36 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
 T8	Observation 187 196	gestation
-E8	Observation:T8 Name:T41
+E8	Observation:T8 Name:T41 Eq-Comparison:E7
 T9	Observation 216 231	gestational age
-E9	Observation:T9 Name:T42
+E9	Observation:T9 Name:T42 Eq-Comparison:E10
 T10	Eq-Comparison 235 246	24-28 weeks
 E10	Eq-Comparison:T10 Value:T43 Operator:T44 Value:T45 Temporal-Unit:T46
 T11	Temporal-Connection 247 249	at
-E11	Temporal-Connection:T11
+E11	Temporal-Connection:T11 Arg:E9 Arg2:E12
 A2	Temporal-Connection-Type-Value E11 during
 T12	Study 254 263	Screening
-E12	Study:T12
+E12	Study:T12 
 T13	Condition 369 377	diabetes
 E13	Condition:T13 Name:T47
 T14	Temporal-Connection 378 384	before
-E14	Temporal-Connection:T14
+E14	Temporal-Connection:T14 Arg:E13 Arg2:E15
 A3	Temporal-Connection-Type-Value E14 before
 T15	Condition 385 394	pregnancy
 E15	Condition:T15 Name:T48
 T16	Or 395 397	or
-E16	Or:T16
+E16	Or:T16 Arg:E15 Arg2:E17
 T17	Condition 430 433	GDM
-E17	Condition:T17 Name:T49
+E17	Condition:T17 Name:T49 Temporality:E32
 T18	Contraindication 443 460	contraindications
-E18	Contraindication:T18
-T19	Condition 465 486	drinking oral glucose
-E19	Condition:T19
+E18	Contraindication:T18 Contraindicates:E19
+T19	Drug 479 486	glucose
+E19	Drug:T19 Name:T50 Dose:E20
 T20	Eq-Comparison 496 516	up to 100 g of sugar
-E20	Eq-Comparison:T20 Value:T51 Unit:T52
+E20	Eq-Comparison:T20 Value:T51 Unit:T52 Operator:T61 Unit2:T62
 T21	Eq-Comparison 519 520	3
-E21	Eq-Comparison:T21
+E21	Eq-Comparison:T21 
 T22	Eq-Comparison 525 531	taking
 E22	Eq-Comparison:T22 Temporal-Period:T53
 T23	Drug 532 541	metformin
-E23	Drug:T23 Name:T54
-T24	Condition 570 589	concomitant illness
+E23	Drug:T23 Name:T54 Temporality:E22
+T24	Condition 582 589	illness
 E24	Condition:T24 Name:T55
 T25	Condition 591 598	disease
-E25	Condition:T25
+E25	Condition:T25 Name:T64
 T26	Or 599 601	or
-E26	Or:T26
+E26	Or:T26 Arg:E25 Arg2:E27
 T27	Condition 602 611	condition
-E27	Condition:T27
+E27	Condition:T27 
 T28	Assertion 667 673	likely
-E28	Assertion:T28
+E28	Assertion:T28 Asserted:T65
 A4	Assertion-Type-Value E28 hypothetical
 T29	Risk 789 793	risk
-E29	Risk:T29
+E29	Risk:T29 
 T30	Life-Stage-And-Gender 25 30	Women
 A5	Life-Stage-And-Gender-Type T30 female
 T31	Eq-Value 31 33	18
@@ -68,7 +68,7 @@ A6	Eq-Temporal-Unit-Value T32 year
 T33	Eq-Operator 47 55	or older
 A7	Eq-Operator-Value T33 GTEQ
 T34	Condition-Name 111 120	pregnancy
-T35	Procedure-Name 153 156	GDM
+T35	Procedure-Name 153 166	GDM screening
 T36	Eq-Operator 167 174	between
 A8	Eq-Operator-Value T36 BETWEEN
 T37	Eq-Value 175 177	24
@@ -89,10 +89,40 @@ A13	Eq-Temporal-Unit-Value T46 week
 T47	Condition-Name 369 377	diabetes
 T48	Condition-Name 385 394	pregnancy
 T49	Condition-Name 430 433	GDM
-T50	Drug-Name 465 486	drinking oral glucose
+T50	Drug-Name 479 486	glucose
 T51	Eq-Value 502 505	100
 T52	Eq-Unit 506 507	g
 T53	Eq-Temporal-Period 525 531	taking
 A14	Eq-Temporal-Period-Value T53 present
 T54	Drug-Name 532 541	metformin
 T55	Condition-Name 582 589	illness
+T56	Age 43 46	age
+E30	Age:T56 Eq-Comparison:E1
+T57	Assertion 129 144	recommended for
+E31	Assertion:T57 Asserted:E6
+A15	Assertion-Type-Value E31 hypothetical
+A16	Observation-Type-Value T42 measurement
+T58	Eq-Comparison 402 409	already
+E32	Eq-Comparison:T58 Temporal-Period:T59
+T59	Eq-Temporal-Period 402 409	already
+A17	Eq-Temporal-Period-Value T59 past
+T60	Modifier 465 478	drinking oral
+E33	Modifier:T60 Modifies:T50
+T61	Eq-Operator 496 501	up to
+A18	Eq-Operator-Value T61 LTEQ
+T62	Eq-Unit 511 516	sugar
+T63	Modifier 570 581	concomitant
+E34	Modifier:T63 Modifies:T55
+T64	Condition-Name 591 598	disease
+T65	Stability 677 684	prevent
+A19	Stability-Value T65 change
+T66	Study 735 743	protocol
+E35	Study:T66 Stability:T65
+R1	Caused-By Arg1:T65 Arg2:E24	
+R2	Caused-By Arg1:T65 Arg2:E25	
+R3	Caused-By Arg1:T65 Arg2:E27	
+T67	Or 745 747	or
+E36	Or:T67 Arg:E35 Arg2:E29
+R4	Caused-By Arg1:E29 Arg2:E24	
+R5	Caused-By Arg1:E29 Arg2:E25	
+R6	Caused-By Arg1:E29 Arg2:E27	

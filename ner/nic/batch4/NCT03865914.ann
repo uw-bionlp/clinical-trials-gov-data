@@ -1,64 +1,61 @@
 T1	Or 38 40	or
-E1	Or:T1
-T2	Condition 75 99	type 2 diabetes mellitus
+E1	Or:T1 Arg:T29 Arg2:T30
+T2	Condition 82 99	diabetes mellitus
 E2	Condition:T2 Name:T31
 T3	Condition 121 137	renal impairment
 E3	Condition:T3 Name:T32
 T4	Condition 149 165	microalbuminuria
 E4	Condition:T4 Name:T33
 T5	Or 166 168	or
-E5	Or:T5
+E5	Or:T5 Arg:E4 Arg2:E7
 T6	Modifier 169 174	overt
-E6	Modifier:T6
+E6	Modifier:T6 Modifies:T34
 T7	Condition 175 186	proteinuria
 E7	Condition:T7 Name:T34
 T8	Or 187 189	or
-E8	Or:T8
+E8	Or:T8 Arg:E7 Arg2:E10
 T9	Modifier 190 195	renal
-E9	Modifier:T9
+E9	Modifier:T9 Modifies:T35
 T10	Condition 196 209	insufficiency
 E10	Condition:T10 Name:T35
 T11	Modifier 219 224	renal
-E11	Modifier:T11
+E11	Modifier:T11 Modifies:T36
 T12	Procedure 225 231	biopsy
 E12	Procedure:T12 Name:T36
 T13	Condition 260 278	renal pathological
 E13	Condition:T13 Name:T37
 T14	Eq-Comparison 375 382	history
 E14	Eq-Comparison:T14 Temporal-Period:T38
-T15	Negation 402 405	not
-E15	Negation:T15
 T16	Other 442 447	other
-E16	Other:T16
+E16	Other:T16 Is-Other:E18
 T17	Modifier 448 457	secondary
-E17	Modifier:T17
+E17	Modifier:T17 Modifies:T39
 T18	Condition 458 472	renal diseases
 E18	Condition:T18 Name:T39
 T19	Modifier 492 502	hereditary
-E19	Modifier:T19
+E19	Modifier:T19 Modifies:T40
 T20	Condition 503 517	kidney disease
-E20	Condition:T20
+E20	Condition:T20 Name:T40
 T21	Condition 523 542	Autoimmune diseases
 E21	Condition:T21 Name:T41
 T22	Condition 562 577	malignant tumor
 E22	Condition:T22 Name:T42
 T23	Assertion 583 594	expected to
-E23	Assertion:T23
+E23	Assertion:T23 Asserted:E33
 A1	Assertion-Type-Value E23 hypothetical
 T24	Eq-Comparison 603 621	less than 6 months
 E24	Eq-Comparison:T24 Operator:T43 Value:T44 Temporal-Unit:T45
 T25	Condition 627 636	Pregnancy
 E25	Condition:T25 Name:T46
 T26	Or 637 640	and
-E26	Or:T26
+E26	Or:T26 Arg:E25 Arg2:E27
 T27	Condition 641 650	lactation
 E27	Condition:T27 Name:T47
-T28	Condition-Name 25 31	Age≥18
 T29	Life-Stage-And-Gender 33 37	male
 A2	Life-Stage-And-Gender-Type T29 male
 T30	Life-Stage-And-Gender 41 47	female
 A3	Life-Stage-And-Gender-Type T30 female
-T31	Condition-Name 75 99	type 2 diabetes mellitus
+T31	Condition-Name 82 99	diabetes mellitus
 T32	Condition-Name 121 137	renal impairment
 T33	Condition-Name 149 165	microalbuminuria
 T34	Condition-Name 175 186	proteinuria
@@ -68,7 +65,7 @@ T37	Condition-Name 260 278	renal pathological
 T38	Eq-Temporal-Period 375 382	history
 A4	Eq-Temporal-Period-Value T38 past
 T39	Condition-Name 458 472	renal diseases
-T40	Condition-Name 492 517	hereditary kidney disease
+T40	Condition-Name 503 517	kidney disease
 T41	Condition-Name 523 542	Autoimmune diseases
 T42	Condition-Name 562 577	malignant tumor
 T43	Eq-Operator 603 612	less than
@@ -78,3 +75,27 @@ T45	Eq-Temporal-Unit 615 621	months
 A6	Eq-Temporal-Unit-Value T45 month
 T46	Condition-Name 627 636	Pregnancy
 T47	Condition-Name 641 650	lactation
+T28	Age 25 28	Age
+E28	Age:T28 Eq-Comparison:E29
+T48	Eq-Comparison 28 31	≥18
+E29	Eq-Comparison:T48 Operator:T49 Value:T50
+T49	Eq-Operator 28 29	≥
+A7	Eq-Operator-Value T49 GTEQ
+T50	Eq-Value 29 31	18
+T51	Modifier 75 81	type 2
+E30	Modifier:T51 Modifies:T31
+R1	Example-Of Arg1:E4 Arg2:E3	
+R2	Example-Of Arg1:E7 Arg2:E3	
+R3	Example-Of Arg1:E10 Arg2:E3	
+R4	Found-By Arg1:E13 Arg2:E12	
+T52	Coreference 386 397	the disease
+E31	Coreference:T52 Refers-To:E2 Temporality:E14
+T15	Negation 402 414	not complete
+E15	Negation:T15 Negates:E31
+T53	Assertion 402 414	not complete
+E32	Assertion:T53 Asserted:E15
+A8	Assertion-Type-Value E32 hypothetical
+T54	Death 595 602	survive
+E33	Death:T54 Temporality:E24
+T55	And 578 582	were
+E34	And:T55 Arg:E22 Arg2:E23
