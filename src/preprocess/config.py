@@ -5,6 +5,7 @@ class Config:
     annotation_dir        = os.path.join(home, 'ner')
     annotation_train_dirs = [ 
         os.path.join(annotation_dir, 'nic', 'training'), 
+        os.path.join(annotation_dir, 'nic', 'batch4'), 
         os.path.join(annotation_dir, 'nic', 'batch5'), 
         os.path.join(annotation_dir, 'nic', 'batch6'), 
         os.path.join(annotation_dir, 'nic', 'batch7'), 

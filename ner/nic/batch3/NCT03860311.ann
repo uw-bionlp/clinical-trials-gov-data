@@ -1,75 +1,67 @@
 T1	Age 25 28	Age
-E1	Age:T1 
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 29 38	8yr-18yrs
-E2	Eq-Comparison:T2 
+E2	Eq-Comparison:T2 Value:T44 Operator:T46 Temporal-Unit:T45 Value2:T47 Temporal-Unit2:T48
 T3	Assertion 56 65	Likely to
-E3	Assertion:T3 
+E3	Assertion:T3 Asserted:E5 Asserted2:E8
 A1	Assertion-Type-Value E3 hypothetical
-T4	Observation 71 83	order placed
-E4	Observation:T4 
 T5	Procedure 88 120	transabdominal pelvic ultrasound
 E5	Procedure:T5 Name:T34
 T6	Or 120 121	/
-E6	Or:T6 
+E6	Or:T6 Arg:E5 Arg2:E8
 T7	Modifier 121 128	ovarian
-E7	Modifier:T7 
+E7	Modifier:T7 Modifies:T35
 T8	Procedure 129 139	ultrasound
 E8	Procedure:T8 Name:T35
 T9	Negation 145 147	No
-E9	Negation:T9 
+E9	Negation:T9 Negates:E14
 T10	Eq-Comparison 148 155	history
 E10	Eq-Comparison:T10 Temporal-Period:T36
 T11	Modifier 159 165	pelvic
-E11	Modifier:T11 
+E11	Modifier:T11 Modifies:T37
 T12	Or 166 168	or
-E12	Or:T12 
+E12	Or:T12 Arg:E11 Arg2:E13
 T13	Modifier 169 176	bladder
-E13	Modifier:T13 
+E13	Modifier:T13 Modifies:T37
 T14	Procedure 177 199	reconstructive surgery
-E14	Procedure:T14 Name:T37
+E14	Procedure:T14 Name:T37 Temporality:E10
 T15	Condition 225 234	Pregnancy
 E15	Condition:T15 Name:T38
 T16	Condition 259 262	ill
-E16	Condition:T16 Name:T39
+E16	Condition:T16 Name:T39 Severity:T4
 T17	Modifier 297 302	renal
-E17	Modifier:T17 
+E17	Modifier:T17 Modifies:T40
 T18	Or 303 305	or
-E18	Or:T18 
+E18	Or:T18 Arg:E17 Arg2:E19
 T19	Modifier 306 330	genitourinary structural
-E19	Modifier:T19 
+E19	Modifier:T19 Modifies:T40
 T20	Condition 331 344	abnormalities
 E20	Condition:T20 Name:T40
 T21	Or 345 347	or
-E21	Or:T21 
+E21	Or:T21 Arg:E20 Arg2:E26
 T22	Eq-Comparison 348 353	prior
 E22	Eq-Comparison:T22 Temporal-Period:T41
 T23	Modifier 354 360	pelvic
-E23	Modifier:T23 
+E23	Modifier:T23 Modifies:T42
 T24	Or 360 361	/
-E24	Or:T24 
+E24	Or:T24 Arg:E23 Arg2:E25
 T25	Modifier 361 374	genitourinary
-E25	Modifier:T25 
+E25	Modifier:T25 Modifies:T42
 T26	Procedure 375 382	surgery
-E26	Procedure:T26 Name:T42
+E26	Procedure:T26 Name:T42 Temporality:E22
 T27	Modifier 388 395	Chronic
-E27	Modifier:T27 
+E27	Modifier:T27 Modifies:T43
 T28	Condition 396 409	renal disease
 E28	Condition:T28 Name:T43
-T29	Eq-Comparison 424 434	presenting
-E29	Eq-Comparison:T29 
-T30	Other 435 442	outside
-E30	Other:T30 
 T31	Procedure 455 464	treatment
 E31	Procedure:T31 
-T32	Or 465 472	windows
-E32	Or:T32 
 T33	Life-Stage-And-Gender 44 50	Female
 A2	Life-Stage-And-Gender-Type T33 female
 T34	Procedure-Name 88 120	transabdominal pelvic ultrasound
 T35	Procedure-Name 129 139	ultrasound
 T36	Eq-Temporal-Period 148 155	history
 A3	Eq-Temporal-Period-Value T36 past
-T37	Procedure-Name 192 199	surgery
+T37	Procedure-Name 177 199	reconstructive surgery
 T38	Condition-Name 225 234	Pregnancy
 T39	Condition-Name 259 262	ill
 T40	Condition-Name 331 344	abnormalities
@@ -77,3 +69,18 @@ T41	Eq-Temporal-Period 348 353	prior
 A4	Eq-Temporal-Period-Value T41 past
 T42	Procedure-Name 375 382	surgery
 T43	Condition-Name 396 409	renal disease
+T44	Eq-Value 29 30	8
+T45	Eq-Temporal-Unit 30 32	yr
+A5	Eq-Temporal-Unit-Value T45 year
+T46	Eq-Operator 32 33	-
+A6	Eq-Operator-Value T46 BETWEEN
+T47	Eq-Value 33 35	18
+T48	Eq-Temporal-Unit 35 38	yrs
+A7	Eq-Temporal-Unit-Value T48 year
+T4	Severity 248 258	Critically
+A8	Severity-Value T4 severe
+T29	Negation 435 442	outside
+E4	Negation:T29 Negates:E31
+T30	Assertion 447 454	defined
+E29	Assertion:T30 Asserted:E31
+A9	Assertion-Type-Value E29 hypothetical

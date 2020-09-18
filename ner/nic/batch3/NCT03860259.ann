@@ -1,36 +1,34 @@
 T1	Eq-Comparison 36 57	greater than 18 years
 E1	Eq-Comparison:T1 Operator:T17 Value:T18 Temporal-Unit:T19
 T2	Age 61 64	age
-E2	Age:T2 
+E2	Age:T2 Eq-Comparison:E1
 T3	Eq-Comparison 142 151	scheduled
 E3	Eq-Comparison:T3 Temporal-Period:T20
-T4	Eq-Comparison 155 162	undergo
-E4	Eq-Comparison:T4 
 T5	Modifier 163 171	elective
-E5	Modifier:T5 
+E5	Modifier:T5 Modifies:T22
 T6	Procedure 172 192	rotator cuff surgery
-E6	Procedure:T6 Name:T22
+E6	Procedure:T6 Name:T22 Temporality:E3
 T7	Condition 270 287	Opioid dependence
 E7	Condition:T7 Name:T23
 T8	Modifier 322 329	chronic
-E8	Modifier:T8 
+E8	Modifier:T8 Modifies:T24
 T9	Condition 330 344	pain condition
 E9	Condition:T9 Name:T24
 T10	Eq-Comparison 351 356	daily
-E10	Eq-Comparison:T10 Temporal-Unit:T25
+E10	Eq-Comparison:T10 Per:T25
 T11	Drug 357 363	opioid
-E11	Drug:T11 Name:T26
+E11	Drug:T11 Name:T26 Temporality:E10
 T12	Condition 383 406	Anatomical malformation
 E12	Condition:T12 Name:T27
 T13	Assertion 444 447	may
-E13	Assertion:T13 
+E13	Assertion:T13 Asserted:T28
 A1	Assertion-Type-Value E13 hypothetical
-T14	Modifier 484 495	nerve block
-E14	Modifier:T14 
+T14	Procedure 484 495	nerve block
+E14	Procedure:T14 Name:T32 Stability:T28
 T15	Condition 501 518	Raynaud's disease
 E15	Condition:T15 Name:T29
-T16	Procedure 534 546	Vasculopathy
-E16	Procedure:T16 
+T16	Condition 534 546	Vasculopathy
+E16	Condition:T16 Name:T30
 T17	Eq-Operator 36 48	greater than
 A2	Eq-Operator-Value T17 GT
 T18	Eq-Value 49 51	18
@@ -38,11 +36,9 @@ T19	Eq-Temporal-Unit 52 57	years
 A3	Eq-Temporal-Unit-Value T19 year
 T20	Eq-Temporal-Period 142 151	scheduled
 A4	Eq-Temporal-Period-Value T20 future
-T21	Eq-Temporal-Period 152 162	to undergo
-A5	Eq-Temporal-Period-Value T21 future
 T22	Procedure-Name 172 192	rotator cuff surgery
 T23	Condition-Name 270 287	Opioid dependence
-T24	Condition-Name 330 334	pain
+T24	Condition-Name 330 344	pain condition
 T25	Eq-Temporal-Unit 351 356	daily
 A6	Eq-Temporal-Unit-Value T25 day
 T26	Drug-Name 357 363	opioid
@@ -51,3 +47,12 @@ T28	Stability 448 457	interfere
 A7	Stability-Value T28 change
 T29	Condition-Name 501 518	Raynaud's disease
 T30	Condition-Name 534 546	Vasculopathy
+T4	Procedure 226 244	interscalene block
+E4	Procedure:T4 Name:T21
+T21	Procedure-Name 226 244	interscalene block
+T31	Assertion 210 222	consented to
+E17	Assertion:T31 Asserted:E4
+A5	Assertion-Type-Value E17 hypothetical
+R1	Treatment-For Arg1:E11 Arg2:E9	
+T32	Procedure-Name 484 495	nerve block
+R2	Caused-By Arg1:T28 Arg2:E12	
