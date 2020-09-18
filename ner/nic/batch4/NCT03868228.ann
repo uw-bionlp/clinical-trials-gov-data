@@ -1,7 +1,7 @@
 T1	Condition 39 42	CPM
 E1	Condition:T1 Name:T56
 T2	And 43 47	with
-E2	And:T2
+E2	And:T2 
 T3	Observation 48 72	expected life expectancy
 E3	Observation:T3 Name:T57
 T4	Eq-Comparison 76 86	> 6 months
@@ -9,15 +9,15 @@ E4	Eq-Comparison:T4 Operator:T58 Value:T59 Temporal-Unit:T60
 T5	Observation 93 125	ECOG Scale of Performance Status
 E5	Observation:T5 Name:T61
 T6	Eq-Comparison 131 144	scores 0 or 1
-E6	Eq-Comparison:T6
+E6	Eq-Comparison:T6 
 T7	Eq-Comparison 151 158	15 mile
 E7	Eq-Comparison:T7 Value:T62
 T8	Modifier 199 207	systemic
-E8	Modifier:T8
+E8	Modifier:T8 
 T9	Procedure 208 220	chemotherapy
 E9	Procedure:T9 Name:T63
 T10	Modifier 241 261	Concomitant systemic
-E10	Modifier:T10
+E10	Modifier:T10 
 T11	Procedure 262 274	chemotherapy
 E11	Procedure:T11 Name:T64
 T12	Drug 289 296	FOLFIRI
@@ -27,60 +27,60 @@ E13	Drug:T13 Name:T66
 T14	Drug 306 317	Mitomycin C
 E14	Drug:T14 Name:T67
 T15	Or 318 319	&
-E15	Or:T15
+E15	Or:T15 
 T16	Drug 325 337	Fluorouracil
 E16	Drug:T16 Name:T68
 T17	Drug 339 351	Capecitabine
 E17	Drug:T17 Name:T69
 T18	Exception 353 362	excluding
-E18	Exception:T18
+E18	Exception:T18 
 T19	Drug 363 370	Lonsurf
-E19	Drug:T19
+E19	Drug:T19 
 T20	Or 372 374	or
-E20	Or:T20
+E20	Or:T20 
 T21	Modifier 375 391	without systemic
-E21	Modifier:T21
+E21	Modifier:T21 
 T22	Procedure 392 404	chemotherapy
 E22	Procedure:T22 Name:T70
 T23	Negation 408 410	no
-E23	Negation:T23
+E23	Negation:T23 
 T24	Observation 454 470	Neutrophil count
 E24	Observation:T24 Name:T71
 T25	Eq-Comparison 471 481	on or just
-E25	Eq-Comparison:T25
+E25	Eq-Comparison:T25 
 T26	Temporal-Connection 482 488	before
-E26	Temporal-Connection:T26
+E26	Temporal-Connection:T26 
 A1	Temporal-Connection-Type-Value E26 before
 T27	Procedure 489 501	chemotherapy
 E27	Procedure:T27 Name:T72
 T28	Eq-Comparison 514 518	>1.5
 E28	Eq-Comparison:T28 Operator:T73 Value:T74
 T29	Age 544 547	Age
-E29	Age:T29
+E29	Age:T29 
 T30	Eq-Comparison 548 551	<18
 E30	Eq-Comparison:T30 Operator:T75 Value:T76
 T31	Negation 583 586	not
-E31	Negation:T31
+E31	Negation:T31 
 T32	Procedure 600 605	PIPAC
-E32	Procedure:T32
+E32	Procedure:T32 
 T33	Temporal-Connection 623 635	Preoperative
-E33	Temporal-Connection:T33
+E33	Temporal-Connection:T33 
 A2	Temporal-Connection-Type-Value E33 before
 T34	Or 658 660	or
-E34	Or:T34
+E34	Or:T34 
 T35	Procedure 661 684	Consultant Anaesthetist
-E35	Procedure:T35
+E35	Procedure:T35 
 T36	Negation 698 701	not
-E36	Negation:T36
+E36	Negation:T36 
 T37	Assertion 702 709	fit for
-E37	Assertion:T37
+E37	Assertion:T37 
 A3	Assertion-Type-Value E37 hypothetical
 T38	Procedure 710 729	general anaesthesia
 E38	Procedure:T38 Name:T78
 T39	And 730 733	and
-E39	And:T39
+E39	And:T39 
 T40	Or 736 738	or
-E40	Or:T40
+E40	Or:T40 
 T41	Procedure 739 750	laparoscopy
 E41	Procedure:T41 Name:T79
 T42	Condition 767 788	evident gross ascites
@@ -88,11 +88,11 @@ E42	Condition:T42 Name:T80
 T43	Condition 794 811	Bowel obstruction
 E43	Condition:T43 Name:T81
 T44	Procedure 817 828	Bevacizumab
-E44	Procedure:T44
+E44	Procedure:T44 
 T45	Procedure 840 861	systemic chemotherapy
 E45	Procedure:T45 Name:T83
 T46	Eq-Comparison 862 875	regime - time
-E46	Eq-Comparison:T46
+E46	Eq-Comparison:T46 
 T47	Procedure 881 893	chemotherapy
 E47	Procedure:T47 Name:T84
 T48	Procedure 897 904	surgery
@@ -104,9 +104,9 @@ E50	Condition:T50 Name:T87
 T51	Procedure 993 1005	chemotherapy
 E51	Procedure:T51 Name:T88
 T52	Risk 1012 1016	risk
-E52	Risk:T52
+E52	Risk:T52 
 T53	Temporal-Connection 1020 1024	post
-E53	Temporal-Connection:T53
+E53	Temporal-Connection:T53 
 A4	Temporal-Connection-Type-Value E53 after
 T54	Procedure 1025 1034	operative
 E54	Procedure:T54 Name:T89

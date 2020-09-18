@@ -1,127 +1,125 @@
 T1	Or 24 27	and
-E1	Or:T1 
+E1	Or:T1 Arg:T61 Arg2:T62
 T2	Age 34 38	aged
-E2	Age:T2 
+E2	Age:T2 Eq-Comparison:E3
 T3	Eq-Comparison 39 47	20 to 80
 E3	Eq-Comparison:T3 Value:T63 Operator:T64 Value:T65
 T4	Condition 53 56	MDD
-E4	Condition:T4 Name:T66
+E4	Condition:T4 Name:T66 Stage:E6
 T5	Procedure 79 82	MRI
 E5	Procedure:T5 Name:T67
 T6	Eq-Comparison 84 96	grade II/III
 E6	Eq-Comparison:T6 Unit:T68 Value:T69 Value:T70
 T7	Modifier 103 108	Joint
-E7	Modifier:T7 
+E7	Modifier:T7 Modifies:T71
 T8	Condition 109 113	pain
-E8	Condition:T8 Name:T71
+E8	Condition:T8 Name:T71 Duration:E9
 T9	Eq-Comparison 118 135	more than 3 month
 E9	Eq-Comparison:T9 Operator:T72 Value:T73 Temporal-Unit:T74
 T10	Negation 141 148	Absence
-E10	Negation:T10 
+E10	Negation:T10 Negates:E12
 T11	Modifier 152 156	bone
-E11	Modifier:T11 
+E11	Modifier:T11 Modifies:T75
 T12	Condition 157 163	lesion
 E12	Condition:T12 Name:T75
 T13	Or 164 166	or
-E13	Or:T13 
-T14	Modifier 167 180	moderate knee
-E14	Modifier:T14 
+E13	Or:T13 Arg:E12 Arg2:E15
+T14	Modifier 176 180	knee
+E14	Modifier:T14 Modifies:T77
 T15	Condition 181 195	osteoarthritis
-E15	Condition:T15 Name:T77
+E15	Condition:T15 Name:T77 Severity:T76
 T16	Eq-Comparison 196 204	stage <2
 E16	Eq-Comparison:T16 Unit:T78 Operator:T79 Value:T80
 T17	Observation 212 235	Kellgren Laurence scale
-E17	Observation:T17 Name:T81
+E17	Observation:T17 Name:T81 Eq-Comparison:E16 Temporality:E20
 T18	Procedure 252 263	radiography
 E18	Procedure:T18 Name:T82
-T19	Procedure 267 273	schuss
-E19	Procedure:T19 
+T19	Modifier 267 273	schuss
+E19	Modifier:T19 Modifies:T82
 T20	Eq-Comparison 282 290	6 months
 E20	Eq-Comparison:T20 Value:T83 Temporal-Unit:T84
 T21	Temporal-Connection 291 299	prior to
-E21	Temporal-Connection:T21 
+E21	Temporal-Connection:T21 Arg:E20 Arg2:E22
 A1	Temporal-Connection-Type-Value E21 before
 T22	Study 300 309	inclusion
 E22	Study:T22 
 T23	Condition 315 330	Axial deformity
 E23	Condition:T23 Name:T85
 T24	Modifier 338 349	lower limbs
-E24	Modifier:T24 
+E24	Modifier:T24 Modifies:T85
 T25	Eq-Comparison 350 375	less than or equal to 5 °
-E25	Eq-Comparison:T25 Operator:T86 Operator:T87 Value:T88 Unit:T89
+E25	Eq-Comparison:T25 Value:T88 Unit:T89 Operator:T87
 T26	Assertion 423 433	Ability to
-E26	Assertion:T26 
+E26	Assertion:T26 Asserted:E27
 A2	Assertion-Type-Value E26 hypothetical
 T27	Procedure 442 452	procedures
 E27	Procedure:T27 
 T28	Encounter 468 477	follow-up
 E28	Encounter:T28 
-T29	Observation 479 492	walk 50 steps
-E29	Observation:T29 Name:T90
+T29	Observation 479 483	walk
+E29	Observation:T29 Name:T90 Eq-Comparison:E62
 T30	Modifier 498 510	flat surface
-E30	Modifier:T30 
+E30	Modifier:T30 Modifies:T90
 T31	Or 511 514	and
-E31	Or:T31 
+E31	Or:T31 Arg:E30 Arg2:E32
 T32	Modifier 515 517	up
-E32	Modifier:T32 
+E32	Modifier:T32 Modifies:T90
 T33	Or 518 519	/
-E33	Or:T33 
+E33	Or:T33 Arg:E32 Arg2:E34
 T34	Modifier 520 531	down stairs
-E34	Modifier:T34 
+E34	Modifier:T34 Modifies:T90
 T35	Observation 607 622	Axial deformity
-E35	Observation:T35 
+E35	Observation:T35 Eq-Comparison:E36
 T36	Eq-Comparison 622 627	> 5 °
-E36	Eq-Comparison:T36 Operator:T94 Value:T95
+E36	Eq-Comparison:T36 Operator:T94 Value:T95 Unit:T120
 T37	Condition 633 653	Ligament instability
 E37	Condition:T37 Name:T96
 T38	Condition 665 673	injuries
-E38	Condition:T38 Name:T98
+E38	Condition:T38 Name:T98 Severity:T97 Temporality:E45
 T39	Or 674 676	or
-E39	Or:T39 
+E39	Or:T39 Arg:E38 Arg2:E40
 T40	Procedure 677 684	surgery
-E40	Procedure:T40 Name:T99
+E40	Procedure:T40 Name:T99 Temporality:E45
 T41	Modifier 692 703	target knee
-E41	Modifier:T41 
+E41	Modifier:T41 Modifies:T99
 T42	Or 704 706	or
-E42	Or:T42 
-T43	Modifier 707 714	lateral
-E43	Modifier:T43 
-T44	Modifier 715 733	contralateral knee
-E44	Modifier:T44 
+E42	Or:T42 Arg:E41 Arg2:E43
+T43	Modifier 707 733	lateral contralateral knee
+E43	Modifier:T43 Modifies:T99
 T45	Eq-Comparison 741 750	12 months
 E45	Eq-Comparison:T45 Value:T100 Temporal-Unit:T101
 T46	Temporal-Connection 751 760	preceding
-E46	Temporal-Connection:T46 
+E46	Temporal-Connection:T46 Arg:E45 Arg2:E47
 A3	Temporal-Connection-Type-Value E46 before
 T47	Study 765 774	inclusion
 E47	Study:T47 
 T48	Procedure 786 809	Ligament reconstruction
-E48	Procedure:T48 Name:T102
+E48	Procedure:T48 Name:T102 Temporality:E49
 T49	Eq-Comparison 817 826	12 months
 E49	Eq-Comparison:T49 Value:T103 Temporal-Unit:T104
 T50	Temporal-Connection 827 835	prior to
-E50	Temporal-Connection:T50 
+E50	Temporal-Connection:T50 Arg:E49 Arg2:E51
 A4	Temporal-Connection-Type-Value E50 before
 T51	Study 840 849	inclusion
 E51	Study:T51 
 T52	Modifier 868 872	cane
-E52	Modifier:T52 
+E52	Modifier:T52 Modifies:T44
 T53	Or 873 875	or
-E53	Or:T53 
-T54	Condition 876 894	assistance to move
-E54	Condition:T54 
+E53	Or:T53 Arg:E52 Arg2:E44
+T54	Condition 890 894	move
+E54	Condition:T54 Name:T44
 T55	Observation 900 903	BMI
-E55	Observation:T55 Name:T105
+E55	Observation:T55 Name:T105 Eq-Comparison:E56
 T56	Eq-Comparison 903 907	> 35
 E56	Eq-Comparison:T56 Operator:T106 Value:T107
 T57	Condition 913 929	Thrombocytopenia
 E57	Condition:T57 Name:T108
 T58	Eq-Comparison 930 940	<150 G / L
-E58	Eq-Comparison:T58 Operator:T109 Value:T110 Unit:T111 Unit:T112
-T59	Observation 946 960	Thrombocytosis
-E59	Observation:T59 Name:T113
+E58	Eq-Comparison:T58 Operator:T109 Value:T110 Unit:T111 Per:T112
+T59	Condition 946 960	Thrombocytosis
+E59	Condition:T59 Name:T113
 T60	Eq-Comparison 960 971	> 450 G / L
-E60	Eq-Comparison:T60 Operator:T114 Value:T115 Unit:T116 Unit:T117
+E60	Eq-Comparison:T60 Operator:T114 Value:T115 Unit:T116 Per:T117
 T61	Life-Stage-And-Gender 20 23	Men
 A5	Life-Stage-And-Gender-Type T61 male
 T62	Life-Stage-And-Gender 28 33	women
@@ -156,10 +154,8 @@ T83	Eq-Value 282 283	6
 T84	Eq-Temporal-Unit 284 290	months
 A13	Eq-Temporal-Unit-Value T84 month
 T85	Condition-Name 315 330	Axial deformity
-T86	Eq-Operator 350 359	less than
-A14	Eq-Operator-Value T86 LT
-T87	Eq-Operator 360 368	or equal
-A15	Eq-Operator-Value T87 GTEQ
+T87	Eq-Operator 350 368	less than or equal
+A15	Eq-Operator-Value T87 LTEQ
 T88	Eq-Value 372 373	5
 T89	Eq-Unit 374 375	°
 T90	Observation-Name 479 483	walk
@@ -192,10 +188,29 @@ A22	Eq-Operator-Value T109 LT
 T110	Eq-Value 931 934	150
 T111	Eq-Unit 935 936	G
 T112	Eq-Unit 939 940	L
-T113	Observation-Name 946 960	Thrombocytosis
-A23	Observation-Type-Value T113 lab
+T113	Condition-Name 946 960	Thrombocytosis
 T114	Eq-Operator 960 961	>
 A24	Eq-Operator-Value T114 GT
 T115	Eq-Value 962 965	450
 T116	Eq-Unit 966 967	G
 T117	Eq-Unit 970 971	L
+R1	Found-By Arg1:E4 Arg2:E5	
+R2	Equivalent-To Arg1:E17 Arg2:E15	
+R3	Found-By Arg1:E15 Arg2:E18	
+T86	Observation 315 330	Axial deformity
+E61	Observation:T86 Eq-Comparison:E25
+R4	Using Arg1:E28 Arg2:E27	
+A14	Observation-Type-Value T90 social-habit
+T118	Eq-Comparison 484 492	50 steps
+E62	Eq-Comparison:T118 Value:T91 Unit:T92
+R5	Equivalent-To Arg1:E29 Arg2:E27	
+T119	Condition 607 622	Axial deformity
+E63	Condition:T119 Name:T93
+T120	Eq-Unit 626 627	°
+T44	Condition-Name 890 894	move
+T121	Modifier 876 886	assistance
+E44	Modifier:T121 Modifies:T44
+T122	Observation 913 929	Thrombocytopenia
+E64	Observation:T122 Eq-Comparison:E58
+T123	Observation 946 960	Thrombocytosis
+E65	Observation:T123 Eq-Comparison:E60

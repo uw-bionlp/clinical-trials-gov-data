@@ -1,129 +1,113 @@
 T1	Eq-Comparison 42 52	6-12 years
 E1	Eq-Comparison:T1 Value:T70 Operator:T71 Value:T72 Temporal-Unit:T73
 T2	Temporal-Connection 75 80	After
-E2	Temporal-Connection:T2
+E2	Temporal-Connection:T2 Arg:E3 Arg2:E5
 A1	Temporal-Connection-Type-Value E2 after
 T3	Birth 81 86	birth
-E3	Birth:T3
+E3	Birth:T3 
 T4	Eq-Comparison 88 93	three
-E4	Eq-Comparison:T4
+E4	Eq-Comparison:T4 Value:T122
 T5	Procedure 94 104	injections
-E5	Procedure:T5 Name:T74
+E5	Procedure:T5 Name:T74 Minimum-Count:E4 Temporality:E9
 T6	Drug 108 113	Hep B
 E6	Drug:T6 Name:T75
-T7	Observation 119 137	inoculated in time
-E7	Observation:T7
-T8	Procedure 155 164	procedure
-E8	Procedure:T8
-T9	Eq-Comparison 168 178	0, 1 and 6
-E9	Eq-Comparison:T9 Value:T76 Value:T77
+T9	Eq-Comparison 168 185	0, 1 and 6 months
+E9	Eq-Comparison:T9 Value:T76 Value:T77 Value2:T7 Temporal-Unit:T8
 T10	Negation 227 229	No
-E10	Negation:T10
-T11	Drug 230 249	HBV booster vaccine
-E11	Drug:T11 Name:T78
-T12	Eq-Comparison 256 261	since
-E12	Eq-Comparison:T12
-T13	Procedure 270 286	HBV immunization
-E13	Procedure:T13
+E10	Negation:T10 Negates:E11
+T11	Immunization 230 249	HBV booster vaccine
+E11	Immunization:T11 Name:T78
+T12	Temporal-Connection 256 261	since
+E12	Temporal-Connection:T12 Arg:E11 Arg2:E13
+T13	Immunization 270 286	HBV immunization
+E13	Immunization:T13 Name:T123
 T14	Or 301 303	or
-E14	Or:T14
+E14	Or:T14 Arg:T79 Arg2:E8
 T15	Study 343 348	study
-E15	Study:T15
+E15	Study:T15 
 T16	Study 366 371	study
-E16	Study:T16
+E16	Study:T16 
 T17	Temporal-Connection 393 398	after
-E17	Temporal-Connection:T17
+E17	Temporal-Connection:T17 Arg:E71 Arg2:E73
 A2	Temporal-Connection-Type-Value E17 after
 T18	Assertion 411 417	can be
-E18	Assertion:T18
+E18	Assertion:T18 Asserted:E70 Asserted2:E71
 A3	Assertion-Type-Value E18 hypothetical
 T19	Eq-Comparison 529 536	history
 E19	Eq-Comparison:T19 Temporal-Period:T81
 T20	Allergy 540 547	allergy
-E20	Allergy:T20
+E20	Allergy:T20 Temporality:E19
 T21	Or 548 550	or
-E21	Or:T21
-T22	Procedure 570 586	vaccine reaction
-E22	Procedure:T22
+E21	Or:T21 Arg:E20 Arg2:E74
 T23	Condition 597 623	immune impairment diseases
 E23	Condition:T23 Name:T83
 T24	Or 624 627	and
-E24	Or:T24
-T25	Modifier 628 634	appear
-E25	Modifier:T25
+E24	Or:T24 Arg:E23 Arg2:E25
+T25	Assertion 628 634	appear
+E25	Assertion:T25 Asserted:E26
 T26	Condition 635 652	immune impairment
 E26	Condition:T26 Name:T84
-T27	Drug 659 676	Immunosuppressive
-E27	Drug:T27 Name:T85
-T28	Procedure 677 686	treatment
-E28	Procedure:T28
-T29	Assertion 688 699	receive any
-E29	Assertion:T29
-A4	Assertion-Type-Value E29 hypothetical
-T30	Procedure 700 709	injection
-E30	Procedure:T30 Name:T86
+T28	Procedure 659 686	Immunosuppressive treatment
+E28	Procedure:T28 Name:T27
+T30	Modifier 700 709	injection
+E30	Modifier:T30 Modifies:T88
 T31	Or 710 712	or
-E31	Or:T31
-T32	Procedure 713 732	oral administration
-E32	Procedure:T32
+E31	Or:T31 Arg:E30 Arg2:E32
+T32	Modifier 713 732	oral administration
+E32	Modifier:T32 Modifies:T88
 T33	Drug 736 745	cortisone
 E33	Drug:T33 Name:T88
 T34	Or 746 748	or
-E34	Or:T34
+E34	Or:T34 Arg:E33 Arg2:E36
 T35	Condition 749 755	cancer
 E35	Condition:T35 Name:T89
 T36	Procedure 756 768	chemotherapy
 E36	Procedure:T36 Name:T90
-T37	Drug 787 794	vaccine
-E37	Drug:T37
+T37	Immunization 787 794	vaccine
+E37	Immunization:T37 
 T38	Or 795 797	or
-E38	Or:T38
+E38	Or:T38 Arg:E37 Arg2:E40
 T39	Study 810 821	observation
-E39	Study:T39
+E39	Study:T39 Study-Of:E40
 T40	Drug 822 826	drug
-E40	Drug:T40
-T41	Condition 836 846	vaccinated
-E41	Condition:T41 Name:T91
+E40	Drug:T40 
+T41	Immunization 836 846	vaccinated
+E41	Immunization:T41 Temporality:E42
 T42	Eq-Comparison 854 869	past four weeks
 E42	Eq-Comparison:T42 Temporal-Period:T92 Value:T93 Temporal-Unit:T94
-T43	Condition 880 893	acute disease
-E43	Condition:T43 Name:T96
+T43	Condition 886 893	disease
+E43	Condition:T43 Name:T96 Severity:T95
 T44	Or 894 896	or
-E44	Or:T44
+E44	Or:T44 Arg:E43 Arg2:E46
 T45	Other 897 902	other
-E45	Other:T45
+E45	Other:T45 Is-Other:E46
 T46	Condition 903 912	infection
 E46	Condition:T46 Name:T97
-T47	Assertion 913 922	requiring
-E47	Assertion:T47
-A5	Assertion-Type-Value E47 hypothetical
 T48	Drug 923 933	antibiotic
 E48	Drug:T48 Name:T98
 T49	Or 934 936	or
-E49	Or:T49
+E49	Or:T49 Arg:E48 Arg2:E50
 T50	Drug 937 946	antiviral
 E50	Drug:T50 Name:T99
 T51	Procedure 947 956	treatment
-E51	Procedure:T51
+E51	Procedure:T51 Temporality:E52
 T52	Eq-Comparison 964 979	past four weeks
 E52	Eq-Comparison:T52 Temporal-Period:T100 Value:T101 Temporal-Unit:T102
 T53	Condition 986 991	Fever
-E53	Condition:T53 Name:T103
+E53	Condition:T53 Name:T103 Temporality:E55
 T54	Assertion 992 1000	symptoms
-E54	Assertion:T54
+E54	Assertion:T54 Asserted:E53
 A6	Assertion-Type-Value E54 possible
 T55	Eq-Comparison 1017 1026	past week
 E55	Eq-Comparison:T55 Temporal-Period:T104 Temporal-Unit:T105
-T56	Observation 1029 1049	axillary temperature
-E56	Observation:T56
+T56	Observation 1038 1049	temperature
+E56	Observation:T56 Name:T29 Eq-Comparison:E57
 T57	Eq-Comparison 1050 1056	≥ 38 ℃
 E57	Eq-Comparison:T57 Operator:T106 Value:T107 Unit:T108
 T58	Eq-Comparison 1105 1112	history
 E58	Eq-Comparison:T58 Temporal-Period:T110
 T59	Condition 1129 1148	infectious diseases
-E59	Condition:T59 Name:T112
-T60	Eq-Comparison 1151 1155	five
-E60	Eq-Comparison:T60
+E59	Condition:T59 Name:T112 Temporality:E58 Severity:T111
 T61	Condition 1165 1174	hepatitis
 E61	Condition:T61 Name:T113
 T62	Condition 1176 1180	AIDS
@@ -132,14 +116,12 @@ T63	Condition 1182 1190	syphilis
 E63	Condition:T63 Name:T115
 T64	Condition 1192 1201	gonorrhea
 E64	Condition:T64 Name:T116
-T65	Condition 1216 1237	Hepatitis B infection
+T65	Condition 1216 1227	Hepatitis B
 E65	Condition:T65 Name:T117
 T66	Or 1238 1240	or
-E66	Or:T66
-T67	Condition 1241 1269	carriers(lineal relationship
-E67	Condition:T67 Name:T118
+E66	Or:T66 Arg2:E60 Arg:E47
 T68	Procedure 1286 1306	physical examination
-E68	Procedure:T68 Name:T119
+E68	Procedure:T68 Name:T119 Polarity:T86
 T69	Life-Stage-And-Gender 25 33	Children
 A7	Life-Stage-And-Gender-Type T69 child
 T70	Eq-Value 42 43	6
@@ -149,10 +131,10 @@ T72	Eq-Value 44 46	12
 T73	Eq-Temporal-Unit 47 52	years
 A9	Eq-Temporal-Unit-Value T73 year
 T74	Procedure-Name 94 104	injections
-T75	Drug-Name 108 111	Hep
+T75	Drug-Name 108 113	Hep B
 T76	Eq-Value 171 172	1
 T77	Eq-Value 177 178	6
-T78	Drug-Name 230 249	HBV booster vaccine
+T78	Immunization-Name 230 249	HBV booster vaccine
 T79	Life-Stage-And-Gender 292 300	Children
 A10	Life-Stage-And-Gender-Type T79 child
 T80	Observation-Specimen 376 381	blood
@@ -162,13 +144,9 @@ T82	Severity 562 569	serious
 A12	Severity-Value T82 severe
 T83	Condition-Name 597 623	immune impairment diseases
 T84	Condition-Name 635 652	immune impairment
-T85	Drug-Name 659 676	Immunosuppressive
-T86	Procedure-Name 700 709	injection
-T87	Drug-Name 713 732	oral administration
 T88	Drug-Name 736 745	cortisone
 T89	Condition-Name 749 755	cancer
 T90	Procedure-Name 756 768	chemotherapy
-T91	Condition-Name 836 846	vaccinated
 T92	Eq-Temporal-Period 854 858	past
 A13	Eq-Temporal-Period-Value T92 past
 T93	Eq-Value 859 863	four
@@ -194,7 +172,7 @@ T106	Eq-Operator 1050 1051	≥
 A20	Eq-Operator-Value T106 GTEQ
 T107	Eq-Value 1052 1054	38
 T108	Eq-Unit 1055 1056	℃
-T109	Condition-Name 1064 1081	Blood transfusion
+T109	Procedure-Name 1064 1081	Blood transfusion
 T110	Eq-Temporal-Period 1105 1112	history
 A21	Eq-Temporal-Period-Value T110 past
 T111	Severity 1121 1128	serious
@@ -204,6 +182,63 @@ T113	Condition-Name 1165 1174	hepatitis
 T114	Condition-Name 1176 1180	AIDS
 T115	Condition-Name 1182 1190	syphilis
 T116	Condition-Name 1192 1201	gonorrhea
-T117	Condition-Name 1216 1237	Hepatitis B infection
-T118	Condition-Name 1241 1269	carriers(lineal relationship
+T117	Condition-Name 1216 1227	Hepatitis B
 T119	Procedure-Name 1286 1306	physical examination
+T120	Age 53 56	old
+E69	Age:T120 Eq-Comparison:E1
+T121	Location 60 69	Chongqing
+A23	Location-Value T121 residence
+T122	Eq-Value 88 93	three
+R1	Using Arg1:E5 Arg2:E6	
+T7	Eq-Value 168 169	0
+T8	Eq-Temporal-Unit 179 185	months
+A24	Eq-Temporal-Unit-Value T8 month
+A25	Temporal-Connection-Type-Value E12 after
+T123	Immunization-Name 270 286	HBV immunization
+T124	Modifier 262 269	primary
+E7	Modifier:T124 Modifies:T123
+T125	Family-Member 304 312	guardian
+E8	Family-Member:T125 
+A26	Family-Member-Type E8 parent
+T126	Encounter 354 365	Follow - up
+E70	Encounter:T126 
+T127	Observation 376 392	blood collection
+E71	Observation:T127 Specimen:T80
+T128	And 372 375	and
+E72	And:T128 Arg:E70 Arg2:E71
+T129	Immunization 399 410	vaccination
+E73	Immunization:T129 
+T22	Immunization 570 577	vaccine
+E22	Immunization:T22 
+T130	Condition-Name 578 586	reaction
+T131	Condition 578 586	reaction
+E74	Condition:T131 Name:T130 Severity:T82
+R2	Caused-By Arg1:E74 Arg2:E22	
+A27	Assertion-Type-Value E25 possible
+T27	Procedure-Name 659 686	Immunosuppressive treatment
+R3	Treatment-For Arg1:E36 Arg2:E35	
+R4	Example-Of Arg1:E33 Arg2:E28	
+R5	Example-Of Arg1:E36 Arg2:E28	
+R6	Using Arg1:E41 Arg2:E37	
+R7	Using Arg1:E41 Arg2:E40	
+R8	Using Arg1:E51 Arg2:E48	
+R9	Using Arg1:E51 Arg2:E50	
+R10	Treatment-For Arg1:E51 Arg2:E43	
+R11	Treatment-For Arg1:E51 Arg2:E46	
+T29	Observation-Name 1038 1049	temperature
+A4	Observation-Type-Value T29 vital
+T47	Modifier 1029 1037	axillary
+E27	Modifier:T47 Modifies:T29
+R12	Equivalent-To Arg1:E56 Arg2:E53	
+T85	Procedure 1064 1081	Blood transfusion
+E29	Procedure:T85 Name:T109
+R13	Example-Of Arg1:E61 Arg2:E59	
+R14	Example-Of Arg1:E62 Arg2:E59	
+R15	Example-Of Arg1:E63 Arg2:E59	
+R16	Example-Of Arg1:E64 Arg2:E59	
+T60	Modifier 1228 1237	infection
+E47	Modifier:T60 Modifies:T117
+T67	Modifier 1241 1249	carriers
+E60	Modifier:T67 Modifies:T117
+T86	Polarity 1277 1285	Abnormal
+A5	Polarity-Value T86 abnormal

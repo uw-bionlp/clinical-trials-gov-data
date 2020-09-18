@@ -3,48 +3,48 @@ E1	Condition:T1 Name:T76
 T2	Eq-Comparison 53 61	received
 E2	Eq-Comparison:T2 Temporal-Period:T77
 T3	Eq-Comparison 68 73	first
-E3	Eq-Comparison:T3
+E3	Eq-Comparison:T3 
 T4	Condition 74 77	PTA
-E4	Condition:T4
+E4	Condition:T4 
 T5	Or 79 81	or
-E5	Or:T5
+E5	Or:T5 
 T6	Modifier 82 88	second
-E6	Modifier:T6
+E6	Modifier:T6 
 T7	Condition 89 92	PTA
-E7	Condition:T7
+E7	Condition:T7 
 T8	Eq-Comparison 107 112	first
-E8	Eq-Comparison:T8
+E8	Eq-Comparison:T8 
 T9	Procedure 113 118	graft
-E9	Procedure:T9
+E9	Procedure:T9 
 T10	Eq-Comparison 133 146	within a week
 E10	Eq-Comparison:T10 Operator:T78 Temporal-Unit:T79
 T11	Eq-Comparison 148 191	between 2 January 2005 and 31 December 2017
 E11	Eq-Comparison:T11 Operator:T80 Value:T81 Value:T82 Value:T83
 T12	Age 197 200	age
-E12	Age:T12
+E12	Age:T12 
 T13	Eq-Comparison 201 204	≥18
 E13	Eq-Comparison:T13 Operator:T84
 T14	And 205 208	and
-E14	And:T14
+E14	And:T14 
 T15	Eq-Comparison 209 219	< 65 years
 E15	Eq-Comparison:T15 Operator:T85 Value:T86 Temporal-Unit:T87
 T16	Condition 320 335	Type 1 diabetes
 E16	Condition:T16 Name:T88
 T17	Age 341 344	age
-E17	Age:T17
+E17	Age:T17 
 T18	Eq-Comparison 345 354	≥18 years
 E18	Eq-Comparison:T18 Operator:T89 Temporal-Unit:T90
 T19	And 355 358	and
-E19	And:T19
+E19	And:T19 
 T20	Eq-Comparison 359 369	< 65 years
 E20	Eq-Comparison:T20 Operator:T91 Value:T92 Temporal-Unit:T93
 T21	Assertion 375 389	willingness to
-E21	Assertion:T21
+E21	Assertion:T21 
 A1	Assertion-Type-Value E21 hypothetical
 T22	Study 424 429	study
-E22	Study:T22
+E22	Study:T22 
 T23	Observation 435 450	minimum disease
-E23	Observation:T23
+E23	Observation:T23 
 T24	Eq-Comparison 451 470	duration of 5 years
 E24	Eq-Comparison:T24 Value:T95 Temporal-Unit:T96
 T25	Condition 476 492	brittle diabetes
@@ -54,13 +54,13 @@ E26	Condition:T26 Name:T100
 T27	Condition 556 568	ketoacidosis
 E27	Condition:T27 Name:T101
 T28	Or 569 571	or
-E28	Or:T28
+E28	Or:T28 
 T29	Condition 579 592	hypoglycaemic
 E29	Condition:T29 Name:T103
 T30	Modifier 612 633	third-part assistance
-E30	Modifier:T30
+E30	Modifier:T30 
 T31	Or 634 636	or
-E31	Or:T31
+E31	Or:T31 
 T32	Procedure 682 697	insulin therapy
 E32	Procedure:T32 Name:T104
 T33	Eq-Comparison 716 728	at least one
@@ -76,15 +76,15 @@ E37	Condition:T37 Name:T110
 T38	Condition 792 815	subclinical nephropathy
 E38	Condition:T38 Name:T111
 T39	Condition 856 866	conditions
-E39	Condition:T39
+E39	Condition:T39 
 T40	Exception 867 877	other than
-E40	Exception:T40
+E40	Exception:T40 
 T41	Condition 878 881	T1D
 E41	Condition:T41 Name:T112
 T42	Condition 898 909	bone health
 E42	Condition:T42 Name:T114
 T43	Modifier 917 932	non-compensated
-E43	Modifier:T43
+E43	Modifier:T43 
 T44	Condition 933 947	hypothyroidism
 E44	Condition:T44 Name:T115
 T45	Condition 949 964	hyperthyroidism
@@ -100,7 +100,7 @@ E49	Condition:T49 Name:T120
 T50	Condition 1049 1061	hypogonadism
 E50	Condition:T50 Name:T121
 T51	Modifier 1070 1077	chronic
-E51	Modifier:T51
+E51	Modifier:T51 
 T52	Condition 1078 1107	obstructive pulmonary disease
 E52	Condition:T52 Name:T123
 T53	Condition 1109 1130	hepatic insufficiency
@@ -110,9 +110,9 @@ E54	Observation:T54 Name:T125
 T55	Eq-Comparison 1147 1160	≥ 3 units/day
 E55	Eq-Comparison:T55 Operator:T126 Value:T127 Unit:T128 Temporal-Unit:T129
 T56	Drug 1176 1181	drugs
-E56	Drug:T56
+E56	Drug:T56 
 T57	Assertion 1187 1190	can
-E57	Assertion:T57
+E57	Assertion:T57 
 A2	Assertion-Type-Value E57 hypothetical
 T58	Condition 1198 1213	bone metabolism
 E58	Condition:T58 Name:T132
@@ -123,11 +123,11 @@ E60	Drug:T60 Name:T134
 T61	Procedure 1255 1282	hormone replacement therapy
 E61	Procedure:T61 Name:T135
 T62	Exception 1284 1294	other than
-E62	Exception:T62
+E62	Exception:T62 
 T63	Drug 1295 1310	glucocorticoids
 E63	Drug:T63 Name:T136
 T64	Or 1311 1314	and
-E64	Or:T64
+E64	Or:T64 
 T65	Drug 1315 1333	immunosuppressants
 E65	Drug:T65 Name:T137
 T66	Procedure 1366 1397	pancreas kidney transplantation
@@ -135,11 +135,11 @@ E66	Procedure:T66 Name:T138
 T67	Procedure 1399 1431	pancreatic islet transplantation
 E67	Procedure:T67 Name:T139
 T68	Modifier 1433 1441	multiple
-E68	Modifier:T68
+E68	Modifier:T68 
 T69	Condition 1442 1446	PTAs
 E69	Condition:T69 Name:T140
 T70	Other 1448 1453	other
-E70	Other:T70
+E70	Other:T70 
 T71	Procedure 1454 1465	transplants
 E71	Procedure:T71 Name:T141
 T72	Observation 1471 1474	BMI
@@ -147,7 +147,7 @@ E72	Observation:T72 Name:T142
 T73	Eq-Comparison 1475 1480	<18.5
 E73	Eq-Comparison:T73 Operator:T143 Value:T144
 T74	Or 1481 1483	or
-E74	Or:T74
+E74	Or:T74 
 T75	Eq-Comparison 1484 1494	≥ 30 kg/m2
 E75	Eq-Comparison:T75 Operator:T145 Value:T146 Unit:T147 Unit:T148
 T76	Condition-Name 36 39	T1D

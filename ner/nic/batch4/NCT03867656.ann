@@ -1,41 +1,39 @@
 T1	Age 35 38	Age
-E1	Age:T1
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 39 53	25 to 65 years
 E2	Eq-Comparison:T2 Value:T27 Operator:T28 Value:T29 Temporal-Unit:T30
-T3	Age 54 57	old
-E3	Age:T3
-T4	Condition 64 79	Type 2 diabetes
+T4	Condition 71 79	diabetes
 E4	Condition:T4 Name:T31
 T5	Drug 89 98	Metformin
 E5	Drug:T5 Name:T32
 T6	Or 99 101	or
-E6	Or:T6
+E6	Or:T6 Arg:E5 Arg2:E7
 T7	Drug 102 115	sulfonylureas
 E7	Drug:T7 Name:T33
 T8	Procedure 141 150	Treatment
-E8	Procedure:T8
+E8	Procedure:T8 
 T9	Other 156 161	other
-E9	Other:T9
+E9	Other:T9 Is-Other:E10
 T10	Drug 162 175	antidiabetics
 E10	Drug:T10 Name:T34
 T11	Condition 181 193	Osteopososis
-E11	Condition:T11
+E11	Condition:T11 Name:T48
 T12	Or 194 196	or
-E12	Or:T12
+E12	Or:T12 Arg:E11 Arg2:E14
 T13	Modifier 197 213	gastrointestinal
-E13	Modifier:T13
+E13	Modifier:T13 Modifies:T35
 T14	Condition 214 221	disease
 E14	Condition:T14 Name:T35
 T15	Condition 227 234	Smoking
 E15	Condition:T15 Name:T36
 T16	Modifier 240 249	Long term
-E16	Modifier:T16
+E16	Modifier:T16 Modifies:E18
 T17	Drug 250 257	steroid
 E17	Drug:T17 Name:T37
 T18	Procedure 258 267	treatment
-E18	Procedure:T18
-T19	Condition 273 286	Weight change
-E19	Condition:T19
+E18	Procedure:T18 
+T19	Observation 273 279	Weight
+E19	Observation:T19 Name:T38 Stability:T49 Eq-Comparison:E20 Temporality:E21
 T20	Eq-Comparison 287 301	more than 3 kg
 E20	Eq-Comparison:T20 Operator:T39 Value:T40 Unit:T41
 T21	Eq-Comparison 302 326	within the last 3 months
@@ -43,9 +41,9 @@ E21	Eq-Comparison:T21 Operator:T42 Temporal-Period:T43 Value:T44 Temporal-Unit:T
 T22	Condition 333 343	Overweight
 E22	Condition:T22 Name:T46
 T23	Or 344 346	or
-E23	Or:T23
+E23	Or:T23 Arg:E22 Arg2:E25
 T24	Modifier 347 357	intestinal
-E24	Modifier:T24
+E24	Modifier:T24 Modifies:T47
 T25	Procedure 358 365	surgery
 E25	Procedure:T25 Name:T47
 T26	Life-Stage-And-Gender 25 29	Male
@@ -56,15 +54,15 @@ A2	Eq-Operator-Value T28 BETWEEN
 T29	Eq-Value 45 47	65
 T30	Eq-Temporal-Unit 48 53	years
 A3	Eq-Temporal-Unit-Value T30 year
-T31	Condition-Name 64 79	Type 2 diabetes
+T31	Condition-Name 71 79	diabetes
 T32	Drug-Name 89 98	Metformin
 T33	Drug-Name 102 115	sulfonylureas
 T34	Drug-Name 162 175	antidiabetics
 T35	Condition-Name 214 221	disease
 T36	Condition-Name 227 234	Smoking
 T37	Drug-Name 250 257	steroid
-T38	Observation-Name 273 286	Weight change
-A4	Observation-Type-Value T38 social-habit
+T38	Observation-Name 273 279	Weight
+A4	Observation-Type-Value T38 vital
 T39	Eq-Operator 287 296	more than
 A5	Eq-Operator-Value T39 GT
 T40	Eq-Value 297 298	3
@@ -78,3 +76,10 @@ T45	Eq-Temporal-Unit 320 326	months
 A8	Eq-Temporal-Unit-Value T45 month
 T46	Condition-Name 333 343	Overweight
 T47	Procedure-Name 358 365	surgery
+T3	Modifier 64 70	Type 2
+E3	Modifier:T3 Modifies:T31
+R1	Using Arg1:E8 Arg2:E10	
+T48	Condition-Name 181 193	Osteopososis
+R2	Using Arg1:E18 Arg2:E17	
+T49	Stability 280 286	change
+A9	Stability-Value T49 change
