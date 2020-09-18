@@ -1,130 +1,121 @@
 T1	Age 25 28	Age
-E1	Age:T1
+E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 29 32	24-
 E2	Eq-Comparison:T2 Value:T57 Operator:T58
 T3	Eq-Comparison 101 106	Prior
 E3	Eq-Comparison:T3 Temporal-Period:T61
-T4	Procedure 276 305	Montreal Cognitive Assessment
-E4	Procedure:T4
+T4	Observation 266 305	Telephone-Montreal Cognitive Assessment
+E4	Observation:T4 Name:T64
 T5	Observation 307 313	T-MoCA
-E5	Observation:T5 Name:T65
+E5	Observation:T5 Name:T65 Eq-Comparison:E6
 T6	Eq-Comparison 324 327	>20
 E6	Eq-Comparison:T6 Operator:T66 Value:T67
 T7	Criteria-Count 383 412	at least one of the following
-E7	Criteria-Count:T7
+E7	Criteria-Count:T7 Min-Value:E64 Criteria:E8 Criteria2:E9 Criteria3:E10 Criteria4:E12 Criteria5:E13
 T8	Condition 413 435	subjective afflictions
-E8	Condition:T8
+E8	Condition:T8 Name:T114
 T9	Condition 462 488	Cardiovascular Dysfunction
 E9	Condition:T9 Name:T70
 T10	Condition 493 515	Neurocognitive Disease
 E10	Condition:T10 Name:T71
 T11	Modifier 520 527	Chronic
-E11	Modifier:T11
+E11	Modifier:T11 Modifies:T73
 T12	Condition 528 532	Pain
 E12	Condition:T12 Name:T73
 T13	Condition 544 555	Sleep Apnea
 E13	Condition:T13 Name:T74
 T14	Observation 717 723	T-MoCA
-E14	Observation:T14
+E14	Observation:T14 Name:T75 Eq-Comparison:E15
 T15	Eq-Comparison 724 733	score <19
-E15	Eq-Comparison:T15 Operator:T76 Value:T77
+E15	Eq-Comparison:T15 Operator:T76 Value:T77 Unit:T72
 T16	Eq-Comparison 797 802	Prior
 E16	Eq-Comparison:T16 Temporal-Period:T78
 T17	Procedure 803 827	metallic device implants
-E17	Procedure:T17 Name:T79
+E17	Procedure:T17 Name:T79 Temporality:E16
 T18	Procedure 836 854	cardiac pacemakers
 E18	Procedure:T18 Name:T80
 T19	Or 854 855	/
-E19	Or:T19
+E19	Or:T19 Arg:E18 Arg2:E20
 T20	Procedure 855 869	defibrillators
 E20	Procedure:T20 Name:T81
 T21	Or 870 872	or
-E21	Or:T21
+E21	Or:T21 Arg:E20 Arg2:E22
 T22	Procedure 873 888	perfusion pumps
 E22	Procedure:T22 Name:T82
-T23	Assertion 894 897	can
-E23	Assertion:T23
-A1	Assertion-Type-Value E23 hypothetical
-T24	Negation 897 900	not
-E24	Negation:T24
 T25	Procedure 918 940	Ferromagnetic implants
 E25	Procedure:T25 Name:T83
 T26	Or 941 943	or
-E26	Or:T26
+E26	Or:T26 Arg:E25 Arg2:E27
 T27	Procedure 944 951	objects
-E27	Procedure:T27
+E27	Procedure:T27 Name:T118
 T28	Assertion 957 963	cannot
-E28	Assertion:T28
+E28	Assertion:T28 Asserted:E67
 A2	Assertion-Type-Value E28 hypothetical
-T29	Procedure 967 974	removed
-E29	Procedure:T29
+T29	Negation 967 974	removed
+E29	Negation:T29 Negates:E27
 T30	Procedure 983 997	aneurysm clips
 E30	Procedure:T30 Name:T84
 T31	Procedure 999 1013	surgical clips
 E31	Procedure:T31 Name:T85
 T32	Procedure 1015 1025	prostheses
 E32	Procedure:T32 Name:T86
-T33	Modifier 1027 1044	artificial hearts
-E33	Modifier:T33
+T33	Procedure 1027 1044	artificial hearts
+E33	Procedure:T33 Name:T87
 T34	Procedure 1046 1052	valves
-E34	Procedure:T34
+E34	Procedure:T34 Name:T120
 T35	Modifier 1058 1069	steel parts
-E35	Modifier:T35
-T36	Procedure 1071 1086	metal fragments
-E36	Procedure:T36
+E35	Modifier:T35 Modifies:T120
+T36	Condition 1071 1086	metal fragments
+E36	Condition:T36 Name:T89
 T37	Condition 1088 1096	shrapnel
-E37	Condition:T37
+E37	Condition:T37 Name:T88
 T38	Condition 1098 1105	tattoos
-E38	Condition:T38
+E38	Condition:T38 Name:T121
 T39	Modifier 1106 1118	near the eye
-E39	Modifier:T39
+E39	Modifier:T39 Modifies:T121
 T40	Or 1120 1122	or
-E40	Or:T40
-T41	Modifier 1123 1137	steel implants
-E41	Modifier:T41
+E40	Or:T40 Arg:E38 Arg2:E41
+T41	Procedure 1123 1128	steel
+E41	Procedure:T41 Name:T90
 T42	Or 1138 1140	or
-E42	Or:T42
+E42	Or:T42 Arg:E68 Arg2:E43
 T43	Modifier 1141 1148	jewelry
-E43	Modifier:T43
-T44	Procedure 1154 1165	Body weight
-E44	Procedure:T44
+E43	Modifier:T43 Modifies:T90
+T44	Observation 1154 1165	Body weight
+E44	Observation:T44 Name:T91 Eq-Comparison:E45
 T45	Eq-Comparison 1166 1174	>450 lbs
 E45	Eq-Comparison:T45 Operator:T92 Value:T93 Unit:T94
 T46	Negation 1180 1189	Inability
-E46	Negation:T46
-T47	Observation 1206 1224	telephone screener
-E47	Observation:T47 Name:T95
-T48	Observation 1234 1246	T-MoCA score
-E48	Observation:T48
+E46	Negation:T46 Negates:E47
+T47	Procedure 1206 1224	telephone screener
+E47	Procedure:T47 Name:T95
+T48	Observation 1234 1240	T-MoCA
+E48	Observation:T48 Name:T125 Polarity:T124 Eq-Comparison:E49
 T49	Eq-Comparison 1248 1251	<20
 E49	Eq-Comparison:T49 Operator:T97 Value:T98
-T50	Assertion 1300 1303	can
-E50	Assertion:T50
-A3	Assertion-Type-Value E50 hypothetical
 T51	Study 1356 1361	study
-E51	Study:T51
+E51	Study:T51 
 T52	Modifier 1380 1390	behavioral
-E52	Modifier:T52
+E52	Modifier:T52 Modifies:T100
 T53	Or 1391 1393	or
-E53	Or:T53
+E53	Or:T53 Arg:E52 Arg2:E54
 T54	Modifier 1394 1404	functional
-E54	Modifier:T54
+E54	Modifier:T54 Modifies:T100
 T55	Condition 1405 1415	disability
-E55	Condition:T55
+E55	Condition:T55 Name:T100 Severity:T99
 T56	Condition 1423 1443	cognitive impairment
 E56	Condition:T56 Name:T101
 T57	Eq-Value 29 31	24
 T58	Eq-Operator 31 32	-
 A4	Eq-Operator-Value T58 BETWEEN
 T59	Eq-Value 32 34	55
-T60	Observation-Name 60 73	football play
 T61	Eq-Temporal-Period 101 106	Prior
 A5	Eq-Temporal-Period-Value T61 past
 T62	Eq-Temporal-Recency 121 126	first
 A6	Eq-Temporal-Recency-Value T62 first-time
 T63	Observation-Name 127 160	Health and Wellness Questionnaire
 A7	Observation-Type-Value T63 survey-or-questionnaire
-T64	Observation-Name 276 305	Montreal Cognitive Assessment
+T64	Observation-Name 266 305	Telephone-Montreal Cognitive Assessment
 A8	Observation-Type-Value T64 clinical-score
 T65	Observation-Name 307 313	T-MoCA
 T66	Eq-Operator 324 325	>
@@ -135,10 +126,9 @@ A10	Eq-Operator-Value T68 GTEQ
 T69	Eq-Value 392 395	one
 T70	Condition-Name 462 488	Cardiovascular Dysfunction
 T71	Condition-Name 493 515	Neurocognitive Disease
-T72	Eq-Value 517 518	3
 T73	Condition-Name 528 532	Pain
 T74	Condition-Name 544 555	Sleep Apnea
-T75	Observation-Name 717 729	T-MoCA score
+T75	Observation-Name 717 723	T-MoCA
 T76	Eq-Operator 730 731	<
 A11	Eq-Operator-Value T76 LT
 T77	Eq-Value 731 733	19
@@ -153,21 +143,93 @@ T84	Procedure-Name 983 997	aneurysm clips
 T85	Procedure-Name 999 1013	surgical clips
 T86	Procedure-Name 1015 1025	prostheses
 T87	Procedure-Name 1027 1044	artificial hearts
-T88	Condition-Name 1058 1069	steel parts
 T89	Condition-Name 1071 1086	metal fragments
-T90	Procedure-Name 1123 1137	steel implants
+T90	Procedure-Name 1123 1128	steel
 T91	Observation-Name 1154 1165	Body weight
 A13	Observation-Type-Value T91 vital
 T92	Eq-Operator 1166 1167	>
 A14	Eq-Operator-Value T92 GT
 T93	Eq-Value 1167 1170	450
 T94	Eq-Unit 1171 1174	lbs
-T95	Observation-Name 1216 1224	screener
-T96	Observation-Name 1227 1246	- Low T-MoCA score
+T95	Procedure-Name 1206 1224	telephone screener
 T97	Eq-Operator 1248 1249	<
 A15	Eq-Operator-Value T97 LT
 T98	Eq-Value 1249 1251	20
 T99	Severity 1368 1379	Significant
 A16	Severity-Value T99 severe
-T100	Condition-Name 1394 1415	functional disability
+T100	Condition-Name 1405 1415	disability
 T101	Condition-Name 1423 1443	cognitive impairment
+T60	Observation 47 73	professional football play
+E57	Observation:T60 Name:T96 Temporality:E58 Temporality2:E59
+T96	Observation-Name 47 73	professional football play
+A17	Observation-Type-Value T96 social-habit
+T102	Eq-Comparison 79 94	1960 to present
+E58	Eq-Comparison:T102 Value:T103 Temporal-Period:T105 Operator:T104
+T103	Eq-Value 79 83	1960
+T104	Eq-Operator 84 86	to
+A18	Eq-Operator-Value T104 BETWEEN
+T105	Eq-Temporal-Period 87 94	present
+A19	Eq-Temporal-Period-Value T105 present
+T106	Eq-Comparison 40 46	Former
+E59	Eq-Comparison:T106 Temporal-Period:T107
+T107	Eq-Temporal-Period 40 46	Former
+A20	Eq-Temporal-Period-Value T107 past
+T108	Eq-Comparison 121 126	first
+E60	Eq-Comparison:T108 Temporal-Recency:T62
+T109	Observation 127 160	Health and Wellness Questionnaire
+E61	Observation:T109 Name:T63 Temporality:E3 Temporality2:E60
+T110	Observation 162 164	Q1
+E62	Observation:T110 Name:T111
+T111	Observation-Name 162 164	Q1
+R1	Abbrev-Of Arg1:E62 Arg2:E61	
+R2	Abbrev-Of Arg1:E5 Arg2:E4	
+T112	Assertion 191 201	ability to
+E63	Assertion:T112 Asserted:E4
+A21	Assertion-Type-Value E63 hypothetical
+T113	Eq-Comparison 383 395	at least one
+E64	Eq-Comparison:T113 Operator:T68 Value:T69
+T114	Condition-Name 413 435	subjective afflictions
+T115	Observation 445 447	Q1
+E65	Observation:T115 Name:T116
+T116	Observation-Name 445 447	Q1
+R3	Found-By Arg1:E8 Arg2:E65	
+R4	Example-Of Arg1:E9 Arg2:E8	
+R5	Example-Of Arg1:E10 Arg2:E8	
+R6	Example-Of Arg1:E12 Arg2:E8	
+R7	Example-Of Arg1:E13 Arg2:E8	
+T72	Eq-Unit 724 729	score
+R8	Example-Of Arg1:E18 Arg2:E17	
+R9	Example-Of Arg1:E20 Arg2:E17	
+R10	Example-Of Arg1:E22 Arg2:E17	
+T23	Negation 904 911	removed
+E23	Negation:T23 Negates:E22
+T24	Negation 894 900	cannot
+E24	Negation:T24 Negates:E23
+T117	Assertion 894 900	cannot
+E66	Assertion:T117 Asserted:E24
+A1	Assertion-Type-Value E66 hypothetical
+T118	Procedure-Name 944 951	objects
+T119	Negation 957 963	cannot
+E67	Negation:T119 Negates:E29
+R11	Example-Of Arg1:E30 Arg2:E27	
+R12	Example-Of Arg1:E31 Arg2:E27	
+R13	Example-Of Arg1:E32 Arg2:E27	
+R14	Example-Of Arg1:E33 Arg2:E27	
+T120	Procedure-Name 1046 1052	valves
+R15	Example-Of Arg1:E34 Arg2:E27	
+R16	Example-Of Arg1:E36 Arg2:E27	
+T88	Condition-Name 1088 1096	shrapnel
+R17	Example-Of Arg1:E37 Arg2:E27	
+T121	Condition-Name 1098 1105	tattoos
+R18	Example-Of Arg1:E38 Arg2:E27	
+T122	Modifier 1129 1137	implants
+E68	Modifier:T122 Modifies:T90
+R19	Example-Of Arg1:E41 Arg2:E27	
+T123	Assertion 1180 1189	Inability
+E69	Assertion:T123 Asserted:E46
+A22	Assertion-Type-Value E69 hypothetical
+T124	Polarity 1230 1233	Low
+A23	Polarity-Value T124 low
+T125	Observation-Name 1234 1240	T-MoCA
+R20	Equivalent-To Arg1:E49 Arg2:T124	
+R21	Caused-By Arg1:E55 Arg2:E56	

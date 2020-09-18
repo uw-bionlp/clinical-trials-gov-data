@@ -1,114 +1,103 @@
 T1	Condition 35 52	diabetes mellitus
 E1	Condition:T1 Name:T52
 T2	And 53 56	and
-E2	And:T2 
+E2	And:T2 Arg:E1 Arg2:E3
 T3	Procedure 57 66	treatment
 E3	Procedure:T3 
-T4	Condition 76 79	DME
+T4	Condition 73 79	CI-DME
 E4	Condition:T4 Name:T54
 T5	Assertion 80 89	requiring
-E5	Assertion:T5 
+E5	Assertion:T5 Asserted:E6
 A1	Assertion-Type-Value E5 hypothetical
-T6	Procedure 95 107	VEGF therapy
-E6	Procedure:T6 
-T7	Procedure 112 130	retinal specialist
-E7	Procedure:T7 Name:T56
+T6	Procedure 100 107	therapy
+E6	Procedure:T6 Name:T55
 T8	Procedure 143 152	treatment
-E8	Procedure:T8 
+E8	Procedure:T8 Provider:E7
 T9	Study 201 206	study
 E9	Study:T9 
-T10	Condition 211 214	DME
-E10	Condition:T10 
-T11	Assertion 215 222	will be
-E11	Assertion:T11 
-A2	Assertion-Type-Value E11 hypothetical
+T10	Condition 208 214	CI-DME
+E10	Condition:T10 Name:T57
 T12	Observation 236 262	central subfield thickness
 E12	Observation:T12 Name:T58
 T13	Observation 264 267	CST
-E13	Observation:T13 Name:T59
+E13	Observation:T13 Name:T59 Eq-Comparison:E14
 T14	Eq-Comparison 269 282	> 300 microns
 E14	Eq-Comparison:T14 Operator:T60 Value:T61 Unit:T62
 T15	Modifier 286 301	spectral domain
-E15	Modifier:T15 
+E15	Modifier:T15 Modifies:T63
 T16	Procedure 302 330	optical coherence tomography
-E16	Procedure:T16 
-T17	Observation 332 338	SD-OCT
-E17	Observation:T17 Name:T64
+E16	Procedure:T16 Name:T63
+T17	Procedure 332 338	SD-OCT
+E17	Procedure:T17 Name:T64
 T18	Or 340 342	or
-E18	Or:T18 
+E18	Or:T18 Arg:E13 Arg2:E19
 T19	Observation 343 346	CST
-E19	Observation:T19 
+E19	Observation:T19 Name:T11 Eq-Comparison:E20
 T20	Eq-Comparison 347 360	> 250 microns
 E20	Eq-Comparison:T20 Operator:T65 Value:T66 Unit:T67
 T21	And 361 365	with
-E21	And:T21 
+E21	And:T21 Arg:E19 Arg2:E23
 T22	Modifier 375 388	intra-retinal
-E22	Modifier:T22 
+E22	Modifier:T22 Modifies:T68
 T23	Condition 389 414	cystic fluid accumulation
 E23	Condition:T23 Name:T68
 T24	Age 450 453	age
-E24	Age:T24 
+E24	Age:T24 Eq-Comparison:E25
 T25	Eq-Comparison 454 464	> 18 years
 E25	Eq-Comparison:T25 Operator:T69 Value:T70 Temporal-Unit:T71
 T26	Age 529 532	Age
-E26	Age:T26 
+E26	Age:T26 Eq-Comparison:E27
 T27	Eq-Comparison 533 543	< 18 years
 E27	Eq-Comparison:T27 Operator:T72 Value:T73 Temporal-Unit:T74
 T28	Condition 593 627	proliferative diabetic retinopathy
 E28	Condition:T28 Name:T75
 T29	Other 641 646	other
-E29	Other:T29 
+E29	Other:T29 Is-Other:E30
 T30	Condition 655 669	ocular disease
-E30	Condition:T30 Name:T77
-T31	Age 671 674	age
-E31	Age:T31 
+E30	Condition:T30 Name:T77 Severity:T76
 T32	Condition 683 703	macular degeneration
 E32	Condition:T32 Name:T78
 T33	Condition 705 713	glaucoma
 E33	Condition:T33 Name:T79
 T34	Condition 727 740	media opacity
-E34	Condition:T34 Name:T81
+E34	Condition:T34 Name:T81 Severity:T80
 T35	Eq-Comparison 743 762	history of previous
-E35	Eq-Comparison:T35 Temporal-Period:T82 Temporal-Period:T83
+E35	Eq-Comparison:T35 Temporal-Period:T82
 T36	Procedure 763 782	intraocular surgery
-E36	Procedure:T36 Name:T84
+E36	Procedure:T36 Name:T84 Temporality:E35
 T37	Modifier 794 801	macular
-E37	Modifier:T37 
+E37	Modifier:T37 Modifies:T86
 T38	Or 802 804	or
-E38	Or:T38 
+E38	Or:T38 Arg:E37 Arg2:E39
 T39	Modifier 805 815	panretinal
-E39	Modifier:T39 
+E39	Modifier:T39 Modifies:T86
 T40	Procedure 816 832	photocoagulation
 E40	Procedure:T40 Name:T86
 T41	Exception 834 840	except
-E41	Exception:T41 
-T42	Procedure 841 863	uncomplicated cataract
-E42	Procedure:T42 
+E41	Exception:T41 From:E40 Except:E45
 T43	Or 864 866	or
-E43	Or:T43 
+E43	Or:T43 Arg:E31 Arg2:E44
 T44	Modifier 867 883	keratorefractive
-E44	Modifier:T44 
+E44	Modifier:T44 Modifies:T88
 T45	Procedure 884 891	surgery
-E45	Procedure:T45 Name:T88
+E45	Procedure:T45 Name:T88 Temporality:E46
 T46	Eq-Comparison 892 910	more than 6 months
 E46	Eq-Comparison:T46 Operator:T89 Value:T90 Temporal-Unit:T91
 T47	Temporal-Connection 911 919	prior to
-E47	Temporal-Connection:T47 
+E47	Temporal-Connection:T47 Arg:E46 Arg2:E48
 A3	Temporal-Connection-Type-Value E47 before
 T48	Study 920 930	enrollment
 E48	Study:T48 
 T49	Condition 933 941	pregnant
 E49	Condition:T49 Name:T92
 T50	Or 942 945	and
-E50	Or:T50 
+E50	Or:T50 Arg:E49 Arg2:E51
 T51	Condition 946 953	nursing
 E51	Condition:T51 Name:T93
 T52	Condition-Name 35 52	diabetes mellitus
-T53	Procedure-Name 67 75	naïve CI
-T54	Condition-Name 76 79	DME
-T55	Procedure-Name 90 107	anti-VEGF therapy
-T56	Procedure-Name 112 130	retinal specialist
-T57	Procedure-Name 211 214	DME
+T54	Condition-Name 73 79	CI-DME
+T55	Procedure-Name 100 107	therapy
+T57	Condition-Name 208 214	CI-DME
 T58	Observation-Name 236 262	central subfield thickness
 A4	Observation-Type-Value T58 measurement
 T59	Observation-Name 264 267	CST
@@ -116,9 +105,8 @@ T60	Eq-Operator 269 270	>
 A5	Eq-Operator-Value T60 GT
 T61	Eq-Value 271 274	300
 T62	Eq-Unit 275 282	microns
-T63	Procedure-Name 286 330	spectral domain optical coherence tomography
-T64	Observation-Name 335 338	OCT
-A6	Observation-Type-Value T64 measurement
+T63	Procedure-Name 302 330	optical coherence tomography
+T64	Procedure-Name 332 338	SD-OCT
 T65	Eq-Operator 347 348	>
 A7	Eq-Operator-Value T65 GT
 T66	Eq-Value 349 352	250
@@ -143,14 +131,10 @@ T79	Condition-Name 705 713	glaucoma
 T80	Severity 715 726	significant
 A13	Severity-Value T80 severe
 T81	Condition-Name 727 740	media opacity
-T82	Eq-Temporal-Period 743 750	history
+T82	Eq-Temporal-Period 743 762	history of previous
 A14	Eq-Temporal-Period-Value T82 past
-T83	Eq-Temporal-Period 754 762	previous
-A15	Eq-Temporal-Period-Value T83 past
 T84	Procedure-Name 763 782	intraocular surgery
-T85	Condition-Name 794 801	macular
 T86	Procedure-Name 816 832	photocoagulation
-T87	Condition-Name 841 863	uncomplicated cataract
 T88	Procedure-Name 884 891	surgery
 T89	Eq-Operator 892 901	more than
 A16	Eq-Operator-Value T89 GT
@@ -161,3 +145,34 @@ T92	Condition-Name 933 941	pregnant
 T93	Condition-Name 946 953	nursing
 T94	Life-Stage-And-Gender 954 959	women
 A18	Life-Stage-And-Gender-Type T94 female
+T53	Negation 67 72	naïve
+E52	Negation:T53 Negates:E3
+R1	Treatment-For Arg1:E3 Arg2:E1	
+T95	Condition 95 99	VEGF
+E53	Condition:T95 Name:T96
+T96	Condition-Name 95 99	VEGF
+R2	Treatment-For Arg1:E6 Arg2:E53	
+T7	Provider 112 130	retinal specialist
+E7	Provider:T7 Type:T56
+T56	Provider-Type 112 130	retinal specialist
+R3	Using Arg1:E8 Arg2:E6	
+R4	Abbrev-Of Arg1:E13 Arg2:E12	
+R5	Equivalent-To Arg1:E12 Arg2:E10	
+R6	Found-By Arg1:E13 Arg2:E16	
+R7	Abbrev-Of Arg1:E17 Arg2:E16	
+T11	Observation-Name 343 346	CST
+T31	Modifier 671 682	age-related
+E11	Modifier:T31 Modifies:T78
+R8	Example-Of Arg1:E32 Arg2:E30	
+R9	Example-Of Arg1:E33 Arg2:E30	
+R10	Example-Of Arg1:E34 Arg2:E30	
+R11	Example-Of Arg1:E40 Arg2:E36	
+T42	Modifier 841 863	uncomplicated cataract
+E31	Modifier:T42 Modifies:T88
+R12	If-Then Arg1:E51 Arg2:T94	
+T83	Condition 967 978	sensitivity
+E42	Condition:T83 Name:T85
+T85	Condition-Name 967 978	sensitivity
+T87	Drug 993 1015	supplement ingredients
+E54	Drug:T87 
+R13	Caused-By Arg1:E42 Arg2:E54	
