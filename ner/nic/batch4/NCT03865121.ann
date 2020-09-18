@@ -1,95 +1,118 @@
 T1	Eq-Comparison 34 47	over 60 years
 E1	Eq-Comparison:T1 Operator:T33 Value:T34 Temporal-Unit:T35
 T2	Age 51 54	age
-E2	Age:T2
+E2	Age:T2 Eq-Comparison:E1
 T3	And 55 59	with
-E3	And:T3
+E3	And:T3 Arg:E2 Arg2:E4
 T4	Condition 84 103	Parkinson's disease
 E4	Condition:T4 Name:T36
 T5	Eq-Comparison 131 134	2-3
-E5	Eq-Comparison:T5
-T6	Condition 138 143	Hoehn
-E6	Condition:T6
-T7	Or 144 147	and
-E7	Or:T7
-T8	Condition 148 152	Yahr
-E8	Condition:T8 Name:T37
+E5	Eq-Comparison:T5 Value:T54 Operator:T55 Value2:T56
 T9	Negation 158 161	Not
-E9	Negation:T9
+E9	Negation:T9 Negates:E10
 T10	Condition 162 180	exposed to tobacco
 E10	Condition:T10 Name:T38
 T11	Temporal-Connection 181 187	during
-E11	Temporal-Connection:T11
+E11	Temporal-Connection:T11 Arg:E10 Arg2:E7
 A1	Temporal-Connection-Type-Value E11 during
-T12	Modifier 192 211	stage of their life
-E12	Modifier:T12
 T13	Negation 217 219	No
-E13	Negation:T13
+E13	Negation:T13 Negates:E15
 T14	Eq-Comparison 220 227	history
 E14	Eq-Comparison:T14 Temporal-Period:T40
 T15	Condition 231 244	lung diseases
-E15	Condition:T15 Name:T41
+E15	Condition:T15 Name:T41 Temporality:E14
 T16	Negation 250 252	No
-E16	Negation:T16
-T17	Condition 253 277	laboratory abnormalities
-E17	Condition:T17 Name:T42
+E16	Negation:T16 Negates:E8
 T18	Negation 283 285	No
-E18	Negation:T18
+E18	Negation:T18 Negates:E12
 T19	Eq-Comparison 286 293	history
 E19	Eq-Comparison:T19 Temporal-Period:T43
 T20	Drug 318 326	nicotine
 E20	Drug:T20 Name:T44
 T21	Assertion 332 339	Able to
-E21	Assertion:T21
+E21	Assertion:T21 Asserted:E22
 A2	Assertion-Type-Value E21 hypothetical
-T22	Condition 344 364	nicotine nasal spray
-E22	Condition:T22
+T22	Drug 344 364	nicotine nasal spray
+E22	Drug:T22 Name:T45
 T23	Assertion 395 402	able to
-E23	Assertion:T23
+E23	Assertion:T23 Asserted:E17
 A3	Assertion-Type-Value E23 hypothetical
 T24	Eq-Comparison 431 444	Under current
 E24	Eq-Comparison:T24 Temporal-Period:T46
 T25	Procedure 445 454	treatment
-E25	Procedure:T25
+E25	Procedure:T25 Temporality:E24
 T26	Drug 460 468	levodopa
-E26	Drug:T26 Name:T47
+E26	Drug:T26 Name:T47 Stability:T48
 T27	Negation 491 494	Not
-E27	Negation:T27
+E27	Negation:T27 Negates:E34
 T28	Eq-Comparison 495 514	currently receiving
-E28	Eq-Comparison:T28 Temporal-Period:T49 Temporal-Period:T50
+E28	Eq-Comparison:T28 Temporal-Period:T49
 T29	Drug 517 544	monoamine oxidase inhibitor
 E29	Drug:T29 Name:T51
 T30	Negation 579 585	Unable
-E30	Negation:T30
-T31	Condition 622 643	Drug adverse reaction
+E30	Negation:T30 Negates:E35
+T31	Condition 627 643	adverse reaction
 E31	Condition:T31 Name:T52
-T32	Condition 649 654	Death
-E32	Condition:T32
+T32	Death 649 654	Death
+E32	Death:T32 
 T33	Eq-Operator 34 38	over
 A4	Eq-Operator-Value T33 GT
 T34	Eq-Value 39 41	60
 T35	Eq-Temporal-Unit 42 47	years
 A5	Eq-Temporal-Unit-Value T35 year
 T36	Condition-Name 84 103	Parkinson's disease
-T37	Condition-Name 148 152	Yahr
 T38	Condition-Name 162 180	exposed to tobacco
-T39	Observation-Name 192 211	stage of their life
 T40	Eq-Temporal-Period 220 227	history
 A6	Eq-Temporal-Period-Value T40 past
 T41	Condition-Name 231 244	lung diseases
-T42	Condition-Name 253 277	laboratory abnormalities
+T42	Observation-Name 253 263	laboratory
 T43	Eq-Temporal-Period 286 293	history
 A7	Eq-Temporal-Period-Value T43 past
 T44	Drug-Name 318 326	nicotine
 T45	Drug-Name 344 364	nicotine nasal spray
-T46	Eq-Temporal-Period 437 444	current
+T46	Eq-Temporal-Period 431 444	Under current
 A8	Eq-Temporal-Period-Value T46 present
 T47	Drug-Name 460 468	levodopa
 T48	Stability 474 480	stable
 A9	Stability-Value T48 stable
-T49	Eq-Temporal-Period 495 504	currently
+T49	Eq-Temporal-Period 495 514	currently receiving
 A10	Eq-Temporal-Period-Value T49 present
-T50	Eq-Temporal-Period 505 514	receiving
-A11	Eq-Temporal-Period-Value T50 present
 T51	Drug-Name 517 544	monoamine oxidase inhibitor
-T52	Condition-Name 622 643	Drug adverse reaction
+T52	Condition-Name 627 643	adverse reaction
+T53	Coreference 119 130	the disease
+E33	Coreference:T53 Refers-To:E4 Stage:E5
+T54	Eq-Value 131 132	2
+T55	Eq-Operator 132 133	-
+A12	Eq-Operator-Value T55 BETWEEN
+T56	Eq-Value 133 134	3
+T6	Modifier 138 152	Hoehn and Yahr
+E6	Modifier:T6 Modifies:E33
+T7	Eq-Comparison 188 211	any stage of their life
+E7	Eq-Comparison:T7 Temporal-Period:T8
+T8	Eq-Temporal-Period 188 211	any stage of their life
+A13	Eq-Temporal-Period-Value T8 anytime
+A14	Observation-Type-Value T42 lab
+T12	Observation 253 263	laboratory
+E8	Observation:T12 Name:T42 Polarity:T17
+T17	Polarity 264 277	abnormalities
+A15	Polarity-Value T17 abnormal
+T37	Condition 297 314	adverse reactions
+E12	Condition:T37 Name:T39 Temporality:E19
+T39	Condition-Name 297 314	adverse reactions
+R1	Caused-By Arg1:E12 Arg2:E20	
+T57	Location 383 394	Mexico City
+A16	Location-Value T57 residence
+T58	Study 414 425	evaluations
+E17	Study:T58 
+R2	Using Arg1:E25 Arg2:E26	
+T50	Procedure 545 554	treatment
+E34	Procedure:T50 Temporality:E28
+R3	Using Arg1:E34 Arg2:E29	
+T59	Encounter 598 607	follow-up
+E35	Encounter:T59 
+T60	Assertion 579 585	Unable
+E36	Assertion:T60 Asserted:E30
+A11	Assertion-Type-Value E36 hypothetical
+T61	Drug 622 626	Drug
+E37	Drug:T61 
+R4	Caused-By Arg1:E31 Arg2:E37	

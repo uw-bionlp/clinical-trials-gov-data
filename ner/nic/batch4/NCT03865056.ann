@@ -1,91 +1,84 @@
 T1	Condition 25 34	Hypoxemia
 E1	Condition:T1 Name:T40
-T2	Observation 61 77	partial pressure
-E2	Observation:T2
-T3	Observation 81 96	arterial oxygen
-E3	Observation:T3
-T4	Procedure 116 131	inspired oxygen
-E4	Procedure:T4
+T2	Observation 61 131	partial pressure of arterial oxygen to the fraction of inspired oxygen
+E2	Observation:T2 Name:T3
 T5	Observation 133 142	PaO2:FiO2
-E5	Observation:T5 Name:T42
+E5	Observation:T5 Name:T42 Eq-Comparison:E6
 T6	Eq-Comparison 144 149	≤ 300
 E6	Eq-Comparison:T6 Operator:T43 Value:T44
 T7	Observation 171 187	breathing oxygen
-E7	Observation:T7
-T8	Observation 196 199	NHF
-E8	Observation:T8 Name:T46
+E7	Observation:T7 Name:T45
+T8	Procedure 196 199	NHF
+E8	Procedure:T8 Name:T46 Duration:E9
 T9	Eq-Comparison 204 223	at least 15 minutes
 E9	Eq-Comparison:T9 Operator:T47 Value:T48 Temporal-Unit:T49
 T10	Observation 230 246	Respiratory rate
-E10	Observation:T10 Name:T50
+E10	Observation:T10 Name:T50 Eq-Comparison:E11
 T11	Eq-Comparison 247 266	> 25 breaths/minute
-E11	Eq-Comparison:T11 Operator:T51 Value:T52 Temporal-Unit:T54
-T12	Observation 281 316	pressure of arterial carbon dioxide
-E12	Observation:T12
+E11	Eq-Comparison:T11 Operator:T51 Value:T52 Per:T54
+T12	Observation 273 316	Partial pressure of arterial carbon dioxide
+E12	Observation:T12 Name:T55
 T13	Observation 318 323	PaCO2
-E13	Observation:T13 Name:T56
+E13	Observation:T13 Name:T56 Eq-Comparison:E14
 T14	Eq-Comparison 325 334	≤ 45 mmHg
 E14	Eq-Comparison:T14 Operator:T57 Value:T58 Unit:T59
 T15	Negation 341 348	Absence
-E15	Negation:T15
+E15	Negation:T15 Negates:E18
 T16	Eq-Comparison 361 368	history
 E16	Eq-Comparison:T16 Temporal-Period:T60
 T17	Modifier 383 390	chronic
-E17	Modifier:T17
+E17	Modifier:T17 Modifies:T61
 T18	Condition 391 410	respiratory failure
-E18	Condition:T18 Name:T61
+E18	Condition:T18 Name:T61 Temporality:E16
 T19	Age 459 462	Age
-E19	Age:T19
+E19	Age:T19 Eq-Comparison:E20
 T20	Eq-Comparison 463 473	< 18 years
 E20	Eq-Comparison:T20 Operator:T62 Value:T63 Temporal-Unit:T64
 T21	Modifier 480 488	Invasive
-E21	Modifier:T21
+E21	Modifier:T21 Modifies:T65
 T22	Procedure 489 511	mechanical ventilation
-E22	Procedure:T22 Name:T65
+E22	Procedure:T22 Name:T65 Duration:E23
 T23	Eq-Comparison 516 526	> 48 hours
 E23	Eq-Comparison:T23 Operator:T66 Value:T67 Temporal-Unit:T68
 T24	Encounter 548 557	admission
-E24	Encounter:T24
+E24	Encounter:T24 Location:T69
 T25	Assertion 573 581	need for
-E25	Assertion:T25
+E25	Assertion:T25 Asserted:E26
 A1	Assertion-Type-Value E25 hypothetical
 T26	Procedure 582 592	intubation
 E26	Procedure:T26 Name:T71
 T27	Eq-Comparison 599 607	Previous
 E27	Eq-Comparison:T27 Temporal-Period:T72
 T28	Study 633 638	study
-E28	Study:T28
+E28	Study:T28 Temporality:E27
 T29	Observation 645 671	Systolic arterial pressure
-E29	Observation:T29 Name:T73
+E29	Observation:T29 Name:T73 Eq-Comparison:E30
 T30	Eq-Comparison 672 681	< 90 mmHg
 E30	Eq-Comparison:T30 Operator:T74 Value:T75 Unit:T76
 T31	Temporal-Connection 682 687	after
-E31	Temporal-Connection:T31
+E31	Temporal-Connection:T31 Arg:E29 Arg2:E32
 A2	Temporal-Connection-Type-Value E31 after
 T32	Procedure 696 709	fluid therapy
 E32	Procedure:T32 Name:T77
 T33	Condition 716 743	Cardiogenic pulmonary edema
 E33	Condition:T33 Name:T78
 T34	Observation 750 768	Glasgow Coma Scale
-E34	Observation:T34 Name:T79
+E34	Observation:T34 Name:T79 Eq-Comparison:E35
 T35	Eq-Comparison 769 773	< 12
 E35	Eq-Comparison:T35 Operator:T80 Value:T81
-T36	Condition 780 794	Imminent death
-E36	Condition:T36
 T37	Contraindication 801 818	Contraindications
-E37	Contraindication:T37
+E37	Contraindication:T37 Contraindicates:E38
 T38	Procedure 822 845	noninvasive ventilation
 E38	Procedure:T38 Name:T82
 T39	Procedure 852 864	Tracheostomy
 E39	Procedure:T39 Name:T83
 T40	Condition-Name 25 34	Hypoxemia
-T41	Procedure-Name 81 96	arterial oxygen
 T42	Observation-Name 133 142	PaO2:FiO2
 T43	Eq-Operator 144 145	≤
 A3	Eq-Operator-Value T43 LTEQ
 T44	Eq-Value 146 149	300
-T45	Procedure-Name 171 187	breathing oxygen
-T46	Observation-Name 196 199	NHF
+T45	Observation-Name 171 187	breathing oxygen
+T46	Procedure-Name 196 199	NHF
 T47	Eq-Operator 204 212	at least
 A4	Eq-Operator-Value T47 GTEQ
 T48	Eq-Value 213 215	15
@@ -129,7 +122,7 @@ T71	Procedure-Name 582 592	intubation
 T72	Eq-Temporal-Period 599 607	Previous
 A19	Eq-Temporal-Period-Value T72 past
 T73	Observation-Name 645 671	Systolic arterial pressure
-A20	Observation-Type-Value T73 measurement
+A20	Observation-Type-Value T73 vital
 T74	Eq-Operator 672 673	<
 A21	Eq-Operator-Value T74 LT
 T75	Eq-Value 674 676	90
@@ -143,3 +136,23 @@ A23	Eq-Operator-Value T80 LT
 T81	Eq-Value 771 773	12
 T82	Procedure-Name 822 845	noninvasive ventilation
 T83	Procedure-Name 852 864	Tracheostomy
+T3	Observation-Name 61 131	partial pressure of arterial oxygen to the fraction of inspired oxygen
+A24	Observation-Type-Value T3 measurement
+R1	Abbrev-Of Arg1:E5 Arg2:E2	
+A25	Observation-Type-Value T42 measurement
+R2	Equivalent-To Arg1:E2 Arg2:E1	
+R3	Using Arg1:E7 Arg2:E8	
+T4	Temporal-Connection 150 155	while
+E3	Temporal-Connection:T4 Arg:E5 Arg2:E7
+A26	Temporal-Connection-Type-Value E3 during
+A27	Observation-Type-Value T56 measurement
+R4	Abbrev-Of Arg1:E13 Arg2:E12	
+T41	Temporal-Connection 527 538	in the same
+E4	Temporal-Connection:T41 Arg:E22 Arg2:E24
+A28	Temporal-Connection-Type-Value E4 during
+T84	Modifier 688 695	optimal
+E40	Modifier:T84 Modifies:T77
+T36	Death 789 794	death
+E36	Death:T36 
+T85	Risk 780 788	Imminent
+E41	Risk:T85 Risk-For:E36
