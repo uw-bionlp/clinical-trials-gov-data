@@ -3,10 +3,16 @@ E1	Condition:T1 Name:T6
 T2	Condition 92 109	medical condition
 E2	Condition:T2 
 T3	Negation 116 124	excludes
-E3	Negation:T3 
+E3	Negation:T3 Negates:E5
 T4	Family-Member 129 134	child
-E4	Family-Member:T4 
+E4	Family-Member:T4 Has:E5
 A1	Family-Member-Type E4 child
 T5	Observation 153 161	exercise
-E5	Observation:T5 
+E5	Observation:T5 Name:T7
 T6	Condition-Name 38 62	autism spectrum disorder
+T7	Observation-Name 153 161	exercise
+A2	Observation-Type-Value T7 social-habit
+T8	Assertion 116 124	excludes
+E6	Assertion:T8 Asserted:E3
+A3	Assertion-Type-Value E6 hypothetical
+R1	Caused-By Arg1:E3 Arg2:E2	
