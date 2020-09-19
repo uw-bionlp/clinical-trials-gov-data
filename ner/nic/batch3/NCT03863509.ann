@@ -1,168 +1,138 @@
 T1	Negation 61 63	no
-E1	Negation:T1
+E1	Negation:T1 Negates:E2
 T2	Assertion 64 69	plans
-E2	Assertion:T2
+E2	Assertion:T2 Asserted:E3
 A1	Assertion-Type-Value E2 intention
-T3	Condition 73 85	quit smoking
-E3	Condition:T3 Name:T94
+T3	Negation 73 77	quit
+E3	Negation:T3 Temporality:E6 Negates:E70 Negates2:E5
 T4	Or 86 92	and/or
-E4	Or:T4
-T5	Condition 95 98	cig
-E5	Condition:T5 Name:T95
+E4	Or:T4 Arg2:E5 Arg:E70
+T5	Drug 93 98	e-cig
+E5	Drug:T5 Name:T38
 T6	Eq-Comparison 110 120	next month
 E6	Eq-Comparison:T6 Temporal-Period:T96 Temporal-Unit:T97
 T7	Negation 126 129	not
-E7	Negation:T7
+E7	Negation:T7 Negates:E9 Negates2:E11 Negates3:E13
 T8	Eq-Comparison 130 135	using
 E8	Eq-Comparison:T8 Temporal-Period:T98
 T9	Drug 136 142	cigars
-E9	Drug:T9 Name:T99
+E9	Drug:T9 Name:T99 Temporality:E8 Minimum-Count:E16
 T10	Or 142 143	/
-E10	Or:T10
+E10	Or:T10 Arg:E9 Arg2:E11
 T11	Drug 143 152	smokeless
-E11	Drug:T11 Name:T100
+E11	Drug:T11 Name:T100 Temporality:E8 Minimum-Count:E16
 T12	Or 152 153	/
-E12	Or:T12
+E12	Or:T12 Arg:E11 Arg2:E13
 T13	Drug 153 165	snus tobacco
-E13	Drug:T13 Name:T101
-T14	Eq-Comparison 166 167	>
-E14	Eq-Comparison:T14 Operator:T102
-T15	Eq-Comparison 167 169	/=
-E15	Eq-Comparison:T15
-T16	Eq-Comparison 170 185	1 time per week
-E16	Eq-Comparison:T16 Value:T103 Temporal-Unit:T104
+E13	Drug:T13 Name:T101 Temporality:E8 Minimum-Count:E16
+T16	Eq-Comparison 166 185	>/= 1 time per week
+E16	Eq-Comparison:T16 Value:T103 Operator:T102 Per:T104
 T17	Eq-Comparison 218 225	current
 E17	Eq-Comparison:T17 Temporal-Period:T106
-T18	Condition 226 237	product use
-E18	Condition:T18
+T18	Drug 226 237	product use
+E18	Drug:T18 Temporality:E17 Stability:T105
 T19	Condition 243 255	able to walk
 E19	Condition:T19 Name:T107
 T20	Eq-Comparison 256 273	at least 2 blocks
 E20	Eq-Comparison:T20 Operator:T108 Value:T109 Unit:T110
-T21	Modifier 274 292	without assistance
-E21	Modifier:T21
+T21	Modifier 282 292	assistance
+E21	Modifier:T21 Modifies:T107
 T22	Or 293 295	or
-E22	Or:T22
+E22	Or:T22 Arg:E21 Arg2:E15
 T23	Condition 332 339	Smokers
-E23	Condition:T23
+E23	Condition:T23 Name:T70
 T24	Condition 351 357	smokes
-E24	Condition:T24
+E24	Condition:T24 Name:T111 Temporality:E25
 T25	Eq-Comparison 358 363	daily
-E25	Eq-Comparison:T25 Temporal-Unit:T112
-T26	Eq-Comparison 374 375	>
-E26	Eq-Comparison:T26 Operator:T113
+E25	Eq-Comparison:T25 Per:T112
 T27	Eq-Comparison 375 388	/= 5 cigs/day
-E27	Eq-Comparison:T27 Operator:T114 Value:T115 Unit:T116 Temporal-Unit:T117
+E27	Eq-Comparison:T27 Operator:T114 Value:T115 Per:T117
 T28	Eq-Comparison 393 406	last 6 months
 E28	Eq-Comparison:T28 Temporal-Period:T118 Value:T119 Temporal-Unit:T120
 T29	Eq-Comparison 417 420	< 3
 E29	Eq-Comparison:T29 Operator:T121 Value:T122
-T30	Observation 426 444	E-cigs in lifetime
-E30	Observation:T30 Name:T123
-T31	Eq-Comparison 455 456	>
-E31	Eq-Comparison:T31 Operator:T124
-T32	Eq-Comparison 456 458	/=
-E32	Eq-Comparison:T32
-T33	Observation 461 480	ppm carbon monoxide
-E33	Observation:T33 Name:T127
+T30	Observation 426 432	E-cigs
+E30	Observation:T30 Name:T123 Minimum-Count:E29 Temporality:E93
+T31	Eq-Comparison 455 464	>/= 5 ppm
+E31	Eq-Comparison:T31 Operator:T124 Value:T125 Unit:T126
+T33	Observation 465 480	carbon monoxide
+E33	Observation:T33 Name:T127 Eq-Comparison:E31
 T34	Observation 496 504	Cotinine
-E34	Observation:T34 Name:T128
-T35	Eq-Comparison 505 506	>
-E35	Eq-Comparison:T35 Operator:T129
-T36	Eq-Comparison 507 516	100 ng/ml
-E36	Eq-Comparison:T36 Value:T130 Unit:T131 Unit:T132
-T37	Observation 544 549	E-cig
-E37	Observation:T37
-T38	Eq-Comparison 567 570	</=
-E38	Eq-Comparison:T38 Operator:T134 Value:T135
-T39	Eq-Comparison 571 587	2 days per month
-E39	Eq-Comparison:T39 Value:T136 Temporal-Unit:T137 Temporal-Unit:T138
-T40	Condition 588 601	cigarette use
-E40	Condition:T40
+E34	Observation:T34 Name:T128 Eq-Comparison:E36
+T36	Eq-Comparison 505 516	> 100 ng/ml
+E36	Eq-Comparison:T36 Value:T130 Unit:T131 Operator:T35 Per:T132
+T37	Drug 544 549	E-cig
+E37	Drug:T37 Name:T133
+T39	Eq-Comparison 567 587	</= 2 days per month
+E39	Eq-Comparison:T39 Value:T136 Temporal-Unit:T137 Operator:T134 Per:T138
+T40	Drug 588 597	cigarette
+E40	Drug:T40 Name:T139 Temporality:E39 Duration:E41
 T41	Eq-Comparison 606 619	last 6 months
 E41	Eq-Comparison:T41 Temporal-Period:T140 Value:T141 Temporal-Unit:T142
-T42	Eq-Comparison 630 631	>
-E42	Eq-Comparison:T42 Operator:T143
-T43	Eq-Comparison 631 633	/=
-E43	Eq-Comparison:T43
-T44	Eq-Comparison 634 649	5 days per week
-E44	Eq-Comparison:T44 Value:T144 Temporal-Unit:T145 Temporal-Unit:T146
-T45	Condition 652 655	cig
-E45	Condition:T45 Name:T147
+T44	Eq-Comparison 630 649	>/= 5 days per week
+E44	Eq-Comparison:T44 Value:T144 Temporal-Unit:T145 Operator:T143 Per:T146
+T45	Drug 650 655	E-cig
+E45	Drug:T45 Name:T147 Temporality:E44 Duration:E46
 T46	Eq-Comparison 664 677	last 3 months
 E46	Eq-Comparison:T46 Temporal-Period:T148 Value:T149 Temporal-Unit:T150
 T47	Eq-Comparison 688 697	</= 4 ppm
-E47	Eq-Comparison:T47 Operator:T151 Value:T152 Value:T153 Unit:T154
+E47	Eq-Comparison:T47 Operator:T151 Value:T153 Unit:T154
 T48	Observation 711 719	Cotinine
-E48	Observation:T48 Name:T155
-T49	Eq-Comparison 720 721	>
-E49	Eq-Comparison:T49 Operator:T156
-T50	Eq-Comparison 722 731	100 ng/ml
-E50	Eq-Comparison:T50 Value:T157 Unit:T158 Unit:T159
-T51	Eq-Comparison 770 773	>/=
-E51	Eq-Comparison:T51 Operator:T160 Value:T161
-T52	Eq-Comparison 774 784	5 cigs/day
-E52	Eq-Comparison:T52 Value:T162 Unit:T163 Temporal-Unit:T164
+E48	Observation:T48 Name:T155 Eq-Comparison:E50
+T50	Eq-Comparison 720 731	> 100 ng/ml
+E50	Eq-Comparison:T50 Value:T157 Unit:T158 Operator:T156 Per:T159
+T52	Eq-Comparison 770 784	>/= 5 cigs/day
+E52	Eq-Comparison:T52 Value:T162 Temporal-Unit:T164 Operator:T160
 T53	Eq-Comparison 789 802	last 6 months
 E53	Eq-Comparison:T53 Temporal-Period:T165 Value:T166 Temporal-Unit:T167
-T54	Eq-Comparison 813 814	>
-E54	Eq-Comparison:T54 Operator:T168
-T55	Eq-Comparison 814 816	/=
-E55	Eq-Comparison:T55
-T56	Eq-Comparison 817 832	5 days per week
-E56	Eq-Comparison:T56 Value:T169 Temporal-Unit:T170 Temporal-Unit:T171
-T57	Condition 835 838	cig
-E57	Condition:T57 Name:T172
+T56	Eq-Comparison 813 832	>/= 5 days per week
+E56	Eq-Comparison:T56 Value:T169 Temporal-Unit:T170 Per:T171 Operator:T168
+T57	Drug 833 838	E-cig
+E57	Drug:T57 Name:T172 Temporality:E56 Duration:E58
 T58	Eq-Comparison 847 860	last 3 months
 E58	Eq-Comparison:T58 Temporal-Period:T173 Value:T174 Temporal-Unit:T175
 T59	Eq-Comparison 871 880	>/= 5 ppm
-E59	Eq-Comparison:T59 Operator:T176 Operator:T177 Value:T178 Unit:T179
-T60	Condition 881 883	CO
-E60	Condition:T60
-T61	Condition 891 903	- Continine
-E61	Condition:T61 Name:T180
-T62	Eq-Comparison 904 905	>
-E62	Eq-Comparison:T62 Operator:T181
-T63	Eq-Comparison 906 915	100 ng/ml
-E63	Eq-Comparison:T63 Value:T182 Unit:T183 Unit:T184
+E59	Eq-Comparison:T59 Operator:T177 Value:T178 Unit:T179
+T60	Observation 881 883	CO
+E60	Observation:T60 Name:T54 Eq-Comparison:E59
+T63	Eq-Comparison 904 915	> 100 ng/ml
+E63	Eq-Comparison:T63 Value:T182 Unit:T183 Operator:T181 Per:T184
 T64	Eq-Comparison 955 960	< 100
 E64	Eq-Comparison:T64 Operator:T185 Value:T186
 T65	Drug 961 971	cigarettes
-E65	Drug:T65
+E65	Drug:T65 Name:T187 Minimum-Count:E64 Minimum-Count2:E49 Temporality:E43 Duration:E66
 T66	Eq-Comparison 996 1005	> 5 years
 E66	Eq-Comparison:T66 Operator:T188 Value:T189 Temporal-Unit:T190
-T67	Eq-Comparison 1016 1025	< 3 E-cig
+T67	Eq-Comparison 1016 1019	< 3
 E67	Eq-Comparison:T67 Operator:T191 Value:T192
 T68	Eq-Comparison 1055 1064	</= 4 ppm
-E68	Eq-Comparison:T68 Operator:T194 Value:T195 Value:T196 Unit:T197
+E68	Eq-Comparison:T68 Operator:T194 Value:T196 Unit:T197
 T69	Observation 1065 1067	CO
-E69	Observation:T69
-T70	Observation 1075 1087	- Continine
-E70	Observation:T70 Name:T198
+E69	Observation:T69 Name:T195 Eq-Comparison:E68
 T71	Eq-Comparison 1088 1099	< 100 ng/ml
-E71	Eq-Comparison:T71 Operator:T199 Value:T200 Unit:T201 Unit:T202
+E71	Eq-Comparison:T71 Operator:T199 Value:T200 Unit:T201 Per:T202
 T72	Eq-Comparison 1125 1132	current
 E72	Eq-Comparison:T72 Temporal-Period:T203
 T73	Drug 1142 1170	smoking cessation medication
-E73	Drug:T73 Name:T204
+E73	Drug:T73 Name:T204 Temporality:E72
 T74	And 1182 1185	who
-E74	And:T74
+E74	And:T74 Arg:T205 Arg2:E75
 T75	Condition 1190 1198	pregnant
 E75	Condition:T75 Name:T206
 T76	Or 1199 1201	or
-E76	Or:T76
+E76	Or:T76 Arg:E75 Arg2:E77
 T77	Assertion 1202 1209	plan to
-E77	Assertion:T77
+E77	Assertion:T77 Asserted:E78
 A2	Assertion-Type-Value E77 intention
 T78	Condition 1214 1222	pregnant
-E78	Condition:T78 Name:T207
+E78	Condition:T78 Name:T207 Temporality:E79
 T79	Eq-Comparison 1230 1242	coming month
-E79	Eq-Comparison:T79 Temporal-Unit:T208
+E79	Eq-Comparison:T79 Temporal-Unit:T208 Temporal-Period:T222
 T80	And 1254 1257	who
-E80	And:T80
+E80	And:T80 Arg:T209 Arg2:E81
 T81	Assertion 1258 1266	might be
-E81	Assertion:T81
-A3	Assertion-Type-Value E81 hypothetical
+E81	Assertion:T81 Asserted:E82
+A3	Assertion-Type-Value E81 possible
 T82	Condition 1267 1275	pregnant
 E82	Condition:T82 Name:T210
 T83	Observation 1281 1293	incarcerated
@@ -170,24 +140,22 @@ E83	Observation:T83 Name:T211
 T84	Eq-Comparison 1311 1318	history
 E84	Eq-Comparison:T84 Temporal-Period:T212
 T85	Condition 1322 1333	sarcoidosis
-E85	Condition:T85 Name:T213
+E85	Condition:T85 Name:T213 Temporality:E84 Temporality2:E86
 T86	Eq-Comparison 1337 1349	past 5 years
 E86	Eq-Comparison:T86 Temporal-Period:T214 Value:T215 Temporal-Unit:T216
 T87	Or 1351 1353	or
-E87	Or:T87
+E87	Or:T87 Arg:E85 Arg2:E92
 T88	Eq-Comparison 1354 1360	active
 E88	Eq-Comparison:T88 Temporal-Period:T217
 T89	Modifier 1361 1378	interstitial lung
-E89	Modifier:T89
+E89	Modifier:T89 Modifies:T218
 T90	Or 1378 1379	/
-E90	Or:T90
+E90	Or:T90 Arg:E89 Arg2:E91
 T91	Modifier 1379 1388	pulmonary
-E91	Modifier:T91
+E91	Modifier:T91 Modifies:T218
 T92	Condition 1389 1397	fibrosis
-E92	Condition:T92
+E92	Condition:T92 Name:T218 Temporality:E88
 T93	Language 48 55	English
-T94	Condition-Name 73 85	quit smoking
-T95	Condition-Name 95 98	cig
 T96	Eq-Temporal-Period 110 114	next
 A4	Eq-Temporal-Period-Value T96 future
 T97	Eq-Temporal-Unit 115 120	month
@@ -196,9 +164,9 @@ T98	Eq-Temporal-Period 130 135	using
 A6	Eq-Temporal-Period-Value T98 present
 T99	Drug-Name 136 142	cigars
 T100	Drug-Name 143 152	smokeless
-T101	Drug-Name 153 157	snus
-T102	Eq-Operator 166 167	>
-A7	Eq-Operator-Value T102 GT
+T101	Drug-Name 153 165	snus tobacco
+T102	Eq-Operator 166 169	>/=
+A7	Eq-Operator-Value T102 GTEQ
 T103	Eq-Value 170 171	1
 T104	Eq-Temporal-Unit 181 185	week
 A8	Eq-Temporal-Unit-Value T104 week
@@ -211,16 +179,13 @@ T108	Eq-Operator 256 264	at least
 A11	Eq-Operator-Value T108 GTEQ
 T109	Eq-Value 265 266	2
 T110	Eq-Unit 267 273	blocks
-T111	Observation-Name 351 357	smokes
-A12	Observation-Type-Value T111 social-habit
+T111	Condition-Name 351 357	smokes
 T112	Eq-Temporal-Unit 358 363	daily
 A13	Eq-Temporal-Unit-Value T112 day
-T113	Eq-Operator 374 375	>
-A14	Eq-Operator-Value T113 GT
-T114	Eq-Operator 375 377	/=
+T114	Eq-Operator 374 377	>/=
 A15	Eq-Operator-Value T114 GTEQ
 T115	Eq-Value 378 379	5
-T116	Eq-Unit 380 384	cigs
+T116	Drug-Name 380 384	cigs
 T117	Eq-Temporal-Unit 385 388	day
 A16	Eq-Temporal-Unit-Value T117 day
 T118	Eq-Temporal-Period 393 397	last
@@ -231,25 +196,22 @@ A18	Eq-Temporal-Unit-Value T120 month
 T121	Eq-Operator 417 418	<
 A19	Eq-Operator-Value T121 LT
 T122	Eq-Value 419 420	3
-T123	Observation-Name 428 432	cigs
+T123	Observation-Name 426 432	E-cigs
 A20	Observation-Type-Value T123 lab
-T124	Eq-Operator 455 456	>
-A21	Eq-Operator-Value T124 GT
+T124	Eq-Operator 455 458	>/=
+A21	Eq-Operator-Value T124 GTEQ
 T125	Eq-Value 459 460	5
 T126	Eq-Unit 461 464	ppm
 T127	Observation-Name 465 480	carbon monoxide
 A22	Observation-Type-Value T127 lab
 T128	Observation-Name 496 504	Cotinine
 A23	Observation-Type-Value T128 lab
-T129	Eq-Operator 505 506	>
-A24	Eq-Operator-Value T129 GT
 T130	Eq-Value 507 510	100
 T131	Eq-Unit 511 513	ng
 T132	Eq-Unit 514 516	ml
-T133	Condition-Name 546 549	cig
-T134	Eq-Operator 567 568	<
-A25	Eq-Operator-Value T134 LT
-T135	Eq-Value 568 570	/=
+T133	Drug-Name 544 549	E-cig
+T134	Eq-Operator 567 570	</=
+A25	Eq-Operator-Value T134 LTEQ
 T136	Eq-Value 571 572	2
 T137	Eq-Temporal-Unit 573 577	days
 A26	Eq-Temporal-Unit-Value T137 day
@@ -261,22 +223,21 @@ A28	Eq-Temporal-Period-Value T140 past
 T141	Eq-Value 611 612	6
 T142	Eq-Temporal-Unit 613 619	months
 A29	Eq-Temporal-Unit-Value T142 month
-T143	Eq-Operator 630 631	>
-A30	Eq-Operator-Value T143 GT
+T143	Eq-Operator 630 633	>/=
+A30	Eq-Operator-Value T143 GTEQ
 T144	Eq-Value 634 635	5
 T145	Eq-Temporal-Unit 636 640	days
 A31	Eq-Temporal-Unit-Value T145 day
 T146	Eq-Temporal-Unit 645 649	week
 A32	Eq-Temporal-Unit-Value T146 week
-T147	Condition-Name 652 655	cig
+T147	Drug-Name 650 655	E-cig
 T148	Eq-Temporal-Period 664 668	last
 A33	Eq-Temporal-Period-Value T148 past
 T149	Eq-Value 669 670	3
 T150	Eq-Temporal-Unit 671 677	months
 A34	Eq-Temporal-Unit-Value T150 month
-T151	Eq-Operator 688 689	<
-A35	Eq-Operator-Value T151 LT
-T152	Eq-Value 689 691	/=
+T151	Eq-Operator 688 691	</=
+A35	Eq-Operator-Value T151 LTEQ
 T153	Eq-Value 692 693	4
 T154	Eq-Unit 694 697	ppm
 T155	Observation-Name 711 719	Cotinine
@@ -286,11 +247,9 @@ A37	Eq-Operator-Value T156 GT
 T157	Eq-Value 722 725	100
 T158	Eq-Unit 726 728	ng
 T159	Eq-Unit 729 731	ml
-T160	Eq-Operator 770 771	>
-A38	Eq-Operator-Value T160 GT
-T161	Eq-Value 771 773	/=
+T160	Eq-Operator 770 773	>/=
+A38	Eq-Operator-Value T160 GTEQ
 T162	Eq-Value 774 775	5
-T163	Eq-Unit 776 780	cigs
 T164	Eq-Temporal-Unit 781 784	day
 A39	Eq-Temporal-Unit-Value T164 day
 T165	Eq-Temporal-Period 789 793	last
@@ -298,26 +257,24 @@ A40	Eq-Temporal-Period-Value T165 past
 T166	Eq-Value 794 795	6
 T167	Eq-Temporal-Unit 796 802	months
 A41	Eq-Temporal-Unit-Value T167 month
-T168	Eq-Operator 813 814	>
-A42	Eq-Operator-Value T168 GT
+T168	Eq-Operator 813 816	>/=
+A42	Eq-Operator-Value T168 GTEQ
 T169	Eq-Value 817 818	5
 T170	Eq-Temporal-Unit 819 823	days
 A43	Eq-Temporal-Unit-Value T170 day
 T171	Eq-Temporal-Unit 828 832	week
 A44	Eq-Temporal-Unit-Value T171 week
-T172	Condition-Name 835 838	cig
+T172	Drug-Name 833 838	E-cig
 T173	Eq-Temporal-Period 847 851	last
 A45	Eq-Temporal-Period-Value T173 past
 T174	Eq-Value 852 853	3
 T175	Eq-Temporal-Unit 854 860	months
 A46	Eq-Temporal-Unit-Value T175 month
-T176	Eq-Operator 871 872	>
-A47	Eq-Operator-Value T176 GT
-T177	Eq-Operator 872 874	/=
+T177	Eq-Operator 871 874	>/=
 A48	Eq-Operator-Value T177 GTEQ
 T178	Eq-Value 875 876	5
 T179	Eq-Unit 877 880	ppm
-T180	Condition-Name 894 903	Continine
+T180	Observation-Name 894 903	Continine
 T181	Eq-Operator 904 905	>
 A49	Eq-Operator-Value T181 GT
 T182	Eq-Value 906 909	100
@@ -326,7 +283,7 @@ T184	Eq-Unit 913 915	ml
 T185	Eq-Operator 955 956	<
 A50	Eq-Operator-Value T185 LT
 T186	Eq-Value 957 960	100
-T187	Eq-Unit 961 971	cigarettes
+T187	Drug-Name 961 971	cigarettes
 T188	Eq-Operator 996 997	>
 A51	Eq-Operator-Value T188 GT
 T189	Eq-Value 998 999	5
@@ -335,13 +292,10 @@ A52	Eq-Temporal-Unit-Value T190 year
 T191	Eq-Operator 1016 1017	<
 A53	Eq-Operator-Value T191 LT
 T192	Eq-Value 1018 1019	3
-T193	Condition-Name 1022 1025	cig
-T194	Eq-Operator 1055 1056	<
-A54	Eq-Operator-Value T194 LT
-T195	Eq-Value 1056 1058	/=
+T194	Eq-Operator 1055 1058	</=
+A54	Eq-Operator-Value T194 LTEQ
 T196	Eq-Value 1059 1060	4
 T197	Eq-Unit 1061 1064	ppm
-T198	Observation-Name 1078 1087	Continine
 T199	Eq-Operator 1088 1089	<
 A55	Eq-Operator-Value T199 LT
 T200	Eq-Value 1090 1093	100
@@ -370,4 +324,58 @@ T216	Eq-Temporal-Unit 1344 1349	years
 A62	Eq-Temporal-Unit-Value T216 year
 T217	Eq-Temporal-Period 1354 1360	active
 A63	Eq-Temporal-Period-Value T217 present
-T218	Condition-Name 1379 1397	pulmonary fibrosis
+T218	Condition-Name 1389 1397	fibrosis
+T14	Observation 243 255	able to walk
+E14	Observation:T14 Eq-Comparison:E20
+T15	Modifier 296 304	stopping
+E15	Modifier:T15 Modifies:T107
+T61	Negation 274 281	without
+E61	Negation:T61 Negates:E21 Negates2:E15
+T70	Condition-Name 332 339	Smokers
+T26	Drug 380 384	cigs
+E26	Drug:T26 Temporality:E28 Minimum-Count:E27 Name:T116
+T95	Condition 78 85	smoking
+E70	Condition:T95 Name:T129
+T113	Eq-Comparison 436 444	lifetime
+E93	Eq-Comparison:T113 Temporal-Period:T219
+T219	Eq-Temporal-Period 436 444	lifetime
+A12	Eq-Temporal-Period-Value T219 anytime
+T32	Observation 482 484	CO
+E32	Observation:T32 Name:T220
+T220	Observation-Name 482 484	CO
+R1	Abbrev-Of Arg1:E32 Arg2:E33	
+T35	Eq-Operator 505 506	>
+A14	Eq-Operator-Value T35 GT
+T38	Drug-Name 93 98	e-cig
+T129	Condition-Name 78 85	smoking
+T42	Observation 698 700	CO
+E35	Observation:T42 Name:T43 Eq-Comparison:E47
+T43	Observation-Name 698 700	CO
+T49	Drug 776 780	cigs
+E38	Drug:T49 Name:T51 Minimum-Count:E52 Duration:E53
+T51	Drug-Name 776 780	cigs
+T54	Observation-Name 881 883	CO
+T55	Observation 894 903	Continine
+E42	Observation:T55 Name:T180 Eq-Comparison:E63
+A24	Observation-Type-Value T180 lab
+T62	Eq-Comparison 977 985	lifetime
+E43	Eq-Comparison:T62 Temporal-Period:T94
+T94	Eq-Temporal-Period 977 985	lifetime
+A47	Eq-Temporal-Period-Value T94 anytime
+T135	Eq-Comparison 987 991	none
+E49	Eq-Comparison:T135 Value:T152
+T152	Eq-Value 987 991	none
+T161	Drug 1020 1025	E-cig
+E51	Drug:T161 Name:T163 Minimum-Count:E67 Temporality:E54
+T163	Drug-Name 1020 1025	E-cig
+T176	Eq-Comparison 1036 1044	lifetime
+E54	Eq-Comparison:T176 Temporal-Period:T193
+T193	Eq-Temporal-Period 1036 1044	lifetime
+A64	Eq-Temporal-Period-Value T193 anytime
+T195	Observation-Name 1065 1067	CO
+T221	Observation-Name 1078 1087	Continine
+A65	Observation-Type-Value T221 lab
+T198	Observation 1078 1087	Continine
+E55	Observation:T198 Name:T221 Eq-Comparison:E71
+T222	Eq-Temporal-Period 1230 1236	coming
+A66	Eq-Temporal-Period-Value T222 future

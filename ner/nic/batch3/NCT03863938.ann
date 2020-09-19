@@ -1,56 +1,54 @@
 T1	Condition 25 32	Healthy
 E1	Condition:T1 Name:T56
 T2	Age 45 49	aged
-E2	Age:T2
+E2	Age:T2 Eq-Comparison:E3 Eq-Comparison2:E5
 T3	Eq-Comparison 50 60	≥ 19 years
 E3	Eq-Comparison:T3 Operator:T59 Value:T60 Temporal-Unit:T61
 T4	And 61 64	and
-E4	And:T4
+E4	And:T4 Arg:E3 Arg2:E5
 T5	Eq-Comparison 65 75	≤ 50 years
 E5	Eq-Comparison:T5 Operator:T62 Value:T63 Temporal-Unit:T64
 T6	Observation 81 92	Body weight
-E6	Observation:T6 Name:T65
+E6	Observation:T6 Name:T65 Eq-Comparison:E7 Eq-Comparison2:E9
 T7	Eq-Comparison 96 105	≥ 55.0 kg
 E7	Eq-Comparison:T7 Operator:T66 Value:T67 Unit:T68
 T8	And 106 109	and
-E8	And:T8
+E8	And:T8 Arg:E7 Arg2:E9
 T9	Eq-Comparison 110 119	≤ 90.0 kg
 E9	Eq-Comparison:T9 Operator:T69 Value:T70 Unit:T71
 T10	And 121 125	with
-E10	And:T10
+E10	And:T10 Arg:E6 Arg2:E11
 T11	Observation 126 141	body mass index
 E11	Observation:T11 Name:T72
 T12	Observation 143 146	BMI
-E12	Observation:T12 Name:T73
+E12	Observation:T12 Name:T73 Eq-Comparison:E13 Eq-Comparison2:E15
 T13	Eq-Comparison 151 163	≥ 18.0 kg/m2
-E13	Eq-Comparison:T13 Operator:T74 Value:T75 Unit:T76 Unit:T77
+E13	Eq-Comparison:T13 Operator:T74 Value:T75 Unit:T76 Per:T77
 T14	And 164 167	and
-E14	And:T14
+E14	And:T14 Arg:E13 Arg2:E15
 T15	Eq-Comparison 168 180	≤ 27.0 kg/m2
-E15	Eq-Comparison:T15 Operator:T78 Value:T79 Unit:T80 Unit:T81
+E15	Eq-Comparison:T15 Operator:T78 Value:T79 Unit:T80 Per:T81
 T16	Temporal-Connection 181 192	at the time
-E16	Temporal-Connection:T16
+E16	Temporal-Connection:T16 Arg:E12 Arg2:E17
 A1	Temporal-Connection-Type-Value E16 during
 T17	Study 196 205	screening
-E17	Study:T17
+E17	Study:T17 
 T18	Organism 211 230	Helicobacter pylori
-E18	Organism:T18
+E18	Organism:T18 Name:T82 Polarity:T83
 T19	Or 274 276	or
-E19	Or:T19
+E19	Or:T19 Arg:E56 Arg2:E20
 T20	Eq-Comparison 277 284	history
 E20	Eq-Comparison:T20 Temporal-Period:T84
 T21	Condition 311 319	diseases
-E21	Condition:T21 Name:T86
+E21	Condition:T21 Name:T86 Severity:T85 Temporality:E56 Temporality2:E20
 T22	Or 334 336	or
-E22	Or:T22
+E22	Or:T22 Arg:E57 Arg2:E23
 T23	Eq-Comparison 337 344	history
 E23	Eq-Comparison:T23 Temporal-Period:T87
 T24	Condition 348 373	gastrointestinal disorder
-E24	Condition:T24 Name:T88
-T25	Modifier 375 382	gastric
-E25	Modifier:T25
-T26	Condition 383 388	ulcer
-E26	Condition:T26
+E24	Condition:T24 Name:T88 Temporality:E57 Temporality2:E23
+T26	Condition 375 388	gastric ulcer
+E26	Condition:T26 Name:T89
 T27	Condition 390 394	GERD
 E27	Condition:T27 Name:T90
 T28	Condition 396 411	Crohn's disease
@@ -58,56 +56,51 @@ E28	Condition:T28 Name:T91
 T29	Condition 424 440	Hypersensitivity
 E29	Condition:T29 Name:T92
 T30	Drug 444 449	drugs
-E30	Drug:T30
+E30	Drug:T30 
 T31	Study 461 466	study
-E31	Study:T31
+E31	Study:T31 Study-Of:E32
 T32	Drug 467 471	drug
-E32	Drug:T32
+E32	Drug:T32 
 T33	Or 472 474	or
-E33	Or:T33
+E33	Or:T33 Arg:E32 Arg2:E34
 T34	Drug 475 496	proton pump inhibitor
 E34	Drug:T34 Name:T93
 T35	Or 497 500	and
-E35	Or:T35
+E35	Or:T35 Arg:E34 Arg2:E37
 T36	Other 501 506	other
-E36	Other:T36
+E36	Other:T36 Is-Other:E37
 T37	Drug 507 512	drugs
-E37	Drug:T37
+E37	Drug:T37 
 T38	Drug 514 521	aspirin
 E38	Drug:T38 Name:T94
 T39	Drug 523 534	antibiotics
 E39	Drug:T39 Name:T95
 T40	Or 542 544	or
-E40	Or:T40
+E40	Or:T40 Arg:E29 Arg2:E42
 T41	Eq-Comparison 545 552	history
 E41	Eq-Comparison:T41 Temporal-Period:T96
 T42	Condition 579 595	hypersensitivity
-E42	Condition:T42 Name:T98
+E42	Condition:T42 Name:T98 Severity:T97 Temporality:E41
 T43	Observation 601 615	Serologic test
-E43	Observation:T43 Name:T99
-T44	Assertion 639 650	obstacle to
-E44	Assertion:T44
-A2	Assertion-Type-Value E44 hypothetical
+E43	Observation:T43 Name:T99 Polarity:T100
 T45	Procedure 651 660	insertion
-E45	Procedure:T45
+E45	Procedure:T45 Name:T44 Stability:T25 Polarity:T101
 T46	And 661 664	and
-E46	And:T46
+E46	And:T46 Arg:E45 Arg2:E44
 T47	Procedure 680 697	pH meter catheter
 E47	Procedure:T47 Name:T102
 T48	Eq-Comparison 703 710	History
 E48	Eq-Comparison:T48 Temporal-Period:T103
 T49	Condition 714 724	drug abuse
-E49	Condition:T49 Name:T104
-T50	Condition 740 755	caffeine intake
-E50	Condition:T50
+E49	Condition:T49 Name:T104 Temporality:E48
+T50	Drug 740 748	caffeine
+E50	Drug:T50 Name:T105 Dose:T112
 T51	Or 756 758	or
-E51	Or:T51
+E51	Or:T51 Arg:E50 Arg2:E25
 T52	Modifier 759 769	persistent
-E52	Modifier:T52
-T53	Condition 770 784	alcohol intake
-E53	Condition:T53
+E52	Modifier:T52 Modifies:T113
 T54	Negation 790 793	Not
-E54	Negation:T54
+E54	Negation:T54 Negates:E55
 T55	Procedure 834 847	contraception
 E55	Procedure:T55 Name:T106
 T56	Condition-Name 25 32	Healthy
@@ -149,7 +142,7 @@ A15	Eq-Operator-Value T78 LTEQ
 T79	Eq-Value 170 174	27.0
 T80	Eq-Unit 175 177	kg
 T81	Eq-Unit 178 180	m2
-T82	Condition-Name 211 230	Helicobacter pylori
+T82	Organism-Name 211 230	Helicobacter pylori
 T83	Polarity 231 239	negative
 A16	Polarity-Value T83 positive
 T84	Eq-Temporal-Period 277 284	history
@@ -176,10 +169,41 @@ T99	Observation-Name 601 615	Serologic test
 A22	Observation-Type-Value T99 lab
 T100	Polarity 616 624	positive
 A23	Polarity-Value T100 positive
-T101	Condition-Name 630 647	Abnormal obstacle
 T102	Procedure-Name 680 697	pH meter catheter
 T103	Eq-Temporal-Period 703 710	History
 A24	Eq-Temporal-Period-Value T103 past
 T104	Condition-Name 714 724	drug abuse
-T105	Drug-Name 740 755	caffeine intake
+T105	Drug-Name 740 748	caffeine
 T106	Procedure-Name 834 847	contraception
+R1	Abbrev-Of Arg1:E12 Arg2:E11	
+T107	Eq-Comparison 265 273	Presence
+E56	Eq-Comparison:T107 Temporal-Period:T108
+T108	Eq-Temporal-Period 265 273	Presence
+A25	Eq-Temporal-Period-Value T108 present
+T109	Eq-Comparison 325 333	Presence
+E57	Eq-Comparison:T109 Temporal-Period:T110
+T110	Eq-Temporal-Period 325 333	Presence
+A26	Eq-Temporal-Period-Value T110 present
+R2	Example-Of Arg1:E26 Arg2:E24	
+R3	Example-Of Arg1:E27 Arg2:E24	
+R4	Example-Of Arg1:E28 Arg2:E24	
+R5	Caused-By Arg1:E29 Arg2:E30	
+R6	Equivalent-To Arg1:E32 Arg2:E30	
+R7	Caused-By Arg1:E29 Arg2:E34	
+R8	Caused-By Arg1:E29 Arg2:E37	
+R9	Example-Of Arg1:E38 Arg2:E37	
+R10	Example-Of Arg1:E39 Arg2:E37	
+T101	Polarity 630 638	Abnormal
+A27	Polarity-Value T101 abnormal
+R11	Using Arg1:E45 Arg2:E47	
+T44	Procedure-Name 651 660	insertion
+T111	Assertion 665 676	maintenance
+E44	Assertion:T111 Asserted:E47 Asserted2:E45
+A2	Assertion-Type-Value E44 hypothetical
+T25	Stability 639 647	obstacle
+A28	Stability-Value T25 change
+T112	Polarity 730 739	Excessive
+A29	Polarity-Value T112 high
+T53	Drug 770 777	alcohol
+E25	Drug:T53 Name:T113
+T113	Drug-Name 770 777	alcohol

@@ -1,27 +1,18 @@
-T1	Eq-Comparison 25 27	NS
-E1	Eq-Comparison:T1 Unit:T27
-T2	Condition 28 31	TAD
-E2	Condition:T2 
-T3	Modifier 32 40	probands
-E3	Modifier:T3 
+T2	Condition 25 31	NS-TAD
+E2	Condition:T2 Name:T1
 T4	Procedure 41 49	operated
-E4	Procedure:T4 
+E4	Procedure:T4 Name:T28
 T5	Age 79 83	aged
-E5	Age:T5 
+E5	Age:T5 Eq-Comparison:E6
 T6	Eq-Comparison 84 96	16 and above
 E6	Eq-Comparison:T6 Value:T31 Operator:T32
 T7	Eq-Comparison 108 120	At least two
 E7	Eq-Comparison:T7 Operator:T33 Value:T34
 T8	Assertion 131 141	willing to
-E8	Assertion:T8 
+E8	Assertion:T8 Asserted:E9
 A1	Assertion-Type-Value E8 hypothetical
 T9	Study 161 170	screening
 E9	Study:T9 
-T10	Assertion 202 209	able to
-E10	Assertion:T10 
-A2	Assertion-Type-Value E10 hypothetical
-T11	Condition 255 263	Probands
-E11	Condition:T11 
 T12	Condition 269 291	syndromic aortopathies
 E12	Condition:T12 Name:T36
 T13	Condition 303 318	Marfan Syndrome
@@ -32,31 +23,23 @@ T15	Condition 342 364	Ehlers-Danlos Syndrome
 E15	Condition:T15 Name:T39
 T16	Condition 366 394	Shprintzen-Goldberg syndrome
 E16	Condition:T16 Name:T40
-T17	Condition 396 404	aneurysm
-E17	Condition:T17 Name:T41
-T18	Condition 405 428	osteoarthritis syndrome
+T18	Condition 396 428	aneurysm-osteoarthritis syndrome
 E18	Condition:T18 Name:T42
 T19	Condition 430 458	arterial tortuosity syndrome
 E19	Condition:T19 Name:T43
 T20	Or 460 463	and
-E20	Or:T20 
+E20	Or:T20 Arg:E19 Arg2:E21
 T21	Condition 464 483	cutis laxa syndrome
 E21	Condition:T21 Name:T44
-T22	Condition 490 498	Probands
-E22	Condition:T22 
 T23	Condition 504 518	aortic lesions
 E23	Condition:T23 Name:T45
 T24	Condition 535 541	trauma
 E24	Condition:T24 Name:T46
 T25	Or 542 545	and
-E25	Or:T25 
+E25	Or:T25 Arg:E24 Arg2:E26
 T26	Condition 546 556	infections
 E26	Condition:T26 Name:T47
-T27	Eq-Unit 25 27	NS
-T28	Procedure-Name 28 49	TAD probands operated
-T29	Observation-Name 54 58	n=16
-T30	Eq-Operator 66 69	FDR
-A3	Eq-Operator-Value T30 GTEQ
+T28	Procedure-Name 41 49	operated
 T31	Eq-Value 84 86	16
 T32	Eq-Operator 87 96	and above
 A4	Eq-Operator-Value T32 GTEQ
@@ -69,10 +52,29 @@ T37	Condition-Name 303 318	Marfan Syndrome
 T38	Condition-Name 320 340	Loeys-Dietz Syndrome
 T39	Condition-Name 342 364	Ehlers-Danlos Syndrome
 T40	Condition-Name 366 394	Shprintzen-Goldberg syndrome
-T41	Condition-Name 396 404	aneurysm
-T42	Condition-Name 405 428	osteoarthritis syndrome
+T42	Condition-Name 396 428	aneurysm-osteoarthritis syndrome
 T43	Condition-Name 430 458	arterial tortuosity syndrome
 T44	Condition-Name 464 483	cutis laxa syndrome
 T45	Condition-Name 504 518	aortic lesions
 T46	Condition-Name 535 541	trauma
 T47	Condition-Name 546 556	infections
+T1	Condition-Name 25 31	NS-TAD
+T3	Condition 66 69	FDR
+E1	Condition:T3 Name:T27
+T27	Condition-Name 66 69	FDR
+T29	Condition 74 77	SDR
+E3	Condition:T29 Name:T30
+T30	Condition-Name 74 77	SDR
+T48	Or 70 73	and
+E27	Or:T48 Arg:E1 Arg2:E3
+T49	Family-Member 121 130	relatives
+E28	Family-Member:T49 Has:E7 Has2:E9
+R1	Example-Of Arg1:E13 Arg2:E12	
+R2	Example-Of Arg1:E14 Arg2:E12	
+R3	Example-Of Arg1:E15 Arg2:E12	
+R4	Example-Of Arg1:E16 Arg2:E12	
+R5	Example-Of Arg1:E18 Arg2:E12	
+R6	Example-Of Arg1:E19 Arg2:E12	
+R7	Example-Of Arg1:E21 Arg2:E12	
+R8	Caused-By Arg1:E23 Arg2:E24	
+R9	Caused-By Arg1:E23 Arg2:E26	

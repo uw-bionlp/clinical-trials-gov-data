@@ -1,79 +1,68 @@
 T1	Eq-Comparison 28 39	60 or older
 E1	Eq-Comparison:T1 Value:T39 Operator:T40
-T2	Assertion 67 76	they must
-E2	Assertion:T2
-A1	Assertion-Type-Value E2 hypothetical
 T3	Condition 80 94	postmenopausal
-E3	Condition:T3 Name:T42
-T4	Negation 96 108	interruption
-E4	Negation:T4
+E3	Condition:T3 Name:T42 Duration:E6
 T5	Condition 112 124	menstruation
 E5	Condition:T5 Name:T44
 T6	Eq-Comparison 129 147	more than one year
 E6	Eq-Comparison:T6 Operator:T45 Value:T46 Temporal-Unit:T47
 T7	Negation 160 163	not
-E7	Negation:T7
+E7	Negation:T7 Negates:E8
 T8	Procedure 195 211	exercise program
-E8	Procedure:T8 Name:T48
+E8	Procedure:T8 Name:T48 Temporality:E9
 T9	Eq-Comparison 216 235	at least six months
 E9	Eq-Comparison:T9 Operator:T49 Value:T50 Temporal-Unit:T51
 T10	Temporal-Connection 236 244	prior to
-E10	Temporal-Connection:T10
+E10	Temporal-Connection:T10 Arg:E9 Arg2:E40
 A2	Temporal-Connection-Type-Value E10 before
 T11	Observation 287 302	body mass index
 E11	Observation:T11 Name:T52
 T12	Observation 304 307	BMI
-E12	Observation:T12 Name:T53
+E12	Observation:T12 Name:T53 Eq-Comparison:E13
 T13	Eq-Comparison 309 334	between 22 and 30 kg / m2
-E13	Eq-Comparison:T13 Operator:T54 Value:T55 Value:T56 Unit:T57 Unit:T58
+E13	Eq-Comparison:T13 Operator:T54 Value:T55 Value:T56 Unit:T57 Per:T58
 T14	Negation 345 348	not
-E14	Negation:T14
+E14	Negation:T14 Negates:E15 Negates2:E16 Negates3:E19
 T15	Condition 349 361	cardiopathic
 E15	Condition:T15 Name:T59
 T16	Condition 363 371	diabetic
 E16	Condition:T16 Name:T60
 T17	Or 372 374	or
-E17	Or:T17
+E17	Or:T17 Arg:E16 Arg2:E19
 T18	Other 384 389	other
-E18	Other:T18
+E18	Other:T18 Is-Other:E19
 T19	Condition 390 407	metabolic disease
 E19	Condition:T19 Name:T61
 T20	Negation 417 420	not
-E20	Negation:T20
+E20	Negation:T20 Negates:E21
 T21	Condition 429 443	joint problems
 E21	Condition:T21 Name:T62
 T22	Or 444 446	or
-E22	Or:T22
+E22	Or:T22 Arg:E21 Arg2:E24
 T23	Other 451 456	other
-E23	Other:T23
+E23	Other:T23 Is-Other:E24
 T24	Condition 457 463	injury
 E24	Condition:T24 Name:T63
 T25	Negation 469 477	prevents
-E25	Negation:T25
-T26	Procedure 482 498	proper execution
-E26	Procedure:T26
+E25	Negation:T25 Negates:E26
 T27	Negation 546 549	Non
-E27	Negation:T27
+E27	Negation:T27 Negates:E28
 T28	Condition 550 556	smoker
 E28	Condition:T28 Name:T64
 T29	Or 557 559	or
-E29	Or:T29
+E29	Or:T29 Arg:E28 Arg2:E30
 T30	Condition 565 577	quit smoking
-E30	Condition:T30 Name:T65
+E30	Condition:T30 Name:T65 Duration:E31
 T31	Eq-Comparison 582 605	at least five years ago
-E31	Eq-Comparison:T31 Operator:T66 Value:T67 Temporal-Unit:T68
-T32	Procedure 671 689	physical exercises
-E32	Procedure:T32
-T33	Observation 716 718	Do
-E33	Observation:T33
+E31	Eq-Comparison:T31 Operator:T66 Value:T67 Temporal-Unit:T68 Temporal-Period:T78
 T34	Negation 719 722	not
-E34	Negation:T34
+E34	Negation:T34 Negates:E33
 T35	Eq-Comparison 738 749	at least 20
 E35	Eq-Comparison:T35 Operator:T69 Value:T70
 T36	Or 768 770	or
-E36	Or:T36
-T37	Condition 771 775	miss
-E37	Condition:T37
+E36	Or:T36 Arg:E34 Arg2:E37
+T37	Negation 771 775	miss
+E37	Negation:T37 Negates:E44
 T38	Eq-Comparison 776 803	more than three consecutive
 E38	Eq-Comparison:T38 Operator:T71 Value:T72
 T39	Eq-Value 28 30	60
@@ -82,7 +71,6 @@ A3	Eq-Operator-Value T40 GTEQ
 T41	Life-Stage-And-Gender 60 65	women
 A4	Life-Stage-And-Gender-Type T41 female
 T42	Condition-Name 80 94	postmenopausal
-T43	Condition-Name 96 108	interruption
 T44	Condition-Name 112 124	menstruation
 T45	Eq-Operator 129 138	more than
 A5	Eq-Operator-Value T45 GT
@@ -123,3 +111,42 @@ T70	Eq-Value 747 749	20
 T71	Eq-Operator 776 785	more than
 A15	Eq-Operator-Value T71 GT
 T72	Eq-Value 786 791	three
+T73	Age 34 39	older
+E39	Age:T73 Eq-Comparison:E1
+R1	If-Then Arg1:T41 Arg2:E3	
+T2	Negation 96 108	interruption
+E2	Negation:T2 Negates:E5
+R2	Equivalent-To Arg1:E2 Arg2:E3	
+T4	Modifier 184 194	systematic
+E4	Modifier:T4 Modifies:T48
+T43	Study 263 270	project
+E40	Study:T43 
+R3	Abbrev-Of Arg1:E12 Arg2:E11	
+T26	Observation 506 515	exercises
+E26	Observation:T26 Name:T74
+T74	Observation-Name 506 515	exercises
+A1	Observation-Type-Value T74 social-habit
+T75	Procedure 523 539	training routine
+E41	Procedure:T75 Name:T76
+T76	Procedure-Name 523 539	training routine
+R4	Using Arg1:E41 Arg2:E26	
+T77	Assertion 469 477	prevents
+E42	Assertion:T77 Asserted:E25
+A16	Assertion-Type-Value E42 hypothetical
+R5	Caused-By Arg1:E25 Arg2:E24	
+R6	Caused-By Arg1:E25 Arg2:E21	
+T78	Eq-Temporal-Period 602 605	ago
+A17	Eq-Temporal-Period-Value T78 past
+T32	Observation 671 689	physical exercises
+E32	Observation:T32 Name:T79
+T79	Observation-Name 671 689	physical exercises
+A18	Observation-Type-Value T79 social-habit
+T80	Assertion 612 622	Release of
+E43	Assertion:T80 Asserted:E32
+A19	Assertion-Type-Value E43 hypothetical
+T33	Procedure 750 767	training sessions
+E33	Procedure:T33 Name:T81 Minimum-Count:E35
+T81	Procedure-Name 750 767	training sessions
+T82	Procedure 804 821	training sessions
+E44	Procedure:T82 Name:T83 Minimum-Count:E38
+T83	Procedure-Name 804 821	training sessions
