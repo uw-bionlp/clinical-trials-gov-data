@@ -12,7 +12,7 @@ T8	Condition-Name 147 154	disease
 E7	Condition:T7 Name:T8
 T9	Procedure 502 520	CAR-T cell therapy
 T10	Procedure-Name 502 520	CAR-T cell therapy
-E9	Procedure:T9 Name:T10
+E9	Procedure:T9 Name:T10 Temporality:E16
 T11	Procedure 899 911	radiotherapy
 T12	Procedure-Name 899 911	radiotherapy
 E11	Procedure:T11 Name:T12
@@ -61,14 +61,11 @@ E2	Or:T38 Arg:T15 Arg2:T16
 T26	Condition 89 91	MM
 E4	Condition:T26 Name:T39
 T39	Condition-Name 89 91	MM
-T40	Observation 136 146	measurable
-E6	Observation:T40 Name:T41
-T41	Observation-Name 136 146	measurable
-A10	Observation-Type-Value T41 measurement
-R1	Found-By Arg1:E7 Arg2:E6	
+T40	Assertion 136 146	measurable
+E6	Assertion:T40 Asserted:E7
 R2	Abbrev-Of Arg1:E17 Arg2:E5	
 T42	Observation 235 250	life expectancy
-E8	Observation:T42 Name:T43
+E8	Observation:T42 Name:T43 Eq-Comparison:E20
 T43	Observation-Name 235 250	life expectancy
 A11	Observation-Type-Value T43 vital
 T44	Eq-Comparison 373 376	0~2
@@ -81,14 +78,8 @@ E12	Observation:T47 Name:T48
 T48	Observation-Name 303 307	ECOG
 A13	Observation-Type-Value T48 clinical-score
 T49	Drug 424 463	anti-CD38 monoclonal antibody treatment
-E14	Drug:T49 Name:T50
+E14	Drug:T49 Name:T50 Temporality:E15
 T50	Drug-Name 424 463	anti-CD38 monoclonal antibody treatment
-T51	Temporal-Connection 464 474	previously
-E15	Temporal-Connection:T51 Arg:E14
-A14	Temporal-Connection-Type-Value E15 before
-T52	Temporal-Connection 521 531	previously
-E16	Temporal-Connection:T52 Arg:E9
-A15	Temporal-Connection-Type-Value E16 before
 T53	Modifier 570 579	allogenic
 E23	Modifier:T53 Modifies:E1
 T55	Modifier 626 636	autologous
@@ -98,34 +89,32 @@ E26	Temporal-Connection:T56 Arg2:E27 Arg:E21
 A17	Temporal-Connection-Type-Value E26 before
 T57	Study 703 708	study
 E27	Study:T57 Study-Of:E39
-T58	Condition 721 756	Primary refractory multiple myeloma
+T58	Condition 749 756	myeloma
 E28	Condition:T58 Name:T59
-T59	Condition-Name 721 756	Primary refractory multiple myeloma
+T59	Condition-Name 749 756	myeloma
 T60	Procedure 875 897	anti-myeloma treatment
-E29	Procedure:T60 Name:T61
+E29	Procedure:T60 Name:T61 Temporality:E22
 T61	Procedure-Name 875 897	anti-myeloma treatment
 T62	Exception 915 923	excluded
 E30	Exception:T62 From:E29 Except:E11
 T63	Or 940 942	or
-E31	Or:T63 
+E31	Or:T63 Arg:E22 Arg2:E41
 T64	Eq-Unit 945 958	PK half-lives
 T65	Procedure 966 975	treatment
-E32	Procedure:T65 Name:T66 Temporality:E22
-T66	Procedure-Name 966 975	treatment
+E32	Procedure:T65 
 T67	Temporal-Connection 995 1001	before
-E33	Temporal-Connection:T67 Arg:E34 Arg2:E29
+E33	Temporal-Connection:T67 Arg:E32 Arg2:E44
 A18	Temporal-Connection-Type-Value E33 before
 T68	Study 1012 1017	study
-E34	Study:T68 
+E34	Study:T68 Study-Of:E43
 T69	Study 101 110	screening
 E35	Study:T69 
 T70	Temporal-Connection 98 100	At
-E36	Temporal-Connection:T70 Arg:E35 Arg2:E6
+E36	Temporal-Connection:T70 Arg:E35 Arg2:E7
 A19	Temporal-Connection-Type-Value E36 during
 T71	Observation 309 343	Eastern Cooperative Oncology Group
 E37	Observation:T71 Name:T72 Eq-Comparison:E10
 T72	Observation-Name 309 343	Eastern Cooperative Oncology Group
-A20	Observation-Type-Value T72 clinical-score
 R3	Abbrev-Of Arg1:E37 Arg2:E12	
 T54	Eq-Comparison 550 560	previously
 E24	Eq-Comparison:T54 Temporal-Period:T73
@@ -135,3 +124,26 @@ T74	Or 602 604	or
 E38	Or:T74 Arg:E1 Arg2:E3
 T75	Drug 709 714	agent
 E39	Drug:T75 
+A21	Assertion-Type-Value E6 hypothetical
+T41	Eq-Comparison 464 474	previously
+E15	Eq-Comparison:T41 Temporal-Period:T51
+T51	Eq-Temporal-Period 464 474	previously
+A10	Eq-Temporal-Period-Value T51 past
+T52	Eq-Comparison 521 531	previously
+E16	Eq-Comparison:T52 Temporal-Period:T76
+T76	Eq-Temporal-Period 521 531	previously
+A14	Eq-Temporal-Period-Value T76 past
+T77	Modifier 721 748	Primary refractory multiple
+E40	Modifier:T77 Modifies:T59
+R1	Treatment-For Arg1:E13 Arg2:E28	
+T78	Eq-Comparison 943 958	5 PK half-lives
+E41	Eq-Comparison:T78 Value:T33 Unit:T64
+T79	Temporal-Connection 959 961	of
+E42	Temporal-Connection:T79 Arg:E41 Arg2:E32
+A15	Temporal-Connection-Type-Value E42 before
+T66	Drug 1018 1023	agent
+E43	Drug:T66 Temporality:E44
+T80	Eq-Comparison 1006 1011	first
+E44	Eq-Comparison:T80 Temporal-Recency:T81
+T81	Eq-Temporal-Recency 1006 1011	first
+A20	Eq-Temporal-Recency-Value T81 first-time
