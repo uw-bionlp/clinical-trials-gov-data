@@ -1,0 +1,138 @@
+T1	Condition 116 136	climacteric symptoms
+T2	Condition-Name 116 136	climacteric symptoms
+E1	Condition:T1 Name:T2
+T6	Condition 469 487	infectious disease
+T7	Condition-Name 469 487	infectious disease
+E6	Condition:T6 Name:T7 Severity:T44
+T8	Condition 447 460	acute disease
+T9	Condition-Name 447 460	acute disease
+E8	Condition:T8 Name:T9
+T10	Condition 662 687	gastrointestinal diseases
+T11	Condition-Name 662 687	gastrointestinal diseases
+E10	Condition:T10 Name:T11
+T12	Procedure 748 772	gastrointestinal surgery
+T13	Procedure-Name 748 772	gastrointestinal surgery
+E12	Procedure:T12 Name:T13
+T14	Condition 718 737	active peptic ulcer
+T15	Condition-Name 718 737	active peptic ulcer
+E14	Condition:T14 Name:T15
+T16	Procedure 792 804	appendectomy
+T17	Procedure-Name 792 804	appendectomy
+E16	Procedure:T16 Name:T17
+T18	Condition 689 716	inflammatory growth disease
+T19	Condition-Name 689 716	inflammatory growth disease
+E18	Condition:T18 Name:T19
+T22	Eq-Operator 612 618	within
+A1	Eq-Operator-Value T22 LTEQ
+T23	Eq-Operator 918 926	the past
+A2	Eq-Operator-Value T23 GTEQ
+T24	Eq-Operator 1081 1096	within the past
+A3	Eq-Operator-Value T24 LTEQ
+T26	Age 25 28	Age
+E21	Age:T26 
+T27	Eq-Value 32 34	40
+T28	Eq-Value 604 605	1
+T3	Life-Stage-And-Gender 38 41	men
+A5	Life-Stage-And-Gender-Type T3 male
+T30	Life-Stage-And-Gender 46 51	women
+T31	Eq-Comparison 32 37	40~75
+E2	Eq-Comparison:T31 Value:T32 Value2:T27 Operator:T33
+T32	Eq-Value 35 37	75
+T33	Eq-Operator 34 35	~
+A6	Eq-Operator-Value T33 BETWEEN
+T34	Condition 155 186	deterioration of various organs
+E3	Condition:T34 Name:T35
+T35	Condition-Name 155 186	deterioration of various organs
+R1	Caused-By Arg1:E1 Arg2:E3	
+T36	Condition 195 202	fatigue
+E5	Condition:T36 Name:T37
+T37	Condition-Name 195 202	fatigue
+R2	Example-Of Arg1:E5 Arg2:E1	
+T38	Condition 204 216	helplessness
+E7	Condition:T38 Name:T39
+T39	Condition-Name 204 216	helplessness
+R3	Abbrev-Of Arg1:E7 Arg2:E1	
+T40	Provider 79 96	menopausal clinic
+E9	Provider:T40 Type:T41
+T41	Provider-Type 79 96	menopausal clinic
+T42	Encounter 67 74	visited
+E11	Encounter:T42 Type:T43
+T43	Encounter-Type 67 74	visited
+A7	Encounter-Type-Value T43 observation
+T4	Study 357 384	human body application test
+E4	Study:T4 
+T5	Negation 385 394	Exclusion
+E13	Negation:T5 
+T44	Severity 462 468	severe
+A8	Severity-Value T44 severe
+T45	Severity 489 495	severe
+A9	Severity-Value T45 severe
+T46	Condition 496 502	trauma
+E15	Condition:T46 Name:T47 Severity:T45
+T47	Condition-Name 496 502	trauma
+T48	Severity 504 510	severe
+A10	Severity-Value T48 severe
+T49	Condition 511 519	diarrhea
+E17	Condition:T49 Name:T50 Severity:T48
+T50	Condition-Name 511 519	diarrhea
+T51	Condition 521 529	vomiting
+E19	Condition:T51 Name:T52
+T52	Condition-Name 521 529	vomiting
+R4	Example-Of Arg1:E6 Arg2:E8	
+R5	Example-Of Arg1:E15 Arg2:E8	
+R6	Example-Of Arg1:E17 Arg2:E8	
+R7	Example-Of Arg1:E19 Arg2:E8	
+T53	Assertion 425 434	suspected
+E22	Assertion:T53 Asserted:E8
+A11	Assertion-Type-Value E22 possible
+T55	Eq-Comparison 594 611	more than 1 month
+E24	Eq-Comparison:T55 Operator:T56 Value:T28 Temporal-Unit:T57
+T56	Eq-Operator 594 603	more than
+A12	Eq-Operator-Value T56 GT
+T57	Eq-Temporal-Unit 606 611	month
+T58	Drug 569 579	antibiotic
+E25	Drug:T58 Name:T59
+T59	Drug-Name 569 579	antibiotic
+T60	Procedure 580 589	treatment
+E26	Procedure:T60 
+T61	Procedure-Name 580 589	treatment
+R8	Example-Of Arg1:E18 Arg2:E10	
+R9	Example-Of Arg1:E14 Arg2:E10	
+T62	Procedure 808 822	hernia surgery
+E27	Procedure:T62 Name:T63
+T63	Procedure-Name 808 822	hernia surgery
+T64	Exception 774 780	except
+E28	Exception:T64 From:E12 Except:E16 Except2:E27
+T65	Or 805 807	or
+E29	Or:T65 Arg:E16 Arg2:E27
+T66	Drug 842 865	health functional foods
+E30	Drug:T66 Name:T67
+T67	Drug-Name 842 865	health functional foods
+T68	Drug 867 887	lactic acid bacteria
+E31	Drug:T68 Name:T69
+T69	Drug-Name 867 887	lactic acid bacteria
+T70	Drug 893 913	red ginseng extracts
+E32	Drug:T70 Name:T71
+T71	Drug-Name 893 913	red ginseng extracts
+T72	Eq-Temporal-Unit 927 931	year
+A13	Eq-Temporal-Unit-Value T72 year
+T73	Eq-Temporal-Period 914 917	for
+A14	Eq-Temporal-Period-Value T73 past
+T74	Eq-Comparison 914 931	for the past year
+E33	Eq-Comparison:T74 Operator:T23 Temporal-Unit:T72 Temporal-Period:T73
+T20	Study 984 1000	clinical studies
+E20	Study:T20 
+T21	Study 1004 1016	human trials
+E34	Study:T21 
+T75	Study 1038 1053	clinical trials
+E35	Study:T75 
+T76	Study 1057 1080	human application tests
+E36	Study:T76 
+T25	And 889 892	and
+E23	And:T25 Arg:E31 Arg2:E32 Arg3:E30
+T29	Or 1018 1020	or
+E37	Or:T29 Arg:E34 Arg2:E35
+T54	Eq-Comparison 1081 1102	within the past month
+E38	Eq-Comparison:T54 Operator:T24 Temporal-Unit:T77
+T77	Eq-Temporal-Unit 1097 1102	month
+A4	Eq-Temporal-Unit-Value T77 month

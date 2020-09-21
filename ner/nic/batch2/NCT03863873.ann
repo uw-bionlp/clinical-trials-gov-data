@@ -1,0 +1,120 @@
+T1	Eq-Comparison 39 55	mild-to-moderate
+E1	Eq-Comparison:T1 
+T2	Modifier 56 66	idiopathic
+E2	Modifier:T2 Modifies:E3
+T3	Condition 67 70	CTS
+E3	Condition:T3 Name:T37 Severity:T36 Severity2:T35
+T6	Procedure 121 143	conservative treatment
+E6	Procedure:T6 Name:T39
+T7	Procedure 154 160	splint
+E7	Procedure:T7 Name:T40
+T8	Drug 162 173	medications
+E8	Drug:T8 
+T9	Procedure 175 191	Physical therapy
+E9	Procedure:T9 Name:T41
+T10	Eq-Comparison 197 214	at least 3 months
+E10	Eq-Comparison:T10 Operator:T42 Value:T43 Temporal-Unit:T44
+T11	And 215 218	and
+E11	And:T11 
+T12	Procedure 242 268	electrophysiological study
+E12	Procedure:T12 Name:T68
+T13	Or 269 272	and
+E13	Or:T13 Arg:E12 Arg2:E15
+T14	Modifier 273 288	musculoskeletal
+E14	Modifier:T14 Modifies:E15
+T15	Procedure 289 299	ultrasound
+E15	Procedure:T15 Name:T45
+T16	Condition 326 334	Diabetes
+E16	Condition:T16 Name:T46
+T17	Condition 340 354	Hypothyroidism
+E17	Condition:T17 Name:T47
+T18	Condition 360 380	Rheumatoid arthritis
+E18	Condition:T18 Name:T48
+T19	Eq-Comparison 386 394	Previous
+E19	Eq-Comparison:T19 Temporal-Period:T49
+T20	Procedure 395 430	carpal tunnel decompressive surgery
+E20	Procedure:T20 Name:T50 Temporality:E19
+T21	Condition 436 458	Cervical radiculopathy
+E21	Condition:T21 Name:T51
+T22	Condition 460 474	polyneuropathy
+E22	Condition:T22 Name:T52
+T23	Condition 476 495	brachial plexopathy
+E23	Condition:T23 Name:T53
+T24	Condition 497 519	traumatic nerve injury
+E24	Condition:T24 Name:T54
+T25	Condition 521 545	thoracic outlet syndrome
+E25	Condition:T25 Name:T55
+T26	Eq-Comparison 551 559	Previous
+E26	Eq-Comparison:T26 Temporal-Period:T56
+T27	Procedure 560 584	corticosteroid injection
+E27	Procedure:T27 Name:T57 Temporality:E26 Temporality2:E29
+T28	Modifier 594 607	carpal tunnel
+E28	Modifier:T28 Modifies:E27
+T29	Eq-Comparison 615 632	preceding 4 weeks
+E29	Eq-Comparison:T29 Temporal-Period:T59 Value:T60 Temporal-Unit:T61
+T30	Condition 638 644	Anemia
+E30	Condition:T30 Name:T62
+T31	Observation 646 656	hemoglobin
+E31	Observation:T31 Name:T63
+T32	Eq-Comparison 657 663	<10gm%
+E32	Eq-Comparison:T32 Operator:T64 Value:T65
+T33	Condition 670 682	Coagulopathy
+E33	Condition:T33 Name:T66
+T34	Condition 688 697	Pregnancy
+E34	Condition:T34 Name:T67
+T35	Severity 39 43	mild
+A2	Severity-Value T35 mild
+T36	Severity 47 55	moderate
+A3	Severity-Value T36 moderate
+T37	Condition-Name 56 70	idiopathic CTS
+T39	Procedure-Name 121 143	conservative treatment
+T40	Procedure-Name 154 160	splint
+T41	Procedure-Name 175 191	Physical therapy
+T42	Eq-Operator 197 205	at least
+A4	Eq-Operator-Value T42 GTEQ
+T43	Eq-Value 206 207	3
+T44	Eq-Temporal-Unit 208 214	months
+A5	Eq-Temporal-Unit-Value T44 month
+T45	Procedure-Name 289 299	ultrasound
+T46	Condition-Name 326 334	Diabetes
+T47	Condition-Name 340 354	Hypothyroidism
+T48	Condition-Name 360 380	Rheumatoid arthritis
+T49	Eq-Temporal-Period 386 394	Previous
+A6	Eq-Temporal-Period-Value T49 past
+T50	Procedure-Name 395 430	carpal tunnel decompressive surgery
+T51	Condition-Name 436 458	Cervical radiculopathy
+T52	Condition-Name 460 474	polyneuropathy
+T53	Condition-Name 476 495	brachial plexopathy
+T54	Condition-Name 497 519	traumatic nerve injury
+T55	Condition-Name 521 545	thoracic outlet syndrome
+T56	Eq-Temporal-Period 551 559	Previous
+A7	Eq-Temporal-Period-Value T56 past
+T57	Procedure-Name 560 584	corticosteroid injection
+T58	Procedure-Name 594 607	carpal tunnel
+T59	Eq-Temporal-Period 615 624	preceding
+A8	Eq-Temporal-Period-Value T59 past
+T60	Eq-Value 625 626	4
+T61	Eq-Temporal-Unit 627 632	weeks
+A9	Eq-Temporal-Unit-Value T61 week
+T62	Condition-Name 638 644	Anemia
+T63	Observation-Name 646 656	hemoglobin
+A10	Observation-Type-Value T63 lab
+T64	Eq-Operator 657 658	<
+A11	Eq-Operator-Value T64 LT
+T65	Eq-Value 658 663	10gm%
+T66	Condition-Name 670 682	Coagulopathy
+T67	Condition-Name 688 697	Pregnancy
+T4	Observation 76 99	clinical manifestations
+E4	Observation:T4 Name:T5
+T5	Observation-Name 76 99	clinical manifestations
+A1	Observation-Type-Value T5 clinical-score
+R1	Caused-By Arg1:E4 Arg2:E3	
+T38	Negation 100 106	failed
+E5	Negation:T38 Temporality:E10
+R2	Example-Of Arg1:E7 Arg2:E6	
+R3	Example-Of Arg1:E8 Arg2:E6	
+R4	Example-Of Arg1:E9 Arg2:E6	
+T68	Procedure-Name 242 268	electrophysiological study
+R5	Found-By Arg1:E3 Arg2:E12	
+R6	Found-By Arg1:E3 Arg2:E15	
+R7	Equivalent-To Arg1:E31 Arg2:E30	

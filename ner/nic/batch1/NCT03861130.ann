@@ -1,0 +1,113 @@
+T1	Condition 120 136	Kawasaki disease
+T2	Condition-Name 120 136	Kawasaki disease
+E1	Condition:T1 Name:T2
+T3	Condition 188 204	Kawasaki disease
+T4	Condition-Name 188 204	Kawasaki disease
+E3	Condition:T3 Name:T4
+T5	Life-Stage-And-Gender 34 42	children
+A1	Life-Stage-And-Gender-Type T5 child
+T6	Condition 783 807	Cervical lymphadenopathy
+T7	Condition-Name 783 807	Cervical lymphadenopathy
+E6	Condition:T6 Name:T7
+T8	Condition 710 727	strawberry tongue
+T9	Condition-Name 710 727	strawberry tongue
+E8	Condition:T8 Name:T9
+T10	Condition 924 940	Kawasaki disease
+T11	Condition-Name 924 940	Kawasaki disease
+E10	Condition:T10 Name:T11
+T14	Condition 729 777	diffuse injection of oral and pharyngeal mucosae
+T15	Condition-Name 729 777	diffuse injection of oral and pharyngeal mucosae
+E14	Condition:T14 Name:T15
+T16	Condition 453 461	erythema
+T17	Condition-Name 453 461	erythema
+E16	Condition:T16 Name:T17
+T18	Condition 679 687	erythema
+T19	Condition-Name 679 687	erythema
+E18	Condition:T18 Name:T19
+T20	Language 285 288	doi
+T21	Condition 1058 1084	coronary artery dilatation
+T22	Condition-Name 1058 1084	coronary artery dilatation
+E21	Condition:T21 Name:T22
+T23	Life-Stage-And-Gender 1106 1111	child
+A2	Life-Stage-And-Gender-Type T23 child
+T24	Condition 1214 1230	Kawasaki disease
+T25	Condition-Name 1214 1230	Kawasaki disease
+E24	Condition:T24 Name:T25
+T26	Life-Stage-And-Gender 1165 1173	children
+A3	Life-Stage-And-Gender-Type T26 child
+T27	Eq-Operator 809 810	>
+A4	Eq-Operator-Value T27 GT
+T28	Eq-Temporal-Unit 361 365	days
+A5	Eq-Temporal-Unit-Value T28 day
+T29	Eq-Unit 813 815	cm
+T30	Eq-Operator 280 281	-
+A6	Eq-Operator-Value T30 BETWEEN
+T31	Eq-Value 268 272	2001
+T32	Eq-Value 273 276	103
+T33	Eq-Value 277 280	335
+T34	Eq-Value 281 284	336
+T35	Eq-Value 305 308	103
+T36	Eq-Value 810 811	1
+T37	Eq-Comparison 809 811	>1
+E25	Eq-Comparison:T37 Operator:T27 Value:T36 Unit:T29
+T38	Eq-Comparison 277 281	335-
+E26	Eq-Comparison:T38 Operator:T30 Value:T33
+T39	Assertion 98 119	diagnosis of possible
+E2	Assertion:T39 Asserted:T2
+A7	Assertion-Type-Value E2 possible
+T40	Condition 252 254	KD
+E4	Condition:T40 
+T41	Condition-Name 252 254	KD
+T12	Eq-Comparison 347 365	at least five days
+E5	Eq-Comparison:T12 Operator:T13 Value:T42 Temporal-Unit:T28
+T13	Eq-Operator 347 355	at least
+A8	Eq-Operator-Value T13 GTEQ
+T42	Eq-Value 356 360	five
+T44	Condition 325 342	presence of fever
+E7	Condition:T44 Name:T45 Duration:E5
+T45	Condition-Name 325 342	presence of fever
+T43	Condition 408 445	Changes in the peripheral extremities
+E9	Condition:T43 Name:T46
+T46	Condition-Name 408 445	Changes in the peripheral extremities
+T47	Modifier 446 451	Acute
+E11	Modifier:T47 Modifies:E16
+T48	Condition 466 490	oedema of hands and feet
+E12	Condition:T48 Name:T49
+T49	Condition-Name 466 490	oedema of hands and feet
+T50	And 462 465	and
+E13	And:T50 Arg:E16 Arg2:E12
+T51	Condition 505 542	membranous desquamation of fingertips
+E15	Condition:T51 Name:T52
+T52	Condition-Name 505 542	membranous desquamation of fingertips
+T53	Modifier 491 503	Convalescent
+E17	Modifier:T53 Modifies:E15
+T54	Condition 548 570	Polymorphous exanthema
+E19	Condition:T54 Name:T55
+T55	Condition-Name 548 570	Polymorphous exanthema
+T56	Condition 576 640	Bilateral painless bulbar conjunctival injection without exudate
+E20	Condition:T56 Name:T57
+T57	Condition-Name 576 640	Bilateral painless bulbar conjunctival injection without exudate
+T58	Condition 646 677	Changes in lips and oral cavity
+E22	Condition:T58 Name:T59
+T59	Condition-Name 646 677	Changes in lips and oral cavity
+T60	Condition 692 708	cracking of lips
+E23	Condition:T60 Name:T61
+T61	Condition-Name 692 708	cracking of lips
+T62	Condition 959 964	fever
+E27	Condition:T62 Name:T63
+T63	Condition-Name 959 964	fever
+T64	Condition 1008 1024	elevation of CRP
+E28	Condition:T64 Name:T65
+T65	Condition-Name 1008 1024	elevation of CRP
+T66	Observation 1028 1054	echocardiographic evidence
+E29	Observation:T66 Name:T67
+T67	Observation-Name 1028 1054	echocardiographic evidence
+A9	Observation-Type-Value T67 lab
+R1	Found-By Arg1:E21 Arg2:E29	
+T68	Family-Member 1086 1093	Parents
+E30	Family-Member:T68 
+T69	Family-Member 1120 1138	biological parents
+E31	Family-Member:T69 
+T70	Assertion 1205 1213	possible
+E32	Assertion:T70 Asserted:E24
+A10	Assertion-Type-Value E32 possible

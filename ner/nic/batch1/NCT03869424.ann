@@ -1,0 +1,73 @@
+T1	Condition 100 116	mental disorders
+T2	Condition-Name 100 116	mental disorders
+E1	Condition:T1 Name:T2
+T3	Condition 493 516	cardio vascular disease
+T4	Condition-Name 493 516	cardio vascular disease
+E3	Condition:T3 Name:T4
+T5	Language 59 74	German language
+T6	Condition 522 536	kidney disease
+T7	Condition-Name 522 536	kidney disease
+E6	Condition:T6 Name:T7
+T8	Condition 542 555	liver disease
+T9	Condition-Name 542 555	liver disease
+E8	Condition:T8 Name:T9
+T11	Condition-Name 294 316	consumption of alcohol
+T12	Condition 465 474	pregnancy
+T13	Condition-Name 465 474	pregnancy
+E12	Condition:T12 Name:T13 Temporality:E19
+T14	Condition 478 487	lactation
+T15	Condition-Name 478 487	lactation
+E14	Condition:T14 Name:T15 Temporality:E19
+T16	Eq-Temporal-Unit 232 237	weeks
+A1	Eq-Temporal-Unit-Value T16 week
+T17	Eq-Temporal-Unit 283 288	weeks
+A2	Eq-Temporal-Unit-Value T17 week
+T18	Condition 25 32	healthy
+E2	Condition:T18 Name:T19
+T19	Condition-Name 25 32	healthy
+T20	Allergy 122 130	allergic
+E4	Allergy:T20 
+T21	Drug 134 143	capsaicin
+E5	Drug:T21 Name:T22
+T22	Drug-Name 134 143	capsaicin
+T23	Allergy 149 157	allergic
+E7	Allergy:T23 
+T24	Drug 161 171	sesame oil
+E9	Drug:T24 Name:T25
+T25	Drug-Name 161 171	sesame oil
+T26	Drug 187 214	psychopharmacological drugs
+E11	Drug:T26 Name:T27 Temporality:E13
+T27	Drug-Name 187 214	psychopharmacological drugs
+T28	Eq-Comparison 215 237	in the last four weeks
+E13	Eq-Comparison:T28 Value:T31 Temporal-Period:T30 Operator:T29 Temporal-Unit:T16
+T29	Eq-Operator 215 217	in
+A3	Eq-Operator-Value T29 LTEQ
+T30	Eq-Temporal-Period 222 226	last
+A4	Eq-Temporal-Period-Value T30 past
+T31	Eq-Value 227 231	four
+T32	Drug 261 266	drugs
+E15	Drug:T32 Temporality:E17
+T33	Modifier 253 260	illegal
+E16	Modifier:T33 Modifies:E15
+T34	Eq-Comparison 267 288	in the last two weeks
+E17	Eq-Comparison:T34 Temporal-Period:T36 Value:T37 Operator:T35
+T35	Eq-Operator 267 269	in
+T36	Eq-Temporal-Period 274 278	last
+A5	Eq-Temporal-Period-Value T36 past
+T37	Eq-Value 279 282	two
+T10	Condition 294 316	consumption of alcohol
+E10	Condition:T10 Name:T11 Temporality:E18
+T38	Eq-Comparison 317 341	in the last twelve hours
+E18	Eq-Comparison:T38 Value:T41 Temporal-Unit:T42 Temporal-Period:T40 Operator:T39
+T39	Eq-Operator 317 319	in
+A6	Eq-Operator-Value T39 LTEQ
+T40	Eq-Temporal-Period 324 328	last
+A7	Eq-Temporal-Period-Value T40 past
+T41	Eq-Value 329 335	twelve
+T42	Eq-Temporal-Unit 336 341	hours
+T43	Eq-Comparison 457 464	current
+E19	Eq-Comparison:T43 Temporal-Period:T44
+T44	Eq-Temporal-Period 457 464	current
+A8	Eq-Temporal-Period-Value T44 present
+T45	Or 476 477	r
+E20	Or:T45 Arg:E12 Arg2:E14

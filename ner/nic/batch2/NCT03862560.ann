@@ -1,0 +1,27 @@
+T1	Eq-Temporal-Unit 71 76	years
+A1	Eq-Temporal-Unit-Value T1 year
+T2	Eq-Temporal-Unit 120 125	years
+A2	Eq-Temporal-Unit-Value T2 year
+T3	Eq-Operator 65 67	to
+A3	Eq-Operator-Value T3 BETWEEN
+T4	Eq-Value 62 64	12
+T5	Eq-Value 68 70	20
+T6	Eq-Value 118 119	3
+T7	Eq-Comparison 62 67	12 to
+E1	Eq-Comparison:T7 Operator:T3 Value:T4 Value2:T5 Temporal-Unit:T1
+T8	Ethnicity 25 34	Caucasian
+T9	Condition 36 43	Healthy
+E2	Condition:T9 Name:T10
+T10	Condition-Name 36 43	Healthy
+T11	Age 77 80	old
+E3	Age:T11 Eq-Comparison:E1
+T12	Eq-Comparison 109 125	at least 3 years
+E4	Eq-Comparison:T12 Operator:T13 Temporal-Unit:T2 Value:T6
+T13	Eq-Operator 109 117	at least
+A4	Eq-Operator-Value T13 GTEQ
+T14	Procedure 100 108	training
+E5	Procedure:T14 Duration:E4
+T15	Ethnicity 152 165	Non-caucasian
+T16	Condition 167 173	injury
+E6	Condition:T16 Name:T17
+T17	Condition-Name 167 173	injury

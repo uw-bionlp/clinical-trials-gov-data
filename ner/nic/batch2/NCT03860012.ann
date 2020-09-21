@@ -1,0 +1,55 @@
+T1	Eq-Operator 248 249	>
+A1	Eq-Operator-Value T1 GT
+T2	Eq-Operator 256 265	less than
+A2	Eq-Operator-Value T2 LT
+T3	Eq-Temporal-Unit 185 190	years
+A3	Eq-Temporal-Unit-Value T3 year
+T4	Age 244 247	age
+E1	Age:T4 Eq-Comparison:E2 Eq-Comparison2:E3
+T5	Eq-Operator 181 182	-
+A4	Eq-Operator-Value T5 BETWEEN
+T6	Eq-Value 180 181	2
+T7	Eq-Value 182 184	21
+T8	Eq-Value 250 252	21
+T9	Eq-Value 266 267	2
+T10	Eq-Comparison 248 252	> 21
+E2	Eq-Comparison:T10 Operator:T1 Value:T8
+T11	Eq-Comparison 256 267	less than 2
+E3	Eq-Comparison:T11 Operator:T2 Value:T9
+T12	Eq-Comparison 180 182	2-
+E4	Eq-Comparison:T12 Operator:T5 Value:T6 Temporal-Unit:T3
+T13	Condition 25 51	inflammatory bowel disease
+E5	Condition:T13 Name:T14
+T14	Condition-Name 25 51	inflammatory bowel disease
+T15	Drug 60 72	methotrexate
+E6	Drug:T15 Name:T16
+T16	Drug-Name 60 72	methotrexate
+T17	Observation 107 120	folate levels
+E7	Observation:T17 Name:T18 Polarity:T19 Temporality:E9
+T18	Observation-Name 107 120	folate levels
+A5	Observation-Type-Value T18 lab
+T19	Polarity 100 106	normal
+A6	Polarity-Value T19 normal
+T20	Study 133 138	study
+E8	Study:T20 Temporality:E9
+T21	Eq-Comparison 124 129	onset
+E9	Eq-Comparison:T21 Temporal-Period:T22
+T22	Eq-Temporal-Period 124 129	onset
+A7	Eq-Temporal-Period-Value T22 present
+T23	Age 175 179	ages
+E10	Age:T23 
+R1	Equivalent-To Arg1:E10 Arg2:E4	
+T24	Drug 159 169	folic acid
+E11	Drug:T24 Name:T25
+T25	Drug-Name 159 169	folic acid
+T26	Procedure 144 153	treatment
+E12	Procedure:T26 
+R2	Using Arg1:E12 Arg2:E11	
+T27	Observation 225 238	folate levels
+E13	Observation:T27 Name:T28 Polarity:T29
+T28	Observation-Name 225 238	folate levels
+A8	Observation-Type-Value T28 lab
+T29	Polarity 216 224	abnormal
+A9	Polarity-Value T29 abnormal
+T30	Or 253 255	or
+E14	Or:T30 Arg:E2 Arg2:E3

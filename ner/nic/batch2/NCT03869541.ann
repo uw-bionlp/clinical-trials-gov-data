@@ -1,0 +1,92 @@
+T1	Encounter 56 64	admitted
+E1	Encounter:T1 
+T2	Eq-Comparison 84 93	receiving
+E2	Eq-Comparison:T2 Temporal-Period:T30
+T3	Drug 94 110	vasoactive drugs
+E3	Drug:T3 Name:T31
+T4	Age 117 120	Age
+E4	Age:T4 
+T5	Eq-Comparison 121 154	greater than or equal to 18 years
+E5	Eq-Comparison:T5 Operator:T32 Value:T33 Temporal-Unit:T34
+T6	Assertion 165 176	Expected to
+E6	Assertion:T6 
+A1	Assertion-Type-Value E6 hypothetical
+T7	Encounter 184 192	admitted
+E7	Encounter:T7 
+T8	Encounter 200 203	ICU
+E8	Encounter:T8 
+T9	Eq-Comparison 208 225	at least 24 hours
+E9	Eq-Comparison:T9 Operator:T36 Value:T37 Temporal-Unit:T38
+T10	Temporal-Connection 226 230	post
+E10	Temporal-Connection:T10 
+A2	Temporal-Connection-Type-Value E10 after
+T11	Assertion 286 297	expected to
+E11	Assertion:T11 
+A3	Assertion-Type-Value E11 hypothetical
+T12	Procedure 298 312	die imminently
+E12	Procedure:T12 
+T13	Contraindication 378 393	contraindicated
+E13	Contraindication:T13 
+T14	Condition 426 434	injuries
+E14	Condition:T14 Name:T39
+T15	Observation 506 515	prisoners
+E15	Observation:T15 Name:T40
+T16	Encounter 532 541	probation
+E16	Encounter:T16 
+T17	Condition 562 583	neuromuscular disease
+E17	Condition:T17 Name:T42
+T18	Or 584 586	or
+E18	Or:T18 
+T19	Modifier 593 598	brain
+E19	Modifier:T19 
+T20	Condition 599 605	injury
+E20	Condition:T20 
+T21	Or 606 608	or
+E21	Or:T21 
+T22	Modifier 609 620	spinal cord
+E22	Modifier:T22 
+T23	Condition 621 627	injury
+E23	Condition:T23 Name:T45
+T24	Negation 675 681	unable
+E24	Negation:T24 
+T25	Encounter 901 909	admitted
+E25	Encounter:T25 
+T26	Procedure 1139 1162	physical rehabilitation
+E26	Procedure:T26 
+T27	Study 1207 1212	study
+E27	Study:T27 
+T28	Encounter-Type 56 64	admitted
+A4	Encounter-Type-Value T28 inpatient
+T29	Location 72 75	ICU
+A5	Location-Value T29 hospital
+T30	Eq-Temporal-Period 84 93	receiving
+A6	Eq-Temporal-Period-Value T30 present
+T31	Drug-Name 94 110	vasoactive drugs
+T32	Eq-Operator 121 142	greater than or equal
+A7	Eq-Operator-Value T32 GTEQ
+T33	Eq-Value 146 148	18
+T34	Eq-Temporal-Unit 149 154	years
+A8	Eq-Temporal-Unit-Value T34 year
+T35	Location 200 203	ICU
+A9	Location-Value T35 hospital
+T36	Eq-Operator 208 216	at least
+A10	Eq-Operator-Value T36 GTEQ
+T37	Eq-Value 217 219	24
+T38	Eq-Temporal-Unit 220 225	hours
+A11	Eq-Temporal-Unit-Value T38 hour
+T39	Condition-Name 426 434	injuries
+T40	Observation-Name 506 515	prisoners
+T41	Encounter-Type 532 541	probation
+A12	Encounter-Type-Value T41 inpatient
+T42	Condition-Name 562 583	neuromuscular disease
+T43	Severity 587 592	acute
+A13	Severity-Value T43 severe
+T44	Condition-Name 593 605	brain injury
+T45	Condition-Name 621 627	injury
+T46	Language 691 698	English
+T47	Location 844 863	intensive care unit
+A14	Location-Value T47 unit
+T48	Encounter-Type 901 909	admitted
+A15	Encounter-Type-Value T48 inpatient
+T49	Observation-Name 1081 1094	ICU clinician
+T50	Procedure-Name 1135 1162	ICU physical rehabilitation

@@ -1,0 +1,84 @@
+T1	Condition 95 111	Mental Disorders
+E1	Condition:T1 Name:T27
+T2	Eq-Comparison 113 118	Fifth
+E2	Eq-Comparison:T2 
+T3	Condition 119 132	Edition(DSM-5
+E3	Condition:T3 
+T4	Condition 176 184	disorder
+E4	Condition:T4 
+T5	Eq-Comparison 185 186	≥
+E5	Eq-Comparison:T5 Operator:T29
+T6	Observation 243 257	Arena of Valor
+E6	Observation:T6 
+T7	Eq-Comparison 318 340	over 20 hours per week
+E7	Eq-Comparison:T7 Operator:T31 Value:T32 Temporal-Unit:T33 Temporal-Unit:T34
+T8	Eq-Comparison 347 367	minimum of 12 months
+E8	Eq-Comparison:T8 Value:T36 Temporal-Unit:T37
+T9	Condition 424 427	IAT
+E9	Condition:T9 Name:T38
+T10	Eq-Comparison 429 433	≥ 50
+E10	Eq-Comparison:T10 Operator:T39 Value:T40
+T11	Eq-Comparison 459 466	Current
+E11	Eq-Comparison:T11 Temporal-Period:T41
+T12	Or 467 469	or
+E12	Or:T12 
+T13	Eq-Comparison 470 477	history
+E13	Eq-Comparison:T13 Temporal-Period:T42
+T14	Condition 488 506	illegal substances
+E14	Condition:T14 
+T15	Or 507 510	and
+E15	Or:T15 
+T16	Modifier 511 519	gambling
+E16	Modifier:T16 
+T17	Eq-Comparison 526 533	Current
+E17	Eq-Comparison:T17 Temporal-Period:T43
+T18	Or 534 536	or
+E18	Or:T18 
+T19	Eq-Comparison 537 544	history
+E19	Eq-Comparison:T19 Temporal-Period:T44
+T20	Modifier 548 559	psychiatric
+E20	Modifier:T20 
+T21	Or 560 562	or
+E21	Or:T21 
+T22	Modifier 563 575	neurological
+E22	Modifier:T22 
+T23	Condition 576 583	illness
+E23	Condition:T23 
+T24	Eq-Comparison 590 601	Current use
+E24	Eq-Comparison:T24 Temporal-Period:T46
+T25	Drug 605 629	psychotropic medications
+E25	Drug:T25 Name:T47
+T26	Eq-Value 43 44	9
+T27	Condition-Name 95 111	Mental Disorders
+T28	Condition-Name 169 184	gaming disorder
+T29	Eq-Operator 185 186	≥
+A1	Eq-Operator-Value T29 GTEQ
+T30	Observation-Name 298 312	Battle Grounds
+T31	Eq-Operator 318 322	over
+A2	Eq-Operator-Value T31 GT
+T32	Eq-Value 323 325	20
+T33	Eq-Temporal-Unit 326 331	hours
+A3	Eq-Temporal-Unit-Value T33 hour
+T34	Eq-Temporal-Unit 336 340	week
+A4	Eq-Temporal-Unit-Value T34 week
+T35	Eq-Operator 345 354	a minimum
+A5	Eq-Operator-Value T35 GTEQ
+T36	Eq-Value 358 360	12
+T37	Eq-Temporal-Unit 361 367	months
+A6	Eq-Temporal-Unit-Value T37 month
+T38	Condition-Name 424 427	IAT
+T39	Eq-Operator 429 430	≥
+A7	Eq-Operator-Value T39 GTEQ
+T40	Eq-Value 431 433	50
+T41	Eq-Temporal-Period 459 466	Current
+A8	Eq-Temporal-Period-Value T41 present
+T42	Eq-Temporal-Period 470 477	history
+A9	Eq-Temporal-Period-Value T42 past
+T43	Eq-Temporal-Period 526 533	Current
+A10	Eq-Temporal-Period-Value T43 present
+T44	Eq-Temporal-Period 537 544	history
+A11	Eq-Temporal-Period-Value T44 past
+T45	Condition-Name 563 583	neurological illness
+T46	Eq-Temporal-Period 590 597	Current
+A12	Eq-Temporal-Period-Value T46 present
+T47	Drug-Name 605 629	psychotropic medications

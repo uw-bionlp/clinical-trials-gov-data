@@ -1,0 +1,34 @@
+T1	Eq-Comparison 41 50	≥18 years
+E1	Eq-Comparison:T1 Operator:T13 Temporal-Unit:T14
+T2	Age 54 57	age
+E2	Age:T2 
+T3	And 59 62	who
+E3	And:T3 
+T4	Eq-Comparison 67 77	undergoing
+E4	Eq-Comparison:T4 Temporal-Period:T15
+T5	Condition 78 106	esophago-gastro duodenoscopy
+E5	Condition:T5 Name:T16
+T6	Condition 108 111	EGD
+E6	Condition:T6 
+T7	Study 169 174	study
+E7	Study:T7 
+T8	Temporal-Connection 175 181	during
+E8	Temporal-Connection:T8 
+A1	Temporal-Connection-Type-Value E8 during
+T9	Study 186 191	study
+E9	Study:T9 
+T10	Negation 242 248	cannot
+E10	Negation:T10 
+T11	Negation 278 284	cannot
+E11	Negation:T11 
+T12	Life-Stage-And-Gender 25 30	adult
+A2	Life-Stage-And-Gender-Type T12 adult
+T13	Eq-Operator 41 44	≥18
+A3	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 45 50	years
+A4	Eq-Temporal-Unit-Value T14 year
+T15	Eq-Temporal-Period 67 77	undergoing
+A5	Eq-Temporal-Period-Value T15 present
+T16	Condition-Name 78 106	esophago-gastro duodenoscopy
+T17	Observation-Name 108 111	EGD
+T18	Language 255 262	English

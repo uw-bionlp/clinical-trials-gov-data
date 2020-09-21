@@ -1,17 +1,15 @@
 T1	Observation 77 91	blood donation
 E1	Observation:T1 Name:T10
 T2	Age 97 100	age
-E2	Age:T2 
+E2	Age:T2 Eq-Comparison:E3
 T3	Eq-Comparison 101 111	≥ 18 years
 E3	Eq-Comparison:T3 Operator:T11 Value:T12 Temporal-Unit:T13
 T4	Encounter 180 192	hospitalized
 E4	Encounter:T4 
 T5	Age 229 232	age
-E5	Age:T5 
+E5	Age:T5 Eq-Comparison:E6
 T6	Eq-Comparison 233 243	≥ 18 years
 E6	Eq-Comparison:T6 Operator:T15 Value:T16 Temporal-Unit:T17
-T7	Age 244 247	old
-E7	Age:T7 
 T8	Encounter 253 268	hospitalization
 E8	Encounter:T8 
 T9	Study 313 318	study
@@ -32,3 +30,6 @@ T17	Eq-Temporal-Unit 238 243	years
 A6	Eq-Temporal-Unit-Value T17 year
 T18	Encounter-Type 253 268	hospitalization
 A7	Encounter-Type-Value T18 inpatient
+T19	Assertion 54 72	selection criteria
+E10	Assertion:T19 Asserted:E1
+A8	Assertion-Type-Value E10 hypothetical

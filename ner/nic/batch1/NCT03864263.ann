@@ -1,0 +1,24 @@
+T1	Condition 69 82	pre-pregnancy
+T2	Condition-Name 69 82	pre-pregnancy
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 101 109	Children
+A1	Life-Stage-And-Gender-Type T3 child
+T4	Life-Stage-And-Gender 187 195	Children
+A2	Life-Stage-And-Gender-Type T4 child
+T7	Condition 55 67	HBV-infected
+T8	Condition-Name 55 67	HBV-infected
+E7	Condition:T7 Name:T8
+T9	Condition 201 214	HBV infection
+T10	Condition-Name 201 214	HBV infection
+E9	Condition:T9 Name:T10
+T11	Family-Member 29 35	father
+E2	Family-Member:T11 
+T12	Family-Member 45 51	mother
+E3	Family-Member:T12 
+T13	Or 36 44	or (and)
+E4	Or:T13 Arg:E2 Arg2:E3
+T14	Procedure 113 148	vaccinated with hepatitis B vaccine
+E6	Procedure:T14 Name:T15
+T15	Procedure-Name 113 148	vaccinated with hepatitis B vaccine
+T5	Birth 155 160	birth
+E5	Birth:T5 

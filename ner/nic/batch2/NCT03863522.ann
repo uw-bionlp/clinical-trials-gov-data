@@ -1,0 +1,26 @@
+T1	Eq-Comparison 69 93	18 years of age or older
+E1	Eq-Comparison:T1 Value:T10 Temporal-Unit:T11 Operator:T12
+T3	Procedure 132 161	ultrasound core needle biopsy
+E3	Procedure:T3 Name:T13
+T4	Assertion 167 177	suspicious
+E4	Assertion:T4 Asserted:E5
+A1	Assertion-Type-Value E4 possible
+T5	Condition 178 191	breast lesion
+E5	Condition:T5 Name:T14
+T6	Negation 233 241	excluded
+E6	Negation:T6 
+T7	Condition 250 259	condition
+E7	Condition:T7 
+T8	Drug 348 357	medicines
+E8	Drug:T8 
+T9	Life-Stage-And-Gender 41 47	female
+A2	Life-Stage-And-Gender-Type T9 female
+T10	Eq-Value 69 71	18
+T11	Eq-Temporal-Unit 72 77	years
+A3	Eq-Temporal-Unit-Value T11 year
+T12	Eq-Operator 85 93	or older
+A4	Eq-Operator-Value T12 GTEQ
+T13	Procedure-Name 132 161	ultrasound core needle biopsy
+T14	Condition-Name 178 191	breast lesion
+T15	Age 81 84	age
+E9	Age:T15 Eq-Comparison:E1
