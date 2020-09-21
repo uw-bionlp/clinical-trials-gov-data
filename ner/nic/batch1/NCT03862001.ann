@@ -1,6 +1,4 @@
 T1	Language 148 155	English
-T4	Family-Member 588 591	PCP
-E4	Family-Member:T4 
 T6	Eq-Operator 118 124	within
 A1	Eq-Operator-Value T6 LTEQ
 T7	Eq-Operator 248 254	within
@@ -22,46 +20,101 @@ T16	Eq-Value 134 136	15
 T17	Eq-Comparison 29 32	55-
 E6	Eq-Comparison:T17 Operator:T12 Value:T13
 T18	Eq-Comparison 47 81	at least 30 pack-years in lifetime
-E1	Eq-Comparison:T18 Operator:T19 Temporal-Unit:T9 Value:T15
+E1	Eq-Comparison:T18 Operator:T19 Temporal-Unit:T9 Value:T15 Temporal-Period:T41
 T19	Eq-Operator 47 55	at least
 A7	Eq-Operator-Value T19 GTEQ
-T20	Condition 90 103	former smoker
-E3	Condition:T20 Name:T21
-T21	Condition-Name 90 103	former smoker
+T20	Condition 97 103	smoker
+E3	Condition:T20 Name:T21 Temporality:E21
+T21	Condition-Name 97 103	smoker
 T22	Eq-Comparison 118 142	within the last 15 years
-E7	Eq-Comparison:T22 Operator:T6 Temporal-Unit:T10 Value:T16
-T23	Condition 189 200	lung cancer
-E8	Condition:T23 Name:T24
-T24	Condition-Name 189 200	lung cancer
-T25	Negation 169 185	no prior history
+E7	Eq-Comparison:T22 Operator:T6 Temporal-Unit:T10 Value:T16 Temporal-Period:T47
+T23	Condition 194 200	cancer
+E8	Condition:T23 Name:T24 Temporality:E24
+T24	Condition-Name 194 200	cancer
+T25	Negation 169 171	no
 E9	Negation:T25 Negates:E8
-T26	Observation 221 247	lung cancer screening test
-E10	Observation:T26 Name:T27
-T27	Observation-Name 221 247	lung cancer screening test
-A8	Observation-Type-Value T27 lab
-T28	Negation 206 218	did not have
-E11	Negation:T28 
-R1	Abbrev-Of Arg1:E11 Arg2:E10	
-T29	Temporal-Connection 248 268	within the last year
-E12	Temporal-Connection:T29 Arg:E10
-A9	Temporal-Connection-Type-Value E12 before
-T2	Family-Member 274 277	PCP
-E2	Family-Member:T2 
-T3	Provider 352 424	University of California, San Francisco (UCSF) internal medicine clinics
-E13	Provider:T3 
-T30	Negation 426 435	Exclusion
-E14	Negation:T30 
-T31	Language 462 470	language
+T28	Negation 210 213	not
+E11	Negation:T28 Negates:E10
 T32	Language 482 489	English
-T33	Negation 471 481	other than
-E15	Negation:T33 Negates:T32
-T34	Condition 512 523	lung cancer
-E16	Condition:T34 Name:T35
-T35	Condition-Name 512 523	lung cancer
-T36	Observation 535 561	lung cancer screening test
-E17	Observation:T36 Name:T37
-T37	Observation-Name 535 561	lung cancer screening test
-A10	Observation-Type-Value T37 lab
-T38	Temporal-Connection 562 582	within the last year
-E18	Temporal-Connection:T38 Arg:E17
-A11	Temporal-Connection-Type-Value E18 before
+T34	Condition 517 523	cancer
+E16	Condition:T34 Name:T35 Temporality:E28
+T35	Condition-Name 517 523	cancer
+T5	Condition 40 46	smoked
+E19	Condition:T5 Name:T39
+T39	Condition-Name 40 46	smoked
+T40	Observation 40 46	smoked
+E20	Observation:T40 Eq-Comparison:E1
+T41	Eq-Temporal-Period 73 81	lifetime
+A12	Eq-Temporal-Period-Value T41 anytime
+T42	Eq-Comparison 90 96	former
+E21	Eq-Comparison:T42 Temporal-Period:T43
+T43	Eq-Temporal-Period 90 96	former
+A13	Eq-Temporal-Period-Value T43 past
+T44	Condition 110 117	smoking
+E22	Condition:T44 Name:T45 Temporality:E7
+T45	Condition-Name 110 117	smoking
+T46	Negation 105 109	quit
+E23	Negation:T46 Negates:E22
+T47	Eq-Temporal-Period 129 133	last
+A14	Eq-Temporal-Period-Value T47 past
+T48	Eq-Comparison 172 185	prior history
+E24	Eq-Comparison:T48 Temporal-Period:T49
+T49	Eq-Temporal-Period 172 185	prior history
+A15	Eq-Temporal-Period-Value T49 past
+T50	Modifier 189 193	lung
+E25	Modifier:T50 Modifies:T24
+T29	Eq-Comparison 248 268	within the last year
+E12	Eq-Comparison:T29 Operator:T7 Temporal-Period:T51 Temporal-Unit:T52
+T51	Eq-Temporal-Period 259 263	last
+A9	Eq-Temporal-Period-Value T51 past
+T52	Eq-Temporal-Unit 264 268	year
+A16	Eq-Temporal-Unit-Value T52 year
+T26	Procedure 233 247	screening test
+E10	Procedure:T26 Name:T27 Temporality:E12
+T27	Procedure-Name 233 247	screening test
+T53	Condition 226 232	cancer
+E26	Condition:T53 Name:T54
+T54	Condition-Name 226 232	cancer
+T55	Modifier 221 225	lung
+E27	Modifier:T55 Modifies:T54
+R1	Treatment-For Arg1:E10 Arg2:E26	
+T2	Eq-Comparison 333 342	scheduled
+E2	Eq-Comparison:T2 Temporal-Period:T3
+T3	Eq-Temporal-Period 333 342	scheduled
+A8	Eq-Temporal-Period-Value T3 future
+T56	Encounter 343 348	visit
+E13	Encounter:T56 Temporality:E2 Location:T57 Location2:T59
+T57	Location 352 391	University of California, San Francisco
+A17	Location-Value T57 hospital
+T58	Location 393 397	UCSF
+A18	Location-Value T58 hospital
+R2	Abbrev-Of Arg1:T58 Arg2:T57	
+T59	Location 399 424	internal medicine clinics
+A19	Location-Value T59 clinic
+T30	Negation 471 481	other than
+E14	Negation:T30 Negates:T32
+T31	Modifier 512 516	lung
+E15	Modifier:T31 Modifies:T35
+T33	Eq-Comparison 501 508	history
+E28	Eq-Comparison:T33 Temporal-Period:T60
+T60	Eq-Temporal-Period 501 508	history
+A20	Eq-Temporal-Period-Value T60 past
+T36	Procedure 547 561	screening test
+E17	Procedure:T36 Name:T37 Temporality:E30 Temporality2:E31
+T37	Procedure-Name 547 561	screening test
+T38	Condition 540 546	cancer
+E18	Condition:T38 Name:T61
+T61	Condition-Name 540 546	cancer
+T62	Modifier 535 539	lung
+E29	Modifier:T62 Modifies:T61
+T63	Eq-Comparison 562 582	within the last year
+E30	Eq-Comparison:T63 Operator:T8 Temporal-Period:T64 Temporal-Unit:T65
+T64	Eq-Temporal-Period 573 577	last
+A10	Eq-Temporal-Period-Value T64 past
+T65	Eq-Temporal-Unit 578 582	year
+A11	Eq-Temporal-Unit-Value T65 year
+R3	Treatment-For Arg1:E17 Arg2:E18	
+T66	Eq-Comparison 529 532	had
+E31	Eq-Comparison:T66 Temporal-Period:T67
+T67	Eq-Temporal-Period 529 532	had
+A21	Eq-Temporal-Period-Value T67 past

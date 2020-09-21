@@ -4,9 +4,9 @@ E1	Condition:T1 Name:T2
 T3	Condition 276 298	eosinophilic disorders
 T4	Condition-Name 276 298	eosinophilic disorders
 E3	Condition:T3 Name:T4
-T5	Condition 400 419	active tuberculosis
-T6	Condition-Name 400 419	active tuberculosis
-E5	Condition:T5 Name:T6
+T5	Condition 407 419	tuberculosis
+T6	Condition-Name 407 419	tuberculosis
+E5	Condition:T5 Name:T6 Temporality:E37
 T7	Condition 426 445	autoimmune diseases
 T8	Condition-Name 426 445	autoimmune diseases
 E7	Condition:T7 Name:T8
@@ -42,16 +42,11 @@ A3	Eq-Operator-Value T30 BETWEEN
 T31	Eq-Value 29 30	1
 T32	Eq-Value 31 33	12
 T33	Eq-Value 758 759	4
-T34	Eq-Comparison 29 31	1-
+T34	Eq-Comparison 29 40	1-12 months
 E25	Eq-Comparison:T34 Operator:T30 Value:T31 Temporal-Unit:T25
 T35	Condition 59 62	CMA
 E2	Condition:T35 Name:T27
 T27	Condition-Name 59 62	CMA
-T36	Drug 46 49	IgE
-E4	Drug:T36 Name:T37
-T37	Drug-Name 46 49	IgE
-T38	Negation 63 72	Exclusion
-E6	Negation:T38 
 T39	Drug 88 106	cow's milk protein
 E8	Drug:T39 Name:T40
 T40	Drug-Name 88 106	cow's milk protein
@@ -63,18 +58,15 @@ T43	Drug 133 145	food protein
 E12	Drug:T43 Name:T44
 T44	Drug-Name 133 145	food protein
 R2	Caused-By Arg1:E19 Arg2:E12	
-T23	Condition 189 203	food allergies
-E14	Condition:T23 Name:T24
-T24	Condition-Name 189 203	food allergies
 T45	Condition 216 233	allergic diseases
 E16	Condition:T45 Name:T46
 T46	Condition-Name 216 233	allergic diseases
-T28	Modifier 240 255	non-CMA-related
+T28	Modifier 244 255	CMA-related
 E18	Modifier:T28 Modifies:E21
-T47	Condition 343 360	systemic diseases
+T47	Condition 352 360	diseases
 E20	Condition:T47 Name:T48
-T48	Condition-Name 343 360	systemic diseases
-T49	Modifier 335 342	chronic
+T48	Condition-Name 352 360	diseases
+T49	Modifier 335 351	chronic systemic
 E22	Modifier:T49 Modifies:E20
 T50	Condition 378 393	cardiac defects
 E23	Condition:T50 Name:T51
@@ -89,14 +81,47 @@ T55	Condition-Name 585 595	malignancy
 T56	Modifier 602 609	chronic
 E29	Modifier:T56 
 R3	Abbrev-Of Arg1:E29 Arg2:E11	
-T57	Condition 635 697	malformations of the gastrointestinal and/or respiratory tract
+T57	Condition 635 648	malformations
 E30	Condition:T57 Name:T58
-T58	Condition-Name 635 697	malformations of the gastrointestinal and/or respiratory tract
-T59	Procedure 704 746	administration of prebiotics or probiotics
-E31	Procedure:T59 Name:T60
-T60	Procedure-Name 704 746	administration of prebiotics or probiotics
+T58	Condition-Name 635 648	malformations
 T61	Temporal-Connection 766 772	before
-E32	Temporal-Connection:T61 
+E32	Temporal-Connection:T61 Arg:E43 Arg2:E44
 T62	Temporal-Connection 747 753	during
-E33	Temporal-Connection:T62 
+E33	Temporal-Connection:T62 Arg:E41 Arg2:E43
 A4	Temporal-Connection-Type-Value E33 during
+T36	Modifier 46 58	IgE-mediated
+E4	Modifier:T36 Modifies:T27
+T37	Other 183 188	other
+E6	Other:T37 Is-Other:E14
+T23	Allergy 194 203	allergies
+E14	Allergy:T23 Name:T24
+T24	Allergy-Name 189 193	food
+T38	Other 210 215	other
+E34	Other:T38 Is-Other:E16
+T63	Negation 240 243	non
+E35	Negation:T63 Negates:E18
+T64	Modifier 306 328	gastrointestinal tract
+E36	Modifier:T64 Modifies:T4
+T65	Eq-Comparison 400 406	active
+E37	Eq-Comparison:T65 Temporal-Period:T66
+T66	Eq-Temporal-Period 400 406	active
+A5	Eq-Temporal-Period-Value T66 present
+T67	Modifier 656 672	gastrointestinal
+E38	Modifier:T67 Modifies:T58
+T68	Modifier 680 697	respiratory tract
+E39	Modifier:T68 Modifies:T58
+T69	Or 673 679	and/or
+E40	Or:T69 Arg:E38 Arg2:E39
+T59	Drug 722 732	prebiotics
+E31	Drug:T59 Name:T60
+T60	Drug-Name 722 732	prebiotics
+T70	Drug 736 746	probiotics
+E41	Drug:T70 Name:T71
+T71	Drug-Name 736 746	probiotics
+T72	Or 733 735	or
+E42	Or:T72 Arg:E31 Arg2:E41
+T73	Eq-Comparison 758 765	4 weeks
+E43	Eq-Comparison:T73 Value:T33 Temporal-Unit:T26
+T74	Study 773 782	enrolment
+E44	Study:T74 
+A6	Temporal-Connection-Type-Value E32 before

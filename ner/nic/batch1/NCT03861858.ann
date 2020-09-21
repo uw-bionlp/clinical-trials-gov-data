@@ -1,20 +1,20 @@
 T1	Life-Stage-And-Gender 130 135	adult
 A1	Life-Stage-And-Gender-Type T1 adult
-T2	Procedure 634 668	psychotropic medication management
-T3	Procedure-Name 634 668	psychotropic medication management
+T2	Procedure 658 668	management
+T3	Procedure-Name 658 668	management
 E2	Procedure:T2 Name:T3
 T4	Procedure 556 568	talk therapy
 T5	Procedure-Name 556 568	talk therapy
 E4	Procedure:T4 Name:T5
-T6	Condition 745 768	intentional self-injury
-T7	Condition-Name 745 768	intentional self-injury
+T6	Condition 757 768	self-injury
+T7	Condition-Name 757 768	self-injury
 E6	Condition:T6 Name:T7
 T8	Condition 802 824	substance use disorder
 T9	Condition-Name 802 824	substance use disorder
 E8	Condition:T8 Name:T9
 T10	Condition 865 896	borderline personality disorder
 T11	Condition-Name 865 896	borderline personality disorder
-E10	Condition:T10 Name:T11
+E10	Condition:T10 Name:T11 Minimum-Count:E40
 T12	Condition 898 901	BPD
 T13	Condition-Name 898 901	BPD
 E12	Condition:T12 Name:T13
@@ -24,11 +24,9 @@ E14	Condition:T14 Name:T15
 T16	Condition 1055 1063	anorexia
 T17	Condition-Name 1055 1063	anorexia
 E16	Condition:T16 Name:T17
-T18	Eq-Operator 459 465	within
-A2	Eq-Operator-Value T18 LTEQ
 T19	Eq-Operator 496 497	<
 A3	Eq-Operator-Value T19 LT
-T20	Eq-Operator 699 714	within the past
+T20	Eq-Operator 699 705	within
 A4	Eq-Operator-Value T20 LTEQ
 T21	Eq-Operator 1188 1189	<
 A5	Eq-Operator-Value T21 LT
@@ -39,7 +37,7 @@ A7	Eq-Temporal-Unit-Value T23 minute
 T24	Eq-Temporal-Unit 719 725	months
 A8	Eq-Temporal-Unit-Value T24 month
 T25	Age 25 28	Age
-E17	Age:T25 Eq-Comparison:E20
+E17	Age:T25 Eq-Comparison:E20 Eq-Comparison2:E21
 T26	Eq-Operator 31 32	-
 A9	Eq-Operator-Value T26 BETWEEN
 T27	Eq-Operator 46 47	-
@@ -49,11 +47,9 @@ T29	Eq-Value 32 34	17
 T30	Eq-Value 44 46	18
 T31	Eq-Value 47 49	20
 T32	Eq-Value 498 500	45
-T33	Eq-Value 742 743	1
-T34	Eq-Value 799 800	2
 T35	Eq-Value 1190 1192	70
 T36	Eq-Comparison 496 508	< 45 minutes
-E18	Eq-Comparison:T36 Operator:T19 Temporal-Unit:T23 Value:T32 Operator2:T18
+E18	Eq-Comparison:T36 Operator:T19 Temporal-Unit:T23 Value:T32
 T37	Eq-Comparison 1188 1192	< 70
 E19	Eq-Comparison:T37 Operator:T21 Value:T35
 T38	Eq-Comparison 29 40	13-17 years
@@ -69,16 +65,16 @@ T43	Location 488 494	clinic
 A11	Location-Value T43 clinic
 T44	Location 449 458	Residence
 A12	Location-Value T44 residence
-T45	Procedure 616 630	AA/NA programs
+T45	Procedure 622 630	programs
 E5	Procedure:T45 Name:T46
-T46	Procedure-Name 616 630	AA/NA programs
+T46	Procedure-Name 622 630	programs
 T47	Exception 598 615	does not refer to
-E7	Exception:T47 From:E4 From2:E5
+E7	Exception:T47 From:E4 Except:E5 Except2:E2
 T48	Procedure 585 596	DBT program
 E9	Procedure:T48 Name:T49
 T49	Procedure-Name 585 596	DBT program
 T50	Condition 685 698	dysregulation
-E11	Condition:T50 Name:T51
+E11	Condition:T50 Name:T51 Temporality:E38
 T51	Condition-Name 685 698	dysregulation
 T52	Eq-Value 715 718	six
 T53	Or 769 775	and/or
@@ -88,16 +84,96 @@ E15	Condition:T54 Name:T55
 T55	Condition-Name 776 791	suicide attempt
 T56	Or 792 798	and/or
 E22	Or:T56 Arg:E15 Arg2:E8
-R1	Found-By Arg1:E11 Arg2:E6	
-T57	Modifier 1038 1054	life-threatening
-E23	Modifier:T57 Modifies:E16
 T58	Procedure 1104 1126	professional treatment
-E24	Procedure:T58 Name:T59
-T59	Procedure-Name 1104 1126	professional treatment
+E24	Procedure:T58 Temporality:E47
 T60	Procedure 1007 1016	treatment
-E25	Procedure:T60 Name:T61
-T61	Procedure-Name 1007 1016	treatment
-T62	Language 1158 1169	Non-English
+E25	Procedure:T60 
+T62	Language 1162 1169	English
+T33	Eq-Comparison 105 117	at least one
+E27	Eq-Comparison:T33 Operator:T65 Value:T66
+T65	Eq-Operator 105 113	at least
+A13	Eq-Operator-Value T65 GTEQ
+T66	Eq-Value 114 117	one
+T67	Family-Member 136 142	parent
+E28	Family-Member:T67 
+A14	Family-Member-Type E28 parent
+T18	Observation 466 484	commuting distance
+E29	Observation:T18 Name:T68 Location:T44 Location2:T43 Eq-Comparison:E18
+T68	Observation-Name 466 484	commuting distance
+T69	Negation 529 540	discontinue
+E30	Negation:T69 Negates:E4
+T70	Assertion 516 525	Agreement
+E31	Assertion:T70 Asserted:E30
+A2	Assertion-Type-Value E31 hypothetical
+T71	Temporal-Connection 569 581	for duration
+E32	Temporal-Connection:T71 Arg:E4 Arg2:E9
+A15	Temporal-Connection-Type-Value E32 during
+T72	Modifier 616 618	AA
+E33	Modifier:T72 Modifies:T46
+T73	Modifier 619 621	NA
+E34	Modifier:T73 Modifies:T46
+T74	Or 618 619	/
+E35	Or:T74 Arg:E33 Arg2:E34
+T75	Or 631 633	or
+E36	Or:T75 Arg:E5 Arg2:E2
+T76	Drug 634 657	psychotropic medication
+E37	Drug:T76 Name:T77
+T77	Drug-Name 634 657	psychotropic medication
+R2	Using Arg1:E2 Arg2:E37	
+T78	Eq-Comparison 699 725	within the past six months
+E38	Eq-Comparison:T78 Operator:T20 Temporal-Period:T79 Value:T52 Temporal-Unit:T24
+T79	Eq-Temporal-Period 710 714	past
+A16	Eq-Temporal-Period-Value T79 past
+T80	Modifier 745 756	intentional
+E39	Modifier:T80 Modifies:T7
+R1	Equivalent-To Arg1:E6 Arg2:E11	
+R3	Equivalent-To Arg1:E15 Arg2:E11	
+R4	Equivalent-To Arg1:E8 Arg2:E11	
+R5	Abbrev-Of Arg1:E12 Arg2:E10	
+T34	Eq-Comparison 837 840	two
+E40	Eq-Comparison:T34 Value:T81
+T81	Eq-Value 837 840	two
+T82	Procedure 946 968	mental health services
+E41	Procedure:T82 Name:T83 Location:T84
+T83	Procedure-Name 946 968	mental health services
+T84	Location 990 997	DBT- RU
+T85	Negation 969 972	not
+E42	Negation:T85 Negates:T84
+T86	Assertion 941 945	need
+E43	Assertion:T86 Asserted:E41
+A17	Assertion-Type-Value E43 hypothetical
+R6	Treatment-For Arg1:E25 Arg2:E14	
+R7	Example-Of Arg1:E25 Arg2:E41	
+T57	Death 1038 1054	life-threatening
+E23	Death:T57 
+T61	Risk 1038 1054	life-threatening
+E44	Risk:T61 Risk-For:E23
+R8	Caused-By Arg1:E44 Arg2:E16	
+T87	Or 1035 1037	or
+E45	Or:T87 Arg:E14 Arg2:E44
+R9	Treatment-For Arg1:E25 Arg2:E16	
+T88	Or 1065 1067	or
+E46	Or:T88 Arg:E25 Arg2:E24
+T59	Eq-Comparison 1076 1085	currently
+E47	Eq-Comparison:T59 
+T89	Eq-Temporal-Period 1076 1085	currently
+A18	Eq-Temporal-Period-Value T89 present
+T90	Negation 1146 1151	ended
+E48	Negation:T90 Negates:E24
+T91	Negation 1139 1142	not
+E49	Negation:T91 Negates:E48
+T92	Assertion 1132 1138	should
+E50	Assertion:T92 Asserted:E48
+A19	Assertion-Type-Value E50 hypothetical
+T93	Negation 1158 1161	Non
+E51	Negation:T93 Negates:T62
+T94	Observation 1185 1187	IQ
+E52	Observation:T94 Name:T95 Eq-Comparison:E19
+T95	Observation-Name 1185 1187	IQ
+A20	Observation-Type-Value T95 clinical-score
 T63	Procedure 1281 1290	treatment
-E26	Procedure:T63 Name:T64
-T64	Procedure-Name 1281 1290	treatment
+E26	Procedure:T63 
+T64	Observation 1249 1262	Court-ordered
+E53	Observation:T64 Name:T96
+T96	Observation-Name 1249 1262	Court-ordered
+R10	Caused-By Arg1:E26 Arg2:E53	
