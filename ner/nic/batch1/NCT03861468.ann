@@ -1,18 +1,18 @@
 T1	Condition 485 504	Renal insufficiency
 T2	Condition-Name 485 504	Renal insufficiency
-E1	Condition:T1 Name:T2
+E1	Condition:T1 Name:T2 Stage:E37
 T3	Condition 522 540	autoimmune disease
 T4	Condition-Name 522 540	autoimmune disease
 E3	Condition:T3 Name:T4
 T5	Condition 374 381	disease
 T6	Condition-Name 374 381	disease
-E5	Condition:T5 Name:T6
+E5	Condition:T5 Name:T6 Temporality:E10 Temporality2:E22
 T7	Condition 545 560	viral hepatitis
 T8	Condition-Name 545 560	viral hepatitis
 E7	Condition:T7 Name:T8
 T9	Condition 336 343	disease
 T10	Condition-Name 336 343	disease
-E9	Condition:T9 Name:T10
+E9	Condition:T9 Name:T10 Severity:T57
 T11	Condition 565 574	cirrhosis
 T12	Condition-Name 565 574	cirrhosis
 E11	Condition:T11 Name:T12
@@ -25,7 +25,7 @@ E15	Observation:T15 Name:T16 Eq-Comparison:E19
 A1	Observation-Type-Value T16 vital
 T17	Provider 103 106	GPs
 T18	Provider-Type 103 106	GPs
-E17	Provider:T17 Name:T18
+E17	Provider:T17 Type:T18
 T19	Eq-Operator 75 76	≥
 A2	Eq-Operator-Value T19 GTEQ
 T20	Eq-Operator 268 269	≥
@@ -45,7 +45,7 @@ A9	Eq-Temporal-Unit-Value T26 month
 T27	Eq-Temporal-Unit 472 478	months
 A10	Eq-Temporal-Unit-Value T27 month
 T28	Eq-Unit 79 81	kg
-T29	Eq-Unit 273 275	mm
+T29	Eq-Unit 273 277	mmol
 T30	Age 34 38	aged
 E18	Age:T30 Eq-Comparison:E25
 T31	Eq-Operator 47 49	to
@@ -61,9 +61,9 @@ T39	Eq-Value 511 512	4
 T40	Eq-Value 516 517	5
 T41	Eq-Value 673 674	1
 T42	Eq-Comparison 75 79	≥ 30
-E19	Eq-Comparison:T42 Operator:T19 Value:T34
-T43	Eq-Comparison 268 275	≥ 27 mm
-E20	Eq-Comparison:T43 Operator:T20 Unit:T29 Value:T35
+E19	Eq-Comparison:T42 Operator:T19 Value:T34 Per:T69
+T43	Eq-Comparison 268 279	≥ 27 mmol/L
+E20	Eq-Comparison:T43 Operator:T20 Unit:T29 Value:T35 Per:T76
 T44	Eq-Comparison 301 304	≥ 3
 E21	Eq-Comparison:T44 Operator:T21 Value:T36
 T45	Eq-Comparison 383 393	< 2 months
@@ -72,45 +72,85 @@ T46	Eq-Comparison 468 478	< 2 months
 E23	Eq-Comparison:T46 Operator:T23 Temporal-Unit:T27 Value:T38
 T47	Eq-Comparison 671 680	< 1 month
 E24	Eq-Comparison:T47 Operator:T24 Value:T41 Temporal-Unit:T68
-T48	Eq-Comparison 44 49	18 to
+T48	Eq-Comparison 44 58	18 to 80 years
 E25	Eq-Comparison:T48 Operator:T31 Value:T32 Value2:T33 Temporal-Unit:T25
-R1	Found-By Arg1:E13 Arg2:E15	
 T49	Observation 152 173	biological assessment
 E2	Observation:T49 Name:T50
 T50	Observation-Name 152 173	biological assessment
 A12	Observation-Type-Value T50 lab
 T51	Encounter 91 99	Referred
-E4	Encounter:T51 Type:T52
+E4	Encounter:T51 Type:T52 Provider:E17
 T52	Encounter-Type 91 99	Referred
 A13	Encounter-Type-Value T52 referral
-T53	Drug 240 267	Bicarbonate - Concentration
-E6	Drug:T53 Name:T54
-T54	Drug-Name 240 267	Bicarbonate - Concentration
+T53	Observation 240 267	Bicarbonate - Concentration
+E6	Observation:T53 Name:T54 Eq-Comparison:E20
+T54	Observation-Name 240 267	Bicarbonate - Concentration
 T55	Observation 285 294	STOP-BANG
-E8	Observation:T55 Name:T56
+E8	Observation:T55 Name:T56 Eq-Comparison:E21
 T56	Observation-Name 285 294	STOP-BANG
 A14	Observation-Type-Value T56 clinical-score
-T57	Modifier 330 335	Acute
-E10	Modifier:T57 Modifies:E9
 T58	Modifier 366 373	chronic
 E12	Modifier:T58 
 R2	Abbrev-Of Arg1:E12 Arg2:E5	
-T59	Eq-Temporal-Recency 347 355	recently
-A15	Eq-Temporal-Recency-Value T59 first-time
-A16	Stability-Value T59 change
 T60	Or 344 346	or
 E14	Or:T60 Arg:E9 Arg2:E5
 T61	Encounter 400 415	Hospitalization
-E16	Encounter:T61 Type:T62
+E16	Encounter:T61 Type:T62 Temporality:E23
 T62	Encounter-Type 400 415	Hospitalization
 A17	Encounter-Type-Value T62 inpatient
-T63	Condition 420 466	respiratory, metabolic or cardiovascular event
+T63	Condition 461 466	event
 E26	Condition:T63 Name:T64
-T64	Condition-Name 420 466	respiratory, metabolic or cardiovascular event
-T65	Severity 505 510	stage
+T64	Condition-Name 461 466	event
 T66	Study 665 670	study
-E27	Study:T66 
+E27	Study:T66 Temporality:E24
 T67	Study 632 652	interventional study
 E28	Study:T67 
 T68	Eq-Temporal-Unit 675 680	month
 A18	Eq-Temporal-Unit-Value T68 month
+R1	Equivalent-To Arg1:E15 Arg2:E13	
+T69	Eq-Unit 82 84	m²
+R3	Using Arg1:E4 Arg2:E2	
+T70	Condition 196 207	respiratory
+E29	Condition:T70 Name:T71
+T71	Condition-Name 196 207	respiratory
+T72	Encounter 208 217	follow-up
+E30	Encounter:T72 Temporality:E31
+R4	Treatment-For Arg1:E30 Arg2:E29	
+T73	Eq-Comparison 218 225	already
+E31	Eq-Comparison:T73 Temporal-Period:T74
+T74	Eq-Temporal-Period 218 225	already
+A19	Eq-Temporal-Period-Value T74 past
+T75	Negation 193 195	no
+E32	Negation:T75 Negates:E30
+T76	Eq-Unit 278 279	L
+A20	Observation-Type-Value T54 lab
+T57	Severity 330 335	Acute
+A15	Severity-Value T57 severe
+T59	Eq-Comparison 347 355	recently
+E10	Eq-Comparison:T59 Temporal-Period:T77
+T77	Eq-Temporal-Period 347 355	recently
+A16	Eq-Temporal-Period-Value T77 past
+T78	Modifier 420 431	respiratory
+E33	Modifier:T78 Modifies:T64
+T79	Modifier 433 442	metabolic
+E34	Modifier:T79 Modifies:T64
+T80	Modifier 446 460	cardiovascular
+E35	Modifier:T80 Modifies:T64
+T81	Or 443 445	or
+E36	Or:T81 Arg:E34 Arg2:E35
+R5	Treatment-For Arg1:E16 Arg2:E26	
+T65	Eq-Comparison 505 517	stage 4 or 5
+E37	Eq-Comparison:T65 Unit:T82 Value:T39 Value2:T40
+T82	Eq-Unit 505 510	stage
+T83	Or 519 521	or
+E38	Or:T83 Arg:E1 Arg2:E3
+T84	Or 542 544	or
+E39	Or:T84 Arg:E3 Arg2:E7
+T85	Or 562 564	or
+E40	Or:T85 Arg:E7 Arg2:E11
+T86	Condition 580 588	Pregnant
+E41	Condition:T86 Name:T87
+T87	Condition-Name 580 588	Pregnant
+T88	Life-Stage-And-Gender 589 594	women
+A21	Life-Stage-And-Gender-Type T88 female
+R6	If-Then Arg1:E41 Arg2:T88	
