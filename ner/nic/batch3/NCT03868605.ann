@@ -1,47 +1,45 @@
 T1	Age 25 28	age
-E1	Age:T1
-T2	Eq-Comparison 29 30	≥
-E2	Eq-Comparison:T2 Operator:T20
-T3	Eq-Comparison 31 39	18 years
-E3	Eq-Comparison:T3 Value:T21 Temporal-Unit:T22
+E1	Age:T1 Eq-Comparison:E3
+T3	Eq-Comparison 29 39	≥ 18 years
+E3	Eq-Comparison:T3 Value:T21 Temporal-Unit:T22 Operator:T20
 T4	Modifier 45 55	colorectal
-E4	Modifier:T4
+E4	Modifier:T4 Modifies:T23
 T5	Condition 56 63	lesions
-E5	Condition:T5
+E5	Condition:T5 Name:T23
 T6	Eq-Comparison 67 75	10-25 mm
 E6	Eq-Comparison:T6 Value:T24 Operator:T25 Value:T26 Unit:T27
-T7	Condition 95 111	non-lifting sign
-E7	Condition:T7
+T7	Condition 107 111	sign
+E7	Condition:T7 Name:T45 Polarity:T28
 T8	Study 150 155	study
-E8	Study:T8
+E8	Study:T8 Study-Of:E9
 T9	Procedure 165 176	colonoscopy
 E9	Procedure:T9 Name:T29
 T10	Age 202 205	age
-E10	Age:T10
+E10	Age:T10 Eq-Comparison:E11
 T11	Eq-Comparison 206 216	< 18 years
 E11	Eq-Comparison:T11 Operator:T30 Value:T31 Temporal-Unit:T32
 T12	Condition 222 229	lesions
-E12	Condition:T12
+E12	Condition:T12 Name:T33
 T13	Eq-Comparison 230 237	> 25 mm
 E13	Eq-Comparison:T13 Operator:T34 Value:T35 Unit:T36
-T14	Modifier 243 262	pedunculated polyps
-E14	Modifier:T14
+T14	Condition 243 262	pedunculated polyps
+E14	Condition:T14 Name:T37
 T15	Condition 268 287	colorectal stenosis
 E15	Condition:T15 Name:T38
 T16	Procedure 293 304	colonoscopy
 E16	Procedure:T16 Name:T39
 T17	Contraindication 305 321	contraindication
-E17	Contraindication:T17
+E17	Contraindication:T17 Contraindicates:E16
 T18	Condition 340 366	inflammatory bowel disease
-E18	Condition:T18 Name:T42
+E18	Condition:T18 Name:T42 Severity:T41
 T19	Condition 379 392	comorbidities
-E19	Condition:T19 Name:T44
+E19	Condition:T19 Name:T44 Severity:T43
 T20	Eq-Operator 29 30	≥
 A1	Eq-Operator-Value T20 GTEQ
 T21	Eq-Value 31 33	18
 T22	Eq-Temporal-Unit 34 39	years
 A2	Eq-Temporal-Unit-Value T22 year
-T23	Condition-Name 45 63	colorectal lesions
+T23	Condition-Name 56 63	lesions
 T24	Eq-Value 67 69	10
 T25	Eq-Operator 69 70	-
 A3	Eq-Operator-Value T25 BETWEEN
@@ -55,8 +53,7 @@ A5	Eq-Operator-Value T30 LT
 T31	Eq-Value 208 210	18
 T32	Eq-Temporal-Unit 211 216	years
 A6	Eq-Temporal-Unit-Value T32 year
-T33	Observation-Name 222 229	lesions
-A7	Observation-Type-Value T33 measurement
+T33	Condition-Name 222 229	lesions
 T34	Eq-Operator 230 231	>
 A8	Eq-Operator-Value T34 GT
 T35	Eq-Value 232 234	25
@@ -64,11 +61,20 @@ T36	Eq-Unit 235 237	mm
 T37	Condition-Name 243 262	pedunculated polyps
 T38	Condition-Name 268 287	colorectal stenosis
 T39	Procedure-Name 293 304	colonoscopy
-T40	Severity 327 333	severe
-A9	Severity-Value T40 severe
-T41	Severity 334 339	acute
+T41	Severity 327 339	severe acute
 A10	Severity-Value T41 severe
 T42	Condition-Name 340 366	inflammatory bowel disease
 T43	Severity 372 378	severe
 A11	Severity-Value T43 severe
 T44	Condition-Name 379 392	comorbidities
+T2	Observation 56 63	lesions
+E2	Observation:T2 Eq-Comparison:E6
+T45	Condition-Name 107 111	sign
+T46	Modifier 99 106	lifting
+E20	Modifier:T46 Modifies:T45
+T47	Negation 95 98	non
+E21	Negation:T47 Negates:E20
+T48	And 81 85	with
+E22	And:T48 Arg:E5 Arg2:E7
+T49	Observation 222 229	lesions
+E23	Observation:T49 Eq-Comparison:E13

@@ -1,138 +1,128 @@
 T1	Modifier 39 49	structural
-E1	Modifier:T1 
+E1	Modifier:T1 Modifies:T90
 T2	Condition 50 63	heart disease
 E2	Condition:T2 Name:T90
 T3	Or 64 67	and
-E3	Or:T3 
+E3	Or:T3 Arg:E2 Arg2:E4
 T4	Procedure 68 106	implantable cardioverter defibrillator
 E4	Procedure:T4 Name:T91
 T5	Procedure 108 111	ICD
 E5	Procedure:T5 Name:T92
 T6	Age 118 121	Age
-E6	Age:T6 
-T7	Eq-Comparison 122 123	>
-E7	Eq-Comparison:T7 Operator:T93
-T8	Eq-Comparison 124 132	18 years
-E8	Eq-Comparison:T8 Value:T94 Temporal-Unit:T95
+E6	Age:T6 Eq-Comparison:E8
+T8	Eq-Comparison 122 132	> 18 years
+E8	Eq-Comparison:T8 Value:T94 Temporal-Unit:T95 Operator:T7
 T9	Assertion 165 176	symptomatic
-E9	Assertion:T9 
+E9	Assertion:T9 Asserted:E10
 A1	Assertion-Type-Value E9 possible
 T10	Condition 177 212	monomorphic ventricular tachycardia
 E10	Condition:T10 Name:T96
 T11	Assertion 218 226	requires
-E11	Assertion:T11 
+E11	Assertion:T11 Asserted:E12
 A2	Assertion-Type-Value E11 hypothetical
 T12	Procedure 227 243	ICD intervention
 E12	Procedure:T12 Name:T97
 T13	Modifier 250 255	shock
-E13	Modifier:T13 
+E13	Modifier:T13 Modifies:T98
 T14	Or 256 258	or
-E14	Or:T14 
-T15	Modifier 259 275	anti-tachycardia
-E15	Modifier:T15 
+E14	Or:T14 Arg:E13
+T15	Modifier 264 275	tachycardia
+E15	Modifier:T15 Modifies:T98
 T16	Procedure 276 287	stimulation
-E16	Procedure:T16 
+E16	Procedure:T16 Name:T98
 T17	Eq-Comparison 290 300	At least 3
 E17	Eq-Comparison:T17 Operator:T99 Value:T100
 T18	Eq-Comparison 310 329	within the 3 months
 E18	Eq-Comparison:T18 Operator:T101 Value:T102 Temporal-Unit:T103
 T19	Temporal-Connection 330 338	prior to
-E19	Temporal-Connection:T19 
+E19	Temporal-Connection:T19 Arg:E18 Arg2:E20
 A3	Temporal-Connection-Type-Value E19 before
 T20	Study 339 348	inclusion
 E20	Study:T20 
-T21	Eq-Comparison 362 371	induction
-E21	Eq-Comparison:T21 
+T21	Procedure 362 371	induction
+E21	Procedure:T21 
 T22	Assertion 375 386	symptomatic
-E22	Assertion:T22 
+E22	Assertion:T22 Asserted:E23
 A4	Assertion-Type-Value E22 possible
 T23	Condition 387 422	monomorphic ventricular tachycardia
 E23	Condition:T23 Name:T104
 T24	Assertion 428 436	requires
-E24	Assertion:T24 
+E24	Assertion:T24 Asserted:E25
 A5	Assertion-Type-Value E24 hypothetical
 T25	Procedure 437 453	ICD intervention
 E25	Procedure:T25 Name:T105
 T26	Modifier 460 465	shock
-E26	Modifier:T26 
+E26	Modifier:T26 Modifies:T137
 T27	Or 466 468	or
-E27	Or:T27 
-T28	Modifier 469 485	anti-tachycardia
-E28	Modifier:T28 
+E27	Or:T27 Arg:E26 Arg2:E28
+T28	Modifier 474 485	tachycardia
+E28	Modifier:T28 Modifies:T137
 T29	Procedure 486 497	stimulation
-E29	Procedure:T29 
-T30	Condition 500 519	Induction triggered
-E30	Condition:T30 Name:T107
+E29	Procedure:T29 Name:T137
+T30	Procedure 500 509	Induction
+E30	Procedure:T30 
 T31	Procedure 523 526	ICD
 E31	Procedure:T31 Name:T108
 T32	Or 527 529	or
-E32	Or:T32 
+E32	Or:T32 Arg:E30 Arg2:E33
 T33	Temporal-Connection 530 536	during
-E33	Temporal-Connection:T33 
+E33	Temporal-Connection:T33 Arg:E34
 A6	Temporal-Connection-Type-Value E33 during
-T34	Study 537 554	electrophysiology
-E34	Study:T34 
-T35	Study 555 562	studies
-E35	Study:T35 
+T34	Procedure 537 562	electrophysiology studies
+E34	Procedure:T34 Name:T35
 T36	Or 569 571	or
-E36	Or:T36 
+E36	Or:T36 Arg:E35 Arg2:E37
 T37	Modifier 572 576	both
 E37	Modifier:T37 
-T38	Or 581 584	and
-E38	Or:T38 
-T39	Modifier 585 586	b
-E39	Modifier:T39 
-T40	Drug 593 603	Refractory
-E40	Drug:T40 
+T40	Condition 593 603	Refractory
+E40	Condition:T40 
 T41	Procedure 607 641	antiarrhythmic combination therapy
 E41	Procedure:T41 Name:T109
 T42	Condition 658 676	cardiac conditions
 E42	Condition:T42 Name:T110
 T43	Negation 678 680	No
-E43	Negation:T43 
+E43	Negation:T43 Negates:E44
 T44	Condition 691 698	illness
 E44	Condition:T44 Name:T111
 T45	Assertion 704 709	would
-E45	Assertion:T45 
+E45	Assertion:T45 Asserted:T112
 A7	Assertion-Type-Value E45 hypothetical
 T46	Observation 733 748	life expectancy
-E46	Observation:T46 Name:T113
+E46	Observation:T46 Name:T113 Stability:T112 Eq-Comparison:E47
 T47	Eq-Comparison 752 770	less than 6 months
 E47	Eq-Comparison:T47 Operator:T114 Value:T115 Temporal-Unit:T116
 T48	Negation 776 778	No
-E48	Negation:T48 
+E48	Negation:T48 Negates:E50
 T49	Eq-Comparison 779 784	prior
 E49	Eq-Comparison:T49 Temporal-Period:T117
 T50	Procedure 785 802	radiation therapy
-E50	Procedure:T50 Name:T118
+E50	Procedure:T50 Name:T118 Temporality:E49
 T51	Modifier 810 821	thorax area
-E51	Modifier:T51 
+E51	Modifier:T51 Modifies:T118
 T52	Negation 827 829	No
-E52	Negation:T52 
+E52	Negation:T52 Negates:E53
 T53	Condition 830 839	pregnancy
 E53	Condition:T53 Name:T119
 T54	And 840 843	and
-E54	And:T54 
+E54	And:T54 Arg:E53 Arg2:E55
 T55	Negation 844 846	no
 E55	Negation:T55 
 T56	Eq-Comparison 847 853	active
 E56	Eq-Comparison:T56 Temporal-Period:T120
 T57	Condition 854 867	breastfeeding
-E57	Condition:T57 Name:T121
+E57	Condition:T57 Name:T121 Temporality:E56
 T58	Condition 952 977	ICD electrode malfunction
-E58	Condition:T58 
+E58	Condition:T58 Name:T122
 T59	Procedure 981 984	ICD
-E59	Procedure:T59 
-T60	Negation 994 1001	outside
-E60	Negation:T60 
+E59	Procedure:T59 Name:T123 Polarity:T38
 T61	Negation 1023 1027	Lack
-E61	Negation:T61 
-T62	Procedure 1045 1060	myocardial scar
-E62	Procedure:T62 
+E61	Negation:T61 Negates:E62
+T62	Condition 1045 1060	myocardial scar
+E62	Condition:T62 Name:T124
 T63	Procedure 1062 1081	Computer tomography
 E63	Procedure:T63 Name:T125
 T64	Or 1082 1084	or
-E64	Or:T64 
+E64	Or:T64 Arg:E63 Arg2:E65
 T65	Procedure 1085 1114	magnetic resonance tomography
 E65	Procedure:T65 Name:T126
 T66	Procedure 1119 1122	MRI
@@ -140,63 +130,55 @@ E66	Procedure:T66 Name:T127
 T67	Procedure 1131 1145	ICD aggregates
 E67	Procedure:T67 Name:T128
 T68	Or 1146 1148	or
-E68	Or:T68 
-T69	Procedure 1149 1181	electrophysiological measurement
-E69	Procedure:T69 
+E68	Or:T68 Arg:E67 Arg2:E38
 T70	Negation 1188 1190	No
-E70	Negation:T70 
+E70	Negation:T70 Negates:E71
 T71	Assertion 1191 1199	possible
-E71	Assertion:T71 
+E71	Assertion:T71 Asserted:E60
 A8	Assertion-Type-Value E71 hypothetical
 T72	Assertion 1213 1224	symptomatic
-E72	Assertion:T72 
+E72	Assertion:T72 Asserted:E73
 A9	Assertion-Type-Value E72 possible
-T73	Condition 1225 1260	monomorphic ventricular tachycardia
+T73	Condition 1237 1260	ventricular tachycardia
 E73	Condition:T73 Name:T129
 T74	Negation 1261 1264	non
-E74	Negation:T74 
+E74	Negation:T74 Negates:E75
 T75	Modifier 1265 1275	persistent
-E75	Modifier:T75 
+E75	Modifier:T75 Modifies:T130
 T76	Or 1276 1278	or
-E76	Or:T76 
+E76	Or:T76 Arg:E75 Arg2:E77
 T77	Modifier 1279 1289	persistent
-E77	Modifier:T77 
-T78	Procedure 1295 1303	delivery
-E78	Procedure:T78 
+E77	Modifier:T77 Modifies:T130
 T79	Procedure 1307 1320	ICD therapies
 E79	Procedure:T79 Name:T130
 T80	Procedure 1329 1351	antitachycardic pacing
 E80	Procedure:T80 Name:T131
 T81	Or 1352 1354	or
-E81	Or:T81 
-T82	Modifier 1355 1360	shock
-E82	Modifier:T82 
+E81	Or:T81 Arg:E80 Arg2:E82
+T82	Procedure 1355 1360	shock
+E82	Procedure:T82 Name:T78
 T83	Contraindication 1366 1382	Contraindication
-E83	Contraindication:T83 
+E83	Contraindication:T83 Contraindicates:E84
 T84	Procedure 1386 1398	radiosurgery
 E84	Procedure:T84 Name:T132
 T85	Negation 1438 1441	not
-E85	Negation:T85 
+E85	Negation:T85 Negates:E69
 T86	Assertion 1442 1450	possible
-E86	Assertion:T86 
+E86	Assertion:T86 Asserted:E85
 A10	Assertion-Type-Value E86 hypothetical
-T87	Procedure 1458 1473	image artifacts
-E87	Procedure:T87 
+T87	Observation 1458 1473	image artifacts
 T88	Procedure 1489 1519	left ventricular assist device
 E88	Procedure:T88 Name:T133
 T89	Procedure 1521 1525	LVAD
-E89	Procedure:T89 
+E89	Procedure:T89 Name:T143
 T90	Condition-Name 50 63	heart disease
 T91	Procedure-Name 68 106	implantable cardioverter defibrillator
 T92	Procedure-Name 108 111	ICD
-T93	Eq-Operator 122 123	>
-A11	Eq-Operator-Value T93 GT
 T94	Eq-Value 124 126	18
 T95	Eq-Temporal-Unit 127 132	years
 A12	Eq-Temporal-Unit-Value T95 year
 T96	Condition-Name 177 212	monomorphic ventricular tachycardia
 T97	Procedure-Name 227 243	ICD intervention
-T98	Condition-Name 264 287	tachycardia stimulation
 T99	Eq-Operator 290 298	At least
 A13	Eq-Operator-Value T99 GTEQ
 T100	Eq-Value 299 300	3
@@ -207,8 +189,6 @@ T103	Eq-Temporal-Unit 323 329	months
 A15	Eq-Temporal-Unit-Value T103 month
 T104	Condition-Name 387 422	monomorphic ventricular tachycardia
 T105	Procedure-Name 437 453	ICD intervention
-T106	Condition-Name 474 497	tachycardia stimulation
-T107	Condition-Name 500 519	Induction triggered
 T108	Procedure-Name 523 526	ICD
 T109	Procedure-Name 607 641	antiarrhythmic combination therapy
 T110	Condition-Name 658 676	cardiac conditions
@@ -228,8 +208,8 @@ T119	Condition-Name 830 839	pregnancy
 T120	Eq-Temporal-Period 847 853	active
 A20	Eq-Temporal-Period-Value T120 present
 T121	Condition-Name 854 867	breastfeeding
-T122	Procedure-Name 952 977	ICD electrode malfunction
-T123	Procedure-Name 981 993	ICD readings
+T122	Condition-Name 952 977	ICD electrode malfunction
+T123	Procedure-Name 981 984	ICD
 T124	Condition-Name 1045 1060	myocardial scar
 T125	Procedure-Name 1062 1081	Computer tomography
 T126	Procedure-Name 1085 1114	magnetic resonance tomography
@@ -239,4 +219,65 @@ T129	Condition-Name 1237 1260	ventricular tachycardia
 T130	Procedure-Name 1307 1320	ICD therapies
 T131	Procedure-Name 1329 1351	antitachycardic pacing
 T132	Procedure-Name 1386 1398	radiosurgery
-T133	Procedure-Name 1494 1519	ventricular assist device
+T133	Procedure-Name 1489 1519	left ventricular assist device
+R1	Abbrev-Of Arg1:E5 Arg2:E4	
+T7	Eq-Operator 122 123	>
+A11	Eq-Operator-Value T7 GT
+R2	Treatment-For Arg1:E12 Arg2:E10	
+T93	Negation 259 263	anti
+E7	Negation:T93 Negates:E15
+T98	Procedure-Name 276 287	stimulation
+R3	Example-Of Arg1:E16 Arg2:E12	
+T134	Coreference 301 309	episodes
+E90	Coreference:T134 Refers-To:E10 Minimum-Count:E17 Temporality:E18
+T135	Or 349 351	or
+E91	Or:T135 Arg:E90 Arg2:E21
+T136	Modifier 155 164	Recurring
+E92	Modifier:T136 Modifies:T96
+R4	Caused-By Arg1:E23 Arg2:E21	
+R5	Treatment-For Arg1:E25 Arg2:E23	
+T106	Negation 469 473	anti
+E93	Negation:T106 Negates:E28
+T137	Procedure-Name 486 497	stimulation
+R6	Example-Of Arg1:E29 Arg2:E25	
+R7	Caused-By Arg1:E30 Arg2:E31	
+T35	Procedure-Name 537 562	electrophysiology studies
+T107	Procedure 564 567	EPS
+E35	Procedure:T107 Name:T138
+T138	Procedure-Name 564 567	EPS
+R8	Abbrev-Of Arg1:E35 Arg2:E34	
+R9	Caused-By Arg1:E40 Arg2:E41	
+R10	Caused-By Arg1:T112 Arg2:E44	
+R11	Abbrev-Of Arg1:E55 Arg2:E57	
+T38	Polarity 994 1017	outside reference range
+A21	Polarity-Value T38 abnormal
+R12	Caused-By Arg1:E59 Arg2:E58	
+T60	Observation 1149 1181	electrophysiological measurement
+E38	Observation:T60 Name:T139
+T139	Observation-Name 1149 1181	electrophysiological measurement
+A22	Observation-Type-Value T139 measurement
+R13	Using Arg1:E67 Arg2:E66	
+R14	Using Arg1:E65 Arg2:E67	
+R15	Example-Of Arg1:E63 Arg2:E61	
+R16	Example-Of Arg1:E65 Arg2:E61	
+R17	Example-Of Arg1:E38 Arg2:E61	
+T39	Modifier 1225 1236	monomorphic
+E39	Modifier:T39 Modifies:T129
+T69	Procedure 1200 1209	induction
+E60	Procedure:T69 
+R18	Caused-By Arg1:E73 Arg2:E60	
+R19	Example-Of Arg1:E80 Arg2:E79	
+T78	Procedure-Name 1355 1360	shock
+R20	Example-Of Arg1:E82 Arg2:E79	
+R21	Treatment-For Arg1:E79 Arg2:E73	
+T140	Observation 1413 1437	target volume definition
+E69	Observation:T140 Name:T141
+T141	Observation-Name 1413 1437	target volume definition
+A23	Observation-Type-Value T141 measurement
+E78	Observation:T87 Name:T142
+T142	Observation-Name 1458 1473	image artifacts
+T143	Procedure-Name 1521 1525	LVAD
+R22	Abbrev-Of Arg1:E89 Arg2:E88	
+R23	Caused-By Arg1:E78 Arg2:E88	
+R24	Caused-By Arg1:E85 Arg2:E78	
+R25	Example-Of Arg1:E69 Arg2:E83	
