@@ -3,7 +3,7 @@ T2	Condition-Name 398 417	Atrial fibrillation
 E1	Condition:T1 Name:T2
 T3	Procedure 79 94	cardiac surgery
 T4	Procedure-Name 79 94	cardiac surgery
-E3	Procedure:T3 Name:T4
+E3	Procedure:T3 Name:T4 Temporality:E29
 T5	Procedure 233 248	cardiac surgery
 T6	Procedure-Name 233 248	cardiac surgery
 E5	Procedure:T5 Name:T6 Temporality:E15
@@ -22,7 +22,7 @@ T14	Eq-Comparison 36 40	≥ 18
 E10	Eq-Comparison:T14 Operator:T12 Value:T13
 T15	Age 32 35	age
 E2	Age:T15 Eq-Comparison:E10
-T16	Modifier 66 78	non-emergent
+T16	Modifier 70 78	emergent
 E4	Modifier:T16 Modifies:E3
 T17	Procedure 128 159	mediastinal chest tube drainage
 E6	Procedure:T17 Name:T18
@@ -32,12 +32,7 @@ E8	Assertion:T19 Asserted:E6
 A3	Assertion-Type-Value E8 possible
 T20	Procedure 195 202	surgery
 E11	Procedure:T20 Name:T23
-T21	Encounter 185 194	Emergency
-E12	Encounter:T21 Type:T22
-T22	Encounter-Type 185 194	Emergency
-A4	Encounter-Type-Value T22 emergency
 T23	Procedure-Name 195 202	surgery
-R1	Equivalent-To Arg1:E11 Arg2:E12	
 T24	Modifier 208 213	Re-do
 E13	Modifier:T24 Modifies:E14
 T25	Procedure 214 221	surgery
@@ -71,9 +66,42 @@ E23	Modifier:T40 Modifies:E25
 T41	Modifier 579 590	psychiatric
 E24	Modifier:T41 Modifies:E25
 T42	Condition 591 600	condition
-E25	Condition:T42 
+E25	Condition:T42 Temporality:E30
 T43	Drug 617 628	medications
-E26	Drug:T43 Name:T44
-T44	Drug-Name 617 628	medications
-T45	Modifier 605 616	interfering
-E27	Modifier:T45 Modifies:E26
+E26	Drug:T43 
+R2	Equivalent-To Arg1:E2 Arg2:T11	
+T46	Negation 66 69	non
+E28	Negation:T46 Negates:E4
+T47	Eq-Comparison 55 65	undergoing
+E29	Eq-Comparison:T47 Temporal-Period:T48
+T48	Eq-Temporal-Period 55 65	undergoing
+A7	Eq-Temporal-Period-Value T48 present
+T21	Modifier 185 194	Emergency
+E12	Modifier:T21 Modifies:T23
+T22	Eq-Comparison 555 567	pre-existing
+E30	Eq-Comparison:T22 Temporal-Period:T49
+T49	Eq-Temporal-Period 555 567	pre-existing
+A4	Eq-Temporal-Period-Value T49 past
+T50	Or 602 604	or
+E31	Or:T50 Arg:E25 Arg2:E26
+T45	Stability 605 616	interfering
+A8	Stability-Value T45 change
+R1	Caused-By Arg1:T45 Arg2:E26	
+T44	Study 679 693	clinical trial
+E27	Study:T44 Temporality:E32
+T51	Eq-Comparison 640 648	previous
+E32	Eq-Comparison:T51 Temporal-Period:T52
+T52	Eq-Temporal-Period 640 648	previous
+A9	Eq-Temporal-Period-Value T52 past
+T53	Modifier 652 662	concurrent
+E33	Modifier:T53 Modifies:E27
+T54	Or 649 651	or
+E34	Or:T54 Arg:E32 Arg2:E33
+T55	Assertion 736 741	might
+E35	Assertion:T55 Asserted:T57
+A10	Assertion-Type-Value E35 hypothetical
+T56	Study 780 794	clinical trial
+E36	Study:T56 Stability:T57
+T57	Stability 742 751	interfere
+A11	Stability-Value T57 change
+R3	Caused-By Arg1:T57 Arg2:E27	
