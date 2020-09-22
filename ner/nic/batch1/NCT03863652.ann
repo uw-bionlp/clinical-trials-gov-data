@@ -13,8 +13,6 @@ E3	Eq-Comparison:T7 Operator:T3 Temporal-Unit:T4 Value:T6
 T8	Condition 84 112	palpable distal radial arter
 E4	Condition:T8 Name:T9
 T9	Condition-Name 84 112	palpable distal radial arter
-T10	Negation 211 220	Exclusion
-E5	Negation:T10 
 T11	Condition 257 286	palpable distal radial artery
 E6	Condition:T11 Name:T12
 T12	Condition-Name 257 286	palpable distal radial artery
@@ -26,13 +24,24 @@ T15	Condition 302 324	childbearing potential
 E8	Condition:T15 Name:T16
 T16	Condition-Name 302 324	childbearing potential
 T17	Condition 355 363	pregnant
-E9	Condition:T17 Name:T18
+E9	Condition:T17 Name:T18 Temporality:E15
 T18	Condition-Name 355 363	pregnant
 T19	Assertion 330 344	possibly plans
 E10	Assertion:T19 Asserted:E9
 A4	Assertion-Type-Value E10 intention
 T20	Temporal-Connection 373 378	after
-E11	Temporal-Connection:T20 Arg:E9 Arg2:E12
+E11	Temporal-Connection:T20 Arg2:E12 Arg:E15
 A5	Temporal-Connection-Type-Value E11 after
 T21	Study 400 405	study
 E12	Study:T21 
+T22	Assertion 48 57	requiring
+E13	Assertion:T22 Asserted:E1
+A6	Assertion-Type-Value E13 hypothetical
+T10	And 299 301	of
+E5	And:T10 Arg:T14 Arg2:E8
+T23	And 326 329	who
+E14	And:T23 Arg:E8 Arg2:E10
+T24	Eq-Comparison 364 372	any time
+E15	Eq-Comparison:T24 Temporal-Period:T25
+T25	Eq-Temporal-Period 364 372	any time
+A7	Eq-Temporal-Period-Value T25 anytime

@@ -7,9 +7,6 @@ E3	Procedure:T3 Name:T4
 T5	Procedure 578 594	dental procedure
 T6	Procedure-Name 578 594	dental procedure
 E5	Procedure:T5 Name:T6
-T7	Condition 682 691	syndromes
-T8	Condition-Name 682 691	syndromes
-E7	Condition:T7 Name:T8
 T9	Condition 480 486	caries
 T10	Condition-Name 480 486	caries
 E9	Condition:T9 Name:T10
@@ -18,21 +15,67 @@ E2	Family-Member:T11
 T12	Condition 228 241	fully erupted
 E4	Condition:T12 Name:T13
 T13	Condition-Name 228 241	fully erupted
-T14	Condition 306 326	need fissure sealant
-E6	Condition:T14 Name:T15
-T15	Condition-Name 306 326	need fissure sealant
-T16	Condition 348 380	white-yellow-brown discoloration
+T14	Procedure 311 326	fissure sealant
+E6	Procedure:T14 Name:T15
+T15	Procedure-Name 311 326	fissure sealant
+T16	Condition 367 380	discoloration
 E8	Condition:T16 Name:T17
-T17	Condition-Name 348 380	white-yellow-brown discoloration
-T18	Risk 395 411	high-caries risk
-E10	Risk:T18 
-T19	Condition 452 471	previously restored
-E11	Condition:T19 Name:T20
-T20	Condition-Name 452 471	previously restored
+T17	Condition-Name 367 380	discoloration
+T18	Risk 407 411	risk
+E10	Risk:T18 Risk-For:E22 Polarity:T38
+T19	Procedure 463 471	restored
+E11	Procedure:T19 Name:T20 Temporality:E23
+T20	Procedure-Name 463 471	restored
 T21	Condition 616 632	dental flourosis
 E12	Condition:T21 Name:T22
 T22	Condition-Name 616 632	dental flourosis
 T23	Condition 636 655	enamel malformation
 E13	Condition:T23 Name:T24
 T24	Condition-Name 636 655	enamel malformation
-R1	Found-By Arg1:E13 Arg2:E7	
+T25	Modifier 138 149	molar teeth
+E14	Modifier:T25 Modifies:T2
+T26	Modifier 213 223	Teeth that
+E15	Modifier:T26 Modifies:T13
+T27	Eq-Comparison 265 277	at least two
+E16	Eq-Comparison:T27 Operator:T28 Value:T29
+T28	Eq-Operator 265 273	at least
+A1	Eq-Operator-Value T28 GTEQ
+T29	Eq-Value 274 277	two
+T30	Modifier 278 293	permanent first
+E17	Modifier:T30 Modifies:T32
+T31	Condition 294 300	molars
+E18	Condition:T31 Name:T32 Minimum-Count:E16
+T32	Condition-Name 294 300	molars
+T33	Assertion 306 310	need
+E19	Assertion:T33 Asserted:E6
+A2	Assertion-Type-Value E19 hypothetical
+R2	Treatment-For Arg1:E6 Arg2:E18	
+T34	Modifier 348 366	white-yellow-brown
+E20	Modifier:T34 Modifies:T17
+T35	Modifier 332 337	Teeth
+E21	Modifier:T35 Modifies:T17
+T36	Condition 400 406	caries
+E22	Condition:T36 Name:T37
+T37	Condition-Name 400 406	caries
+T38	Polarity 395 399	high
+A3	Polarity-Value T38 high
+R3	Caused-By Arg1:E10 Arg2:E8	
+T39	Eq-Comparison 452 462	previously
+E23	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 452 462	previously
+A4	Eq-Temporal-Period-Value T40 past
+T41	Condition 437 442	Teeth
+E24	Condition:T41 Name:T42
+T42	Condition-Name 437 442	Teeth
+R4	Treatment-For Arg1:E11 Arg2:E24	
+T43	Or 472 474	or
+E25	Or:T43 Arg:E24 Arg2:E9
+T44	Assertion 554 557	not
+E26	Assertion:T44 Asserted:E27
+A5	Assertion-Type-Value E26 hypothetical
+T45	Negation 554 557	not
+E27	Negation:T45 Negates:E5
+T46	Modifier 600 605	Teeth
+E28	Modifier:T46 Modifies:T22
+T47	Or 633 635	or
+E29	Or:T47 Arg:E12 Arg2:E13
