@@ -16,8 +16,8 @@ E11	Condition:T11 Name:T12
 T13	Condition 399 403	BPPV
 T14	Condition-Name 399 403	BPPV
 E13	Condition:T13 Name:T14
-T15	Condition 571 591	Postural Hypotension
-T16	Condition-Name 571 591	Postural Hypotension
+T15	Condition 580 591	Hypotension
+T16	Condition-Name 580 591	Hypotension
 E15	Condition:T15 Name:T16
 T17	Condition 598 619	Familial Dysautonomia
 T18	Condition-Name 598 619	Familial Dysautonomia
@@ -25,18 +25,18 @@ E17	Condition:T17 Name:T18
 T19	Condition 626 645	Diabetic Neuropathy
 T20	Condition-Name 626 645	Diabetic Neuropathy
 E19	Condition:T19 Name:T20
-T21	Procedure 699 702	TBI
-T22	Procedure-Name 699 702	TBI
-E21	Procedure:T21 Name:T22
+T21	Condition 699 702	TBI
+T22	Condition-Name 699 702	TBI
+E21	Condition:T21 Name:T22 Temporality:E46
 T23	Condition 779 805	Central Positional Vertigo
 T24	Condition-Name 779 805	Central Positional Vertigo
-E23	Condition:T23 Name:T24
+E23	Condition:T23 Name:T24 Temporality:E48
 T25	Condition 752 770	Multiple Sclerosis
 T26	Condition-Name 752 770	Multiple Sclerosis
-E25	Condition:T25 Name:T26
+E25	Condition:T25 Name:T26 Temporality:E48
 T27	Condition 738 744	Stroke
 T28	Condition-Name 738 744	Stroke
-E27	Condition:T27 Name:T28
+E27	Condition:T27 Name:T28 Temporality:E48
 T29	Condition 746 749	CVA
 T30	Condition-Name 746 749	CVA
 E29	Condition:T29 Name:T30
@@ -80,10 +80,6 @@ T57	Condition 125 143	spinning sensation
 E2	Condition:T57 Name:T58
 T58	Condition-Name 125 143	spinning sensation
 R1	Equivalent-To Arg1:E2 Arg2:E3	
-T9	Observation 304 344	Positive Dix-Hallpike / Supine Roll Test
-E4	Observation:T9 Name:T10
-T10	Observation-Name 304 344	Positive Dix-Hallpike / Supine Roll Test
-A1	Observation-Type-Value T10 clinical-score
 T59	Condition 453 462	dizziness
 E6	Condition:T59 Name:T60
 T60	Condition-Name 453 462	dizziness
@@ -92,8 +88,6 @@ E8	Condition:T61 Name:T62
 T62	Condition-Name 465 483	spinning sensation
 R2	Equivalent-To Arg1:E8 Arg2:E11	
 R3	Equivalent-To Arg1:E6 Arg2:E11	
-T63	Negation 495 504	Exclusion
-E9	Negation:T63 
 T64	Condition 535 539	pain
 E10	Condition:T64 Name:T65
 T65	Condition-Name 535 539	pain
@@ -103,16 +97,14 @@ T67	Temporal-Connection 540 553	in the day of
 E14	Temporal-Connection:T67 Arg:E10 Arg2:E12
 A2	Temporal-Connection-Type-Value E14 during
 T68	Condition 663 671	Whiplash
-E16	Condition:T68 Name:T69
+E16	Condition:T68 Name:T69 Temporality:E44 Temporality2:E46
 T69	Condition-Name 663 671	Whiplash
 T70	Condition 675 697	Traumatic Brain Injury
-E18	Condition:T70 Name:T71
+E18	Condition:T70 Name:T71 Temporality:E44
 T71	Condition-Name 675 697	Traumatic Brain Injury
 T72	Or 672 674	or
 E20	Or:T72 Arg:E16 Arg2:E18
 R4	Abbrev-Of Arg1:E21 Arg2:E18	
-T73	Eq-Temporal-Period 704 720	in the last year
-A3	Eq-Temporal-Period-Value T73 recent
 T41	Condition 836 839	CHD
 E22	Condition:T41 Name:T42
 T42	Condition-Name 836 839	CHD
@@ -126,21 +118,70 @@ T76	Condition 1058 1079	Perilymphatic Fistula
 E26	Condition:T76 Name:T77
 T77	Condition-Name 1058 1079	Perilymphatic Fistula
 T78	Condition 1122 1140	Medical conditions
-E28	Condition:T78 Name:T79
-T79	Condition-Name 1122 1140	Medical conditions
-T80	Risk 1146 1155	high risk
-E30	Risk:T80 
+E28	Condition:T78 
+T80	Risk 1151 1155	risk
+E30	Risk:T80 Risk-For:E32 Risk-For2:E34 Polarity:T104
 T81	Condition 1159 1170	subluxation
 E32	Condition:T81 Name:T82
 T82	Condition-Name 1159 1170	subluxation
-T83	Condition 1173 1211	dislocation of the Atlanto-axial joint
+T83	Condition 1173 1184	dislocation
 E34	Condition:T83 Name:T84
-T84	Condition-Name 1173 1211	dislocation of the Atlanto-axial joint
-R8	Caused-By Arg1:E32 Arg2:E28	
-R9	Caused-By Arg1:E34 Arg2:E28	
+T84	Condition-Name 1173 1184	dislocation
 T85	Provider 1298 1325	Vestibular physiotherapists
-E36	Provider:T85 
-T86	Provider-Role 1298 1325	Vestibular physiotherapists
+E36	Provider:T85 Type:T86
+T86	Provider-Type 1298 1325	Vestibular physiotherapists
 T87	Provider 1218 1238	Health professionals
-E38	Provider:T87 Role:T88
-T88	Provider-Role 1218 1238	Health professionals
+E38	Provider:T87 
+T89	Criteria-Count 79 101	the following criteria
+E40	Criteria-Count:T89 Criteria:E2 Criteria2:E4
+T9	Observation 313 344	Dix-Hallpike / Supine Roll Test
+E4	Observation:T9 Name:T10 Polarity:T90
+T10	Observation-Name 313 344	Dix-Hallpike / Supine Roll Test
+A1	Observation-Type-Value T10 clinical-score
+T90	Polarity 304 312	Positive
+A4	Polarity-Value T90 positive
+R10	Found-By Arg1:E1 Arg2:E4	
+T91	Negation 391 398	without
+E41	Negation:T91 Negates:E13
+T92	Negation 437 440	not
+E42	Negation:T92 Negates:E6 Negates2:E8
+T63	Modifier 571 579	Postural
+E9	Modifier:T63 Modifies:T16
+T93	Eq-Comparison 652 659	History
+E44	Eq-Comparison:T93 Temporal-Period:T94
+T94	Eq-Temporal-Period 652 659	History
+A5	Eq-Temporal-Period-Value T94 past
+T73	Eq-Comparison 711 720	last year
+E46	Eq-Comparison:T73 Temporal-Period:T95 Temporal-Unit:T96
+T95	Eq-Temporal-Period 711 715	last
+A3	Eq-Temporal-Period-Value T95 past
+T96	Eq-Temporal-Unit 716 720	year
+A6	Eq-Temporal-Unit-Value T96 year
+T97	Eq-Comparison 727 734	History
+E48	Eq-Comparison:T97 Temporal-Period:T98
+T98	Eq-Temporal-Period 727 734	History
+A7	Eq-Temporal-Period-Value T98 past
+R11	Abbrev-Of Arg1:E29 Arg2:E27	
+R12	Abbrev-Of Arg1:E31 Arg2:E25	
+T99	Or 776 778	or
+E50	Or:T99 Arg:E31 Arg2:E23
+T100	Procedure 940 949	treatment
+E52	Procedure:T100 
+T101	Drug 953 967	Beta- Blockers
+E54	Drug:T101 Name:T102
+T102	Drug-Name 953 967	Beta- Blockers
+R13	Using Arg1:E52 Arg2:E54	
+T79	Or 1171 1172	/
+E56	Or:T79 Arg:E32 Arg2:E34
+T103	Modifier 1192 1211	Atlanto-axial joint
+E57	Modifier:T103 Modifies:T84
+T104	Polarity 1146 1150	high
+A8	Polarity-Value T104 high
+R8	Caused-By Arg1:E30 Arg2:E28	
+T88	Procedure 1262 1267	treat
+E58	Procedure:T88 Provider:E38
+R9	Treatment-For Arg1:E58 Arg2:E55	
+T105	Assertion 1247 1261	specialized to
+E59	Assertion:T105 Asserted:E58
+A9	Assertion-Type-Value E59 hypothetical
+R14	Example-Of Arg1:E36 Arg2:E38	

@@ -24,7 +24,7 @@ T15	Condition-Name 97 112	hearing problem
 T16	Negation 88 90	no
 E8	Negation:T16 Negates:E7
 T17	Condition 214 221	disease
-E9	Condition:T17 Temporality:E13
+E9	Condition:T17 Temporality:E13 Name:T28
 T18	Modifier 203 213	cadiologic
 E10	Modifier:T18 Modifies:E9
 T19	Modifier 188 199	psychiatric
@@ -38,11 +38,20 @@ A5	Eq-Temporal-Period-Value T22 past
 T23	Procedure 227 236	treatment
 E14	Procedure:T23 
 T1	Observation 256 266	parameters
-E1	Observation:T1 Name:T2
+E1	Observation:T1 Name:T2 Stability:T29
 T2	Observation-Name 256 266	parameters
 A6	Observation-Type-Value T2 measurement
-R1	Caused-By Arg1:E1 Arg2:E14	
 T24	Modifier 270 294	brain tissue pulsatility
-E15	Modifier:T24 Modifies:E1
+E15	Modifier:T24 Modifies:T2
 T25	Modifier 299 324	peripheral nervous system
-E16	Modifier:T25 Modifies:E1
+E16	Modifier:T25 Modifies:T2
+T26	Observation 138 159	professional musician
+E17	Observation:T26 Name:T27
+T27	Observation-Name 138 159	professional musician
+T28	Condition-Name 214 221	disease
+T29	Stability 249 255	impact
+A7	Stability-Value T29 change
+T30	Assertion 243 248	could
+E18	Assertion:T30 Asserted:T29
+A8	Assertion-Type-Value E18 hypothetical
+R1	Caused-By Arg1:T29 Arg2:E14	

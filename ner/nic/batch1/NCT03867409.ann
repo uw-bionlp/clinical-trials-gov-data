@@ -19,8 +19,8 @@ T14	Eq-Comparison 212 221	>10 years
 E3	Eq-Comparison:T14 Operator:T5 Temporal-Unit:T8 Value:T11
 T15	Eq-Comparison 239 247	>3 years
 E4	Eq-Comparison:T15 Operator:T6 Temporal-Unit:T9 Value:T12
-T16	Eq-Comparison 263 266	> 1
-E5	Eq-Comparison:T16 Operator:T7 Value:T13
+T16	Eq-Comparison 263 271	> 1 year
+E5	Eq-Comparison:T16 Operator:T7 Value:T13 Temporal-Unit:T27
 T4	Location 43 56	United States
 A1	Location-Value T4 residence
 T17	Location 72 79	Florida
@@ -43,3 +43,8 @@ T26	Procedure-Name 276 301	fecal immunochemical test
 R1	If-Then Arg1:E7 Arg2:E3	
 R2	If-Then Arg1:E8 Arg2:E4	
 R3	If-Then Arg1:E9 Arg2:E5	
+R4	Example-Of Arg1:E7 Arg2:E2	
+R5	Example-Of Arg1:E8 Arg2:E2	
+R6	Example-Of Arg1:E9 Arg2:E2	
+T27	Eq-Temporal-Unit 267 271	year
+A8	Eq-Temporal-Unit-Value T27 year

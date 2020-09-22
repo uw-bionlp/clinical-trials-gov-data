@@ -6,12 +6,9 @@ T5	Modifier 252 257	liver
 E5	Modifier:T5 Modifies:E16
 T7	Modifier 259 263	lung
 E7	Modifier:T7 Modifies:E16
-T9	Procedure 341 345	work
-T10	Procedure-Name 341 345	work
+T9	Procedure 341 348	work-up
+T10	Procedure-Name 341 348	work-up
 E9	Procedure:T9 Name:T10
-T13	Procedure 649 657	surgical
-T14	Procedure-Name 649 657	surgical
-E13	Procedure:T13 Name:T14
 T15	Procedure 731 749	invasive procedure
 T16	Procedure-Name 731 749	invasive procedure
 E15	Procedure:T15 Name:T16
@@ -26,13 +23,13 @@ T24	Procedure-Name 852 868	systemic therapy
 E23	Procedure:T23 Name:T24
 T25	Condition 983 992	pregnancy
 T26	Condition-Name 983 992	pregnancy
-E25	Condition:T25 Name:T26 Temporality:E52 Temporality2:E50 Temporality3:E53
+E25	Condition:T25 Name:T26 Temporality:E52 Temporality3:E53
 T27	Procedure 1044 1072	organ tissue transplantation
 T28	Procedure-Name 1044 1072	organ tissue transplantation
-E27	Procedure:T27 Name:T28
+E27	Procedure:T27 Name:T28 Temporality:E66
 T29	Procedure 1093 1118	blood product transfusion
 T30	Procedure-Name 1093 1118	blood product transfusion
-E29	Procedure:T29 Name:T30
+E29	Procedure:T29 Name:T30 Temporality:E67 Temporality2:E54
 T31	Eq-Operator 29 53	greater than or equal to
 A1	Eq-Operator-Value T31 GTEQ
 T33	Eq-Operator 547 556	less than
@@ -59,17 +56,13 @@ T43	Eq-Temporal-Unit 1178 1184	months
 A13	Eq-Temporal-Unit-Value T43 month
 T44	Age 25 28	Age
 E30	Age:T44 Eq-Comparison:E2
-T45	Age 63 66	old
-E31	Age:T45 Eq-Comparison:E2
 T46	Age 543 546	Age
 E32	Age:T46 Eq-Comparison:E34
-T47	Age 566 569	old
-E33	Age:T47 Eq-Comparison:E34
 T48	Eq-Value 54 56	21
 T49	Eq-Value 557 559	21
 T50	Eq-Comparison 547 565	less than 21 years
 E34	Eq-Comparison:T50 Operator:T33 Temporal-Unit:T40 Value:T49
-T19	Eq-Comparison 29 66	greater than or equal to 21 years old
+T19	Eq-Comparison 29 62	greater than or equal to 21 years
 E2	Eq-Comparison:T19 Operator:T31 Temporal-Unit:T39 Value:T48
 T20	Condition 94 104	malignancy
 E4	Condition:T20 Name:T51
@@ -77,14 +70,10 @@ T51	Condition-Name 94 104	malignancy
 T52	Assertion 81 90	suspicion
 E6	Assertion:T52 Asserted:E4
 A14	Assertion-Type-Value E6 possible
-T53	Observation 114 119	signs
-E8	Observation:T53 Name:T6
-T54	Observation 121 129	symptoms
-E10	Observation:T54 Name:T8
 T55	Procedure 131 146	imaging studies
-E12	Procedure:T55 
-T56	Procedure 155 176	non-surgical biopsies
-E14	Procedure:T56 
+E12	Procedure:T55 Name:T45
+T56	Procedure 168 176	biopsies
+E14	Procedure:T56 Name:T53
 T57	Condition 201 207	cancer
 E16	Condition:T57 Name:T59
 T58	Modifier 215 222	bladder
@@ -100,10 +89,6 @@ T2	Or 274 276	or
 E24	Or:T2 Arg:E1 Arg2:E3
 T4	Or 148 154	and/or
 E26	Or:T4 Arg:E12 Arg2:E14
-T6	Observation-Name 114 119	signs
-T8	Observation-Name 121 129	symptoms
-R1	Found-By Arg1:E4 Arg2:E8	
-R2	Found-By Arg1:E4 Arg2:E10	
 R3	Found-By Arg1:E4 Arg2:E12	
 R4	Found-By Arg1:E4 Arg2:E14	
 T32	Or 325 331	and/or
@@ -112,16 +97,9 @@ T63	Modifier 317 324	medical
 E35	Modifier:T63 Modifies:E9
 T64	Modifier 332 340	surgical
 E36	Modifier:T64 Modifies:E9
-T65	Observation 361 392	organ-specific cancer diagnosis
-E37	Observation:T65 Name:T66
-T66	Observation-Name 361 392	organ-specific cancer diagnosis
-A2	Observation-Type-Value T66 lab
-R5	Using Arg1:E37 Arg2:E9	
-T67	Observation 406 424	pathologic staging
-E38	Observation:T67 Name:T68
-T68	Observation-Name 406 424	pathologic staging
-A15	Observation-Type-Value T68 lab
-R6	Equivalent-To Arg1:E38 Arg2:E37	
+T67	Procedure 406 424	pathologic staging
+E38	Procedure:T67 Name:T68
+T68	Procedure-Name 406 424	pathologic staging
 T11	Condition 585 591	cancer
 E11	Condition:T11 Name:T12 Temporality:E39
 T12	Condition-Name 585 591	cancer
@@ -130,21 +108,7 @@ E39	Eq-Comparison:T69 Temporal-Period:T70
 T70	Eq-Temporal-Period 579 584	prior
 A16	Eq-Temporal-Period-Value T70 past
 T71	Procedure 623 632	treatment
-E40	Procedure:T71 Name:T72 Temporality:E44
-T72	Procedure-Name 623 632	treatment
-T73	Procedure 662 671	radiation
-E41	Procedure:T73 Name:T74
-T74	Procedure-Name 662 671	radiation
-T75	Procedure 640 647	medical
-E42	Procedure:T75 Name:T76
-T76	Procedure-Name 640 647	medical
-T77	Procedure 672 680	oncology
-E43	Procedure:T77 Name:T78
-T78	Procedure-Name 672 680	oncology
-R7	Example-Of Arg1:E42 Arg2:E40	
-R8	Example-Of Arg1:E13 Arg2:E40	
-R9	Example-Of Arg1:E41 Arg2:E40	
-R10	Example-Of Arg1:E43 Arg2:E40	
+E40	Procedure:T71 Temporality:E44
 T79	Eq-Comparison 682 705	within prior six months
 E44	Eq-Comparison:T79 Value:T81 Temporal-Unit:T41 Operator:T34 Temporal-Period:T80
 T80	Eq-Temporal-Period 689 694	prior
@@ -153,7 +117,7 @@ T81	Eq-Value 695 698	six
 T82	Procedure 716 723	surgery
 E45	Procedure:T82 Name:T83 Temporality:E46
 T83	Procedure-Name 716 723	surgery
-R11	Equivalent-To Arg1:E15 Arg2:E45	
+R11	Example-Of Arg1:E15 Arg2:E45	
 T84	Eq-Comparison 812 830	within prior month
 E46	Eq-Comparison:T84 Temporal-Unit:T86 Temporal-Period:T85
 T85	Eq-Temporal-Period 819 824	prior
@@ -161,19 +125,15 @@ A18	Eq-Temporal-Period-Value T85 past
 T86	Eq-Temporal-Unit 825 830	month
 A19	Eq-Temporal-Unit-Value T86 month
 R12	Using Arg1:E15 Arg2:E17	
-T87	Modifier 841 851	non-cancer
-E47	Modifier:T87 Modifies:E23
 T88	Modifier 885 905	molecularly targeted
 E48	Modifier:T88 Modifies:E21
 R13	Using Arg1:E21 Arg2:E23	
 T89	Procedure 931 952	monoclonal antibodies
 E49	Procedure:T89 Name:T90
 T90	Procedure-Name 931 952	monoclonal antibodies
-R14	Example-Of Arg1:E49 Arg2:E23	
-T91	Eq-Comparison 963 973	concurrent
-E50	Eq-Comparison:T91 Temporal-Period:T92
-T92	Eq-Temporal-Period 963 973	concurrent
-A20	Eq-Temporal-Period-Value T92 present
+R14	Example-Of Arg1:E49 Arg2:E21	
+T91	Modifier 963 973	concurrent
+E50	Modifier:T91 Modifies:T26
 T93	Or 974 976	or
 E51	Or:T93 Arg:E50 Arg2:E52
 T94	Eq-Comparison 977 982	prior
@@ -213,3 +173,53 @@ T113	Condition-Name 1229 1251	motor vehicle accident
 R15	Example-Of Arg1:E57 Arg2:E55	
 R16	Example-Of Arg1:E58 Arg2:E55	
 R17	Example-Of Arg1:E59 Arg2:E55	
+T6	Assertion 114 119	signs
+E8	Assertion:T6 Asserted:E4
+A27	Assertion-Type-Value E8 possible
+T8	Assertion 121 129	symptoms
+E10	Assertion:T8 Asserted:E4
+A28	Assertion-Type-Value E10 possible
+T45	Procedure-Name 131 146	imaging studies
+T53	Procedure-Name 168 176	biopsies
+T54	Modifier 159 167	surgical
+E31	Modifier:T54 Modifies:T53
+T114	Negation 155 158	non
+E60	Negation:T114 Negates:E31
+T65	Condition 376 382	cancer
+E37	Condition:T65 Name:T66
+T66	Condition-Name 376 382	cancer
+T115	Modifier 361 375	organ-specific
+E61	Modifier:T115 Modifies:T66
+R1	Treatment-For Arg1:E9 Arg2:E37	
+R2	Using Arg1:E9 Arg2:E38	
+T116	Assertion 292 305	Candidate for
+E62	Assertion:T116 Asserted:E9
+A2	Assertion-Type-Value E62 hypothetical
+T47	Negation 603 610	without
+E33	Negation:T47 Negates:E40
+T117	Or 611 613	or
+E63	Or:T117 Arg:E33 Arg2:E64
+T118	And 614 618	with
+E64	And:T118 Arg:E11 Arg2:E40
+T13	Modifier 640 647	medical
+E13	Modifier:T13 Modifies:E40
+T14	Modifier 649 657	surgical
+E41	Modifier:T14 Modifies:E40
+T72	Modifier 662 680	radiation oncology
+E42	Modifier:T72 Modifies:E40
+T73	Or 659 661	or
+E43	Or:T73 Arg:E41 Arg2:E42
+T74	Condition 845 851	cancer
+E47	Condition:T74 Name:T75
+T75	Condition-Name 845 851	cancer
+T76	Negation 841 844	non
+E65	Negation:T76 Negates:E47
+R5	Treatment-For Arg1:E23 Arg2:E47	
+T77	Eq-Comparison 1033 1040	history
+E66	Eq-Comparison:T77 Temporal-Period:T78
+T78	Eq-Temporal-Period 1033 1040	history
+A15	Eq-Temporal-Period-Value T78 past
+T87	Eq-Comparison 1082 1089	history
+E67	Eq-Comparison:T87 Temporal-Period:T92
+T92	Eq-Temporal-Period 1082 1089	history
+A20	Eq-Temporal-Period-Value T92 past

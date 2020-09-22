@@ -4,9 +4,9 @@ E1	Procedure:T1 Name:T2
 T3	Procedure 85 101	cochlear implant
 T4	Procedure-Name 85 101	cochlear implant
 E3	Procedure:T3 Name:T4
-T5	Condition 215 227	implantation
-T6	Condition-Name 215 227	implantation
-E5	Condition:T5 Name:T6
+T5	Procedure 215 227	implantation
+T6	Procedure-Name 215 227	implantation
+E5	Procedure:T5 Name:T6
 T7	Language 132 139	English
 T8	Life-Stage-And-Gender 398 403	child
 A1	Life-Stage-And-Gender-Type T8 child
@@ -20,8 +20,6 @@ T12	Eq-Temporal-Unit 174 179	years
 A5	Eq-Temporal-Unit-Value T12 year
 T13	Eq-Temporal-Unit 261 266	years
 A6	Eq-Temporal-Unit-Value T13 year
-T14	Age 208 211	age
-E6	Age:T14 
 T15	Eq-Value 172 173	3
 T16	Eq-Value 259 260	3
 T17	Eq-Comparison 170 179	< 3 years
@@ -29,20 +27,39 @@ E7	Eq-Comparison:T17 Operator:T10 Temporal-Unit:T12 Value:T15
 T18	Eq-Comparison 257 266	> 3 years
 E8	Eq-Comparison:T18 Operator:T11 Temporal-Unit:T13 Value:T16
 T19	Condition 160 168	deafness
-E2	Condition:T19 Name:T20
+E2	Condition:T19 Name:T20 Temporality:E9
 T20	Condition-Name 160 168	deafness
 T21	Age 183 186	age
 E4	Age:T21 Eq-Comparison:E7
-T22	Modifier 145 156	Early onset
-E9	Modifier:T22 Modifies:E2
 T23	Condition 247 255	deafness
-E10	Condition:T23 Name:T24
+E10	Condition:T23 Name:T24 Temporality:E6
 T24	Condition-Name 247 255	deafness
-T25	Modifier 233 243	Late onset
-E11	Modifier:T25 
-R1	Abbrev-Of Arg1:E11 Arg2:E10	
+T25	Modifier 233 237	Late
+E11	Modifier:T25 Modifies:E10
 T26	Age 270 273	age
-E12	Age:T26 
-R2	Equivalent-To Arg1:E12 Arg2:E8	
+E12	Age:T26 Eq-Comparison:E8
 T27	Or 404 406	or
 E13	Or:T27 Arg:T8 Arg2:T9
+T28	Modifier 25 41	Cochlear Nucleus
+E14	Modifier:T28 Modifies:T2
+T29	Modifier 68 84	Advanced Bionics
+E15	Modifier:T29 Modifies:T4
+T30	Or 65 67	or
+E16	Or:T30 Arg:E1 Arg2:E3
+T22	Eq-Comparison 151 156	onset
+E9	Eq-Comparison:T22 Temporal-Recency:T31
+T31	Eq-Temporal-Recency 151 156	onset
+A7	Eq-Temporal-Recency-Value T31 first-time
+T32	Modifier 145 150	Early
+E17	Modifier:T32 Modifies:T20
+R3	Equivalent-To Arg1:E7 Arg2:E17	
+T14	Eq-Comparison 238 243	onset
+E6	Eq-Comparison:T14 Temporal-Recency:T33
+T33	Eq-Temporal-Recency 238 243	onset
+A8	Eq-Temporal-Recency-Value T33 first-time
+R1	Equivalent-To Arg1:E8 Arg2:E11	
+T34	Study 428 438	enrollment
+E18	Study:T34 
+T35	Temporal-Connection 413 424	at the time
+E19	Temporal-Connection:T35 Arg:T9 Arg2:E18
+A9	Temporal-Connection-Type-Value E19 during

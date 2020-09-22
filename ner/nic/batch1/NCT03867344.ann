@@ -1,5 +1,5 @@
-T1	Condition 221 242	alcohol or drug abuse
-T2	Condition-Name 221 242	alcohol or drug abuse
+T1	Condition 237 242	abuse
+T2	Condition-Name 237 242	abuse
 E1	Condition:T1 Name:T2 Temporality:E64 Temporality2:E8
 T3	Condition 132 141	Pregnancy
 T4	Condition-Name 132 141	Pregnancy
@@ -8,7 +8,7 @@ T5	Condition 147 156	Lactation
 T6	Condition-Name 147 156	Lactation
 E5	Condition:T5 Name:T6
 T7	Life-Stage-And-Gender 59 66	Females
-A1	Life-Stage-And-Gender-Type T7 male
+A1	Life-Stage-And-Gender-Type T7 female
 T8	Life-Stage-And-Gender 49 54	Males
 A2	Life-Stage-And-Gender-Type T8 male
 T9	Observation 91 94	BMI
@@ -18,9 +18,6 @@ A3	Observation-Type-Value T10 vital
 T11	Observation 789 825	post-traumatic stress disorder score
 T12	Observation-Name 789 825	post-traumatic stress disorder score
 E11	Observation:T11 Name:T12
-T19	Condition 763 767	PTSD
-T20	Condition-Name 763 767	PTSD
-E19	Condition:T19 Name:T20
 T23	Eq-Operator 377 383	within
 A4	Eq-Operator-Value T23 LTEQ
 T24	Eq-Operator 421 427	within
@@ -56,7 +53,7 @@ T39	Eq-Unit 514 518	mmol
 T40	Eq-Unit 872 876	mmHg
 T41	Eq-Unit 907 911	mmHg
 T42	Age 67 70	age
-E22	Age:T42 
+E22	Age:T42 Eq-Comparison:E35
 T43	Eq-Operator 74 76	to
 A19	Eq-Operator-Value T43 BETWEEN
 T44	Eq-Operator 97 98	-
@@ -66,9 +63,9 @@ T46	Eq-Value 77 79	45
 T47	Eq-Value 95 97	18
 T48	Eq-Value 98 100	30
 T49	Eq-Value 437 438	3
-T50	Eq-Value 510 511	5
+T50	Eq-Value 510 513	5.0
 T51	Eq-Value 541 543	60
-T52	Eq-Value 580 581	6
+T52	Eq-Value 580 583	6.5
 T53	Eq-Value 595 598	130
 T54	Eq-Value 621 624	150
 T55	Eq-Value 694 696	15
@@ -79,12 +76,12 @@ T61	Eq-Value 868 871	100
 T62	Eq-Value 904 906	90
 T63	Eq-Comparison 421 445	within the past 3 months
 E23	Eq-Comparison:T63 Operator:T24 Temporal-Unit:T37 Value:T49 Temporal-Period:T154
-T64	Eq-Comparison 509 511	>5
+T64	Eq-Comparison 509 520	>5.0 mmol/L
 E24	Eq-Comparison:T64 Operator:T25 Value:T50 Unit:T39 Per:T157
 T65	Eq-Comparison 540 558	<60 mL/min/1.73 m2
 E25	Eq-Comparison:T65 Operator:T26 Value:T51 Unit:T111 Per:T112 Per2:T113
 T66	Eq-Comparison 579 581	≥6
-E26	Eq-Comparison:T66 Operator:T27 Value:T52
+E26	Eq-Comparison:T66 Operator:T27 Value:T52 Unit:T170
 T67	Eq-Comparison 594 604	>130 mg/dL
 E27	Eq-Comparison:T67 Operator:T28 Value:T53 Unit:T116 Per:T117
 T68	Eq-Comparison 620 630	>150 mg/dL
@@ -101,14 +98,13 @@ T73	Eq-Comparison 867 874	<100 mm
 E33	Eq-Comparison:T73 Operator:T34 Unit:T40 Value:T61
 T74	Eq-Comparison 903 909	>90 mm
 E34	Eq-Comparison:T74 Operator:T35 Unit:T41 Value:T62
-T75	Eq-Comparison 71 76	18 to
+T75	Eq-Comparison 71 85	18 to 45 years
 E35	Eq-Comparison:T75 Operator:T43 Value:T45 Value2:T46 Temporal-Unit:T36
-T76	Eq-Comparison 95 98	18-
+T76	Eq-Comparison 95 106	18-30 kg/m2
 E36	Eq-Comparison:T76 Operator:T44 Value:T47 Value2:T48 Unit:T79 Per:T38
 T77	Condition 25 32	Healthy
 E2	Condition:T77 Name:T78
 T78	Condition-Name 25 32	Healthy
-R1	Equivalent-To Arg1:E22 Arg2:E35	
 T79	Eq-Unit 101 103	kg
 T80	Condition 162 171	Menopause
 E4	Condition:T80 Name:T81
@@ -145,19 +141,19 @@ E38	Eq-Comparison:T100 Temporal-Unit:T101 Temporal-Period:T155
 T101	Eq-Temporal-Unit 393 397	year
 A24	Eq-Temporal-Unit-Value T101 year
 T102	Negation 454 462	excluded
-E39	Negation:T102 
+E39	Negation:T102 Negates:E10 Negates2:E37
 T103	Drug 476 487	medications
 E40	Drug:T103 Name:T104
 T104	Drug-Name 476 487	medications
 T105	Observation 493 508	Serum potassium
-E41	Observation:T105 Name:T106
+E41	Observation:T105 Name:T106 Eq-Comparison:E24
 T106	Observation-Name 493 508	Serum potassium
 T107	Observation 564 578	Hemoglobin A1c
-E42	Observation:T107 Name:T108
+E42	Observation:T107 Name:T108 Eq-Comparison:E26
 T108	Observation-Name 564 578	Hemoglobin A1c
-T109	Observation 536 539	GFR
-E43	Observation:T109 Name:T110
-T110	Observation-Name 536 539	GFR
+T109	Observation 526 539	Estimated GFR
+E43	Observation:T109 Name:T110 Eq-Comparison:E25
+T110	Observation-Name 526 539	Estimated GFR
 A25	Observation-Type-Value T110 lab
 T111	Eq-Unit 544 546	mL
 T112	Eq-Unit 547 550	min
@@ -167,11 +163,10 @@ E44	Observation:T114 Eq-Comparison:E27 Name:T115
 T115	Observation-Name 590 593	LDL
 A26	Observation-Type-Value T115 lab
 A27	Observation-Type-Value T108 lab
-R2	Equivalent-To Arg1:E42 Arg2:E26	
 T116	Eq-Unit 599 601	mg
 T117	Eq-Unit 602 604	dL
 T118	Observation 606 619	Triglycerides
-E45	Observation:T118 Name:T119
+E45	Observation:T118 Name:T119 Eq-Comparison:E28
 T119	Observation-Name 606 619	Triglycerides
 A28	Observation-Type-Value T119 measurement
 T120	Eq-Unit 625 627	mg
@@ -190,9 +185,6 @@ E21	Observation:T21 Name:T22 Eq-Comparison:E30
 T22	Observation-Name 702 722	GAD-73 Questionnaire
 A31	Observation-Type-Value T22 survey-or-questionnaire
 R4	Equivalent-To Arg1:E11 Arg2:E31	
-T56	Provider 750 762	Primary Care
-E48	Provider:T56 Role:T58
-T58	Provider-Role 750 762	Primary Care
 T126	Observation 835 858	Blood pressure systolic
 E49	Observation:T126 Name:T127 Eq-Comparison:E32
 T127	Observation-Name 835 858	Blood pressure systolic
@@ -230,9 +222,9 @@ T144	Procedure-Name 1074 1086	ear implants
 T145	Procedure 1088 1100	eye implants
 E59	Procedure:T145 Name:T146
 T146	Procedure-Name 1088 1100	eye implants
-T147	Condition 1110 1133	metal fragments in eyes
+T147	Condition 1110 1125	metal fragments
 E60	Condition:T147 Name:T148
-T148	Condition-Name 1110 1133	metal fragments in eyes
+T148	Condition-Name 1110 1125	metal fragments
 R6	Example-Of Arg1:E52 Arg2:E15	
 R7	Example-Of Arg1:E53 Arg2:E15	
 R8	Example-Of Arg1:E54 Arg2:E15	
@@ -269,17 +261,17 @@ E67	Or:T156 Arg:E37 Arg2:E10
 T157	Eq-Unit 519 520	L
 A36	Observation-Type-Value T106 lab
 A37	Observation-Type-Value T12 clinical-score
-T13	Condition 1135 1172	exposure to shrapnel or metal filings
+T13	Condition 1135 1143	exposure
 E13	Condition:T13 Name:T14
-T14	Condition-Name 1135 1172	exposure to shrapnel or metal filings
+T14	Condition-Name 1135 1143	exposure
 R5	Example-Of Arg1:E13 Arg2:E15	
-T158	Procedure 1251 1292	metallic surgical hardware in vital areas
+T158	Procedure 1251 1277	metallic surgical hardware
 E68	Procedure:T158 Name:T159
-T159	Procedure-Name 1251 1292	metallic surgical hardware in vital areas
+T159	Procedure-Name 1251 1277	metallic surgical hardware
 R15	Example-Of Arg1:E68 Arg2:E15	
-T160	Condition 1302 1327	tattoos with metallic ink
+T160	Condition 1302 1309	tattoos
 E69	Condition:T160 Name:T161
-T161	Condition-Name 1302 1327	tattoos with metallic ink
+T161	Condition-Name 1302 1309	tattoos
 R16	Example-Of Arg1:E69 Arg2:E15	
 T162	Procedure 1337 1367	transdermal medication patches
 E70	Procedure:T162 Name:T163
@@ -288,3 +280,53 @@ R17	Example-Of Arg1:E70 Arg2:E15
 T164	Procedure 1373 1394	metal-containing IUDs
 E71	Procedure:T164 Name:T165
 T165	Procedure-Name 1373 1394	metal-containing IUDs
+T166	Or 55 58	and
+E72	Or:T166 Arg:T8 Arg2:T7
+T167	Modifier 221 228	alcohol
+E73	Modifier:T167 Modifies:T2
+T168	Modifier 232 236	drug
+E74	Modifier:T168 Modifies:T2
+T169	Or 229 231	or
+E75	Or:T169 Arg:E73 Arg2:E74
+T170	Eq-Unit 583 584	%
+T19	Procedure 768 774	Screen
+E19	Procedure:T19 Name:T20
+T20	Procedure-Name 768 774	Screen
+T56	Condition 763 767	PTSD
+E48	Condition:T56 Name:T58
+T58	Condition-Name 763 767	PTSD
+R1	Treatment-For Arg1:E19 Arg2:E48	
+T171	Modifier 750 762	Primary Care
+E76	Modifier:T171 Modifies:T20
+R2	Using Arg1:E19 Arg2:E11	
+T172	Or 1101 1103	or
+E77	Or:T172 Arg:E59 Arg2:E60
+T173	Other 1245 1250	other
+E78	Other:T173 Is-Other:E68
+T174	Modifier 1281 1292	vital areas
+E79	Modifier:T174 Modifies:T159
+T175	Modifier 1315 1327	metallic ink
+E80	Modifier:T175 Modifies:T161
+R18	Example-Of Arg1:E71 Arg2:E15	
+T176	Modifier 1129 1133	eyes
+E81	Modifier:T176 Modifies:T148
+T177	Modifier 1147 1155	shrapnel
+E82	Modifier:T177 Modifies:T14
+T178	Modifier 1159 1172	metal filings
+E83	Modifier:T178 Modifies:T14
+T179	Or 1156 1158	or
+E84	Or:T179 Arg:E82 Arg2:E83
+T180	Condition 1174 1200	wounded in military combat
+E85	Condition:T180 Name:T181
+T181	Condition-Name 1174 1200	wounded in military combat
+R19	Example-Of Arg1:E85 Arg2:E13	
+T182	Observation 1202 1221	sheet metal workers
+E86	Observation:T182 Name:T183
+T183	Observation-Name 1202 1221	sheet metal workers
+R20	Example-Of Arg1:E86 Arg2:E13	
+T184	Observation 1223 1230	welders
+E87	Observation:T184 Name:T185
+T185	Observation-Name 1223 1230	welders
+R21	Example-Of Arg1:E87 Arg2:E13	
+T186	Or 1369 1372	and
+E88	Or:T186 Arg:E70 Arg2:E71

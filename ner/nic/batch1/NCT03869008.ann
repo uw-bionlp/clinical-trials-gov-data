@@ -22,9 +22,9 @@ T14	Eq-Comparison 149 156	Current
 E6	Eq-Comparison:T14 Temporal-Period:T15
 T15	Eq-Temporal-Period 149 156	Current
 A4	Eq-Temporal-Period-Value T15 present
-T16	Condition 175 189	Digital ulcers
+T16	Condition 183 189	ulcers
 E7	Condition:T16 Name:T17
-T17	Condition-Name 175 189	Digital ulcers
+T17	Condition-Name 183 189	ulcers
 T18	Condition 205 227	Pulmonary hypertension
 E8	Condition:T18 Name:T19
 T19	Condition-Name 205 227	Pulmonary hypertension
@@ -58,3 +58,10 @@ T33	Eq-Comparison 372 381	Currently
 E16	Eq-Comparison:T33 Temporal-Period:T34
 T34	Eq-Temporal-Period 372 381	Currently
 A6	Eq-Temporal-Period-Value T34 present
+R5	If-Then Arg1:E4 Arg2:T11	
+T35	Modifier 175 182	Digital
+E17	Modifier:T35 Modifies:T17
+T36	Other 335 340	other
+E18	Other:T36 Is-Other:E13
+T37	Or 332 334	or
+E19	Or:T37 Arg:E12 Arg2:E13
