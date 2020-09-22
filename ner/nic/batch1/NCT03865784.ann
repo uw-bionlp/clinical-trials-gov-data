@@ -16,25 +16,58 @@ E1	Eq-Comparison:T9 Temporal-Unit:T4 Operator:T8 Value:T6
 T10	Condition 94 103	back pain
 E3	Condition:T10 Name:T11
 T11	Condition-Name 94 103	back pain
-T12	Modifier 81 93	non-specific
+T12	Modifier 85 93	specific
 E4	Modifier:T12 Modifies:E3
-T13	Condition 236 249	lumbar injury
+T13	Condition 243 249	injury
 E5	Condition:T13 Name:T14
-T14	Condition-Name 236 249	lumbar injury
-T15	Negation 189 198	Exclusion
-E6	Negation:T15 
-T16	Observation 255 272	medical diagnosis
-E7	Observation:T16 
-R1	Found-By Arg1:E5 Arg2:E7	
+T14	Condition-Name 243 249	injury
 T17	Procedure 310 325	pharmacological
 E8	Procedure:T17 Name:T18
 T18	Procedure-Name 310 325	pharmacological
 T19	Eq-Comparison 343 363	in the last 6 months
-E9	Eq-Comparison:T19 Temporal-Unit:T5 Operator:T20 Value:T7
+E9	Eq-Comparison:T19 Temporal-Unit:T5 Operator:T20 Value:T7 Temporal-Period:T37
 T20	Eq-Operator 343 345	in
 A5	Eq-Operator-Value T20 LTEQ
 T21	Allergy 380 389	allergies
 E10	Allergy:T21 
-T22	Condition 393 416	alterations of the skin
+T22	Condition 393 404	alterations
 E11	Condition:T22 Name:T23
-T23	Condition-Name 393 416	alterations of the skin
+T23	Condition-Name 393 404	alterations
+T24	Observation 25 41	Federated boxers
+E12	Observation:T24 Name:T25
+T25	Observation-Name 25 41	Federated boxers
+T26	Age 55 60	years
+E13	Age:T26 Eq-Comparison:E1
+T27	Negation 81 84	non
+E14	Negation:T27 Negates:E4
+T15	Observation 214 230	Federated boxers
+E6	Observation:T15 Name:T28
+T28	Observation-Name 214 230	Federated boxers
+A6	Observation-Type-Value T28 social-habit
+A7	Observation-Type-Value T25 social-habit
+T16	Modifier 236 242	lumbar
+E7	Modifier:T16 Modifies:T14
+T29	And 231 235	with
+E15	And:T29 Arg:E6 Arg2:E5
+T30	Eq-Comparison 282 285	are
+E16	Eq-Comparison:T30 Temporal-Period:T31
+T31	Eq-Temporal-Period 282 285	are
+A8	Eq-Temporal-Period-Value T31 present
+T32	Eq-Comparison 289 298	have been
+E17	Eq-Comparison:T32 Temporal-Period:T33
+T33	Eq-Temporal-Period 289 298	have been
+A9	Eq-Temporal-Period-Value T33 past
+T34	Or 286 288	or
+E18	Or:T34 Arg:E16 Arg2:E17
+T35	Procedure 299 306	treated
+E19	Procedure:T35 Temporality:E16 Temporality2:E17 Temporality3:E9
+R1	Using Arg1:E19 Arg2:E8	
+R2	Using Arg1:E19 Arg2:E2	
+T36	Or 326 328	or
+E20	Or:T36 Arg:E8 Arg2:E2
+T37	Eq-Temporal-Period 350 354	last
+A10	Eq-Temporal-Period-Value T37 past
+T38	Modifier 412 416	skin
+E21	Modifier:T38 Modifies:T23
+T39	Or 390 392	or
+E22	Or:T39 Arg:E10 Arg2:E11

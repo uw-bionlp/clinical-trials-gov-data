@@ -1,12 +1,12 @@
-T1	Condition 116 136	climacteric symptoms
-T2	Condition-Name 116 136	climacteric symptoms
+T1	Condition 116 127	climacteric
+T2	Condition-Name 116 127	climacteric
 E1	Condition:T1 Name:T2
 T6	Condition 469 487	infectious disease
 T7	Condition-Name 469 487	infectious disease
 E6	Condition:T6 Name:T7 Severity:T44
-T8	Condition 447 460	acute disease
-T9	Condition-Name 447 460	acute disease
-E8	Condition:T8 Name:T9
+T8	Condition 453 460	disease
+T9	Condition-Name 453 460	disease
+E8	Condition:T8 Name:T9 Severity:T4
 T10	Condition 662 687	gastrointestinal diseases
 T11	Condition-Name 662 687	gastrointestinal diseases
 E10	Condition:T10 Name:T11
@@ -24,19 +24,15 @@ T19	Condition-Name 689 716	inflammatory growth disease
 E18	Condition:T18 Name:T19
 T22	Eq-Operator 612 618	within
 A1	Eq-Operator-Value T22 LTEQ
-T23	Eq-Operator 918 926	the past
-A2	Eq-Operator-Value T23 GTEQ
-T24	Eq-Operator 1081 1096	within the past
+T24	Eq-Operator 1081 1087	within
 A3	Eq-Operator-Value T24 LTEQ
 T26	Age 25 28	Age
-E21	Age:T26 
+E21	Age:T26 Eq-Comparison:E2
 T27	Eq-Value 32 34	40
 T28	Eq-Value 604 605	1
 T3	Life-Stage-And-Gender 38 41	men
 A5	Life-Stage-And-Gender-Type T3 male
 T30	Life-Stage-And-Gender 46 51	women
-T31	Eq-Comparison 32 37	40~75
-E2	Eq-Comparison:T31 Value:T32 Value2:T27 Operator:T33
 T32	Eq-Value 35 37	75
 T33	Eq-Operator 34 35	~
 A6	Eq-Operator-Value T33 BETWEEN
@@ -47,22 +43,14 @@ R1	Caused-By Arg1:E1 Arg2:E3
 T36	Condition 195 202	fatigue
 E5	Condition:T36 Name:T37
 T37	Condition-Name 195 202	fatigue
-R2	Example-Of Arg1:E5 Arg2:E1	
+R2	Example-Of Arg1:E5 Arg2:E3	
 T38	Condition 204 216	helplessness
 E7	Condition:T38 Name:T39
 T39	Condition-Name 204 216	helplessness
-R3	Abbrev-Of Arg1:E7 Arg2:E1	
-T40	Provider 79 96	menopausal clinic
-E9	Provider:T40 Type:T41
-T41	Provider-Type 79 96	menopausal clinic
 T42	Encounter 67 74	visited
-E11	Encounter:T42 Type:T43
+E11	Encounter:T42 Type:T43 Location:T40
 T43	Encounter-Type 67 74	visited
-A7	Encounter-Type-Value T43 observation
-T4	Study 357 384	human body application test
-E4	Study:T4 
-T5	Negation 385 394	Exclusion
-E13	Negation:T5 
+A7	Encounter-Type-Value T43 outpatient
 T44	Severity 462 468	severe
 A8	Severity-Value T44 severe
 T45	Severity 489 495	severe
@@ -82,7 +70,7 @@ R4	Example-Of Arg1:E6 Arg2:E8
 R5	Example-Of Arg1:E15 Arg2:E8	
 R6	Example-Of Arg1:E17 Arg2:E8	
 R7	Example-Of Arg1:E19 Arg2:E8	
-T53	Assertion 425 434	suspected
+T53	Assertion 425 443	suspected symptoms
 E22	Assertion:T53 Asserted:E8
 A11	Assertion-Type-Value E22 possible
 T55	Eq-Comparison 594 611	more than 1 month
@@ -94,8 +82,7 @@ T58	Drug 569 579	antibiotic
 E25	Drug:T58 Name:T59
 T59	Drug-Name 569 579	antibiotic
 T60	Procedure 580 589	treatment
-E26	Procedure:T60 
-T61	Procedure-Name 580 589	treatment
+E26	Procedure:T60 Temporality:E4 Duration:E24 Temporality2:E13
 R8	Example-Of Arg1:E18 Arg2:E10	
 R9	Example-Of Arg1:E14 Arg2:E10	
 T62	Procedure 808 822	hernia surgery
@@ -106,33 +93,80 @@ E28	Exception:T64 From:E12 Except:E16 Except2:E27
 T65	Or 805 807	or
 E29	Or:T65 Arg:E16 Arg2:E27
 T66	Drug 842 865	health functional foods
-E30	Drug:T66 Name:T67
+E30	Drug:T66 Name:T67 Temporality:E43 Temporality2:E33
 T67	Drug-Name 842 865	health functional foods
 T68	Drug 867 887	lactic acid bacteria
-E31	Drug:T68 Name:T69
+E31	Drug:T68 Name:T69 Temporality:E43 Temporality2:E33
 T69	Drug-Name 867 887	lactic acid bacteria
 T70	Drug 893 913	red ginseng extracts
-E32	Drug:T70 Name:T71
+E32	Drug:T70 Name:T71 Temporality:E43 Temporality2:E33
 T71	Drug-Name 893 913	red ginseng extracts
 T72	Eq-Temporal-Unit 927 931	year
 A13	Eq-Temporal-Unit-Value T72 year
-T73	Eq-Temporal-Period 914 917	for
+T73	Eq-Temporal-Period 922 926	past
 A14	Eq-Temporal-Period-Value T73 past
-T74	Eq-Comparison 914 931	for the past year
-E33	Eq-Comparison:T74 Operator:T23 Temporal-Unit:T72 Temporal-Period:T73
+T74	Eq-Comparison 922 931	past year
+E33	Eq-Comparison:T74 Temporal-Unit:T72 Temporal-Period:T73
 T20	Study 984 1000	clinical studies
-E20	Study:T20 
+E20	Study:T20 Temporality:E47
 T21	Study 1004 1016	human trials
-E34	Study:T21 
+E34	Study:T21 Temporality:E47
 T75	Study 1038 1053	clinical trials
-E35	Study:T75 
+E35	Study:T75 Temporality2:E38
 T76	Study 1057 1080	human application tests
-E36	Study:T76 
-T25	And 889 892	and
-E23	And:T25 Arg:E31 Arg2:E32 Arg3:E30
+E36	Study:T76 Temporality2:E38
 T29	Or 1018 1020	or
 E37	Or:T29 Arg:E34 Arg2:E35
 T54	Eq-Comparison 1081 1102	within the past month
-E38	Eq-Comparison:T54 Operator:T24 Temporal-Unit:T77
+E38	Eq-Comparison:T54 Operator:T24 Temporal-Unit:T77 Temporal-Period:T92
 T77	Eq-Temporal-Unit 1097 1102	month
 A4	Eq-Temporal-Unit-Value T77 month
+A15	Life-Stage-And-Gender-Type T30 female
+T78	Or 42 45	and
+E39	Or:T78 Arg:T3 Arg2:T30
+T31	Eq-Comparison 32 37	40~75
+E2	Eq-Comparison:T31 Value:T27 Operator:T33 Value2:T32
+T40	Location 79 96	menopausal clinic
+A16	Location-Value T40 clinic
+T41	And 97 101	with
+E9	And:T41 Arg:E11 Arg2:E1
+T79	Assertion 128 136	symptoms
+E40	Assertion:T79 Asserted:E1
+A17	Assertion-Type-Value E40 possible
+R3	Example-Of Arg1:E7 Arg2:E3	
+T4	Severity 447 452	acute
+A18	Severity-Value T4 severe
+R10	Using Arg1:E26 Arg2:E25	
+T5	Eq-Comparison 558 565	history
+E4	Eq-Comparison:T5 Temporal-Period:T61
+T61	Eq-Temporal-Period 558 565	history
+A19	Eq-Temporal-Period-Value T61 past
+T80	Eq-Comparison 612 636	within the last 6 months
+E13	Eq-Comparison:T80 Operator:T22 Temporal-Period:T81 Value:T82 Temporal-Unit:T83
+T81	Eq-Temporal-Period 623 627	last
+A20	Eq-Temporal-Period-Value T81 past
+T82	Eq-Value 628 629	6
+T83	Eq-Temporal-Unit 630 636	months
+A21	Eq-Temporal-Unit-Value T83 month
+T84	Or 745 747	or
+E41	Or:T84 Arg:E10 Arg2:E12
+T85	Modifier 785 791	simple
+E42	Modifier:T85 Modifies:T17
+T86	Eq-Comparison 835 841	taking
+E43	Eq-Comparison:T86 Temporal-Period:T87
+T87	Eq-Temporal-Period 835 841	taking
+A22	Eq-Temporal-Period-Value T87 present
+T25	Or 889 892	and
+E23	Or:T25 Arg:E31 Arg2:E32
+T23	Other 978 983	other
+E44	Other:T23 Is-Other:E20
+T88	Or 1001 1003	or
+E45	Or:T88 Arg:E20 Arg2:E34
+T89	Or 1054 1056	or
+E46	Or:T89 Arg:E35 Arg2:E36
+T90	Eq-Comparison 951 960	currently
+E47	Eq-Comparison:T90 Temporal-Period:T91
+T91	Eq-Temporal-Period 951 960	currently
+A2	Eq-Temporal-Period-Value T91 present
+T92	Eq-Temporal-Period 1092 1096	past
+A23	Eq-Temporal-Period-Value T92 past
