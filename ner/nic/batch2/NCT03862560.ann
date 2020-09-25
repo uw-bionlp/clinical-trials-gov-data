@@ -7,7 +7,7 @@ A3	Eq-Operator-Value T3 BETWEEN
 T4	Eq-Value 62 64	12
 T5	Eq-Value 68 70	20
 T6	Eq-Value 118 119	3
-T7	Eq-Comparison 62 67	12 to
+T7	Eq-Comparison 62 76	12 to 20 years
 E1	Eq-Comparison:T7 Operator:T3 Value:T4 Value2:T5 Temporal-Unit:T1
 T8	Ethnicity 25 34	Caucasian
 T9	Condition 36 43	Healthy
@@ -19,9 +19,19 @@ T12	Eq-Comparison 109 125	at least 3 years
 E4	Eq-Comparison:T12 Operator:T13 Temporal-Unit:T2 Value:T6
 T13	Eq-Operator 109 117	at least
 A4	Eq-Operator-Value T13 GTEQ
-T14	Procedure 100 108	training
-E5	Procedure:T14 Duration:E4
-T15	Ethnicity 152 165	Non-caucasian
+T14	Observation 100 108	training
+E5	Observation:T14 Duration:E4 Name:T20 Temporality:E7
+T15	Ethnicity 156 165	caucasian
 T16	Condition 167 173	injury
 E6	Condition:T16 Name:T17
 T17	Condition-Name 167 173	injury
+T18	Eq-Comparison 89 96	history
+E7	Eq-Comparison:T18 Temporal-Period:T19
+T19	Eq-Temporal-Period 89 96	history
+A5	Eq-Temporal-Period-Value T19 past
+T20	Observation-Name 100 108	training
+A6	Observation-Type-Value T20 social-habit
+T21	And 82 86	with
+E8	And:T21 Arg:E3 Arg2:E5
+T22	Negation 152 155	Non
+E9	Negation:T22 Negates:T15

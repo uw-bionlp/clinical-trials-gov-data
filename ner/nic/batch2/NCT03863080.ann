@@ -1,16 +1,16 @@
-T1	Condition 64 81	Myasthenia Gravis
-T2	Condition-Name 64 81	Myasthenia Gravis
+T1	Condition 64 103	Myasthenia Gravis Foundation of America
+T2	Condition-Name 64 103	Myasthenia Gravis Foundation of America
 E1	Condition:T1 Name:T2
 T3	Life-Stage-And-Gender 33 39	female
-A1	Life-Stage-And-Gender-Type T3 male
+A1	Life-Stage-And-Gender-Type T3 female
 T4	Life-Stage-And-Gender 25 29	Male
 A2	Life-Stage-And-Gender-Type T4 male
 T7	Procedure 435 451	immunomodulation
 T8	Procedure-Name 435 451	immunomodulation
-E7	Procedure:T7 Name:T8
+E7	Procedure:T7 Name:T8 Temporality:E17
 T9	Procedure 578 593	plasma exchange
 T10	Procedure-Name 578 593	plasma exchange
-E9	Procedure:T9 Name:T10 Temporality:E18
+E9	Procedure:T9 Name:T10
 T11	Procedure 563 577	plasmapheresis
 T12	Procedure-Name 563 577	plasmapheresis
 E11	Procedure:T11 Name:T12
@@ -73,9 +73,6 @@ E4	Study:T43
 T44	Temporal-Connection 163 179	for the duration
 E5	Temporal-Connection:T44 Arg:E2 Arg2:E4
 A14	Temporal-Connection-Type-Value E5 during
-T45	Assertion 193 222	as judged by the Investigator
-E6	Assertion:T45 Asserted:E3
-A15	Assertion-Type-Value E6 possible
 T46	Observation 229 232	QMG
 E8	Observation:T46 Name:T47 Eq-Comparison:E16
 T47	Observation-Name 229 232	QMG
@@ -106,26 +103,13 @@ A17	Eq-Temporal-Recency-Value T59 first-time
 T60	Eq-Comparison 477 482	first
 E26	Eq-Comparison:T60 Temporal-Recency:T59
 T61	Temporal-Connection 468 473	prior
-E27	Temporal-Connection:T61 Arg:E7 Arg2:E25
+E27	Temporal-Connection:T61 Arg2:E25 Arg:E17
 A18	Temporal-Connection-Type-Value E27 before
 T62	Drug 496 511	Immunoglobulins
-E28	Drug:T62 Name:T63
+E28	Drug:T62 Name:T63 Temporality:E18
 T63	Drug-Name 496 511	Immunoglobulins
-T64	Procedure 521 523	SC
-E29	Procedure:T64 Name:T65
-T65	Procedure-Name 521 523	SC
-T66	Procedure 525 527	IV
-E30	Procedure:T66 Name:T67
-T67	Procedure-Name 525 527	IV
-T68	Procedure 529 533	IVIG
-E31	Procedure:T68 Name:T69
-T69	Procedure-Name 529 533	IVIG
-R5	Equivalent-To Arg1:E31 Arg2:E30	
-T70	Procedure 539 558	intramuscular route
-E32	Procedure:T70 Name:T71
-T71	Procedure-Name 539 558	intramuscular route
 T72	Or 536 538	or
-E33	Or:T72 Arg:E31 Arg2:T71
+E33	Or:T72 Arg:E31 Arg2:E32
 T73	Or 560 562	or
 E34	Or:T73 Arg:E28 Arg2:E11
 T74	Procedure 595 597	PE
@@ -137,18 +121,69 @@ E36	Temporal-Connection:T76 Arg:E18 Arg2:E37
 A19	Temporal-Connection-Type-Value E36 before
 T77	Study 621 630	Screening
 E37	Study:T77 
-T78	Temporal-Connection 670 675	prior
+T78	Temporal-Connection 670 678	prior to
 E38	Temporal-Connection:T78 Arg:E19 Arg2:E39
 A20	Temporal-Connection-Type-Value E38 before
 T79	Study 679 688	screening
 E39	Study:T79 
-T80	Observation 701 704	IgG
+T80	Observation 695 704	Total IgG
 E40	Observation:T80 Name:T81 Eq-Comparison:E20
-T81	Observation-Name 701 704	IgG
+T81	Observation-Name 695 704	Total IgG
 A21	Observation-Type-Value T81 clinical-score
 T82	Eq-Unit 714 715	g
 T83	Eq-Unit 716 717	L
-T84	Observation 748 764	neutrophil count
+T84	Observation 739 764	Absolute neutrophil count
 E41	Observation:T84 Name:T85 Eq-Comparison:E21
-T85	Observation-Name 748 764	neutrophil count
+T85	Observation-Name 739 764	Absolute neutrophil count
 T86	Eq-Unit 771 776	cells
+T87	Or 30 32	or
+E42	Or:T87 Arg:T4 Arg2:T3
+T88	Condition 105 109	MGFA
+E43	Condition:T88 Name:T89 Stage:E44
+T89	Condition-Name 105 109	MGFA
+R7	Abbrev-Of Arg1:E43 Arg2:E1	
+T90	Eq-Comparison 111 123	Class II-IVa
+E44	Eq-Comparison:T90 Operator:T93 Unit:T94 Value:T91 Value2:T92
+T91	Eq-Value 117 119	II
+T92	Eq-Value 120 123	IVa
+T93	Eq-Operator 119 120	-
+A22	Eq-Operator-Value T93 BETWEEN
+T94	Eq-Unit 111 116	Class
+T95	Assertion 128 134	likely
+E45	Assertion:T95 Asserted:E3
+A23	Assertion-Type-Value E45 hypothetical
+T96	And 124 127	and
+E46	And:T96 Arg:E43 Arg2:E45
+T97	Assertion 142 149	need of
+E47	Assertion:T97 Asserted:E2
+A24	Assertion-Type-Value E47 hypothetical
+T45	Study 246 255	Screening
+E6	Study:T45 
+T98	Study 260 268	Baseline
+E48	Study:T98 
+T99	And 256 259	and
+E49	And:T99 Arg:E6 Arg2:E48
+T100	Temporal-Connection 243 245	at
+E50	Temporal-Connection:T100 Arg:E8 Arg2:E6
+A15	Temporal-Connection-Type-Value E50 during
+T101	Study 784 793	screening
+E51	Study:T101 
+T102	Temporal-Connection 781 783	at
+E52	Temporal-Connection:T102 Arg:E41 Arg2:E51
+A25	Temporal-Connection-Type-Value E52 during
+T103	Study 722 731	screening
+E53	Study:T103 
+T104	Temporal-Connection 719 721	at
+E54	Temporal-Connection:T104 Arg:E40 Arg2:E53
+A26	Temporal-Connection-Type-Value E54 during
+T64	Modifier 521 523	SC
+E29	Modifier:T64 Modifies:T63
+T65	Modifier 525 527	IV
+E30	Modifier:T65 Modifies:T63
+T66	Modifier 529 533	IVIG
+E31	Modifier:T66 
+R5	Abbrev-Of Arg1:E31 Arg2:E30	
+T67	Modifier 539 558	intramuscular route
+E32	Modifier:T67 Modifies:T63
+R8	Using Arg1:E28 Arg2:E11	
+R9	Using Arg1:E28 Arg2:E9	

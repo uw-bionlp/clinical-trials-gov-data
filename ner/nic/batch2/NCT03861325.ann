@@ -16,18 +16,11 @@ E9	Condition:T9 Name:T10
 T11	Condition 1172 1191	digestive neoplasia
 T12	Condition-Name 1172 1191	digestive neoplasia
 E11	Condition:T11 Name:T12
-T13	Condition 478 484	sepsis
-T14	Condition-Name 478 484	sepsis
-E13	Condition:T13 Name:T14
 T16	Eq-Temporal-Unit 364 369	years
 A2	Eq-Temporal-Unit-Value T16 year
 T17	Age 370 373	old
 E14	Age:T17 Eq-Comparison:E6
 T18	Eq-Value 361 363	18
-T20	Study 115 120	study
-E2	Study:T20 
-T21	Study 244 249	study
-E4	Study:T21 
 T22	Eq-Comparison 352 369	at least 18 years
 E6	Eq-Comparison:T22 Operator:T23 Temporal-Unit:T16 Value:T18
 T23	Eq-Operator 352 360	at least
@@ -35,9 +28,6 @@ A3	Eq-Operator-Value T23 GTEQ
 T24	Condition 396 408	septic shock
 E8	Condition:T24 Name:T25
 T25	Condition-Name 396 408	septic shock
-T26	Condition 489 501	septic shock
-E10	Condition:T26 Name:T27
-T27	Condition-Name 489 501	septic shock
 T19	Condition 848 856	pregnant
 E12	Condition:T19 Name:T28
 T28	Condition-Name 848 856	pregnant
@@ -89,3 +79,4 @@ T53	Polarity 1091 1099	positive
 A8	Polarity-Value T53 positive
 T15	Modifier 1121 1128	Child C
 E30	Modifier:T15 Modifies:T10
+T20	Insurance 309 330	health insurance plan

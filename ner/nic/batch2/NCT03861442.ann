@@ -1,9 +1,9 @@
 T1	Condition 268 295	sensory-neural hearing loss
 T2	Condition-Name 268 295	sensory-neural hearing loss
-E1	Condition:T1 Name:T2 Severity:T37
+E1	Condition:T1 Name:T2 Temporality:E49 Severity:T92
 T3	Procedure 91 114	MED-EL cochlear implant
 T4	Procedure-Name 91 114	MED-EL cochlear implant
-E3	Procedure:T3 Name:T4 Temporality:E13
+E3	Procedure:T3 Name:T4 Duration:E13
 T8	Language 520 526	German
 T13	Eq-Operator 74 75	≥
 A1	Eq-Operator-Value T13 GTEQ
@@ -25,18 +25,18 @@ T29	Eq-Comparison 74 84	≥ 6 months
 E13	Eq-Comparison:T29 Operator:T13 Temporal-Unit:T16 Value:T20
 T30	Eq-Comparison 200 210	≥ 6 months
 E14	Eq-Comparison:T30 Operator:T14 Temporal-Unit:T17 Value:T21
-T31	Eq-Comparison 25 46	A minimum of 18 years
+T31	Eq-Comparison 27 46	minimum of 18 years
 E2	Eq-Comparison:T31 Operator:T32 Temporal-Unit:T15 Value:T19
-T32	Eq-Operator 25 37	A minimum of
+T32	Eq-Operator 27 34	minimum
 A6	Eq-Operator-Value T32 GTEQ
 T35	Procedure 169 198	MED-EL SONNET audio processor
 E6	Procedure:T35 Name:T36 Duration:E14
 T36	Procedure-Name 169 198	MED-EL SONNET audio processor
-T37	Severity 249 267	severe to profound
+T37	Severity 249 255	severe
 A7	Severity-Value T37 severe
 T38	Modifier 239 248	bilateral
 E7	Modifier:T38 Modifies:E1
-T39	Modifier 217 235	Post-lingual onset
+T39	Modifier 217 229	Post-lingual
 E8	Modifier:T39 Modifies:E1
 T40	Procedure 301 314	Unilateral CI
 E10	Procedure:T40 Name:T41
@@ -45,9 +45,9 @@ T22	Observation 407 434	Freiburg Monosyllables test
 E15	Observation:T22 Name:T23 Eq-Comparison:E16 Temporality:E23
 T23	Observation-Name 407 434	Freiburg Monosyllables test
 A8	Observation-Type-Value T23 clinical-score
-T24	Eq-Comparison 364 380	A minimum of 40%
+T24	Eq-Comparison 366 380	minimum of 40%
 E16	Eq-Comparison:T24 Operator:T42 Value:T43 Unit:T12
-T42	Eq-Operator 364 373	A minimum
+T42	Eq-Operator 366 373	minimum
 A9	Eq-Operator-Value T42 GTEQ
 T43	Eq-Value 377 379	40
 T46	Procedure 732 734	CI
@@ -67,13 +67,13 @@ E4	Modifier:T33 Modifies:T4
 T34	Modifier 120 124	C40+
 E29	Modifier:T34 Modifies:T4
 T5	Procedure 348 358	electrodes
-E5	Procedure:T5 Name:T6 Minimum-Count:E9
+E5	Procedure:T5 Name:T6 Minimum-Count:E9 Temporality:E11
 T6	Procedure-Name 348 358	electrodes
 T9	Eq-Comparison 327 340	minimum of 10
-E9	Eq-Comparison:T9 Value:T10
+E9	Eq-Comparison:T9 Value:T10 Operator:T95
 T10	Eq-Value 338 340	10
-T11	Modifier 341 347	active
-E11	Modifier:T11 Modifies:T6
+T11	Eq-Comparison 341 347	active
+E11	Eq-Comparison:T11 Temporal-Period:T96
 T12	Eq-Unit 379 380	%
 T26	Modifier 381 399	speech recognition
 E17	Modifier:T26 Modifies:T23
@@ -154,3 +154,17 @@ E47	Assertion:T88 Asserted:E46
 A15	Assertion-Type-Value E47 hypothetical
 T89	Or 1248 1250	or
 E48	Or:T89 Arg:E43 Arg2:E47
+T90	Eq-Comparison 230 235	onset
+E49	Eq-Comparison:T90 Temporal-Recency:T91
+T91	Eq-Temporal-Recency 230 235	onset
+A16	Eq-Temporal-Recency-Value T91 first-time
+T92	Severity 259 267	profound
+A17	Severity-Value T92 severe
+T93	Eq-Comparison 249 267	severe to profound
+E50	Eq-Comparison:T93 Value:T37 Value2:T92 Operator:T94
+T94	Eq-Operator 256 258	to
+A18	Eq-Operator-Value T94 BETWEEN
+T95	Eq-Operator 327 334	minimum
+A19	Eq-Operator-Value T95 GTEQ
+T96	Eq-Temporal-Period 341 347	active
+A20	Eq-Temporal-Period-Value T96 present
