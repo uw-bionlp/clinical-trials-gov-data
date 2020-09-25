@@ -1,14 +1,13 @@
-T1	Family-Member 34 39	child
-E1	Family-Member:T1 
-A1	Family-Member-Type E1 child
-T2	Modifier 42 56	Hepatocellular
-E2	Modifier:T2 
+T2	Modifier 34 56	child A Hepatocellular
+E2	Modifier:T2 Modifies:T6
 T3	Condition 57 66	carcinoma
-E3	Condition:T3 
-T4	Condition 107 139	child C Hepatocellular carcinoma
+E3	Condition:T3 Name:T6
+T4	Condition 130 139	carcinoma
 E4	Condition:T4 Name:T7
 T5	Condition 160 173	heart failure
 E5	Condition:T5 Name:T8
-T6	Condition-Name 42 66	Hepatocellular carcinoma
-T7	Condition-Name 115 139	Hepatocellular carcinoma
+T6	Condition-Name 57 66	carcinoma
+T7	Condition-Name 130 139	carcinoma
 T8	Condition-Name 160 173	heart failure
+T1	Modifier 107 129	child C Hepatocellular
+E1	Modifier:T1 Modifies:T7

@@ -1,62 +1,62 @@
 T1	Modifier 75 87	readjustment
-E1	Modifier:T1 
+E1	Modifier:T1 Modifies:T72
 T2	Or 89 91	or
-E2	Or:T2 
-T3	Condition 92 108	anger difficulty
-E3	Condition:T3 
+E2	Or:T2 Arg:E1 Arg2:E40
+T3	Condition 98 108	difficulty
+E3	Condition:T3 Name:T72
 T4	Eq-Comparison 182 194	at least one
 E4	Eq-Comparison:T4 Operator:T37 Value:T38
 T5	Eq-Comparison 245 256	18-65 years
 E5	Eq-Comparison:T5 Value:T41 Operator:T42 Value:T43 Temporal-Unit:T44
 T6	Age 257 260	old
-E6	Age:T6 
+E6	Age:T6 Eq-Comparison:E5
 T7	Observation 426 429	ICF
-E7	Observation:T7 
+E7	Observation:T7 Name:T47
 T8	Condition 461 486	schizophreniform disorder
 E8	Condition:T8 Name:T48
 T9	Or 486 487	/
-E9	Or:T9 
+E9	Or:T9 Arg2:E11 Arg:E8
 T10	Eq-Comparison 487 493	active
 E10	Eq-Comparison:T10 Temporal-Period:T49
 T11	Condition 494 503	psychosis
-E11	Condition:T11 Name:T50
+E11	Condition:T11 Name:T50 Temporality:E10
 T12	Condition 509 525	bipolar disorder
 E12	Condition:T12 Name:T51
 T13	Eq-Comparison 531 537	active
 E13	Eq-Comparison:T13 Temporal-Period:T52
 T14	Condition 538 549	suicidality
-E14	Condition:T14 Name:T53
+E14	Condition:T14 Name:T53 Temporality:E13
 T15	Or 549 550	/
-E15	Or:T15 
+E15	Or:T15 Arg:E14 Arg2:E16
 T16	Condition 550 562	homicidality
-E16	Condition:T16 Name:T54
+E16	Condition:T16 Name:T54 Temporality:E13
 T17	Assertion 563 572	requiring
-E17	Assertion:T17 
+E17	Assertion:T17 Asserted:E18
 A1	Assertion-Type-Value E17 hypothetical
-T18	Procedure 580 592	intervention
+T18	Procedure 573 592	crisis intervention
 E18	Procedure:T18 Name:T55
 T19	Other 598 603	other
-E19	Other:T19 
+E19	Other:T19 Is-Other:E20
 T20	Condition 611 632	psychiatric disorders
-E20	Condition:T20 Name:T57
+E20	Condition:T20 Name:T57 Severity:T56
 T21	Exception 750 759	excluding
-E21	Exception:T21 
+E21	Exception:T21 From:E54 Except:E22
 T22	Condition 760 763	TBI
 E22	Condition:T22 Name:T58
 T23	Eq-Comparison 770 777	current
 E23	Eq-Comparison:T23 Temporal-Period:T59
 T24	Condition 778 798	substance dependence
-E24	Condition:T24 Name:T60
+E24	Condition:T24 Name:T60 Temporality:E23
 T25	Eq-Comparison 804 811	current
 E25	Eq-Comparison:T25 Temporal-Period:T61
 T26	Other 833 838	other
-E26	Other:T26 
+E26	Other:T26 Is-Other:E28
 T27	Eq-Comparison 847 853	active
 E27	Eq-Comparison:T27 Temporal-Period:T62
 T28	Procedure 854 872	behavioral therapy
-E28	Procedure:T28 Name:T63
+E28	Procedure:T28 Name:T63 Temporality:E25 Temporality2:E27
 T29	Temporal-Connection 873 884	at the time
-E29	Temporal-Connection:T29 
+E29	Temporal-Connection:T29 Arg:E28 Arg2:E30
 A2	Temporal-Connection-Type-Value E29 during
 T30	Study 888 898	enrollment
 E30	Study:T30 
@@ -67,9 +67,9 @@ E32	Procedure:T32 Name:T65
 T33	Condition 974 978	mTBI
 E33	Condition:T33 Name:T66
 T34	Or 980 982	or
-E34	Or:T34 
+E34	Or:T34 Arg:E32 Arg2:E36
 T35	Other 983 988	other
-E35	Other:T35 
+E35	Other:T35 Is-Other:E36
 T36	Procedure 989 1002	psychotherapy
 E36	Procedure:T36 Name:T67
 T37	Eq-Operator 182 190	at least
@@ -85,7 +85,7 @@ T44	Eq-Temporal-Unit 251 256	years
 A5	Eq-Temporal-Unit-Value T44 year
 T45	Language 310 317	English
 T46	Language 358 365	English
-T47	Condition-Name 426 429	ICF
+T47	Observation-Name 426 429	ICF
 T48	Condition-Name 461 486	schizophreniform disorder
 T49	Eq-Temporal-Period 487 493	active
 A6	Eq-Temporal-Period-Value T49 present
@@ -95,7 +95,7 @@ T52	Eq-Temporal-Period 531 537	active
 A7	Eq-Temporal-Period-Value T52 present
 T53	Condition-Name 538 549	suicidality
 T54	Condition-Name 550 562	homicidality
-T55	Procedure-Name 580 592	intervention
+T55	Procedure-Name 573 592	crisis intervention
 T56	Severity 604 610	severe
 A8	Severity-Value T56 severe
 T57	Condition-Name 611 632	psychiatric disorders
@@ -108,7 +108,68 @@ A10	Eq-Temporal-Period-Value T61 present
 T62	Eq-Temporal-Period 847 853	active
 A11	Eq-Temporal-Period-Value T62 present
 T63	Procedure-Name 854 872	behavioral therapy
-T64	Procedure-Name 925 943	Processing Therapy
+T64	Procedure-Name 915 943	Cognitive Processing Therapy
 T65	Procedure-Name 945 969	cognitive rehabilitation
 T66	Condition-Name 974 978	mTBI
 T67	Procedure-Name 989 1002	psychotherapy
+T68	Observation 35 43	Veterans
+E37	Observation:T68 Name:T69
+T69	Observation-Name 35 43	Veterans
+T70	Modifier 25 34	Post-9/11
+E38	Modifier:T70 Modifies:T69
+T71	Modifier 60 73	reintegration
+E39	Modifier:T71 Modifies:T72
+T72	Condition-Name 98 108	difficulty
+T73	Modifier 92 97	anger
+E40	Modifier:T73 Modifies:T72
+T74	And 44 47	who
+E41	And:T74 Arg:E37 Arg2:E3
+T75	Observation 125 133	Veterans
+E42	Observation:T75 Name:T76
+T76	Observation-Name 125 133	Veterans
+T77	Observation 220 224	M2CQ
+E43	Observation:T77 Name:T39
+T78	Observation 226 230	PDRI
+E44	Observation:T78 Name:T40
+T79	Observation 232 239	STAXI-2
+E45	Observation:T79 Name:T80
+T80	Observation-Name 232 239	STAXI-2
+T81	Observation 202 218	primary measures
+E46	Observation:T81 Name:T82 Minimum-Count:E4
+T82	Observation-Name 202 218	primary measures
+R1	Example-Of Arg1:E43 Arg2:E46	
+R2	Example-Of Arg1:E44 Arg2:E46	
+R3	Example-Of Arg1:E45 Arg2:E46	
+T83	And 134 137	who
+E47	And:T83 Arg:E42 Arg2:E46
+T84	Modifier 146 161	some difficulty
+E48	Modifier:T84 Modifies:T82
+T85	Observation 430 435	HIPAA
+E49	Observation:T85 Name:T86
+T86	Observation-Name 430 435	HIPAA
+T87	Or 429 430	/
+E50	Or:T87 Arg:E7 Arg2:E49
+R4	Treatment-For Arg1:E18 Arg2:E14	
+R5	Treatment-For Arg1:E18 Arg2:E16	
+T88	Procedure 657 676	group participation
+E51	Procedure:T88 Name:T89
+T89	Procedure-Name 657 676	group participation
+T90	Negation 633 644	prohibiting
+E52	Negation:T90 Negates:E51
+T91	Assertion 633 644	prohibiting
+E53	Assertion:T91 Asserted:E52
+A12	Assertion-Type-Value E53 hypothetical
+R6	Caused-By Arg1:E52 Arg2:E20	
+T92	Condition 682 694	neurological
+E54	Condition:T92 Name:T93
+T93	Condition-Name 682 694	neurological
+T94	Procedure 729 748	group participation
+E55	Procedure:T94 Name:T95
+T95	Procedure-Name 729 748	group participation
+T96	Negation 705 716	prohibiting
+E56	Negation:T96 Negates:E55
+T97	Assertion 705 716	prohibiting
+E57	Assertion:T97 Asserted:E56
+A13	Assertion-Type-Value E57 hypothetical
+R7	Caused-By Arg1:E56 Arg2:E54	
+R8	Treatment-For Arg1:E32 Arg2:E33	

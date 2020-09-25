@@ -1,107 +1,61 @@
-T1	Eq-Comparison 42 60	≥ 3 and ≤ 18 years
-E1	Eq-Comparison:T1 Operator:T50 Value:T51 Operator:T52 Value:T53 Temporal-Unit:T54
+T1	Eq-Comparison 42 45	≥ 3
+E1	Eq-Comparison:T1 Operator:T50 Value:T51
 T2	Age 64 67	age
-E2	Age:T2 
+E2	Age:T2 Eq-Comparison:E1 Eq-Comparison2:E50
 T3	Observation 78 96	predicted survival
-E3	Observation:T3 
+E3	Observation:T3 Name:T100 Eq-Comparison:E4
 T4	Eq-Comparison 107 125	more than 3 months
 E4	Eq-Comparison:T4 Operator:T55 Value:T56 Temporal-Unit:T57
 T5	Eq-Comparison 174 186	at least one
 E5	Eq-Comparison:T5 Operator:T58 Value:T59
 T6	Condition 198 204	lesion
-E6	Condition:T6 Name:T60
-T7	Temporal-Connection 211 224	Postoperative
-E7	Temporal-Connection:T7 
-A1	Temporal-Connection-Type-Value E7 before
+E6	Condition:T6 Name:T60 Minimum-Count:E5
+T7	Temporal-Connection 211 215	Post
+E7	Temporal-Connection:T7 Arg:E52 Arg2:E8
+A1	Temporal-Connection-Type-Value E7 after
 T8	Condition 225 243	pathological stage
-E8	Condition:T8 
+E8	Condition:T8 Name:T61 Stage:E9
 T9	Eq-Comparison 248 259	group II-IV
-E9	Eq-Comparison:T9 Value:T63 Operator:T64 Value:T65
+E9	Eq-Comparison:T9 Value:T63 Operator:T64 Value:T65 Unit:T102
 T10	Negation 280 283	not
-E10	Negation:T10 
+E10	Negation:T10 Negates:E12
 T11	Eq-Comparison 284 292	received
 E11	Eq-Comparison:T11 Temporal-Period:T66
 T12	Procedure 293 305	radiotherapy
-E12	Procedure:T12 Name:T67
-T13	Temporal-Connection 306 312	before
-E13	Temporal-Connection:T13 
-A2	Temporal-Connection-Type-Value E13 before
+E12	Procedure:T12 Name:T67 Temporality:E11 Temporality2:E13
 T14	And 314 317	and
-E14	And:T14 
+E14	And:T14 Arg:E10 Arg2:E15
 T15	Assertion 318 328	can accept
-E15	Assertion:T15 
+E15	Assertion:T15 Asserted:E16 Asserted2:E18
 A3	Assertion-Type-Value E15 hypothetical
 T16	Procedure 329 341	chemotherapy
 E16	Procedure:T16 Name:T68
 T17	Or 342 345	and
-E17	Or:T17 
+E17	Or:T17 Arg:E16 Arg2:E18
 T18	Procedure 346 364	surgical treatment
 E18	Procedure:T18 Name:T69
 T19	Negation 371 373	No
 E19	Negation:T19 
 T20	Other 374 379	other
-E20	Other:T20 
+E20	Other:T20 Is-Other:E21
 T21	Procedure 380 398	anticancer therapy
 E21	Procedure:T21 Name:T70
 T22	Assertion 399 408	should be
-E22	Assertion:T22 
+E22	Assertion:T22 Asserted:E21
 A4	Assertion-Type-Value E22 hypothetical
 T23	Temporal-Connection 414 420	during
-E23	Temporal-Connection:T23 
+E23	Temporal-Connection:T23 Arg:E21 Arg2:E24
 A5	Temporal-Connection-Type-Value E23 during
 T24	Procedure 421 433	radiotherapy
 E24	Procedure:T24 Name:T71
 T25	Condition 444 455	main organs
-E25	Condition:T25 
+E25	Condition:T25 Name:T104 Polarity:T105
 T26	Procedure 528 553	Blood routine examination
 E26	Procedure:T26 Name:T72
 T27	Negation 580 582	no
-E27	Negation:T27 
-T28	Condition 583 600	blood transfusion
-E28	Condition:T28 
-T29	Eq-Comparison 601 607	within
-E29	Eq-Comparison:T29 Operator:T74
-T30	Eq-Comparison 618 625	14 days
-E30	Eq-Comparison:T30 Value:T75 Temporal-Unit:T76
-T31	Eq-Comparison 627 637	A.HB>90g/L
-E31	Eq-Comparison:T31 Unit:T77 Unit:T78
-T32	Eq-Comparison 648 654	*109/L
-E32	Eq-Comparison:T32 
-T33	Eq-Comparison 664 670	*109/L
-E33	Eq-Comparison:T33 
-T34	Criteria-Count 715 733	following criteria
-E34	Criteria-Count:T34 
-T35	Observation 738 741	BIL
-E35	Observation:T35 
-T36	Eq-Comparison 742 754	< 1.25 times
-E36	Eq-Comparison:T36 Operator:T80 Value:T81
-T37	Observation 762 773	upper limit
-E37	Observation:T37 
-T38	Observation 775 778	ULN
-E38	Observation:T38 Name:T83
-T39	Observation 784 787	ALT
-E39	Observation:T39 Name:T84
-T40	And 788 791	and
-E40	And:T40 
-T41	Observation 792 795	AST
-E41	Observation:T41 Name:T85
-T42	Eq-Comparison 796 805	< 2.5 ULN
-E42	Eq-Comparison:T42 Operator:T86 Value:T87 Unit:T88
-T43	Observation 810 818	Serum Cr
-E43	Observation:T43 
-T44	Eq-Comparison 819 826	< 1 ULN
-E44	Eq-Comparison:T44 Operator:T90 Value:T91 Unit:T92
-T45	Observation 828 859	endogenous creatinine clearance
-E45	Observation:T45 Name:T93
-T46	Eq-Comparison 860 871	> 50 ml/min
-E46	Eq-Comparison:T46 Operator:T94 Value:T95 Unit:T96 Temporal-Unit:T97
-T47	Encounter 1027 1036	follow-up
-E47	Encounter:T47 
-T48	Procedure 1064 1073	treatment
-E48	Procedure:T48 
-T49	Assertion 1074 1077	can
-E49	Assertion:T49 
-A6	Assertion-Type-Value E49 hypothetical
+E27	Negation:T27 Negates:E28
+T29	Eq-Comparison 601 615	within 14 days
+E29	Eq-Comparison:T29 Operator:T74 Value:T30 Temporal-Unit:T31
 T50	Eq-Operator 42 43	≥
 A7	Eq-Operator-Value T50 GTEQ
 T51	Eq-Value 44 45	3
@@ -119,8 +73,7 @@ T58	Eq-Operator 174 182	at least
 A12	Eq-Operator-Value T58 GTEQ
 T59	Eq-Value 183 186	one
 T60	Condition-Name 198 204	lesion
-T61	Condition-Name 211 237	Postoperative pathological
-T62	Eq-Unit 238 243	stage
+T61	Condition-Name 225 243	pathological stage
 T63	Eq-Value 254 256	II
 T64	Eq-Operator 256 257	-
 A13	Eq-Operator-Value T64 BETWEEN
@@ -133,42 +86,126 @@ T69	Procedure-Name 346 364	surgical treatment
 T70	Procedure-Name 380 398	anticancer therapy
 T71	Procedure-Name 421 433	radiotherapy
 T72	Procedure-Name 528 553	Blood routine examination
-T73	Observation-Name 583 600	blood transfusion
-A15	Observation-Type-Value T73 lab
 T74	Eq-Operator 601 607	within
 A16	Eq-Operator-Value T74 LTEQ
-T75	Eq-Value 618 620	14
-T76	Eq-Temporal-Unit 621 625	days
-A17	Eq-Temporal-Unit-Value T76 day
-T77	Eq-Unit 627 635	A.HB>90g
-T78	Eq-Unit 636 637	L
-T79	Observation-Name 681 698	Biochemical tests
-A18	Observation-Type-Value T79 lab
-T80	Eq-Operator 742 743	<
-A19	Eq-Operator-Value T80 LT
-T81	Eq-Value 744 748	1.25
-T82	Eq-Unit 755 773	normal upper limit
-A20	Eq-Unit-Value T82 ref-range-high
-T83	Observation-Name 775 778	ULN
-T84	Observation-Name 784 787	ALT
-A21	Observation-Type-Value T84 lab
-T85	Observation-Name 792 795	AST
-A22	Observation-Type-Value T85 lab
-T86	Eq-Operator 796 797	<
-A23	Eq-Operator-Value T86 LT
-T87	Eq-Value 798 801	2.5
-T88	Eq-Unit 802 805	ULN
-T89	Observation-Name 807 818	C. Serum Cr
-A24	Observation-Type-Value T89 lab
-T90	Eq-Operator 819 820	<
-A25	Eq-Operator-Value T90 LT
-T91	Eq-Value 821 822	1
-T92	Eq-Unit 823 826	ULN
-T93	Observation-Name 828 859	endogenous creatinine clearance
-A26	Observation-Type-Value T93 lab
-T94	Eq-Operator 860 861	>
-A27	Eq-Operator-Value T94 GT
-T95	Eq-Value 862 864	50
-T96	Eq-Unit 865 867	ml
-T97	Eq-Temporal-Unit 868 871	min
-A28	Eq-Temporal-Unit-Value T97 minute
+T98	Eq-Comparison 50 60	≤ 18 years
+E50	Eq-Comparison:T98 Operator:T52 Value:T53 Temporal-Unit:T54
+T99	And 46 49	and
+E51	And:T99 Arg:E1 Arg2:E50
+T100	Observation-Name 78 96	predicted survival
+T62	Procedure 215 224	operative
+E52	Procedure:T62 Name:T101
+T101	Procedure-Name 215 224	operative
+T102	Eq-Unit 248 253	group
+T13	Eq-Comparison 306 312	before
+E13	Eq-Comparison:T13 Temporal-Period:T103
+T103	Eq-Temporal-Period 306 312	before
+A2	Eq-Temporal-Period-Value T103 past
+R1	Abbrev-Of Arg1:E19 Arg2:E21	
+T104	Condition-Name 444 455	main organs
+T105	Polarity 472 480	normally
+A29	Polarity-Value T105 normal
+T106	Criteria-Count 494 516	the following criteria
+E53	Criteria-Count:T106 Criteria:E26 Criteria2:E30 Criteria3:E32 Criteria4:E35
+R2	Equivalent-To Arg1:E53 Arg2:E25	
+T30	Eq-Value 608 610	14
+T31	Eq-Temporal-Unit 611 615	days
+A6	Eq-Temporal-Unit-Value T31 day
+T28	Procedure 583 600	blood transfusion
+E28	Procedure:T28 Name:T32 Temporality:E29
+T32	Procedure-Name 583 600	blood transfusion
+R3	Equivalent-To Arg1:E27 Arg2:E26	
+T33	Observation 620 622	HB
+E30	Observation:T33 Name:T34 Eq-Comparison:E31
+T34	Observation-Name 620 622	HB
+A15	Observation-Type-Value T34 lab
+T35	Eq-Comparison 623 631	> 90 g/L
+E31	Eq-Comparison:T35 Operator:T36 Value:T37 Unit:T38 Per:T39
+T36	Eq-Operator 623 624	>
+A17	Eq-Operator-Value T36 GT
+T37	Eq-Value 625 627	90
+T38	Eq-Unit 628 629	g
+T39	Eq-Unit 630 631	L
+T40	Observation 636 639	ANC
+E32	Observation:T40 Name:T41 Eq-Comparison:E33
+T41	Observation-Name 636 639	ANC
+A18	Observation-Type-Value T41 lab
+T42	Eq-Comparison 640 653	> 1.5 * 109/L
+E33	Eq-Comparison:T42 Value:T44 Value2:T45 Operator:T43 Per:T46
+T43	Eq-Operator 640 641	>
+A19	Eq-Operator-Value T43 GT
+T44	Eq-Value 642 645	1.5
+T45	Eq-Value 648 651	109
+T46	Eq-Unit 652 653	L
+T47	Eq-Comparison 662 675	> 80 * 109 /L
+E34	Eq-Comparison:T47 Operator:T73 Value:T75 Value2:T76 Per:T77
+T48	Observation 658 661	PLT
+E35	Observation:T48 Name:T49 Eq-Comparison:E34
+T49	Observation-Name 658 661	PLT
+A20	Observation-Type-Value T49 lab
+T73	Eq-Operator 662 663	>
+A21	Eq-Operator-Value T73 GT
+T75	Eq-Value 664 666	80
+T76	Eq-Value 669 672	109
+T77	Eq-Unit 674 675	L
+T78	Observation 686 703	Biochemical tests
+E36	Observation:T78 Name:T79
+T79	Observation-Name 686 703	Biochemical tests
+A22	Observation-Type-Value T79 lab
+T80	Criteria-Count 716 738	the following criteria
+E37	Criteria-Count:T80 Criteria:E38 Criteria2:E40 Criteria3:E41 Criteria4:E44 Criteria5:E46
+R4	Equivalent-To Arg1:E37 Arg2:E36	
+T81	Observation 743 746	BIL
+E38	Observation:T81 Name:T82 Eq-Comparison:E39
+T82	Observation-Name 743 746	BIL
+A23	Observation-Type-Value T82 lab
+T83	Eq-Comparison 747 778	< 1.25 times normal upper limit
+E39	Eq-Comparison:T83 Operator:T84 Value:T85 Unit:T86
+T84	Eq-Operator 747 748	<
+A24	Eq-Operator-Value T84 LT
+T85	Eq-Value 749 753	1.25
+T86	Eq-Unit 760 778	normal upper limit
+A25	Eq-Unit-Value T86 ref-range-normal
+T87	Eq-Unit 780 783	ULN
+A26	Eq-Unit-Value T87 ref-range-normal
+R5	Abbrev-Of Arg1:T87 Arg2:T86	
+T88	Observation 789 792	ALT
+E40	Observation:T88 Name:T89 Eq-Comparison:E43
+T89	Observation-Name 789 792	ALT
+A27	Observation-Type-Value T89 lab
+T90	Observation 797 800	AST
+E41	Observation:T90 Name:T91 Eq-Comparison:E43
+T91	Observation-Name 797 800	AST
+A28	Observation-Type-Value T91 lab
+T92	And 793 796	and
+E42	And:T92 Arg:E40 Arg2:E41
+T93	Eq-Comparison 801 810	< 2.5 ULN
+E43	Eq-Comparison:T93 Operator:T94 Unit:T96 Value:T95
+T94	Eq-Operator 801 802	<
+A30	Eq-Operator-Value T94 LT
+T95	Eq-Value 803 806	2.5
+T96	Eq-Unit 807 810	ULN
+A31	Eq-Unit-Value T96 ref-range-normal
+T97	Observation 815 823	Serum Cr
+E44	Observation:T97 Name:T107 Eq-Comparison:E45
+T107	Observation-Name 815 823	Serum Cr
+A32	Observation-Type-Value T107 lab
+T108	Eq-Comparison 824 831	< 1 ULN
+E45	Eq-Comparison:T108 Operator:T109 Value:T110 Unit:T111
+T109	Eq-Operator 824 825	<
+A33	Eq-Operator-Value T109 LT
+T110	Eq-Value 826 827	1
+T111	Eq-Unit 828 831	ULN
+A34	Eq-Unit-Value T111 ref-range-normal
+T112	Observation 833 864	endogenous creatinine clearance
+E46	Observation:T112 Name:T113 Eq-Comparison:E47
+T113	Observation-Name 833 864	endogenous creatinine clearance
+A35	Observation-Type-Value T113 lab
+T114	Eq-Comparison 865 876	> 50 ml/min
+E47	Eq-Comparison:T114 Operator:T115 Value:T116 Unit:T117 Per:T118
+T115	Eq-Operator 865 866	>
+A36	Eq-Operator-Value T115 GT
+T116	Eq-Value 867 869	50
+T117	Eq-Unit 870 872	ml
+T118	Eq-Temporal-Unit 873 876	min
+A37	Eq-Temporal-Unit-Value T118 minute

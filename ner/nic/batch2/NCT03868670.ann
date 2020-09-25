@@ -1,44 +1,41 @@
 T1	Observation 25 28	BMI
-E1	Observation:T1 Name:T39
+E1	Observation:T1 Name:T39 Eq-Comparison:E2
 T2	Eq-Comparison 29 40	45-60 kg/m2
-E2	Eq-Comparison:T2 Value:T40 Operator:T41 Value:T42 Unit:T43 Unit:T44
+E2	Eq-Comparison:T2 Value:T40 Operator:T41 Value:T42 Unit:T43 Per:T44
 T3	Eq-Comparison 57 69	at least one
 E3	Eq-Comparison:T3 Operator:T45 Value:T46
-T4	Procedure 70 92	weight loss medication
-E4	Procedure:T4 Name:T47
+T4	Drug 70 92	weight loss medication
+E4	Drug:T4 Name:T47 Minimum-Count:E3
 T5	Eq-Comparison 98 106	Previous
 E5	Eq-Comparison:T5 Temporal-Period:T48
 T6	Procedure 107 129	Gastric Bypass Surgery
-E6	Procedure:T6 Name:T49
-T7	Eq-Comparison 130 184	lead to less than 50% of excess weight lost by 2 years
-E7	Eq-Comparison:T7 Operator:T50 Value:T51 Unit:T52 Value:T54 Temporal-Unit:T55
+E6	Procedure:T6 Name:T49 Temporality:E5
+T7	Eq-Comparison 138 151	less than 50%
+E7	Eq-Comparison:T7 Operator:T50 Value:T51 Unit:T52
 T8	Temporal-Connection 185 190	after
-E8	Temporal-Connection:T8 
+E8	Temporal-Connection:T8 Arg:E40 Arg2:E9
 A1	Temporal-Connection-Type-Value E8 after
-T9	Procedure 191 198	surgery
-E9	Procedure:T9 Name:T56
-T10	Condition 224 243	Control over eating
-E10	Condition:T10 Name:T58
+T9	Coreference 191 198	surgery
+E9	Coreference:T9 Refers-To:E6
+T10	Condition 216 231	Loss of Control
+E10	Condition:T10 Name:T58 Severity:T57
 T11	Assertion 260 267	able to
-E11	Assertion:T11 
+E11	Assertion:T11 Asserted:E42
 A2	Assertion-Type-Value E11 hypothetical
 T12	Condition 348 361	Premenopausal
 E12	Condition:T12 Name:T60
 T13	Assertion 373 381	agree to
-E13	Assertion:T13 
+E13	Assertion:T13 Asserted:E14
 A3	Assertion-Type-Value E13 hypothetical
 T14	Procedure 408 421	birth control
 E14	Procedure:T14 Name:T62
-T15	Assertion 534 541	able to
-E15	Assertion:T15 
-A4	Assertion-Type-Value E15 hypothetical
 T16	Negation 643 645	no
-E16	Negation:T16 
+E16	Negation:T16 Negates:E17
 T17	Assertion 656 660	plan
-E17	Assertion:T17 
+E17	Assertion:T17 Asserted:E18
 A5	Assertion-Type-Value E17 intention
 T18	Observation 665 675	relocation
-E18	Observation:T18 
+E18	Observation:T18 Name:T15 Eq-Comparison:E19
 T19	Eq-Comparison 676 690	beyond 6 hours
 E19	Eq-Comparison:T19 Operator:T63 Value:T64 Temporal-Unit:T65
 T20	Study 698 703	study
@@ -48,39 +45,33 @@ E21	Procedure:T21 Name:T67
 T22	Procedure 833 850	electrical energy
 E22	Procedure:T22 Name:T68
 T23	Modifier 858 863	brain
-E23	Modifier:T23 
+E23	Modifier:T23 Modifies:T68
 T24	Procedure 885 914	implantable cardiac pacemaker
 E24	Procedure:T24 Name:T69
 T25	Procedure 916 929	defibrillator
 E25	Procedure:T25 Name:T70
 T26	Or 931 933	or
-E26	Or:T26 
+E26	Or:T26 Arg:E25 Arg2:E27
 T27	Procedure 934 949	neurostimulator
 E27	Procedure:T27 Name:T71
 T28	Assertion 967 976	likely to
-E28	Assertion:T28 
+E28	Assertion:T28 Asserted:E29
 A6	Assertion-Type-Value E28 hypothetical
 T29	Procedure 992 1002	MR imaging
 E29	Procedure:T29 Name:T72
 T30	Temporal-Connection 1003 1008	after
-E30	Temporal-Connection:T30 
+E30	Temporal-Connection:T30 Arg:E29 Arg2:E31
 A7	Temporal-Connection-Type-Value E30 after
-T31	Procedure 1009 1016	implant
+T31	Procedure 1009 1027	implant of the RNS
 E31	Procedure:T31 Name:T73
-T32	Procedure 1024 1043	RNS Neurostimulator
-E32	Procedure:T32 
-T33	And 1044 1047	and
-E33	And:T33 
+T33	Or 1044 1047	and
+E33	Or:T33 Arg:E32 Arg2:E44
 T34	Negation 1071 1077	unable
-E34	Negation:T34 
+E34	Negation:T34 Negates:E35
 T35	Procedure 1090 1100	CT scanner
 E35	Procedure:T35 Name:T74
-T36	Eq-Comparison 1102 1126	500lb upper weight limit
-E36	Eq-Comparison:T36 Value:T75 Unit:T76 Unit:T77 Unit:T79
 T37	Procedure 1131 1141	CT scanner
 E37	Procedure:T37 Name:T80
-T38	Procedure 1190 1199	treatment
-E38	Procedure:T38 
 T39	Observation-Name 25 28	BMI
 A8	Observation-Type-Value T39 vital
 T40	Eq-Value 29 31	45
@@ -92,7 +83,7 @@ T44	Eq-Unit 38 40	m2
 T45	Eq-Operator 57 65	at least
 A10	Eq-Operator-Value T45 GTEQ
 T46	Eq-Value 66 69	one
-T47	Procedure-Name 70 92	weight loss medication
+T47	Drug-Name 70 92	weight loss medication
 T48	Eq-Temporal-Period 98 106	Previous
 A11	Eq-Temporal-Period-Value T48 past
 T49	Procedure-Name 107 129	Gastric Bypass Surgery
@@ -105,10 +96,9 @@ A13	Observation-Type-Value T53 measurement
 T54	Eq-Value 177 178	2
 T55	Eq-Temporal-Unit 179 184	years
 A14	Eq-Temporal-Unit-Value T55 year
-T56	Procedure-Name 191 198	surgery
 T57	Severity 204 215	Significant
 A15	Severity-Value T57 severe
-T58	Condition-Name 224 243	Control over eating
+T58	Condition-Name 216 231	Loss of Control
 T59	Eq-Temporal-Period 279 288	scheduled
 A16	Eq-Temporal-Period-Value T59 future
 T60	Condition-Name 348 361	Premenopausal
@@ -116,7 +106,7 @@ T61	Life-Stage-And-Gender 362 367	women
 A17	Life-Stage-And-Gender-Type T61 female
 T62	Procedure-Name 408 421	birth control
 T63	Eq-Operator 676 682	beyond
-A18	Eq-Operator-Value T63 LTEQ
+A18	Eq-Operator-Value T63 GTEQ
 T64	Eq-Value 683 684	6
 T65	Eq-Temporal-Unit 685 690	hours
 A19	Eq-Temporal-Unit-Value T65 hour
@@ -126,15 +116,49 @@ T68	Procedure-Name 833 850	electrical energy
 T69	Procedure-Name 885 914	implantable cardiac pacemaker
 T70	Procedure-Name 916 929	defibrillator
 T71	Procedure-Name 934 949	neurostimulator
-T72	Procedure-Name 995 1002	imaging
-T73	Procedure-Name 1009 1016	implant
+T72	Procedure-Name 992 1002	MR imaging
+T73	Procedure-Name 1009 1027	implant of the RNS
 T74	Procedure-Name 1090 1100	CT scanner
 T75	Eq-Value 1102 1105	500
 T76	Eq-Unit 1105 1107	lb
 T77	Eq-Unit 1108 1113	upper
 A20	Eq-Unit-Value T77 ref-range-high
+T80	Procedure-Name 1131 1141	CT scanner
+T81	Observation 155 168	excess weight
+E39	Observation:T81 Name:T53 Stability:T82 Eq-Comparison:E7 Temporality:E40
+T82	Stability 169 173	lost
+A23	Stability-Value T82 change
+R1	Caused-By Arg1:T82 Arg2:E6	
+T83	Eq-Comparison 177 184	2 years
+E40	Eq-Comparison:T83 Value:T54 Temporal-Unit:T55
+T56	Modifier 237 243	eating
+E41	Modifier:T56 Modifies:T58
+T84	Encounter 289 308	clinic appointments
+E42	Encounter:T84 Type:T85 Temporality:E43
+T85	Encounter-Type 289 308	clinic appointments
+A24	Encounter-Type-Value T85 outpatient
+T86	Eq-Comparison 279 288	scheduled
+E43	Eq-Comparison:T86 Temporal-Period:T59
+R2	If-Then Arg1:E12 Arg2:T61	
+R3	If-Then Arg1:T61 Arg2:E13	
+T15	Observation-Name 665 675	relocation
+R4	Using Arg1:E21 Arg2:E22	
+T87	Modifier 985 991	repeat
+E15	Modifier:T87 Modifies:T72
+T32	Modifier 1028 1043	Neurostimulator
+E32	Modifier:T32 Modifies:T73
+T88	Modifier 1048 1053	Leads
+E44	Modifier:T88 Modifies:T73
+T89	Assertion 1071 1077	unable
+E45	Assertion:T89 Asserted:E34
+A4	Assertion-Type-Value E45 hypothetical
+T36	Observation 1114 1120	weight
+E36	Observation:T36 Name:T78 Eq-Comparison:E46
 T78	Observation-Name 1114 1120	weight
 A21	Observation-Type-Value T78 vital
-T79	Eq-Unit 1121 1126	limit
-A22	Eq-Unit-Value T79 ref-range-high
-T80	Procedure-Name 1131 1141	CT scanner
+T79	Eq-Comparison 1102 1113	500lb upper
+E46	Eq-Comparison:T79 Value:T75 Unit:T76 Unit2:T77 Operator:T90
+T90	Eq-Operator 1121 1126	limit
+A22	Eq-Operator-Value T90 LTEQ
+R5	Using Arg1:E37 Arg2:E36	
+R6	Caused-By Arg1:E34 Arg2:E36	
