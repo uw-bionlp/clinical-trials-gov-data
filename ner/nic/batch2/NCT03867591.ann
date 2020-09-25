@@ -1,100 +1,90 @@
 T1	Assertion 83 93	Willing to
-E1	Assertion:T1 
+E1	Assertion:T1 Asserted:E62 Asserted2:E63
 A1	Assertion-Type-Value E1 hypothetical
-T2	Age 168 171	age
-E2	Age:T2 
 T3	Condition 200 209	heartburn
-E3	Condition:T3 Name:T63
+E3	Condition:T3 Name:T63 Minimum-Count:E5
 T4	Assertion 210 218	symptoms
-E4	Assertion:T4 
+E4	Assertion:T4 Asserted:E3
 A2	Assertion-Type-Value E4 possible
 T5	Eq-Comparison 219 241	at least 2 days a week
-E5	Eq-Comparison:T5 Operator:T64 Value:T65 Temporal-Unit:T66 Temporal-Unit:T67
+E5	Eq-Comparison:T5 Operator:T64 Value:T65 Temporal-Unit:T66 Per:T67
 T6	Temporal-Connection 242 248	during
-E6	Temporal-Connection:T6 
+E6	Temporal-Connection:T6 Arg:E5 Arg2:E7
 A3	Temporal-Connection-Type-Value E6 during
 T7	Eq-Comparison 253 266	past 3 months
 E7	Eq-Comparison:T7 Temporal-Period:T68 Value:T69 Temporal-Unit:T70
 T8	Eq-Comparison 273 276	Use
 E8	Eq-Comparison:T8 Temporal-Period:T71
-T9	Drug 277 290	OTC product(s
-E9	Drug:T9 Name:T72
+T9	Drug 277 288	OTC product
+E9	Drug:T9 Name:T72 Temporality:E8 Temporality2:E15
 T10	Drug 293 304	supplements
-E10	Drug:T10 Name:T73
+E10	Drug:T10 Name:T73 Temporality:E8 Temporality2:E15
 T11	Or 306 308	or
-E11	Or:T11 
+E11	Or:T11 Arg:E10 Arg2:E12
 T12	Drug 309 329	dietary manipulation
-E12	Drug:T12 Name:T74
+E12	Drug:T12 Name:T74 Temporality:E8 Temporality2:E15
 T13	Condition 341 350	heartburn
 E13	Condition:T13 Name:T75
 T14	Assertion 351 359	symptoms
-E14	Assertion:T14 
+E14	Assertion:T14 Asserted:E13
 A4	Assertion-Type-Value E14 possible
 T15	Eq-Comparison 367 380	last 3 months
 E15	Eq-Comparison:T15 Temporal-Period:T76 Value:T77 Temporal-Unit:T78
 T16	Assertion 387 397	Willing to
-E16	Assertion:T16 
+E16	Assertion:T16 Asserted:E18
 A5	Assertion-Type-Value E16 hypothetical
 T17	Study 407 412	study
-E17	Study:T17 
-T18	Drug 413 416	soy
-E18	Drug:T18 
+E17	Study:T17 Study-Of:E18
+T18	Drug 413 427	soy supplement
+E18	Drug:T18 Name:T2
 T19	Temporal-Connection 428 434	before
-E19	Temporal-Connection:T19 
+E19	Temporal-Connection:T19 Arg:E18 Arg2:E21
 A6	Temporal-Connection-Type-Value E19 before
-T20	Negation 435 444	resorting
-E20	Negation:T20 
-T21	Drug 448 461	OTC product(s
+T21	Drug 448 459	OTC product
 E21	Drug:T21 Name:T79
 T22	Condition 474 483	heartburn
 E22	Condition:T22 Name:T80
 T23	Assertion 484 492	symptoms
-E23	Assertion:T23 
+E23	Assertion:T23 Asserted:E22
 A7	Assertion-Type-Value E23 possible
 T24	Assertion 499 509	Willing to
-E24	Assertion:T24 
+E24	Assertion:T24 Asserted:E25 Asserted2:E2 Asserted3:E20 Asserted4:E65
 A8	Assertion-Type-Value E24 hypothetical
 T25	Observation 519 533	questionnaires
-E25	Observation:T25 
+E25	Observation:T25 Name:T20
 T26	Study 576 581	study
-E26	Study:T26 
+E26	Study:T26 Study-Of:E25 Study-Of2:E20 Study-Of3:E65
 T27	Assertion 624 634	Willing to
-E27	Assertion:T27 
+E27	Assertion:T27 Asserted:E28
 A9	Assertion-Type-Value E27 hypothetical
-T28	Procedure 661 675	dietary intake
-E28	Procedure:T28 
+T28	Observation 661 675	dietary intake
+E28	Observation:T28 Name:T109
 T29	Observation 696 703	recalls
-E29	Observation:T29 
+E29	Observation:T29 Name:T110 Duration:E67
 T30	Temporal-Connection 704 710	during
-E30	Temporal-Connection:T30 
+E30	Temporal-Connection:T30 Arg:E29 Arg2:E31
 A10	Temporal-Connection-Type-Value E30 during
 T31	Study 711 719	baseline
 E31	Study:T31 
 T32	Procedure 721 733	intervention
 E32	Procedure:T32 Name:T81
 T33	And 735 738	and
-E33	And:T33 
+E33	And:T33 Arg:E32 Arg2:E68
 T34	Allergy 899 906	allergy
-E34	Allergy:T34 
+E34	Allergy:T34 Name:T118
 T35	Condition 919 936	heartburn problem
-E35	Condition:T35 Name:T83
-T36	Negation 941 944	not
-E36	Negation:T36 
-T37	Observation 973 991	your concentration
-E37	Observation:T37 
+E35	Condition:T35 Name:T83 Severity:T82
 T38	Eq-Comparison 995 1000	daily
-E38	Eq-Comparison:T38 Temporal-Unit:T85
+E38	Eq-Comparison:T38 Per:T85
 T39	Temporal-Connection 1013 1019	during
-E39	Temporal-Connection:T39 
+E39	Temporal-Connection:T39 Arg:E35 Arg2:E40
 A11	Temporal-Connection-Type-Value E39 during
 T40	Eq-Comparison 1024 1033	last week
 E40	Eq-Comparison:T40 Temporal-Period:T86 Temporal-Unit:T87
-T41	Or 1049 1051	or
-E41	Or:T41 
-T42	Eq-Comparison 1052 1061	currently
+T42	Eq-Comparison 1052 1067	currently being
 E42	Eq-Comparison:T42 Temporal-Period:T88
 T43	Procedure 1068 1075	treated
-E43	Procedure:T43 
+E43	Procedure:T43 Temporality:E42
 T44	Condition 1084 1109	gastrointestinal diseases
 E44	Condition:T44 Name:T89
 T45	Condition 1120 1124	GERD
@@ -103,36 +93,34 @@ T46	Condition 1126 1140	gastric ulcers
 E46	Condition:T46 Name:T91
 T47	Condition 1142 1149	Crohn's
 E47	Condition:T47 Name:T92
-T48	Modifier 1151 1157	celiac
-E48	Modifier:T48 
+T48	Condition 1151 1157	celiac
+E48	Condition:T48 Name:T121
 T49	Condition 1159 1177	ulcerative colitis
 E49	Condition:T49 Name:T93
-T50	Modifier 1189 1203	Self-disclosed
-E50	Modifier:T50 
 T51	Condition 1207 1215	pregnant
 E51	Condition:T51 Name:T94
 T52	Or 1216 1218	or
-E52	Or:T52 
+E52	Or:T52 Arg:E51 Arg2:E53
 T53	Condition 1219 1233	breast-feeding
 E53	Condition:T53 Name:T95
 T54	Or 1234 1236	or
-E54	Or:T54 
+E54	Or:T54 Arg:E53 Arg2:E55
 T55	Assertion 1237 1245	planning
-E55	Assertion:T55 
+E55	Assertion:T55 Asserted:E56
 A12	Assertion-Type-Value E55 intention
 T56	Condition 1258 1266	pregnant
 E56	Condition:T56 Name:T96
 T57	Temporal-Connection 1267 1273	during
-E57	Temporal-Connection:T57 
+E57	Temporal-Connection:T57 Arg:E56 Arg2:E58
 A13	Temporal-Connection-Type-Value E57 during
 T58	Study 1278 1283	study
 E58	Study:T58 
 T59	Eq-Comparison 1299 1308	Currently
 E59	Eq-Comparison:T59 Temporal-Period:T97
 T60	Other 1326 1333	another
-E60	Other:T60 
+E60	Other:T60 Is-Other:E61
 T61	Study 1343 1348	study
-E61	Study:T61 
+E61	Study:T61 Temporality:E59
 T62	Language 69 76	English
 T63	Condition-Name 200 209	heartburn
 T64	Eq-Operator 219 227	at least
@@ -149,7 +137,7 @@ T70	Eq-Temporal-Unit 260 266	months
 A18	Eq-Temporal-Unit-Value T70 month
 T71	Eq-Temporal-Period 273 276	Use
 A19	Eq-Temporal-Period-Value T71 present
-T72	Drug-Name 277 290	OTC product(s
+T72	Drug-Name 277 288	OTC product
 T73	Drug-Name 293 304	supplements
 T74	Drug-Name 309 329	dietary manipulation
 T75	Condition-Name 341 350	heartburn
@@ -158,20 +146,19 @@ A20	Eq-Temporal-Period-Value T76 past
 T77	Eq-Value 372 373	3
 T78	Eq-Temporal-Unit 374 380	months
 A21	Eq-Temporal-Unit-Value T78 month
-T79	Drug-Name 448 461	OTC product(s
+T79	Drug-Name 448 459	OTC product
 T80	Condition-Name 474 483	heartburn
 T81	Procedure-Name 721 733	intervention
 T82	Severity 912 918	Severe
 A22	Severity-Value T82 severe
 T83	Condition-Name 919 936	heartburn problem
-T84	Observation-Name 966 991	limits your concentration
 T85	Eq-Temporal-Unit 995 1000	daily
 A23	Eq-Temporal-Unit-Value T85 day
 T86	Eq-Temporal-Period 1024 1028	last
 A24	Eq-Temporal-Period-Value T86 past
 T87	Eq-Temporal-Unit 1029 1033	week
 A25	Eq-Temporal-Unit-Value T87 week
-T88	Eq-Temporal-Period 1052 1061	currently
+T88	Eq-Temporal-Period 1052 1067	currently being
 A26	Eq-Temporal-Period-Value T88 present
 T89	Condition-Name 1084 1109	gastrointestinal diseases
 T90	Condition-Name 1120 1124	GERD
@@ -183,3 +170,65 @@ T95	Condition-Name 1219 1233	breast-feeding
 T96	Condition-Name 1258 1266	pregnant
 T97	Eq-Temporal-Period 1299 1308	Currently
 A27	Eq-Temporal-Period-Value T97 present
+T98	Observation 99 105	height
+E62	Observation:T98 Name:T99
+T99	Observation-Name 99 105	height
+A28	Observation-Type-Value T99 vital
+T100	Observation 110 116	weight
+E63	Observation:T100 Name:T101
+T101	Observation-Name 110 116	weight
+A29	Observation-Type-Value T101 vital
+T102	Or 106 109	and
+E64	Or:T102 Arg:E62 Arg2:E63
+R1	Treatment-For Arg1:E9 Arg2:E13	
+R2	Treatment-For Arg1:E10 Arg2:E13	
+R3	Treatment-For Arg1:E12 Arg2:E13	
+T2	Drug-Name 413 427	soy supplement
+R4	Treatment-For Arg1:E21 Arg2:E22	
+T20	Observation-Name 519 533	questionnaires
+A30	Observation-Type-Value T20 survey-or-questionnaire
+T103	Encounter 602 617	clinical visits
+E2	Encounter:T103 
+T104	Observation 535 542	records
+E20	Observation:T104 Name:T105
+T105	Observation-Name 535 542	records
+T106	Observation 548 555	diaries
+E65	Observation:T106 Name:T107
+T107	Observation-Name 548 555	diaries
+T108	Or 544 547	and
+E66	Or:T108 Arg:E20 Arg2:E65
+T109	Observation-Name 661 675	dietary intake
+A31	Observation-Type-Value T109 social-habit
+T110	Observation-Name 696 703	recalls
+T111	Eq-Comparison 677 695	3-day online 24-hr
+E67	Eq-Comparison:T111 Value:T112 Temporal-Unit:T113 Value2:T114 Temporal-Unit2:T115
+T112	Eq-Value 677 678	3
+T113	Eq-Temporal-Unit 679 682	day
+A32	Eq-Temporal-Unit-Value T113 day
+T114	Eq-Value 690 692	24
+T115	Eq-Temporal-Unit 693 695	hr
+A33	Eq-Temporal-Unit-Value T115 hour
+T116	Procedure 739 746	washout
+E68	Procedure:T116 Name:T117
+T117	Procedure-Name 739 746	washout
+T118	Allergy-Name 895 898	Soy
+T36	Condition 978 991	concentration
+E36	Condition:T36 Name:T37 Stability:T84 Temporality:E38
+T37	Condition-Name 978 991	concentration
+T84	Stability 966 972	limits
+A34	Stability-Value T84 change
+T119	Assertion 960 965	often
+E37	Assertion:T119 Asserted:T84
+A35	Assertion-Type-Value E37 hypothetical
+R5	Caused-By Arg1:T84 Arg2:E35	
+T41	Or 1049 1051	or
+E41	Or:T41 Arg:E69 Arg2:E42
+R6	Treatment-For Arg1:E43 Arg2:E44	
+T120	Coreference 1039 1048	Diagnosed
+E69	Coreference:T120 Refers-To:E44
+R7	Example-Of Arg1:E45 Arg2:E44	
+R8	Example-Of Arg1:E46 Arg2:E44	
+R9	Example-Of Arg1:E47 Arg2:E44	
+T121	Condition-Name 1151 1157	celiac
+R10	Example-Of Arg1:E48 Arg2:E44	
+R11	Example-Of Arg1:E49 Arg2:E44	
