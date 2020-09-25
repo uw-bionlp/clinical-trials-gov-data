@@ -1,24 +1,24 @@
 T1	Eq-Comparison 46 56	≥ 18 years
 E1	Eq-Comparison:T1 Operator:T49 Value:T50 Temporal-Unit:T51
 T2	Age 60 63	age
-E2	Age:T2 
+E2	Age:T2 Eq-Comparison:E1
 T3	Or 75 77	or
-E3	Or:T3 Arg:E49 Arg2:E4
+E3	Or:T3 Arg2:E4 Arg:E49
 T4	Assertion 78 87	suspected
-E4	Assertion:T4 
+E4	Assertion:T4 Asserted:E8
 A1	Assertion-Type-Value E4 possible
 T5	Modifier 88 95	primary
-E5	Modifier:T5 
+E5	Modifier:T5 Modifies:T52
 T6	Or 96 98	or
 E6	Or:T6 Arg:E5 Arg2:E7
-T7	Modifier 99 109	metastatic
-E7	Modifier:T7 
-T8	Condition 110 123	breast cancer
+T7	Modifier 99 116	metastatic breast
+E7	Modifier:T7 Modifies:T52
+T8	Condition 117 123	cancer
 E8	Condition:T8 Name:T52
 T9	Eq-Comparison 130 142	At least one
 E9	Eq-Comparison:T9 Operator:T53 Value:T54
 T10	Condition 143 149	lesion
-E10	Condition:T10 Minimum-Count:E9 Stage:E11
+E10	Condition:T10 Minimum-Count:E9 Name:T78
 T11	Eq-Comparison 150 158	≥ 1.5 cm
 E11	Eq-Comparison:T11 Operator:T56 Value:T57 Unit:T58
 T12	Procedure 175 191	standard imaging
@@ -35,14 +35,10 @@ T17	Procedure 230 237	FDG-PET
 E17	Procedure:T17 Name:T64
 T19	Procedure 238 240	CT
 E19	Procedure:T19 Name:T65
-T20	Procedure 252 267	type of imaging
+T20	Procedure 260 267	imaging
 E20	Procedure:T20 Name:T66 Minimum-Count:E21
 T22	Condition 290 296	lesion
 E22	Condition:T22 Name:T67
-T24	Study 523 528	study
-E24	Study:T24 
-T25	Procedure 538 548	procedures
-E25	Procedure:T25 
 T26	And 583 586	who
 E26	And:T26 Arg:T68 Arg2:T69
 T27	Condition 591 599	pregnant
@@ -58,8 +54,8 @@ T31	Study 633 642	screening
 E31	Study:T31 
 T32	Observation 646 666	urine pregnancy test
 E32	Observation:T32 Name:T71
-T34	Modifier 697 720	child-bearing potential
-E34	Modifier:T34 Modifies:T72
+T34	Condition 697 720	child-bearing potential
+E34	Condition:T34 Name:T73
 T35	Temporal-Connection 721 723	at
 E35	Temporal-Connection:T35 Arg:E32 Arg2:E36
 A6	Temporal-Connection-Type-Value E35 during
@@ -74,31 +70,27 @@ E40	Eq-Comparison:T40 Temporal-Period:T75
 T41	Condition 855 872	medical condition
 E41	Condition:T41 Temporality:E40
 T42	Condition 874 881	illness
-E42	Condition:T42 Temporality:E40
+E42	Condition:T42 Temporality:E40 Name:T23
 T43	Or 883 885	or
 E43	Or:T43 Arg:E42 Arg2:E44
 T44	Condition 886 894	disorder
-E44	Condition:T44 Name:T76
-T45	Or 933 939	and/or
-E45	Or:T45 
+E44	Condition:T44 Name:T76 Temporality:E40
 T46	Condition 1010 1019	condition
 E46	Condition:T46 
 T47	Assertion 1025 1030	could
-E47	Assertion:T47 Asserted:E39
+E47	Assertion:T47 Asserted:T33
 A7	Assertion-Type-Value E47 hypothetical
 T48	Study 1096 1101	study
-E48	Study:T48 
+E48	Study:T48 Stability:T33
 T49	Eq-Operator 46 47	≥
 A8	Eq-Operator-Value T49 GTEQ
 T50	Eq-Value 48 50	18
 T51	Eq-Temporal-Unit 51 56	years
 A9	Eq-Temporal-Unit-Value T51 year
-T52	Condition-Name 110 123	breast cancer
+T52	Condition-Name 117 123	cancer
 T53	Eq-Operator 130 138	At least
 A10	Eq-Operator-Value T53 GTEQ
 T54	Eq-Value 139 142	one
-T55	Observation-Name 143 149	lesion
-A11	Observation-Type-Value T55 measurement
 T56	Eq-Operator 150 151	≥
 A12	Eq-Operator-Value T56 GTEQ
 T57	Eq-Value 152 155	1.5
@@ -108,7 +100,7 @@ T60	Procedure-Name 198 200	CT
 T61	Procedure-Name 202 205	MRI
 T62	Procedure-Name 207 216	mammogram
 T63	Procedure-Name 218 228	ultrasound
-T64	Procedure-Name 230 233	FDG
+T64	Procedure-Name 230 237	FDG-PET
 T65	Procedure-Name 238 240	CT
 T66	Procedure-Name 260 267	imaging
 T67	Condition-Name 290 296	lesion
@@ -125,10 +117,6 @@ T74	Procedure-Name 762 780	imaging procedures
 T75	Eq-Temporal-Period 847 854	current
 A16	Eq-Temporal-Period-Value T75 present
 T76	Condition-Name 886 894	disorder
-T77	Observation 69 74	Known
-E49	Observation:T77 Name:T78
-T78	Observation-Name 69 74	Known
-A17	Observation-Type-Value T78 lab
 R1	Example-Of Arg1:E13 Arg2:E12	
 R2	Example-Of Arg1:E14 Arg2:E12	
 R3	Example-Of Arg1:E15 Arg2:E12	
@@ -143,11 +131,19 @@ T79	Eq-Operator 243 247	Only
 A2	Eq-Operator-Value T79 EQ
 T80	Eq-Value 248 251	one
 R7	Found-By Arg1:E22 Arg2:E20	
-T23	Assertion 788 795	opinion
-E23	Assertion:T23 Asserted:E37
-A3	Assertion-Type-Value E23 possible
-T33	Condition 1054 1060	safety
-E33	Condition:T33 Name:T39
-T39	Condition-Name 1054 1060	safety
-T81	Negation 1031 1041	compromise
-E39	Negation:T81 Negates:E33
+T77	Modifier 69 74	Known
+E49	Modifier:T77 Modifies:T52
+T78	Condition-Name 143 149	lesion
+T55	Observation 143 149	lesion
+E50	Observation:T55 Eq-Comparison:E11
+R8	Found-By Arg1:E10 Arg2:E12	
+T24	Assertion 740 749	Inability
+E24	Assertion:T24 Asserted:E37
+A5	Assertion-Type-Value E24 hypothetical
+T23	Condition-Name 874 881	illness
+T25	And 694 696	of
+E23	And:T25 Arg:T72 Arg2:E34
+R10	If-Then Arg1:T72 Arg2:E32	
+T33	Stability 1031 1041	compromise
+A3	Stability-Value T33 change
+R9	Caused-By Arg1:T33 Arg2:E46	

@@ -1,16 +1,16 @@
 T1	Modifier 39 48	end-stage
-E1	Modifier:T1 
+E1	Modifier:T1 Modifies:T8
 T2	Condition 49 62	liver disease
 E2	Condition:T2 Name:T8
 T3	And 63 66	who
-E3	And:T3 
+E3	And:T3 Arg:E2 Arg2:E4
 T4	Assertion 67 74	require
-E4	Assertion:T4 
+E4	Assertion:T4 Asserted:E5
 A1	Assertion-Type-Value E4 hypothetical
 T5	Procedure 75 96	liver transplantation
 E5	Procedure:T5 Name:T9
 T6	Negation 131 138	without
-E6	Negation:T6 
+E6	Negation:T6 Negates:E7
 T7	Procedure 139 160	liver transplantation
 E7	Procedure:T7 Name:T11
 T8	Condition-Name 49 62	liver disease
@@ -20,3 +20,4 @@ A2	Life-Stage-And-Gender-Type T10 child
 T11	Procedure-Name 139 160	liver transplantation
 T12	Life-Stage-And-Gender 185 193	Children
 A3	Life-Stage-And-Gender-Type T12 child
+R1	Treatment-For Arg1:E5 Arg2:E2	

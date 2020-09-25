@@ -1,33 +1,33 @@
 T1	Or 29 32	and
 E1	Or:T1 Arg:T35 Arg2:T36
 T2	Age 39 43	aged
-E2	Age:T2 
+E2	Age:T2 Eq-Comparison:E3
 T3	Eq-Comparison 44 55	18-70 years
 E3	Eq-Comparison:T3 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
 T4	Observation 61 64	BMI
 E4	Observation:T4 Name:T41 Eq-Comparison:E5
 T5	Eq-Comparison 65 78	18.5-50 kg/m2
-E5	Eq-Comparison:T5 Value:T42 Operator:T43 Value:T44 Unit:T45 Unit:T46
+E5	Eq-Comparison:T5 Value:T42 Operator:T43 Value:T44 Unit:T45 Per:T46
 T6	Negation 84 87	Not
-E6	Negation:T6 Negates:E8
+E6	Negation:T6 Negates:E8 Negates2:E10
 T7	Eq-Comparison 88 94	taking
 E7	Eq-Comparison:T7 Temporal-Period:T47
 T8	Drug 95 106	antibiotics
-E8	Drug:T8 Name:T48 Temporality:E7
+E8	Drug:T8 Name:T48 Temporality:E7 Duration:E11
 T9	Or 107 110	and
 E9	Or:T9 Arg:E8 Arg2:E10
 T10	Drug 111 130	antimicrobial drugs
-E10	Drug:T10 Name:T49 Duration:E11
+E10	Drug:T10 Name:T49 Duration:E11 Temporality:E7
 T11	Eq-Comparison 135 156	at least three months
 E11	Eq-Comparison:T11 Operator:T50 Value:T51 Temporal-Unit:T52
 T13	Or 185 188	and
 E13	Or:T13 Arg:E12 Arg2:E14
-T14	Condition 189 198	sedentary
-E14	Condition:T14 Name:T71
+T14	Observation 189 198	sedentary
+E14	Observation:T14 Name:T71
 T17	Study 248 253	study
 E17	Study:T17 
 T18	Eq-Comparison 274 278	±5kg
-E18	Eq-Comparison:T18 Unit:T56
+E18	Eq-Comparison:T18 Unit:T56 Operator:T55 Value:T72
 T19	Eq-Comparison 284 301	at least 6 months
 E19	Eq-Comparison:T19 Operator:T57 Value:T58 Temporal-Unit:T59
 T20	Negation 326 328	No
@@ -36,7 +36,7 @@ T21	Condition 329 344	cardiometabolic
 E21	Condition:T21 Name:T60
 T22	Condition 351 364	heart disease
 E22	Condition:T22 Name:T61
-T23	Condition 366 385	high blood pressure
+T23	Condition 371 385	blood pressure
 E23	Condition:T23 Name:T63 Polarity:T62
 T24	Or 387 389	or
 E24	Or:T24 Arg:E21 Arg2:E26
@@ -89,7 +89,6 @@ T52	Eq-Temporal-Unit 150 156	months
 A11	Eq-Temporal-Unit-Value T52 month
 T54	Stability 266 272	stable
 A13	Stability-Value T54 stable
-T55	Observation-Name 274 276	±5
 T56	Eq-Unit 276 278	kg
 T57	Eq-Operator 284 292	at least
 A14	Eq-Operator-Value T57 GTEQ
@@ -101,7 +100,7 @@ T61	Condition-Name 351 364	heart disease
 T62	Polarity 366 370	high
 A16	Polarity-Value T62 high
 T63	Condition-Name 371 385	blood pressure
-T64	Condition-Name 390 410	inflammatory illness
+T64	Condition-Name 403 410	illness
 T65	Condition-Name 416 423	Smokers
 T66	Drug-Name 446 456	vaporisers
 T67	Drug-Name 461 473	e-cigarettes
@@ -109,11 +108,10 @@ T68	Eq-Temporal-Period 480 486	Taking
 A17	Eq-Temporal-Period-Value T68 present
 T69	Drug-Name 487 510	anti-inflammatory drugs
 T70	Drug-Name 522 529	aspirin
-R1	Equivalent-To Arg1:E2 Arg2:E3	
-T12	Condition 167 184	physically active
-E12	Condition:T12 Name:T53
-T53	Condition-Name 167 184	physically active
-T71	Condition-Name 189 198	sedentary
+T12	Observation 167 184	physically active
+E12	Observation:T12 Name:T53
+T53	Observation-Name 167 184	physically active
+T71	Observation-Name 189 198	sedentary
 T15	Observation 259 265	Weight
 E15	Observation:T15 Name:T16 Stability:T54 Eq-Comparison:E18 Duration:E19
 T16	Observation-Name 259 265	Weight
@@ -122,3 +120,8 @@ R2	Example-Of Arg1:E22 Arg2:E21
 R3	Example-Of Arg1:E23 Arg2:E21	
 R4	Example-Of Arg1:E28 Arg2:E27	
 R5	Example-Of Arg1:E30 Arg2:E27	
+A2	Observation-Type-Value T53 social-habit
+A12	Observation-Type-Value T71 social-habit
+T55	Eq-Operator 274 275	±
+A18	Eq-Operator-Value T55 PLUS-MINUS
+T72	Eq-Value 275 276	5

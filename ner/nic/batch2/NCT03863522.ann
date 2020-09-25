@@ -8,7 +8,7 @@ A1	Assertion-Type-Value E4 possible
 T5	Condition 178 191	breast lesion
 E5	Condition:T5 Name:T14
 T6	Negation 233 241	excluded
-E6	Negation:T6 
+E6	Negation:T6 Negates:E7
 T7	Condition 250 259	condition
 E7	Condition:T7 
 T8	Drug 348 357	medicines
@@ -24,3 +24,7 @@ T13	Procedure-Name 132 161	ultrasound core needle biopsy
 T14	Condition-Name 178 191	breast lesion
 T15	Age 81 84	age
 E9	Age:T15 Eq-Comparison:E1
+R1	Treatment-For Arg1:E3 Arg2:E5	
+T2	Assertion 226 232	may be
+E2	Assertion:T2 Asserted:E6
+A5	Assertion-Type-Value E2 hypothetical

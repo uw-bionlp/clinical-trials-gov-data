@@ -1,11 +1,11 @@
 T1	Condition 47 58	brain death
-E1	Condition:T1 Name:T24
+E1	Condition:T1 Name:T24 Temporality:E24
 T2	Or 59 61	or
-E2	Or:T2 
+E2	Or:T2 Arg:E1 Arg2:E4
 T3	Modifier 70 75	brain
-E3	Modifier:T3 
+E3	Modifier:T3 Modifies:T26
 T4	Condition 76 82	trauma
-E4	Condition:T4 Name:T26
+E4	Condition:T4 Name:T26 Severity:T25 Temporality:E24
 T5	Condition 89 96	Healthy
 E5	Condition:T5 Name:T27
 T6	Procedure 126 144	optical assessment
@@ -13,37 +13,31 @@ E6	Procedure:T6 Name:T28
 T7	Condition 216 225	pregnancy
 E7	Condition:T7 Name:T29
 T8	Or 226 228	or
-E8	Or:T8 
-T9	Condition 234 252	plan to conception
-E9	Condition:T9 
+E8	Or:T8 Arg:E7 Arg2:E28
+T9	Condition 242 252	conception
+E9	Condition:T9 Name:T45
 T10	Procedure 277 293	vertebra surgery
 E10	Procedure:T10 Name:T30
 T11	Or 294 296	or
-E11	Or:T11 
-T12	Eq-Comparison 302 306	plan
-E12	Eq-Comparison:T12 
+E11	Or:T11 Arg:E10 Arg2:E12
 T13	Procedure 310 317	surgery
 E13	Procedure:T13 Name:T31
-T14	Procedure 388 400	radiologists
-E14	Procedure:T14 
-T15	Or 401 403	or
-E15	Or:T15 
 T16	Condition 427 431	AIDS
 E16	Condition:T16 Name:T32
 T17	Eq-Comparison 433 439	Active
 E17	Eq-Comparison:T17 Temporal-Period:T33
 T18	Condition 440 449	Hepatitis
-E18	Condition:T18 Name:T34
+E18	Condition:T18 Name:T34 Temporality:E17
 T19	Condition 451 463	Tuberculosis
 E19	Condition:T19 Name:T35
 T20	Condition 465 473	Syphilis
 E20	Condition:T20 Name:T36
-T21	Eq-Comparison 497 506	regularly
-E21	Eq-Comparison:T21 
+T21	Eq-Comparison 497 511	regularly take
+E21	Eq-Comparison:T21 Temporal-Period:T14
 T22	Drug 512 526	anticoagulants
-E22	Drug:T22 Name:T37
+E22	Drug:T22 Name:T37 Temporality:E21
 T23	Drug 528 546	antiplatelet drugs
-E23	Drug:T23 Name:T38
+E23	Drug:T23 Name:T38 Temporality:E21
 T24	Condition-Name 47 58	brain death
 T25	Severity 62 69	serious
 A1	Severity-Value T25 severe
@@ -61,3 +55,25 @@ T35	Condition-Name 451 463	Tuberculosis
 T36	Condition-Name 465 473	Syphilis
 T37	Drug-Name 512 526	anticoagulants
 T38	Drug-Name 528 546	antiplatelet drugs
+T39	Eq-Comparison 43 46	had
+E24	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 43 46	had
+A3	Eq-Temporal-Period-Value T40 past
+T41	And 104 107	who
+E25	And:T41 Arg:E5 Arg2:E26
+T42	Assertion 112 125	interested in
+E26	Assertion:T42 Asserted:E6
+A4	Assertion-Type-Value E26 hypothetical
+T43	Observation 148 170	hemodynamic parameters
+E27	Observation:T43 Name:T44
+T44	Observation-Name 148 170	hemodynamic parameters
+R1	Using Arg1:E6 Arg2:E27	
+T45	Condition-Name 242 252	conception
+T46	Assertion 234 241	plan to
+E28	Assertion:T46 Asserted:E9
+A5	Assertion-Type-Value E28 intention
+T12	Assertion 302 309	plan of
+E12	Assertion:T12 Asserted:E13
+A6	Assertion-Type-Value E12 intention
+T14	Eq-Temporal-Period 497 511	regularly take
+A7	Eq-Temporal-Period-Value T14 present

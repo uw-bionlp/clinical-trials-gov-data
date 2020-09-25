@@ -1,5 +1,5 @@
 T1	Eq-Comparison 25 41	planned 6 cycles
-E1	Eq-Comparison:T1 Temporal-Period:T12 Value:T13
+E1	Eq-Comparison:T1 Temporal-Period:T12 Value:T13 Unit:T19
 T2	Procedure 45 57	chemotherapy
 E2	Procedure:T2 Name:T14 Duration:E1
 T3	Drug 63 74	carboplatin
@@ -13,7 +13,7 @@ E6	Or:T6 Arg:E5 Arg2:E7
 T7	Drug 89 100	carboplatin
 E7	Drug:T7 Name:T17
 T8	Or 100 101	/
-E8	Or:T8 Arg:E7
+E8	Or:T8 Arg:E7 Arg2:E9
 T9	Drug 101 132	pegylated liposomal doxorubicin
 E9	Drug:T9 Name:T18
 T10	Age 138 141	Age
@@ -38,3 +38,6 @@ R1	Using Arg1:E2 Arg2:E3
 R2	Using Arg1:E2 Arg2:E5	
 R3	Using Arg1:E7 Arg2:E2	
 R4	Using Arg1:E9 Arg2:E2	
+T19	Eq-Unit 35 41	cycles
+T24	Negation 177 187	inadequate
+E12	Negation:T24 Negates:T23
