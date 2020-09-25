@@ -61,7 +61,7 @@ R3	Caused-By Arg1:E3 Arg2:E19
 T35	Assertion 690 695	would
 E23	Assertion:T35 Asserted:E3
 T39	Condition 154 183	respiratory system infections
-E25	Condition:T39 Name:T40
+E25	Condition:T39 Name:T40 Temporality:E26
 T40	Condition-Name 154 183	respiratory system infections
 T41	Eq-Comparison 147 153	recent
 E26	Eq-Comparison:T41 Temporal-Period:T42
@@ -69,8 +69,8 @@ T42	Eq-Temporal-Period 147 153	recent
 A6	Eq-Temporal-Period-Value T42 recent
 T43	Negation 139 146	without
 E27	Negation:T43 Negates:E25
-T45	Condition 211 218	disease
-E29	Condition:T45 Stability:T44 Name:T47
+T45	Coreference 207 218	the disease
+E29	Coreference:T45 Stability:T44 Refers-To:E5
 T46	Or 184 186	or
 E30	Or:T46 Arg:E25 Arg2:E29
 A5	Assertion-Type-Value E23 hypothetical
@@ -83,5 +83,5 @@ T38	Stability 112 118	Stable
 A8	Stability-Value T38 stable
 R4	Equivalent-To Arg1:E27 Arg2:E24	
 T44	Stability 191 203	exacerbation
-A9	Stability-Value T44 stable
-T47	Condition-Name 211 218	disease
+A9	Stability-Value T44 change
+R2	Found-By Arg1:E5 Arg2:E2	

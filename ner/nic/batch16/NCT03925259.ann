@@ -57,12 +57,10 @@ T41	Age 101 104	Age
 E38	Age:T41 Eq-Comparison:E8
 T42	Eq-Value 105 107	16
 T43	Risk 721 725	risk
-E2	Risk:T43 Risk-For:E35
+E2	Risk:T43 Risk-For:E35 Severity:T46
 T44	Eq-Comparison 704 711	current
 E4	Eq-Comparison:T44 Temporal-Period:T45
 T45	Eq-Temporal-Period 704 711	current
-T46	Modifier 692 703	Significant
-E6	Modifier:T46 Modifies:E35
 A3	Eq-Temporal-Period-Value T45 present
 T47	Eq-Comparison 630 639	Currently
 E39	Eq-Comparison:T47 Temporal-Period:T48
@@ -87,7 +85,7 @@ A8	Eq-Temporal-Period-Value T56 past
 T57	Eq-Comparison 105 108	16+
 E8	Eq-Comparison:T57 Operator:T58 Value:T42
 T58	Eq-Operator 107 108	+
-A9	Eq-Operator-Value T58 GT
+A9	Eq-Operator-Value T58 GTEQ
 T59	Condition 35 60	physical health condition
 E10	Condition:T59 Name:T60
 T60	Condition-Name 35 60	physical health condition
@@ -184,3 +182,5 @@ E53	Negation:T99 Negates:E31
 T100	Assertion 1017 1027	reluctance
 E54	Assertion:T100 Asserted:E53
 A16	Assertion-Type-Value E54 hypothetical
+T46	Severity 692 703	Significant
+A17	Severity-Value T46 severe

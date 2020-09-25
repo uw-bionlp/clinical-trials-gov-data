@@ -80,7 +80,7 @@ E41	Or:T41 Arg:E40 Arg2:E42
 T42	Procedure 600 613	sympathectomy
 E42	Procedure:T42 Name:T109
 T43	Allergy 625 632	allergy
-E43	Allergy:T43 Name:E44 Name2:E47
+E43	Allergy:T43 Name:E44 Name2:E47 Name3:E45
 T44	Procedure 636 653	local anesthetics
 E44	Procedure:T44 Name:T110
 T45	Drug 655 663	fentanyl
@@ -231,7 +231,6 @@ E33	Eq-Comparison:T33 Temporal-Period:T37
 T37	Eq-Temporal-Period 536 548	experiencing
 A26	Eq-Temporal-Period-Value T37 present
 R4	Treatment-For Arg1:E39 Arg2:E40	
-R5	Abbrev-Of Arg1:E43 Arg2:E45	
 T138	Eq-Temporal-Period 727 738	Preexisting
 A27	Eq-Temporal-Period-Value T138 past
 T54	Eq-Temporal-Unit 902 905	min
@@ -256,3 +255,6 @@ T141	Procedure-Name 1068 1077	operative
 T142	Temporal-Connection 1064 1068	post
 E78	Temporal-Connection:T142 Arg:E77 Arg2:E70
 A32	Temporal-Connection-Type-Value E78 after
+T143	Condition 457 478	Unable to communicate
+E79	Condition:T143 Name:T144
+T144	Condition-Name 457 478	Unable to communicate
