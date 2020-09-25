@@ -9,8 +9,8 @@ T5	Condition 102 105	DLD
 E5	Condition:T5 Name:T46
 T6	Negation 106 114	excluded
 E6	Negation:T6 Negates:E3
-T7	Criteria-Count 151 193	least three of the following four criteria
-E7	Criteria-Count:T7 Min-Value:E44 Criteria:E8 Criteria2:E16 Criteria3:E24 Criteria4:E25
+T7	Criteria-Count 163 179	of the following
+E7	Criteria-Count:T7 Min-Value:E44 Criteria:E8 Criteria2:E16 Criteria3:E24 Criteria4:E25 Max-Value:E39
 T8	Condition 199 210	respiratory
 E8	Condition:T8 Name:T73
 T9	Condition 227 232	cough
@@ -136,3 +136,6 @@ R11	Found-By Arg1:E25 Arg2:E26
 R12	Found-By Arg1:E25 Arg2:E28	
 T39	Condition-Type 704 714	presenting
 A5	Condition-Type-Value T39 admitting
+T60	Eq-Comparison 180 184	four
+E39	Eq-Comparison:T60 Value:T77
+T77	Eq-Value 180 184	four

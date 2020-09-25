@@ -70,7 +70,7 @@ E10	Eq-Comparison:T49 Operator:T50 Value:T51
 T50	Eq-Operator 83 91	at least
 A8	Eq-Operator-Value T50 GTEQ
 T51	Eq-Value 92 95	one
-T52	Criteria-Count 83 131	at least one of the following high risk criteria
+T52	Criteria-Count 99 112	the following
 E12	Criteria-Count:T52 Min-Value:E10 Criteria:T53 Criteria2:T54 Criteria3:E5 Criteria4:E15
 T53	Insurance 133 142	uninsured
 T54	Insurance 144 152	Medicaid
@@ -187,3 +187,10 @@ A27	Assertion-Type-Value E51 hypothetical
 T103	Modifier 810 819	long-term
 E52	Modifier:T103 Modifies:T101
 T104	Eq-Value 834 836	80
+T105	Polarity 113 117	high
+A28	Polarity-Value T105 high
+T106	Risk 118 122	risk
+E53	Risk:T106 Polarity:T105
+R7	Equivalent-To Arg1:E12 Arg2:E53	
+T107	Negation 133 142	uninsured
+E54	Negation:T107 Negates:T53

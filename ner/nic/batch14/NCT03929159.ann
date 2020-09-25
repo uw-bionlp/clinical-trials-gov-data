@@ -86,8 +86,8 @@ T66	Encounter 556 572	emergency center
 E26	Encounter:T66 Type:T67
 T67	Encounter-Type 556 572	emergency center
 A21	Encounter-Type-Value T67 emergency
-T68	Criteria-Count 579 621	two or more of the following SIRS criteria
-E27	Criteria-Count:T68 Min-Value:E28 Criteria:E29 Criteria2:E40 Criteria3:E41
+T68	Criteria-Count 594 607	the following
+E27	Criteria-Count:T68 Min-Value:E28 Criteria:E29 Criteria2:E40 Criteria3:E41 Criteria4:E52
 T69	Eq-Comparison 579 590	two or more
 E28	Eq-Comparison:T69 Value:T70 Operator:T71
 T70	Eq-Value 579 582	two
@@ -196,3 +196,50 @@ E51	Eq-Comparison:T109 Temporal-Period:T110
 T110	Eq-Temporal-Period 755 767	administered
 A30	Eq-Temporal-Period-Value T110 past
 A31	Observation-Type-Value T19 measurement
+T111	Condition 608 612	SIRS
+E52	Condition:T111 Name:T112
+T112	Condition-Name 608 612	SIRS
+T113	Observation 957 968	temperature
+E53	Observation:T113 Name:T114 Eq-Comparison:E55 Eq-Comparison2:E57
+T114	Observation-Name 957 968	temperature
+A32	Observation-Type-Value T114 vital
+T115	Modifier 952 956	Oral
+E54	Modifier:T115 Modifies:T114
+T116	Eq-Comparison 969 989	> 38 degrees Celsius
+E55	Eq-Comparison:T116 Operator:T117 Value:T118
+T117	Eq-Operator 969 970	>
+A33	Eq-Operator-Value T117 GT
+T118	Eq-Value 971 973	38
+T119	Eq-Unit 974 989	degrees Celsius
+T120	Eq-Unit 991 992	C
+R7	Abbrev-Of Arg1:T120 Arg2:T119	
+T121	Or 994 996	or
+E56	Or:T121 Arg:E55 Arg2:E57
+T122	Eq-Comparison 997 1011	< 36 degrees C
+E57	Eq-Comparison:T122 Operator:T123 Value:T124 Unit:T125
+T123	Eq-Operator 997 998	<
+A34	Eq-Operator-Value T123 LT
+T124	Eq-Value 999 1001	36
+T125	Eq-Unit 1002 1011	degrees C
+T126	Observation 1024 1035	temperature
+E58	Observation:T126 Name:T127 Eq-Comparison:E61 Eq-Comparison2:E62
+T127	Observation-Name 1024 1035	temperature
+A35	Observation-Type-Value T127 vital
+T128	Modifier 1015 1023	axillary
+E59	Modifier:T128 Modifies:T127
+T129	Or 1012 1014	or
+E60	Or:T129 Arg:E53 Arg2:E58
+T130	Eq-Comparison 1036 1050	> 37 degrees C
+E61	Eq-Comparison:T130 Operator:T131 Value:T132 Unit:T133
+T131	Eq-Operator 1036 1037	>
+A36	Eq-Operator-Value T131 GT
+T132	Eq-Value 1038 1040	37
+T133	Eq-Unit 1041 1050	degrees C
+T134	Eq-Comparison 1054 1068	< 35 degrees C
+E62	Eq-Comparison:T134 Operator:T135 Value:T136 Unit:T137
+T135	Eq-Operator 1054 1055	<
+A37	Eq-Operator-Value T135 LT
+T136	Eq-Value 1056 1058	35
+T137	Eq-Unit 1059 1068	degrees C
+T138	Or 1051 1053	or
+E63	Or:T138 Arg:E61 Arg2:E62

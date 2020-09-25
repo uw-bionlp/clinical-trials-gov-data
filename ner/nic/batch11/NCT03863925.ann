@@ -94,8 +94,8 @@ T23	Severity 749 754	sever
 A5	Severity-Value T23 severe
 R10	Example-Of Arg1:E15 Arg2:E14	
 R11	Example-Of Arg1:E11 Arg2:E14	
-T24	Modifier 819 828	untreated
-E23	Modifier:T24 Modifies:E17
+T24	Procedure 819 828	untreated
+E23	Procedure:T24 
 T58	Drug 856 863	alcohol
 E28	Drug:T58 Name:T59
 T59	Drug-Name 856 863	alcohol
@@ -104,10 +104,14 @@ E31	Drug:T60 Name:T61
 T61	Drug-Name 868 881	illegal drugs
 T62	Or 864 867	and
 E32	Or:T62 Arg:E28 Arg2:E31
-R12	Using Arg1:E17 Arg2:E28	
 T63	Modifier 901 912	unspecified
 E33	Modifier:T63 Modifies:E9
 T64	And 301 304	and
 E34	And:T64 Arg:E10 Arg2:E12
 T25	Modifier 85 90	major
 E25	Modifier:T25 Modifies:E1
+R1	Treatment-For Arg1:E23 Arg2:E17	
+T26	Negation 819 828	untreated
+E35	Negation:T26 Negates:E23
+R12	Example-Of Arg1:E28 Arg2:E17	
+R13	Example-Of Arg1:E31 Arg2:E17	
