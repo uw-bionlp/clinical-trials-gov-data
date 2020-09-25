@@ -1,42 +1,38 @@
 T1	And 162 166	with
-E1	And:T1 
+E1	And:T1 Arg:T46 Arg2:E2
 T2	Condition 167 196	immune mediated enteropathies
-E2	Condition:T2 
+E2	Condition:T2 Name:T47
 T3	And 197 200	who
-E3	And:T3 
-T4	Assertion 225 233	symptoms
+E3	And:T3 Arg:E2 Arg2:E4
+T4	Assertion 210 233	improvement in symptoms
 E4	Assertion:T4 
-A1	Assertion-Type-Value E4 possible
+A1	Assertion-Type-Value E4 hypothetical
 T5	Or 234 237	and
-E5	Or:T5 
-T6	Modifier 238 247	histology
-E6	Modifier:T6 
+E5	Or:T5 Arg:E4 Arg2:E6
+T6	Procedure 238 247	histology
+E6	Procedure:T6 Name:T77
 T7	Eq-Comparison 248 250	on
-E7	Eq-Comparison:T7 
+E7	Eq-Comparison:T7 Temporal-Period:T78
 T8	Procedure 251 274	oral budesonide therapy
-E8	Procedure:T8 Name:T48
+E8	Procedure:T8 Name:T48 Temporality:E7
 T9	Age 300 303	Age
-E9	Age:T9 
+E9	Age:T9 Eq-Comparison:E10
 T10	Eq-Comparison 304 313	<18 years
 E10	Eq-Comparison:T10 Operator:T49 Value:T50 Temporal-Unit:T51
 T11	Observation 328 348	stool gluten testing
-E11	Observation:T11 Name:T53
+E11	Observation:T11 Name:T53 Polarity:T52
 T12	Condition 366 391	refractory celiac disease
 E12	Condition:T12 Name:T54
 T13	Condition 397 419	Small bowel malignancy
 E13	Condition:T13 Name:T55
 T14	Or 420 422	or
-E14	Or:T14 
+E14	Or:T14 Arg:E13 Arg2:E16
 T15	Eq-Comparison 423 430	history
 E15	Eq-Comparison:T15 Temporal-Period:T56
 T16	Condition 434 456	small bowel malignancy
-E16	Condition:T16 Name:T57
+E16	Condition:T16 Name:T57 Temporality:E15
 T17	Condition 462 487	Refractory celiac disease
 E17	Condition:T17 Name:T58
-T18	Eq-Comparison 488 494	type 2
-E18	Eq-Comparison:T18 Value:T59
-T19	Modifier 500 515	Post-transplant
-E19	Modifier:T19 
 T20	Condition 516 544	lymphoproliferative disorder
 E20	Condition:T20 Name:T61
 T21	Condition 556 567	enteropathy
@@ -45,55 +41,39 @@ T22	Negation 573 575	No
 E22	Negation:T22 
 T23	Eq-Comparison 576 581	prior
 E23	Eq-Comparison:T23 Temporal-Period:T63
-T24	Assertion 597 605	symptoms
+T24	Assertion 582 605	improvement in symptoms
 E24	Assertion:T24 
-A2	Assertion-Type-Value E24 possible
-T25	And 606 609	and
-E25	And:T25 
-T26	Condition 610 619	histology
-E26	Condition:T26 
+A2	Assertion-Type-Value E24 hypothetical
+T25	Or 606 609	and
+E25	Or:T25 Arg:E24 Arg2:E26
+T26	Procedure 610 619	histology
+E26	Procedure:T26 Name:T80 Temporality:E23
 T27	Procedure 625 643	budesonide therapy
 E27	Procedure:T27 Name:T64
 T28	Procedure 668 686	budesonide therapy
 E28	Procedure:T28 Name:T65
 T29	Temporal-Connection 687 695	prior to
-E29	Temporal-Connection:T29 
+E29	Temporal-Connection:T29 Arg:E28 Arg2:E30
 A3	Temporal-Connection-Type-Value E29 before
 T30	Study 700 705	trial
 E30	Study:T30 
 T31	Other 711 716	Other
-E31	Other:T31 
-T32	Modifier 728 736	systemic
-E32	Modifier:T32 
+E31	Other:T31 Is-Other:E33
+T32	Modifier 717 736	concurrent systemic
+E32	Modifier:T32 Modifies:T66
 T33	Drug 737 752	corticosteroids
 E33	Drug:T33 Name:T66
 T34	Other 758 763	Other
-E34	Other:T34 
+E34	Other:T34 Is-Other:E35
 T35	Drug 764 792	immune mediating medications
 E35	Drug:T35 Name:T67
-T36	Negation 810 813	not
-E36	Negation:T36 
 T37	Drug 825 837	azathioprine
 E37	Drug:T37 Name:T68
-T38	Drug 844 860	6-mercaptopurine
-E38	Drug:T38 Name:T69
-T39	Drug 862 874	cyclosporine
-E39	Drug:T39 Name:T70
-T40	Drug 876 888	methotrexate
-E40	Drug:T40 Name:T71
-T41	Drug 890 920	anti-TNF monoclonal antibodies
-E41	Drug:T41 Name:T72
-T42	Drug 922 976	alpha-4 beta-7 integrin inhibiting monoclonal antibody
-E42	Drug:T42 Name:T73
-T43	Drug 978 1026	interleukin 12/23 inhibiting monoclonal antibody
-E43	Drug:T43 Name:T74
-T44	Drug 1028 1042	JAK inhibitors
-E44	Drug:T44 Name:T75
-T45	Location 112 136	Mayo Clinic in Rochester
+T45	Location 112 140	Mayo Clinic in Rochester, MN
 A4	Location-Value T45 hospital
 T46	Life-Stage-And-Gender 147 152	Adult
 A5	Life-Stage-And-Gender-Type T46 adult
-T47	Drug-Name 167 196	immune mediated enteropathies
+T47	Condition-Name 167 196	immune mediated enteropathies
 T48	Procedure-Name 251 274	oral budesonide therapy
 T49	Eq-Operator 304 305	<
 A6	Eq-Operator-Value T49 LT
@@ -105,12 +85,11 @@ A8	Polarity-Value T52 positive
 T53	Observation-Name 328 348	stool gluten testing
 A9	Observation-Type-Value T53 lab
 T54	Condition-Name 366 391	refractory celiac disease
-T55	Condition-Name 403 419	bowel malignancy
+T55	Condition-Name 397 419	Small bowel malignancy
 T56	Eq-Temporal-Period 423 430	history
 A10	Eq-Temporal-Period-Value T56 past
-T57	Condition-Name 440 456	bowel malignancy
+T57	Condition-Name 434 456	small bowel malignancy
 T58	Condition-Name 462 487	Refractory celiac disease
-T59	Eq-Value 493 494	2
 T60	Procedure-Name 505 515	transplant
 T61	Condition-Name 516 544	lymphoproliferative disorder
 T62	Condition-Name 556 567	enteropathy
@@ -121,10 +100,53 @@ T65	Procedure-Name 668 686	budesonide therapy
 T66	Drug-Name 737 752	corticosteroids
 T67	Drug-Name 764 792	immune mediating medications
 T68	Drug-Name 825 837	azathioprine
-T69	Drug-Name 844 860	6-mercaptopurine
-T70	Drug-Name 862 874	cyclosporine
-T71	Drug-Name 876 888	methotrexate
-T72	Drug-Name 890 920	anti-TNF monoclonal antibodies
-T73	Drug-Name 922 976	alpha-4 beta-7 integrin inhibiting monoclonal antibody
-T74	Drug-Name 978 1026	interleukin 12/23 inhibiting monoclonal antibody
-T75	Drug-Name 1028 1042	JAK inhibitors
+T76	Location 60 103	Division of Gastroenterology and Hepatology
+A12	Location-Value T76 clinic
+T77	Procedure-Name 238 247	histology
+T78	Eq-Temporal-Period 248 250	on
+A13	Eq-Temporal-Period-Value T78 present
+T79	And 361 365	with
+E45	And:T79 Arg:E11 Arg2:E12
+T18	Modifier 488 494	type 2
+E18	Modifier:T18 Modifies:T58
+T19	Procedure 505 515	transplant
+E19	Procedure:T19 Name:T60
+T59	Temporal-Connection 500 504	Post
+E46	Temporal-Connection:T59 Arg:E19 Arg2:E20
+A14	Temporal-Connection-Type-Value E46 after
+R1	Caused-By Arg1:E21 Arg2:E20	
+T80	Procedure-Name 610 619	histology
+R2	Abbrev-Of Arg1:E22 Arg2:E26	
+T81	And 620 624	with
+E47	And:T81 Arg:E26 Arg2:E27
+T82	Negation 649 664	Discontinuation
+E48	Negation:T82 Negates:E28
+T36	Drug 839 855	6-mercaptopurine
+E36	Drug:T36 Name:T38
+T38	Drug-Name 839 855	6-mercaptopurine
+T39	Drug 857 869	cyclosporine
+E38	Drug:T39 Name:T40
+T40	Drug-Name 857 869	cyclosporine
+T41	Drug 871 883	methotrexate
+E39	Drug:T41 Name:T42
+T42	Drug-Name 871 883	methotrexate
+T43	Drug 885 915	anti-TNF monoclonal antibodies
+E40	Drug:T43 Name:T44
+T44	Drug-Name 885 915	anti-TNF monoclonal antibodies
+T69	Drug 917 971	alpha-4 beta-7 integrin inhibiting monoclonal antibody
+E41	Drug:T69 Name:T70
+T70	Drug-Name 917 971	alpha-4 beta-7 integrin inhibiting monoclonal antibody
+T71	Drug 973 1021	interleukin 12/23 inhibiting monoclonal antibody
+E42	Drug:T71 Name:T72
+T72	Drug-Name 973 1021	interleukin 12/23 inhibiting monoclonal antibody
+T73	Drug 1023 1037	JAK inhibitors
+E43	Drug:T73 Name:T74
+T74	Drug-Name 1023 1037	JAK inhibitors
+R3	Example-Of Arg1:E37 Arg2:E35	
+R4	Example-Of Arg1:E36 Arg2:E35	
+R5	Example-Of Arg1:E38 Arg2:E35	
+R6	Example-Of Arg1:E39 Arg2:E35	
+R7	Example-Of Arg1:E40 Arg2:E35	
+R8	Example-Of Arg1:E41 Arg2:E35	
+R9	Example-Of Arg1:E42 Arg2:E35	
+R10	Example-Of Arg1:E43 Arg2:E35	

@@ -1,19 +1,21 @@
-T1	Procedure 38 62	Bionics cochlear implant
-E1	Procedure:T1 Name:T6
+T1	Procedure 29 62	Advanced Bionics cochlear implant
+E1	Procedure:T1 Name:T6 Duration:E2
 T2	Eq-Comparison 78 96	at least 12 months
 E2	Eq-Comparison:T2 Operator:T7 Value:T8 Temporal-Unit:T9
-T3	Condition 140 160	Pure Tone Audiometry
-E3	Condition:T3 
-T4	Observation 162 165	PTA
-E4	Observation:T4 Name:T11
 T5	Negation 193 196	Non
-E5	Negation:T5 
-T6	Procedure-Name 38 62	Bionics cochlear implant
+E5	Negation:T5 Negates:T12
+T6	Procedure-Name 29 62	Advanced Bionics cochlear implant
 T7	Eq-Operator 78 86	at least
 A1	Eq-Operator-Value T7 GTEQ
 T8	Eq-Value 87 89	12
 T9	Eq-Temporal-Unit 90 96	months
 A2	Eq-Temporal-Unit-Value T9 month
-T10	Observation-Name 140 160	Pure Tone Audiometry
-T11	Observation-Name 162 165	PTA
 T12	Language 197 204	English
+T3	Observation 126 160	Low frequency Pure Tone Audiometry
+E3	Observation:T3 Name:T4
+T4	Observation-Name 126 160	Low frequency Pure Tone Audiometry
+A3	Observation-Type-Value T4 measurement
+T10	Observation 162 165	PTA
+E4	Observation:T10 Name:T11
+T11	Observation-Name 162 165	PTA
+R1	Abbrev-Of Arg1:E4 Arg2:E3	
