@@ -13,14 +13,16 @@ def pretokenize(text):
     is_possible_code = lambda i: re.match(possible_code, lowered[i-2:i+2])
     is_numeric = False
     prec_numeric = False
-    dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧' }
+    dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧', '±', '：', ':',
+                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，' }
     cleaned = []
     prev = ''
     prev_num = False
+    prev_per = False
     is_num = re.match(reg_num, text[0])
 
     # Pre/post/peri check
-    reg_oper = r'(pre|post|peri)oper'
+    reg_oper = r'(pre|post|peri)-?oper'
     matches = [ x for x in re.finditer(reg_oper, text, re.I) ]
     while matches:
         match = matches[0]
@@ -33,9 +35,9 @@ def pretokenize(text):
     for i, ch in enumerate(text):
         foll = text[i+1] if i < len(text)-1 else ''
         foll_num = re.match(reg_num, foll) or (is_num and foll in ['.',','])
+        foll_per = foll == '.'
+        is_per = ch == '.'
         add_start, add_end = '', ''
-        if ch == '0' and foll == 'm':
-            x=1
         if ch in dividers:
             if prev != ' ': 
                 add_start = ' '
@@ -43,8 +45,13 @@ def pretokenize(text):
                 add_end = ' '
         if prev_num and ch != ' ' and not is_num and not is_possible_code(i):
             add_start = ' '
+        #if foll_num and not is_num and not is_possible_code(i+1):
+        #    add_end = ' '
+        if not is_num and prev_per:
+            add_start = ' '
         prev_num = is_num
         prev = ch
+        prev_per = is_per
         is_num = foll_num
         cleaned.append(add_start + ch + add_end)
 

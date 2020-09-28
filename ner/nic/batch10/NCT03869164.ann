@@ -174,9 +174,9 @@ T99	Observation-Name 817 842	mitral valve orifice area
 A24	Observation-Type-Value T99 measurement
 T100	Severity 868 879	significant
 A25	Severity-Value T100 severe
-T101	Procedure 860 867	treated
+T101	Procedure 858 867	untreated
 E52	Procedure:T101 
-T102	Negation 858 860	un
+T102	Negation 858 867	untreated
 E53	Negation:T102 Negates:E52
 R4	Treatment-For Arg1:E52 Arg2:E3	
 T103	Condition 915 935	mitral valvuloplasty
@@ -193,9 +193,9 @@ E57	Condition:T108 Name:T109
 T109	Condition-Name 1009 1026	cardiogenic shock
 T110	Severity 1028 1033	acute
 A27	Severity-Value T110 severe
-T111	Procedure 1001 1008	treated
+T111	Procedure 999 1008	untreated
 E58	Procedure:T111 
-T112	Negation 999 1001	un
+T112	Negation 999 1008	untreated
 E59	Negation:T112 Negates:E58
 R5	Treatment-For Arg1:E58 Arg2:E57	
 R6	Treatment-For Arg1:E58 Arg2:E15	

@@ -36,7 +36,7 @@ R3	Example-Of Arg1:E8 Arg2:E4
 T31	Age 37 42	older
 E2	Age:T31 Eq-Comparison:E5
 T33	Eq-Comparison 25 42	18 years or older
-E5	Eq-Comparison:T33 Temporal-Unit:T21 Value:T23
+E5	Eq-Comparison:T33 Temporal-Unit:T21 Value:T23 Operator:T100
 T25	Observation 338 345	smoking
 E7	Observation:T25 Eq-Comparison:E18
 T35	Eq-Temporal-Unit 376 379	day
@@ -184,3 +184,5 @@ E50	Modifier:T98 Modifies:T66
 T26	Condition 338 345	smoking
 E51	Condition:T26 Name:T99
 T99	Condition-Name 338 345	smoking
+T100	Eq-Operator 34 42	or older
+A6	Eq-Operator-Value T100 GTEQ

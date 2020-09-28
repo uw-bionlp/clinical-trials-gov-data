@@ -169,14 +169,6 @@ E62	Modifier:T62 Modifies:T64
 T5	Condition 108 115	disease
 E5	Condition:T5 Name:T65
 T65	Condition-Name 108 115	disease
-T101	Observation 97 107	measurable
-E63	Observation:T101 Name:T102
-T102	Observation-Name 97 107	measurable
-A20	Observation-Type-Value T102 measurement
-R1	Treatment-For Arg1:E63 Arg2:E5	
-T103	Assertion 97 107	measurable
-E64	Assertion:T103 Asserted:E63
-A21	Assertion-Type-Value E64 hypothetical
 T104	Observation 170 174	ECOG
 E65	Observation:T104 Name:T105 Eq-Comparison:E7
 T105	Observation-Name 170 174	ECOG
@@ -226,3 +218,5 @@ R13	If-Then Arg1:T94 Arg2:E48
 T117	Negation 970 982	unwilling to
 E74	Negation:T117 Negates:E52
 A19	Eq-Temporal-Recency-Value T100 most-recent-time
+T101	Modifier 97 107	measurable
+E63	Modifier:T101 Modifies:T65
