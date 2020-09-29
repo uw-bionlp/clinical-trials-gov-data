@@ -55,7 +55,7 @@ T37	Eq-Value 43 45	75
 T39	Eq-Value 131 134	130
 T40	Eq-Value 148 150	24
 T41	Eq-Value 167 169	80
-T42	Eq-Value 563 564	1
+T42	Eq-Value 563 566	1.5
 T43	Eq-Value 611 614	5.5
 T44	Eq-Value 730 733	160
 T45	Eq-Value 768 771	100
@@ -161,22 +161,22 @@ T98	Condition 628 632	Gout
 E43	Condition:T98 Name:T99
 T99	Condition-Name 628 632	Gout
 T100	Drug 648 664	antihypertensive
-E44	Drug:T100 Name:T101 Temporality:E45 Minimum-Count:E47
+E44	Drug:T100 Name:T101
 T101	Drug-Name 648 664	antihypertensive
 T102	Eq-Comparison 639 647	Previous
 E45	Eq-Comparison:T102 Temporal-Period:T103
 T103	Eq-Temporal-Period 639 647	Previous
 A19	Eq-Temporal-Period-Value T103 past
 T104	Procedure 665 674	treatment
-E46	Procedure:T104 
+E46	Procedure:T104 Temporality:E45
 R6	Using Arg1:E46 Arg2:E44	
 T105	Eq-Comparison 680 693	more than one
-E47	Eq-Comparison:T105 Operator:T106 Value:T107 Unit:E48
+E47	Eq-Comparison:T105 Operator:T106 Value:T107
 T106	Eq-Operator 680 689	more than
 A20	Eq-Operator-Value T106 GT
 T107	Eq-Value 690 693	one
 T108	Drug 694 698	drug
-E48	Drug:T108 
+E48	Drug:T108 Minimum-Count:E47
 T109	Observation 705 728	Systolic blood pressure
 E49	Observation:T109 Name:T110 Eq-Comparison:E27
 T110	Observation-Name 705 728	Systolic blood pressure
@@ -211,3 +211,4 @@ T120	Modifier 494 508	Chronic kidney
 E57	Modifier:T120 Modifies:T17
 T121	Modifier 535 540	renal
 E58	Modifier:T121 Modifies:T85
+R10	Using Arg1:E46 Arg2:E48	

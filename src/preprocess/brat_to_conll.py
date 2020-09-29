@@ -35,8 +35,11 @@ def brat_events_to_conll(output_filepath, anns):
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} O\n')
                     else:
                         is_start = tok.i == t_evs[0].args[0].val.tok_idxs[0]
-                        labels = []
+                        labels, types_seen = [], set()
                         for ev in t_evs:
+                            if ev.args[0].val.type in types_seen:
+                                continue
+                            types_seen.add(ev.args[0].val.type)
                             a = [ v for k,v in ann.As.items() if v.attr_of == ev ]
                             a = a[0] if len(a) else None
                             if a:
@@ -70,8 +73,11 @@ def brat_entities_to_conll(output_filepath, anns):
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} O\n')
                     else:
                         is_start = tok.i == t_ents[0].tok_idxs[0]
-                        labels = []
+                        labels, types_seen = [], set()
                         for ent in t_ents:
+                            if ent.type in types_seen:
+                                continue
+                            types_seen.add(ent.type)
                             a = [ v for k,v in ann.As.items() if v.attr_of == ent ]
                             a = a[0] if len(a) else None
                             if a:

@@ -61,9 +61,9 @@ A10	Eq-Temporal-Unit-Value T48 month
 T49	Eq-Temporal-Unit 1027 1031	days
 A11	Eq-Temporal-Unit-Value T49 day
 T51	Eq-Value 539 540	3
-T52	Eq-Value 657 658	5
-T53	Eq-Value 699 700	2
-T54	Eq-Value 717 718	2
+T52	Eq-Value 657 660	5.0
+T53	Eq-Value 699 702	2.5
+T54	Eq-Value 717 720	2.0
 T55	Eq-Value 741 743	30
 T56	Eq-Value 783 785	18
 T57	Eq-Value 1024 1026	30
@@ -296,10 +296,10 @@ T164	Assertion 1132 1139	capable
 E82	Assertion:T164 Asserted:E81
 A32	Assertion-Type-Value E82 hypothetical
 T165	Condition 1172 1180	pregnant
-E83	Condition:T165 Name:T166
+E83	Condition:T165 Name:T166 Temporality:E49
 T166	Condition-Name 1172 1180	pregnant
 T167	Condition 1184 1199	nursing a child
-E84	Condition:T167 Name:T36
+E84	Condition:T167 Name:T36 Temporality:E49
 T36	Condition-Name 1184 1199	nursing a child
 T169	Or 1181 1183	or
 E86	Or:T169 Arg:E83 Arg2:E84

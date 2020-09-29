@@ -38,7 +38,7 @@ T21	Modifier 162 168	ocular
 E11	Modifier:T21 Modifies:T20
 T22	Modifier 148 158	refractive
 E12	Modifier:T22 Modifies:T20
-T23	Or 159 160	o
+T23	Or 159 161	or
 E13	Or:T23 Arg:E12 Arg2:E11
 T24	Observation 192 209	IOL dioptre range
 E14	Observation:T24 Name:T25 Eq-Comparison:E15
@@ -94,7 +94,7 @@ E26	Condition:T52
 T53	Or 432 434	or
 E27	Or:T53 Arg:E23 Arg2:E26
 T54	Risk 463 467	risk
-E28	Risk:T54 
+E28	Risk:T54 Stability:T128
 T55	Study 480 485	study
 E29	Study:T55 Stability:T56
 T56	Stability 471 479	confound
@@ -102,9 +102,8 @@ A16	Stability-Value T56 change
 T57	Or 468 470	or
 E30	Or:T57 Arg:E28 Arg2:T56
 T58	Assertion 448 453	would
-E31	Assertion:T58 Asserted:E28
+E31	Assertion:T58 Asserted:T128
 A17	Assertion-Type-Value E31 hypothetical
-R1	Caused-By Arg1:E28 Arg2:E26	
 T59	Condition 500 517	diabetes mellitus
 E32	Condition:T59 Name:T60
 T60	Condition-Name 500 517	diabetes mellitus
@@ -233,3 +232,6 @@ T127	Eq-Temporal-Period 1134 1141	will be
 A25	Eq-Temporal-Period-Value T127 future
 R12	If-Then Arg1:T119 Arg2:E67	
 R13	Equivalent-To Arg1:E67 Arg2:E64	
+T128	Stability 454 462	increase
+A26	Stability-Value T128 change
+R1	Caused-By Arg1:T128 Arg2:E26	

@@ -37,7 +37,7 @@ T38	Eq-Comparison 355 361	≥ 1500
 E9	Eq-Comparison:T38 Operator:T11 Value:T29 Unit:T22 Per:T74
 T39	Eq-Comparison 382 386	≥ 50
 E10	Eq-Comparison:T39 Operator:T12 Value:T30 Unit:T76 Per:T23
-T40	Eq-Comparison 412 415	≥ 8
+T40	Eq-Comparison 412 422	≥ 8.0 g/dl
 E11	Eq-Comparison:T40 Operator:T13 Value:T31 Unit:T81 Per:T82
 T41	Eq-Comparison 466 481	within 6 months
 E12	Eq-Comparison:T41 Operator:T14 Temporal-Unit:T20 Value:T32
@@ -157,7 +157,7 @@ E35	Eq-Comparison:T42 Operator:T43 Value:T89 Unit:T90
 T43	Eq-Operator 613 614	<
 A31	Eq-Operator-Value T43 LT
 T89	Eq-Value 615 618	1.5
-T90	Eq-Unit 619 641	X maximum normal value
+T90	Eq-Unit 621 641	maximum normal value
 R5	Equivalent-To Arg1:E34 Arg2:E5	
 T91	Observation 642 666	alanine aminotransferase
 E36	Observation:T91 Name:T92 Eq-Comparison:E38 Temporality:E13
@@ -174,9 +174,9 @@ E39	Or:T96 Arg:E36 Arg2:E37
 T97	Eq-Operator 697 698	<
 A34	Eq-Operator-Value T97 LT
 T98	Eq-Value 699 702	2.5
-T99	Eq-Unit 703 725	X maximum normal value
-A35	Eq-Unit-Value T90 ref-range-high
-A36	Eq-Unit-Value T99 ref-range-high
+T99	Eq-Unit 705 725	maximum normal value
+A35	Eq-Unit-Value T90 ref-range-normal
+A36	Eq-Unit-Value T99 ref-range-normal
 T100	Condition 762 783	gross recurrent tumor
 E40	Condition:T100 Name:T101
 T101	Condition-Name 762 783	gross recurrent tumor

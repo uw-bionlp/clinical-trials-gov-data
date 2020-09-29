@@ -80,8 +80,6 @@ T64	Eq-Comparison 509 520	>5.0 mmol/L
 E24	Eq-Comparison:T64 Operator:T25 Value:T50 Unit:T39 Per:T157
 T65	Eq-Comparison 540 558	<60 mL/min/1.73 m2
 E25	Eq-Comparison:T65 Operator:T26 Value:T51 Unit:T111 Per:T112 Per2:T113
-T66	Eq-Comparison 579 581	≥6
-E26	Eq-Comparison:T66 Operator:T27 Value:T52 Unit:T170
 T67	Eq-Comparison 594 604	>130 mg/dL
 E27	Eq-Comparison:T67 Operator:T28 Value:T53 Unit:T116 Per:T117
 T68	Eq-Comparison 620 630	>150 mg/dL
@@ -94,10 +92,6 @@ T71	Eq-Comparison 826 829	≥10
 E31	Eq-Comparison:T71 Operator:T32 Value:T59
 T72	Eq-Comparison 859 863	≥140
 E32	Eq-Comparison:T72 Operator:T33 Value:T60
-T73	Eq-Comparison 867 874	<100 mm
-E33	Eq-Comparison:T73 Operator:T34 Unit:T40 Value:T61
-T74	Eq-Comparison 903 909	>90 mm
-E34	Eq-Comparison:T74 Operator:T35 Unit:T41 Value:T62
 T75	Eq-Comparison 71 85	18 to 45 years
 E35	Eq-Comparison:T75 Operator:T43 Value:T45 Value2:T46 Temporal-Unit:T36
 T76	Eq-Comparison 95 106	18-30 kg/m2
@@ -192,7 +186,7 @@ A32	Observation-Type-Value T127 vital
 T128	Or 864 866	or
 E50	Or:T128 Arg:E32 Arg2:E33
 T129	Observation 878 902	Blood pressure diastolic
-E51	Observation:T129 Name:T130 Eq-Comparison:E34
+E51	Observation:T129 Name:T130 Eq-Comparison:E33 Eq-Comparison2:E34
 T130	Observation-Name 878 902	Blood pressure diastolic
 A33	Observation-Type-Value T130 vital
 T15	Condition 917 934	Metal in the body
@@ -330,3 +324,9 @@ T185	Observation-Name 1223 1230	welders
 R21	Example-Of Arg1:E87 Arg2:E13	
 T186	Or 1369 1372	and
 E88	Or:T186 Arg:E70 Arg2:E71
+T66	Eq-Comparison 579 584	≥6.5%
+E26	Eq-Comparison:T66 Operator:T27 Value:T52 Unit:T170
+T73	Eq-Comparison 867 876	<100 mmHg
+E33	Eq-Comparison:T73 Operator:T34 Value:T61 Unit:T40
+T74	Eq-Comparison 903 911	>90 mmHg
+E34	Eq-Comparison:T74 Operator:T35 Value:T62 Unit:T41

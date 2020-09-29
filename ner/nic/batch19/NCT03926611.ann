@@ -116,7 +116,7 @@ E14	Study:T73
 T79	Drug 233 250	H1-antihistamines
 E16	Drug:T79 Name:T80
 T80	Drug-Name 233 250	H1-antihistamines
-T81	Modifier 220 232	non-sedating
+T81	Modifier 224 232	sedating
 E18	Modifier:T81 Modifies:T80
 T82	And 201 212	in spite of
 E20	And:T82 Arg:E14 Arg2:E16
@@ -266,3 +266,5 @@ T139	Eq-Comparison 1236 1241	using
 E82	Eq-Comparison:T139 Temporal-Period:T140
 T140	Eq-Temporal-Period 1236 1241	using
 A30	Eq-Temporal-Period-Value T140 present
+T141	Negation 220 223	non
+E83	Negation:T141 Negates:E18

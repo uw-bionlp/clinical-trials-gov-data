@@ -14,21 +14,23 @@ def pretokenize(text):
     is_numeric = False
     prec_numeric = False
     dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧', '±', '：', ':',
-                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，' }
+                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙' }
     cleaned = []
     prev = ''
     prev_num = False
     prev_per = False
     is_num = re.match(reg_num, text[0])
+    pad_map = {}
 
     # Pre/post/peri check
-    reg_oper = r'(pre|post|peri)-?oper'
-    matches = [ x for x in re.finditer(reg_oper, text, re.I) ]
-    while matches:
-        match = matches[0]
-        idx = match.regs[1][1]
-        text = text[:idx] + '-' + text[idx:]
-        matches = [ x for x in re.finditer(reg_oper, text, re.I) ]
+    #reg_oper = r'(pre|post|peri)oper'
+    #matches = [ x for x in re.finditer(reg_oper, text, re.I) ]
+    #while matches:
+    #    match = matches[0]
+    #    idx = match.regs[1][1]
+    #    text = text[:idx] + '-' + text[idx:]
+    #    pad_map[idx-1] = 1
+    #    matches = [ x for x in re.finditer(reg_oper, text, re.I) ]
 
     # Char-level check
     lowered = text.lower()
@@ -45,26 +47,28 @@ def pretokenize(text):
                 add_end = ' '
         if prev_num and ch != ' ' and not is_num and not is_possible_code(i):
             add_start = ' '
-        #if foll_num and not is_num and not is_possible_code(i+1):
-        #    add_end = ' '
         if not is_num and prev_per:
             add_start = ' '
+        if (lowered[:i].endswith('pre') or lowered[:i].endswith('post') or lowered[:i].endswith('peri')) and lowered[i:].startswith('oper'):
+            add_start = ' - '
         prev_num = is_num
         prev = ch
         prev_per = is_per
         is_num = foll_num
         cleaned.append(add_start + ch + add_end)
+        pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start + add_end)
 
-    return ''.join(cleaned)
+    return pad_map, ''.join(cleaned)
 
 class BratDocument:
     def __init__(self, doc_id, text, anns, path):
+        pad_map, pretokenized = pretokenize(text)
         self.doc_id       = doc_id
         self.raw_text     = text
-        self.pretokenized = pretokenize(text)
+        self.pretokenized = pretokenized
         self.raw_anns     = anns
         self.path         = path
-        self.derive_annotations()
+        self.derive_annotations(pad_map)
         self.sents
         self.Ts
         self.Es
@@ -81,7 +85,7 @@ class BratDocument:
         return self.pretokenized, '\n'.join(lines)
         
 
-    def derive_annotations(self, nest_sentences=False):
+    def derive_annotations(self, pad_map):
         anns = self.raw_anns
         Ts, Es, Rs, As = {}, {}, {}, {}
         toks = tokenize(self.pretokenized)
@@ -111,46 +115,60 @@ class BratDocument:
 
         # Split pseudo-sentences on newlines
         pseudo_sents, curr_sents, final_toks = [], [], []
-
-        # If not nested, newlines separate sentences
-        if not nest_sentences:
-            for i, tok in enumerate(toks):
-                if tok.text.replace(' ','') == '\n' and i > 0 and len(curr_sents):
-                    pseudo_sents.append(curr_sents)
-                    curr_sents = []
-                curr_sents.append(tok)
-                final_toks.append(tok)
-            if len(curr_sents):
+        for i, tok in enumerate(toks):
+            if tok.text.replace(' ','') == '\n' and i > 0 and len(curr_sents):
                 pseudo_sents.append(curr_sents)
-        
-        # Else, following sentences indented deeper are included as part of parent sentence
-        else:
-            for i, tok in enumerate(toks):
-                if tok.text.replace(' ','') == '\n' and i > 0 and len(curr_sents):
-                    pseudo_sents.append(curr_sents)
-                    curr_sents = []
-                curr_sents.append(tok)
-                final_toks.append(tok)
-            if len(curr_sents):
-                pseudo_sents.append(curr_sents)
+                curr_sents = []
+            curr_sents.append(tok)
+            final_toks.append(tok)
+        if len(curr_sents):
+            pseudo_sents.append(curr_sents)
 
         # Add token-level indexes to 'T' types
         splitters = r'(\/|\\| |<|>|=|≥|≤|-)'
         for k, v in Ts.items():
-            all_matched, matches, tok_cands, idx_start = True, [], [], v.char_beg_idx
-            splt = [ s for s in re.split(splitters, v.span) if len(s.strip()) > 0 ]
-            for part in splt:
-                cands = [ tok for tok in final_toks if tok.idx >= idx_start and (tok.text.startswith(part) or part.startswith(tok.text)) ]
-                if len(cands) > 0:
-                    best_match = sorted(cands, key=lambda x: x.idx)[0]
-                    if len(str(best_match)) == 1 and len(part) > 1:
-                        best_match = sorted(cands, key=lambda x: len(x), reverse=True)[0]
-                    #best_match = sorted(cands, key=lambda x: len(x), reverse=True)[0]
-                    matches.append(best_match)
-                    idx_start += len(str(best_match))
+            try:
+                start = [ t for t in toks if t.idx == v.char_beg_idx + pad_map[v.char_beg_idx]]
+                if not len(start):
+                    start = [ t for t in toks if t.idx == v.char_beg_idx-1 + pad_map[v.char_beg_idx]][0]
                 else:
-                    all_matched = False
+                    start = start[0]
+            except:
+                continue
+            no_spaced = v.span.replace(' ','')
+            matches = [ start ]
+            matches_no_spaced = start.text
+            while True: 
+                nxt = toks[matches[-1].i+1] if len(toks) > matches[-1].i+1 else None
+                if nxt == None or " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ',''):
                     break
+                if no_spaced.startswith(matches_no_spaced+nxt.text):
+                    matches.append(nxt)
+                    matches_no_spaced = ''.join([ m.text for m in matches ])
+                else:
+                    break
+
+            all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
+
+            if not all_matched:
+                idx_start, matches = v.tok_beg_idx, []
+                splt = [ s for s in re.split(splitters, v.span) if len(s.strip()) > 0 ]
+                for part in splt:
+                    cands = [ tok for tok in final_toks if tok.idx >= idx_start and (tok.text.startswith(part) or part.startswith(tok.text)) ]
+                    if len(cands) > 0:
+                        exact_matches = [ c for c in cands if c.text == part ]
+                        if len(exact_matches):
+                            best_match = sorted(exact_matches, key=lambda x: x.idx)[0]
+                        else:
+                            best_match = sorted(cands, key=lambda x: x.idx)[0]
+                            if len(str(best_match)) == 1 and len(part) > 1:
+                                best_match = sorted(cands, key=lambda x: len(x), reverse=True)[0]
+                        matches.append(best_match)
+                        idx_start += len(str(best_match))
+                    else:
+                        all_matched = False
+                        break
+            all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
 
             if all_matched:
                 Ts[k].tok_beg_idx = min([ tok.i for tok in matches ])
