@@ -1,0 +1,173 @@
+E1	Observation:T1 Name:T43 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Value:T44 Operator:T45 Value:T46 Unit:T47 Per:T48
+E3	Observation:T3 Name:T49 Eq-Comparison:E4
+E4	Eq-Comparison:T4 Value:T50 Operator:T51 Value:T52 Unit:T53 Per:T54
+E5	Observation:T5 Name:T55 Eq-Comparison:E6
+E6	Eq-Comparison:T6 Operator:T56 Per:T57 Value:T93 Unit:T94
+E8	Observation:T8 Name:T58 Eq-Comparison:E9
+E9	Eq-Comparison:T9 Operator:T59 Value:T60
+E10	Age:T10 Eq-Comparison:E11
+E11	Eq-Comparison:T11 Value:T63 Operator:T64 Value:T65 Temporal-Unit:T7
+E12	Condition:T12 Name:T67 Severity:T66 Temporality:E13
+E13	Eq-Comparison:T13 Temporal-Period:T68 Value:T69 Temporal-Unit:T70
+E14	Eq-Comparison:T14 Temporal-Period:T71
+E15	Drug:T15 Temporality:E14
+E16	Eq-Comparison:T16 Temporal-Period:T72
+E17	Condition:T17 Name:T73 Temporality:E16
+E18	Or:T18 Arg:E17 Arg2:E19
+E19	Condition:T19 Name:T74
+E20	Condition:T20 Name:T75
+E21	Condition:T21 Name:T76
+E22	Temporal-Connection:T22 Arg:E7 Arg2:E23
+E23	Study:T23
+E24	Eq-Comparison:T24 Temporal-Period:T78
+E25	Condition:T25 Name:T79 Temporality:E24
+E27	Procedure:T27 Name:T80
+E28	Eq-Comparison:T28 Temporal-Period:T81
+E29	Condition:T29 Name:T82 Temporality:E28
+E30	Condition:T30 Name:T83
+E31	Condition:T31 Name:T84
+E32	Condition:T32 Name:T85
+E33	Condition:T33 Name:T86
+E34	Eq-Comparison:T34 Temporal-Period:T87
+E35	Modifier:T35 Modifies:T88
+E36	Or:T36 Arg:E35 Arg2:E37
+E37	Modifier:T37 Modifies:T88
+E38	Procedure:T38 Name:T88 Temporality:E34
+E39	Observation:T39 Name:T89 Eq-Comparison:E44 Eq-Comparison2:E42
+E41	Or:T41 Arg:E44 Arg2:E42
+E42	Eq-Comparison:T42 Operator:T91 Value:T92 Per:T40
+E7	Condition:T95 Severity:T77
+E43	Contraindication:T96 Contraindicates:E27
+E26	Condition:T26
+E44	Eq-Comparison:T97 Operator:T98 Value:T99 Per:T90
+T1	Observation 25 28	BMI
+T2	Eq-Comparison 29 40	30-40 kg/m2
+T3	Observation 46 49	BMI
+T4	Eq-Comparison 50 61	18-25 kg/m2
+T5	Observation 74 77	BMI
+T6	Eq-Comparison 78 91	up to 28kg/m2
+T8	Observation 112 131	waist circumference
+T9	Eq-Comparison 135 138	<96
+T10	Age 158 162	Aged
+T11	Eq-Comparison 163 171	18-60yrs
+T12	Condition 203 210	illness
+T13	Eq-Comparison 218 235	preceding 6 weeks
+T14	Eq-Comparison 241 247	Taking
+T15	Drug 256 266	medication
+T16	Eq-Comparison 272 279	History
+T17	Condition 283 303	deep vein thrombosis
+T18	Or 304 306	or
+T19	Condition 307 325	clotting disorders
+T20	Condition 331 343	Hypertension
+T21	Condition 349 357	Diabetes
+T22	Temporal-Connection 399 401	at
+T23	Study 402 411	screening
+T24	Eq-Comparison 417 424	History
+T25	Condition 428 443	substance abuse
+T27	Procedure 487 490	MRI
+T28	Eq-Comparison 496 503	History
+T29	Condition 507 542	gastrointestinal motility disorders
+T30	Condition 549 580	gastroesophageal reflux disease
+T31	Condition 582 606	irritable bowel syndrome
+T32	Condition 608 621	gastroparesis
+T33	Condition 623 652	sphincter of Oddi dysfunction
+T34	Eq-Comparison 665 673	Previous
+T35	Modifier 674 682	thoracic
+T36	Or 683 685	or
+T37	Modifier 686 695	abdominal
+T38	Procedure 696 703	surgery
+T39	Observation 737 752	bowel movements
+T41	Or 758 760	or
+T42	Eq-Comparison 761 767	>2/day
+T43	Observation-Name 25 28	BMI
+T44	Eq-Value 29 31	30
+T45	Eq-Operator 31 32	-
+T46	Eq-Value 32 34	40
+T47	Eq-Unit 35 37	kg
+T48	Eq-Unit 38 40	m2
+T49	Observation-Name 46 49	BMI
+T50	Eq-Value 50 52	18
+T51	Eq-Operator 52 53	-
+T52	Eq-Value 53 55	25
+T53	Eq-Unit 56 58	kg
+T54	Eq-Unit 59 61	m2
+T55	Observation-Name 74 77	BMI
+T56	Eq-Operator 78 83	up to
+T57	Eq-Unit 89 91	m2
+T58	Observation-Name 112 131	waist circumference
+T59	Eq-Operator 135 136	<
+T60	Eq-Value 136 138	96
+T61	Eq-Unit 138 140	cm
+T62	Life-Stage-And-Gender 147 152	Males
+T63	Eq-Value 163 165	18
+T64	Eq-Operator 165 166	-
+T65	Eq-Value 166 168	60
+T66	Severity 197 202	Acute
+T67	Condition-Name 203 210	illness
+T68	Eq-Temporal-Period 218 227	preceding
+T69	Eq-Value 228 229	6
+T70	Eq-Temporal-Unit 230 235	weeks
+T71	Eq-Temporal-Period 241 247	Taking
+T72	Eq-Temporal-Period 272 279	History
+T73	Condition-Name 283 303	deep vein thrombosis
+T74	Condition-Name 307 325	clotting disorders
+T75	Condition-Name 331 343	Hypertension
+T76	Condition-Name 349 357	Diabetes
+T77	Severity 378 389	significant
+T78	Eq-Temporal-Period 417 424	History
+T79	Condition-Name 428 443	substance abuse
+T80	Procedure-Name 487 490	MRI
+T81	Eq-Temporal-Period 496 503	History
+T82	Condition-Name 507 542	gastrointestinal motility disorders
+T83	Condition-Name 549 580	gastroesophageal reflux disease
+T84	Condition-Name 582 606	irritable bowel syndrome
+T85	Condition-Name 608 621	gastroparesis
+T86	Condition-Name 623 652	sphincter of Oddi dysfunction
+T87	Eq-Temporal-Period 665 673	Previous
+T88	Procedure-Name 696 703	surgery
+T89	Observation-Name 737 752	bowel movements
+T90	Eq-Temporal-Unit 753 757	week
+T91	Eq-Operator 761 762	>
+T92	Eq-Value 762 763	2
+T93	Eq-Value 84 86	28
+T94	Eq-Unit 86 88	kg
+T7	Eq-Temporal-Unit 168 171	yrs
+T95	Condition 390 398	findings
+T96	Contraindication 471 481	precluding
+T26	Condition 463 470	factors
+T97	Eq-Comparison 734 736	≤3
+T98	Eq-Operator 734 735	≤
+T99	Eq-Value 735 736	3
+T40	Eq-Temporal-Unit 764 767	day
+A2	Temporal-Connection-Type-Value E22 during
+A3	Observation-Type-Value T43 vital
+A4	Eq-Operator-Value T45 BETWEEN
+A5	Observation-Type-Value T49 vital
+A6	Eq-Operator-Value T51 BETWEEN
+A7	Observation-Type-Value T55 vital
+A8	Eq-Operator-Value T56 GTEQ
+A9	Observation-Type-Value T58 measurement
+A10	Eq-Operator-Value T59 LT
+A11	Life-Stage-And-Gender-Type T62 male
+A12	Eq-Operator-Value T64 BETWEEN
+A13	Severity-Value T66 severe
+A14	Eq-Temporal-Period-Value T68 past
+A15	Eq-Temporal-Unit-Value T70 week
+A16	Eq-Temporal-Period-Value T71 present
+A17	Eq-Temporal-Period-Value T72 past
+A18	Severity-Value T77 severe
+A19	Eq-Temporal-Period-Value T78 past
+A20	Eq-Temporal-Period-Value T81 past
+A21	Eq-Temporal-Period-Value T87 past
+A22	Eq-Temporal-Unit-Value T90 week
+A23	Eq-Operator-Value T91 GT
+A1	Eq-Temporal-Unit-Value T7 year
+A24	Eq-Operator-Value T98 LTEQ
+A25	Eq-Temporal-Unit-Value T40 day
+R1	If-Then Arg1:E8 Arg2:E5
+R2	Caused-By Arg1:E43 Arg2:E26
+R3	Example-Of Arg1:E30 Arg2:E29
+R4	Example-Of Arg1:E31 Arg2:E29
+R5	Example-Of Arg1:E32 Arg2:E29
+R6	Example-Of Arg1:E33 Arg2:E29

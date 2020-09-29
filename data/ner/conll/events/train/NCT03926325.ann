@@ -1,0 +1,63 @@
+E1	Condition:T1 Name:T2 Location:T18
+E3	Condition:T3 Name:T4 Location:T20
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Procedure:T9 Name:T10
+E11	Condition:T11 Name:T12 Location:T31
+E13	Procedure:T13 Name:T14
+E2	Exception:T19 From:T18 Except:T17
+E4	Provider:T21
+E6	Encounter:T22 Provider:E4
+E8	And:T23 Arg:E1 Arg2:E6
+E10	Condition:T15 Name:T16 Location:T28
+E12	Assertion:T24 Asserted:E7
+E14	Or:T25 Arg:E9 Arg2:E13
+E15	Provider:T26
+E16	Negation:T27 Negates:E9
+E17	Negation:T29 Negates:T28
+E18	Negation:T30 Negates:T31
+E19	Encounter:T33 Type:T34 Location:T32
+E20	Temporal-Connection:T35 Arg:E11 Arg2:E19
+T1	Condition 60 74	cardiac arrest
+T2	Condition-Name 60 74	cardiac arrest
+T3	Condition 211 225	cardiac arrest
+T4	Condition-Name 211 225	cardiac arrest
+T5	Condition 317 331	cardiac arrest
+T6	Condition-Name 317 331	cardiac arrest
+T7	Condition 524 538	cardiac arrest
+T8	Condition-Name 524 538	cardiac arrest
+T9	Procedure 574 588	defibrillation
+T10	Procedure-Name 574 588	defibrillation
+T11	Condition 652 666	cardiac arrest
+T12	Condition-Name 652 666	cardiac arrest
+T13	Procedure 592 605	resuscitation
+T14	Procedure-Name 592 605	resuscitation
+T17	Location 118 126	hospital
+T18	Location 96 104	location
+T19	Exception 105 115	other than
+T20	Location 229 237	hospital
+T21	Provider 166 169	EMS
+T22	Encounter 136 144	attended
+T23	And 128 131	and
+T15	Condition 420 434	cardiac arrest
+T16	Condition-Name 420 434	cardiac arrest
+T24	Assertion 514 523	suspected
+T25	Or 589 591	or
+T26	Provider 609 612	EMS
+T27	Negation 566 573	without
+T28	Location 411 419	hospital
+T29	Negation 404 410	out-of
+T30	Negation 681 687	out-of
+T31	Location 688 696	hospital
+T32	Location 725 733	hospital
+T33	Encounter 706 717	transferred
+T34	Encounter-Type 706 717	transferred
+T35	Temporal-Connection 701 705	then
+A1	Location-Value T17 hospital
+A2	Location-Value T20 hospital
+A3	Assertion-Type-Value E12 possible
+A4	Location-Value T28 hospital
+A5	Location-Value T31 hospital
+A6	Location-Value T32 hospital
+A7	Encounter-Type-Value T34 transfer
+A8	Temporal-Connection-Type-Value E20 before

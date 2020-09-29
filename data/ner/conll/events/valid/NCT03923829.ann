@@ -1,0 +1,128 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4 Stage:E4
+E7	Observation:T7 Name:T8 Eq-Comparison:E11
+E10	Condition:T10 Name:T11 Severity:T74
+E12	Procedure:T12 Name:T13
+E13	Eq-Comparison:T32 Operator:T15 Unit:T21 Value:T28 Value2:T26 Value3:T27 Unit2:T20
+E14	Eq-Comparison:T33 Operator:T16 Unit:T22 Value:T30 Operator2:T17 Value2:T31 Unit2:T23 Operator3:T34
+E16	Eq-Comparison:T35 Temporal-Period:T36 Value:T65 Temporal-Unit:T19
+E2	Modifier:T24 Modifies:T2
+E4	Eq-Comparison:T9 Unit:T37 Value:T38 Value2:T39
+E6	Eq-Comparison:T25 Operator:T40 Value:T41 Unit:T42
+E5	Observation:T5 Name:T6 Minimum-Count:E6 Eq-Comparison:E13
+E8	Procedure:T43 Name:T44
+E9	And:T45 Arg:E5 Arg2:E7
+E11	Eq-Comparison:T46 Value:T29 Unit:T47
+E17	Modifier:T48 Modifies:E7
+E18	Observation:T49 Name:T50 Eq-Comparison:E14
+E15	Procedure:T51 Name:T53
+E19	Drug:T52 Name:T54
+E20	Or:T55 Arg:E15 Arg2:E19
+E21	Procedure:T56
+E22	Eq-Comparison:T57 Temporal-Period:T59 Value:T60 Temporal-Unit:T18
+E23	Temporal-Connection:T58 Arg:E21 Arg2:E22
+E24	Eq-Comparison:T61 Temporal-Period:T62
+E25	Drug:T63 Name:T64 Temporality:E16 Temporality2:E24
+E26	Condition:T66 Name:T67
+E27	Condition:T68 Name:T69
+E28	Or:T70 Arg:E26 Arg2:E27
+E29	Modifier:T71 Modifies:T13
+E30	Modifier:T72 Modifies:T13
+E31	Or:T73 Arg:E30 Arg2:E29
+E32	Condition:T75 Name:T76
+T1	Condition 43 60	diabetes mellitus
+T2	Condition-Name 43 60	diabetes mellitus
+T3	Condition 80 93	periodontitis
+T4	Condition-Name 80 93	periodontitis
+T7	Observation 182 191	bone loss
+T8	Observation-Name 182 191	bone loss
+T10	Condition 522 535	renal failure
+T11	Condition-Name 522 535	renal failure
+T12	Procedure 501 510	treatment
+T13	Procedure-Name 501 510	treatment
+T14	Life-Stage-And-Gender 468 475	females
+T15	Eq-Operator 159 160	≥
+T16	Eq-Operator 263 264	≤
+T18	Eq-Temporal-Unit 363 369	months
+T19	Eq-Temporal-Unit 434 440	months
+T20	Eq-Unit 153 155	mm
+T21	Eq-Unit 162 164	mm
+T22	Eq-Unit 266 268	mm
+T23	Eq-Unit 275 277	mm
+T26	Eq-Value 146 147	3
+T27	Eq-Value 151 152	4
+T28	Eq-Value 160 161	5
+T29	Eq-Value 192 194	15
+T30	Eq-Value 264 265	5
+T31	Eq-Value 273 274	6
+T32	Eq-Comparison 146 164	3 or 4 mm to ≥5 mm
+T33	Eq-Comparison 263 277	≤5 mm to ≥6 mm
+T35	Eq-Comparison 419 440	previous three months
+T36	Eq-Temporal-Period 419 427	previous
+T24	Modifier 25 42	Controlled Type-2
+T9	Eq-Comparison 66 79	Stage-II &III
+T37	Eq-Unit 66 71	Stage
+T38	Eq-Value 72 74	II
+T39	Eq-Value 76 79	III
+T25	Eq-Comparison 99 115	At least 2 sites
+T40	Eq-Operator 99 107	At least
+T41	Eq-Value 108 109	2
+T42	Eq-Unit 110 115	sites
+T5	Observation 130 145	attachment loss
+T6	Observation-Name 130 145	attachment loss
+T43	Procedure 169 181	radiographic
+T44	Procedure-Name 169 181	radiographic
+T45	And 165 168	and
+T46	Eq-Comparison 192 195	15%
+T47	Eq-Unit 194 195	%
+T48	Modifier 196 237	Extending to mid-third of root and beyond
+T49	Observation 244 257	Probing depth
+T50	Observation-Name 244 257	Probing depth
+T17	Eq-Operator 272 273	≥
+T34	Eq-Operator 269 271	to
+T51	Procedure 307 318	periodontal
+T52	Drug 322 332	Antibiotic
+T53	Procedure-Name 307 318	periodontal
+T54	Drug-Name 322 332	Antibiotic
+T55	Or 319 321	or
+T56	Procedure 333 342	treatment
+T57	Eq-Comparison 354 369	last six months
+T58	Temporal-Connection 343 349	during
+T59	Eq-Temporal-Period 354 358	last
+T60	Eq-Value 359 362	six
+T61	Eq-Comparison 376 385	Receiving
+T62	Eq-Temporal-Period 376 385	Receiving
+T63	Drug 386 411	trace element supplements
+T64	Drug-Name 386 411	trace element supplements
+T65	Eq-Value 428 433	three
+T66	Condition 446 454	Pregnant
+T67	Condition-Name 446 454	Pregnant
+T68	Condition 458 467	lactating
+T69	Condition-Name 458 467	lactating
+T70	Or 455 457	or
+T71	Modifier 492 500	diuretic
+T72	Modifier 481 488	Gastric
+T73	Or 489 491	or
+T74	Severity 516 521	Acute
+T75	Condition 541 548	smoking
+T76	Condition-Name 541 548	smoking
+A1	Life-Stage-And-Gender-Type T14 female
+A2	Eq-Operator-Value T15 GTEQ
+A3	Eq-Operator-Value T16 LTEQ
+A5	Eq-Temporal-Unit-Value T18 month
+A6	Eq-Temporal-Unit-Value T19 month
+A7	Eq-Temporal-Period-Value T36 past
+A8	Eq-Operator-Value T40 GTEQ
+A9	Observation-Type-Value T6 measurement
+A10	Observation-Type-Value T8 measurement
+A11	Observation-Type-Value T50 measurement
+A4	Eq-Operator-Value T17 GTEQ
+A12	Eq-Operator-Value T34 BETWEEN
+A13	Temporal-Connection-Type-Value E23 during
+A14	Eq-Temporal-Period-Value T59 past
+A15	Eq-Temporal-Period-Value T62 present
+A16	Severity-Value T74 severe
+R1	Found-By Arg1:E7 Arg2:E8
+R2	Using Arg1:E21 Arg2:E19
+R3	Using Arg1:E21 Arg2:E15
+R4	If-Then Arg1:T14 Arg2:E27

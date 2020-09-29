@@ -1,0 +1,67 @@
+E1	Condition:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6 Temporality:E18 Temporality2:E19
+E6	Age:T10 Eq-Comparison:E11
+E2	Condition:T15 Name:T16 Code:T11
+E4	Modifier:T17 Modifies:T16
+E7	Condition:T18 Name:T19
+E8	Condition:T20 Name:T21 Stage:E9
+E9	Eq-Comparison:T22 Operator:T24 Value:T12 Value2:T23
+E10	And:T25 Arg:E2 Arg2:E7
+E11	Eq-Comparison:T27 Operator:T26 Temporal-Unit:T8 Value:T13
+E12	Negation:T28 Negates:E1
+E13	Or:T31 Arg:T29 Arg2:T30
+E14	Condition:T32 Name:T33
+E15	Modifier:T34 Modifies:T4
+E16	Modifier:T35 Modifies:T6
+E17	Or:T36 Arg:E3 Arg2:E5
+E18	Eq-Comparison:T9 Temporal-Period:T14
+E19	Eq-Comparison:T37 Operator:T7 Value:T38 Temporal-Unit:T39
+E20	Condition:T40
+T1	Condition 150 164	mental illness
+T2	Condition-Name 150 164	mental illness
+T3	Procedure 333 349	cancer resection
+T4	Procedure-Name 333 349	cancer resection
+T5	Procedure 367 376	resection
+T6	Procedure-Name 367 376	resection
+T7	Eq-Operator 392 398	within
+T8	Eq-Temporal-Unit 128 133	years
+T10	Age 137 140	age
+T12	Eq-Value 106 107	0
+T13	Eq-Value 125 127	20
+T15	Condition 39 45	cancer
+T16	Condition-Name 39 45	cancer
+T17	Modifier 25 38	Primary liver
+T11	Condition-Code 66 71	C22.0
+T18	Condition 77 92	Barcelona stage
+T19	Condition-Name 77 92	Barcelona stage
+T20	Condition 94 104	BCLC stage
+T21	Condition-Name 94 104	BCLC stage
+T22	Eq-Comparison 106 109	0-A
+T23	Eq-Value 108 109	A
+T24	Eq-Operator 107 108	-
+T25	And 73 76	and
+T26	Eq-Operator 116 124	At least
+T27	Eq-Comparison 116 133	At least 20 years
+T28	Negation 147 149	No
+T29	Language 203 211	Mandarin
+T30	Language 215 224	Taiwanese
+T31	Or 212 214	or
+T32	Condition 286 297	Unconscious
+T33	Condition-Name 286 297	Unconscious
+T34	Modifier 327 332	liver
+T35	Modifier 353 366	partial liver
+T36	Or 350 352	or
+T9	Eq-Comparison 382 391	performed
+T14	Eq-Temporal-Period 382 391	performed
+T37	Eq-Comparison 392 407	within 3 months
+T38	Eq-Value 399 400	3
+T39	Eq-Temporal-Unit 401 407	months
+T40	Condition 270 279	condition
+A1	Eq-Operator-Value T7 LTEQ
+A2	Eq-Temporal-Unit-Value T8 year
+A4	Eq-Operator-Value T24 BETWEEN
+A5	Eq-Operator-Value T26 GTEQ
+A3	Eq-Temporal-Period-Value T14 past
+A6	Eq-Temporal-Unit-Value T39 month
+R1	Abbrev-Of Arg1:E8 Arg2:E7

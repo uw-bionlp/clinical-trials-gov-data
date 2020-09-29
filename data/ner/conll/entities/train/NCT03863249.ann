@@ -1,0 +1,180 @@
+E1	Eq-Comparison:T1 Value:T43 Operator:T44 Value:T45 Temporal-Unit:T46
+E2	Negation:T2 Negates:E3
+E3	Condition:T3 Name:T47
+E4	Or:T4 Arg:E3 Arg2:E5
+E5	Condition:T5 Name:T48
+E6	Eq-Comparison:T6 Operator:T49 Value:T50 Unit:T51 Per:T52
+E7	Condition:T7 Name:T53 Stage:E8 Stage2:E45
+E8	Eq-Comparison:T8 Unit:T54 Value:T55 Value:T56
+E9	Eq-Comparison:T9 Value:T58
+E10	Condition:T10 Name:T59 Minimum-Count:E9
+E11	Eq-Comparison:T11 Operator:T60 Value:T61
+E12	Condition:T12 Name:T62 Minimum-Count:E11
+E13	Eq-Comparison:T13 Operator:T63 Value:T64 Unit:T65
+E14	Eq-Comparison:T14 Operator:T66 Value:T67 Unit:T68
+E15	Observation:T15 Name:T102 Eq-Comparison:E14 Minimum-Count:E13
+E16	Condition:T16 Name:T104 Polarity:T103
+E17	Observation:T105 Eq-Comparison:E18
+E18	Eq-Comparison:T18 Operator:T69 Value:T70 Unit:T71 Per:T72
+E19	Eq-Comparison:T19 Temporal-Period:T73
+E20	Procedure:T20 Name:T74 Temporality:E19 Temporality2:E21
+E21	Eq-Comparison:T21 Temporal-Period:T75 Value:T76 Temporal-Unit:T77
+E22	Eq-Comparison:T22 Temporal-Period:T107
+E23	Drug:T23 Name:T78 Temporality:E22 Temporality2:E24
+E24	Eq-Comparison:T24 Temporal-Period:T79 Value:T80 Temporal-Unit:T81
+E25	Drug:T25 Name:T82
+E26	Or:T26 Arg:E25
+E28	Temporal-Connection:T28 Arg:E25 Arg2:E29
+E29	Eq-Comparison:T29 Temporal-Period:T83 Value:T84 Temporal-Unit:T85
+E30	Modifier:T30 Modifies:E31
+E31	Condition:T31
+E32	Drug:T32 Name:T86
+E33	Condition:T33 Name:T88
+E34	Or:T34 Arg:E33 Arg2:E35
+E35	Condition:T35 Name:T89
+E36	Drug:T36
+E37	Assertion:T37 Asserted:T90
+E38	Procedure:T38 Name:T91 Stability:T90
+E39	Allergy:T39 Name:E41
+E40	Study:T40 Study-Of:E41
+E41	Drug:T41 Name:T92
+E42	Condition:T42 Name:T93
+E43	Age:T94 Eq-Comparison:E1
+E44	Observation:T95 Eq-Comparison:E6
+E45	Eq-Comparison:T96 Unit:T57 Operator:T99 Value:T97 Value2:T98
+E46	Modifier:T100 Modifies:T59
+E47	Modifier:T101 Modifies:T62
+E48	Condition:T17 Name:T106
+T1	Eq-Comparison 37 48	40-70 years
+T2	Negation 55 57	No
+T3	Condition 58 65	smokers
+T4	Or 66 68	or
+T5	Condition 69 76	smokers
+T6	Eq-Comparison 80 109	less than 10 cigarettes a day
+T7	Condition 130 143	periodontitis
+T8	Eq-Comparison 144 161	stages III and IV
+T9	Eq-Comparison 191 193	20
+T10	Condition 202 207	teeth
+T11	Eq-Comparison 219 233	at least three
+T12	Condition 240 245	teeth
+T13	Eq-Comparison 264 280	at least 4 sites
+T14	Eq-Comparison 286 299	at least 6 mm
+T15	Observation 300 313	probing depth
+T16	Condition 325 339	general health
+T17	Condition 365 372	Smokers
+T18	Eq-Comparison 376 405	more than 10 cigarettes a day
+T19	Eq-Comparison 430 438	received
+T20	Procedure 439 460	periodontal treatment
+T21	Eq-Comparison 468 486	previous 12 months
+T22	Eq-Comparison 511 515	used
+T23	Drug 516 527	antibiotics
+T24	Eq-Comparison 535 548	last 6 months
+T25	Drug 570 586	oral antiseptics
+T26	Or 587 595	and / or
+T28	Temporal-Connection 596 602	during
+T29	Eq-Comparison 607 624	previous 3 months
+T30	Modifier 631 639	Systemic
+T31	Condition 640 650	conditions
+T32	Drug 665 689	antibiotic premedication
+T33	Condition 702 710	pregnant
+T34	Or 711 713	or
+T35	Condition 714 721	nursing
+T36	Drug 728 739	Medications
+T37	Assertion 745 750	could
+T38	Procedure 776 795	periodontal therapy
+T39	Allergy 812 821	allergies
+T40	Study 829 833	test
+T41	Drug 834 854	antimicrobial agents
+T42	Condition 861 870	Diabetics
+T43	Eq-Value 37 39	40
+T44	Eq-Operator 39 40	-
+T45	Eq-Value 40 42	70
+T46	Eq-Temporal-Unit 43 48	years
+T47	Condition-Name 58 65	smokers
+T48	Condition-Name 69 76	smokers
+T49	Eq-Operator 80 89	less than
+T50	Eq-Value 90 92	10
+T51	Eq-Unit 93 103	cigarettes
+T52	Eq-Temporal-Unit 106 109	day
+T53	Condition-Name 130 143	periodontitis
+T54	Eq-Unit 144 150	stages
+T55	Eq-Value 151 154	III
+T56	Eq-Value 159 161	IV
+T57	Eq-Unit 162 168	grades
+T58	Eq-Value 191 193	20
+T59	Condition-Name 202 207	teeth
+T60	Eq-Operator 219 227	at least
+T61	Eq-Value 228 233	three
+T62	Condition-Name 240 245	teeth
+T63	Eq-Operator 264 272	at least
+T64	Eq-Value 273 274	4
+T65	Eq-Unit 275 280	sites
+T66	Eq-Operator 286 294	at least
+T67	Eq-Value 295 296	6
+T68	Eq-Unit 297 299	mm
+T69	Eq-Operator 376 385	more than
+T70	Eq-Value 386 388	10
+T71	Eq-Unit 389 399	cigarettes
+T72	Eq-Temporal-Unit 402 405	day
+T73	Eq-Temporal-Period 430 438	received
+T74	Procedure-Name 439 460	periodontal treatment
+T75	Eq-Temporal-Period 468 476	previous
+T76	Eq-Value 477 479	12
+T77	Eq-Temporal-Unit 480 486	months
+T78	Drug-Name 516 527	antibiotics
+T79	Eq-Temporal-Period 535 539	last
+T80	Eq-Value 540 541	6
+T81	Eq-Temporal-Unit 542 548	months
+T82	Drug-Name 570 586	oral antiseptics
+T83	Eq-Temporal-Period 607 615	previous
+T84	Eq-Value 616 617	3
+T85	Eq-Temporal-Unit 618 624	months
+T86	Drug-Name 665 689	antibiotic premedication
+T87	Life-Stage-And-Gender 696 701	Women
+T88	Condition-Name 702 710	pregnant
+T89	Condition-Name 714 721	nursing
+T90	Stability 751 760	influence
+T91	Procedure-Name 776 795	periodontal therapy
+T92	Drug-Name 834 854	antimicrobial agents
+T93	Condition-Name 861 870	Diabetics
+T94	Age 43 48	years
+T95	Observation 69 76	smokers
+T96	Eq-Comparison 162 172	grades A-B
+T97	Eq-Value 169 170	A
+T98	Eq-Value 171 172	B
+T99	Eq-Operator 170 171	-
+T100	Modifier 194 201	natural
+T101	Modifier 234 239	molar
+T102	Observation-Name 300 313	probing depth
+T103	Polarity 320 324	Good
+T104	Condition-Name 325 339	general health
+T105	Observation 365 372	Smokers
+T106	Condition-Name 365 372	Smokers
+T107	Eq-Temporal-Period 511 515	used
+A1	Temporal-Connection-Type-Value E28 during
+A2	Assertion-Type-Value E37 hypothetical
+A3	Eq-Operator-Value T44 BETWEEN
+A4	Eq-Temporal-Unit-Value T46 year
+A5	Eq-Operator-Value T49 LT
+A6	Eq-Temporal-Unit-Value T52 day
+A7	Eq-Operator-Value T60 GTEQ
+A8	Eq-Operator-Value T63 GTEQ
+A9	Eq-Operator-Value T66 GTEQ
+A10	Eq-Operator-Value T69 GT
+A11	Eq-Temporal-Unit-Value T72 day
+A12	Eq-Temporal-Period-Value T73 past
+A13	Eq-Temporal-Period-Value T75 past
+A14	Eq-Temporal-Unit-Value T77 month
+A15	Eq-Temporal-Period-Value T79 past
+A16	Eq-Temporal-Unit-Value T81 month
+A17	Eq-Temporal-Period-Value T83 past
+A18	Eq-Temporal-Unit-Value T85 month
+A19	Life-Stage-And-Gender-Type T87 female
+A20	Stability-Value T90 change
+A21	Eq-Operator-Value T99 BETWEEN
+A22	Observation-Type-Value T102 measurement
+A23	Polarity-Value T103 normal
+A24	Eq-Temporal-Period-Value T107 past
+R1	Treatment-For Arg1:E32 Arg2:E31
+R2	If-Then Arg1:T87 Arg2:E33
+R3	Caused-By Arg1:T90 Arg2:E36

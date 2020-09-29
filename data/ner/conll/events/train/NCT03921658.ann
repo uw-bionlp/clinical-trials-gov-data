@@ -1,0 +1,83 @@
+E1	Procedure:T1 Name:T2
+E6	Procedure:T6 Name:T7 Temporality:E13 Temporality2:E25
+E8	Procedure:T8 Name:T9
+E10	Procedure:T10 Name:T11 Temporality:E24
+E11	Age:T17 Eq-Comparison:E12
+E12	Eq-Comparison:T23 Operator:T12 Value:T18
+E13	Eq-Comparison:T24 Operator:T13 Temporal-Unit:T15 Value:T20
+E14	Eq-Comparison:T25 Operator:T14 Temporal-Unit:T16 Value:T22
+E2	Condition:T27 Name:T28 Temporality:E15
+E4	Modifier:T29 Modifies:T28
+E5	Modifier:T30 Modifies:T28
+E7	Or:T31 Arg:E5 Arg2:E4
+E9	Modifier:T32 Modifies:T28
+E15	Eq-Comparison:T33 Temporal-Recency:T34
+E16	And:T35 Arg:T26 Arg2:E2
+E17	Procedure:T36
+E18	Assertion:T37 Asserted:E17
+E3	Temporal-Connection:T3 Arg:E8
+E19	Observation:T4 Name:T19 Eq-Comparison:E14
+E20	Observation:T21 Name:T38
+E21	Observation:T39 Name:T40
+E22	Or:T41 Arg:E19 Arg2:E20
+E23	Or:T42 Arg:E20 Arg2:E21
+E24	Eq-Comparison:T43 Temporal-Period:T44
+E25	Eq-Comparison:T45 Temporal-Recency:T46
+T1	Procedure 195 207	chemotherapy
+T2	Procedure-Name 195 207	chemotherapy
+T5	Language 67 74	English
+T6	Procedure 363 385	chemotherapy treatment
+T7	Procedure-Name 363 385	chemotherapy treatment
+T8	Procedure 424 436	chemotherapy
+T9	Procedure-Name 424 436	chemotherapy
+T10	Procedure 534 546	chemotherapy
+T11	Procedure-Name 534 546	chemotherapy
+T12	Eq-Operator 29 30	≥
+T13	Eq-Operator 326 332	within
+T14	Eq-Operator 568 569	<
+T15	Eq-Temporal-Unit 335 340	years
+T16	Eq-Temporal-Unit 572 578	months
+T17	Age 25 28	Age
+T18	Eq-Value 30 32	18
+T20	Eq-Value 333 334	2
+T22	Eq-Value 570 571	3
+T23	Eq-Comparison 29 32	≥18
+T24	Eq-Comparison 326 340	within 2 years
+T25	Eq-Comparison 568 578	< 3 months
+T26	Life-Stage-And-Gender 80 85	women
+T27	Condition 159 165	cancer
+T28	Condition-Name 159 165	cancer
+T29	Modifier 144 158	fallopian tube
+T30	Modifier 121 139	primary peritoneal
+T31	Or 141 143	or
+T32	Modifier 112 119	ovarian
+T33	Eq-Comparison 91 96	newly
+T35	And 86 90	with
+T36	Procedure 171 180	Treatment
+T37	Assertion 181 185	plan
+T3	Temporal-Connection 406 411	prior
+T4	Observation 552 567	Life expectancy
+T19	Observation-Name 552 567	Life expectancy
+T21	Observation 585 597	hospice care
+T38	Observation-Name 585 597	hospice care
+T39	Observation 601 613	nursing home
+T40	Observation-Name 601 613	nursing home
+T41	Or 579 581	or
+T42	Or 598 600	or
+T43	Eq-Comparison 513 521	Previous
+T44	Eq-Temporal-Period 513 521	Previous
+T34	Eq-Temporal-Recency 91 96	newly
+T45	Eq-Comparison 355 362	initial
+T46	Eq-Temporal-Recency 355 362	initial
+A1	Eq-Operator-Value T12 GTEQ
+A2	Eq-Operator-Value T13 LTEQ
+A3	Eq-Operator-Value T14 LT
+A4	Eq-Temporal-Unit-Value T15 year
+A5	Eq-Temporal-Unit-Value T16 month
+A6	Life-Stage-And-Gender-Type T26 female
+A8	Assertion-Type-Value E18 hypothetical
+A9	Temporal-Connection-Type-Value E3 before
+A10	Eq-Temporal-Period-Value T44 past
+A7	Eq-Temporal-Recency-Value T34 first-time
+A11	Eq-Temporal-Recency-Value T46 first-time
+R1	Example-Of Arg1:E1 Arg2:E17

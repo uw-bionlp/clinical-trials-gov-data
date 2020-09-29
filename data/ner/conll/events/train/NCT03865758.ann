@@ -1,0 +1,30 @@
+E1	Condition:T1 Name:T7
+E2	Eq-Comparison:T2 Temporal-Period:T8
+E3	Or:T3 Arg:E8 Arg2:E9
+E4	Eq-Comparison:T4 Value:T9 Operator:T10
+E5	Negation:T5 Negates:E6
+E6	Condition:T6 Name:T11
+E7	Assertion:T12 Asserted:E1
+E8	Coreference:T13 Refers-To:E1 Temporality:E2
+E9	Observation:T14 Name:T15 Eq-Comparison:E4
+T1	Condition 34 42	dementia
+T2	Eq-Comparison 56 61	prior
+T3	Or 72 78	and/or
+T4	Eq-Comparison 90 100	23 or less
+T5	Negation 157 159	No
+T6	Condition 172 180	dementia
+T7	Condition-Name 34 42	dementia
+T8	Eq-Temporal-Period 56 61	prior
+T9	Eq-Value 90 92	23
+T10	Eq-Operator 93 100	or less
+T11	Condition-Name 172 180	dementia
+T12	Assertion 25 33	Probable
+T13	Coreference 62 71	diagnosis
+T14	Observation 108 130	Brief Alzheimer Screen
+T15	Observation-Name 108 130	Brief Alzheimer Screen
+A1	Eq-Temporal-Period-Value T8 past
+A2	Eq-Operator-Value T10 GTEQ
+A3	Assertion-Type-Value E7 possible
+A4	Observation-Type-Value T15 clinical-score
+R1	Equivalent-To Arg1:E8 Arg2:E1
+R2	Equivalent-To Arg1:E9 Arg2:E1

@@ -1,0 +1,34 @@
+E1	Condition:T1 Name:T10
+E2	Encounter:T2
+E3	And:T3 Arg:E2 Arg2:E4
+E4	Assertion:T4 Asserted:E5
+E5	Procedure:T5 Name:T14
+E6	Condition:T6 Name:T12
+E7	Condition:T7 Name:T13
+E8	Or:T8 Arg:E6 Arg2:E9
+E9	Condition:T9 Name:T18
+E10	Modifier:T15 Modifies:T13
+E11	Modifier:T16 Modifies:T13
+E12	Or:T17 Arg:E11 Arg2:E10
+T1	Condition 24 28	COPD
+T2	Encounter 37 52	hospitalization
+T3	And 53 56	and
+T4	Assertion 57 65	eligible
+T5	Procedure 70 72	PR
+T6	Condition 102 119	Inability to walk
+T7	Condition 143 151	problems
+T8	Or 152 154	or
+T9	Condition 155 170	confined to bed
+T10	Condition-Name 24 28	COPD
+T11	Encounter-Type 37 52	hospitalization
+T12	Condition-Name 102 119	Inability to walk
+T13	Condition-Name 143 151	problems
+T14	Procedure-Name 70 72	PR
+T15	Modifier 132 142	neurologic
+T16	Modifier 121 131	orthopedic
+T17	Or 131 132	-
+T18	Condition-Name 155 170	confined to bed
+A1	Assertion-Type-Value E4 hypothetical
+A2	Encounter-Type-Value T11 inpatient
+R1	Treatment-For Arg1:E2 Arg2:E1
+R2	Example-Of Arg1:E7 Arg2:E6

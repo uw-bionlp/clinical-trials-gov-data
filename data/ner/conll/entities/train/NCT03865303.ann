@@ -1,0 +1,36 @@
+E2	Encounter:T2 Location:T10
+E3	Age:T3 Eq-Comparison:E4
+E4	Eq-Comparison:T4 Value:T11 Operator:T12
+E5	Age:T5 Eq-Comparison:E6
+E6	Eq-Comparison:T6 Operator:T13 Value:T14 Temporal-Unit:T15
+E1	Provider:T1 Role:T7
+E7	Provider:T16 Role:T17
+E8	Provider:T18 Role:T19
+E9	Provider:T20 Role:T21
+T2	Encounter 50 58	admitted
+T3	Age 75 79	ages
+T4	Eq-Comparison 80 92	18 and older
+T5	Age 320 323	Age
+T6	Eq-Comparison 324 333	<18 years
+T8	Life-Stage-And-Gender 43 49	adults
+T9	Encounter-Type 50 58	admitted
+T10	Location 66 74	hospital
+T11	Eq-Value 80 82	18
+T12	Eq-Operator 83 92	and older
+T13	Eq-Operator 324 325	<
+T14	Eq-Value 325 327	18
+T15	Eq-Temporal-Unit 328 333	years
+T1	Provider 158 168	physicians
+T7	Provider-Role 158 168	physicians
+T16	Provider 170 197	advanced care practitioners
+T17	Provider-Role 170 197	advanced care practitioners
+T18	Provider 256 266	physicians
+T19	Provider-Role 256 266	physicians
+T20	Provider 268 295	advanced care practitioners
+T21	Provider-Role 268 295	advanced care practitioners
+A1	Life-Stage-And-Gender-Type T8 adult
+A2	Encounter-Type-Value T9 inpatient
+A3	Location-Value T10 hospital
+A4	Eq-Operator-Value T12 GTEQ
+A5	Eq-Operator-Value T13 LT
+A6	Eq-Temporal-Unit-Value T15 year

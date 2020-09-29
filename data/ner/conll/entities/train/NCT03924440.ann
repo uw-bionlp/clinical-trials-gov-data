@@ -1,0 +1,95 @@
+E2	Condition:T2 Name:T3
+E8	Condition:T8 Name:T9
+E9	Age:T12 Eq-Comparison:E11
+E11	Eq-Comparison:T20 Operator:T14 Value:T16 Value2:T17
+E12	Eq-Comparison:T21 Operator:T15 Value:T18 Value2:T19 Temporal-Unit:T11
+E1	Condition:T22 Name:T23 Temporality:E3
+E3	Eq-Comparison:T24 Temporal-Period:T25
+E5	Negation:T26 Negates:E1
+E7	Or:T27 Arg:E1 Arg2:E8
+E13	Observation:T28 Name:T29 Stability:T30
+E14	Assertion:T31 Asserted:E2
+E10	Observation:T13 Name:T32 Stability:T34
+E15	Assertion:T35 Asserted:T33
+E16	Observation:T36 Name:T37 Eq-Comparison:E12
+E17	Observation:T38 Name:T39
+E18	Modifier:T40 Modifies:T39
+E19	Modifier:T41 Modifies:T39
+E20	Or:T42 Arg:E18 Arg2:E19
+E21	Observation:T44 Name:T45 Stability:T43
+E22	Assertion:T46 Asserted:E17
+E23	Eq-Comparison:T47 Temporal-Period:T48
+E4	Procedure:T4 Name:T5 Temporality:E23
+E6	Condition:T7 Name:T10
+E24	Condition:T49 Name:T50
+T1	Life-Stage-And-Gender 25 31	Female
+T2	Condition 84 93	pregnancy
+T3	Condition-Name 84 93	pregnancy
+T8	Condition 75 82	nursing
+T9	Condition-Name 75 82	nursing
+T11	Eq-Temporal-Unit 194 198	days
+T12	Age 119 123	Aged
+T14	Eq-Operator 126 127	-
+T15	Eq-Operator 190 191	-
+T16	Eq-Value 124 126	18
+T17	Eq-Value 127 129	34
+T18	Eq-Value 188 190	26
+T19	Eq-Value 191 193	39
+T20	Eq-Comparison 124 127	18-
+T21	Eq-Comparison 188 198	26-39 days
+T22	Condition 63 71	pregnant
+T23	Condition-Name 63 71	pregnant
+T24	Eq-Comparison 53 62	currently
+T25	Eq-Temporal-Period 53 62	currently
+T26	Negation 49 52	Not
+T27	Or 72 74	or
+T28	Observation 102 112	PdG levels
+T29	Observation-Name 102 112	PdG levels
+T30	Stability 94 101	affects
+T31	Assertion 94 101	affects
+T13	Observation 155 165	PdG levels
+T32	Observation-Name 155 165	PdG levels
+T33	Life-Stage-And-Gender 131 143	advanced age
+T34	Stability 148 154	hinder
+T35	Assertion 144 147	can
+T36	Observation 172 184	Cycle length
+T37	Observation-Name 172 184	Cycle length
+T38	Observation 214 220	cycles
+T39	Observation-Name 214 220	cycles
+T40	Modifier 200 204	long
+T41	Modifier 208 213	short
+T42	Or 205 207	or
+T43	Stability 226 238	inconsistent
+T44	Observation 239 249	PdG levels
+T45	Observation-Name 239 249	PdG levels
+T46	Assertion 221 225	have
+T47	Eq-Comparison 256 265	Currently
+T48	Eq-Temporal-Period 256 265	Currently
+T4	Procedure 276 302	fertility monitoring tools
+T5	Procedure-Name 276 302	fertility monitoring tools
+T6	Life-Stage-And-Gender 438 442	Male
+T7	Condition 448 456	Pregnant
+T10	Condition-Name 448 456	Pregnant
+T49	Condition 462 469	Nursing
+T50	Condition-Name 462 469	Nursing
+A1	Life-Stage-And-Gender-Type T1 female
+A3	Eq-Temporal-Unit-Value T11 day
+A4	Eq-Operator-Value T14 BETWEEN
+A5	Eq-Operator-Value T15 BETWEEN
+A6	Eq-Temporal-Period-Value T25 present
+A7	Stability-Value T30 change
+A8	Assertion-Type-Value E14 hypothetical
+A9	Life-Stage-And-Gender-Type T33 elderly
+A10	Stability-Value T34 change
+A11	Assertion-Type-Value E15 hypothetical
+A12	Stability-Value T43 change
+A13	Assertion-Type-Value E22 hypothetical
+A14	Eq-Temporal-Period-Value T48 present
+A2	Life-Stage-And-Gender-Type T6 male
+A15	Observation-Type-Value T37 measurement
+A16	Observation-Type-Value T32 lab
+A17	Observation-Type-Value T45 lab
+A18	Observation-Type-Value T29 lab
+R1	Caused-By Arg1:T30 Arg2:E2
+R2	Caused-By Arg1:T34 Arg2:T33
+R3	Caused-By Arg1:T43 Arg2:E17

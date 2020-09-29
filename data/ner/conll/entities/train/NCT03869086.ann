@@ -1,0 +1,294 @@
+E1	Observation:T1 Name:T88 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Operator:T89 Value:T90 Unit:T91 Per:T92
+E3	Age:T3 Eq-Comparison:E4
+E4	Eq-Comparison:T4 Value:T94 Operator:T95 Value:T96 Temporal-Unit:T97
+E6	Modifier:T6 Modifies:T100
+E7	Modifier:T7 Modifies:T100
+E8	Or:T8 Arg:E7 Arg2:E9
+E9	Modifier:T9 Modifies:T100
+E10	Procedure:T10 Name:T100
+E11	Temporal-Connection:T11 Arg:E10 Arg2:E12
+E12	Study:T12
+E13	Eq-Comparison:T13 Temporal-Period:T101
+E14	Condition:T14 Name:T102 Temporality:E13
+E15	Or:T15 Arg:E14 Arg2:E16
+E16	Condition:T16 Name:T103 Temporality:E5 Temporality2:E18
+E18	Eq-Comparison:T18 Operator:T104 Value:T105 Temporal-Unit:T106
+E19	Eq-Comparison:T19 Temporal-Period:T107
+E20	Or:T20 Arg:E19 Arg2:E21
+E21	Eq-Comparison:T21 Temporal-Period:T109
+E23	Condition:T23 Name:T111 Temporality:E19 Severity:T108 Temporality2:E21
+E24	Or:T24 Arg:E23 Arg2:E26
+E26	Condition:T26
+E27	Assertion:T27 Asserted:T112
+E28	Study:T28 Stability:T112
+E29	Modifier:T29 Modifies:T113
+E30	Or:T30 Arg:E29 Arg2:E31
+E31	Modifier:T31 Modifies:T113
+E32	Or:T32 Arg:E17 Arg2:E33
+E33	Allergy:T33 Name:E35
+E35	Procedure:T35
+E36	Procedure:T36 Name:T34
+E37	Other:T37 Is-Other:E38
+E38	Study:T38 Study-Of:E39 Study-Of2:E41
+E39	Procedure:T39 Name:T114
+E40	Or:T40 Arg:E39 Arg2:E41
+E41	Procedure:T41 Name:T99
+E42	Or:T42 Arg:E34 Arg2:E88
+E43	Procedure:T43 Name:T139 Temporality:E89
+E44	Or:T44 Arg:E43 Arg2:E45
+E45	Condition:T45 Name:T117 Temporality:E90 Severity:T142 Temporality2:E46
+E46	Eq-Comparison:T46 Operator:T118 Value:T119 Temporal-Unit:T120
+E47	Temporal-Connection:T47 Arg:E46 Arg2:E48
+E48	Study:T48
+E49	Eq-Comparison:T49 Temporal-Period:T121
+E50	Drug:T50 Name:T122 Temporality:E49
+E51	Drug:T51 Name:T123 Temporality:E49
+E52	Or:T52 Arg:E51 Arg2:E53
+E53	Drug:T53 Name:T124 Temporality:E49
+E54	Or:T54 Arg:E53 Arg2:E56
+E55	Modifier:T55 Modifies:T125
+E56	Drug:T56 Name:T125 Temporality:E49
+E57	And:T57 Arg:E56 Arg2:E58
+E58	Assertion:T58 Asserted:E91
+E59	Temporal-Connection:T59 Arg:E92
+E60	And:T60 Arg:E59 Arg2:E61
+E61	Eq-Comparison:T61 Value:T126 Temporal-Unit:T127
+E62	Temporal-Connection:T62 Arg:E61 Arg2:E63
+E63	Study:T63
+E64	Or:T64 Arg:E56 Arg2:E65
+E65	Assertion:T65 Asserted:T145
+E66	Other:T66 Is-Other:E67
+E67	Drug:T67 Name:T128 Temporality:E93 Stability:T145
+E68	Drug:T68 Name:T129
+E69	Drug:T69 Name:T130
+E70	Drug:T70 Name:T131
+E71	Or:T71 Arg:E70 Arg2:E72
+E72	Procedure:T72 Name:T132
+E73	Procedure:T73 Name:T133
+E74	Drug:T74
+E75	Modifier:T75 Modifies:T149
+E76	Modifier:T76 Modifies:T149
+E77	Or:T77 Arg:E76 Arg2:E78
+E78	Modifier:T78 Modifies:T149
+E79	Or:T79 Arg:E94 Arg2:E95
+E80	Study:T80 Stability:T152
+E81	Condition:T81 Name:T134
+E82	Temporal-Connection:T82 Arg:E81 Arg2:E83
+E83	Study:T83
+E84	Eq-Comparison:T84 Operator:T135 Value:T136 Unit:T137 Value2:T155
+E85	Assertion:T85 Asserted:E86
+E86	Provider:T86 Role:T156
+E87	Encounter:T87 Provider:E86
+E5	Eq-Comparison:T5 Temporal-Period:T98
+E17	Condition:T17 Name:T113
+E22	Study:T22 Study-Of:E35
+E25	Assertion:T25 Asserted:E36
+E34	Modifier:T110 Modifies:T99
+E88	Modifier:T115 Modifies:T99
+E89	Eq-Comparison:T138
+E90	Eq-Comparison:T140 Temporal-Period:T141
+E91	Negation:T143 Negates:E92
+E92	Coreference:T144 Refers-To:E56
+E93	Eq-Comparison:T146 Temporal-Period:T147
+E94	Observation:T148 Name:T149
+E95	Observation:T150 Name:T151
+E96	Modifier:T153 Modifies:T134
+E97	Observation:T154 Eq-Comparison:E84
+T1	Observation 25 28	BMI
+T2	Eq-Comparison 29 40	>= 25 kg/m2
+T3	Age 53 57	aged
+T4	Eq-Comparison 58 71	50 - 80 years
+T6	Modifier 81 103	Successful biochemical
+T7	Modifier 105 119	haematological
+T8	Or 121 124	and
+T9	Modifier 125 135	urinalysis
+T10	Procedure 136 146	assessment
+T11	Temporal-Connection 147 149	at
+T12	Study 150 159	screening
+T13	Eq-Comparison 185 192	Current
+T14	Condition 193 200	smokers
+T15	Or 202 204	or
+T16	Condition 208 215	smokers
+T18	Eq-Comparison 224 238	< 6 months ago
+T19	Eq-Comparison 244 252	existing
+T20	Or 253 255	or
+T21	Eq-Comparison 268 288	past medical history
+T23	Condition 292 308	vascular disease
+T24	Or 309 311	or
+T26	Condition 320 330	conditions
+T27	Assertion 331 340	likely to
+T28	Study 352 357	study
+T29	Modifier 372 380	Fructose
+T30	Or 381 383	or
+T31	Modifier 384 391	lactose
+T32	Or 412 414	or
+T33	Allergy 421 430	allergies
+T35	Procedure 447 457	treatments
+T36	Procedure 493 513	dietary instructions
+T37	Other 545 552	another
+T38	Study 553 561	research
+T39	Procedure 580 600	dietary intervention
+T40	Or 601 607	and/or
+T41	Procedure 608 616	sampling
+T42	Or 637 638	/
+T43	Procedure 661 678	therapeutic diets
+T44	Or 679 681	or
+T45	Condition 713 724	weight loss
+T46	Eq-Comparison 725 740	within 2 months
+T47	Temporal-Connection 741 743	of
+T48	Study 744 753	screening
+T49	Eq-Comparison 766 772	taking
+T50	Drug 773 782	flavonoid
+T51	Drug 784 791	nitrate
+T52	Or 792 793	/
+T53	Drug 794 812	nitrite containing
+T54	Or 813 815	or
+T55	Modifier 816 835	fish oil containing
+T56	Drug 836 847	supplements
+T57	And 849 852	and
+T58	Assertion 853 865	unwilling to
+T59	Temporal-Connection 879 885	during
+T60	And 887 890	and
+T61	Eq-Comparison 891 898	1 month
+T62	Temporal-Connection 899 908	preceding
+T63	Study 913 918	trial
+T64	Or 920 922	or
+T65	Assertion 923 935	unwilling to
+T66	Other 964 969	other
+T67	Drug 970 981	supplements
+T68	Drug 999 1012	hypoglycaemic
+T69	Drug 1014 1031	anti-hypertensive
+T70	Drug 1033 1044	vasodilator
+T71	Or 1045 1047	or
+T72	Procedure 1048 1075	hormone replacement therapy
+T73	Procedure 1077 1080	HRT
+T74	Drug 1082 1092	medication
+T75	Modifier 1114 1125	biochemical
+T76	Modifier 1127 1141	haematological
+T77	Or 1142 1144	or
+T78	Modifier 1145 1152	urinary
+T79	Or 1161 1163	or
+T80	Study 1221 1226	study
+T81	Condition 1244 1256	hypertension
+T82	Temporal-Connection 1267 1269	at
+T83	Study 1270 1279	screening
+T84	Eq-Comparison 1286 1301	≥ 180 / 110mmHg
+T85	Assertion 1314 1323	requiring
+T86	Provider 1351 1371	general practitioner
+T87	Encounter 1376 1385	follow-up
+T88	Observation-Name 25 28	BMI
+T89	Eq-Operator 29 31	>=
+T90	Eq-Value 32 34	25
+T91	Eq-Unit 35 37	kg
+T92	Eq-Unit 38 40	m2
+T93	Life-Stage-And-Gender 46 52	Adults
+T94	Eq-Value 58 60	50
+T95	Eq-Operator 61 62	-
+T96	Eq-Value 63 65	80
+T97	Eq-Temporal-Unit 66 71	years
+T100	Procedure-Name 136 146	assessment
+T101	Eq-Temporal-Period 185 192	Current
+T102	Condition-Name 193 200	smokers
+T103	Condition-Name 208 215	smokers
+T104	Eq-Operator 224 225	<
+T105	Eq-Value 226 227	6
+T106	Eq-Temporal-Unit 228 234	months
+T107	Eq-Temporal-Period 244 252	existing
+T108	Severity 256 267	significant
+T109	Eq-Temporal-Period 268 288	past medical history
+T111	Condition-Name 292 308	vascular disease
+T112	Stability 341 347	affect
+T113	Condition-Name 392 402	intolerant
+T114	Procedure-Name 580 600	dietary intervention
+T116	Eq-Temporal-Period 658 660	on
+T117	Condition-Name 713 724	weight loss
+T118	Eq-Operator 725 731	within
+T119	Eq-Value 732 733	2
+T120	Eq-Temporal-Unit 734 740	months
+T121	Eq-Temporal-Period 766 772	taking
+T122	Drug-Name 773 782	flavonoid
+T123	Drug-Name 784 791	nitrate
+T124	Drug-Name 794 812	nitrite containing
+T125	Drug-Name 836 847	supplements
+T126	Eq-Value 891 892	1
+T127	Eq-Temporal-Unit 893 898	month
+T128	Drug-Name 970 981	supplements
+T129	Drug-Name 999 1012	hypoglycaemic
+T130	Drug-Name 1014 1031	anti-hypertensive
+T131	Drug-Name 1033 1044	vasodilator
+T132	Procedure-Name 1048 1075	hormone replacement therapy
+T133	Procedure-Name 1077 1080	HRT
+T134	Condition-Name 1244 1256	hypertension
+T135	Eq-Operator 1286 1287	≥
+T136	Eq-Value 1288 1291	180
+T137	Eq-Unit 1297 1301	mmHg
+T5	Eq-Comparison 205 207	ex
+T98	Eq-Temporal-Period 205 207	ex
+T17	Condition 392 402	intolerant
+T22	Study 434 446	intervention
+T25	Assertion 469 489	unprepared to adhere
+T34	Procedure-Name 493 513	dietary instructions
+T99	Procedure-Name 608 616	sampling
+T110	Modifier 620 637	biological fluids
+T115	Modifier 638 646	material
+T138	Eq-Comparison 658 660	on
+T139	Procedure-Name 661 678	therapeutic diets
+T140	Eq-Comparison 689 700	experienced
+T141	Eq-Temporal-Period 689 700	experienced
+T142	Severity 701 712	substantial
+T143	Negation 866 871	cease
+T144	Coreference 872 878	intake
+T145	Stability 936 944	maintain
+T146	Eq-Comparison 945 953	existing
+T147	Eq-Temporal-Period 945 953	existing
+T148	Observation 1153 1160	results
+T149	Observation-Name 1153 1160	results
+T150	Observation 1164 1176	measurements
+T151	Observation-Name 1164 1176	measurements
+T152	Stability 1194 1212	counter indicative
+T153	Modifier 1232 1243	Undiagnosed
+T154	Observation 1244 1256	hypertension
+T155	Eq-Value 1294 1297	110
+T156	Provider-Role 1351 1371	general practitioner
+A1	Temporal-Connection-Type-Value E11 during
+A2	Assertion-Type-Value E27 hypothetical
+A3	Temporal-Connection-Type-Value E47 before
+A4	Assertion-Type-Value E58 hypothetical
+A5	Temporal-Connection-Type-Value E59 during
+A6	Temporal-Connection-Type-Value E62 before
+A7	Assertion-Type-Value E65 hypothetical
+A8	Temporal-Connection-Type-Value E82 during
+A9	Assertion-Type-Value E85 hypothetical
+A10	Observation-Type-Value T88 vital
+A11	Eq-Operator-Value T89 GTEQ
+A12	Life-Stage-And-Gender-Type T93 adult
+A13	Eq-Operator-Value T95 BETWEEN
+A14	Eq-Temporal-Unit-Value T97 year
+A16	Eq-Temporal-Period-Value T101 present
+A17	Eq-Operator-Value T104 LT
+A18	Eq-Temporal-Unit-Value T106 month
+A19	Eq-Temporal-Period-Value T107 present
+A20	Severity-Value T108 severe
+A21	Eq-Temporal-Period-Value T109 past
+A23	Stability-Value T112 change
+A24	Eq-Temporal-Period-Value T116 present
+A26	Eq-Operator-Value T118 LTEQ
+A27	Eq-Temporal-Unit-Value T120 month
+A28	Eq-Temporal-Period-Value T121 present
+A29	Eq-Temporal-Unit-Value T127 month
+A30	Eq-Operator-Value T135 GTEQ
+A15	Eq-Temporal-Period-Value T98 past
+A22	Assertion-Type-Value E25 hypothetical
+A25	Eq-Temporal-Period-Value T141 past
+A31	Severity-Value T142 severe
+A32	Stability-Value T145 stable
+A33	Eq-Temporal-Period-Value T147 present
+A34	Observation-Type-Value T151 measurement
+A35	Stability-Value T152 change
+R1	Caused-By Arg1:T112 Arg2:E26
+R2	Abbrev-Of Arg1:E73 Arg2:E72
+R3	Using Arg1:E74 Arg2:E73
+R4	Caused-By Arg1:T152 Arg2:E94
+R5	Caused-By Arg1:T152 Arg2:E95
+R6	Treatment-For Arg1:E87 Arg2:E81

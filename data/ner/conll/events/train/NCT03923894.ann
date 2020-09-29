@@ -1,0 +1,273 @@
+E1	Or:T4 Arg:T2 Arg2:T3
+E2	Eq-Comparison:T5 Temporal-Unit:T7 Value:T6 Operator:T8
+E3	Age:T9 Eq-Comparison:E2
+E4	Observation:T10 Name:T11
+E5	Observation:T12 Name:T13 Eq-Comparison:E8
+E6	Study:T14
+E7	Temporal-Connection:T15 Arg:E6 Arg2:E4
+E8	Eq-Comparison:T16 Operator:T17 Value:T18 Per:T19
+E9	Eq-Comparison:T20 Operator:T21 Value:T22 Per:T23
+E10	Or:T24 Arg:E8 Arg2:E9
+E11	Immunization:T25 Name:T26 Temporality:E12 Temporality2:E74
+E12	Eq-Comparison:T27 Temporal-Unit:T30 Operator:T28 Value:T29
+E13	Study:T31
+E14	Temporal-Connection:T32 Arg:E12 Arg2:E13
+E15	Observation:T33 Name:T34
+E16	Observation:T35 Name:T36 Eq-Comparison:E17
+E17	Eq-Comparison:T37 Operator:T38 Value:T39 Unit:T40 Per:T41
+E18	Eq-Comparison:T42 Operator:T43 Value:T44 Unit:T45 Per:T46
+E19	Or:T47 Arg:E17 Arg2:E18
+E20	Study:T48
+E21	Temporal-Connection:T49 Arg:E16 Arg2:E20
+E22	Condition:T50 Name:T51
+E23	Modifier:T52 Modifies:E22
+E25	Or:T54 Arg2:E23 Arg:T53
+E26	Condition:T55 Name:T56
+E27	Condition:T57 Name:T58
+E28	Condition:T59 Name:T60
+E29	Condition:T61 Name:T62
+E30	Condition:T63 Name:T64
+E31	Modifier:T65 Modifies:T64
+E32	Modifier:T66 Modifies:T64
+E33	Or:T67 Arg:E32 Arg2:E31
+E34	Condition:T68 Name:T69
+E35	Condition:T70 Name:T71
+E36	Condition:T72 Name:T73
+E37	Condition:T74 Name:T75
+E38	Or:T76 Arg:E36 Arg2:E37
+E39	Drug:T77 Name:T78 Temporality:E42
+E40	Drug:T79 Name:T80
+E41	Or:T81 Arg:E39 Arg2:E40
+E42	Eq-Comparison:T82 Temporal-Period:T83
+E43	Condition:T84 Name:T85 Temporality:E45 Stability:T144
+E44	Study:T86
+E45	Eq-Comparison:T87 Operator:T88 Temporal-Unit:T90 Value:T89
+E46	Temporal-Connection:T91 Arg:E45 Arg2:E44
+E47	Drug:T92 Name:T93 Temporality:E49 Temporality2:E75
+E48	Study:T94
+E49	Eq-Comparison:T95 Temporal-Unit:T98 Operator:T96 Value:T97
+E50	Temporal-Connection:T99 Arg:E49 Arg2:E48
+E51	Condition:T100 Name:T101
+E52	Assertion:T102 Asserted:E51
+E53	Modifier:T103 Modifies:T101
+E54	Modifier:T104 Modifies:T101
+E55	Or:T105 Arg:E53 Arg2:E54
+E56	Observation:T106 Name:T107 Temporality:E58
+E57	Study:T108
+E58	Eq-Comparison:T109 Temporal-Unit:T112 Operator:T110 Value:T111
+E59	Temporal-Connection:T113 Arg:E58 Arg2:E57
+E60	Observation:T114 Name:T115
+E61	Observation:T116 Name:T117 Eq-Comparison:E64
+E62	Observation:T118 Name:T119
+E63	Observation:T120 Name:T121 Eq-Comparison:E64
+E64	Eq-Comparison:T122 Operator:T123 Unit:T125 Value:T124
+E65	Observation:T126 Name:T127
+E66	Eq-Comparison:T128 Value:T130 Operator:T129 Unit2:T131 Per:T132
+E67	Condition:T133 Name:T134
+E68	Condition:T135 Name:T136
+E69	Or:T137 Arg:E67 Arg2:E68
+E70	Condition:T138 Name:T139
+E71	Drug:T141 Name:T142
+E72	Assertion:T143 Asserted:E73
+E73	Negation:T145 Negates:E71
+E74	Eq-Comparison:T146 Temporal-Period:T147
+E75	Eq-Comparison:T148 Temporal-Period:T149
+T1	Life-Stage-And-Gender 25 30	Adult
+T2	Life-Stage-And-Gender 31 34	men
+T3	Life-Stage-And-Gender 39 44	women
+T4	Or 35 38	and
+T5	Eq-Comparison 45 58	over 50 years
+T6	Eq-Value 50 52	50
+T7	Eq-Temporal-Unit 53 58	years
+T8	Eq-Operator 45 49	over
+T9	Age 53 58	years
+T10	Observation 266 282	white blood cell
+T11	Observation-Name 266 282	white blood cell
+T12	Observation 283 286	WBC
+T13	Observation-Name 283 286	WBC
+T14	Study 241 250	screening
+T15	Temporal-Connection 251 256	shows
+T16	Eq-Comparison 291 307	less than 3000/㎕
+T17	Eq-Operator 291 300	less than
+T18	Eq-Value 301 305	3000
+T19	Eq-Unit 306 307	㎕
+T20	Eq-Comparison 311 327	more than 8000/㎕
+T21	Eq-Operator 311 320	more than
+T22	Eq-Value 321 325	8000
+T23	Eq-Unit 326 327	㎕
+T24	Or 308 310	or
+T25	Immunization 352 373	influenza vaccination
+T26	Immunization-Name 352 373	influenza vaccination
+T27	Eq-Comparison 374 389	within 3 months
+T28	Eq-Operator 374 380	within
+T29	Eq-Value 381 382	3
+T30	Eq-Temporal-Unit 383 389	months
+T31	Study 401 410	screening
+T32	Temporal-Connection 390 396	before
+T33	Observation 433 448	body mass index
+T34	Observation-Name 433 448	body mass index
+T35	Observation 449 452	BMI
+T36	Observation-Name 449 452	BMI
+T37	Eq-Comparison 457 479	less than 18.5 kg / m2
+T38	Eq-Operator 457 466	less than
+T39	Eq-Value 467 471	18.5
+T40	Eq-Unit 472 474	kg
+T41	Eq-Unit 477 479	m2
+T42	Eq-Comparison 483 506	greater than 35 kg / m2
+T43	Eq-Operator 483 495	greater than
+T44	Eq-Value 496 498	35
+T45	Eq-Unit 499 501	kg
+T46	Eq-Unit 504 506	m2
+T47	Or 480 482	or
+T48	Study 514 523	screening
+T49	Temporal-Connection 507 509	at
+T50	Condition 586 607	cardiovascular system
+T51	Condition-Name 586 607	cardiovascular system
+T52	Modifier 578 585	chronic
+T54	Or 575 577	or
+T55	Condition 609 625	endocrine system
+T56	Condition-Name 609 625	endocrine system
+T57	Condition 627 640	immune system
+T58	Condition-Name 627 640	immune system
+T59	Condition 642 660	respiratory system
+T60	Condition-Name 642 660	respiratory system
+T61	Condition 662 682	liver biliary system
+T62	Condition-Name 662 682	liver biliary system
+T63	Condition 703 709	system
+T64	Condition-Name 703 709	system
+T65	Modifier 695 702	urinary
+T66	Modifier 684 690	kidney
+T67	Or 691 694	and
+T68	Condition 711 726	neuropsychiatry
+T69	Condition-Name 711 726	neuropsychiatry
+T70	Condition 728 750	musculoskeletal system
+T71	Condition-Name 728 750	musculoskeletal system
+T72	Condition 752 764	inflammatory
+T73	Condition-Name 752 764	inflammatory
+T74	Condition 769 780	hematologic
+T75	Condition-Name 769 780	hematologic
+T76	Or 765 768	and
+T77	Drug 803 813	medication
+T78	Drug-Name 803 813	medication
+T79	Drug 817 837	health function food
+T80	Drug-Name 817 837	health function food
+T81	Or 814 816	or
+T82	Eq-Comparison 796 800	take
+T83	Eq-Temporal-Period 796 800	take
+T84	Condition 856 877	promotion of immunity
+T85	Condition-Name 856 877	promotion of immunity
+T86	Study 906 915	screening
+T87	Eq-Comparison 878 892	within 1 month
+T88	Eq-Operator 878 884	within
+T89	Eq-Value 885 886	1
+T90	Eq-Temporal-Unit 887 892	month
+T91	Temporal-Connection 893 898	prior
+T92	Drug 945 969	antipsychotic medication
+T93	Drug-Name 945 969	antipsychotic medication
+T94	Study 993 1002	screening
+T95	Eq-Comparison 970 985	within 3 months
+T96	Eq-Operator 970 976	within
+T97	Eq-Value 977 978	3
+T98	Eq-Temporal-Unit 979 985	months
+T99	Temporal-Connection 986 992	before
+T100	Condition 1036 1041	abuse
+T101	Condition-Name 1036 1041	abuse
+T102	Assertion 1042 1051	suspected
+T103	Modifier 1018 1027	alcoholic
+T104	Modifier 1031 1035	drug
+T105	Or 1028 1030	or
+T106	Observation 1067 1104	participated in other clinical trials
+T107	Observation-Name 1067 1104	participated in other clinical trials
+T108	Study 1128 1137	screening
+T109	Eq-Comparison 1105 1120	within 3 months
+T110	Eq-Operator 1105 1111	within
+T111	Eq-Value 1112 1113	3
+T112	Eq-Temporal-Unit 1114 1120	months
+T113	Temporal-Connection 1121 1127	before
+T114	Observation 1199 1221	Aspartate Transaminase
+T115	Observation-Name 1199 1221	Aspartate Transaminase
+T116	Observation 1222 1225	AST
+T117	Observation-Name 1222 1225	AST
+T118	Observation 1228 1248	Alanine Transaminase
+T119	Observation-Name 1228 1248	Alanine Transaminase
+T120	Observation 1249 1252	ALT
+T121	Observation-Name 1249 1252	ALT
+T122	Eq-Comparison 1254 1291	> Reference range 3 times upper limit
+T123	Eq-Operator 1254 1255	>
+T124	Eq-Value 1272 1273	3
+T125	Eq-Unit 1280 1291	upper limit
+T126	Observation 1302 1318	Serum Creatinine
+T127	Observation-Name 1302 1318	Serum Creatinine
+T128	Eq-Comparison 1319 1330	> 2.0 mg/dL
+T129	Eq-Operator 1319 1320	>
+T130	Eq-Value 1321 1324	2.0
+T131	Eq-Unit 1325 1327	mg
+T132	Eq-Unit 1328 1330	dL
+T133	Condition 1336 1345	Pregnancy
+T134	Condition-Name 1336 1345	Pregnancy
+T135	Condition 1349 1363	breast feeding
+T136	Condition-Name 1349 1363	breast feeding
+T137	Or 1346 1348	or
+T138	Condition 1447 1459	childbearing
+T139	Condition-Name 1447 1459	childbearing
+T140	Life-Stage-And-Gender 1460 1465	woman
+T141	Drug 1428 1441	contraception
+T142	Drug-Name 1428 1441	contraception
+T143	Assertion 1387 1393	accept
+T144	Stability 843 850	affects
+T145	Negation 1379 1386	doesn't
+T146	Eq-Comparison 343 351	received
+T147	Eq-Temporal-Period 343 351	received
+T148	Eq-Comparison 936 944	received
+T149	Eq-Temporal-Period 936 944	received
+T53	Severity 569 574	acute
+A1	Life-Stage-And-Gender-Type T1 adult
+A2	Life-Stage-And-Gender-Type T2 male
+A3	Life-Stage-And-Gender-Type T3 female
+A4	Eq-Temporal-Unit-Value T7 year
+A5	Eq-Operator-Value T8 GT
+A6	Observation-Type-Value T11 lab
+A7	Observation-Type-Value T13 lab
+A8	Temporal-Connection-Type-Value E7 during
+A9	Eq-Operator-Value T17 LT
+A10	Eq-Operator-Value T21 GT
+A11	Eq-Operator-Value T28 LTEQ
+A12	Eq-Temporal-Unit-Value T30 month
+A13	Temporal-Connection-Type-Value E14 before
+A14	Observation-Type-Value T34 vital
+A15	Observation-Type-Value T36 vital
+A16	Eq-Operator-Value T38 LT
+A17	Eq-Operator-Value T43 GT
+A18	Temporal-Connection-Type-Value E21 during
+A19	Eq-Temporal-Period-Value T83 present
+A20	Eq-Operator-Value T88 LTEQ
+A21	Eq-Temporal-Unit-Value T90 month
+A22	Temporal-Connection-Type-Value E46 before
+A23	Eq-Operator-Value T96 LTEQ
+A24	Eq-Temporal-Unit-Value T98 month
+A25	Temporal-Connection-Type-Value E50 before
+A26	Assertion-Type-Value E52 possible
+A27	Eq-Operator-Value T110 LTEQ
+A28	Eq-Temporal-Unit-Value T112 month
+A29	Temporal-Connection-Type-Value E59 before
+A30	Observation-Type-Value T115 lab
+A31	Observation-Type-Value T117 lab
+A32	Observation-Type-Value T119 lab
+A33	Observation-Type-Value T121 lab
+A34	Eq-Operator-Value T123 GT
+A35	Eq-Unit-Value T125 ref-range-high
+A36	Observation-Type-Value T127 lab
+A37	Eq-Operator-Value T129 GT
+A38	Life-Stage-And-Gender-Type T140 female
+A39	Assertion-Type-Value E72 hypothetical
+A40	Stability-Value T144 change
+A41	Eq-Temporal-Period-Value T147 past
+A42	Eq-Temporal-Period-Value T149 past
+A43	Severity-Value T53 severe
+R1	Abbrev-Of Arg1:E5 Arg2:E4
+R2	Abbrev-Of Arg1:E16 Arg2:E15
+R4	Abbrev-Of Arg1:E61 Arg2:E60
+R5	Abbrev-Of Arg1:E63 Arg2:E62
+R6	If-Then Arg1:T140 Arg2:E70
+R7	Treatment-For Arg1:E71 Arg2:E70
+R3	Caused-By Arg1:T144 Arg2:E40

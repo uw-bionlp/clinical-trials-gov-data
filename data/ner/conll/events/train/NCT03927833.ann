@@ -1,0 +1,147 @@
+E1	Condition:T1 Name:T2
+E3	Procedure:T3 Name:T4 Temporality:E42
+E8	Age:T15 Eq-Comparison:E16
+E9	Age:T16 Eq-Comparison:E26
+E10	Age:T17 Eq-Comparison:E29
+E11	Eq-Comparison:T28 Operator:T9 Value:T19 Unit:T35
+E12	Eq-Comparison:T29 Operator:T10 Temporal-Unit:T14 Value:T20
+E13	Eq-Comparison:T30 Operator:T11 Value:T24 Unit:T56 Per:T57
+E14	Eq-Comparison:T31 Operator:T12 Value:T26
+E15	Eq-Comparison:T32 Operator:T13 Value:T27
+E16	Eq-Comparison:T33 Operator:T18 Value:T21 Value2:T22
+E2	Birth:T34
+E4	Temporal-Connection:T36 Arg:E6 Arg2:E2
+E6	Observation:T38 Eq-Comparison:E11
+E17	Or:T40 Arg:E2 Arg2:E18
+E18	Observation:T41 Name:T42 Eq-Comparison:E12
+E19	Birth:T43
+E20	Temporal-Connection:T44 Arg:E18 Arg2:E19
+E21	Condition:T37 Name:T45
+E22	Family-Member:T46 Has:E21
+E23	Family-Member:T39 Has:E6
+E24	Family-Member:T47 Has:E8
+E25	Family-Member:T23 Has:E9
+E26	Eq-Comparison:T49 Temporal-Unit:T52 Value:T51 Operator:T50
+E27	Assertion:T53 Asserted:E25
+E28	Observation:T54 Name:T55 Eq-Comparison:E13
+E29	Eq-Comparison:T58 Temporal-Unit:T60 Value:T25
+E30	Temporal-Connection:T59 Arg:E28 Arg2:E10
+E31	Condition:T61 Name:T62
+E32	Condition:T63 Name:T64
+E33	Death:T65
+E34	Risk:T66 Risk-For:E33
+E35	Family-Member:T67 Has:E34
+E5	Encounter:T5 Type:T6
+E36	Negation:T68 Negates:E5
+E37	Assertion:T69 Asserted:E36
+E7	Observation:T7 Name:T8 Eq-Comparison:E14
+E38	Condition:T70 Name:T71
+E39	Condition:T72 Name:T73 Duration:E15
+E40	And:T74 Arg:E38 Arg2:E39
+E41	Or:T75 Arg:E7 Arg2:E38
+E42	Eq-Comparison:T77 Temporal-Period:T78
+T1	Condition 277 294	hemolytic disease
+T2	Condition-Name 277 294	hemolytic disease
+T3	Procedure 253 265	phototherapy
+T4	Procedure-Name 253 265	phototherapy
+T9	Eq-Operator 58 59	≤
+T10	Eq-Operator 86 87	<
+T11	Eq-Operator 316 317	>
+T12	Eq-Operator 576 577	<
+T13	Eq-Operator 628 629	>
+T14	Eq-Temporal-Unit 91 96	weeks
+T15	Age 166 169	age
+T16	Age 235 238	age
+T17	Age 343 346	age
+T18	Eq-Operator 153 154	-
+T19	Eq-Value 60 63	750
+T20	Eq-Value 88 90	27
+T21	Eq-Value 151 153	12
+T22	Eq-Value 154 156	36
+T24	Eq-Value 317 318	6
+T25	Eq-Value 334 336	12
+T26	Eq-Value 578 582	6.80
+T27	Eq-Value 629 630	2
+T28	Eq-Comparison 58 63	≤ 750
+T29	Eq-Comparison 86 96	< 27 weeks
+T30	Eq-Comparison 316 326	>6.0 mg/dL
+T31	Eq-Comparison 576 579	< 6
+T32	Eq-Comparison 628 630	>2
+T33	Eq-Comparison 151 162	12-36 hours
+T34	Birth 73 78	birth
+T35	Eq-Unit 64 69	grams
+T36	Temporal-Connection 70 72	at
+T38	Observation 55 57	is
+T40	Or 79 85	and/or
+T41	Observation 97 106	gestation
+T42	Observation-Name 97 106	gestation
+T43	Birth 110 115	birth
+T44	Temporal-Connection 107 109	at
+T37	Condition 36 42	inborn
+T45	Condition-Name 36 42	inborn
+T46	Family-Member 25 32	Infants
+T39	Family-Member 48 54	Infant
+T47	Family-Member 141 147	Infant
+T48	Eq-Temporal-Unit 157 162	hours
+T23	Family-Member 213 219	infant
+T49	Eq-Comparison 220 231	by 36 hours
+T50	Eq-Operator 220 222	by
+T51	Eq-Value 223 225	36
+T52	Eq-Temporal-Unit 226 231	hours
+T53	Assertion 206 212	enroll
+T54	Observation 300 303	TSB
+T55	Observation-Name 300 303	TSB
+T56	Eq-Unit 321 323	mg
+T57	Eq-Unit 324 326	dL
+T58	Eq-Comparison 334 342	12 hours
+T59	Temporal-Connection 327 333	before
+T60	Eq-Temporal-Unit 337 342	hours
+T61	Condition 352 365	Major anomaly
+T62	Condition-Name 352 365	Major anomaly
+T63	Condition 371 399	Overt nonbacterial infection
+T64	Condition-Name 371 399	Overt nonbacterial infection
+T65	Death 425 431	expire
+T66	Risk 415 421	likely
+T67	Family-Member 405 411	Infant
+T5	Encounter 464 478	intensive care
+T6	Encounter-Type 464 478	intensive care
+T68	Negation 450 460	withdrawal
+T69	Assertion 488 499	recommended
+T7	Observation 570 572	pH
+T8	Observation-Name 570 572	pH
+T70	Condition 586 608	persistent bradycardia
+T71	Condition-Name 586 608	persistent bradycardia
+T72	Condition 614 623	hypoxemia
+T73	Condition-Name 614 623	hypoxemia
+T74	And 609 613	with
+T75	Or 583 585	or
+T76	Eq-Temporal-Unit 630 631	h
+T77	Eq-Comparison 244 252	Previous
+T78	Eq-Temporal-Period 244 252	Previous
+A1	Eq-Operator-Value T9 LTEQ
+A2	Eq-Operator-Value T10 LT
+A3	Eq-Operator-Value T11 GT
+A4	Eq-Operator-Value T12 LT
+A5	Eq-Operator-Value T13 GT
+A6	Eq-Temporal-Unit-Value T14 week
+A7	Eq-Operator-Value T18 BETWEEN
+A10	Observation-Type-Value T42 measurement
+A8	Temporal-Connection-Type-Value E4 during
+A11	Temporal-Connection-Type-Value E20 during
+A12	Family-Member-Type E22 child
+A9	Family-Member-Type E23 child
+A13	Family-Member-Type E24 child
+A14	Eq-Temporal-Unit-Value T48 hour
+A15	Family-Member-Type E25 child
+A16	Eq-Operator-Value T50 LTEQ
+A17	Eq-Temporal-Unit-Value T52 hour
+A18	Assertion-Type-Value E27 hypothetical
+A19	Observation-Type-Value T55 lab
+A20	Temporal-Connection-Type-Value E30 before
+A21	Eq-Temporal-Unit-Value T60 hour
+A22	Family-Member-Type E35 child
+A23	Encounter-Type-Value T6 icu
+A24	Assertion-Type-Value E37 hypothetical
+A25	Observation-Type-Value T8 lab
+A26	Eq-Temporal-Unit-Value T76 hour
+A27	Eq-Temporal-Period-Value T78 past

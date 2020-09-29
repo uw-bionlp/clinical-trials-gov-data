@@ -1,0 +1,189 @@
+E1	Condition:T1 Name:T2
+E7	Procedure:T7 Name:T8 Temporality:E17
+E9	Procedure:T9 Name:T10
+E11	Procedure:T11 Name:T12
+E13	Procedure:T13 Name:T14 Temporality:E19
+E14	Age:T27 Eq-Comparison:E15
+E15	Eq-Comparison:T35 Operator:T15 Temporal-Unit:T22 Value:T28
+E16	Eq-Comparison:T36 Operator:T16 Value:T29
+E17	Eq-Comparison:T37 Operator:T17 Temporal-Unit:T23 Value:T30
+E18	Eq-Comparison:T38 Operator:T18 Temporal-Unit:T24 Value:T31
+E19	Eq-Comparison:T39 Operator:T19 Temporal-Unit:T25 Value:T32
+E20	Eq-Comparison:T40 Operator:T20 Value:T33 Unit:T82 Per:T83
+E21	Eq-Comparison:T41 Operator:T21 Value:T34 Unit:T86 Per:T26
+E2	Procedure:T5 Name:T6
+E3	Negation:T42 Negates:E2
+E4	Study:T43
+E5	Temporal-Connection:T44 Arg:E2 Arg2:E4
+E8	Observation:T46 Name:T47 Eq-Comparison:E16
+E10	Drug:T48 Name:T49
+E12	Drug:T50 Name:T51
+E22	Drug:T52 Name:T53
+E23	Drug:T54 Name:T55
+E24	Or:T56 Arg:E22 Arg2:E23
+E25	Procedure:T57 Name:T58 Temporality:E26
+E26	Eq-Comparison:T60 Temporal-Recency:T59
+E27	Temporal-Connection:T61 Arg2:E25 Arg:E17
+E28	Drug:T62 Name:T63 Temporality:E18
+E33	Or:T72 Arg:E31 Arg2:E32
+E34	Or:T73 Arg:E28 Arg2:E11
+E35	Procedure:T74 Name:T75
+E36	Temporal-Connection:T76 Arg:E18 Arg2:E37
+E37	Study:T77
+E38	Temporal-Connection:T78 Arg:E19 Arg2:E39
+E39	Study:T79
+E40	Observation:T80 Name:T81 Eq-Comparison:E20
+E41	Observation:T84 Name:T85 Eq-Comparison:E21
+E42	Or:T87 Arg:T4 Arg2:T3
+E43	Condition:T88 Name:T89 Stage:E44
+E44	Eq-Comparison:T90 Operator:T93 Unit:T94 Value:T91 Value2:T92
+E45	Assertion:T95 Asserted:E3
+E46	And:T96 Arg:E43 Arg2:E45
+E47	Assertion:T97 Asserted:E2
+E6	Study:T45
+E48	Study:T98
+E49	And:T99 Arg:E6 Arg2:E48
+E50	Temporal-Connection:T100 Arg:E8 Arg2:E6
+E51	Study:T101
+E52	Temporal-Connection:T102 Arg:E41 Arg2:E51
+E53	Study:T103
+E54	Temporal-Connection:T104 Arg:E40 Arg2:E53
+E29	Modifier:T64 Modifies:T63
+E30	Modifier:T65 Modifies:T63
+E31	Modifier:T66
+E32	Modifier:T67 Modifies:T63
+T1	Condition 64 103	Myasthenia Gravis Foundation of America
+T2	Condition-Name 64 103	Myasthenia Gravis Foundation of America
+T3	Life-Stage-And-Gender 33 39	female
+T4	Life-Stage-And-Gender 25 29	Male
+T7	Procedure 435 451	immunomodulation
+T8	Procedure-Name 435 451	immunomodulation
+T9	Procedure 578 593	plasma exchange
+T10	Procedure-Name 578 593	plasma exchange
+T11	Procedure 563 577	plasmapheresis
+T12	Procedure-Name 563 577	plasmapheresis
+T13	Procedure 637 647	Thymectomy
+T14	Procedure-Name 637 647	Thymectomy
+T15	Eq-Operator 40 41	≥
+T16	Eq-Operator 239 240	≥
+T17	Eq-Operator 452 458	within
+T18	Eq-Operator 599 605	within
+T19	Eq-Operator 658 659	<
+T20	Eq-Operator 711 712	<
+T21	Eq-Operator 765 766	<
+T22	Eq-Temporal-Unit 45 50	years
+T23	Eq-Temporal-Unit 461 467	months
+T24	Eq-Temporal-Unit 608 613	weeks
+T25	Eq-Temporal-Unit 663 669	months
+T26	Eq-Unit 777 780	mm3
+T27	Age 54 57	age
+T28	Eq-Value 42 44	18
+T29	Eq-Value 240 242	12
+T30	Eq-Value 459 460	6
+T31	Eq-Value 606 607	4
+T32	Eq-Value 660 662	12
+T33	Eq-Value 712 713	6
+T34	Eq-Value 766 770	1500
+T35	Eq-Comparison 40 50	≥ 18 years
+T36	Eq-Comparison 239 242	≥12
+T37	Eq-Comparison 452 467	within 6 months
+T38	Eq-Comparison 599 613	within 4 weeks
+T39	Eq-Comparison 658 669	< 12 months
+T40	Eq-Comparison 711 717	<6 g/L
+T41	Eq-Comparison 765 780	<1500 cells/mm3
+T5	Procedure 152 162	respirator
+T6	Procedure-Name 152 162	respirator
+T42	Negation 135 138	not
+T43	Study 187 192	study
+T44	Temporal-Connection 163 179	for the duration
+T46	Observation 229 232	QMG
+T47	Observation-Name 229 232	QMG
+T48	Drug 371 380	rituximab
+T49	Drug-Name 371 380	rituximab
+T50	Drug 382 391	belimumab
+T51	Drug-Name 382 391	belimumab
+T52	Drug 393 403	eculizumab
+T53	Drug-Name 393 403	eculizumab
+T54	Drug 411 430	monoclonal antibody
+T55	Drug-Name 411 430	monoclonal antibody
+T56	Or 404 406	or
+T57	Procedure 483 489	dosing
+T58	Procedure-Name 483 489	dosing
+T59	Eq-Temporal-Recency 477 482	first
+T60	Eq-Comparison 477 482	first
+T61	Temporal-Connection 468 473	prior
+T62	Drug 496 511	Immunoglobulins
+T63	Drug-Name 496 511	Immunoglobulins
+T72	Or 536 538	or
+T73	Or 560 562	or
+T74	Procedure 595 597	PE
+T75	Procedure-Name 595 597	PE
+T76	Temporal-Connection 614 620	before
+T77	Study 621 630	Screening
+T78	Temporal-Connection 670 678	prior to
+T79	Study 679 688	screening
+T80	Observation 695 704	Total IgG
+T81	Observation-Name 695 704	Total IgG
+T82	Eq-Unit 714 715	g
+T83	Eq-Unit 716 717	L
+T84	Observation 739 764	Absolute neutrophil count
+T85	Observation-Name 739 764	Absolute neutrophil count
+T86	Eq-Unit 771 776	cells
+T87	Or 30 32	or
+T88	Condition 105 109	MGFA
+T89	Condition-Name 105 109	MGFA
+T90	Eq-Comparison 111 123	Class II-IVa
+T91	Eq-Value 117 119	II
+T92	Eq-Value 120 123	IVa
+T93	Eq-Operator 119 120	-
+T94	Eq-Unit 111 116	Class
+T95	Assertion 128 134	likely
+T96	And 124 127	and
+T97	Assertion 142 149	need of
+T45	Study 246 255	Screening
+T98	Study 260 268	Baseline
+T99	And 256 259	and
+T100	Temporal-Connection 243 245	at
+T101	Study 784 793	screening
+T102	Temporal-Connection 781 783	at
+T103	Study 722 731	screening
+T104	Temporal-Connection 719 721	at
+T64	Modifier 521 523	SC
+T65	Modifier 525 527	IV
+T66	Modifier 529 533	IVIG
+T67	Modifier 539 558	intramuscular route
+A1	Life-Stage-And-Gender-Type T3 female
+A2	Life-Stage-And-Gender-Type T4 male
+A3	Eq-Operator-Value T15 GTEQ
+A4	Eq-Operator-Value T16 GTEQ
+A5	Eq-Operator-Value T17 LTEQ
+A6	Eq-Operator-Value T18 LTEQ
+A7	Eq-Operator-Value T19 LT
+A8	Eq-Operator-Value T20 LT
+A9	Eq-Operator-Value T21 LT
+A10	Eq-Temporal-Unit-Value T22 year
+A11	Eq-Temporal-Unit-Value T23 month
+A12	Eq-Temporal-Unit-Value T24 week
+A13	Eq-Temporal-Unit-Value T25 month
+A14	Temporal-Connection-Type-Value E5 during
+A16	Observation-Type-Value T47 clinical-score
+A17	Eq-Temporal-Recency-Value T59 first-time
+A18	Temporal-Connection-Type-Value E27 before
+A19	Temporal-Connection-Type-Value E36 before
+A20	Temporal-Connection-Type-Value E38 before
+A21	Observation-Type-Value T81 clinical-score
+A22	Eq-Operator-Value T93 BETWEEN
+A23	Assertion-Type-Value E45 hypothetical
+A24	Assertion-Type-Value E47 hypothetical
+A15	Temporal-Connection-Type-Value E50 during
+A25	Temporal-Connection-Type-Value E52 during
+A26	Temporal-Connection-Type-Value E54 during
+R1	Using Arg1:E7 Arg2:E23
+R2	Using Arg1:E7 Arg2:E22
+R3	Using Arg1:E7 Arg2:E12
+R4	Using Arg1:E7 Arg2:E10
+R6	Abbrev-Of Arg1:E35 Arg2:E9
+R7	Abbrev-Of Arg1:E43 Arg2:E1
+R5	Abbrev-Of Arg1:E31 Arg2:E30
+R8	Using Arg1:E28 Arg2:E11
+R9	Using Arg1:E28 Arg2:E9

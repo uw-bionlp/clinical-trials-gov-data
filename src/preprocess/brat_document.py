@@ -71,6 +71,14 @@ class BratDocument:
         self.Rs
         self.As
         self.toks
+
+    def to_brat(self):
+        lines = []
+        for k,v in self.Es.items(): lines.append(v.to_brat())
+        for k,v in self.Ts.items(): lines.append(v.to_brat())
+        for k,v in self.As.items(): lines.append(v.to_brat())
+        for k,v in self.Rs.items(): lines.append(v.to_brat())
+        return self.pretokenized, '\n'.join(lines)
         
 
     def derive_annotations(self, nest_sentences=False):
@@ -97,8 +105,8 @@ class BratDocument:
                     kvs = part.split(':')
                     Es[ch].args.append(BratEArgPair(kvs[0].strip(), kvs[1].strip()))
             elif ch[0] == 'R':
-                arg1 = sub_parts[1].split(':')[1]
-                arg2 = sub_parts[2].split(':')[1]
+                arg1_type, arg1 = sub_parts[1].split(':')
+                arg2_type, arg2 = sub_parts[2].split(':')
                 Rs[ch] = BratR(sub_parts[0].strip(), arg1, arg2, ch, i)
 
         # Split pseudo-sentences on newlines
@@ -584,6 +592,9 @@ class BratR:
         self.arg1 = arg1
         self.arg2 = arg2
         self.line = line
+
+    def to_brat(self):
+        return f'{self.id}\t{self.type} Arg1:{self.arg1.id} Arg2:{self.arg2.id}'
 
 class BratA:
     def __init__(self, tp, attr_of, val, id, line):

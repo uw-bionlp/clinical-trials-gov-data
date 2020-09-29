@@ -1,0 +1,132 @@
+E1	Assertion:T1 Asserted:E5
+E2	Modifier:T2 Modifies:T41
+E3	Or:T3 Arg:E2 Arg2:E4
+E4	Modifier:T4 Modifies:T41
+E5	Condition:T5 Name:T41
+E6	And:T6 Arg:E5 Arg2:E7
+E7	Indication:T7 Indication-For:E8 Indication-For2:E9 Indication-For3:E11
+E8	Procedure:T8 Name:T42
+E9	Procedure:T9 Name:T43
+E10	Or:T10 Arg:E9 Arg2:E11
+E11	Procedure:T11 Name:T44
+E12	Age:T12 Eq-Comparison:E13
+E13	Eq-Comparison:T13 Operator:T45 Temporal-Unit:T46 Value:T63
+E14	Observation:T14 Name:T64 Eq-Comparison:E15
+E15	Eq-Comparison:T15 Value:T47 Operator:T48
+E16	Procedure:T16
+E17	And:T17 Arg:E16 Arg2:E18
+E18	Encounter:T18
+E19	Other:T19 Is-Other:E21
+E20	Eq-Comparison:T20 Temporal-Period:T50
+E21	Condition:T21 Name:T51 Temporality:E20 Temporality2:E22
+E22	Eq-Comparison:T22 Temporal-Period:T52 Value:T53 Temporal-Unit:T54
+E23	Temporal-Connection:T23 Arg:E22 Arg2:E25
+E25	Study:T25
+E26	Exception:T26 From:E21 Except:E29
+E27	Procedure:T27
+E28	Modifier:T28 Modifies:T55
+E29	Condition:T29 Name:T55
+E30	Condition:T30 Name:T57 Severity:T56
+E31	Condition:T31 Name:T58
+E32	Condition:T32 Name:T59
+E33	Modifier:T33 Modifies:T59
+E34	Or:T34 Arg:E33 Arg2:E42
+E35	Eq-Comparison:T35 Temporal-Period:T60
+E36	Procedure:T36 Name:T61 Temporality:E35
+E37	Modifier:T37 Modifies:T62
+E38	Or:T38 Arg:E37 Arg2:E39
+E39	Modifier:T39 Modifies:T62
+E40	Condition:T40 Name:T62
+E41	Assertion:T65 Asserted:E16 Asserted2:E18
+E24	Negation:T24 Negates:E28
+E42	Modifier:T66 Modifies:T59
+E43	Modifier:T67 Modifies:T59
+E44	Study:T68
+E45	Negation:T69 Negates:E44
+E46	Assertion:T70 Asserted:E45
+T1	Assertion 40 49	suspicion
+T2	Modifier 54 61	primary
+T3	Or 62 64	or
+T4	Modifier 65 74	recurrent
+T5	Condition 75 78	EOC
+T6	And 79 83	with
+T7	Indication 87 97	indication
+T8	Procedure 102 109	surgery
+T9	Procedure 111 123	chemotherapy
+T10	Or 124 130	and/or
+T11	Procedure 131 144	immunotherapy
+T12	Age 151 154	Age
+T13	Eq-Comparison 155 164	≥18 years
+T14	Observation 171 193	WHO performance status
+T15	Eq-Comparison 194 196	0-
+T16	Procedure 219 228	treatment
+T17	And 229 232	and
+T18	Encounter 233 242	follow-up
+T19	Other 300 305	Other
+T20	Eq-Comparison 306 312	active
+T21	Condition 313 323	malignancy
+T22	Eq-Comparison 327 339	past 5 years
+T23	Temporal-Connection 340 348	prior to
+T25	Study 364 369	study
+T26	Exception 371 377	except
+T27	Procedure 382 389	treated
+T28	Modifier 394 407	melanoma skin
+T29	Condition 408 414	cancer
+T30	Condition 438 447	infection
+T31	Condition 453 456	HIV
+T32	Condition 458 467	hepatitis
+T33	Modifier 471 472	B
+T34	Or 473 476	and
+T35	Eq-Comparison 485 494	Receiving
+T36	Procedure 495 523	immune suppressive treatment
+T37	Modifier 530 537	Medical
+T38	Or 538 540	or
+T39	Modifier 541 554	psychological
+T40	Condition 555 564	condition
+T41	Condition-Name 75 78	EOC
+T42	Procedure-Name 102 109	surgery
+T43	Procedure-Name 111 123	chemotherapy
+T44	Procedure-Name 131 144	immunotherapy
+T45	Eq-Operator 155 156	≥
+T46	Eq-Temporal-Unit 159 164	years
+T47	Eq-Value 194 195	0
+T48	Eq-Operator 195 196	-
+T49	Eq-Value 196 197	2
+T50	Eq-Temporal-Period 306 312	active
+T51	Condition-Name 313 323	malignancy
+T52	Eq-Temporal-Period 327 331	past
+T53	Eq-Value 332 333	5
+T54	Eq-Temporal-Unit 334 339	years
+T55	Condition-Name 408 414	cancer
+T56	Severity 431 437	severe
+T57	Condition-Name 438 447	infection
+T58	Condition-Name 453 456	HIV
+T59	Condition-Name 458 467	hepatitis
+T60	Eq-Temporal-Period 485 494	Receiving
+T61	Procedure-Name 495 523	immune suppressive treatment
+T62	Condition-Name 555 564	condition
+T63	Eq-Value 156 158	18
+T64	Observation-Name 171 193	WHO performance status
+T65	Assertion 204 218	Accessible for
+T24	Negation 390 393	non
+T66	Modifier 477 478	C
+T67	Modifier 468 469	A
+T68	Study 651 656	study
+T69	Negation 612 615	not
+T70	Assertion 612 615	not
+A1	Assertion-Type-Value E1 possible
+A2	Temporal-Connection-Type-Value E23 before
+A3	Eq-Operator-Value T45 GTEQ
+A4	Eq-Temporal-Unit-Value T46 year
+A5	Eq-Operator-Value T48 BETWEEN
+A6	Eq-Temporal-Period-Value T50 present
+A7	Eq-Temporal-Period-Value T52 past
+A8	Eq-Temporal-Unit-Value T54 year
+A9	Severity-Value T56 severe
+A10	Eq-Temporal-Period-Value T60 present
+A11	Observation-Type-Value T64 clinical-score
+A12	Assertion-Type-Value E41 hypothetical
+A13	Assertion-Type-Value E46 hypothetical
+R1	Treatment-For Arg1:E27 Arg2:E29
+R2	Example-Of Arg1:E31 Arg2:E30
+R3	Caused-By Arg1:E45 Arg2:E40

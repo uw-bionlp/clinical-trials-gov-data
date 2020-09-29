@@ -1,0 +1,162 @@
+E1	Condition:T1 Name:T2 Temporality:E37
+E4	Condition:T4 Name:T5 Temporality:E7
+E5	Age:T16 Eq-Comparison:E2
+E6	Eq-Comparison:T29 Operator:T7 Unit:T15 Value:T21
+E7	Eq-Comparison:T30 Operator:T9 Temporal-Unit:T14 Value:T28 Temporal-Period:T89
+E2	Eq-Comparison:T32 Value:T17 Temporal-Unit:T10 Operator:T31
+E3	Encounter:T33 Type:T34 Provider:E8
+E8	Provider:T35 Role:T36
+E9	Temporal-Connection:T37 Arg:E12 Arg2:E13
+E10	Observation:T38 Name:T39 Eq-Comparison:E11 Temporality:E12
+E11	Eq-Comparison:T41 Value:T19 Value2:T18 Operator:T40
+E12	Eq-Comparison:T42 Temporal-Unit:T11 Operator:T6 Value:T20
+E13	Study:T43
+E15	Condition:T45 Name:T46 Temporality:E14
+E17	Temporal-Connection:T50 Arg:E19 Arg2:E18
+E18	Study:T51
+E19	Eq-Comparison:T52 Temporal-Unit:T12 Operator:T53 Value:T22
+E20	Modifier:T23 Modifies:T2
+E21	Or:T54 Arg:E20 Arg2:E38
+E22	Modifier:T56 Modifies:T58
+E23	Condition:T57 Name:T58 Severity:T55
+E24	Or:T59 Arg:T55 Arg2:E22
+E25	Eq-Comparison:T60 Operator:T61 Temporal-Unit:T62 Value:T25
+E26	Encounter:T63 Type:T64 Duration:E25 Temporality:E27
+E27	Eq-Comparison:T66 Operator:T65 Temporal-Unit:T13 Value:T26 Temporal-Period:T83
+E28	Procedure:T67 Name:T68 Temporality:E39 Temporality2:E29
+E29	Eq-Comparison:T69 Operator:T8 Value:T27 Temporal-Unit:T70
+E30	Temporal-Connection:T71 Arg:E29 Arg2:E31
+E31	Study:T72
+E32	Condition:T73 Name:T74
+E33	Condition:T75 Name:T76 Temporality:E41
+E34	Provider:T77 Type:T78
+E35	Procedure:T79 Name:T80 Provider:E34
+E36	Negation:T81 Negates:E35
+E14	Eq-Comparison:T44 Temporal-Period:T47
+E16	Observation:T48 Eq-Comparison:E6 Temporality:E19
+E37	Eq-Comparison:T49 Temporal-Period:T82
+E38	Modifier:T24 Modifies:T2
+E39	Eq-Comparison:T84 Temporal-Period:T85
+E40	Or:T86 Arg:E39 Arg2:E29
+E41	Eq-Comparison:T87 Temporal-Period:T88
+E42	Assertion:T90 Asserted:E36
+T1	Condition 387 395	diabetes
+T2	Condition-Name 387 395	diabetes
+T3	Language 25 32	English
+T4	Condition 661 672	given birth
+T5	Condition-Name 661 672	given birth
+T6	Eq-Operator 147 153	within
+T7	Eq-Operator 292 293	>
+T8	Eq-Operator 568 574	within
+T9	Eq-Operator 673 679	within
+T10	Eq-Temporal-Unit 50 55	years
+T11	Eq-Temporal-Unit 160 166	months
+T12	Eq-Temporal-Unit 308 314	months
+T13	Eq-Temporal-Unit 498 502	days
+T14	Eq-Temporal-Unit 691 697	months
+T15	Eq-Unit 295 298	lbs
+T16	Age 59 62	age
+T17	Eq-Value 47 49	18
+T18	Eq-Value 137 140	5.7
+T19	Eq-Value 143 146	6.4
+T20	Eq-Value 158 159	3
+T21	Eq-Value 293 294	5
+T22	Eq-Value 306 307	6
+T25	Eq-Value 455 457	72
+T26	Eq-Value 495 497	30
+T27	Eq-Value 579 580	1
+T28	Eq-Value 689 690	3
+T29	Eq-Comparison 292 298	>5 lbs
+T30	Eq-Comparison 673 697	within the past 3 months
+T31	Eq-Operator 63 72	and older
+T32	Eq-Comparison 47 72	18 years of age and older
+T33	Encounter 78 86	Referral
+T34	Encounter-Type 78 86	Referral
+T35	Provider 106 115	physician
+T36	Provider-Role 106 115	physician
+T37	Temporal-Connection 167 172	prior
+T38	Observation 121 135	Hemoglobin A1C
+T39	Observation-Name 121 135	Hemoglobin A1C
+T40	Eq-Operator 141 142	-
+T41	Eq-Comparison 137 146	5.7 - 6.4
+T42	Eq-Comparison 147 166	within the 3 months
+T43	Study 176 186	enrollment
+T45	Condition 260 271	weight loss
+T46	Condition-Name 260 271	weight loss
+T50	Temporal-Connection 315 324	preceding
+T51	Study 325 335	enrollment
+T52	Eq-Comparison 299 314	in the 6 months
+T53	Eq-Operator 299 305	in the
+T23	Modifier 370 376	type 1
+T54	Or 377 379	or
+T55	Severity 401 408	serious
+T56	Modifier 412 422	persistent
+T57	Condition 423 439	mental illnesses
+T58	Condition-Name 423 439	mental illnesses
+T59	Or 409 411	or
+T60	Eq-Comparison 445 463	more than 72 hours
+T61	Eq-Operator 445 454	more than
+T62	Eq-Temporal-Unit 458 463	hours
+T63	Encounter 467 482	hospitalization
+T64	Encounter-Type 467 482	hospitalization
+T65	Eq-Operator 483 489	in the
+T66	Eq-Comparison 483 502	in the last 30 days
+T67	Procedure 535 554	weight-loss program
+T68	Procedure-Name 535 554	weight-loss program
+T69	Eq-Comparison 568 586	within the 1 month
+T70	Eq-Temporal-Unit 581 586	month
+T71	Temporal-Connection 587 596	preceding
+T72	Study 597 602	study
+T73	Condition 619 627	Pregnant
+T74	Condition-Name 619 627	Pregnant
+T75	Condition 643 650	nursing
+T76	Condition-Name 643 650	nursing
+T77	Provider 729 738	physician
+T78	Provider-Type 729 738	physician
+T79	Procedure 754 765	DPP program
+T80	Procedure-Name 754 765	DPP program
+T81	Negation 712 723	discouraged
+T44	Eq-Comparison 253 259	Recent
+T47	Eq-Temporal-Period 253 259	Recent
+T48	Observation 260 271	weight loss
+T49	Eq-Comparison 348 356	previous
+T82	Eq-Temporal-Period 348 356	previous
+T24	Modifier 380 386	type 2
+T83	Eq-Temporal-Period 490 494	last
+T84	Eq-Comparison 555 564	currently
+T85	Eq-Temporal-Period 555 564	currently
+T86	Or 565 567	or
+T87	Eq-Comparison 633 642	Currently
+T88	Eq-Temporal-Period 633 642	Currently
+T89	Eq-Temporal-Period 684 688	past
+T90	Assertion 712 723	discouraged
+A1	Eq-Operator-Value T6 LTEQ
+A2	Eq-Operator-Value T7 GT
+A3	Eq-Operator-Value T8 LTEQ
+A4	Eq-Operator-Value T9 LTEQ
+A5	Eq-Temporal-Unit-Value T10 year
+A6	Eq-Temporal-Unit-Value T11 month
+A7	Eq-Temporal-Unit-Value T12 month
+A8	Eq-Temporal-Unit-Value T13 day
+A9	Eq-Temporal-Unit-Value T14 month
+A10	Eq-Operator-Value T31 GTEQ
+A11	Encounter-Type-Value T34 referral
+A12	Temporal-Connection-Type-Value E9 before
+A13	Observation-Type-Value T39 lab
+A14	Eq-Operator-Value T40 BETWEEN
+A17	Temporal-Connection-Type-Value E17 before
+A18	Eq-Operator-Value T53 LTEQ
+A19	Severity-Value T55 severe
+A20	Eq-Operator-Value T61 GT
+A21	Eq-Temporal-Unit-Value T62 hour
+A22	Encounter-Type-Value T64 inpatient
+A23	Eq-Operator-Value T65 LTEQ
+A24	Eq-Temporal-Unit-Value T70 month
+A25	Temporal-Connection-Type-Value E30 before
+A15	Eq-Temporal-Period-Value T47 recent
+A16	Eq-Temporal-Period-Value T82 past
+A26	Eq-Temporal-Period-Value T83 past
+A27	Eq-Temporal-Period-Value T85 present
+A28	Eq-Temporal-Period-Value T88 present
+A29	Eq-Temporal-Period-Value T89 past
+A30	Assertion-Type-Value E42 hypothetical

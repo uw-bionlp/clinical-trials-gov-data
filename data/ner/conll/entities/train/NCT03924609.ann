@@ -1,0 +1,159 @@
+E1	Condition:T1 Name:T2
+E2	Procedure:T3 Name:T4
+E3	Procedure:T5 Name:T6
+E4	Or:T7 Arg:E2 Arg2:E3
+E5	Condition:T8 Name:T9
+E6	Modifier:T10 Modifies:T9
+E7	Condition:T11 Name:T12
+E8	Criteria-Count:T13 Criteria:E10 Criteria2:E13
+E10	Condition:T16 Name:T17 Minimum-Count:E51
+E11	Modifier:T18 Modifies:T17
+E12	Procedure:T19 Name:T20
+E13	Procedure:T21 Name:T22 Polarity:T23
+E14	Procedure:T24 Name:T25
+E15	Other:T26 Is-Other:E14
+E16	And:T27 Arg:E13 Arg2:E14
+E17	Procedure:T28 Name:T29
+E18	Procedure:T30 Name:T31
+E19	Procedure:T32 Name:T33
+E20	Procedure:T34 Name:T35
+E21	Procedure:T36 Name:T37
+E22	Or:T38 Arg:E20 Arg2:E21
+E23	Procedure:T39 Name:T40 Polarity:T41
+E24	Condition:T42 Name:T43
+E25	Modifier:T44 Modifies:T46
+E26	Condition:T45 Name:T46
+E27	Condition:T47 Name:T48
+E28	Condition:T49 Name:T50
+E29	And:T51 Arg:E23 Arg2:E24
+E30	Condition:T52 Name:T53
+E31	Modifier:T54 Modifies:T53
+E32	Procedure:T55 Name:T56
+E33	Condition:T57 Name:T59
+E34	Modifier:T58 Modifies:T59
+E35	Condition:T60 Name:T61
+E36	Modifier:T62 Modifies:T61
+E37	Negation:T63 Negates:E35
+E38	Procedure:T64 Name:T65
+E39	Condition:T66 Name:T67
+E40	Modifier:T68 Modifies:T67
+E41	Condition:T69 Name:T70
+E42	Other:T71 Is-Other:E41
+E44	Condition:T73 Name:T74
+E45	Exception:T75 From:E41 Except:E44
+E46	Condition:T76 Name:T77
+E47	Modifier:T78 Modifies:T77
+E48	Procedure:T79 Name:T80
+E49	Modifier:T81 Modifies:T2
+E9	Modifier:T14 Modifies:T12
+E50	Procedure:T15 Name:T82
+E51	Eq-Comparison:T83 Operator:T84
+E52	Procedure:T85 Name:T86
+E43	Modifier:T72 Modifies:T74
+T1	Condition 52 58	cancer
+T2	Condition-Name 52 58	cancer
+T3	Procedure 72 78	biopsy
+T4	Procedure-Name 72 78	biopsy
+T5	Procedure 82 106	pathological examination
+T6	Procedure-Name 82 106	pathological examination
+T7	Or 79 81	or
+T8	Condition 123 128	tumor
+T9	Condition-Name 123 128	tumor
+T10	Modifier 114 122	resected
+T11	Condition 165 171	cancer
+T12	Condition-Name 165 171	cancer
+T13	Criteria-Count 200 213	the following
+T16	Condition 234 244	metastases
+T17	Condition-Name 234 244	metastases
+T18	Modifier 229 233	bone
+T19	Procedure 258 267	bone scan
+T20	Procedure-Name 258 267	bone scan
+T21	Procedure 273 282	Bone scan
+T22	Procedure-Name 273 282	Bone scan
+T23	Polarity 283 291	positive
+T24	Procedure 313 333	imaging examinations
+T25	Procedure-Name 313 333	imaging examinations
+T26	Other 307 312	other
+T27	And 293 296	and
+T28	Procedure 345 364	computed tomography
+T29	Procedure-Name 345 364	computed tomography
+T30	Procedure 366 368	CT
+T31	Procedure-Name 366 368	CT
+T32	Procedure 371 397	magnetic resonance imaging
+T33	Procedure-Name 371 397	magnetic resonance imaging
+T34	Procedure 399 402	MRI
+T35	Procedure-Name 399 402	MRI
+T36	Procedure 408 413	X-ray
+T37	Procedure-Name 408 413	X-ray
+T38	Or 404 407	and
+T39	Procedure 420 429	Bone scan
+T40	Procedure-Name 420 429	Bone scan
+T41	Polarity 430 438	positive
+T42	Condition 454 462	symptoms
+T43	Condition-Name 454 462	symptoms
+T44	Modifier 474 478	bone
+T45	Condition 479 483	pain
+T46	Condition-Name 479 483	pain
+T47	Condition 485 504	pathologic fracture
+T48	Condition-Name 485 504	pathologic fracture
+T49	Condition 506 529	spinal cord compression
+T50	Condition-Name 506 529	spinal cord compression
+T51	And 440 444	with
+T52	Condition 551 561	metastases
+T53	Condition-Name 551 561	metastases
+T54	Modifier 546 550	Bone
+T55	Procedure 575 581	PET-CT
+T56	Procedure-Name 575 581	PET-CT
+T57	Condition 614 624	metastases
+T58	Modifier 609 613	bone
+T59	Condition-Name 614 624	metastases
+T60	Condition 656 666	metastases
+T61	Condition-Name 656 666	metastases
+T62	Modifier 651 655	bone
+T63	Negation 648 650	No
+T64	Procedure 680 704	pathological examination
+T65	Procedure-Name 680 704	pathological examination
+T66	Condition 714 724	metastases
+T67	Condition-Name 714 724	metastases
+T68	Modifier 709 713	Bone
+T69	Condition 744 759	malignant tumor
+T70	Condition-Name 744 759	malignant tumor
+T71	Other 738 743	other
+T73	Condition 778 784	cancer
+T74	Condition-Name 778 784	cancer
+T75	Exception 760 770	other than
+T76	Condition 807 812	tumor
+T77	Condition-Name 807 812	tumor
+T78	Modifier 789 806	Secondary primary
+T79	Procedure 23 37	Histologically
+T80	Procedure-Name 23 37	Histologically
+T81	Modifier 45 51	breast
+T14	Modifier 158 164	breast
+T15	Procedure 133 147	Histologically
+T82	Procedure-Name 133 147	Histologically
+T83	Eq-Comparison 220 228	Multiple
+T84	Eq-Operator 220 228	Multiple
+T85	Procedure 587 601	Histologically
+T86	Procedure-Name 587 601	Histologically
+T72	Modifier 771 777	breast
+A2	Polarity-Value T23 positive
+A3	Polarity-Value T41 positive
+A1	Eq-Operator-Value T84 GT
+R1	Found-By Arg1:E1 Arg2:E2
+R2	Using Arg1:E5 Arg2:E3
+R3	Found-By Arg1:E10 Arg2:E12
+R4	Example-Of Arg1:E17 Arg2:E14
+R5	Abbrev-Of Arg1:E18 Arg2:E17
+R6	Example-Of Arg1:E19 Arg2:E14
+R7	Abbrev-Of Arg1:E20 Arg2:E19
+R8	Example-Of Arg1:E21 Arg2:E14
+R9	Example-Of Arg1:E26 Arg2:E24
+R10	Example-Of Arg1:E27 Arg2:E24
+R11	Example-Of Arg1:E28 Arg2:E24
+R12	Found-By Arg1:E30 Arg2:E32
+R13	Found-By Arg1:E35 Arg2:E38
+R14	Found-By Arg1:E1 Arg2:E3
+R15	Found-By Arg1:E1 Arg2:E48
+R16	Found-By Arg1:E7 Arg2:E50
+R17	Found-By Arg1:E33 Arg2:E52
+R18	Caused-By Arg1:E39 Arg2:E41

@@ -1,0 +1,137 @@
+E1	Eq-Comparison:T1 Temporal-Period:T37
+E2	Procedure:T2 Name:T38 Temporality:E1
+E3	Procedure:T3 Name:T39
+E4	And:T4 Arg:E3 Arg2:E7
+E5	Or:T5 Arg:E4 Arg2:E6
+E7	Procedure:T7 Name:T40
+E8	Procedure:T8 Name:T41
+E9	Condition:T9 Name:T42 Stage:E10
+E10	Eq-Comparison:T10 Operator:T43 Value:T65
+E11	Observation:T11 Name:T44
+E12	Condition:T12 Name:T45
+E13	Condition:T13 Name:T46
+E14	Condition:T14 Name:T47
+E15	Or:T15 Arg:E14 Arg2:E16
+E16	Condition:T16 Name:T48
+E17	Temporal-Connection:T17 Arg:E39 Arg2:E18
+E18	Condition:T18 Name:T51
+E19	Observation:T19 Name:T52 Eq-Comparison:E20
+E20	Eq-Comparison:T20 Operator:T53 Value:T54
+E22	Condition:T22 Name:T55
+E23	Modifier:T23 Modifies:E24
+E24	Procedure:T24 Temporality:E40
+E25	Modifier:T25 Modifies:T58
+E26	Procedure:T26 Name:T58
+E27	Condition:T27 Name:T59
+E28	Modifier:T28 Modifies:T60
+E29	Condition:T29 Name:T60
+E30	Or:T30 Arg:E29 Arg2:E32
+E31	Modifier:T31 Modifies:T61
+E32	Procedure:T32 Name:T61
+E33	Condition:T33 Name:T62
+E34	Assertion:T34 Asserted:T63
+E35	Condition:T35 Name:T64 Stability:T63
+E6	Negation:T6 Negates:E7
+E36	Negation:T67 Negates:T66
+E37	Observation:T68 Name:T69
+E38	Observation:T70 Name:T71
+E39	Procedure:T72 Name:T73
+E21	Drug:T21 Name:T74
+E40	Eq-Comparison:T75 Temporal-Period:T56
+E41	Drug:T57 Name:T76
+T1	Eq-Comparison 94 104	undergoing
+T2	Procedure 105 135	coronary artery bypass surgery
+T3	Procedure 141 144	CEC
+T4	And 146 150	with
+T5	Or 151 153	or
+T7	Procedure 162 175	valve surgery
+T8	Procedure 180 190	sternotomy
+T9	Condition 197 200	ASA
+T10	Eq-Comparison 201 203	<4
+T11	Observation 315 331	legal protection
+T12	Condition 392 412	mentally incompetent
+T13	Condition 418 426	Pregnant
+T14	Condition 428 438	parturient
+T15	Or 439 441	or
+T16	Condition 442 455	breastfeeding
+T17	Temporal-Connection 530 533	pre
+T18	Condition 543 564	cognitive dysfunction
+T19	Observation 566 569	MMS
+T20	Eq-Comparison 570 573	<13
+T22	Condition 616 627	intolerance
+T23	Modifier 645 654	long-term
+T24	Procedure 662 671	treatment
+T25	Modifier 678 687	Emergency
+T26	Procedure 688 695	surgery
+T27	Condition 702 713	Eye disease
+T28	Modifier 715 722	corneal
+T29	Condition 723 729	injury
+T30	Or 731 733	or
+T31	Modifier 734 741	wearing
+T32	Procedure 742 756	contact lenses
+T33	Condition 760 780	neurological disease
+T34	Assertion 786 789	can
+T35	Condition 804 820	pupillary reflex
+T36	Life-Stage-And-Gender 67 72	Adult
+T37	Eq-Temporal-Period 94 104	undergoing
+T38	Procedure-Name 105 135	coronary artery bypass surgery
+T39	Procedure-Name 141 144	CEC
+T40	Procedure-Name 162 175	valve surgery
+T41	Procedure-Name 180 190	sternotomy
+T42	Condition-Name 197 200	ASA
+T43	Eq-Operator 201 202	<
+T44	Observation-Name 315 331	legal protection
+T45	Condition-Name 392 412	mentally incompetent
+T46	Condition-Name 418 426	Pregnant
+T47	Condition-Name 428 438	parturient
+T48	Condition-Name 442 455	breastfeeding
+T49	Life-Stage-And-Gender 456 461	woman
+T50	Life-Stage-And-Gender 467 472	Adult
+T51	Condition-Name 543 564	cognitive dysfunction
+T52	Observation-Name 566 569	MMS
+T53	Eq-Operator 570 571	<
+T54	Eq-Value 571 573	13
+T55	Condition-Name 616 627	intolerance
+T56	Eq-Temporal-Period 642 644	on
+T58	Procedure-Name 688 695	surgery
+T59	Condition-Name 702 713	Eye disease
+T60	Condition-Name 723 729	injury
+T61	Procedure-Name 742 756	contact lenses
+T62	Condition-Name 760 780	neurological disease
+T63	Stability 790 799	influence
+T64	Condition-Name 804 820	pupillary reflex
+T6	Negation 154 161	without
+T65	Eq-Value 202 203	4
+T66	Insurance 259 284	national health insurance
+T67	Negation 237 240	not
+T68	Observation 333 344	curatorship
+T69	Observation-Name 333 344	curatorship
+T70	Observation 346 358	guardianship
+T71	Observation-Name 346 358	guardianship
+T72	Procedure 533 542	operative
+T73	Procedure-Name 533 542	operative
+T21	Drug 607 615	morphine
+T74	Drug-Name 607 615	morphine
+T75	Eq-Comparison 642 644	on
+T57	Drug 655 661	opioid
+T76	Drug-Name 655 661	opioid
+A1	Temporal-Connection-Type-Value E17 before
+A2	Assertion-Type-Value E34 hypothetical
+A3	Life-Stage-And-Gender-Type T36 adult
+A4	Eq-Temporal-Period-Value T37 present
+A5	Eq-Operator-Value T43 LT
+A6	Life-Stage-And-Gender-Type T49 female
+A7	Life-Stage-And-Gender-Type T50 adult
+A8	Observation-Type-Value T52 clinical-score
+A9	Eq-Operator-Value T53 LT
+A10	Eq-Temporal-Period-Value T56 present
+A11	Stability-Value T63 change
+R1	Using Arg1:E2 Arg2:E3
+R2	Using Arg1:E7 Arg2:E8
+R3	Equivalent-To Arg1:E37 Arg2:E11
+R4	Equivalent-To Arg1:E38 Arg2:E11
+R5	If-Then Arg1:E16 Arg2:T49
+R6	Equivalent-To Arg1:E19 Arg2:E18
+R7	Caused-By Arg1:E22 Arg2:E21
+R8	Using Arg1:E24 Arg2:E41
+R9	Caused-By Arg1:T63 Arg2:E33

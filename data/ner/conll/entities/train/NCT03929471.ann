@@ -1,0 +1,144 @@
+E2	Procedure:T2 Name:T3 Duration:E23
+E6	Condition:T6 Name:T7
+E8	Condition:T8 Name:T9
+E10	Condition:T10 Name:T11
+E12	Condition:T12 Name:T13
+E14	Procedure:T14 Name:T15
+E16	Procedure:T16 Name:T17
+E19	Eq-Comparison:T37 Operator:T20 Temporal-Unit:T25 Value:T30
+E20	Eq-Comparison:T38 Operator:T21 Temporal-Unit:T27 Value:T34
+E21	Eq-Comparison:T39 Operator:T22 Value:T35 Unit:T56
+E22	Eq-Comparison:T40 Operator:T29 Value:T31 Value2:T32 Per:T44
+E1	Age:T41 Eq-Comparison:E19
+E3	Encounter:T42 Type:T43
+E5	Procedure:T45 Name:T46 Minimum-Count:E22 Temporality:E7 Duration:E9
+E7	Eq-Comparison:T47 Temporal-Period:T48
+E9	Eq-Comparison:T49 Operator:T50 Temporal-Unit:T26 Value:T33
+E11	Observation:T51 Name:T52 Eq-Comparison:E20
+E13	And:T53 Arg:E5 Arg2:E11
+E15	Observation:T54 Name:T55 Eq-Comparison:E21
+E17	Condition:T57 Stability:T58
+E23	Eq-Comparison:T59 Operator:T60 Temporal-Unit:T61 Value:T36
+E4	Coreference:T4 Refers-To:E5
+E24	Or:T5 Arg:E6 Arg2:E8
+E25	Condition:T62 Severity:T65
+E26	Condition:T63 Name:T64
+E27	Modifier:T66
+E28	Procedure:T67 Name:T68 Temporality:E30
+E29	Study:T69
+E30	Eq-Comparison:T70 Operator:T23 Value:T71 Temporal-Unit:T28
+E31	Temporal-Connection:T72 Arg:E30 Arg2:E29
+E32	Modifier:T73 Modifies:T15
+E18	Temporal-Connection:T18 Arg:E35 Arg2:E33
+E33	Study:T19
+E34	Other:T24 Is-Other:T74
+E35	Observation:T75 Name:T76 Location:T74
+E36	Or:T77 Arg:E16 Arg2:E35
+E37	Assertion:T78 Asserted:E16
+E38	Condition:T79 Name:T80
+T1	Life-Stage-And-Gender 25 30	Adult
+T2	Procedure 233 241	dialysis
+T3	Procedure-Name 233 241	dialysis
+T6	Condition 280 289	Pregnancy
+T7	Condition-Name 280 289	Pregnancy
+T8	Condition 293 302	lactation
+T9	Condition-Name 293 302	lactation
+T10	Condition 360 381	cognitive dysfunction
+T11	Condition-Name 360 381	cognitive dysfunction
+T12	Condition 447 459	tuberculosis
+T13	Condition-Name 447 459	tuberculosis
+T14	Procedure 535 543	dialysis
+T15	Procedure-Name 535 543	dialysis
+T16	Procedure 595 605	transplant
+T17	Procedure-Name 595 605	transplant
+T20	Eq-Operator 32 33	>
+T21	Eq-Operator 137 138	>
+T22	Eq-Operator 168 169	≥
+T23	Eq-Operator 484 490	within
+T25	Eq-Temporal-Unit 36 41	years
+T26	Eq-Temporal-Unit 108 113	weeks
+T27	Eq-Temporal-Unit 140 146	months
+T28	Eq-Temporal-Unit 495 500	weeks
+T29	Eq-Operator 63 64	-
+T30	Eq-Value 33 35	18
+T31	Eq-Value 62 63	3
+T32	Eq-Value 64 65	4
+T33	Eq-Value 106 107	6
+T34	Eq-Value 138 139	6
+T35	Eq-Value 169 172	1.1
+T36	Eq-Value 222 223	3
+T37	Eq-Comparison 32 41	>18 years
+T38	Eq-Comparison 137 146	>6 months
+T39	Eq-Comparison 168 170	≥1
+T40	Eq-Comparison 62 80	3-4 times per week
+T41	Age 42 45	old
+T42	Encounter 47 58	outpatients
+T43	Encounter-Type 47 58	outpatients
+T44	Eq-Temporal-Unit 76 80	week
+T45	Procedure 81 83	HD
+T46	Procedure-Name 81 83	HD
+T47	Eq-Comparison 59 61	on
+T48	Eq-Temporal-Period 59 61	on
+T49	Eq-Comparison 97 113	at least 6 weeks
+T50	Eq-Operator 97 105	at least
+T51	Observation 121 136	life expectancy
+T52	Observation-Name 121 136	life expectancy
+T53	And 114 118	with
+T54	Observation 153 167	Fluid overload
+T55	Observation-Name 153 167	Fluid overload
+T56	Eq-Unit 172 173	L
+T57	Condition 180 189	Medically
+T58	Stability 190 196	stable
+T59	Eq-Comparison 211 229	Minimum of 3 hours
+T60	Eq-Operator 211 218	Minimum
+T61	Eq-Temporal-Unit 224 229	hours
+T4	Coreference 246 253	session
+T5	Or 290 292	or
+T62	Condition 414 427	Comorbidities
+T63	Condition 429 445	malignant tumour
+T64	Condition-Name 429 445	malignant tumour
+T65	Severity 393 399	Severe
+T66	Modifier 400 413	life-limiting
+T67	Procedure 476 483	Surgery
+T68	Procedure-Name 476 483	Surgery
+T69	Study 508 513	study
+T70	Eq-Comparison 484 500	within six weeks
+T71	Eq-Value 491 494	six
+T72	Temporal-Connection 501 503	of
+T73	Modifier 525 534	Nocturnal
+T18	Temporal-Connection 632 651	within the duration
+T19	Study 659 664	study
+T24	Other 617 624	another
+T74	Location 625 631	center
+T75	Observation 609 613	move
+T76	Observation-Name 609 613	move
+T77	Or 606 608	or
+T78	Assertion 573 581	expected
+T79	Condition 690 711	arteriovenous fistula
+T80	Condition-Name 690 711	arteriovenous fistula
+A1	Life-Stage-And-Gender-Type T1 adult
+A2	Eq-Operator-Value T20 GT
+A3	Eq-Operator-Value T21 GT
+A4	Eq-Operator-Value T22 GTEQ
+A5	Eq-Operator-Value T23 LTEQ
+A7	Eq-Temporal-Unit-Value T25 year
+A8	Eq-Temporal-Unit-Value T26 week
+A9	Eq-Temporal-Unit-Value T27 month
+A10	Eq-Temporal-Unit-Value T28 week
+A11	Eq-Operator-Value T29 BETWEEN
+A12	Encounter-Type-Value T43 outpatient
+A13	Eq-Temporal-Unit-Value T44 week
+A14	Eq-Temporal-Period-Value T48 present
+A15	Eq-Operator-Value T50 GTEQ
+A16	Observation-Type-Value T55 measurement
+A17	Stability-Value T58 stable
+A18	Eq-Operator-Value T60 GTEQ
+A19	Eq-Temporal-Unit-Value T61 hour
+A20	Severity-Value T65 severe
+A21	Temporal-Connection-Type-Value E31 before
+A6	Temporal-Connection-Type-Value E18 during
+A22	Assertion-Type-Value E37 hypothetical
+R1	Equivalent-To Arg1:E1 Arg2:T1
+R2	Abbrev-Of Arg1:E27 Arg2:E25
+R3	Example-Of Arg1:E26 Arg2:E25
+R4	Example-Of Arg1:E12 Arg2:E25

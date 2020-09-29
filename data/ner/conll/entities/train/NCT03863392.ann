@@ -1,0 +1,110 @@
+E1	Condition:T1 Name:T31
+E2	Or:T2 Arg:E1 Arg2:E3
+E3	Condition:T3 Name:T32
+E4	Condition:T4 Name:T33
+E5	Eq-Comparison:T5 Operator:T34 Value:T35 Value:T36 Temporal-Unit:T37
+E6	Observation:T6 Name:T38 Eq-Comparison:E5
+E7	Condition:T7 Name:T39
+E8	Modifier:T8 Modifies:T39
+E9	Negation:T9 Negates:E11
+E10	Eq-Comparison:T10 Temporal-Period:T40
+E11	Procedure:T11 Name:T41 Temporality:E10
+E12	Condition:T12 Name:T55 Polarity:T56
+E13	Observation:T13 Name:T42 Eq-Comparison:E14
+E14	Eq-Comparison:T14 Operator:T43 Value:T44
+E15	Procedure:T15 Name:T45 Polarity:T60
+E16	Procedure:T16 Name:T46
+E17	Condition:T17 Name:T47
+E18	Or:T18 Arg:E17 Arg2:E19
+E19	Contraindication:T19 Contraindicates:E20
+E20	Drug:T20 Name:T48
+E21	Procedure:T21 Name:T49
+E22	Modifier:T22 Modifies:T50
+E23	Condition:T23 Name:T50
+E24	Assertion:T24 Asserted:E25
+E25	Procedure:T25 Name:T51
+E26	Modifier:T26 Modifies:T51
+E27	Or:T27 Arg:E26 Arg2:E28
+E28	Modifier:T28 Modifies:T51
+E29	Condition:T29 Name:T52
+E30	Procedure:T30 Name:T53 Polarity:T61
+E31	Modifier:T54 Modifies:T39
+E32	Modifier:T57 Modifies:T42
+E33	Modifier:T58 Modifies:T48
+E34	Condition:T59
+T1	Condition 25 37	Primigravida
+T2	Or 38 40	or
+T3	Condition 41 50	Primipara
+T4	Condition 56 65	Pregnancy
+T5	Eq-Comparison 66 89	between 36 and 42 weeks
+T6	Observation 93 102	gestation
+T7	Condition 116 131	singleton fetus
+T8	Modifier 135 156	cephalic presentation
+T9	Negation 163 165	No
+T10	Eq-Comparison 166 173	history
+T11	Procedure 177 192	uterine surgery
+T12	Condition 219 225	pelvis
+T13	Observation 241 255	Bishop's score
+T14	Eq-Comparison 256 258	<5
+T15	Procedure 274 289	Non stress test
+T16	Procedure 291 294	NST
+T17	Condition 330 346	hypersensitivity
+T18	Or 347 349	or
+T19	Contraindication 350 367	contraindications
+T20	Drug 376 387	misoprostol
+T21	Procedure 389 404	uterine surgery
+T22	Modifier 421 430	antenatal
+T23	Condition 439 452	complications
+T24	Assertion 476 485	requiring
+T25	Procedure 486 490	LSCS
+T26	Modifier 492 500	Maternal
+T27	Or 501 503	or
+T28	Modifier 504 509	Fetal
+T29	Condition 515 529	fetal distress
+T30	Procedure 553 556	NST
+T31	Condition-Name 25 37	Primigravida
+T32	Condition-Name 41 50	Primipara
+T33	Condition-Name 56 65	Pregnancy
+T34	Eq-Operator 66 73	between
+T35	Eq-Value 74 76	36
+T36	Eq-Value 81 83	42
+T37	Eq-Temporal-Unit 84 89	weeks
+T38	Observation-Name 93 102	gestation
+T39	Condition-Name 116 131	singleton fetus
+T40	Eq-Temporal-Period 166 173	history
+T41	Procedure-Name 177 192	uterine surgery
+T42	Observation-Name 241 255	Bishop's score
+T43	Eq-Operator 256 257	<
+T44	Eq-Value 257 258	5
+T45	Procedure-Name 274 289	Non stress test
+T46	Procedure-Name 291 294	NST
+T47	Condition-Name 330 346	hypersensitivity
+T48	Drug-Name 376 387	misoprostol
+T49	Procedure-Name 389 404	uterine surgery
+T50	Condition-Name 439 452	complications
+T51	Procedure-Name 486 490	LSCS
+T52	Condition-Name 515 529	fetal distress
+T53	Procedure-Name 553 556	NST
+T54	Modifier 111 115	live
+T55	Condition-Name 219 225	pelvis
+T56	Polarity 210 218	adequate
+T57	Modifier 232 240	Modified
+T58	Modifier 371 375	oral
+T59	Condition 466 475	situation
+T60	Polarity 265 273	Reactive
+T61	Polarity 540 552	Non-reactive
+A1	Assertion-Type-Value E24 hypothetical
+A2	Eq-Operator-Value T34 BETWEEN
+A3	Eq-Temporal-Unit-Value T37 week
+A4	Eq-Temporal-Period-Value T40 past
+A5	Eq-Operator-Value T43 LT
+A6	Observation-Type-Value T38 measurement
+A7	Polarity-Value T56 normal
+A8	Observation-Type-Value T42 clinical-score
+A9	Polarity-Value T60 reactive
+A10	Polarity-Value T61 non-reactive
+R1	Abbrev-Of Arg1:E16 Arg2:E15
+R2	Example-Of Arg1:E21 Arg2:E19
+R3	Caused-By Arg1:E17 Arg2:E20
+R4	Treatment-For Arg1:E25 Arg2:E34
+R5	Example-Of Arg1:E29 Arg2:E34

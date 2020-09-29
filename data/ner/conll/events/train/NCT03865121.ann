@@ -1,0 +1,118 @@
+E1	Eq-Comparison:T1 Operator:T33 Value:T34 Temporal-Unit:T35
+E2	Age:T2 Eq-Comparison:E1
+E3	And:T3 Arg:E2 Arg2:E4
+E4	Condition:T4 Name:T36
+E5	Eq-Comparison:T5 Value:T54 Operator:T55 Value2:T56
+E9	Negation:T9 Negates:E10
+E10	Condition:T10 Name:T38
+E11	Temporal-Connection:T11 Arg:E10 Arg2:E7
+E13	Negation:T13 Negates:E15
+E14	Eq-Comparison:T14 Temporal-Period:T40
+E15	Condition:T15 Name:T41 Temporality:E14
+E16	Negation:T16 Negates:E8
+E18	Negation:T18 Negates:E12
+E19	Eq-Comparison:T19 Temporal-Period:T43
+E20	Drug:T20 Name:T44
+E21	Assertion:T21 Asserted:E22
+E22	Drug:T22 Name:T45
+E23	Assertion:T23 Asserted:E17
+E24	Eq-Comparison:T24 Temporal-Period:T46
+E25	Procedure:T25 Temporality:E24
+E26	Drug:T26 Name:T47 Stability:T48
+E27	Negation:T27 Negates:E34
+E28	Eq-Comparison:T28 Temporal-Period:T49
+E29	Drug:T29 Name:T51
+E30	Negation:T30 Negates:E35
+E31	Condition:T31 Name:T52
+E32	Death:T32
+E33	Coreference:T53 Refers-To:E4 Stage:E5
+E6	Modifier:T6 Modifies:E33
+E7	Eq-Comparison:T7 Temporal-Period:T8
+E8	Observation:T12 Name:T42 Polarity:T17
+E12	Condition:T37 Name:T39 Temporality:E19
+E17	Study:T58
+E34	Procedure:T50 Temporality:E28
+E35	Encounter:T59
+E36	Assertion:T60 Asserted:E30
+E37	Drug:T61
+T1	Eq-Comparison 34 47	over 60 years
+T2	Age 51 54	age
+T3	And 55 59	with
+T4	Condition 84 103	Parkinson's disease
+T5	Eq-Comparison 131 134	2-3
+T9	Negation 158 161	Not
+T10	Condition 162 180	exposed to tobacco
+T11	Temporal-Connection 181 187	during
+T13	Negation 217 219	No
+T14	Eq-Comparison 220 227	history
+T15	Condition 231 244	lung diseases
+T16	Negation 250 252	No
+T18	Negation 283 285	No
+T19	Eq-Comparison 286 293	history
+T20	Drug 318 326	nicotine
+T21	Assertion 332 339	Able to
+T22	Drug 344 364	nicotine nasal spray
+T23	Assertion 395 402	able to
+T24	Eq-Comparison 431 444	Under current
+T25	Procedure 445 454	treatment
+T26	Drug 460 468	levodopa
+T27	Negation 491 494	Not
+T28	Eq-Comparison 495 514	currently receiving
+T29	Drug 517 544	monoamine oxidase inhibitor
+T30	Negation 579 585	Unable
+T31	Condition 627 643	adverse reaction
+T32	Death 649 654	Death
+T33	Eq-Operator 34 38	over
+T34	Eq-Value 39 41	60
+T35	Eq-Temporal-Unit 42 47	years
+T36	Condition-Name 84 103	Parkinson's disease
+T38	Condition-Name 162 180	exposed to tobacco
+T40	Eq-Temporal-Period 220 227	history
+T41	Condition-Name 231 244	lung diseases
+T42	Observation-Name 253 263	laboratory
+T43	Eq-Temporal-Period 286 293	history
+T44	Drug-Name 318 326	nicotine
+T45	Drug-Name 344 364	nicotine nasal spray
+T46	Eq-Temporal-Period 431 444	Under current
+T47	Drug-Name 460 468	levodopa
+T48	Stability 474 480	stable
+T49	Eq-Temporal-Period 495 514	currently receiving
+T51	Drug-Name 517 544	monoamine oxidase inhibitor
+T52	Condition-Name 627 643	adverse reaction
+T53	Coreference 119 130	the disease
+T54	Eq-Value 131 132	2
+T55	Eq-Operator 132 133	-
+T56	Eq-Value 133 134	3
+T6	Modifier 138 152	Hoehn and Yahr
+T7	Eq-Comparison 188 211	any stage of their life
+T8	Eq-Temporal-Period 188 211	any stage of their life
+T12	Observation 253 263	laboratory
+T17	Polarity 264 277	abnormalities
+T37	Condition 297 314	adverse reactions
+T39	Condition-Name 297 314	adverse reactions
+T57	Location 383 394	Mexico City
+T58	Study 414 425	evaluations
+T50	Procedure 545 554	treatment
+T59	Encounter 598 607	follow-up
+T60	Assertion 579 585	Unable
+T61	Drug 622 626	Drug
+A1	Temporal-Connection-Type-Value E11 during
+A2	Assertion-Type-Value E21 hypothetical
+A3	Assertion-Type-Value E23 hypothetical
+A4	Eq-Operator-Value T33 GT
+A5	Eq-Temporal-Unit-Value T35 year
+A6	Eq-Temporal-Period-Value T40 past
+A7	Eq-Temporal-Period-Value T43 past
+A8	Eq-Temporal-Period-Value T46 present
+A9	Stability-Value T48 stable
+A10	Eq-Temporal-Period-Value T49 present
+A12	Eq-Operator-Value T55 BETWEEN
+A13	Eq-Temporal-Period-Value T8 anytime
+A14	Observation-Type-Value T42 lab
+A15	Polarity-Value T17 abnormal
+A16	Location-Value T57 residence
+A11	Assertion-Type-Value E36 hypothetical
+R1	Caused-By Arg1:E12 Arg2:E20
+R2	Using Arg1:E25 Arg2:E26
+R3	Using Arg1:E34 Arg2:E29
+R4	Caused-By Arg1:E31 Arg2:E37

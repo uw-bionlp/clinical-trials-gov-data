@@ -1,0 +1,83 @@
+E1	Procedure:T1 Name:T2
+E2	Age:T9 Eq-Comparison:E4
+E3	Age:T10 Eq-Comparison:E15
+E4	Eq-Comparison:T16 Operator:T4 Temporal-Unit:T8 Value:T11
+E5	Eq-Comparison:T17 Operator:T5 Value:T12 Unit:T26
+E6	Eq-Comparison:T18 Operator:T6 Value:T13 Unit:T29
+E7	Eq-Comparison:T19 Operator:T7 Value:T14
+E8	Condition:T20 Name:T21
+E9	Modifier:T22 Modifies:T21
+E10	Modifier:T23 Modifies:T21
+E11	Observation:T24 Name:T25 Eq-Comparison:E5
+E12	Observation:T27 Name:T28 Eq-Comparison:E6
+E13	Observation:T30 Name:T31 Eq-Comparison:E7
+E14	Condition:T33 Name:T34
+E15	Eq-Comparison:T35 Operator:T36 Value:T15
+E16	Condition:T37 Name:T38
+E17	Modifier:T39 Modifies:T38
+E18	Condition:T40 Name:T41
+E19	Modifier:T42 Modifies:T41
+E20	Condition:T43 Name:T44
+E21	Modifier:T45 Modifies:T44
+E22	Condition:T46 Name:T47
+E23	Assertion:T48 Asserted:E1
+T1	Procedure 460 469	reduction
+T2	Procedure-Name 460 469	reduction
+T3	Life-Stage-And-Gender 296 304	Children
+T4	Eq-Operator 19 20	>
+T5	Eq-Operator 113 114	<
+T6	Eq-Operator 143 144	<
+T7	Eq-Operator 150 151	<
+T8	Eq-Temporal-Unit 24 29	years
+T9	Age 15 18	Age
+T10	Age 315 318	age
+T11	Eq-Value 21 23	18
+T12	Eq-Value 114 116	10
+T13	Eq-Value 144 145	5
+T14	Eq-Value 151 152	2
+T15	Eq-Value 322 324	18
+T16	Eq-Comparison 19 29	> 18 years
+T17	Eq-Comparison 113 117	<10°
+T18	Eq-Comparison 143 147	<5mm
+T19	Eq-Comparison 150 154	<2mm
+T20	Condition 47 55	fracture
+T21	Condition-Name 47 55	fracture
+T22	Modifier 36 46	Unilateral
+T23	Modifier 59 93	distal radius without misalignment
+T24	Observation 95 112	dorsal angulation
+T25	Observation-Name 95 112	dorsal angulation
+T26	Eq-Unit 116 117	°
+T27	Observation 119 142	axial radial shortening
+T28	Observation-Name 119 142	axial radial shortening
+T29	Eq-Unit 145 147	mm
+T30	Observation 155 177	intraarticular stepoff
+T31	Observation-Name 155 177	intraarticular stepoff
+T32	Eq-Unit 152 154	mm
+T33	Condition 184 195	Independent
+T34	Condition-Name 184 195	Independent
+T35	Eq-Comparison 305 324	under the age of 18
+T36	Eq-Operator 305 310	under
+T37	Condition 331 339	Fracture
+T38	Condition-Name 331 339	Fracture
+T39	Modifier 347 364	contralateral arm
+T40	Condition 377 386	fractures
+T41	Condition-Name 377 386	fractures
+T42	Modifier 394 409	ipsilateral arm
+T43	Condition 421 430	fractures
+T44	Condition-Name 421 430	fractures
+T45	Modifier 416 420	Open
+T46	Condition 437 446	Fractures
+T47	Condition-Name 437 446	Fractures
+T48	Assertion 452 459	require
+A1	Life-Stage-And-Gender-Type T3 child
+A2	Eq-Operator-Value T4 GT
+A3	Eq-Operator-Value T5 LT
+A4	Eq-Operator-Value T6 LT
+A5	Eq-Operator-Value T7 LT
+A6	Eq-Temporal-Unit-Value T8 year
+A7	Observation-Type-Value T25 measurement
+A8	Observation-Type-Value T28 measurement
+A9	Eq-Operator-Value T36 LT
+A10	Assertion-Type-Value E23 hypothetical
+R1	Equivalent-To Arg1:E11 Arg2:E8
+R2	Treatment-For Arg1:E1 Arg2:E22

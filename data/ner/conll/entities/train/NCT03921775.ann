@@ -1,0 +1,136 @@
+E1	Procedure:T1 Name:T2 Temporality:E7
+E3	Procedure:T3 Name:T4
+E5	Condition:T5 Name:T6 Temporality:E17
+E9	Observation:T9 Name:T10 Eq-Comparison:E8
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E2	Eq-Comparison:T24 Temporal-Unit:T16 Value:T20 Operator:T25 Value2:T26
+E4	Age:T27 Eq-Comparison:E2
+E6	Or:T28 Arg:T7 Arg2:T8
+E7	Eq-Comparison:T29 Temporal-Period:T30
+E8	Eq-Comparison:T32 Value:T31 Value2:T21 Unit:T19 Operator:T33 Per:T34
+E10	Procedure:T35 Name:T36 Temporality:E12
+E12	Eq-Comparison:T37 Temporal-Period:T38
+E14	Condition:T39 Name:T40 Temporality:E34
+E15	Or:T41 Arg:E14 Arg2:E5
+E16	Study:T42
+E17	Eq-Comparison:T43 Temporal-Unit:T17 Value:T22
+E18	Temporal-Connection:T44 Arg:E17 Arg2:E16
+E19	Observation:T45 Name:T46
+E20	Observation:T47 Name:T48
+E21	Observation:T49 Name:T50
+E22	Observation:T51 Name:T70
+E23	Condition:T52 Name:T53
+E24	Or:T55 Arg:T54 Arg2:E11
+E25	Allergy:T56 Name:E26
+E26	Drug:T57
+E27	Study:T58
+E28	Condition:T59 Name:T60 Stage:E36
+E29	Study:T61 Temporality:E31
+E30	Other:T62 Is-Other:E29
+E31	Eq-Comparison:T63 Temporal-Unit:T18 Operator:T15 Value:T23
+E32	Study:T64
+E33	Temporal-Connection:T65 Arg:E31 Arg2:E32
+E34	Eq-Comparison:T66 Temporal-Period:T67
+E35	Procedure:T68 Name:T69
+E36	Eq-Comparison:T71 Unit:T72 Value:T73
+T1	Procedure 84 111	elective surgical procedure
+T2	Procedure-Name 84 111	elective surgical procedure
+T3	Procedure 112 134	mechanical ventilation
+T4	Procedure-Name 112 134	mechanical ventilation
+T5	Condition 403 416	alcohol abuse
+T6	Condition-Name 403 416	alcohol abuse
+T7	Life-Stage-And-Gender 38 44	female
+T8	Life-Stage-And-Gender 48 52	male
+T9	Observation 163 166	BMI
+T10	Observation-Name 163 166	BMI
+T11	Condition 627 636	lactation
+T12	Condition-Name 627 636	lactation
+T13	Condition 704 739	respiratory management difficulties
+T14	Condition-Name 704 739	respiratory management difficulties
+T15	Eq-Operator 827 833	within
+T16	Eq-Temporal-Unit 31 36	years
+T17	Eq-Temporal-Unit 419 424	years
+T18	Eq-Temporal-Unit 840 846	months
+T19	Eq-Unit 174 176	kg
+T20	Eq-Value 25 27	18
+T21	Eq-Value 168 170	18
+T22	Eq-Value 417 418	2
+T23	Eq-Value 838 839	3
+T24	Eq-Comparison 25 36	18~60 years
+T25	Eq-Operator 27 28	~
+T26	Eq-Value 28 30	60
+T27	Age 31 36	years
+T28	Or 45 47	or
+T29	Eq-Comparison 67 76	scheduled
+T30	Eq-Temporal-Period 67 76	scheduled
+T31	Eq-Value 171 173	30
+T32	Eq-Comparison 168 179	18~30 kg/m2
+T33	Eq-Operator 170 171	~
+T34	Eq-Unit 177 179	m2
+T35	Procedure 333 350	emergency surgery
+T36	Procedure-Name 333 350	emergency surgery
+T37	Eq-Comparison 319 328	scheduled
+T38	Eq-Temporal-Period 319 328	scheduled
+T39	Condition 383 393	drug abuse
+T40	Condition-Name 383 393	drug abuse
+T41	Or 394 402	and / or
+T42	Study 438 447	screening
+T43	Eq-Comparison 417 424	2 years
+T44	Temporal-Connection 425 430	prior
+T45	Observation 542 550	platelet
+T46	Observation-Name 542 550	platelet
+T47	Observation 551 561	hemoglobin
+T48	Observation-Name 551 561	hemoglobin
+T49	Observation 562 588	aspartate aminotransferase
+T50	Observation-Name 562 588	aspartate aminotransferase
+T51	Observation 479 498	laboratory findings
+T52	Condition 600 608	Pregnant
+T53	Condition-Name 600 608	Pregnant
+T54	Life-Stage-And-Gender 609 614	women
+T55	Or 615 617	or
+T56	Allergy 649 657	Allergic
+T57	Drug 661 666	drugs
+T58	Study 679 684	study
+T59	Condition 741 760	Modified Mallampati
+T60	Condition-Name 741 760	Modified Mallampati
+T61	Study 812 826	clinical trial
+T62	Other 806 811	other
+T63	Eq-Comparison 827 846	within the 3 months
+T64	Study 856 869	randomization
+T65	Temporal-Connection 847 852	prior
+T66	Eq-Comparison 372 379	history
+T67	Eq-Temporal-Period 372 379	history
+T68	Procedure 139 156	endotracheal tube
+T69	Procedure-Name 139 156	endotracheal tube
+T70	Observation-Name 479 498	laboratory findings
+T71	Eq-Comparison 761 769	grade IV
+T72	Eq-Unit 761 766	grade
+T73	Eq-Value 767 769	IV
+A1	Life-Stage-And-Gender-Type T7 female
+A2	Life-Stage-And-Gender-Type T8 male
+A3	Observation-Type-Value T10 vital
+A4	Eq-Operator-Value T15 LTEQ
+A5	Eq-Temporal-Unit-Value T16 year
+A6	Eq-Temporal-Unit-Value T17 year
+A7	Eq-Temporal-Unit-Value T18 month
+A8	Eq-Operator-Value T25 BETWEEN
+A9	Eq-Temporal-Period-Value T30 future
+A10	Eq-Operator-Value T33 BETWEEN
+A11	Eq-Temporal-Period-Value T38 future
+A12	Temporal-Connection-Type-Value E18 before
+A13	Observation-Type-Value T46 lab
+A14	Observation-Type-Value T48 lab
+A15	Observation-Type-Value T50 lab
+A16	Life-Stage-And-Gender-Type T54 female
+A17	Temporal-Connection-Type-Value E33 before
+A18	Eq-Temporal-Period-Value T67 past
+A19	Observation-Type-Value T70 lab
+R1	Example-Of Arg1:E3 Arg2:E1
+R2	Example-Of Arg1:E19 Arg2:E22
+R3	Example-Of Arg1:E20 Arg2:E22
+R4	Example-Of Arg1:E21 Arg2:E22
+R5	If-Then Arg1:T54 Arg2:E23
+R6	Equivalent-To Arg1:E28 Arg2:E13
+R7	Using Arg1:E27 Arg2:E26
+R8	Using Arg1:E3 Arg2:E35

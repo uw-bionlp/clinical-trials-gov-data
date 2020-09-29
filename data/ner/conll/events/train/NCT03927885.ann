@@ -1,0 +1,209 @@
+E1	Condition:T1 Name:T2 Severity:T3
+E2	Modifier:T4 Modifies:T6
+E3	Condition:T5 Name:T6
+E4	Modifier:T7 Modifies:T6
+E5	Or:T8 Arg:E2 Arg2:E4
+E6	Condition:T9 Name:T10
+E7	Observation:T11 Name:T12 Eq-Comparison:E9
+E8	Observation:T13 Name:T14
+E9	Eq-Comparison:T15 Operator:T16 Value:T17 Per:T18
+E10	Condition:T19 Name:T20 Duration:E11
+E11	Eq-Comparison:T21 Operator:T22 Temporal-Unit:T24 Value:T23
+E12	Study:T25
+E13	Temporal-Connection:T26 Arg:E10 Arg2:E12
+E14	Condition:T27 Name:T28
+E15	Modifier:T29 Modifies:E14
+E16	Drug:T30 Name:T31 Temporality:E17 Stability:T43
+E17	Eq-Comparison:T32 Temporal-Period:T33
+E18	Condition:T34 Name:T35
+E19	Condition:T36 Name:T37
+E20	Procedure:T38
+E21	Eq-Comparison:T39 Operator:T40 Temporal-Unit:T42 Value:T41
+E22	Negation:T44 Negates:T43 Temporality:E21
+E25	Eq-Comparison:T47 Value:T48 Unit:T50 Operator:T49
+E24	Study:T45
+E26	Temporal-Connection:T46 Arg:E21 Arg2:E24
+E27	Drug:T51 Name:T52 Stability:T53
+E23	Study:T54
+E28	Temporal-Connection:T55 Arg:E27 Arg2:E23
+E29	Assertion:T56 Asserted:E27
+E30	Observation:T57 Name:T58 Eq-Comparison:E31
+E31	Eq-Comparison:T59 Operator:T60 Value:T61 Unit:T62 Per:T63
+E32	Procedure:T64 Name:T65
+E33	Procedure:T66 Name:T67
+E34	Modifier:T68 Modifies:T67
+E35	Assertion:T69 Asserted:E32
+E36	Observation:T70 Name:T71 Eq-Comparison:E37
+E37	Eq-Comparison:T72 Operator:T73 Value:T74 Unit:T75 Per:T76
+E38	Study:T77
+E39	Procedure:T78 Name:T79
+E40	Procedure:T80 Name:T81 Temporality:E45
+E41	Or:T82 Arg:E39 Arg2:E40
+E42	Study:T83
+E43	Study:T84
+E44	Temporal-Connection:T85 Arg:E43
+E45	Eq-Comparison:T86 Operator:T88 Temporal-Unit:T90 Value:T89
+E46	Temporal-Connection:T87 Arg:E45 Arg2:E42
+E47	Or:T91 Arg:E42 Arg2:E43
+E48	Condition:T92 Name:T93 Temporality:E56
+E49	Observation:T94 Name:T95
+E50	Observation:T96 Name:T97 Eq-Comparison:E51
+E51	Eq-Comparison:T98 Operator:T99 Value:T100
+E52	Condition:T101 Name:T102
+E53	Condition:T103 Name:T104
+E54	Condition:T105 Name:T106 Stage:E55
+E55	Eq-Comparison:T107 Operator:T108 Value:T109
+E56	Eq-Comparison:T110 Temporal-Period:T111
+E57	Assertion:T112 Asserted:E36
+T1	Condition 62 68	cancer
+T2	Condition-Name 62 68	cancer
+T3	Severity 53 61	advanced
+T4	Modifier 70 80	metastatic
+T5	Condition 104 116	solid tumors
+T6	Condition-Name 104 116	solid tumors
+T7	Modifier 84 103	recurrent incurable
+T8	Or 81 83	or
+T9	Condition 135 142	fatigue
+T10	Condition-Name 135 142	fatigue
+T11	Observation 157 191	Edmonton Symptom Assessment System
+T12	Observation-Name 157 191	Edmonton Symptom Assessment System
+T13	Observation 193 197	ESAS
+T14	Observation-Name 193 197	ESAS
+T15	Eq-Comparison 146 153	>= 4/10
+T16	Eq-Operator 146 148	>=
+T17	Eq-Value 149 150	4
+T18	Eq-Unit 151 153	10
+T19	Condition 263 270	fatigue
+T20	Condition-Name 263 270	fatigue
+T21	Eq-Comparison 294 312	minimum of 2 weeks
+T22	Eq-Operator 294 304	minimum of
+T23	Eq-Value 305 306	2
+T24	Eq-Temporal-Unit 307 312	weeks
+T25	Study 322 331	screening
+T26	Temporal-Connection 313 318	prior
+T27	Condition 350 354	pain
+T28	Condition-Name 350 354	pain
+T29	Modifier 337 349	Uncontrolled
+T30	Drug 370 377	opioids
+T31	Drug-Name 370 377	opioids
+T32	Eq-Comparison 367 369	on
+T33	Eq-Temporal-Period 367 369	on
+T34	Condition 406 410	pain
+T35	Condition-Name 406 410	pain
+T36	Condition 399 405	cancer
+T37	Condition-Name 399 405	cancer
+T38	Procedure 386 395	treatment
+T39	Eq-Comparison 466 483	at least 48 hours
+T40	Eq-Operator 466 474	at least
+T41	Eq-Value 475 477	48
+T42	Eq-Temporal-Unit 478 483	hours
+T44	Negation 433 435	no
+T47	Eq-Comparison 455 460	> 25%
+T48	Eq-Value 457 459	25
+T49	Eq-Operator 455 456	>
+T50	Eq-Unit 459 460	%
+T45	Study 493 498	study
+T46	Temporal-Connection 484 489	prior
+T51	Drug 516 522	opioid
+T52	Drug-Name 516 522	opioid
+T43	Stability 447 453	change
+T53	Stability 506 512	Change
+T54	Study 534 539	study
+T55	Temporal-Connection 528 533	after
+T56	Assertion 549 556	allowed
+T57	Observation 722 732	Hemoglobin
+T58	Observation-Name 722 732	Hemoglobin
+T59	Eq-Comparison 742 751	>= 9 g/dL
+T60	Eq-Operator 742 744	>=
+T61	Eq-Value 745 746	9
+T62	Eq-Unit 747 748	g
+T63	Eq-Unit 749 751	dL
+T64	Procedure 773 794	packed red blood cell
+T65	Procedure-Name 773 794	packed red blood cell
+T67	Procedure-Name 796 800	PRBC
+T66	Procedure 796 800	PRBC
+T68	Modifier 802 813	transfusion
+T69	Assertion 761 764	may
+T70	Observation 828 838	hemoglobin
+T71	Observation-Name 828 838	hemoglobin
+T72	Eq-Comparison 848 857	>= 9 g/dL
+T73	Eq-Operator 848 850	>=
+T74	Eq-Value 851 852	9
+T75	Eq-Unit 853 854	g
+T76	Eq-Unit 855 857	dL
+T77	Study 883 888	study
+T78	Procedure 914 921	Surgery
+T79	Procedure-Name 914 921	Surgery
+T80	Procedure 926 951	pain relieving procedures
+T81	Procedure-Name 926 951	pain relieving procedures
+T82	Or 923 925	or
+T83	Study 985 990	study
+T84	Study 1005 1010	study
+T85	Temporal-Connection 994 1000	during
+T86	Eq-Comparison 952 966	within 2 weeks
+T87	Temporal-Connection 967 969	of
+T88	Eq-Operator 952 958	within
+T89	Eq-Value 959 960	2
+T90	Eq-Temporal-Unit 961 966	weeks
+T91	Or 991 993	or
+T92	Condition 1048 1063	substance abuse
+T93	Condition-Name 1048 1063	substance abuse
+T94	Observation 1065 1102	Cut down, Annoyed, Guilty, Eye opener
+T95	Observation-Name 1065 1102	Cut down, Annoyed, Guilty, Eye opener
+T96	Observation 1104 1108	CAGE
+T97	Observation-Name 1104 1108	CAGE
+T98	Eq-Comparison 1110 1114	>= 2
+T99	Eq-Operator 1110 1112	>=
+T100	Eq-Value 1113 1114	2
+T101	Condition 1118 1138	cognitively impaired
+T102	Condition-Name 1118 1138	cognitively impaired
+T103	Condition 1140 1159	MD Anderson Symptom
+T104	Condition-Name 1140 1159	MD Anderson Symptom
+T105	Condition 1161 1165	MDAS
+T106	Condition-Name 1161 1165	MDAS
+T107	Eq-Comparison 1167 1170	> 7
+T108	Eq-Operator 1167 1168	>
+T109	Eq-Value 1169 1170	7
+T110	Eq-Comparison 1037 1044	history
+T111	Eq-Temporal-Period 1037 1044	history
+T112	Assertion 814 822	so as to
+A1	Severity-Value T3 severe
+A2	Eq-Operator-Value T16 GTEQ
+A3	Eq-Operator-Value T22 GTEQ
+A4	Eq-Temporal-Unit-Value T24 week
+A5	Temporal-Connection-Type-Value E13 before
+A6	Eq-Temporal-Period-Value T33 present
+A7	Eq-Operator-Value T40 GTEQ
+A8	Eq-Temporal-Unit-Value T42 hour
+A10	Eq-Operator-Value T49 GT
+A11	Temporal-Connection-Type-Value E26 before
+A9	Stability-Value T43 change
+A12	Stability-Value T53 change
+A13	Temporal-Connection-Type-Value E28 after
+A14	Assertion-Type-Value E29 hypothetical
+A15	Observation-Type-Value T58 lab
+A16	Eq-Operator-Value T60 GTEQ
+A17	Assertion-Type-Value E35 hypothetical
+A18	Eq-Operator-Value T73 GTEQ
+A19	Temporal-Connection-Type-Value E44 during
+A20	Temporal-Connection-Type-Value E46 after
+A21	Eq-Operator-Value T88 LTEQ
+A22	Eq-Temporal-Unit-Value T90 week
+A23	Eq-Operator-Value T99 GTEQ
+A24	Eq-Operator-Value T108 GT
+A25	Eq-Temporal-Period-Value T111 past
+A26	Assertion-Type-Value E57 hypothetical
+A27	Observation-Type-Value T95 survey-or-questionnaire
+R1	Equivalent-To Arg1:E3 Arg2:E1
+R2	Abbrev-Of Arg1:E8 Arg2:E7
+R3	Equivalent-To Arg1:E7 Arg2:E6
+R4	Using Arg1:E20 Arg2:E16
+R5	Caused-By Arg1:E18 Arg2:E19
+R6	Treatment-For Arg1:E20 Arg2:E18
+R7	Equivalent-To Arg1:E25 Arg2:T43
+R8	Abbrev-Of Arg1:E33 Arg2:E32
+R9	Caused-By Arg1:E36 Arg2:E33
+R10	Abbrev-Of Arg1:E50 Arg2:E49
+R11	Abbrev-Of Arg1:E54 Arg2:E53
+R12	Equivalent-To Arg1:E53 Arg2:E52
+R13	Equivalent-To Arg1:E49 Arg2:E48

@@ -1,0 +1,20 @@
+E1	Condition:T1 Name:T2
+E2	Assertion:T3 Asserted:E1
+E3	Procedure:T4 Name:T5
+E4	And:T6 Arg:E1 Arg2:E3
+E5	Procedure:T7 Name:T8
+E6	Modifier:T9 Modifies:T8
+E7	Modifier:T10 Modifies:T8
+E8	Or:T11 Arg:E7 Arg2:E6
+T1	Condition 39 45	stroke
+T2	Condition-Name 39 45	stroke
+T3	Assertion 46 54	symptoms
+T4	Procedure 67 83	CT brain imaging
+T5	Procedure-Name 67 83	CT brain imaging
+T6	And 55 58	who
+T7	Procedure 143 159	CT brain imaging
+T8	Procedure-Name 143 159	CT brain imaging
+T9	Modifier 132 142	incomplete
+T10	Modifier 124 128	poor
+T11	Or 129 131	or
+A1	Assertion-Type-Value E2 possible

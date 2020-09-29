@@ -1,0 +1,127 @@
+E1	Or:T1 Arg:T35 Arg2:T36
+E2	Age:T2 Eq-Comparison:E3
+E3	Eq-Comparison:T3 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
+E4	Observation:T4 Name:T41 Eq-Comparison:E5
+E5	Eq-Comparison:T5 Value:T42 Operator:T43 Value:T44 Unit:T45 Per:T46
+E6	Negation:T6 Negates:E8 Negates2:E10
+E7	Eq-Comparison:T7 Temporal-Period:T47
+E8	Drug:T8 Name:T48 Temporality:E7 Duration:E11
+E9	Or:T9 Arg:E8 Arg2:E10
+E10	Drug:T10 Name:T49 Duration:E11 Temporality:E7
+E11	Eq-Comparison:T11 Operator:T50 Value:T51 Temporal-Unit:T52
+E13	Or:T13 Arg:E12 Arg2:E14
+E14	Observation:T14 Name:T71
+E17	Study:T17
+E18	Eq-Comparison:T18 Unit:T56 Operator:T55 Value:T72
+E19	Eq-Comparison:T19 Operator:T57 Value:T58 Temporal-Unit:T59
+E20	Negation:T20 Negates:E21
+E21	Condition:T21 Name:T60
+E22	Condition:T22 Name:T61
+E23	Condition:T23 Name:T63 Polarity:T62
+E24	Or:T24 Arg:E21 Arg2:E26
+E25	Modifier:T25 Modifies:E26
+E26	Condition:T26 Name:T64
+E27	Condition:T27 Name:T65
+E28	Drug:T28 Name:T66
+E29	Or:T29 Arg:E28 Arg2:E30
+E30	Drug:T30 Name:T67
+E31	Eq-Comparison:T31 Temporal-Period:T68
+E32	Drug:T32 Name:T69 Temporality:E31
+E33	Exception:T33 Except:E34 From:E32
+E34	Drug:T34 Name:T70
+E12	Observation:T12 Name:T53
+E15	Observation:T15 Name:T16 Stability:T54 Eq-Comparison:E18 Duration:E19
+T1	Or 29 32	and
+T2	Age 39 43	aged
+T3	Eq-Comparison 44 55	18-70 years
+T4	Observation 61 64	BMI
+T5	Eq-Comparison 65 78	18.5-50 kg/m2
+T6	Negation 84 87	Not
+T7	Eq-Comparison 88 94	taking
+T8	Drug 95 106	antibiotics
+T9	Or 107 110	and
+T10	Drug 111 130	antimicrobial drugs
+T11	Eq-Comparison 135 156	at least three months
+T13	Or 185 188	and
+T14	Observation 189 198	sedentary
+T17	Study 248 253	study
+T18	Eq-Comparison 274 278	±5kg
+T19	Eq-Comparison 284 301	at least 6 months
+T20	Negation 326 328	No
+T21	Condition 329 344	cardiometabolic
+T22	Condition 351 364	heart disease
+T23	Condition 371 385	blood pressure
+T24	Or 387 389	or
+T25	Modifier 390 402	inflammatory
+T26	Condition 403 410	illness
+T27	Condition 416 423	Smokers
+T28	Drug 446 456	vaporisers
+T29	Or 457 460	and
+T30	Drug 461 473	e-cigarettes
+T31	Eq-Comparison 480 486	Taking
+T32	Drug 487 510	anti-inflammatory drugs
+T33	Exception 512 521	excluding
+T34	Drug 522 529	aspirin
+T35	Life-Stage-And-Gender 25 28	Men
+T36	Life-Stage-And-Gender 33 38	women
+T37	Eq-Value 44 46	18
+T38	Eq-Operator 46 47	-
+T39	Eq-Value 47 49	70
+T40	Eq-Temporal-Unit 50 55	years
+T41	Observation-Name 61 64	BMI
+T42	Eq-Value 65 69	18.5
+T43	Eq-Operator 69 70	-
+T44	Eq-Value 70 72	50
+T45	Eq-Unit 73 75	kg
+T46	Eq-Unit 76 78	m2
+T47	Eq-Temporal-Period 88 94	taking
+T48	Drug-Name 95 106	antibiotics
+T49	Drug-Name 111 130	antimicrobial drugs
+T50	Eq-Operator 135 143	at least
+T51	Eq-Value 144 149	three
+T52	Eq-Temporal-Unit 150 156	months
+T54	Stability 266 272	stable
+T56	Eq-Unit 276 278	kg
+T57	Eq-Operator 284 292	at least
+T58	Eq-Value 293 294	6
+T59	Eq-Temporal-Unit 295 301	months
+T60	Condition-Name 329 344	cardiometabolic
+T61	Condition-Name 351 364	heart disease
+T62	Polarity 366 370	high
+T63	Condition-Name 371 385	blood pressure
+T64	Condition-Name 403 410	illness
+T65	Condition-Name 416 423	Smokers
+T66	Drug-Name 446 456	vaporisers
+T67	Drug-Name 461 473	e-cigarettes
+T68	Eq-Temporal-Period 480 486	Taking
+T69	Drug-Name 487 510	anti-inflammatory drugs
+T70	Drug-Name 522 529	aspirin
+T12	Observation 167 184	physically active
+T53	Observation-Name 167 184	physically active
+T71	Observation-Name 189 198	sedentary
+T15	Observation 259 265	Weight
+T16	Observation-Name 259 265	Weight
+T55	Eq-Operator 274 275	±
+T72	Eq-Value 275 276	5
+A3	Life-Stage-And-Gender-Type T35 male
+A4	Life-Stage-And-Gender-Type T36 female
+A5	Eq-Operator-Value T38 BETWEEN
+A6	Eq-Temporal-Unit-Value T40 year
+A7	Observation-Type-Value T41 vital
+A8	Eq-Operator-Value T43 BETWEEN
+A9	Eq-Temporal-Period-Value T47 present
+A10	Eq-Operator-Value T50 GTEQ
+A11	Eq-Temporal-Unit-Value T52 month
+A13	Stability-Value T54 stable
+A14	Eq-Operator-Value T57 GTEQ
+A15	Eq-Temporal-Unit-Value T59 month
+A16	Polarity-Value T62 high
+A17	Eq-Temporal-Period-Value T68 present
+A1	Observation-Type-Value T16 measurement
+A2	Observation-Type-Value T53 social-habit
+A12	Observation-Type-Value T71 social-habit
+A18	Eq-Operator-Value T55 PLUS-MINUS
+R2	Example-Of Arg1:E22 Arg2:E21
+R3	Example-Of Arg1:E23 Arg2:E21
+R4	Example-Of Arg1:E28 Arg2:E27
+R5	Example-Of Arg1:E30 Arg2:E27

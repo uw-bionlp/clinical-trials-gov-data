@@ -1,0 +1,78 @@
+E2	Condition:T2 Name:T3 Temporality:E12
+E6	Procedure:T6 Name:T7 Temporality:E13
+E8	Condition:T8 Name:T9
+E9	Age:T11 Eq-Comparison:E10
+E10	Eq-Comparison:T15 Operator:T12 Value:T13 Value2:T14 Temporal-Unit:T10
+E1	Condition:T16 Name:T17
+E11	Eq-Comparison:T19 Temporal-Period:T20
+E12	Eq-Comparison:T21 Temporal-Period:T22
+E13	Eq-Comparison:T23 Temporal-Period:T24
+E3	Condition:T25 Name:T26 Stage:E5
+E5	Eq-Comparison:T1 Operator:T29 Value:T28 Value2:T27
+E7	Study:T30
+E14	Modifier:T31 Modifies:E7
+E15	Modifier:T32 Modifies:E7
+E16	Modifier:T33 Modifies:E7
+E17	Modifier:T34 Modifies:E7
+E18	Modifier:T35 Modifies:E7
+E19	Or:T36 Arg:E15 Arg2:E14
+E20	Drug:T37 Name:T38 Temporality:E11
+E21	Modifier:T39 Modifies:E20
+E22	Modifier:T40 Modifies:T3
+E23	Modifier:T41 Modifies:T3
+E24	Modifier:T42 Modifies:T3
+E25	Or:T43 Arg:E23 Arg2:E22
+E4	Drug:T4 Name:T5
+E26	Allergy:T44 Name:E4
+E27	Family-Member:T18 Has:E1
+T2	Condition 333 342	disorders
+T3	Condition-Name 333 342	disorders
+T6	Procedure 368 384	Organ transplant
+T7	Procedure-Name 368 384	Organ transplant
+T8	Condition 348 361	Heart failure
+T9	Condition-Name 348 361	Heart failure
+T10	Eq-Temporal-Unit 59 64	years
+T11	Age 25 28	Age
+T12	Eq-Operator 53 55	to
+T13	Eq-Value 50 52	18
+T14	Eq-Value 56 58	75
+T15	Eq-Comparison 50 64	18 to 75 years
+T16	Condition 440 462	malignant hyperthermia
+T17	Condition-Name 440 462	malignant hyperthermia
+T19	Eq-Comparison 254 261	History
+T20	Eq-Temporal-Period 254 261	History
+T21	Eq-Comparison 292 299	History
+T22	Eq-Temporal-Period 292 299	History
+T23	Eq-Comparison 385 392	history
+T24	Eq-Temporal-Period 385 392	history
+T25	Condition 70 73	ASA
+T26	Condition-Name 70 73	ASA
+T1	Eq-Comparison 95 100	I-III
+T27	Eq-Value 95 96	I
+T28	Eq-Value 97 100	III
+T29	Eq-Operator 96 97	-
+T30	Study 191 204	interventions
+T31	Modifier 180 190	urological
+T32	Modifier 162 175	gynecological
+T33	Modifier 146 160	laparoscopical
+T34	Modifier 134 144	orthopedic
+T35	Modifier 123 132	abdominal
+T36	Or 176 179	and
+T37	Drug 273 279	opioid
+T38	Drug-Name 273 279	opioid
+T39	Modifier 265 272	chronic
+T40	Modifier 321 332	psychiatric
+T41	Modifier 310 317	hepatic
+T42	Modifier 303 308	renal
+T43	Or 318 320	or
+T4	Drug 399 408	Lidocaine
+T5	Drug-Name 399 408	Lidocaine
+T44	Allergy 409 416	allergy
+T18	Family-Member 422 436	Family history
+T45	Life-Stage-And-Gender 37 44	genders
+A1	Eq-Temporal-Unit-Value T10 year
+A2	Eq-Operator-Value T12 BETWEEN
+A3	Eq-Temporal-Period-Value T20 past
+A4	Eq-Temporal-Period-Value T22 past
+A5	Eq-Temporal-Period-Value T24 past
+A6	Eq-Operator-Value T29 BETWEEN

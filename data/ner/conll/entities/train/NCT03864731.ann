@@ -1,0 +1,139 @@
+E1	Modifier:T1 Modifies:T45
+E2	Or:T2 Arg:E1 Arg2:E3
+E3	Modifier:T3 Modifies:T45
+E4	Condition:T4 Name:T45
+E5	Condition:T5 Name:T63
+E6	Condition:T6 Name:T46
+E7	Eq-Comparison:T7 Operator:T47 Value:T48 Unit:T49
+E8	Age:T8 Eq-Comparison:E9
+E9	Eq-Comparison:T9 Value:T50 Temporal-Unit:T51 Operator:T52
+E10	Assertion:T10 Asserted:E11
+E12	Study:T12 Study-Of:E11
+E14	Study:T14 Study-Of:E13
+E15	Condition:T15 Name:T54
+E16	Or:T16 Arg:E15 Arg2:E17
+E17	Condition:T17 Name:T55
+E18	Condition:T18 Name:T66
+E19	Or:T19 Arg:E18 Arg2:E20
+E20	Assertion:T20 Asserted:E47
+E21	Modifier:T21 Modifies:T56
+E22	Or:T22 Arg:E21 Arg2:E23
+E23	Modifier:T23 Modifies:T56
+E24	Condition:T24 Name:T56
+E25	Assertion:T25 Asserted:E26
+E26	Negation:T26 Negates:E27
+E27	Procedure:T27 Name:T57
+E28	Assertion:T28 Asserted:E29
+E29	Procedure:T29 Name:T69
+E30	Or:T30 Arg:E29 Arg2:E31
+E31	Negation:T31 Negates:E48
+E32	Condition:T32 Name:T58
+E33	Or:T33 Arg:E32 Arg2:E35
+E34	Modifier:T34 Modifies:T59
+E35	Condition:T35 Name:T59
+E36	Modifier:T36 Modifies:T60
+E37	Modifier:T37 Modifies:T60
+E38	Or:T38 Arg:E37 Arg2:E39
+E39	Modifier:T39 Modifies:T60
+E40	Condition:T40 Name:T60
+E41	Assertion:T41 Asserted:T61
+E42	Assertion:T42 Asserted:E43 Asserted2:E44
+E43	Observation:T43 Stability:T61 Name:T73
+E44	Procedure:T44 Name:T62
+E45	Observation:T64 Eq-Comparison:E7
+E46	Modifier:T65 Modifies:T46
+E11	Observation:T11
+E13	Procedure:T13
+E47	Condition:T67 Name:T68
+E48	Observation:T70 Name:T71
+E49	Assertion:T72 Asserted:E31
+E50	Or:T74 Arg:E43 Arg2:E44
+T1	Modifier 25 35	Unilateral
+T2	Or 36 42	and/or
+T3	Modifier 43 52	bilateral
+T4	Condition 53 76	conductive hearing loss
+T5	Condition 78 81	CHL
+T6	Condition 99 111	hearing loss
+T7	Eq-Comparison 112 123	>10 decibel
+T8	Age 189 193	aged
+T9	Eq-Comparison 194 211	13 years or older
+T10	Assertion 253 276	Willingness and ability
+T12	Study 315 320	study
+T14	Study 385 390	study
+T15	Condition 435 444	Pregnancy
+T16	Or 445 447	or
+T17	Condition 448 461	breastfeeding
+T18	Condition 482 493	hearing aid
+T19	Or 494 496	or
+T20	Assertion 497 502	plans
+T21	Modifier 630 634	skin
+T22	Or 635 637	or
+T23	Modifier 638 643	scalp
+T24	Condition 644 653	condition
+T25	Assertion 659 662	may
+T26	Negation 663 671	preclude
+T27	Procedure 676 710	attachment of the adhesive adapter
+T28	Assertion 725 731	cannot
+T29	Procedure 744 762	audiological tests
+T30	Or 763 765	or
+T31	Negation 769 775	unable
+T32	Condition 835 848	retrocochlear
+T33	Or 850 852	or
+T34	Modifier 853 860	central
+T35	Condition 861 878	auditory disorder
+T36	Modifier 889 897	physical
+T37	Modifier 899 912	psychological
+T38	Or 914 916	or
+T39	Modifier 917 926	emotional
+T40	Condition 927 935	disorder
+T41	Assertion 941 946	would
+T42	Assertion 966 976	ability to
+T43	Observation 988 992	test
+T44	Procedure 997 1022	rehabilitation procedures
+T45	Condition-Name 53 76	conductive hearing loss
+T46	Condition-Name 99 111	hearing loss
+T47	Eq-Operator 112 113	>
+T48	Eq-Value 113 115	10
+T49	Eq-Unit 116 123	decibel
+T50	Eq-Value 194 196	13
+T51	Eq-Temporal-Unit 197 202	years
+T52	Eq-Operator 203 211	or older
+T53	Language 232 238	German
+T54	Condition-Name 435 444	Pregnancy
+T55	Condition-Name 448 461	breastfeeding
+T56	Condition-Name 644 653	condition
+T57	Procedure-Name 676 710	attachment of the adhesive adapter
+T58	Condition-Name 835 848	retrocochlear
+T59	Condition-Name 861 878	auditory disorder
+T60	Condition-Name 927 935	disorder
+T61	Stability 947 956	interfere
+T62	Procedure-Name 997 1022	rehabilitation procedures
+T63	Condition-Name 78 81	CHL
+T64	Observation 99 111	hearing loss
+T65	Modifier 88 98	Conductive
+T11	Observation 292 297	tests
+T13	Procedure 400 409	procedure
+T66	Condition-Name 482 493	hearing aid
+T67	Condition 516 527	hearing aid
+T68	Condition-Name 516 527	hearing aid
+T69	Procedure-Name 744 762	audiological tests
+T70	Observation 792 806	questionnaires
+T71	Observation-Name 792 806	questionnaires
+T72	Assertion 769 775	unable
+T73	Observation-Name 988 992	test
+T74	Or 993 996	and
+A1	Assertion-Type-Value E10 hypothetical
+A4	Assertion-Type-Value E20 intention
+A5	Assertion-Type-Value E25 hypothetical
+A6	Assertion-Type-Value E28 hypothetical
+A7	Assertion-Type-Value E41 hypothetical
+A8	Assertion-Type-Value E42 hypothetical
+A9	Eq-Operator-Value T47 GT
+A10	Eq-Temporal-Unit-Value T51 year
+A11	Eq-Operator-Value T52 GTEQ
+A12	Stability-Value T61 change
+A2	Observation-Type-Value T71 survey-or-questionnaire
+A3	Assertion-Type-Value E49 hypothetical
+R1	Abbrev-Of Arg1:E5 Arg2:E4
+R2	Caused-By Arg1:E26 Arg2:E24
+R3	Caused-By Arg1:T61 Arg2:E40

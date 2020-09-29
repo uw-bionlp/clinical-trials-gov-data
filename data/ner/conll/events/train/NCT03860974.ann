@@ -1,0 +1,151 @@
+E1	Procedure:T1 Name:T2
+E3	Condition:T3 Name:T4
+E7	Observation:T7 Name:T8 Eq-Comparison:E23
+E9	Procedure:T9 Name:T10 Temporality:E2
+E11	Condition:T11 Name:T12
+E22	Age:T31 Eq-Comparison:E15
+E23	Eq-Comparison:T37 Operator:T23 Value:T33
+E24	Eq-Comparison:T38 Operator:T24 Value:T34 Unit:T60 Per:T61
+E2	Eq-Comparison:T40 Temporal-Period:T41
+E4	Modifier:T42
+E6	Modifier:T43 Modifies:E9
+E8	Or:T44 Arg:E4 Arg2:E6
+E10	Eq-Comparison:T45 Value:T48 Operator:T46
+E12	Assertion:T49 Asserted:E16
+E14	And:T51 Arg:E9 Arg2:E16
+E16	Observation:T47 Name:T52 Eq-Comparison:E10
+E20	Temporal-Connection:T54 Arg:E16 Arg2:E18
+E18	Procedure:T53
+E19	Drug:T19 Name:T20 Temporality:E26
+E26	Eq-Comparison:T56 Temporal-Period:T57
+E15	Eq-Comparison:T15 Temporal-Unit:T27 Operator:T16 Value:T32
+E21	Observation:T21 Name:T22
+E27	Procedure:T30
+E28	Temporal-Connection:T58 Arg:E21 Arg2:E27
+E29	Modifier:T62 Modifies:E32
+E30	Eq-Comparison:T63 Operator:T25 Temporal-Unit:T28 Value:T35
+E31	Procedure:T64 Name:T50
+E32	Drug:T65 Temporality2:E30 Dose:E33 Name:T13 Duration:E5
+E34	Temporal-Connection:T69 Arg:E30 Arg2:E31
+E33	Eq-Comparison:T66 Per:T67
+E5	Eq-Comparison:T5 Temporal-Unit:T18 Value:T17 Operator:T6
+E17	Condition:T26 Name:T29
+E25	Condition:T36 Name:T14
+E37	Or:T73 Arg:T39 Arg2:T72
+E38	Condition:T74 Name:T75 Severity:T72
+E39	Condition:T76 Name:T77
+E40	Drug:T78 Name:T79 Temporality:E41
+E41	Eq-Comparison:T80 Temporal-Period:T81
+E42	Procedure:T82 Name:T83
+E43	And:T84 Arg:E40 Arg2:E42
+E44	Observation:T85 Name:T86
+E45	Eq-Comparison:T87 Temporal-Period:T88
+T1	Procedure 160 199	single-injection peripheral nerve block
+T2	Procedure-Name 160 199	single-injection peripheral nerve block
+T3	Condition 353 372	renal insufficiency
+T4	Condition-Name 353 372	renal insufficiency
+T7	Observation 286 301	body mass index
+T8	Observation-Name 286 301	body mass index
+T9	Procedure 60 74	breast surgery
+T10	Procedure-Name 60 74	breast surgery
+T11	Condition 255 269	morbid obesity
+T12	Condition-Name 255 269	morbid obesity
+T23	Eq-Operator 302 303	>
+T24	Eq-Operator 398 399	>
+T25	Eq-Operator 446 452	within
+T27	Eq-Temporal-Unit 215 220	years
+T28	Eq-Temporal-Unit 459 464	weeks
+T31	Age 208 211	age
+T32	Eq-Value 212 214	18
+T33	Eq-Value 304 306	40
+T34	Eq-Value 400 403	1.5
+T35	Eq-Value 457 458	2
+T37	Eq-Comparison 302 306	> 40
+T38	Eq-Comparison 398 403	> 1.5
+T40	Eq-Comparison 25 35	undergoing
+T41	Eq-Temporal-Period 25 35	undergoing
+T42	Modifier 36 46	unilateral
+T43	Modifier 50 59	bilateral
+T44	Or 47 49	or
+T45	Eq-Comparison 80 97	at least moderate
+T46	Eq-Operator 80 88	at least
+T48	Eq-Value 89 97	moderate
+T49	Assertion 117 128	anticipated
+T51	And 75 79	with
+T47	Observation 112 116	pain
+T52	Observation-Name 112 116	pain
+T54	Temporal-Connection 98 102	post
+T53	Procedure 102 111	operative
+T19	Drug 134 143	analgesic
+T20	Drug-Name 134 143	analgesic
+T56	Eq-Comparison 144 148	plan
+T57	Eq-Temporal-Period 144 148	plan
+T15	Eq-Comparison 212 229	18 years or older
+T16	Eq-Operator 221 229	or older
+T21	Observation 387 397	creatinine
+T22	Observation-Name 387 397	creatinine
+T30	Procedure 377 386	operative
+T58	Temporal-Connection 374 377	pre
+T60	Eq-Unit 404 406	mg
+T61	Eq-Unit 407 409	dL
+T62	Modifier 416 423	chronic
+T63	Eq-Comparison 446 464	within the 2 weeks
+T64	Procedure 474 481	surgery
+T65	Drug 424 430	opioid
+T69	Temporal-Connection 465 473	prior to
+T66	Eq-Comparison 436 441	daily
+T67	Eq-Temporal-Unit 436 441	daily
+T5	Eq-Comparison 502 511	> 4 weeks
+T6	Eq-Operator 502 503	>
+T17	Eq-Value 504 505	4
+T18	Eq-Temporal-Unit 506 511	weeks
+T26	Condition 529 541	opioid abuse
+T29	Condition-Name 529 541	opioid abuse
+T36	Condition 551 562	comorbidity
+T39	Severity 580 588	moderate
+T72	Severity 592 598	severe
+T73	Or 589 591	or
+T74	Condition 599 645	functional limitation inability to communicate
+T75	Condition-Name 599 645	functional limitation inability to communicate
+T76	Condition 692 701	pregnancy
+T77	Condition-Name 692 701	pregnancy
+T78	Drug 715 733	regional analgesic
+T79	Drug-Name 715 733	regional analgesic
+T80	Eq-Comparison 707 714	planned
+T81	Eq-Temporal-Period 707 714	planned
+T82	Procedure 739 768	perineural catheter placement
+T83	Procedure-Name 739 768	perineural catheter placement
+T84	And 734 738	with
+T85	Observation 774 787	incarceration
+T86	Observation-Name 774 787	incarceration
+T50	Procedure-Name 474 481	surgery
+T13	Drug-Name 424 430	opioid
+T87	Eq-Comparison 518 525	history
+T88	Eq-Temporal-Period 518 525	history
+T14	Condition-Name 551 562	comorbidity
+A1	Observation-Type-Value T8 vital
+A3	Eq-Operator-Value T23 GT
+A4	Eq-Operator-Value T24 GT
+A5	Eq-Operator-Value T25 LTEQ
+A7	Eq-Temporal-Unit-Value T27 year
+A8	Eq-Temporal-Unit-Value T28 week
+A10	Eq-Temporal-Period-Value T41 present
+A11	Eq-Operator-Value T46 GTEQ
+A14	Eq-Temporal-Period-Value T57 future
+A15	Eq-Operator-Value T16 GTEQ
+A2	Observation-Type-Value T22 lab
+A17	Eq-Temporal-Unit-Value T67 day
+A6	Eq-Operator-Value T6 GT
+A9	Eq-Temporal-Unit-Value T18 week
+A19	Severity-Value T39 moderate
+A20	Severity-Value T72 severe
+A21	Eq-Temporal-Period-Value T81 future
+A13	Temporal-Connection-Type-Value E20 after
+A12	Assertion-Type-Value E12 hypothetical
+A16	Temporal-Connection-Type-Value E28 before
+A18	Temporal-Connection-Type-Value E34 before
+A22	Eq-Temporal-Period-Value T88 past
+R1	Example-Of Arg1:E1 Arg2:E19
+R2	Found-By Arg1:E11 Arg2:E7
+R3	Equivalent-To Arg1:E21 Arg2:E3
+R5	Caused-By Arg1:E38 Arg2:E25

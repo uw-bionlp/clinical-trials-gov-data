@@ -1,0 +1,63 @@
+E1	Condition:T1 Name:T17
+E2	Eq-Comparison:T2 Value:T19 Operator:T20 Value:T21 Temporal-Unit:T22
+E3	Age:T3 Eq-Comparison:E2
+E4	Negation:T4 Negates:E5
+E5	Contraindication:T5 Contraindicates:E6
+E6	Drug:T6 Name:T23
+E7	Condition:T7 Name:T24
+E8	Procedure:T8 Name:T32 Polarity:T25
+E9	Condition:T9 Name:T26
+E10	Eq-Comparison:T10 Temporal-Period:T27
+E11	Drug:T11 Temporality:E10
+E13	Eq-Comparison:T13 Operator:T29 Value:T30 Per:T31
+E14	Condition:T14 Name:T34
+E15	Risk:T15 Stability:T35
+E16	Study:T16
+E12	Observation:T12 Name:T28 Severity:T33 Eq-Comparison:E13
+T1	Condition 25 32	Healthy
+T2	Eq-Comparison 48 59	18-40 years
+T3	Age 63 66	age
+T4	Negation 72 74	No
+T5	Contraindication 81 98	contraindications
+T6	Drug 103 117	anabolic drugs
+T7	Condition 124 130	cancer
+T8	Procedure 166 169	ECG
+T9	Condition 175 188	Steroid abuse
+T10	Eq-Comparison 194 201	Ongoing
+T11	Drug 209 232	prescription medication
+T13	Eq-Comparison 264 288	more than 2 times weekly
+T14	Condition 294 301	Disease
+T15	Risk 330 334	risk
+T16	Study 357 362	trial
+T17	Condition-Name 25 32	Healthy
+T18	Life-Stage-And-Gender 38 42	Male
+T19	Eq-Value 48 50	18
+T20	Eq-Operator 50 51	-
+T21	Eq-Value 51 53	40
+T22	Eq-Temporal-Unit 54 59	years
+T23	Drug-Name 103 117	anabolic drugs
+T24	Condition-Name 124 130	cancer
+T26	Condition-Name 175 188	Steroid abuse
+T27	Eq-Temporal-Period 194 201	Ongoing
+T29	Eq-Operator 264 273	more than
+T30	Eq-Value 274 275	2
+T31	Eq-Temporal-Unit 282 288	weekly
+T25	Polarity 157 165	Abnormal
+T32	Procedure-Name 166 169	ECG
+T12	Observation 244 263	resistance training
+T28	Observation-Name 244 263	resistance training
+T33	Severity 238 243	heavy
+T34	Condition-Name 294 301	Disease
+T35	Stability 322 327	infer
+A1	Life-Stage-And-Gender-Type T18 male
+A2	Eq-Operator-Value T20 BETWEEN
+A3	Eq-Temporal-Unit-Value T22 year
+A4	Eq-Temporal-Period-Value T27 present
+A5	Eq-Operator-Value T29 GT
+A6	Eq-Temporal-Unit-Value T31 week
+A7	Polarity-Value T25 abnormal
+A8	Observation-Type-Value T28 social-habit
+A9	Severity-Value T33 severe
+A10	Stability-Value T35 change
+R1	Example-Of Arg1:E7 Arg2:E5
+R2	Caused-By Arg1:E15 Arg2:E14

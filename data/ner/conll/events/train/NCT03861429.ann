@@ -1,0 +1,121 @@
+E1	Condition:T1 Name:T25
+E2	Or:T2 Arg:E1 Arg2:E3
+E3	Condition:T3 Name:T26
+E4	Condition:T4 Name:T29 Severity:T28
+E5	Observation:T5 Name:T30 Eq-Comparison:E6 Code:T35
+E6	Eq-Comparison:T6 Operator:T31 Value:T32 Operator:T33
+E7	Eq-Comparison:T7 Operator:T36 Value:T37 Operator2:T61
+E8	Eq-Comparison:T8 Operator:T38 Value:T39 Operator2:T65
+E9	Eq-Comparison:T9 Operator:T41 Value:T42 Temporal-Unit:T43
+E11	Age:T11 Eq-Comparison:E12
+E12	Eq-Comparison:T12 Operator:T44 Value:T45 Temporal-Unit:T46
+E13	Assertion:T13
+E14	Assertion:T14
+E15	Assertion:T15 Asserted:E29
+E18	Assertion:T18
+E19	Assertion:T19
+E20	Condition:T20 Name:T50 Polarity:T16
+E21	Condition:T21 Name:T51
+E22	Condition:T22 Name:T52
+E23	Condition:T23 Name:T53
+E24	Condition:T24 Name:T55 Severity:T54
+E25	Eq-Comparison:T56 Value:T27 Operator:T57 Value2:T28
+E27	Observation:T59 Name:T60 Eq-Comparison:E7 Code:T62
+E26	Observation:T63 Name:T64 Eq-Comparison:E8 Code:T66
+E28	Encounter:T67 Location:T40 Duration:E9
+E10	Observation:T10 Name:T68
+E29	Observation:T69 Name:T70
+T1	Condition 55 66	Alzheimer's
+T2	Or 67 69	or
+T3	Condition 78 86	dementia
+T4	Condition 109 129	cognitive impairment
+T5	Observation 131 135	BIMS
+T6	Eq-Comparison 136 140	= 8-
+T7	Eq-Comparison 213 217	= <1
+T8	Eq-Comparison 282 286	= <1
+T9	Eq-Comparison 353 369	at least 2 weeks
+T11	Age 410 413	Age
+T12	Eq-Comparison 414 423	>65 years
+T13	Assertion 496 507	Willing and
+T14	Assertion 508 515	able to
+T15	Assertion 538 548	Willing to
+T18	Assertion 748 758	Willing to
+T19	Assertion 781 791	Willing to
+T20	Condition 857 879	communication capacity
+T21	Condition 886 893	aphasia
+T22	Condition 900 908	Comatose
+T23	Condition 914 932	Cognitively intact
+T24	Condition 945 965	cognitive impairment
+T25	Condition-Name 55 66	Alzheimer's
+T26	Condition-Name 78 86	dementia
+T27	Severity 92 96	Mild
+T28	Severity 100 108	moderate
+T29	Condition-Name 109 129	cognitive impairment
+T30	Observation-Name 131 135	BIMS
+T31	Eq-Operator 136 137	=
+T32	Eq-Value 138 139	8
+T33	Eq-Operator 139 140	-
+T34	Eq-Value 140 142	15
+T36	Eq-Operator 215 216	<
+T37	Eq-Value 216 217	1
+T38	Eq-Operator 284 285	<
+T39	Eq-Value 285 286	1
+T40	Location 344 352	facility
+T41	Eq-Operator 353 361	at least
+T42	Eq-Value 362 363	2
+T43	Eq-Temporal-Unit 364 369	weeks
+T44	Eq-Operator 414 415	>
+T45	Eq-Value 415 417	65
+T46	Eq-Temporal-Unit 418 423	years
+T47	Language 436 443	English
+T48	Language 483 490	English
+T49	Language 735 742	English
+T50	Condition-Name 857 879	communication capacity
+T51	Condition-Name 886 893	aphasia
+T52	Condition-Name 900 908	Comatose
+T53	Condition-Name 914 932	Cognitively intact
+T54	Severity 938 944	Severe
+T55	Condition-Name 945 965	cognitive impairment
+T56	Eq-Comparison 92 108	Mild to moderate
+T57	Eq-Operator 97 99	to
+T58	Location 157 169	nursing home
+T59	Observation 191 212	Makes Self Understood
+T35	Observation-Code 145 154	MDS C0500
+T60	Observation-Name 191 212	Makes Self Understood
+T61	Eq-Operator 213 214	=
+T62	Observation-Code 219 228	MDS B0700
+T63	Observation 261 281	Understood By Others
+T64	Observation-Name 261 281	Understood By Others
+T65	Eq-Operator 282 283	=
+T66	Observation-Code 288 297	MDS B0800
+T67	Encounter 330 336	Reside
+T10	Observation 386 404	long-term resident
+T68	Observation-Name 386 404	long-term resident
+T69	Observation 558 571	short surveys
+T70	Observation-Name 558 571	short surveys
+T16	Polarity 849 856	Limited
+A1	Assertion-Type-Value E13 hypothetical
+A2	Assertion-Type-Value E14 hypothetical
+A3	Assertion-Type-Value E15 hypothetical
+A4	Assertion-Type-Value E18 hypothetical
+A5	Assertion-Type-Value E19 hypothetical
+A6	Severity-Value T27 mild
+A7	Severity-Value T28 moderate
+A8	Eq-Operator-Value T31 EQ
+A9	Eq-Operator-Value T33 BETWEEN
+A10	Eq-Operator-Value T36 LT
+A11	Eq-Operator-Value T38 LT
+A12	Location-Value T40 hospital
+A13	Eq-Operator-Value T41 GTEQ
+A14	Eq-Temporal-Unit-Value T43 week
+A15	Eq-Operator-Value T44 GT
+A16	Eq-Temporal-Unit-Value T46 year
+A17	Severity-Value T54 severe
+A18	Eq-Operator-Value T57 BETWEEN
+A19	Location-Value T58 residence
+A20	Eq-Operator-Value T61 EQ
+A21	Eq-Operator-Value T65 EQ
+A22	Observation-Type-Value T70 survey-or-questionnaire
+A23	Polarity-Value T16 low
+R1	Equivalent-To Arg1:E5 Arg2:E4
+R2	Example-Of Arg1:E21 Arg2:E20

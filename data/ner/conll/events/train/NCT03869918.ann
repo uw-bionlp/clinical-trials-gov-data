@@ -1,0 +1,78 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Value:T18 Temporal-Unit:T19 Operator:T36
+E3	Eq-Comparison:T3 Operator:T21
+E4	Condition:T4 Name:T23 Severity:T22
+E5	Observation:T5 Name:T24
+E6	Observation:T6 Name:T26 Polarity:T25
+E7	Observation:T7 Name:T27
+E8	Assertion:T8 Asserted:E9
+E9	Study:T9
+E10	Eq-Comparison:T10 Temporal-Period:T29
+E11	Drug:T11 Name:T30 Temporality:E10
+E12	Condition:T12 Name:T31
+E13	Condition:T13 Name:T32
+E14	Procedure:T14 Name:T34
+E15	Condition:T15 Name:T35
+E17	Condition:T38 Name:T39
+E18	Assertion:T40 Asserted:E14
+E16	Provider:T16 Role:T41
+T1	Age 37 40	age
+T2	Eq-Comparison 41 50	60+ years
+T3	Eq-Comparison 80 98	Moderate to severe
+T4	Condition 99 102	UUI
+T5	Observation 119 186	International Consultation on Incontinence Questionnaire Short Form
+T6	Observation 197 214	physical activity
+T7	Observation 216 255	Physical Activity Staging questionnaire
+T8	Assertion 274 281	able to
+T9	Study 295 300	study
+T10	Eq-Comparison 346 355	currently
+T11	Drug 359 386	anti-cholinergic medication
+T12	Condition 391 411	urinary incontinence
+T13	Condition 486 506	cognitive impairment
+T14	Procedure 628 647	surgical management
+T15	Condition 653 665	osteoporosis
+T17	Life-Stage-And-Gender 25 31	female
+T18	Eq-Value 41 43	60
+T19	Eq-Temporal-Unit 45 50	years
+T20	Severity 80 88	Moderate
+T21	Eq-Operator 89 91	to
+T22	Severity 92 98	severe
+T23	Condition-Name 99 102	UUI
+T24	Observation-Name 119 186	International Consultation on Incontinence Questionnaire Short Form
+T25	Polarity 193 196	low
+T26	Observation-Name 197 214	physical activity
+T27	Observation-Name 216 255	Physical Activity Staging questionnaire
+T28	Life-Stage-And-Gender 340 345	Women
+T29	Eq-Temporal-Period 346 355	currently
+T30	Drug-Name 359 386	anti-cholinergic medication
+T31	Condition-Name 391 411	urinary incontinence
+T32	Condition-Name 486 506	cognitive impairment
+T33	Language 604 611	English
+T34	Procedure-Name 628 647	surgical management
+T35	Condition-Name 653 665	osteoporosis
+T36	Eq-Operator 43 44	+
+T37	Location 56 74	community dwelling
+T38	Condition 262 273	cognitively
+T39	Condition-Name 262 273	cognitively
+T40	Assertion 617 627	desire for
+T16	Provider 706 715	physician
+T41	Provider-Role 706 715	physician
+A1	Assertion-Type-Value E8 hypothetical
+A2	Life-Stage-And-Gender-Type T17 female
+A3	Eq-Temporal-Unit-Value T19 year
+A4	Severity-Value T20 moderate
+A5	Eq-Operator-Value T21 BETWEEN
+A6	Severity-Value T22 severe
+A7	Polarity-Value T25 low
+A8	Observation-Type-Value T26 social-habit
+A9	Life-Stage-And-Gender-Type T28 female
+A10	Eq-Temporal-Period-Value T29 present
+A11	Eq-Operator-Value T36 GTEQ
+A12	Location-Value T37 residence
+A13	Observation-Type-Value T24 survey-or-questionnaire
+A14	Observation-Type-Value T27 survey-or-questionnaire
+A15	Assertion-Type-Value E18 intention
+R1	Found-By Arg1:E4 Arg2:E5
+R2	Found-By Arg1:E6 Arg2:E7
+R3	Treatment-For Arg1:E11 Arg2:E12
+R4	If-Then Arg1:T28 Arg2:E11

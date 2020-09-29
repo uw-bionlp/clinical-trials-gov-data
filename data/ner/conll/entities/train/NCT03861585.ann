@@ -1,0 +1,59 @@
+E1	Eq-Comparison:T1 Operator:T18 Value:T19 Value:T20 Temporal-Unit:T21
+E2	Age:T2 Eq-Comparison:E1
+E4	Or:T4 Arg:T22 Arg2:E3
+E5	Condition:T5 Name:T23 Polarity:T22
+E6	Condition:T6 Name:T24
+E8	Procedure:T8 Temporality:E9
+E9	Eq-Comparison:T9 Temporal-Period:T26 Value:T27 Temporal-Unit:T28
+E10	Temporal-Connection:T10 Arg:E9 Arg2:E11
+E11	Study:T11
+E12	Condition:T12 Name:T29 Temporality:E18
+E13	Condition:T13 Name:T30
+E14	Condition:T14 Name:T31
+E15	Condition:T15 Name:T32
+E3	Modifier:T3 Modifies:T23
+E7	Negation:T7 Negates:E8
+E17	Drug:T25
+E18	Eq-Comparison:T34 Temporal-Period:T35
+T1	Eq-Comparison 34 56	between 7 and 12 years
+T2	Age 57 60	old
+T4	Or 85 87	or
+T5	Condition 98 111	visual acuity
+T6	Condition 131 135	ADHD
+T8	Procedure 269 278	treatment
+T9	Eq-Comparison 279 293	until 24 hours
+T10	Temporal-Connection 294 300	before
+T11	Study 305 315	experiment
+T12	Condition 518 539	neurological troubles
+T13	Condition 541 550	dysphasia
+T14	Condition 552 578	autistic spectrum disorder
+T15	Condition 580 605	intellectual disabilities
+T17	Life-Stage-And-Gender 25 33	Children
+T18	Eq-Operator 34 41	between
+T19	Eq-Value 42 43	7
+T20	Eq-Value 48 50	12
+T21	Eq-Temporal-Unit 51 56	years
+T22	Polarity 78 84	Normal
+T23	Condition-Name 98 111	visual acuity
+T24	Condition-Name 131 135	ADHD
+T26	Eq-Temporal-Period 279 284	until
+T27	Eq-Value 285 287	24
+T28	Eq-Temporal-Unit 288 293	hours
+T29	Condition-Name 518 539	neurological troubles
+T30	Condition-Name 541 550	dysphasia
+T31	Condition-Name 552 578	autistic spectrum disorder
+T32	Condition-Name 580 605	intellectual disabilities
+T3	Modifier 88 97	corrected
+T7	Negation 254 263	Free from
+T25	Drug 264 268	drug
+T34	Eq-Comparison 507 514	History
+T35	Eq-Temporal-Period 507 514	History
+A1	Temporal-Connection-Type-Value E10 before
+A2	Life-Stage-And-Gender-Type T17 child
+A3	Eq-Operator-Value T18 BETWEEN
+A4	Eq-Temporal-Unit-Value T21 year
+A5	Polarity-Value T22 normal
+A6	Eq-Temporal-Period-Value T26 past
+A7	Eq-Temporal-Unit-Value T28 hour
+A8	Eq-Temporal-Period-Value T35 past
+R1	Using Arg1:E8 Arg2:E17

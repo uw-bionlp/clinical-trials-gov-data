@@ -1,0 +1,110 @@
+E1	Condition:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E7	Procedure:T7 Name:T8
+E9	Procedure:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E16	Eq-Comparison:T20 Operator:T17 Value:T19
+E4	Contraindication:T22 Contraindicates:E5
+E6	Modifier:T23 Modifies:T16
+E8	Modifier:T24
+E12	Condition:T26 Name:T27
+E17	Condition:T29 Name:T30
+E19	Condition:T32 Name:T33
+E20	Observation:T34 Name:T35 Eq-Comparison:E16
+E22	Condition:T37 Name:T38
+E23	Condition:T39 Name:T40
+E25	Condition:T42 Name:T43
+E26	Condition:T44 Name:T45
+E27	Condition:T46 Name:T47
+E28	Condition:T48 Name:T49
+E29	Condition:T50 Name:T51
+E32	Condition:T54 Name:T55
+E33	Risk:T56 Risk-For:E32 Polarity:T41
+E36	Observation:T59 Name:T58
+E37	Modifier:T61 Modifies:E36
+E38	Modifier:T62
+E40	Temporal-Connection:T64 Arg:E7 Arg2:E36
+E2	Or:T21 Arg:E6 Arg2:E8
+E10	Or:T25 Arg:E38 Arg2:E37
+E14	And:T28 Arg:E19 Arg2:E20
+E18	And:T31 Arg:E13 Arg2:E4
+E21	Or:T36 Arg:E28 Arg2:E29
+E30	And:T52 Arg:E3 Arg2:E33
+E24	Modifier:T53 Modifies:E11
+E31	Study:T57
+T1	Condition 404 435	intrauterine growth restriction
+T2	Condition-Name 404 435	intrauterine growth restriction
+T3	Procedure 627 644	Caesarean section
+T4	Procedure-Name 627 644	Caesarean section
+T5	Procedure 94 110	vaginal delivery
+T6	Procedure-Name 94 110	vaginal delivery
+T7	Procedure 556 572	Cesarean section
+T8	Procedure-Name 556 572	Cesarean section
+T9	Procedure 167 189	intra-mural myomectomy
+T10	Procedure-Name 167 189	intra-mural myomectomy
+T11	Condition 35 44	pregnancy
+T12	Condition-Name 35 44	pregnancy
+T13	Condition 50 68	Cicatricial uterus
+T14	Condition-Name 50 68	Cicatricial uterus
+T15	Condition 112 118	uterus
+T16	Condition-Name 112 118	uterus
+T17	Eq-Operator 250 262	greater than
+T18	Eq-Unit 264 266	Kg
+T19	Eq-Value 263 264	4
+T20	Eq-Comparison 250 264	greater than 4
+T22	Contraindication 74 90	contraindication
+T23	Modifier 119 121	bi
+T24	Modifier 125 142	multi-cicatricial
+T26	Condition 144 165	corporal uterine scar
+T27	Condition-Name 144 165	corporal uterine scar
+T29	Condition 191 212	dystocic presentation
+T30	Condition-Name 191 212	dystocic presentation
+T32	Condition 219 235	Fetal macrosomia
+T33	Condition-Name 219 235	Fetal macrosomia
+T34	Observation 243 249	weight
+T35	Observation-Name 243 249	weight
+T37	Condition 272 287	Placenta previa
+T38	Condition-Name 272 287	Placenta previa
+T39	Condition 387 402	fetal pathology
+T40	Condition-Name 387 402	fetal pathology
+T42	Condition 437 449	malformation
+T43	Condition-Name 437 449	malformation
+T44	Condition 451 469	genetics disorders
+T45	Condition-Name 451 469	genetics disorders
+T46	Condition 476 493	adherent placenta
+T47	Condition-Name 476 493	adherent placenta
+T48	Condition 498 510	adnexal mass
+T49	Condition-Name 498 510	adnexal mass
+T50	Condition 516 550	myoma at the lower uterine segment
+T51	Condition-Name 516 550	myoma at the lower uterine segment
+T54	Condition 665 673	bleeding
+T55	Condition-Name 665 673	bleeding
+T56	Risk 657 661	risk
+T59	Observation 612 621	emergency
+T61	Modifier 600 611	obstetrical
+T62	Modifier 589 596	medical
+T64	Temporal-Connection 573 585	in a context
+T21	Or 122 124	or
+T25	Or 597 599	or
+T28	And 236 240	with
+T31	And 69 73	with
+T36	Or 511 513	or
+T52	And 645 649	with
+T41	Polarity 652 656	high
+T53	Modifier 25 34	singleton
+T57	Study 355 360	study
+T58	Observation-Name 612 621	emergency
+A1	Eq-Operator-Value T17 GT
+A2	Observation-Type-Value T35 vital
+A4	Temporal-Connection-Type-Value E40 encounter
+A5	Polarity-Value T41 high
+R2	Example-Of Arg1:E15 Arg2:E4
+R3	Example-Of Arg1:E12 Arg2:E4
+R4	Example-Of Arg1:E9 Arg2:E4
+R5	Example-Of Arg1:E17 Arg2:E4
+R6	Example-Of Arg1:E1 Arg2:E23
+R7	Example-Of Arg1:E25 Arg2:E23
+R8	Example-Of Arg1:E26 Arg2:E23

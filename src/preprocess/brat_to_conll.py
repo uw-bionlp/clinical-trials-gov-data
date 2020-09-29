@@ -13,10 +13,11 @@ import preprocess.utils as utils
 
 def to_brat(output_dir, anns):
     for ann in anns:
+        t, a = ann.to_brat()
         with open(os.path.join(output_dir, ann.doc_id+'.txt'), 'w+') as fout:
-            fout.write(ann.raw_text)
+            fout.write(t)
         with open(os.path.join(output_dir, ann.doc_id+'.ann'), 'w+') as fout:
-            fout.write(ann.raw_anns)
+            fout.write(a)
 
 
 def brat_events_to_conll(output_filepath, anns):

@@ -1,0 +1,61 @@
+E1	Eq-Comparison:T1 Temporal-Period:T35
+E2	Observation:T2 Name:T17 Temporality:E1 Duration:E6 Temporality2:E3
+E3	Eq-Comparison:T3 Operator:T18 Value:T19 Per:T20
+E6	Eq-Comparison:T6 Value:T21 Temporal-Unit:T22 Per:T23
+E7	Age:T7 Eq-Comparison:E8
+E8	Eq-Comparison:T8 Operator:T24 Value:T25 Value:T26 Temporal-Unit:T27
+E9	Eq-Comparison:T9 Temporal-Period:T28
+E10	Modifier:T10 Modifies:T30
+E11	Condition:T11 Name:T30 Severity:T29 Temporality:E9
+E12	Eq-Comparison:T12 Temporal-Period:T31
+E13	Modifier:T13 Modifies:T32
+E14	Condition:T14 Name:T32 Temporality:E12
+E15	Eq-Comparison:T15 Temporal-Period:T33
+E16	Condition:T16 Name:T34 Temporality:E15
+E17	Modifier:T36 Modifies:T17
+T1	Eq-Comparison 25 34	Undertake
+T2	Observation 43 51	exercise
+T3	Eq-Comparison 52 75	at least 3 times a week
+T6	Eq-Comparison 97 113	150 min per week
+T7	Age 119 122	Age
+T8	Eq-Comparison 123 146	between 20 and 30 years
+T9	Eq-Comparison 176 183	History
+T10	Modifier 194 207	neuromuscular
+T11	Condition 208 214	injury
+T12	Eq-Comparison 220 227	Current
+T13	Modifier 228 243	lower extremity
+T14	Condition 244 250	injury
+T15	Eq-Comparison 256 263	Current
+T16	Condition 264 285	neurological diseases
+T17	Observation-Name 43 51	exercise
+T18	Eq-Operator 52 60	at least
+T19	Eq-Value 61 62	3
+T20	Eq-Temporal-Unit 71 75	week
+T21	Eq-Value 97 100	150
+T22	Eq-Temporal-Unit 101 104	min
+T23	Eq-Temporal-Unit 109 113	week
+T24	Eq-Operator 123 130	between
+T25	Eq-Value 131 133	20
+T26	Eq-Value 138 140	30
+T27	Eq-Temporal-Unit 141 146	years
+T28	Eq-Temporal-Period 176 183	History
+T29	Severity 187 193	severe
+T30	Condition-Name 208 214	injury
+T31	Eq-Temporal-Period 220 227	Current
+T32	Condition-Name 244 250	injury
+T33	Eq-Temporal-Period 256 263	Current
+T34	Condition-Name 264 285	neurological diseases
+T35	Eq-Temporal-Period 25 34	Undertake
+T36	Modifier 35 42	regular
+A1	Eq-Operator-Value T18 GTEQ
+A2	Eq-Temporal-Unit-Value T20 week
+A3	Eq-Temporal-Unit-Value T22 minute
+A4	Eq-Temporal-Unit-Value T23 week
+A5	Eq-Operator-Value T24 BETWEEN
+A6	Eq-Temporal-Unit-Value T27 year
+A7	Eq-Temporal-Period-Value T28 past
+A8	Severity-Value T29 severe
+A9	Eq-Temporal-Period-Value T31 present
+A10	Eq-Temporal-Period-Value T33 present
+A11	Eq-Temporal-Period-Value T35 present
+A12	Observation-Type-Value T17 social-habit

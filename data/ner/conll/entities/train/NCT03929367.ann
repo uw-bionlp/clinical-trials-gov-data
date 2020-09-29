@@ -1,0 +1,270 @@
+E1	Observation:T1 Name:T2
+E5	Observation:T5 Name:T6 Eq-Comparison:E20
+E7	Condition:T7 Name:T8 Temporality:E47
+E9	Condition:T9 Name:T10
+E11	Procedure:T11 Name:T12 Temporality:E33
+E15	Condition:T15 Name:T16
+E18	Eq-Comparison:T43 Operator:T20 Value:T32
+E19	Eq-Comparison:T44 Operator:T21 Temporal-Unit:T25 Value:T33
+E20	Eq-Comparison:T45 Operator:T22 Value:T34
+E21	Eq-Comparison:T46 Operator:T23 Value:T41 Temporal-Unit:T80
+E22	Eq-Comparison:T47 Operator:T24 Temporal-Unit:T26 Value:T42
+E23	Eq-Comparison:T48 Operator:T29 Value:T35 Unit:T27 Value2:T36
+E24	Eq-Comparison:T49 Operator:T30 Value:T37 Value2:T38 Unit:T28
+E25	Eq-Comparison:T50 Operator:T31 Value:T39 Value2:T40 Per:T71
+E2	Or:T51 Arg:T4 Arg2:T3
+E3	Age:T52 Eq-Comparison:E18 Eq-Comparison2:E19
+E4	And:T53 Arg:E18 Arg2:E19
+E6	Condition:T54 Name:T55
+E8	Condition:T56 Name:T57 Stage:E10
+E10	Eq-Comparison:T58 Unit:T59 Value:T60 Value2:T61
+E12	Observation:T62 Name:T63 Polarity:T74
+E14	Observation:T64 Name:T65 Eq-Comparison:E23
+E16	Observation:T66 Name:T67 Eq-Comparison:E24
+E26	Observation:T68 Name:T69 Eq-Comparison:E25
+E27	Drug:T72
+E28	Negation:T73 Negates:E27
+E29	Condition:T75 Name:T76
+E30	Condition:T77 Name:T78
+E31	Temporal-Connection:T79 Arg:E21 Arg2:E30
+E32	And:T81 Arg:E29 Arg2:E30
+E33	Eq-Comparison:T82 Temporal-Period:T83
+E34	Procedure:T84 Name:T85
+E35	Condition:T86 Name:T87
+E36	Drug:T88 Name:T89
+E37	Allergy:T90 Name:E36
+E38	Condition:T91 Name:T93 Severity:T92
+E39	Or:T94 Arg:E37 Arg2:E38
+E40	Condition:T95 Name:T96
+E41	Condition:T97
+E42	Condition:T98
+E43	Or:T99 Arg:E41 Arg2:E42
+E17	Modifier:T17 Modifies:E42
+E44	Modifier:T18 Modifies:E42
+E45	Or:T100 Arg:E44 Arg2:E17
+E46	Risk:T101 Polarity:T102
+E47	Eq-Comparison:T103 Temporal-Period:T104
+E48	Condition:T105 Name:T106
+E49	Condition:T107 Name:T108
+E50	And:T109 Arg:E48 Arg2:E49
+E13	Study:T13 Stability:T14
+E51	Assertion:T110 Asserted:E13
+E52	Condition:T112 Name:T113
+E53	And:T114 Arg:T111 Arg2:E52
+E54	Study:T115
+E55	Observation:T116 Name:T117 Polarity:T118
+E56	Temporal-Connection:T119 Arg:E55 Arg2:E54
+E57	Eq-Comparison:T121 Temporal-Period:T122
+E58	Condition:T123 Name:T124 Temporality:E57
+E59	Condition:T125 Name:T126
+E60	Or:T127 Arg:E58 Arg2:E59
+E61	And:T128 Arg:T120 Arg2:E58
+E62	Condition:T130 Name:T131 Temporality:E22 Temporality2:E71
+E63	And:T132 Arg:T129 Arg2:E62
+E64	Condition:T133 Name:T134
+E65	Drug:T135 Name:T136 Temporality:E67
+E66	Drug:T137 Name:T138 Dose:E69
+E67	Eq-Comparison:T139 Temporal-Period:T140
+E68	Or:T141 Arg:E65 Arg2:E66
+E69	Eq-Comparison:T142 Per:T143
+E70	Or:T144 Arg:E9 Arg2:E65
+E71	Eq-Comparison:T145 Temporal-Period:T146
+E72	Modifier:T147 Modifies:T134
+T1	Observation 68 83	Body Mass Index
+T2	Observation-Name 68 83	Body Mass Index
+T3	Life-Stage-And-Gender 33 39	female
+T4	Life-Stage-And-Gender 25 29	Male
+T5	Observation 85 88	BMI
+T6	Observation-Name 85 88	BMI
+T7	Condition 845 864	gynecologic disease
+T8	Condition-Name 845 864	gynecologic disease
+T9	Condition 1281 1298	diabetes mellitus
+T10	Condition-Name 1281 1298	diabetes mellitus
+T11	Procedure 534 547	birth control
+T12	Procedure-Name 534 547	birth control
+T15	Condition 1255 1265	neuropathy
+T16	Condition-Name 1255 1265	neuropathy
+T19	Life-Stage-And-Gender 408 414	Female
+T20	Eq-Operator 40 41	>
+T21	Eq-Operator 49 50	<
+T22	Eq-Operator 90 91	<
+T23	Eq-Operator 461 462	<
+T24	Eq-Operator 1221 1227	within
+T25	Eq-Temporal-Unit 54 59	years
+T26	Eq-Temporal-Unit 1230 1235	years
+T27	Eq-Unit 307 311	mmHg
+T28	Eq-Unit 329 333	mmHg
+T29	Eq-Operator 302 303	-
+T30	Eq-Operator 325 326	-
+T31	Eq-Operator 361 362	-
+T32	Eq-Value 42 44	18
+T33	Eq-Value 51 53	60
+T34	Eq-Value 91 93	40
+T35	Eq-Value 300 302	90
+T36	Eq-Value 303 306	140
+T37	Eq-Value 323 325	50
+T38	Eq-Value 326 328	90
+T39	Eq-Value 359 361	45
+T40	Eq-Value 362 365	100
+T41	Eq-Value 463 464	1
+T42	Eq-Value 1228 1229	2
+T43	Eq-Comparison 40 44	> 18
+T44	Eq-Comparison 49 59	< 60 years
+T45	Eq-Comparison 90 93	<40
+T46	Eq-Comparison 461 469	< 1 year
+T47	Eq-Comparison 1221 1235	within 2 years
+T48	Eq-Comparison 300 311	90-140 mmHg
+T49	Eq-Comparison 323 333	50-90 mmHg
+T50	Eq-Comparison 359 382	45-100 beats per minute
+T51	Or 30 32	or
+T52	Age 63 66	age
+T53	And 45 48	and
+T54	Condition 113 124	good health
+T55	Condition-Name 113 124	good health
+T56	Condition 201 238	American Society of Anesthesiologists
+T57	Condition-Name 201 238	American Society of Anesthesiologists
+T58	Eq-Comparison 248 262	status I or II
+T59	Eq-Unit 248 254	status
+T60	Eq-Value 255 256	I
+T61	Eq-Value 260 262	II
+T62	Observation 275 289	blood pressure
+T63	Observation-Name 275 289	blood pressure
+T64	Observation 291 299	systolic
+T65	Observation-Name 291 299	systolic
+T66	Observation 313 322	diastolic
+T67	Observation-Name 313 322	diastolic
+T68	Observation 335 353	resting heart rate
+T69	Observation-Name 335 353	resting heart rate
+T70	Eq-Unit 366 371	beats
+T71	Eq-Temporal-Unit 376 382	minute
+T72	Drug 392 402	medication
+T73	Negation 384 391	without
+T74	Polarity 268 274	Normal
+T75	Condition 427 450	child-bearing potential
+T76	Condition-Name 427 450	child-bearing potential
+T77	Condition 475 485	menopausal
+T78	Condition-Name 475 485	menopausal
+T79	Temporal-Connection 470 474	post
+T80	Eq-Temporal-Unit 465 469	year
+T81	And 451 454	and
+T82	Eq-Comparison 495 505	practicing
+T83	Eq-Temporal-Period 495 505	practicing
+T84	Procedure 556 572	hormonal methods
+T85	Procedure-Name 556 572	hormonal methods
+T86	Condition 598 614	Hypersensitivity
+T87	Condition-Name 598 614	Hypersensitivity
+T88	Drug 670 677	Pitocin
+T89	Drug-Name 670 677	Pitocin
+T90	Allergy 616 623	allergy
+T92	Severity 628 639	significant
+T91	Condition 640 648	reaction
+T93	Condition-Name 640 648	reaction
+T94	Or 625 627	or
+T95	Condition 688 695	disease
+T96	Condition-Name 688 695	disease
+T97	Condition 697 706	diagnosis
+T98	Condition 711 720	condition
+T99	Or 708 710	or
+T17	Modifier 733 741	surgical
+T18	Modifier 722 729	medical
+T100	Or 730 732	or
+T101	Risk 832 836	risk
+T102	Polarity 822 831	increased
+T103	Eq-Comparison 838 844	active
+T104	Eq-Temporal-Period 838 844	active
+T105	Condition 916 932	uterine fibroids
+T106	Condition-Name 916 932	uterine fibroids
+T107	Condition 946 954	bleeding
+T108	Condition-Name 946 954	bleeding
+T109	And 933 937	with
+T13	Study 998 1003	study
+T14	Stability 957 967	compromise
+T110	Assertion 957 967	compromise
+T111	Life-Stage-And-Gender 1059 1064	Women
+T112	Condition 1073 1081	pregnant
+T113	Condition-Name 1073 1081	pregnant
+T114	And 1065 1068	who
+T115	Study 1127 1136	screening
+T116	Observation 1103 1123	serum pregnancy test
+T117	Observation-Name 1103 1123	serum pregnancy test
+T118	Polarity 1083 1091	positive
+T119	Temporal-Connection 1124 1126	at
+T120	Life-Stage-And-Gender 1145 1150	women
+T121	Eq-Comparison 1159 1168	currently
+T122	Eq-Temporal-Period 1159 1168	currently
+T123	Condition 1169 1176	nursing
+T124	Condition-Name 1169 1176	nursing
+T125	Condition 1180 1189	lactating
+T126	Condition-Name 1180 1189	lactating
+T127	Or 1177 1179	or
+T128	And 1151 1158	who are
+T129	Life-Stage-And-Gender 1191 1196	women
+T130	Condition 1212 1220	pregnant
+T131	Condition-Name 1212 1220	pregnant
+T132	And 1197 1201	that
+T133	Condition 1275 1279	pain
+T134	Condition-Name 1275 1279	pain
+T135	Drug 1310 1325	benzodiazepines
+T136	Drug-Name 1310 1325	benzodiazepines
+T137	Drug 1329 1345	pain medications
+T138	Drug-Name 1329 1345	pain medications
+T139	Eq-Comparison 1303 1309	taking
+T140	Eq-Temporal-Period 1303 1309	taking
+T141	Or 1326 1328	or
+T142	Eq-Comparison 1351 1356	daily
+T143	Eq-Temporal-Unit 1351 1356	daily
+T144	Or 1300 1302	or
+T145	Eq-Comparison 1202 1211	have been
+T146	Eq-Temporal-Period 1202 1211	have been
+T147	Modifier 1267 1274	chronic
+A1	Observation-Type-Value T2 vital
+A2	Life-Stage-And-Gender-Type T3 female
+A3	Life-Stage-And-Gender-Type T4 male
+A4	Observation-Type-Value T6 vital
+A5	Life-Stage-And-Gender-Type T19 female
+A6	Eq-Operator-Value T20 GT
+A7	Eq-Operator-Value T21 LT
+A8	Eq-Operator-Value T22 LT
+A9	Eq-Operator-Value T23 LT
+A10	Eq-Operator-Value T24 LTEQ
+A11	Eq-Temporal-Unit-Value T25 year
+A12	Eq-Temporal-Unit-Value T26 year
+A13	Eq-Operator-Value T29 BETWEEN
+A14	Eq-Operator-Value T30 BETWEEN
+A15	Eq-Operator-Value T31 BETWEEN
+A16	Observation-Type-Value T63 vital
+A17	Observation-Type-Value T65 vital
+A18	Observation-Type-Value T67 vital
+A19	Observation-Type-Value T69 vital
+A20	Eq-Temporal-Unit-Value T71 minute
+A21	Polarity-Value T74 normal
+A22	Temporal-Connection-Type-Value E31 after
+A23	Eq-Temporal-Unit-Value T80 year
+A24	Eq-Temporal-Period-Value T83 present
+A26	Severity-Value T92 severe
+A25	Polarity-Value T102 high
+A27	Eq-Temporal-Period-Value T104 present
+A28	Stability-Value T14 change
+A29	Assertion-Type-Value E51 hypothetical
+A30	Life-Stage-And-Gender-Type T111 female
+A31	Observation-Type-Value T117 lab
+A32	Polarity-Value T118 positive
+A33	Temporal-Connection-Type-Value E56 during
+A34	Life-Stage-And-Gender-Type T120 female
+A35	Eq-Temporal-Period-Value T122 present
+A36	Life-Stage-And-Gender-Type T129 female
+A37	Eq-Temporal-Period-Value T140 present
+A38	Eq-Temporal-Unit-Value T143 day
+A39	Eq-Temporal-Period-Value T146 past
+R1	Abbrev-Of Arg1:E5 Arg2:E1
+R2	Equivalent-To Arg1:E14 Arg2:E12
+R3	Equivalent-To Arg1:E16 Arg2:E12
+R4	Equivalent-To Arg1:E26 Arg2:E12
+R5	Using Arg1:E12 Arg2:E27
+R6	Example-Of Arg1:E34 Arg2:E11
+R7	Caused-By Arg1:E38 Arg2:E36
+R8	Caused-By Arg1:E35 Arg2:E36
+R9	Caused-By Arg1:E46 Arg2:E42
+R10	Example-Of Arg1:E7 Arg2:E42
+R11	Example-Of Arg1:E48 Arg2:E7
+R12	Equivalent-To Arg1:E55 Arg2:E52

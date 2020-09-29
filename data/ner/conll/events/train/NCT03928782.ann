@@ -1,0 +1,64 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4 Temporality:E7
+E4	Age:T7 Eq-Comparison:E12
+E2	Condition:T11 Name:T12 Severity:T13
+E6	Assertion:T14 Asserted:E3
+E7	Eq-Comparison:T15 Operator:T5 Value:T16 Temporal-Unit:T17
+E8	Procedure:T18
+E9	Assertion:T19 Asserted:E8
+E10	And:T20 Arg:E3 Arg2:E9
+E11	Modifier:T21 Modifies:T2
+E12	Eq-Comparison:T22 Value:T9 Temporal-Unit:T6 Operator:T8 Value2:T10
+E5	Condition:T23 Name:T24 Severity:T27
+E13	Modifier:T25 Modifies:E5
+E14	Other:T26 Is-Other:E5
+E15	Study:T28
+E16	Study:T29 Stability:T33
+E17	Condition:T30 Severity:T31
+E18	Assertion:T32 Asserted:T33
+T1	Procedure 141 163	whole-body irradiation
+T2	Procedure-Name 141 163	whole-body irradiation
+T3	Procedure 85 97	chemotherapy
+T4	Procedure-Name 85 97	chemotherapy
+T5	Eq-Operator 98 104	within
+T6	Eq-Temporal-Unit 265 270	years
+T7	Age 242 246	aged
+T9	Eq-Value 255 257	18
+T10	Eq-Value 262 264	50
+T11	Condition 56 64	leukemic
+T12	Condition-Name 56 64	leukemic
+T13	Severity 50 55	acute
+T14	Assertion 78 84	accept
+T15	Eq-Comparison 98 114	within one month
+T16	Eq-Value 105 108	one
+T17	Eq-Temporal-Unit 109 114	month
+T18	Procedure 127 137	pretreated
+T19	Assertion 119 126	will be
+T20	And 115 118	and
+T21	Modifier 164 186	peripheral blood cells
+T22	Eq-Comparison 247 270	between 18 and 50 years
+T8	Eq-Operator 247 254	between
+T23	Condition 449 457	diseases
+T24	Condition-Name 449 457	diseases
+T25	Modifier 440 448	systemic
+T26	Other 434 439	other
+T27	Severity 426 433	serious
+T28	Study 527 532	study
+T29	Study 588 593	study
+T30	Condition 547 552	cases
+T31	Severity 539 546	serious
+T32	Assertion 558 566	probably
+T33	Stability 567 573	hinder
+A1	Eq-Operator-Value T5 LTEQ
+A2	Eq-Temporal-Unit-Value T6 year
+A3	Severity-Value T13 severe
+A4	Assertion-Type-Value E6 hypothetical
+A5	Eq-Temporal-Unit-Value T17 month
+A6	Assertion-Type-Value E9 hypothetical
+A7	Eq-Operator-Value T8 BETWEEN
+A8	Severity-Value T27 severe
+A9	Severity-Value T31 severe
+A10	Assertion-Type-Value E18 hypothetical
+A11	Stability-Value T33 change
+R1	Using Arg1:E8 Arg2:E1
+R2	Caused-By Arg1:T33 Arg2:E17

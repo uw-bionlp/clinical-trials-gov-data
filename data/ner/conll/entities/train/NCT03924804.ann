@@ -1,0 +1,95 @@
+E1	Procedure:T1 Name:T2 Temporality:E10
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Observation:T7 Name:T8 Eq-Comparison:E12
+E9	Condition:T9 Name:T10 Temporality:E22
+E11	Condition:T11 Name:T12
+E16	Condition:T16 Name:T17
+E18	Condition:T18 Name:T19
+E20	Condition:T20 Name:T21
+E21	Eq-Comparison:T28 Operator:T24 Value:T25 Value2:T26 Temporal-Unit:T22
+E22	Eq-Comparison:T29 Temporal-Period:T30
+E2	Age:T31 Eq-Comparison:E21
+E4	Condition:T32 Name:T33
+E6	Condition:T34 Name:T35 Stage:E8
+E8	Eq-Comparison:T36 Value:T37 Value2:T38
+E10	Eq-Comparison:T39 Temporal-Period:T40
+E12	Eq-Comparison:T41 Operator:T42 Value:T27 Unit:T23 Per:T43
+E13	Modifier:T44 Modifies:T10
+E14	Modifier:T14 Modifies:T10
+E15	Modifier:T15 Modifies:T10
+E17	Or:T45 Arg:E14 Arg2:E13
+E19	Or:T46 Arg:E3 Arg2:E5
+E23	Allergy:T47 Name:E24
+E24	Drug:T48
+E25	Study:T49 Study-Of:E24
+E26	Or:T50 Arg:E5 Arg2:E23
+E27	Condition:T51 Name:T52
+E28	Condition:T53 Name:T54
+E29	Or:T55 Arg:E20 Arg2:E28
+T1	Procedure 194 212	general anesthesia
+T2	Procedure-Name 194 212	general anesthesia
+T3	Condition 408 425	diabetes mellitus
+T4	Condition-Name 408 425	diabetes mellitus
+T5	Condition 429 445	arteriosclerosis
+T6	Condition-Name 429 445	arteriosclerosis
+T7	Observation 295 310	Body mass index
+T8	Observation-Name 295 310	Body mass index
+T9	Condition 386 393	failure
+T10	Condition-Name 386 393	failure
+T11	Condition 395 407	hypertension
+T12	Condition-Name 395 407	hypertension
+T16	Condition 577 598	prostatic hypertrophy
+T17	Condition-Name 577 598	prostatic hypertrophy
+T18	Condition 514 530	urinary diseases
+T19	Condition-Name 514 530	urinary diseases
+T20	Condition 548 564	ureteral calculi
+T21	Condition-Name 548 564	ureteral calculi
+T22	Eq-Temporal-Unit 66 71	years
+T23	Eq-Unit 324 326	kg
+T24	Eq-Operator 60 62	to
+T25	Eq-Value 57 59	18
+T26	Eq-Value 63 65	65
+T27	Eq-Value 321 323	30
+T28	Eq-Comparison 57 71	18 to 65 years
+T29	Eq-Comparison 352 359	history
+T30	Eq-Temporal-Period 352 359	history
+T13	Ethnicity 35 42	Chinese
+T31	Age 52 55	age
+T32	Condition 85 123	American Society of Anaesthesiologists
+T33	Condition-Name 85 123	American Society of Anaesthesiologists
+T34	Condition 125 128	ASA
+T35	Condition-Name 125 128	ASA
+T36	Eq-Comparison 146 153	I or II
+T37	Eq-Value 146 147	I
+T38	Eq-Value 151 153	II
+T39	Eq-Comparison 180 189	scheduled
+T40	Eq-Temporal-Period 180 189	scheduled
+T41	Eq-Comparison 311 329	exceeding 30 kg/m2
+T42	Eq-Operator 311 320	exceeding
+T43	Eq-Unit 327 329	m2
+T44	Modifier 380 385	Renal
+T14	Modifier 370 375	liver
+T15	Modifier 363 368	heart
+T45	Or 376 379	and
+T46	Or 426 428	or
+T47	Allergy 455 462	allergy
+T48	Drug 466 471	drugs
+T49	Study 484 489	study
+T50	Or 447 450	and
+T51	Condition 540 546	kidney
+T52	Condition-Name 540 546	kidney
+T53	Condition 569 575	tumors
+T54	Condition-Name 569 575	tumors
+T55	Or 565 568	and
+A1	Observation-Type-Value T8 vital
+A2	Eq-Temporal-Unit-Value T22 year
+A3	Eq-Operator-Value T24 BETWEEN
+A4	Eq-Temporal-Period-Value T30 past
+A5	Eq-Temporal-Period-Value T40 future
+A6	Eq-Operator-Value T42 GT
+R1	Abbrev-Of Arg1:E6 Arg2:E4
+R2	Example-Of Arg1:E27 Arg2:E18
+R3	Example-Of Arg1:E20 Arg2:E18
+R4	Example-Of Arg1:E28 Arg2:E18
+R5	Example-Of Arg1:E16 Arg2:E18

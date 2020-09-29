@@ -1,0 +1,110 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4 Temporality2:E19
+E5	Condition:T5 Name:T6
+E6	Age:T12 Eq-Comparison:E13
+E2	Condition:T19 Name:T20 Provider:E4
+E4	Provider:T21
+E7	Observation:T22 Name:T23 Eq-Comparison:E8
+E8	Eq-Comparison:T24 Value:T13 Operator:T14
+E9	Assertion:T25 Asserted:E2
+E10	Coreference:T26 Refers-To:E2 Duration:E11 Duration2:E12
+E11	Eq-Comparison:T27 Value:T15 Temporal-Unit:T8 Operator:T28
+E12	Eq-Comparison:T29 Operator:T30 Temporal-Unit:T9 Value:T16
+E13	Eq-Comparison:T31 Value:T17 Operator:T32 Temporal-Unit:T10
+E14	Condition:T33
+E15	Negation:T34 Negates:E1
+E16	Assertion:T35 Asserted:E1
+E17	Modifier:T36 Modifies:T2
+E18	Modifier:T37 Modifies:T4
+E19	Eq-Comparison:T38 Value:T18 Temporal-Unit:T11 Temporal-Period:T39
+E20	Study:T40
+E21	Temporal-Connection:T41 Arg:E19 Arg2:E20
+E22	Condition:T42 Name:T43
+E23	Procedure:T44 Name:T45
+E24	Modifier:T46 Modifies:T43
+E25	Condition:T47 Name:T48 Temporality:E28
+E26	Procedure:T49 Name:T50
+E27	Modifier:T51 Modifies:T48
+E28	Eq-Comparison:T52 Operator:T7 Value:T53 Temporal-Unit:T54
+E29	Study:T55
+E30	Temporal-Connection:T56 Arg:E28 Arg2:E29
+E31	Condition:T57 Name:T58 Severity:T59
+T1	Procedure 283 301	epidural injection
+T2	Procedure-Name 283 301	epidural injection
+T3	Procedure 344 362	epidural injection
+T4	Procedure-Name 344 362	epidural injection
+T5	Condition 535 544	Pregnancy
+T6	Condition-Name 535 544	Pregnancy
+T7	Eq-Operator 497 503	within
+T8	Eq-Temporal-Unit 149 154	weeks
+T9	Eq-Temporal-Unit 181 186	weeks
+T10	Eq-Temporal-Unit 225 230	years
+T11	Eq-Temporal-Unit 377 383	months
+T12	Age 212 215	Age
+T13	Eq-Value 76 77	6
+T15	Eq-Value 147 148	3
+T16	Eq-Value 179 180	8
+T17	Eq-Value 222 224	18
+T18	Eq-Value 375 376	6
+T19	Condition 40 48	sciatica
+T20	Condition-Name 40 48	sciatica
+T21	Provider 52 54	GP
+T22	Observation 60 72	NRS leg pain
+T23	Observation-Name 60 72	NRS leg pain
+T24	Eq-Comparison 76 85	6 or more
+T14	Eq-Operator 78 85	or more
+T25	Assertion 135 143	symptoms
+T26	Coreference 135 143	symptoms
+T27	Eq-Comparison 147 154	3 weeks
+T28	Eq-Operator 115 122	Minimum
+T29	Eq-Comparison 159 186	maximum duration of 8 weeks
+T30	Eq-Operator 159 166	maximum
+T31	Eq-Comparison 216 230	under 18 years
+T32	Eq-Operator 216 221	under
+T33	Condition 236 245	Condition
+T34	Negation 246 256	preventing
+T35	Assertion 246 256	preventing
+T36	Modifier 268 282	transforaminal
+T37	Modifier 329 343	Transforaminal
+T38	Eq-Comparison 363 383	received in 6 months
+T39	Eq-Temporal-Period 363 371	received
+T40	Study 391 404	randomization
+T41	Temporal-Connection 384 390	before
+T42	Condition 427 435	sciatica
+T43	Condition-Name 427 435	sciatica
+T44	Procedure 415 422	Surgery
+T45	Procedure-Name 415 422	Surgery
+T46	Modifier 443 453	same level
+T47	Condition 471 479	sciatica
+T48	Condition-Name 471 479	sciatica
+T49	Procedure 459 466	Surgery
+T50	Procedure-Name 459 466	Surgery
+T51	Modifier 483 496	another level
+T52	Eq-Comparison 497 512	within one year
+T53	Eq-Value 504 507	one
+T54	Eq-Temporal-Unit 508 512	year
+T55	Study 520 529	inclusion
+T56	Temporal-Connection 513 519	before
+T57	Condition 314 323	scoliosis
+T58	Condition-Name 314 323	scoliosis
+T59	Severity 307 313	Severe
+A1	Eq-Operator-Value T7 LTEQ
+A2	Eq-Temporal-Unit-Value T8 week
+A3	Eq-Temporal-Unit-Value T9 week
+A4	Eq-Temporal-Unit-Value T10 year
+A5	Eq-Temporal-Unit-Value T11 month
+A6	Observation-Type-Value T23 measurement
+A7	Eq-Operator-Value T14 GTEQ
+A8	Assertion-Type-Value E9 possible
+A9	Eq-Operator-Value T28 GTEQ
+A10	Eq-Operator-Value T30 LTEQ
+A11	Eq-Operator-Value T32 LT
+A12	Assertion-Type-Value E16 hypothetical
+A13	Eq-Temporal-Period-Value T39 past
+A14	Temporal-Connection-Type-Value E21 before
+A15	Eq-Temporal-Unit-Value T54 year
+A16	Temporal-Connection-Type-Value E30 before
+A17	Severity-Value T59 severe
+R1	Caused-By Arg1:E15 Arg2:E14
+R2	Treatment-For Arg1:E23 Arg2:E22
+R3	Treatment-For Arg1:E26 Arg2:E25

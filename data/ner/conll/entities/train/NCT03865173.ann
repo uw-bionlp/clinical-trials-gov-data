@@ -1,0 +1,67 @@
+E1	Condition:T1 Name:T2 Temporality:E5 Temporality2:E7 Provider:E6
+E3	Condition:T3 Name:T4
+E4	Age:T6 Eq-Comparison:E2
+E2	Eq-Comparison:T10 Operator:T11 Value:T7 Temporal-Unit:T5
+E5	Eq-Comparison:T13 Temporal-Period:T14
+E7	Eq-Comparison:T16 Value:T8 Operator:T15
+E8	Negation:T17 Negates:E7
+E6	Provider:T18 Type:T19 Role:T20
+E9	Procedure:T21 Location:T9
+E10	Observation:T22 Name:T23
+E11	Assertion:T24 Asserted:E10
+E12	Modifier:T25 Modifies:E13
+E13	Encounter:T26 Type:T27 Temporality:E14
+E14	Eq-Comparison:T28 Temporal-Recency:T29
+E15	Temporal-Connection:T30 Arg:E10 Arg2:E14
+E16	Death:T31
+E17	Encounter:T32 Temporality:E18
+E18	Eq-Comparison:T33
+E19	Temporal-Connection:T35 Arg:E16 Arg2:E18
+T1	Condition 116 122	stroke
+T2	Condition-Name 116 122	stroke
+T3	Condition 223 229	stroke
+T4	Condition-Name 223 229	stroke
+T5	Eq-Temporal-Unit 47 52	years
+T6	Age 56 59	age
+T7	Eq-Value 44 46	18
+T8	Eq-Value 135 139	2019
+T10	Eq-Comparison 39 52	over 18 years
+T11	Eq-Operator 39 43	over
+T12	Location 70 89	metropolitan France
+T13	Eq-Comparison 109 115	recent
+T14	Eq-Temporal-Period 109 115	recent
+T16	Eq-Comparison 128 139	before 2019
+T17	Negation 124 127	not
+T15	Eq-Operator 128 134	before
+T18	Provider 172 196	neuro-vascular physician
+T19	Provider-Type 172 186	neuro-vascular
+T20	Provider-Role 187 196	physician
+T21	Procedure 211 218	managed
+T9	Location 261 294	hospitals of the Aquitaine region
+T22	Observation 371 376	alive
+T23	Observation-Name 371 376	alive
+T24	Assertion 365 370	to be
+T25	Modifier 395 411	acute management
+T26	Encounter 412 425	hospital stay
+T27	Encounter-Type 412 425	hospital stay
+T28	Eq-Comparison 384 387	end
+T29	Eq-Temporal-Recency 384 387	end
+T30	Temporal-Connection 377 383	at the
+T31	Death 506 510	died
+T32	Encounter 530 534	stay
+T33	Eq-Comparison 522 529	initial
+T34	Eq-Temporal-Recency 522 529	initial
+T35	Temporal-Connection 511 517	during
+A1	Eq-Temporal-Unit-Value T5 year
+A2	Eq-Operator-Value T11 GT
+A3	Location-Value T12 residence
+A4	Eq-Temporal-Period-Value T14 recent
+A5	Eq-Operator-Value T15 LT
+A6	Location-Value T9 hospital
+A7	Assertion-Type-Value E11 hypothetical
+A8	Encounter-Type-Value T27 inpatient
+A9	Eq-Temporal-Recency-Value T29 most-recent-time
+A10	Temporal-Connection-Type-Value E15 during
+A11	Eq-Temporal-Recency-Value T34 first-time
+A12	Temporal-Connection-Type-Value E19 during
+R1	Treatment-For Arg1:E9 Arg2:E3

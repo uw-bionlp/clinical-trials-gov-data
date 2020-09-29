@@ -1,0 +1,145 @@
+E1	Condition:T1 Name:T2 Severity:T35
+E7	Observation:T7 Name:T8 Eq-Comparison:E14
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E12	Age:T17 Eq-Comparison:E13
+E13	Eq-Comparison:T24 Operator:T18 Value:T20 Temporal-Unit:T15 Value2:T21
+E14	Eq-Comparison:T25 Operator:T19 Value:T22 Unit:T16 Per:T47
+E2	Condition:T26 Name:T27
+E6	Modifier:T30 Modifies:T3
+E10	Drug:T32 Temporality:E38
+E15	Drug:T33
+E5	Condition:T5 Name:T6 Stability:T64
+E18	Procedure:T13 Name:T36
+E19	Condition:T37 Name:T38
+E20	Condition:T39 Name:T40
+E21	Condition:T41 Name:T42
+E22	Condition:T43 Name:T44
+E24	Assertion:T14 Asserted:E22
+E8	Or:T31 Arg:E10 Arg2:E15
+E16	Or:T34 Arg:E21 Arg2:E24
+E23	Or:T45 Arg:E4 Arg3:E6
+E25	Condition:T48 Name:T49
+E26	Condition:T50 Name:T51
+E27	Procedure:T52 Name:T46
+E28	Temporal-Connection:T54 Arg:E26 Arg2:E27
+E29	Condition:T56 Name:T57
+E30	Condition:T58 Name:T55
+E31	Modifier:T59 Modifies:E30
+E32	Modifier:T60
+E33	Or:T61 Arg:E31 Arg2:E32
+E34	Or:T62 Arg:E20 Arg2:E30
+E35	Or:T63 Arg:E30 Arg2:E21
+E37	Observation:T66 Name:T67
+E38	Eq-Comparison:T69 Temporal-Period:T70
+E17	Assertion:T53 Asserted:E18
+E4	Modifier:T28 Modifies:T3
+E36	Procedure:T4 Name:T3 Temporality:E44
+E3	Assertion:T29 Asserted:E9
+E39	Negation:T65 Negates:E9
+E40	Negation:T71 Negates:E22
+E41	Risk:T72
+E42	Procedure:T73 Name:T74
+E43	Study:T75
+E44	Eq-Comparison:T76 Temporal-Period:T77
+T1	Condition 263 277	claustrophobia
+T2	Condition-Name 263 277	claustrophobia
+T7	Observation 85 88	BMI
+T8	Observation-Name 85 88	BMI
+T9	Condition 301 317	mental disorders
+T10	Condition-Name 301 317	mental disorders
+T11	Condition 483 504	middle ear prosthesis
+T12	Condition-Name 483 504	middle ear prosthesis
+T15	Eq-Temporal-Unit 74 79	years
+T16	Eq-Unit 95 97	kg
+T17	Age 55 59	aged
+T18	Eq-Operator 68 70	to
+T19	Eq-Operator 91 92	-
+T20	Eq-Value 65 67	18
+T21	Eq-Value 71 73	55
+T22	Eq-Value 89 91	25
+T23	Eq-Value 92 94	35
+T24	Eq-Comparison 65 79	18 to 55 years
+T25	Eq-Comparison 89 100	25-35 kg/m2
+T26	Condition 35 42	healthy
+T27	Condition-Name 35 42	healthy
+T30	Modifier 170 177	special
+T32	Drug 199 210	medications
+T33	Drug 214 219	drugs
+T5	Condition 236 244	appetite
+T6	Condition-Name 236 244	appetite
+T13	Procedure 362 365	MRI
+T36	Procedure-Name 362 365	MRI
+T37	Condition 506 525	permanent eye liner
+T38	Condition-Name 506 525	permanent eye liner
+T39	Condition 572 588	heart pacemakers
+T40	Condition-Name 572 588	heart pacemakers
+T41	Condition 645 653	pregnant
+T42	Condition-Name 645 653	pregnant
+T43	Condition 666 674	pregnant
+T44	Condition-Name 666 674	pregnant
+T14	Assertion 657 665	could be
+T47	Eq-Unit 98 100	m2
+T31	Or 211 213	or
+T34	Or 654 656	or
+T45	Or 167 169	or
+T48	Condition 388 418	metallic objects in their body
+T49	Condition-Name 388 418	metallic objects in their body
+T50	Condition 430 463	surgical staples left in the body
+T51	Condition-Name 430 463	surgical staples left in the body
+T52	Procedure 474 481	surgery
+T54	Temporal-Connection 464 473	following
+T56	Condition 527 570	metal foreign objects lodged inside the eye
+T57	Condition-Name 527 570	metal foreign objects lodged inside the eye
+T58	Condition 597 608	pins inside
+T59	Modifier 613 617	knee
+T60	Modifier 621 633	other joints
+T61	Or 618 620	or
+T62	Or 590 596	and/or
+T63	Or 634 636	or
+T66	Observation 695 715	urine pregnancy test
+T67	Observation-Name 695 715	urine pregnancy test
+T68	Life-Stage-And-Gender 720 725	women
+T69	Eq-Comparison 188 194	Taking
+T70	Eq-Temporal-Period 188 194	Taking
+T35	Severity 255 262	serious
+T53	Assertion 727 734	will be
+T46	Procedure-Name 474 481	surgery
+T55	Condition-Name 597 608	pins inside
+T64	Stability 229 235	affect
+T28	Modifier 155 166	weight-loss
+T4	Procedure 178 182	diet
+T3	Procedure-Name 178 182	diet
+T29	Assertion 319 330	self-report
+T65	Negation 340 348	excluded
+T71	Negation 735 743	excluded
+T72	Risk 775 779	risk
+T73	Procedure 800 803	MRI
+T74	Procedure-Name 800 803	MRI
+T75	Study 754 759	study
+T76	Eq-Comparison 144 149	Being
+T77	Eq-Temporal-Period 144 149	Being
+A1	Observation-Type-Value T8 vital
+A2	Eq-Temporal-Unit-Value T15 year
+A3	Eq-Operator-Value T18 BETWEEN
+A4	Eq-Operator-Value T19 BETWEEN
+A9	Life-Stage-And-Gender-Type T68 female
+A10	Eq-Temporal-Period-Value T70 present
+A11	Severity-Value T35 severe
+A7	Assertion-Type-Value E17 hypothetical
+A6	Assertion-Type-Value E24 possible
+A8	Stability-Value T64 change
+A5	Assertion-Type-Value E3 possible
+A12	Eq-Temporal-Period-Value T77 present
+A13	Temporal-Connection-Type-Value E28 after
+R2	Example-Of Arg1:E26 Arg2:E25
+R3	Example-Of Arg1:E11 Arg2:E25
+R4	Example-Of Arg1:E19 Arg2:E25
+R5	Example-Of Arg1:E29 Arg2:E25
+R6	Example-Of Arg1:E20 Arg2:E25
+R7	Example-Of Arg1:E30 Arg2:E25
+R8	Found-By Arg1:E22 Arg2:E37
+R9	If-Then Arg1:T68 Arg2:E37
+R1	Caused-By Arg1:T64 Arg2:E15
+R10	Caused-By Arg1:E41 Arg2:E42
+R11	Caused-By Arg1:E40 Arg2:E41

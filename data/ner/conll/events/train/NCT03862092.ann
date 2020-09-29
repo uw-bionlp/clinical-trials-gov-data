@@ -1,0 +1,107 @@
+E1	Age:T1 Eq-Comparison:E2 Eq-Comparison2:E4
+E2	Eq-Comparison:T2 Operator:T29 Value:T54
+E3	Or:T3 Arg:E2 Arg2:E4
+E4	Eq-Comparison:T4 Operator:T30 Value:T31 Temporal-Unit:T32
+E6	Modifier:T6 Modifies:T35
+E7	Condition:T7 Name:T35 Severity:T34
+E9	Eq-Comparison:T9 Operator:T37 Value:T38
+E10	Drug:T10 Name:T39
+E11	Drug:T11 Name:T58
+E12	Eq-Comparison:T12 Temporal-Period:T40
+E13	Drug:T13 Name:T41 Temporality:E12
+E14	Drug:T14 Name:T42
+E15	Drug:T15 Name:T43
+E16	Drug:T16 Name:T44
+E17	Drug:T17 Name:T45
+E18	Drug:T18 Name:T46
+E19	Drug:T19 Name:T47
+E21	Modifier:T21 Modifies:T48
+E22	Condition:T22 Name:T48
+E23	Observation:T23 Name:T49 Eq-Comparison:E24
+E24	Eq-Comparison:T24 Operator:T50 Value:T51
+E25	Or:T25 Arg:E23 Arg2:E26
+E26	Condition:T26 Name:T59
+E27	Drug:T27 Name:T52
+E28	Drug:T28 Name:T53
+E5	Encounter:T5 Type:T33
+E29	And:T55 Arg:E5 Arg2:E7
+E30	Observation:T8 Name:T36 Eq-Comparison:E9
+E8	Condition:T56 Name:T57
+E20	And:T20 Arg:E22 Arg2:E23
+T1	Age 34 38	aged
+T2	Eq-Comparison 39 42	≥18
+T3	Or 44 47	and
+T4	Eq-Comparison 48 57	<80 years
+T6	Modifier 92 101	abdominal
+T7	Condition 102 106	pain
+T8	Observation 117 120	NRS
+T9	Eq-Comparison 121 124	≥ 6
+T10	Drug 151 181	gastrointestinal motility drug
+T11	Drug 183 190	antacid
+T12	Eq-Comparison 279 283	take
+T13	Drug 284 300	antiviral agents
+T14	Drug 302 311	acyclovir
+T15	Drug 313 325	valacyclovir
+T16	Drug 327 338	famciclovir
+T17	Drug 340 351	ganciclovir
+T18	Drug 353 367	valganciclovir
+T19	Drug 369 378	foscarnet
+T21	Modifier 409 418	abdominal
+T22	Condition 419 423	pain
+T23	Observation 429 432	NRS
+T24	Eq-Comparison 433 436	≤ 5
+T25	Or 437 439	or
+T26	Condition 449 456	symptom
+T27	Drug 460 490	gastrointestinal motility drug
+T28	Drug 492 499	antacid
+T29	Eq-Operator 39 40	≥
+T30	Eq-Operator 48 49	<
+T31	Eq-Value 49 51	80
+T32	Eq-Temporal-Unit 52 57	years
+T34	Severity 86 91	acute
+T35	Condition-Name 102 106	pain
+T37	Eq-Operator 121 122	≥
+T38	Eq-Value 123 124	6
+T39	Drug-Name 151 181	gastrointestinal motility drug
+T40	Eq-Temporal-Period 279 283	take
+T41	Drug-Name 284 300	antiviral agents
+T42	Drug-Name 302 311	acyclovir
+T43	Drug-Name 313 325	valacyclovir
+T44	Drug-Name 327 338	famciclovir
+T45	Drug-Name 340 351	ganciclovir
+T46	Drug-Name 353 367	valganciclovir
+T47	Drug-Name 369 378	foscarnet
+T48	Condition-Name 419 423	pain
+T49	Observation-Name 429 432	NRS
+T50	Eq-Operator 433 434	≤
+T51	Eq-Value 435 436	5
+T52	Drug-Name 460 490	gastrointestinal motility drug
+T53	Drug-Name 492 499	antacid
+T54	Eq-Value 40 42	18
+T5	Encounter 63 71	ER-visit
+T33	Encounter-Type 63 71	ER-visit
+T55	And 81 85	with
+T36	Observation-Name 117 120	NRS
+T56	Condition 135 147	Unresponsive
+T57	Condition-Name 135 147	Unresponsive
+T58	Drug-Name 183 190	antacid
+T20	And 424 428	with
+T59	Condition-Name 449 456	symptom
+A2	Eq-Operator-Value T29 GTEQ
+A3	Eq-Operator-Value T30 LT
+A4	Eq-Temporal-Unit-Value T32 year
+A5	Severity-Value T34 severe
+A7	Eq-Operator-Value T37 GTEQ
+A8	Eq-Temporal-Period-Value T40 present
+A9	Eq-Operator-Value T50 LTEQ
+A10	Encounter-Type-Value T33 emergency
+R1	Caused-By Arg1:E8 Arg2:E10
+R2	Caused-By Arg1:E8 Arg2:E11
+R3	Example-Of Arg1:E14 Arg2:E13
+R4	Example-Of Arg1:E15 Arg2:E13
+R5	Example-Of Arg1:E16 Arg2:E13
+R6	Example-Of Arg1:E17 Arg2:E13
+R7	Example-Of Arg1:E18 Arg2:E13
+R8	Example-Of Arg1:E19 Arg2:E13
+R9	Treatment-For Arg1:E27 Arg2:E26
+R10	Treatment-For Arg1:E28 Arg2:E26

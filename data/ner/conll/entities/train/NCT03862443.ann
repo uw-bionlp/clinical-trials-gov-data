@@ -1,0 +1,161 @@
+E2	Assertion:T2 Asserted:E3
+E3	Study:T3
+E4	Study:T4
+E5	Or:T5 Arg:T47 Arg2:T48
+E6	Age:T6 Eq-Comparison:E7
+E7	Eq-Comparison:T7 Value:T49 Operator:T50
+E8	Family-Member:T8 Has:E10
+E9	Or:T9 Arg:E8 Arg2:E48
+E10	Family-Member:T10 Has:E12 Has2:E13
+E11	Eq-Comparison:T11 Operator:T54 Value:T55 Temporal-Unit:T56
+E12	Age:T12 Eq-Comparison:E11
+E13	Eq-Comparison:T13 Operator:T57 Value:T58 Temporal-Unit:T59
+E14	Eq-Comparison:T14 Value:T60 Temporal-Unit:T61
+E15	And:T15 Arg:E12 Arg2:E51
+E16	Eq-Comparison:T16 Operator:T62 Value:T63
+E17	Negation:T17 Negates:E19
+E19	Observation:T19 Name:T79 Eq-Comparison:E20 Location2:T81
+E20	Eq-Comparison:T20 Temporal-Period:T64 Value:T65 Temporal-Unit:T66
+E23	Study:T23
+E26	Allergy:T26 Name:E21
+E27	Study:T27 Study-Of:E21
+E28	Condition:T28 Name:T25
+E29	Or:T29 Arg:E28 Arg2:E22
+E31	Temporal-Connection:T31 Arg:E22 Arg2:E32
+E32	Procedure:T32 Name:T70
+E33	Temporal-Connection:T33 Arg:E32 Arg2:E24
+E35	Study:T35 Temporality:E24
+E37	Family-Member:T37 Has:E25 Has2:E38
+E38	Study:T38
+E39	Assertion:T39 Asserted:E40
+E40	Risk:T40 Polarity:T71
+E41	Or:T41 Arg:E40 Arg2:E42
+E42	Negation:T42 Negates:E44
+E44	Study:T44
+E1	Or:T1 Arg:T45 Arg2:T46
+E45	Assertion:T72 Asserted:E4
+E46	Temporal-Connection:T73 Arg:E4
+E47	Or:T74 Arg:T51 Arg2:T52
+E48	Family-Member:T53 Has:E10
+E49	And:T75 Arg:E11 Arg2:E13
+E50	Modifier:T76 Modifies:T78
+E51	Condition:T77 Name:T78 Minimum-Count:E16
+E18	Assertion:T18 Asserted:E19
+E52	Negation:T82 Negates:T81
+E21	Drug:T21
+E22	Condition:T22 Name:T24
+E24	Eq-Comparison:T30 Temporal-Recency:T34
+E25	Family-Member:T36
+E30	Observation:T67 Name:T68
+E34	Condition:T69
+E36	Assertion:T80 Asserted:E42
+T2	Assertion 121 126	Agree
+T3	Study 146 151	study
+T4	Study 204 209	study
+T5	Or 227 229	or
+T6	Age 238 242	aged
+T7	Eq-Comparison 243 255	18 and older
+T8	Family-Member 322 328	parent
+T9	Or 329 331	or
+T10	Family-Member 347 352	child
+T11	Eq-Comparison 353 370	at least 6 months
+T12	Age 371 374	old
+T13	Eq-Comparison 379 398	less than 3.5 years
+T14	Eq-Comparison 400 409	42 months
+T15	And 412 416	with
+T16	Eq-Comparison 417 427	at least 2
+T17	Negation 564 567	Not
+T19	Observation 583 587	move
+T20	Eq-Comparison 606 619	next 6 months
+T23	Study 830 835	study
+T26	Allergy 944 952	allergic
+T27	Study 983 988	study
+T28	Condition 1006 1019	Uncooperative
+T29	Or 1020 1022	or
+T31	Temporal-Connection 1055 1061	during
+T32	Procedure 1064 1078	TB prophylaxis
+T33	Temporal-Connection 1079 1081	at
+T35	Study 1094 1108	baseline study
+T37	Family-Member 1137 1142	child
+T38	Study 1167 1172	study
+T39	Assertion 1306 1311	would
+T40	Risk 1346 1350	risk
+T41	Or 1351 1353	or
+T42	Negation 1354 1362	preclude
+T44	Study 1422 1427	study
+T45	Language 96 103	English
+T46	Language 107 114	Spanish
+T47	Life-Stage-And-Gender 222 226	Male
+T48	Life-Stage-And-Gender 230 236	female
+T49	Eq-Value 243 245	18
+T50	Eq-Operator 246 255	and older
+T51	Language 292 299	English
+T52	Language 303 310	Spanish
+T54	Eq-Operator 353 361	at least
+T55	Eq-Value 362 363	6
+T56	Eq-Temporal-Unit 364 370	months
+T57	Eq-Operator 379 388	less than
+T58	Eq-Value 389 392	3.5
+T59	Eq-Temporal-Unit 393 398	years
+T60	Eq-Value 400 402	42
+T61	Eq-Temporal-Unit 403 409	months
+T62	Eq-Operator 417 425	at least
+T63	Eq-Value 426 427	2
+T64	Eq-Temporal-Period 606 610	next
+T65	Eq-Value 611 612	6
+T66	Eq-Temporal-Unit 613 619	months
+T70	Procedure-Name 1064 1078	TB prophylaxis
+T71	Polarity 1329 1338	increased
+T1	Or 104 106	or
+T72	Assertion 167 179	be available
+T73	Temporal-Connection 180 196	for the duration
+T74	Or 300 302	or
+T53	Family-Member 332 341	caregiver
+T75	And 375 378	but
+T76	Modifier 428 441	fully erupted
+T77	Condition 442 447	teeth
+T78	Condition-Name 442 447	teeth
+T79	Observation-Name 583 587	move
+T18	Assertion 571 582	planning to
+T81	Location 632 656	greater Los Angeles area
+T82	Negation 620 627	outside
+T21	Drug 989 999	product(s)
+T22	Condition 1023 1044	behaviorally unsuited
+T24	Condition-Name 1023 1044	behaviorally unsuited
+T25	Condition-Name 1006 1019	Uncooperative
+T30	Eq-Comparison 1086 1093	initial
+T34	Eq-Temporal-Recency 1086 1093	initial
+T36	Family-Member 1124 1131	sibling
+T67	Observation 1269 1280	foster care
+T68	Observation-Name 1269 1280	foster care
+T69	Condition 1287 1300	Anything else
+T80	Assertion 1354 1362	preclude
+A2	Assertion-Type-Value E2 hypothetical
+A3	Family-Member-Type E8 parent
+A4	Family-Member-Type E10 child
+A7	Temporal-Connection-Type-Value E31 during
+A8	Temporal-Connection-Type-Value E33 during
+A10	Family-Member-Type E37 child
+A11	Assertion-Type-Value E39 hypothetical
+A12	Life-Stage-And-Gender-Type T47 male
+A13	Life-Stage-And-Gender-Type T48 female
+A14	Eq-Operator-Value T50 GTEQ
+A16	Eq-Operator-Value T54 GTEQ
+A17	Eq-Temporal-Unit-Value T56 month
+A18	Eq-Operator-Value T57 LT
+A19	Eq-Temporal-Unit-Value T59 year
+A20	Eq-Temporal-Unit-Value T61 month
+A21	Eq-Operator-Value T62 GTEQ
+A22	Eq-Temporal-Period-Value T64 future
+A23	Eq-Temporal-Unit-Value T66 month
+A24	Polarity-Value T71 high
+A1	Assertion-Type-Value E45 hypothetical
+A25	Temporal-Connection-Type-Value E46 during
+A15	Family-Member-Type E48 parent
+A27	Assertion-Type-Value E18 intention
+A28	Location-Value T81 residence
+A5	Eq-Temporal-Recency-Value T34 first-time
+A6	Family-Member-Type E25 sibling
+A9	Assertion-Type-Value E36 hypothetical
+R1	Equivalent-To Arg1:E14 Arg2:E13
+R2	Caused-By Arg1:E40 Arg2:E34
