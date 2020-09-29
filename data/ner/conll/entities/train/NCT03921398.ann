@@ -1,0 +1,148 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4 Temporality:E4
+E5	Condition:T5 Name:T6 Temporality:E2
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10 Temporality:E22
+E11	Condition:T11 Name:T12 Temporality:E24
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18
+E21	Condition:T21 Name:T22
+E23	Condition:T23 Name:T24
+E25	Condition:T25 Name:T26
+E27	Condition:T27 Name:T28
+E28	Age:T33 Eq-Comparison:E30
+E29	Age:T34 Eq-Comparison:E31
+E30	Eq-Comparison:T37 Operator:T29 Temporal-Unit:T31 Value:T35
+E31	Eq-Comparison:T38 Operator:T30 Temporal-Unit:T32 Value:T36
+E2	Eq-Comparison:T39 Temporal-Period:T40
+E4	Eq-Comparison:T41 Temporal-Period:T42
+E6	Condition:T43 Name:T44 Temporality:E8
+E8	Eq-Comparison:T45 Temporal-Period:T46
+E10	Allergy:T47 Temporality:E12
+E12	Eq-Comparison:T48 Temporal-Period:T49
+E14	Condition:T50 Name:T51
+E16	Condition:T52 Name:T53
+E18	Or:T54 Arg:E14 Arg2:E16
+E19	Negation:T56 Negates:E25
+E20	Procedure:T57 Name:T58
+E22	Eq-Comparison:T59 Temporal-Period:T60
+E24	Eq-Comparison:T61 Temporal-Recency:T62
+E26	Negation:T63 Negates:E1
+E32	Drug:T64 Name:T65
+E33	Negation:T66 Negates:E27
+E34	Procedure:T67
+E35	Temporal-Connection:T68 Arg:E13 Arg2:E34
+E36	Condition:T69 Name:T70
+E37	Condition:T71 Name:T72
+E38	Or:T73 Arg:E36 Arg2:E37
+E39	Procedure:T75 Name:T76
+E40	Observation:T77 Name:T78
+E41	Observation:T79 Name:T80
+E42	Modifier:T81 Modifies:T4
+E43	Observation:T82 Name:T83
+T1	Procedure 601 626	immunosuppressive therapy
+T2	Procedure-Name 601 626	immunosuppressive therapy
+T3	Procedure 272 287	transplantation
+T4	Procedure-Name 272 287	transplantation
+T5	Condition 84 99	lupus nephritis
+T6	Condition-Name 84 99	lupus nephritis
+T7	Condition 120 135	lupus nephritis
+T8	Condition-Name 120 135	lupus nephritis
+T9	Condition 541 556	lupus nephritis
+T10	Condition-Name 541 556	lupus nephritis
+T11	Condition 577 592	lupus nephritis
+T12	Condition-Name 577 592	lupus nephritis
+T13	Condition 817 832	lupus nephritis
+T14	Condition-Name 817 832	lupus nephritis
+T15	Condition 339 348	hay fever
+T16	Condition-Name 339 348	hay fever
+T17	Condition 806 813	Relapse
+T18	Condition-Name 806 813	Relapse
+T19	Life-Stage-And-Gender 402 408	adults
+T20	Life-Stage-And-Gender 901 907	adults
+T21	Condition 20 24	ESRD
+T22	Condition-Name 20 24	ESRD
+T23	Condition 231 235	ESRD
+T24	Condition-Name 231 235	ESRD
+T25	Condition 481 485	ESRD
+T26	Condition-Name 481 485	ESRD
+T27	Condition 754 758	ESRD
+T28	Condition-Name 754 758	ESRD
+T29	Eq-Operator 42 43	≥
+T30	Eq-Operator 503 504	≥
+T31	Eq-Temporal-Unit 47 52	years
+T32	Eq-Temporal-Unit 508 513	years
+T33	Age 38 41	Age
+T34	Age 499 502	Age
+T35	Eq-Value 44 46	18
+T36	Eq-Value 505 507	18
+T37	Eq-Comparison 42 52	≥ 18 years
+T38	Eq-Comparison 503 513	≥ 18 years
+T39	Eq-Comparison 59 66	History
+T40	Eq-Temporal-Period 59 66	History
+T41	Eq-Comparison 249 261	Past-history
+T42	Eq-Temporal-Period 249 261	Past-history
+T43	Condition 300 309	infection
+T44	Condition-Name 300 309	infection
+T45	Eq-Comparison 293 299	Active
+T46	Eq-Temporal-Period 293 299	Active
+T47	Allergy 322 329	allergy
+T48	Eq-Comparison 315 321	Active
+T49	Eq-Temporal-Period 315 321	Active
+T50	Condition 355 363	Pregnant
+T51	Condition-Name 355 363	Pregnant
+T52	Condition 367 380	breastfeeding
+T53	Condition-Name 367 380	breastfeeding
+T54	Or 364 366	or
+T55	Life-Stage-And-Gender 381 386	women
+T56	Negation 477 480	non
+T57	Procedure 520 526	Biopsy
+T58	Procedure-Name 520 526	Biopsy
+T59	Eq-Comparison 534 540	ACTIVE
+T60	Eq-Temporal-Period 534 540	ACTIVE
+T61	Eq-Comparison 562 567	First
+T62	Eq-Temporal-Recency 562 567	First
+T63	Negation 598 600	No
+T64	Drug 638 653	corticosteroids
+T65	Drug-Name 638 653	corticosteroids
+T66	Negation 750 753	non
+T67	Procedure 839 848	treatment
+T68	Temporal-Connection 833 838	under
+T69	Condition 854 862	Pregnant
+T70	Condition-Name 854 862	Pregnant
+T71	Condition 866 879	breastfeeding
+T72	Condition-Name 866 879	breastfeeding
+T73	Or 863 865	or
+T74	Life-Stage-And-Gender 880 885	women
+T75	Procedure 773 800	Immunosuppressive treatment
+T76	Procedure-Name 773 800	Immunosuppressive treatment
+T77	Observation 921 939	under guardianship
+T78	Observation-Name 921 939	under guardianship
+T79	Observation 891 900	Protected
+T80	Observation-Name 891 900	Protected
+T81	Modifier 265 271	kidney
+T82	Observation 422 440	under guardianship
+T83	Observation-Name 422 440	under guardianship
+A1	Life-Stage-And-Gender-Type T19 adult
+A2	Life-Stage-And-Gender-Type T20 adult
+A3	Eq-Operator-Value T29 GTEQ
+A4	Eq-Operator-Value T30 GTEQ
+A5	Eq-Temporal-Unit-Value T31 year
+A6	Eq-Temporal-Unit-Value T32 year
+A7	Eq-Temporal-Period-Value T40 past
+A8	Eq-Temporal-Period-Value T42 present
+A9	Eq-Temporal-Period-Value T46 present
+A10	Eq-Temporal-Period-Value T49 present
+A11	Life-Stage-And-Gender-Type T55 female
+A12	Eq-Temporal-Period-Value T60 present
+A13	Eq-Temporal-Recency-Value T62 first-time
+A14	Temporal-Connection-Type-Value E35 during
+A15	Life-Stage-And-Gender-Type T74 female
+R1	Example-Of Arg1:E15 Arg2:E10
+R2	Found-By Arg1:E9 Arg2:E20
+R3	Example-Of Arg1:E32 Arg2:E1
+R4	Caused-By Arg1:E17 Arg2:E13
+R5	If-Then Arg1:T74 Arg2:E37
+R6	If-Then Arg1:T55 Arg2:E16
+R7	Equivalent-To Arg1:E40 Arg2:E41

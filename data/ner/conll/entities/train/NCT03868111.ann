@@ -1,0 +1,125 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Operator:T39 Value:T40 Value:T41 Temporal-Unit:T42
+E3	Condition:T3 Name:T43 Stage:E4
+E4	Eq-Comparison:T4 Value:T44 Value:T45
+E5	Eq-Comparison:T5 Temporal-Period:T46
+E6	Procedure:T6 Name:T47 Temporality:E5
+E7	Procedure:T7 Name:T48
+E8	Condition:T8 Name:T49
+E9	Condition:T9 Name:T50
+E10	Or:T10 Arg:E9 Arg2:E11
+E11	Condition:T11 Name:T51
+E12	Negation:T12 Negates:E13
+E13	Condition:T13 Name:T52
+E14	Assertion:T14 Asserted:E15
+E15	Observation:T15 Name:T53
+E16	Modifier:T16 Modifies:T54
+E17	Condition:T17 Name:T54
+E18	Or:T18 Arg:E17 Arg2:E20
+E19	Modifier:T19 Modifies:T55
+E20	Condition:T20 Name:T55
+E21	Assertion:T21 Asserted:T22
+E23	Procedure:T23 Name:T56 Stability:T22
+E24	Procedure:T24 Name:T57 Stability:T22
+E25	Assertion:T25 Asserted:E26
+E26	Procedure:T26 Name:T58
+E27	Condition:T27 Name:T67
+E28	Condition:T28 Name:T59
+E29	Or:T29 Arg:E28 Arg2:E31
+E30	Other:T30 Is-Other:E31
+E31	Condition:T31 Name:T68
+E32	Modifier:T32 Modifies:T68
+E33	Eq-Comparison:T33 Temporal-Period:T60
+E34	Modifier:T34 Modifies:T61
+E35	Or:T35 Arg:E34 Arg2:E36
+E36	Modifier:T36 Modifies:T61
+E37	Condition:T37 Name:T61 Temporality:E33
+E38	Condition:T38 Name:T62
+E39	Modifier:T64 Modifies:T47
+E40	Assertion:T65 Asserted:E12
+E22	Modifier:T66 Modifies:T58
+T1	Age 34 38	aged
+T2	Eq-Comparison 39 62	between 19 and 65 years
+T3	Condition 82 119	American Society of Anesthesiologists
+T4	Eq-Comparison 136 143	I or II
+T5	Eq-Comparison 158 167	scheduled
+T6	Procedure 181 209	laparoscopic cholecystectomy
+T7	Procedure 225 243	general anesthesia
+T8	Condition 248 275	benign cholecystic diseases
+T9	Condition 364 370	asthma
+T10	Or 371 373	or
+T11	Condition 374 386	hypertension
+T12	Negation 409 418	inability
+T13	Condition 436 440	pain
+T14	Assertion 474 497	inability to understand
+T15	Observation 502 512	pain scale
+T16	Modifier 532 549	chronic abdominal
+T17	Condition 550 554	pain
+T18	Or 555 557	or
+T19	Modifier 558 565	chronic
+T20	Condition 566 579	pain syndrome
+T21	Assertion 598 609	required to
+T23	Procedure 621 631	laparotomy
+T24	Procedure 637 657	laparoscopic surgery
+T25	Assertion 676 687	required to
+T26	Procedure 713 733	abdominal procedures
+T27	Condition 743 751	adhesion
+T28	Condition 753 759	injury
+T29	Or 761 763	or
+T30	Other 764 769	other
+T31	Condition 770 789	incidental findings
+T32	Modifier 797 819	lower abdominal cavity
+T33	Eq-Comparison 841 848	history
+T34	Modifier 852 856	drug
+T35	Or 857 859	or
+T36	Modifier 860 867	alcohol
+T37	Condition 868 873	abuse
+T38	Condition 879 887	Pregnant
+T39	Eq-Operator 39 46	between
+T40	Eq-Value 47 49	19
+T41	Eq-Value 54 56	65
+T42	Eq-Temporal-Unit 57 62	years
+T43	Condition-Name 82 119	American Society of Anesthesiologists
+T44	Eq-Value 136 137	I
+T45	Eq-Value 141 143	II
+T46	Eq-Temporal-Period 158 167	scheduled
+T47	Procedure-Name 181 209	laparoscopic cholecystectomy
+T48	Procedure-Name 225 243	general anesthesia
+T49	Condition-Name 248 275	benign cholecystic diseases
+T50	Condition-Name 364 370	asthma
+T51	Condition-Name 374 386	hypertension
+T52	Condition-Name 436 440	pain
+T53	Observation-Name 502 512	pain scale
+T54	Condition-Name 550 554	pain
+T55	Condition-Name 566 579	pain syndrome
+T56	Procedure-Name 621 631	laparotomy
+T57	Procedure-Name 637 657	laparoscopic surgery
+T58	Procedure-Name 713 733	abdominal procedures
+T59	Condition-Name 753 759	injury
+T60	Eq-Temporal-Period 841 848	history
+T61	Condition-Name 868 873	abuse
+T62	Condition-Name 879 887	Pregnant
+T63	Life-Stage-And-Gender 888 893	women
+T64	Modifier 172 180	elective
+T65	Assertion 409 418	inability
+T22	Stability 610 617	convert
+T66	Modifier 696 712	incidental lower
+T67	Condition-Name 743 751	adhesion
+T68	Condition-Name 770 789	incidental findings
+A1	Assertion-Type-Value E21 hypothetical
+A3	Assertion-Type-Value E25 hypothetical
+A4	Eq-Operator-Value T39 BETWEEN
+A5	Eq-Temporal-Unit-Value T42 year
+A6	Eq-Temporal-Period-Value T46 future
+A7	Eq-Temporal-Period-Value T60 past
+A8	Life-Stage-And-Gender-Type T63 female
+A9	Assertion-Type-Value E40 hypothetical
+A10	Observation-Type-Value T53 measurement
+A11	Assertion-Type-Value E14 hypothetical
+A2	Stability-Value T22 change
+R1	Using Arg1:E6 Arg2:E7
+R2	Treatment-For Arg1:E6 Arg2:E8
+R3	Treatment-For Arg1:E26 Arg2:E27
+R4	Treatment-For Arg1:E26 Arg2:E28
+R5	Treatment-For Arg1:E26 Arg2:E31
+R6	If-Then Arg1:E38 Arg2:T63

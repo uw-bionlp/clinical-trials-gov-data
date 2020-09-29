@@ -1,0 +1,200 @@
+E1	Condition:T1 Name:T51
+E2	Eq-Comparison:T2 Operator:T52 Value:T53
+E3	Encounter:T3 Type:T54 Location:T8 Minimum-Count:E2 Temporality:E4
+E4	Eq-Comparison:T4 Operator:T55 Temporal-Period:T56 Value:T57 Temporal-Unit:T58
+E5	Eq-Comparison:T5 Operator:T59 Value:T60 Temporal-Unit:T61
+E6	Age:T6 Eq-Comparison:E5
+E7	Condition:T7 Name:T62
+E8	Eq-Comparison:T9 Operator:T63 Value:T64 Unit:T65 Per:T66
+E9	Eq-Comparison:T10 Operator:T67 Value:T68 Temporal-Unit:T69
+E10	Observation:T11 Name:T70
+E11	Eq-Comparison:T12 Operator:T71 Value:T72
+E12	Assertion:T13 Asserted:E13
+E13	Condition:T14 Name:T73 Temporality:E14
+E14	Eq-Comparison:T15 Temporal-Period:T74 Value:T75 Temporal-Unit:T76
+E15	Eq-Comparison:T16 Temporal-Period:T77
+E16	Procedure:T17 Name:T78
+E17	Procedure:T18 Name:T79 Temporality:E15
+E18	Eq-Comparison:T19 Temporal-Period:T80
+E21	Eq-Comparison:T22 Operator:T83 Value:T84 Temporal-Unit:T85 Per:T86
+E22	Modifier:T23 Modifies:T88
+E23	Or:T24 Arg:E22 Arg2:E24
+E24	Modifier:T25 Modifies:T88
+E25	Condition:T26 Name:T88 Stability:T87
+E26	Encounter:T27
+E27	Contraindication:T28 Contraindicates:E28
+E28	Drug:T29 Name:T90
+E29	Condition:T30 Name:T91 Stability:T82
+E30	Modifier:T31 Modifies:T92
+E31	Condition:T32 Name:T92
+E32	Or:T33 Arg:E31 Arg2:E34
+E33	Eq-Comparison:T34 Temporal-Period:T93
+E34	Condition:T35 Name:T94 Temporality:E33
+E35	Encounter:T36
+E36	Condition:T37 Name:T96
+E37	Assertion:T38 Asserted:E36
+E38	Condition:T39 Name:T97
+E39	Exception:T40 From:E38 Except:E40
+E40	Condition:T41 Name:T98
+E41	Eq-Comparison:T42 Temporal-Period:T99 Temporal-Unit:T100
+E42	Condition:T43 Name:T101 Temporality:E41
+E43	Or:T44 Arg:E42 Arg2:E45
+E44	Eq-Comparison:T45 Temporal-Period:T102 Temporal-Unit:T103
+E45	Condition:T46 Name:T104 Temporality:E44
+E46	Condition:T47 Name:T105
+E47	Or:T48 Arg:E46 Arg2:E48
+E48	Condition:T49 Name:T106
+E49	Observation:T50 Eq-Comparison:E8 Duration:E9
+E50	Observation:T107 Name:T108 Eq-Comparison:E11
+E51	Modifier:T109 Modifies:E11
+E19	Drug:T20 Name:T21 Temporality:E18 Temporality2:E21
+E20	Modifier:T81 Modifies:T21
+T1	Condition 64 67	HIV
+T2	Eq-Comparison 80 92	at least one
+T3	Encounter 104 123	medical appointment
+T4	Eq-Comparison 124 156	within the past six month period
+T5	Eq-Comparison 163 180	at least 18 years
+T6	Age 184 187	age
+T7	Condition 193 198	smoke
+T9	Eq-Comparison 199 228	at least 5 cigarettes per day
+T10	Eq-Comparison 233 253	longer than one year
+T11	Observation 259 282	exhaled carbon monoxide
+T12	Eq-Comparison 294 308	greater than 5
+T13	Assertion 340 352	intention to
+T14	Condition 353 365	quit smoking
+T15	Eq-Comparison 373 385	next 30 days
+T16	Eq-Comparison 391 406	currently using
+T17	Procedure 407 422	pharmacotherapy
+T18	Procedure 427 444	smoking cessation
+T19	Eq-Comparison 450 465	currently using
+T22	Eq-Comparison 488 509	more than 2 days/week
+T23	Modifier 524 531	medical
+T24	Or 532 534	or
+T25	Modifier 535 546	psychiatric
+T26	Condition 547 556	condition
+T27	Encounter 569 584	hospitalization
+T28	Contraindication 599 616	contraindications
+T29	Drug 620 628	nicotine
+T30	Condition 639 645	angina
+T31	Modifier 647 659	uncontrolled
+T32	Condition 660 672	hypertension
+T33	Or 674 676	or
+T34	Eq-Comparison 677 683	recent
+T35	Condition 684 704	cardiovascular event
+T36	Encounter 716 731	hospitalization
+T37	Condition 738 747	psychotic
+T38	Assertion 748 756	symptoms
+T39	Condition 762 784	substance use disorder
+T40	Exception 785 795	other than
+T41	Condition 796 815	nicotine dependence
+T42	Eq-Comparison 821 831	past-month
+T43	Condition 832 849	suicidal ideation
+T44	Or 850 852	or
+T45	Eq-Comparison 853 862	past-year
+T46	Condition 863 878	suicide attempt
+T47	Condition 884 892	pregnant
+T48	Or 893 895	or
+T49	Condition 896 903	nursing
+T50	Observation 193 198	smoke
+T51	Condition-Name 64 67	HIV
+T52	Eq-Operator 80 88	at least
+T53	Eq-Value 89 92	one
+T55	Eq-Operator 124 130	within
+T56	Eq-Temporal-Period 135 139	past
+T57	Eq-Value 140 143	six
+T58	Eq-Temporal-Unit 144 149	month
+T59	Eq-Operator 163 171	at least
+T60	Eq-Value 172 174	18
+T61	Eq-Temporal-Unit 175 180	years
+T62	Condition-Name 193 198	smoke
+T63	Eq-Operator 199 207	at least
+T64	Eq-Value 208 209	5
+T65	Eq-Unit 210 220	cigarettes
+T66	Eq-Temporal-Unit 225 228	day
+T67	Eq-Operator 233 244	longer than
+T68	Eq-Value 245 248	one
+T69	Eq-Temporal-Unit 249 253	year
+T70	Observation-Name 259 282	exhaled carbon monoxide
+T71	Eq-Operator 294 306	greater than
+T72	Eq-Value 307 308	5
+T73	Condition-Name 353 365	quit smoking
+T74	Eq-Temporal-Period 373 377	next
+T75	Eq-Value 378 380	30
+T76	Eq-Temporal-Unit 381 385	days
+T77	Eq-Temporal-Period 391 406	currently using
+T79	Procedure-Name 427 444	smoking cessation
+T80	Eq-Temporal-Period 450 465	currently using
+T83	Eq-Operator 488 497	more than
+T84	Eq-Value 498 499	2
+T85	Eq-Temporal-Unit 500 504	days
+T86	Eq-Temporal-Unit 505 509	week
+T87	Stability 515 523	unstable
+T88	Condition-Name 547 556	condition
+T89	Encounter-Type 569 584	hospitalization
+T90	Drug-Name 620 628	nicotine
+T91	Condition-Name 639 645	angina
+T92	Condition-Name 660 672	hypertension
+T93	Eq-Temporal-Period 677 683	recent
+T94	Condition-Name 684 704	cardiovascular event
+T95	Encounter-Type 716 731	hospitalization
+T96	Condition-Name 738 747	psychotic
+T97	Condition-Name 762 784	substance use disorder
+T98	Condition-Name 796 815	nicotine dependence
+T99	Eq-Temporal-Period 821 825	past
+T100	Eq-Temporal-Unit 826 831	month
+T101	Condition-Name 832 849	suicidal ideation
+T102	Eq-Temporal-Period 853 857	past
+T103	Eq-Temporal-Unit 858 862	year
+T104	Condition-Name 863 878	suicide attempt
+T105	Condition-Name 884 892	pregnant
+T106	Condition-Name 896 903	nursing
+T8	Location 93 103	HIV clinic
+T54	Encounter-Type 104 123	medical appointment
+T107	Observation 284 286	CO
+T108	Observation-Name 284 286	CO
+T109	Modifier 312 314	BL
+T78	Procedure-Name 407 422	pharmacotherapy
+T20	Drug 477 487	cigarettes
+T21	Drug-Name 477 487	cigarettes
+T81	Modifier 466 476	electronic
+T82	Stability 630 638	unstable
+A1	Assertion-Type-Value E12 intention
+A2	Assertion-Type-Value E37 possible
+A3	Eq-Operator-Value T52 GTEQ
+A4	Eq-Operator-Value T55 LTEQ
+A5	Eq-Temporal-Period-Value T56 past
+A6	Eq-Temporal-Unit-Value T58 month
+A7	Eq-Operator-Value T59 GTEQ
+A8	Eq-Temporal-Unit-Value T61 year
+A10	Eq-Operator-Value T63 GTEQ
+A11	Eq-Temporal-Unit-Value T66 day
+A12	Eq-Operator-Value T67 GT
+A13	Eq-Temporal-Unit-Value T69 year
+A14	Eq-Operator-Value T71 GT
+A15	Eq-Temporal-Period-Value T74 future
+A16	Eq-Temporal-Unit-Value T76 day
+A17	Eq-Temporal-Period-Value T77 present
+A19	Eq-Temporal-Period-Value T80 present
+A22	Eq-Operator-Value T83 GT
+A23	Eq-Temporal-Unit-Value T85 day
+A24	Eq-Temporal-Unit-Value T86 week
+A25	Stability-Value T87 change
+A26	Encounter-Type-Value T89 inpatient
+A27	Eq-Temporal-Period-Value T93 recent
+A28	Encounter-Type-Value T95 inpatient
+A29	Eq-Temporal-Period-Value T99 past
+A30	Eq-Temporal-Unit-Value T100 month
+A31	Eq-Temporal-Period-Value T102 past
+A32	Eq-Temporal-Unit-Value T103 year
+A33	Location-Value T8 clinic
+A34	Encounter-Type-Value T54 outpatient
+A9	Observation-Type-Value T70 measurement
+A18	Stability-Value T82 change
+R1	Equivalent-To Arg1:E3 Arg2:E1
+R2	Abbrev-Of Arg1:E50 Arg2:E10
+R3	Using Arg1:E17 Arg2:E16
+R4	Equivalent-To Arg1:E26 Arg2:E25
+R5	Example-Of Arg1:E29 Arg2:E27
+R6	Example-Of Arg1:E31 Arg2:E27
+R7	Example-Of Arg1:E34 Arg2:E35
+R8	Example-Of Arg1:E34 Arg2:E27

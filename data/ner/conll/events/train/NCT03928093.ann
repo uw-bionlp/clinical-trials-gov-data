@@ -1,0 +1,200 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E17	Condition:T17 Name:T18
+E19	Condition:T19 Name:T20
+E21	Procedure:T21 Name:T22
+E23	Condition:T23 Name:T24 Provider:E4
+E28	Eq-Comparison:T54 Operator:T29 Value:T40 Operator2:T62 Value2:T41 Temporal-Unit:T34
+E29	Eq-Comparison:T55 Operator:T30 Value:T43 Per:T74
+E30	Eq-Comparison:T56 Operator:T31 Value:T45 Per:T76
+E31	Eq-Comparison:T57 Operator:T32 Value:T49 Per:T77
+E32	Eq-Comparison:T58 Operator:T33 Temporal-Unit:T37 Value:T53
+E2	Age:T61 Eq-Comparison:E28
+E4	Provider:T63 Type:T64
+E6	Provider:T65 Type:T66
+E8	Or:T67 Arg:E4 Arg2:E6
+E10	Or:T68 Arg:E6 Arg2:E21
+E12	Condition:T69 Name:T70
+E14	Procedure:T71 Name:T72
+E16	Observation:T73 Name:T44 Eq-Comparison:E29
+E18	Observation:T42 Name:T75 Eq-Comparison:E30 Temporality:E20 Duration:E22
+E20	Eq-Comparison:T25 Per:T26
+E22	Eq-Comparison:T35 Temporal-Unit:T47 Operator:T38 Value:T46
+E24	Observation:T48 Name:T59 Eq-Comparison:E31 Eq-Comparison2:E25 Duration:E26
+E25	Eq-Comparison:T27 Per:T28
+E26	Eq-Comparison:T36 Temporal-Unit:T51 Operator:T39 Value:T50
+E15	Drug:T15 Name:T16
+E27	Drug:T52 Name:T60
+E33	Or:T78 Arg:E15 Arg2:E27
+E34	Allergy:T79 Name:E15 Name2:E27
+E35	Or:T80 Arg:E11 Arg2:E34
+E36	Drug:T81 Name:T82 Temporality:E32
+E37	Study:T83
+E38	Temporal-Connection:T84 Arg:E32 Arg2:E37
+E39	Condition:T85
+E40	Contraindication:T86 Contraindicates:E41
+E41	Drug:T87 Name:T88
+E42	Condition:T89 Name:T90 Temporality:E45
+E43	Condition:T91 Name:T92 Temporality:E46
+E44	Or:T93 Arg:E43 Arg2:E9
+E7	Allergy:T7 Name:T8
+E45	Eq-Comparison:T94 Temporal-Period:T95
+E46	Eq-Comparison:T96 Temporal-Period:T97
+E47	Eq-Comparison:T98 Temporal-Period:T99
+E48	Eq-Comparison:T100 Temporal-Period:T101
+E49	Procedure:T102 Temporality:E48
+E50	Drug:T103 Name:T104
+E51	Drug:T105 Name:T106
+E52	Drug:T107 Name:T108
+E53	Drug:T109 Name:T110
+E54	Drug:T111 Name:T112
+E55	Drug:T113 Name:T114
+E56	Or:T115 Arg:E55 Arg2:E54
+E57	Other:T116 Is-Other:E55
+T1	Condition 1192 1214	ischemic heart disease
+T2	Condition-Name 1192 1214	ischemic heart disease
+T3	Condition 875 894	Lactose intolerance
+T4	Condition-Name 875 894	Lactose intolerance
+T5	Condition 1216 1235	cardiac dysrhythmia
+T6	Condition-Name 1216 1235	cardiac dysrhythmia
+T9	Condition 1341 1354	alcohol abuse
+T10	Condition-Name 1341 1354	alcohol abuse
+T11	Condition 815 826	Intolerance
+T12	Condition-Name 815 826	Intolerance
+T13	Condition 298 308	neuropathy
+T14	Condition-Name 298 308	neuropathy
+T17	Condition 1282 1291	Pregnancy
+T18	Condition-Name 1282 1291	Pregnancy
+T19	Condition 1237 1245	glaucoma
+T20	Condition-Name 1237 1245	glaucoma
+T21	Procedure 259 279	genetic confirmation
+T22	Procedure-Name 259 279	genetic confirmation
+T23	Condition 206 210	RDEB
+T24	Condition-Name 206 210	RDEB
+T29	Eq-Operator 30 31	>
+T30	Eq-Operator 410 411	>
+T31	Eq-Operator 516 517	>
+T32	Eq-Operator 642 643	>
+T33	Eq-Operator 950 956	within
+T34	Eq-Temporal-Unit 39 44	years
+T37	Eq-Temporal-Unit 959 964	weeks
+T40	Eq-Value 32 33	8
+T41	Eq-Value 36 38	40
+T43	Eq-Value 412 413	4
+T45	Eq-Value 518 519	4
+T49	Eq-Value 644 645	4
+T53	Eq-Value 957 958	2
+T54	Eq-Comparison 30 44	> 8 - 40 years
+T55	Eq-Comparison 410 416	> 4/10
+T56	Eq-Comparison 516 519	> 4
+T57	Eq-Comparison 642 645	> 4
+T58	Eq-Comparison 950 964	within 2 weeks
+T61	Age 25 28	Age
+T62	Eq-Operator 34 35	-
+T63	Provider 217 230	dermatologist
+T64	Provider-Type 217 230	dermatologist
+T65	Provider 238 251	EB specialist
+T66	Provider-Type 238 251	EB specialist
+T67	Or 231 237	and/or
+T68	Or 252 258	and/or
+T69	Condition 321 341	thermal sensory loss
+T70	Condition-Name 321 341	thermal sensory loss
+T71	Procedure 359 373	thermal roller
+T72	Procedure-Name 359 373	thermal roller
+T73	Observation 450 466	neuropathic pain
+T44	Observation-Name 450 466	neuropathic pain
+T74	Eq-Unit 414 416	10
+T42	Observation 498 512	Pain intensity
+T75	Observation-Name 498 512	Pain intensity
+T76	Eq-Unit 520 522	10
+T25	Eq-Comparison 552 557	daily
+T26	Eq-Temporal-Unit 552 557	daily
+T35	Eq-Comparison 606 618	over 2 weeks
+T38	Eq-Operator 606 610	over
+T46	Eq-Value 611 612	2
+T47	Eq-Temporal-Unit 613 618	weeks
+T48	Observation 624 638	Itch intensity
+T59	Observation-Name 624 638	Itch intensity
+T77	Eq-Unit 646 648	10
+T27	Eq-Comparison 678 683	daily
+T28	Eq-Temporal-Unit 678 683	daily
+T36	Eq-Comparison 732 744	over 2 weeks
+T39	Eq-Operator 732 736	over
+T50	Eq-Value 737 738	2
+T51	Eq-Temporal-Unit 739 744	weeks
+T15	Drug 845 855	Pregabalin
+T16	Drug-Name 845 855	Pregabalin
+T52	Drug 859 869	gabapentin
+T60	Drug-Name 859 869	gabapentin
+T78	Or 856 858	or
+T79	Allergy 834 841	allergy
+T80	Or 827 833	and/or
+T81	Drug 935 945	Pregabalin
+T82	Drug-Name 935 945	Pregabalin
+T83	Study 972 977	study
+T84	Temporal-Connection 965 971	before
+T85	Condition 1101 1119	Medical conditions
+T86	Contraindication 1148 1165	contraindications
+T87	Drug 1170 1180	pregabalin
+T88	Drug-Name 1170 1180	pregabalin
+T89	Condition 1258 1275	urinary retention
+T90	Condition-Name 1258 1275	urinary retention
+T91	Condition 1315 1337	restrictive substances
+T92	Condition-Name 1315 1337	restrictive substances
+T93	Or 1338 1340	or
+T7	Allergy 1360 1367	Allergy
+T8	Allergy-Name 1371 1378	gelatin
+T94	Eq-Comparison 1247 1254	history
+T95	Eq-Temporal-Period 1247 1254	history
+T96	Eq-Comparison 1297 1304	History
+T97	Eq-Temporal-Period 1297 1304	History
+T98	Eq-Comparison 423 428	using
+T99	Eq-Temporal-Period 423 428	using
+T100	Eq-Comparison 993 1000	Ongoing
+T101	Eq-Temporal-Period 993 1000	Ongoing
+T102	Procedure 1001 1010	treatment
+T103	Drug 1016 1026	gabapentin
+T104	Drug-Name 1016 1026	gabapentin
+T105	Drug 1028 1041	amitriptyline
+T106	Drug-Name 1028 1041	amitriptyline
+T107	Drug 1043 1053	duloxetine
+T108	Drug-Name 1043 1053	duloxetine
+T109	Drug 1055 1068	nortriptyline
+T110	Drug-Name 1055 1068	nortriptyline
+T111	Drug 1090 1095	SNRIs
+T112	Drug-Name 1090 1095	SNRIs
+T113	Drug 1076 1086	tricyclics
+T114	Drug-Name 1076 1086	tricyclics
+T115	Or 1087 1089	or
+T116	Other 1070 1075	other
+A1	Eq-Operator-Value T29 GT
+A2	Eq-Operator-Value T30 GT
+A3	Eq-Operator-Value T31 GT
+A4	Eq-Operator-Value T32 GT
+A5	Eq-Operator-Value T33 LTEQ
+A6	Eq-Temporal-Unit-Value T34 year
+A9	Eq-Temporal-Unit-Value T37 week
+A12	Eq-Operator-Value T62 BETWEEN
+A10	Eq-Temporal-Unit-Value T26 day
+A7	Eq-Operator-Value T38 GT
+A13	Eq-Temporal-Unit-Value T47 week
+A8	Eq-Temporal-Unit-Value T28 day
+A11	Eq-Operator-Value T39 GT
+A14	Eq-Temporal-Unit-Value T51 week
+A15	Temporal-Connection-Type-Value E38 before
+A16	Eq-Temporal-Period-Value T95 past
+A17	Eq-Temporal-Period-Value T97 past
+A18	Eq-Temporal-Period-Value T99 present
+A19	Eq-Temporal-Period-Value T101 present
+R1	Found-By Arg1:E21 Arg2:E23
+R2	Found-By Arg1:E12 Arg2:E14
+R3	Caused-By Arg1:E40 Arg2:E39
+R4	Example-Of Arg1:E1 Arg2:E39
+R5	Example-Of Arg1:E5 Arg2:E39
+R6	Example-Of Arg1:E19 Arg2:E39
+R7	Example-Of Arg1:E42 Arg2:E39
+R8	Using Arg1:E49 Arg2:E50

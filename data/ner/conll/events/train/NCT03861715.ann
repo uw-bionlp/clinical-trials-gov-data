@@ -1,0 +1,172 @@
+E1	Observation:T1 Name:T2
+E3	Condition:T3 Name:T4 Polarity:T9
+E5	Observation:T5 Name:T6 Eq-Comparison:E37
+E10	Condition:T10 Name:T11 Temporality:E34
+E12	Condition:T12 Name:T13
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17
+E18	Condition:T18 Name:T19
+E20	Condition:T20 Name:T21
+E22	Condition:T22 Name:T23
+E24	Condition:T24 Name:T25 Stage:E31
+E26	Procedure:T26 Name:T27 Temporality:E40
+E28	Condition:T28 Name:T29
+E30	Condition:T30 Name:T31
+E32	Condition:T32 Name:T33 Severity:T92
+E33	Age:T39 Eq-Comparison:E36
+E35	Eq-Comparison:T53 Operator:T34 Value:T51 Unit:T40 Per:T59
+E36	Eq-Comparison:T54 Operator:T41 Value:T45 Value2:T46 Temporal-Unit:T36
+E37	Eq-Comparison:T55 Operator:T42 Value:T47 Per:T8 Unit:T38
+E38	Eq-Comparison:T56 Operator:T43 Value:T49
+E39	Eq-Comparison:T57 Operator:T44 Value:T52 Value2:T64 Unit:T65 Per:T66
+E2	Observation:T7 Name:T58 Eq-Comparison:E35
+E4	Observation:T35 Name:T60
+E6	Modifier:T61 Modifies:T60
+E7	Eq-Comparison:T62 Unit:T63
+E8	And:T68 Arg:T67 Arg2:E30
+E9	Or:T69 Arg:E30 Arg2:E14
+E11	Other:T70 Is-Other:E14
+E13	Modifier:T72 Modifies:T17
+E15	And:T73 Arg:T71 Arg2:E16
+E17	And:T75 Arg:T74 Arg2:E18
+E19	Condition:T76 Name:T77
+E21	Condition:T78 Name:T79 Polarity:T80
+E23	Modifier:T82 Modifies:T13
+E25	Modifier:T83 Modifies:T13
+E27	Or:T84 Arg:E25 Arg2:E23
+E29	And:T85 Arg:T81 Arg2:E12
+E31	Eq-Comparison:T86 Unit:T87 Value:T88 Value2:T89
+E34	Eq-Comparison:T90 Temporal-Period:T91
+E40	Eq-Comparison:T93 Temporal-Period:T94
+E41	Temporal-Connection:T95 Arg:E32 Arg2:E40
+E42	Contraindication:T96 Contraindicates:E43
+E43	Drug:T97 Name:T98
+E44	Or:T99 Arg:E26 Arg2:E42
+E45	Condition:T100 Name:T101 Polarity:T102
+T1	Observation 47 62	body mass index
+T2	Observation-Name 47 62	body mass index
+T3	Condition 94 109	menstrual cycle
+T4	Condition-Name 94 109	menstrual cycle
+T5	Observation 64 67	BMI
+T6	Observation-Name 64 67	BMI
+T10	Condition 618 639	recurrent miscarriage
+T11	Condition-Name 618 639	recurrent miscarriage
+T12	Condition 536 543	disease
+T13	Condition-Name 536 543	disease
+T14	Condition 315 332	metabolic disease
+T15	Condition-Name 315 332	metabolic disease
+T16	Condition 360 376	genetic diseases
+T17	Condition-Name 360 376	genetic diseases
+T18	Condition 394 407	heart disease
+T19	Condition-Name 394 407	heart disease
+T20	Condition 425 438	heart failure
+T21	Condition-Name 425 438	heart failure
+T22	Condition 468 481	liver failure
+T23	Condition-Name 468 481	liver failure
+T24	Condition 574 587	endometriosis
+T25	Condition-Name 574 587	endometriosis
+T26	Procedure 672 689	stimulation cycle
+T27	Procedure-Name 672 689	stimulation cycle
+T28	Condition 483 492	hepatitis
+T29	Condition-Name 483 492	hepatitis
+T30	Condition 296 304	diabetes
+T31	Condition-Name 296 304	diabetes
+T32	Condition 653 657	OHSS
+T33	Condition-Name 653 657	OHSS
+T34	Eq-Operator 158 159	≥
+T36	Eq-Temporal-Unit 35 40	years
+T37	Eq-Temporal-Unit 119 123	days
+T38	Eq-Unit 74 76	kg
+T39	Age 25 28	age
+T41	Eq-Operator 31 32	-
+T42	Eq-Operator 71 72	-
+T43	Eq-Operator 115 116	-
+T44	Eq-Operator 249 250	-
+T45	Eq-Value 29 31	20
+T46	Eq-Value 32 34	34
+T47	Eq-Value 69 71	18
+T48	Eq-Value 72 74	29
+T49	Eq-Value 113 115	26
+T50	Eq-Value 116 118	35
+T51	Eq-Value 159 162	2.3
+T52	Eq-Value 250 252	12
+T53	Eq-Comparison 158 168	≥2.3 ng/ml
+T54	Eq-Comparison 29 40	20-34 years
+T55	Eq-Comparison 69 79	18-29kg/m2
+T56	Eq-Comparison 113 116	26-
+T57	Eq-Comparison 248 257	1-12 IU/l
+T8	Eq-Unit 77 79	m2
+T9	Polarity 86 93	regular
+T7	Observation 130 133	AMH
+T58	Observation-Name 130 133	AMH
+T40	Eq-Unit 163 165	ng
+T59	Eq-Unit 166 168	ml
+T35	Observation 199 225	serum concentration of FSH
+T60	Observation-Name 199 225	serum concentration of FSH
+T61	Modifier 175 198	early follicular- phase
+T62	Eq-Comparison 226 246	within normal limits
+T63	Eq-Unit 226 246	within normal limits
+T64	Eq-Value 248 249	1
+T65	Eq-Unit 253 255	IU
+T66	Eq-Unit 256 257	l
+T67	Life-Stage-And-Gender 285 290	women
+T68	And 291 295	with
+T69	Or 305 308	and
+T70	Other 309 314	other
+T71	Life-Stage-And-Gender 338 343	women
+T72	Modifier 349 359	hereditary
+T73	And 344 348	with
+T74	Life-Stage-And-Gender 383 388	women
+T75	And 389 393	with
+T76	Condition 409 424	QT prolongation
+T77	Condition-Name 409 424	QT prolongation
+T78	Condition 453 466	liver enzymes
+T79	Condition-Name 453 466	liver enzymes
+T80	Polarity 444 452	elevated
+T81	Life-Stage-And-Gender 498 503	women
+T82	Modifier 525 535	autoimmune
+T83	Modifier 509 521	inflammatory
+T84	Or 522 524	or
+T85	And 504 508	with
+T86	Eq-Comparison 588 600	stage III/IV
+T87	Eq-Unit 588 593	stage
+T88	Eq-Value 594 597	III
+T89	Eq-Value 598 600	IV
+T90	Eq-Comparison 607 614	history
+T91	Eq-Temporal-Period 607 614	history
+T92	Severity 646 652	severe
+T93	Eq-Comparison 663 671	previous
+T94	Eq-Temporal-Period 663 671	previous
+T95	Temporal-Connection 658 660	in
+T96	Contraindication 697 713	contraindication
+T97	Drug 729 743	gonadotrophins
+T98	Drug-Name 729 743	gonadotrophins
+T99	Or 690 692	or
+T100	Condition 558 567	karyotype
+T101	Condition-Name 558 567	karyotype
+T102	Polarity 549 557	abnormal
+A1	Observation-Type-Value T2 vital
+A2	Observation-Type-Value T6 vital
+A3	Eq-Operator-Value T34 GTEQ
+A5	Eq-Temporal-Unit-Value T36 year
+A6	Eq-Temporal-Unit-Value T37 day
+A7	Eq-Operator-Value T41 BETWEEN
+A8	Eq-Operator-Value T42 BETWEEN
+A9	Eq-Operator-Value T43 BETWEEN
+A10	Eq-Operator-Value T44 BETWEEN
+A11	Polarity-Value T9 normal
+A12	Observation-Type-Value T58 lab
+A4	Observation-Type-Value T60 lab
+A13	Eq-Unit-Value T63 ref-range-normal
+A14	Life-Stage-And-Gender-Type T67 female
+A15	Life-Stage-And-Gender-Type T71 female
+A16	Life-Stage-And-Gender-Type T74 female
+A17	Polarity-Value T80 high
+A18	Life-Stage-And-Gender-Type T81 female
+A19	Eq-Temporal-Period-Value T91 past
+A20	Severity-Value T92 severe
+A21	Eq-Temporal-Period-Value T94 past
+A22	Temporal-Connection-Type-Value E41 during
+A23	Polarity-Value T102 abnormal
+R1	Abbrev-Of Arg1:E5 Arg2:E1
+R2	Equivalent-To Arg1:E39 Arg2:E7

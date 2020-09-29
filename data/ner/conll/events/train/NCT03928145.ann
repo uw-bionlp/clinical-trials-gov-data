@@ -1,0 +1,214 @@
+E2	Condition:T2 Name:T3
+E4	Condition:T4 Name:T5
+E6	Condition:T6 Name:T7
+E8	Condition:T8 Name:T9
+E10	Condition:T10 Name:T11
+E12	Condition:T12 Name:T13
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17
+E20	Condition:T20 Name:T21
+E22	Condition:T22 Name:T23
+E23	Eq-Comparison:T46 Operator:T24 Unit:T31 Value:T39
+E24	Eq-Comparison:T47 Operator:T25 Unit:T32 Value:T41
+E25	Eq-Comparison:T48 Operator:T26 Value:T42 Unit:T90 Per:T91
+E26	Eq-Comparison:T49 Operator:T27 Value:T43 Unit:T96 Per:T97
+E27	Eq-Comparison:T50 Operator:T28 Unit:T33 Value:T44
+E28	Eq-Comparison:T51 Operator:T29 Unit:T34 Value:T45
+E29	Eq-Comparison:T52 Operator:T35 Value:T36 Value2:T37 Temporal-Unit:T30
+E1	Age:T53 Eq-Comparison:E29
+E3	Procedure:T54 Name:T55
+E5	Observation:T38 Name:T56 Eq-Comparison:E23 Duration:E7
+E7	Eq-Comparison:T57 Unit:T58 Temporal-Unit:T60 Value:T59
+E9	Observation:T61 Name:T62 Duration:E11 Eq-Comparison:E24
+E11	Eq-Comparison:T63 Unit:T64 Temporal-Unit:T65 Value:T40
+E13	Or:T66 Arg:E5 Arg2:E9
+E15	Drug:T67 Name:T68 Temporality:E17
+E17	Eq-Comparison:T69 Temporal-Period:T70
+E19	Negation:T71 Negates:E15
+E21	Observation:T72 Name:T73 Polarity:T74
+E30	Drug:T75 Name:T76
+E31	Indication:T77 Indication-For:E30
+E32	Other:T78 Is-Other:E31
+E33	Drug:T79
+E34	Study:T80 Study-Of:E33
+E35	Contraindication:T81 Contraindicates:E33
+E36	Or:T82 Arg:E4 Arg2:E35
+E37	Or:T83 Arg:E8 Arg2:E12
+E38	Condition:T84 Name:T85 Polarity:T86
+E39	Or:T87 Arg:E16 Arg2:E38
+E40	Observation:T88 Name:T89 Eq-Comparison:E25
+E41	Condition:T92 Name:T93
+E42	Observation:T94 Name:T95 Eq-Comparison:E26
+E43	Condition:T98 Name:T99
+E44	Drug:T100 Name:T101
+E45	Eq-Comparison:T102 Temporal-Period:T103
+E46	Procedure:T104 Temporality:E45
+E47	Eq-Comparison:T105 Operator:T106 Value:T107
+E48	Drug:T108 Minimum-Count:E47
+E49	Observation:T109 Name:T110 Eq-Comparison:E27
+E50	Observation:T111 Name:T112 Eq-Comparison:E28
+E51	Or:T113 Arg:E49 Arg2:E50
+E18	Assertion:T18 Asserted:E22
+E52	Or:T19 Arg:E20 Arg2:E22
+E53	Study:T114
+E54	Temporal-Connection:T115 Arg:E22 Arg2:E53
+E55	Condition:T116 Name:T117
+E56	Modifier:T119 Modifies:T15
+E57	Modifier:T120 Modifies:T17
+E58	Modifier:T121 Modifies:T85
+T1	Life-Stage-And-Gender 25 31	Adults
+T2	Condition 72 92	primary hypertension
+T3	Condition-Name 72 92	primary hypertension
+T4	Condition 329 340	Intolerance
+T5	Condition-Name 329 340	Intolerance
+T6	Condition 387 409	Cardiovascular disease
+T7	Condition-Name 387 409	Cardiovascular disease
+T8	Condition 426 447	myocardial infarction
+T9	Condition-Name 426 447	myocardial infarction
+T10	Condition 411 424	heart failure
+T11	Condition-Name 411 424	heart failure
+T12	Condition 451 457	stroke
+T13	Condition-Name 451 457	stroke
+T14	Condition 475 487	hypertension
+T15	Condition-Name 475 487	hypertension
+T16	Condition 509 516	disease
+T17	Condition-Name 509 516	disease
+T20	Condition 822 831	Pregnancy
+T21	Condition-Name 822 831	Pregnancy
+T22	Condition 847 856	pregnancy
+T23	Condition-Name 847 856	pregnancy
+T24	Eq-Operator 130 131	≥
+T25	Eq-Operator 166 167	≥
+T26	Eq-Operator 562 563	>
+T27	Eq-Operator 610 611	>
+T28	Eq-Operator 729 730	≥
+T29	Eq-Operator 767 768	≥
+T30	Eq-Temporal-Unit 46 51	years
+T31	Eq-Unit 135 139	mmHg
+T32	Eq-Unit 170 174	mmHg
+T33	Eq-Unit 734 738	mmHg
+T34	Eq-Unit 772 776	mmHg
+T35	Eq-Operator 40 42	to
+T36	Eq-Value 37 39	30
+T37	Eq-Value 43 45	75
+T39	Eq-Value 131 134	130
+T40	Eq-Value 148 150	24
+T41	Eq-Value 167 169	80
+T42	Eq-Value 563 566	1.5
+T43	Eq-Value 611 614	5.5
+T44	Eq-Value 730 733	160
+T45	Eq-Value 768 771	100
+T46	Eq-Comparison 130 139	≥130 mmHg
+T47	Eq-Comparison 166 174	≥80 mmHg
+T48	Eq-Comparison 562 572	>1.5 mg/dL
+T49	Eq-Comparison 610 620	>5.5 mEq/L
+T50	Eq-Comparison 729 738	≥160 mmHg
+T51	Eq-Comparison 767 776	≥100 mmHg
+T52	Eq-Comparison 37 51	30 to 75 years
+T53	Age 33 36	age
+T54	Procedure 102 106	ABPM
+T55	Procedure-Name 102 106	ABPM
+T38	Observation 118 129	systolic BP
+T56	Observation-Name 118 129	systolic BP
+T57	Eq-Comparison 108 117	mean 24-h
+T58	Eq-Unit 108 112	mean
+T59	Eq-Value 113 115	24
+T60	Eq-Temporal-Unit 116 117	h
+T61	Observation 153 165	diastolic BP
+T62	Observation-Name 153 165	diastolic BP
+T63	Eq-Comparison 143 152	mean 24-h
+T64	Eq-Unit 143 147	mean
+T65	Eq-Temporal-Unit 151 152	h
+T66	Or 140 142	or
+T67	Drug 200 227	antihypertensive medication
+T68	Drug-Name 200 227	antihypertensive medication
+T69	Eq-Comparison 185 192	current
+T70	Eq-Temporal-Period 185 192	current
+T71	Negation 182 184	No
+T72	Observation 258 273	life expectancy
+T73	Observation-Name 258 273	life expectancy
+T74	Polarity 254 257	Low
+T75	Drug 313 322	diuretics
+T76	Drug-Name 313 322	diuretics
+T77	Indication 286 297	indications
+T78	Other 280 285	Other
+T79	Drug 375 380	drugs
+T80	Study 369 374	study
+T81	Contraindication 344 361	contraindications
+T82	Or 341 343	or
+T83	Or 448 450	or
+T84	Condition 541 549	function
+T85	Condition-Name 541 549	function
+T86	Polarity 526 534	abnormal
+T87	Or 517 525	and / or
+T88	Observation 551 561	creatinine
+T89	Observation-Name 551 561	creatinine
+T90	Eq-Unit 567 569	mg
+T91	Eq-Unit 570 572	dL
+T92	Condition 580 592	Hyperkalemia
+T93	Condition-Name 580 592	Hyperkalemia
+T94	Observation 594 609	serum potassium
+T95	Observation-Name 594 609	serum potassium
+T96	Eq-Unit 615 618	mEq
+T97	Eq-Unit 619 620	L
+T98	Condition 628 632	Gout
+T99	Condition-Name 628 632	Gout
+T100	Drug 648 664	antihypertensive
+T101	Drug-Name 648 664	antihypertensive
+T102	Eq-Comparison 639 647	Previous
+T103	Eq-Temporal-Period 639 647	Previous
+T104	Procedure 665 674	treatment
+T105	Eq-Comparison 680 693	more than one
+T106	Eq-Operator 680 689	more than
+T107	Eq-Value 690 693	one
+T108	Drug 694 698	drug
+T109	Observation 705 728	Systolic blood pressure
+T110	Observation-Name 705 728	Systolic blood pressure
+T111	Observation 742 766	diastolic blood pressure
+T112	Observation-Name 742 766	diastolic blood pressure
+T113	Or 739 741	or
+T18	Assertion 835 846	prospective
+T19	Or 832 834	or
+T114	Study 868 873	study
+T115	Temporal-Connection 857 863	during
+T116	Condition 880 889	Lactating
+T117	Condition-Name 880 889	Lactating
+T118	Life-Stage-And-Gender 890 895	women
+T119	Modifier 465 474	Secondary
+T120	Modifier 494 508	Chronic kidney
+T121	Modifier 535 540	renal
+A1	Life-Stage-And-Gender-Type T1 adult
+A2	Eq-Operator-Value T24 GTEQ
+A3	Eq-Operator-Value T25 GTEQ
+A4	Eq-Operator-Value T26 GT
+A5	Eq-Operator-Value T27 GT
+A6	Eq-Operator-Value T28 GTEQ
+A7	Eq-Operator-Value T29 GTEQ
+A8	Eq-Temporal-Unit-Value T30 year
+A9	Eq-Operator-Value T35 BETWEEN
+A10	Observation-Type-Value T56 vital
+A11	Eq-Temporal-Unit-Value T60 hour
+A12	Observation-Type-Value T62 vital
+A13	Eq-Temporal-Unit-Value T65 hour
+A14	Eq-Temporal-Period-Value T70 present
+A15	Polarity-Value T74 low
+A16	Polarity-Value T86 abnormal
+A17	Observation-Type-Value T89 lab
+A18	Observation-Type-Value T95 lab
+A19	Eq-Temporal-Period-Value T103 past
+A20	Eq-Operator-Value T106 GT
+A21	Observation-Type-Value T110 vital
+A22	Observation-Type-Value T112 vital
+A23	Assertion-Type-Value E18 intention
+A24	Temporal-Connection-Type-Value E54 during
+A25	Life-Stage-And-Gender-Type T118 female
+R1	Equivalent-To Arg1:E1 Arg2:T1
+R2	Found-By Arg1:E2 Arg2:E3
+R3	Using Arg1:E4 Arg2:E33
+R4	Equivalent-To Arg1:E40 Arg2:E38
+R5	Equivalent-To Arg1:E42 Arg2:E41
+R6	Using Arg1:E46 Arg2:E44
+R7	If-Then Arg1:T118 Arg2:E55
+R8	Equivalent-To Arg1:E5 Arg2:E3
+R9	Equivalent-To Arg1:E9 Arg2:E3
+R10	Using Arg1:E46 Arg2:E48

@@ -1,0 +1,70 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4 Temporality:E16
+E5	Condition:T5 Name:T6 Severity:T38
+E10	Observation:T10 Name:T11 Eq-Comparison:E14
+E11	Age:T15 Eq-Comparison:E15
+E13	Eq-Comparison:T22 Operator:T12 Value:T20
+E14	Eq-Comparison:T23 Operator:T13 Value:T21
+E15	Eq-Comparison:T24 Operator:T17 Value:T18 Temporal-Unit:T14
+E2	Eq-Comparison:T25 Temporal-Period:T26
+E4	Procedure:T27 Name:T28 Temporality:E2
+E6	Procedure:T29 Name:T30
+E8	Condition:T16 Name:T31 Stage:E9
+E9	Eq-Comparison:T34 Value:T33 Operator:T35 Value2:T32
+E12	Observation:T36 Name:T37 Eq-Comparison:E13
+E16	Eq-Comparison:T39 Temporal-Period:T40
+E7	Allergy:T7 Name:E17
+E17	Drug:T8
+E18	Modifier:T41 Modifies:E5
+T1	Condition 254 275	neuromuscular disease
+T2	Condition-Name 254 275	neuromuscular disease
+T3	Condition 288 309	respiratory infection
+T4	Condition-Name 288 309	respiratory infection
+T5	Condition 233 248	cardiac disease
+T6	Condition-Name 233 248	cardiac disease
+T9	Life-Stage-And-Gender 25 33	children
+T10	Observation 205 208	BMI
+T11	Observation-Name 205 208	BMI
+T12	Eq-Operator 196 197	>
+T13	Eq-Operator 208 209	>
+T14	Eq-Temporal-Unit 100 105	years
+T15	Age 91 94	age
+T17	Eq-Operator 96 97	-
+T18	Eq-Value 95 96	4
+T19	Eq-Value 97 99	12
+T20	Eq-Value 198 199	3
+T21	Eq-Value 209 211	35
+T22	Eq-Comparison 196 199	> 3
+T23	Eq-Comparison 208 211	>35
+T24	Eq-Comparison 95 105	4-12 years
+T25	Eq-Comparison 34 43	underoing
+T26	Eq-Temporal-Period 34 43	underoing
+T27	Procedure 53 60	surgery
+T28	Procedure-Name 53 60	surgery
+T29	Procedure 67 85	general anaesthsia
+T30	Procedure-Name 67 85	general anaesthsia
+T16	Condition 115 118	ASA
+T31	Condition-Name 115 118	ASA
+T32	Eq-Value 119 120	I
+T33	Eq-Value 121 123	II
+T34	Eq-Comparison 119 123	I-II
+T35	Eq-Operator 120 121	-
+T36	Observation 180 196	Mallampati score
+T37	Observation-Name 180 196	Mallampati score
+T38	Severity 217 223	severe
+T39	Eq-Comparison 281 287	recent
+T40	Eq-Temporal-Period 281 287	recent
+T7	Allergy 320 327	allergy
+T8	Drug 315 319	drug
+T41	Modifier 224 232	systemic
+A1	Life-Stage-And-Gender-Type T9 child
+A2	Observation-Type-Value T11 vital
+A3	Eq-Operator-Value T12 GT
+A4	Eq-Operator-Value T13 GT
+A5	Eq-Temporal-Unit-Value T14 year
+A6	Eq-Operator-Value T17 BETWEEN
+A7	Eq-Temporal-Period-Value T26 present
+A8	Eq-Operator-Value T35 BETWEEN
+A9	Severity-Value T38 severe
+A10	Eq-Temporal-Period-Value T40 recent
+R1	Using Arg1:E4 Arg2:E6

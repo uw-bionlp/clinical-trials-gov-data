@@ -1,0 +1,116 @@
+E1	Procedure:T1 Name:T2 Temporality:E4
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E9	Procedure:T9 Name:T10
+E11	Procedure:T11 Name:T12
+E13	Procedure:T13 Name:T14
+E15	Procedure:T15 Name:T16
+E17	Procedure:T17 Name:T18
+E19	Procedure:T19 Name:T20
+E23	Procedure:T23 Name:T24 Temporality:E18
+E25	Procedure:T25 Name:T26
+E27	Procedure:T27 Name:T28
+E31	Procedure:T31 Name:T32
+E33	Procedure:T33 Name:T34
+E35	Procedure:T35 Name:T36 Stability:T64
+E36	Age:T39 Eq-Comparison:E2
+E2	Eq-Comparison:T41 Temporal-Unit:T38 Operator:T42 Value:T40
+E4	Eq-Comparison:T43 Temporal-Period:T44
+E6	Modifier:T45 Modifies:E3
+E8	Or:T46 Arg:E6 Arg2:E10
+E10	Modifier:T47
+E7	And:T7 Arg:E36 Arg2:E1
+E12	And:T8 Arg:E3 Arg2:E5
+E16	Condition:T48 Name:T49
+E18	Eq-Comparison:T51 Temporal-Period:T52
+E20	Or:T53 Arg:E33 Arg2:E31
+E21	Observation:T54 Name:T55
+E22	Procedure:T56 Temporality:E24 Location:T37 Name:T22
+E24	Eq-Comparison:T57 Temporal-Period:T58
+E26	And:T59 Arg:E27 Arg2:E25
+E14	Assertion:T21 Asserted:E9
+E28	Assertion:T29 Asserted:T64
+E29	Assertion:T30 Asserted:E27
+E37	Eq-Comparison:T60 Temporal-Period:T61
+E30	Observation:T62 Name:T63
+T1	Procedure 115 134	right hemicolectomy
+T2	Procedure-Name 115 134	right hemicolectomy
+T3	Procedure 141 168	minimally invasive approach
+T4	Procedure-Name 141 168	minimally invasive approach
+T5	Procedure 219 230	anastomosis
+T6	Procedure-Name 219 230	anastomosis
+T9	Procedure 232 247	Right colectomy
+T10	Procedure-Name 232 247	Right colectomy
+T11	Procedure 299 340	ligation of the ileocolic artery and vein
+T12	Procedure-Name 299 340	ligation of the ileocolic artery and vein
+T13	Procedure 267 297	removal of the ascending colon
+T14	Procedure-Name 267 297	removal of the ascending colon
+T15	Procedure 346 375	removal of the terminal ileum
+T16	Procedure-Name 346 375	removal of the terminal ileum
+T17	Procedure 381 421	removal of the proximal transverse colon
+T18	Procedure-Name 381 421	removal of the proximal transverse colon
+T19	Procedure 431 494	removal of the right branch of the middle colic artery and vein
+T20	Procedure-Name 431 494	removal of the right branch of the middle colic artery and vein
+T23	Procedure 552 567	colon resection
+T24	Procedure-Name 552 567	colon resection
+T25	Procedure 1015 1030	right colectomy
+T26	Procedure-Name 1015 1030	right colectomy
+T27	Procedure 968 982	loop ileostomy
+T28	Procedure-Name 968 982	loop ileostomy
+T31	Procedure 603 614	proctectomy
+T32	Procedure-Name 603 614	proctectomy
+T33	Procedure 585 599	left colectomy
+T34	Procedure-Name 585 599	left colectomy
+T35	Procedure 943 957	open resection
+T36	Procedure-Name 943 957	open resection
+T38	Eq-Temporal-Unit 61 66	years
+T39	Age 70 73	age
+T40	Eq-Value 58 60	18
+T41	Eq-Comparison 53 66	over 18 years
+T42	Eq-Operator 53 57	over
+T43	Eq-Comparison 92 101	scheduled
+T44	Eq-Temporal-Period 92 101	scheduled
+T45	Modifier 170 177	robotic
+T46	Or 178 180	or
+T47	Modifier 181 193	laparoscopic
+T7	And 74 77	who
+T8	And 195 199	with
+T48	Condition 521 529	Pregnant
+T49	Condition-Name 521 529	Pregnant
+T50	Life-Stage-And-Gender 530 535	women
+T51	Eq-Comparison 571 578	planned
+T52	Eq-Temporal-Period 571 578	planned
+T53	Or 600 602	or
+T54	Observation 652 661	prisoners
+T55	Observation-Name 652 661	prisoners
+T37	Location 739 759	Butterworth hospital
+T56	Procedure 717 724	surgery
+T57	Eq-Comparison 728 735	planned
+T58	Eq-Temporal-Period 728 735	planned
+T59	And 996 1007	in addition
+T21	Assertion 248 255	will be
+T22	Procedure-Name 717 724	surgery
+T29	Assertion 901 903	if
+T30	Assertion 963 965	If
+T60	Eq-Comparison 796 804	received
+T61	Eq-Temporal-Period 796 804	received
+T62	Observation 621 643	Vulnerable populations
+T63	Observation-Name 621 643	Vulnerable populations
+T64	Stability 927 936	converted
+A2	Eq-Temporal-Unit-Value T38 year
+A3	Eq-Operator-Value T42 GT
+A4	Eq-Temporal-Period-Value T44 future
+A6	Life-Stage-And-Gender-Type T50 female
+A7	Eq-Temporal-Period-Value T52 future
+A1	Location-Value T37 hospital
+A8	Eq-Temporal-Period-Value T58 future
+A5	Assertion-Type-Value E14 hypothetical
+A9	Assertion-Type-Value E28 hypothetical
+A10	Assertion-Type-Value E29 hypothetical
+A11	Eq-Temporal-Period-Value T61 past
+A12	Stability-Value T64 change
+R1	Using Arg1:E1 Arg2:E3
+R2	Equivalent-To Arg1:E13 Arg2:E9
+R3	If-Then Arg1:T50 Arg2:E16
+R4	Equivalent-To Arg1:E33 Arg2:E23
+R5	Example-Of Arg1:E21 Arg2:E30

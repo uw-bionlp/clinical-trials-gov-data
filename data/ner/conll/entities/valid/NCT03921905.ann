@@ -1,0 +1,72 @@
+E1	Procedure:T1 Name:T2 Temporality:E8
+E3	Procedure:T3 Name:T4 Temporality:E8
+E5	Condition:T5 Name:T6 Temporality:E8
+E7	Condition:T7 Name:T8
+E10	Condition:T10 Name:T11
+E11	Eq-Comparison:T17 Operator:T12 Temporal-Unit:T14 Value:T16
+E2	Condition:T9 Name:T18 Stability:T19
+E4	Or:T20 Arg:E5 Arg2:E1
+E6	Or:T21 Arg:E1 Arg2:E3
+E8	Eq-Comparison:T22 Operator:T23 Temporal-Unit:T13 Value:T15
+E9	Study:T24
+E12	Or:T25 Arg:E9 Arg2:E7
+E13	Temporal-Connection:T26 Arg:E8 Arg2:E9
+E14	Modifier:T27 Modifies:T8
+E15	Procedure:T29 Name:T30 Stability:T31
+E16	Condition:T32
+E17	Or:T33 Arg:E15 Arg2:E16
+E18	Observation:T34 Name:T35 Temporality:E11 Stability:T36 Severity:T37
+T1	Procedure 122 161	percutaneous coronary revascularization
+T2	Procedure-Name 122 161	percutaneous coronary revascularization
+T3	Procedure 165 201	coronary artery bypass graft surgery
+T4	Procedure-Name 165 201	coronary artery bypass graft surgery
+T5	Condition 91 118	acute myocardial infarction
+T6	Condition-Name 91 118	acute myocardial infarction
+T7	Condition 273 279	angina
+T8	Condition-Name 273 279	angina
+T10	Condition 306 320	Mental illness
+T11	Condition-Name 306 320	Mental illness
+T12	Eq-Operator 412 421	less than
+T13	Eq-Temporal-Unit 222 228	months
+T14	Eq-Temporal-Unit 425 431	months
+T15	Eq-Value 219 221	12
+T16	Eq-Value 422 424	12
+T17	Eq-Comparison 412 431	less than 12 months
+T9	Condition 75 78	CAD
+T18	Condition-Name 75 78	CAD
+T19	Stability 68 74	stable
+T20	Or 119 121	or
+T21	Or 162 164	or
+T22	Eq-Comparison 210 228	at least 12 months
+T23	Eq-Operator 210 218	at least
+T24	Study 249 254	study
+T25	Or 255 257	or
+T26	Temporal-Connection 229 235	before
+T27	Modifier 258 265	chronic
+T28	Stability 266 272	stable
+T29	Procedure 346 355	self-care
+T30	Procedure-Name 346 355	self-care
+T31	Stability 321 329	limiting
+T32	Condition 363 372	condition
+T33	Or 356 358	or
+T34	Observation 396 411	life expectancy
+T35	Observation-Name 396 411	life expectancy
+T36	Stability 373 381	limiting
+T37	Severity 382 391	seriously
+A1	Eq-Operator-Value T12 LT
+A2	Eq-Temporal-Unit-Value T13 month
+A3	Eq-Temporal-Unit-Value T14 month
+A4	Stability-Value T19 stable
+A5	Eq-Operator-Value T23 GTEQ
+A6	Temporal-Connection-Type-Value E13 before
+A7	Stability-Value T28 stable
+A8	Stability-Value T31 change
+A9	Stability-Value T36 change
+A10	Severity-Value T37 severe
+R1	Equivalent-To Arg1:E5 Arg2:E2
+R2	Equivalent-To Arg1:E1 Arg2:E2
+R3	Equivalent-To Arg1:E3 Arg2:E2
+R4	Equivalent-To Arg1:E7 Arg2:T28
+R5	Equivalent-To Arg1:E3 Arg2:E2
+R6	Caused-By Arg1:T31 Arg2:E10
+R7	Caused-By Arg1:T36 Arg2:E16

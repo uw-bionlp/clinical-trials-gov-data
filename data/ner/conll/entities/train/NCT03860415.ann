@@ -1,0 +1,60 @@
+E3	Procedure:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E1	Modifier:T12
+E2	Eq-Comparison:T13 Operator:T15 Temporal-Unit:T11 Value:T14
+E4	Condition:T16 Name:T17
+E6	Observation:T18 Name:T19
+E8	Procedure:T21 Name:T22
+E10	Procedure:T23 Name:T24
+E11	Condition:T25 Name:T26
+E12	Procedure:T27 Name:T28
+E13	Condition:T29
+E14	Procedure:T30 Name:T31
+E15	Modifier:T32 Modifies:T10
+E16	Modifier:T33 Modifies:T10
+E17	Or:T34 Arg:E15 Arg2:E16
+T1	Language 242 249	Swedish
+T2	Language 345 352	Swedish
+T3	Procedure 379 396	Immunosuppression
+T4	Procedure-Name 379 396	Immunosuppression
+T5	Condition 505 525	psychiatric disorder
+T6	Condition-Name 505 525	psychiatric disorder
+T7	Condition 483 499	immunodeficiency
+T8	Condition-Name 483 499	immunodeficiency
+T9	Condition 552 557	abuse
+T10	Condition-Name 552 557	abuse
+T11	Eq-Temporal-Unit 50 56	months
+T12	Modifier 25 32	Chronic
+T13	Eq-Comparison 34 56	more than three months
+T14	Eq-Value 44 49	three
+T15	Eq-Operator 34 43	more than
+T16	Condition 58 75	ESBL colonization
+T17	Condition-Name 58 75	ESBL colonization
+T18	Observation 117 124	species
+T19	Observation-Name 117 124	species
+T20	Location 291 297	Sweden
+T21	Procedure 403 416	chemotheraphy
+T22	Procedure-Name 403 416	chemotheraphy
+T23	Procedure 418 453	treatment with TNF-alpha-inhibitors
+T24	Procedure-Name 418 453	treatment with TNF-alpha-inhibitors
+T25	Condition 563 571	dementia
+T26	Condition-Name 563 571	dementia
+T27	Procedure 577 595	Invasive catheters
+T28	Procedure-Name 577 595	Invasive catheters
+T29	Condition 126 135	phenotype
+T30	Procedure 140 151	antibiogram
+T31	Procedure-Name 140 151	antibiogram
+T32	Modifier 531 538	alcohol
+T33	Modifier 542 551	substance
+T34	Or 539 541	or
+A1	Eq-Temporal-Unit-Value T11 month
+A2	Observation-Type-Value T19 lab
+A3	Location-Value T20 residence
+R1	Found-By Arg1:E4 Arg2:E6
+R2	Equivalent-To Arg1:E2 Arg2:E1
+R3	Example-Of Arg1:E8 Arg2:E3
+R4	Example-Of Arg1:E10 Arg2:E3
+R5	Found-By Arg1:E4 Arg2:E13
+R6	Found-By Arg1:E4 Arg2:E14

@@ -1,0 +1,37 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E2	Procedure:T7 Temporality:E4
+E4	Eq-Comparison:T8 Temporal-Period:T9
+E5	Eq-Comparison:T10 Operator:T11 Value:T6 Temporal-Unit:T5
+E6	Age:T12 Eq-Comparison:E5
+E7	Condition:T13 Name:T14
+E8	Procedure:T15 Temporality:E9
+E9	Eq-Comparison:T16 Temporal-Period:T17
+E10	Condition:T18 Name:T19 Severity:T20
+T1	Condition 221 239	Mental retardation
+T2	Condition-Name 221 239	Mental retardation
+T3	Condition 52 64	hypertension
+T4	Condition-Name 52 64	hypertension
+T5	Eq-Temporal-Unit 100 105	years
+T6	Eq-Value 97 99	60
+T7	Procedure 38 47	treatment
+T8	Eq-Comparison 32 37	under
+T9	Eq-Temporal-Period 32 37	under
+T10	Eq-Comparison 86 105	Older than 60 years
+T11	Eq-Operator 86 96	Older than
+T12	Age 86 91	Older
+T13	Condition 111 121	Autovalent
+T14	Condition-Name 111 121	Autovalent
+T15	Procedure 173 182	treatment
+T16	Eq-Comparison 167 172	Under
+T17	Eq-Temporal-Period 167 172	Under
+T18	Condition 194 215	psychiatric pathology
+T19	Condition-Name 194 215	psychiatric pathology
+T20	Severity 187 193	severe
+A1	Eq-Temporal-Unit-Value T5 year
+A2	Eq-Temporal-Period-Value T9 present
+A3	Eq-Operator-Value T11 GT
+A4	Eq-Temporal-Period-Value T17 present
+A5	Severity-Value T20 severe
+R1	Treatment-For Arg1:E2 Arg2:E3
+R2	Treatment-For Arg1:E8 Arg2:E10

@@ -1,0 +1,148 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Value:T40 Operator:T41 Value:T42 Temporal-Unit:T43
+E3	Procedure:T3 Name:T36
+E4	Observation:T4 Name:T44 Eq-Comparison:E5
+E5	Eq-Comparison:T5 Value:T45 Operator:T46 Value:T47 Temporal-Unit:T48
+E8	Condition:T8 Name:T50
+E9	Exception:T9 From:E8 Except:E10 Except2:E12
+E10	Condition:T10 Name:T51
+E11	Or:T11 Arg:E10 Arg2:E12
+E12	Condition:T12 Name:T52
+E13	Eq-Comparison:T13 Temporal-Period:T53
+E14	Condition:T14 Name:T54 Temporality:E13
+E15	Or:T15 Arg:E14 Arg2:E16
+E16	Condition:T16 Name:T55
+E18	Observation:T18 Name:T58 Eq-Comparison:E19
+E19	Eq-Comparison:T19 Operator:T59 Value:T60 Unit:T61
+E20	Condition:T20 Name:T62
+E21	Or:T21 Arg:E20 Arg2:E22
+E22	Observation:T22 Name:T63 Eq-Comparison:E23
+E23	Eq-Comparison:T23 Operator:T64 Value:T65 Unit:T66
+E24	Condition:T24 Name:T67
+E25	Eq-Comparison:T25 Temporal-Period:T68
+E26	Condition:T26 Name:T69 Temporality:E25
+E27	Observation:T27 Name:T70
+E28	Or:T28 Arg:E26 Arg2:E29
+E29	Condition:T29 Name:T71
+E30	Or:T30 Arg:E29 Arg2:E31
+E31	Assertion:T31 Asserted:E32
+E32	Condition:T32 Name:T72
+E33	Eq-Comparison:T33 Operator:T81
+E34	Condition:T34 Name:T75
+E35	Risk:T35 Risk-For:E34 Polarity:T74
+E37	Eq-Comparison:T37 Operator:T78 Value:T79
+E38	Drug:T38
+E6	Procedure:T6 Name:T7
+E7	Procedure:T49 Name:T80
+E17	Observation:T17 Name:T57 Polarity:T56
+E36	Observation:T82 Name:T76
+E39	Observation:T83 Name:T77 Eq-Comparison:E37
+T1	Age 37 41	Aged
+T2	Eq-Comparison 42 53	18-35 years
+T3	Procedure 70 87	visual inspection
+T4	Observation 127 142	menstrual cycle
+T5	Eq-Comparison 143 153	21-35 days
+T8	Condition 274 295	DSM-5 Axis 1 disorder
+T9	Exception 297 303	except
+T10	Condition 304 311	anxiety
+T11	Or 312 315	and
+T12	Condition 316 326	depression
+T13	Eq-Comparison 379 386	Current
+T14	Condition 387 408	DSM-5 Axis depressive
+T15	Or 409 411	or
+T16	Condition 412 428	anxiety disorder
+T18	Observation 517 545	Breath alcohol concentration
+T19	Eq-Comparison 546 552	>0.00%
+T20	Condition 572 578	smoker
+T21	Or 579 581	or
+T22	Observation 582 611	carbon monoxide concentration
+T23	Eq-Comparison 612 619	≥ 6 ppm
+T24	Condition 625 650	Irregular menstrual cycle
+T25	Eq-Comparison 656 663	Current
+T26	Condition 664 673	pregnancy
+T27	Observation 675 685	urine test
+T28	Or 696 698	or
+T29	Condition 699 708	lactation
+T30	Or 710 712	or
+T31	Assertion 715 722	plan to
+T32	Condition 730 738	pregnant
+T33	Eq-Comparison 744 760	Moderate or high
+T34	Condition 761 768	suicide
+T35	Risk 769 773	risk
+T37	Eq-Comparison 818 822	> 80
+T38	Drug 841 852	medications
+T39	Life-Stage-And-Gender 25 31	Female
+T40	Eq-Value 42 44	18
+T41	Eq-Operator 44 45	-
+T42	Eq-Value 45 47	35
+T43	Eq-Temporal-Unit 48 53	years
+T44	Observation-Name 127 142	menstrual cycle
+T45	Eq-Value 143 145	21
+T46	Eq-Operator 145 146	-
+T47	Eq-Value 146 148	35
+T48	Eq-Temporal-Unit 149 153	days
+T50	Condition-Name 274 295	DSM-5 Axis 1 disorder
+T51	Condition-Name 304 311	anxiety
+T52	Condition-Name 316 326	depression
+T53	Eq-Temporal-Period 379 386	Current
+T54	Condition-Name 387 408	DSM-5 Axis depressive
+T55	Condition-Name 412 428	anxiety disorder
+T56	Polarity 480 488	Positive
+T57	Observation-Name 489 511	urine drug screen test
+T58	Observation-Name 517 545	Breath alcohol concentration
+T59	Eq-Operator 546 547	>
+T60	Eq-Value 547 551	0.00
+T61	Eq-Unit 551 552	%
+T62	Condition-Name 572 578	smoker
+T63	Observation-Name 582 611	carbon monoxide concentration
+T64	Eq-Operator 612 613	≥
+T65	Eq-Value 614 615	6
+T66	Eq-Unit 616 619	ppm
+T67	Condition-Name 625 650	Irregular menstrual cycle
+T68	Eq-Temporal-Period 656 663	Current
+T69	Condition-Name 664 673	pregnancy
+T70	Observation-Name 675 685	urine test
+T71	Condition-Name 699 708	lactation
+T72	Condition-Name 730 738	pregnant
+T73	Severity 744 752	Moderate
+T74	Polarity 756 760	high
+T75	Condition-Name 761 768	suicide
+T76	Observation-Name 779 789	Shipley IQ
+T77	Observation-Name 791 816	vocabulary standard score
+T78	Eq-Operator 818 819	>
+T79	Eq-Value 820 822	80
+T36	Procedure-Name 70 87	visual inspection
+T6	Procedure 350 373	Mental Health Interview
+T7	Procedure-Name 350 373	Mental Health Interview
+T49	Procedure 451 474	Mental Health Interview
+T80	Procedure-Name 451 474	Mental Health Interview
+T17	Observation 489 511	urine drug screen test
+T81	Eq-Operator 753 755	or
+T82	Observation 779 789	Shipley IQ
+T83	Observation 791 816	vocabulary standard score
+A1	Assertion-Type-Value E31 intention
+A2	Life-Stage-And-Gender-Type T39 female
+A3	Eq-Operator-Value T41 BETWEEN
+A4	Eq-Temporal-Unit-Value T43 year
+A5	Eq-Operator-Value T46 BETWEEN
+A6	Eq-Temporal-Unit-Value T48 day
+A8	Eq-Temporal-Period-Value T53 present
+A9	Polarity-Value T56 positive
+A10	Observation-Type-Value T57 lab
+A11	Observation-Type-Value T58 lab
+A12	Eq-Operator-Value T59 GT
+A13	Observation-Type-Value T63 lab
+A14	Eq-Operator-Value T64 GTEQ
+A15	Eq-Temporal-Period-Value T68 present
+A16	Observation-Type-Value T70 lab
+A17	Severity-Value T73 moderate
+A18	Polarity-Value T74 high
+A19	Eq-Operator-Value T78 GT
+A7	Eq-Operator-Value T81 BETWEEN
+A20	Observation-Type-Value T76 clinical-score
+R1	Found-By Arg1:E1 Arg2:E3
+R2	Found-By Arg1:E8 Arg2:E6
+R3	Found-By Arg1:E14 Arg2:E7
+R4	Found-By Arg1:E16 Arg2:E7
+R5	Found-By Arg1:E26 Arg2:E27
+R6	Equivalent-To Arg1:E39 Arg2:E36

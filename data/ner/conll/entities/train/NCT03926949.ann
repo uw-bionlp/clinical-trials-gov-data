@@ -1,0 +1,87 @@
+E1	Procedure:T1 Name:T2 Temporality:E13
+E3	Procedure:T3 Name:T4 Temporality:E27
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E12	Age:T15 Eq-Comparison:E2
+E13	Eq-Comparison:T17 Temporal-Period:T18
+E2	Eq-Comparison:T19 Value:T16 Temporal-Unit:T14 Operator:T20
+E4	Risk:T21 Risk-For:E7
+E6	Observation:T11 Name:T12
+E8	Observation:T22 Name:T23
+E10	And:T24 Arg:E8 Arg2:E9
+E11	Procedure:T25 Name:T26
+E14	Procedure:T27 Name:T28
+E15	Modifier:T29 Modifies:T28
+E16	Modifier:T30 Modifies:T28
+E17	Or:T31 Arg:E15 Arg2:E16
+E18	Modifier:T32 Modifies:T2
+E19	Modifier:T33 Modifies:T2
+E20	Or:T34 Arg:E19 Arg2:E18
+E21	Condition:T35 Name:T36
+E22	Condition:T37 Name:T38 Severity:T40
+E23	Modifier:T39 Modifies:E22
+E24	Condition:T41 Name:T42
+E25	Condition:T43 Name:T44 Stage:E26
+E26	Eq-Comparison:T13 Unit:T45 Value:T46 Operator:T48 Value2:T47
+E27	Eq-Comparison:T49 Temporal-Period:T50
+T1	Procedure 293 300	surgery
+T2	Procedure-Name 293 300	surgery
+T3	Procedure 503 523	palliative treatment
+T4	Procedure-Name 503 523	palliative treatment
+T5	Condition 458 475	diabetes mellitus
+T6	Condition-Name 458 475	diabetes mellitus
+T7	Condition 93 105	malnutrition
+T8	Condition-Name 93 105	malnutrition
+T9	Condition 168 180	malnourished
+T10	Condition-Name 168 180	malnourished
+T14	Eq-Temporal-Unit 37 42	years
+T15	Age 46 49	age
+T16	Eq-Value 34 36	18
+T17	Eq-Comparison 260 270	undergoing
+T18	Eq-Temporal-Period 260 270	undergoing
+T19	Eq-Comparison 34 58	18 years of age or older
+T20	Eq-Operator 50 58	or older
+T21	Risk 85 89	risk
+T11	Observation 109 142	Canadian Nutrition Screening Tool
+T12	Observation-Name 109 142	Canadian Nutrition Screening Tool
+T22	Observation 144 148	CNST
+T23	Observation-Name 144 148	CNST
+T24	And 150 153	and
+T25	Procedure 184 212	subjective global assessment
+T26	Procedure-Name 184 212	subjective global assessment
+T27	Procedure 214 217	SGA
+T28	Procedure-Name 214 217	SGA
+T29	Modifier 219 220	B
+T30	Modifier 224 225	C
+T31	Or 221 223	or
+T32	Modifier 280 292	laparoscopic
+T33	Modifier 271 276	minor
+T34	Or 277 279	or
+T35	Condition 306 315	Pregnancy
+T36	Condition-Name 306 315	Pregnancy
+T37	Condition 351 359	diseases
+T38	Condition-Name 351 359	diseases
+T39	Modifier 342 350	systemic
+T40	Severity 335 341	severe
+T41	Condition 371 408	American Society of Anesthesiologists
+T42	Condition-Name 371 408	American Society of Anesthesiologists
+T43	Condition 410 413	ASA
+T44	Condition-Name 410 413	ASA
+T13	Eq-Comparison 415 438	classification III to V
+T45	Eq-Unit 415 429	classification
+T46	Eq-Value 430 433	III
+T47	Eq-Value 437 438	V
+T48	Eq-Operator 434 436	to
+T49	Eq-Comparison 495 502	planned
+T50	Eq-Temporal-Period 495 502	planned
+A1	Eq-Temporal-Unit-Value T14 year
+A2	Eq-Temporal-Period-Value T18 present
+A3	Eq-Operator-Value T20 GTEQ
+A4	Severity-Value T40 severe
+A5	Eq-Operator-Value T48 BETWEEN
+A6	Eq-Temporal-Period-Value T50 future
+R1	Abbrev-Of Arg1:E8 Arg2:E6
+R2	Found-By Arg1:E7 Arg2:E6
+R3	Abbrev-Of Arg1:E14 Arg2:E11
+R4	Abbrev-Of Arg1:E25 Arg2:E24

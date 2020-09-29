@@ -1,0 +1,18 @@
+E1	Procedure:T1 Name:T2 Temporality:E5
+E3	Procedure:T3 Name:T4 Temporality:E2
+E2	Eq-Comparison:T5 Temporal-Period:T6
+E4	Modifier:T7 Modifies:T4
+E5	Eq-Comparison:T8 Temporal-Period:T10
+E6	Modifier:T9 Modifies:T2
+T1	Procedure 94 101	surgery
+T2	Procedure-Name 94 101	surgery
+T3	Procedure 48 52	RARC
+T4	Procedure-Name 48 52	RARC
+T5	Eq-Comparison 25 34	scheduled
+T6	Eq-Temporal-Period 25 34	scheduled
+T7	Modifier 39 47	elective
+T8	Eq-Comparison 78 85	history
+T9	Modifier 89 93	lung
+T10	Eq-Temporal-Period 78 85	history
+A1	Eq-Temporal-Period-Value T6 future
+A2	Eq-Temporal-Period-Value T10 past

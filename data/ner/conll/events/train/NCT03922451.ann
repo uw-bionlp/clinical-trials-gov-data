@@ -1,0 +1,37 @@
+E1	Procedure:T1 Name:T2 Temporality:E7
+E2	Eq-Comparison:T7 Operator:T3 Temporal-Unit:T4 Value:T6
+E3	Drug:T5 Name:T8 Temporality:E5
+E4	Drug:T9 Name:T10
+E5	Eq-Comparison:T11 Temporal-Period:T12
+E6	Or:T13 Arg:E3 Arg2:E4
+E7	Eq-Comparison:T14 Temporal-Period:T15
+E8	Procedure:T16 Name:T17
+E9	Procedure:T18 Name:T19
+E10	Or:T20 Arg:E8 Arg2:E9
+E11	Age:T21 Eq-Comparison:E2
+T1	Procedure 38 42	ECMO
+T2	Procedure-Name 38 42	ECMO
+T3	Eq-Operator 166 168	>=
+T4	Eq-Temporal-Unit 172 177	years
+T6	Eq-Value 169 171	18
+T7	Eq-Comparison 166 177	>= 18 years
+T5	Drug 56 79	piperacillin-tazobactam
+T8	Drug-Name 56 79	piperacillin-tazobactam
+T9	Drug 83 92	cefazolin
+T10	Drug-Name 83 92	cefazolin
+T11	Eq-Comparison 48 55	receive
+T12	Eq-Temporal-Period 48 55	receive
+T13	Or 80 82	or
+T14	Eq-Comparison 25 34	supported
+T15	Eq-Temporal-Period 25 34	supported
+T16	Procedure 104 116	routine care
+T17	Procedure-Name 104 116	routine care
+T18	Procedure 120 140	infection management
+T19	Procedure-Name 120 140	infection management
+T20	Or 117 119	or
+T21	Age 172 177	years
+A1	Eq-Operator-Value T3 GTEQ
+A2	Eq-Temporal-Unit-Value T4 year
+A3	Eq-Temporal-Period-Value T12 present
+A4	Eq-Temporal-Period-Value T15 present
+R1	Using Arg1:E8 Arg2:E4

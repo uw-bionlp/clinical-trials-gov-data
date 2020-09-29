@@ -1,0 +1,162 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Procedure:T9 Name:T10 Temporality:E11
+E10	Age:T18 Eq-Comparison:E14
+E11	Eq-Comparison:T28 Operator:T13 Temporal-Unit:T17 Value:T25 Temporal-Period:T80
+E12	Eq-Comparison:T29 Operator:T14 Value:T26 Unit:T92
+E13	Eq-Comparison:T30 Operator:T15 Value:T27 Unit:T93
+E14	Eq-Comparison:T31 Operator:T19 Value:T22 Value2:T23 Temporal-Unit:T16
+E2	Condition:T32 Name:T33
+E4	Condition:T34 Name:T35
+E6	Modifier:T36 Modifies:T33
+E8	Or:T37 Arg:E2 Arg2:E4
+E15	Observation:T38 Name:T39 Polarity:T40
+E16	Modifier:T41 Modifies:T39
+E17	Observation:T42 Name:T43 Polarity:T47
+E18	Modifier:T44 Modifies:T46
+E19	Observation:T45 Name:T46 Eq-Comparison:E20
+E20	Eq-Comparison:T48 Value:T20 Unit:T49 Operator:T51 Value2:T21 Unit2:T50
+E21	Condition:T52 Name:T53
+E22	Modifier:T54 Modifies:T53
+E23	Eq-Comparison:T55 Operator:T12 Value:T24 Per:T56
+E24	Observation:T57 Name:T58 Eq-Comparison:E23
+E25	Assertion:T59 Asserted:E1
+E26	Condition:T60 Name:T61
+E27	Modifier:T62 Modifies:T61
+E28	Or:T63 Arg:E7 Arg2:E26
+E29	Procedure:T64 Name:T65
+E30	Condition:T66 Name:T67
+E31	Modifier:T68 Modifies:T67
+E32	Other:T69 Is-Other:E30
+E33	Observation:T70 Name:T71 Polarity:T73
+E34	Modifier:T72 Modifies:T71
+E35	Procedure:T74 Name:T75
+E36	Modifier:T76 Modifies:T4
+E37	Condition:T77 Name:T78
+E38	Or:T79 Arg:E5 Arg2:E9
+E39	Condition:T81 Name:T82
+E40	Procedure:T83 Temporality:E41
+E41	Eq-Comparison:T84 Temporal-Period:T85
+E42	Drug:T86 Name:T87
+E43	Observation:T88 Name:T89
+E44	Observation:T90 Name:T91 Eq-Comparison:E12 Eq-Comparison2:E13
+E45	Or:T94 Arg:E12 Arg2:E13
+T1	Condition 487 509	cervical radiculopathy
+T2	Condition-Name 487 509	cervical radiculopathy
+T3	Condition 747 761	osteoarthritis
+T4	Condition-Name 747 761	osteoarthritis
+T5	Procedure 806 818	dry needling
+T6	Procedure-Name 806 818	dry needling
+T7	Condition 511 522	radiculitis
+T8	Condition-Name 511 522	radiculitis
+T9	Procedure 822 833	acupuncture
+T10	Procedure-Name 822 833	acupuncture
+T11	Language 433 440	English
+T12	Eq-Operator 350 371	greater than or equal
+T13	Eq-Operator 834 840	within
+T14	Eq-Operator 994 1003	less than
+T15	Eq-Operator 1011 1023	greater than
+T16	Eq-Temporal-Unit 305 310	years
+T17	Eq-Temporal-Unit 852 858	months
+T18	Age 292 295	Age
+T19	Eq-Operator 299 301	to
+T20	Eq-Value 262 264	45
+T21	Eq-Value 276 278	90
+T22	Eq-Value 296 298	18
+T23	Eq-Value 302 304	65
+T24	Eq-Value 375 376	2
+T25	Eq-Value 850 851	6
+T26	Eq-Value 1004 1006	10
+T27	Eq-Value 1024 1026	90
+T28	Eq-Comparison 834 858	within the past 6 months
+T29	Eq-Comparison 994 1007	less than 10%
+T30	Eq-Comparison 1011 1027	greater than 90%
+T31	Eq-Comparison 296 310	18 to 65 years
+T32	Condition 55 59	pain
+T33	Condition-Name 55 59	pain
+T34	Condition 64 73	stiffness
+T35	Condition-Name 64 73	stiffness
+T36	Modifier 46 54	shoulder
+T37	Or 60 63	and
+T38	Observation 110 146	Glenohumeral passive range of motion
+T39	Observation-Name 110 146	Glenohumeral passive range of motion
+T40	Polarity 147 154	limited
+T41	Modifier 158 177	multiple directions
+T42	Observation 183 219	Glenohumeral passive range of motion
+T43	Observation-Name 183 219	Glenohumeral passive range of motion
+T44	Modifier 237 244	humerus
+T45	Observation 248 256	abducted
+T46	Observation-Name 248 256	abducted
+T47	Polarity 220 229	decreases
+T48	Eq-Comparison 262 286	45 degrees to 90 degrees
+T49	Eq-Unit 265 272	degrees
+T50	Eq-Unit 279 286	degrees
+T51	Eq-Operator 273 275	to
+T52	Condition 324 328	pain
+T53	Condition-Name 324 328	pain
+T54	Modifier 334 349	normal activity
+T55	Eq-Comparison 350 379	greater than or equal to 2/10
+T56	Eq-Unit 377 379	10
+T57	Observation 395 412	pain rating scale
+T58	Observation-Name 395 412	pain rating scale
+T59	Assertion 466 483	Signs or symptoms
+T60	Condition 527 535	referral
+T61	Condition-Name 527 535	referral
+T62	Modifier 545 559	cervical spine
+T63	Or 524 526	or
+T64	Procedure 604 615	examination
+T65	Procedure-Name 604 615	examination
+T66	Condition 643 652	diagnosis
+T67	Condition-Name 643 652	diagnosis
+T68	Modifier 634 642	shoulder
+T69	Other 622 633	alternative
+T70	Observation 682 697	range of motion
+T71	Observation-Name 682 697	range of motion
+T72	Modifier 665 681	passive shoulder
+T73	Polarity 658 664	Normal
+T74	Procedure 709 721	radiographic
+T75	Procedure-Name 709 721	radiographic
+T76	Modifier 734 746	glenohumeral
+T77	Condition 773 791	neurologic disease
+T78	Condition-Name 773 791	neurologic disease
+T79	Or 819 821	or
+T80	Eq-Temporal-Period 845 849	past
+T81	Condition 864 880	Fear of needling
+T82	Condition-Name 864 880	Fear of needling
+T83	Procedure 902 909	treated
+T84	Eq-Comparison 886 895	Currently
+T85	Eq-Temporal-Period 886 895	Currently
+T86	Drug 915 939	anticoagulant medication
+T87	Drug-Name 915 939	anticoagulant medication
+T88	Observation 945 979	Shoulder pain and disability index
+T89	Observation-Name 945 979	Shoulder pain and disability index
+T90	Observation 981 986	SPADI
+T91	Observation-Name 981 986	SPADI
+T92	Eq-Unit 1006 1007	%
+T93	Eq-Unit 1026 1027	%
+T94	Or 1008 1010	or
+A1	Eq-Operator-Value T12 GTEQ
+A2	Eq-Operator-Value T13 LTEQ
+A3	Eq-Operator-Value T14 LT
+A4	Eq-Operator-Value T15 GT
+A5	Eq-Temporal-Unit-Value T16 year
+A6	Eq-Temporal-Unit-Value T17 month
+A7	Eq-Operator-Value T19 BETWEEN
+A8	Observation-Type-Value T39 measurement
+A9	Polarity-Value T40 low
+A10	Observation-Type-Value T43 measurement
+A11	Polarity-Value T47 low
+A12	Eq-Operator-Value T51 BETWEEN
+A13	Observation-Type-Value T58 measurement
+A14	Assertion-Type-Value E25 possible
+A15	Polarity-Value T73 normal
+A16	Eq-Temporal-Period-Value T80 past
+A17	Eq-Temporal-Period-Value T85 present
+A18	Observation-Type-Value T89 clinical-score
+R1	If-Then Arg1:E17 Arg2:E19
+R2	Found-By Arg1:E30 Arg2:E29
+R3	Found-By Arg1:E3 Arg2:E35
+R4	Using Arg1:E40 Arg2:E42
+R5	Abbrev-Of Arg1:E44 Arg2:E43

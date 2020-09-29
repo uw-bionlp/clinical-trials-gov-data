@@ -1,0 +1,212 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Observation:T5 Name:T6 Polarity:T116 Eq-Comparison:E21
+E7	Procedure:T7 Name:T8 Stability:T106 Temporality:E19
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E14	Eq-Comparison:T43 Operator:T15 Value:T32 Unit:T25 Value2:T59
+E15	Eq-Comparison:T44 Operator:T16 Value:T33 Value2:T65 Unit:T66 Per:T67
+E16	Eq-Comparison:T45 Operator:T17 Value:T34 Unit:T73 Per:T74
+E17	Eq-Comparison:T46 Operator:T18 Value:T35 Value2:T77 Unit:T26
+E18	Eq-Comparison:T47 Operator:T19 Value:T36 Unit:T80 Per:T81
+E19	Eq-Comparison:T48 Operator:T21 Value:T39 Temporal-Unit:T107
+E20	Eq-Comparison:T49 Operator:T22 Value:T40 Unit:T114 Per:T115
+E21	Eq-Comparison:T50 Operator:T23 Value:T41 Temporal-Unit:T117 Per:T118
+E22	Eq-Comparison:T51 Operator:T24 Value:T42 Value2:T128 Unit:T28
+E23	Eq-Comparison:T52 Operator:T29 Value:T30 Value2:T31 Unit:T55 Per:T56
+E2	Observation:T53 Name:T54 Eq-Comparison:E23
+E4	Observation:T57 Name:T58 Eq-Comparison:E14
+E6	Or:T61 Arg:T60 Arg2:T62
+E8	Observation:T63 Name:T64 Eq-Comparison:E15
+E10	Or:T69 Arg:T68 Arg2:T70
+E12	Observation:T71 Name:T72 Eq-Comparison:E16
+E24	Observation:T75 Name:T76 Eq-Comparison:E17
+E25	Observation:T78 Name:T79 Eq-Comparison:E18
+E26	Observation:T82 Name:T83 Stability:T84 Eq-Comparison:E27 Temporality:E28
+E27	Eq-Comparison:T85 Operator:T86 Value:T87 Unit:T27
+E28	Eq-Comparison:T88 Temporal-Period:T89 Value:T37 Temporal-Unit:T90
+E29	Condition:T91 Name:T92
+E30	Allergy:T93 Name:T94
+E31	Or:T95 Arg:E30 Arg2:E9
+E32	Drug:T96 Name:T97 Temporality:E33 Temporality2:E36
+E33	Eq-Comparison:T98 Temporal-Period:T99
+E34	Drug:T100 Name:T101 Temporality:E36
+E35	Or:T102 Arg:E32 Arg2:E34
+E36	Eq-Comparison:T103 Operator:T20 Temporal-Period:T104 Value:T38 Temporal-Unit:T105
+E37	Modifier:T108 Modifies:T4
+E38	Condition:T109 Name:T110
+E39	Observation:T111 Name:T112 Polarity:T113 Eq-Comparison:E20
+E40	Eq-Comparison:T119 Temporal-Period:T120
+E41	Drug:T121 Name:T122 Temporality:E40
+E42	Drug:T123 Name:T124 Temporality:E40
+E43	Or:T125 Arg:E41 Arg2:E42
+E44	Observation:T126 Name:T127 Eq-Comparison:E22
+T1	Condition 464 490	gastrointestinal disorders
+T2	Condition-Name 464 490	gastrointestinal disorders
+T3	Condition 504 512	diarrhea
+T4	Condition-Name 504 512	diarrhea
+T5	Observation 571 587	aerobic exercise
+T6	Observation-Name 571 587	aerobic exercise
+T7	Procedure 427 440	birth control
+T8	Procedure-Name 427 440	birth control
+T9	Condition 303 322	lactose intolerance
+T10	Condition-Name 303 322	lactose intolerance
+T11	Condition 394 403	Pregnancy
+T12	Condition-Name 394 403	Pregnancy
+T13	Condition 405 414	lactation
+T14	Condition-Name 405 414	lactation
+T15	Eq-Operator 66 67	>
+T16	Eq-Operator 100 101	<
+T17	Eq-Operator 133 134	>
+T18	Eq-Operator 152 153	>
+T19	Eq-Operator 186 187	>
+T20	Eq-Operator 371 377	within
+T21	Eq-Operator 442 448	within
+T22	Eq-Operator 546 547	>
+T23	Eq-Operator 589 590	>
+T24	Eq-Operator 660 661	>
+T25	Eq-Unit 74 76	cm
+T26	Eq-Unit 160 164	mmHg
+T27	Eq-Unit 244 246	kg
+T28	Eq-Unit 668 672	mmHg
+T29	Eq-Operator 42 43	-
+T30	Eq-Value 39 42	100
+T31	Eq-Value 43 46	126
+T32	Eq-Value 67 69	89
+T33	Eq-Value 101 103	50
+T34	Eq-Value 134 137	150
+T35	Eq-Value 153 156	130
+T36	Eq-Value 187 189	25
+T37	Eq-Value 258 259	3
+T38	Eq-Value 383 384	1
+T39	Eq-Value 449 450	6
+T40	Eq-Value 547 548	2
+T41	Eq-Value 590 591	5
+T42	Eq-Value 661 664	140
+T43	Eq-Comparison 66 76	>89/102 cm
+T44	Eq-Comparison 100 112	<50/40 mg/dl
+T45	Eq-Comparison 133 143	>150 mg/dl
+T46	Eq-Comparison 152 164	>130/85 mmHg
+T47	Eq-Comparison 186 195	>25 EU/ml
+T48	Eq-Comparison 442 450	within 6
+T49	Eq-Comparison 546 557	>2 drinks/d
+T50	Eq-Comparison 589 596	>5 h/wk
+T51	Eq-Comparison 660 672	>140/90 mmHg
+T52	Eq-Comparison 39 52	100-126 mg/dl
+T53	Observation 25 38	Serum Glucose
+T54	Observation-Name 25 38	Serum Glucose
+T55	Eq-Unit 47 49	mg
+T56	Eq-Unit 50 52	dl
+T57	Observation 58 65	Waist C
+T58	Observation-Name 58 65	Waist C
+T59	Eq-Value 70 73	102
+T60	Life-Stage-And-Gender 78 79	F
+T61	Or 79 80	/
+T62	Life-Stage-And-Gender 80 81	M
+T63	Observation 87 98	Serum HDL-C
+T64	Observation-Name 87 98	Serum HDL-C
+T65	Eq-Value 104 106	40
+T66	Eq-Unit 107 109	mg
+T67	Eq-Unit 110 112	dl
+T68	Life-Stage-And-Gender 114 115	F
+T69	Or 115 116	/
+T70	Life-Stage-And-Gender 116 117	M
+T71	Observation 123 131	Serum TG
+T72	Observation-Name 123 131	Serum TG
+T73	Eq-Unit 138 140	mg
+T74	Eq-Unit 141 143	dl
+T75	Observation 149 151	BP
+T76	Observation-Name 149 151	BP
+T77	Eq-Value 157 159	85
+T78	Observation 170 185	Serum Endotoxin
+T79	Observation-Name 170 185	Serum Endotoxin
+T80	Eq-Unit 190 192	EU
+T81	Eq-Unit 193 195	ml
+T82	Observation 230 239	body mass
+T83	Observation-Name 230 239	body mass
+T84	Stability 221 229	Unstable
+T85	Eq-Comparison 241 246	±2 kg
+T86	Eq-Operator 241 242	±
+T87	Eq-Value 242 243	2
+T88	Eq-Comparison 252 262	prior 3-mo
+T89	Eq-Temporal-Period 252 257	prior
+T90	Eq-Temporal-Unit 260 262	mo
+T91	Condition 269 279	Vegetarian
+T92	Condition-Name 269 279	Vegetarian
+T93	Allergy 290 299	allergies
+T94	Allergy-Name 285 289	Food
+T95	Or 300 302	or
+T96	Drug 336 355	dietary supplements
+T97	Drug-Name 336 355	dietary supplements
+T98	Eq-Comparison 328 332	User
+T99	Eq-Temporal-Period 328 332	User
+T100	Drug 359 369	probiotics
+T101	Drug-Name 359 369	probiotics
+T102	Or 356 358	or
+T103	Eq-Comparison 371 387	within past 1-mo
+T104	Eq-Temporal-Period 378 382	past
+T105	Eq-Temporal-Unit 385 387	mo
+T106	Stability 416 423	changes
+T107	Eq-Temporal-Unit 451 453	mo
+T108	Modifier 496 503	Chronic
+T109	Condition 518 524	Smoker
+T110	Condition-Name 518 524	Smoker
+T111	Observation 537 544	alcohol
+T112	Observation-Name 537 544	alcohol
+T113	Polarity 530 536	Excess
+T114	Eq-Unit 549 555	drinks
+T115	Eq-Temporal-Unit 556 557	d
+T116	Polarity 564 570	Excess
+T117	Eq-Temporal-Unit 592 593	h
+T118	Eq-Temporal-Unit 594 596	wk
+T119	Eq-Comparison 603 609	Recent
+T120	Eq-Temporal-Period 603 609	Recent
+T121	Drug 610 620	antibiotic
+T122	Drug-Name 610 620	antibiotic
+T123	Drug 624 647	anti-inflammatory agent
+T124	Drug-Name 624 647	anti-inflammatory agent
+T125	Or 621 623	or
+T126	Observation 657 659	BP
+T127	Observation-Name 657 659	BP
+T128	Eq-Value 665 667	90
+A1	Eq-Operator-Value T15 GT
+A2	Eq-Operator-Value T16 LT
+A3	Eq-Operator-Value T17 GT
+A4	Eq-Operator-Value T18 GT
+A5	Eq-Operator-Value T19 GT
+A6	Eq-Operator-Value T20 LTEQ
+A7	Eq-Operator-Value T21 LTEQ
+A8	Eq-Operator-Value T22 GT
+A9	Eq-Operator-Value T23 GT
+A10	Eq-Operator-Value T24 GT
+A11	Eq-Operator-Value T29 BETWEEN
+A12	Observation-Type-Value T54 lab
+A13	Observation-Type-Value T58 measurement
+A14	Life-Stage-And-Gender-Type T60 female
+A15	Life-Stage-And-Gender-Type T62 male
+A16	Observation-Type-Value T64 lab
+A17	Life-Stage-And-Gender-Type T68 female
+A18	Life-Stage-And-Gender-Type T70 male
+A19	Observation-Type-Value T72 lab
+A20	Observation-Type-Value T76 vital
+A21	Observation-Type-Value T79 lab
+A22	Observation-Type-Value T83 vital
+A23	Stability-Value T84 change
+A24	Eq-Operator-Value T86 PLUS-MINUS
+A25	Eq-Temporal-Period-Value T89 past
+A26	Eq-Temporal-Unit-Value T90 month
+A27	Eq-Temporal-Period-Value T99 present
+A28	Eq-Temporal-Period-Value T104 past
+A29	Eq-Temporal-Unit-Value T105 month
+A30	Stability-Value T106 change
+A31	Eq-Temporal-Unit-Value T107 month
+A32	Observation-Type-Value T112 social-habit
+A33	Polarity-Value T113 high
+A34	Eq-Temporal-Unit-Value T115 day
+A35	Polarity-Value T116 high
+A36	Observation-Type-Value T6 social-habit
+A37	Eq-Temporal-Unit-Value T117 hour
+A38	Eq-Temporal-Unit-Value T118 week
+A39	Eq-Temporal-Period-Value T120 recent
+A40	Observation-Type-Value T127 vital

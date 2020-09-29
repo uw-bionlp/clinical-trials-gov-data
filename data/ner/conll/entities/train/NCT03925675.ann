@@ -1,0 +1,130 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E7	Procedure:T7 Name:T8
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E14	Eq-Comparison:T20 Operator:T16 Value:T17 Value2:T18
+E2	Condition:T21 Name:T22
+E4	Modifier:T23 Modifies:T22
+E6	Modifier:T24 Modifies:T22
+E8	Or:T25 Arg:E6 Arg2:E4
+E9	Assertion:T26 Asserted:E2
+E10	Procedure:T27 Name:T28 Temporality:E15
+E12	Condition:T29 Name:T30
+E15	Eq-Comparison:T31 Temporal-Recency:T32
+E16	Temporal-Connection:T33 Arg:E2 Arg2:E10
+E17	Drug:T34 Name:T35
+E18	Or:T36 Arg:E1 Arg2:E3
+E19	Or:T37 Arg:T10 Arg2:T9
+E20	Age:T38 Eq-Comparison:E14
+E21	Condition:T39 Name:T40
+E22	Procedure:T41 Name:T42
+E23	Temporal-Connection:T43 Arg:E21 Arg2:E22
+E24	Or:T44 Arg:E5 Arg2:E7
+E25	Drug:T45 Name:T46
+E26	Condition:T48 Name:T49 Temporality:E27
+E27	Eq-Comparison:T50 Temporal-Period:T51
+E28	Condition:T52 Name:T53
+E29	Assertion:T54 Asserted:E28
+E30	Or:T55 Arg:E11 Arg2:E29
+E31	Modifier:T56 Modifies:T14
+E32	Modifier:T57 Modifies:T14
+E33	Or:T58 Arg:E32 Arg2:E31
+E34	Procedure:T15 Name:T59
+E35	Contraindication:T60 Contraindicates:E34
+E36	Procedure:T61 Name:T62
+E37	Procedure:T63 Name:T64
+E38	Eq-Comparison:T65 Temporal-Period:T66
+E39	Condition:T67 Name:T68 Temporality:E38
+E40	Drug:T19
+E41	Drug:T69 Name:T70
+T1	Procedure 107 130	external beam radiation
+T2	Procedure-Name 107 130	external beam radiation
+T3	Procedure 140 152	chemotherapy
+T4	Procedure-Name 140 152	chemotherapy
+T5	Procedure 287 310	external beam radiation
+T6	Procedure-Name 287 310	external beam radiation
+T7	Procedure 319 331	chemotherapy
+T8	Procedure-Name 319 331	chemotherapy
+T9	Life-Stage-And-Gender 186 192	female
+T10	Life-Stage-And-Gender 177 181	Male
+T11	Condition 381 395	breast feeding
+T12	Condition-Name 381 395	breast feeding
+T13	Condition 455 466	dysfunction
+T14	Condition-Name 455 466	dysfunction
+T16	Eq-Operator 206 208	to
+T17	Eq-Value 203 205	18
+T18	Eq-Value 209 211	70
+T20	Eq-Comparison 203 211	18 to 70
+T21	Condition 70 77	gliomas
+T22	Condition-Name 70 77	gliomas
+T23	Modifier 60 69	recurrent
+T24	Modifier 48 56	residual
+T25	Or 57 59	or
+T26	Assertion 34 47	evaluated for
+T27	Procedure 98 105	surgery
+T28	Procedure-Name 98 105	surgery
+T29	Condition 92 97	tumor
+T30	Condition-Name 92 97	tumor
+T31	Eq-Comparison 84 91	initial
+T32	Eq-Temporal-Recency 84 91	initial
+T33	Temporal-Connection 78 83	after
+T34	Drug 158 170	temozolamide
+T35	Drug-Name 158 170	temozolamide
+T36	Or 131 139	and / or
+T37	Or 182 185	and
+T38	Age 198 202	Ages
+T39	Condition 260 266	glioma
+T40	Condition-Name 260 266	glioma
+T41	Procedure 278 285	surgery
+T42	Procedure-Name 278 285	surgery
+T43	Temporal-Connection 271 277	before
+T44	Or 311 318	and /or
+T45	Drug 337 349	temozolamide
+T46	Drug-Name 337 349	temozolamide
+T47	Life-Stage-And-Gender 356 361	Women
+T48	Condition 371 379	pregnant
+T49	Condition-Name 371 379	pregnant
+T50	Eq-Comparison 366 370	were
+T51	Eq-Temporal-Period 366 370	were
+T52	Condition 409 417	pregnant
+T53	Condition-Name 409 417	pregnant
+T54	Assertion 400 408	possibly
+T55	Or 397 399	or
+T56	Modifier 449 454	renal
+T57	Modifier 438 445	hepatic
+T58	Or 446 448	or
+T15	Procedure 487 490	MRI
+T59	Procedure-Name 487 490	MRI
+T60	Contraindication 491 508	contraindications
+T61	Procedure 515 525	pacemakers
+T62	Procedure-Name 515 525	pacemakers
+T63	Procedure 527 552	non-MR compatible devices
+T64	Procedure-Name 527 552	non-MR compatible devices
+T65	Eq-Comparison 576 583	history
+T66	Eq-Temporal-Period 576 583	history
+T67	Condition 592 608	hypersensitivity
+T68	Condition-Name 592 608	hypersensitivity
+T19	Drug 587 591	drug
+T69	Drug 612 628	18F-Fluciclovine
+T70	Drug-Name 612 628	18F-Fluciclovine
+A1	Life-Stage-And-Gender-Type T9 female
+A2	Life-Stage-And-Gender-Type T10 male
+A3	Eq-Operator-Value T16 BETWEEN
+A4	Assertion-Type-Value E9 hypothetical
+A5	Eq-Temporal-Recency-Value T32 first-time
+A6	Temporal-Connection-Type-Value E16 after
+A7	Temporal-Connection-Type-Value E23 before
+A8	Life-Stage-And-Gender-Type T47 female
+A9	Eq-Temporal-Period-Value T51 past
+A10	Assertion-Type-Value E29 possible
+A11	Eq-Temporal-Period-Value T66 past
+R1	Treatment-For Arg1:E10 Arg2:E12
+R2	Using Arg1:E3 Arg2:E17
+R3	Using Arg1:E7 Arg2:E25
+R4	If-Then Arg1:T47 Arg2:E26
+R5	Example-Of Arg1:E36 Arg2:E35
+R6	Example-Of Arg1:E37 Arg2:E35
+R7	Caused-By Arg1:E39 Arg2:E40
+R8	Caused-By Arg1:E39 Arg2:E41

@@ -14,23 +14,13 @@ def pretokenize(text):
     is_numeric = False
     prec_numeric = False
     dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧', '±', '：', ':',
-                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙' }
+                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙', '+', '%' }
     cleaned = []
     prev = ''
     prev_num = False
     prev_per = False
     is_num = re.match(reg_num, text[0])
     pad_map = {}
-
-    # Pre/post/peri check
-    #reg_oper = r'(pre|post|peri)oper'
-    #matches = [ x for x in re.finditer(reg_oper, text, re.I) ]
-    #while matches:
-    #    match = matches[0]
-    #    idx = match.regs[1][1]
-    #    text = text[:idx] + '-' + text[idx:]
-    #    pad_map[idx-1] = 1
-    #    matches = [ x for x in re.finditer(reg_oper, text, re.I) ]
 
     # Char-level check
     lowered = text.lower()
@@ -49,8 +39,15 @@ def pretokenize(text):
             add_start = ' '
         if not is_num and prev_per:
             add_start = ' '
-        if (lowered[:i].endswith('pre') or lowered[:i].endswith('post') or lowered[:i].endswith('peri')) and lowered[i:].startswith('oper'):
-            add_start = ' - '
+        if (lowered[:i].endswith('pre') or lowered[:i].endswith('post') or lowered[:i].endswith('peri')) and (lowered[i:].startswith('oper') or lowered[i:].startswith('treat')):
+            add_start = ' '
+        if not prev_num and ch == '.':
+            add_start = ' '
+        if prev_num and ch == 'x' and foll_num:
+            add_start = ' '
+            add_end = ' '
+        if text[:i].endswith('Grade') and ch == 'Ⅰ':
+            add_start = ' '
         prev_num = is_num
         prev = ch
         prev_per = is_per
@@ -142,9 +139,9 @@ class BratDocument:
                 nxt = toks[matches[-1].i+1] if len(toks) > matches[-1].i+1 else None
                 if nxt == None or " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ',''):
                     break
-                if no_spaced.startswith(matches_no_spaced+nxt.text):
+                if no_spaced.startswith(matches_no_spaced+nxt.text.replace(' ','')):
                     matches.append(nxt)
-                    matches_no_spaced = ''.join([ m.text for m in matches ])
+                    matches_no_spaced = ''.join([ m.text for m in matches ]).replace(' ','')
                 else:
                     break
 

@@ -1,0 +1,124 @@
+E1	Eq-Comparison:T1 Value:T34 Temporal-Unit:T35 Operator:T36
+E2	Or:T2 Arg:T37 Arg2:T38
+E3	Observation:T3 Name:T39 Eq-Comparison:E4
+E4	Eq-Comparison:T4 Operator:T40
+E5	Observation:T5 Name:T41 Eq-Comparison:E7
+E7	Eq-Comparison:T7 Value:T43 Operator:T42
+E8	Eq-Comparison:T8
+E9	Condition:T9 Name:T45 Temporality:E8
+E10	Condition:T10 Name:T47 Severity:T46
+E11	Temporal-Connection:T11 Arg:E10 Arg2:E12
+E12	Eq-Comparison:T12
+E13	Condition:T13 Name:T49 Temporality:E12
+E14	Modifier:T14 Modifies:T51
+E15	Condition:T15 Name:T51
+E16	Modifier:T16 Modifies:T53
+E17	Or:T17 Arg:E16 Arg2:E6
+E18	Condition:T18 Name:T53
+E19	Observation:T19 Name:T56 Stability:T55 Polarity:T54
+E20	Condition:T20 Name:T58 Severity:T57
+E21	Modifier:T21 Modifies:T60
+E22	Condition:T22 Name:T60 Severity:T59
+E23	Condition:T23 Name:T61
+E24	Condition:T24 Name:T62
+E25	Or:T25 Arg:E24 Arg2:E27
+E26	Modifier:T26 Modifies:T63
+E27	Condition:T27 Name:T63
+E28	Eq-Comparison:T28 Temporal-Period:T64
+E30	Condition:T30 Name:T67 Severity:T66 Temporality:E28
+E31	Condition:T31 Name:T68
+E32	Or:T32 Arg:E31 Arg2:E33
+E33	Condition:T33 Name:T69
+E34	Age:T52 Eq-Comparison:E1
+E6	Modifier:T50 Modifies:T53
+E29	Risk:T29 Risk-For:E35
+E35	Death:T65
+T1	Eq-Comparison 25 43	40 years and older
+T2	Or 55 58	and
+T3	Observation 72 121	Center for Epidemiologic Studies Depression Scale
+T4	Eq-Comparison 122 131	score ≥16
+T5	Observation 137 172	Mini Mental State Examination score
+T7	Eq-Comparison 173 177	≥ 24
+T8	Eq-Comparison 183 188	First
+T9	Condition 189 195	stroke
+T10	Condition 313 332	depressive disorder
+T11	Temporal-Connection 333 339	before
+T12	Eq-Comparison 340 345	onset
+T13	Condition 349 355	stroke
+T14	Modifier 361 370	Bilateral
+T15	Condition 371 381	hemiplegia
+T16	Modifier 387 393	Vision
+T17	Or 394 396	or
+T18	Condition 405 413	deficits
+T19	Observation 437 450	everyday life
+T20	Condition 463 470	aphasia
+T21	Modifier 483 493	unilateral
+T22	Condition 494 509	spatial neglect
+T23	Condition 528 553	neurodegenerative disease
+T24	Condition 562 581	Parkinson's disease
+T25	Or 582 584	or
+T26	Modifier 585 600	multiple system
+T27	Condition 601 608	atrophy
+T28	Eq-Comparison 614 621	Current
+T30	Condition 646 659	organ failure
+T31	Condition 661 686	musculoskeletal disorders
+T32	Or 688 690	or
+T33	Condition 691 697	cancer
+T34	Eq-Value 25 27	40
+T35	Eq-Temporal-Unit 28 33	years
+T36	Eq-Operator 34 43	and older
+T37	Life-Stage-And-Gender 49 54	Males
+T38	Life-Stage-And-Gender 59 66	females
+T39	Observation-Name 72 121	Center for Epidemiologic Studies Depression Scale
+T40	Eq-Operator 128 131	≥16
+T41	Observation-Name 137 172	Mini Mental State Examination score
+T42	Eq-Operator 173 174	≥
+T43	Eq-Value 175 177	24
+T44	Eq-Temporal-Recency 183 188	First
+T45	Condition-Name 189 195	stroke
+T46	Severity 307 312	Major
+T47	Condition-Name 313 332	depressive disorder
+T48	Eq-Temporal-Recency 340 345	onset
+T49	Condition-Name 349 355	stroke
+T51	Condition-Name 371 381	hemiplegia
+T53	Condition-Name 405 413	deficits
+T55	Stability 430 436	impact
+T56	Observation-Name 437 450	everyday life
+T57	Severity 456 462	Severe
+T58	Condition-Name 463 470	aphasia
+T59	Severity 476 482	Severe
+T60	Condition-Name 494 509	spatial neglect
+T61	Condition-Name 528 553	neurodegenerative disease
+T62	Condition-Name 562 581	Parkinson's disease
+T63	Condition-Name 601 608	atrophy
+T64	Eq-Temporal-Period 614 621	Current
+T66	Severity 639 645	severe
+T67	Condition-Name 646 659	organ failure
+T68	Condition-Name 661 686	musculoskeletal disorders
+T69	Condition-Name 691 697	cancer
+T52	Age 38 43	older
+T6	Language 220 228	Japanese
+T50	Modifier 397 404	hearing
+T54	Polarity 419 429	negatively
+T29	Risk 622 638	life-threatening
+T65	Death 622 638	life-threatening
+A1	Temporal-Connection-Type-Value E11 before
+A2	Eq-Temporal-Unit-Value T35 year
+A3	Eq-Operator-Value T36 GTEQ
+A4	Life-Stage-And-Gender-Type T37 male
+A5	Life-Stage-And-Gender-Type T38 female
+A6	Observation-Type-Value T39 clinical-score
+A7	Eq-Operator-Value T40 GTEQ
+A8	Observation-Type-Value T41 clinical-score
+A9	Eq-Operator-Value T42 GTEQ
+A10	Eq-Temporal-Recency-Value T44 first-time
+A11	Severity-Value T46 severe
+A12	Eq-Temporal-Recency-Value T48 first-time
+A15	Stability-Value T55 change
+A16	Severity-Value T57 severe
+A17	Severity-Value T59 severe
+A18	Eq-Temporal-Period-Value T64 present
+A20	Severity-Value T66 severe
+A13	Polarity-Value T54 negative
+R1	Caused-By Arg1:T55 Arg2:E18
+R2	Example-Of Arg1:E24 Arg2:E23

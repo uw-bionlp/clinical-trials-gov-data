@@ -27,13 +27,12 @@ A1	Eq-Operator-Value T21 GTEQ
 T22	Eq-Operator 274 275	≤
 A2	Eq-Operator-Value T22 LTEQ
 T23	Eq-Unit 208 212	mmHg
-T24	Eq-Unit 276 278	cm
 T27	Eq-Value 206 208	50
 T28	Eq-Value 275 276	8
 T29	Eq-Comparison 205 212	≥50mmHg
 E20	Eq-Comparison:T29 Operator:T21 Value:T27 Unit:T23
 T30	Eq-Comparison 274 276	≤8
-E21	Eq-Comparison:T30 Operator:T22 Value:T28 Unit:T47 Unit2:T24
+E21	Eq-Comparison:T30 Operator:T22 Value:T28 Unit:T47
 T31	Condition 47 53	AECOPD
 E2	Condition:T31 Name:T32
 T32	Condition-Name 47 53	AECOPD
@@ -69,7 +68,7 @@ T46	Temporal-Connection 213 217	when
 E22	Temporal-Connection:T46 Arg:E18 Arg2:E7
 A6	Temporal-Connection-Type-Value E22 during
 R1	Abbrev-Of Arg1:E9 Arg2:E1	
-T47	Eq-Unit 278 281	H2O
+T47	Eq-Unit 276 281	cmH2O
 T19	Temporal-Connection 301 305	when
 E19	Temporal-Connection:T19 Arg:E9 Arg2:E13
 A7	Temporal-Connection-Type-Value E19 during

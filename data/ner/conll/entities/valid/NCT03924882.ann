@@ -1,0 +1,266 @@
+E2	Observation:T2 Name:T3
+E4	Condition:T4 Name:T5 Temporality:E18
+E6	Procedure:T6 Name:T7 Severity:T65 Temporality:E19
+E8	Condition:T8 Name:T9 Temporality:E20
+E10	Condition:T10 Name:T11
+E12	Condition:T12 Name:T13
+E13	Age:T29 Eq-Comparison:E14 Eq-Comparison2:E15
+E14	Eq-Comparison:T46 Operator:T14 Temporal-Unit:T21 Value:T31
+E15	Eq-Comparison:T47 Operator:T15 Temporal-Unit:T22 Value:T32
+E16	Eq-Comparison:T48 Operator:T16 Temporal-Unit:T23 Value:T33
+E17	Eq-Comparison:T49 Operator:T17 Temporal-Unit:T25 Value:T38
+E18	Eq-Comparison:T50 Operator:T18 Temporal-Unit:T26 Value:T40
+E19	Eq-Comparison:T51 Operator:T19 Temporal-Unit:T27 Value:T42
+E20	Eq-Comparison:T52 Operator:T20 Temporal-Unit:T28 Value:T44
+E21	Eq-Comparison:T53 Operator:T30 Value:T34 Value2:T35
+E22	Eq-Comparison:T54 Temporal-Period:T55
+E23	Eq-Comparison:T56 Temporal-Period:T57
+E24	Eq-Comparison:T58 Temporal-Period:T59
+E25	Eq-Comparison:T60 Temporal-Period:T61
+E1	And:T70 Arg:E14 Arg2:E15
+E3	Condition:T71 Name:T72
+E5	Modifier:T73 Modifies:T72
+E7	Procedure:T74 Name:T75
+E9	Procedure:T76 Name:T77
+E11	Or:T78 Arg:E9 Arg2:E7
+E30	Modifier:T79 Modifies:T81
+E31	Condition:T80 Name:T81
+E32	Coreference:T82 Temporality:E16 Refers-To:E31
+E33	Procedure:T84 Name:T85 Temporality:E35
+E34	Modifier:T86 Modifies:T85
+E35	Eq-Comparison:T87 Temporal-Recency:T88
+E36	Temporal-Connection:T89 Arg:E16 Arg2:E35
+E37	Condition:T90 Name:T91
+E38	Modifier:T92 Modifies:T91
+E39	Or:T93 Arg:E31 Arg2:E37
+E40	Coreference:T83 Refers-To:E37
+E41	Procedure:T94 Name:T95
+E42	Modifier:T96 Modifies:T95
+E43	Temporal-Connection:T97 Arg:E40 Arg2:E41
+E44	Eq-Comparison:T98 Operator:T99 Value:T100
+E45	Procedure:T101 Name:T102 Minimum-Count:E44
+E46	Modifier:T103 Modifies:T102
+E47	Observation:T104 Name:T105
+E48	Observation:T106 Name:T107 Eq-Comparison:E21
+E49	Observation:T36 Name:T108
+E50	Observation:T109 Name:T110 Eq-Comparison:E51
+E51	Eq-Comparison:T111 Operator:T112 Value:T37 Temporal-Unit:T24
+E52	Condition:T113 Name:T114 Polarity:T115
+E53	Drug:T116 Name:T117 Temporality:E25
+E55	Allergy:T119 Name:T118
+E54	Or:T120 Arg:E53 Arg2:E55
+E56	Modifier:T121 Modifies:T13
+E57	Condition:T122 Name:T123 Temporality:E22
+E58	Or:T124 Arg:E57 Arg2:E10
+E59	Condition:T125 Name:T126
+E60	Or:T127 Arg:E10 Arg2:E59
+E61	Condition:T128 Name:T129 Stage:E62 Temporality:E17
+E62	Eq-Comparison:T130 Unit:T131 Value:T132 Operator:T133 Value2:T134
+E26	Study:T39
+E63	Temporal-Connection:T62 Arg:E17 Arg2:E26
+E64	Condition:T63 Name:T135 Temporality:E23
+E65	Or:T136 Arg:E64 Arg2:E4
+E27	Temporal-Connection:T41 Arg:E18 Arg2:E66
+E66	Study:T64
+E28	Study:T43
+E67	Temporal-Connection:T66 Arg:E19 Arg2:E28
+E68	Condition:T67 Name:T137 Severity:T139
+E69	Modifier:T138 Modifies:T137
+E70	Condition:T140 Name:T141 Temporality:E24
+E29	Study:T45
+E71	Temporal-Connection:T68 Arg:E20 Arg2:E29
+E72	Modifier:T69 Modifies:T143
+E73	Condition:T142 Name:T143
+E74	Modifier:T144
+E75	Assertion:T145 Asserted:E73
+T1	Life-Stage-And-Gender 25 31	Female
+T2	Observation 566 584	Measurable disease
+T3	Observation-Name 566 584	Measurable disease
+T4	Condition 1111 1139	gastrointestinal perforation
+T5	Condition-Name 1111 1139	gastrointestinal perforation
+T6	Procedure 1181 1199	surgical procedure
+T7	Procedure-Name 1181 1199	surgical procedure
+T8	Condition 1273 1290	bowel obstruction
+T9	Condition-Name 1273 1290	bowel obstruction
+T10	Condition 975 990	unstable angina
+T11	Condition-Name 975 990	unstable angina
+T12	Condition 920 932	hypertension
+T13	Condition-Name 920 932	hypertension
+T14	Eq-Operator 37 38	≥
+T15	Eq-Operator 51 52	≤
+T16	Eq-Operator 244 250	within
+T17	Eq-Operator 1042 1048	within
+T18	Eq-Operator 1140 1146	within
+T19	Eq-Operator 1200 1206	within
+T20	Eq-Operator 1291 1297	within
+T21	Eq-Temporal-Unit 41 46	years
+T22	Eq-Temporal-Unit 55 60	years
+T23	Eq-Temporal-Unit 253 259	months
+T24	Eq-Temporal-Unit 734 740	months
+T25	Eq-Temporal-Unit 1051 1057	months
+T26	Eq-Temporal-Unit 1150 1154	days
+T27	Eq-Temporal-Unit 1210 1214	days
+T28	Eq-Temporal-Unit 1301 1305	days
+T29	Age 33 36	age
+T30	Eq-Operator 558 559	-
+T31	Eq-Value 38 40	18
+T32	Eq-Value 52 54	70
+T33	Eq-Value 251 252	6
+T34	Eq-Value 557 558	0
+T35	Eq-Value 559 560	2
+T37	Eq-Value 732 733	3
+T38	Eq-Value 1049 1050	6
+T40	Eq-Value 1147 1149	28
+T42	Eq-Value 1207 1209	28
+T44	Eq-Value 1298 1300	28
+T46	Eq-Comparison 37 46	≥18 years
+T47	Eq-Comparison 51 60	≤70 years
+T48	Eq-Comparison 244 259	within 6 months
+T49	Eq-Comparison 1042 1057	within 6 months
+T50	Eq-Comparison 1140 1154	within 28 days
+T51	Eq-Comparison 1200 1214	within 28 days
+T52	Eq-Comparison 1291 1305	within 28 days
+T53	Eq-Comparison 557 559	0-
+T54	Eq-Comparison 938 945	History
+T55	Eq-Temporal-Period 938 945	History
+T56	Eq-Comparison 1079 1086	History
+T57	Eq-Temporal-Period 1079 1086	History
+T58	Eq-Comparison 1259 1265	active
+T59	Eq-Temporal-Period 1259 1265	active
+T60	Eq-Comparison 820 825	prior
+T61	Eq-Temporal-Period 820 825	prior
+T70	And 47 50	and
+T71	Condition 148 168	epithelial carcinoma
+T72	Condition-Name 148 168	epithelial carcinoma
+T73	Modifier 176 181	ovary
+T74	Procedure 110 124	pathologically
+T75	Procedure-Name 110 124	pathologically
+T76	Procedure 92 106	Histologically
+T77	Procedure-Name 92 106	Histologically
+T78	Or 107 109	or
+T79	Modifier 188 214	Platinum resistant ovarian
+T80	Condition 215 221	cancer
+T81	Condition-Name 215 221	cancer
+T82	Coreference 234 243	relapsing
+T84	Procedure 308 320	chemotherapy
+T85	Procedure-Name 308 320	chemotherapy
+T86	Modifier 293 307	platinum-based
+T87	Eq-Comparison 270 274	last
+T88	Eq-Temporal-Recency 270 274	last
+T89	Temporal-Connection 260 265	after
+T90	Condition 353 359	cancer
+T91	Condition-Name 353 359	cancer
+T92	Modifier 325 352	platinum refractory ovarian
+T93	Or 322 324	OR
+T83	Coreference 372 383	progressing
+T94	Procedure 410 422	chemotherapy
+T95	Procedure-Name 410 422	chemotherapy
+T96	Modifier 395 409	platinum-based
+T97	Temporal-Connection 384 392	while on
+T98	Eq-Comparison 429 454	At least treated with one
+T99	Eq-Operator 429 437	At least
+T100	Eq-Value 451 454	one
+T101	Procedure 478 490	chemotherapy
+T102	Procedure-Name 478 490	chemotherapy
+T103	Modifier 463 477	platinum-based
+T104	Observation 496 530	Eastern Cooperative Oncology Group
+T105	Observation-Name 496 530	Eastern Cooperative Oncology Group
+T106	Observation 532 536	ECOG
+T107	Observation-Name 532 536	ECOG
+T36	Observation 667 672	CA125
+T108	Observation-Name 667 672	CA125
+T109	Observation 704 719	life expectancy
+T110	Observation-Name 704 719	life expectancy
+T111	Eq-Comparison 723 740	at least 3 months
+T112	Eq-Operator 723 731	at least
+T113	Condition 775 789	organ function
+T114	Condition-Name 775 789	organ function
+T115	Polarity 766 774	adequate
+T116	Drug 838 847	anlotinib
+T117	Drug-Name 838 847	anlotinib
+T119	Allergy 861 869	allegies
+T118	Allergy-Name 884 894	excipients
+T120	Or 848 850	or
+T121	Modifier 896 919	Inadequately controlled
+T122	Condition 949 970	myocardial infarction
+T123	Condition-Name 949 970	myocardial infarction
+T124	Or 972 974	or
+T125	Condition 995 1021	New York Heart Association
+T126	Condition-Name 995 1021	New York Heart Association
+T127	Or 992 994	or
+T128	Condition 1023 1027	NYHA
+T129	Condition-Name 1023 1027	NYHA
+T130	Eq-Comparison 1029 1041	Grade III-IV
+T131	Eq-Unit 1029 1034	Grade
+T132	Eq-Value 1035 1038	III
+T133	Eq-Operator 1038 1039	-
+T134	Eq-Value 1039 1041	IV
+T39	Study 1067 1070	Day
+T62	Temporal-Connection 1058 1066	prior to
+T63	Condition 1090 1107	abdominal fistula
+T135	Condition-Name 1090 1107	abdominal fistula
+T136	Or 1108 1110	or
+T41	Temporal-Connection 1155 1163	prior to
+T64	Study 1164 1167	Day
+T65	Severity 1175 1180	Major
+T43	Study 1224 1227	Day
+T66	Temporal-Connection 1215 1223	prior to
+T67	Condition 1252 1257	wound
+T137	Condition-Name 1252 1257	wound
+T138	Modifier 1240 1251	non-healing
+T139	Severity 1231 1238	Serious
+T140	Condition 1266 1271	ulcer
+T141	Condition-Name 1266 1271	ulcer
+T45	Study 1315 1318	Day
+T68	Temporal-Connection 1306 1314	prior to
+T69	Modifier 1338 1360	central nervous system
+T142	Condition 1367 1377	metastasis
+T143	Condition-Name 1367 1377	metastasis
+T144	Modifier 1362 1365	CNS
+T145	Assertion 1326 1337	Symptomatic
+A1	Life-Stage-And-Gender-Type T1 female
+A2	Eq-Operator-Value T14 GTEQ
+A3	Eq-Operator-Value T15 LTEQ
+A4	Eq-Operator-Value T16 LTEQ
+A5	Eq-Operator-Value T17 LTEQ
+A6	Eq-Operator-Value T18 LTEQ
+A7	Eq-Operator-Value T19 LTEQ
+A8	Eq-Operator-Value T20 LTEQ
+A9	Eq-Temporal-Unit-Value T21 year
+A10	Eq-Temporal-Unit-Value T22 year
+A11	Eq-Temporal-Unit-Value T23 month
+A12	Eq-Temporal-Unit-Value T24 month
+A13	Eq-Temporal-Unit-Value T25 month
+A14	Eq-Temporal-Unit-Value T26 day
+A15	Eq-Temporal-Unit-Value T27 day
+A16	Eq-Temporal-Unit-Value T28 day
+A17	Eq-Operator-Value T30 BETWEEN
+A18	Eq-Temporal-Period-Value T55 past
+A19	Eq-Temporal-Period-Value T57 past
+A20	Eq-Temporal-Period-Value T59 present
+A21	Eq-Temporal-Period-Value T61 past
+A26	Eq-Temporal-Recency-Value T88 most-recent-time
+A27	Temporal-Connection-Type-Value E36 after
+A28	Temporal-Connection-Type-Value E43 during
+A29	Eq-Operator-Value T99 GTEQ
+A30	Observation-Type-Value T105 clinical-score
+A31	Observation-Type-Value T108 lab
+A32	Observation-Type-Value T3 measurement
+A33	Eq-Operator-Value T112 GTEQ
+A34	Polarity-Value T115 normal
+A35	Eq-Operator-Value T133 BETWEEN
+A22	Temporal-Connection-Type-Value E63 before
+A23	Temporal-Connection-Type-Value E27 before
+A36	Severity-Value T65 severe
+A24	Temporal-Connection-Type-Value E67 before
+A37	Severity-Value T139 severe
+A25	Temporal-Connection-Type-Value E71 before
+A38	Assertion-Type-Value E75 possible
+R1	Found-By Arg1:E3 Arg2:E7
+R2	Found-By Arg1:E3 Arg2:E9
+R3	Equivalent-To Arg1:E32 Arg2:E31
+R4	Equivalent-To Arg1:E40 Arg2:E37
+R5	Abbrev-Of Arg1:E48 Arg2:E47
+R6	Found-By Arg1:E2 Arg2:E49
+R7	Abbrev-Of Arg1:E61 Arg2:E59
+R8	Abbrev-Of Arg1:E74 Arg2:E72

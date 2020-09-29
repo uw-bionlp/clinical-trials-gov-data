@@ -1,0 +1,161 @@
+E1	Eq-Comparison:T1 Operator:T42 Value:T43 Temporal-Unit:T44
+E2	Condition:T2 Name:T45
+E5	Eq-Comparison:T5 Operator:T47
+E6	Condition:T6 Name:T49 Severity:T48
+E7	Observation:T7 Name:T50 Eq-Comparison:E8
+E8	Eq-Comparison:T8 Operator:T51 Value:T52
+E9	Eq-Comparison:T9 Temporal-Period:T53
+E10	Procedure:T10 Name:T54 Temporality:E9 Duration:E13
+E11	Eq-Comparison:T11 Value:T55 Operator:T56
+E12	Drug:T12 Name:T57 Minimum-Count:E11
+E13	Eq-Comparison:T13 Operator:T58 Value:T59 Temporal-Unit:T60
+E14	Condition:T14 Name:T61
+E15	Drug:T15 Name:T62
+E16	Eq-Comparison:T16 Temporal-Period:T63
+E17	Condition:T17 Name:T64 Temporality:E16
+E18	Eq-Comparison:T18 Temporal-Period:T65
+E19	Drug:T19 Name:T66 Temporality:E18
+E20	Other:T20 Is-Other:E3
+E21	Condition:T21 Name:T67
+E22	Eq-Comparison:T22 Temporal-Period:T68
+E23	Condition:T23 Name:T69 Temporality:E22
+E24	Condition:T24 Name:T71 Severity:T70
+E25	Eq-Comparison:T25 Temporal-Period:T72
+E26	Condition:T26 Name:T73 Temporality:E25
+E27	Or:T27 Arg:E26 Arg2:E29
+E28	Other:T28 Is-Other:E29
+E29	Condition:T29 Name:T74 Temporality:E25
+E30	Eq-Comparison:T30 Temporal-Period:T75
+E31	Procedure:T31 Name:T76 Temporality:E30
+E32	Condition:T32 Name:T77
+E33	Or:T33 Arg:E32 Arg2:E34
+E34	Condition:T34 Name:T78
+E35	Condition:T35 Name:T79
+E36	Condition:T36 Name:T80
+E37	Observation:T37 Name:T81 Eq-Comparison:E38 Eq-Comparison2:E4
+E38	Eq-Comparison:T38 Operator:T82 Value:T4
+E39	Or:T39 Arg:T86 Arg2:T87
+E41	Condition:T41 Name:T88
+E42	Age:T89 Eq-Comparison:E1
+E3	Indication:T3 Indication-For:E19
+E4	Eq-Comparison:T90 Operator:T91 Value:T83 Unit:T84 Per:T85
+E43	Or:T92 Arg:E38 Arg2:E4
+T1	Eq-Comparison 34 53	older than 18 years
+T2	Condition 85 105	rheumatoid arthritis
+T5	Eq-Comparison 166 182	moderate to high
+T6	Condition 183 199	disease activity
+T7	Observation 201 217	DAS - 28 . score
+T8	Eq-Comparison 218 234	greater than 3.2
+T9	Eq-Comparison 250 258	received
+T10	Procedure 263 279	standard therapy
+T11	Eq-Comparison 286 297	one or more
+T12	Drug 311 317	DMARDs
+T13	Eq-Comparison 323 344	at least three months
+T14	Condition 377 393	hypersensitivity
+T15	Drug 397 406	metformin
+T16	Eq-Comparison 433 438	prior
+T17	Condition 454 471	diabetes mellitus
+T18	Eq-Comparison 487 494	receive
+T19	Drug 495 504	metformin
+T20	Other 513 518	other
+T21	Condition 551 575	congestive heart failure
+T22	Eq-Comparison 598 605	history
+T23	Condition 609 630	myocardial infarction
+T24	Condition 658 664	anemia
+T25	Eq-Comparison 685 691	active
+T26	Condition 692 702	infections
+T27	Or 703 705	or
+T28	Other 706 711	other
+T29	Condition 712 733	inflammatory diseases
+T30	Eq-Comparison 749 758	receiving
+T31	Procedure 759 777	biological therapy
+T32	Condition 784 793	Pregnancy
+T33	Or 794 796	or
+T34	Condition 797 806	lactation
+T35	Condition 827 851	impaired liver functions
+T36	Condition 872 897	impaired kidney functions
+T37	Observation 899 930	serum creatinine concentrations
+T38	Eq-Comparison 931 935	≥1.5
+T39	Or 960 963	and
+T41	Condition 1006 1018	malignancies
+T42	Eq-Operator 34 44	older than
+T43	Eq-Value 45 47	18
+T44	Eq-Temporal-Unit 48 53	years
+T45	Condition-Name 85 105	rheumatoid arthritis
+T46	Severity 166 174	moderate
+T47	Eq-Operator 175 177	to
+T48	Severity 178 182	high
+T49	Condition-Name 183 199	disease activity
+T50	Observation-Name 201 217	DAS - 28 . score
+T51	Eq-Operator 218 230	greater than
+T52	Eq-Value 231 234	3.2
+T53	Eq-Temporal-Period 250 258	received
+T54	Procedure-Name 263 279	standard therapy
+T55	Eq-Value 286 289	one
+T56	Eq-Operator 290 297	or more
+T57	Drug-Name 311 317	DMARDs
+T58	Eq-Operator 323 331	at least
+T59	Eq-Value 332 337	three
+T60	Eq-Temporal-Unit 338 344	months
+T61	Condition-Name 377 393	hypersensitivity
+T62	Drug-Name 397 406	metformin
+T63	Eq-Temporal-Period 433 438	prior
+T64	Condition-Name 454 471	diabetes mellitus
+T65	Eq-Temporal-Period 487 494	receive
+T66	Drug-Name 495 504	metformin
+T67	Condition-Name 551 575	congestive heart failure
+T68	Eq-Temporal-Period 598 605	history
+T69	Condition-Name 609 630	myocardial infarction
+T70	Severity 651 657	severe
+T71	Condition-Name 658 664	anemia
+T72	Eq-Temporal-Period 685 691	active
+T73	Condition-Name 692 702	infections
+T74	Condition-Name 712 733	inflammatory diseases
+T75	Eq-Temporal-Period 749 758	receiving
+T76	Procedure-Name 759 777	biological therapy
+T77	Condition-Name 784 793	Pregnancy
+T78	Condition-Name 797 806	lactation
+T79	Condition-Name 827 851	impaired liver functions
+T80	Condition-Name 872 897	impaired kidney functions
+T81	Observation-Name 899 930	serum creatinine concentrations
+T82	Eq-Operator 931 932	≥
+T83	Eq-Value 941 944	1.4
+T84	Eq-Unit 945 947	mg
+T85	Eq-Unit 948 950	dL
+T86	Life-Stage-And-Gender 954 959	males
+T87	Life-Stage-And-Gender 964 971	females
+T88	Condition-Name 1006 1018	malignancies
+T89	Age 34 39	older
+T3	Indication 519 530	indications
+T4	Eq-Value 932 935	1.5
+T90	Eq-Comparison 940 950	≥1.4 mg/dL
+T91	Eq-Operator 940 941	≥
+T92	Or 936 939	and
+A1	Eq-Operator-Value T42 GT
+A2	Eq-Temporal-Unit-Value T44 year
+A3	Severity-Value T46 moderate
+A4	Eq-Operator-Value T47 BETWEEN
+A7	Eq-Operator-Value T51 GT
+A8	Eq-Temporal-Period-Value T53 past
+A9	Eq-Operator-Value T56 GTEQ
+A10	Eq-Operator-Value T58 GTEQ
+A11	Eq-Temporal-Unit-Value T60 month
+A12	Eq-Temporal-Period-Value T63 past
+A13	Eq-Temporal-Period-Value T65 present
+A14	Eq-Temporal-Period-Value T68 past
+A15	Severity-Value T70 severe
+A16	Eq-Temporal-Period-Value T72 present
+A17	Eq-Temporal-Period-Value T75 present
+A18	Observation-Type-Value T81 lab
+A19	Eq-Operator-Value T82 GTEQ
+A20	Life-Stage-And-Gender-Type T86 male
+A21	Life-Stage-And-Gender-Type T87 female
+A22	Observation-Type-Value T50 clinical-score
+A6	Severity-Value T48 severe
+A5	Eq-Operator-Value T91 GTEQ
+R1	Equivalent-To Arg1:E7 Arg2:E6
+R2	Equivalent-To Arg1:E12 Arg2:E10
+R3	Caused-By Arg1:E14 Arg2:E15
+R4	If-Then Arg1:T86 Arg2:E38
+R5	If-Then Arg1:T87 Arg2:E4
+R6	Equivalent-To Arg1:E37 Arg2:E36

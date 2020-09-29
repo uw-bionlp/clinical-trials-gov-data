@@ -1,0 +1,20 @@
+E1	Condition:T1 Name:T6
+E3	Drug:T3 Name:T8
+E4	Procedure:T4 Name:T2 Duration:E5
+E5	Eq-Comparison:T5 Operator:T9 Value:T10 Temporal-Unit:T11
+E2	Modifier:T7 Modifies:T6
+T1	Condition 32 49	diabetes mellitus
+T3	Drug 53 62	metformin
+T4	Procedure 63 70	therapy
+T5	Eq-Comparison 75 92	at least 3 months
+T6	Condition-Name 32 49	diabetes mellitus
+T8	Drug-Name 53 62	metformin
+T9	Eq-Operator 75 83	at least
+T10	Eq-Value 84 85	3
+T11	Eq-Temporal-Unit 86 92	months
+T2	Procedure-Name 63 70	therapy
+T7	Modifier 25 31	Type 2
+A2	Eq-Operator-Value T9 GTEQ
+A3	Eq-Temporal-Unit-Value T11 month
+R1	Using Arg1:E4 Arg2:E3
+R2	Treatment-For Arg1:E4 Arg2:E1

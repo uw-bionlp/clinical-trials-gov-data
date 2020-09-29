@@ -1,0 +1,65 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Operator:T20 Temporal-Unit:T21 Value:T3
+E4	Encounter:T4 Location:T5
+E7	And:T7 Arg:E4 Arg2:E8
+E8	Procedure:T8 Name:T27 Duration:E9
+E9	Eq-Comparison:T9 Operator:T28 Value:T29 Temporal-Unit:T30
+E10	Modifier:T10 Modifies:T27
+E11	And:T11 Arg:E8 Arg2:E12
+E12	Condition:T12 Name:T23
+E13	Condition:T13 Name:T32
+E14	Condition:T14 Name:T33 Polarity:T25
+E15	Modifier:T15 Modifies:T26
+E17	Condition:T17 Name:T36
+E18	Modifier:T18 Modifies:T37
+E19	Condition:T19 Name:T37
+E3	And:T38 Arg:E1 Arg2:E4
+E5	Modifier:T6 Modifies:T27
+E6	Criteria-Count:T24 Criteria:E13 Criteria2:E14 Criteria3:E16 Criteria4:E17 Criteria5:E19
+E16	Condition:T16 Name:T26 Type:T31 Severity:T34
+T1	Age 25 28	Age
+T2	Eq-Comparison 29 38	≥18 years
+T4	Encounter 53 62	Admission
+T7	And 94 97	AND
+T8	Procedure 114 136	mechanical ventilation
+T9	Eq-Comparison 141 151	≥ 48 hours
+T10	Modifier 153 173	without interruption
+T11	And 176 179	AND
+T12	Condition 194 216	independent ambulatory
+T13	Condition 315 337	Cardiopulmonary arrest
+T14	Condition 355 376	intracranial pressure
+T15	Modifier 393 405	neurological
+T17	Condition 436 459	Subarachnoid hemorrhage
+T18	Modifier 470 478	Ischemic
+T19	Condition 479 485	stroke
+T20	Eq-Operator 29 30	≥
+T21	Eq-Temporal-Unit 33 38	years
+T22	Encounter-Type 53 62	Admission
+T27	Procedure-Name 114 136	mechanical ventilation
+T28	Eq-Operator 141 142	≥
+T29	Eq-Value 143 145	48
+T30	Eq-Temporal-Unit 146 151	hours
+T32	Condition-Name 315 337	Cardiopulmonary arrest
+T33	Condition-Name 355 376	intracranial pressure
+T34	Severity 387 392	Acute
+T36	Condition-Name 436 459	Subarachnoid hemorrhage
+T37	Condition-Name 479 485	stroke
+T3	Eq-Value 30 32	18
+T38	And 44 47	AND
+T5	Location 88 92	ICUs
+T6	Modifier 103 113	Continuous
+T23	Condition-Name 194 216	independent ambulatory
+T24	Criteria-Count 279 303	the following conditions
+T25	Polarity 348 354	Raised
+T16	Condition 416 425	diagnosis
+T26	Condition-Name 416 425	diagnosis
+T31	Condition-Type 406 415	admission
+A1	Eq-Operator-Value T20 GTEQ
+A2	Eq-Temporal-Unit-Value T21 year
+A3	Encounter-Type-Value T22 inpatient
+A5	Eq-Operator-Value T28 GTEQ
+A6	Eq-Temporal-Unit-Value T30 hour
+A7	Severity-Value T34 severe
+A4	Location-Value T5 unit
+A8	Polarity-Value T25 high
+A9	Condition-Type-Value T31 admitting

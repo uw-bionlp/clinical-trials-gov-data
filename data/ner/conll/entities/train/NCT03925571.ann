@@ -1,0 +1,137 @@
+E1	Procedure:T1 Name:T2
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Procedure:T13 Name:T14
+E15	Drug:T15 Name:T16
+E18	Age:T21 Eq-Comparison:E2
+E2	Eq-Comparison:T24 Operator:T25 Value:T22 Value2:T23 Temporal-Unit:T19
+E4	Assertion:T26 Asserted:E44
+E6	Procedure:T27 Name:T28
+E8	Procedure:T29 Name:T30
+E10	Or:T31 Arg:E6 Arg2:E8
+E12	Procedure:T32 Name:T33
+E14	Or:T34 Arg:E8 Arg2:E12
+E16	Procedure:T35 Name:T36
+E19	Or:T37 Arg:E1 Arg2:E16
+E3	Procedure:T3 Name:T6
+E5	Modifier:T4 Modifies:T6
+E7	Or:T5 Arg:E5 Arg2:E20
+E20	Modifier:T7 Modifies:T6
+E21	Drug:T8 Name:T20 Temporality:E41
+E22	Drug:T38 Name:T39
+E23	Or:T40 Arg:E21 Arg2:E22
+E24	Drug:T41 Name:T42
+E25	Drug:T43 Name:T44
+E26	Or:T45 Arg:E24 Arg2:E25
+E27	Drug:T46 Name:T47
+E28	Procedure:T48 Name:T49 Temporality:E40
+E29	Condition:T50 Name:T51
+E30	Condition:T52 Name:T53
+E31	Condition:T54 Name:T55
+E32	Modifier:T56 Modifies:T55
+E33	Modifier:T57 Modifies:T55
+E34	Or:T58 Arg:E33 Arg2:E32
+E35	Condition:T59 Name:T60
+E36	Condition:T61 Name:T62
+E37	Condition:T64 Name:T65
+E38	Or:T66 Arg2:E37 Arg:E36
+E17	Condition:T17 Name:T18
+E39	Condition:T68 Name:T69
+E40	Eq-Comparison:T70 Temporal-Period:T71
+E41	Eq-Comparison:T72 Temporal-Period:T73
+E42	Modifier:T74 Modifies:T2
+E43	Modifier:T75 Modifies:T2
+E44	Procedure:T76
+E45	Observation:T77 Name:T78
+T1	Procedure 218 225	surgery
+T2	Procedure-Name 218 225	surgery
+T6	Procedure-Name 318 338	placement of an unit
+T9	Condition 1172 1190	hepatic impairment
+T10	Condition-Name 1172 1190	hepatic impairment
+T11	Condition 819 833	claustrophobia
+T12	Condition-Name 819 833	claustrophobia
+T13	Procedure 888 898	hemostasis
+T14	Procedure-Name 888 898	hemostasis
+T15	Drug 668 676	cannabis
+T16	Drug-Name 668 676	cannabis
+T19	Eq-Temporal-Unit 55 60	years
+T21	Age 32 36	aged
+T22	Eq-Value 45 47	18
+T23	Eq-Value 52 54	55
+T24	Eq-Comparison 37 60	between 18 and 55 years
+T25	Eq-Operator 37 44	between
+T26	Assertion 172 179	Needing
+T27	Procedure 227 246	coronary elongation
+T28	Procedure-Name 227 246	coronary elongation
+T29	Procedure 250 268	sanitation surgery
+T30	Procedure-Name 250 268	sanitation surgery
+T31	Or 247 249	or
+T32	Procedure 272 293	muco-gingival surgery
+T33	Procedure-Name 272 293	muco-gingival surgery
+T34	Or 269 271	or
+T35	Procedure 298 316	implantary surgery
+T36	Procedure-Name 298 316	implantary surgery
+T37	Or 295 297	or
+T3	Procedure 318 338	placement of an unit
+T4	Modifier 339 346	implant
+T5	Or 347 349	or
+T7	Modifier 350 386	two implant in the same localization
+T8	Drug 607 617	anxiolytic
+T20	Drug-Name 607 617	anxiolytic
+T38	Drug 621 630	analgesic
+T39	Drug-Name 621 630	analgesic
+T40	Or 618 620	or
+T41	Drug 657 666	soft drug
+T42	Drug-Name 657 666	soft drug
+T43	Drug 681 690	hard drug
+T44	Drug-Name 681 690	hard drug
+T45	Or 678 680	or
+T46	Drug 692 698	opioid
+T47	Drug-Name 692 698	opioid
+T48	Procedure 738 748	psychiatry
+T49	Procedure-Name 738 748	psychiatry
+T50	Condition 750 761	mental harm
+T51	Condition-Name 750 761	mental harm
+T52	Condition 764 779	hearing problem
+T53	Condition-Name 764 779	hearing problem
+T54	Condition 807 817	impairment
+T55	Condition-Name 807 817	impairment
+T56	Modifier 795 806	behavioural
+T57	Modifier 781 790	cognitive
+T58	Or 791 794	and
+T59	Condition 836 856	sensory disabilities
+T60	Condition-Name 836 856	sensory disabilities
+T61	Condition 952 960	Pregnant
+T62	Condition-Name 952 960	Pregnant
+T63	Life-Stage-And-Gender 961 966	women
+T64	Condition 970 979	lactating
+T65	Condition-Name 970 979	lactating
+T66	Or 967 969	or
+T67	Life-Stage-And-Gender 986 992	Minors
+T17	Condition 1210 1219	dry mouth
+T18	Condition-Name 1210 1219	dry mouth
+T68	Condition 1245 1263	suboptimal hearing
+T69	Condition-Name 1245 1263	suboptimal hearing
+T70	Eq-Comparison 727 734	history
+T71	Eq-Temporal-Period 727 734	history
+T72	Eq-Comparison 597 603	taking
+T73	Eq-Temporal-Period 597 603	taking
+T74	Modifier 206 217	periodontal
+T75	Modifier 193 203	odontology
+T76	Procedure 180 189	treatment
+T77	Observation 999 1015	Protected person
+T78	Observation-Name 999 1015	Protected person
+A1	Eq-Temporal-Unit-Value T19 year
+A2	Eq-Operator-Value T25 BETWEEN
+A3	Assertion-Type-Value E4 hypothetical
+A4	Life-Stage-And-Gender-Type T63 female
+A5	Life-Stage-And-Gender-Type T67 child
+A6	Eq-Temporal-Period-Value T71 past
+A7	Eq-Temporal-Period-Value T73 present
+R1	Example-Of Arg1:E6 Arg2:E1
+R2	Example-Of Arg1:E8 Arg2:E1
+R3	Example-Of Arg1:E12 Arg2:E1
+R4	Example-Of Arg1:E15 Arg2:E24
+R5	Example-Of Arg1:E27 Arg2:E25
+R6	If-Then Arg1:T63 Arg2:E36
+R7	Using Arg1:E44 Arg2:E1

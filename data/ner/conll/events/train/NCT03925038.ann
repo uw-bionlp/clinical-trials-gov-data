@@ -1,0 +1,36 @@
+E1	Condition:T1 Name:T2
+E2	Eq-Comparison:T7 Operator:T4 Value:T5 Value2:T6 Temporal-Unit:T3
+E3	Age:T8 Eq-Comparison:E2
+E4	Modifier:T9 Modifies:T2
+E5	Modifier:T10 Modifies:T2
+E6	Or:T11 Arg:E5 Arg2:E4
+E7	Or:T14 Arg:T12 Arg2:T13
+E8	Provider:T15
+E9	Encounter:T16 Temporality:E10 Provider:E8 Location:T12
+E10	Eq-Comparison:T17 Temporal-Period:T18
+E11	Negation:T20 Negates:T19
+T1	Condition 97 105	disorder
+T2	Condition-Name 97 105	disorder
+T3	Eq-Temporal-Unit 46 51	years
+T4	Eq-Operator 41 42	-
+T5	Eq-Value 39 41	12
+T6	Eq-Value 42 45	100
+T7	Eq-Comparison 39 51	12-100 years
+T8	Age 34 38	ages
+T9	Modifier 89 96	anxiety
+T10	Modifier 81 85	mood
+T11	Or 86 88	or
+T12	Location 181 217	Johns Hopkins Bayview Medical Center
+T13	Location 224 246	Johns Hopkins Hospital
+T14	Or 218 220	or
+T15	Provider 163 173	psychiatry
+T16	Encounter 145 149	care
+T17	Eq-Comparison 135 144	receiving
+T18	Eq-Temporal-Period 135 144	receiving
+T19	Language 277 284	English
+T20	Negation 273 276	Non
+A1	Eq-Temporal-Unit-Value T3 year
+A2	Eq-Operator-Value T4 BETWEEN
+A3	Location-Value T12 hospital
+A4	Location-Value T13 hospital
+A5	Eq-Temporal-Period-Value T18 present

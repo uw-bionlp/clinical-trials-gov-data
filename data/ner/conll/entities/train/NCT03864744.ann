@@ -1,0 +1,145 @@
+E1	Eq-Comparison:T1 Temporal-Period:T38
+E2	Procedure:T2 Name:T39 Temporality:E1
+E3	Or:T3 Arg:E2 Arg2:E4
+E4	Procedure:T4 Name:T68 Temporality:E1
+E5	Temporal-Connection:T5
+E6	Study:T6 Study-Of:E7
+E7	Procedure:T7
+E8	Condition:T8 Name:T40
+E9	Temporal-Connection:T9 Arg:E8 Arg2:E10
+E10	Procedure:T10 Name:T41
+E11	Or:T11 Arg:E10 Arg2:E12
+E12	Procedure:T12 Name:T42
+E13	Exception:T13 Except:E14 From:E8
+E14	Condition:T14 Name:T69
+E15	Condition:T15 Name:T44 Severity:T43
+E16	Indication:T16 Indication-For:E17
+E17	Procedure:T17 Name:T45
+E18	Condition:T18 Name:T46
+E19	Condition:T19
+E20	Assertion:T20 Asserted:T47
+E21	Study:T21 Stability:T47
+E22	Procedure:T22 Name:T48
+E23	Temporal-Connection:T23 Arg:E41 Arg2:E24
+E24	Eq-Comparison:T24 Temporal-Recency:T74
+E25	Encounter:T25 Temporality:E24
+E26	Observation:T26 Name:T49 Eq-Comparison:E27
+E27	Eq-Comparison:T27 Operator:T50 Value:T51 Unit:T52
+E28	Observation:T28 Name:T53 Eq-Comparison:E29
+E29	Eq-Comparison:T29 Operator:T54 Value:T55 Unit:T56 Per:T57
+E30	Observation:T30 Name:T58
+E31	Eq-Comparison:T31 Operator:T59 Value:T60
+E32	Observation:T32 Name:T61 Eq-Comparison:E33
+E33	Eq-Comparison:T33 Operator:T62 Value:T63 Unit:T64 Value:T65 Per:T80
+E34	Modifier:T34 Modifies:T66
+E35	Condition:T35 Name:T66
+E36	Procedure:T36 Name:T67
+E37	Assertion:T37 Asserted:E36
+E38	Exception:T70 From:E15 Except:E16
+E39	Condition:T71 Name:T72
+E40	Modifier:T73 Modifies:T48
+E41	Procedure:T75 Name:T76
+E42	Assertion:T77 Asserted:E41
+E43	Procedure:T78 Name:T79
+E44	Modifier:T81 Modifies:T66 Modifies2:T67
+T1	Eq-Comparison 33 42	scheduled
+T2	Procedure 47 67	total pancreatectomy
+T3	Or 68 70	or
+T4	Procedure 71 94	pancreaticoduodenectomy
+T5	Temporal-Connection 124 132	prior to
+T6	Study 137 142	study
+T7	Procedure 151 160	procedure
+T8	Condition 192 205	liver disease
+T9	Temporal-Connection 206 212	before
+T10	Procedure 213 233	total pancreatectomy
+T11	Or 234 236	or
+T12	Procedure 237 260	pancreaticoduodenectomy
+T13	Exception 262 271	excluding
+T14	Condition 272 277	NAFLD
+T15	Condition 291 308	co-morbid disease
+T16	Indication 327 337	indication
+T17	Procedure 346 362	pancreas surgery
+T18	Condition 369 378	Pregnancy
+T19	Condition 388 397	condition
+T20	Assertion 426 431	would
+T21	Study 465 470	trial
+T22	Procedure 551 563	liver biopsy
+T23	Temporal-Connection 600 606	before
+T24	Eq-Comparison 607 611	last
+T25	Encounter 612 617	visit
+T26	Observation 654 667	lipid content
+T27	Eq-Comparison 668 671	<2%
+T28	Observation 677 688	Haemoglobin
+T29	Eq-Comparison 689 698	<6 mmol/L
+T30	Observation 704 707	INR
+T31	Eq-Comparison 708 712	>1.5
+T32	Observation 718 729	Trombocytes
+T33	Eq-Comparison 730 741	<40 × 109/L
+T34	Modifier 747 751	Skin
+T35	Condition 752 761	infection
+T36	Procedure 776 782	biopsy
+T37	Assertion 783 790	will be
+T38	Eq-Temporal-Period 33 42	scheduled
+T39	Procedure-Name 47 67	total pancreatectomy
+T40	Condition-Name 192 205	liver disease
+T41	Procedure-Name 213 233	total pancreatectomy
+T42	Procedure-Name 237 260	pancreaticoduodenectomy
+T43	Severity 284 290	Severe
+T44	Condition-Name 291 308	co-morbid disease
+T45	Procedure-Name 346 362	pancreas surgery
+T46	Condition-Name 369 378	Pregnancy
+T47	Stability 432 441	interfere
+T48	Procedure-Name 551 563	liver biopsy
+T49	Observation-Name 654 667	lipid content
+T50	Eq-Operator 668 669	<
+T51	Eq-Value 669 670	2
+T52	Eq-Unit 670 671	%
+T53	Observation-Name 677 688	Haemoglobin
+T54	Eq-Operator 689 690	<
+T55	Eq-Value 690 691	6
+T56	Eq-Unit 692 696	mmol
+T57	Eq-Unit 697 698	L
+T58	Observation-Name 704 707	INR
+T59	Eq-Operator 708 709	>
+T60	Eq-Value 709 712	1.5
+T61	Observation-Name 718 729	Trombocytes
+T62	Eq-Operator 730 731	<
+T63	Eq-Value 731 733	40
+T64	Eq-Unit 734 735	×
+T65	Eq-Value 736 739	109
+T66	Condition-Name 752 761	infection
+T67	Procedure-Name 776 782	biopsy
+T68	Procedure-Name 71 94	pancreaticoduodenectomy
+T69	Condition-Name 272 277	NAFLD
+T70	Exception 310 317	besides
+T71	Condition 519 537	Metastatic disease
+T72	Condition-Name 519 537	Metastatic disease
+T73	Modifier 538 550	Percutaneous
+T74	Eq-Temporal-Recency 607 611	last
+T75	Procedure 590 599	evaluated
+T76	Procedure-Name 590 599	evaluated
+T77	Assertion 584 589	to be
+T78	Procedure 624 639	MR spectroscopy
+T79	Procedure-Name 624 639	MR spectroscopy
+T80	Eq-Unit 740 741	L
+T81	Modifier 765 769	area
+A1	Temporal-Connection-Type-Value E5 before
+A2	Temporal-Connection-Type-Value E9 before
+A3	Assertion-Type-Value E20 hypothetical
+A4	Temporal-Connection-Type-Value E23 before
+A5	Assertion-Type-Value E37 hypothetical
+A6	Eq-Temporal-Period-Value T38 future
+A7	Severity-Value T43 severe
+A8	Stability-Value T47 change
+A9	Observation-Type-Value T49 lab
+A10	Eq-Operator-Value T50 LT
+A11	Observation-Type-Value T53 lab
+A12	Eq-Operator-Value T54 LT
+A13	Observation-Type-Value T58 lab
+A14	Eq-Operator-Value T59 GT
+A15	Observation-Type-Value T61 lab
+A16	Eq-Operator-Value T62 LT
+A17	Eq-Temporal-Recency-Value T74 most-recent-time
+A18	Assertion-Type-Value E42 hypothetical
+R1	Caused-By Arg1:T47 Arg2:E19
+R2	Found-By Arg1:E26 Arg2:E43

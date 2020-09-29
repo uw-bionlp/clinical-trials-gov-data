@@ -1,0 +1,32 @@
+E1	Eq-Comparison:T3 Operator:T4 Temporal-Unit:T1 Value:T2
+E2	Age:T5 Eq-Comparison:E1
+E3	Encounter:T6 Type:T7
+E4	And:T8 Arg:E2 Arg2:E3
+E5	Study:T9
+E6	Assertion:T10 Asserted:E5
+E8	Modifier:T13 Modifies:T12
+E9	Modifier:T14 Modifies:T12
+E10	Or:T15 Arg:E9 Arg2:E8
+E7	Condition:T11 Name:T12
+E11	Observation:T16 Name:T17
+T1	Eq-Temporal-Unit 49 54	years
+T2	Eq-Value 46 48	14
+T3	Eq-Comparison 35 54	older than 14 years
+T4	Eq-Operator 35 45	older than
+T5	Age 49 54	years
+T6	Encounter 59 67	admitted
+T7	Encounter-Type 75 77	ED
+T8	And 55 58	and
+T9	Study 102 107	study
+T10	Assertion 84 96	eligible for
+T13	Modifier 150 159	obstetric
+T14	Modifier 134 145	Gynecologic
+T15	Or 146 149	and
+T11	Condition 160 171	emergencies
+T12	Condition-Name 160 171	emergencies
+T16	Observation 191 218	left against medical advice
+T17	Observation-Name 191 218	left against medical advice
+A1	Eq-Temporal-Unit-Value T1 year
+A2	Eq-Operator-Value T4 GT
+A3	Encounter-Type-Value T7 emergency
+A4	Assertion-Type-Value E6 hypothetical

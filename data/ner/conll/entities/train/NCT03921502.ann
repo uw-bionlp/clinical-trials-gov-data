@@ -1,0 +1,269 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Procedure:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18 Temporality:E78
+E19	Procedure:T19 Name:T20
+E21	Condition:T21 Name:T22
+E23	Observation:T23 Name:T24
+E25	Condition:T25 Name:T26
+E27	Condition:T27 Name:T28
+E29	Condition:T29 Name:T30
+E31	Procedure:T31 Name:T32
+E33	Procedure:T33 Name:T34
+E35	Eq-Comparison:T57 Operator:T35 Temporal-Unit:T43 Value:T49
+E36	Eq-Comparison:T58 Operator:T36 Value:T50
+E37	Eq-Comparison:T59 Operator:T37 Value:T51
+E38	Eq-Comparison:T60 Operator:T38 Value:T52 Unit:T45
+E39	Eq-Comparison:T61 Operator:T39 Unit:T46 Value:T53
+E40	Eq-Comparison:T62 Operator:T41 Temporal-Unit:T44 Value:T55
+E41	Eq-Comparison:T63 Operator:T42 Value:T56
+E2	Procedure:T64 Name:T65
+E4	Assertion:T66 Asserted:E5 Polarity:T70
+E6	Or:T67 Arg:E9 Arg2:E1
+E8	Assertion:T68 Asserted:E7 Polarity:T69
+E10	Age:T71
+E12	Negation:T72 Negates:E11
+E14	Condition:T73
+E16	Age:T74 Eq-Comparison:E35
+E18	Observation:T75 Name:T76 Eq-Comparison:E36
+E20	Modifier:T48 Modifies:E18
+E22	Procedure:T77 Name:T78 Temporality:E80
+E24	Or:T79 Arg:E15 Arg2:E13
+E26	Procedure:T80 Name:T81
+E28	Condition:T82 Name:T83 Temporality:E79
+E30	Or:T84 Arg:E26 Arg2:E28
+E32	Negation:T85 Negates:E19
+E34	Assertion:T86 Asserted:E32
+E42	Condition:T87 Name:T88
+E43	Procedure:T89 Name:T90
+E44	Contraindication:T91 Contraindicates:E43
+E45	And:T92 Arg:E21 Arg2:E23
+E46	Observation:T93 Name:T94 Eq-Comparison:E37
+E47	Condition:T95 Name:T96
+E48	Encounter:T97 Type:T98
+E49	Condition:T99 Type:T141
+E50	Temporal-Connection:T100 Arg:E49 Arg2:E48
+E51	Condition:T101 Name:T102
+E52	Assertion:T103 Asserted:E33
+E53	Condition:T104 Name:T105
+E54	Negation:T106 Negates:E53
+E55	Observation:T107 Name:T108
+E56	Or:T109 Arg:E14 Arg2:E55
+E57	Condition:T110 Name:T111
+E58	Modifier:T112 Modifies:T111
+E59	Modifier:T113 Modifies:T111
+E60	Modifier:T114 Modifies:T111
+E61	And:T115 Arg:E58 Arg2:E59
+E62	Or:T116 Arg:E59 Arg2:E60
+E63	Observation:T117 Name:T118 Eq-Comparison:E39
+E64	Observation:T119 Name:T120
+E65	Observation:T121 Name:T122 Eq-Comparison:E66
+E66	Eq-Comparison:T123 Operator:T40 Value:T54
+E67	Observation:T124 Name:T125 Eq-Comparison:E40
+E68	Observation:T126 Name:T127 Eq-Comparison:E41
+E69	Modifier:T128 Modifies:T127
+E70	Modifier:T129 Modifies:T127
+E71	And:T130 Arg:E69 Arg2:E70
+E72	Condition:T131 Name:T132
+E73	Observation:T133 Name:T134
+E74	Negation:T135 Negates:E73
+E75	Condition:T136 Name:T137
+E76	Condition:T138 Name:T139
+E77	Or:T140 Arg:E2 Arg2:E4
+E78	Eq-Comparison:T142 Temporal-Period:T143
+E79	Eq-Comparison:T144 Temporal-Period:T145
+E80	Eq-Comparison:T146 Temporal-Period:T147
+E81	Negation:T148 Negates:E76
+T1	Condition 165 185	obstructive jaundice
+T2	Condition-Name 165 185	obstructive jaundice
+T3	Condition 25 56	Symptomatic choledocholithiasis
+T4	Condition-Name 25 56	Symptomatic choledocholithiasis
+T5	Condition 58 77	choledocholithiasis
+T6	Condition-Name 58 77	choledocholithiasis
+T7	Condition 260 279	choledocholithiasis
+T8	Condition-Name 260 279	choledocholithiasis
+T9	Condition 144 161	acute cholangitis
+T10	Condition-Name 144 161	acute cholangitis
+T11	Procedure 352 370	surgical treatment
+T12	Procedure-Name 352 370	surgical treatment
+T13	Condition 584 607	lithiasic cholecystitis
+T14	Condition-Name 584 607	lithiasic cholecystitis
+T15	Condition 568 580	pancreatitis
+T16	Condition-Name 568 580	pancreatitis
+T17	Condition 555 566	cholangitis
+T18	Condition-Name 555 566	cholangitis
+T19	Procedure 715 736	sedation of endoscopy
+T20	Procedure-Name 715 736	sedation of endoscopy
+T21	Condition 818 830	Coagulopathy
+T22	Condition-Name 818 830	Coagulopathy
+T23	Observation 836 839	INR
+T24	Observation-Name 836 839	INR
+T25	Condition 980 999	acute cholecystitis
+T26	Condition-Name 980 999	acute cholecystitis
+T27	Condition 1001 1019	acute pancreatitis
+T28	Condition-Name 1001 1019	acute pancreatitis
+T29	Condition 1054 1077	Hemodynamic instability
+T30	Condition-Name 1054 1077	Hemodynamic instability
+T31	Procedure 1084 1100	Urgent procedure
+T32	Procedure-Name 1084 1100	Urgent procedure
+T33	Procedure 1234 1250	biliary drainage
+T34	Procedure-Name 1234 1250	biliary drainage
+T35	Eq-Operator 430 431	>
+T36	Eq-Operator 508 509	<
+T37	Eq-Operator 873 874	>
+T38	Eq-Operator 915 916	<
+T39	Eq-Operator 1351 1352	<
+T40	Eq-Operator 1417 1420	> =
+T41	Eq-Operator 1451 1452	<
+T42	Eq-Operator 1554 1555	>
+T43	Eq-Temporal-Unit 434 439	years
+T44	Eq-Temporal-Unit 1454 1460	months
+T45	Eq-Unit 924 927	mm3
+T46	Eq-Unit 1355 1357	mm
+T47	Eq-Unit 1557 1559	cm
+T49	Eq-Value 431 433	75
+T50	Eq-Value 509 510	4
+T51	Eq-Value 875 878	1.5
+T52	Eq-Value 916 921	50000
+T53	Eq-Value 1352 1354	10
+T54	Eq-Value 1421 1422	4
+T55	Eq-Value 1452 1453	6
+T56	Eq-Value 1556 1557	1
+T57	Eq-Comparison 430 439	>75 years
+T58	Eq-Comparison 508 510	<4
+T59	Eq-Comparison 873 878	> 1.5
+T60	Eq-Comparison 915 927	<50000 / mm3
+T61	Eq-Comparison 1351 1357	<10 mm
+T62	Eq-Comparison 1451 1460	<6 months
+T63	Eq-Comparison 1554 1557	> 1
+T64	Procedure 91 105	radiologically
+T65	Procedure-Name 91 105	radiologically
+T66	Assertion 116 125	suspected
+T67	Or 162 164	or
+T68	Assertion 245 256	probability
+T69	Polarity 240 244	high
+T70	Polarity 109 115	highly
+T71	Age 378 381	age
+T72	Negation 338 347	Discarded
+T73	Condition 383 394	comorbidity
+T74	Age 427 430	Age
+T75	Observation 465 491	Charlson comorbidity scale
+T76	Observation-Name 465 491	Charlson comorbidity scale
+T48	Modifier 492 507	adjusted to age
+T77	Procedure 523 527	ERCP
+T78	Procedure-Name 523 527	ERCP
+T79	Or 581 583	or
+T80	Procedure 614 635	Hepatobiliary surgery
+T81	Procedure-Name 614 635	Hepatobiliary surgery
+T82	Condition 648 672	superior digestive tract
+T83	Condition-Name 648 672	superior digestive tract
+T84	Or 636 638	or
+T85	Negation 693 702	Inability
+T86	Assertion 706 714	tolerate
+T87	Condition 738 772	perforation of the digestive tract
+T88	Condition-Name 738 772	perforation of the digestive tract
+T89	Procedure 802 811	endoscopy
+T90	Procedure-Name 802 811	endoscopy
+T91	Contraindication 782 798	contraindication
+T92	And 831 835	with
+T93	Observation 841 871	international normalized ratio
+T94	Observation-Name 841 871	international normalized ratio
+T95	Condition 898 914	thrombocytopenia
+T96	Condition-Name 898 914	thrombocytopenia
+T97	Encounter 969 978	admission
+T98	Encounter-Type 969 978	admission
+T99	Condition 956 965	diagnoses
+T100	Temporal-Connection 966 968	at
+T101	Condition 1021 1046	biliopancreatic neoplasia
+T102	Condition-Name 1021 1046	biliopancreatic neoplasia
+T103	Assertion 1206 1219	impossibility
+T104	Condition 1263 1283	vesicular distension
+T105	Condition-Name 1263 1283	vesicular distension
+T106	Negation 1252 1259	absence
+T107	Observation 398 405	refusal
+T108	Observation-Name 398 405	refusal
+T109	Or 395 397	or
+T110	Condition 1285 1292	contact
+T111	Condition-Name 1285 1292	contact
+T112	Modifier 1301 1312	gallbladder
+T113	Modifier 1317 1324	stomach
+T114	Modifier 1328 1336	duodenum
+T115	And 1313 1316	and
+T116	Or 1325 1327	or
+T117	Observation 1338 1350	contact area
+T118	Observation-Name 1338 1350	contact area
+T119	Observation 1374 1378	ECOG
+T120	Observation-Name 1374 1378	ECOG
+T121	Observation 1380 1415	Easthern Cooperative Oncology Group
+T122	Observation-Name 1380 1415	Easthern Cooperative Oncology Group
+T123	Eq-Comparison 1417 1422	> = 4
+T124	Observation 1428 1450	Expectancy of survival
+T125	Observation-Name 1428 1450	Expectancy of survival
+T126	Observation 1496 1504	Distance
+T127	Observation-Name 1496 1504	Distance
+T128	Modifier 1517 1528	gallbladder
+T129	Modifier 1533 1554	upper digestive tract
+T130	And 1529 1532	and
+T131	Condition 1561 1583	scleroatrophic vesicle
+T132	Condition-Name 1561 1583	scleroatrophic vesicle
+T133	Observation 1593 1628	stable acoustic window for drainage
+T134	Observation-Name 1593 1628	stable acoustic window for drainage
+T135	Negation 1585 1592	lack of
+T136	Condition 1634 1638	ERCP
+T137	Condition-Name 1634 1638	ERCP
+T138	Condition 1661 1682	dain common bile duct
+T139	Condition-Name 1661 1682	dain common bile duct
+T140	Or 106 108	or
+T141	Condition-Type 969 978	admission
+T142	Eq-Comparison 534 542	Previous
+T143	Eq-Temporal-Period 534 542	Previous
+T144	Eq-Comparison 639 647	previous
+T145	Eq-Temporal-Period 639 647	previous
+T146	Eq-Comparison 517 522	Prior
+T147	Eq-Temporal-Period 517 522	Prior
+T148	Negation 1647 1657	inhability
+A1	Eq-Operator-Value T35 GT
+A2	Eq-Operator-Value T36 LT
+A3	Eq-Operator-Value T37 GT
+A4	Eq-Operator-Value T38 LT
+A5	Eq-Operator-Value T39 LT
+A6	Eq-Operator-Value T40 GTEQ
+A7	Eq-Operator-Value T41 LT
+A8	Eq-Operator-Value T42 GT
+A9	Eq-Temporal-Unit-Value T43 year
+A10	Eq-Temporal-Unit-Value T44 month
+A11	Assertion-Type-Value E4 possible
+A12	Assertion-Type-Value E8 possible
+A13	Polarity-Value T69 high
+A14	Polarity-Value T70 high
+A15	Observation-Type-Value T76 clinical-score
+A16	Assertion-Type-Value E34 hypothetical
+A17	Observation-Type-Value T24 lab
+A18	Observation-Type-Value T94 lab
+A19	Encounter-Type-Value T98 inpatient
+A20	Temporal-Connection-Type-Value E50 during
+A21	Assertion-Type-Value E52 hypothetical
+A22	Condition-Type-Value T141 admitting
+A23	Eq-Temporal-Period-Value T143 past
+A24	Eq-Temporal-Period-Value T145 past
+A25	Eq-Temporal-Period-Value T147 past
+A26	Observation-Type-Value T118 measurement
+R1	Found-By Arg1:E5 Arg2:E2
+R2	Equivalent-To Arg1:E5 Arg2:E3
+R3	Caused-By Arg1:E12 Arg2:E10
+R4	Example-Of Arg1:E42 Arg2:E44
+R5	Example-Of Arg1:E32 Arg2:E44
+R6	Abbrev-Of Arg1:E23 Arg2:E46
+R7	Example-Of Arg1:E25 Arg2:E49
+R8	Example-Of Arg1:E27 Arg2:E49
+R9	Example-Of Arg1:E51 Arg2:E49
+R10	Example-Of Arg1:E57 Arg2:E33
+R11	Example-Of Arg1:E53 Arg2:E33
+R12	Example-Of Arg1:E63 Arg2:E33
+R13	Abbrev-Of Arg1:E64 Arg2:E65
+R14	Equivalent-To Arg1:E81 Arg2:E75

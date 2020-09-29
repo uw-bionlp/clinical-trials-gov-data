@@ -1,0 +1,52 @@
+E1	Procedure:T1 Name:T2 Duration:E8
+E2	Age:T7 Eq-Comparison:E5
+E3	Eq-Comparison:T12 Operator:T3 Value:T9 Temporal-Unit:T16
+E4	Eq-Comparison:T13 Operator:T4 Temporal-Unit:T6 Value:T11
+E5	Eq-Comparison:T14 Value:T8 Operator:T15
+E6	Eq-Comparison:T17 Temporal-Period:T18
+E7	Encounter:T19 Type:T20 Temporality:E3
+E8	Eq-Comparison:T21 Operator:T22 Temporal-Unit:T5 Value:T10
+E9	Procedure:T23 Name:T24
+E10	Negation:T25 Negates:E9
+E11	Encounter:T26 Type:T27 Duration:E4
+E12	And:T28 Arg:E2 Arg2:E7
+T1	Procedure 100 122	mechanical ventilation
+T2	Procedure-Name 100 122	mechanical ventilation
+T3	Eq-Operator 74 75	<
+T4	Eq-Operator 268 277	less than
+T5	Eq-Temporal-Unit 138 142	days
+T6	Eq-Temporal-Unit 280 284	days
+T7	Age 38 42	aged
+T8	Eq-Value 43 45	18
+T9	Eq-Value 75 77	48
+T10	Eq-Value 136 137	3
+T11	Eq-Value 278 279	3
+T12	Eq-Comparison 74 78	<48h
+T13	Eq-Comparison 268 284	less than 3 days
+T14	Eq-Comparison 43 54	18 or older
+T15	Eq-Operator 46 54	or older
+T16	Eq-Temporal-Unit 77 78	h
+T17	Eq-Comparison 66 72	recent
+T18	Eq-Temporal-Period 66 72	recent
+T19	Encounter 80 89	ICU entry
+T20	Encounter-Type 80 89	ICU entry
+T21	Eq-Comparison 127 142	at least 3 days
+T22	Eq-Operator 127 135	at least
+T23	Procedure 205 214	intubated
+T24	Procedure-Name 205 214	intubated
+T25	Negation 201 204	not
+T26	Encounter 246 267	ICU prevision of stay
+T27	Encounter-Type 246 267	ICU prevision of stay
+T28	And 55 58	and
+A1	Eq-Operator-Value T3 LT
+A2	Eq-Operator-Value T4 LT
+A3	Eq-Temporal-Unit-Value T5 day
+A4	Eq-Temporal-Unit-Value T6 day
+A5	Eq-Operator-Value T15 GTEQ
+A6	Eq-Temporal-Unit-Value T16 hour
+A7	Eq-Temporal-Period-Value T18 recent
+A8	Encounter-Type-Value T20 icu
+A9	Eq-Operator-Value T22 GTEQ
+A10	Encounter-Type-Value T27 icu
+R1	Equivalent-To Arg1:E3 Arg2:E6
+R2	Using Arg1:E7 Arg2:E1

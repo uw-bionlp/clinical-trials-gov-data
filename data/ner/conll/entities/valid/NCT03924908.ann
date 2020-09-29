@@ -1,0 +1,46 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E2	Condition:T8 Name:T9
+E4	Encounter:T10 Type:T11
+E5	Procedure:T12
+E6	Temporal-Connection:T13 Arg:E5 Arg2:E4
+E7	Observation:T14 Name:T15 Eq-Comparison:E8
+E8	Eq-Comparison:T16 Operator:T5 Value:T6 Unit:T17
+E9	Condition:T7 Name:T18
+E10	Condition:T19 Name:T20
+E11	Condition:T21 Name:T22
+E12	Condition:T23 Name:T24
+E13	Condition:T25 Name:T26
+E14	Modifier:T27 Modifies:T26
+T1	Condition 245 262	Visual impairment
+T2	Condition-Name 245 262	Visual impairment
+T3	Condition 283 297	Conjunctivitis
+T4	Condition-Name 283 297	Conjunctivitis
+T5	Eq-Operator 83 89	> or =
+T6	Eq-Value 90 91	5
+T8	Condition 25 29	Burn
+T9	Condition-Name 25 29	Burn
+T10	Encounter 49 59	outpatient
+T11	Encounter-Type 49 59	outpatient
+T12	Procedure 38 45	treated
+T13	Temporal-Connection 46 48	as
+T14	Observation 65 82	Burn surface area
+T15	Observation-Name 65 82	Burn surface area
+T16	Eq-Comparison 83 92	> or = 5%
+T17	Eq-Unit 91 92	%
+T7	Condition 136 151	2nd degree burn
+T18	Condition-Name 136 151	2nd degree burn
+T19	Condition 177 200	Psychiatric antecedents
+T20	Condition-Name 177 200	Psychiatric antecedents
+T21	Condition 206 220	Claustrophobia
+T22	Condition-Name 206 220	Claustrophobia
+T23	Condition 226 239	Heavy hearing
+T24	Condition-Name 226 239	Heavy hearing
+T25	Condition 273 277	burn
+T26	Condition-Name 273 277	burn
+T27	Modifier 268 272	Face
+A1	Eq-Operator-Value T5 GTEQ
+A2	Encounter-Type-Value T11 outpatient
+A3	Temporal-Connection-Type-Value E6 during
+A4	Observation-Type-Value T15 measurement
+R1	Treatment-For Arg1:E5 Arg2:E2

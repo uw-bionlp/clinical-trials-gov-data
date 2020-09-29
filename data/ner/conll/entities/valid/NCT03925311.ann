@@ -1,0 +1,41 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E4	Eq-Comparison:T9 Operator:T6 Value:T7 Value2:T8 Temporal-Unit:T5
+E2	Age:T10 Eq-Comparison:E4
+E5	Condition:T11 Name:T12
+E6	Modifier:T13 Modifies:T12
+E7	Condition:T14 Name:T15
+E8	Modifier:T16 Modifies:T15
+E9	Modifier:T17 Modifies:T15
+E10	Or:T18 Arg:E9 Arg2:E8
+E11	Condition:T19 Name:T20
+E12	Modifier:T21 Modifies:T20
+E13	Modifier:T22 Modifies:T20
+E14	Or:T23 Arg:E12 Arg2:E13
+T1	Condition 169 191	Intrauterine adhesions
+T2	Condition-Name 169 191	Intrauterine adhesions
+T3	Condition 198 209	Adenomyosis
+T4	Condition-Name 198 209	Adenomyosis
+T5	Eq-Temporal-Unit 30 35	years
+T6	Eq-Operator 26 27	-
+T7	Eq-Value 24 26	20
+T8	Eq-Value 27 29	40
+T9	Eq-Comparison 24 35	20-40 years
+T10	Age 20 23	Age
+T11	Condition 82 91	anomalies
+T12	Condition-Name 82 91	anomalies
+T13	Modifier 62 81	Uncorrected uterine
+T14	Condition 123 129	uterus
+T15	Condition-Name 123 129	uterus
+T16	Modifier 112 122	bicornuate
+T17	Modifier 101 108	septate
+T18	Or 109 111	or
+T19	Condition 131 139	fibroids
+T20	Condition-Name 131 139	fibroids
+T21	Modifier 141 150	submucous
+T22	Modifier 151 161	intramural
+T23	Or 150 151	/
+A1	Eq-Temporal-Unit-Value T5 year
+A2	Eq-Operator-Value T6 BETWEEN
+R1	Example-Of Arg1:E7 Arg2:E5
+R2	Example-Of Arg1:E11 Arg2:E5

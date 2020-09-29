@@ -1,0 +1,283 @@
+E2	Condition:T2 Name:T3
+E4	Condition:T4 Name:T5
+E6	Condition:T6 Name:T7 Severity:T153
+E8	Condition:T8 Name:T9
+E10	Condition:T10 Name:T11
+E12	Condition:T12 Name:T13
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17 Severity:T88 Severity2:T87
+E18	Condition:T18 Name:T19
+E21	Procedure:T21 Name:T22
+E23	Observation:T23 Name:T24 Eq-Comparison:E32
+E26	Condition:T26 Name:T27 Temporality:E71 Temporality2:E73
+E28	Condition:T28 Name:T29 Temporality:E54
+E29	Eq-Comparison:T54 Operator:T30 Value:T43 Unit:T131 Per:T132 Unit2:T133
+E30	Eq-Comparison:T55 Operator:T31 Value:T44 Unit:T134 Per:T135
+E31	Eq-Comparison:T56 Operator:T32 Value:T45 Temporal-Unit:T64
+E32	Eq-Comparison:T57 Operator:T33 Value:T46
+E33	Eq-Comparison:T58 Operator:T34 Value:T47 Temporal-Unit:T38
+E34	Eq-Comparison:T59 Operator:T35 Value:T49
+E35	Eq-Comparison:T60 Operator:T36 Value:T50
+E3	Encounter:T65 Type:T66
+E5	Modifier:T67 Modifies:E2
+E11	Condition:T70 Name:T71
+E13	Condition:T72 Name:T73
+E15	Procedure:T74 Name:T75 Temporality:E61 Temporality2:E33
+E17	Condition:T76 Name:T77 Stage:E62
+E19	Or:T78 Arg:E13 Arg2:E15
+E20	Or:T79 Arg:E17 Arg2:E22
+E22	Procedure:T80 Name:T81 Temporality:E65
+E24	Condition:T82 Name:T83
+E27	Encounter:T85 Type:T86
+E36	Or:T89 Arg:T87 Arg2:T88
+E37	Procedure:T90 Name:T91
+E38	Risk:T92 Polarity:T84 Risk-For:E18
+E39	Procedure:T93 Name:T94
+E40	Procedure:T95 Name:T96
+E42	Drug:T98 Name:T99
+E43	Procedure:T100 Temporality:E41
+E45	Procedure:T103 Temporality:E44
+E46	Drug:T105 Name:T106
+E47	Drug:T107 Name:T108
+E48	Drug:T109 Name:T110
+E49	Exception:T111 From:E10 Except:E50
+E50	Condition:T112 Name:T113
+E51	Condition:T114 Name:T115
+E52	Condition:T116 Name:T117
+E53	Exception:T118 From:E51 Except:E52
+E55	Condition:T120 Name:T121 Duration:E56
+E56	Eq-Comparison:T122 Operator:T123 Temporal-Unit:T125 Value:T124
+E57	Eq-Comparison:T126 Temporal-Period:T127
+E58	Eq-Comparison:T128 Temporal-Period:T129
+E59	Or:T130 Arg:E57 Arg2:E58
+E1	Drug:T61 Name:T62 Temporality:E57 Temporality2:E58 Minimum-Count:E29 Minimum-Count2:E30 Duration:E31
+E7	And:T68 Arg:E3 Arg2:E2
+E9	Drug:T69 Name:T136
+E60	And:T137 Arg:E11 Arg2:E13
+E61	Eq-Comparison:T138 Temporal-Recency:T139
+E62	Eq-Comparison:T140 Operator:T141 Value:T142
+E63	And:T143 Arg:E15 Arg2:E17
+E64	Modifier:T144 Modifies:T77
+E65	Eq-Comparison:T145 Operator:T146 Value:T48 Temporal-Unit:T39
+E66	And:T147 Arg:E22 Arg2:E24
+E67	Observation:T148 Name:T149 Eq-Comparison:E34
+E25	Assertion:T150 Asserted:E40
+E68	Observation:T151 Name:T152 Eq-Comparison:E35
+E41	Eq-Comparison:T25 Value:T51 Temporal-Unit:T40 Temporal-Period:T97
+E44	Eq-Comparison:T101 Operator:T37 Temporal-Period:T102 Value:T52 Temporal-Unit:T41
+E69	Or:T104 Arg:E47 Arg2:E48
+E54	Eq-Comparison:T119 Temporal-Period:T154
+E70	Negation:T155 Negates:E55
+E71	Eq-Comparison:T156 Temporal-Period:T157
+E72	Modifier:T158 Modifies:T27
+E73	Eq-Comparison:T159 Temporal-Period:T160 Value:T53 Temporal-Unit:T42
+T2	Condition 222 235	liver disease
+T3	Condition-Name 222 235	liver disease
+T4	Condition 853 877	Irritable bowel syndrome
+T5	Condition-Name 853 877	Irritable bowel syndrome
+T6	Condition 1221 1233	malnutrition
+T7	Condition-Name 1221 1233	malnutrition
+T8	Condition 832 847	Coeliac disease
+T9	Condition-Name 832 847	Coeliac disease
+T10	Condition 1156 1169	liver disease
+T11	Condition-Name 1156 1169	liver disease
+T12	Condition 807 826	Lactose intolerance
+T13	Condition-Name 807 826	Lactose intolerance
+T14	Condition 1135 1144	Pregnancy
+T15	Condition-Name 1135 1144	Pregnancy
+T16	Condition 642 649	Ascites
+T17	Condition-Name 642 649	Ascites
+T18	Condition 702 709	varices
+T19	Condition-Name 702 709	varices
+T20	Language 527 533	Danish
+T21	Procedure 755 759	TIPS
+T22	Procedure-Name 755 759	TIPS
+T23	Observation 305 308	kPa
+T24	Observation-Name 305 308	kPa
+T26	Condition 1405 1420	gastroenteritis
+T27	Condition-Name 1405 1420	gastroenteritis
+T28	Condition 1315 1332	malignant disease
+T29	Condition-Name 1315 1332	malignant disease
+T30	Eq-Operator 90 91	≥
+T31	Eq-Operator 121 122	≥
+T32	Eq-Operator 140 141	≥
+T33	Eq-Operator 301 302	≥
+T34	Eq-Operator 366 367	<
+T35	Eq-Operator 488 489	≥
+T36	Eq-Operator 798 799	≥
+T37	Eq-Operator 1017 1023	within
+T38	Eq-Temporal-Unit 368 374	months
+T39	Eq-Temporal-Unit 460 466	months
+T40	Eq-Temporal-Unit 945 951	months
+T41	Eq-Temporal-Unit 1035 1041	months
+T42	Eq-Temporal-Unit 1437 1442	weeks
+T43	Eq-Value 91 93	24
+T44	Eq-Value 122 124	36
+T45	Eq-Value 142 143	5
+T46	Eq-Value 302 304	15
+T47	Eq-Value 367 368	6
+T48	Eq-Value 458 459	6
+T49	Eq-Value 489 491	10
+T50	Eq-Value 799 801	15
+T51	Eq-Value 943 944	3
+T52	Eq-Value 1033 1034	3
+T53	Eq-Value 1435 1436	6
+T54	Eq-Comparison 90 106	≥24g alcohol/day
+T55	Eq-Comparison 121 127	≥36g/d
+T56	Eq-Comparison 140 148	≥ 5 year
+T57	Eq-Comparison 301 304	≥15
+T58	Eq-Comparison 366 368	<6
+T59	Eq-Comparison 488 491	≥10
+T60	Eq-Comparison 798 801	≥15
+T63	Life-Stage-And-Gender 111 116	women
+T1	Life-Stage-And-Gender 132 135	men
+T64	Eq-Temporal-Unit 144 148	year
+T65	Encounter 160 171	Outpatients
+T66	Encounter-Type 160 171	Outpatients
+T67	Modifier 177 205	compensated advanced chronic
+T70	Condition 285 300	liver stiffness
+T71	Condition-Name 285 300	liver stiffness
+T72	Condition 313 325	asymptomatic
+T73	Condition-Name 313 325	asymptomatic
+T74	Procedure 352 364	liver biopsy
+T75	Procedure-Name 352 364	liver biopsy
+T76	Condition 393 401	fibrosis
+T77	Condition-Name 393 401	fibrosis
+T78	Or 326 332	and/or
+T79	Or 412 418	and/or
+T80	Procedure 434 446	Liver biopsy
+T81	Procedure-Name 434 446	Liver biopsy
+T82	Condition 472 487	liver stiffness
+T83	Condition-Name 472 487	liver stiffness
+T85	Encounter 605 617	Hospitalised
+T86	Encounter-Type 605 617	Hospitalised
+T87	Severity 623 631	Moderete
+T88	Severity 635 641	severe
+T89	Or 632 634	or
+T90	Procedure 667 686	imaging diagnostics
+T91	Procedure-Name 667 686	imaging diagnostics
+T92	Risk 697 701	risk
+T93	Procedure 744 753	endoscopy
+T94	Procedure-Name 744 753	endoscopy
+T95	Procedure 718 742	interventional treatment
+T96	Procedure-Name 718 742	interventional treatment
+T98	Drug 912 922	Antibiotic
+T99	Drug-Name 912 922	Antibiotic
+T100	Procedure 923 932	treatment
+T103	Procedure 957 966	Treatment
+T105	Drug 972 990	nutritional drinks
+T106	Drug-Name 972 990	nutritional drinks
+T107	Drug 992 1002	probiotics
+T108	Drug-Name 992 1002	probiotics
+T109	Drug 1006 1016	prebiotics
+T110	Drug-Name 1006 1016	prebiotics
+T111	Exception 1170 1175	other
+T112	Condition 1181 1190	alcoholic
+T113	Condition-Name 1181 1190	alcoholic
+T114	Condition 1239 1249	Malignancy
+T115	Condition-Name 1239 1249	Malignancy
+T116	Condition 1259 1293	spino- or basocellular skin cancer
+T117	Condition-Name 1259 1293	spino- or basocellular skin cancer
+T118	Exception 1252 1258	except
+T120	Condition 1348 1354	cancer
+T121	Condition-Name 1348 1354	cancer
+T122	Eq-Comparison 1364 1381	at least one year
+T123	Eq-Operator 1364 1372	at least
+T124	Eq-Value 1373 1376	one
+T125	Eq-Temporal-Unit 1377 1381	year
+T126	Eq-Comparison 25 30	Prior
+T127	Eq-Temporal-Period 25 30	Prior
+T128	Eq-Comparison 34 41	ongoing
+T129	Eq-Temporal-Period 34 41	ongoing
+T130	Or 31 33	or
+T61	Drug 50 57	alcohol
+T62	Drug-Name 50 57	alcohol
+T131	Eq-Unit 93 94	g
+T132	Eq-Temporal-Unit 103 106	day
+T133	Eq-Unit 95 102	alcohol
+T134	Eq-Unit 124 125	g
+T135	Eq-Temporal-Unit 126 127	d
+T68	And 172 176	with
+T69	Drug 206 213	alcohol
+T136	Drug-Name 206 213	alcohol
+T137	And 309 312	and
+T138	Eq-Comparison 348 351	New
+T139	Eq-Temporal-Recency 348 351	New
+T140	Eq-Comparison 381 392	at least F3
+T141	Eq-Operator 381 389	at least
+T142	Eq-Value 390 392	F3
+T143	And 376 380	with
+T144	Modifier 403 410	kleiner
+T145	Eq-Comparison 447 466	older that 6 months
+T146	Eq-Operator 447 457	older that
+T147	And 467 471	with
+T148	Observation 492 495	kPa
+T149	Observation-Name 492 495	kPa
+T84	Polarity 692 696	High
+T150	Assertion 710 717	needing
+T151	Observation 790 797	MELD-Na
+T152	Observation-Name 790 797	MELD-Na
+T25	Eq-Comparison 937 951	prior 3 months
+T97	Eq-Temporal-Period 937 942	prior
+T101	Eq-Comparison 1017 1041	within the last 3 months
+T102	Eq-Temporal-Period 1028 1032	last
+T104	Or 1003 1005	or
+T153	Severity 1214 1220	Severe
+T119	Eq-Comparison 1309 1314	prior
+T154	Eq-Temporal-Period 1309 1314	prior
+T155	Negation 1355 1359	free
+T156	Eq-Comparison 1387 1393	Recent
+T157	Eq-Temporal-Period 1387 1393	Recent
+T158	Modifier 1394 1404	infectious
+T159	Eq-Comparison 1430 1442	last 6 weeks
+T160	Eq-Temporal-Period 1430 1434	last
+A1	Eq-Operator-Value T30 GTEQ
+A2	Eq-Operator-Value T31 GTEQ
+A3	Eq-Operator-Value T32 GTEQ
+A4	Eq-Operator-Value T33 GTEQ
+A5	Eq-Operator-Value T34 LT
+A6	Eq-Operator-Value T35 GTEQ
+A7	Eq-Operator-Value T36 GTEQ
+A8	Eq-Operator-Value T37 LTEQ
+A9	Eq-Temporal-Unit-Value T38 month
+A10	Eq-Temporal-Unit-Value T39 month
+A11	Eq-Temporal-Unit-Value T40 month
+A12	Eq-Temporal-Unit-Value T41 month
+A13	Eq-Temporal-Unit-Value T42 week
+A14	Encounter-Type-Value T66 outpatient
+A16	Encounter-Type-Value T86 inpatient
+A17	Severity-Value T87 moderate
+A18	Severity-Value T88 severe
+A23	Eq-Operator-Value T123 GTEQ
+A24	Eq-Temporal-Unit-Value T125 year
+A25	Eq-Temporal-Period-Value T127 past
+A26	Eq-Temporal-Period-Value T129 present
+A27	Eq-Temporal-Unit-Value T132 day
+A28	Eq-Temporal-Unit-Value T135 day
+A29	Observation-Type-Value T24 lab
+A30	Eq-Temporal-Recency-Value T139 first-time
+A15	Eq-Operator-Value T141 GTEQ
+A31	Eq-Operator-Value T146 GT
+A32	Observation-Type-Value T149 lab
+A19	Polarity-Value T84 high
+A33	Assertion-Type-Value E25 hypothetical
+A20	Eq-Temporal-Period-Value T97 past
+A21	Eq-Temporal-Period-Value T102 past
+A34	Severity-Value T153 severe
+A22	Eq-Temporal-Period-Value T154 past
+A35	Eq-Temporal-Period-Value T157 recent
+A36	Eq-Temporal-Period-Value T160 past
+R3	Found-By Arg1:E37 Arg2:E16
+R4	Example-Of Arg1:E39 Arg2:E40
+R5	Example-Of Arg1:E21 Arg2:E40
+R6	If-Then Arg1:T63 Arg2:E29
+R7	If-Then Arg1:T1 Arg2:E30
+R1	Caused-By Arg1:E2 Arg2:E9
+R2	Equivalent-To Arg1:E23 Arg2:E11
+R8	Equivalent-To Arg1:E67 Arg2:E24
+R9	Treatment-For Arg1:E40 Arg2:E18
+R10	Using Arg1:E43 Arg2:E42
+R11	Using Arg1:E45 Arg2:E46
+R12	Using Arg1:E45 Arg2:E47
+R13	Using Arg1:E45 Arg2:E48
+R14	If-Then Arg1:E70 Arg2:E28

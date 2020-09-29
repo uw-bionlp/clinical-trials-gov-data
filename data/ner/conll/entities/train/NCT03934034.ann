@@ -1,0 +1,79 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E2	Condition:T7 Name:T8
+E4	Organism:T9 Name:T10
+E5	Organism:T11 Name:T12
+E6	Organism:T13 Name:T14
+E7	Organism:T15 Name:T16
+E11	Procedure:T20 Temporality:E22
+E12	Eq-Comparison:T21 Operator:T22 Temporal-Unit:T5 Value:T6
+E13	Procedure:T23 Duration:E12
+E14	Procedure:T24 Temporality:E25
+E16	Organism:T27
+E17	Organism:T28
+E18	Organism:T29 Name:T30
+E19	Organism:T31 Name:T32
+E20	Organism:T33 Name:T34
+E21	Organism:T35 Name:T36
+E23	Negation:T38 Negates:E18
+E8	Or:T17 Arg:E4 Arg2:E5
+E9	Or:T18 Arg:E5 Arg2:E6
+E10	Or:T19 Arg:E6 Arg2:E7
+E15	Or:T25 Arg:E20 Arg2:E21
+E22	Eq-Comparison:T26 Temporal-Recency:T37
+E25	Eq-Comparison:T41 Temporal-Period:T42
+T1	Condition 47 68	NTM pulmonary disease
+T2	Condition-Name 47 68	NTM pulmonary disease
+T3	Condition 447 468	NTM pulmonary disease
+T4	Condition-Name 447 468	NTM pulmonary disease
+T5	Eq-Temporal-Unit 412 417	weeks
+T6	Eq-Value 410 411	4
+T7	Condition 98 119	NTM pulmonary disease
+T8	Condition-Name 98 119	NTM pulmonary disease
+T9	Organism 130 146	M. avium complex
+T10	Organism-Name 130 146	M. avium complex
+T11	Organism 151 184	M. abscessus subspecies abscessus
+T12	Organism-Name 151 184	M. abscessus subspecies abscessus
+T13	Organism 189 224	M. abscessus subspecies massiliense
+T14	Organism-Name 189 224	M. abscessus subspecies massiliense
+T15	Organism 229 240	M. kansasii
+T16	Organism-Name 229 240	M. kansasii
+T20	Procedure 271 280	treatment
+T21	Eq-Comparison 400 417	more than 4 weeks
+T22	Eq-Operator 400 409	more than
+T23	Procedure 388 395	treated
+T24	Procedure 317 326	treatment
+T27	Organism 79 94	causative agent
+T28	Organism 428 443	causative agent
+T29	Organism 480 496	M. avium complex
+T30	Organism-Name 480 496	M. avium complex
+T31	Organism 498 531	M. abscessus subspecies abscessus
+T32	Organism-Name 498 531	M. abscessus subspecies abscessus
+T33	Organism 533 568	M. abscessus subspecies massiliense
+T34	Organism-Name 533 568	M. abscessus subspecies massiliense
+T35	Organism 573 584	M. kansasii
+T36	Organism-Name 573 584	M. kansasii
+T38	Negation 472 479	none of
+T17	Or 148 150	or
+T18	Or 186 188	or
+T19	Or 226 228	or
+T25	Or 570 572	or
+T26	Eq-Comparison 267 270	new
+T37	Eq-Temporal-Recency 267 270	new
+T41	Eq-Comparison 297 313	previous history
+T42	Eq-Temporal-Period 297 313	previous history
+A1	Eq-Temporal-Unit-Value T5 week
+A2	Eq-Operator-Value T22 GT
+A3	Eq-Temporal-Recency-Value T37 first-time
+A5	Eq-Temporal-Period-Value T42 past
+R1	Equivalent-To Arg1:E14 Arg2:E11
+R2	Caused-By Arg1:E2 Arg2:E16
+R3	Example-Of Arg1:E16 Arg2:E4
+R4	Example-Of Arg1:E5 Arg2:E16
+R5	Example-Of Arg1:E6 Arg2:E16
+R6	Example-Of Arg1:E7 Arg2:E16
+R8	Example-Of Arg1:E18 Arg2:E17
+R9	Example-Of Arg1:E19 Arg2:E17
+R10	Example-Of Arg1:E20 Arg2:E17
+R11	Example-Of Arg1:E21 Arg2:E17
+R7	Caused-By Arg1:E3 Arg2:E17

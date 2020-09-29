@@ -1,0 +1,28 @@
+E1	Procedure:T2 Name:T3 Duration:E2
+E2	Eq-Comparison:T4 Operator:T5 Temporal-Unit:T6 Value:T1
+E3	Procedure:T7 Name:T8
+E4	Assertion:T9 Asserted:E3
+E5	Condition:T10
+E6	Condition:T11 Name:T12
+E7	Condition:T13 Name:T14
+E8	Modifier:T15 Modifies:T3
+T1	Eq-Value 59 61	48
+T2	Procedure 25 48	central venous catheter
+T3	Procedure-Name 25 48	central venous catheter
+T4	Eq-Comparison 49 67	more than 48 hours
+T5	Eq-Operator 49 58	more than
+T6	Eq-Temporal-Unit 62 67	hours
+T7	Procedure 153 171	ultrasound machine
+T8	Procedure-Name 153 171	ultrasound machine
+T9	Assertion 127 149	technical difficulties
+T10	Condition 195 203	findings
+T11	Condition 206 226	inflammation of skin
+T12	Condition-Name 206 226	inflammation of skin
+T13	Condition 228 239	excoriation
+T14	Condition-Name 228 239	excoriation
+T15	Modifier 68 75	in situ
+A1	Eq-Operator-Value T5 GT
+A2	Eq-Temporal-Unit-Value T6 hour
+A3	Assertion-Type-Value E4 hypothetical
+R1	Example-Of Arg1:E6 Arg2:E5
+R2	Example-Of Arg1:E7 Arg2:E5

@@ -1,0 +1,157 @@
+E3	Condition:T3 Name:T40 Stage:E4
+E4	Eq-Comparison:T4 Unit:T41 Value:T42 Operator:T43
+E5	Condition:T5 Name:T45
+E6	Or:T6 Arg:E1 Arg2:E7
+E7	Negation:T7 Negates:E8
+E8	Procedure:T8 Name:T46
+E9	Eq-Comparison:T9 Operator:T47 Value:T48 Unit:T49
+E10	Assertion:T10 Asserted:E11
+E11	Observation:T11 Name:T50
+E12	Eq-Comparison:T12 Value:T51 Operator:T52
+E13	Eq-Comparison:T13 Operator:T54 Unit:T55 Value:T56
+E14	Condition:T14 Name:T57 Stage:E13
+E16	Condition:T16 Name:T58 Polarity:T15
+E17	Condition:T17 Name:T59
+E18	Or:T18 Arg:E17 Arg2:E20
+E19	Modifier:T19 Modifies:T60
+E20	Condition:T20 Name:T60
+E21	Condition:T21 Name:T61
+E22	Condition:T22 Name:T62
+E24	Or:T24 Arg:E40 Arg2:E26
+E25	Other:T25 Is-Other:E26
+E26	Procedure:T26 Name:T64 Temporality:E27
+E27	Eq-Comparison:T27 Temporal-Period:T65 Value:T66 Temporal-Unit:T67
+E28	Condition:T28 Name:T68
+E29	Or:T29 Arg:E28 Arg2:E30
+E30	Condition:T30 Name:T69
+E31	Condition:T31 Name:T70
+E32	Eq-Comparison:T32 Operator:T71
+E33	Modifier:T33 Modifies:T72
+E34	And:T34 Arg:E33 Arg2:E42
+E35	Negation:T35 Negates:E45
+E36	Eq-Comparison:T36 Operator:T75 Temporal-Period:T76 Value:T77 Temporal-Unit:T78
+E37	Condition:T37 Name:T79
+E38	Observation:T38 Name:T80
+E1	And:T1 Arg:E5 Arg2:E8
+E2	Observation:T2 Eq-Comparison:E9
+E23	Modifier:T23 Modifies:T50
+E39	Observation:T39 Name:T53 Eq-Comparison:E12
+E15	Exception:T81 From:E21 Except:E22
+E40	Procedure:T82 Name:T63 Temporality:E27
+E41	Observation:T83 Name:T72 Eq-Comparison:E32
+E42	Modifier:T84 Modifies:T72
+E43	Assertion:T85 Asserted:E41
+E44	Eq-Comparison:T86 Temporal-Period:T73
+E45	Procedure:T87 Name:T88 Temporality:E44
+E46	Assertion:T89 Asserted:E35
+E47	Observation:T90 Name:T74 Temporality:E36
+T3	Condition 25 66	Hoehn & Yahr Classification of Disability
+T4	Eq-Comparison 68 76	stage 1-
+T5	Condition 83 95	can ambulate
+T6	Or 101 103	or
+T7	Negation 104 111	without
+T8	Procedure 115 131	assistive device
+T9	Eq-Comparison 136 152	at least 50 feet
+T10	Assertion 158 165	able to
+T11	Observation 166 196	get up and down from the floor
+T12	Eq-Comparison 241 252	24 or above
+T13	Eq-Comparison 317 337	Greater than Stage 3
+T14	Condition 345 386	Hoehn & Yahr Classification of Disability
+T16	Condition 403 418	immune function
+T17	Condition 427 436	pneumonia
+T18	Or 437 439	or
+T19	Modifier 440 448	systemic
+T20	Condition 449 458	infection
+T21	Condition 464 496	progressive degenerative disease
+T22	Condition 505 507	PD
+T24	Or 527 529	or
+T25	Other 530 535	other
+T26	Procedure 536 554	orthopedic surgery
+T27	Eq-Comparison 562 577	past six months
+T28	Condition 583 597	mental disease
+T29	Or 597 598	/
+T30	Condition 598 607	psychosis
+T31	Condition 616 624	dementia
+T32	Eq-Comparison 630 642	greater than
+T33	Modifier 675 679	gait
+T34	And 680 683	and
+T35	Negation 699 708	inability
+T36	Eq-Comparison 838 864	within the past six months
+T37	Condition 904 913	pregnancy
+T38	Observation 921 929	prisoner
+T40	Condition-Name 25 66	Hoehn & Yahr Classification of Disability
+T41	Eq-Unit 68 73	stage
+T42	Eq-Value 74 75	1
+T43	Eq-Operator 75 76	-
+T44	Eq-Value 76 77	3
+T45	Condition-Name 83 95	can ambulate
+T46	Procedure-Name 115 131	assistive device
+T47	Eq-Operator 136 144	at least
+T48	Eq-Value 145 147	50
+T49	Eq-Unit 148 152	feet
+T50	Observation-Name 166 196	get up and down from the floor
+T51	Eq-Value 241 243	24
+T52	Eq-Operator 244 252	or above
+T53	Observation-Name 260 291	Folstein Mini-Mental State Exam
+T54	Eq-Operator 317 329	Greater than
+T55	Eq-Unit 330 335	Stage
+T56	Eq-Value 336 337	3
+T57	Condition-Name 345 386	Hoehn & Yahr Classification of Disability
+T58	Condition-Name 403 418	immune function
+T59	Condition-Name 427 436	pneumonia
+T60	Condition-Name 449 458	infection
+T61	Condition-Name 464 496	progressive degenerative disease
+T62	Condition-Name 505 507	PD
+T63	Procedure-Name 513 526	spinal fusion
+T64	Procedure-Name 536 554	orthopedic surgery
+T65	Eq-Temporal-Period 562 566	past
+T66	Eq-Value 567 570	six
+T67	Eq-Temporal-Unit 571 577	months
+T68	Condition-Name 583 597	mental disease
+T69	Condition-Name 598 607	psychosis
+T70	Condition-Name 616 624	dementia
+T71	Eq-Operator 630 642	greater than
+T72	Observation-Name 643 661	minimal assistance
+T73	Eq-Temporal-Period 749 758	scheduled
+T74	Observation-Name 799 818	resistance training
+T75	Eq-Operator 838 844	within
+T76	Eq-Temporal-Period 849 853	past
+T77	Eq-Value 854 857	six
+T78	Eq-Temporal-Unit 858 864	months
+T79	Condition-Name 904 913	pregnancy
+T80	Observation-Name 921 929	prisoner
+T1	And 96 100	with
+T2	Observation 83 95	can ambulate
+T23	Modifier 202 220	minimal assistance
+T39	Observation 260 291	Folstein Mini-Mental State Exam
+T15	Polarity 392 399	decline
+T81	Exception 497 504	besides
+T82	Procedure 513 526	spinal fusion
+T83	Observation 643 661	minimal assistance
+T84	Modifier 684 693	transfers
+T85	Assertion 662 670	required
+T86	Eq-Comparison 749 758	scheduled
+T87	Procedure 759 776	training sessions
+T88	Procedure-Name 759 776	training sessions
+T89	Assertion 699 708	inability
+T90	Observation 799 818	resistance training
+A1	Assertion-Type-Value E10 hypothetical
+A2	Eq-Operator-Value T43 BETWEEN
+A3	Eq-Operator-Value T47 GTEQ
+A4	Eq-Operator-Value T52 GTEQ
+A5	Eq-Operator-Value T54 GT
+A6	Eq-Temporal-Period-Value T65 past
+A7	Eq-Temporal-Unit-Value T67 month
+A8	Eq-Operator-Value T71 GT
+A9	Eq-Temporal-Period-Value T73 future
+A10	Eq-Operator-Value T75 LTEQ
+A11	Eq-Temporal-Period-Value T76 past
+A12	Eq-Temporal-Unit-Value T78 month
+A13	Observation-Type-Value T53 clinical-score
+A14	Polarity-Value T15 low
+A15	Assertion-Type-Value E43 hypothetical
+A16	Assertion-Type-Value E46 hypothetical
+A17	Observation-Type-Value T74 social-habit
+R1	Example-Of Arg1:E17 Arg2:E16
+R2	Example-Of Arg1:E20 Arg2:E16
+R3	Example-Of Arg1:E31 Arg2:E30

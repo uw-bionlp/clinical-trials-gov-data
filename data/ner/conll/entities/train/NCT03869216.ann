@@ -1,0 +1,58 @@
+E1	Eq-Comparison:T1 Temporal-Period:T16
+E2	Age:T2 Eq-Comparison:E3
+E3	Eq-Comparison:T3 Value:T19 Operator:T20 Value:T21 Temporal-Unit:T22
+E5	Observation:T5 Name:T23 Eq-Comparison:E6
+E6	Eq-Comparison:T6 Operator:T24 Value:T25 Temporal-Unit:T26
+E7	Eq-Comparison:T7 Temporal-Period:T27
+E8	Modifier:T8 Modifies:T28
+E9	Condition:T9 Name:T28 Temporality:E7
+E10	Condition:T10 Name:T29
+E11	Assertion:T11 Asserted:T30
+E12	Study:T12 Stability:T30
+E13	Negation:T13 Negates:E4
+E14	Assertion:T14 Asserted:E13
+E16	Procedure:T33 Location:T34 Temporality:E1
+E4	Study:T4
+T1	Eq-Comparison 33 42	Receiving
+T2	Age 114 118	Ages
+T3	Eq-Comparison 119 130	40-69 years
+T5	Observation 159 174	life expectancy
+T6	Eq-Comparison 178 195	at least 10 years
+T7	Eq-Comparison 238 245	history
+T8	Modifier 249 257	prostate
+T9	Condition 258 264	cancer
+T10	Condition 293 313	Cognitive impairment
+T11	Assertion 319 324	would
+T12	Study 361 366	study
+T13	Negation 372 378	Unable
+T14	Assertion 372 378	Unable
+T16	Eq-Temporal-Period 33 42	Receiving
+T17	Ethnicity 87 103	African American
+T18	Life-Stage-And-Gender 104 108	male
+T19	Eq-Value 119 121	40
+T20	Eq-Operator 121 122	-
+T21	Eq-Value 122 124	69
+T22	Eq-Temporal-Unit 125 130	years
+T23	Observation-Name 159 174	life expectancy
+T24	Eq-Operator 178 186	at least
+T25	Eq-Value 187 189	10
+T26	Eq-Temporal-Unit 190 195	years
+T27	Eq-Temporal-Period 238 245	history
+T28	Condition-Name 258 264	cancer
+T29	Condition-Name 293 313	Cognitive impairment
+T30	Stability 325 334	interfere
+T33	Procedure 43 47	care
+T34	Location 55 69	clinical sites
+T4	Study 409 421	intervention
+A1	Assertion-Type-Value E11 hypothetical
+A2	Assertion-Type-Value E14 hypothetical
+A3	Eq-Temporal-Period-Value T16 present
+A4	Life-Stage-And-Gender-Type T18 male
+A5	Eq-Operator-Value T20 BETWEEN
+A6	Eq-Temporal-Unit-Value T22 year
+A7	Eq-Operator-Value T24 GTEQ
+A8	Eq-Temporal-Unit-Value T26 year
+A9	Eq-Temporal-Period-Value T27 past
+A10	Stability-Value T30 change
+A12	Location-Value T34 clinic
+R1	Caused-By Arg1:T30 Arg2:E10

@@ -1,0 +1,48 @@
+E1	Eq-Comparison:T1 Value:T12 Temporal-Unit:T13 Operator:T14
+E2	Eq-Comparison:T2 Value:T16 Operator:T17
+E3	Drug:T3 Minimum-Count:E2 Temporality:E4
+E4	Eq-Comparison:T4 Per:T18
+E5	And:T5 Arg:E3 Arg2:E6
+E6	Assertion:T6 Asserted:E7
+E7	Drug:T7
+E8	Condition:T8 Name:T20 Severity:T19
+E9	Negation:T9 Negates:E13
+E11	Negation:T11 Negates:E14
+E12	Age:T22 Eq-Comparison:E1
+E13	Procedure:T10 Name:T21
+E10	Assertion:T23 Asserted:E9
+E14	Study:T24
+E15	Assertion:T25 Asserted:E11
+T1	Eq-Comparison 25 49	18 years of age or older
+T2	Eq-Comparison 96 107	two or more
+T3	Drug 108 119	medications
+T4	Eq-Comparison 124 127	day
+T5	And 129 132	and
+T6	Assertion 133 145	manage their
+T7	Drug 150 161	medications
+T8	Condition 207 227	cognitive impairment
+T9	Negation 233 242	unwilling
+T10	Procedure 252 265	novel pillbox
+T11	Negation 271 277	unable
+T12	Eq-Value 25 27	18
+T13	Eq-Temporal-Unit 28 33	years
+T14	Eq-Operator 41 49	or older
+T15	Language 61 68	English
+T16	Eq-Value 96 99	two
+T17	Eq-Operator 100 107	or more
+T18	Eq-Temporal-Unit 124 127	day
+T19	Severity 195 206	significant
+T20	Condition-Name 207 227	cognitive impairment
+T22	Age 37 40	age
+T21	Procedure-Name 252 265	novel pillbox
+T23	Assertion 233 242	unwilling
+T24	Study 295 308	research team
+T25	Assertion 271 277	unable
+A1	Assertion-Type-Value E6 hypothetical
+A2	Eq-Temporal-Unit-Value T13 year
+A3	Eq-Operator-Value T14 GTEQ
+A4	Eq-Operator-Value T17 GTEQ
+A5	Eq-Temporal-Unit-Value T18 day
+A6	Severity-Value T19 severe
+A7	Assertion-Type-Value E10 hypothetical
+A8	Assertion-Type-Value E15 hypothetical

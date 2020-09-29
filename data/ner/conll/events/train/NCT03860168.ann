@@ -1,0 +1,67 @@
+E1	Procedure:T1 Name:T2
+E3	Condition:T3 Name:T4
+E6	Procedure:T6 Name:T7
+E8	Procedure:T8 Name:T9
+E11	Eq-Comparison:T15 Operator:T12 Temporal-Unit:T13 Value:T14
+E2	Or:T17 Arg:T16 Arg2:T5
+E4	Assertion:T18 Asserted:E1
+E5	And:T19 Arg:T5 Arg2:E4
+E7	Encounter:T20 Type:T21 Location:T22
+E9	Negation:T23 Negates:E8
+E10	Condition:T10 Name:T25
+E12	Condition:T11 Name:T26
+E13	Condition:T24
+E14	Encounter:T27 Type:T28 Location:T29 Duration:E11
+E15	Eq-Comparison:T30 Temporal-Period:T31
+E16	Observation:T32 Name:T33 Temporality:E15
+E17	Observation:T34 Name:T35
+E18	Negation:T36 Negates:E16
+T1	Procedure 193 215	mechanical ventilation
+T2	Procedure-Name 193 215	mechanical ventilation
+T3	Condition 128 142	critically ill
+T4	Condition-Name 128 142	critically ill
+T5	Life-Stage-And-Gender 155 163	children
+T6	Procedure 504 516	intervention
+T7	Procedure-Name 504 516	intervention
+T8	Procedure 549 561	mobilization
+T9	Procedure-Name 549 561	mobilization
+T12	Eq-Operator 736 737	≥
+T13	Eq-Temporal-Unit 740 744	days
+T14	Eq-Value 738 739	3
+T15	Eq-Comparison 736 744	≥ 3 days
+T16	Life-Stage-And-Gender 143 150	infants
+T17	Or 151 154	and
+T18	Assertion 174 184	ability to
+T19	And 165 169	with
+T20	Encounter 416 424	admitted
+T21	Encounter-Type 416 424	admitted
+T22	Location 432 437	PICUs
+T23	Negation 546 548	no
+T10	Condition 603 613	open chest
+T11	Condition 615 630	surgeon request
+T24	Condition 580 596	clinical factors
+T25	Condition-Name 603 613	open chest
+T26	Condition-Name 615 630	surgeon request
+T27	Encounter 701 709	Admitted
+T28	Encounter-Type 701 709	Admitted
+T29	Location 731 735	PICU
+T30	Eq-Comparison 801 807	active
+T31	Eq-Temporal-Period 801 807	active
+T32	Observation 808 826	do-not-resuscitate
+T33	Observation-Name 808 826	do-not-resuscitate
+T34	Observation 828 831	DNR
+T35	Observation-Name 828 831	DNR
+T36	Negation 847 855	excluded
+A1	Life-Stage-And-Gender-Type T5 child
+A2	Eq-Operator-Value T12 GTEQ
+A3	Eq-Temporal-Unit-Value T13 day
+A4	Life-Stage-And-Gender-Type T16 infant
+A5	Assertion-Type-Value E4 hypothetical
+A6	Encounter-Type-Value T21 inpatient
+A7	Location-Value T22 unit
+A8	Encounter-Type-Value T28 inpatient
+A9	Location-Value T29 unit
+A10	Eq-Temporal-Period-Value T31 present
+R1	Example-Of Arg1:E10 Arg2:E13
+R2	Example-Of Arg1:E12 Arg2:E13
+R3	Abbrev-Of Arg1:E17 Arg2:E16

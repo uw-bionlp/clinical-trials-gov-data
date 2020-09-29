@@ -1,0 +1,214 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E11	Condition:T11 Name:T12 Severity:T107
+E13	Condition:T13 Name:T14
+E15	Observation:T15 Name:T16 Eq-Comparison:E6
+E17	Condition:T17 Name:T18
+E19	Condition:T19 Name:T20
+E21	Condition:T21 Name:T22
+E23	Condition:T23 Name:T24
+E25	Condition:T25 Name:T26
+E27	Condition:T27 Name:T28
+E29	Condition:T29 Name:T30
+E32	Condition:T32 Name:T33
+E34	Condition:T34 Name:T35
+E36	Condition:T36 Name:T37 Stage:E14
+E38	Condition:T38 Name:T39
+E39	Age:T44 Eq-Comparison:E4
+E40	Eq-Comparison:T50 Operator:T40 Value:T47 Unit:T65
+E2	Or:T52 Arg:T31 Arg2:T51
+E4	Eq-Comparison:T53 Temporal-Unit:T41 Operator:T54 Value:T45
+E6	Eq-Comparison:T55 Unit:T57 Operator:T56 Value:T46
+E8	Observation:T58 Name:T59
+E10	Observation:T60 Name:T61 Polarity:T62
+E12	Observation:T63 Name:T64 Eq-Comparison:E40
+E20	Condition:T69 Name:T70
+E22	Assertion:T71 Asserted:E26
+E24	Observation:T72 Stability:T118
+E26	Negation:T73 Negates:T118
+E28	Or:T74 Arg:E7 Arg2:E13
+E9	Drug:T9 Name:T10 Temporality:E33
+E30	Drug:T75 Name:T76
+E31	Drug:T77 Name:T78
+E33	Eq-Comparison:T79 Temporal-Unit:T42 Value:T48
+E35	Study:T80
+E37	Temporal-Connection:T81 Arg2:E35 Arg:E33
+E41	Condition:T82
+E42	Assertion:T83 Asserted:E43
+E43	Condition:T84 Name:T85
+E44	Condition:T86 Name:T87
+E45	Or:T88 Arg:E44 Arg2:E21
+E46	Procedure:T89 Name:T90 Temporality:E47
+E47	Eq-Comparison:T91 Temporal-Unit:T43 Value:T49
+E48	Study:T92
+E49	Temporal-Connection:T93 Arg:E47 Arg2:E48
+E50	Condition:T94 Name:T95
+E51	Condition:T96 Name:T97
+E52	Assertion:T98 Asserted:E51
+E53	Condition:T99 Name:T100
+E54	Or:T101 Arg:E51 Arg2:E53
+E55	Procedure:T102 Name:T103 Temporality:E64
+E56	Condition:T104 Name:T105
+E57	Or:T106 Arg:E25 Arg2:E56
+E58	Modifier:T108 Modifies:T12
+E59	Modifier:T109 Modifies:T12
+E60	Or:T110 Arg:E58 Arg2:E59
+E14	Eq-Comparison:T66 Unit:T67 Value:T68
+E16	Eq-Comparison:T111 Unit:T112 Value:T113
+E18	Or:T114 Arg:E16 Arg2:E14
+E61	Modifier:T115 Modifies:T35
+E62	Modifier:T116 Modifies:T2
+E63	Modifier:T117 Modifies:T6
+E64	Eq-Comparison:T119 Temporal-Period:T120
+T1	Condition 338 358	macular degeneration
+T2	Condition-Name 338 358	macular degeneration
+T3	Condition 801 829	systemic lupus erythematosus
+T4	Condition-Name 801 829	systemic lupus erythematosus
+T5	Condition 259 267	glaucoma
+T6	Condition-Name 259 267	glaucoma
+T7	Condition 523 542	Ocular inflammation
+T8	Condition-Name 523 542	Ocular inflammation
+T11	Condition 1122 1137	organic disease
+T12	Condition-Name 1122 1137	organic disease
+T13	Condition 547 561	ocular disease
+T14	Condition-Name 547 561	ocular disease
+T15	Observation 97 106	ametropia
+T16	Observation-Name 97 106	ametropia
+T17	Condition 835 844	Porphyria
+T18	Condition-Name 835 844	Porphyria
+T19	Condition 846 854	Vitiligo
+T20	Condition-Name 846 854	Vitiligo
+T21	Condition 882 890	Albinism
+T22	Condition-Name 882 890	Albinism
+T23	Condition 920 928	epilepsy
+T24	Condition-Name 920 928	epilepsy
+T25	Condition 1070 1078	disorder
+T26	Condition-Name 1070 1078	disorder
+T27	Condition 278 282	POAG
+T28	Condition-Name 278 282	POAG
+T29	Condition 290 299	diagnosed
+T30	Condition-Name 300 304	POAG
+T31	Life-Stage-And-Gender 25 28	men
+T32	Condition 360 363	AMD
+T33	Condition-Name 360 363	AMD
+T34	Condition 385 388	AMD
+T35	Condition-Name 385 388	AMD
+T36	Condition 426 429	AMD
+T37	Condition-Name 426 429	AMD
+T38	Condition 830 833	SLE
+T39	Condition-Name 830 833	SLE
+T40	Eq-Operator 313 315	<=
+T41	Eq-Temporal-Unit 52 57	years
+T42	Eq-Temporal-Unit 683 689	months
+T43	Eq-Temporal-Unit 958 964	months
+T44	Age 39 43	aged
+T45	Eq-Value 49 51	18
+T46	Eq-Value 113 114	3
+T47	Eq-Value 316 318	10
+T48	Eq-Value 681 682	3
+T49	Eq-Value 956 957	3
+T50	Eq-Comparison 313 318	<= 10
+T51	Life-Stage-And-Gender 33 38	women
+T52	Or 29 32	and
+T53	Eq-Comparison 44 57	over 18 years
+T54	Eq-Operator 44 48	over
+T55	Eq-Comparison 107 123	below 3 diopters
+T56	Eq-Operator 107 112	below
+T57	Eq-Unit 115 123	diopters
+T58	Observation 180 187	healthy
+T59	Observation-Name 180 187	healthy
+T60	Observation 212 235	ophthalmologic findings
+T61	Observation-Name 212 235	ophthalmologic findings
+T62	Polarity 205 211	normal
+T63	Observation 310 312	MD
+T64	Observation-Name 310 312	MD
+T65	Eq-Unit 319 321	dB
+T69	Condition 471 484	abnormalities
+T70	Condition-Name 471 484	abnormalities
+T71	Assertion 485 495	preventing
+T72	Observation 505 517	measurements
+T73	Negation 485 495	preventing
+T74	Or 543 546	and
+T9	Drug 606 633	photosensitizing medication
+T10	Drug-Name 606 633	photosensitizing medication
+T75	Drug 635 651	phototoxic drugs
+T76	Drug-Name 635 651	phototoxic drugs
+T77	Drug 653 672	photoallergic drugs
+T78	Drug-Name 653 672	photoallergic drugs
+T79	Eq-Comparison 681 689	3 months
+T80	Study 704 709	study
+T81	Temporal-Connection 690 699	preceding
+T82	Condition 731 740	condition
+T83	Assertion 750 764	possibility of
+T84	Condition 773 789	photosensitivity
+T85	Condition-Name 773 789	photosensitivity
+T86	Condition 856 877	Xeroderma Pigmentosum
+T87	Condition-Name 856 877	Xeroderma Pigmentosum
+T88	Or 878 881	and
+T89	Procedure 934 948	Ocular surgery
+T90	Procedure-Name 934 948	Ocular surgery
+T91	Eq-Comparison 956 964	3 months
+T92	Study 979 984	study
+T93	Temporal-Connection 965 974	preceding
+T94	Condition 990 999	Pregnancy
+T95	Condition-Name 990 999	Pregnancy
+T96	Condition 1009 1018	pregnancy
+T97	Condition-Name 1009 1018	pregnancy
+T98	Assertion 1001 1008	planned
+T99	Condition 1022 1031	lactating
+T100	Condition-Name 1022 1031	lactating
+T101	Or 1019 1021	or
+T102	Procedure 1052 1060	surgical
+T103	Procedure-Name 1052 1060	surgical
+T104	Condition 1082 1089	disease
+T105	Condition-Name 1082 1089	disease
+T106	Or 1079 1081	or
+T107	Severity 1115 1121	severe
+T108	Modifier 1098 1103	acute
+T109	Modifier 1107 1114	chronic
+T110	Or 1104 1106	or
+T66	Eq-Comparison 416 425	stage III
+T67	Eq-Unit 416 421	stage
+T68	Eq-Value 422 425	III
+T111	Eq-Comparison 404 412	stage II
+T112	Eq-Unit 404 409	stage
+T113	Eq-Value 410 412	II
+T114	Or 413 415	or
+T115	Modifier 381 384	dry
+T116	Modifier 326 337	age-related
+T117	Modifier 240 258	primary open angle
+T118	Stability 496 504	reliable
+T119	Eq-Comparison 1061 1068	history
+T120	Eq-Temporal-Period 1061 1068	history
+A1	Eq-Operator-Value T40 LTEQ
+A2	Eq-Temporal-Unit-Value T41 year
+A3	Eq-Temporal-Unit-Value T42 month
+A4	Eq-Temporal-Unit-Value T43 month
+A5	Life-Stage-And-Gender-Type T31 male
+A6	Life-Stage-And-Gender-Type T51 female
+A7	Eq-Operator-Value T54 GT
+A8	Eq-Operator-Value T56 LT
+A9	Polarity-Value T62 normal
+A10	Assertion-Type-Value E22 hypothetical
+A11	Temporal-Connection-Type-Value E37 before
+A12	Assertion-Type-Value E42 possible
+A13	Temporal-Connection-Type-Value E49 before
+A14	Assertion-Type-Value E52 intention
+A15	Severity-Value T107 severe
+A16	Stability-Value T118 stable
+A17	Eq-Temporal-Period-Value T120 past
+R1	Abbrev-Of Arg1:E27 Arg2:E5
+R2	Abbrev-Of Arg1:E32 Arg2:E1
+R3	Caused-By Arg1:E26 Arg2:E20
+R4	Example-Of Arg1:E30 Arg2:E9
+R5	Example-Of Arg1:E31 Arg2:E9
+R6	Caused-By Arg1:E43 Arg2:E41
+R7	Example-Of Arg1:E3 Arg2:E41
+R8	Example-Of Arg1:E38 Arg2:E41
+R9	Example-Of Arg1:E17 Arg2:E41
+R10	Example-Of Arg1:E19 Arg2:E41
+R11	Example-Of Arg1:E44 Arg2:E41
+R12	Example-Of Arg1:E21 Arg2:E41
+R13	Example-Of Arg1:E11 Arg2:E56

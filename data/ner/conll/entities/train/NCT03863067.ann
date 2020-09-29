@@ -1,0 +1,86 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6 Severity:T37
+E7	Condition:T7 Name:T8 Severity:T38
+E9	Procedure:T9 Name:T10
+E10	Eq-Comparison:T15 Operator:T11 Value:T14
+E2	Procedure:T16 Name:T17
+E4	Indication:T18 Indication-For:E2
+E6	Condition:T19 Name:T20
+E8	Condition:T21 Name:T22 Duration:E12
+E11	Modifier:T23 Modifies:T22
+E12	Eq-Comparison:T24 Operator:T25 Value:T13 Temporal-Unit:T12
+E13	Observation:T26 Name:T27 Eq-Comparison:E10
+E14	Procedure:T28
+E15	Negation:T29 Negates:T30
+E16	Procedure:T31
+E17	Other:T32 Is-Other:E16
+E18	Negation:T34 Negates:T33
+E19	Procedure:T35 Name:T36
+E20	Modifier:T39 Modifies:T8
+E21	Condition:T40 Name:T41
+E22	Condition:T42 Name:T43
+E23	Condition:T44 Name:T45
+E24	Allergy:T46
+E25	Condition:T47 Name:T48
+E26	Assertion:T49 Asserted:E9
+T1	Condition 329 350	Psychiatric disorders
+T2	Condition-Name 329 350	Psychiatric disorders
+T3	Condition 356 372	Opioid addiction
+T4	Condition-Name 356 372	Opioid addiction
+T5	Condition 384 399	organic disease
+T6	Condition-Name 384 399	organic disease
+T7	Condition 420 435	organic disease
+T8	Condition-Name 420 435	organic disease
+T9	Procedure 589 598	procedure
+T10	Procedure-Name 589 598	procedure
+T11	Eq-Operator 194 195	>
+T12	Eq-Temporal-Unit 159 165	months
+T13	Eq-Value 157 158	6
+T14	Eq-Value 195 196	6
+T15	Eq-Comparison 194 196	>6
+T16	Procedure 53 65	epiduroscopy
+T17	Procedure-Name 53 65	epiduroscopy
+T18	Indication 38 48	indication
+T19	Condition 102 125	Neurogenic claudication
+T20	Condition-Name 102 125	Neurogenic claudication
+T21	Condition 138 142	pain
+T22	Condition-Name 138 142	pain
+T23	Modifier 131 137	Lumbar
+T24	Eq-Comparison 147 165	more than 6 months
+T25	Eq-Operator 147 156	more than
+T26	Observation 171 193	Numerical rating scale
+T27	Observation-Name 171 193	Numerical rating scale
+T28	Procedure 227 236	treatment
+T29	Negation 202 204	No
+T30	Stability 205 213	response
+T31	Procedure 280 289	treatment
+T32	Other 259 264	other
+T33	Stability 245 253	response
+T34	Negation 242 244	No
+T35	Procedure 291 303	epidurolysis
+T36	Procedure-Name 291 303	epidurolysis
+T37	Severity 378 383	Acute
+T38	Severity 405 411	Severe
+T39	Modifier 412 419	chronic
+T40	Condition 441 465	Vasculo-cerebral disease
+T41	Condition-Name 441 465	Vasculo-cerebral disease
+T42	Condition 471 494	Coagulation alterations
+T43	Condition-Name 471 494	Coagulation alterations
+T44	Condition 500 521	Ofthalmologic disease
+T45	Condition-Name 500 521	Ofthalmologic disease
+T46	Allergy 527 535	Allergic
+T47	Condition 541 551	Infections
+T48	Condition-Name 541 551	Infections
+T49	Assertion 557 584	Impossibility to understand
+A1	Eq-Operator-Value T11 GT
+A2	Eq-Temporal-Unit-Value T12 month
+A3	Eq-Operator-Value T25 GTEQ
+A4	Stability-Value T30 change
+A5	Stability-Value T33 change
+A6	Severity-Value T37 severe
+A7	Severity-Value T38 severe
+A8	Assertion-Type-Value E26 hypothetical
+R1	Caused-By Arg1:T30 Arg2:E14
+R2	Example-Of Arg1:E19 Arg2:E16
+R3	Caused-By Arg1:T33 Arg2:E16

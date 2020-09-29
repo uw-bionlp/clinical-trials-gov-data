@@ -1,0 +1,146 @@
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Procedure:T15 Name:T16 Temporality:E28
+E17	Condition:T17 Name:T18
+E19	Condition:T19 Name:T20
+E21	Procedure:T21 Name:T22
+E26	Age:T31 Eq-Comparison:E8
+E27	Eq-Comparison:T35 Operator:T27 Value:T33 Temporal-Unit:T47
+E28	Eq-Comparison:T36 Temporal-Unit:T30 Value:T34 Temporal-Period:T28
+E2	Criteria-Count:T37 Min-Value:E4 Max-Value:E6 Criteria:E26 Criteria2:E10 Criteria3:E1 Criteria4:E12 Criteria5:E3 Criteria6:E16
+E4	Eq-Comparison:T38 Operator:T39 Value:T40
+E6	Eq-Comparison:T41 Value:T42
+E8	Eq-Comparison:T43 Operator:T44 Temporal-Unit:T29 Value:T32
+E10	Observation:T45 Name:T46 Eq-Comparison:E27
+E1	Condition:T1 Name:T2
+E12	Condition:T48 Name:T49
+E3	Condition:T3 Name:T4
+E14	Condition:T50 Name:T51
+E16	Negation:T52 Negates:E14
+E18	Condition:T53 Name:T54
+E20	Condition:T55 Name:T56
+E22	Condition:T57 Severity:T58
+E24	Modifier:T59 Modifies:E11
+E29	Or:T60 Arg:E11 Arg2:E9
+E30	Condition:T61 Name:T62
+E31	Modifier:T63 Modifies:T62
+E32	Modifier:T64 Modifies:T62
+E33	Or:T65 Arg:E32 Arg2:E31
+E34	Modifier:T66 Modifies:T16
+E35	Modifier:T67 Modifies:T16
+E36	Or:T68 Arg:E35 Arg2:E34
+E37	Condition:T69 Name:T70
+E38	Condition:T71 Name:T72
+E39	Condition:T73 Name:T74 Severity:T75
+E40	Condition:T76 Name:T77
+E41	Or:T78 Arg:E39 Arg2:E40
+E23	Modifier:T23 Modifies:T20
+E25	Modifier:T24 Modifies:T20
+E42	Modifier:T25 Modifies:T20
+E43	Modifier:T26 Modifies:T20
+E44	Modifier:T79 Modifies:T20
+E45	Condition:T80 Name:T81
+E46	Modifier:T82 Modifies:T70
+E47	Modifier:T83 Modifies:T22
+E48	Modifier:T84 Modifies:T72
+E49	Modifier:T85 Modifies:T74
+E50	Modifier:T86 Modifies:T81
+T5	Condition 544 562	Mental retardation
+T6	Condition-Name 544 562	Mental retardation
+T7	Condition 508 522	Mental illness
+T8	Condition-Name 508 522	Mental illness
+T9	Condition 422 434	hypertension
+T10	Condition-Name 422 434	hypertension
+T11	Condition 410 418	diabetes
+T12	Condition-Name 410 418	diabetes
+T13	Condition 529 537	Dementia
+T14	Condition-Name 529 537	Dementia
+T15	Procedure 669 678	injection
+T16	Procedure-Name 669 678	injection
+T17	Condition 932 957	rheumatic immune diseases
+T18	Condition-Name 932 957	rheumatic immune diseases
+T19	Condition 898 907	arthritis
+T20	Condition-Name 898 907	arthritis
+T21	Procedure 711 718	surgery
+T22	Procedure-Name 711 718	surgery
+T27	Eq-Operator 136 145	less than
+T29	Eq-Temporal-Unit 110 115	years
+T30	Eq-Temporal-Unit 693 699	months
+T31	Age 102 106	aged
+T32	Eq-Value 107 109	50
+T33	Eq-Value 146 148	30
+T34	Eq-Value 691 692	3
+T35	Eq-Comparison 136 153	less than 30 mins
+T36	Eq-Comparison 686 699	past 3 months
+T37	Criteria-Count 49 69	out of the following
+T38	Eq-Comparison 34 48	at least three
+T39	Eq-Operator 34 42	at least
+T40	Eq-Value 43 48	three
+T41	Eq-Comparison 70 73	six
+T42	Eq-Value 70 73	six
+T43	Eq-Comparison 107 124	50 years or above
+T44	Eq-Operator 116 124	or above
+T45	Observation 157 174	morning stiffness
+T46	Observation-Name 157 174	morning stiffness
+T47	Eq-Temporal-Unit 149 153	mins
+T1	Condition 181 206	Crepitus on active motion
+T2	Condition-Name 181 206	Crepitus on active motion
+T48	Condition 213 228	Bony tenderness
+T49	Condition-Name 213 228	Bony tenderness
+T3	Condition 235 251	Bony enlargement
+T4	Condition-Name 235 251	Bony enlargement
+T50	Condition 261 276	palpable warmth
+T51	Condition-Name 261 276	palpable warmth
+T52	Negation 258 260	No
+T53	Condition 320 334	unable to walk
+T54	Condition-Name 320 334	unable to walk
+T55	Condition 341 351	Malignancy
+T56	Condition-Name 341 351	Malignancy
+T57	Condition 368 385	medical condition
+T58	Severity 362 367	acute
+T59	Modifier 392 409	Poorly controlled
+T60	Or 419 421	or
+T61	Condition 460 472	nerve defect
+T62	Condition-Name 460 472	nerve defect
+T63	Modifier 452 459	sensory
+T64	Modifier 443 448	motor
+T65	Or 449 451	or
+T66	Modifier 653 668	hyaluronic acid
+T67	Modifier 628 649	intra-articular solid
+T68	Or 650 652	or
+T28	Eq-Temporal-Period 686 690	past
+T69	Condition 730 736	trauma
+T70	Condition-Name 730 736	trauma
+T71	Condition 759 770	deformation
+T72	Condition-Name 759 770	deformation
+T73	Condition 789 794	varus
+T74	Condition-Name 789 794	varus
+T75	Severity 777 783	Severe
+T76	Condition 798 816	valgus deformation
+T77	Condition-Name 798 816	valgus deformation
+T78	Or 795 797	or
+T23	Modifier 870 897	secondary degenerative knee
+T24	Modifier 856 868	inflammatory
+T25	Modifier 844 854	infectious
+T26	Modifier 833 842	metabolic
+T79	Modifier 823 832	Endocrine
+T80	Condition 981 995	hypersensitive
+T81	Condition-Name 981 995	hypersensitive
+T82	Modifier 725 729	Knee
+T83	Modifier 706 710	Knee
+T84	Modifier 743 758	Congenital knee
+T85	Modifier 784 788	knee
+T86	Modifier 999 1006	needles
+A1	Eq-Operator-Value T27 LT
+A3	Eq-Temporal-Unit-Value T29 year
+A4	Eq-Temporal-Unit-Value T30 month
+A5	Eq-Operator-Value T39 GTEQ
+A6	Eq-Operator-Value T44 GTEQ
+A7	Eq-Temporal-Unit-Value T47 minute
+A8	Severity-Value T58 severe
+A2	Eq-Temporal-Period-Value T28 past
+A9	Severity-Value T75 severe
+R1	Caused-By Arg1:E19 Arg2:E17

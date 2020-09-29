@@ -1,0 +1,165 @@
+E1	Condition:T1 Name:T50
+E2	Age:T2 Eq-Comparison:E3
+E3	Eq-Comparison:T3 Value:T51 Operator:T52 Value:T53 Temporal-Unit:T54
+E5	Eq-Comparison:T5 Temporal-Period:T55
+E6	Procedure:T6 Temporality:E5
+E7	Drug:T7 Name:T56
+E8	Or:T8 Arg:E7 Arg2:E9
+E9	Drug:T9 Name:T57
+E10	Procedure:T10 Name:T58
+E11	Condition:T11 Name:T59
+E12	Risk:T12 Polarity:T60 Risk-For:E15
+E13	Or:T13 Arg:E12 Arg2:E14
+E14	Risk:T14 Polarity:T61 Risk-For:E15
+E15	Condition:T15 Name:T63 Severity:T62
+E16	Condition:T16 Name:T65 Severity:T64
+E17	Condition:T17 Name:T66
+E18	Modifier:T18 Modifies:T67
+E19	Condition:T19 Name:T67
+E20	Condition:T20 Name:T68
+E21	Condition:T21 Name:T69
+E22	Condition:T22 Name:T70
+E23	Age:T23 Eq-Comparison:E24
+E24	Eq-Comparison:T24 Value:T72 Operator:T73 Value:T74 Temporal-Unit:T75
+E25	Condition:T25 Name:T76
+E26	Or:T26 Arg:E25 Arg2:E28
+E28	Condition:T28
+E29	Assertion:T29 Asserted:T77 Asserted2:T78
+E30	Or:T30 Arg:T77 Arg2:T78
+E31	Study:T31 Stability:T78
+E32	Condition:T32 Name:T79
+E35	Assertion:T35 Asserted:T81
+E36	Observation:T36 Name:T27 Stability:T81
+E37	Observation:T37 Specimen:T82
+E39	Procedure:T39 Name:T33
+E40	Condition:T40 Name:T83
+E41	Eq-Comparison:T41 Temporal-Period:T84
+E42	Procedure:T42 Name:T85 Temporality:E41
+E43	Negation:T43 Negates:E42
+E44	Condition:T44 Name:T86
+E46	Or:T46 Arg:T87 Arg2:E47
+E47	Modifier:T47 Modifies:T88
+E48	Condition:T48 Name:T88 Severity:T87
+E49	Negation:T49 Negates:E48
+E4	And:T4 Arg:E2 Arg2:E6
+E50	Negation:T90 Negates:E18
+E51	Negation:T91 Negates:E25 Negates2:E28
+E52	And:T92 Arg:E23 Arg2:E51
+T1	Condition 35 41	cancer
+T2	Age 52 55	age
+T3	Eq-Comparison 56 66	1-18 years
+T5	Eq-Comparison 75 83	received
+T6	Procedure 94 103	treatment
+T7	Drug 119 132	anthracycline
+T8	Or 133 139	and/or
+T9	Drug 140 156	alkylating agent
+T10	Procedure 157 169	chemotherapy
+T11	Condition 176 184	Diseases
+T12	Risk 222 226	risk
+T13	Or 227 229	or
+T14	Risk 240 244	risk
+T15	Condition 251 273	lymphoblastic leukemia
+T16	Condition 281 297	myeloid leukemia
+T17	Condition 299 315	Hodgkin lymphoma
+T18	Modifier 321 328	Hodgkin
+T19	Condition 329 337	lymphoma
+T20	Condition 339 347	sarcomas
+T21	Condition 349 356	Healthy
+T22	Condition 369 376	Healthy
+T23	Age 410 414	ages
+T24	Eq-Comparison 415 425	1-18 years
+T25	Condition 448 456	diseases
+T26	Or 457 459	or
+T28	Condition 460 478	medical conditions
+T29	Assertion 484 492	might be
+T30	Or 505 507	or
+T31	Study 540 545	study
+T32	Condition 547 554	Healthy
+T35	Assertion 693 696	can
+T36	Observation 708 728	epigenetic signature
+T37	Observation 779 784	blood
+T39	Procedure 808 820	routine care
+T40	Condition 842 848	Cancer
+T41	Eq-Comparison 880 888	received
+T42	Procedure 891 913	bone marrow transplant
+T43	Negation 919 922	not
+T44	Condition 936 943	Healthy
+T46	Or 1045 1047	or
+T47	Modifier 1048 1055	chronic
+T48	Condition 1056 1063	disease
+T49	Negation 1072 1080	excluded
+T50	Condition-Name 35 41	cancer
+T51	Eq-Value 56 57	1
+T52	Eq-Operator 57 58	-
+T53	Eq-Value 58 60	18
+T54	Eq-Temporal-Unit 61 66	years
+T55	Eq-Temporal-Period 75 83	received
+T56	Drug-Name 119 132	anthracycline
+T57	Drug-Name 140 156	alkylating agent
+T58	Procedure-Name 157 169	chemotherapy
+T59	Condition-Name 176 184	Diseases
+T60	Polarity 217 221	high
+T61	Polarity 235 239	high
+T62	Severity 245 250	acute
+T63	Condition-Name 251 273	lymphoblastic leukemia
+T64	Severity 275 280	acute
+T65	Condition-Name 281 297	myeloid leukemia
+T66	Condition-Name 299 315	Hodgkin lymphoma
+T67	Condition-Name 329 337	lymphoma
+T68	Condition-Name 339 347	sarcomas
+T69	Condition-Name 349 356	Healthy
+T70	Condition-Name 369 376	Healthy
+T71	Life-Stage-And-Gender 401 409	children
+T72	Eq-Value 415 416	1
+T73	Eq-Operator 416 417	-
+T74	Eq-Value 417 419	18
+T75	Eq-Temporal-Unit 420 425	years
+T76	Condition-Name 448 456	diseases
+T77	Stability 493 501	affected
+T78	Stability 516 522	impact
+T79	Condition-Name 547 554	Healthy
+T81	Stability 697 703	affect
+T82	Observation-Specimen 779 784	blood
+T83	Condition-Name 842 848	Cancer
+T84	Eq-Temporal-Period 880 888	received
+T85	Procedure-Name 891 913	bone marrow transplant
+T86	Condition-Name 936 943	Healthy
+T87	Severity 1039 1044	acute
+T88	Condition-Name 1056 1063	disease
+T89	Life-Stage-And-Gender 25 34	Childhood
+T4	And 71 74	who
+T90	Negation 317 320	non
+T91	Negation 438 447	free from
+T92	And 430 433	who
+T27	Observation-Name 708 728	epigenetic signature
+T33	Procedure-Name 808 820	routine care
+A1	Assertion-Type-Value E29 hypothetical
+A3	Assertion-Type-Value E35 hypothetical
+A4	Eq-Operator-Value T52 BETWEEN
+A5	Eq-Temporal-Unit-Value T54 year
+A6	Eq-Temporal-Period-Value T55 past
+A7	Polarity-Value T60 high
+A8	Polarity-Value T61 high
+A9	Severity-Value T62 severe
+A10	Severity-Value T64 severe
+A11	Life-Stage-And-Gender-Type T71 child
+A12	Eq-Operator-Value T73 BETWEEN
+A13	Eq-Temporal-Unit-Value T75 year
+A14	Stability-Value T77 change
+A15	Stability-Value T78 change
+A16	Stability-Value T81 change
+A17	Eq-Temporal-Period-Value T84 past
+A18	Severity-Value T87 severe
+A19	Life-Stage-And-Gender-Type T89 child
+R1	Using Arg1:E6 Arg2:E7
+R2	Using Arg1:E10 Arg2:E7
+R3	Using Arg1:E10 Arg2:E9
+R4	Example-Of Arg1:E15 Arg2:E11
+R5	Example-Of Arg1:E16 Arg2:E11
+R6	Example-Of Arg1:E17 Arg2:E11
+R7	Example-Of Arg1:E19 Arg2:E11
+R8	Example-Of Arg1:E20 Arg2:E11
+R9	Equivalent-To Arg1:T71 Arg2:E22
+R10	Caused-By Arg1:T78 Arg2:E25
+R11	Caused-By Arg1:T78 Arg2:E28
+R12	Using Arg1:E39 Arg2:E37

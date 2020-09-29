@@ -1,0 +1,19 @@
+E1	Procedure:T1 Name:T2
+E3	Condition:T3 Name:T4
+E2	Temporal-Connection:T6 Arg:E3 Arg2:E1
+T1	Procedure 30 45	cardiac surgery
+T2	Procedure-Name 30 45	cardiac surgery
+T3	Condition 46 59	mediastinitis
+T4	Condition-Name 46 59	mediastinitis
+T5	Life-Stage-And-Gender 95 101	adults
+T6	Temporal-Connection 25 29	post
+T7	Location 81 93	CHU Brugmann
+T8	Location 107 113	HUDERF
+T9	Life-Stage-And-Gender 115 124	pediatric
+A1	Life-Stage-And-Gender-Type T5 adult
+A2	Temporal-Connection-Type-Value E2 after
+A3	Location-Value T7 hospital
+A4	Location-Value T8 hospital
+A5	Life-Stage-And-Gender-Type T9 child
+R1	If-Then Arg1:T5 Arg2:T7
+R2	If-Then Arg1:T9 Arg2:T8

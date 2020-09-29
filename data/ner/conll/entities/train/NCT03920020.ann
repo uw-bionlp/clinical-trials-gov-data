@@ -1,0 +1,98 @@
+E1	Procedure:T1 Name:T2 Temporality:E22 Temporality2:E28
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Procedure:T11 Name:T12
+E13	Procedure:T13 Name:T14 Temporality:E12
+E15	Procedure:T15 Name:T16 Temporality:E27
+E17	Condition:T17 Name:T18
+E18	Eq-Comparison:T25 Operator:T20 Value:T21 Value2:T22 Unit:T27
+E2	Modifier:T26 Modifies:T6
+E4	Condition:T28 Name:T29 Stage:E18
+E6	Coreference:T30 Refers-To:E5 Duration:E10
+E8	Assertion:T31 Asserted2:E6
+E10	Eq-Comparison:T32 Operator:T33 Temporal-Unit:T19 Value:T23
+E12	Eq-Comparison:T34 Temporal-Period:T35
+E14	Assertion:T36 Asserted:E11
+E16	Modifier:T37 Modifies:T10
+E19	Modifier:T38 Modifies:T16
+E20	Modifier:T39 Modifies:T16
+E21	Or:T40 Arg:E20 Arg2:E19
+E22	Eq-Comparison:T41 Temporal-Unit:T42 Value:T24 Temporal-Period:T43
+E23	Condition:T44 Name:T45 Stability:T49
+E24	Condition:T46 Name:T47
+E25	Or:T48 Arg:E17 Arg2:E24
+E26	Assertion:T50 Asserted:T49
+E27	Eq-Comparison:T51 Temporal-Period:T52
+E28	Eq-Comparison:T53 Temporal-Period:T54
+E29	Modifier:T55 Modifies:T8
+T1	Procedure 507 531	intraarticular injection
+T2	Procedure-Name 507 531	intraarticular injection
+T3	Condition 567 587	neurological disease
+T4	Condition-Name 567 587	neurological disease
+T5	Condition 51 65	osteoarthritis
+T6	Condition-Name 51 65	osteoarthritis
+T7	Condition 290 304	osteoarthritis
+T8	Condition-Name 290 304	osteoarthritis
+T9	Condition 427 441	osteoarthritis
+T10	Condition-Name 427 441	osteoarthritis
+T11	Procedure 346 373	outpatient physical therapy
+T12	Procedure-Name 346 373	outpatient physical therapy
+T13	Procedure 250 263	physiotherapy
+T14	Procedure-Name 250 263	physiotherapy
+T15	Procedure 483 490	surgery
+T16	Procedure-Name 483 490	surgery
+T17	Condition 622 629	balance
+T18	Condition-Name 622 629	balance
+T19	Eq-Temporal-Unit 192 198	months
+T20	Eq-Operator 148 149	-
+T21	Eq-Value 147 148	2
+T22	Eq-Value 149 150	3
+T23	Eq-Value 190 191	3
+T24	Eq-Value 540 541	1
+T25	Eq-Comparison 137 150	K-L grade 2-3
+T26	Modifier 38 50	primary knee
+T27	Eq-Unit 137 146	K-L grade
+T28	Condition 120 136	radiographically
+T29	Condition-Name 120 136	radiographically
+T30	Coreference 168 176	symptoms
+T31	Assertion 168 176	symptoms
+T32	Eq-Comparison 181 198	at least 3 months
+T33	Eq-Operator 181 189	at least
+T34	Eq-Comparison 227 234	planned
+T35	Eq-Temporal-Period 227 234	planned
+T36	Assertion 333 345	capacity for
+T37	Modifier 413 426	seconder knee
+T38	Modifier 477 482	spine
+T39	Modifier 464 473	extremity
+T40	Or 474 476	or
+T41	Eq-Comparison 535 547	last 1 month
+T42	Eq-Temporal-Unit 542 547	month
+T44	Condition 605 620	muscle strength
+T45	Condition-Name 605 620	muscle strength
+T46	Condition 634 646	coordination
+T47	Condition-Name 634 646	coordination
+T48	Or 630 633	and
+T49	Stability 598 604	affect
+T43	Eq-Temporal-Period 535 539	last
+T50	Assertion 593 597	will
+T51	Eq-Comparison 447 454	History
+T52	Eq-Temporal-Period 447 454	History
+T53	Eq-Comparison 496 503	History
+T54	Eq-Temporal-Period 496 503	History
+T55	Modifier 285 289	knee
+A1	Eq-Temporal-Unit-Value T19 month
+A2	Eq-Operator-Value T20 BETWEEN
+A3	Assertion-Type-Value E8 possible
+A4	Eq-Operator-Value T33 GTEQ
+A5	Eq-Temporal-Period-Value T35 future
+A6	Assertion-Type-Value E14 hypothetical
+A7	Eq-Temporal-Unit-Value T42 month
+A9	Stability-Value T49 change
+A8	Eq-Temporal-Period-Value T43 past
+A10	Assertion-Type-Value E26 hypothetical
+A11	Eq-Temporal-Period-Value T52 past
+A12	Eq-Temporal-Period-Value T54 past
+R1	Treatment-For Arg1:E13 Arg2:E7
+R2	Caused-By Arg1:T49 Arg2:E3

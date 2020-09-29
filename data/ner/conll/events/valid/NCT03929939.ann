@@ -1,0 +1,141 @@
+E3	Condition:T3 Name:T4 Temporality:E24
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8 Temporality:E25
+E9	Condition:T9 Name:T10
+E11	Observation:T11 Name:T12 Minimum-Count:E18 Duration:E20
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18 Temporality:E27
+E19	Condition:T19 Name:T20
+E21	Condition:T21 Name:T22 Temporality:E28
+E22	Eq-Comparison:T30 Operator:T24 Value:T29 Unit:T68 Per:T69
+E23	Eq-Comparison:T31 Operator:T26 Value:T27 Value2:T28
+E24	Eq-Comparison:T32 Temporal-Period:T33
+E25	Eq-Comparison:T34 Temporal-Period:T35
+E27	Eq-Comparison:T38 Temporal-Period:T39
+E28	Eq-Comparison:T40 Temporal-Period:T41
+E1	Observation:T42 Name:T43
+E2	And:T44 Arg:E1 Arg2:E3
+E4	Or:T45 Arg:E3 Arg2:T2
+E6	Observation:T46 Name:T47
+E8	Negation:T48 Negates:E6
+E10	Negation:T49 Negates:E7
+E12	Negation:T50 Negates:E9
+E14	Age:T51 Eq-Comparison:E23
+E16	Condition:T52 Name:T53
+E18	Eq-Comparison:T54 Operator:T23 Value:T55 Per:T56
+E20	Eq-Comparison:T57 Value:T58 Temporal-Unit:T25 Operator:T59
+E29	Condition:T60 Name:T61
+E30	Modifier:T62 Modifies:T61
+E31	Modifier:T63 Modifies:T61
+E32	Or:T64 Arg:E31 Arg2:E30
+E26	Procedure:T36 Name:T37
+E33	Modifier:T65 Modifies:T14
+E34	Observation:T66 Name:T67 Eq-Comparison:E22
+E35	Drug:T70 Name:T71
+E36	Exception:T72 From:E17 Except:E35
+E37	Condition:T73 Name:T74
+E38	Procedure:T75 Name:T76
+E39	Condition:T77 Name:T78 Stability:T82
+E40	Condition:T79 Name:T80 Stability:T82
+E41	Or:T81 Arg:E39 Arg2:E40
+T1	Life-Stage-And-Gender 37 43	female
+T2	Life-Stage-And-Gender 111 117	female
+T3	Condition 80 84	PTSD
+T4	Condition-Name 80 84	PTSD
+T5	Condition 94 98	PTSD
+T6	Condition-Name 94 98	PTSD
+T7	Condition 161 165	PTSD
+T8	Condition-Name 161 165	PTSD
+T9	Condition 179 183	PTSD
+T10	Condition-Name 179 183	PTSD
+T11	Observation 251 260	exercises
+T12	Observation-Name 251 260	exercises
+T13	Condition 454 468	kidney disease
+T14	Condition-Name 454 468	kidney disease
+T15	Condition 506 533	Peripheral vascular disease
+T16	Condition-Name 506 533	Peripheral vascular disease
+T17	Condition 576 598	substance use disorder
+T18	Condition-Name 576 598	substance use disorder
+T19	Condition 540 561	Peripheral neuropathy
+T20	Condition-Name 540 561	Peripheral neuropathy
+T21	Condition 773 782	pregnancy
+T22	Condition-Name 773 782	pregnancy
+T23	Eq-Operator 261 270	less than
+T24	Eq-Operator 487 488	>
+T25	Eq-Temporal-Unit 301 308	minutes
+T26	Eq-Operator 230 231	-
+T27	Eq-Value 228 230	18
+T28	Eq-Value 231 233	65
+T29	Eq-Value 489 492	1.5
+T30	Eq-Comparison 487 498	> 1.5 mg/dL
+T31	Eq-Comparison 228 233	18-65
+T32	Eq-Comparison 59 66	current
+T33	Eq-Temporal-Period 59 66	current
+T34	Eq-Comparison 140 147	current
+T35	Eq-Temporal-Period 140 147	current
+T38	Eq-Comparison 568 575	Current
+T39	Eq-Temporal-Period 568 575	Current
+T40	Eq-Comparison 765 772	Current
+T41	Eq-Temporal-Period 765 772	Current
+T42	Observation 44 51	veteran
+T43	Observation-Name 44 51	veteran
+T44	And 52 56	with
+T45	Or 106 108	or
+T46	Observation 122 129	veteran
+T47	Observation-Name 122 129	veteran
+T48	Negation 118 121	non
+T49	Negation 130 137	without
+T50	Negation 175 178	non
+T51	Age 220 224	ages
+T52	Condition 240 249	Sedentary
+T53	Condition-Name 240 249	Sedentary
+T54	Eq-Comparison 261 289	less than three times a week
+T55	Eq-Value 271 276	three
+T56	Eq-Temporal-Unit 285 289	week
+T57	Eq-Comparison 294 316	thirty minutes or less
+T58	Eq-Value 294 300	thirty
+T59	Eq-Operator 309 316	or less
+T60	Condition 393 401	diseases
+T61	Condition-Name 393 401	diseases
+T62	Modifier 380 392	neurological
+T63	Modifier 360 375	cardiopulmonary
+T64	Or 376 379	and
+T36	Procedure 419 439	physical examination
+T37	Procedure-Name 419 439	physical examination
+T65	Modifier 446 453	Chronic
+T66	Observation 470 486	serum creatinine
+T67	Observation-Name 470 486	serum creatinine
+T68	Eq-Unit 493 495	mg
+T69	Eq-Unit 496 498	dL
+T70	Drug 610 617	tobacco
+T71	Drug-Name 610 617	tobacco
+T72	Exception 599 609	other than
+T73	Condition 632 658	Endurance-trained athletes
+T74	Condition-Name 632 658	Endurance-trained athletes
+T75	Procedure 681 698	exercise training
+T76	Procedure-Name 681 698	exercise training
+T77	Condition 702 728	sympathetic neural control
+T78	Condition-Name 702 728	sympathetic neural control
+T79	Condition 733 758	cardiac-vascular function
+T80	Condition-Name 733 758	cardiac-vascular function
+T81	Or 729 732	and
+T82	Stability 670 677	effects
+A1	Life-Stage-And-Gender-Type T1 female
+A2	Life-Stage-And-Gender-Type T2 female
+A3	Eq-Operator-Value T23 LT
+A4	Eq-Operator-Value T24 GT
+A5	Eq-Temporal-Unit-Value T25 minute
+A6	Eq-Operator-Value T26 BETWEEN
+A7	Eq-Temporal-Period-Value T33 present
+A8	Eq-Temporal-Period-Value T35 present
+A10	Eq-Temporal-Period-Value T39 present
+A11	Eq-Temporal-Period-Value T41 present
+A12	Observation-Type-Value T12 social-habit
+A13	Eq-Temporal-Unit-Value T56 week
+A14	Eq-Operator-Value T59 LTEQ
+A9	Observation-Type-Value T67 lab
+A15	Stability-Value T82 change
+R1	Found-By Arg1:E29 Arg2:E26
+R2	Equivalent-To Arg1:E34 Arg2:E13
+R3	Caused-By Arg1:T82 Arg2:E38

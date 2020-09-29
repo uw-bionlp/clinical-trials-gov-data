@@ -1,0 +1,102 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E8	Observation:T8 Name:T9 Eq-Comparison:E14
+E10	Condition:T10 Name:T11
+E11	Age:T20 Eq-Comparison:E12
+E12	Eq-Comparison:T27 Operator:T13 Value:T21 Operator2:T35 Operator3:T14 Value2:T19 Temporal-Unit:T22
+E14	Eq-Comparison:T29 Operator:T15 Value:T23 Operator2:T16 Operator3:T16 Operator4:T28
+E16	Eq-Comparison:T31 Operator:T17 Value:T25 Unit:T37
+E17	Eq-Comparison:T32 Operator:T18 Value:T26 Unit:T41
+E2	Or:T34 Arg:T7 Arg2:T33
+E4	Modifier:T5 Modifies:T4
+E5	Modifier:T6 Modifies:T4
+E6	Modifier:T30 Modifies:T4
+E7	Family-Member:T36 Has:E1
+E9	Observation:T38 Name:T39 Eq-Comparison:E16 Eq-Comparison2:E17
+E13	And:T42 Arg:E16 Arg2:E17
+E15	Condition:T43 Name:T44
+E19	Modifier:T46 Modifies:E15
+E20	Or:T47 Arg:E19 Arg2:E18
+E21	Drug:T48 Temporality:E22
+E22	Eq-Comparison:T50 Temporal-Period:T49
+E23	Drug:T51 Name:T52
+E24	Exception:T53 From:E21 Except:E23
+E25	Condition:T54 Name:T55
+E26	Or:T56 Arg:E10 Arg2:E25
+E18	Assertion:T45 Asserted:E15
+T1	Condition 199 226	congenital Long QT syndrome
+T2	Condition-Name 199 226	congenital Long QT syndrome
+T3	Condition 124 140	Chronic diseases
+T4	Condition-Name 124 140	Chronic diseases
+T7	Life-Stage-And-Gender 33 36	men
+T8	Observation 79 82	BMI
+T9	Observation-Name 79 82	BMI
+T10	Condition 392 401	Pregnancy
+T11	Condition-Name 392 401	Pregnancy
+T12	Life-Stage-And-Gender 253 256	men
+T13	Eq-Operator 56 57	≥
+T15	Eq-Operator 83 84	≥
+T16	Eq-Operator 93 94	≤
+T17	Eq-Operator 244 245	>
+T18	Eq-Operator 262 263	>
+T20	Age 52 55	Age
+T21	Eq-Value 57 59	20
+T23	Eq-Value 84 88	18,5
+T24	Eq-Value 94 98	27,5
+T25	Eq-Value 245 248	440
+T26	Eq-Value 263 266	450
+T27	Eq-Comparison 56 73	≥20 and ≤40 years
+T29	Eq-Comparison 83 98	≥18,5 and ≤27,5
+T31	Eq-Comparison 244 251	>440 ms
+T32	Eq-Comparison 262 269	>450 ms
+T33	Life-Stage-And-Gender 41 46	women
+T34	Or 37 40	and
+T35	Eq-Operator 60 63	and
+T14	Eq-Operator 64 65	≤
+T19	Eq-Value 65 67	40
+T22	Eq-Temporal-Unit 68 73	years
+T28	Eq-Operator 89 92	and
+T5	Modifier 142 149	cardiac
+T6	Modifier 151 160	metabolic
+T30	Modifier 162 167	liver
+T36	Family-Member 181 195	family history
+T37	Eq-Unit 249 251	ms
+T38	Observation 233 236	QTc
+T39	Observation-Name 233 236	QTc
+T40	Life-Stage-And-Gender 271 276	women
+T41	Eq-Unit 267 269	ms
+T42	And 258 261	and
+T43	Condition 321 332	bradycardia
+T44	Condition-Name 321 332	bradycardia
+T46	Modifier 283 301	Clinical important
+T47	Or 302 308	and/or
+T48	Drug 346 356	medication
+T49	Eq-Temporal-Period 338 345	Regular
+T50	Eq-Comparison 338 345	Regular
+T51	Drug 358 377	contraceptive pills
+T52	Drug-Name 358 377	contraceptive pills
+T53	Exception 378 385	allowed
+T54	Condition 406 419	breastfeeding
+T55	Condition-Name 406 419	breastfeeding
+T56	Or 402 405	and
+T45	Assertion 309 320	symptomatic
+A1	Observation-Type-Value T9 vital
+A2	Eq-Operator-Value T13 GTEQ
+A4	Eq-Operator-Value T15 GTEQ
+A5	Eq-Operator-Value T16 LTEQ
+A6	Eq-Operator-Value T17 GT
+A7	Eq-Operator-Value T18 GT
+A9	Life-Stage-And-Gender-Type T33 female
+A10	Life-Stage-And-Gender-Type T7 male
+A11	Eq-Operator-Value T35 BETWEEN
+A3	Eq-Operator-Value T14 LTEQ
+A8	Eq-Temporal-Unit-Value T22 year
+A12	Eq-Operator-Value T28 BETWEEN
+A13	Life-Stage-And-Gender-Type T12 male
+A14	Observation-Type-Value T39 measurement
+A15	Life-Stage-And-Gender-Type T40 female
+A16	Eq-Temporal-Period-Value T49 present
+A17	Assertion-Type-Value E18 possible
+R1	Example-Of Arg1:E7 Arg2:E3
+R2	If-Then Arg1:T12 Arg2:E16
+R3	If-Then Arg1:T40 Arg2:E17

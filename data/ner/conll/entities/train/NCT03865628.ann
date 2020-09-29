@@ -1,0 +1,29 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E2	Modifier:T8 Modifies:T4
+E4	Observation:T9 Name:T10 Eq-Comparison:E6
+E5	Modifier:T11 Modifies:T10
+E6	Eq-Comparison:T12 Operator:T5 Value:T7 Unit:T6
+E7	Condition:T13 Name:T14
+E8	Modifier:T15 Modifies:T14
+E9	Modifier:T16 Modifies:T14
+E10	Or:T17 Arg:E9 Arg2:E8
+T1	Condition 209 221	Fetal anemia
+T2	Condition-Name 209 221	Fetal anemia
+T3	Condition 35 44	pregnancy
+T4	Condition-Name 35 44	pregnancy
+T5	Eq-Operator 81 90	less than
+T6	Eq-Unit 111 121	percentile
+T7	Eq-Value 106 110	10th
+T8	Modifier 25 34	Singleton
+T9	Observation 74 80	weight
+T10	Observation-Name 74 80	weight
+T11	Modifier 68 73	fetal
+T12	Eq-Comparison 81 121	less than estimation the 10th percentile
+T13	Condition 190 203	malformations
+T14	Condition-Name 190 203	malformations
+T15	Modifier 181 189	vascular
+T16	Modifier 171 176	Fetal
+T17	Or 177 180	and
+A1	Eq-Operator-Value T5 LT
+A2	Observation-Type-Value T10 vital

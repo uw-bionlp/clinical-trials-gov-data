@@ -1,0 +1,34 @@
+E1	Condition:T1 Name:T2
+E2	Modifier:T3 Modifies:T2
+E3	Modifier:T4 Modifies:T2
+E4	Condition:T5 Name:T6
+E5	Modifier:T7 Modifies:T6
+E6	Modifier:T8 Modifies:T6
+E7	Or:T9 Arg:E6 Arg2:E5
+E8	Condition:T10 Name:T11 Polarity:T12
+E9	Condition:T13 Name:T14 Polarity:T15
+E10	Or:T16 Arg:E8 Arg2:E9
+E11	Condition:T17 Name:T18
+T1	Condition 45 62	mesenchymal tumor
+T2	Condition-Name 45 62	mesenchymal tumor
+T3	Modifier 37 44	primary
+T4	Modifier 70 92	gastrointestinal tract
+T5	Condition 171 178	profile
+T6	Condition-Name 171 178	profile
+T7	Modifier 123 142	immunohistochemical
+T8	Modifier 100 118	histomorphological
+T9	Or 119 122	and
+T10	Condition 144 149	CD117
+T11	Condition-Name 144 149	CD117
+T12	Polarity 150 153	(+)
+T13	Condition 161 165	DOG1
+T14	Condition-Name 161 165	DOG1
+T15	Polarity 166 169	(+)
+T16	Or 154 160	and/or
+T17	Condition 195 199	GIST
+T18	Condition-Name 195 199	GIST
+A1	Polarity-Value T12 positive
+A2	Polarity-Value T15 positive
+R1	Equivalent-To Arg1:E8 Arg2:E6
+R2	Equivalent-To Arg1:E9 Arg2:E5
+R3	Caused-By Arg1:E11 Arg2:E4

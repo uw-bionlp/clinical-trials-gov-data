@@ -1,0 +1,93 @@
+E3	Condition:T3 Name:T4 Duration:E6
+E5	Condition:T5 Name:T6
+E7	Procedure:T7 Name:T8
+E8	Age:T17 Eq-Comparison:E14
+E9	Age:T18 Eq-Comparison:E11
+E10	Eq-Comparison:T23 Operator:T9 Value:T19
+E11	Eq-Comparison:T24 Operator:T11 Temporal-Unit:T15 Value:T21
+E1	Observation:T1 Name:T2
+E2	Assertion:T25 Asserted:E1
+E4	Observation:T26 Name:T27
+E6	Eq-Comparison:T28 Operator:T29 Temporal-Unit:T13 Value:T30
+E12	Observation:T31 Name:T32 Eq-Comparison:E10
+E13	And:T33 Arg:E3 Arg2:E12
+E14	Eq-Comparison:T34 Operator:T35 Temporal-Unit:T14 Value:T20
+E15	And:T10 Arg:E8 Arg2:E9
+E16	Condition:T12 Name:T36
+E17	Condition:T37 Name:T38
+E18	Or:T39 Arg:E16 Arg2:E17
+E19	Procedure:T40 Name:T41
+E20	Contraindication:T42 Contraindicates:E19
+E21	Condition:T43 Name:T44
+E22	Condition:T45 Name:T46 Duration:E23
+E23	Eq-Comparison:T47 Temporal-Unit:T16 Value:T22
+E24	Eq-Comparison:T48 Temporal-Period:T49
+E25	Study:T50 Temporality:E24
+E26	Observation:T51 Name:T52
+T3	Condition 189 210	chronic low back pain
+T4	Condition-Name 189 210	chronic low back pain
+T5	Condition 726 740	claustrophobia
+T6	Condition-Name 726 740	claustrophobia
+T7	Procedure 681 702	ferromagnetic implant
+T8	Procedure-Name 681 702	ferromagnetic implant
+T9	Eq-Operator 270 282	greater than
+T11	Eq-Operator 527 539	younger than
+T13	Eq-Temporal-Unit 229 235	months
+T14	Eq-Temporal-Unit 509 514	years
+T15	Eq-Temporal-Unit 543 548	years
+T16	Eq-Temporal-Unit 792 799	minutes
+T17	Age 515 518	old
+T18	Age 549 552	old
+T19	Eq-Value 283 284	5
+T20	Eq-Value 506 508	18
+T21	Eq-Value 540 542	75
+T22	Eq-Value 789 791	40
+T23	Eq-Comparison 270 284	greater than 5
+T24	Eq-Comparison 527 548	younger than 75 years
+T1	Observation 96 129	modulate the height of the candle
+T2	Observation-Name 96 129	modulate the height of the candle
+T25	Assertion 85 95	ability to
+T26	Observation 149 169	alpha synchrony test
+T27	Observation-Name 149 169	alpha synchrony test
+T28	Eq-Comparison 215 235	more than six months
+T29	Eq-Operator 215 224	more than
+T30	Eq-Value 225 228	six
+T31	Observation 243 269	visual analogue pain scale
+T32	Observation-Name 243 269	visual analogue pain scale
+T33	And 236 240	with
+T34	Eq-Comparison 497 514	at least 18 years
+T35	Eq-Operator 497 505	at least
+T10	And 523 526	and
+T12	Condition 583 591	Pregnant
+T36	Condition-Name 583 591	Pregnant
+T37	Condition 595 608	breastfeeding
+T38	Condition-Name 595 608	breastfeeding
+T39	Or 592 594	or
+T40	Procedure 670 679	fMRI scan
+T41	Procedure-Name 670 679	fMRI scan
+T42	Contraindication 637 653	contraindication
+T43	Condition 716 724	piercing
+T44	Condition-Name 716 724	piercing
+T45	Condition 742 784	unable to remain in the scanner stationary
+T46	Condition-Name 742 784	unable to remain in the scanner stationary
+T47	Eq-Comparison 789 799	40 minutes
+T48	Eq-Comparison 898 906	previous
+T49	Eq-Temporal-Period 898 906	previous
+T50	Study 907 912	study
+T51	Observation 943 964	protection of justice
+T52	Observation-Name 943 964	protection of justice
+A1	Eq-Operator-Value T9 GT
+A3	Eq-Operator-Value T11 LT
+A5	Eq-Temporal-Unit-Value T13 month
+A6	Eq-Temporal-Unit-Value T14 year
+A7	Eq-Temporal-Unit-Value T15 year
+A8	Eq-Temporal-Unit-Value T16 minute
+A9	Assertion-Type-Value E2 hypothetical
+A10	Eq-Operator-Value T29 GT
+A11	Observation-Type-Value T32 measurement
+A12	Eq-Operator-Value T35 GTEQ
+A13	Eq-Temporal-Period-Value T49 past
+R1	Example-Of Arg1:E7 Arg2:E20
+R2	Example-Of Arg1:E21 Arg2:E20
+R3	Example-Of Arg1:E5 Arg2:E20
+R4	Example-Of Arg1:E22 Arg2:E20

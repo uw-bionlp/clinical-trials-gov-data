@@ -1,0 +1,166 @@
+E6	Procedure:T6 Name:T7
+E8	Procedure:T8 Name:T9
+E10	Age:T22 Eq-Comparison:E23
+E11	Eq-Comparison:T36 Operator:T10 Value:T24
+E12	Eq-Comparison:T37 Operator:T11 Temporal-Unit:T15 Value:T25
+E13	Eq-Comparison:T38 Operator:T12 Unit:T20 Value:T26
+E14	Eq-Comparison:T39 Operator:T13 Value:T27 Unit:T48
+E15	Eq-Comparison:T40 Operator:T14 Temporal-Unit:T18 Value:T33
+E16	Eq-Comparison:T41 Operator:T23 Value:T35 Value2:T94 Unit:T95
+E1	Condition:T1 Name:T2
+E2	Age:T42 Eq-Comparison:E11 Eq-Comparison2:E12
+E4	Condition:T21 Name:T43 Polarity:T50
+E5	Observation:T44 Name:T45 Eq-Comparison:E13
+E7	Observation:T46 Name:T47 Eq-Comparison:E14
+E9	And:T49 Arg:E5 Arg2:E7
+E17	Condition:T51 Name:T52 Polarity:T53
+E18	Procedure:T54 Name:T55 Duration:E20 Temporality:E21
+E19	Modifier:T56 Modifies:T55
+E20	Eq-Comparison:T57 Operator:T58 Temporal-Unit:T16 Value:T28
+E21	Eq-Comparison:T59 Per:T60 Operator:T61 Value:T29 Value2:T30 Temporal-Unit:T62
+E22	Assertion:T63 Asserted:E10
+E23	Eq-Comparison:T64 Operator:T65 Value:T31 Temporal-Unit:T17
+E3	Observation:T66 Name:T67
+E24	And:T68 Arg:T4 Arg2:E3
+E25	Observation:T69 Name:T70 Eq-Comparison:E26
+E26	Eq-Comparison:T5 Operator:T71 Value:T32 Unit:T72 Temporal-Unit:T73 Temporal-Unit2:T74
+E27	Condition:T75 Name:T76 Temporality:E28 Temporality2:E15
+E28	Eq-Comparison:T77 Temporal-Period:T78
+E29	Eq-Comparison:T79 Temporal-Period:T80 Value:T34 Temporal-Unit:T19
+E30	Temporal-Connection:T81 Arg:E6 Arg2:E29
+E31	Procedure:T82 Name:T83 Temporality:E35 Duration:E34
+E32	Or:T84 Arg:E31 Arg2:E8
+E33	Modifier:T85 Modifies:T9
+E34	Eq-Comparison:T86 Value:T87 Temporal-Unit:T88
+E35	Eq-Comparison:T89 Temporal-Period:T90
+E36	Observation:T91 Name:T92 Polarity:T93 Eq-Comparison:E16
+T6	Procedure 470 494	Pulmonary rehabilitation
+T7	Procedure-Name 470 494	Pulmonary rehabilitation
+T8	Procedure 576 586	O2 therapy
+T9	Procedure-Name 576 586	O2 therapy
+T10	Eq-Operator 63 64	<
+T11	Eq-Operator 68 69	<
+T12	Eq-Operator 106 107	≥
+T13	Eq-Operator 124 125	≥
+T14	Eq-Operator 454 455	<
+T15	Eq-Temporal-Unit 72 77	years
+T16	Eq-Temporal-Unit 200 206	months
+T17	Eq-Temporal-Unit 301 306	years
+T18	Eq-Temporal-Unit 457 462	weeks
+T19	Eq-Temporal-Unit 521 527	months
+T20	Eq-Unit 111 115	mmHg
+T22	Age 292 295	age
+T23	Eq-Operator 662 663	-
+T24	Eq-Value 60 62	18
+T25	Eq-Value 69 71	80
+T26	Eq-Value 108 110	65
+T27	Eq-Value 126 128	92
+T28	Eq-Value 198 199	3
+T29	Eq-Value 231 233	12
+T30	Eq-Value 238 240	15
+T31	Eq-Value 299 300	5
+T32	Eq-Value 370 372	15
+T33	Eq-Value 455 456	6
+T34	Eq-Value 519 520	2
+T35	Eq-Value 663 665	50
+T36	Eq-Comparison 60 64	18 <
+T37	Eq-Comparison 68 77	<80 years
+T38	Eq-Comparison 106 115	≥ 65 mmHg
+T39	Eq-Comparison 124 129	≥ 92%
+T40	Eq-Comparison 454 462	<6 weeks
+T41	Eq-Comparison 660 666	35-50%
+T1	Condition 25 29	COPD
+T2	Condition-Name 25 29	COPD
+T42	Age 64 67	Age
+T21	Condition 87 91	LTOT
+T43	Condition-Name 87 91	LTOT
+T44	Observation 101 105	PaO2
+T45	Observation-Name 101 105	PaO2
+T46	Observation 120 124	SaO2
+T47	Observation-Name 120 124	SaO2
+T48	Eq-Unit 128 129	%
+T49	And 116 119	and
+T50	Polarity 91 92	-
+T51	Condition 135 139	LTOT
+T52	Condition-Name 135 139	LTOT
+T53	Polarity 139 140	+
+T54	Procedure 158 172	oxygenotherapy
+T55	Procedure-Name 158 172	oxygenotherapy
+T56	Modifier 148 157	long term
+T57	Eq-Comparison 188 206	more than 3 months
+T58	Eq-Operator 188 197	more than
+T59	Eq-Comparison 213 246	daily use between 12 and 15 hours
+T60	Eq-Temporal-Unit 213 218	daily
+T61	Eq-Operator 223 230	between
+T62	Eq-Temporal-Unit 241 246	hours
+T63	Assertion 272 279	will be
+T64	Eq-Comparison 297 306	± 5 years
+T65	Eq-Operator 297 298	±
+T4	Life-Stage-And-Gender 309 312	sex
+T66	Observation 317 334	physical activity
+T67	Observation-Name 317 334	physical activity
+T68	And 313 316	and
+T69	Observation 348 366	GPAQ questionnaire
+T70	Observation-Name 348 366	GPAQ questionnaire
+T5	Eq-Comparison 368 387	± 15% Mets.min/week
+T71	Eq-Operator 368 369	±
+T72	Eq-Unit 372 373	%
+T73	Eq-Temporal-Unit 379 382	min
+T74	Eq-Temporal-Unit 383 387	week
+T75	Condition 422 452	cardiorespiratory exacerbation
+T76	Condition-Name 422 452	cardiorespiratory exacerbation
+T77	Eq-Comparison 415 421	Recent
+T78	Eq-Temporal-Period 415 421	Recent
+T79	Eq-Comparison 514 527	last 2 months
+T80	Eq-Temporal-Period 514 518	last
+T81	Temporal-Connection 503 509	during
+T82	Procedure 544 548	LTOT
+T83	Procedure-Name 544 548	LTOT
+T84	Or 560 562	or
+T85	Modifier 563 575	deambulation
+T86	Eq-Comparison 550 558	24 hours
+T87	Eq-Value 550 552	24
+T88	Eq-Temporal-Unit 553 558	hours
+T89	Eq-Comparison 533 543	Continuous
+T90	Eq-Temporal-Period 533 543	Continuous
+T91	Observation 623 633	Hematocrit
+T92	Observation-Name 623 633	Hematocrit
+T93	Polarity 634 658	outside the normal range
+T94	Eq-Value 660 662	35
+T95	Eq-Unit 665 666	%
+A1	Eq-Operator-Value T10 LT
+A2	Eq-Operator-Value T11 LT
+A3	Eq-Operator-Value T12 GTEQ
+A4	Eq-Operator-Value T13 GTEQ
+A5	Eq-Operator-Value T14 LT
+A6	Eq-Temporal-Unit-Value T15 year
+A7	Eq-Temporal-Unit-Value T16 month
+A8	Eq-Temporal-Unit-Value T17 year
+A9	Eq-Temporal-Unit-Value T18 week
+A10	Eq-Temporal-Unit-Value T19 month
+A11	Eq-Operator-Value T23 BETWEEN
+A12	Observation-Type-Value T45 vital
+A13	Observation-Type-Value T47 vital
+A14	Polarity-Value T50 negative
+A15	Polarity-Value T53 positive
+A16	Eq-Operator-Value T58 GT
+A17	Eq-Temporal-Unit-Value T60 day
+A18	Eq-Operator-Value T61 BETWEEN
+A19	Eq-Temporal-Unit-Value T62 hour
+A20	Assertion-Type-Value E22 hypothetical
+A21	Eq-Operator-Value T65 PLUS-MINUS
+A22	Observation-Type-Value T67 social-habit
+A23	Observation-Type-Value T70 survey-or-questionnaire
+A24	Eq-Operator-Value T71 PLUS-MINUS
+A25	Eq-Temporal-Unit-Value T73 minute
+A26	Eq-Temporal-Unit-Value T74 week
+A27	Eq-Temporal-Period-Value T78 recent
+A28	Eq-Temporal-Period-Value T80 past
+A29	Temporal-Connection-Type-Value E30 during
+A30	Eq-Temporal-Unit-Value T88 hour
+A31	Eq-Temporal-Period-Value T90 present
+A32	Observation-Type-Value T92 lab
+A33	Polarity-Value T93 abnormal
+R1	If-Then Arg1:E4 Arg2:E5
+R2	If-Then Arg1:E17 Arg2:E18
+R3	Equivalent-To Arg1:E34 Arg2:E35

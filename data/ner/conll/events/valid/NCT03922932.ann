@@ -1,0 +1,219 @@
+E1	Condition:T1 Name:T2 Duration:E4
+E3	Condition:T3 Name:T4
+E9	Condition:T9 Name:T10
+E16	Condition:T16 Name:T17
+E18	Condition:T18 Name:T19
+E20	Procedure:T20 Name:T21
+E22	Procedure:T22 Name:T23
+E24	Procedure:T24 Name:T25 Severity:T87 Temporality:E35 Temporality2:E33
+E26	Condition:T26 Name:T27 Temporality:E36
+E28	Procedure:T28 Name:T29
+E30	Condition:T30 Name:T31 Stability:T100
+E33	Eq-Comparison:T44 Operator:T34 Temporal-Unit:T37 Value:T43
+E34	Eq-Comparison:T45 Temporal-Period:T46
+E35	Eq-Comparison:T47 Temporal-Period:T48
+E36	Eq-Comparison:T49 Temporal-Period:T50
+E37	Eq-Comparison:T51 Temporal-Period:T52
+E2	Condition:T53 Name:T54
+E4	Eq-Comparison:T38 Operator:T40 Value:T39 Temporal-Unit:T35
+E6	Or:T55 Arg:E1 Arg2:E3
+E5	Encounter:T5 Duration:E8
+E7	Assertion:T6 Asserted:E5
+E8	Eq-Comparison:T7 Operator:T8 Value:T41 Temporal-Unit:T36
+E10	Condition:T56 Severity:T57
+E12	Encounter:T58
+E14	Negation:T59 Negates:E12
+E15	Assertion:T60 Asserted:E12
+E17	Condition:T61 Name:T62
+E19	Condition:T63
+E21	Condition:T64 Name:T65
+E23	Condition:T66 Name:T67
+E25	Condition:T68 Name:T69 Temporality:E34
+E27	Procedure:T70 Temporality:E37
+E29	Assertion:T71 Asserted:E27
+E31	Condition:T72 Name:T73
+E38	Modifier:T74 Modifies:T73
+E13	Condition:T13 Name:T14
+E11	Observation:T11 Name:T12
+E39	Negation:T15 Negates:E16
+E40	Modifier:T75 Modifies:T19
+E41	Procedure:T76 Name:T77
+E42	Assertion:T78 Asserted:E41
+E43	Observation:T79 Name:T80
+E44	Eq-Comparison:T81 Operator:T82 Value:T42 Per:T83
+E45	Procedure:T84 Name:T85 Stability:T32
+E32	Negation:T33 Negates:T32
+E46	Assertion:T86 Asserted:E32
+E47	Procedure:T88 Name:T89
+E48	Other:T90 Is-Other:E47
+E49	Study:T91
+E50	Temporal-Connection:T92 Arg:E33 Arg2:E49
+E51	Other:T93 Is-Other:E26
+E52	Condition:T94
+E53	Or:T95 Arg:E26 Arg2:E52
+E54	Modifier:T96 Modifies:T31
+E55	Modifier:T97 Modifies:T31
+E56	Modifier:T98 Modifies:T31
+E57	Or:T99 Arg:E55 Arg2:E56
+E58	Assertion:T101 Asserted:T100
+E59	Condition:T102 Name:T103 Severity:T104
+E60	Condition:T105 Name:T106
+E61	Condition:T107 Name:T108
+E62	Condition:T109 Name:T110
+E63	Procedure:T111 Name:T112 Stability:T114
+E64	Study:T113 Study-Of:E63
+T1	Condition 79 94	Type 1 diabetes
+T2	Condition-Name 79 94	Type 1 diabetes
+T3	Condition 132 147	Type 2 diabetes
+T4	Condition-Name 132 147	Type 2 diabetes
+T9	Condition 458 470	hypertension
+T10	Condition-Name 458 470	hypertension
+T16	Condition 850 870	diabetic retinopathy
+T17	Condition-Name 850 870	diabetic retinopathy
+T18	Condition 919 932	macular edema
+T19	Condition-Name 919 932	macular edema
+T20	Procedure 1190 1206	cataract surgery
+T21	Procedure-Name 1190 1206	cataract surgery
+T22	Procedure 1208 1222	scleral buckle
+T23	Procedure-Name 1208 1222	scleral buckle
+T24	Procedure 1165 1176	eye surgery
+T25	Procedure-Name 1165 1176	eye surgery
+T26	Condition 1310 1321	eye disease
+T27	Condition-Name 1310 1321	eye disease
+T28	Procedure 1178 1188	vitrectomy
+T29	Procedure-Name 1178 1188	vitrectomy
+T30	Condition 1350 1357	retinal
+T31	Condition-Name 1350 1357	retinal
+T34	Eq-Operator 1257 1263	within
+T35	Eq-Temporal-Unit 109 114	years
+T36	Eq-Temporal-Unit 217 222	years
+T37	Eq-Temporal-Unit 1267 1271	days
+T39	Eq-Value 107 108	5
+T41	Eq-Value 215 216	3
+T42	Eq-Value 1077 1079	20
+T43	Eq-Value 1264 1266	90
+T44	Eq-Comparison 1257 1271	within 90 days
+T45	Eq-Comparison 583 589	active
+T46	Eq-Temporal-Period 583 589	active
+T47	Eq-Comparison 1148 1155	History
+T48	Eq-Temporal-Period 1148 1155	History
+T49	Eq-Comparison 1291 1298	History
+T50	Eq-Temporal-Period 1291 1298	History
+T51	Eq-Comparison 626 631	prior
+T52	Eq-Temporal-Period 626 631	prior
+T53	Condition 47 56	Diabetics
+T54	Condition-Name 47 56	Diabetics
+T38	Eq-Comparison 98 114	at least 5 years
+T40	Eq-Operator 98 106	at least
+T55	Or 124 126	or
+T5	Encounter 200 209	follow-up
+T6	Assertion 181 188	Able to
+T7	Eq-Comparison 210 222	over 3 years
+T8	Eq-Operator 210 214	over
+T56	Condition 291 308	medical condition
+T57	Severity 279 290	Significant
+T58	Encounter 335 344	follow-up
+T59	Negation 345 354	difficult
+T60	Assertion 314 319	would
+T61	Condition 420 450	retinal vascular abnormalities
+T62	Condition-Name 420 450	retinal vascular abnormalities
+T63	Condition 387 403	medical problems
+T64	Condition 472 491	systemic vasculitis
+T65	Condition-Name 472 491	systemic vasculitis
+T66	Condition 493 514	carotid insufficiency
+T67	Condition-Name 493 514	carotid insufficiency
+T68	Condition 590 608	neovascularization
+T69	Condition-Name 590 608	neovascularization
+T70	Procedure 632 641	treatment
+T71	Assertion 610 625	with or without
+T72	Condition 669 694	fibrovascular proliferans
+T73	Condition-Name 669 694	fibrovascular proliferans
+T74	Modifier 659 668	involuted
+T13	Condition 713 717	NPDR
+T14	Condition-Name 713 717	NPDR
+T11	Observation 752 810	International Clinical Diabetic Retinopathy Severity Scale
+T12	Observation-Name 752 810	International Clinical Diabetic Retinopathy Severity Scale
+T15	Negation 835 837	No
+T75	Modifier 902 918	center-involving
+T76	Procedure 943 952	treatment
+T77	Procedure-Name 943 952	treatment
+T78	Assertion 933 942	requiring
+T79	Observation 1052 1065	Visual acuity
+T80	Observation-Name 1052 1065	Visual acuity
+T81	Eq-Comparison 1066 1083	worse than 20/200
+T82	Eq-Operator 1066 1076	worse than
+T83	Eq-Unit 1080 1083	200
+T84	Procedure 1131 1142	OCT imaging
+T85	Procedure-Name 1131 1142	OCT imaging
+T32	Stability 1111 1117	stable
+T33	Negation 1089 1098	Inability
+T86	Assertion 1089 1098	Inability
+T87	Severity 1159 1164	major
+T88	Procedure 1230 1249	intraocular surgery
+T89	Procedure-Name 1230 1249	intraocular surgery
+T90	Other 1224 1229	other
+T91	Study 1275 1285	enrollment
+T92	Temporal-Connection 1272 1274	of
+T93	Other 1302 1309	another
+T94	Condition 1325 1334	condition
+T95	Or 1322 1324	or
+T96	Modifier 1358 1367	perfusion
+T97	Modifier 1369 1381	permeability
+T98	Modifier 1386 1401	retinal anatomy
+T99	Or 1383 1385	or
+T100	Stability 1344 1349	alter
+T101	Assertion 1340 1343	may
+T102	Condition 1419 1432	media opacity
+T103	Condition-Name 1419 1432	media opacity
+T104	Severity 1407 1418	Substantial
+T105	Condition 1434 1442	cataract
+T106	Condition-Name 1434 1442	cataract
+T107	Condition 1444 1456	corneal scar
+T108	Condition-Name 1444 1456	corneal scar
+T109	Condition 1458 1477	vitreous hemorrhage
+T110	Condition-Name 1458 1477	vitreous hemorrhage
+T111	Procedure 1509 1516	imaging
+T112	Procedure-Name 1509 1516	imaging
+T113	Study 1503 1508	study
+T114	Stability 1488 1497	interfere
+A1	Eq-Operator-Value T34 LTEQ
+A2	Eq-Temporal-Unit-Value T35 year
+A3	Eq-Temporal-Unit-Value T36 year
+A4	Eq-Temporal-Unit-Value T37 day
+A5	Eq-Temporal-Period-Value T46 present
+A6	Eq-Temporal-Period-Value T48 past
+A7	Eq-Temporal-Period-Value T50 past
+A8	Eq-Temporal-Period-Value T52 past
+A9	Eq-Operator-Value T40 GTEQ
+A10	Assertion-Type-Value E7 hypothetical
+A11	Eq-Operator-Value T8 GT
+A12	Severity-Value T57 severe
+A13	Assertion-Type-Value E15 hypothetical
+A14	Assertion-Type-Value E29 hypothetical
+A15	Assertion-Type-Value E42 hypothetical
+A16	Observation-Type-Value T80 measurement
+A17	Eq-Operator-Value T82 LT
+A18	Stability-Value T32 stable
+A19	Assertion-Type-Value E46 hypothetical
+A20	Severity-Value T87 severe
+A21	Temporal-Connection-Type-Value E50 before
+A22	Stability-Value T100 change
+A23	Assertion-Type-Value E58 hypothetical
+A24	Severity-Value T104 severe
+A25	Stability-Value T114 change
+R1	Caused-By Arg1:E14 Arg2:E10
+R2	Caused-By Arg1:E19 Arg2:E17
+R3	Example-Of Arg1:E9 Arg2:E19
+R4	Example-Of Arg1:E21 Arg2:E19
+R5	Example-Of Arg1:E23 Arg2:E19
+R6	Equivalent-To Arg1:E13 Arg2:E11
+R7	Treatment-For Arg1:E41 Arg2:E18
+R8	Example-Of Arg1:E28 Arg2:E24
+R9	Example-Of Arg1:E20 Arg2:E24
+R10	Equivalent-To Arg1:E22 Arg2:E24
+R11	Example-Of Arg1:E47 Arg2:E24
+R12	Caused-By Arg1:T100 Arg2:E52
+R13	Example-Of Arg1:E60 Arg2:E59
+R14	Example-Of Arg1:E61 Arg2:E59
+R15	Example-Of Arg1:E62 Arg2:E59
+R16	Caused-By Arg1:T114 Arg2:E59
