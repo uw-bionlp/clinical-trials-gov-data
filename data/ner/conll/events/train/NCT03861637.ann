@@ -62,138 +62,138 @@ E59	Procedure:T118 Name:T119
 E60	Modifier:T120 Modifies:T119
 E61	Condition:T121 Name:T122
 E62	Or:T123 Arg:E58 Arg2:E61
-T2	Procedure 110 126	renal transplant
-T4	Procedure 208 219	ESA therapy
-T5	Temporal-Connection 248 254	during
-T6	Eq-Comparison 259 272	last 2 months
-T7	Observation 279 290	Haemoglobin
-T8	Eq-Comparison 296 304	≥10mg/dL
-T9	Observation 306 309	Hct
-T10	Eq-Comparison 310 313	32%
-T11	Observation 321 343	Transferrin saturation
-T12	Observation 345 349	TSAT
-T13	Eq-Comparison 351 355	≥20%
-T14	Temporal-Connection 357 363	during
-T15	Study 368 377	screening
-T16	And 391 394	and
-T17	Observation 395 409	serum ferritin
-T18	Eq-Comparison 410 420	≥100 ng/mL
-T21	Or 502 504	or
-T22	Modifier 505 512	chronic
-T23	Condition 513 521	bleeding
-T24	Or 523 525	or
-T26	Procedure 526 549	erythrocyte transfusion
-T27	Eq-Comparison 551 579	within the preceding 8 weeks
-T28	Observation 591 593	Hb
-T30	Eq-Comparison 600 608	≥ 2 g/dL
-T31	Temporal-Connection 609 615	during
-T32	Study 616 625	screening
-T33	Condition 638 654	Hemolytic anemia
-T34	Eq-Comparison 661 667	Recent
-T35	Condition 668 677	infection
-T36	Or 678 680	or
-T37	Condition 681 690	rejection
-T38	Observation 697 721	Diastolic blood pressure
-T40	Eq-Comparison 723 730	100mmHg
-T41	Or 731 733	or
-T42	Negation 734 749	discontinuation
-T43	Procedure 753 756	ESA
-T44	Condition 764 776	hypertension
-T67	Life-Stage-And-Gender 104 109	Adult
-T68	Procedure-Name 110 126	renal transplant
-T69	Stability 176 182	Stable
-T70	Procedure-Name 208 219	ESA therapy
-T71	Eq-Temporal-Period 259 263	last
-T72	Eq-Value 264 265	2
-T73	Eq-Temporal-Unit 266 272	months
-T74	Observation-Name 279 290	Haemoglobin
-T75	Observation-Name 292 294	Hb
-T76	Eq-Value 297 299	10
-T77	Eq-Unit 302 304	dL
-T78	Observation-Name 306 309	Hct
-T79	Eq-Value 310 312	32
-T80	Eq-Unit 312 313	%
-T81	Observation-Name 321 343	Transferrin saturation
-T82	Observation-Name 345 349	TSAT
-T83	Eq-Operator 351 352	≥
-T84	Eq-Unit 354 355	%
-T85	Observation-Name 395 409	serum ferritin
-T86	Eq-Operator 410 411	≥
-T87	Eq-Unit 415 417	ng
-T88	Eq-Unit 418 420	mL
-T89	Severity 496 501	Acute
-T90	Condition-Name 513 521	bleeding
-T91	Procedure-Name 526 549	erythrocyte transfusion
-T92	Eq-Operator 551 557	within
-T93	Eq-Temporal-Period 562 571	preceding
-T94	Eq-Value 572 573	8
-T95	Eq-Temporal-Unit 574 579	weeks
-T96	Stability 581 587	change
-T97	Observation-Name 591 593	Hb
-T98	Eq-Operator 600 601	≥
-T99	Eq-Value 602 603	2
-T100	Eq-Unit 604 605	g
-T101	Eq-Unit 606 608	dL
-T102	Condition-Name 638 654	Hemolytic anemia
-T103	Eq-Temporal-Period 661 667	Recent
-T104	Condition-Name 668 677	infection
-T105	Condition-Name 681 690	rejection
-T106	Observation-Name 697 721	Diastolic blood pressure
-T107	Eq-Operator 722 723	>
-T108	Eq-Value 723 726	100
-T109	Procedure-Name 753 756	ESA
-T110	Condition-Name 764 776	hypertension
-T1	Eq-Comparison 137 145	≥21years
-T127	Eq-Operator 137 138	≥
-T128	Eq-Value 138 140	21
-T129	Eq-Temporal-Unit 140 145	years
-T130	Age 140 145	years
-T3	Modifier 195 207	subcutaneous
-T131	Stability 225 233	constant
-T132	Observation 292 294	Hb
-T133	Eq-Operator 296 297	≥
-T134	Eq-Unit 299 301	mg
-T135	Eq-Value 352 354	20
-T19	Eq-Value 411 414	100
-T20	Eq-Unit 726 730	mmHg
-T25	Eq-Comparison 784 792	6 months
-T29	Eq-Value 784 785	6
-T39	Eq-Temporal-Unit 786 792	months
-T45	Temporal-Connection 793 801	prior to
-T46	Study 802 807	study
-T47	Condition 840 850	deficiency
-T48	Condition-Name 840 850	deficiency
-T49	Modifier 814 825	Vitamin B12
-T50	Modifier 829 839	folic acid
-T51	Or 826 828	or
-T52	Condition 883 902	hyperparathyroidism
-T53	Condition-Name 883 902	hyperparathyroidism
-T54	Modifier 873 882	secondary
-T55	Modifier 857 869	Uncontrolled
-T56	Or 870 872	or
-T57	Severity 909 914	Acute
-T58	Modifier 918 925	chronic
-T59	Condition 926 955	systemic inflammatory disease
-T60	Condition-Name 926 955	systemic inflammatory disease
-T61	Or 915 917	or
-T62	Observation 963 981	C-reactive protein
-T63	Observation-Name 963 981	C-reactive protein
-T64	Or 956 962	and/or
-T65	Observation 983 986	CRP
-T66	Observation-Name 983 986	CRP
-T111	Eq-Comparison 988 996	>30 mg/L
-T112	Eq-Operator 988 989	>
-T113	Eq-Value 989 991	30
-T114	Eq-Unit 992 994	mg
-T115	Eq-Unit 995 996	L
-T116	Procedure 1003 1015	Hemodialysis
-T117	Procedure-Name 1003 1015	Hemodialysis
-T118	Procedure 1036 1053	kidney transplant
-T119	Procedure-Name 1036 1053	kidney transplant
-T120	Modifier 1023 1030	failure
-T121	Condition 1064 1074	malignancy
-T122	Condition-Name 1064 1074	malignancy
-T123	Or 1060 1063	and
+T2	Procedure 130 126	renal transplant
+T4	Procedure 234 219	ESA therapy
+T5	Temporal-Connection 269 254	during
+T6	Eq-Comparison 288 272	last 2 months
+T7	Observation 308 290	Haemoglobin
+T8	Eq-Comparison 329 304	≥10mg/dL
+T9	Observation 335 309	Hct
+T10	Eq-Comparison 341 313	32%
+T11	Observation 376 343	Transferrin saturation
+T12	Observation 383 349	TSAT
+T13	Eq-Comparison 393 355	≥20%
+T14	Temporal-Connection 402 363	during
+T15	Study 416 377	screening
+T16	And 437 394	and
+T17	Observation 452 409	serum ferritin
+T18	Eq-Comparison 467 420	≥100 ng/mL
+T21	Or 555 504	or
+T22	Modifier 563 512	chronic
+T23	Condition 572 521	bleeding
+T24	Or 577 525	or
+T26	Procedure 601 549	erythrocyte transfusion
+T27	Eq-Comparison 633 579	within the preceding 8 weeks
+T28	Observation 649 593	Hb
+T30	Eq-Comparison 667 608	≥ 2 g/dL
+T31	Temporal-Connection 674 615	during
+T32	Study 684 625	screening
+T33	Condition 715 654	Hemolytic anemia
+T34	Eq-Comparison 730 667	Recent
+T35	Condition 740 677	infection
+T36	Or 743 680	or
+T37	Condition 753 690	rejection
+T38	Observation 786 721	Diastolic blood pressure
+T40	Eq-Comparison 798 730	100mmHg
+T41	Or 801 733	or
+T42	Negation 817 749	discontinuation
+T43	Procedure 824 756	ESA
+T44	Condition 844 776	hypertension
+T67	Life-Stage-And-Gender 113 109	Adult
+T68	Procedure-Name 130 126	renal transplant
+T69	Stability 197 182	Stable
+T70	Procedure-Name 234 219	ESA therapy
+T71	Eq-Temporal-Period 278 263	last
+T72	Eq-Value 281 265	2
+T73	Eq-Temporal-Unit 288 272	months
+T74	Observation-Name 308 290	Haemoglobin
+T75	Observation-Name 313 294	Hb
+T76	Eq-Value 321 299	10
+T77	Eq-Unit 329 304	dL
+T78	Observation-Name 335 309	Hct
+T79	Eq-Value 339 312	32
+T80	Eq-Unit 341 313	%
+T81	Observation-Name 376 343	Transferrin saturation
+T82	Observation-Name 383 349	TSAT
+T83	Eq-Operator 387 352	≥
+T84	Eq-Unit 393 355	%
+T85	Observation-Name 452 409	serum ferritin
+T86	Eq-Operator 454 411	≥
+T87	Eq-Unit 462 417	ng
+T88	Eq-Unit 467 420	mL
+T89	Severity 552 501	Acute
+T90	Condition-Name 572 521	bleeding
+T91	Procedure-Name 601 549	erythrocyte transfusion
+T92	Eq-Operator 610 557	within
+T93	Eq-Temporal-Period 624 571	preceding
+T94	Eq-Value 627 573	8
+T95	Eq-Temporal-Unit 633 579	weeks
+T96	Stability 643 587	change
+T97	Observation-Name 649 593	Hb
+T98	Eq-Operator 657 601	≥
+T99	Eq-Value 660 603	2
+T100	Eq-Unit 662 605	g
+T101	Eq-Unit 667 608	dL
+T102	Condition-Name 715 654	Hemolytic anemia
+T103	Eq-Temporal-Period 730 667	Recent
+T104	Condition-Name 740 677	infection
+T105	Condition-Name 753 690	rejection
+T106	Observation-Name 786 721	Diastolic blood pressure
+T107	Eq-Operator 788 723	>
+T108	Eq-Value 793 726	100
+T109	Procedure-Name 824 756	ESA
+T110	Condition-Name 844 776	hypertension
+T1	Eq-Comparison 154 145	≥21years
+T127	Eq-Operator 144 138	≥
+T128	Eq-Value 148 140	21
+T129	Eq-Temporal-Unit 154 145	years
+T130	Age 154 145	years
+T3	Modifier 222 207	subcutaneous
+T131	Stability 248 233	constant
+T132	Observation 313 294	Hb
+T133	Eq-Operator 317 297	≥
+T134	Eq-Unit 324 301	mg
+T135	Eq-Value 391 354	20
+T19	Eq-Value 459 414	100
+T20	Eq-Unit 798 730	mmHg
+T25	Eq-Comparison 861 792	6 months
+T29	Eq-Value 854 785	6
+T39	Eq-Temporal-Unit 861 792	months
+T45	Temporal-Connection 870 801	prior to
+T46	Study 876 807	study
+T47	Condition 922 850	deficiency
+T48	Condition-Name 922 850	deficiency
+T49	Modifier 897 825	Vitamin B12
+T50	Modifier 911 839	folic acid
+T51	Or 900 828	or
+T52	Condition 976 902	hyperparathyroidism
+T53	Condition-Name 976 902	hyperparathyroidism
+T54	Modifier 956 882	secondary
+T55	Modifier 943 869	Uncontrolled
+T56	Or 946 872	or
+T57	Severity 990 914	Acute
+T58	Modifier 1001 925	chronic
+T59	Condition 1031 955	systemic inflammatory disease
+T60	Condition-Name 1031 955	systemic inflammatory disease
+T61	Or 993 917	or
+T62	Observation 1061 981	C-reactive protein
+T63	Observation-Name 1061 981	C-reactive protein
+T64	Or 1040 962	and/or
+T65	Observation 1067 986	CRP
+T66	Observation-Name 1067 986	CRP
+T111	Eq-Comparison 1082 996	>30 mg/L
+T112	Eq-Operator 1071 989	>
+T113	Eq-Value 1075 991	30
+T114	Eq-Unit 1078 994	mg
+T115	Eq-Unit 1082 996	L
+T116	Procedure 1103 1015	Hemodialysis
+T117	Procedure-Name 1103 1015	Hemodialysis
+T118	Procedure 1141 1053	kidney transplant
+T119	Procedure-Name 1141 1053	kidney transplant
+T120	Modifier 1118 1030	failure
+T121	Condition 1164 1074	malignancy
+T122	Condition-Name 1164 1074	malignancy
+T123	Or 1153 1063	and
 A1	Temporal-Connection-Type-Value E5 during
 A2	Temporal-Connection-Type-Value E14 during
 A3	Temporal-Connection-Type-Value E31 during

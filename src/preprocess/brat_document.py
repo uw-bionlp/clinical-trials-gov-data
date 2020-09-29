@@ -14,7 +14,7 @@ def pretokenize(text):
     is_numeric = False
     prec_numeric = False
     dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧', '±', '：', ':',
-                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙', '+', '%' }
+                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙', '+', '%', 'ᵃ' }
     cleaned = []
     prev = ''
     prev_num = False
@@ -41,7 +41,7 @@ def pretokenize(text):
             add_start = ' '
         if (lowered[:i].endswith('pre') or lowered[:i].endswith('post') or lowered[:i].endswith('peri')) and (lowered[i:].startswith('oper') or lowered[i:].startswith('treat')):
             add_start = ' '
-        if not prev_num and ch == '.':
+        if not prev_num and (ch == '.' or is_num):
             add_start = ' '
         if prev_num and ch == 'x' and foll_num:
             add_start = ' '
@@ -168,9 +168,11 @@ class BratDocument:
             all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
 
             if all_matched:
-                Ts[k].tok_beg_idx = min([ tok.i for tok in matches ])
-                Ts[k].tok_end_idx = max([ tok.i for tok in matches ])
-                Ts[k].tok_idxs    = [ tok.i for tok in matches ]
+                Ts[k].tok_beg_idx  = min([ tok.i for tok in matches ])
+                Ts[k].tok_end_idx  = max([ tok.i for tok in matches ])
+                Ts[k].tok_idxs     = [ tok.i for tok in matches ]
+                Ts[k].char_beg_idx = min([ tok.idx for tok in matches ])
+                Ts[k].char_beg_idx = max([ tok.idx + len(tok.text) for tok in matches ])
             else:
                 print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
 
