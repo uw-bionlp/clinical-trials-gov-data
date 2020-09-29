@@ -51,10 +51,10 @@ E11	Temporal-Connection:T27 Arg:E9 Arg2:E13
 A6	Temporal-Connection-Type-Value E11 before
 T28	Study 237 242	study
 E13	Study:T28 
-T38	Encounter 257 288	admitted in intensive care unit
-E15	Encounter:T38 Type:T39
-T39	Encounter-Type 257 288	admitted in intensive care unit
-A9	Encounter-Type-Value T39 icu
+T38	Encounter 257 265	admitted
+E15	Encounter:T38 Type:T39 Location:T78
+T39	Encounter-Type 257 265	admitted
+A9	Encounter-Type-Value T39 inpatient
 T40	Modifier 299 313	decompensation
 E17	Modifier:T40 Modifies:T42
 T41	Condition 317 339	pulmonary hypertension
@@ -143,3 +143,5 @@ E45	Condition:T75 Name:T76
 T76	Condition-Name 1151 1159	Pregnant
 T77	Or 1160 1162	or
 E46	Or:T77 Arg:E45 Arg2:E16
+T78	Location 269 288	intensive care unit
+A12	Location-Value T78 unit

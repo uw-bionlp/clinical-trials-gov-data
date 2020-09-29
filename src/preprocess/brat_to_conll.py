@@ -11,13 +11,11 @@ from preprocess.config import Config
 import preprocess.utils as utils
 
 
-def to_brat(output_dir, anns):
-    for ann in anns:
-        t, a = ann.to_brat()
-        with open(os.path.join(output_dir, ann.doc_id+'.txt'), 'w+') as fout:
-            fout.write(t)
-        with open(os.path.join(output_dir, ann.doc_id+'.ann'), 'w+') as fout:
-            fout.write(a)
+def to_brat(output_dir, doc_id, Ts, text):
+    with open(os.path.join(output_dir, doc_id+'.txt'), 'w+') as fout:
+        fout.write(text)
+    with open(os.path.join(output_dir, doc_id+'.ann'), 'w+') as fout:
+        fout.write('\n'.join(Ts)) 
 
 
 def brat_events_to_conll(output_filepath, anns):
@@ -56,6 +54,12 @@ def brat_events_to_conll(output_filepath, anns):
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} {label}\n')
                 fout.write('\n')
 
+            brat_dir = os.path.join(Path(output_filepath).parent, 'train' if 'train' in output_filepath else 'valid')
+            Ts = [ v.get_T().to_brat() for v in evs ]
+            text = ann.pretokenized
+            to_brat(brat_dir, ann.doc_id, Ts, text)
+
+
 
 def brat_entities_to_conll(output_filepath, anns):
     with open(output_filepath, 'w+') as fout:
@@ -88,6 +92,11 @@ def brat_entities_to_conll(output_filepath, anns):
                         label = f'{"B" if is_start else "I"}-' + '|'.join(sorted(labels))
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} {label}\n')
                 fout.write('\n')
+
+            brat_dir = os.path.join(Path(output_filepath).parent, 'train' if 'train' in output_filepath else 'valid')
+            Ts = [ v.get_T().to_brat() for v in ents ]
+            text = ann.pretokenized
+            to_brat(brat_dir, ann.doc_id, Ts, text)
 
 
 def main():
@@ -122,11 +131,6 @@ def main():
     brat_events_to_conll(os.path.join(events_path, 'valid_spacy.txt'), test)
     brat_entities_to_conll(os.path.join(entities_path, 'valid_spacy.txt'), test)
 
-    to_brat(events_brat_path_train, train)
-    to_brat(entities_brat_path_train, train)
-    to_brat(events_brat_path_valid, test)
-    to_brat(entities_brat_path_valid, test)
-    
     
 if __name__ == '__main__':
     main()

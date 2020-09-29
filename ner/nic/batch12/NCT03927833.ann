@@ -116,10 +116,8 @@ E34	Risk:T66 Risk-For:E33
 T67	Family-Member 405 411	Infant
 E35	Family-Member:T67 Has:E34
 A22	Family-Member-Type E35 child
-T5	Encounter 464 478	intensive care
-E5	Encounter:T5 Type:T6
-T6	Encounter-Type 464 478	intensive care
-A23	Encounter-Type-Value T6 icu
+T5	Procedure 464 478	intensive care
+E5	Procedure:T5 Name:T6
 T68	Negation 450 460	withdrawal
 E36	Negation:T68 Negates:E5
 T69	Assertion 488 499	recommended
@@ -145,3 +143,4 @@ T77	Eq-Comparison 244 252	Previous
 E42	Eq-Comparison:T77 Temporal-Period:T78
 T78	Eq-Temporal-Period 244 252	Previous
 A27	Eq-Temporal-Period-Value T78 past
+T6	Procedure-Name 464 478	intensive care

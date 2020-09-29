@@ -30,10 +30,10 @@ E6	Eq-Comparison:T17 Temporal-Period:T18
 T18	Eq-Temporal-Period 66 72	recent
 A7	Eq-Temporal-Period-Value T18 recent
 R1	Equivalent-To Arg1:E3 Arg2:E6	
-T19	Encounter 80 89	ICU entry
-E7	Encounter:T19 Type:T20 Temporality:E3
-T20	Encounter-Type 80 89	ICU entry
-A8	Encounter-Type-Value T20 icu
+T19	Encounter 84 89	entry
+E7	Encounter:T19 Type:T20 Temporality:E3 Location:T29
+T20	Encounter-Type 84 89	entry
+A8	Encounter-Type-Value T20 inpatient
 R2	Using Arg1:E7 Arg2:E1	
 T21	Eq-Comparison 127 142	at least 3 days
 E8	Eq-Comparison:T21 Operator:T22 Temporal-Unit:T5 Value:T10
@@ -44,9 +44,13 @@ E9	Procedure:T23 Name:T24
 T24	Procedure-Name 205 214	intubated
 T25	Negation 201 204	not
 E10	Negation:T25 Negates:E9
-T26	Encounter 246 267	ICU prevision of stay
-E11	Encounter:T26 Type:T27 Duration:E4
-T27	Encounter-Type 246 267	ICU prevision of stay
-A10	Encounter-Type-Value T27 icu
+T26	Encounter 263 267	stay
+E11	Encounter:T26 Type:T27 Duration:E4 Location:T30
+T27	Encounter-Type 263 267	stay
+A10	Encounter-Type-Value T27 inpatient
 T28	And 55 58	and
 E12	And:T28 Arg:E2 Arg2:E7
+T29	Location 80 83	ICU
+A11	Location-Value T29 unit
+T30	Location 246 249	ICU
+A12	Location-Value T30 unit

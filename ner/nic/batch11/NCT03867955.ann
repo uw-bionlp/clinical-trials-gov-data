@@ -55,7 +55,7 @@ T36	Eq-Comparison 399 405	7 days
 E18	Eq-Comparison:T36 Temporal-Unit:T11 Value:T14
 T37	Modifier 472 489	insulin-dependent
 E19	Modifier:T37 Modifies:T4
-T38	Modifier 493 514	non-insulin-dependent
+T38	Modifier 497 514	insulin-dependent
 E20	Modifier:T38 Modifies:T4
 T39	Or 490 492	or
 E21	Or:T39 Arg:E19 Arg2:E20
@@ -67,8 +67,11 @@ T42	Modifier 529 547	dysautonomic stage
 E24	Modifier:T42 Modifies:E3
 T43	Modifier 575 594	dysautonomous stage
 E25	Modifier:T43 Modifies:E7
-A7	Temporal-Connection-Type-Value E10 encounter
+A7	Temporal-Connection-Type-Value E10 during
 T44	Eq-Comparison 440 447	History
 E26	Eq-Comparison:T44 Temporal-Period:T45
 T45	Eq-Temporal-Period 440 447	History
 A8	Eq-Temporal-Period-Value T45 past
+A2	Temporal-Connection-Type-Value E17 before
+T20	Negation 493 496	non
+E27	Negation:T20 Negates:E20

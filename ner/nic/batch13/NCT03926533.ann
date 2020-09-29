@@ -17,13 +17,13 @@ E10	Condition:T10 Name:T11
 T12	Condition 516 521	blind
 T13	Condition-Name 516 521	blind
 E12	Condition:T12 Name:T13
-T14	Encounter 31 39	ICU stay
-E2	Encounter:T14 Type:T15
-T15	Encounter-Type 31 39	ICU stay
-A1	Encounter-Type-Value T15 icu
+T14	Encounter 35 39	stay
+E2	Encounter:T14 Type:T15 Location:T46
+T15	Encounter-Type 35 39	stay
+A1	Encounter-Type-Value T15 inpatient
 T16	Temporal-Connection 40 44	with
 E4	Temporal-Connection:T16 Arg:E2 Arg2:E10
-A2	Temporal-Connection-Type-Value E4 encounter
+A2	Temporal-Connection-Type-Value E4 during
 T17	Or 67 69	or
 E6	Or:T17 Arg:E10 Arg2:E1
 T18	Encounter-Type 122 132	discharged
@@ -81,3 +81,5 @@ T45	Severity 70 75	acute
 A12	Severity-Value T45 severe
 T29	Other 375 382	outside
 E16	Other:T29 Is-Other:T27
+T46	Location 31 34	ICU
+A13	Location-Value T46 unit

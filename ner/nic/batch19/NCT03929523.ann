@@ -124,10 +124,10 @@ E13	Eq-Comparison:T17 Operator:T76 Value:T77
 T76	Eq-Operator 416 424	at least
 A16	Eq-Operator-Value T76 GTEQ
 T77	Eq-Value 425 428	one
-T78	Encounter 497 516	Intensive care unit
-E15	Encounter:T78 Type:T79 Duration:E43
-T79	Encounter-Type 497 516	Intensive care unit
-A17	Encounter-Type-Value T79 icu
+T78	Encounter 517 521	stay
+E15	Encounter:T78 Type:T79 Duration:E43 Location:T132
+T79	Encounter-Type 517 521	stay
+A17	Encounter-Type-Value T79 inpatient
 T80	Procedure 583 589	biopsy
 E16	Procedure:T80 Name:T82
 T81	Eq-Unit 594 595	%
@@ -230,3 +230,5 @@ E69	Or:T130 Arg:E67 Arg2:E68
 T131	Life-Stage-And-Gender 1411 1416	women
 A27	Life-Stage-And-Gender-Type T131 female
 R5	If-Then Arg1:T131 Arg2:E68	
+T132	Location 497 516	Intensive care unit
+A28	Location-Value T132 unit

@@ -19,6 +19,7 @@ def pretokenize(text):
     prev = ''
     prev_num = False
     prev_per = False
+    prev_add_start, prev_add_end = '', ''
     is_num = re.match(reg_num, text[0])
     pad_map = {}
 
@@ -30,6 +31,10 @@ def pretokenize(text):
         foll_per = foll == '.'
         is_per = ch == '.'
         add_start, add_end = '', ''
+
+        #if ch == '2':
+        #    x=1
+
         if ch in dividers:
             if prev != ' ': 
                 add_start = ' '
@@ -48,17 +53,30 @@ def pretokenize(text):
             add_end = ' '
         if text[:i].endswith('Grade') and ch == 'Ⅰ':
             add_start = ' '
+        if add_start == ' ' and (prev_add_end == ' ' or prev.endswith(' ')):
+            add_start = ''
+        if add_end == ' ' and foll == ' ':
+            add_end = ''
+        
+        cleaned.append(add_start + ch + add_end)
+        pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start + add_end)
+
         prev_num = is_num
         prev = ch
         prev_per = is_per
         is_num = foll_num
-        cleaned.append(add_start + ch + add_end)
-        pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start + add_end)
+        prev_add_start = add_start
+        prev_add_end = add_end
 
-    return pad_map, ''.join(cleaned)
+        
+
+    cleaned = ''.join(cleaned)
+    return pad_map, cleaned
 
 class BratDocument:
     def __init__(self, doc_id, text, anns, path):
+        #if doc_id == 'NCT03860012':
+        #    x=1
         pad_map, pretokenized = pretokenize(text)
         self.doc_id       = doc_id
         self.raw_text     = text
@@ -172,7 +190,12 @@ class BratDocument:
                 Ts[k].tok_end_idx  = max([ tok.i for tok in matches ])
                 Ts[k].tok_idxs     = [ tok.i for tok in matches ]
                 Ts[k].char_beg_idx = min([ tok.idx for tok in matches ])
-                Ts[k].char_beg_idx = max([ tok.idx + len(tok.text) for tok in matches ])
+                Ts[k].char_end_idx = max([ tok.idx + len(tok.text) for tok in matches ])
+
+                #if Ts[k].span.replace(' ','') != self.pretokenized[Ts[k].char_beg_idx:Ts[k].char_end_idx].replace(' ',''):
+                #    print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
+
+                Ts[k].span         = self.pretokenized[Ts[k].char_beg_idx:Ts[k].char_end_idx]
             else:
                 print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
 

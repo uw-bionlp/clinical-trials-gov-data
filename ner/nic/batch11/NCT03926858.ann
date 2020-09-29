@@ -51,9 +51,9 @@ T27	Condition-Name 308 323	substance abuse
 T28	Procedure 351 358	surgery
 E17	Procedure:T28 Name:T32
 T29	Encounter 329 337	Admitted
-E18	Encounter:T29 Type:T30
-T30	Encounter-Type 341 344	ICU
-A8	Encounter-Type-Value T30 icu
+E18	Encounter:T29 Type:T30 Location:T38
+T30	Encounter-Type 329 337	Admitted
+A8	Encounter-Type-Value T30 inpatient
 T31	Temporal-Connection 345 350	after
 E19	Temporal-Connection:T31 Arg:E18 Arg2:E17
 A9	Temporal-Connection-Type-Value E19 after
@@ -67,3 +67,5 @@ T36	Eq-Comparison 232 240	Existing
 E21	Eq-Comparison:T36 Temporal-Period:T37
 T37	Eq-Temporal-Period 232 240	Existing
 A11	Eq-Temporal-Period-Value T37 present
+T38	Location 341 344	ICU
+A12	Location-Value T38 unit

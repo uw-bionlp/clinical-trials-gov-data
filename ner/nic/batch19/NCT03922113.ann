@@ -29,10 +29,10 @@ T25	Eq-Comparison 72 77	> 48h
 E18	Eq-Comparison:T25 Operator:T19 Value:T22 Temporal-Unit:T29
 T26	Eq-Comparison 189 192	> 1
 E19	Eq-Comparison:T26 Operator:T20 Value:T23
-T27	Encounter 39 42	ICU
-E2	Encounter:T27 Type:T28 Duration:E18
-T28	Encounter-Type 39 42	ICU
-A4	Encounter-Type-Value T28 icu
+T27	Encounter 67 71	stay
+E2	Encounter:T27 Type:T28 Duration:E18 Location:T53
+T28	Encounter-Type 67 71	stay
+A4	Encounter-Type-Value T28 inpatient
 T29	Eq-Temporal-Unit 76 77	h
 A5	Eq-Temporal-Unit-Value T29 hour
 T30	Eq-Comparison 101 110	scheduled
@@ -89,3 +89,5 @@ T51	Modifier 512 516	para
 E29	Modifier:T51 Modifies:T8
 T52	Or 518 520	or
 E30	Or:T52 Arg:E29
+T53	Location 39 42	ICU
+A9	Location-Value T53 unit
