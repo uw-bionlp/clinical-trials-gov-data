@@ -32,9 +32,6 @@ def pretokenize(text):
         is_per = ch == '.'
         add_start, add_end = '', ''
 
-        #if ch == '2':
-        #    x=1
-
         if ch in dividers:
             if prev != ' ': 
                 add_start = ' '
@@ -75,8 +72,6 @@ def pretokenize(text):
 
 class BratDocument:
     def __init__(self, doc_id, text, anns, path):
-        #if doc_id == 'NCT03860012':
-        #    x=1
         pad_map, pretokenized = pretokenize(text)
         self.doc_id       = doc_id
         self.raw_text     = text
@@ -191,10 +186,6 @@ class BratDocument:
                 Ts[k].tok_idxs     = [ tok.i for tok in matches ]
                 Ts[k].char_beg_idx = min([ tok.idx for tok in matches ])
                 Ts[k].char_end_idx = max([ tok.idx + len(tok.text) for tok in matches ])
-
-                #if Ts[k].span.replace(' ','') != self.pretokenized[Ts[k].char_beg_idx:Ts[k].char_end_idx].replace(' ',''):
-                #    print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
-
                 Ts[k].span         = self.pretokenized[Ts[k].char_beg_idx:Ts[k].char_end_idx]
             else:
                 print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
