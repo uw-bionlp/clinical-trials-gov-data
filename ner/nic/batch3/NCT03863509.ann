@@ -185,7 +185,6 @@ A13	Eq-Temporal-Unit-Value T112 day
 T114	Eq-Operator 374 377	>/=
 A15	Eq-Operator-Value T114 GTEQ
 T115	Eq-Value 378 379	5
-T116	Drug-Name 380 384	cigs
 T117	Eq-Temporal-Unit 385 388	day
 A16	Eq-Temporal-Unit-Value T117 day
 T118	Eq-Temporal-Period 393 397	last
@@ -332,8 +331,6 @@ E15	Modifier:T15 Modifies:T107
 T61	Negation 274 281	without
 E61	Negation:T61 Negates:E21 Negates2:E15
 T70	Condition-Name 332 339	Smokers
-T26	Drug 380 384	cigs
-E26	Drug:T26 Temporality:E28 Minimum-Count:E27 Name:T116
 T95	Condition 78 85	smoking
 E70	Condition:T95 Name:T129
 T113	Eq-Comparison 436 444	lifetime
@@ -351,9 +348,6 @@ T129	Condition-Name 78 85	smoking
 T42	Observation 698 700	CO
 E35	Observation:T42 Name:T43 Eq-Comparison:E47
 T43	Observation-Name 698 700	CO
-T49	Drug 776 780	cigs
-E38	Drug:T49 Name:T51 Minimum-Count:E52 Duration:E53
-T51	Drug-Name 776 780	cigs
 T54	Observation-Name 881 883	CO
 T55	Observation 894 903	Continine
 E42	Observation:T55 Name:T180 Eq-Comparison:E63
@@ -379,3 +373,5 @@ T198	Observation 1078 1087	Continine
 E55	Observation:T198 Name:T221 Eq-Comparison:E71
 T222	Eq-Temporal-Period 1230 1236	coming
 A66	Eq-Temporal-Period-Value T222 future
+T26	Drug-Name 380 384	cigs
+T49	Drug-Name 776 780	cigs

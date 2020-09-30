@@ -304,11 +304,6 @@ T180	Eq-Unit 727 736	occasions
 T44	Temporal-Connection 763 786	while the patient is on
 E43	Temporal-Connection:T44 Arg:E40 Arg2:E44
 A35	Temporal-Connection-Type-Value E43 during
-T47	Observation 880 889	platelets
-E46	Observation:T47 Name:T51 Eq-Comparison:E49
-T51	Observation-Name 880 889	platelets
-A36	Observation-Type-Value T51 lab
-R16	Equivalent-To Arg1:E46 Arg2:E48	
 T52	Polarity 909 920	abnormality
 A37	Polarity-Value T52 abnormal
 R17	Equivalent-To Arg1:E55 Arg2:E54	
@@ -338,3 +333,5 @@ R21	Caused-By Arg1:E90 Arg2:E89
 T94	Contraindication 1663 1669	unsafe
 E69	Contraindication:T94 Contraindicates:E94
 R22	Caused-By Arg1:E69 Arg2:E92	
+T47	Observation-Name 880 889	platelets
+A36	Observation-Type-Value T47 lab

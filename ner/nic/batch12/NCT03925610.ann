@@ -69,8 +69,8 @@ E13	Eq-Comparison:T41 Temporal-Unit:T22 Value:T42 Temporal-Period:T21
 T42	Eq-Value 426 431	three
 T43	Modifier 509 516	thyroid
 E15	Modifier:T43 Modifies:T19
-T44	Modifier 499 508	untreated
-E17	Modifier:T44 Modifies:E18
+T44	Negation 499 508	untreated
+E17	Negation:T44 Negates:E30
 T45	Modifier 483 494	psychiatric
 E20	Modifier:T45 Modifies:T19
 T46	Modifier 466 481	cardiopulmonary
@@ -106,3 +106,6 @@ A4	Eq-Temporal-Period-Value T21 past
 T61	Procedure 356 365	Treatment
 E29	Procedure:T61 
 R7	Using Arg1:E29 Arg2:E14	
+T62	Procedure 499 508	untreated
+E30	Procedure:T62 
+R8	Treatment-For Arg1:E30 Arg2:E18	

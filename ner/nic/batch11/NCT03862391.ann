@@ -52,8 +52,6 @@ T34	Location 384 403	intensive care unit
 A6	Location-Value T34 unit
 T25	Encounter 124 135	followed up
 E10	Encounter:T25 Location:T23
-T26	Temporal-Connection 124 132	followed
-E15	Temporal-Connection:T26 Arg:E10 Arg2:E6
 T36	Encounter 367 376	follow-up
 E16	Encounter:T36 Location:T34
 T37	And 363 366	and
@@ -63,7 +61,6 @@ E18	Family-Member:T38 Has:E1
 A7	Family-Member-Type E18 patient
 T39	Or 292 294	or
 E19	Or:T39 Arg:E18 Arg2:E13
-A4	Temporal-Connection-Type-Value E15 after
 T35	Eq-Comparison 54 63	underwent
 E20	Eq-Comparison:T35 Temporal-Period:T40
 T40	Eq-Temporal-Period 54 63	underwent

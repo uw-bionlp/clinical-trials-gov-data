@@ -20,13 +20,11 @@ E1	Eq-Comparison:T2 Operator:T21 Temporal-Unit:T18 Value:T19
 T21	Eq-Operator 213 221	at least
 A3	Eq-Operator-Value T21 GTEQ
 T7	Coreference 254 261	disease
-E2	Coreference:T7 Refers-To:E5
+E2	Coreference:T7 Refers-To:E5 Severity:T22
 T22	Severity 247 253	severe
 A4	Severity-Value T22 severe
 T23	Severity 235 243	Moderate
 A5	Severity-Value T23 severe
-T25	Condition 254 261	disease
-E4	Condition:T25 Severity:T22
 T26	Indication 267 276	Candidate
 E6	Indication:T26 Indication-For:E10
 T27	Or 294 296	or
@@ -45,8 +43,8 @@ E14	Or:T28 Arg:E12 Arg2:E13
 T29	Condition 529 538	psoriasis
 E15	Condition:T29 Name:T30
 T30	Condition-Name 529 538	psoriasis
-T31	Modifier 516 528	drug-induced
-E16	Modifier:T31 Modifies:T30
+T31	Drug 516 520	drug
+E16	Drug:T31 
 T32	Modifier 504 511	inverse
 E17	Modifier:T32 Modifies:T30
 T33	Modifier 495 502	Guttate
@@ -84,3 +82,4 @@ T24	Eq-Comparison 235 253	Moderate to severe
 E7	Eq-Comparison:T24 Value:T23 Value2:T22 Operator:T48
 T48	Eq-Operator 244 246	to
 A10	Eq-Operator-Value T48 BETWEEN
+R1	Caused-By Arg1:E15 Arg2:E16	

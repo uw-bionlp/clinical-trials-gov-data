@@ -39,8 +39,8 @@ T23	Assertion 273 276	for
 E13	Assertion:T23 Asserted:E12
 A3	Assertion-Type-Value E13 hypothetical
 R2	Using Arg1:E12 Arg2:E10	
-T24	Modifier 291 300	untreated
-E14	Modifier:T24 Modifies:E5
+T24	Negation 291 300	untreated
+E14	Negation:T24 Negates:E29
 T25	Modifier 301 306	colon
 E15	Modifier:T25 Modifies:T6
 T26	Modifier 310 316	rectal
@@ -86,3 +86,6 @@ T46	Eq-Comparison 469 479	Previously
 E28	Eq-Comparison:T46 Temporal-Period:T47
 T47	Eq-Temporal-Period 469 479	Previously
 A5	Eq-Temporal-Period-Value T47 past
+T48	Procedure 291 300	untreated
+E29	Procedure:T48 
+R9	Treatment-For Arg1:E29 Arg2:E5	

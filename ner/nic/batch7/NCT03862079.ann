@@ -42,14 +42,13 @@ E23	Condition:T23 Name:T108
 T24	Condition 381 396	hemodynamically
 E24	Condition:T24 Name:T18 Stability:T109
 T25	And 404 407	and
-E25	And:T25 Arg:E26
+E25	And:T25 Arg:E26 Arg2:E24
 T26	Negation 408 411	not
 E26	Negation:T26 Negates:E27
 T27	Assertion 412 421	requiring
 E27	Assertion:T27 Asserted:E28
 A2	Assertion-Type-Value E27 hypothetical
-T28	Procedure 422 441	supplemental oxygen
-E28	Procedure:T28 Name:T92
+E28	Observation:T101 Name:T92 Eq-Comparison:E29
 T29	Eq-Comparison 445 467	more than 2 liters via
 E29	Eq-Comparison:T29 Operator:T110 Value:T111 Unit:T112
 T31	Assertion 504 511	able to
@@ -256,11 +255,10 @@ R4	Abbrev-Of Arg1:E19 Arg2:E2
 R5	Using Arg1:E12 Arg2:E16	
 T18	Condition-Name 381 396	hemodynamically
 R6	Equivalent-To Arg1:E24 Arg2:E23	
-T92	Procedure-Name 422 441	supplemental oxygen
+T92	Observation-Name 422 441	supplemental oxygen
 T30	Modifier 468 481	nasal cannula
 E15	Modifier:T30 Modifies:T92
 T101	Observation 422 441	supplemental oxygen
-E18	Observation:T101 Eq-Comparison:E29
 T113	Modifier 537 552	suspension form
 E30	Modifier:T113 Modifies:T114
 T150	Modifier 736 750	broad spectrum

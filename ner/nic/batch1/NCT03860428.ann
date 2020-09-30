@@ -115,12 +115,9 @@ T74	Condition 463 490	intraventricular hemorrhage
 E31	Condition:T74 Name:T75
 T75	Condition-Name 463 490	intraventricular hemorrhage
 T76	Condition 492 495	IVH
-E32	Condition:T76 Name:T77
+E32	Condition:T76 Name:T77 Temporality:E34
 T77	Condition-Name 492 495	IVH
 R3	Abbrev-Of Arg1:E32 Arg2:E31	
-T79	Temporal-Connection 497 518	in the first 48 hours
-E33	Temporal-Connection:T79 Arg:E31
-A18	Temporal-Connection-Type-Value E33 after
 T80	Eq-Comparison 497 518	in the first 48 hours
 E34	Eq-Comparison:T80 Operator:T81 Value:T35 Temporal-Unit:T82
 T81	Eq-Operator 497 509	in the first

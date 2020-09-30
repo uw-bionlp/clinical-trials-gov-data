@@ -213,9 +213,8 @@ A33	Eq-Temporal-Period-Value T114 past
 T115	Procedure 1145 1154	treatment
 E65	Procedure:T115 Temporality:E64
 R8	Using Arg1:E65 Arg2:E62
-T74	Modifier 570 579	untreated
-E34	Modifier:T74 
-R5	Abbrev-Of Arg1:E34 Arg2:E32	
+T74	Negation 570 579	untreated
+E34	Negation:T74 Negates:E67
 T75	Organism 827 841	N meningitidis
 E35	Organism:T75 Name:T116
 T116	Organism-Name 827 841	N meningitidis
@@ -223,3 +222,6 @@ R3	Caused-By Arg1:E5 Arg2:E25
 T117	Modifier 470 483	meningococcal
 E66	Modifier:T117 Modifies:T6
 R9	Caused-By Arg1:E52 Arg2:E35	
+T118	Procedure 570 579	untreated
+E67	Procedure:T118 
+R5	Treatment-For Arg1:E67 Arg2:E32	

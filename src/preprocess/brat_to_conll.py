@@ -21,6 +21,7 @@ def to_brat(output_dir, doc_id, Ts, text):
 def brat_events_to_conll(output_filepath, anns):
     with open(output_filepath, 'w+') as fout:
         for ann in anns:
+            brat_rows = set()
             evs  = [ v for k,v in ann.Es.items() ]
             for sent in ann.sents:
                 for tok in sent:
@@ -48,22 +49,24 @@ def brat_events_to_conll(output_filepath, anns):
                         label = f'{"B" if is_start else "I"}-' + '|'.join(sorted(labels))
 
                         # For now, ignore Ages embedded in Eq-Comparisons
-                        if label == 'B-Age|Eq-Comparison':
-                            label = 'I-Eq-Comparison'
+                        if label[2:] == 'Age|Eq-Comparison':
+                            label = label[:2] + 'Eq-Comparison'
 
+                        brat_rows.add(f'{label[2:]} {t_evs[0].args[0].val.char_beg_idx} {t_evs[0].args[0].val.char_end_idx}\t{t_evs[0].args[0].val.span}')
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} {label}\n')
                 fout.write('\n')
 
+            brat_rows = [ f'T{i+1} {t}' for i,t in enumerate(brat_rows) ]
             brat_dir = os.path.join(Path(output_filepath).parent, 'train' if 'train' in output_filepath else 'valid')
-            Ts = [ v.get_T().to_brat() for v in evs ]
             text = ann.pretokenized
-            to_brat(brat_dir, ann.doc_id, Ts, text)
+            to_brat(brat_dir, ann.doc_id, brat_rows, text)
 
 
 
 def brat_entities_to_conll(output_filepath, anns):
     with open(output_filepath, 'w+') as fout:
         for ann in anns:
+            brat_rows = set()
             evs  = [ v.args[0].val for k,v in ann.Es.items() ]
             ents = [ v for k,v in ann.Ts.items() if v not in evs ] 
             for sent in ann.sents:
@@ -90,13 +93,15 @@ def brat_entities_to_conll(output_filepath, anns):
                                 label = ent.type
                             labels.append(label)
                         label = f'{"B" if is_start else "I"}-' + '|'.join(sorted(labels))
+
+                        brat_rows.add(f'{label[2:]} {t_ents[0].char_beg_idx} {t_ents[0].char_end_idx}\t{t_ents[0].span}')
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} {label}\n')
                 fout.write('\n')
 
+            brat_rows = [ f'T{i+1} {t}' for i,t in enumerate(brat_rows) ]
             brat_dir = os.path.join(Path(output_filepath).parent, 'train' if 'train' in output_filepath else 'valid')
-            Ts = [ v.get_T().to_brat() for v in ents ]
             text = ann.pretokenized
-            to_brat(brat_dir, ann.doc_id, Ts, text)
+            to_brat(brat_dir, ann.doc_id, brat_rows, text)
 
 
 def main():

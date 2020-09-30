@@ -27,8 +27,6 @@ E9	Modifier:T18 Modifies:T14
 T1	Condition 136 154	squamous carcinoma
 E1	Condition:T1 Name:T2
 T2	Condition-Name 136 154	squamous carcinoma
-T19	Modifier 109 135	Surgically resectable oral
-E10	Modifier:T19 Modifies:T2
 T20	Modifier 160 180	invasion of mandible
 E11	Modifier:T20 Modifies:T2
 T21	Modifier 184 191	maxilla
@@ -44,8 +42,8 @@ E15	Or:T25 Arg:E14 Arg2:E8
 T26	Condition 238 261	squamous cell carcinoma
 E16	Condition:T26 Name:T27 Temporality:E8
 T27	Condition-Name 238 261	squamous cell carcinoma
-T28	Modifier 228 237	untreated
-E17	Modifier:T28 Modifies:T27
+T28	Procedure 228 237	untreated
+E17	Procedure:T28 
 T29	Modifier 269 280	oral cavity
 E18	Modifier:T29 Modifies:T27
 T30	Condition 321 339	distant metastases
@@ -55,3 +53,15 @@ T32	Contraindication 360 376	contraindication
 E20	Contraindication:T32 Contraindicates:E3
 T33	Or 432 434	or
 E21	Or:T33 Arg:E7 Arg2:E5
+T19	Procedure 109 119	Surgically
+E10	Procedure:T19 Name:T34
+T34	Procedure-Name 109 119	Surgically
+R2	Treatment-For Arg1:E10 Arg2:E1	
+T35	Assertion 120 130	resectable
+E22	Assertion:T35 Asserted:E10
+A3	Assertion-Type-Value E22 hypothetical
+T36	Modifier 131 135	oral
+E23	Modifier:T36 Modifies:T2
+R3	Treatment-For Arg1:E17 Arg2:E16	
+T37	Negation 228 237	untreated
+E24	Negation:T37 Negates:E17

@@ -54,16 +54,14 @@ E4	Study:T41
 T42	Temporal-Connection 146 152	during
 E6	Temporal-Connection:T42 Arg:E3 Arg2:E4
 A8	Temporal-Connection-Type-Value E6 during
-T43	Coreference 186 202	blotting results
-E8	Coreference:T43 Refers-To:E3
 T44	Observation 186 202	blotting results
-E10	Observation:T44 Eq-Comparison:E21 Minimum-Count:E16
+E10	Observation:T44 Minimum-Count:E16 Name:T43
 T45	Eq-Unit 208 212	μmol
 T46	Eq-Unit 215 216	L
 T47	Study 250 259	screening
 E12	Study:T47 
 T48	Temporal-Connection 239 245	during
-E14	Temporal-Connection:T48 Arg:E10 Arg2:E12
+E14	Temporal-Connection:T48 Arg2:E12 Arg:E8
 A9	Temporal-Connection-Type-Value E14 during
 T49	Eq-Comparison 220 227	several
 E16	Eq-Comparison:T49 Operator:T50
@@ -176,3 +174,15 @@ T95	Drug 1040 1047	product
 E54	Drug:T95 
 T96	Allergy 1025 1032	Allergy
 E55	Allergy:T96 Name:E54
+T43	Observation-Name 186 202	blotting results
+A22	Observation-Type-Value T43 lab
+T97	Observation 228 233	blots
+E8	Observation:T97 Name:T98 Minimum-Count:E16
+T98	Observation-Name 228 233	blots
+A23	Observation-Type-Value T98 lab
+R7	If-Then Arg1:E8 Arg2:E10	
+T99	Procedure 273 282	Untreated
+E56	Procedure:T99 
+T100	Negation 273 282	Untreated
+E57	Negation:T100 Negates:E56
+R8	Equivalent-To Arg1:E24 Arg2:E57	

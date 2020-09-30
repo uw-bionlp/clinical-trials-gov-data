@@ -78,8 +78,8 @@ R5	Example-Of Arg1:E18 Arg2:E14
 T51	Condition 677 691	bony fractures
 E20	Condition:T51 Name:T52
 T52	Condition-Name 677 691	bony fractures
-T53	Modifier 667 676	untreated
-E22	Modifier:T53 Modifies:E20
+T53	Procedure 667 676	untreated
+E22	Procedure:T53 
 R6	Example-Of Arg1:E20 Arg2:E14	
 T54	Condition 693 714	cervical spine injury
 E24	Condition:T54 Name:T55
@@ -115,3 +115,6 @@ T26	Negation 819 828	untreated
 E35	Negation:T26 Negates:E23
 R12	Example-Of Arg1:E28 Arg2:E17	
 R13	Example-Of Arg1:E31 Arg2:E17	
+R14	Treatment-For Arg1:E22 Arg2:E20	
+T65	Negation 667 676	untreated
+E36	Negation:T65 Negates:E22

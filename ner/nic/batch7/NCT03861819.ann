@@ -172,7 +172,7 @@ E84	Drug:T84 Name:T151
 T86	Eq-Comparison 1329 1360	No more than 14 drinks per week
 E86	Eq-Comparison:T86 Operator:T152 Value:T153 Unit:T154 Per:T155
 T87	Or 1371 1373	or
-E87	Or:T87 Arg:T156 Arg2:E97
+E87	Or:T87 Arg:T156 Arg2:T160
 T88	Eq-Comparison 1374 1389	7 drinks a week
 E88	Eq-Comparison:T88 Value:T157 Unit:T158 Per:T159
 T89	Eq-Comparison 1409 1421	last 2 years
@@ -321,9 +321,5 @@ T175	Condition-Name 1205 1212	ascites
 R20	Example-Of Arg1:E77 Arg2:E75	
 R21	Example-Of Arg1:E78 Arg2:E75	
 R22	Example-Of Arg1:E79 Arg2:E75	
-T85	Observation 1345 1351	drinks
-E85	Observation:T85 Eq-Comparison:E86
 R23	If-Then Arg1:T156 Arg2:E86	
-T176	Observation 1376 1382	drinks
-E97	Observation:T176 Temporality:E89
 R24	If-Then Arg1:T160 Arg2:E88	

@@ -99,15 +99,13 @@ E24	Eq-Comparison:T62 Temporal-Period:T63
 T63	Eq-Temporal-Period 166 168	on
 A8	Eq-Temporal-Period-Value T63 present
 T64	Condition 225 233	pregnant
-E26	Condition:T64 Name:T65
+E26	Condition:T64 Name:T65 Minimum-Count:E28
 T65	Condition-Name 225 233	pregnant
-T66	Modifier 237 250	single living
-E28	Modifier:T66 Modifies:T65
 T67	Condition 274 294	congenital anomalies
 E29	Condition:T67 Name:T68
 T68	Condition-Name 274 294	congenital anomalies
 T69	Family-Member 251 256	fetus
-E30	Family-Member:T69 Has:E36
+E30	Family-Member:T69 Has:E36 Has2:E71
 A9	Family-Member-Type E30 child
 T70	Negation 262 264	no
 E36	Negation:T70 Negates:E29
@@ -218,3 +216,10 @@ E68	Modifier:T119
 R10	Abbrev-Of Arg1:E68 Arg2:E1	
 T120	Modifier 1033 1038	liver
 E69	Modifier:T120 Modifies:T32
+T66	Eq-Comparison 237 243	single
+E28	Eq-Comparison:T66 Value:T121
+T121	Eq-Value 237 243	single
+T122	Death 244 250	living
+E70	Death:T122 
+T123	Negation 244 250	living
+E71	Negation:T123 Negates:E70

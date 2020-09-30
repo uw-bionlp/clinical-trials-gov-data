@@ -212,10 +212,8 @@ R8	If-Then Arg1:E53 Arg2:E52
 T121	Stability 1187 1194	delayed
 A33	Stability-Value T121 change
 T110	Coreference 1160 1183	that comorbid condition
-E48	Coreference:T110 Refers-To:E21
-T111	Condition 1160 1183	that comorbid condition
-E55	Condition:T111 Stability:T121
-R9	Treatment-For Arg1:E53 Arg2:E55	
+E48	Coreference:T110 Refers-To:E21 Stability:T121
+R9	Treatment-For Arg1:E53 Arg2:E48	
 R10	Caused-By Arg1:T121 Arg2:E49	
 T122	Drug 1296 1307	medications
 E56	Drug:T122 Stability:T125

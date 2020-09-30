@@ -35,9 +35,8 @@ E9	Procedure:T21 Location:T9
 R1	Treatment-For Arg1:E9 Arg2:E3	
 T9	Location 261 294	hospitals of the Aquitaine region
 A6	Location-Value T9 hospital
-T22	Observation 371 376	alive
-E10	Observation:T22 Name:T23
-T23	Observation-Name 371 376	alive
+T22	Negation 371 376	alive
+E10	Negation:T22 Negates:E20
 T24	Assertion 365 370	to be
 E11	Assertion:T24 Asserted:E10
 A7	Assertion-Type-Value E11 hypothetical
@@ -65,3 +64,5 @@ A11	Eq-Temporal-Recency-Value T34 first-time
 T35	Temporal-Connection 511 517	during
 E19	Temporal-Connection:T35 Arg:E16 Arg2:E18
 A12	Temporal-Connection-Type-Value E19 during
+T23	Death 371 376	alive
+E20	Death:T23 

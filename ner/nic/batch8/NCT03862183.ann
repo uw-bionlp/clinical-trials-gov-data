@@ -14,13 +14,13 @@ E13	Encounter:T13
 T15	Eq-Comparison 250 267	at least one time
 E15	Eq-Comparison:T15 Operator:T59 Value:T60 Temporal-Unit:T61
 T16	Temporal-Connection 268 274	before
-E16	Temporal-Connection:T16 Arg:E15
+E16	Temporal-Connection:T16 Arg:E15 Arg2:E59
 A2	Temporal-Connection-Type-Value E16 before
-T18	Eq-Comparison 316 329	≥140 mmHg SBP
+T18	Eq-Comparison 316 325	≥140 mmHg
 E18	Eq-Comparison:T18 Value:T63 Unit:T64 Operator:T62
 T19	Or 330 336	and/or
 E19	Or:T19 Arg:E14 Arg2:E17
-T20	Eq-Comparison 337 349	≥90 mmHg DBP
+T20	Eq-Comparison 337 345	≥90 mmHg
 E20	Eq-Comparison:T20 Value:T66 Unit:T67 Operator:T102
 T22	Temporal-Connection 382 392	at the day
 E22	Temporal-Connection:T22 Arg:E21 Arg2:E23
@@ -202,3 +202,7 @@ T109	Eq-Comparison 1208 1220	participated
 E58	Eq-Comparison:T109 Temporal-Period:T110
 T110	Eq-Temporal-Period 1208 1220	participated
 A28	Eq-Temporal-Period-Value T110 past
+T111	Coreference 275 283	that day
+E59	Coreference:T111 Refers-To:E13
+R9	Equivalent-To Arg1:E14 Arg2:E11	
+R10	Equivalent-To Arg1:E17 Arg2:E11	

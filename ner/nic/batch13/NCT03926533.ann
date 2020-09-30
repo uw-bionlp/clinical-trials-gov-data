@@ -7,9 +7,9 @@ E3	Condition:T3 Name:T4
 T5	Condition 437 452	substance abuse
 T6	Condition-Name 437 452	substance abuse
 E5	Condition:T5 Name:T6
-T7	Condition 562 577	severe dementia
-T8	Condition-Name 562 577	severe dementia
-E7	Condition:T7 Name:T8
+T7	Condition 569 577	dementia
+T8	Condition-Name 569 577	dementia
+E7	Condition:T7 Name:T8 Severity:T47
 T9	Language 545 552	English
 T10	Condition 60 66	sepsis
 T11	Condition-Name 60 66	sepsis
@@ -33,9 +33,6 @@ E8	Encounter:T19 Type:T18
 T20	Assertion 106 115	projected
 E9	Assertion:T20 Asserted:E8
 A4	Assertion-Type-Value E9 hypothetical
-T21	Condition 133 138	alive
-E11	Condition:T21 Name:T22
-T22	Condition-Name 133 138	alive
 T23	Condition 196 200	PICS
 E13	Condition:T23 Name:T24
 T24	Condition-Name 196 200	PICS
@@ -83,3 +80,11 @@ T29	Other 375 382	outside
 E16	Other:T29 Is-Other:T27
 T46	Location 31 34	ICU
 A13	Location-Value T46 unit
+T47	Severity 562 568	severe
+A14	Severity-Value T47 severe
+T21	Death 133 138	alive
+E11	Death:T21 
+T22	Negation 133 138	alive
+E26	Negation:T22 Negates:E11
+T48	Or 554 556	or
+E27	Or:T48 Arg:T9 Arg2:E7
