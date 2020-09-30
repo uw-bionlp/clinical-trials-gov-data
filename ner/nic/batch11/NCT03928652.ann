@@ -70,9 +70,9 @@ T38	Condition-Name 590 598	Pregnant
 T39	Life-Stage-And-Gender 599 604	women
 A4	Life-Stage-And-Gender-Type T39 female
 R6	If-Then Arg1:T39 Arg2:E23	
-T40	Condition 622 639	colorectal cancer
+T40	Condition 633 639	cancer
 E24	Condition:T40 Name:T41
-T41	Condition-Name 622 639	colorectal cancer
+T41	Condition-Name 633 639	cancer
 T42	Family-Member 611 621	Hereditary
 E25	Family-Member:T42 Has:E24
 T43	Condition 650 676	familial colonic polyposis
@@ -89,3 +89,7 @@ A5	Eq-Temporal-Period-Value T47 past
 T48	Procedure 291 300	untreated
 E29	Procedure:T48 
 R9	Treatment-For Arg1:E29 Arg2:E5	
+T49	Other 561 566	Other
+E30	Other:T49 Is-Other:E22
+T50	Modifier 622 632	colorectal
+E31	Modifier:T50 Modifies:T41

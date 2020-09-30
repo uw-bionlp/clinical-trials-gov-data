@@ -104,6 +104,17 @@ def brat_entities_to_conll(output_filepath, anns):
             to_brat(brat_dir, ann.doc_id, brat_rows, text)
 
 
+def quality_check(annotations):
+    t_s = [ (x,a) for a in annotations for _,x in a.Ts.items() ]
+    a_s = [ x for a in annotations for _,x in a.As.items() ]
+    for ent in [ 'Severity', 'Stability', 'Eq-Operator' ]:
+        x_s = [ t for t in t_s if t[0].type == ent ]
+        for x in x_s: 
+            a = [ a for a in a_s if a.attr_of == x[0] ]
+            a = a[0] if len(a) else None
+            if a == None:
+                print(x[1])
+
 def main():
 
     conll_path = os.path.join(Config.preprocess_dir, 'conll')

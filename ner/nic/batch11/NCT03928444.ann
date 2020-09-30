@@ -48,7 +48,7 @@ T32	Assertion 203 206	for
 E9	Assertion:T32 Asserted:E7
 A7	Assertion-Type-Value E9 hypothetical
 T33	Observation 177 191	adipose tissue
-E11	Observation:T33 Name:T34
+E11	Observation:T33 Name:T34 Polarity:T73
 T34	Observation-Name 177 191	adipose tissue
 T35	Modifier 164 176	subcutaneous
 E15	Modifier:T35 Modifies:T34
@@ -88,14 +88,13 @@ A8	Eq-Temporal-Period-Value T52 present
 T53	Or 415 417	or
 E30	Or:T53 Arg:E8 Arg2:E6
 T12	Modifier 591 610	anti-aging systemic
-E12	Modifier:T12 Modifies:T54
+E12	Modifier:T12 Modifies:E33
 T13	Modifier 614 621	topical
-E31	Modifier:T13 Modifies:T54
-T54	Drug-Name 622 633	medications
+E31	Modifier:T13 Modifies:E33
 T55	Or 611 613	or
 E32	Or:T55 Arg:E12 Arg2:E31
 T56	Drug 622 633	medications
-E33	Drug:T56 Name:T54 Temporality:E34 Temporality2:E40
+E33	Drug:T56 Temporality:E34 Temporality2:E40
 T57	Eq-Comparison 634 662	within the previous 3 months
 E34	Eq-Comparison:T57 Operator:T16 Temporal-Unit:T18 Value:T21 Temporal-Period:T72
 T58	Procedure-Name 207 221	lipoaspiration
@@ -127,3 +126,5 @@ T68	Eq-Temporal-Period 550 554	past
 A12	Eq-Temporal-Period-Value T68 past
 T72	Eq-Temporal-Period 645 653	previous
 A14	Eq-Temporal-Period-Value T72 past
+T73	Polarity 136 144	adequate
+A15	Polarity-Value T73 normal
