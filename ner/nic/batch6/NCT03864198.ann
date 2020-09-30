@@ -3,7 +3,7 @@ E1	Eq-Comparison:T1 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
 T2	Condition 47 62	oligozoospermia
 E2	Condition:T2 Name:T41
 T3	Eq-Comparison 64 90	< 5 million spermatozoa/mL
-E3	Eq-Comparison:T3 Operator:T42 Value:T43 Unit:T46
+E3	Eq-Comparison:T3 Operator:T42 Value:T43 Unit:T46 Unit2:T34
 T4	Condition 97 114	asthenozoospermia
 E4	Condition:T4 Name:T47
 T5	Eq-Comparison 116 121	< 32%
@@ -110,11 +110,6 @@ T69	Procedure-Name 525 543	testicular torsion
 T70	Condition-Name 549 572	genitourinary anomalies
 T22	Age 36 41	years
 E22	Age:T22 Eq-Comparison:E1
-T45	Observation-Name 76 87	spermatozoa
-A13	Observation-Type-Value T45 lab
-T34	Observation 76 87	spermatozoa
-E34	Observation:T34 Name:T45 Eq-Comparison:E3
-R1	Equivalent-To Arg1:E34 Arg2:E2	
 R2	Equivalent-To Arg1:E6 Arg2:E4	
 T44	Observation 189 194	forms
 E36	Observation:T44 Name:T57 Polarity:T56 Eq-Comparison:E8
@@ -132,3 +127,4 @@ T78	Modifier 426 435	secondary
 E40	Modifier:T78 Modifies:T64
 T79	Procedure-Name 578 589	alterations
 T71	Procedure-Name 625 641	inguinal surgery
+T34	Eq-Unit 76 87	spermatozoa
