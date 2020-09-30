@@ -107,7 +107,7 @@ def brat_entities_to_conll(output_filepath, anns):
 def quality_check(annotations):
     t_s = [ (x,a) for a in annotations for _,x in a.Ts.items() ]
     a_s = [ x for a in annotations for _,x in a.As.items() ]
-    for ent in [ 'Severity', 'Stability', 'Eq-Operator' ]:
+    for ent in [ 'Severity', 'Stability', 'Eq-Operator', 'Polarity' ]:
         x_s = [ t for t in t_s if t[0].type == ent ]
         for x in x_s: 
             a = [ a for a in a_s if a.attr_of == x[0] ]
@@ -126,6 +126,8 @@ def main():
     for d in Config.annotation_train_dirs:
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
+
+    quality_check(annotations)
 
     ## Split 
     np.random.seed(1)
