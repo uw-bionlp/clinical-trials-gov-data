@@ -27,7 +27,7 @@ T17	Assertion 116 124	entering
 E5	Assertion:T17 Asserted:E3
 A6	Assertion-Type-Value E5 hypothetical
 T18	Eq-Comparison 171 185	8 mg/kg IV Q4W
-E6	Eq-Comparison:T18 Value:T9 Per:T7 Unit:T19 Per2:T20
+E6	Eq-Comparison:T18 Value:T9 Per:T7 Unit:T19 Unit2:T20
 T19	Eq-Unit 173 175	mg
 T21	Drug 253 258	agent
 E8	Drug:T21 
@@ -55,7 +55,7 @@ E16	Modifier:T32 Modifies:E15
 T33	Severity 391 398	serious
 A8	Severity-Value T33 severe
 T34	Condition 521 531	infections
-E17	Condition:T34 Name:T35 Temporality:E22
+E17	Condition:T34 Name:T35 Temporality:E22 Temporality2:E23
 T35	Condition-Name 521 531	infections
 T36	Modifier 497 510	mycobacterial
 E18	Modifier:T36 Modifies:T35
@@ -87,7 +87,7 @@ E27	Drug:T49 Temporality:E28
 R2	Treatment-For Arg1:E27 Arg2:E25	
 T50	Eq-Comparison 568 595	within the previous 3 years
 E28	Eq-Comparison:T50 Operator:T4 Temporal-Unit:T6 Value:T12 Temporal-Period:T55
-T20	Eq-Temporal-Unit 182 185	Q4W
+T20	Eq-Unit 182 185	Q4W
 T51	Procedure 152 161	treatment
 E7	Procedure:T51 Temporality:E4
 R3	Using Arg1:E7 Arg2:E3	

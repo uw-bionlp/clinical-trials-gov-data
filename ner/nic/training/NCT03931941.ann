@@ -76,7 +76,7 @@ T58	Eq-Comparison 978 1002	within the past 6 months
 E40	Eq-Comparison:T58 Temporal-Unit:T46 Value:T52 Temporal-Period:T40
 T59	Eq-Comparison 1190 1198	<200/mm3
 E41	Eq-Comparison:T59 Operator:T42 Value:T53 Per:T47
-T60	Eq-Comparison 1254 1259	<1000
+T60	Eq-Comparison 1254 1268	<1000 cells/µL
 E42	Eq-Comparison:T60 Operator:T43 Value:T54 Unit:T79 Per:T147
 T31	Modifier 89 98	recurrent
 E2	Modifier:T31 Modifies:E3
@@ -150,12 +150,12 @@ T108	Eq-Temporal-Unit 693 696	day
 A25	Eq-Temporal-Unit-Value T108 day
 T109	Eq-Unit 686 692	stools
 T110	Drug 711 722	antibiotics
-E50	Drug:T110 Name:T111
+E50	Drug:T110 Name:T111 Temporality:E75
 T111	Drug-Name 711 722	antibiotics
 T113	Temporal-Connection 723 729	during
 E51	Temporal-Connection:T113 Arg:E50 Arg2:E70
 T115	Temporal-Connection 698 703	while
-E52	Temporal-Connection:T115 Arg:E39 Arg2:E50
+E52	Temporal-Connection:T115 Arg:E39 Arg2:E75
 T117	Condition 785 793	diarrhea
 E53	Condition:T117 Name:T118
 T118	Condition-Name 785 793	diarrhea
@@ -198,7 +198,7 @@ T144	Assertion 1320 1330	intends to
 E68	Assertion:T144 Asserted:E67
 A22	Eq-Temporal-Period-Value T96 present
 A23	Eq-Temporal-Period-Value T99 recent
-T147	Eq-Temporal-Unit 1266 1268	µL
+T147	Eq-Unit 1266 1268	µL
 T26	Or 276 278	or
 E8	Or:T26 Arg:E1 Arg2:E7
 T89	Or 1317 1319	or
@@ -267,3 +267,8 @@ A37	Eq-Temporal-Period-Value T153 past
 T132	Assertion 870 878	Requires
 E55	Assertion:T132 Asserted:E17
 A35	Assertion-Type-Value E55 hypothetical
+T135	Modifier 879 887	systemic
+E74	Modifier:T135 Modifies:T18
+T136	And 794 801	despite
+E77	And:T136 Arg:E53 Arg2:E54
+R7	Equivalent-To Arg1:E50 Arg2:E49	

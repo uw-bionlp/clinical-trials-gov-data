@@ -107,7 +107,7 @@ def brat_entities_to_conll(output_filepath, anns):
 def quality_check(annotations):
     t_s = [ (x,a) for a in annotations for _,x in a.Ts.items() ]
     a_s = [ x for a in annotations for _,x in a.As.items() ]
-    for ent in [ 'Severity', 'Stability', 'Eq-Operator', 'Polarity' ]:
+    for ent in [ 'Severity', 'Stability', 'Eq-Operator', 'Polarity', 'Eq-Temporal-Unit' ]:
         x_s = [ t for t in t_s if t[0].type == ent ]
         for x in x_s: 
             a = [ a for a in a_s if a.attr_of == x[0] ]
