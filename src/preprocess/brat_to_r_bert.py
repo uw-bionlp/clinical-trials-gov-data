@@ -30,7 +30,7 @@ def get_relation_tuple(tp, arg1, arg2):
 
 def main():
 
-    rel_path = os.path.join(Config.preprocess_dir, 'relations')
+    rel_path = os.path.join(Config.preprocess_dir, 'ctg_data')
     if not os.path.exists(rel_path): 
         os.mkdir(rel_path)
 
@@ -49,6 +49,13 @@ def main():
             args = args.union([ get_relation_tuple('Argument:'+arg.type, ev.args[0].get_T(), arg.get_T()) for arg in ev.args[1:]])
             known_rel_types = known_rel_types.union(set([ (ev.args[0].get_T().type, arg.get_T().type) for arg in ev.args[1:] ]))
     
+    with open(os.path.join(rel_path, 'types.tsv'), 'w+') as fout:
+        types = set()
+        for t1, t2 in known_rel_types:
+            types.add(t1)
+            types.add(t2)
+        fout.write('\n'.join(types))
+
     # Generate labels + ids for each relation
     all_rels = set(['Other']).union(rels).union(args)
     relation2id = {}

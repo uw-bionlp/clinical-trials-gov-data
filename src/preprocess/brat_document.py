@@ -451,7 +451,7 @@ class BratDocument:
             # Check other Entities
             for _, e2 in self.Ts.items():
                 t2 = e2
-                if t1.sent_idx != t2.sent_idx or (t1.type, t2.type) not in known_rel_types:
+                if t1.sent_idx != t2.sent_idx or (t1.type, t2.type) not in known_rel_types or (t2.char_beg_idx >= t1.char_beg_idx and t2.char_end_idx <= t1.char_end_idx):
                     continue
                 rels_temp = [ arg for arg in e1.args[1:] if arg.val == t2 ]
 
@@ -459,6 +459,8 @@ class BratDocument:
                     rel_type = rels_temp[0].type
                     if 'Arg' not in rel_type and any(re.findall(regex_trailing_num, rel_type)):
                         rel_type = clean_rel('Argument:'+re.sub(regex_trailing_num, '', rel_type))
+                    else:
+                        rel_type = 'Argument:'+rel_type
                 else:
                     rel_type = 'Other'
 
@@ -470,13 +472,15 @@ class BratDocument:
                 rels.append(rel)
 
         pad_back, pad_forw = 10, 10
-        for rel_pair in rels:
+        for rel in rels:
             subj_start = rel['subj_start']
             subj_end = rel['subj_end']
             subj_type = rel['subj_type']
+            subj_span = rel['subj'].get_T().span
             obj_start = rel['obj_start']
             obj_end = rel['obj_end']
             obj_type = rel['obj_type']
+            obj_span = rel['obj'].get_T().span
             relation = rel['relation']
             subject_first = subj_start < obj_start
             is_other = relation == 'Other'
@@ -487,7 +491,7 @@ class BratDocument:
                 relation_id = relation2id[rel['relation']+'(E1,E2)']
             else:
                 relation_id = relation2id[rel['relation']+'(E2,E1)']
-            tokens = [ str(t) for t in self.toks ]
+            tokens = [ t.text for t in self.toks ]
 
             if subject_first:
                 prec = tokens[subj_start-pad_back:subj_start]
@@ -507,27 +511,15 @@ class BratDocument:
             if subject_first:
                 new_tokens = prec + ["[E11]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
                              tokens[subj_end+1:obj_start] + ["[E21]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E22]"] + foll
-                if not is_other:
-                    if " ".join(tokens[subj_start:subj_end+1]) != rel['subj'].span:
-                        continue
-                if is_other:
-                    if " ".join(tokens[subj_start:subj_end+1]) != rel['subject'].span:
-                        continue
             else:
                 new_tokens = prec + ["[E11]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E12]"] + \
                              tokens[obj_end+1:subj_start] + ["[E21]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E22]"] + foll
-                if not is_other:
-                    if " ".join(tokens[obj_start:obj_end+1]) != rel['obj'].span:
-                        continue
-                if is_other:
-                    if " ".join(tokens[obj_start:obj_end+1]) != rel['object'].span:
-                        continue
 
             if len(new_tokens) > 100:
                 continue
 
-            token_string = " ".join([ str(t) for t in new_tokens ]).replace('\n','')
-            print(f'\n{token_string}\n\t{id2relation[relation_id]}\n')
+            token_string = " ".join([ t.strip() for t in new_tokens ]).replace('\n','')
+            # print(f'\n{token_string}\n\t{id2relation[relation_id]}\n')
             data.append(f"{token_string}\t{relation_id}\t{id2relation[relation_id]}\n")
 
         return data
@@ -551,6 +543,7 @@ class BratT:
         self.tok_beg_idx  = -1
         self.tok_end_idx  = -1
         self.tok_idxs     = []
+        self.sent_idx     = -1
 
     def __str__(self):
         return f'{self.id}, "{self.span}", {self.char_beg_idx}, {self.char_end_idx}, {self.tok_beg_idx}, {self.tok_end_idx} '
