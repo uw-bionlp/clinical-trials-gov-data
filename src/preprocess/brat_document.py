@@ -124,15 +124,18 @@ class BratDocument:
                 Rs[ch] = BratR(sub_parts[0].strip(), arg1, arg2, ch, i)
 
         # Split pseudo-sentences on newlines
-        pseudo_sents, curr_sents, final_toks = [], [], []
+        pseudo_sents, curr_sents, final_toks, sent_idx = [], [], [], 0
         for i, tok in enumerate(toks):
-            if tok.text.replace(' ','') == '\n' and i > 0 and len(curr_sents):
+            tok_ = Token(tok, sent_idx)
+            if tok_.text.replace(' ','') == '\n' and i > 0 and len(curr_sents):
                 pseudo_sents.append(curr_sents)
                 curr_sents = []
-            curr_sents.append(tok)
-            final_toks.append(tok)
+                sent_idx += 1
+            curr_sents.append(tok_)
+            final_toks.append(tok_)
         if len(curr_sents):
             pseudo_sents.append(curr_sents)
+        toks = final_toks
 
         # Add token-level indexes to 'T' types
         splitters = r'(\/|\\| |<|>|=|≥|≤|-)'
@@ -160,7 +163,11 @@ class BratDocument:
 
             all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
 
+            
             if not all_matched:
+                print(f'Spans did not match! {self.path}/{self.doc_id} {v}')
+            
+                '''
                 idx_start, matches = v.tok_beg_idx, []
                 splt = [ s for s in re.split(splitters, v.span) if len(s.strip()) > 0 ]
                 for part in splt:
@@ -179,6 +186,7 @@ class BratDocument:
                         all_matched = False
                         break
             all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
+            '''
 
             if all_matched:
                 Ts[k].tok_beg_idx  = min([ tok.i for tok in matches ])
@@ -187,6 +195,7 @@ class BratDocument:
                 Ts[k].char_beg_idx = min([ tok.idx for tok in matches ])
                 Ts[k].char_end_idx = max([ tok.idx + len(tok.text) for tok in matches ])
                 Ts[k].span         = self.pretokenized[Ts[k].char_beg_idx:Ts[k].char_end_idx]
+                Ts[k].sent_idx     = min([ tok.sent_idx for tok in matches ])
             else:
                 print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
 
@@ -404,164 +413,122 @@ class BratDocument:
                 sent_idx_map[tok_idx] = sent_idx
                 tok_idx += 1
 
-        # For each sentence
-        min_tok_idx, max_tok_idx = 0, 0
-        idx = 0
-        for i, sent in enumerate(sents):
-            max_tok_idx += len(sent['tokens']) + (0 if i == 0 else 1)
+        rels = []
+        # By Entity
+        for _, e1 in self.Ts.items():
+            for _, e2 in self.Ts.items():
+                if e1 == e2 or e1.sent_idx != e2.sent_idx or (e1.type, e2.type) not in known_rel_types:
+                    continue
 
-            # Add named entities
-            for k, v in self.Ts.items():
-                #if v.tok_beg_idx >= min_tok_idx and v.tok_end_idx <= max_tok_idx:
-                if v.tok_beg_idx in sent_idx_map and v.tok_end_idx in sent_idx_map and \
-                   sent_idx_map[v.tok_beg_idx] == i and sent_idx_map[v.tok_end_idx] == i:
-                    sent['entities'].append(v)
+                rels_temp = [ r for _, r in self.Rs.items() if r.arg1.get_T() == e1 and r.arg2.get_T() == e2 ]
+                relation = clean_rel('Relation:'+rels_temp[0].type) if len(rels_temp) else 'Other'
+                rel = { 
+                    'subj': e1 ,'subj_start': e1.tok_beg_idx, 'subj_end': e1.tok_end_idx, 'subj_type': e1.type,
+                    'obj': e2,'obj_start': e2.tok_beg_idx, 'obj_end': e2.tok_end_idx, 'obj_type': e2.type,
+                    'relation': relation
+                }
+                rels.append(rel)
 
-            # Add relations
-            for _, R in self.Rs.items():
-                arg1, arg2 = R.arg1.get_T(), R.arg2.get_T()
-                if arg1.tok_beg_idx >= min_tok_idx and arg1.tok_end_idx <= max_tok_idx and \
-                   arg2.tok_beg_idx >= min_tok_idx and arg2.tok_end_idx <= max_tok_idx and not \
-                   (arg1.tok_beg_idx == arg2.tok_beg_idx and arg1.tok_end_idx == arg2.tok_end_idx):
+        # By Event
+        for _, e1 in self.Es.items():
+            t1 = e1.get_T()
 
-                    rel_type = R.type
+            # Check other Events
+            for _, e2 in self.Es.items():
+                t2 = e2.get_T()
+                if e1 == e2 or t1.sent_idx != t2.sent_idx or (t1.type, t2.type) not in known_rel_types:
+                    continue
+
+                rels_temp = [ r for _, r in self.Rs.items() if r.arg1 == e1 and r.arg2 == e2 ]
+                relation = clean_rel('Relation:'+rels_temp[0].type) if len(rels_temp) else 'Other'
+                rel = { 
+                    'subj': e1 ,'subj_start': t1.tok_beg_idx, 'subj_end': t1.tok_end_idx, 'subj_type': t1.type,
+                    'obj': e2,'obj_start': t2.tok_beg_idx, 'obj_end': t2.tok_end_idx, 'obj_type': t2.type,
+                    'relation': relation
+                }
+                rels.append(rel)
+                    
+            # Check other Entities
+            for _, e2 in self.Ts.items():
+                t2 = e2
+                if t1.sent_idx != t2.sent_idx or (t1.type, t2.type) not in known_rel_types:
+                    continue
+                rels_temp = [ arg for arg in e1.args[1:] if arg.val == t2 ]
+
+                if len(rels_temp):
+                    rel_type = rels_temp[0].type
                     if 'Arg' not in rel_type and any(re.findall(regex_trailing_num, rel_type)):
-                        rel_type = re.sub(regex_trailing_num, '', rel_type)
+                        rel_type = clean_rel('Argument:'+re.sub(regex_trailing_num, '', rel_type))
+                else:
+                    rel_type = 'Other'
 
-                    rel = { 
-                        'subj': arg1 ,'subj_start': arg1.tok_beg_idx, 'subj_end': arg1.tok_end_idx, 'subj_type': arg1.type,
-                        'obj': arg2,'obj_start': arg2.tok_beg_idx, 'obj_end': arg2.tok_end_idx, 'obj_type': arg2.type,
-                        'relation': clean_rel('Relation:'+rel_type)
-                    }
-                    sent['relations'].append(rel)
+                rel = { 
+                    'subj': e1 ,'subj_start': t1.tok_beg_idx, 'subj_end': t1.tok_end_idx, 'subj_type': t1.type,
+                    'obj': e2,'obj_start': t2.tok_beg_idx, 'obj_end': t2.tok_end_idx, 'obj_type': t2.type,
+                    'relation': rel_type
+                }
+                rels.append(rel)
 
+        pad_back, pad_forw = 10, 10
+        for rel_pair in rels:
+            subj_start = rel['subj_start']
+            subj_end = rel['subj_end']
+            subj_type = rel['subj_type']
+            obj_start = rel['obj_start']
+            obj_end = rel['obj_end']
+            obj_type = rel['obj_type']
+            relation = rel['relation']
+            subject_first = subj_start < obj_start
+            is_other = relation == 'Other'
+            
+            if is_other:
+                relation_id = relation2id['Other']
+            elif subject_first:
+                relation_id = relation2id[rel['relation']+'(E1,E2)']
+            else:
+                relation_id = relation2id[rel['relation']+'(E2,E1)']
+            tokens = [ str(t) for t in self.toks ]
 
-            # Add event arguments
-            for _, E in self.Es.items():
-                if E.get_T().tok_beg_idx >= min_tok_idx and E.get_T().tok_end_idx <= max_tok_idx:
-                    for arg in E.args[1:]:
-                        if arg.get_T().tok_beg_idx >= min_tok_idx and \
-                           arg.get_T().tok_end_idx <= max_tok_idx and \
-                           (arg.get_T().tok_beg_idx > E.get_T().tok_end_idx or arg.get_T().tok_end_idx < E.get_T().tok_beg_idx):
+            if subject_first:
+                prec = tokens[subj_start-pad_back:subj_start]
+                foll = tokens[obj_end+1:obj_end+pad_forw]
+            else:
+                prec = tokens[obj_start-pad_back:obj_start]
+                foll = tokens[subj_end+1:subj_end+pad_forw]
+            
+            last_prec_newline = [ i for i,t in enumerate(prec) if t.replace(' ','') == '\n' ]
+            first_foll_newline = [ i for i,t in enumerate(foll) if t.replace(' ','') == '\n' ]
 
-                            rel_type = arg.type
-                            if 'Arg' not in rel_type and any(re.findall(regex_trailing_num, rel_type)):
-                                rel_type = re.sub(regex_trailing_num, '', rel_type)
+            if len(last_prec_newline) > 0 :
+                prec = prec[max(last_prec_newline)+1:]
+            if len(first_foll_newline) > 0:
+                foll = foll[:min(first_foll_newline)]
 
-                            rel = { 
-                                'subj': E.get_T(), 'subj_start': E.get_T().tok_beg_idx, 'subj_end': E.get_T().tok_end_idx, 'subj_type': E.get_T().type,
-                                'obj': arg.val.get_T(), 'obj_start': arg.val.get_T().tok_beg_idx, 'obj_end': arg.val.get_T().tok_end_idx, 'obj_type': arg.val.get_T().type,
-                                'relation': clean_rel('Argument:'+rel_type)
-                            }
-                            sent['relations'].append(rel)
-
-            pad_back, pad_forw = 10, 10
-            for ent1 in sent['entities']:
-                ent1_idxs = range(ent1.tok_beg_idx, ent1.tok_end_idx+1, 1)
-                for ent2 in sent['entities']:
-                    if ent1 == ent2 or \
-                       ((ent1.type, ent2.type) not in known_rel_types and (ent2.type, ent1.type) not in known_rel_types) or \
-                       ent2.tok_beg_idx <= ent1.tok_beg_idx or \
-                       ent2.tok_beg_idx in ent1_idxs or \
-                       ent2.tok_end_idx in ent1_idxs or \
-                       ent2.tok_end_idx > max_tok_idx or \
-                       ent2.type == ent1.type+'-Name' or \
-                       ent1.type == ent2.type+'-Name' or \
-                       (ent1.type == 'Eq-Comparison' and ent2.type.startswith('Eq-')) or \
-                       (ent2.type == 'Eq-Comparison' and ent1.type.startswith('Eq-')):
+            if subject_first:
+                new_tokens = prec + ["[E11]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
+                             tokens[subj_end+1:obj_start] + ["[E21]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E22]"] + foll
+                if not is_other:
+                    if " ".join(tokens[subj_start:subj_end+1]) != rel['subj'].span:
+                        continue
+                if is_other:
+                    if " ".join(tokens[subj_start:subj_end+1]) != rel['subject'].span:
+                        continue
+            else:
+                new_tokens = prec + ["[E11]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E12]"] + \
+                             tokens[obj_end+1:subj_start] + ["[E21]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E22]"] + foll
+                if not is_other:
+                    if " ".join(tokens[obj_start:obj_end+1]) != rel['obj'].span:
+                        continue
+                if is_other:
+                    if " ".join(tokens[obj_start:obj_end+1]) != rel['object'].span:
                         continue
 
-                    rel_ent1 = [ rel for rel in sent['relations'] if rel['subj'] in [ ent1, ent2 ] ]
-                    rel_ent2 = [ rel for rel in sent['relations'] if rel['obj'] in [ ent1, ent2 ] ]
+            if len(new_tokens) > 100:
+                continue
 
-                    # If there's a gold relation
-                    if len(rel_ent1) == 1 and len(rel_ent2) == 1 and rel_ent1[0] == rel_ent2[0]:
-                        is_other = False
-                        rel = rel_ent1[0]
-                        subj_start = rel['subj_start']
-                        subj_end = rel['subj_end']
-                        subj_type = rel['subj_type']
-                        obj_start = rel['obj_start']
-                        obj_end = rel['obj_end']
-                        obj_type = rel['obj_type']
-                        subject_first = subj_start < obj_start
-                        
-                        if subject_first:
-                            relation_id = relation2id[rel['relation']+'(E1,E2)']
-                        else:
-                            relation_id = relation2id[rel['relation']+'(E2,E1)']
-                    
-                    # Else 'Other' relation
-                    else:
-                        continue
-                        is_other = True
-                        subj_start = ent1.tok_beg_idx
-                        subj_end = ent1.tok_end_idx
-                        subj_type = ent1.type
-                        obj_start = ent2.tok_beg_idx
-                        obj_end = ent2.tok_end_idx
-                        obj_type = ent2.type
-                        relation_id = relation2id['Other']
-                        subject_first = subj_start < obj_start
-
-                    tokens = [ str(t) for t in self.toks ]
-                    idx += 1
-
-                    if subject_first:
-                        prec = tokens[subj_start-pad_back:subj_start]
-                        foll = tokens[obj_end+1:obj_end+pad_forw]
-                    else:
-                        prec = tokens[obj_start-pad_back:obj_start]
-                        foll = tokens[subj_end+1:subj_end+pad_forw]
-                    
-                    last_prec_newline = [ i for i,t in enumerate(prec) if t.replace(' ','') == '\n' ]
-                    first_foll_newline = [ i for i,t in enumerate(foll) if t.replace(' ','') == '\n' ]
-
-                    if len(last_prec_newline) > 0 :
-                        prec = prec[max(last_prec_newline)+1:]
-                    if len(first_foll_newline) > 0:
-                        foll = foll[:min(first_foll_newline)]
-
-                    if subject_first:
-                        new_tokens = prec + ["[E11]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
-                                     tokens[subj_end+1:obj_start] + ["[E21]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E22]"] + foll
-                        if not is_other:
-                            if " ".join(tokens[subj_start:subj_end+1]) != rel['subj'].span:
-                                continue
-                        if is_other:
-                            if " ".join(tokens[subj_start:subj_end+1]) != ent1.span:
-                                continue
-                    else:
-                        new_tokens = prec + ["[E11]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E12]"] + \
-                                     tokens[obj_end+1:subj_start] + ["[E21]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E22]"] + foll
-                        if not is_other:
-                            if " ".join(tokens[obj_start:obj_end+1]) != rel['obj'].span:
-                                continue
-                        if is_other:
-                            if " ".join(tokens[obj_start:obj_end+1]) != ent2.span:
-                                continue
-
-                    if len(new_tokens) > 100:
-                        continue
-
-                    """
-                    if subject_first:
-                        new_tokens = prec + ["[E11]"] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
-                                     tokens[subj_end+1:obj_start] + ["[E21]"] + tokens[obj_start:obj_end+1] + ["[E22]"] + foll
-                        if " ".join(tokens[subj_start:subj_end+1]) != rel['subj'].span:
-                            continue
-                    else:
-                        new_tokens = prec + ["[E11]"] + tokens[obj_start:obj_end+1] + ["[E12]"] + \
-                                     tokens[obj_end+1:subj_start] + ["[E21]"] + tokens[subj_start:subj_end+1] + ["[E22]"] + foll
-                        if " ".join(tokens[obj_start:obj_end+1]) != rel['obj'].span:
-                            continue
-                    """
-
-                    token_string = " ".join([ str(t) for t in new_tokens ]).replace('\n','')
-                    print(f'\n{token_string}\n\t{id2relation[relation_id]}\n')
-                    data.append(f"{token_string}\t{relation_id}\t{id2relation[relation_id]}\n")
-                
-            min_tok_idx = max_tok_idx
+            token_string = " ".join([ str(t) for t in new_tokens ]).replace('\n','')
+            print(f'\n{token_string}\n\t{id2relation[relation_id]}\n')
+            data.append(f"{token_string}\t{relation_id}\t{id2relation[relation_id]}\n")
 
         return data
 
@@ -638,14 +605,10 @@ class BratA:
     def to_brat(self):
         return f'{self.id}\t{self.type} {self.attr_of.id} {self.val}'
 
-class FauxToken:
-    def __init__(self, i, idx, text):
-        self.i = i
-        self.idx = idx
-        self.text = text
-
-    def __repl__(self):
-        return self.text
-
-    def __str__(self):
-        return self.text
+class Token():
+    def __init__(self, tok, sent_idx):
+        self.tok = tok
+        self.text = tok.text
+        self.i = tok.i
+        self.idx = tok.idx
+        self.sent_idx = sent_idx

@@ -54,14 +54,14 @@ def main():
     write_jsonl(test, os.path.join(ner_path, 'test.json'))
 
     # Get eval data
-    brat_eval_raw = [ BratDocument(k, v[0], v[1], "") for k,v in utils.fetch_brat_files(Config.annotation_eval_dir).items() ]
-    dygiepp = [ ann.to_dygiepp_format() for ann in brat_eval_raw ]
-    for d in dygiepp:
-        del d['ner']
-        del d['clusters']
-        del d['relations']
-        del d['events']
-    write_jsonl(dygiepp, os.path.join(ner_path, 'eval.json'))
+    #brat_eval_raw = [ BratDocument(k, v[0], v[1], "") for k,v in utils.fetch_brat_files(Config.annotation_eval_dir).items() ]
+    #dygiepp = [ ann.to_dygiepp_format() for ann in brat_eval_raw ]
+    #for d in dygiepp:
+    #    del d['ner']
+    #    del d['clusters']
+    #    del d['relations']
+    #    del d['events']
+    #write_jsonl(dygiepp, os.path.join(ner_path, 'eval.json'))
 
 if __name__ == '__main__':
     main()

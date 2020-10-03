@@ -21,15 +21,12 @@ T1	Life-Stage-And-Gender 56 67	transgender
 A4	Life-Stage-And-Gender-Type T1 transgender
 T11	Birth 143 148	birth
 E2	Birth:T11 
-T14	Life-Stage-And-Gender 124 130	gender
-T17	Negation 111 118	differs
-E4	Negation:T17 Negates:T14
 T18	Temporal-Connection 140 142	at
-E6	Temporal-Connection:T18 Arg:T14 Arg2:E2
+E6	Temporal-Connection:T18 Arg2:E2 Arg:E4
 A5	Temporal-Connection-Type-Value E6 during
-T2	Condition 89 104	gender identity
-E1	Condition:T2 Name:T10 Temporality:E10
-T10	Condition-Name 89 104	gender identity
+T2	Observation 89 104	gender identity
+E1	Observation:T2 Name:T10 Temporality:E10
+T10	Observation-Name 89 104	gender identity
 T19	Eq-Comparison 81 88	current
 E10	Eq-Comparison:T19 Temporal-Period:T20
 T20	Eq-Temporal-Period 81 88	current
@@ -59,3 +56,10 @@ E18	Age:T30 Eq-Comparison:E9
 T31	Eq-Value 524 526	18
 T32	Eq-Temporal-Unit 527 532	years
 A10	Eq-Temporal-Unit-Value T32 year
+T14	Observation 124 130	gender
+E4	Observation:T14 Name:T17
+T17	Observation-Name 124 130	gender
+T33	Negation 111 118	differs
+E19	Negation:T33 Negates:E4
+T34	And 105 110	which
+E20	And:T34 Arg:E1 Arg2:E19

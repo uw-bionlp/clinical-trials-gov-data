@@ -105,13 +105,12 @@ T64	Eq-Comparison 297 306	± 5 years
 E23	Eq-Comparison:T64 Operator:T65 Value:T31 Temporal-Unit:T17
 T65	Eq-Operator 297 298	±
 A21	Eq-Operator-Value T65 PLUS-MINUS
-T4	Life-Stage-And-Gender 309 312	sex
 T66	Observation 317 334	physical activity
 E3	Observation:T66 Name:T67
 T67	Observation-Name 317 334	physical activity
 A22	Observation-Type-Value T67 social-habit
 T68	And 313 316	and
-E24	And:T68 Arg:T4 Arg2:E3
+E24	And:T68 Arg2:E3 Arg:E37
 T69	Observation 348 366	GPAQ questionnaire
 E25	Observation:T69 Name:T70 Eq-Comparison:E26
 T70	Observation-Name 348 366	GPAQ questionnaire
@@ -164,3 +163,6 @@ T93	Polarity 634 658	outside the normal range
 A33	Polarity-Value T93 abnormal
 T94	Eq-Value 660 662	35
 T95	Eq-Unit 665 666	%
+T3	Observation 309 312	sex
+E37	Observation:T3 Name:T4
+T4	Observation-Name 309 312	sex

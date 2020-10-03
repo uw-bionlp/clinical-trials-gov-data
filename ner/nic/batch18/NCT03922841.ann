@@ -4,8 +4,6 @@ E1	Condition:T1 Name:T2
 T3	Condition 407 422	pleural disease
 T4	Condition-Name 407 422	pleural disease
 E3	Condition:T3 Name:T4
-T5	Age 268 271	age
-E4	Age:T5 
 T6	Procedure 158 174	chest radiograph
 E2	Procedure:T6 Name:T7
 T7	Procedure-Name 158 174	chest radiograph
@@ -22,11 +20,6 @@ E8	Or:T13 Arg:E5 Arg2:E6
 R1	Found-By Arg1:E1 Arg2:E2	
 R2	Found-By Arg1:E1 Arg2:E5	
 R3	Found-By Arg1:E1 Arg2:E6	
-T14	Life-Stage-And-Gender 275 281	gender
-T15	Negation 265 267	No
-E9	Negation:T15 Negates:E4 Negates2:T14
-T16	Or 272 274	or
-E10	Or:T16 Arg:E4 Arg2:T14
 T17	Procedure 382 394	radiographic
 E11	Procedure:T17 Name:T18
 T18	Procedure-Name 382 394	radiographic
