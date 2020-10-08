@@ -65,8 +65,6 @@ def pretokenize(text):
         prev_add_start = add_start
         prev_add_end = add_end
 
-        
-
     cleaned = ''.join(cleaned)
     return pad_map, cleaned
 
@@ -403,21 +401,15 @@ class BratDocument:
     def to_r_bert_format(self, relation2id, id2relation, known_rel_types, debug=False):
 
         regex_trailing_num = r'\d'
-        sents = [ { 'tokens': [ tok.text for tok in sent ], 'entities': [], 'relations': [] } for sent in self.sents ]
-        data = []
+        data, rels = [], []
         clean_rel = lambda tp: re.sub(regex_trailing_num, '', tp) if ':Arg' not in tp and any(re.findall(regex_trailing_num, tp)) else tp
 
-        sent_idx_map, tok_idx = {}, 0
-        for sent_idx, sent in enumerate(sents):
-            for tok in sent['tokens']:
-                sent_idx_map[tok_idx] = sent_idx
-                tok_idx += 1
-
-        rels = []
         # By Entity
         for _, e1 in self.Ts.items():
+
+            # Check Entities by Relation
             for _, e2 in self.Ts.items():
-                if e1 == e2 or e1.sent_idx != e2.sent_idx or (e1.type, e2.type) not in known_rel_types:
+                if e1 == e2 or e1.sent_idx != e2.sent_idx or e2.type == e1.type+'-Name' or (e1.type, e2.type) not in known_rel_types:
                     continue
 
                 rels_temp = [ r for _, r in self.Rs.items() if r.arg1.get_T() == e1 and r.arg2.get_T() == e2 ]
@@ -429,11 +421,26 @@ class BratDocument:
                 }
                 rels.append(rel)
 
+            # Check Events by Relation
+            for _, e2 in self.Es.items():
+                t2 = e2.get_T()
+                if e1.sent_idx != t2.sent_idx or (e1.type, t2.type) not in known_rel_types:
+                    continue
+
+                rels_temp = [ r for _, r in self.Rs.items() if r.arg1.get_T() == e1 and r.arg2.get_T() == t2 ]
+                relation = clean_rel('Relation:'+rels_temp[0].type) if len(rels_temp) else 'Other'
+                rel = { 
+                    'subj': e1 ,'subj_start': e1.tok_beg_idx, 'subj_end': e1.tok_end_idx, 'subj_type': e1.type,
+                    'obj': t2,'obj_start': t2.tok_beg_idx, 'obj_end': t2.tok_end_idx, 'obj_type': t2.type,
+                    'relation': relation
+                }
+                rels.append(rel)
+
         # By Event
         for _, e1 in self.Es.items():
             t1 = e1.get_T()
 
-            # Check other Events
+            # Check Events by Relation
             for _, e2 in self.Es.items():
                 t2 = e2.get_T()
                 if e1 == e2 or t1.sent_idx != t2.sent_idx or (t1.type, t2.type) not in known_rel_types:
@@ -448,10 +455,32 @@ class BratDocument:
                 }
                 rels.append(rel)
                     
-            # Check other Entities
-            for _, e2 in self.Ts.items():
-                t2 = e2
+            # Check Events by Argument
+            for _, e2 in self.Es.items():
+                t2 = e2.get_T()
                 if t1.sent_idx != t2.sent_idx or (t1.type, t2.type) not in known_rel_types or (t2.char_beg_idx >= t1.char_beg_idx and t2.char_end_idx <= t1.char_end_idx):
+                    continue
+                rels_temp = [ arg for arg in e1.args[1:] if arg.val == e2 ]
+
+                if len(rels_temp):
+                    rel_type = rels_temp[0].type
+                    if 'Arg' not in rel_type and any(re.findall(regex_trailing_num, rel_type)):
+                        rel_type = clean_rel('Argument:'+re.sub(regex_trailing_num, '', rel_type))
+                    else:
+                        rel_type = 'Argument:'+rel_type
+                else:
+                    rel_type = 'Other'
+
+                rel = { 
+                    'subj': e1 ,'subj_start': t1.tok_beg_idx, 'subj_end': t1.tok_end_idx, 'subj_type': t1.type,
+                    'obj': e2,'obj_start': t2.tok_beg_idx, 'obj_end': t2.tok_end_idx, 'obj_type': t2.type,
+                    'relation': rel_type
+                }
+                rels.append(rel)
+
+            # Check Entities by Argument
+            for _, t2 in self.Ts.items():
+                if t1.sent_idx != t2.sent_idx or (t1.type, t2.type) not in known_rel_types or t2.type == t1.type+'-Name' or (t2.char_beg_idx >= t1.char_beg_idx and t2.char_end_idx <= t1.char_end_idx):
                     continue
                 rels_temp = [ arg for arg in e1.args[1:] if arg.val == t2 ]
 
@@ -470,6 +499,22 @@ class BratDocument:
                     'relation': rel_type
                 }
                 rels.append(rel)
+
+        # Dedupe
+        deduped = []
+        for rel in rels:
+            if rel['subj_start'] == rel['obj_start'] and rel['subj_end'] == rel['obj_end']:
+                continue
+            if rel['relation'] == 'Other':
+                dup1 = [ r for r in rels if r != rel and r['subj_start'] == rel['subj_start'] and r['subj_end'] == rel['subj_end'] and r['obj_start'] == rel['obj_start'] and r['obj_end'] == rel['obj_end'] and r['relation'] != rel['relation'] ]
+                dup2 = [ r for r in rels if r != rel and r['obj_start'] == rel['subj_start'] and r['obj_end'] == rel['subj_end'] and r['subj_start'] == rel['obj_start'] and r['subj_end'] == rel['obj_end'] and r['relation'] != rel['relation'] ]
+                if not len(dup1) and not len(dup2):
+                    deduped.append(rel)
+            else:
+                dup = [ r for r in deduped if r['subj_start'] == rel['subj_start'] and r['subj_end'] == rel['subj_end'] and r['obj_start'] == rel['obj_start'] and r['obj_end'] == rel['obj_end'] and r['relation'] == rel['relation'] ]
+                if not len(dup):
+                    deduped.append(rel)
+        rels = deduped
 
         pad_back, pad_forw = 10, 10
         for rel in rels:
@@ -508,6 +553,11 @@ class BratDocument:
             if len(first_foll_newline) > 0:
                 foll = foll[:min(first_foll_newline)]
 
+            if subj_type.endswith('-Name'):
+                subj_type = subj_type.replace('-Name','')
+            if obj_type.endswith('-Name'):
+                obj_type = obj_type.replace('-Name','')
+
             if subject_first:
                 new_tokens = prec + ["[E11]"] + [subj_type] + tokens[subj_start:subj_end+1] + ["[E12]"] + \
                              tokens[subj_end+1:obj_start] + ["[E21]"] + [obj_type] + tokens[obj_start:obj_end+1] + ["[E22]"] + foll
@@ -519,8 +569,8 @@ class BratDocument:
                 continue
 
             token_string = " ".join([ t.strip() for t in new_tokens ]).replace('\n','')
-            # print(f'\n{token_string}\n\t{id2relation[relation_id]}\n')
-            data.append(f"{token_string}\t{relation_id}\t{id2relation[relation_id]}\n")
+            output = f"{token_string}\t{relation_id}\t{id2relation[relation_id]}\n"
+            data.append(output)
 
         return data
 
