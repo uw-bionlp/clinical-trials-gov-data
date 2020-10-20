@@ -31,9 +31,9 @@ T22	Eq-Comparison 127 130	≥20
 E13	Eq-Comparison:T22 Operator:T14 Value:T19
 T23	Eq-Comparison 539 563	within the past 6 months
 E14	Eq-Comparison:T23 Operator:T15 Temporal-Unit:T17 Value:T20 Temporal-Period:T68
-T24	Condition 70 87	Glogau photoaging
-E2	Condition:T24 Name:T25 Stage:E5
-T25	Condition-Name 70 87	Glogau photoaging
+T24	Observation 70 87	Glogau photoaging
+E2	Observation:T24 Name:T25 Eq-Comparison:E5
+T25	Observation-Name 70 87	Glogau photoaging
 T26	Condition 46 63	facial skin aging
 E3	Condition:T26 Name:T27
 T27	Condition-Name 46 63	facial skin aging
@@ -118,8 +118,7 @@ E40	Eq-Comparison:T69 Temporal-Period:T70
 T70	Eq-Temporal-Period 570 577	History
 A13	Eq-Temporal-Period-Value T70 past
 T71	Modifier 299 306	chronic
-E41	Modifier:T71 
-R2	Abbrev-Of Arg1:E41 Arg2:E4	
+E41	Modifier:T71 Modifies:E4
 T67	Modifier 534 538	face
 E39	Modifier:T67 Modifies:T11
 T68	Eq-Temporal-Period 550 554	past
@@ -128,3 +127,4 @@ T72	Eq-Temporal-Period 645 653	previous
 A14	Eq-Temporal-Period-Value T72 past
 T73	Polarity 136 144	adequate
 A15	Polarity-Value T73 normal
+A16	Observation-Type-Value T25 clinical-score

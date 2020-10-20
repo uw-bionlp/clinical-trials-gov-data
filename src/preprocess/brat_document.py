@@ -7,19 +7,17 @@ tokenize = spacy.load('en_core_web_sm')
 
 def pretokenize(text):
     reg_num = r'\d'
-    #common_numchars = [ ch.lower() for ch in [ 'CD4', 'B12', 'm2', 'm3', 'icd9', 'icd10' ] ]
-    #is_common_numchar = lambda i: len([ com for com in common_numchars if lowered[:i+2].endswith(com)]) > 0
     possible_code = r'[a-zA-Z]+\d+(\.\d{1,2})?'
     is_possible_code = lambda i: re.match(possible_code, lowered[i-2:i+2])
-    is_numeric = False
-    prec_numeric = False
+    converters = { '˂':'<', '＜':'<', '＞':'>', '：':':', '－':'-', '﴾':'(', '﴿':')', '（':'(', '、':',', '，':',', '±':'+/-',
+                   '≥':'>=', '≧':'>=', '≤':'<=' }
     dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧', '±', '：', ':',
                  '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙', '+', '%', 'ᵃ' }
     cleaned = []
     prev = ''
     prev_num = False
     prev_per = False
-    prev_add_start, prev_add_end = '', ''
+    prev_add_end = '', ''
     is_num = re.match(reg_num, text[0])
     pad_map = {}
 
@@ -28,10 +26,10 @@ def pretokenize(text):
     for i, ch in enumerate(text):
         foll = text[i+1] if i < len(text)-1 else ''
         foll_num = re.match(reg_num, foll) or (is_num and foll in ['.',','])
-        foll_per = foll == '.'
         is_per = ch == '.'
         add_start, add_end = '', ''
-
+        if ch in converters:
+            ch = converters.get(ch)
         if ch in dividers:
             if prev != ' ': 
                 add_start = ' '
@@ -56,150 +54,49 @@ def pretokenize(text):
             add_end = ''
         
         cleaned.append(add_start + ch + add_end)
-        pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start + add_end)
+        pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start + add_end) + len(ch)-1
 
         prev_num = is_num
         prev = ch
         prev_per = is_per
         is_num = foll_num
-        prev_add_start = add_start
         prev_add_end = add_end
 
     cleaned = ''.join(cleaned)
     return pad_map, cleaned
 
 class BratDocument:
-    def __init__(self, doc_id, text, anns, path):
-        pad_map, pretokenized = pretokenize(text)
+    def __init__(self, doc_id, text, anns, path, surface_only=False):
         self.doc_id       = doc_id
         self.raw_text     = text
-        self.pretokenized = pretokenized
         self.raw_anns     = anns
         self.path         = path
-        self.derive_annotations(pad_map)
-        self.sents
-        self.Ts
-        self.Es
-        self.Rs
-        self.As
-        self.toks
+        self.sents        = None
+        self.Ts           = None
+        self.Es           = None
+        self.Rs           = None 
+        self.As           = None
+        self.toks         = None
+
+        if not surface_only:
+            pad_map, pretokenized = pretokenize(text)
+            self.pretokenized = pretokenized
+            self.derive_annotations(pad_map)
+        else:
+            self.pretokenized = self.raw_text
+            self.derive_annotations_surface_only()
 
     def to_brat(self):
         lines = []
-        for k,v in self.Es.items(): lines.append(v.to_brat())
-        for k,v in self.Ts.items(): lines.append(v.to_brat())
-        for k,v in self.As.items(): lines.append(v.to_brat())
-        for k,v in self.Rs.items(): lines.append(v.to_brat())
+        for _,v in self.Es.items(): lines.append(v.to_brat())
+        for _,v in self.Ts.items(): lines.append(v.to_brat())
+        for _,v in self.As.items(): lines.append(v.to_brat())
+        for _,v in self.Rs.items(): lines.append(v.to_brat())
         return self.pretokenized, '\n'.join(lines)
+
+    def set_pointers(self, Ts, Es, Rs, As):
         
-
-    def derive_annotations(self, pad_map):
-        anns = self.raw_anns
-        Ts, Es, Rs, As = {}, {}, {}, {}
-        toks = tokenize(self.pretokenized)
-
-        # First pass, index each annotation type
-        for i,ann in enumerate(anns.splitlines()):
-            if not len(ann.strip()) or '\t' not in ann:
-                continue
-
-            beg_idx, end_idx, txt = -1, -1, None
-            parts = ann.split('\t')
-            sub_parts = [ part for part in parts[1].split(' ') if part != '' ]
-            ch = parts[0].strip()
-            if ch[0] == 'T':
-                Ts[ch] = BratT(sub_parts[0].strip(), int(sub_parts[1]), int(sub_parts[2]), parts[2].strip(), ch, i)
-            elif ch[0] == 'A':
-                As[ch] = BratA(sub_parts[0].strip(), sub_parts[1].strip(), sub_parts[2].strip(),ch, i)
-            elif ch[0] == 'E': 
-                Es[ch] = BratE(ch, i)
-                for part in sub_parts:
-                    kvs = part.split(':')
-                    Es[ch].args.append(BratEArgPair(kvs[0].strip(), kvs[1].strip()))
-            elif ch[0] == 'R':
-                arg1_type, arg1 = sub_parts[1].split(':')
-                arg2_type, arg2 = sub_parts[2].split(':')
-                Rs[ch] = BratR(sub_parts[0].strip(), arg1, arg2, ch, i)
-
-        # Split pseudo-sentences on newlines
-        pseudo_sents, curr_sents, final_toks, sent_idx = [], [], [], 0
-        for i, tok in enumerate(toks):
-            tok_ = Token(tok, sent_idx)
-            if tok_.text.replace(' ','') == '\n' and i > 0 and len(curr_sents):
-                pseudo_sents.append(curr_sents)
-                curr_sents = []
-                sent_idx += 1
-            curr_sents.append(tok_)
-            final_toks.append(tok_)
-        if len(curr_sents):
-            pseudo_sents.append(curr_sents)
-        toks = final_toks
-
-        # Add token-level indexes to 'T' types
-        splitters = r'(\/|\\| |<|>|=|≥|≤|-)'
-        for k, v in Ts.items():
-            try:
-                start = [ t for t in toks if t.idx == v.char_beg_idx + pad_map[v.char_beg_idx]]
-                if not len(start):
-                    start = [ t for t in toks if t.idx == v.char_beg_idx-1 + pad_map[v.char_beg_idx]][0]
-                else:
-                    start = start[0]
-            except:
-                continue
-            no_spaced = v.span.replace(' ','')
-            matches = [ start ]
-            matches_no_spaced = start.text
-            while True: 
-                nxt = toks[matches[-1].i+1] if len(toks) > matches[-1].i+1 else None
-                if nxt == None or " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ',''):
-                    break
-                if no_spaced.startswith(matches_no_spaced+nxt.text.replace(' ','')):
-                    matches.append(nxt)
-                    matches_no_spaced = ''.join([ m.text for m in matches ]).replace(' ','')
-                else:
-                    break
-
-            all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
-
-            
-            if not all_matched:
-                print(f'Spans did not match! {self.path}/{self.doc_id} {v}')
-            
-                '''
-                idx_start, matches = v.tok_beg_idx, []
-                splt = [ s for s in re.split(splitters, v.span) if len(s.strip()) > 0 ]
-                for part in splt:
-                    cands = [ tok for tok in final_toks if tok.idx >= idx_start and (tok.text.startswith(part) or part.startswith(tok.text)) ]
-                    if len(cands) > 0:
-                        exact_matches = [ c for c in cands if c.text == part ]
-                        if len(exact_matches):
-                            best_match = sorted(exact_matches, key=lambda x: x.idx)[0]
-                        else:
-                            best_match = sorted(cands, key=lambda x: x.idx)[0]
-                            if len(str(best_match)) == 1 and len(part) > 1:
-                                best_match = sorted(cands, key=lambda x: len(x), reverse=True)[0]
-                        matches.append(best_match)
-                        idx_start += len(str(best_match))
-                    else:
-                        all_matched = False
-                        break
-            all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
-            '''
-
-            if all_matched:
-                Ts[k].tok_beg_idx  = min([ tok.i for tok in matches ])
-                Ts[k].tok_end_idx  = max([ tok.i for tok in matches ])
-                Ts[k].tok_idxs     = [ tok.i for tok in matches ]
-                Ts[k].char_beg_idx = min([ tok.idx for tok in matches ])
-                Ts[k].char_end_idx = max([ tok.idx + len(tok.text) for tok in matches ])
-                Ts[k].span         = self.pretokenized[Ts[k].char_beg_idx:Ts[k].char_end_idx]
-                Ts[k].sent_idx     = min([ tok.sent_idx for tok in matches ])
-            else:
-                print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
-
-        # Substitute indexed names for objects
         # Es
-        to_remove = []
         for k, v in Es.items():
             for i, arg in enumerate(v.args):
                 pointer = arg.val
@@ -234,6 +131,120 @@ class BratDocument:
             else:
                 print(f"R's pointer2 doesn't exist! {v}")
 
+        return Ts, Es, Rs, As
+
+    def derive_annotations_surface_only(self):
+        Ts, Es, Rs, As = {}, {}, {}, {}
+        for i,ann in enumerate(self.raw_anns.splitlines()):
+            if not len(ann.strip()) or '\t' not in ann:
+                continue
+
+            parts = ann.split('\t')
+            sub_parts = [ part for part in parts[1].split(' ') if part != '' ]
+            ch = parts[0].strip()
+            if ch[0] == 'T':
+                Ts[ch] = BratT(sub_parts[0].strip(), int(sub_parts[1]), int(sub_parts[2]), parts[2].strip(), ch, i)
+            elif ch[0] == 'A':
+                As[ch] = BratA(sub_parts[0].strip(), sub_parts[1].strip(), sub_parts[2].strip(),ch, i)
+            elif ch[0] == 'E': 
+                Es[ch] = BratE(ch, i)
+                for part in sub_parts:
+                    kvs = part.split(':')
+                    Es[ch].args.append(BratEArgPair(kvs[0].strip(), kvs[1].strip()))
+            elif ch[0] == 'R':
+                _, arg1 = sub_parts[1].split(':')
+                _, arg2 = sub_parts[2].split(':')
+                Rs[ch] = BratR(sub_parts[0].strip(), arg1, arg2, ch, i)
+
+        Ts, Es, Rs, As = self.set_pointers(Ts, Es, Rs, As)
+        self.Ts = Ts
+        self.Es = Es
+        self.As = As
+        self.Rs = Rs
+        
+
+    def derive_annotations(self, pad_map):
+        anns = self.raw_anns
+        Ts, Es, Rs, As = {}, {}, {}, {}
+        toks = tokenize(self.pretokenized)
+
+        # First pass, index each annotation type
+        for i,ann in enumerate(anns.splitlines()):
+            if not len(ann.strip()) or '\t' not in ann:
+                continue
+
+            parts = ann.split('\t')
+            sub_parts = [ part for part in parts[1].split(' ') if part != '' ]
+            ch = parts[0].strip()
+            if ch[0] == 'T':
+                Ts[ch] = BratT(sub_parts[0].strip(), int(sub_parts[1]), int(sub_parts[2]), parts[2].strip(), ch, i)
+            elif ch[0] == 'A':
+                As[ch] = BratA(sub_parts[0].strip(), sub_parts[1].strip(), sub_parts[2].strip(),ch, i)
+            elif ch[0] == 'E': 
+                Es[ch] = BratE(ch, i)
+                for part in sub_parts:
+                    kvs = part.split(':')
+                    Es[ch].args.append(BratEArgPair(kvs[0].strip(), kvs[1].strip()))
+            elif ch[0] == 'R':
+                _, arg1 = sub_parts[1].split(':')
+                _, arg2 = sub_parts[2].split(':')
+                Rs[ch] = BratR(sub_parts[0].strip(), arg1, arg2, ch, i)
+
+        # Split pseudo-sentences on newlines
+        pseudo_sents, curr_sents, final_toks, sent_idx = [], [], [], 0
+        for i, tok in enumerate(toks):
+            tok_ = Token(tok, sent_idx)
+            if tok_.text.replace(' ','') == '\n' and i > 0 and len(curr_sents):
+                pseudo_sents.append(curr_sents)
+                curr_sents = []
+                sent_idx += 1
+            curr_sents.append(tok_)
+            final_toks.append(tok_)
+        if len(curr_sents):
+            pseudo_sents.append(curr_sents)
+        toks = final_toks
+
+        # Add token-level indexes to 'T' types
+        for k, v in Ts.items():
+            try:
+                start = [ t for t in toks if t.idx == v.char_beg_idx + pad_map[v.char_beg_idx]]
+                if not len(start):
+                    start = [ t for t in toks if t.idx == v.char_beg_idx-1 + pad_map[v.char_beg_idx]][0]
+                else:
+                    start = start[0]
+            except:
+                continue
+            no_spaced = v.span.replace(' ','')
+            matches = [ start ]
+            matches_no_spaced = start.text
+            while True: 
+                nxt = toks[matches[-1].i+1] if len(toks) > matches[-1].i+1 else None
+                if nxt == None or " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ',''):
+                    break
+                if no_spaced.startswith(matches_no_spaced+nxt.text.replace(' ','')):
+                    matches.append(nxt)
+                    matches_no_spaced = ''.join([ m.text for m in matches ]).replace(' ','')
+                else:
+                    break
+
+            all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
+
+            
+            if not all_matched:
+                print(f'Spans did not match! {self.path}/{self.doc_id} {v}')
+
+            if all_matched:
+                Ts[k].tok_beg_idx  = min([ tok.i for tok in matches ])
+                Ts[k].tok_end_idx  = max([ tok.i for tok in matches ])
+                Ts[k].tok_idxs     = [ tok.i for tok in matches ]
+                Ts[k].char_beg_idx = min([ tok.idx for tok in matches ])
+                Ts[k].char_end_idx = max([ tok.idx + len(tok.text) for tok in matches ])
+                Ts[k].span         = self.pretokenized[Ts[k].char_beg_idx:Ts[k].char_end_idx]
+                Ts[k].sent_idx     = min([ tok.sent_idx for tok in matches ])
+            else:
+                print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
+
+        Ts, Es, Rs, As = self.set_pointers(Ts, Es, Rs, As)
         self.sents = pseudo_sents
         self.toks  = final_toks
         self.Ts = Ts

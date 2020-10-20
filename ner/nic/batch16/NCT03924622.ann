@@ -144,7 +144,7 @@ T80	Or 571 572	/
 E46	Or:T80 Arg:E45 Arg2:E44
 T81	Condition-Name 577 581	pain
 T82	Modifier 559 566	chronic
-E47	Modifier:T82 
+E47	Modifier:T82 Modifies:E43
 R4	Abbrev-Of Arg1:E47 Arg2:E43	
 T83	Or 545 547	or
 E48	Or:T83 Arg:E39 Arg2:E43
@@ -168,8 +168,6 @@ R6	Example-Of Arg1:E54 Arg2:E49
 T92	Or 652 654	or
 E55	Or:T92 Arg:E54 Arg2:E16
 R7	Example-Of Arg1:E16 Arg2:E49	
-T93	Modifier 670 683	Self-reported
-E56	Modifier:T93 Modifies:E12
 T94	Eq-Comparison 761 772	120 minutes
 E57	Eq-Comparison:T94 Value:T27 Temporal-Unit:T21
 T95	Observation 724 730	remain

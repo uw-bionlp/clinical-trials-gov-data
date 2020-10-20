@@ -66,7 +66,7 @@ E18	Modifier:T28 Modifies:E21
 T47	Condition 352 360	diseases
 E20	Condition:T47 Name:T48
 T48	Condition-Name 352 360	diseases
-T49	Modifier 335 351	chronic systemic
+T49	Modifier 335 342	chronic
 E22	Modifier:T49 Modifies:E20
 T50	Condition 378 393	cardiac defects
 E23	Condition:T50 Name:T51
@@ -79,8 +79,7 @@ T54	Condition 585 595	malignancy
 E28	Condition:T54 Name:T55
 T55	Condition-Name 585 595	malignancy
 T56	Modifier 602 609	chronic
-E29	Modifier:T56 
-R3	Abbrev-Of Arg1:E29 Arg2:E11	
+E29	Modifier:T56 Modifies:E11
 T57	Condition 635 648	malformations
 E30	Condition:T57 Name:T58
 T58	Condition-Name 635 648	malformations
@@ -125,3 +124,5 @@ E43	Eq-Comparison:T73 Value:T33 Temporal-Unit:T26
 T74	Study 773 782	enrolment
 E44	Study:T74 
 A6	Temporal-Connection-Type-Value E32 before
+T75	Modifier 343 351	systemic
+E45	Modifier:T75 Modifies:T48

@@ -45,8 +45,7 @@ E15	Eq-Comparison:T28 Temporal-Period:T29
 T29	Eq-Temporal-Period 140 152	referred for
 A4	Eq-Temporal-Period-Value T29 future
 T30	Procedure 153 164	colonoscopy
-E16	Procedure:T30 Name:T35
-R3	Equivalent-To Arg1:E16 Arg2:E15	
+E16	Procedure:T30 Name:T35 Temporality:E15
 T31	And 126 129	who
 E17	And:T31 Arg:E2 Arg2:E16
 T32	Observation 191 207	clinical reasons
@@ -104,3 +103,6 @@ T57	Eq-Comparison 503 512	undergone
 E35	Eq-Comparison:T57 Temporal-Period:T58
 T58	Eq-Temporal-Period 503 512	undergone
 A7	Eq-Temporal-Period-Value T58 past
+T59	Observation 169 185	clinical reasons
+E36	Observation:T59 
+R1	Using Arg1:E16 Arg2:E36	

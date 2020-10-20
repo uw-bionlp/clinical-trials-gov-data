@@ -22,9 +22,9 @@ E15	Condition:T15 Name:T16
 T17	Observation 377 380	INR
 T18	Observation-Name 377 380	INR
 E17	Observation:T17 Name:T18 Eq-Comparison:E25
-T19	Condition 619 642	Hemodynamic instability
-T20	Condition-Name 619 642	Hemodynamic instability
-E19	Condition:T19 Name:T20
+T19	Condition 619 630	Hemodynamic
+T20	Condition-Name 619 630	Hemodynamic
+E19	Condition:T19 Name:T20 Stability:T93
 T21	Eq-Operator 79 80	<
 A1	Eq-Operator-Value T21 LT
 T22	Eq-Operator 145 146	>
@@ -80,7 +80,7 @@ T50	Modifier 53 64	early onset
 E8	Modifier:T50 Modifies:E1
 T51	And 48 52	with
 E10	And:T51 Arg:E2 Arg2:E1
-T52	Eq-Comparison 113 125	more than 10
+T52	Eq-Comparison 113 132	more than 10 ug/min
 E12	Eq-Comparison:T52 Operator:T53 Value:T31 Per:T55 Unit:T54
 T53	Eq-Operator 113 122	more than
 A10	Eq-Operator-Value T53 GT
@@ -131,7 +131,7 @@ E36	Modifier:T75 Modifies:E9
 T76	Death 482 490	moribund
 E37	Death:T76 
 T77	Risk 482 490	moribund
-E38	Risk:T77 Risk-For:E37
+E38	Risk:T77 Risk-For:E37 Severity:T92
 T78	Observation 517 532	life expectancy
 E39	Observation:T78 Name:T79 Eq-Comparison:E26
 T79	Observation-Name 517 532	life expectancy
@@ -140,7 +140,7 @@ E40	And:T80 Arg:E38 Arg2:E39
 T81	Eq-Temporal-Unit 549 554	hours
 A17	Eq-Temporal-Unit-Value T81 hour
 T82	Drug 671 683	vasopressors
-E41	Drug:T82 Name:T83
+E41	Drug:T82 Name:T83 Dose:T84
 T83	Drug-Name 671 683	vasopressors
 R4	Treatment-For Arg1:E41 Arg2:E19	
 T86	Condition 730 735	shock
@@ -159,3 +159,7 @@ T85	Study 767 782	clinical trials
 E42	Study:T85 
 T91	Other 761 766	other
 E47	Other:T91 Is-Other:E42
+T92	Severity 472 481	Extremely
+A20	Severity-Value T92 severe
+T93	Stability 631 642	instability
+A21	Stability-Value T93 change

@@ -11,15 +11,12 @@ E5	Condition:T5 Name:T6
 T7	Condition 735 752	myasthenia gravis
 T8	Condition-Name 735 752	myasthenia gravis
 E7	Condition:T7 Name:T8
-T9	Condition 603 618	substance abuse
-T10	Condition-Name 603 618	substance abuse
+T9	Condition 603 612	substance
+T10	Condition-Name 603 612	substance
 E9	Condition:T9 Name:T10 Temporality:E28
 T11	Condition 502 516	breast feeding
 T12	Condition-Name 502 516	breast feeding
 E11	Condition:T11 Name:T12
-T13	Condition 619 629	dependence
-T14	Condition-Name 619 629	dependence
-E13	Condition:T13 Name:T14
 T15	Condition 491 500	pregnancy
 T16	Condition-Name 491 500	pregnancy
 E15	Condition:T15 Name:T16
@@ -93,8 +90,6 @@ A10	Eq-Temporal-Unit-Value T55 year
 T56	Temporal-Connection 576 578	of
 E26	Temporal-Connection:T56 Arg:E25 Arg2:E24
 A11	Temporal-Connection-Type-Value E26 before
-T57	Or 618 619	/
-E27	Or:T57 Arg:E9 Arg2:E13
 T58	Eq-Comparison 595 602	current
 E28	Eq-Comparison:T58 Temporal-Period:T59
 T59	Eq-Temporal-Period 595 602	current
@@ -148,8 +143,7 @@ T83	Condition 419 423	pain
 E43	Condition:T83 Name:T84 Severity:T86
 T84	Condition-Name 419 423	pain
 T85	Modifier 411 418	chronic
-E44	Modifier:T85 
-R8	Abbrev-Of Arg1:E44 Arg2:E43	
+E44	Modifier:T85 Modifies:E43
 T86	Severity 393 399	Severe
 A18	Severity-Value T86 severe
 T87	Condition 481 485	pain
@@ -174,3 +168,14 @@ T95	Eq-Comparison 950 957	ongoing
 E51	Eq-Comparison:T95 Temporal-Period:T96
 T96	Eq-Temporal-Period 950 957	ongoing
 A20	Eq-Temporal-Period-Value T96 present
+T13	Modifier 613 618	abuse
+E13	Modifier:T13 Modifies:T10
+T14	Modifier 619 629	dependence
+E27	Modifier:T14 Modifies:T10
+T57	Or 618 619	/
+E52	Or:T57 Arg:E13 Arg2:E27
+T97	Condition 823 834	psychiatric
+E53	Condition:T97 Name:T98
+T98	Condition-Name 823 834	psychiatric
+T99	Modifier 805 822	poorly controlled
+E54	Modifier:T99 Modifies:T98

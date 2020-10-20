@@ -1,5 +1,5 @@
-T1	Condition 347 384	Claudication of the lower extremities
-T2	Condition-Name 347 384	Claudication of the lower extremities
+T1	Condition 347 359	Claudication
+T2	Condition-Name 347 359	Claudication
 E1	Condition:T1 Name:T2
 T6	Eq-Temporal-Unit 233 238	years
 A2	Eq-Temporal-Unit-Value T6 year
@@ -57,7 +57,7 @@ E18	Observation:T21 Name:T32
 T32	Observation-Name 332 336	6MWT
 T33	Negation 310 316	unable
 E19	Negation:T33 Negates:E18
-T34	Assertion 310 319	unable to
+T34	Assertion 310 316	unable
 E20	Assertion:T34 Asserted:E19
 A8	Assertion-Type-Value E20 hypothetical
 T35	Modifier 441 453	level ground
@@ -67,3 +67,5 @@ A9	Stability-Value T36 stable
 T37	Assertion 389 398	inability
 E22	Assertion:T37 Asserted:E16
 A10	Assertion-Type-Value E22 hypothetical
+T38	Modifier 367 384	lower extremities
+E23	Modifier:T38 Modifies:T2
