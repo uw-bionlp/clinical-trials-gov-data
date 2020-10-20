@@ -42,7 +42,9 @@ def pretokenize(text):
         if prev_num and ch == 'x' and foll_num:
             add_start = ' '
             add_end = ' '
-        if (text[:i].endswith('Grade') or text[:i].endswith('ASA')) and ch == 'Ⅰ':
+        if text[:i].endswith('Grade') and ch == 'Ⅰ':
+            add_start = ' '
+        if text[:i].endswith('ASA') and ch == 'I':
             add_start = ' '
         if ch in converters:
             ch = converters.get(ch)
@@ -54,6 +56,7 @@ def pretokenize(text):
         cleaned.append(add_start + ch + add_end)
         pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start + add_end) + len(ch)-1
 
+        prev = ch
         prev_num = is_num
         prev_per = is_per
         is_num = foll_num
