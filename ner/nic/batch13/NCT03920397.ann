@@ -1,5 +1,5 @@
-T1	Condition 38 53	Type 1 Diabetes
-T2	Condition-Name 38 53	Type 1 Diabetes
+T1	Condition 45 53	Diabetes
+T2	Condition-Name 45 53	Diabetes
 E1	Condition:T1 Name:T2 Temporality:E2
 T3	Condition 151 174	Pancreatic Autoimmunity
 T4	Condition-Name 151 174	Pancreatic Autoimmunity
@@ -36,7 +36,7 @@ T25	Eq-Value 387 389	12
 T26	Eq-Value 561 563	60
 T27	Eq-Comparison 380 396	within 12 months
 E16	Eq-Comparison:T27 Operator:T19 Temporal-Unit:T22 Value:T25
-T28	Eq-Comparison 551 563	less than 60
+T28	Eq-Comparison 551 569	less than 60ml/min
 E17	Eq-Comparison:T28 Operator:T20 Value:T26 Unit:T17 Per:T50
 T23	Eq-Comparison 123 144	less than four months
 E2	Eq-Comparison:T23 Operator:T18 Temporal-Unit:T21 Value:T29
@@ -92,7 +92,7 @@ T53	Drug 583 600	immunosuppressors
 E24	Drug:T53 Name:T54 Temporality:E27
 T54	Drug-Name 583 600	immunosuppressors
 T55	Drug 604 619	glucocorticoids
-E25	Drug:T55 Name:T56
+E25	Drug:T55 Name:T56 Temporality:E27
 T56	Drug-Name 604 619	glucocorticoids
 T57	Or 601 603	or
 E26	Or:T57 Arg:E24 Arg2:E25
@@ -104,3 +104,5 @@ T58	Eq-Comparison 576 579	Use
 E27	Eq-Comparison:T58 Temporal-Period:T59
 T59	Eq-Temporal-Period 576 579	Use
 A14	Eq-Temporal-Period-Value T59 present
+T62	Modifier 38 44	Type 1
+E29	Modifier:T62 Modifies:T2

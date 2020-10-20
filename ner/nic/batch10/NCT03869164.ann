@@ -60,8 +60,8 @@ E22	Eq-Comparison:T40 Operator:T22 Temporal-Unit:T28 Value:T35 Temporal-Period:T
 T41	Eq-Comparison 736 752	within 12 months
 E23	Eq-Comparison:T41 Operator:T23 Temporal-Unit:T29 Value:T36
 T42	Eq-Comparison 843 851	<3.5 cm2
-E24	Eq-Comparison:T42 Operator:T24 Value:T37
-T43	Eq-Comparison 1299 1302	<10
+E24	Eq-Comparison:T42 Operator:T24 Value:T37 Unit:T30
+T43	Eq-Comparison 1299 1304	<10mm
 E25	Eq-Comparison:T43 Operator:T25 Value:T38 Unit:T134
 T44	Eq-Comparison 29 48	older than 60 years
 E2	Eq-Comparison:T44 Operator:T45 Value:T32 Temporal-Unit:T26
@@ -85,12 +85,12 @@ T53	Condition-Name 84 104	mitral regurgitation
 T54	Condition 193 195	MR
 E10	Condition:T54 Name:T55
 T55	Condition-Name 193 195	MR
-T56	Condition 121 147	New York Heart Association
-E12	Condition:T56 Name:T57
-T57	Condition-Name 121 147	New York Heart Association
-T58	Condition 149 153	NYHA
-E14	Condition:T58 Name:T59 Stage:E21
-T59	Condition-Name 149 153	NYHA
+T56	Observation 121 147	New York Heart Association
+E12	Observation:T56 Name:T57
+T57	Observation-Name 121 147	New York Heart Association
+T58	Observation 149 153	NYHA
+E14	Observation:T58 Name:T59 Eq-Comparison:E21
+T59	Observation-Name 149 153	NYHA
 R1	Abbrev-Of Arg1:E14 Arg2:E12	
 T60	Assertion 111 119	symptoms
 E16	Assertion:T60 Asserted:E10
@@ -250,3 +250,5 @@ T135	Study 1318 1333	clinical trials
 E76	Study:T135 
 T136	Other 1312 1317	Other
 E77	Other:T136 Is-Other:E76
+A32	Observation-Type-Value T57 clinical-score
+A33	Observation-Type-Value T59 clinical-score

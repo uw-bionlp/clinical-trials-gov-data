@@ -1,8 +1,6 @@
 import os
 import re
-from re import IGNORECASE
 import sys
-import numpy as np
 sys.path.append(os.path.join(os.getcwd(), 'src'))
 
 from preprocess.brat_document import BratDocument, BratA, BratT, BratEArgPair
@@ -19,7 +17,21 @@ def to_brat(output_dir, doc_id, Ts, text):
     with open(os.path.join(output_dir, doc_id+'.txt'), 'w+') as fout:
         fout.write(text)
     with open(os.path.join(output_dir, doc_id+'.ann'), 'w+') as fout:
-        fout.write('\n'.join(Ts)) 
+        fout.write('\n'.join(Ts))
+
+def eq_value_unit(annotations):
+    ''' Check that Eq-Value and Eq-Units are inside Eq-Comparisons '''
+    for ann in annotations:
+        matched  = [ v for _,v in ann.Ts.items() if v.type in [ 'Eq-Value', 'Eq-Unit', 'Eq-Temporal-Unit' ] ]
+        for rec in matched:
+            trigger = [ v for _,v in ann.Es.items() if any([ arg for arg in v.args if arg.val == rec ]) ]
+            if not len(trigger):
+                print(f'{ann.path}/{ann.doc_id} has no parent Eq-Comparison!')
+                continue
+            trigger = trigger[0]
+            trigger_t = trigger.args[0].val
+            if not (rec.char_beg_idx >= trigger_t.char_beg_idx and rec.char_end_idx <= trigger_t.char_end_idx):
+                x=1
 
 def chronic(annotations):
     ''' Convert 'Chronic' Modifier -> Acuteness[chronic] '''
@@ -40,7 +52,7 @@ def chronic(annotations):
                 es = [ v for _,v in ann.Es.items() if v.args[0].val == rec ]
                 for e in es:
                     try:
-                        conditions = [ arg for arg in e.args if arg.type == 'Modifies' ]
+                        conditions = [ arg for arg in e.args if arg.type.startswith('Modifies') ]
                         for condition in conditions:
                             cond = condition.val
                             if isinstance(cond, BratT):
@@ -66,9 +78,9 @@ def acute(annotations):
                 ann.As[a_id] = a
                 max_a += 1
                 ann.Ts[rec.id] = rec
-                es = [ v for _,v in ann.Es.items() if any([ arg for arg in v.args if arg.val == rec and arg.type == 'Severity' ]) ]
+                es = [ v for _,v in ann.Es.items() if any([ arg for arg in v.args if arg.val == rec and arg.type.startswith('Severity') ]) ]
                 for e in es:
-                    arg = [ arg for arg in e.args if arg.val == rec and arg.type == 'Severity' ][0]
+                    arg = [ arg for arg in e.args if arg.val == rec and arg.type.startswith('Severity') ][0]
                     arg.type = 'Acuteness'
     return annotations
 
@@ -92,6 +104,7 @@ def asa_and_nyha(annotations):
                     e.type = rec.type
                     ann.Es[e.id] = e
                 ann.Ts[rec.id] = rec
+                # TODO: change from Stage -> Eq-Comparison
     return annotations
 
 
@@ -104,8 +117,8 @@ def main():
     annotations = [ BratDocument(k, v[0], v[1], v[2], surface_only=True) for k,v in brat_train_raw.items() ]
 
     # Convert
-    # TODO: convert diabetes types, anatomy, Condition/Observations
-    for converter in [ asa_and_nyha, acute, chronic ]:
+    # TODO: convert diabetes types, anatomy, Condition/Observations, Eq-Unit/Eq-Value, Female/Male, Pos/Neg
+    for converter in [ eq_value_unit ]:
         annotations = converter(annotations)
     
 

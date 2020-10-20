@@ -35,7 +35,7 @@ E17	Or:T17 Arg:E16 Arg2:E18
 T18	Procedure 346 364	surgical treatment
 E18	Procedure:T18 Name:T69
 T19	Negation 371 373	No
-E19	Negation:T19 
+E19	Negation:T19 Negates:E21
 T20	Other 374 379	other
 E20	Other:T20 Is-Other:E21
 T21	Procedure 380 398	anticancer therapy
@@ -101,7 +101,6 @@ T13	Eq-Comparison 306 312	before
 E13	Eq-Comparison:T13 Temporal-Period:T103
 T103	Eq-Temporal-Period 306 312	before
 A2	Eq-Temporal-Period-Value T103 past
-R1	Abbrev-Of Arg1:E19 Arg2:E21	
 T104	Condition-Name 444 455	main organs
 T105	Polarity 472 480	normally
 A29	Polarity-Value T105 normal
@@ -159,7 +158,7 @@ T81	Observation 743 746	BIL
 E38	Observation:T81 Name:T82 Eq-Comparison:E39
 T82	Observation-Name 743 746	BIL
 A23	Observation-Type-Value T82 lab
-T83	Eq-Comparison 747 778	< 1.25 times normal upper limit
+T83	Eq-Comparison 747 784	< 1.25 times normal upper limit (ULN)
 E39	Eq-Comparison:T83 Operator:T84 Value:T85 Unit:T86
 T84	Eq-Operator 747 748	<
 A24	Eq-Operator-Value T84 LT

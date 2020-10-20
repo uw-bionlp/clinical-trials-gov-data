@@ -1,5 +1,5 @@
-T3	Condition 64 78	MRSA infection
-T4	Condition-Name 64 78	MRSA infection
+T3	Condition 69 78	infection
+T4	Condition-Name 69 78	infection
 E3	Condition:T3 Name:T4
 T5	Life-Stage-And-Gender 25 31	Adults
 A1	Life-Stage-And-Gender-Type T5 adult
@@ -24,7 +24,7 @@ A4	Eq-Temporal-Unit-Value T18 day
 T19	Eq-Value 236 237	2
 T20	Eq-Value 427 428	7
 T21	Eq-Value 640 642	72
-T22	Eq-Comparison 235 237	≥2
+T22	Eq-Comparison 235 242	≥2mg/dl
 E15	Eq-Comparison:T22 Operator:T16 Value:T19 Unit:T34 Per:T35
 T23	Eq-Comparison 420 433	within 7 days
 E16	Eq-Comparison:T23 Operator:T17 Temporal-Unit:T18 Value:T20
@@ -110,3 +110,5 @@ T60	Eq-Operator 631 639	at least
 A10	Eq-Operator-Value T60 LTEQ
 T61	Eq-Temporal-Unit 643 648	hours
 A11	Eq-Temporal-Unit-Value T61 hour
+T62	Modifier 64 68	MRSA
+E33	Modifier:T62 Modifies:T4

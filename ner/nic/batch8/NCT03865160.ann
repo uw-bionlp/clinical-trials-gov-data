@@ -3,11 +3,9 @@ E1	Age:T1 Eq-Comparison:E2
 T2	Eq-Comparison 39 51	6 - 11 years
 E2	Eq-Comparison:T2 Value:T23 Operator:T24 Value:T25 Temporal-Unit:T26
 T3	And 52 56	with
-E3	And:T3 Arg:E1 Arg2:E5
-T4	Eq-Comparison 57 76	-1- to -10 diopters
+E3	And:T3 Arg:E1 Arg2:E22
+T4	Eq-Comparison 57 80	-1- to -10 diopters (D)
 E4	Eq-Comparison:T4 Operator:T28 Value:T29 Value2:T27 Unit:T42
-T5	Condition 81 87	myopia
-E5	Condition:T5 Name:T30
 T6	Condition 117 136	organic eye disease
 E6	Condition:T6 Name:T31
 T7	Condition 138 148	strabismus
@@ -48,7 +46,6 @@ A4	Eq-Temporal-Unit-Value T26 year
 T28	Eq-Operator 61 63	to
 A6	Eq-Operator-Value T28 BETWEEN
 T29	Eq-Value 64 67	-10
-T30	Condition-Name 81 87	myopia
 T31	Condition-Name 117 136	organic eye disease
 T32	Condition-Name 138 148	strabismus
 T33	Condition-Name 150 161	astigmatism
@@ -67,9 +64,11 @@ T42	Eq-Unit 68 76	diopters
 T43	Eq-Unit 78 79	D
 R1	Abbrev-Of Arg1:T43 Arg2:T42	
 T44	Observation 81 87	myopia
-E22	Observation:T44 Eq-Comparison:E4
+E22	Observation:T44 Eq-Comparison:E4 Name:T5
 T9	Observation 171 184	anisometropia
 E9	Observation:T9 Eq-Comparison:E13
 T11	Eq-Comparison 206 209	use
 E11	Eq-Comparison:T11 Temporal-Period:T39
 T40	Procedure-Name 232 246	contact lenses
+T5	Observation-Name 81 87	myopia
+A5	Observation-Type-Value T5 measurement

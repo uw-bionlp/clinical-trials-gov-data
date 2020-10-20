@@ -14,7 +14,7 @@ T11	Age 25 28	Age
 E10	Age:T11 Eq-Comparison:E2
 T12	Eq-Value 34 36	18
 T13	Eq-Comparison 29 36	over 18
-E2	Eq-Comparison:T13 Value:T12
+E2	Eq-Comparison:T13 Value:T12 Operator:T37
 R1	Treatment-For Arg1:E1 Arg2:E3	
 T14	Provider 106 121	Dr. Rick Wright
 E4	Provider:T14 
@@ -35,7 +35,7 @@ T21	Drug 331 341	vancomycin
 E13	Drug:T21 Name:T22 Temporality:E19
 T22	Drug-Name 331 341	vancomycin
 T23	Drug 345 355	tobramycin
-E14	Drug:T23 Name:T24
+E14	Drug:T23 Name:T24 Temporality:E19
 T24	Drug-Name 345 355	tobramycin
 T25	Or 342 344	or
 E15	Or:T25 Arg:E13 Arg2:E14
@@ -59,3 +59,8 @@ T35	Modifier 70 77	primary
 E21	Modifier:T35 Modifies:T4
 T36	Modifier 149 153	knee
 E22	Modifier:T36 Modifies:T8
+T37	Eq-Operator 29 33	over
+A3	Eq-Operator-Value T37 GT
+T38	Assertion 300 309	requiring
+E23	Assertion:T38 Asserted:E13 Asserted2:E14
+A4	Assertion-Type-Value E23 hypothetical

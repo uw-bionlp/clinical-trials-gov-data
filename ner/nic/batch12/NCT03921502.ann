@@ -12,10 +12,10 @@ T10	Condition-Name 144 161	acute cholangitis
 E9	Condition:T9 Name:T10
 T13	Condition 584 607	lithiasic cholecystitis
 T14	Condition-Name 584 607	lithiasic cholecystitis
-E13	Condition:T13 Name:T14
+E13	Condition:T13 Name:T14 Temporality:E78
 T15	Condition 568 580	pancreatitis
 T16	Condition-Name 568 580	pancreatitis
-E15	Condition:T15 Name:T16
+E15	Condition:T15 Name:T16 Temporality:E78
 T17	Condition 555 566	cholangitis
 T18	Condition-Name 555 566	cholangitis
 E17	Condition:T17 Name:T18 Temporality:E78
@@ -86,8 +86,8 @@ T61	Eq-Comparison 1351 1357	<10 mm
 E39	Eq-Comparison:T61 Operator:T39 Unit:T46 Value:T53
 T62	Eq-Comparison 1451 1460	<6 months
 E40	Eq-Comparison:T62 Operator:T41 Temporal-Unit:T44 Value:T55
-T63	Eq-Comparison 1554 1557	> 1
-E41	Eq-Comparison:T63 Operator:T42 Value:T56
+T63	Eq-Comparison 1554 1559	> 1cm
+E41	Eq-Comparison:T63 Operator:T42 Value:T56 Unit:T47
 T64	Procedure 91 105	radiologically
 E2	Procedure:T64 Name:T65
 T65	Procedure-Name 91 105	radiologically
@@ -244,9 +244,8 @@ E81	Negation:T148 Negates:E76
 T11	Assertion 25 36	Symptomatic
 E10	Assertion:T11 Asserted:E3
 A22	Assertion-Type-Value E10 possible
-T12	Observation 129 142	clinical data
-E11	Observation:T12 Name:T71
-T71	Observation-Name 129 142	clinical data
+T12	Condition 129 142	clinical data
+E11	Condition:T12 
 R3	Found-By Arg1:E5 Arg2:E11	
 R15	Equivalent-To Arg1:E9 Arg2:E11	
 R16	Equivalent-To Arg1:E1 Arg2:E11	
@@ -271,3 +270,6 @@ E8	Procedure:T69 Name:T141
 T141	Procedure-Name 1620 1628	drainage
 R19	Using Arg1:E8 Arg2:E73	
 R14	Equivalent-To Arg1:E81 Arg2:E75	
+T71	Condition 679 686	Ascitis
+E56	Condition:T71 Name:T149
+T149	Condition-Name 679 686	Ascitis

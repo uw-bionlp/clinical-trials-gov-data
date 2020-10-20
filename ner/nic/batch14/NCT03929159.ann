@@ -205,8 +205,8 @@ T114	Observation-Name 957 968	temperature
 A32	Observation-Type-Value T114 vital
 T115	Modifier 952 956	Oral
 E54	Modifier:T115 Modifies:T114
-T116	Eq-Comparison 969 989	> 38 degrees Celsius
-E55	Eq-Comparison:T116 Operator:T117 Value:T118
+T116	Eq-Comparison 969 993	> 38 degrees Celsius (C)
+E55	Eq-Comparison:T116 Operator:T117 Value:T118 Unit:T119
 T117	Eq-Operator 969 970	>
 A33	Eq-Operator-Value T117 GT
 T118	Eq-Value 971 973	38
@@ -243,3 +243,4 @@ T136	Eq-Value 1056 1058	35
 T137	Eq-Unit 1059 1068	degrees C
 T138	Or 1051 1053	or
 E63	Or:T138 Arg:E61 Arg2:E62
+R8	Abbrev-Of Arg1:E7 Arg2:E21	

@@ -51,11 +51,11 @@ T53	Eq-Value 957 958	2
 T54	Eq-Comparison 30 44	> 8 - 40 years
 E28	Eq-Comparison:T54 Operator:T29 Value:T40 Operator2:T62 Value2:T41 Temporal-Unit:T34
 T55	Eq-Comparison 410 416	> 4/10
-E29	Eq-Comparison:T55 Operator:T30 Value:T43 Per:T74
-T56	Eq-Comparison 516 519	> 4
-E30	Eq-Comparison:T56 Operator:T31 Value:T45 Per:T76
+E29	Eq-Comparison:T55 Operator:T30 Value:T43 Value2:T74
+T56	Eq-Comparison 516 522	> 4/10
+E30	Eq-Comparison:T56 Operator:T31 Value:T45 Value2:T76
 T57	Eq-Comparison 642 645	> 4
-E31	Eq-Comparison:T57 Operator:T32 Value:T49 Per:T77
+E31	Eq-Comparison:T57 Operator:T32 Value:T49 Value2:T77
 T58	Eq-Comparison 950 964	within 2 weeks
 E32	Eq-Comparison:T58 Operator:T33 Temporal-Unit:T37 Value:T53
 T61	Age 25 28	Age
@@ -83,11 +83,11 @@ R2	Found-By Arg1:E12 Arg2:E14
 T73	Observation 450 466	neuropathic pain
 E16	Observation:T73 Name:T44 Eq-Comparison:E29
 T44	Observation-Name 450 466	neuropathic pain
-T74	Eq-Unit 414 416	10
+T74	Eq-Value 414 416	10
 T42	Observation 498 512	Pain intensity
 E18	Observation:T42 Name:T75 Eq-Comparison:E30 Temporality:E20 Duration:E22
 T75	Observation-Name 498 512	Pain intensity
-T76	Eq-Unit 520 522	10
+T76	Eq-Value 520 522	10
 T25	Eq-Comparison 552 557	daily
 E20	Eq-Comparison:T25 Per:T26
 T26	Eq-Temporal-Unit 552 557	daily
@@ -102,7 +102,7 @@ A13	Eq-Temporal-Unit-Value T47 week
 T48	Observation 624 638	Itch intensity
 E24	Observation:T48 Name:T59 Eq-Comparison:E31 Eq-Comparison2:E25 Duration:E26
 T59	Observation-Name 624 638	Itch intensity
-T77	Eq-Unit 646 648	10
+T77	Eq-Value 646 648	10
 T27	Eq-Comparison 678 683	daily
 E25	Eq-Comparison:T27 Per:T28
 T28	Eq-Temporal-Unit 678 683	daily

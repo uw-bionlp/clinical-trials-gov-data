@@ -26,7 +26,7 @@ T17	Eq-Operator 250 262	greater than
 A1	Eq-Operator-Value T17 GT
 T18	Eq-Unit 264 266	Kg
 T19	Eq-Value 263 264	4
-T20	Eq-Comparison 250 264	greater than 4
+T20	Eq-Comparison 250 266	greater than 4Kg
 E16	Eq-Comparison:T20 Operator:T17 Value:T19
 T22	Contraindication 74 90	contraindication
 E4	Contraindication:T22 Contraindicates:E5
@@ -80,8 +80,8 @@ E32	Condition:T54 Name:T55
 T55	Condition-Name 665 673	bleeding
 T56	Risk 657 661	risk
 E33	Risk:T56 Risk-For:E32 Polarity:T41
-T59	Observation 612 621	emergency
-E36	Observation:T59 Name:T58
+T59	Encounter 612 621	emergency
+E36	Encounter:T59 Type:T58
 T61	Modifier 600 611	obstetrical
 E37	Modifier:T61 Modifies:E36
 T62	Modifier 589 596	medical
@@ -107,4 +107,5 @@ T53	Modifier 25 34	singleton
 E24	Modifier:T53 Modifies:E11
 T57	Study 355 360	study
 E31	Study:T57 
-T58	Observation-Name 612 621	emergency
+T58	Encounter-Type 612 621	emergency
+A3	Encounter-Type-Value T58 emergency

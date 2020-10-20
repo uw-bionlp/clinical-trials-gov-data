@@ -32,7 +32,7 @@ E13	Eq-Comparison:T22 Operator:T12 Value:T20
 T23	Eq-Comparison 208 211	>35
 E14	Eq-Comparison:T23 Operator:T13 Value:T21
 T24	Eq-Comparison 95 105	4-12 years
-E15	Eq-Comparison:T24 Operator:T17 Value:T18 Temporal-Unit:T14
+E15	Eq-Comparison:T24 Operator:T17 Value:T18 Temporal-Unit:T14 Value2:T19
 T25	Eq-Comparison 34 43	underoing
 E2	Eq-Comparison:T25 Temporal-Period:T26
 T26	Eq-Temporal-Period 34 43	underoing
@@ -44,9 +44,9 @@ T29	Procedure 67 85	general anaesthsia
 E6	Procedure:T29 Name:T30
 T30	Procedure-Name 67 85	general anaesthsia
 R1	Using Arg1:E4 Arg2:E6	
-T16	Condition 115 118	ASA
-E8	Condition:T16 Name:T31 Stage:E9
-T31	Condition-Name 115 118	ASA
+T16	Observation 115 118	ASA
+E8	Observation:T16 Name:T31 Eq-Comparison:E9
+T31	Observation-Name 115 118	ASA
 T32	Eq-Value 119 120	I
 T33	Eq-Value 121 123	II
 T34	Eq-Comparison 119 123	I-II
@@ -68,3 +68,4 @@ T8	Drug 315 319	drug
 E17	Drug:T8 
 T41	Modifier 224 232	systemic
 E18	Modifier:T41 Modifies:E5
+A11	Observation-Type-Value T31 clinical-score

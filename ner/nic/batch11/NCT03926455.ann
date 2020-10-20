@@ -22,7 +22,7 @@ A4	Eq-Operator-Value T16 BETWEEN
 T17	Eq-Value 131 133	18
 T18	Eq-Value 137 139	55
 T19	Eq-Value 623 624	6
-T20	Eq-Comparison 131 136	18 to
+T20	Eq-Comparison 131 145	18 to 55 years
 E12	Eq-Comparison:T20 Operator:T16 Value:T17 Value2:T18 Temporal-Unit:T13
 T1	Life-Stage-And-Gender 39 42	men
 A5	Life-Stage-And-Gender-Type T1 male
@@ -135,3 +135,10 @@ E35	Study:T71 Study-Of:E24
 T72	Condition 462 479	Immunocompromised
 E41	Condition:T72 Name:T73
 T73	Condition-Name 462 479	Immunocompromised
+T74	Modifier 394 399	Known
+E42	Modifier:T74 Modifies:T42
+T75	Assertion 403 412	suspected
+E43	Assertion:T75 Asserted:E23
+A21	Assertion-Type-Value E43 hypothetical
+T76	Or 400 402	or
+E44	Or:T76 Arg:E42 Arg2:E43
