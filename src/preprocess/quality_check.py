@@ -181,6 +181,14 @@ def asa_nyha_ecog(annotations):
                 ann.Ts[rec.id] = rec
     return annotations
 
+def no_attrs(annotations):
+    for ann in annotations:
+        matched = [ v for _,v in ann.Es.items() if v.args[0].val.type == 'Temporal-Connection' ]
+        for rec in matched:
+            a_s = [ v for _,v in ann.As.items() if v.attr_of == rec ]
+            if not len(a_s):
+                print(f'Temporal-Connection has no attribute!')
+
 
 def main():
 
@@ -192,12 +200,12 @@ def main():
 
     # Convert
     # TODO: anatomy, Histology
-    for converter in [ asa_nyha_ecog, acute, chronic ]:
+    for converter in [ no_attrs ]:
         annotations = converter(annotations)
 
         
-    for ann in annotations:
-        to_brat(ann)
+    #for ann in annotations:
+    #    to_brat(ann)
     
 
     
