@@ -96,8 +96,6 @@ T51	Modifier 885 889	same
 E51	Modifier:T51 Modifies:T89
 T52	Procedure 903 929	emotional processing tasks
 E52	Procedure:T52 Name:T89
-T53	Condition 935 941	Smoker
-E53	Condition:T53 Name:T90
 T54	Eq-Comparison 942 964	> 5 cigarettes per day
 E54	Eq-Comparison:T54 Operator:T91 Value:T92 Unit:T93 Per:T94
 T55	Observation 980 986	drinks
@@ -152,7 +150,7 @@ T87	Eq-Temporal-Unit 829 835	months
 A16	Eq-Temporal-Unit-Value T87 month
 T88	Eq-Temporal-Period 841 849	Previous
 A17	Eq-Temporal-Period-Value T88 past
-T90	Condition-Name 935 941	Smoker
+T90	Observation-Name 935 941	Smoker
 T91	Eq-Operator 942 943	>
 A19	Eq-Operator-Value T91 GT
 T92	Eq-Value 944 945	5
@@ -179,6 +177,7 @@ E57	Modifier:T100 Modifies:T89
 T101	Or 891 893	or
 E58	Or:T101 Arg:E51 Arg2:E57
 T102	Observation 935 941	Smoker
-E59	Observation:T102 Eq-Comparison:E54
+E59	Observation:T102 Eq-Comparison:E54 Name:T90
 T103	Observation-Name 980 986	drinks
 A18	Observation-Type-Value T103 social-habit
+A23	Observation-Type-Value T90 social-habit

@@ -38,7 +38,7 @@ E2	Age:T31 Eq-Comparison:E5
 T33	Eq-Comparison 25 42	18 years or older
 E5	Eq-Comparison:T33 Temporal-Unit:T21 Value:T23 Operator:T100
 T25	Observation 338 345	smoking
-E7	Observation:T25 Eq-Comparison:E18
+E7	Observation:T25 Eq-Comparison:E18 Name:T26
 T35	Eq-Temporal-Unit 376 379	day
 A7	Eq-Temporal-Unit-Value T35 day
 T34	Eq-Comparison 319 336	at least one year
@@ -99,9 +99,6 @@ E17	Eq-Comparison:T29 Operator:T64 Value:T24 Value2:T63
 T63	Eq-Value 161 163	10
 T64	Eq-Operator 154 160	out of
 A11	Eq-Operator-Value T64 BETWEEN
-T65	Condition 167 179	quit smoking
-E30	Condition:T65 Name:T66
-R11	Equivalent-To Arg1:E30 Arg2:E29	
 T67	Encounter 746 771	inpatient hospitalization
 E31	Encounter:T67 Type:T68
 T68	Encounter-Type 746 771	inpatient hospitalization
@@ -154,7 +151,7 @@ T86	Stability 1009 1017	confound
 A21	Stability-Value T86 change
 R12	Caused-By Arg1:T86 Arg2:E12	
 T62	Condition-Name 99 111	quit smoking
-T66	Condition-Name 167 179	quit smoking
+T66	Observation-Name 167 179	quit smoking
 T87	Eq-Comparison 302 307	daily
 E43	Eq-Comparison:T87 Per:T88
 T88	Eq-Temporal-Unit 302 307	daily
@@ -177,12 +174,14 @@ E49	Or:T96 Arg:E36 Arg2:E48
 T92	Stability 807 813	impede
 A25	Stability-Value T92 change
 R13	Caused-By Arg1:T92 Arg2:E11	
-T97	Observation 167 179	quit smoking
-E47	Observation:T97 Eq-Comparison:E17
 T98	Modifier 136 146	motivation
 E50	Modifier:T98 Modifies:T66
-T26	Condition 338 345	smoking
-E51	Condition:T26 Name:T99
-T99	Condition-Name 338 345	smoking
 T100	Eq-Operator 34 42	or older
 A6	Eq-Operator-Value T100 GTEQ
+A24	Observation-Type-Value T66 survey-or-questionnaire
+T65	Observation 167 179	quit smoking
+E30	Observation:T65 Name:T66
+T97	Modifier 185 211	10-point Likert-type scale
+E47	Modifier:T97 Modifies:T66
+R11	Equivalent-To Arg1:E30 Arg2:E29	
+T26	Observation-Name 338 345	smoking

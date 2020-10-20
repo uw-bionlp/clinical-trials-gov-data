@@ -10,8 +10,6 @@ T5	Eq-Comparison 163 180	at least 18 years
 E5	Eq-Comparison:T5 Operator:T59 Value:T60 Temporal-Unit:T61
 T6	Age 184 187	age
 E6	Age:T6 Eq-Comparison:E5
-T7	Condition 193 198	smoke
-E7	Condition:T7 Name:T62
 T9	Eq-Comparison 199 228	at least 5 cigarettes per day
 E8	Eq-Comparison:T9 Operator:T63 Value:T64 Unit:T65 Per:T66
 T10	Eq-Comparison 233 253	longer than one year
@@ -93,7 +91,7 @@ E47	Or:T48 Arg:E46 Arg2:E48
 T49	Condition 896 903	nursing
 E48	Condition:T49 Name:T106
 T50	Observation 193 198	smoke
-E49	Observation:T50 Eq-Comparison:E8 Duration:E9
+E49	Observation:T50 Eq-Comparison:E8 Duration:E9 Name:T62
 T51	Condition-Name 64 67	HIV
 T52	Eq-Operator 80 88	at least
 A3	Eq-Operator-Value T52 GTEQ
@@ -110,7 +108,7 @@ A7	Eq-Operator-Value T59 GTEQ
 T60	Eq-Value 172 174	18
 T61	Eq-Temporal-Unit 175 180	years
 A8	Eq-Temporal-Unit-Value T61 year
-T62	Condition-Name 193 198	smoke
+T62	Observation-Name 193 198	smoke
 T63	Eq-Operator 199 207	at least
 A10	Eq-Operator-Value T63 GTEQ
 T64	Eq-Value 208 209	5
@@ -198,3 +196,4 @@ R5	Example-Of Arg1:E29 Arg2:E27
 R6	Example-Of Arg1:E31 Arg2:E27	
 R7	Example-Of Arg1:E34 Arg2:E35	
 R8	Example-Of Arg1:E34 Arg2:E27	
+A20	Observation-Type-Value T62 social-habit

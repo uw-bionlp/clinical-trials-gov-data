@@ -66,9 +66,7 @@ T42	Eq-Comparison 147 166	within the 3 months
 E12	Eq-Comparison:T42 Temporal-Unit:T11 Operator:T6 Value:T20
 T43	Study 176 186	enrollment
 E13	Study:T43 
-T45	Condition 260 271	weight loss
-E15	Condition:T45 Name:T46 Temporality:E14
-T46	Condition-Name 260 271	weight loss
+T46	Observation-Name 260 271	weight loss
 T50	Temporal-Connection 315 324	preceding
 E17	Temporal-Connection:T50 Arg:E19 Arg2:E18
 A17	Temporal-Connection-Type-Value E17 before
@@ -136,7 +134,7 @@ E14	Eq-Comparison:T44 Temporal-Period:T47
 T47	Eq-Temporal-Period 253 259	Recent
 A15	Eq-Temporal-Period-Value T47 recent
 T48	Observation 260 271	weight loss
-E16	Observation:T48 Eq-Comparison:E6 Temporality:E19
+E16	Observation:T48 Eq-Comparison:E6 Temporality:E19 Name:T46 Temporality2:E14
 T49	Eq-Comparison 348 356	previous
 E37	Eq-Comparison:T49 Temporal-Period:T82
 T82	Eq-Temporal-Period 348 356	previous
@@ -160,3 +158,4 @@ A29	Eq-Temporal-Period-Value T89 past
 T90	Assertion 712 723	discouraged
 E42	Assertion:T90 Asserted:E36
 A30	Assertion-Type-Value E42 hypothetical
+A31	Observation-Type-Value T46 vital

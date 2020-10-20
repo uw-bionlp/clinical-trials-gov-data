@@ -17,9 +17,7 @@ T11	Eq-Value 182 184	90
 T12	Eq-Value 521 522	2
 T13	Eq-Comparison 25 46	greater than 6 months
 E6	Eq-Comparison:T13 Operator:T7 Temporal-Unit:T8 Value:T9
-T15	Condition 64 81	passive abduction
-E2	Condition:T15 Name:T16
-T16	Condition-Name 64 81	passive abduction
+T16	Observation-Name 64 81	passive abduction
 T17	Condition 135 142	flexion
 E4	Condition:T17 Name:T18 Polarity:T19 Temporality:E7
 T18	Condition-Name 135 142	flexion
@@ -55,7 +53,7 @@ T39	Eq-Unit 88 95	degrees
 T40	Modifier 99 107	shoulder
 E24	Modifier:T40 Modifies:T16
 T41	Observation 64 81	passive abduction
-E25	Observation:T41 Eq-Comparison:E23
+E25	Observation:T41 Eq-Comparison:E23 Name:T16
 T19	Polarity 113 120	reduced
 A6	Polarity-Value T19 low
 T20	Eq-Comparison 121 127	active

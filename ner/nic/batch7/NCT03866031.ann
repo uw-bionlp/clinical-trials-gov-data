@@ -4,8 +4,8 @@ T4	Eq-Comparison 73 90	at least 6 months
 E4	Eq-Comparison:T4 Operator:T40 Value:T41 Temporal-Unit:T42
 T7	Condition 137 141	bone
 E7	Condition:T7 Name:T1 Polarity:T2
-T8	Procedure 149 156	implant
-E8	Procedure:T8 Name:T5
+T8	Observation 149 163	implant length
+E8	Observation:T8 Name:T5 Eq-Comparison:E9 Eq-Comparison2:E11
 T9	Eq-Comparison 167 181	at least 10 mm
 E9	Eq-Comparison:T9 Operator:T44 Value:T45 Unit:T46
 T10	And 182 185	and
@@ -104,14 +104,9 @@ T71	Condition-Name 708 743	temporomandibular joint dysfunction
 T1	Condition-Name 137 141	bone
 T2	Polarity 128 136	adequate
 A1	Polarity-Value T2 normal
-T5	Procedure-Name 149 156	implant
-T6	Observation 137 141	bone
-E1	Observation:T6 Eq-Comparison:E9 Eq-Comparison2:E11
-R1	Treatment-For Arg1:E8 Arg2:E7	
-T43	Modifier 157 163	length
-E2	Modifier:T43 Modifies:E9
+T5	Observation-Name 149 163	implant length
 T72	Modifier 186 194	diameter
-E5	Modifier:T72 Modifies:E11
+E5	Modifier:T72 Modifies:T5
 R2	Treatment-For Arg1:E13 Arg2:E17	
 T54	Eq-Comparison 420 422	on
 E6	Eq-Comparison:T54 Temporal-Period:T58
@@ -121,3 +116,5 @@ A3	Stability-Value T29 change
 R4	Caused-By Arg1:T29 Arg2:E32	
 T34	Severity 663 670	extreme
 A6	Severity-Value T34 severe
+A14	Observation-Type-Value T5 measurement
+R1	Treatment-For Arg1:E8 Arg2:E7	

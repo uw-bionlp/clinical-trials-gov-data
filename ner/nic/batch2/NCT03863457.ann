@@ -17,8 +17,6 @@ T8	Condition 117 123	cancer
 E8	Condition:T8 Name:T52
 T9	Eq-Comparison 130 142	At least one
 E9	Eq-Comparison:T9 Operator:T53 Value:T54
-T10	Condition 143 149	lesion
-E10	Condition:T10 Minimum-Count:E9 Name:T78
 T11	Eq-Comparison 150 158	≥ 1.5 cm
 E11	Eq-Comparison:T11 Operator:T56 Value:T57 Unit:T58
 T12	Procedure 175 191	standard imaging
@@ -133,10 +131,9 @@ T80	Eq-Value 248 251	one
 R7	Found-By Arg1:E22 Arg2:E20	
 T77	Modifier 69 74	Known
 E49	Modifier:T77 Modifies:T52
-T78	Condition-Name 143 149	lesion
+T78	Observation-Name 143 149	lesion
 T55	Observation 143 149	lesion
-E50	Observation:T55 Eq-Comparison:E11
-R8	Found-By Arg1:E10 Arg2:E12	
+E50	Observation:T55 Eq-Comparison:E11 Name:T78 Minimum-Count:E9
 T24	Assertion 740 749	Inability
 E24	Assertion:T24 Asserted:E37
 A5	Assertion-Type-Value E24 hypothetical
@@ -147,3 +144,5 @@ R10	If-Then Arg1:T72 Arg2:E32
 T33	Stability 1031 1041	compromise
 A3	Stability-Value T33 change
 R9	Caused-By Arg1:T33 Arg2:E46	
+A11	Observation-Type-Value T78 measurement
+R8	Found-By Arg1:E50 Arg2:E12	

@@ -7,12 +7,10 @@ T4	Condition 72 75	UTI
 E4	Condition:T4 Name:T73
 T5	Criteria-Count 117 131	of these signs
 E5	Criteria-Count:T5 Min-Value:E2 Criteria:E6 Criteria2:E12 Criteria3:E14 Criteria4:E16 Criteria5:E19 Criteria6:E22 Criteria7:E24 Criteria8:E26 Criteria9:E29
-T7	Condition 133 138	fever
-E7	Condition:T7 Name:T126
 T8	Eq-Comparison 139 145	> 38°C
 E8	Eq-Comparison:T8 Operator:T76 Value:T77 Unit:T78
 T10	Or 146 152	and/or
-E10	Or:T10 Arg:E7
+E10	Or:T10 Arg:E6 Arg2:E12
 T11	Modifier 153 162	sus-pubic
 E11	Modifier:T11 Modifies:T79
 T12	Condition 163 167	pain
@@ -101,7 +99,7 @@ T55	Condition 767 781	pyelonephritis
 E55	Condition:T55 Name:T110 Severity:T109
 T56	Condition 787 798	Hemodynamic
 E56	Condition:T56 Name:T111 Stability:T137
-T57	Condition 816 837	Chronic renal failure
+T57	Condition 824 837	renal failure
 E57	Condition:T57 Name:T112
 T58	Observation 839 848	clearance
 E58	Observation:T58 Name:T138 Eq-Comparison:E59
@@ -174,7 +172,7 @@ T109	Severity 761 766	Acute
 A11	Severity-Value T109 severe
 T110	Condition-Name 767 781	pyelonephritis
 T111	Condition-Name 787 798	Hemodynamic
-T112	Condition-Name 816 837	Chronic renal failure
+T112	Condition-Name 824 837	renal failure
 T113	Eq-Operator 849 850	<
 A12	Eq-Operator-Value T113 LT
 T114	Eq-Value 850 852	60
@@ -197,8 +195,8 @@ T2	Eq-Comparison 104 116	at least one
 E2	Eq-Comparison:T2 Operator:T74 Value:T75
 R2	Equivalent-To Arg1:E5 Arg2:E4	
 T6	Observation 133 138	fever
-E6	Observation:T6 Eq-Comparison:E8
-T126	Condition-Name 133 138	fever
+E6	Observation:T6 Eq-Comparison:E8 Name:T126
+T126	Observation-Name 133 138	fever
 T9	Condition-Name 175 182	dysuria
 T127	Condition-Name 190 201	pollakiuria
 R3	Caused-By Arg1:E26 Arg2:E27	
@@ -206,14 +204,11 @@ T128	Condition-Name 330 339	confusion
 T31	Condition-Name 396 407	bacteriuria
 T87	And 345 348	And
 E9	And:T87 Arg:E3 Arg2:E30
-T129	Condition 371 383	leukocyturia
-E31	Condition:T129 Name:T130
-T130	Condition-Name 371 383	leukocyturia
-R4	Found-By Arg1:E31 Arg2:E30	
+T130	Observation-Name 371 383	leukocyturia
 T34	Eq-Comparison 408 421	> 10^3 CFU/mL
 E34	Eq-Comparison:T34 Operator:T91 Value:T92 Unit:T95 Per:T96
 T93	Observation 371 383	leukocyturia
-E72	Observation:T93 Eq-Comparison:E32
+E72	Observation:T93 Eq-Comparison:E32 Name:T130
 T94	Observation 396 407	bacteriuria
 E73	Observation:T94 Eq-Comparison:E34
 R5	Found-By Arg1:E33 Arg2:E30	
@@ -245,3 +240,7 @@ E78	Drug:T141 Name:T121
 T142	Or 979 980	-
 E79	Or:T142 Arg:E78 Arg2:E66
 R14	Using Arg1:E70 Arg2:E71	
+R4	Found-By Arg1:E72 Arg2:E30	
+A7	Observation-Type-Value T130 lab
+T7	Modifier 816 823	Chronic
+E7	Modifier:T7 Modifies:T112

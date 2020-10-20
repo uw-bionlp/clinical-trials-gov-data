@@ -8,15 +8,15 @@ T4	Eq-Comparison 138 143	≥20mm
 E4	Eq-Comparison:T4 Operator:T35 Unit:T36 Value:T24
 T5	Modifier 148 160	pedunculated
 E5	Modifier:T5 Modifies:T37
-T6	Condition 172 177	polyp
-E6	Condition:T6 Name:T37
+T6	Observation 172 177	polyp
+E6	Observation:T6 Name:T37 Eq-Comparison:E4
 T7	Condition 216 222	polyps
 E7	Condition:T7 Name:T38
 T34	Procedure-Name 60 71	colonoscopy
 T35	Eq-Operator 138 139	≥
 A2	Eq-Operator-Value T35 GTEQ
 T36	Eq-Unit 141 143	mm
-T37	Condition-Name 172 177	polyp
+T37	Observation-Name 172 177	polyp
 T38	Condition-Name 216 222	polyps
 T15	Eq-Operator 37 38	≥
 A3	Eq-Operator-Value T15 GTEQ
@@ -40,8 +40,6 @@ T25	Modifier 161 171	colorectal
 E21	Modifier:T25 Modifies:T37
 T26	Negation 144 147	non
 E22	Negation:T26 Negates:E5
-T27	Observation 172 177	polyp
-E23	Observation:T27 Eq-Comparison:E4
 T8	Modifier 203 215	Pedunculated
 E8	Modifier:T8 Modifies:T38
 T9	Assertion 273 282	Suspected
@@ -129,3 +127,4 @@ R2	Equivalent-To Arg1:E40 Arg2:E39
 T73	Condition 748 757	Pregnancy
 E42	Condition:T73 Name:T74
 T74	Condition-Name 748 757	Pregnancy
+A14	Observation-Type-Value T37 measurement

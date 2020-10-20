@@ -10,7 +10,7 @@ T5	Or 80 82	or
 E5	Or:T5 Arg:E4 Arg2:E6
 T6	Risk 88 92	risk
 E6	Risk:T6 Polarity:T97
-T7	Condition 93 106	breast lesion
+T7	Condition 100 106	lesion
 E7	Condition:T7 Name:T98
 T8	Assertion 112 120	requires
 E8	Assertion:T8 Asserted:E9
@@ -36,14 +36,12 @@ E23	Assertion:T23 Asserted:E24
 A2	Assertion-Type-Value E23 hypothetical
 T24	Procedure 496 503	imaging
 E24	Procedure:T24 Name:T109
-T26	Condition 519 533	calcifications
-E26	Condition:T26 Name:T110 Severity:T18
 T27	Eq-Comparison 544 559	more than 20 mm
 E27	Eq-Comparison:T27 Operator:T111 Value:T112 Unit:T113
 T28	Or 560 566	and/or
-E28	Or:T28 Arg:E26 Arg2:E18
+E28	Or:T28 Arg:E17 Arg2:E29
 T29	Observation 567 573	masses
-E29	Observation:T29 Eq-Comparison:E30
+E29	Observation:T29 Eq-Comparison:E30 Name:T21
 T30	Eq-Comparison 574 592	greater than 30 mm
 E30	Eq-Comparison:T30 Operator:T114 Value:T115 Unit:T116
 T31	Condition 612 619	lesions
@@ -174,7 +172,7 @@ T95	Eq-Value 40 42	18
 T96	Procedure-Name 55 61	biopsy
 T97	Polarity 83 87	high
 A6	Polarity-Value T97 high
-T98	Condition-Name 93 106	breast lesion
+T98	Condition-Name 100 106	lesion
 T99	Procedure-Name 129 137	excision
 T100	Life-Stage-And-Gender 252 257	Women
 A7	Life-Stage-And-Gender-Type T100 female
@@ -187,7 +185,7 @@ T104	Eq-Unit 313 314	%
 T105	Condition-Name 339 345	cancer
 T108	Condition-Name 451 460	Pathology
 T109	Procedure-Name 496 503	imaging
-T110	Condition-Name 519 533	calcifications
+T110	Observation-Name 519 533	calcifications
 T111	Eq-Operator 544 553	more than
 A10	Eq-Operator-Value T111 GT
 T112	Eq-Value 554 556	20
@@ -256,10 +254,8 @@ R5	Found-By Arg1:E22 Arg2:E24
 T18	Severity 509 518	Extensive
 A20	Severity-Value T18 severe
 T19	Observation 519 533	calcifications
-E17	Observation:T19 Eq-Comparison:E27
-T20	Condition 567 573	masses
-E18	Condition:T20 Name:T21
-T21	Condition-Name 567 573	masses
+E17	Observation:T19 Eq-Comparison:E27 Name:T110 Severity:T18
+T21	Observation-Name 567 573	masses
 T25	Condition-Name 670 679	upstaging
 R6	Caused-By Arg1:E32 Arg2:E33	
 T106	Condition-Name 716 725	phyllodes
@@ -315,3 +311,7 @@ E99	Or:T166 Arg:E97 Arg2:E98
 T167	Procedure-Name 1417 1421	VAPE
 R30	Treatment-For Arg1:E91 Arg2:E88	
 R31	Treatment-For Arg1:E93 Arg2:E88	
+T168	Modifier 93 99	breast
+E100	Modifier:T168 Modifies:T98
+A21	Observation-Type-Value T110 measurement
+A22	Observation-Type-Value T21 measurement

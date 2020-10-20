@@ -44,8 +44,6 @@ E23	Assertion:T23 Asserted:E24
 A2	Assertion-Type-Value E23 possible
 T24	Condition 437 455	RV volume overload
 E24	Condition:T24 Name:T62
-T25	Condition 470 476	defect
-E25	Condition:T25 Name:T63 Minimum-Count:E18
 T26	Procedure 491 498	closure
 E26	Procedure:T26 Name:T64
 T27	Eq-Comparison 500 506	>38 mm
@@ -106,7 +104,7 @@ T60	Eq-Operator 415 416	<
 A6	Eq-Operator-Value T60 LT
 T61	Eq-Value 416 419	1.5
 T62	Condition-Name 437 455	RV volume overload
-T63	Condition-Name 470 476	defect
+T63	Observation-Name 470 476	defect
 T64	Procedure-Name 491 498	closure
 T65	Eq-Operator 500 501	>
 A7	Eq-Operator-Value T65 GT
@@ -163,9 +161,9 @@ E18	Eq-Comparison:T19 Value:T59
 T59	Eq-Value 463 469	single
 T94	Modifier 477 486	too large
 E19	Modifier:T94 Modifies:T63
-R5	Treatment-For Arg1:E26 Arg2:E25	
+R5	Treatment-For Arg1:E26 Arg2:E57	
 T95	Observation 470 476	defect
-E57	Observation:T95 Eq-Comparison:E27
+E57	Observation:T95 Eq-Comparison:E27 Minimum-Count:E18 Name:T63
 T96	Eq-Comparison 513 521	Multiple
 E58	Eq-Comparison:T96 Operator:T97
 T97	Eq-Operator 513 521	Multiple

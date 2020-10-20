@@ -7,17 +7,15 @@ E3	Eq-Comparison:T3 Operator:T89 Value:T88 Value2:T90
 T4	Condition 111 114	DLE
 E4	Condition:T4 Name:T91 Severity:T90
 T5	And 115 119	with
-E5	And:T5 Arg:E4 Arg2:E8
+E5	And:T5 Arg:E4 Arg2:E85
 T6	Eq-Comparison 120 132	at least one
 E6	Eq-Comparison:T6 Operator:T92 Value:T93
 T7	Eq-Comparison 133 139	active
 E7	Eq-Comparison:T7 Temporal-Period:T94
-T8	Condition 155 161	lesion
-E8	Condition:T8 Name:T95 Minimum-Count:E6 Temporality:E7
 T9	Eq-Comparison 163 174	0.5-1.0 cm2
 E9	Eq-Comparison:T9 Value:T96 Operator:T97 Value:T98 Unit:T99
 T10	And 177 181	with
-E10	And:T10 Arg:E8 Arg2:E11
+E10	And:T10 Arg2:E11 Arg:E85
 T11	Observation 182 187	CLASI
 E11	Observation:T11 Name:T100 Eq-Comparison:E12
 T12	Eq-Comparison 188 191	≥ 5
@@ -183,7 +181,7 @@ A17	Eq-Operator-Value T92 GTEQ
 T93	Eq-Value 129 132	one
 T94	Eq-Temporal-Period 133 139	active
 A18	Eq-Temporal-Period-Value T94 present
-T95	Condition-Name 155 161	lesion
+T95	Observation-Name 155 161	lesion
 T96	Eq-Value 163 166	0.5
 T97	Eq-Operator 166 167	-
 A19	Eq-Operator-Value T97 BETWEEN
@@ -247,7 +245,7 @@ E83	Age:T140 Eq-Comparison:E2
 T141	Modifier 140 154	discoid target
 E84	Modifier:T141 Modifies:T95
 T142	Observation 155 161	lesion
-E85	Observation:T142 Eq-Comparison:E9
+E85	Observation:T142 Eq-Comparison:E9 Name:T95 Minimum-Count:E6 Temporality:E7
 T143	Eq-Value 190 191	5
 T144	Procedure 241 251	procedures
 E86	Procedure:T144 
@@ -284,3 +282,4 @@ T149	Eq-Comparison 1325 1332	already
 E90	Eq-Comparison:T149 Temporal-Period:T150
 T150	Eq-Temporal-Period 1325 1332	already
 A37	Eq-Temporal-Period-Value T150 past
+A9	Observation-Type-Value T95 measurement

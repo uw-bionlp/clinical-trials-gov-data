@@ -76,8 +76,8 @@ T42	Modifier 678 696	experimental teeth
 E42	Modifier:T42 Modifies:T87
 T44	Eq-Comparison 750 755	< 1mm
 E44	Eq-Comparison:T44 Operator:T76 Value:T77 Unit:T78
-T46	Condition 794 796	KT
-E46	Condition:T46 Name:T80
+T46	Observation 794 796	KT
+E46	Observation:T46 Name:T80
 T49	Eq-Operator 29 32	≥18
 A1	Eq-Operator-Value T49 GTEQ
 T50	Eq-Temporal-Unit 33 38	years
@@ -116,7 +116,7 @@ T76	Eq-Operator 750 751	<
 A12	Eq-Operator-Value T76 LT
 T77	Eq-Value 752 753	1
 T78	Eq-Unit 753 755	mm
-T80	Condition-Name 794 796	KT
+T80	Observation-Name 794 796	KT
 T81	Observation 98 105	smoking
 E49	Observation:T81 Eq-Comparison:E9
 R1	Abbrev-Of Arg1:E11 Arg2:E10	
@@ -126,15 +126,13 @@ T17	Eq-Unit 234 239	tooth
 T18	Eq-Comparison 259 265	single
 E17	Eq-Comparison:T18 Value:T19
 T19	Eq-Value 259 265	single
-T65	Condition 277 296	gingival recessions
-E18	Condition:T65 Name:T83 Minimum-Count:E17
-T83	Condition-Name 277 296	gingival recessions
+T83	Observation-Name 277 296	gingival recessions
 T84	Modifier 266 276	RT1 buccal
 E19	Modifier:T84 Modifies:T83
 T85	Observation 277 296	gingival recessions
-E50	Observation:T85 Eq-Comparison:E20
-R3	Caused-By Arg1:E30 Arg2:E18	
-R4	Caused-By Arg1:E32 Arg2:E18	
+E50	Observation:T85 Eq-Comparison:E20 Name:T83 Minimum-Count:E17
+R3	Caused-By Arg1:E30 Arg2:E50	
+R4	Caused-By Arg1:E32 Arg2:E50	
 T28	Condition-Name 545 554	recession
 R5	Caused-By Arg1:E34 Arg2:E33	
 T86	Modifier 590 601	periodontal
@@ -142,11 +140,11 @@ E28	Modifier:T86 Modifies:T73
 T87	Condition-Name 658 674	Prosthetic crown
 T43	Condition 703 722	Gingival recessions
 E43	Condition:T43 Name:T74
-T45	Condition 760 792	apico-coronal keratinized tissue
-E45	Condition:T45 Name:T75
-T75	Condition-Name 760 792	apico-coronal keratinized tissue
+T75	Observation-Name 760 792	apico-coronal keratinized tissue
 T79	Observation 760 792	apico-coronal keratinized tissue
-E51	Observation:T79 Eq-Comparison:E44
-R7	Abbrev-Of Arg1:E46 Arg2:E45	
+E51	Observation:T79 Eq-Comparison:E44 Name:T75
+R7	Abbrev-Of Arg1:E46 Arg2:E51	
 T47	Modifier 808 832	apical to recession area
 E47	Modifier:T47 Modifies:T80
+A8	Observation-Type-Value T83 measurement
+A11	Observation-Type-Value T75 measurement

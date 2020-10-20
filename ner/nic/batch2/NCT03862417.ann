@@ -37,11 +37,9 @@ A6	Eq-Operator-Value T23 GT
 T24	Condition 55 77	degenerative scoliosis
 E3	Condition:T24 Name:T25
 T25	Condition-Name 55 77	degenerative scoliosis
-T28	Condition 90 94	pain
-E7	Condition:T28 Name:T29
-T29	Condition-Name 90 94	pain
+T29	Observation-Name 90 94	pain
 T30	And 85 89	with
-E11	And:T30 Arg:E3 Arg2:E7
+E11	And:T30 Arg:E3 Arg2:E5
 T31	Eq-Value 99 101	10
 T32	Eq-Operator 148 149	-
 A8	Eq-Operator-Value T32 BETWEEN
@@ -101,7 +99,7 @@ R9	Example-Of Arg1:E6 Arg2:E23
 T63	And 50 54	with
 E28	And:T63 Arg:E9 Arg2:E3
 T26	Observation 90 94	pain
-E5	Observation:T26 Eq-Comparison:E10
+E5	Observation:T26 Eq-Comparison:E10 Name:T29
 T27	Eq-Comparison 145 152	15°-45°
 E12	Eq-Comparison:T27 Value:T17 Unit:T34 Operator:T32 Value2:T18 Unit2:T35
 T33	Assertion 208 218	candidates

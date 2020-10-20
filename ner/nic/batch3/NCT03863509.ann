@@ -31,8 +31,6 @@ T17	Eq-Comparison 218 225	current
 E17	Eq-Comparison:T17 Temporal-Period:T106
 T18	Drug 226 237	product use
 E18	Drug:T18 Temporality:E17 Stability:T105
-T19	Condition 243 255	able to walk
-E19	Condition:T19 Name:T107
 T20	Eq-Comparison 256 273	at least 2 blocks
 E20	Eq-Comparison:T20 Operator:T108 Value:T109 Unit:T110
 T21	Modifier 282 292	assistance
@@ -174,7 +172,7 @@ T105	Stability 200 206	stable
 A9	Stability-Value T105 stable
 T106	Eq-Temporal-Period 218 225	current
 A10	Eq-Temporal-Period-Value T106 present
-T107	Condition-Name 243 255	able to walk
+T107	Observation-Name 243 255	able to walk
 T108	Eq-Operator 256 264	at least
 A11	Eq-Operator-Value T108 GTEQ
 T109	Eq-Value 265 266	2
@@ -325,7 +323,7 @@ T217	Eq-Temporal-Period 1354 1360	active
 A63	Eq-Temporal-Period-Value T217 present
 T218	Condition-Name 1389 1397	fibrosis
 T14	Observation 243 255	able to walk
-E14	Observation:T14 Eq-Comparison:E20
+E14	Observation:T14 Eq-Comparison:E20 Name:T107
 T15	Modifier 296 304	stopping
 E15	Modifier:T15 Modifies:T107
 T61	Negation 274 281	without

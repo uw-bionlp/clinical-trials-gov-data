@@ -20,6 +20,15 @@ def to_brat(output_dir, doc_id, Ts, text):
     with open(os.path.join(output_dir, doc_id+'.ann'), 'w+') as fout:
         fout.write('\n'.join(Ts))
 
+def condition_and_observation(annotations):
+    ''' Check that annotations are not both Conditions and Observations '''
+    for ann in annotations:
+        matched  = [ v for _,v in ann.Es.items() if v.args[0].type == 'Condition' ]
+        for rec in matched:
+            r = rec.args[0].val
+            obs  = [ v for _,v in ann.Es.items() if v.args[0].type == 'Observation' and r.char_beg_idx == v.args[0].val.char_beg_idx and r.char_end_idx == v.args[0].val.char_end_idx ]
+            if len(obs):
+                print('Annotation should not be both a Condition and Observation!')
 
 def diabetes(annotations):
     ''' Check that diabetes types are modifiers '''
@@ -163,8 +172,8 @@ def main():
     annotations = [ BratDocument(k, v[0], v[1], v[2], surface_only=True) for k,v in brat_train_raw.items() ]
 
     # Convert
-    # TODO: anatomy, Condition/Observations, Histology, Unstable (as modifier)
-    for converter in [ unstable ]:
+    # TODO: anatomy, Condition/Observations, Histology
+    for converter in [ condition_and_observation ]:
         annotations = converter(annotations)
     
 
