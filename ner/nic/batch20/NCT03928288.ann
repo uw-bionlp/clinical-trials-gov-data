@@ -174,7 +174,7 @@ E49	Condition:T90 Name:T91 Severity:T95
 T91	Condition-Name 884 891	illness
 T92	Modifier 857 863	mental
 E50	Modifier:T92 Modifies:T91
-T93	Modifier 867 883	chronic systemic
+T93	Modifier 875 883	systemic
 E51	Modifier:T93 Modifies:T91
 T94	Or 864 866	or
 E52	Or:T94 Arg:E50 Arg2:E51
@@ -251,3 +251,8 @@ T131	Drug 1284 1298	butyrophenones
 E74	Drug:T131 Name:T132
 T132	Drug-Name 1284 1298	butyrophenones
 R14	Example-Of Arg1:E74 Arg2:E69	
+T133	Modifier 867 874	chronic
+E75	Modifier:T133 Modifies:T91
+T134	Assertion 1229 1235	affect
+E76	Assertion:T134 Asserted:T126
+A34	Assertion-Type-Value E76 hypothetical

@@ -2,7 +2,7 @@ T1	Eq-Comparison 25 28	20-
 E1	Eq-Comparison:T1 Value:T32 Operator:T33
 T2	Age 31 34	age
 E2	Age:T2 Eq-Comparison:E1
-T3	Modifier 40 53	Chronic ankle
+T3	Modifier 48 53	ankle
 E3	Modifier:T3 Modifies:T35
 T4	Condition 54 60	sprain
 E4	Condition:T4 Name:T35 Duration:E5
@@ -10,7 +10,7 @@ T5	Eq-Comparison 61 78	more than 3months
 E5	Eq-Comparison:T5 Operator:T36 Value:T37 Temporal-Unit:T53
 T6	And 79 83	with
 E6	And:T6 Arg:E4 Arg2:E8
-T7	Modifier 84 97	chronic ankle
+T7	Modifier 92 97	ankle
 E7	Modifier:T7 Modifies:T38
 T8	Condition 98 102	pain
 E8	Condition:T8 Name:T38
@@ -93,3 +93,7 @@ T53	Eq-Temporal-Unit 72 78	months
 A9	Eq-Temporal-Unit-Value T53 month
 R1	Found-By Arg1:E14 Arg2:E12	
 R2	Caused-By Arg1:E29 Arg2:E27	
+T54	Modifier 84 91	chronic
+E32	Modifier:T54 Modifies:T38
+T55	Modifier 40 47	Chronic
+E33	Modifier:T55 Modifies:T35

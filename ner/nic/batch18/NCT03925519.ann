@@ -1,5 +1,5 @@
-T1	Condition 39 54	type 2 diabetes
-T2	Condition-Name 39 54	type 2 diabetes
+T1	Condition 46 54	diabetes
+T2	Condition-Name 46 54	diabetes
 E1	Condition:T1 Name:T2 Duration:E2
 T3	Condition 331 356	musculoskeletal disorders
 T4	Condition-Name 331 356	musculoskeletal disorders
@@ -96,7 +96,7 @@ A9	Polarity-Value T53 abnormal
 R8	Caused-By Arg1:E26 Arg2:E5	
 T54	Modifier 657 663	kidney
 E27	Modifier:T54 Modifies:T10
-T55	Modifier 639 652	chronic liver
+T55	Modifier 647 652	liver
 E28	Modifier:T55 Modifies:T10
 T56	Or 653 656	and
 E29	Or:T56 Arg:E28 Arg2:E27
@@ -115,3 +115,7 @@ E33	Or:T62 Arg:E11 Arg2:E30
 T63	Condition 454 467	complications
 E34	Condition:T63 
 R11	Caused-By Arg1:E34 Arg2:E19	
+T64	Modifier 39 45	type 2
+E35	Modifier:T64 Modifies:T2
+T65	Modifier 639 646	chronic
+E36	Modifier:T65 Modifies:T10

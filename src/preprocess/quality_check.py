@@ -28,21 +28,26 @@ def chronic(annotations):
         if len(matched):
             max_a = max([ int(a.id.replace('A','')) for _,a in ann.As.items() ])+1 if len(ann.As) else 1
             for rec in matched:
+                if 'chronic' in rec.span.lower() and rec.span.lower() != 'chronic':
+                    print(f'{ann.path}/{ann.doc_id} has Chronic as only part of span!')
+                    continue
                 rec.type = 'Acuteness'
                 a_id = f'A{max_a}'
                 a = BratA('Acuteness-Type-Value', rec, 'chronic', a_id, -1)
                 ann.As[a_id] = a
                 max_a += 1
                 ann.Ts[rec.id] = rec
-                e = [ v for _,v in ann.Es.items() if v.args[0].val == rec ]
-                if len(e):
-                    e = e[0]
+                es = [ v for _,v in ann.Es.items() if v.args[0].val == rec ]
+                for e in es:
                     try:
-                        condition = [ arg for arg in e.args if arg.type == 'Modifies' ][0].val
-                        if isinstance(condition, BratT):
-                            condition = [ v for _,v in ann.Es.items() if any([ arg for arg in v.args if arg.val == condition and arg.type == 'Name' ]) ][0]
-                        new_arg = BratEArgPair('Acuteness', rec)
-                        condition.args.append(new_arg)
+                        conditions = [ arg for arg in e.args if arg.type == 'Modifies' ]
+                        for condition in conditions:
+                            cond = condition.val
+                            if isinstance(cond, BratT):
+                                cond = [ v for _,v in ann.Es.items() if any([ arg for arg in v.args if arg.val == cond and arg.type == 'Name' ]) ][0]
+                            new_arg = BratEArgPair('Acuteness', rec)
+                            cond.args.append(new_arg)
+                            ann.Es[cond.id] = cond
                     except:
                         print(f'{ann.path}/{ann.doc_id} has a malformed Modifer!')
                     del ann.Es[e.id]
@@ -92,10 +97,6 @@ def asa_and_nyha(annotations):
 
 def main():
 
-    conll_path = os.path.join(Config.preprocess_dir, 'conll')
-    if not os.path.exists(conll_path): 
-        os.mkdir(conll_path)
-
     # Get data
     brat_train_raw = {} 
     for d in Config.annotation_train_dirs:
@@ -103,7 +104,8 @@ def main():
     annotations = [ BratDocument(k, v[0], v[1], v[2], surface_only=True) for k,v in brat_train_raw.items() ]
 
     # Convert
-    for converter in [ chronic ]:
+    # TODO: convert diabetes types, anatomy, Condition/Observations
+    for converter in [ asa_and_nyha, acute, chronic ]:
         annotations = converter(annotations)
     
 
