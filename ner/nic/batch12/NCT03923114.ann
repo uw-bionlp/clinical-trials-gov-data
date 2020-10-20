@@ -4,11 +4,11 @@ E1	Procedure:T1 Name:T2
 T3	Procedure 960 976	Cochlear implant
 T4	Procedure-Name 960 976	Cochlear implant
 E3	Procedure:T3 Name:T4
-T5	Condition 104 119	type 2 diabetes
-T6	Condition-Name 104 119	type 2 diabetes
+T5	Condition 111 119	diabetes
+T6	Condition-Name 111 119	diabetes
 E5	Condition:T5 Name:T6
-T7	Condition 295 310	type 2 diabetes
-T8	Condition-Name 295 310	type 2 diabetes
+T7	Condition 302 310	diabetes
+T8	Condition-Name 302 310	diabetes
 E7	Condition:T7 Name:T8
 T9	Condition 427 440	Liver disease
 T10	Condition-Name 427 440	Liver disease
@@ -68,9 +68,9 @@ E28	Eq-Comparison:T45 Operator:T26 Temporal-Unit:T30 Value:T41
 T35	Procedure 152 169	GLP-1RA treatment
 E2	Procedure:T35 Name:T36
 T36	Procedure-Name 152 169	GLP-1RA treatment
-T46	Observation 34 52	treatment response
+T46	Observation 44 52	response
 E4	Observation:T46 Name:T47
-T47	Observation-Name 34 52	treatment response
+T47	Observation-Name 44 52	response
 R1	If-Then Arg1:E4 Arg2:E22	
 T48	Observation 225 243	treatment response
 E6	Observation:T48 Name:T49
@@ -127,12 +127,21 @@ T72	Procedure-Name 845 860	Neurostimulator
 T73	Procedure 882 908	non-removable insulin pump
 E41	Procedure:T73 Name:T74
 T74	Procedure-Name 882 908	non-removable insulin pump
-T75	Procedure 919 949	Metal tissue-expander in chest
+T75	Procedure 919 940	Metal tissue-expander
 E42	Procedure:T75 Name:T76
-T76	Procedure-Name 919 949	Metal tissue-expander in chest
+T76	Procedure-Name 919 940	Metal tissue-expander
 T77	Procedure 987 1019	Ossicular replacement prosthesis
 E43	Procedure:T77 Name:T78
 T78	Procedure-Name 987 1019	Ossicular replacement prosthesis
 T79	Procedure 806 834	Mandibular magnetic implants
 E44	Procedure:T79 Name:T80
 T80	Procedure-Name 806 834	Mandibular magnetic implants
+T81	Modifier 104 110	type 2
+E45	Modifier:T81 Modifies:T6
+T82	Modifier 944 949	chest
+E46	Modifier:T82 Modifies:T76
+T83	Modifier 295 301	type 2
+E47	Modifier:T83 Modifies:T8
+T84	Procedure 34 43	treatment
+E48	Procedure:T84 
+R5	Caused-By Arg1:E4 Arg2:E48	

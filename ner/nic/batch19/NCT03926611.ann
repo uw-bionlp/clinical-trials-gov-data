@@ -4,8 +4,8 @@ E1	Condition:T1 Name:T2
 T3	Condition 1031 1055	opportunistic infections
 T4	Condition-Name 1031 1055	opportunistic infections
 E3	Condition:T3 Name:T4
-T7	Condition 665 682	chronic urticaria
-T8	Condition-Name 665 682	chronic urticaria
+T7	Condition 673 682	urticaria
+T8	Condition-Name 673 682	urticaria
 E7	Condition:T7 Name:T8
 T9	Condition 1083 1098	mycobacterioses
 T10	Condition-Name 1083 1098	mycobacterioses
@@ -35,7 +35,7 @@ T27	Condition 1168 1175	nursing
 T28	Condition-Name 1168 1175	nursing
 E27	Condition:T27 Name:T28
 T29	Life-Stage-And-Gender 34 40	female
-A1	Life-Stage-And-Gender-Type T29 male
+A1	Life-Stage-And-Gender-Type T29 female
 T30	Condition 151 156	hives
 T31	Condition-Name 151 156	hives
 E30	Condition:T30 Name:T31 Duration:E38
@@ -260,11 +260,11 @@ T136	And 1205 1207	of
 E79	And:T136 Arg:T133 Arg2:E78
 T137	Negation 1232 1235	not
 E80	Negation:T137 Negates:E13
-T138	Modifier 1242 1266	highly effective methods
-E81	Modifier:T138 Modifies:T14
 T139	Eq-Comparison 1236 1241	using
 E82	Eq-Comparison:T139 Temporal-Period:T140
 T140	Eq-Temporal-Period 1236 1241	using
 A30	Eq-Temporal-Period-Value T140 present
 T141	Negation 220 223	non
 E83	Negation:T141 Negates:E18
+T142	Modifier 665 672	chronic
+E84	Modifier:T142 Modifies:T8

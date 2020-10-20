@@ -20,6 +20,38 @@ def to_brat(output_dir, doc_id, Ts, text):
     with open(os.path.join(output_dir, doc_id+'.ann'), 'w+') as fout:
         fout.write('\n'.join(Ts))
 
+
+def diabetes(annotations):
+    ''' Check that diabetes types are modifiers '''
+    for ann in annotations:
+        matched  = [ v for _,v in ann.Ts.items() if v.type == 'Condition' and 'type' in v.span.lower() and 'diabet' in v.span.lower() ]
+        for rec in matched:
+            print('diabetes type!')
+
+def female_male(annotations):
+    ''' Check that female and male have correct labels '''
+    for ann in annotations:
+        matched  = [ v for _,v in ann.Ts.items() if v.type == 'Life-Stage-And-Gender' and any([ x for x in ['female','male','men','women'] if x in v.span.lower() ]) ]
+        for rec in matched:
+            a_s = [ v for _,v in ann.As.items() if v.attr_of == rec ]
+            for a in a_s:
+                if ('female' in rec.span.lower() or 'women' in rec.span.lower()) and a.val != 'female':
+                    print('Female but not annotated correctly!')
+                if ('male' == rec.span.lower() or 'men' == rec.span.lower()) and a.val != 'male':
+                    print('Male but not annotated correctly!')
+
+def pos_neg(annotations):
+    ''' Check that positive and negative have correct labels '''
+    for ann in annotations:
+        matched  = [ v for _,v in ann.Ts.items() if v.type == 'Polarity' and any([ x for x in ['positive','negative','+','-'] if x in v.span.lower() ]) ]
+        for rec in matched:
+            a_s = [ v for _,v in ann.As.items() if v.attr_of == rec ]
+            for a in a_s:
+                if ('positive' in rec.span.lower() or '+' in rec.span.lower()) and a.val != 'positive':
+                    print('Positive but not annotated correctly!')
+                if ('negative' == rec.span.lower() or '-' == rec.span.lower()) and a.val != 'negative':
+                    print('Negative but not annotated correctly!')
+
 def eq_value_unit(annotations):
     ''' Check that Eq-Value and Eq-Units are inside Eq-Comparisons '''
     for ann in annotations:
@@ -31,8 +63,8 @@ def eq_value_unit(annotations):
                 continue
             trigger = trigger[0]
             trigger_t = trigger.args[0].val
-            if not (rec.char_beg_idx >= trigger_t.char_beg_idx and rec.char_end_idx <= trigger_t.char_end_idx):
-                x=1
+            if rec.span not in [ 'Eq-Unit', 'Eq-Temporal-Unit'] and not (rec.char_beg_idx >= trigger_t.char_beg_idx and rec.char_end_idx <= trigger_t.char_end_idx):
+                print(f'{ann.path}/{ann.doc_id} is outside parent Eq-Comparison!')
 
 def chronic(annotations):
     ''' Convert 'Chronic' Modifier -> Acuteness[chronic] '''
@@ -91,9 +123,10 @@ def asa_nyha_ecog(annotations):
         asa  = [ v for _,v in ann.Ts.items() if (v.span == 'ASA' or re.match(regex_asa, v.span, re.IGNORECASE)) and v.type in [ 'Condition', 'Condition-Name'] ]
         nyha = [ v for _,v in ann.Ts.items() if re.match(regex_nyha, v.span, re.IGNORECASE) and v.type in [ 'Condition', 'Condition-Name'] ]
         ecog = [ v for _,v in ann.Ts.items() if re.match(regex_ecog, v.span, re.IGNORECASE) and v.type in [ 'Condition', 'Condition-Name'] ]
-        if len(asa) or len(nyha) or len(ecog):
+        all = asa+nyha+ecog
+        if len(all):
             max_a = max([ int(a.id.replace('A','')) for _,a in ann.As.items() ])+1 if len(ann.As) else 1
-            for rec in asa+nyha+ecog:
+            for rec in all:
                 if rec.type == 'Condition-Name':
                     rec.type = 'Observation-Name'
                     a_id = f'A{max_a}'
@@ -104,6 +137,9 @@ def asa_nyha_ecog(annotations):
                     rec.type = 'Observation'
                     e = [ v for _,v in ann.Es.items() if v.args[0].val == rec ][0]
                     e.type = rec.type
+                    eqs = [ arg for arg in e.args if arg.type == 'Stage' ]
+                    for eq in eqs:
+                        eq.type = 'Eq-Comparison'
                     ann.Es[e.id] = e
                 ann.Ts[rec.id] = rec
                 # TODO: change from Stage -> Eq-Comparison
@@ -119,8 +155,8 @@ def main():
     annotations = [ BratDocument(k, v[0], v[1], v[2], surface_only=True) for k,v in brat_train_raw.items() ]
 
     # Convert
-    # TODO: convert diabetes types, anatomy, Condition/Observations, Eq-Unit/Eq-Value, Female/Male, Pos/Neg, Histology, Unstable (as modifier)
-    for converter in [ eq_value_unit ]:
+    # TODO: anatomy, Condition/Observations, Histology, Unstable (as modifier)
+    for converter in [ pos_neg ]:
         annotations = converter(annotations)
     
 

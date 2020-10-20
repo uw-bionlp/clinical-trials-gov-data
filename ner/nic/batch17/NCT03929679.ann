@@ -1,5 +1,5 @@
-T1	Condition 560 575	type 2 diabetes
-T2	Condition-Name 560 575	type 2 diabetes
+T1	Condition 567 575	diabetes
+T2	Condition-Name 567 575	diabetes
 E1	Condition:T1 Name:T2 Temporality:E7
 T5	Life-Stage-And-Gender 454 460	female
 A1	Life-Stage-And-Gender-Type T5 female
@@ -97,3 +97,5 @@ T50	Condition 1091 1107	Hypersensitivity
 E27	Condition:T50 Name:T51
 T51	Condition-Name 1091 1107	Hypersensitivity
 R4	Caused-By Arg1:E27 Arg2:E26	
+T52	Modifier 560 566	type 2
+E28	Modifier:T52 Modifies:T2

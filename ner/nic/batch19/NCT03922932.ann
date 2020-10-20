@@ -1,8 +1,8 @@
-T1	Condition 79 94	Type 1 diabetes
-T2	Condition-Name 79 94	Type 1 diabetes
+T1	Condition 86 94	diabetes
+T2	Condition-Name 86 94	diabetes
 E1	Condition:T1 Name:T2 Duration:E4
-T3	Condition 132 147	Type 2 diabetes
-T4	Condition-Name 132 147	Type 2 diabetes
+T3	Condition 139 147	diabetes
+T4	Condition-Name 139 147	diabetes
 E3	Condition:T3 Name:T4
 T9	Condition 458 470	hypertension
 T10	Condition-Name 458 470	hypertension
@@ -175,7 +175,7 @@ A21	Temporal-Connection-Type-Value E50 before
 T93	Other 1302 1309	another
 E51	Other:T93 Is-Other:E26
 T94	Condition 1325 1334	condition
-E52	Condition:T94 
+E52	Condition:T94 Temporality:E36
 T95	Or 1322 1324	or
 E53	Or:T95 Arg:E26 Arg2:E52
 T96	Modifier 1358 1367	perfusion
@@ -217,3 +217,7 @@ E64	Study:T113 Study-Of:E63
 T114	Stability 1488 1497	interfere
 A25	Stability-Value T114 change
 R16	Caused-By Arg1:T114 Arg2:E59	
+T115	Modifier 79 85	Type 1
+E65	Modifier:T115 Modifies:T2
+T116	Modifier 132 138	Type 2
+E66	Modifier:T116 Modifies:T4

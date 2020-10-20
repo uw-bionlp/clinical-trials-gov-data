@@ -1,8 +1,8 @@
 T3	Condition 20 40	Diabetic nephropathy
 T4	Condition-Name 20 40	Diabetic nephropathy
 E3	Condition:T3 Name:T4
-T5	Condition 53 68	type 2 diabetes
-T6	Condition-Name 53 68	type 2 diabetes
+T5	Condition 60 68	diabetes
+T6	Condition-Name 60 68	diabetes
 E5	Condition:T5 Name:T6
 T20	Eq-Comparison 151 161	undergoing
 E16	Eq-Comparison:T20 Temporal-Period:T21
@@ -37,9 +37,9 @@ T18	Eq-Comparison 201 207	Active
 E11	Eq-Comparison:T18 Temporal-Period:T19
 T19	Eq-Temporal-Period 201 207	Active
 A2	Eq-Temporal-Period-Value T19 present
-T22	Condition 245 264	secondary infection
+T22	Condition 255 264	infection
 E12	Condition:T22 Name:T23
-T23	Condition-Name 245 264	secondary infection
+T23	Condition-Name 255 264	infection
 T24	Risk 237 241	risk
 E13	Risk:T24 Risk-For:E12 Polarity:T25
 T26	Modifier 272 276	skin
@@ -56,10 +56,8 @@ E19	Procedure:T31 Name:T32
 T32	Procedure-Name 373 384	fine needle
 R6	Treatment-For Arg1:E19 Arg2:E15	
 T33	Condition 393 405	bladder roof
-E20	Condition:T33 Name:T34
+E20	Condition:T33 Name:T34 Polarity:T35
 T34	Condition-Name 393 405	bladder roof
-T35	Modifier 409 415	intact
-E21	Modifier:T35 Modifies:T34
 T36	And 385 388	and
 E22	And:T36 Arg:E19 Arg2:E20
 T37	Drug 437 445	Warfarin
@@ -89,3 +87,9 @@ T47	Condition-Name 518 521	CUA
 R9	Abbrev-Of Arg1:E28 Arg2:E27	
 T48	Modifier 112 119	chronic
 E29	Modifier:T48 Modifies:T10
+T49	Modifier 53 59	type 2
+E30	Modifier:T49 Modifies:T6
+T50	Modifier 245 254	secondary
+E31	Modifier:T50 Modifies:T23
+T35	Polarity 409 415	intact
+A6	Polarity-Value T35 normal

@@ -17,7 +17,7 @@ T11	Condition 264 271	Crohn's
 T12	Condition-Name 264 271	Crohn's
 E11	Condition:T11 Name:T12
 T13	Life-Stage-And-Gender 25 31	female
-A1	Life-Stage-And-Gender-Type T13 male
+A1	Life-Stage-And-Gender-Type T13 female
 T14	Observation 92 95	BMI
 T15	Observation-Name 92 95	BMI
 E14	Observation:T14 Name:T15 Eq-Comparison:E16
@@ -83,7 +83,7 @@ T47	Or 285 288	and
 E21	Or:T47 Arg:E19 Arg2:E20
 R7	Example-Of Arg1:E20 Arg2:E12	
 T48	Drug 313 323	antibiotic
-E22	Drug:T48 Name:T49
+E22	Drug:T48 Name:T49 Temporality:E25
 T49	Drug-Name 313 323	antibiotic
 T50	Drug 327 336	probiotic
 E23	Drug:T50 Name:T51 Temporality:E25
