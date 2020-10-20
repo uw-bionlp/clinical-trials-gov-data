@@ -1,15 +1,15 @@
-T1	Life-Stage-And-Gender 382 392	Female sex
-A1	Life-Stage-And-Gender-Type T1 male
+T1	Life-Stage-And-Gender 382 388	Female
+A1	Life-Stage-And-Gender-Type T1 female
 T2	Life-Stage-And-Gender 25 29	male
 A2	Life-Stage-And-Gender-Type T2 male
 T3	Life-Stage-And-Gender 50 55	adult
 A3	Life-Stage-And-Gender-Type T3 adult
-T4	Observation 186 189	sex
-T5	Observation-Name 186 189	sex
-E4	Observation:T4 Name:T5
-T7	Condition 425 437	sex with men
-T8	Condition-Name 425 437	sex with men
-E7	Condition:T7 Name:T8 Temporality:E13
+T4	Observation 186 198	sex with men
+T5	Observation-Name 186 198	sex with men
+E4	Observation:T4 Name:T5 Temporality:E10
+T7	Observation 425 437	sex with men
+T8	Observation-Name 425 437	sex with men
+E7	Observation:T7 Name:T8 Temporality:E13
 T10	Eq-Operator 497 509	Younger than
 A4	Eq-Operator-Value T10 LT
 T11	Eq-Temporal-Unit 210 216	months
@@ -26,8 +26,8 @@ T17	Eq-Value 450 452	12
 T18	Eq-Value 510 512	18
 T19	Eq-Comparison 497 518	Younger than 18 years
 E9	Eq-Comparison:T19 Operator:T10 Temporal-Unit:T13 Value:T18
-T20	Eq-Comparison 202 206	past
-E10	Eq-Comparison:T20 Temporal-Period:T21
+T20	Eq-Comparison 202 216	past 12 months
+E10	Eq-Comparison:T20 Temporal-Period:T21 Value:T16 Temporal-Unit:T11
 T21	Eq-Temporal-Period 202 206	past
 A8	Eq-Temporal-Period-Value T21 past
 T22	Birth 38 43	birth
@@ -56,8 +56,6 @@ T34	Or 161 163	or
 E12	Or:T34 Arg:T32 Arg2:T33
 R2	Equivalent-To Arg1:T32 Arg2:T31	
 R3	Equivalent-To Arg1:T33 Arg2:T31	
-T6	Life-Stage-And-Gender 195 198	men
-A12	Life-Stage-And-Gender-Type T6 male
 T9	Eq-Comparison 445 459	last 12 months
 E13	Eq-Comparison:T9 Temporal-Period:T35 Value:T17 Temporal-Unit:T12
 T35	Eq-Temporal-Period 445 449	last
@@ -96,3 +94,8 @@ E23	Assertion:T53 Asserted:E20
 A17	Assertion-Type-Value E23 hypothetical
 T54	Negation 230 233	not
 E24	Negation:T54 Negates:E23
+T6	Birth 397 402	birth
+E25	Birth:T6 
+T55	Temporal-Connection 394 396	at
+E26	Temporal-Connection:T55 Arg:T1 Arg2:E25
+A12	Temporal-Connection-Type-Value E26 during

@@ -37,7 +37,7 @@ E23	Eq-Comparison:T23 Temporal-Period:T58
 T24	Drug 397 415	probiotic products
 E24	Drug:T24 Name:T59 Temporality:E23
 T25	And 416 419	who
-E25	And:T25 Arg:E24
+E25	And:T25 Arg:E24 Arg2:E26
 T26	Assertion 420 429	refuse to
 E26	Assertion:T26 Asserted:E18
 A1	Assertion-Type-Value E26 hypothetical
@@ -109,5 +109,5 @@ E28	Drug:T28 Name:T29
 T29	Drug-Name 468 478	probiotics
 T60	Modifier 452 467	food-containing
 E29	Modifier:T60 Modifies:T29
-T61	Exception 479 519	is not considered an exclusion criterion
+T61	Exception 482 496	not considered
 E31	Exception:T61 From:E24 Except:E28

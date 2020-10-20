@@ -31,7 +31,7 @@ E9	Eq-Comparison:T19 Operator:T9 Temporal-Unit:T13 Value:T15
 T20	Eq-Comparison 113 116	> 4
 E10	Eq-Comparison:T20 Operator:T10 Value:T16
 T21	Eq-Comparison 216 219	<90
-E11	Eq-Comparison:T21 Operator:T11 Value:T17 Per:T38
+E11	Eq-Comparison:T21 Operator:T11 Value:T17 Value2:T38
 T22	Eq-Comparison 360 363	<15
 E12	Eq-Comparison:T22 Operator:T12 Value:T18
 T23	Condition 25 34	Conscious
@@ -58,7 +58,7 @@ A7	Stability-Value T35 change
 T36	Observation 213 215	PA
 E16	Observation:T36 Name:T37 Eq-Comparison:E11
 T37	Observation-Name 213 215	PA
-T38	Eq-Unit 220 222	60
+T38	Eq-Value 220 222	60
 R1	Equivalent-To Arg1:E16 Arg2:E15	
 T39	And 185 189	with
 E17	And:T39 Arg:E14 Arg2:E15
@@ -68,9 +68,9 @@ T41	Observation-Name 346 359	Glasgow score
 A9	Observation-Type-Value T41 clinical-score
 T42	And 341 345	with
 E19	And:T42 Arg:E1 Arg2:E18
-T43	Eq-Comparison 393 401	received
+T43	Eq-Comparison 385 401	already received
 E20	Eq-Comparison:T43 Temporal-Period:T44
-T44	Eq-Temporal-Period 393 401	received
+T44	Eq-Temporal-Period 385 401	already received
 A10	Eq-Temporal-Period-Value T44 past
 T45	Drug 402 412	analgesics
 E21	Drug:T45 Name:T46 Temporality:E20
@@ -150,3 +150,9 @@ T85	Eq-Comparison 462 471	receiving
 E49	Eq-Comparison:T85 Temporal-Period:T86
 T86	Eq-Temporal-Period 462 471	receiving
 A8	Eq-Temporal-Period-Value T86 present
+T87	Modifier 242 248	proven
+E50	Modifier:T87 Modifies:T76
+T88	Or 239 241	or
+E51	Or:T88 Arg:E42 Arg2:E50
+T89	Or 597 599	or
+E52	Or:T89 Arg:E27 Arg2:E3

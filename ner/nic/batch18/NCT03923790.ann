@@ -46,7 +46,7 @@ T34	Eq-Value 612 614	30
 T35	Eq-Value 830 833	130
 T36	Eq-Comparison 224 228	≥ 18
 E22	Eq-Comparison:T36 Operator:T22 Value:T30
-T37	Eq-Comparison 291 295	≥140
+T37	Eq-Comparison 291 298	≥140/90
 E23	Eq-Comparison:T37 Operator:T23 Value:T31 Value2:T58
 T38	Eq-Comparison 499 502	> 4
 E24	Eq-Comparison:T38 Operator:T24 Value:T32
@@ -93,8 +93,7 @@ E20	Eq-Comparison:T59 Value:T60
 T60	Eq-Value 302 305	two
 R1	Equivalent-To Arg1:E19 Arg2:E7	
 T61	Observation 259 275	clinical history
-E28	Observation:T61 Name:T62
-T62	Observation-Name 259 275	clinical history
+E28	Observation:T61 
 T63	Or 276 278	or
 E29	Or:T63 Arg:E28 Arg2:E19
 R2	Equivalent-To Arg1:E28 Arg2:E7	
@@ -106,7 +105,7 @@ A11	Encounter-Type-Value T65 discharge
 T66	Location 340 344	home
 A12	Location-Value T66 residence
 T67	Temporal-Connection 345 350	after
-E31	Temporal-Connection:T67 Arg:E30 Arg2:E14
+E31	Temporal-Connection:T67 Arg2:E14 Arg:E16
 A13	Temporal-Connection-Type-Value E31 after
 T68	Observation 477 498	modified Rankin scale
 E32	Observation:T68 Name:T69 Eq-Comparison:E24

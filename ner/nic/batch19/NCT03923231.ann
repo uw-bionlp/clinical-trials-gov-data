@@ -7,8 +7,7 @@ A2	Observation-Type-Value T5 vital
 T6	Life-Stage-And-Gender 722 727	Child
 A3	Life-Stage-And-Gender-Type T6 child
 T7	Procedure 477 490	ART treatment
-T8	Procedure-Name 477 490	ART treatment
-E7	Procedure:T7 Name:T8 Temporality:E26
+E7	Procedure:T7 Temporality:E26 Name:T8
 T9	Procedure 529 532	ART
 T10	Procedure-Name 529 532	ART
 E9	Procedure:T9 Name:T10 Temporality:E29
@@ -54,13 +53,9 @@ E15	Eq-Comparison:T34 Operator:T14 Temporal-Unit:T20 Value:T28
 T35	Eq-Comparison 693 696	>30
 E16	Eq-Comparison:T35 Operator:T15 Value:T29
 T36	Eq-Comparison 700 711	<18.5 Kg/m2
-E17	Eq-Comparison:T36 Operator:T16 Value:T30 Per:T71
+E17	Eq-Comparison:T36 Operator:T16 Value:T30 Per:T71 Unit:T22
 T37	Eq-Comparison 747 756	<18 years
 E18	Eq-Comparison:T37 Operator:T17 Temporal-Unit:T21 Value:T31
-T38	Eq-Comparison 538 548	concurrent
-E19	Eq-Comparison:T38 Temporal-Period:T39
-T39	Eq-Temporal-Period 538 548	concurrent
-A15	Eq-Temporal-Period-Value T39 present
 T40	Location 241 253	South Africa
 A16	Location-Value T40 residence
 R1	If-Then Arg1:T40 Arg2:E10	
@@ -120,9 +115,8 @@ E30	And:T64 Arg:E9 Arg2:E32
 T65	Drug 549 558	rifamycin
 E31	Drug:T65 Name:T66
 T66	Drug-Name 549 558	rifamycin
-T67	Procedure 565 577	TB treatment
-E32	Procedure:T67 Name:T68 Temporality:E19
-T68	Procedure-Name 565 577	TB treatment
+T67	Procedure 568 577	treatment
+E32	Procedure:T67 Temporality:E29
 R4	Using Arg1:E32 Arg2:E31	
 T13	Condition 646 654	Pregnant
 E33	Condition:T13 Name:T69 Duration:E15
@@ -164,3 +158,8 @@ E44	Family-Member:T86
 A28	Family-Member-Type E44 spouse
 T87	And 963 968	where
 E45	And:T87 Arg:T81 Arg2:E44
+T38	Condition 565 567	TB
+E19	Condition:T38 Name:T39
+T39	Condition-Name 565 567	TB
+R7	Treatment-For Arg1:E32 Arg2:E19	
+T8	Procedure-Name 477 490	ART treatment

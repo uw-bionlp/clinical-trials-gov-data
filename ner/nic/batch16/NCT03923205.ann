@@ -110,7 +110,7 @@ T61	Drug 491 498	vitamin
 E31	Drug:T61 Name:T62 Temporality:E33
 T62	Drug-Name 491 498	vitamin
 T63	Drug 502 521	mineral supplements
-E32	Drug:T63 Name:T64
+E32	Drug:T63 Name:T64 Temporality:E33
 T64	Drug-Name 502 521	mineral supplements
 T65	Eq-Comparison 484 490	taking
 E33	Eq-Comparison:T65 Temporal-Period:T66
@@ -220,7 +220,7 @@ E65	Drug:T121 Name:T122 Temporality:E64
 T122	Drug-Name 1003 1010	vitamin
 R13	If-Then Arg1:E45 Arg2:E46	
 T123	Drug 1014 1033	mineral supplements
-E66	Drug:T123 Name:T124
+E66	Drug:T123 Name:T124 Temporality:E64
 T124	Drug-Name 1014 1033	mineral supplements
 T125	Or 1011 1013	or
 E67	Or:T125 Arg:E65 Arg2:E66
@@ -230,10 +230,10 @@ T127	Assertion 1047 1055	agree to
 E69	Assertion:T127 Asserted:E68
 A22	Assertion-Type-Value E69 hypothetical
 T128	Drug 1068 1083	supplementation
-E70	Drug:T128 Name:T129
+E70	Drug:T128 Name:T129 Temporality:E71
 T129	Drug-Name 1068 1083	supplementation
 T130	Eq-Comparison 1084 1091	2 weeks
-E71	Eq-Comparison:T130 
+E71	Eq-Comparison:T130 Value:T131 Temporal-Unit:T132
 T131	Eq-Value 1084 1085	2
 T132	Eq-Temporal-Unit 1086 1091	weeks
 A23	Eq-Temporal-Unit-Value T132 week

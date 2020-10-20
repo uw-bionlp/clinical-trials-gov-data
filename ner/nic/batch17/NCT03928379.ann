@@ -1,5 +1,5 @@
-T1	Condition 30 46	Type II diabetes
-T2	Condition-Name 30 46	Type II diabetes
+T1	Condition 38 46	diabetes
+T2	Condition-Name 38 46	diabetes
 E1	Condition:T1 Name:T2
 T3	Observation 52 67	Body mass index
 T4	Observation-Name 52 67	Body mass index
@@ -12,8 +12,8 @@ A2	Observation-Type-Value T6 vital
 T9	Condition 610 618	diabetes
 T10	Condition-Name 610 618	diabetes
 E9	Condition:T9 Name:T10
-T11	Condition 573 588	Type 1 diabetes
-T12	Condition-Name 573 588	Type 1 diabetes
+T11	Condition 580 588	diabetes
+T12	Condition-Name 580 588	diabetes
 E11	Condition:T11 Name:T12
 T13	Condition 686 698	ketoacidosis
 T14	Condition-Name 686 698	ketoacidosis
@@ -67,10 +67,10 @@ T55	Eq-Comparison 939 954	within 6 months
 E27	Eq-Comparison:T55 Operator:T30 Temporal-Unit:T34 Value:T47
 T56	Eq-Comparison 1290 1304	within 30 days
 E28	Eq-Comparison:T56 Operator:T31 Temporal-Unit:T35 Value:T51
-T57	Eq-Comparison 1368 1418	<45 milliliters per minute per 1.73 meters squared
-E29	Eq-Comparison:T57 Operator:T32 Value:T52 Unit:T25 Per:T26 Per2:T53
-T58	Eq-Comparison 77 109	25-40 kilograms per square meter
-E30	Eq-Comparison:T58 Operator:T40 Value:T41 Value2:T42 Unit:T36 Per:T7
+T57	Eq-Comparison 1368 1456	<45 milliliters per minute per 1.73 meters squared of body surface area (mL/min/1.73 m²)
+E29	Eq-Comparison:T57 Operator:T32 Value:T52 Unit:T25 Per:T26 Per2:T53 Unit2:T116 Per3:T117 Per4:T118
+T58	Eq-Comparison 77 117	25-40 kilograms per square meter (kg/m²)
+E30	Eq-Comparison:T58 Operator:T40 Value:T41 Value2:T42 Unit:T36 Per:T7 Unit2:T37 Per2:T8
 R1	Abbrev-Of Arg1:E5 Arg2:E3	
 T7	Eq-Unit 97 109	square meter
 R2	Abbrev-Of Arg1:T37 Arg2:T36	
@@ -211,7 +211,7 @@ T112	Temporal-Connection 1305 1307	of
 E59	Temporal-Connection:T112 Arg:E28 Arg2:E58
 A32	Temporal-Connection-Type-Value E59 before
 T114	Observation 1331 1367	estimated glomerular filtration rate
-E61	Observation:T114 Name:T115
+E61	Observation:T114 Name:T115 Eq-Comparison:E29
 T115	Observation-Name 1331 1367	estimated glomerular filtration rate
 A33	Observation-Type-Value T115 lab
 T25	Eq-Unit 1372 1383	milliliters
@@ -224,3 +224,12 @@ T117	Eq-Temporal-Unit 1444 1447	min
 A35	Eq-Temporal-Unit-Value T117 minute
 T118	Eq-Unit 1448 1455	1.73 m²
 R15	Abbrev-Of Arg1:T118 Arg2:T53	
+T113	Modifier 30 37	Type II
+E25	Modifier:T113 Modifies:T2
+T119	Modifier 573 579	Type 1
+E60	Modifier:T119 Modifies:T12
+R16	Equivalent-To Arg1:E36 Arg2:E19	
+R17	Treatment-For Arg1:E38 Arg2:E13	
+T120	Assertion 882 891	requiring
+E62	Assertion:T120 Asserted:E21
+A36	Assertion-Type-Value E62 hypothetical

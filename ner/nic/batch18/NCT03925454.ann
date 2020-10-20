@@ -39,7 +39,7 @@ T28	Condition-Name 826 839	Heart failure
 E27	Condition:T27 Name:T28 Stage:E55
 T29	Condition 1013 1025	pericarditis
 T30	Condition-Name 1013 1025	pericarditis
-E29	Condition:T29 Name:T30
+E29	Condition:T29 Name:T30 Temporality:E32
 T31	Eq-Operator 75 84	less than
 A1	Eq-Operator-Value T31 LT
 T33	Eq-Operator 537 543	within
@@ -187,9 +187,9 @@ T104	Condition-Name 731 740	dizziness
 T105	Or 728 730	or
 E53	Or:T105 Arg:E51 Arg2:E52
 R8	Example-Of Arg1:E52 Arg2:E17	
-T106	Condition 790 816	New York Heart Association
-E54	Condition:T106 Name:T107 Stage:E55
-T107	Condition-Name 790 816	New York Heart Association
+T106	Observation 790 816	New York Heart Association
+E54	Observation:T106 Name:T107 Stage:E55
+T107	Observation-Name 790 816	New York Heart Association
 T108	Eq-Comparison 817 825	grade IV
 E55	Eq-Comparison:T108 Unit:T109 Value:T110
 T109	Eq-Unit 817 822	grade
@@ -242,6 +242,7 @@ T135	Observation 1188 1203	Life expectancy
 E71	Observation:T135 Name:T136 Eq-Comparison:E72
 T136	Observation-Name 1188 1203	Life expectancy
 T137	Eq-Comparison 1207 1230	less than twelve months
-E72	Eq-Comparison:T137 Operator:T34
+E72	Eq-Comparison:T137 Operator:T34 Temporal-Unit:T39 Value:T138
 T138	Eq-Value 1217 1223	twelve
 A29	Eq-Operator-Value T57 GT
+A30	Observation-Type-Value T107 clinical-score

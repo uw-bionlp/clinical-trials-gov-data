@@ -42,7 +42,7 @@ T28	Eq-Comparison 694 709	within 6 months
 E16	Eq-Comparison:T28 Operator:T17 Temporal-Unit:T20 Value:T26
 T29	Eq-Comparison 816 825	class > 2
 E17	Eq-Comparison:T29 Operator:T18 Value:T27 Unit:T90
-T30	Eq-Comparison 438 440	0-
+T30	Eq-Comparison 438 441	0-1
 E18	Eq-Comparison:T30 Operator:T21 Value:T24 Value2:T25
 T33	Eq-Comparison 242 256	Received prior
 E21	Eq-Comparison:T33 Temporal-Period:T34
@@ -104,12 +104,12 @@ E31	Eq-Comparison:T61 Value:T62
 T62	Eq-Value 280 283	One
 T63	And 357 368	in addition
 E32	And:T63 Arg:E1 Arg2:E5
-T64	Condition 396 430	Eastern Cooperative Oncology Group
-E33	Condition:T64 Name:T65
-T65	Condition-Name 396 430	Eastern Cooperative Oncology Group
-T66	Condition 432 436	ECOG
-E34	Condition:T66 Name:T67 Stage:E18
-T67	Condition-Name 432 436	ECOG
+T64	Observation 396 430	Eastern Cooperative Oncology Group
+E33	Observation:T64 Name:T65
+T65	Observation-Name 396 430	Eastern Cooperative Oncology Group
+T66	Observation 432 436	ECOG
+E34	Observation:T66 Name:T67 Stage:E18
+T67	Observation-Name 432 436	ECOG
 R4	Abbrev-Of Arg1:E34 Arg2:E33	
 T39	Procedure 495 504	treatment
 E24	Procedure:T39 Temporality:E22
@@ -142,21 +142,19 @@ T80	Temporal-Connection 710 716	before
 E43	Temporal-Connection:T80 Arg:E16 Arg2:E42
 A14	Temporal-Connection-Type-Value E43 before
 T81	Condition 748 754	angina
-E44	Condition:T81 Name:T82 Severity:T83
+E44	Condition:T81 Name:T82 Severity:T83 Stability:T84
 T82	Condition-Name 748 754	angina
 T83	Severity 741 747	severe
 A15	Severity-Value T83 severe
-T84	Modifier 729 737	unstable
-E45	Modifier:T84 Modifies:T82
 T85	Or 738 740	or
-E46	Or:T85 Arg:E45 Arg2:T83
-T86	Condition 782 808	New York heart association
-E47	Condition:T86 Name:T87
-T87	Condition-Name 782 808	New York heart association
+E46	Or:T85 Arg2:T83 Arg:T84
+T86	Observation 782 808	New York heart association
+E47	Observation:T86 Name:T87
+T87	Observation-Name 782 808	New York heart association
 R7	Equivalent-To Arg1:E47 Arg2:E11	
-T88	Condition 810 814	NYHA
-E48	Condition:T88 Name:T89 Stage:E17
-T89	Condition-Name 810 814	NYHA
+T88	Observation 810 814	NYHA
+E48	Observation:T88 Name:T89 Stage:E17
+T89	Observation-Name 810 814	NYHA
 R8	Abbrev-Of Arg1:E48 Arg2:E47	
 T90	Eq-Unit 816 821	class
 T91	Or 828 830	or
@@ -165,3 +163,15 @@ T92	Assertion 860 864	need
 E50	Assertion:T92 Asserted:E15
 A16	Assertion-Type-Value E50 hypothetical
 R9	Treatment-For Arg1:E15 Arg2:E13	
+T93	Procedure 33 47	pathologically
+E51	Procedure:T93 Name:T94
+T94	Procedure-Name 33 47	pathologically
+R10	Found-By Arg1:E2 Arg2:E51	
+A17	Observation-Type-Value T65 clinical-score
+A18	Observation-Type-Value T67 clinical-score
+R11	Using Arg1:E24 Arg2:E36	
+R12	Using Arg1:E24 Arg2:E37	
+T84	Stability 729 737	unstable
+A19	Stability-Value T84 change
+A20	Observation-Type-Value T87 clinical-score
+A21	Observation-Type-Value T89 clinical-score

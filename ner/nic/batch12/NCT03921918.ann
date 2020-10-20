@@ -66,7 +66,7 @@ E16	Family-Member:T44 Has:E7
 A15	Family-Member-Type E16 child
 R1	Found-By Arg1:E7 Arg2:E5	
 T47	Eq-Comparison 240 256	80% of all feeds
-E18	Eq-Comparison:T47 Value:T48 Unit:T49
+E18	Eq-Comparison:T47 Value:T48 Unit:T49 Unit2:T99
 T48	Eq-Value 240 242	80
 T49	Eq-Unit 242 243	%
 T1	Eq-Unit 268 270	ml
@@ -91,8 +91,8 @@ T56	Eq-Comparison 373 382	last time
 E22	Eq-Comparison:T56 Temporal-Recency:T57
 T57	Eq-Temporal-Recency 373 382	last time
 A18	Eq-Temporal-Recency-Value T57 most-recent-time
-T58	Eq-Comparison 385 403	minimum of 2 hours
-E23	Eq-Comparison:T58 Operator:T59 Value:T27 Temporal-Unit:T60 Temporal-Unit2:T61
+T58	Eq-Comparison 385 408	minimum of 2 hours (hr)
+E23	Eq-Comparison:T58 Operator:T59 Value:T27 Temporal-Unit:T60 Temporal-Unit2:T61 Temporal-Unit3:T61
 T59	Eq-Operator 385 392	minimum
 A19	Eq-Operator-Value T59 GTEQ
 T60	Eq-Temporal-Unit 398 403	hours
@@ -182,3 +182,4 @@ E51	Observation:T97 Name:T98
 T98	Observation-Name 1154 1192	Mother and infant health questionnaire
 A32	Observation-Type-Value T98 survey-or-questionnaire
 R3	Found-By Arg1:E49 Arg2:E51	
+T99	Eq-Unit 251 256	feeds

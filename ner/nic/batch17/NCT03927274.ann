@@ -20,7 +20,7 @@ T20	Procedure-Name 1499 1509	anesthesia
 E19	Procedure:T19 Name:T20
 T21	Procedure 1392 1401	Radiation
 T22	Procedure-Name 1392 1401	Radiation
-E21	Procedure:T21 Name:T22
+E21	Procedure:T21 Name:T22 Temporality:E25
 T26	Eq-Operator 1418 1424	within
 A2	Eq-Operator-Value T26 LTEQ
 T27	Eq-Temporal-Unit 376 381	years
@@ -35,7 +35,7 @@ T34	Eq-Value 435 438	100
 T36	Eq-Value 1027 1028	4
 T37	Eq-Comparison 1418 1432	within 4 weeks
 E25	Eq-Comparison:T37 Operator:T26 Value:T124 Temporal-Unit:T125
-T38	Eq-Comparison 432 435	70-
+T38	Eq-Comparison 432 438	70-100
 E26	Eq-Comparison:T38 Value:T33 Operator:T73 Value2:T34
 T39	Eq-Comparison 1317 1323	Active
 E27	Eq-Comparison:T39 Temporal-Period:T40
@@ -167,7 +167,7 @@ A15	Temporal-Connection-Type-Value E56 during
 T97	Condition 918 921	HIV
 E57	Condition:T97 Name:T98 Polarity:T99
 T98	Condition-Name 918 921	HIV
-T99	Polarity 921 924	(+)
+T99	Polarity 922 923	+
 A16	Polarity-Value T99 positive
 T100	Or 925 927	or
 E58	Or:T100 Arg:E57 Arg2:E10

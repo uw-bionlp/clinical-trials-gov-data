@@ -12,9 +12,9 @@ E6	Procedure:T6 Name:T7 Severity:T65 Temporality:E19
 T8	Condition 1273 1290	bowel obstruction
 T9	Condition-Name 1273 1290	bowel obstruction
 E8	Condition:T8 Name:T9 Temporality:E20
-T10	Condition 975 990	unstable angina
-T11	Condition-Name 975 990	unstable angina
-E10	Condition:T10 Name:T11
+T10	Condition 984 990	angina
+T11	Condition-Name 984 990	angina
+E10	Condition:T10 Name:T11 Temporality:E22 Stability:T146
 T12	Condition 920 932	hypertension
 T13	Condition-Name 920 932	hypertension
 E12	Condition:T12 Name:T13
@@ -76,7 +76,7 @@ T51	Eq-Comparison 1200 1214	within 28 days
 E19	Eq-Comparison:T51 Operator:T19 Temporal-Unit:T27 Value:T42
 T52	Eq-Comparison 1291 1305	within 28 days
 E20	Eq-Comparison:T52 Operator:T20 Temporal-Unit:T28 Value:T44
-T53	Eq-Comparison 557 559	0-
+T53	Eq-Comparison 557 560	0-2
 E21	Eq-Comparison:T53 Operator:T30 Value:T34 Value2:T35
 T54	Eq-Comparison 938 945	History
 E22	Eq-Comparison:T54 Temporal-Period:T55
@@ -200,14 +200,14 @@ E57	Condition:T122 Name:T123 Temporality:E22
 T123	Condition-Name 949 970	myocardial infarction
 T124	Or 972 974	or
 E58	Or:T124 Arg:E57 Arg2:E10
-T125	Condition 995 1021	New York Heart Association
-E59	Condition:T125 Name:T126
-T126	Condition-Name 995 1021	New York Heart Association
+T125	Observation 995 1021	New York Heart Association
+E59	Observation:T125 Name:T126
+T126	Observation-Name 995 1021	New York Heart Association
 T127	Or 992 994	or
 E60	Or:T127 Arg:E10 Arg2:E59
-T128	Condition 1023 1027	NYHA
-E61	Condition:T128 Name:T129 Stage:E62 Temporality:E17
-T129	Condition-Name 1023 1027	NYHA
+T128	Observation 1023 1027	NYHA
+E61	Observation:T128 Name:T129 Temporality:E17 Eq-Comparison:E62
+T129	Observation-Name 1023 1027	NYHA
 R7	Abbrev-Of Arg1:E61 Arg2:E59	
 T130	Eq-Comparison 1029 1041	Grade III-IV
 E62	Eq-Comparison:T130 Unit:T131 Value:T132 Operator:T133 Value2:T134
@@ -241,7 +241,7 @@ A24	Temporal-Connection-Type-Value E67 before
 T67	Condition 1252 1257	wound
 E68	Condition:T67 Name:T137 Severity:T139
 T137	Condition-Name 1252 1257	wound
-T138	Modifier 1240 1251	non-healing
+T138	Modifier 1244 1251	healing
 E69	Modifier:T138 Modifies:T137
 T139	Severity 1231 1238	Serious
 A37	Severity-Value T139 severe
@@ -264,3 +264,9 @@ R8	Abbrev-Of Arg1:E74 Arg2:E72
 T145	Assertion 1326 1337	Symptomatic
 E75	Assertion:T145 Asserted:E73
 A38	Assertion-Type-Value E75 possible
+A39	Observation-Type-Value T126 clinical-score
+A40	Observation-Type-Value T129 clinical-score
+T146	Stability 975 983	unstable
+A41	Stability-Value T146 change
+T147	Negation 1240 1243	non
+E76	Negation:T147 Negates:E69

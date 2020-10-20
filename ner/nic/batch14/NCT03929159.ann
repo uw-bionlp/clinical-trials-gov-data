@@ -38,8 +38,8 @@ T38	Eq-Comparison 677 682	> 10%
 E12	Eq-Comparison:T38 Operator:T14 Value:T27 Unit:T77
 T39	Eq-Comparison 768 782	within 30 days
 E13	Eq-Comparison:T39 Operator:T15 Temporal-Unit:T23 Value:T28
-T40	Eq-Comparison 820 837	> 90 beats/minute
-E14	Eq-Comparison:T40 Operator:T16 Value:T29 Unit:T92 Per:T93
+T40	Eq-Comparison 820 843	> 90 beats/minute (min)
+E14	Eq-Comparison:T40 Operator:T16 Value:T29 Unit:T92 Per:T93 Temporal-Unit:T94
 T41	Eq-Comparison 871 887	> 20 breaths/min
 E15	Eq-Comparison:T41 Operator:T17 Value:T30 Unit:T9 Per:T10
 T46	Eq-Comparison 36 45	scheduled
@@ -206,7 +206,7 @@ A32	Observation-Type-Value T114 vital
 T115	Modifier 952 956	Oral
 E54	Modifier:T115 Modifies:T114
 T116	Eq-Comparison 969 993	> 38 degrees Celsius (C)
-E55	Eq-Comparison:T116 Operator:T117 Value:T118 Unit:T119
+E55	Eq-Comparison:T116 Operator:T117 Value:T118 Unit:T119 Unit2:T120
 T117	Eq-Operator 969 970	>
 A33	Eq-Operator-Value T117 GT
 T118	Eq-Value 971 973	38

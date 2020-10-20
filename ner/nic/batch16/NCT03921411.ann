@@ -50,8 +50,8 @@ T38	Eq-Comparison 189 193	≥ 16
 E15	Eq-Comparison:T38 Operator:T15 Value:T29
 T39	Eq-Comparison 209 212	≥ 3
 E16	Eq-Comparison:T39 Operator:T16 Value:T30
-T40	Eq-Comparison 233 259	≥ 10% of Body Surface Area
-E17	Eq-Comparison:T40 Operator:T17 Value:T31 Unit:T59 Unit2:T60
+T40	Eq-Comparison 233 265	≥ 10% of Body Surface Area (BSA)
+E17	Eq-Comparison:T40 Operator:T17 Value:T31 Unit:T59 Unit2:T60 Unit3:T61
 T41	Eq-Comparison 591 598	< 30 kg
 E18	Eq-Comparison:T41 Operator:T18 Unit:T24 Value:T33
 T42	Eq-Comparison 624 637	within 1 week
@@ -122,7 +122,7 @@ T70	Condition 406 415	abstinent
 E27	Condition:T70 Name:T71
 T71	Condition-Name 406 415	abstinent
 T72	Assertion 385 393	agree to
-E28	Assertion:T72 Asserted:E27
+E28	Assertion:T72 Asserted:E27 Asserted2:E3
 A23	Assertion-Type-Value E28 hypothetical
 R4	If-Then Arg1:E25 Arg2:E27	
 T73	Or 416 418	or
@@ -175,10 +175,10 @@ E46	Assertion:T95 Asserted:E42
 A29	Assertion-Type-Value E46 hypothetical
 R6	Treatment-For Arg1:E42 Arg2:E40	
 T96	Drug 712 722	antivirals
-E47	Drug:T96 Name:T97
+E47	Drug:T96 Name:T97 Temporality:E20
 T97	Drug-Name 712 722	antivirals
 T98	Drug 724 738	antiparasitics
-E48	Drug:T98 Name:T99
+E48	Drug:T98 Name:T99 Temporality:E20
 T99	Drug-Name 724 738	antiparasitics
 T100	Drug 743 754	antifungals
 E49	Drug:T100 Name:T101 Temporality:E20

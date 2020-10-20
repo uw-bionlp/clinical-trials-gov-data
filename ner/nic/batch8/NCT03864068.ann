@@ -121,7 +121,7 @@ T62	Other 1191 1196	other
 E62	Other:T62 Is-Other:E64
 T63	Drug 1197 1208	medications
 E63	Drug:T63 
-T64	Condition 1213 1228	type 2 diabetes
+T64	Condition 1220 1228	diabetes
 E64	Condition:T64 Name:T157
 T65	And 1240 1244	with
 E65	And:T65 Arg:T158 Arg2:E66
@@ -261,7 +261,7 @@ A38	Stability-Value T153 change
 T154	Condition-Name 1126 1142	ovarian function
 T155	Drug-Name 1153 1162	metformin
 T156	Drug-Name 1164 1187	hormonal contraceptives
-T157	Condition-Name 1213 1228	type 2 diabetes
+T157	Condition-Name 1220 1228	diabetes
 T158	Life-Stage-And-Gender 1234 1239	Women
 A39	Life-Stage-And-Gender-Type T158 female
 T159	Drug-Name 1294 1306	OTC inositol
@@ -298,3 +298,5 @@ R10	Example-Of Arg1:E60 Arg2:E57
 R11	Treatment-For Arg1:E63 Arg2:E64	
 R12	Example-Of Arg1:E63 Arg2:E57	
 R13	Caused-By Arg1:E67 Arg2:E66	
+T167	Modifier 1213 1219	type 2
+E81	Modifier:T167 Modifies:T157

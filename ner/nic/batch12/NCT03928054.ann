@@ -13,21 +13,21 @@ A2	Eq-Operator-Value T8 BETWEEN
 T9	Eq-Value 55 57	40
 T10	Eq-Value 61 63	80
 T11	Eq-Comparison 55 69	40 to 80 years
-E6	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10
+E6	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6
 T12	Procedure 93 112	imaging examination
 E2	Procedure:T12 Name:T13 Temporality:E15
 T13	Procedure-Name 93 112	imaging examination
 R1	Found-By Arg1:E1 Arg2:E2	
 T16	Encounter 228 236	referred
-E9	Encounter:T16 Type:T17 Provider:E10
+E9	Encounter:T16 Type:T17 Provider:E10 Provider2:E8
 T17	Encounter-Type 228 236	referred
 A3	Encounter-Type-Value T17 referral
 T18	Provider-Type 244 265	physiotherapy service
 T19	Provider 244 265	physiotherapy service
 E10	Provider:T19 Type:T18
-T20	Condition 334 338	walk
+T20	Condition 324 338	unable to walk
 E11	Condition:T20 Name:T21
-T21	Condition-Name 334 338	walk
+T21	Condition-Name 324 338	unable to walk
 T22	Condition 362 368	cancer
 E12	Condition:T22 Name:T23 Temporality:E14
 T23	Condition-Name 362 368	cancer
@@ -39,8 +39,6 @@ E3	Eq-Comparison:T3 Unit:T14 Value:T26 Value2:T15
 T14	Eq-Unit 124 129	grade
 T15	Eq-Value 130 132	II
 T26	Eq-Value 136 139	III
-T27	Negation 324 330	unable
-E7	Negation:T27 Negates:E11
 T28	Eq-Comparison 351 358	history
 E14	Eq-Comparison:T28 Temporal-Period:T29
 T29	Eq-Temporal-Period 351 358	history
@@ -49,3 +47,6 @@ T30	Eq-Comparison 83 92	underwent
 E15	Eq-Comparison:T30 Temporal-Period:T31
 T31	Eq-Temporal-Period 83 92	underwent
 A5	Eq-Temporal-Period-Value T31 past
+T32	Provider 271 280	physician
+E8	Provider:T32 Role:T33
+T33	Provider-Role 271 280	physician

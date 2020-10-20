@@ -10,6 +10,7 @@ import preprocess.utils as utils
 
 regex_asa = r'(American.*Anes.*)'
 regex_nyha = r'(NYHA|New York Heart Assoc.*)'
+regex_ecog = r'(ECOG|Eastern Cooperative Oncology Group)'
 regex_chronic = r'(chronic|long[ |-]term)'
 
 
@@ -84,14 +85,15 @@ def acute(annotations):
                     arg.type = 'Acuteness'
     return annotations
 
-def asa_and_nyha(annotations):
+def asa_nyha_ecog(annotations):
     ''' Convert ASA & NYHA Condition -> Observation[clinical-score] '''
     for ann in annotations:
         asa  = [ v for _,v in ann.Ts.items() if (v.span == 'ASA' or re.match(regex_asa, v.span, re.IGNORECASE)) and v.type in [ 'Condition', 'Condition-Name'] ]
         nyha = [ v for _,v in ann.Ts.items() if re.match(regex_nyha, v.span, re.IGNORECASE) and v.type in [ 'Condition', 'Condition-Name'] ]
-        if len(asa) or len(nyha):
+        ecog = [ v for _,v in ann.Ts.items() if re.match(regex_ecog, v.span, re.IGNORECASE) and v.type in [ 'Condition', 'Condition-Name'] ]
+        if len(asa) or len(nyha) or len(ecog):
             max_a = max([ int(a.id.replace('A','')) for _,a in ann.As.items() ])+1 if len(ann.As) else 1
-            for rec in asa+nyha:
+            for rec in asa+nyha+ecog:
                 if rec.type == 'Condition-Name':
                     rec.type = 'Observation-Name'
                     a_id = f'A{max_a}'
@@ -117,7 +119,7 @@ def main():
     annotations = [ BratDocument(k, v[0], v[1], v[2], surface_only=True) for k,v in brat_train_raw.items() ]
 
     # Convert
-    # TODO: convert diabetes types, anatomy, Condition/Observations, Eq-Unit/Eq-Value, Female/Male, Pos/Neg
+    # TODO: convert diabetes types, anatomy, Condition/Observations, Eq-Unit/Eq-Value, Female/Male, Pos/Neg, Histology, Unstable (as modifier)
     for converter in [ eq_value_unit ]:
         annotations = converter(annotations)
     

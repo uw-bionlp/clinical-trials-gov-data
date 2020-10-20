@@ -9,7 +9,7 @@ T6	Procedure-Name 818 835	biopsy procedures
 E5	Procedure:T5 Name:T6 Temporality:E37
 T7	Procedure 937 944	therapy
 T8	Procedure-Name 937 944	therapy
-E7	Procedure:T7 Name:T8 Temporality:E43
+E7	Procedure:T7 Name:T8 Temporality:E43 Temporality2:E42
 T9	Procedure 1094 1106	chemotherapy
 T10	Procedure-Name 1094 1106	chemotherapy
 E9	Procedure:T9 Name:T10
@@ -151,7 +151,7 @@ R6	Abbrev-Of Arg1:E50 Arg2:E49
 T89	Or 965 967	or
 E51	Or:T89 Arg:E48 Arg2:E49
 T90	Exception 946 956	other than
-E52	Exception:T90 From:E7 Except:E48
+E52	Exception:T90 From:E7 Except:E48 Except2:E49
 T91	Eq-Comparison 1022 1029	Current
 E53	Eq-Comparison:T91 Temporal-Period:T92
 T92	Eq-Temporal-Period 1022 1029	Current
@@ -164,7 +164,7 @@ T95	Or 1030 1032	or
 E55	Or:T95 Arg:E53 Arg2:E54
 R7	Equivalent-To Arg1:E17 Arg2:E54	
 T96	Drug 1064 1086	immunomodulatory drugs
-E56	Drug:T96 Name:T97 Temporality:E54
+E56	Drug:T96 Name:T97 Temporality:E54 Temporality2:E53
 T97	Drug-Name 1064 1086	immunomodulatory drugs
 R8	Example-Of Arg1:E9 Arg2:E56	
 T98	Drug 1108 1116	steroids
@@ -198,3 +198,10 @@ T50	Condition 387 394	healthy
 E24	Condition:T50 Name:T51
 T51	Condition-Name 387 394	healthy
 R2	If-Then Arg1:E24 Arg2:E26	
+T103	Eq-Comparison 39 42	one
+E61	Eq-Comparison:T103 Value:T110
+T110	Eq-Value 39 42	one
+T111	Criteria-Count 46 59	the following
+E65	Criteria-Count:T111 Min-Value:E61 Criteria:E2 Criteria2:E1 Criteria3:E10 Criteria4:E8
+T112	Exception 1119 1125	except
+E66	Exception:T112 From:E56

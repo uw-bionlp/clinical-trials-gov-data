@@ -83,7 +83,7 @@ E25	Eq-Comparison:T59 Operator:T25 Temporal-Unit:T35 Value:T47
 T60	Eq-Comparison 543 549	≥ 2 mm
 E26	Eq-Comparison:T60 Operator:T26 Unit:T39 Value:T48
 T61	Eq-Comparison 605 624	≥ 3 mm above normal
-E27	Eq-Comparison:T61 Operator:T27 Unit:T40 Value:T49
+E27	Eq-Comparison:T61 Operator:T27 Unit:T40 Value:T49 Unit2:T110 Operator2:T177
 T62	Eq-Comparison 867 872	≥ 1 g
 E28	Eq-Comparison:T62 Operator:T28 Value:T50 Unit:T123
 T63	Eq-Comparison 919 933	within 3 weeks
@@ -173,8 +173,8 @@ A31	Stability-Value T100 change
 T101	And 428 431	but
 E43	And:T101 Arg:E41 Arg2:E42
 R3	Caused-By Arg1:T100 Arg2:E38	
-T102	Condition 517 526	following
-E44	Condition:T102 
+T102	Criteria-Count 513 526	the following
+E44	Criteria-Count:T102 Min-Value:E88 Criteria:E45 Criteria2:E46 Criteria3:E9 Criteria4:E48
 T103	Observation 528 542	lid retraction
 E45	Observation:T103 Name:T104 Eq-Comparison:E26
 T104	Observation-Name 528 542	lid retraction
@@ -188,11 +188,8 @@ T108	Severity 551 559	moderate
 A34	Severity-Value T108 moderate
 T109	Or 560 562	or
 E47	Or:T109 Arg:T108 Arg2:T107
-R5	Example-Of Arg1:E45 Arg2:E44	
-R6	Caused-By Arg1:E44 Arg2:E38	
-R7	Example-Of Arg1:E9 Arg2:E44	
-T110	Eq-Unit 612 624	above normal
-A35	Eq-Unit-Value T110 ref-range-high
+T110	Eq-Unit 618 624	normal
+A35	Eq-Unit-Value T110 ref-range-normal
 T111	Condition 676 684	diplopia
 E48	Condition:T111 Name:T112
 T112	Condition-Name 676 684	diplopia
@@ -204,7 +201,6 @@ T115	Or 664 666	or
 E51	Or:T115 Arg:E50 Arg2:E49
 T116	Or 646 652	and/or
 E52	Or:T116 Arg:E9 Arg2:E48
-R8	Example-Of Arg1:E48 Arg2:E44	
 T117	Drug 795 802	steroid
 E53	Drug:T117 Name:T118 Dose:E28 Temporality:E29
 T118	Drug-Name 795 802	steroid
@@ -232,10 +228,10 @@ T129	Temporal-Connection 934 939	prior
 E61	Temporal-Connection:T129 Arg:E29 Arg2:E60
 A36	Temporal-Connection-Type-Value E61 before
 T130	Drug 966 975	rituximab
-E62	Drug:T130 Name:T131
+E62	Drug:T130 Name:T131 Temporality:E30
 T131	Drug-Name 966 975	rituximab
 T132	Drug 977 988	tocilizumab
-E63	Drug:T132 Name:T133
+E63	Drug:T132 Name:T133 Temporality:E30
 T133	Drug-Name 977 988	tocilizumab
 T134	Drug 997 1016	monoclonal antibody
 E64	Drug:T134 Name:T135 Temporality:E30
@@ -292,7 +288,7 @@ E77	Eq-Comparison:T157 Temporal-Recency:T158
 T158	Eq-Temporal-Recency 1339 1342	new
 A44	Eq-Temporal-Recency-Value T158 first-time
 T159	Condition 1367 1379	color defect
-E78	Condition:T159 Name:T160
+E78	Condition:T159 Name:T160 Temporality:E77
 T160	Condition-Name 1367 1379	color defect
 T161	Or 1364 1366	or
 E79	Or:T161 Arg:E76 Arg2:E78
@@ -318,8 +314,21 @@ T169	Condition 1505 1507	GO
 E85	Condition:T169 Name:T170
 T170	Condition-Name 1505 1507	GO
 T171	Procedure 1493 1500	surgery
-E86	Procedure:T171 Name:T172
+E86	Procedure:T171 Name:T172 Temporality:E84
 T172	Procedure-Name 1493 1500	surgery
 T173	Or 1490 1492	or
 E87	Or:T173 Arg:E21 Arg2:E86
 R18	Treatment-For Arg1:E86 Arg2:E85	
+T174	Eq-Comparison 498 509	one or more
+E88	Eq-Comparison:T174 Value:T175 Operator:T176
+T175	Eq-Value 498 501	one
+T176	Eq-Operator 502 509	or more
+A48	Eq-Operator-Value T176 GTEQ
+R5	Equivalent-To Arg1:E44 Arg2:E38	
+T177	Eq-Operator 612 617	above
+A49	Eq-Operator-Value T177 GT
+R6	Treatment-For Arg1:E63 Arg2:E13	
+R7	Treatment-For Arg1:E62 Arg2:E13	
+T178	Modifier 1324 1337	Snellen chart
+E89	Modifier:T178 Modifies:E75
+R8	Treatment-For Arg1:E21 Arg2:E85	

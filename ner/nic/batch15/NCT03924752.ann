@@ -34,9 +34,9 @@ E6	Eq-Comparison:T24 Operator:T6 Value:T17 Unit:T43
 T25	Eq-Comparison 350 361	>15 degrees
 E7	Eq-Comparison:T25 Operator:T7 Value:T18 Unit:T47
 T26	Eq-Comparison 25 44	Between 18-85 years
-E8	Eq-Comparison:T26 Operator:T11 Value:T13 Value2:T14
+E8	Eq-Comparison:T26 Operator:T11 Value:T13 Value2:T14 Temporal-Unit:T8
 T27	Eq-Comparison 465 474	1-6 hours
-E9	Eq-Comparison:T27 Operator:T12 Value:T20 Temporal-Unit:T52
+E9	Eq-Comparison:T27 Operator:T12 Value:T20 Temporal-Unit:T52 Value2:T21
 T28	Eq-Operator 25 32	Between
 A9	Eq-Operator-Value T28 BETWEEN
 T29	Condition 76 86	capable of
@@ -53,11 +53,11 @@ A10	Observation-Type-Value T34 measurement
 T35	Eq-Unit 262 269	degrees
 T36	Modifier 87 94	walking
 E12	Modifier:T36 Modifies:T30
-T37	Modifier 96 123	ascending/descending stairs
+T37	Modifier 96 105	ascending
 E13	Modifier:T37 Modifies:T30
-T38	Condition 139 197	full capability in lower extremity passive range of motion
+T38	Condition 182 197	range of motion
 E14	Condition:T38 Name:T39
-T39	Condition-Name 139 197	full capability in lower extremity passive range of motion
+T39	Condition-Name 182 197	range of motion
 T40	And 134 138	with
 E15	And:T40 Arg:E1 Arg2:E14
 R1	Equivalent-To Arg1:E10 Arg2:E14	
@@ -131,10 +131,10 @@ E33	Eq-Comparison:T74 Temporal-Period:T75
 T75	Eq-Temporal-Period 750 757	History
 A16	Eq-Temporal-Period-Value T75 past
 T76	Condition 782 796	gait pathology
-E34	Condition:T76 Name:T77
+E34	Condition:T76 Name:T77 Temporality:E33
 T77	Condition-Name 782 796	gait pathology
 T78	Condition 801 825	cardiovascular condition
-E35	Condition:T78 Name:T79
+E35	Condition:T78 Name:T79 Temporality:E33
 T79	Condition-Name 801 825	cardiovascular condition
 T80	Or 798 800	or
 E36	Or:T80 Arg:E34 Arg2:E35
@@ -153,3 +153,11 @@ T87	Assertion 831 836	would
 E39	Assertion:T87 Asserted:T86
 A20	Assertion-Type-Value E39 hypothetical
 R9	Caused-By Arg1:T86 Arg2:E35	
+T88	Modifier 106 123	descending stairs
+E40	Modifier:T88 Modifies:T30
+T89	Or 105 106	/
+E41	Or:T89 Arg:E13 Arg2:E40
+T90	Modifier 139 154	full capability
+E42	Modifier:T90 Modifies:T39
+T91	Modifier 158 181	lower extremity passive
+E43	Modifier:T91 Modifies:T39

@@ -6,7 +6,7 @@ T4	Condition-Name 46 52	stroke
 E3	Condition:T3 Name:T4 Temporality:E2
 T5	Condition 53 56	TIA
 T6	Condition-Name 53 56	TIA
-E5	Condition:T5 Name:T6
+E5	Condition:T5 Name:T6 Temporality:E2
 T7	Condition 425 444	atrial fibrillation
 T8	Condition-Name 425 444	atrial fibrillation
 E7	Condition:T7 Name:T8
@@ -73,7 +73,7 @@ E29	Eq-Comparison:T47 Operator:T30 Temporal-Unit:T36 Value:T41
 T48	Eq-Comparison 464 478	Within 2 weeks
 E30	Eq-Comparison:T48 Operator:T31 Temporal-Unit:T37 Value:T42
 T49	Eq-Comparison 620 624	<30%
-E31	Eq-Comparison:T49 Operator:T32 Value:T45
+E31	Eq-Comparison:T49 Operator:T32 Value:T45 Unit:T90
 T50	Eq-Comparison 715 728	>160/100 mmHg
 E32	Eq-Comparison:T50 Operator:T33 Value:T46 Value2:T102 Unit:T38
 T51	Eq-Comparison 39 45	recent
@@ -193,3 +193,5 @@ E55	Assertion:T111 Asserted:E23
 A25	Assertion-Type-Value E55 hypothetical
 T112	Or 910 911	/
 E56	Or:T112 Arg:E21 Arg2:E25
+T113	Or 57 60	and
+E57	Or:T113 Arg:E5 Arg2:E6

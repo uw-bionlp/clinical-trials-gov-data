@@ -5,7 +5,7 @@ A3	Eq-Operator-Value T5 BETWEEN
 T6	Eq-Value 43 44	1
 T7	Eq-Value 48 49	2
 T8	Eq-Comparison 43 54	1 to 2 days
-E2	Eq-Comparison:T8 Operator:T5 Value:T6 Value2:T7
+E2	Eq-Comparison:T8 Operator:T5 Value:T6 Value2:T7 Temporal-Unit:T3
 T4	Study 295 300	study
 E3	Study:T4 
 T1	Condition 440 448	Pregnant
@@ -21,11 +21,29 @@ T12	Eq-Comparison 84 92	previous
 E5	Eq-Comparison:T12 Temporal-Period:T13
 T13	Eq-Temporal-Period 84 92	previous
 A4	Eq-Temporal-Period-Value T13 past
-T14	Eq-Comparison 361 369	received
+T14	Eq-Comparison 353 369	already received
 E6	Eq-Comparison:T14 Temporal-Period:T15
-T15	Eq-Temporal-Period 361 369	received
+T15	Eq-Temporal-Period 353 369	already received
 A5	Eq-Temporal-Period-Value T15 past
 T16	Eq-Comparison 154 159	prior
 E7	Eq-Comparison:T16 Temporal-Period:T17
 T17	Eq-Temporal-Period 154 159	prior
 A6	Eq-Temporal-Period-Value T17 past
+T18	Negation 75 78	Not
+E8	Negation:T18 
+T19	Negation 145 148	Not
+E9	Negation:T19 
+T20	Eq-Comparison 236 256	more than six months
+E10	Eq-Comparison:T20 Operator:T23 Value:T24 Temporal-Unit:T25
+T21	Observation 215 219	Work
+E11	Observation:T21 Name:T22 Duration:E10
+T22	Observation-Name 215 219	Work
+A7	Observation-Type-Value T22 social-habit
+T23	Eq-Operator 236 245	more than
+A8	Eq-Operator-Value T23 GT
+T24	Eq-Value 246 249	six
+T25	Eq-Temporal-Unit 250 256	months
+A9	Eq-Temporal-Unit-Value T25 month
+T26	Procedure 370 388	ergonomic training
+E12	Procedure:T26 Name:T27 Temporality:E6
+T27	Procedure-Name 370 388	ergonomic training

@@ -29,9 +29,9 @@ T19	Eq-Value 553 555	12
 T20	Eq-Value 556 558	18
 T21	Eq-Comparison 84 94	>>18 years
 E9	Eq-Comparison:T21 Temporal-Unit:T11 Value:T16
-T23	Eq-Comparison 447 450	12-
+T23	Eq-Comparison 447 452	12-17
 E11	Eq-Comparison:T23 Operator:T14 Value:T17 Value2:T18
-T24	Eq-Comparison 553 556	12-
+T24	Eq-Comparison 553 558	12-18
 E12	Eq-Comparison:T24 Operator:T15 Value:T19
 T25	Eq-Comparison 608 615	current
 E13	Eq-Comparison:T25 Temporal-Period:T26
@@ -66,3 +66,8 @@ T38	Condition-Name 646 671	intimate partner violence
 R1	Abbrev-Of Arg1:E6 Arg2:E16	
 T39	Negation 693 701	excluded
 E17	Negation:T39 Negates:E16
+T40	Eq-Comparison 459 471	at least one
+E18	Eq-Comparison:T40 Operator:T41 Value:T42
+T41	Eq-Operator 459 467	at least
+A12	Eq-Operator-Value T41 GTEQ
+T42	Eq-Value 468 471	one

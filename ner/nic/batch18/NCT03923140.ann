@@ -34,8 +34,8 @@ A3	Eq-Temporal-Unit-Value T21 month
 T22	Eq-Value 217 218	2
 T23	Eq-Value 222 223	6
 T25	Eq-Value 870 871	6
-T26	Eq-Comparison 216 218	≥2
-E18	Eq-Comparison:T26 Operator:T19 Value:T22
+T26	Eq-Comparison 216 223	≥2 of 6
+E18	Eq-Comparison:T26 Operator:T19 Value:T22 Value2:T23
 T27	Eq-Comparison 860 878	less than 6 months
 E19	Eq-Comparison:T27 Operator:T20 Temporal-Unit:T21 Value:T25
 T28	Condition 99 121	pathogenic mutation(s)
@@ -135,3 +135,8 @@ A8	Severity-Value T75 severe
 T76	Observation 841 859	expected life time
 E43	Observation:T76 Name:T77 Eq-Comparison:E19
 T77	Observation-Name 841 859	expected life time
+T78	Assertion 237 242	signs
+E44	Assertion:T78 Asserted:E11
+A9	Assertion-Type-Value E44 possible
+T79	Or 242 243	/
+E45	Or:T79 Arg:E44 Arg2:E14

@@ -4,9 +4,6 @@ E1	Observation:T1 Name:T2 Eq-Comparison:E18
 T3	Condition 433 453	hemorrhagic syndrome
 T4	Condition-Name 433 453	hemorrhagic syndrome
 E3	Condition:T3 Name:T4
-T5	Condition 633 641	Oliguria
-T6	Condition-Name 633 641	Oliguria
-E5	Condition:T5 Name:T6
 T7	Condition 522 525	IVH
 T8	Condition-Name 522 525	IVH
 E7	Condition:T7 Name:T8 Stage:E22
@@ -61,7 +58,7 @@ E13	Eq-Comparison:T41 Operator:T11 Temporal-Unit:T20 Value:T29
 T42	Eq-Comparison 69 76	<1500 g
 E14	Eq-Comparison:T42 Operator:T12 Value:T30 Unit:T54
 T43	Eq-Comparison 86 104	less than 72 hours
-E15	Eq-Comparison:T43 Operator:T13 Value:T31
+E15	Eq-Comparison:T43 Operator:T13 Value:T31 Temporal-Unit:T55
 T44	Eq-Comparison 123 131	> 1.5 mm
 E16	Eq-Comparison:T44 Operator:T14 Value:T32 Unit:T22
 T45	Eq-Comparison 225 233	≥ 1500 g
@@ -149,7 +146,7 @@ A23	Assertion-Type-Value E40 possible
 T51	Observation-Name 25 40	Gestational age
 A24	Observation-Type-Value T51 measurement
 T96	Observation 633 641	Oliguria
-E2	Observation:T96 Eq-Comparison:E21
+E2	Observation:T96 Eq-Comparison:E21 Name:T5
 A25	Observation-Type-Value T89 lab
 T78	Eq-Unit 526 531	grade
 T72	Eq-Unit 232 233	g
@@ -167,3 +164,5 @@ E41	Assertion:T97 Asserted:E39
 A26	Assertion-Type-Value E41 possible
 T98	Or 695 696	/
 E42	Or:T98 Arg:E40 Arg2:E41
+T5	Observation-Name 633 641	Oliguria
+A27	Observation-Type-Value T5 measurement
