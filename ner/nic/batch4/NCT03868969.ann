@@ -204,13 +204,11 @@ T128	Condition-Name 330 339	confusion
 T31	Condition-Name 396 407	bacteriuria
 T87	And 345 348	And
 E9	And:T87 Arg:E3 Arg2:E30
-T130	Observation-Name 371 383	leukocyturia
+T130	Condition-Name 371 383	leukocyturia
 T34	Eq-Comparison 408 421	> 10^3 CFU/mL
 E34	Eq-Comparison:T34 Operator:T91 Value:T92 Unit:T95 Per:T96
-T93	Observation 371 383	leukocyturia
-E72	Observation:T93 Eq-Comparison:E32 Name:T130
-T94	Observation 396 407	bacteriuria
-E73	Observation:T94 Eq-Comparison:E34
+T93	Condition 371 383	leukocyturia
+E72	Condition:T93 Name:T130
 R5	Found-By Arg1:E33 Arg2:E30	
 T131	Modifier 427 441	ESBL producing
 E74	Modifier:T131 Modifies:T97
@@ -241,6 +239,5 @@ T142	Or 979 980	-
 E79	Or:T142 Arg:E78 Arg2:E66
 R14	Using Arg1:E70 Arg2:E71	
 R4	Found-By Arg1:E72 Arg2:E30	
-A7	Observation-Type-Value T130 lab
 T7	Modifier 816 823	Chronic
 E7	Modifier:T7 Modifies:T112

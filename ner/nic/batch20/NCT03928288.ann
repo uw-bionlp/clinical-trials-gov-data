@@ -87,13 +87,11 @@ T47	Procedure-Name 294 328	levonorgestrel intrauterine device
 R5	Example-Of Arg1:E21 Arg2:E17	
 T48	Or 291 293	or
 E22	Or:T48 Arg:E20 Arg2:E21
-T49	Condition 349 353	pain
-E23	Condition:T49 Name:T50 Temporality:E2 Duration:E27
-T50	Condition-Name 349 353	pain
+T49	Observation 349 353	pain
+E23	Observation:T49 Name:T50 Temporality:E2 Duration:E27 Eq-Comparison:E26
+T50	Observation-Name 349 353	pain
 T51	Modifier 342 348	pelvic
 E24	Modifier:T51 Modifies:T50
-T52	Observation 349 353	pain
-E25	Observation:T52 Eq-Comparison:E26
 T53	Eq-Comparison 361 364	≥ 3
 E26	Eq-Comparison:T53 Operator:T54 Value:T55
 T54	Eq-Operator 361 362	≥

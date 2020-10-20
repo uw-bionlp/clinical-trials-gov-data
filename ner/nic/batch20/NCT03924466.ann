@@ -3,7 +3,7 @@ T2	Condition-Name 630 656	gastrointestinal disorders
 E1	Condition:T1 Name:T2 Temporality:E35
 T3	Condition 579 593	breast feeding
 T4	Condition-Name 579 593	breast feeding
-E3	Condition:T3 Name:T4
+E3	Condition:T3 Name:T4 Temporality:E23
 T5	Condition 807 818	dysfunction
 T6	Condition-Name 807 818	dysfunction
 E5	Condition:T5 Name:T6
@@ -54,28 +54,24 @@ T35	Eq-Comparison 263 273	at least 1
 E18	Eq-Comparison:T35 Operator:T36 Value:T16
 T36	Eq-Operator 263 271	at least
 A5	Eq-Operator-Value T36 GTEQ
-T37	Condition 274 280	lesion
-E19	Condition:T37 Name:T38 Minimum-Count:E18
-T38	Condition-Name 274 280	lesion
+T38	Observation-Name 274 280	lesion
 T39	Observation 274 280	lesion
-E20	Observation:T39 Eq-Comparison:E22
+E20	Observation:T39 Eq-Comparison:E22 Name:T38 Minimum-Count:E18
 T40	And 258 262	with
-E21	And:T40 Arg:E14 Arg2:E19
+E21	And:T40 Arg:E14 Arg2:E20
 T41	Eq-Comparison 284 298	at least 12 mm
 E22	Eq-Comparison:T41 Operator:T42 Value:T17 Unit:T11
 T42	Eq-Operator 284 292	at least
 A6	Eq-Operator-Value T42 GTEQ
-T43	Condition 332 342	metastases
-E23	Condition:T43 Name:T44
-T44	Condition-Name 332 342	metastases
+T44	Observation-Name 332 342	metastases
 T45	Modifier 299 315	maximal diameter
-E24	Modifier:T45 Modifies:E20
+E24	Modifier:T45 Modifies:T38
 T46	Modifier 321 331	lymph node
 E25	Modifier:T46 Modifies:T44
 T47	Eq-Comparison 375 389	at least 15 mm
 E26	Eq-Comparison:T47 Operator:T49 Value:T18 Unit:T12
 T48	Observation 332 342	metastases
-E27	Observation:T48 Eq-Comparison:E26
+E27	Observation:T48 Eq-Comparison:E26 Name:T44
 T49	Eq-Operator 375 383	at least
 A7	Eq-Operator-Value T49 GTEQ
 T50	Modifier 348 364	largest diameter
@@ -94,7 +90,7 @@ E32	Study:T56
 T57	Negation 459 462	not
 E33	Negation:T57 Negates:E32
 T58	Condition 554 562	pregnant
-E34	Condition:T58 Name:T59
+E34	Condition:T58 Name:T59 Temporality:E19
 T59	Condition-Name 554 562	pregnant
 T60	Eq-Comparison 612 618	recent
 E35	Eq-Comparison:T60 Temporal-Period:T61
@@ -158,3 +154,15 @@ T25	Eq-Temporal-Period 1225 1237	pre-existing
 A16	Eq-Temporal-Period-Value T25 past
 T87	Polarity 1194 1203	increased
 A17	Polarity-Value T87 high
+T88	Criteria-Count 84 106	the following criteria
+E11	Criteria-Count:T88 Criteria:E8 Criteria2:E14 Criteria3:E20 Criteria4:E27 Criteria5:E27 Criteria6:E29
+A18	Observation-Type-Value T38 measurement
+A19	Observation-Type-Value T44 measurement
+T37	Eq-Comparison 551 553	is
+E19	Eq-Comparison:T37 Temporal-Period:T43
+T43	Eq-Temporal-Period 551 553	is
+A20	Eq-Temporal-Period-Value T43 present
+T89	Eq-Comparison 576 578	is
+E23	Eq-Comparison:T89 Temporal-Period:T90
+T90	Eq-Temporal-Period 576 578	is
+A21	Eq-Temporal-Period-Value T90 present

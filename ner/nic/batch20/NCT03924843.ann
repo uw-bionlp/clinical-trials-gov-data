@@ -1,8 +1,8 @@
-T2	Condition 184 210	chronic airway obstruction
-T3	Condition-Name 184 210	chronic airway obstruction
+T2	Condition 192 210	airway obstruction
+T3	Condition-Name 192 210	airway obstruction
 E2	Condition:T2 Name:T3
-T4	Condition 218 236	chronic bronchitis
-T5	Condition-Name 218 236	chronic bronchitis
+T4	Condition 226 236	bronchitis
+T5	Condition-Name 226 236	bronchitis
 E4	Condition:T4 Name:T5
 T6	Condition 383 400	COPD exacerbation
 T7	Condition-Name 383 400	COPD exacerbation
@@ -182,11 +182,9 @@ E49	Temporal-Connection:T108 Arg:E48 Arg2:E47
 A28	Temporal-Connection-Type-Value E49 after
 T109	And 574 577	and
 E50	And:T109 Arg:E46 Arg2:E47
-T110	Condition 621 628	smoking
-E51	Condition:T110 Name:T111 Temporality:E44
-T111	Condition-Name 621 628	smoking
+T111	Observation-Name 621 628	smoking
 T112	Observation 621 628	smoking
-E52	Observation:T112 Eq-Comparison:E42
+E52	Observation:T112 Name:T111 Temporality:E44 Duration:E42
 T113	Procedure 707 712	X-ray
 E53	Procedure:T113 Name:T114
 T114	Procedure-Name 707 712	X-ray
@@ -316,3 +314,10 @@ T169	Eq-Comparison 1561 1569	Existing
 E93	Eq-Comparison:T169 Temporal-Period:T170
 T170	Eq-Temporal-Period 1561 1569	Existing
 A41	Eq-Temporal-Period-Value T170 present
+T171	Modifier 184 191	chronic
+E94	Modifier:T171 Modifies:T3
+T172	Modifier 218 225	chronic
+E95	Modifier:T172 Modifies:T5
+T173	Or 1459 1461	or
+E96	Or:T173 Arg:E89 Arg2:E88
+A42	Observation-Type-Value T111 social-habit

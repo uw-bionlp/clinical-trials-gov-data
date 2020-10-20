@@ -13,9 +13,7 @@ E7	Condition:T7 Name:T32
 T8	Condition 150 161	astigmatism
 E8	Condition:T8 Name:T33
 T10	Or 162 170	and / or
-E10	Or:T10 Arg:E8 Arg2:E12
-T12	Condition 171 184	anisometropia
-E12	Condition:T12 Name:T34
+E10	Or:T10 Arg:E8 Arg2:E9
 T13	Eq-Comparison 185 191	>1.5 D
 E13	Eq-Comparison:T13 Operator:T35 Value:T36 Temporal-Unit:T37
 T14	Condition 193 204	prematurity
@@ -49,7 +47,7 @@ T29	Eq-Value 64 67	-10
 T31	Condition-Name 117 136	organic eye disease
 T32	Condition-Name 138 148	strabismus
 T33	Condition-Name 150 161	astigmatism
-T34	Condition-Name 171 184	anisometropia
+T34	Observation-Name 171 184	anisometropia
 T35	Eq-Operator 185 186	>
 A7	Eq-Operator-Value T35 GT
 T36	Eq-Value 186 189	1.5
@@ -66,9 +64,10 @@ R1	Abbrev-Of Arg1:T43 Arg2:T42
 T44	Observation 81 87	myopia
 E22	Observation:T44 Eq-Comparison:E4 Name:T5
 T9	Observation 171 184	anisometropia
-E9	Observation:T9 Eq-Comparison:E13
+E9	Observation:T9 Eq-Comparison:E13 Name:T34
 T11	Eq-Comparison 206 209	use
 E11	Eq-Comparison:T11 Temporal-Period:T39
 T40	Procedure-Name 232 246	contact lenses
 T5	Observation-Name 81 87	myopia
 A5	Observation-Type-Value T5 measurement
+A10	Observation-Type-Value T34 measurement

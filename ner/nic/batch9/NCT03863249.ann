@@ -5,9 +5,7 @@ E2	Negation:T2 Negates:E3
 T3	Condition 58 65	smokers
 E3	Condition:T3 Name:T47
 T4	Or 66 68	or
-E4	Or:T4 Arg:E3 Arg2:E5
-T5	Condition 69 76	smokers
-E5	Condition:T5 Name:T48
+E4	Or:T4 Arg:E3 Arg2:E44
 T6	Eq-Comparison 80 109	less than 10 cigarettes a day
 E6	Eq-Comparison:T6 Operator:T49 Value:T50 Unit:T51 Per:T52
 T7	Condition 130 143	periodontitis
@@ -30,8 +28,7 @@ T15	Observation 300 313	probing depth
 E15	Observation:T15 Name:T102 Eq-Comparison:E14 Minimum-Count:E13
 T16	Condition 325 339	general health
 E16	Condition:T16 Name:T104 Polarity:T103
-T17	Condition 365 372	Smokers
-E17	Observation:T105 Eq-Comparison:E18
+E17	Observation:T105 Eq-Comparison:E18 Name:T106
 T18	Eq-Comparison 376 405	more than 10 cigarettes a day
 E18	Eq-Comparison:T18 Operator:T69 Value:T70 Unit:T71 Per:T72
 T19	Eq-Comparison 430 438	received
@@ -89,7 +86,7 @@ T45	Eq-Value 40 42	70
 T46	Eq-Temporal-Unit 43 48	years
 A4	Eq-Temporal-Unit-Value T46 year
 T47	Condition-Name 58 65	smokers
-T48	Condition-Name 69 76	smokers
+T48	Observation-Name 69 76	smokers
 T49	Eq-Operator 80 89	less than
 A5	Eq-Operator-Value T49 LT
 T50	Eq-Value 90 92	10
@@ -154,7 +151,7 @@ T93	Condition-Name 861 870	Diabetics
 T94	Age 43 48	years
 E43	Age:T94 Eq-Comparison:E1
 T95	Observation 69 76	smokers
-E44	Observation:T95 Eq-Comparison:E6
+E44	Observation:T95 Eq-Comparison:E6 Name:T48
 T96	Eq-Comparison 162 172	grades A-B
 E45	Eq-Comparison:T96 Unit:T57 Operator:T99 Value:T97 Value2:T98
 T97	Eq-Value 169 170	A
@@ -170,11 +167,12 @@ A22	Observation-Type-Value T102 measurement
 T103	Polarity 320 324	Good
 A23	Polarity-Value T103 normal
 T104	Condition-Name 325 339	general health
-E48	Condition:T17 Name:T106
 T105	Observation 365 372	Smokers
-T106	Condition-Name 365 372	Smokers
+T106	Observation-Name 365 372	Smokers
 T107	Eq-Temporal-Period 511 515	used
 A24	Eq-Temporal-Period-Value T107 past
 R1	Treatment-For Arg1:E32 Arg2:E31	
 R2	If-Then Arg1:T87 Arg2:E33	
 R3	Caused-By Arg1:T90 Arg2:E36	
+A25	Observation-Type-Value T48 social-habit
+A26	Observation-Type-Value T106 social-habit

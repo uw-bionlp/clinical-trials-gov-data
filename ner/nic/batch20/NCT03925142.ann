@@ -222,13 +222,11 @@ E47	Condition:T138 Name:T139
 T139	Condition-Name 399 406	smoking
 T140	Negation 395 398	Non
 E48	Negation:T140 Negates:E47
-T141	Condition 416 424	drinking
-E49	Condition:T141 Name:T142
-T142	Condition-Name 416 424	drinking
+T142	Observation-Name 416 424	drinking
 T143	Observation 416 424	drinking
-E50	Observation:T143 Eq-Comparison:E52
+E50	Observation:T143 Eq-Comparison:E52 Name:T142
 T144	Negation 412 415	Not
-E51	Negation:T144 Negates:E49
+E51	Negation:T144 Negates:E50
 T145	Eq-Comparison 425 461	more than 2 alcoholic drinks per day
 E52	Eq-Comparison:T145 Operator:T146 Value:T63 Unit:T147 Per:T148
 T146	Eq-Operator 425 434	more than
@@ -341,11 +339,9 @@ T199	Drug 1092 1103	medications
 E43	Drug:T199 Temporality:E38
 T200	And 1082 1085	and
 E80	And:T200 Arg:E15 Arg2:E43
-T201	Condition 1122 1130	Drinking
-E81	Condition:T201 Name:T202
-T202	Condition-Name 1122 1130	Drinking
+T202	Observation-Name 1122 1130	Drinking
 T203	Observation 1122 1130	Drinking
-E82	Observation:T203 Eq-Comparison:E83
+E82	Observation:T203 Eq-Comparison:E83 Name:T202
 T204	Eq-Comparison 1131 1167	more than 2 alcoholic drinks per day
 E83	Eq-Comparison:T204 Operator:T205 Value:T75 Unit:T206 Per:T207
 T205	Eq-Operator 1131 1140	more than
@@ -376,3 +372,5 @@ T217	Condition-Name 1352 1361	lactating
 T218	Condition-Name 1340 1348	Pregnant
 T219	Or 1349 1351	or
 E91	Or:T219 Arg:E89 Arg2:E90
+A65	Observation-Type-Value T142 social-habit
+A66	Observation-Type-Value T202 social-habit
