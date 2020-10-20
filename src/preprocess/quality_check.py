@@ -28,6 +28,13 @@ def diabetes(annotations):
         for rec in matched:
             print('diabetes type!')
 
+def unstable(annotations):
+    ''' Check that is not a modifier '''
+    for ann in annotations:
+        matched  = [ v for _,v in ann.Ts.items() if v.type == 'Modifier' and 'unstable' in v.span.lower() ]
+        for rec in matched:
+            print('unstable should not be a modifier!')
+
 def female_male(annotations):
     ''' Check that female and male have correct labels '''
     for ann in annotations:
@@ -51,6 +58,8 @@ def pos_neg(annotations):
                     print('Positive but not annotated correctly!')
                 if ('negative' == rec.span.lower() or '-' == rec.span.lower()) and a.val != 'negative':
                     print('Negative but not annotated correctly!')
+                if '(' in rec.span or ')' in rec.span:
+                    print('Parens in Pos/Neg!')
 
 def eq_value_unit(annotations):
     ''' Check that Eq-Value and Eq-Units are inside Eq-Comparisons '''
@@ -118,7 +127,7 @@ def acute(annotations):
     return annotations
 
 def asa_nyha_ecog(annotations):
-    ''' Convert ASA & NYHA Condition -> Observation[clinical-score] '''
+    ''' Convert ASA & NYHA & ECOG Condition -> Observation[clinical-score] '''
     for ann in annotations:
         asa  = [ v for _,v in ann.Ts.items() if (v.span == 'ASA' or re.match(regex_asa, v.span, re.IGNORECASE)) and v.type in [ 'Condition', 'Condition-Name'] ]
         nyha = [ v for _,v in ann.Ts.items() if re.match(regex_nyha, v.span, re.IGNORECASE) and v.type in [ 'Condition', 'Condition-Name'] ]
@@ -142,7 +151,6 @@ def asa_nyha_ecog(annotations):
                         eq.type = 'Eq-Comparison'
                     ann.Es[e.id] = e
                 ann.Ts[rec.id] = rec
-                # TODO: change from Stage -> Eq-Comparison
     return annotations
 
 
@@ -156,7 +164,7 @@ def main():
 
     # Convert
     # TODO: anatomy, Condition/Observations, Histology, Unstable (as modifier)
-    for converter in [ pos_neg ]:
+    for converter in [ unstable ]:
         annotations = converter(annotations)
     
 
