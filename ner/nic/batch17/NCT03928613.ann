@@ -1,93 +1,93 @@
+E1	Condition:T1 Name:T2 Severity:T25
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E14	Age:T15 Eq-Comparison:E2
+E2	Eq-Comparison:T21 Operator:T22 Value:T16
+E4	Condition:T23 Name:T24
+E3	Observation:T3 Name:T4
+E6	Observation:T26 Name:T27 Eq-Comparison:E8
+E8	Eq-Comparison:T28 Value:T17 Value2:T18
+E10	And:T29 Arg:E1 Arg2:E3
+E12	Condition:T30 Name:T31
+E15	Condition:T19 Name:T20
+E16	Modifier:T32 Modifies:T20
+E17	Condition:T33 Name:T34
+E18	Modifier:T35 Modifies:T34
+E19	Condition:T36 Name:T37 Severity:T38
+E20	Condition:T39 Name:T40
+E21	Assertion:T41 Asserted:E20
+E22	Condition:T42 Name:T43 Stability:T44
+E23	Assertion:T45 Asserted:T44
+E24	Condition:T46 Name:T47
+E25	Study:T48
+E26	Negation:T49 Negates:E25
+E27	Assertion:T50 Asserted:E26
 T1	Condition 85 105	cognitive impairment
 T2	Condition-Name 85 105	cognitive impairment
-E1	Condition:T1 Name:T2 Severity:T25
 T5	Condition 389 418	normal pressure hydrocephalus
 T6	Condition-Name 389 418	normal pressure hydrocephalus
-E5	Condition:T5 Name:T6
 T7	Condition 337 356	Parkinson's disease
 T8	Condition-Name 337 356	Parkinson's disease
-E7	Condition:T7 Name:T8
 T9	Condition 311 328	cognitive decline
 T10	Condition-Name 311 328	cognitive decline
-E9	Condition:T9 Name:T10
 T11	Condition 260 269	confusion
 T12	Condition-Name 260 269	confusion
-E11	Condition:T11 Name:T12
 T13	Condition 250 258	delirium
 T14	Condition-Name 250 258	delirium
-E13	Condition:T13 Name:T14
 T15	Age 25 29	Aged
-E14	Age:T15 Eq-Comparison:E2
 T16	Eq-Value 36 38	60
 T17	Eq-Value 203 204	0
 T18	Eq-Value 208 211	0.5
 T21	Eq-Comparison 30 38	above 60
-E2	Eq-Comparison:T21 Operator:T22 Value:T16
 T22	Eq-Operator 30 35	above
-A2	Eq-Operator-Value T22 GT
 T23	Condition 54 62	literacy
-E4	Condition:T23 Name:T24
 T24	Condition-Name 54 62	literacy
 T25	Severity 80 84	mild
-A3	Severity-Value T25 mild
 T3	Observation 170 194	Clinical Dementia Rating
-E3	Observation:T3 Name:T4
 T4	Observation-Name 170 194	Clinical Dementia Rating
-A4	Observation-Type-Value T4 clinical-score
 T26	Observation 195 198	CDR
-E6	Observation:T26 Name:T27 Eq-Comparison:E8
 T27	Observation-Name 195 198	CDR
-R1	Abbrev-Of Arg1:E6 Arg2:E3	
 T28	Eq-Comparison 203 211	0 or 0.5
-E8	Eq-Comparison:T28 Value:T17 Value2:T18
 T29	And 166 169	and
-E10	And:T29 Arg:E1 Arg2:E3
 T30	Condition 279 302	neurological conditions
-E12	Condition:T30 Name:T31
 T31	Condition-Name 279 302	neurological conditions
-R2	Caused-By Arg1:E9 Arg2:E12	
-R3	Example-Of Arg1:E7 Arg2:E12	
 T19	Condition 364 374	hemorrhage
-E15	Condition:T19 Name:T20
 T20	Condition-Name 364 374	hemorrhage
 T32	Modifier 358 363	brain
-E16	Modifier:T32 Modifies:T20
-R4	Example-Of Arg1:E15 Arg2:E12	
 T33	Condition 382 387	tumor
-E17	Condition:T33 Name:T34
 T34	Condition-Name 382 387	tumor
 T35	Modifier 376 381	brain
-E18	Modifier:T35 Modifies:T34
-R5	Example-Of Arg1:E17 Arg2:E12	
-R6	Example-Of Arg1:E5 Arg2:E12	
 T36	Condition 443 468	cerebrovascular pathology
-E19	Condition:T36 Name:T37 Severity:T38
 T37	Condition-Name 443 468	cerebrovascular pathology
 T38	Severity 436 442	severe
-A1	Severity-Value T38 severe
 T39	Condition 486 496	depressive
-E20	Condition:T39 Name:T40
 T40	Condition-Name 486 496	depressive
 T41	Assertion 497 505	symptoms
-E21	Assertion:T41 Asserted:E20
-A5	Assertion-Type-Value E21 possible
 T42	Condition 527 545	cognitive function
-E22	Condition:T42 Name:T43 Stability:T44
 T43	Condition-Name 527 545	cognitive function
 T44	Stability 517 526	influence
-A6	Stability-Value T44 change
 T45	Assertion 511 516	could
-E23	Assertion:T45 Asserted:T44
-A7	Assertion-Type-Value E23 hypothetical
-R7	Caused-By Arg1:T44 Arg2:E20	
 T46	Condition 563 584	medical comorbidities
-E24	Condition:T46 Name:T47
 T47	Condition-Name 563 584	medical comorbidities
 T48	Study 626 631	study
-E25	Study:T48 
 T49	Negation 610 622	difficulties
-E26	Negation:T49 Negates:E25
 T50	Assertion 590 595	could
-E27	Assertion:T50 Asserted:E26
+A2	Eq-Operator-Value T22 GT
+A3	Severity-Value T25 mild
+A4	Observation-Type-Value T4 clinical-score
+A1	Severity-Value T38 severe
+A5	Assertion-Type-Value E21 possible
+A6	Stability-Value T44 change
+A7	Assertion-Type-Value E23 hypothetical
 A8	Assertion-Type-Value E27 hypothetical
-R8	Caused-By Arg1:E26 Arg2:E24	
+R1	Abbrev-Of Arg1:E6 Arg2:E3
+R2	Caused-By Arg1:E9 Arg2:E12
+R3	Example-Of Arg1:E7 Arg2:E12
+R4	Example-Of Arg1:E15 Arg2:E12
+R5	Example-Of Arg1:E17 Arg2:E12
+R6	Example-Of Arg1:E5 Arg2:E12
+R7	Caused-By Arg1:T44 Arg2:E20
+R8	Caused-By Arg1:E26 Arg2:E24

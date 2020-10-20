@@ -1,12 +1,12 @@
-T1	Age 51 55	aged
 E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T5 Operator:T2 Value:T3 Value2:T4
+T1	Age 51 55	aged
 T2	Eq-Operator 58 59	-
-A1	Eq-Operator-Value T2 BETWEEN
 T3	Eq-Value 56 58	18
 T4	Eq-Value 59 61	21
 T5	Eq-Comparison 56 61	18-21
-E2	Eq-Comparison:T5 Operator:T2 Value:T3 Value2:T4
 T6	Location 69 92	University of Minnesota
-A2	Location-Value T6 residence
 T7	Life-Stage-And-Gender 34 50	college students
+A1	Eq-Operator-Value T2 BETWEEN
+A2	Location-Value T6 residence
 A3	Life-Stage-And-Gender-Type T7 adult

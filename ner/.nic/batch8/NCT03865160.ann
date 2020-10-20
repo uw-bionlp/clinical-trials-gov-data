@@ -1,0 +1,73 @@
+T1	Age 34 38	aged
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 39 51	6 - 11 years
+E2	Eq-Comparison:T2 Value:T23 Operator:T24 Value:T25 Temporal-Unit:T26
+T3	And 52 56	with
+E3	And:T3 Arg:E1 Arg2:E22
+T4	Eq-Comparison 57 80	-1- to -10 diopters (D)
+E4	Eq-Comparison:T4 Operator:T28 Value:T29 Value2:T27 Unit:T42 Unit2:T43
+T6	Condition 117 136	organic eye disease
+E6	Condition:T6 Name:T31
+T7	Condition 138 148	strabismus
+E7	Condition:T7 Name:T32
+T8	Condition 150 161	astigmatism
+E8	Condition:T8 Name:T33
+T10	Or 162 170	and / or
+E10	Or:T10 Arg:E8 Arg2:E9
+T13	Eq-Comparison 185 191	>1.5 D
+E13	Eq-Comparison:T13 Operator:T35 Value:T36 Temporal-Unit:T37
+T14	Condition 193 204	prematurity
+E14	Condition:T14 Name:T38
+T15	Modifier 213 218	mono-
+E15	Modifier:T15 Modifies:T40
+T16	Or 219 220	/
+E16	Or:T16 Arg:E15 Arg2:E17
+T17	Modifier 221 231	multifocal
+E17	Modifier:T17 Modifies:T40
+T18	Procedure 232 246	contact lenses
+E18	Procedure:T18 Name:T40 Temporality:E11
+T19	Temporal-Connection 248 251	pre
+E19	Temporal-Connection:T19 Arg:E20 Arg2:E21
+A1	Temporal-Connection-Type-Value E19 before
+T20	Procedure 252 261	treatment
+E20	Procedure:T20 
+T21	Drug 267 275	atropine
+E21	Drug:T21 Name:T41
+T22	Life-Stage-And-Gender 25 33	Children
+A2	Life-Stage-And-Gender-Type T22 child
+T23	Eq-Value 39 40	6
+T24	Eq-Operator 41 42	-
+A3	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 43 45	11
+T26	Eq-Temporal-Unit 46 51	years
+A4	Eq-Temporal-Unit-Value T26 year
+T28	Eq-Operator 61 63	to
+A6	Eq-Operator-Value T28 BETWEEN
+T29	Eq-Value 64 67	-10
+T31	Condition-Name 117 136	organic eye disease
+T32	Condition-Name 138 148	strabismus
+T33	Condition-Name 150 161	astigmatism
+T34	Observation-Name 171 184	anisometropia
+T35	Eq-Operator 185 186	>
+A7	Eq-Operator-Value T35 GT
+T36	Eq-Value 186 189	1.5
+T37	Eq-Temporal-Unit 190 191	D
+A8	Eq-Temporal-Unit-Value T37 day
+T38	Condition-Name 193 204	prematurity
+T39	Eq-Temporal-Period 206 209	use
+A9	Eq-Temporal-Period-Value T39 present
+T41	Drug-Name 267 275	atropine
+T27	Eq-Value 57 59	-1
+T42	Eq-Unit 68 76	diopters
+T43	Eq-Unit 78 79	D
+R1	Abbrev-Of Arg1:T43 Arg2:T42	
+T44	Observation 81 87	myopia
+E22	Observation:T44 Eq-Comparison:E4 Name:T5
+T9	Observation 171 184	anisometropia
+E9	Observation:T9 Eq-Comparison:E13 Name:T34
+T11	Eq-Comparison 206 209	use
+E11	Eq-Comparison:T11 Temporal-Period:T39
+T40	Procedure-Name 232 246	contact lenses
+T5	Observation-Name 81 87	myopia
+A5	Observation-Type-Value T5 measurement
+A10	Observation-Type-Value T34 measurement

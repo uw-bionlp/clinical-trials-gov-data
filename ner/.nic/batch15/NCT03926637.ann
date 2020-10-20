@@ -1,0 +1,35 @@
+T1	Condition 283 311	Clinically Isolated Syndrome
+T2	Condition-Name 283 311	Clinically Isolated Syndrome
+E1	Condition:T1 Name:T2
+T5	Condition 399 414	Visual function
+T6	Condition-Name 399 414	Visual function
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 657 669	younger than
+A1	Eq-Operator-Value T7 LT
+T8	Eq-Temporal-Unit 673 678	years
+A2	Eq-Temporal-Unit-Value T8 year
+T9	Eq-Value 670 672	18
+T10	Eq-Comparison 657 678	younger than 18 years
+E6	Eq-Comparison:T10 Operator:T7 Temporal-Unit:T8 Value:T9
+T11	Condition 269 271	MS
+E2	Condition:T11 Name:T12
+T12	Condition-Name 269 271	MS
+R1	Example-Of Arg1:E1 Arg2:E2	
+T3	Observation 518 553	Multiple Sclerosis Performance Test
+E3	Observation:T3 Name:T4 Stability:T16
+T4	Observation-Name 518 553	Multiple Sclerosis Performance Test
+A3	Observation-Type-Value T4 clinical-score
+T13	Observation 555 559	MSPT
+E4	Observation:T13 Name:T14
+T14	Observation-Name 555 559	MSPT
+R2	Abbrev-Of Arg1:E4 Arg2:E3	
+T15	Negation 473 476	not
+E7	Negation:T15 Negates:T16
+T16	Stability 477 485	preclude
+A4	Stability-Value T16 change
+T17	Assertion 489 499	ability to
+E8	Assertion:T17 Asserted:E3
+A5	Assertion-Type-Value E8 hypothetical
+R3	Caused-By Arg1:E7 Arg2:E5	
+T18	Age 682 685	age
+E9	Age:T18 Eq-Comparison:E6

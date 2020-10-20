@@ -1,0 +1,139 @@
+T4	Condition 664 669	abuse
+T5	Condition-Name 664 669	abuse
+E4	Condition:T4 Name:T5
+T6	Condition 576 585	pregnancy
+T7	Condition-Name 576 585	pregnancy
+E6	Condition:T6 Name:T7
+T8	Condition 589 598	lactation
+T9	Condition-Name 589 598	lactation
+E8	Condition:T8 Name:T9
+T12	Observation 785 789	yoga
+T13	Observation-Name 785 789	yoga
+E12	Observation:T12 Name:T13 Temporality:E33
+T14	Eq-Temporal-Unit 184 189	years
+A1	Eq-Temporal-Unit-Value T14 year
+T15	Eq-Temporal-Unit 365 371	months
+A2	Eq-Temporal-Unit-Value T15 month
+T16	Eq-Temporal-Unit 632 638	months
+A3	Eq-Temporal-Unit-Value T16 month
+T17	Eq-Temporal-Unit 816 822	months
+A4	Eq-Temporal-Unit-Value T17 month
+T18	Age 173 177	Aged
+E13	Age:T18 Eq-Comparison:E14
+T19	Eq-Operator 180 181	-
+A5	Eq-Operator-Value T19 BETWEEN
+T21	Eq-Value 178 180	18
+T22	Eq-Value 181 183	55
+T23	Eq-Value 363 364	3
+T24	Eq-Value 630 631	6
+T25	Eq-Comparison 178 189	18-55 years
+E14	Eq-Comparison:T25 Operator:T19 Value:T21 Temporal-Unit:T14 Value2:T22
+T3	Condition 60 64	CTTH
+E2	Condition:T3 Name:T26
+T26	Condition-Name 60 64	CTTH
+T29	Condition 334 342	headache
+E5	Condition:T29 Name:T30
+T30	Condition-Name 334 342	headache
+T33	Eq-Comparison 354 371	pervious 3 months
+E9	Eq-Comparison:T33 Temporal-Period:T34 Temporal-Unit:T15 Value:T23
+T34	Eq-Temporal-Period 354 362	pervious
+A7	Eq-Temporal-Period-Value T34 past
+T35	Temporal-Connection 343 349	during
+E11	Temporal-Connection:T35 Arg:E5 Arg2:E9
+A8	Temporal-Connection-Type-Value E11 during
+T36	Drug 389 412	prophylactic medication
+E15	Drug:T36 Name:T37
+T37	Drug-Name 389 412	prophylactic medication
+T38	Eq-Comparison 424 442	previous one month
+E16	Eq-Comparison:T38 Temporal-Period:T41 Temporal-Unit:T40 Value:T39
+T39	Eq-Value 433 436	one
+T40	Eq-Temporal-Unit 437 442	month
+A9	Eq-Temporal-Unit-Value T40 month
+T41	Eq-Temporal-Period 424 432	previous
+A10	Eq-Temporal-Period-Value T41 past
+T42	Temporal-Connection 413 419	during
+E17	Temporal-Connection:T42 Arg:E15 Arg2:E16
+A11	Temporal-Connection-Type-Value E17 during
+T43	Negation 331 333	No
+E18	Negation:T43 Negates:E5
+T44	Condition 459 467	headache
+E19	Condition:T44 Name:T45
+T45	Condition-Name 459 467	headache
+T46	Modifier 449 458	Secondary
+E20	Modifier:T46 Modifies:E19
+T47	Condition 512 522	conditions
+E21	Condition:T47 Name:T48 Severity:T49
+T48	Condition-Name 512 522	conditions
+T49	Severity 504 511	serious
+A12	Severity-Value T49 severe
+T50	Modifier 544 550	kidney
+E22	Modifier:T50 Modifies:T48
+T52	Modifier 560 566	organs
+E23	Modifier:T52 Modifies:T48
+T54	Or 551 553	or
+E24	Or:T54 Arg:E22 Arg2:E23
+T55	Or 586 588	or
+E25	Or:T55 Arg:E6 Arg2:E8
+T56	Condition 618 626	pregnant
+E26	Condition:T56 Name:T57 Temporality:E28
+T57	Condition-Name 618 626	pregnant
+T58	Assertion 603 611	planning
+E27	Assertion:T58 Asserted:E26
+A13	Assertion-Type-Value E27 intention
+T59	Eq-Comparison 630 638	6 months
+E28	Eq-Comparison:T59 Temporal-Unit:T16 Value:T24
+T61	Modifier 645 649	Drug
+E29	Modifier:T61 Modifies:T5
+T63	Condition 685 706	psychiatric condition
+E30	Condition:T63 Name:T64
+T64	Condition-Name 685 706	psychiatric condition
+T65	Drug 759 768	medicines
+E31	Drug:T65 Temporality:E43
+T67	Modifier 729 742	complementary
+E32	Modifier:T67 Modifies:E31
+T68	Eq-Comparison 805 822	last three months
+E33	Eq-Comparison:T68 Temporal-Unit:T17 Value:T70 Temporal-Period:T69
+T69	Eq-Temporal-Period 805 809	last
+A15	Eq-Temporal-Period-Value T69 past
+T70	Eq-Value 810 815	three
+T1	Observation 251 265	headache dairy
+E1	Observation:T1 Name:T2
+T2	Observation-Name 251 265	headache dairy
+T20	Assertion 236 246	completing
+E7	Assertion:T20 Asserted:E1
+A6	Assertion-Type-Value E7 hypothetical
+T27	Assertion 218 231	understanding
+E3	Assertion:T27 Asserted:E1
+A17	Assertion-Type-Value E3 hypothetical
+T28	And 232 235	and
+E34	And:T28 Arg:E3 Arg2:E7
+T31	Condition 486 491	cause
+E35	Condition:T31 
+T32	Modifier 475 485	systematic
+E36	Modifier:T32 Modifies:E35
+T72	Or 468 470	or
+E37	Or:T72 Arg:E19 Arg2:E35
+R1	Caused-By Arg1:E19 Arg2:E35	
+T73	Modifier 530 535	heart
+E38	Modifier:T73 Modifies:T48
+T10	Modifier 537 542	liver
+E10	Modifier:T10 Modifies:T48
+T11	Other 554 559	other
+E39	Other:T11 Is-Other:E23
+T51	Or 600 602	or
+E40	Or:T51 Arg:E8 Arg2:E27
+T53	Modifier 654 663	Substance
+E41	Modifier:T53 Modifies:T5
+T62	Or 650 653	and
+E42	Or:T62 Arg:E29 Arg2:E41
+T74	Eq-Comparison 712 718	Taking
+E43	Eq-Comparison:T74 Temporal-Period:T75
+T75	Eq-Temporal-Period 712 718	Taking
+A18	Eq-Temporal-Period-Value T75 present
+T76	Other 723 728	other
+E44	Other:T76 Is-Other:E31
+T66	Modifier 747 758	alternative
+E45	Modifier:T66 
+T77	Or 743 746	and
+E46	Or:T77 Arg:E32 Arg2:E45
+A19	Observation-Type-Value T13 social-habit

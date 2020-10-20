@@ -1,0 +1,52 @@
+T1	Modifier 25 32	complex
+E1	Modifier:T1 Modifies:T19
+T2	Condition 33 45	anal fistula
+E2	Condition:T2 Name:T19
+T3	Negation 105 108	Non
+E3	Negation:T3 Negates:E4
+T4	Condition 109 133	cryptoglandular fistulas
+E4	Condition:T4 Name:T20
+T5	Condition 145 151	sepsis
+E5	Condition:T5 Name:T22 Severity:T21
+T6	Condition 157 184	inflammatory bowel diseases
+E6	Condition:T6 Name:T23
+T7	Condition 190 205	simple fistulas
+E7	Condition:T7 Name:T24
+T9	Modifier 232 248	intersphincteric
+E9	Modifier:T9 Modifies:T26
+T10	Or 249 252	and
+E10	Or:T10 Arg:E9 Arg2:E11
+T11	Modifier 253 273	low transsphincteric
+E11	Modifier:T11 Modifies:T26
+T12	Condition 274 281	fistula
+E12	Condition:T12 Name:T26
+T13	Condition 288 296	pregnant
+E13	Condition:T13 Name:T27
+T14	Condition 311 314	ASA
+E14	Condition:T14 Name:T28 Stage:E15
+T15	Eq-Comparison 315 317	IV
+E15	Eq-Comparison:T15 Value:T29
+T17	Eq-Comparison 332 335	<18
+E17	Eq-Comparison:T17 Operator:T30 Value:T31
+T18	Condition 341 358	immunocompromised
+E18	Condition:T18 Name:T32
+T19	Condition-Name 33 45	anal fistula
+T20	Condition-Name 109 133	cryptoglandular fistulas
+T21	Severity 139 144	acute
+A1	Severity-Value T21 severe
+T22	Condition-Name 145 151	sepsis
+T23	Condition-Name 157 184	inflammatory bowel diseases
+T24	Condition-Name 190 205	simple fistulas
+T26	Condition-Name 274 281	fistula
+T27	Condition-Name 288 296	pregnant
+T28	Condition-Name 311 314	ASA
+T29	Eq-Value 315 317	IV
+T30	Eq-Operator 332 333	<
+A2	Eq-Operator-Value T30 LT
+T31	Eq-Value 333 335	18
+T32	Condition-Name 341 358	immunocompromised
+T8	Modifier 218 230	subcutaneous
+E8	Modifier:T8 Modifies:T26
+R1	Equivalent-To Arg1:E12 Arg2:E7	
+T16	Age 323 331	patients
+E16	Age:T16 Eq-Comparison:E17

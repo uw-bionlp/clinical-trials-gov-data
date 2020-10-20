@@ -1,0 +1,112 @@
+T1	Condition 216 233	diabetes mellitus
+T2	Condition-Name 216 233	diabetes mellitus
+E1	Condition:T1 Name:T2
+T3	Life-Stage-And-Gender 116 122	female
+A1	Life-Stage-And-Gender-Type T3 female
+T4	Life-Stage-And-Gender 107 111	Male
+A2	Life-Stage-And-Gender-Type T4 male
+T5	Condition 538 544	vision
+T6	Condition-Name 538 544	vision
+E5	Condition:T5 Name:T6 Stability:T53
+T7	Eq-Operator 404 405	≥
+A3	Eq-Operator-Value T7 GTEQ
+T8	Eq-Operator 599 600	≥
+A4	Eq-Operator-Value T8 GTEQ
+T9	Eq-Temporal-Unit 145 150	years
+A5	Eq-Temporal-Unit-Value T9 year
+T10	Age 132 135	age
+E6	Age:T10 Eq-Comparison:E10
+T12	Eq-Operator 139 141	to
+A6	Eq-Operator-Value T12 BETWEEN
+T13	Eq-Operator 353 354	-
+A7	Eq-Operator-Value T13 BETWEEN
+T14	Eq-Value 136 138	18
+T15	Eq-Value 142 144	85
+T16	Eq-Value 295 297	24
+T17	Eq-Value 302 304	70
+T18	Eq-Value 348 350	20
+T19	Eq-Value 354 356	20
+T20	Eq-Value 405 407	34
+T21	Eq-Value 461 463	20
+T22	Eq-Value 601 604	320
+T23	Eq-Comparison 404 425	≥34 letters or better
+E8	Eq-Comparison:T23 Operator:T7 Value:T20 Operator2:T43 Unit:T42
+T24	Eq-Comparison 599 607	≥ 320 µm
+E9	Eq-Comparison:T24 Operator:T8 Value:T22 Unit:T59
+T25	Eq-Comparison 136 150	18 to 85 years
+E10	Eq-Comparison:T25 Operator:T12 Value:T14 Value2:T15 Temporal-Unit:T9
+T26	Eq-Comparison 353 356	-20
+E11	Eq-Comparison:T26 Operator:T13 Value:T19 Value2:T38 Value3:T39 Value4:T18
+T27	Or 112 115	and
+E2	Or:T27 Arg:T4 Arg2:T3
+T11	Study 171 180	screening
+E3	Study:T11 
+T28	Temporal-Connection 168 170	at
+E4	Temporal-Connection:T28 Arg:E6 Arg2:E3
+A8	Temporal-Connection-Type-Value E4 during
+T29	Modifier 208 215	type II
+E7	Modifier:T29 Modifies:T2
+T30	Modifier 198 204	type I
+E12	Modifier:T30 Modifies:T2
+T31	Or 205 207	or
+E13	Or:T31 Arg:E12 Arg2:E7
+T32	Observation 243 261	ETDRS letter score
+E14	Observation:T32 Name:T33 Eq-Comparison:E15
+T33	Observation-Name 243 261	ETDRS letter score
+A9	Observation-Type-Value T33 clinical-score
+T35	Modifier 275 278	eye
+E16	Modifier:T35 Modifies:T33
+T34	Eq-Comparison 287 312	between 24 and 70 letters
+E15	Eq-Comparison:T34 Operator:T36 Value:T16 Value2:T17 Unit:T37
+T36	Eq-Operator 287 294	between
+A10	Eq-Operator-Value T36 BETWEEN
+T37	Eq-Unit 305 312	letters
+T38	Eq-Value 351 353	40
+T39	Eq-Value 357 360	320
+T40	Observation 326 333	Snellen
+E17	Observation:T40 Name:T41 Eq-Comparison:E11
+T41	Observation-Name 326 333	Snellen
+R1	Equivalent-To Arg1:E17 Arg2:E14	
+T42	Eq-Unit 408 415	letters
+T43	Eq-Operator 416 425	or better
+A11	Eq-Operator-Value T43 GTEQ
+T44	Observation 439 446	Snellen
+E18	Observation:T44 Name:T45 Eq-Comparison:E19
+T45	Observation-Name 439 446	Snellen
+T46	Eq-Value 464 467	200
+T47	Eq-Comparison 461 467	20/200
+E19	Eq-Comparison:T47 Value:T21 Value2:T46
+T48	Study 472 481	screening
+E20	Study:T48 
+T49	Temporal-Connection 469 471	at
+E21	Temporal-Connection:T49 Arg:E18 Arg2:E20
+A12	Temporal-Connection-Type-Value E21 during
+T50	Condition 499 502	DME
+E22	Condition:T50 Name:T51
+T51	Condition-Name 499 502	DME
+T52	Modifier 516 519	eye
+E23	Modifier:T52 Modifies:T51
+T53	Stability 526 534	decrease
+A13	Stability-Value T53 change
+T54	And 521 525	with
+E24	And:T54 Arg:E22 Arg2:T53
+T55	Condition 552 569	foveal thickening
+E25	Condition:T55 Name:T56
+T56	Condition-Name 552 569	foveal thickening
+R2	Caused-By Arg1:E5 Arg2:E25	
+T57	Observation 573 598	central macular thickness
+E26	Observation:T57 Name:T58 Eq-Comparison:E9
+T58	Observation-Name 573 598	central macular thickness
+A14	Observation-Type-Value T58 measurement
+T59	Eq-Unit 605 607	µm
+T60	Modifier 615 631	central subfield
+E27	Modifier:T60 Modifies:T58
+T61	Procedure 648 654	SD-OCT
+E28	Procedure:T61 Name:T62
+T62	Procedure-Name 648 654	SD-OCT
+R3	Found-By Arg1:E26 Arg2:E28	
+T63	Study 702 711	screening
+E29	Study:T63 
+T64	Temporal-Connection 699 701	at
+E30	Temporal-Connection:T64 Arg:E28 Arg2:E29
+A15	Temporal-Connection-Type-Value E30 during

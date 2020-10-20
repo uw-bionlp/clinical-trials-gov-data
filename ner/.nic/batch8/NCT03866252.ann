@@ -1,0 +1,149 @@
+T1	Condition 31 50	Depressive Disorder
+E1	Condition:T1 Name:T46 Severity:T45
+T3	Eq-Comparison 131 141	> 25 years
+E3	Eq-Comparison:T3 Operator:T48 Value:T49 Temporal-Unit:T50
+T4	Eq-Comparison 220 230	< 25 years
+E4	Eq-Comparison:T4 Operator:T52 Value:T53 Temporal-Unit:T54
+T5	Eq-Comparison 261 265	past
+E5	Eq-Comparison:T5 Temporal-Period:T55
+T6	Or 266 268	or
+E6	Or:T6 Arg:E5 Arg2:E7
+T7	Eq-Comparison 269 276	present
+E7	Eq-Comparison:T7 Temporal-Period:T56
+T8	Condition 277 295	psychotic disorder
+E8	Condition:T8 Name:T57 Temporality:E5 Temporality2:E7
+T9	Eq-Comparison 326 330	past
+E9	Eq-Comparison:T9 Temporal-Period:T58
+T10	Or 331 333	or
+E10	Or:T10 Arg:E9 Arg2:E11
+T11	Eq-Comparison 334 341	present
+E11	Eq-Comparison:T11 Temporal-Period:T59
+T12	Condition 342 358	bipolar disorder
+E12	Condition:T12 Name:T60 Temporality:E9 Temporality2:E11
+T14	Condition 393 411	psychotic disorder
+E14	Condition:T14 Name:T61
+T15	Negation 417 423	Unable
+E15	Negation:T15 Negates:E45
+T16	Or 424 426	or
+E16	Or:T16 Arg:E15 Arg2:E17
+T17	Negation 427 436	unwilling
+E17	Negation:T17 Negates:E45
+T18	Drug 452 477	antidepressant medication
+E18	Drug:T18 Name:T62
+T19	Condition 483 492	Pregnancy
+E19	Condition:T19 Name:T63
+T20	Or 493 495	or
+E20	Or:T20 Arg:E19 Arg2:E21
+T21	Condition 496 509	breastfeeding
+E21	Condition:T21 Name:T64
+T22	Condition 521 537	hypersensitivity
+E22	Condition:T22 Name:T65
+T23	Drug 541 544	LSD
+E23	Drug:T23 Name:T66
+T24	Condition 550 567	Somatic disorders
+E24	Condition:T24 Name:T67
+T25	Condition 578 600	central nervous system
+E25	Condition:T25 Name:T68
+T26	Condition 602 605	CNS
+E26	Condition:T26 Name:T79
+T29	Or 630 632	or
+E29	Or:T29 Arg:E30
+T30	Assertion 633 642	suspected
+E30	Assertion:T30 Asserted:E32
+A1	Assertion-Type-Value E30 possible
+T31	Negation 643 646	non
+E31	Negation:T31 Negates:E32
+T32	Modifier 647 657	compliance
+E32	Modifier:T32 
+T33	Modifier 659 663	drug
+E33	Modifier:T33 Modifies:T69
+T34	Or 664 666	or
+E34	Or:T34 Arg:E33 Arg2:E35
+T35	Modifier 667 674	alcohol
+E35	Modifier:T35 Modifies:T69
+T36	Condition 675 680	abuse
+E36	Condition:T36 Name:T69
+T37	Procedure 686 700	Metal implants
+E37	Procedure:T37 Name:T70
+T38	Observation 706 712	Weight
+E38	Observation:T38 Name:T71 Eq-Comparison:E39
+T39	Eq-Comparison 713 720	< 42 kg
+E39	Eq-Comparison:T39 Operator:T72 Value:T73 Unit:T74
+T40	Condition 726 733	Suicide
+E40	Condition:T40 Name:T75
+T41	Risk 734 738	risk
+E41	Risk:T41 Risk-For:E40
+T42	Or 739 741	or
+E42	Or:T42 Arg:E41 Arg2:E43
+T43	Assertion 747 756	likely to
+E43	Assertion:T43 Asserted:E44
+A2	Assertion-Type-Value E43 hypothetical
+T45	Severity 25 30	Major
+A3	Severity-Value T45 severe
+T46	Condition-Name 31 50	Depressive Disorder
+T48	Eq-Operator 131 132	>
+A4	Eq-Operator-Value T48 GT
+T49	Eq-Value 133 135	25
+T50	Eq-Temporal-Unit 136 141	years
+A5	Eq-Temporal-Unit-Value T50 year
+T51	Language 179 185	German
+T52	Eq-Operator 220 221	<
+A6	Eq-Operator-Value T52 LT
+T53	Eq-Value 222 224	25
+T54	Eq-Temporal-Unit 225 230	years
+A7	Eq-Temporal-Unit-Value T54 year
+T55	Eq-Temporal-Period 261 265	past
+A8	Eq-Temporal-Period-Value T55 past
+T56	Eq-Temporal-Period 269 276	present
+A9	Eq-Temporal-Period-Value T56 present
+T57	Condition-Name 277 295	psychotic disorder
+T58	Eq-Temporal-Period 326 330	past
+A10	Eq-Temporal-Period-Value T58 past
+T59	Eq-Temporal-Period 334 341	present
+A11	Eq-Temporal-Period-Value T59 present
+T60	Condition-Name 342 358	bipolar disorder
+T61	Condition-Name 393 411	psychotic disorder
+T62	Drug-Name 452 477	antidepressant medication
+T63	Condition-Name 483 492	Pregnancy
+T64	Condition-Name 496 509	breastfeeding
+T65	Condition-Name 521 537	hypersensitivity
+T66	Drug-Name 541 544	LSD
+T67	Condition-Name 550 567	Somatic disorders
+T68	Condition-Name 578 600	central nervous system
+T69	Condition-Name 675 680	abuse
+T70	Procedure-Name 686 700	Metal implants
+T71	Observation-Name 706 712	Weight
+A12	Observation-Type-Value T71 vital
+T72	Eq-Operator 713 714	<
+A13	Eq-Operator-Value T72 LT
+T73	Eq-Value 715 717	42
+T74	Eq-Unit 718 720	kg
+T75	Condition-Name 726 733	Suicide
+T2	Age 136 141	years
+E2	Age:T2 Eq-Comparison:E3
+T28	Age 225 230	years
+E28	Age:T28 Eq-Comparison:E4
+T13	Family-Member 364 385	First degree relative
+E13	Family-Member:T13 Has:E14
+T47	Negation 440 451	discontinue
+E45	Negation:T47 Negates:E18
+T77	Assertion 417 423	Unable
+E46	Assertion:T77 Asserted:E15
+A14	Assertion-Type-Value E46 hypothetical
+T78	Assertion 427 436	unwilling
+E47	Assertion:T78 Asserted:E17
+A15	Assertion-Type-Value E47 hypothetical
+R1	Caused-By Arg1:E22 Arg2:E23	
+T27	Modifier 607 618	involvement
+E27	Modifier:T27 Modifies:T68
+T79	Condition-Name 602 605	CNS
+R2	Abbrev-Of Arg1:E26 Arg2:E25	
+R3	Example-Of Arg1:E25 Arg2:E24	
+T44	Encounter 777 792	hospitalisation
+E44	Encounter:T44 Type:T76
+T76	Encounter-Type 777 792	hospitalisation
+A16	Encounter-Type-Value T76 inpatient
+T80	Condition 765 776	psychiatric
+E48	Condition:T80 Name:T81
+T81	Condition-Name 765 776	psychiatric
+R4	Treatment-For Arg1:E44 Arg2:E48	

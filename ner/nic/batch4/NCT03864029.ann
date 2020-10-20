@@ -1,47 +1,47 @@
-T2	Condition 314 328	BH4 deficiency
 E2	Condition:T2 Name:T16
-T3	Drug 354 359	KUVAN
 E3	Drug:T3 Name:T17 Dose:E5
-T5	Eq-Comparison 371 386	at least 1 dose
 E5	Eq-Comparison:T5 Operator:T18 Value:T19 Unit:T1
-T6	Condition 396 399	HPA
 E6	Condition:T6 Name:T20
-T7	Condition 410 424	BH4 deficiency
 E7	Condition:T7 Name:T21
-T8	Temporal-Connection 425 431	during
 E8	Temporal-Connection:T8 Arg:E7 Arg2:E9
-A1	Temporal-Connection-Type-Value E8 during
-T9	Study 446 457	observation
-E9	Study:T9 
-T10	Observation 473 490	Phe concentration
+E9	Study:T9
 E10	Observation:T10 Name:T22 Eq-Comparison:E11
-T11	Eq-Comparison 491 503	≥ 450 µmol/L
 E11	Eq-Comparison:T11 Operator:T24 Value:T25 Unit:T26 Per:T27
-T12	Condition 555 570	Phenylketonuria
 E12	Condition:T12 Name:T28
-T13	Condition 572 575	PKU
 E13	Condition:T13 Name:T29
+E14	Condition:T14
+E15	Negation:T15
+T2	Condition 314 328	BH4 deficiency
+T3	Drug 354 359	KUVAN
+T5	Eq-Comparison 371 386	at least 1 dose
+T6	Condition 396 399	HPA
+T7	Condition 410 424	BH4 deficiency
+T8	Temporal-Connection 425 431	during
+T9	Study 446 457	observation
+T10	Observation 473 490	Phe concentration
+T11	Eq-Comparison 491 503	≥ 450 µmol/L
+T12	Condition 555 570	Phenylketonuria
+T13	Condition 572 575	PKU
 T14	Condition 590 599	condition
-E14	Condition:T14 
 T15	Negation 707 710	not
-E15	Negation:T15 
 T16	Condition-Name 314 328	BH4 deficiency
 T17	Drug-Name 354 359	KUVAN
 T18	Eq-Operator 371 379	at least
-A2	Eq-Operator-Value T18 GTEQ
 T19	Eq-Value 380 381	1
 T20	Condition-Name 396 399	HPA
 T21	Condition-Name 410 424	BH4 deficiency
 T22	Observation-Name 473 490	Phe concentration
-A3	Observation-Type-Value T22 lab
 T24	Eq-Operator 491 492	≥
-A5	Eq-Operator-Value T24 GTEQ
 T25	Eq-Value 493 496	450
 T26	Eq-Unit 497 501	µmol
 T27	Eq-Unit 502 503	L
 T28	Condition-Name 555 570	Phenylketonuria
 T29	Condition-Name 572 575	PKU
 T1	Eq-Unit 382 386	dose
-R1	Treatment-For Arg1:E3 Arg2:E6	
-R2	Caused-By Arg1:E6 Arg2:E7	
-R3	Abbrev-Of Arg1:E13 Arg2:E12	
+A1	Temporal-Connection-Type-Value E8 during
+A2	Eq-Operator-Value T18 GTEQ
+A3	Observation-Type-Value T22 lab
+A5	Eq-Operator-Value T24 GTEQ
+R1	Treatment-For Arg1:E3 Arg2:E6
+R2	Caused-By Arg1:E6 Arg2:E7
+R3	Abbrev-Of Arg1:E13 Arg2:E12

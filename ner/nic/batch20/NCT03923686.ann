@@ -1,53 +1,53 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4 Severity:T30
+E5	Condition:T5 Name:T6 Severity:T30
+E6	Eq-Comparison:T7 Temporal-Period:T8
+E2	Condition:T9 Name:T10
+E4	Procedure:T11 Name:T12
+E7	Indication:T13 Indication-For:E4
+E8	Condition:T14 Name:T15
+E9	Condition:T16 Name:T17
+E10	Exception:T18 From:E8 Except:E9
+E11	Procedure:T19 Name:T20
+E12	Procedure:T21 Name:T22
+E13	Procedure:T23 Name:T24
+E14	Exception:T25 From:E12 Except:E13
+E15	Procedure:T26 Name:T27 Temporality:E6
+E16	Condition:T28 Name:T29
+E17	Or:T31 Arg:E5 Arg2:E3
 T1	Condition 25 55	walled-off pancreatic necrosis
 T2	Condition-Name 25 55	walled-off pancreatic necrosis
-E1	Condition:T1 Name:T2
 T3	Condition 346 362	thrombocytopenia
 T4	Condition-Name 346 362	thrombocytopenia
-E3	Condition:T3 Name:T4 Severity:T30
 T5	Condition 330 342	coagulopathy
 T6	Condition-Name 330 342	coagulopathy
-E5	Condition:T5 Name:T6 Severity:T30
 T7	Eq-Comparison 281 289	previous
-E6	Eq-Comparison:T7 Temporal-Period:T8
 T8	Eq-Temporal-Period 281 289	previous
-A1	Eq-Temporal-Period-Value T8 past
 T9	Condition 57 60	WON
-E2	Condition:T9 Name:T10
 T10	Condition-Name 57 60	WON
-R1	Abbrev-Of Arg1:E2 Arg2:E1	
 T11	Procedure 76 97	endoscopical drainage
-E4	Procedure:T11 Name:T12
 T12	Procedure-Name 76 97	endoscopical drainage
 T13	Indication 62 71	indicated
-E7	Indication:T13 Indication-For:E4
 T14	Condition 207 218	collections
-E8	Condition:T14 Name:T15
 T15	Condition-Name 207 218	collections
 T16	Condition 230 233	WON
-E9	Condition:T16 Name:T17
 T17	Condition-Name 230 233	WON
 T18	Exception 219 229	other than
-E10	Exception:T18 From:E8 Except:E9
 T19	Procedure 239 247	drainage
-E11	Procedure:T19 Name:T20
 T20	Procedure-Name 239 247	drainage
 T21	Procedure 253 259	stents
-E12	Procedure:T21 Name:T22
 T22	Procedure-Name 253 259	stents
-R2	Using Arg1:E11 Arg2:E12	
 T23	Procedure 271 275	LAMS
-E13	Procedure:T23 Name:T24
 T24	Procedure-Name 271 275	LAMS
 T25	Exception 260 270	other than
-E14	Exception:T25 From:E12 Except:E13
 T26	Procedure 302 310	drainage
-E15	Procedure:T26 Name:T27 Temporality:E6
 T27	Procedure-Name 302 310	drainage
 T28	Condition 314 317	WON
-E16	Condition:T28 Name:T29
 T29	Condition-Name 314 317	WON
-R3	Treatment-For Arg1:E15 Arg2:E16	
 T30	Severity 323 329	severe
-A2	Severity-Value T30 severe
 T31	Or 343 345	or
-E17	Or:T31 Arg:E5 Arg2:E3
+A1	Eq-Temporal-Period-Value T8 past
+A2	Severity-Value T30 severe
+R1	Abbrev-Of Arg1:E2 Arg2:E1
+R2	Using Arg1:E11 Arg2:E12
+R3	Treatment-For Arg1:E15 Arg2:E16

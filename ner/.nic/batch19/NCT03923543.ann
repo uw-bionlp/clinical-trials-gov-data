@@ -1,0 +1,32 @@
+T1	Age 120 123	age
+E1	Age:T1 Eq-Comparison:E6
+T2	Eq-Value 135 136	1
+T3	Life-Stage-And-Gender 25 32	newborn
+A1	Life-Stage-And-Gender-Type T3 infant
+T4	Procedure 39 47	operated
+E2	Procedure:T4 Name:T5 Temporality:E3
+T5	Procedure-Name 39 47	operated
+T6	Eq-Comparison 33 38	to be
+E3	Eq-Comparison:T6 Temporal-Period:T7
+T7	Eq-Temporal-Period 33 38	to be
+A2	Eq-Temporal-Period-Value T7 future
+T8	Condition 70 94	congenital heart disease
+E4	Condition:T8 Name:T9
+T9	Condition-Name 70 94	congenital heart disease
+T10	And 48 52	with
+E5	And:T10 Arg:E2 Arg2:E4
+T11	Eq-Comparison 124 142	older than 1 month
+E6	Eq-Comparison:T11 Operator:T12 Temporal-Unit:T13 Value:T2
+T12	Eq-Operator 124 134	older than
+A3	Eq-Operator-Value T12 GT
+T13	Eq-Temporal-Unit 137 142	month
+A4	Eq-Temporal-Unit-Value T13 month
+T14	Procedure 153 161	operated
+E7	Procedure:T14 Name:T15 Temporality:E8
+T15	Procedure-Name 153 161	operated
+T16	Eq-Comparison 147 152	to be
+E8	Eq-Comparison:T16 Temporal-Period:T17
+T17	Eq-Temporal-Period 147 152	to be
+A5	Eq-Temporal-Period-Value T17 future
+T18	Negation 143 146	not
+E9	Negation:T18 Negates:E7

@@ -1,116 +1,116 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E14	Observation:T14 Name:T15 Eq-Comparison:E16
+E15	Age:T20 Eq-Comparison:E17
+E16	Eq-Comparison:T26 Operator:T16 Unit:T19 Value:T24 Per:T33
+E17	Eq-Comparison:T27 Operator:T21 Value:T22 Value2:T23 Temporal-Unit:T17
+E2	Negation:T29 Negates:T28
+E4	Or:T32 Arg:T30 Arg2:T31
+E6	Encounter:T35 Location:T34
+E8	Assertion:T36 Asserted:E6
+E10	Eq-Comparison:T37 Per:T38
+E12	Condition:T39
+E13	Modifier:T40 Modifies:E12
+E18	Condition:T41 Name:T42
+E19	Condition:T43 Name:T44
+E20	Condition:T45 Name:T46
+E21	Or:T47 Arg:E19 Arg2:E20
+E22	Drug:T48 Name:T49 Temporality:E25
+E23	Drug:T50 Name:T51 Temporality:E25
+E24	Or:T52 Arg:E22 Arg2:E23
+E25	Eq-Comparison:T53 Temporal-Period:T54 Temporal-Unit:T18 Value:T25
+E26	Condition:T55 Name:T56
+E27	Condition:T57 Name:T58 Severity:T59
+E28	Condition:T60
+E29	Modifier:T61 Modifies:E28
+E30	Condition:T62 Name:T63
+E31	Modifier:T64 Modifies:T44
 T1	Condition 216 231	irritable bowel
 T2	Condition-Name 216 231	irritable bowel
-E1	Condition:T1 Name:T2
 T3	Condition 233 247	diverticulitis
 T4	Condition-Name 233 247	diverticulitis
-E3	Condition:T3 Name:T4
 T5	Condition 249 262	peptic ulcers
 T6	Condition-Name 249 262	peptic ulcers
-E5	Condition:T5 Name:T6
 T7	Condition 450 463	renal disease
 T8	Condition-Name 450 463	renal disease
-E7	Condition:T7 Name:T8
 T9	Condition 465 473	diabetes
 T10	Condition-Name 465 473	diabetes
-E9	Condition:T9 Name:T10
 T11	Condition 264 271	Crohn's
 T12	Condition-Name 264 271	Crohn's
-E11	Condition:T11 Name:T12
 T13	Life-Stage-And-Gender 25 31	female
-A1	Life-Stage-And-Gender-Type T13 female
 T14	Observation 92 95	BMI
 T15	Observation-Name 92 95	BMI
-E14	Observation:T14 Name:T15 Eq-Comparison:E16
-A2	Observation-Type-Value T15 vital
 T16	Eq-Operator 96 98	>=
-A3	Eq-Operator-Value T16 GTEQ
 T17	Eq-Temporal-Unit 81 86	years
-A4	Eq-Temporal-Unit-Value T17 year
 T18	Eq-Temporal-Unit 360 364	days
-A5	Eq-Temporal-Unit-Value T18 day
 T19	Eq-Unit 102 104	kg
 T20	Age 71 74	age
-E15	Age:T20 Eq-Comparison:E17
 T21	Eq-Operator 77 78	-
-A6	Eq-Operator-Value T21 BETWEEN
 T22	Eq-Value 75 77	19
 T23	Eq-Value 78 80	65
 T24	Eq-Value 99 101	30
 T25	Eq-Value 357 359	90
 T26	Eq-Comparison 96 108	>= 30 kg/m^2
-E16	Eq-Comparison:T26 Operator:T16 Unit:T19 Value:T24 Per:T33
 T27	Eq-Comparison 75 86	19-65 years
-E17	Eq-Comparison:T27 Operator:T21 Value:T22 Value2:T23 Temporal-Unit:T17
 T28	Ethnicity 41 49	Hispanic
 T29	Negation 37 40	non
-E2	Negation:T29 Negates:T28
 T30	Ethnicity 51 56	black
 T31	Ethnicity 60 65	white
 T32	Or 57 59	or
-E4	Or:T32 Arg:T30 Arg2:T31
 T33	Eq-Unit 105 108	m^2
 T34	Location 128 145	Bionutrition Unit
-A7	Location-Value T34 unit
 T35	Encounter 122 127	visit
-E6	Encounter:T35 Location:T34
 T36	Assertion 114 121	able to
-E8	Assertion:T36 Asserted:E6
-A8	Assertion-Type-Value E8 hypothetical
 T37	Eq-Comparison 146 151	daily
-E10	Eq-Comparison:T37 Per:T38
 T38	Eq-Temporal-Unit 146 151	daily
-A9	Eq-Temporal-Unit-Value T38 day
 T39	Condition 199 209	conditions
-E12	Condition:T39 
 T40	Modifier 177 193	gastrointestinal
-E13	Modifier:T40 Modifies:E12
 T41	Condition 195 197	GI
-E18	Condition:T41 Name:T42
 T42	Condition-Name 195 197	GI
-R1	Abbrev-Of Arg1:E18 Arg2:E13	
-R2	Example-Of Arg1:E1 Arg2:E12	
-R3	Example-Of Arg1:E3 Arg2:E12	
-R4	Example-Of Arg1:E5 Arg2:E12	
-R5	Example-Of Arg1:E11 Arg2:E12	
 T43	Condition 276 283	cancers
-E19	Condition:T43 Name:T44
 T44	Condition-Name 276 283	cancers
-R6	Example-Of Arg1:E19 Arg2:E12	
 T45	Condition 289 307	adenatomous polyps
-E20	Condition:T45 Name:T46
 T46	Condition-Name 289 307	adenatomous polyps
 T47	Or 285 288	and
-E21	Or:T47 Arg:E19 Arg2:E20
-R7	Example-Of Arg1:E20 Arg2:E12	
 T48	Drug 313 323	antibiotic
-E22	Drug:T48 Name:T49 Temporality:E25
 T49	Drug-Name 313 323	antibiotic
 T50	Drug 327 336	probiotic
-E23	Drug:T50 Name:T51 Temporality:E25
 T51	Drug-Name 327 336	probiotic
 T52	Or 324 326	or
-E24	Or:T52 Arg:E22 Arg2:E23
 T53	Eq-Comparison 348 364	previous 90 days
-E25	Eq-Comparison:T53 Temporal-Period:T54 Temporal-Unit:T18 Value:T25
 T54	Eq-Temporal-Period 348 356	previous
-A10	Eq-Temporal-Period-Value T54 past
 T55	Condition 370 381	tobacco use
-E26	Condition:T55 Name:T56
 T56	Condition-Name 370 381	tobacco use
 T57	Condition 393 412	alcohol consumption
-E27	Condition:T57 Name:T58 Severity:T59
 T58	Condition-Name 393 412	alcohol consumption
 T59	Severity 387 392	heavy
-A11	Severity-Value T59 severe
 T60	Condition 424 442	medical conditions
-E28	Condition:T60 
 T61	Modifier 418 423	major
-E29	Modifier:T61 Modifies:E28
-R8	Example-Of Arg1:E7 Arg2:E28	
-R9	Example-Of Arg1:E9 Arg2:E28	
 T62	Condition 475 481	cancer
-E30	Condition:T62 Name:T63
 T63	Condition-Name 475 481	cancer
-R10	Example-Of Arg1:E30 Arg2:E28	
 T64	Modifier 273 275	GI
-E31	Modifier:T64 Modifies:T44
+A1	Life-Stage-And-Gender-Type T13 female
+A2	Observation-Type-Value T15 vital
+A3	Eq-Operator-Value T16 GTEQ
+A4	Eq-Temporal-Unit-Value T17 year
+A5	Eq-Temporal-Unit-Value T18 day
+A6	Eq-Operator-Value T21 BETWEEN
+A7	Location-Value T34 unit
+A8	Assertion-Type-Value E8 hypothetical
+A9	Eq-Temporal-Unit-Value T38 day
+A10	Eq-Temporal-Period-Value T54 past
+A11	Severity-Value T59 severe
+R1	Abbrev-Of Arg1:E18 Arg2:E13
+R2	Example-Of Arg1:E1 Arg2:E12
+R3	Example-Of Arg1:E3 Arg2:E12
+R4	Example-Of Arg1:E5 Arg2:E12
+R5	Example-Of Arg1:E11 Arg2:E12
+R6	Example-Of Arg1:E19 Arg2:E12
+R7	Example-Of Arg1:E20 Arg2:E12
+R8	Example-Of Arg1:E7 Arg2:E28
+R9	Example-Of Arg1:E9 Arg2:E28
+R10	Example-Of Arg1:E30 Arg2:E28

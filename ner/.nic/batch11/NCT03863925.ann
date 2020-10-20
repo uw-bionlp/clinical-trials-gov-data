@@ -1,0 +1,120 @@
+T1	Condition 91 110	depressive disorder
+T2	Condition-Name 91 110	depressive disorder
+E1	Condition:T1 Name:T2
+T3	Condition 485 508	neurocognitive disorder
+T4	Condition-Name 485 508	neurocognitive disorder
+E3	Condition:T3 Name:T4
+T5	Condition 587 610	cerebrovascular disease
+T6	Condition-Name 587 610	cerebrovascular disease
+E5	Condition:T5 Name:T6
+T7	Condition 564 585	myocardial infarction
+T8	Condition-Name 564 585	myocardial infarction
+E7	Condition:T7 Name:T8
+T9	Condition 913 934	psychiatric disorders
+T10	Condition-Name 913 934	psychiatric disorders
+E9	Condition:T9 Name:T10
+T11	Condition 773 793	deep vein thrombosis
+T12	Condition-Name 773 793	deep vein thrombosis
+E11	Condition:T11 Name:T12
+T13	Condition 112 128	bipolar disorder
+T14	Condition-Name 112 128	bipolar disorder
+E13	Condition:T13 Name:T14
+T15	Condition 755 771	valvular disease
+T16	Condition-Name 755 771	valvular disease
+E15	Condition:T15 Name:T16 Severity:T23
+T17	Condition 829 844	substance abuse
+T18	Condition-Name 829 844	substance abuse
+E17	Condition:T17 Name:T18
+T19	Condition 134 147	schizophrenia
+T20	Condition-Name 134 147	schizophrenia
+E19	Condition:T19 Name:T20
+T21	Condition 734 747	heart failure
+T22	Condition-Name 734 747	heart failure
+E21	Condition:T21 Name:T22
+T27	Procedure 208 211	ECT
+T28	Procedure-Name 208 211	ECT
+E27	Procedure:T27 Name:T28 Temporality:E6
+T29	Procedure 549 552	ECT
+T30	Procedure-Name 549 552	ECT
+E29	Procedure:T29 Name:T30
+T31	Eq-Temporal-Unit 40 45	years
+A1	Eq-Temporal-Unit-Value T31 year
+T32	Eq-Temporal-Unit 57 62	years
+A2	Eq-Temporal-Unit-Value T32 year
+T33	Age 25 28	Age
+E30	Age:T33 Eq-Comparison:E2
+T36	Eq-Value 37 39	20
+T37	Eq-Value 54 56	65
+T39	Eq-Comparison 29 66	between 20 years old and 65 years old
+E2	Eq-Comparison:T39 Operator:T34 Temporal-Unit:T31 Value:T36 Value2:T37 Temporal-Unit2:T32
+T34	Eq-Operator 29 36	between
+A3	Eq-Operator-Value T34 BETWEEN
+T35	Or 130 133	and
+E4	Or:T35 Arg:E13 Arg2:E19
+T38	Eq-Comparison 195 207	necessity of
+E6	Eq-Comparison:T38 Temporal-Period:T40
+T40	Eq-Temporal-Period 195 207	necessity of
+A4	Eq-Temporal-Period-Value T40 future
+T41	And 181 185	with
+E8	And:T41 Arg2:E27 Arg:E19
+T42	Condition 278 300	adequate visual acuity
+E10	Condition:T42 Name:T43
+T43	Condition-Name 278 300	adequate visual acuity
+T44	Condition 305 320	auditory acuity
+E12	Condition:T44 Name:T45
+T45	Condition-Name 305 320	auditory acuity
+T46	Contraindication 528 545	contraindications
+E14	Contraindication:T46 Contraindicates:E29
+R2	Example-Of Arg1:E7 Arg2:E14	
+R3	Example-Of Arg1:E5 Arg2:E14	
+T47	Condition 612 642	elevated intracranial pressure
+E16	Condition:T47 Name:T48
+T48	Condition-Name 612 642	elevated intracranial pressure
+R4	Example-Of Arg1:E16 Arg2:E14	
+T49	Condition 644 665	intracranial angiomas
+E18	Condition:T49 Name:T50
+T50	Condition-Name 644 665	intracranial angiomas
+R5	Example-Of Arg1:E18 Arg2:E14	
+T51	Condition 677 691	bony fractures
+E20	Condition:T51 Name:T52
+T52	Condition-Name 677 691	bony fractures
+T53	Procedure 667 676	untreated
+E22	Procedure:T53 
+R6	Example-Of Arg1:E20 Arg2:E14	
+T54	Condition 693 714	cervical spine injury
+E24	Condition:T54 Name:T55
+T55	Condition-Name 693 714	cervical spine injury
+R7	Example-Of Arg1:E24 Arg2:E14	
+T56	Condition 716 732	pheochromocytoma
+E26	Condition:T56 Name:T57
+T57	Condition-Name 716 732	pheochromocytoma
+R8	Example-Of Arg1:E26 Arg2:E14	
+R9	Example-Of Arg1:E21 Arg2:E14	
+T23	Severity 749 754	sever
+A5	Severity-Value T23 severe
+R10	Example-Of Arg1:E15 Arg2:E14	
+R11	Example-Of Arg1:E11 Arg2:E14	
+T24	Procedure 819 828	untreated
+E23	Procedure:T24 
+T58	Drug 856 863	alcohol
+E28	Drug:T58 Name:T59
+T59	Drug-Name 856 863	alcohol
+T60	Drug 868 881	illegal drugs
+E31	Drug:T60 Name:T61
+T61	Drug-Name 868 881	illegal drugs
+T62	Or 864 867	and
+E32	Or:T62 Arg:E28 Arg2:E31
+T63	Modifier 901 912	unspecified
+E33	Modifier:T63 Modifies:E9
+T64	And 301 304	and
+E34	And:T64 Arg:E10 Arg2:E12
+T25	Modifier 85 90	major
+E25	Modifier:T25 Modifies:E1
+R1	Treatment-For Arg1:E23 Arg2:E17	
+T26	Negation 819 828	untreated
+E35	Negation:T26 Negates:E23
+R12	Example-Of Arg1:E28 Arg2:E17	
+R13	Example-Of Arg1:E31 Arg2:E17	
+R14	Treatment-For Arg1:E22 Arg2:E20	
+T65	Negation 667 676	untreated
+E36	Negation:T65 Negates:E22

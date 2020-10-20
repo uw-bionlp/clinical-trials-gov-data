@@ -1,0 +1,185 @@
+T6	Condition 1037 1048	Engorgement
+T7	Condition-Name 1037 1048	Engorgement
+E6	Condition:T6 Name:T7 Temporality:E46
+T8	Condition 974 982	Mastitis
+T9	Condition-Name 974 982	Mastitis
+E8	Condition:T8 Name:T9 Temporality:E42
+T10	Eq-Operator 33 34	≥
+A2	Eq-Operator-Value T10 GTEQ
+T11	Eq-Operator 63 64	≥
+A3	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 70 71	≤
+A4	Eq-Operator-Value T12 LTEQ
+T13	Eq-Operator 263 264	≤
+A5	Eq-Operator-Value T13 LTEQ
+T14	Eq-Operator 961 962	≥
+A6	Eq-Operator-Value T14 GTEQ
+T15	Eq-Operator 995 1001	within
+A7	Eq-Operator-Value T15 LTEQ
+T16	Eq-Operator 1061 1067	within
+A8	Eq-Operator-Value T16 LTEQ
+T17	Eq-Temporal-Unit 38 43	years
+A9	Eq-Temporal-Unit-Value T17 year
+T18	Eq-Temporal-Unit 1006 1011	weeks
+A10	Eq-Temporal-Unit-Value T18 week
+T19	Eq-Temporal-Unit 1072 1077	weeks
+A11	Eq-Temporal-Unit-Value T19 week
+T20	Eq-Unit 966 968	mm
+T21	Age 44 47	old
+E9	Age:T21 Eq-Comparison:E11
+T22	Age 79 82	old
+E10	Age:T22 Eq-Comparison:E13
+T23	Eq-Value 35 37	18
+T24	Eq-Value 64 65	1
+T25	Eq-Value 71 72	6
+T26	Eq-Value 264 267	150
+T27	Eq-Value 396 397	2
+T28	Eq-Value 700 701	2
+T30	Eq-Value 963 965	21
+T31	Eq-Comparison 33 43	≥ 18 years
+E11	Eq-Comparison:T31 Operator:T10 Temporal-Unit:T17 Value:T23
+T32	Eq-Comparison 63 65	≥1
+E12	Eq-Comparison:T32 Operator:T11 Value:T24
+T33	Eq-Comparison 70 78	≤6 month
+E13	Eq-Comparison:T33 Operator:T12 Value:T25 Temporal-Unit:T38
+T34	Eq-Comparison 263 282	≤150 ml formula/day
+E14	Eq-Comparison:T34 Operator:T13 Value:T26 Unit:T1 Temporal-Unit:T2
+T35	Eq-Comparison 961 968	≥ 21 mm
+E15	Eq-Comparison:T35 Operator:T14 Unit:T20 Value:T30
+T36	Life-Stage-And-Gender 53 59	Infant
+A12	Life-Stage-And-Gender-Type T36 infant
+T37	And 66 69	and
+E2	And:T37 Arg:E12 Arg2:E13
+T38	Eq-Temporal-Unit 73 78	month
+A13	Eq-Temporal-Unit-Value T38 month
+T39	And 60 62	is
+E4	And:T39 Arg:T36 Arg2:E10
+T40	Observation 155 193	Mother and infant health questionnaire
+E5	Observation:T40 Name:T41
+T41	Observation-Name 155 193	Mother and infant health questionnaire
+A14	Observation-Type-Value T41 survey-or-questionnaire
+T42	Condition 109 116	healthy
+E7	Condition:T42 Name:T43
+T43	Condition-Name 109 116	healthy
+T44	Family-Member 100 104	baby
+E16	Family-Member:T44 Has:E7
+A15	Family-Member-Type E16 child
+R1	Found-By Arg1:E7 Arg2:E5	
+T47	Eq-Comparison 240 256	80% of all feeds
+E18	Eq-Comparison:T47 Value:T48 Unit:T49 Unit2:T99
+T48	Eq-Value 240 242	80
+T49	Eq-Unit 242 243	%
+T1	Eq-Unit 268 270	ml
+T2	Eq-Temporal-Unit 279 282	day
+A16	Eq-Temporal-Unit-Value T2 day
+R2	Equivalent-To Arg1:E14 Arg2:E18	
+T45	Condition 225 238	breastfeeding
+E1	Condition:T45 Name:T46
+T46	Condition-Name 225 238	breastfeeding
+T50	Assertion 346 355	agrees to
+E17	Assertion:T50 Asserted:E19
+A17	Assertion-Type-Value E17 hypothetical
+T51	Observation 356 360	pump
+E19	Observation:T51 Name:T52
+T52	Observation-Name 356 360	pump
+T53	Observation 364 368	feed
+E20	Observation:T53 Name:T54
+T54	Observation-Name 364 368	feed
+T55	Or 361 363	or
+E21	Or:T55 Arg:E19 Arg2:E20
+T56	Eq-Comparison 373 382	last time
+E22	Eq-Comparison:T56 Temporal-Recency:T57
+T57	Eq-Temporal-Recency 373 382	last time
+A18	Eq-Temporal-Recency-Value T57 most-recent-time
+T58	Eq-Comparison 385 408	minimum of 2 hours (hr)
+E23	Eq-Comparison:T58 Operator:T59 Value:T27 Temporal-Unit:T60 Temporal-Unit2:T61 Temporal-Unit3:T61
+T59	Eq-Operator 385 392	minimum
+A19	Eq-Operator-Value T59 GTEQ
+T60	Eq-Temporal-Unit 398 403	hours
+A20	Eq-Temporal-Unit-Value T60 hour
+T61	Eq-Temporal-Unit 405 407	hr
+A21	Eq-Temporal-Unit-Value T61 hour
+T62	Study 456 461	study
+E24	Study:T62 
+T63	Temporal-Connection 409 415	before
+E25	Temporal-Connection:T63 Arg:E20 Arg2:E24
+A22	Temporal-Connection-Type-Value E25 before
+T64	Observation 494 514	photographs/3 D scan
+E26	Observation:T64 Name:T65
+T65	Observation-Name 494 514	photographs/3 D scan
+T66	Modifier 522 528	breast
+E27	Modifier:T66 Modifies:T65
+T67	Modifier 533 543	upper body
+E28	Modifier:T67 Modifies:T65
+T68	Or 529 532	and
+E29	Or:T68 Arg:E27 Arg2:E28
+T3	Modifier 548 552	face
+E3	Modifier:T3 
+T4	Exception 545 547	no
+E30	Exception:T4 From:E26 Except:E3
+T69	Assertion 484 493	agrees to
+E31	Assertion:T69 Asserted:E26
+A23	Assertion-Type-Value E31 hypothetical
+T70	Observation 584 589	video
+E32	Observation:T70 Name:T71
+T71	Observation-Name 584 589	video
+T72	Observation 596 603	pumping
+E33	Observation:T72 Name:T73
+T73	Observation-Name 596 603	pumping
+T74	Assertion 572 581	agrees to
+E34	Assertion:T74 Asserted:E32
+A24	Assertion-Type-Value E34 hypothetical
+T75	Temporal-Connection 590 595	while
+E35	Temporal-Connection:T75 Arg:E32 Arg2:E33
+A25	Temporal-Connection-Type-Value E35 during
+T76	Eq-Comparison 689 719	maximum of 2 male team members
+E36	Eq-Comparison:T76 Unit:T5 Operator:T77 Value:T28
+T5	Eq-Unit 702 719	male team members
+T77	Eq-Operator 689 696	maximum
+A1	Eq-Operator-Value T77 LTEQ
+T78	Assertion 675 686	agrees that
+E37	Assertion:T78 Asserted:E38
+A26	Assertion-Type-Value E37 hypothetical
+T79	Observation 727 746	present in the room
+E38	Observation:T79 Name:T80 Eq-Comparison:E36
+T80	Observation-Name 727 746	present in the room
+T29	Assertion 806 818	accepts that
+E39	Assertion:T29 
+A27	Assertion-Type-Value E39 hypothetical
+T81	Observation 949 960	nipple size
+E40	Observation:T81 Name:T82 Eq-Comparison:E15
+T82	Observation-Name 949 960	nipple size
+A28	Observation-Type-Value T82 measurement
+T83	Modifier 984 994	any breast
+E41	Modifier:T83 Modifies:T9
+T84	Eq-Comparison 995 1011	within two weeks
+E42	Eq-Comparison:T84 Operator:T15 Temporal-Unit:T18 Value:T85
+T85	Eq-Value 1002 1005	two
+T86	Study 1021 1030	enrolment
+E43	Study:T86 
+T87	Temporal-Connection 1012 1020	prior to
+E44	Temporal-Connection:T87 Arg:E42 Arg2:E43
+A29	Temporal-Connection-Type-Value E44 before
+T88	Modifier 1050 1060	any breast
+E45	Modifier:T88 Modifies:T7
+T89	Eq-Comparison 1061 1077	within two weeks
+E46	Eq-Comparison:T89 Operator:T16 Temporal-Unit:T19 Value:T90
+T90	Eq-Value 1068 1071	two
+T91	Study 1087 1096	enrolment
+E47	Study:T91 
+T92	Temporal-Connection 1078 1086	prior to
+E48	Temporal-Connection:T92 Arg:E46 Arg2:E47
+A30	Temporal-Connection-Type-Value E48 before
+T93	Condition 1120 1129	infection
+E49	Condition:T93 Name:T94 Temporality:E50
+T94	Condition-Name 1120 1129	infection
+T95	Eq-Comparison 1112 1119	current
+E50	Eq-Comparison:T95 Temporal-Period:T96
+T96	Eq-Temporal-Period 1112 1119	current
+A31	Eq-Temporal-Period-Value T96 present
+T97	Observation 1154 1192	Mother and infant health questionnaire
+E51	Observation:T97 Name:T98
+T98	Observation-Name 1154 1192	Mother and infant health questionnaire
+A32	Observation-Type-Value T98 survey-or-questionnaire
+R3	Found-By Arg1:E49 Arg2:E51	
+T99	Eq-Unit 251 256	feeds

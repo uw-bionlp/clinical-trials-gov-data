@@ -1,35 +1,35 @@
+E1	Condition:T1 Name:T2
+E2	Eq-Comparison:T6 Operator:T3 Value:T4 Value2:T5
+E3	Observation:T7 Name:T8 Eq-Comparison:E2
+E4	Procedure:T9 Name:T10 Temporality:E5
+E5	Eq-Comparison:T11 Temporal-Period:T12
+E6	Or:T13 Arg:E3 Arg2:E4
+E7	Condition:T14 Name:T15 Temporality:E11
+E8	Modifier:T16 Modifies:T15
+E9	Modifier:T17 Modifies:T15
+E10	Or:T18 Arg:E8 Arg2:E9
+E11	Eq-Comparison:T19 Temporal-Period:T20
 T1	Condition 45 66	chronic heart failure
 T2	Condition-Name 45 66	chronic heart failure
-E1	Condition:T1 Name:T2
 T3	Eq-Operator 78 79	-
-A1	Eq-Operator-Value T3 BETWEEN
 T4	Eq-Value 77 78	5
 T5	Eq-Value 79 80	7
 T6	Eq-Comparison 77 80	5-7
-E2	Eq-Comparison:T6 Operator:T3 Value:T4 Value2:T5
 T7	Observation 67 76	INTERMASC
-E3	Observation:T7 Name:T8 Eq-Comparison:E2
 T8	Observation-Name 67 76	INTERMASC
-R1	Equivalent-To Arg1:E3 Arg2:E1	
 T9	Procedure 101 113	LVAD support
-E4	Procedure:T9 Name:T10 Temporality:E5
 T10	Procedure-Name 101 113	LVAD support
 T11	Eq-Comparison 98 100	on
-E5	Eq-Comparison:T11 Temporal-Period:T12
 T12	Eq-Temporal-Period 98 100	on
-A2	Eq-Temporal-Period-Value T12 present
 T13	Or 81 83	or
-E6	Or:T13 Arg:E3 Arg2:E4
 T14	Condition 173 178	event
-E7	Condition:T14 Name:T15 Temporality:E11
 T15	Condition-Name 173 178	event
 T16	Modifier 147 160	thrombembolic
-E8	Modifier:T16 Modifies:T15
 T17	Modifier 164 172	bleeding
-E9	Modifier:T17 Modifies:T15
 T18	Or 161 163	or
-E10	Or:T18 Arg:E8 Arg2:E9
 T19	Eq-Comparison 139 146	current
-E11	Eq-Comparison:T19 Temporal-Period:T20
 T20	Eq-Temporal-Period 139 146	current
+A1	Eq-Operator-Value T3 BETWEEN
+A2	Eq-Temporal-Period-Value T12 present
 A3	Eq-Temporal-Period-Value T20 present
+R1	Equivalent-To Arg1:E3 Arg2:E1

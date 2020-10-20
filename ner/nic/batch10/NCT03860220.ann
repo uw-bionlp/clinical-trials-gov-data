@@ -1,234 +1,235 @@
-T1	Observation 36 41	msSBP
 E1	Observation:T1 Name:T2 Eq-Comparison:E2 Eq-Comparison2:E3
-T2	Observation-Name 36 41	msSBP
-A1	Observation-Type-Value T2 vital
-T3	Eq-Comparison 25 35	145 mmHg ≤
 E2	Eq-Comparison:T3 Value:T4 Unit:T5 Operator:T6
+E3	Eq-Comparison:T7 Operator:T8 Value:T9 Unit:T10
+E4	Observation:T11 Name:T12 Eq-Comparison:E5
+E5	Eq-Comparison:T13 Operator:T14 Value:T15 Unit:T16 Per:T17
+E6	Observation:T18 Name:T19
+E7	Eq-Comparison:T20 Operator:T21 Value:T22 Unit:T23 Per:T24
+E8	Observation:T25 Name:T26 Eq-Comparison:E9
+E9	Eq-Comparison:T27 Operator:T28 Value:T29 Unit:T30
+E10	Observation:T31 Name:T32 Eq-Comparison:E11
+E11	Eq-Comparison:T33 Operator:T34 Value:T35 Unit:T36
+E12	And:T37 Arg:E8 Arg2:E10
+E13	Assertion:T38 Asserted:E15
+E14	Modifier:T39 Modifies:T41
+E15	Condition:T40 Name:T41
+E16	Condition:T42 Name:T43
+E17	Condition:T44 Name:T45
+E18	Or:T46 Arg:E16 Arg2:E17
+E19	Modifier:T47 Modifies:T43
+E20	Modifier:T48 Modifies:T43
+E21	Or:T49 Arg:E20 Arg2:E19
+E22	Or:T50 Arg:E15 Arg2:E16
+E23	Eq-Comparison:T51 Temporal-Period:T52
+E24	Condition:T53 Name:T54 Severity:T57 Temporality:E23
+E25	Eq-Comparison:T55 Value:T56 Operator:T58 Value2:T57
+E26	Condition:T59 Name:T60
+E27	Condition:T61 Name:T62
+E28	Condition:T63 Name:T64
+E29	Condition:T65 Name:T66 Stability:T67 Temporality:E31
+E30	Or:T68 Arg:E28 Arg2:E29
+E31	Eq-Comparison:T69 Temporal-Period:T70 Value:T71 Temporal-Unit:T72
+E32	Condition:T73 Name:T74 Severity:T75
+E33	Observation:T76 Name:T77 Eq-Comparison:E34
+E34	Eq-Comparison:T78 Value:T79 Value2:T80 Unit:T81
+E35	Condition:T82 Name:T83
+E36	Drug:T84 Name:T85
+E37	Drug:T87 Name:T86
+E38	Or:T88 Arg:E36 Arg2:E37
+E39	Eq-Comparison:T89 Temporal-Period:T90
+E40	Condition:T91 Name:T92 Temporality:E39
+E41	Procedure:T93
+E42	Temporal-Connection:T94 Arg:E40 Arg2:E41
+E43	Drug:T95 Name:T96
+E44	Drug:T97 Name:T98
+E45	Or:T99 Arg:E43 Arg2:E44
+E46	Observation:T100 Name:T101 Eq-Comparison:E47
+E47	Eq-Comparison:T102 Operator:T103 Value:T104 Unit:T105
+E48	Observation:T106 Name:T107 Eq-Comparison:E49
+E49	Eq-Comparison:T108 Operator:T109 Value:T110 Unit:T111 Per:T112
+E50	Observation:T113 Name:T114
+E51	Observation:T115 Name:T116
+E52	Or:T117 Arg:E50 Arg2:E51
+E53	Eq-Comparison:T118 Operator:T119 Value:T120 Unit:T121
+E54	Observation:T122 Name:T123 Eq-Comparison:E55
+E55	Eq-Comparison:T124 Operator:T125 Value:T126 Unit:T127 Per:T128
+E56	Study:T129 Stability:T130
+E57	Assertion:T131 Asserted:T130
+E58	Condition:T132 Name:T133
+E59	Or:T134 Arg:E54 Arg2:E58
+T1	Observation 36 41	msSBP
+T2	Observation-Name 36 41	msSBP
+T3	Eq-Comparison 25 35	145 mmHg ≤
 T4	Eq-Value 25 28	145
 T5	Eq-Unit 29 33	mmHg
 T6	Eq-Operator 34 35	≤
-A2	Eq-Operator-Value T6 LTEQ
 T7	Eq-Comparison 42 52	≤ 190 mmHg
-E3	Eq-Comparison:T7 Operator:T8 Value:T9 Unit:T10
 T8	Eq-Operator 42 43	≤
-A3	Eq-Operator-Value T8 LTEQ
 T9	Eq-Value 44 47	190
 T10	Eq-Unit 48 52	mmHg
 T11	Observation 58 71	Triglycerides
-E4	Observation:T11 Name:T12 Eq-Comparison:E5
 T12	Observation-Name 58 71	Triglycerides
-A4	Observation-Type-Value T12 lab
 T13	Eq-Comparison 72 83	< 500 mg/dL
-E5	Eq-Comparison:T13 Operator:T14 Value:T15 Unit:T16 Per:T17
 T14	Eq-Operator 72 73	<
-A5	Eq-Operator-Value T14 LT
 T15	Eq-Value 74 77	500
 T16	Eq-Unit 78 80	mg
 T17	Eq-Unit 81 83	dL
 T18	Observation 89 94	LDL-C
-E6	Observation:T18 Name:T19
 T19	Observation-Name 89 94	LDL-C
-A6	Observation-Type-Value T19 lab
 T20	Eq-Comparison 95 106	≤ 250 mg/dL
-E7	Eq-Comparison:T20 Operator:T21 Value:T22 Unit:T23 Per:T24
 T21	Eq-Operator 95 96	≤
-A7	Eq-Operator-Value T21 LTEQ
 T22	Eq-Value 97 100	250
 T23	Eq-Unit 101 103	mg
 T24	Eq-Unit 104 106	dL
 T25	Observation 132 136	sSBP
-E8	Observation:T25 Name:T26 Eq-Comparison:E9
 T26	Observation-Name 132 136	sSBP
-A8	Observation-Type-Value T26 vital
 T27	Eq-Comparison 137 145	≥ 20mmHg
-E9	Eq-Comparison:T27 Operator:T28 Value:T29 Unit:T30
 T28	Eq-Operator 137 138	≥
-A9	Eq-Operator-Value T28 GTEQ
 T29	Eq-Value 139 141	20
 T30	Eq-Unit 141 145	mmHg
 T31	Observation 150 154	sDBP
-E10	Observation:T31 Name:T32 Eq-Comparison:E11
 T32	Observation-Name 150 154	sDBP
-A10	Observation-Type-Value T32 vital
 T33	Eq-Comparison 155 163	≥ 10mmHg
-E11	Eq-Comparison:T33 Operator:T34 Value:T35 Unit:T36
 T34	Eq-Operator 155 156	≥
-A11	Eq-Operator-Value T34 GTEQ
 T35	Eq-Value 157 159	10
 T36	Eq-Unit 159 163	mmHg
 T37	And 146 149	and
-E12	And:T37 Arg:E8 Arg2:E10
 T38	Assertion 169 180	symptomatic
-E13	Assertion:T38 Asserted:E15
-A12	Assertion-Type-Value E13 possible
 T39	Modifier 181 192	orthostatic
-E14	Modifier:T39 Modifies:T41
 T40	Condition 193 204	hypotension
-E15	Condition:T40 Name:T41
 T41	Condition-Name 193 204	hypotension
 T42	Condition 230 242	hypertension
-E16	Condition:T42 Name:T43
 T43	Condition-Name 230 242	hypertension
 T44	Condition 247 259	dyslipidemia
-E17	Condition:T44 Name:T45
 T45	Condition-Name 247 259	dyslipidemia
 T46	Or 243 246	and
-E18	Or:T46 Arg:E16 Arg2:E17
 T47	Modifier 219 229	iatrogenic
-E19	Modifier:T47 Modifies:T43
 T48	Modifier 209 218	secondary
-E20	Modifier:T48 Modifies:T43
 T49	Or 218 219	/
-E21	Or:T49 Arg:E20 Arg2:E19
 T50	Or 205 208	and
-E22	Or:T50 Arg:E15 Arg2:E16
 T51	Eq-Comparison 265 272	history
-E23	Eq-Comparison:T51 Temporal-Period:T52
 T52	Eq-Temporal-Period 265 272	history
-A13	Eq-Temporal-Period-Value T52 past
 T53	Condition 295 312	cerebral ischemia
-E24	Condition:T53 Name:T54 Severity:T57 Temporality:E23
 T54	Condition-Name 295 312	cerebral ischemia
 T55	Eq-Comparison 276 294	moderate to severe
-E25	Eq-Comparison:T55 Value:T56 Operator:T58 Value2:T57
 T56	Severity 276 284	moderate
-A14	Severity-Value T56 moderate
 T57	Severity 288 294	severe
-A15	Severity-Value T57 severe
 T58	Eq-Operator 285 287	to
-A16	Eq-Operator-Value T58 BETWEEN
 T59	Condition 314 333	cerebral hemorrhage
-E26	Condition:T59 Name:T60
 T60	Condition-Name 314 333	cerebral hemorrhage
 T61	Condition 335 360	transient ischemic attack
-E27	Condition:T61 Name:T62
 T62	Condition-Name 335 360	transient ischemic attack
 T63	Condition 362 383	myocardial infarction
-E28	Condition:T63 Name:T64
 T64	Condition-Name 362 383	myocardial infarction
 T65	Condition 397 403	angina
-E29	Condition:T65 Name:T66 Stability:T67 Temporality:E31
 T66	Condition-Name 397 403	angina
 T67	Stability 388 396	unstable
-A17	Stability-Value T67 change
 T68	Or 385 387	or
-E30	Or:T68 Arg:E28 Arg2:E29
 T69	Eq-Comparison 411 424	past 6 months
-E31	Eq-Comparison:T69 Temporal-Period:T70 Value:T71 Temporal-Unit:T72
 T70	Eq-Temporal-Period 411 415	past
-A18	Eq-Temporal-Period-Value T70 past
 T71	Eq-Value 416 417	6
 T72	Eq-Temporal-Unit 418 424	months
-A19	Eq-Temporal-Unit-Value T72 month
 T73	Condition 433 446	heart failure
-E32	Condition:T73 Name:T74 Severity:T75
 T74	Condition-Name 433 446	heart failure
 T75	Severity 426 432	severe
-A20	Severity-Value T75 severe
-T76	Condition 448 474	New York Heart Association
-E33	Condition:T76 Name:T77 Stage:E34
-T77	Condition-Name 448 474	New York Heart Association
+T76	Observation 448 474	New York Heart Association
+T77	Observation-Name 448 474	New York Heart Association
 T78	Eq-Comparison 486 502	class III and IV
-E34	Eq-Comparison:T78 Value:T79 Value2:T80 Unit:T81
 T79	Eq-Value 492 495	III
 T80	Eq-Value 500 502	IV
 T81	Eq-Unit 486 491	class
-R1	Equivalent-To Arg1:E33 Arg2:E32	
 T82	Condition 509 525	hypersensitivity
-E35	Condition:T82 Name:T83
 T83	Condition-Name 509 525	hypersensitivity
 T84	Drug 529 540	telmisartan
-E36	Drug:T84 Name:T85
 T85	Drug-Name 529 540	telmisartan
 T86	Drug-Name 544 556	rosuvastatin
 T87	Drug 544 556	rosuvastatin
-E37	Drug:T87 Name:T86
-R2	Caused-By Arg1:E35 Arg2:E36	
-R3	Caused-By Arg1:E35 Arg2:E37	
 T88	Or 541 543	or
-E38	Or:T88 Arg:E36 Arg2:E37
 T89	Eq-Comparison 562 569	history
-E39	Eq-Comparison:T89 Temporal-Period:T90
 T90	Eq-Temporal-Period 562 569	history
-A21	Eq-Temporal-Period-Value T90 past
 T91	Condition 573 583	angioedema
-E40	Condition:T91 Name:T92 Temporality:E39
 T92	Condition-Name 573 583	angioedema
 T93	Procedure 590 599	treatment
-E41	Procedure:T93 
 T94	Temporal-Connection 584 589	after
-E42	Temporal-Connection:T94 Arg:E40 Arg2:E41
-A22	Temporal-Connection-Type-Value E42 after
 T95	Drug 605 645	angiotensin-converting enzyme inhibitors
-E43	Drug:T95 Name:T96
 T96	Drug-Name 605 645	angiotensin-converting enzyme inhibitors
 T97	Drug 649 653	ARBs
-E44	Drug:T97 Name:T98
 T98	Drug-Name 649 653	ARBs
-R4	Using Arg1:E41 Arg2:E43	
 T99	Or 646 648	or
-E45	Or:T99 Arg:E43 Arg2:E44
 T100	Observation 655 679	creatinine phosphokinase
-E46	Observation:T100 Name:T101 Eq-Comparison:E47
 T101	Observation-Name 655 679	creatinine phosphokinase
-A23	Observation-Type-Value T101 lab
 T102	Eq-Comparison 687 721	≥3 times the upper limit of normal
-E47	Eq-Comparison:T102 Operator:T103 Value:T104 Unit:T105
 T103	Eq-Operator 687 688	≥
-A24	Eq-Operator-Value T103 GTEQ
 T104	Eq-Value 688 689	3
 T105	Eq-Unit 700 721	upper limit of normal
-A25	Eq-Unit-Value T105 ref-range-normal
 T106	Observation 727 763	estimated glomerular filtration rate
-E48	Observation:T106 Name:T107 Eq-Comparison:E49
 T107	Observation-Name 727 763	estimated glomerular filtration rate
-A26	Observation-Type-Value T107 lab
 T108	Eq-Comparison 764 774	≤30 mL/min
-E49	Eq-Comparison:T108 Operator:T109 Value:T110 Unit:T111 Per:T112
 T109	Eq-Operator 764 765	≤
-A27	Eq-Operator-Value T109 LTEQ
 T110	Eq-Value 765 767	30
 T111	Eq-Unit 768 770	mL
 T112	Eq-Temporal-Unit 771 774	min
-A28	Eq-Temporal-Unit-Value T112 minute
 T113	Observation 776 802	aspartate aminotransferase
-E50	Observation:T113 Name:T114
 T114	Observation-Name 776 802	aspartate aminotransferase
-A29	Observation-Type-Value T114 lab
 T115	Observation 807 831	alanine aminotransferase
-E51	Observation:T115 Name:T116
 T116	Observation-Name 807 831	alanine aminotransferase
-A30	Observation-Type-Value T116 lab
 T117	Or 803 806	and
-E52	Or:T117 Arg:E50 Arg2:E51
 T118	Eq-Comparison 839 873	≥3 times the upper limit of normal
-E53	Eq-Comparison:T118 Operator:T119 Value:T120 Unit:T121
 T119	Eq-Operator 839 840	≥
-A31	Eq-Operator-Value T119 GTEQ
 T120	Eq-Value 840 841	3
 T121	Eq-Unit 852 873	upper limit of normal
-A32	Eq-Unit-Value T121 ref-range-normal
 T122	Observation 879 888	potassium
-E54	Observation:T122 Name:T123 Eq-Comparison:E55
 T123	Observation-Name 879 888	potassium
-A33	Observation-Type-Value T123 lab
 T124	Eq-Comparison 896 907	>5.5 mmol/L
-E55	Eq-Comparison:T124 Operator:T125 Value:T126 Unit:T127 Per:T128
 T125	Eq-Operator 896 897	>
-A34	Eq-Operator-Value T125 GT
 T126	Eq-Value 897 900	5.5
 T127	Eq-Unit 901 905	mmol
 T128	Eq-Unit 906 907	L
 T129	Study 962 967	study
-E56	Study:T129 Stability:T130
 T130	Stability 936 942	affect
-A35	Stability-Value T130 change
 T131	Assertion 930 935	could
-E57	Assertion:T131 Asserted:T130
-A36	Assertion-Type-Value E57 hypothetical
 T132	Condition 916 924	diseases
-E58	Condition:T132 Name:T133
 T133	Condition-Name 916 924	diseases
 T134	Or 909 911	or
-E59	Or:T134 Arg:E54 Arg2:E58
-R5	Caused-By Arg1:T130 Arg2:E58	
+A1	Observation-Type-Value T2 vital
+A2	Eq-Operator-Value T6 LTEQ
+A3	Eq-Operator-Value T8 LTEQ
+A4	Observation-Type-Value T12 lab
+A5	Eq-Operator-Value T14 LT
+A6	Observation-Type-Value T19 lab
+A7	Eq-Operator-Value T21 LTEQ
+A8	Observation-Type-Value T26 vital
+A9	Eq-Operator-Value T28 GTEQ
+A10	Observation-Type-Value T32 vital
+A11	Eq-Operator-Value T34 GTEQ
+A12	Assertion-Type-Value E13 possible
+A13	Eq-Temporal-Period-Value T52 past
+A14	Severity-Value T56 moderate
+A15	Severity-Value T57 severe
+A16	Eq-Operator-Value T58 BETWEEN
+A17	Stability-Value T67 change
+A18	Eq-Temporal-Period-Value T70 past
+A19	Eq-Temporal-Unit-Value T72 month
+A20	Severity-Value T75 severe
+A21	Eq-Temporal-Period-Value T90 past
+A22	Temporal-Connection-Type-Value E42 after
+A23	Observation-Type-Value T101 lab
+A24	Eq-Operator-Value T103 GTEQ
+A25	Eq-Unit-Value T105 ref-range-normal
+A26	Observation-Type-Value T107 lab
+A27	Eq-Operator-Value T109 LTEQ
+A28	Eq-Temporal-Unit-Value T112 minute
+A29	Observation-Type-Value T114 lab
+A30	Observation-Type-Value T116 lab
+A31	Eq-Operator-Value T119 GTEQ
+A32	Eq-Unit-Value T121 ref-range-normal
+A33	Observation-Type-Value T123 lab
+A34	Eq-Operator-Value T125 GT
+A35	Stability-Value T130 change
+A36	Assertion-Type-Value E57 hypothetical
+A37	Observation-Type-Value T77 clinical-score
+R1	Equivalent-To Arg1:E33 Arg2:E32
+R2	Caused-By Arg1:E35 Arg2:E36
+R3	Caused-By Arg1:E35 Arg2:E37
+R4	Using Arg1:E41 Arg2:E43
+R5	Caused-By Arg1:T130 Arg2:E58

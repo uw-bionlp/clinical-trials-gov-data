@@ -1,91 +1,91 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E10	Age:T14 Eq-Comparison:E2
+E11	Eq-Comparison:T19 Operator:T11 Value:T17 Unit:T44
+E12	Eq-Comparison:T20 Operator:T12 Value:T18 Unit:T45
+E2	Eq-Comparison:T21 Operator:T22 Temporal-Unit:T13 Value:T15
+E4	Procedure:T16 Name:T23
+E6	Procedure:T24 Name:T25
+E7	Observation:T26 Name:T27 Eq-Comparison:E11 Eq-Comparison2:E12
+E14	Condition:T10 Name:T30
+E15	Procedure:T31 Name:T32
+E16	Condition:T33
+E17	Study:T35
+E18	Negation:T36 Negates:E17
+E19	Condition:T37
+E20	Or:T39 Arg:E16 Arg2:E19
+E21	Or:T40 Arg:T8 Arg2:T7
+E22	Modifier:T41 Modifies:T2
+E23	Assertion:T42 Asserted:E4 Asserted2:E6
+E24	Or:T43 Arg:E4 Arg2:E6
+E25	And:T46 Arg:E11 Arg2:E12
+E26	Procedure:T47 Temporality:E27 Location:T28 Location2:T29
+E27	Eq-Comparison:T48 Temporal-Period:T49
+E8	Or:T50 Arg:T28 Arg2:T29
+E9	Or:T9 Arg:E14 Arg2:E3
+E13	Assertion:T34 Asserted:E18
 T1	Condition 102 119	diabetes mellitus
 T2	Condition-Name 102 119	diabetes mellitus
-E1	Condition:T1 Name:T2
 T3	Condition 460 473	breastfeeding
 T4	Condition-Name 460 473	breastfeeding
-E3	Condition:T3 Name:T4
 T5	Condition 204 212	diabetes
 T6	Condition-Name 204 212	diabetes
-E5	Condition:T5 Name:T6
 T7	Life-Stage-And-Gender 34 40	Female
-A1	Life-Stage-And-Gender-Type T7 female
 T8	Life-Stage-And-Gender 25 29	Male
-A2	Life-Stage-And-Gender-Type T8 male
 T11	Eq-Operator 168 169	≥
-A3	Eq-Operator-Value T11 GTEQ
 T12	Eq-Operator 178 179	≤
-A4	Eq-Operator-Value T12 LTEQ
 T13	Eq-Temporal-Unit 45 50	years
-A5	Eq-Temporal-Unit-Value T13 year
 T14	Age 54 57	age
-E10	Age:T14 Eq-Comparison:E2
 T15	Eq-Value 42 44	18
 T17	Eq-Value 169 172	8.0
 T18	Eq-Value 179 183	12.0
 T19	Eq-Comparison 168 173	≥8.0%
-E11	Eq-Comparison:T19 Operator:T11 Value:T17 Unit:T44
 T20	Eq-Comparison 178 184	≤12.0%
-E12	Eq-Comparison:T20 Operator:T12 Value:T18 Unit:T45
 T21	Eq-Comparison 42 66	18 years of age or older
-E2	Eq-Comparison:T21 Operator:T22 Temporal-Unit:T13 Value:T15
 T22	Eq-Operator 58 66	or older
-A6	Eq-Operator-Value T22 GTEQ
 T16	Procedure 140 143	CGM
-E4	Procedure:T16 Name:T23
 T23	Procedure-Name 140 143	CGM
 T24	Procedure 148 151	BGM
-E6	Procedure:T24 Name:T25
 T25	Procedure-Name 148 151	BGM
 T26	Observation 157 160	A1c
-E7	Observation:T26 Name:T27 Eq-Comparison:E11 Eq-Comparison2:E12
 T27	Observation-Name 157 160	A1c
-A7	Observation-Type-Value T27 lab
 T10	Condition 448 456	Pregnant
-E14	Condition:T10 Name:T30
 T30	Condition-Name 448 456	Pregnant
 T31	Procedure 489 501	insulin pump
-E15	Procedure:T31 Name:T32
 T32	Procedure-Name 489 501	insulin pump
 T33	Condition 511 520	condition
-E16	Condition:T33 
 T35	Study 599 604	study
-E17	Study:T35 
 T36	Negation 581 594	inappropriate
-E18	Negation:T36 Negates:E17
 T37	Condition 524 533	situation
-E19	Condition:T37 
 T39	Or 521 523	or
-E20	Or:T39 Arg:E16 Arg2:E19
 T40	Or 30 33	and
-E21	Or:T40 Arg:T8 Arg2:T7
 T41	Modifier 95 101	Type 2
-E22	Modifier:T41 Modifies:T2
 T42	Assertion 125 135	Willing to
-E23	Assertion:T42 Asserted:E4 Asserted2:E6
-A8	Assertion-Type-Value E23 hypothetical
 T43	Or 144 147	and
-E24	Or:T43 Arg:E4 Arg2:E6
 T44	Eq-Unit 172 173	%
 T45	Eq-Unit 183 184	%
 T46	And 174 177	and
-E25	And:T46 Arg:E11 Arg2:E12
 T47	Procedure 213 217	care
-E26	Procedure:T47 Temporality:E27 Location:T28 Location2:T29
-R1	Treatment-For Arg1:E26 Arg2:E5	
 T48	Eq-Comparison 190 197	Receive
-E27	Eq-Comparison:T48 Temporal-Period:T49
 T49	Eq-Temporal-Period 190 197	Receive
-A9	Eq-Temporal-Period-Value T49 present
 T28	Location 223 249	Premier Medical Associates
-A10	Location-Value T28 clinic
 T29	Location 257 285	Palo Alto Medical Foundation
-A11	Location-Value T29 clinic
 T50	Or 250 252	or
-E8	Or:T50 Arg:T28 Arg2:T29
 T9	Or 457 459	or
-E9	Or:T9 Arg:E14 Arg2:E3
 T34	Assertion 581 594	inappropriate
-E13	Assertion:T34 Asserted:E18
+A1	Life-Stage-And-Gender-Type T7 female
+A2	Life-Stage-And-Gender-Type T8 male
+A3	Eq-Operator-Value T11 GTEQ
+A4	Eq-Operator-Value T12 LTEQ
+A5	Eq-Temporal-Unit-Value T13 year
+A6	Eq-Operator-Value T22 GTEQ
+A7	Observation-Type-Value T27 lab
+A8	Assertion-Type-Value E23 hypothetical
+A9	Eq-Temporal-Period-Value T49 present
+A10	Location-Value T28 clinic
+A11	Location-Value T29 clinic
 A12	Assertion-Type-Value E13 hypothetical
-R2	Caused-By Arg1:E18 Arg2:E16	
-R3	Caused-By Arg1:E18 Arg2:E19	
+R1	Treatment-For Arg1:E26 Arg2:E5
+R2	Caused-By Arg1:E18 Arg2:E16
+R3	Caused-By Arg1:E18 Arg2:E19

@@ -1,62 +1,62 @@
-T1	Modifier 41 55	primary immune
 E1	Modifier:T1 Modifies:T22
-T2	Condition 56 72	thrombocytopenic
 E2	Condition:T2 Name:T22 Temporality:E21
-T3	Other 141 146	other
 E3	Other:T3 Is-Other:E5
-T4	Assertion 147 155	possible
 E4	Assertion:T4 Asserted:E5
-A1	Assertion-Type-Value E4 possible
-T5	Condition 156 161	cause
-E5	Condition:T5 
-T6	Condition 165 181	thrombocytopenia
+E5	Condition:T5
 E6	Condition:T6 Name:T23
-T7	Modifier 189 195	immune
 E7	Modifier:T7 Modifies:T23
-T8	Or 196 198	or
 E8	Or:T8 Arg:E7 Arg2:E9
-T9	Modifier 203 209	immune
 E9	Modifier:T9 Modifies:T23
-T10	Condition 233 241	diabetes
 E10	Condition:T10 Name:T25
-T11	Condition 247 250	HCV
 E11	Condition:T11 Name:T26
-T12	Other 256 261	other
 E12	Other:T12 Is-Other:E13
-T13	Condition 262 280	autoimmune disease
 E13	Condition:T13 Name:T27
-T14	Condition 285 288	SLE
 E14	Condition:T14 Name:T28
-T15	Or 289 291	or
 E15	Or:T15 Arg:E14 Arg2:E16
-T16	Condition 292 294	RA
 E16	Condition:T16 Name:T32
-T17	Modifier 309 314	Liver
 E17	Modifier:T17 Modifies:T29
-T18	Or 315 317	or
 E18	Or:T18 Arg:E17 Arg2:E19
-T19	Modifier 318 324	kidney
 E19	Modifier:T19 Modifies:T29
+E20	Condition:T20 Name:T29 Acuteness:T33
+E21	Eq-Comparison:T30 Temporal-Recency:T21
+E22	Negation:T31 Negates:E5
+E23	Negation:T24 Negates:E9
+T1	Modifier 41 55	primary immune
+T2	Condition 56 72	thrombocytopenic
+T3	Other 141 146	other
+T4	Assertion 147 155	possible
+T5	Condition 156 161	cause
+T6	Condition 165 181	thrombocytopenia
+T7	Modifier 189 195	immune
+T8	Or 196 198	or
+T9	Modifier 203 209	immune
+T10	Condition 233 241	diabetes
+T11	Condition 247 250	HCV
+T12	Other 256 261	other
+T13	Condition 262 280	autoimmune disease
+T14	Condition 285 288	SLE
+T15	Or 289 291	or
+T16	Condition 292 294	RA
+T17	Modifier 309 314	Liver
+T18	Or 315 317	or
+T19	Modifier 318 324	kidney
 T20	Condition 325 332	disease
-E20	Condition:T20 Name:T29
 T21	Eq-Temporal-Recency 25 30	newly
-A2	Eq-Temporal-Recency-Value T21 first-time
 T22	Condition-Name 56 72	thrombocytopenic
 T23	Condition-Name 165 181	thrombocytopenia
 T25	Condition-Name 233 241	diabetes
 T26	Condition-Name 247 250	HCV
 T27	Condition-Name 262 280	autoimmune disease
 T28	Condition-Name 285 288	SLE
-T29	Condition-Name 325 332	disease	kidney disease
+T29	Condition-Name 325 332	disease
 T30	Eq-Comparison 25 30	newly
-E21	Eq-Comparison:T30 Temporal-Recency:T21
-R1	Caused-By Arg1:E6 Arg2:E5	
 T31	Negation 115 122	exclude
-E22	Negation:T31 Negates:E5
 T24	Negation 199 202	non
-E23	Negation:T24 Negates:E9
-R2	Example-Of Arg1:E14 Arg2:E13	
 T32	Condition-Name 292 294	RA
-R3	Example-Of Arg1:E16 Arg2:E13	
-T33	Modifier 301 308	Chronic
-E24	Modifier:T33 Modifies:T29
+T33	Acuteness 301 308	Chronic
+A1	Assertion-Type-Value E4 possible
+A2	Eq-Temporal-Recency-Value T21 first-time
+A3	Acuteness-Type-Value T33 chronic
+R1	Caused-By Arg1:E6 Arg2:E5
+R2	Example-Of Arg1:E14 Arg2:E13
+R3	Example-Of Arg1:E16 Arg2:E13

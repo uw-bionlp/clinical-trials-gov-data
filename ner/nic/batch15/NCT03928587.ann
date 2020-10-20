@@ -1,66 +1,66 @@
+E1	Condition:T1 Name:T2 Severity:T15 Acuteness:T35
+E2	Age:T7 Eq-Comparison:E3
+E3	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6
+E4	Condition:T12 Name:T13
+E5	Negation:T14 Negates:E1
+E6	And:T16 Arg:T3 Arg2:E5
+E7	Procedure:T17 Name:T18
+E8	Assertion:T19 Asserted:E7
+E9	Drug:T20 Name:T21 Dose:E10
+E10	Eq-Comparison:T22 Per:T23
+E11	Assertion:T24 Asserted:E9
+E12	Condition:T25 Severity:T26
+E13	And:T27 Arg:T4 Arg2:E12
+E14	Condition:T28 Name:T29
+E15	Modifier:T31 Modifies:T29
+E16	Modifier:T32 Modifies:T29
+E17	Or:T33 Arg:E15 Arg2:E16
+E18	Family-Member:T34 Has:T5
 T1	Condition 73 80	disease
 T2	Condition-Name 73 80	disease
-E1	Condition:T1 Name:T2 Severity:T15
 T3	Life-Stage-And-Gender 33 41	children
-A1	Life-Stage-And-Gender-Type T3 child
 T4	Life-Stage-And-Gender 332 340	Children
-A2	Life-Stage-And-Gender-Type T4 child
 T5	Life-Stage-And-Gender 423 431	Children
-A3	Life-Stage-And-Gender-Type T5 child
 T6	Eq-Temporal-Unit 94 99	years
-A4	Eq-Temporal-Unit-Value T6 year
 T7	Age 86 89	Age
-E2	Age:T7 Eq-Comparison:E3
 T8	Eq-Operator 91 92	-
-A5	Eq-Operator-Value T8 BETWEEN
 T9	Eq-Value 90 91	5
 T10	Eq-Value 92 93	8
 T11	Eq-Comparison 90 99	5-8 years
-E3	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6
 T12	Condition 25 32	Healthy
-E4	Condition:T12 Name:T13
 T13	Condition-Name 25 32	Healthy
 T14	Negation 47 57	absence of
-E5	Negation:T14 Negates:E1
 T15	Severity 58 64	severe
-A6	Severity-Value T15 severe
 T16	And 42 46	with
-E6	And:T16 Arg:T3 Arg2:E5
 T17	Procedure 159 177	dental examination
-E7	Procedure:T17 Name:T18
 T18	Procedure-Name 159 177	dental examination
 T19	Assertion 135 145	Ability to
-E8	Assertion:T19 Asserted:E7
-A7	Assertion-Type-Value E8 hypothetical
 T20	Drug 227 234	lozenge
-E9	Drug:T20 Name:T21 Dose:E10
 T21	Drug-Name 227 234	lozenge
 T22	Eq-Comparison 209 214	daily
-E10	Eq-Comparison:T22 Per:T23
 T23	Eq-Temporal-Unit 209 214	daily
-A8	Eq-Temporal-Unit-Value T23 day
 T24	Assertion 183 193	Ability to
-E11	Assertion:T24 Asserted:E9
-A9	Assertion-Type-Value E11 hypothetical
 T25	Condition 353 371	medical conditions
-E12	Condition:T25 Severity:T26
 T26	Severity 346 352	severe
-A10	Severity-Value T26 severe
 T27	And 341 345	with
-E13	And:T27 Arg:T4 Arg2:E12
 T28	Condition 400 408	disabled
-E14	Condition:T28 Name:T29
 T29	Condition-Name 400 408	disabled
 T30	Life-Stage-And-Gender 409 417	children
-A11	Life-Stage-And-Gender-Type T30 child
 T31	Modifier 377 385	Mentally
-E15	Modifier:T31 Modifies:T29
 T32	Modifier 389 399	physically
-E16	Modifier:T32 Modifies:T29
 T33	Or 386 388	or
-E17	Or:T33 Arg:E15 Arg2:E16
 T34	Family-Member 435 442	parents
-E18	Family-Member:T34 Has:T5
+T35	Acuteness 65 72	chronic
+A1	Life-Stage-And-Gender-Type T3 child
+A2	Life-Stage-And-Gender-Type T4 child
+A3	Life-Stage-And-Gender-Type T5 child
+A4	Eq-Temporal-Unit-Value T6 year
+A5	Eq-Operator-Value T8 BETWEEN
+A6	Severity-Value T15 severe
+A7	Assertion-Type-Value E8 hypothetical
+A8	Eq-Temporal-Unit-Value T23 day
+A9	Assertion-Type-Value E11 hypothetical
+A10	Severity-Value T26 severe
+A11	Life-Stage-And-Gender-Type T30 child
 A12	Family-Member-Type E18 parent
-T35	Modifier 65 72	chronic
-E19	Modifier:T35 Modifies:E1
+A13	Acuteness-Type-Value T35 chronic

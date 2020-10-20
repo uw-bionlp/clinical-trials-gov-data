@@ -1,0 +1,28 @@
+T1	Modifier 25 34	Bilateral
+E1	Modifier:T1 Modifies:T11
+T2	Condition 35 47	hearing loss
+E2	Condition:T2 Name:T11
+T4	Study 76 81	study
+E4	Study:T4 Study-Of:E5
+T5	Procedure 82 94	hearing aids
+E5	Procedure:T5 Name:T12
+T6	Negation 130 141	unqualified
+E6	Negation:T6 Negates:E7
+T7	Procedure 153 165	hearing aids
+E7	Procedure:T7 Name:T13
+T8	Eq-Comparison 171 178	Current
+E8	Eq-Comparison:T8 Temporal-Period:T14
+T9	Procedure 179 190	hearing aid
+E9	Procedure:T9 Name:T16 Temporality:E8
+T10	Condition 201 221	Cognitively impaired
+E10	Condition:T10 Name:T15
+T11	Condition-Name 35 47	hearing loss
+T12	Procedure-Name 82 94	hearing aids
+T13	Procedure-Name 153 165	hearing aids
+T14	Eq-Temporal-Period 171 178	Current
+A1	Eq-Temporal-Period-Value T14 present
+T15	Condition-Name 201 221	Cognitively impaired
+T3	Assertion 130 141	unqualified
+E3	Assertion:T3 Asserted:E6
+A2	Assertion-Type-Value E3 hypothetical
+T16	Procedure-Name 179 190	hearing aid

@@ -1,0 +1,100 @@
+T1	Procedure 100 104	ICSI
+T2	Procedure-Name 100 104	ICSI
+E1	Procedure:T1 Name:T2
+T3	Procedure 94 97	IVF
+T4	Procedure-Name 94 97	IVF
+E3	Procedure:T3 Name:T4 Temporality:E29
+T5	Procedure 670 703	Surgery for reversal of vasectomy
+T6	Procedure-Name 670 703	Surgery for reversal of vasectomy
+E5	Procedure:T5 Name:T6
+T7	Procedure 437 451	Tubal ligation
+T8	Procedure-Name 437 451	Tubal ligation
+E7	Procedure:T7 Name:T8
+T9	Procedure 457 483	Reversal of tubal ligation
+T10	Procedure-Name 457 483	Reversal of tubal ligation
+E9	Procedure:T9 Name:T10
+T11	Condition 489 502	Endometriosis
+T12	Condition-Name 489 502	Endometriosis
+E11	Condition:T11 Name:T12
+T13	Procedure 329 341	Chemotherapy
+T14	Procedure-Name 329 341	Chemotherapy
+E13	Procedure:T13 Name:T14
+T15	Procedure 564 576	Chemotherapy
+T16	Procedure-Name 564 576	Chemotherapy
+E15	Procedure:T15 Name:T16 Temporality:E33
+T17	Procedure 345 354	radiation
+T18	Procedure-Name 345 354	radiation
+E17	Procedure:T17 Name:T18
+T19	Procedure 579 588	Radiation
+T20	Procedure-Name 579 588	Radiation
+E19	Procedure:T19 Name:T20
+T21	Life-Stage-And-Gender 291 297	female
+A1	Life-Stage-And-Gender-Type T21 female
+T22	Life-Stage-And-Gender 528 532	male
+A2	Life-Stage-And-Gender-Type T22 male
+T23	Procedure 655 664	Vasectomy
+E2	Procedure:T23 Name:T24
+T24	Procedure-Name 655 664	Vasectomy
+T25	Procedure 625 632	Surgery
+E4	Procedure:T25 Name:T26
+T26	Procedure-Name 625 632	Surgery
+T27	Or 577 578	/
+E6	Or:T27 Arg:E15 Arg2:E19
+T28	Procedure 394 401	Surgery
+E8	Procedure:T28 Name:T29
+T29	Procedure-Name 394 401	Surgery
+T30	Modifier 409 416	ovaries
+E10	Modifier:T30 Modifies:T29
+T31	Modifier 419 431	adnex region
+E12	Modifier:T31 Modifies:T29
+T32	Or 417 418	/
+E14	Or:T32 Arg:E10 Arg2:E12
+T33	Or 342 344	or
+E16	Or:T33 Arg:E13 Arg2:E17
+T34	Observation 257 265	donation
+E18	Observation:T34 Name:T35 Temporality:E23
+T35	Observation-Name 257 265	donation
+T36	Modifier 251 256	sperm
+E20	Modifier:T36 Modifies:T35
+T37	Modifier 240 246	oocyte
+E21	Modifier:T37 Modifies:T35
+T38	Or 247 250	and
+E22	Or:T38 Arg:E21 Arg2:E20
+T39	Eq-Comparison 228 235	planned
+E23	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 228 235	planned
+A3	Eq-Temporal-Period-Value T40 future
+T41	Condition 55 66	infertility
+E24	Condition:T41 Name:T42
+T42	Condition-Name 55 66	infertility
+T43	Modifier 35 42	primary
+E25	Modifier:T43 Modifies:T42
+T44	Modifier 45 54	secondary
+E26	Modifier:T44 Modifies:T42
+T45	Or 43 44	/
+E27	Or:T45 Arg:E25 Arg2:E26
+T46	Or 98 99	/
+E28	Or:T46 Arg:E3 Arg2:E1
+T47	Eq-Comparison 75 93	planned to undergo
+E29	Eq-Comparison:T47 Temporal-Period:T48
+T48	Eq-Temporal-Period 75 93	planned to undergo
+A4	Eq-Temporal-Period-Value T48 future
+T49	And 67 70	who
+E30	And:T49 Arg:E24 Arg2:E3
+T50	Condition 607 612	semen
+E31	Condition:T50 Name:T51 Stability:T52
+T51	Condition-Name 607 612	semen
+T52	Stability 595 602	impacts
+A5	Stability-Value T52 change
+R1	Caused-By Arg1:T52 Arg2:E19
+T53	Eq-Comparison 312 319	history
+E32	Eq-Comparison:T53 Temporal-Period:T54
+T54	Eq-Temporal-Period 312 319	history
+A6	Eq-Temporal-Period-Value T54 past
+T55	Eq-Comparison 547 554	history
+E33	Eq-Comparison:T55 Temporal-Period:T56
+T56	Eq-Temporal-Period 547 554	history
+A7	Eq-Temporal-Period-Value T56 past
+T57	Modifier 640 649	testicles
+E34	Modifier:T57 Modifies:T26
+R2	Caused-By Arg1:T52 Arg2:E15	

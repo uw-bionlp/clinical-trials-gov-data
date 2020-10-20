@@ -1,0 +1,50 @@
+T1	Condition 35 45	parturient
+E1	Condition:T1 Name:T16
+T2	Eq-Comparison 51 58	planned
+E2	Eq-Comparison:T2 Temporal-Period:T17
+T3	Modifier 63 71	elective
+E3	Modifier:T3 Modifies:T30
+T4	Procedure 72 76	LSCS
+E4	Procedure:T4 Name:T30 Temporality:E2
+T5	Procedure 83 100	spinal anesthesia
+E5	Procedure:T5 Name:T18
+T6	Observation 126 141	gestational age
+E6	Observation:T6 Name:T19 Eq-Comparison:E7
+T7	Eq-Comparison 142 152	< 36 weeks
+E7	Eq-Comparison:T7 Operator:T20 Value:T21 Temporal-Unit:T22
+T8	Condition 179 194	placenta previa
+E8	Condition:T8 Name:T24
+T11	Condition 196 209	pre-eclampsia
+E11	Condition:T11 Name:T25
+T12	Observation 215 218	BMI
+E12	Observation:T12 Name:T23 Eq-Comparison:E17
+T13	Condition 227 243	Reynauld disease
+E13	Condition:T13 Name:T27
+T15	Condition 270 292	cardiovascular disease
+E15	Condition:T15 Name:T28
+T16	Condition-Name 35 45	parturient
+T17	Eq-Temporal-Period 51 58	planned
+A2	Eq-Temporal-Period-Value T17 future
+T18	Procedure-Name 83 100	spinal anesthesia
+T19	Observation-Name 126 141	gestational age
+T20	Eq-Operator 142 143	<
+A3	Eq-Operator-Value T20 LT
+T21	Eq-Value 144 146	36
+T22	Eq-Temporal-Unit 147 152	weeks
+A4	Eq-Temporal-Unit-Value T22 week
+T24	Condition-Name 179 194	placenta previa
+T25	Condition-Name 196 209	pre-eclampsia
+T26	Eq-Operator 218 219	>
+A5	Eq-Operator-Value T26 GTEQ
+T27	Condition-Name 227 243	Reynauld disease
+T28	Condition-Name 270 292	cardiovascular disease
+T29	Modifier 25 34	singleton
+E16	Modifier:T29 Modifies:T16
+T30	Procedure-Name 72 76	LSCS
+R1	Using Arg1:E4 Arg2:E5	
+A6	Observation-Type-Value T19 measurement
+T23	Observation-Name 215 218	BMI
+A7	Observation-Type-Value T23 vital
+T31	Eq-Comparison 218 221	>40
+E17	Eq-Comparison:T31 Value:T32 Operator:T26
+T32	Eq-Value 219 221	40

@@ -1,68 +1,124 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E9	Condition:T9 Name:T10
+E13	Condition:T13 Name:T14 Temporality:E78
+E15	Condition:T15 Name:T16 Temporality:E78
+E17	Condition:T17 Name:T18 Temporality:E78
+E19	Procedure:T19 Name:T20
+E21	Condition:T21 Name:T22
+E23	Observation:T23 Name:T24
+E25	Condition:T25 Name:T26
+E27	Condition:T27 Name:T28
+E29	Condition:T29 Name:T30 Stability:T8
+E31	Procedure:T31 Name:T32
+E33	Procedure:T33 Name:T34
+E35	Eq-Comparison:T57 Operator:T35 Temporal-Unit:T43 Value:T49
+E36	Eq-Comparison:T58 Operator:T36 Value:T50
+E37	Eq-Comparison:T59 Operator:T37 Value:T51
+E38	Eq-Comparison:T60 Operator:T38 Value:T52 Unit:T45
+E39	Eq-Comparison:T61 Operator:T39 Unit:T46 Value:T53
+E40	Eq-Comparison:T62 Operator:T41 Temporal-Unit:T44 Value:T55
+E41	Eq-Comparison:T63 Operator:T42 Value:T56 Unit:T47
+E2	Procedure:T64 Name:T65
+E4	Assertion:T66 Asserted:E5 Polarity:T70
+E6	Or:T67 Arg:E9 Arg2:E1
+E16	Age:T74 Eq-Comparison:E35
+E18	Observation:T75 Name:T76 Eq-Comparison:E36
+E20	Modifier:T48 Modifies:E18
+E22	Procedure:T77 Name:T78 Temporality:E80
+E24	Or:T79 Arg:E15 Arg2:E13
+E26	Procedure:T80 Name:T81
+E28	Condition:T82 Name:T83 Temporality:E79
+E30	Or:T84 Arg:E26 Arg2:E28
+E32	Negation:T85 Negates:E19
+E34	Assertion:T86 Asserted:E32
+E42	Condition:T87 Name:T88
+E43	Procedure:T89 Name:T90
+E44	Contraindication:T91 Contraindicates:E43
+E45	And:T92 Arg:E21 Arg2:E23
+E46	Observation:T93 Name:T94 Eq-Comparison:E37
+E47	Condition:T95 Name:T96
+E48	Encounter:T97
+E49	Condition:T99
+E50	Temporal-Connection:T100 Arg:E49 Arg2:E48
+E51	Condition:T101 Name:T102
+E52	Assertion:T103 Asserted:E33
+E53	Condition:T104 Name:T105
+E54	Negation:T106 Negates:E53
+E57	Condition:T110 Name:T111
+E58	Modifier:T112 Modifies:T111
+E59	Modifier:T113 Modifies:T111
+E60	Modifier:T114 Modifies:T111
+E61	And:T115 Arg:E58 Arg2:E59
+E62	Or:T116 Arg:E59 Arg2:E60
+E63	Observation:T117 Name:T118 Eq-Comparison:E39
+E64	Observation:T119 Name:T120
+E65	Observation:T121 Name:T122 Eq-Comparison:E66
+E66	Eq-Comparison:T123 Operator:T40 Value:T54
+E67	Observation:T124 Name:T125 Eq-Comparison:E40
+E68	Observation:T126 Name:T127 Eq-Comparison:E41
+E69	Modifier:T128 Modifies:T127
+E70	Modifier:T129 Modifies:T127
+E71	And:T130 Arg:E69 Arg2:E70
+E72	Condition:T131 Name:T132
+E73	Observation:T133 Name:T134 Stability:T68
+E74	Negation:T135 Negates:E73
+E75	Condition:T136 Name:T137
+E76	Condition:T138 Name:T139
+E77	Or:T140 Arg:E2 Arg2:E4
+E78	Eq-Comparison:T142 Temporal-Period:T143
+E79	Eq-Comparison:T144 Temporal-Period:T145
+E80	Eq-Comparison:T146 Temporal-Period:T147
+E81	Negation:T148 Negates:E76
+E10	Assertion:T11 Asserted:E3
+E11	Condition:T12
+E12	Observation:T72 Name:T73
+E14	Procedure:T107 Name:T108
+E55	Or:T109 Arg:E12 Arg2:E14
+E7	Other:T7 Is-Other:E49
+E8	Procedure:T69 Name:T141
+E56	Condition:T71 Name:T149
 T1	Condition 165 185	obstructive jaundice
 T2	Condition-Name 165 185	obstructive jaundice
-E1	Condition:T1 Name:T2
 T3	Condition 37 56	choledocholithiasis
 T4	Condition-Name 37 56	choledocholithiasis
-E3	Condition:T3 Name:T4
 T5	Condition 58 77	choledocholithiasis
 T6	Condition-Name 58 77	choledocholithiasis
-E5	Condition:T5 Name:T6
 T9	Condition 144 161	acute cholangitis
 T10	Condition-Name 144 161	acute cholangitis
-E9	Condition:T9 Name:T10
 T13	Condition 584 607	lithiasic cholecystitis
 T14	Condition-Name 584 607	lithiasic cholecystitis
-E13	Condition:T13 Name:T14 Temporality:E78
 T15	Condition 568 580	pancreatitis
 T16	Condition-Name 568 580	pancreatitis
-E15	Condition:T15 Name:T16 Temporality:E78
 T17	Condition 555 566	cholangitis
 T18	Condition-Name 555 566	cholangitis
-E17	Condition:T17 Name:T18 Temporality:E78
 T19	Procedure 715 736	sedation of endoscopy
 T20	Procedure-Name 715 736	sedation of endoscopy
-E19	Procedure:T19 Name:T20
 T21	Condition 818 830	Coagulopathy
 T22	Condition-Name 818 830	Coagulopathy
-E21	Condition:T21 Name:T22
 T23	Observation 836 839	INR
 T24	Observation-Name 836 839	INR
-E23	Observation:T23 Name:T24
 T25	Condition 980 999	acute cholecystitis
 T26	Condition-Name 980 999	acute cholecystitis
-E25	Condition:T25 Name:T26
 T27	Condition 1001 1019	acute pancreatitis
 T28	Condition-Name 1001 1019	acute pancreatitis
-E27	Condition:T27 Name:T28
 T29	Condition 1054 1065	Hemodynamic
 T30	Condition-Name 1054 1065	Hemodynamic
-E29	Condition:T29 Name:T30 Stability:T8
 T31	Procedure 1084 1100	Urgent procedure
 T32	Procedure-Name 1084 1100	Urgent procedure
-E31	Procedure:T31 Name:T32
 T33	Procedure 1234 1250	biliary drainage
 T34	Procedure-Name 1234 1250	biliary drainage
-E33	Procedure:T33 Name:T34
 T35	Eq-Operator 430 431	>
-A1	Eq-Operator-Value T35 GT
 T36	Eq-Operator 508 509	<
-A2	Eq-Operator-Value T36 LT
 T37	Eq-Operator 873 874	>
-A3	Eq-Operator-Value T37 GT
 T38	Eq-Operator 915 916	<
-A4	Eq-Operator-Value T38 LT
 T39	Eq-Operator 1351 1352	<
-A5	Eq-Operator-Value T39 LT
 T40	Eq-Operator 1417 1420	> =
-A6	Eq-Operator-Value T40 GTEQ
 T41	Eq-Operator 1451 1452	<
-A7	Eq-Operator-Value T41 LT
 T42	Eq-Operator 1554 1555	>
-A8	Eq-Operator-Value T42 GT
 T43	Eq-Temporal-Unit 434 439	years
-A9	Eq-Temporal-Unit-Value T43 year
 T44	Eq-Temporal-Unit 1454 1460	months
-A10	Eq-Temporal-Unit-Value T44 month
 T45	Eq-Unit 924 927	mm3
 T46	Eq-Unit 1355 1357	mm
 T47	Eq-Unit 1557 1559	cm
@@ -75,201 +131,145 @@ T54	Eq-Value 1421 1422	4
 T55	Eq-Value 1452 1453	6
 T56	Eq-Value 1556 1557	1
 T57	Eq-Comparison 430 439	>75 years
-E35	Eq-Comparison:T57 Operator:T35 Temporal-Unit:T43 Value:T49
 T58	Eq-Comparison 508 510	<4
-E36	Eq-Comparison:T58 Operator:T36 Value:T50
 T59	Eq-Comparison 873 878	> 1.5
-E37	Eq-Comparison:T59 Operator:T37 Value:T51
 T60	Eq-Comparison 915 927	<50000 / mm3
-E38	Eq-Comparison:T60 Operator:T38 Value:T52 Unit:T45
 T61	Eq-Comparison 1351 1357	<10 mm
-E39	Eq-Comparison:T61 Operator:T39 Unit:T46 Value:T53
 T62	Eq-Comparison 1451 1460	<6 months
-E40	Eq-Comparison:T62 Operator:T41 Temporal-Unit:T44 Value:T55
 T63	Eq-Comparison 1554 1559	> 1cm
-E41	Eq-Comparison:T63 Operator:T42 Value:T56 Unit:T47
 T64	Procedure 91 105	radiologically
-E2	Procedure:T64 Name:T65
 T65	Procedure-Name 91 105	radiologically
-R1	Found-By Arg1:E5 Arg2:E2	
 T66	Assertion 116 125	suspected
-E4	Assertion:T66 Asserted:E5 Polarity:T70
-A11	Assertion-Type-Value E4 possible
-R2	Equivalent-To Arg1:E5 Arg2:E3	
 T67	Or 162 164	or
-E6	Or:T67 Arg:E9 Arg2:E1
 T70	Polarity 109 115	highly
-A14	Polarity-Value T70 high
 T74	Age 427 430	Age
-E16	Age:T74 Eq-Comparison:E35
 T75	Observation 465 491	Charlson comorbidity scale
-E18	Observation:T75 Name:T76 Eq-Comparison:E36
 T76	Observation-Name 465 491	Charlson comorbidity scale
-A15	Observation-Type-Value T76 clinical-score
 T48	Modifier 492 507	adjusted to age
-E20	Modifier:T48 Modifies:E18
 T77	Procedure 523 527	ERCP
-E22	Procedure:T77 Name:T78 Temporality:E80
 T78	Procedure-Name 523 527	ERCP
 T79	Or 581 583	or
-E24	Or:T79 Arg:E15 Arg2:E13
 T80	Procedure 614 635	Hepatobiliary surgery
-E26	Procedure:T80 Name:T81
 T81	Procedure-Name 614 635	Hepatobiliary surgery
 T82	Condition 648 672	superior digestive tract
-E28	Condition:T82 Name:T83 Temporality:E79
 T83	Condition-Name 648 672	superior digestive tract
 T84	Or 636 638	or
-E30	Or:T84 Arg:E26 Arg2:E28
 T85	Negation 693 702	Inability
-E32	Negation:T85 Negates:E19
 T86	Assertion 706 714	tolerate
-E34	Assertion:T86 Asserted:E32
-A16	Assertion-Type-Value E34 hypothetical
 T87	Condition 738 772	perforation of the digestive tract
-E42	Condition:T87 Name:T88
 T88	Condition-Name 738 772	perforation of the digestive tract
 T89	Procedure 802 811	endoscopy
-E43	Procedure:T89 Name:T90
 T90	Procedure-Name 802 811	endoscopy
 T91	Contraindication 782 798	contraindication
-E44	Contraindication:T91 Contraindicates:E43
-R4	Example-Of Arg1:E42 Arg2:E44	
-R5	Example-Of Arg1:E32 Arg2:E44	
-A17	Observation-Type-Value T24 lab
 T92	And 831 835	with
-E45	And:T92 Arg:E21 Arg2:E23
 T93	Observation 841 871	international normalized ratio
-E46	Observation:T93 Name:T94 Eq-Comparison:E37
 T94	Observation-Name 841 871	international normalized ratio
-A18	Observation-Type-Value T94 lab
-R6	Abbrev-Of Arg1:E23 Arg2:E46	
 T95	Condition 898 914	thrombocytopenia
-E47	Condition:T95 Name:T96
 T96	Condition-Name 898 914	thrombocytopenia
 T97	Encounter 969 978	admission
-E48	Encounter:T97 
 T98	Encounter-Type 969 978	admission
-A19	Encounter-Type-Value T98 inpatient
 T99	Condition 956 965	diagnoses
-E49	Condition:T99 
 T100	Temporal-Connection 966 968	at
-E50	Temporal-Connection:T100 Arg:E49 Arg2:E48
-A20	Temporal-Connection-Type-Value E50 during
-R7	Example-Of Arg1:E25 Arg2:E49	
-R8	Example-Of Arg1:E27 Arg2:E49	
 T101	Condition 1021 1046	biliopancreatic neoplasia
-E51	Condition:T101 Name:T102
 T102	Condition-Name 1021 1046	biliopancreatic neoplasia
-R9	Example-Of Arg1:E51 Arg2:E49	
 T103	Assertion 1206 1219	impossibility
-E52	Assertion:T103 Asserted:E33
-A21	Assertion-Type-Value E52 hypothetical
 T104	Condition 1263 1283	vesicular distension
-E53	Condition:T104 Name:T105
 T105	Condition-Name 1263 1283	vesicular distension
 T106	Negation 1252 1259	absence
-E54	Negation:T106 Negates:E53
 T110	Condition 1285 1292	contact
-E57	Condition:T110 Name:T111
 T111	Condition-Name 1285 1292	contact
 T112	Modifier 1301 1312	gallbladder
-E58	Modifier:T112 Modifies:T111
 T113	Modifier 1317 1324	stomach
-E59	Modifier:T113 Modifies:T111
 T114	Modifier 1328 1336	duodenum
-E60	Modifier:T114 Modifies:T111
 T115	And 1313 1316	and
-E61	And:T115 Arg:E58 Arg2:E59
 T116	Or 1325 1327	or
-E62	Or:T116 Arg:E59 Arg2:E60
-R10	Example-Of Arg1:E57 Arg2:E33	
-R11	Example-Of Arg1:E53 Arg2:E33	
 T117	Observation 1338 1350	contact area
-E63	Observation:T117 Name:T118 Eq-Comparison:E39
 T118	Observation-Name 1338 1350	contact area
-R12	Example-Of Arg1:E63 Arg2:E33	
 T119	Observation 1374 1378	ECOG
-E64	Observation:T119 Name:T120
 T120	Observation-Name 1374 1378	ECOG
 T121	Observation 1380 1415	Easthern Cooperative Oncology Group
-E65	Observation:T121 Name:T122 Eq-Comparison:E66
 T122	Observation-Name 1380 1415	Easthern Cooperative Oncology Group
-R13	Abbrev-Of Arg1:E64 Arg2:E65	
 T123	Eq-Comparison 1417 1422	> = 4
-E66	Eq-Comparison:T123 Operator:T40 Value:T54
 T124	Observation 1428 1450	Expectancy of survival
-E67	Observation:T124 Name:T125 Eq-Comparison:E40
 T125	Observation-Name 1428 1450	Expectancy of survival
 T126	Observation 1496 1504	Distance
-E68	Observation:T126 Name:T127 Eq-Comparison:E41
 T127	Observation-Name 1496 1504	Distance
 T128	Modifier 1517 1528	gallbladder
-E69	Modifier:T128 Modifies:T127
 T129	Modifier 1533 1554	upper digestive tract
-E70	Modifier:T129 Modifies:T127
 T130	And 1529 1532	and
-E71	And:T130 Arg:E69 Arg2:E70
 T131	Condition 1561 1583	scleroatrophic vesicle
-E72	Condition:T131 Name:T132
 T132	Condition-Name 1561 1583	scleroatrophic vesicle
 T133	Observation 1600 1615	acoustic window
-E73	Observation:T133 Name:T134 Stability:T68
 T134	Observation-Name 1600 1615	acoustic window
 T135	Negation 1585 1592	lack of
-E74	Negation:T135 Negates:E73
 T136	Condition 1634 1638	ERCP
-E75	Condition:T136 Name:T137
 T137	Condition-Name 1634 1638	ERCP
 T138	Condition 1661 1682	dain common bile duct
-E76	Condition:T138 Name:T139
 T139	Condition-Name 1661 1682	dain common bile duct
 T140	Or 106 108	or
-E77	Or:T140 Arg:E2 Arg2:E4
 T142	Eq-Comparison 534 542	Previous
-E78	Eq-Comparison:T142 Temporal-Period:T143
 T143	Eq-Temporal-Period 534 542	Previous
-A23	Eq-Temporal-Period-Value T143 past
 T144	Eq-Comparison 639 647	previous
-E79	Eq-Comparison:T144 Temporal-Period:T145
 T145	Eq-Temporal-Period 639 647	previous
-A24	Eq-Temporal-Period-Value T145 past
 T146	Eq-Comparison 517 522	Prior
-E80	Eq-Comparison:T146 Temporal-Period:T147
 T147	Eq-Temporal-Period 517 522	Prior
-A25	Eq-Temporal-Period-Value T147 past
-A26	Observation-Type-Value T118 measurement
 T148	Negation 1647 1657	inhability
-E81	Negation:T148 Negates:E76
 T11	Assertion 25 36	Symptomatic
-E10	Assertion:T11 Asserted:E3
-A22	Assertion-Type-Value E10 possible
 T12	Condition 129 142	clinical data
-E11	Condition:T12 
-R3	Found-By Arg1:E5 Arg2:E11	
-R15	Equivalent-To Arg1:E9 Arg2:E11	
-R16	Equivalent-To Arg1:E1 Arg2:E11	
 T72	Observation 188 198	analytical
-E12	Observation:T72 Name:T73
 T73	Observation-Name 188 198	analytical
 T107	Procedure 203 210	imaging
-E14	Procedure:T107 Name:T108
 T108	Procedure-Name 203 210	imaging
 T109	Or 199 202	and
-E55	Or:T109 Arg:E12 Arg2:E14
-R17	Found-By Arg1:E5 Arg2:E12	
-R18	Found-By Arg1:E5 Arg2:E14	
 T7	Other 950 955	Other
-E7	Other:T7 Is-Other:E49
 T8	Stability 1066 1077	instability
-A12	Stability-Value T8 change
 T68	Stability 1593 1599	stable
-A13	Stability-Value T68 stable
 T69	Procedure 1620 1628	drainage
-E8	Procedure:T69 Name:T141
 T141	Procedure-Name 1620 1628	drainage
-R19	Using Arg1:E8 Arg2:E73	
-R14	Equivalent-To Arg1:E81 Arg2:E75	
 T71	Condition 679 686	Ascitis
-E56	Condition:T71 Name:T149
 T149	Condition-Name 679 686	Ascitis
+A1	Eq-Operator-Value T35 GT
+A2	Eq-Operator-Value T36 LT
+A3	Eq-Operator-Value T37 GT
+A4	Eq-Operator-Value T38 LT
+A5	Eq-Operator-Value T39 LT
+A6	Eq-Operator-Value T40 GTEQ
+A7	Eq-Operator-Value T41 LT
+A8	Eq-Operator-Value T42 GT
+A9	Eq-Temporal-Unit-Value T43 year
+A10	Eq-Temporal-Unit-Value T44 month
+A11	Assertion-Type-Value E4 possible
+A14	Polarity-Value T70 high
+A15	Observation-Type-Value T76 clinical-score
+A16	Assertion-Type-Value E34 hypothetical
+A17	Observation-Type-Value T24 lab
+A18	Observation-Type-Value T94 lab
+A19	Encounter-Type-Value T98 inpatient
+A20	Temporal-Connection-Type-Value E50 during
+A21	Assertion-Type-Value E52 hypothetical
+A23	Eq-Temporal-Period-Value T143 past
+A24	Eq-Temporal-Period-Value T145 past
+A25	Eq-Temporal-Period-Value T147 past
+A26	Observation-Type-Value T118 measurement
+A22	Assertion-Type-Value E10 possible
+A12	Stability-Value T8 change
+A13	Stability-Value T68 stable
+R1	Found-By Arg1:E5 Arg2:E2
+R2	Equivalent-To Arg1:E5 Arg2:E3
+R4	Example-Of Arg1:E42 Arg2:E44
+R5	Example-Of Arg1:E32 Arg2:E44
+R6	Abbrev-Of Arg1:E23 Arg2:E46
+R7	Example-Of Arg1:E25 Arg2:E49
+R8	Example-Of Arg1:E27 Arg2:E49
+R9	Example-Of Arg1:E51 Arg2:E49
+R10	Example-Of Arg1:E57 Arg2:E33
+R11	Example-Of Arg1:E53 Arg2:E33
+R12	Example-Of Arg1:E63 Arg2:E33
+R13	Abbrev-Of Arg1:E64 Arg2:E65
+R3	Found-By Arg1:E5 Arg2:E11
+R15	Equivalent-To Arg1:E9 Arg2:E11
+R16	Equivalent-To Arg1:E1 Arg2:E11
+R17	Found-By Arg1:E5 Arg2:E12
+R18	Found-By Arg1:E5 Arg2:E14
+R19	Using Arg1:E8 Arg2:E73
+R14	Equivalent-To Arg1:E81 Arg2:E75

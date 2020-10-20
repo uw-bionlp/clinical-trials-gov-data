@@ -1,0 +1,108 @@
+T1	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T1 adult
+T2	Condition 113 116	IBD
+T3	Condition-Name 113 116	IBD
+E2	Condition:T2 Name:T3
+T4	Procedure 220 247	colorectal cancer screening
+T5	Procedure-Name 220 247	colorectal cancer screening
+E4	Procedure:T4 Name:T5
+T6	Condition 459 478	microscopic colitis
+T7	Condition-Name 459 478	microscopic colitis
+E6	Condition:T6 Name:T7
+T8	Condition 420 438	infectious colitis
+T9	Condition-Name 420 438	infectious colitis
+E8	Condition:T8 Name:T9
+T10	Condition 440 454	diverticulitis
+T11	Condition-Name 440 454	diverticulitis
+E10	Condition:T10 Name:T11
+T14	Eq-Operator 41 42	≥
+A2	Eq-Operator-Value T14 GTEQ
+T15	Eq-Temporal-Unit 46 51	years
+A3	Eq-Temporal-Unit-Value T15 year
+T16	Age 55 58	age
+E13	Age:T16 Eq-Comparison:E14
+T17	Eq-Value 43 45	18
+T18	Eq-Comparison 41 51	≥ 18 years
+E14	Eq-Comparison:T18 Operator:T14 Temporal-Unit:T15 Value:T17
+T19	Condition 64 66	CD
+E1	Condition:T19 Name:T20
+T20	Condition-Name 64 66	CD
+T21	And 59 63	with
+E3	And:T21 Arg:E13 Arg2:E1
+T22	Condition 81 100	colonic involvement
+E5	Condition:T22 Name:T23
+T23	Condition-Name 81 100	colonic involvement
+T24	Condition 102 104	UC
+E7	Condition:T24 Name:T25
+T25	Condition-Name 102 104	UC
+T26	Negation 109 112	non
+E9	Negation:T26 
+R2	Abbrev-Of Arg1:E9 Arg2:E2	
+T27	Or 106 108	or
+E11	Or:T27 Arg:E7 Arg2:E2
+T28	Eq-Comparison 140 152	referred for
+E15	Eq-Comparison:T28 Temporal-Period:T29
+T29	Eq-Temporal-Period 140 152	referred for
+A4	Eq-Temporal-Period-Value T29 future
+T30	Procedure 153 164	colonoscopy
+E16	Procedure:T30 Name:T35 Temporality:E15
+T31	And 126 129	who
+E17	And:T31 Arg:E2 Arg2:E16
+T32	Observation 191 207	clinical reasons
+E18	Observation:T32 
+R4	Example-Of Arg1:E4 Arg2:E18	
+T33	Observation 249 261	surveillance
+E19	Observation:T33 Name:T55
+R5	Example-Of Arg1:E19 Arg2:E18	
+T34	Condition 278 280	CD
+E20	Condition:T34 Name:T37
+T37	Condition-Name 278 280	CD
+T38	Condition 284 286	UC
+E22	Condition:T38 Name:T39
+T39	Condition-Name 284 286	UC
+T40	Or 281 283	or
+E23	Or:T40 Arg:E20 Arg2:E22
+T41	Condition 297 313	gastrointestinal
+E24	Condition:T41 Name:T42
+T42	Condition-Name 297 313	gastrointestinal
+T43	Or 294 296	or
+E25	Or:T43 Arg:E22 Arg2:E24
+R6	Example-Of Arg1:E20 Arg2:E18	
+R7	Example-Of Arg1:E24 Arg2:E18	
+T44	Condition 349 357	Pregnant
+E26	Condition:T44 Name:T45
+T45	Condition-Name 349 357	Pregnant
+T46	Condition 412 418	cancer
+E27	Condition:T46 Name:T47 Temporality:E28
+T47	Condition-Name 412 418	cancer
+T48	Eq-Comparison 393 400	current
+E28	Eq-Comparison:T48 Temporal-Period:T49
+T49	Eq-Temporal-Period 393 400	current
+A6	Eq-Temporal-Period-Value T49 present
+T50	Or 456 458	or
+E29	Or:T50 Arg:E10 Arg2:E6
+T51	Procedure 513 520	surgery
+E30	Procedure:T51 Name:T53 Temporality:E35
+T52	Modifier 535 540	cecum
+E31	Modifier:T52 Modifies:T53
+T53	Procedure-Name 513 520	surgery
+T12	Modifier 544 550	rectum
+E12	Modifier:T12 
+T13	Or 541 543	or
+E32	Or:T13 Arg:E31 Arg2:E12
+T36	And 67 71	with
+E33	And:T36 Arg:E1 Arg2:E5
+T35	Procedure-Name 153 164	colonoscopy
+T54	Assertion 314 322	symptoms
+E21	Assertion:T54 Asserted:E24
+A5	Assertion-Type-Value E21 possible
+T55	Observation-Name 249 261	surveillance
+T56	Modifier 401 411	colorectal
+E34	Modifier:T56 Modifies:T47
+T57	Eq-Comparison 503 512	undergone
+E35	Eq-Comparison:T57 Temporal-Period:T58
+T58	Eq-Temporal-Period 503 512	undergone
+A7	Eq-Temporal-Period-Value T58 past
+T59	Observation 169 185	clinical reasons
+E36	Observation:T59 
+R1	Using Arg1:E16 Arg2:E36	

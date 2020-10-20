@@ -1,0 +1,145 @@
+T1	Procedure 179 200	radical prostatectomy
+T2	Procedure-Name 179 200	radical prostatectomy
+E1	Procedure:T1 Name:T2
+T3	Procedure 204 216	radiotherapy
+T4	Procedure-Name 204 216	radiotherapy
+E3	Procedure:T3 Name:T4
+T5	Procedure 394 415	radical prostatectomy
+T6	Procedure-Name 394 415	radical prostatectomy
+E5	Procedure:T5 Name:T6 Temporality:E23
+T7	Eq-Operator 582 594	younger than
+A1	Eq-Operator-Value T7 LT
+T8	Eq-Value 89 91	18
+T9	Eq-Value 153 157	2000
+T10	Eq-Value 162 166	2017
+T11	Eq-Value 454 458	2000
+T12	Eq-Value 463 467	2017
+T13	Eq-Value 595 597	18
+T14	Eq-Comparison 582 597	younger than 18
+E6	Eq-Comparison:T14 Operator:T7 Value:T13
+T15	Eq-Comparison 78 91	older than 18
+E2	Eq-Comparison:T15 Operator:T16 Value:T8
+T16	Eq-Operator 78 88	older than
+A2	Eq-Operator-Value T16 GTEQ
+T17	Age 78 83	older
+E4	Age:T17 Eq-Comparison:E2
+T18	Procedure 92 99	treated
+E7	Procedure:T18 Temporality:E11
+T20	Condition 114 128	adenocarcinoma
+E8	Condition:T20 Name:T21
+T21	Condition-Name 114 128	adenocarcinoma
+T22	Modifier 104 113	localized
+E9	Modifier:T22 Modifies:T21
+T23	Modifier 136 144	prostate
+E10	Modifier:T23 Modifies:T21
+R1	Treatment-For Arg1:E7 Arg2:E8	
+T24	Eq-Comparison 145 166	between 2000 and 2017
+E11	Eq-Comparison:T24 Operator:T25 Value:T9 Value2:T10
+T25	Eq-Operator 145 152	between
+A3	Eq-Operator-Value T25 BETWEEN
+R2	Using Arg1:E7 Arg2:E1	
+T26	Or 201 203	or
+E12	Or:T26 Arg:E1 Arg2:E3
+T19	Observation 271 274	PSA
+E13	Observation:T19 Name:T27 Polarity:T28
+T27	Observation-Name 271 274	PSA
+T28	Polarity 249 255	rising
+A4	Polarity-Value T28 high
+T29	Temporal-Connection 256 260	post
+E14	Temporal-Connection:T29 Arg:E15 Arg2:E13
+A5	Temporal-Connection-Type-Value E14 after
+T30	Procedure 261 270	treatment
+E15	Procedure:T30 
+T31	Observation 314 328	PSA blood test
+E16	Observation:T31 Name:T32 Minimum-Count:E18
+T32	Observation-Name 314 328	PSA blood test
+A6	Observation-Type-Value T32 lab
+A7	Observation-Type-Value T27 lab
+T33	Temporal-Connection 294 298	post
+E17	Temporal-Connection:T33 Arg:E19 Arg2:E16
+A8	Temporal-Connection-Type-Value E17 after
+T34	Eq-Comparison 281 293	at least one
+E18	Eq-Comparison:T34 Operator:T35 Value:T36
+T35	Eq-Operator 281 289	at least
+A9	Eq-Operator-Value T35 GTEQ
+T36	Eq-Value 290 293	one
+T37	Procedure 299 308	treatment
+E19	Procedure:T37 
+T38	And 276 280	with
+E20	And:T38 Arg:E13 Arg2:E16
+T39	Condition 439 445	cancer
+E21	Condition:T39 Name:T40
+T40	Condition-Name 439 445	cancer
+T41	Modifier 420 438	localized prostate
+E22	Modifier:T41 Modifies:T40
+R3	Treatment-For Arg1:E5 Arg2:E21	
+T42	Eq-Comparison 446 467	between 2000 and 2017
+E23	Eq-Comparison:T42 Operator:T43 Value:T11 Value2:T12
+T43	Eq-Operator 446 453	between
+A10	Eq-Operator-Value T43 BETWEEN
+T44	Observation 476 491	biobank samples
+E24	Observation:T44 Name:T45 Temporality:E25
+T45	Observation-Name 476 491	biobank samples
+A11	Observation-Type-Value T45 lab
+T46	Eq-Comparison 492 497	taken
+E25	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 492 497	taken
+A12	Eq-Temporal-Period-Value T47 past
+T48	And 468 471	who
+E26	And:T48 Arg:E5 Arg2:E24
+T49	Age 582 589	younger
+E27	Age:T49 Eq-Comparison:E6
+T50	Condition 627 633	cancer
+E28	Condition:T50 Name:T51
+T51	Condition-Name 627 633	cancer
+T52	Modifier 618 626	prostate
+E29	Modifier:T52 Modifies:T51
+T53	Condition 645 659	adenocarcinoma
+E30	Condition:T53 Name:T54
+T54	Condition-Name 645 659	adenocarcinoma
+T55	Exception 634 644	other than
+E31	Exception:T55 From:E28 Except:E30
+T56	Condition 699 705	cancer
+E32	Condition:T56 Name:T57
+T57	Condition-Name 699 705	cancer
+T58	Modifier 684 698	neuroendocrine
+E33	Modifier:T58 Modifies:T57
+T59	Modifier 669 679	small cell
+E34	Modifier:T59 Modifies:T57
+T60	Or 680 683	and
+E35	Or:T60 Arg:E34 Arg2:E33
+R4	Example-Of Arg1:E32 Arg2:E30	
+T61	Condition 734 748	adenocarcinoma
+E36	Condition:T61 Name:T62
+T62	Condition-Name 734 748	adenocarcinoma
+T63	Modifier 725 733	prostate
+E37	Modifier:T63 Modifies:T62
+T64	Condition 514 536	biochemical recurrence
+E38	Condition:T64 Name:T65
+T65	Condition-Name 514 536	biochemical recurrence
+T66	Temporal-Connection 498 502	when
+E39	Temporal-Connection:T66 Arg:E25 Arg2:E38
+A13	Temporal-Connection-Type-Value E39 during
+T67	Condition 770 792	biochemical recurrence
+E40	Condition:T67 Name:T68
+T68	Condition-Name 770 792	biochemical recurrence
+T69	Negation 758 761	not
+E41	Negation:T69 Negates:E40
+T70	And 749 753	that
+E42	And:T70 Arg:E36 Arg2:E41
+T71	Negation 848 851	not
+E43	Negation:T71 Negates:E45
+T72	Eq-Comparison 857 869	at least one
+E44	Eq-Comparison:T72 Operator:T73 Value:T74
+T73	Eq-Operator 857 865	at least
+A14	Eq-Operator-Value T73 GTEQ
+T74	Eq-Value 866 869	one
+T75	Observation 890 904	PSA blood test
+E45	Observation:T75 Name:T76 Minimum-Count:E44
+T76	Observation-Name 890 904	PSA blood test
+A15	Observation-Type-Value T76 lab
+T77	Temporal-Connection 870 874	post
+E46	Temporal-Connection:T77 Arg:E47 Arg2:E45
+A16	Temporal-Connection-Type-Value E46 after
+T78	Procedure 875 884	treatment
+E47	Procedure:T78 

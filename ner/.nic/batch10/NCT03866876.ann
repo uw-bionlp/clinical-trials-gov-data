@@ -1,0 +1,61 @@
+T1	Life-Stage-And-Gender 300 308	Children
+A1	Life-Stage-And-Gender-Type T1 child
+T4	Eq-Temporal-Unit 48 53	weeks
+A2	Eq-Temporal-Unit-Value T4 week
+T5	Eq-Operator 154 156	to
+A3	Eq-Operator-Value T5 BETWEEN
+T6	Eq-Value 45 47	37
+T7	Eq-Value 134 153	1st of january 2000
+T9	Eq-Value 157 173	31 december 2016
+T11	Eq-Comparison 134 173	1st of january 2000 to 31 december 2016
+E3	Eq-Comparison:T11 Operator:T5 Value:T7 Value2:T9
+T2	Birth 29 34	birth
+E1	Birth:T2 Temporality:E2 Location:T17 Location2:T16
+T3	Eq-Comparison 35 53	more than 37 weeks
+E2	Eq-Comparison:T3 Operator:T12 Value:T6 Temporal-Unit:T4
+T12	Eq-Operator 35 44	more than
+A4	Eq-Operator-Value T12 GT
+T13	Condition 57 67	amenorrhea
+E4	Condition:T13 Name:T14
+T14	Condition-Name 57 67	amenorrhea
+T15	Temporal-Connection 54 56	of
+E5	Temporal-Connection:T15 Arg:E2 Arg2:E4
+A5	Temporal-Connection-Type-Value E5 after
+T16	Location 97 123	hospital Femme-Mère-Enfant
+A6	Location-Value T16 hospital
+T17	Location 75 89	maternity ward
+A7	Location-Value T17 unit
+T8	Life-Stage-And-Gender 199 206	Infants
+A8	Life-Stage-And-Gender-Type T8 infant
+T10	Birth 207 211	born
+E6	Birth:T10 Location:T18
+T18	Location 223 231	hospital
+A9	Location-Value T18 hospital
+T19	Negation 212 218	out of
+E7	Negation:T19 Negates:T18
+T20	Encounter 236 260	secondarily hospitalized
+E8	Encounter:T20 Type:T21 Location:T23
+T21	Encounter-Type 236 260	secondarily hospitalized
+A10	Encounter-Type-Value T21 transfer
+T22	And 232 235	and
+E9	And:T22 Arg:E6 Arg2:E8
+T23	Location 268 294	hospital Femme-Mère-Enfant
+A11	Location-Value T23 hospital
+T24	Condition 314 334	congenital anomalies
+E10	Condition:T24 Name:T25
+T25	Condition-Name 314 334	congenital anomalies
+T26	And 309 313	with
+E11	And:T26 Arg:T1 Arg2:E10
+T27	Observation 372 394	umbilical cord samples
+E12	Observation:T27 Specimen:T28
+T28	Observation-Specimen 372 386	umbilical cord
+T29	Modifier 352 360	arterial
+E13	Modifier:T29 Modifies:E12
+T30	Modifier 365 371	venous
+E14	Modifier:T30 Modifies:E12
+T31	Or 361 364	and
+E15	Or:T31 Arg:E13 Arg2:E14
+T32	Negation 338 345	without
+E16	Negation:T32 Negates:E12
+T33	Or 335 337	or
+E17	Or:T33 Arg:E10 Arg2:E16

@@ -1,82 +1,82 @@
+E3	Condition:T3 Name:T4 Minimum-Count:E2
+E5	Condition:T5 Name:T6 Temporality:E17 Severity:T28
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10 Acuteness:T36 Acuteness:T46
+E11	Condition:T11 Name:T12
+E14	Age:T16 Eq-Comparison:E15
+E15	Eq-Comparison:T20 Operator:T17 Value:T18 Value2:T19 Temporal-Unit:T15
+E16	Eq-Comparison:T21 Temporal-Period:T22
+E17	Eq-Comparison:T23 Temporal-Period:T24
+E1	Modifier:T1 Modifies:T4
+E2	Eq-Comparison:T2 Operator:T25 Value:T26
+E4	Condition:T27 Temporality:E16
+E6	Or:T29 Arg:T28 Arg2:E17
+E8	Modifier:T30 Modifies:T8
+E10	Modifier:T31 Modifies:T33
+E12	Condition:T32 Name:T33
+E18	Or:T34 Arg:E7 Arg2:E12
+E19	Modifier:T35 Modifies:T10
+E20	Or:T37 Arg:T36 Arg2:E19
+E21	Condition:T38 Name:T39
+E22	Or:T40 Arg:E21 Arg2:E11
+E13	Procedure:T13 Name:T14
+E23	Modifier:T42 Modifies:T14
+E24	Modifier:T43 Modifies:T14
+E25	Modifier:T44 Modifies:T14
+E26	Or:T45 Arg:E24 Arg2:E25
 T3	Condition 204 210	caries
 T4	Condition-Name 204 210	caries
-E3	Condition:T3 Name:T4 Minimum-Count:E2
 T5	Condition 303 322	periodontal disease
 T6	Condition-Name 303 322	periodontal disease
-E5	Condition:T5 Name:T6 Temporality:E17 Severity:T28
 T7	Condition 335 342	bruxism
 T8	Condition-Name 335 342	bruxism
-E7	Condition:T7 Name:T8
 T9	Condition 398 407	infection
 T10	Condition-Name 398 407	infection
-E9	Condition:T9 Name:T10 Severity:T36
 T11	Condition 426 439	breastfeeding
 T12	Condition-Name 426 439	breastfeeding
-E11	Condition:T11 Name:T12
 T15	Eq-Temporal-Unit 53 58	years
-A1	Eq-Temporal-Unit-Value T15 year
 T16	Age 34 38	aged
-E14	Age:T16 Eq-Comparison:E15
 T17	Eq-Operator 47 49	to
-A2	Eq-Operator-Value T17 BETWEEN
 T18	Eq-Value 44 46	15
 T19	Eq-Value 50 52	50
 T20	Eq-Comparison 44 58	15 to 50 years
-E15	Eq-Comparison:T20 Operator:T17 Value:T18 Value2:T19 Temporal-Unit:T15
 T21	Eq-Comparison 272 279	history
-E16	Eq-Comparison:T21 Temporal-Period:T22
 T22	Eq-Temporal-Period 272 279	history
-A3	Eq-Temporal-Period-Value T22 past
 T23	Eq-Comparison 296 302	active
-E17	Eq-Comparison:T23 Temporal-Period:T24
 T24	Eq-Temporal-Period 296 302	active
-A4	Eq-Temporal-Period-Value T24 present
 T1	Modifier 185 203	posterior proximal
-E1	Modifier:T1 Modifies:T4
 T2	Eq-Comparison 172 184	at least one
-E2	Eq-Comparison:T2 Operator:T25 Value:T26
 T25	Eq-Operator 172 180	at least
-A5	Eq-Operator-Value T25 GTEQ
 T26	Eq-Value 181 184	one
 T27	Condition 252 263	compromised
-E4	Condition:T27 Temporality:E16
 T28	Severity 286 292	Severe
-A6	Severity-Value T28 severe
 T29	Or 293 295	or
-E6	Or:T29 Arg:T28 Arg2:E17
 T30	Modifier 329 334	Heavy
-E8	Modifier:T30 Modifies:T8
 T31	Modifier 348 357	traumatic
-E10	Modifier:T31 Modifies:T33
 T32	Condition 358 367	occlusion
-E12	Condition:T32 Name:T33
 T33	Condition-Name 358 367	occlusion
 T34	Or 343 345	or
-E18	Or:T34 Arg:E7 Arg2:E12
 T35	Modifier 391 397	dental
-E19	Modifier:T35 Modifies:T10
-T36	Severity 374 379	Acute
-A7	Severity-Value T36 severe
+T36	Acuteness 374 379	Acute
 T37	Or 380 382	or
-E20	Or:T37 Arg:T36 Arg2:E19
 T38	Condition 414 422	Pregnant
-E21	Condition:T38 Name:T39
 T39	Condition-Name 414 422	Pregnant
 T40	Or 423 425	or
-E22	Or:T40 Arg:E21 Arg2:E11
 T41	Life-Stage-And-Gender 440 445	women
-A8	Life-Stage-And-Gender-Type T41 female
-R1	If-Then Arg1:T41 Arg2:E11	
 T13	Procedure 476 488	restorations
-E13	Procedure:T13 Name:T14
 T14	Procedure-Name 476 488	restorations
 T42	Modifier 466 475	posterior
-E23	Modifier:T42 Modifies:T14
 T43	Modifier 492 498	molars
-E24	Modifier:T43 Modifies:T14
 T44	Modifier 502 511	premolars
-E25	Modifier:T44 Modifies:T14
 T45	Or 499 501	or
-E26	Or:T45 Arg:E24 Arg2:E25
-T46	Modifier 383 390	chronic
-E27	Modifier:T46 Modifies:T10
+T46	Acuteness 383 390	chronic
+A1	Eq-Temporal-Unit-Value T15 year
+A2	Eq-Operator-Value T17 BETWEEN
+A3	Eq-Temporal-Period-Value T22 past
+A4	Eq-Temporal-Period-Value T24 present
+A5	Eq-Operator-Value T25 GTEQ
+A6	Severity-Value T28 severe
+A8	Life-Stage-And-Gender-Type T41 female
+A9	Acuteness-Type-Value T36 acute
+A10	Acuteness-Type-Value T46 chronic
+R1	If-Then Arg1:T41 Arg2:E11

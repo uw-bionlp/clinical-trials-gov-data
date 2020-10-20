@@ -1,0 +1,92 @@
+T1	Condition 225 236	tetraplegia
+T2	Condition-Name 225 236	tetraplegia
+E1	Condition:T1 Name:T2
+T3	Condition 211 221	paraplegia
+T4	Condition-Name 211 221	paraplegia
+E3	Condition:T3 Name:T4 Stage:E14
+T5	Language 359 366	English
+T6	Procedure 474 495	home exercise program
+T7	Procedure-Name 474 495	home exercise program
+E6	Procedure:T6 Name:T7
+T8	Condition 642 660	hearing impairment
+T9	Condition-Name 642 660	hearing impairment
+E8	Condition:T8 Name:T9 Severity:T44
+T10	Condition 405 422	visual impairment
+T11	Condition-Name 405 422	visual impairment
+E10	Condition:T10 Name:T11 Severity:T36
+T12	Condition 509 523	pressure ulcer
+T13	Condition-Name 509 523	pressure ulcer
+E12	Condition:T12 Name:T13 Temporality:E21
+T14	Eq-Temporal-Unit 309 314	years
+A1	Eq-Temporal-Unit-Value T14 year
+T15	Eq-Operator 303 305	to
+A2	Eq-Operator-Value T15 BETWEEN
+T16	Eq-Value 300 302	18
+T17	Eq-Value 306 308	65
+T18	Eq-Comparison 300 314	18 to 65 years
+E13	Eq-Comparison:T18 Operator:T15 Value:T16 Value2:T17 Temporal-Unit:T14
+T19	Observation 50 67	physical activity
+E2	Observation:T19 Name:T20
+T20	Observation-Name 50 67	physical activity
+T21	Assertion 37 46	readiness
+E4	Assertion:T21 Asserted:E2
+A3	Assertion-Type-Value E4 hypothetical
+T22	Observation 93 134	Physical Activity Readiness Questionnaire
+E5	Observation:T22 Name:T23
+T23	Observation-Name 93 134	Physical Activity Readiness Questionnaire
+A4	Observation-Type-Value T23 survey-or-questionnaire
+T24	Observation 136 141	PAR-Q
+E7	Observation:T24 Name:T25
+T25	Observation-Name 136 141	PAR-Q
+R1	Abbrev-Of Arg1:E7 Arg2:E5	
+R2	Equivalent-To Arg1:E5 Arg2:E2	
+T26	Condition 156 159	SCI
+E9	Condition:T26 Name:T27
+T27	Condition-Name 156 159	SCI
+T28	Or 222 224	or
+E11	Or:T28 Arg:E3 Arg2:E1
+T29	Eq-Comparison 197 209	C5 and below
+E14	Eq-Comparison:T29 Operator:T31 Value:T30
+T30	Eq-Value 197 199	C5
+T31	Eq-Operator 200 209	and below
+A6	Eq-Operator-Value T31 LTEQ
+T32	Modifier 173 183	incomplete
+E15	Modifier:T32 Modifies:E3
+T33	Modifier 187 195	complete
+E16	Modifier:T33 Modifies:E3
+T34	Or 184 186	or
+E17	Or:T34 Arg:E15 Arg2:E16
+R3	Caused-By Arg1:E3 Arg2:E9	
+T35	Age 292 296	ages
+E18	Age:T35 Eq-Comparison:E13
+T36	Severity 393 404	significant
+A7	Severity-Value T36 severe
+T37	Negation 428 436	prevents
+E19	Negation:T37 Negates:E6
+T38	Assertion 428 436	prevents
+E20	Assertion:T38 Asserted:E6
+A8	Assertion-Type-Value E20 hypothetical
+R4	Caused-By Arg1:E19 Arg2:E10	
+T39	Eq-Comparison 502 508	active
+E21	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 502 508	active
+A9	Eq-Temporal-Period-Value T40 present
+T41	Observation 555 563	exercise
+E22	Observation:T41 Name:T42
+T42	Observation-Name 555 563	exercise
+T43	Contraindication 534 551	contraindications
+E23	Contraindication:T43 Contraindicates:E22
+T44	Severity 630 641	significant
+A10	Severity-Value T44 severe
+T45	Condition 670 685	ability to hear
+E24	Condition:T45 Name:T46
+T46	Condition-Name 670 685	ability to hear
+T47	Observation 695 713	engage in exercise
+E25	Observation:T47 Name:T48
+T48	Observation-Name 695 713	engage in exercise
+T49	Negation 661 669	impeding
+E26	Negation:T49 Negates:E24 Negates2:E25
+R5	Caused-By Arg1:E26 Arg2:E8	
+T50	Assertion 661 669	impeding
+E27	Assertion:T50 Asserted:E24 Asserted2:E25
+A11	Assertion-Type-Value E27 hypothetical

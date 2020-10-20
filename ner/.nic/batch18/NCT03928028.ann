@@ -1,0 +1,197 @@
+T1	Language 195 202	English
+T3	Language 625 632	English
+T4	Condition 836 860	developmental disability
+T5	Condition-Name 836 860	developmental disability
+E4	Condition:T4 Name:T5
+T6	Condition 908 932	autism spectrum disorder
+T7	Condition-Name 908 932	autism spectrum disorder
+E6	Condition:T6 Name:T7
+T8	Condition 1204 1228	developmental disability
+T9	Condition-Name 1204 1228	developmental disability
+E8	Condition:T8 Name:T9
+T10	Condition 1276 1300	autism spectrum disorder
+T11	Condition-Name 1276 1300	autism spectrum disorder
+E10	Condition:T10 Name:T11
+T12	Condition 937 960	intellectual disability
+T13	Condition-Name 937 960	intellectual disability
+E12	Condition:T12 Name:T13
+T14	Condition 1305 1328	intellectual disability
+T15	Condition-Name 1305 1328	intellectual disability
+E14	Condition:T14 Name:T15
+T16	Condition 873 889	bipolar disorder
+T17	Condition-Name 873 889	bipolar disorder
+E16	Condition:T16 Name:T17
+T18	Condition 1241 1257	bipolar disorder
+T19	Condition-Name 1241 1257	bipolar disorder
+E18	Condition:T18 Name:T19
+T20	Condition 987 995	disorder
+T21	Condition-Name 987 995	disorder
+E20	Condition:T20 Name:T21
+T22	Condition 862 871	psychosis
+T23	Condition-Name 862 871	psychosis
+E22	Condition:T22 Name:T23
+T26	Condition 1230 1239	psychosis
+T27	Condition-Name 1230 1239	psychosis
+E26	Condition:T26 Name:T27
+T28	Procedure 1127 1147	psychosocial therapy
+T29	Procedure-Name 1127 1147	psychosocial therapy
+E28	Procedure:T28 Name:T29 Temporality:E43
+T30	Condition 1015 1018	TBI
+T31	Condition-Name 1015 1018	TBI
+E30	Condition:T30 Name:T31
+T32	Condition 1356 1364	disorder
+T33	Condition-Name 1356 1364	disorder
+E32	Condition:T32 Name:T33
+T34	Drug 1454 1479	anti-psychotic medication
+T35	Drug-Name 1454 1479	anti-psychotic medication
+E34	Drug:T34 Name:T35 Temporality:E60
+T36	Condition 1384 1387	TBI
+T37	Condition-Name 1384 1387	TBI
+E36	Condition:T36 Name:T37
+T38	Eq-Operator 531 532	>
+A2	Eq-Operator-Value T38 GT
+T39	Age 36 39	Age
+E37	Age:T39 Eq-Comparison:E41
+T40	Age 527 530	Age
+E38	Age:T40 Eq-Comparison:E40
+T41	Age 749 752	age
+E39	Age:T41 Eq-Comparison:E29
+T42	Eq-Operator 42 43	-
+A3	Eq-Operator-Value T42 BETWEEN
+T43	Eq-Value 40 42	12
+T44	Eq-Value 43 45	18
+T46	Eq-Value 532 534	18
+T47	Eq-Comparison 531 534	>18
+E40	Eq-Comparison:T47 Operator:T38 Value:T46
+T48	Eq-Comparison 40 45	12-18
+E41	Eq-Comparison:T48 Operator:T42 Value:T43 Value2:T44
+T49	Eq-Comparison 51 60	Currently
+E42	Eq-Comparison:T49 Temporal-Period:T50
+T50	Eq-Temporal-Period 51 60	Currently
+A4	Eq-Temporal-Period-Value T50 present
+T51	Eq-Comparison 1116 1126	Concurrent
+E43	Eq-Comparison:T51 Temporal-Period:T52
+T52	Eq-Temporal-Period 1116 1126	Concurrent
+A5	Eq-Temporal-Period-Value T52 present
+T45	Condition 116 132	Anorexia Nervosa
+E1	Condition:T45 Name:T53 Temporality:E42
+T53	Condition-Name 116 132	Anorexia Nervosa
+T54	Condition 148 154	stable
+E2	Condition:T54 Name:T55
+T55	Condition-Name 148 154	stable
+T56	Encounter 159 169	outpatient
+E3	Encounter:T56 Type:T57
+T57	Encounter-Type 159 169	outpatient
+A6	Encounter-Type-Value T57 outpatient
+T58	Procedure 170 179	treatment
+E5	Procedure:T58 
+R1	Using Arg1:E3 Arg2:E5	
+T59	Assertion 155 158	for
+E7	Assertion:T59 Asserted:E3
+A7	Assertion-Type-Value E7 hypothetical
+T60	Condition 211 230	co-morbid condition
+E9	Condition:T60 Name:T61
+T61	Condition-Name 211 230	co-morbid condition
+T62	Negation 208 210	No
+E11	Negation:T62 Negates:E9
+T63	Family-Member 403 409	parent
+E13	Family-Member:T63 Has:E15
+A8	Family-Member-Type E13 parent
+T64	Procedure 452 461	treatment
+E15	Procedure:T64 
+T65	Assertion 431 441	willing to
+E17	Assertion:T65 Asserted:E15
+A9	Assertion-Type-Value E17 hypothetical
+T66	Family-Member 514 521	Parents
+E19	Family-Member:T66 
+A10	Family-Member-Type E19 parent
+R2	If-Then Arg1:E19 Arg2:E38	
+T67	Condition 566 568	AN
+E21	Condition:T67 Name:T68
+T68	Condition-Name 566 568	AN
+T2	Life-Stage-And-Gender 540 545	Child
+A1	Life-Stage-And-Gender-Type T2 child
+T69	And 546 550	with
+E23	And:T69 Arg:T2 Arg2:E21
+T70	Condition 641 660	co-morbid condition
+E25	Condition:T70 Name:T71
+T71	Condition-Name 641 660	co-morbid condition
+T72	Negation 638 640	No
+E27	Negation:T72 Negates:E25
+T73	Life-Stage-And-Gender 714 724	Adolescent
+A11	Life-Stage-And-Gender-Type T73 child
+T74	Eq-Comparison 753 758	range
+E29	Eq-Comparison:T74 Unit:T75
+T75	Eq-Unit 753 758	range
+A12	Eq-Unit-Value T75 ref-range-high
+T76	Negation 741 748	outside
+E31	Negation:T76 Negates:E39
+T77	Life-Stage-And-Gender 730 740	Adolescent
+A13	Life-Stage-And-Gender-Type T77 child
+R3	If-Then Arg1:T73 Arg2:T77	
+T78	Condition 775 782	adopted
+E33	Condition:T78 Name:T79
+T79	Condition-Name 775 782	adopted
+T80	Life-Stage-And-Gender 764 774	Adolescent
+A14	Life-Stage-And-Gender-Type T80 child
+T81	Condition 788 796	Pregnant
+E35	Condition:T81 Name:T82
+T82	Condition-Name 788 796	Pregnant
+T83	Life-Stage-And-Gender 797 807	adolescent
+A15	Life-Stage-And-Gender-Type T83 child
+T84	Condition 891 906	substance abuse
+E44	Condition:T84 Name:T85
+T85	Condition-Name 891 906	substance abuse
+T86	Or 934 936	or
+E45	Or:T86 Arg:E6 Arg2:E12
+T87	Condition 999 1005	injury
+E46	Condition:T87 Name:T88
+T88	Condition-Name 999 1005	injury
+T89	Or 996 998	or
+E47	Or:T89 Arg:E20 Arg2:E46
+T90	Modifier 981 986	brain
+E48	Modifier:T90 Modifies:T21
+R4	Example-Of Arg1:E30 Arg2:E46	
+T91	Procedure 1063 1072	treatment
+E49	Procedure:T91 Stability:T92
+T92	Stability 1031 1037	impact
+A16	Stability-Value T92 change
+T93	Assertion 1025 1030	could
+E50	Assertion:T93 Asserted:T92
+A17	Assertion-Type-Value E50 hypothetical
+R5	Caused-By Arg1:T92 Arg2:E46	
+T24	Drug 1085 1110	anti-psychotic medication
+E24	Drug:T24 Name:T25 Temporality:E51
+T25	Drug-Name 1085 1110	anti-psychotic medication
+T94	Eq-Comparison 1078 1081	Use
+E51	Eq-Comparison:T94 Temporal-Period:T95
+T95	Eq-Temporal-Period 1078 1081	Use
+A18	Eq-Temporal-Period-Value T95 present
+T96	Family-Member 1168 1175	Parents
+E52	Family-Member:T96 Has:E8
+A19	Family-Member-Type E52 parent
+T97	Condition 1259 1274	substance abuse
+E53	Condition:T97 Name:T98
+T98	Condition-Name 1259 1274	substance abuse
+T99	Or 1302 1304	or
+E54	Or:T99 Arg:E10 Arg2:E14
+T100	Condition 1368 1374	injury
+E55	Condition:T100 Name:T101
+T101	Condition-Name 1368 1374	injury
+T102	Modifier 1350 1355	brain
+E56	Modifier:T102 Modifies:T33
+T103	Or 1365 1367	or
+E57	Or:T103 Arg:E32 Arg2:E55
+R6	Example-Of Arg1:E36 Arg2:E55	
+T104	Procedure 1432 1441	treatment
+E58	Procedure:T104 Stability:T106
+T105	Assertion 1394 1399	could
+E59	Assertion:T105 Asserted:T106
+A20	Assertion-Type-Value E59 hypothetical
+T106	Stability 1400 1406	impact
+A21	Stability-Value T106 change
+R7	Caused-By Arg1:T106 Arg2:E55	
+T107	Eq-Comparison 1447 1450	Use
+E60	Eq-Comparison:T107 Temporal-Period:T108
+T108	Eq-Temporal-Period 1447 1450	Use
+A22	Eq-Temporal-Period-Value T108 present

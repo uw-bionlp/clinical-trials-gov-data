@@ -1,33 +1,33 @@
+E2	Encounter:T7 Provider:E3 Type:T9 Temporality:E4
+E3	Provider:T8
+E4	Eq-Comparison:T10 Operator:T11 Value:T3 Value2:T4
+E5	And:T5 Arg:E2 Arg2:E6
+E6	Condition:T6 Name:T2
+E1	Condition:T1 Name:T12
+E7	Assertion:T13 Asserted:E1
+E8	Or:T14 Arg:E6 Arg2:E7
+E9	Condition:T15 Name:T16
+E10	Or:T17 Arg:E1 Arg2:E9
+E11	Assertion:T18 Asserted:E9
 T2	Condition-Name 214 218	PTSD
 T7	Encounter 43 47	seen
-E2	Encounter:T7 Provider:E3 Type:T9 Temporality:E4
 T8	Provider 62 84	Remy Coeytaux, MD, PhD
-E3	Provider:T8 
 T9	Encounter-Type 114 126	consultation
-A1	Encounter-Type-Value T9 outpatient
 T10	Eq-Comparison 127 171	between September 1, 2018 and April 30, 2019
-E4	Eq-Comparison:T10 Operator:T11 Value:T3 Value2:T4
 T11	Eq-Operator 127 134	between
-A2	Eq-Operator-Value T11 BETWEEN
 T3	Eq-Value 135 152	September 1, 2018
 T4	Eq-Value 157 171	April 30, 2019
 T5	And 172 175	and
-E5	And:T5 Arg:E2 Arg2:E6
 T6	Condition 214 218	PTSD
-E6	Condition:T6 Name:T2
 T1	Condition 248 252	PTSD
-E1	Condition:T1 Name:T12
 T12	Condition-Name 248 252	PTSD
 T13	Assertion 239 242	may
-E7	Assertion:T13 Asserted:E1
-A3	Assertion-Type-Value E7 possible
 T14	Or 219 221	or
-E8	Or:T14 Arg:E6 Arg2:E7
 T15	Condition 256 260	PTSD
-E9	Condition:T15 Name:T16
 T16	Condition-Name 256 260	PTSD
 T17	Or 253 255	or
-E10	Or:T17 Arg:E1 Arg2:E9
 T18	Assertion 269 277	symptoms
-E11	Assertion:T18 Asserted:E9
+A1	Encounter-Type-Value T9 outpatient
+A2	Eq-Operator-Value T11 BETWEEN
+A3	Assertion-Type-Value E7 possible
 A4	Assertion-Type-Value E11 possible

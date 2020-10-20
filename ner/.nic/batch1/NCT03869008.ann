@@ -1,0 +1,67 @@
+T1	Condition 44 72	Primary Raynaud's Phenomenon
+T2	Condition-Name 44 72	Primary Raynaud's Phenomenon
+E1	Condition:T1 Name:T2
+T3	Eq-Operator 98 107	Less than
+A1	Eq-Operator-Value T3 LT
+T4	Eq-Temporal-Unit 111 116	years
+A2	Eq-Temporal-Unit-Value T4 year
+T5	Age 120 123	age
+E2	Age:T5 Eq-Comparison:E3
+T6	Eq-Value 108 110	18
+T8	Eq-Comparison 98 116	Less than 18 years
+E3	Eq-Comparison:T8 Operator:T3 Temporal-Unit:T4 Value:T6
+T9	Condition 129 137	Pregnant
+E4	Condition:T9 Name:T10
+T10	Condition-Name 129 137	Pregnant
+T11	Life-Stage-And-Gender 138 143	women
+A3	Life-Stage-And-Gender-Type T11 female
+T12	Condition 157 164	smokers
+E5	Condition:T12 Name:T13 Temporality:E6
+T13	Condition-Name 157 164	smokers
+T14	Eq-Comparison 149 156	Current
+E6	Eq-Comparison:T14 Temporal-Period:T15
+T15	Eq-Temporal-Period 149 156	Current
+A4	Eq-Temporal-Period-Value T15 present
+T16	Condition 183 189	ulcers
+E7	Condition:T16 Name:T17
+T17	Condition-Name 183 189	ulcers
+T18	Condition 205 227	Pulmonary hypertension
+E8	Condition:T18 Name:T19
+T19	Condition-Name 205 227	Pulmonary hypertension
+T20	Drug 246 258	vasodilators
+E9	Drug:T20 Name:T21 Temporality:E14
+T21	Drug-Name 246 258	vasodilators
+T7	Drug 265 300	Phosphodiesterase type 5 inhibitors
+E10	Drug:T7 Name:T22
+T22	Drug-Name 265 300	Phosphodiesterase type 5 inhibitors
+T23	Drug 302 314	prostacyclin
+E11	Drug:T23 Name:T24
+T24	Drug-Name 302 314	prostacyclin
+T25	Drug 316 330	nitroglycerine
+E12	Drug:T25 Name:T26
+T26	Drug-Name 316 330	nitroglycerine
+T27	Drug 341 365	nitric oxide derivatives
+E13	Drug:T27 Name:T28
+T28	Drug-Name 341 365	nitric oxide derivatives
+T29	Eq-Comparison 233 242	Currently
+E14	Eq-Comparison:T29 Temporal-Period:T30
+T30	Eq-Temporal-Period 233 242	Currently
+A5	Eq-Temporal-Period-Value T30 present
+R1	Example-Of Arg1:E10 Arg2:E9	
+R2	Example-Of Arg1:E11 Arg2:E9	
+R3	Example-Of Arg1:E12 Arg2:E9	
+R4	Example-Of Arg1:E13 Arg2:E9	
+T31	Drug 385 409	Calcium Channel Blockers
+E15	Drug:T31 Name:T32 Temporality:E16
+T32	Drug-Name 385 409	Calcium Channel Blockers
+T33	Eq-Comparison 372 381	Currently
+E16	Eq-Comparison:T33 Temporal-Period:T34
+T34	Eq-Temporal-Period 372 381	Currently
+A6	Eq-Temporal-Period-Value T34 present
+R5	If-Then Arg1:E4 Arg2:T11	
+T35	Modifier 175 182	Digital
+E17	Modifier:T35 Modifies:T17
+T36	Other 335 340	other
+E18	Other:T36 Is-Other:E13
+T37	Or 332 334	or
+E19	Or:T37 Arg:E12 Arg2:E13

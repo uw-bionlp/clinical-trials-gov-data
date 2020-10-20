@@ -1,61 +1,65 @@
-T2	Observation 46 58	Bishop score
 E2	Observation:T2 Name:T33 Eq-Comparison:E3
-T3	Eq-Comparison 59 62	≤ 4
 E3	Eq-Comparison:T3 Operator:T34 Value:T35
-T4	Indication 70 80	indication
 E4	Indication:T4 Indication-For:E5
-T6	Modifier 105 112	medical
 E6	Modifier:T6 Modifies:T36
-T7	Or 113 115	or
 E7	Or:T7 Arg:E6 Arg2:E8
-T8	Modifier 116 127	obstetrical
 E8	Modifier:T8 Modifies:T36
-T9	Eq-Comparison 135 137	37
 E9	Eq-Comparison:T9 Value:T37 Temporal-Unit:T39
-T10	Observation 148 159	gestational
 E10	Observation:T10 Name:T38 Eq-Comparison:E9
-T11	Condition 172 191	vertex presentation
 E11	Condition:T11 Name:T40
-T12	Modifier 198 207	singleton
 E12	Modifier:T12 Modifies:T41
-T13	Condition 208 217	pregnancy
 E13	Condition:T13 Name:T41
-T14	Condition 223 239	intact membranes
 E14	Condition:T14 Name:T42
-T15	Eq-Comparison 266 274	previous
 E15	Eq-Comparison:T15 Temporal-Period:T43
-T16	Procedure 275 292	cesarean delivery
 E16	Procedure:T16 Name:T44 Temporality:E15
-T17	Eq-Comparison 298 306	previous
 E17	Eq-Comparison:T17 Temporal-Period:T45
-T18	Procedure 307 322	uterine surgery
 E18	Procedure:T18 Name:T46 Temporality:E17
-T19	Procedure 328 338	myomectomy
 E19	Procedure:T19 Name:T47
-T20	Condition 345 369	noncephalic presentation
 E20	Condition:T20 Name:T48
-T21	Eq-Comparison 375 383	multiple
 E21	Eq-Comparison:T21 Operator:T61
-T22	Condition 384 393	pregnancy
 E22	Condition:T22 Name:T49 Temporality:E21
-T24	Condition 399 412	pre-eclampsia
 E24	Condition:T24 Name:T50 Severity:T51
-T27	Observation 456 479	Maximal vertical pocket
 E27	Observation:T27 Name:T53 Eq-Comparison:E28
-T28	Eq-Comparison 480 482	≤2
 E28	Eq-Comparison:T28 Operator:T54 Value:T62
-T29	Observation 505 511	weight
 E29	Observation:T29 Name:T55 Eq-Comparison:E30
-T30	Eq-Comparison 512 527	<10% percentile
 E30	Eq-Comparison:T30 Operator:T56 Value:T57 Unit:T58 Unit:T59
-T31	Contraindication 537 553	contraindication
 E31	Contraindication:T31 Contraindicates:E32
-T32	Procedure 557 573	Vaginal delivery
 E32	Procedure:T32 Name:T60
+E1	Condition:T1 Name:T26
+E5	Procedure:T5 Name:T36
+E23	Modifier:T23 Modifies:T50
+E25	Condition:T25 Name:T52
+E26	Modifier:T63 Modifies:T55
+E33	Family-Member:T64 Has:E29
+T2	Observation 46 58	Bishop score
+T3	Eq-Comparison 59 62	≤ 4
+T4	Indication 70 80	indication
+T6	Modifier 105 112	medical
+T7	Or 113 115	or
+T8	Modifier 116 127	obstetrical
+T9	Eq-Comparison 135 137	37
+T10	Observation 148 159	gestational
+T11	Condition 172 191	vertex presentation
+T12	Modifier 198 207	singleton
+T13	Condition 208 217	pregnancy
+T14	Condition 223 239	intact membranes
+T15	Eq-Comparison 266 274	previous
+T16	Procedure 275 292	cesarean delivery
+T17	Eq-Comparison 298 306	previous
+T18	Procedure 307 322	uterine surgery
+T19	Procedure 328 338	myomectomy
+T20	Condition 345 369	noncephalic presentation
+T21	Eq-Comparison 375 383	multiple
+T22	Condition 384 393	pregnancy
+T24	Condition 399 412	pre-eclampsia
+T27	Observation 456 479	Maximal vertical pocket
+T28	Eq-Comparison 480 482	≤2
+T29	Observation 505 511	weight
+T30	Eq-Comparison 512 527	<10% percentile
+T31	Contraindication 537 553	contraindication
+T32	Procedure 557 573	Vaginal delivery
 T33	Observation-Name 46 58	Bishop score
-A2	Observation-Type-Value T33 clinical-score
 T34	Eq-Operator 59 60	≤
-A3	Eq-Operator-Value T34 LTEQ
 T35	Eq-Value 61 62	4
 T36	Procedure-Name 85 103	induction of labor
 T37	Eq-Value 135 137	37
@@ -64,50 +68,46 @@ T40	Condition-Name 172 191	vertex presentation
 T41	Condition-Name 208 217	pregnancy
 T42	Condition-Name 223 239	intact membranes
 T43	Eq-Temporal-Period 266 274	previous
-A5	Eq-Temporal-Period-Value T43 past
 T44	Procedure-Name 275 292	cesarean delivery
 T45	Eq-Temporal-Period 298 306	previous
-A6	Eq-Temporal-Period-Value T45 past
 T46	Procedure-Name 307 322	uterine surgery
 T47	Procedure-Name 328 338	myomectomy
 T48	Condition-Name 345 369	noncephalic presentation
 T49	Condition-Name 384 393	pregnancy
 T50	Condition-Name 399 412	pre-eclampsia
 T51	Severity 418 424	severe
-A7	Severity-Value T51 severe
 T52	Condition-Name 439 454	oligohydramnios
 T53	Observation-Name 456 479	Maximal vertical pocket
-A8	Observation-Type-Value T53 measurement
 T54	Eq-Operator 480 481	≤
-A9	Eq-Operator-Value T54 LTEQ
 T55	Observation-Name 505 511	weight
-A10	Observation-Type-Value T55 vital
 T56	Eq-Operator 512 513	<
-A11	Eq-Operator-Value T56 LT
 T57	Eq-Value 513 515	10
 T58	Eq-Unit 515 516	%
 T59	Eq-Unit 517 527	percentile
 T60	Procedure-Name 557 573	Vaginal delivery
 T1	Condition 25 44	unfavourable cervix
-E1	Condition:T1 Name:T26
 T26	Condition-Name 25 44	unfavourable cervix
-R1	Equivalent-To Arg1:E2 Arg2:E1	
 T5	Procedure 85 103	induction of labor
-E5	Procedure:T5 Name:T36
 T39	Eq-Temporal-Unit 160 165	weeks
+T61	Eq-Operator 375 383	multiple
+T23	Modifier 425 433	features
+T25	Condition 439 454	oligohydramnios
+T62	Eq-Value 481 482	2
+T63	Modifier 489 498	estimated
+T64	Family-Member 499 504	fetal
+A2	Observation-Type-Value T33 clinical-score
+A3	Eq-Operator-Value T34 LTEQ
+A5	Eq-Temporal-Period-Value T43 past
+A6	Eq-Temporal-Period-Value T45 past
+A7	Severity-Value T51 severe
+A8	Observation-Type-Value T53 measurement
+A9	Eq-Operator-Value T54 LTEQ
+A10	Observation-Type-Value T55 vital
+A11	Eq-Operator-Value T56 LT
 A4	Eq-Temporal-Unit-Value T39 week
 A12	Observation-Type-Value T38 measurement
-R2	Example-Of Arg1:E19 Arg2:E18	
-T61	Eq-Operator 375 383	multiple
 A13	Eq-Operator-Value T61 GT
-T23	Modifier 425 433	features
-E23	Modifier:T23 Modifies:T50
-T25	Condition 439 454	oligohydramnios
-E25	Condition:T25 Name:T52
-T62	Eq-Value 481 482	2
-R3	Equivalent-To Arg1:E27 Arg2:E25	
-T63	Modifier 489 498	estimated
-E26	Modifier:T63 Modifies:T55
-T64	Family-Member 499 504	fetal
-E33	Family-Member:T64 Has:E29
 A1	Family-Member-Type E33 child
+R1	Equivalent-To Arg1:E2 Arg2:E1
+R2	Example-Of Arg1:E19 Arg2:E18
+R3	Equivalent-To Arg1:E27 Arg2:E25

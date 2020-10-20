@@ -1,0 +1,114 @@
+T3	Condition 69 78	infection
+T4	Condition-Name 69 78	infection
+E3	Condition:T3 Name:T4
+T5	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T5 adult
+T6	Condition 129 143	breast feeding
+T7	Condition-Name 129 143	breast feeding
+E6	Condition:T6 Name:T7
+T8	Condition 116 125	Pregnancy
+T9	Condition-Name 116 125	Pregnancy
+E8	Condition:T8 Name:T9
+T12	Condition 504 517	HIV infection
+T13	Condition-Name 504 517	HIV infection
+E12	Condition:T12 Name:T13
+T14	Condition 519 547	systemic lupus erythematoses
+T15	Condition-Name 519 547	systemic lupus erythematoses
+E14	Condition:T14 Name:T15
+T16	Eq-Operator 235 236	≥
+A2	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 420 426	within
+A3	Eq-Operator-Value T17 LTEQ
+T18	Eq-Temporal-Unit 429 433	days
+A4	Eq-Temporal-Unit-Value T18 day
+T19	Eq-Value 236 237	2
+T20	Eq-Value 427 428	7
+T21	Eq-Value 640 642	72
+T22	Eq-Comparison 235 242	≥2mg/dl
+E15	Eq-Comparison:T22 Operator:T16 Value:T19 Unit:T34 Per:T35
+T23	Eq-Comparison 420 433	within 7 days
+E16	Eq-Comparison:T23 Operator:T17 Temporal-Unit:T18 Value:T20
+T1	Condition 51 54	ill
+E1	Condition:T1 Severity:T2
+T2	Severity 40 50	critically
+A5	Severity-Value T2 severe
+T10	And 32 35	who
+E2	And:T10 Arg:T5 Arg2:E1
+T11	Assertion 79 89	suspection
+E4	Assertion:T11 Asserted:E3
+A6	Assertion-Type-Value E4 possible
+T24	And 55 58	and
+E5	And:T24 Arg:E1 Arg2:E3
+T25	Or 126 128	or
+E7	Or:T25 Arg:E8 Arg2:E6
+T26	Allergy 156 163	allergy
+E9	Allergy:T26 Name:E10
+T27	Drug 174 184	vancomycin
+E10	Drug:T27 Name:T28
+T28	Drug-Name 174 184	vancomycin
+T29	Drug 188 201	ascorbic acid
+E11	Drug:T29 Name:T30
+T30	Drug-Name 188 201	ascorbic acid
+T31	Or 185 187	or
+E13	Or:T31 Arg:E10 Arg2:E11
+T32	Observation 218 234	serum creatinine
+E17	Observation:T32 Name:T33 Eq-Comparison:E15
+T33	Observation-Name 218 234	serum creatinine
+A7	Observation-Type-Value T33 lab
+T34	Eq-Unit 237 239	mg
+T35	Eq-Unit 240 242	dl
+T36	Drug 274 290	nephrotoxic drug
+E18	Drug:T36 Name:T37
+T37	Drug-Name 274 290	nephrotoxic drug
+T38	Drug-Name 298 313	aminoglycosides
+T39	Drug 298 313	aminoglycosides
+E19	Drug:T39 Name:T38
+T40	Drug 315 329	amphotericin B
+E20	Drug:T40 Name:T41
+T41	Drug-Name 315 329	amphotericin B
+T42	Drug 331 340	cisplatin
+E21	Drug:T42 Name:T43
+T43	Drug-Name 331 340	cisplatin
+T44	Drug 344 366	calcinurine inhibitors
+E22	Drug:T44 Name:T45
+T45	Drug-Name 344 366	calcinurine inhibitors
+T46	Or 341 343	or
+E23	Or:T46 Arg:E21 Arg2:E22
+R1	Example-Of Arg1:E19 Arg2:E18	
+R2	Example-Of Arg1:E20 Arg2:E18	
+R3	Example-Of Arg1:E21 Arg2:E18	
+R4	Example-Of Arg1:E22 Arg2:E18	
+T47	Assertion 374 385	Anticepated
+E24	Assertion:T47 Asserted:E25
+A8	Assertion-Type-Value E24 hypothetical
+T48	Drug 404 419	contrast medium
+E25	Drug:T48 Name:T49 Temporality:E16
+T49	Drug-Name 404 419	contrast medium
+T50	Condition 480 488	diseases
+E26	Condition:T50 Name:T51
+T51	Condition-Name 480 488	diseases
+T52	Condition 496 502	cancer
+E27	Condition:T52 Name:T53
+T53	Condition-Name 496 502	cancer
+T54	Condition 551 571	urinary tract stones
+E28	Condition:T54 Name:T55
+T55	Condition-Name 551 571	urinary tract stones
+T56	Or 548 550	or
+E29	Or:T56 Arg:E14 Arg2:E28
+R5	Example-Of Arg1:E27 Arg2:E26	
+R6	Example-Of Arg1:E12 Arg2:E26	
+R7	Example-Of Arg1:E14 Arg2:E26	
+R8	Example-Of Arg1:E28 Arg2:E26	
+T57	Assertion 579 591	Unlikelyhood
+E30	Assertion:T57 Asserted:E31
+A9	Assertion-Type-Value E30 hypothetical
+T58	Drug 615 626	medications
+E31	Drug:T58 Temporality:E32
+T59	Eq-Comparison 631 648	at least 72 hours
+E32	Eq-Comparison:T59 Temporal-Unit:T61 Operator:T60 Value:T21
+T60	Eq-Operator 631 639	at least
+A10	Eq-Operator-Value T60 LTEQ
+T61	Eq-Temporal-Unit 643 648	hours
+A11	Eq-Temporal-Unit-Value T61 hour
+T62	Modifier 64 68	MRSA
+E33	Modifier:T62 Modifies:T4

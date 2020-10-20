@@ -1,76 +1,97 @@
+E2	Observation:T2 Name:T3
+E4	Observation:T4 Name:T5 Eq-Comparison:E37 Eq-Comparison2:E38
+E6	Condition:T6 Name:T7
+E8	Observation:T8 Name:T9 Eq-Comparison:E39 Eq-Comparison2:E40
+E10	Procedure:T10 Temporality:E9 Name:T28
+E12	Procedure:T12 Temporality:E11 Name:T29
+E14	Procedure:T14 Name:T15
+E16	Condition:T16 Name:T17
+E18	Procedure:T18 Name:T19 Temporality:E27 Temporality2:E25
+E20	Condition:T20 Name:T21 Duration:E47
+E22	Condition:T22 Name:T23
+E24	Condition:T24 Name:T25 Stability:T105
+E26	Condition:T26 Name:T27
+E31	Condition:T31 Name:T32
+E33	Condition:T33 Name:T34
+E36	Age:T49 Eq-Comparison:E43
+E37	Eq-Comparison:T65 Operator:T37 Value:T54
+E38	Eq-Comparison:T66 Operator:T38 Unit:T46 Value:T55 Per:T76
+E39	Eq-Comparison:T67 Operator:T39 Value:T56
+E40	Eq-Comparison:T68 Operator:T40 Unit:T47 Value:T57 Per:T78
+E41	Eq-Comparison:T69 Operator:T41 Value:T58 Value2:T59 Operator2:T51 Unit:T72 Per:T86
+E42	Eq-Comparison:T70 Operator:T42 Value:T60 Unit:T87 Per:T88
+E43	Eq-Comparison:T71 Operator:T50 Value:T52 Temporal-Unit:T43 Value2:T53
+E1	Or:T74 Arg:T1 Arg2:T73
+E3	And:T75 Arg:E37 Arg2:E38
+E5	Or:T77 Arg:E39 Arg2:E40
+E7	Condition:T79 Name:T80
+E9	Eq-Comparison:T81 Temporal-Period:T82
+E11	Eq-Comparison:T11 Temporal-Period:T13
+E13	Observation:T83 Name:T84 Polarity:T85 Eq-Comparison:E41
+E15	Or:T89 Arg:T30 Arg2:T90
+E17	Drug:T61 Name:T62
+E19	Exception:T91 From:E14 Except:E17
+E21	Observation:T92 Name:T93 Stability:T94 Polarity:T95 Eq-Comparison:E23
+E23	Eq-Comparison:T96 Operator:T97 Value:T63 Unit:T48
+E25	Eq-Comparison:T98 Temporal-Period:T99
+E27	Eq-Comparison:T100 Value:T101 Temporal-Unit:T44
+E28	Or:T102 Arg:E21 Arg2:E18
+E29	Condition:T103 Name:T104 Stability:T105
+E30	Or:T106 Arg:E24 Arg2:E29
+E32	Condition:T107 Name:T108
+E34	Condition:T109 Name:T110
+E44	Or:T111 Arg:E32 Arg2:E34
+E45	Condition:T114 Name:T115
+E46	And:T116 Arg:T113 Arg2:E45
+E47	Eq-Comparison:T117 Operator:T118 Temporal-Unit:T45 Value:T64
+E48	Observation:T119 Name:T120 Severity:T121
+E49	Allergy:T122 Name:T123 Name2:E35
+E35	Drug:T35
+E50	Study:T36 Study-Of:E35
+E51	Or:T124 Arg:E33 Arg2:E31
 T2	Observation 69 84	Body Mass Index
 T3	Observation-Name 69 84	Body Mass Index
-E2	Observation:T2 Name:T3
-A1	Observation-Type-Value T3 vital
 T4	Observation 86 89	BMI
 T5	Observation-Name 86 89	BMI
-E4	Observation:T4 Name:T5 Eq-Comparison:E37 Eq-Comparison2:E38
-A2	Observation-Type-Value T5 vital
 T6	Condition 300 317	Diabetes Mellitus
 T7	Condition-Name 300 317	Diabetes Mellitus
-E6	Condition:T6 Name:T7
 T8	Observation 249 252	BMI
 T9	Observation-Name 249 252	BMI
-E8	Observation:T8 Name:T9 Eq-Comparison:E39 Eq-Comparison2:E40
-A3	Observation-Type-Value T9 vital
 T10	Procedure 354 379	pharmacological treatment
-E10	Procedure:T10 Temporality:E9 Name:T28
 T12	Procedure 415 440	pharmacological treatment
-E12	Procedure:T12 Temporality:E11 Name:T29
 T14	Procedure 688 713	pharmacological treatment
 T15	Procedure-Name 688 713	pharmacological treatment
-E14	Procedure:T14 Name:T15
 T16	Condition 916 941	gastrointestinal diseases
 T17	Condition-Name 916 941	gastrointestinal diseases
-E16	Condition:T16 Name:T17
 T18	Procedure 844 860	weight loss diet
 T19	Procedure-Name 844 860	weight loss diet
-E18	Procedure:T18 Name:T19 Temporality:E27 Temporality2:E25
 T20	Condition 1074 1100	absence of menstrual cycle
 T21	Condition-Name 1074 1100	absence of menstrual cycle
-E20	Condition:T20 Name:T21 Duration:E47
 T22	Condition 399 411	hypertension
 T23	Condition-Name 399 411	hypertension
-E22	Condition:T22 Name:T23
 T24	Condition 958 967	digestion
 T25	Condition-Name 958 967	digestion
-E24	Condition:T24 Name:T25 Stability:T105
 T26	Condition 485 500	eating disorder
 T27	Condition-Name 485 500	eating disorder
-E26	Condition:T26 Name:T27
 T31	Condition 1342 1360	gluten intolerance
 T32	Condition-Name 1342 1360	gluten intolerance
-E31	Condition:T31 Name:T32
 T33	Condition 1322 1336	celiac disease
 T34	Condition-Name 1322 1336	celiac disease
-E33	Condition:T33 Name:T34
 T37	Eq-Operator 91 92	≥
-A4	Eq-Operator-Value T37 GTEQ
 T38	Eq-Operator 99 100	<
-A5	Eq-Operator-Value T38 LT
 T39	Eq-Operator 253 254	≥
-A6	Eq-Operator-Value T39 GTEQ
 T40	Eq-Operator 260 261	<
-A7	Eq-Operator-Value T40 LT
 T41	Eq-Operator 563 564	>
-A8	Eq-Operator-Value T41 GT
 T42	Eq-Operator 593 594	>
-A9	Eq-Operator-Value T42 GT
 T43	Eq-Temporal-Unit 53 58	years
-A10	Eq-Temporal-Unit-Value T43 year
 T44	Eq-Temporal-Unit 835 841	months
-A11	Eq-Temporal-Unit-Value T44 month
 T45	Eq-Temporal-Unit 1112 1118	months
-A12	Eq-Temporal-Unit-Value T45 month
 T46	Eq-Unit 103 105	kg
 T47	Eq-Unit 264 266	kg
 T48	Eq-Unit 803 805	kg
 T49	Age 59 62	old
-E36	Age:T49 Eq-Comparison:E43
 T50	Eq-Operator 47 49	to
-A13	Eq-Operator-Value T50 BETWEEN
 T51	Eq-Operator 566 567	-
-A14	Eq-Operator-Value T51 BETWEEN
 T52	Eq-Value 44 46	18
 T53	Eq-Value 50 52	65
 T54	Eq-Value 92 94	25
@@ -83,136 +104,115 @@ T60	Eq-Value 595 596	1
 T63	Eq-Value 801 802	4
 T64	Eq-Value 1110 1111	2
 T65	Eq-Comparison 91 94	≥25
-E37	Eq-Comparison:T65 Operator:T37 Value:T54
 T66	Eq-Comparison 99 108	<30 kg/m2
-E38	Eq-Comparison:T66 Operator:T38 Unit:T46 Value:T55 Per:T76
 T67	Eq-Comparison 253 256	≥30
-E39	Eq-Comparison:T67 Operator:T39 Value:T56
 T68	Eq-Comparison 260 270	<25 kg /m2
-E40	Eq-Comparison:T68 Operator:T40 Unit:T47 Value:T57 Per:T78
 T69	Eq-Comparison 563 582	> 2-3 servings/ day
-E41	Eq-Comparison:T69 Operator:T41 Value:T58 Value2:T59 Operator2:T51 Unit:T72 Per:T86
 T70	Eq-Comparison 593 608	> 1 serving/day
-E42	Eq-Comparison:T70 Operator:T42 Value:T60 Unit:T87 Per:T88
 T71	Eq-Comparison 44 58	18 to 65 years
-E43	Eq-Comparison:T71 Operator:T50 Value:T52 Temporal-Unit:T43 Value2:T53
 T1	Life-Stage-And-Gender 25 28	Men
-A15	Life-Stage-And-Gender-Type T1 male
 T73	Life-Stage-And-Gender 33 38	women
-A16	Life-Stage-And-Gender-Type T73 female
 T74	Or 29 32	and
-E1	Or:T74 Arg:T1 Arg2:T73
-R1	Abbrev-Of Arg1:E4 Arg2:E2	
 T75	And 95 98	and
-E3	And:T75 Arg:E37 Arg2:E38
 T76	Eq-Unit 106 108	m2
 T77	Or 257 259	or
-E5	Or:T77 Arg:E39 Arg2:E40
 T78	Eq-Unit 268 270	m2
 T79	Condition 338 350	dyslipidemia
-E7	Condition:T79 Name:T80
 T80	Condition-Name 338 350	dyslipidemia
 T81	Eq-Comparison 351 353	on
-E9	Eq-Comparison:T81 Temporal-Period:T82
 T82	Eq-Temporal-Period 351 353	on
-A17	Eq-Temporal-Period-Value T82 present
-R2	Treatment-For Arg1:E10 Arg2:E7	
 T11	Eq-Comparison 412 414	on
-E11	Eq-Comparison:T11 Temporal-Period:T13
 T13	Eq-Temporal-Period 412 414	on
-A18	Eq-Temporal-Period-Value T13 present
-R3	Treatment-For Arg1:E12 Arg2:E22	
 T83	Observation 542 561	alcohol consumption
-E13	Observation:T83 Name:T84 Polarity:T85 Eq-Comparison:E41
 T84	Observation-Name 542 561	alcohol consumption
-A19	Observation-Type-Value T84 social-habit
 T85	Polarity 537 541	high
-A20	Polarity-Value T85 high
 T72	Eq-Unit 569 577	servings
 T86	Eq-Temporal-Unit 579 582	day
-A21	Eq-Temporal-Unit-Value T86 day
 T30	Life-Stage-And-Gender 586 589	men
-A22	Life-Stage-And-Gender-Type T30 male
-R4	If-Then Arg1:T30 Arg2:E41	
 T87	Eq-Unit 597 604	serving
 T88	Eq-Temporal-Unit 605 608	day
-A23	Eq-Temporal-Unit-Value T88 day
 T89	Or 590 593	and
-E15	Or:T89 Arg:T30 Arg2:T90
 T90	Life-Stage-And-Gender 612 617	women
-A24	Life-Stage-And-Gender-Type T90 female
-R5	If-Then Arg1:T90 Arg2:E42	
 T28	Procedure-Name 354 379	pharmacological treatment
 T29	Procedure-Name 415 440	pharmacological treatment
 T61	Drug 722 741	oral contraceptives
-E17	Drug:T61 Name:T62
 T62	Drug-Name 722 741	oral contraceptives
 T91	Exception 715 721	except
-E19	Exception:T91 From:E14 Except:E17
 T92	Observation 768 774	weight
-E21	Observation:T92 Name:T93 Stability:T94 Polarity:T95 Eq-Comparison:E23
 T93	Observation-Name 768 774	weight
-A25	Observation-Type-Value T93 vital
 T94	Stability 775 787	fluctuations
-A26	Stability-Value T94 change
 T95	Polarity 762 767	large
-A27	Polarity-Value T95 high
 T96	Eq-Comparison 791 805	more than 4 kg
-E23	Eq-Comparison:T96 Operator:T97 Value:T63 Unit:T48
 T97	Eq-Operator 791 800	more than
-A28	Eq-Operator-Value T97 GTEQ
 T98	Eq-Comparison 818 827	undergone
-E25	Eq-Comparison:T98 Temporal-Period:T99
 T99	Eq-Temporal-Period 818 827	undergone
-A29	Eq-Temporal-Period-Value T99 past
 T100	Eq-Comparison 831 841	six months
-E27	Eq-Comparison:T100 Value:T101 Temporal-Unit:T44
 T101	Eq-Value 831 834	six
 T102	Or 806 808	or
-E28	Or:T102 Arg:E21 Arg2:E18
 T103	Condition 971 994	absorption of nutrients
-E29	Condition:T103 Name:T104 Stability:T105
 T104	Condition-Name 971 994	absorption of nutrients
 T105	Stability 947 953	affect
-A30	Stability-Value T105 change
 T106	Or 968 970	or
-E30	Or:T106 Arg:E24 Arg2:E29
-R6	Caused-By Arg1:T105 Arg2:E16	
 T107	Condition 1000 1008	Pregnant
-E32	Condition:T107 Name:T108
 T108	Condition-Name 1000 1008	Pregnant
 T109	Condition 1012 1025	breastfeeding
-E34	Condition:T109 Name:T110
 T110	Condition-Name 1012 1025	breastfeeding
 T111	Or 1009 1011	or
-E44	Or:T111 Arg:E32 Arg2:E34
 T112	Life-Stage-And-Gender 1026 1031	women
-A31	Life-Stage-And-Gender-Type T112 female
-R7	If-Then Arg1:T112 Arg2:E34	
 T113	Life-Stage-And-Gender 1037 1042	Women
-A32	Life-Stage-And-Gender-Type T113 female
 T114	Condition 1048 1072	menstrual irregularities
-E45	Condition:T114 Name:T115
 T115	Condition-Name 1048 1072	menstrual irregularities
 T116	And 1043 1047	with
-E46	And:T116 Arg:T113 Arg2:E45
 T117	Eq-Comparison 1101 1118	at least 2 months
-E47	Eq-Comparison:T117 Operator:T118 Temporal-Unit:T45 Value:T64
 T118	Eq-Operator 1101 1109	at least
-A33	Eq-Operator-Value T118 GTEQ
-R8	Equivalent-To Arg1:E20 Arg2:E45	
 T119	Observation 1147 1164	physical activity
-E48	Observation:T119 Name:T120 Severity:T121
 T120	Observation-Name 1147 1164	physical activity
-A34	Observation-Type-Value T120 social-habit
 T121	Severity 1139 1146	intense
-A35	Severity-Value T121 severe
 T122	Allergy 1190 1199	allergies
-E49	Allergy:T122 Name:T123 Name2:E35
 T123	Allergy-Name 1185 1189	food
 T35	Drug 1238 1245	product
-E35	Drug:T35 
 T36	Study 1232 1237	study
-E50	Study:T36 Study-Of:E35
 T124	Or 1337 1339	or
-E51	Or:T124 Arg:E33 Arg2:E31
+A1	Observation-Type-Value T3 vital
+A2	Observation-Type-Value T5 vital
+A3	Observation-Type-Value T9 vital
+A4	Eq-Operator-Value T37 GTEQ
+A5	Eq-Operator-Value T38 LT
+A6	Eq-Operator-Value T39 GTEQ
+A7	Eq-Operator-Value T40 LT
+A8	Eq-Operator-Value T41 GT
+A9	Eq-Operator-Value T42 GT
+A10	Eq-Temporal-Unit-Value T43 year
+A11	Eq-Temporal-Unit-Value T44 month
+A12	Eq-Temporal-Unit-Value T45 month
+A13	Eq-Operator-Value T50 BETWEEN
+A14	Eq-Operator-Value T51 BETWEEN
+A15	Life-Stage-And-Gender-Type T1 male
+A16	Life-Stage-And-Gender-Type T73 female
+A17	Eq-Temporal-Period-Value T82 present
+A18	Eq-Temporal-Period-Value T13 present
+A19	Observation-Type-Value T84 social-habit
+A20	Polarity-Value T85 high
+A21	Eq-Temporal-Unit-Value T86 day
+A22	Life-Stage-And-Gender-Type T30 male
+A23	Eq-Temporal-Unit-Value T88 day
+A24	Life-Stage-And-Gender-Type T90 female
+A25	Observation-Type-Value T93 vital
+A26	Stability-Value T94 change
+A27	Polarity-Value T95 high
+A28	Eq-Operator-Value T97 GTEQ
+A29	Eq-Temporal-Period-Value T99 past
+A30	Stability-Value T105 change
+A31	Life-Stage-And-Gender-Type T112 female
+A32	Life-Stage-And-Gender-Type T113 female
+A33	Eq-Operator-Value T118 GTEQ
+A34	Observation-Type-Value T120 social-habit
+A35	Severity-Value T121 severe
+R1	Abbrev-Of Arg1:E4 Arg2:E2
+R2	Treatment-For Arg1:E10 Arg2:E7
+R3	Treatment-For Arg1:E12 Arg2:E22
+R4	If-Then Arg1:T30 Arg2:E41
+R5	If-Then Arg1:T90 Arg2:E42
+R6	Caused-By Arg1:T105 Arg2:E16
+R7	If-Then Arg1:T112 Arg2:E34
+R8	Equivalent-To Arg1:E20 Arg2:E45

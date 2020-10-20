@@ -1,0 +1,96 @@
+T1	Procedure 147 156	resection
+T2	Procedure-Name 147 156	resection
+E1	Procedure:T1 Name:T2
+T4	Eq-Operator 358 364	within
+A1	Eq-Operator-Value T4 LTEQ
+T5	Eq-Temporal-Unit 190 195	years
+A2	Eq-Temporal-Unit-Value T5 year
+T6	Eq-Temporal-Unit 376 381	years
+A3	Eq-Temporal-Unit-Value T6 year
+T7	Age 182 186	aged
+E2	Age:T7 Eq-Comparison:E11
+T8	Eq-Value 187 189	18
+T9	Eq-Value 374 375	5
+T10	Eq-Value 460 461	6
+T11	Condition 69 75	glioma
+E3	Condition:T11 Name:T12 Temporality:E24 Stage:E5
+T12	Condition-Name 69 75	glioma
+T13	Eq-Temporal-Recency 53 58	newly
+A4	Eq-Temporal-Recency-Value T13 first-time
+T14	Assertion 43 52	suspected
+E4	Assertion:T14 Asserted:T12
+A5	Assertion-Type-Value E4 possible
+T17	Condition 97 109	glioblastoma
+E8	Condition:T17 Name:T18
+T18	Condition-Name 97 109	glioblastoma
+T19	Procedure 124 145	surgical intervention
+E9	Procedure:T19 Name:T20 Temporality:E7
+T20	Procedure-Name 124 145	surgical intervention
+R1	Example-Of Arg1:E1 Arg2:E9	
+T21	Procedure 160 166	biopsy
+E10	Procedure:T21 Name:T22
+T22	Procedure-Name 160 166	biopsy
+R2	Example-Of Arg1:E10 Arg2:E9	
+T23	Eq-Comparison 187 204	18 years or older
+E11	Eq-Comparison:T23 Operator:T24 Temporal-Unit:T5 Value:T8
+T24	Eq-Operator 196 204	or older
+A6	Eq-Operator-Value T24 GTEQ
+T26	Procedure 291 303	Radiotherapy
+E13	Procedure:T26 Name:T27 Temporality:E12
+T27	Procedure-Name 291 303	Radiotherapy
+T28	Modifier 311 333	central nervous system
+E14	Modifier:T28 Modifies:E13
+T30	Procedure 345 357	Chemotherapy
+E16	Procedure:T30 Name:T31 Temporality:E18 Temporality2:E17
+T31	Procedure-Name 345 357	Chemotherapy
+T32	Eq-Comparison 358 381	within the last 5 years
+E17	Eq-Comparison:T32 Operator:T4 Temporal-Unit:T6 Value:T9 Temporal-Period:T51
+T33	Eq-Comparison 339 344	Prior
+E18	Eq-Comparison:T33 Temporal-Period:T50
+T34	Condition 420 430	malignancy
+E19	Condition:T34 Name:T35 Temporality:E15
+T35	Condition-Name 420 430	malignancy
+T37	Procedure 440 447	surgery
+E21	Procedure:T37 Name:T38
+T38	Procedure-Name 440 447	surgery
+T40	Temporal-Connection 448 454	during
+E23	Temporal-Connection:T40 Arg:E21 Arg2:E22
+A10	Temporal-Connection-Type-Value E23 during
+T39	Eq-Temporal-Unit 462 467	month
+A11	Eq-Temporal-Unit-Value T39 month
+T41	Eq-Comparison 455 467	last 6 month
+E22	Eq-Comparison:T41 Temporal-Unit:T39 Value:T10 Temporal-Period:T54
+T42	Eq-Comparison 53 58	newly
+E24	Eq-Comparison:T42 Temporal-Recency:T13
+T3	Eq-Comparison 77 93	grade I, II, III
+E5	Eq-Comparison:T3 Unit:T15 Value:T16 Value2:T43 Value3:T44
+T15	Eq-Unit 77 82	grade
+T16	Eq-Value 83 84	I
+T43	Eq-Value 86 88	II
+T44	Eq-Value 90 93	III
+T45	Or 94 96	or
+E6	Or:T45 Arg:E3 Arg2:E8
+T46	Eq-Comparison 116 123	planned
+E7	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 116 123	planned
+A12	Eq-Temporal-Period-Value T47 future
+T48	And 111 115	with
+E25	And:T48 Arg:E3 Arg2:E9
+T49	Or 157 159	or
+E26	Or:T49 Arg:E1 Arg2:E10
+T25	Eq-Comparison 285 290	Prior
+E12	Eq-Comparison:T25 Temporal-Period:T29
+T29	Eq-Temporal-Period 285 290	Prior
+A7	Eq-Temporal-Period-Value T29 past
+T50	Eq-Temporal-Period 339 344	Prior
+A8	Eq-Temporal-Period-Value T50 past
+T51	Eq-Temporal-Period 369 373	last
+A13	Eq-Temporal-Period-Value T51 past
+T36	Eq-Comparison 391 396	prior
+E15	Eq-Comparison:T36 Temporal-Period:T52
+T52	Eq-Temporal-Period 391 396	prior
+A9	Eq-Temporal-Period-Value T52 past
+T53	Modifier 397 419	central nervous system
+E20	Modifier:T53 Modifies:T35
+T54	Eq-Temporal-Period 455 459	last
+A14	Eq-Temporal-Period-Value T54 past

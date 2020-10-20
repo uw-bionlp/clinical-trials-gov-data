@@ -1,0 +1,54 @@
+T1	Temporal-Connection 64 75	at the time
+E1	Temporal-Connection:T1 Arg:E2
+A1	Temporal-Connection-Type-Value E1 during
+T2	Study 83 88	study
+E2	Study:T2 
+T3	Eq-Comparison 138 151	Over 18 years
+E3	Eq-Comparison:T3 Operator:T18 Value:T19 Temporal-Unit:T20
+T4	Age 152 155	old
+E4	Age:T4 Eq-Comparison:E3
+T5	Condition 213 219	injury
+E5	Condition:T5 Name:T21
+T6	Or 220 222	or
+E6	Or:T6 Arg:E5 Arg2:E7
+T7	Condition 223 230	illness
+E7	Condition:T7 Name:T22
+T8	Modifier 252 256	knee
+E8	Modifier:T8 Modifies:T23
+T9	Condition 257 263	injury
+E9	Condition:T9 Name:T23 Temporality:E10
+T10	Eq-Comparison 271 279	6 months
+E10	Eq-Comparison:T10 Value:T24 Temporal-Unit:T25
+T11	Temporal-Connection 280 288	prior to
+E11	Temporal-Connection:T11 Arg:E10 Arg2:E12
+A2	Temporal-Connection-Type-Value E11 before
+T12	Study 293 298	study
+E12	Study:T12 
+T13	Drug 315 330	pharmacological
+E13	Drug:T13 
+T14	Or 331 333	or
+E14	Or:T14 Arg:E13 Arg2:E15
+T15	Procedure 334 357	physiotherapy treatment
+E15	Procedure:T15 Name:T26
+T16	Study 374 379	study
+E16	Study:T16 Study-Of:E13 Study-Of2:E15
+T18	Eq-Operator 138 142	Over
+A4	Eq-Operator-Value T18 GT
+T19	Eq-Value 143 145	18
+T20	Eq-Temporal-Unit 146 151	years
+A5	Eq-Temporal-Unit-Value T20 year
+T21	Condition-Name 213 219	injury
+T22	Condition-Name 223 230	illness
+T23	Condition-Name 257 263	injury
+T24	Eq-Value 271 272	6
+T25	Eq-Temporal-Unit 273 279	months
+A6	Eq-Temporal-Unit-Value T25 month
+T26	Procedure-Name 334 357	physiotherapy treatment
+T17	Observation 25 43	Volleyball players
+E17	Observation:T17 Name:T27
+T27	Observation-Name 25 43	Volleyball players
+A3	Observation-Type-Value T27 social-habit
+T28	Location 113 132	Community of Madrid
+A7	Location-Value T28 residence
+T29	Other 358 369	external to
+E18	Other:T29 Is-Other:E16

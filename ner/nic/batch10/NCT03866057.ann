@@ -1,66 +1,66 @@
+E1	Condition:T1 Name:T2 Severity:T30 Temporality:E14
+E5	Condition:T5 Name:T6
+E6	Age:T10 Eq-Comparison:E8
+E7	Eq-Comparison:T16 Operator:T7 Temporal-Unit:T8 Value:T14
+E8	Eq-Comparison:T17 Operator:T11 Value:T12 Value2:T13
+E2	Condition:T18 Name:T19 Temporality:E7 Acuteness:T23
+E4	Modifier:T20 Modifies:T19
+E9	Modifier:T21 Modifies:T19
+E10	Or:T22 Arg:E9 Arg2:E4
+E11	Condition:T24 Name:T25 Temporality:E12
+E12	Eq-Comparison:T26 Operator:T27 Value:T15 Temporal-Unit:T9
+E3	Encounter:T3 Type:T4 Location:T29
+E13	Temporal-Connection:T28 Arg:E12 Arg2:E3
+E14	Eq-Comparison:T31 Temporal-Period:T32
+E15	Condition:T33 Name:T34 Temporality:E16
+E16	Eq-Comparison:T35 Temporal-Period:T36
+E17	Or:T37 Arg:E1 Arg2:E15
 T1	Condition 637 657	psychiatric disorder
 T2	Condition-Name 637 657	psychiatric disorder
-E1	Condition:T1 Name:T2 Severity:T30 Temporality:E14
 T5	Condition 686 700	global aphasia
 T6	Condition-Name 686 700	global aphasia
-E5	Condition:T5 Name:T6
 T7	Eq-Operator 78 84	within
-A1	Eq-Operator-Value T7 LTEQ
 T8	Eq-Temporal-Unit 88 92	days
-A2	Eq-Temporal-Unit-Value T8 day
 T9	Eq-Temporal-Unit 477 481	days
-A3	Eq-Temporal-Unit-Value T9 day
 T10	Age 25 28	age
-E6	Age:T10 Eq-Comparison:E8
 T11	Eq-Operator 31 32	-
-A4	Eq-Operator-Value T11 BETWEEN
 T12	Eq-Value 29 31	18
 T13	Eq-Value 32 34	90
 T14	Eq-Value 85 87	30
 T15	Eq-Value 474 476	30
 T16	Eq-Comparison 78 92	within 30 days
-E7	Eq-Comparison:T16 Operator:T7 Temporal-Unit:T8 Value:T14
 T17	Eq-Comparison 29 34	18-90
-E8	Eq-Comparison:T17 Operator:T11 Value:T12 Value2:T13
 T18	Condition 70 76	stroke
-E2	Condition:T18 Name:T19 Temporality:E7 Severity:T23
 T19	Condition-Name 70 76	stroke
 T20	Modifier 58 69	hemorrhagic
-E4	Modifier:T20 Modifies:T19
 T21	Modifier 46 54	ischemic
-E9	Modifier:T21 Modifies:T19
 T22	Or 55 57	or
-E10	Or:T22 Arg:E9 Arg2:E4
-T23	Severity 40 45	acute
-A5	Severity-Value T23 severe
+T23	Acuteness 40 45	acute
 T24	Condition 448 454	Stroke
-E11	Condition:T24 Name:T25 Temporality:E12
 T25	Condition-Name 448 454	Stroke
 T26	Eq-Comparison 464 481	more than 30 days
-E12	Eq-Comparison:T26 Operator:T27 Value:T15 Temporal-Unit:T9
 T27	Eq-Operator 464 473	more than
-A6	Eq-Operator-Value T27 GT
 T3	Encounter 492 500	transfer
-E3	Encounter:T3 Type:T4 Location:T29
 T4	Encounter-Type 492 500	transfer
-A7	Encounter-Type-Value T4 transfer
 T28	Temporal-Connection 482 487	after
-E13	Temporal-Connection:T28 Arg:E12 Arg2:E3
-A8	Temporal-Connection-Type-Value E13 after
 T29	Location 504 528	intensive rehabilitation
-A9	Location-Value T29 unit
 T30	Severity 631 636	major
-A10	Severity-Value T30 severe
 T31	Eq-Comparison 620 627	history
-E14	Eq-Comparison:T31 Temporal-Period:T32
 T32	Eq-Temporal-Period 620 627	history
-A11	Eq-Temporal-Period-Value T32 present
 T33	Condition 668 680	exacerbation
-E15	Condition:T33 Name:T34 Temporality:E16
 T34	Condition-Name 668 680	exacerbation
 T35	Eq-Comparison 661 667	recent
-E16	Eq-Comparison:T35 Temporal-Period:T36
 T36	Eq-Temporal-Period 661 667	recent
-A12	Eq-Temporal-Period-Value T36 recent
 T37	Or 658 660	or
-E17	Or:T37 Arg:E1 Arg2:E15
+A1	Eq-Operator-Value T7 LTEQ
+A2	Eq-Temporal-Unit-Value T8 day
+A3	Eq-Temporal-Unit-Value T9 day
+A4	Eq-Operator-Value T11 BETWEEN
+A6	Eq-Operator-Value T27 GT
+A7	Encounter-Type-Value T4 transfer
+A8	Temporal-Connection-Type-Value E13 after
+A9	Location-Value T29 unit
+A10	Severity-Value T30 severe
+A11	Eq-Temporal-Period-Value T32 present
+A12	Eq-Temporal-Period-Value T36 recent
+A13	Acuteness-Type-Value T23 acute

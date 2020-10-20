@@ -1,0 +1,18 @@
+T1	Procedure 120 141	liver transplantation
+T2	Procedure-Name 120 141	liver transplantation
+E1	Procedure:T1 Name:T2
+T3	Procedure 91 102	hepatectomy
+T4	Procedure-Name 91 102	hepatectomy
+E3	Procedure:T3 Name:T4
+T5	Condition 46 49	ASA
+E2	Condition:T5 Name:T6 Stage:E4
+T6	Condition-Name 46 49	ASA
+T7	Eq-Comparison 50 57	I or II
+E4	Eq-Comparison:T7 Value:T8 Value2:T9
+T8	Eq-Value 50 51	I
+T9	Eq-Value 55 57	II
+T10	Modifier 80 90	right lobe
+E5	Modifier:T10 Modifies:T4
+T11	Modifier 107 119	living donor
+E6	Modifier:T11 Modifies:T2
+R1	Using Arg1:E1 Arg2:E3	

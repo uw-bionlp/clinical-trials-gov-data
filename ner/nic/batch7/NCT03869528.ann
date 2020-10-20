@@ -1,83 +1,83 @@
-T1	Eq-Comparison 36 44	≥ 18 yrs
 E1	Eq-Comparison:T1 Operator:T23 Value:T24 Temporal-Unit:T25
-T2	Age 48 51	age
 E2	Age:T2 Eq-Comparison:E1
-T3	Eq-Comparison 52 62	undergoing
 E3	Eq-Comparison:T3 Temporal-Period:T26
-T4	Procedure 72 84	bronchoscopy
 E4	Procedure:T4 Name:T27 Temporality:E3
-T5	Modifier 110 122	Uncontrolled
 E5	Modifier:T5 Modifies:T28
-T6	Condition 123 135	hypertension
 E6	Condition:T6 Name:T28
-T7	Observation 136 159	Systolic Blood Pressure
 E7	Observation:T7 Name:T29 Eq-Comparison:E8
-T8	Eq-Comparison 160 170	>180 mm Hg
 E8	Eq-Comparison:T8 Operator:T30 Value:T31 Unit:T32
-T9	Assertion 176 187	Symptomatic
 E9	Assertion:T9 Asserted:E10
-A1	Assertion-Type-Value E9 possible
-T10	Condition 188 211	coronary artery disease
 E10	Condition:T10 Name:T33
-T11	Condition 217 226	Pregnancy
 E11	Condition:T11 Name:T34
-T13	Condition 283 292	Hypoxemia
 E13	Condition:T13 Name:T36
-T14	Observation 294 311	oxygen saturation
 E14	Observation:T14 Name:T37 Eq-Comparison:E16
-T15	Procedure 316 330	pulse oximetry
 E15	Procedure:T15 Name:T38
-T16	Eq-Comparison 332 337	< 92%
 E16	Eq-Comparison:T16 Operator:T39 Value:T40 Unit:T41
-T17	And 338 342	with
 E17	And:T17 Arg:E14 Arg2:E18
-T18	Observation 343 347	Fio2
 E18	Observation:T18 Name:T42 Eq-Comparison:E19
-T19	Eq-Comparison 351 356	≥ 0.3
 E19	Eq-Comparison:T19 Operator:T43 Value:T44
-T20	Procedure 362 374	Bronchoscopy
 E20	Procedure:T20 Name:T45
-T21	Procedure 396 413	artificial airway
 E21	Procedure:T21 Name:T46
+E22	Modifier:T47 Modifies:T27
+E12	Coreference:T12 Refers-To:E4
+T1	Eq-Comparison 36 44	≥ 18 yrs
+T2	Age 48 51	age
+T3	Eq-Comparison 52 62	undergoing
+T4	Procedure 72 84	bronchoscopy
+T5	Modifier 110 122	Uncontrolled
+T6	Condition 123 135	hypertension
+T7	Observation 136 159	Systolic Blood Pressure
+T8	Eq-Comparison 160 170	>180 mm Hg
+T9	Assertion 176 187	Symptomatic
+T10	Condition 188 211	coronary artery disease
+T11	Condition 217 226	Pregnancy
+T13	Condition 283 292	Hypoxemia
+T14	Observation 294 311	oxygen saturation
+T15	Procedure 316 330	pulse oximetry
+T16	Eq-Comparison 332 337	< 92%
+T17	And 338 342	with
+T18	Observation 343 347	Fio2
+T19	Eq-Comparison 351 356	≥ 0.3
+T20	Procedure 362 374	Bronchoscopy
+T21	Procedure 396 413	artificial airway
 T22	Life-Stage-And-Gender 29 35	adults
-A2	Life-Stage-And-Gender-Type T22 adult
 T23	Eq-Operator 36 37	≥
-A3	Eq-Operator-Value T23 GTEQ
 T24	Eq-Value 38 40	18
 T25	Eq-Temporal-Unit 41 44	yrs
-A4	Eq-Temporal-Unit-Value T25 year
 T26	Eq-Temporal-Period 52 62	undergoing
-A5	Eq-Temporal-Period-Value T26 present
 T27	Procedure-Name 72 84	bronchoscopy
 T28	Condition-Name 123 135	hypertension
 T29	Observation-Name 136 159	Systolic Blood Pressure
-A6	Observation-Type-Value T29 vital
 T30	Eq-Operator 160 161	>
-A7	Eq-Operator-Value T30 GT
 T31	Eq-Value 161 164	180
 T32	Eq-Unit 165 170	mm Hg
 T33	Condition-Name 188 211	coronary artery disease
 T34	Condition-Name 217 226	Pregnancy
 T36	Condition-Name 283 292	Hypoxemia
 T37	Observation-Name 294 311	oxygen saturation
-A8	Observation-Type-Value T37 vital
 T38	Procedure-Name 316 330	pulse oximetry
 T39	Eq-Operator 332 333	<
-A9	Eq-Operator-Value T39 LT
 T40	Eq-Value 334 336	92
 T41	Eq-Unit 336 337	%
 T42	Observation-Name 343 347	Fio2
 T43	Eq-Operator 351 352	≥
-A10	Eq-Operator-Value T43 GTEQ
 T44	Eq-Value 353 356	0.3
 T45	Procedure-Name 362 374	Bronchoscopy
 T46	Procedure-Name 396 413	artificial airway
 T47	Modifier 63 71	flexible
-E22	Modifier:T47 Modifies:T27
-R1	Equivalent-To Arg1:E7 Arg2:E6	
 T12	Coreference 264 277	the procedure
-E12	Coreference:T12 Refers-To:E4
-R2	Using Arg1:E14 Arg2:E15	
-R3	Equivalent-To Arg1:E14 Arg2:E13	
+A1	Assertion-Type-Value E9 possible
+A2	Life-Stage-And-Gender-Type T22 adult
+A3	Eq-Operator-Value T23 GTEQ
+A4	Eq-Temporal-Unit-Value T25 year
+A5	Eq-Temporal-Period-Value T26 present
+A6	Observation-Type-Value T29 vital
+A7	Eq-Operator-Value T30 GT
+A8	Observation-Type-Value T37 vital
+A9	Eq-Operator-Value T39 LT
+A10	Eq-Operator-Value T43 GTEQ
 A11	Observation-Type-Value T42 vital
-R4	Using Arg1:E20 Arg2:E21	
+R1	Equivalent-To Arg1:E7 Arg2:E6
+R2	Using Arg1:E14 Arg2:E15
+R3	Equivalent-To Arg1:E14 Arg2:E13
+R4	Using Arg1:E20 Arg2:E21

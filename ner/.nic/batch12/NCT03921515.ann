@@ -1,0 +1,207 @@
+T1	Condition 105 108	CGD
+T2	Condition-Name 105 108	CGD
+E1	Condition:T1 Name:T2
+T3	Condition 459 462	CGD
+T4	Condition-Name 459 462	CGD
+E3	Condition:T3 Name:T4
+T5	Procedure 818 835	biopsy procedures
+T6	Procedure-Name 818 835	biopsy procedures
+E5	Procedure:T5 Name:T6 Temporality:E37
+T7	Procedure 937 944	therapy
+T8	Procedure-Name 937 944	therapy
+E7	Procedure:T7 Name:T8 Temporality:E43 Temporality2:E42
+T9	Procedure 1094 1106	chemotherapy
+T10	Procedure-Name 1094 1106	chemotherapy
+E9	Procedure:T9 Name:T10
+T11	Condition 1174 1183	Pregnancy
+T12	Condition-Name 1174 1183	Pregnancy
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 889 895	within
+A1	Eq-Operator-Value T13 LTEQ
+T14	Eq-Operator 1040 1046	within
+A2	Eq-Operator-Value T14 LTEQ
+T15	Eq-Temporal-Unit 373 378	years
+A3	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Temporal-Unit 431 436	years
+A4	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Temporal-Unit 489 494	years
+A5	Eq-Temporal-Unit-Value T17 year
+T18	Eq-Temporal-Unit 898 904	months
+A6	Eq-Temporal-Unit-Value T18 month
+T19	Eq-Temporal-Unit 1049 1055	months
+A7	Eq-Temporal-Unit-Value T19 month
+T22	Age 437 440	old
+E14	Age:T22 Eq-Comparison:E25
+T23	Age 495 498	old
+E15	Age:T23 Eq-Comparison:E12
+T24	Eq-Value 363 365	18
+T25	Eq-Value 370 372	65
+T26	Eq-Value 422 423	7
+T27	Eq-Value 428 430	65
+T28	Eq-Value 479 481	18
+T29	Eq-Value 486 488	65
+T30	Eq-Value 896 897	3
+T31	Eq-Value 1047 1048	3
+T32	Eq-Comparison 889 904	within 3 months
+E16	Eq-Comparison:T32 Operator:T13 Temporal-Unit:T18 Value:T30
+T33	Eq-Comparison 1040 1055	within 3 months
+E17	Eq-Comparison:T33 Operator:T14 Temporal-Unit:T19 Value:T31
+T34	Condition 97 101	HIES
+E2	Condition:T34 Name:T35
+T35	Condition-Name 97 101	HIES
+T36	Or 102 104	or
+E4	Or:T36 Arg:E2 Arg2:E1
+T37	Condition 199 212	immune defect
+E6	Condition:T37 Name:T38
+T38	Condition-Name 199 212	immune defect
+T39	Condition 259 269	infections
+E8	Condition:T39 Name:T40 Temporality:E63
+T41	Modifier 227 235	invasive
+E18	Modifier:T41 Modifies:T40
+T42	Modifier 239 248	recurrent
+E19	Modifier:T42 Modifies:T40
+T43	Or 236 238	or
+E20	Or:T43 Arg:E18 Arg2:E19
+T40	Condition-Name 259 269	infections
+T44	Negation 155 158	not
+E10	Negation:T44 Negates:E6
+T45	Or 213 215	or
+E21	Or:T45 Arg:E6 Arg2:E8
+T46	Or 132 134	or
+E22	Or:T46 Arg:E1 Arg2:E10
+T47	Eq-Comparison 363 378	18 and 65 years
+E23	Eq-Comparison:T47 Operator:T49 Value:T24 Value2:T25
+T49	Eq-Operator 366 369	and
+A9	Eq-Operator-Value T49 BETWEEN
+T52	Eq-Comparison 422 436	7 and 65 years
+E25	Eq-Comparison:T52 Temporal-Unit:T16 Value:T27 Value2:T26 Operator:T53
+T53	Eq-Operator 424 427	and
+A11	Eq-Operator-Value T53 BETWEEN
+T54	Age 379 382	old
+E26	Age:T54 Eq-Comparison:E23
+R3	If-Then Arg1:E3 Arg2:E14	
+T20	Eq-Comparison 479 494	18 and 65 years
+E12	Eq-Comparison:T20 Temporal-Unit:T17 Operator:T55 Value:T28 Value2:T29
+T55	Eq-Operator 482 485	and
+A12	Eq-Operator-Value T55 BETWEEN
+T56	Condition 517 521	HIES
+E27	Condition:T56 Name:T57
+T57	Condition-Name 517 521	HIES
+R4	If-Then Arg1:E27 Arg2:E15	
+T58	Observation 544 557	allow storage
+E28	Observation:T58 Name:T59
+T59	Observation-Name 544 557	allow storage
+T60	Assertion 533 543	Willing to
+E29	Assertion:T60 Asserted:E28
+A13	Assertion-Type-Value E29 hypothetical
+T61	Modifier 561 566	blood
+E30	Modifier:T61 Modifies:T59
+T62	Modifier 568 571	RNA
+E31	Modifier:T62 Modifies:T59
+T63	Modifier 573 582	bacterial
+E32	Modifier:T63 Modifies:T59
+T64	Modifier 587 602	fungal cultures
+E33	Modifier:T64 Modifies:T59
+T65	Modifier 614 628	tissue samples
+E34	Modifier:T65 Modifies:T59
+T66	Or 604 607	and
+E35	Or:T66 Arg:E34 Arg2:E33
+T67	Or 583 586	and
+E36	Or:T67 Arg:E32 Arg2:E33
+T68	Eq-Comparison 791 801	undergoing
+E37	Eq-Comparison:T68 Temporal-Period:T69
+T69	Eq-Temporal-Period 791 801	undergoing
+A14	Eq-Temporal-Period-Value T69 present
+T70	Modifier 802 809	blister
+E38	Modifier:T70 Modifies:T6
+T71	Modifier 813 817	skin
+E39	Modifier:T71 Modifies:T6
+T72	Or 810 812	or
+E40	Or:T72 Arg:E38 Arg2:E39
+T73	Condition 848 864	keloid formation
+E41	Condition:T73 Name:T74 Temporality:E64
+T74	Condition-Name 848 864	keloid formation
+T75	Eq-Comparison 871 878	Current
+E42	Eq-Comparison:T75 Temporal-Period:T76
+T76	Eq-Temporal-Period 871 878	Current
+A15	Eq-Temporal-Period-Value T76 present
+T77	Eq-Temporal-Period 882 887	prior
+A16	Eq-Temporal-Period-Value T77 past
+T78	Eq-Comparison 882 887	prior
+E43	Eq-Comparison:T78 Temporal-Period:T77
+T79	Or 879 881	or
+E44	Or:T79 Arg:E42 Arg2:E43
+R5	Equivalent-To Arg1:E16 Arg2:E43	
+T80	Modifier 906 919	anticoagulant
+E45	Modifier:T80 Modifies:T8
+T81	Modifier 923 936	anti-platelet
+E46	Modifier:T81 Modifies:T8
+T82	Or 920 922	or
+E47	Or:T82 Arg:E45 Arg2:E46
+T83	Drug 957 964	aspirin
+E48	Drug:T83 Name:T84
+T84	Drug-Name 957 964	aspirin
+T85	Drug 968 1005	non-steroidal anti-inflammatory drugs
+E49	Drug:T85 Name:T86
+T86	Drug-Name 968 1005	non-steroidal anti-inflammatory drugs
+T87	Drug 1007 1013	NSAIDs
+E50	Drug:T87 Name:T88
+T88	Drug-Name 1007 1013	NSAIDs
+R6	Abbrev-Of Arg1:E50 Arg2:E49	
+T89	Or 965 967	or
+E51	Or:T89 Arg:E48 Arg2:E49
+T90	Exception 946 956	other than
+E52	Exception:T90 From:E7 Except:E48 Except2:E49
+T91	Eq-Comparison 1022 1029	Current
+E53	Eq-Comparison:T91 Temporal-Period:T92
+T92	Eq-Temporal-Period 1022 1029	Current
+A17	Eq-Temporal-Period-Value T92 present
+T93	Eq-Comparison 1033 1038	prior
+E54	Eq-Comparison:T93 Temporal-Period:T94
+T94	Eq-Temporal-Period 1033 1038	prior
+A18	Eq-Temporal-Period-Value T94 past
+T95	Or 1030 1032	or
+E55	Or:T95 Arg:E53 Arg2:E54
+R7	Equivalent-To Arg1:E17 Arg2:E54	
+T96	Drug 1064 1086	immunomodulatory drugs
+E56	Drug:T96 Name:T97 Temporality:E54 Temporality2:E53
+T97	Drug-Name 1064 1086	immunomodulatory drugs
+R8	Example-Of Arg1:E9 Arg2:E56	
+T98	Drug 1108 1116	steroids
+E57	Drug:T98 Name:T99
+T99	Drug-Name 1108 1116	steroids
+R9	Example-Of Arg1:E57 Arg2:E56	
+T100	Study 1283 1288	study
+E58	Study:T100 
+T101	Contraindication 1246 1261	contraindicates
+E59	Contraindication:T101 Contraindicates:E58
+T102	Condition 1194 1203	condition
+E60	Condition:T102 
+R10	Caused-By Arg1:E59 Arg2:E60	
+T104	Organism 249 258	S. aureus
+E62	Organism:T104 Name:T105
+T105	Organism-Name 249 258	S. aureus
+R11	Caused-By Arg1:E8 Arg2:E62
+T106	Eq-Comparison 216 223	history
+E63	Eq-Comparison:T106 Temporal-Period:T107
+T107	Eq-Temporal-Period 216 223	history
+A20	Eq-Temporal-Period-Value T107 past
+T108	Eq-Comparison 837 844	history
+E64	Eq-Comparison:T108 Temporal-Period:T109
+T109	Eq-Temporal-Period 837 844	history
+A21	Eq-Temporal-Period-Value T109 past
+T21	Condition 271 278	healthy
+E13	Condition:T21 Name:T48
+T48	Condition-Name 271 278	healthy
+R1	If-Then Arg1:E13 Arg2:E8	
+T50	Condition 387 394	healthy
+E24	Condition:T50 Name:T51
+T51	Condition-Name 387 394	healthy
+R2	If-Then Arg1:E24 Arg2:E26	
+T103	Eq-Comparison 39 42	one
+E61	Eq-Comparison:T103 Value:T110
+T110	Eq-Value 39 42	one
+T111	Criteria-Count 46 59	the following
+E65	Criteria-Count:T111 Min-Value:E61 Criteria:E2 Criteria2:E1 Criteria3:E10 Criteria4:E8
+T112	Exception 1119 1125	except
+E66	Exception:T112 From:E56

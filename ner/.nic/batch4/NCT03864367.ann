@@ -1,0 +1,49 @@
+T1	Eq-Comparison 25 37	55 and older
+E1	Eq-Comparison:T1 Value:T13 Operator:T14
+T2	Modifier 43 55	distal femur
+E2	Modifier:T2 Modifies:T15
+T3	Condition 56 64	fracture
+E3	Condition:T3 Name:T15
+T4	Condition 70 82	able to walk
+E4	Condition:T4 Name:T16
+T5	Temporal-Connection 83 91	prior to
+E5	Temporal-Connection:T5 Arg:E4 Arg2:E6
+A1	Temporal-Connection-Type-Value E5 before
+T6	Condition 92 100	fracture
+E6	Condition:T6 Name:T17
+T7	Condition 135 149	unable to walk
+E7	Condition:T7 Name:T18
+T8	Negation 150 157	without
+E8	Negation:T8 Negates:E9
+T9	Procedure 162 179	assistive devices
+E9	Procedure:T9 Name:T19
+T10	Temporal-Connection 180 184	post
+E10	Temporal-Connection:T10 Arg:E7 Arg2:E11
+A2	Temporal-Connection-Type-Value E10 after
+T11	Condition 185 191	injury
+E11	Condition:T11 Name:T20
+T12	Procedure 247 263	physical therapy
+E12	Procedure:T12 Name:T22
+T13	Eq-Value 25 27	55
+T14	Eq-Operator 28 37	and older
+A3	Eq-Operator-Value T14 GTEQ
+T15	Condition-Name 56 64	fracture
+T16	Condition-Name 70 82	able to walk
+T17	Condition-Name 92 100	fracture
+T18	Condition-Name 135 149	unable to walk
+T19	Procedure-Name 162 179	assistive devices
+T20	Condition-Name 185 191	injury
+T21	Stability 220 228	unstable
+A4	Stability-Value T21 change
+T22	Procedure-Name 247 263	physical therapy
+T23	Age 32 37	older
+E13	Age:T23 Eq-Comparison:E1
+R1	Treatment-For Arg1:E9 Arg2:E7	
+T24	Condition 210 219	medically
+E14	Condition:T24 Stability:T21
+T25	Negation 206 209	too
+E15	Negation:T25 Negates:E12
+T26	Assertion 206 209	too
+E16	Assertion:T26 Asserted:E15
+A5	Assertion-Type-Value E16 hypothetical
+R2	Caused-By Arg1:E15 Arg2:E14	

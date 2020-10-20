@@ -1,90 +1,90 @@
-T2	Eq-Comparison 31 41	≥ 18 years
 E2	Eq-Comparison:T2 Operator:T28 Value:T29 Temporal-Unit:T30
-T3	Age 42 45	old
 E3	Age:T3 Eq-Comparison:E2
-T4	Eq-Comparison 51 61	undergoing
 E4	Eq-Comparison:T4 Temporal-Period:T31
-T5	Procedure 62 82	laparoscopic surgery
 E5	Procedure:T5 Name:T32 Temporality:E4
-T6	Condition 87 100	endometriosis
 E6	Condition:T6 Name:T33
-T7	Condition 102 117	uterine myoma's
 E7	Condition:T7 Name:T34
-T8	Procedure 119 131	hysterectomy
 E8	Procedure:T8 Name:T35
-T9	Or 132 134	or
 E9	Or:T9 Arg:E8 Arg2:E10
-T10	Procedure 135 144	colpopexy
 E10	Procedure:T10 Name:T36
-T11	Eq-Comparison 177 187	< 18 years
 E11	Eq-Comparison:T11 Operator:T38 Value:T39 Temporal-Unit:T40
-T12	Age 188 191	old
 E12	Age:T12 Eq-Comparison:E11
-T13	Condition 208 217	Pregnancy
 E13	Condition:T13 Name:T42
-T14	Condition 223 233	Conditions
-E14	Condition:T14 
-T15	Modifier 250 257	chronic
-E15	Modifier:T15 Modifies:T43
-T16	Condition 258 262	pain
-E16	Condition:T16 Name:T43
-T17	Condition 272 293	peripheral neuropathy
+E14	Condition:T14
+E16	Condition:T16 Name:T43 Acuteness:T15
 E17	Condition:T17 Name:T44
-T18	Condition 295 304	pathology
 E18	Condition:T18 Name:T45
-T19	Modifier 312 328	vertebral column
 E19	Modifier:T19 Modifies:T45
-T20	Or 329 332	and
 E20	Or:T20 Arg:E18 Arg2:E22
-T22	Condition 333 356	osteo-articular disease
 E22	Condition:T22 Name:T46
-T23	Condition 363 373	Conditions
-E23	Condition:T23 
-T24	Condition 388 392	pain
-E24	Condition:T24 Name:T48 Severity:T47
-T25	Modifier 398 407	abdominal
+E23	Condition:T23
+E24	Condition:T24 Name:T48 Acuteness:T47
 E25	Modifier:T25 Modifies:T49
-T26	Condition 408 414	trauma
 E26	Condition:T26 Name:T49
+T2	Eq-Comparison 31 41	≥ 18 years
+T3	Age 42 45	old
+T4	Eq-Comparison 51 61	undergoing
+T5	Procedure 62 82	laparoscopic surgery
+T6	Condition 87 100	endometriosis
+T7	Condition 102 117	uterine myoma's
+T8	Procedure 119 131	hysterectomy
+T9	Or 132 134	or
+T10	Procedure 135 144	colpopexy
+T11	Eq-Comparison 177 187	< 18 years
+T12	Age 188 191	old
+T13	Condition 208 217	Pregnancy
+T14	Condition 223 233	Conditions
+T15	Acuteness 250 257	chronic
+T16	Condition 258 262	pain
+T17	Condition 272 293	peripheral neuropathy
+T18	Condition 295 304	pathology
+T19	Modifier 312 328	vertebral column
+T20	Or 329 332	and
+T22	Condition 333 356	osteo-articular disease
+T23	Condition 363 373	Conditions
+T24	Condition 388 392	pain
+T25	Modifier 398 407	abdominal
+T26	Condition 408 414	trauma
 T27	Life-Stage-And-Gender 25 30	Woman
-A1	Life-Stage-And-Gender-Type T27 female
 T28	Eq-Operator 31 32	≥
-A2	Eq-Operator-Value T28 GTEQ
 T29	Eq-Value 33 35	18
 T30	Eq-Temporal-Unit 36 41	years
-A3	Eq-Temporal-Unit-Value T30 year
 T31	Eq-Temporal-Period 51 61	undergoing
-A4	Eq-Temporal-Period-Value T31 present
 T32	Procedure-Name 62 82	laparoscopic surgery
 T33	Condition-Name 87 100	endometriosis
 T34	Condition-Name 102 117	uterine myoma's
 T35	Procedure-Name 119 131	hysterectomy
 T36	Procedure-Name 135 144	colpopexy
 T37	Life-Stage-And-Gender 171 176	Women
-A5	Life-Stage-And-Gender-Type T37 female
 T38	Eq-Operator 177 178	<
-A6	Eq-Operator-Value T38 LT
 T39	Eq-Value 179 181	18
 T40	Eq-Temporal-Unit 182 187	years
-A7	Eq-Temporal-Unit-Value T40 year
 T41	Life-Stage-And-Gender 197 202	Males
-A8	Life-Stage-And-Gender-Type T41 male
 T42	Condition-Name 208 217	Pregnancy
 T43	Condition-Name 258 262	pain
 T44	Condition-Name 272 293	peripheral neuropathy
 T45	Condition-Name 295 304	pathology
 T46	Condition-Name 333 356	osteo-articular disease
-T47	Severity 382 387	acute
-A9	Severity-Value T47 severe
+T47	Acuteness 382 387	acute
 T48	Condition-Name 388 392	pain
 T49	Condition-Name 408 414	trauma
-R1	Treatment-For Arg1:E5 Arg2:E6	
-R2	Treatment-For Arg1:E5 Arg2:E7	
-R3	Using Arg1:E5 Arg2:E8	
-R4	Using Arg1:E5 Arg2:E10	
-R5	Caused-By Arg1:E16 Arg2:E14	
-R6	Example-Of Arg1:E17 Arg2:E14	
-R7	Example-Of Arg1:E18 Arg2:E14	
-R8	Example-Of Arg1:E22 Arg2:E14	
-R9	Caused-By Arg1:E24 Arg2:E23	
-R10	Example-Of Arg1:E26 Arg2:E23	
+A1	Life-Stage-And-Gender-Type T27 female
+A2	Eq-Operator-Value T28 GTEQ
+A3	Eq-Temporal-Unit-Value T30 year
+A4	Eq-Temporal-Period-Value T31 present
+A5	Life-Stage-And-Gender-Type T37 female
+A6	Eq-Operator-Value T38 LT
+A7	Eq-Temporal-Unit-Value T40 year
+A8	Life-Stage-And-Gender-Type T41 male
+A10	Acuteness-Type-Value T47 acute
+A11	Acuteness-Type-Value T15 chronic
+R1	Treatment-For Arg1:E5 Arg2:E6
+R2	Treatment-For Arg1:E5 Arg2:E7
+R3	Using Arg1:E5 Arg2:E8
+R4	Using Arg1:E5 Arg2:E10
+R5	Caused-By Arg1:E16 Arg2:E14
+R6	Example-Of Arg1:E17 Arg2:E14
+R7	Example-Of Arg1:E18 Arg2:E14
+R8	Example-Of Arg1:E22 Arg2:E14
+R9	Caused-By Arg1:E24 Arg2:E23
+R10	Example-Of Arg1:E26 Arg2:E23

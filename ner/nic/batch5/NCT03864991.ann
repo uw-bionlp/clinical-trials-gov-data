@@ -1,80 +1,80 @@
-T1	Condition 48 51	T1D
 E1	Condition:T1 Name:T19 Duration:E2
-T2	Eq-Comparison 52 62	> 6 months
 E2	Eq-Comparison:T2 Operator:T20 Value:T21 Temporal-Unit:T22
-T3	Age 78 81	age
 E3	Age:T3 Eq-Comparison:E5
-T5	Eq-Comparison 82 92	≥ 15 years
 E5	Eq-Comparison:T5 Value:T24 Temporal-Unit:T25 Operator:T23
-T6	Family-Member 151 157	mother
-E6	Family-Member:T6 
-A1	Family-Member-Type E6 parent
-T7	Or 158 160	or
+E6	Family-Member:T6
 E7	Or:T7 Arg:E6 Arg2:E19
-T8	Eq-Comparison 334 336	on
 E8	Eq-Comparison:T8 Temporal-Period:T27
-T10	Condition 355 363	Pregnant
 E10	Condition:T10 Name:T29
-T11	Condition 391 415	neurodevelopmental delay
 E11	Condition:T11 Name:T31
-T12	Or 416 418	or
 E12	Or:T12 Arg:E11 Arg2:E13
-T13	Condition 419 430	thalassemia
 E13	Condition:T13 Name:T32
-T14	Eq-Comparison 444 453	currently
 E14	Eq-Comparison:T14 Temporal-Period:T33
-T15	Procedure 482 490	e-device
 E15	Procedure:T15 Name:T40
-T16	Observation 495 505	step count
 E16	Observation:T16 Name:T41 Temporality:E14
-T17	Or 506 508	or
 E17	Or:T17 Arg:E16 Arg2:E18
-T18	Observation 509 526	physical activity
 E18	Observation:T18 Name:T34 Temporality:E14
+E4	Family-Member:T4
+E19	Family-Member:T35
+E20	Eq-Comparison:T36 Temporal-Period:T26
+E21	Family-Member:T37
+E22	Family-Member:T38
+E9	Drug:T9 Name:T28 Temporality:E8
+E23	Modifier:T39 Modifies:T28
+T1	Condition 48 51	T1D
+T2	Eq-Comparison 52 62	> 6 months
+T3	Age 78 81	age
+T5	Eq-Comparison 82 92	≥ 15 years
+T6	Family-Member 151 157	mother
+T7	Or 158 160	or
+T8	Eq-Comparison 334 336	on
+T10	Condition 355 363	Pregnant
+T11	Condition 391 415	neurodevelopmental delay
+T12	Or 416 418	or
+T13	Condition 419 430	thalassemia
+T14	Eq-Comparison 444 453	currently
+T15	Procedure 482 490	e-device
+T16	Observation 495 505	step count
+T17	Or 506 508	or
+T18	Observation 509 526	physical activity
 T19	Condition-Name 48 51	T1D
 T20	Eq-Operator 52 53	>
-A3	Eq-Operator-Value T20 GT
 T21	Eq-Value 54 55	6
 T22	Eq-Temporal-Unit 56 62	months
-A4	Eq-Temporal-Unit-Value T22 month
 T23	Eq-Operator 82 83	≥
-A5	Eq-Operator-Value T23 GTEQ
 T24	Eq-Value 84 86	15
 T25	Eq-Temporal-Unit 87 92	years
-A6	Eq-Temporal-Unit-Value T25 year
 T26	Eq-Temporal-Period 169 174	using
-A7	Eq-Temporal-Period-Value T26 present
 T27	Eq-Temporal-Period 334 336	on
-A8	Eq-Temporal-Period-Value T27 present
 T28	Drug-Name 337 344	insulin
 T29	Condition-Name 355 363	Pregnant
 T30	Life-Stage-And-Gender 364 371	females
-A9	Life-Stage-And-Gender-Type T30 female
 T31	Condition-Name 391 415	neurodevelopmental delay
 T32	Condition-Name 419 430	thalassemia
 T33	Eq-Temporal-Period 444 453	currently
-A10	Eq-Temporal-Period-Value T33 present
 T34	Observation-Name 509 526	physical activity
-A11	Observation-Type-Value T34 social-habit
 T4	Family-Member 143 149	father
-E4	Family-Member:T4 
-A2	Family-Member-Type E4 father
 T35	Family-Member 161 168	sibling
-E19	Family-Member:T35 
-A12	Family-Member-Type E19 sibling
 T36	Eq-Comparison 169 174	using
-E20	Eq-Comparison:T36 Temporal-Period:T26
 T37	Family-Member 124 137	family member
-E21	Family-Member:T37 
 T38	Family-Member 219 232	family member
-E22	Family-Member:T38 
 T9	Drug 337 344	insulin
-E9	Drug:T9 Name:T28 Temporality:E8
 T39	Modifier 345 349	pump
-E23	Modifier:T39 Modifies:T28
-R1	If-Then Arg1:E10 Arg2:T30	
 T40	Procedure-Name 482 490	e-device
 T41	Observation-Name 495 505	step count
+A1	Family-Member-Type E6 parent
+A3	Eq-Operator-Value T20 GT
+A4	Eq-Temporal-Unit-Value T22 month
+A5	Eq-Operator-Value T23 GTEQ
+A6	Eq-Temporal-Unit-Value T25 year
+A7	Eq-Temporal-Period-Value T26 present
+A8	Eq-Temporal-Period-Value T27 present
+A9	Life-Stage-And-Gender-Type T30 female
+A10	Eq-Temporal-Period-Value T33 present
+A11	Observation-Type-Value T34 social-habit
+A2	Family-Member-Type E4 father
+A12	Family-Member-Type E19 sibling
 A13	Observation-Type-Value T41 social-habit
-R2	Using Arg1:E16 Arg2:E15	
-R3	Using Arg1:E18 Arg2:E15	
+R1	If-Then Arg1:E10 Arg2:T30
+R2	Using Arg1:E16 Arg2:E15
+R3	Using Arg1:E18 Arg2:E15

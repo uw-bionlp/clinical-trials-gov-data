@@ -1,0 +1,110 @@
+T5	Procedure 382 404	surgical sterilization
+T6	Procedure-Name 382 404	surgical sterilization
+E5	Procedure:T5 Name:T6
+T7	Condition 361 367	menses
+T8	Condition-Name 361 367	menses
+E7	Condition:T7 Name:T8 Temporality:E18 Temporality2:E17
+T9	Condition 509 518	Pregnancy
+T10	Condition-Name 509 518	Pregnancy
+E9	Condition:T9 Name:T10
+T11	Eq-Operator 214 220	within
+A1	Eq-Operator-Value T11 LTEQ
+T12	Eq-Temporal-Unit 37 42	years
+A2	Eq-Temporal-Unit-Value T12 year
+T14	Age 46 49	age
+E10	Age:T14 Eq-Comparison:E2
+T15	Eq-Value 34 36	18
+T17	Eq-Value 221 223	48
+T18	Eq-Value 343 344	1
+T19	Eq-Comparison 214 229	within 48 hours
+E11	Eq-Comparison:T19 Operator:T11 Value:T17 Temporal-Unit:T28
+T20	Eq-Comparison 25 42	At least 18 years
+E2	Eq-Comparison:T20 Operator:T21 Value:T15 Temporal-Unit:T12
+T21	Eq-Operator 25 33	At least
+A3	Eq-Operator-Value T21 GTEQ
+T13	Location 74 77	UAB
+A4	Location-Value T13 hospital
+T1	Observation 203 213	β-hCG test
+E1	Observation:T1 Name:T2 Specimen:T16 Specimen2:T22 Polarity:T24 Temporality:E11
+T2	Observation-Name 203 213	β-hCG test
+A5	Observation-Type-Value T2 lab
+T16	Observation-Specimen 197 202	serum
+T22	Observation-Specimen 188 193	urine
+T23	Or 194 196	or
+E4	Or:T23 Arg:T22 Arg2:T16
+T24	Polarity 179 187	Negative
+A6	Polarity-Value T24 negative
+T25	Drug 239 261	acetate administration
+E6	Drug:T25 Name:T26
+T26	Drug-Name 239 261	acetate administration
+T27	Modifier 234 237	11C
+E8	Modifier:T27 Modifies:T26
+T28	Eq-Temporal-Unit 224 229	hours
+A7	Eq-Temporal-Unit-Value T28 hour
+T29	Temporal-Connection 230 232	of
+E12	Temporal-Connection:T29 Arg:E11 Arg2:E6
+A8	Temporal-Connection-Type-Value E12 after
+T30	Life-Stage-And-Gender 265 270	women
+A9	Life-Stage-And-Gender-Type T30 female
+T31	Condition 274 297	child bearing potential
+E13	Condition:T31 Name:T32
+T32	Condition-Name 274 297	child bearing potential
+T33	And 271 273	of
+E14	And:T33 Arg:T30 Arg2:E13
+T34	And 262 264	in
+E15	And:T34 Arg:E6 Arg2:T30
+T35	Life-Stage-And-Gender 299 304	Women
+A10	Life-Stage-And-Gender-Type T35 female
+T36	Condition 313 328	post-menopausal
+E16	Condition:T36 Name:T37
+T37	Condition-Name 313 328	post-menopausal
+T38	Eq-Comparison 334 349	at least 1 year
+E17	Eq-Comparison:T38 Operator:T39 Value:T18 Temporal-Unit:T40
+T39	Eq-Operator 334 342	at least
+A11	Eq-Operator-Value T39 GTEQ
+T40	Eq-Temporal-Unit 345 349	year
+A12	Eq-Temporal-Unit-Value T40 year
+T41	Eq-Comparison 356 360	last
+E18	Eq-Comparison:T41 Temporal-Recency:T42
+T42	Eq-Temporal-Recency 356 360	last
+A13	Eq-Temporal-Recency-Value T42 most-recent-time
+T43	And 305 308	who
+E19	And:T43 Arg:T35 Arg2:E16
+T44	And 329 333	with
+E20	And:T44 Arg:E16 Arg2:E7
+T45	Temporal-Connection 350 355	since
+E21	Temporal-Connection:T45 Arg:E17 Arg2:E18
+A14	Temporal-Connection-Type-Value E21 after
+T3	Or 368 370	or
+E3	Or:T3 Arg:E7 Arg2:E5
+T4	Observation 422 439	pregnancy testing
+E22	Observation:T4 Name:T46
+T46	Observation-Name 422 439	pregnancy testing
+A15	Observation-Type-Value T46 lab
+T47	Assertion 414 421	require
+E23	Assertion:T47 Asserted:E22
+A16	Assertion-Type-Value E23 hypothetical
+T48	Negation 410 413	not
+E24	Negation:T48 Negates:E23
+R1	If-Then Arg1:E5 Arg2:E24	
+T49	Procedure 555 568	imaging study
+E25	Procedure:T49 Name:T50
+T50	Procedure-Name 555 568	imaging study
+T51	Negation 524 533	Inability
+E26	Negation:T51 Negates:E25
+T52	Assertion 524 533	Inability
+E27	Assertion:T52 Asserted:E26
+A17	Assertion-Type-Value E27 hypothetical
+T53	Procedure 615 632	PET imaging table
+E28	Procedure:T53 Name:T54
+T54	Procedure-Name 615 632	PET imaging table
+T55	Observation 574 580	Weight
+E29	Observation:T55 Name:T56 Eq-Comparison:E30
+T56	Observation-Name 574 580	Weight
+A18	Observation-Type-Value T56 vital
+T57	Eq-Comparison 634 644	500 pounds
+E30	Eq-Comparison:T57 Value:T58 Unit:T59 Operator:T60
+T58	Eq-Value 634 637	500
+T59	Eq-Unit 638 644	pounds
+T60	Eq-Operator 581 590	exceeding
+A19	Eq-Operator-Value T60 GT

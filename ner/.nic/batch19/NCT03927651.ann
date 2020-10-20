@@ -1,0 +1,49 @@
+T1	Procedure 323 331	dialysis
+T2	Procedure-Name 323 331	dialysis
+E1	Procedure:T1 Name:T2 Temporality:E14
+T3	Condition 302 308	uremia
+T4	Condition-Name 302 308	uremia
+E3	Condition:T3 Name:T4
+T5	Eq-Comparison 230 237	history
+E4	Eq-Comparison:T5 Temporal-Period:T6
+T6	Eq-Temporal-Period 230 237	history
+A1	Eq-Temporal-Period-Value T6 past
+T7	Eq-Comparison 274 281	history
+E5	Eq-Comparison:T7 Temporal-Period:T8
+T8	Eq-Temporal-Period 274 281	history
+A2	Eq-Temporal-Period-Value T8 past
+T9	Location 72 107	Center for Comprehensive Gynecology
+A3	Location-Value T9 clinic
+T10	Procedure 125 132	surgery
+E2	Procedure:T10 Name:T11 Temporality:E6
+T11	Procedure-Name 125 132	surgery
+T12	Eq-Comparison 112 116	will
+E6	Eq-Comparison:T12 Temporal-Period:T13
+T13	Eq-Temporal-Period 112 116	will
+A4	Eq-Temporal-Period-Value T13 future
+T14	Encounter 59 64	visit
+E7	Encounter:T14 Type:T15 Location:T9
+T15	Encounter-Type 59 64	visit
+A5	Encounter-Type-Value T15 outpatient
+T16	Procedure 49 58	operative
+E8	Procedure:T16 Name:T17
+T17	Procedure-Name 49 58	operative
+T18	Temporal-Connection 46 49	pre
+E9	Temporal-Connection:T18 Arg:E7 Arg2:E8
+A6	Temporal-Connection-Type-Value E9 before
+T19	And 108 111	who
+E10	And:T19 Arg:E7 Arg2:E2
+T20	Allergy-Name 252 259	iodides
+T21	Allergy 241 248	allergy
+E11	Allergy:T21 Name:T20 Temporality:E4
+T22	Condition 285 298	renal failure
+E12	Condition:T22 Name:T23 Temporality:E5
+T23	Condition-Name 285 298	renal failure
+T24	Or 299 301	or
+E13	Or:T24 Arg:E12 Arg2:E3
+T25	Eq-Comparison 320 322	on
+E14	Eq-Comparison:T25 Temporal-Period:T26
+T26	Eq-Temporal-Period 320 322	on
+A7	Eq-Temporal-Period-Value T26 present
+T27	And 310 313	and
+E15	And:T27 Arg:E3 Arg2:E1

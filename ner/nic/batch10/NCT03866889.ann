@@ -1,66 +1,66 @@
+E1	Procedure:T1 Name:T2 Temporality:E20
+E4	Age:T8 Eq-Comparison:E5
+E5	Eq-Comparison:T13 Operator:T9 Value:T10 Value2:T11 Temporal-Unit:T6
+E2	Observation:T14 Name:T15
+E6	Modifier:T16 Modifies:T15
+E7	Condition:T17 Name:T18 Temporality:E9
+E8	Modifier:T19 Modifies:T18
+E9	Eq-Comparison:T20 Temporal-Period:T21
+E10	Negation:T22 Negates:E7
+E11	Eq-Comparison:T23 Value:T12 Temporal-Unit:T7
+E12	Temporal-Connection:T24 Arg:E7 Arg2:E11
+E13	Temporal-Connection:T25 Arg:E11 Arg2:E14
+E14	Study:T26
+E15	Condition:T27 Name:T28
+E16	Temporal-Connection:T29 Arg:E15
+E17	Temporal-Connection:T30 Arg:E19
+E18	Or:T31 Arg:E16 Arg2:E17
+E19	Study:T32
+E20	Eq-Comparison:T33 Temporal-Period:T34
+E3	Study:T3
+E21	Temporal-Connection:T4 Arg:E1 Arg2:E3
 T1	Procedure 330 356	physiotherapy intervention
 T2	Procedure-Name 330 356	physiotherapy intervention
-E1	Procedure:T1 Name:T2 Temporality:E20
 T5	Life-Stage-And-Gender 90 94	male
-A1	Life-Stage-And-Gender-Type T5 male
 T6	Eq-Temporal-Unit 124 129	years
-A2	Eq-Temporal-Unit-Value T6 year
 T7	Eq-Temporal-Unit 181 187	months
-A3	Eq-Temporal-Unit-Value T7 month
 T8	Age 108 111	age
-E4	Age:T8 Eq-Comparison:E5
 T9	Eq-Operator 118 120	to
-A4	Eq-Operator-Value T9 BETWEEN
 T10	Eq-Value 115 117	25
 T11	Eq-Value 121 123	45
 T12	Eq-Value 179 180	3
 T13	Eq-Comparison 115 129	25 to 45 years
-E5	Eq-Comparison:T13 Operator:T9 Value:T10 Value2:T11 Temporal-Unit:T6
 T14	Observation 25 43	Military personnel
-E2	Observation:T14 Name:T15
 T15	Observation-Name 25 43	Military personnel
 T16	Modifier 61 84	Military Emergency Unit
-E6	Modifier:T16 Modifies:T15
 T17	Condition 165 171	injury
-E7	Condition:T17 Name:T18 Temporality:E9
 T18	Condition-Name 165 171	injury
 T19	Modifier 149 164	musculoskeletal
-E8	Modifier:T19 Modifies:T18
 T20	Eq-Comparison 138 145	history
-E9	Eq-Comparison:T20 Temporal-Period:T21
 T21	Eq-Temporal-Period 138 145	history
-A5	Eq-Temporal-Period-Value T21 past
 T22	Negation 135 137	No
-E10	Negation:T22 Negates:E7
 T23	Eq-Comparison 179 187	3 months
-E11	Eq-Comparison:T23 Value:T12 Temporal-Unit:T7
 T24	Temporal-Connection 172 174	in
-E12	Temporal-Connection:T24 Arg:E7 Arg2:E11
-A6	Temporal-Connection-Type-Value E12 during
 T25	Temporal-Connection 188 196	prior to
-E13	Temporal-Connection:T25 Arg:E11 Arg2:E14
-A7	Temporal-Connection-Type-Value E13 before
 T26	Study 201 206	study
-E14	Study:T26 
 T27	Condition 255 261	injury
-E15	Condition:T27 Name:T28
 T28	Condition-Name 255 261	injury
 T29	Temporal-Connection 276 284	prior to
-E16	Temporal-Connection:T29 Arg:E15
-A8	Temporal-Connection-Type-Value E16 before
 T30	Temporal-Connection 288 294	during
-E17	Temporal-Connection:T30 Arg:E19
-A9	Temporal-Connection-Type-Value E17 during
 T31	Or 285 287	or
-E18	Or:T31 Arg:E16 Arg2:E17
 T32	Study 299 304	study
-E19	Study:T32 
 T33	Eq-Comparison 318 327	receiving
-E20	Eq-Comparison:T33 Temporal-Period:T34
 T34	Eq-Temporal-Period 318 327	receiving
-A10	Eq-Temporal-Period-Value T34 present
 T3	Study 376 381	study
-E3	Study:T3 
 T4	Temporal-Connection 357 368	at the time
-E21	Temporal-Connection:T4 Arg:E1 Arg2:E3
+A1	Life-Stage-And-Gender-Type T5 male
+A2	Eq-Temporal-Unit-Value T6 year
+A3	Eq-Temporal-Unit-Value T7 month
+A4	Eq-Operator-Value T9 BETWEEN
+A5	Eq-Temporal-Period-Value T21 past
+A6	Temporal-Connection-Type-Value E12 during
+A7	Temporal-Connection-Type-Value E13 before
+A8	Temporal-Connection-Type-Value E16 before
+A9	Temporal-Connection-Type-Value E17 during
+A10	Eq-Temporal-Period-Value T34 present
 A11	Temporal-Connection-Type-Value E21 during

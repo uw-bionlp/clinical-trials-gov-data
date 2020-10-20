@@ -1,0 +1,84 @@
+T1	Or 42 45	and
+E1	Or:T1 Arg:T21 Arg2:T22
+T2	Eq-Comparison 96 108	2008 to 2015
+E2	Eq-Comparison:T2 Value:T23 Operator:T24 Value:T25
+T3	Procedure 127 137	transplant
+E3	Procedure:T3 Name:T27 Temporality:E2 Temporality2:E21
+T4	Or 138 139	/
+E4	Or:T4 Arg:E22 Arg2:E5
+T5	Modifier 140 145	heart
+E5	Modifier:T5 Modifies:T27
+T6	Or 146 147	/
+E6	Or:T6 Arg:E5 Arg2:E7
+T7	Modifier 148 152	lung
+E7	Modifier:T7 Modifies:T27
+T8	Or 153 154	/
+E8	Or:T8 Arg:E7 Arg2:E9
+T9	Modifier 155 166	liver donor
+E9	Modifier:T9 Modifies:T27
+T10	Or 174 176	or
+E10	Or:T10 Arg2:E11 Arg:E24
+T11	Death 177 185	deceased
+E11	Death:T11 
+T12	Negation 187 190	non
+E12	Negation:T12 Negates:E13
+T14	Temporal-Connection 210 216	before
+E14	Temporal-Connection:T14 Arg:E13 Arg2:E26
+A1	Temporal-Connection-Type-Value E14 before
+T16	Procedure 269 274	graft
+E16	Procedure:T16 Name:T42 Duration:E17
+T17	Eq-Comparison 275 284	> 2 years
+E17	Eq-Comparison:T17 Operator:T30 Value:T31 Temporal-Unit:T32
+T18	Assertion 297 306	agreed to
+E18	Assertion:T18 Asserted:E19
+A2	Assertion-Type-Value E18 hypothetical
+T19	Procedure 340 355	transplantation
+E19	Procedure:T19 Name:T33
+T20	Observation 386 399	serum samples
+E20	Observation:T20 Name:T34
+T21	Life-Stage-And-Gender 35 41	adults
+A3	Life-Stage-And-Gender-Type T21 adult
+T22	Life-Stage-And-Gender 46 54	children
+A4	Life-Stage-And-Gender-Type T22 child
+T23	Eq-Value 96 100	2008
+T24	Eq-Operator 101 103	to
+A5	Eq-Operator-Value T24 BETWEEN
+T25	Eq-Value 104 108	2015
+T26	Eq-Temporal-Recency 114 119	first
+A6	Eq-Temporal-Recency-Value T26 first-time
+T27	Procedure-Name 127 137	transplant
+T30	Eq-Operator 275 276	>
+A7	Eq-Operator-Value T30 GT
+T31	Eq-Value 277 278	2
+T32	Eq-Temporal-Unit 279 284	years
+A8	Eq-Temporal-Unit-Value T32 year
+T33	Procedure-Name 340 355	transplantation
+T34	Observation-Name 386 399	serum samples
+A9	Observation-Type-Value T34 lab
+T35	Location 84 90	France
+A10	Location-Value T35 residence
+T36	Eq-Comparison 114 119	first
+E21	Eq-Comparison:T36 Temporal-Recency:T26
+T37	Modifier 120 126	kidney
+E22	Modifier:T37 Modifies:T27
+T39	Negation 167 173	living
+E24	Negation:T39 Negates:E15
+T13	Immunization 191 200	immunized
+E13	Immunization:T13 
+T28	Condition 206 209	HLA
+E25	Condition:T28 Name:T40
+T40	Condition-Name 206 209	HLA
+R1	Treatment-For Arg1:E13 Arg2:E25	
+T41	Coreference 217 231	the transplant
+E26	Coreference:T41 Refers-To:E3
+T42	Procedure-Name 269 274	graft
+T43	Observation 378 381	DNA
+E27	Observation:T43 Name:T44
+T44	Observation-Name 378 381	DNA
+A11	Observation-Type-Value T44 lab
+T45	And 382 385	and
+E28	And:T45 Arg:E27 Arg2:E20
+R2	Using Arg1:E19 Arg2:E27	
+R3	Using Arg1:E19 Arg2:E20	
+T15	Death 167 173	living
+E15	Death:T15 

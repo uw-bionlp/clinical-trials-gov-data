@@ -1,0 +1,133 @@
+T1	Condition 477 500	cardiovascular diseases
+T2	Condition-Name 477 500	cardiovascular diseases
+E1	Condition:T1 Name:T2 Temporality:E28
+T3	Condition 503 520	diabetes mellitus
+T4	Condition-Name 503 520	diabetes mellitus
+E3	Condition:T3 Name:T4
+T5	Condition 539 546	disease
+T6	Condition-Name 539 546	disease
+E5	Condition:T5 Name:T6
+T7	Eq-Temporal-Unit 31 36	years
+A1	Eq-Temporal-Unit-Value T7 year
+T8	Eq-Unit 90 94	mmol
+T9	Eq-Unit 153 157	mmol
+T10	Eq-Operator 27 28	-
+A2	Eq-Operator-Value T10 BETWEEN
+T11	Eq-Operator 83 85	to
+A3	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Operator 145 147	to
+A4	Eq-Operator-Value T12 BETWEEN
+T13	Eq-Value 25 27	30
+T14	Eq-Value 28 30	60
+T15	Eq-Value 79 82	6.1
+T16	Eq-Value 86 89	7.0
+T17	Eq-Value 139 140	7
+T18	Eq-Value 143 144	8
+T19	Eq-Value 148 152	11.1
+T20	Eq-Value 211 214	5.7
+T21	Eq-Value 219 222	6.4
+T22	Eq-Value 442 444	10
+T23	Eq-Comparison 25 36	30-60 years
+E6	Eq-Comparison:T23 Operator:T10 Value:T13 Value2:T14 Temporal-Unit:T7
+T24	Eq-Comparison 79 98	6.1 to 7.0 mmol / L
+E7	Eq-Comparison:T24 Value:T16 Per:T31 Operator:T11 Unit:T8 Value2:T15
+T25	Eq-Comparison 139 161	7 , 8 to 11.1 mmol / L
+E8	Eq-Comparison:T25 Operator:T12 Value:T18 Value2:T17 Per:T30 Unit:T9 Value3:T19
+T26	Age 31 36	years
+E2	Age:T26 Eq-Comparison:E6
+T27	Observation 52 73	fasting blood glucose
+E4	Observation:T27 Name:T28 Polarity:T29 Eq-Comparison:E7
+T28	Observation-Name 52 73	fasting blood glucose
+A5	Observation-Type-Value T28 lab
+T29	Polarity 42 51	Increased
+A6	Polarity-Value T29 high
+T31	Eq-Unit 97 98	L
+T32	Observation 118 135	glucose tolerance
+E9	Observation:T32 Name:T33 Polarity:T34
+T33	Observation-Name 118 135	glucose tolerance
+A8	Observation-Type-Value T33 lab
+T34	Polarity 108 117	Decreased
+A9	Polarity-Value T34 low
+T30	Eq-Unit 160 161	L
+T35	Or 162 164	or
+E10	Or:T35 Arg:E9
+T36	Or 99 101	or
+E11	Or:T36 Arg:E4 Arg2:E9
+T37	Observation 180 190	hemoglobin
+E12	Observation:T37 Name:T38 Eq-Comparison:E14
+T38	Observation-Name 180 190	hemoglobin
+A7	Observation-Type-Value T38 lab
+T39	Modifier 171 179	Glycated
+E13	Modifier:T39 
+R1	Abbrev-Of Arg1:E13 Arg2:E12	
+T40	Eq-Comparison 203 223	between 5.7 and 6.4%
+E14	Eq-Comparison:T40 Operator:T41 Value:T20 Value2:T21 Unit:T42
+T41	Eq-Operator 203 210	between
+A10	Eq-Operator-Value T41 BETWEEN
+T42	Eq-Unit 222 223	%
+T43	Drug 253 265	hypoglycemic
+E15	Drug:T43 Name:T44 Temporality:E16
+T44	Drug-Name 253 265	hypoglycemic
+T45	Eq-Comparison 249 252	Use
+E16	Eq-Comparison:T45 Temporal-Period:T46
+T46	Eq-Temporal-Period 249 252	Use
+A11	Eq-Temporal-Period-Value T46 present
+T47	Drug 267 280	hypolipidemic
+E17	Drug:T47 Name:T48
+T48	Drug-Name 267 280	hypolipidemic
+T49	Eq-Comparison 293 296	Use
+E18	Eq-Comparison:T49 Temporal-Period:T50
+T50	Eq-Temporal-Period 293 296	Use
+A12	Eq-Temporal-Period-Value T50 present
+T51	Drug 297 316	dietary supplements
+E19	Drug:T51 Name:T52 Temporality:E18
+T52	Drug-Name 297 316	dietary supplements
+T53	Drug 318 326	vitamins
+E20	Drug:T53 Name:T54
+T54	Drug-Name 318 326	vitamins
+R2	Example-Of Arg1:E20 Arg2:E19	
+T55	Drug 328 336	minerals
+E21	Drug:T55 Name:T56
+T56	Drug-Name 328 336	minerals
+R3	Example-Of Arg1:E21 Arg2:E19	
+T57	Drug 338 351	bioflavonoids
+E22	Drug:T57 Name:T58
+T58	Drug-Name 338 351	bioflavonoids
+R4	Example-Of Arg1:E22 Arg2:E19	
+T59	Drug 353 363	prebiotics
+E23	Drug:T59 Name:T60
+T60	Drug-Name 353 363	prebiotics
+R5	Example-Of Arg1:E23 Arg2:E19	
+T61	Drug 365 375	probiotics
+E24	Drug:T61 Name:T62
+T62	Drug-Name 365 375	probiotics
+R6	Example-Of Arg1:E24 Arg2:E19	
+T63	Drug 385 404	bioactive compounds
+E25	Drug:T63 Name:T64
+T64	Drug-Name 385 404	bioactive compounds
+R7	Example-Of Arg1:E25 Arg2:E19	
+T65	Condition 412 420	Exercise
+E26	Condition:T65 Name:T66 Severity:T67 Duration:E27
+T66	Condition-Name 412 420	Exercise
+T67	Severity 421 430	intensely
+A13	Severity-Value T67 severe
+T68	Eq-Comparison 432 459	more than 10 hours per week
+E27	Eq-Comparison:T68 Operator:T69 Value:T22 Temporal-Unit:T70 Per:T71
+T69	Eq-Operator 432 441	more than
+A14	Eq-Operator-Value T69 GTEQ
+T70	Eq-Temporal-Unit 445 450	hours
+A15	Eq-Temporal-Unit-Value T70 hour
+T71	Eq-Temporal-Unit 455 459	week
+A16	Eq-Temporal-Unit-Value T71 week
+T72	Eq-Comparison 466 473	History
+E28	Eq-Comparison:T72 Temporal-Period:T73
+T73	Eq-Temporal-Period 466 473	History
+A17	Eq-Temporal-Period-Value T73 past
+T74	Modifier 532 538	kidney
+E29	Modifier:T74 Modifies:T6
+T75	Modifier 522 527	liver
+E30	Modifier:T75 Modifies:T6
+T76	Or 528 531	and
+E31	Or:T76 Arg:E30 Arg2:E29
+T77	Other 379 384	other
+E32	Other:T77 Is-Other:E25

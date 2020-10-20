@@ -1,0 +1,70 @@
+T1	Condition 196 218	neurological disorders
+T2	Condition-Name 196 218	neurological disorders
+E1	Condition:T1 Name:T2
+T3	Condition 275 283	diseases
+T4	Condition-Name 275 283	diseases
+E3	Condition:T3 Name:T4 Severity:T32
+T7	Eq-Operator 320 329	less than
+A1	Eq-Operator-Value T7 LT
+T8	Eq-Temporal-Unit 59 64	weeks
+A2	Eq-Temporal-Unit-Value T8 week
+T9	Eq-Temporal-Unit 333 338	years
+A3	Eq-Temporal-Unit-Value T9 year
+T13	Eq-Operator 53 55	to
+A4	Eq-Operator-Value T13 BETWEEN
+T14	Eq-Value 50 52	26
+T15	Eq-Value 56 58	34
+T16	Eq-Value 330 332	18
+T17	Eq-Comparison 320 338	less than 18 years
+E9	Eq-Comparison:T17 Operator:T7 Temporal-Unit:T9 Value:T16
+T18	Eq-Comparison 50 64	26 to 34 weeks
+E10	Eq-Comparison:T18 Operator:T13 Value:T14 Value2:T15 Temporal-Unit:T8
+T19	Condition 25 32	preterm
+E2	Condition:T19 Name:T20
+T20	Condition-Name 25 32	preterm
+T21	Life-Stage-And-Gender 33 41	neonates
+A5	Life-Stage-And-Gender-Type T21 infant
+T22	Birth 42 46	born
+E4	Birth:T22 
+T10	Observation 68 83	gestational age
+E6	Observation:T10 Name:T23 Eq-Comparison:E10
+T23	Observation-Name 68 83	gestational age
+T24	Temporal-Connection 47 49	at
+E11	Temporal-Connection:T24 Arg:E4 Arg2:E10
+A6	Temporal-Connection-Type-Value E11 during
+T25	Life-Stage-And-Gender 151 158	infants
+A7	Life-Stage-And-Gender-Type T25 infant
+T26	Condition 159 167	infected
+E12	Condition:T26 Name:T27
+T27	Condition-Name 159 167	infected
+T28	Life-Stage-And-Gender 173 180	infants
+A8	Life-Stage-And-Gender-Type T28 infant
+T5	Modifier 265 274	metabolic
+E5	Modifier:T5 Modifies:T4
+T6	Modifier 252 261	digestive
+E13	Modifier:T6 Modifies:T4
+T29	Modifier 239 250	respiratory
+E14	Modifier:T29 Modifies:T4
+T30	Modifier 232 237	heart
+E15	Modifier:T30 Modifies:T4
+T31	Or 262 264	or
+E16	Or:T31 Arg:E13 Arg2:E5
+T32	Severity 224 231	serious
+A9	Severity-Value T32 severe
+T33	Life-Stage-And-Gender 289 296	infants
+A10	Life-Stage-And-Gender-Type T33 infant
+T11	Family-Member 307 314	mothers
+E7	Family-Member:T11 Has:E17
+A11	Family-Member-Type E7 mother
+T34	Age 315 319	aged
+E17	Age:T34 Eq-Comparison:E9
+T12	Birth 297 301	born
+E8	Birth:T12 
+T35	Observation 346 379	deprived of their parental rights
+E18	Observation:T35 Name:T36
+T36	Observation-Name 346 379	deprived of their parental rights
+T37	Or 343 345	or
+E19	Or:T37 Arg:E17 Arg2:E18
+T38	Insurance 416 425	insurance
+T39	Negation 385 388	non
+E20	Negation:T39 Negates:T38

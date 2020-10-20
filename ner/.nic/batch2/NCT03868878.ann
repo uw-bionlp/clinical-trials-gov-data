@@ -1,0 +1,80 @@
+T1	Age 25 28	age
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 29 50	greater than 60 years
+E2	Eq-Comparison:T2 Operator:T23 Value:T24 Temporal-Unit:T25
+T3	Negation 60 63	not
+E3	Negation:T3 Negates:E4
+T4	Observation 75 92	physical exercise
+E4	Observation:T4 Name:T26 Duration:E5
+T5	Eq-Comparison 106 123	at least one year
+E5	Eq-Comparison:T5 Operator:T27 Value:T28 Temporal-Unit:T29
+T6	Negation 133 136	not
+E6	Negation:T6 Negates:E7 Negates2:E8 Negates3:E9 Negates4:E13
+T7	Condition 152 174	cardiovascular disease
+E7	Condition:T7 Name:T31 Severity:T30
+T8	Condition 176 190	kidney disease
+E8	Condition:T8 Name:T32
+T9	Condition 192 205	liver disease
+E9	Condition:T9 Name:T33
+T10	Or 206 208	or
+E10	Or:T10 Arg:E9 Arg2:E13
+T11	Modifier 209 227	limiting cognitive
+E11	Modifier:T11 Modifies:T34
+T12	Or 228 230	or
+E12	Or:T12 Arg:E11 Arg2:E23
+T13	Condition 245 252	disease
+E13	Condition:T13 Name:T34
+T14	Negation 268 271	not
+E14	Negation:T14 Negates:E17
+T15	Modifier 280 286	visual
+E15	Modifier:T15 Modifies:T35
+T16	Or 287 289	or
+E16	Or:T16 Arg:E15 Arg2:E25
+T17	Condition 299 308	inability
+E17	Condition:T17 Name:T35
+T18	Study 365 376	evaluations
+E18	Study:T18 
+T19	Temporal-Connection 387 393	during
+E19	Temporal-Connection:T19 Arg:E18 Arg2:E20
+A1	Temporal-Connection-Type-Value E19 during
+T20	Study 398 410	intervention
+E20	Study:T20 
+T21	Negation 430 437	absence
+E21	Negation:T21 Negates:E28
+T22	Eq-Comparison 441 453	five or more
+E22	Eq-Comparison:T22 Value:T36 Operator:T37
+T23	Eq-Operator 29 41	greater than
+A2	Eq-Operator-Value T23 GT
+T24	Eq-Value 42 44	60
+T25	Eq-Temporal-Unit 45 50	years
+A3	Eq-Temporal-Unit-Value T25 year
+T26	Observation-Name 75 92	physical exercise
+A4	Observation-Type-Value T26 social-habit
+T27	Eq-Operator 106 114	at least
+A5	Eq-Operator-Value T27 GTEQ
+T28	Eq-Value 115 118	one
+T29	Eq-Temporal-Unit 119 123	year
+A6	Eq-Temporal-Unit-Value T29 year
+T30	Severity 145 151	severe
+A7	Severity-Value T30 severe
+T31	Condition-Name 152 174	cardiovascular disease
+T32	Condition-Name 176 190	kidney disease
+T33	Condition-Name 192 205	liver disease
+T34	Condition-Name 245 252	disease
+T35	Condition-Name 299 308	inability
+T36	Eq-Value 441 445	five
+T37	Eq-Operator 446 453	or more
+A8	Eq-Operator-Value T37 GTEQ
+T38	Modifier 231 244	neuromuscular
+E23	Modifier:T38 Modifies:T34
+T39	And 253 256	and
+E24	And:T39 Arg:E6 Arg2:E14
+T40	Modifier 290 298	auditory
+E25	Modifier:T40 Modifies:T35
+T41	Negation 335 342	failing
+E26	Negation:T41 Negates:E18
+T42	And 420 423	and
+E27	And:T42 Arg:E26 Arg2:E21
+T43	Procedure 454 480	Capoeira training sessions
+E28	Procedure:T43 Name:T44 Minimum-Count:E22
+T44	Procedure-Name 454 480	Capoeira training sessions

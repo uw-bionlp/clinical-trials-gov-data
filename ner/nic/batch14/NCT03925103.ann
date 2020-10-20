@@ -1,55 +1,86 @@
+E1	Condition:T1 Name:T2 Severity:T69
+E3	Observation:T3 Name:T4
+E5	Procedure:T5 Name:T6 Temporality:E45
+E7	Procedure:T7 Name:T8
+E15	Observation:T15 Name:T16 Eq-Comparison:E32 Eq-Comparison2:E31
+E17	Procedure:T17 Name:T18 Temporality:E46
+E19	Procedure:T19 Name:T20
+E21	Procedure:T21 Name:T22 Temporality:E26
+E23	Procedure:T23 Name:T24
+E27	Procedure:T27 Name:T28
+E28	Age:T38 Eq-Comparison:E33
+E29	Eq-Comparison:T45 Operator:T29 Value:T39 Unit:T58
+E30	Eq-Comparison:T46 Operator:T30 Value:T40
+E31	Eq-Comparison:T47 Operator:T32 Value:T41
+E32	Eq-Comparison:T48 Operator:T33 Value:T42
+E33	Eq-Comparison:T49 Operator:T35 Value:T43
+E34	Eq-Comparison:T50 Operator:T36 Temporal-Unit:T37 Value:T44
+E2	Observation:T11 Name:T12
+E4	Observation:T51 Name:T52 Eq-Comparison:E29
+E6	Observation:T53 Name:T54
+E8	Observation:T55 Name:T56 Eq-Comparison:E29
+E10	And:T57 Arg:E4 Arg2:E6
+E11	Observation:T13 Name:T14
+E12	Observation:T59 Name:T60 Eq-Comparison:E13
+E13	Eq-Comparison:T61 Unit:T63 Operator:T31 Value:T62
+E14	Condition:T64 Name:T65 Stage:E16
+E16	Eq-Comparison:T66 Unit:T67 Value:T68 Operator:T34
+E18	Procedure:T70 Name:T71
+E9	Or:T9 Arg:E5 Arg2:E7
+E20	Or:T10 Arg:E33 Arg2:E34
+E22	Or:T72 Arg:E17 Arg2:E19
+E24	Modifier:T73 Modifies:T20
+E26	Eq-Comparison:T74 Temporal-Period:T75
+E25	Exception:T25 From:E21 Except:E23
+E35	Condition:T26 Severity:T77 Name:T101
+E36	Contraindication:T76 Contraindicates:E27
+E37	Procedure:T78 Name:T79
+E38	Procedure:T80 Name:T81
+E39	Negation:T82 Negates:E38
+E40	Negation:T83
+E41	Or:T84 Arg:E40 Arg2:E39
+E42	Or:T85 Arg:E38 Arg2:E37
+E43	Assertion:T86
+E44	Assertion:T87 Asserted:E38
+E45	Eq-Comparison:T88 Temporal-Period:T89
+E46	Eq-Comparison:T90 Temporal-Period:T91
+E47	Observation:T92 Name:T93 Eq-Comparison:E30
+E48	Modifier:T94 Modifies:T93
+E49	Modifier:T95
+E50	Observation:T96 Name:T97 Eq-Comparison:E30
+E51	Modifier:T98 Modifies:T97
+E52	And:T99 Arg:E47 Arg2:E50
+E53	Modifier:T100 Modifies:T79
 T1	Condition 469 486	pleural adhesions
 T2	Condition-Name 469 486	pleural adhesions
-E1	Condition:T1 Name:T2 Severity:T69
 T3	Observation 294 309	Body mass index
 T4	Observation-Name 294 309	Body mass index
-E3	Observation:T3 Name:T4
-A1	Observation-Type-Value T4 vital
 T5	Procedure 390 414	Neoadjuvant chemotherapy
 T6	Procedure-Name 390 414	Neoadjuvant chemotherapy
-E5	Procedure:T5 Name:T6 Temporality:E45
 T7	Procedure 418 430	radiotherapy
 T8	Procedure-Name 418 430	radiotherapy
-E7	Procedure:T7 Name:T8
 T15	Observation 311 314	BMI
 T16	Observation-Name 311 314	BMI
-E15	Observation:T15 Name:T16 Eq-Comparison:E32 Eq-Comparison2:E31
-A2	Observation-Type-Value T16 vital
 T17	Procedure 543 554	pleurodesis
 T18	Procedure-Name 543 554	pleurodesis
-E17	Procedure:T17 Name:T18 Temporality:E46
 T19	Procedure 558 569	thoracotomy
 T20	Procedure-Name 558 569	thoracotomy
-E19	Procedure:T19 Name:T20
 T21	Procedure 629 652	surgical lung resection
 T22	Procedure-Name 629 652	surgical lung resection
-E21	Procedure:T21 Name:T22 Temporality:E26
 T23	Procedure 664 673	lobectomy
 T24	Procedure-Name 664 673	lobectomy
-E23	Procedure:T23 Name:T24
 T27	Procedure 730 739	lobectomy
 T28	Procedure-Name 730 739	lobectomy
-E27	Procedure:T27 Name:T28
 T29	Eq-Operator 170 171	>
-A3	Eq-Operator-Value T29 GT
 T30	Eq-Operator 233 234	>
-A4	Eq-Operator-Value T30 GT
 T31	Eq-Operator 285 287	<=
-A5	Eq-Operator-Value T31 LTEQ
 T32	Eq-Operator 316 317	>
-A6	Eq-Operator-Value T32 GT
 T33	Eq-Operator 320 321	<
-A7	Eq-Operator-Value T33 LT
 T34	Eq-Operator 369 370	>
-A8	Eq-Operator-Value T34 GT
 T35	Eq-Operator 497 498	<
-A9	Eq-Operator-Value T35 LT
 T36	Eq-Operator 504 505	>
-A10	Eq-Operator-Value T36 GT
 T37	Eq-Temporal-Unit 508 513	years
-A11	Eq-Temporal-Unit-Value T37 year
 T38	Age 493 496	Age
-E28	Age:T38 Eq-Comparison:E33
 T39	Eq-Value 171 173	60
 T40	Eq-Value 234 236	35
 T41	Eq-Value 317 319	18
@@ -57,124 +88,95 @@ T42	Eq-Value 321 323	28
 T43	Eq-Value 498 500	18
 T44	Eq-Value 505 507	80
 T45	Eq-Comparison 170 174	>60%
-E29	Eq-Comparison:T45 Operator:T29 Value:T39 Unit:T58
 T46	Eq-Comparison 233 236	>35
-E30	Eq-Comparison:T46 Operator:T30 Value:T40
 T47	Eq-Comparison 316 319	>18
-E31	Eq-Comparison:T47 Operator:T32 Value:T41
 T48	Eq-Comparison 320 323	<28
-E32	Eq-Comparison:T48 Operator:T33 Value:T42
 T49	Eq-Comparison 497 500	<18
-E33	Eq-Comparison:T49 Operator:T35 Value:T43
 T50	Eq-Comparison 504 513	>80 years
-E34	Eq-Comparison:T50 Operator:T36 Temporal-Unit:T37 Value:T44
 T11	Observation 76 114	forced expiratory volume in one second
-E2	Observation:T11 Name:T12
 T12	Observation-Name 76 114	forced expiratory volume in one second
 T51	Observation 116 120	FEV1
-E4	Observation:T51 Name:T52 Eq-Comparison:E29
 T52	Observation-Name 116 120	FEV1
-R1	Abbrev-Of Arg1:E4 Arg2:E2	
 T53	Observation 126 163	diffusion capacity of carbon monoxide
-E6	Observation:T53 Name:T54
 T54	Observation-Name 126 163	diffusion capacity of carbon monoxide
 T55	Observation 165 169	DLCO
-E8	Observation:T55 Name:T56 Eq-Comparison:E29
 T56	Observation-Name 165 169	DLCO
-R2	Abbrev-Of Arg1:E8 Arg2:E6	
-A14	Observation-Type-Value T12 measurement
 T57	And 122 125	and
-E10	And:T57 Arg:E4 Arg2:E6
 T58	Eq-Unit 173 174	%
-T13	Condition 243 273	American Society of Anesthesia
-E11	Condition:T13 Name:T14
-T14	Condition-Name 243 273	American Society of Anesthesia
-T59	Condition 275 278	ASA
-E12	Condition:T59 Name:T60 Stage:E13
-T60	Condition-Name 275 278	ASA
-R3	Abbrev-Of Arg1:E12 Arg2:E11	
+T13	Observation 243 273	American Society of Anesthesia
+T14	Observation-Name 243 273	American Society of Anesthesia
+T59	Observation 275 278	ASA
+T60	Observation-Name 275 278	ASA
 T61	Eq-Comparison 280 288	score<=2
-E13	Eq-Comparison:T61 Unit:T63 Operator:T31 Value:T62
 T62	Eq-Value 287 288	2
 T63	Eq-Unit 280 285	score
 T64	Condition 358 363	NSCLC
-E14	Condition:T64 Name:T65 Stage:E16
 T65	Condition-Name 358 363	NSCLC
 T66	Eq-Comparison 364 373	stage> II
-E16	Eq-Comparison:T66 Unit:T67 Value:T68 Operator:T34
 T67	Eq-Unit 364 369	stage
 T68	Eq-Value 371 373	II
 T69	Severity 459 468	extensive
-A15	Severity-Value T69 severe
 T70	Procedure 436 446	Radiologic
-E18	Procedure:T70 Name:T71
 T71	Procedure-Name 436 446	Radiologic
-R4	Found-By Arg1:E1 Arg2:E18	
 T9	Or 415 417	or
-E9	Or:T9 Arg:E5 Arg2:E7
 T10	Or 501 503	or
-E20	Or:T10 Arg:E33 Arg2:E34
 T72	Or 555 557	or
-E22	Or:T72 Arg:E17 Arg2:E19
 T73	Modifier 577 596	affected hemithorax
-E24	Modifier:T73 Modifies:T20
 T74	Eq-Comparison 616 628	will undergo
-E26	Eq-Comparison:T74 Temporal-Period:T75
 T75	Eq-Temporal-Period 616 628	will undergo
-A16	Eq-Temporal-Period-Value T75 future
 T25	Exception 653 663	other than
-E25	Exception:T25 From:E21 Except:E23
 T26	Condition 701 712	comorbidity
-E35	Condition:T26 Severity:T77 Name:T101
 T76	Contraindication 713 729	contraindicating
-E36	Contraindication:T76 Contraindicates:E27
-R5	Caused-By Arg1:E36 Arg2:E35	
 T77	Severity 694 700	severe
-A17	Severity-Value T77 severe
 T78	Procedure 812 823	ventilation
-E37	Procedure:T78 Name:T79
 T79	Procedure-Name 812 823	ventilation
 T80	Procedure 783 798	general surgery
-E38	Procedure:T80 Name:T81
 T81	Procedure-Name 783 798	general surgery
 T82	Negation 766 779	noncompliance
-E39	Negation:T82 Negates:E38
 T83	Negation 755 762	refusal
-E40	Negation:T83 
 T84	Or 763 765	or
-E41	Or:T84 Arg:E40 Arg2:E39
 T85	Or 799 802	and
-E42	Or:T85 Arg:E38 Arg2:E37
 T86	Assertion 755 762	refusal
-E43	Assertion:T86 
-A18	Assertion-Type-Value E43 hypothetical
 T87	Assertion 766 779	noncompliance
-E44	Assertion:T87 Asserted:E38
-A19	Assertion-Type-Value E44 hypothetical
 T88	Eq-Comparison 379 386	History
-E45	Eq-Comparison:T88 Temporal-Period:T89
 T89	Eq-Temporal-Period 379 386	History
-A20	Eq-Temporal-Period-Value T89 past
 T90	Eq-Comparison 534 542	previous
-E46	Eq-Comparison:T90 Temporal-Period:T91
 T91	Eq-Temporal-Period 534 542	previous
-A21	Eq-Temporal-Period-Value T91 past
-A22	Observation-Type-Value T54 measurement
 T92	Observation 215 219	FEV1
-E47	Observation:T92 Name:T93 Eq-Comparison:E30
 T93	Observation-Name 215 219	FEV1
 T94	Modifier 185 208	predicted postoperative
-E48	Modifier:T94 Modifies:T93
 T95	Modifier 210 213	PPO
-E49	Modifier:T95 
-R6	Abbrev-Of Arg1:E49 Arg2:E48	
 T96	Observation 228 232	DLCO
-E50	Observation:T96 Name:T97 Eq-Comparison:E30
 T97	Observation-Name 228 232	DLCO
 T98	Modifier 224 227	PPO
-E51	Modifier:T98 Modifies:T97
 T99	And 220 223	and
-E52	And:T99 Arg:E47 Arg2:E50
 T100	Modifier 803 811	one-lung
-E53	Modifier:T100 Modifies:T79
 T101	Condition-Name 701 712	comorbidity
+A1	Observation-Type-Value T4 vital
+A2	Observation-Type-Value T16 vital
+A3	Eq-Operator-Value T29 GT
+A4	Eq-Operator-Value T30 GT
+A5	Eq-Operator-Value T31 LTEQ
+A6	Eq-Operator-Value T32 GT
+A7	Eq-Operator-Value T33 LT
+A8	Eq-Operator-Value T34 GT
+A9	Eq-Operator-Value T35 LT
+A10	Eq-Operator-Value T36 GT
+A11	Eq-Temporal-Unit-Value T37 year
+A14	Observation-Type-Value T12 measurement
+A15	Severity-Value T69 severe
+A16	Eq-Temporal-Period-Value T75 future
+A17	Severity-Value T77 severe
+A18	Assertion-Type-Value E43 hypothetical
+A19	Assertion-Type-Value E44 hypothetical
+A20	Eq-Temporal-Period-Value T89 past
+A21	Eq-Temporal-Period-Value T91 past
+A22	Observation-Type-Value T54 measurement
+A23	Observation-Type-Value T14 clinical-score
+A24	Observation-Type-Value T60 clinical-score
+R1	Abbrev-Of Arg1:E4 Arg2:E2
+R2	Abbrev-Of Arg1:E8 Arg2:E6
+R3	Abbrev-Of Arg1:E12 Arg2:E11
+R4	Found-By Arg1:E1 Arg2:E18
+R5	Caused-By Arg1:E36 Arg2:E35
+R6	Abbrev-Of Arg1:E49 Arg2:E48

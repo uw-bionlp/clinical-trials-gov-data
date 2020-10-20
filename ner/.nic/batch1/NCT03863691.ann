@@ -1,0 +1,145 @@
+T1	Language 90 96	German
+T3	Condition 565 571	stroke
+T4	Condition-Name 565 571	stroke
+E3	Condition:T3 Name:T4
+T5	Condition 913 934	personality disorders
+T6	Condition-Name 913 934	personality disorders
+E5	Condition:T5 Name:T6
+T7	Condition 837 853	mental disorders
+T8	Condition-Name 837 853	mental disorders
+E7	Condition:T7 Name:T8 Severity:T17
+T9	Condition 880 896	bipolar disorder
+T10	Condition-Name 880 896	bipolar disorder
+E9	Condition:T9 Name:T10
+T11	Condition 865 878	schizophrenia
+T12	Condition-Name 865 878	schizophrenia
+E11	Condition:T11 Name:T12
+T13	Condition 954 967	breastfeeding
+T14	Condition-Name 954 967	breastfeeding
+E13	Condition:T13 Name:T14
+T15	Condition 941 950	Pregnancy
+T16	Condition-Name 941 950	Pregnancy
+E15	Condition:T15 Name:T16
+T18	Eq-Value 528 530	10
+T20	Allergy 209 216	allergy
+E2	Allergy:T20 Name:E1
+T21	Drug-Name 197 208	Amisulpride
+T22	Allergy 223 230	Allergy
+E4	Allergy:T22 Name:E6 Name2:E8
+T23	Drug 240 265	components of amisulpride
+E6	Drug:T23 Name:T24
+T24	Drug-Name 240 265	components of amisulpride
+T25	Drug 268 284	placebo capsules
+E8	Drug:T25 Name:T26
+T26	Drug-Name 268 284	placebo capsules
+T27	Or 266 267	/
+E10	Or:T27 Arg:E6 Arg2:E8
+T28	Drug 290 297	lactose
+E12	Drug:T28 Name:T29
+T29	Drug-Name 290 297	lactose
+R1	Example-Of Arg1:E12 Arg2:E8	
+T30	Drug 326 336	medication
+E14	Drug:T30 Temporality:E37
+T32	Drug 347 361	contraceptives
+E16	Drug:T32 Name:T33
+T33	Drug-Name 347 361	contraceptives
+R2	Example-Of Arg1:E16 Arg2:E14	
+T34	Condition 380 388	seizures
+E17	Condition:T34 Name:T35
+T35	Condition-Name 380 388	seizures
+T36	Condition 408 414	cancer
+E18	Condition:T36 Name:T37
+T37	Condition-Name 408 414	cancer
+T38	Condition 426 442	pheochromocytoma
+E19	Condition:T38 Name:T39
+T39	Condition-Name 426 442	pheochromocytoma
+T40	Condition 444 456	prolactinoma
+E20	Condition:T40 Name:T41
+T41	Condition-Name 444 456	prolactinoma
+T42	Condition 468 474	cancer
+E21	Condition:T42 Name:T43
+T43	Condition-Name 468 474	cancer
+R3	Example-Of Arg1:E19 Arg2:E18	
+R4	Example-Of Arg1:E20 Arg2:E18	
+R5	Example-Of Arg1:E21 Arg2:E18	
+T44	Condition 481 499	Kidney dysfunction
+E22	Condition:T44 Name:T45
+T45	Condition-Name 481 499	Kidney dysfunction
+T46	Observation 501 521	creatinine clearance
+E23	Observation:T46 Name:T47 Eq-Comparison:E24
+T47	Observation-Name 501 521	creatinine clearance
+T48	Eq-Comparison 522 544	below 10 ml per minute
+E24	Eq-Comparison:T48 Operator:T49 Value:T18 Per:T50 Unit:T51
+T49	Eq-Operator 522 527	below
+A2	Eq-Operator-Value T49 LT
+T50	Eq-Unit 538 544	minute
+T51	Eq-Unit 531 533	ml
+T52	Risk 556 560	risk
+E25	Risk:T52 Polarity:T74 Risk-For:E3 Risk-For2:E26
+T53	Condition 575 585	thrombosis
+E26	Condition:T53 Name:T54
+T54	Condition-Name 575 585	thrombosis
+T55	Or 572 574	or
+E27	Or:T55 Arg:E3 Arg2:E26
+T56	Condition 598 629	prolongation of the QT interval
+E28	Condition:T56 Name:T57
+T57	Condition-Name 598 629	prolongation of the QT interval
+T58	Condition 652 669	medical condition
+E29	Condition:T58 Severity:T60
+T60	Severity 640 651	substantial
+A3	Severity-Value T60 severe
+T61	Study 743 748	study
+E30	Study:T61 Stability:T59
+T62	Condition 755 772	Suicidal thoughts
+E31	Condition:T62 Name:T63 Temporality:E42 Temporality2:E43
+T63	Condition-Name 755 772	Suicidal thoughts
+T64	Condition 776 792	suicide attempts
+E32	Condition:T64 Name:T65 Temporality:E42 Temporality2:E43
+T65	Condition-Name 776 792	suicide attempts
+T66	Or 773 775	or
+E33	Or:T66 Arg:E31 Arg2:E32
+T17	Severity 825 836	Substantial
+R6	Example-Of Arg1:E11 Arg2:E7	
+R7	Example-Of Arg1:E9 Arg2:E7	
+T67	Condition 898 908	drug abuse
+E34	Condition:T67 Name:T68
+T68	Condition-Name 898 908	drug abuse
+R8	Example-Of Arg1:E34 Arg2:E7	
+R9	Example-Of Arg1:E5 Arg2:E7	
+T69	Or 951 953	or
+E35	Or:T69 Arg:E15 Arg2:E13
+T70	Or 910 912	or
+E36	Or:T70 Arg:E34 Arg2:E5
+T2	Drug 197 208	Amisulpride
+E1	Drug:T2 Name:T21
+T19	Eq-Comparison 304 309	Daily
+E37	Eq-Comparison:T19 Per:T71
+T71	Eq-Temporal-Unit 304 309	Daily
+A1	Eq-Temporal-Unit-Value T71 day
+T72	Other 320 325	other
+E38	Other:T72 Is-Other:E14
+T31	Modifier 368 376	Tendency
+E39	Modifier:T31 Modifies:T35
+T73	Modifier 461 467	breast
+E40	Modifier:T73 Modifies:T43
+A4	Observation-Type-Value T47 lab
+R10	Equivalent-To Arg1:E23 Arg2:E22	
+T74	Polarity 551 555	High
+A5	Polarity-Value T74 high
+T59	Stability 689 697	reducing
+A6	Stability-Value T59 change
+T75	Assertion 678 688	capable of
+E41	Assertion:T75 Asserted:T59
+A7	Assertion-Type-Value E41 hypothetical
+R11	Caused-By Arg1:T59 Arg2:E29	
+T76	Eq-Comparison 800 804	past
+E42	Eq-Comparison:T76 Temporal-Period:T77
+T77	Eq-Temporal-Period 800 804	past
+A8	Eq-Temporal-Period-Value T77 past
+T78	Eq-Comparison 811 818	present
+E43	Eq-Comparison:T78 Temporal-Period:T79
+T79	Eq-Temporal-Period 811 818	present
+A9	Eq-Temporal-Period-Value T79 present
+T80	Or 805 807	or
+E44	Or:T80 Arg:E42 Arg2:E43
+A10	Severity-Value T17 severe

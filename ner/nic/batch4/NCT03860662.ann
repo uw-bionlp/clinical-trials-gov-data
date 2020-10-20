@@ -1,126 +1,126 @@
-T1	Eq-Comparison 31 56	between the ages of 18-60
 E1	Eq-Comparison:T1 Value:T39 Operator:T40 Value2:T41
-T3	Condition 114 132	Spastic Hemiplegia
 E3	Condition:T3 Name:T42
-T4	Observation 134 157	Modified Ashworth Scale
 E4	Observation:T4 Name:T43 Eq-Comparison:E5
-T5	Eq-Comparison 158 169	2 and above
 E5	Eq-Comparison:T5 Value:T44 Operator:T45
-T6	Condition 196 204	Pregnant
 E6	Condition:T6 Name:T46
-T7	Condition 212 225	breastfeeding
 E7	Condition:T7 Name:T48
-T8	And 226 229	and
 E8	And:T8 Arg:E7 Arg2:E2
-T9	Eq-Comparison 230 251	younger than 18 years
 E9	Eq-Comparison:T9 Operator:T49 Value:T50 Temporal-Unit:T51
-T10	Drug 265 275	medication
-E10	Drug:T10 
-T11	Or 276 279	and
+E10	Drug:T10
 E11	Or:T11 Arg:E10 Arg2:E12
-T12	Condition 280 293	substance use
 E12	Condition:T12 Name:T69
-T13	Condition 302 312	neuropathy
 E13	Condition:T13 Name:T52
-T14	Eq-Comparison 320 327	history
 E14	Eq-Comparison:T14 Temporal-Period:T53
-T15	Condition 335 342	disease
 E15	Condition:T15 Name:T54 Temporality:E14
-T16	Or 343 351	and / or
 E16	Or:T16 Arg:E15 Arg2:E18
-T18	Condition 352 362	neuropathy
 E18	Condition:T18 Name:T55 Temporality:E14
-T19	Eq-Comparison 388 396	received
 E19	Eq-Comparison:T19 Temporal-Period:T56
-T20	Procedure 397 430	botulinum toxin injection therapy
 E20	Procedure:T20 Name:T57 Temporality:E19
-T21	Or 431 439	and / or
 E21	Or:T21 Arg:E20 Arg2:E25
-T24	Modifier 440 444	oral
 E24	Modifier:T24 Modifies:T58
-T25	Procedure 445 464	antispastic therapy
 E25	Procedure:T25 Name:T58 Temporality:E19 Temporality2:E26
-T26	Eq-Comparison 465 489	within the last 6 months
 E26	Eq-Comparison:T26 Operator:T59 Temporal-Period:T60 Value:T61 Temporal-Unit:T62
-T27	Eq-Comparison 502 509	history
 E27	Eq-Comparison:T27 Temporal-Period:T63
-T28	Allergy 513 522	allergies
 E28	Allergy:T28 Temporality:E27 Name:E31
-T29	Or 523 526	and
 E29	Or:T29 Arg:E28 Arg2:E30
-T30	Condition 527 543	hypersensitivity
 E30	Condition:T30 Name:T64
-T31	Drug 557 561	drug
-E31	Drug:T31 
-T32	Procedure 567 586	Injection treatment
+E31	Drug:T31
 E32	Procedure:T32 Name:T23 Temporality:E33
-T33	Eq-Comparison 587 594	planned
 E33	Eq-Comparison:T33 Temporal-Period:T65
-T34	Procedure 595 616	purification hematoma
 E34	Procedure:T34 Name:T66 Temporality:E33
-T35	Modifier 618 626	cleaning
 E35	Modifier:T35 Modifies:T67
-T36	Or 627 629	or
 E36	Or:T36 Arg:E35 Arg2:E37
-T37	Modifier 630 634	skin
 E37	Modifier:T37 Modifies:T67
-T38	Condition 635 641	lesion
 E38	Condition:T38 Name:T67
+E39	Age:T68 Eq-Comparison:E1
+E2	Age:T2 Eq-Comparison:E9
+E17	Temporal-Connection:T17 Arg:E13 Arg2:E14
+E22	Modifier:T22 Modifies:E31
+T1	Eq-Comparison 31 56	between the ages of 18-60
+T3	Condition 114 132	Spastic Hemiplegia
+T4	Observation 134 157	Modified Ashworth Scale
+T5	Eq-Comparison 158 169	2 and above
+T6	Condition 196 204	Pregnant
+T7	Condition 212 225	breastfeeding
+T8	And 226 229	and
+T9	Eq-Comparison 230 251	younger than 18 years
+T10	Drug 265 275	medication
+T11	Or 276 279	and
+T12	Condition 280 293	substance use
+T13	Condition 302 312	neuropathy
+T14	Eq-Comparison 320 327	history
+T15	Condition 335 342	disease
+T16	Or 343 351	and / or
+T18	Condition 352 362	neuropathy
+T19	Eq-Comparison 388 396	received
+T20	Procedure 397 430	botulinum toxin injection therapy
+T21	Or 431 439	and / or
+T24	Modifier 440 444	oral
+T25	Procedure 445 464	antispastic therapy
+T26	Eq-Comparison 465 489	within the last 6 months
+T27	Eq-Comparison 502 509	history
+T28	Allergy 513 522	allergies
+T29	Or 523 526	and
+T30	Condition 527 543	hypersensitivity
+T31	Drug 557 561	drug
+T32	Procedure 567 586	Injection treatment
+T33	Eq-Comparison 587 594	planned
+T34	Procedure 595 616	purification hematoma
+T35	Modifier 618 626	cleaning
+T36	Or 627 629	or
+T37	Modifier 630 634	skin
+T38	Condition 635 641	lesion
 T39	Eq-Value 51 53	18
 T40	Eq-Operator 31 38	between
-A1	Eq-Operator-Value T40 BETWEEN
 T41	Eq-Value 54 56	60
 T42	Condition-Name 114 132	Spastic Hemiplegia
 T43	Observation-Name 134 157	Modified Ashworth Scale
-A2	Observation-Type-Value T43 clinical-score
 T44	Eq-Value 158 159	2
 T45	Eq-Operator 160 169	and above
-A3	Eq-Operator-Value T45 GTEQ
 T46	Condition-Name 196 204	Pregnant
 T47	Life-Stage-And-Gender 205 210	women
-A4	Life-Stage-And-Gender-Type T47 female
 T48	Condition-Name 212 225	breastfeeding
 T49	Eq-Operator 230 242	younger than
-A5	Eq-Operator-Value T49 LT
 T50	Eq-Value 243 245	18
 T51	Eq-Temporal-Unit 246 251	years
-A6	Eq-Temporal-Unit-Value T51 year
 T52	Condition-Name 302 312	neuropathy
 T53	Eq-Temporal-Period 320 327	history
-A7	Eq-Temporal-Period-Value T53 past
 T54	Condition-Name 335 342	disease
 T55	Condition-Name 352 362	neuropathy
 T56	Eq-Temporal-Period 388 396	received
-A8	Eq-Temporal-Period-Value T56 past
 T57	Procedure-Name 397 430	botulinum toxin injection therapy
 T58	Procedure-Name 445 464	antispastic therapy
 T59	Eq-Operator 465 471	within
-A9	Eq-Operator-Value T59 LTEQ
 T60	Eq-Temporal-Period 476 480	last
-A10	Eq-Temporal-Period-Value T60 past
 T61	Eq-Value 481 482	6
 T62	Eq-Temporal-Unit 483 489	months
-A11	Eq-Temporal-Unit-Value T62 month
 T63	Eq-Temporal-Period 502 509	history
-A12	Eq-Temporal-Period-Value T63 past
 T64	Condition-Name 527 543	hypersensitivity
 T65	Eq-Temporal-Period 587 594	planned
-A13	Eq-Temporal-Period-Value T65 future
 T66	Procedure-Name 595 616	purification hematoma
 T67	Condition-Name 635 641	lesion
 T68	Age 43 47	ages
-E39	Age:T68 Eq-Comparison:E1
-R1	Equivalent-To Arg1:E4 Arg2:E3	
-R2	If-Then Arg1:E6 Arg2:T47	
 T2	Age 246 251	years
-E2	Age:T2 Eq-Comparison:E9
 T69	Condition-Name 280 293	substance use
-R3	Caused-By Arg1:E13 Arg2:E10	
-R4	Caused-By Arg1:E13 Arg2:E12	
 T17	Temporal-Connection 313 315	in
-E17	Temporal-Connection:T17 Arg:E13 Arg2:E14
-A14	Temporal-Connection-Type-Value E17 during
-R5	Caused-By Arg1:E30 Arg2:E31	
 T22	Modifier 547 556	usability
-E22	Modifier:T22 Modifies:E31
 T23	Procedure-Name 567 586	Injection treatment
+A1	Eq-Operator-Value T40 BETWEEN
+A2	Observation-Type-Value T43 clinical-score
+A3	Eq-Operator-Value T45 GTEQ
+A4	Life-Stage-And-Gender-Type T47 female
+A5	Eq-Operator-Value T49 LT
+A6	Eq-Temporal-Unit-Value T51 year
+A7	Eq-Temporal-Period-Value T53 past
+A8	Eq-Temporal-Period-Value T56 past
+A9	Eq-Operator-Value T59 LTEQ
+A10	Eq-Temporal-Period-Value T60 past
+A11	Eq-Temporal-Unit-Value T62 month
+A12	Eq-Temporal-Period-Value T63 past
+A13	Eq-Temporal-Period-Value T65 future
+A14	Temporal-Connection-Type-Value E17 during
+R1	Equivalent-To Arg1:E4 Arg2:E3
+R2	If-Then Arg1:E6 Arg2:T47
+R3	Caused-By Arg1:E13 Arg2:E10
+R4	Caused-By Arg1:E13 Arg2:E12
+R5	Caused-By Arg1:E30 Arg2:E31

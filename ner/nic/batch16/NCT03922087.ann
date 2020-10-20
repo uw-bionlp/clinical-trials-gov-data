@@ -1,87 +1,87 @@
+E1	Condition:T1 Name:T2 Location:T3
+E2	Condition:T10 Name:T11
+E3	Assertion:T4 Asserted:E1
+E5	And:T13 Arg:T12 Arg2:E3
+E6	Condition:T14 Name:T15
+E7	Eq-Comparison:T18 Operator:T19 Value:T8 Temporal-Unit:T5
+E8	Observation:T20 Name:T21 Location:T17 Duration:E7
+E9	And:T22 Arg:T16 Arg2:E8
+E10	Condition:T23 Name:T24
+E11	Encounter:T26
+E12	Assertion:T27 Asserted:E11
+E13	And:T28 Arg:T25 Arg2:E12
+E14	Family-Member:T29 Has2:E11
+E15	Family-Member:T30
+E16	And:T31 Arg:E14 Arg2:E15
+E17	Condition:T32 Name:T33
+E4	Observation:T7 Name:T35 Eq-Comparison:E18
+E18	Eq-Comparison:T36 Operator:T37 Value:T9 Temporal-Unit:T6
+E19	And:T38 Arg:T34 Arg2:E4
+E20	Condition:T39 Name:T40
+E21	Condition:T42 Name:T43
+E22	Condition:T45 Name:T46
+E23	And:T47 Arg:T44 Arg2:E22
 T1	Condition 57 65	delivery
 T2	Condition-Name 57 65	delivery
-E1	Condition:T1 Name:T2 Location:T3
 T5	Eq-Temporal-Unit 180 185	years
-A1	Eq-Temporal-Unit-Value T5 year
 T6	Eq-Temporal-Unit 382 387	weeks
-A2	Eq-Temporal-Unit-Value T6 week
 T8	Eq-Value 178 179	3
 T9	Eq-Value 379 381	24
 T10	Condition 25 33	Pregnant
-E2	Condition:T10 Name:T11
 T11	Condition-Name 25 33	Pregnant
 T12	Life-Stage-And-Gender 34 39	women
-A3	Life-Stage-And-Gender-Type T12 female
 T3	Location 99 115	Huizhou hospital
-A4	Location-Value T3 hospital
 T4	Assertion 49 56	plan to
-E3	Assertion:T4 Asserted:E1
-A5	Assertion-Type-Value E3 intention
 T13	And 40 43	who
-E5	And:T13 Arg:T12 Arg2:E3
 T14	Condition 122 130	Pregnant
-E6	Condition:T14 Name:T15
 T15	Condition-Name 122 130	Pregnant
 T16	Life-Stage-And-Gender 131 136	women
-A6	Life-Stage-And-Gender-Type T16 female
 T17	Location 157 164	Huizhou
-A7	Location-Value T17 residence
 T18	Eq-Comparison 169 185	at least 3 years
-E7	Eq-Comparison:T18 Operator:T19 Value:T8 Temporal-Unit:T5
 T19	Eq-Operator 169 177	at least
-A8	Eq-Operator-Value T19 GTEQ
 T20	Observation 146 153	resided
-E8	Observation:T20 Name:T21 Location:T17 Duration:E7
 T21	Observation-Name 146 153	resided
 T22	And 137 140	who
-E9	And:T22 Arg:T16 Arg2:E8
 T23	Condition 192 200	Pregnant
-E10	Condition:T23 Name:T24
 T24	Condition-Name 192 200	Pregnant
 T25	Life-Stage-And-Gender 201 206	women
-A9	Life-Stage-And-Gender-Type T25 female
 T26	Encounter 261 271	follow-ups
-E11	Encounter:T26 
 T27	Assertion 215 226	consent for
-E12	Assertion:T27 Asserted:E11
-A10	Assertion-Type-Value E12 hypothetical
 T28	And 207 210	who
-E13	And:T28 Arg:T25 Arg2:E12
 T29	Family-Member 281 287	mother
-E14	Family-Member:T29 Has2:E11
-A11	Family-Member-Type E14 mother
 T30	Family-Member 292 298	infant
-E15	Family-Member:T30 
-A12	Family-Member-Type E15 child
 T31	And 288 291	and
-E16	And:T31 Arg:E14 Arg2:E15
 T32	Condition 325 333	Pregnant
-E17	Condition:T32 Name:T33
 T33	Condition-Name 325 333	Pregnant
 T34	Life-Stage-And-Gender 334 339	women
-A13	Life-Stage-And-Gender-Type T34 female
 T7	Observation 353 368	gestational age
-E4	Observation:T7 Name:T35 Eq-Comparison:E18
 T35	Observation-Name 353 368	gestational age
-A14	Observation-Type-Value T35 measurement
 T36	Eq-Comparison 369 387	more than 24 weeks
-E18	Eq-Comparison:T36 Operator:T37 Value:T9 Temporal-Unit:T6
 T37	Eq-Operator 369 378	more than
-A15	Eq-Operator-Value T37 GT
 T38	And 340 343	who
-E19	And:T38 Arg:T34 Arg2:E4
 T39	Condition 395 403	Pregnant
-E20	Condition:T39 Name:T40
 T40	Condition-Name 395 403	Pregnant
 T41	Life-Stage-And-Gender 404 409	women
-A16	Life-Stage-And-Gender-Type T41 female
 T42	Condition 483 491	Pregnant
-E21	Condition:T42 Name:T43
 T43	Condition-Name 483 491	Pregnant
 T44	Life-Stage-And-Gender 492 497	women
-A17	Life-Stage-And-Gender-Type T44 female
 T45	Condition 506 528	mentally incapacitated
-E22	Condition:T45 Name:T46
 T46	Condition-Name 506 528	mentally incapacitated
 T47	And 498 501	who
-E23	And:T47 Arg:T44 Arg2:E22
+A1	Eq-Temporal-Unit-Value T5 year
+A2	Eq-Temporal-Unit-Value T6 week
+A3	Life-Stage-And-Gender-Type T12 female
+A4	Location-Value T3 hospital
+A5	Assertion-Type-Value E3 intention
+A6	Life-Stage-And-Gender-Type T16 female
+A7	Location-Value T17 residence
+A8	Eq-Operator-Value T19 GTEQ
+A9	Life-Stage-And-Gender-Type T25 female
+A10	Assertion-Type-Value E12 hypothetical
+A11	Family-Member-Type E14 mother
+A12	Family-Member-Type E15 child
+A13	Life-Stage-And-Gender-Type T34 female
+A14	Observation-Type-Value T35 measurement
+A15	Eq-Operator-Value T37 GT
+A16	Life-Stage-And-Gender-Type T41 female
+A17	Life-Stage-And-Gender-Type T44 female

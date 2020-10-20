@@ -1,0 +1,99 @@
+T1	Eq-Comparison 25 30	20-70
+E1	Eq-Comparison:T1 Value:T32 Operator:T33 Value2:T34
+T2	Age 31 34	age
+E2	Age:T2 Eq-Comparison:E1
+T3	Modifier 48 53	ankle
+E3	Modifier:T3 Modifies:T35
+T4	Condition 54 60	sprain
+E4	Condition:T4 Name:T35 Duration:E5
+T5	Eq-Comparison 61 78	more than 3months
+E5	Eq-Comparison:T5 Operator:T36 Value:T37 Temporal-Unit:T53
+T6	And 79 83	with
+E6	And:T6 Arg:E4 Arg2:E8
+T7	Modifier 92 97	ankle
+E7	Modifier:T7 Modifies:T38
+T8	Condition 98 102	pain
+E8	Condition:T8 Name:T38
+T9	Or 103 105	or
+E9	Or:T9 Arg:E8 Arg2:E11
+T10	Modifier 106 117	instability
+E10	Modifier:T10 Modifies:T39
+T11	Condition 118 127	sensation
+E11	Condition:T11 Name:T39
+T12	Procedure 133 143	Ultrasound
+E12	Procedure:T12 Name:T40
+T13	Modifier 154 174	anterior talofibular
+E13	Modifier:T13 Modifies:T41
+T14	Condition 175 190	ligament sprain
+E14	Condition:T14 Name:T41
+T15	Modifier 222 227	ankle
+E15	Modifier:T15 Modifies:T43
+T16	Condition 228 234	sprain
+E16	Condition:T16 Name:T43 Severity:T42 Duration:E17
+T17	Eq-Comparison 235 253	less than 3 months
+E17	Eq-Comparison:T17 Operator:T44 Value:T45 Temporal-Unit:T46
+T18	Modifier 259 269	Lower limb
+E18	Modifier:T18 Modifies:T47
+T19	Condition 270 278	fracture
+E19	Condition:T19 Name:T47 Temporality:E20
+T20	Eq-Comparison 279 286	history
+E20	Eq-Comparison:T20 Temporal-Period:T48
+T21	Condition 292 312	Cognitive impairment
+E21	Condition:T21 Name:T49
+T22	Other 318 323	Other
+E22	Other:T22 Is-Other:E26
+T23	Modifier 324 336	neurological
+E23	Modifier:T23 Modifies:T50
+T24	Or 337 339	or
+E24	Or:T24 Arg:E23 Arg2:E25
+T25	Modifier 340 348	muscular
+E25	Modifier:T25 Modifies:T50
+T26	Condition 349 358	disorders
+E26	Condition:T26 Name:T50
+T27	Condition 370 374	pain
+E27	Condition:T27 Name:T51
+T28	Assertion 375 380	could
+E28	Assertion:T28 Asserted:E29
+A1	Assertion-Type-Value E28 hypothetical
+T29	Negation 381 384	not
+E29	Negation:T29 Negates:E30
+T30	Assertion 385 393	tolerate
+E30	Assertion:T30 Asserted:E31
+A2	Assertion-Type-Value E30 hypothetical
+T31	Procedure 394 405	examination
+E31	Procedure:T31 Name:T52
+T32	Eq-Value 25 27	20
+T33	Eq-Operator 27 28	-
+A3	Eq-Operator-Value T33 BETWEEN
+T34	Eq-Value 28 30	70
+T35	Condition-Name 54 60	sprain
+T36	Eq-Operator 61 70	more than
+A4	Eq-Operator-Value T36 GT
+T37	Eq-Value 71 72	3
+T38	Condition-Name 98 102	pain
+T39	Condition-Name 118 127	sensation
+T40	Procedure-Name 133 143	Ultrasound
+T41	Condition-Name 175 190	ligament sprain
+T42	Severity 216 221	Acute
+A5	Severity-Value T42 severe
+T43	Condition-Name 228 234	sprain
+T44	Eq-Operator 235 244	less than
+A6	Eq-Operator-Value T44 LT
+T45	Eq-Value 245 246	3
+T46	Eq-Temporal-Unit 247 253	months
+A7	Eq-Temporal-Unit-Value T46 month
+T47	Condition-Name 270 278	fracture
+T48	Eq-Temporal-Period 279 286	history
+A8	Eq-Temporal-Period-Value T48 past
+T49	Condition-Name 292 312	Cognitive impairment
+T50	Condition-Name 349 358	disorders
+T51	Condition-Name 370 374	pain
+T52	Procedure-Name 394 405	examination
+T53	Eq-Temporal-Unit 72 78	months
+A9	Eq-Temporal-Unit-Value T53 month
+R1	Found-By Arg1:E14 Arg2:E12	
+R2	Caused-By Arg1:E29 Arg2:E27	
+T54	Modifier 84 91	chronic
+E32	Modifier:T54 Modifies:T38
+T55	Modifier 40 47	Chronic
+E33	Modifier:T55 Modifies:T35

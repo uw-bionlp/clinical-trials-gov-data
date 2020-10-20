@@ -1,104 +1,104 @@
+E1	Condition:T1 Name:T2 Stage:E3
+E6	Condition:T6 Name:T7 Temporality:E22
+E8	Condition:T8 Name:T9 Stability:T49 Temporality:E22
+E10	Condition:T10 Name:T11 Temporality:E22
+E12	Condition:T12 Name:T13 Temporality:E22
+E14	Condition:T14 Name:T15 Temporality:E22
+E16	Condition:T16 Name:T17 Temporality:E22
+E18	Observation:T18 Name:T19 Eq-Comparison:E21
+E19	Age:T24 Eq-Comparison:E20
+E20	Eq-Comparison:T28 Operator:T20 Temporal-Unit:T22 Value:T25
+E21	Eq-Comparison:T29 Operator:T21 Value:T27
+E22	Eq-Comparison:T30 Temporal-Period:T31
+E2	Or:T32 Arg:T4 Arg2:T3
+E3	Eq-Comparison:T5 Unit:T33 Value:T34 Value2:T35
+E4	Condition:T36 Name:T37
+E5	Condition:T38 Name:T39 Duration:E7
+E7	Eq-Comparison:T40 Operator:T41 Value:T26 Temporal-Unit:T23
+E9	Condition:T42 Name:T43
+E11	Modifier:T44 Modifies:T43
+E13	Study:T45
+E15	Negation:T46 Negates:E13
+E17	Condition:T47 Name:T48 Temporality:E22
+E23	Modifier:T50 Modifies:T15
+E24	Procedure:T51 Name:T52 Temporality:E22
+E25	Condition:T53 Name:T54 Temporality:E22
+E26	Modifier:T55 Modifies:T54
+E27	Modifier:T56 Modifies:T54
+E28	Or:T57 Arg:E27 Arg2:E26
+E29	Modifier:T58 Modifies:T43
+E30	Negation:T59 Negates:E29
+E31	Or:T60 Arg:E11 Arg2:E30
 T1	Condition 146 160	Osteoarthritis
 T2	Condition-Name 146 160	Osteoarthritis
-E1	Condition:T1 Name:T2 Stage:E3
 T3	Life-Stage-And-Gender 95 101	female
-A1	Life-Stage-And-Gender-Type T3 female
 T4	Life-Stage-And-Gender 86 90	male
-A2	Life-Stage-And-Gender-Type T4 male
 T6	Condition 531 554	cerebrovascular disease
 T7	Condition-Name 531 554	cerebrovascular disease
-E6	Condition:T6 Name:T7 Temporality:E22
 T8	Condition 427 449	cardiovascular disease
 T9	Condition-Name 427 449	cardiovascular disease
-E8	Condition:T8 Name:T9 Stability:T49 Temporality:E22
 T10	Condition 513 529	terminal illness
 T11	Condition-Name 513 529	terminal illness
-E10	Condition:T10 Name:T11 Temporality:E22
 T12	Condition 478 492	morbid obesity
 T13	Condition-Name 478 492	morbid obesity
-E12	Condition:T12 Name:T13 Temporality:E22
 T14	Condition 464 476	hypertension
 T15	Condition-Name 464 476	hypertension
-E14	Condition:T14 Name:T15 Temporality:E22
 T16	Condition 556 564	dementia
 T17	Condition-Name 556 564	dementia
-E16	Condition:T16 Name:T17 Temporality:E22
 T18	Observation 503 506	BMI
 T19	Observation-Name 503 506	BMI
-E18	Observation:T18 Name:T19 Eq-Comparison:E21
-A3	Observation-Type-Value T19 vital
 T20	Eq-Operator 115 116	≥
-A4	Eq-Operator-Value T20 GTEQ
 T21	Eq-Operator 507 508	≥
-A5	Eq-Operator-Value T21 GTEQ
 T22	Eq-Temporal-Unit 120 125	years
-A6	Eq-Temporal-Unit-Value T22 year
 T23	Eq-Temporal-Unit 286 292	months
-A7	Eq-Temporal-Unit-Value T23 month
 T24	Age 111 114	age
-E19	Age:T24 Eq-Comparison:E20
 T25	Eq-Value 117 119	20
 T26	Eq-Value 284 285	3
 T27	Eq-Value 509 511	40
 T28	Eq-Comparison 115 125	≥ 20 years
-E20	Eq-Comparison:T28 Operator:T20 Temporal-Unit:T22 Value:T25
 T29	Eq-Comparison 507 511	≥ 40
-E21	Eq-Comparison:T29 Operator:T21 Value:T27
 T30	Eq-Comparison 399 406	history
-E22	Eq-Comparison:T30 Temporal-Period:T31
 T31	Eq-Temporal-Period 399 406	history
-A8	Eq-Temporal-Period-Value T31 past
 T32	Or 91 94	and
-E2	Or:T32 Arg:T4 Arg2:T3
 T5	Eq-Comparison 161 178	stages III and IV
-E3	Eq-Comparison:T5 Unit:T33 Value:T34 Value2:T35
 T33	Eq-Unit 161 167	stages
 T34	Eq-Value 168 171	III
 T35	Eq-Value 176 178	IV
 T36	Condition 242 246	pain
-E4	Condition:T36 Name:T37
 T37	Condition-Name 242 246	pain
-R1	Caused-By Arg1:E4 Arg2:E1	
 T38	Condition 248 269	functional impairment
-E5	Condition:T38 Name:T39 Duration:E7
 T39	Condition-Name 248 269	functional impairment
-R2	Caused-By Arg1:E5 Arg2:E1	
 T40	Eq-Comparison 274 292	more than 3 months
-E7	Eq-Comparison:T40 Operator:T41 Value:T26 Temporal-Unit:T23
 T41	Eq-Operator 274 283	more than
-A9	Eq-Operator-Value T41 GT
 T42	Condition 294 308	able to wander
-E9	Condition:T42 Name:T43
 T43	Condition-Name 294 308	able to wander
 T44	Modifier 309 313	with
-E11	Modifier:T44 Modifies:T43
 T45	Study 379 384	study
-E13	Study:T45 
 T46	Negation 365 373	excluded
-E15	Negation:T46 Negates:E13
 T47	Condition 410 416	cancer
-E17	Condition:T47 Name:T48 Temporality:E22
 T48	Condition-Name 410 416	cancer
 T49	Stability 418 426	unstable
-A10	Stability-Value T49 change
 T50	Modifier 451 463	uncontrolled
-E23	Modifier:T50 Modifies:T15
 T51	Procedure 566 581	heart pacemaker
-E24	Procedure:T51 Name:T52 Temporality:E22
 T52	Procedure-Name 566 581	heart pacemaker
 T53	Condition 609 618	fractures
-E25	Condition:T53 Name:T54 Temporality:E22
 T54	Condition-Name 609 618	fractures
 T55	Modifier 595 608	inferior limb
-E26	Modifier:T55 Modifies:T54
 T56	Modifier 583 591	superior
-E27	Modifier:T56 Modifies:T54
 T57	Or 592 594	or
-E28	Or:T57 Arg:E27 Arg2:E26
 T58	Modifier 325 330	canes
-E29	Modifier:T58 Modifies:T43
 T59	Negation 317 324	without
-E30	Negation:T59 Negates:E29
 T60	Or 314 316	or
-E31	Or:T60 Arg:E11 Arg2:E30
-R3	Equivalent-To Arg1:E18 Arg2:E12	
+A1	Life-Stage-And-Gender-Type T3 female
+A2	Life-Stage-And-Gender-Type T4 male
+A3	Observation-Type-Value T19 vital
+A4	Eq-Operator-Value T20 GTEQ
+A5	Eq-Operator-Value T21 GTEQ
+A6	Eq-Temporal-Unit-Value T22 year
+A7	Eq-Temporal-Unit-Value T23 month
+A8	Eq-Temporal-Period-Value T31 past
+A9	Eq-Operator-Value T41 GT
+A10	Stability-Value T49 change
+R1	Caused-By Arg1:E4 Arg2:E1
+R2	Caused-By Arg1:E5 Arg2:E1
+R3	Equivalent-To Arg1:E18 Arg2:E12

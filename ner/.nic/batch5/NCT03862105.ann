@@ -1,0 +1,68 @@
+T1	Age 8 11	Age
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 0 21	Minimum Age: 18 Years
+E2	Eq-Comparison:T2 Value:T19 Temporal-Unit:T20 Operator:T18
+T3	Age 30 33	Age
+E3	Age:T3 Eq-Comparison:E18
+T5	Or 110 112	or
+E5	Or:T5 Arg:T24 Arg2:T25
+T6	And 129 133	with
+E6	And:T6 Arg:T25 Arg2:E8
+T7	Modifier 134 150	invasive bladder
+E7	Modifier:T7 Modifies:T26
+T8	Condition 151 157	cancer
+E8	Condition:T8 Name:T26
+T9	Eq-Comparison 158 167	scheduled
+E9	Eq-Comparison:T9 Temporal-Period:T27
+T10	Procedure 172 190	radical cystectomy
+E10	Procedure:T10 Name:T4 Temporality:E9 Location:T28 Temporality2:E11
+T11	Eq-Comparison 198 221	within the next 30 days
+E11	Eq-Comparison:T11 Operator:T29 Temporal-Period:T30 Value:T31 Temporal-Unit:T32
+T12	Condition 501 520	psychiatric illness
+E12	Condition:T12 Name:T35 Severity:T34
+T14	Procedure 526 544	Cystectomy surgery
+E14	Procedure:T14 Name:T36
+T15	Negation 545 552	without
+E15	Negation:T15 Negates:E16
+T16	Condition 553 559	cancer
+E16	Condition:T16 Name:T37
+T17	Negation 575 578	Non
+E17	Negation:T17 Negates:T38
+T18	Eq-Operator 0 7	Minimum
+A1	Eq-Operator-Value T18 GTEQ
+T19	Eq-Value 13 15	18
+T20	Eq-Temporal-Unit 16 21	Years
+A2	Eq-Temporal-Unit-Value T20 year
+T21	Eq-Operator 22 29	Maximum
+A3	Eq-Operator-Value T21 LTEQ
+T22	Eq-Value 35 37	99
+T23	Eq-Temporal-Unit 38 43	Years
+A4	Eq-Temporal-Unit-Value T23 year
+T24	Life-Stage-And-Gender 105 109	Male
+A5	Life-Stage-And-Gender-Type T24 male
+T25	Life-Stage-And-Gender 113 119	female
+A6	Life-Stage-And-Gender-Type T25 female
+T26	Condition-Name 151 157	cancer
+T27	Eq-Temporal-Period 158 167	scheduled
+A7	Eq-Temporal-Period-Value T27 future
+T28	Location 194 197	UNC
+A8	Location-Value T28 hospital
+T29	Eq-Operator 198 204	within
+A9	Eq-Operator-Value T29 LTEQ
+T30	Eq-Temporal-Period 209 213	next
+A10	Eq-Temporal-Period-Value T30 future
+T31	Eq-Value 214 216	30
+T32	Eq-Temporal-Unit 217 221	days
+A11	Eq-Temporal-Unit-Value T32 day
+T33	Language 227 234	English
+T34	Severity 494 500	Severe
+A12	Severity-Value T34 severe
+T35	Condition-Name 501 520	psychiatric illness
+T36	Procedure-Name 526 544	Cystectomy surgery
+T37	Condition-Name 553 559	cancer
+T38	Language 579 586	English
+T39	Eq-Comparison 22 43	Maximum Age: 99 Years
+E18	Eq-Comparison:T39 Operator:T21 Temporal-Unit:T23 Value:T22
+T4	Procedure-Name 172 190	radical cystectomy
+R1	Treatment-For Arg1:E10 Arg2:E8	
+R2	Treatment-For Arg1:E14 Arg2:E16	

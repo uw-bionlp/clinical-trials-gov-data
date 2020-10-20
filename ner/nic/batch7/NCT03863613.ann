@@ -1,113 +1,116 @@
-T1	And 31 35	with
 E1	And:T1 Arg:T56 Arg2:E3
-T2	Modifier 38 42	twin
 E2	Modifier:T2 Modifies:T57
-T3	Condition 43 52	pregnancy
 E3	Condition:T3 Name:T57
-T4	Modifier 54 59	mono-
 E4	Modifier:T4 Modifies:T57
-T5	Or 60 63	and
 E5	Or:T5 Arg:E4 Arg2:E6
-T6	Modifier 64 76	di-chorionic
 E6	Modifier:T6 Modifies:T57
-T8	Observation 109 118	gestation
 E8	Observation:T8 Name:T65 Eq-Comparison:E7
-T9	Age 133 136	age
 E9	Age:T9 Eq-Comparison:E10
-T10	Eq-Comparison 137 144	≥18 yrs
 E10	Eq-Comparison:T10 Operator:T66 Value:T67 Temporal-Unit:T36
-T11	Observation 150 165	Cervical length
 E11	Observation:T11 Name:T68 Eq-Comparison:E12
-T12	Eq-Comparison 166 172	≤28 mm
 E12	Eq-Comparison:T12 Operator:T69 Unit:T70 Value:T42
-T13	Negation 200 203	Not
 E13	Negation:T13 Negates:E17
-T14	Other 221 228	another
 E14	Other:T14 Is-Other:E17
-T16	Birth 237 242	birth
-E16	Birth:T16 
-T17	Study 243 248	study
+E16	Birth:T16
 E17	Study:T17 Study-Of:E16
-T18	Condition 291 308	Uterine anomalies
 E18	Condition:T18 Name:T71
-T19	Condition 314 331	Cervical dilation
 E19	Condition:T19 Name:T72
-T20	And 332 336	with
 E20	And:T20 Arg:E19 Arg2:E21
-T21	Condition 345 363	amniotic membranes
 E21	Condition:T21 Name:T73
-T22	Or 364 366	or
 E22	Or:T22 Arg:E21 Arg2:E23
-T23	Condition 367 395	amniotic membranes prolapsed
 E23	Condition:T23 Name:T74
-T24	Modifier 396 411	into the vagina
 E24	Modifier:T24 Modifies:T74
-T25	Modifier 417 429	Twin-to-twin
 E25	Modifier:T25 Modifies:T75
-T26	Condition 430 450	transfusion syndrome
 E26	Condition:T26 Name:T75
-T27	Condition 456 466	Stillbirth
 E27	Condition:T27 Name:T76
-T28	Or 467 469	or
 E28	Or:T28 Arg:E27 Arg2:E30
-T30	Condition 476 500	congenital abnormalities
 E30	Condition:T30 Name:T78 Severity:T77
-T32	Condition 533 550	vaginal discharge
 E32	Condition:T32 Name:T81 Severity:T80
-T33	Condition 562 571	vaginitis
-E33	Condition:T33 Name:T83 Severity:T82
-T34	Or 572 574	or
+E33	Condition:T33 Name:T83 Acuteness:T82
 E34	Or:T34 Arg:E33 Arg2:E35
-T35	Condition 575 585	cervicitis
 E35	Condition:T35 Name:T84
-T37	Condition 599 607	bleeding
 E37	Condition:T37 Name:T85
-T38	Condition 613 630	Placental preavia
 E38	Condition:T38 Name:T86
-T39	Condition 636 648	Vasa preavia
 E39	Condition:T39 Name:T87
-T40	Condition 664 684	rupture of membranes
 E40	Condition:T40 Name:T88
-T41	Modifier 654 663	Premature
 E41	Modifier:T41 Modifies:T88
-T43	Condition 700 705	labor
 E43	Condition:T43 Name:T89
-T46	Condition 719 736	ruptured membrane
 E46	Condition:T46 Name:T90
-T47	Assertion 742 751	Suspicion
 E47	Assertion:T47 Asserted:E48
-A1	Assertion-Type-Value E47 possible
-T48	Condition 755 771	chorioamnionitis
 E48	Condition:T48 Name:T91
-T50	Condition 777 794	Cerclage in place
 E50	Condition:T50 Name:T60
-T51	Or 795 797	or
 E51	Or:T51 Arg:E50 Arg2:E56
-T52	Negation 798 804	unable
 E52	Negation:T52 Negates:E53
-T53	Procedure 816 824	cervical
 E53	Procedure:T53 Name:T92
-T54	Or 834 836	or
 E54	Or:T54 Arg:E49 Arg2:E55
-T55	Modifier 837 844	pessary
 E55	Modifier:T55 Modifies:T92
+E7	Eq-Comparison:T7 Value:T59 Operator:T61 Value2:T62 Temporal-Unit:T64
+E15	Modifier:T15 Modifies:E16
+E29	Modifier:T29 Modifies:T78
+E31	Modifier:T31 Modifies:T85
+E36	Modifier:T49 Modifies:T89
+E42	And:T44 Arg:E43 Arg2:E46
+E44	Or:T45 Arg:E42 Arg2:E45
+E45	Negation:T58 Negates:E46
+E49	Modifier:T63 Modifies:T92
+E56	Assertion:T79 Asserted:E52
+T1	And 31 35	with
+T2	Modifier 38 42	twin
+T3	Condition 43 52	pregnancy
+T4	Modifier 54 59	mono-
+T5	Or 60 63	and
+T6	Modifier 64 76	di-chorionic
+T8	Observation 109 118	gestation
+T9	Age 133 136	age
+T10	Eq-Comparison 137 144	≥18 yrs
+T11	Observation 150 165	Cervical length
+T12	Eq-Comparison 166 172	≤28 mm
+T13	Negation 200 203	Not
+T14	Other 221 228	another
+T16	Birth 237 242	birth
+T17	Study 243 248	study
+T18	Condition 291 308	Uterine anomalies
+T19	Condition 314 331	Cervical dilation
+T20	And 332 336	with
+T21	Condition 345 363	amniotic membranes
+T22	Or 364 366	or
+T23	Condition 367 395	amniotic membranes prolapsed
+T24	Modifier 396 411	into the vagina
+T25	Modifier 417 429	Twin-to-twin
+T26	Condition 430 450	transfusion syndrome
+T27	Condition 456 466	Stillbirth
+T28	Or 467 469	or
+T30	Condition 476 500	congenital abnormalities
+T32	Condition 533 550	vaginal discharge
+T33	Condition 562 571	vaginitis
+T34	Or 572 574	or
+T35	Condition 575 585	cervicitis
+T37	Condition 599 607	bleeding
+T38	Condition 613 630	Placental preavia
+T39	Condition 636 648	Vasa preavia
+T40	Condition 664 684	rupture of membranes
+T41	Modifier 654 663	Premature
+T43	Condition 700 705	labor
+T46	Condition 719 736	ruptured membrane
+T47	Assertion 742 751	Suspicion
+T48	Condition 755 771	chorioamnionitis
+T50	Condition 777 794	Cerclage in place
+T51	Or 795 797	or
+T52	Negation 798 804	unable
+T53	Procedure 816 824	cervical
+T54	Or 834 836	or
+T55	Modifier 837 844	pessary
 T56	Life-Stage-And-Gender 25 30	Women
-A2	Life-Stage-And-Gender-Type T56 female
 T57	Condition-Name 43 52	pregnancy
 T59	Eq-Value 83 89	16 0/7
 T61	Eq-Operator 90 92	to
-A4	Eq-Operator-Value T61 BETWEEN
 T62	Eq-Value 93 99	22 0/7
 T64	Eq-Temporal-Unit 100 105	weeks
-A5	Eq-Temporal-Unit-Value T64 week
 T65	Observation-Name 109 118	gestation
 T66	Eq-Operator 137 138	≥
-A6	Eq-Operator-Value T66 GTEQ
 T67	Eq-Value 138 140	18
 T68	Observation-Name 150 165	Cervical length
-A7	Observation-Type-Value T68 measurement
 T69	Eq-Operator 166 167	≤
-A8	Eq-Operator-Value T69 LTEQ
 T70	Eq-Unit 170 172	mm
 T71	Condition-Name 291 308	Uterine anomalies
 T72	Condition-Name 314 331	Cervical dilation
@@ -116,13 +119,10 @@ T74	Condition-Name 367 395	amniotic membranes prolapsed
 T75	Condition-Name 430 450	transfusion syndrome
 T76	Condition-Name 456 466	Stillbirth
 T77	Severity 470 475	major
-A9	Severity-Value T77 severe
 T78	Condition-Name 476 500	congenital abnormalities
 T80	Severity 526 532	Severe
-A10	Severity-Value T80 severe
 T81	Condition-Name 533 550	vaginal discharge
-T82	Severity 556 561	Acute
-A11	Severity-Value T82 severe
+T82	Acuteness 556 561	Acute
 T83	Condition-Name 562 571	vaginitis
 T84	Condition-Name 575 585	cervicitis
 T85	Condition-Name 599 607	bleeding
@@ -134,27 +134,27 @@ T90	Condition-Name 719 736	ruptured membrane
 T91	Condition-Name 755 771	chorioamnionitis
 T92	Procedure-Name 816 824	cervical
 T7	Eq-Comparison 83 105	16 0/7 to 22 0/7 weeks
-E7	Eq-Comparison:T7 Value:T59 Operator:T61 Value2:T62 Temporal-Unit:T64
 T36	Eq-Temporal-Unit 141 144	yrs
-A3	Eq-Temporal-Unit-Value T36 year
 T42	Eq-Value 167 169	28
 T15	Modifier 229 236	preterm
-E15	Modifier:T15 Modifies:E16
 T29	Modifier 515 520	fetus
-E29	Modifier:T29 Modifies:T78
 T31	Modifier 591 598	Vaginal
-E31	Modifier:T31 Modifies:T85
 T49	Modifier 690 699	Premature
-E36	Modifier:T49 Modifies:T89
 T44	And 706 710	with
-E42	And:T44 Arg:E43 Arg2:E46
 T45	Or 710 711	/
-E44	Or:T45 Arg:E42 Arg2:E45
 T58	Negation 711 718	without
-E45	Negation:T58 Negates:E46
 T60	Condition-Name 777 794	Cerclage in place
 T63	Modifier 825 833	cerclage
-E49	Modifier:T63 Modifies:T92
 T79	Assertion 798 804	unable
-E56	Assertion:T79 Asserted:E52
+A1	Assertion-Type-Value E47 possible
+A2	Life-Stage-And-Gender-Type T56 female
+A4	Eq-Operator-Value T61 BETWEEN
+A5	Eq-Temporal-Unit-Value T64 week
+A6	Eq-Operator-Value T66 GTEQ
+A7	Observation-Type-Value T68 measurement
+A8	Eq-Operator-Value T69 LTEQ
+A9	Severity-Value T77 severe
+A10	Severity-Value T80 severe
+A3	Eq-Temporal-Unit-Value T36 year
 A12	Assertion-Type-Value E56 hypothetical
+A13	Acuteness-Type-Value T82 acute

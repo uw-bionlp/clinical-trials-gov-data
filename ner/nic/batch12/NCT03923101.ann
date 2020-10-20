@@ -1,16 +1,16 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E2	Encounter:T8 Location:T7 Location2:T5 Location3:T6
+E4	Negation:T9 Negates:E3
 T1	Condition 29 40	Keratoconus
 T2	Condition-Name 29 40	Keratoconus
-E1	Condition:T1 Name:T2
 T3	Condition 203 214	Keratoconus
 T4	Condition-Name 203 214	Keratoconus
-E3	Condition:T3 Name:T4
 T5	Location 97 131	Saarland University Medical Center
-A1	Location-Value T5 hospital
 T6	Location 133 159	Homburg, Saarland, Germany
-A2	Location-Value T6 residence
 T7	Location 68 95	department of ophthalmology
-A3	Location-Value T7 clinic
 T8	Encounter 50 60	presenting
-E2	Encounter:T8 Location:T7 Location2:T5 Location3:T6
 T9	Negation 195 202	without
-E4	Negation:T9 Negates:E3
+A1	Location-Value T5 hospital
+A2	Location-Value T6 residence
+A3	Location-Value T7 clinic

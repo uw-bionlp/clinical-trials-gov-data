@@ -1,0 +1,208 @@
+T1	Condition 41 71	paroxysmal atrial fibrillation
+T2	Condition-Name 41 71	paroxysmal atrial fibrillation
+E1	Condition:T1 Name:T2
+T3	Condition 181 211	paroxysmal atrial fibrillation
+T4	Condition-Name 181 211	paroxysmal atrial fibrillation
+E3	Condition:T3 Name:T4
+T7	Procedure 93 111	ablation procedure
+T8	Procedure-Name 93 111	ablation procedure
+E7	Procedure:T7 Name:T8 Temporality:E2
+T9	Procedure 351 374	anticoagulation therapy
+T10	Procedure-Name 351 374	anticoagulation therapy
+E9	Procedure:T9 Name:T10
+T11	Procedure 768 791	radiofrequency ablation
+T12	Procedure-Name 768 791	radiofrequency ablation
+E11	Procedure:T11 Name:T12 Temporality:E39
+T13	Procedure 932 955	anticoagulation therapy
+T14	Procedure-Name 932 955	anticoagulation therapy
+E13	Procedure:T13 Name:T14
+T15	Procedure 1116 1136	mitral valvuloplasty
+T16	Procedure-Name 1116 1136	mitral valvuloplasty
+E15	Procedure:T15 Name:T16
+T17	Condition 394 413	cerebral infarction
+T18	Condition-Name 394 413	cerebral infarction
+E17	Condition:T17 Name:T18
+T19	Condition 509 528	Atrial fibrillation
+T20	Condition-Name 509 528	Atrial fibrillation
+E19	Condition:T19 Name:T20
+T21	Condition 796 815	atrial fibrillation
+T22	Condition-Name 796 815	atrial fibrillation
+E21	Condition:T21 Name:T22
+T23	Condition 974 993	cerebral infarction
+T24	Condition-Name 974 993	cerebral infarction
+E23	Condition:T23 Name:T24
+T25	Condition 1051 1070	atrial fibrillation
+T26	Condition-Name 1051 1070	atrial fibrillation
+E25	Condition:T25 Name:T26
+T27	Condition 665 681	renal impairment
+T28	Condition-Name 665 681	renal impairment
+E27	Condition:T27 Name:T28 Severity:T87
+T29	Procedure 825 840	cardiac surgery
+T30	Procedure-Name 825 840	cardiac surgery
+E29	Procedure:T29 Name:T30
+T31	Condition 1072 1087	mitral stenosis
+T32	Condition-Name 1072 1087	mitral stenosis
+E31	Condition:T31 Name:T32 Stage:E56
+T33	Condition 589 602	heart disease
+T34	Condition-Name 589 602	heart disease
+E33	Condition:T33 Name:T34 Stability:T86
+T35	Eq-Operator 116 117	≥
+A1	Eq-Operator-Value T35 GTEQ
+T36	Eq-Operator 124 125	≤
+A2	Eq-Operator-Value T36 LTEQ
+T37	Eq-Operator 166 167	<
+A3	Eq-Operator-Value T37 LT
+T38	Eq-Operator 1088 1089	>
+A4	Eq-Operator-Value T38 GT
+T39	Eq-Operator 1212 1213	<
+A5	Eq-Operator-Value T39 LT
+T40	Eq-Temporal-Unit 128 133	years
+A6	Eq-Temporal-Unit-Value T40 year
+T41	Age 137 140	age
+E34	Age:T41 Eq-Comparison:E36
+T42	Eq-Value 117 119	20
+T43	Eq-Value 125 127	80
+T44	Eq-Value 168 170	45
+T45	Eq-Value 1095 1096	2
+T46	Eq-Value 1214 1215	1
+T47	Eq-Comparison 116 119	≥20
+E35	Eq-Comparison:T47 Operator:T35 Value:T42
+T48	Eq-Comparison 124 133	≤80 years
+E36	Eq-Comparison:T48 Operator:T36 Temporal-Unit:T40 Value:T43
+T49	Eq-Comparison 166 172	< 45mm
+E37	Eq-Comparison:T49 Operator:T37 Value:T44 Unit:T64
+T50	Eq-Comparison 1212 1220	< 1 year
+E38	Eq-Comparison:T50 Operator:T39 Value:T46 Temporal-Unit:T108
+T51	Eq-Comparison 752 764	past history
+E39	Eq-Comparison:T51 Temporal-Period:T52
+T52	Eq-Temporal-Period 752 764	past history
+A7	Eq-Temporal-Period-Value T52 past
+T55	Eq-Comparison 863 869	active
+E41	Eq-Comparison:T55 Temporal-Period:T56
+T56	Eq-Temporal-Period 863 869	active
+A9	Eq-Temporal-Period-Value T56 present
+T59	Eq-Comparison 79 88	scheduled
+E2	Eq-Comparison:T59 Temporal-Period:T60
+T60	Eq-Temporal-Period 79 88	scheduled
+A11	Eq-Temporal-Period-Value T60 future
+T5	And 72 75	who
+E4	And:T5 Arg:E1 Arg2:E7
+T6	And 120 123	and
+E5	And:T6 Arg:E35 Arg2:E36
+T61	And 112 115	and
+E6	And:T61 Arg:E7 Arg2:E34
+T62	Observation 149 165	Left atrium size
+E8	Observation:T62 Name:T63 Eq-Comparison:E37
+T63	Observation-Name 149 165	Left atrium size
+A12	Observation-Type-Value T63 measurement
+T64	Eq-Unit 170 172	mm
+T65	Drug 238 257	antiarrhythmic drug
+E10	Drug:T65 Name:T66
+T66	Drug-Name 238 257	antiarrhythmic drug
+T67	Procedure 258 267	treatment
+E12	Procedure:T67 
+R1	Using Arg1:E12 Arg2:E10	
+T68	Temporal-Connection 231 237	during
+E14	Temporal-Connection:T68 Arg:E3 Arg2:E12
+A13	Temporal-Connection-Type-Value E14 during
+T69	Drug 293 312	antiarrhythmic drug
+E16	Drug:T69 Name:T70
+T70	Drug-Name 293 312	antiarrhythmic drug
+T71	Negation 274 277	not
+E18	Negation:T71 Negates:E16
+T72	Or 268 270	or
+E20	Or:T72 Arg:E12 Arg2:E18
+T73	Indication 337 346	indicated
+E22	Indication:T73 Indication-For:E9
+T75	Assertion 380 390	prevention
+E26	Assertion:T75 Asserted:E17
+A14	Assertion-Type-Value E26 hypothetical
+R2	Treatment-For Arg1:E9 Arg2:E17	
+T74	Condition 481 500	atrial fibrillation
+E24	Condition:T74 Name:T76
+T76	Condition-Name 481 500	atrial fibrillation
+T77	Modifier 471 480	permanent
+E28	Modifier:T77 Modifies:T76
+T78	Modifier 457 467	persistent
+E30	Modifier:T78 Modifies:T76
+T79	Or 468 470	or
+E32	Or:T79 Arg:E30 Arg2:E28
+T80	Condition 552 572	cardiac malformation
+E43	Condition:T80 Name:T81 Severity:T82
+T81	Condition-Name 552 572	cardiac malformation
+T82	Severity 545 551	severe
+A15	Severity-Value T82 severe
+R3	Caused-By Arg1:E19 Arg2:E43	
+T83	Modifier 578 588	structural
+E44	Modifier:T83 Modifies:T34
+T86	Stability 627 635	affected
+A16	Stability-Value T86 change
+T84	Modifier 611 626	hemodynamically
+E45	Modifier:T84 Modifies:T34
+T85	Or 573 575	or
+E46	Or:T85 Arg:E43 Arg2:E33
+T87	Severity 658 664	severe
+A17	Severity-Value T87 severe
+T88	Procedure 685 695	CT imaging
+E48	Procedure:T88 Name:T89
+T89	Procedure-Name 685 695	CT imaging
+T57	Procedure 713 727	contrast media
+E42	Procedure:T57 Name:T58
+T58	Procedure-Name 713 727	contrast media
+R4	Using Arg1:E48 Arg2:E42	
+T90	Or 682 684	or
+E47	Or:T90 Arg:E27 Arg2:E48
+R5	Treatment-For Arg1:E11 Arg2:E21	
+T53	Or 816 818	or
+E40	Or:T53 Arg:E21 Arg2:E29
+T54	Other 819 824	other
+E49	Other:T54 Is-Other:E29
+T91	Condition 870 887	internal bleeding
+E50	Condition:T91 Name:T92 Temporality:E41
+T92	Condition-Name 870 887	internal bleeding
+T93	Contraindication 910 927	contraindications
+E51	Contraindication:T93 Contraindicates:E13
+T94	Assertion 960 970	prevention
+E52	Assertion:T94 Asserted:E23
+A8	Assertion-Type-Value E52 hypothetical
+R6	Treatment-For Arg1:E13 Arg2:E23	
+T95	Drug 999 1019	antiarrhythmic drugs
+E53	Drug:T95 Name:T96
+T96	Drug-Name 999 1019	antiarrhythmic drugs
+T97	And 995 998	and
+E54	And:T97 Arg:E13 Arg2:E53
+T98	Modifier 1042 1050	valvular
+E55	Modifier:T98 Modifies:T26
+T99	Eq-Comparison 1088 1096	>grade 2
+E56	Eq-Comparison:T99 Operator:T38 Unit:T100 Value:T45
+T100	Eq-Unit 1089 1094	grade
+R7	Example-Of Arg1:E31 Arg2:E25	
+T101	Procedure 1098 1114	mechanical valve
+E57	Procedure:T101 Name:T102
+T102	Procedure-Name 1098 1114	mechanical valve
+R8	Example-Of Arg1:E57 Arg2:E25	
+R9	Example-Of Arg1:E15 Arg2:E25	
+T103	Condition 1169 1185	comorbid disease
+E58	Condition:T103 Name:T104 Severity:T105
+T104	Condition-Name 1169 1185	comorbid disease
+T105	Severity 1162 1168	severe
+A10	Severity-Value T105 severe
+T106	Observation 1194 1211	Expected survival
+E59	Observation:T106 Name:T107 Eq-Comparison:E38
+T107	Observation-Name 1194 1211	Expected survival
+T108	Eq-Temporal-Unit 1216 1220	year
+A18	Eq-Temporal-Unit-Value T108 year
+T109	Condition 1230 1242	Drug addicts
+E60	Condition:T109 Name:T110
+T110	Condition-Name 1230 1242	Drug addicts
+T111	Condition 1246 1256	alcoholics
+E61	Condition:T111 Name:T112
+T112	Condition-Name 1246 1256	alcoholics
+T113	Or 1243 1245	or
+E62	Or:T113 Arg:E60 Arg2:E61
+T114	Condition 1309 1320	illiterates
+E63	Condition:T114 Name:T115
+T115	Condition-Name 1309 1320	illiterates
+T116	Ethnicity 1322 1332	foreigners
+T117	Study 1468 1473	study
+E64	Study:T117 

@@ -1,0 +1,45 @@
+T1	Procedure 127 146	gallbladder surgery
+T2	Procedure-Name 127 146	gallbladder surgery
+E1	Procedure:T1 Name:T2 Location:T18 Provider:E9
+T3	Language 403 410	English
+T4	Life-Stage-And-Gender 319 325	Adults
+A1	Life-Stage-And-Gender-Type T4 adult
+T5	Eq-Operator 288 297	less than
+A2	Eq-Operator-Value T5 LT
+T6	Eq-Temporal-Unit 301 306	years
+A3	Eq-Temporal-Unit-Value T6 year
+T7	Age 310 313	age
+E2	Age:T7 Eq-Comparison:E3
+T8	Eq-Value 298 300	18
+T9	Eq-Comparison 288 306	less than 18 years
+E3	Eq-Comparison:T9 Operator:T5 Temporal-Unit:T6 Value:T8
+T10	Procedure 77 104	laparoscopic ventral hernia
+E4	Procedure:T10 Name:T11 Temporality:E6
+T11	Procedure-Name 77 104	laparoscopic ventral hernia
+T12	Modifier 68 76	same-day
+E5	Modifier:T12 Modifies:T11
+T13	Eq-Comparison 55 67	will undergo
+E6	Eq-Comparison:T13 Temporal-Period:T14
+T14	Eq-Temporal-Period 55 67	will undergo
+A4	Eq-Temporal-Period-Value T14 future
+T15	Procedure 106 121	inguinal hernia
+E7	Procedure:T15 Name:T16
+T16	Procedure-Name 106 121	inguinal hernia
+T17	Or 123 126	and
+E8	Or:T17 Arg:E7 Arg2:E1
+T18	Location 150 180	Howard County General Hospital
+A5	Location-Value T18 hospital
+T19	Provider 190 214	general surgery practice
+E9	Provider:T19 Type:T20
+T20	Provider-Type 190 214	general surgery practice
+T21	Condition 364 372	Pregnant
+E10	Condition:T21 Name:T22
+T22	Condition-Name 364 372	Pregnant
+T23	Life-Stage-And-Gender 373 378	women
+A6	Life-Stage-And-Gender-Type T23 female
+R1	If-Then Arg1:T23 Arg2:E10	
+T24	Observation 384 393	Prisoners
+E11	Observation:T24 Name:T25
+T25	Observation-Name 384 393	Prisoners
+T26	Negation 399 402	Non
+E12	Negation:T26 Negates:T3

@@ -1,85 +1,85 @@
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6 Stability:T1 Duration:E1
+E8	Procedure:T8 Name:T9
+E10	Procedure:T10 Name:T11
+E1	Eq-Comparison:T2 Operator:T21 Temporal-Unit:T18 Value:T19
+E2	Coreference:T7 Refers-To:E5 Severity:T22
+E6	Indication:T26 Indication-For:E10
+E9	Or:T27 Arg:E10 Arg2:E8
+E11	Condition:T12 Name:T13
+E12	Condition:T14 Name:T15
+E13	Condition:T16 Name:T17
+E14	Or:T28 Arg:E12 Arg2:E13
+E15	Condition:T29 Name:T30
+E16	Drug:T31
+E17	Modifier:T32 Modifies:T30
+E18	Modifier:T33 Modifies:T30
+E19	Or:T34 Arg:E17 Arg2:E16
+E20	Study:T35
+E21	Study:T36
+E22	Or:T37 Arg:E20 Arg2:E21
+E23	Temporal-Connection:T38 Arg:E15 Arg2:E20
+E24	Condition:T39 Name:T40 Temporality:E25 Temporality2:E27
+E25	Eq-Comparison:T41 Temporal-Period:T42
+E26	Drug:T20 Name:T43 Temporality:E28
+E27	Eq-Comparison:T44 Temporal-Period:T45
+E28	Eq-Comparison:T46 Temporal-Period:T47
+E7	Eq-Comparison:T24 Value:T23 Value2:T22 Operator:T48
 T3	Condition 164 180	plaque psoriasis
 T4	Condition-Name 164 180	plaque psoriasis
-E3	Condition:T3 Name:T4
 T5	Condition 192 208	plaque psoriasis
 T6	Condition-Name 192 208	plaque psoriasis
-E5	Condition:T5 Name:T6 Stability:T1 Duration:E1
 T8	Procedure 297 313	systemic therapy
 T9	Procedure-Name 297 313	systemic therapy
-E8	Procedure:T8 Name:T9
 T10	Procedure 281 293	phototherapy
 T11	Procedure-Name 281 293	phototherapy
-E10	Procedure:T10 Name:T11
 T18	Eq-Temporal-Unit 224 230	months
-A1	Eq-Temporal-Unit-Value T18 month
 T19	Eq-Value 222 223	6
 T1	Stability 185 191	Stable
-A2	Stability-Value T1 stable
 T2	Eq-Comparison 213 230	at least 6 months
-E1	Eq-Comparison:T2 Operator:T21 Temporal-Unit:T18 Value:T19
 T21	Eq-Operator 213 221	at least
-A3	Eq-Operator-Value T21 GTEQ
 T7	Coreference 254 261	disease
-E2	Coreference:T7 Refers-To:E5 Severity:T22
 T22	Severity 247 253	severe
-A4	Severity-Value T22 severe
 T23	Severity 235 243	Moderate
-A5	Severity-Value T23 severe
 T26	Indication 267 276	Candidate
-E6	Indication:T26 Indication-For:E10
 T27	Or 294 296	or
-E9	Or:T27 Arg:E10 Arg2:E8
 T12	Condition 390 409	psoriatic arthritis
-E11	Condition:T12 Name:T13
 T13	Condition-Name 390 409	psoriatic arthritis
 T14	Condition 411 434	erythrodermic psoriasis
-E12	Condition:T14 Name:T15
 T15	Condition-Name 411 434	erythrodermic psoriasis
 T16	Condition 439 469	generalized pustular psoriasis
-E13	Condition:T16 Name:T17
 T17	Condition-Name 439 469	generalized pustular psoriasis
 T28	Or 436 438	or
-E14	Or:T28 Arg:E12 Arg2:E13
 T29	Condition 529 538	psoriasis
-E15	Condition:T29 Name:T30
 T30	Condition-Name 529 538	psoriasis
 T31	Drug 516 520	drug
-E16	Drug:T31 
 T32	Modifier 504 511	inverse
-E17	Modifier:T32 Modifies:T30
 T33	Modifier 495 502	Guttate
-E18	Modifier:T33 Modifies:T30
 T34	Or 513 515	or
-E19	Or:T34 Arg:E17 Arg2:E16
 T35	Study 542 551	Screening
-E20	Study:T35 
 T36	Study 555 563	Baseline
-E21	Study:T36 
 T37	Or 552 554	or
-E22	Or:T37 Arg:E20 Arg2:E21
 T38	Temporal-Connection 539 541	at
-E23	Temporal-Connection:T38 Arg:E15 Arg2:E20
-A6	Temporal-Connection-Type-Value E23 during
 T39	Condition 587 596	infection
-E24	Condition:T39 Name:T40 Temporality:E25 Temporality2:E27
 T40	Condition-Name 587 596	infection
 T41	Eq-Comparison 580 586	recent
-E25	Eq-Comparison:T41 Temporal-Period:T42
 T42	Eq-Temporal-Period 580 586	recent
-A7	Eq-Temporal-Period-Value T42 recent
 T20	Drug 620 630	BMS-986165
-E26	Drug:T20 Name:T43 Temporality:E28
 T43	Drug-Name 620 630	BMS-986165
 T44	Eq-Comparison 569 576	History
-E27	Eq-Comparison:T44 Temporal-Period:T45
 T45	Eq-Temporal-Period 569 576	History
-A8	Eq-Temporal-Period-Value T45 past
 T46	Eq-Comparison 602 607	Prior
-E28	Eq-Comparison:T46 Temporal-Period:T47
 T47	Eq-Temporal-Period 602 607	Prior
-A9	Eq-Temporal-Period-Value T47 past
 T24	Eq-Comparison 235 253	Moderate to severe
-E7	Eq-Comparison:T24 Value:T23 Value2:T22 Operator:T48
 T48	Eq-Operator 244 246	to
+A1	Eq-Temporal-Unit-Value T18 month
+A2	Stability-Value T1 stable
+A3	Eq-Operator-Value T21 GTEQ
+A4	Severity-Value T22 severe
+A5	Severity-Value T23 severe
+A6	Temporal-Connection-Type-Value E23 during
+A7	Eq-Temporal-Period-Value T42 recent
+A8	Eq-Temporal-Period-Value T45 past
+A9	Eq-Temporal-Period-Value T47 past
 A10	Eq-Operator-Value T48 BETWEEN
-R1	Caused-By Arg1:E15 Arg2:E16	
+R1	Caused-By Arg1:E15 Arg2:E16

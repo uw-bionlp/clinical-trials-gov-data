@@ -1,0 +1,142 @@
+T1	Encounter 25 36	outpatients
+E1	Encounter:T1 
+T2	Eq-Comparison 37 49	2 to 6 years
+E2	Eq-Comparison:T2 Value:T41 Operator:T42 Value:T43 Temporal-Unit:T44
+T3	Age 53 56	age
+E3	Age:T3 Eq-Comparison:E2
+T4	Or 69 72	and
+E4	Or:T4 Arg:T45 Arg2:T46
+T5	And 81 84	who
+E5	And:T5 Arg:T46 Arg2:E6
+T6	Condition 100 107	healthy
+E6	Condition:T6 Name:T47
+T7	Condition 127 151	autism spectrum disorder
+E7	Condition:T7 Name:T48
+T9	Assertion 333 338	could
+E9	Assertion:T9 Asserted:E40
+A1	Assertion-Type-Value E9 hypothetical
+T10	Assertion 380 385	could
+E10	Assertion:T10 
+A2	Assertion-Type-Value E10 hypothetical
+T11	Assertion 468 478	ability of
+E11	Assertion:T11 Asserted:E12
+A3	Assertion-Type-Value E11 hypothetical
+T14	Drug 536 547	medications
+E14	Drug:T14 Stability:T50 Duration:E15 Duration2:E16
+T15	Eq-Comparison 552 568	at least 2 weeks
+E15	Eq-Comparison:T15 Operator:T51 Value:T52 Temporal-Unit:T53
+T16	Eq-Comparison 570 577	4 weeks
+E16	Eq-Comparison:T16 Value:T54 Temporal-Unit:T55
+T17	Eq-Comparison 589 593	took
+E17	Eq-Comparison:T17 Temporal-Period:T49
+T18	Drug 594 604	fluoxetine
+E18	Drug:T18 Name:T56 Temporality:E17
+T19	Negation 612 614	no
+E19	Negation:T19 Negates:E21
+T20	Eq-Comparison 615 622	planned
+E20	Eq-Comparison:T20 Temporal-Period:T57
+T21	Procedure 634 660	psychosocial interventions
+E21	Procedure:T21 Name:T74 Stability:T58 Temporality:E20
+T22	Temporal-Connection 661 667	during
+E22	Temporal-Connection:T22 Arg:E21 Arg2:E24
+A5	Temporal-Connection-Type-Value E22 during
+T23	Modifier 672 682	open-label
+E23	Modifier:T23 Modifies:E24
+T24	Study 683 688	trial
+E24	Study:T24 
+T25	Condition 734 747	schizophrenia
+E25	Condition:T25 Name:T60
+T26	Condition 749 773	schizoaffective disorder
+E26	Condition:T26 Name:T61
+T27	Or 775 777	or
+E27	Or:T27 Arg:E26 Arg2:E28
+T28	Condition 778 796	psychotic disorder
+E28	Condition:T28 Name:T62
+T29	Eq-Comparison 827 832	prior
+E29	Eq-Comparison:T29 Temporal-Period:T63
+T30	Drug 851 863	Esomeprazole
+E30	Drug:T30 Name:T64
+T31	Eq-Comparison 870 876	active
+E31	Eq-Comparison:T31 Temporal-Period:T65
+T32	Condition 877 893	medical problems
+E32	Condition:T32 Temporality:E31
+T33	Condition 911 919	seizures
+E33	Condition:T33 Name:T66 Stability:T75
+T34	Or 921 923	or
+E34	Or:T34 Arg:E33 Arg2:E35
+T35	Condition 936 952	physical illness
+E35	Condition:T35 Name:T68 Severity:T67
+T36	Modifier 968 973	liver
+E36	Modifier:T36 Modifies:T70
+T37	Or 974 976	or
+E37	Or:T37 Arg:E36 Arg2:E38
+T38	Modifier 977 982	renal
+E38	Modifier:T38 Modifies:T70
+T39	Condition 983 992	pathology
+E39	Condition:T39 Name:T70 Severity:T69
+T40	Encounter-Type 25 36	outpatients
+A6	Encounter-Type-Value T40 outpatient
+T41	Eq-Value 37 38	2
+T42	Eq-Operator 39 41	to
+A7	Eq-Operator-Value T42 BETWEEN
+T43	Eq-Value 42 43	6
+T44	Eq-Temporal-Unit 44 49	years
+A8	Eq-Temporal-Unit-Value T44 year
+T45	Life-Stage-And-Gender 63 68	males
+A9	Life-Stage-And-Gender-Type T45 male
+T46	Life-Stage-And-Gender 73 80	females
+A10	Life-Stage-And-Gender-Type T46 female
+T47	Condition-Name 100 107	healthy
+T48	Condition-Name 127 151	autism spectrum disorder
+T50	Stability 517 523	stable
+A11	Stability-Value T50 stable
+T51	Eq-Operator 552 560	at least
+A12	Eq-Operator-Value T51 GTEQ
+T52	Eq-Value 561 562	2
+T53	Eq-Temporal-Unit 563 568	weeks
+A13	Eq-Temporal-Unit-Value T53 week
+T54	Eq-Value 570 571	4
+T55	Eq-Temporal-Unit 572 577	weeks
+A14	Eq-Temporal-Unit-Value T55 week
+T56	Drug-Name 594 604	fluoxetine
+T57	Eq-Temporal-Period 615 622	planned
+A15	Eq-Temporal-Period-Value T57 future
+T58	Stability 623 630	changes
+A16	Stability-Value T58 change
+T60	Condition-Name 734 747	schizophrenia
+T61	Condition-Name 749 773	schizoaffective disorder
+T62	Condition-Name 778 796	psychotic disorder
+T63	Eq-Temporal-Period 827 832	prior
+A17	Eq-Temporal-Period-Value T63 past
+T64	Drug-Name 851 863	Esomeprazole
+T65	Eq-Temporal-Period 870 876	active
+A18	Eq-Temporal-Period-Value T65 present
+T66	Condition-Name 911 919	seizures
+T67	Severity 924 935	significant
+A19	Severity-Value T67 severe
+T68	Condition-Name 936 952	physical illness
+T69	Severity 960 967	serious
+A20	Severity-Value T69 severe
+T70	Condition-Name 983 992	pathology
+T8	Provider 315 328	care provider
+E8	Provider:T8 
+T71	Encounter 372 378	visits
+E40	Encounter:T71 Type:T73 Location:T72 Provider:E8
+T72	Location 365 371	clinic
+A21	Location-Value T72 clinic
+T73	Encounter-Type 372 378	visits
+A22	Encounter-Type-Value T73 outpatient
+T12	Drug 502 510	compound
+E12	Drug:T12 
+T13	Modifier 524 535	concomitant
+E13	Modifier:T13 Modifies:E14
+T49	Eq-Temporal-Period 589 593	took
+A4	Eq-Temporal-Period-Value T49 past
+R1	If-Then Arg1:E18 Arg2:E14	
+T74	Procedure-Name 634 660	psychosocial interventions
+T59	Study 842 847	trial
+E41	Study:T59 Study-Of:E30 Temporality:E29
+T75	Stability 902 910	unstable
+A23	Stability-Value T75 change
+R2	Example-Of Arg1:E33 Arg2:E32	
+R3	Example-Of Arg1:E39 Arg2:E35	

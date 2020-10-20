@@ -1,0 +1,58 @@
+T1	Eq-Comparison 33 42	Receiving
+E1	Eq-Comparison:T1 Temporal-Period:T16
+T2	Age 114 118	Ages
+E2	Age:T2 Eq-Comparison:E3
+T3	Eq-Comparison 119 130	40-69 years
+E3	Eq-Comparison:T3 Value:T19 Operator:T20 Value:T21 Temporal-Unit:T22
+T5	Observation 159 174	life expectancy
+E5	Observation:T5 Name:T23 Eq-Comparison:E6
+T6	Eq-Comparison 178 195	at least 10 years
+E6	Eq-Comparison:T6 Operator:T24 Value:T25 Temporal-Unit:T26
+T7	Eq-Comparison 238 245	history
+E7	Eq-Comparison:T7 Temporal-Period:T27
+T8	Modifier 249 257	prostate
+E8	Modifier:T8 Modifies:T28
+T9	Condition 258 264	cancer
+E9	Condition:T9 Name:T28 Temporality:E7
+T10	Condition 293 313	Cognitive impairment
+E10	Condition:T10 Name:T29
+T11	Assertion 319 324	would
+E11	Assertion:T11 Asserted:T30
+A1	Assertion-Type-Value E11 hypothetical
+T12	Study 361 366	study
+E12	Study:T12 Stability:T30
+T13	Negation 372 378	Unable
+E13	Negation:T13 Negates:E4
+T14	Assertion 372 378	Unable
+E14	Assertion:T14 Asserted:E13
+A2	Assertion-Type-Value E14 hypothetical
+T16	Eq-Temporal-Period 33 42	Receiving
+A3	Eq-Temporal-Period-Value T16 present
+T17	Ethnicity 87 103	African American
+T18	Life-Stage-And-Gender 104 108	male
+A4	Life-Stage-And-Gender-Type T18 male
+T19	Eq-Value 119 121	40
+T20	Eq-Operator 121 122	-
+A5	Eq-Operator-Value T20 BETWEEN
+T21	Eq-Value 122 124	69
+T22	Eq-Temporal-Unit 125 130	years
+A6	Eq-Temporal-Unit-Value T22 year
+T23	Observation-Name 159 174	life expectancy
+T24	Eq-Operator 178 186	at least
+A7	Eq-Operator-Value T24 GTEQ
+T25	Eq-Value 187 189	10
+T26	Eq-Temporal-Unit 190 195	years
+A8	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Temporal-Period 238 245	history
+A9	Eq-Temporal-Period-Value T27 past
+T28	Condition-Name 258 264	cancer
+T29	Condition-Name 293 313	Cognitive impairment
+T30	Stability 325 334	interfere
+A10	Stability-Value T30 change
+T33	Procedure 43 47	care
+E16	Procedure:T33 Location:T34 Temporality:E1
+T34	Location 55 69	clinical sites
+A12	Location-Value T34 clinic
+R1	Caused-By Arg1:T30 Arg2:E10	
+T4	Study 409 421	intervention
+E4	Study:T4 

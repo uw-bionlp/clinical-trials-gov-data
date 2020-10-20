@@ -1,71 +1,71 @@
+E1	Procedure:T1 Name:T2 Temporality:E7
+E2	Eq-Comparison:T6 Operator:T7 Temporal-Unit:T3 Value:T4
+E3	Age:T8 Eq-Comparison:E2
+E4	Modifier:T9 Modifies:T2
+E5	Modifier:T10 Modifies:T2
+E6	Or:T11 Arg:E5 Arg2:E4
+E7	Eq-Comparison:T12 Temporal-Period:T13
+E8	Encounter:T14 Type:T15 Duration:E11
+E9	Procedure:T16 Name:T33
+E10	Temporal-Connection:T17 Arg:E11 Arg2:E9
+E11	Eq-Comparison:T18 Operator:T19 Temporal-Unit:T20 Value:T5
+E12	Condition:T21 Name:T22 Temporality:E21
+E13	Modifier:T23 Modifies:T22
+E14	Modifier:T24 Modifies:T22
+E15	Or:T25 Arg:E14 Arg2:E13
+E16	Condition:T26 Name:T27 Temporality:E20
+E17	Procedure:T28 Name:T32
+E18	Encounter:T29 Type:T30 Location:T38
+E19	Temporal-Connection:T31 Arg:E18 Arg2:E17
+E20	Eq-Comparison:T34 Temporal-Period:T35
+E21	Eq-Comparison:T36 Temporal-Period:T37
 T1	Procedure 79 89	anesthesia
 T2	Procedure-Name 79 89	anesthesia
-E1	Procedure:T1 Name:T2 Temporality:E7
 T3	Eq-Temporal-Unit 28 33	years
-A1	Eq-Temporal-Unit-Value T3 year
 T4	Eq-Value 25 27	18
 T5	Eq-Value 121 123	24
 T6	Eq-Comparison 25 42	18 years or older
-E2	Eq-Comparison:T6 Operator:T7 Temporal-Unit:T3 Value:T4
 T7	Eq-Operator 34 42	or older
-A2	Eq-Operator-Value T7 GTEQ
 T8	Age 37 42	older
-E3	Age:T8 Eq-Comparison:E2
 T9	Modifier 70 78	regional
-E4	Modifier:T9 Modifies:T2
 T10	Modifier 59 66	general
-E5	Modifier:T10 Modifies:T2
 T11	Or 67 69	or
-E6	Or:T11 Arg:E5 Arg2:E4
 T12	Eq-Comparison 48 58	Undergoing
-E7	Eq-Comparison:T12 Temporal-Period:T13
 T13	Eq-Temporal-Period 48 58	Undergoing
-A3	Eq-Temporal-Period-Value T13 present
 T14	Encounter 95 107	Hospitalized
-E8	Encounter:T14 Type:T15 Duration:E11
 T15	Encounter-Type 95 107	Hospitalized
-A4	Encounter-Type-Value T15 inpatient
 T16	Procedure 136 143	surgery
-E9	Procedure:T16 Name:T33
 T17	Temporal-Connection 130 135	after
-E10	Temporal-Connection:T17 Arg:E11 Arg2:E9
-A5	Temporal-Connection-Type-Value E10 after
 T18	Eq-Comparison 112 129	at least 24 hours
-E11	Eq-Comparison:T18 Operator:T19 Temporal-Unit:T20 Value:T5
 T19	Eq-Operator 112 120	at least
-A6	Eq-Operator-Value T19 GTEQ
 T20	Eq-Temporal-Unit 124 129	hours
-A7	Eq-Temporal-Unit-Value T20 hour
 T21	Condition 280 289	pathology
-E12	Condition:T21 Name:T22 Temporality:E21
 T22	Condition-Name 280 289	pathology
 T23	Modifier 269 279	neurologic
-E13	Modifier:T23 Modifies:T22
 T24	Modifier 254 265	psychiatric
-E14	Modifier:T24 Modifies:T22
 T25	Or 266 268	or
-E15	Or:T25 Arg:E14 Arg2:E13
 T26	Condition 308 323	substance abuse
-E16	Condition:T26 Name:T27 Temporality:E20
 T27	Condition-Name 308 323	substance abuse
 T28	Procedure 351 358	surgery
-E17	Procedure:T28 Name:T32
 T29	Encounter 329 337	Admitted
-E18	Encounter:T29 Type:T30 Location:T38
 T30	Encounter-Type 329 337	Admitted
-A8	Encounter-Type-Value T30 inpatient
 T31	Temporal-Connection 345 350	after
-E19	Temporal-Connection:T31 Arg:E18 Arg2:E17
-A9	Temporal-Connection-Type-Value E19 after
 T32	Procedure-Name 351 358	surgery
 T33	Procedure-Name 136 143	surgery
 T34	Eq-Comparison 297 304	history
-E20	Eq-Comparison:T34 Temporal-Period:T35
 T35	Eq-Temporal-Period 297 304	history
-A10	Eq-Temporal-Period-Value T35 past
 T36	Eq-Comparison 232 240	Existing
-E21	Eq-Comparison:T36 Temporal-Period:T37
 T37	Eq-Temporal-Period 232 240	Existing
-A11	Eq-Temporal-Period-Value T37 present
 T38	Location 341 344	ICU
+A1	Eq-Temporal-Unit-Value T3 year
+A2	Eq-Operator-Value T7 GTEQ
+A3	Eq-Temporal-Period-Value T13 present
+A4	Encounter-Type-Value T15 inpatient
+A5	Temporal-Connection-Type-Value E10 after
+A6	Eq-Operator-Value T19 GTEQ
+A7	Eq-Temporal-Unit-Value T20 hour
+A8	Encounter-Type-Value T30 inpatient
+A9	Temporal-Connection-Type-Value E19 after
+A10	Eq-Temporal-Period-Value T35 past
+A11	Eq-Temporal-Period-Value T37 present
 A12	Location-Value T38 unit

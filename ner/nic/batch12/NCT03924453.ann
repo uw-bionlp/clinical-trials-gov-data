@@ -1,65 +1,65 @@
+E2	Condition:T2 Name:T3
+E4	Condition:T4 Name:T5
+E6	Procedure:T6 Name:T7 Temporality:E9
+E7	Age:T11 Eq-Comparison:E10
+E9	Eq-Comparison:T17 Operator:T9 Temporal-Unit:T10 Value:T16
+E10	Eq-Comparison:T18 Operator:T13 Value:T14 Value2:T15
+E1	Condition:T19 Name:T20 Temporality:E5
+E3	Or:T21 Arg:E1 Arg2:E2
+E5	Eq-Comparison:T22 Temporal-Period:T23
+E11	Negation:T24 Negates:E1
+E8	Negation:T12 Negates:E4
+E12	Negation:T25 Negates:E6
+E13	Condition:T26 Name:T27 Temporality:E15
+E14	Assertion:T28 Asserted:E13
+E15	Eq-Comparison:T29 Temporal-Period:T30
+E16	Condition:T32 Name:T33
+E17	Condition:T34 Name:T35
+E18	Eq-Comparison:T36 Temporal-Period:T37
 T1	Life-Stage-And-Gender 25 31	Female
-A1	Life-Stage-And-Gender-Type T1 female
 T2	Condition 75 82	nursing
 T3	Condition-Name 75 82	nursing
-E2	Condition:T2 Name:T3
 T4	Condition 177 188	sub fertile
 T5	Condition-Name 177 188	sub fertile
-E4	Condition:T4 Name:T5
 T6	Procedure 269 291	hormonal birth control
 T7	Procedure-Name 269 291	hormonal birth control
-E6	Procedure:T6 Name:T7 Temporality:E9
 T8	Life-Stage-And-Gender 490 494	Male
-A2	Life-Stage-And-Gender-Type T8 male
 T9	Eq-Operator 295 303	the past
-A3	Eq-Operator-Value T9 LTEQ
 T10	Eq-Temporal-Unit 306 312	months
-A4	Eq-Temporal-Unit-Value T10 month
 T11	Age 100 104	Aged
-E7	Age:T11 Eq-Comparison:E10
 T13	Eq-Operator 107 108	-
-A5	Eq-Operator-Value T13 BETWEEN
 T14	Eq-Value 105 107	21
 T15	Eq-Value 108 110	45
 T16	Eq-Value 304 305	2
 T17	Eq-Comparison 295 312	the past 2 months
-E9	Eq-Comparison:T17 Operator:T9 Temporal-Unit:T10 Value:T16
 T18	Eq-Comparison 105 110	21-45
-E10	Eq-Comparison:T18 Operator:T13 Value:T14 Value2:T15
 T19	Condition 63 71	pregnant
-E1	Condition:T19 Name:T20 Temporality:E5
 T20	Condition-Name 63 71	pregnant
 T21	Or 72 74	or
-E3	Or:T21 Arg:E1 Arg2:E2
 T22	Eq-Comparison 53 62	currently
-E5	Eq-Comparison:T22 Temporal-Period:T23
 T23	Eq-Temporal-Period 53 62	currently
-A6	Eq-Temporal-Period-Value T23 present
 T24	Negation 49 52	Not
-E11	Negation:T24 Negates:E1
 T12	Negation 157 160	Not
-E8	Negation:T12 Negates:E4
 T25	Negation 243 246	Not
-E12	Negation:T25 Negates:E6
 T26	Condition 350 358	conceive
-E13	Condition:T26 Name:T27 Temporality:E15
 T27	Condition-Name 350 358	conceive
 T28	Assertion 340 349	trying to
-E14	Assertion:T28 Asserted:E13
-A7	Assertion-Type-Value E14 intention
 T29	Eq-Comparison 330 339	Currently
-E15	Eq-Comparison:T29 Temporal-Period:T30
 T30	Eq-Temporal-Period 330 339	Currently
-A8	Eq-Temporal-Period-Value T30 present
 T31	Location 413 415	US
-A9	Location-Value T31 residence
 T32	Condition 500 508	Pregnant
-E16	Condition:T32 Name:T33
 T33	Condition-Name 500 508	Pregnant
 T34	Condition 514 521	Nursing
-E17	Condition:T34 Name:T35
 T35	Condition-Name 514 521	Nursing
 T36	Eq-Comparison 389 398	Currently
-E18	Eq-Comparison:T36 Temporal-Period:T37
 T37	Eq-Temporal-Period 389 398	Currently
+A1	Life-Stage-And-Gender-Type T1 female
+A2	Life-Stage-And-Gender-Type T8 male
+A3	Eq-Operator-Value T9 LTEQ
+A4	Eq-Temporal-Unit-Value T10 month
+A5	Eq-Operator-Value T13 BETWEEN
+A6	Eq-Temporal-Period-Value T23 present
+A7	Assertion-Type-Value E14 intention
+A8	Eq-Temporal-Period-Value T30 present
+A9	Location-Value T31 residence
 A10	Eq-Temporal-Period-Value T37 present

@@ -1,0 +1,172 @@
+T1	Condition 39 51	hypertension
+E1	Condition:T1 Name:T40
+T2	And 52 55	and
+E2	And:T2 Arg:E1 Arg2:E4
+T3	Eq-Comparison 56 62	taking
+E3	Eq-Comparison:T3 Temporal-Period:T41
+T4	Drug 63 85	antihypertensive drugs
+E4	Drug:T4 Name:T42 Temporality:E3 Duration:E6
+T6	Eq-Comparison 86 102	more than 1 year
+E6	Eq-Comparison:T6 Operator:T43 Value:T44 Temporal-Unit:T45
+T7	Condition 138 150	hypertension
+E7	Condition:T7 Name:T46
+T8	Condition 156 168	Hypertensive
+E8	Condition:T8 Name:T47
+T9	Encounter 169 178	emergency
+E9	Encounter:T9 
+T10	Or 179 182	and
+E10	Or:T10 Arg:E9 Arg2:E40
+T11	Condition 203 216	heart failure
+E11	Condition:T11 Name:T49 Severity:T48
+T12	Eq-Comparison 223 233	III and IV
+E12	Eq-Comparison:T12 Value:T51 Value:T52
+T13	Condition 240 246	Angina
+E13	Condition:T13 Name:T53 Temporality:E14
+T14	Eq-Comparison 252 260	6 months
+E14	Eq-Comparison:T14 Value:T54 Temporal-Unit:T55
+T15	Condition 266 287	Myocardial infarction
+E15	Condition:T15 Name:T56 Temporality:E16
+T16	Eq-Comparison 288 303	within 6 months
+E16	Eq-Comparison:T16 Operator:T57 Value:T58 Temporal-Unit:T59
+T17	Condition 309 334	Peripheral artery disease
+E17	Condition:T17 Name:T60 Temporality:E18
+T18	Eq-Comparison 335 350	within 6 months
+E18	Eq-Comparison:T18 Operator:T61 Value:T62 Temporal-Unit:T63
+T19	Condition 368 378	arrhythmia
+E19	Condition:T19 Name:T65 Severity:T64
+T20	Condition 385 408	ventricular tachycardia
+E20	Condition:T20 Name:T66
+T21	Or 409 412	and
+E21	Or:T21 Arg:E20 Arg2:E22
+T22	Condition 413 425	fibrillation
+E22	Condition:T22 Name:T67
+T23	Condition 427 446	atrial fibrillation
+E23	Condition:T23 Name:T68
+T24	Condition 448 462	atrial flutter
+E24	Condition:T24 Name:T69
+T25	Condition 469 478	Pregnancy
+E25	Condition:T25 Name:T70
+T26	Eq-Comparison 529 538	currently
+E26	Eq-Comparison:T26 Temporal-Period:T71
+T27	Study 571 578	studies
+E27	Study:T27 Temporality:E26
+T28	Other 605 610	other
+E28	Other:T28 Is-Other:E29
+T29	Study 611 625	clinical trial
+E29	Study:T29 Study-Of:E30
+T30	Drug 626 631	drugs
+E30	Drug:T30 Temporality:E45 Temporality2:E31
+T31	Eq-Comparison 632 653	within the past month
+E31	Eq-Comparison:T31 Operator:T72 Temporal-Period:T73 Temporal-Unit:T74
+T32	Condition 732 739	disease
+E32	Condition:T32 Name:T75
+T33	Assertion 745 748	may
+E33	Assertion:T33 Asserted:T76
+A1	Assertion-Type-Value E33 hypothetical
+T34	Study 786 791	study
+E34	Study:T34 Stability:T76
+T35	Eq-Comparison 797 804	History
+E35	Eq-Comparison:T35 Temporal-Period:T77
+T36	Modifier 808 812	drug
+E36	Modifier:T36 Modifies:T78
+T37	Or 813 815	or
+E37	Or:T37 Arg:E36 Arg2:E47
+T38	Condition 824 834	dependence
+E38	Condition:T38 Name:T78 Temporality:E35 Temporality2:E39
+T39	Eq-Comparison 835 850	within 6 months
+E39	Eq-Comparison:T39 Operator:T79 Value:T80 Temporal-Unit:T81
+T40	Condition-Name 39 51	hypertension
+T41	Eq-Temporal-Period 56 62	taking
+A2	Eq-Temporal-Period-Value T41 present
+T42	Drug-Name 63 85	antihypertensive drugs
+T43	Eq-Operator 86 95	more than
+A3	Eq-Operator-Value T43 GT
+T44	Eq-Value 96 97	1
+T45	Eq-Temporal-Unit 98 102	year
+A4	Eq-Temporal-Unit-Value T45 year
+T46	Condition-Name 138 150	hypertension
+T47	Condition-Name 156 168	Hypertensive
+T48	Severity 196 202	Severe
+A5	Severity-Value T48 severe
+T49	Condition-Name 203 216	heart failure
+T50	Condition-Name 218 222	NYHA
+T51	Eq-Value 223 226	III
+T52	Eq-Value 231 233	IV
+T53	Condition-Name 240 246	Angina
+T54	Eq-Value 252 253	6
+T55	Eq-Temporal-Unit 254 260	months
+A6	Eq-Temporal-Unit-Value T55 month
+T56	Condition-Name 266 287	Myocardial infarction
+T57	Eq-Operator 288 294	within
+A7	Eq-Operator-Value T57 LTEQ
+T58	Eq-Value 295 296	6
+T59	Eq-Temporal-Unit 297 303	months
+A8	Eq-Temporal-Unit-Value T59 month
+T60	Condition-Name 309 334	Peripheral artery disease
+T61	Eq-Operator 335 341	within
+A9	Eq-Operator-Value T61 LTEQ
+T62	Eq-Value 342 343	6
+T63	Eq-Temporal-Unit 344 350	months
+A10	Eq-Temporal-Unit-Value T63 month
+T64	Severity 356 367	Significant
+A11	Severity-Value T64 severe
+T65	Condition-Name 368 378	arrhythmia
+T66	Condition-Name 385 408	ventricular tachycardia
+T67	Condition-Name 413 425	fibrillation
+T68	Condition-Name 427 446	atrial fibrillation
+T69	Condition-Name 448 462	atrial flutter
+T70	Condition-Name 469 478	Pregnancy
+T71	Eq-Temporal-Period 529 538	currently
+A12	Eq-Temporal-Period-Value T71 present
+T72	Eq-Operator 632 638	within
+A13	Eq-Operator-Value T72 LTEQ
+T73	Eq-Temporal-Period 643 647	past
+A14	Eq-Temporal-Period-Value T73 past
+T74	Eq-Temporal-Unit 648 653	month
+A15	Eq-Temporal-Unit-Value T74 month
+T75	Condition-Name 732 739	disease
+T76	Stability 749 758	interfere
+A16	Stability-Value T76 change
+T77	Eq-Temporal-Period 797 804	History
+A17	Eq-Temporal-Period-Value T77 past
+T78	Condition-Name 824 834	dependence
+T79	Eq-Operator 835 841	within
+A18	Eq-Operator-Value T79 LTEQ
+T80	Eq-Value 842 843	6
+T81	Eq-Temporal-Unit 844 850	months
+A19	Eq-Temporal-Unit-Value T81 month
+T5	Modifier 128 137	Secondary
+E5	Modifier:T5 Modifies:T46
+T82	Encounter-Type 169 178	emergency
+A20	Encounter-Type-Value T82 emergency
+T83	Encounter 183 190	urgency
+E40	Encounter:T83 Type:T84
+T84	Encounter-Type 183 190	urgency
+A21	Encounter-Type-Value T84 emergency
+R1	Treatment-For Arg1:E9 Arg2:E8	
+R2	Treatment-For Arg1:E40 Arg2:E8	
+T85	Condition 218 222	NYHA
+E41	Condition:T85 Name:T50 Stage:E12
+R3	Equivalent-To Arg1:E41 Arg2:E11	
+R4	Example-Of Arg1:E20 Arg2:E19	
+R5	Example-Of Arg1:E22 Arg2:E19	
+R6	Example-Of Arg1:E23 Arg2:E19	
+R7	Example-Of Arg1:E24 Arg2:E19	
+T86	Observation 484 495	Night labor
+E42	Observation:T86 Name:T87
+T87	Observation-Name 484 495	Night labor
+T88	Observation 497 509	shift worker
+E43	Observation:T88 Name:T89
+T89	Observation-Name 497 509	shift worker
+T90	Other 556 561	other
+E44	Other:T90 Is-Other:E27
+T91	Eq-Comparison 599 604	taken
+E45	Eq-Comparison:T91 Temporal-Period:T92
+T92	Eq-Temporal-Period 599 604	taken
+A22	Eq-Temporal-Period-Value T92 past
+T93	Assertion 721 729	may have
+E46	Assertion:T93 Asserted:E32
+A23	Assertion-Type-Value E46 possible
+R8	Caused-By Arg1:T76 Arg2:E32	
+T94	Modifier 816 823	alcohol
+E47	Modifier:T94 Modifies:T78

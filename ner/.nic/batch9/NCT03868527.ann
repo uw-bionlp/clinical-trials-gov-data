@@ -1,0 +1,13 @@
+T1	Encounter 31 39	followed
+E1	Encounter:T1 
+T2	Condition 44 66	hematological diseases
+E2	Condition:T2 Name:T4 Location:T5
+T3	Condition 136 158	hematological diseases
+E3	Condition:T3 Name:T6
+T4	Condition-Name 44 66	hematological diseases
+T5	Location 70 87	Lyon Sud Hospital
+A1	Location-Value T5 hospital
+T6	Condition-Name 136 158	hematological diseases
+T8	Negation 123 135	doesn't have
+E4	Negation:T8 Negates:E3
+R1	Treatment-For Arg1:E1 Arg2:E2	

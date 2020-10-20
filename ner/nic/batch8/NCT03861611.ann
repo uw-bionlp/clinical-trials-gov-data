@@ -1,131 +1,131 @@
-T1	Or 29 31	or
 E1	Or:T1 Arg:T39 Arg2:T40
-T2	Age 38 41	age
 E2	Age:T2 Eq-Comparison:E3
-T3	Eq-Comparison 42 47	18-64
 E3	Eq-Comparison:T3 Value:T41 Operator:T42 Value2:T43
-T5	Condition 94 107	Low Back Pain
 E5	Condition:T5 Name:T44 Type:T67
-T6	Condition 109 112	LBP
 E6	Condition:T6 Name:T45
-T7	Condition 142 151	back pain
 E7	Condition:T7 Name:T46
-T8	Eq-Comparison 173 187	greater than 5
 E8	Eq-Comparison:T8 Operator:T47 Value:T48
-T9	Observation 195 233	Roland-Morris Disability Questionnaire
 E9	Observation:T9 Name:T69 Eq-Comparison:E8
-T10	Condition 239 263	Musculoskeletal etiology
 E10	Condition:T10 Name:T49
-T12	Modifier 286 295	radicular
 E12	Modifier:T12 Modifies:T50
-T13	Condition 296 300	pain
 E13	Condition:T13 Name:T50
-T14	Condition 307 311	Pain
 E14	Condition:T14 Name:T51 Duration:E15
-T15	Eq-Comparison 321 329	<2 weeks
 E15	Eq-Comparison:T15 Operator:T52 Value:T53 Temporal-Unit:T54
-T16	Eq-Comparison 331 340	336 hours
 E16	Eq-Comparison:T16 Value:T55 Temporal-Unit:T56
-T17	Modifier 352 361	traumatic
 E17	Modifier:T17 Modifies:T57
-T18	Condition 362 365	LBP
 E18	Condition:T18 Name:T57
-T19	Encounter 392 402	discharged
 E19	Encounter:T19 Location:T59
-T20	Modifier 434 439	Flank
 E20	Modifier:T20 Modifies:T60
-T21	Condition 440 444	pain
 E21	Condition:T21 Name:T60
-T22	Condition 454 458	pain
 E22	Condition:T22 Name:T61
-T24	Modifier 476 517	tissues lateral to the paraspinal muscles
 E24	Modifier:T24 Modifies:T61
-T25	Negation 524 527	Not
 E25	Negation:T25 Negates:E26
-T26	Assertion 528 537	available
 E26	Assertion:T26 Asserted:E27
-A1	Assertion-Type-Value E26 hypothetical
-T27	Encounter 542 551	follow-up
-E27	Encounter:T27 
-T28	Condition 557 565	Pregnant
+E27	Encounter:T27
 E28	Condition:T28 Name:T63
-T29	Modifier 571 578	Chronic
-E29	Modifier:T29 Modifies:T64
-T30	Condition 579 592	pain syndrome
-E30	Condition:T30 Name:T64
-T31	Allergy 598 606	Allergic
+E30	Condition:T30 Name:T64 Acuteness:T29
 E31	Allergy:T31 Name:E34
-T32	Or 610 612	or
 E32	Or:T32 Arg:E31 Arg2:E23
-T33	Study 627 642	investigational
 E33	Study:T33 Study-Of:E34
-T34	Drug 643 654	medications
-E34	Drug:T34 
-T37	Study 682 697	investigational
+E34	Drug:T34
 E37	Study:T37 Study-Of:E38
+E38	Drug:T38
+E4	Encounter:T4 Type:T66
+E39	Modifier:T68 Modifies:T46
+E11	Modifier:T11 Modifies:T49
+E40	Negation:T70 Negates:E12
+E41	Negation:T71 Negates:E17
+E42	Assertion:T72 Asserted:E19
+E23	Condition:T23 Name:T62
+E35	Contraindication:T35 Contraindicates:E38
+T1	Or 29 31	or
+T2	Age 38 41	age
+T3	Eq-Comparison 42 47	18-64
+T5	Condition 94 107	Low Back Pain
+T6	Condition 109 112	LBP
+T7	Condition 142 151	back pain
+T8	Eq-Comparison 173 187	greater than 5
+T9	Observation 195 233	Roland-Morris Disability Questionnaire
+T10	Condition 239 263	Musculoskeletal etiology
+T12	Modifier 286 295	radicular
+T13	Condition 296 300	pain
+T14	Condition 307 311	Pain
+T15	Eq-Comparison 321 329	<2 weeks
+T16	Eq-Comparison 331 340	336 hours
+T17	Modifier 352 361	traumatic
+T18	Condition 362 365	LBP
+T19	Encounter 392 402	discharged
+T20	Modifier 434 439	Flank
+T21	Condition 440 444	pain
+T22	Condition 454 458	pain
+T24	Modifier 476 517	tissues lateral to the paraspinal muscles
+T25	Negation 524 527	Not
+T26	Assertion 528 537	available
+T27	Encounter 542 551	follow-up
+T28	Condition 557 565	Pregnant
+T29	Acuteness 571 578	Chronic
+T30	Condition 579 592	pain syndrome
+T31	Allergy 598 606	Allergic
+T32	Or 610 612	or
+T33	Study 627 642	investigational
+T34	Drug 643 654	medications
+T37	Study 682 697	investigational
 T38	Drug 698 709	medications
-E38	Drug:T38 
 T39	Life-Stage-And-Gender 25 28	Men
-A2	Life-Stage-And-Gender-Type T39 male
 T40	Life-Stage-And-Gender 32 37	women
-A3	Life-Stage-And-Gender-Type T40 female
 T41	Eq-Value 42 44	18
 T42	Eq-Operator 44 45	-
-A4	Eq-Operator-Value T42 BETWEEN
 T43	Eq-Value 45 47	64
 T44	Condition-Name 94 107	Low Back Pain
 T45	Condition-Name 109 112	LBP
 T46	Condition-Name 142 151	back pain
 T47	Eq-Operator 173 185	greater than
-A5	Eq-Operator-Value T47 GT
 T48	Eq-Value 186 187	5
 T49	Condition-Name 239 263	Musculoskeletal etiology
 T50	Condition-Name 296 300	pain
 T51	Condition-Name 307 311	Pain
 T52	Eq-Operator 321 322	<
-A7	Eq-Operator-Value T52 LT
 T53	Eq-Value 322 323	2
 T54	Eq-Temporal-Unit 324 329	weeks
-A8	Eq-Temporal-Unit-Value T54 week
 T55	Eq-Value 331 334	336
 T56	Eq-Temporal-Unit 335 340	hours
-A9	Eq-Temporal-Unit-Value T56 hour
 T57	Condition-Name 362 365	LBP
 T58	Encounter-Type 392 402	discharged
-A10	Encounter-Type-Value T58 discharge
 T59	Location 403 407	home
-A11	Location-Value T59 residence
 T60	Condition-Name 440 444	pain
 T61	Condition-Name 454 458	pain
 T63	Condition-Name 557 565	Pregnant
 T64	Condition-Name 579 592	pain syndrome
 T4	Encounter 65 67	ED
-E4	Encounter:T4 Type:T66
 T66	Encounter-Type 65 67	ED
-A12	Encounter-Type-Value T66 emergency
-R1	Abbrev-Of Arg1:E6 Arg2:E5	
-R2	Treatment-For Arg1:E4 Arg2:E5	
 T67	Condition-Type 54 61	Present
-A13	Condition-Type-Value T67 admitting
 T68	Modifier 119 141	Functionally impairing
-E39	Modifier:T68 Modifies:T46
 T69	Observation-Name 195 233	Roland-Morris Disability Questionnaire
-A14	Observation-Type-Value T69 survey-or-questionnaire
-R3	Equivalent-To Arg1:E9 Arg2:E7	
 T11	Modifier 267 275	low back
-E11	Modifier:T11 Modifies:T49
 T70	Negation 282 285	Non
-E40	Negation:T70 Negates:E12
-R4	Equivalent-To Arg1:E16 Arg2:E15	
 T71	Negation 348 351	Non
-E41	Negation:T71 Negates:E17
 T72	Assertion 386 391	to be
-E42	Assertion:T72 Asserted:E19
-A6	Assertion-Type-Value E42 hypothetical
-R5	Equivalent-To Arg1:E22 Arg2:E21	
 T23	Condition 613 623	intolerant
-E23	Condition:T23 Name:T62
 T62	Condition-Name 613 623	intolerant
-R6	Caused-By Arg1:E23 Arg2:E34	
 T35	Contraindication 660 678	Contra-indications
-E35	Contraindication:T35 Contraindicates:E38
+A1	Assertion-Type-Value E26 hypothetical
+A2	Life-Stage-And-Gender-Type T39 male
+A3	Life-Stage-And-Gender-Type T40 female
+A4	Eq-Operator-Value T42 BETWEEN
+A5	Eq-Operator-Value T47 GT
+A7	Eq-Operator-Value T52 LT
+A8	Eq-Temporal-Unit-Value T54 week
+A9	Eq-Temporal-Unit-Value T56 hour
+A10	Encounter-Type-Value T58 discharge
+A11	Location-Value T59 residence
+A12	Encounter-Type-Value T66 emergency
+A13	Condition-Type-Value T67 admitting
+A14	Observation-Type-Value T69 survey-or-questionnaire
+A6	Assertion-Type-Value E42 hypothetical
+A15	Acuteness-Type-Value T29 chronic
+R1	Abbrev-Of Arg1:E6 Arg2:E5
+R2	Treatment-For Arg1:E4 Arg2:E5
+R3	Equivalent-To Arg1:E9 Arg2:E7
+R4	Equivalent-To Arg1:E16 Arg2:E15
+R5	Equivalent-To Arg1:E22 Arg2:E21
+R6	Caused-By Arg1:E23 Arg2:E34

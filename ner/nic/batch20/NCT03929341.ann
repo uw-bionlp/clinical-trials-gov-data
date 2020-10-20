@@ -1,219 +1,219 @@
+E1	Condition:T1 Name:T2 Acuteness:T76
+E3	Condition:T3 Name:T4 Acuteness:T75
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8 Stability:T77
+E9	Condition:T9 Name:T10
+E14	Condition:T14 Name:T15
+E16	Procedure:T16 Name:T17 Stability:T103
+E18	Condition:T18 Name:T19
+E20	Condition:T20 Name:T21
+E22	Condition:T22 Name:T23 Severity:T95
+E24	Condition:T24 Name:T25
+E29	Condition:T29 Name:T30
+E33	Age:T40 Eq-Comparison:E35
+E35	Eq-Comparison:T46 Operator:T34 Temporal-Unit:T37 Value:T42
+E36	Eq-Comparison:T47 Operator:T35 Value:T44 Unit:T31 Per:T108 Per2:T109
+E37	Eq-Comparison:T48 Operator:T36 Temporal-Unit:T39 Value:T45 Temporal-Period:T110
+E38	Eq-Comparison:T49 Temporal-Period:T50
+E39	Eq-Comparison:T51 Temporal-Period:T52
+E40	Eq-Comparison:T53 Temporal-Period:T54
+E2	Or:T56 Arg:T13 Arg2:T55
+E4	Condition:T41 Name:T57 Stability:T59
+E6	Modifier:T58 Modifies:T57
+E8	Modifier:T60 Modifies:T57
+E10	Assertion:T61 Asserted:E8
+E12	Or:T62 Arg:E4 Arg2:E8
+E11	Eq-Comparison:T11 Temporal-Period:T12
+E13	Procedure:T63 Name:T64 Temporality:E11
+E15	Condition:T65 Name:T71
+E17	Modifier:T66 Modifies:T64
+E19	Modifier:T67 Modifies:T64
+E21	Modifier:T68 Modifies:T71
+E23	Negation:T69 Negates:E17
+E25	Negation:T70 Negates:E19
+E27	Modifier:T72
+E28	Assertion:T73 Asserted:E27
+E30	Or:T74 Arg:E15 Arg2:E27
+E31	Or:T78 Arg:E1 Arg2:E7
+E34	Modifier:T79 Modifies:T6
+E41	Negation:T80 Negates:E34
+E42	Other:T81 Is-Other:E9
+E43	Or:T82 Arg:E5 Arg2:E9
+E26	Procedure:T26 Name:T27
+E44	Modifier:T83 Modifies:T27
+E45	Assertion:T84 Asserted:E26
+E46	Condition:T28 Name:T85
+E47	Procedure:T86 Name:T87 Temporality:E40
+E48	Condition:T88 Temporality:E38
+E49	Procedure:T89 Temporality:E39 Temporality2:E50
+E50	Eq-Comparison:T90 Temporal-Period:T91 Value:T43 Temporal-Unit:T38
+E51	Allergy:T92 Severity:T93 Name:T94
+E52	Drug:T96 Name:T97
+E53	Drug:T98 Name:T99
+E54	Or:T100 Arg:E52 Arg2:E53
+E55	Study:T101
+E56	Assertion:T102 Asserted:E55
+E57	Assertion:T104 Asserted:T103
+E58	Or:T105 Arg:E18 Arg2:E20
+E59	Observation:T106 Name:T107 Eq-Comparison:E36 Temporality:E37
+E60	Condition:T111 Name:T112
+E32	Observation:T32 Name:T33
+E61	Assertion:T113 Asserted:E32
 T1	Condition 270 291	myocardial infarction
 T2	Condition-Name 270 291	myocardial infarction
-E1	Condition:T1 Name:T2 Severity:T76
 T3	Condition 235 252	coronary syndrome
 T4	Condition-Name 235 252	coronary syndrome
-E3	Condition:T3 Name:T4 Severity:T75
 T5	Condition 331 345	cardiomyopathy
 T6	Condition-Name 331 345	cardiomyopathy
-E5	Condition:T5 Name:T6
 T7	Condition 304 310	angina
 T8	Condition-Name 304 310	angina
-E7	Condition:T7 Name:T8 Stability:T77
 T9	Condition 355 370	cardiac disease
 T10	Condition-Name 355 370	cardiac disease
-E9	Condition:T9 Name:T10
 T13	Life-Stage-And-Gender 25 28	Men
 T14	Condition 377 398	mitral valve prolapse
 T15	Condition-Name 377 398	mitral valve prolapse
-E14	Condition:T14 Name:T15
 T16	Procedure 700 713	premedication
 T17	Procedure-Name 700 713	premedication
-E16	Procedure:T16 Name:T17 Stability:T103
 T18	Condition 776 789	Renal failure
 T19	Condition-Name 776 789	Renal failure
-E18	Condition:T18 Name:T19
 T20	Condition 793 804	dysfunction
 T21	Condition-Name 793 804	dysfunction
-E20	Condition:T20 Name:T21
 T22	Condition 664 673	urticaria
 T23	Condition-Name 664 673	urticaria
-E22	Condition:T22 Name:T23 Severity:T95
 T24	Condition 886 895	Pregnancy
 T25	Condition-Name 886 895	Pregnancy
-E24	Condition:T24 Name:T25
 T29	Condition 562 565	CAD
 T30	Condition-Name 562 565	CAD
-E29	Condition:T29 Name:T30
 T34	Eq-Operator 43 44	≥
-A1	Eq-Operator-Value T34 GTEQ
 T35	Eq-Operator 842 843	<
-A2	Eq-Operator-Value T35 LT
 T36	Eq-Operator 855 861	within
-A3	Eq-Operator-Value T36 LTEQ
 T37	Eq-Temporal-Unit 48 53	years
-A4	Eq-Temporal-Unit-Value T37 year
 T38	Eq-Temporal-Unit 581 587	months
-A5	Eq-Temporal-Unit-Value T38 month
 T39	Eq-Temporal-Unit 873 879	months
-A6	Eq-Temporal-Unit-Value T39 month
 T40	Age 39 42	age
-E33	Age:T40 Eq-Comparison:E35
 T42	Eq-Value 45 47	40
 T43	Eq-Value 578 580	12
 T44	Eq-Value 843 845	30
 T45	Eq-Value 871 872	3
 T46	Eq-Comparison 43 53	≥ 40 years
-E35	Eq-Comparison:T46 Operator:T34 Temporal-Unit:T37 Value:T42
 T47	Eq-Comparison 842 854	<30ml/min/m2
-E36	Eq-Comparison:T47 Operator:T35 Value:T44 Unit:T31 Per:T108 Per2:T109
 T48	Eq-Comparison 855 879	within the past 3 months
-E37	Eq-Comparison:T48 Operator:T36 Temporal-Unit:T39 Value:T45 Temporal-Period:T110
 T49	Eq-Comparison 501 508	current
-E38	Eq-Comparison:T49 Temporal-Period:T50
 T50	Eq-Temporal-Period 501 508	current
-A7	Eq-Temporal-Period-Value T50 present
 T51	Eq-Comparison 534 544	Previously
-E39	Eq-Comparison:T51 Temporal-Period:T52
 T52	Eq-Temporal-Period 534 544	Previously
-A8	Eq-Temporal-Period-Value T52 past
 T53	Eq-Comparison 472 477	Prior
-E40	Eq-Comparison:T53 Temporal-Period:T54
 T54	Eq-Temporal-Period 472 477	Prior
-A9	Eq-Temporal-Period-Value T54 past
-A10	Life-Stage-And-Gender-Type T13 male
 T55	Life-Stage-And-Gender 33 38	women
-A11	Life-Stage-And-Gender-Type T55 female
 T56	Or 29 32	and
-E2	Or:T56 Arg:T13 Arg2:T55
 T41	Condition 79 83	pain
-E4	Condition:T41 Name:T57 Stability:T59
 T57	Condition-Name 79 83	pain
 T58	Modifier 73 78	chest
-E6	Modifier:T58 Modifies:T57
 T59	Stability 66 72	Stable
-A12	Stability-Value T59 stable
 T60	Modifier 87 97	equivalent
-E8	Modifier:T60 Modifies:T57
 T61	Assertion 98 106	symptoms
-E10	Assertion:T61 Asserted:E8
-A13	Assertion-Type-Value E10 possible
 T62	Or 84 86	or
-E12	Or:T62 Arg:E4 Arg2:E8
 T11	Eq-Comparison 112 119	Planned
-E11	Eq-Comparison:T11 Temporal-Period:T12
 T12	Eq-Temporal-Period 112 119	Planned
-A14	Eq-Temporal-Period-Value T12 future
 T63	Procedure 145 152	testing
-E13	Procedure:T63 Name:T64 Temporality:E11
 T64	Procedure-Name 145 152	testing
 T65	Condition 176 180	pain
-E15	Condition:T65 Name:T71
 T66	Modifier 136 144	invasive
-E17	Modifier:T66 Modifies:T64
 T67	Modifier 124 130	urgent
-E19	Modifier:T67 Modifies:T64
 T68	Modifier 170 175	chest
-E21	Modifier:T68 Modifies:T71
 T69	Negation 132 135	non
-E23	Negation:T69 Negates:E17
 T70	Negation 120 123	non
-E25	Negation:T70 Negates:E19
 T71	Condition-Name 176 180	pain
-R1	Treatment-For Arg1:E13 Arg2:E15	
 T72	Modifier 184 194	equivalent
-E27	Modifier:T72 
 T73	Assertion 195 203	symptoms
-E28	Assertion:T73 Asserted:E27
-A15	Assertion-Type-Value E28 possible
 T74	Or 181 183	or
-E30	Or:T74 Arg:E15 Arg2:E27
-T75	Severity 229 234	Acute
-A16	Severity-Value T75 severe
-T76	Severity 264 269	acute
-A17	Severity-Value T76 severe
-R2	Example-Of Arg1:E1 Arg2:E3	
+T75	Acuteness 229 234	Acute
+T76	Acuteness 264 269	acute
 T77	Stability 295 303	unstable
-A18	Stability-Value T77 change
 T78	Or 292 294	or
-E31	Or:T78 Arg:E1 Arg2:E7
-R3	Example-Of Arg1:E7 Arg2:E3	
 T79	Modifier 322 330	ischemic
-E34	Modifier:T79 Modifies:T6
 T80	Negation 318 321	non
-E41	Negation:T80 Negates:E34
-R4	Example-Of Arg1:E5 Arg2:E3	
 T81	Other 349 354	other
-E42	Other:T81 Is-Other:E9
 T82	Or 346 348	or
-E43	Or:T82 Arg:E5 Arg2:E9
-R5	Example-Of Arg1:E9 Arg2:E3	
-R6	Example-Of Arg1:E14 Arg2:E9	
 T26	Procedure 433 451	cardiac evaluation
-E26	Procedure:T26 Name:T27
 T27	Procedure-Name 433 451	cardiac evaluation
 T83	Modifier 426 432	urgent
-E44	Modifier:T83 Modifies:T27
 T84	Assertion 412 417	would
-E45	Assertion:T84 Asserted:E26
-A19	Assertion-Type-Value E45 hypothetical
-R7	Treatment-For Arg1:E26 Arg2:E9	
 T28	Condition 463 466	CAD
-E46	Condition:T28 Name:T85
 T85	Condition-Name 463 466	CAD
 T86	Procedure 478 496	cardiac evaluation
-E47	Procedure:T86 Name:T87 Temporality:E40
 T87	Procedure-Name 478 496	cardiac evaluation
 T88	Condition 520 528	symptoms
-E48	Condition:T88 Temporality:E38
-R8	Treatment-For Arg1:E47 Arg2:E48	
 T89	Procedure 545 557	investigated
-E49	Procedure:T89 Temporality:E39 Temporality2:E50
-R9	Treatment-For Arg1:E49 Arg2:E29	
 T90	Eq-Comparison 573 587	last 12 months
-E50	Eq-Comparison:T90 Temporal-Period:T91 Value:T43 Temporal-Unit:T38
 T91	Eq-Temporal-Period 573 577	last
-A20	Eq-Temporal-Period-Value T91 past
 T92	Allergy 600 608	allergic
-E51	Allergy:T92 Severity:T93 Name:T94
 T93	Severity 593 599	Severe
-A21	Severity-Value T93 severe
 T94	Allergy-Name 621 639	iodinated contrast
 T95	Severity 641 645	mild
-A22	Severity-Value T95 mild
 T96	Drug 719 727	Benadryl
-E52	Drug:T96 Name:T97
 T97	Drug-Name 719 727	Benadryl
 T98	Drug 730 740	Prednisone
-E53	Drug:T98 Name:T99
 T99	Drug-Name 730 740	Prednisone
 T100	Or 728 729	&
-E54	Or:T100 Arg:E52 Arg2:E53
-R10	Using Arg1:E16 Arg2:E52	
-R11	Using Arg1:E16 Arg2:E53	
 T101	Study 764 769	study
-E55	Study:T101 
 T102	Assertion 741 744	may
-E56	Assertion:T102 Asserted:E55
-A23	Assertion-Type-Value E56 hypothetical
 T103	Stability 686 696	controlled
-A24	Stability-Value T103 stable
 T104	Assertion 679 682	can
-E57	Assertion:T104 Asserted:T103
-A25	Assertion-Type-Value E57 hypothetical
-R12	Treatment-For Arg1:E16 Arg2:E22	
-R13	Caused-By Arg1:E22 Arg2:E51	
 T105	Or 790 792	or
-E58	Or:T105 Arg:E18 Arg2:E20
 T106	Observation 806 842	estimated Glomerular Filtration Rate
-E59	Observation:T106 Name:T107 Eq-Comparison:E36 Temporality:E37
 T107	Observation-Name 806 842	estimated Glomerular Filtration Rate
-A26	Observation-Type-Value T107 lab
 T31	Eq-Unit 845 847	ml
 T108	Eq-Temporal-Unit 848 851	min
-A27	Eq-Temporal-Unit-Value T108 minute
 T109	Eq-Unit 852 854	m2
-R14	Equivalent-To Arg1:E59 Arg2:E20	
 T110	Eq-Temporal-Period 866 870	past
-A28	Eq-Temporal-Period-Value T110 past
 T111	Condition 936 949	premenopausal
-E60	Condition:T111 Name:T112
 T112	Condition-Name 936 949	premenopausal
 T32	Observation 1016 1036	pregnancy strip test
-E32	Observation:T32 Name:T33
 T33	Observation-Name 1016 1036	pregnancy strip test
-A29	Observation-Type-Value T33 lab
 T113	Assertion 982 989	will be
-E61	Assertion:T113 Asserted:E32
+A1	Eq-Operator-Value T34 GTEQ
+A2	Eq-Operator-Value T35 LT
+A3	Eq-Operator-Value T36 LTEQ
+A4	Eq-Temporal-Unit-Value T37 year
+A5	Eq-Temporal-Unit-Value T38 month
+A6	Eq-Temporal-Unit-Value T39 month
+A7	Eq-Temporal-Period-Value T50 present
+A8	Eq-Temporal-Period-Value T52 past
+A9	Eq-Temporal-Period-Value T54 past
+A10	Life-Stage-And-Gender-Type T13 male
+A11	Life-Stage-And-Gender-Type T55 female
+A12	Stability-Value T59 stable
+A13	Assertion-Type-Value E10 possible
+A14	Eq-Temporal-Period-Value T12 future
+A15	Assertion-Type-Value E28 possible
+A18	Stability-Value T77 change
+A19	Assertion-Type-Value E45 hypothetical
+A20	Eq-Temporal-Period-Value T91 past
+A21	Severity-Value T93 severe
+A22	Severity-Value T95 mild
+A23	Assertion-Type-Value E56 hypothetical
+A24	Stability-Value T103 stable
+A25	Assertion-Type-Value E57 hypothetical
+A26	Observation-Type-Value T107 lab
+A27	Eq-Temporal-Unit-Value T108 minute
+A28	Eq-Temporal-Period-Value T110 past
+A29	Observation-Type-Value T33 lab
 A30	Assertion-Type-Value E61 hypothetical
-R15	If-Then Arg1:E60 Arg2:E32	
+A31	Acuteness-Type-Value T75 acute
+A32	Acuteness-Type-Value T76 acute
+R1	Treatment-For Arg1:E13 Arg2:E15
+R2	Example-Of Arg1:E1 Arg2:E3
+R3	Example-Of Arg1:E7 Arg2:E3
+R4	Example-Of Arg1:E5 Arg2:E3
+R5	Example-Of Arg1:E9 Arg2:E3
+R6	Example-Of Arg1:E14 Arg2:E9
+R7	Treatment-For Arg1:E26 Arg2:E9
+R8	Treatment-For Arg1:E47 Arg2:E48
+R9	Treatment-For Arg1:E49 Arg2:E29
+R10	Using Arg1:E16 Arg2:E52
+R11	Using Arg1:E16 Arg2:E53
+R12	Treatment-For Arg1:E16 Arg2:E22
+R13	Caused-By Arg1:E22 Arg2:E51
+R14	Equivalent-To Arg1:E59 Arg2:E20
+R15	If-Then Arg1:E60 Arg2:E32

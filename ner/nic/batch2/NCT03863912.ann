@@ -1,27 +1,27 @@
-T1	Eq-Comparison 25 41	planned 6 cycles
 E1	Eq-Comparison:T1 Temporal-Period:T12 Value:T13 Unit:T19
-T2	Procedure 45 57	chemotherapy
 E2	Procedure:T2 Name:T14 Duration:E1
-T3	Drug 63 74	carboplatin
 E3	Drug:T3 Name:T15
-T4	Or 74 75	/
 E4	Or:T4 Arg:E3 Arg2:E5
-T5	Drug 75 85	paclitaxel
 E5	Drug:T5 Name:T16
-T6	Or 86 88	or
 E6	Or:T6 Arg:E5 Arg2:E7
-T7	Drug 89 100	carboplatin
 E7	Drug:T7 Name:T17
-T8	Or 100 101	/
 E8	Or:T8 Arg:E7 Arg2:E9
-T9	Drug 101 132	pegylated liposomal doxorubicin
 E9	Drug:T9 Name:T18
-T10	Age 138 141	Age
 E10	Age:T10 Eq-Comparison:E11
-T11	Eq-Comparison 142 151	>18 years
 E11	Eq-Comparison:T11 Operator:T20 Value:T21 Temporal-Unit:T22
+E12	Negation:T24 Negates:T23
+T1	Eq-Comparison 25 41	planned 6 cycles
+T2	Procedure 45 57	chemotherapy
+T3	Drug 63 74	carboplatin
+T4	Or 74 75	/
+T5	Drug 75 85	paclitaxel
+T6	Or 86 88	or
+T7	Drug 89 100	carboplatin
+T8	Or 100 101	/
+T9	Drug 101 132	pegylated liposomal doxorubicin
+T10	Age 138 141	Age
+T11	Eq-Comparison 142 151	>18 years
 T12	Eq-Temporal-Period 25 32	planned
-A1	Eq-Temporal-Period-Value T12 future
 T13	Eq-Value 33 34	6
 T14	Procedure-Name 45 57	chemotherapy
 T15	Drug-Name 63 74	carboplatin
@@ -29,15 +29,15 @@ T16	Drug-Name 75 85	paclitaxel
 T17	Drug-Name 89 100	carboplatin
 T18	Drug-Name 101 132	pegylated liposomal doxorubicin
 T20	Eq-Operator 142 143	>
-A2	Eq-Operator-Value T20 GT
 T21	Eq-Value 143 145	18
 T22	Eq-Temporal-Unit 146 151	years
-A3	Eq-Temporal-Unit-Value T22 year
 T23	Language 205 211	German
-R1	Using Arg1:E2 Arg2:E3	
-R2	Using Arg1:E2 Arg2:E5	
-R3	Using Arg1:E7 Arg2:E2	
-R4	Using Arg1:E9 Arg2:E2	
 T19	Eq-Unit 35 41	cycles
 T24	Negation 177 187	inadequate
-E12	Negation:T24 Negates:T23
+A1	Eq-Temporal-Period-Value T12 future
+A2	Eq-Operator-Value T20 GT
+A3	Eq-Temporal-Unit-Value T22 year
+R1	Using Arg1:E2 Arg2:E3
+R2	Using Arg1:E2 Arg2:E5
+R3	Using Arg1:E7 Arg2:E2
+R4	Using Arg1:E9 Arg2:E2

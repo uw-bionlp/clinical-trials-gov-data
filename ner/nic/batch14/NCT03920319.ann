@@ -1,80 +1,80 @@
+E1	Condition:T1 Name:T2 Stage:E13 Temporality:E24
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8 Temporality:E22
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E2	Condition:T15 Name:T16
+E4	Procedure:T17
+E6	Assertion:T18 Asserted:E4
+E8	Observation:T13 Name:T14 Polarity:T19
+E10	Study:T20
+E12	Temporal-Connection:T21 Arg:E8 Arg2:E10
+E13	Eq-Comparison:T22 Unit:T23 Value:T24
+E14	Exception:T25 From:E1 Except:E5
+E15	Condition:T26
+E16	Condition:T27 Name:T28 Stability:T29
+E17	Assertion:T30 Asserted:T29
+E18	Eq-Comparison:T31 Temporal-Period:T32
+E19	Drug:T33 Temporality:E18
+E20	Condition:T34 Name:T35 Stability:T36
+E21	Assertion:T37 Asserted:T36
+E22	Eq-Comparison:T38 Temporal-Period:T39
+E23	Exception:T40 From:E7 Except:E11
+E24	Eq-Comparison:T41 Temporal-Period:T42
 T1	Condition 222 243	psychiatric diagnosis
 T2	Condition-Name 222 243	psychiatric diagnosis
-E1	Condition:T1 Name:T2 Stage:E13 Temporality:E24
 T3	Condition 90 109	nicotine dependence
 T4	Condition-Name 90 109	nicotine dependence
-E3	Condition:T3 Name:T4
 T5	Condition 255 274	nicotine dependence
 T6	Condition-Name 255 274	nicotine dependence
-E5	Condition:T5 Name:T6
 T7	Condition 424 440	illicit drug use
 T8	Condition-Name 424 440	illicit drug use
-E7	Condition:T7 Name:T8 Temporality:E22
 T9	Condition 401 410	Pregnancy
 T10	Condition-Name 401 410	Pregnancy
-E9	Condition:T9 Name:T10
 T11	Condition 470 479	marijuana
 T12	Condition-Name 470 479	marijuana
-E11	Condition:T11 Name:T12
 T15	Condition 43 59	cigarette smoker
-E2	Condition:T15 Name:T16
 T16	Condition-Name 43 59	cigarette smoker
 T17	Procedure 25 34	Treatment
-E4	Procedure:T17 
 T18	Assertion 35 42	seeking
-E6	Assertion:T18 Asserted:E4
-A1	Assertion-Type-Value E6 intention
-R1	Treatment-For Arg1:E4 Arg2:E2	
 T13	Observation 134 157	urine test for drug use
-E8	Observation:T13 Name:T14 Polarity:T19
 T14	Observation-Name 134 157	urine test for drug use
-A2	Observation-Type-Value T14 lab
 T19	Polarity 115 123	Negative
-A3	Polarity-Value T19 negative
 T20	Study 165 174	screening
-E10	Study:T20 
 T21	Temporal-Connection 158 164	during
-E12	Temporal-Connection:T21 Arg:E8 Arg2:E10
-A4	Temporal-Connection-Type-Value E12 during
 T22	Eq-Comparison 215 221	Axis I
-E13	Eq-Comparison:T22 Unit:T23 Value:T24
 T23	Eq-Unit 215 219	Axis
 T24	Eq-Value 220 221	I
 T25	Exception 244 254	other than
-E14	Exception:T25 From:E1 Except:E5
 T26	Condition 280 298	Medical conditions
-E15	Condition:T26 
 T27	Condition 317 331	brain function
-E16	Condition:T27 Name:T28 Stability:T29
 T28	Condition-Name 317 331	brain function
 T29	Stability 310 316	affect
-A5	Stability-Value T29 change
 T30	Assertion 304 309	might
-E17	Assertion:T30 Asserted:T29
-A6	Assertion-Type-Value E17 possible
-R2	Caused-By Arg1:T29 Arg2:E15	
 T31	Eq-Comparison 337 344	Current
-E18	Eq-Comparison:T31 Temporal-Period:T32
 T32	Eq-Temporal-Period 337 344	Current
-A7	Eq-Temporal-Period-Value T32 present
 T33	Drug 352 363	medications
-E19	Drug:T33 Temporality:E18
 T34	Condition 381 395	brain function
-E20	Condition:T34 Name:T35 Stability:T36
 T35	Condition-Name 381 395	brain function
 T36	Stability 375 380	alter
-A8	Stability-Value T36 change
 T37	Assertion 369 374	could
-E21	Assertion:T37 Asserted:T36
-A9	Assertion-Type-Value E21 possible
-R3	Caused-By Arg1:T36 Arg2:E19	
 T38	Eq-Comparison 416 423	Current
-E22	Eq-Comparison:T38 Temporal-Period:T39
 T39	Eq-Temporal-Period 416 423	Current
-A10	Eq-Temporal-Period-Value T39 present
 T40	Exception 441 451	other than
-E23	Exception:T40 From:E7 Except:E11
 T41	Eq-Comparison 200 207	History
-E24	Eq-Comparison:T41 Temporal-Period:T42
 T42	Eq-Temporal-Period 200 207	History
+A1	Assertion-Type-Value E6 intention
+A2	Observation-Type-Value T14 lab
+A3	Polarity-Value T19 negative
+A4	Temporal-Connection-Type-Value E12 during
+A5	Stability-Value T29 change
+A6	Assertion-Type-Value E17 possible
+A7	Eq-Temporal-Period-Value T32 present
+A8	Stability-Value T36 change
+A9	Assertion-Type-Value E21 possible
+A10	Eq-Temporal-Period-Value T39 present
 A11	Eq-Temporal-Period-Value T42 past
+R1	Treatment-For Arg1:E4 Arg2:E2
+R2	Caused-By Arg1:T29 Arg2:E15
+R3	Caused-By Arg1:T36 Arg2:E19

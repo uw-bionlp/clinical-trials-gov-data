@@ -1,0 +1,59 @@
+T1	Eq-Comparison 34 56	between 7 and 12 years
+E1	Eq-Comparison:T1 Operator:T18 Value:T19 Value:T20 Temporal-Unit:T21
+T2	Age 57 60	old
+E2	Age:T2 Eq-Comparison:E1
+T4	Or 85 87	or
+E4	Or:T4 Arg:T22 Arg2:E3
+T5	Condition 98 111	visual acuity
+E5	Condition:T5 Name:T23 Polarity:T22
+T6	Condition 131 135	ADHD
+E6	Condition:T6 Name:T24
+T8	Procedure 269 278	treatment
+E8	Procedure:T8 Temporality:E9
+T9	Eq-Comparison 279 293	until 24 hours
+E9	Eq-Comparison:T9 Temporal-Period:T26 Value:T27 Temporal-Unit:T28
+T10	Temporal-Connection 294 300	before
+E10	Temporal-Connection:T10 Arg:E9 Arg2:E11
+A1	Temporal-Connection-Type-Value E10 before
+T11	Study 305 315	experiment
+E11	Study:T11 
+T12	Condition 518 539	neurological troubles
+E12	Condition:T12 Name:T29 Temporality:E18
+T13	Condition 541 550	dysphasia
+E13	Condition:T13 Name:T30
+T14	Condition 552 578	autistic spectrum disorder
+E14	Condition:T14 Name:T31
+T15	Condition 580 605	intellectual disabilities
+E15	Condition:T15 Name:T32
+T17	Life-Stage-And-Gender 25 33	Children
+A2	Life-Stage-And-Gender-Type T17 child
+T18	Eq-Operator 34 41	between
+A3	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Value 42 43	7
+T20	Eq-Value 48 50	12
+T21	Eq-Temporal-Unit 51 56	years
+A4	Eq-Temporal-Unit-Value T21 year
+T22	Polarity 78 84	Normal
+A5	Polarity-Value T22 normal
+T23	Condition-Name 98 111	visual acuity
+T24	Condition-Name 131 135	ADHD
+T26	Eq-Temporal-Period 279 284	until
+A6	Eq-Temporal-Period-Value T26 past
+T27	Eq-Value 285 287	24
+T28	Eq-Temporal-Unit 288 293	hours
+A7	Eq-Temporal-Unit-Value T28 hour
+T29	Condition-Name 518 539	neurological troubles
+T30	Condition-Name 541 550	dysphasia
+T31	Condition-Name 552 578	autistic spectrum disorder
+T32	Condition-Name 580 605	intellectual disabilities
+T3	Modifier 88 97	corrected
+E3	Modifier:T3 Modifies:T23
+T7	Negation 254 263	Free from
+E7	Negation:T7 Negates:E8
+T25	Drug 264 268	drug
+E17	Drug:T25 
+R1	Using Arg1:E8 Arg2:E17	
+T34	Eq-Comparison 507 514	History
+E18	Eq-Comparison:T34 Temporal-Period:T35
+T35	Eq-Temporal-Period 507 514	History
+A8	Eq-Temporal-Period-Value T35 past

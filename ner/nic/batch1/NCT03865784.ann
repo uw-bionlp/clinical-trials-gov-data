@@ -1,71 +1,71 @@
+E2	Procedure:T2 Name:T3
+E1	Eq-Comparison:T9 Temporal-Unit:T4 Operator:T8 Value:T6
+E3	Condition:T10 Name:T11
+E4	Modifier:T12 Modifies:E3
+E5	Condition:T13 Name:T14
+E8	Procedure:T17 Name:T18
+E9	Eq-Comparison:T19 Temporal-Unit:T5 Value:T7 Temporal-Period:T37
+E10	Allergy:T21
+E11	Condition:T22 Name:T23
+E12	Observation:T24 Name:T25
+E13	Age:T26 Eq-Comparison:E1
+E14	Negation:T27 Negates:E4
+E6	Observation:T15 Name:T28
+E7	Modifier:T16 Modifies:T14
+E15	And:T29 Arg:E6 Arg2:E5
+E16	Eq-Comparison:T30 Temporal-Period:T31
+E17	Eq-Comparison:T32 Temporal-Period:T33
+E18	Or:T34 Arg:E16 Arg2:E17
+E19	Procedure:T35 Temporality:E16 Temporality2:E17 Temporality3:E9
+E20	Or:T36 Arg:E8 Arg2:E2
+E21	Modifier:T38 Modifies:T23
+E22	Or:T39 Arg:E10 Arg2:E11
 T1	Life-Stage-And-Gender 66 70	Male
-A1	Life-Stage-And-Gender-Type T1 male
 T2	Procedure 329 342	physiotherapy
 T3	Procedure-Name 329 342	physiotherapy
-E2	Procedure:T2 Name:T3
 T4	Eq-Temporal-Unit 55 60	years
-A2	Eq-Temporal-Unit-Value T4 year
 T5	Eq-Temporal-Unit 357 363	months
-A3	Eq-Temporal-Unit-Value T5 month
 T6	Eq-Value 52 54	18
 T7	Eq-Value 355 356	6
 T8	Eq-Operator 47 51	Over
-A4	Eq-Operator-Value T8 GT
 T9	Eq-Comparison 47 60	Over 18 years
-E1	Eq-Comparison:T9 Temporal-Unit:T4 Operator:T8 Value:T6
 T10	Condition 94 103	back pain
-E3	Condition:T10 Name:T11
 T11	Condition-Name 94 103	back pain
 T12	Modifier 85 93	specific
-E4	Modifier:T12 Modifies:E3
 T13	Condition 243 249	injury
-E5	Condition:T13 Name:T14
 T14	Condition-Name 243 249	injury
 T17	Procedure 310 325	pharmacological
-E8	Procedure:T17 Name:T18
 T18	Procedure-Name 310 325	pharmacological
 T19	Eq-Comparison 350 363	last 6 months
-E9	Eq-Comparison:T19 Temporal-Unit:T5 Value:T7 Temporal-Period:T37
 T21	Allergy 380 389	allergies
-E10	Allergy:T21 
 T22	Condition 393 404	alterations
-E11	Condition:T22 Name:T23
 T23	Condition-Name 393 404	alterations
 T24	Observation 25 41	Federated boxers
-E12	Observation:T24 Name:T25
 T25	Observation-Name 25 41	Federated boxers
 T26	Age 55 60	years
-E13	Age:T26 Eq-Comparison:E1
 T27	Negation 81 84	non
-E14	Negation:T27 Negates:E4
 T15	Observation 214 230	Federated boxers
-E6	Observation:T15 Name:T28
 T28	Observation-Name 214 230	Federated boxers
+T16	Modifier 236 242	lumbar
+T29	And 231 235	with
+T30	Eq-Comparison 282 285	are
+T31	Eq-Temporal-Period 282 285	are
+T32	Eq-Comparison 289 298	have been
+T33	Eq-Temporal-Period 289 298	have been
+T34	Or 286 288	or
+T35	Procedure 299 306	treated
+T36	Or 326 328	or
+T37	Eq-Temporal-Period 350 354	last
+T38	Modifier 412 416	skin
+T39	Or 390 392	or
+A1	Life-Stage-And-Gender-Type T1 male
+A2	Eq-Temporal-Unit-Value T4 year
+A3	Eq-Temporal-Unit-Value T5 month
+A4	Eq-Operator-Value T8 GT
 A6	Observation-Type-Value T28 social-habit
 A7	Observation-Type-Value T25 social-habit
-T16	Modifier 236 242	lumbar
-E7	Modifier:T16 Modifies:T14
-T29	And 231 235	with
-E15	And:T29 Arg:E6 Arg2:E5
-T30	Eq-Comparison 282 285	are
-E16	Eq-Comparison:T30 Temporal-Period:T31
-T31	Eq-Temporal-Period 282 285	are
 A8	Eq-Temporal-Period-Value T31 present
-T32	Eq-Comparison 289 298	have been
-E17	Eq-Comparison:T32 Temporal-Period:T33
-T33	Eq-Temporal-Period 289 298	have been
 A9	Eq-Temporal-Period-Value T33 past
-T34	Or 286 288	or
-E18	Or:T34 Arg:E16 Arg2:E17
-T35	Procedure 299 306	treated
-E19	Procedure:T35 Temporality:E16 Temporality2:E17 Temporality3:E9
-R1	Using Arg1:E19 Arg2:E8	
-R2	Using Arg1:E19 Arg2:E2	
-T36	Or 326 328	or
-E20	Or:T36 Arg:E8 Arg2:E2
-T37	Eq-Temporal-Period 350 354	last
 A10	Eq-Temporal-Period-Value T37 past
-T38	Modifier 412 416	skin
-E21	Modifier:T38 Modifies:T23
-T39	Or 390 392	or
-E22	Or:T39 Arg:E10 Arg2:E11
+R1	Using Arg1:E19 Arg2:E8
+R2	Using Arg1:E19 Arg2:E2

@@ -1,0 +1,113 @@
+T1	Procedure 25 34	Treatment
+E1	Procedure:T1 
+T2	Negation 35 40	naïve
+E2	Negation:T2 Negates:E1
+T3	Or 41 43	or
+E3	Or:T3 Arg:E2 Arg2:E4
+T4	Drug 46 52	pegIFN
+E4	Drug:T4 Name:T53 Temporality:E33
+T5	Or 54 56	or
+E5	Or:T5 Arg:E4 Arg2:E6
+T6	Drug 57 60	IFN
+E6	Drug:T6 Name:T33
+T7	Or 63 69	and/or
+E7	Or:T7 Arg:E4 Arg2:E8
+T8	Drug 70 79	Ribavirin
+E8	Drug:T8 Name:T34 Temporality:E33
+T9	Drug 81 84	RBV
+E9	Drug:T9 Name:T35
+T10	Or 86 92	and/or
+E10	Or:T10 Arg:E8 Arg2:E11
+T11	Drug 93 103	sofosbuvir
+E11	Drug:T11 Name:T36 Temporality:E33
+T12	Drug 105 108	PRS
+E12	Drug:T12 Name:T37
+T13	Condition 137 140	CHC
+E13	Condition:T13 Name:T38
+T16	And 173 177	with
+E16	And:T16 Arg:E13
+T17	Or 178 180	or
+E17	Or:T17 Arg:E16 Arg2:E35
+T18	Modifier 189 200	compensated
+E18	Modifier:T18 Modifies:T44
+T19	Condition 201 210	cirrhosis
+E19	Condition:T19 Name:T44
+T20	Eq-Comparison 212 221	receiving
+E20	Eq-Comparison:T20 Temporal-Period:T45
+T21	Procedure 222 241	combination therapy
+E21	Procedure:T21 Name:T46 Temporality:E20
+T22	Drug 255 263	oral GLE
+E22	Drug:T22 Name:T47
+T23	Or 263 264	/
+E23	Or:T23 Arg:E22 Arg2:E24
+T24	Drug 264 267	PIB
+E24	Drug:T24 Name:T48
+T25	Eq-Comparison 395 408	up to 4 weeks
+E25	Eq-Comparison:T25 Operator:T50 Value:T51 Temporal-Unit:T52
+T26	Temporal-Connection 409 414	after
+E26	Temporal-Connection:T26 Arg:E25 Arg2:E28
+A1	Temporal-Connection-Type-Value E26 after
+T27	Procedure 415 424	treatment
+E27	Procedure:T27 Temporality:E28
+T28	Eq-Comparison 425 435	initiation
+E28	Eq-Comparison:T28 Temporal-Recency:T49
+T29	Temporal-Connection 504 509	prior
+E29	Temporal-Connection:T29 Arg:E30
+A2	Temporal-Connection-Type-Value E29 before
+T30	Study 532 537	study
+E30	Study:T30 
+T31	Negation 557 560	not
+E31	Negation:T31 Negates:E42
+T32	Procedure 637 648	therapeutic
+E32	Procedure:T32 Name:T59
+T33	Drug-Name 57 60	IFN
+T34	Drug-Name 70 79	Ribavirin
+T35	Drug-Name 81 84	RBV
+T36	Drug-Name 93 103	sofosbuvir
+T37	Drug-Name 105 108	PRS
+T38	Condition-Name 137 140	CHC
+T44	Condition-Name 201 210	cirrhosis
+T45	Eq-Temporal-Period 212 221	receiving
+A3	Eq-Temporal-Period-Value T45 present
+T46	Procedure-Name 222 241	combination therapy
+T47	Drug-Name 255 263	oral GLE
+T48	Drug-Name 264 267	PIB
+T50	Eq-Operator 395 400	up to
+A5	Eq-Operator-Value T50 LTEQ
+T51	Eq-Value 401 402	4
+T52	Eq-Temporal-Unit 403 408	weeks
+A6	Eq-Temporal-Unit-Value T52 week
+T53	Drug-Name 46 52	pegIFN
+R1	Abbrev-Of Arg1:E9 Arg2:E8	
+R2	Abbrev-Of Arg1:E12 Arg2:E11	
+T54	Eq-Comparison 110 121	experienced
+E33	Eq-Comparison:T54 Temporal-Period:T55
+T55	Eq-Temporal-Period 110 121	experienced
+A7	Eq-Temporal-Period-Value T55 past
+T56	And 122 126	with
+E34	And:T56 Arg:E12 Arg2:E13
+T57	Negation 181 188	without
+E35	Negation:T57 Negates:E19
+T14	Modifier 142 151	genotypes
+E14	Modifier:T14 Modifies:T38
+T15	Modifier 152 153	1
+E15	Modifier:T15 Modifies:T38
+T39	Modifier 155 156	2
+E36	Modifier:T39 Modifies:T38
+T40	Modifier 158 159	3
+E37	Modifier:T40 Modifies:T38
+T41	Modifier 161 162	4
+E38	Modifier:T41 Modifies:T38
+T42	Modifier 164 165	5
+E39	Modifier:T42 Modifies:T38
+T43	Modifier 170 171	6
+E40	Modifier:T43 Modifies:T38
+T58	Or 167 169	or
+E41	Or:T58 Arg:E39 Arg2:E40
+R3	Using Arg1:E21 Arg2:E22	
+R4	Using Arg1:E21 Arg2:E24	
+T49	Eq-Temporal-Recency 425 435	initiation
+A4	Eq-Temporal-Recency-Value T49 first-time
+T59	Procedure-Name 637 648	therapeutic
+T60	Study 649 654	trial
+E42	Study:T60 Study-Of:E32

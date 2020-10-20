@@ -1,0 +1,47 @@
+T1	Procedure 81 85	care
+E1	Procedure:T1 Location:T19
+T2	Modifier 132 141	singleton
+E2	Modifier:T2 Modifies:E3
+T3	Condition 142 151	pregnancy
+E3	Condition:T3 Name:T11
+T4	Birth 162 167	birth
+E4	Birth:T4 Temporality:E11 Temporality2:E5
+T5	Eq-Comparison 172 193	last one to six month
+E5	Eq-Comparison:T5 Temporal-Period:T12 Value:T13 Operator:T14 Value:T15 Temporal-Unit:T16
+T7	Condition 262 271	pregnancy
+E7	Condition:T7 Name:T17 Minimum-Count:E6
+T8	Negation 277 280	Not
+E8	Negation:T8 Negates:E9
+T9	Procedure 296 310	antenatal care
+E9	Procedure:T9 Name:T25 Location:T26
+T10	Condition-Name 71 80	pregnancy
+T11	Condition-Name 142 151	pregnancy
+T12	Eq-Temporal-Period 172 176	last
+A1	Eq-Temporal-Period-Value T12 past
+T13	Eq-Value 177 180	one
+T14	Eq-Operator 181 183	to
+A2	Eq-Operator-Value T14 BETWEEN
+T15	Eq-Value 184 187	six
+T16	Eq-Temporal-Unit 188 193	month
+A3	Eq-Temporal-Unit-Value T16 month
+T17	Condition-Name 262 271	pregnancy
+T18	Location 37 50	rural village
+A4	Location-Value T18 residence
+T19	Location 93 121	villages governmental clinic
+A5	Location-Value T19 clinic
+T20	Condition 71 80	pregnancy
+E10	Condition:T20 Name:T10
+R1	Treatment-For Arg1:E1 Arg2:E10	
+T21	Eq-Comparison 157 161	Gave
+E11	Eq-Comparison:T21 Temporal-Period:T22
+T22	Eq-Temporal-Period 157 161	Gave
+A6	Eq-Temporal-Period-Value T22 past
+T23	Location 231 242	urban areas
+A7	Location-Value T23 residence
+T6	Eq-Comparison 253 261	multiple
+E6	Eq-Comparison:T6 Operator:T24
+T24	Eq-Operator 253 261	multiple
+A8	Eq-Operator-Value T24 GT
+T25	Procedure-Name 296 310	antenatal care
+T26	Location 318 343	local governmental clinic
+A9	Location-Value T26 clinic

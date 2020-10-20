@@ -1,51 +1,51 @@
-T1	Eq-Comparison 25 36	20-70 years
 E1	Eq-Comparison:T1 Value:T24 Operator:T25 Value:T26 Temporal-Unit:T27
-T2	Age 37 40	old
 E2	Age:T2 Eq-Comparison:E1
-T3	Condition 61 85	myofascial pain syndrome
 E3	Condition:T3 Name:T28
-T4	Modifier 89 111	upper trapezium muscle
 E4	Modifier:T4 Modifies:T28
-T8	Condition 157 161	pain
 E8	Condition:T8 Name:T31
-T9	Condition 168 188	taut band irritation
 E9	Condition:T9 Name:T32
-T10	Condition 214 234	Cognitive impairment
 E10	Condition:T10 Name:T33
-T11	Procedure 246 255	operation
 E11	Procedure:T11 Name:T34
-T12	Modifier 259 263	neck
 E12	Modifier:T12 Modifies:T34
-T13	Or 264 267	and
 E13	Or:T13 Arg:E12 Arg2:E14
-T14	Modifier 268 276	shoulder
 E14	Modifier:T14 Modifies:T34
-T15	Condition 283 300	Nerve compression
 E15	Condition:T15 Name:T35
-T16	Modifier 304 319	cervical region
 E16	Modifier:T16 Modifies:T35
-T17	Assertion 326 331	Could
 E17	Assertion:T17 Asserted:E18
-A1	Assertion-Type-Value E17 hypothetical
-T18	Negation 332 335	not
 E18	Negation:T18 Negates:E19
-T19	Procedure 344 361	injection therapy
 E19	Procedure:T19 Name:T36
-T20	Eq-Comparison 363 370	history
 E20	Eq-Comparison:T20 Temporal-Period:T37
-T21	Condition 374 382	fainting
 E21	Condition:T21 Name:T38 Temporality:E20
-T22	Temporal-Connection 383 389	during
 E22	Temporal-Connection:T22 Arg:E21 Arg2:E23
-A2	Temporal-Connection-Type-Value E22 during
-T23	Procedure 390 398	needling
 E23	Procedure:T23 Name:T40
+E5	Condition:T5 Name:T30
+E6	Condition:T6 Name:T7
+E7	Temporal-Connection:T29 Arg:E8 Arg2:E9
+E24	Temporal-Connection:T39 Arg:E11
+T1	Eq-Comparison 25 36	20-70 years
+T2	Age 37 40	old
+T3	Condition 61 85	myofascial pain syndrome
+T4	Modifier 89 111	upper trapezium muscle
+T8	Condition 157 161	pain
+T9	Condition 168 188	taut band irritation
+T10	Condition 214 234	Cognitive impairment
+T11	Procedure 246 255	operation
+T12	Modifier 259 263	neck
+T13	Or 264 267	and
+T14	Modifier 268 276	shoulder
+T15	Condition 283 300	Nerve compression
+T16	Modifier 304 319	cervical region
+T17	Assertion 326 331	Could
+T18	Negation 332 335	not
+T19	Procedure 344 361	injection therapy
+T20	Eq-Comparison 363 370	history
+T21	Condition 374 382	fainting
+T22	Temporal-Connection 383 389	during
+T23	Procedure 390 398	needling
 T24	Eq-Value 25 27	20
 T25	Eq-Operator 27 28	-
-A3	Eq-Operator-Value T25 BETWEEN
 T26	Eq-Value 28 30	70
 T27	Eq-Temporal-Unit 31 36	years
-A4	Eq-Temporal-Unit-Value T27 year
 T28	Condition-Name 61 85	myofascial pain syndrome
 T30	Condition-Name 117 130	trigger point
 T31	Condition-Name 157 161	pain
@@ -55,17 +55,17 @@ T34	Procedure-Name 246 255	operation
 T35	Condition-Name 283 300	Nerve compression
 T36	Procedure-Name 344 361	injection therapy
 T37	Eq-Temporal-Period 363 370	history
-A5	Eq-Temporal-Period-Value T37 past
 T38	Condition-Name 374 382	fainting
 T5	Condition 117 130	trigger point
-E5	Condition:T5 Name:T30
 T6	Condition 136 145	taut band
-E6	Condition:T6 Name:T7
 T7	Condition-Name 136 145	taut band
 T29	Temporal-Connection 162 167	while
-E7	Temporal-Connection:T29 Arg:E8 Arg2:E9
-A6	Temporal-Connection-Type-Value E7 during
 T39	Temporal-Connection 241 245	Post
-E24	Temporal-Connection:T39 Arg:E11
-A7	Temporal-Connection-Type-Value E24 after
 T40	Procedure-Name 390 398	needling
+A1	Assertion-Type-Value E17 hypothetical
+A2	Temporal-Connection-Type-Value E22 during
+A3	Eq-Operator-Value T25 BETWEEN
+A4	Eq-Temporal-Unit-Value T27 year
+A5	Eq-Temporal-Period-Value T37 past
+A6	Temporal-Connection-Type-Value E7 during
+A7	Temporal-Connection-Type-Value E24 after

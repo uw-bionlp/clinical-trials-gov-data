@@ -1,0 +1,190 @@
+T1	Condition 39 49	burn scars
+E1	Condition:T1 Name:T57
+T2	Modifier 54 71	re-epithelialized
+E2	Modifier:T2 Modifies:T57
+T3	Temporal-Connection 72 77	after
+E3	Temporal-Connection:T3 Arg:E1 Arg2:E4
+A1	Temporal-Connection-Type-Value E3 after
+T4	Procedure 78 90	aseptic care
+E4	Procedure:T4 Name:T59
+T5	Or 91 93	or
+E5	Or:T5 Arg:E4 Arg2:E6
+T6	Procedure 94 104	skin graft
+E6	Procedure:T6 Name:T58
+T7	Age 127 131	aged
+E7	Age:T7 Eq-Comparison:E8
+T8	Eq-Comparison 132 141	≥18 years
+E8	Eq-Comparison:T8 Operator:T60 Temporal-Unit:T61 Value:T89
+T9	Modifier 149 171	deep partial-thickness
+E9	Modifier:T9 Modifies:T63
+T11	Modifier 173 186	second-degree
+E11	Modifier:T11 Modifies:T63
+T12	Condition 188 192	burn
+E12	Condition:T12 Name:T63
+T13	Or 193 195	or
+E13	Or:T13 Arg:E12 Arg2:E16
+T14	Modifier 198 212	full thickness
+E14	Modifier:T14 Modifies:T64
+T15	Modifier 214 226	third-degree
+E15	Modifier:T15 Modifies:T64
+T16	Condition 228 232	burn
+E16	Condition:T16 Name:T64
+T17	Condition 254 271	joint contracture
+E17	Condition:T17 Name:T91
+T18	Or 277 280	and
+E18	Or:T18 Arg:E58 Arg2:E19
+T19	Modifier 281 286	wrist
+E19	Modifier:T19 Modifies:T91
+T20	Encounter 301 312	transferred
+E20	Encounter:T20 Type:T65 Location:T94
+T21	Temporal-Connection 346 351	after
+E21	Temporal-Connection:T21 Arg:E20 Arg2:E22
+A2	Temporal-Connection-Type-Value E21 after
+T22	Procedure 363 372	treatment
+E22	Procedure:T22 Name:T67 Temporality:E24
+T24	Eq-Comparison 378 396	less than 6 months
+E24	Eq-Comparison:T24 Operator:T68 Value:T69 Temporal-Unit:T70
+T25	Temporal-Connection 397 402	since
+E25	Temporal-Connection:T25 Arg:E24 Arg2:E26
+A3	Temporal-Connection-Type-Value E25 after
+T26	Eq-Comparison 407 412	onset
+E26	Eq-Comparison:T26 Temporal-Recency:T71
+T27	Modifier 420 424	burn
+E27	Modifier:T27 Modifies:T72
+T28	Condition 425 431	injury
+E28	Condition:T28 Name:T72 Temporality:E26
+T29	Modifier 475 488	fourth-degree
+E29	Modifier:T29 Modifies:T73
+T30	Condition 489 494	burns
+E30	Condition:T30 Name:T73
+T31	Modifier 514 521	tendons
+E31	Modifier:T31 Modifies:T74
+T32	Or 523 526	and
+E32	Or:T32 Arg:E31 Arg2:E33
+T33	Modifier 527 531	bone
+E33	Modifier:T33 Modifies:T74
+T34	Condition 532 540	injuries
+E34	Condition:T34 Name:T74
+T35	Condition 543 567	musculoskeletal diseases
+E35	Condition:T35 Name:T75
+T36	Condition 578 588	amputation
+E36	Condition:T36 Name:T99
+T37	Condition 590 610	rheumatoid arthritis
+E37	Condition:T37 Name:T76
+T38	Or 612 615	and
+E38	Or:T38 Arg:E37 Arg2:E40
+T40	Condition 616 643	degenerative joint diseases
+E40	Condition:T40 Name:T77
+T41	Modifier 652 663	burned hand
+E41	Modifier:T41 Modifies:E35
+T42	Or 665 667	or
+E42	Or:T42 Arg:E35 Arg2:E44
+T44	Condition 668 689	neurological diseases
+E44	Condition:T44 Name:T39
+T45	Condition 698 724	peripheral nerve disorders
+E45	Condition:T45 Name:T78
+T46	Modifier 739 747	physical
+E46	Modifier:T46 Modifies:T80
+T47	Or 748 751	and
+E47	Or:T47 Arg:E46 Arg2:E48
+T48	Modifier 752 763	psychologic
+E48	Modifier:T48 Modifies:T80
+T49	Condition 764 774	disability
+E49	Condition:T49 Name:T80 Temporality:E39
+T50	Condition 783 790	aphasia
+E50	Condition:T50 Name:T82 Severity:T81
+T51	Or 791 794	and
+E51	Or:T51 Arg:E50 Arg2:E52
+T52	Condition 795 815	cognitive impairment
+E52	Condition:T52 Name:T83
+T53	Assertion 821 826	could
+E53	Assertion:T53 Asserted:T84
+A4	Assertion-Type-Value E53 hypothetical
+T55	Or 856 859	and
+E55	Or:T55 Arg:E49 Arg2:E54
+T56	Procedure 881 900	hand rehabilitation
+E56	Procedure:T56 Name:T88 Stability:T100
+T57	Condition-Name 39 49	burn scars
+T59	Procedure-Name 78 90	aseptic care
+T60	Eq-Operator 132 133	≥
+A5	Eq-Operator-Value T60 GTEQ
+T61	Eq-Temporal-Unit 136 141	years
+A6	Eq-Temporal-Unit-Value T61 year
+T63	Condition-Name 188 192	burn
+T64	Condition-Name 228 232	burn
+T66	Severity 352 357	acute
+A8	Severity-Value T66 severe
+T67	Procedure-Name 363 372	treatment
+T68	Eq-Operator 378 387	less than
+A9	Eq-Operator-Value T68 LT
+T69	Eq-Value 388 389	6
+T70	Eq-Temporal-Unit 390 396	months
+A10	Eq-Temporal-Unit-Value T70 month
+T71	Eq-Temporal-Recency 407 412	onset
+A11	Eq-Temporal-Recency-Value T71 first-time
+T72	Condition-Name 425 431	injury
+T73	Condition-Name 489 494	burns
+T74	Condition-Name 532 540	injuries
+T75	Condition-Name 543 567	musculoskeletal diseases
+T76	Condition-Name 590 610	rheumatoid arthritis
+T77	Condition-Name 616 643	degenerative joint diseases
+T78	Condition-Name 698 724	peripheral nerve disorders
+T80	Condition-Name 764 774	disability
+T81	Severity 776 782	severe
+A12	Severity-Value T81 severe
+T82	Condition-Name 783 790	aphasia
+T83	Condition-Name 795 815	cognitive impairment
+T84	Stability 827 836	influence
+A13	Stability-Value T84 change
+T86	Severity 860 866	severe
+A14	Severity-Value T86 severe
+T87	Condition-Name 867 871	pain
+T88	Procedure-Name 881 900	hand rehabilitation
+T58	Procedure-Name 94 104	skin graft
+T89	Eq-Value 133 135	18
+T10	And 142 146	with
+E10	And:T10 Arg:E7 Arg2:E12
+T62	Modifier 242 247	hands
+E57	Modifier:T62 Modifies:T64
+T90	Modifier 272 276	hand
+E58	Modifier:T90 Modifies:T91
+T91	Condition-Name 254 271	joint contracture
+T65	Encounter-Type 301 312	transferred
+A7	Encounter-Type-Value T65 transfer
+T92	And 249 253	with
+E59	And:T92 Arg:E16 Arg2:E17
+T93	And 289 300	having been
+E60	And:T93 Arg:E17 Arg2:E20
+T94	Location 320 345	rehabilitation department
+A15	Location-Value T94 unit
+T95	Condition 358 362	burn
+E61	Condition:T95 Name:T96 Severity:T66
+T96	Condition-Name 358 362	burn
+R1	Treatment-For Arg1:E22 Arg2:E61	
+T23	Modifier 505 512	muscles
+E23	Modifier:T23 Modifies:T74
+R2	Example-Of Arg1:E34 Arg2:E30	
+T97	Condition 568 576	fracture
+E62	Condition:T97 Name:T98
+T98	Condition-Name 568 576	fracture
+T99	Condition-Name 578 588	amputation
+R3	Example-Of Arg1:E62 Arg2:E35	
+R4	Example-Of Arg1:E36 Arg2:E35	
+R5	Example-Of Arg1:E37 Arg2:E35	
+R6	Example-Of Arg1:E40 Arg2:E35	
+T39	Condition-Name 668 689	neurological diseases
+R7	Example-Of Arg1:E45 Arg2:E44	
+T43	Eq-Comparison 727 738	preexisting
+E39	Eq-Comparison:T43 Temporal-Period:T79
+T79	Eq-Temporal-Period 727 738	preexisting
+A16	Eq-Temporal-Period-Value T79 past
+R8	Example-Of Arg1:E50 Arg2:E49	
+R9	Example-Of Arg1:E52 Arg2:E49	
+T54	Study 841 853	intervention
+E43	Study:T54 Stability:T84
+R10	Caused-By Arg1:T84 Arg2:E52	
+T85	Condition 867 871	pain
+E54	Condition:T85 Name:T87 Severity:T86
+T100	Stability 872 880	impeding
+A17	Stability-Value T100 change
+R11	Caused-By Arg1:T100 Arg2:E54	

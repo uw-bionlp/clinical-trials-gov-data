@@ -1,0 +1,51 @@
+T1	Procedure 318 338	relaxation technique
+T2	Procedure-Name 318 338	relaxation technique
+E1	Procedure:T1 Name:T2
+T3	Condition 192 199	anxiety
+T4	Condition-Name 192 199	anxiety
+E3	Condition:T3 Name:T4
+T5	Language 253 259	French
+T6	Condition 161 175	sleep problems
+T7	Condition-Name 161 175	sleep problems
+E6	Condition:T6 Name:T7
+T8	Eq-Temporal-Unit 154 159	weeks
+A1	Eq-Temporal-Unit-Value T8 week
+T9	Eq-Value 42 44	18
+T10	Eq-Comparison 31 44	older than 18
+E2	Eq-Comparison:T10 Operator:T11 Value:T9
+T11	Eq-Operator 31 41	older than
+A2	Eq-Operator-Value T11 GT
+T12	Age 31 36	older
+E4	Age:T12 Eq-Comparison:E2
+T13	Condition 72 75	HIV
+E5	Condition:T13 Name:T14
+T14	Condition-Name 72 75	HIV
+T15	Eq-Comparison 90 102	at least one
+E7	Eq-Comparison:T15 Operator:T16 Value:T17
+T16	Eq-Operator 90 98	at least
+A3	Eq-Operator-Value T16 GTEQ
+T17	Eq-Value 99 102	one
+T18	Criteria-Count 106 128	the following symptoms
+E8	Criteria-Count:T18 Min-Value:E7 Temporality:E9 Criteria:E6 Criteria2:E10 Criteria3:E11 Criteria4:E12
+T19	Eq-Comparison 140 159	preceding two weeks
+E9	Eq-Comparison:T19 Temporal-Period:T20 Temporal-Unit:T8 Value:T21
+T20	Eq-Temporal-Period 140 149	preceding
+A4	Eq-Temporal-Period-Value T20 past
+T21	Eq-Value 150 153	two
+T22	Condition 177 184	fatigue
+E10	Condition:T22 Name:T23
+T23	Condition-Name 177 184	fatigue
+T24	Condition 186 190	pain
+E11	Condition:T24 Name:T25
+T25	Condition-Name 186 190	pain
+T26	Condition 215 225	depression
+E12	Condition:T26 Name:T27
+T27	Condition-Name 215 225	depression
+T28	Assertion 203 211	symptoms
+E13	Assertion:T28 Asserted:E12
+A5	Assertion-Type-Value E13 possible
+T29	Or 200 202	or
+E14	Or:T29 Arg:E3 Arg2:E13
+T30	Assertion 273 280	able to
+E15	Assertion:T30 Asserted:E1
+A6	Assertion-Type-Value E15 hypothetical

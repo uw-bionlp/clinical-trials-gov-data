@@ -1,86 +1,86 @@
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6 Temporality:E19 Temporality2:E20
+E6	Eq-Comparison:T10 Temporal-Period:T11
+E1	Condition:T1 Name:T2
+E2	Modifier:T12 Modifies:T2
+E4	Modifier:T13 Modifies:T2
+E7	Or:T14 Arg:E4 Arg2:E2
+E8	Eq-Comparison:T15 Operator:T16 Value:T17
+E9	Drug:T18 Minimum-Count:E8 Name:T19
+E12	Drug:T22 Name:T23
+E13	Drug:T24 Name:T25
+E10	Drug:T20 Name:T21
+E11	Or:T26 Arg:E9 Arg2:E10
+E14	Observation:T27 Name:T28
+E15	Observation:T29 Name:T30
+E16	Eq-Comparison:T31 Temporal-Recency:T32
+E17	Procedure:T33 Temporality:E16
+E18	Temporal-Connection:T34 Arg:E15 Arg2:E17
+E19	Eq-Comparison:T35 Operator:T36 Value:T7 Value2:T8
+E20	Eq-Comparison:T37 Temporal-Period:T38
+E21	Eq-Comparison:T39 Value:T40
+E22	Drug:T41 Name:T42 Minimum-Count:E21
+E23	Procedure:T43 Temporality:E6
+E24	Drug:T44 Name:T45
+E25	Drug:T9 Name:T46 Dose:T47
 T3	Procedure 102 122	first-line treatment
 T4	Procedure-Name 102 122	first-line treatment
-E3	Procedure:T3 Name:T4
 T5	Procedure 387 407	first-line treatment
 T6	Procedure-Name 387 407	first-line treatment
-E5	Procedure:T5 Name:T6 Temporality:E19 Temporality2:E20
 T7	Eq-Value 428 432	2007
 T8	Eq-Value 437 446	June 2016
 T10	Eq-Comparison 481 491	previously
-E6	Eq-Comparison:T10 Temporal-Period:T11
 T11	Eq-Temporal-Period 481 491	previously
-A1	Eq-Temporal-Period-Value T11 past
 T1	Condition 81 90	carcinoma
-E1	Condition:T1 Name:T2
 T2	Condition-Name 81 90	carcinoma
 T12	Modifier 59 80	metastatic renal cell
-E2	Modifier:T12 Modifies:T2
 T13	Modifier 39 55	locally advanced
-E4	Modifier:T13 Modifies:T2
 T14	Or 56 58	or
-E7	Or:T14 Arg:E4 Arg2:E2
 T15	Eq-Comparison 132 144	at least one
-E8	Eq-Comparison:T15 Operator:T16 Value:T17
 T16	Eq-Operator 132 140	at least
-A2	Eq-Operator-Value T16 GTEQ
 T17	Eq-Value 141 144	one
 T18	Drug 145 166	anti-angiogenic agent
-E9	Drug:T18 Minimum-Count:E8 Name:T19
-R1	Using Arg1:E3 Arg2:E9	
 T22	Drug 168 193	tyrosine kinase inhibitor
-E12	Drug:T22 Name:T23
 T23	Drug-Name 168 193	tyrosine kinase inhibitor
-R3	Example-Of Arg1:E12 Arg2:E9	
 T24	Drug 197 218	monoclonal antibodies
-E13	Drug:T24 Name:T25
 T25	Drug-Name 197 218	monoclonal antibodies
 T19	Drug-Name 145 166	anti-angiogenic agent
 T20	Drug 232 246	mTOR inhibitor
-E10	Drug:T20 Name:T21
 T21	Drug-Name 232 246	mTOR inhibitor
 T26	Or 220 228	and / or
-E11	Or:T26 Arg:E9 Arg2:E10
 T27	Observation 278 285	ECOG-PS
-E14	Observation:T27 Name:T28
 T28	Observation-Name 278 285	ECOG-PS
 T29	Observation 293 346	Eastern Cooperative Oncology Group Performance Status
-E15	Observation:T29 Name:T30
 T30	Observation-Name 293 346	Eastern Cooperative Oncology Group Performance Status
-A3	Observation-Type-Value T30 clinical-score
-R2	Abbrev-Of Arg1:E14 Arg2:E15	
 T31	Eq-Comparison 361 371	initiation
-E16	Eq-Comparison:T31 Temporal-Recency:T32
 T32	Eq-Temporal-Recency 361 371	initiation
-A4	Eq-Temporal-Recency-Value T32 first-time
 T33	Procedure 351 360	treatment
-E17	Procedure:T33 Temporality:E16
 T34	Temporal-Connection 348 350	at
-E18	Temporal-Connection:T34 Arg:E15 Arg2:E17
-A5	Temporal-Connection-Type-Value E18 during
 T35	Eq-Comparison 420 446	between 2007 and June 2016
-E19	Eq-Comparison:T35 Operator:T36 Value:T7 Value2:T8
 T36	Eq-Operator 420 427	between
-A6	Eq-Operator-Value T36 BETWEEN
 T37	Eq-Comparison 408 419	carried out
-E20	Eq-Comparison:T37 Temporal-Period:T38
 T38	Eq-Temporal-Period 408 419	carried out
-A7	Eq-Temporal-Period-Value T38 past
 T39	Eq-Comparison 510 513	one
-E21	Eq-Comparison:T39 Value:T40
 T40	Eq-Value 510 513	one
 T41	Drug 514 522	cytokine
-E22	Drug:T41 Name:T42 Minimum-Count:E21
 T42	Drug-Name 514 522	cytokine
 T43	Procedure 492 499	treated
-E23	Procedure:T43 Temporality:E6
-R4	Using Arg1:E23 Arg2:E22	
 T44	Drug 524 538	Interferon α2a
-E24	Drug:T44 Name:T45
 T45	Drug-Name 524 538	Interferon α2a
-R5	Example-Of Arg1:E24 Arg2:E22	
 T9	Drug 550 563	interleukin-2
-E25	Drug:T9 Name:T46 Dose:T47
 T46	Drug-Name 550 563	interleukin-2
 T47	Polarity 540 544	high
+A1	Eq-Temporal-Period-Value T11 past
+A2	Eq-Operator-Value T16 GTEQ
+A3	Observation-Type-Value T30 clinical-score
+A4	Eq-Temporal-Recency-Value T32 first-time
+A5	Temporal-Connection-Type-Value E18 during
+A6	Eq-Operator-Value T36 BETWEEN
+A7	Eq-Temporal-Period-Value T38 past
 A8	Polarity-Value T47 high
-R6	Example-Of Arg1:E25 Arg2:E22	
+R1	Using Arg1:E3 Arg2:E9
+R3	Example-Of Arg1:E12 Arg2:E9
+R2	Abbrev-Of Arg1:E14 Arg2:E15
+R4	Using Arg1:E23 Arg2:E22
+R5	Example-Of Arg1:E24 Arg2:E22
+R6	Example-Of Arg1:E25 Arg2:E22

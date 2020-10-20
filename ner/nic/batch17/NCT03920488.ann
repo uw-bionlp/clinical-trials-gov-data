@@ -1,21 +1,51 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E6	Age:T13 Eq-Comparison:E2
+E7	Eq-Comparison:T22 Operator:T8 Value:T16 Unit:T38
+E8	Eq-Comparison:T23 Operator:T9 Value:T17 Unit:T43
+E9	Eq-Comparison:T24 Operator:T10 Temporal-Unit:T12 Value:T21
+E2	Eq-Comparison:T25 Operator:T26 Value:T14 Value2:T15 Temporal-Unit:T11
+E4	Condition:T27 Name:T28 Polarity:T30
+E10	Modifier:T29 Modifies:T28
+E11	Modifier:T31 Modifies:T28
+E12	Procedure:T32 Name:T33
+E13	Observation:T34 Name:T35 Eq-Comparison:E7
+E14	Observation:T36 Name:T37
+E15	Observation:T39 Name:T40 Eq-Comparison:E8
+E16	Observation:T41 Name:T42
+E17	Condition:T44 Name:T45
+E18	Condition:T46 Name:T47 Polarity:T49
+E19	Or:T48 Arg:E17 Arg2:E18
+E20	Observation:T50 Name:T51 Eq-Comparison:E21
+E21	Eq-Comparison:T52 Value:T18 Value2:T19 Value3:T20
+E22	Condition:T53 Name:T54
+E23	Eq-Comparison:T7 Operator:T59 Unit:T56 Value:T57 Value2:T58
+E24	Procedure:T60 Name:T61
+E25	Assertion:T62 Asserted:E24
+E26	Temporal-Connection:T63 Arg:E24 Arg2:E3
+E27	Modifier:T64 Modifies:E3
+E28	Or:T65 Arg:E27 Arg2:E26
+E5	Observation:T5 Name:T6 Temporality:E9
+E29	Modifier:T66
+E30	Modifier:T67
+E31	Or:T68 Arg:E30 Arg2:E29
+E32	Study:T69
+E33	Temporal-Connection:T70 Arg:E9 Arg2:E32
+E34	Negation:T71 Negates:E1
+E35	Or:T72 Arg:E36 Arg2:E34
+E36	Negation:T73
+E37	Assertion:T74 Asserted:E34
+E38	Assertion:T75 Asserted:E36
 T1	Procedure 473 492	genetic counselling
 T2	Procedure-Name 473 492	genetic counselling
-E1	Procedure:T1 Name:T2
 T3	Procedure 326 337	neoadjuvant
 T4	Procedure-Name 326 337	neoadjuvant
-E3	Procedure:T3 Name:T4
 T8	Eq-Operator 171 172	<
-A1	Eq-Operator-Value T8 LT
 T9	Eq-Operator 206 207	<
-A2	Eq-Operator-Value T9 LT
 T10	Eq-Operator 386 392	within
-A3	Eq-Operator-Value T10 LTEQ
 T11	Eq-Temporal-Unit 47 52	years
-A4	Eq-Temporal-Unit-Value T11 year
 T12	Eq-Temporal-Unit 395 401	months
-A5	Eq-Temporal-Unit-Value T12 month
 T13	Age 25 28	age
-E6	Age:T13 Eq-Comparison:E2
 T14	Eq-Value 37 39	18
 T15	Eq-Value 44 46	60
 T16	Eq-Value 173 174	1
@@ -25,111 +55,81 @@ T19	Eq-Value 238 239	1
 T20	Eq-Value 244 245	2
 T21	Eq-Value 393 394	6
 T22	Eq-Comparison 171 175	< 1%
-E7	Eq-Comparison:T22 Operator:T8 Value:T16 Unit:T38
 T23	Eq-Comparison 206 210	< 1%
-E8	Eq-Comparison:T23 Operator:T9 Value:T17 Unit:T43
 T24	Eq-Comparison 386 401	within 6 months
-E9	Eq-Comparison:T24 Operator:T10 Temporal-Unit:T12 Value:T21
 T25	Eq-Comparison 29 52	between 18 and 60 years
-E2	Eq-Comparison:T25 Operator:T26 Value:T14 Value2:T15 Temporal-Unit:T11
 T26	Eq-Operator 29 36	between
-A6	Eq-Operator-Value T26 BETWEEN
 T27	Condition 139 145	cancer
-E4	Condition:T27 Name:T28 Polarity:T30
 T28	Condition-Name 139 145	cancer
 T29	Modifier 132 138	breast
-E10	Modifier:T29 Modifies:T28
 T30	Polarity 123 131	negative
-A7	Polarity-Value T30 negative
 T31	Modifier 116 122	triple
-E11	Modifier:T31 Modifies:T28
 T32	Procedure 91 105	histologically
-E12	Procedure:T32 Name:T33
 T33	Procedure-Name 91 105	histologically
-R1	Found-By Arg1:E4 Arg2:E12	
 T34	Observation 151 169	Estrogen Receptors
-E13	Observation:T34 Name:T35 Eq-Comparison:E7
 T35	Observation-Name 151 169	Estrogen Receptors
-A8	Observation-Type-Value T35 lab
 T36	Observation 147 149	ER
-E14	Observation:T36 Name:T37
 T37	Observation-Name 147 149	ER
-R2	Abbrev-Of Arg1:E14 Arg2:E13	
 T38	Eq-Unit 174 175	%
 T39	Observation 182 204	Progesterone Receptors
-E15	Observation:T39 Name:T40 Eq-Comparison:E8
 T40	Observation-Name 182 204	Progesterone Receptors
-A9	Observation-Type-Value T40 lab
 T41	Observation 177 180	PgR
-E16	Observation:T41 Name:T42
 T42	Observation-Name 177 180	PgR
-R3	Abbrev-Of Arg1:E16 Arg2:E15	
 T43	Eq-Unit 209 210	%
 T44	Condition 212 216	HER2
-E17	Condition:T44 Name:T45
 T45	Condition-Name 212 216	HER2
 T46	Condition 217 220	neu
-E18	Condition:T46 Name:T47 Polarity:T49
 T47	Condition-Name 217 220	neu
 T48	Or 216 217	/
-E19	Or:T48 Arg:E17 Arg2:E18
 T49	Polarity 221 229	negative
-A10	Polarity-Value T49 negative
 T50	Observation 231 234	IHC
-E20	Observation:T50 Name:T51 Eq-Comparison:E21
 T51	Observation-Name 231 234	IHC
 T52	Eq-Comparison 235 246	0, 1+ or 2+
-E21	Eq-Comparison:T52 Value:T18 Value2:T19 Value3:T20
 T53	Condition 247 251	FISH
-E22	Condition:T53 Name:T54
 T54	Condition-Name 247 251	FISH
 T55	Polarity 252 260	negative
-A11	Polarity-Value T55 negative
-R4	Equivalent-To Arg1:E22 Arg2:T55	
-R5	Equivalent-To Arg1:E20 Arg2:E18	
 T7	Eq-Comparison 268 279	Stage I-III
-E23	Eq-Comparison:T7 Operator:T59 Unit:T56 Value:T57 Value2:T58
 T56	Eq-Unit 268 273	Stage
 T57	Eq-Value 274 275	I
 T58	Eq-Value 276 279	III
 T59	Eq-Operator 275 276	-
-A12	Eq-Operator-Value T59 BETWEEN
 T60	Procedure 301 308	surgery
-E24	Procedure:T60 Name:T61
 T61	Procedure-Name 301 308	surgery
 T62	Assertion 285 292	Able to
-E25	Assertion:T62 Asserted:E24
-A13	Assertion-Type-Value E25 hypothetical
 T63	Temporal-Connection 321 325	post
-E26	Temporal-Connection:T63 Arg:E24 Arg2:E3
-A14	Temporal-Connection-Type-Value E26 after
 T64	Modifier 310 317	primary
-E27	Modifier:T64 Modifies:E3
 T65	Or 318 320	or
-E28	Or:T65 Arg:E27 Arg2:E26
 T5	Observation 377 385	material
-E5	Observation:T5 Name:T6 Temporality:E9
 T6	Observation-Name 377 385	material
 T66	Modifier 369 376	bioptic
-E29	Modifier:T66 
 T67	Modifier 360 368	surgical
-E30	Modifier:T67 
 T68	Or 368 369	/
-E31	Or:T68 Arg:E30 Arg2:E29
 T69	Study 407 416	enrolment
-E32	Study:T69 
 T70	Temporal-Connection 402 406	from
-E33	Temporal-Connection:T70 Arg:E9 Arg2:E32
-A15	Temporal-Connection-Type-Value E33 after
 T71	Negation 452 461	unwilling
-E34	Negation:T71 Negates:E1
 T72	Or 449 451	or
-E35	Or:T72 Arg:E36 Arg2:E34
 T73	Negation 442 448	unable
-E36	Negation:T73 
 T74	Assertion 452 461	unwilling
-E37	Assertion:T74 Asserted:E34
-A16	Assertion-Type-Value E37 hypothetical
 T75	Assertion 442 448	unable
-E38	Assertion:T75 Asserted:E36
+A1	Eq-Operator-Value T8 LT
+A2	Eq-Operator-Value T9 LT
+A3	Eq-Operator-Value T10 LTEQ
+A4	Eq-Temporal-Unit-Value T11 year
+A5	Eq-Temporal-Unit-Value T12 month
+A6	Eq-Operator-Value T26 BETWEEN
+A7	Polarity-Value T30 negative
+A8	Observation-Type-Value T35 lab
+A9	Observation-Type-Value T40 lab
+A10	Polarity-Value T49 negative
+A11	Polarity-Value T55 negative
+A12	Eq-Operator-Value T59 BETWEEN
+A13	Assertion-Type-Value E25 hypothetical
+A14	Temporal-Connection-Type-Value E26 after
+A15	Temporal-Connection-Type-Value E33 after
+A16	Assertion-Type-Value E37 hypothetical
 A17	Assertion-Type-Value E38 hypothetical
+R1	Found-By Arg1:E4 Arg2:E12
+R2	Abbrev-Of Arg1:E14 Arg2:E13
+R3	Abbrev-Of Arg1:E16 Arg2:E15
+R4	Equivalent-To Arg1:E22 Arg2:T55
+R5	Equivalent-To Arg1:E20 Arg2:E18

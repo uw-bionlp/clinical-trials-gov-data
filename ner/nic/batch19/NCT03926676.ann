@@ -1,42 +1,42 @@
+E1	Condition:T1 Name:T2 Temporality:E3 Severity:T21
+E3	Eq-Comparison:T8 Temporal-Period:T9
+E4	Condition:T10 Name:T11
+E5	Or:T12 Arg:T5 Arg2:T4
+E6	Condition:T13 Name:T14
+E7	Modifier:T15 Modifies:T14
+E8	Modifier:T16 Modifies:T11
+E9	Study:T17
+E10	Assertion:T18 Asserted:E9
+E2	Condition:T6
+E11	Modifier:T7 Modifies:E2
+E12	Condition:T19 Severity:T20
+E13	Or:T22 Arg:T21 Arg2:E3
 T1	Condition 308 327	periodontal disease
 T2	Condition-Name 308 327	periodontal disease
-E1	Condition:T1 Name:T2 Temporality:E3 Severity:T21
 T3	Life-Stage-And-Gender 91 103	young adults
-A1	Life-Stage-And-Gender-Type T3 adult
 T4	Life-Stage-And-Gender 113 120	females
-A2	Life-Stage-And-Gender-Type T4 female
 T5	Life-Stage-And-Gender 104 109	males
-A3	Life-Stage-And-Gender-Type T5 male
 T8	Eq-Comparison 301 307	active
-E3	Eq-Comparison:T8 Temporal-Period:T9
 T9	Eq-Temporal-Period 301 307	active
-A5	Eq-Temporal-Period-Value T9 present
 T10	Condition 45 63	broken vital teeth
-E4	Condition:T10 Name:T11
 T11	Condition-Name 45 63	broken vital teeth
 T12	Or 110 112	or
-E5	Or:T12 Arg:T5 Arg2:T4
 T13	Condition 69 81	oral hygiene
-E6	Condition:T13 Name:T14
 T14	Condition-Name 69 81	oral hygiene
 T15	Modifier 64 68	good
-E7	Modifier:T15 Modifies:T14
 T16	Modifier 39 44	badly
-E8	Modifier:T16 Modifies:T11
 T17	Study 174 179	study
-E9	Study:T17 
 T18	Assertion 142 151	approving
-E10	Assertion:T18 Asserted:E9
-A6	Assertion-Type-Value E10 hypothetical
 T6	Condition 231 246	medical history
-E2	Condition:T6 
 T7	Modifier 219 230	compromised
-E11	Modifier:T7 Modifies:E2
 T19	Condition 273 290	medical condition
-E12	Condition:T19 Severity:T20
 T20	Severity 266 272	severe
-A4	Severity-Value T20 severe
 T21	Severity 291 297	severe
-A7	Severity-Value T21 severe
 T22	Or 298 300	or
-E13	Or:T22 Arg:T21 Arg2:E3
+A1	Life-Stage-And-Gender-Type T3 adult
+A2	Life-Stage-And-Gender-Type T4 female
+A3	Life-Stage-And-Gender-Type T5 male
+A5	Eq-Temporal-Period-Value T9 present
+A6	Assertion-Type-Value E10 hypothetical
+A4	Severity-Value T20 severe
+A7	Severity-Value T21 severe

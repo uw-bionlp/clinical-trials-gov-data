@@ -1,0 +1,47 @@
+T1	Condition 38 42	ARDS
+E1	Condition:T1 Name:T12
+T2	Observation 69 78	P/F ratio
+E2	Observation:T2 Name:T26 Eq-Comparison:E3
+T3	Eq-Comparison 79 94	between 100-300
+E3	Eq-Comparison:T3 Operator:T13 Value:T14 Operator:T15 Value:T16
+T5	Eq-Comparison 131 146	within 48 hours
+E5	Eq-Comparison:T5 Operator:T17 Value:T18 Temporal-Unit:T19
+T6	Eq-Comparison 172 190	Less than 18 years
+E6	Eq-Comparison:T6 Operator:T20 Value:T21 Temporal-Unit:T22
+T7	Age 191 194	old
+E7	Age:T7 Eq-Comparison:E6
+T8	Condition 200 209	Pregnancy
+E8	Condition:T8 Name:T23
+T9	Procedure 233 245	tracheostomy
+E9	Procedure:T9 Name:T24
+T10	Negation 251 257	Unable
+E10	Negation:T10 Negates:E11
+T11	Procedure 272 279	NG-tube
+E11	Procedure:T11 Name:T25
+T12	Condition-Name 38 42	ARDS
+T13	Eq-Operator 79 86	between
+A1	Eq-Operator-Value T13 BETWEEN
+T14	Eq-Value 87 90	100
+T15	Eq-Operator 90 91	-
+A2	Eq-Operator-Value T15 BETWEEN
+T16	Eq-Value 91 94	300
+T17	Eq-Operator 131 137	within
+A3	Eq-Operator-Value T17 LTEQ
+T18	Eq-Value 138 140	48
+T19	Eq-Temporal-Unit 141 146	hours
+A4	Eq-Temporal-Unit-Value T19 hour
+T20	Eq-Operator 172 181	Less than
+A5	Eq-Operator-Value T20 LT
+T21	Eq-Value 182 184	18
+T22	Eq-Temporal-Unit 185 190	years
+A6	Eq-Temporal-Unit-Value T22 year
+T23	Condition-Name 200 209	Pregnancy
+T24	Procedure-Name 233 245	tracheostomy
+T25	Procedure-Name 272 279	NG-tube
+T26	Observation-Name 69 78	P/F ratio
+A7	Observation-Type-Value T26 measurement
+T4	Study 119 130	enrollement
+E4	Study:T4 Temporality:E5
+T27	Assertion 251 257	Unable
+E12	Assertion:T27 Asserted:E10
+A8	Assertion-Type-Value E12 hypothetical

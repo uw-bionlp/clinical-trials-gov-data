@@ -1,198 +1,198 @@
-T1	Eq-Comparison 25 36	18-40 years
 E1	Eq-Comparison:T1 Value:T55 Operator:T56 Value:T57 Temporal-Unit:T58
-T2	Observation 42 45	BMI
 E2	Observation:T2 Name:T59 Eq-Comparison:E3
-T3	Eq-Comparison 46 63	= 18.5-29.9 kg/m2
 E3	Eq-Comparison:T3 Value:T61 Operator:T62 Value:T63 Unit:T64 Operator2:T60 Per:T65
-T4	Or 74 76	or
 E4	Or:T4 Arg:T66 Arg2:T67
-T7	Negation 154 157	Non
 E7	Negation:T7 Negates:E8 Negates2:E57 Negates3:E9
-T8	Condition 158 164	smoker
 E8	Condition:T8 Name:T77
-T9	Drug 202 214	e-cigarettes
 E9	Drug:T9 Name:T78
-T10	Condition 221 228	Healthy
 E10	Condition:T10 Name:T79
-T11	Observation 248 286	School's standard health questionnaire
 E11	Observation:T11 Name:T81
-T12	Negation 293 295	No
 E12	Negation:T12 Negates:E16
-T13	Modifier 296 311	cardiometabolic
 E13	Modifier:T13 Modifies:T82
-T14	Or 312 314	or
 E14	Or:T14 Arg:E13 Arg2:E15
-T15	Modifier 315 327	inflammatory
 E15	Modifier:T15 Modifies:T82
-T16	Condition 328 335	illness
 E16	Condition:T16 Name:T82
-T19	Observation 395 398	BMI
 E19	Observation:T19 Name:T83 Eq-Comparison:E17
-T20	Observation 410 418	Inactive
 E20	Observation:T20 Name:T85 Minimum-Count:E59 Duration:E21
-T21	Eq-Comparison 426 459	30 min moderate exercise per week
 E21	Eq-Comparison:T21 Value:T88 Temporal-Unit:T89 Per:T91
-T22	Condition 466 472	Smoker
 E22	Condition:T22 Name:T92
-T23	Eq-Comparison 478 484	Taking
 E23	Eq-Comparison:T23 Temporal-Period:T93
-T24	Drug 485 495	medication
 E24	Drug:T24 Temporality:E23
-T25	Eq-Comparison 501 508	History
 E25	Eq-Comparison:T25 Temporal-Period:T94
-T27	Or 528 530	or
 E27	Or:T27 Arg:E26 Arg2:E28
-T28	Modifier 531 543	inflammatory
 E28	Modifier:T28 Modifies:T96
-T29	Condition 544 551	illness
 E29	Condition:T29 Name:T96 Temporality:E25
-T30	Condition 557 567	Vegetarian
 E30	Condition:T30 Name:T97
-T33	Other 627 632	Other
 E33	Other:T33 Is-Other:E34
-T34	Condition 633 653	dietary restrictions
 E34	Condition:T34 Name:T31
-T35	Negation 660 667	prevent
 E35	Negation:T35 Negates:E31
-T37	Drug 725 735	probiotics
 E37	Drug:T37 Name:T99 Temporality:E38
-T38	Eq-Comparison 736 756	within last 3 months
 E38	Eq-Comparison:T38 Operator:T100 Temporal-Period:T101 Value:T102 Temporal-Unit:T103
-T40	Other 816 823	another
 E40	Other:T40 Is-Other:E41
-T41	Study 824 838	clinical trial
-E41	Study:T41 
-T42	Or 861 863	or
+E41	Study:T41
 E42	Or:T42 Arg:E32 Arg2:E43
-T43	Assertion 864 873	suspected
 E43	Assertion:T43 Asserted:E44 Asserted2:E45 Asserted3:E47
-A1	Assertion-Type-Value E43 possible
-T44	Condition 874 891	food intolerances
 E44	Condition:T44 Name:T104
-T45	Allergy 893 902	allergies
-E45	Allergy:T45 
-T46	Or 903 905	or
+E45	Allergy:T45
 E46	Or:T46 Arg:E45 Arg2:E47
-T47	Condition 906 922	hypersensitivity
 E47	Condition:T47 Name:T105
-T48	And 934 937	who
 E48	And:T48 Arg:T106 Arg2:E49
-T49	Condition 954 962	pregnant
 E49	Condition:T49 Name:T107
-T50	Or 963 965	or
 E50	Or:T50 Arg:E49 Arg2:E51
-T51	Assertion 974 986	intending to
 E51	Assertion:T51 Asserted:E52
-A2	Assertion-Type-Value E51 intention
-T52	Condition 994 1002	pregnant
 E52	Condition:T52 Name:T108
-T53	Temporal-Connection 1003 1018	over the course
 E53	Temporal-Connection:T53 Arg:E52 Arg2:E54
-A3	Temporal-Connection-Type-Value E53 during
+E54	Study:T54
+E55	Age:T109 Eq-Comparison:E1
+E5	Observation:T5 Name:T68 Minimum-Count:E6 Duration:E56
+E6	Eq-Comparison:T6 Operator:T69 Value:T70
+E56	Eq-Comparison:T71 Value:T72 Temporal-Unit:T73 Per:T76
+E57	Drug:T74 Name:T75
+E58	Or:T110 Arg:E57 Arg2:E9
+E17	Eq-Comparison:T17 Unit:T18
+E18	Negation:T80 Negates:E17
+E59	Eq-Comparison:T84 Operator:T86 Value:T87
+E26	Modifier:T26 Modifies:T96
+E60	Condition:T90 Name:T95
+E61	Or:T111 Arg:E30 Arg2:E60
+E31	Procedure:T32 Name:T36
+E32	Modifier:T39 Modifies:T104
+T1	Eq-Comparison 25 36	18-40 years
+T2	Observation 42 45	BMI
+T3	Eq-Comparison 46 63	= 18.5-29.9 kg/m2
+T4	Or 74 76	or
+T7	Negation 154 157	Non
+T8	Condition 158 164	smoker
+T9	Drug 202 214	e-cigarettes
+T10	Condition 221 228	Healthy
+T11	Observation 248 286	School's standard health questionnaire
+T12	Negation 293 295	No
+T13	Modifier 296 311	cardiometabolic
+T14	Or 312 314	or
+T15	Modifier 315 327	inflammatory
+T16	Condition 328 335	illness
+T19	Observation 395 398	BMI
+T20	Observation 410 418	Inactive
+T21	Eq-Comparison 426 459	30 min moderate exercise per week
+T22	Condition 466 472	Smoker
+T23	Eq-Comparison 478 484	Taking
+T24	Drug 485 495	medication
+T25	Eq-Comparison 501 508	History
+T27	Or 528 530	or
+T28	Modifier 531 543	inflammatory
+T29	Condition 544 551	illness
+T30	Condition 557 567	Vegetarian
+T33	Other 627 632	Other
+T34	Condition 633 653	dietary restrictions
+T35	Negation 660 667	prevent
+T37	Drug 725 735	probiotics
+T38	Eq-Comparison 736 756	within last 3 months
+T40	Other 816 823	another
+T41	Study 824 838	clinical trial
+T42	Or 861 863	or
+T43	Assertion 864 873	suspected
+T44	Condition 874 891	food intolerances
+T45	Allergy 893 902	allergies
+T46	Or 903 905	or
+T47	Condition 906 922	hypersensitivity
+T48	And 934 937	who
+T49	Condition 954 962	pregnant
+T50	Or 963 965	or
+T51	Assertion 974 986	intending to
+T52	Condition 994 1002	pregnant
+T53	Temporal-Connection 1003 1018	over the course
 T54	Study 1026 1031	study
-E54	Study:T54 
 T55	Eq-Value 25 27	18
 T56	Eq-Operator 27 28	-
-A4	Eq-Operator-Value T56 BETWEEN
 T57	Eq-Value 28 30	40
 T58	Eq-Temporal-Unit 31 36	years
-A5	Eq-Temporal-Unit-Value T58 year
 T59	Observation-Name 42 45	BMI
-A6	Observation-Type-Value T59 vital
 T60	Eq-Operator 46 47	=
-A7	Eq-Operator-Value T60 EQ
 T61	Eq-Value 48 52	18.5
 T62	Eq-Operator 52 53	-
-A8	Eq-Operator-Value T62 BETWEEN
 T63	Eq-Value 53 57	29.9
 T64	Eq-Unit 58 60	kg
 T65	Eq-Unit 61 63	m2
 T66	Life-Stage-And-Gender 69 73	Male
-A9	Life-Stage-And-Gender-Type T66 male
 T67	Life-Stage-And-Gender 77 83	female
-A10	Life-Stage-And-Gender-Type T67 female
 T69	Eq-Operator 108 109	>
-A12	Eq-Operator-Value T69 GT
 T70	Eq-Value 110 111	3
 T72	Eq-Value 114 116	30
 T73	Eq-Temporal-Unit 117 120	min
-A14	Eq-Temporal-Unit-Value T73 minute
 T76	Eq-Temporal-Unit 143 147	week
-A17	Eq-Temporal-Unit-Value T76 week
 T77	Condition-Name 158 164	smoker
 T78	Drug-Name 202 214	e-cigarettes
 T79	Condition-Name 221 228	Healthy
 T81	Observation-Name 248 286	School's standard health questionnaire
-A18	Observation-Type-Value T81 survey-or-questionnaire
 T82	Condition-Name 328 335	illness
 T83	Observation-Name 395 398	BMI
-A19	Observation-Type-Value T83 vital
 T85	Observation-Name 410 418	Inactive
 T86	Eq-Operator 420 421	<
-A21	Eq-Operator-Value T86 LT
 T87	Eq-Value 422 423	3
 T88	Eq-Value 426 428	30
 T89	Eq-Temporal-Unit 429 432	min
-A22	Eq-Temporal-Unit-Value T89 minute
 T91	Eq-Temporal-Unit 455 459	week
-A24	Eq-Temporal-Unit-Value T91 week
 T92	Condition-Name 466 472	Smoker
 T93	Eq-Temporal-Period 478 484	Taking
-A25	Eq-Temporal-Period-Value T93 present
 T94	Eq-Temporal-Period 501 508	History
-A26	Eq-Temporal-Period-Value T94 past
 T96	Condition-Name 544 551	illness
 T97	Condition-Name 557 567	Vegetarian
 T99	Drug-Name 725 735	probiotics
 T100	Eq-Operator 736 742	within
-A28	Eq-Operator-Value T100 LTEQ
 T101	Eq-Temporal-Period 743 747	last
-A29	Eq-Temporal-Period-Value T101 past
 T102	Eq-Value 748 749	3
 T103	Eq-Temporal-Unit 750 756	months
-A30	Eq-Temporal-Unit-Value T103 month
 T104	Condition-Name 874 891	food intolerances
 T105	Condition-Name 906 922	hypersensitivity
 T106	Life-Stage-And-Gender 928 933	Women
-A31	Life-Stage-And-Gender-Type T106 female
 T107	Condition-Name 954 962	pregnant
 T108	Condition-Name 994 1002	pregnant
 T109	Age 31 36	years
-E55	Age:T109 Eq-Comparison:E1
 T5	Observation 89 106	Physically active
-E5	Observation:T5 Name:T68 Minimum-Count:E6 Duration:E56
 T68	Observation-Name 89 106	Physically active
-A11	Observation-Type-Value T68 social-habit
 T6	Eq-Comparison 108 111	> 3
-E6	Eq-Comparison:T6 Operator:T69 Value:T70
 T71	Eq-Comparison 114 147	30 min moderate exercise per week
-E56	Eq-Comparison:T71 Value:T72 Temporal-Unit:T73 Per:T76
 T74	Drug 187 197	vaporisers
-E57	Drug:T74 Name:T75
 T75	Drug-Name 187 197	vaporisers
 T110	Or 198 201	and
-E58	Or:T110 Arg:E57 Arg2:E9
-R1	Found-By Arg1:E10 Arg2:E11	
 T17	Eq-Comparison 399 404	range
-E17	Eq-Comparison:T17 Unit:T18
 T18	Eq-Unit 399 404	range
-A13	Eq-Unit-Value T18 ref-range-normal
 T80	Negation 387 394	Outside
-E18	Negation:T80 Negates:E17
 T84	Eq-Comparison 420 423	< 3
-E59	Eq-Comparison:T84 Operator:T86 Value:T87
-A15	Observation-Type-Value T85 social-habit
 T26	Modifier 512 527	cardiometabolic
-E26	Modifier:T26 Modifies:T96
 T90	Condition 569 574	vegan
-E60	Condition:T90 Name:T95
 T95	Condition-Name 569 574	vegan
 T111	Or 567 568	/
-E61	Or:T111 Arg:E30 Arg2:E60
 T31	Condition-Name 633 653	dietary restrictions
 T32	Procedure 687 704	experimental diet
-E31	Procedure:T32 Name:T36
 T36	Procedure-Name 687 704	experimental diet
-R2	Caused-By Arg1:E35 Arg2:E34	
 T39	Modifier 855 860	known
-E32	Modifier:T39 Modifies:T104
+A1	Assertion-Type-Value E43 possible
+A2	Assertion-Type-Value E51 intention
+A3	Temporal-Connection-Type-Value E53 during
+A4	Eq-Operator-Value T56 BETWEEN
+A5	Eq-Temporal-Unit-Value T58 year
+A6	Observation-Type-Value T59 vital
+A7	Eq-Operator-Value T60 EQ
+A8	Eq-Operator-Value T62 BETWEEN
+A9	Life-Stage-And-Gender-Type T66 male
+A10	Life-Stage-And-Gender-Type T67 female
+A12	Eq-Operator-Value T69 GT
+A14	Eq-Temporal-Unit-Value T73 minute
+A17	Eq-Temporal-Unit-Value T76 week
+A18	Observation-Type-Value T81 survey-or-questionnaire
+A19	Observation-Type-Value T83 vital
+A21	Eq-Operator-Value T86 LT
+A22	Eq-Temporal-Unit-Value T89 minute
+A24	Eq-Temporal-Unit-Value T91 week
+A25	Eq-Temporal-Period-Value T93 present
+A26	Eq-Temporal-Period-Value T94 past
+A28	Eq-Operator-Value T100 LTEQ
+A29	Eq-Temporal-Period-Value T101 past
+A30	Eq-Temporal-Unit-Value T103 month
+A31	Life-Stage-And-Gender-Type T106 female
+A11	Observation-Type-Value T68 social-habit
+A13	Eq-Unit-Value T18 ref-range-normal
+A15	Observation-Type-Value T85 social-habit
+R1	Found-By Arg1:E10 Arg2:E11
+R2	Caused-By Arg1:E35 Arg2:E34

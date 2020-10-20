@@ -1,67 +1,67 @@
+E1	Procedure:T1 Name:T2 Temporality:E9
+E3	Procedure:T3 Name:T4 Temporality:E7
+E5	Procedure:T5 Name:T6
+E6	Eq-Comparison:T12 Operator:T9 Temporal-Unit:T10 Value:T11
+E7	Eq-Comparison:T13 Temporal-Period:T14
+E2	Or:T17 Arg:T8 Arg2:T7
+E4	Age:T18 Eq-Comparison:E6
+E9	Eq-Comparison:T19 Temporal-Period:T21
+E10	Modifier:T20 Modifies:T2
+E11	Condition:T22 Name:T23
+E12	Condition:T24 Name:T25 Stability:T26
+E13	Negation:T27 Negates:T26
+E14	Assertion:T28 Asserted:E11
+E15	And:T29 Arg:E1 Arg2:E14
+E16	Observation:T30 Specimen:T32 Name:T31 Temporality:E17
+E17	Eq-Comparison:T33 Temporal-Period:T34
+E18	Temporal-Connection:T35 Arg:E17 Arg2:E5
+E8	Condition:T16 Name:T36
+E19	Modifier:T15 Modifies:T4
+E20	Modifier:T37 Modifies:T36
 T1	Procedure 84 91	surgery
 T2	Procedure-Name 84 91	surgery
-E1	Procedure:T1 Name:T2 Temporality:E9
 T3	Procedure 558 570	radiotherapy
 T4	Procedure-Name 558 570	radiotherapy
-E3	Procedure:T3 Name:T4 Temporality:E7
 T5	Procedure 274 283	procedure
 T6	Procedure-Name 274 283	procedure
-E5	Procedure:T5 Name:T6
 T7	Life-Stage-And-Gender 33 39	female
-A1	Life-Stage-And-Gender-Type T7 female
 T8	Life-Stage-And-Gender 25 29	Male
-A2	Life-Stage-And-Gender-Type T8 male
 T9	Eq-Operator 40 41	≥
-A3	Eq-Operator-Value T9 GTEQ
 T10	Eq-Temporal-Unit 45 50	years
-A4	Eq-Temporal-Unit-Value T10 year
 T11	Eq-Value 42 44	18
 T12	Eq-Comparison 40 50	≥ 18 years
-E6	Eq-Comparison:T12 Operator:T9 Temporal-Unit:T10 Value:T11
 T13	Eq-Comparison 537 557	previously undergone
-E7	Eq-Comparison:T13 Temporal-Period:T14
 T14	Eq-Temporal-Period 537 557	previously undergone
-A5	Eq-Temporal-Period-Value T14 past
 T17	Or 30 32	or
-E2	Or:T17 Arg:T8 Arg2:T7
 T18	Age 45 50	years
-E4	Age:T18 Eq-Comparison:E6
 T19	Eq-Comparison 95 105	programmed
-E9	Eq-Comparison:T19 Temporal-Period:T21
 T20	Modifier 75 83	vascular
-E10	Modifier:T20 Modifies:T2
 T21	Eq-Temporal-Period 95 105	programmed
-A7	Eq-Temporal-Period-Value T21 future
 T22	Condition 144 160	arterial segment
-E11	Condition:T22 Name:T23
 T23	Condition-Name 144 160	arterial segment
 T24	Condition 186 192	health
-E12	Condition:T24 Name:T25 Stability:T26
 T25	Condition-Name 186 192	health
 T26	Stability 173 177	harm
-A8	Stability-Value T26 change
 T27	Negation 161 168	without
-E13	Negation:T27 Negates:T26
 T28	Assertion 124 130	allows
-E14	Assertion:T28 Asserted:E11
-A9	Assertion-Type-Value E14 hypothetical
 T29	And 107 110	and
-E15	And:T29 Arg:E1 Arg2:E14
 T30	Observation 232 244	blood sample
-E16	Observation:T30 Specimen:T32 Name:T31 Temporality:E17
 T31	Observation-Name 238 244	sample
 T32	Observation-Specimen 232 237	blood
 T33	Eq-Comparison 248 255	planned
-E17	Eq-Comparison:T33 Temporal-Period:T34
 T34	Eq-Temporal-Period 248 255	planned
-A10	Eq-Temporal-Period-Value T34 future
 T35	Temporal-Connection 256 266	on the day
-E18	Temporal-Connection:T35 Arg:E17 Arg2:E5
-A11	Temporal-Connection-Type-Value E18 during
 T16	Condition 610 616	cancer
-E8	Condition:T16 Name:T36
 T36	Condition-Name 610 616	cancer
 T15	Modifier 578 591	sampling site
-E19	Modifier:T15 Modifies:T4
 T37	Modifier 624 637	sampling site
-E20	Modifier:T37 Modifies:T36
+A1	Life-Stage-And-Gender-Type T7 female
+A2	Life-Stage-And-Gender-Type T8 male
+A3	Eq-Operator-Value T9 GTEQ
+A4	Eq-Temporal-Unit-Value T10 year
+A5	Eq-Temporal-Period-Value T14 past
+A7	Eq-Temporal-Period-Value T21 future
+A8	Stability-Value T26 change
+A9	Assertion-Type-Value E14 hypothetical
+A10	Eq-Temporal-Period-Value T34 future
+A11	Temporal-Connection-Type-Value E18 during

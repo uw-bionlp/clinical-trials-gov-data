@@ -1,0 +1,85 @@
+T1	Condition 426 455	coagulation factor deficiency
+T2	Condition-Name 426 455	coagulation factor deficiency
+E1	Condition:T1 Name:T2
+T3	Procedure 56 86	cardiopulmonary bypass surgery
+T4	Procedure-Name 56 86	cardiopulmonary bypass surgery
+E3	Procedure:T3 Name:T4 Temporality:E2 Temporality2:E22
+T5	Procedure 196 218	cardiopulmonary bypass
+T6	Procedure-Name 196 218	cardiopulmonary bypass
+E5	Procedure:T5 Name:T6
+T7	Procedure 130 156	tissue mitral valve repair
+T8	Procedure-Name 130 156	tissue mitral valve repair
+E7	Procedure:T7 Name:T8 Temporality:E22 Temporality2:E2
+T9	Condition 256 271	Aortic Stenosis
+T10	Condition-Name 256 271	Aortic Stenosis
+E9	Condition:T9 Name:T10
+T11	Procedure 510 525	heparin therapy
+T12	Procedure-Name 510 525	heparin therapy
+E11	Procedure:T11 Name:T12 Temporality:E12 Temporality2:E21
+T13	Condition 300 332	acquired von Willebrand Syndrome
+T14	Condition-Name 300 332	acquired von Willebrand Syndrome
+E13	Condition:T13 Name:T14
+T17	Condition 459 485	platelet function disorder
+T18	Condition-Name 459 485	platelet function disorder
+E17	Condition:T17 Name:T18
+T19	Eq-Operator 388 389	<
+A1	Eq-Operator-Value T19 LT
+T20	Eq-Operator 539 545	within
+A2	Eq-Operator-Value T20 LTEQ
+T21	Eq-Temporal-Unit 553 557	days
+A3	Eq-Temporal-Unit-Value T21 day
+T23	Eq-Value 551 552	7
+T24	Eq-Comparison 388 398	<100x109/L
+E18	Eq-Comparison:T24 Operator:T19 Value:T33 Value2:T45 Per:T46
+T25	Eq-Temporal-Recency 45 55	first time
+A4	Eq-Temporal-Recency-Value T25 first-time
+T26	Eq-Comparison 45 55	first time
+E2	Eq-Comparison:T26 Temporal-Recency:T25
+T27	Condition 105 126	atrial septal defects
+E4	Condition:T27 Name:T28
+T28	Condition-Name 105 126	atrial septal defects
+T29	Drug 184 191	Heparin
+E6	Drug:T29 Name:T30 Temporality:E24
+T30	Drug-Name 184 191	Heparin
+T31	Modifier 172 183	intravenous
+E8	Modifier:T31 Modifies:E6
+T32	Modifier 244 255	Concomitant
+E10	Modifier:T32 Modifies:E9
+T15	Condition 334 338	aVWS
+E14	Condition:T15 Name:T16
+T16	Condition-Name 334 338	aVWS
+R1	Abbrev-Of Arg1:E14 Arg2:E13	
+R2	Treatment-For Arg1:E3 Arg2:E4	
+T34	Observation 370 384	platelet count
+E15	Observation:T34 Name:T35 Eq-Comparison:E18
+T35	Observation-Name 370 384	platelet count
+A5	Observation-Type-Value T35 lab
+T22	Or 456 458	or
+E16	Or:T22 Arg:E1 Arg2:E17
+T36	Temporal-Connection 526 534	prior to
+E19	Temporal-Connection:T36 Arg:E11 Arg2:E20
+A6	Temporal-Connection-Type-Value E19 before
+T37	Procedure 535 538	CPB
+E20	Procedure:T37 Name:T38
+T38	Procedure-Name 535 538	CPB
+T39	Eq-Comparison 539 557	within last 7 days
+E21	Eq-Comparison:T39 Operator:T20 Temporal-Unit:T21 Value:T23
+T40	Eq-Comparison 34 44	undergoing
+E22	Eq-Comparison:T40 Temporal-Period:T41
+T41	Eq-Temporal-Period 34 44	undergoing
+A7	Eq-Temporal-Period-Value T41 present
+T42	Or 127 129	or
+E23	Or:T42 Arg:E3 Arg2:E7
+R3	Using Arg1:E5 Arg2:E6	
+T43	Eq-Comparison 162 171	Receiving
+E24	Eq-Comparison:T43 Temporal-Period:T44
+T44	Eq-Temporal-Period 162 171	Receiving
+A8	Eq-Temporal-Period-Value T44 present
+R4	Caused-By Arg1:E9 Arg2:E13	
+T33	Eq-Value 389 392	100
+T45	Eq-Value 393 396	109
+T46	Eq-Unit 397 398	L
+T47	Eq-Comparison 500 509	receiving
+E12	Eq-Comparison:T47 Temporal-Period:T48
+T48	Eq-Temporal-Period 500 509	receiving
+A9	Eq-Temporal-Period-Value T48 present

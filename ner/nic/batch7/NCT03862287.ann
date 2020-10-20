@@ -1,108 +1,96 @@
-T1	Condition 25 28	ASA
-E1	Condition:T1 Name:T37 Stage:E2
-T2	Eq-Comparison 29 34	I-III
+E1	Observation:T1 Name:T37 Eq-Comparison:E2
 E2	Eq-Comparison:T2 Value:T38 Operator:T39 Value:T40
-T3	Or 40 43	and
 E3	Or:T3 Arg:T41 Arg2:T42
-T4	Age 60 64	aged
 E4	Age:T4 Eq-Comparison:E5
-T5	Eq-Comparison 65 87	between 18 to 80 years
 E5	Eq-Comparison:T5 Operator:T43 Value:T44 Operator:T45 Value:T46 Temporal-Unit:T47
-T7	And 93 96	who
 E7	And:T7 Arg:E4 Arg2:E8
-T8	Assertion 97 109	will receive
 E8	Assertion:T8 Asserted:E9
-A1	Assertion-Type-Value E8 hypothetical
-T9	Procedure 110 127	spinal anesthesia
 E9	Procedure:T9 Name:T49
-T10	Procedure 132 141	surgeries
 E10	Procedure:T10 Name:T50 Duration:E11
-T11	Eq-Comparison 150 168	less than one hour
 E11	Eq-Comparison:T11 Operator:T52 Value:T53 Temporal-Unit:T54
-T12	Eq-Comparison 204 225	younger than 18 years
 E12	Eq-Comparison:T12 Operator:T55 Value:T56 Temporal-Unit:T57
-T13	Condition 236 239	ASA
-E13	Condition:T13 Name:T58 Stage:E14
-T14	Eq-Comparison 256 258	>3
+E13	Observation:T13 Name:T58 Eq-Comparison:E14
 E14	Eq-Comparison:T14 Operator:T59 Value:T48
-T15	Condition 265 282	Immunosuppression
 E15	Condition:T15 Name:T60
-T16	Or 283 285	or
 E16	Or:T16 Arg:E15 Arg2:E17
-T17	Risk 291 295	risk
 E17	Risk:T17 Risk-For:E18 Polarity:T61
-T18	Condition 299 308	infection
 E18	Condition:T18 Name:T62
-T19	Contraindication 315 332	Contraindications
 E19	Contraindication:T19 Contraindicates:E21
-T21	Procedure 346 363	spinal anesthesia
 E21	Procedure:T21 Name:T64
-T22	Condition 370 392	coagulation impairment
 E22	Condition:T22 Name:T65
-T23	Condition 414 423	psychosis
 E23	Condition:T23 Name:T66
-T24	Condition 455 464	back pain
 E24	Condition:T24 Name:T67 Temporality:E20
-T25	Condition 485 505	cognitive impairment
 E25	Condition:T25 Name:T68
-T26	Allergy 511 520	Allergies
 E26	Allergy:T26 Name:E27 Name2:E28 Name3:E30
-T27	Procedure 524 541	local anesthetics
 E27	Procedure:T27 Name:T69
-T28	Drug 543 553	analgesics
 E28	Drug:T28 Name:T70
-T29	Or 554 556	or
 E29	Or:T29 Arg:E28 Arg2:E30
-T30	Drug 561 571	medication
-E30	Drug:T30 
-T31	Study 584 589	study
+E30	Drug:T30
 E31	Study:T31 Study-Of:E30
-T32	Modifier 610 617	chronic
-E32	Modifier:T32 Modifies:T72
-T33	Eq-Comparison 618 625	regular
 E33	Eq-Comparison:T33 Temporal-Period:T71
-T34	Drug 626 632	opioid
-E34	Drug:T34 Name:T72 Temporality:E33
-T35	Condition 668 680	neurological
+E34	Drug:T34 Name:T72 Temporality:E33 Acuteness:T32
 E35	Condition:T35 Name:T73 Temporality:E37
-T36	Assertion 681 689	symptoms
 E36	Assertion:T36 Asserted:E35
-A2	Assertion-Type-Value E36 possible
-T37	Condition-Name 25 28	ASA
+E6	Age:T6 Eq-Comparison:E12
+E20	Eq-Comparison:T20 Temporal-Period:T51
+E37	Eq-Comparison:T63 Temporal-Period:T74
+T1	Observation 25 28	ASA
+T2	Eq-Comparison 29 34	I-III
+T3	Or 40 43	and
+T4	Age 60 64	aged
+T5	Eq-Comparison 65 87	between 18 to 80 years
+T7	And 93 96	who
+T8	Assertion 97 109	will receive
+T9	Procedure 110 127	spinal anesthesia
+T10	Procedure 132 141	surgeries
+T11	Eq-Comparison 150 168	less than one hour
+T12	Eq-Comparison 204 225	younger than 18 years
+T13	Observation 236 239	ASA
+T14	Eq-Comparison 256 258	>3
+T15	Condition 265 282	Immunosuppression
+T16	Or 283 285	or
+T17	Risk 291 295	risk
+T18	Condition 299 308	infection
+T19	Contraindication 315 332	Contraindications
+T21	Procedure 346 363	spinal anesthesia
+T22	Condition 370 392	coagulation impairment
+T23	Condition 414 423	psychosis
+T24	Condition 455 464	back pain
+T25	Condition 485 505	cognitive impairment
+T26	Allergy 511 520	Allergies
+T27	Procedure 524 541	local anesthetics
+T28	Drug 543 553	analgesics
+T29	Or 554 556	or
+T30	Drug 561 571	medication
+T31	Study 584 589	study
+T32	Acuteness 610 617	chronic
+T33	Eq-Comparison 618 625	regular
+T34	Drug 626 632	opioid
+T35	Condition 668 680	neurological
+T36	Assertion 681 689	symptoms
+T37	Observation-Name 25 28	ASA
 T38	Eq-Value 29 30	I
 T39	Eq-Operator 30 31	-
-A3	Eq-Operator-Value T39 BETWEEN
 T40	Eq-Value 31 34	III
 T41	Life-Stage-And-Gender 35 39	male
-A4	Life-Stage-And-Gender-Type T41 male
 T42	Life-Stage-And-Gender 44 50	female
-A5	Life-Stage-And-Gender-Type T42 female
 T43	Eq-Operator 65 72	between
-A6	Eq-Operator-Value T43 BETWEEN
 T44	Eq-Value 73 75	18
 T45	Eq-Operator 76 78	to
-A7	Eq-Operator-Value T45 BETWEEN
 T46	Eq-Value 79 81	80
 T47	Eq-Temporal-Unit 82 87	years
-A8	Eq-Temporal-Unit-Value T47 year
 T49	Procedure-Name 110 127	spinal anesthesia
 T50	Procedure-Name 132 141	surgeries
 T52	Eq-Operator 150 159	less than
-A11	Eq-Operator-Value T52 LT
 T53	Eq-Value 160 163	one
 T54	Eq-Temporal-Unit 164 168	hour
-A12	Eq-Temporal-Unit-Value T54 hour
 T55	Eq-Operator 204 216	younger than
-A13	Eq-Operator-Value T55 LT
 T56	Eq-Value 217 219	18
 T57	Eq-Temporal-Unit 220 225	years
-A14	Eq-Temporal-Unit-Value T57 year
-T58	Condition-Name 236 239	ASA
+T58	Observation-Name 236 239	ASA
 T59	Eq-Operator 256 257	>
-A15	Eq-Operator-Value T59 GT
 T60	Condition-Name 265 282	Immunosuppression
 T61	Polarity 286 290	high
-A16	Polarity-Value T61 high
 T62	Condition-Name 299 308	infection
 T64	Procedure-Name 346 363	spinal anesthesia
 T65	Condition-Name 370 392	coagulation impairment
@@ -112,19 +100,33 @@ T68	Condition-Name 485 505	cognitive impairment
 T69	Procedure-Name 524 541	local anesthetics
 T70	Drug-Name 543 553	analgesics
 T71	Eq-Temporal-Period 618 625	regular
-A18	Eq-Temporal-Period-Value T71 present
 T72	Drug-Name 626 632	opioid
 T73	Condition-Name 668 680	neurological
-R1	Using Arg1:E10 Arg2:E9	
 T6	Age 226 229	old
-E6	Age:T6 Eq-Comparison:E12
 T48	Eq-Value 257 258	3
-R2	Example-Of Arg1:E22 Arg2:E19	
 T20	Eq-Comparison 443 454	preexisting
-E20	Eq-Comparison:T20 Temporal-Period:T51
 T51	Eq-Temporal-Period 443 454	preexisting
-A9	Eq-Temporal-Period-Value T51 past
 T63	Eq-Comparison 656 667	preexisting
-E37	Eq-Comparison:T63 Temporal-Period:T74
 T74	Eq-Temporal-Period 656 667	preexisting
+A1	Assertion-Type-Value E8 hypothetical
+A2	Assertion-Type-Value E36 possible
+A3	Eq-Operator-Value T39 BETWEEN
+A4	Life-Stage-And-Gender-Type T41 male
+A5	Life-Stage-And-Gender-Type T42 female
+A6	Eq-Operator-Value T43 BETWEEN
+A7	Eq-Operator-Value T45 BETWEEN
+A8	Eq-Temporal-Unit-Value T47 year
+A11	Eq-Operator-Value T52 LT
+A12	Eq-Temporal-Unit-Value T54 hour
+A13	Eq-Operator-Value T55 LT
+A14	Eq-Temporal-Unit-Value T57 year
+A15	Eq-Operator-Value T59 GT
+A16	Polarity-Value T61 high
+A18	Eq-Temporal-Period-Value T71 present
+A9	Eq-Temporal-Period-Value T51 past
 A10	Eq-Temporal-Period-Value T74 past
+A19	Observation-Type-Value T37 clinical-score
+A20	Observation-Type-Value T58 clinical-score
+A21	Acuteness-Type-Value T32 chronic
+R1	Using Arg1:E10 Arg2:E9
+R2	Example-Of Arg1:E22 Arg2:E19

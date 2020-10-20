@@ -1,73 +1,124 @@
+E1	Condition:T1 Name:T2 Acuteness:T96
+E3	Condition:T3 Name:T4
+E7	Condition:T7 Name:T8 Acuteness:T142
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Procedure:T13 Name:T14 Temporality:E82
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18
+E19	Condition:T19 Name:T20
+E21	Condition:T21 Name:T22
+E25	Condition:T25 Name:T26
+E27	Condition:T27 Name:T28
+E30	Condition:T30 Name:T31 Duration:E38
+E33	Condition:T33 Name:T34 Temporality:E37
+E34	Age:T44 Eq-Comparison:E36
+E36	Eq-Comparison:T59 Operator:T35 Temporal-Unit:T40 Value:T48
+E37	Eq-Comparison:T60 Operator:T36 Temporal-Unit:T41 Value:T49
+E38	Eq-Comparison:T61 Operator:T37 Value:T50 Temporal-Unit:T42
+E39	Eq-Comparison:T62 Operator:T38 Value:T53
+E40	Eq-Comparison:T63 Operator:T39 Value:T56
+E41	Eq-Comparison:T64 Operator:T46 Value:T51 Value2:T52
+E42	Eq-Comparison:T65 Operator:T47 Value:T54 Value2:T55
+E43	Eq-Comparison:T66 Temporal-Period:T67
+E2	Or:T76 Arg:T32 Arg2:T29
+E4	Study:T45
+E6	Temporal-Connection:T70 Arg:E37 Arg2:E4
+E8	Condition:T71 Name:T77
+E10	And:T78 Arg:E8 Arg2:E30
+E12	Temporal-Connection:T72 Arg:E38 Arg2:E14
+E14	Study:T73
+E16	Drug:T79 Name:T80
+E18	Modifier:T81 Modifies:T80
+E20	And:T82 Arg:E14 Arg2:E16
+E5	Observation:T5 Name:T6 Eq-Comparison:E39 Eq-Comparison2:E41
+E22	Observation:T83 Name:T84 Eq-Comparison:E42 Eq-Comparison2:E40
+E24	And:T85 Arg:E5 Arg2:E22
+E26	Eq-Comparison:T74 Value:T57 Temporal-Unit:T43
+E28	Temporal-Connection:T75 Arg:E22 Arg2:E26
+E29	Study:T86
+E31	Temporal-Connection:T58 Arg:E26 Arg2:E29
+E23	Procedure:T23 Name:T24
+E32	Procedure:T87 Name:T88
+E35	Study:T89
+E45	Temporal-Connection:T90 Arg:E32 Arg2:E35
+E46	Assertion:T91 Asserted:E23
+E47	Study:T92 Study-Of:E48
+E48	Procedure:T93
+E49	Condition:T94 Name:T95
+E51	Modifier:T97 Modifies:T8
+E52	Modifier:T98 Modifies:T8
+E53	Or:T99 Arg:E51 Arg2:E52
+E54	Condition:T100 Name:T101
+E55	Or:T102 Arg:E25 Arg2:E54
+E56	Assertion:T103 Asserted:E25 Asserted2:E54
+E57	Condition:T104 Name:T105
+E58	Other:T106 Is-Other:E57
+E59	Other:T107 Is-Other:E15
+E60	Condition:T108 Name:T109 Acuteness:T110
+E62	Study:T111 Stability:T112
+E63	Assertion:T113 Asserted:T112
+E64	Assertion:T114 Asserted:E44
+E44	Condition:T68 Name:T69 Temporality:E43 Temporality2:E68 Acuteness:T116
+E65	Modifier:T115 Modifies:T69
+E67	Or:T117 Arg:T116 Arg2:E65
+E68	Eq-Comparison:T118 Temporal-Period:T119
+E69	Modifier:T120 Modifies:T10
+E70	Or:T121 Arg:E19 Arg2:E11
+E71	Condition:T122 Name:T123
+E72	Modifier:T124 Modifies:T22
+E73	Modifier:T125 Modifies:T22
+E74	Or:T126 Arg:E72 Arg2:E73
+E75	Condition:T127 Name:T128
+E76	Or:T129 Arg:E75 Arg2:E27
+E77	Condition:T130 Name:T131
+E78	Condition:T134 Name:T135
+E79	And:T136 Arg:T133 Arg2:E78
+E80	Negation:T137 Negates:E13
+E82	Eq-Comparison:T139 Temporal-Period:T140
+E83	Negation:T141 Negates:E18
 T1	Condition 692 711	inducible urticaria
 T2	Condition-Name 692 711	inducible urticaria
-E1	Condition:T1 Name:T2
 T3	Condition 1031 1055	opportunistic infections
 T4	Condition-Name 1031 1055	opportunistic infections
-E3	Condition:T3 Name:T4
 T7	Condition 673 682	urticaria
 T8	Condition-Name 673 682	urticaria
-E7	Condition:T7 Name:T8
 T9	Condition 1083 1098	mycobacterioses
 T10	Condition-Name 1083 1098	mycobacterioses
-E9	Condition:T9 Name:T10
 T11	Condition 1115 1128	aspergillosis
 T12	Condition-Name 1115 1128	aspergillosis
-E11	Condition:T11 Name:T12
 T13	Procedure 1270 1283	contraception
 T14	Procedure-Name 1270 1283	contraception
-E13	Procedure:T13 Name:T14 Temporality:E82
 T15	Condition 785 797	skin disease
 T16	Condition-Name 785 797	skin disease
-E15	Condition:T15 Name:T16
 T17	Condition 1060 1072	tuberculosis
 T18	Condition-Name 1060 1072	tuberculosis
-E17	Condition:T17 Name:T18
 T19	Condition 1100 1111	listeriosis
 T20	Condition-Name 1100 1111	listeriosis
-E19	Condition:T19 Name:T20
 T21	Condition 1136 1145	Hepatitis
 T22	Condition-Name 1136 1145	Hepatitis
-E21	Condition:T21 Name:T22
 T25	Condition 750 759	urticaria
 T26	Condition-Name 750 759	urticaria
-E25	Condition:T25 Name:T26
 T27	Condition 1168 1175	nursing
 T28	Condition-Name 1168 1175	nursing
-E27	Condition:T27 Name:T28
 T29	Life-Stage-And-Gender 34 40	female
-A1	Life-Stage-And-Gender-Type T29 female
 T30	Condition 151 156	hives
 T31	Condition-Name 151 156	hives
-E30	Condition:T30 Name:T31 Duration:E38
 T32	Life-Stage-And-Gender 25 29	Male
-A2	Life-Stage-And-Gender-Type T32 male
 T33	Condition 77 80	CSU
 T34	Condition-Name 77 80	CSU
-E33	Condition:T33 Name:T34 Temporality:E37
 T35	Eq-Operator 55 56	≥
-A3	Eq-Operator-Value T35 GTEQ
 T36	Eq-Operator 95 96	≥
-A4	Eq-Operator-Value T36 GTEQ
 T37	Eq-Operator 161 162	≥
-A5	Eq-Operator-Value T37 GTEQ
 T38	Eq-Operator 344 345	≥
-A6	Eq-Operator-Value T38 GTEQ
 T39	Eq-Operator 376 377	≥
-A7	Eq-Operator-Value T39 GTEQ
 T40	Eq-Temporal-Unit 59 64	years
-A8	Eq-Temporal-Unit-Value T40 year
 T41	Eq-Temporal-Unit 99 105	months
-A9	Eq-Temporal-Unit-Value T41 month
 T42	Eq-Temporal-Unit 176 181	weeks
-A10	Eq-Temporal-Unit-Value T42 week
 T43	Eq-Temporal-Unit 389 393	days
-A11	Eq-Temporal-Unit-Value T43 day
 T44	Age 50 54	aged
-E34	Age:T44 Eq-Comparison:E36
 T46	Eq-Operator 339 340	-
-A12	Eq-Operator-Value T46 BETWEEN
 T47	Eq-Operator 371 372	-
-A13	Eq-Operator-Value T47 BETWEEN
 T48	Eq-Value 56 58	18
 T49	Eq-Value 97 98	6
 T50	Eq-Value 162 163	6
@@ -79,192 +130,141 @@ T55	Eq-Value 372 374	21
 T56	Eq-Value 378 379	8
 T57	Eq-Value 387 388	7
 T59	Eq-Comparison 55 64	≥18 years
-E36	Eq-Comparison:T59 Operator:T35 Temporal-Unit:T40 Value:T48
 T60	Eq-Comparison 95 105	≥ 6 months
-E37	Eq-Comparison:T60 Operator:T36 Temporal-Unit:T41 Value:T49
 T61	Eq-Comparison 161 181	≥6 consecutive weeks
-E38	Eq-Comparison:T61 Operator:T37 Value:T50 Temporal-Unit:T42
 T62	Eq-Comparison 344 347	≥16
-E39	Eq-Comparison:T62 Operator:T38 Value:T53
 T63	Eq-Comparison 376 379	≥ 8
-E40	Eq-Comparison:T63 Operator:T39 Value:T56
 T64	Eq-Comparison 338 342	0-42
-E41	Eq-Comparison:T64 Operator:T46 Value:T51 Value2:T52
 T65	Eq-Comparison 370 374	0-21
-E42	Eq-Comparison:T65 Operator:T47 Value:T54 Value2:T55
 T66	Eq-Comparison 939 946	history
-E43	Eq-Comparison:T66 Temporal-Period:T67
 T67	Eq-Temporal-Period 939 946	history
-A14	Eq-Temporal-Period-Value T67 past
 T76	Or 30 33	and
-E2	Or:T76 Arg:T32 Arg2:T29
 T45	Study 115 124	screening
-E4	Study:T45 
 T70	Temporal-Connection 106 114	prior to
-E6	Temporal-Connection:T70 Arg:E37 Arg2:E4
-A16	Temporal-Connection-Type-Value E6 before
 T71	Condition 142 146	itch
-E8	Condition:T71 Name:T77
 T77	Condition-Name 142 146	itch
 T78	And 147 150	and
-E10	And:T78 Arg:E8 Arg2:E30
 T72	Temporal-Connection 182 190	prior to
-E12	Temporal-Connection:T72 Arg:E38 Arg2:E14
-A17	Temporal-Connection-Type-Value E12 before
 T73	Study 191 200	screening
-E14	Study:T73 
 T79	Drug 233 250	H1-antihistamines
-E16	Drug:T79 Name:T80
 T80	Drug-Name 233 250	H1-antihistamines
 T81	Modifier 224 232	sedating
-E18	Modifier:T81 Modifies:T80
 T82	And 201 212	in spite of
-E20	And:T82 Arg:E14 Arg2:E16
 T5	Observation 320 330	UAS7 score
-E5	Observation:T5 Name:T6 Eq-Comparison:E39 Eq-Comparison2:E41
 T6	Observation-Name 320 330	UAS7 score
-A18	Observation-Type-Value T6 clinical-score
 T83	Observation 352 362	HSS7 score
-E22	Observation:T83 Name:T84 Eq-Comparison:E42 Eq-Comparison2:E40
 T84	Observation-Name 352 362	HSS7 score
-A20	Observation-Type-Value T84 clinical-score
 T85	And 348 351	and
-E24	And:T85 Arg:E5 Arg2:E22
 T74	Eq-Comparison 387 393	7 days
-E26	Eq-Comparison:T74 Value:T57 Temporal-Unit:T43
 T75	Temporal-Connection 380 386	during
-E28	Temporal-Connection:T75 Arg:E22 Arg2:E26
-A19	Temporal-Connection-Type-Value E28 during
 T86	Study 403 416	randomization
-E29	Study:T86 
 T58	Temporal-Connection 394 402	prior to
-E31	Temporal-Connection:T58 Arg:E26 Arg2:E29
-A21	Temporal-Connection-Type-Value E31 before
 T23	Procedure 462 496	Urticaria Participant Daily eDiary
-E23	Procedure:T23 Name:T24
 T24	Procedure-Name 462 496	Urticaria Participant Daily eDiary
 T87	Procedure 498 502	UPDD
-E32	Procedure:T87 Name:T88
 T88	Procedure-Name 498 502	UPDD
-R1	Abbrev-Of Arg1:E32 Arg2:E23	
 T89	Study 528 533	study
-E35	Study:T89 
 T90	Temporal-Connection 504 520	for the duration
-E45	Temporal-Connection:T90 Arg:E32 Arg2:E35
-A22	Temporal-Connection-Type-Value E45 during
 T91	Assertion 430 446	Willing and able
-E46	Assertion:T91 Asserted:E23
-A23	Assertion-Type-Value E46 hypothetical
 T92	Study 590 595	study
-E47	Study:T92 Study-Of:E48
 T93	Procedure 596 606	treatments
-E48	Procedure:T93 
 T94	Condition 559 575	Hypersensitivity
-E49	Condition:T94 Name:T95
 T95	Condition-Name 559 575	Hypersensitivity
-R2	Caused-By Arg1:E49 Arg2:E48	
-T96	Modifier 684 691	chronic
-E50	Modifier:T96 Modifies:T2
-R3	Equivalent-To Arg1:E1 Arg2:E7	
+T96	Acuteness 684 691	chronic
 T97	Modifier 628 639	predominant
-E51	Modifier:T97 Modifies:T8
 T98	Modifier 643 655	sole trigger
-E52	Modifier:T98 Modifies:T8
 T99	Or 640 642	or
-E53	Or:T99 Arg:E51 Arg2:E52
 T100	Condition 763 773	angioedema
-E54	Condition:T100 Name:T101
 T101	Condition-Name 763 773	angioedema
 T102	Or 760 762	or
-E55	Or:T102 Arg:E25 Arg2:E54
 T103	Assertion 738 746	symptoms
-E56	Assertion:T103 Asserted:E25 Asserted2:E54
-A24	Assertion-Type-Value E56 possible
 T104	Condition 724 732	diseases
-E57	Condition:T104 Name:T105
 T105	Condition-Name 724 732	diseases
-R4	Caused-By Arg1:E25 Arg2:E57	
-R5	Caused-By Arg1:E54 Arg2:E57	
 T106	Other 718 723	Other
-E58	Other:T106 Is-Other:E57
 T107	Other 779 784	Other
-E59	Other:T107 Is-Other:E15
 T108	Condition 822 829	itching
-E60	Condition:T108 Name:T109
 T109	Condition-Name 822 829	itching
-T110	Modifier 814 821	chronic
-E61	Modifier:T110 Modifies:T109
-R6	Caused-By Arg1:E60 Arg2:E15	
+T110	Acuteness 814 821	chronic
 T111	Study 884 889	study
-E62	Study:T111 Stability:T112
 T112	Stability 841 850	influence
-A25	Stability-Value T112 change
 T113	Assertion 835 840	might
-E63	Assertion:T113 Asserted:T112
-A26	Assertion-Type-Value E63 hypothetical
-R7	Caused-By Arg1:T112 Arg2:E60	
 T114	Assertion 929 938	suspected
-E64	Assertion:T114 Asserted:E44
-A27	Assertion-Type-Value E64 possible
 T68	Condition 983 1001	infectious disease
-E44	Condition:T68 Name:T69 Temporality:E43 Temporality2:E68
 T69	Condition-Name 983 1001	infectious disease
 T115	Modifier 973 982	recurrent
-E65	Modifier:T115 Modifies:T69
-T116	Modifier 962 969	chronic
-E66	Modifier:T116 Modifies:T69
+T116	Acuteness 962 969	chronic
 T117	Or 970 972	or
-E67	Or:T117 Arg:E66 Arg2:E65
 T118	Eq-Comparison 953 960	ongoing
-E68	Eq-Comparison:T118 Temporal-Period:T119
 T119	Eq-Temporal-Period 953 960	ongoing
-A15	Eq-Temporal-Period-Value T119 present
-R8	Example-Of Arg1:E3 Arg2:E44	
 T120	Modifier 1074 1082	atypical
-E69	Modifier:T120 Modifies:T10
-R9	Example-Of Arg1:E17 Arg2:E3	
-R10	Example-Of Arg1:E9 Arg2:E3	
-R11	Example-Of Arg1:E19 Arg2:E3	
-R12	Example-Of Arg1:E11 Arg2:E3	
 T121	Or 1112 1114	or
-E70	Or:T121 Arg:E19 Arg2:E11
 T122	Condition 1131 1134	HIV
-E71	Condition:T122 Name:T123
 T123	Condition-Name 1131 1134	HIV
 T124	Modifier 1146 1147	B
-E72	Modifier:T124 Modifies:T22
 T125	Modifier 1148 1149	C
-E73	Modifier:T125 Modifies:T22
 T126	Or 1147 1148	/
-E74	Or:T126 Arg:E72 Arg2:E73
-R13	Example-Of Arg1:E71 Arg2:E44	
-R14	Example-Of Arg1:E21 Arg2:E44	
 T127	Condition 1156 1164	Pregnant
-E75	Condition:T127 Name:T128
 T128	Condition-Name 1156 1164	Pregnant
 T129	Or 1165 1167	or
-E76	Or:T129 Arg:E75 Arg2:E27
 T130	Condition 1177 1186	lactating
-E77	Condition:T130 Name:T131
 T131	Condition-Name 1177 1186	lactating
-R15	Equivalent-To Arg1:E77 Arg2:E27	
 T132	Life-Stage-And-Gender 1188 1193	women
-A28	Life-Stage-And-Gender-Type T132 female
-R16	If-Then Arg1:T132 Arg2:E77	
 T133	Life-Stage-And-Gender 1199 1204	Women
-A29	Life-Stage-And-Gender-Type T133 female
 T134	Condition 1208 1231	child-bearing potential
-E78	Condition:T134 Name:T135
 T135	Condition-Name 1208 1231	child-bearing potential
 T136	And 1205 1207	of
-E79	And:T136 Arg:T133 Arg2:E78
 T137	Negation 1232 1235	not
-E80	Negation:T137 Negates:E13
 T139	Eq-Comparison 1236 1241	using
-E82	Eq-Comparison:T139 Temporal-Period:T140
 T140	Eq-Temporal-Period 1236 1241	using
-A30	Eq-Temporal-Period-Value T140 present
 T141	Negation 220 223	non
-E83	Negation:T141 Negates:E18
-T142	Modifier 665 672	chronic
-E84	Modifier:T142 Modifies:T8
+T142	Acuteness 665 672	chronic
+A1	Life-Stage-And-Gender-Type T29 female
+A2	Life-Stage-And-Gender-Type T32 male
+A3	Eq-Operator-Value T35 GTEQ
+A4	Eq-Operator-Value T36 GTEQ
+A5	Eq-Operator-Value T37 GTEQ
+A6	Eq-Operator-Value T38 GTEQ
+A7	Eq-Operator-Value T39 GTEQ
+A8	Eq-Temporal-Unit-Value T40 year
+A9	Eq-Temporal-Unit-Value T41 month
+A10	Eq-Temporal-Unit-Value T42 week
+A11	Eq-Temporal-Unit-Value T43 day
+A12	Eq-Operator-Value T46 BETWEEN
+A13	Eq-Operator-Value T47 BETWEEN
+A14	Eq-Temporal-Period-Value T67 past
+A16	Temporal-Connection-Type-Value E6 before
+A17	Temporal-Connection-Type-Value E12 before
+A18	Observation-Type-Value T6 clinical-score
+A20	Observation-Type-Value T84 clinical-score
+A19	Temporal-Connection-Type-Value E28 during
+A21	Temporal-Connection-Type-Value E31 before
+A22	Temporal-Connection-Type-Value E45 during
+A23	Assertion-Type-Value E46 hypothetical
+A24	Assertion-Type-Value E56 possible
+A25	Stability-Value T112 change
+A26	Assertion-Type-Value E63 hypothetical
+A27	Assertion-Type-Value E64 possible
+A15	Eq-Temporal-Period-Value T119 present
+A28	Life-Stage-And-Gender-Type T132 female
+A29	Life-Stage-And-Gender-Type T133 female
+A30	Eq-Temporal-Period-Value T140 present
+A31	Acuteness-Type-Value T96 chronic
+A32	Acuteness-Type-Value T110 chronic
+A33	Acuteness-Type-Value T116 chronic
+A34	Acuteness-Type-Value T142 chronic
+R1	Abbrev-Of Arg1:E32 Arg2:E23
+R2	Caused-By Arg1:E49 Arg2:E48
+R3	Equivalent-To Arg1:E1 Arg2:E7
+R4	Caused-By Arg1:E25 Arg2:E57
+R5	Caused-By Arg1:E54 Arg2:E57
+R6	Caused-By Arg1:E60 Arg2:E15
+R7	Caused-By Arg1:T112 Arg2:E60
+R8	Example-Of Arg1:E3 Arg2:E44
+R9	Example-Of Arg1:E17 Arg2:E3
+R10	Example-Of Arg1:E9 Arg2:E3
+R11	Example-Of Arg1:E19 Arg2:E3
+R12	Example-Of Arg1:E11 Arg2:E3
+R13	Example-Of Arg1:E71 Arg2:E44
+R14	Example-Of Arg1:E21 Arg2:E44
+R15	Equivalent-To Arg1:E77 Arg2:E27
+R16	If-Then Arg1:T132 Arg2:E77

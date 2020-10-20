@@ -1,0 +1,209 @@
+T1	Modifier 53 63	pathogenic
+E1	Modifier:T1 Modifies:T56
+T2	Or 64 66	or
+E2	Or:T2 Arg:E1 Arg2:E3
+T3	Assertion 67 73	likely
+E3	Assertion:T3 Asserted:E56
+A1	Assertion-Type-Value E3 possible
+T4	Condition 85 99	PCDH19 variant
+E4	Condition:T4 Name:T56
+T5	Condition 124 132	seizures
+E5	Condition:T5 Name:T57 Stability:T98
+T6	Eq-Comparison 141 150	2 or more
+E6	Eq-Comparison:T6 Value:T58 Operator:T59
+T7	Condition 156 163	seizure
+E7	Condition:T7 Name:T101
+T8	Drug 164 175	medications
+E8	Drug:T8 Minimum-Count:E6
+T9	Condition 184 192	seizures
+E9	Condition:T9 Name:T62 Minimum-Count:E60
+T10	Temporal-Connection 193 197	over
+E10	Temporal-Connection:T10 Arg:E9 Arg2:E11
+A2	Temporal-Connection-Type-Value E10 during
+T11	Eq-Comparison 200 214	12-week period
+E11	Eq-Comparison:T11 Value:T102 Temporal-Unit:T103
+T12	Condition 218 233	primary seizure
+E12	Condition:T12 Name:T63 Temporality:E11
+T13	Temporal-Connection 240 248	prior to
+E13	Temporal-Connection:T13 Arg:E12 Arg2:E14
+A3	Temporal-Connection-Type-Value E13 before
+T14	Study 249 258	screening
+E14	Study:T14 
+T15	Procedure 300 310	treatments
+E15	Procedure:T15 Stability:T65 Temporality:E61
+T16	Procedure 312 334	Vagus nerve stimulator
+E16	Procedure:T16 Name:T67 Stability:T107 Temporality:E21
+T17	Observation 336 350	ketogenic diet
+E17	Observation:T17 Name:T68 Stability:T107 Temporality:E21
+T18	Or 352 355	and
+E18	Or:T18 Arg:E17 Arg2:E19
+T19	Observation 365 376	Atkins diet
+E19	Observation:T19 Name:T69 Stability:T107 Temporality:E21
+T21	Eq-Comparison 401 409	3 months
+E21	Eq-Comparison:T21 Value:T70 Temporal-Unit:T71
+T22	Temporal-Connection 410 418	prior to
+E22	Temporal-Connection:T22 Arg:E21 Arg2:E23
+A5	Temporal-Connection-Type-Value E22 before
+T23	Study 419 428	screening
+E23	Study:T23 
+T24	Eq-Comparison 455 463	Previous
+E24	Eq-Comparison:T24 Temporal-Period:T72
+T25	Drug 476 486	ganaxolone
+E25	Drug:T25 Name:T73 Temporality:E24
+T26	Eq-Comparison 492 513	> 8 consecutive weeks
+E26	Eq-Comparison:T26 Operator:T74 Value:T75 Temporal-Unit:T76
+T27	Condition 517 524	seizure
+E27	Condition:T27 Name:T77 Duration:E26
+T28	Temporal-Connection 533 539	during
+E28	Temporal-Connection:T28 Arg:E27 Arg2:E29
+A6	Temporal-Connection-Type-Value E28 during
+T29	Eq-Comparison 544 552	12 weeks
+E29	Eq-Comparison:T29 Value:T78 Temporal-Unit:T79
+T30	Temporal-Connection 553 561	prior to
+E30	Temporal-Connection:T30 Arg:E29 Arg2:E31
+A7	Temporal-Connection-Type-Value E30 before
+T31	Study 562 571	screening
+E31	Study:T31 
+T33	Drug 595 610	strong inducers
+E33	Drug:T33 Name:T81
+T34	Or 611 613	or
+E34	Or:T34 Arg:E33 Arg2:E35
+T35	Drug 614 624	inhibitors
+E35	Drug:T35 Name:T82
+T37	Negation 642 645	not
+E37	Negation:T37 Negates:E35 Negates2:E33
+T38	Eq-Comparison 661 664	Use
+E38	Eq-Comparison:T38 Temporal-Period:T84
+T39	Drug 668 688	tetrahydrocannabinol
+E39	Drug:T39 Name:T85 Temporality:E38
+T40	Drug 690 693	THC
+E40	Drug:T40 Name:T86
+T41	Or 695 697	or
+E41	Or:T41 Arg:E40 Arg2:E43
+T42	Modifier 698 710	non-approved
+E42	Modifier:T42 Modifies:T87
+T43	Drug 711 722	cannabidiol
+E43	Drug:T43 Name:T87
+T44	Drug 724 727	CBD
+E44	Drug:T44 Name:T110
+T45	Negation 732 742	prohibited
+E45	Negation:T45 Negates:E39 Negates2:E43
+T46	Temporal-Connection 743 749	during
+E46	Temporal-Connection:T46 Arg:E44 Arg2:E47
+A8	Temporal-Connection-Type-Value E46 during
+T47	Modifier 754 766	double-blind
+E47	Modifier:T47 
+T48	Other 794 799	other
+E48	Other:T48 Is-Other:E50
+T49	Study 800 815	investigational
+E49	Study:T49 Study-Of:E50
+T50	Drug 816 820	drug
+E50	Drug:T50 Temporality:E51 Temporality2:E53
+T51	Eq-Comparison 821 835	within 30 days
+E51	Eq-Comparison:T51 Operator:T88 Value:T89 Temporal-Unit:T90
+T52	Or 836 838	or
+E52	Or:T52 Arg:E51 Arg2:E53
+T54	Temporal-Connection 863 871	prior to
+E54	Temporal-Connection:T54 Arg:E53 Arg2:E55
+A9	Temporal-Connection-Type-Value E54 before
+T55	Study 872 881	screening
+E55	Study:T55 
+T56	Condition-Name 85 99	PCDH19 variant
+T57	Condition-Name 124 132	seizures
+T58	Eq-Value 141 142	2
+T59	Eq-Operator 143 150	or more
+A10	Eq-Operator-Value T59 GTEQ
+T61	Eq-Value 181 183	12
+T62	Condition-Name 184 192	seizures
+T63	Condition-Name 218 233	primary seizure
+T64	Eq-Temporal-Period 264 266	On
+A11	Eq-Temporal-Period-Value T64 present
+T65	Stability 269 275	stable
+A12	Stability-Value T65 stable
+T67	Procedure-Name 312 334	Vagus nerve stimulator
+T68	Observation-Name 336 350	ketogenic diet
+T69	Observation-Name 365 376	Atkins diet
+T70	Eq-Value 401 402	3
+T71	Eq-Temporal-Unit 403 409	months
+A13	Eq-Temporal-Unit-Value T71 month
+T72	Eq-Temporal-Period 455 463	Previous
+A14	Eq-Temporal-Period-Value T72 past
+T73	Drug-Name 476 486	ganaxolone
+T74	Eq-Operator 492 493	>
+A15	Eq-Operator-Value T74 GT
+T75	Eq-Value 494 495	8
+T76	Eq-Temporal-Unit 508 513	weeks
+A16	Eq-Temporal-Unit-Value T76 week
+T77	Condition-Name 517 524	seizure
+T78	Eq-Value 544 546	12
+T79	Eq-Temporal-Unit 547 552	weeks
+A17	Eq-Temporal-Unit-Value T79 week
+T81	Drug-Name 595 610	strong inducers
+T82	Drug-Name 614 624	inhibitors
+T84	Eq-Temporal-Period 661 664	Use
+A19	Eq-Temporal-Period-Value T84 present
+T85	Drug-Name 668 688	tetrahydrocannabinol
+T86	Drug-Name 690 693	THC
+T87	Drug-Name 711 722	cannabidiol
+T88	Eq-Operator 821 827	within
+A20	Eq-Operator-Value T88 LTEQ
+T89	Eq-Value 828 830	30
+T90	Eq-Temporal-Unit 831 835	days
+A21	Eq-Temporal-Unit-Value T90 day
+T91	Eq-Operator 839 849	fewer than
+A22	Eq-Operator-Value T91 LTEQ
+T93	Eq-Value 850 851	5
+T95	Modifier 74 84	pathogenic
+E56	Modifier:T95 Modifies:T56
+T96	Procedure 25 34	Molecular
+E57	Procedure:T96 Name:T97
+T97	Procedure-Name 25 34	Molecular
+R1	Found-By Arg1:E4 Arg2:E57	
+T98	Stability 116 123	control
+A25	Stability-Value T98 stable
+T99	Negation 105 112	Failure
+E58	Negation:T99 Negates:T98
+T100	And 133 140	despite
+E59	And:T100 Arg:E5 Arg2:E8
+T101	Condition-Name 156 163	seizure
+R2	Treatment-For Arg1:E8 Arg2:E7	
+T60	Eq-Comparison 181 183	12
+E60	Eq-Comparison:T60 Value:T61
+T102	Eq-Value 200 202	12
+T103	Eq-Temporal-Unit 203 207	week
+A26	Eq-Temporal-Unit-Value T103 week
+T104	Eq-Comparison 264 266	On
+E61	Eq-Comparison:T104 Temporal-Period:T64
+T66	Condition 292 299	seizure
+E62	Condition:T66 Name:T105
+T105	Condition-Name 292 299	seizure
+R3	Treatment-For Arg1:E15 Arg2:E62	
+R4	Example-Of Arg1:E16 Arg2:E15	
+R5	Example-Of Arg1:E17 Arg2:E15	
+A27	Observation-Type-Value T68 social-habit
+A28	Observation-Type-Value T69 social-habit
+T106	Modifier 356 364	modified
+E63	Modifier:T106 Modifies:T69
+R6	Example-Of Arg1:E19 Arg2:E15	
+T107	Stability 387 396	unchanged
+A29	Stability-Value T107 stable
+T20	Negation 525 532	freedom
+E20	Negation:T20 Negates:E27
+T32	Modifier 577 587	Concurrent
+E32	Modifier:T32 Modifies:T81
+T36	Modifier 628 634	CYP3A4
+E36	Modifier:T36 Modifies:T82
+T80	Modifier 635 636	5
+E64	Modifier:T80 Modifies:T82
+T83	Modifier 637 638	7
+E65	Modifier:T83 Modifies:T82
+T108	Or 634 635	/
+E66	Or:T108 Arg:E36 Arg2:E64
+T109	Or 636 637	/
+E67	Or:T109 Arg:E64 Arg2:E65
+R7	Example-Of Arg1:E40 Arg2:E39	
+T110	Drug-Name 724 727	CBD
+R8	Abbrev-Of Arg1:E44 Arg2:E43	
+T53	Eq-Comparison 839 862	fewer than 5 half-lives
+E53	Eq-Comparison:T53 Operator:T91 Value:T93 Unit:T92
+T92	Eq-Unit 852 862	half-lives

@@ -1,0 +1,35 @@
+T1	Procedure 57 90	Cochlear Nucleus cochlear implant
+E1	Procedure:T1 Name:T12
+T2	Or 97 99	or
+E2	Or:T2 Arg:E1 Arg2:E3
+T3	Procedure 100 116	Advanced Bionics
+E3	Procedure:T3 Name:T18
+T5	Eq-Comparison 186 203	at least one year
+E5	Eq-Comparison:T5 Operator:T14 Value:T15 Temporal-Unit:T16
+T8	Or 222 224	or
+E8	Or:T8 Arg2:T17 Arg:T6
+T9	Temporal-Connection 231 242	at the time
+E9	Temporal-Connection:T9 Arg:T17 Arg2:E10
+A3	Temporal-Connection-Type-Value E9 during
+T10	Study 246 256	enrollment
+E10	Study:T10 
+T11	Language 44 51	English
+T12	Procedure-Name 57 90	Cochlear Nucleus cochlear implant
+T13	Condition-Name 142 150	deafened
+T14	Eq-Operator 186 194	at least
+A4	Eq-Operator-Value T14 GTEQ
+T15	Eq-Value 195 198	one
+T16	Eq-Temporal-Unit 199 203	year
+A5	Eq-Temporal-Unit-Value T16 year
+T17	Life-Stage-And-Gender 225 230	adult
+A6	Life-Stage-And-Gender-Type T17 adult
+T18	Procedure-Name 100 116	Advanced Bionics
+T4	Condition 142 150	deafened
+E4	Condition:T4 Name:T13
+T19	Modifier 128 141	Postlingually
+E11	Modifier:T19 Modifies:T13
+T20	Procedure 164 170	device
+E12	Procedure:T20 Name:T21 Duration:E5
+T21	Procedure-Name 164 170	device
+T6	Life-Stage-And-Gender 216 221	child
+A1	Life-Stage-And-Gender-Type T6 child

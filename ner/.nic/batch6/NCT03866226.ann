@@ -1,0 +1,231 @@
+T1	Age 62 65	Age
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 66 77	18-80 years
+E2	Eq-Comparison:T2 Value:T62 Operator:T63 Value:T64 Temporal-Unit:T65
+T3	Procedure 112 116	test
+E3	Procedure:T3 Name:T119
+T4	Eq-Comparison 182 189	History
+E4	Eq-Comparison:T4 Temporal-Period:T66
+T5	Condition 193 202	psychosis
+E5	Condition:T5 Name:T67 Temporality:E4
+T6	Condition 214 227	schizophrenia
+E6	Condition:T6 Name:T68
+T7	Condition 229 245	bipolar disorder
+E7	Condition:T7 Name:T69
+T8	Condition 247 257	depression
+E8	Condition:T8 Name:T70
+T9	Condition 259 266	anxiety
+E9	Condition:T9 Name:T71
+T10	Condition 268 297	obsessive-compulsive disorder
+E10	Condition:T10 Name:T72
+T11	Condition 299 305	phobia
+E11	Condition:T11 Name:T73
+T12	Condition 307 326	somatoform disorder
+E12	Condition:T12 Name:T74
+T13	Condition 328 352	stress-related disorders
+E13	Condition:T13 Name:T75
+T14	Eq-Comparison 358 365	History
+E14	Eq-Comparison:T14 Temporal-Period:T76
+T15	Condition 369 377	insomnia
+E15	Condition:T15 Name:T77 Temporality:E14
+T16	Eq-Comparison 379 388	currently
+E16	Eq-Comparison:T16 Temporal-Period:T78
+T17	Drug 394 404	medication
+E17	Drug:T17 Temporality:E16
+T18	Eq-Comparison 410 417	History
+E18	Eq-Comparison:T18 Temporal-Period:T79
+T19	Condition 421 444	obstructive sleep apnea
+E19	Condition:T19 Name:T80 Temporality:E18
+T20	Condition 446 449	OSA
+E20	Condition:T20 Name:T81
+T21	Eq-Comparison 456 463	History
+E21	Eq-Comparison:T21 Temporal-Period:T82
+T22	Other 467 472	other
+E22	Other:T22 Is-Other:E23
+T23	Condition 473 488	sleep disorders
+E23	Condition:T23 Name:T83 Temporality:E21
+T24	Condition 500 510	narcolepsy
+E24	Condition:T24 Name:T84
+T25	Or 510 511	/
+E25	Or:T25 Arg:E24 Arg2:E26
+T26	Condition 511 523	hypersomnias
+E26	Condition:T26 Name:T85
+T27	Condition 525 556	circadian rhythm sleep disorder
+E27	Condition:T27 Name:T86
+T28	Condition 558 569	parasomnias
+E28	Condition:T28 Name:T87
+T29	Modifier 571 584	sleep-related
+E29	Modifier:T29 Modifies:T88
+T30	Condition 585 595	dyskinesia
+E30	Condition:T30 Name:T88
+T31	Eq-Comparison 601 608	History
+E31	Eq-Comparison:T31 Temporal-Period:T89
+T32	Condition 612 625	heart failure
+E32	Condition:T32 Name:T90 Temporality:E31
+T33	Condition 635 661	New York heart association
+E33	Condition:T33 Name:T91
+T34	Condition 663 667	NYHA
+E34	Condition:T34 Name:T92 Stage:E35
+T35	Eq-Comparison 669 678	Class Ⅲ-Ⅳ
+E35	Eq-Comparison:T35 Unit:T93 Value:T94 Operator:T124 Value2:T125
+T36	Eq-Comparison 684 691	History
+E36	Eq-Comparison:T36 Temporal-Period:T95
+T37	Condition 695 714	atrial fibrillation
+E37	Condition:T37 Name:T96 Temporality:E36
+T38	Or 715 718	and
+E38	Or:T38 Arg:E37 Arg2:E41
+T39	Modifier 728 734	atrial
+E39	Modifier:T39 Modifies:T98
+T40	Or 735 737	or
+E40	Or:T40 Arg:E39 Arg2:E65
+T41	Condition 750 763	extrasystoles
+E41	Condition:T41 Name:T98
+T42	Eq-Comparison 769 776	Ongoing
+E42	Eq-Comparison:T42 Temporal-Period:T99
+T43	Modifier 777 786	substance
+E43	Modifier:T43 Modifies:T100
+T44	Or 787 789	or
+E44	Or:T44 Arg:E43 Arg2:E45
+T45	Modifier 790 797	alcohol
+E45	Modifier:T45 Modifies:T100
+T46	Condition 798 803	abuse
+E46	Condition:T46 Name:T100 Temporality:E42
+T47	Eq-Comparison 809 828	Currently receiving
+E47	Eq-Comparison:T47 Temporal-Period:T101
+T49	Drug 829 857	sedative hypnotic medication
+E49	Drug:T49 Name:T103 Temporality:E47 Temporality2:E50
+T50	Eq-Comparison 858 871	within 1 week
+E50	Eq-Comparison:T50 Operator:T104 Value:T105 Temporal-Unit:T106
+T51	Condition 877 885	Pregnant
+E51	Condition:T51 Name:T107
+T52	Eq-Comparison 897 904	Ongoing
+E52	Eq-Comparison:T52 Temporal-Period:T48
+T53	Observation 920 936	night-shift work
+E53	Observation:T53 Name:T102 Temporality:E52 Temporality2:E54 Temporality3:E55
+T54	Eq-Comparison 938 948	22:00-6:00
+E54	Eq-Comparison:T54 Value:T109 Operator:T110 Value:T111
+T55	Eq-Comparison 950 963	within 1 week
+E55	Eq-Comparison:T55 Operator:T112 Value:T113 Temporal-Unit:T114
+T56	Assertion 977 984	need of
+E56	Assertion:T56 Asserted:E57
+A1	Assertion-Type-Value E56 hypothetical
+T58	Condition 1015 1036	wake during the night
+E58	Condition:T58 Name:T115
+T61	Eq-Comparison 1037 1050	within 1 week
+E61	Eq-Comparison:T61 Operator:T116 Value:T117 Temporal-Unit:T118
+T62	Eq-Value 66 68	18
+T63	Eq-Operator 68 69	-
+A3	Eq-Operator-Value T63 BETWEEN
+T64	Eq-Value 69 71	80
+T65	Eq-Temporal-Unit 72 77	years
+A4	Eq-Temporal-Unit-Value T65 year
+T66	Eq-Temporal-Period 182 189	History
+A5	Eq-Temporal-Period-Value T66 past
+T67	Condition-Name 193 202	psychosis
+T68	Condition-Name 214 227	schizophrenia
+T69	Condition-Name 229 245	bipolar disorder
+T70	Condition-Name 247 257	depression
+T71	Condition-Name 259 266	anxiety
+T72	Condition-Name 268 297	obsessive-compulsive disorder
+T73	Condition-Name 299 305	phobia
+T74	Condition-Name 307 326	somatoform disorder
+T75	Condition-Name 328 352	stress-related disorders
+T76	Eq-Temporal-Period 358 365	History
+A6	Eq-Temporal-Period-Value T76 past
+T77	Condition-Name 369 377	insomnia
+T78	Eq-Temporal-Period 379 388	currently
+A7	Eq-Temporal-Period-Value T78 present
+T79	Eq-Temporal-Period 410 417	History
+A8	Eq-Temporal-Period-Value T79 past
+T80	Condition-Name 421 444	obstructive sleep apnea
+T81	Condition-Name 446 449	OSA
+T82	Eq-Temporal-Period 456 463	History
+A9	Eq-Temporal-Period-Value T82 past
+T83	Condition-Name 473 488	sleep disorders
+T84	Condition-Name 500 510	narcolepsy
+T85	Condition-Name 511 523	hypersomnias
+T86	Condition-Name 525 556	circadian rhythm sleep disorder
+T87	Condition-Name 558 569	parasomnias
+T88	Condition-Name 585 595	dyskinesia
+T89	Eq-Temporal-Period 601 608	History
+A10	Eq-Temporal-Period-Value T89 past
+T90	Condition-Name 612 625	heart failure
+T91	Condition-Name 635 661	New York heart association
+T92	Condition-Name 663 667	NYHA
+T93	Eq-Unit 669 674	Class
+T94	Eq-Value 675 676	Ⅲ
+T95	Eq-Temporal-Period 684 691	History
+A11	Eq-Temporal-Period-Value T95 past
+T96	Condition-Name 695 714	atrial fibrillation
+T98	Condition-Name 750 763	extrasystoles
+T99	Eq-Temporal-Period 769 776	Ongoing
+A12	Eq-Temporal-Period-Value T99 present
+T100	Condition-Name 798 803	abuse
+T101	Eq-Temporal-Period 809 828	Currently receiving
+A13	Eq-Temporal-Period-Value T101 present
+T103	Drug-Name 829 857	sedative hypnotic medication
+T104	Eq-Operator 858 864	within
+A15	Eq-Operator-Value T104 LTEQ
+T105	Eq-Value 865 866	1
+T106	Eq-Temporal-Unit 867 871	week
+A16	Eq-Temporal-Unit-Value T106 week
+T107	Condition-Name 877 885	Pregnant
+T108	Life-Stage-And-Gender 886 891	women
+A17	Life-Stage-And-Gender-Type T108 female
+T109	Eq-Value 938 943	22:00
+T110	Eq-Operator 943 944	-
+A18	Eq-Operator-Value T110 BETWEEN
+T111	Eq-Value 944 948	6:00
+T112	Eq-Operator 950 956	within
+A19	Eq-Operator-Value T112 LTEQ
+T113	Eq-Value 957 958	1
+T114	Eq-Temporal-Unit 959 963	week
+A20	Eq-Temporal-Unit-Value T114 week
+T115	Condition-Name 1015 1036	wake during the night
+T116	Eq-Operator 1037 1043	within
+A21	Eq-Operator-Value T116 LTEQ
+T117	Eq-Value 1044 1045	1
+T118	Eq-Temporal-Unit 1046 1050	week
+A22	Eq-Temporal-Unit-Value T118 week
+T119	Procedure-Name 112 116	test
+T120	Observation 142 155	questionnaire
+E62	Observation:T120 Name:T121
+T121	Observation-Name 142 155	questionnaire
+A23	Observation-Type-Value T121 survey-or-questionnaire
+T122	Assertion 83 93	Capable of
+E63	Assertion:T122 Asserted:E3 Asserted2:E62
+A24	Assertion-Type-Value E63 hypothetical
+T123	And 117 120	and
+E64	And:T123 Arg:E3 Arg2:E62
+R1	Example-Of Arg1:E6 Arg2:E5	
+R2	Example-Of Arg1:E7 Arg2:E5	
+R3	Example-Of Arg1:E8 Arg2:E5	
+R4	Example-Of Arg1:E9 Arg2:E5	
+R5	Example-Of Arg1:E10 Arg2:E5	
+R6	Example-Of Arg1:E11 Arg2:E5	
+R7	Example-Of Arg1:E12 Arg2:E5	
+R8	Example-Of Arg1:E13 Arg2:E5	
+R9	Treatment-For Arg1:E17 Arg2:E15	
+R10	Abbrev-Of Arg1:E20 Arg2:E19	
+R11	Example-Of Arg1:E24 Arg2:E23	
+R12	Example-Of Arg1:E26 Arg2:E23	
+R13	Example-Of Arg1:E27 Arg2:E23	
+R14	Example-Of Arg1:E28 Arg2:E23	
+R15	Example-Of Arg1:E30 Arg2:E23	
+R16	Equivalent-To Arg1:E33 Arg2:E32	
+R17	Abbrev-Of Arg1:E34 Arg2:E33	
+T124	Eq-Operator 676 677	-
+A25	Eq-Operator-Value T124 BETWEEN
+T125	Eq-Value 677 678	Ⅳ
+T97	Modifier 738 749	ventricular
+E65	Modifier:T97 Modifies:T98
+R18	If-Then Arg1:E51 Arg2:T108	
+T48	Eq-Temporal-Period 897 904	Ongoing
+A14	Eq-Temporal-Period-Value T48 present
+T102	Observation-Name 920 936	night-shift work
+T57	Family-Member 993 1009	families at home
+E48	Family-Member:T57 Has:E58
+T126	Procedure 985 989	care
+E57	Procedure:T126 Name:T127 Temporality:E61
+T127	Procedure-Name 985 989	care
+R19	Treatment-For Arg1:E57 Arg2:E58	

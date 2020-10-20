@@ -1,0 +1,183 @@
+T1	Or 30 32	or
+E1	Or:T1 Arg:T57 Arg2:T58
+T2	Age 45 49	Aged
+E2	Age:T2 Eq-Comparison:E3
+T3	Eq-Comparison 50 61	18-40 years
+E3	Eq-Comparison:T3 Value:T59 Operator:T60 Value:T61 Temporal-Unit:T62
+T5	Eq-Comparison 234 241	Current
+E5	Eq-Comparison:T5 Temporal-Period:T64
+T6	Drug 251 274	psychoactive medication
+E6	Drug:T6 Name:T65 Temporality:E5
+T7	Exception 276 282	except
+E7	Exception:T7 From:E6 Except:E8 Except2:E9 Except3:E12
+T8	Drug 287 305	contraceptive pill
+E8	Drug:T8 Name:T66
+T9	Drug 311 323	Depo-Provera
+E9	Drug:T9 Name:T67
+T11	Or 334 336	or
+E11	Or:T11 Arg:E9 Arg2:E12
+T12	Procedure 341 361	progesterone implant
+E12	Procedure:T12 Name:T68
+T13	Eq-Comparison 372 376	past
+E13	Eq-Comparison:T13 Temporal-Period:T69
+T14	Or 377 379	or
+E14	Or:T14 Arg:E13 Arg2:E15
+T15	Eq-Comparison 380 387	current
+E15	Eq-Comparison:T15 Temporal-Period:T70
+T17	Condition 402 422	psychiatric disorder
+E17	Condition:T17 Name:T72 Temporality:E15 Temporality2:E13
+T18	Condition 440 457	medical condition
+E18	Condition:T18 Severity:T73
+T19	Eq-Comparison 463 470	Current
+E19	Eq-Comparison:T19 Temporal-Period:T74
+T20	Or 471 473	or
+E20	Or:T20 Arg:E19 Arg2:E21
+T21	Eq-Comparison 474 478	past
+E21	Eq-Comparison:T21 Temporal-Period:T75
+T22	Modifier 479 496	gastro-intestinal
+E22	Modifier:T22 Modifies:T76
+T23	Condition 497 505	disorder
+E23	Condition:T23 Name:T76 Temporality:E21 Temporality2:E19
+T24	Or 506 508	or
+E24	Or:T24 Arg:E23 Arg2:E25
+T25	Condition 509 533	irritable bowel syndrome
+E25	Condition:T25 Name:T77
+T26	Eq-Comparison 539 546	Current
+E26	Eq-Comparison:T26 Temporal-Period:T78
+T27	Condition 547 556	pregnancy
+E27	Condition:T27 Name:T79 Temporality:E26
+T28	Or 557 559	or
+E28	Or:T28 Arg:E27 Arg2:E29
+T29	Condition 560 573	breastfeeding
+E29	Condition:T29 Name:T80 Temporality:E26
+T30	Condition 585 603	lactate deficiency
+E30	Condition:T30 Name:T81
+T31	Or 604 606	or
+E31	Or:T31 Arg:E30 Arg2:E33
+T32	Other 611 616	other
+E32	Other:T32 Is-Other:E33
+T33	Condition 617 634	problem absorbing
+E33	Condition:T33 Name:T10
+T34	Modifier 644 653	galactose
+E34	Modifier:T34 Modifies:T10
+T35	Or 654 656	or
+E35	Or:T35 Arg:E34 Arg2:E36
+T36	Modifier 657 664	glucose
+E36	Modifier:T36 Modifies:T10
+T37	Eq-Comparison 670 677	Current
+E37	Eq-Comparison:T37 Temporal-Period:T82
+T38	Or 678 680	or
+E38	Or:T38 Arg:E37 Arg2:E39
+T39	Eq-Comparison 681 693	past history
+E39	Eq-Comparison:T39 Temporal-Period:T83
+T40	Modifier 697 701	drug
+E40	Modifier:T40 Modifies:T71
+T41	Or 702 704	or
+E41	Or:T41 Arg:E40 Arg2:E42
+T42	Modifier 705 712	alcohol
+E42	Modifier:T42 Modifies:T71
+T43	Condition 713 723	dependency
+E43	Condition:T43 Name:T71 Temporality:E37 Temporality2:E39
+T44	Modifier 748 761	psychological
+E44	Modifier:T44 Modifies:E46
+T45	Or 762 764	or
+E45	Or:T45 Arg:E44 Arg2:E16
+T46	Study 773 778	study
+E46	Study:T46 Study-Of:E47 Temporality:E48
+T47	Drug 800 810	medication
+E47	Drug:T47 
+T48	Eq-Comparison 811 835	within the last 3 months
+E48	Eq-Comparison:T48 Operator:T84 Temporal-Period:T85 Value:T86 Temporal-Unit:T87
+T49	Eq-Comparison 841 849	Previous
+E49	Eq-Comparison:T49 Temporal-Period:T88
+T50	Study 869 874	study
+E50	Study:T50 Temporality:E49 Study-Of:E52
+T51	Modifier 885 889	same
+E51	Modifier:T51 Modifies:T89
+T52	Procedure 903 929	emotional processing tasks
+E52	Procedure:T52 Name:T89
+T54	Eq-Comparison 942 964	> 5 cigarettes per day
+E54	Eq-Comparison:T54 Operator:T91 Value:T92 Unit:T93 Per:T94
+T55	Observation 980 986	drinks
+E55	Observation:T55 Name:T103 Eq-Comparison:E56
+T56	Eq-Comparison 987 1017	> 6 caffeinated drinks per day
+E56	Eq-Comparison:T56 Operator:T95 Value:T96 Unit:T97 Per:T98
+T57	Life-Stage-And-Gender 25 29	Male
+A1	Life-Stage-And-Gender-Type T57 male
+T58	Life-Stage-And-Gender 33 39	female
+A2	Life-Stage-And-Gender-Type T58 female
+T59	Eq-Value 50 52	18
+T60	Eq-Operator 52 53	-
+A3	Eq-Operator-Value T60 BETWEEN
+T61	Eq-Value 53 55	40
+T62	Eq-Temporal-Unit 56 61	years
+A4	Eq-Temporal-Unit-Value T62 year
+T63	Language 165 172	English
+T64	Eq-Temporal-Period 234 241	Current
+A5	Eq-Temporal-Period-Value T64 present
+T65	Drug-Name 251 274	psychoactive medication
+T66	Drug-Name 287 305	contraceptive pill
+T67	Drug-Name 311 323	Depo-Provera
+T68	Procedure-Name 341 361	progesterone implant
+T69	Eq-Temporal-Period 372 376	past
+A6	Eq-Temporal-Period-Value T69 past
+T70	Eq-Temporal-Period 380 387	current
+A7	Eq-Temporal-Period-Value T70 present
+T72	Condition-Name 402 422	psychiatric disorder
+T73	Severity 428 439	Significant
+A8	Severity-Value T73 severe
+T74	Eq-Temporal-Period 463 470	Current
+A9	Eq-Temporal-Period-Value T74 present
+T75	Eq-Temporal-Period 474 478	past
+A10	Eq-Temporal-Period-Value T75 past
+T76	Condition-Name 497 505	disorder
+T77	Condition-Name 509 533	irritable bowel syndrome
+T78	Eq-Temporal-Period 539 546	Current
+A11	Eq-Temporal-Period-Value T78 present
+T79	Condition-Name 547 556	pregnancy
+T80	Condition-Name 560 573	breastfeeding
+T81	Condition-Name 585 603	lactate deficiency
+T82	Eq-Temporal-Period 670 677	Current
+A12	Eq-Temporal-Period-Value T82 present
+T83	Eq-Temporal-Period 681 693	past history
+A13	Eq-Temporal-Period-Value T83 past
+T84	Eq-Operator 811 817	within
+A14	Eq-Operator-Value T84 LTEQ
+T85	Eq-Temporal-Period 822 826	last
+A15	Eq-Temporal-Period-Value T85 past
+T86	Eq-Value 827 828	3
+T87	Eq-Temporal-Unit 829 835	months
+A16	Eq-Temporal-Unit-Value T87 month
+T88	Eq-Temporal-Period 841 849	Previous
+A17	Eq-Temporal-Period-Value T88 past
+T90	Observation-Name 935 941	Smoker
+T91	Eq-Operator 942 943	>
+A19	Eq-Operator-Value T91 GT
+T92	Eq-Value 944 945	5
+T93	Eq-Unit 946 956	cigarettes
+T94	Eq-Temporal-Unit 961 964	day
+A20	Eq-Temporal-Unit-Value T94 day
+T95	Eq-Operator 987 988	>
+A21	Eq-Operator-Value T95 GT
+T96	Eq-Value 989 990	6
+T97	Eq-Unit 991 1009	caffeinated drinks
+T98	Eq-Temporal-Unit 1014 1017	day
+A22	Eq-Temporal-Unit-Value T98 day
+T4	Modifier 388 401	Axis 1 DSM-IV
+E4	Modifier:T4 Modifies:T72
+T10	Condition-Name 617 634	problem absorbing
+T16	Modifier 635 642	lactose
+E10	Modifier:T16 Modifies:T10
+T71	Condition-Name 713 723	dependency
+T99	Modifier 765 772	medical
+E16	Modifier:T99 Modifies:E46
+T89	Procedure-Name 903 929	emotional processing tasks
+T100	Modifier 894 901	similar
+E57	Modifier:T100 Modifies:T89
+T101	Or 891 893	or
+E58	Or:T101 Arg:E51 Arg2:E57
+T102	Observation 935 941	Smoker
+E59	Observation:T102 Eq-Comparison:E54 Name:T90
+T103	Observation-Name 980 986	drinks
+A18	Observation-Type-Value T103 social-habit
+A23	Observation-Type-Value T90 social-habit

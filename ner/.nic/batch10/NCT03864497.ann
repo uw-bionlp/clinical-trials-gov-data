@@ -1,0 +1,78 @@
+T1	Condition 292 319	peripheral vascular disease
+T2	Condition-Name 292 319	peripheral vascular disease
+E1	Condition:T1 Name:T2
+T3	Condition 263 286	cerebrovascular disease
+T4	Condition-Name 263 286	cerebrovascular disease
+E3	Condition:T3 Name:T4
+T5	Procedure 22 43	Liver transplantation
+T6	Procedure-Name 22 43	Liver transplantation
+E5	Procedure:T5 Name:T6
+T7	Procedure 400 421	liver transplantation
+T8	Procedure-Name 400 421	liver transplantation
+E7	Procedure:T7 Name:T8
+T9	Condition 156 173	diabetes mellitus
+T10	Condition-Name 156 173	diabetes mellitus
+E9	Condition:T9 Name:T10
+T11	Condition 244 257	stable angina
+T12	Condition-Name 244 257	stable angina
+E11	Condition:T11 Name:T12
+T13	Procedure 234 238	CABG
+T14	Procedure-Name 234 238	CABG
+E13	Procedure:T13 Name:T14
+T15	Procedure 227 230	PCI
+T16	Procedure-Name 227 230	PCI
+E15	Procedure:T15 Name:T16
+T17	Eq-Operator 116 117	>
+A1	Eq-Operator-Value T17 GT
+T18	Eq-Operator 196 197	>
+A2	Eq-Operator-Value T18 GT
+T19	Eq-Operator 349 350	<
+A3	Eq-Operator-Value T19 LT
+T20	Eq-Temporal-Unit 354 359	years
+A4	Eq-Temporal-Unit-Value T20 year
+T21	Age 345 348	Age
+E16	Age:T21 Eq-Comparison:E19
+T22	Eq-Value 117 118	4
+T23	Eq-Value 197 200	152
+T24	Eq-Value 351 353	18
+T25	Eq-Comparison 116 118	>4
+E17	Eq-Comparison:T25 Operator:T17 Value:T22
+T26	Eq-Comparison 196 206	>152μmol/l
+E18	Eq-Comparison:T26 Operator:T18 Value:T23 Unit:T35 Per:T36
+T27	Eq-Comparison 349 359	< 18 years
+E19	Eq-Comparison:T27 Operator:T19 Temporal-Unit:T20 Value:T24
+T28	Assertion 44 54	candidates
+E2	Assertion:T28 Asserted:E5
+A5	Assertion-Type-Value E2 hypothetical
+T29	Observation 119 123	METs
+E4	Observation:T29 Name:T30 Eq-Comparison:E17 Temporality:E23
+T30	Observation-Name 119 123	METs
+A6	Observation-Type-Value T30 measurement
+T31	Negation 95 104	inability
+E6	Negation:T31 Negates:E4
+T32	Modifier 140 155	insulin-treated
+E8	Modifier:T32 Modifies:T10
+T33	Observation 179 195	serum creatinine
+E10	Observation:T33 Name:T34 Eq-Comparison:E18
+T34	Observation-Name 179 195	serum creatinine
+A7	Observation-Type-Value T34 lab
+T35	Eq-Unit 200 204	μmol
+T36	Eq-Unit 205 206	l
+T37	Condition 223 225	MI
+E12	Condition:T37 Name:T38 Temporality:E14
+T38	Condition-Name 223 225	MI
+T39	Eq-Comparison 212 219	history
+E14	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 212 219	history
+A8	Eq-Temporal-Period-Value T40 past
+T41	Or 231 233	or
+E20	Or:T41 Arg:E15 Arg2:E13
+T42	Condition 365 374	Pregnancy
+E21	Condition:T42 Name:T43
+T43	Condition-Name 365 374	Pregnancy
+T44	Contraindication 380 396	Contraindication
+E22	Contraindication:T44 Contraindicates:E7
+T45	Eq-Comparison 127 134	history
+E23	Eq-Comparison:T45 Temporal-Period:T46
+T46	Eq-Temporal-Period 127 134	history
+A9	Eq-Temporal-Period-Value T46 past

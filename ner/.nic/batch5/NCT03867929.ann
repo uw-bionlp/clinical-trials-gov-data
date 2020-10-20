@@ -1,0 +1,98 @@
+T1	Condition 37 57	erectile dysfunction
+E1	Condition:T1 Name:T25 Temporality:E25
+T2	Modifier 95 107	uncontrolled
+E2	Modifier:T2 Modifies:T26
+T3	Condition 108 125	diabetes mellitus
+E3	Condition:T3 Name:T26 Temporality:E26
+T4	Modifier 144 156	uncontrolled
+E4	Modifier:T4 Modifies:T27
+T5	Condition 157 169	hypertension
+E5	Condition:T5 Name:T27 Temporality:E27
+T6	Modifier 188 200	uncontrolled
+E6	Modifier:T6 Modifies:T28
+T7	Condition 201 227	lipid metabolism disorders
+E7	Condition:T7 Name:T28 Temporality:E28
+T8	Condition 246 267	neurological diseases
+E8	Condition:T8 Name:T29 Temporality:E29
+T9	Condition 286 309	heamatological diseases
+E9	Condition:T9 Name:T30 Temporality:E30
+T11	Condition 316 339	Urinary tract infection
+E11	Condition:T11 Name:T10
+T12	Condition 363 375	malignencies
+E12	Condition:T12 Name:T31
+T13	Condition 390 404	kidney failure
+E13	Condition:T13 Name:T32
+T14	Condition 423 441	metabolic syndrome
+E14	Condition:T14 Name:T33 Temporality:E31
+T15	Condition 460 480	psychiatric diseases
+E15	Condition:T15 Name:T34 Temporality:E32
+T16	Or 481 487	and/or
+E16	Or:T16 Arg:E15 Arg2:E17
+T17	Procedure 488 505	medical treatment
+E17	Procedure:T17 
+T18	Condition 512 519	Smoking
+E18	Condition:T18 Name:T35
+T19	Eq-Comparison 526 533	History
+E19	Eq-Comparison:T19 Temporal-Period:T36
+T20	Procedure 537 551	pelvic surgery
+E20	Procedure:T20 Name:T37 Temporality:E19
+T21	Procedure 553 568	cardiac surgery
+E21	Procedure:T21 Name:T38 Temporality:E19
+T22	Or 569 572	and
+E22	Or:T22 Arg:E21 Arg2:E24
+T23	Modifier 573 579	pelvic
+E23	Modifier:T23 Modifies:T39
+T24	Procedure 580 592	radiotherapy
+E24	Procedure:T24 Name:T39 Temporality:E19
+T25	Condition-Name 37 57	erectile dysfunction
+T26	Condition-Name 108 125	diabetes mellitus
+T27	Condition-Name 157 169	hypertension
+T28	Condition-Name 201 227	lipid metabolism disorders
+T29	Condition-Name 246 267	neurological diseases
+T30	Condition-Name 286 309	heamatological diseases
+T32	Condition-Name 390 404	kidney failure
+T33	Condition-Name 423 441	metabolic syndrome
+T34	Condition-Name 460 480	psychiatric diseases
+T35	Condition-Name 512 519	Smoking
+T36	Eq-Temporal-Period 526 533	History
+A1	Eq-Temporal-Period-Value T36 past
+T37	Procedure-Name 537 551	pelvic surgery
+T38	Procedure-Name 553 568	cardiac surgery
+T39	Procedure-Name 580 592	radiotherapy
+T40	Eq-Comparison 25 33	presence
+E25	Eq-Comparison:T40 Temporal-Period:T41
+T41	Eq-Temporal-Period 25 33	presence
+A2	Eq-Temporal-Period-Value T41 present
+T42	Eq-Comparison 83 91	Presence
+E26	Eq-Comparison:T42 Temporal-Period:T43
+T43	Eq-Temporal-Period 83 91	Presence
+A3	Eq-Temporal-Period-Value T43 present
+T44	Eq-Comparison 132 140	Presence
+E27	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 132 140	Presence
+A4	Eq-Temporal-Period-Value T45 present
+T46	Eq-Comparison 176 184	Presence
+E28	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 176 184	Presence
+A5	Eq-Temporal-Period-Value T47 present
+T48	Eq-Comparison 234 242	Presence
+E29	Eq-Comparison:T48 Temporal-Period:T49
+T49	Eq-Temporal-Period 234 242	Presence
+A6	Eq-Temporal-Period-Value T49 present
+T50	Eq-Comparison 274 282	Presence
+E30	Eq-Comparison:T50 Temporal-Period:T51
+T51	Eq-Temporal-Period 274 282	Presence
+A7	Eq-Temporal-Period-Value T51 present
+T10	Condition-Name 316 339	Urinary tract infection
+T31	Condition-Name 363 375	malignencies
+T52	Modifier 382 389	Chronic
+E10	Modifier:T52 Modifies:T32
+T53	Eq-Comparison 411 419	Presence
+E31	Eq-Comparison:T53 Temporal-Period:T54
+T54	Eq-Temporal-Period 411 419	Presence
+A8	Eq-Temporal-Period-Value T54 present
+T55	Eq-Comparison 448 456	Presence
+E32	Eq-Comparison:T55 Temporal-Period:T56
+T56	Eq-Temporal-Period 448 456	Presence
+A9	Eq-Temporal-Period-Value T56 present
+R1	Treatment-For Arg1:E17 Arg2:E15	

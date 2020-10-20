@@ -1,0 +1,153 @@
+T1	Age 25 28	Age
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 29 50	greater than 48 years
+E2	Eq-Comparison:T2 Operator:T48 Value:T49 Temporal-Unit:T50
+T4	Modifier 72 75	leg
+E4	Modifier:T4 Modifies:T51
+T5	Or 76 78	or
+E5	Or:T5 Arg:E4 Arg2:E6
+T6	Modifier 79 86	buttock
+E6	Modifier:T6 Modifies:T51
+T7	Condition 87 91	pain
+E7	Condition:T7 Name:T51
+T11	Modifier 256 261	motor
+E11	Modifier:T11 Modifies:T53
+T12	Or 262 264	or
+E12	Or:T12 Arg:E11 Arg2:E9
+T13	Condition 273 284	disturbance
+E13	Condition:T13 Name:T53
+T15	Observation 291 298	walking
+E15	Observation:T15 Name:T14
+T16	And 323 326	and
+E16	And:T16 Arg:T54 Arg2:E17
+T17	Modifier 327 338	symmetrical
+E17	Modifier:T17 Modifies:T52
+T18	Observation 339 350	foot pulses
+E18	Observation:T18 Name:T52 Polarity:T54
+T19	Condition 384 392	weakness
+E19	Condition:T19 Name:T55
+T20	Condition 419 423	pain
+E20	Condition:T20 Name:T56
+T24	Eq-Comparison 464 481	more than 1 month
+E24	Eq-Comparison:T24 Operator:T57 Value:T58 Temporal-Unit:T59
+T25	Condition 487 494	Able to
+E25	Condition:T25 Name:T60 Duration:E29
+T26	Modifier 505 509	walk
+E26	Modifier:T26 Modifies:T60
+T27	Negation 510 517	without
+E27	Negation:T27 Negates:E28
+T28	Procedure 518 535	assistive devices
+E28	Procedure:T28 Name:T85
+T29	Eq-Comparison 540 559	at least 20 minutes
+E29	Eq-Comparison:T29 Operator:T61 Value:T62 Temporal-Unit:T63
+T30	Modifier 694 700	spinal
+E30	Modifier:T30 Modifies:T65
+T31	Condition 701 705	pain
+E31	Condition:T31 Name:T65
+T32	Condition 713 721	fracture
+E32	Condition:T32 Name:T66
+T33	Condition 723 728	tumor
+E33	Condition:T33 Name:T67
+T34	Condition 730 739	infection
+E34	Condition:T34 Name:T68
+T35	Or 741 743	or
+E35	Or:T35 Arg:E34 Arg2:E36
+T36	Condition 751 770	spondyloarthropathy
+E36	Condition:T36 Name:T70 Severity:T69
+T37	Other 780 785	other
+E37	Other:T37 Is-Other:E38
+T38	Condition 793 807	co-morbidities
+E38	Condition:T38 Name:T72 Severity:T71
+T39	Modifier 819 830	progressive
+E39	Modifier:T39 Modifies:T73
+T40	Condition 831 851	neurological deficit
+E40	Condition:T40 Name:T73
+T41	Other 857 862	Other
+E41	Other:T41 Is-Other:E42
+T42	Condition 871 882	pathologies
+E42	Condition:T42 Name:T75 Severity:T74
+T43	Modifier 890 906	locomotor system
+E43	Modifier:T43 Modifies:T75
+T44	Negation 962 971	Inability
+E44	Negation:T44 Negates:T77
+T45	Eq-Comparison 1101 1109	Previous
+E45	Eq-Comparison:T45 Temporal-Period:T78
+T46	Procedure 1110 1129	spinal manipulation
+E46	Procedure:T46 Name:T79 Temporality:E45 Temporality2:E47
+T47	Eq-Comparison 1130 1151	within the past month
+E47	Eq-Comparison:T47 Operator:T80 Temporal-Period:T81 Temporal-Unit:T82
+T48	Eq-Operator 29 41	greater than
+A5	Eq-Operator-Value T48 GT
+T49	Eq-Value 42 44	48
+T50	Eq-Temporal-Unit 45 50	years
+A6	Eq-Temporal-Unit-Value T50 year
+T51	Condition-Name 87 91	pain
+T53	Condition-Name 273 284	disturbance
+T54	Polarity 316 322	normal
+A8	Polarity-Value T54 normal
+T55	Condition-Name 384 392	weakness
+T56	Condition-Name 419 423	pain
+T57	Eq-Operator 464 473	more than
+A9	Eq-Operator-Value T57 GT
+T58	Eq-Value 474 475	1
+T59	Eq-Temporal-Unit 476 481	month
+A10	Eq-Temporal-Unit-Value T59 month
+T60	Condition-Name 487 494	Able to
+T61	Eq-Operator 540 548	at least
+A11	Eq-Operator-Value T61 GTEQ
+T62	Eq-Value 549 551	20
+T63	Eq-Temporal-Unit 552 559	minutes
+A12	Eq-Temporal-Unit-Value T63 minute
+T64	Language 649 656	English
+T65	Condition-Name 701 705	pain
+T66	Condition-Name 713 721	fracture
+T67	Condition-Name 723 728	tumor
+T68	Condition-Name 730 739	infection
+T69	Severity 744 750	severe
+A13	Severity-Value T69 severe
+T70	Condition-Name 751 770	spondyloarthropathy
+T71	Severity 786 792	severe
+A14	Severity-Value T71 severe
+T72	Condition-Name 793 807	co-morbidities
+T73	Condition-Name 831 851	neurological deficit
+T74	Severity 863 870	serious
+A15	Severity-Value T74 severe
+T75	Condition-Name 871 882	pathologies
+T77	Language 992 999	English
+T78	Eq-Temporal-Period 1101 1109	Previous
+A16	Eq-Temporal-Period-Value T78 past
+T79	Procedure-Name 1110 1129	spinal manipulation
+T80	Eq-Operator 1130 1136	within
+A17	Eq-Operator-Value T80 LTEQ
+T81	Eq-Temporal-Period 1141 1145	past
+A18	Eq-Temporal-Period-Value T81 past
+T82	Eq-Temporal-Unit 1146 1151	month
+A19	Eq-Temporal-Unit-Value T82 month
+T8	Coreference 135 143	symptoms
+E8	Coreference:T8 Refers-To:E7
+T9	Modifier 265 272	sensory
+E9	Modifier:T9 Modifies:T53
+T3	Observation 98 105	walking
+E3	Observation:T3 Name:T10
+T10	Observation-Name 98 105	walking
+R1	Caused-By Arg1:E7 Arg2:E3	
+T14	Observation-Name 291 298	walking
+R2	Caused-By Arg1:E13 Arg2:E15	
+T52	Observation-Name 339 350	foot pulses
+T83	Modifier 368 383	lower extremity
+E10	Modifier:T83 Modifies:T55
+T84	Modifier 410 418	low back
+E14	Modifier:T84 Modifies:T56
+T21	Coreference 441 459	symptoms and signs
+E21	Coreference:T21 Refers-To:E7 Duration:E24
+T22	Modifier 495 500	stand
+E22	Modifier:T22 Modifies:T60
+T23	And 501 504	and
+E23	And:T23 Arg:E22 Arg2:E26
+T85	Procedure-Name 518 535	assistive devices
+R3	Treatment-For Arg1:E28 Arg2:E25	
+R4	Caused-By Arg1:E31 Arg2:E32	
+R5	Caused-By Arg1:E31 Arg2:E33	
+R6	Caused-By Arg1:E31 Arg2:E34	
+R7	Caused-By Arg1:E31 Arg2:E36	
+R8	Example-Of Arg1:E40 Arg2:E38	

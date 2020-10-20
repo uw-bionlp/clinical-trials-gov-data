@@ -1,99 +1,99 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E7	Procedure:T7 Name:T8
+E9	Procedure:T9 Name:T10 Temporality:E19
+E11	Procedure:T11 Name:T12
+E13	Procedure:T13 Name:T14
+E15	Procedure:T15 Name:T16
+E17	Procedure:T17 Name:T18
+E21	Procedure:T21 Name:T22
+E26	Age:T31 Eq-Comparison:E2
+E27	Eq-Comparison:T34 Temporal-Unit:T30 Value:T33 Temporal-Period:T23
+E2	Eq-Comparison:T35 Temporal-Unit:T29 Value:T32 Operator:T36
+E4	Eq-Comparison:T37 Temporal-Period:T38
+E6	Procedure:T39 Name:T40 Temporality:E4
+E8	Modifier:T41 Modifies:T40
+E10	Modifier:T42 Modifies:T40
+E12	Or:T43 Arg:E10 Arg2:E8
+E14	Modifier:T44 Modifies:T18
+E16	Or:T45 Arg:E14 Arg2:E18
+E18	Modifier:T46 Modifies:T18
+E19	Eq-Comparison:T19 Temporal-Period:T20
+E20	Drug:T25 Name:T26 Temporality:E27
+E22	Temporal-Connection:T47 Arg:E27 Arg2:E11
+E24	Allergy:T48 Name:E25
+E25	Drug:T49
+E28	Observation:T50 Name:T51 Temporality:E29
+E29	Eq-Comparison:T52 Temporal-Period:T53
+E30	Negation:T54 Negates:T27
+E23	Study:T24 Study-Of:E25
 T1	Procedure 189 213	total ankle arthroplasty
 T2	Procedure-Name 189 213	total ankle arthroplasty
-E1	Procedure:T1 Name:T2
 T3	Procedure 147 167	subtalar arthrodesis
 T4	Procedure-Name 147 167	subtalar arthrodesis
-E3	Procedure:T3 Name:T4
 T5	Procedure 275 314	Medial Displacement Calcaneal Osteotomy
 T6	Procedure-Name 275 314	Medial Displacement Calcaneal Osteotomy
-E5	Procedure:T5 Name:T6
 T7	Procedure 169 187	triple arthrodesis
 T8	Procedure-Name 169 187	triple arthrodesis
-E7	Procedure:T7 Name:T8
 T9	Procedure 386 413	revision surgical procedure
 T10	Procedure-Name 386 413	revision surgical procedure
-E9	Procedure:T9 Name:T10 Temporality:E19
 T11	Procedure 497 515	surgical procedure
 T12	Procedure-Name 497 515	surgical procedure
-E11	Procedure:T11 Name:T12
 T13	Procedure 128 145	ankle arthrodesis
 T14	Procedure-Name 128 145	ankle arthrodesis
-E13	Procedure:T13 Name:T14
 T15	Procedure 253 273	Cavus Reconstruction
 T16	Procedure-Name 253 273	Cavus Reconstruction
-E15	Procedure:T15 Name:T16
 T17	Procedure 215 230	peroneal tendon
 T18	Procedure-Name 215 230	peroneal tendon
-E17	Procedure:T17 Name:T18
 T21	Procedure 316 331	Dwyer Osteotomy
 T22	Procedure-Name 316 331	Dwyer Osteotomy
-E21	Procedure:T21 Name:T22
 T27	Language 707 714	English
 T29	Eq-Temporal-Unit 37 42	years
-A2	Eq-Temporal-Unit-Value T29 year
 T30	Eq-Temporal-Unit 481 487	months
-A3	Eq-Temporal-Unit-Value T30 month
 T31	Age 46 49	age
-E26	Age:T31 Eq-Comparison:E2
 T32	Eq-Value 34 36	18
 T33	Eq-Value 479 480	3
 T34	Eq-Comparison 474 487	past 3 months
-E27	Eq-Comparison:T34 Temporal-Unit:T30 Value:T33 Temporal-Period:T23
 T35	Eq-Comparison 34 58	18 years of age or older
-E2	Eq-Comparison:T35 Temporal-Unit:T29 Value:T32 Operator:T36
 T36	Eq-Operator 50 58	or older
-A4	Eq-Operator-Value T36 GTEQ
 T37	Eq-Comparison 73 83	undergoing
-E4	Eq-Comparison:T37 Temporal-Period:T38
 T38	Eq-Temporal-Period 73 83	undergoing
-A5	Eq-Temporal-Period-Value T38 present
 T39	Procedure 119 126	surgery
-E6	Procedure:T39 Name:T40 Temporality:E4
 T40	Procedure-Name 119 126	surgery
 T41	Modifier 110 118	hindfoot
-E8	Modifier:T41 Modifies:T40
 T42	Modifier 93 106	primary ankle
-E10	Modifier:T42 Modifies:T40
 T43	Or 107 109	or
-E12	Or:T43 Arg:E10 Arg2:E8
-R2	Example-Of Arg1:E13 Arg2:E6	
-R3	Example-Of Arg1:E3 Arg2:E6	
-R4	Example-Of Arg1:E7 Arg2:E6	
-R5	Example-Of Arg1:E1 Arg2:E6	
 T44	Modifier 231 242	debridement
-E14	Modifier:T44 Modifies:T18
 T45	Or 242 243	/
-E16	Or:T45 Arg:E14 Arg2:E18
 T46	Modifier 243 251	transfer
-E18	Modifier:T46 Modifies:T18
-R6	Example-Of Arg1:E17 Arg2:E6	
-R7	Example-Of Arg1:E15 Arg2:E6	
-R8	Example-Of Arg1:E5 Arg2:E6	
-R9	Example-Of Arg1:E21 Arg2:E6	
 T19	Eq-Comparison 375 385	undergoing
-E19	Eq-Comparison:T19 Temporal-Period:T20
 T20	Eq-Temporal-Period 375 385	undergoing
-A6	Eq-Temporal-Period-Value T20 present
 T25	Drug 443 466	opioid pain medications
-E20	Drug:T25 Name:T26 Temporality:E27
 T26	Drug-Name 443 466	opioid pain medications
 T47	Temporal-Connection 488 496	prior to
-E22	Temporal-Connection:T47 Arg:E27 Arg2:E11
-A7	Temporal-Connection-Type-Value E22 before
 T48	Allergy 539 548	allergies
-E24	Allergy:T48 Name:E25
 T49	Drug 563 574	medications
-E25	Drug:T49 
 T50	Observation 654 666	incarcerated
-E28	Observation:T50 Name:T51 Temporality:E29
 T51	Observation-Name 654 666	incarcerated
 T52	Eq-Comparison 644 653	currently
-E29	Eq-Comparison:T52 Temporal-Period:T53
 T53	Eq-Temporal-Period 644 653	currently
-A8	Eq-Temporal-Period-Value T53 present
 T54	Negation 685 691	cannot
-E30	Negation:T54 Negates:T27
 T23	Eq-Temporal-Period 474 478	past
-A1	Eq-Temporal-Period-Value T23 past
 T24	Study 624 629	study
-E23	Study:T24 Study-Of:E25
+A2	Eq-Temporal-Unit-Value T29 year
+A3	Eq-Temporal-Unit-Value T30 month
+A4	Eq-Operator-Value T36 GTEQ
+A5	Eq-Temporal-Period-Value T38 present
+A6	Eq-Temporal-Period-Value T20 present
+A7	Temporal-Connection-Type-Value E22 before
+A8	Eq-Temporal-Period-Value T53 present
+A1	Eq-Temporal-Period-Value T23 past
+R2	Example-Of Arg1:E13 Arg2:E6
+R3	Example-Of Arg1:E3 Arg2:E6
+R4	Example-Of Arg1:E7 Arg2:E6
+R5	Example-Of Arg1:E1 Arg2:E6
+R6	Example-Of Arg1:E17 Arg2:E6
+R7	Example-Of Arg1:E15 Arg2:E6
+R8	Example-Of Arg1:E5 Arg2:E6
+R9	Example-Of Arg1:E21 Arg2:E6

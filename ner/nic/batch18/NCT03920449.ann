@@ -1,62 +1,62 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Procedure:T7 Name:T8 Temporality:E16
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E15	Eq-Comparison:T19 Temporal-Period:T20
+E2	Condition:T15 Name:T16 Duration:E6 Acuteness:T21
+E6	Eq-Comparison:T22 Operator:T23 Temporal-Unit:T13 Value:T14
+E8	Condition:T24 Name:T25
+E10	Or:T26 Arg:E3 Arg2:E9
+E12	Drug:T27 Name:T28 Temporality:E13
+E13	Eq-Comparison:T29 Temporal-Period:T30
+E16	Eq-Comparison:T31 Temporal-Period:T32
+E17	Temporal-Connection:T33 Arg:E11 Arg2:E16
+E14	Procedure:T17 Name:T18 Temporality:E15
+E18	Modifier:T34 Modifies:T18
+E19	Modifier:T35 Modifies:T6
+E20	Other:T36 Is-Other:E5
 T1	Condition 328 355	inflammatory bowel diseases
 T2	Condition-Name 328 355	inflammatory bowel diseases
-E1	Condition:T1 Name:T2
 T3	Condition 111 133	cardiovascular disease
 T4	Condition-Name 111 133	cardiovascular disease
-E3	Condition:T3 Name:T4
 T5	Condition 299 317	anorectal diseases
 T6	Condition-Name 299 317	anorectal diseases
-E5	Condition:T5 Name:T6
 T7	Procedure 231 245	sphincterotomy
 T8	Procedure-Name 231 245	sphincterotomy
-E7	Procedure:T7 Name:T8 Temporality:E16
 T9	Condition 137 150	heart failure
 T10	Condition-Name 137 150	heart failure
-E9	Condition:T9 Name:T10
 T11	Condition 203 215	anal fissure
 T12	Condition-Name 203 215	anal fissure
-E11	Condition:T11 Name:T12
 T13	Eq-Temporal-Unit 66 71	weeks
-A1	Eq-Temporal-Unit-Value T13 week
 T14	Eq-Value 64 65	6
 T19	Eq-Comparison 251 264	prior history
-E15	Eq-Comparison:T19 Temporal-Period:T20
 T20	Eq-Temporal-Period 251 264	prior history
-A5	Eq-Temporal-Period-Value T20 past
 T15	Condition 33 45	anal fissure
-E2	Condition:T15 Name:T16 Duration:E6
 T16	Condition-Name 33 45	anal fissure
-T21	Modifier 25 32	Chronic
-E4	Modifier:T21 Modifies:E2
+T21	Acuteness 25 32	Chronic
 T22	Eq-Comparison 54 71	more than 6 weeks
-E6	Eq-Comparison:T22 Operator:T23 Temporal-Unit:T13 Value:T14
 T23	Eq-Operator 54 63	more than
-A2	Eq-Operator-Value T23 GT
 T24	Condition 97 105	Pregnant
-E8	Condition:T24 Name:T25
 T25	Condition-Name 97 105	Pregnant
 T26	Or 134 136	or
-E10	Or:T26 Arg:E3 Arg2:E9
 T27	Drug 159 187	antihypertensive medications
-E12	Drug:T27 Name:T28 Temporality:E13
 T28	Drug-Name 159 187	antihypertensive medications
 T29	Eq-Comparison 156 158	on
-E13	Eq-Comparison:T29 Temporal-Period:T30
 T30	Eq-Temporal-Period 156 158	on
-A3	Eq-Temporal-Period-Value T30 present
 T31	Eq-Comparison 222 230	previous
-E16	Eq-Comparison:T31 Temporal-Period:T32
 T32	Eq-Temporal-Period 222 230	previous
-A6	Eq-Temporal-Period-Value T32 past
 T33	Temporal-Connection 216 221	after
-E17	Temporal-Connection:T33 Arg:E11 Arg2:E16
-A7	Temporal-Connection-Type-Value E17 after
 T17	Procedure 273 280	surgery
-E14	Procedure:T17 Name:T18 Temporality:E15
 T18	Procedure-Name 273 280	surgery
 T34	Modifier 268 272	anal
-E18	Modifier:T34 Modifies:T18
 T35	Modifier 292 298	benign
-E19	Modifier:T35 Modifies:T6
 T36	Other 286 291	other
-E20	Other:T36 Is-Other:E5
+A1	Eq-Temporal-Unit-Value T13 week
+A5	Eq-Temporal-Period-Value T20 past
+A2	Eq-Operator-Value T23 GT
+A3	Eq-Temporal-Period-Value T30 present
+A6	Eq-Temporal-Period-Value T32 past
+A7	Temporal-Connection-Type-Value E17 after
+A8	Acuteness-Type-Value T21 chronic

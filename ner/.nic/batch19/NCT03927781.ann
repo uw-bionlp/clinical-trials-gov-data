@@ -1,0 +1,94 @@
+T1	Condition 205 224	Renal insufficiency
+T2	Condition-Name 205 224	Renal insufficiency
+E1	Condition:T1 Name:T2
+T3	Procedure 57 72	stent placement
+T4	Procedure-Name 57 72	stent placement
+E3	Procedure:T3 Name:T4 Provider:E4 Location:T30
+T5	Procedure 39 51	ureteroscopy
+T6	Procedure-Name 39 51	ureteroscopy
+E5	Procedure:T5 Name:T6 Temporality:E18
+T7	Condition 535 548	Liver failure
+T8	Condition-Name 535 548	Liver failure
+E7	Condition:T7 Name:T8
+T9	Condition 307 317	opioid use
+T10	Condition-Name 307 317	opioid use
+E9	Condition:T9 Name:T10
+T11	Condition 423 432	Pregnancy
+T12	Condition-Name 423 432	Pregnancy
+E11	Condition:T11 Name:T12
+T13	Language 492 499	English
+T16	Eq-Operator 170 172	>=
+A1	Eq-Operator-Value T16 GTEQ
+T17	Eq-Operator 231 232	<
+A2	Eq-Operator-Value T17 LT
+T18	Eq-Temporal-Unit 176 181	years
+A3	Eq-Temporal-Unit-Value T18 year
+T19	Eq-Value 173 175	18
+T20	Eq-Value 233 235	30
+T21	Eq-Comparison 170 181	>= 18 years
+E15	Eq-Comparison:T21 Operator:T16 Temporal-Unit:T18 Value:T19
+T22	Eq-Comparison 231 253	< 30 mL/minute/1.73 m2
+E16	Eq-Comparison:T22 Operator:T17 Value:T20 Unit:T34 Per:T35 Per2:T36
+T23	Eq-Comparison 323 330	History
+E17	Eq-Comparison:T23 Temporal-Period:T24
+T24	Eq-Temporal-Period 323 330	History
+A4	Eq-Temporal-Period-Value T24 past
+T25	Eq-Comparison 19 29	Undergoing
+E18	Eq-Comparison:T25 Temporal-Period:T26
+T26	Eq-Temporal-Period 19 29	Undergoing
+A5	Eq-Temporal-Period-Value T26 present
+R1	Using Arg1:E5 Arg2:E3	
+T27	Modifier 30 38	elective
+E2	Modifier:T27 Modifies:T6
+T28	Provider 76 86	Dr. Murray
+E4	Provider:T28 
+T30	Location 90 121	University of Missouri Hospital
+A6	Location-Value T30 hospital
+T31	Age 166 169	Age
+E6	Age:T31 Eq-Comparison:E15
+T32	Observation 226 230	eGFR
+E8	Observation:T32 Name:T33 Eq-Comparison:E16
+T33	Observation-Name 226 230	eGFR
+A7	Observation-Type-Value T33 lab
+T34	Eq-Unit 236 238	mL
+T35	Eq-Temporal-Unit 239 245	minute
+A8	Eq-Temporal-Unit-Value T35 minute
+T36	Eq-Unit 246 253	1.73 m2
+R2	Equivalent-To Arg1:E8 Arg2:E1	
+T37	Procedure 279 293	ureteral stent
+E10	Procedure:T37 Name:T38
+T38	Procedure-Name 279 293	ureteral stent
+T39	Modifier 268 278	indwelling
+E12	Modifier:T39 Modifies:T38
+T40	Modifier 299 306	Chronic
+E13	Modifier:T40 Modifies:T10
+T41	Condition 334 346	opioid abuse
+E19	Condition:T41 Name:T42 Temporality:E17
+T42	Condition-Name 334 346	opioid abuse
+T43	Drug 360 373	gabapentinoid
+E20	Drug:T43 Name:T44
+T44	Drug-Name 360 373	gabapentinoid
+T45	Modifier 352 359	Chronic
+E21	Modifier:T45 Modifies:T44
+T14	Encounter 392 417	inpatient hospitalization
+E14	Encounter:T14 Type:T15 Temporality:E22
+T15	Encounter-Type 392 417	inpatient hospitalization
+A9	Encounter-Type-Value T15 inpatient
+T46	Eq-Comparison 383 387	Plan
+E22	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 383 387	Plan
+A10	Eq-Temporal-Period-Value T47 future
+T48	Negation 438 447	Inability
+E23	Negation:T48 Negates:T13
+T49	Drug 516 529	gabapentinoid
+E24	Drug:T49 Name:T50
+T50	Drug-Name 516 529	gabapentinoid
+T51	Allergy 505 512	Allergy
+E25	Allergy:T51 Name:E24
+T52	Condition 552 571	hepatic dysfunction
+E26	Condition:T52 Name:T53
+T53	Condition-Name 552 571	hepatic dysfunction
+T54	Or 549 551	or
+E27	Or:T54 Arg:E7 Arg2:E26
+T29	Modifier 260 267	Chronic
+E28	Modifier:T29 Modifies:T38

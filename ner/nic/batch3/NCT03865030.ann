@@ -1,58 +1,59 @@
-T1	Condition 25 34	Psoriatic
 E1	Condition:T1 Name:T29
-T2	Procedure 53 60	treated
 E2	Procedure:T2 Location:T51
-T3	Condition 128 151	cardiovascular diseases
 E3	Condition:T3 Name:T30
-T4	Condition 153 180	peripheral vascular disease
 E4	Condition:T4 Name:T31
-T5	Condition 181 205	congestive heart failure
 E5	Condition:T5 Name:T32
-T6	Temporal-Connection 214 218	post
 E6	Temporal-Connection:T6 Arg:E7
-A1	Temporal-Connection-Type-Value E6 after
-T7	Condition 219 243	cerebrovascular accident
 E7	Condition:T7 Name:T33
-T8	Condition 251 261	Conditions
-E8	Condition:T8 
-T9	Condition 271 295	harmful to the inner ear
+E8	Condition:T8
 E9	Condition:T9 Name:T34
-T10	Modifier 297 304	chronic
-E10	Modifier:T10 Modifies:T35
-T11	Condition 305 318	renal failure
-E11	Condition:T11 Name:T35
-T12	Eq-Comparison 319 326	history
+E11	Condition:T11 Name:T35 Acuteness:T10
 E12	Eq-Comparison:T12 Temporal-Period:T36
-T13	Condition 330 344	noise exposure
 E13	Condition:T13 Name:T37 Temporality:E12
-T14	Drug 355 369	ototoxic drugs
 E14	Drug:T14 Name:T38
-T15	Modifier 371 378	chronic
-E15	Modifier:T15 Modifies:T39
-T16	Condition 379 391	otitis media
-E16	Condition:T16 Name:T39
-T18	Procedure 393 404	ear surgery
+E16	Condition:T16 Name:T39 Acuteness:T15
 E18	Procedure:T18 Name:T40 Temporality:E19
-T19	Eq-Comparison 412 416	past
 E19	Eq-Comparison:T19 Temporal-Period:T41
-T20	Modifier 430 434	head
 E20	Modifier:T20 Modifies:T43
-T21	Condition 435 441	trauma
 E21	Condition:T21 Name:T43 Severity:T42
-T22	Eq-Comparison 449 453	past
 E22	Eq-Comparison:T22 Temporal-Period:T44
-T23	Condition 455 475	ear drum perforation
 E23	Condition:T23 Name:T45 Temporality:E22
-T24	Condition 513 520	vertigo
 E24	Condition:T24 Name:T46
-T25	Condition 597 614	inner ear disease
 E25	Condition:T25 Name:T47
-T26	Condition 616 631	meniere disease
 E26	Condition:T26 Name:T48
-T27	Condition 633 651	acoustic neurinoma
 E27	Condition:T27 Name:T49
-T28	Condition 653 674	vestibular neuronitis
 E28	Condition:T28 Name:T50
+E17	Condition:T17 Name:T52
+E29	Condition:T53 Name:T54
+E30	Or:T55 Arg:E24 Arg2:E17
+E31	Or:T56 Arg:E17 Arg2:E29
+T1	Condition 25 34	Psoriatic
+T2	Procedure 53 60	treated
+T3	Condition 128 151	cardiovascular diseases
+T4	Condition 153 180	peripheral vascular disease
+T5	Condition 181 205	congestive heart failure
+T6	Temporal-Connection 214 218	post
+T7	Condition 219 243	cerebrovascular accident
+T8	Condition 251 261	Conditions
+T9	Condition 271 295	harmful to the inner ear
+T10	Acuteness 297 304	chronic
+T11	Condition 305 318	renal failure
+T12	Eq-Comparison 319 326	history
+T13	Condition 330 344	noise exposure
+T14	Drug 355 369	ototoxic drugs
+T15	Acuteness 371 378	chronic
+T16	Condition 379 391	otitis media
+T18	Procedure 393 404	ear surgery
+T19	Eq-Comparison 412 416	past
+T20	Modifier 430 434	head
+T21	Condition 435 441	trauma
+T22	Eq-Comparison 449 453	past
+T23	Condition 455 475	ear drum perforation
+T24	Condition 513 520	vertigo
+T25	Condition 597 614	inner ear disease
+T26	Condition 616 631	meniere disease
+T27	Condition 633 651	acoustic neurinoma
+T28	Condition 653 674	vestibular neuronitis
 T29	Condition-Name 25 34	Psoriatic
 T30	Condition-Name 128 151	cardiovascular diseases
 T31	Condition-Name 153 180	peripheral vascular disease
@@ -61,18 +62,14 @@ T33	Condition-Name 219 243	cerebrovascular accident
 T34	Condition-Name 271 295	harmful to the inner ear
 T35	Condition-Name 305 318	renal failure
 T36	Eq-Temporal-Period 319 326	history
-A2	Eq-Temporal-Period-Value T36 past
 T37	Condition-Name 330 344	noise exposure
 T38	Drug-Name 355 369	ototoxic drugs
 T39	Condition-Name 379 391	otitis media
 T40	Procedure-Name 393 404	ear surgery
 T41	Eq-Temporal-Period 412 416	past
-A3	Eq-Temporal-Period-Value T41 past
 T42	Severity 418 429	significant
-A4	Severity-Value T42 severe
 T43	Condition-Name 435 441	trauma
 T44	Eq-Temporal-Period 449 453	past
-A5	Eq-Temporal-Period-Value T44 past
 T45	Condition-Name 455 475	ear drum perforation
 T46	Condition-Name 513 520	vertigo
 T47	Condition-Name 597 614	inner ear disease
@@ -80,29 +77,32 @@ T48	Condition-Name 616 631	meniere disease
 T49	Condition-Name 633 651	acoustic neurinoma
 T50	Condition-Name 653 674	vestibular neuronitis
 T51	Location 68 77	institute
-A6	Location-Value T51 hospital
-R1	Treatment-For Arg1:E2 Arg2:E1	
-R2	Example-Of Arg1:E4 Arg2:E3	
-R3	Example-Of Arg1:E5 Arg2:E3	
-R4	Example-Of Arg1:E7 Arg2:E3	
-R5	Caused-By Arg1:E9 Arg2:E8	
-R6	Example-Of Arg1:E11 Arg2:E8	
-R7	Example-Of Arg1:E13 Arg2:E8	
-R8	Example-Of Arg1:E14 Arg2:E8	
-R9	Example-Of Arg1:E16 Arg2:E8	
-R10	Example-Of Arg1:E18 Arg2:E8	
-R11	Example-Of Arg1:E21 Arg2:E8	
-R12	Example-Of Arg1:E23 Arg2:E8	
 T17	Condition 522 531	dizziness
-E17	Condition:T17 Name:T52
 T52	Condition-Name 522 531	dizziness
 T53	Condition 533 545	unsteadiness
-E29	Condition:T53 Name:T54
 T54	Condition-Name 533 545	unsteadiness
 T55	Or 520 521	/
-E30	Or:T55 Arg:E24 Arg2:E17
 T56	Or 531 532	/
-E31	Or:T56 Arg:E17 Arg2:E29
-R13	Example-Of Arg1:E26 Arg2:E25	
-R14	Example-Of Arg1:E27 Arg2:E25	
-R15	Example-Of Arg1:E28 Arg2:E25	
+A1	Temporal-Connection-Type-Value E6 after
+A2	Eq-Temporal-Period-Value T36 past
+A3	Eq-Temporal-Period-Value T41 past
+A4	Severity-Value T42 severe
+A5	Eq-Temporal-Period-Value T44 past
+A6	Location-Value T51 hospital
+A7	Acuteness-Type-Value T10 chronic
+A8	Acuteness-Type-Value T15 chronic
+R1	Treatment-For Arg1:E2 Arg2:E1
+R2	Example-Of Arg1:E4 Arg2:E3
+R3	Example-Of Arg1:E5 Arg2:E3
+R4	Example-Of Arg1:E7 Arg2:E3
+R5	Caused-By Arg1:E9 Arg2:E8
+R6	Example-Of Arg1:E11 Arg2:E8
+R7	Example-Of Arg1:E13 Arg2:E8
+R8	Example-Of Arg1:E14 Arg2:E8
+R9	Example-Of Arg1:E16 Arg2:E8
+R10	Example-Of Arg1:E18 Arg2:E8
+R11	Example-Of Arg1:E21 Arg2:E8
+R12	Example-Of Arg1:E23 Arg2:E8
+R13	Example-Of Arg1:E26 Arg2:E25
+R14	Example-Of Arg1:E27 Arg2:E25
+R15	Example-Of Arg1:E28 Arg2:E25

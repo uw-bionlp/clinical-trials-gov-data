@@ -1,0 +1,177 @@
+T1	Procedure 368 394	coronary revascularization
+T2	Procedure-Name 368 394	coronary revascularization
+E1	Procedure:T1 Name:T2 Temporality:E31
+T3	Procedure 542 564	rehabilitation program
+T4	Procedure-Name 542 564	rehabilitation program
+E3	Procedure:T3 Name:T4 Stability:T86
+T5	Procedure 414 421	surgery
+T6	Procedure-Name 414 421	surgery
+E5	Procedure:T5 Name:T6 Temporality:E32 Temporality2:E33 Severity:T98
+T8	Condition 639 659	psychiatric disorder
+T9	Condition-Name 639 659	psychiatric disorder
+E8	Condition:T8 Name:T9 Severity:T90
+T10	Condition 661 681	cognitive impairment
+T11	Condition-Name 661 681	cognitive impairment
+E10	Condition:T10 Name:T11
+T12	Condition 601 617	major depression
+T13	Condition-Name 601 617	major depression
+E12	Condition:T12 Name:T13
+T14	Condition 571 580	arthrosis
+T15	Condition-Name 571 580	arthrosis
+E14	Condition:T14 Name:T15
+T16	Condition 766 775	Pregnancy
+T17	Condition-Name 766 775	Pregnancy
+E16	Condition:T16 Name:T17
+T18	Eq-Operator 83 84	>
+A1	Eq-Operator-Value T18 GT
+T19	Eq-Operator 114 115	≥
+A2	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 121 122	≤
+A3	Eq-Operator-Value T20 LTEQ
+T21	Eq-Operator 422 428	within
+A4	Eq-Operator-Value T21 LTEQ
+T22	Eq-Operator 741 750	less than
+A5	Eq-Operator-Value T22 LT
+T23	Eq-Temporal-Unit 87 92	years
+A6	Eq-Temporal-Unit-Value T23 year
+T24	Eq-Temporal-Unit 124 130	months
+A7	Eq-Temporal-Unit-Value T24 month
+T25	Eq-Temporal-Unit 273 280	minutes
+A8	Eq-Temporal-Unit-Value T25 minute
+T27	Eq-Temporal-Unit 441 447	months
+A10	Eq-Temporal-Unit-Value T27 month
+T28	Eq-Temporal-Unit 754 760	months
+A11	Eq-Temporal-Unit-Value T28 month
+T29	Age 96 99	age
+E17	Age:T29 Eq-Comparison:E18
+T30	Eq-Value 84 86	18
+T31	Eq-Value 115 116	1
+T32	Eq-Value 122 123	6
+T33	Eq-Value 270 272	30
+T34	Eq-Value 281 282	5
+T35	Eq-Value 438 440	12
+T36	Eq-Value 751 753	12
+T37	Eq-Comparison 83 92	>18 years
+E18	Eq-Comparison:T37 Operator:T18 Temporal-Unit:T23 Value:T30
+T38	Eq-Comparison 114 116	≥1
+E19	Eq-Comparison:T38 Operator:T19 Value:T31
+T39	Eq-Comparison 121 130	≤6 months
+E20	Eq-Comparison:T39 Operator:T20 Temporal-Unit:T24 Value:T32
+T40	Eq-Comparison 741 760	less than 12 months
+E21	Eq-Comparison:T40 Operator:T22 Temporal-Unit:T28 Value:T36
+T41	Eq-Comparison 582 588	active
+E22	Eq-Comparison:T41 Temporal-Period:T42
+T42	Eq-Temporal-Period 582 588	active
+A12	Eq-Temporal-Period-Value T42 present
+T7	Life-Stage-And-Gender 69 72	Men
+A13	Life-Stage-And-Gender-Type T7 male
+T43	Life-Stage-And-Gender 77 82	women
+A14	Life-Stage-And-Gender-Type T43 female
+T44	Or 73 76	and
+E2	Or:T44 Arg:T7 Arg2:T43
+T45	Condition 144 165	myocardial infarction
+E4	Condition:T45 Name:T46 Stage:E6
+T46	Condition-Name 144 165	myocardial infarction
+T47	Eq-Comparison 137 143	type I
+E6	Eq-Comparison:T47 Unit:T48 Value:T49
+T48	Eq-Unit 137 141	type
+T49	Eq-Value 142 143	I
+T50	And 117 120	and
+E7	And:T50 Arg:E19 Arg2:E20
+T51	Temporal-Connection 131 136	after
+E9	Temporal-Connection:T51 Arg:E20 Arg2:E4
+A15	Temporal-Connection-Type-Value E9 after
+T52	Condition 198 200	MI
+E11	Condition:T52 Name:T53
+T53	Condition-Name 198 200	MI
+T54	Condition 171 190	Physical inactivity
+E13	Condition:T54 Name:T55
+T55	Condition-Name 171 190	Physical inactivity
+T56	Temporal-Connection 191 197	before
+E15	Temporal-Connection:T56 Arg:E13 Arg2:E11
+A16	Temporal-Connection-Type-Value E15 before
+T57	Eq-Comparison 227 247	moderate to vigorous
+E23	Eq-Comparison:T57 Value:T58 Value2:T59
+T58	Severity 227 235	moderate
+A17	Severity-Value T58 moderate
+T59	Severity 239 247	vigorous
+A18	Severity-Value T59 severe
+T60	Observation 248 256	exercise
+E24	Observation:T60 Name:T61 Severity:T59 Duration:E25 Temporality:E26
+T61	Observation-Name 248 256	exercise
+A19	Observation-Type-Value T61 social-habit
+T62	Eq-Comparison 261 280	at least 30 minutes
+E25	Eq-Comparison:T62 Operator:T63 Value:T33 Temporal-Unit:T25
+T63	Eq-Operator 261 269	at least
+A20	Eq-Operator-Value T63 GTEQ
+T64	Eq-Comparison 281 302	5 or more days a week
+E26	Eq-Comparison:T64 Value:T34 Operator:T65 Temporal-Unit:T66 Per:T26
+T65	Eq-Operator 283 290	or more
+A21	Eq-Operator-Value T65 GTEQ
+T66	Eq-Temporal-Unit 291 295	days
+A22	Eq-Temporal-Unit-Value T66 day
+T26	Eq-Temporal-Unit 298 302	week
+A9	Eq-Temporal-Unit-Value T26 week
+T67	Negation 216 223	absence
+E27	Negation:T67 Negates:E24
+R1	Equivalent-To Arg1:E27 Arg2:E13	
+T68	Condition 328 341	Heart failure
+E28	Condition:T68 Name:T69
+T69	Condition-Name 328 341	Heart failure
+T70	Condition 342 346	NYHA
+E29	Condition:T70 Name:T71 Stage:E30
+T71	Condition-Name 342 346	NYHA
+T72	Eq-Comparison 347 354	IIIB-IV
+E30	Eq-Comparison:T72 Operator:T75 Value:T73 Value2:T74
+T73	Eq-Value 347 351	IIIB
+T74	Eq-Value 352 354	IV
+T75	Eq-Operator 351 352	-
+A23	Eq-Operator-Value T75 BETWEEN
+T76	Eq-Comparison 360 367	Planned
+E31	Eq-Comparison:T76 Temporal-Period:T77
+T77	Eq-Temporal-Period 360 367	Planned
+A24	Eq-Temporal-Period-Value T77 future
+T78	Eq-Comparison 400 407	Planned
+E32	Eq-Comparison:T78 Temporal-Period:T79
+T79	Eq-Temporal-Period 400 407	Planned
+A25	Eq-Temporal-Period-Value T79 future
+T80	Eq-Comparison 422 447	within the next 12 months
+E33	Eq-Comparison:T80 Operator:T21 Temporal-Period:T81 Value:T35 Temporal-Unit:T27
+T81	Eq-Temporal-Period 433 437	next
+A26	Eq-Temporal-Period-Value T81 future
+T82	Condition 453 470	Inability to walk
+E34	Condition:T82 Name:T83
+T83	Condition-Name 453 470	Inability to walk
+T84	Condition 491 504	Comorbidities
+E35	Condition:T84 Name:T85
+T85	Condition-Name 491 504	Comorbidities
+T86	Stability 516 524	preclude
+A27	Stability-Value T86 change
+T87	Assertion 510 515	would
+E36	Assertion:T87 Asserted:T86
+A28	Assertion-Type-Value E36 hypothetical
+R2	Caused-By Arg1:T86 Arg2:E35	
+R3	Example-Of Arg1:E14 Arg2:E35	
+T88	Condition 589 599	malignancy
+E37	Condition:T88 Name:T89 Temporality:E22
+T89	Condition-Name 589 599	malignancy
+R4	Example-Of Arg1:E37 Arg2:E35	
+T90	Severity 627 638	significant
+A29	Severity-Value T90 severe
+T91	Other 621 626	other
+E38	Other:T91 Is-Other:E8
+R5	Example-Of Arg1:E8 Arg2:E35	
+R6	Example-Of Arg1:E10 Arg2:E35	
+T92	Observation 725 740	Life expectancy
+E39	Observation:T92 Name:T93 Eq-Comparison:E21
+T93	Observation-Name 725 740	Life expectancy
+T94	Observation 794 817	operate the smart-watch
+E40	Observation:T94 Name:T95
+T95	Observation-Name 794 817	operate the smart-watch
+T96	Negation 781 790	Inability
+E41	Negation:T96 Negates:E40
+T97	Assertion 781 790	Inability
+E42	Assertion:T97 Asserted:E41
+A30	Assertion-Type-Value E42 hypothetical
+T98	Severity 408 413	major
+A31	Severity-Value T98 severe

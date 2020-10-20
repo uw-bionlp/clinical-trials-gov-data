@@ -1,32 +1,32 @@
-T1	Condition 51 68	enzyme deficiency
 E1	Condition:T1 Name:T13
-T2	Condition 121 140	pathogenic variants
 E2	Condition:T2 Name:T19
-T3	Modifier 148 157	TPP1 gene
 E3	Modifier:T3 Modifies:T19
-T6	Negation 299 306	without
 E6	Negation:T6 Negates:E7 Negates2:E9
-T7	Condition 322 326	CLN2
 E7	Condition:T7 Name:T15
-T8	Or 327 330	and
 E8	Or:T8 Arg:E7 Arg2:E9
-T9	Condition 331 341	deficiency
 E9	Condition:T9 Name:T16
-T11	Eq-Comparison 373 382	currently
 E11	Eq-Comparison:T11 Temporal-Period:T18
-T12	Study 434 439	trial
 E12	Study:T12 Temporality:E11
+E13	Procedure:T20 Name:T21
+E4	Modifier:T4 Modifies:T16
+E5	Modifier:T5 Modifies:T13
+T1	Condition 51 68	enzyme deficiency
+T2	Condition 121 140	pathogenic variants
+T3	Modifier 148 157	TPP1 gene
+T6	Negation 299 306	without
+T7	Condition 322 326	CLN2
+T8	Or 327 330	and
+T9	Condition 331 341	deficiency
+T11	Eq-Comparison 373 382	currently
+T12	Study 434 439	trial
 T13	Condition-Name 51 68	enzyme deficiency
 T15	Condition-Name 322 326	CLN2
 T16	Condition-Name 331 341	deficiency
 T18	Eq-Temporal-Period 373 382	currently
-A3	Eq-Temporal-Period-Value T18 present
 T19	Condition-Name 121 140	pathogenic variants
 T20	Procedure 98 107	molecular
-E13	Procedure:T20 Name:T21
 T21	Procedure-Name 98 107	molecular
-R1	Found-By Arg1:E2 Arg2:E13	
 T4	Modifier 345 349	TPP1
-E4	Modifier:T4 Modifies:T16
 T5	Modifier 46 50	TPP1
-E5	Modifier:T5 Modifies:T13
+A3	Eq-Temporal-Period-Value T18 present
+R1	Found-By Arg1:E2 Arg2:E13

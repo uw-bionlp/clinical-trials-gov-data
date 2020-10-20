@@ -1,0 +1,96 @@
+T1	Procedure 68 89	hepatobiliary surgery
+T2	Procedure-Name 68 89	hepatobiliary surgery
+E1	Procedure:T1 Name:T2 Temporality:E22
+T3	Condition 213 234	psychiatric disorders
+T4	Condition-Name 213 234	psychiatric disorders
+E3	Condition:T3 Name:T4
+T5	Condition 238 247	pregnancy
+T6	Condition-Name 238 247	pregnancy
+E5	Condition:T5 Name:T6
+T7	Condition 252 261	lactation
+T8	Condition-Name 252 261	lactation
+E7	Condition:T7 Name:T8
+T9	Condition 314 336	cerebrovascular stroke
+T10	Condition-Name 314 336	cerebrovascular stroke
+E9	Condition:T9 Name:T10 Temporality:E21
+T11	Condition 277 301	neurological dysfunction
+T12	Condition-Name 277 301	neurological dysfunction
+E11	Condition:T11 Name:T12 Temporality:E14
+T13	Condition 337 340	CVS
+T14	Condition-Name 337 340	CVS
+E13	Condition:T13 Name:T14
+T15	Condition 370 396	Inflammatory bowel disease
+T16	Condition-Name 370 396	Inflammatory bowel disease
+E15	Condition:T15 Name:T16
+T17	Condition 400 417	Diabetes mellitus
+T18	Condition-Name 400 417	Diabetes mellitus
+E17	Condition:T17 Name:T18
+T19	Condition 421 440	Renal insufficiency
+T20	Condition-Name 421 440	Renal insufficiency
+E19	Condition:T19 Name:T20
+T21	Eq-Operator 33 34	>
+A1	Eq-Operator-Value T21 GT
+T22	Eq-Temporal-Unit 37 42	years
+A2	Eq-Temporal-Unit-Value T22 year
+T23	Eq-Value 34 36	18
+T32	Eq-Value 475 478	180
+T35	Eq-Comparison 33 42	>18 years
+E20	Eq-Comparison:T35 Operator:T21 Temporal-Unit:T22 Value:T23
+T36	Eq-Comparison 303 310	history
+E21	Eq-Comparison:T36 Temporal-Period:T37
+T37	Eq-Temporal-Period 303 310	history
+A3	Eq-Temporal-Period-Value T37 past
+T38	Eq-Comparison 48 58	undergoing
+E22	Eq-Comparison:T38 Temporal-Period:T39
+T39	Eq-Temporal-Period 48 58	undergoing
+A4	Eq-Temporal-Period-Value T39 present
+T40	Age 43 46	old
+E2	Age:T40 Eq-Comparison:E20
+T41	Procedure 96 114	general anesthesia
+E4	Procedure:T41 Name:T42
+T42	Procedure-Name 96 114	general anesthesia
+R1	Using Arg1:E1 Arg2:E4	
+T43	Condition 119 156	American Society of Anesthesiologists
+E6	Condition:T43 Name:T44 Stage:E8
+T44	Condition-Name 119 156	American Society of Anesthesiologists
+T45	Eq-Comparison 157 165	grade II
+E8	Eq-Comparison:T45 Unit:T46 Value:T47
+T46	Eq-Unit 157 162	grade
+T47	Eq-Value 163 165	II
+T48	And 115 118	and
+E10	And:T48 Arg:E4 Arg2:E6
+T24	And 248 251	and
+E12	And:T24 Arg:E5 Arg2:E7
+T25	Eq-Comparison 265 276	preexisting
+E14	Eq-Comparison:T25 Temporal-Period:T26
+T26	Eq-Temporal-Period 265 276	preexisting
+A5	Eq-Temporal-Period-Value T26 past
+R2	Abbrev-Of Arg1:E13 Arg2:E9	
+R3	Example-Of Arg1:E9 Arg2:E11	
+T27	Condition 355 361	cancer
+E16	Condition:T27 Name:T28
+T28	Condition-Name 355 361	cancer
+T49	Modifier 344 354	metastatic
+E18	Modifier:T49 Modifies:T28
+T29	Observation 442 464	serum creatinine level
+E23	Observation:T29 Name:T30 Eq-Comparison:E24
+T30	Observation-Name 442 464	serum creatinine level
+A6	Observation-Type-Value T30 lab
+T31	Eq-Comparison 465 485	more than 180 μmol/l
+E24	Eq-Comparison:T31 Operator:T50 Value:T32 Unit:T51 Per:T52
+T50	Eq-Operator 465 474	more than
+A7	Eq-Operator-Value T50 GT
+T51	Eq-Unit 479 483	μmol
+T52	Eq-Unit 484 485	l
+R4	Equivalent-To Arg1:E23 Arg2:E19	
+T33	Condition 502 525	intraoperative findings
+E25	Condition:T33 Name:T34
+T34	Condition-Name 502 525	intraoperative findings
+T53	Assertion 491 501	unexpected
+E26	Assertion:T53 Asserted:E25
+A8	Assertion-Type-Value E26 hypothetical
+T54	Condition 562 587	intraoperative hemorrhage
+E27	Condition:T54 Name:T55
+T55	Condition-Name 562 587	intraoperative hemorrhage
+T56	Modifier 543 561	accidental massive
+E28	Modifier:T56 Modifies:T55

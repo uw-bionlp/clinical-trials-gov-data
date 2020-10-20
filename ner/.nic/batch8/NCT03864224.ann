@@ -1,0 +1,102 @@
+T2	Modifier 44 63	persistent low back
+E2	Modifier:T2 Modifies:T38
+T3	Condition 64 68	pain
+E3	Condition:T3 Name:T38 Duration:E4
+T4	Eq-Comparison 72 88	at least 1 month
+E4	Eq-Comparison:T4 Operator:T39 Value:T40 Temporal-Unit:T41
+T5	Eq-Comparison 140 149	currently
+E5	Eq-Comparison:T5 Temporal-Period:T42
+T6	Modifier 166 174	exercise
+E6	Modifier:T6 Modifies:T49
+T7	Or 175 177	or
+E7	Or:T7 Arg:E6 Arg2:E1
+T8	Procedure 193 200	program
+E8	Procedure:T8 Name:T49 Temporality:E5
+T9	Or 201 203	or
+E9	Or:T9 Arg:E8 Arg2:E12
+T10	Other 216 223	another
+E10	Other:T10 Is-Other:E12
+T12	Study 239 253	clinical trial
+E12	Study:T12 
+T13	Condition 274 296	nerve root involvement
+E13	Condition:T13 Name:T43
+T14	Assertion 298 307	suspected
+E14	Assertion:T14 Asserted:E15
+A1	Assertion-Type-Value E14 possible
+T15	Condition 316 325	pathology
+E15	Condition:T15 Name:T45 Severity:T44
+T16	Condition 336 342	trauma
+E16	Condition:T16 Name:T47 Stability:T46
+T17	Modifier 350 355	spine
+E17	Modifier:T17 Modifies:T47
+T18	Condition 368 377	pregnancy
+E18	Condition:T18 Name:T48
+T19	Or 378 380	or
+E19	Or:T19 Arg:E18 Arg2:E21
+T20	Other 381 386	other
+E20	Other:T20 Is-Other:E21
+T21	Condition 387 397	conditions
+E21	Condition:T21 
+T22	Assertion 403 408	would
+E22	Assertion:T22 Asserted:E23
+A2	Assertion-Type-Value E22 hypothetical
+T23	Negation 409 416	prevent
+E23	Negation:T23 Negates:E24
+T24	Study 443 448	trial
+E24	Study:T24 
+T26	Condition 513 523	conditions
+E26	Condition:T26 Provider:E11 Provider2:E25
+T27	Assertion 529 536	require
+E27	Assertion:T27 Asserted:E11
+A3	Assertion-Type-Value E27 hypothetical
+T28	Assertion 562 571	suspected
+E28	Assertion:T28 Asserted:E32
+A4	Assertion-Type-Value E28 possible
+T29	Or 605 607	or
+E29	Or:T29 Arg:E26 Arg2:E30
+T30	Condition 613 623	conditions
+E30	Condition:T30 Stability:T32 Stability2:T34
+T31	Assertion 629 634	would
+E31	Assertion:T31 Asserted:T32
+A5	Assertion-Type-Value E31 hypothetical
+T33	Or 649 651	or
+E33	Or:T33 Arg:T32 Arg2:T34
+T35	Procedure 664 671	treated
+E35	Procedure:T35 
+T36	Procedure 679 692	interventions
+E36	Procedure:T36 
+T37	Study 701 706	study
+E37	Study:T37 Study-Of:E36
+T38	Condition-Name 64 68	pain
+T39	Eq-Operator 72 80	at least
+A6	Eq-Operator-Value T39 GTEQ
+T40	Eq-Value 81 82	1
+T41	Eq-Temporal-Unit 83 88	month
+A7	Eq-Temporal-Unit-Value T41 month
+T42	Eq-Temporal-Period 140 149	currently
+A8	Eq-Temporal-Period-Value T42 present
+T43	Condition-Name 274 296	nerve root involvement
+T44	Severity 308 315	serious
+A9	Severity-Value T44 severe
+T45	Condition-Name 316 325	pathology
+T46	Stability 327 335	unstable
+A10	Stability-Value T46 change
+T47	Condition-Name 336 342	trauma
+T48	Condition-Name 368 377	pregnancy
+T1	Modifier 178 192	rehabilitation
+E1	Modifier:T1 Modifies:T49
+T49	Procedure-Name 193 200	program
+R1	Caused-By Arg1:E23 Arg2:E21	
+T11	Provider 539 557	specialist consult
+E11	Provider:T11 
+T25	Provider 585 603	specialist consult
+E25	Provider:T25 
+T32	Stability 638 648	aggravated
+A11	Stability-Value T32 change
+T34	Stability 652 660	worsened
+A12	Stability-Value T34 change
+R2	Using Arg1:E35 Arg2:E36	
+R3	Treatment-For Arg1:E35 Arg2:E30	
+T50	Assertion 575 582	needing
+E32	Assertion:T50 Asserted:E25
+A13	Assertion-Type-Value E32 hypothetical

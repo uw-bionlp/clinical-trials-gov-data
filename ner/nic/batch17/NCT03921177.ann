@@ -1,27 +1,27 @@
+E1	Condition:T1 Name:T2 Temporality:E2
+E2	Eq-Comparison:T4 Temporal-Period:T5
+E4	Eq-Comparison:T9 Temporal-Period:T10
+E5	Condition:T11 Name:T12 Temporality:E4
+E6	Condition:T13 Name:T14
+E3	And:T7 Arg:T6 Arg2:E1
 T1	Condition 191 200	pregnancy
 T2	Condition-Name 191 200	pregnancy
-E1	Condition:T1 Name:T2 Temporality:E2
 T4	Eq-Comparison 171 190	history of previous
 T5	Eq-Temporal-Period 171 190	history of previous
-E2	Eq-Comparison:T4 Temporal-Period:T5
-A1	Eq-Temporal-Period-Value T5 past
 T3	Location 69 87	Gaibandha district
-A3	Location-Value T3 residence
 T8	Life-Stage-And-Gender 110 115	woman
-A4	Life-Stage-And-Gender-Type T8 female
 T9	Eq-Comparison 93 101	Recently
-E4	Eq-Comparison:T9 Temporal-Period:T10
 T10	Eq-Temporal-Period 93 101	Recently
-A5	Eq-Temporal-Period-Value T10 recent
 T11	Condition 102 109	married
-E5	Condition:T11 Name:T12 Temporality:E4
 T12	Condition-Name 102 109	married
 T13	Condition 121 132	Nulligravid
-E6	Condition:T13 Name:T14
 T14	Condition-Name 121 132	Nulligravid
 T6	Life-Stage-And-Gender 158 163	Women
-A2	Life-Stage-And-Gender-Type T6 female
 T7	And 164 168	with
-E3	And:T7 Arg:T6 Arg2:E1
 T15	Life-Stage-And-Gender 206 211	Women
+A1	Eq-Temporal-Period-Value T5 past
+A3	Location-Value T3 residence
+A4	Life-Stage-And-Gender-Type T8 female
+A5	Eq-Temporal-Period-Value T10 recent
+A2	Life-Stage-And-Gender-Type T6 female
 A6	Life-Stage-And-Gender-Type T15 female

@@ -1,36 +1,36 @@
+E1	Eq-Comparison:T7 Temporal-Period:T8 Value:T4 Temporal-Unit:T1
+E2	Eq-Comparison:T9 Temporal-Period:T10 Value:T6 Temporal-Unit:T2
+E3	Eq-Comparison:T11 Operator:T12 Value:T3
+E4	Encounter:T13 Type:T14 Minimum-Count:E3 Temporality:E1
+E5	Eq-Comparison:T15 Operator:T16 Value:T5
+E6	Encounter:T17 Type:T18 Minimum-Count:E5 Temporality:E2
+E7	Modifier:T19 Modifies:E6
+E8	Or:T20 Arg:E4 Arg2:E6
 T1	Eq-Temporal-Unit 79 85	months
-A1	Eq-Temporal-Unit-Value T1 month
 T2	Eq-Temporal-Unit 159 165	months
-A2	Eq-Temporal-Unit-Value T2 month
 T3	Eq-Value 51 52	3
 T4	Eq-Value 76 78	12
 T5	Eq-Value 99 100	1
 T6	Eq-Value 156 158	12
 T7	Eq-Comparison 70 85	prior 12 months
-E1	Eq-Comparison:T7 Temporal-Period:T8 Value:T4 Temporal-Unit:T1
 T8	Eq-Temporal-Period 70 75	prior
-A3	Eq-Temporal-Period-Value T8 past
 T9	Eq-Comparison 150 165	prior 12 months
-E2	Eq-Comparison:T9 Temporal-Period:T10 Value:T6 Temporal-Unit:T2
 T10	Eq-Temporal-Period 150 155	prior
-A4	Eq-Temporal-Period-Value T10 past
 T11	Eq-Comparison 41 52	more than 3
-E3	Eq-Comparison:T11 Operator:T12 Value:T3
 T12	Eq-Operator 41 50	more than
-A5	Eq-Operator-Value T12 GT
 T13	Encounter 53 62	ED visits
-E4	Encounter:T13 Type:T14 Minimum-Count:E3 Temporality:E1
 T14	Encounter-Type 53 62	ED visits
-A6	Encounter-Type-Value T14 emergency
 T15	Eq-Comparison 90 100	at least 1
-E5	Eq-Comparison:T15 Operator:T16 Value:T5
 T16	Eq-Operator 90 98	at least
-A7	Eq-Operator-Value T16 GTEQ
 T17	Encounter 127 142	hospitalization
-E6	Encounter:T17 Type:T18 Minimum-Count:E5 Temporality:E2
 T18	Encounter-Type 127 142	hospitalization
-A8	Encounter-Type-Value T18 inpatient
 T19	Modifier 101 126	ambulatory care-sensitive
-E7	Modifier:T19 Modifies:E6
 T20	Or 87 89	or
-E8	Or:T20 Arg:E4 Arg2:E6
+A1	Eq-Temporal-Unit-Value T1 month
+A2	Eq-Temporal-Unit-Value T2 month
+A3	Eq-Temporal-Period-Value T8 past
+A4	Eq-Temporal-Period-Value T10 past
+A5	Eq-Operator-Value T12 GT
+A6	Encounter-Type-Value T14 emergency
+A7	Eq-Operator-Value T16 GTEQ
+A8	Encounter-Type-Value T18 inpatient

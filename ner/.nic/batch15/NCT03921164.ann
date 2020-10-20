@@ -1,0 +1,55 @@
+T1	Procedure 72 111	interventional neuroradiology procedure
+T2	Procedure-Name 72 111	interventional neuroradiology procedure
+E1	Procedure:T1 Name:T2
+T3	Procedure 63 71	elective
+T4	Procedure-Name 63 71	elective
+E3	Procedure:T3 Name:T4 Temporality:E7
+T5	Eq-Operator 34 35	>
+A1	Eq-Operator-Value T5 GT
+T6	Eq-Operator 246 247	<
+A2	Eq-Operator-Value T6 LT
+T7	Eq-Temporal-Unit 39 44	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Eq-Temporal-Unit 250 255	years
+A4	Eq-Temporal-Unit-Value T8 year
+T9	Age 242 245	age
+E4	Age:T9 Eq-Comparison:E6
+T10	Eq-Value 36 38	18
+T11	Eq-Value 247 249	18
+T12	Eq-Comparison 34 44	> 18 years
+E5	Eq-Comparison:T12 Operator:T5 Temporal-Unit:T7 Value:T10
+T13	Eq-Comparison 246 255	<18 years
+E6	Eq-Comparison:T13 Operator:T6 Temporal-Unit:T8 Value:T11
+T14	Age 39 44	years
+E2	Age:T14 Eq-Comparison:E5
+T15	Eq-Comparison 46 55	scheduled
+E7	Eq-Comparison:T15 Temporal-Period:T16
+T16	Eq-Temporal-Period 46 55	scheduled
+A5	Eq-Temporal-Period-Value T16 future
+T17	Procedure 118 136	general anesthesia
+E8	Procedure:T17 Name:T18
+T18	Procedure-Name 118 136	general anesthesia
+R1	Using Arg1:E1 Arg2:E8	
+T19	Observation 174 196	mean arterial pressure
+E9	Observation:T19 Name:T20
+T20	Observation-Name 174 196	mean arterial pressure
+A6	Observation-Type-Value T20 measurement
+T21	Observation 201 215	cardiac output
+E10	Observation:T21 Name:T22
+T22	Observation-Name 201 215	cardiac output
+A7	Observation-Type-Value T22 measurement
+T23	And 197 200	and
+E11	And:T23 Arg:E9 Arg2:E10
+R2	Using Arg1:E8 Arg2:E9	
+T24	Assertion 137 146	requiring
+E12	Assertion:T24 Asserted:E9
+A8	Assertion-Type-Value E12 hypothetical
+T25	Condition 305 313	Pregnant
+E13	Condition:T25 Name:T26
+T26	Condition-Name 305 313	Pregnant
+T27	Life-Stage-And-Gender 314 319	woman
+A9	Life-Stage-And-Gender-Type T27 female
+R3	If-Then Arg1:T27 Arg2:E13	
+T28	Observation 339 358	judicial protection
+E14	Observation:T28 Name:T29
+T29	Observation-Name 339 358	judicial protection

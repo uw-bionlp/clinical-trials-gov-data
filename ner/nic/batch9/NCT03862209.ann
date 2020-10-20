@@ -1,125 +1,125 @@
+E1	Condition:T1 Name:T2 Severity:T25
+E3	Condition:T3 Name:T4
+E6	Condition:T6 Name:T7
+E9	Age:T10 Eq-Comparison:E8
+E10	Eq-Comparison:T15 Operator:T11 Value:T12 Value2:T13
+E2	Age:T16 Eq-Comparison:E10
+E4	Condition:T17 Name:T18 Severity:T21
+E5	Modifier:T19
+E7	Or:T20 Arg:T21 Arg2:E5
+E11	And:T22 Arg:E2 Arg2:E4
+E12	Condition:T23 Name:T24
+E13	Or:T26 Arg:E1 Arg2:E3
+E14	Condition:T27 Name:T28
+E15	Procedure:T29
+E16	Procedure:T30
+E17	And:T31 Arg:E16 Arg2:E15
+E18	Assertion:T32 Asserted:E16 Asserted2:E15
+E19	Modifier:T33 Modifies:T7
+E20	Negation:T34 Negates:E19
+E21	Condition:T35 Name:T36 Severity:T40
+E22	Modifier:T37 Modifies:T36
+E23	Modifier:T38 Modifies:T36
+E24	And:T39 Arg:E23 Arg2:E22
+E25	Modifier:T41 Modifies:T36
+E26	Negation:T42 Negates:E25
+E27	Condition:T43 Acuteness:T49
+E28	Modifier:T44 Modifies:E27
+E29	Negation:T45 Negates:E28
+E30	Modifier:T46 Modifies:E28
+E31	Modifier:T47 Modifies:E28
+E32	Modifier:T48 Modifies:E27
+E34	And:T50 Arg:E32 Arg2:T49
+E35	Procedure:T51 Name:T52 Provider:E36 Provider2:E37
+E36	Provider:T53
+E37	Provider:T54
+E38	Procedure:T55 Temporality:E39
+E39	Eq-Comparison:T56 Temporal-Period:T57
+E40	Assertion:T58 Asserted:E38
+E41	Or:T59 Arg:E36 Arg2:E37
+E8	Eq-Comparison:T8 Operator:T9 Value:T14
+E42	Study:T60 Temporality:E43
+E43	Eq-Comparison:T61 Temporal-Recency:T62
+E44	Temporal-Connection:T63 Arg:E9 Arg2:E43
 T1	Condition 209 219	depression
 T2	Condition-Name 209 219	depression
-E1	Condition:T1 Name:T2 Severity:T25
 T3	Condition 224 237	schizophrenia
 T4	Condition-Name 224 237	schizophrenia
-E3	Condition:T3 Name:T4
 T5	Life-Stage-And-Gender 20 26	Adults
-A1	Life-Stage-And-Gender-Type T5 adult
 T6	Condition 299 319	psychiatric disorder
 T7	Condition-Name 299 319	psychiatric disorder
-E6	Condition:T6 Name:T7
 T10	Age 917 920	age
-E9	Age:T10 Eq-Comparison:E8
 T11	Eq-Operator 35 36	-
-A2	Eq-Operator-Value T11 BETWEEN
 T12	Eq-Value 33 35	18
 T13	Eq-Value 36 38	65
 T14	Eq-Value 924 926	18
 T15	Eq-Comparison 33 38	18-65
-E10	Eq-Comparison:T15 Operator:T11 Value:T12 Value2:T13
 T16	Age 28 32	ages
-E2	Age:T16 Eq-Comparison:E10
-R1	Equivalent-To Arg1:E2 Arg2:T5	
 T17	Condition 89 106	mental ill-health
-E4	Condition:T17 Name:T18 Severity:T21
 T18	Condition-Name 89 106	mental ill-health
 T19	Modifier 80 88	enduring
-E5	Modifier:T19 
 T20	Or 76 79	and
-E7	Or:T20 Arg:T21 Arg2:E5
 T21	Severity 69 75	severe
-A3	Severity-Value T21 severe
 T22	And 64 68	with
-E11	And:T22 Arg:E2 Arg2:E4
 T23	Condition 184 200	bipolar disorder
-E12	Condition:T23 Name:T24
 T24	Condition-Name 184 200	bipolar disorder
 T25	Severity 202 208	severe
-A4	Severity-Value T25 severe
-R2	Example-Of Arg1:E12 Arg2:E4	
-R3	Example-Of Arg1:E1 Arg2:E4	
-R4	Example-Of Arg1:E3 Arg2:E4	
 T26	Or 221 223	or
-E13	Or:T26 Arg:E1 Arg2:E3
 T27	Condition 275 278	SMI
-E14	Condition:T27 Name:T28
 T28	Condition-Name 275 278	SMI
 T29	Procedure 343 352	treatment
-E15	Procedure:T29 
 T30	Procedure 334 338	care
-E16	Procedure:T30 
 T31	And 339 342	and
-E17	And:T31 Arg:E16 Arg2:E15
-R5	Treatment-For Arg1:E16 Arg2:E6	
-R6	Treatment-For Arg1:E15 Arg2:E6	
 T32	Assertion 325 333	requires
-E18	Assertion:T32 Asserted:E16 Asserted2:E15
-A5	Assertion-Type-Value E18 hypothetical
 T33	Modifier 374 391	symptom remission
-E19	Modifier:T33 Modifies:T7
 T34	Negation 367 370	NOT
-E20	Negation:T34 Negates:E19
 T35	Condition 409 420	limitations
-E21	Condition:T35 Name:T36 Severity:T40
 T36	Condition-Name 409 420	limitations
 T37	Modifier 435 456	community functioning
-E22	Modifier:T37 Modifies:T36
 T38	Modifier 424 430	social
-E23	Modifier:T38 Modifies:T36
 T39	And 431 434	and
-E24	And:T39 Arg:E23 Arg2:E22
 T40	Severity 402 408	severe
-A6	Severity-Value T40 severe
 T41	Modifier 479 499	functional remission
-E25	Modifier:T41 Modifies:T36
 T42	Negation 472 475	not
-E26	Negation:T42 Negates:E25
 T43	Condition 512 520	problems
-E27	Condition:T43 
 T44	Modifier 529 538	transient
-E28	Modifier:T44 Modifies:E27
 T45	Negation 525 528	not
-E29	Negation:T45 Negates:E28
 T46	Modifier 545 554	temporary
-E30	Modifier:T46 Modifies:E28
 T47	Modifier 556 563	one-off
-E31	Modifier:T47 Modifies:E28
 T48	Modifier 585 595	systematic
-E32	Modifier:T48 Modifies:E27
-T49	Modifier 600 609	long-term
-E33	Modifier:T49 Modifies:E27
+T49	Acuteness 600 609	long-term
 T50	And 596 599	and
-E34	And:T50 Arg:E32 Arg2:E33
 T51	Procedure 616 632	Coordinated care
-E35	Procedure:T51 Name:T52 Provider:E36 Provider2:E37
 T52	Procedure-Name 616 632	Coordinated care
 T53	Provider 645 658	care networks
-E36	Provider:T53 
 T54	Provider 662 667	teams
-E37	Provider:T54 
 T55	Procedure 695 704	treatment
-E38	Procedure:T55 Temporality:E39
 T56	Eq-Comparison 705 709	plan
-E39	Eq-Comparison:T56 Temporal-Period:T57
 T57	Eq-Temporal-Period 705 709	plan
-A7	Eq-Temporal-Period-Value T57 future
 T58	Assertion 671 690	needed to implement
-E40	Assertion:T58 Asserted:E38
-A8	Assertion-Type-Value E40 hypothetical
 T59	Or 659 661	or
-E41	Or:T59 Arg:E36 Arg2:E37
-R7	Using Arg1:E38 Arg2:E35	
 T8	Eq-Comparison 907 926	under the age of 18
-E8	Eq-Comparison:T8 Operator:T9 Value:T14
 T9	Eq-Operator 907 912	under
-A9	Eq-Operator-Value T9 LT
 T60	Study 947 952	study
-E42	Study:T60 Temporality:E43
 T61	Eq-Comparison 934 939	start
-E43	Eq-Comparison:T61 Temporal-Recency:T62
 T62	Eq-Temporal-Recency 934 939	start
-A10	Eq-Temporal-Recency-Value T62 first-time
 T63	Temporal-Connection 927 933	at the
-E44	Temporal-Connection:T63 Arg:E9 Arg2:E43
+A1	Life-Stage-And-Gender-Type T5 adult
+A2	Eq-Operator-Value T11 BETWEEN
+A3	Severity-Value T21 severe
+A4	Severity-Value T25 severe
+A5	Assertion-Type-Value E18 hypothetical
+A6	Severity-Value T40 severe
+A7	Eq-Temporal-Period-Value T57 future
+A8	Assertion-Type-Value E40 hypothetical
+A9	Eq-Operator-Value T9 LT
+A10	Eq-Temporal-Recency-Value T62 first-time
 A11	Temporal-Connection-Type-Value E44 during
+A12	Acuteness-Type-Value T49 chronic
+R1	Equivalent-To Arg1:E2 Arg2:T5
+R2	Example-Of Arg1:E12 Arg2:E4
+R3	Example-Of Arg1:E1 Arg2:E4
+R4	Example-Of Arg1:E3 Arg2:E4
+R5	Treatment-For Arg1:E16 Arg2:E6
+R6	Treatment-For Arg1:E15 Arg2:E6
+R7	Using Arg1:E38 Arg2:E35

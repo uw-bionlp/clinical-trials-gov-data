@@ -1,0 +1,62 @@
+T1	Condition 420 438	Raynaud's syndrome
+T2	Condition-Name 420 438	Raynaud's syndrome
+E1	Condition:T1 Name:T2 Temporality:E15
+T3	Condition 43 60	Diabetes mellitus
+T4	Condition-Name 43 60	Diabetes mellitus
+E3	Condition:T3 Name:T4 Stage:E2
+T7	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T7 GTEQ
+T8	Age 25 28	Age
+E6	Age:T8 Eq-Comparison:E7
+T9	Eq-Value 31 33	18
+T12	Eq-Value 176 188	January 2014
+T13	Eq-Value 193 201	May 2017
+T14	Eq-Comparison 29 33	≥ 18
+E7	Eq-Comparison:T14 Operator:T7 Value:T9
+T10	Eq-Comparison 62 73	type 1 or 2
+E2	Eq-Comparison:T10 Unit:T16 Value:T11 Value2:T15
+T11	Eq-Value 67 68	1
+T15	Eq-Value 72 73	2
+T16	Eq-Unit 62 66	type
+T17	Encounter 112 127	hospitalization
+E4	Encounter:T17 Type:T18 Duration:E8
+T18	Encounter-Type 112 127	hospitalization
+A2	Encounter-Type-Value T18 inpatient
+T19	Eq-Comparison 104 111	one-day
+E8	Eq-Comparison:T19 Value:T20 Temporal-Unit:T21
+T20	Eq-Value 104 107	one
+T21	Eq-Temporal-Unit 108 111	day
+A3	Eq-Temporal-Unit-Value T21 day
+T22	Condition 138 166	cardiovascular comorbidities
+E9	Condition:T22 Name:T23 Temporality:E11 Location:T5 Location2:T6
+T23	Condition-Name 138 166	cardiovascular comorbidities
+T24	Temporal-Connection 128 130	to
+E10	Temporal-Connection:T24 Arg:E4 Arg2:E9
+A4	Temporal-Connection-Type-Value E10 during
+T25	Eq-Comparison 168 201	between January 2014 and May 2017
+E11	Eq-Comparison:T25 Operator:T26 Value:T12 Value2:T13
+T26	Eq-Operator 168 175	between
+A5	Eq-Operator-Value T26 BETWEEN
+T5	Location 210 229	diabetes department
+A6	Location-Value T5 unit
+T6	Location 238 264	Pitié-Salpêtrière hospital
+A7	Location-Value T6 hospital
+T27	Observation 270 299	Coronary artery calcium score
+E5	Observation:T27 Name:T28
+T28	Observation-Name 270 299	Coronary artery calcium score
+A8	Observation-Type-Value T28 measurement
+T29	Observation 315 333	Toe-brachial index
+E12	Observation:T29 Name:T30
+T30	Observation-Name 315 333	Toe-brachial index
+A9	Observation-Type-Value T30 measurement
+T31	Condition 380 403	coronary artery disease
+E13	Condition:T31 Name:T32 Temporality:E14
+T32	Condition-Name 380 403	coronary artery disease
+T33	Eq-Comparison 369 376	History
+E14	Eq-Comparison:T33 Temporal-Period:T34
+T34	Eq-Temporal-Period 369 376	History
+A10	Eq-Temporal-Period-Value T34 past
+T35	Eq-Comparison 409 416	History
+E15	Eq-Comparison:T35 Temporal-Period:T36
+T36	Eq-Temporal-Period 409 416	History
+A11	Eq-Temporal-Period-Value T36 past

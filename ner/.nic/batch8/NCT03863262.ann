@@ -1,0 +1,41 @@
+T3	Eq-Comparison 419 432	were 18 years
+E3	Eq-Comparison:T3 Value:T14 Temporal-Unit:T15
+T4	Eq-Comparison 471 489	less than 18 years
+E4	Eq-Comparison:T4 Operator:T16 Value:T17 Temporal-Unit:T18
+T6	Negation 590 593	not
+E6	Negation:T6 Negates:T20 Negates2:T5
+T7	Condition 730 736	unwell
+E7	Condition:T7 Name:T12 Severity:T13
+T8	Assertion 737 746	requiring
+E8	Assertion:T8 Asserted:E9
+A2	Assertion-Type-Value E8 hypothetical
+T9	Encounter 756 765	admission
+E9	Encounter:T9 Location:T21
+T10	Location 101 130	cardiology outpatient clinics
+A3	Location-Value T10 clinic
+T14	Eq-Value 424 426	18
+T15	Eq-Temporal-Unit 427 432	years
+A7	Eq-Temporal-Unit-Value T15 year
+T16	Eq-Operator 471 480	less than
+A8	Eq-Operator-Value T16 LT
+T17	Eq-Value 481 483	18
+T18	Eq-Temporal-Unit 484 489	years
+A9	Eq-Temporal-Unit-Value T18 year
+T20	Location 621 650	cardiology outpatient clinics
+A11	Location-Value T20 clinic
+T21	Location 747 755	hospital
+A12	Location-Value T21 hospital
+T22	Encounter-Type 756 765	admission
+A13	Encounter-Type-Value T22 inpatient
+T11	Location 211 239	cardiology outpatient clinic
+A4	Location-Value T11 clinic
+T1	Age 433 436	old
+E1	Age:T1 Eq-Comparison:E3
+T2	Age 490 493	old
+E2	Age:T2 Eq-Comparison:E4
+T5	Location 654 692	Eric Williams Medical Sciences Complex
+A1	Location-Value T5 hospital
+T12	Condition-Name 730 736	unwell
+T13	Severity 722 729	acutely
+A5	Severity-Value T13 severe
+R1	Treatment-For Arg1:E9 Arg2:E7	

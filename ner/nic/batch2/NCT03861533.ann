@@ -1,98 +1,98 @@
+E1	Condition:T1 Name:T2 Temporality:E25
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6 Temporality:E24
+E7	Procedure:T7 Name:T8 Duration:E14
+E10	Procedure:T10 Temporality:E21
+E11	Age:T18 Eq-Comparison:E12
+E12	Eq-Comparison:T22 Operator:T12 Temporal-Unit:T15 Value:T19
+E13	Eq-Comparison:T23 Operator:T13 Temporal-Unit:T16 Value:T20 Temporal-Period:T52
+E14	Eq-Comparison:T24 Operator:T14 Temporal-Unit:T17 Value:T21
+E2	Risk:T25 Risk-For:E3 Risk-For2:E4 Polarity:T48
+E4	Death:T26
+E6	Or:T27 Arg:E3 Arg2:E4
+E8	Modifier:T28 Modifies:T6
+E9	Or:T29 Arg:E5 Arg2:T2
+E15	Observation:T30 Name:T31 Temporality:E13 Minimum-Count:E16
+E16	Eq-Comparison:T32 Operator:T33 Unit:T34
+E17	Drug:T35 Name:T36
+E18	Modifier:T37
+E19	And:T38 Arg:E15 Arg2:E7
+E20	Drug:T39 Name:T40
+E21	Eq-Comparison:T41
+E22	Study:T43 Temporality:E23
+E23	Eq-Comparison:T44 Temporal-Period:T45
+E24	Eq-Comparison:T46 Temporal-Period:T47
+E25	Eq-Comparison:T49 Temporal-Period:T50
+E26	Modifier:T51 Modifies:T2
 T1	Condition 189 209	hypercholesterolemia
 T2	Condition-Name 189 209	hypercholesterolemia
-E1	Condition:T1 Name:T2 Temporality:E25
 T3	Condition 66 90	cardiovascular morbidity
 T4	Condition-Name 66 90	cardiovascular morbidity
-E3	Condition:T3 Name:T4
 T5	Condition 139 161	cardiovascular disease
 T6	Condition-Name 139 161	cardiovascular disease
-E5	Condition:T5 Name:T6 Temporality:E24
 T7	Procedure 296 310	statin therapy
 T8	Procedure-Name 296 310	statin therapy
-E7	Procedure:T7 Name:T8 Duration:E14
 T9	Life-Stage-And-Gender 25 31	Adults
-A1	Life-Stage-And-Gender-Type T9 adult
 T10	Procedure 379 388	treatment
-E10	Procedure:T10 Temporality:E21
 T12	Eq-Operator 32 33	≥
-A2	Eq-Operator-Value T12 GTEQ
 T13	Eq-Operator 221 227	within
-A3	Eq-Operator-Value T13 LTEQ
 T14	Eq-Operator 327 335	the past
-A4	Eq-Operator-Value T14 GTEQ
 T15	Eq-Temporal-Unit 37 42	years
-A5	Eq-Temporal-Unit-Value T15 year
 T16	Eq-Temporal-Unit 239 245	months
-A6	Eq-Temporal-Unit-Value T16 month
 T17	Eq-Temporal-Unit 338 344	months
-A7	Eq-Temporal-Unit-Value T17 month
 T18	Age 43 46	old
-E11	Age:T18 Eq-Comparison:E12
 T19	Eq-Value 34 36	18
 T20	Eq-Value 237 238	6
 T21	Eq-Value 336 337	3
 T22	Eq-Comparison 32 42	≥ 18 years
-E12	Eq-Comparison:T22 Operator:T12 Temporal-Unit:T15 Value:T19
 T23	Eq-Comparison 221 245	within the past 6 months
-E13	Eq-Comparison:T23 Operator:T13 Temporal-Unit:T16 Value:T20 Temporal-Period:T52
 T24	Eq-Comparison 327 344	the past 3 months
-E14	Eq-Comparison:T24 Operator:T14 Temporal-Unit:T17 Value:T21
 T25	Risk 57 61	risk
-E2	Risk:T25 Risk-For:E3 Risk-For2:E4 Polarity:T48
 T26	Death 95 104	mortality
-E4	Death:T26 
 T27	Or 91 94	and
-E6	Or:T27 Arg:E3 Arg2:E4
 T28	Modifier 130 138	clinical
-E8	Modifier:T28 Modifies:T6
 T29	Or 162 168	and/or
-E9	Or:T29 Arg:E5 Arg2:T2
 T30	Observation 215 220	LDL-C
-E15	Observation:T30 Name:T31 Temporality:E13 Minimum-Count:E16
 T31	Observation-Name 215 220	LDL-C
-A8	Observation-Type-Value T31 lab
 T32	Eq-Comparison 246 269	above recommended level
-E16	Eq-Comparison:T32 Operator:T33 Unit:T34
 T33	Eq-Operator 246 251	above
-A9	Eq-Operator-Value T33 GT
 T34	Eq-Unit 252 269	recommended level
 T35	Drug 313 322	ezetimibe
-E17	Drug:T35 Name:T36
 T36	Drug-Name 313 322	ezetimibe
-R2	Using Arg1:E7 Arg2:E17	
 T37	Modifier 278 295	maximal tolerated
-E18	Modifier:T37 
-R3	Abbrev-Of Arg1:E18 Arg2:E7	
 T38	And 270 277	despite
-E19	And:T38 Arg:E15 Arg2:E7
 T39	Drug 394 409	PCSK9 inhibitor
-E20	Drug:T39 Name:T40
 T40	Drug-Name 394 409	PCSK9 inhibitor
-R4	Using Arg1:E10 Arg2:E20	
 T41	Eq-Comparison 371 378	Current
-E21	Eq-Comparison:T41 
 T42	Eq-Temporal-Period 371 378	Current
-A10	Eq-Temporal-Period-Value T42 present
 T43	Study 456 461	study
-E22	Study:T43 Temporality:E23
 T44	Eq-Comparison 415 422	Current
-E23	Eq-Comparison:T44 Temporal-Period:T45
 T45	Eq-Temporal-Period 415 422	Current
-A11	Eq-Temporal-Period-Value T45 present
 T46	Eq-Comparison 113 126	prior history
-E24	Eq-Comparison:T46 Temporal-Period:T47
 T47	Eq-Temporal-Period 113 126	prior history
-A12	Eq-Temporal-Period-Value T47 past
-R5	Example-Of Arg1:E5 Arg2:E2	
 T48	Polarity 52 56	High
-A13	Polarity-Value T48 high
 T49	Eq-Comparison 169 176	history
-E25	Eq-Comparison:T49 Temporal-Period:T50
 T50	Eq-Temporal-Period 169 176	history
-A14	Eq-Temporal-Period-Value T50 past
-R1	Example-Of Arg1:E1 Arg2:E2	
 T51	Modifier 180 188	familial
-E26	Modifier:T51 Modifies:T2
 T52	Eq-Temporal-Period 232 236	past
+A1	Life-Stage-And-Gender-Type T9 adult
+A2	Eq-Operator-Value T12 GTEQ
+A3	Eq-Operator-Value T13 LTEQ
+A4	Eq-Operator-Value T14 GTEQ
+A5	Eq-Temporal-Unit-Value T15 year
+A6	Eq-Temporal-Unit-Value T16 month
+A7	Eq-Temporal-Unit-Value T17 month
+A8	Observation-Type-Value T31 lab
+A9	Eq-Operator-Value T33 GT
+A10	Eq-Temporal-Period-Value T42 present
+A11	Eq-Temporal-Period-Value T45 present
+A12	Eq-Temporal-Period-Value T47 past
+A13	Polarity-Value T48 high
+A14	Eq-Temporal-Period-Value T50 past
 A15	Eq-Temporal-Period-Value T52 past
 A16	Eq-Unit-Value T34 ref-range-normal
+R2	Using Arg1:E7 Arg2:E17
+R3	Abbrev-Of Arg1:E18 Arg2:E7
+R4	Using Arg1:E10 Arg2:E20
+R5	Example-Of Arg1:E5 Arg2:E2
+R1	Example-Of Arg1:E1 Arg2:E2

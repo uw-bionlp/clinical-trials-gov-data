@@ -1,49 +1,51 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4 Location:T13 Location2:T14 Polarity:T26
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E2	Or:T16 Arg:T14 Arg2:T15
+E4	Condition:T17 
+E6	Other:T18 Is-Other:E4
+E8	Condition:T19 Name:T20
+E10	Other:T21 Is-Other:E8
+E12	Modifier:T22 Modifies:T6
+E13	Modifier:T23 Modifies:T12
+E14	Modifier:T24 Modifies:T2
+E15	Or:T25 Arg:E11 Arg2:E1
 T1	Condition 328 337	arthritis
 T2	Condition-Name 328 337	arthritis
-E1	Condition:T1 Name:T2
-T3	Condition 25 43	reactive arthritis
-T4	Condition-Name 25 43	reactive arthritis
-E3	Condition:T3 Name:T4 Location:T13 Location2:T14
+T3	Condition 34 43	arthritis
+T4	Condition-Name 34 43	arthritis
 T5	Condition 262 271	arthritis
 T6	Condition-Name 262 271	arthritis
-E5	Condition:T5 Name:T6
 T7	Condition 273 285	Lyme disease
 T8	Condition-Name 273 285	Lyme disease
-E7	Condition:T7 Name:T8
 T9	Condition 201 210	arthritis
 T10	Condition-Name 201 210	arthritis
-E9	Condition:T9 Name:T10
 T11	Condition 304 313	arthritis
 T12	Condition-Name 304 313	arthritis
-E11	Condition:T11 Name:T12
 T13	Location 72 96	rheumatology departments
-A1	Location-Value T13 clinic
 T14	Location 102 129	Centre Hospitalier Lyon Sud
-A2	Location-Value T14 hospital
 T15	Location 133 141	Besançon
-A3	Location-Value T15 hospital
 T16	Or 130 132	or
-E2	Or:T16 Arg:T14 Arg2:T15
 T17	Condition 191 197	causes
-E4	Condition:T17 
 T18	Other 179 184	other
-E6	Other:T18 Is-Other:E4
-R1	Caused-By Arg1:E9 Arg2:E4	
 T19	Condition 234 253	spondyloarthritides
-E8	Condition:T19 Name:T20
 T20	Condition-Name 234 253	spondyloarthritides
 T21	Other 220 225	other
-E10	Other:T21 Is-Other:E8
-R2	Example-Of Arg1:E8 Arg2:E4	
-R3	Example-Of Arg1:E5 Arg2:E4	
-R4	Example-Of Arg1:E7 Arg2:E4	
 T22	Modifier 255 261	septic
-E12	Modifier:T22 Modifies:T6
 T23	Modifier 287 303	microcrystalline
-E13	Modifier:T23 Modifies:T12
-R5	Example-Of Arg1:E11 Arg2:E4	
 T24	Modifier 317 327	rheumatoid
-E14	Modifier:T24 Modifies:T2
-R6	Example-Of Arg1:E1 Arg2:E4	
 T25	Or 314 316	or
-E15	Or:T25 Arg:E11 Arg2:E1
+A1	Location-Value T13 clinic
+A2	Location-Value T14 hospital
+A3	Location-Value T15 hospital
+R1	Caused-By Arg1:E9 Arg2:E4
+R2	Example-Of Arg1:E8 Arg2:E4
+R3	Example-Of Arg1:E5 Arg2:E4
+R4	Example-Of Arg1:E7 Arg2:E4
+R5	Example-Of Arg1:E11 Arg2:E4
+R6	Example-Of Arg1:E1 Arg2:E4
+T26	Polarity 25 33	reactive
+A4	Polarity-Value T26 reactive

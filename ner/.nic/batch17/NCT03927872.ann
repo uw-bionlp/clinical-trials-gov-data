@@ -1,0 +1,107 @@
+T4	Condition 38 41	CES
+T5	Condition-Name 38 41	CES
+E4	Condition:T4 Name:T5
+T7	Condition 198 201	CES
+T8	Condition-Name 198 201	CES
+E7	Condition:T7 Name:T8
+T9	Life-Stage-And-Gender 357 362	Adult
+A1	Life-Stage-And-Gender-Type T9 adult
+T10	Condition 451 477	transient ischemic attacks
+T11	Condition-Name 451 477	transient ischemic attacks
+E10	Condition:T10 Name:T11
+T12	Condition 440 446	stroke
+T13	Condition-Name 440 446	stroke
+E12	Condition:T12 Name:T13
+T14	Condition 479 483	TIAs
+T15	Condition-Name 479 483	TIAs
+E14	Condition:T14 Name:T15
+T16	Condition 580 612	cerebral venous sinus thrombosis
+T17	Condition-Name 580 612	cerebral venous sinus thrombosis
+E16	Condition:T16 Name:T17
+T18	Condition 708 729	Chronic renal disease
+T19	Condition-Name 708 729	Chronic renal disease
+E18	Condition:T18 Name:T19
+T20	Condition 551 571	cerebral dysfunction
+T21	Condition-Name 551 571	cerebral dysfunction
+E20	Condition:T20 Name:T21 Severity:T54
+T22	Condition 643 664	auto immune disorders
+T23	Condition-Name 643 664	auto immune disorders
+E22	Condition:T22 Name:T23
+T24	Condition 689 702	Liver failure
+T25	Condition-Name 689 702	Liver failure
+E24	Condition:T24 Name:T25
+T28	Eq-Value 349 350	5
+T29	Eq-Value 398 400	18
+T1	Condition 25 28	CES
+E1	Condition:T1 Name:T2
+T2	Condition-Name 25 28	CES
+T3	Negation 33 36	non
+E2	Negation:T3 Negates:E4
+T27	Or 29 32	and
+E3	Or:T27 Arg:E1 Arg2:E2
+T30	Procedure 91 113	Acute Stroke Treatment
+E5	Procedure:T30 Name:T31
+T31	Procedure-Name 91 113	Acute Stroke Treatment
+T32	Procedure 115 120	TOAST
+E6	Procedure:T32 Name:T33
+T33	Procedure-Name 115 120	TOAST
+R1	Abbrev-Of Arg1:E6 Arg2:E5	
+T6	Negation 152 155	non
+E8	Negation:T6 Negates:E9
+T34	Condition 157 160	CES
+E9	Condition:T34 Name:T35
+T35	Condition-Name 157 160	CES
+T36	Condition 281 323	National Institutes of Health Stroke Scale
+E11	Condition:T36 Name:T37
+T37	Condition-Name 281 323	National Institutes of Health Stroke Scale
+T38	Condition 325 330	NIHSS
+E13	Condition:T38 Name:T39 Stage:E15
+T39	Condition-Name 325 330	NIHSS
+R2	Abbrev-Of Arg1:E13 Arg2:E11	
+T40	Eq-Comparison 339 350	more than 5
+E15	Eq-Comparison:T40 Operator:T41 Value:T28
+T41	Eq-Operator 339 348	more than
+A2	Eq-Operator-Value T41 GT
+T42	Age 383 387	ages
+E17	Age:T42 Eq-Comparison:E19
+T43	Eq-Comparison 388 405	more than 18 year
+E19	Eq-Comparison:T43 Operator:T44 Temporal-Unit:T45 Value:T29
+T44	Eq-Operator 388 397	more than
+A3	Eq-Operator-Value T44 GT
+T45	Eq-Temporal-Unit 401 405	year
+A4	Eq-Temporal-Unit-Value T45 year
+T46	And 372 376	with
+E21	And:T46 Arg:T9 Arg2:E17
+R3	Abbrev-Of Arg1:E14 Arg2:E10	
+T47	Modifier 432 439	Lacunar
+E23	Modifier:T47 Modifies:T13
+T48	Condition 503 509	stroke
+E26	Condition:T48 Name:T49
+T49	Condition-Name 503 509	stroke
+T50	Modifier 490 502	Haemorrhagic
+E27	Modifier:T50 Modifies:T49
+T51	Modifier 545 550	focal
+E28	Modifier:T51 Modifies:T21
+T52	Condition 516 535	Neurological causes
+E29	Condition:T52 Name:T53
+T53	Condition-Name 516 535	Neurological causes
+R4	Caused-By Arg1:E20 Arg2:E29	
+T54	Severity 539 544	acute
+A5	Severity-Value T54 severe
+R5	Example-Of Arg1:E16 Arg2:E29	
+T55	Condition 620 626	trauma
+E30	Condition:T55 Name:T56
+T56	Condition-Name 620 626	trauma
+T57	Modifier 615 619	head
+E31	Modifier:T57 Modifies:T56
+R6	Example-Of Arg1:E30 Arg2:E29	
+T58	Condition 628 637	infection
+E32	Condition:T58 Name:T59
+T59	Condition-Name 628 637	infection
+R7	Example-Of Arg1:E32 Arg2:E29	
+R8	Example-Of Arg1:E22 Arg2:E29	
+T60	Or 639 642	and
+E33	Or:T60 Arg:E32 Arg2:E22
+T61	Condition 670 683	Heart failure
+E34	Condition:T61 Name:T62
+T62	Condition-Name 670 683	Heart failure

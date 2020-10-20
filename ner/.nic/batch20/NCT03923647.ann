@@ -1,0 +1,35 @@
+T1	Condition 344 368	haemodynamic instability
+T2	Condition-Name 344 368	haemodynamic instability
+E1	Condition:T1 Name:T2
+T3	Procedure 294 317	conservative management
+T4	Procedure-Name 294 317	conservative management
+E3	Procedure:T3 Name:T4
+T5	Procedure 277 289	intervention
+T6	Procedure-Name 277 289	intervention
+E5	Procedure:T5 Name:T6
+T7	Condition 85 91	injury
+E2	Condition:T7 Name:T8 Stability:T10
+T8	Condition-Name 85 91	injury
+T9	Modifier 69 84	intra-abdominal
+E4	Modifier:T9 Modifies:T8
+T10	Stability 25 31	stable
+A1	Stability-Value T10 stable
+T11	Procedure 144 167	radiological evaluation
+E6	Procedure:T11 Name:T12
+T12	Procedure-Name 144 167	radiological evaluation
+T13	Condition 229 235	trauma
+E7	Condition:T13 Name:T14
+T14	Condition-Name 229 235	trauma
+T15	Modifier 207 228	penetrating abdominal
+E8	Modifier:T15 Modifies:T14
+T16	Assertion 264 272	need for
+E9	Assertion:T16 Asserted:E5
+A2	Assertion-Type-Value E9 hypothetical
+R1	Using Arg1:E5 Arg2:E3	
+T17	Negation 257 260	not
+E10	Negation:T17 Negates:E9
+T18	Stability 241 247	stable
+A3	Stability-Value T18 stable
+T19	Condition 374 391	polyt-traumatized
+E11	Condition:T19 Name:T20
+T20	Condition-Name 374 391	polyt-traumatized

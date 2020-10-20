@@ -1,57 +1,57 @@
+E2	Eq-Comparison:T7 Operator:T8 Temporal-Unit:T3 Value:T5
+E3	Age:T9 Eq-Comparison:E2
+E4	And:T10 Arg:E3 Arg2:E6
+E5	Eq-Comparison:T11 Operator:T12 Temporal-Unit:T4 Value:T6
+E6	Age:T13 Eq-Comparison:E5
+E7	Condition:T14 Name:T15
+E8	Negation:T16 Negates:E7
+E9	Condition:T17 Temporality:E13 Name:T28
+E10	Modifier:T18 Modifies:E9
+E11	Modifier:T19 Modifies:E9
+E12	Modifier:T20 Modifies:E9
+E13	Eq-Comparison:T21 Temporal-Period:T22
+E14	Procedure:T23
+E1	Observation:T1 Name:T2 Stability:T29
+E15	Modifier:T24 Modifies:T2
+E16	Modifier:T25 Modifies:T2
+E17	Observation:T26 Name:T27
+E18	Assertion:T30 Asserted:T29
 T3	Eq-Temporal-Unit 42 47	years
-A1	Eq-Temporal-Unit-Value T3 year
 T4	Eq-Temporal-Unit 73 78	years
-A2	Eq-Temporal-Unit-Value T4 year
 T5	Eq-Value 39 41	18
 T6	Eq-Value 70 72	45
 T7	Eq-Comparison 25 47	more or equal 18 years
-E2	Eq-Comparison:T7 Operator:T8 Temporal-Unit:T3 Value:T5
 T8	Eq-Operator 25 38	more or equal
-A3	Eq-Operator-Value T8 GTEQ
 T9	Age 48 51	old
-E3	Age:T9 Eq-Comparison:E2
 T10	And 52 55	and
-E4	And:T10 Arg:E3 Arg2:E6
 T11	Eq-Comparison 56 78	less or equal 45 years
-E5	Eq-Comparison:T11 Operator:T12 Temporal-Unit:T4 Value:T6
 T12	Eq-Operator 56 69	less or equal
-A4	Eq-Operator-Value T12 LTEQ
 T13	Age 79 82	old
-E6	Age:T13 Eq-Comparison:E5
 T14	Condition 97 112	hearing problem
-E7	Condition:T14 Name:T15
 T15	Condition-Name 97 112	hearing problem
 T16	Negation 88 90	no
-E8	Negation:T16 Negates:E7
 T17	Condition 214 221	disease
-E9	Condition:T17 Temporality:E13 Name:T28
 T18	Modifier 203 213	cadiologic
-E10	Modifier:T18 Modifies:E9
 T19	Modifier 188 199	psychiatric
-E11	Modifier:T19 Modifies:E9
 T20	Modifier 176 186	neurologic
-E12	Modifier:T20 Modifies:E9
 T21	Eq-Comparison 165 172	history
-E13	Eq-Comparison:T21 Temporal-Period:T22
 T22	Eq-Temporal-Period 165 172	history
-A5	Eq-Temporal-Period-Value T22 past
 T23	Procedure 227 236	treatment
-E14	Procedure:T23 
 T1	Observation 256 266	parameters
-E1	Observation:T1 Name:T2 Stability:T29
 T2	Observation-Name 256 266	parameters
-A6	Observation-Type-Value T2 measurement
 T24	Modifier 270 294	brain tissue pulsatility
-E15	Modifier:T24 Modifies:T2
 T25	Modifier 299 324	peripheral nervous system
-E16	Modifier:T25 Modifies:T2
 T26	Observation 138 159	professional musician
-E17	Observation:T26 Name:T27
 T27	Observation-Name 138 159	professional musician
 T28	Condition-Name 214 221	disease
 T29	Stability 249 255	impact
-A7	Stability-Value T29 change
 T30	Assertion 243 248	could
-E18	Assertion:T30 Asserted:T29
+A1	Eq-Temporal-Unit-Value T3 year
+A2	Eq-Temporal-Unit-Value T4 year
+A3	Eq-Operator-Value T8 GTEQ
+A4	Eq-Operator-Value T12 LTEQ
+A5	Eq-Temporal-Period-Value T22 past
+A6	Observation-Type-Value T2 measurement
+A7	Stability-Value T29 change
 A8	Assertion-Type-Value E18 hypothetical
-R1	Caused-By Arg1:T29 Arg2:E14	
+R1	Caused-By Arg1:T29 Arg2:E14

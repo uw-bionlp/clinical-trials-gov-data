@@ -1,0 +1,290 @@
+T1	Eq-Comparison 25 35	6-17 years
+E1	Eq-Comparison:T1 Value:T90 Operator:T91 Value:T92 Temporal-Unit:T93
+T2	Age 36 39	old
+E2	Age:T2 Eq-Comparison:E1
+T4	Condition 55 62	healthy
+E4	Condition:T4 Name:T94
+T5	Eq-Comparison 68 77	Currently
+E5	Eq-Comparison:T5 Temporal-Period:T95
+T6	Modifier 83 93	unilateral
+E6	Modifier:T6 Modifies:T96
+T7	Or 94 96	or
+E7	Or:T7 Arg:E6 Arg2:E8
+T8	Modifier 97 106	bilateral
+E8	Modifier:T8 Modifies:T96
+T9	Procedure 107 123	ventilation tube
+E9	Procedure:T9 Name:T96 Temporality:E5
+T10	Procedure 128 131	VTs
+E10	Procedure:T10 Name:T97
+T11	Modifier 133 141	inserted
+E11	Modifier:T11 Modifies:T96
+T12	Condition 146 172	otitis media with effusion
+E12	Condition:T12 Name:T98
+T13	Condition 174 177	OME
+E13	Condition:T13 Name:T99
+T14	Or 179 181	or
+E14	Or:T14 Arg:E13 Arg2:E15
+T15	Procedure 182 210	tympanic membrane retraction
+E15	Procedure:T15 Name:T100
+T16	Or 210 211	/
+E16	Or:T16 Arg:E15 Arg2:E17
+T17	Procedure 211 228	retraction pocket
+E17	Procedure:T17 Name:T101
+T19	Or 239 241	or
+E19	Or:T19 Arg:E3 Arg2:E20
+T20	Condition 244 258	TM perforation
+E20	Condition:T20 Name:T103
+T21	Temporal-Connection 259 264	after
+E21	Temporal-Connection:T21 Arg:E20 Arg2:E22
+A1	Temporal-Connection-Type-Value E21 after
+T22	Procedure 265 282	extrusion of a VT
+E22	Procedure:T22 Name:T104
+T24	Eq-Comparison 288 295	History
+E24	Eq-Comparison:T24 Temporal-Period:T105
+T25	Eq-Comparison 299 314	at least 2 sets
+E25	Eq-Comparison:T25 Operator:T106 Value:T107 Unit:T108
+T26	Procedure 318 331	VT insertions
+E26	Procedure:T26 Name:T23 Temporality:E24 Minimum-Count:E25 Temporality2:E27
+T27	Eq-Comparison 339 343	past
+E27	Eq-Comparison:T27 Temporal-Period:T109
+T29	Observation 380 383	ETF
+E29	Observation:T29 Name:T136
+T30	Eq-Comparison 402 408	active
+E30	Eq-Comparison:T30 Temporal-Period:T111
+T31	Modifier 409 425	muscular pattern
+E31	Modifier:T31 Modifies:T113
+T32	Condition 429 456	Eustachian tube dysfunction
+E32	Condition:T32 Name:T113 Temporality:E30
+T33	Observation 462 480	Tubomanometry test
+E33	Observation:T33 Name:T114
+T34	Condition 509 535	velopharyngeal dysfunction
+E34	Condition:T34 Name:T115
+T35	Temporal-Connection 536 542	during
+E35	Temporal-Connection:T35 Arg:E34 Arg2:E36
+A2	Temporal-Connection-Type-Value E35 during
+T36	Observation 543 553	swallowing
+E36	Observation:T36 Name:T112
+T38	Condition 573 575	CP
+E38	Condition:T38 Name:T139
+T39	Negation 585 588	non
+E39	Negation:T39 Negates:E40
+T40	Condition 589 598	syndromic
+E40	Condition:T40 Name:T138
+T41	Eq-Comparison 600 605	prior
+E41	Eq-Comparison:T41 Temporal-Period:T117
+T42	Procedure 606 625	Furlow palatoplasty
+E42	Procedure:T42 Name:T118 Temporality:E41
+T43	Negation 626 633	without
+E43	Negation:T43 Negates:E44
+T44	Condition 634 647	complications
+E44	Condition:T44 Name:T119
+T45	Or 648 650	or
+E45	Or:T45 Arg:E44 Arg2:E46
+T46	Assertion 651 659	need for
+E46	Assertion:T46 Asserted:E90
+A3	Assertion-Type-Value E46 hypothetical
+T47	Negation 674 677	Non
+E47	Negation:T47 Negates:E48
+T48	Condition 678 680	CP
+E48	Condition:T48 Name:T142
+T49	Eq-Comparison 698 703	prior
+E49	Eq-Comparison:T49 Temporal-Period:T120
+T50	Eq-Comparison 743 753	Concurrent
+E50	Eq-Comparison:T50 Temporal-Period:T121
+T51	Or 754 756	or
+E51	Or:T51 Arg:E50 Arg2:E52
+T52	Eq-Comparison 757 761	past
+E52	Eq-Comparison:T52 Temporal-Period:T122
+T53	Condition 775 781	cancer
+E53	Condition:T53 Name:T123 Temporality:E50 Temporality2:E52
+T54	Or 782 784	or
+E54	Or:T54 Arg:E53 Arg2:E56
+T55	Eq-Comparison 785 792	history
+E55	Eq-Comparison:T55 Temporal-Period:T124
+T56	Procedure 796 805	radiation
+E56	Procedure:T56 Name:T125 Temporality:E55
+T57	Or 816 818	or
+E57	Or:T57 Arg:E92 Arg2:E93
+T58	Condition 823 843	vestibular pathology
+E58	Condition:T58 Name:T126 Temporality:E92 Temporality2:E93
+T59	Modifier 845 857	cranial base
+E59	Modifier:T59 Modifies:T127
+T60	Procedure 858 865	surgery
+E60	Procedure:T60 Name:T127 Temporality:E92 Temporality2:E93
+T61	Or 866 868	or
+E61	Or:T61 Arg:E60 Arg2:E63
+T62	Modifier 869 878	ossicular
+E62	Modifier:T62 Modifies:T128
+T63	Procedure 879 899	chain reconstruction
+E63	Procedure:T63 Name:T128 Temporality:E92 Temporality2:E93
+T64	Condition 905 931	Craniofacial dysmorphology
+E64	Condition:T64 Name:T129
+T65	Exception 933 943	other than
+E65	Exception:T65 From:E64 Except:E67
+T66	Modifier 948 957	syndromic
+E66	Modifier:T66 Modifies:T130
+T67	Condition 958 960	CP
+E67	Condition:T67 Name:T130
+T68	And 961 965	with
+E68	And:T68 Arg:E67
+T69	Or 966 968	or
+E69	Or:T69 Arg:E68 Arg2:E70
+T70	Negation 969 976	without
+E70	Negation:T70 Negates:E71
+T71	Condition 977 986	cleft lip
+E71	Condition:T71 Name:T131
+T73	Or 1005 1007	or
+E73	Or:T73 Arg:E64 Arg2:E75
+T74	Other 1008 1013	other
+E74	Other:T74 Is-Other:E75
+T75	Condition 1014 1022	syndrome
+E75	Condition:T75 Name:T132
+T77	Condition 1041 1053	nasal cavity
+E77	Condition:T77 Name:T133
+T78	Condition 1059 1070	Patulous ET
+E78	Condition:T78 Name:T152
+T79	Or 1071 1073	or
+E79	Or:T79 Arg:E78 Arg2:E80
+T80	Condition 1074 1095	pathologically low ET
+E80	Condition:T80 Name:T153
+T81	Modifier 1096 1103	opening
+E81	Modifier:T81 Modifies:T153
+T82	Or 1104 1106	or
+E82	Or:T82 Arg:E81 Arg2:E83
+T83	Modifier 1107 1124	closing pressures
+E83	Modifier:T83 Modifies:T153
+T84	Condition 1130 1139	Pregnancy
+E84	Condition:T84 Name:T134
+T85	Negation 1145 1151	Unable
+E85	Negation:T85 Negates:E88 Negates2:E96
+T86	Or 1152 1154	or
+E86	Or:T86 Arg:E85 Arg2:E87
+T87	Negation 1155 1164	unwilling
+E87	Negation:T87 Negates:E88 Negates2:E96
+T88	Observation 1180 1185	tests
+E88	Observation:T88 Name:T154
+T89	Study 1216 1221	study
+E89	Study:T89 Study-Of:E88 Study-Of2:E96
+T90	Eq-Value 25 26	6
+T91	Eq-Operator 26 27	-
+A4	Eq-Operator-Value T91 BETWEEN
+T92	Eq-Value 27 29	17
+T93	Eq-Temporal-Unit 30 35	years
+A5	Eq-Temporal-Unit-Value T93 year
+T94	Condition-Name 55 62	healthy
+T95	Eq-Temporal-Period 68 77	Currently
+A6	Eq-Temporal-Period-Value T95 present
+T96	Procedure-Name 107 123	ventilation tube
+T97	Procedure-Name 128 131	VTs
+T98	Condition-Name 146 172	otitis media with effusion
+T99	Condition-Name 174 177	OME
+T100	Procedure-Name 182 210	tympanic membrane retraction
+T101	Procedure-Name 211 228	retraction pocket
+T103	Condition-Name 244 258	TM perforation
+T104	Procedure-Name 265 282	extrusion of a VT
+T105	Eq-Temporal-Period 288 295	History
+A8	Eq-Temporal-Period-Value T105 past
+T106	Eq-Operator 299 307	at least
+A9	Eq-Operator-Value T106 GTEQ
+T107	Eq-Value 308 309	2
+T108	Eq-Unit 310 314	sets
+T109	Eq-Temporal-Period 339 343	past
+A10	Eq-Temporal-Period-Value T109 past
+T110	Observation-Name 349 364	Eustachian tube
+T111	Eq-Temporal-Period 402 408	active
+A11	Eq-Temporal-Period-Value T111 present
+T113	Condition-Name 429 456	Eustachian tube dysfunction
+T114	Observation-Name 462 480	Tubomanometry test
+A12	Observation-Type-Value T114 measurement
+T115	Condition-Name 509 535	velopharyngeal dysfunction
+T116	Condition-Name 559 571	Cleft palate
+T117	Eq-Temporal-Period 600 605	prior
+A13	Eq-Temporal-Period-Value T117 past
+T118	Procedure-Name 606 625	Furlow palatoplasty
+T119	Condition-Name 634 647	complications
+T120	Eq-Temporal-Period 698 703	prior
+A14	Eq-Temporal-Period-Value T120 past
+T121	Eq-Temporal-Period 743 753	Concurrent
+A15	Eq-Temporal-Period-Value T121 present
+T122	Eq-Temporal-Period 757 761	past
+A16	Eq-Temporal-Period-Value T122 past
+T123	Condition-Name 775 781	cancer
+T124	Eq-Temporal-Period 785 792	history
+A17	Eq-Temporal-Period-Value T124 past
+T125	Procedure-Name 796 805	radiation
+T126	Condition-Name 823 843	vestibular pathology
+T127	Procedure-Name 858 865	surgery
+T128	Procedure-Name 879 899	chain reconstruction
+T129	Condition-Name 905 931	Craniofacial dysmorphology
+T130	Condition-Name 958 960	CP
+T131	Condition-Name 977 986	cleft lip
+T132	Condition-Name 1014 1022	syndrome
+T133	Condition-Name 1041 1053	nasal cavity
+T134	Condition-Name 1130 1139	Pregnancy
+R1	Example-Of Arg1:E10 Arg2:E9	
+R2	Abbrev-Of Arg1:E13 Arg2:E12	
+R3	Treatment-For Arg1:E10 Arg2:E12	
+T3	Procedure 230 237	TM-R/RP
+E3	Procedure:T3 Name:T18
+T18	Procedure-Name 230 237	TM-R/RP
+R4	Abbrev-Of Arg1:E3 Arg2:E17	
+T23	Procedure-Name 318 331	VT insertions
+T28	Observation 349 364	Eustachian tube
+E18	Observation:T28 Name:T110
+A7	Observation-Type-Value T110 measurement
+T37	Observation 366 368	ET
+E23	Observation:T37 Name:T102
+T102	Observation-Name 366 368	ET
+R5	Abbrev-Of Arg1:E23 Arg2:E18	
+T135	Modifier 370 378	function
+E28	Modifier:T135 Modifies:T110
+T136	Observation-Name 380 383	ETF
+R6	Abbrev-Of Arg1:E29 Arg2:E18	
+R7	Found-By Arg1:E32 Arg2:E18	
+R8	Found-By Arg1:E34 Arg2:E33	
+T112	Observation-Name 543 553	swallowing
+T137	Condition 559 571	Cleft palate
+E37	Condition:T137 Name:T116
+R9	Abbrev-Of Arg1:E38 Arg2:E37	
+T138	Condition-Name 589 598	syndromic
+T139	Condition-Name 573 575	CP
+T140	Procedure 660 668	revision
+E90	Procedure:T140 Name:T141
+T141	Procedure-Name 660 668	revision
+T142	Condition-Name 678 680	CP
+T143	Procedure 704 717	adenoidectomy
+E91	Procedure:T143 Name:T144 Temporality:E49
+T144	Procedure-Name 704 717	adenoidectomy
+T145	Eq-Comparison 811 815	Have
+E92	Eq-Comparison:T145 Temporal-Period:T146
+T146	Eq-Temporal-Period 811 815	Have
+A18	Eq-Temporal-Period-Value T146 present
+T147	Eq-Comparison 819 822	had
+E93	Eq-Comparison:T147 Temporal-Period:T148
+T148	Eq-Temporal-Period 819 822	had
+A19	Eq-Temporal-Period-Value T148 past
+T149	Negation 944 947	non
+E94	Negation:T149 Negates:E66
+T72	Condition 994 996	CP
+E72	Condition:T72 Name:T150
+T150	Condition-Name 994 996	CP
+R10	If-Then Arg1:E72 Arg2:E71	
+T151	Negation 1030 1033	non
+E95	Negation:T151 Negates:E76
+T76	Modifier 1034 1040	patent
+E76	Modifier:T76 Modifies:T133
+T152	Condition-Name 1059 1070	Patulous ET
+T153	Condition-Name 1074 1095	pathologically low ET
+T154	Observation-Name 1180 1185	tests
+T155	Observation 1190 1199	exercises
+E96	Observation:T155 Name:T156
+T156	Observation-Name 1190 1199	exercises
+A20	Observation-Type-Value T156 social-habit
+T157	Or 1186 1189	and
+E97	Or:T157 Arg:E88 Arg2:E96
+T158	Assertion 1145 1151	Unable
+E98	Assertion:T158 Asserted:E85
+A21	Assertion-Type-Value E98 hypothetical
+T159	Assertion 1155 1164	unwilling
+E99	Assertion:T159 Asserted:E87
+A22	Assertion-Type-Value E99 hypothetical

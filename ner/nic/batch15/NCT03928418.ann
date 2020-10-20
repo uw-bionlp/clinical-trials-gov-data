@@ -1,73 +1,73 @@
+E1	Procedure:T1 Name:T2 Duration:E8 Temporality:E7
+E2	Age:T8 Eq-Comparison:E5
+E3	Eq-Comparison:T11 Operator:T4 Temporal-Unit:T7 Value:T10
+E4	Eq-Comparison:T12 Temporal-Period:T13 Temporal-Unit:T26
+E5	Eq-Comparison:T14 Value:T9 Temporal-Unit:T5 Operator:T15
+E6	Condition:T16 Name:T17 Polarity:T18
+E7	Eq-Comparison:T19 Temporal-Period:T20
+E8	Eq-Comparison:T21 Operator:T22 Value:T23 Temporal-Unit:T6
+E9	Drug:T24 Name:T25 Temporality:E4
+E10	Eq-Comparison:T3 Operator:T28 Value:T29 Temporal-Unit:T30
+E11	Observation:T31 Name:T32 Eq-Comparison:E10 Location:T33
+E12	Observation:T34 Name:T35 Polarity:T36
+E13	Assertion:T37 Asserted:E14
+E14	Observation:T38 Name:T39 Temporality:E3
+E15	Study:T40
+E16	Other:T41 Is-Other:E15
 T1	Procedure 76 79	ART
 T2	Procedure-Name 76 79	ART
-E1	Procedure:T1 Name:T2 Duration:E8 Temporality:E7
 T4	Eq-Operator 407 413	within
-A2	Eq-Operator-Value T4 LTEQ
 T5	Eq-Temporal-Unit 32 37	years
-A3	Eq-Temporal-Unit-Value T5 year
 T6	Eq-Temporal-Unit 97 103	months
-A4	Eq-Temporal-Unit-Value T6 month
 T7	Eq-Temporal-Unit 416 422	months
-A5	Eq-Temporal-Unit-Value T7 month
 T8	Age 25 28	Age
-E2	Age:T8 Eq-Comparison:E5
 T9	Eq-Value 29 31	18
 T10	Eq-Value 414 415	6
 T11	Eq-Comparison 407 422	within 6 months
-E3	Eq-Comparison:T11 Operator:T4 Temporal-Unit:T7 Value:T10
 T12	Eq-Comparison 138 148	prior year
-E4	Eq-Comparison:T12 Temporal-Period:T13 Temporal-Unit:T26
 T13	Eq-Temporal-Period 138 143	prior
-A6	Eq-Temporal-Period-Value T13 past
 T14	Eq-Comparison 29 47	18 years and older
-E5	Eq-Comparison:T14 Value:T9 Temporal-Unit:T5 Operator:T15
 T15	Eq-Operator 38 47	and older
-A7	Eq-Operator-Value T15 GTEQ
 T16	Condition 54 57	HIV
-E6	Condition:T16 Name:T17 Polarity:T18
 T17	Condition-Name 54 57	HIV
 T18	Polarity 58 66	positive
-A8	Polarity-Value T18 positive
 T19	Eq-Comparison 73 75	On
-E7	Eq-Comparison:T19 Temporal-Period:T20
 T20	Eq-Temporal-Period 73 75	On
-A9	Eq-Temporal-Period-Value T20 present
 T21	Eq-Comparison 84 103	at least six months
-E8	Eq-Comparison:T21 Operator:T22 Value:T23 Temporal-Unit:T6
 T22	Eq-Operator 84 92	at least
-A10	Eq-Operator-Value T22 GTEQ
 T23	Eq-Value 93 96	six
 T24	Drug 119 126	alcohol
-E9	Drug:T24 Name:T25 Temporality:E4
 T25	Drug-Name 119 126	alcohol
 T26	Eq-Temporal-Unit 144 148	year
-A11	Eq-Temporal-Unit-Value T26 year
 T27	Language 182 191	Runyakole
 T3	Eq-Comparison 205 221	within two hours
-E10	Eq-Comparison:T3 Operator:T28 Value:T29 Temporal-Unit:T30
 T28	Eq-Operator 205 211	within
-A1	Eq-Operator-Value T28 LTEQ
 T29	Eq-Value 212 215	two
 T30	Eq-Temporal-Unit 216 221	hours
-A12	Eq-Temporal-Unit-Value T30 hour
 T31	Observation 222 233	travel time
-E11	Observation:T31 Name:T32 Eq-Comparison:E10 Location:T33
 T32	Observation-Name 222 233	travel time
-A13	Observation-Type-Value T32 measurement
 T33	Location 243 249	clinic
-A14	Location-Value T33 clinic
 T34	Observation 334 341	AUDIT-C
-E12	Observation:T34 Name:T35 Polarity:T36
 T35	Observation-Name 334 341	AUDIT-C
 T36	Polarity 318 326	positive
-A15	Polarity-Value T36 positive
 T37	Assertion 367 372	Plans
-E13	Assertion:T37 Asserted:E14
-A16	Assertion-Type-Value E13 intention
 T38	Observation 376 384	move out
-E14	Observation:T38 Name:T39 Temporality:E3
 T39	Observation-Name 376 384	move out
 T40	Study 504 509	study
-E15	Study:T40 
 T41	Other 487 494	another
-E16	Other:T41 Is-Other:E15
+A2	Eq-Operator-Value T4 LTEQ
+A3	Eq-Temporal-Unit-Value T5 year
+A4	Eq-Temporal-Unit-Value T6 month
+A5	Eq-Temporal-Unit-Value T7 month
+A6	Eq-Temporal-Period-Value T13 past
+A7	Eq-Operator-Value T15 GTEQ
+A8	Polarity-Value T18 positive
+A9	Eq-Temporal-Period-Value T20 present
+A10	Eq-Operator-Value T22 GTEQ
+A11	Eq-Temporal-Unit-Value T26 year
+A1	Eq-Operator-Value T28 LTEQ
+A12	Eq-Temporal-Unit-Value T30 hour
+A13	Observation-Type-Value T32 measurement
+A14	Location-Value T33 clinic
+A15	Polarity-Value T36 positive
+A16	Assertion-Type-Value E13 intention

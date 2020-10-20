@@ -1,0 +1,76 @@
+T1	Condition 235 243	diseases
+T2	Condition-Name 235 243	diseases
+E1	Condition:T1 Name:T2
+T3	Condition 410 424	kidney failure
+T4	Condition-Name 410 424	kidney failure
+E3	Condition:T3 Name:T4
+T5	Condition 395 408	liver failure
+T6	Condition-Name 395 408	liver failure
+E5	Condition:T5 Name:T6
+T7	Condition 430 435	obese
+T8	Condition-Name 430 435	obese
+E7	Condition:T7 Name:T8
+T10	Eq-Operator 65 72	between
+A1	Eq-Operator-Value T10 BETWEEN
+T11	Eq-Value 53 54	1
+T12	Eq-Value 78 80	18
+T13	Eq-Value 81 83	65
+T14	Eq-Comparison 65 83	between ages 18-65
+E8	Eq-Comparison:T14 Operator:T10 Value:T12 Value2:T13
+T15	Procedure 25 32	surgery
+E2	Procedure:T15 Name:T16 Duration:E4
+T16	Procedure-Name 25 32	surgery
+T17	Eq-Comparison 43 59	more then 1 hour
+E4	Eq-Comparison:T17 Operator:T18 Temporal-Unit:T19 Value:T11
+T18	Eq-Operator 43 52	more then
+A2	Eq-Operator-Value T18 GT
+T19	Eq-Temporal-Unit 55 59	hour
+A3	Eq-Temporal-Unit-Value T19 hour
+T20	Age 73 77	ages
+E6	Age:T20 Eq-Comparison:E8
+T21	Condition 89 92	ASA
+E9	Condition:T21 Name:T22 Stage:E10
+T22	Condition-Name 89 92	ASA
+T9	Eq-Comparison 93 105	I,II and III
+E10	Eq-Comparison:T9 Value:T25 Value2:T24 Value3:T23
+T23	Eq-Value 93 94	I
+T24	Eq-Value 95 97	II
+T25	Eq-Value 102 105	III
+T26	Drug 189 194	drugs
+E11	Drug:T26 
+T27	Allergy 161 171	allergical
+E12	Allergy:T27 Name:E11
+T28	Modifier 221 234	neuromuscular
+E13	Modifier:T28 Modifies:T2
+T29	Modifier 205 217	neurological
+E14	Modifier:T29 Modifies:T2
+T30	Or 218 220	or
+E15	Or:T30 Arg:E14 Arg2:E13
+T31	Condition 290 312	neuromuscular junction
+E16	Condition:T31 Name:T32 Stability:T33
+T32	Condition-Name 290 312	neuromuscular junction
+T33	Stability 276 285	effecting
+A4	Stability-Value T33 change
+T34	Drug 270 275	drugs
+E17	Drug:T34 Temporality:E18
+T35	Eq-Comparison 266 269	use
+E18	Eq-Comparison:T35 Temporal-Period:T36
+T36	Eq-Temporal-Period 266 269	use
+A5	Eq-Temporal-Period-Value T36 present
+R1	Caused-By Arg1:T33 Arg2:E17	
+T37	Condition 318 326	pregnant
+E19	Condition:T37 Name:T38
+T38	Condition-Name 318 326	pregnant
+T39	Condition 341 367	electrolyte disregulations
+E20	Condition:T39 Name:T40
+T40	Condition-Name 341 367	electrolyte disregulations
+T41	Condition 379 393	organ failures
+E21	Condition:T41 Name:T42 Severity:T46
+T42	Condition-Name 379 393	organ failures
+T43	Condition 440 449	cachectic
+E22	Condition:T43 Name:T44
+T44	Condition-Name 440 449	cachectic
+T45	Or 436 439	and
+E23	Or:T45 Arg:E7 Arg2:E22
+T46	Severity 373 378	major
+A6	Severity-Value T46 severe

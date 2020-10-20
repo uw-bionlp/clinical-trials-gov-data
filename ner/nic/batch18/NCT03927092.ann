@@ -1,35 +1,35 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E4	Age:T6 Eq-Comparison:E2
+E2	Eq-Comparison:T9 Operator:T10 Value:T7 Temporal-Unit:T5
+E5	Observation:T11 Name:T12
+E6	Negation:T13 Negates:E5
+E7	Assertion:T14 Asserted:E6
+E8	Procedure:T15 Name:T16
+E9	Negation:T17 Negates:E8
+E10	Assertion:T18 Asserted:E9
 T1	Condition 326 346	cognitive impairment
 T2	Condition-Name 326 346	cognitive impairment
-E1	Condition:T1 Name:T2
 T3	Condition 45 63	Multiple Sclerosis
 T4	Condition-Name 45 63	Multiple Sclerosis
-E3	Condition:T3 Name:T4
 T5	Eq-Temporal-Unit 175 180	years
-A1	Eq-Temporal-Unit-Value T5 year
 T6	Age 184 187	age
-E4	Age:T6 Eq-Comparison:E2
 T7	Eq-Value 172 174	18
 T8	Location 136 155	university hospital
-A2	Location-Value T8 hospital
 T9	Eq-Comparison 161 180	Older than 18 years
-E2	Eq-Comparison:T9 Operator:T10 Value:T7 Temporal-Unit:T5
 T10	Eq-Operator 161 171	Older than
-A3	Eq-Operator-Value T10 GT
 T11	Observation 267 280	questionnaire
-E5	Observation:T11 Name:T12
 T12	Observation-Name 267 280	questionnaire
-A4	Observation-Type-Value T12 survey-or-questionnaire
 T13	Negation 242 245	not
-E6	Negation:T13 Negates:E5
 T14	Assertion 246 252	accept
-E7	Assertion:T14 Asserted:E6
-A5	Assertion-Type-Value E7 hypothetical
 T15	Procedure 307 316	questions
-E8	Procedure:T15 Name:T16
 T16	Procedure-Name 307 316	questions
 T17	Negation 286 292	Unable
-E9	Negation:T17 Negates:E8
 T18	Assertion 286 292	Unable
-E10	Assertion:T18 Asserted:E9
+A1	Eq-Temporal-Unit-Value T5 year
+A2	Location-Value T8 hospital
+A3	Eq-Operator-Value T10 GT
+A4	Observation-Type-Value T12 survey-or-questionnaire
+A5	Assertion-Type-Value E7 hypothetical
 A6	Assertion-Type-Value E10 hypothetical
-R1	Caused-By Arg1:E9 Arg2:E1	
+R1	Caused-By Arg1:E9 Arg2:E1

@@ -1,0 +1,57 @@
+T1	Procedure 62 73	arthroscopy
+T2	Procedure-Name 62 73	arthroscopy
+E1	Procedure:T1 Name:T2 Temporality:E2
+T3	Condition 372 392	sleep apnea syndrome
+T4	Condition-Name 372 392	sleep apnea syndrome
+E3	Condition:T3 Name:T4
+T5	Condition 462 483	psychiatric disorders
+T6	Condition-Name 462 483	psychiatric disorders
+E5	Condition:T5 Name:T6
+T7	Eq-Temporal-Unit 112 117	years
+A1	Eq-Temporal-Unit-Value T7 year
+T8	Age 89 93	aged
+E6	Age:T8 Eq-Comparison:E7
+T10	Eq-Value 102 104	21
+T11	Eq-Value 109 111	50
+T12	Eq-Comparison 34 43	scheduled
+E2	Eq-Comparison:T12 Temporal-Period:T13
+T13	Eq-Temporal-Period 34 43	scheduled
+A2	Eq-Temporal-Period-Value T13 future
+T14	Modifier 48 61	elective knee
+E4	Modifier:T14 Modifies:T2
+T9	Eq-Comparison 94 117	between 21 and 50 years
+E7	Eq-Comparison:T9 Operator:T15 Value:T10 Value2:T11 Temporal-Unit:T7
+T15	Eq-Operator 94 101	between
+A3	Eq-Operator-Value T15 BETWEEN
+T16	Condition 142 180	American Society of Anaesthesiologists
+E8	Condition:T16 Name:T17 Stage:E9
+T17	Condition-Name 142 180	American Society of Anaesthesiologists
+T18	Eq-Comparison 197 204	I or II
+E9	Eq-Comparison:T18 Value:T19 Value2:T20
+T19	Eq-Value 197 198	I
+T20	Eq-Value 202 204	II
+T21	Allergy 251 258	allergy
+E10	Allergy:T21 Name:E11
+T22	Drug 266 270	drug
+E11	Drug:T22 
+T23	Study 283 288	study
+E12	Study:T23 Study-Of:E11
+T24	Drug 324 334	analgesics
+E13	Drug:T24 Name:T25
+T25	Drug-Name 324 334	analgesics
+T26	Drug 342 351	sedatives
+E14	Drug:T26 Name:T27
+T27	Drug-Name 342 351	sedatives
+T28	Or 335 341	and/or
+E15	Or:T28 Arg:E13 Arg2:E14
+T29	Modifier 309 316	chronic
+E16	Modifier:T29 Modifies:T25
+T30	Condition 430 441	dysfunction
+E17	Condition:T30 Name:T31
+T31	Condition-Name 430 441	dysfunction
+T32	Modifier 422 429	hepatic
+E18	Modifier:T32 Modifies:T31
+T33	Modifier 413 418	renal
+E19	Modifier:T33 Modifies:T31
+T34	Or 419 421	or
+E20	Or:T34 Arg:E19 Arg2:E18

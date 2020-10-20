@@ -1,0 +1,82 @@
+T1	Eq-Comparison 30 44	18 to 24 years
+E1	Eq-Comparison:T1 Value:T25 Operator:T26 Value:T27 Temporal-Unit:T28
+T2	Age 45 48	old
+E2	Age:T2 Eq-Comparison:E1
+T3	Observation 77 91	weight lifters
+E3	Observation:T3 Name:T30 Duration:E5
+T5	Eq-Comparison 97 114	at least one year
+E5	Eq-Comparison:T5 Operator:T31 Value:T32 Temporal-Unit:T33
+T6	Negation 147 150	not
+E6	Negation:T6 Negates:E8
+T7	Modifier 159 174	musculoskeletal
+E7	Modifier:T7 Modifies:T34 Modifies2:T35
+T8	Condition 175 181	injury
+E8	Condition:T8 Name:T34 Temporality:E11
+T9	Or 182 184	or
+E9	Or:T9 Arg:E8 Arg2:E10
+T10	Condition 185 194	pathology
+E10	Condition:T10 Name:T35 Temporality:E11
+T11	Eq-Comparison 202 214	three months
+E11	Eq-Comparison:T11 Value:T36 Temporal-Unit:T37
+T12	Temporal-Connection 215 223	prior to
+E12	Temporal-Connection:T12 Arg:E11 Arg2:E13
+A1	Temporal-Connection-Type-Value E12 before
+T13	Study 245 250	study
+E13	Study:T13 
+T14	Negation 280 283	not
+E14	Negation:T14 Negates:E4
+T15	Temporal-Connection 295 301	during
+E15	Temporal-Connection:T15 Arg:E4 Arg2:E16
+A2	Temporal-Connection-Type-Value E15 during
+T16	Eq-Comparison 306 313	6 weeks
+E16	Eq-Comparison:T16 Value:T38 Temporal-Unit:T39
+T17	Study 321 333	intervention
+E17	Study:T17 Duration:E16
+T18	And 334 337	and
+E18	And:T18 Arg:E17 Arg2:E19
+T19	Study 342 353	evaluations
+E19	Study:T19 
+T20	Negation 362 370	excluded
+E20	Negation:T20 Negates:E19
+T21	Eq-Comparison 376 381	Under
+E21	Eq-Comparison:T21 Temporal-Period:T40
+T22	Procedure 382 407	pharmacological treatment
+E22	Procedure:T22 Name:T43 Temporality:E21
+T23	Other 432 439	another
+E23	Other:T23 Is-Other:E26
+T24	Procedure 440 453	physiotherapy
+E24	Procedure:T24 Name:T41
+T25	Eq-Value 30 32	18
+T26	Eq-Operator 33 35	to
+A3	Eq-Operator-Value T26 BETWEEN
+T27	Eq-Value 36 38	24
+T28	Eq-Temporal-Unit 39 44	years
+A4	Eq-Temporal-Unit-Value T28 year
+T29	Life-Stage-And-Gender 54 58	Male
+A5	Life-Stage-And-Gender-Type T29 male
+T30	Observation-Name 77 91	weight lifters
+T31	Eq-Operator 97 105	at least
+A6	Eq-Operator-Value T31 GTEQ
+T32	Eq-Value 106 109	one
+T33	Eq-Temporal-Unit 110 114	year
+A7	Eq-Temporal-Unit-Value T33 year
+T34	Condition-Name 175 181	injury
+T35	Condition-Name 185 194	pathology
+T36	Eq-Value 202 207	three
+T37	Eq-Temporal-Unit 208 214	months
+A8	Eq-Temporal-Unit-Value T37 month
+T38	Eq-Value 306 307	6
+T39	Eq-Temporal-Unit 308 313	weeks
+A9	Eq-Temporal-Unit-Value T39 week
+T41	Procedure-Name 440 453	physiotherapy
+A10	Observation-Type-Value T30 social-habit
+T4	Encounter 284 294	be present
+E4	Encounter:T4 
+T42	Assertion 280 283	not
+E25	Assertion:T42 Asserted:E14
+A11	Assertion-Type-Value E25 hypothetical
+T40	Eq-Temporal-Period 376 381	Under
+A12	Eq-Temporal-Period-Value T40 present
+T43	Procedure-Name 382 407	pharmacological treatment
+T44	Study 454 459	study
+E26	Study:T44 Study-Of:E24

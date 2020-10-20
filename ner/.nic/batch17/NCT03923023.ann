@@ -1,0 +1,57 @@
+T5	Eq-Value 381 382	3
+T6	Condition 25 33	Pregnant
+E2	Condition:T6 Name:T7
+T7	Condition-Name 25 33	Pregnant
+T8	Life-Stage-And-Gender 34 39	women
+A2	Life-Stage-And-Gender-Type T8 female
+T9	Provider 49 72	Antenatal care services
+E3	Provider:T9 Type:T10
+T10	Provider-Type 49 63	Antenatal care
+T11	Assertion 44 48	seek
+E4	Assertion:T11 Asserted:E3
+A3	Assertion-Type-Value E4 intention
+T1	And 40 43	who
+E1	And:T1 Arg:T8 Arg2:E4
+T2	Procedure 85 92	deliver
+E5	Procedure:T2 Name:T12 Location:T13
+T12	Procedure-Name 85 92	deliver
+T13	Location 109 126	health facilities
+A4	Location-Value T13 hospital
+T14	Assertion 77 84	plan to
+E6	Assertion:T14 Asserted:E5
+A5	Assertion-Type-Value E6 intention
+T15	And 73 76	and
+E7	And:T15 Arg:E4 Arg2:E6
+T16	Life-Stage-And-Gender 132 137	Women
+A6	Life-Stage-And-Gender-Type T16 female
+T3	Location 160 181	larger catchment area
+A1	Location-Value T3 residence
+T4	Location 200 217	health facilities
+A7	Location-Value T4 hospital
+T17	Eq-Comparison 198 199	3
+E8	Eq-Comparison:T17 Value:T18
+T18	Eq-Value 198 199	3
+T19	Life-Stage-And-Gender 243 248	Women
+A8	Life-Stage-And-Gender-Type T19 female
+T20	Location 272 293	larger catchment area
+A9	Location-Value T20 residence
+T21	Location 301 318	health facilities
+A10	Location-Value T21 hospital
+T22	Other 260 267	outside
+E9	Other:T22 Is-Other:T20
+T23	Life-Stage-And-Gender 324 329	Women
+A11	Life-Stage-And-Gender-Type T23 female
+T24	Provider 350 373	antenatal care services
+E10	Provider:T24 Type:T25
+T25	Provider-Type 350 364	antenatal care
+T26	Eq-Comparison 381 382	3
+E11	Eq-Comparison:T26 Value:T5
+T27	Location 383 400	health facilities
+A12	Location-Value T27 hospital
+T28	Negation 339 342	not
+E12	Negation:T28 Negates:E13
+T29	Assertion 343 349	sought
+E13	Assertion:T29 Asserted:E10
+A13	Assertion-Type-Value E13 intention
+T30	And 330 333	who
+E14	And:T30 Arg:T23 Arg2:E12

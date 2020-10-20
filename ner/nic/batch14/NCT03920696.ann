@@ -1,31 +1,31 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E4	Age:T7 Eq-Comparison:E5
+E5	Eq-Comparison:T9 Operator:T5 Temporal-Unit:T6 Value:T8
+E2	Encounter:T10 Location:T11
+E6	Encounter:T12 Location:T13
+E7	Other:T14 Is-Other:T13
+E8	Condition:T15 Name:T16
+E9	Negation:T17 Negates:E3
 T1	Condition 59 81	Pityriasis Lichenoides
 T2	Condition-Name 59 81	Pityriasis Lichenoides
-E1	Condition:T1 Name:T2
 T3	Condition 428 450	Pityriasis Lichenoides
 T4	Condition-Name 428 450	Pityriasis Lichenoides
-E3	Condition:T3 Name:T4
 T5	Eq-Operator 29 30	≥
-A1	Eq-Operator-Value T5 GTEQ
 T6	Eq-Temporal-Unit 34 39	years
-A2	Eq-Temporal-Unit-Value T6 year
 T7	Age 25 28	Age
-E4	Age:T7 Eq-Comparison:E5
 T8	Eq-Value 31 33	18
 T9	Eq-Comparison 29 39	≥ 18 years
-E5	Eq-Comparison:T9 Operator:T5 Temporal-Unit:T6 Value:T8
 T10	Encounter 124 128	seen
-E2	Encounter:T10 Location:T11
 T11	Location 132 144	Henri Mondor
-A3	Location-Value T11 hospital
 T12	Encounter 289 293	care
-E6	Encounter:T12 Location:T13
 T13	Location 302 314	Henri Mondor
-A4	Location-Value T13 hospital
 T14	Other 294 301	outside
-E7	Other:T14 Is-Other:T13
 T15	Condition 393 409	Clinical lesions
-E8	Condition:T15 Name:T16
 T16	Condition-Name 393 409	Clinical lesions
 T17	Negation 410 422	incompatible
-E9	Negation:T17 Negates:E3
-R1	Caused-By Arg1:E9 Arg2:E8	
+A1	Eq-Operator-Value T5 GTEQ
+A2	Eq-Temporal-Unit-Value T6 year
+A3	Location-Value T11 hospital
+A4	Location-Value T13 hospital
+R1	Caused-By Arg1:E9 Arg2:E8

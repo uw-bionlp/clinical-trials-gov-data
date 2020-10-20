@@ -1,0 +1,181 @@
+T1	Condition 66 113	International Classification Headache Disorders
+T2	Condition-Name 66 113	International Classification Headache Disorders
+E1	Condition:T1 Name:T2 Stage:E3
+T3	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T3 female
+T4	Life-Stage-And-Gender 25 29	male
+A2	Life-Stage-And-Gender-Type T4 male
+T5	Condition 769 798	amyotrophic lateral sclerosis
+T6	Condition-Name 769 798	amyotrophic lateral sclerosis
+E5	Condition:T5 Name:T6
+T7	Condition 735 752	myasthenia gravis
+T8	Condition-Name 735 752	myasthenia gravis
+E7	Condition:T7 Name:T8
+T9	Condition 603 612	substance
+T10	Condition-Name 603 612	substance
+E9	Condition:T9 Name:T10 Temporality:E28
+T11	Condition 502 516	breast feeding
+T12	Condition-Name 502 516	breast feeding
+E11	Condition:T11 Name:T12
+T15	Condition 491 500	pregnancy
+T16	Condition-Name 491 500	pregnancy
+E15	Condition:T15 Name:T16
+T17	Eq-Operator 191 203	greater than
+A3	Eq-Operator-Value T17 GT
+T18	Eq-Operator 297 309	greater than
+A4	Eq-Operator-Value T18 GT
+T19	Eq-Operator 560 566	within
+A5	Eq-Operator-Value T19 LTEQ
+T20	Eq-Operator 903 909	within
+A6	Eq-Operator-Value T20 LTEQ
+T21	Eq-Temporal-Unit 916 922	months
+A7	Eq-Temporal-Unit-Value T21 month
+T22	Age 45 48	age
+E16	Age:T22 Eq-Comparison:E18
+T23	Eq-Operator 51 52	-
+A8	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Value 49 51	18
+T25	Eq-Value 52 54	65
+T26	Eq-Value 204 205	4
+T27	Eq-Comparison 191 208	greater than 4/10
+E17	Eq-Comparison:T27 Operator:T17 Value:T26 Per:T40
+T28	Eq-Comparison 49 54	18-65
+E18	Eq-Comparison:T28 Operator:T23 Value:T24 Value2:T25
+T29	Or 30 32	or
+E2	Or:T29 Arg:T4 Arg2:T3
+T30	Eq-Comparison 114 116	II
+E3	Eq-Comparison:T30 Value:T31
+T31	Eq-Value 114 116	II
+T32	Condition 118 122	ICHD
+E4	Condition:T32 Name:T33 Stage:E6
+T33	Condition-Name 118 122	ICHD
+R1	Abbrev-Of Arg1:E4 Arg2:E1	
+T34	Eq-Comparison 123 125	II
+E6	Eq-Comparison:T34 Value:T35
+T35	Eq-Value 123 125	II
+T36	Condition 140 163	post-traumatic headache
+E8	Condition:T36 Name:T37
+T37	Condition-Name 140 163	post-traumatic headache
+R2	Equivalent-To Arg1:E8 Arg2:E4	
+T38	Observation 177 187	pain score
+E10	Observation:T38 Name:T39 Eq-Comparison:E17
+T39	Observation-Name 177 187	pain score
+T40	Eq-Unit 206 208	10
+T41	Observation 257 296	Rancho Los Amigos cognitive scale score
+E12	Observation:T41 Name:T42 Eq-Comparison:E14
+T42	Observation-Name 257 296	Rancho Los Amigos cognitive scale score
+A9	Observation-Type-Value T42 clinical-score
+T43	Eq-Comparison 297 315	greater than seven
+E14	Eq-Comparison:T43 Operator:T18 Value:T44
+T44	Eq-Value 310 315	seven
+T45	Condition 355 372	medical condition
+E19	Condition:T45 
+T46	Modifier 342 354	Uncontrolled
+E20	Modifier:T46 Modifies:E19
+T47	Condition 384 387	PTH
+E21	Condition:T47 Name:T48
+T48	Condition-Name 384 387	PTH
+T49	Exception 373 383	other than
+E22	Exception:T49 From:E19 Except:E21
+T50	Drug 544 559	botulinum toxin
+E23	Drug:T50 Name:T51 Temporality:E25
+T51	Drug-Name 544 559	botulinum toxin
+T52	Study 579 589	enrollment
+E24	Study:T52 
+T53	Eq-Comparison 560 575	within one year
+E25	Eq-Comparison:T53 Operator:T19 Temporal-Unit:T55 Value:T54
+T54	Eq-Value 567 570	one
+T55	Eq-Temporal-Unit 571 575	year
+A10	Eq-Temporal-Unit-Value T55 year
+T56	Temporal-Connection 576 578	of
+E26	Temporal-Connection:T56 Arg:E25 Arg2:E24
+A11	Temporal-Connection-Type-Value E26 before
+T58	Eq-Comparison 595 602	current
+E28	Eq-Comparison:T58 Temporal-Period:T59
+T59	Eq-Temporal-Period 595 602	current
+A12	Eq-Temporal-Period-Value T59 present
+T60	Condition 635 652	medical condition
+E29	Condition:T60 
+T61	Condition 681 712	neuromuscular junction blockade
+E30	Condition:T61 Name:T62 Stability:T64
+T62	Condition-Name 681 712	neuromuscular junction blockade
+T63	Risk 673 677	risk
+E31	Risk:T63 Risk-For:E30
+T64	Stability 664 672	increase
+A13	Stability-Value T64 change
+T65	Assertion 658 663	would
+E32	Assertion:T65 Asserted:T64
+A14	Assertion-Type-Value E32 hypothetical
+R3	Caused-By Arg1:E31 Arg2:E29	
+T66	Drug 718 733	botulinum toxin
+E33	Drug:T66 Name:T67
+T67	Drug-Name 718 733	botulinum toxin
+R4	Using Arg1:E30 Arg2:E33	
+R5	Example-Of Arg1:E7 Arg2:E29	
+T68	Condition 754 767	Eaton Lambert
+E34	Condition:T68 Name:T69
+T69	Condition-Name 754 767	Eaton Lambert
+R6	Example-Of Arg1:E34 Arg2:E29	
+R7	Example-Of Arg1:E5 Arg2:E29	
+T70	Drug 879 902	anti-seizure medication
+E35	Drug:T70 Name:T71 Temporality:E39
+T71	Drug-Name 879 902	anti-seizure medication
+T72	Drug 860 875	anti-depressant
+E36	Drug:T72 Name:T73 Temporality:E37
+T73	Drug-Name 860 875	anti-depressant
+T74	Eq-Comparison 856 859	new
+E37	Eq-Comparison:T74 Temporal-Recency:T75
+T76	Or 876 878	or
+E38	Or:T76 Arg:E36 Arg2:E35
+T77	Eq-Comparison 903 922	within three months
+E39	Eq-Comparison:T77 Temporal-Unit:T21 Operator:T20 Value:T78
+T78	Eq-Value 910 915	three
+T79	Study 939 944	study
+E40	Study:T79 
+T80	Temporal-Connection 923 925	of
+E41	Temporal-Connection:T80 Arg:E39 Arg2:E40
+A16	Temporal-Connection-Type-Value E41 after
+T81	Eq-Comparison 523 528	prior
+E42	Eq-Comparison:T81 Temporal-Period:T82
+T82	Eq-Temporal-Period 523 528	prior
+A17	Eq-Temporal-Period-Value T82 past
+T83	Condition 419 423	pain
+E43	Condition:T83 Name:T84 Severity:T86
+T84	Condition-Name 419 423	pain
+T85	Modifier 411 418	chronic
+E44	Modifier:T85 Modifies:E43
+T86	Severity 393 399	Severe
+A18	Severity-Value T86 severe
+T87	Condition 481 485	pain
+E45	Condition:T87 Name:T88
+T88	Condition-Name 481 485	pain
+T89	Modifier 472 480	headache
+E46	Modifier:T89 Modifies:T88
+T90	Negation 446 449	not
+E47	Negation:T90 Negates:E45
+T91	Assertion 440 445	could
+E48	Assertion:T91 Asserted:E47
+A19	Assertion-Type-Value E48 hypothetical
+T92	Procedure 529 538	treatment
+E49	Procedure:T92 Temporality:E42
+R9	Using Arg1:E49 Arg2:E23	
+T75	Eq-Temporal-Recency 856 859	new
+A15	Eq-Temporal-Recency-Value T75 first-time
+T93	Condition 958 968	disability
+E50	Condition:T93 Name:T94 Temporality:E51
+T94	Condition-Name 958 968	disability
+T95	Eq-Comparison 950 957	ongoing
+E51	Eq-Comparison:T95 Temporal-Period:T96
+T96	Eq-Temporal-Period 950 957	ongoing
+A20	Eq-Temporal-Period-Value T96 present
+T13	Modifier 613 618	abuse
+E13	Modifier:T13 Modifies:T10
+T14	Modifier 619 629	dependence
+E27	Modifier:T14 Modifies:T10
+T57	Or 618 619	/
+E52	Or:T57 Arg:E13 Arg2:E27
+T97	Condition 823 834	psychiatric
+E53	Condition:T97 Name:T98
+T98	Condition-Name 823 834	psychiatric
+T99	Modifier 805 822	poorly controlled
+E54	Modifier:T99 Modifies:T98

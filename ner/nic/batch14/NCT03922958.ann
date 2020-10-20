@@ -1,127 +1,127 @@
+E1	Procedure:T1 Name:T2 Temporality:E2
+E4	Procedure:T4 Name:T5
+E6	Condition:T6 Name:T7
+E10	Condition:T10 Name:T11
+E12	Condition:T12 Name:T13
+E14	Procedure:T14 Name:T15
+E16	Condition:T16 Name:T17 Temporality:E31
+E18	Condition:T18 Name:T19
+E20	Condition:T20 Name:T21
+E22	Condition:T22 Name:T23
+E24	Condition:T24 Name:T25
+E26	Condition:T26 Name:T27
+E31	Eq-Comparison:T37 Operator:T32 Value:T35
+E32	Eq-Comparison:T38 Operator:T34 Value:T36 Unit:T74 Per:T75
+E2	Eq-Comparison:T39 Temporal-Period:T40
+E3	Procedure:T41 Name:T42
+E5	Condition:T43
+E7	Condition:T44 Name:T45 Stability:T46
+E9	Or:T47 Arg:E7 Arg2:E24
+E11	Condition:T48 Name:T49
+E13	Condition:T50 Name:T51
+E15	Condition:T52 Name:T53
+E17	Drug:T54 Name:T55
+E19	Or:T56 Arg:E14 Arg2:E17
+E21	Drug:T57 Name:T58
+E23	Drug:T59 Name:T60 Temporality:E27
+E25	Or:T61 Arg:E21 Arg2:E23
+E27	Eq-Comparison:T62 Temporal-Period:T63
+E29	Eq-Comparison:T64 Operator:T33 Temporal-Unit:T66 Value:T65 Temporal-Period:T8
+E33	Or:T67 Arg:E27 Arg2:E29
+E34	Procedure:T68 Name:T69
+E35	Temporal-Connection:T70 Arg:E26 Arg2:E34
+E36	Assertion:T71 Asserted:E4
+E37	Observation:T72 Name:T73 Eq-Comparison:E32
 T1	Procedure 47 62	cardiac surgery
 T2	Procedure-Name 47 62	cardiac surgery
-E1	Procedure:T1 Name:T2 Temporality:E2
 T3	Life-Stage-And-Gender 29 35	adults
-A1	Life-Stage-And-Gender-Type T3 adult
 T4	Procedure 649 674	renal replacement therapy
 T5	Procedure-Name 649 674	renal replacement therapy
-E4	Procedure:T4 Name:T5
 T6	Condition 481 504	urinary tract infection
 T7	Condition-Name 481 504	urinary tract infection
-E6	Condition:T6 Name:T7
 T10	Condition 269 286	immunosuppression
 T11	Condition-Name 269 286	immunosuppression
-E10	Condition:T10 Name:T11
 T12	Condition 309 326	chronic infection
 T13	Condition-Name 309 326	chronic infection
-E12	Condition:T12 Name:T13
 T14	Procedure 353 369	organ transplant
 T15	Procedure-Name 353 369	organ transplant
-E14	Procedure:T14 Name:T15
 T16	Condition 425 440	acute infection
 T17	Condition-Name 425 440	acute infection
-E16	Condition:T16 Name:T17 Temporality:E31
 T18	Condition 339 350	Hepatitis C
 T19	Condition-Name 339 350	Hepatitis C
-E18	Condition:T18 Name:T19
 T20	Condition 470 479	pneumonia
 T21	Condition-Name 470 479	pneumonia
-E20	Condition:T20 Name:T21
 T22	Condition 634 638	ESRD
 T23	Condition-Name 634 638	ESRD
-E22	Condition:T22 Name:T23
 T24	Condition 171 174	AKI
 T25	Condition-Name 171 174	AKI
-E24	Condition:T24 Name:T25
 T26	Condition 597 600	AKI
 T27	Condition-Name 597 600	AKI
-E26	Condition:T26 Name:T27
 T32	Eq-Operator 446 454	the past
-A2	Eq-Operator-Value T32 LTEQ
 T33	Eq-Operator 561 567	within
-A3	Eq-Operator-Value T33 LTEQ
 T34	Eq-Operator 699 700	<
-A4	Eq-Operator-Value T34 LT
 T35	Eq-Value 455 456	1
 T36	Eq-Value 700 702	45
 T37	Eq-Comparison 446 462	the past 1 month
-E31	Eq-Comparison:T37 Operator:T32 Value:T35
 T38	Eq-Comparison 699 709	<45 mL/min
-E32	Eq-Comparison:T38 Operator:T34 Value:T36 Unit:T74 Per:T75
 T39	Eq-Comparison 36 46	undergoing
-E2	Eq-Comparison:T39 Temporal-Period:T40
 T40	Eq-Temporal-Period 36 46	undergoing
-A5	Eq-Temporal-Period-Value T40 present
 T41	Procedure 68 71	CPB
-E3	Procedure:T41 Name:T42
 T42	Procedure-Name 68 71	CPB
-R1	Using Arg1:E1 Arg2:E3	
 T43	Condition 132 139	Factors
-E5	Condition:T43 
 T44	Condition 152 167	immune function
-E7	Condition:T44 Name:T45 Stability:T46
 T45	Condition-Name 152 167	immune function
 T46	Stability 145 151	affect
-A6	Stability-Value T46 change
-R2	Caused-By Arg1:T46 Arg2:E5	
 T47	Or 168 170	or
-E9	Or:T47 Arg:E7 Arg2:E24
 T48	Condition 245 252	disease
-E11	Condition:T48 Name:T49
 T49	Condition-Name 245 252	disease
-R3	Caused-By Arg1:E10 Arg2:E11	
 T50	Condition 297 307	malignancy
-E13	Condition:T50 Name:T51
 T51	Condition-Name 297 307	malignancy
-R4	Example-Of Arg1:E13 Arg2:E11	
-R5	Example-Of Arg1:E12 Arg2:E11	
 T52	Condition 334 337	HIV
-E15	Condition:T52 Name:T53
 T53	Condition-Name 334 337	HIV
-R6	Example-Of Arg1:E15 Arg2:E12	
-R7	Example-Of Arg1:E18 Arg2:E12	
 T54	Drug 374 403	immunosuppressant medications
-E17	Drug:T54 Name:T55
 T55	Drug-Name 374 403	immunosuppressant medications
 T56	Or 370 373	and
-E19	Or:T56 Arg:E14 Arg2:E17
-R8	Example-Of Arg1:E20 Arg2:E16	
-R9	Example-Of Arg1:E6 Arg2:E16	
 T57	Drug 516 526	Prednisone
-E21	Drug:T57 Name:T58
 T58	Drug-Name 516 526	Prednisone
 T59	Drug 536 543	steroid
-E23	Drug:T59 Name:T60 Temporality:E27
 T60	Drug-Name 536 543	steroid
 T61	Or 527 529	or
-E25	Or:T61 Arg:E21 Arg2:E23
 T62	Eq-Comparison 548 557	currently
-E27	Eq-Comparison:T62 Temporal-Period:T63
 T63	Eq-Temporal-Period 548 557	currently
-A7	Eq-Temporal-Period-Value T63 present
 T64	Eq-Comparison 561 586	within the past one month
-E29	Eq-Comparison:T64 Operator:T33 Temporal-Unit:T66 Value:T65 Temporal-Period:T8
 T65	Eq-Value 577 580	one
 T66	Eq-Temporal-Unit 581 586	month
-A8	Eq-Temporal-Unit-Value T66 month
 T67	Or 558 560	or
-E33	Or:T67 Arg:E27 Arg2:E29
 T68	Procedure 616 623	surgery
-E34	Procedure:T68 Name:T69
 T69	Procedure-Name 616 623	surgery
 T70	Temporal-Connection 601 612	at the time
-E35	Temporal-Connection:T70 Arg:E26 Arg2:E34
-A9	Temporal-Connection-Type-Value E35 during
 T71	Assertion 639 648	requiring
-E36	Assertion:T71 Asserted:E4
-A10	Assertion-Type-Value E36 hypothetical
-R10	Treatment-For Arg1:E4 Arg2:E22	
 T72	Observation 695 698	GFR
-E37	Observation:T72 Name:T73 Eq-Comparison:E32
 T73	Observation-Name 695 698	GFR
-A11	Observation-Type-Value T73 lab
 T74	Eq-Unit 703 705	mL
 T75	Eq-Temporal-Unit 706 709	min
-A12	Eq-Temporal-Unit-Value T75 minute
 T8	Eq-Temporal-Period 572 576	past
+A1	Life-Stage-And-Gender-Type T3 adult
+A2	Eq-Operator-Value T32 LTEQ
+A3	Eq-Operator-Value T33 LTEQ
+A4	Eq-Operator-Value T34 LT
+A5	Eq-Temporal-Period-Value T40 present
+A6	Stability-Value T46 change
+A7	Eq-Temporal-Period-Value T63 present
+A8	Eq-Temporal-Unit-Value T66 month
+A9	Temporal-Connection-Type-Value E35 during
+A10	Assertion-Type-Value E36 hypothetical
+A11	Observation-Type-Value T73 lab
+A12	Eq-Temporal-Unit-Value T75 minute
 A13	Eq-Temporal-Period-Value T8 past
+R1	Using Arg1:E1 Arg2:E3
+R2	Caused-By Arg1:T46 Arg2:E5
+R3	Caused-By Arg1:E10 Arg2:E11
+R4	Example-Of Arg1:E13 Arg2:E11
+R5	Example-Of Arg1:E12 Arg2:E11
+R6	Example-Of Arg1:E15 Arg2:E12
+R7	Example-Of Arg1:E18 Arg2:E12
+R8	Example-Of Arg1:E20 Arg2:E16
+R9	Example-Of Arg1:E6 Arg2:E16
+R10	Treatment-For Arg1:E4 Arg2:E22

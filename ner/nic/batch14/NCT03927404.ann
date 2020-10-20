@@ -1,89 +1,89 @@
+E1	Condition:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E6	Eq-Comparison:T18 Operator:T7 Value:T10
+E7	Eq-Comparison:T19 Operator:T8 Value:T14 Unit:T16
+E2	Age:T20 Eq-Comparison:E6
+E4	Condition:T21 Name:T22
+E8	Modifier:T23 Modifies:T22
+E9	Modifier:T24 Modifies:T22
+E10	Or:T25 Arg:E8 Arg2:E9
+E11	Condition:T26 Name:T27 Stage:E12
+E12	Eq-Comparison:T28 Operator:T31 Unit:T30 Value:T29
+E5	Eq-Comparison:T5 Operator:T6 Value:T12 Temporal-Unit:T9
+E13	Temporal-Connection:T11 Arg:E5 Arg2:E3
+E14	Observation:T13 Name:T15 Eq-Comparison:E7
+E15	Condition:T32 Name:T33
+E16	Condition:T34 Name:T35
+E17	Condition:T36
+E18	Negation:T37 Negates:E16
+E19	Assertion:T38 Asserted:E16
+E20	Condition:T39 Name:T40
+E21	Or:T41 Arg:E1 Arg2:E20
+E22	Condition:T42 Name:T43
+E23	And:T44 Arg:T17 Arg2:E22
+E24	Condition:T45 Name:T46 Temporality:E27
+E25	Assertion:T47 Asserted:E24
+E26	Or:T48 Arg:E22 Arg2:E24
+E27	Eq-Comparison:T49 Temporal-Period:T50
 T1	Condition 484 502	Cognitive deficits
 T2	Condition-Name 484 502	Cognitive deficits
-E1	Condition:T1 Name:T2
 T3	Procedure 175 185	amputation
 T4	Procedure-Name 175 185	amputation
-E3	Procedure:T3 Name:T4
 T7	Eq-Operator 39 48	and above
-A1	Eq-Operator-Value T7 GTEQ
 T8	Eq-Operator 239 251	greater than
-A2	Eq-Operator-Value T8 GT
 T9	Eq-Temporal-Unit 163 169	months
-A3	Eq-Temporal-Unit-Value T9 month
 T10	Eq-Value 36 38	18
 T12	Eq-Value 161 162	3
 T14	Eq-Value 252 255	6.5
 T18	Eq-Comparison 36 48	18 and above
-E6	Eq-Comparison:T18 Operator:T7 Value:T10
 T19	Eq-Comparison 239 262	greater than 6.5 inches
-E7	Eq-Comparison:T19 Operator:T8 Value:T14 Unit:T16
 T20	Age 28 32	Ages
-E2	Age:T20 Eq-Comparison:E6
 T21	Condition 96 103	amputee
-E4	Condition:T21 Name:T22
 T22	Condition-Name 96 103	amputee
 T23	Modifier 57 79	Unilateral transtibial
-E8	Modifier:T23 Modifies:T22
 T24	Modifier 83 95	transfemoral
-E9	Modifier:T24 Modifies:T22
 T25	Or 80 82	or
-E10	Or:T25 Arg:E8 Arg2:E9
 T26	Condition 112 120	Ambulate
-E11	Condition:T26 Name:T27 Stage:E12
 T27	Condition-Name 112 120	Ambulate
 T28	Eq-Comparison 126 144	K2 level or higher
-E12	Eq-Comparison:T28 Operator:T31 Unit:T30 Value:T29
 T29	Eq-Value 126 128	K2
 T30	Eq-Unit 129 134	level
 T31	Eq-Operator 135 144	or higher
-A4	Eq-Operator-Value T31 GTEQ
 T5	Eq-Comparison 152 169	At least 3 months
-E5	Eq-Comparison:T5 Operator:T6 Value:T12 Temporal-Unit:T9
 T6	Eq-Operator 152 160	At least
-A6	Eq-Operator-Value T6 GTEQ
 T11	Temporal-Connection 170 174	post
-E13	Temporal-Connection:T11 Arg:E5 Arg2:E3
-A5	Temporal-Connection-Type-Value E13 after
 T13	Observation 218 238	Residual limb length
-E14	Observation:T13 Name:T15 Eq-Comparison:E7
 T15	Observation-Name 218 238	Residual limb length
-A7	Observation-Type-Value T15 measurement
 T16	Eq-Unit 256 262	inches
 T32	Condition 360 376	able to ambulate
-E15	Condition:T32 Name:T33
 T33	Condition-Name 360 376	able to ambulate
 T34	Condition 448 475	wearing a prosthetic socket
-E16	Condition:T34 Name:T35
 T35	Condition-Name 448 475	wearing a prosthetic socket
 T36	Condition 424 434	Conditions
-E17	Condition:T36 
 T37	Negation 440 447	prevent
-E18	Negation:T37 Negates:E16
 T38	Assertion 440 447	prevent
-E19	Assertion:T38 Asserted:E16
-A8	Assertion-Type-Value E19 hypothetical
-R1	Caused-By Arg1:E18 Arg2:E17	
 T39	Condition 506 528	mental health problems
-E20	Condition:T39 Name:T40
 T40	Condition-Name 506 528	mental health problems
 T41	Or 503 505	or
-E21	Or:T41 Arg:E1 Arg2:E20
 T17	Life-Stage-And-Gender 616 621	Women
-A9	Life-Stage-And-Gender-Type T17 female
 T42	Condition 630 638	pregnant
-E22	Condition:T42 Name:T43
 T43	Condition-Name 630 638	pregnant
 T44	And 622 625	who
-E23	And:T44 Arg:T17 Arg2:E22
 T45	Condition 661 669	pregnant
-E24	Condition:T45 Name:T46 Temporality:E27
 T46	Condition-Name 661 669	pregnant
 T47	Assertion 646 653	plan to
-E25	Assertion:T47 Asserted:E24
-A10	Assertion-Type-Value E25 intention
 T48	Or 639 641	or
-E26	Or:T48 Arg:E22 Arg2:E24
 T49	Eq-Comparison 677 688	near future
-E27	Eq-Comparison:T49 Temporal-Period:T50
 T50	Eq-Temporal-Period 677 688	near future
+A1	Eq-Operator-Value T7 GTEQ
+A2	Eq-Operator-Value T8 GT
+A3	Eq-Temporal-Unit-Value T9 month
+A4	Eq-Operator-Value T31 GTEQ
+A6	Eq-Operator-Value T6 GTEQ
+A5	Temporal-Connection-Type-Value E13 after
+A7	Observation-Type-Value T15 measurement
+A8	Assertion-Type-Value E19 hypothetical
+A9	Life-Stage-And-Gender-Type T17 female
+A10	Assertion-Type-Value E25 intention
 A11	Eq-Temporal-Period-Value T50 future
+R1	Caused-By Arg1:E18 Arg2:E17

@@ -1,119 +1,119 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E6	Condition:T6 Name:T7
+E8	Condition:T8 Name:T9 Temporality:E5
+E10	Condition:T10 Name:T11
+E13	Condition:T13 Name:T14
+E2	Condition:T21 Name:T22
+E4	Or:T23 Arg:E6 Arg2:E1
+E5	Eq-Comparison:T24 Operator:T25 Temporal-Unit:T16 Value:T19
+E7	Condition:T26 Name:T27
+E9	Eq-Comparison:T28 Operator:T29 Value:T30 Per:T31
+E11	Observation:T32 Name:T33 Temporality:E9
+E12	Observation:T17 Name:T34 Temporality:E15
+E14	Condition:T35 Name:T36
+E15	Eq-Comparison:T37 Operator:T15 Value:T38 Per:T39
+E16	Condition:T40 Name:T41
+E17	Condition:T42
+E18	Exception:T43 From:E17 Except:E13
+E19	Condition:T44 Name:T45
+E20	Or:T46 Arg:E13 Arg2:E19
+E21	Or:T47 Arg:E19 Arg2:E22
+E22	Coreference:T48 Refers-To:E16 Duration:E23
+E23	Eq-Comparison:T49 Operator:T50 Temporal-Unit:T18 Value:T20
+E24	Negation:T51 Negates:T12
+E25	Condition:T52 Severity:T53
+E26	Condition:T54 Name:T55
+E27	Or:T56 Arg:E25 Arg2:E26
+E28	Eq-Comparison:T57 Value:T58 Temporal-Unit:T59
+E29	Study:T60 Duration:E28
+E30	Other:T61 Is-Other:E10
+E31	Eq-Comparison:T62 Value:T63 Temporal-Unit:T64
+E32	Study:T65 Duration:E31
+E33	Negation:T66 Negates:E32
+E34	Assertion:T67 Asserted:E33
+E35	Assertion:T68 Asserted:E29
 T1	Condition 131 150	Alzheimer's Disease
 T2	Condition-Name 131 150	Alzheimer's Disease
-E1	Condition:T1 Name:T2
 T3	Condition 96 121	Frontal Temporal Dementia
 T4	Condition-Name 96 121	Frontal Temporal Dementia
-E3	Condition:T3 Name:T4
 T5	Language 454 460	German
 T6	Condition 123 126	FTD
 T7	Condition-Name 123 126	FTD
-E6	Condition:T6 Name:T7
 T8	Condition 152 154	AD
 T9	Condition-Name 152 154	AD
-E8	Condition:T8 Name:T9 Temporality:E5
 T10	Condition 662 670	dementia
 T11	Condition-Name 662 670	dementia
-E10	Condition:T10 Name:T11
 T12	Language 969 975	German
 T13	Condition 688 691	FTD
 T14	Condition-Name 688 691	FTD
-E13	Condition:T13 Name:T14
 T15	Eq-Operator 573 582	less than
-A1	Eq-Operator-Value T15 LT
 T16	Eq-Temporal-Unit 159 165	months
-A2	Eq-Temporal-Unit-Value T16 month
 T18	Eq-Temporal-Unit 732 738	months
-A4	Eq-Temporal-Unit-Value T18 month
 T19	Eq-Value 156 158	12
 T20	Eq-Value 729 731	12
 T21	Condition 57 60	YOD
-E2	Condition:T21 Name:T22
 T22	Condition-Name 57 60	YOD
-R1	Abbrev-Of Arg1:E6 Arg2:E3	
-R2	Abbrev-Of Arg1:E8 Arg2:E1	
 T23	Or 128 130	or
-E4	Or:T23 Arg:E6 Arg2:E1
 T24	Eq-Comparison 156 177	12 months ago or less
-E5	Eq-Comparison:T24 Operator:T25 Temporal-Unit:T16 Value:T19
 T25	Eq-Operator 170 177	or less
-A5	Eq-Operator-Value T25 LTEQ
 T26	Condition 240 243	YOD
-E7	Condition:T26 Name:T27
 T27	Condition-Name 240 243	YOD
 T28	Eq-Comparison 244 265	at least twice a weak
-E9	Eq-Comparison:T28 Operator:T29 Value:T30 Per:T31
 T29	Eq-Operator 244 252	at least
-A6	Eq-Operator-Value T29 GTEQ
 T30	Eq-Value 253 258	twice
 T31	Eq-Temporal-Unit 261 265	weak
-A7	Eq-Temporal-Unit-Value T31 week
 T32	Observation 198 218	face-to-face contact
-E11	Observation:T32 Name:T33 Temporality:E9
 T33	Observation-Name 198 218	face-to-face contact
 T17	Observation 527 547	face-to-face contact
-E12	Observation:T17 Name:T34 Temporality:E15
 T34	Observation-Name 527 547	face-to-face contact
 T35	Condition 569 572	YOD
-E14	Condition:T35 Name:T36
 T36	Condition-Name 569 572	YOD
 T37	Eq-Comparison 573 595	less than twice a week
-E15	Eq-Comparison:T37 Operator:T15 Value:T38 Per:T39
 T38	Eq-Value 583 588	twice
 T39	Eq-Temporal-Unit 591 595	week
-A3	Eq-Temporal-Unit-Value T39 week
 T40	Condition 618 621	YOD
-E16	Condition:T40 Name:T41
 T41	Condition-Name 618 621	YOD
 T42	Condition 671 676	cause
-E17	Condition:T42 
 T43	Exception 677 687	other than
-E18	Exception:T43 From:E17 Except:E13
-R3	Caused-By Arg1:E10 Arg2:E17	
 T44	Condition 695 697	AD
-E19	Condition:T44 Name:T45
 T45	Condition-Name 695 697	AD
 T46	Or 692 694	or
-E20	Or:T46 Arg:E13 Arg2:E19
 T47	Or 698 700	or
-E21	Or:T47 Arg:E19 Arg2:E22
 T48	Coreference 705 714	diagnosis
-E22	Coreference:T48 Refers-To:E16 Duration:E23
 T49	Eq-Comparison 718 738	older than 12 months
-E23	Eq-Comparison:T49 Operator:T50 Temporal-Unit:T18 Value:T20
 T50	Eq-Operator 718 728	older than
-A8	Eq-Operator-Value T50 GT
 T51	Negation 955 958	not
-E24	Negation:T51 Negates:T12
 T52	Condition 1010 1024	health problem
-E25	Condition:T52 Severity:T53
 T53	Severity 998 1009	significant
-A9	Severity-Value T53 severe
 T54	Condition 1028 1038	disability
-E26	Condition:T54 Name:T55
 T55	Condition-Name 1028 1038	disability
 T56	Or 1025 1027	or
-E27	Or:T56 Arg:E25 Arg2:E26
 T57	Eq-Comparison 413 424	eight weeks
-E28	Eq-Comparison:T57 Value:T58 Temporal-Unit:T59
 T58	Eq-Value 413 418	eight
 T59	Eq-Temporal-Unit 419 424	weeks
-A10	Eq-Temporal-Unit-Value T59 week
 T60	Study 374 386	intervention
-E29	Study:T60 Duration:E28
 T61	Other 652 661	different
-E30	Other:T61 Is-Other:E10
 T62	Eq-Comparison 903 913	eight week
-E31	Eq-Comparison:T62 Value:T63 Temporal-Unit:T64
 T63	Eq-Value 903 908	eight
 T64	Eq-Temporal-Unit 909 913	week
-A11	Eq-Temporal-Unit-Value T64 week
 T65	Study 914 926	intervention
-E32	Study:T65 Duration:E31
 T66	Negation 867 870	not
-E33	Negation:T66 Negates:E32
 T67	Assertion 871 880	available
-E34	Assertion:T67 Asserted:E33
-A12	Assertion-Type-Value E34 hypothetical
 T68	Assertion 356 365	available
-E35	Assertion:T68 Asserted:E29
+A1	Eq-Operator-Value T15 LT
+A2	Eq-Temporal-Unit-Value T16 month
+A4	Eq-Temporal-Unit-Value T18 month
+A5	Eq-Operator-Value T25 LTEQ
+A6	Eq-Operator-Value T29 GTEQ
+A7	Eq-Temporal-Unit-Value T31 week
+A3	Eq-Temporal-Unit-Value T39 week
+A8	Eq-Operator-Value T50 GT
+A9	Severity-Value T53 severe
+A10	Eq-Temporal-Unit-Value T59 week
+A11	Eq-Temporal-Unit-Value T64 week
+A12	Assertion-Type-Value E34 hypothetical
 A13	Assertion-Type-Value E35 hypothetical
+R1	Abbrev-Of Arg1:E6 Arg2:E3
+R2	Abbrev-Of Arg1:E8 Arg2:E1
+R3	Caused-By Arg1:E10 Arg2:E17

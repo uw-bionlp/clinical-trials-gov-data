@@ -1,178 +1,178 @@
+E1	Procedure:T1 Name:T2
+E5	Procedure:T5 Name:T6
+E7	Condition:T7 Name:T8 Acuteness:T83
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Procedure:T13 Name:T14
+E19	Procedure:T19 Name:T20
+E20	Age:T27 Eq-Comparison:E22
+E21	Eq-Comparison:T31 Operator:T21 Temporal-Unit:T24 Value:T28
+E22	Eq-Comparison:T32 Operator:T22 Temporal-Unit:T25 Value:T29
+E23	Eq-Comparison:T33 Operator:T23 Unit:T26 Value:T30
+E24	Eq-Comparison:T34 Temporal-Period:T35
+E26	Eq-Comparison:T38 Temporal-Period:T39
+E2	Age:T40 Eq-Comparison:E21
+E4	Procedure:T41 Name:T42 Temporality:E14
+E6	Modifier:T43 Modifies:E4
+E8	Procedure:T44 Name:T45
+E10	Procedure:T46 Name:T47
+E12	Or:T48 Arg:E8 Arg2:E10
+E14	Eq-Comparison:T49 Temporal-Period:T50
+E16	Condition:T51 Name:T52 Minimum-Count:E18
+E18	Eq-Comparison:T53 Value:T54
+E27	Assertion:T55 Asserted:E16
+E28	Procedure:T56 Name:T57
+E25	Temporal-Connection:T36 Arg:E16 Arg2:E28
+E29	Condition:T58 Name:T59
+E30	Procedure:T60 Name:T61 Temporality:E26
+E31	Modifier:T62 Modifies:E28
+E32	Modifier:T63 Modifies:E30
+E33	Condition:T64 Name:T65 Temporality:E24
+E34	Modifier:T66 Modifies:T65
+E35	Assertion:T67 Asserted:E33
+E3	Modifier:T3 Modifies:T65
+E36	Modifier:T4 Modifies:T65
+E37	Modifier:T68 Modifies:T65
+E38	Or:T69 Arg:E36 Arg2:E37
+E39	Or:T70 Arg:E3 Arg2:E36
+E40	Procedure:T71 Name:T72
+E41	Modifier:T73 Modifies:E40
+E42	Procedure:T74 Name:T75
+E43	Negation:T76 Negates:E42
+E44	Modifier:T77 Modifies:T75
+E45	Modifier:T78 Modifies:T6
+E46	Or:T79 Arg:E43 Arg2:E5
+E47	Procedure:T80 Name:T81
+E48	Contraindication:T82 Contraindicates:E47
+E49	Condition:T84 Name:T85
+E50	Assertion:T86 Asserted:E49
+E51	Observation:T87 Name:T88 Eq-Comparison:E23
+E52	Modifier:T89 Modifies:T88
+E53	Modifier:T90 Modifies:T88
+E54	Or:T91 Arg:E53 Arg2:E52
+E55	Condition:T92 Name:T93
+E56	Modifier:T94 Modifies:T93
+E57	Procedure:T95 Name:T96
+E58	Encounter:T97 Type:T98
 T1	Procedure 286 294	sedation
 T2	Procedure-Name 286 294	sedation
-E1	Procedure:T1 Name:T2
 T5	Procedure 828 845	bowel preparation
 T6	Procedure-Name 828 845	bowel preparation
-E5	Procedure:T5 Name:T6
 T7	Condition 947 961	diverticulitis
 T8	Condition-Name 947 961	diverticulitis
-E7	Condition:T7 Name:T8 Severity:T83
 T9	Condition 963 980	fulminant colitis
 T10	Condition-Name 963 980	fulminant colitis
-E9	Condition:T9 Name:T10
 T11	Condition 1037 1063	inflammatory bowel disease
 T12	Condition-Name 1037 1063	inflammatory bowel disease
-E11	Condition:T11 Name:T12
 T13	Procedure 1191 1219	endoscopic mucosal resection
 T14	Procedure-Name 1191 1219	endoscopic mucosal resection
-E13	Procedure:T13 Name:T14
 T19	Procedure 1221 1224	EMR
 T20	Procedure-Name 1221 1224	EMR
-E19	Procedure:T19 Name:T20
 T21	Eq-Operator 39 40	≥
-A1	Eq-Operator-Value T21 GTEQ
 T22	Eq-Operator 441 442	<
-A2	Eq-Operator-Value T22 LT
 T23	Eq-Operator 1113 1114	>
-A3	Eq-Operator-Value T23 GT
 T24	Eq-Temporal-Unit 44 49	years
-A4	Eq-Temporal-Unit-Value T24 year
 T25	Eq-Temporal-Unit 446 451	years
-A5	Eq-Temporal-Unit-Value T25 year
 T26	Eq-Unit 1117 1119	cm
 T27	Age 436 440	aged
-E20	Age:T27 Eq-Comparison:E22
 T28	Eq-Value 41 43	22
 T29	Eq-Value 443 445	22
 T30	Eq-Value 1115 1116	2
 T31	Eq-Comparison 39 49	≥ 22 years
-E21	Eq-Comparison:T31 Operator:T21 Temporal-Unit:T24 Value:T28
 T32	Eq-Comparison 441 451	< 22 years
-E22	Eq-Comparison:T32 Operator:T22 Temporal-Unit:T25 Value:T29
 T33	Eq-Comparison 1113 1119	> 2 cm
-E23	Eq-Comparison:T33 Operator:T23 Unit:T26 Value:T30
 T34	Eq-Comparison 575 581	active
-E24	Eq-Comparison:T34 Temporal-Period:T35
 T35	Eq-Temporal-Period 575 581	active
-A6	Eq-Temporal-Period-Value T35 present
 T38	Eq-Comparison 514 524	undergoing
-E26	Eq-Comparison:T38 Temporal-Period:T39
 T39	Eq-Temporal-Period 514 524	undergoing
-A8	Eq-Temporal-Period-Value T39 present
 T40	Age 34 37	age
-E2	Age:T40 Eq-Comparison:E21
 T41	Procedure 87 98	colonoscopy
-E4	Procedure:T41 Name:T42 Temporality:E14
 T42	Procedure-Name 87 98	colonoscopy
 T43	Modifier 79 86	routine
-E6	Modifier:T43 Modifies:E4
 T44	Procedure 103 112	screening
-E8	Procedure:T44 Name:T45
 T45	Procedure-Name 103 112	screening
 T46	Procedure 120 132	surveillance
-E10	Procedure:T46 Name:T47
 T47	Procedure-Name 120 132	surveillance
 T48	Or 113 119	and/or
-E12	Or:T48 Arg:E8 Arg2:E10
-R1	Using Arg1:E8 Arg2:E4	
 T49	Eq-Comparison 64 74	presenting
-E14	Eq-Comparison:T49 Temporal-Period:T50
 T50	Eq-Temporal-Period 64 74	presenting
-A9	Eq-Temporal-Period-Value T50 present
 T51	Condition 175 186	withdrawals
-E16	Condition:T51 Name:T52 Minimum-Count:E18
 T52	Condition-Name 175 186	withdrawals
 T53	Eq-Comparison 171 174	two
-E18	Eq-Comparison:T53 Value:T54
 T54	Eq-Value 171 174	two
 T55	Assertion 148 159	Willingness
-E27	Assertion:T55 Asserted:E16
-A10	Assertion-Type-Value E27 hypothetical
 T56	Procedure 269 280	colonoscopy
-E28	Procedure:T56 Name:T57
 T57	Procedure-Name 269 280	colonoscopy
-R2	Using Arg1:E28 Arg2:E1	
 T36	Temporal-Connection 239 244	while
-E25	Temporal-Connection:T36 Arg:E16 Arg2:E28
-A7	Temporal-Connection-Type-Value E25 during
 T37	Life-Stage-And-Gender 429 435	Minors
-A11	Life-Stage-And-Gender-Type T37 child
 T58	Condition 470 499	diminished cognitive capacity
-E29	Condition:T58 Name:T59
 T59	Condition-Name 470 499	diminished cognitive capacity
 T60	Procedure 536 547	colonoscopy
-E30	Procedure:T60 Name:T61 Temporality:E26
 T61	Procedure-Name 536 547	colonoscopy
 T62	Modifier 256 268	conventional
-E31	Modifier:T62 Modifies:E28
 T63	Modifier 525 535	diagnostic
-E32	Modifier:T63 Modifies:E30
 T64	Condition 599 604	bleed
-E33	Condition:T64 Name:T65 Temporality:E24
 T65	Condition-Name 599 604	bleed
 T66	Modifier 582 598	gastrointestinal
-E34	Modifier:T66 Modifies:T65
-R3	Found-By Arg1:E33 Arg2:E30	
 T67	Assertion 560 574	evaluation for
-E35	Assertion:T67 Asserted:E33
-A12	Assertion-Type-Value E35 hypothetical
 T3	Modifier 636 643	stomach
-E3	Modifier:T3 Modifies:T65
 T4	Modifier 652 657	small
-E36	Modifier:T4 Modifies:T65
 T68	Modifier 662 677	large intestine
-E37	Modifier:T68 Modifies:T65
 T69	Or 658 661	and
-E38	Or:T69 Arg:E36 Arg2:E37
 T70	Or 644 647	and
-E39	Or:T70 Arg:E3 Arg2:E36
 T71	Procedure 710 723	colonoscopies
-E40	Procedure:T71 Name:T72
 T72	Procedure-Name 710 723	colonoscopies
 T73	Modifier 699 709	incomplete
-E41	Modifier:T73 Modifies:E40
 T74	Procedure 771 779	intubate
-E42	Procedure:T74 Name:T75
 T75	Procedure-Name 771 779	intubate
 T76	Negation 754 757	not
-E43	Negation:T76 Negates:E42
 T77	Modifier 784 789	cecum
-E44	Modifier:T77 Modifies:T75
 T78	Modifier 823 827	poor
-E45	Modifier:T78 Modifies:T6
 T79	Or 820 822	or
-E46	Or:T79 Arg:E43 Arg2:E5
-R4	Example-Of Arg1:E43 Arg2:E40	
-R5	Example-Of Arg1:E5 Arg2:E40	
 T80	Procedure 901 912	colonoscopy
-E47	Procedure:T80 Name:T81
 T81	Procedure-Name 901 912	colonoscopy
 T82	Contraindication 880 897	contraindications
-E48	Contraindication:T82 Contraindicates:E47
-T83	Severity 941 946	acute
-A13	Severity-Value T83 severe
-R6	Example-Of Arg1:E7 Arg2:E48	
-R7	Example-Of Arg1:E9 Arg2:E48	
+T83	Acuteness 941 946	acute
 T84	Condition 1004 1015	perforation
-E49	Condition:T84 Name:T85
 T85	Condition-Name 1004 1015	perforation
 T86	Assertion 994 1003	suspected
-E50	Assertion:T86 Asserted:E49
-A14	Assertion-Type-Value E50 possible
-R8	Example-Of Arg1:E49 Arg2:E48	
 T87	Observation 1106 1112	lesion
-E51	Observation:T87 Name:T88 Eq-Comparison:E23
 T88	Observation-Name 1106 1112	lesion
-A15	Observation-Type-Value T88 measurement
 T89	Modifier 1096 1105	ulcerated
-E52	Modifier:T89 Modifies:T88
 T90	Modifier 1087 1095	polypoid
-E53	Modifier:T90 Modifies:T88
 T91	Or 1095 1096	/
-E54	Or:T91 Arg:E53 Arg2:E52
 T92	Condition 1144 1150	cancer
-E55	Condition:T92 Name:T93
 T93	Condition-Name 1144 1150	cancer
 T94	Modifier 1135 1143	invasive
-E56	Modifier:T94 Modifies:T93
 T95	Procedure 1154 1163	endoscopy
-E57	Procedure:T95 Name:T96
 T96	Procedure-Name 1154 1163	endoscopy
-R9	Found-By Arg1:E55 Arg2:E57	
-R10	Found-By Arg1:E51 Arg2:E57	
 T97	Encounter 1178 1186	referred
-E58	Encounter:T97 Type:T98
 T98	Encounter-Type 1178 1186	referred
+A1	Eq-Operator-Value T21 GTEQ
+A2	Eq-Operator-Value T22 LT
+A3	Eq-Operator-Value T23 GT
+A4	Eq-Temporal-Unit-Value T24 year
+A5	Eq-Temporal-Unit-Value T25 year
+A6	Eq-Temporal-Period-Value T35 present
+A8	Eq-Temporal-Period-Value T39 present
+A9	Eq-Temporal-Period-Value T50 present
+A10	Assertion-Type-Value E27 hypothetical
+A7	Temporal-Connection-Type-Value E25 during
+A11	Life-Stage-And-Gender-Type T37 child
+A12	Assertion-Type-Value E35 hypothetical
+A14	Assertion-Type-Value E50 possible
+A15	Observation-Type-Value T88 measurement
 A16	Encounter-Type-Value T98 referral
-R11	Abbrev-Of Arg1:E19 Arg2:E13	
-R12	Using Arg1:E58 Arg2:E13	
+A17	Acuteness-Type-Value T83 acute
+R1	Using Arg1:E8 Arg2:E4
+R2	Using Arg1:E28 Arg2:E1
+R3	Found-By Arg1:E33 Arg2:E30
+R4	Example-Of Arg1:E43 Arg2:E40
+R5	Example-Of Arg1:E5 Arg2:E40
+R6	Example-Of Arg1:E7 Arg2:E48
+R7	Example-Of Arg1:E9 Arg2:E48
+R8	Example-Of Arg1:E49 Arg2:E48
+R9	Found-By Arg1:E55 Arg2:E57
+R10	Found-By Arg1:E51 Arg2:E57
+R11	Abbrev-Of Arg1:E19 Arg2:E13
+R12	Using Arg1:E58 Arg2:E13

@@ -1,0 +1,49 @@
+T1	Condition 87 103	3GCRE bacteremia
+T2	Condition-Name 87 103	3GCRE bacteremia
+E1	Condition:T1 Name:T2
+T3	Condition 247 271	Polymicrobial bacteremia
+T4	Condition-Name 247 271	Polymicrobial bacteremia
+E3	Condition:T3 Name:T4
+T5	Condition 334 344	bacteremia
+T6	Condition-Name 334 344	bacteremia
+E5	Condition:T5 Name:T6 Temporality:E10
+T7	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T7 adult
+T10	Eq-Temporal-Unit 53 58	years
+A2	Eq-Temporal-Unit-Value T10 year
+T11	Eq-Value 50 52	18
+T8	Eq-Comparison 50 67	18 years or above
+E2	Eq-Comparison:T8 Temporal-Unit:T10 Value:T11 Operator:T9
+T9	Eq-Operator 59 67	or above
+A3	Eq-Operator-Value T9 GTEQ
+T14	Age 45 49	ages
+E4	Age:T14 Eq-Comparison:E2
+T12	Encounter 118 126	admitted
+E6	Encounter:T12 Type:T15
+T15	Encounter-Type 118 126	admitted
+A4	Encounter-Type-Value T15 inpatient
+T16	Encounter 215 225	transition
+E7	Encounter:T16 Type:T17 Location:T18
+T17	Encounter-Type 215 225	transition
+A5	Encounter-Type-Value T17 transfer
+T18	Location 229 241	hospice care
+A6	Location-Value T18 clinic
+T19	Drug 197 207	antibiotic
+E8	Drug:T19 Name:T20 Stability:T21
+T20	Drug-Name 197 207	antibiotic
+T21	Stability 178 193	Discontinuation
+A7	Stability-Value T21 change
+R1	Caused-By Arg1:T21 Arg2:E7	
+T22	Drug 277 297	Empirical antibiotic
+E9	Drug:T22 Name:T23
+T23	Drug-Name 277 297	Empirical antibiotic
+T13	Eq-Comparison 304 321	24 hours of first
+E10	Eq-Comparison:T13 Temporal-Recency:T24 Temporal-Unit:T26 Value:T25
+T24	Eq-Temporal-Recency 316 321	first
+A8	Eq-Temporal-Recency-Value T24 first-time
+T25	Eq-Value 304 306	24
+T26	Eq-Temporal-Unit 307 312	hours
+A9	Eq-Temporal-Unit-Value T26 hour
+T27	Temporal-Connection 298 303	after
+E11	Temporal-Connection:T27 Arg:E9 Arg2:E10
+A10	Temporal-Connection-Type-Value E11 after

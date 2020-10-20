@@ -1,154 +1,154 @@
+E1	Condition:T1 Name:T2 Acuteness:T78
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6 Temporality:E17
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E16	Age:T18 Eq-Comparison:E4
+E17	Eq-Comparison:T21 Temporal-Period:T22
+E18	Eq-Comparison:T23 Temporal-Period:T24
+E19	Eq-Comparison:T25 Temporal-Period:T26
+E21	Eq-Comparison:T29 Temporal-Period:T30
+E2	Condition:T31 Name:T32
+E4	Eq-Comparison:T34 Value:T19 Temporal-Unit:T17 Value2:T20
+E6	Assertion:T36 Asserted:E5
+E8	Negation:T37 Negates:E5
+E10	Procedure:T38 Name:T39 Polarity:T43
+E12	Modifier:T40 Modifies:T39
+E14	Modifier:T41 Modifies:T39
+E22	And:T42 Arg:E14 Arg2:E12
+E23	And:T45 Arg:T44 Arg2:E7
+E24	Condition:T46 Name:T47
+E25	And:T49 Arg:T48 Arg2:E24
+E26	Assertion:T50 Asserted:E28
+E27	Condition:T51 Name:T52 Temporality:E18
+E28	Condition:T53 Name:T54
+E29	Or:T55 Arg:E28 Arg2:E27
+E30	Drug:T57 Name:T58
+E31	Condition:T59 Name:T60
+E32	Allergy:T61 Name:E30
+E33	Or:T62 Arg:E32 Arg2:E31
+E34	And:T63 Arg:T56 Arg2:E13
+E35	Condition:T65 Name:T66
+E36	Condition:T67 Name:T68
+E37	Or:T69 Arg:E35 Arg2:E36
+E38	And:T70 Arg:T64 Arg2:E35
+E20	Drug:T27 Name:T28 Temporality:E19
+E39	And:T72 Arg:T71 Arg2:E20
+E40	And:T74 Arg:T73 Arg2:E41
+E41	Procedure:T75 Temporality:E21
+E42	Modifier:T76 Modifies:T16
+E43	Modifier:T77 Modifies:E1
+E45	Condition:T79 Name:T80
+E46	Condition:T82 Name:T83
+E47	Or:T84 Arg:T81 Arg2:E46
 T1	Condition 680 704	noncommunicable diseases
 T2	Condition-Name 680 704	noncommunicable diseases
-E1	Condition:T1 Name:T2
 T3	Condition 297 320	endometrial hyperplasia
 T4	Condition-Name 297 320	endometrial hyperplasia
-E3	Condition:T3 Name:T4
 T5	Condition 106 123	vaginal infection
 T6	Condition-Name 106 123	vaginal infection
-E5	Condition:T5 Name:T6 Temporality:E17
 T7	Condition 215 232	vaginal infection
 T8	Condition-Name 215 232	vaginal infection
-E7	Condition:T7 Name:T8
 T9	Condition 706 723	diabetes mellitus
 T10	Condition-Name 706 723	diabetes mellitus
-E9	Condition:T9 Name:T10
 T11	Condition 725 738	heart disease
 T12	Condition-Name 725 738	heart disease
-E11	Condition:T11 Name:T12
 T13	Condition 385 396	intolerance
 T14	Condition-Name 385 396	intolerance
-E13	Condition:T13 Name:T14
 T15	Condition 646 652	sepsis
 T16	Condition-Name 646 652	sepsis
-E15	Condition:T15 Name:T16
 T17	Eq-Temporal-Unit 57 62	years
-A1	Eq-Temporal-Unit-Value T17 year
 T18	Age 63 66	old
-E16	Age:T18 Eq-Comparison:E4
 T19	Eq-Value 47 49	18
 T20	Eq-Value 54 56	45
 T21	Eq-Comparison 86 93	current
-E17	Eq-Comparison:T21 Temporal-Period:T22
 T22	Eq-Temporal-Period 86 93	current
-A2	Eq-Temporal-Period-Value T22 present
 T23	Eq-Comparison 352 358	active
-E18	Eq-Comparison:T23 Temporal-Period:T24
 T24	Eq-Temporal-Period 352 358	active
-A3	Eq-Temporal-Period-Value T24 present
 T25	Eq-Comparison 536 551	currently using
-E19	Eq-Comparison:T25 Temporal-Period:T26
 T26	Eq-Temporal-Period 536 551	currently using
-A4	Eq-Temporal-Period-Value T26 present
 T29	Eq-Comparison 613 618	using
-E21	Eq-Comparison:T29 Temporal-Period:T30
 T30	Eq-Temporal-Period 613 618	using
-A6	Eq-Temporal-Period-Value T30 present
 T31	Condition 25 32	Healthy
-E2	Condition:T31 Name:T32
 T32	Condition-Name 25 32	Healthy
 T33	Life-Stage-And-Gender 33 38	women
-A7	Life-Stage-And-Gender-Type T33 female
 T34	Eq-Comparison 39 62	between 18 and 45 years
-E4	Eq-Comparison:T34 Value:T19 Temporal-Unit:T17 Value2:T20
 T35	Life-Stage-And-Gender 72 77	Women
-A8	Life-Stage-And-Gender-Type T35 female
 T36	Assertion 94 102	symptoms
-E6	Assertion:T36 Asserted:E5
-A9	Assertion-Type-Value E6 possible
 T37	Negation 78 85	without
-E8	Negation:T37 Negates:E5
 T38	Procedure 167 178	examination
-E10	Procedure:T38 Name:T39 Polarity:T43
 T39	Procedure-Name 167 178	examination
 T40	Modifier 158 166	clinical
-E12	Modifier:T40 Modifies:T39
 T41	Modifier 138 153	bacteriological
-E14	Modifier:T41 Modifies:T39
 T42	And 154 157	and
-E22	And:T42 Arg:E14 Arg2:E12
 T43	Polarity 129 137	Negative
-A10	Polarity-Value T43 negative
 T44	Life-Stage-And-Gender 204 209	Women
-A11	Life-Stage-And-Gender-Type T44 female
 T45	And 210 214	with
-E23	And:T45 Arg:T44 Arg2:E7
 T46	Condition 261 277	vaginal bleeding
-E24	Condition:T46 Name:T47
 T47	Condition-Name 261 277	vaginal bleeding
 T48	Life-Stage-And-Gender 238 243	Women
-A12	Life-Stage-And-Gender-Type T48 female
 T49	And 244 248	with
-E25	And:T49 Arg:T48 Arg2:E24
 T50	Assertion 326 335	Suspicion
-E26	Assertion:T50 Asserted:E28
-A13	Assertion-Type-Value E26 possible
 T51	Condition 359 368	neoplasia
-E27	Condition:T51 Name:T52 Temporality:E18
 T52	Condition-Name 359 368	neoplasia
 T53	Condition 339 348	neoplasia
-E28	Condition:T53 Name:T54
 T54	Condition-Name 339 348	neoplasia
 T55	Or 349 351	or
-E29	Or:T55 Arg:E28 Arg2:E27
 T56	Life-Stage-And-Gender 374 379	Women
-A14	Life-Stage-And-Gender-Type T56 female
 T57	Drug 451 460	probiotic
-E30	Drug:T57 Name:T58
 T58	Drug-Name 451 460	probiotic
 T59	Condition 409 425	hypersensitivity
-E31	Condition:T59 Name:T60
 T60	Condition-Name 409 425	hypersensitivity
 T61	Allergy 398 405	allergy
-E32	Allergy:T61 Name:E30
-R1	Caused-By Arg1:E31 Arg2:E30	
 T62	Or 406 408	or
-E33	Or:T62 Arg:E32 Arg2:E31
-R2	Caused-By Arg1:E13 Arg2:E30	
 T63	And 380 384	with
-E34	And:T63 Arg:T56 Arg2:E13
 T64	Life-Stage-And-Gender 466 471	Women
-A15	Life-Stage-And-Gender-Type T64 female
 T65	Condition 477 504	immunosuppressive disorders
-E35	Condition:T65 Name:T66
 T66	Condition-Name 477 504	immunosuppressive disorders
 T67	Condition 513 516	HIV
-E36	Condition:T67 Name:T68
 T68	Condition-Name 513 516	HIV
 T69	Or 505 507	or
-E37	Or:T69 Arg:E35 Arg2:E36
 T70	And 472 476	with
-E38	And:T70 Arg:T64 Arg2:E35
 T71	Life-Stage-And-Gender 522 527	Women
-A16	Life-Stage-And-Gender-Type T71 female
 T27	Drug 552 562	probiotics
-E20	Drug:T27 Name:T28 Temporality:E19
 T28	Drug-Name 552 562	probiotics
 T72	And 528 531	who
-E39	And:T72 Arg:T71 Arg2:E20
 T73	Life-Stage-And-Gender 599 604	Women
-A5	Life-Stage-And-Gender-Type T73 female
 T74	And 605 608	who
-E40	And:T74 Arg:T73 Arg2:E41
 T75	Procedure 624 633	treatment
-E41	Procedure:T75 Temporality:E21
-R3	Treatment-For Arg1:E41 Arg2:E15	
 T76	Modifier 638 645	vaginal
-E42	Modifier:T76 Modifies:T16
 T77	Modifier 666 679	decompensated
-E43	Modifier:T77 Modifies:E1
-T78	Modifier 658 665	Chronic
-E44	Modifier:T78 Modifies:E1
-R4	Example-Of Arg1:E9 Arg2:E1	
-R5	Example-Of Arg1:E11 Arg2:E1	
+T78	Acuteness 658 665	Chronic
 T79	Condition 749 757	Pregnant
-E45	Condition:T79 Name:T80
 T80	Condition-Name 749 757	Pregnant
 T81	Life-Stage-And-Gender 758 763	women
-A17	Life-Stage-And-Gender-Type T81 female
-R6	If-Then Arg1:T81 Arg2:E45	
 T82	Condition 778 798	precocious menopause
-E46	Condition:T82 Name:T83
 T83	Condition-Name 778 798	precocious menopause
 T84	Or 764 766	or
-E47	Or:T84 Arg:T81 Arg2:E46
+A1	Eq-Temporal-Unit-Value T17 year
+A2	Eq-Temporal-Period-Value T22 present
+A3	Eq-Temporal-Period-Value T24 present
+A4	Eq-Temporal-Period-Value T26 present
+A6	Eq-Temporal-Period-Value T30 present
+A7	Life-Stage-And-Gender-Type T33 female
+A8	Life-Stage-And-Gender-Type T35 female
+A9	Assertion-Type-Value E6 possible
+A10	Polarity-Value T43 negative
+A11	Life-Stage-And-Gender-Type T44 female
+A12	Life-Stage-And-Gender-Type T48 female
+A13	Assertion-Type-Value E26 possible
+A14	Life-Stage-And-Gender-Type T56 female
+A15	Life-Stage-And-Gender-Type T64 female
+A16	Life-Stage-And-Gender-Type T71 female
+A5	Life-Stage-And-Gender-Type T73 female
+A17	Life-Stage-And-Gender-Type T81 female
+A18	Acuteness-Type-Value T78 chronic
+R1	Caused-By Arg1:E31 Arg2:E30
+R2	Caused-By Arg1:E13 Arg2:E30
+R3	Treatment-For Arg1:E41 Arg2:E15
+R4	Example-Of Arg1:E9 Arg2:E1
+R5	Example-Of Arg1:E11 Arg2:E1
+R6	If-Then Arg1:T81 Arg2:E45

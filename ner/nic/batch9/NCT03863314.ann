@@ -1,60 +1,60 @@
-T1	Eq-Comparison 25 46	Greater than 18 years
 E1	Eq-Comparison:T1 Operator:T16 Value:T17 Temporal-Unit:T18
-T2	Age 50 53	age
 E2	Age:T2 Eq-Comparison:E1
-T3	Or 138 140	or
 E3	Or:T3 Arg:T20 Arg2:T33
-T5	Eq-Comparison 241 257	currently taking
 E5	Eq-Comparison:T5 Temporal-Period:T21
-T6	Drug 258 271	beta blockers
 E6	Drug:T6 Name:T23 Temporality:E5
-T7	Or 272 274	or
 E7	Or:T7 Arg:E6 Arg2:E9
-T8	Other 275 280	other
 E8	Other:T8 Is-Other:E9
-T9	Drug 281 312	chronotropic heart medication(s
 E9	Drug:T9 Name:T24
-T10	Eq-Comparison 326 333	history
 E10	Eq-Comparison:T10 Temporal-Period:T25
-T11	Condition 344 359	motion sickness
 E11	Condition:T11 Name:T27 Severity:T26 Temporality:E10
-T12	Eq-Comparison 365 374	Currently
 E12	Eq-Comparison:T12 Temporal-Period:T28
-T13	Condition 380 386	nausea
 E13	Condition:T13 Name:T29 Temporality:E12
-T14	Eq-Comparison 392 401	Currently
 E14	Eq-Comparison:T14 Temporal-Period:T30
-T15	Condition 415 423	seizures
 E15	Condition:T15 Name:T31 Temporality:E14
+T1	Eq-Comparison 25 46	Greater than 18 years
+T2	Age 50 53	age
+T3	Or 138 140	or
+T5	Eq-Comparison 241 257	currently taking
+T6	Drug 258 271	beta blockers
+T7	Or 272 274	or
+T8	Other 275 280	other
+T9	Drug 281 312	chronotropic heart medication(s
+T10	Eq-Comparison 326 333	history
+T11	Condition 344 359	motion sickness
+T12	Eq-Comparison 365 374	Currently
+T13	Condition 380 386	nausea
+T14	Eq-Comparison 392 401	Currently
+T15	Condition 415 423	seizures
 T16	Eq-Operator 25 37	Greater than
-A1	Eq-Operator-Value T16 GT
 T17	Eq-Value 38 40	18
 T18	Eq-Temporal-Unit 41 46	years
-A2	Eq-Temporal-Unit-Value T18 year
 T19	Location 96 130	Lucile Packard Children's Hospital
-A3	Location-Value T19 hospital
 T20	Location 132 136	LPCH
-A4	Location-Value T20 hospital
 T21	Eq-Temporal-Period 241 257	currently taking
-A5	Eq-Temporal-Period-Value T21 present
 T23	Drug-Name 258 271	beta blockers
 T24	Drug-Name 281 312	chronotropic heart medication(s
 T25	Eq-Temporal-Period 326 333	history
-A7	Eq-Temporal-Period-Value T25 past
 T26	Severity 337 343	severe
-A8	Severity-Value T26 severe
 T27	Condition-Name 344 359	motion sickness
 T28	Eq-Temporal-Period 365 374	Currently
-A9	Eq-Temporal-Period-Value T28 present
 T29	Condition-Name 380 386	nausea
 T30	Eq-Temporal-Period 392 401	Currently
-A10	Eq-Temporal-Period-Value T30 present
 T31	Condition-Name 415 423	seizures
 T32	Stability 444 452	unstable
-A11	Stability-Value T32 change
-R1	Abbrev-Of Arg1:T20 Arg2:T19	
 T33	Location 141 161	Stanford Health Care
-A12	Location-Value T33 hospital
 T4	Location 163 166	SHC
-R2	Abbrev-Of Arg1:T4 Arg2:T33	
+A1	Eq-Operator-Value T16 GT
+A2	Eq-Temporal-Unit-Value T18 year
+A3	Location-Value T19 hospital
+A4	Location-Value T20 hospital
+A5	Eq-Temporal-Period-Value T21 present
+A7	Eq-Temporal-Period-Value T25 past
+A8	Severity-Value T26 severe
+A9	Eq-Temporal-Period-Value T28 present
+A10	Eq-Temporal-Period-Value T30 present
+A11	Stability-Value T32 change
+A12	Location-Value T33 hospital
 A13	Location-Value T4 hospital
+R1	Abbrev-Of Arg1:T20 Arg2:T19
+R2	Abbrev-Of Arg1:T4 Arg2:T33

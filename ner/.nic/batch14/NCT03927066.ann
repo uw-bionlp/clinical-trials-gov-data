@@ -1,0 +1,70 @@
+T1	Condition 132 155	coronary artery disease
+T2	Condition-Name 132 155	coronary artery disease
+E1	Condition:T1 Name:T2
+T3	Condition 108 120	hypertension
+T4	Condition-Name 108 120	hypertension
+E3	Condition:T3 Name:T4
+T5	Procedure 243 264	surgically sterilized
+T6	Procedure-Name 243 264	surgically sterilized
+E5	Procedure:T5 Name:T6 Temporality:E17
+T7	Condition 122 130	diabetes
+T8	Condition-Name 122 130	diabetes
+E7	Condition:T7 Name:T8
+T9	Condition 29 34	obese
+T10	Condition-Name 29 34	obese
+E9	Condition:T9 Name:T10
+T11	Observation 36 39	BMI
+T12	Observation-Name 36 39	BMI
+E11	Observation:T11 Name:T12 Eq-Comparison:E12
+A1	Observation-Type-Value T12 vital
+T13	Eq-Operator 40 41	<
+A2	Eq-Operator-Value T13 LT
+T14	Eq-Value 42 44	30
+T15	Eq-Comparison 40 44	< 30
+E12	Eq-Comparison:T15 Operator:T13 Value:T14
+T16	Negation 25 28	Non
+E2	Negation:T16 Negates:E9
+T17	Condition 89 97	diseases
+E4	Condition:T17 Name:T18
+T18	Condition-Name 89 97	diseases
+T19	Negation 68 75	Free of
+E6	Negation:T19 Negates:E4
+R1	Example-Of Arg1:E3 Arg2:E4	
+R2	Example-Of Arg1:E7 Arg2:E4	
+R3	Example-Of Arg1:E1 Arg2:E4	
+T20	Condition 157 175	neurologic disease
+E8	Condition:T20 Name:T21
+T21	Condition-Name 157 175	neurologic disease
+R4	Example-Of Arg1:E8 Arg2:E4	
+T22	Condition 196 216	medical co-morbidity
+E10	Condition:T22 Name:T23 Severity:T24
+T23	Condition-Name 196 216	medical co-morbidity
+T24	Severity 190 195	major
+A3	Severity-Value T24 severe
+T25	Or 177 179	or
+E13	Or:T25 Arg:E8 Arg2:E10
+R5	Example-Of Arg1:E10 Arg2:E4	
+T26	Life-Stage-And-Gender 222 227	Women
+A4	Life-Stage-And-Gender-Type T26 female
+T27	Condition 272 280	pregnant
+E14	Condition:T27 Name:T28
+T28	Condition-Name 272 280	pregnant
+T29	Negation 268 271	non
+E15	Negation:T29 Negates:E14
+T30	Or 265 267	or
+E16	Or:T30 Arg:E5 Arg2:E15
+T31	Eq-Comparison 228 235	will be
+E17	Eq-Comparison:T31 Temporal-Period:T32
+T32	Eq-Temporal-Period 228 235	will be
+A5	Eq-Temporal-Period-Value T32 future
+R6	If-Then Arg1:T26 Arg2:E5	
+T33	Observation 300 320	urine pregnancy test
+E18	Observation:T33 Name:T34
+T34	Observation-Name 300 320	urine pregnancy test
+R7	Found-By Arg1:E14 Arg2:E18	
+T35	Modifier 80 88	systemic
+E19	Modifier:T35 
+R8	Abbrev-Of Arg1:E19 Arg2:E4	
+T36	Other 184 189	other
+E20	Other:T36 Is-Other:E10
+A6	Observation-Type-Value T34 lab

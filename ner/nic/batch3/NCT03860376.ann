@@ -1,98 +1,103 @@
-T1	Age 34 38	aged
 E1	Age:T1 Eq-Comparison:E2
-T2	Eq-Comparison 39 58	21 years or younger
 E2	Eq-Comparison:T2 Value:T46 Temporal-Unit:T47 Operator:T70
-T3	Temporal-Connection 59 70	at the time
 E3	Temporal-Connection:T3 Arg:E1 Arg2:E4
-A1	Temporal-Connection-Type-Value E3 during
-T4	Study 74 84	enrollment
-E4	Study:T4 
-T7	Assertion 157 166	suspected
+E4	Study:T4
 E7	Assertion:T7 Asserted:E12
-A2	Assertion-Type-Value E7 possible
-T8	Or 167 169	or
 E8	Or:T8 Arg:E7 Arg2:E5
-T9	Modifier 193 202	recurrent
 E9	Modifier:T9 Modifies:T48
-T10	Or 203 205	or
 E10	Or:T10 Arg:E9 Arg2:E11
-T11	Modifier 206 216	refractory
 E11	Modifier:T11 Modifies:T48
-T12	Condition 217 223	cancer
 E12	Condition:T12 Name:T48
-T13	Eq-Comparison 251 260	scheduled
 E13	Eq-Comparison:T13 Temporal-Period:T49
-T14	Or 265 267	or
 E14	Or:T14 Arg:E13 Arg2:E6
-T15	Procedure 286 292	biopsy
 E15	Procedure:T15 Name:T50 Temporality:E13 Temporality2:E6
-T16	Or 293 295	or
 E16	Or:T16 Arg:E15 Arg2:E17
-T17	Procedure 302 309	excised
 E17	Procedure:T17 Name:T73
-T18	Modifier 311 316	solid
 E18	Modifier:T18 Modifies:T74
-T19	Or 325 327	or
 E19	Or:T19 Arg:E17 Arg2:E21
-T20	Modifier 328 339	bone marrow
 E20	Modifier:T20 Modifies:T53
-T21	Procedure 340 348	aspirate
 E21	Procedure:T21 Name:T53
-T22	Condition 356 363	cancers
 E22	Condition:T22 Name:T54
-T23	Assertion 384 394	willing to
 E23	Assertion:T23 Asserted:E28
-A3	Assertion-Type-Value E23 hypothetical
-T24	Observation 402 412	blood draw
 E24	Observation:T24 Specimen:T55
-T25	Or 413 415	or
 E25	Or:T25 Arg:E24 Arg2:E26
-T26	Procedure 416 427	buccal swab
 E26	Procedure:T26 Name:T56
-T27	Assertion 428 436	done for
 E27	Assertion:T27 Asserted:E28
-A4	Assertion-Type-Value E27 hypothetical
-T28	Procedure 453 468	genetic testing
-E28	Procedure:T28 
-T29	Age 576 580	aged
+E28	Procedure:T28
 E29	Age:T29 Eq-Comparison:E49
-T30	Negation 653 656	not
 E30	Negation:T30 Negates:E31
-T31	Condition 662 678	malignant tissue
 E31	Condition:T31 Name:T60
-T32	Condition 731 747	malignant tissue
 E32	Condition:T32 Name:T61
-T33	Negation 751 754	not
 E33	Negation:T33 Negates:E32
-T34	Assertion 755 765	sufficient
 E34	Assertion:T34 Asserted:E33
-A5	Assertion-Type-Value E34 hypothetical
-T35	Procedure 782 794	drug testing
 E35	Procedure:T35 Name:T62
-T36	Or 795 801	and/or
 E36	Or:T36 Arg:E35 Arg2:E37
-T37	Procedure 802 819	genetic profiling
 E37	Procedure:T37 Name:T83
-T38	Condition 856 862	tumors
 E38	Condition:T38 Name:T63 Temporality:E55
-T39	Or 863 866	and
 E39	Or:T39 Arg:E38 Arg2:E40
-T40	Condition 867 873	tumors
 E40	Condition:T40 Name:T64
-T41	Eq-Comparison 890 894	>90%
 E41	Eq-Comparison:T41 Operator:T66 Value:T67 Unit:T68
-T42	Observation 896 905	cure rate
 E42	Observation:T42 Name:T86 Eq-Comparison:E41 Polarity:T65
-T44	Modifier 911 915	safe
 E44	Modifier:T44 Modifies:T69
-T45	Procedure 916 932	standard therapy
 E45	Procedure:T45 Name:T69
+E5	Modifier:T5 Modifies:T48
+E6	Eq-Comparison:T6 Temporal-Period:T71
+E46	Condition:T72 Name:T51
+E47	Condition:T52 Name:T74
+E48	Modifier:T75 Modifies:T54
+E49	Eq-Comparison:T76 Value:T57 Operator:T58 Value2:T59
+E50	Assertion:T77 Asserted:E31
+E51	Assertion:T78 Asserted:E31
+E52	Or:T79 Arg:E50 Arg2:E51
+E53	Procedure:T80 Name:T81
+E54	Modifier:T82 Modifies:T62
+E55	Eq-Comparison:T84 Temporal-Recency:T85
+T1	Age 34 38	aged
+T2	Eq-Comparison 39 58	21 years or younger
+T3	Temporal-Connection 59 70	at the time
+T4	Study 74 84	enrollment
+T7	Assertion 157 166	suspected
+T8	Or 167 169	or
+T9	Modifier 193 202	recurrent
+T10	Or 203 205	or
+T11	Modifier 206 216	refractory
+T12	Condition 217 223	cancer
+T13	Eq-Comparison 251 260	scheduled
+T14	Or 265 267	or
+T15	Procedure 286 292	biopsy
+T16	Or 293 295	or
+T17	Procedure 302 309	excised
+T18	Modifier 311 316	solid
+T19	Or 325 327	or
+T20	Modifier 328 339	bone marrow
+T21	Procedure 340 348	aspirate
+T22	Condition 356 363	cancers
+T23	Assertion 384 394	willing to
+T24	Observation 402 412	blood draw
+T25	Or 413 415	or
+T26	Procedure 416 427	buccal swab
+T27	Assertion 428 436	done for
+T28	Procedure 453 468	genetic testing
+T29	Age 576 580	aged
+T30	Negation 653 656	not
+T31	Condition 662 678	malignant tissue
+T32	Condition 731 747	malignant tissue
+T33	Negation 751 754	not
+T34	Assertion 755 765	sufficient
+T35	Procedure 782 794	drug testing
+T36	Or 795 801	and/or
+T37	Procedure 802 819	genetic profiling
+T38	Condition 856 862	tumors
+T39	Or 863 866	and
+T40	Condition 867 873	tumors
+T41	Eq-Comparison 890 894	>90%
+T42	Observation 896 905	cure rate
+T44	Modifier 911 915	safe
+T45	Procedure 916 932	standard therapy
 T46	Eq-Value 39 41	21
 T47	Eq-Temporal-Unit 42 47	years
-A6	Eq-Temporal-Unit-Value T47 year
 T48	Condition-Name 217 223	cancer
 T49	Eq-Temporal-Period 251 260	scheduled
-A7	Eq-Temporal-Period-Value T49 future
 T50	Procedure-Name 286 292	biopsy
 T51	Condition-Name 296 301	tumor
 T53	Procedure-Name 340 348	aspirate
@@ -101,7 +106,6 @@ T55	Observation-Specimen 402 407	blood
 T56	Procedure-Name 416 427	buccal swab
 T57	Eq-Value 581 582	7
 T58	Eq-Operator 583 585	to
-A8	Eq-Operator-Value T58 BETWEEN
 T59	Eq-Value 586 588	17
 T60	Condition-Name 662 678	malignant tissue
 T61	Condition-Name 731 747	malignant tissue
@@ -109,57 +113,53 @@ T62	Procedure-Name 782 794	drug testing
 T63	Condition-Name 856 862	tumors
 T64	Condition-Name 867 873	tumors
 T65	Polarity 884 888	high
-A10	Polarity-Value T65 high
 T66	Eq-Operator 890 891	>
-A11	Eq-Operator-Value T66 GT
 T67	Eq-Value 891 893	90
 T68	Eq-Unit 893 894	%
 T69	Procedure-Name 916 932	standard therapy
 T70	Eq-Operator 48 58	or younger
-A12	Eq-Operator-Value T70 LTEQ
 T5	Modifier 170 179	confirmed
-E5	Modifier:T5 Modifies:T48
 T6	Eq-Comparison 273 281	recently
-E6	Eq-Comparison:T6 Temporal-Period:T71
 T71	Eq-Temporal-Period 273 281	recently
-A13	Eq-Temporal-Period-Value T71 recent
 T72	Condition 296 301	tumor
-E46	Condition:T72 Name:T51
 T73	Procedure-Name 302 309	excised
-R1	Treatment-For Arg1:E17 Arg2:E46	
 T52	Condition 317 323	tumors
-E47	Condition:T52 Name:T74
 T74	Condition-Name 317 323	tumors
-R2	Equivalent-To Arg1:E47 Arg2:E46	
 T75	Modifier 350 355	blood
-E48	Modifier:T75 Modifies:T54
-R3	Treatment-For Arg1:E21 Arg2:E22	
-R4	Using Arg1:E28 Arg2:E24	
-R5	Using Arg1:E28 Arg2:E26	
 T76	Eq-Comparison 581 588	7 to 17
-E49	Eq-Comparison:T76 Value:T57 Operator:T58 Value2:T59
 T77	Assertion 679 688	available
-E50	Assertion:T77 Asserted:E31
-A14	Assertion-Type-Value E50 hypothetical
 T78	Assertion 693 703	accessible
-E51	Assertion:T78 Asserted:E31
-A15	Assertion-Type-Value E51 hypothetical
 T79	Or 689 692	and
-E52	Or:T79 Arg:E50 Arg2:E51
 T80	Procedure 723 730	excised
-E53	Procedure:T80 Name:T81
 T81	Procedure-Name 723 730	excised
-R6	Treatment-For Arg1:E53 Arg2:E32	
 T82	Modifier 774 781	ex vivo
-E54	Modifier:T82 Modifies:T62
 T83	Procedure-Name 802 819	genetic profiling
-R7	Treatment-For Arg1:E35 Arg2:E32	
-R8	Treatment-For Arg1:E37 Arg2:E32	
 T84	Eq-Comparison 840 845	newly
-E55	Eq-Comparison:T84 Temporal-Recency:T85
 T85	Eq-Temporal-Recency 840 845	newly
-A9	Eq-Temporal-Recency-Value T85 first-time
 T86	Observation-Name 896 905	cure rate
-R9	Treatment-For Arg1:E42 Arg2:E40	
-R10	Equivalent-To Arg1:E41 Arg2:T65	
-R11	Using Arg1:E42 Arg2:E45	
+A1	Temporal-Connection-Type-Value E3 during
+A2	Assertion-Type-Value E7 possible
+A3	Assertion-Type-Value E23 hypothetical
+A4	Assertion-Type-Value E27 hypothetical
+A5	Assertion-Type-Value E34 hypothetical
+A6	Eq-Temporal-Unit-Value T47 year
+A7	Eq-Temporal-Period-Value T49 future
+A8	Eq-Operator-Value T58 BETWEEN
+A10	Polarity-Value T65 high
+A11	Eq-Operator-Value T66 GT
+A12	Eq-Operator-Value T70 LTEQ
+A13	Eq-Temporal-Period-Value T71 recent
+A14	Assertion-Type-Value E50 hypothetical
+A15	Assertion-Type-Value E51 hypothetical
+A9	Eq-Temporal-Recency-Value T85 first-time
+R1	Treatment-For Arg1:E17 Arg2:E46
+R2	Equivalent-To Arg1:E47 Arg2:E46
+R3	Treatment-For Arg1:E21 Arg2:E22
+R4	Using Arg1:E28 Arg2:E24
+R5	Using Arg1:E28 Arg2:E26
+R6	Treatment-For Arg1:E53 Arg2:E32
+R7	Treatment-For Arg1:E35 Arg2:E32
+R8	Treatment-For Arg1:E37 Arg2:E32
+R9	Treatment-For Arg1:E42 Arg2:E40
+R10	Equivalent-To Arg1:E41 Arg2:T65
+R11	Using Arg1:E42 Arg2:E45

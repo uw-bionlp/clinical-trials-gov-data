@@ -1,51 +1,51 @@
-T1	Modifier 33 37	neck
 E1	Modifier:T1 Modifies:T19
-T2	Condition 38 42	pain
-E2	Condition:T2 Name:T19
-T3	Modifier 56 60	head
+E2	Condition:T2 Name:T19 Acuteness:T12
 E3	Modifier:T3 Modifies:T20
-T4	Condition 61 65	pain
-E4	Condition:T4 Name:T20
-T5	Eq-Comparison 91 99	previous
+E4	Condition:T4 Name:T20 Acuteness:T29
 E5	Eq-Comparison:T5 Temporal-Period:T21
-T6	Procedure 100 107	surgery
 E6	Procedure:T6 Name:T22 Temporality:E5
-T7	Modifier 111 115	neck
 E7	Modifier:T7 Modifies:T22
-T8	Or 116 119	and
 E8	Or:T8 Arg:E7 Arg2:E9
-T9	Modifier 120 124	head
 E9	Modifier:T9 Modifies:T22
-T10	Observation 130 145	Body Mass Index
 E10	Observation:T10 Name:T23 Eq-Comparison:E11
-T11	Eq-Comparison 146 153	> 39,99
 E11	Eq-Comparison:T11 Operator:T24 Value:T25
-T13	Condition 159 169	politrauma
 E13	Condition:T13 Name:T26
-T14	Condition 184 193	pregnancy
 E14	Condition:T14 Name:T27
-T15	Modifier 199 203	neck
 E15	Modifier:T15 Modifies:T28
-T16	Or 204 207	and
 E16	Or:T16 Arg:E15 Arg2:E17
-T17	Modifier 208 212	head
 E17	Modifier:T17 Modifies:T28
-T18	Condition 213 223	infections
 E18	Condition:T18 Name:T28
+T1	Modifier 33 37	neck
+T2	Condition 38 42	pain
+T3	Modifier 56 60	head
+T4	Condition 61 65	pain
+T5	Eq-Comparison 91 99	previous
+T6	Procedure 100 107	surgery
+T7	Modifier 111 115	neck
+T8	Or 116 119	and
+T9	Modifier 120 124	head
+T10	Observation 130 145	Body Mass Index
+T11	Eq-Comparison 146 153	> 39,99
+T13	Condition 159 169	politrauma
+T14	Condition 184 193	pregnancy
+T15	Modifier 199 203	neck
+T16	Or 204 207	and
+T17	Modifier 208 212	head
+T18	Condition 213 223	infections
 T19	Condition-Name 38 42	pain
 T20	Condition-Name 61 65	pain
 T21	Eq-Temporal-Period 91 99	previous
-A1	Eq-Temporal-Period-Value T21 past
 T22	Procedure-Name 100 107	surgery
 T23	Observation-Name 130 145	Body Mass Index
-A2	Observation-Type-Value T23 vital
 T24	Eq-Operator 146 147	>
-A3	Eq-Operator-Value T24 GT
 T25	Eq-Value 148 153	39,99
 T26	Condition-Name 159 169	politrauma
 T27	Condition-Name 184 193	pregnancy
 T28	Condition-Name 213 223	infections
-T12	Modifier 25 32	Chronic
-E12	Modifier:T12 Modifies:T19
-T29	Modifier 48 55	Chronic
-E19	Modifier:T29 Modifies:T20
+T12	Acuteness 25 32	Chronic
+T29	Acuteness 48 55	Chronic
+A1	Eq-Temporal-Period-Value T21 past
+A2	Observation-Type-Value T23 vital
+A3	Eq-Operator-Value T24 GT
+A4	Acuteness-Type-Value T12 chronic
+A5	Acuteness-Type-Value T29 chronic

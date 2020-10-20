@@ -1,48 +1,48 @@
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E6	Age:T10 Eq-Comparison:E7
+E7	Eq-Comparison:T14 Operator:T11 Value:T12 Value2:T13 Temporal-Unit:T9
+E1	Assertion:T15 Asserted:E5
+E2	Allergy:T16 Name:E3
+E4	Condition:T17 Name:T18
+E8	Or:T19 Arg:E3 Arg2:E4
+E9	Condition:T20 Name:T22
+E10	And:T21 Arg:T7 Arg2:E2
+E11	Condition:T23 Name:T24
+E12	Or:T25 Arg:E9 Arg2:E11
+E13	Modifier:T26
 T1	Life-Stage-And-Gender 25 33	Children
-A1	Life-Stage-And-Gender-Type T1 child
 T3	Procedure 154 171	local anaesthesia
 T4	Procedure-Name 154 171	local anaesthesia
-E3	Procedure:T3 Name:T4
 T5	Procedure 85 101	dental treatment
 T6	Procedure-Name 85 101	dental treatment
-E5	Procedure:T5 Name:T6
 T7	Life-Stage-And-Gender 127 135	Children
-A3	Life-Stage-And-Gender-Type T7 child
 T8	Life-Stage-And-Gender 252 260	children
-A4	Life-Stage-And-Gender-Type T8 child
 T9	Eq-Temporal-Unit 42 47	years
-A5	Eq-Temporal-Unit-Value T9 year
 T10	Age 48 51	old
-E6	Age:T10 Eq-Comparison:E7
 T11	Eq-Operator 37 39	to
-A6	Eq-Operator-Value T11 BETWEEN
 T12	Eq-Value 35 36	6
 T13	Eq-Value 40 41	9
 T14	Eq-Comparison 35 47	6 to 9 years
-E7	Eq-Comparison:T14 Operator:T11 Value:T12 Value2:T13 Temporal-Unit:T9
 T2	Life-Stage-And-Gender 52 60	children
-A2	Life-Stage-And-Gender-Type T2 child
 T15	Assertion 75 84	requiring
-E1	Assertion:T15 Asserted:E5
-A7	Assertion-Type-Value E1 hypothetical
 T16	Allergy 143 150	allergy
-E2	Allergy:T16 Name:E3
 T17	Condition 184 191	problem
-E4	Condition:T17 Name:T18
 T18	Condition-Name 184 191	problem
 T19	Or 172 174	or
-E8	Or:T19 Arg:E3 Arg2:E4
 T20	Condition 218 230	Mentally ill
-E9	Condition:T20 Name:T22
 T21	And 136 142	having
-E10	And:T21 Arg:T7 Arg2:E2
 T22	Condition-Name 218 230	Mentally ill
 T23	Condition 234 251	mentally retarded
-E11	Condition:T23 Name:T24
 T24	Condition-Name 234 251	mentally retarded
 T25	Or 231 233	or
-E12	Or:T25 Arg:E9 Arg2:E11
-R1	If-Then Arg1:T8 Arg2:E11	
 T26	Modifier 175 183	systemic
-E13	Modifier:T26 
-R2	Abbrev-Of Arg1:E13 Arg2:E4	
+A1	Life-Stage-And-Gender-Type T1 child
+A3	Life-Stage-And-Gender-Type T7 child
+A4	Life-Stage-And-Gender-Type T8 child
+A5	Eq-Temporal-Unit-Value T9 year
+A6	Eq-Operator-Value T11 BETWEEN
+A2	Life-Stage-And-Gender-Type T2 child
+A7	Assertion-Type-Value E1 hypothetical
+R1	If-Then Arg1:T8 Arg2:E11
+R2	Abbrev-Of Arg1:E13 Arg2:E4

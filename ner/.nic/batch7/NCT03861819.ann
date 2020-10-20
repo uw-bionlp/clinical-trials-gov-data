@@ -1,0 +1,325 @@
+T1	Age 25 29	Ages
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 30 35	18-59
+E2	Eq-Comparison:T2 Value:T92 Operator:T93 Value2:T94
+T3	Condition 66 94	nonalcoholic steatohepatitis
+E3	Condition:T3 Name:T95
+T4	Or 95 98	and
+E4	Or:T4 Arg:E3 Arg2:E5
+T5	Condition 99 107	fibrosis
+E5	Condition:T5 Name:T96 Stage:E6
+T6	Eq-Comparison 109 118	stage 1-3
+E6	Eq-Comparison:T6 Unit:T97 Value:T98 Operator:T99 Value:T100
+T7	Procedure 125 137	liver biopsy
+E7	Procedure:T7 Name:T101
+T8	Assertion 143 150	Able to
+E8	Assertion:T8 Asserted:E9
+A1	Assertion-Type-Value E8 hypothetical
+T9	Observation 161 184	indoor rowing apparatus
+E9	Observation:T9 Name:T103
+T10	Negation 190 193	Not
+E10	Negation:T10 Negates:E11
+T11	Observation 219 236	physical exercise
+E11	Observation:T11 Name:T104
+T12	Eq-Comparison 238 258	more than 60 minutes
+E12	Eq-Comparison:T12 Operator:T105 Value:T106 Temporal-Unit:T107
+T13	Or 281 283	or
+E13	Or:T13 Arg:E12 Arg2:E14
+T14	Eq-Comparison 284 294	30 minutes
+E14	Eq-Comparison:T14 Value:T109 Temporal-Unit:T110
+T15	Eq-Comparison 326 334	per week
+E15	Eq-Comparison:T15 Per:T112
+T16	Negation 341 344	Not
+E16	Negation:T16 Negates:E17
+T17	Assertion 354 363	trying to
+E17	Assertion:T17 Asserted:E93
+A2	Assertion-Type-Value E17 intention
+T18	Observation 386 402	dietary approach
+E18	Observation:T18 Name:T168
+T19	Negation 408 410	No
+E19	Negation:T19 Negates:E20
+T20	Contraindication 420 438	contra-indications
+E20	Contraindication:T20 Contraindicates:E21
+T21	Observation 442 450	exercise
+E21	Observation:T21 Name:T113
+T22	Eq-Comparison 452 458	recent
+E22	Eq-Comparison:T22 Temporal-Period:T114
+T23	Eq-Comparison 460 469	<6 months
+E23	Eq-Comparison:T23 Operator:T115 Value:T116 Temporal-Unit:T117
+T24	Condition 477 490	cardiac event
+E24	Condition:T24 Name:T119 Severity:T118 Temporality:E23
+T25	Condition 500 506	angina
+E25	Condition:T25 Name:T121 Stability:T120
+T26	Modifier 508 520	uncontrolled
+E26	Modifier:T26 Modifies:T122
+T27	Condition 521 533	dysrhythmias
+E27	Condition:T27 Name:T122
+T28	Assertion 542 550	symptoms
+E28	Assertion:T28 Asserted:E31
+A3	Assertion-Type-Value E28 possible
+T29	Or 551 553	or
+E29	Or:T29 Arg:E28 Arg2:E30
+T31	Condition 566 576	compromise
+E31	Condition:T31 Name:T123
+T32	Condition 590 605	aortic stenosis
+E32	Condition:T32 Name:T124
+T33	Modifier 607 619	uncontrolled
+E33	Modifier:T33 Modifies:T125
+T34	Assertion 620 631	symptomatic
+E34	Assertion:T34 Asserted:E35
+A4	Assertion-Type-Value E34 possible
+T35	Condition 632 645	heart failure
+E35	Condition:T35 Name:T125
+T36	Condition 653 670	pulmonary embolus
+E36	Condition:T36 Name:T127 Severity:T126
+T37	Condition 678 689	myocarditis
+E37	Condition:T37 Name:T129 Severity:T128
+T38	Or 690 692	or
+E38	Or:T38 Arg:E37 Arg2:E39
+T39	Condition 693 705	pericarditis
+E39	Condition:T39 Name:T130
+T40	Assertion 707 716	suspected
+E40	Assertion:T40 Asserted:E42
+A5	Assertion-Type-Value E40 possible
+T41	Or 717 719	or
+E41	Or:T41 Arg:E40
+T42	Condition 726 745	dissecting aneurism
+E42	Condition:T42 Name:T131
+T43	Or 746 749	and
+E43	Or:T43 Arg:E42 Arg2:E45
+T44	Modifier 756 764	systemic
+E44	Modifier:T44 Modifies:T133
+T45	Condition 765 774	infection
+E45	Condition:T45 Name:T133 Severity:T132
+T46	Negation 780 782	No
+E46	Negation:T46 Negates:E49
+T47	Other 783 788	other
+E47	Other:T47 Is-Other:E49
+T48	Modifier 797 804	chronic
+E48	Modifier:T48 Modifies:T134
+T49	Condition 805 818	liver disease
+E49	Condition:T49 Name:T134
+T50	Procedure 836 844	serology
+E50	Procedure:T50 Name:T170
+T51	Or 845 848	and
+E51	Or:T51 Arg:E50 Arg2:E52
+T52	Procedure 849 858	histology
+E52	Procedure:T52 Name:T171
+T53	Negation 865 867	No
+E53	Negation:T53 Negates:E54
+T54	Condition 868 883	liver cirrhosis
+E54	Condition:T54 Name:T135
+T55	Eq-Comparison 885 892	stage 4
+E55	Eq-Comparison:T55 Unit:T136 Value:T137
+T56	Condition 893 901	fibrosis
+E56	Condition:T56 Name:T138 Stage:E55
+T57	Procedure 905 917	liver biopsy
+E57	Procedure:T57 Name:T139
+T58	Or 919 921	or
+E58	Or:T58 Arg:E54 Arg2:E59
+T59	Condition 946 955	cirrhosis
+E59	Condition:T59 Name:T140 Provider:E60
+T60	Provider 976 988	hepatologist
+E60	Provider:T60 Type:T172
+T61	Negation 994 996	No
+E61	Negation:T61 Negates:E62
+T62	Condition 997 1020	coronary artery disease
+E62	Condition:T62 Name:T141
+T63	Or 1021 1023	or
+E63	Or:T63 Arg:E62 Arg2:E65
+T64	Modifier 1024 1031	chronic
+E64	Modifier:T64 Modifies:T142
+T65	Condition 1032 1061	obstructive pulmonary disease
+E65	Condition:T65 Name:T142
+T66	Negation 1068 1070	No
+E66	Negation:T66 Negates:E67
+T67	Condition 1084 1094	malignancy
+E67	Condition:T67 Name:T143
+T68	Exception 1096 1102	except
+E68	Exception:T68 From:E67 Except:E70
+T69	Modifier 1116 1120	skin
+E69	Modifier:T69 Modifies:T144
+T70	Condition 1121 1127	cancer
+E70	Condition:T70 Name:T144
+T71	Negation 1134 1136	No
+E71	Negation:T71 Negates:E75
+T72	Eq-Comparison 1137 1141	past
+E72	Eq-Comparison:T72 Temporal-Period:T145
+T73	Or 1142 1144	or
+E73	Or:T73 Arg:E72 Arg2:E74
+T74	Eq-Comparison 1145 1160	present history
+E74	Eq-Comparison:T74 Temporal-Period:T146
+T75	Condition 1164 1183	portal hypertension
+E75	Condition:T75 Name:T147 Temporality:E72 Temporality2:E74
+T76	Modifier 1185 1195	esophageal
+E76	Modifier:T76 Modifies:T148
+T77	Condition 1196 1203	varices
+E77	Condition:T77 Name:T148
+T78	Condition 1205 1212	ascites
+E78	Condition:T78 Name:T175
+T79	Condition 1214 1236	hepatic encephalopathy
+E79	Condition:T79 Name:T149
+T80	Negation 1243 1245	No
+E80	Negation:T80 Negates:E81 Negates2:E84
+T81	Drug 1253 1270	immunosuppression
+E81	Drug:T81 Name:T150
+T82	Or 1271 1273	or
+E82	Or:T82 Arg:E81 Arg2:E84
+T83	Modifier 1274 1281	chronic
+E83	Modifier:T83 Modifies:T151
+T84	Drug 1282 1323	nonsteroidal anti-inflammatory medication
+E84	Drug:T84 Name:T151
+T86	Eq-Comparison 1329 1360	No more than 14 drinks per week
+E86	Eq-Comparison:T86 Operator:T152 Value:T153 Unit:T154 Per:T155
+T87	Or 1371 1373	or
+E87	Or:T87 Arg:T156 Arg2:T160
+T88	Eq-Comparison 1374 1389	7 drinks a week
+E88	Eq-Comparison:T88 Value:T157 Unit:T158 Per:T159
+T89	Eq-Comparison 1409 1421	last 2 years
+E89	Eq-Comparison:T89 Temporal-Period:T161 Value:T162 Temporal-Unit:T163
+T92	Eq-Value 30 32	18
+T93	Eq-Operator 32 33	-
+A7	Eq-Operator-Value T93 BETWEEN
+T94	Eq-Value 33 35	59
+T95	Condition-Name 66 94	nonalcoholic steatohepatitis
+T96	Condition-Name 99 107	fibrosis
+T97	Eq-Unit 109 114	stage
+T98	Eq-Value 115 116	1
+T99	Eq-Operator 116 117	-
+A8	Eq-Operator-Value T99 BETWEEN
+T100	Eq-Value 117 118	3
+T101	Procedure-Name 125 137	liver biopsy
+T103	Observation-Name 161 184	indoor rowing apparatus
+T104	Observation-Name 219 236	physical exercise
+A9	Observation-Type-Value T104 social-habit
+T105	Eq-Operator 238 247	more than
+A10	Eq-Operator-Value T105 GT
+T106	Eq-Value 248 250	60
+T107	Eq-Temporal-Unit 251 258	minutes
+A11	Eq-Temporal-Unit-Value T107 minute
+T108	Severity 262 270	moderate
+A12	Severity-Value T108 moderate
+T109	Eq-Value 284 286	30
+T110	Eq-Temporal-Unit 287 294	minutes
+A13	Eq-Temporal-Unit-Value T110 minute
+T111	Observation-Name 317 325	exercise
+T112	Eq-Temporal-Unit 330 334	week
+A14	Eq-Temporal-Unit-Value T112 week
+T114	Eq-Temporal-Period 452 458	recent
+A15	Eq-Temporal-Period-Value T114 recent
+T115	Eq-Operator 460 461	<
+A16	Eq-Operator-Value T115 LT
+T116	Eq-Value 461 462	6
+T117	Eq-Temporal-Unit 463 469	months
+A17	Eq-Temporal-Unit-Value T117 month
+T118	Severity 471 476	acute
+A18	Severity-Value T118 severe
+T119	Condition-Name 477 490	cardiac event
+T120	Stability 491 499	unstable
+A19	Stability-Value T120 change
+T121	Condition-Name 500 506	angina
+T122	Condition-Name 521 533	dysrhythmias
+T123	Condition-Name 566 576	compromise
+T124	Condition-Name 590 605	aortic stenosis
+T125	Condition-Name 632 645	heart failure
+T126	Severity 647 652	acute
+A20	Severity-Value T126 severe
+T127	Condition-Name 653 670	pulmonary embolus
+T128	Severity 672 677	acute
+A21	Severity-Value T128 severe
+T129	Condition-Name 678 689	myocarditis
+T130	Condition-Name 693 705	pericarditis
+T131	Condition-Name 726 745	dissecting aneurism
+T132	Severity 750 755	acute
+A22	Severity-Value T132 severe
+T133	Condition-Name 765 774	infection
+T134	Condition-Name 805 818	liver disease
+T135	Condition-Name 868 883	liver cirrhosis
+T136	Eq-Unit 885 890	stage
+T137	Eq-Value 891 892	4
+T138	Condition-Name 893 901	fibrosis
+T139	Procedure-Name 905 917	liver biopsy
+T140	Condition-Name 946 955	cirrhosis
+T141	Condition-Name 997 1020	coronary artery disease
+T142	Condition-Name 1032 1061	obstructive pulmonary disease
+T143	Condition-Name 1084 1094	malignancy
+T144	Condition-Name 1121 1127	cancer
+T145	Eq-Temporal-Period 1137 1141	past
+A23	Eq-Temporal-Period-Value T145 past
+T146	Eq-Temporal-Period 1145 1160	present history
+A24	Eq-Temporal-Period-Value T146 present
+T147	Condition-Name 1164 1183	portal hypertension
+T148	Condition-Name 1196 1203	varices
+T149	Condition-Name 1214 1236	hepatic encephalopathy
+T150	Drug-Name 1253 1270	immunosuppression
+T151	Drug-Name 1282 1323	nonsteroidal anti-inflammatory medication
+T152	Eq-Operator 1329 1341	No more than
+A25	Eq-Operator-Value T152 LTEQ
+T153	Eq-Value 1342 1344	14
+T154	Eq-Unit 1345 1351	drinks
+T155	Eq-Temporal-Unit 1356 1360	week
+A26	Eq-Temporal-Unit-Value T155 week
+T156	Life-Stage-And-Gender 1365 1369	male
+A27	Life-Stage-And-Gender-Type T156 male
+T157	Eq-Value 1374 1375	7
+T158	Eq-Unit 1376 1382	drinks
+T159	Eq-Temporal-Unit 1385 1389	week
+A28	Eq-Temporal-Unit-Value T159 week
+T160	Life-Stage-And-Gender 1394 1400	female
+A29	Life-Stage-And-Gender-Type T160 female
+T161	Eq-Temporal-Period 1409 1413	last
+A30	Eq-Temporal-Period-Value T161 past
+T162	Eq-Value 1414 1415	2
+T163	Eq-Temporal-Unit 1416 1421	years
+A31	Eq-Temporal-Unit-Value T163 year
+T164	Language 1504 1511	English
+R1	Found-By Arg1:E5 Arg2:E7	
+A32	Observation-Type-Value T103 social-habit
+A33	Observation-Type-Value T111 social-habit
+T102	Observation 317 325	exercise
+E92	Observation:T102 Name:T111 Temporality:E15 Severity:T165 Duration:E14 Severity2:T108 Duration2:E12
+T165	Severity 298 316	vigorous intensity
+A34	Severity-Value T165 severe
+R2	Equivalent-To Arg1:E92 Arg2:E11	
+T166	Condition 364 375	lose weight
+E93	Condition:T166 Name:T167
+T167	Condition-Name 364 375	lose weight
+T168	Observation-Name 386 402	dietary approach
+A35	Observation-Type-Value T168 social-habit
+R3	Using Arg1:E93 Arg2:E18	
+T113	Observation-Name 442 450	exercise
+A36	Observation-Type-Value T113 social-habit
+R4	Equivalent-To Arg1:E23 Arg2:E22	
+R5	Example-Of Arg1:E24 Arg2:E20	
+R6	Example-Of Arg1:E25 Arg2:E20	
+R7	Example-Of Arg1:E27 Arg2:E20	
+T30	Modifier 554 565	hemodynamic
+E30	Modifier:T30 Modifies:T123
+R8	Caused-By Arg1:E31 Arg2:E27	
+T169	Assertion 578 589	symptomatic
+E94	Assertion:T169 Asserted:E32
+A37	Assertion-Type-Value E94 possible
+R9	Example-Of Arg1:E32 Arg2:E20	
+R10	Example-Of Arg1:E35 Arg2:E20	
+R11	Example-Of Arg1:E36 Arg2:E20	
+R12	Example-Of Arg1:E37 Arg2:E20	
+R13	Example-Of Arg1:E39 Arg2:E20	
+R14	Example-Of Arg1:E42 Arg2:E20	
+R15	Example-Of Arg1:E45 Arg2:E20	
+T170	Procedure-Name 836 844	serology
+T171	Procedure-Name 849 858	histology
+R16	Found-By Arg1:E49 Arg2:E50	
+R17	Found-By Arg1:E49 Arg2:E52	
+R18	Found-By Arg1:E56 Arg2:E57	
+R19	Equivalent-To Arg1:E56 Arg2:E54	
+T172	Provider-Type 976 988	hepatologist
+T173	Modifier 1107 1115	melanoma
+E95	Modifier:T173 Modifies:T144
+T174	Negation 1103 1106	non
+E96	Negation:T174 Negates:E95
+T175	Condition-Name 1205 1212	ascites
+R20	Example-Of Arg1:E77 Arg2:E75	
+R21	Example-Of Arg1:E78 Arg2:E75	
+R22	Example-Of Arg1:E79 Arg2:E75	
+R23	If-Then Arg1:T156 Arg2:E86	
+R24	If-Then Arg1:T160 Arg2:E88	

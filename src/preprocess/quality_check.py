@@ -14,11 +14,12 @@ regex_ecog = r'(ECOG|Eastern Cooperative Oncology Group)'
 regex_chronic = r'(chronic|long[ |-]term)'
 
 
-def to_brat(output_dir, doc_id, Ts, text):
-    with open(os.path.join(output_dir, doc_id+'.txt'), 'w+') as fout:
+def to_brat(ann):
+    text, anns = ann.to_brat()
+    with open(os.path.join(ann.path, ann.doc_id+'.txt'), 'w+') as fout:
         fout.write(text)
-    with open(os.path.join(output_dir, doc_id+'.ann'), 'w+') as fout:
-        fout.write('\n'.join(Ts))
+    with open(os.path.join(ann.path, ann.doc_id+'.ann'), 'w+') as fout:
+        fout.write(anns)
 
 def condition_and_observation(annotations):
     ''' Check that annotations are not both Conditions and Observations '''
@@ -100,7 +101,7 @@ def chronic(annotations):
                 ann.As[a_id] = a
                 max_a += 1
                 ann.Ts[rec.id] = rec
-                es = [ v for _,v in ann.Es.items() if v.args[0].val == rec ]
+                es = [ v for _,v in ann.Es.items() if v.args[0].val == rec ] # Old entity
                 for e in es:
                     try:
                         conditions = [ arg for arg in e.args if arg.type.startswith('Modifies') ]
@@ -111,8 +112,22 @@ def chronic(annotations):
                             new_arg = BratEArgPair('Acuteness', rec)
                             cond.args.append(new_arg)
                             ann.Es[cond.id] = cond
-                    except:
+                            other_es = [ v for _,v in ann.Es.items() if any([ arg for arg in v.args if arg.val == e ]) ]
+                            for e2 in other_es:
+                                for arg in e2.args[1:]:
+                                    if arg.val == e:
+                                        arg.val = rec
+                                ann.Es[e2.id] = e2
+                            rels = [ v for _,v in ann.Rs.items() if v.arg1 == e or v.arg2 == e ]
+                            for rel in rels:
+                                if rel.arg1 == e:
+                                    rel.arg1 = rec
+                                if rel.arg2 == e:
+                                    rel.arg2 = rec
+                                ann.Rs[rel.id] = rel
+                    except Exception as ex:
                         print(f'{ann.path}/{ann.doc_id} has a malformed Modifer!')
+
                     del ann.Es[e.id]
     return annotations
 
@@ -125,6 +140,9 @@ def acute(annotations):
             for rec in matched:
                 rec.type = 'Acuteness'
                 a_id = f'A{max_a}'
+                prev_a = [ v for _,v in ann.As.items() if v.attr_of == rec and v.type == 'Severity-Value' ]
+                if len(prev_a):
+                    del ann.As[prev_a[0].id]
                 a = BratA('Acuteness-Type-Value', rec, 'acute', a_id, -1)
                 ann.As[a_id] = a
                 max_a += 1
@@ -155,6 +173,7 @@ def asa_nyha_ecog(annotations):
                     rec.type = 'Observation'
                     e = [ v for _,v in ann.Es.items() if v.args[0].val == rec ][0]
                     e.type = rec.type
+                    e.args[0].type = rec.type
                     eqs = [ arg for arg in e.args if arg.type == 'Stage' ]
                     for eq in eqs:
                         eq.type = 'Eq-Comparison'
@@ -173,8 +192,12 @@ def main():
 
     # Convert
     # TODO: anatomy, Histology
-    for converter in [ condition_and_observation ]:
+    for converter in [ asa_nyha_ecog, acute, chronic ]:
         annotations = converter(annotations)
+
+        
+    for ann in annotations:
+        to_brat(ann)
     
 
     

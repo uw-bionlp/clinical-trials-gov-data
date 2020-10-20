@@ -1,0 +1,137 @@
+T1	Condition 300 325	Transient Ischemic Attack
+T2	Condition-Name 300 325	Transient Ischemic Attack
+E1	Condition:T1 Name:T2 Code:T23
+T3	Condition 262 277	ischemic stroke
+T4	Condition-Name 262 277	ischemic stroke
+E3	Condition:T3 Name:T4 Type:T13 Code:T14
+T5	Condition 732 747	primary disease
+E5	Condition:T5 Severity:T47 Name:T74
+T7	Procedure 849 856	surgery
+E7	Procedure:T7 Temporality:E26 Name:T55
+T9	Condition 41 47	stroke
+T10	Condition-Name 41 47	stroke
+E9	Condition:T9 Name:T10 Severity:T6
+T11	Procedure 1009 1021	thrombectomy
+T12	Procedure-Name 1009 1021	thrombectomy
+E11	Procedure:T11 Name:T12
+T16	Condition-Name 419 425	stroke
+T17	Condition 910 916	stroke
+T18	Condition-Name 910 916	stroke
+E17	Condition:T17 Name:T18 Temporality:E27
+T19	Condition 295 298	TIA
+T20	Condition-Name 295 298	TIA
+E19	Condition:T19 Name:T20
+T21	Observation 517 520	mRS
+T22	Observation-Name 517 520	mRS
+E21	Observation:T21 Name:T22 Eq-Comparison:E24
+T24	Eq-Operator 388 389	≤
+A2	Eq-Operator-Value T24 LTEQ
+T25	Eq-Operator 448 449	≤
+A3	Eq-Operator-Value T25 LTEQ
+T26	Eq-Operator 521 526	up to
+A4	Eq-Operator-Value T26 LTEQ
+T27	Eq-Operator 769 770	<
+A5	Eq-Operator-Value T27 LT
+T28	Eq-Operator 857 863	within
+A6	Eq-Operator-Value T28 LTEQ
+T29	Eq-Operator 917 923	within
+A7	Eq-Operator-Value T29 LTEQ
+T30	Eq-Temporal-Unit 866 871	weeks
+A8	Eq-Temporal-Unit-Value T30 week
+T31	Eq-Temporal-Unit 926 932	months
+A9	Eq-Temporal-Unit-Value T31 month
+T35	Eq-Value 390 391	4
+T36	Eq-Value 450 451	3
+T37	Eq-Value 527 528	3
+T38	Eq-Value 771 772	1
+T39	Eq-Value 864 865	4
+T40	Eq-Value 924 925	3
+T41	Eq-Comparison 388 397	≤ 4 hours
+E22	Eq-Comparison:T41 Operator:T24 Value:T35 Temporal-Unit:T52
+T42	Eq-Comparison 448 451	≤ 3
+E23	Eq-Comparison:T42 Operator:T25 Value:T36
+T43	Eq-Comparison 521 528	up to 3
+E24	Eq-Comparison:T43 Operator:T26 Value:T37
+T44	Eq-Comparison 769 777	< 1 year
+E25	Eq-Comparison:T44 Operator:T27 Value:T38 Temporal-Unit:T65
+T45	Eq-Comparison 857 871	within 4 weeks
+E26	Eq-Comparison:T45 Operator:T28 Temporal-Unit:T30 Value:T39
+T46	Eq-Comparison 917 932	within 3 months
+E27	Eq-Comparison:T46 Operator:T29 Temporal-Unit:T31 Value:T40
+T13	Condition-Type 243 248	Final
+A1	Condition-Type-Value T13 discharge
+R2	Abbrev-Of Arg1:E19 Arg2:E1	
+T49	Condition 346 351	G45.4
+E12	Condition:T49 Code:T50
+T50	Condition-Code 346 351	G45.4
+T51	Exception 339 345	except
+E13	Exception:T51 Except:E12 From:E1
+T52	Eq-Temporal-Unit 392 397	hours
+A10	Eq-Temporal-Unit-Value T52 hour
+T53	Observation 368 387	onset-to-alarm time
+E14	Observation:T53 Name:T54 Eq-Comparison:E22
+T54	Observation-Name 368 387	onset-to-alarm time
+T56	Observation 426 447	modified Rankin scale
+E18	Observation:T56 Name:T57 Eq-Comparison:E23
+T57	Observation-Name 426 447	modified Rankin scale
+A11	Observation-Type-Value T57 clinical-score
+T58	Condition 459 475	able to ambulate
+E20	Condition:T58 Name:T59
+T59	Condition-Name 459 475	able to ambulate
+R4	Equivalent-To Arg1:E20 Arg2:E18	
+T61	Modifier 706 715	Malignant
+E30	Modifier:T61 
+T63	Observation 753 768	life expectancy
+E32	Observation:T63 Name:T64 Eq-Comparison:E25
+T64	Observation-Name 753 768	life expectancy
+T65	Eq-Temporal-Unit 773 777	year
+A12	Eq-Temporal-Unit-Value T65 year
+T68	Temporal-Connection 872 878	before
+E35	Temporal-Connection:T68 Arg:E26 Arg2:E28
+T71	Study 940 955	study inclusion
+E37	Study:T71 
+T73	Temporal-Connection 933 939	before
+E38	Temporal-Connection:T73 Arg:E27 Arg2:E37
+T75	Contraindication 970 987	contraindications
+E39	Contraindication:T75 Contraindicates:E40
+T76	Procedure 992 1004	thrombolysis
+E40	Procedure:T76 Name:T77
+T77	Procedure-Name 992 1004	thrombolysis
+T14	Condition-Code 279 290	ICD 10: I63
+T23	Condition-Code 327 338	ICD 10: G45
+T32	Or 292 294	or
+E2	Or:T32 Arg:E3 Arg2:E19
+T33	Or 716 718	or
+E6	Or:T33 Arg:E30 Arg2:E8
+T34	Modifier 719 724	other
+E8	Modifier:T34 Modifies:E5
+T47	Severity 725 731	severe
+T60	And 748 752	with
+E10	And:T60 Arg:E5 Arg2:E32
+T6	Severity 35 40	acute
+A16	Severity-Value T6 severe
+A15	Severity-Value T47 severe
+T8	Condition 419 425	stroke
+E4	Condition:T8 Name:T16
+T15	Temporal-Connection 415 418	Pre
+E15	Temporal-Connection:T15 Arg:E18 Arg2:E4
+A17	Temporal-Connection-Type-Value E15 before
+A13	Temporal-Connection-Type-Value E35 before
+A14	Temporal-Connection-Type-Value E38 before
+T48	And 1005 1008	AND
+E16	And:T48 Arg:E40 Arg2:E11
+T55	Procedure-Name 849 856	surgery
+T62	Study 879 884	study
+E28	Study:T62 
+T66	Assertion 25 34	Suspected
+E29	Assertion:T66 Asserted:E9
+A18	Assertion-Type-Value E29 possible
+T67	Condition 639 648	disabling
+E31	Condition:T67 Name:T69 Stability:T70
+T69	Condition-Name 639 648	disabling
+T70	Stability 626 635	Remission
+A19	Stability-Value T70 change
+T72	Assertion 649 657	symptoms
+E33	Assertion:T72 Asserted:E31
+A20	Assertion-Type-Value E33 possible
+T74	Condition-Name 732 747	primary disease

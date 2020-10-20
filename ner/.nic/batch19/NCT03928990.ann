@@ -1,0 +1,129 @@
+T1	Condition 63 81	Multiple sclerosis
+T2	Condition-Name 63 81	Multiple sclerosis
+E1	Condition:T1 Name:T2
+T3	Condition 377 395	multiple sclerosis
+T4	Condition-Name 377 395	multiple sclerosis
+E3	Condition:T3 Name:T4
+T5	Eq-Comparison 447 459	Introduction
+T6	Eq-Temporal-Recency 447 459	Introduction
+E5	Eq-Comparison:T5 Temporal-Recency:T6
+T11	Eq-Operator 315 321	within
+A3	Eq-Operator-Value T11 LTEQ
+T12	Eq-Temporal-Unit 48 53	years
+A4	Eq-Temporal-Unit-Value T12 year
+T13	Eq-Temporal-Unit 415 421	months
+A5	Eq-Temporal-Unit-Value T13 month
+T14	Age 34 38	aged
+E8	Age:T14 Eq-Comparison:E13
+T16	Eq-Operator 42 44	to
+A6	Eq-Operator-Value T16 BETWEEN
+T17	Eq-Value 39 41	18
+T19	Eq-Value 45 47	80
+T21	Eq-Value 322 324	60
+T22	Eq-Value 174 177	6.5
+T25	Eq-Value 514 516	30
+T26	Eq-Comparison 315 328	within 60 day
+E10	Eq-Comparison:T26 Value:T21 Temporal-Unit:T40
+T27	Eq-Comparison 406 421	within 6 months
+E11	Eq-Comparison:T27 Temporal-Unit:T13 Operator:T46 Value:T47
+T28	Eq-Comparison 507 520	within 30 day
+E12	Eq-Comparison:T28 Operator:T52 Value:T25 Temporal-Unit:T53
+T29	Eq-Comparison 39 53	18 to 80 years
+E13	Eq-Comparison:T29 Operator:T16 Value:T17 Temporal-Unit:T12 Value2:T19
+T9	Observation 120 152	Expanded Disability Status Scale
+E2	Observation:T9 Name:T10
+T10	Observation-Name 120 152	Expanded Disability Status Scale
+A1	Observation-Type-Value T10 clinical-score
+T15	Observation 154 158	EDSS
+E4	Observation:T15 Name:T18 Eq-Comparison:E6
+T18	Observation-Name 154 158	EDSS
+R1	Abbrev-Of Arg1:E4 Arg2:E2	
+T20	Eq-Comparison 160 177	between 0 and 6.5
+E6	Eq-Comparison:T20 Operator:T24 Value:T23 Value2:T22
+T23	Eq-Value 168 169	0
+T24	Eq-Operator 160 167	between
+A2	Eq-Operator-Value T24 BETWEEN
+T32	Condition 193 205	able to move
+E9	Condition:T32 Name:T33
+T33	Condition-Name 193 205	able to move
+T34	Procedure 222 243	mechanical assistance
+E15	Procedure:T34 Name:T35
+T35	Procedure-Name 222 243	mechanical assistance
+R2	Using Arg1:E9 Arg2:E15	
+T36	Condition 287 314	neurological symptomatology
+E16	Condition:T36 Name:T37 Stability:T38 Temporality:E10
+T37	Condition-Name 287 314	neurological symptomatology
+T38	Stability 270 283	Deterioration
+A8	Stability-Value T38 change
+T39	Study 336 346	enrollment
+E17	Study:T39 
+T40	Eq-Temporal-Unit 325 328	day
+A9	Eq-Temporal-Unit-Value T40 day
+T41	Temporal-Connection 329 335	before
+E18	Temporal-Connection:T41 Arg:E10 Arg2:E17
+A10	Temporal-Connection-Type-Value E18 before
+T42	Procedure 396 405	treatment
+E19	Procedure:T42 Stability:T43 Temporality:E11
+T43	Stability 354 361	Changes
+A11	Stability-Value T43 change
+R3	Treatment-For Arg1:E19 Arg2:E3	
+T44	Study 429 439	enrollment
+E20	Study:T44 
+T45	Temporal-Connection 422 428	before
+E21	Temporal-Connection:T45 Arg:E11 Arg2:E20
+A12	Temporal-Connection-Type-Value E21 before
+T46	Eq-Operator 406 412	within
+A13	Eq-Operator-Value T46 LTEQ
+T47	Eq-Value 413 414	6
+A14	Eq-Temporal-Recency-Value T6 first-time
+T48	Procedure 465 474	treatment
+E22	Procedure:T48 Temporality:E5 Temporality2:E12
+T30	Condition 485 495	spasticity
+E14	Condition:T30 Name:T31
+T31	Condition-Name 485 495	spasticity
+T49	Condition 499 506	fatigue
+E23	Condition:T49 Name:T50
+T50	Condition-Name 499 506	fatigue
+T51	Or 496 498	or
+E24	Or:T51 Arg:E14 Arg2:E23
+R4	Treatment-For Arg1:E22 Arg2:E14	
+R5	Treatment-For Arg1:E22 Arg2:E23	
+T52	Eq-Operator 507 513	within
+A7	Eq-Operator-Value T52 LTEQ
+T53	Eq-Temporal-Unit 517 520	day
+A15	Eq-Temporal-Unit-Value T53 day
+T54	Study 528 538	enrollment
+E25	Study:T54 
+T55	Temporal-Connection 521 527	before
+E26	Temporal-Connection:T55 Arg:E12 Arg2:E25
+A16	Temporal-Connection-Type-Value E26 before
+T56	Procedure 563 583	reeducation protocol
+E27	Procedure:T56 Name:T57 Stability:T58
+T57	Procedure-Name 563 583	reeducation protocol
+T58	Stability 544 551	Changes
+A17	Stability-Value T58 change
+T59	Study 615 620	study
+E28	Study:T59 
+T60	Temporal-Connection 584 607	throughout the duration
+E29	Temporal-Connection:T60 Arg:E27 Arg2:E28
+A18	Temporal-Connection-Type-Value E29 during
+T7	Observation 688 711	resting metabolic value
+E7	Observation:T7 Name:T8 Eq-Comparison:E30
+T8	Observation-Name 688 711	resting metabolic value
+T61	Eq-Comparison 676 683	3 times
+E30	Eq-Comparison:T61 Value:T62 Unit:T63
+T62	Eq-Value 676 677	3
+T63	Eq-Unit 678 683	times
+T64	Negation 634 640	unable
+E31	Negation:T64 Negates:E7
+T65	Observation 716 744	Metabolic Equivalent of Task
+E32	Observation:T65 Name:T66 Eq-Comparison:E33
+T66	Observation-Name 716 744	Metabolic Equivalent of Task
+T67	Eq-Comparison 714 715	3
+E33	Eq-Comparison:T67 Value:T68
+T68	Eq-Value 714 715	3
+R6	Equivalent-To Arg1:E32 Arg2:E7	
+T69	Observation 746 750	METs
+E34	Observation:T69 Name:T70
+T70	Observation-Name 746 750	METs
+R7	Abbrev-Of Arg1:E34 Arg2:E32	

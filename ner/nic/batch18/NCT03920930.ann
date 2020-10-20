@@ -1,109 +1,110 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E7	Condition:T7 Name:T8
+E11	Procedure:T11 Name:T12 Temporality:E18 Acuteness:T50
+E14	Observation:T14 Name:T15 Eq-Comparison:E16
+E15	Eq-Comparison:T29 Operator:T16 Value:T24
+E16	Eq-Comparison:T30 Operator:T18 Value:T25
+E17	Eq-Comparison:T31 Operator:T19 Temporal-Unit:T21 Value:T26
+E18	Eq-Comparison:T32 Operator:T20 Temporal-Unit:T23 Value:T28
+E19	Eq-Comparison:T33 Temporal-Period:T34
+E2	Modifier:T9 Modifies:T35
+E4	Procedure:T10 Name:T35 Temporality:E19
+E6	Procedure:T36 Name:T37
+E8	Observation:T38 Name:T39 Eq-Comparison:E15
+E9	Condition:T40 Name:T41
+E10	Condition:T13 Name:T42 Severity:T43
+E12	Age:T44 Eq-Comparison:E17
+E13	Observation:T45 Name:T46
+E20	Study:T47 Temporality:E22
+E21	Other:T48 Is-Other:E20
+E22	Eq-Comparison:T49 Value:T27 Temporal-Unit:T22
+E24	Procedure:T51 Name:T52
+E25	Eq-Comparison:T53 Temporal-Period:T54
+E26	Temporal-Connection:T55 Arg:E18 Arg2:E25
+E27	Procedure:T56 Name:T57
+E28	Or:T58 Arg:E27 Arg2:E5
+E29	Allergy:T59 Name:E30
+E30	Drug:T60
+E31	Assertion:T61 Asserted:E27 Asserted2:E5
 T1	Condition 220 243	diabetic polyneuropathy
 T2	Condition-Name 220 243	diabetic polyneuropathy
-E1	Condition:T1 Name:T2
 T3	Condition 140 159	heart insufficiency
 T4	Condition-Name 140 159	heart insufficiency
-E3	Condition:T3 Name:T4
 T5	Procedure 546 557	anaesthesia
 T6	Procedure-Name 546 557	anaesthesia
-E5	Procedure:T5 Name:T6
 T7	Condition 305 314	pregnancy
 T8	Condition-Name 305 314	pregnancy
-E7	Condition:T7 Name:T8
 T11	Procedure 440 454	opioid therapy
 T12	Procedure-Name 440 454	opioid therapy
-E11	Procedure:T11 Name:T12 Temporality:E18
 T14	Observation 267 270	BMI
 T15	Observation-Name 267 270	BMI
-E14	Observation:T14 Name:T15 Eq-Comparison:E16
-A2	Observation-Type-Value T15 vital
 T16	Eq-Operator 165 166	>
-A3	Eq-Operator-Value T16 GT
 T17	Eq-Operator 193 194	>
-A4	Eq-Operator-Value T17 GT
 T18	Eq-Operator 271 272	>
-A5	Eq-Operator-Value T18 GT
 T19	Eq-Operator 289 290	<
-A6	Eq-Operator-Value T19 LT
 T20	Eq-Operator 455 456	>
-A7	Eq-Operator-Value T20 GT
 T21	Eq-Temporal-Unit 294 299	years
-A8	Eq-Temporal-Unit-Value T21 year
 T22	Eq-Temporal-Unit 422 426	days
-A9	Eq-Temporal-Unit-Value T22 day
 T23	Eq-Temporal-Unit 458 464	months
-A10	Eq-Temporal-Unit-Value T23 month
 T24	Eq-Value 166 167	2
 T25	Eq-Value 272 274	40
 T26	Eq-Value 291 293	18
 T27	Eq-Value 419 421	30
 T28	Eq-Value 456 457	3
 T29	Eq-Comparison 165 167	>2
-E15	Eq-Comparison:T29 Operator:T16 Value:T24
 T30	Eq-Comparison 271 274	>40
-E16	Eq-Comparison:T30 Operator:T18 Value:T25
 T31	Eq-Comparison 289 299	< 18 years
-E17	Eq-Comparison:T31 Operator:T19 Temporal-Unit:T21 Value:T26
 T32	Eq-Comparison 455 464	>3 months
-E18	Eq-Comparison:T32 Operator:T20 Temporal-Unit:T23 Value:T28
 T33	Eq-Comparison 31 41	undergoing
-E19	Eq-Comparison:T33 Temporal-Period:T34
 T34	Eq-Temporal-Period 31 41	undergoing
-A11	Eq-Temporal-Period-Value T34 present
 T9	Modifier 52 59	primary
-E2	Modifier:T9 Modifies:T35
 T10	Procedure 60 82	knee joint replacement
-E4	Procedure:T10 Name:T35 Temporality:E19
 T35	Procedure-Name 60 82	knee joint replacement
 T36	Procedure 95 114	general anaesthesia
-E6	Procedure:T36 Name:T37
 T37	Procedure-Name 95 114	general anaesthesia
-R1	Using Arg1:E4 Arg2:E6	
-T38	Condition 160 164	NYHA
-E8	Condition:T38 Name:T39 Stage:E15
-T39	Condition-Name 160 164	NYHA
-R2	Equivalent-To Arg1:E8 Arg2:E3	
+T38	Observation 160 164	NYHA
+T39	Observation-Name 160 164	NYHA
 T40	Condition 173 192	liver insufficiency
-E9	Condition:T40 Name:T41
 T41	Condition-Name 173 192	liver insufficiency
 T13	Condition 256 266	adipositas
-E10	Condition:T13 Name:T42 Severity:T43
 T42	Condition-Name 256 266	adipositas
 T43	Severity 249 255	severe
-A1	Severity-Value T43 severe
 T44	Age 294 299	years
-E12	Age:T44 Eq-Comparison:E17
 T45	Observation 331 345	police custody
-E13	Observation:T45 Name:T46
 T46	Observation-Name 331 345	police custody
 T47	Study 396 399	RCT
-E20	Study:T47 Temporality:E22
 T48	Other 370 380	paralleled
-E21	Other:T48 Is-Other:E20
 T49	Eq-Comparison 419 426	30 days
-E22	Eq-Comparison:T49 Value:T27 Temporal-Unit:T22
-T50	Modifier 432 439	chronic
-E23	Modifier:T50 Modifies:T12
+T50	Acuteness 432 439	chronic
 T51	Procedure 482 489	surgery
-E24	Procedure:T51 Name:T52
 T52	Procedure-Name 482 489	surgery
 T53	Eq-Comparison 472 481	scheduled
-E25	Eq-Comparison:T53 Temporal-Period:T54
 T54	Eq-Temporal-Period 472 481	scheduled
-A12	Eq-Temporal-Period-Value T54 future
 T55	Temporal-Connection 465 471	before
-E26	Temporal-Connection:T55 Arg:E18 Arg2:E25
-A13	Temporal-Connection-Type-Value E26 before
 T56	Procedure 535 542	surgery
-E27	Procedure:T56 Name:T57
 T57	Procedure-Name 535 542	surgery
 T58	Or 543 545	or
-E28	Or:T58 Arg:E27 Arg2:E5
 T59	Allergy 495 502	allergy
-E29	Allergy:T59 Name:E30
 T60	Drug 511 521	medication
-E30	Drug:T60 
-R3	Using Arg1:E27 Arg2:E30	
 T61	Assertion 522 534	required for
-E31	Assertion:T61 Asserted:E27 Asserted2:E5
+A2	Observation-Type-Value T15 vital
+A3	Eq-Operator-Value T16 GT
+A4	Eq-Operator-Value T17 GT
+A5	Eq-Operator-Value T18 GT
+A6	Eq-Operator-Value T19 LT
+A7	Eq-Operator-Value T20 GT
+A8	Eq-Temporal-Unit-Value T21 year
+A9	Eq-Temporal-Unit-Value T22 day
+A10	Eq-Temporal-Unit-Value T23 month
+A11	Eq-Temporal-Period-Value T34 present
+A1	Severity-Value T43 severe
+A12	Eq-Temporal-Period-Value T54 future
+A13	Temporal-Connection-Type-Value E26 before
 A14	Assertion-Type-Value E31 hypothetical
+A15	Observation-Type-Value T39 clinical-score
+A16	Acuteness-Type-Value T50 chronic
+R1	Using Arg1:E4 Arg2:E6
+R2	Equivalent-To Arg1:E8 Arg2:E3
+R3	Using Arg1:E27 Arg2:E30

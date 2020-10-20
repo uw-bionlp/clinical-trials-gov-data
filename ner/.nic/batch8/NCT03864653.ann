@@ -1,0 +1,64 @@
+T1	Eq-Comparison 25 34	Currently
+E1	Eq-Comparison:T1 Temporal-Period:T14
+T2	Drug 109 124	methamphetamine
+E2	Drug:T2 Name:T16
+T3	Procedure 125 142	treatment program
+E3	Procedure:T3 Name:T24 Temporality:E1 Location:T26
+T4	Eq-Comparison 204 220	within two weeks
+E4	Eq-Comparison:T4 Operator:T17 Value:T18 Temporal-Unit:T19
+T5	Temporal-Connection 221 223	of
+E5	Temporal-Connection:T5 Arg:E4 Arg2:E6
+A1	Temporal-Connection-Type-Value E5 before
+T6	Eq-Comparison 224 231	initial
+E6	Eq-Comparison:T6 Temporal-Recency:T28
+T7	Study 232 242	enrollment
+E7	Study:T7 Temporality:E6 Study-Of:E17
+T8	Negation 300 303	Not
+E8	Negation:T8 Negates:E19
+T9	Eq-Comparison 304 313	currently
+E9	Eq-Comparison:T9 Temporal-Period:T20
+T10	Or 362 364	or
+E10	Or:T10 Arg:E8 Arg2:E13
+T11	Eq-Comparison 366 385	more than two weeks
+E11	Eq-Comparison:T11 Operator:T21 Value:T22 Temporal-Unit:T23
+T12	Temporal-Connection 386 390	post
+E12	Temporal-Connection:T12 Arg:E11 Arg2:E13
+A2	Temporal-Connection-Type-Value E12 after
+T13	Study 391 401	enrollment
+E13	Study:T13 Study-Of:E18
+T14	Eq-Temporal-Period 25 34	Currently
+A3	Eq-Temporal-Period-Value T14 present
+T15	Encounter-Type 98 108	outpatient
+A4	Encounter-Type-Value T15 outpatient
+T16	Drug-Name 109 124	methamphetamine
+T17	Eq-Operator 204 210	within
+A5	Eq-Operator-Value T17 LTEQ
+T18	Eq-Value 211 214	two
+T19	Eq-Temporal-Unit 215 220	weeks
+A6	Eq-Temporal-Unit-Value T19 week
+T20	Eq-Temporal-Period 304 313	currently
+A7	Eq-Temporal-Period-Value T20 present
+T21	Eq-Operator 366 375	more than
+A8	Eq-Operator-Value T21 GT
+T22	Eq-Value 376 379	two
+T23	Eq-Temporal-Unit 380 385	weeks
+A9	Eq-Temporal-Unit-Value T23 week
+T24	Procedure-Name 125 142	treatment program
+R1	Using Arg1:E3 Arg2:E2	
+T25	Encounter 98 108	outpatient
+E14	Encounter:T25 
+R2	Using Arg1:E14 Arg2:E3	
+T26	Location 172 192	Los Angeles, CA, USA
+A10	Location-Value T26 residence
+T27	And 199 202	and
+E15	And:T27 Arg:E3 Arg2:E7
+T28	Eq-Temporal-Recency 224 231	initial
+A11	Eq-Temporal-Recency-Value T28 first-time
+T29	Procedure 348 355	program
+E16	Procedure:T29 
+T30	Procedure 266 273	program
+E17	Procedure:T30 
+T31	Procedure 423 430	program
+E18	Procedure:T31 
+T32	Study 314 322	enrolled
+E19	Study:T32 Temporality:E9 Study-Of:E16

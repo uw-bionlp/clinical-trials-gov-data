@@ -1,0 +1,95 @@
+T3	Condition 41 47	cancer
+T4	Condition-Name 41 47	cancer
+E3	Condition:T3 Name:T4
+T5	Condition 317 323	cancer
+T6	Condition-Name 317 323	cancer
+E5	Condition:T5 Name:T6
+T7	Condition 680 694	Lynch syndrome
+T8	Condition-Name 680 694	Lynch syndrome
+E7	Condition:T7 Name:T8
+T9	Drug 503 525	cytotoxic drug therapy
+T10	Drug-Name 503 525	cytotoxic drug therapy
+E9	Drug:T9 Name:T10
+T11	Procedure 527 548	targeted drug therapy
+T12	Procedure-Name 527 548	targeted drug therapy
+E11	Procedure:T11 Name:T12
+T14	Modifier 34 40	rectal
+E2	Modifier:T14 Modifies:T4
+T15	Modifier 25 30	Colon
+E4	Modifier:T15 Modifies:T4
+T16	Or 31 33	or
+E6	Or:T16 Arg:E4 Arg2:E2
+T17	Procedure 61 93	endoscopic biopsy histopathology
+E8	Procedure:T17 Name:T18
+T18	Procedure-Name 61 93	endoscopic biopsy histopathology
+R1	Found-By Arg1:E3 Arg2:E8	
+T1	Observation 109 115	sample
+E1	Observation:T1 Name:T2
+T2	Observation-Name 109 115	sample
+A1	Observation-Type-Value T2 lab
+T13	Observation 235 250	surgical tissue
+E10	Observation:T13 Name:T19 Specimen:T20
+T19	Observation-Name 235 250	surgical tissue
+A2	Observation-Type-Value T19 lab
+T20	Observation-Specimen 251 258	samples
+T21	Observation 277 284	testing
+E12	Observation:T21 Name:T22
+T22	Observation-Name 277 284	testing
+T23	Assertion 273 276	for
+E13	Assertion:T23 Asserted:E12
+A3	Assertion-Type-Value E13 hypothetical
+R2	Using Arg1:E12 Arg2:E10	
+T24	Negation 291 300	untreated
+E14	Negation:T24 Negates:E29
+T25	Modifier 301 306	colon
+E15	Modifier:T25 Modifies:T6
+T26	Modifier 310 316	rectal
+E16	Modifier:T26 Modifies:T6
+T27	Or 307 309	or
+E17	Or:T27 Arg:E15 Arg2:E16
+T28	Condition 420 438	distant metastasis
+E18	Condition:T28 Name:T29 Code:T31
+T29	Condition-Name 420 438	distant metastasis
+T31	Condition-Code 440 442	M0
+T30	Negation 405 407	No
+E19	Negation:T30 Negates:E18
+T32	Condition 488 491	CRC
+E20	Condition:T32 Name:T33
+T33	Condition-Name 488 491	CRC
+T34	Procedure 480 487	treated
+E21	Procedure:T34 Temporality:E28
+R3	Example-Of Arg1:E9 Arg2:E21	
+R4	Example-Of Arg1:E11 Arg2:E21	
+R5	Treatment-For Arg1:E21 Arg2:E20	
+T35	Condition 567 583	malignant tumors
+E22	Condition:T35 Name:T36
+T36	Condition-Name 567 583	malignant tumors
+T37	Condition 590 598	Pregnant
+E23	Condition:T37 Name:T38
+T38	Condition-Name 590 598	Pregnant
+T39	Life-Stage-And-Gender 599 604	women
+A4	Life-Stage-And-Gender-Type T39 female
+R6	If-Then Arg1:T39 Arg2:E23	
+T40	Condition 633 639	cancer
+E24	Condition:T40 Name:T41
+T41	Condition-Name 633 639	cancer
+T42	Family-Member 611 621	Hereditary
+E25	Family-Member:T42 Has:E24
+T43	Condition 650 676	familial colonic polyposis
+E26	Condition:T43 Name:T44
+T44	Condition-Name 650 676	familial colonic polyposis
+T45	Or 677 679	or
+E27	Or:T45 Arg:E26 Arg2:E7
+R7	Equivalent-To Arg1:E26 Arg2:E24	
+R8	Equivalent-To Arg1:E7 Arg2:E24
+T46	Eq-Comparison 469 479	Previously
+E28	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 469 479	Previously
+A5	Eq-Temporal-Period-Value T47 past
+T48	Procedure 291 300	untreated
+E29	Procedure:T48 
+R9	Treatment-For Arg1:E29 Arg2:E5	
+T49	Other 561 566	Other
+E30	Other:T49 Is-Other:E22
+T50	Modifier 622 632	colorectal
+E31	Modifier:T50 Modifies:T41

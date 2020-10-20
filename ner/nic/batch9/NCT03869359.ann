@@ -1,63 +1,62 @@
-T1	Condition 45 48	IBS
 E1	Condition:T1 Name:T28
-T2	Allergy 104 111	allergy
 E2	Allergy:T2 Name:T49
-T3	Or 112 114	or
 E3	Or:T3 Arg:E2 Arg2:E4
-T4	Condition 126 137	intolerance
 E4	Condition:T4 Name:T29
-T5	Modifier 159 173	cardiovascular
 E5	Modifier:T5 Modifies:T31
-T6	Modifier 175 182	hepatic
 E6	Modifier:T6 Modifies:T31
-T7	Modifier 184 196	neurological
 E7	Modifier:T7 Modifies:T31
-T8	Or 197 199	or
 E8	Or:T8 Arg:E7 Arg2:E9
-T9	Modifier 200 211	psychiatric
 E9	Modifier:T9 Modifies:T31
-T10	Condition 212 219	disease
 E10	Condition:T10 Name:T31 Severity:T30
-T11	Condition 233 257	gastrointestinal disease
 E11	Condition:T11 Name:T33 Severity:T32
-T12	Condition 269 283	celiac disease
 E12	Condition:T12 Name:T34
-T13	Or 284 287	and
 E13	Or:T13 Arg:E12 Arg2:E14
-T14	Condition 288 315	inflammatory bowel diseases
 E14	Condition:T14 Name:T35
-T15	Condition 317 320	IBD
 E15	Condition:T15 Name:T36
-T16	Condition 328 336	diabetes
 E16	Condition:T16 Name:T37
-T18	Eq-Comparison 371 379	previous
 E18	Eq-Comparison:T18 Temporal-Period:T39
-T19	Procedure 380 387	surgery
 E19	Procedure:T19 Name:T40 Temporality:E18
-T20	Condition 393 401	pregnant
 E20	Condition:T20 Name:T41
-T21	Or 402 404	or
 E21	Or:T21 Arg:E20 Arg2:E22
-T22	Condition 405 414	lactating
 E22	Condition:T22 Name:T42
-T23	Drug 435 446	antibiotics
 E23	Drug:T23 Name:T44 Temporality:E24
-T24	Eq-Comparison 447 461	within 4 weeks
 E24	Eq-Comparison:T24 Operator:T45 Value:T46 Temporal-Unit:T47
-T25	Temporal-Connection 462 468	before
 E25	Temporal-Connection:T25 Arg:E24 Arg2:E26
-A1	Temporal-Connection-Type-Value E25 before
+E26	Study:T26
+E17	And:T17 Arg:T27 Arg2:E1
+E27	Modifier:T48 Modifies:T29
+E28	Condition:T50 Name:T38
+T1	Condition 45 48	IBS
+T2	Allergy 104 111	allergy
+T3	Or 112 114	or
+T4	Condition 126 137	intolerance
+T5	Modifier 159 173	cardiovascular
+T6	Modifier 175 182	hepatic
+T7	Modifier 184 196	neurological
+T8	Or 197 199	or
+T9	Modifier 200 211	psychiatric
+T10	Condition 212 219	disease
+T11	Condition 233 257	gastrointestinal disease
+T12	Condition 269 283	celiac disease
+T13	Or 284 287	and
+T14	Condition 288 315	inflammatory bowel diseases
+T15	Condition 317 320	IBD
+T16	Condition 328 336	diabetes
+T18	Eq-Comparison 371 379	previous
+T19	Procedure 380 387	surgery
+T20	Condition 393 401	pregnant
+T21	Or 402 404	or
+T22	Condition 405 414	lactating
+T23	Drug 435 446	antibiotics
+T24	Eq-Comparison 447 461	within 4 weeks
+T25	Temporal-Connection 462 468	before
 T26	Study 469 478	inclusion
-E26	Study:T26 
 T27	Life-Stage-And-Gender 25 30	Adult
-A2	Life-Stage-And-Gender-Type T27 adult
 T28	Condition-Name 45 48	IBS
 T29	Condition-Name 126 137	intolerance
 T30	Severity 152 158	severe
-A3	Severity-Value T30 severe
 T31	Condition-Name 212 219	disease
 T32	Severity 225 232	serious
-A4	Severity-Value T32 severe
 T33	Condition-Name 233 257	gastrointestinal disease
 T34	Condition-Name 269 283	celiac disease
 T35	Condition-Name 288 315	inflammatory bowel diseases
@@ -65,27 +64,28 @@ T36	Condition-Name 317 320	IBD
 T37	Condition-Name 328 336	diabetes
 T38	Condition-Name 342 359	bowel dysfunction
 T39	Eq-Temporal-Period 371 379	previous
-A5	Eq-Temporal-Period-Value T39 past
 T40	Procedure-Name 380 387	surgery
 T41	Condition-Name 393 401	pregnant
 T42	Condition-Name 405 414	lactating
 T43	Life-Stage-And-Gender 415 420	women
-A6	Life-Stage-And-Gender-Type T43 female
 T44	Drug-Name 435 446	antibiotics
 T45	Eq-Operator 447 453	within
-A7	Eq-Operator-Value T45 LTEQ
 T46	Eq-Value 454 455	4
 T47	Eq-Temporal-Unit 456 461	weeks
-A8	Eq-Temporal-Unit-Value T47 week
 T17	And 40 44	with
-E17	And:T17 Arg:T27 Arg2:E1
 T48	Modifier 141 145	food
-E27	Modifier:T48 Modifies:T29
 T49	Allergy-Name 141 145	food
-R1	Example-Of Arg1:E12 Arg2:E11	
-R2	Example-Of Arg1:E14 Arg2:E11	
-R3	Abbrev-Of Arg1:E15 Arg2:E14	
 T50	Condition 342 359	bowel dysfunction
-E28	Condition:T50 Name:T38
-R4	Caused-By Arg1:E28 Arg2:E19	
-R5	If-Then Arg1:T43 Arg2:E22	
+A1	Temporal-Connection-Type-Value E25 before
+A2	Life-Stage-And-Gender-Type T27 adult
+A3	Severity-Value T30 severe
+A4	Severity-Value T32 severe
+A5	Eq-Temporal-Period-Value T39 past
+A6	Life-Stage-And-Gender-Type T43 female
+A7	Eq-Operator-Value T45 LTEQ
+A8	Eq-Temporal-Unit-Value T47 week
+R1	Example-Of Arg1:E12 Arg2:E11
+R2	Example-Of Arg1:E14 Arg2:E11
+R3	Abbrev-Of Arg1:E15 Arg2:E14
+R4	Caused-By Arg1:E28 Arg2:E19
+R5	If-Then Arg1:T43 Arg2:E22

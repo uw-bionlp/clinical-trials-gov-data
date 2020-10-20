@@ -1,17 +1,17 @@
+E1	Procedure:T1 Name:T2
+E2	Observation:T3 Name:T4 Polarity:T5
+E3	Condition:T6 Name:T7 Temporality:E4
+E4	Eq-Comparison:T8 Temporal-Period:T9
+E5	Modifier:T10 Modifies:T7
 T1	Procedure 97 105	Dialysis
 T2	Procedure-Name 97 105	Dialysis
-E1	Procedure:T1 Name:T2
 T3	Observation 34 42	FIT test
-E2	Observation:T3 Name:T4 Polarity:T5
 T4	Observation-Name 34 42	FIT test
 T5	Polarity 25 33	Positive
-A1	Polarity-Value T5 positive
 T6	Condition 85 91	cancer
-E3	Condition:T6 Name:T7 Temporality:E4
 T7	Condition-Name 85 91	cancer
 T8	Eq-Comparison 68 73	Prior
-E4	Eq-Comparison:T8 Temporal-Period:T9
 T9	Eq-Temporal-Period 68 73	Prior
-A2	Eq-Temporal-Period-Value T9 past
 T10	Modifier 74 84	colorectal
-E5	Modifier:T10 Modifies:T7
+A1	Polarity-Value T5 positive
+A2	Eq-Temporal-Period-Value T9 past

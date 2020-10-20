@@ -1,165 +1,165 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E6	Condition:T6 Name:T7
+E8	Condition:T8 Name:T9
+E10	Condition:T10 Name:T11
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17 Acuteness:T34
+E18	Condition:T18 Name:T19
+E21	Condition:T21 Name:T22
+E24	Condition:T24 Name:T25
+E25	Eq-Comparison:T37 Operator:T27 Value:T36 Unit:T29
+E2	Assertion:T39 Asserted:T2
+E4	Condition:T40 Name:T41
+E5	Eq-Comparison:T12 Operator:T13 Value:T42 Temporal-Unit:T28
+E7	Condition:T44 Name:T45 Duration:E5
+E9	Condition:T43 Name:T46 Stability:T33
+E12	Condition:T48 Name:T49
+E13	Or:T50 Arg:E16 Arg2:E12
+E15	Condition:T51 Name:T52
+E17	Modifier:T53 Modifies:E15
+E19	Condition:T54 Name:T55
+E20	Condition:T56 Name:T57
+E22	Condition:T58 Name:T59 Stability:T80
+E23	Condition:T60 Name:T61
+E27	Condition:T62 Name:T63
+E28	Condition:T64 Name:T65 Polarity:T88
+E29	Observation:T66 Name:T67
+E30	Family-Member:T68 Has:T23
+E32	Assertion:T70 Asserted:E24
+E33	Procedure:T71 Provider:E34
+E34	Provider:T72
+E26	Criteria-Count:T20 Min-Value:E35 Criteria:E9 Criteria2:E12 Criteria3:E15 Criteria4:E19 Criteria5:E20 Criteria6:E22
+E35	Eq-Comparison:T30 Value:T31
+E36	And:T32 Arg:E7 Arg2:E26
+E11	Modifier:T35 Modifies:T49
+E37	Modifier:T38 Modifies:T49
+E38	Or:T47 Arg:E11 Arg2:E37
+E39	Modifier:T73 Modifies:T52
+E40	Modifier:T74 Modifies:T57
+E41	Modifier:T75 Modifies:T57
+E42	Negation:T76 Negates:E41
+E43	Modifier:T77 Modifies:T59
+E44	Modifier:T78 Modifies:T59
+E45	Or:T79 Arg:E43 Arg2:E44
+E46	Or:T81 Arg:E18 Arg2:E23
+E47	Modifier:T82 Modifies:T15
+E48	Modifier:T83 Modifies:T15
+E49	Or:T84 Arg:E47 Arg2:E48
+E50	Observation:T85 Name:T86 Eq-Comparison:E25
+E51	And:T87 Arg:E27 Arg2:E28
+E52	Or:T89 Arg:E28 Arg2:E21
+E31	Negation:T69 Negates:E24
+E53	Family-Member:T26 Has:E31
 T1	Condition 120 136	Kawasaki disease
 T2	Condition-Name 120 136	Kawasaki disease
-E1	Condition:T1 Name:T2
 T3	Condition 188 204	Kawasaki disease
 T4	Condition-Name 188 204	Kawasaki disease
-E3	Condition:T3 Name:T4
 T5	Life-Stage-And-Gender 34 42	children
-A1	Life-Stage-And-Gender-Type T5 child
 T6	Condition 783 807	Cervical lymphadenopathy
 T7	Condition-Name 783 807	Cervical lymphadenopathy
-E6	Condition:T6 Name:T7
 T8	Condition 710 727	strawberry tongue
 T9	Condition-Name 710 727	strawberry tongue
-E8	Condition:T8 Name:T9
 T10	Condition 924 940	Kawasaki disease
 T11	Condition-Name 924 940	Kawasaki disease
-E10	Condition:T10 Name:T11
 T14	Condition 729 746	diffuse injection
 T15	Condition-Name 729 746	diffuse injection
-E14	Condition:T14 Name:T15
 T16	Condition 453 461	erythema
 T17	Condition-Name 453 461	erythema
-E16	Condition:T16 Name:T17 Severity:T34
 T18	Condition 679 687	erythema
 T19	Condition-Name 679 687	erythema
-E18	Condition:T18 Name:T19
 T21	Condition 1058 1084	coronary artery dilatation
 T22	Condition-Name 1058 1084	coronary artery dilatation
-E21	Condition:T21 Name:T22
 T23	Life-Stage-And-Gender 1106 1111	child
-A2	Life-Stage-And-Gender-Type T23 child
 T24	Condition 1214 1230	Kawasaki disease
 T25	Condition-Name 1214 1230	Kawasaki disease
-E24	Condition:T24 Name:T25
 T27	Eq-Operator 809 810	>
-A4	Eq-Operator-Value T27 GT
 T28	Eq-Temporal-Unit 361 365	days
-A5	Eq-Temporal-Unit-Value T28 day
 T29	Eq-Unit 813 815	cm
 T36	Eq-Value 810 813	1.5
 T37	Eq-Comparison 809 815	>1.5cm
-E25	Eq-Comparison:T37 Operator:T27 Value:T36 Unit:T29
 T39	Assertion 111 119	possible
-E2	Assertion:T39 Asserted:T2
-A7	Assertion-Type-Value E2 possible
 T40	Condition 252 254	KD
-E4	Condition:T40 Name:T41
 T41	Condition-Name 252 254	KD
 T12	Eq-Comparison 347 365	at least five days
-E5	Eq-Comparison:T12 Operator:T13 Value:T42 Temporal-Unit:T28
 T13	Eq-Operator 347 355	at least
-A8	Eq-Operator-Value T13 GTEQ
 T42	Eq-Value 356 360	five
 T44	Condition 337 342	fever
-E7	Condition:T44 Name:T45 Duration:E5
 T45	Condition-Name 337 342	fever
 T43	Condition 423 445	peripheral extremities
-E9	Condition:T43 Name:T46 Stability:T33
 T46	Condition-Name 423 445	peripheral extremities
 T48	Condition 466 472	oedema
-E12	Condition:T48 Name:T49
 T49	Condition-Name 466 472	oedema
 T50	Or 462 465	and
-E13	Or:T50 Arg:E16 Arg2:E12
 T51	Condition 505 528	membranous desquamation
-E15	Condition:T51 Name:T52
 T52	Condition-Name 505 528	membranous desquamation
 T53	Modifier 491 503	Convalescent
-E17	Modifier:T53 Modifies:E15
 T54	Condition 548 570	Polymorphous exanthema
-E19	Condition:T54 Name:T55
 T55	Condition-Name 548 570	Polymorphous exanthema
 T56	Condition 595 624	bulbar conjunctival injection
-E20	Condition:T56 Name:T57
 T57	Condition-Name 595 624	bulbar conjunctival injection
 T58	Condition 671 677	cavity
-E22	Condition:T58 Name:T59 Stability:T80
 T59	Condition-Name 671 677	cavity
 T60	Condition 692 708	cracking of lips
-E23	Condition:T60 Name:T61
 T61	Condition-Name 692 708	cracking of lips
 T62	Condition 959 964	fever
-E27	Condition:T62 Name:T63
 T63	Condition-Name 959 964	fever
 T64	Condition 1021 1024	CRP
-E28	Condition:T64 Name:T65 Polarity:T88
 T65	Condition-Name 1021 1024	CRP
 T66	Observation 1028 1054	echocardiographic evidence
-E29	Observation:T66 Name:T67
 T67	Observation-Name 1028 1054	echocardiographic evidence
-A9	Observation-Type-Value T67 lab
-R1	Found-By Arg1:E21 Arg2:E29	
 T68	Family-Member 1086 1093	Parents
-E30	Family-Member:T68 Has:T23
 T70	Assertion 1205 1213	possible
-E32	Assertion:T70 Asserted:E24
-A10	Assertion-Type-Value E32 possible
 T71	Procedure 68 76	treating
-E33	Procedure:T71 Provider:E34
-R2	Treatment-For Arg1:E33 Arg2:E1	
 T72	Provider 77 86	clinician
-E34	Provider:T72 
 T20	Criteria-Count 379 401	the following criteria
-E26	Criteria-Count:T20 Min-Value:E35 Criteria:E9 Criteria2:E12 Criteria3:E15 Criteria4:E19 Criteria5:E20 Criteria6:E22
 T30	Eq-Comparison 371 375	four
-E35	Eq-Comparison:T30 Value:T31
 T31	Eq-Value 371 375	four
 T32	And 366 370	plus
-E36	And:T32 Arg:E7 Arg2:E26
 T33	Stability 408 415	Changes
-A6	Stability-Value T33 change
-T34	Severity 446 451	Acute
-A11	Severity-Value T34 severe
+T34	Acuteness 446 451	Acute
 T35	Modifier 476 481	hands
-E11	Modifier:T35 Modifies:T49
 T38	Modifier 486 490	feet
-E37	Modifier:T38 Modifies:T49
 T47	Or 482 485	and
-E38	Or:T47 Arg:E11 Arg2:E37
-R3	Equivalent-To Arg1:E26 Arg2:E16	
 T73	Modifier 532 542	fingertips
-E39	Modifier:T73 Modifies:T52
 T74	Modifier 576 594	Bilateral painless
-E40	Modifier:T74 Modifies:T57
 T75	Modifier 633 640	exudate
-E41	Modifier:T75 Modifies:T57
 T76	Negation 625 632	without
-E42	Negation:T76 Negates:E41
 T77	Modifier 657 661	lips
-E43	Modifier:T77 Modifies:T59
 T78	Modifier 666 670	oral
-E44	Modifier:T78 Modifies:T59
 T79	Or 662 665	and
-E45	Or:T79 Arg:E43 Arg2:E44
 T80	Stability 646 653	Changes
-A12	Stability-Value T80 change
-R4	Example-Of Arg1:E18 Arg2:E22	
 T81	Or 688 691	and
-E46	Or:T81 Arg:E18 Arg2:E23
-R5	Example-Of Arg1:E23 Arg2:E22	
-R6	Example-Of Arg1:E8 Arg2:E22	
 T82	Modifier 750 754	oral
-E47	Modifier:T82 Modifies:T15
 T83	Modifier 759 777	pharyngeal mucosae
-E48	Modifier:T83 Modifies:T15
 T84	Or 755 758	and
-E49	Or:T84 Arg:E47 Arg2:E48
-R7	Example-Of Arg1:E14 Arg2:E22	
 T85	Observation 816 824	diameter
-E50	Observation:T85 Name:T86 Eq-Comparison:E25
 T86	Observation-Name 816 824	diameter
-A13	Observation-Type-Value T86 measurement
-R8	Found-By Arg1:E6 Arg2:E50	
 T87	And 965 968	and
-E51	And:T87 Arg:E27 Arg2:E28
 T88	Polarity 1008 1017	elevation
-A14	Polarity-Value T88 high
 T89	Or 1025 1027	or
-E52	Or:T89 Arg:E28 Arg2:E21
-A15	Family-Member-Type E30 parent
 T69	Negation 1181 1184	not
-E31	Negation:T69 Negates:E24
 T26	Family-Member 1165 1173	children
-E53	Family-Member:T26 Has:E31
+A1	Life-Stage-And-Gender-Type T5 child
+A2	Life-Stage-And-Gender-Type T23 child
+A4	Eq-Operator-Value T27 GT
+A5	Eq-Temporal-Unit-Value T28 day
+A7	Assertion-Type-Value E2 possible
+A8	Eq-Operator-Value T13 GTEQ
+A9	Observation-Type-Value T67 lab
+A10	Assertion-Type-Value E32 possible
+A6	Stability-Value T33 change
+A12	Stability-Value T80 change
+A13	Observation-Type-Value T86 measurement
+A14	Polarity-Value T88 high
+A15	Family-Member-Type E30 parent
 A3	Family-Member-Type E53 child
+A16	Acuteness-Type-Value T34 acute
+R1	Found-By Arg1:E21 Arg2:E29
+R2	Treatment-For Arg1:E33 Arg2:E1
+R3	Equivalent-To Arg1:E26 Arg2:E16
+R4	Example-Of Arg1:E18 Arg2:E22
+R5	Example-Of Arg1:E23 Arg2:E22
+R6	Example-Of Arg1:E8 Arg2:E22
+R7	Example-Of Arg1:E14 Arg2:E22
+R8	Found-By Arg1:E6 Arg2:E50

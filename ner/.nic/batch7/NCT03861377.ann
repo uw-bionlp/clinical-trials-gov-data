@@ -1,0 +1,140 @@
+T1	Procedure 25 48	Gynecological procedure
+E1	Procedure:T1 Name:T40
+T2	Age 54 57	Age
+E2	Age:T2 Eq-Comparison:E3
+T3	Eq-Comparison 58 69	18-50 years
+E3	Eq-Comparison:T3 Value:T41 Operator:T42 Value:T43 Temporal-Unit:T44
+T4	Procedure 75 93	General anesthesia
+E4	Procedure:T4 Name:T45 Temporality:E5
+T5	Eq-Comparison 94 101	planned
+E5	Eq-Comparison:T5 Temporal-Period:T46
+T6	Observation 107 130	Systolic blood pressure
+E6	Observation:T6 Name:T47 Eq-Comparison:E7
+T7	Eq-Comparison 131 141	< 150 mmHg
+E7	Eq-Comparison:T7 Operator:T48 Value:T49 Unit:T50
+T8	Eq-Comparison 146 161	< 100 beats/min
+E8	Eq-Comparison:T8 Operator:T51 Value:T52 Unit:T53 Per:T54
+T9	Eq-Comparison 187 199	Pre-existing
+E9	Eq-Comparison:T9 Temporal-Period:T55
+T10	Condition 200 212	hypertension
+E10	Condition:T10 Name:T56 Temporality:E9
+T11	Condition 218 226	Diabetes
+E11	Condition:T11 Name:T57
+T12	Modifier 232 240	Ischemic
+E12	Modifier:T12 Modifies:T58
+T13	Condition 241 254	heart disease
+E13	Condition:T13 Name:T58
+T14	Or 255 257	or
+E14	Or:T14 Arg:E13 Arg2:E15
+T15	Condition 258 281	cerebrovascular disease
+E15	Condition:T15 Name:T59
+T16	Condition 287 306	Heart valve disease
+E16	Condition:T16 Name:T60
+T17	Condition 321 339	cardiac arrhythmia
+E17	Condition:T17 Name:T61
+T18	Exception 340 350	other than
+E18	Exception:T18 From:E17 Except:E19
+T19	Condition 351 364	extrasystoles
+E19	Condition:T19 Name:T62
+T20	Condition 379 386	anaemia
+E20	Condition:T20 Name:T63
+T21	And 387 391	with
+E21	And:T21 Arg:E20 Arg2:E22
+T22	Observation 392 402	hemoglobin
+E22	Observation:T22 Name:T64 Eq-Comparison:E23
+T23	Eq-Comparison 409 424	below 9.0 gr/dl
+E23	Eq-Comparison:T23 Operator:T65 Value:T66 Unit:T67 Per:T68
+T24	Modifier 431 437	Kidney
+E24	Modifier:T24 Modifies:T69
+T25	Or 438 440	or
+E25	Or:T25 Arg:E24 Arg2:E26
+T26	Modifier 441 448	hepatic
+E26	Modifier:T26 Modifies:T69
+T27	Condition 449 456	disease
+E27	Condition:T27 Name:T69
+T28	Condition 462 478	Hypersensitivity
+E28	Condition:T28 Name:T70
+T29	Drug 483 491	propofol
+E29	Drug:T29 Name:T71
+T31	Or 504 506	or
+E31	Or:T31 Arg:E41 Arg2:E32
+T32	Modifier 507 514	peanuts
+E32	Modifier:T32 Modifies:T70
+T33	Condition 520 529	Pregnancy
+E33	Condition:T33 Name:T74
+T34	Condition 535 546	Poor health
+E34	Condition:T34 Name:T75
+T35	Condition 558 579	Illicit substance use
+E35	Condition:T35 Name:T76
+T36	Observation 585 588	BMI
+E36	Observation:T36 Name:T77 Eq-Comparison:E37 Eq-Comparison2:E39
+T37	Eq-Comparison 589 592	<20
+E37	Eq-Comparison:T37 Operator:T78 Value:T79
+T38	Or 593 595	or
+E38	Or:T38 Arg:E37 Arg2:E39
+T39	Eq-Comparison 596 605	>35 kg/m2
+E39	Eq-Comparison:T39 Operator:T80 Value:T81 Unit:T82 Per:T83
+T40	Procedure-Name 25 48	Gynecological procedure
+T41	Eq-Value 58 60	18
+T42	Eq-Operator 60 61	-
+A1	Eq-Operator-Value T42 BETWEEN
+T43	Eq-Value 61 63	50
+T44	Eq-Temporal-Unit 64 69	years
+A2	Eq-Temporal-Unit-Value T44 year
+T45	Procedure-Name 75 93	General anesthesia
+T46	Eq-Temporal-Period 94 101	planned
+A3	Eq-Temporal-Period-Value T46 future
+T47	Observation-Name 107 130	Systolic blood pressure
+A4	Observation-Type-Value T47 vital
+T48	Eq-Operator 131 132	<
+A5	Eq-Operator-Value T48 LT
+T49	Eq-Value 133 136	150
+T50	Eq-Unit 137 141	mmHg
+T51	Eq-Operator 146 147	<
+A6	Eq-Operator-Value T51 LT
+T52	Eq-Value 148 151	100
+T53	Eq-Unit 152 157	beats
+T54	Eq-Temporal-Unit 158 161	min
+A7	Eq-Temporal-Unit-Value T54 minute
+T55	Eq-Temporal-Period 187 199	Pre-existing
+A8	Eq-Temporal-Period-Value T55 past
+T56	Condition-Name 200 212	hypertension
+T57	Condition-Name 218 226	Diabetes
+T58	Condition-Name 241 254	heart disease
+T59	Condition-Name 258 281	cerebrovascular disease
+T60	Condition-Name 287 306	Heart valve disease
+T61	Condition-Name 321 339	cardiac arrhythmia
+T62	Condition-Name 351 364	extrasystoles
+T63	Condition-Name 379 386	anaemia
+T64	Observation-Name 392 402	hemoglobin
+A9	Observation-Type-Value T64 lab
+T65	Eq-Operator 409 414	below
+A10	Eq-Operator-Value T65 GT
+T66	Eq-Value 415 418	9.0
+T67	Eq-Unit 419 421	gr
+T68	Eq-Unit 422 424	dl
+T69	Condition-Name 449 456	disease
+T70	Condition-Name 462 478	Hypersensitivity
+T71	Drug-Name 483 491	propofol
+T74	Condition-Name 520 529	Pregnancy
+T75	Condition-Name 535 546	Poor health
+T76	Condition-Name 558 579	Illicit substance use
+T77	Observation-Name 585 588	BMI
+A11	Observation-Type-Value T77 vital
+T78	Eq-Operator 589 590	<
+A12	Eq-Operator-Value T78 LT
+T79	Eq-Value 590 592	20
+T80	Eq-Operator 596 597	>
+A13	Eq-Operator-Value T80 GT
+T81	Eq-Value 597 599	35
+T82	Eq-Unit 600 602	kg
+T83	Eq-Unit 603 605	m2
+T84	Observation 143 145	HR
+E40	Observation:T84 Name:T85 Eq-Comparison:E8
+T85	Observation-Name 143 145	HR
+A14	Observation-Type-Value T85 vital
+R1	Caused-By Arg1:E28 Arg2:E29	
+T86	Modifier 499 503	eggs
+E41	Modifier:T86 Modifies:T70
+T30	Modifier 493 497	soya
+E30	Modifier:T30 Modifies:T70

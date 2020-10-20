@@ -1,13 +1,13 @@
-T1	Condition 36 45	Psoriasis
 E1	Condition:T1 Name:T5
-T2	Condition 66 82	topic dermatitis
 E2	Condition:T2 Name:T6
-T3	Other 125 132	another
 E3	Other:T3 Is-Other:E4
-T4	Condition 133 155	dermatological disease
 E4	Condition:T4 Name:T7
+E5	Or:T8 Arg:E1 Arg2:E2
+T1	Condition 36 45	Psoriasis
+T2	Condition 66 82	topic dermatitis
+T3	Other 125 132	another
+T4	Condition 133 155	dermatological disease
 T5	Condition-Name 36 45	Psoriasis
 T6	Condition-Name 66 82	topic dermatitis
 T7	Condition-Name 133 155	dermatological disease
 T8	Or 46 49	and
-E5	Or:T8 Arg:E1 Arg2:E2

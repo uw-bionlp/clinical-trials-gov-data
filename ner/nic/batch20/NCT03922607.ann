@@ -1,86 +1,86 @@
+E1	Condition:T1 Name:T2 Severity:T22 Acuteness:T21
+E3	Condition:T3 Name:T4
+E4	Age:T7 Eq-Comparison:E2
+E5	Age:T8 Eq-Comparison:E11
+E6	Eq-Comparison:T15 Temporal-Period:T16
+E2	Eq-Comparison:T17 Operator:T18 Value:T9 Value2:T10 Temporal-Unit:T5
+E7	Condition:T19 Name:T11
+E8	And:T20 Arg:E4 Arg2:E7
+E10	Eq-Comparison:T24 Value:T23 Value2:T22 Operator:T25
+E11	Eq-Comparison:T26 Operator:T27 Value:T12 Value2:T13 Temporal-Unit:T6
+E12	Study:T14
+E13	Temporal-Connection:T28 Arg:E5 Arg2:E12
+E14	And:T29 Arg:E7 Arg2:E1
+E15	Condition:T30 Name:T31 Temporality:E6
+E16	Condition:T32 Name:T33 Severity:T44
+E17	Or:T34 Arg:E16 Arg2:E3
+E18	Modifier:T35 Modifies:T33
+E19	Modifier:T36 Modifies:T33
+E20	Or:T37 Arg:E19 Arg2:E18
+E21	Modifier:T38 Modifies:T33
+E22	Modifier:T39 Modifies:T33
+E23	Modifier:T40 Modifies:T33
+E24	Modifier:T41 Modifies:T33
+E25	Modifier:T42 Modifies:T33
+E26	Modifier:T43 Modifies:T33
+E27	Condition:T45
+E28	Modifier:T46 Modifies:E27
+E29	Or:T47 Arg:E3 Arg2:E27
 T1	Condition 166 182	plaque psoriasis
 T2	Condition-Name 166 182	plaque psoriasis
-E1	Condition:T1 Name:T2 Severity:T22
 T3	Condition 531 539	disorder
 T4	Condition-Name 531 539	disorder
-E3	Condition:T3 Name:T4
 T5	Eq-Temporal-Unit 63 68	years
-A1	Eq-Temporal-Unit-Value T5 year
 T6	Eq-Temporal-Unit 201 206	years
-A2	Eq-Temporal-Unit-Value T6 year
 T7	Age 72 75	age
-E4	Age:T7 Eq-Comparison:E2
 T8	Age 210 213	age
-E5	Age:T8 Eq-Comparison:E11
 T9	Eq-Value 53 55	18
 T10	Eq-Value 60 62	55
 T12	Eq-Value 191 193	18
 T13	Eq-Value 198 200	75
 T15	Eq-Comparison 385 392	history
-E6	Eq-Comparison:T15 Temporal-Period:T16
 T16	Eq-Temporal-Period 385 392	history
-A3	Eq-Temporal-Period-Value T16 past
 T17	Eq-Comparison 45 68	between 18 and 55 years
-E2	Eq-Comparison:T17 Operator:T18 Value:T9 Value2:T10 Temporal-Unit:T5
 T18	Eq-Operator 45 52	between
-A4	Eq-Operator-Value T18 BETWEEN
 T19	Condition 83 102	general good health
-E7	Condition:T19 Name:T11
 T11	Condition-Name 83 102	general good health
 T20	And 76 79	and
-E8	And:T20 Arg:E4 Arg2:E7
-T21	Modifier 158 165	chronic
-E9	Modifier:T21 Modifies:T2
+T21	Acuteness 158 165	chronic
 T22	Severity 151 157	severe
-A5	Severity-Value T22 severe
 T23	Severity 139 147	moderate
-A6	Severity-Value T23 moderate
 T24	Eq-Comparison 139 157	moderate to severe
-E10	Eq-Comparison:T24 Value:T23 Value2:T22 Operator:T25
 T25	Eq-Operator 148 150	to
-A7	Eq-Operator-Value T25 BETWEEN
 T26	Eq-Comparison 183 206	between 18 and 75 years
-E11	Eq-Comparison:T26 Operator:T27 Value:T12 Value2:T13 Temporal-Unit:T6
 T27	Eq-Operator 183 190	between
-A8	Eq-Operator-Value T27 BETWEEN
 T14	Study 244 254	enrollment
-E12	Study:T14 
 T28	Temporal-Connection 229 240	at the time
-E13	Temporal-Connection:T28 Arg:E5 Arg2:E12
-A9	Temporal-Connection-Type-Value E13 during
 T29	And 118 121	and
-E14	And:T29 Arg:E7 Arg2:E1
 T30	Condition 396 404	epilepsy
-E15	Condition:T30 Name:T31 Temporality:E6
 T31	Condition-Name 396 404	epilepsy
 T32	Condition 520 527	disease
-E16	Condition:T32 Name:T33 Severity:T44
 T33	Condition-Name 520 527	disease
 T34	Or 528 530	or
-E17	Or:T34 Arg:E16 Arg2:E3
 T35	Modifier 508 519	psychiatric
-E18	Modifier:T35 Modifies:T33
 T36	Modifier 493 504	hematologic
-E19	Modifier:T36 Modifies:T33
 T37	Or 505 507	or
-E20	Or:T37 Arg:E19 Arg2:E18
 T38	Modifier 478 491	opthalmologic
-E21	Modifier:T38 Modifies:T33
 T39	Modifier 460 476	gastrointestinal
-E22	Modifier:T39 Modifies:T33
 T40	Modifier 451 458	hepatic
-E23	Modifier:T40 Modifies:T33
 T41	Modifier 444 449	renal
-E24	Modifier:T41 Modifies:T33
 T42	Modifier 431 442	respiratory
-E25	Modifier:T42 Modifies:T33
 T43	Modifier 422 429	cardiac
-E26	Modifier:T43 Modifies:T33
 T44	Severity 410 421	significant
-A10	Severity-Value T44 severe
 T45	Condition 561 576	medical illness
-E27	Condition:T45 
 T46	Modifier 548 560	uncontrolled
-E28	Modifier:T46 Modifies:E27
 T47	Or 541 543	or
-E29	Or:T47 Arg:E3 Arg2:E27
+A1	Eq-Temporal-Unit-Value T5 year
+A2	Eq-Temporal-Unit-Value T6 year
+A3	Eq-Temporal-Period-Value T16 past
+A4	Eq-Operator-Value T18 BETWEEN
+A5	Severity-Value T22 severe
+A6	Severity-Value T23 moderate
+A7	Eq-Operator-Value T25 BETWEEN
+A8	Eq-Operator-Value T27 BETWEEN
+A9	Temporal-Connection-Type-Value E13 during
+A10	Severity-Value T44 severe
+A11	Acuteness-Type-Value T21 chronic

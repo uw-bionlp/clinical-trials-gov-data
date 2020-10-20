@@ -1,0 +1,54 @@
+T1	Age 25 28	Age
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 29 38	>18 years
+E2	Eq-Comparison:T2 Operator:T20 Temporal-Unit:T22 Value:T21
+T4	Condition 57 64	BCR‐ABL
+E4	Condition:T4 Name:T23 Polarity:T24
+T6	Observation 132 138	Blasts
+E6	Observation:T6 Name:T5 Eq-Comparison:E7
+T7	Eq-Comparison 139 150	20% or more
+E7	Eq-Comparison:T7 Value:T27 Unit:T28 Operator:T29
+T8	Modifier 154 182	peripheral blood white cells
+E8	Modifier:T8 Modifies:T5
+T10	Or 183 185	or
+E10	Or:T10 Arg:E8 Arg2:E11
+T11	Modifier 186 203	bone marrow cells
+E11	Modifier:T11 Modifies:T5
+T12	Or 204 206	or
+E12	Or:T12 Arg:E6 Arg2:E14
+T14	Condition 232 251	blast proliferation
+E14	Condition:T14 Name:T31
+T15	Or 252 254	or
+E15	Or:T15 Arg:E14 Arg2:E9
+T16	Modifier 265 275	Large foci
+E16	Modifier:T16 Modifies:T25
+T17	Or 276 278	or
+E17	Or:T17 Arg:E16 Arg2:E13
+T19	Procedure 301 319	bone marrow biopsy
+E19	Procedure:T19 Name:T32
+T20	Eq-Operator 29 30	>
+A1	Eq-Operator-Value T20 GT
+T21	Eq-Value 30 32	18
+T22	Eq-Temporal-Unit 33 38	years
+A2	Eq-Temporal-Unit-Value T22 year
+T23	Condition-Name 57 64	BCR‐ABL
+T24	Polarity 65 73	positive
+A3	Polarity-Value T24 positive
+T27	Eq-Value 139 141	20
+T28	Eq-Unit 141 142	%
+T29	Eq-Operator 143 150	or more
+A5	Eq-Operator-Value T29 GTEQ
+T31	Condition-Name 232 251	blast proliferation
+T32	Procedure-Name 301 319	bone marrow biopsy
+T3	Modifier 74 90	CML blast crisis
+E3	Modifier:T3 Modifies:T23
+T5	Observation-Name 132 138	Blasts
+A4	Observation-Type-Value T5 lab
+T9	Modifier 217 231	Extramedullary
+E5	Modifier:T9 Modifies:T31
+T13	Condition 291 297	blasts
+E9	Condition:T13 Name:T25
+T25	Condition-Name 291 297	blasts
+T26	Modifier 279 287	clusters
+E13	Modifier:T26 Modifies:T25
+R1	Found-By Arg1:E9 Arg2:E19	

@@ -1,0 +1,137 @@
+T1	Modifier 25 35	Unilateral
+E1	Modifier:T1 Modifies:T45
+T2	Or 36 42	and/or
+E2	Or:T2 Arg:E1 Arg2:E3
+T3	Modifier 43 52	bilateral
+E3	Modifier:T3 Modifies:T45
+T4	Condition 53 76	conductive hearing loss
+E4	Condition:T4 Name:T45
+T5	Condition 78 81	CHL
+E5	Condition:T5 Name:T63
+T6	Condition 99 111	hearing loss
+E6	Condition:T6 Name:T46
+T7	Eq-Comparison 112 123	>10 decibel
+E7	Eq-Comparison:T7 Operator:T47 Value:T48 Unit:T49
+T8	Age 189 193	aged
+E8	Age:T8 Eq-Comparison:E9
+T9	Eq-Comparison 194 211	13 years or older
+E9	Eq-Comparison:T9 Value:T50 Temporal-Unit:T51 Operator:T52
+T10	Assertion 253 276	Willingness and ability
+E10	Assertion:T10 Asserted:E11
+A1	Assertion-Type-Value E10 hypothetical
+T12	Study 315 320	study
+E12	Study:T12 Study-Of:E11
+T14	Study 385 390	study
+E14	Study:T14 Study-Of:E13
+T15	Condition 435 444	Pregnancy
+E15	Condition:T15 Name:T54
+T16	Or 445 447	or
+E16	Or:T16 Arg:E15 Arg2:E17
+T17	Condition 448 461	breastfeeding
+E17	Condition:T17 Name:T55
+T18	Condition 482 493	hearing aid
+E18	Condition:T18 Name:T66
+T19	Or 494 496	or
+E19	Or:T19 Arg:E18 Arg2:E20
+T20	Assertion 497 502	plans
+E20	Assertion:T20 Asserted:E47
+A4	Assertion-Type-Value E20 intention
+T21	Modifier 630 634	skin
+E21	Modifier:T21 Modifies:T56
+T22	Or 635 637	or
+E22	Or:T22 Arg:E21 Arg2:E23
+T23	Modifier 638 643	scalp
+E23	Modifier:T23 Modifies:T56
+T24	Condition 644 653	condition
+E24	Condition:T24 Name:T56
+T25	Assertion 659 662	may
+E25	Assertion:T25 Asserted:E26
+A5	Assertion-Type-Value E25 hypothetical
+T26	Negation 663 671	preclude
+E26	Negation:T26 Negates:E27
+T27	Procedure 676 710	attachment of the adhesive adapter
+E27	Procedure:T27 Name:T57
+T28	Assertion 725 731	cannot
+E28	Assertion:T28 Asserted:E29
+A6	Assertion-Type-Value E28 hypothetical
+T29	Procedure 744 762	audiological tests
+E29	Procedure:T29 Name:T69
+T30	Or 763 765	or
+E30	Or:T30 Arg:E29 Arg2:E31
+T31	Negation 769 775	unable
+E31	Negation:T31 Negates:E48
+T32	Condition 835 848	retrocochlear
+E32	Condition:T32 Name:T58
+T33	Or 850 852	or
+E33	Or:T33 Arg:E32 Arg2:E35
+T34	Modifier 853 860	central
+E34	Modifier:T34 Modifies:T59
+T35	Condition 861 878	auditory disorder
+E35	Condition:T35 Name:T59
+T36	Modifier 889 897	physical
+E36	Modifier:T36 Modifies:T60
+T37	Modifier 899 912	psychological
+E37	Modifier:T37 Modifies:T60
+T38	Or 914 916	or
+E38	Or:T38 Arg:E37 Arg2:E39
+T39	Modifier 917 926	emotional
+E39	Modifier:T39 Modifies:T60
+T40	Condition 927 935	disorder
+E40	Condition:T40 Name:T60
+T41	Assertion 941 946	would
+E41	Assertion:T41 Asserted:T61
+A7	Assertion-Type-Value E41 hypothetical
+T42	Assertion 966 976	ability to
+E42	Assertion:T42 Asserted:E43 Asserted2:E44
+A8	Assertion-Type-Value E42 hypothetical
+T43	Observation 988 992	test
+E43	Observation:T43 Stability:T61 Name:T73
+T44	Procedure 997 1022	rehabilitation procedures
+E44	Procedure:T44 Name:T62
+T45	Condition-Name 53 76	conductive hearing loss
+T46	Condition-Name 99 111	hearing loss
+T47	Eq-Operator 112 113	>
+A9	Eq-Operator-Value T47 GT
+T48	Eq-Value 113 115	10
+T49	Eq-Unit 116 123	decibel
+T50	Eq-Value 194 196	13
+T51	Eq-Temporal-Unit 197 202	years
+A10	Eq-Temporal-Unit-Value T51 year
+T52	Eq-Operator 203 211	or older
+A11	Eq-Operator-Value T52 GTEQ
+T53	Language 232 238	German
+T54	Condition-Name 435 444	Pregnancy
+T55	Condition-Name 448 461	breastfeeding
+T56	Condition-Name 644 653	condition
+T57	Procedure-Name 676 710	attachment of the adhesive adapter
+T58	Condition-Name 835 848	retrocochlear
+T59	Condition-Name 861 878	auditory disorder
+T60	Condition-Name 927 935	disorder
+T61	Stability 947 956	interfere
+A12	Stability-Value T61 change
+T62	Procedure-Name 997 1022	rehabilitation procedures
+T63	Condition-Name 78 81	CHL
+R1	Abbrev-Of Arg1:E5 Arg2:E4	
+T65	Modifier 88 98	Conductive
+E46	Modifier:T65 Modifies:T46
+T11	Observation 292 297	tests
+E11	Observation:T11 
+T13	Procedure 400 409	procedure
+E13	Procedure:T13 
+T66	Condition-Name 482 493	hearing aid
+T67	Condition 516 527	hearing aid
+E47	Condition:T67 Name:T68
+T68	Condition-Name 516 527	hearing aid
+R2	Caused-By Arg1:E26 Arg2:E24	
+T69	Procedure-Name 744 762	audiological tests
+T70	Observation 792 806	questionnaires
+E48	Observation:T70 Name:T71
+T71	Observation-Name 792 806	questionnaires
+A2	Observation-Type-Value T71 survey-or-questionnaire
+T72	Assertion 769 775	unable
+E49	Assertion:T72 Asserted:E31
+A3	Assertion-Type-Value E49 hypothetical
+R3	Caused-By Arg1:T61 Arg2:E40	
+T73	Observation-Name 988 992	test
+T74	Or 993 996	and
+E50	Or:T74 Arg:E43 Arg2:E44

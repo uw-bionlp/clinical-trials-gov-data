@@ -1,0 +1,154 @@
+T1	Condition 695 715	alcohol use disorder
+T2	Condition-Name 695 715	alcohol use disorder
+E1	Condition:T1 Name:T2
+T3	Condition 779 789	impairment
+T4	Condition-Name 779 789	impairment
+E3	Condition:T3 Name:T4 Severity:T81
+T5	Procedure 513 519	repair
+T6	Procedure-Name 513 519	repair
+E5	Procedure:T5 Name:T6
+T7	Procedure 119 132	skin incision
+T8	Procedure-Name 119 132	skin incision
+E7	Procedure:T7 Name:T8
+T9	Condition 447 459	endometritis
+T10	Condition-Name 447 459	endometritis
+E9	Condition:T9 Name:T10
+T11	Procedure 485 497	hysterectomy
+T12	Procedure-Name 485 497	hysterectomy
+E11	Procedure:T11 Name:T12
+T13	Procedure 171 182	hysterotomy
+T14	Procedure-Name 171 182	hysterotomy
+E13	Procedure:T13 Name:T14
+T15	Procedure 91 100	C-section
+T16	Procedure-Name 91 100	C-section
+E15	Procedure:T15 Name:T16
+T17	Procedure 78 86	delivery
+T18	Procedure-Name 78 86	delivery
+E17	Procedure:T17 Name:T18 Temporality:E6
+T19	Language 188 195	English
+T20	Eq-Temporal-Unit 52 57	years
+A1	Eq-Temporal-Unit-Value T20 year
+T21	Age 61 64	age
+E18	Age:T21 Eq-Comparison:E4
+T22	Eq-Value 49 51	18
+T23	Eq-Comparison 648 655	History
+E19	Eq-Comparison:T23 Temporal-Period:T24
+T24	Eq-Temporal-Period 648 655	History
+A2	Eq-Temporal-Period-Value T24 past
+T25	Condition 25 33	Pregnant
+E2	Condition:T25 Name:T26
+T26	Condition-Name 25 33	Pregnant
+T27	Life-Stage-And-Gender 34 39	women
+A3	Life-Stage-And-Gender-Type T27 female
+T28	Eq-Comparison 40 57	at least 18 years
+E4	Eq-Comparison:T28 Operator:T29 Temporal-Unit:T20 Value:T22
+T29	Eq-Operator 40 48	at least
+A4	Eq-Operator-Value T29 GTEQ
+T30	Eq-Comparison 70 77	Planned
+E6	Eq-Comparison:T30 Temporal-Period:T31
+T31	Eq-Temporal-Period 70 77	Planned
+A5	Eq-Temporal-Period-Value T31 future
+R1	Using Arg1:E17 Arg2:E15	
+T32	Modifier 106 118	Pfannenstiel
+E8	Modifier:T32 Modifies:T8
+T33	Modifier 138 170	Lower uterine segment transverse
+E10	Modifier:T33 Modifies:T14
+T34	Condition 270 282	complication
+E12	Condition:T34 Severity:T35
+T35	Severity 230 235	Major
+A6	Severity-Value T35 severe
+T36	Procedure 260 269	operative
+E14	Procedure:T36 Name:T37
+T37	Procedure-Name 260 269	operative
+T38	Temporal-Connection 255 259	post
+E16	Temporal-Connection:T38 Arg:E12 Arg2:E14
+A7	Temporal-Connection-Type-Value E16 after
+T39	Procedure 242 251	operative
+E20	Procedure:T39 Name:T40
+T40	Procedure-Name 242 251	operative
+T41	Temporal-Connection 236 241	intra
+E21	Temporal-Connection:T41 Arg:E12 Arg2:E20
+A8	Temporal-Connection-Type-Value E21 during
+T42	Or 252 254	or
+E22	Or:T42 Arg:E20 Arg2:E14
+T43	Drug 341 378	non-steroidal anti-inflammatory drugs
+E23	Drug:T43 Name:T44
+T44	Drug-Name 341 378	non-steroidal anti-inflammatory drugs
+T45	Negation 329 332	not
+E24	Negation:T45 Negates:E23
+T46	Assertion 303 313	recommends
+E25	Assertion:T46 Asserted:E24
+R2	Caused-By Arg1:E24 Arg2:E12	
+T47	Drug 404 417	acetaminophen
+E26	Drug:T47 Name:T48
+T48	Drug-Name 404 417	acetaminophen
+T49	Condition 427 432	fever
+E27	Condition:T49 Name:T50
+T50	Condition-Name 427 432	fever
+T51	Assertion 395 403	requires
+E28	Assertion:T51 Asserted:E26
+A9	Assertion-Type-Value E28 hypothetical
+R3	Treatment-For Arg1:E26 Arg2:E27	
+T52	Or 379 381	or
+E29	Or:T52 Arg:E23 Arg2:E28
+T53	Assertion 437 446	suspected
+E30	Assertion:T53 Asserted:E9
+A10	Assertion-Type-Value E30 possible
+R4	Example-Of Arg1:E9 Arg2:E27	
+T54	Procedure 476 483	surgery
+E31	Procedure:T54 Name:T55
+T55	Procedure-Name 476 483	surgery
+T56	Modifier 466 475	Unplanned
+E32	Modifier:T56 Modifies:T55
+T57	Modifier 505 512	bladder
+E33	Modifier:T57 Modifies:T6
+T58	Modifier 499 504	bowel
+E34	Modifier:T58 Modifies:T6
+T59	Or 504 505	/
+E35	Or:T59 Arg:E34 Arg2:E33
+R5	Example-Of Arg1:E5 Arg2:E31	
+R6	Example-Of Arg1:E11 Arg2:E31	
+T60	Study 557 562	study
+E36	Study:T60 Study-Of:E37
+T61	Drug 563 573	medication
+E37	Drug:T61 
+T62	Contraindication 537 553	contraindication
+E38	Contraindication:T62 Contraindicates:E37
+T63	Allergy 526 533	Allergy
+E39	Allergy:T63 Name:E37
+T64	Or 534 536	or
+E40	Or:T64 Arg:E39 Arg2:E38
+T65	Language 583 590	English
+T66	Negation 579 582	Non
+E41	Negation:T66 Negates:T65
+T67	Condition 681 690	substance
+E42	Condition:T67 Name:T68 Temporality:E19
+T68	Condition-Name 681 690	substance
+T69	Modifier 673 680	illicit
+E43	Modifier:T69 Modifies:T68
+T70	Other 667 672	other
+E44	Other:T70 Is-Other:E43
+T71	Modifier 659 665	opioid
+E45	Modifier:T71 Modifies:T68
+T72	Or 692 694	or
+E46	Or:T72 Arg:E42 Arg2:E1
+T73	Condition 740 749	pregnancy
+E47	Condition:T73 Name:T74
+T74	Condition-Name 740 749	pregnancy
+T75	Temporal-Connection 733 739	during
+E48	Temporal-Connection:T75 Arg:E47
+A11	Temporal-Connection-Type-Value E48 during
+T76	Temporal-Connection 723 729	before
+E49	Temporal-Connection:T76 Arg:E1
+A12	Temporal-Connection-Type-Value E49 before
+T77	Or 730 732	or
+E50	Or:T77 Arg:E49 Arg2:E48
+T78	Modifier 771 778	hepatic
+E51	Modifier:T78 Modifies:T4
+T79	Modifier 762 767	renal
+E52	Modifier:T79 Modifies:T4
+T80	Or 768 770	or
+E53	Or:T80 Arg:E52 Arg2:E51
+T81	Severity 755 761	Severe
+A13	Severity-Value T81 severe
+A14	Assertion-Type-Value E25 hypothetical

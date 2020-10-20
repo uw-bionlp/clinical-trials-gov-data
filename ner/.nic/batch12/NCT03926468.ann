@@ -1,0 +1,53 @@
+T1	Procedure 295 318	multimodality treatment
+T2	Procedure-Name 295 318	multimodality treatment
+E1	Procedure:T1 Name:T2
+T3	Procedure 274 291	chemoradiotherapy
+T4	Procedure-Name 274 291	chemoradiotherapy
+E3	Procedure:T3 Name:T4
+T5	Procedure 258 270	radiotherapy
+T6	Procedure-Name 258 270	radiotherapy
+E5	Procedure:T5 Name:T6
+T7	Eq-Operator 125 126	-
+A1	Eq-Operator-Value T7 BETWEEN
+T8	Eq-Value 124 125	0
+T9	Eq-Value 126 127	2
+T10	Eq-Comparison 124 127	0-2
+E6	Eq-Comparison:T10 Operator:T7 Value:T8 Value2:T9
+T11	Condition 64 87	squamous cell carcinoma
+E2	Condition:T11 Name:T12
+T12	Condition-Name 64 87	squamous cell carcinoma
+T13	Condition 89 94	HNSCC
+E4	Condition:T13 Name:T14
+T14	Condition-Name 89 94	HNSCC
+R1	Abbrev-Of Arg1:E4 Arg2:E2	
+T15	Modifier 59 63	neck
+E7	Modifier:T15 Modifies:T12
+T16	Modifier 50 54	head
+E8	Modifier:T16 Modifies:T12
+T17	Or 55 58	and
+E9	Or:T17 Arg:E8 Arg2:E7
+T18	Observation 101 123	WHO performance status
+E10	Observation:T18 Name:T19 Eq-Comparison:E6
+T19	Observation-Name 101 123	WHO performance status
+A2	Observation-Type-Value T19 clinical-score
+T22	Condition 192 202	metastasis
+E12	Condition:T22 Name:T23 Stage:E11
+T23	Condition-Name 192 202	metastasis
+T26	Or 271 273	or
+E14	Or:T26 Arg:E5 Arg2:E3
+T27	Or 292 294	or
+E15	Or:T27 Arg:E3 Arg2:E1
+T20	Eq-Comparison 142 151	stage III
+E11	Eq-Comparison:T20 Unit:T21 Value:T28
+T21	Eq-Unit 142 147	stage
+T28	Eq-Value 148 151	III
+T24	Eq-Comparison 212 220	stage IV
+E13	Eq-Comparison:T24 Unit:T25 Value:T29
+T25	Eq-Unit 212 217	stage
+T29	Eq-Value 218 220	IV
+T30	Modifier 187 191	neck
+E16	Modifier:T30 Modifies:T23
+T31	Modifier 166 182	bulky T3 primary
+E17	Modifier:T31 Modifies:T23
+T32	Or 183 186	+/-
+E18	Or:T32 Arg:E17 Arg2:E16

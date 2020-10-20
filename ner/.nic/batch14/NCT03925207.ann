@@ -1,0 +1,46 @@
+T1	Procedure 94 113	enucleation surgery
+T2	Procedure-Name 94 113	enucleation surgery
+E1	Procedure:T1 Name:T2 Provider:E7 Location:T14
+T3	Procedure 292 311	surgical procedures
+T4	Procedure-Name 292 311	surgical procedures
+E3	Procedure:T3 Name:T4 Temporality:E11
+T5	Age 336 339	age
+E4	Age:T5 Eq-Comparison:E13
+T6	Eq-Value 327 329	18
+T7	Eq-Comparison 56 65	underwent
+E2	Eq-Comparison:T7 Temporal-Period:T8
+T8	Eq-Temporal-Period 56 65	underwent
+A1	Eq-Temporal-Period-Value T8 past
+T9	Procedure 66 87	orbital ball implants
+E5	Procedure:T9 Name:T10 Temporality:E2
+T10	Procedure-Name 66 87	orbital ball implants
+T11	Temporal-Connection 88 93	after
+E6	Temporal-Connection:T11 Arg:E5 Arg2:E1
+A2	Temporal-Connection-Type-Value E6 after
+T12	Provider 121 144	ophthalmologist surgeon
+E7	Provider:T12 Type:T13
+T13	Provider-Type 121 144	ophthalmologist surgeon
+T14	Location 201 207	centre
+A3	Location-Value T14 clinic
+T15	Modifier 161 173	oculoplastic
+E8	Modifier:T15 Modifies:T13
+T16	Modifier 178 193	orbital surgery
+E9	Modifier:T16 Modifies:T13
+T17	And 174 177	and
+E10	And:T17 Arg:E8 Arg2:E9
+T18	Eq-Comparison 265 274	underwent
+E11	Eq-Comparison:T18 Temporal-Period:T19
+T19	Eq-Temporal-Period 265 274	underwent
+A4	Eq-Temporal-Period-Value T19 past
+T20	Negation 248 256	excluded
+E12	Negation:T20 Negates:E3
+T21	Eq-Comparison 321 332	under 18 yr
+E13	Eq-Comparison:T21 Operator:T22 Value:T6 Temporal-Unit:T23
+T22	Eq-Operator 321 326	under
+A5	Eq-Operator-Value T22 LT
+T23	Eq-Temporal-Unit 330 332	yr
+A6	Eq-Temporal-Unit-Value T23 year
+T24	Or 313 315	or
+E14	Or:T24 Arg:E3 Arg2:E4
+T25	Other 275 280	other
+E15	Other:T25 Is-Other:E3

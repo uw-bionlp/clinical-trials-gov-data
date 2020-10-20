@@ -1,0 +1,65 @@
+T1	Condition 25 32	Healthy
+E1	Condition:T1 Name:T24
+T2	And 42 46	with
+E2	And:T2 Arg:T25 Arg2:E3
+T3	Negation 47 49	no
+E3	Negation:T3 Negates:E5
+T4	Modifier 50 58	systemic
+E4	Modifier:T4 Modifies:T26
+T5	Condition 59 67	diseases
+E5	Condition:T5 Name:T26
+T6	Condition 79 85	caries
+E6	Condition:T6 Name:T28
+T7	Risk 86 90	risk
+E7	Risk:T7 Risk-For:E6 Polarity:T27
+T9	And 100 104	with
+E9	And:T9 Arg:T29 Arg2:E12
+T10	Eq-Comparison 121 133	at least one
+E10	Eq-Comparison:T10 Operator:T30 Value:T31
+T11	Modifier 134 141	visible
+E11	Modifier:T11 Modifies:T38
+T12	Condition 149 152	WSL
+E12	Condition:T12 Name:T38 Temporality:E8 Minimum-Count:E10
+T13	Modifier 156 169	primary teeth
+E13	Modifier:T13 Modifies:T38
+T14	And 170 174	with
+E14	And:T14 Arg:E12
+T15	Observation 175 189	ICDAS II score
+E15	Observation:T15 Name:T39 Eq-Comparison:E16
+T16	Eq-Comparison 193 201	1,2 or 3
+E16	Eq-Comparison:T16 Value:T32 Value:T33 Value2:T40
+T18	Modifier 294 308	Selected tooth
+E18	Modifier:T18 Modifies:T34
+T19	Condition 314 330	cavitated lesion
+E19	Condition:T19 Name:T34
+T20	Modifier 337 351	Selected tooth
+E20	Modifier:T20 Modifies:T35
+T21	Condition 357 371	enamel defects
+E21	Condition:T21 Name:T35
+T22	Allergy 391 399	allergic
+E22	Allergy:T22 Name:T36
+T24	Condition-Name 25 32	Healthy
+T25	Life-Stage-And-Gender 33 41	children
+A2	Life-Stage-And-Gender-Type T25 child
+T26	Condition-Name 59 67	diseases
+T27	Polarity 74 78	High
+A3	Polarity-Value T27 high
+T28	Condition-Name 79 85	caries
+T29	Life-Stage-And-Gender 91 99	children
+A4	Life-Stage-And-Gender-Type T29 child
+T30	Eq-Operator 121 129	at least
+A5	Eq-Operator-Value T30 GTEQ
+T31	Eq-Value 130 133	one
+T32	Eq-Value 193 194	1
+T33	Eq-Value 200 201	3
+T34	Condition-Name 314 330	cavitated lesion
+T35	Condition-Name 357 371	enamel defects
+T36	Allergy-Name 403 407	milk
+T8	Eq-Comparison 142 148	active
+E8	Eq-Comparison:T8 Temporal-Period:T37
+T37	Eq-Temporal-Period 142 148	active
+A1	Eq-Temporal-Period-Value T37 present
+T38	Condition-Name 149 152	WSL
+T39	Observation-Name 175 189	ICDAS II score
+A6	Observation-Type-Value T39 clinical-score
+T40	Eq-Value 195 196	2
