@@ -1,0 +1,156 @@
+T1	Condition 686 708	cervical radiculopathy
+T2	Condition-Name 686 708	cervical radiculopathy
+E1	Condition:T1 Name:T2 Temporality:E32
+T3	Condition 711 733	brachial plexus lesion
+T4	Condition-Name 711 733	brachial plexus lesion
+E3	Condition:T3 Name:T4
+T5	Condition 750 771	neuromuscular disease
+T6	Condition-Name 750 771	neuromuscular disease
+E5	Condition:T5 Name:T6 Temporality:E33
+T7	Condition 39 58	adhesive capsulitis
+T8	Condition-Name 39 58	adhesive capsulitis
+E7	Condition:T7 Name:T8
+T9	Condition 342 361	adhesive capsulitis
+T10	Condition-Name 342 361	adhesive capsulitis
+E9	Condition:T9 Name:T10 Temporality:E28
+T11	Condition 484 515	inflammatory rheumatic diseases
+T12	Condition-Name 484 515	inflammatory rheumatic diseases
+E11	Condition:T11 Name:T12
+T13	Procedure 405 430	shoulder shoulder surgery
+T14	Procedure-Name 405 430	shoulder shoulder surgery
+E13	Procedure:T13 Name:T14
+T15	Procedure 788 804	physical therapy
+T16	Procedure-Name 788 804	physical therapy
+E15	Procedure:T15 Name:T16 Temporality:E34 Temporality2:E45
+T17	Condition 455 482	glenohumeral osteoarthritis
+T18	Condition-Name 455 482	glenohumeral osteoarthritis
+E17	Condition:T17 Name:T18
+T19	Procedure 662 669	surgery
+T20	Procedure-Name 662 669	surgery
+E19	Procedure:T19 Name:T20
+T21	Condition 432 453	calcific tendinopathy
+T22	Condition-Name 432 453	calcific tendinopathy
+E21	Condition:T21 Name:T22
+T23	Condition 270 279	pregnancy
+T24	Condition-Name 270 279	pregnancy
+E23	Condition:T23 Name:T24
+T29	Eq-Temporal-Unit 609 615	months
+A1	Eq-Temporal-Unit-Value T29 month
+T30	Eq-Temporal-Unit 849 855	months
+A2	Eq-Temporal-Unit-Value T30 month
+T32	Eq-Value 254 255	1
+T33	Eq-Value 607 608	3
+T34	Eq-Value 847 848	6
+T35	Eq-Comparison 321 328	History
+E28	Eq-Comparison:T35 Temporal-Period:T36
+T36	Eq-Temporal-Period 321 328	History
+A3	Eq-Temporal-Period-Value T36 past
+T37	Eq-Comparison 367 374	History
+E29	Eq-Comparison:T37 Temporal-Period:T38
+T38	Eq-Temporal-Period 367 374	History
+A4	Eq-Temporal-Period-Value T38 past
+T39	Eq-Comparison 539 546	History
+E30	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 539 546	History
+A5	Eq-Temporal-Period-Value T40 past
+T41	Eq-Comparison 621 628	History
+E31	Eq-Comparison:T41 Temporal-Period:T42
+T42	Eq-Temporal-Period 621 628	History
+A6	Eq-Temporal-Period-Value T42 past
+T43	Eq-Comparison 675 682	History
+E32	Eq-Comparison:T43 Temporal-Period:T44
+T44	Eq-Temporal-Period 675 682	History
+A7	Eq-Temporal-Period-Value T44 past
+T45	Eq-Comparison 739 746	History
+E33	Eq-Comparison:T45 Temporal-Period:T46
+T46	Eq-Temporal-Period 739 746	History
+A8	Eq-Temporal-Period-Value T46 past
+T47	Eq-Comparison 777 784	History
+E34	Eq-Comparison:T47 Temporal-Period:T48
+T48	Eq-Temporal-Period 777 784	History
+A9	Eq-Temporal-Period-Value T48 past
+T49	Procedure 72 92	physical examination
+E2	Procedure:T49 Name:T50
+T50	Procedure-Name 72 92	physical examination
+R1	Found-By Arg1:E7 Arg2:E2	
+T31	Eq-Comparison 130 143	more than 25%
+E4	Eq-Comparison:T31 Operator:T51 Value:T52 Unit:T53
+T51	Eq-Operator 130 139	more than
+A10	Eq-Operator-Value T51 GT
+T52	Eq-Value 140 142	25
+T53	Eq-Unit 142 143	%
+T54	Observation 185 209	shoulder range of motion
+E6	Observation:T54 Name:T55 Eq-Comparison:E4 Eq-Comparison2:E8
+T55	Observation-Name 185 209	shoulder range of motion
+A11	Observation-Type-Value T55 measurement
+T56	Eq-Comparison 158 181	at least two directions
+E8	Eq-Comparison:T56 Operator:T57 Value:T58 Unit:T59
+T57	Eq-Operator 158 166	at least
+A12	Eq-Operator-Value T57 GTEQ
+T58	Eq-Value 167 170	two
+T59	Eq-Unit 171 181	directions
+R2	Equivalent-To Arg1:E6 Arg2:E7	
+T60	Condition 230 240	complaints
+E10	Condition:T60 Name:T61 Duration:E12
+T61	Condition-Name 230 240	complaints
+T62	Eq-Comparison 245 261	at least 1 month
+E12	Eq-Comparison:T62 Operator:T63 Temporal-Unit:T64 Value:T32
+T63	Eq-Operator 245 253	at least
+A13	Eq-Operator-Value T63 GTEQ
+T64	Eq-Temporal-Unit 256 261	month
+A14	Eq-Temporal-Unit-Value T64 month
+T65	Condition 282 295	breastfeeding
+E14	Condition:T65 Name:T66
+T66	Condition-Name 282 295	breastfeeding
+T67	Or 280 281	/
+E16	Or:T67 Arg:E23 Arg2:E14
+T68	Negation 267 269	No
+E18	Negation:T68 Negates:E23
+T69	Modifier 332 341	bilateral
+E20	Modifier:T69 Modifies:T10
+T70	Condition 387 393	trauma
+E22	Condition:T70 Name:T71 Temporality:E29
+T71	Condition-Name 387 393	trauma
+T72	Condition 395 403	fracture
+E24	Condition:T72 Name:T73
+T73	Condition-Name 395 403	fracture
+T74	Condition 517 522	tumor
+E26	Condition:T74 Name:T75
+T75	Condition-Name 517 522	tumor
+T76	Condition 524 533	infection
+E35	Condition:T76 Name:T77
+T77	Condition-Name 524 533	infection
+T25	Drug 550 564	corticosteroid
+E25	Drug:T25 Name:T26 Temporality:E30
+T26	Drug-Name 550 564	corticosteroid
+T78	Modifier 582 590	shoulder
+E36	Modifier:T78 Modifies:E25
+T79	Eq-Comparison 602 615	last 3 months
+E37	Eq-Comparison:T79 Temporal-Period:T80 Value:T33 Temporal-Unit:T29
+T80	Eq-Temporal-Period 602 606	last
+A15	Eq-Temporal-Period-Value T80 past
+T81	Temporal-Connection 591 597	during
+E38	Temporal-Connection:T81 Arg:E25 Arg2:E37
+A16	Temporal-Connection-Type-Value E38 during
+T82	Eq-Comparison 632 638	recent
+E39	Eq-Comparison:T82 Temporal-Period:T83
+T83	Eq-Temporal-Period 632 638	recent
+A17	Eq-Temporal-Period-Value T83 recent
+T84	Modifier 655 661	bypass
+E40	Modifier:T84 Modifies:T20
+T27	Modifier 645 651	breast
+E27	Modifier:T27 Modifies:T20
+T28	Modifier 639 643	lung
+E41	Modifier:T28 Modifies:T20
+T85	Or 652 654	or
+E42	Or:T85 Arg:E27 Arg2:E40
+T86	Or 709 710	/
+E43	Or:T86 Arg:E1 Arg2:E3
+T87	Modifier 821 834	same shoulder
+E44	Modifier:T87 Modifies:E15
+T88	Eq-Comparison 842 855	last 6 months
+E45	Eq-Comparison:T88 Temporal-Period:T89 Value:T34 Temporal-Unit:T30
+T89	Eq-Temporal-Period 842 846	last
+A18	Eq-Temporal-Period-Value T89 past
+T90	Modifier 378 386	shoulder
+E46	Modifier:T90 Modifies:T71

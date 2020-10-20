@@ -1,35 +1,35 @@
-T1	Observation 25 61	Estimated glomerular filtration rate
 E1	Observation:T1 Name:T9 Eq-Comparison:E2
-T2	Eq-Comparison 62 77	below 20 ml/min
 E2	Eq-Comparison:T2 Operator:T10 Value:T11 Unit:T12 Per:T13
-T3	Procedure 181 198	Conservative care
 E3	Procedure:T3 Name:T16
-T4	Procedure 221 236	transplantation
 E4	Procedure:T4 Name:T14 Temporality:E9
-T8	Condition 293 313	cognitive impairment
 E8	Condition:T8 Name:T15
+E9	Eq-Comparison:T17 Temporal-Period:T18
+E5	Modifier:T5 Modifies:T14
+E6	Study:T6
+E7	Negation:T7 Negates:E6
+E10	Assertion:T19 Asserted:E7
+T1	Observation 25 61	Estimated glomerular filtration rate
+T2	Eq-Comparison 62 77	below 20 ml/min
+T3	Procedure 181 198	Conservative care
+T4	Procedure 221 236	transplantation
+T8	Condition 293 313	cognitive impairment
 T9	Observation-Name 25 61	Estimated glomerular filtration rate
-A2	Observation-Type-Value T9 lab
 T10	Eq-Operator 62 67	below
-A3	Eq-Operator-Value T10 LT
 T11	Eq-Value 68 70	20
 T12	Eq-Unit 71 73	ml
 T13	Eq-Temporal-Unit 74 77	min
-A4	Eq-Temporal-Unit-Value T13 minute
 T14	Procedure-Name 221 236	transplantation
 T15	Condition-Name 293 313	cognitive impairment
 T16	Procedure-Name 181 198	Conservative care
 T17	Eq-Comparison 206 214	set date
-E9	Eq-Comparison:T17 Temporal-Period:T18
 T18	Eq-Temporal-Period 206 214	set date
-A5	Eq-Temporal-Period-Value T18 future
 T5	Modifier 244 256	living donor
-E5	Modifier:T5 Modifies:T14
 T6	Study 274 285	participate
-E6	Study:T6 
 T7	Negation 262 265	Not
-E7	Negation:T7 Negates:E6
 T19	Assertion 266 273	able to
-E10	Assertion:T19 Asserted:E7
+A2	Observation-Type-Value T9 lab
+A3	Eq-Operator-Value T10 LT
+A4	Eq-Temporal-Unit-Value T13 minute
+A5	Eq-Temporal-Period-Value T18 future
 A1	Assertion-Type-Value E10 hypothetical
-R1	Caused-By Arg1:E7 Arg2:E8	
+R1	Caused-By Arg1:E7 Arg2:E8

@@ -1,184 +1,184 @@
+E1	Procedure:T1 Name:T2 Temporality:E38
+E3	Condition:T3 Name:T4
+E5	Procedure:T5 Name:T6 Temporality:E54
+E7	Condition:T7 Name:T8
+E8	Eq-Comparison:T22 Operator:T9 Value:T17
+E9	Eq-Comparison:T23 Operator:T10 Temporal-Unit:T14 Value:T18
+E10	Eq-Comparison:T24 Operator:T11 Temporal-Unit:T15 Value:T19
+E11	Eq-Comparison:T25 Operator:T12 Value:T20 Unit:T67
+E12	Eq-Comparison:T26 Operator:T13 Temporal-Unit:T16 Value:T21
+E2	Condition:T27 Name:T28 Severity:T36
+E4	Condition:T29 Name:T30
+E13	Modifier:T33 Modifies:E2
+E14	Modifier:T34 Modifies:E2
+E15	Or:T35 Arg:E14 Arg2:E13
+E16	Procedure:T37 Name:T38
+E17	Procedure:T39 Name:T40 Temporality:E18 Minimum-Count:E8
+E18	Eq-Comparison:T41 Temporal-Period:T42
+E19	Modifier:T43 Modifies:E1
+E20	Condition:T44 Name:T48
+E21	Condition:T45 Name:T50
+E22	Condition:T46 Name:T49
+E23	Condition:T47 Name:T51
+E24	Or:T52 Arg:E20 Arg2:E21
+E25	Procedure:T53 Name:T54 Temporality:E39
+E26	Procedure:T55 Temporality:E42
+E27	Drug:T57 Name:T58
+E28	Drug:T59 Name:T60
+E30	Drug:T63
+E31	Modifier:T65 Modifies:E30
+E32	Study:T66 Study-Of:E49
+E33	Procedure:T68
+E34	Temporal-Connection:T69 Arg:E5 Arg2:E56
+E35	Drug:T70 Temporality:E56
+E6	Modifier:T31
+E36	Modifier:T32 Modifies:T30
+E37	Or:T72 Arg:E6 Arg2:E36
+E38	Eq-Comparison:T73 Temporal-Recency:T74
+E39	Eq-Comparison:T75 Temporal-Recency:T76
+E40	Assertion:T77 Asserted:E25
+E41	Temporal-Connection:T78 Arg:E9 Arg2:E39
+E42	Eq-Comparison:T79 Temporal-Period:T80
+E43	Modifier:T56 Modifies:T58
+E44	Study:T81 Study-Of:E29
+E45	Other:T82 Is-Other:E44
+E29	Procedure:T61 Temporality:E10
+E46	Drug:T62
+E47	Eq-Comparison:T83 Temporal-Recency:T84
+E48	Temporal-Connection:T85 Arg:E10 Arg2:E47
+E49	Drug:T86 Temporality:E47
+E50	Condition:T64 Name:T87
+E51	Assertion:T88 Asserted:E7 Asserted2:E3
+E52	Assertion:T89 Asserted:E33
+E53	And:T90 Arg:E3 Arg2:E52
+E54	Eq-Comparison:T91 Temporal-Period:T92
+E55	Or:T93 Arg:E33 Arg2:E5
+E56	Eq-Comparison:T71 Temporal-Recency:T94
 T1	Procedure 303 323	chemotherapy regimen
 T2	Procedure-Name 303 323	chemotherapy regimen
-E1	Procedure:T1 Name:T2 Temporality:E38
 T3	Condition 763 779	pleural effusion
 T4	Condition-Name 763 779	pleural effusion
-E3	Condition:T3 Name:T4
 T5	Procedure 825 841	ascites drainage
 T6	Procedure-Name 825 841	ascites drainage
-E5	Procedure:T5 Name:T6 Temporality:E54
 T7	Condition 747 761	cancer ascites
 T8	Condition-Name 747 761	cancer ascites
-E7	Condition:T7 Name:T8
 T9	Eq-Operator 175 176	≥
-A1	Eq-Operator-Value T9 GTEQ
 T10	Eq-Operator 384 385	≤
-A2	Eq-Operator-Value T10 LTEQ
 T11	Eq-Operator 574 580	within
-A3	Eq-Operator-Value T11 LTEQ
 T12	Eq-Operator 623 624	<
-A4	Eq-Operator-Value T12 LT
 T13	Eq-Operator 842 848	within
-A5	Eq-Operator-Value T13 LTEQ
 T14	Eq-Temporal-Unit 387 392	weeks
-A6	Eq-Temporal-Unit-Value T14 week
 T15	Eq-Temporal-Unit 583 588	weeks
-A7	Eq-Temporal-Unit-Value T15 week
 T16	Eq-Temporal-Unit 851 857	months
-A8	Eq-Temporal-Unit-Value T16 month
 T17	Eq-Value 176 177	2
 T18	Eq-Value 385 386	8
 T19	Eq-Value 581 582	4
 T20	Eq-Value 625 626	5
 T21	Eq-Value 849 850	2
 T22	Eq-Comparison 175 177	≥2
-E8	Eq-Comparison:T22 Operator:T9 Value:T17
 T23	Eq-Comparison 384 392	≤8 weeks
-E9	Eq-Comparison:T23 Operator:T10 Temporal-Unit:T14 Value:T18
 T24	Eq-Comparison 574 588	within 4 weeks
-E10	Eq-Comparison:T24 Operator:T11 Temporal-Unit:T15 Value:T19
 T25	Eq-Comparison 622 649	(< 5 elimination half-lives
-E11	Eq-Comparison:T25 Operator:T12 Value:T20 Unit:T67
 T26	Eq-Comparison 842 857	within 2 months
-E12	Eq-Comparison:T26 Operator:T13 Temporal-Unit:T16 Value:T21
 T27	Condition 92 98	cancer
-E2	Condition:T27 Name:T28 Severity:T36
 T28	Condition-Name 92 98	cancer
 T29	Condition 148 154	cancer
-E4	Condition:T29 Name:T30
 T30	Condition-Name 148 154	cancer
-R2	Example-Of Arg1:E4 Arg2:E2	
 T33	Modifier 71 91	endometrioid ovarian
-E13	Modifier:T33 Modifies:E2
 T34	Modifier 61 67	serous
-E14	Modifier:T34 Modifies:E2
 T35	Or 68 70	or
-E15	Or:T35 Arg:E14 Arg2:E13
 T36	Severity 50 60	high-grade
-A9	Severity-Value T36 severe
 T37	Procedure 25 39	Histologically
-E16	Procedure:T37 Name:T38
 T38	Procedure-Name 25 39	Histologically
-R3	Found-By Arg1:E2 Arg2:E16	
 T39	Procedure 187 215	platinum-containing regimens
-E17	Procedure:T39 Name:T40 Temporality:E18 Minimum-Count:E8
 T40	Procedure-Name 187 215	platinum-containing regimens
 T41	Eq-Comparison 178 186	previous
-E18	Eq-Comparison:T41 Temporal-Period:T42
 T42	Eq-Temporal-Period 178 186	previous
-A11	Eq-Temporal-Period-Value T42 past
 T43	Modifier 288 302	platinum-based
-E19	Modifier:T43 Modifies:E1
 T44	Condition 221 238	Complete response
-E20	Condition:T44 Name:T48
 T45	Condition 247 263	partial response
-E21	Condition:T45 Name:T50
 T46	Condition 240 242	CR
-E22	Condition:T46 Name:T49
 T47	Condition 265 267	PR
-E23	Condition:T47 Name:T51
 T48	Condition-Name 221 238	Complete response
 T49	Condition-Name 240 242	CR
 T50	Condition-Name 247 263	partial response
 T51	Condition-Name 265 267	PR
-R4	Abbrev-Of Arg1:E22 Arg2:E20	
-R5	Abbrev-Of Arg1:E23 Arg2:E21	
 T52	Or 244 246	or
-E24	Or:T52 Arg:E20 Arg2:E21
-R6	Using Arg1:E21 Arg2:E1	
-R7	Using Arg1:E20 Arg2:E1	
 T53	Procedure 412 420	platinum
-E25	Procedure:T53 Name:T54 Temporality:E39
 T54	Procedure-Name 412 420	platinum
 T55	Procedure 452 461	treatment
-E26	Procedure:T55 Temporality:E42
 T57	Drug 469 497	poly (ADP-ribose) polymerase
-E27	Drug:T57 Name:T58
 T58	Drug-Name 469 497	poly (ADP-ribose) polymerase
 T59	Drug 499 503	PARP
-E28	Drug:T59 Name:T60
 T60	Drug-Name 499 503	PARP
-R8	Using Arg1:E26 Arg2:E27	
-R9	Abbrev-Of Arg1:E28 Arg2:E27	
 T63	Drug 699 704	drugs
-E30	Drug:T63 
 T65	Modifier 668 686	molecular targeted
-E31	Modifier:T65 Modifies:E30
 T66	Study 657 662	study
-E32	Study:T66 Study-Of:E49
 T67	Eq-Unit 639 649	half-lives
 T68	Procedure 793 801	drainage
-E33	Procedure:T68 
 T69	Temporal-Connection 858 866	prior to
-E34	Temporal-Connection:T69 Arg:E5 Arg2:E56
 T70	Drug 877 891	administration
-E35	Drug:T70 Temporality:E56
-A12	Temporal-Connection-Type-Value E34 before
 T31	Modifier 110 128	primary peritoneal
-E6	Modifier:T31 
 T32	Modifier 133 147	fallopian tube
-E36	Modifier:T32 Modifies:T30
 T72	Or 129 132	and
-E37	Or:T72 Arg:E6 Arg2:E36
 T73	Eq-Comparison 283 287	last
-E38	Eq-Comparison:T73 Temporal-Recency:T74
 T74	Eq-Temporal-Recency 283 287	last
-A10	Eq-Temporal-Recency-Value T74 most-recent-time
 T75	Eq-Comparison 399 403	last
-E39	Eq-Comparison:T75 Temporal-Recency:T76
 T76	Eq-Temporal-Recency 399 403	last
-A13	Eq-Temporal-Recency-Value T76 most-recent-time
 T77	Assertion 359 369	Ability to
-E40	Assertion:T77 Asserted:E25
-A14	Assertion-Type-Value E40 hypothetical
 T78	Temporal-Connection 393 398	after
-E41	Temporal-Connection:T78 Arg:E9 Arg2:E39
-A15	Temporal-Connection-Type-Value E41 after
 T79	Eq-Comparison 446 451	Prior
-E42	Eq-Comparison:T79 Temporal-Period:T80
 T80	Eq-Temporal-Period 446 451	Prior
-A16	Eq-Temporal-Period-Value T80 past
 T56	Modifier 505 514	inhibitor
-E43	Modifier:T56 Modifies:T58
 T81	Study 553 558	study
-E44	Study:T81 Study-Of:E29
 T82	Other 547 552	other
-E45	Other:T82 Is-Other:E44
 T61	Procedure 564 573	treatment
-E29	Procedure:T61 Temporality:E10
 T62	Drug 559 563	drug
-E46	Drug:T62 
-R1	Using Arg1:E29 Arg2:E46	
 T83	Eq-Comparison 602 607	first
-E47	Eq-Comparison:T83 Temporal-Recency:T84
 T84	Eq-Temporal-Recency 602 607	first
-A17	Eq-Temporal-Recency-Value T84 first-time
 T85	Temporal-Connection 589 597	prior to
-E48	Temporal-Connection:T85 Arg:E10 Arg2:E47
-A18	Temporal-Connection-Type-Value E48 before
-R10	Equivalent-To Arg1:E11 Arg2:E47	
 T86	Drug 663 667	drug
-E49	Drug:T86 Temporality:E47
 T64	Condition 692 698	cancer
-E50	Condition:T64 Name:T87
 T87	Condition-Name 692 698	cancer
-R11	Treatment-For Arg1:E30 Arg2:E50	
-R12	Example-Of Arg1:E30 Arg2:E49	
 T88	Assertion 735 743	symptoms
-E51	Assertion:T88 Asserted:E7 Asserted2:E3
-A19	Assertion-Type-Value E51 possible
 T89	Assertion 785 789	need
-E52	Assertion:T89 Asserted:E33
-A20	Assertion-Type-Value E52 hypothetical
 T90	And 781 784	who
-E53	And:T90 Arg:E3 Arg2:E52
 T91	Eq-Comparison 815 824	undergone
-E54	Eq-Comparison:T91 Temporal-Period:T92
 T92	Eq-Temporal-Period 815 824	undergone
-A21	Eq-Temporal-Period-Value T92 past
 T93	Or 803 805	or
-E55	Or:T93 Arg:E33 Arg2:E5
 T71	Eq-Comparison 871 876	first
-E56	Eq-Comparison:T71 Temporal-Recency:T94
 T94	Eq-Temporal-Recency 871 876	first
+A1	Eq-Operator-Value T9 GTEQ
+A2	Eq-Operator-Value T10 LTEQ
+A3	Eq-Operator-Value T11 LTEQ
+A4	Eq-Operator-Value T12 LT
+A5	Eq-Operator-Value T13 LTEQ
+A6	Eq-Temporal-Unit-Value T14 week
+A7	Eq-Temporal-Unit-Value T15 week
+A8	Eq-Temporal-Unit-Value T16 month
+A9	Severity-Value T36 severe
+A11	Eq-Temporal-Period-Value T42 past
+A12	Temporal-Connection-Type-Value E34 before
+A10	Eq-Temporal-Recency-Value T74 most-recent-time
+A13	Eq-Temporal-Recency-Value T76 most-recent-time
+A14	Assertion-Type-Value E40 hypothetical
+A15	Temporal-Connection-Type-Value E41 after
+A16	Eq-Temporal-Period-Value T80 past
+A17	Eq-Temporal-Recency-Value T84 first-time
+A18	Temporal-Connection-Type-Value E48 before
+A19	Assertion-Type-Value E51 possible
+A20	Assertion-Type-Value E52 hypothetical
+A21	Eq-Temporal-Period-Value T92 past
 A22	Eq-Temporal-Recency-Value T94 first-time
+R2	Example-Of Arg1:E4 Arg2:E2
+R3	Found-By Arg1:E2 Arg2:E16
+R4	Abbrev-Of Arg1:E22 Arg2:E20
+R5	Abbrev-Of Arg1:E23 Arg2:E21
+R6	Using Arg1:E21 Arg2:E1
+R7	Using Arg1:E20 Arg2:E1
+R8	Using Arg1:E26 Arg2:E27
+R9	Abbrev-Of Arg1:E28 Arg2:E27
+R1	Using Arg1:E29 Arg2:E46
+R10	Equivalent-To Arg1:E11 Arg2:E47
+R11	Treatment-For Arg1:E30 Arg2:E50
+R12	Example-Of Arg1:E30 Arg2:E49

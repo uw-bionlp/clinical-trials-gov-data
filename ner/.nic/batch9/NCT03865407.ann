@@ -1,0 +1,84 @@
+T1	Condition 33 47	Kidney Disease
+E1	Condition:T1 Name:T26 Stage:E2
+T2	Eq-Comparison 48 57	stage 1-5
+E2	Eq-Comparison:T2 Unit:T27 Value:T28 Operator:T29 Value2:T30
+T3	Condition 63 76	Hyperuricemic
+E3	Condition:T3 Name:T31
+T4	Observation 78 80	UA
+E4	Observation:T4 Name:T32 Eq-Comparison:E5
+T5	Eq-Comparison 81 93	>= 5.5 mg/dL
+E5	Eq-Comparison:T5 Operator:T33 Value:T34 Unit:T35 Per:T36
+T6	Contraindication 120 136	Contraindication
+E6	Contraindication:T6 Contraindicates:E7
+T7	Drug 140 151	Allopurinol
+E7	Drug:T7 Name:T37
+T8	Observation 175 195	liver function tests
+E8	Observation:T8 Name:T39 Polarity:T38
+T9	Eq-Comparison 201 210	Receiving
+E9	Eq-Comparison:T9 Temporal-Period:T40
+T10	Or 217 219	or
+E10	Or:T10 Arg:T41 Arg2:E11
+T11	Modifier 220 227	chronic
+E11	Modifier:T11 Modifies:T42
+T12	Procedure 228 236	dialysis
+E12	Procedure:T12 Name:T42 Severity:T41 Temporality:E9
+T13	Modifier 242 249	Primary
+E13	Modifier:T13 Modifies:T43
+T14	Condition 250 268	metabolic disorder
+E14	Condition:T14 Name:T43
+T15	Condition 274 293	Sickle cell disease
+E15	Condition:T15 Name:T44
+T16	Modifier 299 317	Autosomal Dominant
+E16	Modifier:T16 Modifies:T45
+T17	Condition 318 343	Polycystic Kidney Disease
+E17	Condition:T17 Name:T45
+T18	Condition 349 359	Cystinosis
+E18	Condition:T18 Name:T46
+T19	Modifier 365 372	Bartter
+E19	Modifier:T19 Modifies:T48
+T20	Or 373 375	or
+E20	Or:T20 Arg:E19 Arg2:E21
+T21	Modifier 376 384	Gitelman
+E21	Modifier:T21 Modifies:T48
+T22	Condition 385 392	Disease
+E22	Condition:T22 Name:T48
+T23	Condition 398 406	Pregnant
+E23	Condition:T23 Name:T49
+T24	Or 407 409	or
+E24	Or:T24 Arg:E23 Arg2:E25
+T25	Condition 410 417	nursing
+E25	Condition:T25 Name:T50
+T26	Condition-Name 33 47	Kidney Disease
+T27	Eq-Unit 48 53	stage
+T28	Eq-Value 54 55	1
+T29	Eq-Operator 55 56	-
+A1	Eq-Operator-Value T29 BETWEEN
+T30	Eq-Value 56 57	5
+T31	Condition-Name 63 76	Hyperuricemic
+T32	Observation-Name 78 80	UA
+A2	Observation-Type-Value T32 lab
+T33	Eq-Operator 81 83	>=
+A3	Eq-Operator-Value T33 GTEQ
+T34	Eq-Value 84 87	5.5
+T35	Eq-Unit 88 90	mg
+T36	Eq-Unit 91 93	dL
+T37	Drug-Name 140 151	Allopurinol
+T38	Polarity 157 165	Elevated
+A4	Polarity-Value T38 high
+T39	Observation-Name 175 195	liver function tests
+A5	Observation-Type-Value T39 lab
+T40	Eq-Temporal-Period 201 210	Receiving
+A6	Eq-Temporal-Period-Value T40 present
+T41	Severity 211 216	acute
+A7	Severity-Value T41 severe
+T42	Procedure-Name 228 236	dialysis
+T43	Condition-Name 250 268	metabolic disorder
+T44	Condition-Name 274 293	Sickle cell disease
+T45	Condition-Name 318 343	Polycystic Kidney Disease
+T46	Condition-Name 349 359	Cystinosis
+T48	Condition-Name 385 392	Disease
+T49	Condition-Name 398 406	Pregnant
+T50	Condition-Name 410 417	nursing
+T47	Modifier 25 32	Chronic
+E26	Modifier:T47 Modifies:T26
+R1	Equivalent-To Arg1:E4 Arg2:E3	

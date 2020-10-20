@@ -1,0 +1,196 @@
+T1	Condition 53 68	dry eye disease
+T2	Condition-Name 53 68	dry eye disease
+E1	Condition:T1 Name:T2 Temporality:E15 Duration:E4
+T3	Condition 158 165	dry eye
+T4	Condition-Name 158 165	dry eye
+E3	Condition:T3 Name:T4
+T5	Condition 582 598	systemic disease
+T6	Condition-Name 582 598	systemic disease
+E5	Condition:T5 Name:T6
+T7	Procedure 748 761	birth control
+T8	Procedure-Name 748 761	birth control
+E7	Procedure:T7 Name:T8 Temporality:E20
+T9	Condition 655 664	pregnancy
+T10	Condition-Name 655 664	pregnancy
+E9	Condition:T9 Name:T10
+T11	Condition 633 640	nursing
+T12	Condition-Name 633 640	nursing
+E11	Condition:T11 Name:T12
+T13	Eq-Operator 196 197	≥
+A1	Eq-Operator-Value T13 GTEQ
+T14	Eq-Operator 527 533	within
+A2	Eq-Operator-Value T14 LTEQ
+T15	Eq-Operator 1103 1109	within
+A3	Eq-Operator-Value T15 LTEQ
+T16	Eq-Temporal-Unit 97 103	months
+A4	Eq-Temporal-Unit-Value T16 month
+T17	Eq-Temporal-Unit 537 543	months
+A5	Eq-Temporal-Unit-Value T17 month
+T18	Eq-Temporal-Unit 1113 1117	days
+A6	Eq-Temporal-Unit-Value T18 day
+T19	Eq-Value 95 96	6
+T20	Eq-Value 197 199	40
+T22	Eq-Value 534 536	12
+T24	Eq-Value 1110 1112	45
+T26	Eq-Comparison 196 199	≥40
+E12	Eq-Comparison:T26 Operator:T13 Value:T20
+T27	Eq-Comparison 527 543	within 12 months
+E13	Eq-Comparison:T27 Operator:T14 Temporal-Unit:T17 Value:T22
+T28	Eq-Comparison 1103 1117	within 45 days
+E14	Eq-Comparison:T28 Operator:T15 Temporal-Unit:T18 Value:T24
+T29	Eq-Comparison 42 49	history
+E15	Eq-Comparison:T29 Temporal-Period:T30
+T30	Eq-Temporal-Period 42 49	history
+A7	Eq-Temporal-Period-Value T30 past
+T31	Eq-Comparison 110 117	History
+E16	Eq-Comparison:T31 Temporal-Period:T32
+T32	Eq-Temporal-Period 110 117	History
+A8	Eq-Temporal-Period-Value T32 past
+T33	Eq-Comparison 377 385	previous
+E17	Eq-Comparison:T33 Temporal-Period:T34
+T34	Eq-Temporal-Period 377 385	previous
+A9	Eq-Temporal-Period-Value T34 past
+T35	Eq-Comparison 490 497	history
+E18	Eq-Comparison:T35 Temporal-Period:T36
+T36	Eq-Temporal-Period 490 497	history
+A10	Eq-Temporal-Period-Value T36 past
+T37	Eq-Comparison 994 1003	currently
+E19	Eq-Comparison:T37 Temporal-Period:T38
+T38	Eq-Temporal-Period 994 1003	currently
+A11	Eq-Temporal-Period-Value T38 present
+T39	Eq-Comparison 719 724	using
+E20	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 719 724	using
+A12	Eq-Temporal-Period-Value T40 present
+T41	Temporal-Connection 1118 1123	prior
+E21	Temporal-Connection:T41 Arg:E14 Arg2:E62
+T43	Modifier 72 81	both eyes
+E2	Modifier:T43 Modifies:T2
+T44	Eq-Comparison 86 103	at least 6 months
+E4	Eq-Comparison:T44 Operator:T45 Value:T19 Temporal-Unit:T16
+T45	Eq-Operator 86 94	at least
+A14	Eq-Operator-Value T45 GTEQ
+T46	Procedure 128 153	artificial tear eye drops
+E6	Procedure:T46 Name:T47 Temporality:E16
+T47	Procedure-Name 128 153	artificial tear eye drops
+T48	Assertion 166 174	symptoms
+E8	Assertion:T48 Asserted:E3
+A15	Assertion-Type-Value E8 possible
+R1	Treatment-For Arg1:E6 Arg2:E3	
+T49	Observation 203 208	SANDE
+E22	Observation:T49 Name:T50 Eq-Comparison:E12
+T50	Observation-Name 203 208	SANDE
+T51	Observation 215 220	TFBUT
+E10	Observation:T51 Name:T52
+T52	Observation-Name 215 220	TFBUT
+T53	Condition 227 255	Corneal fluorescein staining
+E23	Condition:T53 Name:T54
+T54	Condition-Name 227 255	Corneal fluorescein staining
+T55	Condition 278 299	conjunctival staining
+E24	Condition:T55 Name:T56
+T56	Condition-Name 278 299	conjunctival staining
+T57	Modifier 262 277	Lissamine green
+E25	Modifier:T57 Modifies:T56
+T58	Observation 306 321	Schirmer's test
+E26	Observation:T58 Name:T59
+T59	Observation-Name 306 321	Schirmer's test
+T60	Drug 386 397	tavilermide
+E27	Drug:T60 Name:T61 Temporality:E17
+T61	Drug-Name 386 397	tavilermide
+T62	Drug 399 405	MIM-D3
+E28	Drug:T62 Name:T63
+T63	Drug-Name 399 405	MIM-D3
+R2	Abbrev-Of Arg1:E28 Arg2:E27	
+T64	Study 407 412	study
+E29	Study:T64 Study-Of:E28
+T21	Condition 447 465	slit lamp findings
+E30	Condition:T21 Name:T65
+T65	Condition-Name 447 465	slit lamp findings
+T66	Study 469 474	Visit
+E31	Study:T66 
+T67	Temporal-Connection 466 468	at
+E32	Temporal-Connection:T67 Arg:E30 Arg2:E31
+A16	Temporal-Connection-Type-Value E32 during
+T68	Condition 501 526	lacrimal duct obstruction
+E33	Condition:T68 Name:T69 Temporality:E18 Temporality2:E13
+T69	Condition-Name 501 526	lacrimal duct obstruction
+T23	Study 547 552	Visit
+E34	Study:T23 
+T70	Temporal-Connection 544 546	of
+E35	Temporal-Connection:T70 Arg:E13 Arg2:E34
+A17	Temporal-Connection-Type-Value E35 before
+T71	Modifier 569 581	uncontrolled
+E36	Modifier:T71 Modifies:E5
+T72	Life-Stage-And-Gender 610 615	woman
+A18	Life-Stage-And-Gender-Type T72 female
+T73	Condition 623 631	pregnant
+E37	Condition:T73 Name:T74
+T74	Condition-Name 623 631	pregnant
+T75	And 616 619	who
+E38	And:T75 Arg:T72 Arg2:E37
+T76	Assertion 644 652	planning
+E39	Assertion:T76 Asserted:E9
+A19	Assertion-Type-Value E39 intention
+T77	Or 641 643	or
+E40	Or:T77 Arg:E11 Arg2:E39
+T78	Life-Stage-And-Gender 676 681	woman
+A20	Life-Stage-And-Gender-Type T78 female
+T79	Condition 685 707	childbearing potential
+E41	Condition:T79 Name:T80
+T80	Condition-Name 685 707	childbearing potential
+T81	And 682 684	of
+E42	And:T81 Arg:T78 Arg2:E41
+T82	Negation 715 718	not
+E43	Negation:T82 Negates:E7
+T83	And 708 711	who
+E44	And:T83 Arg:E41 Arg2:E43
+T84	Condition 775 784	condition
+E45	Condition:T84 
+T85	Risk 870 874	risk
+E46	Risk:T85 Severity:T86
+R3	Caused-By Arg1:E46 Arg2:E45	
+T86	Severity 858 869	significant
+A21	Severity-Value T86 severe
+T87	Study 893 898	study
+E47	Study:T87 Stability:T88
+T88	Stability 880 888	confound
+A22	Stability-Value T88 change
+R4	Caused-By Arg1:T88 Arg2:E45	
+T89	Assertion 876 879	may
+E48	Assertion:T89 Asserted:T88
+A23	Assertion-Type-Value E48 hypothetical
+T90	Study 979 984	study
+E49	Study:T90 Stability:T91
+T91	Stability 915 924	interfere
+A24	Stability-Value T91 change
+T92	Assertion 911 914	may
+E50	Assertion:T92 Asserted:T91
+A25	Assertion-Type-Value E50 hypothetical
+T93	Or 908 910	or
+E51	Or:T93 Arg:E47 Arg2:E50
+R5	Caused-By Arg1:T91 Arg2:E45	
+T94	Study 1050 1055	study
+E52	Study:T94 Study-Of:E54 Temporality:E19
+T95	Drug 1035 1039	drug
+E53	Drug:T95 
+T96	Procedure 1043 1049	device
+E54	Procedure:T96 
+T97	Or 1040 1042	or
+E55	Or:T97 Arg:E53 Arg2:E54
+T98	Drug 1088 1092	drug
+E56	Drug:T98 
+T99	Procedure 1096 1102	device
+E57	Procedure:T99 Temporality:E14
+T100	Study 1072 1087	investigational
+E58	Study:T100 Temporality:E59 Study-Of:E56
+T101	Eq-Comparison 1064 1068	used
+E59	Eq-Comparison:T101 Temporal-Period:T102
+T102	Eq-Temporal-Period 1064 1068	used
+A26	Eq-Temporal-Period-Value T102 past
+T103	Or 1056 1058	or
+E60	Or:T103 Arg:E52 Arg2:E58
+T104	Or 1093 1095	or
+E61	Or:T104 Arg:E56 Arg2:E57
+A13	Temporal-Connection-Type-Value E21 before
+T25	Study 1127 1132	Visit
+E62	Study:T25 

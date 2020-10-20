@@ -1,0 +1,194 @@
+T1	Condition 38 58	Alzheimer's Dementia
+T2	Condition-Name 38 58	Alzheimer's Dementia
+E1	Condition:T1 Name:T2
+T6	Language 529 536	English
+T11	Condition 969 988	Depressive Disorder
+T12	Condition-Name 969 988	Depressive Disorder
+E11	Condition:T11 Name:T12 Temporality:E32
+T13	Condition 914 938	Schizoaffective Disorder
+T14	Condition-Name 914 938	Schizoaffective Disorder
+E13	Condition:T13 Name:T14
+T15	Condition 1007 1029	substance use disorder
+T16	Condition-Name 1007 1029	substance use disorder
+E15	Condition:T15 Name:T16 Temporality:E34 Temporality2:E36
+T17	Condition 894 910	Bipolar Disorder
+T18	Condition-Name 894 910	Bipolar Disorder
+E17	Condition:T17 Name:T18
+T19	Condition 879 892	Schizophrenia
+T20	Condition-Name 879 892	Schizophrenia
+E19	Condition:T19 Name:T20 Temporality:E26
+T23	Condition 710 728	co-morbid delirium
+T24	Condition-Name 710 728	co-morbid delirium
+E23	Condition:T23 Name:T24 Temporality:E22
+T25	Condition 832 840	Dementia
+T26	Condition-Name 832 840	Dementia
+E25	Condition:T25 Name:T26
+T29	Condition 990 993	MDD
+T30	Condition-Name 990 993	MDD
+E29	Condition:T29 Name:T30
+T31	Procedure 1125 1148	vagal nerve stimulation
+T32	Procedure-Name 1125 1148	vagal nerve stimulation
+E31	Procedure:T31 Name:T32
+T35	Procedure 1071 1074	ECT
+T36	Procedure-Name 1071 1074	ECT
+E35	Procedure:T35 Name:T36
+T37	Procedure 1118 1121	TMS
+T38	Procedure-Name 1118 1121	TMS
+E37	Procedure:T37 Name:T38
+T39	Eq-Operator 116 117	<
+A1	Eq-Operator-Value T39 LT
+T40	Eq-Operator 192 193	≥
+A2	Eq-Operator-Value T40 GTEQ
+T41	Eq-Operator 1030 1036	within
+A3	Eq-Operator-Value T41 LTEQ
+T42	Eq-Operator 1150 1156	within
+A4	Eq-Operator-Value T42 LTEQ
+T43	Eq-Temporal-Unit 642 647	years
+A5	Eq-Temporal-Unit-Value T43 year
+T44	Eq-Temporal-Unit 1044 1050	months
+A6	Eq-Temporal-Unit-Value T44 month
+T45	Eq-Temporal-Unit 1168 1174	months
+A7	Eq-Temporal-Unit-Value T45 month
+T48	Age 630 633	Age
+E38	Age:T48 Eq-Comparison:E20
+T50	Eq-Value 118 120	15
+T51	Eq-Value 193 194	4
+T54	Eq-Value 634 636	55
+T55	Eq-Value 639 641	89
+T56	Eq-Value 1042 1043	6
+T57	Eq-Value 1166 1167	3
+T58	Eq-Comparison 116 120	< 15
+E40	Eq-Comparison:T58 Operator:T39 Value:T50
+T59	Eq-Comparison 192 194	≥4
+E41	Eq-Comparison:T59 Operator:T40 Value:T51
+T60	Eq-Comparison 1150 1174	within the past 3 months
+E42	Eq-Comparison:T60 Operator:T42 Temporal-Unit:T45 Value:T57 Temporal-Period:T108
+T3	Observation 111 115	MMSE
+E2	Observation:T3 Name:T4 Eq-Comparison:E40
+T4	Observation-Name 111 115	MMSE
+T5	Observation 126 175	Cohen-Mansfield Agitation Inventory Short Version
+E3	Observation:T5 Name:T46
+T46	Observation-Name 126 175	Cohen-Mansfield Agitation Inventory Short Version
+T47	Observation 177 181	CMAI
+E4	Observation:T47 Name:T61 Eq-Comparison:E41 Eq-Comparison2:E5 Eq-Comparison3:E6
+T61	Observation-Name 177 181	CMAI
+R1	Abbrev-Of Arg1:E4 Arg2:E3	
+T62	Eq-Comparison 198 215	at least one item
+E5	Eq-Comparison:T62 Operator:T63 Unit:T65 Value:T64
+T63	Eq-Operator 198 206	at least
+A8	Eq-Operator-Value T63 GTEQ
+T64	Eq-Value 207 210	one
+T65	Eq-Unit 211 215	item
+T52	Eq-Comparison 228 251	3 on at least two items
+E6	Eq-Comparison:T52 Unit:T68 Operator:T67 Value:T66
+T66	Eq-Value 228 229	3
+T67	Eq-Operator 233 241	at least
+A9	Eq-Operator-Value T67 GTEQ
+T68	Eq-Unit 242 251	two items
+T53	Eq-Comparison 267 292	2 on at least three items
+E8	Eq-Comparison:T53 Unit:T71 Operator:T70 Value:T69
+T69	Eq-Value 267 268	2
+T70	Eq-Operator 272 280	at least
+A10	Eq-Operator-Value T70 GTEQ
+T71	Eq-Unit 281 292	three items
+T72	Or 253 255	or
+E10	Or:T72 Arg:E6 Arg2:E8
+T7	Eq-Comparison 299 311	At least one
+E7	Eq-Comparison:T7 Operator:T8 Unit:T73
+T8	Eq-Operator 299 307	At least
+A11	Eq-Operator-Value T8 GTEQ
+T73	Eq-Unit 308 311	one
+T74	Condition 358 368	behavioral
+E12	Condition:T74 Name:T75
+T75	Condition-Name 358 368	behavioral
+T76	Drug 319 334	pharmacological
+E14	Drug:T76 Minimum-Count:E7
+T77	Assertion 369 377	symptoms
+E16	Assertion:T77 Asserted:E12
+A12	Assertion-Type-Value E16 possible
+R2	Treatment-For Arg1:E14 Arg2:E12	
+T9	Procedure-Name 427 430	ECT
+T10	Procedure 427 430	ECT
+E9	Procedure:T10 Name:T9
+T78	Assertion 400 403	for
+E18	Assertion:T78 Asserted:E9
+A13	Assertion-Type-Value E18 hypothetical
+T49	Eq-Comparison 634 647	55 - 89 years
+E20	Eq-Comparison:T49 Temporal-Unit:T43 Value:T55 Value2:T54 Operator:T79
+T79	Eq-Operator 637 638	-
+A14	Eq-Operator-Value T79 BETWEEN
+T80	Eq-Comparison 689 696	Current
+E22	Eq-Comparison:T80 Temporal-Period:T81
+T81	Eq-Temporal-Period 689 696	Current
+A15	Eq-Temporal-Period-Value T81 present
+T21	Observation 746 774	Confusion Assessment Measure
+E21	Observation:T21 Name:T22
+T22	Observation-Name 746 774	Confusion Assessment Measure
+A16	Observation-Type-Value T22 measurement
+T27	Observation 776 779	CAM
+E24	Observation:T27 Name:T28
+T28	Observation-Name 776 779	CAM
+R3	Abbrev-Of Arg1:E24 Arg2:E21	
+R4	Found-By Arg1:E23 Arg2:E21	
+T82	Eq-Comparison 858 865	current
+E26	Eq-Comparison:T82 Temporal-Period:T83
+T83	Eq-Temporal-Period 858 865	current
+A18	Eq-Temporal-Period-Value T83 present
+T84	Or 911 913	or
+E27	Or:T84 Arg:E17 Arg2:E13
+T85	Eq-Comparison 846 854	Lifetime
+E28	Eq-Comparison:T85 Temporal-Period:T86
+T86	Eq-Temporal-Period 846 854	Lifetime
+A19	Eq-Temporal-Period-Value T86 past
+T87	Or 855 857	or
+E30	Or:T87 Arg:E28 Arg2:E26
+R5	Abbrev-Of Arg1:E29 Arg2:E11	
+T88	Eq-Comparison 944 951	Current
+E32	Eq-Comparison:T88 Temporal-Period:T89
+T89	Eq-Temporal-Period 944 951	Current
+A20	Eq-Temporal-Period-Value T89 present
+T90	Eq-Comparison 1000 1006	Active
+E34	Eq-Comparison:T90 Temporal-Period:T91
+T91	Eq-Temporal-Period 1000 1006	Active
+A21	Eq-Temporal-Period-Value T91 present
+T92	Eq-Comparison 1030 1050	within past 6 months
+E36	Eq-Comparison:T92 Operator:T41 Temporal-Unit:T44 Value:T56 Temporal-Period:T106
+T93	Procedure 1084 1110	neurostimulation therapies
+E39	Procedure:T93 Name:T94 Temporality:E42
+T94	Procedure-Name 1084 1110	neurostimulation therapies
+T95	Or 1075 1077	or
+E43	Or:T95 Arg:E35 Arg2:E39
+R6	Example-Of Arg1:E37 Arg2:E39	
+R7	Example-Of Arg1:E31 Arg2:E39	
+T33	Procedure 443 472	standard physical examination
+E33	Procedure:T33 Name:T34
+T34	Procedure-Name 443 472	standard physical examination
+T96	Observation 474 484	urinalysis
+E44	Observation:T96 Name:T97
+T97	Observation-Name 474 484	urinalysis
+A22	Observation-Type-Value T97 lab
+T98	Observation 489 506	serum chemistries
+E45	Observation:T98 Name:T99
+T99	Observation-Name 489 506	serum chemistries
+A23	Observation-Type-Value T99 lab
+T100	Stability 393 399	stable
+A24	Stability-Value T100 stable
+T101	Condition 383 392	Medically
+E46	Condition:T101 Stability:T100
+R8	Found-By Arg1:E33 Arg2:E46	
+R9	Found-By Arg1:E44 Arg2:E46	
+R10	Found-By Arg1:E45 Arg2:E46	
+T102	Condition 829 831	AD
+E47	Condition:T102 Name:T103
+T103	Condition-Name 829 831	AD
+T104	Negation 825 828	Non
+E48	Negation:T104 Negates:E47
+T105	Modifier 963 968	Major
+E49	Modifier:T105 Modifies:T12
+T106	Eq-Temporal-Period 1037 1041	past
+A17	Eq-Temporal-Period-Value T106 past
+T107	Procedure 1056 1065	Treatment
+E50	Procedure:T107 
+R11	Using Arg1:E50 Arg2:E35	
+T108	Eq-Temporal-Period 1161 1165	past
+A25	Eq-Temporal-Period-Value T108 past

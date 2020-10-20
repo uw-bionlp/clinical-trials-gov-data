@@ -1,38 +1,38 @@
+E1	Condition:T1 Name:T2 Temporality:E11
+E3	Condition:T3 Name:T4 Severity:T22
+E7	Condition:T7 Name:T8
+E2	Condition:T11 Name:T12
+E4	Assertion:T13 Asserted:E7
+E5	Modifier:T5 Modifies:T8
+E6	And:T6 Arg:E2 Arg2:E4
+E8	Procedure:T9 Name:T14
+E9	Procedure:T10 Name:T15
+E10	Contraindication:T16 Contraindicates:E9
+E11	Eq-Comparison:T17 Temporal-Period:T18
+E12	Condition:T19 Name:T20
+E13	And:T21 Arg:E1 Arg2:E12
 T1	Condition 227 247	neurological disease
 T2	Condition-Name 227 247	neurological disease
-E1	Condition:T1 Name:T2 Temporality:E11
 T3	Condition 275 294	psychiatric disease
 T4	Condition-Name 275 294	psychiatric disease
-E3	Condition:T3 Name:T4 Severity:T22
 T7	Condition 97 100	TIA
 T8	Condition-Name 97 100	TIA
-E7	Condition:T7 Name:T8
 T11	Condition 51 79	transient neurologic deficit
-E2	Condition:T11 Name:T12
 T12	Condition-Name 51 79	transient neurologic deficit
 T13	Assertion 84 93	suspicion
-E4	Assertion:T13 Asserted:E7
-A1	Assertion-Type-Value E4 possible
 T5	Modifier 104 123	carotid circulation
-E5	Modifier:T5 Modifies:T8
 T6	And 80 83	and
-E6	And:T6 Arg:E2 Arg2:E4
 T9	Procedure 160 163	MRI
-E8	Procedure:T9 Name:T14
 T14	Procedure-Name 160 163	MRI
 T10	Procedure 209 212	MRI
-E9	Procedure:T10 Name:T15
 T15	Procedure-Name 209 212	MRI
 T16	Contraindication 189 205	Contraindication
-E10	Contraindication:T16 Contraindicates:E9
 T17	Eq-Comparison 218 226	Previous
-E11	Eq-Comparison:T17 Temporal-Period:T18
 T18	Eq-Temporal-Period 218 226	Previous
-A2	Eq-Temporal-Period-Value T18 past
 T19	Condition 254 261	lesions
-E12	Condition:T19 Name:T20
 T20	Condition-Name 254 261	lesions
 T21	And 249 253	with
-E13	And:T21 Arg:E1 Arg2:E12
 T22	Severity 268 274	Severe
+A1	Assertion-Type-Value E4 possible
+A2	Eq-Temporal-Period-Value T18 past
 A3	Severity-Value T22 severe

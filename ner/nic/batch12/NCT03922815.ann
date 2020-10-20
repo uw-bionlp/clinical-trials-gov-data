@@ -1,80 +1,81 @@
+E1	Condition:T1 Name:T2
+E3	Procedure:T3 Name:T4 Temporality:E2
+E5	Procedure:T5 Name:T6
+E7	Condition:T7 Name:T8
+E10	Procedure:T10 Name:T11 Stability:T41
+E12	Procedure:T12 Name:T13
+E2	Eq-Comparison:T14 Temporal-Period:T15
+E4	Assertion:T16 Asserted:E3
+E6	Observation:T17 Name:T18 Eq-Comparison:E8
+E8	Eq-Comparison:T9 Value:T20 Value2:T19 Operator:T21
+E9	Drug:T22 Name:T23
+E11	Assertion:T24 Asserted:E9
+E13	Condition:T25 Name:T26
+E14	Condition:T27 Name:T28
+E15	Assertion:T29 Asserted:E12
+E16	Drug:T30 Name:T31 Temporality:E23 Acuteness:T34
+E17	Condition:T32 Name:T33
+E19	Procedure:T35 Name:T36 Stability:T38
+E20	Negation:T37 Negates:E19
+E21	Assertion:T39 Asserted:E20
+E22	Negation:T40 Negates:E12
+E23	Eq-Comparison:T42 Temporal-Period:T43
 T1	Condition 413 436	general atherosclerosis
 T2	Condition-Name 413 436	general atherosclerosis
-E1	Condition:T1 Name:T2
 T3	Procedure 101 114	deep sedation
 T4	Procedure-Name 101 114	deep sedation
-E3	Procedure:T3 Name:T4 Temporality:E2
 T5	Procedure 119 141	colonoscopic procedure
 T6	Procedure-Name 119 141	colonoscopic procedure
-E5	Procedure:T5 Name:T6
 T7	Condition 321 330	pregnancy
 T8	Condition-Name 321 330	pregnancy
-E7	Condition:T7 Name:T8
 T10	Procedure 301 315	SPI monitoring
 T11	Procedure-Name 301 315	SPI monitoring
-E10	Procedure:T10 Name:T11 Stability:T41
 T12	Procedure 474 488	SPI monitoring
 T13	Procedure-Name 474 488	SPI monitoring
-E12	Procedure:T12 Name:T13
 T14	Eq-Comparison 93 100	undergo
-E2	Eq-Comparison:T14 Temporal-Period:T15
 T15	Eq-Temporal-Period 93 100	undergo
-A1	Eq-Temporal-Period-Value T15 future
 T16	Assertion 82 92	consent to
-E4	Assertion:T16 Asserted:E3
-A2	Assertion-Type-Value E4 hypothetical
-R1	Using Arg1:E5 Arg2:E3	
-T17	Condition 180 215	American Society of Anaesthesiology
-E6	Condition:T17 Name:T18 Stage:E8
-T18	Condition-Name 180 215	American Society of Anaesthesiology
+T17	Observation 180 215	American Society of Anaesthesiology
+T18	Observation-Name 180 215	American Society of Anaesthesiology
 T9	Eq-Comparison 171 176	I-III
-E8	Eq-Comparison:T9 Value:T20 Value2:T19 Operator:T21
 T19	Eq-Value 171 172	I
 T20	Eq-Value 173 176	III
 T21	Eq-Operator 172 173	-
-A3	Eq-Operator-Value T21 BETWEEN
 T22	Drug 272 288	vasoactive drugs
-E9	Drug:T22 Name:T23
 T23	Drug-Name 272 288	vasoactive drugs
 T24	Assertion 241 250	necessity
-E11	Assertion:T24 Asserted:E9
-A4	Assertion-Type-Value E11 hypothetical
 T25	Condition 336 359	anatomical malformation
-E13	Condition:T25 Name:T26
 T26	Condition-Name 336 359	anatomical malformation
 T27	Condition 438 463	heart rhythm disturbances
-E14	Condition:T27 Name:T28
 T28	Condition-Name 438 463	heart rhythm disturbances
 T29	Assertion 464 473	impairing
-E15	Assertion:T29 Asserted:E12
-A5	Assertion-Type-Value E15 hypothetical
 T30	Drug 519 531	opioid drugs
-E16	Drug:T30 Name:T31 Temporality:E23
 T31	Drug-Name 519 531	opioid drugs
 T32	Condition 543 564	resistancy to opioids
-E17	Condition:T32 Name:T33
 T33	Condition-Name 543 564	resistancy to opioids
-R3	Caused-By Arg1:E17 Arg2:E16	
-T34	Modifier 494 501	chronic
-E18	Modifier:T34 Modifies:E16
+T34	Acuteness 494 501	chronic
 T35	Procedure 370 396	monitoring using SE sensor
-E19	Procedure:T35 Name:T36 Stability:T38
 T36	Procedure-Name 370 396	monitoring using SE sensor
 T37	Negation 397 407	impossible
-E20	Negation:T37 Negates:E19
 T38	Stability 365 369	make
-A6	Stability-Value T38 change
 T39	Assertion 397 407	impossible
-E21	Assertion:T39 Asserted:E20
-A7	Assertion-Type-Value E21 hypothetical
-R4	Caused-By Arg1:E20 Arg2:E13	
 T40	Negation 464 473	impairing
-E22	Negation:T40 Negates:E12
-R5	Caused-By Arg1:E22 Arg2:E14	
 T41	Stability 289 300	influencing
-A8	Stability-Value T41 change
-R2	Caused-By Arg1:T41 Arg2:E9
 T42	Eq-Comparison 513 518	using
-E23	Eq-Comparison:T42 Temporal-Period:T43
 T43	Eq-Temporal-Period 513 518	using
+A1	Eq-Temporal-Period-Value T15 future
+A2	Assertion-Type-Value E4 hypothetical
+A3	Eq-Operator-Value T21 BETWEEN
+A4	Assertion-Type-Value E11 hypothetical
+A5	Assertion-Type-Value E15 hypothetical
+A6	Stability-Value T38 change
+A7	Assertion-Type-Value E21 hypothetical
+A8	Stability-Value T41 change
 A9	Eq-Temporal-Period-Value T43 present
+A10	Acuteness-Type-Value T34 chronic
+R1	Using Arg1:E5 Arg2:E3
+R3	Caused-By Arg1:E17 Arg2:E16
+R4	Caused-By Arg1:E20 Arg2:E13
+R5	Caused-By Arg1:E22 Arg2:E14
+R2	Caused-By Arg1:T41 Arg2:E9
+A11	Observation-Type-Value T18 clinical-score

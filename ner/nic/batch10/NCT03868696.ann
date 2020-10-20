@@ -1,125 +1,125 @@
+E1	Procedure:T1 Name:T2 Stability:T29
+E3	Procedure:T3 Name:T4 Temporality:E11 Location:T22
+E6	Procedure:T6 Name:T7
+E9	Age:T11 Eq-Comparison:E12
+E10	Eq-Comparison:T14 Operator:T10 Value:T13
+E2	Condition:T15 Name:T16
+E4	Modifier:T17 Modifies:T16
+E5	And:T18 Arg:T5 Arg2:E2
+E7	Modifier:T19 Modifies:T16
+E11	Eq-Comparison:T20 Temporal-Period:T21
+E12	Eq-Comparison:T23 Operator:T24 Value:T12
+E13	Condition:T25 Name:T26
+E14	Modifier:T27 Modifies:T26
+E15	Modifier:T28 Modifies:T26
+E16	Assertion:T30 Asserted:E1
+E17	And:T31 Arg:T29 Arg2:E16
+E18	Encounter:T32
+E19	Negation:T33 Negates:E18
+E20	Assertion:T34 Asserted:E19
+E21	Encounter:T35 Provider:E22 Location:T38
+E22	Provider:T36 Type:T37
+E23	Other:T39 Is-Other:T38
+E24	Condition:T40 Name:T41 Severity:T44
+E25	Condition:T42 Name:T43
+E26	Other:T45 Is-Other:E25
+E27	And:T46 Arg:E24 Arg2:E25
+E28	Observation:T47 Name:T48
+E29	And:T49 Arg:E25 Arg2:E28
+E30	Observation:T50 Name:T51 Eq-Comparison:E10
+E8	Modifier:T8 Modifies:T7
+E31	Assertion:T9 Asserted:E6
+E32	Condition:T52 Name:T53
+E33	Modifier:T54 Modifies:T53
+E34	Modifier:T55 Modifies:T53
+E35	Or:T56 Arg:E33 Arg2:E34
+E36	Condition:T57 Name:T58
+E37	Modifier:T59 Modifies:T58
+E39	Modifier:T62 Modifies:E42
+E40	Modifier:T63 Modifies:E42
+E41	Or:T64 Arg:E40 Arg2:E39
+E38	Or:T60 Arg:E42 Arg2:E36
+E42	Coreference:T61 Refers-To:E36
+E43	Observation:T65 Name:T66
 T1	Procedure 301 319	surgical treatment
 T2	Procedure-Name 301 319	surgical treatment
-E1	Procedure:T1 Name:T2 Stability:T29
 T3	Procedure 92 113	fracture manipulation
 T4	Procedure-Name 92 113	fracture manipulation
-E3	Procedure:T3 Name:T4 Temporality:E11 Location:T22
 T5	Life-Stage-And-Gender 25 31	Adults
-A1	Life-Stage-And-Gender-Type T5 adult
 T6	Procedure 547 559	manipulation
 T7	Procedure-Name 547 559	manipulation
-E6	Procedure:T6 Name:T7
 T10	Eq-Operator 531 532	>
-A2	Eq-Operator-Value T10 GT
 T11	Age 192 195	Age
-E9	Age:T11 Eq-Comparison:E12
 T12	Eq-Value 202 204	18
 T13	Eq-Value 532 534	16
 T14	Eq-Comparison 531 534	>16
-E10	Eq-Comparison:T14 Operator:T10 Value:T13
 T15	Condition 50 59	fractures
-E2	Condition:T15 Name:T16
 T16	Condition-Name 50 59	fractures
 T17	Modifier 37 49	Colles' type
-E4	Modifier:T17 Modifies:T16
 T18	And 32 36	with
-E5	And:T18 Arg:T5 Arg2:E2
 T19	Modifier 67 80	distal radius
-E7	Modifier:T19 Modifies:T16
 T20	Eq-Comparison 81 91	undergoing
-E11	Eq-Comparison:T20 Temporal-Period:T21
 T21	Eq-Temporal-Period 81 91	undergoing
-A3	Eq-Temporal-Period-Value T21 present
 T22	Location 121 123	ED
-A4	Location-Value T22 emergency-dept
 T23	Eq-Comparison 196 204	under 18
-E12	Eq-Comparison:T23 Operator:T24 Value:T12
 T24	Eq-Operator 196 201	under
-A5	Eq-Operator-Value T24 LT
 T25	Condition 241 250	fractures
-E13	Condition:T25 Name:T26
 T26	Condition-Name 241 250	fractures
 T27	Modifier 210 225	Volar displaced
-E14	Modifier:T27 Modifies:T26
 T28	Modifier 227 234	Smith's
-E15	Modifier:T28 Modifies:T26
 T29	Stability 278 286	unstable
-A6	Stability-Value T29 change
 T30	Assertion 291 300	requiring
-E16	Assertion:T30 Asserted:E1
-A7	Assertion-Type-Value E16 hypothetical
 T31	And 287 290	and
-E17	And:T31 Arg:T29 Arg2:E16
-R1	Treatment-For Arg1:E1 Arg2:E13	
 T32	Encounter 402 413	followed up
-E18	Encounter:T32 
 T33	Negation 376 395	Unable or unwilling
-E19	Negation:T33 Negates:E18
 T34	Assertion 376 395	Unable or unwilling
-E20	Assertion:T34 Asserted:E19
-A8	Assertion-Type-Value E20 hypothetical
 T35	Encounter 432 441	follow up
-E21	Encounter:T35 Provider:E22 Location:T38
 T36	Provider 420 431	orthopaedic
-E22	Provider:T36 Type:T37
 T37	Provider-Type 420 431	orthopaedic
 T38	Location 453 459	region
 T39	Other 445 452	another
-E23	Other:T39 Is-Other:T38
-R2	Example-Of Arg1:E21 Arg2:E19	
 T40	Condition 472 478	trauma
-E24	Condition:T40 Name:T41 Severity:T44
 T41	Condition-Name 472 478	trauma
 T42	Condition 490 498	injuries
-E25	Condition:T42 Name:T43
 T43	Condition-Name 490 498	injuries
 T44	Severity 466 471	Major
-A9	Severity-Value T44 severe
 T45	Other 484 489	other
-E26	Other:T45 Is-Other:E25
 T46	And 479 483	with
-E27	And:T46 Arg:E24 Arg2:E25
 T47	Observation 503 506	ISS
-E28	Observation:T47 Name:T48
 T48	Observation-Name 503 506	ISS
-A10	Observation-Type-Value T48 clinical-score
 T49	And 499 502	and
-E29	And:T49 Arg:E25 Arg2:E28
 T50	Observation 508 529	Injury Severity Score
-E30	Observation:T50 Name:T51 Eq-Comparison:E10
 T51	Observation-Name 508 529	Injury Severity Score
-A11	Observation-Type-Value T51 clinical-score
-R3	Abbrev-Of Arg1:E28 Arg2:E30	
 T8	Modifier 540 546	Urgent
-E8	Modifier:T8 Modifies:T7
 T9	Assertion 560 568	required
-E31	Assertion:T9 Asserted:E6
-A12	Assertion-Type-Value E31 hypothetical
 T52	Condition 598 608	compromise
-E32	Condition:T52 Name:T53
 T53	Condition-Name 598 608	compromise
 T54	Modifier 576 589	neurovascular
-E33	Modifier:T54 Modifies:T53
 T55	Modifier 593 597	skin
-E34	Modifier:T55 Modifies:T53
 T56	Or 590 592	or
-E35	Or:T56 Arg:E33 Arg2:E34
-R4	Treatment-For Arg1:E6 Arg2:E32	
 T57	Condition 619 628	fractures
-E36	Condition:T57 Name:T58
 T58	Condition-Name 619 628	fractures
 T59	Modifier 614 618	Open
-E37	Modifier:T59 Modifies:T58
 T62	Modifier 663 681	tendon involvement
-E39	Modifier:T62 Modifies:E42
 T63	Modifier 654 659	nerve
-E40	Modifier:T63 Modifies:E42
 T64	Or 660 662	or
-E41	Or:T64 Arg:E40 Arg2:E39
 T60	Or 629 631	or
-E38	Or:T60 Arg:E42 Arg2:E36
 T61	Coreference 632 637	those
-E42	Coreference:T61 Refers-To:E36
 T65	Observation 715 724	Prisoners
-E43	Observation:T65 Name:T66
 T66	Observation-Name 715 724	Prisoners
+A1	Life-Stage-And-Gender-Type T5 adult
+A2	Eq-Operator-Value T10 GT
+A3	Eq-Temporal-Period-Value T21 present
+A4	Location-Value T22 emergency-dept
+A5	Eq-Operator-Value T24 LT
+A6	Stability-Value T29 change
+A7	Assertion-Type-Value E16 hypothetical
+A8	Assertion-Type-Value E20 hypothetical
+A9	Severity-Value T44 severe
+A10	Observation-Type-Value T48 clinical-score
+A11	Observation-Type-Value T51 clinical-score
+A12	Assertion-Type-Value E31 hypothetical
+R1	Treatment-For Arg1:E1 Arg2:E13
+R2	Example-Of Arg1:E21 Arg2:E19
+R3	Abbrev-Of Arg1:E28 Arg2:E30
+R4	Treatment-For Arg1:E6 Arg2:E32

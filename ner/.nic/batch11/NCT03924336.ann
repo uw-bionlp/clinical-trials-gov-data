@@ -1,0 +1,150 @@
+T1	Condition 35 48	periodontitis
+T2	Condition-Name 35 48	periodontitis
+E1	Condition:T1 Name:T2 Stage:E42
+T3	Procedure 501 520	periodontal therapy
+T4	Procedure-Name 501 520	periodontal therapy
+E3	Procedure:T3 Name:T4 Temporality:E13
+T5	Condition 830 844	breast feeding
+T6	Condition-Name 830 844	breast feeding
+E5	Condition:T5 Name:T6
+T7	Condition 817 826	Pregnancy
+T8	Condition-Name 817 826	Pregnancy
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 149 150	≥
+A1	Eq-Operator-Value T9 GTEQ
+T10	Eq-Operator 256 257	≥
+A2	Eq-Operator-Value T10 GTEQ
+T11	Eq-Operator 284 285	≥
+A3	Eq-Operator-Value T11 GTEQ
+T13	Eq-Operator 911 923	greater than
+A5	Eq-Operator-Value T13 GT
+T14	Eq-Temporal-Unit 485 491	months
+A6	Eq-Temporal-Unit-Value T14 month
+T15	Eq-Temporal-Unit 547 553	months
+A7	Eq-Temporal-Unit-Value T15 month
+T16	Eq-Temporal-Unit 635 640	years
+A8	Eq-Temporal-Unit-Value T16 year
+T17	Eq-Unit 153 155	mm
+T18	Eq-Unit 288 290	mm
+T19	Age 613 616	age
+E8	Age:T19 Eq-Comparison:E14
+T25	Eq-Value 151 152	3
+T26	Eq-Value 258 259	5
+T27	Eq-Value 286 287	6
+T28	Eq-Value 483 484	6
+T29	Eq-Value 545 546	6
+T30	Eq-Value 625 627	25
+T31	Eq-Value 632 634	50
+T33	Eq-Comparison 149 155	≥ 3 mm
+E10	Eq-Comparison:T33 Operator:T9 Unit:T17 Value:T25
+T34	Eq-Comparison 256 261	≥ 5mm
+E11	Eq-Comparison:T34 Operator:T10 Value:T26 Unit:T55
+T35	Eq-Comparison 284 290	≥ 6 mm
+E12	Eq-Comparison:T35 Operator:T11 Unit:T18 Value:T27
+T36	Eq-Comparison 540 553	past 6 months
+E13	Eq-Comparison:T36 Temporal-Unit:T15 Value:T29 Temporal-Period:T12
+T37	Observation 129 148	intraosseous defect
+E2	Observation:T37 Minimum-Count:E4 Name:T45 Eq-Comparison:E10
+T38	Eq-Comparison 64 82	at least one tooth
+E4	Eq-Comparison:T38 Operator:T39 Unit:T41 Value:T40
+T39	Eq-Operator 64 72	at least
+A9	Eq-Operator-Value T39 GTEQ
+T40	Eq-Value 73 76	one
+T41	Eq-Unit 77 82	tooth
+T42	Or 827 829	or
+E6	Or:T42 Arg:E7 Arg2:E5
+T43	Eq-Comparison 617 640	between 25 and 50 years
+E14	Eq-Comparison:T43 Operator:T20 Temporal-Unit:T16 Value:T30 Value2:T31
+T20	Eq-Operator 617 624	between
+A10	Eq-Operator-Value T20 BETWEEN
+T44	Negation 498 500	No
+E9	Negation:T44 Negates:E3
+T21	Modifier 88 94	2-wall
+E15	Modifier:T21 Modifies:E2
+T22	Modifier 96 102	3-wall
+E16	Modifier:T22 Modifies:E2
+T23	Modifier 116 128	2- to 3-wall
+E17	Modifier:T23 Modifies:E2
+T24	Or 104 106	or
+E18	Or:T24 Arg:E16 Arg2:E17
+T45	Observation-Name 129 148	intraosseous defect
+T46	And 57 63	having
+E19	And:T46 Arg:E1 Arg2:E2
+T47	Procedure 178 191	bone sounding
+E20	Procedure:T47 Name:T48
+T48	Procedure-Name 178 191	bone sounding
+R1	Found-By Arg1:E2 Arg2:E20	
+T49	Procedure 193 217	radiographic examination
+E21	Procedure:T49 Name:T50
+T50	Procedure-Name 193 217	radiographic examination
+T51	Observation 224 249	clinical attachment level
+E22	Observation:T51 Name:T52
+T52	Observation-Name 224 249	clinical attachment level
+T53	Observation 251 254	CAL
+E23	Observation:T53 Name:T54 Eq-Comparison:E11
+T54	Observation-Name 251 254	CAL
+R2	Abbrev-Of Arg1:E23 Arg2:E22	
+T55	Eq-Unit 259 261	mm
+T56	And 219 223	with
+E24	And:T56 Arg:E2 Arg2:E22
+T57	Observation 266 278	pocket depth
+E25	Observation:T57 Name:T58
+T58	Observation-Name 266 278	pocket depth
+T59	Observation 280 282	PD
+E26	Observation:T59 Name:T60 Eq-Comparison:E12
+T60	Observation-Name 280 282	PD
+R3	Abbrev-Of Arg1:E26 Arg2:E25	
+T61	And 262 265	and
+E27	And:T61 Arg:E23 Arg2:E25
+T62	Condition 297 303	Defect
+E28	Condition:T62 Name:T63
+T63	Condition-Name 297 303	Defect
+T64	Modifier 323 342	root furcation area
+E29	Modifier:T64 Modifies:E28
+T65	Negation 304 307	not
+E30	Negation:T65 Negates:E29
+T68	Negation 365 368	Non
+E32	Negation:T68 Negates:E31
+T69	Drug 407 418	antibiotics
+E33	Drug:T69 Name:T70 Temporality:E43
+T70	Drug-Name 407 418	antibiotics
+T71	Negation 383 385	No
+E34	Negation:T71 Negates:E33
+T72	Drug 428 439	medications
+E35	Drug:T72 Temporality:E38
+T73	Or 419 421	or
+E36	Or:T73 Arg:E33 Arg2:E35
+T74	Condition 454 466	periodontium
+E37	Condition:T74 Name:T75 Stability:T89
+T75	Condition-Name 454 466	periodontium
+T76	Eq-Comparison 474 491	previous 6 months
+E38	Eq-Comparison:T76 Operator:T77 Temporal-Unit:T14 Value:T28
+T77	Eq-Operator 474 482	previous
+A12	Eq-Operator-Value T77 LTEQ
+T32	Condition 896 910	Teeth mobility
+E39	Condition:T32 Name:T78 Stage:E40
+T78	Condition-Name 896 910	Teeth mobility
+T79	Eq-Comparison 911 931	greater than grade I
+E40	Eq-Comparison:T79 Operator:T13 Unit:T80 Value:T81
+T80	Eq-Unit 924 929	grade
+T81	Eq-Value 930 931	I
+T82	Condition 869 890	orthodontic appliance
+E41	Condition:T82 Name:T83
+T83	Condition-Name 869 890	orthodontic appliance
+R5	Found-By Arg1:E21 Arg2:E2	
+T66	Condition 369 376	smokers
+E31	Condition:T66 Name:T67
+T67	Condition-Name 369 376	smokers
+T84	Eq-Comparison 25 34	Stage III
+E42	Eq-Comparison:T84 Unit:T85 Value:T86
+T85	Eq-Unit 25 30	Stage
+T86	Eq-Value 31 34	III
+T87	Eq-Comparison 386 393	history
+E43	Eq-Comparison:T87 Temporal-Period:T88
+T88	Eq-Temporal-Period 386 393	history
+A13	Eq-Temporal-Period-Value T88 past
+T89	Stability 440 449	affecting
+A11	Stability-Value T89 change
+R4	Caused-By Arg1:T89 Arg2:E35	
+T12	Eq-Temporal-Period 540 544	past
+A4	Eq-Temporal-Period-Value T12 past

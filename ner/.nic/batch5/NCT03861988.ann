@@ -1,0 +1,19 @@
+T2	Modifier 48 55	primary
+E2	Modifier:T2 Modifies:T7
+T3	Procedure 56 80	total joint arthroplasty
+E3	Procedure:T3 Name:T7
+T4	Condition 92 111	Depressive Disorder
+E4	Condition:T4 Name:T9 Severity:T8
+T5	Condition 137 145	Pregnant
+E5	Condition:T5 Name:T10
+T6	Condition 149 162	breastfeeding
+E6	Condition:T6 Name:T11
+T7	Procedure-Name 56 80	total joint arthroplasty
+T8	Severity 86 91	Major
+A1	Severity-Value T8 severe
+T9	Condition-Name 92 111	Depressive Disorder
+T10	Condition-Name 137 145	Pregnant
+T11	Condition-Name 149 162	breastfeeding
+T12	Life-Stage-And-Gender 163 168	women
+A2	Life-Stage-And-Gender-Type T12 female
+R1	If-Then Arg1:T12 Arg2:E6	

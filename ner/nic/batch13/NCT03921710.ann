@@ -1,88 +1,88 @@
+E1	Condition:T1 Name:T2 Polarity:T13 Stage:E20
+E3	Condition:T3 Name:T4
+E9	Condition:T9 Name:T10
+E10	Eq-Comparison:T23 Operator:T11 Temporal-Unit:T14 Value:T17
+E11	Eq-Comparison:T24 Operator:T12 Value:T20 Unit:T36
+E12	Eq-Comparison:T25 Operator:T16 Unit:T15 Value:T19 Value2:T34
+E2	Age:T26 Eq-Comparison:E10
+E4	Condition:T27 Name:T28
+E6	And:T29 Arg:E9 Arg2:E4
+E8	Eq-Comparison:T30 Operator:T31 Value:T18
+E13	Observation:T32 Name:T33 Minimum-Count:E8 Eq-Comparison:E12
+E5	Observation:T5 Name:T6 Polarity:T35 Eq-Comparison:E11
+E7	Condition:T7 Name:T8
+E14	Modifier:T21 Modifies:T8
+E15	Modifier:T37 Modifies:T8
+E16	Or:T38 Arg:E15 Arg2:E14
+E17	Modifier:T39 Modifies:E7
+E18	Negation:T40 Negates:E7
+E20	Eq-Comparison:T42 Unit:T45 Value:T44 Operator:T43
+E19	Condition:T22 Name:T41 Severity:T46
+E21	Condition:T47 Name:T48
+E22	Condition:T49 Name:T50
+E23	Or:T51 Arg:E3 Arg2:E22
 T1	Condition 335 348	endometriosis
 T2	Condition-Name 335 348	endometriosis
-E1	Condition:T1 Name:T2 Polarity:T13 Stage:E20
 T3	Condition 400 411	azoospermia
 T4	Condition-Name 400 411	azoospermia
-E3	Condition:T3 Name:T4
 T9	Condition 41 45	PCOS
 T10	Condition-Name 41 45	PCOS
-E9	Condition:T9 Name:T10
 T11	Eq-Operator 25 26	<
-A1	Eq-Operator-Value T11 LT
 T12	Eq-Operator 182 183	>
-A2	Eq-Operator-Value T12 GT
 T14	Eq-Temporal-Unit 30 35	years
-A4	Eq-Temporal-Unit-Value T14 year
 T15	Eq-Unit 118 120	mm
 T16	Eq-Operator 115 116	-
-A5	Eq-Operator-Value T16 BETWEEN
 T17	Eq-Value 27 29	38
 T18	Eq-Value 100 102	25
 T19	Eq-Value 116 117	9
 T20	Eq-Value 183 185	10
 T23	Eq-Comparison 25 35	< 38 years
-E10	Eq-Comparison:T23 Operator:T11 Temporal-Unit:T14 Value:T17
 T24	Eq-Comparison 182 187	>10ml
-E11	Eq-Comparison:T24 Operator:T12 Value:T20 Unit:T36
 T25	Eq-Comparison 114 120	2-9 mm
-E12	Eq-Comparison:T25 Operator:T16 Unit:T15 Value:T19 Value2:T34
 T26	Age 30 35	years
-E2	Age:T26 Eq-Comparison:E10
 T27	Condition 60 89	polycystic ovarian morphology
-E4	Condition:T27 Name:T28
 T28	Condition-Name 60 89	polycystic ovarian morphology
 T29	And 55 59	with
-E6	And:T29 Arg:E9 Arg2:E4
 T30	Eq-Comparison 91 102	at least 25
-E8	Eq-Comparison:T30 Operator:T31 Value:T18
 T31	Eq-Operator 91 99	at least
-A6	Eq-Operator-Value T31 GTEQ
 T32	Observation 103 112	follicles
-E13	Observation:T32 Name:T33 Minimum-Count:E8 Eq-Comparison:E12
 T33	Observation-Name 103 112	follicles
-R1	Equivalent-To Arg1:E13 Arg2:E4	
 T34	Eq-Value 114 115	2
 T5	Observation 166 180	ovarian volume
-E5	Observation:T5 Name:T6 Polarity:T35 Eq-Comparison:E11
 T6	Observation-Name 166 180	ovarian volume
 T35	Polarity 156 165	increased
-A7	Polarity-Value T35 high
 T36	Eq-Unit 185 187	ml
 T7	Condition 274 287	abnormalities
-E7	Condition:T7 Name:T8
 T8	Condition-Name 274 287	abnormalities
 T21	Modifier 266 273	ovarian
-E14	Modifier:T21 Modifies:T8
 T37	Modifier 255 262	uterine
-E15	Modifier:T37 Modifies:T8
 T38	Or 263 265	or
-E16	Or:T38 Arg:E15 Arg2:E14
 T39	Modifier 249 254	major
-E17	Modifier:T39 Modifies:E7
 T40	Negation 246 248	No
-E18	Negation:T40 Negates:E7
 T13	Polarity 313 317	High
 T42	Eq-Comparison 319 327	>grade 2
-E20	Eq-Comparison:T42 Unit:T45 Value:T44 Operator:T43
 T43	Eq-Operator 319 320	>
-A3	Eq-Operator-Value T43 GT
 T44	Eq-Value 326 327	2
 T45	Eq-Unit 320 325	grade
 T22	Condition 375 385	poor sperm
-E19	Condition:T22 Name:T41 Severity:T46
 T41	Condition-Name 375 385	poor sperm
 T46	Severity 365 374	extremely
-A8	Severity-Value T46 severe
 T47	Condition 387 390	OAT
-E21	Condition:T47 Name:T48
 T48	Condition-Name 387 390	OAT
-R2	Equivalent-To Arg1:E21 Arg2:E19	
-R3	Example-Of Arg1:E3 Arg2:E21	
 T49	Condition 415 431	cryptozoospermia
-E22	Condition:T49 Name:T50
 T50	Condition-Name 415 431	cryptozoospermia
 T51	Or 412 414	or
-E23	Or:T51 Arg:E3 Arg2:E22
-R4	Example-Of Arg1:E22 Arg2:E21	
+A1	Eq-Operator-Value T11 LT
+A2	Eq-Operator-Value T12 GT
+A4	Eq-Temporal-Unit-Value T14 year
+A5	Eq-Operator-Value T16 BETWEEN
+A6	Eq-Operator-Value T31 GTEQ
+A7	Polarity-Value T35 high
+A3	Eq-Operator-Value T43 GT
+A8	Severity-Value T46 severe
 A9	Observation-Type-Value T6 measurement
 A10	Polarity-Value T13 high
+R1	Equivalent-To Arg1:E13 Arg2:E4
+R2	Equivalent-To Arg1:E21 Arg2:E19
+R3	Example-Of Arg1:E3 Arg2:E21
+R4	Example-Of Arg1:E22 Arg2:E21

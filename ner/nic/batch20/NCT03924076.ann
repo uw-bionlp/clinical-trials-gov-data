@@ -1,90 +1,90 @@
-T1	Life-Stage-And-Gender 25 33	children
-A1	Life-Stage-And-Gender-Type T1 child
-T2	Age 37 40	age
 E1	Age:T2 Eq-Comparison:E2
-T3	Eq-Comparison 44 53	7-9 years
 E2	Eq-Comparison:T3 Value:T4 Value2:T6 Operator:T5 Temporal-Unit:T7
+E3	And:T8 Arg:T1 Arg2:E1
+E4	Observation:T9 Name:T10 Polarity:T11
+E5	Observation:T12 Name:T13
+E6	Eq-Comparison:T14 Operator:T17 Value:T15 Unit:T16 Operator2:T18 Value2:T19
+E7	Observation:T21 Name:T22 Severity:T20 Eq-Comparison:E8
+E8	Eq-Comparison:T23 Unit:T24 Value:T26 Operator:T25
+E9	Observation:T27 Name:T28 Severity:T29 Eq-Comparison:E10
+E10	Eq-Comparison:T30 Unit:T31 Operator:T32 Value:T33
+E11	Or:T34 Arg:E7 Arg2:E9
+E12	Allergy:T35 Name:T36
+E13	Drug:T37 Name:T38 Temporality:E15
+E14	Other:T39 Is-Other:E13
+E15	Eq-Comparison:T40 Temporal-Period:T41
+E16	Assertion:T42 Asserted:E19
+E17	Eq-Comparison:T43 Value:T44 Temporal-Unit:T45
+E18	Procedure:T46 Name:T47 Duration:E17
+E19	Coreference:T48 Refers-To:E13
+E20	And:T49 Arg:E19 Arg2:E18
+T1	Life-Stage-And-Gender 25 33	children
+T2	Age 37 40	age
+T3	Eq-Comparison 44 53	7-9 years
 T4	Eq-Value 44 45	7
 T5	Eq-Operator 45 46	-
-A2	Eq-Operator-Value T5 BETWEEN
 T6	Eq-Value 46 47	9
 T7	Eq-Temporal-Unit 48 53	years
-A3	Eq-Temporal-Unit-Value T7 year
 T8	And 34 36	at
-E3	And:T8 Arg:T1 Arg2:E1
 T9	Observation 71 86	body mass index
-E4	Observation:T9 Name:T10 Polarity:T11
 T10	Observation-Name 71 86	body mass index
-A4	Observation-Type-Value T10 vital
 T11	Polarity 64 70	normal
-A5	Polarity-Value T11 normal
 T12	Observation 88 91	BMI
-E5	Observation:T12 Name:T13
 T13	Observation-Name 88 91	BMI
-A6	Observation-Type-Value T13 vital
-R1	Abbrev-Of Arg1:E5 Arg2:E4	
 T14	Eq-Comparison 98 115	-2 ≤ z-score < +1
-E6	Eq-Comparison:T14 Operator:T17 Value:T15 Unit:T16 Operator2:T18 Value2:T19
 T15	Eq-Value 98 100	-2
 T16	Eq-Unit 103 110	z-score
-A7	Eq-Unit-Value T16 ref-range-normal
 T17	Eq-Operator 101 102	≤
-A8	Eq-Operator-Value T17 LTEQ
 T18	Eq-Operator 111 112	<
-A9	Eq-Operator-Value T18 LT
 T19	Eq-Value 113 115	+1
 T20	Severity 117 125	slightly
-A10	Severity-Value T20 mild
 T21	Observation 126 136	overweight
-E7	Observation:T21 Name:T22 Severity:T20 Eq-Comparison:E8
 T22	Observation-Name 126 136	overweight
-A11	Observation-Type-Value T22 vital
 T23	Eq-Comparison 137 151	z-score < +1.5
-E8	Eq-Comparison:T23 Unit:T24 Value:T26 Operator:T25
 T24	Eq-Unit 137 144	z-score
-A12	Eq-Unit-Value T24 ref-range-normal
 T25	Eq-Operator 145 146	<
-A13	Eq-Operator-Value T25 LT
 T26	Eq-Value 147 151	+1.5
 T27	Observation 166 177	underweight
-E9	Observation:T27 Name:T28 Severity:T29 Eq-Comparison:E10
 T28	Observation-Name 166 177	underweight
-A14	Observation-Type-Value T28 vital
 T29	Severity 157 165	slightly
-A15	Severity-Value T29 mild
 T30	Eq-Comparison 178 190	z-score > -3
-E10	Eq-Comparison:T30 Unit:T31 Operator:T32 Value:T33
 T31	Eq-Unit 178 185	z-score
-A16	Eq-Unit-Value T31 ref-range-normal
 T32	Eq-Operator 186 187	>
-A17	Eq-Operator-Value T32 GT
 T33	Eq-Value 188 190	-3
 T34	Or 153 156	and
-E11	Or:T34 Arg:E7 Arg2:E9
 T35	Allergy 217 225	allergic
-E12	Allergy:T35 Name:T36
 T36	Allergy-Name 229 233	milk
 T37	Drug 255 272	probiotic product
-E13	Drug:T37 Name:T38 Temporality:E15
 T38	Drug-Name 255 272	probiotic product
 T39	Other 249 254	other
-E14	Other:T39 Is-Other:E13
 T40	Eq-Comparison 239 248	consuming
-E15	Eq-Comparison:T40 Temporal-Period:T41
 T41	Eq-Temporal-Period 239 248	consuming
-A18	Eq-Temporal-Period-Value T41 present
 T42	Assertion 285 296	do not want
-E16	Assertion:T42 Asserted:E19
-A19	Assertion-Type-Value E16 hypothetical
 T43	Eq-Comparison 337 344	2 weeks
-E17	Eq-Comparison:T43 Value:T44 Temporal-Unit:T45
 T44	Eq-Value 337 338	2
 T45	Eq-Temporal-Unit 339 344	weeks
-A20	Eq-Temporal-Unit-Value T45 week
 T46	Procedure 325 332	washout
-E18	Procedure:T46 Name:T47 Duration:E17
 T47	Procedure-Name 325 332	washout
 T48	Coreference 305 316	consumption
-E19	Coreference:T48 Refers-To:E13
 T49	And 317 318	&
-E20	And:T49 Arg:E19 Arg2:E18
+A1	Life-Stage-And-Gender-Type T1 child
+A2	Eq-Operator-Value T5 BETWEEN
+A3	Eq-Temporal-Unit-Value T7 year
+A4	Observation-Type-Value T10 vital
+A5	Polarity-Value T11 normal
+A6	Observation-Type-Value T13 vital
+A7	Eq-Unit-Value T16 ref-range-normal
+A8	Eq-Operator-Value T17 LTEQ
+A9	Eq-Operator-Value T18 LT
+A10	Severity-Value T20 mild
+A11	Observation-Type-Value T22 vital
+A12	Eq-Unit-Value T24 ref-range-normal
+A13	Eq-Operator-Value T25 LT
+A14	Observation-Type-Value T28 vital
+A15	Severity-Value T29 mild
+A16	Eq-Unit-Value T31 ref-range-normal
+A17	Eq-Operator-Value T32 GT
+A18	Eq-Temporal-Period-Value T41 present
+A19	Assertion-Type-Value E16 hypothetical
+A20	Eq-Temporal-Unit-Value T45 week
+R1	Abbrev-Of Arg1:E5 Arg2:E4

@@ -1,24 +1,24 @@
+E1	Condition:T1 Name:T2 Temporality:E7
+E3	Condition:T3 Name:T4
+E2	Condition:T7 Name:T8 Severity:T14
+E5	Procedure:T6 Name:T10
+E6	Contraindication:T11 Contraindicates:E5
+E7	Eq-Comparison:T13 Temporal-Period:T12
+E4	Assertion:T9 Asserted:E2
 T1	Condition 65 88	neurocognitive disorder
 T2	Condition-Name 65 88	neurocognitive disorder
-E1	Condition:T1 Name:T2 Temporality:E7
 T3	Condition 141 149	Delirium
 T4	Condition-Name 141 149	Delirium
-E3	Condition:T3 Name:T4
 T5	Language 25 31	French
 T7	Condition 161 171	depressive
-E2	Condition:T7 Name:T8 Severity:T14
 T8	Condition-Name 161 171	depressive
 T6	Procedure 186 189	MRI
-E5	Procedure:T6 Name:T10
 T10	Procedure-Name 186 189	MRI
 T11	Contraindication 190 206	contraindication
-E6	Contraindication:T11 Contraindicates:E5
 T12	Eq-Temporal-Period 45 51	Recent
 T13	Eq-Comparison 45 51	Recent
-E7	Eq-Comparison:T13 Temporal-Period:T12
-A1	Eq-Temporal-Period-Value T12 recent
 T9	Assertion 172 180	symptoms
-E4	Assertion:T9 Asserted:E2
-A2	Assertion-Type-Value E4 possible
 T14	Severity 155 160	Major
+A1	Eq-Temporal-Period-Value T12 recent
+A2	Assertion-Type-Value E4 possible
 A3	Severity-Value T14 severe

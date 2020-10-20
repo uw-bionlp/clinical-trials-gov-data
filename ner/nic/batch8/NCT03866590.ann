@@ -1,91 +1,86 @@
-T1	Eq-Comparison 128 147	older than 14 years
 E1	Eq-Comparison:T1 Operator:T38 Value:T39 Temporal-Unit:T40
-T2	And 148 151	and
 E2	And:T2 Arg:E1 Arg2:E3
-T3	Eq-Comparison 152 173	younger than 25 years
 E3	Eq-Comparison:T3 Operator:T41 Value:T42 Temporal-Unit:T43
-T4	Age 174 177	old
 E4	Age:T4 Eq-Comparison:E1 Eq-Comparison2:E3
-T5	Modifier 204 211	chronic
-E5	Modifier:T5 Modifies:T44
-T6	Condition 212 219	anaemia
-E6	Condition:T6 Name:T44
-T7	Or 220 222	or
+E6	Condition:T6 Name:T44 Acuteness:T5
 E7	Or:T7 Arg:E6 Arg2:E8
-T8	Condition 223 237	cholelithiasis
 E8	Condition:T8 Name:T45
-T9	Or 238 240	or
 E9	Or:T9 Arg:E8 Arg2:E10
-T10	Condition 241 254	cholecystitis
 E10	Condition:T10 Name:T46
-T12	Condition 313 316	PKD
 E12	Condition:T12 Name:T49 Polarity:T48
-T13	Assertion 317 326	suspicion
 E13	Assertion:T13 Asserted:E12
-A1	Assertion-Type-Value E13 possible
-T14	Procedure 380 393	biochemically
 E14	Procedure:T14 Name:T66
-T15	Or 394 400	and/or
 E15	Or:T15 Arg:E14 Arg2:E11
-T16	Condition 418 421	PKD
 E16	Condition:T16 Name:T50
-T17	Negation 507 510	not
 E17	Negation:T17 Negates:E19 Negates2:E21 Negates3:E23
-T18	Modifier 523 530	chronic
-E18	Modifier:T18 Modifies:T51
-T19	Condition 531 538	anaemia
-E19	Condition:T19 Name:T51
-T20	Or 539 541	or
+E19	Condition:T19 Name:T51 Acuteness:T18
 E20	Or:T20 Arg:E19 Arg2:E21
-T21	Condition 542 556	cholelithiasis
 E21	Condition:T21 Name:T52
-T22	Or 557 559	or
 E22	Or:T22 Arg:E21 Arg2:E23
-T23	Condition 560 573	cholecystitis
 E23	Condition:T23 Name:T53
-T24	Modifier 596 603	chronic
-E24	Modifier:T24 Modifies:T54
-T25	Condition 604 611	anaemia
-E25	Condition:T25 Name:T54
-T26	Or 612 614	or
+E25	Condition:T25 Name:T54 Acuteness:T24
 E26	Or:T26 Arg:E25 Arg2:E27
-T27	Condition 615 629	cholelithiasis
 E27	Condition:T27 Name:T55
-T28	Or 630 632	or
 E28	Or:T28 Arg:E27 Arg2:E29
-T29	Condition 633 646	cholecystitis
 E29	Condition:T29 Name:T56
-T30	Negation 668 671	not
 E30	Negation:T30 Negates:E31
-T31	Condition 679 682	PKD
 E31	Condition:T31 Name:T57
-T32	Eq-Comparison 707 728	younger than 14 years
 E32	Eq-Comparison:T32 Operator:T58 Value:T59 Temporal-Unit:T60
-T33	Or 729 731	or
 E33	Or:T33 Arg:E32 Arg2:E34
-T34	Eq-Comparison 732 751	older than 25 years
 E34	Eq-Comparison:T34 Operator:T61 Value:T62 Temporal-Unit:T63
-T35	Age 752 755	old
 E35	Age:T35 Eq-Comparison:E32 Eq-Comparison2:E34
-T36	Eq-Comparison 761 771	Previously
 E36	Eq-Comparison:T36 Temporal-Period:T64
-T37	Study 788 793	study
 E37	Study:T37 Temporality:E36
+E38	Modifier:T47 Modifies:T46
+E11	Procedure:T11 Name:T65
+E39	Or:T67 Arg:E12 Arg2:E16
+E40	Or:T68 Arg:E10 Arg2:E12
+T1	Eq-Comparison 128 147	older than 14 years
+T2	And 148 151	and
+T3	Eq-Comparison 152 173	younger than 25 years
+T4	Age 174 177	old
+T5	Acuteness 204 211	chronic
+T6	Condition 212 219	anaemia
+T7	Or 220 222	or
+T8	Condition 223 237	cholelithiasis
+T9	Or 238 240	or
+T10	Condition 241 254	cholecystitis
+T12	Condition 313 316	PKD
+T13	Assertion 317 326	suspicion
+T14	Procedure 380 393	biochemically
+T15	Or 394 400	and/or
+T16	Condition 418 421	PKD
+T17	Negation 507 510	not
+T18	Acuteness 523 530	chronic
+T19	Condition 531 538	anaemia
+T20	Or 539 541	or
+T21	Condition 542 556	cholelithiasis
+T22	Or 557 559	or
+T23	Condition 560 573	cholecystitis
+T24	Acuteness 596 603	chronic
+T25	Condition 604 611	anaemia
+T26	Or 612 614	or
+T27	Condition 615 629	cholelithiasis
+T28	Or 630 632	or
+T29	Condition 633 646	cholecystitis
+T30	Negation 668 671	not
+T31	Condition 679 682	PKD
+T32	Eq-Comparison 707 728	younger than 14 years
+T33	Or 729 731	or
+T34	Eq-Comparison 732 751	older than 25 years
+T35	Age 752 755	old
+T36	Eq-Comparison 761 771	Previously
+T37	Study 788 793	study
 T38	Eq-Operator 128 138	older than
-A2	Eq-Operator-Value T38 GT
 T39	Eq-Value 139 141	14
 T40	Eq-Temporal-Unit 142 147	years
-A3	Eq-Temporal-Unit-Value T40 year
 T41	Eq-Operator 152 164	younger than
-A4	Eq-Operator-Value T41 LT
 T42	Eq-Value 165 167	25
 T43	Eq-Temporal-Unit 168 173	years
-A5	Eq-Temporal-Unit-Value T43 year
 T44	Condition-Name 212 219	anaemia
 T45	Condition-Name 223 237	cholelithiasis
 T46	Condition-Name 241 254	cholecystitis
 T48	Polarity 302 306	high
-A6	Polarity-Value T48 high
 T49	Condition-Name 313 316	PKD
 T50	Condition-Name 418 421	PKD
 T51	Condition-Name 531 538	anaemia
@@ -96,29 +91,34 @@ T55	Condition-Name 615 629	cholelithiasis
 T56	Condition-Name 633 646	cholecystitis
 T57	Condition-Name 679 682	PKD
 T58	Eq-Operator 707 719	younger than
-A7	Eq-Operator-Value T58 LT
 T59	Eq-Value 720 722	14
 T60	Eq-Temporal-Unit 723 728	years
-A8	Eq-Temporal-Unit-Value T60 year
 T61	Eq-Operator 732 742	older than
-A9	Eq-Operator-Value T61 GT
 T62	Eq-Value 743 745	25
 T63	Eq-Temporal-Unit 746 751	years
-A10	Eq-Temporal-Unit-Value T63 year
 T64	Eq-Temporal-Period 761 771	Previously
-A11	Eq-Temporal-Period-Value T64 past
 T47	Modifier 258 280	undetermined aetiology
-E38	Modifier:T47 Modifies:T46
 T11	Procedure 401 412	genetically
-E11	Procedure:T11 Name:T65
 T65	Procedure-Name 401 412	genetically
 T66	Procedure-Name 380 393	biochemically
-R1	Found-By Arg1:E16 Arg2:E11	
-R2	Found-By Arg1:E16 Arg2:E14	
 T67	Or 352 354	or
-E39	Or:T67 Arg:E12 Arg2:E16
 T68	Or 281 283	or
-E40	Or:T68 Arg:E10 Arg2:E12
-R3	Caused-By Arg1:E25 Arg2:E31	
-R4	Caused-By Arg1:E27 Arg2:E31	
-R5	Caused-By Arg1:E29 Arg2:E31	
+A1	Assertion-Type-Value E13 possible
+A2	Eq-Operator-Value T38 GT
+A3	Eq-Temporal-Unit-Value T40 year
+A4	Eq-Operator-Value T41 LT
+A5	Eq-Temporal-Unit-Value T43 year
+A6	Polarity-Value T48 high
+A7	Eq-Operator-Value T58 LT
+A8	Eq-Temporal-Unit-Value T60 year
+A9	Eq-Operator-Value T61 GT
+A10	Eq-Temporal-Unit-Value T63 year
+A11	Eq-Temporal-Period-Value T64 past
+A12	Acuteness-Type-Value T5 chronic
+A13	Acuteness-Type-Value T18 chronic
+A14	Acuteness-Type-Value T24 chronic
+R1	Found-By Arg1:E16 Arg2:E11
+R2	Found-By Arg1:E16 Arg2:E14
+R3	Caused-By Arg1:E25 Arg2:E31
+R4	Caused-By Arg1:E27 Arg2:E31
+R5	Caused-By Arg1:E29 Arg2:E31

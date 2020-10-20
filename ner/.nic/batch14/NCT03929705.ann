@@ -1,0 +1,199 @@
+T1	Eq-Temporal-Unit 64 69	years
+A1	Eq-Temporal-Unit-Value T1 year
+T2	Eq-Temporal-Unit 433 438	years
+A2	Eq-Temporal-Unit-Value T2 year
+T3	Age 73 76	age
+E1	Age:T3 Eq-Comparison:E3
+T4	Age 442 445	age
+E2	Age:T4 Eq-Comparison:E21
+T7	Eq-Value 61 63	18
+T11	Eq-Value 430 432	18
+T12	Eq-Value 544 546	10
+T5	Eq-Comparison 52 69	at least 18 years
+E3	Eq-Comparison:T5 Operator:T6 Temporal-Unit:T1 Value:T7
+T6	Eq-Operator 52 60	at least
+A3	Eq-Operator-Value T6 GTEQ
+T8	Eq-Comparison 164 180	minimum of 10 mL
+E4	Eq-Comparison:T8 Value:T18 Unit:T19 Operator:T20
+T18	Eq-Value 175 177	10
+T19	Eq-Unit 178 180	mL
+T20	Eq-Operator 164 171	minimum
+A4	Eq-Operator-Value T20 GTEQ
+T21	Assertion 146 153	able to
+E5	Assertion:T21 Asserted:E6
+A5	Assertion-Type-Value E5 hypothetical
+T22	Observation 184 195	whole blood
+E6	Observation:T22 Name:T23 Eq-Comparison:E4 Eq-Comparison2:E9
+T23	Observation-Name 184 195	whole blood
+A6	Observation-Type-Value T23 lab
+T24	Encounter 204 209	visit
+E7	Encounter:T24 
+T25	Temporal-Connection 196 198	at
+E8	Temporal-Connection:T25 Arg:E6 Arg2:E7
+A7	Temporal-Connection-Type-Value E8 during
+T26	Eq-Comparison 211 215	16mL
+E9	Eq-Comparison:T26 Value:T27 Unit:T28
+T27	Eq-Value 211 213	16
+T28	Eq-Unit 213 215	mL
+T29	Condition 220 237	immunocompromised
+E10	Condition:T29 Name:T30
+T30	Condition-Name 220 237	immunocompromised
+R1	If-Then Arg1:E10 Arg2:E9	
+T31	Condition 243 246	HIV
+E11	Condition:T31 Name:T32 Polarity:T33
+T32	Condition-Name 243 246	HIV
+T33	Polarity 246 247	+
+A8	Polarity-Value T33 positive
+R2	Equivalent-To Arg1:E11 Arg2:E10	
+T34	Observation 267 276	T-SPOT.TB
+E12	Observation:T34 Name:T35 Polarity:T36
+T35	Observation-Name 267 276	T-SPOT.TB
+T36	Polarity 277 285	positive
+A9	Polarity-Value T36 positive
+T37	Eq-Comparison 296 301	First
+E13	Eq-Comparison:T37 Temporal-Recency:T38
+T38	Eq-Temporal-Recency 296 301	First
+A10	Eq-Temporal-Recency-Value T38 first-time
+T39	Encounter 302 307	visit
+E14	Encounter:T39 Temporality:E13
+T40	Condition 316 318	TB
+E15	Condition:T40 Name:T41
+T41	Condition-Name 316 318	TB
+T42	Assertion 308 315	suspect
+E16	Assertion:T42 Asserted:E15
+A11	Assertion-Type-Value E16 possible
+T43	Condition 353 355	TB
+E17	Condition:T43 Name:T44 Temporality:E18
+T44	Condition-Name 353 355	TB
+T45	Eq-Comparison 336 349	prior history
+E18	Eq-Comparison:T45 Temporal-Period:T46
+T46	Eq-Temporal-Period 336 349	prior history
+A12	Eq-Temporal-Period-Value T46 past
+T47	Negation 333 335	no
+E19	Negation:T47 Negates:E17
+T48	And 328 332	with
+E20	And:T48 Arg:E15 Arg2:E19
+T9	Eq-Comparison 421 438	at least 18 years
+E21	Eq-Comparison:T9 Operator:T10 Temporal-Unit:T2 Value:T11
+T10	Eq-Operator 421 429	at least
+A13	Eq-Operator-Value T10 GTEQ
+T49	Eq-Comparison 533 549	minimum of 10 mL
+E22	Eq-Comparison:T49 Operator:T50 Value:T12 Unit:T51
+T50	Eq-Operator 533 543	minimum of
+A14	Eq-Operator-Value T50 GTEQ
+T51	Eq-Unit 547 549	mL
+T52	Observation 553 564	whole blood
+E23	Observation:T52 Name:T53 Eq-Comparison:E22 Eq-Comparison2:E27
+T53	Observation-Name 553 564	whole blood
+T54	Assertion 515 522	able to
+E24	Assertion:T54 Asserted:E23
+A15	Assertion-Type-Value E24 hypothetical
+T55	Encounter 573 578	visit
+E25	Encounter:T55 
+T56	Temporal-Connection 565 567	at
+E26	Temporal-Connection:T56 Arg:E23 Arg2:E25
+A16	Temporal-Connection-Type-Value E26 during
+T57	Eq-Comparison 580 584	16mL
+E27	Eq-Comparison:T57 Value:T58 Unit:T59
+T58	Eq-Value 580 582	16
+T59	Eq-Unit 582 584	mL
+T60	Condition 589 606	immunocompromised
+E28	Condition:T60 Name:T61
+T61	Condition-Name 589 606	immunocompromised
+T62	Condition 612 615	HIV
+E29	Condition:T62 Name:T63 Polarity:T64
+T63	Condition-Name 612 615	HIV
+T64	Polarity 615 616	+
+A17	Polarity-Value T64 positive
+R3	Equivalent-To Arg1:E29 Arg2:E28	
+R4	If-Then Arg1:E28 Arg2:E27	
+T65	Condition 636 645	T-SPOT.TB
+E30	Condition:T65 Name:T66 Polarity:T67
+T66	Condition-Name 636 645	T-SPOT.TB
+T67	Polarity 646 654	positive
+A18	Polarity-Value T67 positive
+T68	Condition 685 687	TB
+E31	Condition:T68 Name:T69 Temporality:E32
+T69	Condition-Name 685 687	TB
+T70	Eq-Comparison 668 681	prior history
+E32	Eq-Comparison:T70 Temporal-Period:T71
+T71	Eq-Temporal-Period 668 681	prior history
+A19	Eq-Temporal-Period-Value T71 past
+T72	Negation 665 667	No
+E33	Negation:T72 Negates:E31
+T13	Observation 758 772	T-SPOT.TB test
+E34	Observation:T13 Name:T14 Polarity:T73
+T14	Observation-Name 758 772	T-SPOT.TB test
+T73	Polarity 742 750	Negative
+A20	Polarity-Value T73 negative
+T74	Condition 818 820	TB
+E35	Condition:T74 Name:T75 Temporality:E37
+T75	Condition-Name 818 820	TB
+T76	Eq-Comparison 783 791	Previous
+E36	Eq-Comparison:T76 Temporal-Period:T77
+T77	Eq-Temporal-Period 783 791	Previous
+A21	Eq-Temporal-Period-Value T77 past
+T78	Eq-Comparison 795 807	pre-existing
+E37	Eq-Comparison:T78 
+T79	Eq-Temporal-Period 795 807	pre-existing
+A22	Eq-Temporal-Period-Value T79 past
+T80	Or 792 794	or
+E38	Or:T80 Arg:E36 Arg2:E37
+T82	Eq-Comparison 841 843	On
+E40	Eq-Comparison:T82 Temporal-Period:T83
+T83	Eq-Temporal-Period 841 843	On
+A23	Eq-Temporal-Period-Value T83 present
+T84	Eq-Comparison 866 882	more than 1 week
+E41	Eq-Comparison:T84 Operator:T85 Temporal-Unit:T87 Value:T86
+T85	Eq-Operator 866 875	more than
+A24	Eq-Operator-Value T85 GT
+T86	Eq-Value 876 877	1
+T87	Eq-Temporal-Unit 878 882	week
+A25	Eq-Temporal-Unit-Value T87 week
+T16	Observation 981 995	T-SPOT.TB test
+E42	Observation:T16 Name:T17 Polarity:T88
+A26	Observation-Type-Value T14 lab
+T17	Observation-Name 981 995	T-SPOT.TB test
+A27	Observation-Type-Value T17 lab
+T88	Polarity 972 980	Negative
+A28	Polarity-Value T88 negative
+T89	Condition 1041 1043	TB
+E43	Condition:T89 Name:T90 Temporality:E45
+T90	Condition-Name 1041 1043	TB
+T91	Eq-Comparison 1006 1014	Previous
+E44	Eq-Comparison:T91 Temporal-Period:T92
+T92	Eq-Temporal-Period 1006 1014	Previous
+A29	Eq-Temporal-Period-Value T92 past
+T93	Eq-Comparison 1018 1030	pre-existing
+E45	Eq-Comparison:T93 
+T94	Eq-Temporal-Period 1018 1030	pre-existing
+A30	Eq-Temporal-Period-Value T94 past
+T95	Or 1015 1017	or
+E46	Or:T95 Arg:E44 Arg2:E45
+T96	Procedure 1075 1084	treatment
+E47	Procedure:T96 Temporality:E48
+T98	Eq-Comparison 1064 1066	On
+E48	Eq-Comparison:T98 Temporal-Period:T101
+T15	Procedure 852 861	treatment
+E39	Procedure:T15 Temporality:E40 Duration:E41
+T81	Condition 849 851	TB
+E49	Condition:T81 Name:T99
+T99	Condition-Name 849 851	TB
+R5	Treatment-For Arg1:E39 Arg2:E49	
+T97	Condition 1072 1074	TB
+E50	Condition:T97 Name:T100
+T100	Condition-Name 1072 1074	TB
+R6	Treatment-For Arg1:E47 Arg2:E50	
+T101	Eq-Temporal-Period 1064 1066	On
+A31	Eq-Temporal-Period-Value T101 present
+T102	Condition 1114 1116	TB
+E51	Condition:T102 Name:T103 Temporality:E52
+T103	Condition-Name 1114 1116	TB
+T104	Eq-Comparison 1107 1113	active
+E52	Eq-Comparison:T104 Temporal-Period:T105
+T105	Eq-Temporal-Period 1107 1113	active
+A32	Eq-Temporal-Period-Value T105 present
+T106	Assertion 1095 1103	Symptoms
+E53	Assertion:T106 Asserted:E51
+A33	Assertion-Type-Value E53 possible
+A34	Observation-Type-Value T35 lab

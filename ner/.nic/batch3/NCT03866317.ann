@@ -1,0 +1,285 @@
+T1	Or 30 32	or
+E1	Or:T1 Arg:T83 Arg2:T84
+T2	Eq-Comparison 48 72	18 years of age or older
+E2	Eq-Comparison:T2 Value:T85 Temporal-Unit:T86 Operator:T87
+T3	Eq-Comparison 92 110	moderate to severe
+E3	Eq-Comparison:T3 Operator:T89 Value:T88 Value2:T90
+T4	Condition 111 114	DLE
+E4	Condition:T4 Name:T91 Severity:T90
+T5	And 115 119	with
+E5	And:T5 Arg:E4 Arg2:E85
+T6	Eq-Comparison 120 132	at least one
+E6	Eq-Comparison:T6 Operator:T92 Value:T93
+T7	Eq-Comparison 133 139	active
+E7	Eq-Comparison:T7 Temporal-Period:T94
+T9	Eq-Comparison 163 174	0.5-1.0 cm2
+E9	Eq-Comparison:T9 Value:T96 Operator:T97 Value:T98 Unit:T99
+T10	And 177 181	with
+E10	And:T10 Arg2:E11 Arg:E85
+T11	Observation 182 187	CLASI
+E11	Observation:T11 Name:T100 Eq-Comparison:E12
+T12	Eq-Comparison 188 191	≥ 5
+E12	Eq-Comparison:T12 Operator:T101 Value:T143
+T13	Assertion 198 209	Willingness
+E13	Assertion:T13 Asserted:E14
+A1	Assertion-Type-Value E13 hypothetical
+T14	Study 235 240	study
+E14	Study:T14 Study-Of:E86
+T15	Assertion 257 271	Willingness to
+E15	Assertion:T15 Asserted:E87
+A2	Assertion-Type-Value E15 hypothetical
+T16	Condition 300 308	diseased
+E16	Condition:T16 Name:T146
+T17	Modifier 318 325	natural
+E17	Modifier:T17 Modifies:T146
+T18	Or 326 328	or
+E18	Or:T18 Arg:E17 Arg2:E19
+T20	Condition 374 383	Pregnancy
+E20	Condition:T20 Name:T102
+T21	Or 384 386	or
+E21	Or:T21 Arg:E20 Arg2:E22
+T22	Condition 387 401	breast feeding
+E22	Condition:T22 Name:T103
+T23	Condition 411 420	condition
+E23	Condition:T23 
+T24	Or 421 423	or
+E24	Or:T24 Arg:E23 Arg2:E25
+T25	Procedure 424 431	therapy
+E25	Procedure:T25 Name:T104
+T26	Assertion 467 470	may
+E26	Assertion:T26 Asserted:T27
+A3	Assertion-Type-Value E26 hypothetical
+T28	Risk 478 482	risk
+E28	Risk:T28 Stability:T27
+T29	Assertion 506 511	could
+E29	Assertion:T29 Asserted:T105
+A4	Assertion-Type-Value E29 hypothetical
+T30	Study 549 554	study
+E30	Study:T30 Stability:T105
+T31	Modifier 560 568	Systemic
+E31	Modifier:T31 Modifies:T106
+T32	Condition 569 588	Lupus Erythematosus
+E32	Condition:T32 Name:T106
+T33	Condition 590 593	SLE
+E33	Condition:T33 Name:T107
+T35	Condition 633 649	hypersensitivity
+E35	Condition:T35 Name:T109
+T36	Coreference 664 676	constituents
+E36	Coreference:T36 Refers-To:E40
+T37	Or 677 679	or
+E37	Or:T37 Arg:E36 Arg2:E38
+T38	Coreference 680 690	excipients
+E38	Coreference:T38 Refers-To:E40
+T39	Study 698 713	investigational
+E39	Study:T39 Study-Of:E40
+T40	Drug 714 721	product
+E40	Drug:T40 
+T41	Modifier 738 750	prescription
+E41	Modifier:T41 Modifies:E44
+T42	Or 751 753	or
+E42	Or:T42 Arg:E41 Arg2:E43
+T43	Negation 754 757	non
+E43	Negation:T43 Negates:E88
+T44	Drug 771 781	medication
+E44	Drug:T44 Temporality:E34
+T45	Assertion 787 792	could
+E45	Assertion:T45 Asserted:T112
+A5	Assertion-Type-Value E45 hypothetical
+T46	Procedure 808 828	efficacy evaluations
+E46	Procedure:T46 Name:T111 Stability:T112
+T47	Study 836 841	study
+E47	Study:T47 Study-Of:E46
+T48	Modifier 864 872	systemic
+E48	Modifier:T48 Modifies:T114
+T49	Procedure 873 884	DLE therapy
+E49	Procedure:T49 Name:T114 Stability:T113 Temporality:E54
+T50	Drug 891 915	systemic corticosteroids
+E50	Drug:T50 Name:T115
+T51	Drug 917 931	cyclosporine A
+E51	Drug:T51 Name:T116
+T52	Drug 933 945	azathioprine
+E52	Drug:T52 Name:T117
+T53	Drug 947 968	mycophenolate mofetil
+E53	Drug:T53 Name:T118
+T54	Eq-Comparison 977 989	past 1 month
+E54	Eq-Comparison:T54 Temporal-Period:T119 Value:T120 Temporal-Unit:T121
+T55	Eq-Comparison 996 999	Use
+E55	Eq-Comparison:T55 Temporal-Period:T122
+T56	Modifier 1003 1011	systemic
+E56	Modifier:T56 Modifies:T123
+T57	Condition 1012 1016	pain
+E57	Condition:T57 Name:T123 Temporality:E55
+T58	Drug 1017 1028	medications
+E58	Drug:T58 Temporality:E60
+T59	Drug 1035 1044	oxycodone
+E59	Drug:T59 Name:T125
+T60	Eq-Comparison 1052 1064	past 2 weeks
+E60	Eq-Comparison:T60 Temporal-Period:T126 Value:T127 Temporal-Unit:T128
+T61	Other 1087 1094	another
+E61	Other:T61 Is-Other:E62
+T62	Study 1113 1118	study
+E62	Study:T62 
+T63	Study 1127 1142	investigational
+E63	Study:T63 Study-Of:E64
+T64	Drug 1143 1147	drug
+E64	Drug:T64 Temporality:E65
+T65	Eq-Comparison 1148 1162	within 4 weeks
+E65	Eq-Comparison:T65 Operator:T129 Value:T130 Temporal-Unit:T131
+T66	Temporal-Connection 1163 1169	before
+E66	Temporal-Connection:T66 Arg:E65 Arg2:E67
+A6	Temporal-Connection-Type-Value E66 before
+T67	Study 1175 1180	study
+E67	Study:T67 
+T68	Eq-Comparison 1186 1189	Use
+E68	Eq-Comparison:T68 Temporal-Period:T132
+T69	Drug 1193 1211	immune-suppressant
+E69	Drug:T69 Name:T133 Temporality:E68
+T70	Or 1212 1214	or
+E70	Or:T70 Arg:E69 Arg2:E72
+T71	Other 1215 1220	other
+E71	Other:T71 Is-Other:E72
+T72	Procedure 1221 1241	biological treatment
+E72	Procedure:T72 Name:T148
+T73	Eq-Comparison 1247 1255	Starting
+E73	Eq-Comparison:T73 Temporal-Period:T134
+T74	Drug 1256 1277	antimalarial medicine
+E74	Drug:T74 Name:T135 Temporality:E73
+T75	Temporal-Connection 1278 1283	after
+E75	Temporal-Connection:T75 Arg:E74 Arg2:E76
+A7	Temporal-Connection-Type-Value E75 after
+T76	Study 1301 1306	study
+E76	Study:T76 
+T77	Drug 1353 1365	antimalarial
+E77	Drug:T77 Name:T137 Temporality:E90 Stability:T136
+T78	Temporal-Connection 1366 1372	before
+E78	Temporal-Connection:T78 Arg:E77 Arg2:E79
+A8	Temporal-Connection-Type-Value E78 before
+T79	Study 1373 1383	enrollment
+E79	Study:T79 
+T81	Eq-Comparison 1421 1428	ongoing
+E81	Eq-Comparison:T81 Temporal-Period:T138
+T82	Condition 1429 1438	infection
+E82	Condition:T82 Name:T139 Temporality:E81
+T83	Life-Stage-And-Gender 25 29	Male
+A10	Life-Stage-And-Gender-Type T83 male
+T84	Life-Stage-And-Gender 33 39	female
+A11	Life-Stage-And-Gender-Type T84 female
+T85	Eq-Value 48 50	18
+T86	Eq-Temporal-Unit 51 56	years
+A12	Eq-Temporal-Unit-Value T86 year
+T87	Eq-Operator 64 72	or older
+A13	Eq-Operator-Value T87 GTEQ
+T88	Severity 92 100	moderate
+A14	Severity-Value T88 moderate
+T89	Eq-Operator 101 103	to
+A15	Eq-Operator-Value T89 BETWEEN
+T90	Severity 104 110	severe
+A16	Severity-Value T90 severe
+T91	Condition-Name 111 114	DLE
+T92	Eq-Operator 120 128	at least
+A17	Eq-Operator-Value T92 GTEQ
+T93	Eq-Value 129 132	one
+T94	Eq-Temporal-Period 133 139	active
+A18	Eq-Temporal-Period-Value T94 present
+T95	Observation-Name 155 161	lesion
+T96	Eq-Value 163 166	0.5
+T97	Eq-Operator 166 167	-
+A19	Eq-Operator-Value T97 BETWEEN
+T98	Eq-Value 167 170	1.0
+T99	Eq-Unit 171 174	cm2
+T100	Observation-Name 182 187	CLASI
+T101	Eq-Operator 188 189	≥
+A20	Eq-Operator-Value T101 GTEQ
+T102	Condition-Name 374 383	Pregnancy
+T103	Condition-Name 387 401	breast feeding
+T104	Procedure-Name 424 431	therapy
+T105	Stability 512 521	interfere
+A21	Stability-Value T105 change
+T106	Condition-Name 569 588	Lupus Erythematosus
+T107	Condition-Name 590 593	SLE
+T109	Condition-Name 633 649	hypersensitivity
+T110	Eq-Temporal-Period 727 730	Use
+A22	Eq-Temporal-Period-Value T110 present
+T112	Stability 793 802	interfere
+A23	Stability-Value T112 change
+T113	Stability 847 853	Change
+A24	Stability-Value T113 change
+T114	Procedure-Name 873 884	DLE therapy
+T115	Drug-Name 891 915	systemic corticosteroids
+T116	Drug-Name 917 931	cyclosporine A
+T117	Drug-Name 933 945	azathioprine
+T118	Drug-Name 947 968	mycophenolate mofetil
+T119	Eq-Temporal-Period 977 981	past
+A25	Eq-Temporal-Period-Value T119 past
+T120	Eq-Value 982 983	1
+T121	Eq-Temporal-Unit 984 989	month
+A26	Eq-Temporal-Unit-Value T121 month
+T122	Eq-Temporal-Period 996 999	Use
+A27	Eq-Temporal-Period-Value T122 present
+T123	Condition-Name 1012 1016	pain
+T125	Drug-Name 1035 1044	oxycodone
+T126	Eq-Temporal-Period 1052 1056	past
+A28	Eq-Temporal-Period-Value T126 past
+T127	Eq-Value 1057 1058	2
+T128	Eq-Temporal-Unit 1059 1064	weeks
+A29	Eq-Temporal-Unit-Value T128 week
+T129	Eq-Operator 1148 1154	within
+A30	Eq-Operator-Value T129 LTEQ
+T130	Eq-Value 1155 1156	4
+T131	Eq-Temporal-Unit 1157 1162	weeks
+A31	Eq-Temporal-Unit-Value T131 week
+T132	Eq-Temporal-Period 1186 1189	Use
+A32	Eq-Temporal-Period-Value T132 present
+T133	Drug-Name 1193 1211	immune-suppressant
+T134	Eq-Temporal-Period 1247 1255	Starting
+A33	Eq-Temporal-Period-Value T134 present
+T135	Drug-Name 1256 1277	antimalarial medicine
+T136	Stability 1338 1344	stable
+A34	Stability-Value T136 stable
+T137	Drug-Name 1353 1365	antimalarial
+T138	Eq-Temporal-Period 1421 1428	ongoing
+A35	Eq-Temporal-Period-Value T138 present
+T139	Condition-Name 1429 1438	infection
+T140	Age 60 63	age
+E83	Age:T140 Eq-Comparison:E2
+T141	Modifier 140 154	discoid target
+E84	Modifier:T141 Modifies:T95
+T142	Observation 155 161	lesion
+E85	Observation:T142 Eq-Comparison:E9 Name:T95 Minimum-Count:E6 Temporality:E7
+T143	Eq-Value 190 191	5
+T144	Procedure 241 251	procedures
+E86	Procedure:T144 
+T145	Negation 272 277	avoid
+E87	Negation:T145 Negates:E16
+T19	Modifier 329 348	artificial sunlight
+E19	Modifier:T19 Modifies:T146
+T146	Condition-Name 300 308	diseased
+T27	Stability 471 475	pose
+A36	Stability-Value T27 change
+R1	Caused-By Arg1:T27 Arg2:E23	
+R2	Caused-By Arg1:T27 Arg2:E25	
+T147	Or 498 500	or
+E27	Or:T147 Arg:E28 Arg2:E29
+R3	Abbrev-Of Arg1:E33 Arg2:E32	
+R4	Caused-By Arg1:E35 Arg2:E36	
+R5	Caused-By Arg1:E35 Arg2:E38	
+T34	Eq-Comparison 727 730	Use
+E34	Eq-Comparison:T34 Temporal-Period:T110
+T108	Modifier 758 770	prescription
+E88	Modifier:T108 Modifies:E44
+R6	Caused-By Arg1:T112 Arg2:E44	
+T111	Procedure-Name 808 828	efficacy evaluations
+R7	Example-Of Arg1:E50 Arg2:E49	
+R8	Example-Of Arg1:E51 Arg2:E49	
+R9	Example-Of Arg1:E52 Arg2:E49	
+R10	Example-Of Arg1:E53 Arg2:E49	
+R11	Treatment-For Arg1:E58 Arg2:E57	
+R12	Example-Of Arg1:E59 Arg2:E58	
+T124	And 1119 1123	with
+E89	And:T124 Arg:E62 Arg2:E64
+T148	Procedure-Name 1221 1241	biological treatment
+T149	Eq-Comparison 1325 1332	already
+E90	Eq-Comparison:T149 Temporal-Period:T150
+T150	Eq-Temporal-Period 1325 1332	already
+A37	Eq-Temporal-Period-Value T150 past
+A9	Observation-Type-Value T95 measurement

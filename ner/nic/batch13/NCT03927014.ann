@@ -1,98 +1,98 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10 Temporality:E26
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16 Temporality:E27
+E2	Condition:T17 Name:T18
+E4	Condition:T20 Name:T21
+E6	Condition:T22 Name:T23
+E8	Condition:T24 Name:T25
+E10	Modifier:T26 Modifies:T8
+E12	Modifier:T27 Modifies:T8
+E14	Or:T28 Arg:E12 Arg2:E10
+E16	Temporal-Connection:T30 Arg:E15 Arg2:E13
+E17	And:T31 Arg:T29 Arg2:E15
+E18	Condition:T32 Name:T33
+E19	Drug:T34 Temporality:E28
+E20	Encounter:T35 Type:T36 Temporality:E21
+E21	Eq-Comparison:T37 Temporal-Recency:T38
+E22	Temporal-Connection:T39 Arg:E19 Arg2:E21
+E23	Condition:T40 Name:T41
+E24	Or:T42 Arg:E23 Arg2:E3
+E25	Condition:T43 Name:T44
+E26	Eq-Comparison:T45 Temporal-Period:T46
+E27	Eq-Comparison:T47 Temporal-Period:T48
+E28	Eq-Comparison:T49 Temporal-Period:T50
+E29	Condition:T51 Name:T52
+E30	Modifier:T53 Modifies:T23
 T1	Condition 160 177	diabetes mellitus
 T2	Condition-Name 160 177	diabetes mellitus
-E1	Condition:T1 Name:T2
 T3	Condition 414 431	genetic syndromes
 T4	Condition-Name 414 431	genetic syndromes
-E3	Condition:T3 Name:T4
 T5	Condition 179 195	thyroid diseases
 T6	Condition-Name 179 195	thyroid diseases
-E5	Condition:T5 Name:T6
 T7	Condition 214 222	diseases
 T8	Condition-Name 214 222	diseases
-E7	Condition:T7 Name:T8
 T9	Condition 468 473	labor
 T10	Condition-Name 468 473	labor
-E9	Condition:T9 Name:T10 Temporality:E26
 T11	Condition 51 60	pregnancy
 T12	Condition-Name 51 60	pregnancy
-E11	Condition:T11 Name:T12
 T13	Condition 273 282	pregnancy
 T14	Condition-Name 273 282	pregnancy
-E13	Condition:T13 Name:T14
 T15	Condition 253 261	drug use
 T16	Condition-Name 253 261	drug use
-E15	Condition:T15 Name:T16 Temporality:E27
 T17	Condition 43 50	healthy
-E2	Condition:T17 Name:T18
 T18	Condition-Name 43 50	healthy
 T19	Life-Stage-And-Gender 95 100	women
-A1	Life-Stage-And-Gender-Type T19 female
 T20	Condition 86 94	pregnant
-E4	Condition:T20 Name:T21
 T21	Condition-Name 86 94	pregnant
-R1	If-Then Arg1:T19 Arg2:E4	
 T22	Condition 119 128	condition
-E6	Condition:T22 Name:T23
 T23	Condition-Name 119 128	condition
 T24	Condition 138 158	chronic hypertension
-E8	Condition:T24 Name:T25
 T25	Condition-Name 138 158	chronic hypertension
-R2	Example-Of Arg1:E8 Arg2:E6	
-R3	Example-Of Arg1:E1 Arg2:E6	
-R4	Example-Of Arg1:E5 Arg2:E6	
 T26	Modifier 207 213	kidney
-E10	Modifier:T26 Modifies:T8
 T27	Modifier 197 202	liver
-E12	Modifier:T27 Modifies:T8
 T28	Or 203 206	and
-E14	Or:T28 Arg:E12 Arg2:E10
-R5	Example-Of Arg1:E7 Arg2:E6	
 T29	Life-Stage-And-Gender 229 234	women
-A2	Life-Stage-And-Gender-Type T29 female
 T30	Temporal-Connection 262 272	throughout
-E16	Temporal-Connection:T30 Arg:E15 Arg2:E13
-A3	Temporal-Connection-Type-Value E16 during
 T31	And 235 239	with
-E17	And:T31 Arg:T29 Arg2:E15
 T32	Condition 314 316	PE
-E18	Condition:T32 Name:T33
 T33	Condition-Name 314 316	PE
 T34	Drug 299 309	medication
-E19	Drug:T34 Temporality:E28
-R6	Treatment-For Arg1:E19 Arg2:E18	
 T35	Encounter 348 357	admission
-E20	Encounter:T35 Type:T36 Temporality:E21
 T36	Encounter-Type 348 357	admission
-A4	Encounter-Type-Value T36 inpatient
 T37	Eq-Comparison 342 347	first
-E21	Eq-Comparison:T37 Temporal-Recency:T38
 T38	Eq-Temporal-Recency 342 347	first
-A5	Eq-Temporal-Recency-Value T38 first-time
 T39	Temporal-Connection 327 329	at
-E22	Temporal-Connection:T39 Arg:E19 Arg2:E21
-A6	Temporal-Connection-Type-Value E22 during
 T40	Condition 380 410	fetal congenital abnormalities
-E23	Condition:T40 Name:T41
 T41	Condition-Name 380 410	fetal congenital abnormalities
 T42	Or 411 413	or
-E24	Or:T42 Arg:E23 Arg2:E3
 T43	Condition 437 455	multiple gestation
-E25	Condition:T43 Name:T44
 T44	Condition-Name 437 455	multiple gestation
 T45	Eq-Comparison 461 467	active
-E26	Eq-Comparison:T45 Temporal-Period:T46
 T46	Eq-Temporal-Period 461 467	active
-A7	Eq-Temporal-Period-Value T46 present
 T47	Eq-Comparison 242 249	history
-E27	Eq-Comparison:T47 Temporal-Period:T48
 T48	Eq-Temporal-Period 242 249	history
-A8	Eq-Temporal-Period-Value T48 past
 T49	Eq-Comparison 288 295	history
-E28	Eq-Comparison:T49 Temporal-Period:T50
 T50	Eq-Temporal-Period 288 295	history
-A9	Eq-Temporal-Period-Value T50 past
 T51	Condition 25 37	preeclampsia
-E29	Condition:T51 Name:T52
 T52	Condition-Name 25 37	preeclampsia
 T53	Modifier 110 118	systemic
-E30	Modifier:T53 Modifies:T23
+A1	Life-Stage-And-Gender-Type T19 female
+A2	Life-Stage-And-Gender-Type T29 female
+A3	Temporal-Connection-Type-Value E16 during
+A4	Encounter-Type-Value T36 inpatient
+A5	Eq-Temporal-Recency-Value T38 first-time
+A6	Temporal-Connection-Type-Value E22 during
+A7	Eq-Temporal-Period-Value T46 present
+A8	Eq-Temporal-Period-Value T48 past
+A9	Eq-Temporal-Period-Value T50 past
+R1	If-Then Arg1:T19 Arg2:E4
+R2	Example-Of Arg1:E8 Arg2:E6
+R3	Example-Of Arg1:E1 Arg2:E6
+R4	Example-Of Arg1:E5 Arg2:E6
+R5	Example-Of Arg1:E7 Arg2:E6
+R6	Treatment-For Arg1:E19 Arg2:E18

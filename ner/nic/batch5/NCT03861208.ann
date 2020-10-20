@@ -1,33 +1,33 @@
-T1	Negation 67 69	no
 E1	Negation:T1 Negates:E2
-T2	Allergy 75 84	allergies
 E2	Allergy:T2 Name:T14
-T3	Negation 90 92	no
 E3	Negation:T3 Negates:E4
-T4	Drug 93 104	medications
-E4	Drug:T4 
-T5	Condition 117 125	behavior
+E4	Drug:T4
 E5	Condition:T5 Name:T17 Stability:T12
-T6	Or 125 126	/
 E6	Or:T6 Arg:E5 Arg2:E7
-T7	Condition 126 134	learning
 E7	Condition:T7 Name:T15 Stability:T12
-T8	Or 134 135	/
 E8	Or:T8 Arg:E7 Arg2:E9
-T9	Condition 135 143	appetite
 E9	Condition:T9 Name:T16 Stability:T12
+E10	Condition:T13 Name:T10
+E11	Assertion:T18 Asserted:T12
+T1	Negation 67 69	no
+T2	Allergy 75 84	allergies
+T3	Negation 90 92	no
+T4	Drug 93 104	medications
+T5	Condition 117 125	behavior
+T6	Or 125 126	/
+T7	Condition 126 134	learning
+T8	Or 134 135	/
+T9	Condition 135 143	appetite
 T10	Condition-Name 25 32	healthy
 T11	Life-Stage-And-Gender 33 41	children
-A1	Life-Stage-And-Gender-Type T11 child
 T12	Stability 110 116	affect
-A2	Stability-Value T12 change
 T13	Condition 25 32	healthy
-E10	Condition:T13 Name:T10
 T14	Allergy-Name 70 74	food
-R1	Caused-By Arg1:T12 Arg2:E4	
 T15	Condition-Name 126 134	learning
 T16	Condition-Name 135 143	appetite
 T17	Condition-Name 117 125	behavior
 T18	Assertion 110 116	affect
-E11	Assertion:T18 Asserted:T12
+A1	Life-Stage-And-Gender-Type T11 child
+A2	Stability-Value T12 change
 A3	Assertion-Type-Value E11 hypothetical
+R1	Caused-By Arg1:T12 Arg2:E4

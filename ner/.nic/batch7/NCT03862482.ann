@@ -1,0 +1,49 @@
+T1	Negation 25 28	non
+E1	Negation:T1 Negates:E2
+T2	Condition 29 35	smoker
+E2	Condition:T2 Name:T14
+T3	Negation 41 43	no
+E3	Negation:T3 Negates:E4
+T4	Condition 44 67	temporomandibular joint
+E4	Condition:T4 Name:T15
+T5	Condition 69 72	TMJ
+E5	Condition:T5 Name:T16
+T7	Or 83 85	or
+E7	Or:T7 Arg:E5 Arg2:E9
+T8	Modifier 86 92	facial
+E8	Modifier:T8 Modifies:T18
+T9	Condition 93 97	pain
+E9	Condition:T9 Name:T18
+T10	Study 138 143	study
+E10	Study:T10 Temporality:E11
+T11	Eq-Comparison 145 156	1993 - 1996
+E11	Eq-Comparison:T11 Value:T17 Operator:T25 Value2:T24
+T12	Age 195 198	age
+E12	Age:T12 Eq-Comparison:E13 Eq-Comparison2:E14
+T13	Eq-Comparison 203 211	25 years
+E13	Eq-Comparison:T13 Value:T19 Temporal-Unit:T20 Operator:T26
+T14	Condition-Name 29 35	smoker
+T15	Condition-Name 44 67	temporomandibular joint
+T16	Condition-Name 69 72	TMJ
+T18	Condition-Name 93 97	pain
+T19	Eq-Value 203 205	25
+T20	Eq-Temporal-Unit 206 211	years
+A1	Eq-Temporal-Unit-Value T20 year
+T21	Eq-Operator 220 227	maximum
+A2	Eq-Operator-Value T21 LTEQ
+T22	Eq-Value 228 230	56
+T23	Eq-Temporal-Unit 231 236	years
+A3	Eq-Temporal-Unit-Value T23 year
+R1	Abbrev-Of Arg1:E5 Arg2:E4	
+T6	Modifier 74 82	disorder
+E6	Modifier:T6 Modifies:T16
+T17	Eq-Value 145 149	1993
+T24	Eq-Value 152 156	1996
+T25	Eq-Operator 150 151	-
+A4	Eq-Operator-Value T25 BETWEEN
+T26	Eq-Operator 176 182	mnimum
+A5	Eq-Operator-Value T26 GTEQ
+T27	Eq-Comparison 220 236	maximum 56 years
+E14	Eq-Comparison:T27 Operator:T21 Value:T22 Temporal-Unit:T23
+T28	And 212 215	and
+E15	And:T28 Arg:E13 Arg2:E14

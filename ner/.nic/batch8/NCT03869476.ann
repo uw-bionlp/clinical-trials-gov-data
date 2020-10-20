@@ -1,0 +1,93 @@
+T1	Eq-Comparison 32 56	18 years of age or older
+E1	Eq-Comparison:T1 Value:T30 Temporal-Unit:T31 Operator:T32
+T2	Modifier 80 89	essential
+E2	Modifier:T2 Modifies:T33
+T3	Condition 90 104	thrombocytosis
+E3	Condition:T3 Name:T33
+T4	Condition 106 131	prefibrotic myelofibrosis
+E4	Condition:T4 Name:T34
+T5	Or 132 134	or
+E5	Or:T5 Arg:E4 Arg2:E7
+T6	Modifier 135 140	overt
+E6	Modifier:T6 Modifies:T35
+T7	Condition 141 154	myelofibrosis
+E7	Condition:T7 Name:T35
+T8	Negation 208 211	not
+E8	Negation:T8 Negates:E10
+T9	Eq-Comparison 212 220	received
+E9	Eq-Comparison:T9 Temporal-Period:T36
+T10	Procedure 230 239	treatment
+E10	Procedure:T10 Temporality:E9
+T11	Condition 244 253	neoplasms
+E11	Condition:T11 Name:T37
+T12	Study 317 322	study
+E12	Study:T12 
+T13	Assertion 345 357	consented to
+E13	Assertion:T13 
+A1	Assertion-Type-Value E13 hypothetical
+T15	Study 502 507	study
+E15	Study:T15 
+T16	Other 582 589	another
+E16	Other:T16 Is-Other:E17
+T17	Condition 590 610	hematologic neoplasm
+E17	Condition:T17 Name:T39
+T18	Or 611 613	or
+E18	Or:T18 Arg:E17 Arg2:E20
+T19	Modifier 614 625	progressive
+E19	Modifier:T19 Modifies:T40
+T20	Condition 626 632	cancer
+E20	Condition:T20 Name:T40
+T21	Temporal-Connection 633 644	at the time
+E21	Temporal-Connection:T21 Arg:E20 Arg2:E31
+A2	Temporal-Connection-Type-Value E21 during
+T22	Modifier 692 701	secondary
+E22	Modifier:T22 Modifies:T41
+T23	Condition 702 715	myelofibrosis
+E23	Condition:T23 Name:T41
+T24	Condition 722 730	Pregnant
+E24	Condition:T24 Name:T42
+T25	Or 731 733	or
+E25	Or:T25 Arg:E24 Arg2:E26
+T26	Condition 734 747	breastfeeding
+E26	Condition:T26 Name:T43
+T27	Observation 767 784	prived of liberty
+E27	Observation:T27 Name:T45
+T28	Observation 850 874	legal protection measure
+E28	Observation:T28 Name:T46
+T29	Life-Stage-And-Gender 25 30	Adult
+A3	Life-Stage-And-Gender-Type T29 adult
+T30	Eq-Value 32 34	18
+T31	Eq-Temporal-Unit 35 40	years
+A4	Eq-Temporal-Unit-Value T31 year
+T32	Eq-Operator 48 56	or older
+A5	Eq-Operator-Value T32 GTEQ
+T33	Condition-Name 90 104	thrombocytosis
+T34	Condition-Name 106 131	prefibrotic myelofibrosis
+T35	Condition-Name 141 154	myelofibrosis
+T36	Eq-Temporal-Period 212 220	received
+A6	Eq-Temporal-Period-Value T36 past
+T37	Condition-Name 244 253	neoplasms
+T38	Location 420 449	University Hospital of Angers
+A7	Location-Value T38 hospital
+T39	Condition-Name 590 610	hematologic neoplasm
+T40	Condition-Name 626 632	cancer
+T41	Condition-Name 702 715	myelofibrosis
+T42	Condition-Name 722 730	Pregnant
+T43	Condition-Name 734 747	breastfeeding
+T44	Life-Stage-And-Gender 748 753	woman
+A8	Life-Stage-And-Gender-Type T44 female
+T45	Observation-Name 767 784	prived of liberty
+T46	Observation-Name 850 874	legal protection measure
+T47	Age 44 47	age
+E29	Age:T47 Eq-Comparison:E1
+R1	Equivalent-To Arg1:E1 Arg2:T29	
+T48	And 58 62	with
+E30	And:T48 Arg:T29 Arg2:E3
+R2	Treatment-For Arg1:E10 Arg2:E11	
+T14	Location 453 458	Brest
+A9	Location-Value T14 hospital
+T49	Or 450 452	or
+E14	Or:T49 Arg:T38 Arg2:T14
+T50	Coreference 648 657	diagnosis
+E31	Coreference:T50 Refers-To:E3
+R3	If-Then Arg1:T44 Arg2:E26	

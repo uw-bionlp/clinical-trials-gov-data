@@ -1,0 +1,79 @@
+T1	Condition 53 57	NMDs
+E1	Condition:T1 Name:T26
+T3	Eq-Comparison 111 149	between January 2015 and December 2018
+E3	Eq-Comparison:T3 Operator:T18 Value:T19 Value:T20
+T4	Negation 247 249	no
+E4	Negation:T4 Negates:E5
+T5	Assertion 250 258	need for
+E5	Assertion:T5 Asserted:E6
+A1	Assertion-Type-Value E5 hypothetical
+T6	Procedure 267 278	ventilation
+E6	Procedure:T6 Name:T21
+T7	Modifier 298 309	ineffective
+E7	Modifier:T7 Modifies:T22
+T8	Procedure 310 313	NIV
+E8	Procedure:T8 Name:T22
+T9	Temporal-Connection 314 320	during
+E9	Temporal-Connection:T9 Arg:E8 Arg2:E10
+A2	Temporal-Connection-Type-Value E9 during
+T10	Observation 321 326	sleep
+E10	Observation:T10 Name:T36
+T11	Condition 412 422	oral leaks
+E11	Condition:T11 Name:T23
+T12	Procedure 428 431	MPV
+E12	Procedure:T12 Name:T44
+T13	Or 432 434	or
+E13	Or:T13 Arg:E11 Arg2:E14
+T14	Condition 452 473	respiratory infection
+E14	Condition:T14 Name:T25 Severity:T24
+T15	Temporal-Connection 474 480	during
+E15	Temporal-Connection:T15 Arg:E14 Arg2:E16
+A3	Temporal-Connection-Type-Value E15 during
+T16	Study 485 491	trials
+E16	Study:T16 
+T18	Eq-Operator 111 118	between
+A4	Eq-Operator-Value T18 BETWEEN
+T19	Eq-Value 119 131	January 2015
+T20	Eq-Value 136 149	December 2018
+T21	Procedure-Name 267 278	ventilation
+T22	Procedure-Name 310 313	NIV
+T23	Condition-Name 412 422	oral leaks
+T24	Severity 446 451	acute
+A5	Severity-Value T24 severe
+T25	Condition-Name 452 473	respiratory infection
+T26	Condition-Name 53 57	NMDs
+T2	Location 72 110	Centre for Home Mechanical Ventilation
+A6	Location-Value T2 clinic
+T17	Encounter 58 67	attending
+E2	Encounter:T17 Location:T2 Temporality:E3
+T27	Procedure 171 174	MPV
+E17	Procedure:T27 Name:T28
+T28	Procedure-Name 171 174	MPV
+T29	Modifier 163 170	daytime
+E18	Modifier:T29 Modifies:T28
+T30	Procedure 204 207	NIV
+E19	Procedure:T30 Name:T31
+T31	Procedure-Name 204 207	NIV
+T32	Modifier 194 203	nocturnal
+E20	Modifier:T32 Modifies:T31
+T33	And 175 193	as an extension of
+E21	And:T33 Arg:E17 Arg2:E19
+T34	And 150 153	who
+E22	And:T34 Arg:E2 Arg2:E17
+T35	Modifier 259 266	daytime
+E23	Modifier:T35 Modifies:T21
+T36	Observation-Name 321 326	sleep
+T37	Observation 361 366	TcCO2
+E24	Observation:T37 Name:T38 Eq-Comparison:E25
+T38	Observation-Name 361 366	TcCO2
+T39	Eq-Comparison 366 373	>49mmHg
+E25	Eq-Comparison:T39 Operator:T40 Value:T41 Unit:T42
+T40	Eq-Operator 366 367	>
+A7	Eq-Operator-Value T40 GT
+T41	Eq-Value 367 369	49
+T42	Eq-Unit 369 373	mmHg
+R1	Equivalent-To Arg1:E24 Arg2:E8	
+T43	Modifier 397 411	uncontrollable
+E26	Modifier:T43 Modifies:T23
+T44	Procedure-Name 428 431	MPV
+R2	Caused-By Arg1:E11 Arg2:E12	

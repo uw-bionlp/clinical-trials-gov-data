@@ -1,124 +1,124 @@
-T1	Or 29 31	or
 E1	Or:T1 Arg:T33 Arg2:T34
-T2	Eq-Comparison 38 62	18 years of age or older
 E2	Eq-Comparison:T2 Value:T35 Temporal-Unit:T36 Operator:T37
-T3	Negation 98 101	not
 E3	Negation:T3 Negates:E4
-T4	Assertion 102 112	willing to
 E4	Assertion:T4 Asserted:E6
-A1	Assertion-Type-Value E4 hypothetical
-T5	Negation 126 132	unable
 E5	Negation:T5 Negates:E6
-T6	Procedure 140 144	CPAP
 E6	Procedure:T6 Name:T38
-T7	Procedure 149 158	treatment
-E7	Procedure:T7 
-T8	Condition 162 165	OSA
+E7	Procedure:T7
 E8	Condition:T8 Name:T39
-T9	Other 184 189	other
 E9	Other:T9 Is-Other:E10
-T10	Condition 190 205	sleep disorders
 E10	Condition:T10 Name:T40
-T11	Condition 211 219	Pregnant
 E11	Condition:T11 Name:T41
-T12	Or 220 222	or
 E12	Or:T12 Arg:E11 Arg2:E13
-T13	Condition 223 236	breastfeeding
 E13	Condition:T13 Name:T42
-T14	Condition 257 274	child-bearing age
 E14	Condition:T14 Name:T45
-T15	Condition 276 281	WOCBA
 E15	Condition:T15 Name:T46
-T16	Negation 283 286	not
 E16	Negation:T16 Negates:E17
-T17	Assertion 287 294	willing
 E17	Assertion:T17 Asserted:E37
-A2	Assertion-Type-Value E17 hypothetical
-T18	Or 295 297	or
 E18	Or:T18 Arg:E17 Arg2:E19
-T19	Negation 298 304	unable
 E19	Negation:T19 Negates:E37
-T20	Negation 334 339	avoid
 E20	Negation:T20 Negates:E21
-T21	Condition 340 349	pregnancy
 E21	Condition:T21 Name:T47
-T22	Study 381 386	study
-E22	Study:T22 
-T23	Observation 392 401	Prisoners
+E22	Study:T22
 E23	Observation:T23 Name:T48
-T25	Or 491 493	or
 E25	Or:T25 Arg:E24 Arg2:E26
-T26	Procedure 494 503	treatment
-E26	Procedure:T26 
-T27	Modifier 516 527	psychiatric
+E26	Procedure:T26
 E27	Modifier:T27 Modifies:T62
-T28	Or 528 530	or
 E28	Or:T28 Arg:E27 Arg2:E29
-T29	Modifier 531 539	physical
 E29	Modifier:T29 Modifies:T62
-T30	Condition 546 564	infectious disease
 E30	Condition:T30 Name:T50
-T32	Condition 624 640	language barrier
 E32	Condition:T32 Name:T63
+E31	Age:T31 Eq-Comparison:E2
+E33	Or:T51 Arg:E4 Arg2:E5
+E34	Assertion:T52 Asserted:E5
+E35	And:T53 Arg:T44 Arg2:E14
+E36	Assertion:T54 Asserted:E19
+E37	Procedure:T55
+E38	Assertion:T56 Asserted:E20
+E39	Temporal-Connection:T57 Arg:E21 Arg2:E22
+E40	Observation:T58 Name:T49
+E41	Or:T59 Arg:E23 Arg2:E40
+E24	Observation:T24 Name:T60
+E42	Condition:T61 Name:T62
+T1	Or 29 31	or
+T2	Eq-Comparison 38 62	18 years of age or older
+T3	Negation 98 101	not
+T4	Assertion 102 112	willing to
+T5	Negation 126 132	unable
+T6	Procedure 140 144	CPAP
+T7	Procedure 149 158	treatment
+T8	Condition 162 165	OSA
+T9	Other 184 189	other
+T10	Condition 190 205	sleep disorders
+T11	Condition 211 219	Pregnant
+T12	Or 220 222	or
+T13	Condition 223 236	breastfeeding
+T14	Condition 257 274	child-bearing age
+T15	Condition 276 281	WOCBA
+T16	Negation 283 286	not
+T17	Assertion 287 294	willing
+T18	Or 295 297	or
+T19	Negation 298 304	unable
+T20	Negation 334 339	avoid
+T21	Condition 340 349	pregnancy
+T22	Study 381 386	study
+T23	Observation 392 401	Prisoners
+T25	Or 491 493	or
+T26	Procedure 494 503	treatment
+T27	Modifier 516 527	psychiatric
+T28	Or 528 530	or
+T29	Modifier 531 539	physical
+T30	Condition 546 564	infectious disease
+T32	Condition 624 640	language barrier
 T33	Life-Stage-And-Gender 25 28	Men
-A3	Life-Stage-And-Gender-Type T33 male
 T34	Life-Stage-And-Gender 32 37	women
-A4	Life-Stage-And-Gender-Type T34 female
 T35	Eq-Value 38 40	18
 T36	Eq-Temporal-Unit 41 46	years
-A5	Eq-Temporal-Unit-Value T36 year
 T37	Eq-Operator 54 62	or older
-A6	Eq-Operator-Value T37 GTEQ
 T38	Procedure-Name 140 144	CPAP
 T39	Condition-Name 162 165	OSA
 T40	Condition-Name 190 205	sleep disorders
 T41	Condition-Name 211 219	Pregnant
 T42	Condition-Name 223 236	breastfeeding
 T43	Life-Stage-And-Gender 237 242	women
-A7	Life-Stage-And-Gender-Type T43 female
 T44	Life-Stage-And-Gender 248 253	Women
-A8	Life-Stage-And-Gender-Type T44 female
 T46	Condition-Name 276 281	WOCBA
 T47	Condition-Name 340 349	pregnancy
 T48	Observation-Name 392 401	Prisoners
 T49	Observation-Name 422 448	involuntarily incarcerated
 T50	Condition-Name 546 564	infectious disease
 T31	Age 50 53	age
-E31	Age:T31 Eq-Comparison:E2
 T51	Or 113 115	or
-E33	Or:T51 Arg:E4 Arg2:E5
 T52	Assertion 126 132	unable
-E34	Assertion:T52 Asserted:E5
-A10	Assertion-Type-Value E34 hypothetical
-R1	Using Arg1:E7 Arg2:E6	
-R2	Treatment-For Arg1:E7 Arg2:E8	
-R3	If-Then Arg1:T43 Arg2:E13	
 T53	And 254 256	of
-E35	And:T53 Arg:T44 Arg2:E14
 T45	Condition-Name 257 274	child-bearing age
-R4	Abbrev-Of Arg1:E15 Arg2:E14	
 T54	Assertion 298 304	unable
-E36	Assertion:T54 Asserted:E19
-A9	Assertion-Type-Value E36 hypothetical
 T55	Procedure 324 330	method
-E37	Procedure:T55 
 T56	Assertion 334 339	avoid
-E38	Assertion:T56 Asserted:E20
-A11	Assertion-Type-Value E38 hypothetical
-R5	Caused-By Arg1:E20 Arg2:E37	
 T57	Temporal-Connection 350 373	for the entire duration
-E39	Temporal-Connection:T57 Arg:E21 Arg2:E22
-A12	Temporal-Connection-Type-Value E39 during
 T58	Observation 422 448	involuntarily incarcerated
-E40	Observation:T58 Name:T49
 T59	Or 402 404	or
-E41	Or:T59 Arg:E23 Arg2:E40
 T24	Observation 471 490	compulsorily detain
-E24	Observation:T24 Name:T60
 T60	Observation-Name 471 490	compulsorily detain
 T61	Condition 566 573	illness
-E42	Condition:T61 Name:T62
 T62	Condition-Name 566 573	illness
-R6	Example-Of Arg1:E30 Arg2:E42	
-R7	Treatment-For Arg1:E26 Arg2:E42	
 T63	Condition-Name 624 640	language barrier
+A1	Assertion-Type-Value E4 hypothetical
+A2	Assertion-Type-Value E17 hypothetical
+A3	Life-Stage-And-Gender-Type T33 male
+A4	Life-Stage-And-Gender-Type T34 female
+A5	Eq-Temporal-Unit-Value T36 year
+A6	Eq-Operator-Value T37 GTEQ
+A7	Life-Stage-And-Gender-Type T43 female
+A8	Life-Stage-And-Gender-Type T44 female
+A10	Assertion-Type-Value E34 hypothetical
+A9	Assertion-Type-Value E36 hypothetical
+A11	Assertion-Type-Value E38 hypothetical
+A12	Temporal-Connection-Type-Value E39 during
+R1	Using Arg1:E7 Arg2:E6
+R2	Treatment-For Arg1:E7 Arg2:E8
+R3	If-Then Arg1:T43 Arg2:E13
+R4	Abbrev-Of Arg1:E15 Arg2:E14
+R5	Caused-By Arg1:E20 Arg2:E37
+R6	Example-Of Arg1:E30 Arg2:E42
+R7	Treatment-For Arg1:E26 Arg2:E42

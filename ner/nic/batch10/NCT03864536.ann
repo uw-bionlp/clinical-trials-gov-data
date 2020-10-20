@@ -1,57 +1,57 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Observation:T7 Name:T8 Eq-Comparison:E9
+E8	Age:T10 Eq-Comparison:E10
+E9	Eq-Comparison:T15 Operator:T9 Value:T14
+E10	Eq-Comparison:T16 Operator:T11 Value:T12 Value2:T13
+E2	Condition:T17 Name:T18
+E4	Condition:T19 Name:T20 Severity:T22
+E6	Modifier:T21 Modifies:T20
+E11	Modifier:T23 Modifies:T20
+E12	Negation:T24 Negates:E4
+E13	Or:T25 Arg:E3 Arg2:E1
+E14	Or:T26 Arg:E11 Arg2:E6
+E15	Condition:T27 Name:T28
+E16	Negation:T29 Negates:E15
+E17	Observation:T30 Name:T31
 T1	Condition 261 277	bipolar disorder
 T2	Condition-Name 261 277	bipolar disorder
-E1	Condition:T1 Name:T2
 T3	Condition 244 257	schizophrenia
 T4	Condition-Name 244 257	schizophrenia
-E3	Condition:T3 Name:T4
 T5	Condition 195 203	dementia
 T6	Condition-Name 195 203	dementia
-E5	Condition:T5 Name:T6
 T7	Observation 353 357	TICS
 T8	Observation-Name 353 357	TICS
-E7	Observation:T7 Name:T8 Eq-Comparison:E9
 T9	Eq-Operator 365 366	≤
-A1	Eq-Operator-Value T9 LTEQ
 T10	Age 55 58	age
-E8	Age:T10 Eq-Comparison:E10
 T11	Eq-Operator 62 64	to
-A2	Eq-Operator-Value T11 BETWEEN
 T12	Eq-Value 59 61	50
 T13	Eq-Value 65 67	65
 T14	Eq-Value 366 368	20
 T15	Eq-Comparison 365 368	≤20
-E9	Eq-Comparison:T15 Operator:T9 Value:T14
 T16	Eq-Comparison 59 67	50 to 65
-E10	Eq-Comparison:T16 Operator:T11 Value:T12 Value2:T13
 T17	Condition 140 150	ambulatory
-E2	Condition:T17 Name:T18
 T18	Condition-Name 140 150	ambulatory
 T19	Condition 279 288	disorders
-E4	Condition:T19 Name:T20 Severity:T22
 T20	Condition-Name 279 288	disorders
 T21	Modifier 225 236	psychiatric
-E6	Modifier:T21 Modifies:T20
 T22	Severity 218 224	severe
-A3	Severity-Value T22 severe
 T23	Modifier 171 183	neurological
-E11	Modifier:T23 Modifies:T20
 T24	Negation 168 170	No
-E12	Negation:T24 Negates:E4
-R1	Example-Of Arg1:E5 Arg2:E4	
-R2	Example-Of Arg1:E3 Arg2:E4	
-R3	Example-Of Arg1:E1 Arg2:E4	
 T25	Or 258 260	or
-E13	Or:T25 Arg:E3 Arg2:E1
 T26	Or 215 217	or
-E14	Or:T26 Arg:E11 Arg2:E6
 T27	Condition 297 305	insomnia
-E15	Condition:T27 Name:T28
 T28	Condition-Name 297 305	insomnia
 T29	Negation 294 296	No
-E16	Negation:T29 Negates:E15
 T30	Observation 311 351	Telephone Interview for Cognitive Status
-E17	Observation:T30 Name:T31
 T31	Observation-Name 311 351	Telephone Interview for Cognitive Status
-A4	Observation-Type-Value T31 clinical-score
-R4	Abbrev-Of Arg1:E7 Arg2:E17	
 T32	Ethnicity 25 41	African American
+A1	Eq-Operator-Value T9 LTEQ
+A2	Eq-Operator-Value T11 BETWEEN
+A3	Severity-Value T22 severe
+A4	Observation-Type-Value T31 clinical-score
+R1	Example-Of Arg1:E5 Arg2:E4
+R2	Example-Of Arg1:E3 Arg2:E4
+R3	Example-Of Arg1:E1 Arg2:E4
+R4	Abbrev-Of Arg1:E7 Arg2:E17

@@ -1,0 +1,187 @@
+T1	Condition 426 436	drug abuse
+T2	Condition-Name 426 436	drug abuse
+E1	Condition:T1 Name:T2 Temporality:E15
+T3	Language 76 83	English
+T4	Condition 591 604	brain disease
+T5	Condition-Name 591 604	brain disease
+E4	Condition:T4 Name:T5 Severity:T71
+T6	Condition 611 620	psychosis
+T7	Condition-Name 611 620	psychosis
+E6	Condition:T6 Name:T7
+T8	Condition 657 665	dementia
+T9	Condition-Name 657 665	dementia
+E8	Condition:T8 Name:T9
+T10	Condition 622 628	stroke
+T11	Condition-Name 622 628	stroke
+E10	Condition:T10 Name:T11
+T18	Eq-Operator 150 151	≥
+A1	Eq-Operator-Value T18 GTEQ
+T19	Eq-Operator 357 358	≥
+A2	Eq-Operator-Value T19 GTEQ
+T20	Eq-Operator 527 542	within the last
+A3	Eq-Operator-Value T20 LTEQ
+T21	Eq-Temporal-Unit 28 33	years
+A4	Eq-Temporal-Unit-Value T21 year
+T22	Eq-Temporal-Unit 545 551	months
+A5	Eq-Temporal-Unit-Value T22 month
+T23	Eq-Value 25 27	18
+T24	Eq-Value 152 153	5
+T27	Eq-Value 359 360	5
+T28	Eq-Value 543 544	3
+T30	Eq-Comparison 349 379	average ≥ 5 cigarettes per day
+E18	Eq-Comparison:T30 Operator:T19 Value:T27 Per:T35 Unit:T55
+R1	Example-Of Arg1:E6 Arg2:E4
+R2	Example-Of Arg1:E10 Arg2:E4
+R3	Example-Of Arg1:E8 Arg2:E4
+T31	Age 37 42	older
+E2	Age:T31 Eq-Comparison:E5
+T33	Eq-Comparison 25 42	18 years or older
+E5	Eq-Comparison:T33 Temporal-Unit:T21 Value:T23 Operator:T100
+T25	Observation 338 345	smoking
+E7	Observation:T25 Eq-Comparison:E18 Name:T26
+T35	Eq-Temporal-Unit 376 379	day
+A7	Eq-Temporal-Unit-Value T35 day
+T34	Eq-Comparison 319 336	at least one year
+E9	Eq-Comparison:T34 Operator:T36 Temporal-Unit:T38 Value:T37
+T36	Eq-Operator 319 327	at least
+A8	Eq-Operator-Value T36 GTEQ
+T37	Eq-Value 328 331	one
+T38	Eq-Temporal-Unit 332 336	year
+A9	Eq-Temporal-Unit-Value T38 year
+T41	Drug 440 451	depressants
+E13	Drug:T41 Name:T42
+T42	Drug-Name 440 451	depressants
+T43	Eq-Comparison 527 551	within the last 3 months
+E15	Eq-Comparison:T43 Temporal-Unit:T22 Operator:T20 Value:T28
+T44	Drug 453 477	dissociative anesthetics
+E19	Drug:T44 Name:T45
+T45	Drug-Name 453 477	dissociative anesthetics
+T46	Drug 479 492	hallucinogens
+E20	Drug:T46 Name:T47
+T47	Drug-Name 479 492	hallucinogens
+T48	Drug 494 501	opioids
+E21	Drug:T48 Name:T49
+T49	Drug-Name 494 501	opioids
+T50	Drug 503 510	cocaine
+E22	Drug:T50 Name:T51
+T51	Drug-Name 503 510	cocaine
+T52	Drug 515 526	amphetamine
+E23	Drug:T52 Name:T53
+T53	Drug-Name 515 526	amphetamine
+R4	Using Arg1:E1 Arg2:E13
+R5	Using Arg1:E1 Arg2:E19
+R6	Using Arg1:E1 Arg2:E19	
+R7	Using Arg1:E1 Arg2:E20	
+R8	Using Arg1:E1 Arg2:E21	
+R9	Using Arg1:E1 Arg2:E22	
+T55	Eq-Unit 361 371	cigarettes
+T40	Condition 308 314	smoker
+E25	Condition:T40 Name:T39 Duration:E9 Temporality:E43
+T39	Condition-Name 308 314	smoker
+T56	Condition 777 795	Hearing impairment
+E11	Condition:T56 Name:T57
+T57	Condition-Name 777 795	Hearing impairment
+T14	Condition 869 878	illnesses
+E14	Condition:T14 Severity:T93
+T13	Drug-Name 929 939	Wellbutrin
+T15	Drug 941 948	Chantix
+E16	Drug:T15 Name:T16
+T16	Drug-Name 941 948	Chantix
+T17	Drug 929 939	Wellbutrin
+E26	Drug:T17 Name:T13 Temporality:E38
+T12	Drug-Name 975 997	smoking cessation aids
+T58	Drug 975 997	smoking cessation aids
+E12	Drug:T58 Name:T12
+T61	Condition 99 111	quit smoking
+E29	Condition:T61 Name:T62
+T29	Eq-Comparison 150 163	≥ 5 out of 10
+E17	Eq-Comparison:T29 Operator:T64 Value:T24 Value2:T63
+T63	Eq-Value 161 163	10
+T64	Eq-Operator 154 160	out of
+A11	Eq-Operator-Value T64 BETWEEN
+T67	Encounter 746 771	inpatient hospitalization
+E31	Encounter:T67 Type:T68
+T68	Encounter-Type 746 771	inpatient hospitalization
+A13	Encounter-Type-Value T68 inpatient
+T69	Modifier 565 576	psychiatric
+E32	Modifier:T69 
+T70	Modifier 580 590	structural
+E33	Modifier:T70 Modifies:E4
+T73	Eq-Comparison 671 678	current
+E36	Eq-Comparison:T73 Temporal-Period:T74
+T74	Eq-Temporal-Period 671 678	current
+T75	Condition 686 698	risk to self
+E37	Condition:T75 Name:T76 Temporality:E48
+T76	Condition-Name 686 698	risk to self
+T77	Eq-Comparison 912 928	Currently taking
+E38	Eq-Comparison:T77 Temporal-Period:T78
+T78	Eq-Temporal-Period 912 928	Currently taking
+T60	Assertion 89 98	Desire to
+E28	Assertion:T60 Asserted:E29
+A14	Eq-Temporal-Period-Value T74 present
+A15	Eq-Temporal-Period-Value T78 present
+T32	Condition 634 655	functional impairment
+E3	Condition:T32 Name:T81
+T81	Condition-Name 634 655	functional impairment
+T54	Or 667 669	or
+E24	Or:T54 Arg2:E37 Arg:E4
+T59	Or 950 952	or
+E27	Or:T59 Arg:E16 Arg2:E12
+T71	Severity 558 564	Severe
+T72	Or 577 579	or
+E34	Or:T72 Arg:E32 Arg2:E33
+T82	And 629 633	with
+E35	And:T82 Arg:E10 Arg2:E3
+A17	Severity-Value T71 severe
+A16	Assertion-Type-Value E28 intention
+T79	Stability 879 888	impacting
+A18	Stability-Value T79 change
+T80	Assertion 879 888	impacting
+E39	Assertion:T80 Asserted:T79
+A19	Assertion-Type-Value E39 hypothetical
+T83	Study 893 898	study
+E40	Study:T83 Stability:T79
+R10	Caused-By Arg1:T79 Arg2:E14	
+T84	Study 1033 1038	study
+E41	Study:T84 Stability:T86
+T85	Assertion 1003 1008	could
+E42	Assertion:T85 Asserted:T86
+A20	Assertion-Type-Value E42 hypothetical
+T86	Stability 1009 1017	confound
+A21	Stability-Value T86 change
+R12	Caused-By Arg1:T86 Arg2:E12	
+T62	Condition-Name 99 111	quit smoking
+T66	Observation-Name 167 179	quit smoking
+T87	Eq-Comparison 302 307	daily
+E43	Eq-Comparison:T87 Per:T88
+T88	Eq-Temporal-Unit 302 307	daily
+A10	Eq-Temporal-Unit-Value T88 day
+T89	Study 845 857	intervention
+E44	Study:T89 Stability:T92
+T90	Modifier 836 844	auditory
+E45	Modifier:T90 Modifies:E44
+T91	Assertion 801 806	would
+E46	Assertion:T91 Asserted:T92
+A12	Assertion-Type-Value E46 hypothetical
+T93	Severity 863 868	Major
+A22	Severity-Value T93 severe
+T94	Eq-Comparison 679 685	recent
+E48	Eq-Comparison:T94 Temporal-Period:T95
+T95	Eq-Temporal-Period 679 685	recent
+A23	Eq-Temporal-Period-Value T95 recent
+T96	Or 678 679	/
+E49	Or:T96 Arg:E36 Arg2:E48
+T92	Stability 807 813	impede
+A25	Stability-Value T92 change
+R13	Caused-By Arg1:T92 Arg2:E11	
+T98	Modifier 136 146	motivation
+E50	Modifier:T98 Modifies:T66
+T100	Eq-Operator 34 42	or older
+A6	Eq-Operator-Value T100 GTEQ
+A24	Observation-Type-Value T66 survey-or-questionnaire
+T65	Observation 167 179	quit smoking
+E30	Observation:T65 Name:T66
+T97	Modifier 185 211	10-point Likert-type scale
+E47	Modifier:T97 Modifies:T66
+R11	Equivalent-To Arg1:E30 Arg2:E29	
+T26	Observation-Name 338 345	smoking

@@ -1,0 +1,98 @@
+T1	Condition 454 469	spatial neglect
+T2	Condition-Name 454 469	spatial neglect
+E1	Condition:T1 Name:T2
+T3	Condition 52 58	stroke
+T4	Condition-Name 52 58	stroke
+E3	Condition:T3 Name:T4 Temporality:E6
+T5	Condition 381 387	stroke
+T6	Condition-Name 381 387	stroke
+E5	Condition:T5 Name:T6
+T7	Eq-Operator 25 37	greater than
+A1	Eq-Operator-Value T7 GT
+T8	Eq-Temporal-Unit 40 46	months
+A2	Eq-Temporal-Unit-Value T8 month
+T9	Eq-Value 38 39	6
+T10	Eq-Value 85 87	90
+T11	Eq-Value 182 184	90
+T12	Eq-Value 521 522	2
+T13	Eq-Comparison 25 46	greater than 6 months
+E6	Eq-Comparison:T13 Operator:T7 Temporal-Unit:T8 Value:T9
+T16	Observation-Name 64 81	passive abduction
+T17	Condition 135 142	flexion
+E4	Condition:T17 Name:T18 Polarity:T19 Temporality:E7
+T18	Condition-Name 135 142	flexion
+T22	Eq-Comparison 182 192	90 degrees
+E10	Eq-Comparison:T22 Value:T11 Unit:T23
+T23	Eq-Unit 185 192	degrees
+T24	Condition 213 220	flexion
+E11	Condition:T24 Name:T25 Polarity:T27 Temporality:E12
+T25	Condition-Name 213 220	flexion
+T26	Eq-Comparison 206 212	active
+E12	Eq-Comparison:T26 Temporal-Period:T49
+T28	Condition 359 368	condition
+E14	Condition:T28 
+T29	Exception 370 380	other than
+E15	Exception:T29 From:E14 Except:E5
+T31	Modifier 443 453	unilateral
+E17	Modifier:T31 Modifies:E1
+T33	Condition 485 488	sit
+E19	Condition:T33 Name:T34 Duration:E21
+T34	Condition-Name 485 488	sit
+T35	Modifier 489 499	in a chair
+E20	Modifier:T35 Modifies:E19
+T36	Eq-Comparison 521 528	2 hours
+E21	Eq-Comparison:T36 Temporal-Unit:T37 Value:T12
+T37	Eq-Temporal-Unit 523 528	hours
+A5	Eq-Temporal-Unit-Value T37 hour
+T14	Temporal-Connection 47 51	post
+E22	Temporal-Connection:T14 Arg:E3
+A3	Temporal-Connection-Type-Value E22 after
+T38	Eq-Comparison 85 95	90 degrees
+E23	Eq-Comparison:T38 Value:T10 Unit:T39
+T39	Eq-Unit 88 95	degrees
+T40	Modifier 99 107	shoulder
+E24	Modifier:T40 Modifies:T16
+T41	Observation 64 81	passive abduction
+E25	Observation:T41 Eq-Comparison:E23 Name:T16
+T19	Polarity 113 120	reduced
+A6	Polarity-Value T19 low
+T20	Eq-Comparison 121 127	active
+E7	Eq-Comparison:T20 Temporal-Period:T42
+T42	Eq-Temporal-Period 121 127	active
+A7	Eq-Temporal-Period-Value T42 present
+T43	Modifier 129 134	retro
+E8	Modifier:T43 Modifies:T18
+T44	Condition 143 152	extension
+E26	Condition:T44 Name:T45
+T45	Condition-Name 143 152	extension
+T46	Or 142 143	/
+E27	Or:T46 Arg:E4 Arg2:E26
+T21	Modifier 156 164	shoulder
+E9	Modifier:T21 Modifies:T45
+T47	Observation 170 178	abducted
+E28	Observation:T47 Name:T48 Eq-Comparison:E10
+T48	Observation-Name 170 178	abducted
+R1	If-Then Arg1:E28 Arg2:E26	
+T49	Eq-Temporal-Period 206 212	active
+A8	Eq-Temporal-Period-Value T49 present
+T27	Polarity 198 205	reduced
+A9	Polarity-Value T27 low
+T50	Condition 221 230	extension
+E13	Condition:T50 Name:T51
+T51	Condition-Name 221 230	extension
+T52	Or 220 221	/
+E29	Or:T52 Arg:E11 Arg2:E13
+T53	Modifier 234 239	elbow
+E30	Modifier:T53 Modifies:T51
+T30	Condition 399 420	sensorimotor function
+E16	Condition:T30 Name:T54 Stability:T55
+T54	Condition-Name 399 420	sensorimotor function
+T55	Stability 389 398	affecting
+A10	Stability-Value T55 change
+R2	Caused-By Arg1:T55 Arg2:E14	
+T32	Modifier 508 516	armrests
+E18	Modifier:T32 
+T56	Negation 500 507	without
+E31	Negation:T56 Negates:E18
+T57	Negation 475 481	unable
+E32	Negation:T57 Negates:E19

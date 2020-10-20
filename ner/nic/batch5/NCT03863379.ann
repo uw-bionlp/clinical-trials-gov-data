@@ -1,53 +1,54 @@
-T1	Condition 38 44	stroke
 E1	Condition:T1 Name:T30
-T2	Or 45 46	/
 E2	Or:T2 Arg:E1 Arg2:E4
-T4	Condition 47 70	cerebrovascular disease
 E4	Condition:T4 Name:T31
-T6	Condition 76 98	traumatic brain injury
 E6	Condition:T6 Name:T32
-T7	Condition 104 122	multiple sclerosis
 E7	Condition:T7 Name:T33
-T8	Modifier 128 139	spinal cord
 E8	Modifier:T8 Modifies:T34
-T9	Condition 140 148	injuries
 E9	Condition:T9 Name:T34
-T10	Modifier 160 171	spinal cord
 E10	Modifier:T10 Modifies:T35
-T11	Condition 172 179	lesions
 E11	Condition:T11 Name:T35
-T12	Condition 185 197	myelopathies
 E12	Condition:T12 Name:T3
-T13	Condition 242 267	heterotopic ossifications
 E13	Condition:T13 Name:T36
-T14	Modifier 274 281	chronic
-E14	Modifier:T14 Modifies:E15
-T15	Drug 300 305	drugs
-E15	Drug:T15 
-T17	Modifier 339 346	chronic
-E17	Modifier:T17 Modifies:E18
-T18	Drug 365 370	drugs
-E18	Drug:T18 
-T19	Modifier 386 390	bone
+E15	Drug:T15 Acuteness:T14
+E18	Drug:T18 Acuteness:T17
 E19	Modifier:T19 Modifies:T38
-T20	Or 391 393	or
 E20	Or:T20 Arg:E19 Arg2:E21
-T21	Modifier 394 400	muscle
 E21	Modifier:T21 Modifies:T38
-T22	Condition 401 405	loss
 E22	Condition:T22 Name:T38 Stability:T45
-T24	Other 423 428	other
 E24	Other:T24 Is-Other:E25
-T25	Condition 429 437	diseases
 E25	Condition:T25 Name:T40
-T26	Condition 447 463	endocrinopathies
 E26	Condition:T26 Name:T41
-T27	Condition 465 485	muscular dystrophies
 E27	Condition:T27 Name:T42
-T28	Negation 487 490	non
 E28	Negation:T28 Negates:E16
-T29	Condition 501 520	fatty liver disease
 E29	Condition:T29 Name:T43
+E3	Condition:T16 Name:T44 Polarity:T37 Stability:T5
+E5	Modifier:T23
+E16	Modifier:T39 Modifies:T43
+T1	Condition 38 44	stroke
+T2	Or 45 46	/
+T4	Condition 47 70	cerebrovascular disease
+T6	Condition 76 98	traumatic brain injury
+T7	Condition 104 122	multiple sclerosis
+T8	Modifier 128 139	spinal cord
+T9	Condition 140 148	injuries
+T10	Modifier 160 171	spinal cord
+T11	Condition 172 179	lesions
+T12	Condition 185 197	myelopathies
+T13	Condition 242 267	heterotopic ossifications
+T14	Acuteness 274 281	chronic
+T15	Drug 300 305	drugs
+T17	Acuteness 339 346	chronic
+T18	Drug 365 370	drugs
+T19	Modifier 386 390	bone
+T20	Or 391 393	or
+T21	Modifier 394 400	muscle
+T22	Condition 401 405	loss
+T24	Other 423 428	other
+T25	Condition 429 437	diseases
+T26	Condition 447 463	endocrinopathies
+T27	Condition 465 485	muscular dystrophies
+T28	Negation 487 490	non
+T29	Condition 501 520	fatty liver disease
 T30	Condition-Name 38 44	stroke
 T31	Condition-Name 47 70	cerebrovascular disease
 T32	Condition-Name 76 98	traumatic brain injury
@@ -56,29 +57,28 @@ T34	Condition-Name 140 148	injuries
 T35	Condition-Name 172 179	lesions
 T36	Condition-Name 242 267	heterotopic ossifications
 T37	Polarity 325 333	increase
-A1	Polarity-Value T37 high
 T38	Condition-Name 401 405	loss
 T40	Condition-Name 429 437	diseases
 T41	Condition-Name 447 463	endocrinopathies
 T42	Condition-Name 465 485	muscular dystrophies
 T43	Condition-Name 501 520	fatty liver disease
 T3	Condition-Name 185 197	myelopathies
-R1	Example-Of Arg1:E12 Arg2:E11	
-R2	Example-Of Arg1:E11 Arg2:E9	
 T5	Stability 313 320	promote
-A3	Stability-Value T5 change
 T16	Condition 321 324	fat
-E3	Condition:T16 Name:T44 Polarity:T37 Stability:T5
 T44	Condition-Name 321 324	fat
-R3	Caused-By Arg1:T5 Arg2:E15	
 T45	Stability 378 385	promote
-A4	Stability-Value T45 change
-R4	Caused-By Arg1:T45 Arg2:E18	
 T23	Modifier 411 422	co-existing
-E5	Modifier:T23 
-R5	Abbrev-Of Arg1:E5 Arg2:E25	
-R6	Example-Of Arg1:E26 Arg2:E25	
-R7	Example-Of Arg1:E27 Arg2:E25	
 T39	Modifier 491 500	alcoholic
-E16	Modifier:T39 Modifies:T43
-R8	Example-Of Arg1:E29 Arg2:E25	
+A1	Polarity-Value T37 high
+A3	Stability-Value T5 change
+A4	Stability-Value T45 change
+A5	Acuteness-Type-Value T14 chronic
+A6	Acuteness-Type-Value T17 chronic
+R1	Example-Of Arg1:E12 Arg2:E11
+R2	Example-Of Arg1:E11 Arg2:E9
+R3	Caused-By Arg1:T5 Arg2:E15
+R4	Caused-By Arg1:T45 Arg2:E18
+R5	Abbrev-Of Arg1:E5 Arg2:E25
+R6	Example-Of Arg1:E26 Arg2:E25
+R7	Example-Of Arg1:E27 Arg2:E25
+R8	Example-Of Arg1:E29 Arg2:E25

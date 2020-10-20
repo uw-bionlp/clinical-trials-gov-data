@@ -1,0 +1,87 @@
+T3	Procedure 101 119	orthopedic surgery
+T4	Procedure-Name 101 119	orthopedic surgery
+E3	Procedure:T3 Name:T4
+T5	Procedure 79 96	spinal anesthesia
+T6	Procedure-Name 79 96	spinal anesthesia
+E5	Procedure:T5 Name:T6
+T7	Procedure 243 260	spinal anesthesia
+T8	Procedure-Name 243 260	spinal anesthesia
+E7	Procedure:T7 Name:T8
+T9	Condition 262 274	coagulopathy
+T10	Condition-Name 262 274	coagulopathy
+E9	Condition:T9 Name:T10
+T12	Eq-Temporal-Unit 54 59	years
+A1	Eq-Temporal-Unit-Value T12 year
+T13	Age 63 66	age
+E10	Age:T13 Eq-Comparison:E4 Eq-Comparison2:E2
+T14	Eq-Value 40 42	40
+T15	Eq-Value 51 53	60
+T16	Eq-Comparison 470 477	history
+E11	Eq-Comparison:T16 Temporal-Period:T17
+T17	Eq-Temporal-Period 470 477	history
+A2	Eq-Temporal-Period-Value T17 past
+T18	Eq-Comparison 34 42	under 40
+E2	Eq-Comparison:T18 Operator:T19 Value:T14
+T19	Eq-Operator 34 39	under
+A3	Eq-Operator-Value T19 LT
+T20	Eq-Comparison 46 59	over 60 years
+E4	Eq-Comparison:T20 Operator:T21 Value:T15 Temporal-Unit:T12
+T21	Eq-Operator 46 50	over
+A4	Eq-Operator-Value T21 GT
+T22	Or 43 45	or
+E6	Or:T22 Arg:E2 Arg2:E4
+R1	Using Arg1:E3 Arg2:E5	
+T23	Assertion 71 78	require
+E8	Assertion:T23 Asserted:E5
+A5	Assertion-Type-Value E8 hypothetical
+T24	And 67 70	who
+E12	And:T24 Arg:E10 Arg2:E8
+T25	Condition 131 134	ASA
+E13	Condition:T25 Name:T26 Stage:E14
+T26	Condition-Name 131 134	ASA
+T11	Eq-Comparison 173 183	I, II, III
+E14	Eq-Comparison:T11 Value:T27 Value2:T28 Value3:T29
+T27	Eq-Value 173 174	I
+T28	Eq-Value 176 178	II
+T29	Eq-Value 180 183	III
+T30	Contraindication 223 239	contraindication
+E15	Contraindication:T30 Contraindicates:E7
+R2	Example-Of Arg1:E9 Arg2:E15	
+T31	Condition 282 291	infection
+E16	Condition:T31 Name:T32
+T32	Condition-Name 282 291	infection
+T33	Modifier 276 281	local
+E17	Modifier:T33 Modifies:T32
+R3	Example-Of Arg1:E16 Arg2:E15	
+T1	Procedure 304 320	local anesthetic
+E1	Procedure:T1 Name:T2
+T2	Procedure-Name 304 320	local anesthetic
+T34	Allergy 293 300	allergy
+E18	Allergy:T34 Name:E1
+R4	Example-Of Arg1:E18 Arg2:E15	
+T35	Condition 341 367	communication difficulties
+E19	Condition:T35 Name:T36
+T36	Condition-Name 341 367	communication difficulties
+T37	Condition 429 437	position
+E20	Condition:T37 Name:T38
+T38	Condition-Name 429 437	position
+T39	Modifier 411 428	lateral decubitus
+E21	Modifier:T39 Modifies:T38
+T40	Modifier 400 407	sitting
+E22	Modifier:T40 Modifies:T38
+T41	Or 408 410	or
+E23	Or:T41 Arg:E22 Arg2:E21
+T42	Condition 439 447	fracture
+E24	Condition:T42 Name:T43
+T43	Condition-Name 439 447	fracture
+T44	Negation 389 392	not
+E25	Negation:T44 Negates:E20
+R5	Caused-By Arg1:E25 Arg2:E24	
+T45	Procedure 481 495	spinal surgery
+E26	Procedure:T45 Name:T46 Temporality:E11
+T46	Procedure-Name 481 495	spinal surgery
+T47	Condition 514 536	anatomical abnormality
+E27	Condition:T47 Name:T48
+T48	Condition-Name 514 536	anatomical abnormality
+T49	Modifier 544 549	spine
+E28	Modifier:T49 Modifies:T48

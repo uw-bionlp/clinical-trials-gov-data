@@ -1,31 +1,46 @@
+E4	Observation:T4 Name:T5 Eq-Comparison:E11
+E7	Observation:T7 Name:T8 Eq-Comparison:E12
+E8	Age:T15 Eq-Comparison:E1
+E9	Age:T16 Eq-Comparison:E14
+E11	Eq-Comparison:T27 Operator:T9 Value:T23 Per:T41 Unit:T13
+E12	Eq-Comparison:T28 Operator:T10 Value:T26 Unit:T14
+E13	Eq-Comparison:T29 Operator:T18 Value:T22 Value2:T21
+E14	Eq-Comparison:T30 Operator:T19 Value:T24 Value2:T25 Temporal-Unit:T12
+E1	Eq-Comparison:T31 Value:T20 Temporal-Unit:T11 Operator:T32
+E2	Negation:T35 Negates:T34
+E3	Observation:T36 Name:T37
+E5	Negation:T38 Negates:E3
+E6	Observation:T39 Name:T40 Eq-Comparison:E13
+E15	Family-Member:T2
+E16	Family-Member:T3
+E17	Study:T42
+E10	Modifier:T17 Modifies:E12
+E18	Family-Member:T44
+E19	Family-Member:T43
+E20	Condition:T45 Name:T46
+E21	Condition:T47 Name:T48
+E22	Condition:T49 Name:T50
+E23	Family-Member:T51 Has:E22
+E24	Observation:T52 Name:T53
+E25	Negation:T54 Negates:E24
+E26	Condition:T55 Name:T56
+E27	Family-Member:T57
 T1	Language 284 291	Spanish
 T4	Observation 299 302	BMI
 T5	Observation-Name 299 302	BMI
-E4	Observation:T4 Name:T5 Eq-Comparison:E11
-A3	Observation-Type-Value T5 vital
 T6	Language 514 521	Spanish
 T7	Observation 529 532	BMI
 T8	Observation-Name 529 532	BMI
-E7	Observation:T7 Name:T8 Eq-Comparison:E12
-A4	Observation-Type-Value T8 vital
 T9	Eq-Operator 303 304	>
-A5	Eq-Operator-Value T9 GT
 T10	Eq-Operator 533 534	>
-A6	Eq-Operator-Value T10 GT
 T11	Eq-Temporal-Unit 52 57	years
-A7	Eq-Temporal-Unit-Value T11 year
 T12	Eq-Temporal-Unit 474 479	years
-A8	Eq-Temporal-Unit-Value T12 year
 T13	Eq-Unit 306 308	kg
 T14	Eq-Unit 540 550	percentile
 T15	Age 45 48	age
-E8	Age:T15 Eq-Comparison:E1
 T16	Age 466 469	age
-E9	Age:T16 Eq-Comparison:E14
 T18	Eq-Operator 242 244	to
-A9	Eq-Operator-Value T18 BETWEEN
 T19	Eq-Operator 471 472	-
-A10	Eq-Operator-Value T19 BETWEEN
 T20	Eq-Value 49 51	18
 T21	Eq-Value 237 241	1.00
 T22	Eq-Value 245 249	2.99
@@ -34,69 +49,54 @@ T24	Eq-Value 470 471	3
 T25	Eq-Value 472 473	5
 T26	Eq-Value 535 539	25th
 T27	Eq-Comparison 303 311	>25kg/m²
-E11	Eq-Comparison:T27 Operator:T9 Value:T23 Per:T41 Unit:T13
 T28	Eq-Comparison 533 550	> 25th percentile
-E12	Eq-Comparison:T28 Operator:T10 Value:T26 Unit:T14
 T29	Eq-Comparison 237 249	1.00 to 2.99
-E13	Eq-Comparison:T29 Operator:T18 Value:T22 Value2:T21
 T30	Eq-Comparison 470 479	3-5 years
-E14	Eq-Comparison:T30 Operator:T19 Value:T24 Value2:T25 Temporal-Unit:T12
 T31	Eq-Comparison 49 66	18 years or older
-E1	Eq-Comparison:T31 Value:T20 Temporal-Unit:T11 Operator:T32
 T32	Eq-Operator 58 66	or older
-A11	Eq-Operator-Value T32 GTEQ
 T33	Ethnicity 95 103	Hispanic
 T34	Language 117 124	English
 T35	Negation 109 116	limited
-E2	Negation:T35 Negates:T34
 T36	Observation 145 158	acculturation
-E3	Observation:T36 Name:T37
 T37	Observation-Name 145 158	acculturation
 T38	Negation 138 144	little
-E5	Negation:T38 Negates:E3
 T39	Observation 179 218	Short Acculturation Scale for Hispanics
-E6	Observation:T39 Name:T40 Eq-Comparison:E13
 T40	Observation-Name 179 218	Short Acculturation Scale for Hispanics
-A12	Observation-Type-Value T40 clinical-score
-R1	Equivalent-To Arg1:E6 Arg2:E3	
-R2	Equivalent-To Arg1:E6 Arg2:T34	
 T41	Eq-Unit 309 311	m²
 T2	Family-Member 332 341	the child
-E15	Family-Member:T2 
-A1	Family-Member-Type E15 child
 T3	Family-Member 389 400	their child
-E16	Family-Member:T3 
-A2	Family-Member-Type E16 child
 T42	Study 413 418	study
-E17	Study:T42 
 T17	Modifier 555 569	age and gender
-E10	Modifier:T17 Modifies:E12
 T44	Family-Member 593 600	mothers
-E18	Family-Member:T44 
-A14	Family-Member-Type E18 mother
 T43	Family-Member 443 451	children
-E19	Family-Member:T43 
-A13	Family-Member-Type E19 child
 T45	Condition 615 627	heart murmur
-E20	Condition:T45 Name:T46
 T46	Condition-Name 615 627	heart murmur
 T47	Condition 633 657	congenital heart disease
-E21	Condition:T47 Name:T48
 T48	Condition-Name 633 657	congenital heart disease
 T49	Condition 681 693	sudden death
-E22	Condition:T49 Name:T50
 T50	Condition-Name 681 693	sudden death
 T51	Family-Member 663 677	family history
-E23	Family-Member:T51 Has:E22
 T52	Observation 710 720	exercising
-E24	Observation:T52 Name:T53
 T53	Observation-Name 710 720	exercising
-A15	Observation-Type-Value T53 social-habit
 T54	Negation 699 709	difficulty
-E25	Negation:T54 Negates:E24
 T55	Condition 726 748	psychological problems
-E26	Condition:T55 Name:T56
 T56	Condition-Name 726 748	psychological problems
 T57	Family-Member 23 30	mothers
-E27	Family-Member:T57 
+A3	Observation-Type-Value T5 vital
+A4	Observation-Type-Value T8 vital
+A5	Eq-Operator-Value T9 GT
+A6	Eq-Operator-Value T10 GT
+A7	Eq-Temporal-Unit-Value T11 year
+A8	Eq-Temporal-Unit-Value T12 year
+A9	Eq-Operator-Value T18 BETWEEN
+A10	Eq-Operator-Value T19 BETWEEN
+A11	Eq-Operator-Value T32 GTEQ
+A12	Observation-Type-Value T40 clinical-score
+A1	Family-Member-Type E15 child
+A2	Family-Member-Type E16 child
+A14	Family-Member-Type E18 mother
+A13	Family-Member-Type E19 child
+A15	Observation-Type-Value T53 social-habit
 A16	Family-Member-Type E27 mother
+R1	Equivalent-To Arg1:E6 Arg2:E3
+R2	Equivalent-To Arg1:E6 Arg2:T34

@@ -1,87 +1,83 @@
-T1	Condition 59 68	gonorrhea
 E1	Condition:T1 Name:T35
-T2	Or 69 71	or
 E2	Or:T2 Arg:E1 Arg2:E4
-T3	Modifier 72 82	gonococcal
 E3	Modifier:T3 Modifies:T36
-T4	Condition 83 93	urethritis
 E4	Condition:T4 Name:T36
-T5	And 94 97	who
 E5	And:T5 Arg:E4 Arg2:E7
-T6	Eq-Comparison 102 112	undergoing
 E6	Eq-Comparison:T6 Temporal-Period:T37
-T7	Procedure 113 141	pharyngeal gonorrhea testing
 E7	Procedure:T7 Name:T38 Temporality:E6
-T8	And 143 146	who
 E8	And:T8 Arg:E7 Arg2:E9
-T9	Negation 151 154	not
 E9	Negation:T9 Negates:E10
-T10	Procedure 159 166	treated
-E10	Procedure:T10 
-T11	Age 193 196	Age
+E10	Procedure:T10
 E11	Age:T11 Eq-Comparison:E12
-T12	Eq-Comparison 197 215	less than 16 years
 E12	Eq-Comparison:T12 Operator:T39 Value:T40 Temporal-Unit:T41
-T13	Drug 232 243	antibiotics
 E13	Drug:T13 Name:T42 Temporality:E14
-T14	Eq-Comparison 247 255	≤30 days
 E14	Eq-Comparison:T14 Operator:T43 Temporal-Unit:T44 Value:T64
-T15	Allergy 267 274	allergy
 E15	Allergy:T15 Name:E16
-T16	Drug 278 287	aztreonam
 E16	Drug:T16 Name:T45
-T17	Eq-Comparison 293 300	History
 E17	Eq-Comparison:T17 Temporal-Period:T46
-T18	Condition 304 317	renal disease
 E18	Condition:T18 Name:T47 Temporality:E17
-T19	Condition 342 357	solitary kidney
 E19	Condition:T19 Name:T48
-T20	Modifier 359 366	chronic
-E20	Modifier:T20 Modifies:T49
-T21	Condition 367 386	renal insufficiency
-E21	Condition:T21 Name:T49
-T22	Condition 388 408	renal cell carcinoma
+E21	Condition:T21 Name:T49 Acuteness:T20
 E22	Condition:T22 Name:T50
-T24	Condition 431 440	infection
 E24	Condition:T24 Name:T52
-T25	Condition 446 454	syphilis
 E25	Condition:T25 Name:T53
-T26	Or 455 457	or
 E26	Or:T26 Arg:E25 Arg2:E27
-T27	Condition 458 467	chlamydia
 E27	Condition:T27 Name:T54
-T28	Condition 473 482	Pregnancy
 E28	Condition:T28 Name:T55
-T29	Or 483 489	and/or
 E29	Or:T29 Arg:E28 Arg2:E30
-T30	Condition 490 497	nursing
 E30	Condition:T30 Name:T56
-T31	Negation 503 509	Unable
 E31	Negation:T31 Negates:E32
-T32	Encounter 526 541	follow-up visit
 E32	Encounter:T32 Minimum-Count:E33 Minimum-Count2:E34
-T33	Eq-Comparison 542 550	4-7 days
 E33	Eq-Comparison:T33 Value:T57 Operator:T58 Value:T59 Temporal-Unit:T60
-T34	Eq-Comparison 552 561	+/- 1 day
 E34	Eq-Comparison:T34 Value:T61 Temporal-Unit:T62 Operator:T65
+E35	Modifier:T63 Modifies:T35
+E23	Modifier:T23 Modifies:T52
+E36	Assertion:T51 Asserted:E31
+T1	Condition 59 68	gonorrhea
+T2	Or 69 71	or
+T3	Modifier 72 82	gonococcal
+T4	Condition 83 93	urethritis
+T5	And 94 97	who
+T6	Eq-Comparison 102 112	undergoing
+T7	Procedure 113 141	pharyngeal gonorrhea testing
+T8	And 143 146	who
+T9	Negation 151 154	not
+T10	Procedure 159 166	treated
+T11	Age 193 196	Age
+T12	Eq-Comparison 197 215	less than 16 years
+T13	Drug 232 243	antibiotics
+T14	Eq-Comparison 247 255	≤30 days
+T15	Allergy 267 274	allergy
+T16	Drug 278 287	aztreonam
+T17	Eq-Comparison 293 300	History
+T18	Condition 304 317	renal disease
+T19	Condition 342 357	solitary kidney
+T20	Acuteness 359 366	chronic
+T21	Condition 367 386	renal insufficiency
+T22	Condition 388 408	renal cell carcinoma
+T24	Condition 431 440	infection
+T25	Condition 446 454	syphilis
+T26	Or 455 457	or
+T27	Condition 458 467	chlamydia
+T28	Condition 473 482	Pregnancy
+T29	Or 483 489	and/or
+T30	Condition 490 497	nursing
+T31	Negation 503 509	Unable
+T32	Encounter 526 541	follow-up visit
+T33	Eq-Comparison 542 550	4-7 days
+T34	Eq-Comparison 552 561	+/- 1 day
 T35	Condition-Name 59 68	gonorrhea
 T36	Condition-Name 83 93	urethritis
 T37	Eq-Temporal-Period 102 112	undergoing
-A1	Eq-Temporal-Period-Value T37 present
 T38	Procedure-Name 113 141	pharyngeal gonorrhea testing
 T39	Eq-Operator 197 206	less than
-A2	Eq-Operator-Value T39 LT
 T40	Eq-Value 207 209	16
 T41	Eq-Temporal-Unit 210 215	years
-A3	Eq-Temporal-Unit-Value T41 year
 T42	Drug-Name 232 243	antibiotics
 T43	Eq-Operator 247 248	≤
-A4	Eq-Operator-Value T43 LTEQ
 T44	Eq-Temporal-Unit 251 255	days
-A5	Eq-Temporal-Unit-Value T44 day
 T45	Drug-Name 278 287	aztreonam
 T46	Eq-Temporal-Period 293 300	History
-A6	Eq-Temporal-Period-Value T46 past
 T47	Condition-Name 304 317	renal disease
 T48	Condition-Name 342 357	solitary kidney
 T49	Condition-Name 367 386	renal insufficiency
@@ -93,27 +89,31 @@ T55	Condition-Name 473 482	Pregnancy
 T56	Condition-Name 490 497	nursing
 T57	Eq-Value 542 543	4
 T58	Eq-Operator 543 544	-
-A8	Eq-Operator-Value T58 BETWEEN
 T59	Eq-Value 544 545	7
 T60	Eq-Temporal-Unit 546 550	days
-A9	Eq-Temporal-Unit-Value T60 day
 T61	Eq-Value 556 557	1
 T62	Eq-Temporal-Unit 558 561	day
-A10	Eq-Temporal-Unit-Value T62 day
 T63	Modifier 48 58	pharyngeal
-E35	Modifier:T63 Modifies:T35
-R1	Treatment-For Arg1:E10 Arg2:E4	
-R2	Treatment-For Arg1:E10 Arg2:E1	
 T64	Eq-Value 248 250	30
-R3	Example-Of Arg1:E19 Arg2:E18	
-R4	Example-Of Arg1:E21 Arg2:E18	
-R5	Example-Of Arg1:E22 Arg2:E18	
 T23	Modifier 420 430	Concurrent
-E23	Modifier:T23 Modifies:T52
-R6	Example-Of Arg1:E24 Arg2:E25	
-R7	Example-Of Arg1:E24 Arg2:E27	
 T51	Assertion 503 509	Unable
-E36	Assertion:T51 Asserted:E31
-A7	Assertion-Type-Value E36 hypothetical
 T65	Eq-Operator 552 555	+/-
+A1	Eq-Temporal-Period-Value T37 present
+A2	Eq-Operator-Value T39 LT
+A3	Eq-Temporal-Unit-Value T41 year
+A4	Eq-Operator-Value T43 LTEQ
+A5	Eq-Temporal-Unit-Value T44 day
+A6	Eq-Temporal-Period-Value T46 past
+A8	Eq-Operator-Value T58 BETWEEN
+A9	Eq-Temporal-Unit-Value T60 day
+A10	Eq-Temporal-Unit-Value T62 day
+A7	Assertion-Type-Value E36 hypothetical
 A11	Eq-Operator-Value T65 PLUS-MINUS
+A12	Acuteness-Type-Value T20 chronic
+R1	Treatment-For Arg1:E10 Arg2:E4
+R2	Treatment-For Arg1:E10 Arg2:E1
+R3	Example-Of Arg1:E19 Arg2:E18
+R4	Example-Of Arg1:E21 Arg2:E18
+R5	Example-Of Arg1:E22 Arg2:E18
+R6	Example-Of Arg1:E24 Arg2:E25
+R7	Example-Of Arg1:E24 Arg2:E27

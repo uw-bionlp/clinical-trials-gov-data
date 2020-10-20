@@ -1,0 +1,39 @@
+T3	Condition 288 296	dementia
+T4	Condition-Name 288 296	dementia
+E3	Condition:T3 Name:T4
+T5	Eq-Temporal-Unit 63 69	months
+A1	Eq-Temporal-Unit-Value T5 month
+T6	Eq-Temporal-Unit 83 88	years
+A2	Eq-Temporal-Unit-Value T6 year
+T7	Age 89 92	old
+E4	Age:T7 Eq-Comparison:E6
+T8	Eq-Value 80 82	65
+T9	Language 123 131	Mandarin
+T10	Language 135 144	Taiwanese
+T1	Observation 166 214	High-need Community Older Adults Screening Scale
+E1	Observation:T1 Name:T2
+T2	Observation-Name 166 214	High-need Community Older Adults Screening Scale
+A3	Observation-Type-Value T2 clinical-score
+T11	Observation 216 222	HCOASS
+E2	Observation:T11 Name:T12
+T12	Observation-Name 216 222	HCOASS
+A4	Observation-Type-Value T12 clinical-score
+R1	Abbrev-Of Arg1:E2 Arg2:E1	
+T13	Eq-Comparison 48 69	at least three months
+E5	Eq-Comparison:T13 Operator:T14 Value:T15 Temporal-Unit:T5
+T14	Eq-Operator 48 56	at least
+A5	Eq-Operator-Value T14 GTEQ
+T15	Eq-Value 57 62	three
+T16	Eq-Comparison 75 88	over 65 years
+E6	Eq-Comparison:T16 Operator:T17 Value:T8 Temporal-Unit:T6
+T17	Eq-Operator 75 79	over
+A6	Eq-Operator-Value T17 GT
+T18	Or 132 134	or
+E7	Or:T18 Arg:T9 Arg2:T10
+T19	Life-Stage-And-Gender 237 249	older adults
+A7	Life-Stage-And-Gender-Type T19 elderly
+T20	Condition 227 236	high-need
+E8	Condition:T20 Name:T21
+T21	Condition-Name 227 236	high-need
+R2	Found-By Arg1:E8 Arg2:E1	
+R3	Found-By Arg1:T19 Arg2:E1	

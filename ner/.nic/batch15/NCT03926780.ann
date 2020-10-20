@@ -1,0 +1,21 @@
+T5	Eq-Operator 149 158	less than
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Value 159 161	50
+T7	Eq-Comparison 149 168	less than 50 ml/min
+E4	Eq-Comparison:T7 Operator:T5 Value:T6 Unit:T12 Per:T13
+T8	Condition 37 48	LV thrombus
+E2	Condition:T8 Name:T9
+T9	Condition-Name 37 48	LV thrombus
+T1	Procedure 64 95	trans-thoracic echocardiography
+E1	Procedure:T1 Name:T2
+T2	Procedure-Name 64 95	trans-thoracic echocardiography
+T10	Procedure 97 100	TTE
+E5	Procedure:T10 Name:T11
+T11	Procedure-Name 97 100	TTE
+R1	Abbrev-Of Arg1:E5 Arg2:E1	
+T3	Observation 128 148	Creatinine clearance
+E3	Observation:T3 Name:T4 Eq-Comparison:E4
+T4	Observation-Name 128 148	Creatinine clearance
+A2	Observation-Type-Value T4 lab
+T12	Eq-Unit 162 164	ml
+T13	Eq-Unit 165 168	min

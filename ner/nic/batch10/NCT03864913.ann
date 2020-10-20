@@ -1,34 +1,34 @@
+E1	Procedure:T1 Name:T2 Temporality:E5 Temporality2:E6
+E2	Age:T6 Eq-Comparison:E3
+E3	Eq-Comparison:T10 Operator:T7 Value:T8 Value2:T9 Temporal-Unit:T5
+E4	Condition:T11 Name:T12
+E5	Eq-Comparison:T16 Temporal-Period:T17
+E6	Eq-Comparison:T18 Operator:T4
+E7	And:T19 Arg:T3 Arg2:E1
 T1	Procedure 148 168	testosterone therapy
 T2	Procedure-Name 148 168	testosterone therapy
-E1	Procedure:T1 Name:T2 Temporality:E5 Temporality2:E6
 T3	Life-Stage-And-Gender 124 129	males
-A1	Life-Stage-And-Gender-Type T3 male
 T4	Eq-Operator 176 180	past
-A2	Eq-Operator-Value T4 GTEQ
 T5	Eq-Temporal-Unit 77 82	years
-A3	Eq-Temporal-Unit-Value T5 year
 T6	Age 83 86	old
-E2	Age:T6 Eq-Comparison:E3
 T7	Eq-Operator 73 74	-
-A4	Eq-Operator-Value T7 BETWEEN
 T8	Eq-Value 71 73	14
 T9	Eq-Value 74 76	19
 T10	Eq-Comparison 71 82	14-19 years
-E3	Eq-Comparison:T10 Operator:T7 Value:T8 Value2:T9 Temporal-Unit:T5
 T11	Condition 25 43	Testosterone naive
-E4	Condition:T11 Name:T12
 T12	Condition-Name 25 43	Testosterone naive
 T13	Life-Stage-And-Gender 49 60	Transgender
-A5	Life-Stage-And-Gender-Type T13 transgender
 T14	Life-Stage-And-Gender 61 65	male
-A6	Life-Stage-And-Gender-Type T14 male
 T15	Life-Stage-And-Gender 112 123	Transgender
-A7	Life-Stage-And-Gender-Type T15 transgender
 T16	Eq-Comparison 139 147	received
-E5	Eq-Comparison:T16 Temporal-Period:T17
 T17	Eq-Temporal-Period 139 147	received
-A8	Eq-Temporal-Period-Value T17 past
 T18	Eq-Comparison 176 180	past
-E6	Eq-Comparison:T18 Operator:T4
 T19	And 130 133	who
-E7	And:T19 Arg:T3 Arg2:E1
+A1	Life-Stage-And-Gender-Type T3 male
+A2	Eq-Operator-Value T4 GTEQ
+A3	Eq-Temporal-Unit-Value T5 year
+A4	Eq-Operator-Value T7 BETWEEN
+A5	Life-Stage-And-Gender-Type T13 transgender
+A6	Life-Stage-And-Gender-Type T14 male
+A7	Life-Stage-And-Gender-Type T15 transgender
+A8	Eq-Temporal-Period-Value T17 past

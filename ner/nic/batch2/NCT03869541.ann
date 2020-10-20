@@ -1,124 +1,124 @@
-T1	Encounter 56 64	admitted
 E1	Encounter:T1 Location:T29
-T2	Eq-Comparison 84 93	receiving
 E2	Eq-Comparison:T2 Temporal-Period:T30
-T3	Drug 94 110	vasoactive drugs
 E3	Drug:T3 Name:T31 Temporality:E2
-T4	Age 117 120	Age
 E4	Age:T4 Eq-Comparison:E5
-T5	Eq-Comparison 121 154	greater than or equal to 18 years
 E5	Eq-Comparison:T5 Operator:T32 Value:T33 Temporal-Unit:T34
-T6	Assertion 165 176	Expected to
 E6	Assertion:T6 Asserted:T8
-A1	Assertion-Type-Value E6 hypothetical
-T7	Encounter 184 192	admitted
 E7	Encounter:T7 Type:T52 Location:T35 Stability:T8 Duration:E9
-T9	Eq-Comparison 208 225	at least 24 hours
 E9	Eq-Comparison:T9 Operator:T36 Value:T37 Temporal-Unit:T38
-T10	Temporal-Connection 226 230	post
 E10	Temporal-Connection:T10 Arg:E7 Arg2:E8
-A2	Temporal-Connection-Type-Value E10 after
-T11	Assertion 286 297	expected to
 E11	Assertion:T11 Asserted:E12
-A3	Assertion-Type-Value E11 hypothetical
-T13	Contraindication 378 393	contraindicated
 E13	Contraindication:T13 Contraindicates:E30
-T14	Condition 426 434	injuries
 E14	Condition:T14 Name:T39 Temporality:E31
-T15	Observation 506 515	prisoners
 E15	Observation:T15 Name:T40
-T16	Observation 529 541	on probation
 E16	Observation:T16 Name:T41
-T17	Condition 562 583	neuromuscular disease
 E17	Condition:T17 Name:T42
-T18	Or 584 586	or
 E18	Or:T18 Arg:E17 Arg2:E20
-T19	Modifier 593 598	brain
 E19	Modifier:T19 Modifies:T44
-T20	Condition 599 605	injury
-E20	Condition:T20 Name:T44 Severity:T43
-T21	Or 606 608	or
+E20	Condition:T20 Name:T44 Acuteness:T43
 E21	Or:T21 Arg:E20 Arg2:E23
-T22	Modifier 609 620	spinal cord
 E22	Modifier:T22 Modifies:T45
-T23	Condition 621 627	injury
 E23	Condition:T23 Name:T45
-T24	Negation 675 681	unable
 E24	Negation:T24 Negates:T46
-T25	Encounter 901 909	admitted
 E25	Encounter:T25 Location:T47 Temporality:E26
+E28	And:T51 Arg:E1 Arg2:E3
+E8	Study:T53
+E12	Death:T12
+E29	Modifier:T54 Modifies:E12
+E30	Procedure:T55 Name:T56
+E31	Eq-Comparison:T57 Temporal-Period:T58
+E32	Or:T59 Arg:E15 Arg2:E16
+E33	Procedure:T60 Name:T61 Location:T63
+E34	Assertion:T62 Asserted:E33
+E26	Eq-Comparison:T26 Temporal-Period:T27
+E27	Observation:T64 Name:T65 Location:T50
+E35	Study:T66 Study-Of:E27
+T1	Encounter 56 64	admitted
+T2	Eq-Comparison 84 93	receiving
+T3	Drug 94 110	vasoactive drugs
+T4	Age 117 120	Age
+T5	Eq-Comparison 121 154	greater than or equal to 18 years
+T6	Assertion 165 176	Expected to
+T7	Encounter 184 192	admitted
+T9	Eq-Comparison 208 225	at least 24 hours
+T10	Temporal-Connection 226 230	post
+T11	Assertion 286 297	expected to
+T13	Contraindication 378 393	contraindicated
+T14	Condition 426 434	injuries
+T15	Observation 506 515	prisoners
+T16	Observation 529 541	on probation
+T17	Condition 562 583	neuromuscular disease
+T18	Or 584 586	or
+T19	Modifier 593 598	brain
+T20	Condition 599 605	injury
+T21	Or 606 608	or
+T22	Modifier 609 620	spinal cord
+T23	Condition 621 627	injury
+T24	Negation 675 681	unable
+T25	Encounter 901 909	admitted
 T28	Encounter-Type 56 64	admitted
-A4	Encounter-Type-Value T28 inpatient
 T29	Location 72 75	ICU
-A5	Location-Value T29 hospital
 T30	Eq-Temporal-Period 84 93	receiving
-A6	Eq-Temporal-Period-Value T30 present
 T31	Drug-Name 94 110	vasoactive drugs
 T32	Eq-Operator 121 142	greater than or equal
-A7	Eq-Operator-Value T32 GTEQ
 T33	Eq-Value 146 148	18
 T34	Eq-Temporal-Unit 149 154	years
-A8	Eq-Temporal-Unit-Value T34 year
 T35	Location 200 203	ICU
-A9	Location-Value T35 unit
 T36	Eq-Operator 208 216	at least
-A10	Eq-Operator-Value T36 GTEQ
 T37	Eq-Value 217 219	24
 T38	Eq-Temporal-Unit 220 225	hours
-A11	Eq-Temporal-Unit-Value T38 hour
 T39	Condition-Name 426 434	injuries
 T40	Observation-Name 506 515	prisoners
 T41	Observation-Name 529 541	on probation
 T42	Condition-Name 562 583	neuromuscular disease
-T43	Severity 587 592	acute
-A13	Severity-Value T43 severe
+T43	Acuteness 587 592	acute
 T44	Condition-Name 599 605	injury
 T45	Condition-Name 621 627	injury
 T46	Language 691 698	English
 T47	Location 844 863	intensive care unit
-A14	Location-Value T47 unit
 T48	Encounter-Type 901 909	admitted
-A15	Encounter-Type-Value T48 inpatient
 T51	And 76 79	who
-E28	And:T51 Arg:E1 Arg2:E3
 T52	Encounter-Type 184 192	admitted
-A16	Encounter-Type-Value T52 inpatient
 T8	Stability 177 183	remain
-A17	Stability-Value T8 stable
 T53	Study 231 240	enrolment
-E8	Study:T53 
 T12	Death 298 301	die
-E12	Death:T12 
 T54	Modifier 302 312	imminently
-E29	Modifier:T54 Modifies:E12
 T55	Procedure 362 374	mobilization
-E30	Procedure:T55 Name:T56
 T56	Procedure-Name 362 374	mobilization
-R1	Caused-By Arg1:E13 Arg2:E14	
 T57	Eq-Comparison 417 425	existing
-E31	Eq-Comparison:T57 Temporal-Period:T58
 T58	Eq-Temporal-Period 417 425	existing
-A18	Eq-Temporal-Period-Value T58 present
 T59	Or 516 518	or
-E32	Or:T59 Arg:E15 Arg2:E16
 T60	Procedure 1009 1032	physical rehabilitation
-E33	Procedure:T60 Name:T61 Location:T63
 T61	Procedure-Name 1009 1032	physical rehabilitation
 T62	Assertion 986 997	feasibility
-E34	Assertion:T62 Asserted:E33
-A12	Assertion-Type-Value E34 hypothetical
 T63	Location 1005 1008	ICU
-A19	Location-Value T63 unit
 T26	Eq-Comparison 892 900	has been
-E26	Eq-Comparison:T26 Temporal-Period:T27
 T27	Eq-Temporal-Period 892 900	has been
-A20	Eq-Temporal-Period-Value T27 past
 T49	Location 1081 1084	ICU
-A21	Location-Value T49 unit
 T50	Location 1135 1138	ICU
-A22	Location-Value T50 unit
 T64	Observation 1139 1181	physical rehabilitation adverse event tool
-E27	Observation:T64 Name:T65 Location:T50
 T65	Observation-Name 1139 1181	physical rehabilitation adverse event tool
 T66	Study 1207 1212	study
-E35	Study:T66 Study-Of:E27
+A1	Assertion-Type-Value E6 hypothetical
+A2	Temporal-Connection-Type-Value E10 after
+A3	Assertion-Type-Value E11 hypothetical
+A4	Encounter-Type-Value T28 inpatient
+A5	Location-Value T29 hospital
+A6	Eq-Temporal-Period-Value T30 present
+A7	Eq-Operator-Value T32 GTEQ
+A8	Eq-Temporal-Unit-Value T34 year
+A9	Location-Value T35 unit
+A10	Eq-Operator-Value T36 GTEQ
+A11	Eq-Temporal-Unit-Value T38 hour
+A14	Location-Value T47 unit
+A15	Encounter-Type-Value T48 inpatient
+A16	Encounter-Type-Value T52 inpatient
+A17	Stability-Value T8 stable
+A18	Eq-Temporal-Period-Value T58 present
+A12	Assertion-Type-Value E34 hypothetical
+A19	Location-Value T63 unit
+A20	Eq-Temporal-Period-Value T27 past
+A21	Location-Value T49 unit
+A22	Location-Value T50 unit
+A23	Acuteness-Type-Value T43 acute
+R1	Caused-By Arg1:E13 Arg2:E14

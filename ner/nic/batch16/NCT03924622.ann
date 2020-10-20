@@ -1,180 +1,180 @@
+E2	Condition:T2 Name:T3
+E4	Condition:T4 Name:T5
+E6	Condition:T6 Name:T84
+E8	Condition:T8 Name:T9
+E10	Condition:T10 Name:T11
+E12	Condition:T12 Name:T13
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17
+E18	Condition:T18 Name:T19
+E19	Age:T22 Eq-Comparison:E21
+E20	Eq-Comparison:T28 Operator:T20 Value:T26 Unit:T46
+E21	Eq-Comparison:T29 Operator:T23 Value:T24 Value2:T25
+E22	Eq-Comparison:T30 Temporal-Period:T31
+E23	Eq-Comparison:T32 Temporal-Period:T33
+E24	Eq-Comparison:T34 Temporal-Period:T35
+E25	Eq-Comparison:T36 Temporal-Period:T37
+E26	Eq-Comparison:T38 Temporal-Period:T39
+E27	Eq-Comparison:T40 Temporal-Period:T41
+E1	Or:T43 Arg:T1 Arg2:T42
+E3	Observation:T44 Name:T45 Eq-Comparison:E20
+E5	Condition:T47 Name:T48 Temporality:E22
+E7	Modifier:T49 Modifies:T48
+E9	Or:T50 Arg:E7 Arg2:E11
+E11	Modifier:T51 Modifies:T48
+E13	Modifier:T52 Modifies:T48
+E15	Condition:T53 Name:T54 Temporality:E23
+E17	Modifier:T55 Modifies:T54
+E28	Condition:T56 Name:T57 Temporality:E25
+E29	Or:T58 Arg:E18 Arg2:E8
+E30	Condition:T59 Name:T60 Temporality:E24
+E31	Condition:T61 Name:T62 Stability:T70
+E32	Modifier:T63 Modifies:T62
+E33	Study:T64 Study-Of:E34
+E34	Observation:T65 Name:T66
+E35	Study:T67
+E36	Temporal-Connection:T68 Arg:E34 Arg2:E35
+E37	Assertion:T69 Asserted:E34
+E38	Assertion:T71 Asserted:T70
+E39	Condition:T72 Name:T73 Temporality:E26
+E40	Modifier:T74 Modifies:T73
+E41	Modifier:T75 Modifies:T73
+E42	Or:T76 Arg:E40 Arg2:E41
+E43	Condition:T77 Name:T81 Temporality:E27 Acuteness:T82
+E44	Modifier:T78 Modifies:T81
+E45	Modifier:T79 Modifies:T81
+E46	Or:T80 Arg:E45 Arg2:E44
+E48	Or:T83 Arg:E39 Arg2:E43
+E49	Condition:T7 Name:T85
+E50	Or:T86 Arg:E6 Arg2:E49
+E51	Modifier:T87 Modifies:T84
+E52	Modifier:T88 Modifies:T84
+E53	Or:T89 Arg:E52 Arg2:E51
+E54	Condition:T90 Name:T91
+E55	Or:T92 Arg:E54 Arg2:E16
+E57	Eq-Comparison:T94 Value:T27 Temporal-Unit:T21
+E58	Observation:T95 Name:T96 Duration:E57
+E59	Modifier:T97 Modifies:T96
+E60	Assertion:T98 Asserted:E58
 T2	Condition 335 357	Cardiovascular disease
 T3	Condition-Name 335 357	Cardiovascular disease
-E2	Condition:T2 Name:T3
 T4	Condition 363 383	Neurological disease
 T5	Condition-Name 363 383	Neurological disease
-E4	Condition:T4 Name:T5
 T6	Condition 615 622	disease
-E6	Condition:T6 Name:T84
 T8	Condition 506 515	psoriasis
 T9	Condition-Name 506 515	psoriasis
-E8	Condition:T8 Name:T9
 T10	Condition 631 640	scoliosis
 T11	Condition-Name 631 640	scoliosis
-E10	Condition:T10 Name:T11
 T12	Condition 684 693	pregnancy
 T13	Condition-Name 684 693	pregnancy
-E12	Condition:T12 Name:T13
 T14	Condition 425 433	Diabetes
 T15	Condition-Name 425 433	Diabetes
-E14	Condition:T14 Name:T15
 T16	Condition 655 663	lordosis
 T17	Condition-Name 655 663	lordosis
-E16	Condition:T16 Name:T17
 T18	Condition 496 502	eczema
 T19	Condition-Name 496 502	eczema
-E18	Condition:T18 Name:T19
 T20	Eq-Operator 124 133	less than
-A1	Eq-Operator-Value T20 LT
 T21	Eq-Temporal-Unit 765 772	minutes
-A2	Eq-Temporal-Unit-Value T21 minute
 T22	Age 44 47	Age
-E19	Age:T22 Eq-Comparison:E21
 T23	Eq-Operator 51 53	to
-A3	Eq-Operator-Value T23 BETWEEN
 T24	Eq-Value 48 50	18
 T25	Eq-Value 54 56	55
 T26	Eq-Value 134 137	250
 T27	Eq-Value 761 764	120
 T28	Eq-Comparison 124 144	less than 250 pounds
-E20	Eq-Comparison:T28 Operator:T20 Value:T26 Unit:T46
 T29	Eq-Comparison 48 56	18 to 55
-E21	Eq-Comparison:T29 Operator:T23 Value:T24 Value2:T25
 T30	Eq-Comparison 245 253	Previous
-E22	Eq-Comparison:T30 Temporal-Period:T31
 T31	Eq-Temporal-Period 245 253	Previous
-A4	Eq-Temporal-Period-Value T31 past
 T32	Eq-Comparison 301 308	History
-E23	Eq-Comparison:T32 Temporal-Period:T33
 T33	Eq-Temporal-Period 301 308	History
-A5	Eq-Temporal-Period-Value T33 past
 T34	Eq-Comparison 439 446	History
-E24	Eq-Comparison:T34 Temporal-Period:T35
 T35	Eq-Temporal-Period 439 446	History
-A6	Eq-Temporal-Period-Value T35 past
 T36	Eq-Comparison 466 473	Current
-E25	Eq-Comparison:T36 Temporal-Period:T37
 T37	Eq-Temporal-Period 466 473	Current
-A7	Eq-Temporal-Period-Value T37 present
 T38	Eq-Comparison 522 529	Current
-E26	Eq-Comparison:T38 Temporal-Period:T39
 T39	Eq-Temporal-Period 522 529	Current
-A8	Eq-Temporal-Period-Value T39 present
 T40	Eq-Comparison 548 555	history
-E27	Eq-Comparison:T40 Temporal-Period:T41
 T41	Eq-Temporal-Period 548 555	history
-A9	Eq-Temporal-Period-Value T41 past
 T1	Life-Stage-And-Gender 25 28	Men
-A10	Life-Stage-And-Gender-Type T1 male
 T42	Life-Stage-And-Gender 33 38	women
-A11	Life-Stage-And-Gender-Type T42 female
 T43	Or 29 32	and
-E1	Or:T43 Arg:T1 Arg2:T42
 T44	Observation 118 123	Weigh
-E3	Observation:T44 Name:T45 Eq-Comparison:E20
 T45	Observation-Name 118 123	Weigh
-A12	Observation-Type-Value T45 vital
 T46	Eq-Unit 138 144	pounds
 T47	Condition 254 262	injuries
-E5	Condition:T47 Name:T48 Temporality:E22
 T48	Condition-Name 254 262	injuries
 T49	Modifier 266 272	sacrum
-E7	Modifier:T49 Modifies:T48
 T50	Or 272 273	/
-E9	Or:T50 Arg:E7 Arg2:E11
 T51	Modifier 273 281	buttocks
-E11	Modifier:T51 Modifies:T48
 T52	Modifier 282 295	with scarring
-E13	Modifier:T52 Modifies:T48
 T53	Condition 321 329	injuries
-E15	Condition:T53 Name:T54 Temporality:E23
 T54	Condition-Name 321 329	injuries
 T55	Modifier 312 320	pressure
-E17	Modifier:T55 Modifies:T54
 T56	Condition 474 488	skin condition
-E28	Condition:T56 Name:T57 Temporality:E25
 T57	Condition-Name 474 488	skin condition
-R1	Example-Of Arg1:E18 Arg2:E28	
 T58	Or 503 505	or
-E29	Or:T58 Arg:E18 Arg2:E8
-R2	Example-Of Arg1:E8 Arg2:E28	
 T59	Condition 450 460	malignancy
-E30	Condition:T59 Name:T60 Temporality:E24
 T60	Condition-Name 450 460	malignancy
 T61	Condition 411 419	response
-E31	Condition:T61 Name:T62 Stability:T70
 T62	Condition-Name 411 419	response
 T63	Modifier 402 410	vascular
-E32	Modifier:T63 Modifies:T62
 T64	Study 175 180	study
-E33	Study:T64 Study-Of:E34
 T65	Observation 181 189	position
-E34	Observation:T65 Name:T66
 T66	Observation-Name 181 189	position
 T67	Study 214 219	study
-E35	Study:T67 
 T68	Temporal-Connection 198 206	duration
-E36	Temporal-Connection:T68 Arg:E34 Arg2:E35
-A13	Temporal-Connection-Type-Value E36 during
 T69	Assertion 153 160	able to
-E37	Assertion:T69 Asserted:E34
-A14	Assertion-Type-Value E37 hypothetical
 T70	Stability 395 401	affect
-A15	Stability-Value T70 change
 T71	Assertion 389 394	would
-E38	Assertion:T71 Asserted:T70
-A16	Assertion-Type-Value E38 hypothetical
-R3	Caused-By Arg1:T70 Arg2:E4	
 T72	Condition 540 544	pain
-E39	Condition:T72 Name:T73 Temporality:E26
 T73	Condition-Name 540 544	pain
 T74	Modifier 530 534	neck
-E40	Modifier:T74 Modifies:T73
 T75	Modifier 535 539	back
-E41	Modifier:T75 Modifies:T73
 T76	Or 534 535	/
-E42	Or:T76 Arg:E40 Arg2:E41
 T77	Condition 577 581	pain
-E43	Condition:T77 Name:T81 Temporality:E27
 T78	Modifier 572 576	back
-E44	Modifier:T78 Modifies:T81
 T79	Modifier 567 571	neck
-E45	Modifier:T79 Modifies:T81
 T80	Or 571 572	/
-E46	Or:T80 Arg:E45 Arg2:E44
 T81	Condition-Name 577 581	pain
-T82	Modifier 559 566	chronic
-E47	Modifier:T82 Modifies:E43
-R4	Abbrev-Of Arg1:E47 Arg2:E43	
+T82	Acuteness 559 566	chronic
 T83	Or 545 547	or
-E48	Or:T83 Arg:E39 Arg2:E43
 T84	Condition-Name 615 622	disease
 T7	Condition 623 629	injury
-E49	Condition:T7 Name:T85
 T85	Condition-Name 623 629	injury
 T86	Or 622 623	/
-E50	Or:T86 Arg:E6 Arg2:E49
 T87	Modifier 603 614	spinal cord
-E51	Modifier:T87 Modifies:T84
 T88	Modifier 593 602	vertebral
-E52	Modifier:T88 Modifies:T84
 T89	Or 602 603	/
-E53	Or:T89 Arg:E52 Arg2:E51
-R5	Example-Of Arg1:E10 Arg2:E49	
 T90	Condition 642 650	kyphosis
-E54	Condition:T90 Name:T91
 T91	Condition-Name 642 650	kyphosis
-R6	Example-Of Arg1:E54 Arg2:E49	
 T92	Or 652 654	or
-E55	Or:T92 Arg:E54 Arg2:E16
-R7	Example-Of Arg1:E16 Arg2:E49	
 T94	Eq-Comparison 761 772	120 minutes
-E57	Eq-Comparison:T94 Value:T27 Temporal-Unit:T21
 T95	Observation 724 730	remain
-E58	Observation:T95 Name:T96 Duration:E57
 T96	Observation-Name 724 730	remain
 T97	Modifier 738 756	vacuum spine board
-E59	Modifier:T97 Modifies:T96
 T98	Assertion 713 723	ability to
-E60	Assertion:T98 Asserted:E58
+A1	Eq-Operator-Value T20 LT
+A2	Eq-Temporal-Unit-Value T21 minute
+A3	Eq-Operator-Value T23 BETWEEN
+A4	Eq-Temporal-Period-Value T31 past
+A5	Eq-Temporal-Period-Value T33 past
+A6	Eq-Temporal-Period-Value T35 past
+A7	Eq-Temporal-Period-Value T37 present
+A8	Eq-Temporal-Period-Value T39 present
+A9	Eq-Temporal-Period-Value T41 past
+A10	Life-Stage-And-Gender-Type T1 male
+A11	Life-Stage-And-Gender-Type T42 female
+A12	Observation-Type-Value T45 vital
+A13	Temporal-Connection-Type-Value E36 during
+A14	Assertion-Type-Value E37 hypothetical
+A15	Stability-Value T70 change
+A16	Assertion-Type-Value E38 hypothetical
 A17	Assertion-Type-Value E60 hypothetical
+A18	Acuteness-Type-Value T82 chronic
+R1	Example-Of Arg1:E18 Arg2:E28
+R2	Example-Of Arg1:E8 Arg2:E28
+R3	Caused-By Arg1:T70 Arg2:E4
+R4	Abbrev-Of Arg1:T82 Arg2:E43
+R5	Example-Of Arg1:E10 Arg2:E49
+R6	Example-Of Arg1:E54 Arg2:E49
+R7	Example-Of Arg1:E16 Arg2:E49

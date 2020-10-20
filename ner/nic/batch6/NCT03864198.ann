@@ -1,130 +1,130 @@
-T1	Eq-Comparison 30 41	18-50 years
 E1	Eq-Comparison:T1 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
-T2	Condition 47 62	oligozoospermia
 E2	Condition:T2 Name:T41
-T3	Eq-Comparison 64 90	< 5 million spermatozoa/mL
 E3	Eq-Comparison:T3 Operator:T42 Value:T43 Unit:T46 Unit2:T34
-T4	Condition 97 114	asthenozoospermia
 E4	Condition:T4 Name:T47
-T5	Eq-Comparison 116 121	< 32%
 E5	Eq-Comparison:T5 Operator:T48 Value:T49 Unit:T50
-T6	Observation 122 152	progressive motile spermatozoa
 E6	Observation:T6 Name:T51 Eq-Comparison:E5
-T7	Condition 159 175	teratozoospermia
 E7	Condition:T7 Name:T52
-T8	Eq-Comparison 177 181	< 4%
 E8	Eq-Comparison:T8 Operator:T53 Value:T54 Unit:T55
-T9	Condition 221 232	azoospermia
 E9	Condition:T9 Name:T58
-T10	Condition 238 243	smoke
 E10	Condition:T10 Name:T73
-T11	Eq-Comparison 249 252	use
 E11	Eq-Comparison:T11 Temporal-Period:T59
-T12	Drug 253 258	drugs
 E12	Drug:T12 Temporality:E11
-T13	Drug 268 273	drugs
 E13	Drug:T13 Temporality:E37
-T14	Condition 286 304	fertility toxicity
 E14	Condition:T14 Name:T61
-T15	Modifier 328 341	environmental
 E15	Modifier:T15 Modifies:T62
-T16	Or 342 344	or
 E16	Or:T16 Arg:E15 Arg2:E17
-T17	Modifier 345 363	occupational toxic
 E17	Modifier:T17 Modifies:T62
-T18	Drug 364 374	substances
 E18	Drug:T18 Name:T62
-T19	Procedure 394 403	radiation
 E19	Procedure:T19 Name:T63
-T20	Or 404 406	or
 E20	Or:T20 Arg:E19 Arg2:E21
-T21	Modifier 407 411	heat
-E21	Modifier:T21 
-T23	Condition 439 444	mumps
+E21	Modifier:T21
 E23	Condition:T23 Name:T64
-T24	Condition 450 479	sexually transmitted diseases
 E24	Condition:T24 Name:T65
-T25	Eq-Comparison 485 492	history
 E25	Eq-Comparison:T25 Temporal-Period:T66
-T26	Condition 496 510	cryptorchidism
 E26	Condition:T26 Name:T67 Temporality:E25
-T27	Eq-Comparison 516 524	previous
 E27	Eq-Comparison:T27 Temporal-Period:T68
-T28	Procedure 525 543	testicular torsion
 E28	Procedure:T28 Name:T69 Temporality:E27
-T29	Condition 549 572	genitourinary anomalies
 E29	Condition:T29 Name:T70
-T30	Procedure 578 589	alterations
 E30	Procedure:T30 Name:T79
-T31	Modifier 597 607	epididymis
 E31	Modifier:T31 Modifies:T79
-T32	Or 608 610	or
 E32	Or:T32 Arg:E31 Arg2:E33
-T33	Modifier 611 619	deferens
 E33	Modifier:T33 Modifies:T79
-T35	Procedure 625 641	inguinal surgery
 E35	Procedure:T35 Name:T71
+E22	Age:T22 Eq-Comparison:E1
+E36	Observation:T44 Name:T57 Polarity:T56 Eq-Comparison:E8
+E37	Eq-Comparison:T74 Temporal-Period:T60
+E38	And:T75 Arg:E13 Arg2:E14
+E39	Condition:T76 Name:T77
+E40	Modifier:T78 Modifies:T64
+T1	Eq-Comparison 30 41	18-50 years
+T2	Condition 47 62	oligozoospermia
+T3	Eq-Comparison 64 90	< 5 million spermatozoa/mL
+T4	Condition 97 114	asthenozoospermia
+T5	Eq-Comparison 116 121	< 32%
+T6	Observation 122 152	progressive motile spermatozoa
+T7	Condition 159 175	teratozoospermia
+T8	Eq-Comparison 177 181	< 4%
+T9	Condition 221 232	azoospermia
+T10	Condition 238 243	smoke
+T11	Eq-Comparison 249 252	use
+T12	Drug 253 258	drugs
+T13	Drug 268 273	drugs
+T14	Condition 286 304	fertility toxicity
+T15	Modifier 328 341	environmental
+T16	Or 342 344	or
+T17	Modifier 345 363	occupational toxic
+T18	Drug 364 374	substances
+T19	Procedure 394 403	radiation
+T20	Or 404 406	or
+T21	Modifier 407 411	heat
+T23	Condition 439 444	mumps
+T24	Condition 450 479	sexually transmitted diseases
+T25	Eq-Comparison 485 492	history
+T26	Condition 496 510	cryptorchidism
+T27	Eq-Comparison 516 524	previous
+T28	Procedure 525 543	testicular torsion
+T29	Condition 549 572	genitourinary anomalies
+T30	Procedure 578 589	alterations
+T31	Modifier 597 607	epididymis
+T32	Or 608 610	or
+T33	Modifier 611 619	deferens
+T35	Procedure 625 641	inguinal surgery
 T36	Life-Stage-And-Gender 25 29	male
-A1	Life-Stage-And-Gender-Type T36 male
 T37	Eq-Value 30 32	18
 T38	Eq-Operator 32 33	-
-A2	Eq-Operator-Value T38 BETWEEN
 T39	Eq-Value 33 35	50
 T40	Eq-Temporal-Unit 36 41	years
-A3	Eq-Temporal-Unit-Value T40 year
 T41	Condition-Name 47 62	oligozoospermia
 T42	Eq-Operator 64 65	<
-A4	Eq-Operator-Value T42 LT
 T43	Eq-Value 66 75	5 million
 T46	Eq-Unit 88 90	mL
 T47	Condition-Name 97 114	asthenozoospermia
 T48	Eq-Operator 116 117	<
-A5	Eq-Operator-Value T48 LT
 T49	Eq-Value 118 120	32
 T50	Eq-Unit 120 121	%
 T51	Observation-Name 122 152	progressive motile spermatozoa
-A6	Observation-Type-Value T51 lab
 T52	Condition-Name 159 175	teratozoospermia
 T53	Eq-Operator 177 178	<
-A7	Eq-Operator-Value T53 LT
 T54	Eq-Value 179 180	4
 T55	Eq-Unit 180 181	%
 T56	Polarity 182 188	normal
-A8	Polarity-Value T56 normal
 T58	Condition-Name 221 232	azoospermia
 T59	Eq-Temporal-Period 249 252	use
-A9	Eq-Temporal-Period-Value T59 present
 T60	Eq-Temporal-Period 264 267	use
-A10	Eq-Temporal-Period-Value T60 present
 T61	Condition-Name 286 304	fertility toxicity
 T62	Drug-Name 364 374	substances
 T63	Procedure-Name 394 403	radiation
 T64	Condition-Name 439 444	mumps
 T65	Condition-Name 450 479	sexually transmitted diseases
 T66	Eq-Temporal-Period 485 492	history
-A11	Eq-Temporal-Period-Value T66 past
 T67	Condition-Name 496 510	cryptorchidism
 T68	Eq-Temporal-Period 516 524	previous
-A12	Eq-Temporal-Period-Value T68 past
 T69	Procedure-Name 525 543	testicular torsion
 T70	Condition-Name 549 572	genitourinary anomalies
 T22	Age 36 41	years
-E22	Age:T22 Eq-Comparison:E1
-R2	Equivalent-To Arg1:E6 Arg2:E4	
 T44	Observation 189 194	forms
-E36	Observation:T44 Name:T57 Polarity:T56 Eq-Comparison:E8
 T57	Observation-Name 189 194	forms
-R3	Equivalent-To Arg1:E36 Arg2:E7	
 T73	Condition-Name 238 243	smoke
 T74	Eq-Comparison 264 267	use
-E37	Eq-Comparison:T74 Temporal-Period:T60
 T75	And 274 278	with
-E38	And:T75 Arg:E13 Arg2:E14
 T76	Condition 417 425	orchitis
-E39	Condition:T76 Name:T77
 T77	Condition-Name 417 425	orchitis
 T78	Modifier 426 435	secondary
-E40	Modifier:T78 Modifies:T64
 T79	Procedure-Name 578 589	alterations
 T71	Procedure-Name 625 641	inguinal surgery
 T34	Eq-Unit 76 87	spermatozoa
+A1	Life-Stage-And-Gender-Type T36 male
+A2	Eq-Operator-Value T38 BETWEEN
+A3	Eq-Temporal-Unit-Value T40 year
+A4	Eq-Operator-Value T42 LT
+A5	Eq-Operator-Value T48 LT
+A6	Observation-Type-Value T51 lab
+A7	Eq-Operator-Value T53 LT
+A8	Polarity-Value T56 normal
+A9	Eq-Temporal-Period-Value T59 present
+A10	Eq-Temporal-Period-Value T60 present
+A11	Eq-Temporal-Period-Value T66 past
+A12	Eq-Temporal-Period-Value T68 past
+R2	Equivalent-To Arg1:E6 Arg2:E4
+R3	Equivalent-To Arg1:E36 Arg2:E7

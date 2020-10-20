@@ -1,81 +1,82 @@
+E1	Procedure:T1 Name:T2 Temporality:E2 Location:T9
+E3	Procedure:T3 Name:T4 Temporality:E21
+E5	Procedure:T5 Temporality:E19
+E7	Procedure:T7 Name:T8
+E10	Eq-Comparison:T13 Operator:T11 Value:T12 Operator2:T24 Unit:T25
+E2	Eq-Comparison:T14 Temporal-Period:T15
+E4	Encounter:T10 Type:T16
+E6	Assertion:T17 Asserted:E4
+E8	Eq-Comparison:T18 Temporal-Period:T19
+E9	Condition:T20 Name:T21 Acuteness:T22
+E12	Drug:T23 Temporality:E8 Dose:E10
+E13	Drug:T26 Name:T27
+E14	Allergy:T28 Name:E13
+E15	Observation:T29 Name:T30 Eq-Comparison:E16
+E16	Eq-Comparison:T31 Value:T32 Value2:T33 Value3:T34
+E17	Condition:T35 Name:T36
+E18	Observation:T37 Name:T38
+E19	Eq-Comparison:T39 Temporal-Period:T40
+E20	Exception:T6 From:E5 Except:E7
+E21	Eq-Comparison:T41 Temporal-Period:T42
+E22	Modifier:T43 Modifies:T4
+E23	Procedure:T44 Name:T45
+E24	Negation:T46 Negates:E23
 T1	Procedure 57 88	laparoscopic colorectal surgery
 T2	Procedure-Name 57 88	laparoscopic colorectal surgery
-E1	Procedure:T1 Name:T2 Temporality:E2 Location:T9
 T3	Procedure 528 543	anticoagulation
 T4	Procedure-Name 528 543	anticoagulation
-E3	Procedure:T3 Name:T4 Temporality:E21
 T5	Procedure 442 452	procedures
-E5	Procedure:T5 Temporality:E19
 T7	Procedure 468 501	laparoscopic colorectal procedure
 T8	Procedure-Name 468 501	laparoscopic colorectal procedure
-E7	Procedure:T7 Name:T8
 T11	Eq-Operator 205 206	>
-A1	Eq-Operator-Value T11 GT
 T12	Eq-Value 207 209	25
 T13	Eq-Comparison 183 236	equaling or exceeding > 25 morphine daily equivalents
-E10	Eq-Comparison:T13 Operator:T11 Value:T12 Operator2:T24 Unit:T25
 T14	Eq-Comparison 34 43	scheduled
-E2	Eq-Comparison:T14 Temporal-Period:T15
 T15	Eq-Temporal-Period 34 43	scheduled
-A2	Eq-Temporal-Period-Value T15 future
 T9	Location 92 96	UWMC
-A3	Location-Value T9 hospital
 T10	Encounter 107 121	inpatient stay
-E4	Encounter:T10 Type:T16
 T16	Encounter-Type 107 121	inpatient stay
-A4	Encounter-Type-Value T16 inpatient
 T17	Assertion 97 106	requiring
-E6	Assertion:T17 Asserted:E4
-A5	Assertion-Type-Value E6 hypothetical
 T18	Eq-Comparison 156 158	on
-E8	Eq-Comparison:T18 Temporal-Period:T19
 T19	Eq-Temporal-Period 156 158	on
-A6	Eq-Temporal-Period-Value T19 present
 T20	Condition 167 171	pain
-E9	Condition:T20 Name:T21
 T21	Condition-Name 167 171	pain
-T22	Modifier 159 166	chronic
-E11	Modifier:T22 Modifies:T21
+T22	Acuteness 159 166	chronic
 T23	Drug 172 182	mediations
-E12	Drug:T23 Temporality:E8 Dose:E10
-R1	Treatment-For Arg1:E12 Arg2:E9	
 T24	Eq-Operator 183 204	equaling or exceeding
-A7	Eq-Operator-Value T24 GTEQ
 T25	Eq-Unit 210 236	morphine daily equivalents
 T26	Drug 263 274	bupivacaine
-E13	Drug:T26 Name:T27
 T27	Drug-Name 263 274	bupivacaine
 T28	Allergy 251 259	allergic
-E14	Allergy:T28 Name:E13
-T29	Condition 294 297	ASA
-E15	Condition:T29 Name:T30 Stage:E16
-T30	Condition-Name 294 297	ASA
+T29	Observation 294 297	ASA
+T30	Observation-Name 294 297	ASA
 T31	Eq-Comparison 305 317	IV, V, or VI
-E16	Eq-Comparison:T31 Value:T32 Value2:T33 Value3:T34
 T32	Eq-Value 305 307	IV
 T33	Eq-Value 309 310	V
 T34	Eq-Value 315 317	VI
 T35	Condition 373 381	pregnant
-E17	Condition:T35 Name:T36
 T36	Condition-Name 373 381	pregnant
 T37	Observation 405 417	incarcerated
-E18	Observation:T37 Name:T38
 T38	Observation-Name 405 417	incarcerated
 T39	Eq-Comparison 432 441	receiving
-E19	Eq-Comparison:T39 Temporal-Period:T40
 T40	Eq-Temporal-Period 432 441	receiving
-A8	Eq-Temporal-Period-Value T40 present
 T6	Exception 453 467	in addition to
-E20	Exception:T6 From:E5 Except:E7
 T41	Eq-Comparison 516 518	on
-E21	Eq-Comparison:T41 Temporal-Period:T42
 T42	Eq-Temporal-Period 516 518	on
-A9	Eq-Temporal-Period-Value T42 present
 T43	Modifier 519 527	systemic
-E22	Modifier:T43 Modifies:T4
 T44	Procedure 565 580	regional blocks
-E23	Procedure:T44 Name:T45
 T45	Procedure-Name 565 580	regional blocks
 T46	Negation 544 554	precluding
-E24	Negation:T46 Negates:E23
-R2	Caused-By Arg1:E24 Arg2:E3	
+A1	Eq-Operator-Value T11 GT
+A2	Eq-Temporal-Period-Value T15 future
+A3	Location-Value T9 hospital
+A4	Encounter-Type-Value T16 inpatient
+A5	Assertion-Type-Value E6 hypothetical
+A6	Eq-Temporal-Period-Value T19 present
+A7	Eq-Operator-Value T24 GTEQ
+A8	Eq-Temporal-Period-Value T40 present
+A9	Eq-Temporal-Period-Value T42 present
+A10	Observation-Type-Value T30 clinical-score
+A11	Acuteness-Type-Value T22 chronic
+R1	Treatment-For Arg1:E12 Arg2:E9
+R2	Caused-By Arg1:E24 Arg2:E3

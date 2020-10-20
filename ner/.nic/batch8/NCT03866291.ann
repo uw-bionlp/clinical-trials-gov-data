@@ -1,0 +1,15 @@
+T2	Condition 36 45	diarrhoea
+E2	Condition:T2 Name:T5
+T3	Negation 116 118	no
+E3	Negation:T3 Negates:E4
+T5	Condition-Name 36 45	diarrhoea
+T1	Modifier 25 35	Travellers
+E1	Modifier:T1 Modifies:T5
+T6	Location 51 58	foreign
+A1	Location-Value T6 residence
+T7	Location 94 101	foreign
+A3	Location-Value T7 residence
+T4	Coreference 119 127	symptoms
+E4	Coreference:T4 Refers-To:E2
+T8	And 112 115	but
+E5	And:T8 Arg:T7 Arg2:E3

@@ -1,0 +1,36 @@
+T1	Or 75 77	or
+E1	Or:T1 Arg:T14 Arg2:E2
+T2	Modifier 78 85	chronic
+E2	Modifier:T2 Modifies:T15
+T3	Condition 86 117	synthetic cannabinoids toxicity
+E3	Condition:T3 Name:T15 Severity:T14
+T4	Study 142 147	study
+E4	Study:T4 
+T5	Study 266 271	study
+E5	Study:T5 
+T6	Eq-Comparison 317 324	history
+E6	Eq-Comparison:T6 Temporal-Period:T17
+T7	Condition 340 347	disease
+E7	Condition:T7 Name:T18 Temporality:E6
+T8	Modifier 349 354	renal
+E8	Modifier:T8 Modifies:T18
+T9	Or 355 358	and
+E9	Or:T9 Arg:E8 Arg2:E10
+T10	Modifier 359 366	hepatic
+E10	Modifier:T10 Modifies:T18
+T12	Other 429 434	other
+E12	Other:T12 Is-Other:E13
+T13	Drug 435 440	drugs
+E13	Drug:T13 
+T14	Severity 69 74	acute
+A1	Severity-Value T14 severe
+T15	Condition-Name 86 117	synthetic cannabinoids toxicity
+T17	Eq-Temporal-Period 317 324	history
+A2	Eq-Temporal-Period-Value T17 past
+T18	Condition-Name 340 347	disease
+T16	Modifier 332 339	chronic
+E14	Modifier:T16 Modifies:T18
+T11	Condition-Name 420 425	Abuse
+T19	Condition 420 425	Abuse
+E11	Condition:T19 Name:T11
+R1	Caused-By Arg1:E11 Arg2:E13	

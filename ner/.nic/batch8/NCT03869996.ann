@@ -1,0 +1,109 @@
+T1	Modifier 46 50	knee
+E1	Modifier:T1 Modifies:T27
+T2	Condition 51 65	osteoarthritis
+E2	Condition:T2 Name:T27
+T3	Assertion 67 79	eligible for
+E3	Assertion:T3 Asserted:E5
+A1	Assertion-Type-Value E3 hypothetical
+T4	Modifier 80 87	primary
+E4	Modifier:T4 Modifies:T28
+T5	Procedure 88 111	total knee arthroplasty
+E5	Procedure:T5 Name:T28
+T6	Observation 117 120	BMI
+E6	Observation:T6 Name:T29 Eq-Comparison:E7
+T7	Eq-Comparison 121 125	< 32
+E7	Eq-Comparison:T7 Operator:T30 Value:T31
+T8	Observation 131 150	Time up ang go test
+E8	Observation:T8 Name:T32 Eq-Comparison:E9
+T9	Eq-Comparison 151 165	</= 12 seconds
+E9	Eq-Comparison:T9 Operator:T34 Value:T35 Temporal-Unit:T36
+T10	Condition 171 208	American Society of Anesthesiologists
+E10	Condition:T10 Name:T37
+T11	Condition 248 251	ASA
+E11	Condition:T11 Name:T38 Stage:E12
+T12	Eq-Comparison 253 258	</= 2
+E12	Eq-Comparison:T12 Operator:T39 Value:T40
+T13	Temporal-Connection 264 267	pre
+E13	Temporal-Connection:T13 Arg:E27 Arg2:E14
+A2	Temporal-Connection-Type-Value E13 before
+T14	Observation 277 287	hemoglobin
+E14	Observation:T14 Name:T41
+T15	Observation 289 291	HB
+E15	Observation:T15 Name:T42 Eq-Comparison:E16
+T16	Eq-Comparison 293 301	>13 g/dl
+E16	Eq-Comparison:T16 Operator:T43 Value:T44 Unit:T45 Per:T46
+T17	Assertion 316 328	eligible for
+E17	Assertion:T17 Asserted:E18
+A3	Assertion-Type-Value E17 hypothetical
+T18	Procedure 329 346	spinal anesthesia
+E18	Procedure:T18 Name:T47
+T19	Condition 402 422	psychiatric diseases
+E19	Condition:T19 Name:T48
+T20	Temporal-Connection 428 431	pre
+E20	Temporal-Connection:T20 Arg:E28 Arg2:E21
+A4	Temporal-Connection-Type-Value E20 before
+T21	Procedure 448 456	crutches
+E21	Procedure:T21 Name:T49
+T22	Condition 462 465	ASA
+E22	Condition:T22 Name:T50 Stage:E23
+T23	Eq-Comparison 466 469	> 3
+E23	Eq-Comparison:T23 Operator:T51 Value:T52
+T24	Temporal-Connection 475 478	pre
+E24	Temporal-Connection:T24 Arg:E29 Arg2:E25
+A5	Temporal-Connection-Type-Value E24 before
+T25	Observation 488 490	HB
+E25	Observation:T25 Name:T53 Eq-Comparison:E26
+T26	Eq-Comparison 491 500	< 13 g/dl
+E26	Eq-Comparison:T26 Operator:T54 Value:T55 Unit:T56 Per:T57
+T27	Condition-Name 51 65	osteoarthritis
+T28	Procedure-Name 88 111	total knee arthroplasty
+T29	Observation-Name 117 120	BMI
+A6	Observation-Type-Value T29 vital
+T30	Eq-Operator 121 122	<
+A7	Eq-Operator-Value T30 LT
+T31	Eq-Value 123 125	32
+T32	Observation-Name 131 150	Time up ang go test
+T34	Eq-Operator 151 154	</=
+A9	Eq-Operator-Value T34 LTEQ
+T35	Eq-Value 155 157	12
+T36	Eq-Temporal-Unit 158 165	seconds
+T37	Condition-Name 171 208	American Society of Anesthesiologists
+T38	Condition-Name 248 251	ASA
+T39	Eq-Operator 253 256	</=
+A10	Eq-Operator-Value T39 LTEQ
+T40	Eq-Value 257 258	2
+T41	Observation-Name 277 287	hemoglobin
+A11	Observation-Type-Value T41 lab
+T42	Observation-Name 289 291	HB
+T43	Eq-Operator 293 294	>
+A12	Eq-Operator-Value T43 GT
+T44	Eq-Value 294 296	13
+T45	Eq-Unit 297 298	g
+T46	Eq-Unit 299 301	dl
+T47	Procedure-Name 329 346	spinal anesthesia
+T48	Condition-Name 402 422	psychiatric diseases
+T49	Procedure-Name 448 456	crutches
+T50	Condition-Name 462 465	ASA
+T51	Eq-Operator 466 467	>
+A14	Eq-Operator-Value T51 GT
+T52	Eq-Value 468 469	3
+T53	Observation-Name 488 490	HB
+A15	Observation-Type-Value T53 lab
+T54	Eq-Operator 491 492	<
+A16	Eq-Operator-Value T54 LT
+T55	Eq-Value 493 495	13
+T56	Eq-Unit 496 497	g
+T57	Eq-Unit 498 500	dl
+R1	Treatment-For Arg1:E5 Arg2:E2	
+A8	Eq-Temporal-Unit-Value T36 second
+R2	Abbrev-Of Arg1:E11 Arg2:E10	
+R3	Abbrev-Of Arg1:E15 Arg2:E14	
+T33	Procedure 267 276	operative
+E27	Procedure:T33 Name:T58
+T58	Procedure-Name 267 276	operative
+T59	Procedure 431 440	operative
+E28	Procedure:T59 Name:T60
+T60	Procedure-Name 431 440	operative
+T61	Procedure 478 487	operative
+E29	Procedure:T61 Name:T62
+T62	Procedure-Name 478 487	operative

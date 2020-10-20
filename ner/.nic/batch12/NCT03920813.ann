@@ -1,0 +1,101 @@
+T1	Procedure 238 257	maintenance therapy
+T2	Procedure-Name 238 257	maintenance therapy
+E1	Procedure:T1 Name:T2
+T3	Procedure 132 144	chemotherapy
+T4	Procedure-Name 132 144	chemotherapy
+E3	Procedure:T3 Name:T4 Temporality:E4
+T5	Procedure 189 201	chemotherapy
+T6	Procedure-Name 189 201	chemotherapy
+E5	Procedure:T5 Name:T6
+T9	Eq-Operator 283 284	>
+A2	Eq-Operator-Value T9 GT
+T10	Eq-Operator 311 312	≥
+A3	Eq-Operator-Value T10 GTEQ
+T11	Eq-Operator 490 491	≥
+A4	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 513 514	<
+A5	Eq-Operator-Value T12 LT
+T13	Eq-Operator 556 557	≥
+A6	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 286 291	weeks
+A7	Eq-Temporal-Unit-Value T14 week
+T15	Eq-Temporal-Unit 315 321	months
+A8	Eq-Temporal-Unit-Value T15 month
+T16	Age 509 512	age
+E6	Age:T16 Eq-Comparison:E10
+T18	Eq-Value 284 285	4
+T19	Eq-Value 313 314	6
+T21	Eq-Value 492 493	1
+T23	Eq-Value 515 516	6
+T24	Eq-Value 558 561	300
+T25	Eq-Comparison 283 291	>4 weeks
+E7	Eq-Comparison:T25 Operator:T9 Temporal-Unit:T14 Value:T18
+T26	Eq-Comparison 311 321	≥ 6 months
+E8	Eq-Comparison:T26 Operator:T10 Temporal-Unit:T15 Value:T19
+T27	Eq-Comparison 490 494	≥ 1%
+E9	Eq-Comparison:T27 Operator:T11 Value:T21 Unit:T46
+T28	Eq-Comparison 513 522	< 6 month
+E10	Eq-Comparison:T28 Operator:T12 Value:T23 Temporal-Unit:T22
+T29	Eq-Comparison 550 567	count ≥ 300×109/L
+E11	Eq-Comparison:T29 Operator:T13 Value:T24 Unit:T52 Per:T53
+T30	Condition 59 87	Acute Lymphoblastic Leukemia
+E2	Condition:T30 Name:T31
+T31	Condition-Name 59 87	Acute Lymphoblastic Leukemia
+T32	Life-Stage-And-Gender 93 102	Childhood
+A9	Life-Stage-And-Gender-Type T32 child
+T33	Eq-Comparison 121 131	undergoing
+E4	Eq-Comparison:T33 Temporal-Period:T34
+T34	Eq-Temporal-Period 121 131	undergoing
+A10	Eq-Temporal-Period-Value T34 present
+T35	And 112 115	who
+E12	And:T35 Arg:T32 Arg2:E3
+T36	Temporal-Connection 169 174	after
+E13	Temporal-Connection:T36 Arg:E14 Arg2:E5
+A11	Temporal-Connection-Type-Value E13 after
+T37	Encounter 159 168	follow-up
+E14	Encounter:T37 Type:T38
+T38	Encounter-Type 159 168	follow-up
+A12	Encounter-Type-Value T38 outpatient
+T39	Or 145 147	or
+E15	Or:T39 Arg:E3 Arg2:E14
+T40	Modifier 272 276	oral
+E16	Modifier:T40 Modifies:E17
+T7	Drug 277 281	6-MP
+E17	Drug:T7 Name:T8 Duration:E7 Duration2:E8
+T8	Drug-Name 277 281	6-MP
+R1	Using Arg1:E1 Arg2:E17	
+T17	Condition 447 450	ALL
+E18	Condition:T17 Name:T20
+T20	Condition-Name 447 450	ALL
+T41	Risk 442 446	risk
+E19	Risk:T41 Risk-For:E18 Polarity:T42
+T42	Polarity 437 441	high
+A1	Polarity-Value T42 high
+T43	Coreference 464 484	higher-risk features
+E20	Coreference:T43 Refers-To:E18
+T44	Observation 486 489	MRD
+E21	Observation:T44 Name:T45 Eq-Comparison:E9
+T45	Observation-Name 486 489	MRD
+T46	Eq-Unit 493 494	%
+R2	Equivalent-To Arg1:E21 Arg2:E20	
+T22	Eq-Temporal-Unit 517 522	month
+A13	Eq-Temporal-Unit-Value T22 month
+T47	Or 506 508	or
+E22	Or:T47 Arg:E21 Arg2:E6
+T48	Observation 527 543	white blood cell
+E23	Observation:T48 Name:T49
+T49	Observation-Name 527 543	white blood cell
+A14	Observation-Type-Value T49 lab
+T50	Observation 545 548	WBC
+E24	Observation:T50 Name:T51 Eq-Comparison:E11
+T51	Observation-Name 545 548	WBC
+A15	Observation-Type-Value T51 lab
+R3	Abbrev-Of Arg1:E24 Arg2:E23	
+T52	Eq-Unit 561 565	×109
+T53	Eq-Unit 566 567	L
+T54	And 523 526	and
+E25	And:T54 Arg:E6 Arg2:E23
+T55	Eq-Comparison 216 224	received
+E26	Eq-Comparison:T55 Temporal-Period:T56
+T56	Eq-Temporal-Period 216 224	received
+A16	Eq-Temporal-Period-Value T56 past

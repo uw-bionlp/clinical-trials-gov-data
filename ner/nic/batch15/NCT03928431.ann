@@ -1,165 +1,165 @@
-T1	Eq-Comparison 569 586	prior to 37 weeks
 E1	Eq-Comparison:T1 Temporal-Period:T2 Value:T57 Temporal-Unit:T58
-T2	Eq-Temporal-Period 569 574	prior
-A1	Eq-Temporal-Period-Value T2 past
-T3	Family-Member 25 32	Infants
-E2	Family-Member:T3 
-A2	Family-Member-Type E2 child
-T4	Family-Member 44 51	mothers
+E2	Family-Member:T3
 E3	Family-Member:T4 Has:E4 Has2:E2
-A3	Family-Member-Type E3 mother
-T5	Condition 36 43	healthy
 E4	Condition:T5 Name:T6
+E5	Condition:T7 Name:T8
+E6	Modifier:T9 Modifies:T8
+E7	Family-Member:T10 Has:T11
+E8	Observation:T13 Name:T14 Eq-Comparison:E9
+E9	Eq-Comparison:T15 Operator:T16 Value:T17
+E10	Birth:T18
+E11	Temporal-Connection:T19 Arg:E8 Arg2:E10
+E12	Family-Member:T20
+E13	And:T21 Arg:E3 Arg2:E5
+E14	Family-Member:T22 Has:E12 Has2:E15
+E15	Condition:T23 Name:T24
+E16	Condition:T25 Name:T26
+E17	Modifier:T27 Modifies:T26
+E18	Or:T28 Arg:E15 Arg2:E16
+E19	Family-Member:T29 Has:E23
+E20	Eq-Comparison:T30 Operator:T31 Value:T32 Temporal-Unit:T33
+E21	Eq-Comparison:T34 Operator:T35 Value:T36 Temporal-Unit:T37
+E22	Or:T38 Arg:E20 Arg2:E21
+E23	Age:T39 Eq-Comparison:E21
+E24	Condition:T40 Name:T41
+E25	Condition:T42 Name:T43
+E26	Condition:T44 Name:T45
+E27	Condition:T46 Name:T47
+E28	Condition:T48 Name:T49
+E29	Condition:T50 Name:T51
+E30	Temporal-Connection:T52 Arg:E28 Arg2:E29
+E31	Or:T53 Arg:E27 Arg2:E28
+E32	Family-Member:T54
+E33	Observation:T55 Name:T56 Eq-Comparison:E1
+E34	Family-Member:T59 Has:E35
+E35	Condition:T60 Name:T61 Polarity:T62
+E36	Condition:T63 Name:T64
+E37	Condition:T65 Name:T66
+E38	Observation:T67 Name:T68 Eq-Comparison:E39
+E39	Eq-Comparison:T69 Operator:T70 Value:T71
+E40	Birth:T72
+E41	Temporal-Connection:T73 Arg:E38 Arg2:E40
+E42	Family-Member:T74 Has:E43
+E43	Observation:T75 Name:T76 Specimen:T77 Polarity:T87
+E44	Organism:T78 Name:T79
+E45	Organism:T80 Name:T81
+E46	Organism:T82 Name:T83
+E47	Organism:T84 Name:T85
+E48	Or:T86 Arg:E46 Arg2:E47
+T1	Eq-Comparison 569 586	prior to 37 weeks
+T2	Eq-Temporal-Period 569 574	prior
+T3	Family-Member 25 32	Infants
+T4	Family-Member 44 51	mothers
+T5	Condition 36 43	healthy
 T6	Condition-Name 36 43	healthy
 T7	Condition 71 82	pregnancies
-E5	Condition:T7 Name:T8
 T8	Condition-Name 71 82	pregnancies
 T9	Modifier 57 70	uncomplicated
-E6	Modifier:T9 Modifies:T8
 T10	Family-Member 92 99	mothers
-E7	Family-Member:T10 Has:T11
-A4	Family-Member-Type E7 mother
 T11	Language 172 179	Swedish
 T12	Language 219 226	Swedish
 T13	Observation 294 304	vaginal pH
-E8	Observation:T13 Name:T14 Eq-Comparison:E9
 T14	Observation-Name 294 304	vaginal pH
-A5	Observation-Type-Value T14 lab
 T15	Eq-Comparison 305 308	≤ 4
-E9	Eq-Comparison:T15 Operator:T16 Value:T17
 T16	Eq-Operator 305 306	≤
-A6	Eq-Operator-Value T16 LTEQ
 T17	Eq-Value 307 308	4
 T18	Birth 324 329	birth
-E10	Birth:T18 
 T19	Temporal-Connection 309 311	at
-E11	Temporal-Connection:T19 Arg:E8 Arg2:E10
-A7	Temporal-Connection-Type-Value E11 during
 T20	Family-Member 356 363	Infants
-E12	Family-Member:T20 
-A8	Family-Member-Type E12 child
 T21	And 52 56	with
-E13	And:T21 Arg:E3 Arg2:E5
 T22	Family-Member 367 374	mothers
-E14	Family-Member:T22 Has:E12 Has2:E15
-A9	Family-Member-Type E14 mother
 T23	Condition 380 393	pre-eclampsia
-E15	Condition:T23 Name:T24
 T24	Condition-Name 380 393	pre-eclampsia
 T25	Condition 409 420	pregnancies
-E16	Condition:T25 Name:T26
 T26	Condition-Name 409 420	pregnancies
 T27	Modifier 397 408	complicated
-E17	Modifier:T27 Modifies:T26
 T28	Or 394 396	or
-E18	Or:T28 Arg:E15 Arg2:E16
 T29	Family-Member 422 429	mothers
-E19	Family-Member:T29 Has:E23
-A10	Family-Member-Type E19 mother
 T30	Eq-Comparison 430 439	<18 years
-E20	Eq-Comparison:T30 Operator:T31 Value:T32 Temporal-Unit:T33
 T31	Eq-Operator 430 431	<
-A11	Eq-Operator-Value T31 LT
 T32	Eq-Value 431 433	18
 T33	Eq-Temporal-Unit 434 439	years
-A12	Eq-Temporal-Unit-Value T33 year
 T34	Eq-Comparison 443 452	>40 years
-E21	Eq-Comparison:T34 Operator:T35 Value:T36 Temporal-Unit:T37
 T35	Eq-Operator 443 444	>
-A13	Eq-Operator-Value T35 GT
 T36	Eq-Value 444 446	40
 T37	Eq-Temporal-Unit 447 452	years
-A14	Eq-Temporal-Unit-Value T37 year
 T38	Or 440 442	or
-E22	Or:T38 Arg:E20 Arg2:E21
 T39	Age 456 459	age
-E23	Age:T39 Eq-Comparison:E21
 T40	Condition 461 483	genital herpes simplex
-E24	Condition:T40 Name:T41
 T41	Condition-Name 461 483	genital herpes simplex
 T42	Condition 485 498	genital warts
-E25	Condition:T42 Name:T43
 T43	Condition-Name 485 498	genital warts
 T44	Condition 500 503	HIV
-E26	Condition:T44 Name:T45
 T45	Condition-Name 500 503	HIV
 T46	Condition 505 516	Hepatitis B
-E27	Condition:T46 Name:T47
 T47	Condition-Name 505 516	Hepatitis B
 T48	Condition 520 533	complications
-E28	Condition:T48 Name:T49
 T49	Condition-Name 520 533	complications
 T50	Condition 541 549	delivery
-E29	Condition:T50 Name:T51
 T51	Condition-Name 541 549	delivery
 T52	Temporal-Connection 534 540	during
-E30	Temporal-Connection:T52 Arg:E28 Arg2:E29
-A15	Temporal-Connection-Type-Value E30 during
 T53	Or 517 519	or
-E31	Or:T53 Arg:E27 Arg2:E28
 T54	Family-Member 551 558	infants
-E32	Family-Member:T54 
-A16	Family-Member-Type E32 child
 T55	Observation 590 599	gestation
-E33	Observation:T55 Name:T56 Eq-Comparison:E1
 T56	Observation-Name 590 599	gestation
-A17	Observation-Type-Value T56 measurement
 T57	Eq-Value 578 580	37
 T58	Eq-Temporal-Unit 581 586	weeks
-A18	Eq-Temporal-Unit-Value T58 week
 T59	Family-Member 660 667	Mothers
-E34	Family-Member:T59 Has:E35
-A19	Family-Member-Type E34 mother
 T60	Condition 680 701	Group B Streptococcus
-E35	Condition:T60 Name:T61 Polarity:T62
 T61	Condition-Name 680 701	Group B Streptococcus
 T62	Polarity 668 676	positive
-A20	Polarity-Value T62 positive
 T63	Condition 703 724	Group A Streptococcus
-E36	Condition:T63 Name:T64
 T64	Condition-Name 703 724	Group A Streptococcus
 T65	Condition 726 745	bacterial vaginosis
-E37	Condition:T65 Name:T66
 T66	Condition-Name 726 745	bacterial vaginosis
 T67	Observation 747 757	vaginal pH
-E38	Observation:T67 Name:T68 Eq-Comparison:E39
 T68	Observation-Name 747 757	vaginal pH
-A21	Observation-Type-Value T68 lab
 T69	Eq-Comparison 758 761	> 4
-E39	Eq-Comparison:T69 Operator:T70 Value:T71
 T70	Eq-Operator 758 759	>
-A22	Eq-Operator-Value T70 GT
 T71	Eq-Value 760 761	4
 T72	Birth 777 782	birth
-E40	Birth:T72 
 T73	Temporal-Connection 762 764	at
-E41	Temporal-Connection:T73 Arg:E38 Arg2:E40
-A23	Temporal-Connection-Type-Value E41 during
 T74	Family-Member 784 791	Mothers
-E42	Family-Member:T74 Has:E43
-A24	Family-Member-Type E42 mother
 T75	Observation 803 810	samples
-E43	Observation:T75 Name:T76 Specimen:T77 Polarity:T87
 T76	Observation-Name 803 810	samples
-A25	Observation-Type-Value T76 lab
 T77	Observation-Specimen 797 802	fecal
 T78	Organism 824 834	Salmonella
-E44	Organism:T78 Name:T79
 T79	Organism-Name 824 834	Salmonella
 T80	Organism 836 844	Shigella
-E45	Organism:T80 Name:T81
 T81	Organism-Name 836 844	Shigella
 T82	Organism 846 859	Campylobacter
-E46	Organism:T82 Name:T83
 T83	Organism-Name 846 859	Campylobacter
 T84	Organism 863 871	Yersinia
-E47	Organism:T84 Name:T85
 T85	Organism-Name 863 871	Yersinia
 T86	Or 860 862	or
-E48	Or:T86 Arg:E46 Arg2:E47
 T87	Polarity 811 819	positive
+A1	Eq-Temporal-Period-Value T2 past
+A2	Family-Member-Type E2 child
+A3	Family-Member-Type E3 mother
+A4	Family-Member-Type E7 mother
+A5	Observation-Type-Value T14 lab
+A6	Eq-Operator-Value T16 LTEQ
+A7	Temporal-Connection-Type-Value E11 during
+A8	Family-Member-Type E12 child
+A9	Family-Member-Type E14 mother
+A10	Family-Member-Type E19 mother
+A11	Eq-Operator-Value T31 LT
+A12	Eq-Temporal-Unit-Value T33 year
+A13	Eq-Operator-Value T35 GT
+A14	Eq-Temporal-Unit-Value T37 year
+A15	Temporal-Connection-Type-Value E30 during
+A16	Family-Member-Type E32 child
+A17	Observation-Type-Value T56 measurement
+A18	Eq-Temporal-Unit-Value T58 week
+A19	Family-Member-Type E34 mother
+A20	Polarity-Value T62 positive
+A21	Observation-Type-Value T68 lab
+A22	Eq-Operator-Value T70 GT
+A23	Temporal-Connection-Type-Value E41 during
+A24	Family-Member-Type E42 mother
+A25	Observation-Type-Value T76 lab
 A26	Polarity-Value T87 positive
-R1	Found-By Arg1:E44 Arg2:E43	
-R2	Found-By Arg1:E45 Arg2:E43	
-R3	Found-By Arg1:E46 Arg2:E43	
-R4	Found-By Arg1:E47 Arg2:E43	
+R1	Found-By Arg1:E44 Arg2:E43
+R2	Found-By Arg1:E45 Arg2:E43
+R3	Found-By Arg1:E46 Arg2:E43
+R4	Found-By Arg1:E47 Arg2:E43

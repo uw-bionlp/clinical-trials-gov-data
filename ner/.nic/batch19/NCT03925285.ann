@@ -1,0 +1,236 @@
+T1	Procedure 85 103	surgical resection
+T2	Procedure-Name 85 103	surgical resection
+E1	Procedure:T1 Name:T2 Temporality:E6
+T3	Procedure 234 244	procedures
+E3	Procedure:T3 
+T5	Procedure 953 982	monoclonal antibody therapies
+T6	Procedure-Name 953 982	monoclonal antibody therapies
+E5	Procedure:T5 Name:T6
+T7	Condition 654 678	cerebrovascular accident
+T8	Condition-Name 654 678	cerebrovascular accident
+E7	Condition:T7 Name:T8
+T9	Condition 745 760	unstable angina
+T10	Condition-Name 745 760	unstable angina
+E9	Condition:T9 Name:T10 Temporality:E23
+T11	Condition 701 714	heart failure
+T12	Condition-Name 701 714	heart failure
+E11	Condition:T11 Name:T12
+T13	Condition 728 741	liver disease
+T14	Condition-Name 728 741	liver disease
+E13	Condition:T13 Name:T14 Severity:T82
+T15	Condition 827 839	hypertension
+T16	Condition-Name 827 839	hypertension
+E15	Condition:T15 Name:T16
+T17	Condition 919 928	reactions
+T18	Condition-Name 919 928	reactions
+E17	Condition:T17 Name:T18 Temporality:E28
+T19	Procedure 1324 1342	surgical resection
+T20	Procedure-Name 1324 1342	surgical resection
+E19	Procedure:T19 Name:T20
+T21	Eq-Operator 114 115	≥
+A1	Eq-Operator-Value T21 GTEQ
+T22	Eq-Operator 456 462	within
+A2	Eq-Operator-Value T22 LTEQ
+T23	Eq-Operator 761 767	within
+A3	Eq-Operator-Value T23 LTEQ
+T24	Eq-Operator 1214 1223	less than
+A4	Eq-Operator-Value T24 LT
+T25	Eq-Operator 1365 1366	<
+A5	Eq-Operator-Value T25 LT
+T26	Eq-Temporal-Unit 119 124	years
+A6	Eq-Temporal-Unit-Value T26 year
+T27	Eq-Temporal-Unit 466 470	days
+A7	Eq-Temporal-Unit-Value T27 day
+T28	Eq-Temporal-Unit 770 776	months
+A8	Eq-Temporal-Unit-Value T28 month
+T29	Eq-Temporal-Unit 1228 1233	years
+A9	Eq-Temporal-Unit-Value T29 year
+T30	Eq-Temporal-Unit 1370 1375	weeks
+A10	Eq-Temporal-Unit-Value T30 week
+T31	Age 110 113	Age
+E20	Age:T31 Eq-Comparison:E21
+T32	Eq-Value 116 118	18
+T33	Eq-Value 463 465	30
+T34	Eq-Value 768 769	6
+T35	Eq-Value 1367 1369	12
+T36	Eq-Comparison 114 124	≥ 18 years
+E21	Eq-Comparison:T36 Operator:T21 Temporal-Unit:T26 Value:T32
+T37	Eq-Comparison 456 470	within 30 days
+E22	Eq-Comparison:T37 Operator:T22 Temporal-Unit:T27 Value:T33
+T38	Eq-Comparison 761 776	within 6 months
+E23	Eq-Comparison:T38 Operator:T23 Temporal-Unit:T28 Value:T34
+T39	Eq-Comparison 1365 1375	< 12 weeks
+E24	Eq-Comparison:T39 Operator:T25 Temporal-Unit:T30 Value:T35
+T42	Eq-Comparison 620 627	History
+E26	Eq-Comparison:T42 Temporal-Period:T43
+T43	Eq-Temporal-Period 620 627	History
+A12	Eq-Temporal-Period-Value T43 past
+T44	Eq-Comparison 856 863	current
+E27	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 856 863	current
+A13	Eq-Temporal-Period-Value T45 present
+T46	Eq-Comparison 899 906	History
+E28	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 899 906	History
+A14	Eq-Temporal-Period-Value T47 past
+T48	Eq-Comparison 423 431	Received
+E29	Eq-Comparison:T48 Temporal-Period:T49
+T49	Eq-Temporal-Period 423 431	Received
+A15	Eq-Temporal-Period-Value T49 past
+T50	Temporal-Connection 471 476	prior
+E30	Temporal-Connection:T50 Arg:E22 Arg2:E37
+T52	Temporal-Connection 777 782	prior
+E31	Temporal-Connection:T52 Arg:E23 Arg2:E46
+T54	Procedure 25 31	Biopsy
+E2	Procedure:T54 Name:T55
+T55	Procedure-Name 25 31	Biopsy
+T56	Condition 55 59	SNIP
+E4	Condition:T56 Name:T57
+T57	Condition-Name 55 59	SNIP
+R1	Found-By Arg1:E4 Arg2:E2	
+T58	Eq-Comparison 64 73	scheduled
+E6	Eq-Comparison:T58 Temporal-Period:T59
+T59	Eq-Temporal-Period 64 73	scheduled
+A18	Eq-Temporal-Period-Value T59 future
+T60	And 60 63	and
+E8	And:T60 Arg:E4 Arg2:E1
+T61	Condition 162 180	Mentally competent
+E10	Condition:T61 Name:T62
+T62	Condition-Name 162 180	Mentally competent
+T4	Study 228 233	study
+E12	Study:T4 Study-Of:E3
+T63	Assertion 196 212	able and willing
+E14	Assertion:T63 Asserted:E3
+A19	Assertion-Type-Value E14 hypothetical
+T64	Condition 294 304	conditions
+E16	Condition:T64 Name:T65
+T65	Condition-Name 294 304	conditions
+T66	Modifier 282 293	psychiatric
+E18	Modifier:T66 Modifies:T65
+T67	Modifier 271 278	Medical
+E32	Modifier:T67 Modifies:T65
+T68	Or 279 281	or
+E33	Or:T68 Arg:E32 Arg2:E18
+T40	Condition 398 416	medical conditions
+E25	Condition:T40 
+T41	Modifier 374 397	Concurrent uncontrolled
+E34	Modifier:T41 Modifies:E25
+T69	Drug 451 455	drug
+E35	Drug:T69 Temporality:E29 Temporality2:E22
+T70	Study 435 450	investigational
+E36	Study:T70 Study-Of:E35
+A11	Temporal-Connection-Type-Value E30 before
+T51	Drug 492 514	bevacizumab-IRDye800CW
+E37	Drug:T51 Name:T71
+T71	Drug-Name 492 514	bevacizumab-IRDye800CW
+T72	Condition 521 527	Tumors
+E38	Condition:T72 Name:T73
+T73	Condition-Name 521 527	Tumors
+T74	Procedure 576 591	in vivo imaging
+E39	Procedure:T74 Name:T75
+T75	Procedure-Name 576 591	in vivo imaging
+T76	Negation 598 601	not
+E40	Negation:T76 Negates:E39
+T77	Assertion 592 597	would
+E41	Assertion:T77 Asserted:E40
+A16	Assertion-Type-Value E41 hypothetical
+T78	Modifier 531 536	sites
+E42	Modifier:T78 Modifies:T73
+R2	Treatment-For Arg1:E39 Arg2:E38	
+T79	Condition 631 652	myocardial infarction
+E43	Condition:T79 Name:T80 Temporality:E26
+T80	Condition-Name 631 652	myocardial infarction
+T81	Modifier 680 700	uncontrolled cardiac
+E44	Modifier:T81 Modifies:T12
+T82	Severity 716 727	significant
+A20	Severity-Value T82 severe
+T83	Or 742 744	or
+E45	Or:T83 Arg:E13 Arg2:E9
+A17	Temporal-Connection-Type-Value E31 before
+T53	Study 786 796	enrollment
+E46	Study:T53 
+T84	Modifier 803 826	Inadequately controlled
+E47	Modifier:T84 Modifies:T16
+T85	Drug 864 892	antihypertensive medications
+E48	Drug:T85 Name:T86 Temporality:E27
+T86	Drug-Name 864 892	antihypertensive medications
+T87	Drug 932 943	bevacizumab
+E49	Drug:T87 Name:T88
+T88	Drug-Name 932 943	bevacizumab
+T89	Other 947 952	other
+E50	Other:T89 Is-Other:E5
+T90	Or 944 946	or
+E51	Or:T90 Arg:E49 Arg2:E5
+T91	Modifier 910 918	infusion
+E52	Modifier:T91 Modifies:T18
+R3	Caused-By Arg1:E17 Arg2:E49	
+R4	Caused-By Arg1:E17 Arg2:E5	
+T92	Condition 989 997	Pregnant
+E53	Condition:T92 Name:T93
+T93	Condition-Name 989 997	Pregnant
+T94	Condition 1001 1010	lactating
+E54	Condition:T94 Name:T95
+T95	Condition-Name 1001 1010	lactating
+T96	Or 998 1000	or
+E55	Or:T96 Arg:E53 Arg2:E54
+T97	Life-Stage-And-Gender 1011 1016	women
+A21	Life-Stage-And-Gender-Type T97 female
+R5	If-Then Arg1:T97 Arg2:E54	
+T98	Observation 1046 1060	pregnancy test
+E56	Observation:T98 Name:T99 Polarity:T100
+T99	Observation-Name 1046 1060	pregnancy test
+A22	Observation-Type-Value T99 lab
+T100	Polarity 1037 1045	negative
+A23	Polarity-Value T100 negative
+T101	Condition 1092 1114	childbearing potential
+E57	Condition:T101 Name:T102
+T102	Condition-Name 1092 1114	childbearing potential
+T103	Life-Stage-And-Gender 1083 1088	women
+A24	Life-Stage-And-Gender-Type T103 female
+R6	If-Then Arg1:T103 Arg2:E57	
+R7	If-Then Arg1:T103 Arg2:E56	
+T104	Life-Stage-And-Gender 1116 1121	Woman
+A25	Life-Stage-And-Gender-Type T104 female
+T105	Condition 1125 1147	childbearing potential
+E58	Condition:T105 Name:T106
+T106	Condition-Name 1125 1147	childbearing potential
+R8	If-Then Arg1:T104 Arg2:E58	
+T107	Condition 1152 1165	premenopausal
+E59	Condition:T107 Name:T108
+T108	Condition-Name 1152 1165	premenopausal
+T109	Life-Stage-And-Gender 1166 1171	women
+A26	Life-Stage-And-Gender-Type T109 female
+R9	If-Then Arg1:T109 Arg2:E59	
+T110	Condition 1177 1203	intact reproductive organs
+E60	Condition:T110 Name:T111
+T111	Condition-Name 1177 1203	intact reproductive organs
+T112	And 1172 1176	with
+E61	And:T112 Arg:T109 Arg2:E60
+T113	And 1148 1151	are
+E62	And:T113 Arg:E58 Arg2:E59
+T114	Life-Stage-And-Gender 1208 1213	women
+A27	Life-Stage-And-Gender-Type T114 female
+T115	And 1204 1207	and
+E63	And:T115 Arg:E60 Arg2:T114
+T116	Eq-Comparison 1214 1233	less than two years
+E64	Eq-Comparison:T116 Operator:T24 Value:T117 Temporal-Unit:T29
+T117	Eq-Value 1224 1227	two
+T118	Condition 1240 1249	menopause
+E65	Condition:T118 Name:T119
+T119	Condition-Name 1240 1249	menopause
+T120	Temporal-Connection 1234 1239	after
+E66	Temporal-Connection:T120 Arg:E64 Arg2:E65
+A28	Temporal-Connection-Type-Value E66 after
+T121	Observation 1256 1266	Lab values
+E67	Observation:T121 Name:T122
+T122	Observation-Name 1256 1266	Lab values
+A29	Observation-Type-Value T122 lab
+T123	Negation 1316 1323	prevent
+E68	Negation:T123 Negates:E19
+T124	Assertion 1310 1315	would
+E69	Assertion:T124 Asserted:E68
+A30	Assertion-Type-Value E69 hypothetical
+R10	Caused-By Arg1:E68 Arg2:E67	
+T125	Observation 1349 1364	Life expectancy
+E70	Observation:T125 Name:T126 Eq-Comparison:E24
+T126	Observation-Name 1349 1364	Life expectancy

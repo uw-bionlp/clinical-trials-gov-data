@@ -1,0 +1,29 @@
+T1	Procedure 55 67	hemodialysis
+T2	Procedure-Name 55 67	hemodialysis
+E1	Procedure:T1 Name:T2
+T3	Procedure 89 97	dialysis
+T4	Procedure-Name 89 97	dialysis
+E3	Procedure:T3 Name:T4 Temporality:E4 Location:T5
+T7	Language 25 32	English
+T8	Language 186 193	English
+T9	Life-Stage-And-Gender 43 48	adult
+A1	Life-Stage-And-Gender-Type T9 adult
+T10	Eq-Comparison 50 53	21+
+E2	Eq-Comparison:T10 Operator:T12 Value:T11
+T11	Eq-Value 50 52	21
+T12	Eq-Operator 52 53	+
+A2	Eq-Operator-Value T12 GTEQ
+R1	Equivalent-To Arg1:E2 Arg2:T9	
+T13	Eq-Comparison 81 88	receive
+E4	Eq-Comparison:T13 Temporal-Period:T14
+T14	Eq-Temporal-Period 81 88	receive
+A3	Eq-Temporal-Period-Value T14 present
+T15	And 77 80	who
+E6	And:T15 Arg:E1 Arg2:E3
+T5	Location 120 147	outpatient dialysis centers
+A4	Location-Value T5 clinic
+T6	Negation 176 179	not
+E5	Negation:T6 Negates:T8
+T16	Condition 195 203	deafness
+E7	Condition:T16 Name:T17
+T17	Condition-Name 195 203	deafness

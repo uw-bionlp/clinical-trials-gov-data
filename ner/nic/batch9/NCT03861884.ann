@@ -1,51 +1,51 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E6	Age:T10 Eq-Comparison:E13
+E2	Condition:T12 Name:T13
+E4	Procedure:T14 Name:T15
+E7	Procedure:T16 Name:T17
+E8	Or:T18 Arg:E5 Arg2:E4
+E9	Modifier:T19 Modifies:T2
+E10	Or:T20 Arg:E3 Arg2:E1
+E11	Condition:T21 Name:T22
+E12	Negation:T23 Negates:T7
+E13	Eq-Comparison:T24 Value:T11 Temporal-Unit:T9
+E14	Temporal-Connection:T25 Arg:T7 Arg2:E6
+E15	Condition:T26 Name:T27
+E16	Procedure:T8 Name:T28
+E17	Contraindication:T29 Contraindicates:E16
 T1	Condition 202 222	Cognitive Impairment
 T2	Condition-Name 202 222	Cognitive Impairment
-E1	Condition:T1 Name:T2
 T3	Condition 170 189	Alzheimer's Disease
 T4	Condition-Name 170 189	Alzheimer's Disease
-E3	Condition:T3 Name:T4
 T5	Procedure 85 92	genetic
 T6	Procedure-Name 85 92	genetic
-E5	Procedure:T5 Name:T6
 T7	Language 355 362	English
 T9	Eq-Temporal-Unit 376 381	years
-A1	Eq-Temporal-Unit-Value T9 year
 T10	Age 370 373	age
-E6	Age:T10 Eq-Comparison:E13
 T11	Eq-Value 374 375	5
 T12	Condition 134 168	Fronto-temporal Lobar Degeneration
-E2	Condition:T12 Name:T13
 T13	Condition-Name 134 168	Fronto-temporal Lobar Degeneration
 T14	Procedure 96 103	imaging
-E4	Procedure:T14 Name:T15
 T15	Procedure-Name 96 103	imaging
 T16	Procedure 71 83	pathological
-E7	Procedure:T16 Name:T17
 T17	Procedure-Name 71 83	pathological
 T18	Or 93 95	or
-E8	Or:T18 Arg:E5 Arg2:E4
-R1	Found-By Arg1:E2 Arg2:E4	
-R2	Found-By Arg1:E2 Arg2:E5	
-R3	Found-By Arg1:E2 Arg2:E7	
 T19	Modifier 193 201	Vascular
-E9	Modifier:T19 Modifies:T2
 T20	Or 190 192	or
-E10	Or:T20 Arg:E3 Arg2:E1
 T21	Condition 280 303	Lack of mental capacity
-E11	Condition:T21 Name:T22
 T22	Condition-Name 280 303	Lack of mental capacity
 T23	Negation 342 345	Not
-E12	Negation:T23 Negates:T7
 T24	Eq-Comparison 374 381	5 years
-E13	Eq-Comparison:T24 Value:T11 Temporal-Unit:T9
 T25	Temporal-Connection 363 369	before
-E14	Temporal-Connection:T25 Arg:T7 Arg2:E6
-A2	Temporal-Connection-Type-Value E14 before
 T26	Condition 388 407	Learning disability
-E15	Condition:T26 Name:T27
 T27	Condition-Name 388 407	Learning disability
 T8	Procedure 414 417	MRI
-E16	Procedure:T8 Name:T28
 T28	Procedure-Name 414 417	MRI
 T29	Contraindication 418 435	contraindications
-E17	Contraindication:T29 Contraindicates:E16
+A1	Eq-Temporal-Unit-Value T9 year
+A2	Temporal-Connection-Type-Value E14 before
+R1	Found-By Arg1:E2 Arg2:E4
+R2	Found-By Arg1:E2 Arg2:E5
+R3	Found-By Arg1:E2 Arg2:E7

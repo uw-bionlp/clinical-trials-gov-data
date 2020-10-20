@@ -1,0 +1,146 @@
+T3	Condition 103 112	pregnancy
+T4	Condition-Name 103 112	pregnancy
+E3	Condition:T3 Name:T4
+T5	Condition 782 795	pain disorder
+T6	Condition-Name 782 795	pain disorder
+E5	Condition:T5 Name:T6 Temporality:E39
+T11	Observation 130 139	gestation
+T12	Observation-Name 130 139	gestation
+E11	Observation:T11 Name:T12 Eq-Comparison:E24
+T13	Procedure 53 61	abortion
+T14	Procedure-Name 53 61	abortion
+E13	Procedure:T13 Name:T14
+T15	Procedure 535 543	abortion
+T16	Procedure-Name 535 543	abortion
+E15	Procedure:T15 Name:T16
+T18	Procedure 869 873	TENS
+T19	Procedure-Name 869 873	TENS
+E18	Procedure:T18 Name:T19 Temporality:E42
+T20	Condition 114 117	IUP
+T21	Condition-Name 114 117	IUP
+E20	Condition:T20 Name:T21
+T22	Observation 879 882	BMI
+T23	Observation-Name 879 882	BMI
+E22	Observation:T22 Name:T23 Eq-Comparison:E27
+A2	Observation-Type-Value T23 vital
+T24	Eq-Operator 119 120	<
+A3	Eq-Operator-Value T24 LT
+T25	Eq-Operator 234 235	>
+A4	Eq-Operator-Value T25 GT
+T26	Eq-Operator 247 271	equal to or greater than
+A5	Eq-Operator-Value T26 GTEQ
+T27	Eq-Operator 883 884	>
+A6	Eq-Operator-Value T27 GT
+T28	Eq-Temporal-Unit 124 128	days
+A7	Eq-Temporal-Unit-Value T28 day
+T29	Eq-Temporal-Unit 275 280	years
+A8	Eq-Temporal-Unit-Value T29 year
+T30	Eq-Temporal-Unit 835 839	days
+A9	Eq-Temporal-Unit-Value T30 day
+T31	Age 243 246	Age
+E23	Age:T31 Eq-Comparison:E26
+T32	Eq-Value 121 123	70
+T33	Eq-Value 236 237	4
+T34	Eq-Value 272 274	18
+T35	Eq-Value 832 834	30
+T36	Eq-Value 885 887	30
+T37	Eq-Comparison 119 128	< 70 days
+E24	Eq-Comparison:T37 Operator:T24 Temporal-Unit:T28 Value:T32
+T38	Eq-Comparison 228 237	score > 4
+E25	Eq-Comparison:T38 Operator:T25 Value:T33 Unit:T51
+T39	Eq-Comparison 247 280	equal to or greater than 18 years
+E26	Eq-Comparison:T39 Operator:T26 Temporal-Unit:T29 Value:T34
+T40	Eq-Comparison 883 887	> 30
+E27	Eq-Comparison:T40 Operator:T27 Value:T36
+T41	Drug 42 52	medication
+E2	Drug:T41 
+R1	Using Arg1:E13 Arg2:E2	
+T42	Assertion 34 41	seeking
+E4	Assertion:T42 Asserted:E13
+A10	Assertion-Type-Value E4 intention
+T43	Modifier 79 88	singleton
+E6	Modifier:T43 Modifies:T4
+T44	Modifier 69 77	definite
+E8	Modifier:T44 Modifies:T4
+T45	Modifier 90 102	intrauterine
+E10	Modifier:T45 Modifies:T4
+R2	Abbrev-Of Arg1:E20 Arg2:E3	
+T46	Procedure 143 153	ultrasound
+E12	Procedure:T46 Name:T47
+T47	Procedure-Name 143 153	ultrasound
+R3	Found-By Arg1:E11 Arg2:E12	
+T17	Observation 159 214	Rapid Estimate of Adult Literacy in Medicine-Short Form
+E14	Observation:T17 Name:T48
+T48	Observation-Name 159 214	Rapid Estimate of Adult Literacy in Medicine-Short Form
+A1	Observation-Type-Value T48 clinical-score
+T49	Observation 216 224	REALM-SF
+E16	Observation:T49 Name:T50 Eq-Comparison:E25
+T50	Observation-Name 216 224	REALM-SF
+R4	Abbrev-Of Arg1:E16 Arg2:E14	
+T51	Eq-Unit 228 233	score
+T7	Drug 524 534	medication
+E7	Drug:T7 
+R5	Using Arg1:E15 Arg2:E7	
+T8	Contraindication 504 520	Contraindication
+E17	Contraindication:T8 Contraindicates:E15
+T1	Drug 560 572	mifepristone
+E1	Drug:T1 Name:T2
+T2	Drug-Name 560 572	mifepristone
+T52	Drug 576 587	misoprostol
+E19	Drug:T52 Name:T53
+T53	Drug-Name 576 587	misoprostol
+T54	Or 573 575	or
+E21	Or:T54 Arg:E1 Arg2:E19
+T55	Allergy 549 556	Allergy
+E28	Allergy:T55 Name:E1
+T56	Allergy 613 620	allergy
+E29	Allergy:T56 Name:E30
+T57	Drug 624 633	ibuprofen
+E30	Drug:T57 Name:T58
+T58	Drug-Name 624 633	ibuprofen
+T59	Contraindication 593 609	Contraindication
+E31	Contraindication:T59 Contraindicates:E30
+T60	Or 610 612	or
+E32	Or:T60 Arg:E31 Arg2:E29
+T61	Condition 650 668	cardiac arrhythmia
+E33	Condition:T61 Name:T62 Temporality:E34
+T62	Condition-Name 650 668	cardiac arrhythmia
+T63	Eq-Comparison 639 646	History
+E34	Eq-Comparison:T63 Temporal-Period:T64
+T64	Eq-Temporal-Period 639 646	History
+A11	Eq-Temporal-Period-Value T64 past
+T65	Procedure 689 707	implantable device
+E35	Procedure:T65 Name:T66
+T66	Procedure-Name 689 707	implantable device
+T67	Modifier 713 733	electrical discharge
+E36	Modifier:T67 Modifies:T66
+T68	Procedure 740 757	cardiac pacemaker
+E37	Procedure:T68 Name:T69
+T69	Procedure-Name 740 757	cardiac pacemaker
+R6	Example-Of Arg1:E37 Arg2:E35	
+T70	Modifier 774 781	chronic
+E38	Modifier:T70 Modifies:E5
+T71	Eq-Comparison 763 770	History
+E39	Eq-Comparison:T71 Temporal-Period:T72
+T72	Eq-Temporal-Period 763 770	History
+A12	Eq-Temporal-Period-Value T72 past
+T9	Drug 805 811	opioid
+E9	Drug:T9 Name:T10
+T10	Drug-Name 805 811	opioid
+T73	Eq-Comparison 823 839	previous 30 days
+E40	Eq-Comparison:T73 Temporal-Period:T74 Temporal-Unit:T30 Value:T35
+T74	Eq-Temporal-Period 823 831	previous
+A13	Eq-Temporal-Period-Value T74 past
+T75	Temporal-Connection 816 822	during
+E41	Temporal-Connection:T75 Arg:E9 Arg2:E40
+A14	Temporal-Connection-Type-Value E41 during
+T76	Eq-Comparison 856 861	prior
+E42	Eq-Comparison:T76 Temporal-Period:T77
+T77	Eq-Temporal-Period 856 861	prior
+A15	Eq-Temporal-Period-Value T77 past
+T78	Eq-Comparison 845 852	Current
+E43	Eq-Comparison:T78 Temporal-Period:T79
+T79	Eq-Temporal-Period 845 852	Current
+A16	Eq-Temporal-Period-Value T79 present
+T80	Or 853 855	or
+E44	Or:T80 Arg:E43 Arg2:E42

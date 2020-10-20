@@ -1,0 +1,86 @@
+T4	Condition 160 184	Internet gaming disorder
+E4	Condition:T4 Name:T1 Stage:E5
+T5	Eq-Comparison 185 188	≥ 5
+E5	Eq-Comparison:T5 Operator:T3 Value:T2
+T1	Condition-Name 160 184	Internet gaming disorder
+T2	Eq-Value 187 188	5
+T3	Eq-Operator 185 186	≥
+A1	Eq-Operator-Value T3 GTEQ
+T6	Observation 195 231	Engagement in popular Internet games
+E1	Observation:T6 Name:T7 Minimum-Count:E2 Duration:E3
+T7	Observation-Name 195 231	Engagement in popular Internet games
+A2	Observation-Type-Value T7 social-habit
+T8	Eq-Comparison 313 335	over 20 hours per week
+E2	Eq-Comparison:T8 Operator:T9 Value:T10 Temporal-Unit:T11 Per:T12
+T9	Eq-Operator 313 317	over
+A3	Eq-Operator-Value T9 GT
+T10	Eq-Value 318 320	20
+T11	Eq-Temporal-Unit 321 326	hours
+A4	Eq-Temporal-Unit-Value T11 hour
+T12	Eq-Temporal-Unit 331 335	week
+A5	Eq-Temporal-Unit-Value T12 week
+T13	Eq-Comparison 342 362	minimum of 12 months
+E3	Eq-Comparison:T13 Operator:T14 Value:T15 Temporal-Unit:T16
+T14	Eq-Operator 342 349	minimum
+A6	Eq-Operator-Value T14 GTEQ
+T15	Eq-Value 353 355	12
+T16	Eq-Temporal-Unit 356 362	months
+A7	Eq-Temporal-Unit-Value T16 month
+T17	Observation 387 416	Young-Internet Addiction Test
+E6	Observation:T17 Name:T18
+T18	Observation-Name 387 416	Young-Internet Addiction Test
+A8	Observation-Type-Value T18 survey-or-questionnaire
+T19	Observation 417 422	Y-IAT
+E7	Observation:T19 Name:T20 Eq-Comparison:E8
+T20	Observation-Name 417 422	Y-IAT
+R1	Abbrev-Of Arg1:E7 Arg2:E6	
+T21	Eq-Comparison 424 428	≥ 50
+E8	Eq-Comparison:T21 Operator:T22 Value:T23
+T22	Eq-Operator 424 425	≥
+A9	Eq-Operator-Value T22 GTEQ
+T23	Eq-Value 426 428	50
+T24	Eq-Comparison 454 461	Current
+E9	Eq-Comparison:T24 Temporal-Period:T25
+T25	Eq-Temporal-Period 454 461	Current
+A10	Eq-Temporal-Period-Value T25 present
+T26	Eq-Comparison 465 472	history
+E10	Eq-Comparison:T26 Temporal-Period:T27
+T27	Eq-Temporal-Period 465 472	history
+A11	Eq-Temporal-Period-Value T27 past
+T28	Or 462 464	or
+E11	Or:T28 Arg:E9 Arg2:E10
+T29	Drug 483 501	illegal substances
+E12	Drug:T29 Name:T30 Temporality:E9 Temporality2:E10
+T30	Drug-Name 483 501	illegal substances
+T31	Observation 506 514	gambling
+E13	Observation:T31 Name:T32 Temporality:E9 Temporality2:E10
+T32	Observation-Name 506 514	gambling
+A12	Observation-Type-Value T32 social-habit
+T33	Or 502 505	and
+E14	Or:T33 Arg:E12 Arg2:E13
+T34	Eq-Comparison 521 528	Current
+E15	Eq-Comparison:T34 Temporal-Period:T35
+T35	Eq-Temporal-Period 521 528	Current
+A13	Eq-Temporal-Period-Value T35 present
+T36	Eq-Comparison 532 539	history
+E16	Eq-Comparison:T36 Temporal-Period:T37
+T37	Eq-Temporal-Period 532 539	history
+A14	Eq-Temporal-Period-Value T37 past
+T38	Condition 571 578	illness
+E17	Condition:T38 Name:T40 Temporality:E15 Temporality2:E16
+T39	Or 529 531	or
+E18	Or:T39 Arg:E15 Arg2:E16
+T40	Condition-Name 571 578	illness
+T41	Or 555 557	or
+E19	Or:T41 Arg:E20 Arg2:E21
+T42	Modifier 543 554	psychiatric
+E20	Modifier:T42 Modifies:T40
+T43	Modifier 558 570	neurological
+E21	Modifier:T43 Modifies:T40
+T44	Eq-Comparison 585 592	Current
+E22	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 585 592	Current
+A15	Eq-Temporal-Period-Value T45 present
+T46	Drug 600 624	psychotropic medications
+E23	Drug:T46 Name:T47 Temporality:E22
+T47	Drug-Name 600 624	psychotropic medications

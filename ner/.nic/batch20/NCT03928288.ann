@@ -1,0 +1,256 @@
+T1	Eq-Comparison 178 185	Current
+E1	Eq-Comparison:T1 Temporal-Period:T2
+T2	Eq-Temporal-Period 178 185	Current
+A1	Eq-Temporal-Period-Value T2 present
+T3	Eq-Comparison 334 341	Current
+E2	Eq-Comparison:T3 Temporal-Period:T4
+T4	Eq-Temporal-Period 334 341	Current
+A2	Eq-Temporal-Period-Value T4 present
+T5	Eq-Comparison 1131 1138	current
+E3	Eq-Comparison:T5 Temporal-Period:T6
+T6	Eq-Temporal-Period 1131 1138	current
+A3	Eq-Temporal-Period-Value T6 present
+T7	Eq-Comparison 1142 1150	previous
+E4	Eq-Comparison:T7 Temporal-Period:T8
+T8	Eq-Temporal-Period 1142 1150	previous
+A4	Eq-Temporal-Period-Value T8 past
+T9	Eq-Comparison 1180 1187	current
+E5	Eq-Comparison:T9 Temporal-Period:T10
+T10	Eq-Temporal-Period 1180 1187	current
+A5	Eq-Temporal-Period-Value T10 present
+T11	Eq-Comparison 1191 1199	previous
+E6	Eq-Comparison:T11 Temporal-Period:T12
+T12	Eq-Temporal-Period 1191 1199	previous
+A6	Eq-Temporal-Period-Value T12 past
+T13	Eq-Comparison 109 118	within 3y
+E7	Eq-Comparison:T13 Operator:T24 Temporal-Unit:T26 Value:T25
+T15	Eq-Comparison 495 503	2 months
+E8	Eq-Comparison:T15 Value:T16 Temporal-Unit:T61
+T17	Life-Stage-And-Gender 25 31	Female
+A9	Life-Stage-And-Gender-Type T17 female
+T18	Condition 58 71	endometriosis
+E9	Condition:T18 Name:T19
+T19	Condition-Name 58 71	endometriosis
+T20	Procedure 37 47	surgically
+E10	Procedure:T20 Name:T21
+T21	Procedure-Name 37 47	surgically
+R1	Found-By Arg1:E9 Arg2:E10	
+T22	Procedure 87 98	laparoscopy
+E11	Procedure:T22 Name:T23 Temporality:E7
+T23	Procedure-Name 87 98	laparoscopy
+R2	Found-By Arg1:E9 Arg2:E11	
+T24	Eq-Operator 109 115	within
+A10	Eq-Operator-Value T24 LTEQ
+T25	Eq-Value 116 117	3
+T26	Eq-Temporal-Unit 117 118	y
+A11	Eq-Temporal-Unit-Value T26 year
+T14	Temporal-Connection 119 127	prior to
+E12	Temporal-Connection:T14 Arg:E7 Arg2:E13
+A7	Temporal-Connection-Type-Value E12 before
+T27	Study 128 133	study
+E13	Study:T27 
+T28	Age 148 151	Age
+E14	Age:T28 Eq-Comparison:E15
+T29	Eq-Comparison 152 172	15 years to 40 years
+E15	Eq-Comparison:T29 Value:T30 Temporal-Unit:T31 Operator:T32 Value2:T33 Temporal-Unit2:T34
+T30	Eq-Value 152 154	15
+T31	Eq-Temporal-Unit 155 160	years
+A12	Eq-Temporal-Unit-Value T31 year
+T32	Eq-Operator 161 163	to
+A13	Eq-Operator-Value T32 BETWEEN
+T33	Eq-Value 164 166	40
+T34	Eq-Temporal-Unit 167 172	years
+A14	Eq-Temporal-Unit-Value T34 year
+T35	Eq-Comparison 190 200	≥ 2 months
+E16	Eq-Comparison:T35 Operator:T36 Value:T37 Temporal-Unit:T38
+T36	Eq-Operator 190 191	≥
+A15	Eq-Operator-Value T36 GTEQ
+T37	Eq-Value 192 193	2
+T38	Eq-Temporal-Unit 194 200	months
+A16	Eq-Temporal-Unit-Value T38 month
+T39	Procedure 213 229	hormonal therapy
+E17	Procedure:T39 Name:T40 Temporality:E1 Duration:E16
+T40	Procedure-Name 213 229	hormonal therapy
+T41	Procedure 247 266	oral contraceptives
+E18	Procedure:T41 Name:T42
+T42	Procedure-Name 247 266	oral contraceptives
+T43	Modifier 238 246	combined
+E19	Modifier:T43 Modifies:T42
+R3	Example-Of Arg1:E18 Arg2:E17	
+T44	Drug 268 289	norethindrone acetate
+E20	Drug:T44 Name:T45
+T45	Drug-Name 268 289	norethindrone acetate
+R4	Example-Of Arg1:E20 Arg2:E17	
+T46	Procedure 294 328	levonorgestrel intrauterine device
+E21	Procedure:T46 Name:T47
+T47	Procedure-Name 294 328	levonorgestrel intrauterine device
+R5	Example-Of Arg1:E21 Arg2:E17	
+T48	Or 291 293	or
+E22	Or:T48 Arg:E20 Arg2:E21
+T49	Observation 349 353	pain
+E23	Observation:T49 Name:T50 Temporality:E2 Duration:E27 Eq-Comparison:E26
+T50	Observation-Name 349 353	pain
+T51	Modifier 342 348	pelvic
+E24	Modifier:T51 Modifies:T50
+T53	Eq-Comparison 361 364	≥ 3
+E26	Eq-Comparison:T53 Operator:T54 Value:T55
+T54	Eq-Operator 361 362	≥
+A17	Eq-Operator-Value T54 GTEQ
+T55	Eq-Value 363 364	3
+T56	Eq-Comparison 470 485	≥ 14 days/month
+E27	Eq-Comparison:T56 Operator:T57 Value:T58 Temporal-Unit:T59 Per:T60
+T57	Eq-Operator 470 471	≥
+A18	Eq-Operator-Value T57 GTEQ
+T58	Eq-Value 472 474	14
+T59	Eq-Temporal-Unit 475 479	days
+A19	Eq-Temporal-Unit-Value T59 day
+T60	Eq-Temporal-Unit 480 485	month
+A20	Eq-Temporal-Unit-Value T60 month
+T16	Eq-Value 495 496	2
+T61	Eq-Temporal-Unit 497 503	months
+A8	Eq-Temporal-Unit-Value T61 month
+T62	Temporal-Connection 486 490	over
+E28	Temporal-Connection:T62 Arg:E23 Arg2:E8
+A21	Temporal-Connection-Type-Value E28 during
+T63	Study 513 518	study
+E29	Study:T63 
+T64	Temporal-Connection 504 512	prior to
+E30	Temporal-Connection:T64 Arg:E8 Arg2:E29
+A22	Temporal-Connection-Type-Value E30 before
+T65	Assertion 535 546	Willingness
+E31	Assertion:T65 Asserted:E32
+A23	Assertion-Type-Value E31 hypothetical
+T66	Encounter 562 567	visit
+E32	Encounter:T66 
+T67	Condition 619 627	menarche
+E33	Condition:T67 Name:T68
+T68	Condition-Name 619 627	menarche
+T69	Condition 636 645	menopause
+E34	Condition:T69 Name:T71
+T70	Temporal-Connection 615 618	Pre
+E35	Temporal-Connection:T70 Arg:E33
+A24	Temporal-Connection-Type-Value E35 before
+T71	Condition-Name 636 645	menopause
+T72	Temporal-Connection 631 635	post
+E36	Temporal-Connection:T72 Arg:E34
+A25	Temporal-Connection-Type-Value E36 after
+T73	Or 628 630	or
+E37	Or:T73 Arg:E33 Arg2:E34
+T74	Drug 672 683	cabergoline
+E38	Drug:T74 Name:T75
+T75	Drug-Name 672 683	cabergoline
+T76	Contraindication 651 668	Contraindications
+E39	Contraindication:T76 Contraindicates:E38
+T77	Condition 691 713	cardiac valve disorder
+E40	Condition:T77 Name:T78
+T78	Condition-Name 691 713	cardiac valve disorder
+R6	Example-Of Arg1:E40 Arg2:E39	
+T79	Condition 764 772	disorder
+E41	Condition:T79 Name:T80
+T80	Condition-Name 764 772	disorder
+T81	Modifier 715 724	pulmonary
+E42	Modifier:T81 Modifies:T80
+T82	Modifier 726 737	pericardial
+E43	Modifier:T82 Modifies:T80
+T83	Modifier 739 763	retroperitoneal fibrotic
+E44	Modifier:T83 Modifies:T80
+R7	Example-Of Arg1:E41 Arg2:E39	
+T84	Condition 774 790	hypersensitivity
+E45	Condition:T84 Name:T85
+T85	Condition-Name 774 790	hypersensitivity
+T86	Modifier 794 811	ergot derivatives
+E46	Modifier:T86 Modifies:T85
+R8	Example-Of Arg1:E45 Arg2:E39	
+T87	Condition 826 838	hypertension
+E47	Condition:T87 Name:T88
+T88	Condition-Name 826 838	hypertension
+T89	Modifier 813 825	uncontrolled
+E48	Modifier:T89 Modifies:T88
+R9	Example-Of Arg1:E47 Arg2:E39	
+T90	Condition 884 891	illness
+E49	Condition:T90 Name:T91 Severity:T95
+T91	Condition-Name 884 891	illness
+T92	Modifier 857 863	mental
+E50	Modifier:T92 Modifies:T91
+T93	Modifier 875 883	systemic
+E51	Modifier:T93 Modifies:T91
+T94	Or 864 866	or
+E52	Or:T94 Arg:E50 Arg2:E51
+T95	Severity 845 856	Significant
+A26	Severity-Value T95 severe
+T96	Procedure 912 927	pain assessment
+E53	Procedure:T96 Name:T97 Stability:T98
+T97	Procedure-Name 912 927	pain assessment
+T98	Stability 903 911	confound
+A27	Stability-Value T98 change
+T99	Assertion 897 902	might
+E54	Assertion:T99 Asserted:T98
+A28	Assertion-Type-Value E54 hypothetical
+R10	Caused-By Arg1:T98 Arg2:E49	
+T100	Study 959 964	study
+E55	Study:T100 
+T101	Assertion 935 945	ability to
+E56	Assertion:T101 Asserted:E55
+A29	Assertion-Type-Value E56 hypothetical
+T102	Or 928 930	or
+E57	Or:T102 Arg:E53 Arg2:E56
+T103	Condition 970 978	Pregnant
+E58	Condition:T103 Name:T104
+T104	Condition-Name 970 978	Pregnant
+T105	Condition 980 993	breastfeeding
+E59	Condition:T105 Name:T106
+T106	Condition-Name 980 993	breastfeeding
+T107	Condition 1017 1025	pregnant
+E60	Condition:T107 Name:T108 Temporality:E63
+T108	Condition-Name 1017 1025	pregnant
+T109	Assertion 998 1016	planning to become
+E61	Assertion:T109 Asserted:E60
+A30	Assertion-Type-Value E61 intention
+T110	Or 995 997	or
+E62	Or:T110 Arg:E59 Arg2:E61
+T111	Eq-Comparison 1033 1046	next 6 months
+E63	Eq-Comparison:T111 Temporal-Period:T112 Value:T113 Temporal-Unit:T114
+T112	Eq-Temporal-Period 1033 1037	next
+A31	Eq-Temporal-Period-Value T112 future
+T113	Eq-Value 1038 1039	6
+T114	Eq-Temporal-Unit 1040 1046	months
+A32	Eq-Temporal-Unit-Value T114 month
+T115	Condition 1123 1129	cancer
+E64	Condition:T115 Name:T116 Temporality:E3 Temporality2:E4
+T116	Condition-Name 1123 1129	cancer
+T117	Modifier 1116 1122	Breast
+E65	Modifier:T117 Modifies:T116
+T118	Or 1139 1141	or
+E66	Or:T118 Arg:E3 Arg2:E4
+T119	Condition 1156 1178	Thromboembolic disease
+E67	Condition:T119 Name:T120 Temporality:E5 Temporality2:E6
+T120	Condition-Name 1156 1178	Thromboembolic disease
+T121	Or 1188 1190	or
+E68	Or:T121 Arg:E5 Arg2:E6
+T122	Drug 1218 1223	drugs
+E69	Drug:T122 
+T123	Drug 1236 1244	dopamine
+E70	Drug:T123 Name:T124 Stability:T126
+T124	Drug-Name 1236 1244	dopamine
+T125	Other 1212 1217	other
+E71	Other:T125 Is-Other:E69
+T126	Stability 1229 1235	affect
+A33	Stability-Value T126 change
+R11	Caused-By Arg1:T126 Arg2:E69	
+T127	Drug 1252 1266	phenothiazines
+E72	Drug:T127 Name:T128
+T128	Drug-Name 1252 1266	phenothiazines
+R12	Example-Of Arg1:E72 Arg2:E69	
+T129	Drug 1268 1282	metoclopramide
+E73	Drug:T129 Name:T130
+T130	Drug-Name 1268 1282	metoclopramide
+R13	Example-Of Arg1:E73 Arg2:E69	
+T131	Drug 1284 1298	butyrophenones
+E74	Drug:T131 Name:T132
+T132	Drug-Name 1284 1298	butyrophenones
+R14	Example-Of Arg1:E74 Arg2:E69	
+T133	Modifier 867 874	chronic
+E75	Modifier:T133 Modifies:T91
+T134	Assertion 1229 1235	affect
+E76	Assertion:T134 Asserted:T126
+A34	Assertion-Type-Value E76 hypothetical

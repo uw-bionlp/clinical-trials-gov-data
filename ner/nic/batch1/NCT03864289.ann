@@ -1,125 +1,125 @@
+E2	Condition:T2 Name:T3
+E5	Condition:T5 Name:T6
+E8	Condition:T8 Name:T9
+E10	Condition:T10 Name:T11
+E12	Condition:T12 Name:T13
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17
+E18	Condition:T18 Name:T19 Severity:T36
+E20	Condition:T20 Name:T21
+E22	Condition:T22 Name:T23
+E27	Condition:T27 Name:T28
+E1	Risk:T30 Polarity:T40 Risk-For:E2
+E3	Family-Member:T31 Has:E19
+E4	Modifier:T32 Modifies:E27
+E6	Condition:T25 Name:T26
+E7	Modifier:T33 Modifies:E12
+E9	Condition:T34 Name:T35
+E11	Condition:T37 Name:T38
+E13	And:T39 Arg:T1 Arg2:E5
+E15	Or:T41 Arg:E5 Arg2:E1
+E17	Eq-Comparison:T29 Operator:T42
+E19	Observation:T43 Name:T44 Eq-Comparison:E17
+E21	Eq-Comparison:T4 Operator:T45 Value:T46 Temporal-Unit:T47 Per:T48
+E23	Assertion:T49 Asserted:E25
+E24	Eq-Comparison:T50 Temporal-Period:T51
+E25	Observation:T52 Name:T53 Temporality:E24 Minimum-Count:E21
+E26	And:T54 Arg:E19 Arg2:E23
+E28	And:T55 Arg:T24 Arg2:E27
+E29	Or:T56 Arg:E6 Arg2:E12
+E30	Condition:T57 Name:T58
+E31	Modifier:T59 Modifies:T58
+E32	Modifier:T60 Modifies:T58
+E33	Modifier:T61 Modifies:T58
+E34	Or:T62 Arg:E32 Arg2:E31
+E35	Other:T63 Is-Other:E18
+E36	Modifier:T64 Modifies:T21
+E37	Modifier:T65 Modifies:T21
+E38	Or:T66 Arg:E37 Arg2:E36
 T1	Life-Stage-And-Gender 25 33	Children
-A1	Life-Stage-And-Gender-Type T1 child
 T2	Condition 60 66	autism
 T3	Condition-Name 60 66	autism
-E2	Condition:T2 Name:T3
 T5	Condition 39 42	ASD
 T6	Condition-Name 39 42	ASD
-E5	Condition:T5 Name:T6
 T7	Ethnicity 73 76	Han
 T8	Condition 602 628	connective tissue diseases
 T9	Condition-Name 602 628	connective tissue diseases
-E8	Condition:T8 Name:T9
 T10	Condition 421 442	Prader-Willi Syndrome
 T11	Condition-Name 421 442	Prader-Willi Syndrome
-E10	Condition:T10 Name:T11
 T12	Condition 338 356	metabolic diseases
 T13	Condition-Name 338 356	metabolic diseases
-E12	Condition:T12 Name:T13
 T14	Condition 382 400	Fragile X Syndrome
 T15	Condition-Name 382 400	Fragile X Syndrome
-E14	Condition:T14 Name:T15
 T16	Condition 402 419	Angelman Syndrome
 T17	Condition-Name 402 419	Angelman Syndrome
-E16	Condition:T16 Name:T17
 T18	Condition 550 566	chronic diseases
 T19	Condition-Name 550 566	chronic diseases
-E18	Condition:T18 Name:T19 Severity:T36
 T20	Condition 593 600	failure
 T21	Condition-Name 593 600	failure
-E20	Condition:T20 Name:T21
 T22	Condition 367 380	Rett Syndrome
 T23	Condition-Name 367 380	Rett Syndrome
-E22	Condition:T22 Name:T23
 T24	Life-Stage-And-Gender 265 273	Children
-A3	Life-Stage-And-Gender-Type T24 child
 T27	Condition 289 292	ASD
 T28	Condition-Name 289 292	ASD
-E27	Condition:T27 Name:T28
 T30	Risk 51 55	risk
-E1	Risk:T30 Polarity:T40 Risk-For:E2
 T31	Family-Member 89 96	Parents
-E3	Family-Member:T31 Has:E19
 T32	Modifier 279 288	Syndromic
-E4	Modifier:T32 Modifies:E27
 T25	Condition 309 324	genetic defects
-E6	Condition:T25 Name:T26
 T26	Condition-Name 309 324	genetic defects
-R1	Caused-By Arg1:E27 Arg2:E6	
 T33	Modifier 328 337	inherited
-E7	Modifier:T33 Modifies:E12
-R2	Caused-By Arg1:E27 Arg2:E12	
-R3	Example-Of Arg1:E22 Arg2:E12	
-R4	Example-Of Arg1:E14 Arg2:E12	
-R5	Example-Of Arg1:E16 Arg2:E12	
-R6	Example-Of Arg1:E10 Arg2:E12	
 T34	Condition 444 462	tuberous sclerosis
-E9	Condition:T34 Name:T35
 T35	Condition-Name 444 462	tuberous sclerosis
-R7	Example-Of Arg1:E9 Arg2:E12	
 T36	Severity 542 549	serious
-A4	Severity-Value T36 severe
-R8	Example-Of Arg1:E20 Arg2:E18	
-R9	Example-Of Arg1:E8 Arg2:E18	
 T37	Condition 630 636	tumors
-E11	Condition:T37 Name:T38
 T38	Condition-Name 630 636	tumors
-R10	Example-Of Arg1:E11 Arg2:E18	
 T39	And 34 38	with
-E13	And:T39 Arg:T1 Arg2:E5
 T40	Polarity 46 50	high
-A5	Polarity-Value T40 high
 T41	Or 43 45	or
-E15	Or:T41 Arg:E5 Arg2:E1
-A6	Family-Member-Type E3 parent
 T29	Eq-Comparison 102 110	at least
-E17	Eq-Comparison:T29 Operator:T42
 T42	Eq-Operator 102 110	at least
-A7	Eq-Operator-Value T42 GTEQ
 T43	Observation 111 133	middle school educated
-E19	Observation:T43 Name:T44 Eq-Comparison:E17
 T44	Observation-Name 111 133	middle school educated
 T4	Eq-Comparison 152 178	at least 20 hours per week
-E21	Eq-Comparison:T4 Operator:T45 Value:T46 Temporal-Unit:T47 Per:T48
 T45	Eq-Operator 152 160	at least
-A2	Eq-Operator-Value T45 GTEQ
 T46	Eq-Value 161 163	20
 T47	Eq-Temporal-Unit 164 169	hours
-A8	Eq-Temporal-Unit-Value T47 hour
 T48	Eq-Temporal-Unit 174 178	week
-A9	Eq-Temporal-Unit-Value T48 week
 T49	Assertion 139 148	agreed to
-E23	Assertion:T49 Asserted:E25
-A10	Assertion-Type-Value E23 hypothetical
 T50	Eq-Comparison 182 189	planned
-E24	Eq-Comparison:T50 Temporal-Period:T51
 T51	Eq-Temporal-Period 182 189	planned
-A11	Eq-Temporal-Period-Value T51 future
 T52	Observation 190 209	practice activities
-E25	Observation:T52 Name:T53 Temporality:E24 Minimum-Count:E21
 T53	Observation-Name 190 209	practice activities
 T54	And 135 138	and
-E26	And:T54 Arg:E19 Arg2:E23
 T55	And 274 278	with
-E28	And:T55 Arg:T24 Arg2:E27
 T56	Or 325 327	or
-E29	Or:T56 Arg:E6 Arg2:E12
 T57	Condition 499 511	disabilities
-E30	Condition:T57 Name:T58
 T58	Condition-Name 499 511	disabilities
 T59	Modifier 490 498	physical
-E31	Modifier:T59 Modifies:T58
 T60	Modifier 477 485	auditory
-E32	Modifier:T60 Modifies:T58
 T61	Modifier 469 475	Visual
-E33	Modifier:T61 Modifies:T58
 T62	Or 486 489	and
-E34	Or:T62 Arg:E32 Arg2:E31
 T63	Other 536 541	other
-E35	Other:T63 Is-Other:E18
 T64	Modifier 586 592	kidney
-E36	Modifier:T64 Modifies:T21
 T65	Modifier 576 581	liver
-E37	Modifier:T65 Modifies:T21
 T66	Or 582 585	and
-E38	Or:T66 Arg:E37 Arg2:E36
+A1	Life-Stage-And-Gender-Type T1 child
+A3	Life-Stage-And-Gender-Type T24 child
+A4	Severity-Value T36 severe
+A5	Polarity-Value T40 high
+A6	Family-Member-Type E3 parent
+A7	Eq-Operator-Value T42 GTEQ
+A2	Eq-Operator-Value T45 GTEQ
+A8	Eq-Temporal-Unit-Value T47 hour
+A9	Eq-Temporal-Unit-Value T48 week
+A10	Assertion-Type-Value E23 hypothetical
+A11	Eq-Temporal-Period-Value T51 future
+R1	Caused-By Arg1:E27 Arg2:E6
+R2	Caused-By Arg1:E27 Arg2:E12
+R3	Example-Of Arg1:E22 Arg2:E12
+R4	Example-Of Arg1:E14 Arg2:E12
+R5	Example-Of Arg1:E16 Arg2:E12
+R6	Example-Of Arg1:E10 Arg2:E12
+R7	Example-Of Arg1:E9 Arg2:E12
+R8	Example-Of Arg1:E20 Arg2:E18
+R9	Example-Of Arg1:E8 Arg2:E18
+R10	Example-Of Arg1:E11 Arg2:E18

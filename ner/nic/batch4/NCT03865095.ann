@@ -1,94 +1,94 @@
-T1	Age 25 28	age
 E1	Age:T1 Eq-Comparison:E2
-T2	Eq-Comparison 29 38	≥18 years
 E2	Eq-Comparison:T2 Operator:T28 Temporal-Unit:T29 Value:T19
-T3	Procedure 44 66	mechanical ventilation
 E3	Procedure:T3 Name:T30 Duration:E4
-T4	Eq-Comparison 80 97	at least 48 hours
 E4	Eq-Comparison:T4 Operator:T31 Value:T32 Temporal-Unit:T33
-T5	Observation 123 145	Clinical Frailty Score
 E5	Observation:T5 Name:T34 Eq-Comparison:E6
-T6	Eq-Comparison 146 153	above 7
 E6	Eq-Comparison:T6 Operator:T35 Value:T36
-T7	Encounter 160 169	admission
 E7	Encounter:T7 Temporality:E28
-T8	Condition 175 196	neuromuscular disease
 E8	Condition:T8 Name:T39 Temporality:E9
-T9	Eq-Comparison 200 224	previous medical history
 E9	Eq-Comparison:T9 Temporal-Period:T40
-T12	Modifier 240 257	lower extremities
 E12	Modifier:T12 Modifies:T42
-T13	Condition 263 269	trauma
 E13	Condition:T13 Name:T43
-T14	Modifier 273 307	lower extremities involving tights
 E14	Modifier:T14 Modifies:T43
-T16	Age 313 316	age
 E16	Age:T16 Eq-Comparison:E17
-T17	Eq-Comparison 317 331	under 18 years
 E17	Eq-Comparison:T17 Operator:T45 Value:T46 Temporal-Unit:T47
-T18	Assertion 337 346	inability
 E18	Assertion:T18 Asserted:E26
-A1	Assertion-Type-Value E18 hypothetical
-T20	Procedure 358 380	ultrasound examination
 E19	Procedure:T20 Name:T48
-T21	Death 386 391	death
-E20	Death:T21 
-T22	Or 392 394	or
+E20	Death:T21
 E21	Or:T22 Arg:E20 Arg2:E22
-T23	Encounter 395 404	discharge
 E22	Encounter:T23 Type:T11
-T25	Procedure 439 459	full verticalization
 E24	Procedure:T25 Name:T41
-T26	Temporal-Connection 460 465	prior
 E25	Temporal-Connection:T26 Arg:E24 Arg2:E23
-A2	Temporal-Connection-Type-Value E25 before
-T27	Negation 337 346	inability
 E26	Negation:T27 Negates:E19
+E27	Assertion:T50 Asserted:E3
+E28	Eq-Comparison:T51 Temporal-Period:T37
+E10	Condition:T10 Name:T42
+E11	Study:T15
+E15	Temporal-Connection:T24 Arg:E22 Arg2:E11
+E23	Study:T44
+T1	Age 25 28	age
+T2	Eq-Comparison 29 38	≥18 years
+T3	Procedure 44 66	mechanical ventilation
+T4	Eq-Comparison 80 97	at least 48 hours
+T5	Observation 123 145	Clinical Frailty Score
+T6	Eq-Comparison 146 153	above 7
+T7	Encounter 160 169	admission
+T8	Condition 175 196	neuromuscular disease
+T9	Eq-Comparison 200 224	previous medical history
+T12	Modifier 240 257	lower extremities
+T13	Condition 263 269	trauma
+T14	Modifier 273 307	lower extremities involving tights
+T16	Age 313 316	age
+T17	Eq-Comparison 317 331	under 18 years
+T18	Assertion 337 346	inability
+T20	Procedure 358 380	ultrasound examination
+T21	Death 386 391	death
+T22	Or 392 394	or
+T23	Encounter 395 404	discharge
+T25	Procedure 439 459	full verticalization
+T26	Temporal-Connection 460 465	prior
+T27	Negation 337 346	inability
 T28	Eq-Operator 29 30	≥
-A3	Eq-Operator-Value T28 GTEQ
 T29	Eq-Temporal-Unit 33 38	years
-A4	Eq-Temporal-Unit-Value T29 year
 T30	Procedure-Name 44 66	mechanical ventilation
 T31	Eq-Operator 80 88	at least
-A5	Eq-Operator-Value T31 GTEQ
 T32	Eq-Value 89 91	48
 T33	Eq-Temporal-Unit 92 97	hours
-A6	Eq-Temporal-Unit-Value T33 hour
 T34	Observation-Name 123 145	Clinical Frailty Score
-A7	Observation-Type-Value T34 clinical-score
 T35	Eq-Operator 146 151	above
-A8	Eq-Operator-Value T35 GT
 T36	Eq-Value 152 153	7
 T37	Eq-Temporal-Period 154 159	prior
-A9	Eq-Temporal-Period-Value T37 past
 T38	Encounter-Type 160 169	admission
-A10	Encounter-Type-Value T38 inpatient
 T39	Condition-Name 175 196	neuromuscular disease
 T40	Eq-Temporal-Period 200 224	previous medical history
-A11	Eq-Temporal-Period-Value T40 past
 T42	Condition-Name 230 239	amputated
 T43	Condition-Name 263 269	trauma
 T45	Eq-Operator 317 322	under
-A13	Eq-Operator-Value T45 LT
 T46	Eq-Value 323 325	18
 T47	Eq-Temporal-Unit 326 331	years
-A14	Eq-Temporal-Unit-Value T47 year
 T48	Procedure-Name 358 380	ultrasound examination
 T19	Eq-Value 30 32	18
 T50	Assertion 67 75	expected
-E27	Assertion:T50 Asserted:E3
-A16	Assertion-Type-Value E27 hypothetical
 T51	Eq-Comparison 154 159	prior
-E28	Eq-Comparison:T51 Temporal-Period:T37
 T10	Condition 230 239	amputated
-E10	Condition:T10 Name:T42
 T11	Encounter-Type 395 404	discharge
-A12	Encounter-Type-Value T11 discharge
 T15	Study 425 433	protocol
-E11	Study:T15 
 T24	Temporal-Connection 405 410	prior
-E15	Temporal-Connection:T24 Arg:E22 Arg2:E11
-A15	Temporal-Connection-Type-Value E15 before
 T41	Procedure-Name 439 459	full verticalization
 T44	Study 480 488	protocol
-E23	Study:T44 
+A1	Assertion-Type-Value E18 hypothetical
+A2	Temporal-Connection-Type-Value E25 before
+A3	Eq-Operator-Value T28 GTEQ
+A4	Eq-Temporal-Unit-Value T29 year
+A5	Eq-Operator-Value T31 GTEQ
+A6	Eq-Temporal-Unit-Value T33 hour
+A7	Observation-Type-Value T34 clinical-score
+A8	Eq-Operator-Value T35 GT
+A9	Eq-Temporal-Period-Value T37 past
+A10	Encounter-Type-Value T38 inpatient
+A11	Eq-Temporal-Period-Value T40 past
+A13	Eq-Operator-Value T45 LT
+A14	Eq-Temporal-Unit-Value T47 year
+A16	Assertion-Type-Value E27 hypothetical
+A12	Encounter-Type-Value T11 discharge
+A15	Temporal-Connection-Type-Value E15 before

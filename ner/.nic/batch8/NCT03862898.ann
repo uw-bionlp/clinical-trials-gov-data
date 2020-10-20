@@ -1,0 +1,68 @@
+T1	Modifier 39 45	lumbar
+E1	Modifier:T1 Modifies:T23
+T2	Condition 46 50	pain
+E2	Condition:T2 Name:T23 Duration:E3
+T3	Eq-Comparison 63 81	more than 12 weeks
+E3	Eq-Comparison:T3 Operator:T24 Value:T25 Temporal-Unit:T26
+T4	Condition 88 92	pain
+E4	Condition:T4 Name:T27
+T5	Temporal-Connection 93 99	during
+E5	Temporal-Connection:T5 Arg:E4 Arg2:E6
+A1	Temporal-Connection-Type-Value E5 during
+T6	Observation 100 124	changing of the position
+E6	Observation:T6 Name:T41
+T7	Modifier 131 140	radicular
+E7	Modifier:T7 Modifies:T28
+T8	Condition 141 145	pain
+E8	Condition:T8 Name:T28
+T9	Condition 172 193	Cauda equina syndrome
+E9	Condition:T9 Name:T29
+T10	Condition 200 222	ankylosing spondylitis
+E10	Condition:T10 Name:T30
+T11	Condition 229 249	thoracic deformities
+E11	Condition:T11 Name:T31
+T12	Condition 251 267	pectus carinatum
+E12	Condition:T12 Name:T32
+T13	Condition 269 278	excavatum
+E13	Condition:T13 Name:T33
+T14	Condition 286 298	spina bifida
+E14	Condition:T14 Name:T34
+T15	Condition 305 314	fractures
+E15	Condition:T15 Name:T35
+T16	Temporal-Connection 321 325	post
+E16	Temporal-Connection:T16 Arg:E18 Arg2:E17
+A2	Temporal-Connection-Type-Value E16 after
+T17	Procedure 326 335	operative
+E17	Procedure:T17 Name:T42
+T18	Condition 336 353	spinal conditions
+E18	Condition:T18 Name:T36
+T19	Condition 360 368	diabetes
+E19	Condition:T19 Name:T37
+T20	Condition 375 397	inflammatory processes
+E20	Condition:T20 Name:T38
+T21	Condition 404 410	tumors
+E21	Condition:T21 Name:T39
+T22	Condition 417 426	pregnancy
+E22	Condition:T22 Name:T40
+T23	Condition-Name 46 50	pain
+T24	Eq-Operator 63 72	more than
+A3	Eq-Operator-Value T24 GT
+T25	Eq-Value 73 75	12
+T26	Eq-Temporal-Unit 76 81	weeks
+A4	Eq-Temporal-Unit-Value T26 week
+T27	Condition-Name 88 92	pain
+T28	Condition-Name 141 145	pain
+T29	Condition-Name 172 193	Cauda equina syndrome
+T30	Condition-Name 200 222	ankylosing spondylitis
+T31	Condition-Name 229 249	thoracic deformities
+T32	Condition-Name 251 267	pectus carinatum
+T33	Condition-Name 269 278	excavatum
+T34	Condition-Name 286 298	spina bifida
+T35	Condition-Name 305 314	fractures
+T36	Condition-Name 336 353	spinal conditions
+T37	Condition-Name 360 368	diabetes
+T38	Condition-Name 375 397	inflammatory processes
+T39	Condition-Name 404 410	tumors
+T40	Condition-Name 417 426	pregnancy
+T41	Observation-Name 100 124	changing of the position
+T42	Procedure-Name 326 335	operative

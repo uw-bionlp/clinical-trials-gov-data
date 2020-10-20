@@ -1,0 +1,167 @@
+T1	Age 41 44	age
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 45 59	45 to 60 years
+E2	Eq-Comparison:T2 Value:T43 Operator:T44 Value:T45 Temporal-Unit:T46
+T3	Eq-Comparison 65 76	one or more
+E3	Eq-Comparison:T3 Value:T47 Operator:T48
+T4	Condition 77 79	CV
+E4	Condition:T4 Name:T49
+T5	Condition 94 104	overweight
+E5	Condition:T5 Name:T50
+T6	Or 105 107	or
+E6	Or:T6 Arg:E5 Arg2:E7
+T7	Condition 108 115	obesity
+E7	Condition:T7 Name:T51
+T8	Observation 123 138	body mass index
+E8	Observation:T8 Name:T52
+T9	Observation 140 143	BMI
+E9	Observation:T9 Name:T53 Eq-Comparison:E10
+T10	Eq-Comparison 145 154	≥25 kg/m2
+E10	Eq-Comparison:T10 Operator:T54 Unit:T55 Per:T56 Value:T90
+T11	Or 156 162	and/or
+E11	Or:T11 Arg2:E13 Arg:E7
+T12	Modifier 163 170	central
+E12	Modifier:T12 Modifies:T57
+T13	Condition 171 178	obesity
+E13	Condition:T13 Name:T57
+T14	Observation 181 200	waist circumference
+E14	Observation:T14 Name:T58 Eq-Comparison:E15
+T15	Eq-Comparison 201 207	≥88 cm
+E15	Eq-Comparison:T15 Operator:T59 Unit:T60 Value:T91
+T16	Observation 214 228	blood pressure
+E16	Observation:T16 Name:T62 Polarity:T61
+T17	Observation 230 253	systolic blood pressure
+E17	Observation:T17 Name:T63 Eq-Comparison:E18
+T18	Eq-Comparison 254 264	≥140 mm Hg
+E18	Eq-Comparison:T18 Operator:T64 Value2:T92 Unit:T66
+T19	Or 265 271	and/or
+E19	Or:T19 Arg:E17 Arg2:E20
+T20	Observation 272 296	diastolic blood pressure
+E20	Observation:T20 Name:T67 Eq-Comparison:E21
+T21	Eq-Comparison 297 306	≥90 mm Hg
+E21	Eq-Comparison:T21 Operator:T68 Unit:T69 Value:T93
+T22	Observation 314 331	blood cholesterol
+E22	Observation:T22 Name:T72 Polarity:T71 Eq-Comparison:E23
+T23	Eq-Comparison 333 344	≥5.2 mmol/L
+E23	Eq-Comparison:T23 Value:T73 Unit:T74 Operator:T65 Per:T75
+T24	And 346 349	and
+E24	And:T24 Arg:E22 Arg2:E26
+T25	Eq-Comparison 350 356	active
+E25	Eq-Comparison:T25 Temporal-Period:T76
+T26	Condition 357 364	smoking
+E26	Condition:T26 Name:T77 Temporality:E25
+T27	Eq-Comparison 384 386	on
+E27	Eq-Comparison:T27 Temporal-Period:T78
+T28	Procedure 387 411	antihypertensive therapy
+E28	Procedure:T28 Name:T79 Temporality:E27
+T29	Study 438 443	study
+E29	Study:T29 
+T30	Eq-Comparison 469 476	current
+E30	Eq-Comparison:T30 Temporal-Period:T80
+T31	Condition 477 499	cardiovascular disease
+E31	Condition:T31 Name:T81 Temporality:E30
+T32	Condition 501 504	CVD
+E32	Condition:T32 Name:T82
+T33	Condition 507 529	ischemic heart disease
+E33	Condition:T33 Name:T83
+T34	Condition 531 556	peripheral artery disease
+E34	Condition:T34 Name:T84
+T35	Or 558 561	and
+E35	Or:T35 Arg:E34 Arg2:E36
+T36	Condition 562 568	stroke
+E36	Condition:T36 Name:T85
+T37	Condition 575 593	malignant diseases
+E37	Condition:T37 Name:T86
+T38	Modifier 607 615	systemic
+E38	Modifier:T38 Modifies:T88
+T39	Or 616 618	or
+E39	Or:T39 Arg:E38 Arg2:E40
+T40	Modifier 619 625	mental
+E40	Modifier:T40 Modifies:T88
+T41	Condition 626 634	diseases
+E41	Condition:T41 Name:T88 Severity:T87
+T42	Life-Stage-And-Gender 25 31	female
+A1	Life-Stage-And-Gender-Type T42 female
+T43	Eq-Value 45 47	45
+T44	Eq-Operator 48 50	to
+A2	Eq-Operator-Value T44 BETWEEN
+T45	Eq-Value 51 53	60
+T46	Eq-Temporal-Unit 54 59	years
+A3	Eq-Temporal-Unit-Value T46 year
+T47	Eq-Value 65 68	one
+T48	Eq-Operator 69 76	or more
+A4	Eq-Operator-Value T48 GTEQ
+T49	Condition-Name 77 79	CV
+T50	Condition-Name 94 104	overweight
+T51	Condition-Name 108 115	obesity
+T52	Observation-Name 123 138	body mass index
+A5	Observation-Type-Value T52 vital
+T53	Observation-Name 140 143	BMI
+A6	Observation-Type-Value T53 vital
+T54	Eq-Operator 145 146	≥
+A7	Eq-Operator-Value T54 GTEQ
+T55	Eq-Unit 149 151	kg
+T56	Eq-Unit 152 154	m2
+T57	Condition-Name 171 178	obesity
+T58	Observation-Name 181 200	waist circumference
+A8	Observation-Type-Value T58 measurement
+T59	Eq-Operator 201 202	≥
+A9	Eq-Operator-Value T59 GTEQ
+T60	Eq-Unit 205 207	cm
+T61	Polarity 209 213	high
+A10	Polarity-Value T61 high
+T62	Observation-Name 214 228	blood pressure
+A11	Observation-Type-Value T62 vital
+T63	Observation-Name 230 253	systolic blood pressure
+A12	Observation-Type-Value T63 vital
+T64	Eq-Operator 254 255	≥
+A13	Eq-Operator-Value T64 GTEQ
+T66	Eq-Unit 259 264	mm Hg
+T67	Observation-Name 272 296	diastolic blood pressure
+A14	Observation-Type-Value T67 vital
+T68	Eq-Operator 297 298	≥
+A15	Eq-Operator-Value T68 GTEQ
+T69	Eq-Unit 301 306	mm Hg
+T71	Polarity 309 313	high
+A16	Polarity-Value T71 high
+T72	Observation-Name 314 331	blood cholesterol
+A17	Observation-Type-Value T72 lab
+T73	Eq-Value 334 337	5.2
+T74	Eq-Unit 338 342	mmol
+T75	Eq-Unit 343 344	L
+T76	Eq-Temporal-Period 350 356	active
+A18	Eq-Temporal-Period-Value T76 present
+T77	Condition-Name 357 364	smoking
+T78	Eq-Temporal-Period 384 386	on
+A19	Eq-Temporal-Period-Value T78 present
+T79	Procedure-Name 387 411	antihypertensive therapy
+T80	Eq-Temporal-Period 469 476	current
+A20	Eq-Temporal-Period-Value T80 present
+T81	Condition-Name 477 499	cardiovascular disease
+T82	Condition-Name 501 504	CVD
+T83	Condition-Name 507 529	ischemic heart disease
+T84	Condition-Name 531 556	peripheral artery disease
+T85	Condition-Name 562 568	stroke
+T86	Condition-Name 575 593	malignant diseases
+T87	Severity 599 606	serious
+A21	Severity-Value T87 severe
+T88	Condition-Name 626 634	diseases
+T89	Risk 80 92	risk factors
+E42	Risk:T89 Risk-For:E4 Minimum-Count:E3
+R1	Example-Of Arg1:E5 Arg2:E42	
+R2	Example-Of Arg1:E7 Arg2:E42	
+R3	Abbrev-Of Arg1:E9 Arg2:E8	
+R4	Equivalent-To Arg1:E8 Arg2:E7	
+R5	Equivalent-To Arg1:E14 Arg2:E13	
+T90	Eq-Value 146 148	25
+T91	Eq-Value 202 204	88
+T92	Eq-Value 255 258	140
+R6	Equivalent-To Arg1:E17 Arg2:E16	
+T93	Eq-Value 298 300	90
+R7	Equivalent-To Arg1:E20 Arg2:E16	
+T65	Eq-Operator 333 334	≥
+A22	Eq-Operator-Value T65 GTEQ
+R8	Abbrev-Of Arg1:E32 Arg2:E31	
+R9	Example-Of Arg1:E33 Arg2:E31	
+R10	Example-Of Arg1:E34 Arg2:E31	
+R11	Example-Of Arg1:E36 Arg2:E31	

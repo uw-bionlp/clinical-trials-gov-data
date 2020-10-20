@@ -1,0 +1,86 @@
+T1	Condition 313 327	Heavy drinking
+T2	Condition-Name 313 327	Heavy drinking
+E1	Condition:T1 Name:T2
+T5	Language 169 176	English
+T6	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T6 adult
+T7	Condition 331 345	binge-drinking
+T8	Condition-Name 331 345	binge-drinking
+E7	Condition:T7 Name:T8
+T9	Condition 405 426	alcohol use disorders
+T10	Condition-Name 405 426	alcohol use disorders
+E9	Condition:T9 Name:T10
+T11	Condition 493 513	cognitive impairment
+T12	Condition-Name 493 513	cognitive impairment
+E11	Condition:T11 Name:T12
+T13	Condition 525 545	cognitive impairment
+T14	Condition-Name 525 545	cognitive impairment
+E13	Condition:T13 Name:T14 Severity:T39
+T15	Condition 674 682	drinking
+T16	Condition-Name 674 682	drinking
+E15	Condition:T15 Name:T16 Stability:T43
+T17	Eq-Operator 39 40	-
+A2	Eq-Operator-Value T17 BETWEEN
+T18	Eq-Value 37 39	18
+T19	Eq-Value 40 42	25
+T20	Eq-Value 722 723	9
+T21	Eq-Value 727 729	10
+T22	Eq-Comparison 37 42	18-25
+E16	Eq-Comparison:T22 Operator:T17 Value:T18 Value2:T19
+T23	Age 32 36	ages
+E2	Age:T23 Eq-Comparison:E16
+T24	Condition 243 249	vision
+E4	Condition:T24 Name:T25 Polarity:T27
+T25	Condition-Name 243 249	vision
+T26	Polarity 213 219	Normal
+A3	Polarity-Value T26 normal
+T27	Polarity 236 242	normal
+A4	Polarity-Value T27 normal
+T28	Or 220 222	or
+E5	Or:T28 Arg:T26 Arg2:T27
+T3	Or 328 330	or
+E3	Or:T3 Arg:E1 Arg2:E7
+T4	Eq-Comparison 371 378	Present
+E6	Eq-Comparison:T4 Temporal-Period:T29
+T29	Eq-Temporal-Period 371 378	Present
+A5	Eq-Temporal-Period-Value T29 present
+T30	Condition 379 392	DSM disorders
+E8	Condition:T30 Name:T31 Temporality:E6
+T31	Condition-Name 379 392	DSM disorders
+T32	Exception 394 404	apart from
+E10	Exception:T32 From:E8 Except:E9
+T33	Condition 468 477	disorders
+E12	Condition:T33 Name:T34
+T34	Condition-Name 468 477	disorders
+T35	Modifier 459 467	systemic
+E14	Modifier:T35 Modifies:T34
+T36	Modifier 443 455	neurological
+E17	Modifier:T36 Modifies:T34
+T37	Or 456 458	or
+E18	Or:T37 Arg:E17 Arg2:E14
+R2	Caused-By Arg1:E11 Arg2:E12	
+T38	Assertion 483 486	can
+E19	Assertion:T38 Asserted:E11
+A6	Assertion-Type-Value E19 hypothetical
+T39	Severity 519 524	Minor
+A7	Severity-Value T39 mild
+T40	Study 596 601	study
+E20	Study:T40 
+T41	Assertion 639 647	interest
+E21	Assertion:T41 Asserted:T43
+A8	Assertion-Type-Value E21 intention
+T42	Negation 636 638	no
+E22	Negation:T42 Negates:E21
+T43	Stability 651 659	reducing
+A9	Stability-Value T43 change
+T44	Observation 684 718	Alcohol Contemplation Ladder score
+E23	Observation:T44 Name:T45 Eq-Comparison:E24
+T45	Observation-Name 684 718	Alcohol Contemplation Ladder score
+A10	Observation-Type-Value T45 clinical-score
+T46	Eq-Comparison 722 729	9 or 10
+E24	Eq-Comparison:T46 Value:T20 Value2:T21
+R3	Equivalent-To Arg1:E23 Arg2:E22	
+T47	Condition 562 595	inability to correctly understand
+E25	Condition:T47 Name:T48
+T48	Condition-Name 562 595	inability to correctly understand
+R1	Caused-By Arg1:E25 Arg2:E13	

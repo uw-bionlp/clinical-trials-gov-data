@@ -1,0 +1,101 @@
+T3	Condition 61 71	pemphigoid
+T4	Condition-Name 61 71	pemphigoid
+E3	Condition:T3 Name:T4 Temporality:E7
+T5	Eq-Operator 883 892	less than
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Temporal-Unit 112 118	months
+A2	Eq-Temporal-Unit-Value T6 month
+T7	Eq-Temporal-Unit 895 901	months
+A3	Eq-Temporal-Unit-Value T7 month
+T8	Eq-Value 110 111	3
+T12	Eq-Value 893 894	3
+T13	Eq-Comparison 883 901	less than 3 months
+E4	Eq-Comparison:T13 Operator:T5 Temporal-Unit:T7 Value:T12
+T14	Eq-Comparison 318 326	received
+E5	Eq-Comparison:T14 Temporal-Period:T15
+T15	Eq-Temporal-Period 318 326	received
+A4	Eq-Temporal-Period-Value T15 past
+T16	Eq-Comparison 847 855	received
+E6	Eq-Comparison:T16 Temporal-Period:T17
+T17	Eq-Temporal-Period 847 855	received
+A5	Eq-Temporal-Period-Value T17 past
+T18	Modifier 47 60	multi-bullous
+E2	Modifier:T18 Modifies:T4
+T19	Eq-Comparison 100 118	more than 3 months
+E7	Eq-Comparison:T19 Operator:T20 Temporal-Unit:T6 Value:T8
+T20	Eq-Operator 100 109	more than
+A6	Eq-Operator-Value T20 GT
+T21	Drug 134 149	corticosteroids
+E8	Drug:T21 Name:T22
+T22	Drug-Name 134 149	corticosteroids
+T23	Temporal-Connection 119 124	after
+E9	Temporal-Connection:T23 Arg:E7 Arg2:E8
+A7	Temporal-Connection-Type-Value E9 after
+T24	Procedure 154 161	treated
+E10	Procedure:T24 
+R1	Treatment-For Arg1:E10 Arg2:E3	
+T25	And 150 153	and
+E11	And:T25 Arg:E8 Arg2:E10
+T9	Insurance 409 434	national health insurance
+T26	Procedure 583 592	treatment
+E12	Procedure:T26 Temporality:E14
+T27	Drug 565 582	anti-osteoporotic
+E13	Drug:T27 Name:T28
+T28	Drug-Name 565 582	anti-osteoporotic
+T29	Eq-Comparison 552 561	receiving
+E14	Eq-Comparison:T29 Temporal-Period:T30
+T30	Eq-Temporal-Period 552 561	receiving
+A8	Eq-Temporal-Period-Value T30 present
+R2	Using Arg1:E12 Arg2:E13	
+T10	Procedure 647 656	treatment
+E15	Procedure:T10 
+T31	Drug 620 637	anti-osteoporotic
+E16	Drug:T31 Name:T32
+T32	Drug-Name 620 637	anti-osteoporotic
+T33	Assertion 607 616	requiring
+E17	Assertion:T33 Asserted:E15
+A9	Assertion-Type-Value E17 hypothetical
+R3	Using Arg1:E15 Arg2:E16	
+T34	Observation 658 665	T-score
+E18	Observation:T34 Name:T35 Eq-Comparison:E19 Minimum-Count:E1
+T35	Observation-Name 658 665	T-score
+T36	Eq-Comparison 666 672	⩽ -3DS
+E19	Eq-Comparison:T36 Operator:T37 Value:T38 Unit:T39
+T37	Eq-Operator 666 667	⩽
+A10	Eq-Operator-Value T37 LTEQ
+T38	Eq-Value 668 670	-3
+T39	Eq-Unit 670 672	DS
+T1	Eq-Comparison 676 691	at least 1 site
+E1	Eq-Comparison:T1 Operator:T2 Value:T11 Unit:T40
+T2	Eq-Operator 676 684	at least
+A11	Eq-Operator-Value T2 GTEQ
+T11	Eq-Value 685 686	1
+T40	Eq-Unit 687 691	site
+T41	Observation 695 705	FRAX score
+E20	Observation:T41 Name:T42 Eq-Comparison:E21
+T42	Observation-Name 695 705	FRAX score
+A12	Observation-Type-Value T35 measurement
+A13	Observation-Type-Value T42 clinical-score
+T43	Eq-Comparison 706 750	above the therapeutic intervention threshold
+E21	Eq-Comparison:T43 Operator:T44 Unit:T45
+T44	Eq-Operator 706 711	above
+A14	Eq-Operator-Value T44 GT
+T45	Eq-Unit 716 750	therapeutic intervention threshold
+A15	Eq-Unit-Value T45 ref-range-high
+T46	Or 692 694	or
+E22	Or:T46 Arg:E18 Arg2:E20
+T47	Condition 811 823	osteoporosis
+E23	Condition:T47 Name:T48
+T48	Condition-Name 811 823	osteoporosis
+T49	Risk 794 798	risk
+E24	Risk:T49 Risk-For:E23 Minimum-Count:E25 Severity:T53
+T50	Eq-Comparison 776 787	one or more
+E25	Eq-Comparison:T50 Value:T51 Operator:T52
+T51	Eq-Value 776 779	one
+T52	Eq-Operator 780 787	or more
+A16	Eq-Operator-Value T52 GTEQ
+T53	Severity 788 793	major
+A17	Severity-Value T53 severe
+T54	Drug 856 879	topical corticosteroids
+E26	Drug:T54 Name:T55 Temporality:E6 Temporality2:E4
+T55	Drug-Name 856 879	topical corticosteroids

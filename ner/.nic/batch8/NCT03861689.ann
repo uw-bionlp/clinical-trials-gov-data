@@ -1,0 +1,82 @@
+T1	Age 25 28	Age
+E1	Age:T1 Eq-Comparison:E3
+T3	Eq-Comparison 29 39	≥ 18 years
+E3	Eq-Comparison:T3 Value:T30 Temporal-Unit:T31 Operator:T29
+T5	Modifier 72 80	perianal
+E5	Modifier:T5 Modifies:T32
+T6	Condition 81 96	Crohn's disease
+E6	Condition:T6 Name:T32
+T7	Eq-Comparison 102 104	On
+E7	Eq-Comparison:T7 Temporal-Period:T33
+T8	Drug 105 114	biologics
+E8	Drug:T8 Name:T42 Temporality:E7
+T9	Or 115 117	or
+E9	Or:T9 Arg:E2 Arg2:E8
+T10	Condition 182 198	perianal fistula
+E10	Condition:T10 Name:T34
+T11	Condition 206 212	causes
+E11	Condition:T11 
+T12	Exception 213 223	other than
+E12	Exception:T12 From:E11 Except:E13
+T13	Condition 224 239	Crohn's disease
+E13	Condition:T13 Name:T35
+T14	Other 262 267	other
+E14	Other:T14 Is-Other:E15
+T15	Modifier 268 274	organs
+E15	Modifier:T15 Modifies:T36
+T16	Modifier 286 293	bladder
+E16	Modifier:T16 Modifies:T36
+T17	Or 294 297	and
+E17	Or:T17 Arg:E16 Arg2:E18
+T18	Modifier 298 307	intestine
+E18	Modifier:T18 Modifies:T36
+T19	Allergy 331 339	allergic
+E19	Allergy:T19 Name:E22
+T20	Or 349 350	/
+E20	Or:T20 Arg:E30 Arg2:E21
+T21	Contraindication 351 368	contraindications
+E21	Contraindication:T21 Contraindicates:E22
+T22	Drug 372 380	anti-TNF
+E22	Drug:T22 Name:T37
+T23	Eq-Comparison 404 410	active
+E23	Eq-Comparison:T23 Temporal-Period:T38
+T24	Condition 411 417	cancer
+E24	Condition:T24 Name:T39 Temporality:E23
+T25	Contraindication 441 458	contraindications
+E25	Contraindication:T25 Contraindicates:E26
+T26	Procedure 463 466	MRI
+E26	Procedure:T26 Name:T40
+T27	Condition 478 487	pregnancy
+E27	Condition:T27 Name:T41
+T28	Procedure 600 611	control arm
+E28	Procedure:T28 
+T29	Eq-Operator 29 30	≥
+A1	Eq-Operator-Value T29 GTEQ
+T30	Eq-Value 31 33	18
+T31	Eq-Temporal-Unit 34 39	years
+A2	Eq-Temporal-Unit-Value T31 year
+T32	Condition-Name 81 96	Crohn's disease
+T33	Eq-Temporal-Period 102 104	On
+A3	Eq-Temporal-Period-Value T33 present
+T34	Condition-Name 182 198	perianal fistula
+T35	Condition-Name 224 239	Crohn's disease
+T36	Condition-Name 245 256	Fistulation
+T37	Drug-Name 372 380	anti-TNF
+T38	Eq-Temporal-Period 404 410	active
+A4	Eq-Temporal-Period-Value T38 present
+T39	Condition-Name 411 417	cancer
+T40	Procedure-Name 463 466	MRI
+T41	Condition-Name 478 487	pregnancy
+T2	Drug 129 138	biologics
+E2	Drug:T2 Name:T4 Temporality:E4
+T4	Drug-Name 129 138	biologics
+T42	Drug-Name 105 114	biologics
+T43	Eq-Comparison 118 128	will start
+E4	Eq-Comparison:T43 Temporal-Period:T44
+T44	Eq-Temporal-Period 118 128	will start
+A5	Eq-Temporal-Period-Value T44 future
+R1	Caused-By Arg1:E10 Arg2:E11	
+T45	Condition 245 256	Fistulation
+E29	Condition:T45 Name:T36
+T46	Modifier 340 348	reaction
+E30	Modifier:T46 Modifies:E19

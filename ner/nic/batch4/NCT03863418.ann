@@ -1,185 +1,176 @@
-T1	Age 34 38	aged
 E1	Age:T1 Eq-Comparison:E2
-T2	Eq-Comparison 39 50	6-36 months
 E2	Eq-Comparison:T2 Value:T80 Operator:T81 Value:T82 Temporal-Unit:T83
-T3	Condition 69 86	Atopic Dermatitis
 E3	Condition:T3 Name:T84
-T4	Observation 100 112	SCORAD index
 E4	Observation:T4 Name:T133
-T5	Age 137 140	Age
 E5	Age:T5 Eq-Comparison:E6
-T6	Eq-Comparison 141 151	< 6 months
 E6	Eq-Comparison:T6 Operator:T85 Value:T86 Temporal-Unit:T87
-T7	Age 157 160	age
 E7	Age:T7 Eq-Comparison:E8
-T8	Eq-Comparison 161 172	> 36 months
 E8	Eq-Comparison:T8 Operator:T88 Value:T89 Temporal-Unit:T90
-T9	Modifier 179 183	skin
 E9	Modifier:T9 Modifies:T91
-T10	Condition 184 194	infections
 E10	Condition:T10 Name:T91
-T11	Condition 201 211	ichthyosis
 E11	Condition:T11 Name:T92
-T12	Allergy 223 232	allergies
 E12	Allergy:T12 Name:T134
-T13	Other 239 244	other
 E13	Other:T13 Is-Other:E14
-T14	Condition 245 262	allergic diseases
 E14	Condition:T14 Name:T93
-T15	Modifier 277 285	systemic
 E15	Modifier:T15 Modifies:T94
-T16	Condition 286 294	diseases
-E16	Condition:T16 Name:T94
-T17	Condition 301 327	congenital cardiac defects
+E16	Condition:T16 Name:T94 Acuteness:T74
 E17	Condition:T17 Name:T95
-T18	Eq-Comparison 334 340	active
 E18	Eq-Comparison:T18 Temporal-Period:T96
-T19	Condition 341 353	tuberculosis
 E19	Condition:T19 Name:T97 Temporality:E18
-T20	Condition 360 379	autoimmune diseases
 E20	Condition:T20 Name:T98
-T21	Condition 386 402	immunodeficiency
 E21	Condition:T21 Name:T99
-T22	Modifier 409 416	chronic
-E22	Modifier:T22 Modifies:T100
-T23	Condition 417 444	inflammatory bowel diseases
-E23	Condition:T23 Name:T100
-T24	Condition 451 465	celiac disease
+E23	Condition:T23 Name:T100 Acuteness:T22
 E24	Condition:T24 Name:T101
-T25	Condition 472 487	cystic fibrosis
 E25	Condition:T25 Name:T102
-T26	Condition 494 512	metabolic diseases
 E26	Condition:T26 Name:T103
-T27	Condition 519 529	malignancy
 E27	Condition:T27 Name:T104
-T28	Modifier 536 543	chronic
-E28	Modifier:T28 Modifies:T105
-T29	Condition 544 562	pulmonary diseases
-E29	Condition:T29 Name:T105
-T30	Condition 569 582	malformations
+E29	Condition:T29 Name:T105 Acuteness:T28
 E30	Condition:T30 Name:T106
-T31	Modifier 590 606	gastrointestinal
 E31	Modifier:T31 Modifies:T106
-T32	Or 607 613	and/or
 E32	Or:T32 Arg:E31 Arg2:E33
-T34	Drug 656 666	prebiotics
 E34	Drug:T34 Name:T108
-T35	Or 678 679	/
 E35	Or:T35 Arg:E80 Arg2:E39
-T36	Modifier 679 688	symbiotic
 E36	Modifier:T36 Modifies:T109
-T37	Or 688 689	/
 E37	Or:T37 Arg:E36 Arg2:E38
-T38	Modifier 689 697	systemic
 E38	Modifier:T38 Modifies:T109
-T39	Drug 698 714	immunomodulators
 E39	Drug:T39 Name:T109
-T40	Temporal-Connection 715 721	during
 E40	Temporal-Connection:T40 Arg:E39 Arg2:E41
-A1	Temporal-Connection-Type-Value E40 during
-T41	Eq-Comparison 726 733	4 weeks
 E41	Eq-Comparison:T41 Value:T110 Temporal-Unit:T111
-T42	Temporal-Connection 734 740	before
 E42	Temporal-Connection:T42 Arg:E41 Arg2:E43
-A2	Temporal-Connection-Type-Value E42 before
-T43	Study 741 750	enrolment
-E43	Study:T43 
-T44	Procedure 757 767	treatments
+E43	Study:T43
 E44	Procedure:T44 Temporality:E49
-T45	Drug 773 797	topical immunomodulators
 E45	Drug:T45 Name:T112
-T46	Drug 799 809	Tacrolimus
 E46	Drug:T46 Name:T113
-T47	Or 810 812	or
 E47	Or:T47 Arg:E46 Arg2:E48
-T48	Drug 813 825	Pimecrolimus
 E48	Drug:T48 Name:T114
-T49	Eq-Comparison 827 848	over the three months
 E49	Eq-Comparison:T49 Value:T115 Temporal-Unit:T116
-T50	Temporal-Connection 849 857	prior to
 E50	Temporal-Connection:T50 Arg:E49 Arg2:E51
-A3	Temporal-Connection-Type-Value E50 before
-T51	Study 858 867	enrolment
-E51	Study:T51 
-T52	Drug 881 896	corticosteroids
+E51	Study:T51
 E52	Drug:T52 Name:T118 Temporality:E58
-T53	Or 897 899	or
 E53	Or:T53 Arg:E52 Arg2:E55
-T55	Drug 900 923	calcineurin antagonists
 E55	Drug:T55 Name:T119 Temporality:E58
-T56	Or 924 926	or
 E56	Or:T56 Arg:E55 Arg2:E57
-T57	Procedure 927 939	phototherapy
 E57	Procedure:T57 Name:T120 Temporality:E58
-T58	Eq-Comparison 947 963	previous 4 weeks
 E58	Eq-Comparison:T58 Temporal-Period:T121 Value:T122 Temporal-Unit:T123
-T59	Drug 986 997	antibiotics
 E59	Drug:T59 Name:T125
-T60	Or 998 1000	or
 E60	Or:T60 Arg:E59 Arg2:E61
-T61	Drug 1014 1019	drugs
-E61	Drug:T61 
-T62	Temporal-Connection 1020 1026	during
+E61	Drug:T61
 E62	Temporal-Connection:T62 Arg:E61 Arg2:E63
-A4	Temporal-Connection-Type-Value E62 during
-T63	Eq-Comparison 1027 1034	4 weeks
 E63	Eq-Comparison:T63 Value:T127 Temporal-Unit:T128
-T64	Temporal-Connection 1035 1041	before
 E64	Temporal-Connection:T64 Arg:E63 Arg2:E65
-A5	Temporal-Connection-Type-Value E64 before
-T65	Study 1042 1047	study
-E65	Study:T65 
-T66	Other 1203 1208	other
+E65	Study:T65
 E66	Other:T66 Is-Other:E67
-T67	Study 1209 1216	studies
 E67	Study:T67 Study-Of:E70
-T68	Study 1227 1242	investigational
 E68	Study:T68 Study-Of:E70
-T69	Or 1243 1245	or
 E69	Or:T69 Arg:E68 Arg2:E82
-T70	Drug 1255 1263	products
 E70	Drug:T70 Temporality:E72
-T71	Or 1278 1280	or
 E71	Or:T71 Arg:E83 Arg2:E72
-T72	Eq-Comparison 1281 1297	within two weeks
 E72	Eq-Comparison:T72 Operator:T129 Value:T130 Temporal-Unit:T131
-T73	Temporal-Connection 1298 1306	prior to
 E73	Temporal-Connection:T73 Arg:E72 Arg2:E75
-A6	Temporal-Connection-Type-Value E73 before
-T75	Study 1322 1327	study
-E75	Study:T75 
-T76	Condition 1334 1350	hypersensitivity
+E75	Study:T75
 E76	Condition:T76 Name:T132
-T77	Study 1378 1383	study
 E77	Study:T77 Study-Of:E78
+E78	Drug:T78
+E33	Modifier:T33 Modifies:T106
+E79	Or:T107 Arg:E34 Arg2:E80
+E80	Drug:T135 Name:T136
+E54	Modifier:T54 Modifies:T125
+E81	Condition:T117 Name:T124
+E82	Modifier:T126 Modifies:E70
+E83	Modifier:T137 Modifies:E70
+T1	Age 34 38	aged
+T2	Eq-Comparison 39 50	6-36 months
+T3	Condition 69 86	Atopic Dermatitis
+T4	Observation 100 112	SCORAD index
+T5	Age 137 140	Age
+T6	Eq-Comparison 141 151	< 6 months
+T7	Age 157 160	age
+T8	Eq-Comparison 161 172	> 36 months
+T9	Modifier 179 183	skin
+T10	Condition 184 194	infections
+T11	Condition 201 211	ichthyosis
+T12	Allergy 223 232	allergies
+T13	Other 239 244	other
+T14	Condition 245 262	allergic diseases
+T15	Modifier 277 285	systemic
+T16	Condition 286 294	diseases
+T17	Condition 301 327	congenital cardiac defects
+T18	Eq-Comparison 334 340	active
+T19	Condition 341 353	tuberculosis
+T20	Condition 360 379	autoimmune diseases
+T21	Condition 386 402	immunodeficiency
+T22	Acuteness 409 416	chronic
+T23	Condition 417 444	inflammatory bowel diseases
+T24	Condition 451 465	celiac disease
+T25	Condition 472 487	cystic fibrosis
+T26	Condition 494 512	metabolic diseases
+T27	Condition 519 529	malignancy
+T28	Acuteness 536 543	chronic
+T29	Condition 544 562	pulmonary diseases
+T30	Condition 569 582	malformations
+T31	Modifier 590 606	gastrointestinal
+T32	Or 607 613	and/or
+T34	Drug 656 666	prebiotics
+T35	Or 678 679	/
+T36	Modifier 679 688	symbiotic
+T37	Or 688 689	/
+T38	Modifier 689 697	systemic
+T39	Drug 698 714	immunomodulators
+T40	Temporal-Connection 715 721	during
+T41	Eq-Comparison 726 733	4 weeks
+T42	Temporal-Connection 734 740	before
+T43	Study 741 750	enrolment
+T44	Procedure 757 767	treatments
+T45	Drug 773 797	topical immunomodulators
+T46	Drug 799 809	Tacrolimus
+T47	Or 810 812	or
+T48	Drug 813 825	Pimecrolimus
+T49	Eq-Comparison 827 848	over the three months
+T50	Temporal-Connection 849 857	prior to
+T51	Study 858 867	enrolment
+T52	Drug 881 896	corticosteroids
+T53	Or 897 899	or
+T55	Drug 900 923	calcineurin antagonists
+T56	Or 924 926	or
+T57	Procedure 927 939	phototherapy
+T58	Eq-Comparison 947 963	previous 4 weeks
+T59	Drug 986 997	antibiotics
+T60	Or 998 1000	or
+T61	Drug 1014 1019	drugs
+T62	Temporal-Connection 1020 1026	during
+T63	Eq-Comparison 1027 1034	4 weeks
+T64	Temporal-Connection 1035 1041	before
+T65	Study 1042 1047	study
+T66	Other 1203 1208	other
+T67	Study 1209 1216	studies
+T68	Study 1227 1242	investigational
+T69	Or 1243 1245	or
+T70	Drug 1255 1263	products
+T71	Or 1278 1280	or
+T72	Eq-Comparison 1281 1297	within two weeks
+T73	Temporal-Connection 1298 1306	prior to
+T75	Study 1322 1327	study
+T76	Condition 1334 1350	hypersensitivity
+T77	Study 1378 1383	study
 T78	Drug 1384 1391	product
-E78	Drug:T78 
 T79	Life-Stage-And-Gender 25 33	Children
-A7	Life-Stage-And-Gender-Type T79 child
 T80	Eq-Value 39 40	6
 T81	Eq-Operator 40 41	-
-A8	Eq-Operator-Value T81 BETWEEN
 T82	Eq-Value 41 43	36
 T83	Eq-Temporal-Unit 44 50	months
-A9	Eq-Temporal-Unit-Value T83 month
 T84	Condition-Name 69 86	Atopic Dermatitis
 T85	Eq-Operator 141 142	<
-A10	Eq-Operator-Value T85 LT
 T86	Eq-Value 143 144	6
 T87	Eq-Temporal-Unit 145 151	months
-A11	Eq-Temporal-Unit-Value T87 month
 T88	Eq-Operator 161 162	>
-A12	Eq-Operator-Value T88 GT
 T89	Eq-Value 163 165	36
 T90	Eq-Temporal-Unit 166 172	months
-A13	Eq-Temporal-Unit-Value T90 month
 T91	Condition-Name 184 194	infections
 T92	Condition-Name 201 211	ichthyosis
 T93	Condition-Name 245 262	allergic diseases
 T94	Condition-Name 286 294	diseases
 T95	Condition-Name 301 327	congenital cardiac defects
 T96	Eq-Temporal-Period 334 340	active
-A14	Eq-Temporal-Period-Value T96 present
 T97	Condition-Name 341 353	tuberculosis
 T98	Condition-Name 360 379	autoimmune diseases
 T99	Condition-Name 386 402	immunodeficiency
@@ -194,55 +185,64 @@ T108	Drug-Name 656 666	prebiotics
 T109	Drug-Name 698 714	immunomodulators
 T110	Eq-Value 726 727	4
 T111	Eq-Temporal-Unit 728 733	weeks
-A15	Eq-Temporal-Unit-Value T111 week
 T112	Drug-Name 773 797	topical immunomodulators
 T113	Drug-Name 799 809	Tacrolimus
 T114	Drug-Name 813 825	Pimecrolimus
 T115	Eq-Value 836 841	three
 T116	Eq-Temporal-Unit 842 848	months
-A16	Eq-Temporal-Unit-Value T116 month
 T118	Drug-Name 881 896	corticosteroids
 T119	Drug-Name 900 923	calcineurin antagonists
 T120	Procedure-Name 927 939	phototherapy
 T121	Eq-Temporal-Period 947 955	previous
-A18	Eq-Temporal-Period-Value T121 past
 T122	Eq-Value 956 957	4
 T123	Eq-Temporal-Unit 958 963	weeks
-A19	Eq-Temporal-Unit-Value T123 week
 T125	Drug-Name 986 997	antibiotics
 T127	Eq-Value 1027 1028	4
 T128	Eq-Temporal-Unit 1029 1034	weeks
-A21	Eq-Temporal-Unit-Value T128 week
 T129	Eq-Operator 1281 1287	within
-A22	Eq-Operator-Value T129 LTEQ
 T130	Eq-Value 1288 1291	two
 T131	Eq-Temporal-Unit 1292 1297	weeks
-A23	Eq-Temporal-Unit-Value T131 week
 T132	Condition-Name 1334 1350	hypersensitivity
 T133	Observation-Name 100 112	SCORAD index
-A24	Observation-Type-Value T133 clinical-score
-R1	Found-By Arg1:E3 Arg2:E4	
 T134	Allergy-Name 218 222	food
 T33	Modifier 614 631	respiratory tract
-E33	Modifier:T33 Modifies:T106
 T107	Or 666 667	/
-E79	Or:T107 Arg:E34 Arg2:E80
 T135	Drug 668 678	probiotics
-E80	Drug:T135 Name:T136
 T136	Drug-Name 668 678	probiotics
-R2	Using Arg1:E44 Arg2:E45	
-R3	Example-Of Arg1:E46 Arg2:E45	
-R4	Example-Of Arg1:E48 Arg2:E45	
 T54	Modifier 977 985	systemic
-E54	Modifier:T54 Modifies:T125
 T117	Condition 1006 1013	mycotic
-E81	Condition:T117 Name:T124
 T124	Condition-Name 1006 1013	mycotic
-R5	Treatment-For Arg1:E61 Arg2:E81	
 T126	Modifier 1246 1254	marketed
-E82	Modifier:T126 Modifies:E70
 T137	Modifier 1264 1277	concomitantly
-E83	Modifier:T137 Modifies:E70
-R6	Caused-By Arg1:E76 Arg2:E78	
-T74	Modifier 269 276	chronic
-E74	Modifier:T74 Modifies:T94
+T74	Acuteness 269 276	chronic
+A1	Temporal-Connection-Type-Value E40 during
+A2	Temporal-Connection-Type-Value E42 before
+A3	Temporal-Connection-Type-Value E50 before
+A4	Temporal-Connection-Type-Value E62 during
+A5	Temporal-Connection-Type-Value E64 before
+A6	Temporal-Connection-Type-Value E73 before
+A7	Life-Stage-And-Gender-Type T79 child
+A8	Eq-Operator-Value T81 BETWEEN
+A9	Eq-Temporal-Unit-Value T83 month
+A10	Eq-Operator-Value T85 LT
+A11	Eq-Temporal-Unit-Value T87 month
+A12	Eq-Operator-Value T88 GT
+A13	Eq-Temporal-Unit-Value T90 month
+A14	Eq-Temporal-Period-Value T96 present
+A15	Eq-Temporal-Unit-Value T111 week
+A16	Eq-Temporal-Unit-Value T116 month
+A18	Eq-Temporal-Period-Value T121 past
+A19	Eq-Temporal-Unit-Value T123 week
+A21	Eq-Temporal-Unit-Value T128 week
+A22	Eq-Operator-Value T129 LTEQ
+A23	Eq-Temporal-Unit-Value T131 week
+A24	Observation-Type-Value T133 clinical-score
+A25	Acuteness-Type-Value T22 chronic
+A26	Acuteness-Type-Value T28 chronic
+A27	Acuteness-Type-Value T74 chronic
+R1	Found-By Arg1:E3 Arg2:E4
+R2	Using Arg1:E44 Arg2:E45
+R3	Example-Of Arg1:E46 Arg2:E45
+R4	Example-Of Arg1:E48 Arg2:E45
+R5	Treatment-For Arg1:E61 Arg2:E81
+R6	Caused-By Arg1:E76 Arg2:E78

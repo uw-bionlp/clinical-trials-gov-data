@@ -1,91 +1,84 @@
-T1	Assertion 33 42	requiring
 E1	Assertion:T1 Asserted:E2
-A1	Assertion-Type-Value E1 hypothetical
-T2	Procedure 46 65	electroneuromyogram
 E2	Procedure:T2 Name:T59
-T3	Modifier 111 128	standard protocol
 E3	Modifier:T3 Modifies:T61
-T4	Procedure 132 143	examination
 E4	Procedure:T4 Name:T61
-T5	Eq-Comparison 315 332	at least 18 years
 E5	Eq-Comparison:T5 Operator:T34 Value:T35 Temporal-Unit:T36 Operator2:T37
-T6	Age 333 336	old
 E6	Age:T6 Eq-Comparison:E5
-T7	Eq-Comparison 361 375	under 80 years
 E7	Eq-Comparison:T7 Operator:T38 Value:T39 Temporal-Unit:T40 Operator2:T41
-T8	Age 376 379	old
 E8	Age:T8 Eq-Comparison:E7
-T9	Assertion 423 431	symptoms
 E9	Assertion:T9 Asserted:E10
-A2	Assertion-Type-Value E9 possible
-T10	Condition 435 445	neuropathy
 E10	Condition:T10 Name:T42
-T11	Temporal-Connection 446 452	during
 E11	Temporal-Connection:T11 Arg:E10 Arg2:E12
-A3	Temporal-Connection-Type-Value E11 during
-T12	Study 457 466	screening
-E12	Study:T12 
-T13	Observation 487 514	Neurological severity score
+E12	Study:T12
 E13	Observation:T13 Name:T43
-T14	Observation 516 519	NSS
 E14	Observation:T14 Name:T44 Eq-Comparison:E15
-T15	Eq-Comparison 530 533	≥ 3
 E15	Eq-Comparison:T15 Operator:T45
-T16	Procedure 554 578	neurological examination
 E16	Procedure:T16 Name:T46 Polarity:T47
-T18	Or 591 594	and
 E18	Or:T18 Arg:T47 Arg2:E17
-T19	Condition 609 619	neuropathy
 E19	Condition:T19 Name:T48
-T20	Condition 647 656	pathology
 E20	Condition:T20 Name:T49
-T21	Assertion 662 667	could
 E21	Assertion:T21 Asserted:E20
-A4	Assertion-Type-Value E21 hypothetical
-T22	Condition 674 684	neuropathy
 E22	Condition:T22 Name:T50
-T23	Condition 691 699	diabetes
 E23	Condition:T23 Name:T51
-T24	Condition 701 714	renal failure
 E24	Condition:T24 Name:T52
-T26	Other 852 859	another
 E26	Other:T26 Is-Other:E27
-T27	Study 860 865	study
-E27	Study:T27 
-T28	Observation 890 911	protection of justice
+E27	Study:T27
 E28	Observation:T28 Name:T54
-T29	Study 1075 1080	study
-E29	Study:T29 
-T30	Condition 1087 1095	Pregnant
+E29	Study:T29
 E30	Condition:T30 Name:T56
-T31	Condition 1105 1115	parturient
 E31	Condition:T31 Name:T57
-T32	Or 1117 1119	or
 E32	Or:T32 Arg:E31 Arg2:E33
-T33	Condition 1120 1133	breastfeeding
 E33	Condition:T33 Name:T58
+E34	Indication:T60 Indication-For:E4
+E17	Assertion:T17 Asserted:E19
+E25	Observation:T25 Name:T55
+E35	Observation:T53 Name:T63
+E36	Or:T64 Arg:E25 Arg2:E35
+T1	Assertion 33 42	requiring
+T2	Procedure 46 65	electroneuromyogram
+T3	Modifier 111 128	standard protocol
+T4	Procedure 132 143	examination
+T5	Eq-Comparison 315 332	at least 18 years
+T6	Age 333 336	old
+T7	Eq-Comparison 361 375	under 80 years
+T8	Age 376 379	old
+T9	Assertion 423 431	symptoms
+T10	Condition 435 445	neuropathy
+T11	Temporal-Connection 446 452	during
+T12	Study 457 466	screening
+T13	Observation 487 514	Neurological severity score
+T14	Observation 516 519	NSS
+T15	Eq-Comparison 530 533	≥ 3
+T16	Procedure 554 578	neurological examination
+T18	Or 591 594	and
+T19	Condition 609 619	neuropathy
+T20	Condition 647 656	pathology
+T21	Assertion 662 667	could
+T22	Condition 674 684	neuropathy
+T23	Condition 691 699	diabetes
+T24	Condition 701 714	renal failure
+T26	Other 852 859	another
+T27	Study 860 865	study
+T28	Observation 890 911	protection of justice
+T29	Study 1075 1080	study
+T30	Condition 1087 1095	Pregnant
+T31	Condition 1105 1115	parturient
+T32	Or 1117 1119	or
+T33	Condition 1120 1133	breastfeeding
 T34	Eq-Operator 315 323	at least
-A5	Eq-Operator-Value T34 GTEQ
 T35	Eq-Value 324 326	18
 T36	Eq-Temporal-Unit 327 332	years
-A6	Eq-Temporal-Unit-Value T36 year
 T37	Eq-Operator 338 339	≥
-A7	Eq-Operator-Value T37 GTEQ
 T38	Eq-Operator 361 366	under
-A8	Eq-Operator-Value T38 LT
 T39	Eq-Value 367 369	80
 T40	Eq-Temporal-Unit 370 375	years
-A9	Eq-Temporal-Unit-Value T40 year
 T41	Eq-Operator 381 382	≤
 T42	Condition-Name 435 445	neuropathy
 T43	Observation-Name 487 514	Neurological severity score
-A10	Observation-Type-Value T43 clinical-score
 T44	Observation-Name 516 519	NSS
 T45	Eq-Operator 530 531	≥
-A11	Eq-Operator-Value T45 GTEQ
 T46	Procedure-Name 554 578	neurological examination
 T47	Polarity 582 590	abnormal
-A12	Polarity-Value T47 abnormal
 T48	Condition-Name 609 619	neuropathy
 T49	Condition-Name 647 656	pathology
 T50	Condition-Name 674 684	neuropathy
@@ -98,23 +91,30 @@ T57	Condition-Name 1105 1115	parturient
 T58	Condition-Name 1120 1133	breastfeeding
 T59	Procedure-Name 46 65	electroneuromyogram
 T61	Procedure-Name 132 143	examination
-R1	Using Arg1:E2 Arg2:E4	
 T60	Indication 72 82	indication
-E34	Indication:T60 Indication-For:E4
 T62	Insurance 272 293	health insurance plan
-R2	Abbrev-Of Arg1:E14 Arg2:E13	
 T17	Assertion 595 605	suggestive
-E17	Assertion:T17 Asserted:E19
-A14	Assertion-Type-Value E17 possible
-R3	Found-By Arg1:E19 Arg2:E16	
-A15	Eq-Operator-Value T41 LTEQ
-R4	Caused-By Arg1:E22 Arg2:E20	
-R5	Example-Of Arg1:E23 Arg2:E20	
-R6	Example-Of Arg1:E24 Arg2:E20	
 T25	Observation 913 931	under guardianship
-E25	Observation:T25 Name:T55
 T53	Observation 941 952	curatorship
-E35	Observation:T53 Name:T63
 T63	Observation-Name 941 952	curatorship
 T64	Or 932 934	or
-E36	Or:T64 Arg:E25 Arg2:E35
+A1	Assertion-Type-Value E1 hypothetical
+A2	Assertion-Type-Value E9 possible
+A3	Temporal-Connection-Type-Value E11 during
+A4	Assertion-Type-Value E21 hypothetical
+A5	Eq-Operator-Value T34 GTEQ
+A6	Eq-Temporal-Unit-Value T36 year
+A7	Eq-Operator-Value T37 GTEQ
+A8	Eq-Operator-Value T38 LT
+A9	Eq-Temporal-Unit-Value T40 year
+A10	Observation-Type-Value T43 clinical-score
+A11	Eq-Operator-Value T45 GTEQ
+A12	Polarity-Value T47 abnormal
+A14	Assertion-Type-Value E17 possible
+A15	Eq-Operator-Value T41 LTEQ
+R1	Using Arg1:E2 Arg2:E4
+R2	Abbrev-Of Arg1:E14 Arg2:E13
+R3	Found-By Arg1:E19 Arg2:E16
+R4	Caused-By Arg1:E22 Arg2:E20
+R5	Example-Of Arg1:E23 Arg2:E20
+R6	Example-Of Arg1:E24 Arg2:E20

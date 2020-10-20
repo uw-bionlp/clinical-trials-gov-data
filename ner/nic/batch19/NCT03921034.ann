@@ -1,146 +1,147 @@
+E1	Condition:T1 Name:T2 Acuteness:T57
+E3	Procedure:T3 Name:T4
+E5	Condition:T5 Name:T6 Temporality:E45
+E7	Procedure:T7 Name:T8
+E9	Observation:T9 Name:T10 Eq-Comparison:E47
+E11	Procedure:T11 Name:T12
+E13	Drug:T13 Name:T14 Duration:E44 Temporality:E42
+E15	Procedure:T15 Name:T16
+E16	Age:T24 Eq-Comparison:E6
+E17	Eq-Comparison:T30 Operator:T19 Value:T26
+E18	Eq-Comparison:T31 Operator:T20 Value:T27
+E19	Eq-Comparison:T32 Temporal-Period:T33
+E2	Modifier:T34 Modifies:T4
+E4	Modifier:T35 Modifies:T4
+E6	Eq-Comparison:T36 Value:T25 Temporal-Unit:T22 Operator:T37
+E8	Observation:T18 Name:T38 Eq-Comparison:E10
+E10	Eq-Comparison:T39 Operator:T42 Value:T40 Value2:T41
+E12	Modifier:T43 Modifies:T16
+E14	Modifier:T44 Modifies:T16
+E20	Or:T45 Arg:E14 Arg2:E12
+E21	Assertion:T46 Asserted:E15
+E22	Study:T47
+E23	Contraindication:T48 Contraindicates:E7 Contraindicates2:E11
+E24	Modifier:T49 Modifies:T12
+E25	Or:T50 Arg:E7 Arg2:E11
+E26	Allergy:T51 Name:E27
+E27	Procedure:T52 Name:T53
+E28	Allergy:T54 Name:E29
+E29	Drug:T55 Name:T56
+E31	Observation:T58 Name:T59 Eq-Comparison:E17
+E32	Observation:T60 Name:T61 Eq-Comparison:E18
+E33	Or:T62 Arg:E31 Arg2:E32
+E34	And:T63 Arg:E1 Arg2:E31
+E35	Condition:T64 Name:T65 Acuteness:T66
+E37	Modifier:T67 Modifies:T65
+E38	Negation:T68 Negates:E37
+E39	Drug:T69 Name:T70 Temporality:E19 Acuteness:T71
+E41	Eq-Comparison:T72 Per:T73
+E42	Eq-Comparison:T74 Per:T75
+E43	Or:T76 Arg:E41 Arg2:E42
+E44	Eq-Comparison:T77 Value:T28 Temporal-Unit:T23 Operator:T78
+E45	Eq-Comparison:T79 Temporal-Period:T80
+E46	Modifier:T81 Modifies:T6
+E47	Eq-Comparison:T82 Operator:T21 Value:T29
 T1	Condition 442 461	renal insufficiency
 T2	Condition-Name 442 461	renal insufficiency
-E1	Condition:T1 Name:T2
 T3	Procedure 71 83	arthroplasty
 T4	Procedure-Name 71 83	arthroplasty
-E3	Procedure:T3 Name:T4
 T5	Condition 682 703	peripheral neuropathy
 T6	Condition-Name 682 703	peripheral neuropathy
-E5	Condition:T5 Name:T6 Temporality:E45
 T7	Procedure 325 344	regional anesthesia
 T8	Procedure-Name 325 344	regional anesthesia
-E7	Procedure:T7 Name:T8
 T9	Observation 738 753	Body mass index
 T10	Observation-Name 738 753	Body mass index
-E9	Observation:T9 Name:T10 Eq-Comparison:E47
-A1	Observation-Type-Value T10 vital
 T11	Procedure 359 371	nerve blocks
 T12	Procedure-Name 359 371	nerve blocks
-E11	Procedure:T11 Name:T12
 T13	Drug 622 628	opioid
 T14	Drug-Name 622 628	opioid
-E13	Drug:T13 Name:T14 Duration:E44 Temporality:E42
 T15	Procedure 170 189	epidural anesthetic
 T16	Procedure-Name 170 189	epidural anesthetic
-E15	Procedure:T15 Name:T16
 T17	Language 231 238	English
 T19	Eq-Operator 470 471	>
-A2	Eq-Operator-Value T19 GT
 T20	Eq-Operator 483 484	<
-A3	Eq-Operator-Value T20 LT
 T21	Eq-Operator 754 775	greater than or equal
-A4	Eq-Operator-Value T21 GTEQ
 T22	Eq-Temporal-Unit 96 101	years
-A5	Eq-Temporal-Unit-Value T22 year
 T23	Eq-Temporal-Unit 639 645	months
-A6	Eq-Temporal-Unit-Value T23 month
 T24	Age 89 92	Age
-E16	Age:T24 Eq-Comparison:E6
 T25	Eq-Value 93 95	18
 T26	Eq-Value 472 475	1.4
 T27	Eq-Value 485 487	60
 T28	Eq-Value 637 638	3
 T29	Eq-Value 779 781	40
 T30	Eq-Comparison 470 475	> 1.4
-E17	Eq-Comparison:T30 Operator:T19 Value:T26
 T31	Eq-Comparison 483 487	< 60
-E18	Eq-Comparison:T31 Operator:T20 Value:T27
 T32	Eq-Comparison 566 571	using
-E19	Eq-Comparison:T32 Temporal-Period:T33
 T33	Eq-Temporal-Period 566 571	using
-A7	Eq-Temporal-Period-Value T33 present
 T34	Modifier 37 70	primary tricompartment total knee
-E2	Modifier:T34 Modifies:T4
 T35	Modifier 25 35	Unilateral
-E4	Modifier:T35 Modifies:T4
 T36	Eq-Comparison 93 110	18 years or older
-E6	Eq-Comparison:T36 Value:T25 Temporal-Unit:T22 Operator:T37
 T37	Eq-Operator 102 110	or older
-A8	Eq-Operator-Value T37 GTEQ
-T18	Condition 116 119	ASA
-E8	Condition:T18 Name:T38 Stage:E10
-T38	Condition-Name 116 119	ASA
+T18	Observation 116 119	ASA
+T38	Observation-Name 116 119	ASA
 T39	Eq-Comparison 120 125	I-III
-E10	Eq-Comparison:T39 Operator:T42 Value:T40 Value2:T41
 T40	Eq-Value 120 121	I
 T41	Eq-Value 122 125	III
 T42	Eq-Operator 121 122	-
-A9	Eq-Operator-Value T42 BETWEEN
 T43	Modifier 154 169	combined spinal
-E12	Modifier:T43 Modifies:T16
 T44	Modifier 144 150	spinal
-E14	Modifier:T44 Modifies:T16
 T45	Or 151 153	or
-E20	Or:T45 Arg:E14 Arg2:E12
 T46	Assertion 131 143	Eligible for
-E21	Assertion:T46 Asserted:E15
-A10	Assertion-Type-Value E21 hypothetical
 T47	Study 274 279	trial
-E22	Study:T47 
 T48	Contraindication 305 321	Contraindication
-E23	Contraindication:T48 Contraindicates:E7 Contraindicates2:E11
 T49	Modifier 348 358	peripheral
-E24	Modifier:T49 Modifies:T12
 T50	Or 345 347	or
-E25	Or:T50 Arg:E7 Arg2:E11
 T51	Allergy 377 384	Allergy
-E26	Allergy:T51 Name:E27
 T52	Procedure 388 405	local anesthetics
-E27	Procedure:T52 Name:T53
 T53	Procedure-Name 388 405	local anesthetics
 T54	Allergy 411 418	Allergy
-E28	Allergy:T54 Name:E29
 T55	Drug 422 428	NSAIDs
-E29	Drug:T55 Name:T56
 T56	Drug-Name 422 428	NSAIDs
-T57	Modifier 434 441	Chronic
-E30	Modifier:T57 Modifies:T2
+T57	Acuteness 434 441	Chronic
 T58	Observation 467 469	Cr
-E31	Observation:T58 Name:T59 Eq-Comparison:E17
 T59	Observation-Name 467 469	Cr
-A11	Observation-Type-Value T59 lab
 T60	Observation 479 482	GFR
-E32	Observation:T60 Name:T61 Eq-Comparison:E18
 T61	Observation-Name 479 482	GFR
-A12	Observation-Type-Value T61 lab
 T62	Or 476 478	or
-E33	Or:T62 Arg:E31 Arg2:E32
 T63	And 462 466	with
-E34	And:T63 Arg:E1 Arg2:E31
 T64	Condition 506 510	pain
-E35	Condition:T64 Name:T65
 T65	Condition-Name 506 510	pain
-T66	Modifier 498 505	chronic
-E36	Modifier:T66 Modifies:T65
+T66	Acuteness 498 505	chronic
 T67	Modifier 540 550	knee joint
-E37	Modifier:T67 Modifies:T65
 T68	Negation 519 522	not
-E38	Negation:T68 Negates:E37
 T69	Drug 572 579	opioids
-E39	Drug:T69 Name:T70 Temporality:E19
 T70	Drug-Name 572 579	opioids
-T71	Modifier 585 592	chronic
-E40	Modifier:T71 Modifies:T70
+T71	Acuteness 585 592	chronic
 T72	Eq-Comparison 600 605	daily
-E41	Eq-Comparison:T72 Per:T73
 T73	Eq-Temporal-Unit 600 605	daily
-A13	Eq-Temporal-Unit-Value T73 day
 T74	Eq-Comparison 616 621	daily
-E42	Eq-Comparison:T74 Per:T75
 T75	Eq-Temporal-Unit 616 621	daily
-A14	Eq-Temporal-Unit-Value T75 day
 T76	Or 606 608	or
-E43	Or:T76 Arg:E41 Arg2:E42
 T77	Eq-Comparison 637 655	3 months or longer
-E44	Eq-Comparison:T77 Value:T28 Temporal-Unit:T23 Operator:T78
 T78	Eq-Operator 646 655	or longer
-A15	Eq-Operator-Value T78 GTEQ
-R1	Equivalent-To Arg1:E13 Arg2:E39	
 T79	Eq-Comparison 669 681	pre-existing
-E45	Eq-Comparison:T79 Temporal-Period:T80
 T80	Eq-Temporal-Period 669 681	pre-existing
-A16	Eq-Temporal-Period-Value T80 past
 T81	Modifier 718 732	operative site
-E46	Modifier:T81 Modifies:T6
 T82	Eq-Comparison 754 781	greater than or equal to 40
-E47	Eq-Comparison:T82 Operator:T21 Value:T29
+A1	Observation-Type-Value T10 vital
+A2	Eq-Operator-Value T19 GT
+A3	Eq-Operator-Value T20 LT
+A4	Eq-Operator-Value T21 GTEQ
+A5	Eq-Temporal-Unit-Value T22 year
+A6	Eq-Temporal-Unit-Value T23 month
+A7	Eq-Temporal-Period-Value T33 present
+A8	Eq-Operator-Value T37 GTEQ
+A9	Eq-Operator-Value T42 BETWEEN
+A10	Assertion-Type-Value E21 hypothetical
+A11	Observation-Type-Value T59 lab
+A12	Observation-Type-Value T61 lab
+A13	Eq-Temporal-Unit-Value T73 day
+A14	Eq-Temporal-Unit-Value T75 day
+A15	Eq-Operator-Value T78 GTEQ
+A16	Eq-Temporal-Period-Value T80 past
+A17	Observation-Type-Value T38 clinical-score
+A18	Acuteness-Type-Value T57 chronic
+A19	Acuteness-Type-Value T66 chronic
+A20	Acuteness-Type-Value T71 chronic
+R1	Equivalent-To Arg1:E13 Arg2:E39

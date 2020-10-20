@@ -1,0 +1,71 @@
+T1	Procedure 516 549	transcranial magnetic stimulation
+T2	Procedure-Name 516 549	transcranial magnetic stimulation
+E1	Procedure:T1 Name:T2
+T3	Drug 418 443	psychological medications
+T4	Drug-Name 418 443	psychological medications
+E3	Drug:T3 Name:T4
+T5	Condition 453 473	substance dependence
+T6	Condition-Name 453 473	substance dependence
+E5	Condition:T5 Name:T6
+T7	Condition 38 55	heroin dependence
+T8	Condition-Name 38 55	heroin dependence
+E7	Condition:T7 Name:T8
+T9	Condition 262 278	withdrawal state
+T10	Condition-Name 262 278	withdrawal state
+E9	Condition:T9 Name:T10 Severity:T21
+T11	Eq-Operator 294 295	>
+A1	Eq-Operator-Value T11 GT
+T12	Eq-Value 296 297	9
+T13	Eq-Comparison 294 297	> 9
+E10	Eq-Comparison:T13 Operator:T11 Value:T12
+T14	Eq-Comparison 102 109	history
+E11	Eq-Comparison:T14 Temporal-Period:T15
+T15	Eq-Temporal-Period 102 109	history
+A2	Eq-Temporal-Period-Value T15 past
+T16	Condition 113 134	neurological diseases
+E2	Condition:T16 Name:T17 Temporality:E11
+T17	Condition-Name 113 134	neurological diseases
+T18	Condition 139 161	psychological problems
+E4	Condition:T18 Name:T19
+T19	Condition-Name 139 161	psychological problems
+T20	Or 135 138	and
+E6	Or:T20 Arg:E2 Arg2:E4
+T21	Severity 256 261	Acute
+A3	Severity-Value T21 severe
+T22	Observation 283 287	CIWA
+E8	Observation:T22 Name:T23 Eq-Comparison:E10
+T23	Observation-Name 283 287	CIWA
+T24	Condition 314 335	neurological diseases
+E12	Condition:T24 Name:T25
+T25	Condition-Name 314 335	neurological diseases
+T26	Other 308 313	other
+E13	Other:T26 Is-Other:E12
+T27	Condition 340 362	psychological problems
+E14	Condition:T27 Name:T28
+T28	Condition-Name 340 362	psychological problems
+T29	Or 336 339	and
+E15	Or:T29 Arg:E12 Arg2:E14
+T30	Condition 384 390	trauma
+E16	Condition:T30 Name:T31 Temporality:E18
+T31	Condition-Name 384 390	trauma
+T32	Modifier 378 383	brain
+E17	Modifier:T32 Modifies:T31
+T33	Eq-Comparison 373 377	ever
+E18	Eq-Comparison:T33 Temporal-Period:T34
+T34	Eq-Temporal-Period 373 377	ever
+A4	Eq-Temporal-Period-Value T34 anytime
+T35	Condition 395 401	damage
+E19	Condition:T35 Name:T36
+T36	Condition-Name 395 401	damage
+T37	Or 391 394	and
+E20	Or:T37 Arg:E16 Arg2:E19
+T38	Other 412 417	other
+E21	Other:T38 Is-Other:E3
+T39	Other 447 452	other
+E22	Other:T39 Is-Other:E5
+T40	Or 444 446	or
+E23	Or:T40 Arg:E3 Arg2:E5
+T41	Contraindication 490 507	contraindications
+E24	Contraindication:T41 Contraindicates:E1
+T42	Other 484 489	other
+E25	Other:T42 Is-Other:E24

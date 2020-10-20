@@ -1,0 +1,71 @@
+T1	Procedure 97 100	ART
+T2	Procedure-Name 97 100	ART
+E1	Procedure:T1 Name:T2 Duration:E4 Temporality:E3 Temporality2:E10
+T5	Procedure 276 279	ART
+T6	Procedure-Name 276 279	ART
+E5	Procedure:T5 Name:T6 Minimum-Count:E12
+T7	Eq-Temporal-Unit 61 66	years
+A1	Eq-Temporal-Unit-Value T7 year
+T8	Eq-Temporal-Unit 116 122	months
+A2	Eq-Temporal-Unit-Value T8 month
+T9	Eq-Temporal-Unit 403 409	months
+A3	Eq-Temporal-Unit-Value T9 month
+T10	Age 50 54	aged
+E6	Age:T10 Eq-Comparison:E7
+T11	Eq-Operator 57 58	-
+A4	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 55 57	10
+T13	Eq-Value 58 60	19
+T14	Eq-Value 114 115	6
+T15	Eq-Value 400 402	12
+T16	Eq-Comparison 55 66	10-19 years
+E7	Eq-Comparison:T16 Operator:T11 Value:T12 Temporal-Unit:T7 Value2:T13
+T17	Condition 25 28	HIV
+E2	Condition:T17 Name:T18 Polarity:T19
+T18	Condition-Name 25 28	HIV
+T19	Polarity 29 37	positive
+A5	Polarity-Value T19 positive
+T20	Life-Stage-And-Gender 38 49	adolescents
+A6	Life-Stage-And-Gender-Type T20 child
+T21	Eq-Comparison 105 122	at least 6 months
+E4	Eq-Comparison:T21 Operator:T22 Value:T14 Temporal-Unit:T8
+T22	Eq-Operator 105 113	at least
+A7	Eq-Operator-Value T22 GTEQ
+T3	Eq-Comparison 94 96	On
+E3	Eq-Comparison:T3 Temporal-Period:T4
+T4	Eq-Temporal-Period 94 96	On
+A8	Eq-Temporal-Period-Value T4 present
+T23	Eq-Comparison 215 228	at least once
+E8	Eq-Comparison:T23 Operator:T24 Value:T25
+T24	Eq-Operator 215 223	at least
+A9	Eq-Operator-Value T24 GTEQ
+T25	Eq-Value 224 228	once
+T26	Encounter 168 176	attended
+E9	Encounter:T26 Location:T27 Minimum-Count:E8
+T27	Location 181 187	clinic
+A10	Location-Value T27 clinic
+T28	Eq-Comparison 235 245	initiation
+E10	Eq-Comparison:T28 Temporal-Recency:T29
+T29	Eq-Temporal-Recency 235 245	initiation
+A11	Eq-Temporal-Recency-Value T29 first-time
+T30	Temporal-Connection 229 234	since
+E11	Temporal-Connection:T30 Arg:E9 Arg2:E10
+A12	Temporal-Connection-Type-Value E11 after
+T31	Eq-Comparison 280 293	at least once
+E12	Eq-Comparison:T31 Operator:T32 Value:T33
+T32	Eq-Operator 280 288	at least
+A13	Eq-Operator-Value T32 GTEQ
+T33	Eq-Value 289 293	once
+T34	And 246 249	AND
+E13	And:T34 Arg:E9 Arg2:E5
+T35	Encounter 365 369	care
+E14	Encounter:T35 Location:T39 Duration:E16
+T36	Assertion 345 353	Planning
+E15	Assertion:T36 Asserted:E14
+A14	Assertion-Type-Value E15 intention
+T37	Eq-Comparison 391 409	at least 12 months
+E16	Eq-Comparison:T37 Operator:T38 Value:T15 Temporal-Unit:T9
+T38	Eq-Operator 391 399	at least
+A15	Eq-Operator-Value T38 GTEQ
+T39	Location 378 386	facility
+A16	Location-Value T39 hospital

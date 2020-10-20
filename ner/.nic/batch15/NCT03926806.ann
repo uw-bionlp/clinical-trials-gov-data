@@ -1,0 +1,115 @@
+T1	Condition 371 390	Lactose intolerance
+T2	Condition-Name 371 390	Lactose intolerance
+E1	Condition:T1 Name:T2
+T3	Drug 140 155	oral medication
+T4	Drug-Name 140 155	oral medication
+E3	Drug:T3 Name:T4 Stability:T33 Duration:E12
+T5	Observation 25 28	BMI
+T6	Observation-Name 25 28	BMI
+E5	Observation:T5 Name:T6 Eq-Comparison:E8
+A1	Observation-Type-Value T6 vital
+T7	Eq-Operator 46 47	<
+A2	Eq-Operator-Value T7 LT
+T8	Eq-Operator 459 460	>
+A3	Eq-Operator-Value T8 GT
+T9	Eq-Temporal-Unit 113 119	months
+A4	Eq-Temporal-Unit-Value T9 month
+T10	Eq-Temporal-Unit 171 177	months
+A5	Eq-Temporal-Unit-Value T10 month
+T11	Eq-Operator 31 32	-
+A6	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 29 31	27
+T13	Eq-Value 32 34	36
+T14	Eq-Value 48 51	8.5
+T15	Eq-Value 111 112	3
+T16	Eq-Value 169 170	3
+T17	Eq-Value 217 218	1
+T18	Eq-Value 461 462	2
+T19	Eq-Comparison 46 52	< 8.5%
+E6	Eq-Comparison:T19 Operator:T7 Value:T14 Unit:T24
+T20	Eq-Comparison 459 477	> 2 drinks per day
+E7	Eq-Comparison:T20 Operator:T8 Value:T18 Unit:T59 Per:T60
+T21	Eq-Comparison 29 34	27-36
+E8	Eq-Comparison:T21 Operator:T11 Value:T12 Value2:T13
+T22	Observation 40 45	HbA1C
+E2	Observation:T22 Name:T23 Eq-Comparison:E6
+T23	Observation-Name 40 45	HbA1C
+A7	Observation-Type-Value T23 lab
+T24	Eq-Unit 51 52	%
+T25	Observation 67 78	body weight
+E4	Observation:T25 Name:T26 Stability:T27 Temporality:E10
+T26	Observation-Name 67 78	body weight
+A8	Observation-Type-Value T26 vital
+T27	Stability 58 66	Constant
+A9	Stability-Value T27 stable
+T28	Observation 83 97	dietary habits
+E9	Observation:T28 Name:T29 Temporality:E10 Stability:T27
+T29	Observation-Name 83 97	dietary habits
+A10	Observation-Type-Value T29 social-habit
+T30	Eq-Comparison 106 119	last 3 months
+E10	Eq-Comparison:T30 Temporal-Period:T31 Temporal-Unit:T9 Value:T15
+T31	Eq-Temporal-Period 106 110	last
+A11	Eq-Temporal-Period-Value T31 past
+T32	And 79 82	and
+E11	And:T32 Arg:E4 Arg2:E9
+T33	Stability 125 131	Stable
+A12	Stability-Value T33 stable
+T34	Eq-Comparison 160 177	at least 3 months
+E12	Eq-Comparison:T34 Operator:T35 Value:T16 Temporal-Unit:T10
+T35	Eq-Operator 160 168	at least
+A13	Eq-Operator-Value T35 GTEQ
+T36	Condition 198 202	T2DM
+E13	Condition:T36 Name:T37 Duration:E14
+T37	Condition-Name 198 202	T2DM
+T38	Eq-Comparison 207 223	more than 1 year
+E14	Eq-Comparison:T38 Operator:T39 Value:T17 Temporal-Unit:T40
+T39	Eq-Operator 207 216	more than
+A14	Eq-Operator-Value T39 GT
+T40	Eq-Temporal-Unit 219 223	year
+A15	Eq-Temporal-Unit-Value T40 year
+T41	Condition 321 329	diseases
+E15	Condition:T41 Name:T42 Temporality:E21
+T42	Condition-Name 321 329	diseases
+T43	Modifier 260 274	cardiovascular
+E16	Modifier:T43 Modifies:T42
+T44	Modifier 276 292	gastrointestinal
+E17	Modifier:T44 Modifies:T42
+T45	Modifier 294 299	renal
+E18	Modifier:T45 Modifies:T42
+T46	Modifier 304 320	endocrinological
+E19	Modifier:T46 Modifies:T42
+T47	And 300 303	and
+E20	And:T47 Arg:E18 Arg2:E19
+T48	Eq-Comparison 249 256	History
+E21	Eq-Comparison:T48 Temporal-Period:T49
+T49	Eq-Temporal-Period 249 256	History
+A16	Eq-Temporal-Period-Value T49 past
+T50	Procedure 339 340	t
+E22	Procedure:T50 
+T51	Condition 349 365	weight reduction
+E23	Condition:T51 Name:T52
+T52	Condition-Name 349 365	weight reduction
+R1	Treatment-For Arg1:E22 Arg2:E23	
+T53	Allergy 396 405	Allergies
+E24	Allergy:T53 Name:T54 Name2:T55
+T54	Allergy-Name 409 413	milk
+T55	Allergy-Name 418 423	dairy
+T56	Or 414 417	and
+E25	Or:T56 Arg:T54 Arg2:T55
+T57	Observation 438 457	Alcohol consumption
+E26	Observation:T57 Name:T58 Eq-Comparison:E7
+T58	Observation-Name 438 457	Alcohol consumption
+A17	Observation-Type-Value T58 social-habit
+T59	Eq-Unit 463 469	drinks
+T60	Eq-Temporal-Unit 474 477	day
+A18	Eq-Temporal-Unit-Value T60 day
+T61	Drug 494 505	supplements
+E27	Drug:T61 Name:T62
+T62	Drug-Name 494 505	supplements
+T63	Drug 521 528	insulin
+E28	Drug:T63 Name:T64 Temporality:E29
+T64	Drug-Name 521 528	insulin
+T65	Eq-Comparison 511 520	Receiving
+E29	Eq-Comparison:T65 Temporal-Period:T66
+T66	Eq-Temporal-Period 511 520	Receiving
+A19	Eq-Temporal-Period-Value T66 present

@@ -1,0 +1,40 @@
+T1	Procedure 64 71	surgery
+E1	Procedure:T1 Name:T2
+T2	Procedure-Name 64 71	surgery
+T3	Observation 75 99	pre-operative assessment
+E2	Observation:T3 Name:T4 Temporality:E4
+T4	Observation-Name 75 99	pre-operative assessment
+T5	Or 72 74	or
+E3	Or:T5 Arg:E1 Arg2:E2
+T6	Eq-Comparison 107 120	next 120 days
+E4	Eq-Comparison:T6 Temporal-Unit:T9 Value:T8 Temporal-Period:T7
+T8	Eq-Value 112 115	120
+T9	Eq-Temporal-Unit 116 120	days
+A2	Eq-Temporal-Unit-Value T9 day
+T10	Condition 145 159	risky drinking
+E5	Condition:T10 Name:T11
+T11	Condition-Name 145 159	risky drinking
+T12	Condition 242 251	psychotic
+E6	Condition:T12 Name:T13
+T13	Condition-Name 242 251	psychotic
+T14	Assertion 252 260	symptoms
+E7	Assertion:T14 Asserted:E6
+A3	Assertion-Type-Value E7 possible
+T15	Procedure 277 286	surgeries
+E8	Procedure:T15 Name:T16 Temporality:E9
+T16	Procedure-Name 277 286	surgeries
+T17	Eq-Comparison 266 276	Undergoing
+E9	Eq-Comparison:T17 Temporal-Period:T18
+T18	Eq-Temporal-Period 266 276	Undergoing
+A4	Eq-Temporal-Period-Value T18 present
+T19	Procedure 309 325	local anesthesia
+E10	Procedure:T19 Name:T20
+T20	Procedure-Name 309 325	local anesthesia
+R1	Using Arg1:E8 Arg2:E10	
+T21	Encounter 25 33	Referred
+E11	Encounter:T21 Type:T22
+T22	Encounter-Type 25 33	Referred
+A5	Encounter-Type-Value T22 referral
+R2	Using Arg1:E11 Arg2:E1	
+T7	Eq-Temporal-Period 107 111	next
+A1	Eq-Temporal-Period-Value T7 future

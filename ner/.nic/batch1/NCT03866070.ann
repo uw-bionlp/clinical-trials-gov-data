@@ -1,0 +1,63 @@
+T1	Life-Stage-And-Gender 25 31	Female
+A1	Life-Stage-And-Gender-Type T1 female
+T2	Procedure 388 411	physiotherapy treatment
+T3	Procedure-Name 388 411	physiotherapy treatment
+E2	Procedure:T2 Name:T3 Temporality:E13
+T6	Eq-Temporal-Unit 139 144	years
+A2	Eq-Temporal-Unit-Value T6 year
+T7	Eq-Temporal-Unit 162 167	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Eq-Temporal-Unit 347 353	months
+A4	Eq-Temporal-Unit-Value T8 month
+T9	Age 111 114	age
+E5	Age:T9 Eq-Comparison:E1
+T10	Eq-Value 129 131	18
+T11	Eq-Value 136 138	37
+T12	Eq-Value 160 161	2
+T13	Eq-Comparison 121 144	between 18 and 37 years
+E1	Eq-Comparison:T13 Operator:T14 Temporal-Unit:T6 Value:T11 Value2:T10
+T14	Eq-Operator 121 128	between
+A5	Eq-Operator-Value T14 BETWEEN
+T15	Eq-Operator 150 159	More than
+A6	Eq-Operator-Value T15 GT
+T16	Eq-Comparison 150 167	More than 2 years
+E3	Eq-Comparison:T16 Operator:T15 Temporal-Unit:T7 Value:T12
+T18	Condition 324 330	injury
+E7	Condition:T18 Name:T19 Temporality:E12 Temporality2:E8
+T19	Condition-Name 324 330	injury
+T20	Eq-Comparison 338 353	last six months
+E8	Eq-Comparison:T20 Temporal-Unit:T8 Value:T22 Temporal-Period:T32
+T22	Eq-Value 343 346	six
+T23	Eq-Temporal-Period 367 376	currently
+A8	Eq-Temporal-Period-Value T23 present
+T4	Procedure 460 472	intervention
+E4	Procedure:T4 Name:T5
+T5	Procedure-Name 460 472	intervention
+T24	Procedure 477 487	evaluation
+E9	Procedure:T24 Name:T25
+T25	Procedure-Name 477 487	evaluation
+T26	Observation 37 53	Handball players
+E10	Observation:T26 Name:T27
+T27	Observation-Name 37 53	Handball players
+T28	Observation 171 186	handball sports
+E11	Observation:T28 Name:T29 Duration:E3
+A9	Observation-Type-Value T27 social-habit
+T29	Observation-Name 171 186	handball sports
+A10	Observation-Type-Value T29 social-habit
+T17	Modifier 315 323	shoulder
+E6	Modifier:T17 Modifies:T19
+T30	Eq-Comparison 304 312	suffered
+E12	Eq-Comparison:T30 Temporal-Period:T31
+T31	Eq-Temporal-Period 304 312	suffered
+A11	Eq-Temporal-Period-Value T31 past
+T32	Eq-Temporal-Period 338 342	last
+A12	Eq-Temporal-Period-Value T32 past
+T21	Eq-Comparison 367 376	currently
+E13	Eq-Comparison:T21 Temporal-Period:T23
+T33	And 473 476	and
+E14	And:T33 Arg:E4 Arg2:E9
+T34	Negation 421 428	fail to
+E15	Negation:T34 Negates:E4 Negates2:E9
+T35	Assertion 421 428	fail to
+E16	Assertion:T35 Asserted:E15
+A7	Assertion-Type-Value E16 hypothetical

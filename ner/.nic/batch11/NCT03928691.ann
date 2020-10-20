@@ -1,0 +1,98 @@
+T1	Condition 20 28	pregnant
+E1	Condition:T1 Name:T2 Duration:E2
+T2	Condition-Name 20 28	pregnant
+T3	Life-Stage-And-Gender 29 34	women
+A1	Life-Stage-And-Gender-Type T3 female
+T4	Eq-Comparison 35 51	34 weeks or less
+E2	Eq-Comparison:T4 Operator:T7 Temporal-Unit:T6 Value:T5
+T5	Eq-Value 35 37	34
+T6	Eq-Temporal-Unit 38 43	weeks
+A2	Eq-Temporal-Unit-Value T6 week
+T7	Eq-Operator 44 51	or less
+A3	Eq-Operator-Value T7 LTEQ
+T8	Encounter 52 60	admitted
+E3	Encounter:T8 Type:T9 Location:T10
+T9	Encounter-Type 52 60	admitted
+A4	Encounter-Type-Value T9 inpatient
+T10	Location 64 87	Women's Health Hospital
+A5	Location-Value T10 hospital
+T11	Condition 121 133	preeclampsia
+E4	Condition:T11 Severity:T12 Name:T13
+T12	Severity 115 120	sever
+A6	Severity-Value T12 severe
+T13	Condition-Name 121 133	preeclampsia
+T14	Observation 155 169	blood pressure
+E5	Observation:T14 Name:T15
+T15	Observation-Name 155 169	blood pressure
+A7	Observation-Type-Value T15 vital
+T16	Eq-Comparison 170 190	160/110 mmHg or more
+E6	Eq-Comparison:T16 Value:T17 Value2:T18 Unit:T19 Operator:T20
+T17	Eq-Value 170 173	160
+T18	Eq-Value 174 177	110
+T19	Eq-Unit 178 182	mmHg
+T20	Eq-Operator 183 190	or more
+A8	Eq-Operator-Value T20 GTEQ
+R1	Equivalent-To Arg1:E5 Arg2:E6	
+R2	Equivalent-To Arg1:E5 Arg2:E4	
+T21	Observation 194 205	proteinurea
+E7	Observation:T21 Name:T22 Eq-Comparison:E8
+T22	Observation-Name 194 205	proteinurea
+A9	Observation-Type-Value T22 lab
+T23	Eq-Comparison 207 217	+3 or more
+E8	Eq-Comparison:T23 Operator:T25 Value:T24
+T24	Eq-Value 208 209	3
+T25	Eq-Operator 210 217	or more
+A10	Eq-Operator-Value T25 GTEQ
+T26	Condition 231 247	3-HELLP syndrome
+E9	Condition:T26 Name:T27
+T27	Condition-Name 231 247	3-HELLP syndrome
+R3	Equivalent-To Arg1:E7 Arg2:E4	
+R4	Equivalent-To Arg1:E9 Arg2:E4	
+T28	Assertion 253 263	threatened
+E10	Assertion:T28 Asserted:E11
+A11	Assertion-Type-Value E10 possible
+T29	Condition 264 278	preterm labour
+E11	Condition:T29 Name:T30
+T30	Condition-Name 264 278	preterm labour
+T31	Drug-Name 297 315	Magnesium Sulphate
+T32	Drug 297 315	Magnesium Sulphate
+E12	Drug:T32 Name:T31
+T33	Assertion 284 288	will
+E13	Assertion:T33 Asserted:E12
+A12	Assertion-Type-Value E13 hypothetical
+R5	Treatment-For Arg1:E12 Arg2:E11	
+T34	Life-Stage-And-Gender 379 384	women
+A13	Life-Stage-And-Gender-Type T34 female
+T35	Eq-Comparison 390 408	more than 34 weeks
+E14	Eq-Comparison:T35 Operator:T36 Temporal-Unit:T38 Value:T37
+T36	Eq-Operator 390 399	more than
+A14	Eq-Operator-Value T36 GT
+T37	Eq-Value 400 402	34
+T38	Eq-Temporal-Unit 403 408	weeks
+A15	Eq-Temporal-Unit-Value T38 week
+T39	And 385 389	with
+E15	And:T39 Arg:T34 Arg2:E16
+T40	Observation 409 418	gestation
+E16	Observation:T40 Name:T41 Eq-Comparison:E14
+T41	Observation-Name 409 418	gestation
+T42	Contraindication 432 448	contraindication
+E17	Contraindication:T42 Contraindicates:E18
+T43	Drug 453 471	Magnesium Sulphate
+E18	Drug:T43 Name:T44
+T44	Drug-Name 453 471	Magnesium Sulphate
+T45	And 419 422	and
+E19	And:T45 Arg:E16 Arg2:E17
+T46	Condition 491 507	renal impairment
+E20	Condition:T46 Name:T47 Severity:T48
+T47	Condition-Name 491 507	renal impairment
+T48	Severity 484 490	severe
+R6	Example-Of Arg1:E20 Arg2:E17	
+T49	Condition 511 528	myasthenia gravis
+E21	Condition:T49 Name:T50
+T50	Condition-Name 511 528	myasthenia gravis
+T51	Or 508 510	or
+E22	Or:T51 Arg:E20 Arg2:E21
+R7	Example-Of Arg1:E21 Arg2:E17	
+T52	Modifier 218 229	by dipstick
+E23	Modifier:T52 Modifies:T22
+A16	Severity-Value T48 severe

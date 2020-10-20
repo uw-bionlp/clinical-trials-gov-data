@@ -1,100 +1,100 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E7	Condition:T7 Name:T49
+E9	Condition:T9 Name:T10
+E12	Age:T16 Eq-Comparison:E2
+E2	Eq-Comparison:T18 Operator:T13 Temporal-Unit:T15 Value:T17
+E4	Study:T19
+E6	Temporal-Connection:T20 Arg:E12 Arg2:E4
+E8	Condition:T21 Name:T22 Stage:E10
+E16	Procedure:T26 Name:T27
+E17	Negation:T28 Negates:E7
+E18	Negation:T29 Negates:E9
+E19	Condition:T30 Name:T31
+E20	Condition:T32 Name:T50
+E21	Drug:T8 Name:T33
+E11	Drug:T11 Name:T12
+E22	Drug:T34 Name:T35
+E23	Drug:T36 Name:T37
+E24	Drug:T38 Name:T39
+E25	Drug:T40 Name:T41
+E26	Drug:T42 Name:T43
+E27	Or:T44 Arg:E25 Arg2:E26
+E28	Condition:T45 Name:T46 Temporality:E29
+E29	Eq-Comparison:T47 Temporal-Period:T48
+E10	Eq-Comparison:T14 Unit:T23 Value:T24
+E13	Eq-Comparison:T25 Unit:T53 Value:T52 Operator:T51
+E14	Eq-Comparison:T54 Unit:T56 Value:T55
+E15	Or:T57 Arg:E13 Arg2:E14
+E30	Condition:T58 Name:T59
+E31	Assertion:T60 Asserted:E21
 T1	Procedure 212 233	orthodontic treatment
 T2	Procedure-Name 212 233	orthodontic treatment
-E1	Procedure:T1 Name:T2
 T3	Procedure 157 200	Extraction of all four first premolar teeth
 T4	Procedure-Name 157 200	Extraction of all four first premolar teeth
-E3	Procedure:T3 Name:T4
 T5	Procedure 273 285	mini-implant
 T6	Procedure-Name 273 285	mini-implant
-E5	Procedure:T5 Name:T6
 T7	Condition 295 311	systemic disease
-E7	Condition:T7 Name:T49
 T9	Condition 345 364	periodontal disease
 T10	Condition-Name 345 364	periodontal disease
-E9	Condition:T9 Name:T10
 T13	Eq-Operator 39 48	and above
-A1	Eq-Operator-Value T13 GTEQ
 T15	Eq-Temporal-Unit 33 38	years
-A3	Eq-Temporal-Unit-Value T15 year
 T16	Age 25 29	Aged
-E12	Age:T16 Eq-Comparison:E2
 T17	Eq-Value 30 32	18
 T18	Eq-Comparison 30 48	18 years and above
-E2	Eq-Comparison:T18 Operator:T13 Temporal-Unit:T15 Value:T17
 T19	Study 69 78	treatment
-E4	Study:T19 
 T20	Temporal-Connection 49 61	at the start
-E6	Temporal-Connection:T20 Arg:E12 Arg2:E4
-A4	Temporal-Connection-Type-Value E6 during
 T21	Condition 85 103	Molar relationship
-E8	Condition:T21 Name:T22 Stage:E10
 T22	Condition-Name 85 103	Molar relationship
-R1	Using Arg1:E3 Arg2:E1	
 T26	Procedure 240 257	Maximum anchorage
-E16	Procedure:T26 Name:T27
 T27	Procedure-Name 240 257	Maximum anchorage
-R2	Using Arg1:E16 Arg2:E5	
 T28	Negation 292 294	No
-E17	Negation:T28 Negates:E7
 T29	Negation 342 344	No
-E18	Negation:T29 Negates:E9
 T30	Condition 403 434	vertical skeletal discrepancies
-E19	Condition:T30 Name:T31
 T31	Condition-Name 403 434	vertical skeletal discrepancies
 T32	Condition 441 458	Systemic diseases
-E20	Condition:T32 Name:T50
 T8	Drug 479 489	antibiotic
-E21	Drug:T8 Name:T33
 T33	Drug-Name 479 489	antibiotic
-R3	Treatment-For Arg1:E21 Arg2:E20	
 T11	Drug 495 504	phenytoin
-E11	Drug:T11 Name:T12
 T12	Drug-Name 495 504	phenytoin
 T34	Drug 506 517	cyclosporin
-E22	Drug:T34 Name:T35
 T35	Drug-Name 506 517	cyclosporin
 T36	Drug 519 542	anti-inflammatory drugs
-E23	Drug:T36 Name:T37
 T37	Drug-Name 519 542	anti-inflammatory drugs
 T38	Drug 544 559	bisphosphonates
-E24	Drug:T38 Name:T39
 T39	Drug-Name 544 559	bisphosphonates
 T40	Drug 561 585	systemic corticosteroids
-E25	Drug:T40 Name:T41
 T41	Drug-Name 561 585	systemic corticosteroids
 T42	Drug 589 613	calcium channel blockers
-E26	Drug:T42 Name:T43
 T43	Drug-Name 589 613	calcium channel blockers
 T44	Or 586 588	or
-E27	Or:T44 Arg:E25 Arg2:E26
 T45	Condition 651 670	periodontal disease
-E28	Condition:T45 Name:T46 Temporality:E29
 T46	Condition-Name 651 670	periodontal disease
 T47	Eq-Comparison 644 650	Active
-E29	Eq-Comparison:T47 Temporal-Period:T48
 T48	Eq-Temporal-Period 644 650	Active
-A2	Eq-Temporal-Period-Value T48 present
 T49	Condition-Name 295 311	systemic disease
 T50	Condition-Name 441 458	Systemic diseases
 T14	Eq-Comparison 111 118	Class I
-E10	Eq-Comparison:T14 Unit:T23 Value:T24
 T23	Eq-Unit 111 116	Class
 T24	Eq-Value 117 118	I
 T25	Eq-Comparison 120 137	< ½ unit Class II
-E13	Eq-Comparison:T25 Unit:T53 Value:T52 Operator:T51
 T51	Eq-Operator 120 121	<
-A5	Eq-Operator-Value T51 LT
 T52	Eq-Value 122 123	½
 T53	Eq-Unit 124 137	unit Class II
 T54	Eq-Comparison 141 150	Class III
-E14	Eq-Comparison:T54 Unit:T56 Value:T55
 T55	Eq-Value 147 150	III
 T56	Eq-Unit 141 146	Class
 T57	Or 138 140	or
-E15	Or:T57 Arg:E13 Arg2:E14
 T58	Condition 620 637	Poor oral hygiene
-E30	Condition:T58 Name:T59
 T59	Condition-Name 620 637	Poor oral hygiene
 T60	Assertion 459 468	requiring
-E31	Assertion:T60 Asserted:E21
+A1	Eq-Operator-Value T13 GTEQ
+A3	Eq-Temporal-Unit-Value T15 year
+A4	Temporal-Connection-Type-Value E6 during
+A2	Eq-Temporal-Period-Value T48 present
+A5	Eq-Operator-Value T51 LT
 A6	Assertion-Type-Value E31 hypothetical
+R1	Using Arg1:E3 Arg2:E1
+R2	Using Arg1:E16 Arg2:E5
+R3	Treatment-For Arg1:E21 Arg2:E20

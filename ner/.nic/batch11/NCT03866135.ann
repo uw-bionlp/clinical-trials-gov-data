@@ -1,0 +1,87 @@
+T1	Condition 47 49	AS
+E1	Condition:T1 Name:T2
+T2	Condition-Name 47 49	AS
+T3	Condition 179 181	OP
+E2	Condition:T3 Name:T4 Temporality:E24
+T4	Condition-Name 179 181	OP
+T5	Condition 244 258	bone fractures
+E3	Condition:T5 Name:T6 Temporality:E22
+T6	Condition-Name 244 258	bone fractures
+T7	Condition 286 288	OP
+E4	Condition:T7 Name:T8 Temporality:E26
+T8	Condition-Name 286 288	OP
+R1	Caused-By Arg1:E3 Arg2:E4	
+T9	Drug 307 312	drugs
+E5	Drug:T9 Name:T10 Temporality:E20
+T10	Drug-Name 307 312	drugs
+T11	Condition 325 340	bone metabolism
+E6	Condition:T11 Name:T12 Stability:T41
+T12	Condition-Name 325 340	bone metabolism
+T13	Condition 342 365	metabolic bone diseases
+E7	Condition:T13 Name:T14
+T14	Condition-Name 342 365	metabolic bone diseases
+T15	Condition 367 382	Paget's disease
+E8	Condition:T15 Name:T16
+T16	Condition-Name 367 382	Paget's disease
+R3	Example-Of Arg1:E8 Arg2:E7	
+T17	Condition 384 396	osteomalacia
+E9	Condition:T17 Name:T18
+T18	Condition-Name 384 396	osteomalacia
+R4	Example-Of Arg1:E9 Arg2:E7	
+T19	Condition 398 417	hyperparathyroidism
+E10	Condition:T19 Name:T20
+T20	Condition-Name 398 417	hyperparathyroidism
+R5	Example-Of Arg1:E10 Arg2:E7	
+T21	Condition 425 442	Diabetes mellitus
+E11	Condition:T21 Name:T22
+T22	Condition-Name 425 442	Diabetes mellitus
+T23	Condition 449 463	Hypothyroidism
+E12	Condition:T23 Name:T24
+T24	Condition-Name 449 463	Hypothyroidism
+T25	Condition 465 480	hyperthyroidism
+E13	Condition:T25 Name:T26
+T26	Condition-Name 465 480	hyperthyroidism
+T27	Condition 530 538	diseases
+E14	Condition:T27 Name:T28
+T28	Condition-Name 530 538	diseases
+T29	Modifier 519 529	intestinal
+E15	Modifier:T29 Modifies:E14
+T30	Modifier 509 514	liver
+E16	Modifier:T30 Modifies:E14
+T31	Modifier 501 507	kidney
+E17	Modifier:T31 Modifies:E14
+T32	Or 515 518	and
+E18	Or:T32 Arg:E16 Arg2:E15
+T33	Drug 557 572	corticosteroids
+E19	Drug:T33 Name:T34 Temporality:E21
+T34	Drug-Name 557 572	corticosteroids
+T35	Eq-Comparison 301 306	using
+E20	Eq-Comparison:T35 Temporal-Period:T36
+T36	Eq-Temporal-Period 301 306	using
+A1	Eq-Temporal-Period-Value T36 present
+T37	Eq-Comparison 551 556	using
+E21	Eq-Comparison:T37 Temporal-Period:T38
+T38	Eq-Temporal-Period 551 556	using
+A2	Eq-Temporal-Period-Value T38 present
+T39	Eq-Comparison 239 243	with
+E22	Eq-Comparison:T39 Temporal-Period:T40
+T40	Eq-Temporal-Period 239 243	with
+A3	Eq-Temporal-Period-Value T40 present
+T41	Stability 318 324	affect
+A4	Stability-Value T41 change
+R2	Caused-By Arg1:T41 Arg2:E5	
+T42	Condition 221 223	OP
+E23	Condition:T42 Name:T43 Temporality:E25
+T43	Condition-Name 221 223	OP
+T44	Eq-Comparison 153 163	previously
+E24	Eq-Comparison:T44 Temporal-Period:T45
+T45	Eq-Temporal-Period 153 163	previously
+A5	Eq-Temporal-Period-Value T45 past
+T46	Eq-Comparison 197 207	previously
+E25	Eq-Comparison:T46 Temporal-Period:T47
+T47	Eq-Temporal-Period 197 207	previously
+A6	Eq-Temporal-Period-Value T47 past
+T48	Eq-Comparison 259 269	previously
+E26	Eq-Comparison:T48 Temporal-Period:T49
+T49	Eq-Temporal-Period 259 269	previously
+A7	Eq-Temporal-Period-Value T49 past

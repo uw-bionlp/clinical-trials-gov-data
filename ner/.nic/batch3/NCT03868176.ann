@@ -1,0 +1,71 @@
+T1	Modifier 38 47	germ cell
+E1	Modifier:T1 Modifies:T27
+T2	Condition 48 53	tumor
+E2	Condition:T2 Name:T27
+T3	Eq-Comparison 102 104	on
+E3	Eq-Comparison:T3 Temporal-Period:T28
+T4	Procedure 105 117	surveillance
+E4	Procedure:T4 Name:T29 Temporality:E3
+T5	Modifier 144 154	Testicular
+E5	Modifier:T5 Modifies:T30
+T6	Condition 155 161	cancer
+E6	Condition:T6 Name:T30
+T7	Negation 162 169	without
+E7	Negation:T7 Negates:E8
+T9	Eq-Comparison 196 209	Prior history
+E9	Eq-Comparison:T9 Temporal-Period:T32
+T10	Other 213 218	other
+E10	Other:T10 Is-Other:E11
+T11	Condition 219 229	malignancy
+E11	Condition:T11 Name:T33 Temporality:E9
+T12	Exception 230 236	except
+E12	Exception:T12 From:E11 Except:E13
+T13	Condition 242 259	cutaneous cancers
+E13	Condition:T13 Name:T34
+T14	Exception 260 269	excluding
+E14	Exception:T14 From:E13 Except:E15 Except2:E17 Except3:E19
+T15	Condition 270 278	melanoma
+E15	Condition:T15 Name:T35
+T16	Modifier 280 299	superficial bladder
+E16	Modifier:T16 Modifies:T36
+T17	Condition 300 305	tumor
+E17	Condition:T17 Name:T36
+T18	Modifier 307 325	localized prostate
+E18	Modifier:T18 Modifies:T37
+T19	Condition 326 332	cancer
+E19	Condition:T19 Name:T37
+T21	Observation 351 354	PSA
+E21	Observation:T21 Name:T38 Polarity:T20
+T22	Condition 361 380	Cognitive condition
+E22	Condition:T22 Name:T39
+T23	Assertion 386 391	would
+E23	Assertion:T23 Asserted:E24
+A1	Assertion-Type-Value E23 hypothetical
+T24	Negation 392 400	preclude
+E24	Negation:T24 Negates:E26
+T25	Study 443 448	study
+E25	Study:T25 Study-Of:E26
+T26	Procedure 449 459	procedures
+E26	Procedure:T26 
+T27	Condition-Name 48 53	tumor
+T28	Eq-Temporal-Period 102 104	on
+A2	Eq-Temporal-Period-Value T28 present
+T29	Procedure-Name 105 117	surveillance
+T30	Condition-Name 155 161	cancer
+T32	Eq-Temporal-Period 196 209	Prior history
+A3	Eq-Temporal-Period-Value T32 past
+T33	Condition-Name 219 229	malignancy
+T34	Condition-Name 242 259	cutaneous cancers
+T35	Condition-Name 270 278	melanoma
+T36	Condition-Name 300 305	tumor
+T37	Condition-Name 326 332	cancer
+T38	Observation-Name 351 354	PSA
+A4	Observation-Type-Value T38 lab
+T39	Condition-Name 361 380	Cognitive condition
+T8	Modifier 170 189	germ cell component
+E8	Modifier:T8 Modifies:T30
+T20	Polarity 338 350	undetectable
+A5	Polarity-Value T20 negative
+T31	And 333 337	with
+E20	And:T31 Arg:E19 Arg2:E21
+R1	Caused-By Arg1:E24 Arg2:E22	

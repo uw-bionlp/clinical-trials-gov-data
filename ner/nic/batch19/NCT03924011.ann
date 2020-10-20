@@ -1,56 +1,102 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E7	Procedure:T7 Name:T8
+E9	Procedure:T9 Name:T10 Temporality:E28 Location:T75
+E13	Procedure:T13 Name:T14
+E17	Procedure:T17 Name:T18
+E19	Condition:T19 Name:T20
+E21	Procedure:T21 Name:T22 Temporality:E47 Location:T88
+E23	Procedure:T23 Name:T24
+E25	Procedure:T25 Name:T26 Temporality:E42
+E29	Procedure:T29
+E31	Procedure:T31 Name:T32
+E33	Condition:T33 Name:T34
+E35	Condition:T35 Name:T36 Severity:T106
+E37	Condition:T37 Name:T38
+E39	Condition:T39 Name:T40
+E41	Condition:T41 Name:T42
+E42	Eq-Comparison:T52 Temporal-Period:T53
+E43	Eq-Comparison:T54 Temporal-Period:T55
+E2	Condition:T56 Name:T57 Stage:E4 Stage2:E8
+E4	Eq-Comparison:T58 Unit:T59 Value:T44 Value2:T45 Value3:T46
+E6	Modifier:T60 Modifies:T57
+E8	Eq-Comparison:T61 Unit:T62 Value:T43
+E10	Modifier:T63 Modifies:T57
+E12	Or:T64 Arg:E10 Arg2:E6
+E14	Procedure:T65
+E16	Modifier:T66 Modifies:T4
+E18	Or:T67 Arg:E13 Arg2:E7
+E20	Modifier:T68
+E11	Modifier:T11 Modifies:T8
+E22	Modifier:T12 Modifies:T8
+E24	Modifier:T69
+E26	Or:T70 Arg:E7 Arg2:E5
+E28	Eq-Comparison:T71 Temporal-Period:T72
+E30	Temporal-Connection:T73 Arg:E9 Arg2:E32
+E32	Procedure:T74
+E15	Eq-Comparison:T15 Value:T47 Per:T16
+E34	Procedure:T48 Name:T51 Temporality:E15
+E36	Modifier:T76 Modifies:T51
+E38	Procedure:T50 Name:T77 Minimum-Count:E44 Temporality:E46
+E40	Modifier:T78 Modifies:T77
+E44	Eq-Comparison:T79 Value:T49
+E45	Temporal-Connection:T80 Arg:E34 Arg2:E38
+E46	Eq-Comparison:T81 Value:T82 Per:T83
+E47	Eq-Comparison:T84 Temporal-Period:T85
+E48	Temporal-Connection:T86 Arg:E21 Arg2:E49
+E49	Procedure:T87
+E50	Modifier:T89 Modifies:T26
+E51	Assertion:T90 Asserted:E31
+E27	Modifier:T27 Modifies:T20
+E52	Modifier:T28 Modifies:T20
+E53	Or:T91 Arg:E52 Arg2:E27
+E54	Condition:T92 Name:T93
+E55	Assertion:T94 Asserted:E54
+E56	Negation:T95 Negates:E29
+E57	Assertion:T96 Asserted:E56
+E58	Study:T97 Study-Of:E29
+E59	Condition:T30 Name:T98
+E60	Condition:T99 Name:T100
+E61	Drug:T101 Name:T102
+E62	Condition:T103 Name:T104
+E63	Assertion:T105 Asserted:E35
+E64	Condition:T107 Name:T108 Polarity:T109 Temporality:E43
 T1	Procedure 408 437	Hypofractionated radiotherapy
 T2	Procedure-Name 408 437	Hypofractionated radiotherapy
-E1	Procedure:T1 Name:T2
 T3	Procedure 192 214	breast-sparing surgery
 T4	Procedure-Name 192 214	breast-sparing surgery
-E3	Procedure:T3 Name:T4
 T5	Procedure 306 322	hormonal therapy
 T6	Procedure-Name 306 322	hormonal therapy
-E5	Procedure:T5 Name:T6
 T7	Procedure 290 302	chemotherapy
 T8	Procedure-Name 290 302	chemotherapy
-E7	Procedure:T7 Name:T8
 T9	Procedure 356 368	radiotherapy
 T10	Procedure-Name 356 368	radiotherapy
-E9	Procedure:T9 Name:T10 Temporality:E28 Location:T75
 T13	Procedure 216 226	lumpectomy
 T14	Procedure-Name 216 226	lumpectomy
-E13	Procedure:T13 Name:T14
 T17	Procedure 771 783	chemotherapy
 T18	Procedure-Name 771 783	chemotherapy
-E17	Procedure:T17 Name:T18
 T19	Condition 1097 1102	abuse
 T20	Condition-Name 1097 1102	abuse
-E19	Condition:T19 Name:T20
 T21	Procedure 637 649	radiotherapy
 T22	Procedure-Name 637 649	radiotherapy
-E21	Procedure:T21 Name:T22 Temporality:E47 Location:T88
 T23	Procedure 831 843	radiotherapy
 T24	Procedure-Name 831 843	radiotherapy
-E23	Procedure:T23 Name:T24
 T25	Procedure 700 711	irradiation
 T26	Procedure-Name 700 711	irradiation
-E25	Procedure:T25 Name:T26 Temporality:E42
 T29	Procedure 1132 1142	procedures
-E29	Procedure:T29 
 T31	Procedure 805 810	bolus
 T32	Procedure-Name 805 810	bolus
-E31	Procedure:T31 Name:T32
 T33	Condition 1319 1340	Hemorrhagic diatheses
 T34	Condition-Name 1319 1340	Hemorrhagic diatheses
-E33	Condition:T33 Name:T34
 T35	Condition 1391 1409	infectious disease
 T36	Condition-Name 1391 1409	infectious disease
-E35	Condition:T35 Name:T36 Severity:T106
 T37	Condition 1169 1186	language problems
 T38	Condition-Name 1169 1186	language problems
-E37	Condition:T37 Name:T38
 T39	Condition 1346 1355	Pregnancy
 T40	Condition-Name 1346 1355	Pregnancy
-E39	Condition:T39 Name:T40
 T41	Condition 1214 1222	dementia
 T42	Condition-Name 1214 1222	dementia
-E41	Condition:T41 Name:T42
 T43	Eq-Value 107 108	0
 T44	Eq-Value 129 130	1
 T45	Eq-Value 132 133	2
@@ -58,145 +104,99 @@ T46	Eq-Value 138 140	3A
 T47	Eq-Value 452 454	16
 T49	Eq-Value 527 528	5
 T52	Eq-Comparison 691 699	Previous
-E42	Eq-Comparison:T52 Temporal-Period:T53
 T53	Eq-Temporal-Period 691 699	Previous
-A1	Eq-Temporal-Period-Value T53 past
 T54	Eq-Comparison 1428 1435	history
-E43	Eq-Comparison:T54 Temporal-Period:T55
 T55	Eq-Temporal-Period 1428 1435	history
-A2	Eq-Temporal-Period-Value T55 past
 T56	Condition 142 163	breast adenocarcinoma
-E2	Condition:T56 Name:T57 Stage:E4 Stage2:E8
 T57	Condition-Name 142 163	breast adenocarcinoma
 T58	Eq-Comparison 123 140	stage 1, 2 and 3A
-E4	Eq-Comparison:T58 Unit:T59 Value:T44 Value2:T45 Value3:T46
 T59	Eq-Unit 123 128	stage
 T60	Modifier 113 121	invasive
-E6	Modifier:T60 Modifies:T57
-R1	Equivalent-To Arg1:E4 Arg2:E6	
 T61	Eq-Comparison 101 108	stage 0
-E8	Eq-Comparison:T61 Unit:T62 Value:T43
 T62	Eq-Unit 101 106	stage
 T63	Modifier 87 99	non-invasive
-E10	Modifier:T63 Modifies:T57
 T64	Or 110 112	or
-E12	Or:T64 Arg:E10 Arg2:E6
-R2	Equivalent-To Arg1:E8 Arg2:E10	
 T65	Procedure 169 178	Treatment
-E14	Procedure:T65 
 T66	Modifier 184 191	primary
-E16	Modifier:T66 Modifies:T4
-R3	Equivalent-To Arg1:E13 Arg2:E3	
-R4	Using Arg1:E14 Arg2:E3	
 T67	Or 228 234	and/or
-E18	Or:T67 Arg:E13 Arg2:E7
 T68	Modifier 248 260	preoperative
-E20	Modifier:T68 
 T11	Modifier 235 246	neoadjuvant
-E11	Modifier:T11 Modifies:T8
-R5	Abbrev-Of Arg1:E20 Arg2:E11	
 T12	Modifier 265 273	adjuvant
-E22	Modifier:T12 Modifies:T8
 T69	Modifier 275 288	postoperative
-E24	Modifier:T69 
-R6	Abbrev-Of Arg1:E24 Arg2:E22	
 T70	Or 303 305	or
-E26	Or:T70 Arg:E7 Arg2:E5
 T71	Eq-Comparison 328 337	Scheduled
-E28	Eq-Comparison:T71 Temporal-Period:T72
 T72	Eq-Temporal-Period 328 337	Scheduled
-A3	Eq-Temporal-Period-Value T72 future
 T73	Temporal-Connection 342 346	post
-E30	Temporal-Connection:T73 Arg:E9 Arg2:E32
-A4	Temporal-Connection-Type-Value E30 after
 T74	Procedure 346 355	operative
-E32	Procedure:T74 
 T75	Location 372 401	Ziekenhuis Oost-Limburg, Genk
-A5	Location-Value T75 hospital
 T15	Eq-Comparison 452 460	16 daily
-E15	Eq-Comparison:T15 Value:T47 Per:T16
 T16	Eq-Temporal-Unit 455 460	daily
-A6	Eq-Temporal-Unit-Value T16 day
 T48	Procedure 474 483	2.66 Gray
-E34	Procedure:T48 Name:T51 Temporality:E15
 T51	Procedure-Name 474 483	2.66 Gray
 T76	Modifier 491 503	whole breast
-E36	Modifier:T76 Modifies:T51
 T50	Procedure 542 551	2.66 Gray
-E38	Procedure:T50 Name:T77 Minimum-Count:E44 Temporality:E46
 T77	Procedure-Name 542 551	2.66 Gray
 T78	Modifier 559 568	tumor bed
-E40	Modifier:T78 Modifies:T77
 T79	Eq-Comparison 527 528	5
-E44	Eq-Comparison:T79 Value:T49
 T80	Temporal-Connection 504 515	followed by
-E45	Temporal-Connection:T80 Arg:E34 Arg2:E38
-A7	Temporal-Connection-Type-Value E45 before
 T81	Eq-Comparison 570 577	5x/week
-E46	Eq-Comparison:T81 Value:T82 Per:T83
 T82	Eq-Value 570 571	5
 T83	Eq-Temporal-Unit 573 577	week
-A8	Eq-Temporal-Unit-Value T83 week
-R7	Equivalent-To Arg1:E34 Arg2:E1	
-R8	Equivalent-To Arg1:E38 Arg2:E1	
 T84	Eq-Comparison 609 618	Scheduled
-E47	Eq-Comparison:T84 Temporal-Period:T85
 T85	Eq-Temporal-Period 609 618	Scheduled
-A9	Eq-Temporal-Period-Value T85 future
 T86	Temporal-Connection 623 627	post
-E48	Temporal-Connection:T86 Arg:E21 Arg2:E49
-A10	Temporal-Connection-Type-Value E48 after
 T87	Procedure 627 636	operative
-E49	Procedure:T87 
 T88	Location 653 685	Jessa Hospital, Hasselt, Belgium
-A11	Location-Value T88 hospital
 T89	Modifier 719 730	same breast
-E50	Modifier:T89 Modifies:T26
-R9	Using Arg1:E23 Arg2:E31	
 T90	Assertion 789 797	Required
-E51	Assertion:T90 Asserted:E31
-A12	Assertion-Type-Value E51 hypothetical
 T27	Modifier 1089 1096	alcohol
-E27	Modifier:T27 Modifies:T20
 T28	Modifier 1081 1085	drug
-E52	Modifier:T28 Modifies:T20
 T91	Or 1086 1088	or
-E53	Or:T91 Arg:E52 Arg2:E27
 T92	Condition 1065 1079	non-compliance
-E54	Condition:T92 Name:T93
 T93	Condition-Name 1065 1079	non-compliance
 T94	Assertion 1055 1064	suspected
-E55	Assertion:T94 Asserted:E54
-A13	Assertion-Type-Value E55 possible
 T95	Negation 1108 1117	Inability
-E56	Negation:T95 Negates:E29
 T96	Assertion 1108 1117	Inability
-E57	Assertion:T96 Asserted:E56
-A14	Assertion-Type-Value E57 hypothetical
 T97	Study 1150 1155	study
-E58	Study:T97 Study-Of:E29
-R10	Caused-By Arg1:E56 Arg2:E37	
 T30	Condition 1188 1212	psyschological disorders
-E59	Condition:T30 Name:T98
 T98	Condition-Name 1188 1212	psyschological disorders
-R11	Caused-By Arg1:E56 Arg2:E59	
 T99	Condition 1253 1260	Seizure
-E60	Condition:T99 Name:T100
 T100	Condition-Name 1253 1260	Seizure
 T101	Drug 1299 1313	anticoagulants
-E61	Drug:T101 Name:T102
 T102	Drug-Name 1299 1313	anticoagulants
 T103	Condition 1266 1275	Disorders
-E62	Condition:T103 Name:T104
 T104	Condition-Name 1266 1275	Disorders
-R12	Caused-By Arg1:E62 Arg2:E61	
 T105	Assertion 1361 1370	Suspected
-E63	Assertion:T105 Asserted:E35
-A15	Assertion-Type-Value E63 possible
 T106	Severity 1383 1390	serious
-A16	Severity-Value T106 severe
 T107	Condition 1415 1418	HIV
-E64	Condition:T107 Name:T108 Polarity:T109 Temporality:E43
 T108	Condition-Name 1415 1418	HIV
 T109	Polarity 1419 1427	positive
+A1	Eq-Temporal-Period-Value T53 past
+A2	Eq-Temporal-Period-Value T55 past
+A3	Eq-Temporal-Period-Value T72 future
+A4	Temporal-Connection-Type-Value E30 after
+A5	Location-Value T75 hospital
+A6	Eq-Temporal-Unit-Value T16 day
+A7	Temporal-Connection-Type-Value E45 before
+A8	Eq-Temporal-Unit-Value T83 week
+A9	Eq-Temporal-Period-Value T85 future
+A10	Temporal-Connection-Type-Value E48 after
+A11	Location-Value T88 hospital
+A12	Assertion-Type-Value E51 hypothetical
+A13	Assertion-Type-Value E55 possible
+A14	Assertion-Type-Value E57 hypothetical
+A15	Assertion-Type-Value E63 possible
+A16	Severity-Value T106 severe
 A17	Polarity-Value T109 positive
+R1	Equivalent-To Arg1:E4 Arg2:E6
+R2	Equivalent-To Arg1:E8 Arg2:E10
+R3	Equivalent-To Arg1:E13 Arg2:E3
+R4	Using Arg1:E14 Arg2:E3
+R5	Abbrev-Of Arg1:E20 Arg2:E11
+R6	Abbrev-Of Arg1:E24 Arg2:E22
+R7	Equivalent-To Arg1:E34 Arg2:E1
+R8	Equivalent-To Arg1:E38 Arg2:E1
+R9	Using Arg1:E23 Arg2:E31
+R10	Caused-By Arg1:E56 Arg2:E37
+R11	Caused-By Arg1:E56 Arg2:E59
+R12	Caused-By Arg1:E62 Arg2:E61

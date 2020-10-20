@@ -1,143 +1,143 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E2	Encounter:T27 Type:T28 Provider:E4
+E4	Provider:T29 Type:T30
+E6	And:T31 Arg:E2 Arg2:E1
+E7	Modifier:T32 Modifies:E3
+E9	Assertion:T33 Asserted:E3
+E11	Drug:T7 Name:T5
+E5	Procedure:T6
+E16	And:T34 Arg:E3 Arg2:E5
+E17	Observation:T35 Name:T36 Stability:T38 Polarity:T37 Duration:E20
+E18	And:T39 Arg:T37 Arg2:T38
+E19	And:T40 Arg2:E17 Arg:E10
+E20	Eq-Comparison:T41 Operator:T42 Value:T19
+E8	Procedure:T8 Name:T11
+E10	Procedure:T9 Name:T10
+E12	Drug:T12 Name:T13 Dose:E15
+E13	Drug:T14 Name:T15 Dose:E15
+E14	And:T16 Arg:E12 Arg2:E13
+E15	Eq-Comparison:T17 Value:T18 Per:T20 Per2:T21
+E21	Condition:T22 Name:T23
+E22	Assertion:T24 Asserted:E21
+E23	Modifier:T25
+E24	Condition:T26
+E25	Other:T43 Is-Other:E24
+E26	Negation:T44 Negates:E24
+E27	Eq-Comparison:T45 Temporal-Recency:T46
+E28	Procedure:T47 Temporality:E27
+E29	Drug:T48 Name:T49
+E30	Observation:T50 Name:T51 Eq-Comparison:E32
+E31	And:T52 Arg:E28 Arg2:E30
+E32	Eq-Comparison:T53 Operator:T54 Unit:T55
+E33	Observation:T56 Name:T57 Eq-Comparison:E34
+E34	Eq-Comparison:T58 Operator:T59 Value:T60 Unit:T61 Per:T62
+E35	Condition:T63 Name:T64 Temporality:E36
+E36	Eq-Comparison:T65 Temporal-Period:T66
+E37	Age:T67 Eq-Comparison:E38
+E38	Eq-Comparison:T68 Operator:T69 Temporal-Unit:T71 Value:T70
+E39	Eq-Comparison:T72 Operator:T73 Temporal-Unit:T75 Value:T74
+E40	Or:T76 Arg:E38 Arg2:E39
 T1	Condition 96 110	hypothyroidism
 T2	Condition-Name 96 110	hypothyroidism
-E1	Condition:T1 Name:T2
 T3	Condition 133 144	hypothyroid
 T4	Condition-Name 133 144	hypothyroid
-E3	Condition:T3 Name:T4
 T19	Eq-Value 242 243	6
 T27	Encounter 34 42	admitted
-E2	Encounter:T27 Type:T28 Provider:E4
 T28	Encounter-Type 34 42	admitted
-A6	Encounter-Type-Value T28 inpatient
 T29	Provider 64 77	endocrinology
-E4	Provider:T29 Type:T30
 T30	Provider-Type 64 77	endocrinology
 T31	And 78 82	with
-E6	And:T31 Arg:E2 Arg2:E1
 T32	Modifier 122 132	persistent
-E7	Modifier:T32 Modifies:E3
-R2	Caused-By Arg1:E1 Arg2:E3	
 T33	Assertion 145 153	symptoms
-E9	Assertion:T33 Asserted:E3
-A7	Assertion-Type-Value E9 possible
 T7	Drug 177 188	L-thyroxine
-E11	Drug:T7 Name:T5
 T5	Drug-Name 178 179	-
 T6	Procedure 162 171	treatment
-E5	Procedure:T6 
-R1	Using Arg1:E5 Arg2:E11	
 T34	And 154 161	despite
-E16	And:T34 Arg:E3 Arg2:E5
 T35	Observation 224 227	TSH
-E17	Observation:T35 Name:T36 Stability:T38 Polarity:T37 Duration:E20
 T36	Observation-Name 224 227	TSH
-A8	Observation-Type-Value T36 lab
 T37	Polarity 206 212	normal
-A9	Polarity-Value T37 normal
 T38	Stability 217 223	stable
-A10	Stability-Value T38 stable
 T39	And 213 216	and
-E18	And:T39 Arg:T37 Arg2:T38
 T40	And 202 205	and
-E19	And:T40 Arg2:E17 Arg:E10
 T41	Eq-Comparison 233 250	at least 6 months
-E20	Eq-Comparison:T41 Operator:T42 Value:T19
 T42	Eq-Operator 233 241	at least
-A11	Eq-Operator-Value T42 GTEQ
 T8	Procedure 269 288	combination therapy
-E8	Procedure:T8 Name:T11
 T9	Procedure 189 201	mono-therapy
-E10	Procedure:T9 Name:T10
 T10	Procedure-Name 189 201	mono-therapy
-R3	Using Arg1:E10 Arg2:E11	
 T11	Procedure-Name 269 288	combination therapy
 T12	Drug 294 305	L-thyroxine
-E12	Drug:T12 Name:T13 Dose:E15
 T13	Drug-Name 294 305	L-thyroxine
-R4	Using Arg1:E8 Arg2:E12	
 T14	Drug 310 322	Liothyronine
-E13	Drug:T14 Name:T15 Dose:E15
 T15	Drug-Name 310 322	Liothyronine
 T16	And 306 309	and
-E14	And:T16 Arg:E12 Arg2:E13
-R5	Using Arg1:E8 Arg2:E13	
 T17	Eq-Comparison 343 353	17/1 ratio
-E15	Eq-Comparison:T17 Value:T18 Per:T20 Per2:T21
 T18	Eq-Value 343 345	17
 T20	Eq-Unit 346 347	1
 T21	Eq-Unit 348 353	ratio
 T22	Condition 414 425	hypothyroid
-E21	Condition:T22 Name:T23
 T23	Condition-Name 414 425	hypothyroid
 T24	Assertion 426 434	symptoms
-E22	Assertion:T24 Asserted:E21
-A1	Assertion-Type-Value E22 possible
 T25	Modifier 403 413	persistent
-E23	Modifier:T25 
-R6	Abbrev-Of Arg1:E23 Arg2:E21	
 T26	Condition 387 398	explanation
-E24	Condition:T26 
 T43	Other 375 386	alternative
-E25	Other:T43 Is-Other:E24
-R7	Caused-By Arg1:E21 Arg2:E24	
 T44	Negation 359 368	Exclusion
-E26	Negation:T44 Negates:E24
 T45	Eq-Comparison 460 470	Initiation
-E27	Eq-Comparison:T45 Temporal-Recency:T46
 T46	Eq-Temporal-Recency 460 470	Initiation
-A2	Eq-Temporal-Recency-Value T46 first-time
 T47	Procedure 486 495	treatment
-E28	Procedure:T47 Temporality:E27
 T48	Drug 474 485	L-thyroxine
-E29	Drug:T48 Name:T49
 T49	Drug-Name 474 485	L-thyroxine
-R8	Using Arg1:E28 Arg2:E29	
 T50	Observation 513 518	s-TSH
-E30	Observation:T50 Name:T51 Eq-Comparison:E32
 T51	Observation-Name 513 518	s-TSH
-A3	Observation-Type-Value T51 lab
 T52	And 508 512	with
-E31	And:T52 Arg:E28 Arg2:E30
 T53	Eq-Comparison 519 543	below upper normal limit
-E32	Eq-Comparison:T53 Operator:T54 Unit:T55
 T54	Eq-Operator 519 524	below
-A4	Eq-Operator-Value T54 LT
 T55	Eq-Unit 525 543	upper normal limit
-A5	Eq-Unit-Value T55 ref-range-low
 T56	Observation 580 583	TSH
-E33	Observation:T56 Name:T57 Eq-Comparison:E34
 T57	Observation-Name 580 583	TSH
-A12	Observation-Type-Value T57 lab
 T58	Eq-Comparison 584 592	< 4 mU/L
-E34	Eq-Comparison:T58 Operator:T59 Value:T60 Unit:T61 Per:T62
 T59	Eq-Operator 584 585	<
-A13	Eq-Operator-Value T59 LT
 T60	Eq-Value 586 587	4
 T61	Eq-Unit 588 590	mU
 T62	Eq-Unit 591 592	L
-R9	Equivalent-To Arg1:E33 Arg2:E30	
 T63	Condition 607 616	pregnancy
-E35	Condition:T63 Name:T64 Temporality:E36
 T64	Condition-Name 607 616	pregnancy
 T65	Eq-Comparison 599 606	Ongoing
-E36	Eq-Comparison:T65 Temporal-Period:T66
 T66	Eq-Temporal-Period 599 606	Ongoing
-A14	Eq-Temporal-Period-Value T66 present
 T67	Age 622 625	Age
-E37	Age:T67 Eq-Comparison:E38
 T68	Eq-Comparison 626 640	below 18 years
-E38	Eq-Comparison:T68 Operator:T69 Temporal-Unit:T71 Value:T70
 T69	Eq-Operator 626 631	below
-A15	Eq-Operator-Value T69 LT
 T70	Eq-Value 632 634	18
 T71	Eq-Temporal-Unit 635 640	years
-A16	Eq-Temporal-Unit-Value T71 year
 T72	Eq-Comparison 644 658	above 80 years
-E39	Eq-Comparison:T72 Operator:T73 Temporal-Unit:T75 Value:T74
 T73	Eq-Operator 644 649	above
-A17	Eq-Operator-Value T73 GT
 T74	Eq-Value 650 652	80
 T75	Eq-Temporal-Unit 653 658	years
-A18	Eq-Temporal-Unit-Value T75 year
 T76	Or 641 643	or
-E40	Or:T76 Arg:E38 Arg2:E39
+A6	Encounter-Type-Value T28 inpatient
+A7	Assertion-Type-Value E9 possible
+A8	Observation-Type-Value T36 lab
+A9	Polarity-Value T37 normal
+A10	Stability-Value T38 stable
+A11	Eq-Operator-Value T42 GTEQ
+A1	Assertion-Type-Value E22 possible
+A2	Eq-Temporal-Recency-Value T46 first-time
+A3	Observation-Type-Value T51 lab
+A4	Eq-Operator-Value T54 LT
+A5	Eq-Unit-Value T55 ref-range-low
+A12	Observation-Type-Value T57 lab
+A13	Eq-Operator-Value T59 LT
+A14	Eq-Temporal-Period-Value T66 present
+A15	Eq-Operator-Value T69 LT
+A16	Eq-Temporal-Unit-Value T71 year
+A17	Eq-Operator-Value T73 GT
+A18	Eq-Temporal-Unit-Value T75 year
+R2	Caused-By Arg1:E1 Arg2:E3
+R1	Using Arg1:E5 Arg2:E11
+R3	Using Arg1:E10 Arg2:E11
+R4	Using Arg1:E8 Arg2:E12
+R5	Using Arg1:E8 Arg2:E13
+R6	Abbrev-Of Arg1:E23 Arg2:E21
+R7	Caused-By Arg1:E21 Arg2:E24
+R8	Using Arg1:E28 Arg2:E29
+R9	Equivalent-To Arg1:E33 Arg2:E30

@@ -1,26 +1,26 @@
+E1	Condition:T1 Name:T2 Severity:T12
+E2	Condition:T5 Name:T6 Severity:T7
+E3	Risk:T8 Risk-For:E4
+E4	Condition:T9 Name:T10 Severity:T11
+E5	Procedure:T13
+E6	Assertion:T14 Asserted:E5
 T1	Condition 185 199	Mental illness
 T2	Condition-Name 185 199	Mental illness
-E1	Condition:T1 Name:T2 Severity:T12
 T3	Location 60 89	Bernalillo County, New Mexico
-A1	Location-Value T3 residence
 T4	Ethnicity 25 32	Mexican
 T5	Condition 122 152	cognitive functioning problems
-E2	Condition:T5 Name:T6 Severity:T7
 T6	Condition-Name 122 152	cognitive functioning problems
 T7	Severity 115 121	Severe
-A2	Severity-Value T7 severe
 T8	Risk 175 179	risk
-E3	Risk:T8 Risk-For:E4
 T9	Condition 167 174	suicide
-E4	Condition:T9 Name:T10 Severity:T11
 T10	Condition-Name 167 174	suicide
 T11	Severity 158 166	Imminent
-A3	Severity-Value T11 severe
 T12	Severity 211 217	severe
-A4	Severity-Value T12 severe
 T13	Procedure 295 304	treatment
-E5	Procedure:T13 
 T14	Assertion 265 273	warrants
-E6	Assertion:T14 Asserted:E5
+A1	Location-Value T3 residence
+A2	Severity-Value T7 severe
+A3	Severity-Value T11 severe
+A4	Severity-Value T12 severe
 A5	Assertion-Type-Value E6 hypothetical
-R1	Treatment-For Arg1:E5 Arg2:E1	
+R1	Treatment-For Arg1:E5 Arg2:E1

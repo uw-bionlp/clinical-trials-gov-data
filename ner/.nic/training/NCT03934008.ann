@@ -1,0 +1,59 @@
+T1	Language 293 300	English
+T2	Life-Stage-And-Gender 324 329	child
+A1	Life-Stage-And-Gender-Type T2 child
+T3	Eq-Operator 269 270	≥
+A2	Eq-Operator-Value T3 GTEQ
+T4	Eq-Operator 330 331	≤
+A3	Eq-Operator-Value T4 LTEQ
+T5	Eq-Temporal-Unit 56 61	years
+A4	Eq-Temporal-Unit-Value T5 year
+T6	Eq-Temporal-Unit 273 278	years
+A5	Eq-Temporal-Unit-Value T6 year
+T7	Eq-Temporal-Unit 333 338	years
+A6	Eq-Temporal-Unit-Value T7 year
+T8	Age 65 68	age
+E1	Age:T8 Eq-Comparison:E6
+T9	Age 279 282	old
+E2	Age:T9 Eq-Comparison:E4
+T10	Age 342 345	age
+E3	Age:T10 Eq-Comparison:E5
+T11	Eq-Operator 53 54	-
+A7	Eq-Operator-Value T11 BETWEEN
+T12	Eq-Value 52 53	0
+T13	Eq-Value 54 55	6
+T14	Eq-Value 270 272	18
+T15	Eq-Value 331 332	6
+T16	Eq-Comparison 269 278	≥18 years
+E4	Eq-Comparison:T16 Operator:T3 Temporal-Unit:T6 Value:T14
+T17	Eq-Comparison 330 338	≤6 years
+E5	Eq-Comparison:T17 Operator:T4 Temporal-Unit:T7 Value:T15
+T18	Eq-Comparison 52 61	0-6 years
+E6	Eq-Comparison:T18 Operator:T11 Value:T12 Temporal-Unit:T5 Value2:T13
+T19	Location 86 116	Rocking Horse Community Center
+A8	Location-Value T19 clinic
+T20	Encounter 74 78	Seen
+E7	Encounter:T20 Type:T21 Location:T19 Provider:E12
+T21	Encounter-Type 74 78	Seen
+A9	Encounter-Type-Value T21 outpatient
+T25	Temporal-Connection 141 147	during
+E9	Temporal-Connection:T25 Arg:E7 Arg2:E13
+T27	Family-Member 246 253	Parents
+E10	Family-Member:T27 Has:E2
+A11	Family-Member-Type E10 parent
+T28	Eq-Comparison 311 323	at least one
+E11	Eq-Comparison:T28 Operator:T29 Value:T30
+T29	Eq-Operator 311 319	at least
+A12	Eq-Operator-Value T29 GTEQ
+T30	Eq-Value 320 323	one
+T31	Location 454 484	Rocking Horse Community Center
+A13	Location-Value T31 clinic
+T32	Provider 122 140	pediatric provider
+E12	Provider:T32 Type:T33
+T33	Provider-Type 122 131	pediatric
+T24	Or 161 163	or
+E8	Or:T24 Arg:E13 Arg2:E14
+A10	Temporal-Connection-Type-Value E9 during
+T22	Study 152 160	baseline
+E13	Study:T22 
+T23	Study 164 169	study
+E14	Study:T23 

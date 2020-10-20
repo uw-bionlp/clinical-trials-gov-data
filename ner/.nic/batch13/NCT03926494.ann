@@ -1,0 +1,60 @@
+T1	Procedure 116 141	hyperbaric oxygen therapy
+T2	Procedure-Name 116 141	hyperbaric oxygen therapy
+E1	Procedure:T1 Name:T2 Location:T21
+T3	Condition 29 37	comatose
+T4	Condition-Name 29 37	comatose
+E3	Condition:T3 Name:T4
+T7	Condition 379 385	stroke
+T8	Condition-Name 379 385	stroke
+E7	Condition:T7 Name:T8
+T9	Eq-Operator 67 68	<
+A1	Eq-Operator-Value T9 LT
+T10	Eq-Operator 198 199	≥
+A2	Eq-Operator-Value T10 GTEQ
+T11	Eq-Temporal-Unit 203 208	years
+A3	Eq-Temporal-Unit-Value T11 year
+T12	Age 193 197	Aged
+E8	Age:T12 Eq-Comparison:E10
+T13	Eq-Value 68 69	8
+T14	Eq-Value 200 202	18
+T15	Eq-Comparison 67 69	<8
+E9	Eq-Comparison:T15 Operator:T9 Value:T13
+T16	Eq-Comparison 198 208	≥ 18 years
+E10	Eq-Comparison:T16 Operator:T10 Temporal-Unit:T11 Value:T14
+T17	Observation 48 66	Glasgow coma score
+E2	Observation:T17 Name:T18 Eq-Comparison:E9
+T18	Observation-Name 48 66	Glasgow coma score
+A4	Observation-Type-Value T18 clinical-score
+R1	Equivalent-To Arg1:E2 Arg2:E3	
+T19	Condition 78 103	carbon monoxide poisoning
+E4	Condition:T19 Name:T20
+T20	Condition-Name 78 103	carbon monoxide poisoning
+R2	Caused-By Arg1:E3 Arg2:E4	
+T21	Location 147 181	tertiary hospital in Île de France
+A5	Location-Value T21 hospital
+R3	Treatment-For Arg1:E1 Arg2:E4	
+T22	Encounter 215 227	Hospitalized
+E6	Encounter:T22 Type:T23 Location:T24 Location2:T25 Location3:T26
+T23	Encounter-Type 215 227	Hospitalized
+A6	Encounter-Type-Value T23 inpatient
+T24	Location 231 256	hyperbaric medicine unity
+A7	Location-Value T24 unit
+T25	Location 260 285	Raymond Poincaré hospital
+T26	Location 289 296	Garches
+A8	Location-Value T25 hospital
+T27	Condition 323 331	Pregnant
+E11	Condition:T27 Name:T28
+T28	Condition-Name 323 331	Pregnant
+T29	Life-Stage-And-Gender 332 337	woman
+A9	Life-Stage-And-Gender-Type T29 female
+R4	If-Then Arg1:T29 Arg2:E11	
+T30	Assertion 369 375	signes
+E12	Assertion:T30 Asserted:E7
+A10	Assertion-Type-Value E12 possible
+T31	Negation 390 397	without
+E13	Negation:T31 Negates:E5
+T5	Condition 398 410	CO detection
+E5	Condition:T5 Name:T6
+T6	Condition-Name 398 410	CO detection
+T32	And 386 389	and
+E14	And:T32 Arg:E7 Arg2:E13

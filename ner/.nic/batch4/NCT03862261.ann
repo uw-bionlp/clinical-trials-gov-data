@@ -1,0 +1,99 @@
+T1	Eq-Comparison 34 43	< 5 years
+E1	Eq-Comparison:T1 Operator:T32 Value:T33 Temporal-Unit:T34
+T2	Modifier 66 75	pulmonary
+E2	Modifier:T2 Modifies:T36
+T3	Or 76 78	or
+E3	Or:T3 Arg:E2 Arg2:E4
+T4	Modifier 79 94	extra-pulmonary
+E4	Modifier:T4 Modifies:T36
+T5	Condition 95 97	TB
+E5	Condition:T5 Name:T36
+T6	Assertion 104 112	symptoms
+E6	Assertion:T6 Asserted:E11
+A1	Assertion-Type-Value E6 possible
+T7	Or 113 115	or
+E7	Or:T7 Arg:E6 Arg2:E8
+T8	Assertion 125 130	signs
+E8	Assertion:T8 Asserted:E11
+A2	Assertion-Type-Value E8 possible
+T9	Assertion 131 141	suggestive
+E9	Assertion:T9 Asserted:E11
+A3	Assertion-Type-Value E9 possible
+T10	Eq-Comparison 145 151	active
+E10	Eq-Comparison:T10 Temporal-Period:T37
+T11	Condition 152 162	TB disease
+E11	Condition:T11 Name:T38 Temporality:E10
+T12	Other 169 174	Other
+E12	Other:T12 Is-Other:E13
+T13	Condition 175 194	infectious diseases
+E13	Condition:T13 Name:T39
+T14	Negation 199 202	not
+E14	Negation:T14 Negates:E15
+T15	Assertion 203 212	suspected
+E15	Assertion:T15 Asserted:E13
+A4	Assertion-Type-Value E15 possible
+T16	Or 213 215	or
+E16	Or:T16 Arg:E15
+T17	Assertion 250 263	Commitment to
+E17	Assertion:T17 Asserted:E18
+A5	Assertion-Type-Value E17 hypothetical
+T18	Procedure 269 278	treatment
+E18	Procedure:T18 Location:T45
+T19	Study 323 328	study
+E19	Study:T19 
+T20	Family-Member 375 380	child
+E20	Family-Member:T20 Has:E21
+A6	Family-Member-Type E20 child
+T21	Study 403 408	study
+E21	Study:T21 
+T22	And 444 447	who
+E22	And:T22 Arg:T40 Arg2:E23
+T23	Condition 452 454	TB
+E23	Condition:T23 Name:T41
+T24	And 464 467	but
+E24	And:T24 Arg:E23 Arg2:E25
+T25	Negation 468 475	without
+E25	Negation:T25 Negates:E30
+T26	Assertion 476 484	symptoms
+E26	Assertion:T26 Asserted:E30
+A7	Assertion-Type-Value E26 possible
+T27	Or 485 487	or
+E27	Or:T27 Arg:E26 Arg2:E28
+T28	Assertion 488 493	signs
+E28	Assertion:T28 Asserted:E30
+A8	Assertion-Type-Value E28 possible
+T29	Eq-Comparison 497 503	active
+E29	Eq-Comparison:T29 Temporal-Period:T42
+T30	Condition 504 506	TB
+E30	Condition:T30 Name:T43 Temporality:E29
+T31	Life-Stage-And-Gender 25 33	Children
+A9	Life-Stage-And-Gender-Type T31 child
+T32	Eq-Operator 34 35	<
+A10	Eq-Operator-Value T32 LT
+T33	Eq-Value 36 37	5
+T34	Eq-Temporal-Unit 38 43	years
+A11	Eq-Temporal-Unit-Value T34 year
+T36	Condition-Name 95 97	TB
+T37	Eq-Temporal-Period 145 151	active
+A12	Eq-Temporal-Period-Value T37 present
+T38	Condition-Name 152 162	TB disease
+T39	Condition-Name 175 194	infectious diseases
+T40	Life-Stage-And-Gender 435 443	Children
+A13	Life-Stage-And-Gender-Type T40 child
+T41	Condition-Name 452 454	TB
+T42	Eq-Temporal-Period 497 503	active
+A14	Eq-Temporal-Period-Value T42 present
+T43	Condition-Name 504 506	TB
+T44	Age 44 47	old
+E31	Age:T44 Eq-Comparison:E1
+T35	Assertion 54 65	Presumptive
+E32	Assertion:T35 Asserted:E5
+A15	Assertion-Type-Value E32 possible
+R1	Equivalent-To Arg1:E11 Arg2:E5	
+T45	Location 286 292	clinic
+A16	Location-Value T45 clinic
+T46	Or 306 308	or
+E33	Or:T46 Arg:T45 Arg2:E19
+T47	Family-Member 340 348	Parental
+E34	Family-Member:T47 Has:E20
+A17	Family-Member-Type E34 parent

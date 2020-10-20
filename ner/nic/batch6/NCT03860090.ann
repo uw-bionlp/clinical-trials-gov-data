@@ -1,29 +1,29 @@
-T1	Procedure 41 61	endovenous pacemaker
 E1	Procedure:T1 Name:T11
-T2	Or 62 64	or
 E2	Or:T2 Arg:E1 Arg2:E3
-T3	Procedure 65 78	defibrillator
 E3	Procedure:T3 Name:T12
-T4	Eq-Comparison 116 128	Pre-existing
 E4	Eq-Comparison:T4 Temporal-Period:T13
-T6	Procedure 129 157	ipsilateral pacing electrode
 E6	Procedure:T6 Name:T15 Temporality:E4
-T7	Eq-Comparison 164 172	Previous
 E7	Eq-Comparison:T7 Temporal-Period:T16
-T8	Condition 173 200	ipsilateral lymphadenectomy
 E8	Condition:T8 Name:T17 Temporality:E7
-T9	Indication 207 217	Indication
 E9	Indication:T9 Indication-For:E10
-T10	Procedure 221 254	cardiac resynchronization therapy
 E10	Procedure:T10 Name:T18
+E11	Indication:T19 Indication-For:E1 Indication-For2:E3
+T1	Procedure 41 61	endovenous pacemaker
+T2	Or 62 64	or
+T3	Procedure 65 78	defibrillator
+T4	Eq-Comparison 116 128	Pre-existing
+T6	Procedure 129 157	ipsilateral pacing electrode
+T7	Eq-Comparison 164 172	Previous
+T8	Condition 173 200	ipsilateral lymphadenectomy
+T9	Indication 207 217	Indication
+T10	Procedure 221 254	cardiac resynchronization therapy
 T11	Procedure-Name 41 61	endovenous pacemaker
 T12	Procedure-Name 65 78	defibrillator
 T13	Eq-Temporal-Period 116 128	Pre-existing
-A1	Eq-Temporal-Period-Value T13 past
 T15	Procedure-Name 129 157	ipsilateral pacing electrode
 T16	Eq-Temporal-Period 164 172	Previous
-A3	Eq-Temporal-Period-Value T16 past
 T17	Condition-Name 173 200	ipsilateral lymphadenectomy
 T18	Procedure-Name 221 254	cardiac resynchronization therapy
 T19	Indication 79 89	indication
-E11	Indication:T19 Indication-For:E1 Indication-For2:E3
+A1	Eq-Temporal-Period-Value T13 past
+A3	Eq-Temporal-Period-Value T16 past

@@ -1,0 +1,20 @@
+T1	Life-Stage-And-Gender 28 34	Adults
+A1	Life-Stage-And-Gender-Type T1 adult
+T6	Eq-Operator 39 60	greater than or equal
+A2	Eq-Operator-Value T6 GTEQ
+T7	Eq-Temporal-Unit 67 72	years
+A3	Eq-Temporal-Unit-Value T7 year
+T8	Age 35 38	age
+E5	Age:T8 Eq-Comparison:E1
+T9	Eq-Value 64 66	18
+T10	Eq-Comparison 39 72	greater than or equal to 18 years
+E1	Eq-Comparison:T10 Operator:T6 Temporal-Unit:T7 Value:T9
+T11	Eq-Comparison 79 88	Receiving
+E3	Eq-Comparison:T11 Temporal-Period:T12
+T12	Eq-Temporal-Period 79 88	Receiving
+A4	Eq-Temporal-Period-Value T12 present
+T2	Location 103 137	structural heart and valve program
+A5	Location-Value T2 clinic
+T3	Procedure 89 93	care
+E2	Procedure:T3 Temporality:E3 Location:T2 Location2:T13
+T13	Location 159 202	NHLBI structural heart disease network site

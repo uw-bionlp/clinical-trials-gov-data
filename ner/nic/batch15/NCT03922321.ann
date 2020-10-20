@@ -1,68 +1,130 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E7	Observation:T7 Name:T8 Eq-Comparison:E24 Severity:T80
+E9	Observation:T9 Name:T10 Eq-Comparison:E27
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18 Temporality:E81
+E21	Procedure:T21 Name:T22 Temporality:E84
+E22	Age:T42 Eq-Comparison:E23
+E23	Eq-Comparison:T57 Operator:T23 Temporal-Unit:T34 Value:T43
+E24	Eq-Comparison:T58 Operator:T24 Value:T44
+E25	Eq-Comparison:T59 Operator:T25 Temporal-Unit:T35 Value:T47
+E26	Eq-Comparison:T60 Operator:T26 Unit:T39 Value:T48
+E27	Eq-Comparison:T61 Operator:T27 Unit:T40 Value:T49 Unit2:T110 Operator2:T177
+E28	Eq-Comparison:T62 Operator:T28 Value:T50 Unit:T123
+E29	Eq-Comparison:T63 Operator:T29 Temporal-Unit:T36 Value:T51
+E30	Eq-Comparison:T64 Operator:T30 Temporal-Unit:T37 Value:T52
+E31	Eq-Comparison:T65 Operator:T31 Value:T53 Unit:T141 Per:T142
+E32	Eq-Comparison:T66 Operator:T32 Value:T54 Unit:T147 Per:T41
+E2	Or:T67 Arg:T6 Arg2:T5
+E4	And:T68 Arg:E1 Arg2:E3
+E5	Condition:T69 Name:T70 Severity:T73 Temporality:E8
+E6	Or:T71 Arg:T72 Arg2:T73
+E8	Eq-Comparison:T74 Temporal-Period:T75
+E10	Observation:T76 Name:T77
+E12	Study:T78
+E14	Modifier:T45 Modifies:T8
+E16	Temporal-Connection:T79 Arg:E7 Arg2:E12
+E18	Study:T81
+E20	And:T82 Arg:E12 Arg2:E18
+E33	Eq-Comparison:T46 Temporal-Recency:T83
+E34	Eq-Comparison:T84 Temporal-Period:T85
+E35	Condition:T86 Name:T87 Temporality:E34 Temporality2:E33 Temporality3:E25
+E36	Study:T88
+E37	Temporal-Connection:T89 Arg:E25 Arg2:E36
+E38	Condition:T90 Name:T91 Severity:T94 Temporality:E39
+E39	Eq-Comparison:T92 Temporal-Period:T93
+E40	Or:T96 Arg:T95 Arg2:T94
+E11	Condition:T11 Name:T12
+E41	Negation:T97 Negates:E11
+E42	Observation:T98 Name:T99 Stability:T100
+E43	And:T101 Arg:E41 Arg2:E42
+E44	Criteria-Count:T102 Min-Value:E88 Criteria:E45 Criteria2:E46 Criteria3:E9 Criteria4:E48
+E45	Observation:T103 Name:T104 Eq-Comparison:E26
+E46	Condition:T105 Name:T106 Severity:T107
+E47	Or:T109 Arg:T108 Arg2:T107
+E48	Condition:T111 Name:T112
+E49	Modifier:T113 Modifies:T112
+E50	Modifier:T114 Modifies:T112
+E51	Or:T115 Arg:E50 Arg2:E49
+E52	Or:T116 Arg:E9 Arg2:E48
+E53	Drug:T117 Name:T118 Dose:E28 Temporality:E29
+E54	Modifier:T119 Modifies:E53
+E55	Modifier:T120
+E56	Modifier:T121 Modifies:E53
+E57	Or:T122 Arg:E55 Arg2:E56
+E58	Drug:T124 Name:T125
+E59	Condition:T126 Name:T127
+E60	Study:T128
+E61	Temporal-Connection:T129 Arg:E29 Arg2:E60
+E62	Drug:T130 Name:T131 Temporality:E30
+E63	Drug:T132 Name:T133 Temporality:E30
+E64	Drug:T134 Name:T135 Temporality:E30
+E65	Or:T136 Arg:E63 Arg2:E64
+E66	Study:T137
+E67	Temporal-Connection:T138 Arg:E30 Arg2:E66
+E68	Observation:T139 Name:T140 Eq-Comparison:E31
+E69	Study:T143
+E70	Temporal-Connection:T144 Arg:E68 Arg2:E69
+E71	Observation:T145 Name:T146 Eq-Comparison:E32
+E72	Study:T148
+E73	Temporal-Connection:T149 Arg:E71 Arg2:E72
+E74	Condition:T150 Name:T151 Polarity:T152
+E19	Eq-Comparison:T19 Value:T20 Unit:T55
+E75	Observation:T153 Name:T154 Eq-Comparison:E19
+E76	Condition:T155 Name:T156 Temporality:E77
+E77	Eq-Comparison:T157 Temporal-Recency:T158
+E78	Condition:T159 Name:T160 Temporality:E77
+E79	Or:T161 Arg:E76 Arg2:E78
+E80	Modifier:T162 Modifies:T18
+E81	Eq-Comparison:T163 Operator:T33 Temporal-Period:T164 Value:T56 Temporal-Unit:T38
+E82	Study:T165
+E83	Temporal-Connection:T166 Arg:E17 Arg2:E82
+E84	Eq-Comparison:T167 Temporal-Period:T168
+E85	Condition:T169 Name:T170
+E86	Procedure:T171 Name:T172 Temporality:E84
+E87	Or:T173 Arg:E21 Arg2:E86
+E88	Eq-Comparison:T174 Value:T175 Operator:T176
+E89	Modifier:T178 Modifies:E75
 T1	Condition 86 101	Graves' disease
 T2	Condition-Name 86 101	Graves' disease
-E1	Condition:T1 Name:T2
 T3	Condition 107 122	hyperthyroidism
 T4	Condition-Name 107 122	hyperthyroidism
-E3	Condition:T3 Name:T4
 T5	Life-Stage-And-Gender 33 39	female
-A1	Life-Stage-And-Gender-Type T5 female
 T6	Life-Stage-And-Gender 25 29	Male
-A2	Life-Stage-And-Gender-Type T6 male
 T7	Observation 201 204	CAS
 T8	Observation-Name 201 204	CAS
-E7	Observation:T7 Name:T8 Eq-Comparison:E24 Severity:T80
 T9	Observation 595 604	proptosis
 T10	Observation-Name 595 604	proptosis
-E9	Observation:T9 Name:T10 Eq-Comparison:E27
 T13	Condition 1021 1037	immunomodulation
 T14	Condition-Name 1021 1037	immunomodulation
-E13	Condition:T13 Name:T14
 T15	Condition 1254 1270	optic neuropathy
 T16	Condition-Name 1254 1270	optic neuropathy
-E15	Condition:T15 Name:T16
 T17	Condition 1393 1404	optic nerve
 T18	Condition-Name 1393 1404	optic nerve
-E17	Condition:T17 Name:T18 Temporality:E81
 T21	Procedure 1470 1489	orbital irradiation
 T22	Procedure-Name 1470 1489	orbital irradiation
-E21	Procedure:T21 Name:T22 Temporality:E84
 T23	Eq-Operator 40 41	≥
-A3	Eq-Operator-Value T23 GTEQ
 T24	Eq-Operator 206 207	≥
-A4	Eq-Operator-Value T24 GTEQ
 T25	Eq-Operator 341 347	within
-A5	Eq-Operator-Value T25 LTEQ
 T26	Eq-Operator 543 544	≥
-A6	Eq-Operator-Value T26 GTEQ
 T27	Eq-Operator 605 606	≥
-A7	Eq-Operator-Value T27 GTEQ
 T28	Eq-Operator 867 868	≥
-A8	Eq-Operator-Value T28 GTEQ
 T29	Eq-Operator 919 925	within
-A9	Eq-Operator-Value T29 LTEQ
 T30	Eq-Operator 1038 1053	within the past
-A10	Eq-Operator-Value T30 LTEQ
 T31	Eq-Operator 1103 1104	<
-A11	Eq-Operator-Value T31 LT
 T32	Eq-Operator 1155 1156	<
-A12	Eq-Operator-Value T32 LT
 T33	Eq-Operator 1417 1423	within
-A13	Eq-Operator-Value T33 LTEQ
 T34	Eq-Temporal-Unit 45 50	years
-A14	Eq-Temporal-Unit-Value T34 year
 T35	Eq-Temporal-Unit 350 356	months
-A15	Eq-Temporal-Unit-Value T35 month
 T36	Eq-Temporal-Unit 928 933	weeks
-A16	Eq-Temporal-Unit-Value T36 week
 T37	Eq-Temporal-Unit 1056 1062	months
-A17	Eq-Temporal-Unit-Value T37 month
 T38	Eq-Temporal-Unit 1435 1441	months
-A18	Eq-Temporal-Unit-Value T38 month
 T39	Eq-Unit 547 549	mm
 T40	Eq-Unit 609 611	mm
 T41	Eq-Unit 1167 1170	mm3
 T42	Age 54 57	age
-E22	Age:T42 Eq-Comparison:E23
 T43	Eq-Value 42 44	18
 T44	Eq-Value 208 209	4
 T47	Eq-Value 348 349	9
@@ -75,260 +137,198 @@ T53	Eq-Value 1105 1106	6
 T54	Eq-Value 1156 1160	1500
 T56	Eq-Value 1433 1434	6
 T57	Eq-Comparison 40 50	≥ 18 years
-E23	Eq-Comparison:T57 Operator:T23 Temporal-Unit:T34 Value:T43
 T58	Eq-Comparison 206 209	≥ 4
-E24	Eq-Comparison:T58 Operator:T24 Value:T44
 T59	Eq-Comparison 341 356	within 9 months
-E25	Eq-Comparison:T59 Operator:T25 Temporal-Unit:T35 Value:T47
 T60	Eq-Comparison 543 549	≥ 2 mm
-E26	Eq-Comparison:T60 Operator:T26 Unit:T39 Value:T48
 T61	Eq-Comparison 605 624	≥ 3 mm above normal
-E27	Eq-Comparison:T61 Operator:T27 Unit:T40 Value:T49 Unit2:T110 Operator2:T177
 T62	Eq-Comparison 867 872	≥ 1 g
-E28	Eq-Comparison:T62 Operator:T28 Value:T50 Unit:T123
 T63	Eq-Comparison 919 933	within 3 weeks
-E29	Eq-Comparison:T63 Operator:T29 Temporal-Unit:T36 Value:T51
 T64	Eq-Comparison 1038 1062	within the past 9 months
-E30	Eq-Comparison:T64 Operator:T30 Temporal-Unit:T37 Value:T52
 T65	Eq-Comparison 1103 1109	< 6g/L
-E31	Eq-Comparison:T65 Operator:T31 Value:T53 Unit:T141 Per:T142
 T66	Eq-Comparison 1155 1170	<1500 cells/mm3
-E32	Eq-Comparison:T66 Operator:T32 Value:T54 Unit:T147 Per:T41
 T67	Or 30 32	or
-E2	Or:T67 Arg:T6 Arg2:T5
 T68	And 102 106	with
-E4	And:T68 Arg:E1 Arg2:E3
 T69	Condition 166 168	GO
-E5	Condition:T69 Name:T70 Severity:T73 Temporality:E8
 T70	Condition-Name 166 168	GO
 T72	Severity 147 155	moderate
-A19	Severity-Value T72 moderate
 T73	Severity 159 165	severe
-A20	Severity-Value T73 severe
 T71	Or 156 158	to
-E6	Or:T71 Arg:T72 Arg2:T73
 T74	Eq-Comparison 139 145	active
-E8	Eq-Comparison:T74 Temporal-Period:T75
 T75	Eq-Temporal-Period 139 145	active
-A21	Eq-Temporal-Period-Value T75 present
-R1	Caused-By Arg1:E3 Arg2:E5	
 T76	Observation 176 199	Clinical Activity Score
-E10	Observation:T76 Name:T77
 T77	Observation-Name 176 199	Clinical Activity Score
-A22	Observation-Type-Value T77 clinical-score
-R2	Abbrev-Of Arg1:E7 Arg2:E10	
 T78	Study 248 257	Screening
-E12	Study:T78 
 T80	Severity 223 231	severely
-A23	Severity-Value T80 severe
 T45	Modifier 232 244	affected eye
-E14	Modifier:T45 Modifies:T8
 T79	Temporal-Connection 245 247	at
-E16	Temporal-Connection:T79 Arg:E7 Arg2:E12
-A24	Temporal-Connection-Type-Value E16 during
 T81	Study 284 292	Baseline
-E18	Study:T81 
 T82	And 280 283	and
-E20	And:T82 Arg:E12 Arg2:E18
 T46	Eq-Comparison 322 327	Onset
-E33	Eq-Comparison:T46 Temporal-Recency:T83
 T83	Eq-Temporal-Recency 322 327	Onset
-A25	Eq-Temporal-Recency-Value T83 first-time
 T84	Eq-Comparison 331 337	active
-E34	Eq-Comparison:T84 Temporal-Period:T85
 T85	Eq-Temporal-Period 331 337	active
-A26	Eq-Temporal-Period-Value T85 present
 T86	Condition 338 340	GO
-E35	Condition:T86 Name:T87 Temporality:E34 Temporality2:E33 Temporality3:E25
 T87	Condition-Name 338 340	GO
 T88	Study 360 369	screening
-E36	Study:T88 
 T89	Temporal-Connection 357 359	of
-E37	Temporal-Connection:T89 Arg:E25 Arg2:E36
-A27	Temporal-Connection-Type-Value E37 before
 T90	Condition 402 404	GO
-E38	Condition:T90 Name:T91 Severity:T94 Temporality:E39
 T91	Condition-Name 402 404	GO
 T92	Eq-Comparison 395 401	active
-E39	Eq-Comparison:T92 Temporal-Period:T93
 T93	Eq-Temporal-Period 395 401	active
-A28	Eq-Temporal-Period-Value T93 present
 T94	Severity 388 394	severe
-A29	Severity-Value T94 severe
 T95	Severity 376 384	Moderate
-A30	Severity-Value T95 severe
 T96	Or 385 387	to
-E40	Or:T96 Arg:T95 Arg2:T94
 T11	Condition 410 427	sight-threatening
-E11	Condition:T11 Name:T12
 T12	Condition-Name 410 427	sight-threatening
 T97	Negation 406 409	not
-E41	Negation:T97 Negates:E11
-R4	Caused-By Arg1:E11 Arg2:E38	
 T98	Observation 461 471	daily life
-E42	Observation:T98 Name:T99 Stability:T100
 T99	Observation-Name 461 471	daily life
 T100	Stability 451 457	impact
-A31	Stability-Value T100 change
 T101	And 428 431	but
-E43	And:T101 Arg:E41 Arg2:E42
-R3	Caused-By Arg1:T100 Arg2:E38	
 T102	Criteria-Count 513 526	the following
-E44	Criteria-Count:T102 Min-Value:E88 Criteria:E45 Criteria2:E46 Criteria3:E9 Criteria4:E48
 T103	Observation 528 542	lid retraction
-E45	Observation:T103 Name:T104 Eq-Comparison:E26
 T104	Observation-Name 528 542	lid retraction
-A32	Observation-Type-Value T104 measurement
 T105	Condition 570 593	soft tissue involvement
-E46	Condition:T105 Name:T106 Severity:T107
 T106	Condition-Name 570 593	soft tissue involvement
 T107	Severity 563 569	severe
-A33	Severity-Value T107 severe
 T108	Severity 551 559	moderate
-A34	Severity-Value T108 moderate
 T109	Or 560 562	or
-E47	Or:T109 Arg:T108 Arg2:T107
 T110	Eq-Unit 618 624	normal
-A35	Eq-Unit-Value T110 ref-range-normal
 T111	Condition 676 684	diplopia
-E48	Condition:T111 Name:T112
 T112	Condition-Name 676 684	diplopia
 T113	Modifier 667 675	constant
-E49	Modifier:T113 Modifies:T112
 T114	Modifier 653 663	inconstant
-E50	Modifier:T114 Modifies:T112
 T115	Or 664 666	or
-E51	Or:T115 Arg:E50 Arg2:E49
 T116	Or 646 652	and/or
-E52	Or:T116 Arg:E9 Arg2:E48
 T117	Drug 795 802	steroid
-E53	Drug:T117 Name:T118 Dose:E28 Temporality:E29
 T118	Drug-Name 795 802	steroid
 T119	Modifier 804 815	intravenous
-E54	Modifier:T119 Modifies:E53
 T120	Modifier 817 819	IV
-E55	Modifier:T120 
-R9	Abbrev-Of Arg1:E55 Arg2:E54	
 T121	Modifier 824 828	oral
-E56	Modifier:T121 Modifies:E53
 T122	Or 821 823	or
-E57	Or:T122 Arg:E55 Arg2:E56
 T123	Eq-Unit 871 872	g
 T124	Drug 876 894	methylprednisolone
-E58	Drug:T124 Name:T125
 T125	Drug-Name 876 894	methylprednisolone
 T126	Condition 916 918	GO
-E59	Condition:T126 Name:T127
 T127	Condition-Name 916 918	GO
-R10	Example-Of Arg1:E58 Arg2:E53	
-R11	Treatment-For Arg1:E53 Arg2:E59	
 T128	Study 943 952	Screening
-E60	Study:T128 
 T129	Temporal-Connection 934 939	prior
-E61	Temporal-Connection:T129 Arg:E29 Arg2:E60
-A36	Temporal-Connection-Type-Value E61 before
 T130	Drug 966 975	rituximab
-E62	Drug:T130 Name:T131 Temporality:E30
 T131	Drug-Name 966 975	rituximab
 T132	Drug 977 988	tocilizumab
-E63	Drug:T132 Name:T133 Temporality:E30
 T133	Drug-Name 977 988	tocilizumab
 T134	Drug 997 1016	monoclonal antibody
-E64	Drug:T134 Name:T135 Temporality:E30
 T135	Drug-Name 997 1016	monoclonal antibody
 T136	Or 990 992	or
-E65	Or:T136 Arg:E63 Arg2:E64
-R12	Treatment-For Arg1:E64 Arg2:E13	
 T137	Study 1072 1080	Baseline
-E66	Study:T137 
 T138	Temporal-Connection 1063 1068	prior
-E67	Temporal-Connection:T138 Arg:E30 Arg2:E66
-A37	Temporal-Connection-Type-Value E67 before
 T139	Observation 1087 1102	Total IgG level
-E68	Observation:T139 Name:T140 Eq-Comparison:E31
 T140	Observation-Name 1087 1102	Total IgG level
-A38	Observation-Type-Value T140 lab
 T141	Eq-Unit 1106 1107	g
 T142	Eq-Unit 1108 1109	L
 T143	Study 1113 1122	Screening
-E69	Study:T143 
 T144	Temporal-Connection 1110 1112	at
-E70	Temporal-Connection:T144 Arg:E68 Arg2:E69
-A39	Temporal-Connection-Type-Value E70 during
 T145	Observation 1129 1154	Absolute neutrophil count
-E71	Observation:T145 Name:T146 Eq-Comparison:E32
 T146	Observation-Name 1129 1154	Absolute neutrophil count
-A40	Observation-Type-Value T146 lab
 T147	Eq-Unit 1161 1166	cells
 T148	Study 1174 1183	Screening
-E72	Study:T148 
 T149	Temporal-Connection 1171 1173	at
-E73	Temporal-Connection:T149 Arg:E71 Arg2:E72
-A41	Temporal-Connection-Type-Value E73 during
 T150	Condition 1218 1246	best corrected visual acuity
-E74	Condition:T150 Name:T151 Polarity:T152
 T151	Condition-Name 1218 1246	best corrected visual acuity
 T152	Polarity 1208 1217	decreased
-A42	Polarity-Value T152 low
-R13	Caused-By Arg1:E74 Arg2:E15	
 T19	Eq-Comparison 1309 1316	2 lines
-E19	Eq-Comparison:T19 Value:T20 Unit:T55
 T20	Eq-Value 1309 1310	2
 T55	Eq-Unit 1311 1316	lines
 T153	Observation 1287 1305	decrease in vision
-E75	Observation:T153 Name:T154 Eq-Comparison:E19
 T154	Observation-Name 1287 1305	decrease in vision
-A43	Observation-Type-Value T154 measurement
-R14	Equivalent-To Arg1:E75 Arg2:E15	
 T155	Condition 1343 1362	visual field defect
-E76	Condition:T155 Name:T156 Temporality:E77
 T156	Condition-Name 1343 1362	visual field defect
 T157	Eq-Comparison 1339 1342	new
-E77	Eq-Comparison:T157 Temporal-Recency:T158
 T158	Eq-Temporal-Recency 1339 1342	new
-A44	Eq-Temporal-Recency-Value T158 first-time
 T159	Condition 1367 1379	color defect
-E78	Condition:T159 Name:T160 Temporality:E77
 T160	Condition-Name 1367 1379	color defect
 T161	Or 1364 1366	or
-E79	Or:T161 Arg:E76 Arg2:E78
-R15	Equivalent-To Arg1:E76 Arg2:E15	
-R16	Caused-By Arg1:E78 Arg2:E17	
 T162	Modifier 1405 1416	involvement
-E80	Modifier:T162 Modifies:T18
-R17	Equivalent-To Arg1:E17 Arg2:E15	
 T163	Eq-Comparison 1417 1441	within the last 6 months
-E81	Eq-Comparison:T163 Operator:T33 Temporal-Period:T164 Value:T56 Temporal-Unit:T38
 T164	Eq-Temporal-Period 1428 1432	last
-A45	Eq-Temporal-Period-Value T164 past
 T165	Study 1445 1454	Screening
-E82	Study:T165 
 T166	Temporal-Connection 1442 1444	at
-E83	Temporal-Connection:T166 Arg:E17 Arg2:E82
-A46	Temporal-Connection-Type-Value E83 during
 T167	Eq-Comparison 1461 1469	Previous
-E84	Eq-Comparison:T167 Temporal-Period:T168
 T168	Eq-Temporal-Period 1461 1469	Previous
-A47	Eq-Temporal-Period-Value T168 past
 T169	Condition 1505 1507	GO
-E85	Condition:T169 Name:T170
 T170	Condition-Name 1505 1507	GO
 T171	Procedure 1493 1500	surgery
-E86	Procedure:T171 Name:T172 Temporality:E84
 T172	Procedure-Name 1493 1500	surgery
 T173	Or 1490 1492	or
-E87	Or:T173 Arg:E21 Arg2:E86
-R18	Treatment-For Arg1:E86 Arg2:E85	
 T174	Eq-Comparison 498 509	one or more
-E88	Eq-Comparison:T174 Value:T175 Operator:T176
 T175	Eq-Value 498 501	one
 T176	Eq-Operator 502 509	or more
-A48	Eq-Operator-Value T176 GTEQ
-R5	Equivalent-To Arg1:E44 Arg2:E38	
 T177	Eq-Operator 612 617	above
-A49	Eq-Operator-Value T177 GT
-R6	Treatment-For Arg1:E63 Arg2:E13	
-R7	Treatment-For Arg1:E62 Arg2:E13	
 T178	Modifier 1324 1337	Snellen chart
-E89	Modifier:T178 Modifies:E75
-R8	Treatment-For Arg1:E21 Arg2:E85	
+A1	Life-Stage-And-Gender-Type T5 female
+A2	Life-Stage-And-Gender-Type T6 male
+A3	Eq-Operator-Value T23 GTEQ
+A4	Eq-Operator-Value T24 GTEQ
+A5	Eq-Operator-Value T25 LTEQ
+A6	Eq-Operator-Value T26 GTEQ
+A7	Eq-Operator-Value T27 GTEQ
+A8	Eq-Operator-Value T28 GTEQ
+A9	Eq-Operator-Value T29 LTEQ
+A10	Eq-Operator-Value T30 LTEQ
+A11	Eq-Operator-Value T31 LT
+A12	Eq-Operator-Value T32 LT
+A13	Eq-Operator-Value T33 LTEQ
+A14	Eq-Temporal-Unit-Value T34 year
+A15	Eq-Temporal-Unit-Value T35 month
+A16	Eq-Temporal-Unit-Value T36 week
+A17	Eq-Temporal-Unit-Value T37 month
+A18	Eq-Temporal-Unit-Value T38 month
+A19	Severity-Value T72 moderate
+A20	Severity-Value T73 severe
+A21	Eq-Temporal-Period-Value T75 present
+A22	Observation-Type-Value T77 clinical-score
+A23	Severity-Value T80 severe
+A24	Temporal-Connection-Type-Value E16 during
+A25	Eq-Temporal-Recency-Value T83 first-time
+A26	Eq-Temporal-Period-Value T85 present
+A27	Temporal-Connection-Type-Value E37 before
+A28	Eq-Temporal-Period-Value T93 present
+A29	Severity-Value T94 severe
+A30	Severity-Value T95 severe
+A31	Stability-Value T100 change
+A32	Observation-Type-Value T104 measurement
+A33	Severity-Value T107 severe
+A34	Severity-Value T108 moderate
+A35	Eq-Unit-Value T110 ref-range-normal
+A36	Temporal-Connection-Type-Value E61 before
+A37	Temporal-Connection-Type-Value E67 before
+A38	Observation-Type-Value T140 lab
+A39	Temporal-Connection-Type-Value E70 during
+A40	Observation-Type-Value T146 lab
+A41	Temporal-Connection-Type-Value E73 during
+A42	Polarity-Value T152 low
+A43	Observation-Type-Value T154 measurement
+A44	Eq-Temporal-Recency-Value T158 first-time
+A45	Eq-Temporal-Period-Value T164 past
+A46	Temporal-Connection-Type-Value E83 during
+A47	Eq-Temporal-Period-Value T168 past
+A48	Eq-Operator-Value T176 GTEQ
+A49	Eq-Operator-Value T177 GT
+R1	Caused-By Arg1:E3 Arg2:E5
+R2	Abbrev-Of Arg1:E7 Arg2:E10
+R4	Caused-By Arg1:E11 Arg2:E38
+R3	Caused-By Arg1:T100 Arg2:E38
+R9	Abbrev-Of Arg1:E55 Arg2:E54
+R10	Example-Of Arg1:E58 Arg2:E53
+R11	Treatment-For Arg1:E53 Arg2:E59
+R12	Treatment-For Arg1:E64 Arg2:E13
+R13	Caused-By Arg1:E74 Arg2:E15
+R14	Equivalent-To Arg1:E75 Arg2:E15
+R15	Equivalent-To Arg1:E76 Arg2:E15
+R16	Caused-By Arg1:E78 Arg2:E17
+R17	Equivalent-To Arg1:E17 Arg2:E15
+R18	Treatment-For Arg1:E86 Arg2:E85
+R5	Equivalent-To Arg1:E44 Arg2:E38
+R6	Treatment-For Arg1:E63 Arg2:E13
+R7	Treatment-For Arg1:E62 Arg2:E13
+R8	Treatment-For Arg1:E21 Arg2:E85

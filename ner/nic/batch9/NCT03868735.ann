@@ -1,60 +1,60 @@
-T1	Procedure 32 41	intubated
 E1	Procedure:T1 Name:T13
-T2	Procedure 55 72	endotracheal tube
 E2	Procedure:T2 Name:T14
-T3	Procedure 78 101	Mechanically ventilated
 E3	Procedure:T3 Name:T29 Temporality:E4
-T4	Eq-Comparison 102 120	less than 24 hours
 E4	Eq-Comparison:T4 Operator:T15 Value:T16 Temporal-Unit:T17
-T5	Temporal-Connection 121 129	prior to
 E5	Temporal-Connection:T5 Arg:E4 Arg2:E6
-A1	Temporal-Connection-Type-Value E5 before
-T6	Study 130 140	enrollment
-E6	Study:T6 
-T7	Eq-Comparison 166 184	Less than 18 years
+E6	Study:T6
 E7	Eq-Comparison:T7 Operator:T18 Value:T19 Temporal-Unit:T20
-T8	Procedure 194 211	Tracheostomy tube
 E8	Procedure:T8 Name:T21
-T9	Procedure 217 252	Extracorporeal membrane oxygenation
 E9	Procedure:T9 Name:T22
-T10	Encounter 258 266	Transfer
 E10	Encounter:T10 Type:T31 Location:T23
-T11	Eq-Comparison 294 312	more than 24 hours
 E11	Eq-Comparison:T11 Operator:T24 Value:T25 Temporal-Unit:T26
-T12	Procedure 316 338	mechanical ventilation
 E12	Procedure:T12 Name:T27 Duration:E11
+E13	Modifier:T28 Modifies:T13
+E14	Age:T30 Eq-Comparison:E7
+E15	Other:T32 Is-Other:T23
+E16	Temporal-Connection:T33 Arg:E10 Arg2:E12
+T1	Procedure 32 41	intubated
+T2	Procedure 55 72	endotracheal tube
+T3	Procedure 78 101	Mechanically ventilated
+T4	Eq-Comparison 102 120	less than 24 hours
+T5	Temporal-Connection 121 129	prior to
+T6	Study 130 140	enrollment
+T7	Eq-Comparison 166 184	Less than 18 years
+T8	Procedure 194 211	Tracheostomy tube
+T9	Procedure 217 252	Extracorporeal membrane oxygenation
+T10	Encounter 258 266	Transfer
+T11	Eq-Comparison 294 312	more than 24 hours
+T12	Procedure 316 338	mechanical ventilation
 T13	Procedure-Name 32 41	intubated
 T14	Procedure-Name 55 72	endotracheal tube
 T15	Eq-Operator 102 111	less than
-A2	Eq-Operator-Value T15 LT
 T16	Eq-Value 112 114	24
 T17	Eq-Temporal-Unit 115 120	hours
-A3	Eq-Temporal-Unit-Value T17 hour
 T18	Eq-Operator 166 175	Less than
-A4	Eq-Operator-Value T18 LT
 T19	Eq-Value 176 178	18
 T20	Eq-Temporal-Unit 179 184	years
-A5	Eq-Temporal-Unit-Value T20 year
 T21	Procedure-Name 194 211	Tracheostomy tube
 T22	Procedure-Name 217 252	Extracorporeal membrane oxygenation
 T23	Location 280 288	hospital
-A6	Location-Value T23 hospital
 T24	Eq-Operator 294 303	more than
-A7	Eq-Operator-Value T24 GT
 T25	Eq-Value 304 306	24
 T26	Eq-Temporal-Unit 307 312	hours
-A8	Eq-Temporal-Unit-Value T26 hour
 T27	Procedure-Name 316 338	mechanical ventilation
 T28	Modifier 25 31	Orally
-E13	Modifier:T28 Modifies:T13
-R1	Using Arg1:E1 Arg2:E2	
 T29	Procedure-Name 78 101	Mechanically ventilated
 T30	Age 185 188	old
-E14	Age:T30 Eq-Comparison:E7
 T31	Encounter-Type 258 266	Transfer
-A9	Encounter-Type-Value T31 transfer
 T32	Other 272 279	outside
-E15	Other:T32 Is-Other:T23
 T33	Temporal-Connection 289 293	with
-E16	Temporal-Connection:T33 Arg:E10 Arg2:E12
+A1	Temporal-Connection-Type-Value E5 before
+A2	Eq-Operator-Value T15 LT
+A3	Eq-Temporal-Unit-Value T17 hour
+A4	Eq-Operator-Value T18 LT
+A5	Eq-Temporal-Unit-Value T20 year
+A6	Location-Value T23 hospital
+A7	Eq-Operator-Value T24 GT
+A8	Eq-Temporal-Unit-Value T26 hour
+A9	Encounter-Type-Value T31 transfer
 A10	Temporal-Connection-Type-Value E16 during
+R1	Using Arg1:E1 Arg2:E2

@@ -1,0 +1,47 @@
+T1	Condition 282 295	periodontitis
+T2	Condition-Name 282 295	periodontitis
+E1	Condition:T1 Name:T2 Severity:T20
+T3	Condition 244 258	bruxism habits
+T4	Condition-Name 244 258	bruxism habits
+E3	Condition:T3 Name:T4
+T5	Eq-Temporal-Unit 33 38	years
+A1	Eq-Temporal-Unit-Value T5 year
+T6	Age 39 42	old
+E4	Age:T6 Eq-Comparison:E2
+T7	Eq-Value 30 32	18
+T8	Eq-Value 106 108	20
+T9	Eq-Comparison 25 38	over 18 years
+E2	Eq-Comparison:T9 Temporal-Unit:T5 Operator:T10 Value:T7
+T10	Eq-Operator 25 29	over
+A2	Eq-Operator-Value T10 GT
+T11	Eq-Comparison 97 108	at least 20
+E5	Eq-Comparison:T11 Operator:T12 Value:T8
+T12	Eq-Operator 97 105	at least
+A3	Eq-Operator-Value T12 GTEQ
+T14	Eq-Comparison 152 166	at least three
+E6	Eq-Comparison:T14 Operator:T15 Value:T16
+T15	Eq-Operator 152 160	at least
+A4	Eq-Operator-Value T15 GTEQ
+T16	Eq-Value 161 166	three
+T17	Condition 179 195	cervical lesions
+E7	Condition:T17 Name:T18 Minimum-Count:E6
+T18	Condition-Name 179 195	cervical lesions
+T21	Modifier 274 281	chronic
+E10	Modifier:T21 Modifies:E1
+T23	Condition 109 130	teeth under occlusion
+E12	Condition:T23 Name:T24 Minimum-Count:E5
+T24	Condition-Name 109 130	teeth under occlusion
+T13	Or 271 273	or
+E11	Or:T13 Arg2:E10 Arg:T20
+T20	Severity 264 270	severe
+A5	Severity-Value T20 severe
+T19	Condition 48 65	good oral hygiene
+E8	Condition:T19 Name:T22
+T22	Condition-Name 48 65	good oral hygiene
+T25	Modifier 171 178	carious
+E9	Modifier:T25 Modifies:T18
+T26	Negation 167 170	non
+E13	Negation:T26 Negates:E9
+T27	Condition 221 238	poor oral hygiene
+E14	Condition:T27 Name:T28
+T28	Condition-Name 221 238	poor oral hygiene

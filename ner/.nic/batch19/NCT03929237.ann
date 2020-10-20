@@ -1,0 +1,71 @@
+T1	Procedure 25 51	ACL reconstruction surgery
+T2	Procedure-Name 25 51	ACL reconstruction surgery
+E1	Procedure:T1 Name:T2
+T3	Procedure 228 232	MPFL
+T4	Procedure-Name 228 232	MPFL
+E3	Procedure:T3 Name:T4
+T5	Procedure 211 214	PCL
+T6	Procedure-Name 211 214	PCL
+E5	Procedure:T5 Name:T6
+T11	Procedure 216 219	MCL
+E2	Procedure:T11 Name:T12
+T12	Procedure-Name 216 219	MCL
+T13	Procedure 221 224	LCL
+E4	Procedure:T13 Name:T14
+T14	Procedure-Name 221 224	LCL
+T15	Or 225 227	or
+E7	Or:T15 Arg:E4 Arg2:E3
+T16	Procedure 189 205	ligament surgery
+E8	Procedure:T16 Name:T17
+T17	Procedure-Name 189 205	ligament surgery
+R1	Example-Of Arg1:E5 Arg2:E8	
+R2	Example-Of Arg1:E2 Arg2:E8	
+R3	Example-Of Arg1:E4 Arg2:E8	
+R4	Example-Of Arg1:E3 Arg2:E8
+T18	Eq-Comparison 57 66	currently
+E9	Eq-Comparison:T18 Temporal-Period:T19
+T19	Eq-Temporal-Period 57 66	currently
+A2	Eq-Temporal-Period-Value T19 present
+T20	Life-Stage-And-Gender 79 100	middle or high school
+A3	Life-Stage-And-Gender-Type T20 child
+T7	Procedure 120 127	Surgery
+E6	Procedure:T7 Name:T8
+T8	Procedure-Name 120 127	Surgery
+T9	Temporal-Connection 135 141	during
+E10	Temporal-Connection:T9 Arg:E6 Arg2:E11
+A1	Temporal-Connection-Type-Value E10 during
+T10	Observation 146 157	school year
+E11	Observation:T10 Name:T21
+T21	Observation-Name 146 157	school year
+T22	Modifier 166 188	concomitant additional
+E12	Modifier:T22 Modifies:T17
+T23	Negation 163 165	No
+E13	Negation:T23 Negates:E8
+T24	Observation 270 283	home schooled
+E14	Observation:T24 Name:T25
+T25	Observation-Name 270 283	home schooled
+T26	Observation 290 320	non-traditional school setting
+E15	Observation:T26 Name:T27
+T27	Observation-Name 290 320	non-traditional school setting
+T28	Or 284 286	or
+E16	Or:T28 Arg:E14 Arg2:E15
+T29	Observation 326 350	school for special needs
+E17	Observation:T29 Name:T30
+T30	Observation-Name 326 350	school for special needs
+R5	Example-Of Arg1:E17 Arg2:E15	
+T31	Procedure 380 396	ligament surgery
+E18	Procedure:T31 Name:T32
+T32	Procedure-Name 380 396	ligament surgery
+T33	Modifier 357 379	concomitant additional
+E19	Modifier:T33 Modifies:T32
+T34	Procedure 402 409	surgery
+E20	Procedure:T34 Name:T35
+T35	Procedure-Name 402 409	surgery
+T36	Observation 432 443	school year
+E21	Observation:T36 Name:T37
+T37	Observation-Name 432 443	school year
+T38	Negation 417 424	outside
+E22	Negation:T38 Negates:E21
+T39	Temporal-Connection 410 416	occurs
+E23	Temporal-Connection:T39 Arg:E20 Arg2:E22
+A4	Temporal-Connection-Type-Value E23 during

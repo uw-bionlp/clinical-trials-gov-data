@@ -1,0 +1,66 @@
+T1	Condition 199 208	pregnancy
+T2	Condition-Name 199 208	pregnancy
+E1	Condition:T1 Name:T2
+T3	Condition 226 235	cirrhosis
+T4	Condition-Name 226 235	cirrhosis
+E3	Condition:T3 Name:T4
+T5	Eq-Operator 186 187	<
+A1	Eq-Operator-Value T5 LT
+T6	Eq-Operator 264 265	>
+A2	Eq-Operator-Value T6 GT
+T7	Eq-Value 63 65	18
+T8	Eq-Value 188 190	50
+T9	Eq-Comparison 186 197	< 50 ml/min
+E4	Eq-Comparison:T9 Operator:T5 Value:T8 Unit:T30 Temporal-Unit:T31
+T10	Eq-Comparison 95 105	previously
+E5	Eq-Comparison:T10 Temporal-Period:T11
+T11	Eq-Temporal-Period 95 105	previously
+A3	Eq-Temporal-Period-Value T11 past
+T12	Eq-Comparison 63 78	18 yrs or older
+E2	Eq-Comparison:T12 Value:T7 Temporal-Unit:T13 Operator:T14
+T13	Eq-Temporal-Unit 66 69	yrs
+A4	Eq-Temporal-Unit-Value T13 year
+T14	Eq-Operator 70 78	or older
+A5	Eq-Operator-Value T14 GTEQ
+T15	Condition 86 91	naive
+E6	Condition:T15 Name:T16
+T16	Condition-Name 86 91	naive
+T17	Or 92 94	or
+E7	Or:T17 Arg:E6 Arg2:E8
+T18	Procedure 106 113	treated
+E8	Procedure:T18 Temporality:E5
+T19	Condition 124 129	HBsAg
+E9	Condition:T19 Name:T20 Polarity:T21
+T20	Condition-Name 124 129	HBsAg
+T21	Polarity 130 138	positive
+A6	Polarity-Value T21 positive
+T22	Condition 143 146	HIV
+E10	Condition:T22 Name:T23 Polarity:T24
+T23	Condition-Name 143 146	HIV
+T24	Polarity 147 155	positive
+A7	Polarity-Value T24 positive
+T25	Or 139 142	and
+E11	Or:T25 Arg:E9 Arg2:E10
+R1	Example-Of Arg1:E9 Arg2:E8	
+R2	Example-Of Arg1:E10 Arg2:E8	
+T26	Age 73 78	older
+E12	Age:T26 Eq-Comparison:E2
+T27	Location 55 59	SERD
+A8	Location-Value T27 residence
+T28	Observation 182 185	GFR
+E13	Observation:T28 Name:T29 Eq-Comparison:E4
+T29	Observation-Name 182 185	GFR
+T30	Eq-Unit 191 193	ml
+T31	Eq-Temporal-Unit 194 197	min
+A9	Eq-Temporal-Unit-Value T31 minute
+T32	Condition 210 224	breast-feeding
+E14	Condition:T32 Name:T33
+T33	Condition-Name 210 224	breast-feeding
+T34	Condition 239 258	CHILD-PUGH-TURCOTTE
+E15	Condition:T34 Name:T35 Stage:E16
+T35	Condition-Name 239 258	CHILD-PUGH-TURCOTTE
+T36	Eq-Comparison 259 265	B7 o >
+E16	Eq-Comparison:T36 Value:T37 Operator:T6
+T37	Eq-Value 259 261	B7
+T38	And 236 238	of
+E17	And:T38 Arg:E3 Arg2:E15

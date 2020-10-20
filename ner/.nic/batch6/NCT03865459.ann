@@ -1,0 +1,78 @@
+T1	Age 25 28	age
+E1	Age:T1 Eq-Comparison:E3
+T3	Eq-Comparison 29 39	> 18 years
+E3	Eq-Comparison:T3 Value:T26 Temporal-Unit:T27 Operator:T25
+T4	Procedure 70 80	cystoscopy
+E4	Procedure:T4 Name:T29 Temporality:E25
+T5	Contraindication 141 157	contraindication
+E5	Contraindication:T5 Contraindicates:E6
+T6	Procedure 162 172	cystoscopy
+E6	Procedure:T6 Name:T30
+T7	Drug 182 191	lidocaine
+E7	Drug:T7 Name:T31
+T8	Allergy 192 199	allergy
+E8	Allergy:T8 
+T10	Condition 201 224	urinary tract infection
+E10	Condition:T10 Name:T32
+T11	Or 226 229	and
+E11	Or:T11 Arg:E10 Arg2:E13
+T13	Condition 246 266	anatomical disorders
+E13	Condition:T13 Name:T33
+T14	Drug 277 286	analgesic
+E14	Drug:T14 Name:T34 Temporality:E15
+T15	Eq-Comparison 292 300	24 hours
+E15	Eq-Comparison:T15 Value:T35 Temporal-Unit:T36
+T16	Temporal-Connection 301 307	before
+E16	Temporal-Connection:T16 Arg:E15 Arg2:E17
+A1	Temporal-Connection-Type-Value E16 before
+T17	Procedure 308 318	cystoscopy
+E17	Procedure:T17 Name:T37
+T18	Procedure 324 337	manipulations
+E18	Procedure:T18 Name:T38
+T19	Procedure 346 360	Double-J stent
+E19	Procedure:T19 Name:T39
+T20	Or 371 373	or
+E20	Or:T20 Arg:E12 Arg2:E21
+T21	Modifier 374 381	removal
+E21	Modifier:T21 Modifies:T39
+T22	Or 383 389	and/or
+E22	Or:T22 Arg:E18 Arg2:E24
+T23	Modifier 390 397	bladder
+E23	Modifier:T23 Modifies:T40
+T24	Procedure 398 404	biopsy
+E24	Procedure:T24 Name:T40
+T25	Eq-Operator 29 30	>
+A2	Eq-Operator-Value T25 GT
+T26	Eq-Value 31 33	18
+T27	Eq-Temporal-Unit 34 39	years
+A3	Eq-Temporal-Unit-Value T27 year
+T28	Life-Stage-And-Gender 45 51	female
+A4	Life-Stage-And-Gender-Type T28 female
+T29	Procedure-Name 70 80	cystoscopy
+T30	Procedure-Name 162 172	cystoscopy
+T31	Drug-Name 182 191	lidocaine
+T32	Condition-Name 201 224	urinary tract infection
+T33	Condition-Name 246 266	anatomical disorders
+T34	Drug-Name 277 286	analgesic
+T35	Eq-Value 292 294	24
+T36	Eq-Temporal-Unit 295 300	hours
+A5	Eq-Temporal-Unit-Value T36 hour
+T37	Procedure-Name 308 318	cystoscopy
+T38	Procedure-Name 324 337	manipulations
+T39	Procedure-Name 346 360	Double-J stent
+T40	Procedure-Name 398 404	biopsy
+T2	Modifier 64 69	rigid
+E2	Modifier:T2 Modifies:T29
+T41	Eq-Comparison 89 99	first time
+E25	Eq-Comparison:T41 Temporal-Recency:T42
+T42	Eq-Temporal-Recency 89 99	first time
+A6	Eq-Temporal-Recency-Value T42 first-time
+R1	Example-Of Arg1:E7 Arg2:E5	
+R2	Example-Of Arg1:E8 Arg2:E5	
+R3	Example-Of Arg1:E10 Arg2:E5	
+T9	Modifier 230 237	urethra
+E9	Modifier:T9 Modifies:T33
+R4	Example-Of Arg1:E13 Arg2:E5	
+R5	Example-Of Arg1:E19 Arg2:E18	
+T12	Modifier 361 370	placement
+E12	Modifier:T12 Modifies:T39

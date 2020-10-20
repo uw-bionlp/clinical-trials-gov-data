@@ -1,157 +1,160 @@
-T1	Assertion 34 43	suspicion
 E1	Assertion:T1 Asserted:E3
-A1	Assertion-Type-Value E1 possible
-T3	Condition 47 70	urinary tract infection
 E3	Condition:T3 Name:T72
-T4	Condition 72 75	UTI
 E4	Condition:T4 Name:T73
-T5	Criteria-Count 117 131	of these signs
 E5	Criteria-Count:T5 Min-Value:E2 Criteria:E6 Criteria2:E12 Criteria3:E14 Criteria4:E16 Criteria5:E19 Criteria6:E22 Criteria7:E24 Criteria8:E26 Criteria9:E29
-T8	Eq-Comparison 139 145	> 38°C
 E8	Eq-Comparison:T8 Operator:T76 Value:T77 Unit:T78
-T10	Or 146 152	and/or
 E10	Or:T10 Arg:E6 Arg2:E12
-T11	Modifier 153 162	sus-pubic
 E11	Modifier:T11 Modifies:T79
-T12	Condition 163 167	pain
 E12	Condition:T12 Name:T79
-T13	Or 168 174	and/or
 E13	Or:T13 Arg:E12 Arg2:E14
-T14	Condition 175 182	dysuria
 E14	Condition:T14 Name:T9
-T15	Or 183 189	and/or
 E15	Or:T15 Arg:E14 Arg2:E16
-T16	Condition 190 201	pollakiuria
 E16	Condition:T16 Name:T127
-T17	Or 202 208	and/or
 E17	Or:T17 Arg:E16 Arg2:E19
-T18	Modifier 209 216	urinary
 E18	Modifier:T18 Modifies:T80
-T19	Condition 217 222	burns
 E19	Condition:T19 Name:T80
-T20	Or 223 229	and/or
 E20	Or:T20 Arg:E19 Arg2:E22
-T21	Modifier 230 241	macroscopic
 E21	Modifier:T21 Modifies:T81
-T22	Condition 242 251	hematuria
 E22	Condition:T22 Name:T81
-T23	Or 252 258	and/or
 E23	Or:T23 Arg:E22 Arg2:E24
-T24	Condition 265 282	urinary retention
-E24	Condition:T24 Name:T83 Severity:T82
-T25	Or 283 289	and/or
+E24	Condition:T24 Name:T83 Acuteness:T82
 E25	Or:T25 Arg:E24 Arg2:E26
-T26	Condition 290 294	pain
 E26	Condition:T26 Name:T84
-T27	Procedure 304 322	rectal examination
 E27	Procedure:T27 Name:T85
-T28	Or 323 329	and/or
 E28	Or:T28 Arg:E26 Arg2:E29
-T29	Condition 330 339	confusion
 E29	Condition:T29 Name:T128
-T30	Observation 349 365	urinary analysis
 E30	Observation:T30 Name:T86
-T32	Eq-Comparison 384 394	> 10 / mm3
 E32	Eq-Comparison:T32 Operator:T88 Value:T89 Per:T90
-T33	Condition 396 407	bacteriuria
 E33	Condition:T33 Name:T31
-T35	And 422 426	with
 E35	And:T35 Arg:E33 Arg2:E36
-T36	Condition 442 460	enterobacteriaceae
 E36	Condition:T36 Name:T97
-T37	And 461 464	and
 E37	And:T37 Arg:E36 Arg2:E38
-T38	Condition 465 475	resistance
 E38	Condition:T38 Name:T132
-T39	Drug 492 508	fluoroquinolones
 E39	Drug:T39 Name:T98
-T40	Drug 510 512	FQ
 E40	Drug:T40 Name:T99
-T41	Or 514 517	and
 E41	Or:T41 Arg:E40 Arg2:E42
-T42	Drug 518 531	cotrimoxazole
 E42	Drug:T42 Name:T100
-T43	Drug 533 536	CTX
 E43	Drug:T43 Name:T101
-T44	And 538 541	but
 E44	And:T44 Arg:E38 Arg2:E75
-T45	Drug 555 565	fosfomycin
 E45	Drug:T45 Name:T102
-T46	Allergy 592 599	allergy
 E46	Allergy:T46 Name:E47 Name2:E49
-T47	Drug 603 613	fosfomycin
 E47	Drug:T47 Name:T103
-T48	Or 614 620	and/or
 E48	Or:T48 Arg:E47 Arg2:E49
-T49	Drug 621 631	trometamol
 E49	Drug:T49 Name:T104
-T50	Modifier 665 678	urinary tract
 E50	Modifier:T50 Modifies:T136
-T51	Condition 691 708	immunosuppression
 E51	Condition:T51 Name:T106 Severity:T105
-T52	Modifier 714 721	Chronic
-E52	Modifier:T52 Modifies:T107
-T53	Condition 722 733	prostatitis
-E53	Condition:T53 Name:T107
-T54	Condition 739 755	Prostate abscess
+E53	Condition:T53 Name:T107 Acuteness:T52
 E54	Condition:T54 Name:T108
-T55	Condition 767 781	pyelonephritis
-E55	Condition:T55 Name:T110 Severity:T109
-T56	Condition 787 798	Hemodynamic
+E55	Condition:T55 Name:T110 Acuteness:T109
 E56	Condition:T56 Name:T111 Stability:T137
-T57	Condition 824 837	renal failure
-E57	Condition:T57 Name:T112
-T58	Observation 839 848	clearance
+E57	Condition:T57 Name:T112 Acuteness:T7
 E58	Observation:T58 Name:T138 Eq-Comparison:E59
-T59	Eq-Comparison 849 859	<60 mL/min
 E59	Eq-Comparison:T59 Operator:T113 Value:T114 Unit:T115 Per:T116
-T60	Eq-Comparison 866 871	Prior
 E60	Eq-Comparison:T60 Temporal-Period:T117
-T61	Procedure 872 890	antibiotic therapy
 E61	Procedure:T61 Name:T118 Temporality:E60
-T62	And 892 896	with
 E62	And:T62 Arg:E61 Arg2:E77
-T63	Drug 900 910	antibiotic
 E63	Drug:T63 Name:T119
-T64	Observation 928 958	antibiotic susceptibility test
 E64	Observation:T64 Name:T120
-T65	Exception 959 965	except
 E65	Exception:T65 From:E63 Except:E78 Except2:E66 Except3:E67 Except4:E68
-T66	Drug 981 996	clavulanic acid
 E66	Drug:T66 Name:T122
-T67	Drug 998 1006	cefixime
 E67	Drug:T67 Name:T123
-T68	Drug 1008 1022	nitrofurantoin
 E68	Drug:T68 Name:T124
-T70	Procedure 1032 1041	treatment
-E70	Procedure:T70 
-T71	Drug 1047 1061	metoclopramide
+E70	Procedure:T70
 E71	Drug:T71 Name:T125
+E2	Eq-Comparison:T2 Operator:T74 Value:T75
+E6	Observation:T6 Eq-Comparison:E8 Name:T126
+E9	And:T87 Arg:E3 Arg2:E30
+E34	Eq-Comparison:T34 Operator:T91 Value:T92 Unit:T95 Per:T96
+E72	Condition:T93 Name:T130
+E74	Modifier:T131 Modifies:T97
+E75	Condition:T133 Name:T134
+E76	Condition:T135 Name:T136
+E77	Condition:T139 Name:T140
+E78	Drug:T141 Name:T121
+E79	Or:T142 Arg:E78 Arg2:E66
+T1	Assertion 34 43	suspicion
+T3	Condition 47 70	urinary tract infection
+T4	Condition 72 75	UTI
+T5	Criteria-Count 117 131	of these signs
+T8	Eq-Comparison 139 145	> 38°C
+T10	Or 146 152	and/or
+T11	Modifier 153 162	sus-pubic
+T12	Condition 163 167	pain
+T13	Or 168 174	and/or
+T14	Condition 175 182	dysuria
+T15	Or 183 189	and/or
+T16	Condition 190 201	pollakiuria
+T17	Or 202 208	and/or
+T18	Modifier 209 216	urinary
+T19	Condition 217 222	burns
+T20	Or 223 229	and/or
+T21	Modifier 230 241	macroscopic
+T22	Condition 242 251	hematuria
+T23	Or 252 258	and/or
+T24	Condition 265 282	urinary retention
+T25	Or 283 289	and/or
+T26	Condition 290 294	pain
+T27	Procedure 304 322	rectal examination
+T28	Or 323 329	and/or
+T29	Condition 330 339	confusion
+T30	Observation 349 365	urinary analysis
+T32	Eq-Comparison 384 394	> 10 / mm3
+T33	Condition 396 407	bacteriuria
+T35	And 422 426	with
+T36	Condition 442 460	enterobacteriaceae
+T37	And 461 464	and
+T38	Condition 465 475	resistance
+T39	Drug 492 508	fluoroquinolones
+T40	Drug 510 512	FQ
+T41	Or 514 517	and
+T42	Drug 518 531	cotrimoxazole
+T43	Drug 533 536	CTX
+T44	And 538 541	but
+T45	Drug 555 565	fosfomycin
+T46	Allergy 592 599	allergy
+T47	Drug 603 613	fosfomycin
+T48	Or 614 620	and/or
+T49	Drug 621 631	trometamol
+T50	Modifier 665 678	urinary tract
+T51	Condition 691 708	immunosuppression
+T52	Acuteness 714 721	Chronic
+T53	Condition 722 733	prostatitis
+T54	Condition 739 755	Prostate abscess
+T55	Condition 767 781	pyelonephritis
+T56	Condition 787 798	Hemodynamic
+T57	Condition 824 837	renal failure
+T58	Observation 839 848	clearance
+T59	Eq-Comparison 849 859	<60 mL/min
+T60	Eq-Comparison 866 871	Prior
+T61	Procedure 872 890	antibiotic therapy
+T62	And 892 896	with
+T63	Drug 900 910	antibiotic
+T64	Observation 928 958	antibiotic susceptibility test
+T65	Exception 959 965	except
+T66	Drug 981 996	clavulanic acid
+T67	Drug 998 1006	cefixime
+T68	Drug 1008 1022	nitrofurantoin
+T70	Procedure 1032 1041	treatment
+T71	Drug 1047 1061	metoclopramide
 T72	Condition-Name 47 70	urinary tract infection
 T73	Condition-Name 72 75	UTI
 T74	Eq-Operator 104 112	at least
-A3	Eq-Operator-Value T74 GTEQ
 T75	Eq-Value 113 116	one
 T76	Eq-Operator 139 140	>
-A4	Eq-Operator-Value T76 GT
 T77	Eq-Value 141 143	38
 T78	Eq-Unit 143 145	°C
 T79	Condition-Name 163 167	pain
 T80	Condition-Name 217 222	burns
 T81	Condition-Name 242 251	hematuria
-T82	Severity 259 264	acute
-A5	Severity-Value T82 severe
+T82	Acuteness 259 264	acute
 T83	Condition-Name 265 282	urinary retention
 T84	Condition-Name 290 294	pain
 T85	Procedure-Name 304 322	rectal examination
 T86	Observation-Name 349 365	urinary analysis
-A6	Observation-Type-Value T86 lab
 T88	Eq-Operator 384 385	>
-A8	Eq-Operator-Value T88 GT
 T89	Eq-Value 386 388	10
 T90	Eq-Unit 391 394	mm3
 T91	Eq-Operator 408 409	>
-A9	Eq-Operator-Value T91 GT
 T92	Eq-Value 410 414	10^3
 T95	Eq-Unit 415 418	CFU
 T96	Eq-Unit 419 421	mL
@@ -164,80 +167,77 @@ T102	Drug-Name 555 565	fosfomycin
 T103	Drug-Name 603 613	fosfomycin
 T104	Drug-Name 621 631	trometamol
 T105	Severity 684 690	Severe
-A10	Severity-Value T105 severe
 T106	Condition-Name 691 708	immunosuppression
 T107	Condition-Name 722 733	prostatitis
 T108	Condition-Name 739 755	Prostate abscess
-T109	Severity 761 766	Acute
-A11	Severity-Value T109 severe
+T109	Acuteness 761 766	Acute
 T110	Condition-Name 767 781	pyelonephritis
 T111	Condition-Name 787 798	Hemodynamic
 T112	Condition-Name 824 837	renal failure
 T113	Eq-Operator 849 850	<
-A12	Eq-Operator-Value T113 LT
 T114	Eq-Value 850 852	60
 T115	Eq-Unit 853 855	mL
 T116	Eq-Temporal-Unit 856 859	min
-A13	Eq-Temporal-Unit-Value T116 minute
 T117	Eq-Temporal-Period 866 871	Prior
-A14	Eq-Temporal-Period-Value T117 past
 T118	Procedure-Name 872 890	antibiotic therapy
 T119	Drug-Name 900 910	antibiotic
 T120	Observation-Name 928 958	antibiotic susceptibility test
-A15	Observation-Type-Value T120 lab
 T121	Drug-Name 967 978	amoxicillin
 T122	Drug-Name 981 996	clavulanic acid
 T123	Drug-Name 998 1006	cefixime
 T124	Drug-Name 1008 1022	nitrofurantoin
 T125	Drug-Name 1047 1061	metoclopramide
-R1	Abbrev-Of Arg1:E4 Arg2:E3	
 T2	Eq-Comparison 104 116	at least one
-E2	Eq-Comparison:T2 Operator:T74 Value:T75
-R2	Equivalent-To Arg1:E5 Arg2:E4	
 T6	Observation 133 138	fever
-E6	Observation:T6 Eq-Comparison:E8 Name:T126
 T126	Observation-Name 133 138	fever
 T9	Condition-Name 175 182	dysuria
 T127	Condition-Name 190 201	pollakiuria
-R3	Caused-By Arg1:E26 Arg2:E27	
 T128	Condition-Name 330 339	confusion
 T31	Condition-Name 396 407	bacteriuria
 T87	And 345 348	And
-E9	And:T87 Arg:E3 Arg2:E30
 T130	Condition-Name 371 383	leukocyturia
 T34	Eq-Comparison 408 421	> 10^3 CFU/mL
-E34	Eq-Comparison:T34 Operator:T91 Value:T92 Unit:T95 Per:T96
 T93	Condition 371 383	leukocyturia
-E72	Condition:T93 Name:T130
-R5	Found-By Arg1:E33 Arg2:E30	
 T131	Modifier 427 441	ESBL producing
-E74	Modifier:T131 Modifies:T97
 T132	Condition-Name 465 475	resistance
-R6	Caused-By Arg1:E38 Arg2:E39	
-R7	Abbrev-Of Arg1:E40 Arg2:E39	
-R8	Abbrev-Of Arg1:E43 Arg2:E42	
-R9	Caused-By Arg1:E38 Arg2:E42	
 T133	Condition 542 551	sensitive
-E75	Condition:T133 Name:T134
 T134	Condition-Name 542 551	sensitive
-R10	Caused-By Arg1:E75 Arg2:E45	
 T135	Condition 649 657	material
-E76	Condition:T135 Name:T136
 T136	Condition-Name 649 657	material
 T137	Stability 799 810	instability
-A2	Stability-Value T137 change
 T138	Observation-Name 839 848	clearance
-R11	Equivalent-To Arg1:E58 Arg2:E57	
 T139	Condition 911 920	sensitive
-E77	Condition:T139 Name:T140
 T140	Condition-Name 911 920	sensitive
-R12	Caused-By Arg1:E77 Arg2:E63	
-R13	Found-By Arg1:E77 Arg2:E64	
 T141	Drug 967 978	amoxicillin
-E78	Drug:T141 Name:T121
 T142	Or 979 980	-
-E79	Or:T142 Arg:E78 Arg2:E66
-R14	Using Arg1:E70 Arg2:E71	
-R4	Found-By Arg1:E72 Arg2:E30	
-T7	Modifier 816 823	Chronic
-E7	Modifier:T7 Modifies:T112
+T7	Acuteness 816 823	Chronic
+A1	Assertion-Type-Value E1 possible
+A3	Eq-Operator-Value T74 GTEQ
+A4	Eq-Operator-Value T76 GT
+A6	Observation-Type-Value T86 lab
+A8	Eq-Operator-Value T88 GT
+A9	Eq-Operator-Value T91 GT
+A10	Severity-Value T105 severe
+A12	Eq-Operator-Value T113 LT
+A13	Eq-Temporal-Unit-Value T116 minute
+A14	Eq-Temporal-Period-Value T117 past
+A15	Observation-Type-Value T120 lab
+A2	Stability-Value T137 change
+A16	Acuteness-Type-Value T82 acute
+A17	Acuteness-Type-Value T109 acute
+A18	Acuteness-Type-Value T52 chronic
+A19	Acuteness-Type-Value T7 chronic
+R1	Abbrev-Of Arg1:E4 Arg2:E3
+R2	Equivalent-To Arg1:E5 Arg2:E4
+R3	Caused-By Arg1:E26 Arg2:E27
+R5	Found-By Arg1:E33 Arg2:E30
+R6	Caused-By Arg1:E38 Arg2:E39
+R7	Abbrev-Of Arg1:E40 Arg2:E39
+R8	Abbrev-Of Arg1:E43 Arg2:E42
+R9	Caused-By Arg1:E38 Arg2:E42
+R10	Caused-By Arg1:E75 Arg2:E45
+R11	Equivalent-To Arg1:E58 Arg2:E57
+R12	Caused-By Arg1:E77 Arg2:E63
+R13	Found-By Arg1:E77 Arg2:E64
+R14	Using Arg1:E70 Arg2:E71
+R4	Found-By Arg1:E72 Arg2:E30

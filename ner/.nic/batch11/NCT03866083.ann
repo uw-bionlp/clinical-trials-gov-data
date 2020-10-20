@@ -1,0 +1,165 @@
+T3	Condition 236 259	cardiopulmonary disease
+T4	Condition-Name 236 259	cardiopulmonary disease
+E3	Condition:T3 Name:T4 Severity:T60
+T5	Condition 299 322	coronary artery disease
+T6	Condition-Name 299 322	coronary artery disease
+E5	Condition:T5 Name:T6
+T7	Condition 284 297	heart disease
+T8	Condition-Name 284 297	heart disease
+E7	Condition:T7 Name:T8
+T9	Condition 452 466	kidney disease
+T10	Condition-Name 452 466	kidney disease
+E9	Condition:T9 Name:T10
+T11	Condition 342 354	coagulopathy
+T12	Condition-Name 342 354	coagulopathy
+E11	Condition:T11 Name:T12 Severity:T64
+T13	Condition 429 438	Pregnancy
+T14	Condition-Name 429 438	Pregnancy
+E13	Condition:T13 Name:T14
+T15	Condition 324 328	COPD
+T16	Condition-Name 324 328	COPD
+E15	Condition:T15 Name:T16
+T17	Observation 377 380	INR
+T18	Observation-Name 377 380	INR
+E17	Observation:T17 Name:T18 Eq-Comparison:E25
+T19	Condition 619 630	Hemodynamic
+T20	Condition-Name 619 630	Hemodynamic
+E19	Condition:T19 Name:T20 Stability:T93
+T21	Eq-Operator 79 80	<
+A1	Eq-Operator-Value T21 LT
+T22	Eq-Operator 145 146	>
+A2	Eq-Operator-Value T22 GT
+T23	Eq-Operator 199 208	less than
+A3	Eq-Operator-Value T23 LT
+T24	Eq-Operator 365 366	<
+A4	Eq-Operator-Value T24 LT
+T25	Eq-Operator 381 382	>
+A5	Eq-Operator-Value T25 GT
+T26	Eq-Operator 536 545	less than
+A6	Eq-Operator-Value T26 LT
+T27	Eq-Temporal-Unit 212 217	years
+A7	Eq-Temporal-Unit-Value T27 year
+T28	Eq-Unit 148 152	mmol
+T29	Age 195 198	age
+E20	Age:T29 Eq-Comparison:E23
+T30	Eq-Value 80 82	24
+T31	Eq-Value 123 125	10
+T32	Eq-Value 146 147	4
+T33	Eq-Value 209 211	18
+T34	Eq-Value 366 372	20,000
+T35	Eq-Value 382 383	5
+T36	Eq-Value 546 548	24
+T37	Eq-Comparison 79 88	<24 hours
+E21	Eq-Comparison:T37 Operator:T21 Value:T30 Temporal-Unit:T46
+T38	Eq-Comparison 145 154	>4 mmol/L
+E22	Eq-Comparison:T38 Operator:T22 Unit:T28 Value:T32 Per:T58
+T39	Eq-Comparison 199 217	less than 18 years
+E23	Eq-Comparison:T39 Operator:T23 Temporal-Unit:T27 Value:T33
+T40	Eq-Comparison 365 372	<20,000
+E24	Eq-Comparison:T40 Operator:T24 Value:T34
+T41	Eq-Comparison 381 383	>5
+E25	Eq-Comparison:T41 Operator:T25 Value:T35
+T42	Eq-Comparison 536 554	less than 24 hours
+E26	Eq-Comparison:T42 Operator:T26 Value:T36 Temporal-Unit:T81
+T43	Condition 37 47	cirrhotics
+E2	Condition:T43 Name:T44 Severity:T1
+T44	Condition-Name 37 47	cirrhotics
+T1	Severity 22 32	Critically
+A8	Severity-Value T1 severe
+T2	Condition 65 77	septic shock
+E1	Condition:T2 Name:T45 Temporality:E21
+T45	Condition-Name 65 77	septic shock
+T46	Eq-Temporal-Unit 83 88	hours
+A9	Eq-Temporal-Unit-Value T46 hour
+T47	Drug 95 109	norepinephrine
+E4	Drug:T47 Name:T48 Dose:E12
+T48	Drug-Name 95 109	norepinephrine
+T49	And 90 94	with
+E6	And:T49 Arg:E1 Arg2:E4
+T50	Modifier 53 64	early onset
+E8	Modifier:T50 Modifies:E1
+T51	And 48 52	with
+E10	And:T51 Arg:E2 Arg2:E1
+T52	Eq-Comparison 113 132	more than 10 ug/min
+E12	Eq-Comparison:T52 Operator:T53 Value:T31 Per:T55 Unit:T54
+T53	Eq-Operator 113 122	more than
+A10	Eq-Operator-Value T53 GT
+T54	Eq-Unit 126 128	ug
+T55	Eq-Temporal-Unit 129 132	min
+A11	Eq-Temporal-Unit-Value T55 minute
+T56	Observation 137 144	lactate
+E14	Observation:T56 Name:T57 Eq-Comparison:E22
+T57	Observation-Name 137 144	lactate
+A12	Observation-Type-Value T57 lab
+T58	Eq-Unit 153 154	L
+T59	And 133 136	and
+E16	And:T59 Arg:E4 Arg2:E14
+T60	Severity 223 229	Severe
+A13	Severity-Value T60 severe
+T61	Modifier 261 271	structural
+E18	Modifier:T61 Modifies:T8
+T62	Modifier 275 283	valvular
+E27	Modifier:T62 Modifies:T8
+T63	Or 272 274	or
+E28	Or:T63 Arg:E18 Arg2:E27
+R1	Example-Of Arg1:E7 Arg2:E3	
+R2	Example-Of Arg1:E5 Arg2:E3	
+R3	Example-Of Arg1:E15 Arg2:E3	
+T64	Severity 335 341	Severe
+A14	Severity-Value T64 severe
+T65	Observation 355 364	platelets
+E29	Observation:T65 Name:T66 Eq-Comparison:E24
+T66	Observation-Name 355 364	platelets
+A15	Observation-Type-Value T66 lab
+T67	And 373 376	and
+E30	And:T67 Arg:E29 Arg2:E17
+T68	Condition 396 401	Bleed
+E31	Condition:T68 Name:T69 Temporality:E35
+T69	Condition-Name 396 401	Bleed
+T70	Modifier 403 410	Mucosal
+E32	Modifier:T70 Modifies:T69
+T71	Modifier 414 422	variceal
+E33	Modifier:T71 Modifies:T69
+T72	Or 411 413	or
+E34	Or:T72 Arg:E32 Arg2:E33
+T73	Eq-Comparison 389 395	Active
+E35	Eq-Comparison:T73 Temporal-Period:T74
+T74	Eq-Temporal-Period 389 395	Active
+A16	Eq-Temporal-Period-Value T74 present
+T75	Modifier 444 451	Chronic
+E36	Modifier:T75 Modifies:E9
+T76	Death 482 490	moribund
+E37	Death:T76 
+T77	Risk 482 490	moribund
+E38	Risk:T77 Risk-For:E37 Severity:T92
+T78	Observation 517 532	life expectancy
+E39	Observation:T78 Name:T79 Eq-Comparison:E26
+T79	Observation-Name 517 532	life expectancy
+T80	And 500 504	with
+E40	And:T80 Arg:E38 Arg2:E39
+T81	Eq-Temporal-Unit 549 554	hours
+A17	Eq-Temporal-Unit-Value T81 hour
+T82	Drug 671 683	vasopressors
+E41	Drug:T82 Name:T83 Dose:T84
+T83	Drug-Name 671 683	vasopressors
+R4	Treatment-For Arg1:E41 Arg2:E19	
+T86	Condition 730 735	shock
+E43	Condition:T86 Name:T87
+T87	Condition-Name 730 735	shock
+T88	Modifier 685 702	late presentation
+E44	Modifier:T88 Modifies:E43
+T89	Modifier 706 726	spontaneous reversal
+E45	Modifier:T89 Modifies:E43
+T90	Or 703 705	or
+E46	Or:T90 Arg:E44 Arg2:E45
+A18	Observation-Type-Value T18 lab
+T84	Polarity 658 662	high
+A19	Polarity-Value T84 high
+T85	Study 767 782	clinical trials
+E42	Study:T85 
+T91	Other 761 766	other
+E47	Other:T91 Is-Other:E42
+T92	Severity 472 481	Extremely
+A20	Severity-Value T92 severe
+T93	Stability 631 642	instability
+A21	Stability-Value T93 change

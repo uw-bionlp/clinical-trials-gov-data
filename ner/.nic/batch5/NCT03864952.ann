@@ -1,0 +1,36 @@
+T1	Eq-Comparison 25 44	three months before
+E1	Eq-Comparison:T1 Value:T12 Temporal-Unit:T13 Temporal-Period:T2
+T3	Condition 58 66	infected
+E3	Condition:T3 Name:T14 Temporality:E1
+T6	Eq-Comparison 222 236	under 18 years
+E6	Eq-Comparison:T6 Operator:T17 Value:T18 Temporal-Unit:T19
+T7	Age 237 240	old
+E7	Age:T7 Eq-Comparison:E6
+T9	Procedure 283 297	tartar removal
+E9	Procedure:T9 Name:T21
+T10	Temporal-Connection 298 303	since
+E10	Temporal-Connection:T10 Arg:E9 Arg2:E11
+A2	Temporal-Connection-Type-Value E10 after
+T11	Coreference 304 317	the infection
+E11	Coreference:T11 Refers-To:E3
+T12	Eq-Value 25 30	three
+T13	Eq-Temporal-Unit 31 37	months
+A3	Eq-Temporal-Unit-Value T13 month
+T14	Condition-Name 58 66	infected
+T17	Eq-Operator 222 227	under
+A4	Eq-Operator-Value T17 LT
+T18	Eq-Value 228 230	18
+T19	Eq-Temporal-Unit 231 236	years
+A5	Eq-Temporal-Unit-Value T19 year
+T21	Procedure-Name 283 297	tartar removal
+T2	Eq-Temporal-Period 38 44	before
+A1	Eq-Temporal-Period-Value T2 past
+T4	Condition 85 93	pathogen
+E2	Condition:T4 Name:T15
+T15	Condition-Name 85 93	pathogen
+R1	Caused-By Arg1:E3 Arg2:E2	
+T23	Condition 175 190	dental calculus
+E4	Condition:T23 Name:T24
+T24	Condition-Name 175 190	dental calculus
+T5	Coreference 99 113	this infection
+E5	Coreference:T5 Refers-To:E3

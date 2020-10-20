@@ -1,38 +1,38 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Condition:T5 Name:T6
+E2	Assertion:T7 Asserted:E1
+E4	Assertion:T8 Asserted:E6
+E6	Negation:T9 Negates:E3
+E7	Condition:T10 Name:T11
+E8	Or:T14 Arg:T12 Arg2:E5
+E9	Observation:T15 Name:T16
+E10	Study:T17
+E11	Other:T18 Is-Other:E10
+E12	Observation:T19 Name:T20
 T1	Procedure 47 77	deep brain stimulation surgery
 T2	Procedure-Name 47 77	deep brain stimulation surgery
-E1	Procedure:T1 Name:T2
 T3	Procedure 282 312	deep brain stimulation surgery
 T4	Procedure-Name 282 312	deep brain stimulation surgery
-E3	Procedure:T3 Name:T4
 T5	Condition 336 343	nursing
 T6	Condition-Name 336 343	nursing
-E5	Condition:T5 Name:T6
 T7	Assertion 25 33	Eligible
-E2	Assertion:T7 Asserted:E1
-A1	Assertion-Type-Value E2 hypothetical
 T8	Assertion 269 277	eligible
-E4	Assertion:T8 Asserted:E6
-A2	Assertion-Type-Value E4 hypothetical
 T9	Negation 265 268	not
-E6	Negation:T9 Negates:E3
 T10	Condition 318 326	Pregnant
-E7	Condition:T10 Name:T11
 T11	Condition-Name 318 326	Pregnant
 T12	Life-Stage-And-Gender 327 332	women
-A3	Life-Stage-And-Gender-Type T12 female
-R1	If-Then Arg1:T12 Arg2:E7	
 T13	Life-Stage-And-Gender 344 351	mothers
-A4	Life-Stage-And-Gender-Type T13 female
-R2	If-Then Arg1:T13 Arg2:E5	
 T14	Or 333 335	or
-E8	Or:T14 Arg:T12 Arg2:E5
 T15	Observation 365 384	deprived of liberty
-E9	Observation:T15 Name:T16
 T16	Observation-Name 365 384	deprived of liberty
 T17	Study 545 559	interventional
-E10	Study:T17 
 T18	Other 537 544	another
-E11	Other:T18 Is-Other:E10
 T19	Observation 472 489	legally protected
-E12	Observation:T19 Name:T20
 T20	Observation-Name 472 489	legally protected
+A1	Assertion-Type-Value E2 hypothetical
+A2	Assertion-Type-Value E4 hypothetical
+A3	Life-Stage-And-Gender-Type T12 female
+A4	Life-Stage-And-Gender-Type T13 female
+R1	If-Then Arg1:T12 Arg2:E7
+R2	If-Then Arg1:T13 Arg2:E5

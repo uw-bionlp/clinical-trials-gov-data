@@ -1,44 +1,44 @@
+E1	Condition:T1 Name:T2 Temporality:E6
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E6	Eq-Comparison:T12 Temporal-Period:T13
+E2	Study:T8
+E4	Study:T9
+E7	Eq-Comparison:T14 Value:T10 Temporal-Unit:T7
+E8	Procedure:T15 Temporality:E7
+E9	Drug:T16 Name:T17
+E10	Assertion:T18 Asserted:E8
+E11	Modifier:T19 Modifies:T2
+E12	Exception:T20 From:E1 Except:E3
+E13	Study:T11
+E14	Temporal-Connection:T21 Arg:E3 Arg2:E13
+E15	Risk:T22 Risk-For:E5 Severity:T23
 T1	Condition 474 494	psychiatric disorder
 T2	Condition-Name 474 494	psychiatric disorder
-E1	Condition:T1 Name:T2 Temporality:E6
 T3	Condition 506 519	schizophrenia
 T4	Condition-Name 506 519	schizophrenia
-E3	Condition:T3 Name:T4
 T5	Condition 630 637	suicide
 T6	Condition-Name 630 637	suicide
-E5	Condition:T5 Name:T6
 T7	Eq-Temporal-Unit 327 332	weeks
-A1	Eq-Temporal-Unit-Value T7 week
 T10	Eq-Value 324 326	24
 T12	Eq-Comparison 458 465	current
-E6	Eq-Comparison:T12 Temporal-Period:T13
 T13	Eq-Temporal-Period 458 465	current
-A2	Eq-Temporal-Period-Value T13 present
 T8	Study 47 52	Study
-E2	Study:T8 
 T9	Study 264 269	Study
-E4	Study:T9 
 T14	Eq-Comparison 324 332	24 weeks
-E7	Eq-Comparison:T14 Value:T10 Temporal-Unit:T7
 T15	Procedure 336 345	treatment
-E8	Procedure:T15 Temporality:E7
 T16	Drug 351 361	Lu AF11167
-E9	Drug:T16 Name:T17
 T17	Drug-Name 351 361	Lu AF11167
-R1	Using Arg1:E8 Arg2:E9	
 T18	Assertion 295 310	can potentially
-E10	Assertion:T18 Asserted:E8
-A3	Assertion-Type-Value E10 hypothetical
 T19	Modifier 466 473	primary
-E11	Modifier:T19 Modifies:T2
 T20	Exception 495 505	other than
-E12	Exception:T20 From:E1 Except:E3
 T11	Study 537 542	study
-E13	Study:T11 
 T21	Temporal-Connection 530 536	during
-E14	Temporal-Connection:T21 Arg:E3 Arg2:E13
-A4	Temporal-Connection-Type-Value E14 during
 T22	Risk 622 626	risk
-E15	Risk:T22 Risk-For:E5 Severity:T23
 T23	Severity 610 621	significant
+A1	Eq-Temporal-Unit-Value T7 week
+A2	Eq-Temporal-Period-Value T13 present
+A3	Assertion-Type-Value E10 hypothetical
+A4	Temporal-Connection-Type-Value E14 during
 A5	Severity-Value T23 severe
+R1	Using Arg1:E8 Arg2:E9

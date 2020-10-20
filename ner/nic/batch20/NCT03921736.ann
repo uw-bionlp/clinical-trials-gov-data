@@ -1,84 +1,84 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Procedure:T5 Name:T6 Temporality:E18
+E7	Condition:T7 Name:T8 Acuteness:T45
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14 Stage:E8
+E15	Condition:T15 Name:T16
+E16	Eq-Comparison:T20 Temporal-Period:T21
+E17	Eq-Comparison:T22 Temporal-Period:T23
+E18	Eq-Comparison:T24 Temporal-Period:T25
+E2	Condition:T26 Name:T27
+E4	Procedure:T29
+E6	Negation:T30 Negates:E4
+E8	Eq-Comparison:T31 Value:T17 Value2:T18
+E10	Condition:T19 Name:T32
+E12	Modifier:T33 Modifies:T32
+E14	Family-Member:T34 Has:E10
+E19	Condition:T35 Name:T36
+E20	Procedure:T37 Name:T38
+E21	Condition:T39 Name:T40 Temporality:E16
+E22	Or:T41 Arg:E17 Arg2:E18
+E23	Procedure:T42 Name:T43
+E24	Or:T44 Arg:E5 Arg2:E23
+E26	Modifier:T46 Modifies:T8
+E27	Other:T47 Is-Other:E7
+E28	Or:T48 Arg:E26 Arg2:E27
 T1	Condition 475 497	secondary hypertension
 T2	Condition-Name 475 497	secondary hypertension
-E1	Condition:T1 Name:T2
 T3	Condition 499 518	atrial fibrillation
 T4	Condition-Name 499 518	atrial fibrillation
-E3	Condition:T3 Name:T4
 T5	Procedure 333 359	estrogen-progestin therapy
 T6	Procedure-Name 333 359	estrogen-progestin therapy
-E5	Procedure:T5 Name:T6 Temporality:E18
 T7	Condition 465 473	diseases
 T8	Condition-Name 465 473	diseases
-E7	Condition:T7 Name:T8
 T9	Condition 419 434	thyroid disease
 T10	Condition-Name 419 434	thyroid disease
-E9	Condition:T9 Name:T10
 T11	Condition 398 412	kidney failure
 T12	Condition-Name 398 412	kidney failure
-E11	Condition:T11 Name:T12
 T13	Condition 77 89	hypertension
 T14	Condition-Name 77 89	hypertension
-E13	Condition:T13 Name:T14 Stage:E8
 T15	Condition 383 391	diabetes
 T16	Condition-Name 383 391	diabetes
-E15	Condition:T15 Name:T16
 T17	Eq-Value 97 98	1
 T18	Eq-Value 102 103	2
 T20	Eq-Comparison 263 270	history
-E16	Eq-Comparison:T20 Temporal-Period:T21
 T21	Eq-Temporal-Period 263 270	history
-A1	Eq-Temporal-Period-Value T21 past
 T22	Eq-Comparison 304 311	current
-E17	Eq-Comparison:T22 Temporal-Period:T23
 T23	Eq-Temporal-Period 304 311	current
-A2	Eq-Temporal-Period-Value T23 present
 T24	Eq-Comparison 315 322	history
-E18	Eq-Comparison:T24 Temporal-Period:T25
 T25	Eq-Temporal-Period 315 322	history
-A3	Eq-Temporal-Period-Value T25 past
 T26	Condition 41 55	postmenopausal
-E2	Condition:T26 Name:T27
 T27	Condition-Name 41 55	postmenopausal
 T28	Life-Stage-And-Gender 56 61	women
-A4	Life-Stage-And-Gender-Type T28 female
 T29	Procedure 25 34	Treatment
-E4	Procedure:T29 
 T30	Negation 35 40	naive
-E6	Negation:T30 Negates:E4
-R1	Treatment-For Arg1:E4 Arg2:E2	
 T31	Eq-Comparison 91 103	grade 1 or 2
-E8	Eq-Comparison:T31 Value:T17 Value2:T18
 T19	Condition 174 180	cancer
-E10	Condition:T19 Name:T32
 T32	Condition-Name 174 180	cancer
 T33	Modifier 167 173	breast
-E12	Modifier:T33 Modifies:T32
 T34	Family-Member 186 207	first-degree relative
-E14	Family-Member:T34 Has:E10
 T35	Condition 213 224	hyperplasia
-E19	Condition:T35 Name:T36
 T36	Condition-Name 213 224	hyperplasia
 T37	Procedure 238 256	endometrial biopsy
-E20	Procedure:T37 Name:T38
 T38	Procedure-Name 238 256	endometrial biopsy
-R2	Found-By Arg1:E19 Arg2:E20	
 T39	Condition 274 297	thromboembolic diseases
-E21	Condition:T39 Name:T40 Temporality:E16
 T40	Condition-Name 274 297	thromboembolic diseases
 T41	Or 312 314	or
-E22	Or:T41 Arg:E17 Arg2:E18
 T42	Procedure 363 377	contraceptives
-E23	Procedure:T42 Name:T43
 T43	Procedure-Name 363 377	contraceptives
 T44	Or 360 362	or
-E24	Or:T44 Arg:E5 Arg2:E23
-T45	Modifier 457 464	chronic
-E25	Modifier:T45 Modifies:T8
+T45	Acuteness 457 464	chronic
 T46	Modifier 441 446	heart
-E26	Modifier:T46 Modifies:T8
 T47	Other 451 456	other
-E27	Other:T47 Is-Other:E7
 T48	Or 447 450	and
-E28	Or:T48 Arg:E26 Arg2:E27
-R3	Example-Of Arg1:E1 Arg2:E7	
-R4	Example-Of Arg1:E3 Arg2:E7	
+A1	Eq-Temporal-Period-Value T21 past
+A2	Eq-Temporal-Period-Value T23 present
+A3	Eq-Temporal-Period-Value T25 past
+A4	Life-Stage-And-Gender-Type T28 female
+A5	Acuteness-Type-Value T45 chronic
+R1	Treatment-For Arg1:E4 Arg2:E2
+R2	Found-By Arg1:E19 Arg2:E20
+R3	Example-Of Arg1:E1 Arg2:E7
+R4	Example-Of Arg1:E3 Arg2:E7

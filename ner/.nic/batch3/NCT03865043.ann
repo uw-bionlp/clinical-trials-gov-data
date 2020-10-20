@@ -1,0 +1,31 @@
+T1	Eq-Comparison 34 44	undergoing
+E1	Eq-Comparison:T1 Temporal-Period:T10
+T2	Procedure 47 51	TAVI
+E2	Procedure:T2 Name:T11 Temporality:E1 Location:T12
+T3	Eq-Comparison 92 111	Since November 2017
+E3	Eq-Comparison:T3 Temporal-Period:T13 Value:T14
+T4	Procedure 122 134	implantation
+E4	Procedure:T4 Name:T15
+T5	Modifier 140 149	COREVALVE
+E5	Modifier:T5 Modifies:T15
+T6	Or 150 152	or
+E6	Or:T6 Arg:E5 Arg2:E7
+T7	Modifier 153 160	EDWARDS
+E7	Modifier:T7 Modifies:T15
+T8	Procedure 169 185	femoral approach
+E8	Procedure:T8 Name:T16
+T9	Condition 293 309	language barrier
+E9	Condition:T9 Name:T18
+T10	Eq-Temporal-Period 34 44	undergoing
+A1	Eq-Temporal-Period-Value T10 present
+T11	Procedure-Name 47 51	TAVI
+T12	Location 55 86	Montpellier University Hospital
+A2	Location-Value T12 hospital
+T13	Eq-Temporal-Period 92 97	Since
+A3	Eq-Temporal-Period-Value T13 past
+T14	Eq-Value 98 111	November 2017
+T15	Procedure-Name 122 134	implantation
+T16	Procedure-Name 169 185	femoral approach
+T17	Life-Stage-And-Gender 211 216	Minor
+A4	Life-Stage-And-Gender-Type T17 child
+T18	Condition-Name 293 309	language barrier

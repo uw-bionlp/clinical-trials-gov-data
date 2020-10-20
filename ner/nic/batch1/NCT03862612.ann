@@ -1,98 +1,99 @@
+E1	Procedure:T1 Name:T2
+E3	Condition:T3 Name:T4 Severity:T27
+E5	Condition:T5 Name:T6 Temporality:E12
+E9	Condition:T9 Name:T10 Temporality:E26
+E13	Procedure:T13 Name:T14 Temporality:E22
+E14	Age:T15 Eq-Comparison:E2
+E2	Eq-Comparison:T20 Operator:T21 Value:T18
+E4	Procedure:T22 Name:T23
+E8	Condition:T25 Name:T26 Temporality:E6
+E10	Allergy:T28 Name:E1
+E11	Condition:T29 Name:T30 Temporality:E23
+E15	Condition:T32 Name:T33 Temporality:E24 Acuteness:T50
+E16	Observation:T19 Name:T34 Temporality:E28
+E17	Procedure:T35 Name:T36
+E19	Or:T38 Arg:T12 Arg2:T11
+E20	Observation:T39 Name:T40 Eq-Comparison:E21
+E21	Eq-Comparison:T41 Value:T16 Value2:T17 Unit:T42
+E22	Eq-Comparison:T43 Temporal-Period:T44
+E6	Eq-Comparison:T7 Temporal-Period:T8
+E7	Modifier:T24 Modifies:T26
+E23	Eq-Comparison:T45 Temporal-Period:T46
+E12	Eq-Comparison:T31 Temporal-Period:T47
+E24	Eq-Comparison:T48 Temporal-Period:T49
+E26	Eq-Comparison:T51 Temporal-Period:T52
+E27	Assertion:T53 Asserted:E16
+E28	Eq-Comparison:T54 Temporal-Unit:T55
+E18	Temporal-Connection:T37 Arg:E28 Arg2:E17
 T1	Procedure 336 353	local anaesthesia
 T2	Procedure-Name 336 353	local anaesthesia
-E1	Procedure:T1 Name:T2
 T3	Condition 306 318	coagulopathy
 T4	Condition-Name 306 318	coagulopathy
-E3	Condition:T3 Name:T4 Severity:T27
 T5	Condition 420 432	opiate abuse
 T6	Condition-Name 420 432	opiate abuse
-E5	Condition:T5 Name:T6 Temporality:E12
 T9	Condition 494 502	dementia
 T10	Condition-Name 494 502	dementia
-E9	Condition:T9 Name:T10 Temporality:E26
 T11	Life-Stage-And-Gender 34 40	Female
-A1	Life-Stage-And-Gender-Type T11 female
 T12	Life-Stage-And-Gender 25 29	Male
-A2	Life-Stage-And-Gender-Type T12 male
 T13	Procedure 147 161	VATS procedure
 T14	Procedure-Name 147 161	VATS procedure
-E13	Procedure:T13 Name:T14 Temporality:E22
 T15	Age 116 120	aged
-E14	Age:T15 Eq-Comparison:E2
 T16	Eq-Value 105 106	1
 T17	Eq-Value 108 109	4
 T18	Eq-Value 126 128	18
 T20	Eq-Comparison 121 128	over 18
-E2	Eq-Comparison:T20 Operator:T21 Value:T18
 T21	Eq-Operator 121 125	over
-A3	Eq-Operator-Value T21 GT
 T22	Procedure 168 187	General Anaesthesia
-E4	Procedure:T22 Name:T23
 T23	Procedure-Name 168 187	General Anaesthesia
 T25	Condition 268 277	infection
-E8	Condition:T25 Name:T26 Temporality:E6
 T26	Condition-Name 268 277	infection
 T27	Severity 299 305	severe
 T28	Allergy 325 332	allergy
-E10	Allergy:T28 Name:E1
 T29	Condition 373 393	neurological deficit
-E11	Condition:T29 Name:T30 Temporality:E23
 T30	Condition-Name 373 393	neurological deficit
 T32	Condition 460 474	pain condition
-E15	Condition:T32 Name:T33 Temporality:E24
 T33	Condition-Name 460 474	pain condition
 T19	Observation 548 560	QoR-15 score
-E16	Observation:T19 Name:T34 Temporality:E28
 T34	Observation-Name 548 560	QoR-15 score
-A5	Observation-Type-Value T34 clinical-score
 T35	Procedure 571 578	surgery
-E17	Procedure:T35 Name:T36
 T36	Procedure-Name 571 578	surgery
 T38	Or 30 33	and
-E19	Or:T38 Arg:T12 Arg2:T11
-T39	Condition 95 98	ASA
-E20	Condition:T39 Name:T40 Stage:E21
-T40	Condition-Name 95 98	ASA
+T39	Observation 95 98	ASA
+T40	Observation-Name 95 98	ASA
 T41	Eq-Comparison 99 109	grade 1- 4
-E21	Eq-Comparison:T41 Value:T16 Value2:T17 Unit:T42
 T42	Eq-Unit 99 104	grade
 T43	Eq-Comparison 134 144	undergoing
-E22	Eq-Comparison:T43 Temporal-Period:T44
 T44	Eq-Temporal-Period 134 144	undergoing
-A7	Eq-Temporal-Period-Value T44 present
-R1	Using Arg1:E13 Arg2:E4	
 T7	Eq-Comparison 255 267	pre existing
-E6	Eq-Comparison:T7 Temporal-Period:T8
 T8	Eq-Temporal-Period 255 267	pre existing
-A8	Eq-Temporal-Period-Value T8 past
 T24	Modifier 281 291	block site
-E7	Modifier:T24 Modifies:T26
-A9	Severity-Value T27 severe
 T45	Eq-Comparison 360 372	pre existing
-E23	Eq-Comparison:T45 Temporal-Period:T46
 T46	Eq-Temporal-Period 360 372	pre existing
-A10	Eq-Temporal-Period-Value T46 past
 T31	Eq-Comparison 400 416	previous history
-E12	Eq-Comparison:T31 Temporal-Period:T47
 T47	Eq-Temporal-Period 400 416	previous history
-A4	Eq-Temporal-Period-Value T47 past
 T48	Eq-Comparison 439 451	pre existing
-E24	Eq-Comparison:T48 Temporal-Period:T49
 T49	Eq-Temporal-Period 439 451	pre existing
-A11	Eq-Temporal-Period-Value T49 past
-T50	Modifier 452 459	chronic
-E25	Modifier:T50 Modifies:T33
+T50	Acuteness 452 459	chronic
 T51	Eq-Comparison 481 493	pre-existing
-E26	Eq-Comparison:T51 Temporal-Period:T52
 T52	Eq-Temporal-Period 481 493	pre-existing
-A12	Eq-Temporal-Period-Value T52 past
 T53	Assertion 515 522	need to
-E27	Assertion:T53 Asserted:E16
-A13	Assertion-Type-Value E27 hypothetical
 T54	Eq-Comparison 561 564	day
-E28	Eq-Comparison:T54 Temporal-Unit:T55
 T55	Eq-Temporal-Unit 561 564	day
-A14	Eq-Temporal-Unit-Value T55 day
 T37	Temporal-Connection 565 570	after
-E18	Temporal-Connection:T37 Arg:E28 Arg2:E17
+A1	Life-Stage-And-Gender-Type T11 female
+A2	Life-Stage-And-Gender-Type T12 male
+A3	Eq-Operator-Value T21 GT
+A5	Observation-Type-Value T34 clinical-score
+A7	Eq-Temporal-Period-Value T44 present
+A8	Eq-Temporal-Period-Value T8 past
+A9	Severity-Value T27 severe
+A10	Eq-Temporal-Period-Value T46 past
+A4	Eq-Temporal-Period-Value T47 past
+A11	Eq-Temporal-Period-Value T49 past
+A12	Eq-Temporal-Period-Value T52 past
+A13	Assertion-Type-Value E27 hypothetical
+A14	Eq-Temporal-Unit-Value T55 day
 A6	Temporal-Connection-Type-Value E18 after
+A15	Observation-Type-Value T40 clinical-score
+A16	Acuteness-Type-Value T50 chronic
+R1	Using Arg1:E13 Arg2:E4

@@ -1,179 +1,179 @@
-T1	Eq-Comparison 40 58	moderate or higher
 E1	Eq-Comparison:T1 Operator:T46 Value:T45
-T2	Condition 59 63	pain
 E2	Condition:T2 Name:T48 Severity:T45
-T3	Temporal-Connection 75 81	during
 E3	Temporal-Connection:T3 Arg:E2 Arg2:E4
-A1	Temporal-Connection-Type-Value E3 during
-T4	Eq-Comparison 86 95	last week
 E4	Eq-Comparison:T4 Temporal-Period:T49 Temporal-Unit:T50
-T5	Eq-Comparison 97 100	> 3
 E5	Eq-Comparison:T5 Operator:T51 Value:T52
-T6	Observation 111 139	pain intensity numeric scale
 E6	Observation:T6 Name:T53 Eq-Comparison:E5
-T7	Condition 174 178	pain
 E7	Condition:T7 Name:T54 Temporality:E8 Temporality2:E9
-T8	Eq-Comparison 179 204	at least half of the days
 E8	Eq-Comparison:T8 Operator:T55 Value:T56 Per:T57
-T9	Eq-Comparison 212 224	past 4 weeks
 E9	Eq-Comparison:T9 Temporal-Period:T58 Value:T59 Temporal-Unit:T60
-T10	Modifier 245 252	chronic
-E10	Modifier:T10 Modifies:T61
-T11	Condition 253 257	pain
-E11	Condition:T11 Name:T61
-T12	Condition 269 275	cancer
+E11	Condition:T11 Name:T61 Acuteness:T10
 E12	Condition:T12 Name:T62
-T13	Or 276 278	or
 E13	Or:T13 Arg:E12 Arg2:E14
-T14	Procedure 283 292	treatment
-E14	Procedure:T14 
-T15	Eq-Comparison 298 307	completed
+E14	Procedure:T14
 E15	Eq-Comparison:T15 Temporal-Period:T64
-T16	Eq-Comparison 308 314	active
 E16	Eq-Comparison:T16 Temporal-Period:T65
-T17	Condition 315 321	cancer
 E17	Condition:T17 Name:T66 Temporality:E16
-T18	Procedure 322 331	treatment
 E18	Procedure:T18 Temporality:E15
-T19	Exception 332 342	other than
 E19	Exception:T19 From:E18 Except:E20
-T20	Procedure 343 362	maintenance therapy
 E20	Procedure:T20 Name:T67
-T21	Eq-Comparison 374 384	> 18 years
 E21	Eq-Comparison:T21 Operator:T68 Value:T69 Temporal-Unit:T70
-T22	Age 388 391	age
 E22	Age:T22 Eq-Comparison:E21
-T23	Condition 525 546	psychiatric condition
 E23	Condition:T23 Name:T72
-T24	Or 547 549	or
 E24	Or:T24 Arg:E23 Arg2:E25
-T25	Assertion 550 558	symptoms
 E25	Assertion:T25 Asserted:E23
-A2	Assertion-Type-Value E25 possible
-T26	Condition 579 601	paranoid schizophrenia
 E26	Condition:T26 Name:T73
-T27	Or 602 604	or
 E27	Or:T27 Arg:E26 Arg2:E29
-T28	Eq-Comparison 605 611	active
 E28	Eq-Comparison:T28 Temporal-Period:T74
-T29	Condition 612 640	paranoid delusional thoughts
 E29	Condition:T29 Name:T75 Temporality:E28
-T30	Procedure 685 705	screening assessment
 E30	Procedure:T30 Name:T76
-T32	Assertion 712 717	would
 E32	Assertion:T32 Asserted:T78
-A3	Assertion-Type-Value E32 hypothetical
-T33	Study 733 738	study
 E33	Study:T33 Stability:T78
-T34	Eq-Comparison 810 817	history
 E34	Eq-Comparison:T34 Temporal-Period:T80
-T35	Condition 821 838	seizure condition
 E35	Condition:T35 Name:T81 Temporality:E34 Temporality2:E36
-T36	Eq-Comparison 839 859	within the last year
 E36	Eq-Comparison:T36 Operator:T82 Temporal-Period:T83 Temporal-Unit:T84
-T37	Modifier 879 884	brain
 E37	Modifier:T37 Modifies:T86
-T38	Condition 885 891	injury
 E38	Condition:T38 Name:T86 Severity:T85
-T39	Or 892 894	or
 E39	Or:T39 Arg:E38 Arg2:E41
-T40	Modifier 895 900	skull
 E40	Modifier:T40 Modifies:T87
-T41	Condition 901 907	defect
 E41	Condition:T41 Name:T87
-T42	Eq-Comparison 915 922	history
 E42	Eq-Comparison:T42 Temporal-Period:T88
-T43	Modifier 926 931	brain
 E43	Modifier:T43 Modifies:T89
-T44	Condition 932 938	cancer
 E44	Condition:T44 Name:T89 Temporality:E42
+E45	Modifier:T47 Modifies:T53
+E46	Coreference:T63 Refers-To:E12
+E47	Assertion:T90 Asserted:E48
+E48	Observation:T91 Name:T92
+E31	Modifier:T31 Modifies:T76
+E49	Modifier:T77 Modifies:T76
+E50	Or:T93 Arg:E49 Arg2:E31
+T1	Eq-Comparison 40 58	moderate or higher
+T2	Condition 59 63	pain
+T3	Temporal-Connection 75 81	during
+T4	Eq-Comparison 86 95	last week
+T5	Eq-Comparison 97 100	> 3
+T6	Observation 111 139	pain intensity numeric scale
+T7	Condition 174 178	pain
+T8	Eq-Comparison 179 204	at least half of the days
+T9	Eq-Comparison 212 224	past 4 weeks
+T10	Acuteness 245 252	chronic
+T11	Condition 253 257	pain
+T12	Condition 269 275	cancer
+T13	Or 276 278	or
+T14	Procedure 283 292	treatment
+T15	Eq-Comparison 298 307	completed
+T16	Eq-Comparison 308 314	active
+T17	Condition 315 321	cancer
+T18	Procedure 322 331	treatment
+T19	Exception 332 342	other than
+T20	Procedure 343 362	maintenance therapy
+T21	Eq-Comparison 374 384	> 18 years
+T22	Age 388 391	age
+T23	Condition 525 546	psychiatric condition
+T24	Or 547 549	or
+T25	Assertion 550 558	symptoms
+T26	Condition 579 601	paranoid schizophrenia
+T27	Or 602 604	or
+T28	Eq-Comparison 605 611	active
+T29	Condition 612 640	paranoid delusional thoughts
+T30	Procedure 685 705	screening assessment
+T32	Assertion 712 717	would
+T33	Study 733 738	study
+T34	Eq-Comparison 810 817	history
+T35	Condition 821 838	seizure condition
+T36	Eq-Comparison 839 859	within the last year
+T37	Modifier 879 884	brain
+T38	Condition 885 891	injury
+T39	Or 892 894	or
+T40	Modifier 895 900	skull
+T41	Condition 901 907	defect
+T42	Eq-Comparison 915 922	history
+T43	Modifier 926 931	brain
+T44	Condition 932 938	cancer
 T45	Severity 40 48	moderate
-A4	Severity-Value T45 moderate
 T46	Eq-Operator 49 58	or higher
-A5	Eq-Operator-Value T46 GTEQ
 T48	Condition-Name 59 63	pain
 T49	Eq-Temporal-Period 86 90	last
-A7	Eq-Temporal-Period-Value T49 past
 T50	Eq-Temporal-Unit 91 95	week
-A8	Eq-Temporal-Unit-Value T50 week
 T51	Eq-Operator 97 98	>
-A9	Eq-Operator-Value T51 GT
 T52	Eq-Value 99 100	3
 T53	Observation-Name 111 139	pain intensity numeric scale
-A10	Observation-Type-Value T53 clinical-score
 T54	Condition-Name 174 178	pain
 T55	Eq-Operator 179 187	at least
-A11	Eq-Operator-Value T55 GTEQ
 T56	Eq-Value 188 192	half
 T57	Eq-Temporal-Unit 200 204	days
-A12	Eq-Temporal-Unit-Value T57 day
 T58	Eq-Temporal-Period 212 216	past
-A13	Eq-Temporal-Period-Value T58 past
 T59	Eq-Value 217 218	4
 T60	Eq-Temporal-Unit 219 224	weeks
-A14	Eq-Temporal-Unit-Value T60 week
 T61	Condition-Name 253 257	pain
 T62	Condition-Name 269 275	cancer
 T64	Eq-Temporal-Period 298 307	completed
-A16	Eq-Temporal-Period-Value T64 past
 T65	Eq-Temporal-Period 308 314	active
-A17	Eq-Temporal-Period-Value T65 present
 T66	Condition-Name 315 321	cancer
 T67	Procedure-Name 343 362	maintenance therapy
 T68	Eq-Operator 374 375	>
-A18	Eq-Operator-Value T68 GT
 T69	Eq-Value 376 378	18
 T70	Eq-Temporal-Unit 379 384	years
-A19	Eq-Temporal-Unit-Value T70 year
 T71	Language 419 426	English
 T72	Condition-Name 525 546	psychiatric condition
 T73	Condition-Name 579 601	paranoid schizophrenia
 T74	Eq-Temporal-Period 605 611	active
-A20	Eq-Temporal-Period-Value T74 present
 T75	Condition-Name 612 640	paranoid delusional thoughts
 T76	Procedure-Name 685 705	screening assessment
 T78	Stability 718 727	interfere
-A21	Stability-Value T78 change
 T80	Eq-Temporal-Period 810 817	history
-A22	Eq-Temporal-Period-Value T80 past
 T81	Condition-Name 821 838	seizure condition
 T82	Eq-Operator 839 845	within
-A23	Eq-Operator-Value T82 LTEQ
 T83	Eq-Temporal-Period 850 854	last
-A24	Eq-Temporal-Period-Value T83 past
 T84	Eq-Temporal-Unit 855 859	year
-A25	Eq-Temporal-Unit-Value T84 year
 T85	Severity 867 878	significant
-A26	Severity-Value T85 severe
 T86	Condition-Name 885 891	injury
 T87	Condition-Name 901 907	defect
 T88	Eq-Temporal-Period 915 922	history
-A27	Eq-Temporal-Period-Value T88 past
 T89	Condition-Name 932 938	cancer
 T47	Modifier 106 110	0-10
-E45	Modifier:T47 Modifies:T53
-R1	Equivalent-To Arg1:E6 Arg2:E2	
-R2	Caused-By Arg1:E11 Arg2:E12	
 T63	Coreference 279 282	its
-E46	Coreference:T63 Refers-To:E12
-R3	Treatment-For Arg1:E14 Arg2:E46	
-R4	Caused-By Arg1:E11 Arg2:E14	
-R5	Treatment-For Arg1:E18 Arg2:E17	
 T90	Assertion 432 460	mentally and physically able
-E47	Assertion:T90 Asserted:E48
-A6	Assertion-Type-Value E47 hypothetical
 T91	Observation 489 496	surveys
-E48	Observation:T91 Name:T92
 T92	Observation-Name 489 496	surveys
-A15	Observation-Type-Value T92 survey-or-questionnaire
-R6	Example-Of Arg1:E26 Arg2:E23	
-R7	Example-Of Arg1:E29 Arg2:E23	
 T31	Modifier 675 684	in-person
-E31	Modifier:T31 Modifies:T76
 T77	Modifier 662 671	telephone
-E49	Modifier:T77 Modifies:T76
 T93	Or 672 674	or
-E50	Or:T93 Arg:E49 Arg2:E31
-R8	Found-By Arg1:E29 Arg2:E30	
-R9	Found-By Arg1:E26 Arg2:E30	
-R10	Caused-By Arg1:T78 Arg2:E23	
+A1	Temporal-Connection-Type-Value E3 during
+A2	Assertion-Type-Value E25 possible
+A3	Assertion-Type-Value E32 hypothetical
+A4	Severity-Value T45 moderate
+A5	Eq-Operator-Value T46 GTEQ
+A7	Eq-Temporal-Period-Value T49 past
+A8	Eq-Temporal-Unit-Value T50 week
+A9	Eq-Operator-Value T51 GT
+A10	Observation-Type-Value T53 clinical-score
+A11	Eq-Operator-Value T55 GTEQ
+A12	Eq-Temporal-Unit-Value T57 day
+A13	Eq-Temporal-Period-Value T58 past
+A14	Eq-Temporal-Unit-Value T60 week
+A16	Eq-Temporal-Period-Value T64 past
+A17	Eq-Temporal-Period-Value T65 present
+A18	Eq-Operator-Value T68 GT
+A19	Eq-Temporal-Unit-Value T70 year
+A20	Eq-Temporal-Period-Value T74 present
+A21	Stability-Value T78 change
+A22	Eq-Temporal-Period-Value T80 past
+A23	Eq-Operator-Value T82 LTEQ
+A24	Eq-Temporal-Period-Value T83 past
+A25	Eq-Temporal-Unit-Value T84 year
+A26	Severity-Value T85 severe
+A27	Eq-Temporal-Period-Value T88 past
+A6	Assertion-Type-Value E47 hypothetical
+A15	Observation-Type-Value T92 survey-or-questionnaire
+A28	Acuteness-Type-Value T10 chronic
+R1	Equivalent-To Arg1:E6 Arg2:E2
+R2	Caused-By Arg1:E11 Arg2:E12
+R3	Treatment-For Arg1:E14 Arg2:E46
+R4	Caused-By Arg1:E11 Arg2:E14
+R5	Treatment-For Arg1:E18 Arg2:E17
+R6	Example-Of Arg1:E26 Arg2:E23
+R7	Example-Of Arg1:E29 Arg2:E23
+R8	Found-By Arg1:E29 Arg2:E30
+R9	Found-By Arg1:E26 Arg2:E30
+R10	Caused-By Arg1:T78 Arg2:E23

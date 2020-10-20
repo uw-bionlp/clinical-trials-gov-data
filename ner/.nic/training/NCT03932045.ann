@@ -1,0 +1,193 @@
+T1	Assertion 41 47	desire
+E1	Assertion:T1 Asserted:E40
+T2	Eq-Comparison 145 160	score of 3 or 4
+E2	Eq-Comparison:T2 Unit:T3 Value:T5 Value2:T4 Operator:T6
+T3	Eq-Unit 145 150	score
+T4	Eq-Value 154 155	3
+T5	Eq-Value 159 160	4
+T6	Eq-Operator 156 158	or
+A1	Eq-Operator-Value T6 BETWEEN
+T7	Observation 168 197	Wrinkle Severity Rating Scale
+E3	Observation:T7 Name:T8 Eq-Comparison:E2
+T8	Observation-Name 168 197	Wrinkle Severity Rating Scale
+A2	Observation-Type-Value T8 clinical-score
+T9	Observation 199 203	WSRS
+E4	Observation:T9 Name:T10
+T10	Observation-Name 199 203	WSRS
+R1	Abbrev-Of Arg1:E4 Arg2:E3	
+T11	Negation 244 256	abstain from
+E5	Negation:T11 Negates:E6
+T12	Procedure 267 292	dermatological procedures
+E6	Procedure:T12 Name:T13
+T13	Procedure-Name 267 292	dermatological procedures
+T14	Procedure 296 306	treatments
+E7	Procedure:T14 
+T16	Procedure 333 350	wrinkle reduction
+E9	Procedure:T16 Name:T17
+T17	Procedure-Name 333 350	wrinkle reduction
+R2	Example-Of Arg1:E9 Arg2:E7	
+T18	Temporal-Connection 371 377	during
+E10	Temporal-Connection:T18 Arg:E9 Arg2:E48
+T21	Drug 447 460	anticoagulant
+E11	Drug:T21 Name:T22 Temporality:E56
+T22	Drug-Name 447 460	anticoagulant
+T24	Eq-Comparison 529 543	within 2 weeks
+E12	Eq-Comparison:T24 Operator:T27 Temporal-Unit:T25 Value:T26
+T25	Eq-Temporal-Unit 538 543	weeks
+A5	Eq-Temporal-Unit-Value T25 week
+T26	Eq-Value 536 537	2
+T27	Eq-Operator 529 535	within
+A6	Eq-Operator-Value T27 LTEQ
+T28	Temporal-Connection 544 546	of
+E13	Temporal-Connection:T28 Arg:E12 Arg2:E47
+T30	Drug 495 502	aspirin
+E14	Drug:T30 Name:T31 Dose2:E8 Dose:E16
+T31	Drug-Name 495 502	aspirin
+T33	Eq-Comparison 504 526	100mg, up to 300mg/day
+E16	Eq-Comparison:T33 Operator:T37 Value:T34 Unit:T35 Value2:T36 Unit2:T38 Per:T39
+T34	Eq-Value 504 507	100
+T35	Eq-Unit 507 509	mg
+T36	Eq-Value 517 520	300
+T37	Eq-Operator 511 516	up to
+A8	Eq-Operator-Value T37 BETWEEN
+T38	Eq-Unit 520 522	mg
+T39	Eq-Temporal-Unit 523 526	day
+A9	Eq-Temporal-Unit-Value T39 day
+T40	Exception 471 480	exception
+E17	Exception:T40 From:E11 Except:E14
+T41	Drug 591 600	Vitamin E
+E18	Drug:T41 Name:T42
+T42	Drug-Name 591 600	Vitamin E
+T43	Drug-Name 604 641	non-steroidal anti-inflammatory drugs
+T46	Drug-Name 645 653	Collagen
+T48	Eq-Comparison 654 667	within 1 week
+E22	Eq-Comparison:T48 Operator:T49 Temporal-Unit:T51 Value:T50
+T49	Eq-Operator 654 660	within
+A10	Eq-Operator-Value T49 LTEQ
+T50	Eq-Value 661 662	1
+T51	Eq-Temporal-Unit 663 667	week
+A11	Eq-Temporal-Unit-Value T51 week
+T52	Temporal-Connection 668 670	of
+E23	Temporal-Connection:T52 Arg:E22 Arg2:E44
+T55	Condition 766 783	bleeding disorder
+E24	Condition:T55 Name:T56 Temporality:E25 Temporality2:E49 Temporality3:E27
+T56	Condition-Name 766 783	bleeding disorder
+T57	Eq-Comparison 787 791	past
+E25	Eq-Comparison:T57 Temporal-Period:T58
+T58	Eq-Temporal-Period 787 791	past
+T60	Eq-Comparison 795 802	present
+E27	Eq-Comparison:T60 Temporal-Period:T61
+T61	Eq-Temporal-Period 795 802	present
+T62	Procedure 817 829	deep-peeling
+E28	Procedure:T62 Name:T63 Temporality:E54
+T63	Procedure-Name 817 829	deep-peeling
+T64	Procedure 831 848	skin regeneration
+E29	Procedure:T64 Name:T65
+T65	Procedure-Name 831 848	skin regeneration
+T66	Procedure 850 865	plastic surgery
+E30	Procedure:T66 Name:T67
+T67	Procedure-Name 850 865	plastic surgery
+T68	Procedure 877 902	botulinum toxin injection
+E31	Procedure:T68 Name:T69
+T69	Procedure-Name 877 902	botulinum toxin injection
+R4	Example-Of Arg1:E31 Arg2:E30	
+T70	Procedure 905 924	wrinkle improvement
+E32	Procedure:T70 Name:T71
+T71	Procedure-Name 905 924	wrinkle improvement
+T72	Procedure 928 947	acne scar treatment
+E33	Procedure:T72 Name:T73 Temporality:E36
+T73	Procedure-Name 928 947	acne scar treatment
+T76	Temporal-Connection 983 985	of
+E35	Temporal-Connection:T76 Arg:E36 Arg2:E46
+T78	Eq-Comparison 967 982	within 24 weeks
+E36	Eq-Comparison:T78 Operator:T79 Temporal-Unit:T81 Value:T80
+T79	Eq-Operator 967 973	within
+A16	Eq-Operator-Value T79 LTEQ
+T80	Eq-Value 974 976	24
+T81	Eq-Temporal-Unit 977 982	weeks
+A17	Eq-Temporal-Unit-Value T81 week
+T82	Drug 1033 1055	hyaluronic acid filler
+E37	Drug:T82 Name:T83 Temporality:E39 Temporality2:E55
+T83	Drug-Name 1033 1055	hyaluronic acid filler
+T85	Temporal-Connection 1072 1074	of
+E38	Temporal-Connection:T85 Arg:E39 Arg2:E45
+T87	Eq-Comparison 1056 1071	within 24 weeks
+E39	Eq-Comparison:T87 Operator:T88 Temporal-Unit:T90 Value:T89
+T88	Eq-Operator 1056 1062	within
+A19	Eq-Operator-Value T88 LTEQ
+T89	Eq-Value 1063 1065	24
+T90	Eq-Temporal-Unit 1066 1071	weeks
+A20	Eq-Temporal-Unit-Value T90 week
+A3	Eq-Temporal-Period-Value T58 past
+A13	Eq-Temporal-Period-Value T61 present
+T15	Eq-Comparison 484 487	low
+E8	Eq-Comparison:T15 Value:T32
+T32	Eq-Value 484 487	low
+T44	Or 925 927	or
+E15	Or:T44 Arg:E32 Arg2:E33
+T45	Or 642 644	or
+E19	Or:T45 Arg:E21 Arg2:E26
+T47	Or 601 603	or
+E20	Or:T47 Arg:T42 Arg2:E21
+T59	Drug 604 641	non-steroidal anti-inflammatory drugs
+E21	Drug:T59 Name:T43
+T74	Drug 645 653	Collagen
+E26	Drug:T74 Name:T46 Temporality:E22
+T92	Or 792 794	or
+E34	Or:T92 Arg:E25 Arg2:E27
+T93	Observation 70 103	appearance of the nasolabial fold
+E40	Observation:T93 Name:T94
+T94	Observation-Name 70 103	appearance of the nasolabial fold
+T95	And 130 133	and
+E41	And:T95 Arg:E40 Arg2:E3
+T96	Or 293 295	or
+E42	Or:T96 Arg:E6 Arg2:E7
+T97	Assertion 231 243	consented to
+E43	Assertion:T97 Asserted:E5
+A21	Assertion-Type-Value E1 intention
+A14	Assertion-Type-Value E43 hypothetical
+A4	Temporal-Connection-Type-Value E10 during
+A7	Temporal-Connection-Type-Value E13 before
+A12	Temporal-Connection-Type-Value E23 before
+A15	Temporal-Connection-Type-Value E38 before
+A18	Temporal-Connection-Type-Value E35 before
+T19	Study 687 696	screening
+E44	Study:T19 
+T29	Study 1091 1100	screening
+E45	Study:T29 
+T53	Study 1002 1011	screening
+E46	Study:T53 
+T23	Study 563 572	screening
+E47	Study:T23 
+T20	Study 399 404	study
+E48	Study:T20 
+T98	Eq-Comparison 755 762	History
+E49	Eq-Comparison:T98 Temporal-Period:T99
+T99	Eq-Temporal-Period 755 762	History
+A22	Eq-Temporal-Period-Value T99 past
+T54	Study 744 749	study
+E50	Study:T54 
+T75	Temporal-Connection 719 725	during
+E51	Temporal-Connection:T75 Arg:E53 Arg2:E50
+A23	Temporal-Connection-Type-Value E51 during
+T77	Assertion 705 712	require
+E52	Assertion:T77 Asserted:E53
+A24	Assertion-Type-Value E52 hypothetical
+T84	Coreference 713 718	these
+E53	Coreference:T84 Refers-To:E26
+T86	Eq-Comparison 808 816	Received
+E54	Eq-Comparison:T86 Temporal-Period:T91
+T91	Eq-Temporal-Period 808 816	Received
+A25	Eq-Temporal-Period-Value T91 past
+T100	Eq-Comparison 1017 1029	Administered
+E55	Eq-Comparison:T100 Temporal-Period:T101
+T101	Eq-Temporal-Period 1017 1029	Administered
+A26	Eq-Temporal-Period-Value T101 past
+T102	Eq-Comparison 431 443	Administered
+E56	Eq-Comparison:T102 Temporal-Period:T103
+T103	Eq-Temporal-Period 431 443	Administered
+A27	Eq-Temporal-Period-Value T103 past
+T104	Eq-Comparison 578 590	Administered
+E57	Eq-Comparison:T104 Temporal-Period:T105
+T105	Eq-Temporal-Period 578 590	Administered
+A28	Eq-Temporal-Period-Value T105 past

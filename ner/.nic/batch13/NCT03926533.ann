@@ -1,0 +1,90 @@
+T1	Condition 76 105	respiratory distress syndrome
+T2	Condition-Name 76 105	respiratory distress syndrome
+E1	Condition:T1 Name:T2 Severity:T45
+T3	Condition 456 476	psychiatric disorder
+T4	Condition-Name 456 476	psychiatric disorder
+E3	Condition:T3 Name:T4
+T5	Condition 437 452	substance abuse
+T6	Condition-Name 437 452	substance abuse
+E5	Condition:T5 Name:T6
+T7	Condition 569 577	dementia
+T8	Condition-Name 569 577	dementia
+E7	Condition:T7 Name:T8 Severity:T47
+T9	Language 545 552	English
+T10	Condition 60 66	sepsis
+T11	Condition-Name 60 66	sepsis
+E10	Condition:T10 Name:T11
+T12	Condition 516 521	blind
+T13	Condition-Name 516 521	blind
+E12	Condition:T12 Name:T13
+T14	Encounter 35 39	stay
+E2	Encounter:T14 Type:T15 Location:T46
+T15	Encounter-Type 35 39	stay
+A1	Encounter-Type-Value T15 inpatient
+T16	Temporal-Connection 40 44	with
+E4	Temporal-Connection:T16 Arg:E2 Arg2:E10
+A2	Temporal-Connection-Type-Value E4 during
+T17	Or 67 69	or
+E6	Or:T17 Arg:E10 Arg2:E1
+T18	Encounter-Type 122 132	discharged
+A3	Encounter-Type-Value T18 discharge
+T19	Encounter 122 132	discharged
+E8	Encounter:T19 Type:T18
+T20	Assertion 106 115	projected
+E9	Assertion:T20 Asserted:E8
+A4	Assertion-Type-Value E9 hypothetical
+T23	Condition 196 200	PICS
+E13	Condition:T23 Name:T24
+T24	Condition-Name 196 200	PICS
+T25	Risk 176 180	risk
+E14	Risk:T25 Polarity:T26 Risk-For:E13
+T26	Polarity 168 175	highest
+A5	Polarity-Value T26 high
+T27	Location 386 390	VUMC
+A6	Location-Value T27 hospital
+T28	Encounter 353 365	primary care
+E15	Encounter:T28 Location:T27 Temporality:E25
+T30	Location 405 417	hospice care
+A7	Location-Value T30 clinic
+T31	Encounter 421 430	discharge
+E17	Encounter:T31 Type:T32 Location:T30
+T32	Encounter-Type 421 430	discharge
+A8	Encounter-Type-Value T32 discharge
+T33	Or 453 455	or
+E18	Or:T33 Arg:E5 Arg2:E3
+T34	Condition 491 509	independent living
+E19	Condition:T34 Name:T35
+T35	Condition-Name 491 509	independent living
+T36	Negation 482 490	prevents
+E20	Negation:T36 Negates:E19
+R1	Caused-By Arg1:E20 Arg2:E3	
+T37	Condition 523 527	deaf
+E21	Condition:T37 Name:T38
+T38	Condition-Name 523 527	deaf
+T39	Negation 529 535	unable
+E22	Negation:T39 Negates:T9
+T40	Encounter 593 608	hospitalization
+E23	Encounter:T40 Type:T41
+T41	Encounter-Type 593 608	hospitalization
+A9	Encounter-Type-Value T41 inpatient
+T42	Temporal-Connection 578 586	prior to
+E24	Temporal-Connection:T42 Arg:E7 Arg2:E23
+A10	Temporal-Connection-Type-Value E24 before
+T43	Eq-Comparison 366 374	received
+E25	Eq-Comparison:T43 Temporal-Period:T44
+T44	Eq-Temporal-Period 366 374	received
+A11	Eq-Temporal-Period-Value T44 past
+T45	Severity 70 75	acute
+A12	Severity-Value T45 severe
+T29	Other 375 382	outside
+E16	Other:T29 Is-Other:T27
+T46	Location 31 34	ICU
+A13	Location-Value T46 unit
+T47	Severity 562 568	severe
+A14	Severity-Value T47 severe
+T21	Death 133 138	alive
+E11	Death:T21 
+T22	Negation 133 138	alive
+E26	Negation:T22 Negates:E11
+T48	Or 554 556	or
+E27	Or:T48 Arg:T9 Arg2:E7

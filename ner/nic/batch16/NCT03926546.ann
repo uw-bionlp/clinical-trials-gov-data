@@ -1,63 +1,63 @@
+E3	Condition:T3 Name:T4 Temporality:E11
+E5	Condition:T5 Name:T6 Temporality:E9
+E7	Condition:T7 Name:T8 Temporality:E8
+E8	Eq-Comparison:T11 Temporal-Period:T12
+E9	Eq-Comparison:T13 Temporal-Period:T14
+E10	Eq-Comparison:T15 Temporal-Period:T16
+E11	Eq-Comparison:T17 Temporal-Period:T18
+E1	Eq-Comparison:T19 Value:T10 Temporal-Unit:T9 Operator:T20
+E2	Procedure:T21 Name:T22 Temporality:E4
+E4	Eq-Comparison:T23 Temporal-Period:T24
+E6	And:T25 Arg:E2 Arg2:E3
+E12	Procedure:T26
+E13	Assertion:T27 Asserted:E12
+E14	Observation:T28 Name:T29
+E15	Risk:T30 Polarity:T31
+E16	Other:T32 Is-Other:E15
+E17	Or:T33 Arg:E14 Arg2:E15
+E18	Condition:T34 Name:T35 Temporality:E10
 T1	Life-Stage-And-Gender 46 52	adults
-A1	Life-Stage-And-Gender-Type T1 adult
 T2	Language 261 268	English
 T3	Condition 227 230	OCD
 T4	Condition-Name 227 230	OCD
-E3	Condition:T3 Name:T4 Temporality:E11
 T5	Condition 469 493	substance abuse disorder
 T6	Condition-Name 469 493	substance abuse disorder
-E5	Condition:T5 Name:T6 Temporality:E9
 T7	Condition 434 443	psychosis
 T8	Condition-Name 434 443	psychosis
-E7	Condition:T7 Name:T8 Temporality:E8
 T9	Eq-Temporal-Unit 56 61	years
-A2	Eq-Temporal-Unit-Value T9 year
 T10	Eq-Value 53 55	18
 T11	Eq-Comparison 427 433	active
-E8	Eq-Comparison:T11 Temporal-Period:T12
 T12	Eq-Temporal-Period 427 433	active
-A3	Eq-Temporal-Period-Value T12 present
 T13	Eq-Comparison 462 468	active
-E9	Eq-Comparison:T13 Temporal-Period:T14
 T14	Eq-Temporal-Period 462 468	active
-A4	Eq-Temporal-Period-Value T14 present
 T15	Eq-Comparison 512 518	active
-E10	Eq-Comparison:T15 Temporal-Period:T16
 T16	Eq-Temporal-Period 512 518	active
-A5	Eq-Temporal-Period-Value T16 present
 T17	Eq-Comparison 203 211	received
-E11	Eq-Comparison:T17 Temporal-Period:T18
 T18	Eq-Temporal-Period 203 211	received
-A6	Eq-Temporal-Period-Value T18 past
 T19	Eq-Comparison 53 70	18 years or older
-E1	Eq-Comparison:T19 Value:T10 Temporal-Unit:T9 Operator:T20
 T20	Eq-Operator 62 70	or older
-A7	Eq-Operator-Value T20 GTEQ
 T21	Procedure 188 198	assessment
-E2	Procedure:T21 Name:T22 Temporality:E4
 T22	Procedure-Name 188 198	assessment
 T23	Eq-Comparison 179 184	given
-E4	Eq-Comparison:T23 Temporal-Period:T24
 T24	Eq-Temporal-Period 179 184	given
-A8	Eq-Temporal-Period-Value T24 past
 T25	And 199 202	and
-E6	And:T25 Arg:E2 Arg2:E3
 T26	Procedure 322 331	treatment
-E12	Procedure:T26 
 T27	Assertion 296 303	able to
-E13	Assertion:T27 Asserted:E12
-A9	Assertion-Type-Value E13 hypothetical
 T28	Observation 358 367	Prisoners
-E14	Observation:T28 Name:T29
 T29	Observation-Name 358 367	Prisoners
 T30	Risk 386 390	risk
-E15	Risk:T30 Polarity:T31
 T31	Polarity 381 385	high
-A10	Polarity-Value T31 high
 T32	Other 375 380	other
-E16	Other:T32 Is-Other:E15
 T33	Or 368 370	or
-E17	Or:T33 Arg:E14 Arg2:E15
 T34	Condition 519 530	suicidality
-E18	Condition:T34 Name:T35 Temporality:E10
 T35	Condition-Name 519 530	suicidality
+A1	Life-Stage-And-Gender-Type T1 adult
+A2	Eq-Temporal-Unit-Value T9 year
+A3	Eq-Temporal-Period-Value T12 present
+A4	Eq-Temporal-Period-Value T14 present
+A5	Eq-Temporal-Period-Value T16 present
+A6	Eq-Temporal-Period-Value T18 past
+A7	Eq-Operator-Value T20 GTEQ
+A8	Eq-Temporal-Period-Value T24 past
+A9	Assertion-Type-Value E13 hypothetical
+A10	Polarity-Value T31 high

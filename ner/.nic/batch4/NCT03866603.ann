@@ -1,0 +1,78 @@
+T1	Condition 126 145	Parkinson's disease
+E1	Condition:T1 Name:T22
+T2	Or 146 148	or
+E2	Or:T2 Arg:E1 Arg2:E3
+T3	Family-Member 169 182	family member
+E3	Family-Member:T3 Has:E4
+T4	Condition 211 223	parkinsonism
+E4	Condition:T4 Name:T23
+T5	Or 224 226	or
+E5	Or:T5 Arg:E3 Arg2:E6
+T6	Risk 249 253	risk
+E6	Risk:T6 Polarity:T24 Risk-For:E8
+T7	Modifier 273 278	early
+E7	Modifier:T7 Modifies:T25
+T8	Condition 279 281	PD
+E8	Condition:T8 Name:T25 Temporality:E23
+T9	Eq-Comparison 313 344	equal to or older than 18 years
+E9	Eq-Comparison:T9 Operator:T26 Value:T28 Temporal-Unit:T29
+T10	Age 345 348	old
+E10	Age:T10 Eq-Comparison:E9
+T11	Negation 438 441	not
+E11	Negation:T11 Negates:E12
+T12	Condition 457 476	Parkinson's disease
+E12	Condition:T12 Name:T30
+T13	Or 477 479	or
+E13	Or:T13 Arg:E12 Arg2:E25
+T14	Family-Member 504 517	family member
+E14	Family-Member:T14 Has:E15
+T15	Condition 546 558	parkinsonism
+E15	Condition:T15 Name:T31
+T16	Or 559 561	or
+E16	Or:T16 Arg:E25 Arg2:E26
+T17	Risk 588 592	risk
+E17	Risk:T17 Polarity:T32
+T18	Eq-Comparison 629 650	younger than 18 years
+E18	Eq-Comparison:T18 Operator:T33 Value:T34 Temporal-Unit:T35
+T19	Age 651 654	old
+E19	Age:T19 Eq-Comparison:E18
+T20	Eq-Comparison 661 671	Previously
+E20	Eq-Comparison:T20 Temporal-Period:T36
+T21	Study 688 693	study
+E21	Study:T21 Temporality:E20
+T22	Condition-Name 126 145	Parkinson's disease
+T23	Condition-Name 211 223	parkinsonism
+T24	Polarity 244 248	high
+A1	Polarity-Value T24 high
+T25	Condition-Name 279 281	PD
+T26	Eq-Operator 313 335	equal to or older than
+A2	Eq-Operator-Value T26 GTEQ
+T28	Eq-Value 336 338	18
+T29	Eq-Temporal-Unit 339 344	years
+A4	Eq-Temporal-Unit-Value T29 year
+T30	Condition-Name 457 476	Parkinson's disease
+T31	Condition-Name 546 558	parkinsonism
+T32	Polarity 583 587	high
+A5	Polarity-Value T32 high
+T33	Eq-Operator 629 641	younger than
+A6	Eq-Operator-Value T33 LT
+T34	Eq-Value 642 644	18
+T35	Eq-Temporal-Unit 645 650	years
+A7	Eq-Temporal-Unit-Value T35 year
+T36	Eq-Temporal-Period 661 671	Previously
+A8	Eq-Temporal-Period-Value T36 past
+T37	Modifier 205 210	LRRK2
+E22	Modifier:T37 Modifies:T23
+T38	Eq-Comparison 282 287	onset
+E23	Eq-Comparison:T38 Temporal-Recency:T39
+T39	Eq-Temporal-Recency 282 287	onset
+A9	Eq-Temporal-Recency-Value T39 first-time
+T27	Modifier 540 545	LRRK2
+E24	Modifier:T27 Modifies:T31
+T40	Negation 498 501	not
+E25	Negation:T40 Negates:E14
+T41	Negation 565 568	not
+E26	Negation:T41 Negates:E17
+T42	Observation 712 722	in custody
+E27	Observation:T42 Name:T43
+T43	Observation-Name 712 722	in custody

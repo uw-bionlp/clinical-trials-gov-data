@@ -1,93 +1,94 @@
-T1	Condition 38 51	schizophrenia
 E1	Condition:T1 Name:T46
-T2	Or 52 54	OR
 E2	Or:T2 Arg:E1 Arg2:E3
-T3	Condition 55 80	schizoaffective-depressed
 E3	Condition:T3 Name:T47
-T5	Or 81 83	OR
 E5	Or:T5 Arg:E3 Arg2:E6
-T6	Condition 84 91	healthy
 E6	Condition:T6 Name:T48
-T7	Age 106 110	ages
 E7	Age:T7 Eq-Comparison:E8
-T8	Eq-Comparison 111 116	18-50
 E8	Eq-Comparison:T8 Value:T49 Operator:T50 Value:T51
-T9	Modifier 139 153	double barrier
 E9	Modifier:T9 Modifies:T52
-T10	Procedure 154 167	contraception
 E10	Procedure:T10 Name:T52
-T11	Negation 190 193	not
 E11	Negation:T11 Negates:E12
-T12	Condition 194 202	pregnant
 E12	Condition:T12 Name:T53
-T13	Eq-Comparison 257 264	I or II
 E13	Eq-Comparison:T13 Value:T54 Value:T55
-T14	Condition 283 290	healthy
 E14	Condition:T14 Name:T56
-T15	Condition 305 308	MEM
 E15	Condition:T15 Name:T57
-T16	Or 309 311	or
 E16	Or:T16 Arg:E15 Arg2:E17
-T17	Drug 312 322	amantadine
 E17	Drug:T17 Name:T58
-T18	Eq-Comparison 341 348	current
 E18	Eq-Comparison:T18 Temporal-Period:T59
-T19	Condition 349 364	substance abuse
 E19	Condition:T19 Name:T60 Temporality:E18
-T20	Eq-Comparison 387 394	current
 E20	Eq-Comparison:T20 Temporal-Period:T61
-T22	Eq-Comparison 439 446	history
 E22	Eq-Comparison:T22 Temporal-Period:T62
-T23	Other 450 455	other
 E23	Other:T23 Is-Other:E24
-T24	Condition 468 483	medical illness
 E24	Condition:T24 Name:T64 Severity:T63 Temporality:E22
-T25	Condition 490 496	cancer
 E25	Condition:T25 Name:T65
-T26	Condition 498 506	diabetes
 E26	Condition:T26 Name:T66
-T27	Condition 508 521	heart disease
 E27	Condition:T27 Name:T67
-T28	Condition 523 526	HIV
 E28	Condition:T28 Name:T68
-T29	Condition 528 536	seizures
 E29	Condition:T29 Name:T69
-T30	Modifier 560 569	open head
 E30	Modifier:T30 Modifies:T70
-T31	Condition 570 576	injury
 E31	Condition:T31 Name:T70
-T32	Or 577 579	or
 E32	Or:T32 Arg:E31 Arg2:E34
-T33	Modifier 580 591	closed head
 E33	Modifier:T33 Modifies:T71
-T34	Condition 592 598	injury
 E34	Condition:T34 Name:T71
-T35	And 599 603	with
 E35	And:T35 Arg:E34 Arg2:E37
-T37	Condition 604 625	loss of consciousness
 E37	Condition:T37 Name:T72 Duration:E38
-T38	Eq-Comparison 626 633	> 1 min
 E38	Eq-Comparison:T38 Operator:T73 Value:T74 Temporal-Unit:T75
-T39	Modifier 656 663	hearing
 E39	Modifier:T39 Modifies:T76
-T40	Or 664 666	or
 E40	Or:T40 Arg:E39 Arg2:E41
-T41	Modifier 667 673	visual
 E41	Modifier:T41 Modifies:T76
-T42	Condition 674 684	impairment
 E42	Condition:T42 Name:T76
-T43	Condition 707 716	pregnancy
 E43	Condition:T43 Name:T77
-T44	Condition 739 747	dementia
 E44	Condition:T44 Name:T78
-T45	Condition 770 788	mental retardation
 E45	Condition:T45 Name:T79
+E4	Condition:T4 Name:T80 Stage:E13
+E21	Condition:T21 Name:T81 Temporality:E20
+T1	Condition 38 51	schizophrenia
+T2	Or 52 54	OR
+T3	Condition 55 80	schizoaffective-depressed
+T5	Or 81 83	OR
+T6	Condition 84 91	healthy
+T7	Age 106 110	ages
+T8	Eq-Comparison 111 116	18-50
+T9	Modifier 139 153	double barrier
+T10	Procedure 154 167	contraception
+T11	Negation 190 193	not
+T12	Condition 194 202	pregnant
+T13	Eq-Comparison 257 264	I or II
+T14	Condition 283 290	healthy
+T15	Condition 305 308	MEM
+T16	Or 309 311	or
+T17	Drug 312 322	amantadine
+T18	Eq-Comparison 341 348	current
+T19	Condition 349 364	substance abuse
+T20	Eq-Comparison 387 394	current
+T22	Eq-Comparison 439 446	history
+T23	Other 450 455	other
+T24	Condition 468 483	medical illness
+T25	Condition 490 496	cancer
+T26	Condition 498 506	diabetes
+T27	Condition 508 521	heart disease
+T28	Condition 523 526	HIV
+T29	Condition 528 536	seizures
+T30	Modifier 560 569	open head
+T31	Condition 570 576	injury
+T32	Or 577 579	or
+T33	Modifier 580 591	closed head
+T34	Condition 592 598	injury
+T35	And 599 603	with
+T37	Condition 604 625	loss of consciousness
+T38	Eq-Comparison 626 633	> 1 min
+T39	Modifier 656 663	hearing
+T40	Or 664 666	or
+T41	Modifier 667 673	visual
+T42	Condition 674 684	impairment
+T43	Condition 707 716	pregnancy
+T44	Condition 739 747	dementia
+T45	Condition 770 788	mental retardation
 T46	Condition-Name 38 51	schizophrenia
 T47	Condition-Name 55 80	schizoaffective-depressed
 T48	Condition-Name 84 91	healthy
 T49	Eq-Value 111 113	18
 T50	Eq-Operator 113 114	-
-A1	Eq-Operator-Value T50 BETWEEN
 T51	Eq-Value 114 116	50
 T52	Procedure-Name 154 167	contraception
 T53	Condition-Name 194 202	pregnant
@@ -97,14 +98,10 @@ T56	Condition-Name 283 290	healthy
 T57	Condition-Name 305 308	MEM
 T58	Drug-Name 312 322	amantadine
 T59	Eq-Temporal-Period 341 348	current
-A2	Eq-Temporal-Period-Value T59 present
 T60	Condition-Name 349 364	substance abuse
 T61	Eq-Temporal-Period 387 394	current
-A3	Eq-Temporal-Period-Value T61 present
 T62	Eq-Temporal-Period 439 446	history
-A4	Eq-Temporal-Period-Value T62 past
 T63	Severity 456 467	significant
-A5	Severity-Value T63 severe
 T64	Condition-Name 468 483	medical illness
 T65	Condition-Name 490 496	cancer
 T66	Condition-Name 498 506	diabetes
@@ -115,23 +112,26 @@ T70	Condition-Name 570 576	injury
 T71	Condition-Name 592 598	injury
 T72	Condition-Name 604 625	loss of consciousness
 T73	Eq-Operator 626 627	>
-A6	Eq-Operator-Value T73 GT
 T74	Eq-Value 628 629	1
 T75	Eq-Temporal-Unit 630 633	min
-A7	Eq-Temporal-Unit-Value T75 minute
 T76	Condition-Name 674 684	impairment
 T77	Condition-Name 707 716	pregnancy
 T78	Condition-Name 739 747	dementia
 T79	Condition-Name 770 788	mental retardation
 T4	Condition 245 256	DSM-IV Axis
-E4	Condition:T4 Name:T80 Stage:E13
 T80	Condition-Name 245 256	DSM-IV Axis
-R1	If-Then Arg1:E14 Arg2:E4	
 T21	Condition 395 416	recreational drug use
-E21	Condition:T21 Name:T81 Temporality:E20
 T81	Condition-Name 395 416	recreational drug use
-R2	Example-Of Arg1:E25 Arg2:E24	
-R3	Example-Of Arg1:E26 Arg2:E24	
-R4	Example-Of Arg1:E27 Arg2:E24	
-R5	Example-Of Arg1:E28 Arg2:E24	
-R6	Example-Of Arg1:E29 Arg2:E24	
+A1	Eq-Operator-Value T50 BETWEEN
+A2	Eq-Temporal-Period-Value T59 present
+A3	Eq-Temporal-Period-Value T61 present
+A4	Eq-Temporal-Period-Value T62 past
+A5	Severity-Value T63 severe
+A6	Eq-Operator-Value T73 GT
+A7	Eq-Temporal-Unit-Value T75 minute
+R1	If-Then Arg1:E14 Arg2:E4
+R2	Example-Of Arg1:E25 Arg2:E24
+R3	Example-Of Arg1:E26 Arg2:E24
+R4	Example-Of Arg1:E27 Arg2:E24
+R5	Example-Of Arg1:E28 Arg2:E24
+R6	Example-Of Arg1:E29 Arg2:E24

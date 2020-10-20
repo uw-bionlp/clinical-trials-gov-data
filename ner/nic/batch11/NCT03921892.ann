@@ -1,85 +1,85 @@
+E6	Birth:T6
+E7	Age:T13 Eq-Comparison:E8
+E8	Eq-Comparison:T18 Operator:T14 Value:T15 Value2:T16
+E1	Assertion:T2 Asserted:E9
+E2	Eq-Comparison:T19 Operator:T8 Temporal-Unit:T9 Value:T20
+E4	Family-Member:T21 Has:E6
+E5	Temporal-Connection:T7 Arg:E2 Arg2:E6
+E9	Study:T1 Temporality:E2
+E3	Study:T3 Duration:E11
+E10	Assertion:T4 Asserted:E3
+E11	Eq-Comparison:T11 Temporal-Unit:T10 Value:T12 Operator:T39
+E12	Condition:T17
+E13	Family-Member:T22 Has:E17 Has2:E16
+E14	Family-Member:T23 Has:E13
+E15	Assertion:T24 Asserted:E17
+E16	Observation:T25 Polarity:T26 Name:T27
+E17	Negation:T28 Negates:E13
+E18	Condition:T29 Name:T30
+E19	Condition:T31 Name:T32
+E20	Or:T33 Arg:E18 Arg2:E19
+E21	Family-Member:T34 Has:E22
+E22	Encounter:T35 Type:T36 Temporality:E23
+E23	Eq-Comparison:T37 Temporal-Period:T38
+E24	Assertion:T40 Asserted:E22
 T5	Language 75 82	English
 T6	Birth 247 252	birth
-E6	Birth:T6 
 T8	Eq-Operator 212 218	within
-A1	Eq-Operator-Value T8 LTEQ
 T9	Eq-Temporal-Unit 223 228	weeks
-A2	Eq-Temporal-Unit-Value T9 week
 T10	Eq-Temporal-Unit 310 315	weeks
-A3	Eq-Temporal-Unit-Value T10 week
 T13	Age 25 28	age
-E7	Age:T13 Eq-Comparison:E8
 T14	Eq-Operator 32 34	to
-A6	Eq-Operator-Value T14 BETWEEN
 T15	Eq-Value 29 31	15
 T16	Eq-Value 35 37	21
 T18	Eq-Comparison 29 37	15 to 21
-E8	Eq-Comparison:T18 Operator:T14 Value:T15 Value2:T16
 T1	Study 199 211	intervention
 T2	Assertion 181 188	able to
-E1	Assertion:T2 Asserted:E9
-A7	Assertion-Type-Value E1 hypothetical
 T19	Eq-Comparison 212 228	within six weeks
-E2	Eq-Comparison:T19 Operator:T8 Temporal-Unit:T9 Value:T20
 T20	Eq-Value 219 222	six
 T21	Family-Member 238 246	infant's
-E4	Family-Member:T21 Has:E6
-A8	Family-Member-Type E4 child
 T7	Temporal-Connection 229 231	of
-E5	Temporal-Connection:T7 Arg:E2 Arg2:E6
-A9	Temporal-Connection-Type-Value E5 after
-E9	Study:T1 Temporality:E2
 T3	Study 288 300	intervention
-E3	Study:T3 Duration:E11
 T4	Assertion 262 269	able to
-E10	Assertion:T4 Asserted:E3
-A10	Assertion-Type-Value E10 hypothetical
 T11	Eq-Comparison 301 315	over two weeks
-E11	Eq-Comparison:T11 Temporal-Unit:T10 Value:T12 Operator:T39
 T12	Eq-Value 306 309	two
 T17	Condition 621 630	condition
-E12	Condition:T17 
 T22	Family-Member 663 669	infant
-E13	Family-Member:T22 Has:E17 Has2:E16
-A4	Family-Member-Type E13 child
 T23	Family-Member 654 662	father's
-E14	Family-Member:T23 Has:E13
-A5	Family-Member-Type E14 father
 T24	Assertion 636 641	might
-E15	Assertion:T24 Asserted:E17
-A11	Assertion-Type-Value E15 possible
 T25	Observation 691 715	developmental milestones
-E16	Observation:T25 Polarity:T26 Name:T27
 T26	Polarity 684 690	normal
-A12	Polarity-Value T26 normal
 T27	Observation-Name 691 715	developmental milestones
 T28	Negation 642 649	prevent
-E17	Negation:T28 Negates:E13
-R1	Caused-By Arg1:E17 Arg2:E12	
 T29	Condition 746 770	congenital malformations
-E18	Condition:T29 Name:T30
 T30	Condition-Name 746 770	congenital malformations
 T31	Condition 774 785	prematurity
-E19	Condition:T31 Name:T32
 T32	Condition-Name 774 785	prematurity
 T33	Or 771 773	or
-E20	Or:T33 Arg:E18 Arg2:E19
 T34	Family-Member 815 821	infant
-E21	Family-Member:T34 Has:E22
-A13	Family-Member-Type E21 child
 T35	Encounter 822 837	hospitalization
-E22	Encounter:T35 Type:T36 Temporality:E23
 T36	Encounter-Type 822 837	hospitalization
-A14	Encounter-Type-Value T36 inpatient
 T37	Eq-Comparison 807 814	ongoing
-E23	Eq-Comparison:T37 Temporal-Period:T38
 T38	Eq-Temporal-Period 807 814	ongoing
-A15	Eq-Temporal-Period-Value T38 present
-R2	Caused-By Arg1:E22 Arg2:E19	
-R3	Example-Of Arg1:E18 Arg2:E12	
-R4	Example-Of Arg1:E19 Arg2:E12	
 T39	Eq-Operator 301 305	over
-A16	Eq-Operator-Value T39 GT
 T40	Assertion 786 795	requiring
-E24	Assertion:T40 Asserted:E22
+A1	Eq-Operator-Value T8 LTEQ
+A2	Eq-Temporal-Unit-Value T9 week
+A3	Eq-Temporal-Unit-Value T10 week
+A6	Eq-Operator-Value T14 BETWEEN
+A7	Assertion-Type-Value E1 hypothetical
+A8	Family-Member-Type E4 child
+A9	Temporal-Connection-Type-Value E5 after
+A10	Assertion-Type-Value E10 hypothetical
+A4	Family-Member-Type E13 child
+A5	Family-Member-Type E14 father
+A11	Assertion-Type-Value E15 possible
+A12	Polarity-Value T26 normal
+A13	Family-Member-Type E21 child
+A14	Encounter-Type-Value T36 inpatient
+A15	Eq-Temporal-Period-Value T38 present
+A16	Eq-Operator-Value T39 GT
 A17	Assertion-Type-Value E24 hypothetical
+R1	Caused-By Arg1:E17 Arg2:E12
+R2	Caused-By Arg1:E22 Arg2:E19
+R3	Example-Of Arg1:E18 Arg2:E12
+R4	Example-Of Arg1:E19 Arg2:E12

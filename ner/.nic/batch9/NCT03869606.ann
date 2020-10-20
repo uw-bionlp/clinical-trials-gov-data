@@ -1,0 +1,54 @@
+T1	Eq-Comparison 34 62	11 to no older than 17 years
+E1	Eq-Comparison:T1 Value:T16 Operator:T17 Value:T18 Temporal-Unit:T19
+T2	Age 66 69	age
+E2	Age:T2 Eq-Comparison:E1
+T3	Condition 103 122	developmental delay
+E3	Condition:T3 Name:T20 Severity:T29
+T4	Procedure 129 139	orthopedic
+E4	Procedure:T4 Name:T30
+T5	Modifier 154 157	leg
+E5	Modifier:T5 Modifies:T21
+T6	Condition 158 166	injuries
+E6	Condition:T6 Name:T21
+T7	Condition 172 178	injury
+E7	Condition:T7 Name:T22
+T8	Assertion 184 189	would
+E8	Assertion:T8 Asserted:E9
+A1	Assertion-Type-Value E8 hypothetical
+T9	Negation 190 197	prevent
+E9	Negation:T9 Negates:E17
+T10	Modifier 198 209	passive leg
+E10	Modifier:T10 Modifies:T33
+T11	Condition 233 253	aortic insufficiency
+E11	Condition:T11 Name:T25 Severity:T24
+T12	Condition 267 289	anatomic abnormalities
+E12	Condition:T12 Name:T27 Severity:T26
+T13	Modifier 297 311	thoracic aorta
+E13	Modifier:T13 Modifies:T27
+T14	Procedure 331 358	external cardiac pacemakers
+E14	Procedure:T14 Name:T28
+T16	Eq-Value 34 36	11
+T17	Eq-Operator 37 53	to no older than
+A2	Eq-Operator-Value T17 BETWEEN
+T18	Eq-Value 54 56	17
+T19	Eq-Temporal-Unit 57 62	years
+A3	Eq-Temporal-Unit-Value T19 year
+T20	Condition-Name 103 122	developmental delay
+T21	Condition-Name 158 166	injuries
+T22	Condition-Name 172 178	injury
+T24	Severity 226 232	severe
+A4	Severity-Value T24 severe
+T25	Condition-Name 233 253	aortic insufficiency
+T26	Severity 260 266	severe
+A5	Severity-Value T26 severe
+T27	Condition-Name 267 289	anatomic abnormalities
+T28	Procedure-Name 331 358	external cardiac pacemakers
+T29	Severity 95 102	severed
+A6	Severity-Value T29 severe
+T30	Procedure-Name 129 139	orthopedic
+T31	And 149 153	with
+E16	And:T31 Arg:E4 Arg2:E6
+T32	Procedure 210 219	elevation
+E17	Procedure:T32 Name:T33
+T33	Procedure-Name 210 219	elevation
+R1	Caused-By Arg1:E9 Arg2:E7	

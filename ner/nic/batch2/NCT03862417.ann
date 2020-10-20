@@ -1,27 +1,49 @@
+E2	Procedure:T2 Name:T3
+E4	Procedure:T4 Name:T5 Temporality:E20 Temporality2:E30
+E6	Condition:T6 Name:T7
+E8	Observation:T8 Name:T9
+E9	Age:T14 Eq-Comparison:E1
+E10	Eq-Comparison:T21 Operator:T10 Value:T16 Value2:T31
+E1	Eq-Comparison:T22 Temporal-Unit:T12 Operator:T23 Value:T15
+E3	Condition:T24 Name:T25
+E11	And:T30 Arg:E3 Arg2:E5
+E13	Observation:T36 Name:T37 Eq-Comparison:E12
+E14	Observation:T38 Name:T39
+E15	Eq-Comparison:T40 Operator:T41 Value:T19 Unit:T42
+E16	Negation:T43 Negates:E2
+E17	Drug:T44 Name:T45
+E18	Drug:T46 Name:T47
+E19	Or:T48 Arg:E18 Arg2:E17
+E20	Eq-Comparison:T49 Operator:T11 Temporal-Period:T50 Temporal-Unit:T13 Value:T20
+E21	Procedure:T51 Name:T52
+E22	Or:T53 Arg:E21 Arg2:E23
+E23	Contraindication:T54 Contraindicates:E8
+E24	Condition:T55 Name:T56
+E25	Condition:T57 Name:T58
+E26	Condition:T59 Name:T60 Severity:T61
+E27	Or:T62 Arg:E26 Arg2:E6
+E28	And:T63 Arg:E9 Arg2:E3
+E5	Observation:T26 Eq-Comparison:E10 Name:T29
+E12	Eq-Comparison:T27 Value:T17 Unit:T34 Operator:T32 Value2:T18 Unit2:T35
+E29	Assertion:T33 Asserted:E2
+E30	Eq-Comparison:T64 Temporal-Period:T65
+E31	Assertion:T66 Asserted:E16
+E32	Negation:T67 Negates:E23
+E33	Assertion:T68 Asserted:E32
 T1	Life-Stage-And-Gender 25 31	Adults
-A1	Life-Stage-And-Gender-Type T1 adult
 T2	Procedure 199 207	surgical
 T3	Procedure-Name 199 207	surgical
-E2	Procedure:T2 Name:T3
 T4	Procedure 288 298	injections
 T5	Procedure-Name 288 298	injections
-E4	Procedure:T4 Name:T5 Temporality:E20 Temporality2:E30
 T6	Condition 441 451	osteopenia
 T7	Condition-Name 441 451	osteopenia
-E6	Condition:T6 Name:T7
 T8	Observation 369 378	exercises
 T9	Observation-Name 369 378	exercises
-E8	Observation:T8 Name:T9
 T10	Eq-Operator 96 97	>
-A2	Eq-Operator-Value T10 GT
 T11	Eq-Operator 299 305	within
-A3	Eq-Operator-Value T11 LTEQ
 T12	Eq-Temporal-Unit 40 45	years
-A4	Eq-Temporal-Unit-Value T12 year
 T13	Eq-Temporal-Unit 317 323	months
-A5	Eq-Temporal-Unit-Value T13 month
 T14	Age 46 49	old
-E9	Age:T14 Eq-Comparison:E1
 T15	Eq-Value 37 39	50
 T16	Eq-Value 97 98	2
 T17	Eq-Value 145 147	15
@@ -29,94 +51,72 @@ T18	Eq-Value 149 151	45
 T19	Eq-Value 191 193	50
 T20	Eq-Value 315 316	3
 T21	Eq-Comparison 96 101	>2/10
-E10	Eq-Comparison:T21 Operator:T10 Value:T16 Value2:T31
 T22	Eq-Comparison 32 45	over 50 years
-E1	Eq-Comparison:T22 Temporal-Unit:T12 Operator:T23 Value:T15
 T23	Eq-Operator 32 36	over
-A6	Eq-Operator-Value T23 GT
 T24	Condition 55 77	degenerative scoliosis
-E3	Condition:T24 Name:T25
 T25	Condition-Name 55 77	degenerative scoliosis
 T29	Observation-Name 90 94	pain
 T30	And 85 89	with
-E11	And:T30 Arg:E3 Arg2:E5
 T31	Eq-Value 99 101	10
 T32	Eq-Operator 148 149	-
-A8	Eq-Operator-Value T32 BETWEEN
 T34	Eq-Unit 147 148	°
 T35	Eq-Unit 151 152	°
 T36	Observation 138 144	curves
-E13	Observation:T36 Name:T37 Eq-Comparison:E12
 T37	Observation-Name 138 144	curves
 T38	Observation 179 185	Curves
-E14	Observation:T38 Name:T39
 T39	Observation-Name 179 185	Curves
 T40	Eq-Comparison 186 194	over 50°
-E15	Eq-Comparison:T40 Operator:T41 Value:T19 Unit:T42
 T41	Eq-Operator 186 190	over
-A9	Eq-Operator-Value T41 GT
 T42	Eq-Unit 193 194	°
-R3	Equivalent-To Arg1:E14 Arg2:E15	
 T43	Negation 232 240	excluded
-E16	Negation:T43 Negates:E2
 T44	Drug 277 287	anesthetic
-E17	Drug:T44 Name:T45
 T45	Drug-Name 277 287	anesthetic
 T46	Drug 264 273	cortisone
-E18	Drug:T46 Name:T47
 T47	Drug-Name 264 273	cortisone
 T48	Or 274 276	or
-E19	Or:T48 Arg:E18 Arg2:E17
-R4	Using Arg1:E4 Arg2:E17	
 T49	Eq-Comparison 299 323	within the last 3 months
-E20	Eq-Comparison:T49 Operator:T11 Temporal-Period:T50 Temporal-Unit:T13 Value:T20
 T50	Eq-Temporal-Period 310 314	last
-A10	Eq-Temporal-Period-Value T50 past
 T51	Procedure 325 332	surgery
-E21	Procedure:T51 Name:T52
 T52	Procedure-Name 325 332	surgery
 T53	Or 333 335	or
-E22	Or:T53 Arg:E21 Arg2:E23
 T54	Contraindication 347 365	contra-indications
-E23	Contraindication:T54 Contraindicates:E8
 T55	Condition 380 389	fractures
-E24	Condition:T55 Name:T56
 T56	Condition-Name 380 389	fractures
 T57	Condition 391 397	cancer
-E25	Condition:T57 Name:T58
 T58	Condition-Name 391 397	cancer
 T59	Condition 406 436	cardio-vascular co-morbidities
-E26	Condition:T59 Name:T60 Severity:T61
 T60	Condition-Name 406 436	cardio-vascular co-morbidities
 T61	Severity 399 405	severe
-A11	Severity-Value T61 severe
 T62	Or 438 440	or
-E27	Or:T62 Arg:E26 Arg2:E6
-R6	Example-Of Arg1:E24 Arg2:E23	
-R7	Example-Of Arg1:E25 Arg2:E23	
-R8	Example-Of Arg1:E26 Arg2:E23	
-R9	Example-Of Arg1:E6 Arg2:E23	
 T63	And 50 54	with
-E28	And:T63 Arg:E9 Arg2:E3
 T26	Observation 90 94	pain
-E5	Observation:T26 Eq-Comparison:E10 Name:T29
 T27	Eq-Comparison 145 152	15°-45°
-E12	Eq-Comparison:T27 Value:T17 Unit:T34 Operator:T32 Value2:T18 Unit2:T35
 T33	Assertion 208 218	candidates
-E29	Assertion:T33 Asserted:E2
-A7	Assertion-Type-Value E29 hypothetical
-R1	If-Then Arg1:E14 Arg2:E2	
 T64	Eq-Comparison 260 263	had
-E30	Eq-Comparison:T64 Temporal-Period:T65
 T65	Eq-Temporal-Period 260 263	had
-A12	Eq-Temporal-Period-Value T65 past
-R2	Using Arg1:E4 Arg2:E18	
-A13	Observation-Type-Value T9 social-habit
 T66	Assertion 224 231	will be
-E31	Assertion:T66 Asserted:E16
-A14	Assertion-Type-Value E31 hypothetical
 T67	Negation 461 469	excluded
-E32	Negation:T67 Negates:E23
 T68	Assertion 453 460	will be
-E33	Assertion:T68 Asserted:E32
+A1	Life-Stage-And-Gender-Type T1 adult
+A2	Eq-Operator-Value T10 GT
+A3	Eq-Operator-Value T11 LTEQ
+A4	Eq-Temporal-Unit-Value T12 year
+A5	Eq-Temporal-Unit-Value T13 month
+A6	Eq-Operator-Value T23 GT
+A8	Eq-Operator-Value T32 BETWEEN
+A9	Eq-Operator-Value T41 GT
+A10	Eq-Temporal-Period-Value T50 past
+A11	Severity-Value T61 severe
+A7	Assertion-Type-Value E29 hypothetical
+A12	Eq-Temporal-Period-Value T65 past
+A13	Observation-Type-Value T9 social-habit
+A14	Assertion-Type-Value E31 hypothetical
 A15	Assertion-Type-Value E33 hypothetical
+R3	Equivalent-To Arg1:E14 Arg2:E15
+R4	Using Arg1:E4 Arg2:E17
+R6	Example-Of Arg1:E24 Arg2:E23
+R7	Example-Of Arg1:E25 Arg2:E23
+R8	Example-Of Arg1:E26 Arg2:E23
+R9	Example-Of Arg1:E6 Arg2:E23
+R1	If-Then Arg1:E14 Arg2:E2
+R2	Using Arg1:E4 Arg2:E18

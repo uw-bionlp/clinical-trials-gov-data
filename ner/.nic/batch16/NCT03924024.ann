@@ -1,0 +1,250 @@
+T1	Life-Stage-And-Gender 33 39	female
+A1	Life-Stage-And-Gender-Type T1 female
+T2	Life-Stage-And-Gender 25 29	Male
+A2	Life-Stage-And-Gender-Type T2 male
+T3	Condition 582 604	neurological disorders
+T4	Condition-Name 582 604	neurological disorders
+E3	Condition:T3 Name:T4
+T5	Condition 556 572	seizure disorder
+T6	Condition-Name 556 572	seizure disorder
+E5	Condition:T5 Name:T6 Temporality:E35
+T7	Procedure 272 282	extubation
+T8	Procedure-Name 272 282	extubation
+E7	Procedure:T7 Name:T8
+T9	Life-Stage-And-Gender 379 385	female
+A3	Life-Stage-And-Gender-Type T9 female
+T11	Condition 1089 1110	neurological disorder
+T12	Condition-Name 1089 1110	neurological disorder
+E11	Condition:T11 Name:T12
+T13	Condition 830 848	psychotic disorder
+T14	Condition-Name 830 848	psychotic disorder
+E13	Condition:T13 Name:T14 Temporality:E38
+T15	Condition 1062 1073	alcohol use
+T16	Condition-Name 1062 1073	alcohol use
+E15	Condition:T15 Name:T16 Severity:T133
+T17	Condition 1173 1189	Seizure disorder
+T18	Condition-Name 1173 1189	Seizure disorder
+E17	Condition:T17 Name:T18
+T25	Life-Stage-And-Gender 810 817	females
+A4	Life-Stage-And-Gender-Type T25 female
+T26	Procedure 1120 1127	implant
+T27	Procedure-Name 1120 1127	implant
+E26	Procedure:T26 Name:T27
+T30	Eq-Operator 237 243	within
+A5	Eq-Operator-Value T30 LTEQ
+T31	Eq-Operator 670 671	>
+A6	Eq-Operator-Value T31 GT
+T32	Eq-Operator 723 724	<
+A7	Eq-Operator-Value T32 LT
+T33	Eq-Operator 949 955	within
+A8	Eq-Operator-Value T33 LTEQ
+T34	Eq-Temporal-Unit 50 55	years
+A9	Eq-Temporal-Unit-Value T34 year
+T35	Eq-Temporal-Unit 959 963	days
+A10	Eq-Temporal-Unit-Value T35 day
+T36	Age 59 62	age
+E29	Age:T36 Eq-Comparison:E34
+T37	Eq-Operator 44 46	to
+A11	Eq-Operator-Value T37 BETWEEN
+T38	Eq-Value 41 43	18
+T39	Eq-Value 47 49	65
+T40	Eq-Value 234 236	15
+T41	Eq-Value 244 246	24
+T42	Eq-Value 400 402	60
+T44	Eq-Value 671 672	4
+T45	Eq-Value 724 726	36
+T46	Eq-Value 956 958	30
+T47	Eq-Comparison 234 236	15
+E30	Eq-Comparison:T47 Value:T40
+T48	Eq-Comparison 664 672	score >4
+E31	Eq-Comparison:T48 Operator:T31 Value:T44 Unit:T115
+T49	Eq-Comparison 717 726	score <36
+E32	Eq-Comparison:T49 Operator:T32 Value:T45 Unit:T116
+T50	Eq-Comparison 949 963	within 30 days
+E33	Eq-Comparison:T50 Operator:T33 Temporal-Unit:T35 Value:T46
+T51	Eq-Comparison 41 55	18 to 65 years
+E34	Eq-Comparison:T51 Operator:T37 Value:T38 Value2:T39 Temporal-Unit:T34
+T52	Eq-Comparison 545 552	history
+E35	Eq-Comparison:T52 Temporal-Period:T53
+T53	Eq-Temporal-Period 545 552	history
+A12	Eq-Temporal-Period-Value T53 past
+T54	Eq-Comparison 855 866	Current use
+E36	Eq-Comparison:T54 Temporal-Period:T55
+T55	Eq-Temporal-Period 855 866	Current use
+A13	Eq-Temporal-Period-Value T55 present
+T58	Eq-Comparison 824 829	Prior
+E38	Eq-Comparison:T58 Temporal-Period:T59
+T59	Eq-Temporal-Period 824 829	Prior
+A15	Eq-Temporal-Period-Value T59 past
+T60	Eq-Comparison 922 927	Prior
+E39	Eq-Comparison:T60 Temporal-Period:T61
+T61	Eq-Temporal-Period 922 927	Prior
+A16	Eq-Temporal-Period-Value T61 past
+T62	Or 30 32	or
+E1	Or:T62 Arg:T2 Arg2:T1
+T63	Location 119 148	Stanford Emergency Department
+A17	Location-Value T63 hospital
+T64	Condition 154 160	trauma
+E2	Condition:T64 Name:T65 Location:T63
+T65	Condition-Name 154 160	trauma
+T66	Condition 200 206	injury
+E4	Condition:T66 Name:T67
+T67	Condition-Name 200 206	injury
+T68	Encounter 108 115	Present
+E6	Encounter:T68 Location:T63
+T69	Modifier 168 199	major operative lower extremity
+E8	Modifier:T69 Modifies:T67
+T70	And 161 165	with
+E9	And:T70 Arg:E2 Arg2:E4
+T71	Observation 212 230	Glasgow coma scale
+E10	Observation:T71 Name:T72 Eq-Comparison:E30
+T72	Observation-Name 212 230	Glasgow coma scale
+A18	Observation-Type-Value T72 clinical-score
+T73	Eq-Comparison 237 252	within 24 hours
+E12	Eq-Comparison:T73 Operator:T30 Temporal-Unit:T74 Value:T41
+T74	Eq-Temporal-Unit 247 252	hours
+A19	Eq-Temporal-Unit-Value T74 hour
+T75	Encounter 259 268	admission
+E14	Encounter:T75 Type:T76
+T76	Encounter-Type 259 268	admission
+A20	Encounter-Type-Value T76 inpatient
+T77	Or 269 271	or
+E16	Or:T77 Arg:E14 Arg2:E7
+T78	Temporal-Connection 253 258	after
+E18	Temporal-Connection:T78 Arg:E12 Arg2:E14
+A21	Temporal-Connection-Type-Value E18 after
+T79	Observation 297 315	urinary toxicology
+E20	Observation:T79 Name:T80 Polarity:T81
+T80	Observation-Name 297 315	urinary toxicology
+A22	Observation-Type-Value T80 lab
+T81	Polarity 288 296	Negative
+A23	Polarity-Value T81 negative
+T82	Modifier 316 345	screen for illicit substances
+E22	Modifier:T82 Modifies:T80
+T83	Condition 361 370	pregnancy
+E24	Condition:T83 Name:T84 Polarity:T85
+T84	Condition-Name 361 370	pregnancy
+T85	Polarity 352 360	Negative
+A24	Polarity-Value T85 negative
+R1	If-Then Arg1:T9 Arg2:E24	
+T86	Eq-Comparison 390 406	less then 60 y/o
+E25	Eq-Comparison:T86 Operator:T87 Value:T42 Temporal-Unit:T88
+T87	Eq-Operator 390 399	less then
+A25	Eq-Operator-Value T87 LTEQ
+T88	Eq-Temporal-Unit 403 404	y
+A26	Eq-Temporal-Unit-Value T88 year
+T89	Age 405 406	o
+E27	Age:T89 Eq-Comparison:E25
+T90	And 386 389	and
+E40	And:T90 Arg:T9 Arg2:E27
+T91	Condition 437 443	injury
+E41	Condition:T91 Name:T92
+T92	Condition-Name 437 443	injury
+T93	Modifier 432 436	head
+E42	Modifier:T93 Modifies:T92
+T94	Assertion 416 425	suspicion
+E43	Assertion:T94 Asserted:E41
+A27	Assertion-Type-Value E43 possible
+T95	Negation 413 415	No
+E44	Negation:T95 Negates:E43
+T96	Procedure 465 472	CT scan
+E45	Procedure:T96 Name:T97 Polarity:T99
+T97	Procedure-Name 465 472	CT scan
+T98	Modifier 460 464	head
+E46	Modifier:T98 Modifies:T97
+T99	Polarity 451 459	negative
+A28	Polarity-Value T99 negative
+T100	Or 444 450	and/or
+E47	Or:T100 Arg:E44 Arg2:E45
+T101	Condition 477 500	intracranial hemorrhage
+E48	Condition:T101 Name:T102
+T102	Condition-Name 477 500	intracranial hemorrhage
+R2	Found-By Arg1:E48 Arg2:E45	
+T103	Condition 504 510	injury
+E49	Condition:T103 Name:T104
+T104	Condition-Name 504 510	injury
+T105	Or 501 503	or
+E50	Or:T105 Arg:E48 Arg2:E49
+T106	Negation 542 544	No
+E51	Negation:T106 Negates:E5
+T107	Or 573 575	or
+E52	Or:T107 Arg:E5 Arg2:E3
+T108	Other 576 581	other
+E53	Other:T108 Is-Other:E3
+T43	Observation 658 663	PHQ-9
+E54	Observation:T43 Name:T109 Eq-Comparison:E31 Polarity:T110
+T109	Observation-Name 658 663	PHQ-9
+A29	Observation-Type-Value T109 survey-or-questionnaire
+T110	Polarity 645 653	positive
+A30	Polarity-Value T110 positive
+T111	Condition 695 705	depression
+E55	Condition:T111 Name:T112 Polarity:T114
+T112	Condition-Name 695 705	depression
+T113	Assertion 683 691	symptoms
+E56	Assertion:T113 Asserted:E55
+A31	Assertion-Type-Value E56 possible
+T114	Polarity 674 682	positive
+A32	Polarity-Value T114 positive
+R3	Equivalent-To Arg1:E55 Arg2:E54	
+T10	Observation 711 716	CES-T
+E57	Observation:T10 Name:T117 Eq-Comparison:E32
+T115	Eq-Unit 664 669	score
+T116	Eq-Unit 717 722	score
+T117	Observation-Name 711 716	CES-T
+A33	Observation-Type-Value T117 survey-or-questionnaire
+T118	Condition 728 753	poor coping self-efficacy
+E58	Condition:T118 Name:T119
+T119	Condition-Name 728 753	poor coping self-efficacy
+R4	Equivalent-To Arg1:E58 Arg2:E57	
+T120	And 707 710	and
+E59	And:T120 Arg:E54 Arg2:E57
+T121	Observation 781 794	Incarceration
+E60	Observation:T121 Name:T122
+T122	Observation-Name 781 794	Incarceration
+T123	Condition 801 809	Pregnant
+E61	Condition:T123 Name:T124
+T124	Condition-Name 801 809	Pregnant
+R5	If-Then Arg1:T25 Arg2:E61	
+T125	Drug 870 885	anti-depressant
+E62	Drug:T125 Name:T126 Temporality:E36
+T126	Drug-Name 870 885	anti-depressant
+T23	Drug 889 915	anti-psychotic medications
+E23	Drug:T23 Name:T24
+T24	Drug-Name 889 915	anti-psychotic medications
+T127	Or 886 888	or
+E63	Or:T127 Arg:E62 Arg2:E23
+T128	Encounter 928 937	admission
+E64	Encounter:T128 Type:T129 Temporality:E39
+T129	Encounter-Type 928 937	admission
+A34	Encounter-Type-Value T129 inpatient
+T19	Condition 938 948	opioid use
+E19	Condition:T19 Name:T20 Temporality:E33
+T20	Condition-Name 938 948	opioid use
+R6	Treatment-For Arg1:E64 Arg2:E19	
+T130	Assertion 974 981	will be
+E65	Assertion:T130 Asserted:E21
+A35	Assertion-Type-Value E65 hypothetical
+T131	Eq-Comparison 995 1001	recent
+E66	Eq-Comparison:T131 Temporal-Period:T132
+T132	Eq-Temporal-Period 995 1001	recent
+A36	Eq-Temporal-Period-Value T132 recent
+T21	Drug 1015 1021	opioid
+E21	Drug:T21 Name:T22 Temporality:E66
+T22	Drug-Name 1015 1021	opioid
+T56	Observation 1036 1041	CURES
+E37	Observation:T56 Name:T57
+T57	Observation-Name 1036 1041	CURES
+R7	Found-By Arg1:E21 Arg2:E37	
+T133	Severity 1056 1061	Heavy
+A14	Severity-Value T133 severe
+T134	Modifier 1080 1088	Lesional
+E67	Modifier:T134 Modifies:T12
+T28	Modifier 1114 1119	brain
+E28	Modifier:T28 Modifies:T27
+T29	Or 1111 1113	or
+E68	Or:T29 Arg:E11 Arg2:E26
+T135	Condition 1131 1166	intracranial ferromagnetic material
+E69	Condition:T135 Name:T136
+T136	Condition-Name 1131 1166	intracranial ferromagnetic material
+T137	Or 1128 1130	or
+E70	Or:T137 Arg:E26 Arg2:E69

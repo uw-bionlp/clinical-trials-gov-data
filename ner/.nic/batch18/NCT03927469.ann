@@ -1,0 +1,54 @@
+T1	Condition 201 219	Spastic hemiplegia
+T2	Condition-Name 201 219	Spastic hemiplegia
+E1	Condition:T1 Name:T2 Code:T19
+T3	Eq-Value 68 80	January 2015
+T4	Eq-Value 85 94	July 2018
+T6	Encounter 31 43	hospitalized
+E2	Encounter:T6 Type:T7 Location:T8 Temporality:E3
+T7	Encounter-Type 31 43	hospitalized
+A1	Encounter-Type-Value T7 inpatient
+T8	Location 51 59	hospital
+A2	Location-Value T8 hospital
+T9	Eq-Comparison 60 94	between January 2015 and July 2018
+E3	Eq-Comparison:T9 Operator:T10 Value:T3 Value2:T4
+T10	Eq-Operator 60 67	between
+A3	Eq-Operator-Value T10 BETWEEN
+T5	Condition 122 132	hemiplegia
+E4	Condition:T5 Name:T11 Code:T12
+T11	Condition-Name 122 132	hemiplegia
+T12	Condition-Code 134 137	G81
+T13	Condition 140 158	flaccid hemiplegia
+E5	Condition:T13 Name:T14 Code:T15
+T14	Condition-Name 140 158	flaccid hemiplegia
+T15	Condition-Code 160 165	G81.0
+T16	Condition 168 191	hemiplegia, unspecified
+E6	Condition:T16 Name:T17 Code:T18
+T17	Condition-Name 168 191	hemiplegia, unspecified
+T18	Condition-Code 193 198	G81.9
+T19	Condition-Code 221 226	G81.1
+T20	Condition 263 269	stroke
+E7	Condition:T20 Name:T21
+T21	Condition-Name 263 269	stroke
+T22	Modifier 251 262	hemorrhagic
+E8	Modifier:T22 Modifies:T21
+T23	Modifier 239 247	ischemic
+E9	Modifier:T23 Modifies:T21
+T24	Or 248 250	or
+E10	Or:T24 Arg:E9 Arg2:E8
+T25	Condition 301 311	hemiplegic
+E11	Condition:T25 Name:T26
+T26	Condition-Name 301 311	hemiplegic
+T27	Condition 319 325	trauma
+E12	Condition:T27 Name:T28
+T28	Condition-Name 319 325	trauma
+T29	Condition 327 333	cancer
+E13	Condition:T29 Name:T30
+T30	Condition-Name 327 333	cancer
+T31	Procedure 338 360	intracranial operation
+E14	Procedure:T31 Name:T32
+T32	Procedure-Name 338 360	intracranial operation
+T33	Or 334 337	and
+E15	Or:T33 Arg:E13 Arg2:E14
+R1	Caused-By Arg1:E11 Arg2:E12	
+R2	Caused-By Arg1:E11 Arg2:E13	
+R3	Caused-By Arg1:E11 Arg2:E14	

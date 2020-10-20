@@ -1,0 +1,37 @@
+T1	Condition 145 167	psychological disorder
+T2	Condition-Name 145 167	psychological disorder
+E1	Condition:T1 Name:T2 Severity:T19 Temporality:E10
+T3	Condition 171 180	substance
+T4	Condition-Name 171 180	substance
+E3	Condition:T3 Name:T4
+T7	Language 82 89	Spanish
+T8	Procedure 255 273	meditation program
+T9	Procedure-Name 255 273	meditation program
+E8	Procedure:T8 Name:T9 Temporality:E11
+T10	Eq-Temporal-Unit 28 33	years
+A1	Eq-Temporal-Unit-Value T10 year
+T11	Age 37 40	age
+E9	Age:T11 Eq-Comparison:E2
+T12	Eq-Value 25 27	18
+T13	Eq-Comparison 126 133	current
+E10	Eq-Comparison:T13 Temporal-Period:T14
+T14	Eq-Temporal-Period 126 133	current
+A2	Eq-Temporal-Period-Value T14 present
+T15	Eq-Comparison 212 221	currently
+E11	Eq-Comparison:T15 Temporal-Period:T16
+T16	Eq-Temporal-Period 212 221	currently
+A3	Eq-Temporal-Period-Value T16 present
+T17	Eq-Comparison 25 48	18 years of age or more
+E2	Eq-Comparison:T17 Value:T12 Temporal-Unit:T10 Operator:T18
+T18	Eq-Operator 41 48	or more
+A4	Eq-Operator-Value T18 GTEQ
+T19	Severity 137 144	serious
+A5	Severity-Value T19 severe
+T5	Modifier 181 186	abuse
+E4	Modifier:T5 Modifies:T4
+T6	Modifier 189 199	dependence
+E5	Modifier:T6 Modifies:T4
+T20	Or 187 188	/
+E6	Or:T20 Arg:E4 Arg2:E5
+T21	Or 168 170	or
+E7	Or:T21 Arg:E1 Arg2:E3

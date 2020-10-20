@@ -1,102 +1,102 @@
+E1	Condition:T1 Name:T2
+E2	Eq-Comparison:T13 Operator:T3 Temporal-Unit:T5 Value:T10
+E3	Drug:T8 Name:T14 Dose:E6
+E4	Eq-Comparison:T15 Temporal-Period:T16
+E5	Assertion:T17 Asserted:E3
+E6	Eq-Comparison:T18 Value:T9 Per:T7 Unit:T19 Unit2:T20
+E8	Drug:T21
+E9	Exception:T23 From:E8 Except:E10
+E10	Drug:T24 Name:T22 Temporality:E2
+E11	Eq-Comparison:T25 Value:T11 Unit:T26
+E12	Or:T27 Arg:E2 Arg2:E11
+E13	Study:T28
+E14	Temporal-Connection:T29 Arg:E11 Arg2:E13
+E15	Condition:T30 Name:T31 Severity:T33
+E16	Modifier:T32 Modifies:E15
+E17	Condition:T34 Name:T35 Temporality:E22 Temporality2:E23
+E18	Modifier:T36 Modifies:T35
+E19	Modifier:T37 Modifies:T35
+E20	Modifier:T38 Modifies:T35
+E21	Modifier:T39 Modifies:T35
+E22	Eq-Comparison:T40 Temporal-Period:T41
+E23	Eq-Comparison:T43 Temporal-Period:T42
+E24	Or:T44 Arg:E23 Arg2:E22
+E25	Condition:T45 Name:T46 Temporality:E26
+E26	Eq-Comparison:T47 Temporal-Period:T48
+E27	Drug:T49 Temporality:E28
+E28	Eq-Comparison:T50 Operator:T4 Temporal-Unit:T6 Value:T12 Temporal-Period:T55
+E7	Procedure:T51 Temporality:E4
+E29	Study:T52 Study-Of:E8
+E30	Procedure:T53
+E31	Other:T54 Is-Other:E29
 T1	Condition 38 41	GCA
 T2	Condition-Name 38 41	GCA
-E1	Condition:T1 Name:T2
 T3	Eq-Operator 271 277	within
-A1	Eq-Operator-Value T3 LTEQ
 T4	Eq-Operator 568 574	within
-A2	Eq-Operator-Value T4 LTEQ
 T5	Eq-Temporal-Unit 281 286	weeks
-A3	Eq-Temporal-Unit-Value T5 week
 T6	Eq-Temporal-Unit 590 595	years
-A4	Eq-Temporal-Unit-Value T6 year
 T7	Eq-Unit 176 178	kg
 T9	Eq-Value 171 172	8
 T10	Eq-Value 278 280	12
 T11	Eq-Value 291 292	5
 T12	Eq-Value 588 589	3
 T13	Eq-Comparison 271 286	within 12 weeks
-E2	Eq-Comparison:T13 Operator:T3 Temporal-Unit:T5 Value:T10
 T8	Drug 167 170	TCZ
-E3	Drug:T8 Name:T14 Dose:E6
 T14	Drug-Name 167 170	TCZ
 T15	Eq-Comparison 142 151	receiving
-E4	Eq-Comparison:T15 Temporal-Period:T16
 T16	Eq-Temporal-Period 142 151	receiving
-A5	Eq-Temporal-Period-Value T16 present
 T17	Assertion 116 124	entering
-E5	Assertion:T17 Asserted:E3
-A6	Assertion-Type-Value E5 hypothetical
 T18	Eq-Comparison 171 185	8 mg/kg IV Q4W
-E6	Eq-Comparison:T18 Value:T9 Per:T7 Unit:T19 Unit2:T20
 T19	Eq-Unit 173 175	mg
 T21	Drug 253 258	agent
-E8	Drug:T21 
 T22	Drug-Name 267 270	TCZ
 T23	Exception 259 266	besides
-E9	Exception:T23 From:E8 Except:E10
 T24	Drug 267 270	TCZ
-E10	Drug:T24 Name:T22 Temporality:E2
 T25	Eq-Comparison 291 303	5 half-lives
-E11	Eq-Comparison:T25 Value:T11 Unit:T26
 T26	Eq-Unit 293 303	half-lives
 T27	Or 288 290	or
-E12	Or:T27 Arg:E2 Arg2:E11
-R1	Equivalent-To Arg1:E11 Arg2:E2	
 T28	Study 363 372	screening
-E13	Study:T28 
 T29	Temporal-Connection 354 359	prior
-E14	Temporal-Connection:T29 Arg:E11 Arg2:E13
-A7	Temporal-Connection-Type-Value E14 before
 T30	Condition 412 419	disease
-E15	Condition:T30 Name:T31 Severity:T33
 T31	Condition-Name 412 419	disease
 T32	Modifier 399 411	uncontrolled
-E16	Modifier:T32 Modifies:E15
 T33	Severity 391 398	serious
-A8	Severity-Value T33 severe
 T34	Condition 521 531	infections
-E17	Condition:T34 Name:T35 Temporality:E22 Temporality2:E23
 T35	Condition-Name 521 531	infections
 T36	Modifier 497 510	mycobacterial
-E18	Modifier:T36 Modifies:T35
 T37	Modifier 489 495	fungal
-E19	Modifier:T37 Modifies:T35
 T38	Modifier 482 487	viral
-E20	Modifier:T38 Modifies:T35
 T39	Modifier 471 480	bacterial
-E21	Modifier:T39 Modifies:T35
 T40	Eq-Comparison 450 460	history of
-E22	Eq-Comparison:T40 Temporal-Period:T41
 T41	Eq-Temporal-Period 450 460	history of
-A9	Eq-Temporal-Period-Value T41 past
 T42	Eq-Temporal-Period 432 446	active current
-A10	Eq-Temporal-Period-Value T42 present
 T43	Eq-Comparison 432 446	active current
-E23	Eq-Comparison:T43 Temporal-Period:T42
 T44	Or 447 449	or
-E24	Or:T44 Arg:E23 Arg2:E22
 T45	Condition 545 547	TB
-E25	Condition:T45 Name:T46 Temporality:E26
 T46	Condition-Name 545 547	TB
 T47	Eq-Comparison 538 544	Active
-E26	Eq-Comparison:T47 Temporal-Period:T48
 T48	Eq-Temporal-Period 538 544	Active
-A11	Eq-Temporal-Period-Value T48 present
 T49	Drug 558 567	treatment
-E27	Drug:T49 Temporality:E28
-R2	Treatment-For Arg1:E27 Arg2:E25	
 T50	Eq-Comparison 568 595	within the previous 3 years
-E28	Eq-Comparison:T50 Operator:T4 Temporal-Unit:T6 Value:T12 Temporal-Period:T55
 T20	Eq-Unit 182 185	Q4W
 T51	Procedure 152 161	treatment
-E7	Procedure:T51 Temporality:E4
-R3	Using Arg1:E7 Arg2:E3	
 T52	Study 237 252	investigational
-E29	Study:T52 Study-Of:E8
 T53	Procedure 212 221	Treatment
-E30	Procedure:T53 
 T54	Other 231 236	other
-E31	Other:T54 Is-Other:E29
-R4	Using Arg1:E30 Arg2:E8	
 T55	Eq-Temporal-Period 579 587	previous
+A1	Eq-Operator-Value T3 LTEQ
+A2	Eq-Operator-Value T4 LTEQ
+A3	Eq-Temporal-Unit-Value T5 week
+A4	Eq-Temporal-Unit-Value T6 year
+A5	Eq-Temporal-Period-Value T16 present
+A6	Assertion-Type-Value E5 hypothetical
+A7	Temporal-Connection-Type-Value E14 before
+A8	Severity-Value T33 severe
+A9	Eq-Temporal-Period-Value T41 past
+A10	Eq-Temporal-Period-Value T42 present
+A11	Eq-Temporal-Period-Value T48 present
 A12	Eq-Temporal-Period-Value T55 past
+R1	Equivalent-To Arg1:E11 Arg2:E2
+R2	Treatment-For Arg1:E27 Arg2:E25
+R3	Using Arg1:E7 Arg2:E3
+R4	Using Arg1:E30 Arg2:E8

@@ -1,100 +1,100 @@
+E1	Condition:T1 Name:T2
+E7	Procedure:T7 Name:T8
+E13	Procedure:T13 Name:T14
+E15	Procedure:T15 Name:T16
+E17	Condition:T17 Name:T18
+E18	Age:T21 Eq-Comparison:E19
+E19	Eq-Comparison:T24 Operator:T19 Temporal-Unit:T20 Value:T23 Value2:T22 Operator2:T25
+E2	Procedure:T26 Name:T27
+E4	Condition:T28
+E6	Condition:T29 Name:T30
+E8	Condition:T31 Name:T32
+E9	Observation:T33 Name:T43
+E5	Procedure:T5 Name:T6
+E10	Or:T34 Arg:E5 Arg2:E15
+E11	Encounter:T36 Location:T35
+E12	Assertion:T37 Asserted:E2
+E3	Modifier:T3 Modifies:T27
+E14	Modifier:T4 Modifies:T27
+E16	Or:T38 Arg:E3 Arg2:E14
+E20	And:T39 Arg:E11 Arg2:E12
+E21	And:T10 Arg:T11 Arg2:E4
+E22	Negation:T40 Negates:E7
+E23	Assertion:T41 Asserted:E22
+E24	Negation:T42 Negates:E9
+E25	Modifier:T44 Modifies:T43
+E26	Assertion:T45 Asserted:E24
+E27	Assertion:T46 Asserted:E13
+E28	Procedure:T47 Name:T48
+E29	Modifier:T49 Modifies:T16
+E30	Modifier:T50 Modifies:T16
+E31	Or:T51 Arg:E30 Arg2:E29
 T1	Condition 332 351	developmental delay
 T2	Condition-Name 332 351	developmental delay
-E1	Condition:T1 Name:T2
 T7	Procedure 313 322	procedure
 T8	Procedure-Name 313 322	procedure
-E7	Procedure:T7 Name:T8
 T9	Life-Stage-And-Gender 25 33	Children
-A1	Life-Stage-And-Gender-Type T9 child
 T11	Life-Stage-And-Gender 235 243	Children
-A3	Life-Stage-And-Gender-Type T11 child
 T12	Life-Stage-And-Gender 449 457	Children
-A4	Life-Stage-And-Gender-Type T12 child
 T13	Procedure 466 474	sedation
 T14	Procedure-Name 466 474	sedation
-E13	Procedure:T13 Name:T14
 T15	Procedure 526 534	sedation
 T16	Procedure-Name 526 534	sedation
-E15	Procedure:T15 Name:T16
 T17	Condition 353 359	autism
 T18	Condition-Name 353 359	autism
-E17	Condition:T17 Name:T18
 T19	Eq-Operator 43 44	<
-A5	Eq-Operator-Value T19 LT
 T20	Eq-Temporal-Unit 48 53	years
-A6	Eq-Temporal-Unit-Value T20 year
 T21	Age 34 37	age
-E18	Age:T21 Eq-Comparison:E19
 T22	Eq-Value 38 39	4
 T23	Eq-Value 45 47	17
 T24	Eq-Comparison 38 53	4 to < 17 years
-E19	Eq-Comparison:T24 Operator:T19 Temporal-Unit:T20 Value:T23 Value2:T22 Operator2:T25
 T25	Eq-Operator 40 42	to
-A7	Eq-Operator-Value T25 BETWEEN
 T26	Procedure 105 111	dental
-E2	Procedure:T26 Name:T27
 T27	Procedure-Name 105 111	dental
 T28	Condition 249 259	conditions
-E4	Condition:T28 
-R1	Example-Of Arg1:E1 Arg2:E4	
-R2	Example-Of Arg1:E17 Arg2:E4	
 T29	Condition 361 386	challenging communication
-E6	Condition:T29 Name:T30
 T30	Condition-Name 361 386	challenging communication
-R3	Example-Of Arg1:E6 Arg2:E4	
 T31	Condition 393 408	Facial features
-E8	Condition:T31 Name:T32
 T32	Condition-Name 393 408	Facial features
 T33	Observation 421 428	wearing
-E9	Observation:T33 Name:T43
 T5	Procedure 489 510	inhalation via a mask
-E5	Procedure:T5 Name:T6
 T6	Procedure-Name 489 510	inhalation via a mask
 T34	Or 517 519	or
-E10	Or:T34 Arg:E5 Arg2:E15
-R4	Example-Of Arg1:E5 Arg2:E13	
-R5	Example-Of Arg1:E15 Arg2:E13	
 T35	Location 75 95	UBC dentistry clinic
-A8	Location-Value T35 clinic
 T36	Encounter 59 67	Arriving
-E11	Encounter:T36 Location:T35
 T37	Assertion 100 104	need
-E12	Assertion:T37 Asserted:E2
-A9	Assertion-Type-Value E12 hypothetical
 T3	Modifier 112 122	assessment
-E3	Modifier:T3 Modifies:T27
 T4	Modifier 123 133	procedures
-E14	Modifier:T4 Modifies:T27
 T38	Or 122 123	/
-E16	Or:T38 Arg:E3 Arg2:E14
 T39	And 96 99	and
-E20	And:T39 Arg:E11 Arg2:E12
 T10	And 244 248	with
-E21	And:T10 Arg:T11 Arg2:E4
 T40	Negation 269 277	prohibit
-E22	Negation:T40 Negates:E7
 T41	Assertion 265 268	may
-E23	Assertion:T41 Asserted:E22
-A2	Assertion-Type-Value E23 hypothetical
 T42	Negation 409 420	prohibiting
-E24	Negation:T42 Negates:E9
 T43	Observation-Name 421 428	wearing
 T44	Modifier 433 443	VR goggles
-E25	Modifier:T44 Modifies:T43
 T45	Assertion 409 420	prohibiting
-E26	Assertion:T45 Asserted:E24
-A10	Assertion-Type-Value E26 hypothetical
-R6	Caused-By Arg1:E24 Arg2:E8	
 T46	Assertion 458 465	needing
-E27	Assertion:T46 Asserted:E13
-A11	Assertion-Type-Value E27 hypothetical
 T47	Procedure 512 515	N2O
-E28	Procedure:T47 Name:T48
 T48	Procedure-Name 512 515	N2O
-R7	Abbrev-Of Arg1:E28 Arg2:E5	
 T49	Modifier 523 525	IM
-E29	Modifier:T49 Modifies:T16
 T50	Modifier 520 522	IV
-E30	Modifier:T50 Modifies:T16
 T51	Or 522 523	/
-E31	Or:T51 Arg:E30 Arg2:E29
+A1	Life-Stage-And-Gender-Type T9 child
+A3	Life-Stage-And-Gender-Type T11 child
+A4	Life-Stage-And-Gender-Type T12 child
+A5	Eq-Operator-Value T19 LT
+A6	Eq-Temporal-Unit-Value T20 year
+A7	Eq-Operator-Value T25 BETWEEN
+A8	Location-Value T35 clinic
+A9	Assertion-Type-Value E12 hypothetical
+A2	Assertion-Type-Value E23 hypothetical
+A10	Assertion-Type-Value E26 hypothetical
+A11	Assertion-Type-Value E27 hypothetical
+R1	Example-Of Arg1:E1 Arg2:E4
+R2	Example-Of Arg1:E17 Arg2:E4
+R3	Example-Of Arg1:E6 Arg2:E4
+R4	Example-Of Arg1:E5 Arg2:E13
+R5	Example-Of Arg1:E15 Arg2:E13
+R6	Caused-By Arg1:E24 Arg2:E8
+R7	Abbrev-Of Arg1:E28 Arg2:E5

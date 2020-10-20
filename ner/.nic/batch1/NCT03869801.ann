@@ -1,0 +1,55 @@
+T1	Procedure 34 62	laparoscopic Cholecystectomy
+T2	Procedure-Name 34 62	laparoscopic Cholecystectomy
+E1	Procedure:T1 Name:T2
+T3	Condition 356 377	psychiatric disorders
+T4	Condition-Name 356 377	psychiatric disorders
+E3	Condition:T3 Name:T4
+T5	Procedure 141 160	regional anesthesia
+T6	Procedure-Name 141 160	regional anesthesia
+E5	Procedure:T5 Name:T6
+T7	Drug 226 241	anti-coagulants
+T8	Drug-Name 226 241	anti-coagulants
+E7	Drug:T7 Name:T8
+T9	Modifier 297 302	liver
+E9	Modifier:T9 Modifies:E17
+T13	Procedure 324 335	operate PCA
+T14	Procedure-Name 324 335	operate PCA
+E13	Procedure:T13 Name:T14
+T15	Eq-Operator 76 77	-
+A1	Eq-Operator-Value T15 BETWEEN
+T16	Eq-Value 75 76	1
+T17	Eq-Value 77 78	2
+T18	Eq-Comparison 75 78	1-2
+E14	Eq-Comparison:T18 Operator:T15 Value:T16 Value2:T17
+T11	Modifier 25 33	Elective
+E2	Modifier:T11 Modifies:E1
+T12	Condition 64 67	ASA
+E4	Condition:T12 Name:T19 Stage:E14
+T19	Condition-Name 64 67	ASA
+T20	Contraindication 120 137	Contraindications
+E6	Contraindication:T20 Contraindicates:E5
+T21	Allergy 167 174	allergy
+E8	Allergy:T21 Name:E10
+T22	Drug 178 195	local anesthetics
+E10	Drug:T22 Name:T23
+T23	Drug-Name 178 195	local anesthetics
+T24	Condition 196 204	Bleeding
+E11	Condition:T24 Name:T25
+T25	Condition-Name 196 204	Bleeding
+T26	Condition 205 214	diathesis
+E12	Condition:T26 Name:T27
+T27	Condition-Name 205 214	diathesis
+T28	Severity 280 286	Severe
+A3	Severity-Value T28 severe
+T29	Modifier 287 293	kidney
+E15	Modifier:T29 Modifies:E17
+T31	Or 294 296	or
+E16	Or:T31 Arg:E15 Arg2:E9
+T10	Condition 303 310	disease
+E17	Condition:T10 Name:T30 Severity:T28
+T30	Condition-Name 303 310	disease
+T32	Assertion 311 320	Inability
+E18	Assertion:T32 Asserted:E19
+A2	Assertion-Type-Value E18 hypothetical
+T33	Negation 311 320	Inability
+E19	Negation:T33 Negates:E13

@@ -1,0 +1,109 @@
+T1	Eq-Comparison 40 50	> 18 years
+E1	Eq-Comparison:T1 Operator:T30 Value:T31 Temporal-Unit:T32
+T3	Criteria-Count 171 193	the following criteria
+E3	Criteria-Count:T3 Min-Value:E2 Criteria:E4 Criteria2:E7 Criteria3:E10 Criteria4:E11 Criteria5:E15 Criteria6:E19
+T4	Condition 218 229	nephropathy
+E4	Condition:T4 Name:T35
+T5	And 230 237	despite
+E5	And:T5 Arg:E4 Arg2:E6
+T6	Procedure 238 250	renal biopsy
+E6	Procedure:T6 Name:T36
+T7	Condition 262 282	Nephroangiosclerosis
+E7	Condition:T7 Name:T37
+T8	Modifier 290 301	predominant
+E8	Modifier:T8 Modifies:T53
+T9	Modifier 327 345	tubulointerstitial
+E9	Modifier:T9 Modifies:T38
+T10	Condition 346 357	nephropathy
+E10	Condition:T10 Name:T38
+T11	Condition 369 387	Glomerulosclerosis
+E11	Condition:T11 Name:T39
+T12	Modifier 399 408	Segmental
+E12	Modifier:T12 Modifies:T40
+T13	Or 409 412	and
+E13	Or:T13 Arg:E12 Arg2:E14
+T14	Modifier 413 418	focal
+E14	Modifier:T14 Modifies:T40
+T15	Condition 419 429	hyalinosis
+E15	Condition:T15 Name:T40
+T16	Modifier 458 464	kidney
+E16	Modifier:T16 Modifies:T42
+T17	Or 465 467	or
+E17	Or:T17 Arg:E16 Arg2:E18
+T18	Modifier 468 483	seat of minimal
+E18	Modifier:T18 Modifies:T42
+T19	Condition 484 491	lesions
+E19	Condition:T19 Name:T42 Polarity:T41
+T20	Condition 559 572	Fabry Disease
+E20	Condition:T20 Name:T43
+T21	Criteria-Count 594 616	the following criteria
+E21	Criteria-Count:T21 Min-Value:E34 Criteria:E22 Criteria2:E25 Criteria3:E26
+T22	Condition 628 646	Nephrotic syndrome
+E22	Condition:T22 Name:T46
+T23	Or 647 653	and/or
+E23	Or:T23 Arg:E22 Arg2:E25
+T24	Modifier 654 664	Glomerular
+E24	Modifier:T24 Modifies:T47
+T25	Condition 665 676	nephropathy
+E25	Condition:T25 Name:T47
+T26	Condition 721 734	nephropathies
+E26	Condition:T26 Name:T48
+T27	Modifier 745 751	kidney
+E27	Modifier:T27 Modifies:T49
+T28	Condition 752 759	lesions
+E28	Condition:T28 Name:T49
+T29	Life-Stage-And-Gender 25 30	Adult
+A1	Life-Stage-And-Gender-Type T29 adult
+T30	Eq-Operator 40 41	>
+A2	Eq-Operator-Value T30 GT
+T31	Eq-Value 42 44	18
+T32	Eq-Temporal-Unit 45 50	years
+A3	Eq-Temporal-Unit-Value T32 year
+T33	Eq-Operator 155 163	at least
+A4	Eq-Operator-Value T33 GTEQ
+T34	Eq-Value 164 167	one
+T35	Condition-Name 218 229	nephropathy
+T36	Procedure-Name 238 250	renal biopsy
+T37	Condition-Name 262 282	Nephroangiosclerosis
+T38	Condition-Name 346 357	nephropathy
+T39	Condition-Name 369 387	Glomerulosclerosis
+T40	Condition-Name 419 429	hyalinosis
+T41	Polarity 451 457	normal
+A5	Polarity-Value T41 normal
+T42	Condition-Name 484 491	lesions
+T43	Condition-Name 559 572	Fabry Disease
+T44	Eq-Operator 578 586	At least
+A6	Eq-Operator-Value T44 GTEQ
+T45	Eq-Value 587 590	one
+T46	Condition-Name 628 646	Nephrotic syndrome
+T47	Condition-Name 665 676	nephropathy
+T48	Condition-Name 721 734	nephropathies
+T49	Condition-Name 752 759	lesions
+T50	Age 51 54	old
+E29	Age:T50 Eq-Comparison:E1
+R1	Equivalent-To Arg1:E29 Arg2:T29	
+T2	Eq-Comparison 155 167	at least one
+E2	Eq-Comparison:T2 Operator:T33 Value:T34
+T51	Modifier 205 217	Undetermined
+E30	Modifier:T51 Modifies:T35
+T52	Condition 302 308	lesion
+E31	Condition:T52 Name:T53
+T53	Condition-Name 302 308	lesion
+R2	Caused-By Arg1:E31 Arg2:E7	
+T54	Procedure 546 554	screened
+E32	Procedure:T54 Name:T55 Temporality:E33
+T55	Procedure-Name 546 554	screened
+R3	Treatment-For Arg1:E32 Arg2:E20	
+T56	Eq-Comparison 533 540	already
+E33	Eq-Comparison:T56 Temporal-Period:T57
+T57	Eq-Temporal-Period 533 540	already
+A7	Eq-Temporal-Period-Value T57 past
+T58	Eq-Comparison 578 590	At least one
+E34	Eq-Comparison:T58 Operator:T44 Value:T45
+T59	Procedure 687 699	Histological
+E35	Procedure:T59 Name:T60
+T60	Procedure-Name 687 699	Histological
+R4	Found-By Arg1:E26 Arg2:E35	
+R5	Example-Of Arg1:E28 Arg2:E26	
+T61	Modifier 319 326	Chronic
+E36	Modifier:T61 Modifies:T38

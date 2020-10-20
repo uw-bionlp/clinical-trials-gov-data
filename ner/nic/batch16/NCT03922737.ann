@@ -1,104 +1,104 @@
-T1	Eq-Comparison 32 39	over 18
 E1	Eq-Comparison:T1 Operator:T2 Value:T3
+E2	Eq-Comparison:T4 Operator:T5 Value:T6 Temporal-Unit:T7
+E3	And:T8 Arg:E1 Arg2:E2
+E4	Age:T9 Eq-Comparison:E2
+E5	Eq-Comparison:T10 Temporal-Period:T11
+E6	Modifier:T12 Modifies:T14
+E7	Procedure:T13 Name:T14 Temporality:E5 Location:T15 Location2:T16 Location3:T17
+E8	Or:T18 Arg:T16 Arg2:T17
+E9	Procedure:T19 Name:T20
+E10	Temporal-Connection:T21 Arg:E9
+E11	Eq-Comparison:T23 Operator:T24 Temporal-Unit:T26 Value:T25
+E12	Age:T27 Eq-Comparison:E11
+E13	Condition:T28 Name:T29
+E14	Condition:T30 Name:T31
+E15	Or:T32 Arg:E13 Arg2:E14
+E16	Procedure:T34 Name:T35 Temporality:E17
+E17	Eq-Comparison:T36 Temporal-Period:T37
+E18	Condition:T38 Name:T39
+E19	Condition:T40 Name:T41
+E20	Condition:T42 Name:T43
+E21	Or:T44 Arg:E19 Arg2:E20
+E22	Negation:T46 Negates:T45
+E23	Condition:T47 Name:T48
+E24	Procedure:T49 Name:T50
+E25	Temporal-Connection:T51 Arg:E23 Arg2:E24
+E26	Procedure:T52 Name:T53
+E27	Temporal-Connection:T54 Arg:E23 Arg2:E26
+E28	Or:T55 Arg:E26 Arg2:E24
+E29	Assertion:T56 Asserted:E23
+T1	Eq-Comparison 32 39	over 18
 T2	Eq-Operator 32 36	over
-A1	Eq-Operator-Value T2 GT
 T3	Eq-Value 37 39	18
 T4	Eq-Comparison 44 58	under 75 years
-E2	Eq-Comparison:T4 Operator:T5 Value:T6 Temporal-Unit:T7
 T5	Eq-Operator 44 49	under
-A2	Eq-Operator-Value T5 LT
 T6	Eq-Value 50 52	75
 T7	Eq-Temporal-Unit 53 58	years
-A3	Eq-Temporal-Unit-Value T7 year
 T8	And 40 43	and
-E3	And:T8 Arg:E1 Arg2:E2
 T9	Age 62 65	age
-E4	Age:T9 Eq-Comparison:E2
 T10	Eq-Comparison 66 76	undergoing
-E5	Eq-Comparison:T10 Temporal-Period:T11
 T11	Eq-Temporal-Period 66 76	undergoing
-A4	Eq-Temporal-Period-Value T11 present
 T12	Modifier 86 93	primary
-E6	Modifier:T12 Modifies:T14
 T13	Procedure 94 113	orthopaedic surgery
-E7	Procedure:T13 Name:T14 Temporality:E5 Location:T15 Location2:T16 Location3:T17
 T14	Procedure-Name 94 113	orthopaedic surgery
 T15	Location 117 153	Thomas Jefferson University Hospital
-A5	Location-Value T15 hospital
 T16	Location 155 193	Rothman Orthopaedic Specialty Hospital
-A6	Location-Value T16 hospital
 T17	Location 197 215	Methodist Hospital
-A7	Location-Value T17 hospital
 T18	Or 194 196	or
-E8	Or:T18 Arg:T16 Arg2:T17
 T19	Procedure 589 598	operative
-E9	Procedure:T19 Name:T20
 T20	Procedure-Name 589 598	operative
 T21	Temporal-Connection 584 588	post
-E10	Temporal-Connection:T21 Arg:E9
-A8	Temporal-Connection-Type-Value E10 after
 T22	Insurance 691 713	workman's compensation
 T23	Eq-Comparison 846 871	under the age of 18 years
-E11	Eq-Comparison:T23 Operator:T24 Temporal-Unit:T26 Value:T25
 T24	Eq-Operator 846 851	under
-A9	Eq-Operator-Value T24 LT
 T25	Eq-Value 863 865	18
 T26	Eq-Temporal-Unit 866 871	years
-A10	Eq-Temporal-Unit-Value T26 year
 T27	Age 856 859	age
-E12	Age:T27 Eq-Comparison:E11
 T28	Condition 877 885	Pregnant
-E13	Condition:T28 Name:T29
 T29	Condition-Name 877 885	Pregnant
 T30	Condition 889 902	breastfeeding
-E14	Condition:T30 Name:T31
 T31	Condition-Name 889 902	breastfeeding
 T32	Or 886 888	or
-E15	Or:T32 Arg:E13 Arg2:E14
 T33	Life-Stage-And-Gender 903 908	women
-A11	Life-Stage-And-Gender-Type T33 female
-R1	If-Then Arg1:T33 Arg2:E14	
 T34	Procedure 934 941	surgery
-E16	Procedure:T34 Name:T35 Temporality:E17
 T35	Procedure-Name 934 941	surgery
 T36	Eq-Comparison 923 933	undergoing
-E17	Eq-Comparison:T36 Temporal-Period:T37
 T37	Eq-Temporal-Period 923 933	undergoing
-A12	Eq-Temporal-Period-Value T37 present
 T38	Condition 946 951	tumor
-E18	Condition:T38 Name:T39
 T39	Condition-Name 946 951	tumor
 T40	Condition 953 959	trauma
-E19	Condition:T40 Name:T41
 T41	Condition-Name 953 959	trauma
 T42	Condition 963 972	infection
-E20	Condition:T42 Name:T43
 T43	Condition-Name 963 972	infection
-R2	Treatment-For Arg1:E16 Arg2:E18	
-R3	Treatment-For Arg1:E16 Arg2:E19	
 T44	Or 960 962	or
-E21	Or:T44 Arg:E19 Arg2:E20
-R4	Treatment-For Arg1:E16 Arg2:E20	
 T45	Language 1040 1047	English
 T46	Negation 1032 1039	without
-E22	Negation:T46 Negates:T45
 T47	Condition 1132 1145	complications
-E23	Condition:T47 Name:T48
 T48	Condition-Name 1132 1145	complications
 T49	Procedure 1122 1131	operative
-E24	Procedure:T49 Name:T50
 T50	Procedure-Name 1122 1131	operative
 T51	Temporal-Connection 1118 1122	peri
-E25	Temporal-Connection:T51 Arg:E23 Arg2:E24
-A13	Temporal-Connection-Type-Value E25 during
 T52	Procedure 1105 1114	operative
-E26	Procedure:T52 Name:T53
 T53	Procedure-Name 1105 1114	operative
 T54	Temporal-Connection 1099 1104	intra
-E27	Temporal-Connection:T54 Arg:E23 Arg2:E26
-A14	Temporal-Connection-Type-Value E27 during
 T55	Or 1115 1117	or
-E28	Or:T55 Arg:E26 Arg2:E24
 T56	Assertion 1088 1098	unforeseen
-E29	Assertion:T56 Asserted:E23
+A1	Eq-Operator-Value T2 GT
+A2	Eq-Operator-Value T5 LT
+A3	Eq-Temporal-Unit-Value T7 year
+A4	Eq-Temporal-Period-Value T11 present
+A5	Location-Value T15 hospital
+A6	Location-Value T16 hospital
+A7	Location-Value T17 hospital
+A8	Temporal-Connection-Type-Value E10 after
+A9	Eq-Operator-Value T24 LT
+A10	Eq-Temporal-Unit-Value T26 year
+A11	Life-Stage-And-Gender-Type T33 female
+A12	Eq-Temporal-Period-Value T37 present
+A13	Temporal-Connection-Type-Value E25 during
+A14	Temporal-Connection-Type-Value E27 during
 A15	Assertion-Type-Value E29 hypothetical
+R1	If-Then Arg1:T33 Arg2:E14
+R2	Treatment-For Arg1:E16 Arg2:E18
+R3	Treatment-For Arg1:E16 Arg2:E19
+R4	Treatment-For Arg1:E16 Arg2:E20

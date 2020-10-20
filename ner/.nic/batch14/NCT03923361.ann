@@ -1,0 +1,244 @@
+T1	Condition 888 918	Post-traumatic stress disorder
+T2	Condition-Name 888 918	Post-traumatic stress disorder
+E1	Condition:T1 Name:T2 Temporality:E63
+T3	Condition 843 872	Obsessive compulsive disorder
+T4	Condition-Name 843 872	Obsessive compulsive disorder
+E3	Condition:T3 Name:T4 Temporality:E62
+T5	Condition 59 78	depressive disorder
+T6	Condition-Name 59 78	depressive disorder
+E5	Condition:T5 Name:T6
+T7	Condition 566 589	coronary artery disease
+T8	Condition-Name 566 589	coronary artery disease
+E7	Condition:T7 Name:T8
+T9	Condition 982 1005	Neurocognitive disorder
+T10	Condition-Name 982 1005	Neurocognitive disorder
+E9	Condition:T9 Name:T10 Temporality:E31
+T11	Condition 803 825	Substance use disorder
+T12	Condition-Name 803 825	Substance use disorder
+E11	Condition:T11 Name:T12 Temporality:E61
+T13	Condition 1021 1041	Personality disorder
+T14	Condition-Name 1021 1041	Personality disorder
+E13	Condition:T13 Name:T14
+T15	Condition 131 149	depressive episode
+T16	Condition-Name 131 149	depressive episode
+E15	Condition:T15 Name:T16 Severity:T72 Temporality:E6
+T17	Condition 82 98	bipolar disorder
+T18	Condition-Name 82 98	bipolar disorder
+E17	Condition:T17 Name:T18
+T19	Observation 311 326	Body mass index
+T20	Observation-Name 311 326	Body mass index
+E19	Observation:T19 Name:T20 Eq-Comparison:E41
+A1	Observation-Type-Value T20 vital
+T21	Condition 711 725	breast feeding
+T22	Condition-Name 711 725	breast feeding
+E21	Condition:T21 Name:T22
+T23	Condition 593 606	heart failure
+T24	Condition-Name 593 606	heart failure
+E23	Condition:T23 Name:T24
+T25	Condition 934 965	Schizophrenia-spectrum disorder
+T26	Condition-Name 934 965	Schizophrenia-spectrum disorder
+E25	Condition:T25 Name:T26
+T27	Condition 630 642	hypertension
+T28	Condition-Name 630 642	hypertension
+E27	Condition:T27 Name:T28
+T29	Condition 646 654	diabetes
+T30	Condition-Name 646 654	diabetes
+E29	Condition:T29 Name:T30
+T35	Procedure 1079 1082	ECT
+T36	Procedure-Name 1079 1082	ECT
+E35	Procedure:T35 Name:T36 Temporality:E43
+T37	Procedure 1131 1134	ECT
+T38	Procedure-Name 1131 1134	ECT
+E37	Procedure:T37 Name:T38
+T39	Eq-Operator 195 204	less than
+A2	Eq-Operator-Value T39 LT
+T41	Eq-Operator 327 328	<
+A4	Eq-Operator-Value T41 LT
+T42	Eq-Operator 402 403	>
+A5	Eq-Operator-Value T42 GT
+T45	Eq-Temporal-Unit 184 190	months
+A8	Eq-Temporal-Unit-Value T45 month
+T46	Eq-Temporal-Unit 207 212	years
+A9	Eq-Temporal-Unit-Value T46 year
+T47	Eq-Temporal-Unit 300 305	years
+A10	Eq-Temporal-Unit-Value T47 year
+T48	Eq-Temporal-Unit 1101 1107	months
+A11	Eq-Temporal-Unit-Value T48 month
+T49	Eq-Temporal-Unit 1178 1183	years
+A12	Eq-Temporal-Unit-Value T49 year
+T50	Age 25 28	Age
+E38	Age:T50 Eq-Comparison:E45
+T51	Eq-Operator 31 32	-
+A13	Eq-Operator-Value T51 BETWEEN
+T52	Eq-Value 29 31	18
+T53	Eq-Value 32 34	55
+T54	Eq-Value 182 183	2
+T55	Eq-Value 205 206	5
+T57	Eq-Value 298 299	2
+T58	Eq-Value 329 331	40
+T60	Eq-Value 404 406	10
+T61	Eq-Value 1099 1100	3
+T62	Eq-Value 1176 1177	5
+T63	Eq-Comparison 195 212	less than 5 years
+E39	Eq-Comparison:T63 Operator:T39 Temporal-Unit:T46 Value:T55
+T64	Eq-Comparison 282 305	within the past 2 years
+E40	Eq-Comparison:T64 Temporal-Unit:T47 Value:T57 Temporal-Period:T40 Operator:T138
+T65	Eq-Comparison 327 331	< 40
+E41	Eq-Comparison:T65 Operator:T41 Value:T58
+T66	Eq-Comparison 402 406	> 10
+E42	Eq-Comparison:T66 Operator:T42 Value:T60
+T67	Eq-Comparison 1083 1107	within the past 3 months
+E43	Eq-Comparison:T67 Temporal-Unit:T48 Value:T61 Temporal-Period:T43 Operator:T139
+T68	Eq-Comparison 1160 1183	within the past 5 years
+E44	Eq-Comparison:T68 Temporal-Unit:T49 Value:T62 Temporal-Period:T44 Operator:T140
+T69	Eq-Comparison 29 34	18-55
+E45	Eq-Comparison:T69 Operator:T51 Value:T52 Value2:T53
+T70	Or 79 81	or
+E2	Or:T70 Arg:E5 Arg2:E17
+T71	Severity 112 120	moderate
+A14	Severity-Value T71 moderate
+T72	Severity 124 130	severe
+A15	Severity-Value T72 severe
+T73	Or 121 123	to
+E4	Or:T73 Arg:T71 Arg2:T72
+T74	Eq-Comparison 104 111	Current
+E6	Eq-Comparison:T74 Temporal-Period:T75
+T75	Eq-Temporal-Period 104 111	Current
+A16	Eq-Temporal-Period-Value T75 present
+T76	Coreference 155 162	Episode
+E8	Coreference:T76 Refers-To:E15 Duration:E10
+T77	Eq-Comparison 172 190	more than 2 months
+E10	Eq-Comparison:T77 Operator:T78 Temporal-Unit:T45 Value:T54
+T78	Eq-Operator 172 181	more than
+A17	Eq-Operator-Value T78 GT
+T79	And 191 194	and
+E12	And:T79 Arg:E10 Arg2:E39
+T56	Drug 249 274	antidepressant medication
+E14	Drug:T56 Name:T80 Minimum-Count:E16 Temporality:E40
+T80	Drug-Name 249 274	antidepressant medication
+T81	Eq-Comparison 229 239	at least 2
+E16	Eq-Comparison:T81 Operator:T82 Value:T83
+T82	Eq-Operator 229 237	at least
+A18	Eq-Operator-Value T82 GTEQ
+T83	Eq-Value 238 239	2
+T59	Observation 337 389	16-item Quick Inventory of Depressive Symptomatology
+E18	Observation:T59 Name:T84 Eq-Comparison:E42
+T84	Observation-Name 337 389	16-item Quick Inventory of Depressive Symptomatology
+T85	Drug 452 460	propofol
+E20	Drug:T85 Name:T86
+T86	Drug-Name 452 460	propofol
+T87	Drug 464 473	midazolam
+E22	Drug:T87 Name:T88
+T88	Drug-Name 464 473	midazolam
+T89	Or 461 463	or
+E24	Or:T89 Arg:E20 Arg2:E22
+T90	Contraindication 432 448	Contraindication
+E26	Contraindication:T90 Contraindicates:E20
+T91	Drug 492 506	benzodiazepine
+E28	Drug:T91 Name:T92 Temporality:E36
+T92	Drug-Name 492 506	benzodiazepine
+T93	Drug 508 514	opioid
+E30	Drug:T93 Name:T94
+T94	Drug-Name 508 514	opioid
+T95	Drug 516 529	ACE inhibitor
+E32	Drug:T95 Name:T96
+T96	Drug-Name 516 529	ACE inhibitor
+T33	Drug 534 548	ARB medication
+E33	Drug:T33 Name:T34
+T34	Drug-Name 534 548	ARB medication
+T97	Or 531 533	or
+E34	Or:T97 Arg:E32 Arg2:E33
+T98	Eq-Comparison 479 484	Daily
+E36	Eq-Comparison:T98 Per:T99
+T100	Assertion 554 565	Symptomatic
+E46	Assertion:T100 Asserted:E7
+A20	Assertion-Type-Value E46 possible
+T101	Or 590 592	or
+E47	Or:T101 Arg:E7 Arg2:E23
+T102	Modifier 612 629	Poorly controlled
+E48	Modifier:T102 Modifies:E27
+T103	Or 643 645	or
+E49	Or:T103 Arg:E27 Arg2:E29
+T104	Condition 685 693	function
+E50	Condition:T104 Name:T105 Polarity:T109
+T105	Condition-Name 685 693	function
+T106	Modifier 679 684	liver
+E51	Modifier:T106 Modifies:T105
+T107	Modifier 669 675	kidney
+E52	Modifier:T107 Modifies:T105
+T108	Or 676 678	or
+E53	Or:T108 Arg:E52 Arg2:E51
+T109	Polarity 660 668	Abnormal
+A21	Polarity-Value T109 abnormal
+T110	Condition 699 707	Pregnant
+E54	Condition:T110 Name:T111
+T111	Condition-Name 699 707	Pregnant
+T112	Or 708 710	or
+E55	Or:T112 Arg:E54 Arg2:E21
+T113	Condition 731 753	Traumatic brain injury
+E56	Condition:T113 Name:T114
+T114	Condition-Name 731 753	Traumatic brain injury
+T115	Condition 769 779	neurologic
+E57	Condition:T115 Name:T116 Severity:T117 Temporality:E60
+T116	Condition-Name 769 779	neurologic
+T117	Severity 757 768	significant
+A22	Severity-Value T117 severe
+T118	Assertion 780 785	signs
+E58	Assertion:T118 Asserted:E57
+A23	Assertion-Type-Value E58 possible
+T119	Eq-Comparison 787 796	past year
+E60	Eq-Comparison:T119 Temporal-Period:T121 Temporal-Unit:T120
+T120	Eq-Temporal-Unit 792 796	year
+A24	Eq-Temporal-Unit-Value T120 year
+T121	Eq-Temporal-Period 787 791	past
+A25	Eq-Temporal-Period-Value T121 past
+T122	Or 754 756	or
+E59	Or:T122 Arg:E56 Arg2:E57
+T40	Eq-Temporal-Period 293 297	past
+A3	Eq-Temporal-Period-Value T40 past
+T123	Eq-Comparison 827 836	past year
+E61	Eq-Comparison:T123 Temporal-Unit:T124 Temporal-Period:T125
+T124	Eq-Temporal-Unit 832 836	year
+A26	Eq-Temporal-Unit-Value T124 year
+T125	Eq-Temporal-Period 827 831	past
+A27	Eq-Temporal-Period-Value T125 past
+T126	Eq-Comparison 874 881	current
+E62	Eq-Comparison:T126 Temporal-Period:T127
+T127	Eq-Temporal-Period 874 881	current
+A28	Eq-Temporal-Period-Value T127 present
+T128	Eq-Comparison 920 927	current
+E63	Eq-Comparison:T128 Temporal-Period:T129
+T129	Eq-Temporal-Period 920 927	current
+A29	Eq-Temporal-Period-Value T129 present
+T31	Eq-Comparison 1007 1014	current
+E31	Eq-Comparison:T31 Temporal-Period:T32
+T32	Eq-Temporal-Period 1007 1014	current
+A30	Eq-Temporal-Period-Value T32 present
+T130	Procedure 1064 1073	treatment
+E64	Procedure:T130 Temporality:E65
+T131	Eq-Comparison 1047 1054	current
+E65	Eq-Comparison:T131 Temporal-Period:T132
+T132	Eq-Temporal-Period 1047 1054	current
+A31	Eq-Temporal-Period-Value T132 present
+R1	Treatment-For Arg1:E64 Arg2:E13	
+T43	Eq-Temporal-Period 1094 1098	past
+A6	Eq-Temporal-Period-Value T43 past
+T133	Procedure 1156 1159	ECT
+E66	Procedure:T133 Name:T134 Temporality:E44
+T134	Procedure-Name 1156 1159	ECT
+T44	Eq-Temporal-Period 1171 1175	past
+A7	Eq-Temporal-Period-Value T44 past
+T135	Or 1136 1138	or
+E67	Or:T135 Arg:E37 Arg2:E66
+T136	Contraindication 1113 1126	Inappropriate
+E68	Contraindication:T136 Contraindicates:E37
+T137	Modifier 53 58	major
+E69	Modifier:T137 Modifies:T6
+T138	Eq-Operator 282 288	within
+A32	Eq-Operator-Value T138 LTEQ
+T99	Eq-Temporal-Unit 479 484	Daily
+A19	Eq-Temporal-Unit-Value T99 day
+T139	Eq-Operator 1083 1089	within
+A33	Eq-Operator-Value T139 LTEQ
+T140	Eq-Operator 1160 1166	within
+A34	Eq-Operator-Value T140 LTEQ

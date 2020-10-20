@@ -1,0 +1,197 @@
+T1	Condition 377 399	diverticulitis disease
+T2	Condition-Name 377 399	diverticulitis disease
+E1	Condition:T1 Name:T2 Severity:T61 Temporality:E39
+T3	Condition 444 464	diverticular disease
+T4	Condition-Name 444 464	diverticular disease
+E3	Condition:T3 Name:T4
+T5	Procedure 834 854	antiplatelet therapy
+T6	Procedure-Name 834 854	antiplatelet therapy
+E5	Procedure:T5 Name:T6
+T7	Condition 880 900	coagulation disorder
+T8	Condition-Name 880 900	coagulation disorder
+E7	Condition:T7 Name:T8
+T9	Condition 594 613	Renal insufficiency
+T10	Condition-Name 594 613	Renal insufficiency
+E9	Condition:T9 Name:T10
+T11	Condition 490 507	bowel obstruction
+T12	Condition-Name 490 507	bowel obstruction
+E11	Condition:T11 Name:T12
+T17	Observation 171 174	BMI
+T18	Observation-Name 171 174	BMI
+E17	Observation:T17 Name:T18 Eq-Comparison:E6
+A1	Observation-Type-Value T18 vital
+T20	Observation 902 905	INR
+T21	Observation-Name 902 905	INR
+E20	Observation:T20 Name:T21 Eq-Comparison:E34
+T22	Condition 953 965	hyponatremia
+T23	Condition-Name 953 965	hyponatremia
+E22	Condition:T22 Name:T23
+T24	Condition 985 1011	congestive cardiac failure
+T25	Condition-Name 985 1011	congestive cardiac failure
+E24	Condition:T24 Name:T25
+T26	Condition 1053 1067	breast feeding
+T27	Condition-Name 1053 1067	breast feeding
+E26	Condition:T26 Name:T27
+T28	Condition 1017 1026	Pregnancy
+T29	Condition-Name 1017 1026	Pregnancy
+E28	Condition:T28 Name:T29
+T30	Condition 1087 1108	altered mental status
+T31	Condition-Name 1087 1108	altered mental status
+E30	Condition:T30 Name:T31
+T33	Eq-Operator 583 584	≥
+A3	Eq-Operator-Value T33 GTEQ
+T34	Eq-Operator 626 627	≥
+A4	Eq-Operator-Value T34 GTEQ
+T35	Eq-Operator 703 704	≥
+A5	Eq-Operator-Value T35 GTEQ
+T36	Eq-Operator 906 907	>
+A6	Eq-Operator-Value T36 GT
+T37	Eq-Temporal-Unit 120 125	years
+A7	Eq-Temporal-Unit-Value T37 year
+T38	Eq-Temporal-Unit 1238 1244	months
+A8	Eq-Temporal-Unit-Value T38 month
+T39	Age 101 104	age
+E31	Age:T39 Eq-Comparison:E35
+T40	Eq-Operator 116 117	-
+A9	Eq-Operator-Value T40 BETWEEN
+T41	Eq-Operator 200 201	-
+A10	Eq-Operator-Value T41 BETWEEN
+T42	Eq-Value 114 116	22
+T43	Eq-Value 117 119	75
+T44	Eq-Value 196 200	18.5
+T45	Eq-Value 201 203	35
+T46	Eq-Value 628 631	1.5
+T47	Eq-Value 705 706	2
+T48	Eq-Value 907 910	1.5
+T49	Eq-Value 1236 1237	2
+T50	Eq-Comparison 626 637	≥ 1.5mg /dL
+E32	Eq-Comparison:T50 Operator:T34 Value:T46 Unit:T90 Per:T91
+T51	Eq-Comparison 703 735	≥ 2 times upper limits of normal
+E33	Eq-Comparison:T51 Operator:T35 Value:T47 Unit:T98
+T52	Eq-Comparison 906 910	>1.5
+E34	Eq-Comparison:T52 Operator:T36 Value:T48
+T53	Eq-Comparison 114 125	22-75 years
+E35	Eq-Comparison:T53 Operator:T40 Value:T42 Temporal-Unit:T37 Value2:T43
+T55	Eq-Comparison 39 46	history
+E37	Eq-Comparison:T55 Temporal-Period:T56
+T56	Eq-Temporal-Period 39 46	history
+A11	Eq-Temporal-Period-Value T56 past
+T57	Eq-Comparison 298 304	active
+E38	Eq-Comparison:T57 Temporal-Period:T58
+T58	Eq-Temporal-Period 298 304	active
+A12	Eq-Temporal-Period-Value T58 present
+T59	Eq-Comparison 351 367	previous history
+E39	Eq-Comparison:T59 Temporal-Period:T60
+T60	Eq-Temporal-Period 351 367	previous history
+A13	Eq-Temporal-Period-Value T60 past
+T63	Eq-Comparison 526 542	History of prior
+E41	Eq-Comparison:T63 Temporal-Period:T64
+T64	Eq-Temporal-Period 526 542	History of prior
+A15	Eq-Temporal-Period-Value T64 past
+T69	Eq-Comparison 778 784	taking
+E44	Eq-Comparison:T69 Temporal-Period:T70
+T70	Eq-Temporal-Period 778 784	taking
+A18	Eq-Temporal-Period-Value T70 present
+T71	Eq-Comparison 408 413	prior
+E45	Eq-Comparison:T71 Temporal-Period:T72
+T72	Eq-Temporal-Period 408 413	prior
+A19	Eq-Temporal-Period-Value T72 past
+T75	Condition 50 78	inadequate bowel preparation
+E2	Condition:T75 Name:T76 Temporality:E37
+T76	Condition-Name 50 78	inadequate bowel preparation
+T77	Observation 155 169	BodyMass Index
+E4	Observation:T77 Name:T78
+T78	Observation-Name 155 169	BodyMass Index
+A21	Observation-Type-Value T78 vital
+R1	Abbrev-Of Arg1:E17 Arg2:E4	
+T79	Eq-Comparison 196 203	18.5-35
+E6	Eq-Comparison:T79 Value:T44 Operator:T41 Value2:T45
+T32	Condition 305 331	Inflammatory Bowel Disease
+E8	Condition:T32 Name:T54 Temporality:E38
+T54	Condition-Name 305 331	Inflammatory Bowel Disease
+T61	Severity 371 376	acute
+A2	Severity-Value T61 severe
+T62	Or 400 402	or
+E10	Or:T62 Arg:E1 Arg2:E12
+T80	Procedure 425 436	colonoscopy
+E12	Procedure:T80 Name:T81 Temporality:E45
+T81	Procedure-Name 425 436	colonoscopy
+T82	Modifier 414 424	incomplete
+E14	Modifier:T82 Modifies:T81
+R2	Caused-By Arg1:E3 Arg2:E12	
+T83	Condition 510 520	strictures
+E16	Condition:T83 Name:T84
+T84	Condition-Name 510 520	strictures
+T85	Or 508 509	/
+E18	Or:T85 Arg:E11 Arg2:E16
+T73	Procedure 543 550	surgery
+E19	Procedure:T73 Name:T74 Temporality:E41
+T74	Procedure-Name 543 550	surgery
+T86	Or 560 566	and/or
+E21	Or:T86 Arg:E13 Arg2:E15
+T13	Modifier 554 559	colon
+E13	Modifier:T13 Modifies:T74
+T14	Modifier 567 573	rectum
+E15	Modifier:T14 Modifies:T74
+T15	Condition 579 582	ASA
+E23	Condition:T15 Name:T16 Stage:E25
+T16	Condition-Name 579 582	ASA
+T19	Eq-Comparison 583 588	≥ III
+E25	Eq-Comparison:T19 Operator:T33 Value:T87
+T87	Eq-Value 585 588	III
+T88	Observation 615 625	Creatinine
+E27	Observation:T88 Name:T89 Eq-Comparison:E32
+T89	Observation-Name 615 625	Creatinine
+A14	Observation-Type-Value T89 lab
+T90	Eq-Unit 631 633	mg
+T91	Eq-Unit 635 637	dL
+T65	Condition 680 693	Liver enzymes
+E29	Condition:T65 Name:T66 Polarity:T92
+T66	Condition-Name 680 693	Liver enzymes
+T92	Polarity 671 679	Abnormal
+A16	Polarity-Value T92 abnormal
+T93	Observation 695 698	ALT
+E36	Observation:T93 Name:T94 Eq-Comparison:E33
+T94	Observation-Name 695 698	ALT
+A20	Observation-Type-Value T94 lab
+T95	Observation 699 702	AST
+E40	Observation:T95 Name:T96 Eq-Comparison:E33
+T96	Observation-Name 699 702	AST
+A22	Observation-Type-Value T96 lab
+T97	Or 698 699	/
+E42	Or:T97 Arg:E36 Arg2:E40
+T98	Eq-Unit 713 735	upper limits of normal
+A23	Eq-Unit-Value T98 ref-range-normal
+T67	Drug 785 805	anticoagulants drugs
+E43	Drug:T67 Name:T68 Temporality:E44
+T68	Drug-Name 785 805	anticoagulants drugs
+T99	Drug 817 824	aspirin
+E46	Drug:T99 Name:T100
+T100	Drug-Name 817 824	aspirin
+T101	Exception 807 816	excluding
+E47	Exception:T101 From:E43 Except:E46
+T102	Modifier 829 833	dual
+E48	Modifier:T102 Modifies:T6
+T103	Or 826 828	or
+E49	Or:T103 Arg:E43 Arg2:E5
+A17	Observation-Type-Value T21 lab
+R3	Equivalent-To Arg1:E40 Arg2:E29	
+R4	Equivalent-To Arg1:E36 Arg2:E29	
+R5	Equivalent-To Arg1:E20 Arg2:E7	
+T104	Condition 938 949	hypokalemia
+E50	Condition:T104 Name:T105
+T105	Condition-Name 938 949	hypokalemia
+T106	Or 950 952	or
+E51	Or:T106 Arg:E50 Arg2:E22
+T107	Risk 930 934	risk
+E52	Risk:T107 Risk-For:E50
+T108	Or 1050 1052	or
+E53	Or:T108 Arg:E28 Arg2:E26
+T109	Study 1218 1223	study
+E54	Study:T109 Temporality:E56
+T110	Other 1186 1193	another
+E55	Other:T110 Is-Other:E54
+T111	Eq-Comparison 1231 1244	last 2 months
+E56	Eq-Comparison:T111 Temporal-Period:T112 Value:T49 Temporal-Unit:T38
+T112	Eq-Temporal-Period 1231 1235	last
+A24	Eq-Temporal-Period-Value T112 past

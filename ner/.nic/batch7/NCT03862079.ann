@@ -1,0 +1,296 @@
+T1	Eq-Comparison 42 65	day -10 pre- to day +30
+E1	Eq-Comparison:T1 Value:T61 Operator:T2 Temporal-Unit:T90 Value2:T93 Temporal-Unit2:T91
+T3	Temporal-Connection 66 70	post
+E3	Temporal-Connection:T3 Arg:E1 Arg2:E4
+A1	Temporal-Connection-Type-Value E3 after
+T4	Procedure 71 111	allogeneic hematopoietic cell transplant
+E4	Procedure:T4 Name:T94
+T5	Procedure 113 117	AHCT
+E5	Procedure:T5 Name:T95
+T6	Modifier 128 133	donor
+E6	Modifier:T6 Modifies:T95
+T7	Or 134 136	or
+E7	Or:T7 Arg:E6 Arg2:E8
+T8	Modifier 137 149	graft source
+E8	Modifier:T8 Modifies:T95
+T9	And 150 153	and
+E9	And:T9 Arg:E5 Arg2:E10
+T10	Procedure 162 182	conditioning regimen
+E10	Procedure:T10 Name:T96
+T11	Eq-Comparison 206 214	received
+E11	Eq-Comparison:T11 Temporal-Period:T97
+T12	Procedure 215 224	treatment
+E12	Procedure:T12 Temporality:E11 Duration:E20 Temporality2:E21
+T13	Drug 230 239	meropenem
+E13	Drug:T13 Name:T98
+T14	Or 240 242	or
+E14	Or:T14 Arg:E13 Arg2:E16
+T16	Drug 243 266	piperacillin-tazobactam
+E16	Drug:T16 Name:T99
+T17	Drug 268 276	pip-tazo
+E17	Drug:T17 Name:T100
+T19	Modifier 293 295	IV
+E19	Modifier:T19 
+T20	Eq-Comparison 301 327	at least 24 hours duration
+E20	Eq-Comparison:T20 Operator:T102 Value:T103 Temporal-Unit:T104
+T21	Eq-Comparison 332 343	past 7 days
+E21	Eq-Comparison:T21 Temporal-Period:T105 Value:T106 Temporal-Unit:T107
+T22	Modifier 349 359	Controlled
+E22	Modifier:T22 Modifies:T108
+T23	Condition 360 369	infection
+E23	Condition:T23 Name:T108
+T24	Condition 381 396	hemodynamically
+E24	Condition:T24 Name:T18 Stability:T109
+T25	And 404 407	and
+E25	And:T25 Arg:E26 Arg2:E24
+T26	Negation 408 411	not
+E26	Negation:T26 Negates:E27
+T27	Assertion 412 421	requiring
+E27	Assertion:T27 Asserted:E28
+A2	Assertion-Type-Value E27 hypothetical
+E28	Observation:T101 Name:T92 Eq-Comparison:E29
+T29	Eq-Comparison 445 467	more than 2 liters via
+E29	Eq-Comparison:T29 Operator:T110 Value:T111 Unit:T112
+T31	Assertion 504 511	able to
+E31	Assertion:T31 Asserted:E32
+A3	Assertion-Type-Value E31 hypothetical
+T32	Drug 517 533	oral medications
+E32	Drug:T32 Name:T114
+T33	Assertion 703 717	anticipated to
+E33	Assertion:T33 Asserted:E34
+A4	Assertion-Type-Value E33 hypothetical
+T34	Drug 751 762	antibiotics
+E34	Drug:T34 Name:T115
+T35	Drug 768 777	meropenem
+E35	Drug:T35 Name:T116
+T36	Or 778 780	or
+E36	Or:T36 Arg:E35 Arg2:E37
+T37	Drug 781 789	pip-tazo
+E37	Drug:T37 Name:T117 Duration:E39
+T39	Eq-Comparison 797 807	> 96 hours
+E39	Eq-Comparison:T39 Operator:T118 Value:T119 Temporal-Unit:T120
+T40	Temporal-Connection 808 812	post
+E40	Temporal-Connection:T40 Arg:E37 Arg2:E91
+A5	Temporal-Connection-Type-Value E40 after
+T41	Condition 855 865	infections
+E41	Condition:T41 Name:T122
+T42	Assertion 866 879	necessitating
+E42	Assertion:T42 Asserted:E43
+A6	Assertion-Type-Value E42 hypothetical
+T43	Procedure 890 899	treatment
+E43	Procedure:T43 
+T44	Eq-Comparison 921 926	prior
+E44	Eq-Comparison:T44 Temporal-Period:T123
+T45	Condition 938 947	infection
+E45	Condition:T45 Name:T124 Temporality:E44
+T47	Eq-Comparison 988 1007	greater than 2 days
+E47	Eq-Comparison:T47 Operator:T126 Value:T127 Temporal-Unit:T128
+T48	Temporal-Connection 1008 1012	from
+E48	Temporal-Connection:T48 Arg:E47 Arg2:E49
+A7	Temporal-Connection-Type-Value E48 after
+T51	Temporal-Connection 1044 1048	post
+E51	Temporal-Connection:T51 Arg:E49 Arg2:E52
+A8	Temporal-Connection-Type-Value E51 after
+T52	Procedure 1049 1053	AHCT
+E52	Procedure:T52 Name:T49
+T53	Eq-Comparison 1073 1079	active
+E53	Eq-Comparison:T53 Temporal-Period:T130
+T54	Modifier 1080 1087	enteric
+E54	Modifier:T54 Modifies:T131
+T55	Condition 1088 1098	infections
+E55	Condition:T55 Name:T131 Temporality:E53
+T56	Condition 1124 1128	GVHD
+E56	Condition:T56 Name:T133 Stage:E57 Severity:T132
+T57	Eq-Comparison 1129 1140	>= grade II
+E57	Eq-Comparison:T57 Operator:T134 Unit:T135 Value:T136
+T58	Assertion 1155 1164	unwilling
+E58	Assertion:T58 Asserted:E61
+A9	Assertion-Type-Value E58 hypothetical
+T59	Or 1165 1167	or
+E59	Or:T59 Arg:E58 Arg2:E60
+T60	Assertion 1168 1174	unable
+E60	Assertion:T60 Asserted:E88
+A10	Assertion-Type-Value E60 hypothetical
+T62	Procedure 1190 1193	FMT
+E61	Procedure:T62 Name:T137
+T63	Procedure 1198 1223	retention enema procedure
+E62	Procedure:T63 Name:T138
+T64	Eq-Comparison 1247 1255	received
+E63	Eq-Comparison:T64 Temporal-Period:T139
+T65	Procedure 1256 1265	treatment
+E64	Procedure:T65 Temporality:E63 Temporality2:E67
+T66	Study 1274 1289	investigational
+E65	Study:T66 Study-Of:E66
+T67	Drug 1290 1295	agent
+E66	Drug:T67 
+T68	Eq-Comparison 1296 1310	within 2 weeks
+E67	Eq-Comparison:T68 Operator:T140 Value:T141 Temporal-Unit:T142
+T69	Temporal-Connection 1311 1313	of
+E68	Temporal-Connection:T69 Arg:E67 Arg2:E69
+A11	Temporal-Connection-Type-Value E68 before
+T70	Study 1314 1324	enrollment
+E69	Study:T70 
+T71	Negation 1339 1357	unable to tolerate
+E70	Negation:T71 Negates:E71
+T72	Procedure 1358 1378	oral decontamination
+E71	Procedure:T72 Name:T143
+T73	Drug 1390 1398	pip-tazo
+E72	Drug:T73 Name:T144
+T74	Or 1399 1402	and
+E73	Or:T74 Arg:E72 Arg2:E74
+T75	Drug 1403 1411	nystatin
+E74	Drug:T75 Name:T145
+T76	Eq-Comparison 1419 1424	prior
+E75	Eq-Comparison:T76 Temporal-Period:T146
+T77	Allergy 1425 1432	allergy
+E76	Allergy:T77 Temporality:E75 Name:E79
+T78	Or 1433 1435	or
+E77	Or:T78 Arg:E76 Arg2:E78
+T79	Condition 1436 1447	intolerance
+E78	Condition:T79 Name:T147
+T81	Modifier 1492 1499	medical
+E80	Modifier:T81 Modifies:E83
+T82	Or 1500 1502	or
+E81	Or:T82 Arg:E80 Arg2:E82
+T83	Modifier 1503 1516	psychological
+E82	Modifier:T83 Modifies:E83
+T84	Condition 1517 1526	condition
+E83	Condition:T84 
+T85	Assertion 1569 1574	might
+E84	Assertion:T85 Asserted:T148
+A12	Assertion-Type-Value E84 hypothetical
+T86	Study 1625 1630	trial
+E85	Study:T86 Stability:T148
+T88	Risk 1652 1656	risk
+E87	Risk:T88 
+T89	Negation 1168 1174	unable
+E88	Negation:T89 Negates:E61
+T90	Eq-Temporal-Unit 42 45	day
+A13	Eq-Temporal-Unit-Value T90 day
+T91	Eq-Temporal-Unit 58 61	day
+A14	Eq-Temporal-Unit-Value T91 day
+T93	Eq-Value 63 65	30
+T94	Procedure-Name 71 111	allogeneic hematopoietic cell transplant
+T95	Procedure-Name 113 117	AHCT
+T96	Procedure-Name 162 182	conditioning regimen
+T97	Eq-Temporal-Period 206 214	received
+A16	Eq-Temporal-Period-Value T97 past
+T98	Drug-Name 230 239	meropenem
+T99	Drug-Name 243 266	piperacillin-tazobactam
+T100	Drug-Name 268 276	pip-tazo
+T102	Eq-Operator 301 309	at least
+A17	Eq-Operator-Value T102 GTEQ
+T103	Eq-Value 310 312	24
+T104	Eq-Temporal-Unit 313 318	hours
+A18	Eq-Temporal-Unit-Value T104 hour
+T105	Eq-Temporal-Period 332 336	past
+A19	Eq-Temporal-Period-Value T105 past
+T106	Eq-Value 337 338	7
+T107	Eq-Temporal-Unit 339 343	days
+A20	Eq-Temporal-Unit-Value T107 day
+T108	Condition-Name 360 369	infection
+T109	Stability 397 403	stable
+A21	Stability-Value T109 stable
+T110	Eq-Operator 445 454	more than
+A22	Eq-Operator-Value T110 GT
+T111	Eq-Value 455 456	2
+T112	Eq-Unit 457 463	liters
+T114	Drug-Name 517 533	oral medications
+T115	Drug-Name 751 762	antibiotics
+T116	Drug-Name 768 777	meropenem
+T117	Drug-Name 781 789	pip-tazo
+T118	Eq-Operator 797 798	>
+A23	Eq-Operator-Value T118 GT
+T119	Eq-Value 799 801	96
+T120	Eq-Temporal-Unit 802 807	hours
+A24	Eq-Temporal-Unit-Value T120 hour
+T121	Procedure-Name 813 824	engraftment
+T122	Condition-Name 855 865	infections
+T123	Eq-Temporal-Period 921 926	prior
+A25	Eq-Temporal-Period-Value T123 past
+T124	Condition-Name 938 947	infection
+T126	Eq-Operator 988 1000	greater than
+A26	Eq-Operator-Value T126 GT
+T127	Eq-Value 1001 1002	2
+T128	Eq-Temporal-Unit 1003 1007	days
+A27	Eq-Temporal-Unit-Value T128 day
+T130	Eq-Temporal-Period 1073 1079	active
+A28	Eq-Temporal-Period-Value T130 present
+T131	Condition-Name 1088 1098	infections
+T132	Severity 1118 1123	acute
+A29	Severity-Value T132 severe
+T133	Condition-Name 1124 1128	GVHD
+T134	Eq-Operator 1129 1131	>=
+A30	Eq-Operator-Value T134 GTEQ
+T135	Eq-Unit 1132 1137	grade
+T136	Eq-Value 1138 1140	II
+T137	Procedure-Name 1190 1193	FMT
+T138	Procedure-Name 1198 1223	retention enema procedure
+T139	Eq-Temporal-Period 1247 1255	received
+A31	Eq-Temporal-Period-Value T139 past
+T140	Eq-Operator 1296 1302	within
+A32	Eq-Operator-Value T140 LTEQ
+T141	Eq-Value 1303 1304	2
+T142	Eq-Temporal-Unit 1305 1310	weeks
+A33	Eq-Temporal-Unit-Value T142 week
+T143	Procedure-Name 1358 1378	oral decontamination
+T144	Drug-Name 1390 1398	pip-tazo
+T145	Drug-Name 1403 1411	nystatin
+T146	Eq-Temporal-Period 1419 1424	prior
+A34	Eq-Temporal-Period-Value T146 past
+T147	Condition-Name 1436 1447	intolerance
+T148	Stability 1575 1584	interfere
+A35	Stability-Value T148 change
+T149	Stability 1677 1685	confound
+A36	Stability-Value T149 change
+T61	Eq-Value 46 49	-10
+T2	Eq-Operator 55 57	to
+A15	Eq-Operator-Value T2 BETWEEN
+R1	Abbrev-Of Arg1:E5 Arg2:E4	
+R2	Using Arg1:E12 Arg2:E13	
+R3	Abbrev-Of Arg1:E17 Arg2:E16	
+T15	Modifier 278 291	intravenously
+E2	Modifier:T15 Modifies:T100
+R4	Abbrev-Of Arg1:E19 Arg2:E2	
+R5	Using Arg1:E12 Arg2:E16	
+T18	Condition-Name 381 396	hemodynamically
+R6	Equivalent-To Arg1:E24 Arg2:E23	
+T92	Observation-Name 422 441	supplemental oxygen
+T30	Modifier 468 481	nasal cannula
+E15	Modifier:T30 Modifies:T92
+T101	Observation 422 441	supplemental oxygen
+T113	Modifier 537 552	suspension form
+E30	Modifier:T113 Modifies:T114
+T150	Modifier 736 750	broad spectrum
+E89	Modifier:T150 Modifies:T115
+T151	And 763 767	with
+E90	And:T151 Arg:E34 Arg2:E35
+T38	Modifier 790 792	IV
+E38	Modifier:T38 Modifies:T117
+T152	Procedure 813 824	engraftment
+E91	Procedure:T152 Name:T121
+R7	Treatment-For Arg1:E43 Arg2:E41	
+R8	Treatment-For Arg1:E34 Arg2:E41	
+T46	Organism 953 965	mycormycetes
+E46	Organism:T46 Name:T125
+T125	Organism-Name 953 965	mycormycetes
+R9	Caused-By Arg1:E45 Arg2:E46	
+T49	Procedure-Name 1049 1053	AHCT
+T50	Procedure 1021 1043	neutrophil engraftment
+E49	Procedure:T50 Name:T129
+T129	Procedure-Name 1021 1043	neutrophil engraftment
+R10	Using Arg1:E61 Arg2:E62	
+R11	Using Arg1:E64 Arg2:E66	
+T153	Assertion 1339 1357	unable to tolerate
+E50	Assertion:T153 Asserted:E70
+A37	Assertion-Type-Value E50 hypothetical
+R12	Using Arg1:E71 Arg2:E72	
+T80	Coreference 1451 1468	these medications
+E79	Coreference:T80 Refers-To:E74 Refers-To2:E72
+R13	Caused-By Arg1:E78 Arg2:E79	
+R14	Caused-By Arg1:E70 Arg2:E76	
+R15	Caused-By Arg1:T148 Arg2:E83	
+R16	Caused-By Arg1:E87 Arg2:E83	
+T87	Or 1674 1676	or
+E86	Or:T87 Arg:E87 Arg2:T149
+R17	Caused-By Arg1:T149 Arg2:E83	

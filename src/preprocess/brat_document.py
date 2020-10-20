@@ -10,7 +10,7 @@ def pretokenize(text):
     possible_code = r'[a-zA-Z]+\d+(\.\d{1,2})?'
     is_possible_code = lambda i: re.match(possible_code, lowered[i-2:i+2])
     dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧', '±', '：', ':',
-                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙', '+', '%', 'ᵃ' }
+                 '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙', '+', '%', 'ᵃ', '*' }
     cleaned = []
     prev = ''
     prev_num = False
@@ -42,7 +42,7 @@ def pretokenize(text):
         if prev_num and ch == 'x' and foll_num:
             add_start = ' '
             add_end = ' '
-        if text[:i].endswith('Grade') and ch == 'Ⅰ':
+        if (text[:i].endswith('Grade') or text[:i].endswith('ASA')) and ch == 'Ⅰ':
             add_start = ' '
         if ch in converters:
             ch = converters.get(ch)

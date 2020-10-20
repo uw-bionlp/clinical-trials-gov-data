@@ -1,171 +1,171 @@
-T1	Family-Member 122 127	child
-E1	Family-Member:T1 
-A1	Family-Member-Type E1 child
-T2	Or 128 131	and
+E1	Family-Member:T1
 E2	Or:T2 Arg:E1 Arg2:E3
-T3	Family-Member 132 139	parents
-E3	Family-Member:T3 
-A2	Family-Member-Type E3 parent
-T4	Temporal-Connection 162 168	before
+E3	Family-Member:T3
 E4	Temporal-Connection:T4 Arg:E5
-A3	Temporal-Connection-Type-Value E4 before
-T5	Study 184 189	study
 E5	Study:T5 Study-Of:E47
-T6	Condition 241 262	neuromuscular desease
 E6	Condition:T6 Name:T47
-T7	Condition 264 267	NMD
 E7	Condition:T7 Name:T79
-T9	Procedure 289 311	neurologic examination
 E9	Procedure:T9 Name:T48
-T10	Condition 317 326	Deformity
 E10	Condition:T10 Name:T49
-T11	Modifier 330 338	thoracic
 E11	Modifier:T11 Modifies:T49
-T12	Or 339 345	and/or
 E12	Or:T12 Arg:E11 Arg2:E13
-T13	Modifier 346 358	lumbar spine
 E13	Modifier:T13 Modifies:T49
-T14	Condition 375 378	NMD
 E14	Condition:T14 Name:T8
-T15	Assertion 386 394	requires
 E15	Assertion:T15 Asserted:E16
-A4	Assertion-Type-Value E15 hypothetical
-T16	Procedure 395 416	surgical intervention
 E16	Procedure:T16 Name:T51
-T17	Study 487 492	study
 E17	Study:T17 Study-Of:E18
-T18	Procedure 493 503	procedures
-E18	Procedure:T18 
-T20	Family-Member 593 598	child
-E20	Family-Member:T20 
-A5	Family-Member-Type E20 child
-T21	Or 599 602	and
+E18	Procedure:T18
+E20	Family-Member:T20
 E21	Or:T21 Arg:E20 Arg2:E22
-T22	Family-Member 607 614	parents
-E22	Family-Member:T22 
-A6	Family-Member-Type E22 parent
-T24	Other 657 664	another
+E22	Family-Member:T22
 E24	Other:T24 Is-Other:E26
-T26	Study 674 679	study
-E26	Study:T26 
-T27	Assertion 687 690	can
+E26	Study:T26
 E27	Assertion:T27 Asserted:T52
-A7	Assertion-Type-Value E27 hypothetical
-T28	Study 721 726	study
 E28	Study:T28 Stability:T52
-T29	Observation 732 764	Left ventricle ejection fraction
 E29	Observation:T29 Name:T53 Eq-Comparison:E30
-T30	Eq-Comparison 765 778	less than 40%
 E30	Eq-Comparison:T30 Operator:T54 Value:T55 Unit:T56
-T31	Procedure 782 798	echocardiography
 E31	Procedure:T31 Name:T57
-T32	Observation 804 807	FEV
 E32	Observation:T32 Name:T58 Eq-Comparison:E33
-T33	Eq-Comparison 808 811	>20
 E33	Eq-Comparison:T33 Operator:T59 Value:T60
-T34	Observation 817 832	Life expectancy
 E34	Observation:T34 Name:T61 Eq-Comparison:E35
-T35	Eq-Comparison 833 843	<12 months
 E35	Eq-Comparison:T35 Operator:T62 Value:T63 Temporal-Unit:T64
-T36	Condition 849 868	Liver insufficiency
 E36	Condition:T36 Name:T65
-T37	Observation 870 873	ALT
 E37	Observation:T37 Name:T66 Eq-Comparison:E41
-T38	Observation 875 878	AST
 E38	Observation:T38 Name:T67 Eq-Comparison:E41
-T39	Or 879 882	and
 E39	Or:T39 Arg:E38 Arg2:E40
-T40	Observation 883 898	total bilirubin
 E40	Observation:T40 Name:T68 Eq-Comparison:E41
-T41	Eq-Comparison 899 923	twice higher than normal
 E41	Eq-Comparison:T41 Operator:T69 Unit:T70 Value:T19
-T42	Condition 929 949	Kidney insufficiency
 E42	Condition:T42 Name:T71
-T43	Observation 951 971	creatinine clearance
 E43	Observation:T43 Name:T72 Eq-Comparison:E44
-T44	Eq-Comparison 972 982	<60 ml/min
 E44	Eq-Comparison:T44 Operator:T73 Value:T74 Unit:T75 Per:T76
-T45	Condition 1001 1009	diseases
 E45	Condition:T45 Name:T77
+E46	Study:T46
+E47	Procedure:T78
+E8	Assertion:T50 Asserted:E51
+E48	Assertion:T80 Asserted:E50
+E49	Or:T81 Arg:E8 Arg2:E48
+E50	Negation:T82 Negates:E17
+E51	Negation:T83 Negates:E17
+E19	Modifier:T23 Modifies:T77
+E23	Negation:T25 Negates:E46
+E25	Assertion:T84 Asserted:E23
+T1	Family-Member 122 127	child
+T2	Or 128 131	and
+T3	Family-Member 132 139	parents
+T4	Temporal-Connection 162 168	before
+T5	Study 184 189	study
+T6	Condition 241 262	neuromuscular desease
+T7	Condition 264 267	NMD
+T9	Procedure 289 311	neurologic examination
+T10	Condition 317 326	Deformity
+T11	Modifier 330 338	thoracic
+T12	Or 339 345	and/or
+T13	Modifier 346 358	lumbar spine
+T14	Condition 375 378	NMD
+T15	Assertion 386 394	requires
+T16	Procedure 395 416	surgical intervention
+T17	Study 487 492	study
+T18	Procedure 493 503	procedures
+T20	Family-Member 593 598	child
+T21	Or 599 602	and
+T22	Family-Member 607 614	parents
+T24	Other 657 664	another
+T26	Study 674 679	study
+T27	Assertion 687 690	can
+T28	Study 721 726	study
+T29	Observation 732 764	Left ventricle ejection fraction
+T30	Eq-Comparison 765 778	less than 40%
+T31	Procedure 782 798	echocardiography
+T32	Observation 804 807	FEV
+T33	Eq-Comparison 808 811	>20
+T34	Observation 817 832	Life expectancy
+T35	Eq-Comparison 833 843	<12 months
+T36	Condition 849 868	Liver insufficiency
+T37	Observation 870 873	ALT
+T38	Observation 875 878	AST
+T39	Or 879 882	and
+T40	Observation 883 898	total bilirubin
+T41	Eq-Comparison 899 923	twice higher than normal
+T42	Condition 929 949	Kidney insufficiency
+T43	Observation 951 971	creatinine clearance
+T44	Eq-Comparison 972 982	<60 ml/min
+T45	Condition 1001 1009	diseases
 T46	Study 1056 1061	study
-E46	Study:T46 
 T47	Condition-Name 241 262	neuromuscular desease
 T48	Procedure-Name 289 311	neurologic examination
 T49	Condition-Name 317 326	Deformity
 T51	Procedure-Name 395 416	surgical intervention
 T52	Stability 691 700	influence
-A8	Stability-Value T52 change
 T53	Observation-Name 732 764	Left ventricle ejection fraction
-A9	Observation-Type-Value T53 measurement
 T54	Eq-Operator 765 774	less than
-A10	Eq-Operator-Value T54 LT
 T55	Eq-Value 775 777	40
 T56	Eq-Unit 777 778	%
 T57	Procedure-Name 782 798	echocardiography
 T58	Observation-Name 804 807	FEV
-A11	Observation-Type-Value T58 measurement
 T59	Eq-Operator 808 809	>
-A12	Eq-Operator-Value T59 GT
 T60	Eq-Value 809 811	20
 T61	Observation-Name 817 832	Life expectancy
 T62	Eq-Operator 833 834	<
-A13	Eq-Operator-Value T62 LT
 T63	Eq-Value 834 836	12
 T64	Eq-Temporal-Unit 837 843	months
-A14	Eq-Temporal-Unit-Value T64 month
 T65	Condition-Name 849 868	Liver insufficiency
 T66	Observation-Name 870 873	ALT
-A15	Observation-Type-Value T66 lab
 T67	Observation-Name 875 878	AST
-A16	Observation-Type-Value T67 lab
 T68	Observation-Name 883 898	total bilirubin
-A17	Observation-Type-Value T68 lab
 T69	Eq-Operator 905 916	higher than
-A18	Eq-Operator-Value T69 GT
 T70	Eq-Unit 917 923	normal
-A19	Eq-Unit-Value T70 ref-range-normal
 T71	Condition-Name 929 949	Kidney insufficiency
 T72	Observation-Name 951 971	creatinine clearance
-A20	Observation-Type-Value T72 lab
 T73	Eq-Operator 972 973	<
-A21	Eq-Operator-Value T73 LT
 T74	Eq-Value 973 975	60
 T75	Eq-Unit 976 978	ml
 T76	Eq-Temporal-Unit 979 982	min
-A22	Eq-Temporal-Unit-Value T76 minute
 T77	Condition-Name 1001 1009	diseases
 T78	Procedure 190 200	procedures
-E47	Procedure:T78 
 T79	Condition-Name 264 267	NMD
-R1	Abbrev-Of Arg1:E7 Arg2:E6	
-R2	Found-By Arg1:E7 Arg2:E9	
 T8	Condition-Name 375 378	NMD
-R3	Caused-By Arg1:E10 Arg2:E14	
-R4	Treatment-For Arg1:E16 Arg2:E10	
 T50	Assertion 450 463	unwillingness
-E8	Assertion:T50 Asserted:E51
-A23	Assertion-Type-Value E8 hypothetical
 T80	Assertion 467 476	inability
-E48	Assertion:T80 Asserted:E50
-A24	Assertion-Type-Value E48 hypothetical
 T81	Or 464 466	or
-E49	Or:T81 Arg:E8 Arg2:E48
 T82	Negation 467 476	inability
-E50	Negation:T82 Negates:E17
 T83	Negation 450 463	unwillingness
-E51	Negation:T83 Negates:E17
-R5	Caused-By Arg1:T52 Arg2:E26	
-R6	Found-By Arg1:E29 Arg2:E31	
 T19	Eq-Value 899 904	twice
-R7	Equivalent-To Arg1:E37 Arg2:E36	
-R8	Equivalent-To Arg1:E38 Arg2:E36	
-R9	Equivalent-To Arg1:E40 Arg2:E36	
-R10	Equivalent-To Arg1:E43 Arg2:E42	
 T23	Modifier 989 1000	Concomitant
-E19	Modifier:T23 Modifies:T77
 T25	Negation 1017 1025	preclude
-E23	Negation:T25 Negates:E46
 T84	Assertion 1017 1025	preclude
-E25	Assertion:T84 Asserted:E23
+A1	Family-Member-Type E1 child
+A2	Family-Member-Type E3 parent
+A3	Temporal-Connection-Type-Value E4 before
+A4	Assertion-Type-Value E15 hypothetical
+A5	Family-Member-Type E20 child
+A6	Family-Member-Type E22 parent
+A7	Assertion-Type-Value E27 hypothetical
+A8	Stability-Value T52 change
+A9	Observation-Type-Value T53 measurement
+A10	Eq-Operator-Value T54 LT
+A11	Observation-Type-Value T58 measurement
+A12	Eq-Operator-Value T59 GT
+A13	Eq-Operator-Value T62 LT
+A14	Eq-Temporal-Unit-Value T64 month
+A15	Observation-Type-Value T66 lab
+A16	Observation-Type-Value T67 lab
+A17	Observation-Type-Value T68 lab
+A18	Eq-Operator-Value T69 GT
+A19	Eq-Unit-Value T70 ref-range-normal
+A20	Observation-Type-Value T72 lab
+A21	Eq-Operator-Value T73 LT
+A22	Eq-Temporal-Unit-Value T76 minute
+A23	Assertion-Type-Value E8 hypothetical
+A24	Assertion-Type-Value E48 hypothetical
 A25	Assertion-Type-Value E25 hypothetical
-R11	Caused-By Arg1:E23 Arg2:E45	
+R1	Abbrev-Of Arg1:E7 Arg2:E6
+R2	Found-By Arg1:E7 Arg2:E9
+R3	Caused-By Arg1:E10 Arg2:E14
+R4	Treatment-For Arg1:E16 Arg2:E10
+R5	Caused-By Arg1:T52 Arg2:E26
+R6	Found-By Arg1:E29 Arg2:E31
+R7	Equivalent-To Arg1:E37 Arg2:E36
+R8	Equivalent-To Arg1:E38 Arg2:E36
+R9	Equivalent-To Arg1:E40 Arg2:E36
+R10	Equivalent-To Arg1:E43 Arg2:E42
+R11	Caused-By Arg1:E23 Arg2:E45

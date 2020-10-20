@@ -1,26 +1,26 @@
+E1	Eq-Comparison:T4 Operator:T1 Temporal-Unit:T2 Value:T3
+E2	Observation:T5 Name:T6 Duration:E1 Location:T7
+E3	Assertion:T8 Asserted:E2
+E4	Observation:T9 Name:T10
+E5	Procedure:T11 Name:T12
+E6	Negation:T13 Negates:E4
+E7	Assertion:T14 Asserted:E4
 T1	Eq-Operator 76 85	less than
-A1	Eq-Operator-Value T1 LT
 T2	Eq-Temporal-Unit 89 96	minutes
-A2	Eq-Temporal-Unit-Value T2 minute
 T3	Eq-Value 86 88	40
 T4	Eq-Comparison 76 96	less than 40 minutes
-E1	Eq-Comparison:T4 Operator:T1 Temporal-Unit:T2 Value:T3
 T5	Observation 97 103	travel
-E2	Observation:T5 Name:T6 Duration:E1 Location:T7
 T6	Observation-Name 97 103	travel
 T7	Location 111 128	assessment center
 T8	Assertion 66 75	Requiring
-E3	Assertion:T8 Asserted:E2
-A3	Assertion-Type-Value E3 hypothetical
 T9	Observation 171 180	coming in
-E4	Observation:T9 Name:T10
 T10	Observation-Name 171 180	coming in
 T11	Procedure 185 195	assessment
-E5	Procedure:T11 Name:T12
 T12	Procedure-Name 185 195	assessment
-R1	Using Arg1:E4 Arg2:E5	
 T13	Negation 154 167	Impossibility
-E6	Negation:T13 Negates:E4
 T14	Assertion 154 167	Impossibility
-E7	Assertion:T14 Asserted:E4
+A1	Eq-Operator-Value T1 LT
+A2	Eq-Temporal-Unit-Value T2 minute
+A3	Assertion-Type-Value E3 hypothetical
 A4	Assertion-Type-Value E7 hypothetical
+R1	Using Arg1:E4 Arg2:E5

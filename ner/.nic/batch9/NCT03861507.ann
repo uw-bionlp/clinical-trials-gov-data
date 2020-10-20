@@ -1,0 +1,50 @@
+T1	Procedure 210 223	brachytherapy
+T2	Procedure-Name 210 223	brachytherapy
+E1	Procedure:T1 Name:T2
+T3	Life-Stage-And-Gender 25 29	Male
+A1	Life-Stage-And-Gender-Type T3 male
+T4	Procedure 295 307	radiotherapy
+T5	Procedure-Name 295 307	radiotherapy
+E4	Procedure:T4 Name:T5 Temporality:E14
+T6	Condition 315 323	prostate
+T7	Condition-Name 315 323	prostate
+E6	Condition:T6 Name:T7
+T8	Eq-Temporal-Unit 39 44	years
+A2	Eq-Temporal-Unit-Value T8 year
+T9	Age 31 35	aged
+E7	Age:T9 Eq-Comparison:E2
+T10	Eq-Value 36 38	18
+T11	Eq-Comparison 36 53	18 years or older
+E2	Eq-Comparison:T11 Value:T10 Temporal-Unit:T8 Operator:T12
+T12	Eq-Operator 45 53	or older
+A3	Eq-Operator-Value T12 GTEQ
+T13	Condition 133 139	cancer
+E3	Condition:T13 Name:T14
+T14	Condition-Name 133 139	cancer
+T15	Modifier 124 132	prostate
+E5	Modifier:T15 Modifies:T14
+T16	Procedure 99 113	Pathologically
+E8	Procedure:T16 Name:T17
+T17	Procedure-Name 99 113	Pathologically
+R1	Found-By Arg1:E3 Arg2:E8	
+T18	Procedure 152 158	biopsy
+E9	Procedure:T18 Name:T19 Temporality:E10
+T19	Procedure-Name 152 158	biopsy
+T20	Eq-Comparison 143 151	previous
+E10	Eq-Comparison:T20 Temporal-Period:T21
+T21	Eq-Temporal-Period 143 151	previous
+A4	Eq-Temporal-Period-Value T21 past
+R2	Found-By Arg1:E3 Arg2:E9	
+T22	Modifier 195 209	high-dose-rate
+E11	Modifier:T22 Modifies:T2
+T23	Procedure 228 237	treatment
+E12	Procedure:T23 
+R3	Using Arg1:E12 Arg2:E1	
+T24	Assertion 164 176	Suitable for
+E13	Assertion:T24 Asserted:E1
+A5	Assertion-Type-Value E13 hypothetical
+T25	Eq-Comparison 286 294	Previous
+E14	Eq-Comparison:T25 Temporal-Period:T26
+T26	Eq-Temporal-Period 286 294	Previous
+A6	Eq-Temporal-Period-Value T26 past
+R4	Treatment-For Arg1:E4 Arg2:E6	

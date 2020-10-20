@@ -1,21 +1,21 @@
-T1	Condition 42 50	fracture
 E1	Condition:T1 Name:T2
+E2	Condition:T3 Name:T4
+E3	Condition:T5 Name:T6
+E4	Condition:T7 Name:T8
+E5	Condition:T9 Name:T10
+E6	Modifier:T11 Modifies:T2
+E7	Modifier:T12 Modifies:T6
+T1	Condition 42 50	fracture
 T2	Condition-Name 42 50	fracture
 T3	Condition 65 71	trauma
-E2	Condition:T3 Name:T4
 T4	Condition-Name 65 71	trauma
-R1	Caused-By Arg1:E1 Arg2:E2	
 T5	Condition 115 123	fracture
-E3	Condition:T5 Name:T6
 T6	Condition-Name 115 123	fracture
 T7	Condition 138 143	tumor
-E4	Condition:T7 Name:T8
 T8	Condition-Name 138 143	tumor
-R2	Caused-By Arg1:E3 Arg2:E4	
 T9	Condition 145 154	infection
-E5	Condition:T9 Name:T10
 T10	Condition-Name 145 154	infection
 T11	Modifier 29 41	tibial shaft
-E6	Modifier:T11 Modifies:T2
 T12	Modifier 102 114	tibial shaft
-E7	Modifier:T12 Modifies:T6
+R1	Caused-By Arg1:E1 Arg2:E2
+R2	Caused-By Arg1:E3 Arg2:E4

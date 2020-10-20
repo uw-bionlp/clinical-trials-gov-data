@@ -1,0 +1,40 @@
+T1	Condition 73 82	pregnancy
+T2	Condition-Name 73 82	pregnancy
+E1	Condition:T1 Name:T2
+T7	Condition 55 67	HBV-infected
+T8	Condition-Name 55 67	HBV-infected
+E7	Condition:T7 Name:T8 Temporality:E10
+T9	Condition 201 214	HBV infection
+T10	Condition-Name 201 214	HBV infection
+E9	Condition:T9 Name:T10
+T11	Family-Member 29 35	father
+E2	Family-Member:T11 Has:E7
+T12	Family-Member 45 51	mother
+E3	Family-Member:T12 Has:E7
+T13	Or 36 44	or (and)
+E4	Or:T13 Arg:E2 Arg2:E3
+T5	Birth 155 160	birth
+E5	Birth:T5 
+A3	Family-Member-Type E2 father
+A4	Family-Member-Type E3 mother
+T6	Temporal-Connection 69 72	pre
+E8	Temporal-Connection:T6 Arg:E7 Arg2:E1
+A5	Temporal-Connection-Type-Value E8 before
+T16	Eq-Comparison 86 93	present
+E10	Eq-Comparison:T16 Temporal-Period:T17
+T17	Eq-Temporal-Period 86 93	present
+A6	Eq-Temporal-Period-Value T17 present
+T18	Or 83 85	or
+E11	Or:T18 Arg:E8 Arg2:E10
+T3	Family-Member 101 109	Children
+E12	Family-Member:T3 Has:E6
+A1	Family-Member-Type E12 child
+T14	Immunization 113 123	vaccinated
+E6	Immunization:T14 Name:T15
+T15	Immunization-Name 129 148	hepatitis B vaccine
+T19	Temporal-Connection 149 154	after
+E13	Temporal-Connection:T19 Arg:E6 Arg2:E5
+A7	Temporal-Connection-Type-Value E13 after
+T4	Family-Member 187 195	Children
+E14	Family-Member:T4 Has:E9
+A2	Family-Member-Type E14 child

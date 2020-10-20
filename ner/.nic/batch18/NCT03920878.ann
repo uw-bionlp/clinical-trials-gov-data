@@ -1,0 +1,88 @@
+T1	Procedure 216 243	panretinal photocoagulation
+T2	Procedure-Name 216 243	panretinal photocoagulation
+E1	Procedure:T1 Name:T2 Temporality:E10
+T3	Condition 68 90	diabetic macular edema
+T4	Condition-Name 68 90	diabetic macular edema
+E3	Condition:T3 Name:T4
+T5	Condition 49 66	diabetes mellitus
+T6	Condition-Name 49 66	diabetes mellitus
+E5	Condition:T5 Name:T6
+T7	Procedure 146 162	cataract surgery
+T8	Procedure-Name 146 162	cataract surgery
+E7	Procedure:T7 Name:T8 Temporality:E8
+T9	Condition 116 125	cataracts
+T10	Condition-Name 116 125	cataracts
+E9	Condition:T9 Name:T10 Severity:T29
+T11	Life-Stage-And-Gender 25 31	Adults
+A1	Life-Stage-And-Gender-Type T11 adult
+T12	Condition 274 290	ocular condition
+T13	Condition-Name 274 290	ocular condition
+E12	Condition:T12 Name:T13
+T14	Procedure 245 248	PRP
+T15	Procedure-Name 245 248	PRP
+E14	Procedure:T14 Name:T15 Temporality:E19
+T16	Condition 438 458	neovascular glaucoma
+T17	Condition-Name 438 458	neovascular glaucoma
+E16	Condition:T16 Name:T17
+T18	Eq-Temporal-Unit 261 267	months
+A2	Eq-Temporal-Unit-Value T18 month
+T19	Age 37 40	age
+E17	Age:T19 Eq-Comparison:E2
+T20	Eq-Value 41 43	18
+T21	Eq-Value 259 260	4
+T22	Eq-Comparison 396 403	history
+E18	Eq-Comparison:T22 Temporal-Period:T23
+T23	Eq-Temporal-Period 396 403	history
+A3	Eq-Temporal-Period-Value T23 past
+T24	Eq-Comparison 253 267	prior 4 months
+E19	Eq-Comparison:T24 Temporal-Period:T25 Value:T21 Temporal-Unit:T18
+T25	Eq-Temporal-Period 253 258	prior
+A4	Eq-Temporal-Period-Value T25 past
+T26	Eq-Comparison 32 43	over age 18
+E2	Eq-Comparison:T26 Operator:T27 Value:T20
+T27	Eq-Operator 32 36	over
+A5	Eq-Operator-Value T27 GT
+T28	And 44 48	with
+E4	And:T28 Arg:E17 Arg2:E5
+T29	Severity 104 115	significant
+A6	Severity-Value T29 severe
+T30	And 91 94	and
+E6	And:T30 Arg:E3 Arg2:E9
+T31	Eq-Comparison 126 134	planning
+E8	Eq-Comparison:T31 Temporal-Period:T32
+T32	Eq-Temporal-Period 126 134	planning
+A7	Eq-Temporal-Period-Value T32 future
+T33	Eq-Comparison 206 215	undergone
+E10	Eq-Comparison:T33 Temporal-Period:T34
+T34	Eq-Temporal-Period 206 215	undergone
+A8	Eq-Temporal-Period-Value T34 past
+R1	Abbrev-Of Arg1:E14 Arg2:E1	
+T35	Or 268 270	or
+E11	Or:T35 Arg:E14 Arg2:E12
+T36	Condition 303 311	cataract
+E13	Condition:T36 Name:T37
+T37	Condition-Name 303 311	cataract
+T38	Condition 316 319	DME
+E15	Condition:T38 Name:T39
+T39	Condition-Name 316 319	DME
+T40	Or 312 315	and
+E20	Or:T40 Arg:E13 Arg2:E15
+T41	Exception 292 302	other than
+E21	Exception:T41 From:E12 Except:E13 Except2:E15
+T42	Condition 339 352	visual acuity
+E22	Condition:T42 Name:T43 Stability:T46
+T43	Condition-Name 339 352	visual acuity
+T44	Study 370 375	study
+E23	Study:T44 
+T45	Temporal-Connection 353 359	during
+E24	Temporal-Connection:T45 Arg:E22 Arg2:E23
+A9	Temporal-Connection-Type-Value E24 during
+T46	Stability 332 338	affect
+A10	Stability-Value T46 change
+T47	Assertion 326 331	might
+E25	Assertion:T47 Asserted:T46
+A11	Assertion-Type-Value E25 hypothetical
+R2	Caused-By Arg1:T46 Arg2:E12	
+T48	Condition 407 417	vitrectomy
+E26	Condition:T48 Name:T49 Temporality:E18
+T49	Condition-Name 407 417	vitrectomy

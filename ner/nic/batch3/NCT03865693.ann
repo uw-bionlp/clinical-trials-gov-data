@@ -1,72 +1,68 @@
-T1	Condition 25 29	Burn
 E1	Condition:T1 Name:T27
-T2	Modifier 51 61	neuropatic
 E2	Modifier:T2 Modifies:T29
-T3	Condition 62 66	pain
 E3	Condition:T3 Name:T29 Severity:T28
-T4	Eq-Comparison 73 83	at least 5
 E4	Eq-Comparison:T4 Operator:T30 Value:T31
-T5	Observation 124 127	NRS
 E5	Observation:T5 Name:T32
-T6	Condition 154 168	cardiac arrest
 E6	Condition:T6 Name:T33 Temporality:E7
-T7	Eq-Comparison 169 176	history
 E7	Eq-Comparison:T7 Temporal-Period:T34
-T8	Eq-Comparison 182 189	history
 E8	Eq-Comparison:T8 Temporal-Period:T35
-T9	Condition 193 210	neurologi disease
 E9	Condition:T9 Name:T36 Temporality:E8
-T10	Or 211 213	or
 E10	Or:T10 Arg:E9 Arg2:E12
-T11	Modifier 214 219	brain
 E11	Modifier:T11 Modifies:T37
-T12	Procedure 220 227	surgery
 E12	Procedure:T12 Name:T37
-T13	Condition 242 255	heart disease
 E13	Condition:T13 Name:T39 Stability:T38
-T14	Or 256 258	or
 E14	Or:T14 Arg:E13 Arg2:E15
-T15	Procedure 273 290	cardiac pacemaker
 E15	Procedure:T15 Name:T40
-T16	Condition 296 300	pain
 E16	Condition:T16 Name:T41
-T17	Other 316 321	other
 E17	Other:T17 Is-Other:E18
-T18	Condition 322 328	causes
-E18	Condition:T18 
-T19	Condition 337 359	neuromuscular diseases
+E18	Condition:T18
 E19	Condition:T19 Name:T42
-T20	Condition 365 385	psychiatric disorder
 E20	Condition:T20 Name:T43
-T21	Condition 391 408	diabetes mellitus
 E21	Condition:T21 Name:T44
-T22	Condition 423 437	renal function
 E22	Condition:T22 Name:T45 Polarity:T50
-T23	Contraindication 443 459	contraindication
 E23	Contraindication:T23 Contraindicates:E24
-T24	Procedure 464 467	MRI
 E24	Procedure:T24 Name:T46
-T25	Or 469 471	or
 E25	Or:T25 Arg:E24 Arg2:E26
-T26	Condition 472 481	pregnancy
 E26	Condition:T26 Name:T47
+E27	Observation:T48 Name:T49 Eq-Comparison:E4
+T1	Condition 25 29	Burn
+T2	Modifier 51 61	neuropatic
+T3	Condition 62 66	pain
+T4	Eq-Comparison 73 83	at least 5
+T5	Observation 124 127	NRS
+T6	Condition 154 168	cardiac arrest
+T7	Eq-Comparison 169 176	history
+T8	Eq-Comparison 182 189	history
+T9	Condition 193 210	neurologi disease
+T10	Or 211 213	or
+T11	Modifier 214 219	brain
+T12	Procedure 220 227	surgery
+T13	Condition 242 255	heart disease
+T14	Or 256 258	or
+T15	Procedure 273 290	cardiac pacemaker
+T16	Condition 296 300	pain
+T17	Other 316 321	other
+T18	Condition 322 328	causes
+T19	Condition 337 359	neuromuscular diseases
+T20	Condition 365 385	psychiatric disorder
+T21	Condition 391 408	diabetes mellitus
+T22	Condition 423 437	renal function
+T23	Contraindication 443 459	contraindication
+T24	Procedure 464 467	MRI
+T25	Or 469 471	or
+T26	Condition 472 481	pregnancy
 T27	Condition-Name 25 29	Burn
 T28	Severity 44 50	severe
-A1	Severity-Value T28 severe
 T29	Condition-Name 62 66	pain
 T30	Eq-Operator 73 81	at least
-A2	Eq-Operator-Value T30 GTEQ
 T31	Eq-Value 82 83	5
 T32	Observation-Name 124 127	NRS
 T33	Condition-Name 154 168	cardiac arrest
 T34	Eq-Temporal-Period 169 176	history
-A3	Eq-Temporal-Period-Value T34 past
 T35	Eq-Temporal-Period 182 189	history
-A4	Eq-Temporal-Period-Value T35 past
 T36	Condition-Name 193 210	neurologi disease
 T37	Procedure-Name 220 227	surgery
 T38	Stability 233 241	unstable
-A5	Stability-Value T38 change
 T39	Condition-Name 242 255	heart disease
 T40	Procedure-Name 273 290	cardiac pacemaker
 T41	Condition-Name 296 300	pain
@@ -77,12 +73,16 @@ T45	Condition-Name 423 437	renal function
 T46	Procedure-Name 464 467	MRI
 T47	Condition-Name 472 481	pregnancy
 T48	Observation 91 122	10-point numerical rating scale
-E27	Observation:T48 Name:T49 Eq-Comparison:E4
 T49	Observation-Name 91 122	10-point numerical rating scale
-A6	Observation-Type-Value T49 measurement
-R1	Abbrev-Of Arg1:E5 Arg2:E27	
-R2	Equivalent-To Arg1:E27 Arg2:E3	
-R3	Caused-By Arg1:E16 Arg2:E18	
-R4	Example-Of Arg1:E19 Arg2:E18	
 T50	Polarity 414 422	abnormal
+A1	Severity-Value T28 severe
+A2	Eq-Operator-Value T30 GTEQ
+A3	Eq-Temporal-Period-Value T34 past
+A4	Eq-Temporal-Period-Value T35 past
+A5	Stability-Value T38 change
+A6	Observation-Type-Value T49 measurement
 A7	Polarity-Value T50 abnormal
+R1	Abbrev-Of Arg1:E5 Arg2:E27
+R2	Equivalent-To Arg1:E27 Arg2:E3
+R3	Caused-By Arg1:E16 Arg2:E18
+R4	Example-Of Arg1:E19 Arg2:E18

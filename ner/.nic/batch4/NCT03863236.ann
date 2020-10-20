@@ -1,0 +1,213 @@
+T1	Eq-Comparison 25 42	18 years or older
+E1	Eq-Comparison:T1 Value:T64 Temporal-Unit:T65 Operator:T66
+T2	Modifier 48 61	Primary colon
+E2	Modifier:T2 Modifies:T67
+T3	Condition 62 76	adenocarcinoma
+E3	Condition:T3 Name:T67
+T4	Procedure 82 100	Curative operation
+E4	Procedure:T4 Name:T68
+T5	Assertion 104 112	possible
+E5	Assertion:T5 Asserted:E4
+A1	Assertion-Type-Value E5 hypothetical
+T6	Observation 132 147	life expectancy
+E6	Observation:T6 Name:T69 Eq-Comparison:E7
+T7	Eq-Comparison 151 169	at least 12 months
+E7	Eq-Comparison:T7 Operator:T70 Value:T71 Temporal-Unit:T72
+T9	Modifier 273 288	Recurrent colon
+E9	Modifier:T9 Modifies:T73
+T10	Condition 289 303	adenocarcinoma
+E10	Condition:T10 Name:T73
+T11	Condition 309 327	Metastatic disease
+E11	Condition:T11 Name:T74
+T12	Condition 333 339	Cancer
+E12	Condition:T12 Name:T75
+T13	Assertion 345 357	will require
+E13	Assertion:T13 Asserted:E14
+A2	Assertion-Type-Value E13 hypothetical
+T14	Procedure 358 378	multiorgan resection
+E14	Procedure:T14 Name:T76
+T15	Condition 384 392	Pregnant
+E15	Condition:T15 Name:T77
+T16	Or 393 395	or
+E16	Or:T16 Arg:E15 Arg2:E17
+T17	Assertion 396 405	suspected
+E17	Assertion:T17 Asserted:E18
+A3	Assertion-Type-Value E17 possible
+T18	Condition 406 415	pregnancy
+E18	Condition:T18 Name:T78
+T19	Condition 436 452	comorbid illness
+E19	Condition:T19 Name:T79
+T20	Or 453 455	or
+E20	Or:T20 Arg:E19 Arg2:E21
+T21	Condition 456 465	condition
+E21	Condition:T21 
+T22	Assertion 471 476	would
+E22	Assertion:T22 Asserted:E23
+A4	Assertion-Type-Value E22 hypothetical
+T23	Negation 477 485	preclude
+E23	Negation:T23 Negates:E24
+T24	Procedure 497 504	surgery
+E24	Procedure:T24 Name:T80
+T25	Condition 506 509	ASA
+E25	Condition:T25 Name:T81 Stage:E8
+T26	Modifier 533 543	concurrent
+E26	Modifier:T26 Modifies:T84
+T27	Or 544 546	or
+E27	Or:T27 Arg:E26 Arg2:E28
+T28	Eq-Comparison 547 555	previous
+E28	Eq-Comparison:T28 Temporal-Period:T83
+T29	Condition 556 572	malignant tumors
+E29	Condition:T29 Name:T84 Temporality:E28 Temporality2:E30
+T30	Eq-Comparison 573 587	within 5 years
+E30	Eq-Comparison:T30 Operator:T85 Value:T86 Temporal-Unit:T87
+T31	Temporal-Connection 588 594	before
+E31	Temporal-Connection:T31 Arg:E30 Arg2:E32
+A5	Temporal-Connection-Type-Value E31 before
+T32	Study 599 604	study
+E32	Study:T32 
+T34	Eq-Comparison 629 639	undergoing
+E34	Eq-Comparison:T34 Temporal-Period:T88
+T35	Procedure 650 660	procedures
+E35	Procedure:T35 Temporality:E34
+T36	Procedure 666 674	Dialysis
+E36	Procedure:T36 Name:T89
+T37	Condition 680 697	Liver dysfunction
+E37	Condition:T37 Name:T90
+T38	Condition 699 709	child pugh
+E38	Condition:T38 Name:T91 Stage:E39
+T41	Observation 726 729	NRS
+E41	Observation:T41 Name:T92 Eq-Comparison:E42 Eq-Comparison2:E44
+T42	Eq-Comparison 730 738	score <2
+E42	Eq-Comparison:T42 Unit:T93 Operator:T94 Value:T95
+T43	Or 739 741	or
+E43	Or:T43 Arg:E42 Arg2:E44
+T44	Eq-Comparison 742 744	>5
+E44	Eq-Comparison:T44 Operator:T96 Value:T97
+T45	Observation 750 753	BMI
+E45	Observation:T45 Name:T98 Eq-Comparison:E46
+T46	Eq-Comparison 754 764	under 18.5
+E46	Eq-Comparison:T46 Operator:T99 Value:T100
+T47	Observation 770 781	Weight loss
+E47	Observation:T47 Name:T101 Eq-Comparison:E48 Temporality:E49
+T48	Eq-Comparison 782 793	15% or more
+E48	Eq-Comparison:T48 Value:T102 Unit:T103 Operator:T104
+T49	Eq-Comparison 794 807	past 6 months
+E49	Eq-Comparison:T49 Temporal-Period:T105 Value:T106 Temporal-Unit:T107
+T50	Observation 813 826	Serum albumin
+E50	Observation:T50 Name:T108 Eq-Comparison:E51
+T51	Eq-Comparison 827 839	less than 30
+E51	Eq-Comparison:T51 Operator:T109 Value:T110
+T52	Negation 840 847	without
+E52	Negation:T52 Negates:E56
+T53	Modifier 848 853	liver
+E53	Modifier:T53 Modifies:T111
+T54	Or 854 856	or
+E54	Or:T54 Arg:E53 Arg2:E55
+T55	Modifier 857 862	renal
+E55	Modifier:T55 Modifies:T111
+T56	Condition 863 874	dysfunction
+E56	Condition:T56 Name:T111
+T57	Condition 880 900	Chronic malnutrition
+E57	Condition:T57 Name:T112
+T58	Condition 902 922	short bowel syndrome
+E58	Condition:T58 Name:T113
+T59	Eq-Comparison 924 932	previous
+E59	Eq-Comparison:T59 Temporal-Period:T114
+T60	Condition 933 944	gastrectomy
+E60	Condition:T60 Name:T115 Temporality:E59
+T61	Condition 946 968	pancreatic dysfunction
+E61	Condition:T61 Name:T116 Temporality:E59
+T64	Eq-Value 25 27	18
+T65	Eq-Temporal-Unit 28 33	years
+A7	Eq-Temporal-Unit-Value T65 year
+T66	Eq-Operator 34 42	or older
+A8	Eq-Operator-Value T66 GTEQ
+T67	Condition-Name 62 76	adenocarcinoma
+T68	Procedure-Name 82 100	Curative operation
+T69	Observation-Name 132 147	life expectancy
+T70	Eq-Operator 151 159	at least
+A9	Eq-Operator-Value T70 GTEQ
+T71	Eq-Value 160 162	12
+T72	Eq-Temporal-Unit 163 169	months
+A10	Eq-Temporal-Unit-Value T72 month
+T73	Condition-Name 289 303	adenocarcinoma
+T74	Condition-Name 309 327	Metastatic disease
+T75	Condition-Name 333 339	Cancer
+T76	Procedure-Name 358 378	multiorgan resection
+T77	Condition-Name 384 392	Pregnant
+T78	Condition-Name 406 415	pregnancy
+T79	Condition-Name 436 452	comorbid illness
+T80	Procedure-Name 497 504	surgery
+T81	Condition-Name 506 509	ASA
+T83	Eq-Temporal-Period 547 555	previous
+A12	Eq-Temporal-Period-Value T83 past
+T84	Condition-Name 556 572	malignant tumors
+T85	Eq-Operator 573 579	within
+A13	Eq-Operator-Value T85 LTEQ
+T86	Eq-Value 580 581	5
+T87	Eq-Temporal-Unit 582 587	years
+A14	Eq-Temporal-Unit-Value T87 year
+T88	Eq-Temporal-Period 629 639	undergoing
+A15	Eq-Temporal-Period-Value T88 present
+T89	Procedure-Name 666 674	Dialysis
+T90	Condition-Name 680 697	Liver dysfunction
+T91	Condition-Name 699 709	child pugh
+T92	Observation-Name 726 729	NRS
+A16	Observation-Type-Value T92 clinical-score
+T93	Eq-Unit 730 735	score
+T94	Eq-Operator 736 737	<
+A17	Eq-Operator-Value T94 LT
+T95	Eq-Value 737 738	2
+T96	Eq-Operator 742 743	>
+A18	Eq-Operator-Value T96 GT
+T97	Eq-Value 743 744	5
+T98	Observation-Name 750 753	BMI
+A19	Observation-Type-Value T98 vital
+T99	Eq-Operator 754 759	under
+A20	Eq-Operator-Value T99 LT
+T100	Eq-Value 760 764	18.5
+T101	Observation-Name 770 781	Weight loss
+A21	Observation-Type-Value T101 measurement
+T102	Eq-Value 782 784	15
+T103	Eq-Unit 784 785	%
+T104	Eq-Operator 786 793	or more
+A22	Eq-Operator-Value T104 GTEQ
+T105	Eq-Temporal-Period 794 798	past
+A23	Eq-Temporal-Period-Value T105 past
+T106	Eq-Value 799 800	6
+T107	Eq-Temporal-Unit 801 807	months
+A24	Eq-Temporal-Unit-Value T107 month
+T108	Observation-Name 813 826	Serum albumin
+A25	Observation-Type-Value T108 lab
+T109	Eq-Operator 827 836	less than
+A26	Eq-Operator-Value T109 LT
+T110	Eq-Value 837 839	30
+T111	Condition-Name 863 874	dysfunction
+T112	Condition-Name 880 900	Chronic malnutrition
+T113	Condition-Name 902 922	short bowel syndrome
+T114	Eq-Temporal-Period 924 932	previous
+A27	Eq-Temporal-Period-Value T114 past
+T115	Condition-Name 933 944	gastrectomy
+T116	Condition-Name 946 968	pancreatic dysfunction
+T117	Condition-Name 974 990	Language barrier
+T118	Age 37 42	older
+E64	Age:T118 Eq-Comparison:E1
+R1	Treatment-For Arg1:E14 Arg2:E12	
+R2	Caused-By Arg1:E23 Arg2:E21	
+R3	Caused-By Arg1:E23 Arg2:E19	
+T8	Eq-Comparison 510 511	5
+E8	Eq-Comparison:T8 Value:T119
+T119	Eq-Value 510 511	5
+R4	Example-Of Arg1:E25 Arg2:E21	
+T33	Modifier 640 649	emergency
+E33	Modifier:T33 Modifies:E35
+T39	Eq-Comparison 710 720	B or worse
+E39	Eq-Comparison:T39 Value:T40 Operator:T82
+T40	Eq-Value 710 711	B
+T82	Eq-Operator 712 720	or worse
+A11	Eq-Operator-Value T82 LTEQ
+R5	Example-Of Arg1:E58 Arg2:E57	
+R6	Example-Of Arg1:E60 Arg2:E57	
+R7	Example-Of Arg1:E61 Arg2:E57	
+T120	Condition 974 990	Language barrier
+E40	Condition:T120 Name:T117

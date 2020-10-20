@@ -1,151 +1,140 @@
-T1	Condition 25 32	Healthy
 E1	Condition:T1 Name:T60
-T2	Or 38 41	and
 E2	Or:T2 Arg:T61 Arg2:T62
-T3	Age 59 63	aged
 E3	Age:T3 Eq-Comparison:E4
-T4	Eq-Comparison 64 75	19~45 years
 E4	Eq-Comparison:T4 Temporal-Unit:T64 Operator:T63 Value:T97 Value2:T98
-T5	Temporal-Connection 76 87	at the time
 E5	Temporal-Connection:T5 Arg:E3 Arg2:E6
-A1	Temporal-Connection-Type-Value E5 during
-T6	Study 91 100	screening
-E6	Study:T6 
-T7	Eq-Comparison 125 158	between 50kg (inclusive) and 90kg
+E6	Study:T6
 E7	Eq-Comparison:T7 Operator:T65 Value:T66 Unit:T67 Value2:T68 Unit2:T69
-T9	Observation 185 200	body mass index
 E9	Observation:T9 Name:T70
-T10	Observation 202 205	BMI
 E10	Observation:T10 Name:T71 Eq-Comparison:E11
-T11	Eq-Comparison 210 219	17.1～25.8
 E11	Eq-Comparison:T11 Operator:T72 Value:T101 Value2:T102
-T12	Observation 264 286	fasting plasma glucose
 E12	Observation:T12 Name:T73
-T13	Observation 288 291	FPG
 E13	Observation:T13 Name:T74 Eq-Comparison:E14
-T14	Eq-Comparison 296 307	70～110mg/dL
 E14	Eq-Comparison:T14 Value:T75 Value2:T104 Unit2:T105 Per:T76
-T15	Temporal-Connection 330 341	at the time
 E15	Temporal-Connection:T15 Arg:E13 Arg2:E16
-A2	Temporal-Connection-Type-Value E15 during
-T16	Study 345 354	screening
-E16	Study:T16 
-T19	Eq-Comparison 628 635	history
+E16	Study:T16
 E19	Eq-Comparison:T19 Temporal-Period:T77
-T20	Allergy 639 648	allergies
 E20	Allergy:T20 Temporality:E19
-T21	Drug 659 663	drug
-E21	Drug:T21 
-T22	Allergy 664 673	allergies
+E21	Drug:T21
 E22	Allergy:T22 Name:E21
-T23	Drug 675 682	aspirin
 E23	Drug:T23 Name:T78
-T24	Drug 684 695	antibiotics
 E24	Drug:T24 Name:T79
-T25	Or 704 706	or
 E25	Or:T25 Arg:E20 Arg2:E27
-T26	Other 707 712	other
 E26	Other:T26 Is-Other:E27
-T27	Allergy 736 745	allergies
 E27	Allergy:T27 Severity:T80
-T28	Condition 763 771	diseases
 E28	Condition:T28 Name:T81
-T29	Modifier 779 784	liver
 E29	Modifier:T29 Modifies:T81
-T30	Condition 808 823	hepatitis virus
 E30	Condition:T30 Name:T82
-T31	Modifier 826 832	kidney
 E31	Modifier:T31 Modifies:T81
-T34	Modifier 872 886	nervous system
 E34	Modifier:T34 Modifies:T81
-T35	Or 887 889	or
 E35	Or:T35 Arg:E34 Arg2:E36
-T36	Modifier 890 903	immune system
 E36	Modifier:T36 Modifies:T81
-T37	Eq-Comparison 926 933	history
 E37	Eq-Comparison:T37 Temporal-Period:T87
-T38	Modifier 937 947	hematology
 E38	Modifier:T38 Modifies:T88
-T39	Or 947 948	/
 E39	Or:T39 Arg:E38 Arg2:E40
-T40	Modifier 948 956	oncology
 E40	Modifier:T40 Modifies:T88
-T41	Modifier 958 968	psychiatry
 E41	Modifier:T41 Modifies:T88
-T42	Or 969 971	or
 E42	Or:T42 Arg:E41 Arg2:E43
-T43	Modifier 972 986	cardiovascular
 E43	Modifier:T43 Modifies:T88
-T44	Condition 987 995	diseases
 E44	Condition:T44 Name:T88 Temporality:E37
-T45	Eq-Comparison 1023 1030	history
 E45	Eq-Comparison:T45 Temporal-Period:T89
-T46	Condition 1034 1059	gastrointestinal diseases
 E46	Condition:T46 Name:T90 Temporality:E45
-T47	Condition 1061 1067	ulcers
 E47	Condition:T47 Name:T91
-T48	Condition 1069 1084	Crohn's disease
 E48	Condition:T48 Name:T92
-T49	Or 1092 1094	or
 E49	Or:T49 Arg:E46 Arg2:E50
-T50	Procedure 1095 1102	surgery
 E50	Procedure:T50 Name:T93
-T51	Exception 1104 1113	excluding
 E51	Exception:T51 From:E50 Except:E52 Except2:E54
-T52	Procedure 1121 1133	appendectomy
 E52	Procedure:T52 Name:T94
-T53	Or 1134 1136	or
 E53	Or:T53 Arg:E52 Arg2:E54
-T54	Procedure 1137 1150	hernia repair
 E54	Procedure:T54 Name:T95
-T56	Assertion 1174 1177	can
 E56	Assertion:T56 Asserted:T96
-A4	Assertion-Type-Value E56 hypothetical
-T57	Condition 1189 1199	absorption
 E57	Condition:T57 Name:T33 Stability:T96
-T58	Study 1207 1212	study
 E58	Study:T58 Study-Of:E59
+E59	Drug:T59
+E60	Observation:T99 Name:T100 Eq-Comparison:E7
+E8	And:T8 Arg:E60 Arg2:E9
+E17	Modifier:T17 Modifies:T81
+E18	Modifier:T18 Modifies:T81
+E32	Modifier:T32 Modifies:T94
+T1	Condition 25 32	Healthy
+T2	Or 38 41	and
+T3	Age 59 63	aged
+T4	Eq-Comparison 64 75	19~45 years
+T5	Temporal-Connection 76 87	at the time
+T6	Study 91 100	screening
+T7	Eq-Comparison 125 158	between 50kg (inclusive) and 90kg
+T9	Observation 185 200	body mass index
+T10	Observation 202 205	BMI
+T11	Eq-Comparison 210 219	17.1～25.8
+T12	Observation 264 286	fasting plasma glucose
+T13	Observation 288 291	FPG
+T14	Eq-Comparison 296 307	70～110mg/dL
+T15	Temporal-Connection 330 341	at the time
+T16	Study 345 354	screening
+T19	Eq-Comparison 628 635	history
+T20	Allergy 639 648	allergies
+T21	Drug 659 663	drug
+T22	Allergy 664 673	allergies
+T23	Drug 675 682	aspirin
+T24	Drug 684 695	antibiotics
+T25	Or 704 706	or
+T26	Other 707 712	other
+T27	Allergy 736 745	allergies
+T28	Condition 763 771	diseases
+T29	Modifier 779 784	liver
+T30	Condition 808 823	hepatitis virus
+T31	Modifier 826 832	kidney
+T34	Modifier 872 886	nervous system
+T35	Or 887 889	or
+T36	Modifier 890 903	immune system
+T37	Eq-Comparison 926 933	history
+T38	Modifier 937 947	hematology
+T39	Or 947 948	/
+T40	Modifier 948 956	oncology
+T41	Modifier 958 968	psychiatry
+T42	Or 969 971	or
+T43	Modifier 972 986	cardiovascular
+T44	Condition 987 995	diseases
+T45	Eq-Comparison 1023 1030	history
+T46	Condition 1034 1059	gastrointestinal diseases
+T47	Condition 1061 1067	ulcers
+T48	Condition 1069 1084	Crohn's disease
+T49	Or 1092 1094	or
+T50	Procedure 1095 1102	surgery
+T51	Exception 1104 1113	excluding
+T52	Procedure 1121 1133	appendectomy
+T53	Or 1134 1136	or
+T54	Procedure 1137 1150	hernia repair
+T56	Assertion 1174 1177	can
+T57	Condition 1189 1199	absorption
+T58	Study 1207 1212	study
 T59	Drug 1213 1217	drug
-E59	Drug:T59 
 T60	Condition-Name 25 32	Healthy
 T61	Life-Stage-And-Gender 33 37	male
-A5	Life-Stage-And-Gender-Type T61 male
 T62	Life-Stage-And-Gender 42 48	female
-A6	Life-Stage-And-Gender-Type T62 female
 T63	Eq-Operator 66 67	~
-A7	Eq-Operator-Value T63 BETWEEN
 T64	Eq-Temporal-Unit 70 75	years
-A8	Eq-Temporal-Unit-Value T64 year
 T65	Eq-Operator 125 132	between
-A9	Eq-Operator-Value T65 BETWEEN
 T66	Eq-Value 133 135	50
 T67	Eq-Unit 135 137	kg
 T68	Eq-Value 154 156	90
 T69	Eq-Unit 156 158	kg
 T70	Observation-Name 185 200	body mass index
-A10	Observation-Type-Value T70 vital
 T71	Observation-Name 202 205	BMI
-A11	Observation-Type-Value T71 vital
 T72	Eq-Operator 214 215	～
-A12	Eq-Operator-Value T72 BETWEEN
 T73	Observation-Name 264 286	fasting plasma glucose
-A13	Observation-Type-Value T73 lab
 T74	Observation-Name 288 291	FPG
 T75	Eq-Value 296 298	70
 T76	Eq-Unit 305 307	dL
 T77	Eq-Temporal-Period 628 635	history
-A14	Eq-Temporal-Period-Value T77 past
 T78	Drug-Name 675 682	aspirin
 T79	Drug-Name 684 695	antibiotics
 T80	Severity 724 735	significant
-A15	Severity-Value T80 severe
 T81	Condition-Name 763 771	diseases
 T82	Condition-Name 808 823	hepatitis virus
 T87	Eq-Temporal-Period 926 933	history
-A16	Eq-Temporal-Period-Value T87 past
 T88	Condition-Name 987 995	diseases
 T89	Eq-Temporal-Period 1023 1030	history
-A17	Eq-Temporal-Period-Value T89 past
 T90	Condition-Name 1034 1059	gastrointestinal diseases
 T91	Condition-Name 1061 1067	ulcers
 T92	Condition-Name 1069 1084	Crohn's disease
@@ -153,36 +142,47 @@ T93	Procedure-Name 1095 1102	surgery
 T94	Procedure-Name 1121 1133	appendectomy
 T95	Procedure-Name 1137 1150	hernia repair
 T96	Stability 1178 1184	affect
-A18	Stability-Value T96 change
 T97	Eq-Value 64 66	19
 T98	Eq-Value 67 69	45
 T99	Observation 116 124	weighing
-E60	Observation:T99 Name:T100 Eq-Comparison:E7
 T100	Observation-Name 116 124	weighing
-A19	Observation-Type-Value T100 vital
 T8	And 172 175	and
-E8	And:T8 Arg:E60 Arg2:E9
-R1	Abbrev-Of Arg1:E10 Arg2:E9	
 T101	Eq-Value 210 214	17.1
 T102	Eq-Value 215 219	25.8
-R2	Abbrev-Of Arg1:E13 Arg2:E12	
 T103	Eq-Operator 298 299	～
-A20	Eq-Operator-Value T103 BETWEEN
 T104	Eq-Value 299 302	110
 T105	Eq-Unit 302 304	mg
-R3	Example-Of Arg1:E22 Arg2:E20	
-R4	Example-Of Arg1:E23 Arg2:E21	
-R5	Example-Of Arg1:E24 Arg2:E21	
-R6	Example-Of Arg1:E30 Arg2:E28	
 T17	Modifier 834 852	respiratory system
-E17	Modifier:T17 Modifies:T81
 T18	Modifier 854 870	endocrine system
-E18	Modifier:T18 Modifies:T81
-R7	Example-Of Arg1:E47 Arg2:E46	
-R8	Example-Of Arg1:E48 Arg2:E46	
 T32	Modifier 1114 1120	simple
-E32	Modifier:T32 Modifies:T94
 T33	Condition-Name 1189 1199	absorption
-R9	Using Arg1:E57 Arg2:E59	
-R10	Caused-By Arg1:T96 Arg2:E50	
-R11	Caused-By Arg1:T96 Arg2:E46	
+A1	Temporal-Connection-Type-Value E5 during
+A2	Temporal-Connection-Type-Value E15 during
+A4	Assertion-Type-Value E56 hypothetical
+A5	Life-Stage-And-Gender-Type T61 male
+A6	Life-Stage-And-Gender-Type T62 female
+A7	Eq-Operator-Value T63 BETWEEN
+A8	Eq-Temporal-Unit-Value T64 year
+A9	Eq-Operator-Value T65 BETWEEN
+A10	Observation-Type-Value T70 vital
+A11	Observation-Type-Value T71 vital
+A12	Eq-Operator-Value T72 BETWEEN
+A13	Observation-Type-Value T73 lab
+A14	Eq-Temporal-Period-Value T77 past
+A15	Severity-Value T80 severe
+A16	Eq-Temporal-Period-Value T87 past
+A17	Eq-Temporal-Period-Value T89 past
+A18	Stability-Value T96 change
+A19	Observation-Type-Value T100 vital
+A20	Eq-Operator-Value T103 BETWEEN
+R1	Abbrev-Of Arg1:E10 Arg2:E9
+R2	Abbrev-Of Arg1:E13 Arg2:E12
+R3	Example-Of Arg1:E22 Arg2:E20
+R4	Example-Of Arg1:E23 Arg2:E21
+R5	Example-Of Arg1:E24 Arg2:E21
+R6	Example-Of Arg1:E30 Arg2:E28
+R7	Example-Of Arg1:E47 Arg2:E46
+R8	Example-Of Arg1:E48 Arg2:E46
+R9	Using Arg1:E57 Arg2:E59
+R10	Caused-By Arg1:T96 Arg2:E50
+R11	Caused-By Arg1:T96 Arg2:E46

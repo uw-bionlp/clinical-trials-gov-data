@@ -1,42 +1,42 @@
+E2	Condition:T2 Name:T3
+E1	Procedure:T4 Name:T5 Temporality:E3 Location:T11
+E3	Eq-Comparison:T9 Temporal-Period:T10
+E4	Or:T13 Arg:T11 Arg2:T12
+E5	Eq-Comparison:T14 Temporal-Unit:T6 Operator:T15 Value:T7
+E6	Age:T16 Eq-Comparison:E5
+E7	Observation:T17 Name:T18 Eq-Comparison:E8
+E8	Eq-Comparison:T19 Operator:T20 Value:T8 Unit:T21 Per:T22
+E9	Condition:T23 Name:T24
+E10	Negation:T25 Negates:T1
 T1	Language 263 269	danish
 T2	Condition 40 44	COPD
 T3	Condition-Name 40 44	COPD
-E2	Condition:T2 Name:T3
 T6	Eq-Temporal-Unit 154 159	years
-A1	Eq-Temporal-Unit-Value T6 year
 T7	Eq-Value 151 153	18
 T8	Eq-Value 207 210	200
 T4	Procedure 75 94	lung rehabilitating
-E1	Procedure:T4 Name:T5 Temporality:E3 Location:T11
 T5	Procedure-Name 75 94	lung rehabilitating
 T9	Eq-Comparison 67 74	ongoing
-E3	Eq-Comparison:T9 Temporal-Period:T10
 T10	Eq-Temporal-Period 67 74	ongoing
-A2	Eq-Temporal-Period-Value T10 present
 T11	Location 108 116	Hvidovre
-A3	Location-Value T11 hospital
 T12	Location 121 140	Bispebjerg Hospital
-A4	Location-Value T12 hospital
 T13	Or 117 120	and
-E4	Or:T13 Arg:T11 Arg2:T12
 T14	Eq-Comparison 146 159	over 18 years
-E5	Eq-Comparison:T14 Temporal-Unit:T6 Operator:T15 Value:T7
 T15	Eq-Operator 146 150	over
-A5	Eq-Operator-Value T15 GT
 T16	Age 154 159	years
-E6	Age:T16 Eq-Comparison:E5
 T17	Observation 185 201	Plasma creatinin
-E7	Observation:T17 Name:T18 Eq-Comparison:E8
 T18	Observation-Name 185 201	Plasma creatinin
-A6	Observation-Type-Value T18 lab
 T19	Eq-Comparison 202 219	over 200 mikrog/l
-E8	Eq-Comparison:T19 Operator:T20 Value:T8 Unit:T21 Per:T22
 T20	Eq-Operator 202 206	over
-A7	Eq-Operator-Value T20 GT
 T21	Eq-Unit 211 217	mikrog
 T22	Eq-Unit 218 219	l
 T23	Condition 225 233	dementia
-E9	Condition:T23 Name:T24
 T24	Condition-Name 225 233	dementia
 T25	Negation 239 245	unable
-E10	Negation:T25 Negates:T1
+A1	Eq-Temporal-Unit-Value T6 year
+A2	Eq-Temporal-Period-Value T10 present
+A3	Location-Value T11 hospital
+A4	Location-Value T12 hospital
+A5	Eq-Operator-Value T15 GT
+A6	Observation-Type-Value T18 lab
+A7	Eq-Operator-Value T20 GT

@@ -1,0 +1,115 @@
+T2	Procedure 699 724	intra-articular injection
+T3	Procedure-Name 699 724	intra-articular injection
+E2	Procedure:T2 Name:T3 Temporality:E27
+T4	Condition 845 866	coagulation disorders
+T5	Condition-Name 845 866	coagulation disorders
+E4	Condition:T4 Name:T5
+T6	Condition 868 888	inflammatory disease
+T7	Condition-Name 868 888	inflammatory disease
+E6	Condition:T6 Name:T7
+T8	Condition 615 624	arthritis
+T9	Condition-Name 615 624	arthritis
+E8	Condition:T8 Name:T9
+T10	Condition 826 835	pregnancy
+T11	Condition-Name 826 835	pregnancy
+E10	Condition:T10 Name:T11
+T12	Eq-Temporal-Unit 40 45	years
+A1	Eq-Temporal-Unit-Value T12 year
+T13	Eq-Temporal-Unit 764 770	months
+A2	Eq-Temporal-Unit-Value T13 month
+T14	Age 32 36	aged
+E11	Age:T14 Eq-Comparison:E1
+T15	Eq-Value 37 39	45
+T16	Eq-Value 762 763	6
+T17	Eq-Comparison 37 53	45 years or more
+E1	Eq-Comparison:T17 Operator:T18 Temporal-Unit:T12 Value:T15
+T18	Eq-Operator 46 53	or more
+A3	Eq-Operator-Value T18 GTEQ
+T19	Condition 88 90	OA
+E3	Condition:T19 Name:T20
+T20	Condition-Name 88 90	OA
+T1	Eq-Comparison 195 210	grade II or III
+E5	Eq-Comparison:T1 Unit:T21 Value:T22 Value2:T23
+T21	Eq-Unit 195 200	grade
+T22	Eq-Value 201 203	II
+T23	Eq-Value 207 210	III
+T24	Condition 211 213	OA
+E7	Condition:T24 Name:T25 Stage:E5
+T25	Condition-Name 211 213	OA
+T26	Procedure 221 244	radiologicalexamination
+E9	Procedure:T26 Name:T27
+T27	Procedure-Name 221 244	radiologicalexamination
+T28	Temporal-Connection 214 220	during
+E12	Temporal-Connection:T28 Arg:E7 Arg2:E9
+A4	Temporal-Connection-Type-Value E12 during
+T29	Condition 359 369	tenderness
+E13	Condition:T29 Name:T31
+T30	Modifier 377 403	medial tibial plateau area
+E14	Modifier:T30 Modifies:T31
+T31	Condition-Name 359 369	tenderness
+T32	Condition 426 430	pain
+E15	Condition:T32 Name:T33
+T33	Condition-Name 426 430	pain
+T34	Modifier 434 454	one side of the knee
+E16	Modifier:T34 Modifies:T33
+T35	Condition 508 523	spinal stenosis
+E17	Condition:T35 Name:T36 Temporality:E33
+T36	Condition-Name 508 523	spinal stenosis
+T37	Condition 537 555	neurologic disease
+E18	Condition:T37 Name:T38
+T38	Condition-Name 537 555	neurologic disease
+T39	Procedure 570 590	physical examination
+E19	Procedure:T39 Name:T40 Temporality:E34
+T40	Procedure-Name 570 590	physical examination
+R1	Found-By Arg1:E18 Arg2:E19	
+T41	Modifier 626 638	inflammatory
+E20	Modifier:T41 Modifies:T9
+T42	Modifier 642 651	metabolic
+E21	Modifier:T42 Modifies:T9
+T43	Or 639 641	or
+E22	Or:T43 Arg:E20 Arg2:E21
+T44	Or 592 594	or
+E23	Or:T44 Arg2:E8 Arg:E18
+T45	Procedure 674 695	surgical intervention
+E24	Procedure:T45 Name:T46
+T46	Procedure-Name 674 695	surgical intervention
+T47	Or 696 698	or
+E25	Or:T47 Arg:E24 Arg2:E2
+T48	Modifier 732 745	affected knee
+E26	Modifier:T48 Modifies:T3
+T49	Eq-Comparison 753 770	previous 6 months
+E27	Eq-Comparison:T49 Temporal-Unit:T13 Value:T16 Temporal-Period:T50
+T51	Procedure 800 825	extracorporeal shock wave
+E28	Procedure:T51 Name:T52
+T52	Procedure-Name 800 825	extracorporeal shock wave
+T53	Contraindication 780 796	contraindication
+E29	Contraindication:T53 Contraindicates:E28
+R2	Example-Of Arg1:E10 Arg2:E29	
+T54	Condition 837 843	cancer
+E30	Condition:T54 Name:T55
+T55	Condition-Name 837 843	cancer
+R3	Example-Of Arg1:E30 Arg2:E29	
+R4	Example-Of Arg1:E4 Arg2:E29	
+R5	Example-Of Arg1:E6 Arg2:E29	
+T56	Procedure 890 900	pacemakers
+E31	Procedure:T56 Name:T57
+T57	Procedure-Name 890 900	pacemakers
+R6	Example-Of Arg1:E31 Arg2:E29	
+T58	Procedure 911 930	electronic implants
+E32	Procedure:T58 Name:T59
+T59	Procedure-Name 911 930	electronic implants
+R7	Example-Of Arg1:E32 Arg2:E29	
+T50	Eq-Temporal-Period 753 761	previous
+A5	Eq-Temporal-Period-Value T50 past
+T60	Eq-Comparison 497 504	history
+E33	Eq-Comparison:T60 Temporal-Period:T61
+T61	Eq-Temporal-Period 497 504	history
+A6	Eq-Temporal-Period-Value T61 past
+T62	Eq-Comparison 559 566	history
+E34	Eq-Comparison:T62 Temporal-Period:T63
+T63	Eq-Temporal-Period 559 566	history
+A7	Eq-Temporal-Period-Value T63 past
+T64	Modifier 83 87	knee
+E35	Modifier:T64 Modifies:T20
+T65	Other 905 910	other
+E36	Other:T65 Is-Other:E32

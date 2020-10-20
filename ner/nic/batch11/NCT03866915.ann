@@ -1,71 +1,71 @@
+E1	Condition:T1 Name:T2
+E4	Age:T7 Eq-Comparison:E15
+E2	Age:T11 Eq-Comparison:E5
+E5	Eq-Comparison:T12 Operator:T13 Temporal-Unit:T8 Value:T14
+E6	Procedure:T5 Name:T15 Temporality:E7
+E7	Eq-Comparison:T16 Temporal-Period:T17
+E8	Provider:T18 Type:T19
+E9	Temporal-Connection:T20 Arg2:E11 Arg:E10
+E10	Coreference:T22 Refers-To:E6
+E11	Encounter:T23 Provider:E8
+E12	And:T24 Arg:E6 Arg2:E11
+E13	Eq-Comparison:T25 Temporal-Period:T26
+E14	Procedure:T27 Name:T28 Temporality:E13
+E15	Eq-Comparison:T29 Temporal-Unit:T6 Operator:T30 Value:T9
+E3	Observation:T3 Name:T4 Stability:T36
+E16	Negation:T10 Negates:E3
+E17	And:T31 Arg:E1 Arg2:E16
+E18	Observation:T21 Name:T32
+E19	Negation:T33 Negates:E18
+E20	Assertion:T34 Asserted:E19
+E21	Modifier:T35 Modifies:T4
+E22	Assertion:T37 Asserted:E16
+E23	Modifier:T38 Modifies:T2
 T1	Condition 347 359	Claudication
 T2	Condition-Name 347 359	Claudication
-E1	Condition:T1 Name:T2
 T6	Eq-Temporal-Unit 233 238	years
-A2	Eq-Temporal-Unit-Value T6 year
 T7	Age 242 245	age
-E4	Age:T7 Eq-Comparison:E15
 T9	Eq-Value 230 232	18
 T11	Age 38 43	older
-E2	Age:T11 Eq-Comparison:E5
 T12	Eq-Comparison 38 57	older than 18 years
-E5	Eq-Comparison:T12 Operator:T13 Temporal-Unit:T8 Value:T14
 T13	Eq-Operator 38 48	older than
-A3	Eq-Operator-Value T13 GT
 T14	Eq-Value 49 51	18
 T8	Eq-Temporal-Unit 52 57	years
-A4	Eq-Temporal-Unit-Value T8 year
 T5	Procedure 78 85	surgery
-E6	Procedure:T5 Name:T15 Temporality:E7
 T15	Procedure-Name 78 85	surgery
 T16	Eq-Comparison 58 68	undergoing
-E7	Eq-Comparison:T16 Temporal-Period:T17
 T17	Eq-Temporal-Period 58 68	undergoing
-A1	Eq-Temporal-Period-Value T17 present
 T18	Provider 123 140	anesthesiologists
-E8	Provider:T18 Type:T19
 T19	Provider-Type 123 140	anesthesiologists
 T20	Temporal-Connection 101 104	pre
-E9	Temporal-Connection:T20 Arg2:E11 Arg:E10
 T22	Coreference 104 113	operative
-E10	Coreference:T22 Refers-To:E6
 T23	Encounter 114 119	visit
-E11	Encounter:T23 Provider:E8
 T24	And 86 90	that
-E12	And:T24 Arg:E6 Arg2:E11
 T25	Eq-Comparison 176 186	undergoing
-E13	Eq-Comparison:T25 Temporal-Period:T26
 T26	Eq-Temporal-Period 176 186	undergoing
-A6	Eq-Temporal-Period-Value T26 present
 T27	Procedure 187 204	emergency surgery
-E14	Procedure:T27 Name:T28 Temporality:E13
 T28	Procedure-Name 187 204	emergency surgery
 T29	Eq-Comparison 224 238	under 18 years
-E15	Eq-Comparison:T29 Temporal-Unit:T6 Operator:T30 Value:T9
 T30	Eq-Operator 224 229	under
-A7	Eq-Operator-Value T30 LT
 T3	Observation 422 437	pace of walking
-E3	Observation:T3 Name:T4 Stability:T36
 T4	Observation-Name 422 437	pace of walking
 T10	Negation 389 398	inability
-E16	Negation:T10 Negates:E3
 T31	And 385 388	and
-E17	And:T31 Arg:E1 Arg2:E16
-A5	Temporal-Connection-Type-Value E9 before
 T21	Observation 332 336	6MWT
-E18	Observation:T21 Name:T32
 T32	Observation-Name 332 336	6MWT
 T33	Negation 310 316	unable
-E19	Negation:T33 Negates:E18
 T34	Assertion 310 316	unable
-E20	Assertion:T34 Asserted:E19
-A8	Assertion-Type-Value E20 hypothetical
 T35	Modifier 441 453	level ground
-E21	Modifier:T35 Modifies:T4
 T36	Stability 413 421	constant
-A9	Stability-Value T36 stable
 T37	Assertion 389 398	inability
-E22	Assertion:T37 Asserted:E16
-A10	Assertion-Type-Value E22 hypothetical
 T38	Modifier 367 384	lower extremities
-E23	Modifier:T38 Modifies:T2
+A2	Eq-Temporal-Unit-Value T6 year
+A3	Eq-Operator-Value T13 GT
+A4	Eq-Temporal-Unit-Value T8 year
+A1	Eq-Temporal-Period-Value T17 present
+A6	Eq-Temporal-Period-Value T26 present
+A7	Eq-Operator-Value T30 LT
+A5	Temporal-Connection-Type-Value E9 before
+A8	Assertion-Type-Value E20 hypothetical
+A9	Stability-Value T36 stable
+A10	Assertion-Type-Value E22 hypothetical

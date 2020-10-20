@@ -1,137 +1,137 @@
-T1	Encounter 34 42	admitted
 E1	Encounter:T1 Location:T4 Location2:T2
-T5	And 154 158	with
 E5	And:T5 Arg:E1 Arg2:E3
-T2	Location 76 143	Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán
-A2	Location-Value T2 hospital
-T3	Location 145 152	INCMNSZ
-R1	Abbrev-Of Arg1:T3 Arg2:T2	
-T4	Location 54 68	critical areas
-A10	Location-Value T4 unit
-T47	Negation 50 53	non
 E2	Negation:T47 Negates:T4
-T6	Risk 173 177	risk
 E3	Risk:T6 Risk-For:E4
-T48	Condition 161 172	nutritional
 E4	Condition:T48 Name:T77 Temporality:E6
+E6	Eq-Comparison:T7 Value:T9 Value2:T10 Operator:T8
+E7	Condition:T11 Name:T12 Temporality:E9 Duration:E10
+E8	Modifier:T13 Modifies:T12
+E9	Eq-Comparison:T14 Temporal-Period:T15
+E10	Eq-Comparison:T16 Operator:T17 Value:T18 Temporal-Unit:T19
+E11	Condition:T20 Name:T21
+E12	Modifier:T22 Modifies:T21
+E13	Modifier:T23 Modifies:T21
+E14	Or:T24 Arg:E12 Arg2:E13
+E15	Condition:T25 Name:T26
+E16	Modifier:T27 Modifies:T26
+E17	Modifier:T28 Modifies:T26
+E18	Modifier:T29 Modifies:T26
+E19	Modifier:T30 Modifies:T26
+E20	Modifier:T31 Modifies:T26
+E21	Or:T32 Arg:E19 Arg2:E20
+E22	Procedure:T33 Name:T34
+E23	Contraindication:T35 Contraindicates:E22
+E24	Allergy:T36 Name:E25
+E25	Procedure:T37 Name:T38
+E26	Condition:T39 Name:T40 Severity:T44
+E27	Modifier:T41 Modifies:T40
+E28	Modifier:T42 Modifies:T40
+E29	Or:T43 Arg:E28 Arg2:E27
+E30	Condition:T45 Name:T46 Stability:T49
+E31	Death:T50
+E32	Risk:T51 Risk-For:E31
+E33	Condition:T52 Acuteness:T53
+E34	Or:T54 Arg:T53 Arg2:E32
+E35	Condition:T55 Name:T56
+E36	Condition:T57 Name:T58
+E37	Condition:T59 Name:T60
+E38	Condition:T61 Name:T62
+E39	Eq-Comparison:T63 Temporal-Period:T64
+E40	Drug:T65 Name:T66
+E41	Condition:T67 Name:T68 Severity:T69
+E42	Condition:T70 Name:T71
+E43	Condition:T72 Name:T73
+E44	Or:T74 Arg:E42 Arg2:E43
+T1	Encounter 34 42	admitted
+T5	And 154 158	with
+T2	Location 76 143	Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán
+T3	Location 145 152	INCMNSZ
+T4	Location 54 68	critical areas
+T47	Negation 50 53	non
+T6	Risk 173 177	risk
+T48	Condition 161 172	nutritional
 T77	Condition-Name 161 172	nutritional
 T7	Eq-Comparison 178 212	between January 2019 and July 2020
-E6	Eq-Comparison:T7 Value:T9 Value2:T10 Operator:T8
 T8	Eq-Operator 178 185	between
-A1	Eq-Operator-Value T8 BETWEEN
 T9	Eq-Value 186 198	January 2019
 T10	Eq-Value 203 212	July 2020
 T11	Condition 281 283	IF
-E7	Condition:T11 Name:T12 Temporality:E9 Duration:E10
 T12	Condition-Name 281 283	IF
 T13	Modifier 284 291	type II
-E8	Modifier:T13 Modifies:T12
 T14	Eq-Comparison 261 267	recent
-E9	Eq-Comparison:T14 Temporal-Period:T15
 T15	Eq-Temporal-Period 261 267	recent
-A3	Eq-Temporal-Period-Value T15 recent
 T16	Eq-Comparison 306 314	>28 days
-E10	Eq-Comparison:T16 Operator:T17 Value:T18 Temporal-Unit:T19
 T17	Eq-Operator 306 307	>
-A4	Eq-Operator-Value T17 GT
 T18	Eq-Value 307 309	28
 T19	Eq-Temporal-Unit 310 314	days
-A5	Eq-Temporal-Unit-Value T19 day
 T20	Condition 368 376	diseases
-E11	Condition:T20 Name:T21
 T21	Condition-Name 368 376	diseases
 T22	Modifier 339 355	gastrointestinal
-E12	Modifier:T22 Modifies:T21
 T23	Modifier 359 367	systemic
-E13	Modifier:T23 Modifies:T21
 T24	Or 356 358	or
-E14	Or:T24 Arg:E12 Arg2:E13
-R2	Caused-By Arg1:E7 Arg2:E11	
 T25	Condition 493 500	disease
-E15	Condition:T25 Name:T26
 T26	Condition-Name 493 500	disease
 T27	Modifier 378 389	short bowel
-E16	Modifier:T27 Modifies:T26
 T28	Modifier 391 409	intestinal fistula
-E17	Modifier:T28 Modifies:T26
 T29	Modifier 411 433	intestinal dysmotility
-E18	Modifier:T29 Modifies:T26
 T30	Modifier 435 457	mechanical obstruction
-E19	Modifier:T30 Modifies:T26
 T31	Modifier 463 492	extensive small bowel mucosal
-E20	Modifier:T31 Modifies:T26
 T32	Or 459 462	and
-E21	Or:T32 Arg:E19 Arg2:E20
-R3	Example-Of Arg1:E15 Arg2:E11	
 T33	Procedure 569 571	PN
-E22	Procedure:T33 Name:T34
 T34	Procedure-Name 569 571	PN
 T35	Contraindication 547 564	contraindications
-E23	Contraindication:T35 Contraindicates:E22
 T36	Allergy 597 606	allergies
-E24	Allergy:T36 Name:E25
 T37	Procedure 632 634	PN
-E25	Procedure:T37 Name:T38
 T38	Procedure-Name 632 634	PN
 T39	Condition 670 683	insufficiency
-E26	Condition:T39 Name:T40 Severity:T44
 T40	Condition-Name 670 683	insufficiency
 T41	Modifier 664 669	renal
-E27	Modifier:T41 Modifies:T40
 T42	Modifier 655 660	liver
-E28	Modifier:T42 Modifies:T40
 T43	Or 661 663	or
-E29	Or:T43 Arg:E28 Arg2:E27
 T44	Severity 648 654	Severe
-A6	Severity-Value T44 severe
 T45	Condition 702 719	diabetes mellitus
-E30	Condition:T45 Name:T46 Stability:T49
 T46	Condition-Name 702 719	diabetes mellitus
 T49	Stability 689 701	Uncontrolled
-A7	Stability-Value T49 change
 T50	Death 743 759	life-threatening
-E31	Death:T50 
 T51	Risk 743 759	life-threatening
-E32	Risk:T51 Risk-For:E31
 T52	Condition 760 770	conditions
-E33	Condition:T52 Severity:T53
-R4	Caused-By Arg1:E32 Arg2:E33	
-T53	Severity 733 738	acute
-A8	Severity-Value T53 severe
+T53	Acuteness 733 738	acute
 T54	Or 739 742	and
-E34	Or:T54 Arg:T53 Arg2:E32
 T55	Condition 776 798	Immunological diseases
-E35	Condition:T55 Name:T56
 T56	Condition-Name 776 798	Immunological diseases
 T57	Condition 808 827	autoimmune diseases
-E36	Condition:T57 Name:T58
 T58	Condition-Name 808 827	autoimmune diseases
 T59	Condition 829 867	human immunodeficiency virus infection
-E37	Condition:T59 Name:T60
 T60	Condition-Name 829 867	human immunodeficiency virus infection
 T61	Condition 869 875	cancer
-E38	Condition:T61 Name:T62
 T62	Condition-Name 869 875	cancer
-R5	Example-Of Arg1:E36 Arg2:E35	
-R6	Example-Of Arg1:E37 Arg2:E35	
-R7	Example-Of Arg1:E38 Arg2:E35	
 T63	Eq-Comparison 899 903	take
-E39	Eq-Comparison:T63 Temporal-Period:T64
 T64	Eq-Temporal-Period 899 903	take
-A9	Eq-Temporal-Period-Value T64 present
 T65	Drug 904 933	immunosuppressant medications
-E40	Drug:T65 Name:T66
 T66	Drug-Name 904 933	immunosuppressant medications
 T67	Condition 946 967	hemorrhagic disorders
-E41	Condition:T67 Name:T68 Severity:T69
 T68	Condition-Name 946 967	hemorrhagic disorders
 T69	Severity 939 945	Severe
-A11	Severity-Value T69 severe
 T70	Condition 973 981	Pregnant
-E42	Condition:T70 Name:T71
 T71	Condition-Name 973 981	Pregnant
 T72	Condition 985 994	lactating
-E43	Condition:T72 Name:T73
 T73	Condition-Name 985 994	lactating
 T74	Or 982 984	or
-E44	Or:T74 Arg:E42 Arg2:E43
+A2	Location-Value T2 hospital
+A10	Location-Value T4 unit
+A1	Eq-Operator-Value T8 BETWEEN
+A3	Eq-Temporal-Period-Value T15 recent
+A4	Eq-Operator-Value T17 GT
+A5	Eq-Temporal-Unit-Value T19 day
+A6	Severity-Value T44 severe
+A7	Stability-Value T49 change
+A9	Eq-Temporal-Period-Value T64 present
+A11	Severity-Value T69 severe
+A12	Acuteness-Type-Value T53 acute
+R1	Abbrev-Of Arg1:T3 Arg2:T2
+R2	Caused-By Arg1:E7 Arg2:E11
+R3	Example-Of Arg1:E15 Arg2:E11
+R4	Caused-By Arg1:E32 Arg2:E33
+R5	Example-Of Arg1:E36 Arg2:E35
+R6	Example-Of Arg1:E37 Arg2:E35
+R7	Example-Of Arg1:E38 Arg2:E35

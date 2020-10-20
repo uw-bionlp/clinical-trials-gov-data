@@ -1,217 +1,217 @@
-T1	Condition 28 36	diabetic
 E1	Condition:T1 Name:T67
-T2	Eq-Comparison 47 65	18 years and older
 E2	Eq-Comparison:T2 Value:T68 Temporal-Unit:T69 Operator:T70
-T3	Negation 118 121	non
 E3	Negation:T3 Negates:E4
-T4	Condition 122 125	PDR
 E4	Condition:T4 Name:T72 Severity:T71
-T5	Modifier 129 140	either eyes
 E5	Modifier:T5 Modifies:T72
-T6	And 141 145	with
 E6	And:T6 Arg:E4
-T7	Or 145 146	/
 E7	Or:T7 Arg:E6 Arg2:E8
-T8	Negation 146 153	without
 E8	Negation:T8 Negates:E9
-T9	Condition 154 176	diabetic macular edema
 E9	Condition:T9 Name:T73
-T10	Observation 206 234	best-corrected visual acuity
 E10	Observation:T10 Name:T74
-T11	Observation 236 240	BCVA
 E11	Observation:T11 Name:T75 Eq-Comparison:E12
-T12	Eq-Comparison 255 270	20/40 to 20/320
 E12	Eq-Comparison:T12 Value:T76 Operator:T77 Value2:T13
-T15	Negation 301 303	no
-E15	Negation:T15 
-T16	Eq-Comparison 304 312	previous
+E15	Negation:T15
 E16	Eq-Comparison:T16 Temporal-Period:T79
-T17	Procedure 313 322	treatment
 E17	Procedure:T17 Temporality:E16
-T19	Modifier 340 350	either eye
 E19	Modifier:T19 Modifies:E17
-T20	Eq-Comparison 377 393	history of prior
 E20	Eq-Comparison:T20 Temporal-Period:T80
-T21	Procedure 394 409	laser treatment
 E21	Procedure:T21 Name:T82 Temporality:E20
-T22	Or 410 412	or
 E22	Or:T22 Arg:E21 Arg2:E23
-T23	Procedure 413 423	vitrectomy
 E23	Procedure:T23 Name:T83 Temporality:E20
-T24	Study 431 436	study
 E24	Study:T24 Study-Of:E14
-T25	Eq-Comparison 447 454	history
 E25	Eq-Comparison:T25 Temporal-Period:T84
-T26	Condition 458 478	thromboembolic event
 E26	Condition:T26 Name:T85 Temporality:E25
-T27	Condition 491 512	myocardial infarction
 E27	Condition:T27 Name:T86
-T28	Or 513 515	or
 E28	Or:T28 Arg:E27 Arg2:E29
-T29	Condition 516 542	cerebral vascular accident
 E29	Condition:T29 Name:T87
-T31	Procedure 555 562	surgery
 E31	Procedure:T31 Name:T88 Severity:T30 Temporality:E32
-T32	Eq-Comparison 563 588	within the prior 6 months
 E32	Eq-Comparison:T32 Operator:T89 Temporal-Period:T90 Value:T91 Temporal-Unit:T92
-T33	Or 589 591	or
 E33	Or:T33 Arg:E32 Arg2:E35
-T35	Eq-Comparison 592 623	planned within the next 28 days
 E35	Eq-Comparison:T35 Operator:T94 Temporal-Period:T95 Value:T96 Temporal-Unit:T97 Temporal-Period2:T93
-T36	Eq-Comparison 630 637	history
 E36	Eq-Comparison:T36 Temporal-Period:T98
-T37	Condition 641 649	glaucoma
 E37	Condition:T37 Name:T99 Temporality:E36
-T38	Or 650 652	or
 E38	Or:T38 Arg:E37 Arg2:T100
-T39	Modifier 653 659	ocular
 E39	Modifier:T39 Modifies:T100
-T40	Condition 660 672	hypertension
 E40	Condition:T40 Name:T100 Temporality:E36
-T41	Condition 679 693	loss of vision
 E41	Condition:T41 Name:T101
-T42	Other 709 714	other
 E42	Other:T42 Is-Other:E43
-T43	Condition 715 721	causes
-E43	Condition:T43 
-T44	Eq-Comparison 728 735	history
+E43	Condition:T43
 E44	Eq-Comparison:T44 Temporal-Period:T102
-T45	Modifier 739 747	systemic
 E45	Modifier:T45 Modifies:T103
-T46	Procedure 748 770	corticosteroid therapy
 E46	Procedure:T46 Name:T103 Temporality:E44 Temporality2:E47
-T47	Eq-Comparison 771 795	within the last 3 months
 E47	Eq-Comparison:T47 Operator:T104 Temporal-Period:T105 Value:T106 Temporal-Unit:T107
-T48	Modifier 809 817	systemic
 E48	Modifier:T48 Modifies:T34
-T49	Condition 818 825	disease
 E49	Condition:T49 Name:T34 Severity:T108
-T50	Exception 826 836	other than
 E50	Exception:T50 From:E49 Except:E51
-T51	Condition 837 854	diabetes mellitus
 E51	Condition:T51 Name:T110
-T52	Condition 867 878	coagulation
 E52	Condition:T52 Name:T111 Polarity:T78
-T53	Or 893 895	or
 E53	Or:T53 Arg:E52 Arg2:E55
-T54	Eq-Comparison 896 903	current
 E54	Eq-Comparison:T54 Temporal-Period:T112
-T55	Drug 911 937	anticoagulative medication
 E55	Drug:T55 Name:T113 Temporality:E54
-T56	Exception 938 948	other than
 E56	Exception:T56 From:E55 Except:E57
-T57	Drug 949 956	aspirin
 E57	Drug:T57 Name:T114
-T58	Condition 966 975	condition
-E58	Condition:T58 
-T59	Assertion 981 986	could
+E58	Condition:T58
 E59	Assertion:T59 Asserted:T115
-A1	Assertion-Type-Value E59 hypothetical
-T60	Encounter 994 1002	followup
 E60	Encounter:T60 Stability:T115
-T61	Or 1003 1005	or
 E61	Or:T61 Arg:E60 Arg2:E62
-T62	Observation 1006 1019	documentation
 E62	Observation:T62 Name:T81
-T63	Modifier 1031 1041	preretinal
 E63	Modifier:T63 Modifies:T116
-T64	Or 1042 1044	or
 E64	Or:T64 Arg:E63 Arg2:E65
-T65	Modifier 1045 1053	vitreous
 E65	Modifier:T65 Modifies:T116
-T66	Condition 1054 1064	hemorrhage
 E66	Condition:T66 Name:T116
+E67	Modifier:T117 Modifies:T67
+E68	Age:T118 Eq-Comparison:E2
+E69	Modifier:T119 Modifies:T74
+E13	Modifier:T14 Modifies:E12
+E14	Modifier:T18 Modifies:T83
+T1	Condition 28 36	diabetic
+T2	Eq-Comparison 47 65	18 years and older
+T3	Negation 118 121	non
+T4	Condition 122 125	PDR
+T5	Modifier 129 140	either eyes
+T6	And 141 145	with
+T7	Or 145 146	/
+T8	Negation 146 153	without
+T9	Condition 154 176	diabetic macular edema
+T10	Observation 206 234	best-corrected visual acuity
+T11	Observation 236 240	BCVA
+T12	Eq-Comparison 255 270	20/40 to 20/320
+T15	Negation 301 303	no
+T16	Eq-Comparison 304 312	previous
+T17	Procedure 313 322	treatment
+T19	Modifier 340 350	either eye
+T20	Eq-Comparison 377 393	history of prior
+T21	Procedure 394 409	laser treatment
+T22	Or 410 412	or
+T23	Procedure 413 423	vitrectomy
+T24	Study 431 436	study
+T25	Eq-Comparison 447 454	history
+T26	Condition 458 478	thromboembolic event
+T27	Condition 491 512	myocardial infarction
+T28	Or 513 515	or
+T29	Condition 516 542	cerebral vascular accident
+T31	Procedure 555 562	surgery
+T32	Eq-Comparison 563 588	within the prior 6 months
+T33	Or 589 591	or
+T35	Eq-Comparison 592 623	planned within the next 28 days
+T36	Eq-Comparison 630 637	history
+T37	Condition 641 649	glaucoma
+T38	Or 650 652	or
+T39	Modifier 653 659	ocular
+T40	Condition 660 672	hypertension
+T41	Condition 679 693	loss of vision
+T42	Other 709 714	other
+T43	Condition 715 721	causes
+T44	Eq-Comparison 728 735	history
+T45	Modifier 739 747	systemic
+T46	Procedure 748 770	corticosteroid therapy
+T47	Eq-Comparison 771 795	within the last 3 months
+T48	Modifier 809 817	systemic
+T49	Condition 818 825	disease
+T50	Exception 826 836	other than
+T51	Condition 837 854	diabetes mellitus
+T52	Condition 867 878	coagulation
+T53	Or 893 895	or
+T54	Eq-Comparison 896 903	current
+T55	Drug 911 937	anticoagulative medication
+T56	Exception 938 948	other than
+T57	Drug 949 956	aspirin
+T58	Condition 966 975	condition
+T59	Assertion 981 986	could
+T60	Encounter 994 1002	followup
+T61	Or 1003 1005	or
+T62	Observation 1006 1019	documentation
+T63	Modifier 1031 1041	preretinal
+T64	Or 1042 1044	or
+T65	Modifier 1045 1053	vitreous
+T66	Condition 1054 1064	hemorrhage
 T67	Condition-Name 28 36	diabetic
 T68	Eq-Value 47 49	18
 T69	Eq-Temporal-Unit 50 55	years
-A2	Eq-Temporal-Unit-Value T69 year
 T70	Eq-Operator 56 65	and older
-A3	Eq-Operator-Value T70 GTEQ
 T71	Severity 111 117	severe
-A4	Severity-Value T71 severe
 T72	Condition-Name 122 125	PDR
 T73	Condition-Name 154 176	diabetic macular edema
 T74	Observation-Name 206 234	best-corrected visual acuity
 T75	Observation-Name 236 240	BCVA
 T76	Eq-Value 255 260	20/40
 T77	Eq-Operator 261 263	to
-A5	Eq-Operator-Value T77 BETWEEN
 T79	Eq-Temporal-Period 304 312	previous
-A6	Eq-Temporal-Period-Value T79 past
 T80	Eq-Temporal-Period 377 393	history of prior
-A7	Eq-Temporal-Period-Value T80 past
 T82	Procedure-Name 394 409	laser treatment
 T83	Procedure-Name 413 423	vitrectomy
 T84	Eq-Temporal-Period 447 454	history
-A9	Eq-Temporal-Period-Value T84 past
 T85	Condition-Name 458 478	thromboembolic event
 T86	Condition-Name 491 512	myocardial infarction
 T87	Condition-Name 516 542	cerebral vascular accident
 T88	Procedure-Name 555 562	surgery
 T89	Eq-Operator 563 569	within
-A10	Eq-Operator-Value T89 LTEQ
 T90	Eq-Temporal-Period 574 579	prior
-A11	Eq-Temporal-Period-Value T90 past
 T91	Eq-Value 580 581	6
 T92	Eq-Temporal-Unit 582 588	months
-A12	Eq-Temporal-Unit-Value T92 month
 T93	Eq-Temporal-Period 592 599	planned
-A13	Eq-Temporal-Period-Value T93 future
 T94	Eq-Operator 600 606	within
-A14	Eq-Operator-Value T94 LTEQ
 T95	Eq-Temporal-Period 611 615	next
-A15	Eq-Temporal-Period-Value T95 future
 T96	Eq-Value 616 618	28
 T97	Eq-Temporal-Unit 619 623	days
-A16	Eq-Temporal-Unit-Value T97 day
 T98	Eq-Temporal-Period 630 637	history
-A17	Eq-Temporal-Period-Value T98 past
 T99	Condition-Name 641 649	glaucoma
 T100	Condition-Name 660 672	hypertension
 T101	Condition-Name 679 693	loss of vision
 T102	Eq-Temporal-Period 728 735	history
-A18	Eq-Temporal-Period-Value T102 past
 T103	Procedure-Name 748 770	corticosteroid therapy
 T104	Eq-Operator 771 777	within
-A19	Eq-Operator-Value T104 LTEQ
 T105	Eq-Temporal-Period 782 786	last
-A20	Eq-Temporal-Period-Value T105 past
 T106	Eq-Value 787 788	3
 T107	Eq-Temporal-Unit 789 795	months
-A21	Eq-Temporal-Unit-Value T107 month
 T108	Severity 802 808	severe
-A22	Severity-Value T108 severe
 T110	Condition-Name 837 854	diabetes mellitus
 T111	Condition-Name 867 878	coagulation
 T112	Eq-Temporal-Period 896 903	current
-A23	Eq-Temporal-Period-Value T112 present
 T113	Drug-Name 911 937	anticoagulative medication
 T114	Drug-Name 949 956	aspirin
 T115	Stability 987 993	affect
-A24	Stability-Value T115 change
 T116	Condition-Name 1054 1064	hemorrhage
 T117	Modifier 20 27	Type II
-E67	Modifier:T117 Modifies:T67
 T118	Age 60 65	older
-E68	Age:T118 Eq-Comparison:E2
 T119	Modifier 183 205	ETDRS letters-measured
-E69	Modifier:T119 Modifies:T74
-A25	Observation-Type-Value T74 measurement
-R1	Abbrev-Of Arg1:E11 Arg2:E10	
 T13	Eq-Value 264 270	20/320
 T14	Modifier 271 289	Snellen equivalent
-E13	Modifier:T14 Modifies:E12
-R2	Abbrev-Of Arg1:E15 Arg2:E17	
 T18	Modifier 437 440	eye
-E14	Modifier:T18 Modifies:T83
-R3	Example-Of Arg1:E27 Arg2:E26	
-R4	Example-Of Arg1:E29 Arg2:E26	
 T30	Severity 549 554	major
-A8	Severity-Value T30 severe
-R5	Caused-By Arg1:E41 Arg2:E43	
 T34	Condition-Name 818 825	disease
 T78	Polarity 879 892	abnormalities
-A26	Polarity-Value T78 abnormal
-R6	Caused-By Arg1:T115 Arg2:E58	
 T81	Observation-Name 1006 1019	documentation
-R7	Example-Of Arg1:E66 Arg2:E58	
+A1	Assertion-Type-Value E59 hypothetical
+A2	Eq-Temporal-Unit-Value T69 year
+A3	Eq-Operator-Value T70 GTEQ
+A4	Severity-Value T71 severe
+A5	Eq-Operator-Value T77 BETWEEN
+A6	Eq-Temporal-Period-Value T79 past
+A7	Eq-Temporal-Period-Value T80 past
+A9	Eq-Temporal-Period-Value T84 past
+A10	Eq-Operator-Value T89 LTEQ
+A11	Eq-Temporal-Period-Value T90 past
+A12	Eq-Temporal-Unit-Value T92 month
+A13	Eq-Temporal-Period-Value T93 future
+A14	Eq-Operator-Value T94 LTEQ
+A15	Eq-Temporal-Period-Value T95 future
+A16	Eq-Temporal-Unit-Value T97 day
+A17	Eq-Temporal-Period-Value T98 past
+A18	Eq-Temporal-Period-Value T102 past
+A19	Eq-Operator-Value T104 LTEQ
+A20	Eq-Temporal-Period-Value T105 past
+A21	Eq-Temporal-Unit-Value T107 month
+A22	Severity-Value T108 severe
+A23	Eq-Temporal-Period-Value T112 present
+A24	Stability-Value T115 change
+A25	Observation-Type-Value T74 measurement
+A8	Severity-Value T30 severe
+A26	Polarity-Value T78 abnormal
+R1	Abbrev-Of Arg1:E11 Arg2:E10
+R2	Abbrev-Of Arg1:E15 Arg2:E17
+R3	Example-Of Arg1:E27 Arg2:E26
+R4	Example-Of Arg1:E29 Arg2:E26
+R5	Caused-By Arg1:E41 Arg2:E43
+R6	Caused-By Arg1:T115 Arg2:E58
+R7	Example-Of Arg1:E66 Arg2:E58

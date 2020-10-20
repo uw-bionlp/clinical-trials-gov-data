@@ -1,0 +1,13 @@
+T1	Condition 179 200	Psychiatric disorders
+T2	Condition-Name 179 200	Psychiatric disorders
+E1	Condition:T1 Name:T2
+T3	Procedure 159 173	CPAP treatment
+T4	Procedure-Name 159 173	CPAP treatment
+E3	Procedure:T3 Name:T4 Temporality:E2
+T5	Condition 63 74	sarcoidosis
+T6	Condition-Name 63 74	sarcoidosis
+E5	Condition:T5 Name:T6
+T7	Eq-Comparison 151 158	Ongoing
+E2	Eq-Comparison:T7 Temporal-Period:T8
+T8	Eq-Temporal-Period 151 158	Ongoing
+A1	Eq-Temporal-Period-Value T8 present

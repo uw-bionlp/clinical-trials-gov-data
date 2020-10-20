@@ -1,0 +1,85 @@
+T1	Condition 48 55	Healthy
+E1	Condition:T1 Name:T24
+T2	Eq-Comparison 79 91	at least one
+E2	Eq-Comparison:T2 Operator:T25 Value:T26
+T3	Eq-Comparison 114 123	last year
+E3	Eq-Comparison:T3 Temporal-Period:T27 Temporal-Unit:T28
+T4	And 124 127	and
+E4	And:T4 Arg:E26 Arg2:E27
+T5	Eq-Comparison 135 138	70%
+E5	Eq-Comparison:T5 Value:T29 Unit:T30
+T6	Temporal-Connection 164 170	during
+E6	Temporal-Connection:T6 Arg:E27 Arg2:E7
+A1	Temporal-Connection-Type-Value E6 during
+T7	Eq-Comparison 175 182	current
+E7	Eq-Comparison:T7 
+T8	Modifier 216 231	musculoskeletal
+E8	Modifier:T8 Modifies:T32
+T9	Condition 232 238	injury
+E9	Condition:T9 Name:T32 Temporality:E10
+T10	Eq-Comparison 246 263	last three months
+E10	Eq-Comparison:T10 Temporal-Period:T33 Value:T34 Temporal-Unit:T35
+T11	Condition 270 293	cardiovascular diseases
+E11	Condition:T11 Name:T36
+T15	Or 335 338	and
+E15	Or:T15 Arg:E14 Arg2:E13
+T16	Drug 349 354	drugs
+E16	Drug:T16 Name:T40 Temporality2:E17
+T17	Eq-Comparison 355 363	72 hours
+E17	Eq-Comparison:T17 Value:T41 Temporal-Unit:T42
+T18	Temporal-Connection 364 370	before
+E18	Temporal-Connection:T18 Arg:E17 Arg2:E19
+A2	Temporal-Connection-Type-Value E18 before
+T19	Study 375 386	evaluations
+E19	Study:T19 
+T20	Drug 400 407	alcohol
+E20	Drug:T20 Name:T44
+T21	Or 408 411	and
+E21	Or:T21 Arg:E20 Arg2:E22
+T22	Drug 412 425	illicit drugs
+E22	Drug:T22 Name:T45
+T23	Temporal-Connection 426 432	during
+E23	Temporal-Connection:T23 Arg:E22 Arg2:E12
+A3	Temporal-Connection-Type-Value E23 during
+T24	Condition-Name 48 55	Healthy
+T25	Eq-Operator 79 87	at least
+A4	Eq-Operator-Value T25 GTEQ
+T26	Eq-Value 88 91	one
+T27	Eq-Temporal-Period 114 118	last
+A5	Eq-Temporal-Period-Value T27 past
+T28	Eq-Temporal-Unit 119 123	year
+A6	Eq-Temporal-Unit-Value T28 year
+T29	Eq-Value 135 137	70
+T30	Eq-Unit 137 138	%
+T31	Eq-Temporal-Period 175 182	current
+A7	Eq-Temporal-Period-Value T31 present
+T32	Condition-Name 232 238	injury
+T33	Eq-Temporal-Period 246 250	last
+A8	Eq-Temporal-Period-Value T33 past
+T34	Eq-Value 251 256	three
+T35	Eq-Temporal-Unit 257 263	months
+A9	Eq-Temporal-Unit-Value T35 month
+T36	Condition-Name 270 293	cardiovascular diseases
+T40	Drug-Name 349 354	drugs
+T41	Eq-Value 355 357	72
+T42	Eq-Temporal-Unit 358 363	hours
+A11	Eq-Temporal-Unit-Value T42 hour
+T44	Drug-Name 400 407	alcohol
+T45	Drug-Name 412 425	illicit drugs
+T46	Observation 25 41	Handball players
+E24	Observation:T46 Name:T47
+T47	Observation-Name 25 41	Handball players
+T13	Modifier 339 348	analgesic
+E13	Modifier:T13 
+T14	Modifier 317 334	anti-inflammatory
+E14	Modifier:T14 Modifies:T40
+T38	Modifier 307 315	anabolic
+E25	Modifier:T38 Modifies:T40
+T12	Study 437 454	collection period
+E12	Study:T12 
+T37	Observation 92 106	official match
+E26	Observation:T37 Name:T39 Minimum-Count:E2 Temporality:E3
+T39	Observation-Name 92 106	official match
+T43	Observation 146 163	team's activities
+E27	Observation:T43 Name:T48 Eq-Comparison:E5
+T48	Observation-Name 146 163	team's activities

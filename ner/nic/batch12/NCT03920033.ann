@@ -1,28 +1,81 @@
+E1	Procedure:T1 Name:T2
+E8	Eq-Comparison:T37 Operator:T10 Temporal-Unit:T19 Value:T28
+E9	Eq-Comparison:T38 Operator:T11 Value:T29 Unit:T22 Per:T74
+E10	Eq-Comparison:T39 Operator:T12 Value:T30 Unit:T76 Per:T23
+E11	Eq-Comparison:T40 Operator:T13 Value:T31 Unit:T81 Per:T82
+E12	Eq-Comparison:T41 Operator:T14 Temporal-Unit:T20 Value:T32
+E15	Eq-Comparison:T44 Operator:T24 Value:T26 Value2:T27
+E2	Condition:T45 Name:T46
+E4	Risk:T47 Risk-For:E2 Polarity:T48
+E6	Or:T50 Arg:T49 Arg2:T48
+E16	Procedure:T51 Name:T52
+E17	Coreference:T53 Refers-To:E2
+E18	Temporal-Connection:T54 Arg:E17 Arg2:E1
+E19	Observation:T55 Name:T56 Eq-Comparison:E20 Polarity:T66
+E20	Eq-Comparison:T57 Value:T25 Operator:T60 Unit:T58 Per:T59
+E21	Eq-Comparison:T61 Value:T62 Operator:T9 Unit:T63 Per:T64
+E22	And:T65 Arg:E20 Arg2:E21
+E23	Observation:T67 Name:T68 Eq-Comparison:E15
+E24	Study:T69 
+E25	Observation:T70 Name:T71 Eq-Comparison:E8
+E26	Observation:T72 Name:T73 Eq-Comparison:E9
+E27	Temporal-Connection:T75 Arg:E25 Arg2:E24 Arg3:E8
+E28	Observation:T77 Name:T78 Eq-Comparison:E10 Temporality:E8
+E29	Observation:T79 Name:T80 Temporality:E8 Eq-Comparison:E11
+E30	Study:T83 
+E31	Temporal-Connection:T84 Arg:E12 Arg2:E30
+E32	Observation:T85 Name:T86 Temporality:E12
+E33	Observation:T87 Name:T88 Eq-Comparison:E3 Temporality:E12
+E3	Eq-Comparison:T3 Operator:T15 Value:T6 Unit:T4 Per:T5
+E5	Observation:T7 Name:T8 Temporality:E13
+E7	Study:T16 
+E13	Eq-Comparison:T17 Temporal-Unit:T33 Operator:T18 Value:T21
+E14	Temporal-Connection:T34 Arg:E13 Arg2:E7
+E34	Observation:T35 Name:T36 Eq-Comparison:E35 Temporality:E13
+E35	Eq-Comparison:T42 Operator:T43 Value:T89 Unit:T90
+E36	Observation:T91 Name:T92 Eq-Comparison:E38 Temporality:E13
+E37	Observation:T93 Name:T94 Eq-Comparison:E38 Temporality:E13
+E38	Eq-Comparison:T95 Value:T98 Operator:T97 Unit:T99
+E39	Or:T96 Arg:E36 Arg2:E37
+E40	Condition:T100 Name:T101
+E41	Condition:T102 Name:T103 Temporality:E58
+E42	Condition:T104 Name:T105
+E43	Procedure:T106 Name:T107 Temporality:E56
+E44	Procedure:T108 Name:T109 Temporality:E57
+E45	Procedure:T110 Name:T111
+E46	Or:T112 Arg:E44 Arg2:E45
+E47	Condition:T113 Name:T114
+E48	Condition:T115 Name:T116 Minimum-Count:E49
+E49	Eq-Comparison:T117 Value:T118
+E50	Modifier:T119 Modifies:E52
+E51	Modifier:T120 Modifies:E52
+E52	Condition:T121 Name:T123
+E53	Or:T122 Arg:E50 Arg2:E51
+E54	Exception:T124 From:E48 Except:E52
+E55	Condition:T125 Name:T126 Severity:T127
+E56	Eq-Comparison:T128 Temporal-Period:T129
+E57	Eq-Comparison:T130 Temporal-Period:T131
+E58	Eq-Comparison:T132 Temporal-Period:T133
+E59	Eq-Comparison:T134 Temporal-Period:T135
+E60	Modifier:T136 Modifies:T105
+E61	Modifier:T137 Modifies:T103
+E62	Modifier:T138 Modifies:T107
+E63	Modifier:T139 Modifies:T114
+E64	Modifier:T140 Modifies:T116
 T1	Procedure 127 148	radical prostatectomy
 T2	Procedure-Name 127 148	radical prostatectomy
-E1	Procedure:T1 Name:T2
 T9	Eq-Operator 205 207	<=
-A1	Eq-Operator-Value T9 LTEQ
 T10	Eq-Operator 290 296	within
-A2	Eq-Operator-Value T10 LTEQ
 T11	Eq-Operator 355 356	≥
-A3	Eq-Operator-Value T11 GTEQ
 T12	Eq-Operator 382 383	≥
-A4	Eq-Operator-Value T12 GTEQ
 T13	Eq-Operator 412 413	≥
-A5	Eq-Operator-Value T13 GTEQ
 T14	Eq-Operator 466 472	within
-A6	Eq-Operator-Value T14 LTEQ
 T15	Eq-Operator 510 511	<
-A7	Eq-Operator-Value T15 LT
 T19	Eq-Temporal-Unit 299 305	months
-A11	Eq-Temporal-Unit-Value T19 month
 T20	Eq-Temporal-Unit 475 481	months
-A12	Eq-Temporal-Unit-Value T20 month
 T22	Eq-Unit 362 367	cells
 T23	Eq-Unit 397 400	mm3
 T24	Eq-Operator 248 249	-
-A14	Eq-Operator-Value T24 BETWEEN
 T25	Eq-Value 191 194	0.2
 T26	Eq-Value 247 248	0
 T27	Eq-Value 249 250	1
@@ -32,221 +85,170 @@ T30	Eq-Value 384 390	50,000
 T31	Eq-Value 414 417	8.0
 T32	Eq-Value 473 474	6
 T37	Eq-Comparison 290 305	within 6 months
-E8	Eq-Comparison:T37 Operator:T10 Temporal-Unit:T19 Value:T28
 T38	Eq-Comparison 355 371	≥ 1500 cells/mm3
-E9	Eq-Comparison:T38 Operator:T11 Value:T29 Unit:T22 Per:T74
 T39	Eq-Comparison 382 400	≥ 50,000 cells/mm3
-E10	Eq-Comparison:T39 Operator:T12 Value:T30 Unit:T76 Per:T23
 T40	Eq-Comparison 412 422	≥ 8.0 g/dl
-E11	Eq-Comparison:T40 Operator:T13 Value:T31 Unit:T81 Per:T82
 T41	Eq-Comparison 466 481	within 6 months
-E12	Eq-Comparison:T41 Operator:T14 Temporal-Unit:T20 Value:T32
 T44	Eq-Comparison 247 250	0-1
-E15	Eq-Comparison:T44 Operator:T24 Value:T26 Value2:T27
-T45	Condition 77 92	prostate cancer
-E2	Condition:T45 Name:T46
-T46	Condition-Name 77 92	prostate cancer
+T45	Condition 86 92	cancer
+T46	Condition-Name 86 92	cancer
 T47	Risk 72 76	risk
-E4	Risk:T47 Risk-For:E2 Polarity:T48
 T48	Polarity 67 71	high
-A15	Polarity-Value T48 high
 T49	Polarity 50 62	intermediate
-A16	Polarity-Value T49 medium
 T50	Or 64 66	or
-E6	Or:T50 Arg:T49 Arg2:T48
 T51	Procedure 25 39	Pathologically
-E16	Procedure:T51 Name:T52
 T52	Procedure-Name 25 39	Pathologically
-R1	Found-By Arg1:E2 Arg2:E16	
 T53	Coreference 110 120	recurrence
-E17	Coreference:T53 Refers-To:E2
 T54	Temporal-Connection 121 126	after
-E18	Temporal-Connection:T54 Arg:E17 Arg2:E1
-A17	Temporal-Connection-Type-Value E18 after
 T55	Observation 182 185	PSA
-E19	Observation:T55 Name:T56 Eq-Comparison:E20 Polarity:T66
 T56	Observation-Name 182 185	PSA
-A18	Observation-Type-Value T56 lab
 T57	Eq-Comparison 186 200	over 0.2 ng/mL
-E20	Eq-Comparison:T57 Value:T25 Operator:T60 Unit:T58 Per:T59
 T58	Eq-Unit 195 197	ng
 T59	Eq-Unit 198 200	mL
 T60	Eq-Operator 186 190	over
-A19	Eq-Operator-Value T60 GT
 T61	Eq-Comparison 205 216	<=1.0 ng/mL
-E21	Eq-Comparison:T61 Value:T62 Operator:T9 Unit:T63 Per:T64
 T62	Eq-Value 207 210	1.0
 T63	Eq-Unit 211 213	ng
 T64	Eq-Unit 214 216	mL
 T65	And 201 204	and
-E22	And:T65 Arg:E20 Arg2:E21
 T66	Polarity 169 178	elevation
-A20	Polarity-Value T66 high
-R2	Equivalent-To Arg1:E19 Arg2:E17	
 T67	Observation 223 246	ECOG performance status
-E23	Observation:T67 Name:T68 Eq-Comparison:E15
 T68	Observation-Name 223 246	ECOG performance status
-A21	Observation-Type-Value T68 clinical-score
 T69	Study 312 322	enrollment
-E24	Study:T69 
 T70	Observation 323 348	Absolute neutrophil count
-E25	Observation:T70 Name:T71 Eq-Comparison:E8
 T71	Observation-Name 323 348	Absolute neutrophil count
-A22	Observation-Type-Value T71 lab
 T72	Observation 350 353	ANC
-E26	Observation:T72 Name:T73 Eq-Comparison:E9
 T73	Observation-Name 350 353	ANC
-A23	Observation-Type-Value T73 lab
-R3	Abbrev-Of Arg1:E26 Arg2:E25	
 T74	Eq-Unit 368 371	mm3
 T75	Temporal-Connection 306 311	after
-E27	Temporal-Connection:T75 Arg:E25 Arg2:E24 Arg3:E8
-A24	Temporal-Connection-Type-Value E27 after
 T76	Eq-Unit 391 396	cells
 T77	Observation 372 381	Platelets
-E28	Observation:T77 Name:T78 Eq-Comparison:E10 Temporality:E8
 T78	Observation-Name 372 381	Platelets
-A25	Observation-Type-Value T78 lab
 T79	Observation 401 411	Hemoglobin
-E29	Observation:T79 Name:T80 Temporality:E8 Eq-Comparison:E11
 T80	Observation-Name 401 411	Hemoglobin
-A26	Observation-Type-Value T80 lab
 T81	Eq-Unit 418 419	g
 T82	Eq-Unit 420 422	dl
 T83	Study 488 498	enrollment
-E30	Study:T83 
 T84	Temporal-Connection 482 487	after
-E31	Temporal-Connection:T84 Arg:E12 Arg2:E30
-A27	Temporal-Connection-Type-Value E31 after
 T85	Observation 450 465	kidney function
-E32	Observation:T85 Name:T86 Temporality:E12
 T86	Observation-Name 450 465	kidney function
-A28	Observation-Type-Value T86 lab
 T87	Observation 499 509	Creatinine
-E33	Observation:T87 Name:T88 Eq-Comparison:E3 Temporality:E12
 T88	Observation-Name 499 509	Creatinine
-A29	Observation-Type-Value T88 lab
 T3	Eq-Comparison 510 521	< 2.0 ng/dL
-E3	Eq-Comparison:T3 Operator:T15 Value:T6 Unit:T4 Per:T5
 T4	Eq-Unit 516 518	ng
 T5	Eq-Unit 519 521	dL
 T6	Eq-Value 512 515	2.0
-R4	Equivalent-To Arg1:E33 Arg2:E32	
 T7	Observation 549 563	liver function
-E5	Observation:T7 Name:T8 Temporality:E13
 T8	Observation-Name 549 563	liver function
-A8	Observation-Type-Value T8 lab
 T16	Study 586 596	enrollment
-E7	Study:T16 
 T17	Eq-Comparison 564 579	within 6 months
-E13	Eq-Comparison:T17 Temporal-Unit:T33 Operator:T18 Value:T21
 T18	Eq-Operator 564 570	within
-A9	Eq-Operator-Value T18 LTEQ
 T21	Eq-Value 571 572	6
 T33	Eq-Temporal-Unit 573 579	months
-A10	Eq-Temporal-Unit-Value T33 month
 T34	Temporal-Connection 580 585	after
-E14	Temporal-Connection:T34 Arg:E13 Arg2:E7
-A13	Temporal-Connection-Type-Value E14 after
 T35	Observation 597 612	total bilirubin
-E34	Observation:T35 Name:T36 Eq-Comparison:E35 Temporality:E13
 T36	Observation-Name 597 612	total bilirubin
-A30	Observation-Type-Value T36 lab
 T42	Eq-Comparison 613 641	< 1.5 X maximum normal value
-E35	Eq-Comparison:T42 Operator:T43 Value:T89 Unit:T90
 T43	Eq-Operator 613 614	<
-A31	Eq-Operator-Value T43 LT
 T89	Eq-Value 615 618	1.5
 T90	Eq-Unit 621 641	maximum normal value
-R5	Equivalent-To Arg1:E34 Arg2:E5	
 T91	Observation 642 666	alanine aminotransferase
-E36	Observation:T91 Name:T92 Eq-Comparison:E38 Temporality:E13
 T92	Observation-Name 642 666	alanine aminotransferase
-A32	Observation-Type-Value T92 lab
 T93	Observation 670 696	aspartate aminotransferase
-E37	Observation:T93 Name:T94 Eq-Comparison:E38 Temporality:E13
 T94	Observation-Name 670 696	aspartate aminotransferase
-A33	Observation-Type-Value T94 lab
 T95	Eq-Comparison 697 725	< 2.5 X maximum normal value
-E38	Eq-Comparison:T95 Value:T98 Operator:T97 Unit:T99
 T96	Or 667 669	or
-E39	Or:T96 Arg:E36 Arg2:E37
 T97	Eq-Operator 697 698	<
-A34	Eq-Operator-Value T97 LT
 T98	Eq-Value 699 702	2.5
 T99	Eq-Unit 705 725	maximum normal value
-A35	Eq-Unit-Value T90 ref-range-normal
-A36	Eq-Unit-Value T99 ref-range-normal
 T100	Condition 762 783	gross recurrent tumor
-E40	Condition:T100 Name:T101
 T101	Condition-Name 762 783	gross recurrent tumor
 T102	Condition 809 819	metastasis
-E41	Condition:T102 Name:T103 Temporality:E58
 T103	Condition-Name 809 819	metastasis
 T104	Condition 847 857	metastasis
-E42	Condition:T104 Name:T105
 T105	Condition-Name 847 857	metastasis
 T106	Procedure 881 892	irradiation
-E43	Procedure:T106 Name:T107 Temporality:E56
 T107	Procedure-Name 881 892	irradiation
 T108	Procedure 909 920	cryotherapy
-E44	Procedure:T108 Name:T109 Temporality:E57
 T109	Procedure-Name 909 920	cryotherapy
 T110	Procedure 924 937	brachytherapy
-E45	Procedure:T110 Name:T111
 T111	Procedure-Name 924 937	brachytherapy
 T112	Or 921 923	or
-E46	Or:T112 Arg:E44 Arg2:E45
 T113	Condition 951 957	cancer
-E47	Condition:T113 Name:T114
 T114	Condition-Name 951 957	cancer
-R6	Treatment-For Arg1:E45 Arg2:E47	
-R7	Treatment-For Arg1:E44 Arg2:E47	
 T115	Condition 978 984	cancer
-E48	Condition:T115 Name:T116 Minimum-Count:E49
 T116	Condition-Name 978 984	cancer
 T117	Eq-Comparison 963 969	Double
-E49	Eq-Comparison:T117 Value:T118
 T118	Eq-Value 963 969	Double
 T119	Modifier 996 1000	skin
-E50	Modifier:T119 Modifies:E52
 T120	Modifier 1001 1008	thyroid
-E51	Modifier:T120 Modifies:E52
 T121	Condition 1009 1015	cancer
-E52	Condition:T121 Name:T123
 T122	Or 1000 1001	/
-E53	Or:T122 Arg:E50 Arg2:E51
 T123	Condition-Name 1009 1015	cancer
 T124	Exception 985 995	other than
-E54	Exception:T124 From:E48 Except:E52
 T125	Condition 1038 1047	morbidity
-E55	Condition:T125 Name:T126 Severity:T127
 T126	Condition-Name 1038 1047	morbidity
 T127	Severity 1030 1037	serious
-A37	Severity-Value T127 severe
 T128	Eq-Comparison 863 870	History
-E56	Eq-Comparison:T128 Temporal-Period:T129
 T129	Eq-Temporal-Period 863 870	History
-A38	Eq-Temporal-Period-Value T129 past
 T130	Eq-Comparison 898 905	History
-E57	Eq-Comparison:T130 Temporal-Period:T131
 T131	Eq-Temporal-Period 898 905	History
-A39	Eq-Temporal-Period-Value T131 past
 T132	Eq-Comparison 789 797	Presence
-E58	Eq-Comparison:T132 Temporal-Period:T133
 T133	Eq-Temporal-Period 789 797	Presence
-A40	Eq-Temporal-Period-Value T133 present
 T134	Eq-Comparison 825 833	Presence
-E59	Eq-Comparison:T134 Temporal-Period:T135
 T135	Eq-Temporal-Period 825 833	Presence
-A41	Eq-Temporal-Period-Value T135 present
 T136	Modifier 837 846	pelvic LN
-E60	Modifier:T136 Modifies:T105
 T137	Modifier 801 808	distant
-E61	Modifier:T137 Modifies:T103
 T138	Modifier 874 880	pelvic
-E62	Modifier:T138 Modifies:T107
 T139	Modifier 942 950	prostate
-E63	Modifier:T139 Modifies:T114
 T140	Modifier 970 977	primary
-E64	Modifier:T140 Modifies:T116
+A1	Eq-Operator-Value T9 LTEQ
+A2	Eq-Operator-Value T10 LTEQ
+A3	Eq-Operator-Value T11 GTEQ
+A4	Eq-Operator-Value T12 GTEQ
+A5	Eq-Operator-Value T13 GTEQ
+A6	Eq-Operator-Value T14 LTEQ
+A7	Eq-Operator-Value T15 LT
+A11	Eq-Temporal-Unit-Value T19 month
+A12	Eq-Temporal-Unit-Value T20 month
+A14	Eq-Operator-Value T24 BETWEEN
+A15	Polarity-Value T48 high
+A16	Polarity-Value T49 medium
+A17	Temporal-Connection-Type-Value E18 after
+A18	Observation-Type-Value T56 lab
+A19	Eq-Operator-Value T60 GT
+A20	Polarity-Value T66 high
+A21	Observation-Type-Value T68 clinical-score
+A22	Observation-Type-Value T71 lab
+A23	Observation-Type-Value T73 lab
+A24	Temporal-Connection-Type-Value E27 after
+A25	Observation-Type-Value T78 lab
+A26	Observation-Type-Value T80 lab
+A27	Temporal-Connection-Type-Value E31 after
+A28	Observation-Type-Value T86 lab
+A29	Observation-Type-Value T88 lab
+A8	Observation-Type-Value T8 lab
+A9	Eq-Operator-Value T18 LTEQ
+A10	Eq-Temporal-Unit-Value T33 month
+A13	Temporal-Connection-Type-Value E14 after
+A30	Observation-Type-Value T36 lab
+A31	Eq-Operator-Value T43 LT
+A32	Observation-Type-Value T92 lab
+A33	Observation-Type-Value T94 lab
+A34	Eq-Operator-Value T97 LT
+A35	Eq-Unit-Value T90 ref-range-normal
+A36	Eq-Unit-Value T99 ref-range-normal
+A37	Severity-Value T127 severe
+A38	Eq-Temporal-Period-Value T129 past
+A39	Eq-Temporal-Period-Value T131 past
+A40	Eq-Temporal-Period-Value T133 present
+A41	Eq-Temporal-Period-Value T135 present
+R1	Found-By Arg1:E2 Arg2:E16
+R2	Equivalent-To Arg1:E19 Arg2:E17
+R3	Abbrev-Of Arg1:E26 Arg2:E25
+R4	Equivalent-To Arg1:E33 Arg2:E32
+R5	Equivalent-To Arg1:E34 Arg2:E5
+R6	Treatment-For Arg1:E45 Arg2:E47
+R7	Treatment-For Arg1:E44 Arg2:E47
+T141	Modifier 77 85	prostate
+E65	Modifier:T141 Modifies:T46

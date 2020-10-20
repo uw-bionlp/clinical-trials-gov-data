@@ -1,0 +1,121 @@
+T1	Condition 390 410	psychiatric disorder
+T2	Condition-Name 390 410	psychiatric disorder
+E1	Condition:T1 Name:T2 Severity:T58
+T3	Condition 434 449	hepatic disease
+T4	Condition-Name 434 449	hepatic disease
+E3	Condition:T3 Name:T4 Temporality:E31
+T5	Condition 62 70	migraine
+T6	Condition-Name 62 70	migraine
+E5	Condition:T5 Name:T6 Temporality:E4 Minimum-Count:E2
+T7	Condition 139 147	migraine
+T8	Condition-Name 139 147	migraine
+E7	Condition:T7 Name:T8 Temporality:E14
+T9	Condition 294 302	migraine
+T10	Condition-Name 294 302	migraine
+E9	Condition:T9 Name:T10 Temporality:E22
+T11	Eq-Operator 76 77	≥
+A1	Eq-Operator-Value T11 GTEQ
+T12	Eq-Operator 104 105	≥
+A2	Eq-Operator-Value T12 GTEQ
+T13	Eq-Operator 185 187	>=
+A3	Eq-Operator-Value T13 GTEQ
+T14	Eq-Temporal-Unit 90 94	days
+A4	Eq-Temporal-Unit-Value T14 day
+T15	Eq-Temporal-Unit 117 121	days
+A5	Eq-Temporal-Unit-Value T15 day
+T16	Eq-Temporal-Unit 148 152	days
+A6	Eq-Temporal-Unit-Value T16 day
+T17	Eq-Temporal-Unit 278 283	years
+A7	Eq-Temporal-Unit-Value T17 year
+T18	Age 287 290	age
+E10	Age:T18 Eq-Comparison:E21
+T19	Eq-Value 49 50	5
+T20	Eq-Value 78 80	15
+T21	Eq-Value 106 107	8
+T22	Eq-Value 275 277	50
+T23	Eq-Comparison 76 80	≥ 15
+E11	Eq-Comparison:T23 Operator:T11 Value:T20 Temporal-Unit:T14
+T24	Eq-Comparison 104 107	≥ 8
+E12	Eq-Comparison:T24 Operator:T12 Value:T21 Temporal-Unit:T15
+T25	Eq-Comparison 40 50	at least 5
+E2	Eq-Comparison:T25 Operator:T26 Value:T19
+T26	Eq-Operator 40 48	at least
+A8	Eq-Operator-Value T26 GTEQ
+T27	Eq-Comparison 29 36	History
+E4	Eq-Comparison:T27 Temporal-Period:T28
+T28	Eq-Temporal-Period 29 36	History
+A9	Eq-Temporal-Period-Value T28 past
+T29	Condition 81 89	headache
+E6	Condition:T29 Name:T30 Minimum-Count:E11
+T30	Condition-Name 81 89	headache
+T31	Condition 108 116	headache
+E8	Condition:T31 Name:T32 Minimum-Count:E12
+T32	Condition-Name 108 116	headache
+T33	And 95 103	of which
+E13	And:T33 Arg:E6 Arg2:E8
+T34	Eq-Comparison 148 152	days
+E14	Eq-Comparison:T34 Temporal-Unit:T16
+T35	Study 164 172	baseline
+E15	Study:T35 
+T36	Temporal-Connection 153 159	during
+E16	Temporal-Connection:T36 Arg:E14 Arg2:E15
+A10	Temporal-Connection-Type-Value E16 during
+T37	Observation 191 207	diary compliance
+E17	Observation:T37 Name:T38 Eq-Comparison:E18
+T38	Observation-Name 191 207	diary compliance
+T39	Eq-Value 187 189	80
+T40	Eq-Unit 189 190	%
+T41	Eq-Comparison 185 190	>=80%
+E18	Eq-Comparison:T41 Operator:T13 Value:T39 Unit:T40
+T42	Study 219 227	baseline
+E19	Study:T42 
+T43	Temporal-Connection 208 214	during
+E20	Temporal-Connection:T43 Arg:E17 Arg2:E19
+A11	Temporal-Connection-Type-Value E20 during
+T44	Eq-Comparison 264 283	Older than 50 years
+E21	Eq-Comparison:T44 Operator:T45 Value:T22 Temporal-Unit:T17
+T45	Eq-Operator 264 274	Older than
+A12	Eq-Operator-Value T45 GT
+T46	Eq-Comparison 303 308	onset
+E22	Eq-Comparison:T46 Temporal-Recency:T47
+T47	Eq-Temporal-Recency 303 308	onset
+A13	Eq-Temporal-Recency-Value T47 first-time
+T48	Temporal-Connection 291 293	at
+E23	Temporal-Connection:T48 Arg:E10 Arg2:E9
+A14	Temporal-Connection-Type-Value E23 during
+T49	Condition 347 355	headache
+E24	Condition:T49 Name:T50 Temporality:E28
+T50	Condition-Name 347 355	headache
+T51	Modifier 336 346	hemiplegic
+E25	Modifier:T51 Modifies:T50
+T52	Modifier 325 332	cluster
+E26	Modifier:T52 Modifies:T50
+T53	Or 333 335	or
+E27	Or:T53 Arg:E26 Arg2:E25
+T54	Eq-Comparison 314 321	History
+E28	Eq-Comparison:T54 Temporal-Period:T55
+T55	Eq-Temporal-Period 314 321	History
+A15	Eq-Temporal-Period-Value T55 past
+T56	Condition 373 380	seizure
+E29	Condition:T56 Name:T57
+T57	Condition-Name 373 380	seizure
+T58	Severity 384 389	major
+A16	Severity-Value T58 severe
+T59	Or 381 383	or
+E30	Or:T59 Arg:E29 Arg2:E1
+T60	Eq-Comparison 427 433	active
+E31	Eq-Comparison:T60 Temporal-Period:T61
+T61	Eq-Temporal-Period 427 433	active
+A17	Eq-Temporal-Period-Value T61 present
+T62	Modifier 416 423	Cardiac
+E32	Modifier:T62 Modifies:T4
+T63	Or 424 426	or
+E33	Or:T63 Arg:E32 Arg2:E31
+T64	Condition 455 463	Pregnant
+E34	Condition:T64 Name:T65
+T65	Condition-Name 455 463	Pregnant
+T66	Condition 467 474	nursing
+E35	Condition:T66 Name:T67
+T67	Condition-Name 467 474	nursing
+T68	Or 464 466	or
+E36	Or:T68 Arg:E34 Arg2:E35

@@ -1,0 +1,43 @@
+T1	Condition 186 202	pleural effusion
+T2	Condition-Name 186 202	pleural effusion
+E1	Condition:T1 Name:T2
+T5	Eq-Value 274 275	8
+T6	Procedure 25 48	Mechanically ventilated
+E2	Procedure:T6 Name:T7
+T7	Procedure-Name 25 48	Mechanically ventilated
+T8	Condition 63 67	ASAI
+E4	Condition:T8 Name:T9
+T9	Condition-Name 63 67	ASAI
+T10	Condition 69 74	ASAII
+E5	Condition:T10 Name:T11
+T11	Condition-Name 69 74	ASAII
+T12	Condition 76 82	ASAIII
+E6	Condition:T12 Name:T13
+T13	Condition-Name 76 82	ASAIII
+T14	Condition 155 166	pneumthorax
+E7	Condition:T14 Name:T15
+T15	Condition-Name 155 166	pneumthorax
+T16	Condition 222 240	surgical emphysema
+E8	Condition:T16 Name:T17
+T17	Condition-Name 222 240	surgical emphysema
+T3	Observation 246 257	Glasco coma
+E3	Observation:T3 Name:T4 Eq-Comparison:E9
+T4	Observation-Name 246 257	Glasco coma
+A1	Observation-Type-Value T4 clinical-score
+T18	Eq-Comparison 258 275	score more than 8
+E9	Eq-Comparison:T18 Operator:T20 Unit:T19 Value:T5
+T19	Eq-Unit 258 263	score
+T20	Eq-Operator 264 273	more than
+A2	Eq-Operator-Value T20 GT
+T21	Drug 298 315	inotropic support
+E10	Drug:T21 Name:T22 Dose:T23 Temporality:E11
+T22	Drug-Name 298 315	inotropic support
+T23	Polarity 293 297	high
+A3	Polarity-Value T23 high
+T24	Eq-Comparison 290 292	on
+E11	Eq-Comparison:T24 Temporal-Period:T25
+T25	Eq-Temporal-Period 290 292	on
+A4	Eq-Temporal-Period-Value T25 present
+T26	Condition 335 358	diaphragmatic paralysis
+E12	Condition:T26 Name:T27
+T27	Condition-Name 335 358	diaphragmatic paralysis
