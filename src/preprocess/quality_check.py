@@ -172,7 +172,7 @@ def main():
     annotations = [ BratDocument(k, v[0], v[1], v[2], surface_only=True) for k,v in brat_train_raw.items() ]
 
     # Convert
-    # TODO: anatomy, Condition/Observations, Histology
+    # TODO: anatomy, Histology
     for converter in [ condition_and_observation ]:
         annotations = converter(annotations)
     

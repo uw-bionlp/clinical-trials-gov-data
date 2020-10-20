@@ -72,9 +72,9 @@ T45	Procedure-Name 38 42	fMRI
 T46	Assertion 25 33	Eligible
 E4	Assertion:T46 Asserted:E2
 A14	Assertion-Type-Value E4 hypothetical
-T47	Eq-Comparison 102 108	≦ 40.0
+T47	Eq-Comparison 102 108	≤ 40.0
 E6	Eq-Comparison:T47 Operator:T48 Value:T29
-T48	Eq-Operator 102 103	≦
+T48	Eq-Operator 102 103	≤
 A16	Eq-Operator-Value T48 LTEQ
 T49	Condition 114 126	Right-handed
 E8	Condition:T49 Name:T50
@@ -108,9 +108,9 @@ E17	Observation:T61 Name:T62 Eq-Comparison:E24
 T62	Observation-Name 316 324	lifespan
 T63	Eq-Unit 303 304	%
 R2	If-Then Arg1:T12 Arg2:E13	
-T64	Eq-Comparison 353 359	≧ 18.0
+T64	Eq-Comparison 353 359	≥ 18.0
 E19	Eq-Comparison:T64 Value:T32 Operator:T65
-T65	Eq-Operator 353 354	≧
+T65	Eq-Operator 353 354	≥
 A24	Eq-Operator-Value T65 GT
 R3	If-Then Arg1:T13 Arg2:E18	
 T66	Life-Stage-And-Gender 365 375	Adolescent
@@ -119,9 +119,9 @@ R4	If-Then Arg1:T66 Arg2:E23
 T67	Life-Stage-And-Gender 411 421	Adolescent
 A26	Life-Stage-And-Gender-Type T67 child
 R5	If-Then Arg1:T67 Arg2:E20	
-T68	Eq-Comparison 440 446	≧ 16.0
+T68	Eq-Comparison 440 446	≥ 16.0
 E21	Eq-Comparison:T68 Operator:T69 Value:T35
-T69	Eq-Operator 440 441	≧
+T69	Eq-Operator 440 441	≥
 A27	Eq-Operator-Value T69 GTEQ
 T70	Drug 507 518	Medications
 E28	Drug:T70 

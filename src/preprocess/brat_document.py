@@ -3,14 +3,12 @@ import re
 import spacy
 tokenize = spacy.load('en_core_web_sm')
 
-
+converters = { '˂':'<', '＜':'<', '＞':'>', '：':':', '－':'-', '﴾':'(', '﴿':')', '（':'(', '、':',', '，':',' }
 
 def pretokenize(text):
     reg_num = r'\d'
     possible_code = r'[a-zA-Z]+\d+(\.\d{1,2})?'
     is_possible_code = lambda i: re.match(possible_code, lowered[i-2:i+2])
-    converters = { '˂':'<', '＜':'<', '＞':'>', '：':':', '－':'-', '﴾':'(', '﴿':')', '（':'(', '、':',', '，':',', '±':'+/-',
-                   '≥':'>=', '≧':'>=', '≤':'<=' }
     dividers = { '<', '>', '=', '≥', '≤', '-', '˂', '\\', '/', '＜', '＞', '(', ')', '~', '、', '+', '≧', '±', '：', ':',
                  '③', '④', '－', ',', '﴾', '﴿', '[', ']', '，', '（', '∙', '+', '%', 'ᵃ' }
     cleaned = []
@@ -28,8 +26,6 @@ def pretokenize(text):
         foll_num = re.match(reg_num, foll) or (is_num and foll in ['.',','])
         is_per = ch == '.'
         add_start, add_end = '', ''
-        if ch in converters:
-            ch = converters.get(ch)
         if ch in dividers:
             if prev != ' ': 
                 add_start = ' '
@@ -48,6 +44,8 @@ def pretokenize(text):
             add_end = ' '
         if text[:i].endswith('Grade') and ch == 'Ⅰ':
             add_start = ' '
+        if ch in converters:
+            ch = converters.get(ch)
         if add_start == ' ' and (prev_add_end == ' ' or prev.endswith(' ')):
             add_start = ''
         if add_end == ' ' and foll == ' ':
@@ -57,7 +55,6 @@ def pretokenize(text):
         pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start + add_end) + len(ch)-1
 
         prev_num = is_num
-        prev = ch
         prev_per = is_per
         is_num = foll_num
         prev_add_end = add_end
@@ -214,6 +211,9 @@ class BratDocument:
                     start = start[0]
             except:
                 continue
+            for i,ch in enumerate(v.span):
+                if ch in converters:
+                    v.span = v.span[:i] + converters.get(ch) + v.span[i+1:]
             no_spaced = v.span.replace(' ','')
             matches = [ start ]
             matches_no_spaced = start.text
@@ -228,8 +228,6 @@ class BratDocument:
                     break
 
             all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
-
-            
             if not all_matched:
                 print(f'Spans did not match! {self.path}/{self.doc_id} {v}')
 
