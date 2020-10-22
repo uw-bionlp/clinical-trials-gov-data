@@ -9,7 +9,7 @@ E2	Encounter:T19 Type:T20
 E7	Or:T23 Arg:T21 Arg2:T22
 E9	Eq-Comparison:T24 Operator:T25 Temporal-Unit:T13 Value:T16
 E13	Encounter:T26 Type:T27 Temporality:E35 Location:T76
-E14	Condition:T28 Name:T29 Temporality:E12
+E14	Observation:T28 Name:T29 Temporality:E12
 E15	Risk:T30 Minimum-Count:E19 Risk-For:E34
 E16	Condition:T31 Name:T32
 E17	Condition:T33 Name:T34
@@ -19,15 +19,14 @@ E20	Encounter:T46 Type:T47
 E21	Condition:T48 Name:T49
 E22	Encounter:T50 Type:T51
 E24	Encounter:T53 Type:T54 Location:T80 Location2:T81
-E25	Encounter:T56
+E25	Encounter:T56 
 E26	Temporal-Connection:T59 Arg:T57 Arg2:E25
 E27	Temporal-Connection:T60 Arg:T57 Arg2:E25
 E28	Or:T61 Arg:E26 Arg2:E27
-E29	Condition:T62 Name:T63
 E30	Condition:T64 Name:T65
 E31	Encounter:T66 Type:T67
 E33	Temporal-Connection:T70 Arg2:E31 Arg:E30
-E32	Encounter:T68
+E32	Encounter:T68 
 E34	Condition:T69 Name:T71
 E35	Eq-Comparison:T72 Value:T73 Value2:T74 Operator:T75
 E3	And:T77 Arg:E2 Arg2:E1
@@ -58,8 +57,8 @@ T24	Eq-Comparison 125 149	18 years of age or older
 T25	Eq-Operator 141 149	or older
 T26	Encounter 177 185	admitted
 T27	Encounter-Type 177 185	admitted
-T28	Condition 321 343	prognosis for survival
-T29	Condition-Name 321 343	prognosis for survival
+T28	Observation 321 343	prognosis for survival
+T29	Observation-Name 321 343	prognosis for survival
 T30	Risk 392 404	risk factors
 T31	Condition 411 414	DLP
 T32	Condition-Name 411 414	DLP
@@ -91,8 +90,6 @@ T58	Encounter-Type 825 834	discharge
 T59	Temporal-Connection 809 815	before
 T60	Temporal-Connection 819 824	after
 T61	Or 816 818	or
-T62	Condition 840 847	hospice
-T63	Condition-Name 840 847	hospice
 T64	Condition 853 872	inability to comply
 T65	Condition-Name 853 872	inability to comply
 T66	Encounter 883 892	discharge
@@ -153,3 +150,4 @@ R6	Treatment-For Arg1:E20 Arg2:E10
 R7	Treatment-For Arg1:E22 Arg2:E21
 R8	Equivalent-To Arg1:T57 Arg2:T55
 R9	Treatment-For Arg1:E2 Arg2:E1
+T62	Location 840 847	hospice

@@ -11,9 +11,9 @@ E11	Modifier:T11 Modifies:T96
 E12	Condition:T12 Name:T98
 E13	Condition:T13 Name:T99
 E14	Or:T14 Arg:E13 Arg2:E15
-E15	Procedure:T15 Name:T100
+E15	Condition:T15 Name:T100
 E16	Or:T16 Arg:E15 Arg2:E17
-E17	Procedure:T17 Name:T101
+E17	Condition:T17 Name:T101
 E19	Or:T19 Arg:E3 Arg2:E20
 E20	Condition:T20 Name:T103
 E21	Temporal-Connection:T21 Arg:E20 Arg2:E22
@@ -80,7 +80,7 @@ E86	Or:T86 Arg:E85 Arg2:E87
 E87	Negation:T87 Negates:E88 Negates2:E96
 E88	Observation:T88 Name:T154
 E89	Study:T89 Study-Of:E88 Study-Of2:E96
-E3	Procedure:T3 Name:T18
+E3	Condition:T3 Name:T18
 E18	Observation:T28 Name:T110
 E23	Observation:T37 Name:T102
 E28	Modifier:T135 Modifies:T110
@@ -110,9 +110,9 @@ T11	Modifier 133 141	inserted
 T12	Condition 146 172	otitis media with effusion
 T13	Condition 174 177	OME
 T14	Or 179 181	or
-T15	Procedure 182 210	tympanic membrane retraction
+T15	Condition 182 210	tympanic membrane retraction
 T16	Or 210 211	/
-T17	Procedure 211 228	retraction pocket
+T17	Condition 211 228	retraction pocket
 T19	Or 239 241	or
 T20	Condition 244 258	TM perforation
 T21	Temporal-Connection 259 264	after
@@ -189,8 +189,8 @@ T96	Procedure-Name 107 123	ventilation tube
 T97	Procedure-Name 128 131	VTs
 T98	Condition-Name 146 172	otitis media with effusion
 T99	Condition-Name 174 177	OME
-T100	Procedure-Name 182 210	tympanic membrane retraction
-T101	Procedure-Name 211 228	retraction pocket
+T100	Condition-Name 182 210	tympanic membrane retraction
+T101	Condition-Name 211 228	retraction pocket
 T103	Condition-Name 244 258	TM perforation
 T104	Procedure-Name 265 282	extrusion of a VT
 T105	Eq-Temporal-Period 288 295	History
@@ -222,8 +222,8 @@ T131	Condition-Name 977 986	cleft lip
 T132	Condition-Name 1014 1022	syndrome
 T133	Condition-Name 1041 1053	nasal cavity
 T134	Condition-Name 1130 1139	Pregnancy
-T3	Procedure 230 237	TM-R/RP
-T18	Procedure-Name 230 237	TM-R/RP
+T3	Condition 230 237	TM-R/RP
+T18	Condition-Name 230 237	TM-R/RP
 T23	Procedure-Name 318 331	VT insertions
 T28	Observation 349 364	Eustachian tube
 T37	Observation 366 368	ET
@@ -288,3 +288,6 @@ R7	Found-By Arg1:E32 Arg2:E18
 R8	Found-By Arg1:E34 Arg2:E33
 R9	Abbrev-Of Arg1:E38 Arg2:E37
 R10	If-Then Arg1:E72 Arg2:E71
+R11	Treatment-For Arg1:E10 Arg2:E15	
+R12	Treatment-For Arg1:E10 Arg2:E17	
+R13	Treatment-For Arg1:E10 Arg2:E20	

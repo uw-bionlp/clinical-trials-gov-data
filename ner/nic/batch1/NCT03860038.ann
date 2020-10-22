@@ -17,7 +17,7 @@ E6	Assertion:T40 Asserted:E7
 E8	Observation:T42 Name:T43 Eq-Comparison:E20
 E10	Eq-Comparison:T44 Value:T45 Value2:T30 Operator:T46
 E12	Observation:T47 Name:T48
-E14	Drug:T49 Name:T50 Temporality:E15
+E14	Drug:T49 Name:T50
 E23	Modifier:T53 Modifies:E1
 E25	Modifier:T55 Modifies:E3
 E26	Temporal-Connection:T56 Arg2:E27 Arg:E21
@@ -89,8 +89,8 @@ T45	Eq-Value 375 376	2
 T46	Eq-Operator 374 375	~
 T47	Observation 303 307	ECOG
 T48	Observation-Name 303 307	ECOG
-T49	Drug 424 463	anti-CD38 monoclonal antibody treatment
-T50	Drug-Name 424 463	anti-CD38 monoclonal antibody treatment
+T49	Drug 424 453	anti-CD38 monoclonal antibody
+T50	Drug-Name 424 453	anti-CD38 monoclonal antibody
 T53	Modifier 570 579	allogenic
 T55	Modifier 626 636	autologous
 T56	Temporal-Connection 674 680	before
@@ -132,7 +132,6 @@ A6	Eq-Operator-Value T22 LTEQ
 A7	Eq-Temporal-Unit-Value T23 month
 A8	Eq-Temporal-Unit-Value T24 month
 A9	Eq-Temporal-Unit-Value T25 week
-A11	Observation-Type-Value T43 vital
 A12	Eq-Operator-Value T46 BETWEEN
 A13	Observation-Type-Value T48 clinical-score
 A17	Temporal-Connection-Type-Value E26 before
@@ -145,5 +144,9 @@ A14	Eq-Temporal-Period-Value T76 past
 A15	Temporal-Connection-Type-Value E42 before
 A20	Eq-Temporal-Recency-Value T81 first-time
 R2	Abbrev-Of Arg1:E17 Arg2:E5
-R3	Abbrev-Of Arg1:E37 Arg2:E12
+R3	Abbrev-Of Arg1:E12 Arg2:E37
 R1	Treatment-For Arg1:E13 Arg2:E28
+A22	Observation-Type-Value T72 clinical-score
+T82	Procedure 454 463	treatment
+E45	Procedure:T82 Temporality:E15
+R4	Using Arg1:E45 Arg2:E14	

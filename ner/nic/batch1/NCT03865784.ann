@@ -5,7 +5,7 @@ E4	Modifier:T12 Modifies:E3
 E5	Condition:T13 Name:T14
 E8	Procedure:T17 Name:T18
 E9	Eq-Comparison:T19 Temporal-Unit:T5 Value:T7 Temporal-Period:T37
-E10	Allergy:T21
+E10	Allergy:T21 
 E11	Condition:T22 Name:T23
 E12	Observation:T24 Name:T25
 E13	Age:T26 Eq-Comparison:E1
@@ -29,8 +29,8 @@ T6	Eq-Value 52 54	18
 T7	Eq-Value 355 356	6
 T8	Eq-Operator 47 51	Over
 T9	Eq-Comparison 47 60	Over 18 years
-T10	Condition 94 103	back pain
-T11	Condition-Name 94 103	back pain
+T10	Condition 99 103	pain
+T11	Condition-Name 99 103	pain
 T12	Modifier 85 93	specific
 T13	Condition 243 249	injury
 T14	Condition-Name 243 249	injury
@@ -69,3 +69,5 @@ A9	Eq-Temporal-Period-Value T33 past
 A10	Eq-Temporal-Period-Value T37 past
 R1	Using Arg1:E19 Arg2:E8
 R2	Using Arg1:E19 Arg2:E2
+T20	Modifier 94 98	back
+E23	Modifier:T20 Modifies:T11

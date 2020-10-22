@@ -190,6 +190,21 @@ def no_attrs(annotations):
                 print(f'Temporal-Connection has no attribute!')
 
 
+def anatomy(annotations):
+    mods = {}
+    for ann in annotations:
+        matched  = [ v.span.lower() for _,v in ann.Ts.items() if v.type == 'Modifier' ]
+        for m in matched:
+            if m in mods:
+                mods[m] += 1
+            else:
+                mods[m] = 1
+    
+    for k,v in sorted(mods.items(), key=lambda x: x[1], reverse=True)[:50]:
+        print(f'{k} {v}')
+
+    return annotations
+
 def main():
 
     # Get data
@@ -200,9 +215,8 @@ def main():
 
     # Convert
     # TODO: anatomy, Histology
-    for converter in [ no_attrs ]:
+    for converter in [ anatomy ]:
         annotations = converter(annotations)
-
         
     #for ann in annotations:
     #    to_brat(ann)

@@ -8,7 +8,7 @@ E2	Condition:T3 Name:T26
 E5	Condition:T29 Name:T30
 E9	Eq-Comparison:T33 Temporal-Period:T34 Temporal-Unit:T15 Value:T23
 E11	Temporal-Connection:T35 Arg:E5 Arg2:E9
-E15	Drug:T36 Name:T37
+E15	Drug:T36 Name:T37 Temporality:E47
 E16	Eq-Comparison:T38 Temporal-Period:T41 Temporal-Unit:T40 Value:T39
 E17	Temporal-Connection:T42 Arg:E15 Arg2:E16
 E18	Negation:T43 Negates:E5
@@ -31,7 +31,7 @@ E1	Observation:T1 Name:T2
 E7	Assertion:T20 Asserted:E1
 E3	Assertion:T27 Asserted:E1
 E34	And:T28 Arg:E3 Arg2:E7
-E35	Condition:T31
+E35	Condition:T31 
 E36	Modifier:T32 Modifies:E35
 E37	Or:T72 Arg:E19 Arg2:E35
 E38	Modifier:T73 Modifies:T48
@@ -42,7 +42,7 @@ E41	Modifier:T53 Modifies:T5
 E42	Or:T62 Arg:E29 Arg2:E41
 E43	Eq-Comparison:T74 Temporal-Period:T75
 E44	Other:T76 Is-Other:E31
-E45	Modifier:T66
+E45	Modifier:T66 
 E46	Or:T77 Arg:E32 Arg2:E45
 T4	Condition 664 669	abuse
 T5	Condition-Name 664 669	abuse
@@ -137,3 +137,7 @@ A17	Assertion-Type-Value E3 hypothetical
 A18	Eq-Temporal-Period-Value T75 present
 A19	Observation-Type-Value T13 social-habit
 R1	Caused-By Arg1:E19 Arg2:E35
+T60	Eq-Comparison 378 384	Taking
+E47	Eq-Comparison:T60 Temporal-Period:T71
+T71	Eq-Temporal-Period 378 384	Taking
+A14	Eq-Temporal-Period-Value T71 present

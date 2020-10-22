@@ -410,7 +410,7 @@ class BratDocument:
 
         return output
 
-    def to_r_bert_format(self, relation2id, id2relation, known_rel_types, debug=False):
+    def to_r_bert_format(self, relation2id, id2relation, known_rel_types):
 
         regex_trailing_num = r'\d'
         data, rels = [], []

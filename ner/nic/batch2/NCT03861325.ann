@@ -80,3 +80,20 @@ A7	Eq-Temporal-Period-Value T43 future
 A8	Polarity-Value T53 positive
 A9	Acuteness-Type-Value T50 chronic
 R1	Example-Of Arg1:E3 Arg2:E1
+T13	Observation 616 634	under guardianship
+E2	Observation:T13 Name:T14
+T14	Observation-Name 616 634	under guardianship
+T21	Observation 636 654	under guardianship
+E4	Observation:T21 Name:T26
+T26	Observation-Name 636 654	under guardianship
+T27	Observation 659 690	under the protection of justice
+E10	Observation:T27 Name:T54
+T54	Observation-Name 659 690	under the protection of justice
+T55	Or 656 658	or
+E13	Or:T55 Arg:E4 Arg2:E10
+T56	Study 590 595	study
+E28	Study:T56 Temporality:E31
+T57	Eq-Comparison 581 589	previous
+E31	Eq-Comparison:T57 Temporal-Period:T58
+T58	Eq-Temporal-Period 581 589	previous
+A1	Eq-Temporal-Period-Value T58 past

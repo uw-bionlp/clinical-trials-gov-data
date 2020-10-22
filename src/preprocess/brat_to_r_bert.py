@@ -22,6 +22,8 @@ def write_tsv(lines, file_path):
 def get_relation_tuple(tp, arg1, arg2):
     if ':Arg' not in tp and any(re.findall(regex_trailing_num, tp)):
         tp = re.sub(regex_trailing_num, '', tp)
+    elif ':Arg3' in tp:
+        tp = re.sub(regex_trailing_num, '2', tp)
     tp = tp.replace('-Name','')
     args_str = get_ordered_arguments(arg1, arg2)
 
@@ -29,15 +31,18 @@ def get_relation_tuple(tp, arg1, arg2):
 
 
 def get_ordered_arguments(arg1, arg2):
-    if arg1.tok_beg_idx < arg2.tok_end_idx:
+    if arg1.tok_beg_idx < arg2.tok_beg_idx:
         return '(E1,E2)'
     return '(E2,E1)'
 
 
-def main():
+def get_ordered_type_tuple(t1, t2, rel):
+    if t1.tok_beg_idx < t2.tok_beg_idx:
+        return (t1.type, t2.type, rel)
+    return (t2.type, t1.type, rel)
 
-    regex_trailing_num = r'\d'
-    clean_rel = lambda tp: (re.sub(regex_trailing_num, '', tp) if 'Arg' not in tp and any(re.findall(regex_trailing_num, tp)) else tp).replace('-Name','')
+
+def main():
 
     rel_path = os.path.join(Config.preprocess_dir, 'ctg_data')
     if not os.path.exists(rel_path): 
@@ -52,11 +57,11 @@ def main():
     # Get unique relations unioned with event arguments
     rels, args, known_rel_types = set(), set(), set()
     for ann in annotations:
-        rels = rels.union(set([ get_relation_tuple('Relation:'+v.type, v.arg1.get_T(), v.arg2.get_T()) for k,v in ann.Rs.items() ]))
-        known_rel_types = known_rel_types.union(set([ (v.arg1.get_T().type, v.arg2.get_T().type, get_relation_tuple('Relation:'+v.type,v.arg1.get_T(),v.arg2.get_T())) for k,v in ann.Rs.items() ]))
+        rels = rels.union(set([ get_relation_tuple('Relation:'+v.type, v.arg1.get_T(), v.arg2.get_T()) for _,v in ann.Rs.items() ]))
+        known_rel_types = known_rel_types.union(set([ get_ordered_type_tuple(v.arg1.get_T(), v.arg2.get_T(), get_relation_tuple('Relation:'+v.type,v.arg1.get_T(),v.arg2.get_T())) for k,v in ann.Rs.items() ]))
         for _, ev in ann.Es.items():
             args = args.union([ get_relation_tuple('Argument:'+arg.type, ev.args[0].get_T(), arg.get_T()) for arg in ev.args[1:]])
-            known_rel_types = known_rel_types.union(set([ (ev.args[0].get_T().type, arg.get_T().type, get_relation_tuple('Argument:'+arg.type,ev.args[0].get_T(),arg.get_T())) for arg in ev.args[1:] ]))
+            known_rel_types = known_rel_types.union(set([ get_ordered_type_tuple(ev.args[0].get_T(), arg.get_T(), get_relation_tuple('Argument:'+arg.type,ev.args[0].get_T(),arg.get_T())) for arg in ev.args[1:] ]))
     
     # Track type labels so BERT won't mess with them in prediction
     with open(os.path.join(rel_path, 'types.tsv'), 'w+') as fout:
@@ -87,7 +92,7 @@ def main():
                 fout.write(f'{rel}\n')
 
     rels = []
-    known_rel_types_no_arg = set([ (x1, x2) for x1, x2, x3 in known_rel_types ])
+    known_rel_types_no_arg = set([ (x1, x2) for x1, x2, _ in known_rel_types ])
     r_bert = [ ann.to_r_bert_format(relation2id, id2relation, known_rel_types_no_arg) for ann in annotations ]
     for rel in r_bert:
         rels += rel
