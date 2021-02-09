@@ -1,11 +1,11 @@
-E3	Procedure:T3 Name:T4
+E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E2	Eq-Comparison:T13 Operator:T15 Temporal-Unit:T11 Value:T14
 E4	Condition:T16 Name:T17 Acuteness:T12
 E6	Observation:T18 Name:T19
 E8	Procedure:T21 Name:T22
-E10	Procedure:T23 Name:T24
+E10	Drug:T23 Name:T24
 E11	Condition:T25 Name:T26
 E12	Procedure:T27 Name:T28
 E13	Condition:T29 
@@ -17,8 +17,8 @@ E17	Condition:T34 Name:T9
 E18	Or:T35 Arg:E13 Arg2:E14
 T1	Language 242 249	Swedish
 T2	Language 345 352	Swedish
-T3	Procedure 379 396	Immunosuppression
-T4	Procedure-Name 379 396	Immunosuppression
+T3	Condition 379 396	Immunosuppression
+T4	Condition-Name 379 396	Immunosuppression
 T5	Condition 505 525	psychiatric disorder
 T6	Condition-Name 505 525	psychiatric disorder
 T7	Condition 483 499	immunodeficiency
@@ -35,8 +35,8 @@ T19	Observation-Name 117 124	species
 T20	Location 291 297	Sweden
 T21	Procedure 403 416	chemotheraphy
 T22	Procedure-Name 403 416	chemotheraphy
-T23	Procedure 418 453	treatment with TNF-alpha-inhibitors
-T24	Procedure-Name 418 453	treatment with TNF-alpha-inhibitors
+T23	Drug 433 453	TNF-alpha-inhibitors
+T24	Drug-Name 433 453	TNF-alpha-inhibitors
 T25	Condition 563 571	dementia
 T26	Condition-Name 563 571	dementia
 T27	Procedure 577 595	Invasive catheters
@@ -58,6 +58,9 @@ A5	Acuteness-Type-Value T12 chronic
 R1	Found-By Arg1:E4 Arg2:E6
 R2	Equivalent-To Arg1:E2 Arg2:T12
 R3	Example-Of Arg1:E8 Arg2:E3
-R4	Example-Of Arg1:E10 Arg2:E3
 R5	Found-By Arg1:E4 Arg2:E13
 R6	Found-By Arg1:E4 Arg2:E14
+T36	Procedure 418 427	treatment
+E1	Procedure:T36 
+R4	Using Arg1:E1 Arg2:E10	
+R7	Example-Of Arg1:E10 Arg2:E3	

@@ -81,13 +81,13 @@ T40	Condition 444 456	prolactinoma
 T41	Condition-Name 444 456	prolactinoma
 T42	Condition 468 474	cancer
 T43	Condition-Name 468 474	cancer
-T44	Condition 481 499	Kidney dysfunction
-T45	Condition-Name 481 499	Kidney dysfunction
+T44	Condition 488 499	dysfunction
+T45	Condition-Name 488 499	dysfunction
 T46	Observation 501 521	creatinine clearance
 T47	Observation-Name 501 521	creatinine clearance
 T48	Eq-Comparison 522 544	below 10 ml per minute
 T49	Eq-Operator 522 527	below
-T50	Eq-Unit 538 544	minute
+T50	Eq-Temporal-Unit 538 544	minute
 T51	Eq-Unit 531 533	ml
 T52	Risk 556 560	risk
 T53	Condition 575 585	thrombosis
@@ -143,3 +143,8 @@ R8	Example-Of Arg1:E34 Arg2:E7
 R9	Example-Of Arg1:E5 Arg2:E7
 R10	Equivalent-To Arg1:E23 Arg2:E22
 R11	Caused-By Arg1:T59 Arg2:E29
+T81	Or 458 460	or
+E45	Or:T81 Arg:E20 Arg2:E21
+A11	Eq-Temporal-Unit-Value T50 minute
+T82	Modifier 481 487	Kidney
+E46	Modifier:T82 Modifies:T45

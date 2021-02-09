@@ -1,8 +1,8 @@
 E1	Procedure:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6 Temporality:E31
-E7	Condition:T7 Name:T8
-E9	Condition:T9 Name:T10
+E7	Condition:T7 Name:T8 Severity:T103
+E9	Procedure:T9 Name:T10
 E11	Procedure:T11 Name:T12
 E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
@@ -27,7 +27,7 @@ E20	Or:T64 Arg:E3 Arg2:E18
 E22	Modifier:T65 Modifies:T2
 E25	Modifier:T66 Modifies:T2
 E27	Or:T67 Arg:E22 Arg2:E25
-E32	Study:T68
+E32	Study:T68 
 E33	Temporal-Connection:T69 Arg:E9 Arg2:E32
 E34	Condition:T70 Name:T71 Polarity:T72
 E35	Condition:T73 Name:T74
@@ -41,11 +41,11 @@ E42	Observation:T82 Name:T83
 E43	Assertion:T84 Asserted:E54
 E44	Drug:T86 Name:T85
 E45	Or:T87 Arg:E44 Arg2:E13
-E46	Condition:T88 Name:T89
+E46	Condition:T88 Name:T89 Severity:T104
 E47	Negation:T90 Negates:E15
-E17	Death:T17
+E17	Death:T17 
 E48	Assertion:T18 Asserted:E17
-E49	Condition:T91 Name:T92
+E49	Condition:T91 Name:T92 Severity:T105 Stability:T106
 E50	Condition:T93 Name:T94
 E51	Condition:T95 Name:T96 Temporality:E52
 E52	Eq-Comparison:T97 Temporal-Period:T98
@@ -59,10 +59,10 @@ T3	Condition 414 423	Pregnancy
 T4	Condition-Name 414 423	Pregnancy
 T5	Condition 511 532	myocardial infarction
 T6	Condition-Name 511 532	myocardial infarction
-T7	Condition 564 591	Advanced pulmonary fibrosis
-T8	Condition-Name 564 591	Advanced pulmonary fibrosis
-T9	Condition 613 642	cardiopulmonary resuscitation
-T10	Condition-Name 613 642	cardiopulmonary resuscitation
+T7	Condition 573 591	pulmonary fibrosis
+T8	Condition-Name 573 591	pulmonary fibrosis
+T9	Procedure 613 642	cardiopulmonary resuscitation
+T10	Procedure-Name 613 642	cardiopulmonary resuscitation
 T11	Procedure 852 864	life support
 T12	Procedure-Name 852 864	life support
 T13	Condition 935 951	immunodeficiency
@@ -134,13 +134,13 @@ T84	Assertion 822 835	commitment to
 T85	Drug-Name 903 926	immunosuppressive drugs
 T86	Drug 903 926	immunosuppressive drugs
 T87	Or 927 929	or
-T88	Condition 972 987	advanced tumors
-T89	Condition-Name 972 987	advanced tumors
+T88	Condition 981 987	tumors
+T89	Condition-Name 981 987	tumors
 T90	Negation 1017 1020	non
 T17	Death 1055 1060	death
 T18	Assertion 1040 1050	leading to
-T91	Condition 1061 1090	uncontrollable major bleeding
-T92	Condition-Name 1061 1090	uncontrollable major bleeding
+T91	Condition 1082 1090	bleeding
+T92	Condition-Name 1082 1090	bleeding
 T93	Condition 1098 1104	hernia
 T94	Condition-Name 1098 1104	hernia
 T95	Condition 1140 1149	infection
@@ -179,3 +179,11 @@ R4	Example-Of Arg1:E19 Arg2:E15
 R5	Example-Of Arg1:E50 Arg2:E15
 R6	Example-Of Arg1:E53 Arg2:E51
 R1	Equivalent-To Arg1:E54 Arg2:E42
+T103	Severity 564 572	Advanced
+A19	Severity-Value T103 severe
+T104	Severity 972 980	advanced
+A20	Severity-Value T104 severe
+T105	Severity 1076 1081	major
+A21	Severity-Value T105 severe
+T106	Stability 1061 1075	uncontrollable
+A22	Stability-Value T106 change

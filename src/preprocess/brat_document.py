@@ -452,6 +452,18 @@ class BratDocument:
         for _, e1 in self.Es.items():
             t1 = e1.get_T()
 
+            # Check Eq-Comparison -> Units specifically (as they can be 'Per' or 'Unit' arguments, so need to predict)
+            #if t1.type == 'Eq-Comparison':
+            #    args = [ arg for arg in e1.args[1:] if arg.type in [ 'Unit', 'Per' ] and isinstance(arg.val, BratT) and arg.val.type in [ 'Eq-Unit', 'Eq-Temporal-Unit' ] ]
+            #    for arg in args:
+            #        relation = clean_rel('Argument:'+arg.type)
+            #        rel = { 
+            #            'subj': e1 ,'subj_start': t1.tok_beg_idx, 'subj_end': t1.tok_end_idx, 'subj_type': t1.type,
+            #            'obj': arg.val,'obj_start': arg.val.tok_beg_idx, 'obj_end': arg.val.tok_end_idx, 'obj_type': arg.val.type,
+            #            'relation': relation
+            #        }
+            #        rels.append(rel)
+
             # Check Events by Relation
             for _, e2 in self.Es.items():
                 t2 = e2.get_T()
@@ -507,7 +519,7 @@ class BratDocument:
 
                 rel = { 
                     'subj': e1 ,'subj_start': t1.tok_beg_idx, 'subj_end': t1.tok_end_idx, 'subj_type': t1.type,
-                    'obj': e2,'obj_start': t2.tok_beg_idx, 'obj_end': t2.tok_end_idx, 'obj_type': t2.type,
+                    'obj': t2,'obj_start': t2.tok_beg_idx, 'obj_end': t2.tok_end_idx, 'obj_type': t2.type,
                     'relation': rel_type
                 }
                 rels.append(rel)
@@ -541,13 +553,16 @@ class BratDocument:
             relation = rel['relation']
             subject_first = subj_start < obj_start
             is_other = relation == 'Other'
+
+            if 'Arg3' in relation or 'Arg4' in relation or 'Arg5' in relation:
+                relation = relation.replace('Arg3','Arg2').replace('Arg4','Arg2').replace('Arg5','Arg2')
             
             if is_other:
                 relation_id = relation2id['Other']
             elif subject_first:
-                relation_id = relation2id[rel['relation']+'(E1,E2)']
+                relation_id = relation2id[relation+'(E1,E2)']
             else:
-                relation_id = relation2id[rel['relation']+'(E2,E1)']
+                relation_id = relation2id[relation+'(E2,E1)']
             tokens = [ t.text for t in self.toks ]
 
             if subject_first:

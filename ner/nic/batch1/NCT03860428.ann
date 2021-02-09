@@ -123,8 +123,8 @@ T89	Observation-Name 581 611	serum creatinine concentration
 T90	Eq-Unit 648 650	kg
 T91	Eq-Unit 651 652	h
 T92	Assertion 658 667	Suspected
-T93	Condition 705 720	lung hypoplasia
-T94	Condition-Name 705 720	lung hypoplasia
+T93	Condition 710 720	hypoplasia
+T94	Condition-Name 710 720	hypoplasia
 T95	Assertion 686 695	Suspected
 T51	Observation-Name 25 40	Gestational age
 T96	Observation 633 641	Oliguria
@@ -166,3 +166,5 @@ A27	Observation-Type-Value T5 measurement
 R1	Abbrev-Of Arg1:E28 Arg2:E27
 R3	Abbrev-Of Arg1:E32 Arg2:E31
 R2	Treatment-For Arg1:E8 Arg2:E6
+T6	Modifier 705 709	lung
+E5	Modifier:T6 Modifies:T94

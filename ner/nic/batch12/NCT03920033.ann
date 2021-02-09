@@ -6,7 +6,7 @@ E11	Eq-Comparison:T40 Operator:T13 Value:T31 Unit:T81 Per:T82
 E12	Eq-Comparison:T41 Operator:T14 Temporal-Unit:T20 Value:T32
 E15	Eq-Comparison:T44 Operator:T24 Value:T26 Value2:T27
 E2	Condition:T45 Name:T46
-E4	Risk:T47 Risk-For:E2 Polarity:T48
+E4	Risk:T47 Risk-For:E2 Polarity:T48 Polarity2:T49
 E6	Or:T50 Arg:T49 Arg2:T48
 E16	Procedure:T51 Name:T52
 E17	Coreference:T53 Refers-To:E2
@@ -161,8 +161,8 @@ T96	Or 667 669	or
 T97	Eq-Operator 697 698	<
 T98	Eq-Value 699 702	2.5
 T99	Eq-Unit 705 725	maximum normal value
-T100	Condition 762 783	gross recurrent tumor
-T101	Condition-Name 762 783	gross recurrent tumor
+T100	Condition 778 783	tumor
+T101	Condition-Name 778 783	tumor
 T102	Condition 809 819	metastasis
 T103	Condition-Name 809 819	metastasis
 T104	Condition 847 857	metastasis
@@ -252,3 +252,5 @@ R6	Treatment-For Arg1:E45 Arg2:E47
 R7	Treatment-For Arg1:E44 Arg2:E47
 T141	Modifier 77 85	prostate
 E65	Modifier:T141 Modifies:T46
+T142	Modifier 762 777	gross recurrent
+E66	Modifier:T142 Modifies:T101

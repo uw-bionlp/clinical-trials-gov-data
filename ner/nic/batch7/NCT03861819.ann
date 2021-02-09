@@ -90,7 +90,7 @@ E95	Modifier:T173 Modifies:T144
 E96	Negation:T174 Negates:E95
 T1	Age 25 29	Ages
 T2	Eq-Comparison 30 35	18-59
-T3	Condition 66 94	nonalcoholic steatohepatitis
+T3	Condition 79 94	steatohepatitis
 T4	Or 95 98	and
 T5	Condition 99 107	fibrosis
 T6	Eq-Comparison 109 118	stage 1-3
@@ -178,7 +178,7 @@ T89	Eq-Comparison 1409 1421	last 2 years
 T92	Eq-Value 30 32	18
 T93	Eq-Operator 32 33	-
 T94	Eq-Value 33 35	59
-T95	Condition-Name 66 94	nonalcoholic steatohepatitis
+T95	Condition-Name 79 94	steatohepatitis
 T96	Condition-Name 99 107	fibrosis
 T97	Eq-Unit 109 114	stage
 T98	Eq-Value 115 116	1
@@ -323,3 +323,9 @@ R21	Example-Of Arg1:E78 Arg2:E75
 R22	Example-Of Arg1:E79 Arg2:E75
 R23	If-Then Arg1:T156 Arg2:E86
 R24	If-Then Arg1:T160 Arg2:E88
+T85	Modifier 66 78	nonalcoholic
+E48	Modifier:T85 Modifies:T95
+T90	Procedure 41 55	Histologically
+E64	Procedure:T90 Name:T91
+T91	Procedure-Name 41 55	Histologically
+R25	Found-By Arg1:E3 Arg2:E64	
