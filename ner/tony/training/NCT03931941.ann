@@ -1,74 +1,119 @@
+E1	Procedure:T1 Name:T2 Minimum-Count:E5
+E3	Condition:T3 Name:T4
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14 Stability:T133
+E15	Condition:T15 Name:T16
+E17	Procedure:T17 Name:T18
+E19	Procedure:T19 Name:T20
+E21	Condition:T21 Name:T22
+E23	Procedure:T23 Name:T24 Temporality:E40
+E25	Procedure:T25 
+E27	Procedure:T27 Name:T28
+E29	Procedure:T29 Name:T30
+E33	Condition:T33 Name:T34
+E35	Condition:T35 Name:T36
+E36	Age:T48 Eq-Comparison:E37
+E37	Eq-Comparison:T55 Operator:T37 Temporal-Unit:T44 Value:T49
+E38	Eq-Comparison:T56 Temporal-Unit:T45 Value:T50 Temporal-Period:T38
+E39	Eq-Comparison:T57 Operator:T39 Value:T51 Per:T108 Unit:T109
+E40	Eq-Comparison:T58 Temporal-Unit:T46 Value:T52 Temporal-Period:T40
+E41	Eq-Comparison:T59 Operator:T42 Value:T53 Per:T47
+E42	Eq-Comparison:T60 Operator:T43 Value:T54 Unit:T79 Per:T147
+E2	Modifier:T31 Modifies:E3
+E4	Eq-Comparison:T5 Operator:T6 Value:T32
+E5	Eq-Comparison:T61 Operator:T62 Value:T63
+E6	Temporal-Connection:T64 Arg2:E12 Arg:E10
+E10	Coreference:T67 Minimum-Count:E4 Refers-To:E3
+E12	Coreference:T68 Refers-To:E3
+E18	Eq-Comparison:T71 Operator:T72 Value:T73
+E24	Encounter:T76 Type:T77
+E7	Condition:T7 Name:T8 Minimum-Count:E18 Severity:T75
+E20	Observation:T74 Name:T78 Eq-Comparison:E42
+E26	Observation:T80 Name:T81 Eq-Comparison:E41
+E28	Condition:T82 Name:T83
+E30	Observation:T84 Specimen:T85 Temporality:E38 Polarity:T86 Name:T65
+E32	Temporal-Connection:T90 Arg:E38 Arg2:E60
+E34	Drug:T93 Name:T94 Temporality:E46
+E43	Eq-Comparison:T95 Temporal-Period:T96
+E46	Eq-Comparison:T100 Temporal-Period:T99
+E47	Condition:T101 Name:T102
+E48	Temporal-Connection:T104 Arg:E47 Arg2:E69
+E49	Condition:T106 Name:T107
+E50	Drug:T110 Name:T111 Temporality:E75
+E51	Temporal-Connection:T113 Arg:E50 Arg2:E70
+E52	Temporal-Connection:T115 Arg:E39 Arg2:E75
+E53	Condition:T117 Name:T118
+E54	Drug:T119 Name:T120
+E56	Condition:T122 
+E57	Exception:T123 Except:E21 From:E56
+E58	Observation:T124 Name:T112 Severity:T121
+E61	Drug:T126 Name:T127
+E62	Drug:T128 Name:T129 Temporality:E63
+E63	Eq-Comparison:T130 Temporal-Unit:T131 Temporal-Period:T41
+E64	Temporal-Connection:T134 Arg:E26 Arg2:E71
+E65	Temporal-Connection:T137 Arg:E20 Arg2:E72
+E66	Temporal-Connection:T140 Arg:E67 Arg2:E73
+E67	Condition:T142 Name:T143
+E68	Assertion:T144 Asserted:E67
+E8	Or:T26 Arg:E1 Arg2:E7
+E45	Or:T89 Arg:E35 Arg2:E68
+E14	Or:T69 Arg:E29 Arg2:E25
+E22	And:T98 Arg:E27 Arg2:E58
+E31	Or:T70 Arg:E43 Arg2:E46
+E16	Organism:T66 Name:T87
+E44	Organism:T88 Name:T91
+E59	Or:T97 Arg:E16 Arg2:E44
+E60	Study:T92 
+E69	Study:T103 
+E70	Study:T105 
+E71	Study:T114 
+E72	Study:T116 
+E73	Study:T125 
+E75	Eq-Comparison:T150 Temporal-Period:T151
+E76	Eq-Comparison:T152 Temporal-Period:T153
+E55	Assertion:T132 Asserted:E17
+E74	Modifier:T135 Modifies:T18
+E77	And:T136 Arg:E53 Arg2:E54
 T1	Procedure 248 271	oral antibiotic therapy
 T2	Procedure-Name 248 271	oral antibiotic therapy
-E1	Procedure:T1 Name:T2
 T3	Condition 99 102	CDI
 T4	Condition-Name 99 102	CDI
-E3	Condition:T3 Name:T4
-T7	Condition 319 322	CDI
 T8	Condition-Name 319 322	CDI
-E7	Condition:T7 Name:T8
 T9	Condition 570 573	CDI
 T10	Condition-Name 570 573	CDI
-E9	Condition:T9 Name:T10
 T11	Condition 635 638	CDI
 T12	Condition-Name 635 638	CDI
-E11	Condition:T11 Name:T12
 T13	Condition 781 784	CDI
 T14	Condition-Name 781 784	CDI
-E13	Condition:T13 Name:T14
 T15	Condition 850 853	CDI
 T16	Condition-Name 850 853	CDI
-E15	Condition:T15 Name:T16
 T17	Procedure 888 906	antibiotic therapy
 T18	Procedure-Name 888 906	antibiotic therapy
-E17	Procedure:T17 Name:T18
 T19	Procedure 944 971	Fecal microbiota transplant
-T20	Procedure-Name 961 971	transplant
-E19	Procedure:T19 Name:T20
+T20	Procedure-Name 944 971	Fecal microbiota transplant
 T21	Condition 934 937	CDI
 T22	Condition-Name 934 937	CDI
-E21	Condition:T21 Name:T22
 T23	Procedure 973 976	FMT
 T24	Procedure-Name 973 976	FMT
-E23	Procedure:T23 Name:T24
 T25	Procedure 1084 1093	procedure
-T26	Procedure-Name 1084 1093	procedure
-E25	Procedure:T25 Name:T26
 T27	Procedure 1009 1012	FMT
 T28	Procedure-Name 1009 1012	FMT
-E27	Procedure:T27 Name:T28
 T29	Procedure 1069 1072	FMT
 T30	Procedure-Name 1069 1072	FMT
-E29	Procedure:T29 Name:T30
 T33	Condition 1114 1117	CDI
 T34	Condition-Name 1114 1117	CDI
-E33	Condition:T33 Name:T34
 T35	Condition 1302 1315	breastfeeding
 T36	Condition-Name 1302 1315	breastfeeding
-E35	Condition:T35 Name:T36
 T37	Eq-Operator 25 26	≥
-A1	Eq-Operator-Value T37 GTEQ
-T38	Eq-Operator 445 451	within
-A2	Eq-Operator-Value T38 LTEQ
 T39	Eq-Operator 668 669	<
-A3	Eq-Operator-Value T39 LT
-T40	Eq-Operator 978 993	within the past
-A4	Eq-Operator-Value T40 LTEQ
-T41	Eq-Operator 1153 1159	within
-A5	Eq-Operator-Value T41 LTEQ
 T42	Eq-Operator 1190 1191	<
-A6	Eq-Operator-Value T42 LT
 T43	Eq-Operator 1254 1255	<
-A7	Eq-Operator-Value T43 LT
 T44	Eq-Temporal-Unit 30 35	years
-A8	Eq-Temporal-Unit-Value T44 year
 T45	Eq-Temporal-Unit 455 459	days
-A9	Eq-Temporal-Unit-Value T45 day
 T46	Eq-Temporal-Unit 996 1002	months
-A10	Eq-Temporal-Unit-Value T46 month
 T47	Eq-Unit 1195 1198	mm3
 T48	Age 36 39	old
-E36	Age:T48 
 T49	Eq-Value 27 29	18
 T50	Eq-Value 452 454	30
 T51	Eq-Value 669 670	3
@@ -76,144 +121,156 @@ T52	Eq-Value 994 995	6
 T53	Eq-Value 1191 1194	200
 T54	Eq-Value 1255 1259	1000
 T55	Eq-Comparison 25 35	≥ 18 years
-E37	Eq-Comparison:T55 Operator:T37 Temporal-Unit:T44 Value:T49
 T56	Eq-Comparison 445 459	within 30 days
-E38	Eq-Comparison:T56 Operator:T38 Temporal-Unit:T45 Value:T50
-T57	Eq-Comparison 668 670	<3
-E39	Eq-Comparison:T57 Operator:T39 Value:T51
+T57	Eq-Comparison 668 696	<3 unformed/loose stools/day
 T58	Eq-Comparison 978 1002	within the past 6 months
-E40	Eq-Comparison:T58 Operator:T40 Temporal-Unit:T46 Value:T52
 T59	Eq-Comparison 1190 1198	<200/mm3
-E41	Eq-Comparison:T59 Operator:T42 Unit:T47 Value:T53
-T60	Eq-Comparison 1254 1259	<1000
-E42	Eq-Comparison:T60 Operator:T43 Value:T54 Unit:T104
-T5	Study 111 116	study
-E2	Study:T5 
-T6	Eq-Temporal-Recency 175 190	primary episode
-A11	Eq-Temporal-Recency-Value T6 first-time
-T31	Temporal-Connection 167 172	after
-E4	Temporal-Connection:T31 
-A12	Temporal-Connection-Type-Value E4 after
-T32	Eq-Comparison 209 227	at least one round
-E5	Eq-Comparison:T32 Operator:T61 Value:T62
-T61	Eq-Operator 209 217	at least
-A13	Eq-Operator-Value T61 GTEQ
-T62	Eq-Value 218 221	one
-T63	Severity 312 318	severe
-A14	Severity-Value T63 severe
-T64	Encounter 336 351	hospitalization
-E6	Encounter:T64 Type:T65
-T65	Encounter-Type 336 351	hospitalization
-A15	Encounter-Type-Value T65 inpatient
-R1	Caused-By Arg1:E6 Arg2:E7	
-T66	Eq-Comparison 287 308	at least two episodes
-E8	Eq-Comparison:T66 Operator:T67 Value:T68
-T67	Eq-Operator 287 295	at least
-A16	Eq-Operator-Value T67 GTEQ
-T68	Eq-Value 296 299	two
-T69	Eq-Comparison 143 166	at least one recurrence
-E10	Eq-Comparison:T69 Operator:T70 Value:T71
-T70	Eq-Operator 143 151	at least
-A17	Eq-Operator-Value T70 GTEQ
-T71	Eq-Value 152 155	one
-T72	Observation 369 379	stool test
-E12	Observation:T72 Name:T73 Polarity:T74
-T73	Observation-Name 369 379	stool test
-A18	Observation-Type-Value T73 lab
-T74	Polarity 360 368	positive
-A19	Polarity-Value T74 positive
-T75	Organism 400 422	toxigenic C. difficile
-E14	Organism:T75 
-T76	Organism 426 444	C. difficile toxin
-E16	Organism:T76 
-T77	Temporal-Connection 460 468	prior to
-E18	Temporal-Connection:T77 
-A20	Temporal-Connection-Type-Value E18 before
-T78	Or 469 471	or
-E20	Or:T78 
-T79	Temporal-Connection 472 483	on the date
-E22	Temporal-Connection:T79 
-A21	Temporal-Connection-Type-Value E22 during
-T80	Eq-Temporal-Period 507 516	currently
-A22	Eq-Temporal-Period-Value T80 present
-T81	Drug 547 558	antibiotics
-E24	Drug:T81 Name:T82
-T82	Drug-Name 547 558	antibiotics
-T83	Condition 582 590	diarrhea
-E26	Condition:T83 Name:T84
-T84	Condition-Name 582 590	diarrhea
-R2	Caused-By Arg1:E26 Arg2:E9	
-T85	Temporal-Connection 591 605	at the time of
-E28	Temporal-Connection:T85 
-A23	Temporal-Connection-Type-Value E28 during
-T86	Condition 639 647	diarrhea
-E30	Condition:T86 Name:T87
-T87	Condition-Name 639 647	diarrhea
-R3	Caused-By Arg1:E30 Arg2:E11	
-T88	Temporal-Connection 698 703	while
-E31	Temporal-Connection:T88 
-A24	Temporal-Connection-Type-Value E31 during
-T89	Drug 711 722	antibiotics
-E32	Drug:T89 Name:T90
-T90	Drug-Name 711 722	antibiotics
-T91	Temporal-Connection 723 729	during
-E34	Temporal-Connection:T91 
-A25	Temporal-Connection-Type-Value E34 during
-T92	Observation 671 692	unformed/loose stools
-E43	Observation:T92 Name:T93
-T93	Observation-Name 671 692	unformed/loose stools
-T94	Condition 785 793	diarrhea
-E44	Condition:T94 Name:T95
-T95	Condition-Name 785 793	diarrhea
-R4	Caused-By Arg1:E44 Arg2:E13	
-T96	Drug 823 834	antibiotics
-E45	Drug:T96 Name:T97
-T97	Drug-Name 823 834	antibiotics
-T98	Stability 771 780	continued
-A26	Stability-Value T98 stable
-T99	Condition 913 922	condition
-E46	Condition:T99 
-T100	Exception 923 933	other than
-E47	Exception:T100 Except:E21 From:E46
-T101	Condition 1040 1053	adverse event
-E48	Condition:T101 
-T102	Severity 1032 1039	serious
-A27	Severity-Value T102 severe
-R5	Caused-By Arg1:E48 Arg2:E27	
-R6	Caused-By Arg1:E48 Arg2:E29	
-T103	Temporal-Connection 1199 1205	during
-E49	Temporal-Connection:T103 
-A28	Temporal-Connection-Type-Value E49 during
-T104	Eq-Unit 1260 1268	cells/µL
-T105	Temporal-Connection 1269 1275	during
-E50	Temporal-Connection:T105 
-A29	Temporal-Connection-Type-Value E50 during
-T106	Condition 1292 1300	Pregnant
-E51	Condition:T106 Name:T107
-T107	Condition-Name 1292 1300	Pregnant
-T108	Condition 1338 1346	pregnant
-E52	Condition:T108 Name:T109
-T109	Condition-Name 1338 1346	pregnant
-T110	Assertion 1320 1327	intends
-E53	Assertion:T110 Asserted:E52
-A30	Assertion-Type-Value E53 intention
-T111	Study 1354 1359	study
-E54	Study:T111 
-T112	Observation 1225 1250	absolute neutrophil count
-E55	Observation:T112 Name:T113
-T113	Observation-Name 1225 1250	absolute neutrophil count
-A31	Observation-Type-Value T113 lab
-T114	Observation 1180 1189	CD4 count
-E56	Observation:T114 Name:T115
-T115	Observation-Name 1180 1189	CD4 count
-A32	Observation-Type-Value T115 lab
-T116	Drug 1100 1112	Bezlotoxumab
-E57	Drug:T116 Name:T117
-T117	Drug-Name 1100 1112	Bezlotoxumab
-T118	Drug 1118 1139	monoclonal antibodies
-E58	Drug:T118 Name:T119
-T119	Drug-Name 1118 1139	monoclonal antibodies
-T120	Eq-Comparison 1153 1173	within the last year
-E59	Eq-Comparison:T120 Temporal-Period:T121 Operator:T41
-T121	Eq-Temporal-Period 1161 1173	he last year
-A33	Eq-Temporal-Period-Value T121 recent
+T60	Eq-Comparison 1254 1268	<1000 cells/µL
+T31	Modifier 89 98	recurrent
+T5	Eq-Comparison 143 155	at least one
+T6	Eq-Operator 143 151	at least
+T32	Eq-Value 152 155	one
+T61	Eq-Comparison 209 221	at least one
+T62	Eq-Operator 209 217	at least
+T63	Eq-Value 218 221	one
+T64	Temporal-Connection 167 172	after
+T67	Coreference 156 166	recurrence
+T68	Coreference 183 190	episode
+T71	Eq-Comparison 287 299	at least two
+T72	Eq-Operator 287 295	at least
+T73	Eq-Value 296 299	two
+T76	Encounter 336 351	hospitalization
+T77	Encounter-Type 336 351	hospitalization
+T7	Condition 319 322	CDI
+T74	Observation 1225 1250	absolute neutrophil count
+T78	Observation-Name 1225 1250	absolute neutrophil count
+T79	Eq-Unit 1260 1265	cells
+T80	Observation 1180 1189	CD4 count
+T81	Observation-Name 1180 1189	CD4 count
+T82	Condition 1292 1300	Pregnant
+T83	Condition-Name 1292 1300	Pregnant
+T86	Polarity 360 368	positive
+T84	Observation 369 379	stool test
+T85	Observation-Specimen 369 374	stool
+T90	Temporal-Connection 460 468	prior to
+T93	Drug 547 558	antibiotics
+T94	Drug-Name 547 558	antibiotics
+T95	Eq-Comparison 507 516	currently
+T96	Eq-Temporal-Period 507 516	currently
+T99	Eq-Temporal-Period 531 535	just
+T100	Eq-Comparison 531 535	just
+T101	Condition 582 590	diarrhea
+T102	Condition-Name 582 590	diarrhea
+T104	Temporal-Connection 591 602	at the time
+T106	Condition 639 647	diarrhea
+T107	Condition-Name 639 647	diarrhea
+T108	Eq-Temporal-Unit 693 696	day
+T109	Eq-Unit 686 692	stools
+T110	Drug 711 722	antibiotics
+T111	Drug-Name 711 722	antibiotics
+T113	Temporal-Connection 723 729	during
+T115	Temporal-Connection 698 703	while
+T117	Condition 785 793	diarrhea
+T118	Condition-Name 785 793	diarrhea
+T120	Drug-Name 823 834	antibiotics
+T119	Drug 823 834	antibiotics
+T122	Condition 913 922	condition
+T123	Exception 923 933	other than
+T124	Observation 1040 1053	adverse event
+T126	Drug 1100 1112	Bezlotoxumab
+T127	Drug-Name 1100 1112	Bezlotoxumab
+T128	Drug 1118 1139	monoclonal antibodies
+T129	Drug-Name 1118 1139	monoclonal antibodies
+T130	Eq-Comparison 1153 1173	within the last year
+T131	Eq-Temporal-Unit 1169 1173	year
+T134	Temporal-Connection 1199 1205	during
+T137	Temporal-Connection 1269 1275	during
+T140	Temporal-Connection 1347 1353	during
+T142	Condition 1338 1346	pregnant
+T143	Condition-Name 1338 1346	pregnant
+T144	Assertion 1320 1330	intends to
+T147	Eq-Unit 1266 1268	µL
+T26	Or 276 278	or
+T89	Or 1317 1319	or
+T75	Severity 312 318	severe
+T69	Or 1081 1083	or
+T98	And 1013 1017	with
+T70	Or 524 526	or
+T65	Observation-Name 375 379	test
+T66	Organism 400 422	toxigenic C. difficile
+T87	Organism-Name 400 422	toxigenic C. difficile
+T88	Organism 426 444	C. difficile toxin
+T91	Organism-Name 426 444	C. difficile toxin
+T97	Or 423 425	or
+T92	Study 487 497	enrollment
+T103	Study 606 616	enrollment
+T105	Study 730 739	screening
+T112	Observation-Name 1040 1053	adverse event
+T114	Study 1206 1215	Screening
+T116	Study 1276 1285	Screening
+T125	Study 1354 1359	study
+T38	Eq-Temporal-Period 445 451	within
+T133	Stability 771 780	continued
+T40	Eq-Temporal-Period 978 993	within the past
+T121	Severity 1032 1039	serious
+T41	Eq-Temporal-Period 1153 1168	within the last
+T150	Eq-Comparison 704 710	taking
+T151	Eq-Temporal-Period 704 710	taking
+T152	Eq-Comparison 1144 1152	received
+T153	Eq-Temporal-Period 1144 1152	received
+T132	Assertion 870 878	Requires
+T135	Modifier 879 887	systemic
+T136	And 794 801	despite
+A1	Eq-Operator-Value T37 GTEQ
+A3	Eq-Operator-Value T39 LT
+A6	Eq-Operator-Value T42 LT
+A7	Eq-Operator-Value T43 LT
+A8	Eq-Temporal-Unit-Value T44 year
+A9	Eq-Temporal-Unit-Value T45 day
+A10	Eq-Temporal-Unit-Value T46 month
+A11	Eq-Operator-Value T6 GTEQ
+A12	Eq-Operator-Value T62 GTEQ
+A14	Eq-Operator-Value T72 GTEQ
+A15	Encounter-Type-Value T77 inpatient
+A16	Observation-Type-Value T78 lab
+A17	Observation-Type-Value T81 lab
+A25	Eq-Temporal-Unit-Value T108 day
+A28	Eq-Temporal-Unit-Value T131 year
+A22	Eq-Temporal-Period-Value T96 present
+A23	Eq-Temporal-Period-Value T99 recent
+A33	Severity-Value T75 severe
+A13	Temporal-Connection-Type-Value E6 after
+A19	Polarity-Value T86 positive
+A21	Temporal-Connection-Type-Value E32 before
+A24	Temporal-Connection-Type-Value E48 during
+A27	Temporal-Connection-Type-Value E52 during
+A26	Temporal-Connection-Type-Value E51 during
+A29	Temporal-Connection-Type-Value E64 during
+A30	Temporal-Connection-Type-Value E65 during
+A32	Assertion-Type-Value E68 intention
+A31	Temporal-Connection-Type-Value E66 during
+A34	Observation-Type-Value T65 lab
+A2	Eq-Temporal-Period-Value T38 past
+A18	Stability-Value T133 stable
+A4	Eq-Temporal-Period-Value T40 past
+A20	Severity-Value T121 severe
+A5	Eq-Temporal-Period-Value T41 past
+A36	Eq-Temporal-Period-Value T151 present
+A37	Eq-Temporal-Period-Value T153 past
+A35	Assertion-Type-Value E55 hypothetical
+R1	Caused-By Arg1:E24 Arg2:E7
+R2	Treatment-For Arg1:E34 Arg2:E9
+R3	Caused-By Arg1:E47 Arg2:E9
+R4	Caused-By Arg1:E49 Arg2:E11
+R5	Caused-By Arg1:E53 Arg2:E13
+R6	Treatment-For Arg1:E54 Arg2:E15
+R8	Treatment-For Arg1:E17 Arg2:E56
+R9	Abbrev-Of Arg1:E23 Arg2:E19
+R10	Caused-By Arg1:E58 Arg2:E29
+R11	Treatment-For Arg1:E62 Arg2:E33
+R12	Equivalent-To Arg1:E62 Arg2:E61
+R13	Found-By Arg1:E16 Arg2:E30
+R14	Found-By Arg1:E44 Arg2:E30
+R7	Equivalent-To Arg1:E50 Arg2:E49
+T138	And 191 194	and
+E78	And:T138 Arg:E12 Arg2:E1

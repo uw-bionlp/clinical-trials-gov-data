@@ -11,12 +11,10 @@ E5	Condition:T5 Name:T6
 T7	Condition 318 329	consumption
 T8	Condition-Name 318 329	consumption
 E7	Condition:T7 Name:T8
-T9	Life-Stage-And-Gender 44 47	men
 T10	Eq-Unit 87 92	kg/m2
 T11	Eq-Value 77 79	18
 T12	Eq-Value 84 86	30
 T13	Eq-Value 156 157	2
-A2	Life-Stage-And-Gender-Type T9 adult
 T14	Life-Stage-And-Gender 44 47	men
 A3	Life-Stage-And-Gender-Type T14 male
 T15	Condition 36 43	healthy
@@ -33,8 +31,6 @@ E8	Temporal-Connection:T20
 A5	Temporal-Connection-Type-Value E8 during
 T21	Eq-Comparison 156 162	2 week
 E9	Eq-Comparison:T21 Value:T13
-T22	Negation 170 179	Exclusion
-E10	Negation:T22 
 T23	Stability 215 222	chronic
 A6	Stability-Value T23 stable
 T24	Or 223 225	or

@@ -31,12 +31,9 @@ E6	Encounter:T19 Type:T20
 T20	Encounter-Type 179 208	Registered with My HealtheVet
 A4	Encounter-Type-Value T20 outpatient
 T21	Encounter 214 235	Follow-up appointment
-E8	Encounter:T21 Provider:E11
+E8	Encounter:T21 Provider:E11 Temporality:E10
 T22	Encounter-Type 214 235	Follow-up appointment
 A5	Encounter-Type-Value T22 outpatient
-T23	Temporal-Connection 256 267	in the next
-E10	Temporal-Connection:T23 
-A6	Temporal-Connection-Type-Value E10 after
 T24	Provider 247 255	provider
 E11	Provider:T24 
 T25	Provider 320 332	VA Providers
@@ -47,3 +44,9 @@ T27	Stability 539 545	active
 A7	Stability-Value T27 stable
 T28	Eq-Comparison 67 77	Initiating
 E14	Eq-Comparison:T28 Temporal-Recency:T17
+T23	Eq-Comparison 263 276	next 12 weeks
+E10	Eq-Comparison:T23 Temporal-Period:T29 Value:T13 Temporal-Unit:T12
+T29	Eq-Temporal-Period 263 267	next
+A6	Eq-Temporal-Period-Value T29 future
+T30	Or 536 538	or
+E15	Or:T30 Arg:E5 Arg2:E7

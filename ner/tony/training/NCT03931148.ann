@@ -1,6 +1,6 @@
 T1	Condition 65 88	neurocognitive disorder
 T2	Condition-Name 65 88	neurocognitive disorder
-E1	Condition:T1 Name:T2
+E1	Condition:T1 Name:T2 Temporality:E7
 T3	Condition 141 149	Delirium
 T4	Condition-Name 141 149	Delirium
 E3	Condition:T3 Name:T4
@@ -14,7 +14,11 @@ T10	Assertion 172 180	symptoms
 E4	Assertion:T10 Asserted:E2
 A2	Assertion-Type-Value E4 possible
 T11	Contraindication 190 206	contraindication
-E5	Contraindication:T11 
+E5	Contraindication:T11 Contraindicates:E6
 T6	Procedure 186 189	MRI
 E6	Procedure:T6 Name:T12
 T12	Procedure-Name 186 189	MRI
+T13	Eq-Comparison 45 51	Recent
+E7	Eq-Comparison:T13 Temporal-Period:T14
+T14	Eq-Temporal-Period 45 51	Recent
+A3	Eq-Temporal-Period-Value T14 recent

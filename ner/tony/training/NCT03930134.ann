@@ -31,11 +31,11 @@ E16	Eq-Comparison:T20 Operator:T17 Value:T19
 T21	Modifier 25 34	singleton
 E2	Modifier:T21 Modifies:E11
 T22	Contraindication 74 90	contraindication
-E4	Contraindication:T22 
+E4	Contraindication:T22 Contraindicates:E5
 T23	Condition 119 142	bi or multi-cicatricial
 E6	Condition:T23 Name:T24
 T24	Condition-Name 119 142	bi or multi-cicatricial
-T25	Condition 144 166	corporal uterine scar,
+T25	Condition 144 165	corporal uterine scar
 E8	Condition:T25 Name:T26
 T26	Condition-Name 144 165	corporal uterine scar
 T27	Modifier 167 178	intra-mural
@@ -61,7 +61,7 @@ T37	Condition-Name 272 287	Placenta previa
 T39	Study 355 360	study
 E22	Study:T39 
 T38	Temporal-Connection 366 376	prenatally
-E21	Temporal-Connection:T38 
+E21	Temporal-Connection:T38 Arg:E23
 A4	Temporal-Connection-Type-Value E21 before
 T40	Condition 387 402	fetal pathology
 E23	Condition:T40 Name:T41
@@ -70,7 +70,7 @@ T42	Condition 437 449	malformation
 E24	Condition:T42 Name:T43
 T43	Condition-Name 437 449	malformation
 T44	Condition 451 469	genetics disorders
-E25	Condition:T44 
+E25	Condition:T44 Name:T45
 T45	Condition-Name 451 469	genetics disorders
 R1	Example-Of Arg1:E1 Arg2:E23	
 R2	Example-Of Arg1:E24 Arg2:E23	
@@ -78,6 +78,28 @@ R3	Example-Of Arg1:E25 Arg2:E23
 T46	Condition 665 673	bleeding
 E26	Condition:T46 Name:T47
 T47	Condition-Name 665 673	bleeding
-T48	Risk 652 661	high risk
-E27	Risk:T48 Risk-For:E26
+T48	Risk 657 661	risk
+E27	Risk:T48 Risk-For:E26 Polarity:T58
 R5	Caused-By Arg1:E27 Arg2:E3	
+T49	And 69 73	with
+E28	And:T49 Arg:E13 Arg2:E4
+R4	Example-Of Arg1:E15 Arg2:E4	
+R6	Example-Of Arg1:E6 Arg2:E4	
+R7	Example-Of Arg1:E8 Arg2:E4	
+R8	Example-Of Arg1:E9 Arg2:E4	
+R9	Example-Of Arg1:E12 Arg2:E4	
+T50	Condition 476 493	adherent placenta
+E29	Condition:T50 Name:T51
+T51	Condition-Name 476 493	adherent placenta
+T52	Condition 498 510	adnexal mass
+E30	Condition:T52 Name:T53
+T53	Condition-Name 498 510	adnexal mass
+T54	Condition 516 521	myoma
+E31	Condition:T54 Name:T55
+T55	Condition-Name 516 521	myoma
+T56	Modifier 529 550	lower uterine segment
+E32	Modifier:T56 Modifies:T55
+T57	Or 511 513	or
+E33	Or:T57 Arg:E30 Arg2:E31
+T58	Polarity 652 656	high
+A5	Polarity-Value T58 high

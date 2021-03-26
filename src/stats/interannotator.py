@@ -3,9 +3,9 @@ import sys
 import spacy
 sys.path.append(os.path.join(os.getcwd(), 'src'))
 
-from ner.preprocess.brat_document import BratDocument
-from ner.preprocess.config import Config
-import ner.preprocess.utils as utils
+from preprocess.brat_document import BratDocument
+from preprocess.config import Config
+import preprocess.utils as utils
 
 tokenize = spacy.load('en_core_web_sm')
 
@@ -116,14 +116,14 @@ def main():
     print(f'    F1: {round(f1*100,1)}')
     print('')
 
-    for k,v in sorted(type_scores.items()):
-        precision = v['tp'] / (v['tp'] + v['fp']) if v['tp'] + v['fp'] > 0 else 0.0
-        recall = v['tp'] / (v['tp'] + v['fn']) if v['tp'] + v['fn'] > 0 else 0.0
-        f1 = 2 * (precision * recall) / (precision + recall) if precision + recall > 0 else 0.0
-        print(f'    {k}')
-        print(f'        Precision: {round(precision*100,1)}')
-        print(f'        Recall: {round(recall*100,1)}')
-        print(f'        F1: {round(f1*100,1)}')
+    #for k,v in sorted(type_scores.items()):
+    #    precision = v['tp'] / (v['tp'] + v['fp']) if v['tp'] + v['fp'] > 0 else 0.0
+    #    recall = v['tp'] / (v['tp'] + v['fn']) if v['tp'] + v['fn'] > 0 else 0.0
+    #    f1 = 2 * (precision * recall) / (precision + recall) if precision + recall > 0 else 0.0
+    #    print(f'    {k}')
+    #    print(f'        Precision: {round(precision*100,1)}')
+    #    print(f'        Recall: {round(recall*100,1)}')
+    #    print(f'        F1: {round(f1*100,1)}')
 
 main()
 

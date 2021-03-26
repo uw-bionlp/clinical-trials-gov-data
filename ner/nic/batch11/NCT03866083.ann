@@ -33,16 +33,14 @@ E32	Modifier:T70 Modifies:T69
 E33	Modifier:T71 Modifies:T69
 E34	Or:T72 Arg:E32 Arg2:E33
 E35	Eq-Comparison:T73 Temporal-Period:T74
-E37	Death:T76
-E38	Risk:T77 Risk-For:E37 Severity:T92
 E39	Observation:T78 Name:T79 Eq-Comparison:E26
-E40	And:T80 Arg:E38 Arg2:E39
+E40	And:T80 Arg2:E39 Arg:E37
 E41	Drug:T82 Name:T83 Dose:T84
 E43	Condition:T86 Name:T87
 E44	Modifier:T88 Modifies:E43
 E45	Modifier:T89 Modifies:E43
 E46	Or:T90 Arg:E44 Arg2:E45
-E42	Study:T85
+E42	Study:T85 
 E47	Other:T91 Is-Other:E42
 T3	Condition 236 259	cardiopulmonary disease
 T4	Condition-Name 236 259	cardiopulmonary disease
@@ -119,8 +117,6 @@ T72	Or 411 413	or
 T73	Eq-Comparison 389 395	Active
 T74	Eq-Temporal-Period 389 395	Active
 T75	Acuteness 444 451	Chronic
-T76	Death 482 490	moribund
-T77	Risk 482 490	moribund
 T78	Observation 517 532	life expectancy
 T79	Observation-Name 517 532	life expectancy
 T80	And 500 504	with
@@ -163,3 +159,7 @@ R1	Example-Of Arg1:E7 Arg2:E3
 R2	Example-Of Arg1:E5 Arg2:E3
 R3	Example-Of Arg1:E15 Arg2:E3
 R4	Treatment-For Arg1:E41 Arg2:E19
+T76	Death 482 490	moribund
+E36	Death:T76 
+T77	Risk 482 490	moribund
+E37	Risk:T77 Risk-For:E36 Severity:T92

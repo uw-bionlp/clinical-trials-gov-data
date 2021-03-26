@@ -40,6 +40,7 @@ def main():
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
     #dygiepp = [ ann.to_dygiepp_format() for ann in annotations ]
     dygiepp = [ ann.to_dygiepp_format2(debug=False) for ann in annotations ]
+    get_label_counts(dygiepp)
 
     ## Split 
     np.random.seed(1)

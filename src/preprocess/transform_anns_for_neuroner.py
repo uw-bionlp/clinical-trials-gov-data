@@ -6,6 +6,7 @@ from preprocess.brat_document import BratDocument
 import preprocess.utils as utils
 
 output_dir = os.path.join('data', 'ner', 'neuroner')
+use_cleaned = True
 
 def main():
     brat_train_raw = {} 
@@ -16,11 +17,12 @@ def main():
     for ann in annotations:
         event_types = set([ v.args[0].type for k, v in ann.Es.items() ])
         seen = set()
+        text = ann.pretokenized if use_cleaned else ann.raw_text
 
         with open(os.path.join(output_dir, 'events', ann.doc_id+'.txt'), 'w+') as f_ev, \
              open(os.path.join(output_dir, 'entities', ann.doc_id+'.txt'), 'w+') as f_ent:
-             f_ev.write(ann.raw_text)
-             f_ent.write(ann.raw_text)
+             f_ev.write(text)
+             f_ent.write(text)
 
         with open(os.path.join(output_dir, 'events', ann.doc_id+'.ann'), 'w+') as f_ev, \
              open(os.path.join(output_dir, 'entities', ann.doc_id+'.ann'), 'w+') as f_ent:
