@@ -12,6 +12,7 @@ regex_asa = r'(American.*Anes.*)'
 regex_nyha = r'(NYHA|New York Heart Assoc.*)'
 regex_ecog = r'(ECOG|Eastern Cooperative Oncology Group)'
 regex_chronic = r'(chronic|long[ |-]term)'
+regex_trailing_num = r'\d'
 
 
 def to_brat(ann):
@@ -204,6 +205,7 @@ def anatomy(annotations):
         print(f'{k} {v}')
 
     return annotations
+    
 
 def main():
 
@@ -221,29 +223,38 @@ def main():
             if not any([ e for _, e in ann.Es.items() if any(e.args) and e.args[0].val == t ]):
                 if t.type in ents: ents[t.type] += 1
                 else:              ents[t.type] = 1
-        for _, t in ann.Es.items():
-            if any(t.args):
-                if t.args[0].type in Es: Es[t.args[0].type] += 1
-                else:                    Es[t.args[0].type] = 1
-                for arg in t.args[1:]:
+        for _, e in ann.Es.items():
+            if any(e.args):
+                if e.args[0].type in Es: Es[e.args[0].type] += 1
+                else:                    Es[e.args[0].type] = 1
+                for arg in e.args[1:]:
+                    if arg.type == 'Name':
+                        continue
+                    if any(re.findall(regex_trailing_num, arg.type)):
+                        arg.type = re.sub(regex_trailing_num, '', arg.type)
                     if arg.type in args: args[arg.type] += 1
                     else:                args[arg.type] = 1
         for _, r in ann.Rs.items():
             if r.type in Rs: Rs[r.type] += 1
             else:            Rs[r.type] = 1
-        for _, r in ann.As.items():
-            if r.type in As: As[r.type] += 1
-            else:            As[r.type] = 1
+        for _, a in ann.As.items():
+            if a.type in As: As[a.type] += 1
+            else:            As[a.type] = 1
 
-    sum_cnt = sum([ cnt for t, cnt in Ts.items() ])
-    print('Ts', sum_cnt)
+    t_sum_cnt = sum([ cnt for t, cnt in Ts.items() ])
+    print('Ts', t_sum_cnt)
     for t, cnt in sorted(Ts.items()):
-        print('\t', t, cnt, round(cnt / sum_cnt * 100.0, 1))
+        print('\t', t, cnt, round(cnt / t_sum_cnt * 100.0, 1))
 
-    sum_cnt = sum([ cnt for r, cnt in Rs.items() ])
-    print('Rs', sum_cnt)
+    r_sum_cnt = sum([ cnt for r, cnt in Rs.items() ])
+    print('Rs', r_sum_cnt)
     for r, cnt in sorted(Rs.items()):
-        print('\t', r, cnt, round(cnt / sum_cnt * 100.0, 1))
+        print('\t', r, cnt, round(cnt / r_sum_cnt * 100.0, 1))
+
+    arg_sum_cnt = sum([ cnt for arg, cnt in args.items() ])
+    print('Args', arg_sum_cnt)
+    for arg, cnt in sorted(args.items()):
+        print('\t', arg, cnt, round(cnt / arg_sum_cnt * 100.0, 1))
 
     # Convert
     # TODO: anatomy, Histology

@@ -1,0 +1,42 @@
+T1	Drug 213 223	Medication
+E1	Drug:T1 
+T2	Stability 230 236	affect
+A1	Stability-Value T2 change
+T3	Observation 237 253	glycemic control
+E2	Observation:T3 Name:T4 Stability:T2
+T4	Observation-Name 237 253	glycemic control
+R1	Caused-By Arg1:T2 Arg2:E1	
+T5	Condition 254 261	Disease
+E3	Condition:T5 
+T7	Stability 268 274	affect
+A2	Stability-Value T7 change
+T8	Drug 298 303	drugs
+E4	Drug:T8 Stability:T7
+T9	Modifier 275 283	efficacy
+E5	Modifier:T9 Modifies:E4
+T10	Modifier 288 294	safety
+E6	Modifier:T10 Modifies:E4
+T11	Or 284 287	and
+E7	Or:T11 Arg:E5 Arg2:E6
+R2	Caused-By Arg1:T7 Arg2:E3	
+T12	Condition 314 321	illness
+E8	Condition:T12 Name:T13 Severity:T14
+T13	Condition-Name 314 321	illness
+T14	Severity 308 313	major
+A3	Severity-Value T14 severe
+T15	Condition 323 336	Liver disease
+E9	Condition:T15 Name:T16
+T16	Condition-Name 323 336	Liver disease
+R3	Example-Of Arg1:E9 Arg2:E8	
+T17	Condition 338 351	Renal failure
+E10	Condition:T17 Name:T18
+T18	Condition-Name 338 351	Renal failure
+R4	Example-Of Arg1:E10 Arg2:E8	
+T19	Condition 353 366	Heart disease
+E11	Condition:T19 Name:T20
+T20	Condition-Name 353 366	Heart disease
+R5	Example-Of Arg1:E11 Arg2:E8	
+T21	Condition 368 374	Cancer
+E12	Condition:T21 Name:T22
+T22	Condition-Name 368 374	Cancer
+R6	Example-Of Arg1:E12 Arg2:E8	

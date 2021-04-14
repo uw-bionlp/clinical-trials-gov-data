@@ -1,0 +1,38 @@
+T1	Condition 0 23	Acute coronary syndrome
+E1	Condition:T1 Name:T2 Temporality:E3
+T2	Condition-Name 0 23	Acute coronary syndrome
+T3	Condition 25 28	ACS
+E2	Condition:T3 Name:T4
+T4	Condition-Name 25 28	ACS
+R1	Abbrev-Of Arg1:E2 Arg2:E1	
+T5	Eq-Comparison 30 45	within 3 months
+E3	Eq-Comparison:T5 Operator:T8 Value:T7 Temporal-Unit:T6
+T6	Eq-Temporal-Unit 39 45	months
+A1	Eq-Temporal-Unit-Value T6 month
+T7	Eq-Value 37 38	3
+T8	Eq-Operator 30 36	within
+A2	Eq-Operator-Value T8 LTEQ
+T9	Drug 53 65	beta-blocker
+E4	Drug:T9 Name:T10 Temporality:E6
+T10	Drug-Name 53 65	beta-blocker
+T12	Eq-Comparison 84 96	last 2 weeks
+E6	Eq-Comparison:T12 Temporal-Period:T15 Value:T14 Temporal-Unit:T13
+T13	Eq-Temporal-Unit 91 96	weeks
+A3	Eq-Temporal-Unit-Value T13 week
+T14	Eq-Value 89 90	2
+T15	Eq-Temporal-Period 84 88	last
+A4	Eq-Temporal-Period-Value T15 past
+T16	Drug 110 118	medicine
+E7	Drug:T16 
+T18	Other 104 109	other
+E9	Other:T18 Is-Other:E7
+T19	Observation 146 156	heart rate
+E10	Observation:T19 Name:T20 Stability:T21
+T20	Observation-Name 146 156	heart rate
+A5	Observation-Type-Value T20 vital
+T21	Stability 139 145	affect
+A6	Stability-Value T21 change
+T22	Assertion 135 138	may
+E11	Assertion:T22 Asserted:T21
+A7	Assertion-Type-Value E11 hypothetical
+R2	Caused-By Arg1:T21 Arg2:E7	

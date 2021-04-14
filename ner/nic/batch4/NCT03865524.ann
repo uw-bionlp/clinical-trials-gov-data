@@ -2,7 +2,7 @@ E1	Or:T1 Arg:T52 Arg2:T53
 E2	Eq-Comparison:T2 Operator:T54 Value:T55 Temporal-Unit:T56
 E3	Age:T3 Eq-Comparison:E2
 E4	Temporal-Connection:T4 Arg:E5
-E5	Study:T5
+E5	Study:T5 
 E6	Observation:T6 Name:T57 Eq-Comparison:E7
 E7	Eq-Comparison:T7 Value:T60 Unit:T61 Operator:T58 Per:T62
 E8	Modifier:T8 Modifies:T63
@@ -17,16 +17,16 @@ E16	Condition:T16 Name:T65
 E17	Or:T17 Arg:E16 Arg2:E18
 E18	Condition:T18 Name:T66
 E19	Study:T19 Temporality:E52 Study-Of:E20 Study-Of2:E53
-E20	Drug:T20
-E21	Negation:T21
+E20	Drug:T20 
+E21	Negation:T21 Negates:E56
 E22	Temporal-Connection:T22 Arg:E21 Arg2:E23
-E23	Study:T23
+E23	Study:T23 
 E24	Procedure:T24 Name:T67
 E25	Condition:T25 Name:T68
 E26	Modifier:T26 Modifies:E29
 E27	Or:T27 Arg:E26 Arg2:E28
 E28	Modifier:T28 Modifies:E29
-E29	Condition:T29
+E29	Condition:T29 
 E30	Assertion:T30 Asserted:T70
 E31	Eq-Comparison:T31 Temporal-Period:T71
 E32	Procedure:T32 Name:T72 Temporality:E31 Temporality2:E35

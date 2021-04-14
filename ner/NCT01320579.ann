@@ -1,0 +1,37 @@
+T1	Ethnicity 59 68	Caucasian
+T2	Life-Stage-And-Gender 69 73	male
+A1	Life-Stage-And-Gender-Type T2 male
+T3	Life-Stage-And-Gender 77 83	female
+A2	Life-Stage-And-Gender-Type T3 female
+T4	Or 74 76	or
+E1	Or:T4 Arg:T2 Arg2:T3
+T5	Eq-Comparison 92 109	At least 18 years
+E2	Eq-Comparison:T5 Operator:T6 Temporal-Unit:T7 Value:T21
+T6	Eq-Operator 92 100	At least
+A3	Eq-Operator-Value T6 GTEQ
+T7	Eq-Temporal-Unit 104 109	years
+A4	Eq-Temporal-Unit-Value T7 year
+T8	Age 113 116	age
+E3	Age:T8 Eq-Comparison:E2
+T9	Observation 117 123	Weight
+E4	Observation:T9 Name:T10 Eq-Comparison:E5
+T10	Observation-Name 117 123	Weight
+A5	Observation-Type-Value T10 vital
+T11	Eq-Comparison 124 138	at least 45 kg
+E5	Eq-Comparison:T11 Operator:T12 Value:T13 Unit:T14
+T12	Eq-Operator 124 132	at least
+A6	Eq-Operator-Value T12 GTEQ
+T13	Eq-Value 133 135	45
+T14	Eq-Unit 136 138	kg
+T15	Severity 152 160	moderate
+A7	Severity-Value T15 moderate
+T16	Severity 164 170	severe
+A8	Severity-Value T16 severe
+T17	Or 161 163	or
+E6	Or:T17 Arg:T15 Arg2:T16
+T18	Acuteness 171 178	chronic
+A9	Acuteness-Type-Value T18 chronic
+T19	Condition 179 196	atopic dermatitis
+E7	Condition:T19 Name:T20 Acuteness:T18 Severity:T15 Severity2:T16
+T20	Condition-Name 179 196	atopic dermatitis
+T21	Eq-Value 101 103	18

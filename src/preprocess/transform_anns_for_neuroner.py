@@ -1,11 +1,15 @@
 import os
 import sys
+import math
+import random
 sys.path.append(os.path.join(os.getcwd(), 'src'))
+
 from preprocess.config import Config
 from preprocess.brat_document import BratDocument
 import preprocess.utils as utils
 
 output_dir = os.path.join('data', 'ner', 'neuroner')
+random.seed(42)
 use_cleaned = True
 
 def main():
@@ -13,19 +17,28 @@ def main():
     for d in Config.annotation_train_dirs:
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
+    random.shuffle(annotations)
+
+    total_cnt = len(annotations)
+    train_cnt = 0
+    train_desired = math.floor(total_cnt * 0.8)
 
     for ann in annotations:
         event_types = set([ v.args[0].type for k, v in ann.Es.items() ])
         seen = set()
         text = ann.pretokenized if use_cleaned else ann.raw_text
+        dir = 'train' if train_cnt < train_desired else 'valid'
 
-        with open(os.path.join(output_dir, 'events', ann.doc_id+'.txt'), 'w+') as f_ev, \
-             open(os.path.join(output_dir, 'entities', ann.doc_id+'.txt'), 'w+') as f_ent:
+        if train_cnt < train_desired: 
+            train_cnt += 1
+
+        with open(os.path.join(output_dir, 'events', dir, ann.doc_id+'.txt'), 'w+') as f_ev, \
+             open(os.path.join(output_dir, 'entities', dir, ann.doc_id+'.txt'), 'w+') as f_ent:
              f_ev.write(text)
              f_ent.write(text)
 
-        with open(os.path.join(output_dir, 'events', ann.doc_id+'.ann'), 'w+') as f_ev, \
-             open(os.path.join(output_dir, 'entities', ann.doc_id+'.ann'), 'w+') as f_ent:
+        with open(os.path.join(output_dir, 'events', dir, ann.doc_id+'.ann'), 'w+') as f_ev, \
+             open(os.path.join(output_dir, 'entities', dir, ann.doc_id+'.ann'), 'w+') as f_ent:
 
             for k,t in ann.Ts.items():
                 if k in seen: continue

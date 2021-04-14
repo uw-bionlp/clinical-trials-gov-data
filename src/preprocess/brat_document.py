@@ -135,6 +135,7 @@ class BratDocument:
 
     def derive_annotations_surface_only(self):
         Ts, Es, Rs, As = {}, {}, {}, {}
+
         for i,ann in enumerate(self.raw_anns.splitlines()):
             if not len(ann.strip()) or '\t' not in ann:
                 continue
@@ -143,8 +144,12 @@ class BratDocument:
             sub_parts = [ part for part in parts[1].split(' ') if part != '' ]
             ch = parts[0].strip()
             if ch[0] == 'T':
+                if ';' in parts[1]:
+                    sub_parts = [ sub_parts[0], sub_parts[1], sub_parts[2].split(';')[0] ]
                 Ts[ch] = BratT(sub_parts[0].strip(), int(sub_parts[1]), int(sub_parts[2]), parts[2].strip(), ch, i)
             elif ch[0] == 'A':
+                if len(sub_parts) != 3:
+                    continue
                 As[ch] = BratA(sub_parts[0].strip(), sub_parts[1].strip(), sub_parts[2].strip(),ch, i)
             elif ch[0] == 'E': 
                 Es[ch] = BratE(ch, i)

@@ -1,0 +1,143 @@
+T1	Modifier 0 6	HLA-A2
+E1	Modifier:T1 Modifies:T3
+T2	Condition 7 15	melanoma
+E2	Condition:T2 Name:T3
+T3	Condition-Name 7 15	melanoma
+T4	Condition 67 77	metastasis
+E3	Condition:T4 Name:T5
+T5	Condition-Name 67 77	metastasis
+T6	Modifier 39 52	loco-regional
+E4	Modifier:T6 Modifies:T5
+T7	Modifier 56 66	lymph node
+E5	Modifier:T7 Modifies:T5
+T8	Or 53 55	or
+E6	Or:T8 Arg:E4 Arg2:E5
+T9	Condition 78 93	transit nodules
+E7	Condition:T9 Name:T10
+T10	Condition-Name 78 93	transit nodules
+T11	Procedure 98 108	surgically
+E8	Procedure:T11 Name:T12
+T12	Procedure-Name 98 108	surgically
+T13	Assertion 109 119	resectable
+E9	Assertion:T13 Asserted:E8
+A1	Assertion-Type-Value E9 hypothetical
+R1	Treatment-For Arg1:E8 Arg2:E7	
+T14	Negation 94 97	not
+E10	Negation:T14 Negates:E8
+T15	Condition 153 163	metastasis
+E11	Condition:T15 Name:T16
+T16	Condition-Name 153 163	metastasis
+T17	Modifier 120 140	measurable cutaneous
+E12	Modifier:T17 Modifies:T16
+T18	Modifier 144 152	visceral
+E13	Modifier:T18 Modifies:T16
+T19	Or 141 143	or
+E14	Or:T19 Arg:E12 Arg2:E13
+T20	Condition 174 179	tumor
+E15	Condition:T20 Name:T21
+T21	Condition-Name 174 179	tumor
+T22	Observation 203 210	antigen
+E16	Observation:T22 Name:T23
+T23	Observation-Name 203 210	antigen
+T24	Modifier 196 202	MART-1
+E17	Modifier:T24 Modifies:T23
+T25	Modifier 188 195	Melan-A
+E18	Modifier:T25 Modifies:T23
+T26	Or 195 196	/
+E19	Or:T26 Arg:E18 Arg2:E17
+R2	Caused-By Arg1:E16 Arg2:E15	
+T27	Procedure 215 237	chemotherapy treatment
+E20	Procedure:T27 Name:T28
+T28	Procedure-Name 215 237	chemotherapy treatment
+T29	Negation 212 214	No
+E21	Negation:T29 Negates:E20
+T30	Drug 250 258	Deticene
+E22	Drug:T30 Name:T31 Temporality:E27
+T31	Drug-Name 250 258	Deticene
+T32	Exception 239 249	except for
+E23	Exception:T32 From:E20 Except:E22
+T33	Procedure 281 303	T cell clones infusion
+E24	Procedure:T33 Name:T34 Temporality:E25
+T34	Procedure-Name 281 303	T cell clones infusion
+T35	Eq-Comparison 275 280	first
+E25	Eq-Comparison:T35 Temporal-Recency:T36
+T36	Eq-Temporal-Recency 275 280	first
+A2	Eq-Temporal-Recency-Value T36 first-time
+T37	Temporal-Connection 264 270	before
+E26	Temporal-Connection:T37 Arg:E22 Arg2:E25
+A3	Temporal-Connection-Type-Value E26 before
+T38	Eq-Comparison 259 263	used
+E27	Eq-Comparison:T38 Temporal-Period:T39
+T39	Eq-Temporal-Period 259 263	used
+A4	Eq-Temporal-Period-Value T39 past
+T40	Procedure 308 320	radiotherapy
+E28	Procedure:T40 Name:T41
+T41	Procedure-Name 308 320	radiotherapy
+T42	Or 305 307	or
+E29	Or:T42 Arg:E20 Arg2:E28
+T43	Procedure 324 337	immunotherapy
+E30	Procedure:T43 Name:T44
+T44	Procedure-Name 324 337	immunotherapy
+T45	Or 321 323	or
+E31	Or:T45 Arg:E28 Arg2:E30
+T46	Procedure 365 373	infusion
+E32	Procedure:T46 Name:T53
+T47	Eq-Comparison 345 357	last 4 weeks
+E33	Eq-Comparison:T47 Value:T49 Temporal-Unit:T48 Temporal-Recency:T51
+T48	Eq-Temporal-Unit 352 357	weeks
+A5	Eq-Temporal-Unit-Value T48 week
+T49	Eq-Value 350 351	4
+T51	Eq-Temporal-Recency 345 349	last
+A6	Eq-Temporal-Recency-Value T51 most-recent-time
+T52	Temporal-Connection 338 344	in the
+E35	Temporal-Connection:T52 Arg:E30 Arg2:E33
+A7	Temporal-Connection-Type-Value E35 during
+T50	Temporal-Connection 358 364	before
+E34	Temporal-Connection:T50 Arg:E33 Arg2:E32
+A8	Temporal-Connection-Type-Value E34 before
+T53	Procedure-Name 365 373	infusion
+T54	Negation 375 377	No
+E36	Negation:T54 Negates:E47
+T56	Condition 384 392	melanoma
+E38	Condition:T56 Name:T57
+T57	Condition-Name 384 392	melanoma
+T58	Procedure 393 402	treatment
+E39	Procedure:T58 
+T59	Study 414 422	protocol
+E40	Study:T59 
+T60	Temporal-Connection 403 409	during
+E41	Temporal-Connection:T60 Arg:E39 Arg2:E40
+A9	Temporal-Connection-Type-Value E41 during
+R3	Treatment-For Arg1:E39 Arg2:E38	
+T61	Observation 424 439	Life expectancy
+E42	Observation:T61 Name:T62 Eq-Comparison:E43
+T62	Observation-Name 424 439	Life expectancy
+T63	Eq-Comparison 450 471	greater than 6 months
+E43	Eq-Comparison:T63 Operator:T64 Temporal-Unit:T66 Value:T65
+T64	Eq-Operator 450 462	greater than
+A10	Eq-Operator-Value T64 GT
+T65	Eq-Value 463 464	6
+T66	Eq-Temporal-Unit 465 471	months
+A11	Eq-Temporal-Unit-Value T66 month
+T55	Observation 492 501	Karnowsky
+E37	Observation:T55 Name:T67 Eq-Comparison:E44
+T67	Observation-Name 492 501	Karnowsky
+A12	Observation-Type-Value T67 clinical-score
+T68	Eq-Comparison 502 517	greater than 80
+E44	Eq-Comparison:T68 Operator:T69 Value:T70
+T69	Eq-Operator 502 514	greater than
+A13	Eq-Operator-Value T69 GT
+T70	Eq-Value 515 517	80
+T71	Observation 519 523	ECOG
+E45	Observation:T71 Name:T72 Eq-Comparison:E46
+T72	Observation-Name 519 523	ECOG
+A14	Observation-Type-Value T72 clinical-score
+T73	Eq-Comparison 524 535	= 0, 1 or 2
+E46	Eq-Comparison:T73 Operator:T74 Value:T75 Value2:T76 Value3:T77
+T74	Eq-Operator 524 525	=
+A15	Eq-Operator-Value T74 EQ
+T75	Eq-Value 526 527	0
+T76	Eq-Value 529 530	1
+T77	Eq-Value 534 535	2
+T78	Other 378 383	other
+E47	Other:T78 Is-Other:E39

@@ -1,0 +1,39 @@
+T1	Severity 1182 1193	significant
+A1	Severity-Value T1 severe
+T2	Condition 1194 1210	physical illness
+E1	Condition:T2 Name:T3 Severity:T1
+T3	Condition-Name 1194 1210	physical illness
+T4	Contraindication 1211 1227	contraindicating
+E2	Contraindication:T4 Contraindicates:E3 Contraindicates2:E4
+R1	Caused-By Arg1:E2 Arg2:E1	
+T5	Drug 1239 1254	levomilnacipran
+E3	Drug:T5 Name:T6
+T6	Drug-Name 1239 1254	levomilnacipran
+T7	Drug 1259 1269	duloxetine
+E4	Drug:T7 Name:T8
+T8	Drug-Name 1259 1269	duloxetine
+T9	Or 1255 1258	and
+E5	Or:T9 Arg:E3 Arg2:E4
+T10	Eq-Comparison 1367 1374	Current
+E6	Eq-Comparison:T10 
+T11	Eq-Temporal-Period 1367 1374	Current
+A2	Eq-Temporal-Period-Value T11 present
+T12	Drug 1382 1392	medication
+E7	Drug:T12 Temporality:E6
+T13	Stability 1402 1408	affect
+A3	Stability-Value T13 change
+T14	Assertion 1398 1401	may
+E8	Assertion:T14 Asserted:T13
+A4	Assertion-Type-Value E8 hypothetical
+R2	Caused-By Arg1:T13 Arg2:E7	
+T15	Observation 1409 1416	voiding
+E9	Observation:T15 Name:T16 Stability:T13
+T16	Observation-Name 1409 1416	voiding
+T17	Drug 1422 1438	anticholinergics
+E10	Drug:T17 Name:T18
+T18	Drug-Name 1422 1438	anticholinergics
+R3	Example-Of Arg1:E10 Arg2:E7	
+T19	Procedure 1283 1296	physical exam
+E11	Procedure:T19 Name:T20
+T20	Procedure-Name 1283 1296	physical exam
+R4	Found-By Arg1:E1 Arg2:E11	

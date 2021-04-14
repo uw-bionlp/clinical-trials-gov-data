@@ -1,41 +1,86 @@
 import os
 import sys
 import spacy
+import itertools
 sys.path.append(os.path.join(os.getcwd(), 'src'))
 
+from sklearn.metrics import cohen_kappa_score
+
 from preprocess.brat_document import BratDocument
-from preprocess.config import Config
 import preprocess.utils as utils
 
 tokenize = spacy.load('en_core_web_sm')
 
+
 def main():
-    nic_dir = os.path.join('ner','nic', 'training')
-    tony_dir = os.path.join('ner','tony', 'training')
-    nic_data = {}
-    tony_data = {}
+    nic_raw  = { k:v for k,v in utils.fetch_brat_files(os.path.join('ner','nic', 'training')).items() }
+    tony_raw = { k:v for k,v in utils.fetch_brat_files(os.path.join('ner','tony', 'training')).items() }
+    nic_anns  = [ BratDocument(k, v[0], v[1], tokenize) for k,v in nic_raw.items() ]
+    tony_anns = [ BratDocument(k, v[0], v[1], tokenize) for k,v in tony_raw.items() ]
     
-    first_10 = [ 'NCT03930108', 'NCT03930121', 'NCT03930134', 'NCT03930524', 'NCT03930849', 'NCT03930901', 'NCT03931148', 'NCT03931616', 'NCT03931772', 'NCT03931941' ]
-    last_10  = [ 'NCT03932045', 'NCT03932929', 'NCT03934008', 'NCT03934034', 'NCT03934151', 'NCT03934346', 'NCT03934385', 'NCT03934424', 'NCT03934554', 'NCT03934593' ]
-    to_compare = first_10 + last_10
+    cohens_kappa(nic_anns, tony_anns)
+
+def cohens_kappa(anns1, anns2):
+    anns1_conll = list(itertools.chain(*[ to_conll(d).splitlines() for d in anns1 ]))
+    anns2_conll = list(itertools.chain(*[ to_conll(d).splitlines() for d in anns2 ]))
+    anns1_str_ids = [ [ d.split()[0], d.split()[-1] ] for d in anns1_conll if d != '' ]
+    anns2_str_ids = [ [ d.split()[0], d.split()[-1] ] for d in anns2_conll if d != '' ]
+
+    assert len(anns1_str_ids) == len(anns2_str_ids), 'Lengths are different!'
+
+    unq_toks = set([ d[0] for d in anns1_str_ids])
+    unq_labels = set([ d[1] for d in anns1_str_ids ] + [ d[1] for d in anns2_str_ids ])
+
+    tok2id = { i:d for i, d in enumerate(unq_toks) }
+    label2id = { d:i for i, d in enumerate(unq_labels) }
+
+    anns1_idxs = [ label2id[a[1]] for a in anns1_str_ids ]
+    anns2_idxs = [ label2id[a[1]] for a in anns2_str_ids ]
+    
+    kappa = cohen_kappa_score(anns1_idxs, anns2_idxs)
+    print(kappa)
+    
+
+def to_conll(ann):
+    conll = ''
+    evs  = [ v.args[0].val for k,v in ann.Es.items() ]
+    ents = [ v for k,v in ann.Ts.items() if v not in evs ] 
+    for sent in ann.sents:
+        for tok in sent:
+            t_ents = [ v for v in ents if tok.i in v.tok_idxs ]
+            tok_start = tok.idx
+            tok_end = tok_start + len(tok.text)
+            if tok.text.strip() == '':
+                continue
+            if not len(t_ents):
+                conll += f'{tok.text} {ann.doc_id} {tok_start} {tok_end} O\n'
+            else:
+                is_start = tok.i == t_ents[0].tok_idxs[0]
+                labels, types_seen = [], set()
+                for ent in t_ents:
+                    if ent.type in types_seen:
+                        continue
+                    types_seen.add(ent.type)
+                    a = [ v for k,v in ann.As.items() if v.attr_of == ent ]
+                    a = a[0] if len(a) else None
+                    if a:
+                        label = ent.type + '___' + a.type + ':' + a.val
+                    else:
+                        label = ent.type
+                    labels.append(label)
+                label = f'{"B" if is_start else "I"}-' + '|'.join(sorted(labels))
+                conll += f'{tok.text} {ann.doc_id} {tok_start} {tok_end} {label}\n'
+        conll += '\n'
+    return conll
 
 
-    # Raw data
-    nic_raw  = { k:v for k,v in utils.fetch_brat_files(nic_dir).items() if k in to_compare }
-    tony_raw = { k:v for k,v in utils.fetch_brat_files(tony_dir).items() if k in to_compare }
 
-    # Annotations
-    nic_ann  = [ BratDocument(k, v[0], v[1], tokenize) for k,v in nic_raw.items() ]
-    tony_ann = [ BratDocument(k, v[0], v[1], tokenize) for k,v in tony_raw.items() ]
-
-    ann_gold = nic_ann
-    ann_eval = tony_ann
-
+def f1(anns_gold, anns_eval):
     """ Entities """
     tp, tn, fp, fn = 0, 0, 0, 0
     type_scores = {}
-    for doc_gold in ann_gold:
-        doc_eval = [ doc for doc in ann_eval if doc.doc_id == doc_gold.doc_id ][0]
+    for doc_gold in anns_gold:
+        doc_eval = [ doc for doc in anns_eval if doc.doc_id == doc_gold.doc_id ][0]
 
         # Precision
         for k,v in doc_eval.Ts.items():
@@ -80,8 +125,8 @@ def main():
     """ Relations """
     tp, tn, fp, fn = 0, 0, 0, 0
     type_scores = {}
-    for doc_gold in ann_gold:
-        doc_eval = [ doc for doc in ann_eval if doc.doc_id == doc_gold.doc_id ][0]
+    for doc_gold in anns_gold:
+        doc_eval = [ doc for doc in anns_eval if doc.doc_id == doc_gold.doc_id ][0]
 
         # Precision
         for k,v in doc_eval.Rs.items():
@@ -124,8 +169,7 @@ def main():
     #    print(f'        Precision: {round(precision*100,1)}')
     #    print(f'        Recall: {round(recall*100,1)}')
     #    print(f'        F1: {round(f1*100,1)}')
+    
 
-main()
-
-
-# TODO(ndobb) - frequency stats for each annotation type
+if __name__ == '__main__':
+    main()

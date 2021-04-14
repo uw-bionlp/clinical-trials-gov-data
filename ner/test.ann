@@ -1,38 +1,11 @@
-T1	Condition 0 18	Kidney dysfunction
-E1	Condition:T1 Name:T2
-T2	Condition-Name 0 18	Kidney dysfunction
-T3	Observation 20 40	creatinine clearance
-E2	Observation:T3 Name:T4 Eq-Comparison:E3
-T4	Observation-Name 20 40	creatinine clearance
-A1	Observation-Type-Value T4 lab
-T5	Eq-Comparison 41 63	below 10 ml per minute
-E3	Eq-Comparison:T5 Operator:T6 Value:T7 Unit:T8 Temporal-Unit:T9
-T6	Eq-Operator 41 46	below
-A2	Eq-Operator-Value T6 LT
-T7	Eq-Value 47 49	10
-T8	Eq-Unit 50 52	ml
-T9	Eq-Temporal-Unit 57 63	minute
-A3	Eq-Temporal-Unit-Value T9 minute
-R1	Equivalent-To Arg1:E2 Arg2:E1	
-T10	Negation 64 66	No
-E4	Negation:T10 Negates:E5
-T11	Condition 67 76	condition
-E5	Condition:T11 
-T12	Contraindication 77 93	contraindicating
-E6	Contraindication:T12 Contraindicates:E7
-T13	Procedure 101 104	MRI
-E7	Procedure:T13 Name:T14
-T14	Procedure-Name 101 104	MRI
-R2	Caused-By Arg1:E6 Arg2:E5	
-T15	Polarity 105 109	High
-A4	Polarity-Value T15 high
-T16	Risk 110 114	risk
-E8	Risk:T16 Polarity:T15 Risk-For:E9 Risk-For2:E10
-T17	Condition 119 125	stroke
-E9	Condition:T17 Name:T19
-T18	Condition 129 139	thrombosis
-E10	Condition:T18 Name:T20
-T19	Condition-Name 119 125	stroke
-T20	Condition-Name 129 139	thrombosis
-T21	Or 126 128	or
-E11	Or:T21 Arg:E9 Arg2:E10
+k
+T1	Negation 0 2	No
+E1	Negation:T1 Negates:E2
+T2	Condition 3 12	condition
+E2	Condition:T2 
+T3	Contraindication 13 29	contraindicating
+E3	Contraindication:T3 Contraindicates:E4
+T4	Procedure 37 40	MRI
+E4	Procedure:T4 Name:T5
+T5	Procedure-Name 37 40	MRI
+R1	Caused-By Arg1:E3 Arg2:E2	
