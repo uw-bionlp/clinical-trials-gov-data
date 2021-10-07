@@ -1,7 +1,7 @@
 E1	Procedure:T1 Name:T2 Temporality:E19
 E3	Procedure:T3 Name:T4
 E5	Condition:T5 Name:T6
-E7	Condition:T7 Name:T8
+E7	Condition:T7 Name:T8 Polarity:T43
 E2	Procedure:T14 Name:T15 Temporality:E4
 E4	Eq-Comparison:T16 Temporal-Period:T17
 E6	Procedure:T18 Name:T19 Temporality:E18
@@ -25,8 +25,8 @@ T3	Procedure 208 218	dissection
 T4	Procedure-Name 208 218	dissection
 T5	Condition 381 390	pregnancy
 T6	Condition-Name 381 390	pregnancy
-T7	Condition 269 290	Bad general condition
-T8	Condition-Name 269 290	Bad general condition
+T7	Condition 273 290	general condition
+T8	Condition-Name 273 290	general condition
 T9	Eq-Temporal-Unit 241 246	years
 T11	Eq-Value 238 240	18
 T12	Eq-Value 255 257	70
@@ -74,3 +74,5 @@ A10	Eq-Temporal-Period-Value T40 past
 A11	Observation-Type-Value T28 clinical-score
 A12	Observation-Type-Value T31 clinical-score
 R1	Abbrev-Of Arg1:E14 Arg2:E13
+T43	Polarity 269 272	Bad
+A13	Polarity-Value T43 abnormal

@@ -54,7 +54,7 @@ def pretokenize(text):
             add_end = ''
         
         cleaned.append(add_start + ch + add_end)
-        pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start + add_end) + len(ch)-1
+        pad_map[i] = (pad_map[i-1] if i > 0 else 0) + len(add_start) + len(prev_add_end)
 
         prev = ch
         prev_num = is_num

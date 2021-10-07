@@ -18,6 +18,7 @@ def main():
     nic_anns  = [ BratDocument(k, v[0], v[1], tokenize) for k,v in nic_raw.items() ]
     tony_anns = [ BratDocument(k, v[0], v[1], tokenize) for k,v in tony_raw.items() ]
     
+    f1(nic_anns, tony_anns)
     cohens_kappa(nic_anns, tony_anns)
 
 def cohens_kappa(anns1, anns2):

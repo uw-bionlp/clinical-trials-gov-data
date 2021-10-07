@@ -30,8 +30,6 @@ def main():
                 if e.args[0].type in Es: Es[e.args[0].type] += 1
                 else:                    Es[e.args[0].type] = 1
                 for arg in e.args[1:]:
-                    if arg.type == 'Name':
-                        continue
                     if any(re.findall(regex_trailing_num, arg.type)):
                         arg.type = re.sub(regex_trailing_num, '', arg.type)
                     if arg.type in args: args[arg.type] += 1
@@ -57,3 +55,7 @@ def main():
     print('Args', arg_sum_cnt)
     for arg, cnt in sorted(args.items()):
         print('\t', arg, cnt, round(cnt / arg_sum_cnt * 100.0, 1))
+
+
+if __name__ == '__main__':
+    main()
