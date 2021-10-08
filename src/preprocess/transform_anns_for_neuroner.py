@@ -32,6 +32,11 @@ def main():
         if train_cnt < train_desired: 
             train_cnt += 1
 
+        for d in ['events','entities']:
+            if not os.path.exists(os.path.join(output_dir, d, dir)): 
+                os.mkdir(os.path.join(output_dir, d, dir))
+        
+
         with open(os.path.join(output_dir, 'events', dir, ann.doc_id+'.txt'), 'w+') as f_ev, \
              open(os.path.join(output_dir, 'entities', dir, ann.doc_id+'.txt'), 'w+') as f_ent:
              f_ev.write(text)
