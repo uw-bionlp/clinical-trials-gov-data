@@ -25,6 +25,7 @@ REGEX_LOW = r'( low |reduced|decreased)'
 REGEX_MOST_RECENT = r'(most recent|last )'
 REGEX_NEGATIVE = r'negative'
 REGEX_REACTIVE = r'reactive'
+REGEX_COVID = r'(COVID|Sars-Cov)'
 
 MIN_LEN = 75
 MAX_LEN = 2000
@@ -65,7 +66,7 @@ def scrub(text):
     lpad = get_left_padding(text)
 
     for ln in text.split(NEWLINE):
-        if ln == EMPTY:
+        if ln.strip() == EMPTY:
             continue
         output.append(ln.rstrip()[lpad:])
     out = NEWLINE.join(output)
@@ -104,6 +105,8 @@ def parse(filepath):
     if len(first_submit):
         dt = parse_date(first_submit[0].firstChild.data)
     if dt and len(elig):
+        if dt.year < 2020:
+            return None
         crit = [ node for node in elig[0].childNodes if node.nodeName == 'criteria' ]
         if len(crit):
             text = [ node for node in crit[0].childNodes if node.nodeName == 'textblock' ]
@@ -144,23 +147,22 @@ def parse_files(main_dir):
                 if not os.path.exists(year_out_dir):
                     os.makedirs(year_out_dir)
 
-                #for name, reg in [ ['icd10',REGEX_ICD10], ['cpt',REGEX_CPT], ['immune',REGEX_IMMUNE], ['low',REGEX_LOW], ['most-recent',REGEX_MOST_RECENT], ['negative',REGEX_NEGATIVE], ['reactive',REGEX_REACTIVE] ]:
-                for name, reg in [ ['low',REGEX_LOW] ]:
-                    data[name] = True if re.search(reg, data['criteria'], re.IGNORECASE) else False
+                #for name, reg in [ ['covid',REGEX_COVID], ['icd10',REGEX_ICD10], ['cpt',REGEX_CPT], ['immune',REGEX_IMMUNE], ['low',REGEX_LOW], ['most-recent',REGEX_MOST_RECENT], ['negative',REGEX_NEGATIVE], ['reactive',REGEX_REACTIVE] ]:
+                #    data[name] = True if re.search(reg, data['criteria'], re.IGNORECASE) else False
 
-                    if data[name]:
-                        dir_name = os.path.join('data','docs','meta',name)
-                        if not os.path.exists(dir_name):
-                            os.makedirs(dir_name)
-                        with open(dir_name+'/'+f.replace('.xml','.txt'), 'w+') as fout:
-                            fout.write(data['criteria'])
-                        with open(dir_name+'/'+f.replace('.xml','.json'), 'w+', encoding="utf-8") as fout:
-                            json.dump(data, fout, ensure_ascii=False, indent=4)
+                #    if data[name]:
+                #        dir_name = os.path.join('data','docs','meta',name)
+                #        if not os.path.exists(dir_name):
+                #            os.makedirs(dir_name)
+                #        with open(dir_name+'/'+f.replace('.xml','.txt'), 'w+') as fout:
+                #            fout.write(data['criteria'])
+                #        with open(dir_name+'/'+f.replace('.xml','.json'), 'w+', encoding="utf-8") as fout:
+                #            json.dump(data, fout, ensure_ascii=False, indent=4)
 
-                #save_to_file(f_out_path, data)
+                save_to_file(f_out_path, data)
 
 cwd = os.getcwd() + os.path.sep
-main_dir = cwd + os.path.join('data','AllPublicXML')
+main_dir = cwd + os.path.join('AllPublicXML')
 out_dir = cwd + os.path.join('data','docs','json')
 
 parse_files(main_dir)
