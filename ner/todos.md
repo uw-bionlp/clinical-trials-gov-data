@@ -6,3 +6,4 @@
 5. Drop `Contraindication` and make `Contraindicates` a direct relation
 6. Drop `Temporal-Connection` and make `Arg` into `Before`/`During`/`After`
 7. Drop `And` and `Or` and make into `Relations`
+8. Rename `Eq-Comparison` numeric relation

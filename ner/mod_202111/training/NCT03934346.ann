@@ -1,0 +1,87 @@
+E1	Observation:T1 Name:T2 Numeric-Filter:E2
+E3	Condition:T3 Acuteness:T4 Name:T31 Acuteness:T13
+E5	Condition:T5 Name:T6
+E2	Eq-Comparison:T14 Operator:T15 Value:T11 Value2:T12 Unit:T10 Per:T32
+E9	Allergy:T17 Name:T18
+E12	Drug:T22 Name:T23 Temporality:E31
+E7	Drug:T7
+E13	Drug:T24 Name:T8
+E14	Condition:T25 Name:T26
+E15	Condition:T27 Name:T28
+E6	Modifier:T19
+E10	Modifier:T20 Modifies:T6
+E16	Coreference:T29 Refers-To:E7 Refers-To2:E13
+E18	Observation:T33 Name:T34 Duration:E21
+E19	Assertion:T35 Asserted:E18
+E20	Study:T36
+E21	Eq-Comparison:T37 Value:T38 Temporal-Unit:T39
+E22	Condition:T40 Name:T41
+E24	Drug:T43 Temporality:E29
+E25	Study:T44
+E27	Negation:T46 Negates:E24
+E28	Negation:T47 Negates:E27
+E29	Eq-Comparison:T48 Temporal-Period:T49
+E30	Assertion:T50 Asserted:E15
+E31	Eq-Comparison:T51 Temporal-Period:T52
+T1	Observation 53 68	Body mass index
+T2	Observation-Name 53 68	Body mass index
+T3	Condition 232 240	diseases
+T5	Condition 277 282	abuse
+T6	Condition-Name 277 282	abuse
+T10	Eq-Unit 87 89	kg
+T11	Eq-Value 77 79	18
+T12	Eq-Value 84 86	30
+T14	Eq-Comparison 69 92	between 18 and 30 kg/m2
+T15	Eq-Operator 69 76	between
+T13	Acuteness 215 222	chronic
+T17	Allergy 247 256	allergies
+T18	Allergy-Name 242 246	food
+T22	Drug 295 308	illicit drugs
+T23	Drug-Name 295 308	illicit drugs
+T7	Drug 333 344	medications
+T8	Drug-Name 346 371	micronutrient supplements
+T24	Drug 346 371	micronutrient supplements
+T25	Condition 386 397	Vegetarians
+T27	Condition 36 43	healthy
+T28	Condition-Name 36 43	healthy
+T4	Acuteness 226 231	acute
+T19	Modifier 258 265	smoking
+T20	Modifier 269 276	alcohol
+T29	Coreference 376 380	both
+T31	Condition-Name 232 240	diseases
+T32	Eq-Unit 90 92	m2
+T33	Observation 109 112	eat
+T34	Observation-Name 109 112	eat
+T35	Assertion 98 108	Willing to
+T36	Study 144 149	study
+T37	Eq-Comparison 156 162	2 week
+T38	Eq-Value 156 157	2
+T39	Eq-Temporal-Unit 158 162	week
+T26	Condition-Name 386 397	Vegetarians
+T40	Condition 408 426	unable to eat meat
+T41	Condition-Name 408 426	unable to eat meat
+T43	Drug 524 535	medications
+T44	Study 547 552	study
+T46	Negation 504 511	refrain
+T47	Negation 494 500	Unable
+T48	Eq-Comparison 517 523	taking
+T49	Eq-Temporal-Period 517 523	taking
+T9	Life-Stage-And-Gender 44 47	men
+T50	Assertion 25 35	Apparently
+T51	Eq-Comparison 288 291	Use
+T52	Eq-Temporal-Period 288 291	Use
+A1	Observation-Type-Value T2 vital
+A2	Eq-Operator-Value T15 BETWEEN
+A5	Assertion-Type-Value E19 hypothetical
+A6	Eq-Temporal-Unit-Value T39 week
+A7	Eq-Temporal-Period-Value T49 present
+A8	Life-Stage-And-Gender-Type T9 male
+A9	Assertion-Type-Value E30 possible
+A10	Eq-Temporal-Period-Value T52 present
+A11	Acuteness-Type-Value T4 acute
+A12	Acuteness-Type-Value T13 chronic
+R1	Or Arg1:T13 Arg2:T4
+R2	Or Arg1:E6 Arg2:E10
+R3	Or Arg1:E13 Arg2:E16
+R4	Or Arg1:E14 Arg2:E22
+R5	During Arg1:E24 Arg2:E25

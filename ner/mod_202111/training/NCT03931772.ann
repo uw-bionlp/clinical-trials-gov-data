@@ -1,0 +1,181 @@
+E1	Condition:T1 Name:T2 Temporality:E15
+E4	Condition:T4 Name:T5 Severity:T71
+E6	Condition:T6 Name:T7
+E8	Condition:T8 Name:T9
+E10	Condition:T10 Name:T11
+E18	Eq-Comparison:T30 Operator:T19 Value:T27 Per:T35 Unit:T55
+E2	Age:T31 Numeric-Filter:E5
+E5	Eq-Comparison:T33 Temporal-Unit:T21 Value:T23 Operator:T100
+E7	Observation:T25 Numeric-Filter:E18 Name:T26
+E9	Eq-Comparison:T34 Operator:T36 Temporal-Unit:T38 Value:T37
+E13	Drug:T41 Name:T42
+E15	Eq-Comparison:T43 Temporal-Unit:T22 Operator:T20 Value:T28
+E19	Drug:T44 Name:T45
+E20	Drug:T46 Name:T47
+E21	Drug:T48 Name:T49
+E22	Drug:T50 Name:T51
+E23	Drug:T52 Name:T53
+E25	Condition:T40 Name:T39 Duration:E9 Temporality:E43
+E11	Condition:T56 Name:T57
+E14	Condition:T14 Severity:T93
+E16	Drug:T15 Name:T16
+E26	Drug:T17 Name:T13 Temporality:E38
+E12	Drug:T58 Name:T12
+E29	Condition:T61 Name:T62
+E17	Eq-Comparison:T29 Operator:T64 Value:T24 Value2:T63
+E31	Encounter:T67
+E32	Modifier:T69
+E33	Modifier:T70 Modifies:E4
+E36	Eq-Comparison:T73 Temporal-Period:T74
+E37	Condition:T75 Name:T76 Temporality:E48
+E38	Eq-Comparison:T77 Temporal-Period:T78
+E28	Assertion:T60 Asserted:E29
+E3	Condition:T32 Name:T81
+E39	Assertion:T80 Asserted:T79
+E40	Study:T83 Stability:T79
+E41	Study:T84 Stability:T86
+E42	Assertion:T85 Asserted:T86
+E43	Eq-Comparison:T87 Per:T88
+E44	Study:T89 Stability:T92
+E45	Modifier:T90 Modifies:E44
+E46	Assertion:T91 Asserted:T92
+E48	Eq-Comparison:T94 Temporal-Period:T95
+E50	Modifier:T98 Modifies:T66
+E30	Observation:T65 Name:T66
+E47	Modifier:T97 Modifies:T66
+T1	Condition 426 436	drug abuse
+T2	Condition-Name 426 436	drug abuse
+T3	Language 76 83	English
+T4	Condition 591 604	brain disease
+T5	Condition-Name 591 604	brain disease
+T6	Condition 611 620	psychosis
+T7	Condition-Name 611 620	psychosis
+T8	Condition 657 665	dementia
+T9	Condition-Name 657 665	dementia
+T10	Condition 622 628	stroke
+T11	Condition-Name 622 628	stroke
+T18	Eq-Operator 150 151	≥
+T19	Eq-Operator 357 358	≥
+T20	Eq-Operator 527 542	within the last
+T21	Eq-Temporal-Unit 28 33	years
+T22	Eq-Temporal-Unit 545 551	months
+T23	Eq-Value 25 27	18
+T24	Eq-Value 152 153	5
+T27	Eq-Value 359 360	5
+T28	Eq-Value 543 544	3
+T30	Eq-Comparison 349 379	average ≥ 5 cigarettes per day
+T31	Age 37 42	older
+T33	Eq-Comparison 25 42	18 years or older
+T25	Observation 338 345	smoking
+T35	Eq-Temporal-Unit 376 379	day
+T34	Eq-Comparison 319 336	at least one year
+T36	Eq-Operator 319 327	at least
+T37	Eq-Value 328 331	one
+T38	Eq-Temporal-Unit 332 336	year
+T41	Drug 440 451	depressants
+T42	Drug-Name 440 451	depressants
+T43	Eq-Comparison 527 551	within the last 3 months
+T44	Drug 453 477	dissociative anesthetics
+T45	Drug-Name 453 477	dissociative anesthetics
+T46	Drug 479 492	hallucinogens
+T47	Drug-Name 479 492	hallucinogens
+T48	Drug 494 501	opioids
+T49	Drug-Name 494 501	opioids
+T50	Drug 503 510	cocaine
+T51	Drug-Name 503 510	cocaine
+T52	Drug 515 526	amphetamine
+T53	Drug-Name 515 526	amphetamine
+T55	Eq-Unit 361 371	cigarettes
+T40	Condition 308 314	smoker
+T39	Condition-Name 308 314	smoker
+T56	Condition 777 795	Hearing impairment
+T57	Condition-Name 777 795	Hearing impairment
+T14	Condition 869 878	illnesses
+T13	Drug-Name 929 939	Wellbutrin
+T15	Drug 941 948	Chantix
+T16	Drug-Name 941 948	Chantix
+T17	Drug 929 939	Wellbutrin
+T12	Drug-Name 975 997	smoking cessation aids
+T58	Drug 975 997	smoking cessation aids
+T61	Condition 99 111	quit smoking
+T29	Eq-Comparison 150 163	≥ 5 out of 10
+T63	Eq-Value 161 163	10
+T64	Eq-Operator 154 160	out of
+T67	Encounter 746 771	inpatient hospitalization
+T69	Modifier 565 576	psychiatric
+T70	Modifier 580 590	structural
+T73	Eq-Comparison 671 678	current
+T74	Eq-Temporal-Period 671 678	current
+T75	Condition 686 698	risk to self
+T76	Condition-Name 686 698	risk to self
+T77	Eq-Comparison 912 928	Currently taking
+T78	Eq-Temporal-Period 912 928	Currently taking
+T60	Assertion 89 98	Desire to
+T32	Condition 634 655	functional impairment
+T81	Condition-Name 634 655	functional impairment
+T71	Severity 558 564	Severe
+T79	Stability 879 888	impacting
+T80	Assertion 879 888	impacting
+T83	Study 893 898	study
+T84	Study 1033 1038	study
+T85	Assertion 1003 1008	could
+T86	Stability 1009 1017	confound
+T62	Condition-Name 99 111	quit smoking
+T66	Observation-Name 167 179	quit smoking
+T87	Eq-Comparison 302 307	daily
+T88	Eq-Temporal-Unit 302 307	daily
+T89	Study 845 857	intervention
+T90	Modifier 836 844	auditory
+T91	Assertion 801 806	would
+T93	Severity 863 868	Major
+T94	Eq-Comparison 679 685	recent
+T95	Eq-Temporal-Period 679 685	recent
+T92	Stability 807 813	impede
+T98	Modifier 136 146	motivation
+T100	Eq-Operator 34 42	or older
+T65	Observation 167 179	quit smoking
+T97	Modifier 185 211	10-point Likert-type scale
+T26	Observation-Name 338 345	smoking
+A1	Eq-Operator-Value T18 GTEQ
+A2	Eq-Operator-Value T19 GTEQ
+A3	Eq-Operator-Value T20 LTEQ
+A4	Eq-Temporal-Unit-Value T21 year
+A5	Eq-Temporal-Unit-Value T22 month
+A7	Eq-Temporal-Unit-Value T35 day
+A8	Eq-Operator-Value T36 GTEQ
+A9	Eq-Temporal-Unit-Value T38 year
+A11	Eq-Operator-Value T64 BETWEEN
+A13	Encounter-Type-Value E31 inpatient
+A14	Eq-Temporal-Period-Value T74 present
+A15	Eq-Temporal-Period-Value T78 present
+A17	Severity-Value T71 severe
+A16	Assertion-Type-Value E28 intention
+A18	Stability-Value T79 change
+A19	Assertion-Type-Value E39 hypothetical
+A20	Assertion-Type-Value E42 hypothetical
+A21	Stability-Value T86 change
+A10	Eq-Temporal-Unit-Value T88 day
+A12	Assertion-Type-Value E46 hypothetical
+A22	Severity-Value T93 severe
+A23	Eq-Temporal-Period-Value T95 recent
+A25	Stability-Value T92 change
+A6	Eq-Operator-Value T100 GTEQ
+A24	Observation-Type-Value T66 survey-or-questionnaire
+R1	Example-Of Arg1:E6 Arg2:E4
+R2	Example-Of Arg1:E10 Arg2:E4
+R3	Example-Of Arg1:E8 Arg2:E4
+R4	Using Arg1:E1 Arg2:E13
+R5	Using Arg1:E1 Arg2:E19
+R6	Using Arg1:E1 Arg2:E19
+R7	Using Arg1:E1 Arg2:E20
+R8	Using Arg1:E1 Arg2:E21
+R9	Using Arg1:E1 Arg2:E22
+R10	Caused-By Arg1:T79 Arg2:E14
+R12	Caused-By Arg1:T86 Arg2:E12
+R13	Caused-By Arg1:T92 Arg2:E11
+R11	Equivalent-To Arg1:E30 Arg2:E29
+R14	Or Arg1:E4 Arg2:E37
+R15	Or Arg1:E16 Arg2:E12
+R16	Or Arg1:E32 Arg2:E33
+R17	And Arg1:E10 Arg2:E3
+R18	Or Arg1:E36 Arg2:E48

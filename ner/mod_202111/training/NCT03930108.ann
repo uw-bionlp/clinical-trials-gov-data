@@ -1,0 +1,52 @@
+E1	Eq-Comparison:T9 Operator:T2 Value:T6
+E2	Eq-Comparison:T10 Operator:T3 Value:T7 Temporal-Unit:T19
+E3	Eq-Comparison:T11 Operator:T4 Temporal-Unit:T5 Value:T8
+E4	Age:T12 Numeric-Filter:E1
+E5	Encounter:T13 Location:T15
+E8	Encounter:T20
+E9	Encounter:T22 Temporality:E2
+E12	Death:T24 Temporality:E2
+E13	Encounter:T29
+E14	Encounter:T31 Location:T33 Temporality:E3
+E10	Study:T16
+E15	Other:T25 Is-Other:T33
+T1	Life-Stage-And-Gender 25 30	adult
+T2	Eq-Operator 48 57	and above
+T3	Eq-Operator 165 174	less than
+T4	Eq-Operator 238 244	within
+T5	Eq-Temporal-Unit 248 252	days
+T6	Eq-Value 45 47	18
+T7	Eq-Value 175 177	24
+T8	Eq-Value 245 247	30
+T9	Eq-Comparison 45 57	18 and above
+T10	Eq-Comparison 165 183	less than 24 hours
+T11	Eq-Comparison 238 252	within 30 days
+T12	Age 41 44	age
+T13	Encounter 63 71	admitted
+T15	Location 75 84	burn unit
+T19	Eq-Temporal-Unit 178 183	hours
+T20	Encounter 187 196	admission
+T22	Encounter 142 152	discharged
+T24	Death 156 164	deceased
+T29	Encounter 253 262	admission
+T31	Encounter 211 219	referred
+T33	Location 229 237	hospital
+T16	Study 92 100	sampling
+T25	Other 223 228	other
+A1	Life-Stage-And-Gender-Type T1 adult
+A2	Eq-Operator-Value T2 GTEQ
+A3	Eq-Operator-Value T3 LT
+A4	Eq-Operator-Value T4 LTEQ
+A5	Eq-Temporal-Unit-Value T5 day
+A6	Encounter-Type-Value E5 inpatient
+A7	Location-Value T15 unit
+A8	Eq-Temporal-Unit-Value T19 hour
+A9	Encounter-Type-Value E8 inpatient
+A10	Encounter-Type-Value E9 discharge
+A13	Encounter-Type-Value E13 inpatient
+A14	Encounter-Type-Value E14 referral
+A15	Location-Value T33 hospital
+R2	Equivalent-To Arg1:E4 Arg2:T1
+R1	During Arg1:E5 Arg2:E10
+R3	After Arg1:E2 Arg2:E8
+R4	Or Arg1:E9 Arg2:E12

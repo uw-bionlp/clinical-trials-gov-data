@@ -1,0 +1,65 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4 Severity:T29
+E9	Procedure:T9 Name:T10
+E11	Procedure:T11 Name:T12
+E13	Condition:T13 Name:T14
+E14	Eq-Comparison:T20 Operator:T16 Value:T19 Unit:T5 Per:T15
+E2	Negation:T21 Negates:E11
+E12	Observation:T26 Name:T27 Numeric-Filter:E14
+E5	Observation:T6 Name:T7 Numeric-Filter:E7
+E7	Eq-Comparison:T8 Operator:T17 Unit:T28 Temporal-Unit:T18
+E17	Procedure:T31 Name:T32
+E18	Assertion:T33 Asserted:E17
+E20	Assertion:T37 Asserted:E15
+E21	Condition:T39 Name:T40 Temporality:E19
+E15	Procedure:T34 Name:T35
+E19	Eq-Comparison:T36 Temporal-Period:T38
+T1	Condition 64 91	chronic renal insufficiency
+T2	Condition-Name 64 91	chronic renal insufficiency
+T3	Condition 455 476	psychiatric disorders
+T4	Condition-Name 455 476	psychiatric disorders
+T9	Procedure 25 33	Dialysis
+T10	Procedure-Name 25 33	Dialysis
+T11	Procedure 41 49	dialysis
+T12	Procedure-Name 41 49	dialysis
+T13	Condition 482 490	dementia
+T14	Condition-Name 482 490	dementia
+T16	Eq-Operator 103 104	<
+T17	Eq-Operator 409 418	less than
+T18	Eq-Temporal-Unit 423 428	years
+T19	Eq-Value 105 107	20
+T20	Eq-Comparison 103 115	< 20ml / min
+T21	Negation 37 40	non
+T26	Observation 99 102	GFR
+T27	Observation-Name 99 102	GFR
+T5	Eq-Unit 107 109	ml
+T15	Eq-Temporal-Unit 112 115	min
+T6	Observation 390 405	life expectancy
+T7	Observation-Name 390 405	life expectancy
+T8	Eq-Comparison 409 428	less than two years
+T28	Eq-Unit 419 422	two
+T31	Procedure 129 139	transplant
+T32	Procedure-Name 129 139	transplant
+T33	Assertion 116 124	eligible
+T37	Assertion 153 163	wishing to
+T39	Condition 373 382	pathology
+T40	Condition-Name 373 382	pathology
+T29	Severity 447 454	serious
+T34	Procedure 202 212	transplant
+T35	Procedure-Name 202 212	transplant
+T36	Eq-Comparison 364 370	having
+T38	Eq-Temporal-Period 364 370	having
+A1	Eq-Operator-Value T16 LT
+A2	Eq-Operator-Value T17 LT
+A3	Eq-Temporal-Unit-Value T18 year
+A4	Observation-Type-Value T27 lab
+A5	Eq-Temporal-Unit-Value T15 minute
+A8	Severity-Value T29 severe
+A6	Assertion-Type-Value E18 hypothetical
+A7	Assertion-Type-Value E20 intention
+A9	Eq-Temporal-Period-Value T38 present
+R1	Or Arg1:E9 Arg2:E11
+R2	And Arg1:E11 Arg2:E1
+R3	And Arg1:E21 Arg2:E5
+R4	Or Arg1:E3 Arg2:E13
+R5	And Arg1:E1 Arg2:E12
