@@ -15,13 +15,13 @@ E20	Drug:T46 Name:T47
 E21	Drug:T48 Name:T49
 E22	Drug:T50 Name:T51
 E23	Drug:T52 Name:T53
-E25	Condition:T40 Name:T39 Duration:E9 Temporality:E43
+E25	Observation:T40 Name:T39 Duration:E9 Temporality:E43
 E11	Condition:T56 Name:T57
 E14	Condition:T14 Severity:T93
 E16	Drug:T15 Name:T16
 E26	Drug:T17 Name:T13 Temporality:E38
 E12	Drug:T58 Name:T12
-E29	Condition:T61 Name:T62
+E29	Observation:T61 Name:T62
 E17	Eq-Comparison:T29 Operator:T64 Value:T24 Value2:T63
 E31	Encounter:T67
 E32	Modifier:T69
@@ -86,8 +86,8 @@ T51	Drug-Name 503 510	cocaine
 T52	Drug 515 526	amphetamine
 T53	Drug-Name 515 526	amphetamine
 T55	Eq-Unit 361 371	cigarettes
-T40	Condition 308 314	smoker
-T39	Condition-Name 308 314	smoker
+T40	Observation 308 314	smoker
+T39	Observation-Name 308 314	smoker
 T56	Condition 777 795	Hearing impairment
 T57	Condition-Name 777 795	Hearing impairment
 T14	Condition 869 878	illnesses
@@ -97,7 +97,7 @@ T16	Drug-Name 941 948	Chantix
 T17	Drug 929 939	Wellbutrin
 T12	Drug-Name 975 997	smoking cessation aids
 T58	Drug 975 997	smoking cessation aids
-T61	Condition 99 111	quit smoking
+T61	Observation 99 111	quit smoking
 T29	Eq-Comparison 150 163	≥ 5 out of 10
 T63	Eq-Value 161 163	10
 T64	Eq-Operator 154 160	out of
@@ -120,7 +120,7 @@ T83	Study 893 898	study
 T84	Study 1033 1038	study
 T85	Assertion 1003 1008	could
 T86	Stability 1009 1017	confound
-T62	Condition-Name 99 111	quit smoking
+T62	Observation-Name 99 111	quit smoking
 T66	Observation-Name 167 179	quit smoking
 T87	Eq-Comparison 302 307	daily
 T88	Eq-Temporal-Unit 302 307	daily
@@ -160,7 +160,7 @@ A22	Severity-Value T93 severe
 A23	Eq-Temporal-Period-Value T95 recent
 A25	Stability-Value T92 change
 A6	Eq-Operator-Value T100 GTEQ
-A24	Observation-Type-Value T66 survey-or-questionnaire
+A24	Observation-Type-Value E30 survey-or-questionnaire
 R1	Example-Of Arg1:E6 Arg2:E4
 R2	Example-Of Arg1:E10 Arg2:E4
 R3	Example-Of Arg1:E8 Arg2:E4
@@ -179,3 +179,10 @@ R15	Or Arg1:E16 Arg2:E12
 R16	Or Arg1:E32 Arg2:E33
 R17	And Arg1:E10 Arg2:E3
 R18	Or Arg1:E36 Arg2:E48
+R19	Or Arg1:E6 Arg2:E10
+R20	Or Arg1:E13 Arg2:E19
+R21	Or Arg1:E19 Arg2:E20
+R22	Or Arg1:E20 Arg2:E21
+R23	Or Arg1:E21 Arg2:E22
+R24	Or Arg1:E26 Arg2:E16
+R25	Or Arg1:E3 Arg2:E8

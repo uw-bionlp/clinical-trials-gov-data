@@ -7,8 +7,8 @@ E12	Drug:T22 Name:T23 Temporality:E31
 E7	Drug:T7
 E13	Drug:T24 Name:T8
 E14	Condition:T25 Name:T26
-E15	Condition:T27 Name:T28
-E6	Modifier:T19
+E15	Condition:T27 Condition:T28
+E6	Observation:T19
 E10	Modifier:T20 Modifies:T6
 E16	Coreference:T29 Refers-To:E7 Refers-To2:E13
 E18	Observation:T33 Name:T34 Duration:E21
@@ -45,7 +45,7 @@ T25	Condition 386 397	Vegetarians
 T27	Condition 36 43	healthy
 T28	Condition-Name 36 43	healthy
 T4	Acuteness 226 231	acute
-T19	Modifier 258 265	smoking
+T19	Observation 258 265	smoking
 T20	Modifier 269 276	alcohol
 T29	Coreference 376 380	both
 T31	Condition-Name 232 240	diseases
@@ -70,7 +70,7 @@ T9	Life-Stage-And-Gender 44 47	men
 T50	Assertion 25 35	Apparently
 T51	Eq-Comparison 288 291	Use
 T52	Eq-Temporal-Period 288 291	Use
-A1	Observation-Type-Value T2 vital
+A1	Observation-Type-Value E1 vital
 A2	Eq-Operator-Value T15 BETWEEN
 A5	Assertion-Type-Value E19 hypothetical
 A6	Eq-Temporal-Unit-Value T39 week
@@ -85,3 +85,4 @@ R2	Or Arg1:E6 Arg2:E10
 R3	Or Arg1:E13 Arg2:E16
 R4	Or Arg1:E14 Arg2:E22
 R5	During Arg1:E24 Arg2:E25
+R6	Or Arg1:E7 Arg2:E13

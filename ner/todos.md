@@ -7,3 +7,4 @@
 6. Drop `Temporal-Connection` and make `Arg` into `Before`/`During`/`After`
 7. Drop `And` and `Or` and make into `Relations`
 8. Rename `Eq-Comparison` numeric relation
+9. Move values from `Observation-Name` to `Observation`

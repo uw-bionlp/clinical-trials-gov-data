@@ -21,7 +21,7 @@ E26	Condition:T44 Name:T45
 E27	Condition:T46 Name:T47
 E28	Condition:T48 Name:T49
 E29	Condition:T50 Name:T51
-E32	Condition:T54 Name:T55
+E32	Observation:T54 Observation:T55
 E33	Risk:T56 Risk-For:E32 Polarity:T41
 E36	Encounter:T59
 E37	Modifier:T61 Modifies:E36
@@ -73,7 +73,7 @@ T48	Condition 498 510	adnexal mass
 T49	Condition-Name 498 510	adnexal mass
 T50	Condition 516 550	myoma at the lower uterine segment
 T51	Condition-Name 516 550	myoma at the lower uterine segment
-T54	Condition 665 673	bleeding
+T54	Observation 665 673	bleeding
 T55	Condition-Name 665 673	bleeding
 T56	Risk 657 661	risk
 T59	Encounter 612 621	emergency
@@ -83,7 +83,7 @@ T41	Polarity 652 656	high
 T53	Modifier 25 34	singleton
 T57	Study 355 360	study
 A1	Eq-Operator-Value T17 GT
-A2	Observation-Type-Value T35 vital
+A2	Observation-Type-Value E20 vital
 A5	Polarity-Value T41 high
 A3	Encounter-Type-Value E36 emergency
 R2	Example-Of Arg1:E15 Arg2:E4
@@ -100,3 +100,7 @@ R11	And Arg1:E19 Arg2:E20
 R12	And Arg1:E13 Arg2:E4
 R13	Or Arg1:E28 Arg2:E29
 R14	And Arg1:E3 Arg2:E33
+R15	Or Arg1:E1 Arg2:E25
+R16	Or Arg1:E9 Arg2:E17
+R17	Or Arg1:E12 Arg2:E9
+R18	Or Arg1:E25 Arg2:E26

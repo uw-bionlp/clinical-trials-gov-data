@@ -5,7 +5,7 @@ E11	Condition:T11 Name:T12
 E12	Age:T17 Numeric-Filter:E13
 E13	Eq-Comparison:T24 Operator:T18 Value:T20 Temporal-Unit:T15 Value2:T21
 E14	Eq-Comparison:T25 Operator:T19 Value:T22 Unit:T16 Per:T47 Value2:T23
-E2	Condition:T26 Name:T27
+E2	Condition:T26 Condition:T27
 E6	Modifier:T30 Modifies:T3
 E10	Drug:T32 Temporality:E38
 E15	Drug:T33
@@ -107,7 +107,7 @@ T75	Study 754 759	study
 T76	Eq-Comparison 144 149	Being
 T77	Eq-Temporal-Period 144 149	Being
 T78	Assertion 780 795	associated with
-A1	Observation-Type-Value T8 vital
+A1	Observation-Type-Value E7 vital
 A2	Eq-Temporal-Unit-Value T15 year
 A3	Eq-Operator-Value T18 BETWEEN
 A4	Eq-Operator-Value T19 BETWEEN
@@ -138,3 +138,7 @@ R15	After Arg1:E26 Arg2:E27
 R16	Or Arg1:E31 Arg2:E32
 R17	Or Arg1:E20 Arg2:E30
 R18	Or Arg1:E30 Arg2:E21
+R19	Or Arg1:E11 Arg2:E19
+R20	Or Arg1:E19 Arg2:E29
+R21	Or Arg1:E27 Arg2:E11
+R22	Or Arg1:E29 Arg2:E20
