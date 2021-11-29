@@ -1,7 +1,7 @@
 E1	Observation:T1 Name:T2
 E3	Procedure:T3 Name:T4
 E5	Procedure:T5 Name:T6
-E9	Observation:T9 Name:T10 Eq-Comparison:E21
+E9	Observation:T9 Name:T10 Numeric-Filter:E21
 E11	Procedure:T11 Name:T12
 E13	Procedure:T13 Name:T14
 E15	Procedure:T15 Name:T16
@@ -11,15 +11,10 @@ E21	Eq-Comparison:T30 Operator:T22 Value:T28 Unit:T47
 E2	Condition:T31 Name:T32
 E4	Procedure:T26 Name:T33 Duration:E6
 E6	Eq-Comparison:T34 Value:T35 Temporal-Unit:T36
-E8	Temporal-Connection:T37 Arg:E3 Arg2:E6
 E10	Procedure:T38 Name:T39
 E12	Procedure:T40 Name:T41
-E14	Or:T42 Arg:E10 Arg2:E12
-E16	Temporal-Connection:T43 Arg:E12 Arg2:E5
-E18	Observation:T44 Name:T45 Eq-Comparison:E20
+E18	Observation:T44 Name:T45 Numeric-Filter:E20
 E7	Procedure:T8 Name:T7
-E22	Temporal-Connection:T46 Arg:E18 Arg2:E7
-E19	Temporal-Connection:T19 Arg:E9 Arg2:E13
 E23	Observation:T20 Name:T25
 E24	Modifier:T48 Modifies:E15
 E25	Modifier:T49 Modifies:E17
@@ -54,20 +49,15 @@ T33	Procedure-Name 115 126	ventilation
 T34	Eq-Comparison 94 102	48 hours
 T35	Eq-Value 94 96	48
 T36	Eq-Temporal-Unit 97 102	hours
-T37	Temporal-Connection 88 93	after
 T38	Procedure 166 170	HFNC
 T39	Procedure-Name 166 170	HFNC
 T40	Procedure 174 177	NIV
 T41	Procedure-Name 174 177	NIV
-T42	Or 171 173	or
-T43	Temporal-Connection 178 183	after
 T44	Observation 200 205	PaCO2
 T45	Observation-Name 200 205	PaCO2
 T7	Procedure-Name 218 228	extubation
 T8	Procedure 218 228	extubation
-T46	Temporal-Connection 213 217	when
 T47	Eq-Unit 276 281	cmH2O
-T19	Temporal-Connection 301 305	when
 T20	Observation 342 357	Do-not-intubate
 T25	Observation-Name 342 357	Do-not-intubate
 T48	Modifier 383 393	Accidental
@@ -76,10 +66,11 @@ T50	Modifier 106 114	invasive
 A1	Eq-Operator-Value T21 GTEQ
 A2	Eq-Operator-Value T22 LTEQ
 A3	Eq-Temporal-Unit-Value T36 hour
-A4	Temporal-Connection-Type-Value E8 after
-A5	Temporal-Connection-Type-Value E16 after
-A6	Temporal-Connection-Type-Value E22 during
-A7	Temporal-Connection-Type-Value E19 during
-A8	Observation-Type-Value T45 measurement
-A9	Observation-Type-Value T2 measurement
+A8	Observation-Type-Value E18 measurement
+A9	Observation-Type-Value E1 measurement
 R1	Abbrev-Of Arg1:E9 Arg2:E1
+R2	After Arg1:E3 Arg2:E6
+R3	Or Arg1:E10 Arg2:E12
+R4	After Arg1:E12 Arg2:E5
+R5	During Arg1:E18 Arg2:E7
+R6	During Arg1:E9 Arg2:E13

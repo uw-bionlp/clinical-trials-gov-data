@@ -4,14 +4,14 @@ E5	Procedure:T5 Temporality:E19
 E7	Procedure:T7 Name:T8
 E10	Eq-Comparison:T13 Operator:T11 Value:T12 Operator2:T24 Unit:T25
 E2	Eq-Comparison:T14 Temporal-Period:T15
-E4	Encounter:T10 Type:T16
+E4	Encounter:T10
 E6	Assertion:T17 Asserted:E4
 E8	Eq-Comparison:T18 Temporal-Period:T19
-E9	Condition:T20 Name:T21 Acuteness:T22
+E9	Observation:T20 Name:T21 Acuteness:T22
 E12	Drug:T23 Temporality:E8 Dose:E10
 E13	Drug:T26 Name:T27
 E14	Allergy:T28 Name:E13
-E15	Observation:T29 Name:T30 Eq-Comparison:E16
+E15	Observation:T29 Name:T30 Numeric-Filter:E16
 E16	Eq-Comparison:T31 Value:T32 Value2:T33 Value3:T34
 E17	Condition:T35 Name:T36
 E18	Observation:T37 Name:T38
@@ -35,12 +35,11 @@ T14	Eq-Comparison 34 43	scheduled
 T15	Eq-Temporal-Period 34 43	scheduled
 T9	Location 92 96	UWMC
 T10	Encounter 107 121	inpatient stay
-T16	Encounter-Type 107 121	inpatient stay
 T17	Assertion 97 106	requiring
 T18	Eq-Comparison 156 158	on
 T19	Eq-Temporal-Period 156 158	on
-T20	Condition 167 171	pain
-T21	Condition-Name 167 171	pain
+T20	Observation 167 171	pain
+T21	Observation-Name 167 171	pain
 T22	Acuteness 159 166	chronic
 T23	Drug 172 182	mediations
 T24	Eq-Operator 183 204	equaling or exceeding
@@ -70,13 +69,13 @@ T46	Negation 544 554	precluding
 A1	Eq-Operator-Value T11 GT
 A2	Eq-Temporal-Period-Value T15 future
 A3	Location-Value T9 hospital
-A4	Encounter-Type-Value T16 inpatient
+A4	Encounter-Type-Value E4 inpatient
 A5	Assertion-Type-Value E6 hypothetical
 A6	Eq-Temporal-Period-Value T19 present
 A7	Eq-Operator-Value T24 GTEQ
 A8	Eq-Temporal-Period-Value T40 present
 A9	Eq-Temporal-Period-Value T42 present
-A10	Observation-Type-Value T30 clinical-score
+A10	Observation-Type-Value E15 clinical-score
 A11	Acuteness-Type-Value T22 chronic
 R1	Treatment-For Arg1:E12 Arg2:E9
 R2	Caused-By Arg1:E24 Arg2:E3

@@ -5,18 +5,13 @@ E11	Procedure:T11 Name:T12
 E13	Condition:T13 Name:T14
 E14	Eq-Comparison:T20 Operator:T16 Value:T19 Unit:T5 Per:T15
 E2	Negation:T21 Negates:E11
-E12	Observation:T26 Name:T27 Eq-Comparison:E14
-E5	Observation:T6 Name:T7 Eq-Comparison:E7
+E12	Observation:T26 Name:T27 Numeric-Filter:E14
+E5	Observation:T6 Name:T7 Numeric-Filter:E7
 E7	Eq-Comparison:T8 Operator:T17 Unit:T28 Temporal-Unit:T18
-E4	Or:T22 Arg:E9 Arg2:E11
-E16	And:T30 Arg:E11 Arg2:E1
 E17	Procedure:T31 Name:T32
 E18	Assertion:T33 Asserted:E17
 E20	Assertion:T37 Asserted:E15
 E21	Condition:T39 Name:T40 Temporality:E19
-E6	And:T23 Arg:E21 Arg2:E5
-E8	Or:T24 Arg:E3 Arg2:E13
-E10	And:T25 Arg:E1 Arg2:E12
 E15	Procedure:T34 Name:T35
 E19	Eq-Comparison:T36 Temporal-Period:T38
 T1	Condition 64 91	chronic renal insufficiency
@@ -43,8 +38,6 @@ T6	Observation 390 405	life expectancy
 T7	Observation-Name 390 405	life expectancy
 T8	Eq-Comparison 409 428	less than two years
 T28	Eq-Unit 419 422	two
-T22	Or 34 36	or
-T30	And 59 63	with
 T31	Procedure 129 139	transplant
 T32	Procedure-Name 129 139	transplant
 T33	Assertion 116 124	eligible
@@ -52,9 +45,6 @@ T37	Assertion 153 163	wishing to
 T39	Condition 373 382	pathology
 T40	Condition-Name 373 382	pathology
 T29	Severity 447 454	serious
-T23	And 383 387	with
-T24	Or 479 481	or
-T25	And 92 96	with
 T34	Procedure 202 212	transplant
 T35	Procedure-Name 202 212	transplant
 T36	Eq-Comparison 364 370	having
@@ -62,9 +52,14 @@ T38	Eq-Temporal-Period 364 370	having
 A1	Eq-Operator-Value T16 LT
 A2	Eq-Operator-Value T17 LT
 A3	Eq-Temporal-Unit-Value T18 year
-A4	Observation-Type-Value T27 lab
+A4	Observation-Type-Value E12 lab
 A5	Eq-Temporal-Unit-Value T15 minute
 A8	Severity-Value T29 severe
 A6	Assertion-Type-Value E18 hypothetical
 A7	Assertion-Type-Value E20 intention
 A9	Eq-Temporal-Period-Value T38 present
+R1	Or Arg1:E9 Arg2:E11
+R2	And Arg1:E11 Arg2:E1
+R3	And Arg1:E21 Arg2:E5
+R4	Or Arg1:E3 Arg2:E13
+R5	And Arg1:E1 Arg2:E12

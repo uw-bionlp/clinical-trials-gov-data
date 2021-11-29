@@ -9,37 +9,31 @@ E13	Eq-Comparison:T39 Operator:T15 Temporal-Unit:T23 Value:T28
 E14	Eq-Comparison:T40 Operator:T16 Value:T29 Unit:T92 Per:T93 Temporal-Unit:T94
 E15	Eq-Comparison:T41 Operator:T17 Value:T30 Unit:T9 Per:T10
 E2	Eq-Comparison:T46 Temporal-Period:T47
-E4	Encounter:T48 Type:T49 Duration:E20
+E4	Encounter:T48 Duration:E20
 E6	Assertion:T50 Asserted:E4
-E8	And:T51 Arg:E1 Arg2:E6
 E20	Eq-Comparison:T52 Operator:T53 Value:T54 Temporal-Unit:T55
 E21	Procedure:T56 Name:T57
 E22	Assertion:T58 Asserted:E5 Polarity:T59
-E23	Or:T60 Arg:E7 Arg2:E22
-E24	Provider:T61 Type:T62 Role:T63
-E25	Encounter:T64 Type:T65
-E26	Encounter:T66 Type:T67
+E24	Provider:T61
+E25	Encounter:T64
+E26	Encounter:T66
 E27	Criteria-Count:T68 Min-Value:E28 Criteria:E29 Criteria2:E40 Criteria3:E41 Criteria4:E52
 E28	Eq-Comparison:T69 Value:T70 Operator:T71
-E29	Observation:T72 Name:T73 Eq-Comparison:E10
-E30	Or:T76 Arg:E10 Arg2:E11
-E31	Or:T78 Arg:E11 Arg2:E12
-E32	Observation:T79 Name:T80 Eq-Comparison:E12
+E29	Observation:T72 Name:T73 Numeric-Filter:E10
+E32	Observation:T79 Name:T80 Numeric-Filter:E12
 E33	Drug:T81 Name:T82
 E34	Drug:T83 Name:T84 Temporality:E13 Temporality2:E51
-E35	Or:T85 Arg:E33 Arg2:E34
 E36	Negation:T86 Negates:E33
 E37	Condition:T87 Name:T88
 E38	Negation:T89 Negates:E37
-E39	And:T90 Arg:E34 Arg2:E38
-E40	Observation:T11 Name:T91 Eq-Comparison:E14
-E41	Observation:T95 Name:T96 Eq-Comparison:E15
+E40	Observation:T11 Name:T91 Numeric-Filter:E14
+E41	Observation:T95 Name:T96 Numeric-Filter:E15
 E9	Observation:T18 Name:T19
-E16	Observation:T20 Name:T21 Eq-Comparison:E17
+E16	Observation:T20 Name:T21 Numeric-Filter:E17
 E17	Eq-Comparison:T22 Operator:T24 Value:T31 Unit:T32
 E18	Condition:T33 Name:T34 Temporality:E19
 E19	Eq-Comparison:T35 Temporal-Period:T42
-E42	Encounter:T43 Type:T44
+E42	Encounter:T43
 E43	Procedure:T45 Name:T97
 E44	Negation:T98 Negates:E43
 E45	Assertion:T99 Asserted:E43
@@ -47,20 +41,16 @@ E46	Procedure:T100 Name:T101
 E47	Observation:T102 Name:T103 Temporality:E49
 E48	Observation:T104 Name:T105
 E49	Eq-Comparison:T106 Temporal-Period:T107
-E50	Or:T108 Arg:E47 Arg2:E48
 E51	Eq-Comparison:T109 Temporal-Period:T110
 E52	Condition:T111 Name:T112
-E53	Observation:T113 Name:T114 Eq-Comparison:E55 Eq-Comparison2:E57
+E53	Observation:T113 Name:T114 Numeric-Filter:E55 Numeric-Filter:E57
 E54	Modifier:T115 Modifies:T114
 E55	Eq-Comparison:T116 Operator:T117 Value:T118 Unit:T119 Unit2:T120
-E56	Or:T121 Arg:E55 Arg2:E57
 E57	Eq-Comparison:T122 Operator:T123 Value:T124 Unit:T125
-E58	Observation:T126 Name:T127 Eq-Comparison:E61 Eq-Comparison2:E62
+E58	Observation:T126 Name:T127 Numeric-Filter:E61 Numeric-Filter:E62
 E59	Modifier:T128 Modifies:T127
-E60	Or:T129 Arg:E53 Arg2:E58
 E61	Eq-Comparison:T130 Operator:T131 Value:T132 Unit:T133
 E62	Eq-Comparison:T134 Operator:T135 Value:T136 Unit:T137
-E63	Or:T138 Arg:E61 Arg2:E62
 T1	Procedure 82 100	general anesthesia
 T2	Procedure-Name 82 100	general anesthesia
 T3	Procedure 50 68	surgical operation
@@ -91,9 +81,7 @@ T41	Eq-Comparison 871 887	> 20 breaths/min
 T46	Eq-Comparison 36 45	scheduled
 T47	Eq-Temporal-Period 36 45	scheduled
 T48	Encounter 126 141	hospitalization
-T49	Encounter-Type 126 141	hospitalization
 T50	Assertion 105 113	expected
-T51	And 101 104	and
 T52	Eq-Comparison 145 164	longer than one day
 T53	Eq-Operator 145 156	longer than
 T54	Eq-Value 157 160	one
@@ -102,14 +90,9 @@ T56	Procedure 182 219	Perioperative Evaluation & Management
 T57	Procedure-Name 182 219	Perioperative Evaluation & Management
 T58	Assertion 245 254	suspicion
 T59	Polarity 231 235	high
-T60	Or 228 230	or
 T61	Provider 272 291	emergency physician
-T62	Provider-Type 272 281	emergency
-T63	Provider-Role 282 291	physician
 T64	Encounter 309 325	emergency center
-T65	Encounter-Type 309 325	emergency center
 T66	Encounter 556 572	emergency center
-T67	Encounter-Type 556 572	emergency center
 T68	Criteria-Count 594 607	the following
 T69	Eq-Comparison 579 590	two or more
 T70	Eq-Value 579 582	two
@@ -118,21 +101,17 @@ T72	Observation 633 643	Leukocytes
 T73	Observation-Name 633 643	Leukocytes
 T74	Eq-Unit 653 657	mm^3
 T75	Eq-Unit 669 673	mm^3
-T76	Or 658 660	or
 T77	Eq-Unit 681 682	%
-T78	Or 674 676	or
 T79	Observation 683 704	immature (band) forms
 T80	Observation-Name 683 704	immature (band) forms
 T81	Drug 723 733	filgrastim
 T82	Drug-Name 723 733	filgrastim
 T83	Drug 737 750	pegfilgrastim
 T84	Drug-Name 737 750	pegfilgrastim
-T85	Or 734 736	or
 T86	Negation 720 722	no
 T87	Condition 790 798	leukemia
 T88	Condition-Name 790 798	leukemia
 T89	Negation 787 789	no
-T90	And 783 786	and
 T11	Observation 809 819	Heart rate
 T91	Observation-Name 809 819	Heart rate
 T92	Eq-Unit 825 830	beats
@@ -155,7 +134,6 @@ T34	Condition-Name 1216 1224	moribund
 T35	Eq-Comparison 1210 1215	Being
 T42	Eq-Temporal-Period 1210 1215	Being
 T43	Encounter 1242 1258	emergency center
-T44	Encounter-Type 1242 1258	emergency center
 T45	Procedure 1279 1286	surgery
 T97	Procedure-Name 1279 1286	surgery
 T98	Negation 1263 1275	cancellation
@@ -168,7 +146,6 @@ T104	Observation 1347 1362	Do Not Intubate
 T105	Observation-Name 1347 1362	Do Not Intubate
 T106	Eq-Comparison 1315 1321	Active
 T107	Eq-Temporal-Period 1315 1321	Active
-T108	Or 1343 1345	or
 T109	Eq-Comparison 755 767	administered
 T110	Eq-Temporal-Period 755 767	administered
 T111	Condition 608 612	SIRS
@@ -181,7 +158,6 @@ T117	Eq-Operator 969 970	>
 T118	Eq-Value 971 973	38
 T119	Eq-Unit 974 989	degrees Celsius
 T120	Eq-Unit 991 992	C
-T121	Or 994 996	or
 T122	Eq-Comparison 997 1011	< 36 degrees C
 T123	Eq-Operator 997 998	<
 T124	Eq-Value 999 1001	36
@@ -189,7 +165,6 @@ T125	Eq-Unit 1002 1011	degrees C
 T126	Observation 1024 1035	temperature
 T127	Observation-Name 1024 1035	temperature
 T128	Modifier 1015 1023	axillary
-T129	Or 1012 1014	or
 T130	Eq-Comparison 1036 1050	> 37 degrees C
 T131	Eq-Operator 1036 1037	>
 T132	Eq-Value 1038 1040	37
@@ -198,7 +173,6 @@ T134	Eq-Comparison 1054 1068	< 35 degrees C
 T135	Eq-Operator 1054 1055	<
 T136	Eq-Value 1056 1058	35
 T137	Eq-Unit 1059 1068	degrees C
-T138	Or 1051 1053	or
 A1	Eq-Operator-Value T12 GT
 A2	Eq-Operator-Value T13 LT
 A3	Eq-Operator-Value T14 GT
@@ -207,33 +181,33 @@ A5	Eq-Operator-Value T16 GT
 A6	Eq-Operator-Value T17 GT
 A12	Eq-Temporal-Unit-Value T23 day
 A13	Eq-Temporal-Period-Value T47 future
-A14	Encounter-Type-Value T49 inpatient
+A14	Encounter-Type-Value E4 inpatient
 A15	Assertion-Type-Value E6 hypothetical
 A16	Eq-Operator-Value T53 GT
 A17	Eq-Temporal-Unit-Value T55 day
 A18	Assertion-Type-Value E22 possible
 A19	Polarity-Value T59 high
-A20	Encounter-Type-Value T65 emergency
-A21	Encounter-Type-Value T67 emergency
+A20	Encounter-Type-Value E25 emergency
+A21	Encounter-Type-Value E26 emergency
 A22	Eq-Operator-Value T71 GTEQ
-A23	Observation-Type-Value T73 lab
-A24	Observation-Type-Value T80 lab
-A25	Observation-Type-Value T91 vital
+A23	Observation-Type-Value E29 lab
+A24	Observation-Type-Value E32 lab
+A25	Observation-Type-Value E40 vital
 A26	Eq-Temporal-Unit-Value T93 minute
 A27	Eq-Temporal-Unit-Value T94 minute
-A28	Observation-Type-Value T96 vital
+A28	Observation-Type-Value E41 vital
 A7	Eq-Temporal-Unit-Value T10 minute
 A8	Eq-Operator-Value T24 LT
 A9	Eq-Temporal-Period-Value T42 present
-A10	Encounter-Type-Value T44 emergency
+A10	Encounter-Type-Value E42 emergency
 A11	Assertion-Type-Value E45 hypothetical
 A29	Eq-Temporal-Period-Value T107 present
 A30	Eq-Temporal-Period-Value T110 past
-A31	Observation-Type-Value T19 measurement
-A32	Observation-Type-Value T114 vital
+A31	Observation-Type-Value E9 measurement
+A32	Observation-Type-Value E53 vital
 A33	Eq-Operator-Value T117 GT
 A34	Eq-Operator-Value T123 LT
-A35	Observation-Type-Value T127 vital
+A35	Observation-Type-Value E58 vital
 A36	Eq-Operator-Value T131 GT
 A37	Eq-Operator-Value T135 LT
 R1	Using Arg1:E3 Arg2:E1
@@ -244,3 +218,13 @@ R5	If-Then Arg1:E42 Arg2:E18
 R6	If-Then Arg1:E46 Arg2:E44
 R7	Abbrev-Of Arg1:T120 Arg2:T119
 R8	Abbrev-Of Arg1:E7 Arg2:E21
+R9	And Arg1:E1 Arg2:E6
+R10	Or Arg1:E7 Arg2:E22
+R11	Or Arg1:E10 Arg2:E11
+R12	Or Arg1:E11 Arg2:E12
+R13	Or Arg1:E33 Arg2:E34
+R14	And Arg1:E34 Arg2:E38
+R15	Or Arg1:E47 Arg2:E48
+R16	Or Arg1:E55 Arg2:E57
+R17	Or Arg1:E53 Arg2:E58
+R18	Or Arg1:E61 Arg2:E62

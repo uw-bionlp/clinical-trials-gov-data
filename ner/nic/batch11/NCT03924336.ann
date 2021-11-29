@@ -2,43 +2,37 @@ E1	Condition:T1 Name:T2 Stage:E42
 E3	Procedure:T3 Name:T4 Temporality:E13
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
-E8	Age:T19 Eq-Comparison:E14
+E8	Age:T19 Numeric-Filter:E14
 E10	Eq-Comparison:T33 Operator:T9 Unit:T17 Value:T25
 E11	Eq-Comparison:T34 Operator:T10 Value:T26 Unit:T55
 E12	Eq-Comparison:T35 Operator:T11 Unit:T18 Value:T27
 E13	Eq-Comparison:T36 Temporal-Unit:T15 Value:T29 Temporal-Period:T12
-E2	Observation:T37 Minimum-Count:E4 Name:T45 Eq-Comparison:E10
+E2	Observation:T37 Minimum-Count:E4 Name:T45 Numeric-Filter:E10
 E4	Eq-Comparison:T38 Operator:T39 Unit:T41 Value:T40
-E6	Or:T42 Arg:E7 Arg2:E5
 E14	Eq-Comparison:T43 Operator:T20 Temporal-Unit:T16 Value:T30 Value2:T31
 E9	Negation:T44 Negates:E3
 E15	Modifier:T21 Modifies:E2
 E16	Modifier:T22 Modifies:E2
 E17	Modifier:T23 Modifies:E2
-E18	Or:T24 Arg:E16 Arg2:E17
-E19	And:T46 Arg:E1 Arg2:E2
 E20	Procedure:T47 Name:T48
 E21	Procedure:T49 Name:T50
 E22	Observation:T51 Name:T52
-E23	Observation:T53 Name:T54 Eq-Comparison:E11
-E24	And:T56 Arg:E2 Arg2:E22
+E23	Observation:T53 Name:T54 Numeric-Filter:E11
 E25	Observation:T57 Name:T58
-E26	Observation:T59 Name:T60 Eq-Comparison:E12
-E27	And:T61 Arg:E23 Arg2:E25
-E28	Condition:T62 Name:T63
+E26	Condition:T59 Name:T60 Numeric-Filter:E12
+E28	Observation:T62 Name:T63
 E29	Modifier:T64 Modifies:E28
 E30	Negation:T65 Negates:E29
 E32	Negation:T68 Negates:E31
 E33	Drug:T69 Name:T70 Temporality:E43
 E34	Negation:T71 Negates:E33
 E35	Drug:T72 Temporality:E38
-E36	Or:T73 Arg:E33 Arg2:E35
 E37	Condition:T74 Name:T75 Stability:T89
 E38	Eq-Comparison:T76 Operator:T77 Temporal-Unit:T14 Value:T28
-E39	Condition:T32 Name:T78 Stage:E40
+E39	Observation:T32 Name:T78 Stage:E40
 E40	Eq-Comparison:T79 Operator:T13 Unit:T80 Value:T81
 E41	Condition:T82 Name:T83
-E31	Condition:T66 Name:T67
+E31	Observation:T66 Name:T67
 E42	Eq-Comparison:T84 Unit:T85 Value:T86
 E43	Eq-Comparison:T87 Temporal-Period:T88
 T1	Condition 35 48	periodontitis
@@ -75,16 +69,13 @@ T38	Eq-Comparison 64 82	at least one tooth
 T39	Eq-Operator 64 72	at least
 T40	Eq-Value 73 76	one
 T41	Eq-Unit 77 82	tooth
-T42	Or 827 829	or
 T43	Eq-Comparison 617 640	between 25 and 50 years
 T20	Eq-Operator 617 624	between
 T44	Negation 498 500	No
 T21	Modifier 88 94	2-wall
 T22	Modifier 96 102	3-wall
 T23	Modifier 116 128	2- to 3-wall
-T24	Or 104 106	or
 T45	Observation-Name 129 148	intraosseous defect
-T46	And 57 63	having
 T47	Procedure 178 191	bone sounding
 T48	Procedure-Name 178 191	bone sounding
 T49	Procedure 193 217	radiographic examination
@@ -94,14 +85,12 @@ T52	Observation-Name 224 249	clinical attachment level
 T53	Observation 251 254	CAL
 T54	Observation-Name 251 254	CAL
 T55	Eq-Unit 259 261	mm
-T56	And 219 223	with
 T57	Observation 266 278	pocket depth
 T58	Observation-Name 266 278	pocket depth
-T59	Observation 280 282	PD
-T60	Observation-Name 280 282	PD
-T61	And 262 265	and
-T62	Condition 297 303	Defect
-T63	Condition-Name 297 303	Defect
+T59	Condition 280 282	PD
+T60	Condition-Name 280 282	PD
+T62	Observation 297 303	Defect
+T63	Observation-Name 297 303	Defect
 T64	Modifier 323 342	root furcation area
 T65	Negation 304 307	not
 T68	Negation 365 368	Non
@@ -109,20 +98,19 @@ T69	Drug 407 418	antibiotics
 T70	Drug-Name 407 418	antibiotics
 T71	Negation 383 385	No
 T72	Drug 428 439	medications
-T73	Or 419 421	or
 T74	Condition 454 466	periodontium
 T75	Condition-Name 454 466	periodontium
 T76	Eq-Comparison 474 491	previous 6 months
 T77	Eq-Operator 474 482	previous
-T32	Condition 896 910	Teeth mobility
-T78	Condition-Name 896 910	Teeth mobility
+T32	Observation 896 910	Teeth mobility
+T78	Observation-Name 896 910	Teeth mobility
 T79	Eq-Comparison 911 931	greater than grade I
 T80	Eq-Unit 924 929	grade
 T81	Eq-Value 930 931	I
 T82	Condition 869 890	orthodontic appliance
 T83	Condition-Name 869 890	orthodontic appliance
-T66	Condition 369 376	smokers
-T67	Condition-Name 369 376	smokers
+T66	Observation 369 376	smokers
+T67	Observation-Name 369 376	smokers
 T84	Eq-Comparison 25 34	Stage III
 T85	Eq-Unit 25 30	Stage
 T86	Eq-Value 31 34	III
@@ -148,3 +136,11 @@ R2	Abbrev-Of Arg1:E23 Arg2:E22
 R3	Abbrev-Of Arg1:E26 Arg2:E25
 R5	Found-By Arg1:E21 Arg2:E2
 R4	Caused-By Arg1:T89 Arg2:E35
+R6	Or Arg1:E7 Arg2:E5
+R7	Or Arg1:E16 Arg2:E17
+R8	And Arg1:E1 Arg2:E2
+R9	And Arg1:E2 Arg2:E22
+R10	And Arg1:E23 Arg2:E25
+R11	Or Arg1:E33 Arg2:E35
+R12	Or Arg1:E15 Arg2:E16
+R13	Or Arg1:E20 Arg2:E21

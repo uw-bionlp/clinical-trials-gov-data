@@ -15,29 +15,25 @@ E25	Eq-Comparison:T34 Temporal-Period:T35
 E27	Eq-Comparison:T38 Temporal-Period:T39
 E28	Eq-Comparison:T40 Temporal-Period:T41
 E1	Observation:T42 Name:T43
-E2	And:T44 Arg:E1 Arg2:E3
-E4	Or:T45 Arg:E3 Arg2:T2
 E6	Observation:T46 Name:T47
 E8	Negation:T48 Negates:E6
 E10	Negation:T49 Negates:E7
 E12	Negation:T50 Negates:E9
-E14	Age:T51 Eq-Comparison:E23
-E16	Condition:T52 Name:T53
+E14	Age:T51 Numeric-Filter:E23
+E16	Observation:T52 Name:T53
 E18	Eq-Comparison:T54 Operator:T23 Value:T55 Per:T56
 E20	Eq-Comparison:T57 Value:T58 Temporal-Unit:T25 Operator:T59
-E29	Condition:T60 Name:T61
-E30	Modifier:T62 Modifies:T61
-E31	Modifier:T63 Modifies:T61
-E32	Or:T64 Arg:E31 Arg2:E30
+E29	Condition:T60
+E30	Modifier:T62 Modifies:E29
+E31	Modifier:T63 Modifies:E29
 E26	Procedure:T36 Name:T37
-E34	Observation:T66 Name:T67 Eq-Comparison:E22
+E34	Observation:T66 Name:T67 Numeric-Filter:E22
 E35	Drug:T70 Name:T71
 E36	Exception:T72 From:E17 Except:E35
 E37	Condition:T73 Name:T74
 E38	Procedure:T75 Name:T76
 E39	Condition:T77 Name:T78 Stability:T82
 E40	Condition:T79 Name:T80 Stability:T82
-E41	Or:T81 Arg:E39 Arg2:E40
 T1	Life-Stage-And-Gender 37 43	female
 T2	Life-Stage-And-Gender 111 117	female
 T3	Condition 80 84	PTSD
@@ -79,16 +75,14 @@ T40	Eq-Comparison 765 772	Current
 T41	Eq-Temporal-Period 765 772	Current
 T42	Observation 44 51	veteran
 T43	Observation-Name 44 51	veteran
-T44	And 52 56	with
-T45	Or 106 108	or
 T46	Observation 122 129	veteran
 T47	Observation-Name 122 129	veteran
 T48	Negation 118 121	non
 T49	Negation 130 137	without
 T50	Negation 175 178	non
 T51	Age 220 224	ages
-T52	Condition 240 249	Sedentary
-T53	Condition-Name 240 249	Sedentary
+T52	Observation 240 249	Sedentary
+T53	Observation-Name 240 249	Sedentary
 T54	Eq-Comparison 261 289	less than three times a week
 T55	Eq-Value 271 276	three
 T56	Eq-Temporal-Unit 285 289	week
@@ -99,7 +93,6 @@ T60	Condition 393 401	diseases
 T61	Condition-Name 393 401	diseases
 T62	Modifier 380 392	neurological
 T63	Modifier 360 375	cardiopulmonary
-T64	Or 376 379	and
 T36	Procedure 419 439	physical examination
 T37	Procedure-Name 419 439	physical examination
 T65	Acuteness 446 453	Chronic
@@ -118,7 +111,6 @@ T77	Condition 702 728	sympathetic neural control
 T78	Condition-Name 702 728	sympathetic neural control
 T79	Condition 733 758	cardiac-vascular function
 T80	Condition-Name 733 758	cardiac-vascular function
-T81	Or 729 732	and
 T82	Stability 670 677	effects
 A1	Life-Stage-And-Gender-Type T1 female
 A2	Life-Stage-And-Gender-Type T2 female
@@ -130,12 +122,16 @@ A7	Eq-Temporal-Period-Value T33 present
 A8	Eq-Temporal-Period-Value T35 present
 A10	Eq-Temporal-Period-Value T39 present
 A11	Eq-Temporal-Period-Value T41 present
-A12	Observation-Type-Value T12 social-habit
+A12	Observation-Type-Value E11 social-habit
 A13	Eq-Temporal-Unit-Value T56 week
 A14	Eq-Operator-Value T59 LTEQ
-A9	Observation-Type-Value T67 lab
+A9	Observation-Type-Value E34 lab
 A15	Stability-Value T82 change
 A16	Acuteness-Type-Value T65 chronic
 R1	Found-By Arg1:E29 Arg2:E26
 R2	Equivalent-To Arg1:E34 Arg2:E13
 R3	Caused-By Arg1:T82 Arg2:E38
+R4	And Arg1:E1 Arg2:E3
+R5	Or Arg1:E3 Arg2:T2
+R6	Or Arg1:E31 Arg2:E30
+R7	Or Arg1:E39 Arg2:E40

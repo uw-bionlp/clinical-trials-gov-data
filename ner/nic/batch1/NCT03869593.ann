@@ -12,18 +12,15 @@ E21	Condition:T21 Name:T22
 E23	Condition:T23 Name:T24
 E25	Condition:T25 Name:T26
 E2	Organism:T30 Name:T31
-E4	Or:T32 Arg:E2 Arg2:E15
 E6	Observation:T33 Name:T34 Specimen:T64 Minimum-Count:E35 Polarity:T68
 E8	Observation:T35 Name:T36
 E10	Condition:T37 Name:T38
 E12	Drug:T39 Name:T40
 E14	Modifier:T41 Modifies:E7
-E16	Or:T42 Arg:E5 Arg2:E7
 E18	Modifier:T43 Modifies:E11
 E20	Procedure:T44 Name:T80
 E22	Modifier:T45 Modifies:E20
 E24	Modifier:T46 Modifies:E20
-E26	Or:T47 Arg:E24 Arg2:E22
 E27	Eq-Comparison:T48 Value:T28 Operator:T27 Temporal-Unit:T49 Temporal-Recency:T84
 E28	Procedure:T50 Name:T51 Temporality:E29
 E29	Eq-Comparison:T52 Temporal-Unit:T29 Value:T54 Operator:T53
@@ -31,7 +28,6 @@ E30	Modifier:T55 Modifies:E23
 E31	Procedure:T56 Name:T57
 E32	Condition:T58 Name:T59
 E33	Condition:T60 Name:T61
-E34	Or:T63 Arg:E32 Arg2:T61
 E35	Eq-Comparison:T65 Operator:T66 Value:T67
 E36	Condition:T69 Name:T70
 E37	Observation:T71 Name:T72
@@ -72,7 +68,6 @@ T27	Eq-Operator 842 848	within
 T28	Eq-Value 859 861	24
 T30	Organism 38 47	S. aureus
 T31	Organism-Name 38 47	S. aureus
-T32	Or 48 50	or
 T33	Observation 118 131	blood culture
 T34	Observation-Name 124 131	culture
 T35	Observation 164 174	blood test
@@ -82,12 +77,10 @@ T38	Condition-Name 458 475	Immunocompromised
 T39	Drug 543 558	corticosteroids
 T40	Drug-Name 543 558	corticosteroids
 T41	Modifier 629 642	hematopoietic
-T42	Or 626 628	or
 T43	Modifier 717 727	Congenital
 T44	Procedure 797 805	catheter
 T45	Modifier 789 796	central
 T46	Modifier 775 785	peripheral
-T47	Or 786 788	or
 T48	Eq-Comparison 842 867	within the first 24 hours
 T49	Eq-Temporal-Unit 862 867	hours
 T50	Procedure 923 932	undrained
@@ -104,8 +97,7 @@ T59	Condition-Name 1053 1061	Pregnant
 T60	Condition 1065 1074	lactating
 T61	Condition-Name 1065 1074	lactating
 T62	Life-Stage-And-Gender 1075 1080	woman
-T63	Or 1062 1064	or
-T64	Observation-Specimen 118 123	blood
+T64	Specimen 118 123	blood
 T65	Eq-Comparison 96 108	at least one
 T66	Eq-Operator 96 104	at least
 T67	Eq-Value 105 108	one
@@ -128,13 +120,13 @@ T83	Negation 831 834	not
 T84	Eq-Temporal-Recency 853 858	first
 T85	Modifier 887 902	Intra-abdominal
 A1	Eq-Operator-Value T27 LTEQ
-A2	Observation-Type-Value T34 lab
+A2	Observation-Type-Value E6 lab
 A3	Eq-Temporal-Unit-Value T49 hour
 A4	Eq-Operator-Value T53 LTEQ
 A5	Life-Stage-And-Gender-Type T62 female
 A6	Eq-Operator-Value T66 GTEQ
 A7	Polarity-Value T68 positive
-A8	Observation-Type-Value T36 lab
+A8	Observation-Type-Value E8 lab
 A9	Eq-Temporal-Period-Value T75 present
 A10	Eq-Temporal-Recency-Value T84 first-time
 A11	Eq-Temporal-Unit-Value T29 hour
@@ -160,3 +152,9 @@ R19	Equivalent-To Arg1:E3 Arg2:E10
 R20	Treatment-For Arg1:E31 Arg2:E25
 R21	Equivalent-To Arg1:E23 Arg2:E10
 R22	If-Then Arg1:E33 Arg2:T62
+R23	Or Arg1:E2 Arg2:E15
+R24	Or Arg1:E5 Arg2:E7
+R25	Or Arg1:E24 Arg2:E22
+R26	Or Arg1:E32 Arg2:T61
+R27	Or Arg1:E13 Arg2:E19
+R28	Or Arg1:E12 Arg2:E13

@@ -1,35 +1,31 @@
-E1	Condition:T1 Name:T2
+E1	Condition:T1
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12 Severity:T71
-E12	Age:T15 Eq-Comparison:E13
+E12	Age:T15 Numeric-Filter:E13
 E13	Eq-Comparison:T20 Operator:T13 Temporal-Unit:T14 Value:T16
 E2	Condition:T21 Name:T22
 E4	Modifier:T23 Modifies:T22
 E6	Procedure:T24 Name:T25
 E8	Procedure:T26 Name:T27
-E10	Or:T28 Arg:E8 Arg2:E6
 E14	Procedure:T29
 E15	Negation:T30 Negates:E14
 E16	Assertion:T31 Asserted:E14
 E17	Condition:T32 Name:T33
 E18	Coreference:T34 Refers-To:E2
 E19	Observation:T35 Name:T36
-E20	Observation:T37 Name:T38 Eq-Comparison:E21
+E20	Observation:T37 Name:T38 Numeric-Filter:E21
 E21	Eq-Comparison:T39 Value:T17 Value2:T18
-E3	Modifier:T3 Modifies:T2
-E22	Modifier:T4 Modifies:T2
-E23	Or:T19 Arg:E22 Arg2:E3
+E3	Modifier:T3 Modifies:E1
+E22	Modifier:T4 Modifies:E1
 E24	Observation:T40 Specimen:T41
 E25	Observation:T42 Specimen:T43
-E26	Or:T44 Arg:E24 Arg2:E25
 E27	Assertion:T45 Asserted:E24
 E28	Procedure:T46 Name:T47
 E29	Procedure:T48 Name:T49
 E30	Observation:T50 Specimen2:T51
 E31	Observation:T53 Specimen:T52
-E32	Or:T54 Arg:E31 Arg2:E30
 E33	Assertion:T55 Asserted:E30
 E34	Condition:T56 Name:T57 Polarity:T58
 E35	Procedure:T59 Name:T60
@@ -38,13 +34,11 @@ E37	Procedure:T63
 E38	Assertion:T64 Asserted:E37
 E39	Risk:T65 Severity:T66
 E40	Modifier:T67 Modifies:E39
-E41	Condition:T68 Name:T69
-E42	Or:T70 Arg:E39 Arg2:E41
+E41	Condition:T68
 E43	Condition:T72 Name:T73
 E44	Condition:T74 Name:T75
 E45	Modifier:T76 Modifies:T10
 E46	Modifier:T77 Modifies:T10
-E47	Or:T78 Arg:E46 Arg2:E45
 E48	Study:T79 Stability:T80
 T1	Condition 355 362	disease
 T2	Condition-Name 355 362	disease
@@ -70,7 +64,6 @@ T24	Procedure 89 98	cytologic
 T25	Procedure-Name 89 98	cytologic
 T26	Procedure 75 85	Histologic
 T27	Procedure-Name 75 85	Histologic
-T28	Or 86 88	or
 T29	Procedure 165 174	treatment
 T30	Negation 153 155	no
 T31	Assertion 175 182	options
@@ -84,22 +77,19 @@ T38	Observation-Name 296 300	ECOG
 T39	Eq-Comparison 302 309	3 and 4
 T3	Modifier 345 354	evaluable
 T4	Modifier 331 341	measurable
-T19	Or 342 344	or
 T40	Observation 472 485	blood samples
-T41	Observation-Specimen 472 477	blood
+T41	Specimen 472 477	blood
 T42	Observation 489 503	tissue samples
-T43	Observation-Specimen 489 495	tissue
-T44	Or 486 488	or
+T43	Specimen 489 495	tissue
 T45	Assertion 456 463	able to
 T46	Procedure 508 511	NGS
 T47	Procedure-Name 508 511	NGS
 T48	Procedure 513 539	Next Generation Sequencing
 T49	Procedure-Name 513 539	Next Generation Sequencing
 T50	Observation 574 588	tissue samples
-T51	Observation-Specimen 574 580	tissue
-T52	Observation-Specimen 564 569	blood
+T51	Specimen 574 580	tissue
+T52	Specimen 564 569	blood
 T53	Observation 564 569	blood
-T54	Or 570 573	and
 T55	Assertion 589 603	should be able
 T56	Condition 691 712	organ system function
 T57	Condition-Name 691 712	organ system function
@@ -115,7 +105,6 @@ T66	Severity 962 969	serious
 T67	Modifier 971 985	uncontrollable
 T68	Condition 1027 1035	diseases
 T69	Condition-Name 1027 1035	diseases
-T70	Or 1013 1015	or
 T71	Severity 1045 1051	severe
 T72	Condition 1062 1077	thyroid disease
 T73	Condition-Name 1062 1077	thyroid disease
@@ -123,7 +112,6 @@ T74	Condition 1079 1088	infection
 T75	Condition-Name 1079 1088	infection
 T76	Modifier 1160 1171	psychiatric
 T77	Modifier 1144 1156	neurological
-T78	Or 1157 1159	or
 T79	Study 1236 1241	study
 T80	Stability 1198 1204	affect
 A1	Eq-Operator-Value T13 GTEQ
@@ -136,8 +124,8 @@ A7	Assertion-Type-Value E38 hypothetical
 A8	Severity-Value T66 severe
 A9	Severity-Value T71 severe
 A10	Stability-Value T80 change
-A11	Observation-Type-Value T36 clinical-score
-A12	Observation-Type-Value T38 clinical-score
+A11	Observation-Type-Value E19 clinical-score
+A12	Observation-Type-Value E20 clinical-score
 R1	Found-By Arg1:E2 Arg2:E6
 R2	Found-By Arg1:E2 Arg2:E8
 R3	Treatment-For Arg1:E14 Arg2:E2
@@ -155,3 +143,13 @@ R14	Example-Of Arg1:E7 Arg2:E41
 R15	Example-Of Arg1:E5 Arg2:E41
 R16	Example-Of Arg1:E9 Arg2:E41
 R17	Caused-By Arg1:T80 Arg2:E41
+R18	Or Arg1:E8 Arg2:E6
+R19	Or Arg1:E22 Arg2:E3
+R20	Or Arg1:E24 Arg2:E25
+R21	Or Arg1:E31 Arg2:E30
+R22	Or Arg1:E39 Arg2:E41
+R23	Or Arg1:E46 Arg2:E45
+R24	Or Arg1:E7 Arg2:E5
+R25	Or Arg1:E11 Arg2:E43
+R26	Or Arg1:E43 Arg2:E44
+R27	Or Arg1:E44 Arg2:E7

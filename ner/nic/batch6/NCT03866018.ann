@@ -1,20 +1,16 @@
-E1	Or:T1 Arg:T40 Arg2:T41
 E3	Eq-Comparison:T3 Value:T43 Temporal-Unit:T44 Operator:T42
-E4	Age:T4 Eq-Comparison:E3
-E5	Observation:T5 Name:T45 Eq-Comparison:E6
+E4	Age:T4 Numeric-Filter:E3
+E5	Observation:T5 Name:T45 Numeric-Filter:E6
 E6	Eq-Comparison:T6 Operator:T47 Value:T48 Value:T49 Value:T50
 E7	Condition:T7 Name:T53 Severity:T52
-E9	Or:T9 Arg:E8 Arg2:E10
 E10	Condition:T10 Name:T54 Minimum-Count:E40
 E11	Negation:T11 Negates:E15
-E14	Or:T14 Arg:E13 Arg2:E12
 E15	Condition:T15 Name:T56 Severity:T55
 E16	Negation:T16 Negates:E17
 E17	Contraindication:T17 Contraindicates:E18
 E18	Observation:T18 Name:T57
 E20	Eq-Comparison:T20 Value:T59 Temporal-Unit:T60 Operator:T58
 E21	Eq-Comparison:T21 Temporal-Period:T61
-E22	Or:T22 Arg:E21 Arg2:T62
 E23	Condition:T23 Name:T63 Temporality:E21 Stability:T62
 E24	Procedure:T24 Name:T64 Stability:T65
 E25	Condition:T25 Name:T66 Stability:T86
@@ -23,9 +19,9 @@ E27	Condition:T27 Name:T67
 E28	Modifier:T28 Modifies:T68
 E29	Condition:T29 Name:T68
 E30	Condition:T30 Name:T70 Acuteness:T69
-E31	Observation:T31 Name:T71 Eq-Comparison:E32
+E31	Observation:T31 Name:T71 Numeric-Filter:E32
 E32	Eq-Comparison:T32 Unit:T72 Operator:T73 Value:T74
-E33	Observation:T33 Name:T75 Eq-Comparison:E41
+E33	Observation:T33 Name:T75 Numeric-Filter:E41
 E34	Condition:T34 Name:T76
 E35	Condition:T35 Name:T77
 E36	Condition:T36 Name:T78
@@ -37,31 +33,25 @@ E8	Condition:T8 Name:T46
 E40	Eq-Comparison:T83 Operator:T84
 E12	Modifier:T12 Modifies:T56
 E13	Modifier:T13 Modifies:T56
-E19	Age:T19 Eq-Comparison:E20
+E19	Age:T19 Numeric-Filter:E20
 E41	Eq-Comparison:T85 Temporal-Period:T87
 E42	Observation:T88 Name:T81
 E43	Observation:T89 Name:T90
-E44	Or:T91 Arg:E43 Arg2:E42
 E45	Modifier:T92 Modifies:T82
 E46	Modifier:T93 Modifies:T82
-E47	Or:T94 Arg:E45 Arg2:E46
-T1	Or 30 32	or
 T3	Eq-Comparison 40 50	≥ 60 years
 T4	Age 51 54	old
 T5	Observation 60 64	MMSE
 T6	Eq-Comparison 71 92	between 4 and 26 / 30
 T7	Condition 126 149	NeuroCognitive Disorder
-T9	Or 172 174	or
 T10	Condition 184 192	etiology
 T11	Negation 207 214	without
-T14	Or 231 233	or
 T15	Condition 241 251	impairment
 T16	Negation 266 269	not
 T17	Contraindication 285 302	contraindications
 T18	Observation 330 347	physical activity
 T20	Eq-Comparison 455 465	< 60 years
 T21	Eq-Comparison 492 498	Recent
-T22	Or 499 501	or
 T23	Condition 511 532	cardiovascular events
 T24	Procedure 534 537	ECG
 T25	Condition 556 562	angina
@@ -135,10 +125,8 @@ T87	Eq-Temporal-Period 659 666	already
 T88	Observation 852 872	safeguard of justice
 T89	Observation 837 848	curatorship
 T90	Observation-Name 837 848	curatorship
-T91	Or 849 851	or
 T92	Modifier 913 927	administrative
 T93	Modifier 931 939	judicial
-T94	Or 928 930	or
 A1	Life-Stage-And-Gender-Type T40 male
 A2	Life-Stage-And-Gender-Type T41 female
 A3	Eq-Operator-Value T42 GTEQ
@@ -147,15 +135,15 @@ A5	Eq-Operator-Value T47 BETWEEN
 A6	Severity-Value T51 mild
 A7	Severity-Value T52 severe
 A8	Severity-Value T55 severe
-A9	Observation-Type-Value T57 social-habit
+A9	Observation-Type-Value E18 social-habit
 A10	Eq-Operator-Value T58 LT
 A11	Eq-Temporal-Unit-Value T60 year
 A12	Eq-Temporal-Period-Value T61 recent
 A13	Stability-Value T62 change
 A14	Stability-Value T65 change
-A16	Observation-Type-Value T71 clinical-score
+A16	Observation-Type-Value E31 clinical-score
 A17	Eq-Operator-Value T73 LT
-A18	Observation-Type-Value T75 social-habit
+A18	Observation-Type-Value E33 social-habit
 A19	Eq-Operator-Value T84 GT
 A20	Stability-Value T86 change
 A21	Eq-Temporal-Period-Value T87 past
@@ -169,3 +157,11 @@ R6	Example-Of Arg1:E29 Arg2:E23
 R7	Example-Of Arg1:E30 Arg2:E23
 R8	Example-Of Arg1:E35 Arg2:E34
 R9	Example-Of Arg1:E36 Arg2:E34
+R10	Or Arg1:T40 Arg2:T41
+R11	Or Arg1:E8 Arg2:E10
+R12	Or Arg1:E13 Arg2:E12
+R13	Or Arg1:E21 Arg2:T62
+R14	Or Arg1:E43 Arg2:E42
+R15	Or Arg1:E45 Arg2:E46
+R16	Or Arg1:E35 Arg2:E36
+R17	Or Arg1:E38 Arg2:E43

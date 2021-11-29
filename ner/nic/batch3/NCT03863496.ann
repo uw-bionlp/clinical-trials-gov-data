@@ -1,65 +1,56 @@
-E1	Family-Member:T1 
-E2	Or:T2 Arg:E1 Arg2:E3
-E3	Family-Member:T3 
-E4	Temporal-Connection:T4 Arg:E5
+E1	Family-Member:T1
+E3	Family-Member:T3
 E5	Study:T5 Study-Of:E47
 E6	Condition:T6 Name:T47
 E7	Condition:T7 Name:T79
 E9	Procedure:T9 Name:T48
 E10	Condition:T10 Name:T49
 E11	Modifier:T11 Modifies:T49
-E12	Or:T12 Arg:E11 Arg2:E13
 E13	Modifier:T13 Modifies:T49
 E14	Condition:T14 Name:T8
 E15	Assertion:T15 Asserted:E16
 E16	Procedure:T16 Name:T51
 E17	Study:T17 Study-Of:E18
-E18	Procedure:T18 
-E20	Family-Member:T20 
-E21	Or:T21 Arg:E20 Arg2:E22
-E22	Family-Member:T22 
+E18	Procedure:T18
+E20	Family-Member:T20
+E22	Family-Member:T22
 E24	Other:T24 Is-Other:E26
-E26	Study:T26 
+E26	Study:T26
 E27	Assertion:T27 Asserted:T52
 E28	Study:T28 Stability:T52
-E29	Observation:T29 Name:T53 Eq-Comparison:E30
+E29	Observation:T29 Name:T53 Numeric-Filter:E30
 E30	Eq-Comparison:T30 Operator:T54 Value:T55 Unit:T56
 E31	Procedure:T31 Name:T57
-E32	Observation:T32 Name:T58 Eq-Comparison:E33
+E32	Observation:T32 Name:T58 Numeric-Filter:E33
 E33	Eq-Comparison:T33 Operator:T59 Value:T60
-E34	Observation:T34 Name:T61 Eq-Comparison:E35
+E34	Observation:T34 Name:T61 Numeric-Filter:E35
 E35	Eq-Comparison:T35 Operator:T62 Value:T63 Temporal-Unit:T64
 E36	Condition:T36 Name:T65
-E37	Observation:T37 Name:T66 Eq-Comparison:E41
-E38	Observation:T38 Name:T67 Eq-Comparison:E41
-E39	Or:T39 Arg:E38 Arg2:E40
-E40	Observation:T40 Name:T68 Eq-Comparison:E41
+E37	Observation:T37 Name:T66 Numeric-Filter:E41
+E38	Observation:T38 Name:T67 Numeric-Filter:E41
+E40	Observation:T40 Name:T68 Numeric-Filter:E41
 E41	Eq-Comparison:T41 Operator:T69 Unit:T70 Value:T19
 E42	Condition:T42 Name:T71
-E43	Observation:T43 Name:T72 Eq-Comparison:E44
+E43	Observation:T43 Name:T72 Numeric-Filter:E44
 E44	Eq-Comparison:T44 Operator:T73 Value:T74 Unit:T75 Per:T76
-E45	Condition:T45 Name:T77
-E46	Study:T46 
-E47	Procedure:T78 
+E45	Condition:T45
+E46	Study:T46
+E47	Procedure:T78
 E8	Assertion:T50 Asserted:E51
 E48	Assertion:T80 Asserted:E50
-E49	Or:T81 Arg:E8 Arg2:E48
 E50	Negation:T82 Negates:E17
 E51	Negation:T83 Negates:E17
-E19	Modifier:T23 Modifies:T77
+E19	Modifier:T23 Modifies:E45
 E23	Negation:T25 Negates:E46
 E25	Assertion:T84 Asserted:E23
 T1	Family-Member 122 127	child
-T2	Or 128 131	and
 T3	Family-Member 132 139	parents
-T4	Temporal-Connection 162 168	before
 T5	Study 184 189	study
 T6	Condition 241 262	neuromuscular desease
 T7	Condition 264 267	NMD
 T9	Procedure 289 311	neurologic examination
 T10	Condition 317 326	Deformity
 T11	Modifier 330 338	thoracic
-T12	Or 339 345	and/or
 T13	Modifier 346 358	lumbar spine
 T14	Condition 375 378	NMD
 T15	Assertion 386 394	requires
@@ -67,7 +58,6 @@ T16	Procedure 395 416	surgical intervention
 T17	Study 487 492	study
 T18	Procedure 493 503	procedures
 T20	Family-Member 593 598	child
-T21	Or 599 602	and
 T22	Family-Member 607 614	parents
 T24	Other 657 664	another
 T26	Study 674 679	study
@@ -83,7 +73,6 @@ T35	Eq-Comparison 833 843	<12 months
 T36	Condition 849 868	Liver insufficiency
 T37	Observation 870 873	ALT
 T38	Observation 875 878	AST
-T39	Or 879 882	and
 T40	Observation 883 898	total bilirubin
 T41	Eq-Comparison 899 923	twice higher than normal
 T42	Condition 929 949	Kidney insufficiency
@@ -126,7 +115,6 @@ T79	Condition-Name 264 267	NMD
 T8	Condition-Name 375 378	NMD
 T50	Assertion 450 463	unwillingness
 T80	Assertion 467 476	inability
-T81	Or 464 466	or
 T82	Negation 467 476	inability
 T83	Negation 450 463	unwillingness
 T19	Eq-Value 899 904	twice
@@ -135,24 +123,23 @@ T25	Negation 1017 1025	preclude
 T84	Assertion 1017 1025	preclude
 A1	Family-Member-Type E1 child
 A2	Family-Member-Type E3 parent
-A3	Temporal-Connection-Type-Value E4 before
 A4	Assertion-Type-Value E15 hypothetical
 A5	Family-Member-Type E20 child
 A6	Family-Member-Type E22 parent
 A7	Assertion-Type-Value E27 hypothetical
 A8	Stability-Value T52 change
-A9	Observation-Type-Value T53 measurement
+A9	Observation-Type-Value E29 measurement
 A10	Eq-Operator-Value T54 LT
-A11	Observation-Type-Value T58 measurement
+A11	Observation-Type-Value E32 measurement
 A12	Eq-Operator-Value T59 GT
 A13	Eq-Operator-Value T62 LT
 A14	Eq-Temporal-Unit-Value T64 month
-A15	Observation-Type-Value T66 lab
-A16	Observation-Type-Value T67 lab
-A17	Observation-Type-Value T68 lab
+A15	Observation-Type-Value E37 lab
+A16	Observation-Type-Value E38 lab
+A17	Observation-Type-Value E40 lab
 A18	Eq-Operator-Value T69 GT
 A19	Eq-Unit-Value T70 ref-range-normal
-A20	Observation-Type-Value T72 lab
+A20	Observation-Type-Value E43 lab
 A21	Eq-Operator-Value T73 LT
 A22	Eq-Temporal-Unit-Value T76 minute
 A23	Assertion-Type-Value E8 hypothetical
@@ -169,3 +156,10 @@ R8	Equivalent-To Arg1:E38 Arg2:E36
 R9	Equivalent-To Arg1:E40 Arg2:E36
 R10	Equivalent-To Arg1:E43 Arg2:E42
 R11	Caused-By Arg1:E23 Arg2:E45
+R12	Or Arg1:E1 Arg2:E3
+R13	Or Arg1:E11 Arg2:E13
+R14	Or Arg1:E20 Arg2:E22
+R15	Or Arg1:E38 Arg2:E40
+R16	Or Arg1:E8 Arg2:E48
+R17	Or Arg1:E6 Arg2:E7
+R18	Or Arg1:E37 Arg2:E38

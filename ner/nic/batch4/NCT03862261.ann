@@ -1,10 +1,8 @@
 E1	Eq-Comparison:T1 Operator:T32 Value:T33 Temporal-Unit:T34
 E2	Modifier:T2 Modifies:T36
-E3	Or:T3 Arg:E2 Arg2:E4
 E4	Modifier:T4 Modifies:T36
 E5	Condition:T5 Name:T36
 E6	Assertion:T6 Asserted:E11
-E7	Or:T7 Arg:E6 Arg2:E8
 E8	Assertion:T8 Asserted:E11
 E9	Assertion:T9 Asserted:E11
 E10	Eq-Comparison:T10 Temporal-Period:T37
@@ -13,32 +11,25 @@ E12	Other:T12 Is-Other:E13
 E13	Condition:T13 Name:T39
 E14	Negation:T14 Negates:E15
 E15	Assertion:T15 Asserted:E13
-E16	Or:T16 Arg:E15
 E17	Assertion:T17 Asserted:E18
 E18	Procedure:T18 Location:T45
-E19	Study:T19 
+E19	Study:T19
 E20	Family-Member:T20 Has:E21
-E21	Study:T21 
-E22	And:T22 Arg:T40 Arg2:E23
+E21	Study:T21
 E23	Condition:T23 Name:T41
-E24	And:T24 Arg:E23 Arg2:E25
 E25	Negation:T25 Negates:E30
 E26	Assertion:T26 Asserted:E30
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Assertion:T28 Asserted:E30
 E29	Eq-Comparison:T29 Temporal-Period:T42
 E30	Condition:T30 Name:T43 Temporality:E29
-E31	Age:T44 Eq-Comparison:E1
+E31	Age:T44 Numeric-Filter:E1
 E32	Assertion:T35 Asserted:E5
-E33	Or:T46 Arg:T45 Arg2:E19
 E34	Family-Member:T47 Has:E20
 T1	Eq-Comparison 34 43	< 5 years
 T2	Modifier 66 75	pulmonary
-T3	Or 76 78	or
 T4	Modifier 79 94	extra-pulmonary
 T5	Condition 95 97	TB
 T6	Assertion 104 112	symptoms
-T7	Or 113 115	or
 T8	Assertion 125 130	signs
 T9	Assertion 131 141	suggestive
 T10	Eq-Comparison 145 151	active
@@ -47,18 +38,14 @@ T12	Other 169 174	Other
 T13	Condition 175 194	infectious diseases
 T14	Negation 199 202	not
 T15	Assertion 203 212	suspected
-T16	Or 213 215	or
 T17	Assertion 250 263	Commitment to
 T18	Procedure 269 278	treatment
 T19	Study 323 328	study
 T20	Family-Member 375 380	child
 T21	Study 403 408	study
-T22	And 444 447	who
 T23	Condition 452 454	TB
-T24	And 464 467	but
 T25	Negation 468 475	without
 T26	Assertion 476 484	symptoms
-T27	Or 485 487	or
 T28	Assertion 488 493	signs
 T29	Eq-Comparison 497 503	active
 T30	Condition 504 506	TB
@@ -77,7 +64,6 @@ T43	Condition-Name 504 506	TB
 T44	Age 44 47	old
 T35	Assertion 54 65	Presumptive
 T45	Location 286 292	clinic
-T46	Or 306 308	or
 T47	Family-Member 340 348	Parental
 A1	Assertion-Type-Value E6 possible
 A2	Assertion-Type-Value E8 possible
@@ -97,3 +83,9 @@ A15	Assertion-Type-Value E32 possible
 A16	Location-Value T45 clinic
 A17	Family-Member-Type E34 parent
 R1	Equivalent-To Arg1:E11 Arg2:E5
+R2	Or Arg1:E2 Arg2:E4
+R3	Or Arg1:E6 Arg2:E8
+R4	And Arg1:T40 Arg2:E23
+R5	And Arg1:E23 Arg2:E25
+R6	Or Arg1:E26 Arg2:E28
+R7	Or Arg1:T45 Arg2:E19

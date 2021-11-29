@@ -1,14 +1,10 @@
 E1	Eq-Comparison:T1 Temporal-Period:T38
 E2	Procedure:T2 Name:T39 Temporality:E1
-E3	Or:T3 Arg:E2 Arg2:E4
 E4	Procedure:T4 Name:T68 Temporality:E1
-E5	Temporal-Connection:T5 Arg:E7
 E6	Study:T6 Study-Of:E7
-E7	Procedure:T7 
+E7	Procedure:T7
 E8	Condition:T8 Name:T40
-E9	Temporal-Connection:T9 Arg:E8 Arg2:E10
 E10	Procedure:T10 Name:T41
-E11	Or:T11 Arg:E10 Arg2:E12
 E12	Procedure:T12 Name:T42
 E13	Exception:T13 Except:E14 From:E8
 E14	Condition:T14 Name:T69
@@ -16,20 +12,19 @@ E15	Condition:T15 Name:T44 Severity:T43
 E16	Indication:T16 Indication-For:E17
 E17	Procedure:T17 Name:T45
 E18	Condition:T18 Name:T46
-E19	Condition:T19 
+E19	Condition:T19
 E20	Assertion:T20 Asserted:T47
 E21	Study:T21 Stability:T47
 E22	Procedure:T22 Name:T48
-E23	Temporal-Connection:T23 Arg:E41 Arg2:E24
 E24	Eq-Comparison:T24 Temporal-Recency:T74
-E25	Encounter:T25 Temporality:E24
-E26	Observation:T26 Name:T49 Eq-Comparison:E27
+E25	Encounter:T25
+E26	Observation:T26 Name:T49 Numeric-Filter:E27
 E27	Eq-Comparison:T27 Operator:T50 Value:T51 Unit:T52
-E28	Observation:T28 Name:T53 Eq-Comparison:E29
+E28	Observation:T28 Name:T53 Numeric-Filter:E29
 E29	Eq-Comparison:T29 Operator:T54 Value:T55 Unit:T56 Per:T57
 E30	Observation:T30 Name:T58
 E31	Eq-Comparison:T31 Operator:T59 Value:T60
-E32	Observation:T32 Name:T61 Eq-Comparison:E33
+E32	Observation:T32 Name:T61 Numeric-Filter:E33
 E33	Eq-Comparison:T33 Operator:T62 Value:T63 Unit:T64 Value:T65 Per:T80
 E34	Modifier:T34 Modifies:T66
 E35	Condition:T35 Name:T66
@@ -44,15 +39,11 @@ E43	Procedure:T78 Name:T79
 E44	Modifier:T81 Modifies:T66 Modifies2:T67
 T1	Eq-Comparison 33 42	scheduled
 T2	Procedure 47 67	total pancreatectomy
-T3	Or 68 70	or
 T4	Procedure 71 94	pancreaticoduodenectomy
-T5	Temporal-Connection 124 132	prior to
 T6	Study 137 142	study
 T7	Procedure 151 160	procedure
 T8	Condition 192 205	liver disease
-T9	Temporal-Connection 206 212	before
 T10	Procedure 213 233	total pancreatectomy
-T11	Or 234 236	or
 T12	Procedure 237 260	pancreaticoduodenectomy
 T13	Exception 262 271	excluding
 T14	Condition 272 277	NAFLD
@@ -64,7 +55,6 @@ T19	Condition 388 397	condition
 T20	Assertion 426 431	would
 T21	Study 465 470	trial
 T22	Procedure 551 563	liver biopsy
-T23	Temporal-Connection 600 606	before
 T24	Eq-Comparison 607 611	last
 T25	Encounter 612 617	visit
 T26	Observation 654 667	lipid content
@@ -123,23 +113,24 @@ T78	Procedure 624 639	MR spectroscopy
 T79	Procedure-Name 624 639	MR spectroscopy
 T80	Eq-Unit 740 741	L
 T81	Modifier 765 769	area
-A1	Temporal-Connection-Type-Value E5 before
-A2	Temporal-Connection-Type-Value E9 before
 A3	Assertion-Type-Value E20 hypothetical
-A4	Temporal-Connection-Type-Value E23 before
 A5	Assertion-Type-Value E37 hypothetical
 A6	Eq-Temporal-Period-Value T38 future
 A7	Severity-Value T43 severe
 A8	Stability-Value T47 change
-A9	Observation-Type-Value T49 lab
+A9	Observation-Type-Value E26 lab
 A10	Eq-Operator-Value T50 LT
-A11	Observation-Type-Value T53 lab
+A11	Observation-Type-Value E28 lab
 A12	Eq-Operator-Value T54 LT
-A13	Observation-Type-Value T58 lab
+A13	Observation-Type-Value E30 lab
 A14	Eq-Operator-Value T59 GT
-A15	Observation-Type-Value T61 lab
+A15	Observation-Type-Value E32 lab
 A16	Eq-Operator-Value T62 LT
 A17	Eq-Temporal-Recency-Value T74 most-recent-time
 A18	Assertion-Type-Value E42 hypothetical
 R1	Caused-By Arg1:T47 Arg2:E19
 R2	Found-By Arg1:E26 Arg2:E43
+R3	Or Arg1:E2 Arg2:E4
+R4	Before Arg1:E8 Arg2:E10
+R5	Or Arg1:E10 Arg2:E12
+R6	Before Arg1:E41 Arg2:E24

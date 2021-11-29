@@ -1,0 +1,71 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Condition:T5 Name:T6
+E9	Procedure:T9 Name:T10
+E11	Procedure:T11 Name:T12
+E12	Eq-Comparison:T16 Operator:T13 Value:T15
+E2	Condition:T17 Name:T18
+E4	Modifier:T19 Modifies:T18
+E6	Procedure:T20 Name:T21
+E8	Observation:T22 Name:T23 Eq-Comparison:E12
+E7	Modifier:T7 Modifies:T12
+E10	Or:T8 Arg:E11 Arg2:E3
+E13	Procedure:T24 Name:T25
+E14	Modifier:T26 Modifies:T25
+E15	Negation:T27 Negates:E13
+E16	Temporal-Connection:T28 Arg:E13 Arg2:E1
+E17	Other:T29 Is-Other:E5
+E18	Condition:T30 Name:T31
+E19	Other:T32 Is-Other:E18
+E20	Negation:T33 Negates:E9
+E21	Condition:T34 Name:T35
+E22	Eq-Comparison:T36 Temporal-Recency:T37
+E23	Condition:T38 Name:T39 Temporality:E22
+E24	Temporal-Connection:T40 Arg:E21 Arg2:E22
+T1	Procedure 154 173	neoadjuvant therapy
+T2	Procedure-Name 154 173	neoadjuvant therapy
+T3	Procedure 106 123	chemoradiotherapy
+T4	Procedure-Name 106 123	chemoradiotherapy
+T5	Condition 205 222	malignant disease
+T6	Condition-Name 205 222	malignant disease
+T9	Procedure 277 289	radiotherapy
+T10	Procedure-Name 277 289	radiotherapy
+T11	Procedure 90 102	radiotherapy
+T12	Procedure-Name 90 102	radiotherapy
+T13	Eq-Operator 65 66	≤
+T14	Eq-Unit 69 71	cm
+T15	Eq-Value 67 69	10
+T16	Eq-Comparison 65 71	≤ 10cm
+T17	Condition 46 52	cancer
+T18	Condition-Name 46 52	cancer
+T19	Modifier 39 45	rectal
+T20	Procedure 25 31	biopsy
+T21	Procedure-Name 25 31	biopsy
+T22	Observation 54 64	anal verge
+T23	Observation-Name 54 64	anal verge
+T7	Modifier 78 89	neoadjuvant
+T8	Or 103 105	or
+T24	Procedure 140 147	surgery
+T25	Procedure-Name 140 147	surgery
+T26	Modifier 132 139	radical
+T27	Negation 129 131	no
+T28	Temporal-Connection 148 153	after
+T29	Other 199 204	other
+T30	Condition 234 247	fatel disease
+T31	Condition-Name 234 247	fatel disease
+T32	Other 228 233	other
+T33	Negation 253 265	incompletion
+T34	Condition 302 312	metastasis
+T35	Condition-Name 302 312	metastasis
+T36	Eq-Comparison 316 323	initial
+T37	Eq-Temporal-Recency 316 323	initial
+T38	Condition 324 336	presentation
+T39	Condition-Name 324 336	presentation
+T40	Temporal-Connection 313 315	on
+A1	Eq-Operator-Value T13 LTEQ
+A2	Observation-Type-Value T23 measurement
+A3	Temporal-Connection-Type-Value E16 after
+A4	Eq-Temporal-Recency-Value T37 first-time
+A5	Temporal-Connection-Type-Value E24 during
+R1	Found-By Arg1:E2 Arg2:E6
+R2	Equivalent-To Arg1:E8 Arg2:E2

@@ -1,0 +1,236 @@
+E1	Condition:T1 Name:T2
+E8	Procedure:T8 Name:T9
+E10	Procedure:T10 Name:T11
+E12	Condition:T12 Name:T13 Temporality:E43
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17
+E18	Condition:T18 Name:T19
+E20	Condition:T20 Name:T21
+E21	Age:T32 Eq-Comparison:E2
+E22	Eq-Comparison:T48 Operator:T25 Value:T36 Temporal-Unit:T68
+E23	Eq-Comparison:T49 Operator:T26 Value:T37
+E24	Eq-Comparison:T50 Operator:T27 Value:T42 Unit:T87
+E25	Eq-Comparison:T51 Operator:T29 Value:T46 Unit:T106
+E26	Eq-Comparison:T52 Operator:T33 Value:T38 Value2:T39 Temporal-Unit:T40 Unit:T31
+E2	Eq-Comparison:T53 Operator:T54 Temporal-Unit:T30 Value:T34
+E3	Modifier:T3 Modifies:T2
+E4	Condition:T4 Name:T5
+E5	Condition:T6 Name:T23 Stage:E7
+E6	Modifier:T55 Modifies:T23
+E7	Eq-Comparison:T56 Value:T57
+E9	Procedure:T7 Name:T58 Temporality:E11 Acuteness:T59
+E11	Eq-Comparison:T60 Operator:T24 Temporal-Recency:T62 Temporal-Unit:T61 Value:T35
+E13	Condition:T63 Name:T64 Severity:T65
+E15	And:T66 Arg:E9 Arg2:E13
+E17	Observation:T67 Name:T69 Eq-Comparison:E22
+E29	Observation:T76 Name:T77 Eq-Comparison:E23 Eq-Comparison2:E26
+E30	And:T78 Arg:E19 Arg2:E28
+E31	Eq-Comparison:T79 Value:T80 Operator:T81
+E27	Observation:T73 Name:T82 Eq-Comparison:E31 Severity:T133
+E19	Modifier:T70 Modifies:T82
+E28	Modifier:T71
+E32	Observation:T72 Name:T74 Eq-Comparison:E33
+E33	Eq-Comparison:T75 Value:T41 Unit:T83 Operator:T84
+E34	Observation:T85 Name:T86 Eq-Comparison:E24
+E35	And:T88 Arg:E32 Arg2:E34
+E36	Condition:T89 Name:T90 Stage:E37
+E37	Eq-Comparison:T44 Value:T43
+E38	Modifier:T91
+E40	Or:T93 Arg:E38 Arg2:E39
+E39	Procedure:T92 Name:T95
+E41	Modifier:T94 Modifies:T95
+E42	Eq-Comparison:T96 Operator:T28 Temporal-Recency:T97 Value:T45 Temporal-Unit:T98
+E43	Eq-Comparison:T99 Temporal-Period:T100
+E44	Assertion:T101 Asserted:E12
+E45	And:T102 Arg:E12 Arg2:E14
+E46	Temporal-Connection:T103 Arg:E47 Arg2:E16
+E47	Observation:T104 Name:T105 Eq-Comparison:E25
+E48	Condition:T107 Name:T108 Stability:T109
+E49	Condition:T110 Name:T111
+E50	And:T112 Arg:E48 Arg2:E49
+E51	Assertion:T113 Asserted:E48 Asserted2:E49
+E52	Condition:T115 Name:T116 Severity:T114 Temporality:E53
+E53	Eq-Comparison:T117 Temporal-Period:T118
+E55	Procedure:T121 Name:T122 Stability:T123
+E56	Assertion:T124 Asserted:T123
+E57	Condition:T125 Name:T126
+E58	Condition:T127 Name:T128
+E59	Or:T129 Arg:E57 Arg2:E58
+E60	Procedure:T22 Name:T131
+E61	Contraindication:T132 Contraindicates:E60
+E54	Or:T47 Arg:E20 Arg2:E18
+T1	Condition 63 79	Cerebral infarct
+T2	Condition-Name 63 79	Cerebral infarct
+T8	Procedure 536 550	recanalization
+T9	Procedure-Name 536 550	recanalization
+T10	Procedure 566 578	thrombectomy
+T11	Procedure-Name 566 578	thrombectomy
+T12	Condition 785 801	cerebral infarct
+T13	Condition-Name 785 801	cerebral infarct
+T14	Condition 807 825	functional deficit
+T15	Condition-Name 807 825	functional deficit
+T16	Condition 831 837	stroke
+T17	Condition-Name 831 837	stroke
+T18	Condition 1074 1095	psychiatric disorders
+T19	Condition-Name 1074 1095	psychiatric disorders
+T20	Condition 1048 1056	dementia
+T21	Condition-Name 1048 1056	dementia
+T24	Eq-Operator 212 218	within
+T25	Eq-Operator 353 354	>
+T26	Eq-Operator 395 396	<
+T27	Eq-Operator 503 512	less than
+T28	Eq-Operator 628 634	within
+T29	Eq-Operator 866 867	≥
+T30	Eq-Temporal-Unit 48 53	years
+T31	Eq-Unit 407 410	mm2
+T32	Age 54 57	old
+T33	Eq-Operator 404 405	-
+T34	Eq-Value 45 47	18
+T35	Eq-Value 229 231	24
+T36	Eq-Value 354 355	6
+T37	Eq-Value 396 399	600
+T38	Eq-Value 402 404	10
+T39	Eq-Value 405 406	6
+T41	Eq-Value 461 463	15
+T42	Eq-Value 513 515	70
+T43	Eq-Value 557 561	2b-3
+T45	Eq-Value 645 648	4.5
+T46	Eq-Value 867 868	1
+T48	Eq-Comparison 353 356	>6s
+T49	Eq-Comparison 395 399	<600
+T50	Eq-Comparison 503 518	less than 70 mL
+T51	Eq-Comparison 860 868	score ≥1
+T52	Eq-Comparison 402 412	10-6 mm2/s
+T53	Eq-Comparison 34 53	older than 18 years
+T54	Eq-Operator 34 44	older than
+T3	Modifier 91 111	anterior circulation
+T4	Condition 119 159	occlusion of intracranial carotid artery
+T5	Condition-Name 119 159	occlusion of intracranial carotid artery
+T6	Condition 177 180	MCA
+T23	Condition-Name 177 180	MCA
+T55	Modifier 163 171	proximal
+T56	Eq-Comparison 173 175	M1
+T57	Eq-Value 173 175	M1
+T7	Procedure 198 201	MRI
+T58	Procedure-Name 198 201	MRI
+T59	Acuteness 192 197	acute
+T60	Eq-Comparison 212 232	within the first 24h
+T61	Eq-Temporal-Unit 231 232	h
+T62	Eq-Temporal-Recency 223 228	first
+T63	Condition 257 265	penumbra
+T64	Condition-Name 257 265	penumbra
+T65	Severity 245 256	significant
+T66	And 233 236	and
+T67	Observation 349 353	Tmax
+T68	Eq-Temporal-Unit 355 356	s
+T69	Observation-Name 349 353	Tmax
+T76	Observation 392 395	ADC
+T77	Observation-Name 392 395	ADC
+T78	And 358 361	and
+T40	Eq-Temporal-Unit 411 412	s
+T79	Eq-Comparison 417 428	1.8 or more
+T80	Eq-Value 417 420	1.8
+T81	Eq-Operator 421 428	or more
+T73	Observation 277 302	ratio between the volumes
+T82	Observation-Name 277 302	ratio between the volumes
+T70	Modifier 317 336	hypoperfused tissue
+T71	Modifier 366 379	ischemic core
+T72	Observation 438 457	absolute difference
+T74	Observation-Name 438 457	absolute difference
+T75	Eq-Comparison 461 474	15 mL or more
+T83	Eq-Unit 464 466	mL
+T84	Eq-Operator 467 474	or more
+T85	Observation 479 499	ischemic core volume
+T86	Observation-Name 479 499	ischemic core volume
+T87	Eq-Unit 516 518	mL
+T88	And 475 478	and
+T89	Condition 552 556	TICI
+T90	Condition-Name 552 556	TICI
+T44	Eq-Comparison 557 561	2b-3
+T91	Modifier 579 584	alone
+T93	Or 585 587	or
+T92	Procedure 611 623	thrombolysis
+T94	Modifier 608 610	IV
+T95	Procedure-Name 611 623	thrombolysis
+T96	Eq-Comparison 628 649	within the first 4.5h
+T97	Eq-Temporal-Recency 639 644	first
+T98	Eq-Temporal-Unit 648 649	h
+T99	Eq-Comparison 762 769	History
+T100	Eq-Temporal-Period 762 769	History
+T101	Assertion 773 784	symptomatic
+T102	And 802 806	with
+T103	Temporal-Connection 827 830	pre
+T104	Observation 838 859	modified Rankin Scale
+T105	Observation-Name 838 859	modified Rankin Scale
+T106	Eq-Unit 860 865	score
+T107	Condition 899 906	infarct
+T108	Condition-Name 899 906	infarct
+T109	Stability 885 891	impact
+T110	Condition 911 934	selective neuronal loss
+T111	Condition-Name 911 934	selective neuronal loss
+T112	And 907 910	and
+T113	Assertion 870 880	to measure
+T114	Severity 1019 1025	severe
+T115	Condition 1026 1046	cognitive impairment
+T116	Condition-Name 1026 1046	cognitive impairment
+T117	Eq-Comparison 1008 1015	History
+T118	Eq-Temporal-Period 1008 1015	History
+T121	Procedure 1120 1144	neurological evaluations
+T122	Procedure-Name 1120 1144	neurological evaluations
+T123	Stability 1107 1115	confound
+T124	Assertion 1101 1106	would
+T125	Condition 1151 1159	Pregnant
+T126	Condition-Name 1151 1159	Pregnant
+T127	Condition 1163 1177	breast-feeding
+T128	Condition-Name 1163 1177	breast-feeding
+T129	Or 1160 1162	or
+T130	Life-Stage-And-Gender 1178 1183	women
+T22	Procedure 1211 1214	MRI
+T131	Procedure-Name 1211 1214	MRI
+T132	Contraindication 1190 1207	Contraindications
+T133	Severity 306 316	critically
+T47	Or 1058 1060	or
+A2	Eq-Operator-Value T24 LTEQ
+A3	Eq-Operator-Value T25 GT
+A4	Eq-Operator-Value T26 LT
+A5	Eq-Operator-Value T27 LT
+A6	Eq-Operator-Value T28 LTEQ
+A7	Eq-Operator-Value T29 GTEQ
+A8	Eq-Temporal-Unit-Value T30 year
+A9	Eq-Operator-Value T33 BETWEEN
+A10	Eq-Operator-Value T54 GT
+A11	Eq-Temporal-Unit-Value T61 hour
+A12	Eq-Temporal-Recency-Value T62 first-time
+A13	Severity-Value T65 severe
+A14	Eq-Temporal-Unit-Value T68 second
+A16	Eq-Temporal-Unit-Value T40 second
+A17	Eq-Operator-Value T81 GTEQ
+A15	Observation-Type-Value T74 measurement
+A18	Observation-Type-Value T82 measurement
+A19	Eq-Operator-Value T84 GTEQ
+A20	Observation-Type-Value T86 measurement
+A21	Eq-Temporal-Recency-Value T97 first-time
+A22	Eq-Temporal-Unit-Value T98 hour
+A23	Eq-Temporal-Period-Value T100 past
+A24	Assertion-Type-Value E44 possible
+A25	Temporal-Connection-Type-Value E46 before
+A26	Stability-Value T109 change
+A27	Assertion-Type-Value E51 hypothetical
+A28	Severity-Value T114 severe
+A29	Eq-Temporal-Period-Value T118 past
+A30	Stability-Value T123 change
+A31	Assertion-Type-Value E56 hypothetical
+A32	Life-Stage-And-Gender-Type T130 female
+A33	Severity-Value T133 severe
+A34	Acuteness-Type-Value T59 acute
+R1	Caused-By Arg1:E1 Arg2:E4
+R2	Equivalent-To Arg1:E17 Arg2:E19
+R3	Equivalent-To Arg1:E29 Arg2:E28
+R4	Equivalent-To Arg1:E36 Arg2:E8
+R5	Using Arg1:E8 Arg2:E10
+R6	If-Then Arg1:E42 Arg2:E39
+R7	Equivalent-To Arg1:E47 Arg2:E14
+R8	Equivalent-To Arg1:E20 Arg2:E52
+R9	Caused-By Arg1:T123 Arg2:E18
+R10	If-Then Arg1:T130 Arg2:E58
+R11	Equivalent-To Arg1:E27 Arg2:E13

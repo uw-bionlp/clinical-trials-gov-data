@@ -1,7 +1,7 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Procedure:T5 Name:T6 Temporality:E18
-E7	Condition:T7 Name:T8 Acuteness:T45
+E7	Condition:T7 Acuteness:T45
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14 Stage:E8
@@ -19,12 +19,9 @@ E14	Family-Member:T34 Has:E10
 E19	Condition:T35 Name:T36
 E20	Procedure:T37 Name:T38
 E21	Condition:T39 Name:T40 Temporality:E16
-E22	Or:T41 Arg:E17 Arg2:E18
 E23	Procedure:T42 Name:T43
-E24	Or:T44 Arg:E5 Arg2:E23
-E26	Modifier:T46 Modifies:T8
+E26	Modifier:T46 Modifies:E7
 E27	Other:T47 Is-Other:E7
-E28	Or:T48 Arg:E26 Arg2:E27
 T1	Condition 475 497	secondary hypertension
 T2	Condition-Name 475 497	secondary hypertension
 T3	Condition 499 518	atrial fibrillation
@@ -65,14 +62,11 @@ T37	Procedure 238 256	endometrial biopsy
 T38	Procedure-Name 238 256	endometrial biopsy
 T39	Condition 274 297	thromboembolic diseases
 T40	Condition-Name 274 297	thromboembolic diseases
-T41	Or 312 314	or
 T42	Procedure 363 377	contraceptives
 T43	Procedure-Name 363 377	contraceptives
-T44	Or 360 362	or
 T45	Acuteness 457 464	chronic
 T46	Modifier 441 446	heart
 T47	Other 451 456	other
-T48	Or 447 450	and
 A1	Eq-Temporal-Period-Value T21 past
 A2	Eq-Temporal-Period-Value T23 present
 A3	Eq-Temporal-Period-Value T25 past
@@ -82,3 +76,7 @@ R1	Treatment-For Arg1:E4 Arg2:E2
 R2	Found-By Arg1:E19 Arg2:E20
 R3	Example-Of Arg1:E1 Arg2:E7
 R4	Example-Of Arg1:E3 Arg2:E7
+R5	Or Arg1:E17 Arg2:E18
+R6	Or Arg1:E5 Arg2:E23
+R7	Or Arg1:E26 Arg2:E27
+R8	Or Arg1:E1 Arg2:E3

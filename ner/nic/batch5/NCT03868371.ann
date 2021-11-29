@@ -1,15 +1,14 @@
 E1	Eq-Comparison:T1 Operator:T20 Temporal-Unit:T21 Value:T46
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E3	Eq-Comparison:T3 Temporal-Period:T22
 E4	Procedure:T4 Temporality:E3
 E5	Procedure:T5 Name:T23
 E6	Procedure:T6 Name:T24
-E7	Or:T7 Arg:E6 Arg2:E8
 E8	Procedure:T8 Name:T25
-E9	Observation:T9 Name:T26 Eq-Comparison:E10 Duration:E11
+E9	Observation:T9 Name:T26 Numeric-Filter:E10 Duration:E11
 E10	Eq-Comparison:T10 Operator:T27 Value:T28 Value:T29 Unit:T30 Per:T31
 E11	Eq-Comparison:T11 Operator:T32 Value:T33 Temporal-Unit:T34
-E12	Observation:T12 Name:T35 Eq-Comparison:E13 Duration:E14
+E12	Observation:T12 Name:T35 Numeric-Filter:E13 Duration:E14
 E13	Eq-Comparison:T13 Operator:T36 Value:T37 Value:T38 Unit:T39 Per:T40
 E14	Eq-Comparison:T14 Operator:T41 Value:T42 Temporal-Unit:T43
 E15	Eq-Comparison:T15 Temporal-Period:T47
@@ -23,7 +22,6 @@ T3	Eq-Comparison 47 56	Currently
 T4	Procedure 57 64	treated
 T5	Procedure 70 89	peritoneal dialysis
 T6	Procedure 91 94	APD
-T7	Or 95 97	or
 T8	Procedure 98 102	CAPD
 T9	Observation 109 130	Serum ionized calcium
 T10	Eq-Comparison 131 159	between 1.10 and 1.40 mmol/L
@@ -67,11 +65,11 @@ T47	Eq-Temporal-Period 262 269	Earlier
 A1	Eq-Operator-Value T20 GTEQ
 A2	Eq-Temporal-Unit-Value T21 year
 A3	Eq-Temporal-Period-Value T22 present
-A5	Observation-Type-Value T26 lab
+A5	Observation-Type-Value E9 lab
 A6	Eq-Operator-Value T27 BETWEEN
 A7	Eq-Operator-Value T32 GT
 A8	Eq-Temporal-Unit-Value T34 month
-A9	Observation-Type-Value T35 lab
+A9	Observation-Type-Value E12 lab
 A10	Eq-Operator-Value T36 BETWEEN
 A11	Eq-Operator-Value T41 GT
 A12	Eq-Temporal-Unit-Value T43 month
@@ -81,3 +79,4 @@ R1	Using Arg1:E4 Arg2:E5
 R2	Abbrev-Of Arg1:E6 Arg2:E5
 R3	Abbrev-Of Arg1:E8 Arg2:E5
 R4	Caused-By Arg1:T45 Arg2:E18
+R5	Or Arg1:E6 Arg2:E8

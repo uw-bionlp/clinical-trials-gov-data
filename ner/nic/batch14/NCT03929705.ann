@@ -1,48 +1,43 @@
-E1	Age:T3 Eq-Comparison:E3
-E2	Age:T4 Eq-Comparison:E21
+E1	Age:T3 Numeric-Filter:E3
+E2	Age:T4 Numeric-Filter:E21
 E3	Eq-Comparison:T5 Operator:T6 Temporal-Unit:T1 Value:T7
 E4	Eq-Comparison:T8 Value:T18 Unit:T19 Operator:T20
 E5	Assertion:T21 Asserted:E6
-E6	Observation:T22 Name:T23 Eq-Comparison:E4 Eq-Comparison2:E9
-E7	Encounter:T24
-E8	Temporal-Connection:T25 Arg:E6 Arg2:E7
+E6	Observation:T22 Name:T23 Numeric-Filter:E4 Numeric-Filter:E9
+E7	
 E9	Eq-Comparison:T26 Value:T27 Unit:T28
 E10	Condition:T29 Name:T30
 E11	Condition:T31 Name:T32 Polarity:T33
 E12	Observation:T34 Name:T35 Polarity:T36
 E13	Eq-Comparison:T37 Temporal-Recency:T38
-E14	Encounter:T39 Temporality:E13
+E14	Encounter:T39
 E15	Condition:T40 Name:T41
 E16	Assertion:T42 Asserted:E15
 E17	Condition:T43 Name:T44 Temporality:E18
 E18	Eq-Comparison:T45 Temporal-Period:T46
 E19	Negation:T47 Negates:E17
-E20	And:T48 Arg:E15 Arg2:E19
 E21	Eq-Comparison:T9 Operator:T10 Temporal-Unit:T2 Value:T11
 E22	Eq-Comparison:T49 Operator:T50 Value:T12 Unit:T51
-E23	Observation:T52 Name:T53 Eq-Comparison:E22 Eq-Comparison2:E27
+E23	Observation:T52 Name:T53 Numeric-Filter:E22 Numeric-Filter:E27
 E24	Assertion:T54 Asserted:E23
-E25	Encounter:T55
-E26	Temporal-Connection:T56 Arg:E23 Arg2:E25
+E25	
 E27	Eq-Comparison:T57 Value:T58 Unit:T59
 E28	Condition:T60 Name:T61
 E29	Condition:T62 Name:T63 Polarity:T64
-E30	Condition:T65 Name:T66 Polarity:T67
+E30	Observation:T65 Name:T66 Polarity:T67
 E31	Condition:T68 Name:T69 Temporality:E32
 E32	Eq-Comparison:T70 Temporal-Period:T71
 E33	Negation:T72 Negates:E31
 E34	Observation:T13 Name:T14 Polarity:T73
-E35	Condition:T74 Name:T75 Temporality:E37
+E35	Condition:T74 Name:T75 Temporality:E37 Temporality2:E36
 E36	Eq-Comparison:T76 Temporal-Period:T77
 E37	Eq-Comparison:T78
-E38	Or:T80 Arg:E36 Arg2:E37
 E40	Eq-Comparison:T82 Temporal-Period:T83
 E41	Eq-Comparison:T84 Operator:T85 Temporal-Unit:T87 Value:T86
 E42	Observation:T16 Name:T17 Polarity:T88
-E43	Condition:T89 Name:T90 Temporality:E45
+E43	Condition:T89 Name:T90 Temporality:E45 Temporality2:E44
 E44	Eq-Comparison:T91 Temporal-Period:T92
 E45	Eq-Comparison:T93
-E46	Or:T95 Arg:E44 Arg2:E45
 E47	Procedure:T96 Temporality:E48
 E48	Eq-Comparison:T98 Temporal-Period:T101
 E39	Procedure:T15 Temporality:E40 Duration:E41
@@ -68,7 +63,6 @@ T21	Assertion 146 153	able to
 T22	Observation 184 195	whole blood
 T23	Observation-Name 184 195	whole blood
 T24	Encounter 204 209	visit
-T25	Temporal-Connection 196 198	at
 T26	Eq-Comparison 211 215	16mL
 T27	Eq-Value 211 213	16
 T28	Eq-Unit 213 215	mL
@@ -91,7 +85,6 @@ T44	Condition-Name 353 355	TB
 T45	Eq-Comparison 336 349	prior history
 T46	Eq-Temporal-Period 336 349	prior history
 T47	Negation 333 335	no
-T48	And 328 332	with
 T9	Eq-Comparison 421 438	at least 18 years
 T10	Eq-Operator 421 429	at least
 T49	Eq-Comparison 533 549	minimum of 10 mL
@@ -101,7 +94,6 @@ T52	Observation 553 564	whole blood
 T53	Observation-Name 553 564	whole blood
 T54	Assertion 515 522	able to
 T55	Encounter 573 578	visit
-T56	Temporal-Connection 565 567	at
 T57	Eq-Comparison 580 584	16mL
 T58	Eq-Value 580 582	16
 T59	Eq-Unit 582 584	mL
@@ -110,8 +102,8 @@ T61	Condition-Name 589 606	immunocompromised
 T62	Condition 612 615	HIV
 T63	Condition-Name 612 615	HIV
 T64	Polarity 615 616	+
-T65	Condition 636 645	T-SPOT.TB
-T66	Condition-Name 636 645	T-SPOT.TB
+T65	Observation 636 645	T-SPOT.TB
+T66	Observation-Name 636 645	T-SPOT.TB
 T67	Polarity 646 654	positive
 T68	Condition 685 687	TB
 T69	Condition-Name 685 687	TB
@@ -127,7 +119,6 @@ T76	Eq-Comparison 783 791	Previous
 T77	Eq-Temporal-Period 783 791	Previous
 T78	Eq-Comparison 795 807	pre-existing
 T79	Eq-Temporal-Period 795 807	pre-existing
-T80	Or 792 794	or
 T82	Eq-Comparison 841 843	On
 T83	Eq-Temporal-Period 841 843	On
 T84	Eq-Comparison 866 882	more than 1 week
@@ -143,7 +134,6 @@ T91	Eq-Comparison 1006 1014	Previous
 T92	Eq-Temporal-Period 1006 1014	Previous
 T93	Eq-Comparison 1018 1030	pre-existing
 T94	Eq-Temporal-Period 1018 1030	pre-existing
-T95	Or 1015 1017	or
 T96	Procedure 1075 1084	treatment
 T98	Eq-Comparison 1064 1066	On
 T15	Procedure 852 861	treatment
@@ -162,8 +152,7 @@ A2	Eq-Temporal-Unit-Value T2 year
 A3	Eq-Operator-Value T6 GTEQ
 A4	Eq-Operator-Value T20 GTEQ
 A5	Assertion-Type-Value E5 hypothetical
-A6	Observation-Type-Value T23 lab
-A7	Temporal-Connection-Type-Value E8 during
+A6	Observation-Type-Value E6 lab
 A8	Polarity-Value T33 positive
 A9	Polarity-Value T36 positive
 A10	Eq-Temporal-Recency-Value T38 first-time
@@ -172,7 +161,6 @@ A12	Eq-Temporal-Period-Value T46 past
 A13	Eq-Operator-Value T10 GTEQ
 A14	Eq-Operator-Value T50 GTEQ
 A15	Assertion-Type-Value E24 hypothetical
-A16	Temporal-Connection-Type-Value E26 during
 A17	Polarity-Value T64 positive
 A18	Polarity-Value T67 positive
 A19	Eq-Temporal-Period-Value T71 past
@@ -182,18 +170,23 @@ A22	Eq-Temporal-Period-Value T79 past
 A23	Eq-Temporal-Period-Value T83 present
 A24	Eq-Operator-Value T85 GT
 A25	Eq-Temporal-Unit-Value T87 week
-A26	Observation-Type-Value T14 lab
-A27	Observation-Type-Value T17 lab
+A26	Observation-Type-Value E34 lab
+A27	Observation-Type-Value E42 lab
 A28	Polarity-Value T88 negative
 A29	Eq-Temporal-Period-Value T92 past
 A30	Eq-Temporal-Period-Value T94 past
 A31	Eq-Temporal-Period-Value T101 present
 A32	Eq-Temporal-Period-Value T105 present
 A33	Assertion-Type-Value E53 possible
-A34	Observation-Type-Value T35 lab
+A34	Observation-Type-Value E12 lab
 R1	If-Then Arg1:E10 Arg2:E9
 R2	Equivalent-To Arg1:E11 Arg2:E10
 R3	Equivalent-To Arg1:E29 Arg2:E28
 R4	If-Then Arg1:E28 Arg2:E27
 R5	Treatment-For Arg1:E39 Arg2:E49
 R6	Treatment-For Arg1:E47 Arg2:E50
+R7	During Arg1:E6 Arg2:E7
+R8	And Arg1:E15 Arg2:E19
+R9	During Arg1:E23 Arg2:E25
+R10	Or Arg1:E36 Arg2:E37
+R11	Or Arg1:E44 Arg2:E45

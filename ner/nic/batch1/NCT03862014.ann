@@ -2,7 +2,7 @@ E1	Condition:T1 Name:T2
 E3	Procedure:T3 Name:T4
 E5	Procedure:T5 Name:T6
 E9	Condition:T9 Name:T10
-E2	Family-Member:T11 
+E2	Family-Member:T11
 E4	Condition:T12 Name:T13
 E6	Procedure:T14 Name:T15
 E8	Condition:T16 Name:T17
@@ -20,11 +20,10 @@ E20	Modifier:T34 Modifies:T17
 E21	Modifier:T35 Modifies:T17
 E22	Condition:T36 Name:T37
 E23	Eq-Comparison:T39 Temporal-Period:T40
-E25	Or:T43 Arg2:E9 Arg:E11
 E26	Assertion:T44 Asserted:E27
 E27	Negation:T45 Negates:E5
 E28	Modifier:T46 Modifies:T22
-E29	Or:T47 Arg:E12 Arg2:E13
+E7	Modifier:T7 Modifies:T20 Modifies2:T10
 T1	Condition 167 199	molar incisor hypomineralization
 T2	Condition-Name 167 199	molar incisor hypomineralization
 T3	Procedure 510 531	orthodontic treatment
@@ -63,11 +62,10 @@ T37	Condition-Name 400 406	caries
 T38	Polarity 395 399	high
 T39	Eq-Comparison 452 462	previously
 T40	Eq-Temporal-Period 452 462	previously
-T43	Or 472 474	or
 T44	Assertion 554 557	not
 T45	Negation 554 557	not
 T46	Modifier 600 605	Teeth
-T47	Or 633 635	or
+T7	Modifier 437 442	Teeth
 A1	Eq-Operator-Value T28 GTEQ
 A2	Assertion-Type-Value E19 hypothetical
 A3	Polarity-Value T38 high
@@ -75,5 +73,5 @@ A4	Eq-Temporal-Period-Value T40 past
 A5	Assertion-Type-Value E26 hypothetical
 R2	Treatment-For Arg1:E6 Arg2:E18
 R3	Caused-By Arg1:E10 Arg2:E8
-T7	Modifier 437 442	Teeth
-E7	Modifier:T7 Modifies:T20 Modifies2:T10
+R1	Or Arg1:E11 Arg2:E9
+R4	Or Arg1:E12 Arg2:E13

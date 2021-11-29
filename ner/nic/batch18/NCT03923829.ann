@@ -1,6 +1,6 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4 Stage:E4
-E7	Observation:T7 Name:T8 Eq-Comparison:E11
+E7	Observation:T7 Name:T8 Numeric-Filter:E11
 E10	Condition:T10 Name:T11 Acuteness:T74
 E12	Procedure:T12 Name:T13
 E13	Eq-Comparison:T32 Operator:T15 Unit:T21 Value:T28 Value2:T26 Value3:T27 Unit2:T20
@@ -9,27 +9,22 @@ E16	Eq-Comparison:T35 Temporal-Period:T36 Value:T65 Temporal-Unit:T19
 E2	Modifier:T24 Modifies:T2
 E4	Eq-Comparison:T9 Unit:T37 Value:T38 Value2:T39
 E6	Eq-Comparison:T25 Operator:T40 Value:T41 Unit:T42
-E5	Observation:T5 Name:T6 Minimum-Count:E6 Eq-Comparison:E13
+E5	Observation:T5 Name:T6 Minimum-Count:E6 Numeric-Filter:E13
 E8	Procedure:T43 Name:T44
-E9	And:T45 Arg:E5 Arg2:E7
 E11	Eq-Comparison:T46 Value:T29 Unit:T47
 E17	Modifier:T48 Modifies:E7
-E18	Observation:T49 Name:T50 Eq-Comparison:E14
+E18	Observation:T49 Name:T50 Numeric-Filter:E14
 E15	Procedure:T51 Name:T53
 E19	Drug:T52 Name:T54
-E20	Or:T55 Arg:E15 Arg2:E19
 E21	Procedure:T56
 E22	Eq-Comparison:T57 Temporal-Period:T59 Value:T60 Temporal-Unit:T18
-E23	Temporal-Connection:T58 Arg:E21 Arg2:E22
 E24	Eq-Comparison:T61 Temporal-Period:T62
 E25	Drug:T63 Name:T64 Temporality:E16 Temporality2:E24
 E26	Condition:T66 Name:T67
 E27	Condition:T68 Name:T69
-E28	Or:T70 Arg:E26 Arg2:E27
 E29	Modifier:T71 Modifies:T13
 E30	Modifier:T72 Modifies:T13
-E31	Or:T73 Arg:E30 Arg2:E29
-E32	Condition:T75 Name:T76
+E32	Observation:T75 Name:T76
 T1	Condition 43 60	diabetes mellitus
 T2	Condition-Name 43 60	diabetes mellitus
 T3	Condition 80 93	periodontitis
@@ -72,7 +67,6 @@ T5	Observation 130 145	attachment loss
 T6	Observation-Name 130 145	attachment loss
 T43	Procedure 169 181	radiographic
 T44	Procedure-Name 169 181	radiographic
-T45	And 165 168	and
 T46	Eq-Comparison 192 195	15%
 T47	Eq-Unit 194 195	%
 T48	Modifier 196 237	Extending to mid-third of root and beyond
@@ -84,10 +78,8 @@ T51	Procedure 307 318	periodontal
 T52	Drug 322 332	Antibiotic
 T53	Procedure-Name 307 318	periodontal
 T54	Drug-Name 322 332	Antibiotic
-T55	Or 319 321	or
 T56	Procedure 333 342	treatment
 T57	Eq-Comparison 354 369	last six months
-T58	Temporal-Connection 343 349	during
 T59	Eq-Temporal-Period 354 358	last
 T60	Eq-Value 359 362	six
 T61	Eq-Comparison 376 385	Receiving
@@ -99,13 +91,11 @@ T66	Condition 446 454	Pregnant
 T67	Condition-Name 446 454	Pregnant
 T68	Condition 458 467	lactating
 T69	Condition-Name 458 467	lactating
-T70	Or 455 457	or
 T71	Modifier 492 500	diuretic
 T72	Modifier 481 488	Gastric
-T73	Or 489 491	or
 T74	Acuteness 516 521	Acute
-T75	Condition 541 548	smoking
-T76	Condition-Name 541 548	smoking
+T75	Observation 541 548	smoking
+T76	Observation-Name 541 548	smoking
 A1	Life-Stage-And-Gender-Type T14 female
 A2	Eq-Operator-Value T15 GTEQ
 A3	Eq-Operator-Value T16 LTEQ
@@ -113,12 +103,11 @@ A5	Eq-Temporal-Unit-Value T18 month
 A6	Eq-Temporal-Unit-Value T19 month
 A7	Eq-Temporal-Period-Value T36 past
 A8	Eq-Operator-Value T40 GTEQ
-A9	Observation-Type-Value T6 measurement
-A10	Observation-Type-Value T8 measurement
-A11	Observation-Type-Value T50 measurement
+A9	Observation-Type-Value E5 measurement
+A10	Observation-Type-Value E7 measurement
+A11	Observation-Type-Value E18 measurement
 A4	Eq-Operator-Value T17 GTEQ
 A12	Eq-Operator-Value T34 BETWEEN
-A13	Temporal-Connection-Type-Value E23 during
 A14	Eq-Temporal-Period-Value T59 past
 A15	Eq-Temporal-Period-Value T62 present
 A17	Acuteness-Type-Value T74 acute
@@ -126,3 +115,8 @@ R1	Found-By Arg1:E7 Arg2:E8
 R2	Using Arg1:E21 Arg2:E19
 R3	Using Arg1:E21 Arg2:E15
 R4	If-Then Arg1:T14 Arg2:E27
+R5	And Arg1:E5 Arg2:E7
+R6	Or Arg1:E15 Arg2:E19
+R7	During Arg1:E21 Arg2:E22
+R8	Or Arg1:E26 Arg2:E27
+R9	Or Arg1:E30 Arg2:E29

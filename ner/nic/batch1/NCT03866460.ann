@@ -1,17 +1,14 @@
 E1	Procedure:T1 Name:T2 Temporality:E12 Temporality2:E13
 E4	Condition:T4 Name:T5 Temporality:E2
-E5	Age:T10 Eq-Comparison:E7
+E5	Age:T10 Numeric-Filter:E7
 E3	Condition:T15 Name:T16
 E7	Eq-Comparison:T17 Value:T12 Operator:T18 Temporal-Unit:T8
 E8	Drug:T19 Name:T20
 E9	Condition:T21 Name:T22
 E10	Eq-Comparison:T23 Temporal-Unit:T9 Operator:T24 Value:T13
-E11	And:T25 Arg:T3 Arg2:E3
 E12	Eq-Comparison:T26 Temporal-Period:T27
 E13	Eq-Comparison:T28 Temporal-Recency:T29
-E14	And:T30 Arg:E5 Arg2:E1
 E2	Eq-Comparison:T11 Temporal-Period:T14
-E6	And:T31 Arg:T7 Arg2:E4
 T1	Procedure 227 239	chemotherapy
 T2	Procedure-Name 227 239	chemotherapy
 T3	Life-Stage-And-Gender 122 130	Children
@@ -34,15 +31,12 @@ T21	Condition 251 265	Retinoblastoma
 T22	Condition-Name 251 265	Retinoblastoma
 T23	Eq-Comparison 293 309	over 8 years old
 T24	Eq-Operator 293 297	over
-T25	And 131 135	with
 T26	Eq-Comparison 171 180	scheduled
 T27	Eq-Temporal-Period 171 180	scheduled
 T28	Eq-Comparison 198 203	first
 T29	Eq-Temporal-Recency 198 203	first
-T30	And 163 166	who
 T11	Eq-Comparison 465 476	preexisting
 T14	Eq-Temporal-Period 465 476	preexisting
-T31	And 439 443	with
 A1	Life-Stage-And-Gender-Type T3 child
 A2	Life-Stage-And-Gender-Type T6 child
 A3	Life-Stage-And-Gender-Type T7 child
@@ -54,3 +48,6 @@ A8	Eq-Temporal-Period-Value T27 future
 A9	Eq-Temporal-Recency-Value T29 first-time
 A10	Eq-Temporal-Period-Value T14 past
 R1	Using Arg1:E1 Arg2:E8
+R2	And Arg1:T3 Arg2:E3
+R3	And Arg1:E5 Arg2:E1
+R4	And Arg1:T7 Arg2:E4

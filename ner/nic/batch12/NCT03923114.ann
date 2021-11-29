@@ -9,9 +9,9 @@ E15	Condition:T15 Name:T16
 E17	Procedure:T17 Name:T18
 E19	Condition:T19 Name:T20
 E21	Condition:T21 Name:T22
-E22	Age:T31 Eq-Comparison:E25
-E23	Age:T32 Eq-Comparison:E26
-E24	Age:T33 Eq-Comparison:E28
+E22	Age:T31 Numeric-Filter:E25
+E23	Age:T32 Numeric-Filter:E26
+E24	Age:T33 Numeric-Filter:E28
 E25	Eq-Comparison:T42 Operator:T23 Temporal-Unit:T27 Value:T34
 E26	Eq-Comparison:T43 Operator:T24 Temporal-Unit:T28 Value:T37
 E27	Eq-Comparison:T44 Operator:T25 Temporal-Unit:T29 Value:T40
@@ -26,17 +26,13 @@ E14	Observation:T53 Name:T54
 E16	Negation:T55 Negates:E14
 E18	Condition:T56 Name:T57 Temporality:E27
 E20	Assertion:T58 Asserted:E18
-E29	Or:T59 Arg:E15 Arg2:E20
-E30	Study:T60 
-E31	Temporal-Connection:T61 Arg:E27 Arg2:E30
+E30	Study:T60
 E32	Modifier:T62 Modifies:T22
 E33	Modifier:T63 Modifies:T22
 E34	Modifier:T64 Modifies:T22
-E35	Or:T65 Arg:E33 Arg2:E34
 E36	Modifier:T66 Modifies:T22
 E37	Modifier:T67 Modifies:T22
 E38	Procedure:T68 Name:T69
-E39	Or:T70 Arg:E38 Arg2:E17
 E40	Procedure:T71 Name:T72
 E41	Procedure:T73 Name:T74
 E42	Procedure:T75 Name:T76
@@ -45,7 +41,7 @@ E44	Procedure:T79 Name:T80
 E45	Modifier:T81 Modifies:T6
 E46	Modifier:T82 Modifies:T76
 E47	Modifier:T83 Modifies:T8
-E48	Procedure:T84 
+E48	Procedure:T84
 T1	Procedure 862 880	bladder stimulator
 T2	Procedure-Name 862 880	bladder stimulator
 T3	Procedure 960 976	Cochlear implant
@@ -104,18 +100,14 @@ T55	Negation 331 333	no
 T56	Condition 497 505	pregnant
 T57	Condition-Name 497 505	pregnant
 T58	Assertion 482 489	wish to
-T59	Or 475 477	or
 T60	Study 532 537	study
-T61	Temporal-Connection 522 527	after
 T62	Modifier 682 691	Fragments
 T63	Modifier 693 698	clips
 T64	Modifier 702 709	devices
-T65	Or 699 701	or
 T66	Modifier 720 724	eyes
 T67	Modifier 726 738	spinal canal
 T68	Procedure 749 774	Implantable defibrillator
 T69	Procedure-Name 749 774	Implantable defibrillator
-T70	Or 775 777	or
 T71	Procedure 845 860	Neurostimulator
 T72	Procedure-Name 845 860	Neurostimulator
 T73	Procedure 882 908	non-removable insulin pump
@@ -139,9 +131,16 @@ A6	Eq-Temporal-Unit-Value T28 year
 A7	Eq-Temporal-Unit-Value T29 month
 A8	Eq-Temporal-Unit-Value T30 year
 A9	Assertion-Type-Value E20 intention
-A10	Temporal-Connection-Type-Value E31 after
 R1	If-Then Arg1:E4 Arg2:E22
 R2	If-Then Arg1:E8 Arg2:E23
 R3	Caused-By Arg1:E12 Arg2:E2
 R4	Caused-By Arg1:E14 Arg2:E10
 R5	Caused-By Arg1:E4 Arg2:E48
+R6	Or Arg1:E15 Arg2:E20
+R7	After Arg1:E27 Arg2:E30
+R8	Or Arg1:E33 Arg2:E34
+R9	Or Arg1:E38 Arg2:E17
+R10	Or Arg1:E1 Arg2:E41
+R11	Or Arg1:E32 Arg2:E33
+R12	Or Arg1:E36 Arg2:E37
+R13	Or Arg1:E40 Arg2:E1

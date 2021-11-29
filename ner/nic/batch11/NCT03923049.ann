@@ -7,21 +7,15 @@ E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14
 E15	Procedure:T15 Name:T16
 E17	Condition:T17 Name:T18
-E18	Age:T21 Eq-Comparison:E2
+E18	Age:T21 Numeric-Filter:E2
 E19	Eq-Comparison:T24 Operator:T19 Value:T23 Unit:T41 Per:T42 Value2:T43 Unit2:T44
 E2	Eq-Comparison:T25 Operator:T26 Temporal-Unit:T20 Value:T22
-E4	And:T27 Arg:E18 Arg2:E1
 E6	Procedure:T28 Name:T29
-E8	Or:T31 Arg:E5 Arg2:E3
-E10	Or:T32 Arg:E1 Arg2:E3
-E12	Or:T33 Arg:E13 Arg2:E17
 E14	Procedure:T34 Name:T35
-E16	Or:T36 Arg:E15 Arg2:E14
 E20	Condition:T37 Name:T38
-E21	Observation:T39 Name:T40 Eq-Comparison:E19
+E21	Observation:T39 Name:T40 Numeric-Filter:E19
 E22	Procedure:T45 Name:T46
 E23	Procedure:T47 Name:T48
-E24	Or:T49 Arg:E22 Arg2:E23
 E25	Negation:T50 Negates:E22
 E26	Assertion:T51 Asserted:E25
 E27	Condition:T52
@@ -53,16 +47,11 @@ T23	Eq-Value 465 467	45
 T24	Eq-Comparison 464 482	<45 ml/min/1.73 m2
 T25	Eq-Comparison 31 50	older than 18 years
 T26	Eq-Operator 31 41	older than
-T27	And 58 62	with
 T28	Procedure 108 114	biopsy
 T29	Procedure-Name 108 114	biopsy
 T30	Polarity 154 162	positive
-T31	Or 147 153	and/or
-T32	Or 101 107	and/or
-T33	Or 309 310	/
 T34	Procedure 348 396	automatic implantable cardioverter-defibrillator
 T35	Procedure-Name 348 396	automatic implantable cardioverter-defibrillator
-T36	Or 345 347	or
 T37	Condition 402 425	Impaired renal function
 T38	Condition-Name 402 425	Impaired renal function
 T39	Observation 427 463	estimated glomerular filtration rate
@@ -75,7 +64,6 @@ T45	Procedure 528 531	PET
 T46	Procedure-Name 528 531	PET
 T47	Procedure 532 535	MRI
 T48	Procedure-Name 532 535	MRI
-T49	Or 531 532	/
 T50	Negation 507 516	Inability
 T51	Assertion 520 527	undergo
 T52	Condition 553 562	condition
@@ -86,7 +74,7 @@ A1	Eq-Operator-Value T19 LT
 A2	Eq-Temporal-Unit-Value T20 year
 A3	Eq-Operator-Value T26 GT
 A4	Polarity-Value T30 positive
-A5	Observation-Type-Value T40 lab
+A5	Observation-Type-Value E21 lab
 A6	Eq-Temporal-Unit-Value T42 minute
 A7	Assertion-Type-Value E26 hypothetical
 A8	Assertion-Type-Value E28 possible
@@ -94,3 +82,9 @@ A9	Polarity-Value T54 high
 R1	Found-By Arg1:E3 Arg2:E6
 R2	Equivalent-To Arg1:E21 Arg2:E20
 R3	Caused-By Arg1:E25 Arg2:E27
+R4	And Arg1:E18 Arg2:E1
+R5	Or Arg1:E5 Arg2:E3
+R6	Or Arg1:E1 Arg2:E3
+R7	Or Arg1:E13 Arg2:E17
+R8	Or Arg1:E15 Arg2:E14
+R9	Or Arg1:E22 Arg2:E23

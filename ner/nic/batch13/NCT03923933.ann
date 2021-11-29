@@ -5,11 +5,10 @@ E7	Condition:T7 Name:T8 Acuteness:T48
 E9	Procedure:T9 Name:T10
 E11	Procedure:T11 Name:T12
 E14	Eq-Comparison:T20 Operator:T16 Value:T17 Unit:T15 Per:T23 Per2:T24
-E2	Observation:T21 Name:T22 Eq-Comparison:E14
+E2	Observation:T21 Name:T22 Numeric-Filter:E14
 E4	Negation:T18 Negates:E5
-E6	Or:T25 Arg:E11 Arg2:E9
 E8	Condition:T26 Name:T27
-E10	Observation:T13 Name:T14 Eq-Comparison:E12
+E10	Observation:T13 Name:T14 Numeric-Filter:E12
 E12	Eq-Comparison:T28 Operator:T29 Value:T19 Per:T31 Unit:T30
 E13	Drug:T32 Name:T33
 E15	Allergy:T34 Name:E13
@@ -40,7 +39,6 @@ T15	Eq-Unit 65 67	ml
 T23	Eq-Temporal-Unit 70 73	min
 T24	Eq-Unit 76 81	1.73m
 T18	Negation 87 94	Without
-T25	Or 125 127	or
 T26	Condition 147 162	Volume overload
 T27	Condition-Name 147 162	Volume overload
 T13	Observation 195 212	residual diuresis
@@ -73,8 +71,9 @@ A4	Eq-Temporal-Unit-Value T31 day
 A5	Severity-Value T41 severe
 A6	Eq-Operator-Value T45 GTEQ
 A7	Eq-Temporal-Unit-Value T47 month
-A8	Observation-Type-Value T22 lab
-A9	Observation-Type-Value T14 measurement
+A8	Observation-Type-Value E2 lab
+A9	Observation-Type-Value E10 measurement
 A11	Acuteness-Type-Value T48 acute
 R1	Example-Of Arg1:E11 Arg2:E5
 R2	Example-Of Arg1:E9 Arg2:E5
+R3	Or Arg1:E11 Arg2:E9

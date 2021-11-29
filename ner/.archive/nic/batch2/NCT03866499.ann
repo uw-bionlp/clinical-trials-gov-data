@@ -1,0 +1,258 @@
+E1	Procedure:T1 Name:T130
+E2	Or:T2 Arg:E1 Arg2:E3
+E3	Procedure:T3 Name:T76
+E4	Negation:T4 Negates:E5
+E5	Modifier:T5 Modifies:T77
+E6	Condition:T6 Name:T77
+E7	Observation:T7 Name:T78 Eq-Comparison:E8
+E8	Eq-Comparison:T8 Value:T79 Value2:T131 Operator:T132
+E9	Modifier:T9 Modifies:T80
+E10	Or:T10 Arg:E9 Arg2:E11
+E11	Modifier:T11 Modifies:T80
+E12	Condition:T12 Name:T80
+E13	Eq-Comparison:T13 Temporal-Period:T81
+E14	Procedure:T14 Temporality:E13
+E15	Eq-Comparison:T15 Operator:T82 Value:T83
+E16	Condition:T16 Name:T84 Minimum-Count:E15
+E17	Negation:T17 Negates:E19
+E18	Eq-Comparison:T18 Temporal-Period:T85
+E19	Procedure:T19 Name:T134 Temporality:E18
+E20	Temporal-Connection:T20 Arg:E21 Arg2:E22
+E21	Study:T21 
+E22	Observation:T22 Name:T86
+E23	Condition:T23 Name:T87 Minimum-Count:E24
+E24	Eq-Comparison:T24 Value:T88 Value2:T135
+E25	Condition:T25 Name:T89 Polarity:T90
+E26	Procedure:T26 Name:T91
+E28	And:T28 Arg:E26
+E29	Or:T29 Arg:E28 Arg2:E30
+E30	Negation:T30 Negates:E32
+E31	Other:T31 Is-Other:E32
+E32	Condition:T32 Name:T92
+E33	Exception:T33 From:E32 Except:E34
+E34	Condition:T34 Name:T27
+E35	Eq-Comparison:T35 Temporal-Period:T93
+E36	Modifier:T36 Modifies:E37
+E37	Procedure:T37 Temporality:E35
+E38	Modifier:T38 Modifies:T94
+E39	Or:T39 Arg:E38 Arg2:E40
+E40	Modifier:T40 Modifies:T94
+E41	Condition:T41 Name:T94
+E42	Modifier:T42 Modifies:T95
+E43	Condition:T43 Name:T95 Polarity:T96
+E44	Eq-Comparison:T44 Temporal-Period:T97
+E45	Condition:T45 Name:T98 Temporality:E44
+E47	Condition:T47 Name:T99
+E48	Condition:T48 Name:T100
+E49	Assertion:T49 Asserted:E50
+E50	Procedure:T50 Name:T101
+E51	Or:T51 Arg:E50 Arg2:E53
+E52	Eq-Comparison:T52 Temporal-Period:T102
+E53	Condition:T53 Name:T103 Temporality:E52
+E54	Eq-Comparison:T54 Temporal-Period:T104
+E55	Condition:T55 Name:T105 Temporality:E54
+E56	Condition:T56 Name:T106
+E57	Condition:T57 Name:T107
+E58	Or:T58 Arg:E57 Arg2:E59
+E59	Condition:T59 Name:T108
+E60	Modifier:T60 Modifies:T109
+E61	Procedure:T61 Name:T109 Temporality:E62 Temporality2:E63
+E62	Eq-Comparison:T62 Temporal-Period:T137
+E63	Eq-Comparison:T63 Operator:T110 Value:T111 Temporal-Unit:T112
+E64	Eq-Comparison:T64 Operator:T113 Value:T114 Unit:T115
+E65	Procedure:T65 Name:T116 Minimum-Count:E64 Temporality:E68
+E66	Or:T66 Arg:E65 Arg2:E67
+E67	Procedure:T67 Name:T118 Severity:T117 Temporality:E68
+E68	Eq-Comparison:T68 Operator:T119 Value:T120 Temporal-Unit:T121
+E69	Eq-Comparison:T69 Operator:T122 Value:T123 Temporal-Unit:T124
+E70	Temporal-Connection:T70 Arg:E69 Arg2:E71
+E71	Procedure:T71 Name:T125 Severity:T138
+E72	Or:T72 Arg:E71 Arg2:E73
+E73	Eq-Comparison:T73 Operator:T126 Value:T127 Temporal-Unit:T128
+E74	Temporal-Connection:T74 Arg:E73 Arg2:E75
+E75	Procedure:T75 Name:T129 Severity:T139
+E76	Negation:T133 Negates:E14
+E77	Assertion:T136 Asserted:E26
+E27	Drug:T46 
+T1	Procedure 25 39	Histologically
+T2	Or 40 42	or
+T3	Procedure 43 56	cytologically
+T4	Negation 67 70	non
+T5	Modifier 71 86	small cell lung
+T6	Condition 87 93	cancer
+T7	Observation 104 108	ECOG
+T8	Eq-Comparison 140 143	0-1
+T9	Modifier 150 166	Locally advanced
+T10	Or 167 169	or
+T11	Modifier 170 190	recurrent metastatic
+T12	Condition 191 196	NSCLC
+T13	Eq-Comparison 212 220	received
+T14	Procedure 221 239	systemic treatment
+T15	Eq-Comparison 288 298	at least 1
+T16	Condition 310 316	lesion
+T17	Negation 326 329	not
+T18	Eq-Comparison 335 345	previously
+T19	Procedure 346 356	irradiated
+T20	Temporal-Connection 363 371	Prior to
+T21	Study 372 382	enrollment
+T22	Observation 394 412	laboratory testing
+T23	Condition 443 448	tumor
+T24	Eq-Comparison 453 463	one of two
+T25	Condition 464 485	common EGFR mutations
+T26	Procedure 517 533	EGFR-TKI therapy
+T28	And 547 551	with
+T29	Or 552 554	or
+T30	Negation 555 558	not
+T31	Other 576 581	other
+T32	Condition 582 595	EGFR mutation
+T33	Exception 606 615	exception
+T34	Condition 619 636	exon 20 insertion
+T35	Eq-Comparison 663 682	Previously received
+T36	Modifier 683 691	systemic
+T37	Procedure 692 701	treatment
+T38	Modifier 706 722	locally advanced
+T39	Or 723 725	or
+T40	Modifier 726 746	recurrent metastatic
+T41	Condition 747 753	cancer
+T42	Modifier 760 767	Primary
+T43	Condition 768 782	T790M mutation
+T44	Eq-Comparison 806 814	Previous
+T45	Condition 815 840	interstitial lung disease
+T47	Condition 855 880	interstitial lung disease
+T48	Condition 882 901	radiation pneumonia
+T49	Assertion 902 911	requiring
+T50	Procedure 912 928	hormonal therapy
+T51	Or 930 932	or
+T52	Eq-Comparison 955 961	active
+T53	Condition 962 987	interstitial lung disease
+T54	Eq-Comparison 1000 1006	active
+T55	Condition 1007 1017	infections
+T56	Condition 1026 1037	hepatitis B
+T57	Condition 1039 1050	hepatitis C
+T58	Or 1052 1055	and
+T59	Condition 1056 1084	human immunodeficiency virus
+T60	Modifier 1091 1096	Local
+T61	Procedure 1097 1114	radiation therapy
+T62	Eq-Comparison 1118 1129	carried out
+T63	Eq-Comparison 1130 1143	within 1 week
+T64	Eq-Comparison 1145 1158	more than 30%
+T65	Procedure 1159 1188	bone marrow radiation therapy
+T66	Or 1189 1191	or
+T67	Procedure 1202 1219	radiation therapy
+T68	Eq-Comparison 1233 1247	within 4 weeks
+T69	Eq-Comparison 1254 1263	≤ 4 weeks
+T70	Temporal-Connection 1264 1268	from
+T71	Procedure 1275 1282	surgery
+T72	Or 1283 1285	or
+T73	Eq-Comparison 1286 1295	≤ 2 weeks
+T74	Temporal-Connection 1296 1300	from
+T75	Procedure 1307 1314	surgery
+T76	Procedure-Name 43 56	cytologically
+T77	Condition-Name 87 93	cancer
+T78	Observation-Name 104 108	ECOG
+T79	Eq-Value 140 141	0
+T80	Condition-Name 191 196	NSCLC
+T81	Eq-Temporal-Period 212 220	received
+T82	Eq-Operator 288 296	at least
+T83	Eq-Value 297 298	1
+T84	Condition-Name 310 316	lesion
+T85	Eq-Temporal-Period 335 345	previously
+T86	Observation-Name 394 412	laboratory testing
+T87	Condition-Name 443 448	tumor
+T88	Eq-Value 460 463	two
+T89	Condition-Name 464 485	common EGFR mutations
+T90	Polarity 486 494	positive
+T91	Procedure-Name 517 533	EGFR-TKI therapy
+T92	Condition-Name 582 595	EGFR mutation
+T93	Eq-Temporal-Period 663 682	Previously received
+T94	Condition-Name 747 753	cancer
+T95	Condition-Name 768 782	T790M mutation
+T96	Polarity 783 791	positive
+T97	Eq-Temporal-Period 806 814	Previous
+T98	Condition-Name 815 840	interstitial lung disease
+T99	Condition-Name 855 880	interstitial lung disease
+T100	Condition-Name 882 901	radiation pneumonia
+T101	Procedure-Name 912 928	hormonal therapy
+T102	Eq-Temporal-Period 955 961	active
+T103	Condition-Name 962 987	interstitial lung disease
+T104	Eq-Temporal-Period 1000 1006	active
+T105	Condition-Name 1007 1017	infections
+T106	Condition-Name 1026 1037	hepatitis B
+T107	Condition-Name 1039 1050	hepatitis C
+T108	Condition-Name 1056 1084	human immunodeficiency virus
+T109	Procedure-Name 1097 1114	radiation therapy
+T110	Eq-Operator 1130 1136	within
+T111	Eq-Value 1137 1138	1
+T112	Eq-Temporal-Unit 1139 1143	week
+T113	Eq-Operator 1145 1154	more than
+T114	Eq-Value 1155 1157	30
+T115	Eq-Unit 1157 1158	%
+T116	Procedure-Name 1159 1188	bone marrow radiation therapy
+T118	Procedure-Name 1202 1219	radiation therapy
+T119	Eq-Operator 1233 1239	within
+T120	Eq-Value 1240 1241	4
+T121	Eq-Temporal-Unit 1242 1247	weeks
+T122	Eq-Operator 1254 1255	≤
+T123	Eq-Value 1256 1257	4
+T124	Eq-Temporal-Unit 1258 1263	weeks
+T125	Procedure-Name 1275 1282	surgery
+T126	Eq-Operator 1286 1287	≤
+T127	Eq-Value 1288 1289	2
+T128	Eq-Temporal-Unit 1290 1295	weeks
+T129	Procedure-Name 1307 1314	surgery
+T130	Procedure-Name 25 39	Histologically
+T131	Eq-Value 142 143	1
+T132	Eq-Operator 141 142	-
+T133	Negation 206 211	never
+T134	Procedure-Name 346 356	irradiated
+T135	Eq-Value 453 456	one
+T136	Assertion 504 516	sensitive to
+T27	Condition-Name 619 636	exon 20 insertion
+T46	Drug 842 846	drug
+T137	Eq-Temporal-Period 1118 1129	carried out
+T117	Severity 1192 1201	extensive
+T138	Severity 1269 1274	major
+T139	Severity 1301 1306	minor
+A1	Temporal-Connection-Type-Value E20 before
+A2	Assertion-Type-Value E49 hypothetical
+A3	Temporal-Connection-Type-Value E70 after
+A4	Temporal-Connection-Type-Value E74 after
+A5	Observation-Type-Value T78 clinical-score
+A6	Eq-Temporal-Period-Value T81 past
+A7	Eq-Operator-Value T82 GTEQ
+A8	Eq-Temporal-Period-Value T85 past
+A9	Observation-Type-Value T86 lab
+A10	Polarity-Value T90 positive
+A11	Eq-Temporal-Period-Value T93 past
+A12	Polarity-Value T96 positive
+A13	Eq-Temporal-Period-Value T97 past
+A14	Eq-Temporal-Period-Value T102 present
+A15	Eq-Temporal-Period-Value T104 present
+A16	Eq-Operator-Value T110 LTEQ
+A17	Eq-Temporal-Unit-Value T112 week
+A18	Eq-Operator-Value T113 GT
+A20	Eq-Operator-Value T119 LTEQ
+A21	Eq-Temporal-Unit-Value T121 week
+A22	Eq-Operator-Value T122 LTEQ
+A23	Eq-Temporal-Unit-Value T124 week
+A24	Eq-Operator-Value T126 LTEQ
+A25	Eq-Temporal-Unit-Value T128 week
+A26	Eq-Operator-Value T132 BETWEEN
+A27	Assertion-Type-Value E77 hypothetical
+A28	Eq-Temporal-Period-Value T137 past
+A19	Severity-Value T117 severe
+A29	Severity-Value T138 severe
+A30	Severity-Value T139 mild
+R1	Found-By Arg1:E6 Arg2:E1
+R2	Found-By Arg1:E6 Arg2:E3
+R3	Treatment-For Arg1:E14 Arg2:E12
+R4	Treatment-For Arg1:E19 Arg2:E16
+R5	Found-By Arg1:E23 Arg2:E22
+R6	Caused-By Arg1:E25 Arg2:E23
+R7	Treatment-For Arg1:E26 Arg2:E25
+R8	Treatment-For Arg1:E37 Arg2:E41
+R9	Caused-By Arg1:E47 Arg2:E27
+R10	Treatment-For Arg1:E50 Arg2:E48
+R11	Example-Of Arg1:E56 Arg2:E55
+R12	Example-Of Arg1:E57 Arg2:E55
+R13	Example-Of Arg1:E59 Arg2:E55

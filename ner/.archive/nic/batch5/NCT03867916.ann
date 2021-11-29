@@ -1,0 +1,88 @@
+E1	Condition:T1 Name:T24
+E2	Or:T2 Arg:T27 Arg2:T28
+E3	Eq-Comparison:T3 Temporal-Period:T29
+E4	Condition:T4 Name:T30 Temporality:E3
+E5	Condition:T5 Name:T31
+E6	Condition:T6 Name:T32
+E7	Or:T7 Arg:T35 Arg2:T36
+E8	Eq-Comparison:T8 Unit:T37 Value:T38 Operator:T39 Value:T40
+E9	Modifier:T9 Modifies:T41
+E10	Modifier:T10 Modifies:T41
+E11	Or:T11 Arg:E10 Arg2:E12
+E12	Modifier:T12 Modifies:T41
+E13	Condition:T13 Name:T41 Stage:E8
+E14	Negation:T14 Negates:E16
+E15	Eq-Comparison:T15 Temporal-Period:T42
+E16	Procedure:T16 Temporality:E15
+E17	Assertion:T17 Asserted:E18
+E18	Study:T18 Duration:E19
+E19	Eq-Comparison:T19 Value:T43 Temporal-Unit:T44
+E20	Modifier:T20 Modifies:E23
+E21	Or:T21 Arg:E20 Arg2:E22
+E22	Modifier:T22 Modifies:E23
+E23	Condition:T23
+E24	Provider:T48 Role:T49
+E25	Provider:T50
+E26	And:T52 Arg:T51 Arg2:E6
+T1	Condition 58 64	Cancer
+T2	Or 171 173	or
+T3	Eq-Comparison 192 199	history
+T4	Condition 203 209	cancer
+T5	Condition 326 332	cancer
+T6	Condition 492 498	cancer
+T7	Or 635 637	or
+T8	Eq-Comparison 654 665	stage I-III
+T9	Modifier 666 676	colorectal
+T10	Modifier 678 682	lung
+T11	Or 684 686	or
+T12	Modifier 687 692	liver
+T13	Condition 693 699	cancer
+T14	Negation 705 708	not
+T15	Eq-Comparison 713 722	undergone
+T16	Procedure 723 732	treatment
+T17	Assertion 776 786	willing to
+T18	Study 799 804	study
+T19	Eq-Comparison 809 819	six months
+T20	Modifier 849 856	medical
+T21	Or 857 859	or
+T22	Modifier 860 873	psychological
+T23	Condition 874 884	conditions
+T24	Condition-Name 58 64	Cancer
+T25	Language 141 148	English
+T26	Language 150 158	Mandarin
+T27	Language 160 169	Cantonese
+T28	Language 174 184	Vietnamese
+T29	Eq-Temporal-Period 192 199	history
+T30	Condition-Name 203 209	cancer
+T31	Condition-Name 326 332	cancer
+T32	Condition-Name 492 498	cancer
+T33	Language 605 612	English
+T34	Language 614 622	Mandarin
+T35	Language 624 633	Cantonese
+T36	Language 638 648	Vietnamese
+T37	Eq-Unit 654 659	stage
+T38	Eq-Value 660 661	I
+T39	Eq-Operator 661 662	-
+T40	Eq-Value 662 665	III
+T41	Condition-Name 693 699	cancer
+T42	Eq-Temporal-Period 713 722	undergone
+T43	Eq-Value 809 812	six
+T44	Eq-Temporal-Unit 813 819	months
+T45	Ethnicity 94 108	Asian American
+T46	Location 119 132	San Francisco
+T47	Ethnicity 311 325	Asian American
+T48	Provider 401 411	physicians
+T49	Provider-Role 401 411	physicians
+T50	Provider 422 442	health professionals
+T51	Ethnicity 463 477	Asian American
+T52	And 487 491	with
+T53	Ethnicity 558 572	Asian American
+T54	Location 583 596	San Francisco
+A1	Assertion-Type-Value E17 hypothetical
+A2	Eq-Temporal-Period-Value T29 past
+A3	Eq-Operator-Value T39 BETWEEN
+A4	Eq-Temporal-Period-Value T42 past
+A5	Eq-Temporal-Unit-Value T44 month
+A6	Location-Value T46 residence
+A7	Location-Value T54 residence
+R1	Treatment-For Arg1:E16 Arg2:E13

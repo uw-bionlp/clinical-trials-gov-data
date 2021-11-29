@@ -8,44 +8,37 @@ E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
 E19	Condition:T19 Name:T20
 E23	Condition:T23 Name:T24
-E24	Age:T36 Eq-Comparison:E28
-E26	Age:T38 Eq-Comparison:E29
+E24	Age:T36 Numeric-Filter:E28
+E26	Age:T38 Numeric-Filter:E29
 E28	Eq-Comparison:T45 Operator:T25 Temporal-Unit:T29 Value:T41
 E29	Eq-Comparison:T46 Operator:T26 Value:T42
 E30	Eq-Comparison:T47 Operator:T27 Value:T43 Unit:T51 Per:T52
 E31	Eq-Comparison:T48 Operator:T28 Temporal-Unit:T33 Value:T44 Temporal-Period:T102
 E2	Condition:T49 Name:T50 Stage:E55
-E4	And:T37 Arg:E24 Arg2:E26
-E6	Observation:T39 Name:T40 Eq-Comparison:E30
-E8	Age:T53 Eq-Comparison:E10
+E6	Observation:T39 Name:T40 Numeric-Filter:E30
+E8	Age:T53 Numeric-Filter:E10
 E10	Eq-Comparison:T54 Temporal-Unit:T31 Value:T56 Operator:T55
-E12	Age:T57 Eq-Comparison:E14
+E12	Age:T57 Numeric-Filter:E14
 E14	Eq-Comparison:T58 Temporal-Unit:T32 Value:T60 Operator:T59
-E16	Or:T61 Arg:E8 Arg2:E12
 E18	Condition:T62 Name:T63
-E20	Or:T64 Arg:E3 Arg2:E18
 E22	Modifier:T65 Modifies:T2
 E25	Modifier:T66 Modifies:T2
-E27	Or:T67 Arg:E22 Arg2:E25
-E32	Study:T68 
-E33	Temporal-Connection:T69 Arg:E9 Arg2:E32
+E32	Study:T68
 E34	Condition:T70 Name:T71 Polarity:T72
 E35	Condition:T73 Name:T74
 E36	Modifier:T75 Modifies:E38
 E37	Modifier:T76 Modifies:T78
 E38	Condition:T77 Name:T78
 E39	Modifier:T79 Modifies:T78
-E40	Or:T80 Arg:E37 Arg2:E39
 E41	Negation:T81 Negates:E36
 E42	Observation:T82 Name:T83
 E43	Assertion:T84 Asserted:E54
 E44	Drug:T86 Name:T85
-E45	Or:T87 Arg:E44 Arg2:E13
 E46	Condition:T88 Name:T89 Severity:T104
 E47	Negation:T90 Negates:E15
-E17	Death:T17 
+E17	Death:T17
 E48	Assertion:T18 Asserted:E17
-E49	Condition:T91 Name:T92 Severity:T105 Stability:T106
+E49	Observation:T91 Name:T92 Severity:T105 Stability:T106
 E50	Condition:T93 Name:T94
 E51	Condition:T95 Name:T96 Temporality:E52
 E52	Eq-Comparison:T97 Temporal-Period:T98
@@ -94,7 +87,6 @@ T47	Eq-Comparison 345 352	≥2ng/ml
 T48	Eq-Comparison 533 557	within the past 3 months
 T49	Condition 153 159	sepsis
 T50	Condition-Name 153 159	sepsis
-T37	And 304 307	and
 T39	Observation 331 344	Procalcitonin
 T40	Observation-Name 331 344	Procalcitonin
 T51	Eq-Unit 347 349	ng
@@ -107,15 +99,11 @@ T57	Age 395 398	age
 T58	Eq-Comparison 398 407	＞80 years
 T59	Eq-Operator 398 399	＞
 T60	Eq-Value 399 401	80
-T61	Or 392 394	or
 T62	Condition 427 436	lactating
 T63	Condition-Name 427 436	lactating
-T64	Or 424 426	or
 T65	Modifier 444 455	solid-organ
 T66	Modifier 459 470	bone marrow
-T67	Or 456 458	or
 T68	Study 650 660	enrollment
-T69	Temporal-Connection 643 649	before
 T70	Condition 667 670	HIV
 T71	Condition-Name 667 670	HIV
 T72	Polarity 671 679	positive
@@ -126,21 +114,19 @@ T76	Modifier 732 737	blood
 T77	Condition 755 761	tumors
 T78	Condition-Name 755 761	tumors
 T79	Modifier 738 754	lymphatic system
-T80	Or 737 738	/
 T81	Negation 766 769	not
 T82	Observation 800 812	limited care
 T83	Observation-Name 800 812	limited care
 T84	Assertion 822 835	commitment to
 T85	Drug-Name 903 926	immunosuppressive drugs
 T86	Drug 903 926	immunosuppressive drugs
-T87	Or 927 929	or
 T88	Condition 981 987	tumors
 T89	Condition-Name 981 987	tumors
 T90	Negation 1017 1020	non
 T17	Death 1055 1060	death
 T18	Assertion 1040 1050	leading to
-T91	Condition 1082 1090	bleeding
-T92	Condition-Name 1082 1090	bleeding
+T91	Observation 1082 1090	bleeding
+T92	Observation-Name 1082 1090	bleeding
 T93	Condition 1098 1104	hernia
 T94	Condition-Name 1098 1104	hernia
 T95	Condition 1140 1149	infection
@@ -155,6 +141,10 @@ T101	Negation 814 821	lack of
 T34	Eq-Comparison 160 161	3
 T35	Eq-Value 160 161	3
 T102	Eq-Temporal-Period 544 548	past
+T103	Severity 564 572	Advanced
+T104	Severity 972 980	advanced
+T105	Severity 1076 1081	major
+T106	Stability 1061 1075	uncontrollable
 A1	Eq-Operator-Value T25 GTEQ
 A2	Eq-Operator-Value T26 LTEQ
 A3	Eq-Operator-Value T27 GTEQ
@@ -164,26 +154,29 @@ A6	Eq-Temporal-Unit-Value T30 year
 A7	Eq-Temporal-Unit-Value T31 year
 A8	Eq-Temporal-Unit-Value T32 year
 A9	Eq-Temporal-Unit-Value T33 month
-A10	Observation-Type-Value T40 lab
+A10	Observation-Type-Value E6 lab
 A11	Eq-Operator-Value T55 LT
 A12	Eq-Operator-Value T59 GT
-A13	Temporal-Connection-Type-Value E33 before
 A14	Polarity-Value T72 positive
 A15	Assertion-Type-Value E43 hypothetical
 A16	Assertion-Type-Value E48 hypothetical
 A17	Eq-Temporal-Period-Value T98 present
 A18	Eq-Temporal-Period-Value T102 past
+A19	Severity-Value T103 severe
+A20	Severity-Value T104 severe
+A21	Severity-Value T105 severe
+A22	Stability-Value T106 change
 R2	Caused-By Arg1:E17 Arg2:E15
 R3	Example-Of Arg1:E49 Arg2:E15
 R4	Example-Of Arg1:E19 Arg2:E15
 R5	Example-Of Arg1:E50 Arg2:E15
 R6	Example-Of Arg1:E53 Arg2:E51
 R1	Equivalent-To Arg1:E54 Arg2:E42
-T103	Severity 564 572	Advanced
-A19	Severity-Value T103 severe
-T104	Severity 972 980	advanced
-A20	Severity-Value T104 severe
-T105	Severity 1076 1081	major
-A21	Severity-Value T105 severe
-T106	Stability 1061 1075	uncontrollable
-A22	Stability-Value T106 change
+R7	And Arg1:E24 Arg2:E26
+R8	Or Arg1:E8 Arg2:E12
+R9	Or Arg1:E3 Arg2:E18
+R10	Or Arg1:E22 Arg2:E25
+R11	Before Arg1:E9 Arg2:E32
+R12	Or Arg1:E37 Arg2:E39
+R13	Or Arg1:E44 Arg2:E13
+R14	Or Arg1:E49 Arg2:E19

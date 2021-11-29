@@ -1,16 +1,12 @@
 E1	Eq-Comparison:T1 Value:T61 Operator:T2 Temporal-Unit:T90 Value2:T93 Temporal-Unit2:T91
-E3	Temporal-Connection:T3 Arg:E1 Arg2:E4
 E4	Procedure:T4 Name:T94
 E5	Procedure:T5 Name:T95
 E6	Modifier:T6 Modifies:T95
-E7	Or:T7 Arg:E6 Arg2:E8
 E8	Modifier:T8 Modifies:T95
-E9	And:T9 Arg:E5 Arg2:E10
 E10	Procedure:T10 Name:T96
 E11	Eq-Comparison:T11 Temporal-Period:T97
 E12	Procedure:T12 Temporality:E11 Duration:E20 Temporality2:E21
 E13	Drug:T13 Name:T98
-E14	Or:T14 Arg:E13 Arg2:E16
 E16	Drug:T16 Name:T99
 E17	Drug:T17 Name:T100
 E19	Modifier:T19
@@ -19,28 +15,23 @@ E21	Eq-Comparison:T21 Temporal-Period:T105 Value:T106 Temporal-Unit:T107
 E22	Modifier:T22 Modifies:T108
 E23	Condition:T23 Name:T108
 E24	Condition:T24 Name:T18 Stability:T109
-E25	And:T25 Arg:E26 Arg2:E24
 E26	Negation:T26 Negates:E27
 E27	Assertion:T27 Asserted:E28
-E28	Observation:T101 Name:T92 Eq-Comparison:E29
+E28	Observation:T101 Name:T92 Numeric-Filter:E29
 E29	Eq-Comparison:T29 Operator:T110 Value:T111 Unit:T112
 E31	Assertion:T31 Asserted:E32
 E32	Drug:T32 Name:T114
 E33	Assertion:T33 Asserted:E34
 E34	Drug:T34 Name:T115
 E35	Drug:T35 Name:T116
-E36	Or:T36 Arg:E35 Arg2:E37
 E37	Drug:T37 Name:T117 Duration:E39
 E39	Eq-Comparison:T39 Operator:T118 Value:T119 Temporal-Unit:T120
-E40	Temporal-Connection:T40 Arg:E37 Arg2:E91
 E41	Condition:T41 Name:T122
 E42	Assertion:T42 Asserted:E43
 E43	Procedure:T43
 E44	Eq-Comparison:T44 Temporal-Period:T123
 E45	Condition:T45 Name:T124 Temporality:E44
 E47	Eq-Comparison:T47 Operator:T126 Value:T127 Temporal-Unit:T128
-E48	Temporal-Connection:T48 Arg:E47 Arg2:E49
-E51	Temporal-Connection:T51 Arg:E49 Arg2:E52
 E52	Procedure:T52 Name:T49
 E53	Eq-Comparison:T53 Temporal-Period:T130
 E54	Modifier:T54 Modifies:T131
@@ -48,7 +39,6 @@ E55	Condition:T55 Name:T131 Temporality:E53
 E56	Condition:T56 Name:T133 Stage:E57 Acuteness:T132
 E57	Eq-Comparison:T57 Operator:T134 Unit:T135 Value:T136
 E58	Assertion:T58 Asserted:E61
-E59	Or:T59 Arg:E58 Arg2:E60
 E60	Assertion:T60 Asserted:E88
 E61	Procedure:T62 Name:T137
 E62	Procedure:T63 Name:T138
@@ -57,19 +47,15 @@ E64	Procedure:T65 Temporality:E63 Temporality2:E67
 E65	Study:T66 Study-Of:E66
 E66	Drug:T67
 E67	Eq-Comparison:T68 Operator:T140 Value:T141 Temporal-Unit:T142
-E68	Temporal-Connection:T69 Arg:E67 Arg2:E69
 E69	Study:T70
 E70	Negation:T71 Negates:E71
 E71	Procedure:T72 Name:T143
 E72	Drug:T73 Name:T144
-E73	Or:T74 Arg:E72 Arg2:E74
 E74	Drug:T75 Name:T145
 E75	Eq-Comparison:T76 Temporal-Period:T146
 E76	Allergy:T77 Temporality:E75 Name:E79
-E77	Or:T78 Arg:E76 Arg2:E78
 E78	Condition:T79 Name:T147
 E80	Modifier:T81 Modifies:E83
-E81	Or:T82 Arg:E80 Arg2:E82
 E82	Modifier:T83 Modifies:E83
 E83	Condition:T84
 E84	Assertion:T85 Asserted:T148
@@ -80,27 +66,21 @@ E2	Modifier:T15 Modifies:T100
 E15	Modifier:T30 Modifies:T92
 E30	Modifier:T113 Modifies:T114
 E89	Modifier:T150 Modifies:T115
-E90	And:T151 Arg:E34 Arg2:E35
 E38	Modifier:T38 Modifies:T117
 E91	Procedure:T152 Name:T121
 E46	Organism:T46 Name:T125
 E49	Procedure:T50 Name:T129
 E50	Assertion:T153 Asserted:E70
 E79	Coreference:T80 Refers-To:E74 Refers-To2:E72
-E86	Or:T87 Arg:E87 Arg2:T149
 T1	Eq-Comparison 42 65	day -10 pre- to day +30
-T3	Temporal-Connection 66 70	post
 T4	Procedure 71 111	allogeneic hematopoietic cell transplant
 T5	Procedure 113 117	AHCT
 T6	Modifier 128 133	donor
-T7	Or 134 136	or
 T8	Modifier 137 149	graft source
-T9	And 150 153	and
 T10	Procedure 162 182	conditioning regimen
 T11	Eq-Comparison 206 214	received
 T12	Procedure 215 224	treatment
 T13	Drug 230 239	meropenem
-T14	Or 240 242	or
 T16	Drug 243 266	piperacillin-tazobactam
 T17	Drug 268 276	pip-tazo
 T19	Modifier 293 295	IV
@@ -109,7 +89,6 @@ T21	Eq-Comparison 332 343	past 7 days
 T22	Modifier 349 359	Controlled
 T23	Condition 360 369	infection
 T24	Condition 381 396	hemodynamically
-T25	And 404 407	and
 T26	Negation 408 411	not
 T27	Assertion 412 421	requiring
 T29	Eq-Comparison 445 467	more than 2 liters via
@@ -118,18 +97,14 @@ T32	Drug 517 533	oral medications
 T33	Assertion 703 717	anticipated to
 T34	Drug 751 762	antibiotics
 T35	Drug 768 777	meropenem
-T36	Or 778 780	or
 T37	Drug 781 789	pip-tazo
 T39	Eq-Comparison 797 807	> 96 hours
-T40	Temporal-Connection 808 812	post
 T41	Condition 855 865	infections
 T42	Assertion 866 879	necessitating
 T43	Procedure 890 899	treatment
 T44	Eq-Comparison 921 926	prior
 T45	Condition 938 947	infection
 T47	Eq-Comparison 988 1007	greater than 2 days
-T48	Temporal-Connection 1008 1012	from
-T51	Temporal-Connection 1044 1048	post
 T52	Procedure 1049 1053	AHCT
 T53	Eq-Comparison 1073 1079	active
 T54	Modifier 1080 1087	enteric
@@ -137,7 +112,6 @@ T55	Condition 1088 1098	infections
 T56	Condition 1124 1128	GVHD
 T57	Eq-Comparison 1129 1140	>= grade II
 T58	Assertion 1155 1164	unwilling
-T59	Or 1165 1167	or
 T60	Assertion 1168 1174	unable
 T62	Procedure 1190 1193	FMT
 T63	Procedure 1198 1223	retention enema procedure
@@ -146,19 +120,15 @@ T65	Procedure 1256 1265	treatment
 T66	Study 1274 1289	investigational
 T67	Drug 1290 1295	agent
 T68	Eq-Comparison 1296 1310	within 2 weeks
-T69	Temporal-Connection 1311 1313	of
 T70	Study 1314 1324	enrollment
 T71	Negation 1339 1357	unable to tolerate
 T72	Procedure 1358 1378	oral decontamination
 T73	Drug 1390 1398	pip-tazo
-T74	Or 1399 1402	and
 T75	Drug 1403 1411	nystatin
 T76	Eq-Comparison 1419 1424	prior
 T77	Allergy 1425 1432	allergy
-T78	Or 1433 1435	or
 T79	Condition 1436 1447	intolerance
 T81	Modifier 1492 1499	medical
-T82	Or 1500 1502	or
 T83	Modifier 1503 1516	psychological
 T84	Condition 1517 1526	condition
 T85	Assertion 1569 1574	might
@@ -229,7 +199,6 @@ T30	Modifier 468 481	nasal cannula
 T101	Observation 422 441	supplemental oxygen
 T113	Modifier 537 552	suspension form
 T150	Modifier 736 750	broad spectrum
-T151	And 763 767	with
 T38	Modifier 790 792	IV
 T152	Procedure 813 824	engraftment
 T46	Organism 953 965	mycormycetes
@@ -239,18 +208,12 @@ T50	Procedure 1021 1043	neutrophil engraftment
 T129	Procedure-Name 1021 1043	neutrophil engraftment
 T153	Assertion 1339 1357	unable to tolerate
 T80	Coreference 1451 1468	these medications
-T87	Or 1674 1676	or
-A1	Temporal-Connection-Type-Value E3 after
 A2	Assertion-Type-Value E27 hypothetical
 A3	Assertion-Type-Value E31 hypothetical
 A4	Assertion-Type-Value E33 hypothetical
-A5	Temporal-Connection-Type-Value E40 after
 A6	Assertion-Type-Value E42 hypothetical
-A7	Temporal-Connection-Type-Value E48 after
-A8	Temporal-Connection-Type-Value E51 after
 A9	Assertion-Type-Value E58 hypothetical
 A10	Assertion-Type-Value E60 hypothetical
-A11	Temporal-Connection-Type-Value E68 before
 A12	Assertion-Type-Value E84 hypothetical
 A13	Eq-Temporal-Unit-Value T90 day
 A14	Eq-Temporal-Unit-Value T91 day
@@ -294,3 +257,19 @@ R14	Caused-By Arg1:E70 Arg2:E76
 R15	Caused-By Arg1:T148 Arg2:E83
 R16	Caused-By Arg1:E87 Arg2:E83
 R17	Caused-By Arg1:T149 Arg2:E83
+R18	After Arg1:E1 Arg2:E4
+R19	Or Arg1:E6 Arg2:E8
+R20	And Arg1:E5 Arg2:E10
+R21	Or Arg1:E13 Arg2:E16
+R22	And Arg1:E26 Arg2:E24
+R23	Or Arg1:E35 Arg2:E37
+R24	After Arg1:E37 Arg2:E91
+R25	After Arg1:E47 Arg2:E49
+R26	After Arg1:E49 Arg2:E52
+R27	Or Arg1:E58 Arg2:E60
+R28	Before Arg1:E67 Arg2:E69
+R29	Or Arg1:E72 Arg2:E74
+R30	Or Arg1:E76 Arg2:E78
+R31	Or Arg1:E80 Arg2:E82
+R32	And Arg1:E34 Arg2:E35
+R33	Or Arg1:E87 Arg2:T149

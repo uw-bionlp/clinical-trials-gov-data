@@ -1,25 +1,22 @@
 E3	Procedure:T3 Name:T4 Temporality:E4 Location:T27
 E5	Condition:T5 Name:T6
 E9	Procedure:T9 Name:T10
-E10	Age:T13 Eq-Comparison:E2
+E10	Age:T13 Numeric-Filter:E2
 E11	Eq-Comparison:T19 Operator:T11 Value:T18 Unit:T40
 E12	Eq-Comparison:T20 Operator:T14 Value:T16 Value2:T17 Temporal-Unit:T12
 E2	Eq-Comparison:T22 Value:T15 Operator:T23
 E4	Eq-Comparison:T24 Temporal-Period:T25
 E1	Modifier:T1 Modifies:T4
 E6	Modifier:T2 Modifies:T4
-E8	Or:T26 Arg:E6 Arg2:E1
 E13	Modifier:T29 Modifies:T6
-E14	Encounter:T30 Type:T31
-E15	Temporal-Connection:T32 Arg:E12 Arg2:E14
+E14	Encounter:T30
 E16	Contraindication:T33 Contraindicates:E17
 E7	Negation:T7 Negates:E16
-E17	Encounter:T8 Type:T34
+E17	Encounter:T8
 E18	Modifier:T35 Modifies:T10
 E19	Modifier:T36 Modifies:T10
-E20	Or:T37 Arg:E18 Arg2:E19
 E21	Negation:T39 Negates:T38
-E22	Observation:T41 Name:T42 Eq-Comparison:E11
+E22	Observation:T41 Name:T42 Numeric-Filter:E11
 T3	Procedure 79 87	abortion
 T4	Procedure-Name 79 87	abortion
 T5	Condition 211 220	pregnancy
@@ -43,20 +40,15 @@ T24	Eq-Comparison 48 58	undergoing
 T25	Eq-Temporal-Period 48 58	undergoing
 T1	Modifier 70 78	surgical
 T2	Modifier 59 66	medical
-T26	Or 67 69	or
 T27	Location 91 121	Planned Parenthood of Illinois
 T28	Location 123 127	PPIL
 T29	Modifier 198 210	intrauterine
 T30	Encounter 303 321	clinic appointment
-T31	Encounter-Type 303 321	clinic appointment
-T32	Temporal-Connection 293 298	after
 T33	Contraindication 333 350	contraindications
 T7	Negation 330 332	no
 T8	Encounter 357 367	outpatient
-T34	Encounter-Type 357 367	outpatient
 T35	Modifier 368 378	medication
 T36	Modifier 382 390	surgical
-T37	Or 379 381	or
 T38	Language 516 523	English
 T39	Negation 512 515	non
 T40	Eq-Unit 574 579	grade
@@ -69,8 +61,10 @@ A4	Life-Stage-And-Gender-Type T21 female
 A5	Eq-Operator-Value T23 GTEQ
 A6	Eq-Temporal-Period-Value T25 present
 A7	Location-Value T27 clinic
-A8	Encounter-Type-Value T31 outpatient
-A9	Temporal-Connection-Type-Value E15 after
-A10	Encounter-Type-Value T34 outpatient
+A8	Encounter-Type-Value E14 outpatient
+A10	Encounter-Type-Value E17 outpatient
 R1	Abbrev-Of Arg1:T28 Arg2:T27
 R2	Using Arg1:E17 Arg2:E9
+R3	Or Arg1:E6 Arg2:E1
+R4	After Arg1:E12 Arg2:E14
+R5	Or Arg1:E18 Arg2:E19

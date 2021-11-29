@@ -3,7 +3,7 @@ E3	Condition:T3 Name:T4 Severity:T27
 E5	Condition:T5 Name:T6 Temporality:E12
 E9	Condition:T9 Name:T10 Temporality:E26
 E13	Procedure:T13 Name:T14 Temporality:E22
-E14	Age:T15 Eq-Comparison:E2
+E14	Age:T15 Numeric-Filter:E2
 E2	Eq-Comparison:T20 Operator:T21 Value:T18
 E4	Procedure:T22 Name:T23
 E8	Condition:T25 Name:T26 Temporality:E6
@@ -12,8 +12,7 @@ E11	Condition:T29 Name:T30 Temporality:E23
 E15	Condition:T32 Name:T33 Temporality:E24 Acuteness:T50
 E16	Observation:T19 Name:T34 Temporality:E28
 E17	Procedure:T35 Name:T36
-E19	Or:T38 Arg:T12 Arg2:T11
-E20	Observation:T39 Name:T40 Eq-Comparison:E21
+E20	Observation:T39 Name:T40 Numeric-Filter:E21
 E21	Eq-Comparison:T41 Value:T16 Value2:T17 Unit:T42
 E22	Eq-Comparison:T43 Temporal-Period:T44
 E6	Eq-Comparison:T7 Temporal-Period:T8
@@ -24,7 +23,6 @@ E24	Eq-Comparison:T48 Temporal-Period:T49
 E26	Eq-Comparison:T51 Temporal-Period:T52
 E27	Assertion:T53 Asserted:E16
 E28	Eq-Comparison:T54 Temporal-Unit:T55
-E18	Temporal-Connection:T37 Arg:E28 Arg2:E17
 T1	Procedure 336 353	local anaesthesia
 T2	Procedure-Name 336 353	local anaesthesia
 T3	Condition 306 318	coagulopathy
@@ -57,7 +55,6 @@ T19	Observation 548 560	QoR-15 score
 T34	Observation-Name 548 560	QoR-15 score
 T35	Procedure 571 578	surgery
 T36	Procedure-Name 571 578	surgery
-T38	Or 30 33	and
 T39	Observation 95 98	ASA
 T40	Observation-Name 95 98	ASA
 T41	Eq-Comparison 99 109	grade 1- 4
@@ -79,11 +76,10 @@ T52	Eq-Temporal-Period 481 493	pre-existing
 T53	Assertion 515 522	need to
 T54	Eq-Comparison 561 564	day
 T55	Eq-Temporal-Unit 561 564	day
-T37	Temporal-Connection 565 570	after
 A1	Life-Stage-And-Gender-Type T11 female
 A2	Life-Stage-And-Gender-Type T12 male
 A3	Eq-Operator-Value T21 GT
-A5	Observation-Type-Value T34 clinical-score
+A5	Observation-Type-Value E16 clinical-score
 A7	Eq-Temporal-Period-Value T44 present
 A8	Eq-Temporal-Period-Value T8 past
 A9	Severity-Value T27 severe
@@ -93,7 +89,8 @@ A11	Eq-Temporal-Period-Value T49 past
 A12	Eq-Temporal-Period-Value T52 past
 A13	Assertion-Type-Value E27 hypothetical
 A14	Eq-Temporal-Unit-Value T55 day
-A6	Temporal-Connection-Type-Value E18 after
-A15	Observation-Type-Value T40 clinical-score
+A15	Observation-Type-Value E20 clinical-score
 A16	Acuteness-Type-Value T50 chronic
 R1	Using Arg1:E13 Arg2:E4
+R2	Or Arg1:T12 Arg2:T11
+R3	After Arg1:E28 Arg2:E17

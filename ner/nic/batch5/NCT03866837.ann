@@ -4,23 +4,21 @@ E3	Eq-Comparison:T3 Value:T28 Temporal-Unit:T29 Operator:T54
 E4	Eq-Comparison:T4 Temporal-Unit:T31 Operator:T30 Value:T55
 E5	Family-Member:T5 Has:E7
 E6	Eq-Comparison:T6 Operator:T32 Temporal-Unit:T33 Value:T56
-E7	Age:T7 Eq-Comparison:E6
+E7	Age:T7 Numeric-Filter:E6
 E8	Condition:T8 Name:T35
 E9	Study:T9
-E10	Observation:T10 Name:T36 Eq-Comparison:E11
+E10	Observation:T10 Name:T36 Numeric-Filter:E11
 E11	Eq-Comparison:T11 Operator:T37 Value:T38 Unit:T40 Per:T39
-E13	Observation:T13 Name:T41 Eq-Comparison:E28
-E14	Or:T14 Arg:E13 Arg2:E15
+E13	Observation:T13 Name:T41 Numeric-Filter:E28
 E15	Observation:T15 Name:T42
-E16	Observation:T16 Name:T43 Eq-Comparison:E28
+E16	Observation:T16 Name:T43 Numeric-Filter:E28
 E17	Family-Member:T17 Has:E20
-E18	Or:T18 Arg:E17 Arg2:E29
 E20	Condition:T20 Name:T45 Acuteness:T60
 E23	Drug:T23 Name:T47 Temporality:E24
 E24	Eq-Comparison:T24 Temporal-Period:T48 Value:T49 Temporal-Unit:T50
 E25	Eq-Comparison:T25 Temporal-Period:T51
 E26	Drug:T26 Name:T52
-E27	Age:T53 Eq-Comparison:E3 Eq-Comparison2:E4
+E27	Age:T53 Numeric-Filter:E3 Numeric-Filter:E4
 E12	Observation:T12 Name:T57
 E28	Eq-Comparison:T44 Operator:T58 Value:T59
 E29	Family-Member:T19 Has:E20
@@ -28,7 +26,6 @@ E30	Procedure:T61 Temporality:E25
 E31	Family-Member:T62 Has:E30
 E21	Modifier:T21 Modifies:T47
 E22	Modifier:T22 Modifies:T47
-E32	Or:T46 Arg:E22 Arg2:E21
 E33	Family-Member:T63 Has:E23
 T1	Procedure 25 41	vaginal delivery
 T2	Family-Member 50 56	infant
@@ -42,11 +39,9 @@ T9	Study 192 197	study
 T10	Observation 276 286	hemoglobin
 T11	Eq-Comparison 287 295	< 70 g/L
 T13	Observation 330 333	WAZ
-T14	Or 335 337	or
 T15	Observation 338 355	weight-for-height
 T16	Observation 357 360	WHZ
 T17	Family-Member 375 383	maternal
-T18	Or 384 386	or
 T20	Condition 402 409	illness
 T23	Drug 463 474	supplements
 T24	Eq-Comparison 483 496	past 2 months
@@ -91,7 +86,6 @@ T61	Procedure 535 544	treatment
 T62	Family-Member 517 523	infant
 T21	Modifier 455 462	mineral
 T22	Modifier 444 451	vitamin
-T46	Or 452 454	or
 T63	Family-Member 437 443	infant
 A1	Family-Member-Type E2 child
 A2	Eq-Temporal-Unit-Value T29 month
@@ -99,16 +93,16 @@ A3	Eq-Temporal-Unit-Value T31 week
 A4	Eq-Operator-Value T32 GTEQ
 A5	Eq-Temporal-Unit-Value T33 year
 A6	Life-Stage-And-Gender-Type T34 infant
-A7	Observation-Type-Value T36 lab
+A7	Observation-Type-Value E10 lab
 A8	Eq-Operator-Value T37 LT
-A9	Observation-Type-Value T42 measurement
+A9	Observation-Type-Value E15 measurement
 A10	Eq-Temporal-Period-Value T48 past
 A11	Eq-Temporal-Unit-Value T50 month
 A12	Eq-Temporal-Period-Value T51 past
 A13	Eq-Operator-Value T54 EQ
 A14	Eq-Operator-Value T30 PLUS-MINUS
 A15	Family-Member-Type E5 mother
-A16	Observation-Type-Value T57 measurement
+A16	Observation-Type-Value E12 measurement
 A17	Eq-Operator-Value T58 LT
 A18	Family-Member-Type E17 mother
 A19	Family-Member-Type E29 child
@@ -118,3 +112,6 @@ A22	Acuteness-Type-Value T60 chronic
 R1	Abbrev-Of Arg1:E13 Arg2:E12
 R2	Abbrev-Of Arg1:E16 Arg2:E15
 R3	Using Arg1:E30 Arg2:E26
+R4	Or Arg1:E13 Arg2:E15
+R5	Or Arg1:E17 Arg2:E29
+R6	Or Arg1:E22 Arg2:E21

@@ -1,0 +1,123 @@
+E1	Condition:T1 Name:T2 Temporality:E19
+E3	Condition:T3 Name:T4 Temporality:E20
+E4	Eq-Comparison:T27 Operator:T7 Temporal-Unit:T13 Value:T19
+E5	Eq-Comparison:T28 Operator:T8 Unit:T15 Value:T20 Per:T39
+E6	Eq-Comparison:T29 Operator:T9 Value:T21 Per:T40 Unit:T16
+E7	Eq-Comparison:T30 Operator:T10 Unit:T17 Value:T23
+E8	Eq-Comparison:T31 Operator:T11 Unit:T18 Value:T24
+E9	Eq-Comparison:T32 Operator:T12 Value:T25 Unit:T52 Per:T53
+E2	Age:T34 Eq-Comparison:E4
+E10	Observation:T35 Name:T36
+E11	Observation:T37 Name:T38 Eq-Comparison:E5 Eq-Comparison2:E6
+E12	Procedure:T42 Name:T43
+E13	Observation:T22 Name:T44 Eq-Comparison:E7 Eq-Comparison2:E8
+E14	Procedure:T46 Name:T47
+E15	Observation:T48 Name:T49 Polarity:T50 Eq-Comparison:E9
+E16	Or:T51 Arg:E14 Arg2:E15
+E17	Observation:T54 Name:T55 Eq-Comparison:E18
+E18	Eq-Comparison:T56 Operator:T57 Value:T26 Temporal-Unit:T14
+E19	Eq-Comparison:T59 Temporal-Period:T60
+E20	Eq-Comparison:T61 Temporal-Period:T62
+E21	Eq-Comparison:T63 Temporal-Period:T64
+E22	Condition:T65 Name:T66 Temporality:E21
+E23	Observation:T67 Name:T68
+T1	Condition 517 531	kidney failure
+T2	Condition-Name 517 531	kidney failure
+T3	Condition 564 577	liver failure
+T4	Condition-Name 564 577	liver failure
+T7	Eq-Operator 39 40	≥
+T8	Eq-Operator 113 114	<
+T9	Eq-Operator 131 132	<
+T10	Eq-Operator 270 271	<
+T11	Eq-Operator 285 286	<
+T12	Eq-Operator 373 374	<
+T13	Eq-Temporal-Unit 44 49	years
+T14	Eq-Temporal-Unit 451 457	months
+T15	Eq-Unit 116 118	kg
+T16	Eq-Unit 136 138	kg
+T17	Eq-Unit 274 276	kg
+T18	Eq-Unit 289 291	kg
+T19	Eq-Value 41 43	65
+T20	Eq-Value 114 115	7
+T21	Eq-Value 132 135	5.7
+T23	Eq-Value 271 273	26
+T24	Eq-Value 286 288	18
+T25	Eq-Value 374 375	1
+T26	Eq-Value 449 450	6
+T27	Eq-Comparison 39 49	≥ 65 years
+T28	Eq-Comparison 113 122	<7 kg/m^2
+T29	Eq-Comparison 131 142	<5.7 kg/m^2
+T30	Eq-Comparison 270 276	<26 kg
+T31	Eq-Comparison 285 291	<18 kg
+T32	Eq-Comparison 373 379	<1 m/s
+T33	Life-Stage-And-Gender 25 37	Older adults
+T34	Age 44 49	years
+T35	Observation 68 104	lower appendicular muscle mass index
+T36	Observation-Name 68 104	lower appendicular muscle mass index
+T37	Observation 106 110	AMMI
+T38	Observation-Name 106 110	AMMI
+T39	Eq-Unit 119 122	m^2
+T5	Life-Stage-And-Gender 126 129	men
+T40	Eq-Unit 139 142	m^2
+T41	Life-Stage-And-Gender 146 151	women
+T42	Procedure 159 191	Bioelectrical impedance analysis
+T43	Procedure-Name 159 191	Bioelectrical impedance analysis
+T22	Observation 245 268	lower handgrip strength
+T44	Observation-Name 245 268	lower handgrip strength
+T6	Life-Stage-And-Gender 280 283	men
+T45	Life-Stage-And-Gender 295 300	women
+T46	Procedure 308 319	dynamometer
+T47	Procedure-Name 308 319	dynamometer
+T48	Observation 361 371	gait speed
+T49	Observation-Name 361 371	gait speed
+T50	Polarity 354 360	slowly
+T51	Or 351 353	or
+T52	Eq-Unit 376 377	m
+T53	Eq-Temporal-Unit 378 379	s
+T54	Observation 416 431	life expectancy
+T55	Observation-Name 416 431	life expectancy
+T56	Eq-Comparison 436 457	shorter than 6 months
+T57	Eq-Operator 436 448	shorter than
+T58	Location 463 475	Nursing home
+T59	Eq-Comparison 506 513	history
+T60	Eq-Temporal-Period 506 513	history
+T61	Eq-Comparison 553 560	history
+T62	Eq-Temporal-Period 553 560	history
+T63	Eq-Comparison 599 606	history
+T64	Eq-Temporal-Period 599 606	history
+T65	Condition 610 627	diabetes mellitus
+T66	Condition-Name 610 627	diabetes mellitus
+T67	Observation 645 664	resistance exercise
+T68	Observation-Name 645 664	resistance exercise
+A1	Eq-Operator-Value T7 GTEQ
+A2	Eq-Operator-Value T8 LT
+A3	Eq-Operator-Value T9 LT
+A4	Eq-Operator-Value T10 LT
+A5	Eq-Operator-Value T11 LT
+A6	Eq-Operator-Value T12 LT
+A7	Eq-Temporal-Unit-Value T13 year
+A8	Eq-Temporal-Unit-Value T14 month
+A9	Life-Stage-And-Gender-Type T33 elderly
+A10	Observation-Type-Value T36 measurement
+A11	Life-Stage-And-Gender-Type T5 male
+A12	Life-Stage-And-Gender-Type T41 female
+A13	Observation-Type-Value T44 measurement
+A14	Life-Stage-And-Gender-Type T6 male
+A15	Life-Stage-And-Gender-Type T45 female
+A16	Observation-Type-Value T49 measurement
+A17	Polarity-Value T50 low
+A18	Eq-Temporal-Unit-Value T53 second
+A19	Eq-Operator-Value T57 LT
+A20	Location-Value T58 residence
+A21	Eq-Temporal-Period-Value T60 past
+A22	Eq-Temporal-Period-Value T62 past
+A23	Eq-Temporal-Period-Value T64 past
+A24	Observation-Type-Value T68 social-habit
+R1	Equivalent-To Arg1:E2 Arg2:T33
+R2	Abbrev-Of Arg1:E11 Arg2:E10
+R3	If-Then Arg1:T5 Arg2:E5
+R4	If-Then Arg1:T41 Arg2:E6
+R5	Found-By Arg1:E11 Arg2:E12
+R6	If-Then Arg1:T6 Arg2:E7
+R7	If-Then Arg1:T45 Arg2:E8
+R8	Found-By Arg1:E13 Arg2:E14

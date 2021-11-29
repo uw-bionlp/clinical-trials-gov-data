@@ -1,5 +1,5 @@
 E1	Observation:T1 Name:T2
-E3	Observation:T3 Name:T4 Eq-Comparison:E19
+E3	Observation:T3 Name:T4 Numeric-Filter:E19
 E6	Procedure:T6 Name:T7 Temporality:E7
 E8	Procedure:T8 Name:T9
 E10	Condition:T10 Name:T11
@@ -9,25 +9,23 @@ E16	Procedure:T16 Name:T17 Temporality:E13
 E18	Condition:T18 Name:T19 Severity:T49
 E19	Eq-Comparison:T26 Operator:T20 Unit:T23 Value:T24 Per:T27
 E2	Observation:T28 Name:T29
-E4	Observation:T30 Name:T31 Eq-Comparison:E5
+E4	Observation:T30 Name:T31 Numeric-Filter:E5
 E5	Eq-Comparison:T5 Unit:T32 Value:T35 Value2:T33 Operator:T34
 E7	Eq-Comparison:T36 Temporal-Period:T37
-E9	Or:T38 Arg:E6 Arg2:E8
-E11	Condition:T39 Name:T40
+E11	Observation:T39 Name:T40
 E13	Eq-Comparison:T41 Temporal-Unit:T22 Value:T42 Temporal-Period:T21
 E15	Modifier:T43 Modifies:T19
 E17	Negation:T44 Negates:E30
 E20	Modifier:T45 Modifies:T19
 E21	Modifier:T46 Modifies:T19
 E22	Modifier:T47 Modifies:T19
-E23	Or:T48 Arg:E20 Arg2:E17
 E24	Condition:T50 Name:T51
 E25	Drug:T53 Name:T52 Temporality:E26
 E26	Eq-Comparison:T54 Temporal-Period:T55
-E27	Observation:T56 Name:T57 Eq-Comparison:E28
+E27	Observation:T56 Name:T57 Numeric-Filter:E28
 E28	Eq-Comparison:T58 Operator:T59 Value:T25 Unit:T60
-E29	Procedure:T61 
-E30	Procedure:T62 
+E29	Procedure:T61
+E30	Procedure:T62
 T1	Observation 25 40	Body mass index
 T2	Observation-Name 25 40	Body mass index
 T3	Observation 42 45	BMI
@@ -64,9 +62,8 @@ T34	Eq-Operator 146 147	-
 T35	Eq-Value 148 151	III
 T36	Eq-Comparison 167 187	Scheduled to undergo
 T37	Eq-Temporal-Period 167 187	Scheduled to undergo
-T38	Or 226 228	or
-T39	Condition 266 277	weight loss
-T40	Condition-Name 266 277	weight loss
+T39	Observation 266 277	weight loss
+T40	Observation-Name 266 277	weight loss
 T41	Eq-Comparison 421 438	past three months
 T42	Eq-Value 426 431	three
 T43	Modifier 509 516	thyroid
@@ -74,7 +71,6 @@ T44	Negation 499 508	untreated
 T45	Modifier 483 494	psychiatric
 T46	Modifier 466 481	cardiopulmonary
 T47	Modifier 452 464	neurological
-T48	Or 496 498	or
 T49	Severity 445 451	Severe
 T50	Condition 532 554	Chronic pain condition
 T51	Condition-Name 532 554	Chronic pain condition
@@ -90,19 +86,19 @@ T60	Eq-Unit 637 638	%
 T21	Eq-Temporal-Period 421 425	past
 T61	Procedure 356 365	Treatment
 T62	Procedure 499 508	untreated
-A1	Observation-Type-Value T2 vital
-A2	Observation-Type-Value T4 vital
+A1	Observation-Type-Value E1 vital
+A2	Observation-Type-Value E3 vital
 A3	Eq-Operator-Value T20 GTEQ
 A5	Eq-Temporal-Unit-Value T22 month
 A6	Eq-Operator-Value T34 BETWEEN
 A7	Eq-Temporal-Period-Value T37 future
 A8	Severity-Value T49 severe
 A9	Eq-Temporal-Period-Value T55 present
-A10	Observation-Type-Value T57 lab
+A10	Observation-Type-Value E27 lab
 A11	Eq-Operator-Value T59 LT
 A4	Eq-Temporal-Period-Value T21 past
-A12	Observation-Type-Value T29 clinical-score
-A13	Observation-Type-Value T31 clinical-score
+A12	Observation-Type-Value E2 clinical-score
+A13	Observation-Type-Value E4 clinical-score
 R1	Abbrev-Of Arg1:E3 Arg2:E1
 R2	Abbrev-Of Arg1:E4 Arg2:E2
 R3	Treatment-For Arg1:E8 Arg2:E11
@@ -111,3 +107,7 @@ R5	Abbrev-Of Arg1:E16 Arg2:E14
 R6	Treatment-For Arg1:E25 Arg2:E24
 R7	Using Arg1:E29 Arg2:E14
 R8	Treatment-For Arg1:E30 Arg2:E18
+R9	Or Arg1:E6 Arg2:E8
+R10	Or Arg1:E20 Arg2:E17
+R11	Or Arg1:E21 Arg2:E20
+R12	Or Arg1:E22 Arg2:E21

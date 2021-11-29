@@ -1,17 +1,14 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T96 Operator:T97 Value:T98 Temporal-Unit:T99
-E3	And:T3 Arg:E1 Arg2:E5
 E4	Modifier:T4 Modifies:T101
 E5	Condition:T5 Name:T101 Severity:T100
 E6	Modifier:T6 Modifies:T101
-E7	Or:T7 Arg:E6 Arg2:E8
 E8	Modifier:T8 Modifies:T101
 E9	Condition:T9 Name:T102
 E10	Assertion:T10 Asserted:E93
 E11	Procedure:T11 Name:T103
 E12	Procedure:T12 Name:T104
 E13	Procedure:T13 Name:T155
-E14	Or:T14 Arg:E13 Arg2:E15
 E15	Procedure:T15 Name:T105
 E17	Condition:T17 Name:T106 Stability:T16
 E18	Condition:T18 Name:T107
@@ -19,7 +16,6 @@ E19	Condition:T19 Name:T109
 E20	Assertion:T20 Asserted:E19
 E21	Assertion:T21 Asserted:E22
 E22	Procedure:T22 Name:T110
-E23	Temporal-Connection:T23 Arg:E22 Arg2:E24
 E24	Study:T24
 E25	Procedure:T25 Name:T111
 E26	Condition:T26 Name:T157
@@ -28,75 +24,56 @@ E28	Procedure:T28 Name:T113
 E29	Procedure:T29 Name:T114
 E30	Procedure:T30 Name:T158
 E31	Procedure:T31 Name:T115
-E32	Or:T32 Arg:T115 Arg2:E33
 E33	Procedure:T33 Name:T116
 E35	Observation:T35 Name:T118 Polarity:T117
 E36	Condition:T36 Name:T119
 E37	Procedure:T37 Name:T160
-E38	Or:T38 Arg:E37 Arg2:E39
 E39	Procedure:T39 Name:T120
-E40	Or:T40 Arg:E41 Arg2:E95
-E42	Or:T42 Arg:E39 Arg2:E43
 E43	Procedure:T43 Name:T121
-E44	Or:T44 Arg:E96 Arg2:E45
 E45	Modifier:T45 Modifies:T121
 E47	Eq-Comparison:T47 Operator:T124 Value:T125 Temporal-Unit:T126
 E48	Eq-Comparison:T48 Temporal-Recency:T127
 E50	Condition:T50 Name:T132
 E51	Allergy:T51 Name:E52 Name2:E54
 E52	Drug:T52 Name:T133
-E53	Or:T53 Arg:E52 Arg2:E54
 E54	Drug:T54 Name:T134
 E55	Assertion:T55 Asserted:E91
-E57	And:T58 Arg:E56 Arg2:E58
 E58	Modifier:T59 Modifies:T57
 E59	Procedure:T60 Name:T135
 E60	Procedure:T61 Name:T168
 E61	Condition:T62
-E62	Temporal-Connection:T63 Arg:E61 Arg2:E63
 E63	Procedure:T64 Name:T136
 E64	Condition:T65 Name:T137
 E65	Condition:T66 Name:T138
 E66	Procedure:T67 Name:T139
-E67	Or:T68 Arg:E66 Arg2:E69
 E68	Modifier:T69 Modifies:T140
-E69	Condition:T70 Name:T140
-E70	Observation:T71 Name:T141 Eq-Comparison:E71
+E69	Observation:T70 Name:T140
+E70	Observation:T71 Name:T141 Numeric-Filter:E71
 E71	Eq-Comparison:T72 Operator:T142 Value:T143 Unit:T144
-E72	Temporal-Connection:T73 Arg:E70 Arg2:E73
 E73	Study:T74
 E74	Eq-Comparison:T75 Temporal-Period:T145
 E75	Drug:T76 Name:T147 Temporality:E74
 E76	Condition:T77 Name:T148
-E77	Temporal-Connection:T78 Arg:E76 Arg2:E104
 E78	Condition:T79 Name:T149
-E79	Temporal-Connection:T80 Arg:E78 Arg2:E80
 E80	Procedure:T81 Name:T150
 E81	Assertion:T82 Asserted:E92
-E82	Encounter:T84
-E83	And:T85 Arg:T151 Arg2:E84
+E82	
 E84	Condition:T86 Name:T152
 E85	Condition:T87 Name:T153
-E86	Or:T88 Arg:E85 Arg2:E87
 E87	Assertion:T89 Asserted:E88
 E88	Condition:T90 Name:T154
-E89	Temporal-Connection:T91 Arg:E88 Arg2:E90
 E90	Procedure:T92
 E91	Negation:T93 Negates:E101
 E92	Negation:T94 Negates:E82
-E93	Encounter:T56 Type:T83
+E93	Encounter:T56
 E94	Modifier:T156 Modifies:T105
-E16	And:T34 Arg:E33 Arg2:E35
-E34	And:T159 Arg:E33 Arg2:E36
 E41	Modifier:T41 Modifies:T120
 E95	Modifier:T161 Modifies:T120
 E96	Modifier:T122 Modifies:T121
 E46	Observation:T46 Name:T123 Temporality:E47
 E97	Assertion:T162 Asserted:E46
 E98	Condition:T163 Name:T164 Polarity:T128 Temporality:E48
-E99	Temporal-Connection:T165 Arg:E47 Arg2:E48
 E49	Condition:T49 Name:T129
-E100	And:T130 Arg:T131 Arg2:E50
 E101	Observation:T166 Name:T57
 E56	Modifier:T167 Modifies:T57
 E102	Modifier:T169 Modifies:T137
@@ -104,18 +81,15 @@ E104	Procedure:T171 Name:T172
 E103	Modifier:T146 Modifies:T149
 T1	Age 32 35	age
 T2	Eq-Comparison 36 47	55-90 years
-T3	And 48 52	with
 T4	Modifier 53 59	visual
 T5	Condition 72 81	cataracts
 T6	Modifier 85 88	one
-T7	Or 89 91	or
 T8	Modifier 92 101	both eyes
 T9	Condition 108 115	Healthy
 T10	Assertion 128 135	able to
 T11	Procedure 156 172	cataract surgery
 T12	Procedure 179 195	local anesthesia
 T13	Procedure 207 226	phacoemulsification
-T14	Or 227 233	and/or
 T15	Procedure 255 271	cataract surgery
 T17	Condition 289 297	diabetes
 T18	Condition 299 311	hypertension
@@ -123,7 +97,6 @@ T19	Condition 346 358	childbearing
 T20	Assertion 359 368	potential
 T21	Assertion 374 382	agree to
 T22	Procedure 408 421	birth control
-T23	Temporal-Connection 422 427	while
 T24	Study 450 455	study
 T25	Procedure 477 490	birth control
 T26	Condition 496 506	abstinence
@@ -132,59 +105,44 @@ T28	Procedure 529 548	intrauterine device
 T29	Procedure 550 553	IUD
 T30	Procedure 556 567	DepoProvera
 T31	Procedure 569 583	tubal ligation
-T32	Or 584 586	or
 T33	Procedure 587 596	vasectomy
 T35	Observation 637 649	sperm counts
 T36	Condition 654 677	monogamous relationship
 T37	Procedure 768 775	condoms
-T38	Or 776 779	and
 T39	Procedure 780 791	spermicidal
-T40	Or 797 799	or
-T42	Or 804 810	and/or
 T43	Procedure 811 819	cervical
-T44	Or 824 826	or
 T45	Modifier 827 833	sponge
 T47	Eq-Comparison 864 880	at least 10 days
 T48	Eq-Comparison 890 894	last
 T50	Condition 966 988	childbearing potential
 T51	Allergy 1015 1022	Allergy
 T52	Drug 1026 1039	Phenylephrine
-T53	Or 1040 1042	or
 T54	Drug 1043 1049	NSAIDs
 T55	Assertion 1056 1065	Inability
-T58	And 1080 1083	and
 T59	Modifier 1084 1091	upright
 T60	Procedure 1100 1128	Optical Coherence Tomography
 T61	Procedure 1130 1133	OCT
 T62	Condition 1141 1154	Complications
-T63	Temporal-Connection 1155 1161	during
 T64	Procedure 1162 1169	surgery
 T65	Condition 1191 1207	capsular rupture
 T66	Condition 1209 1222	vitreous loss
 T67	Procedure 1224 1240	zonular dialysis
-T68	Or 1242 1244	or
 T69	Modifier 1245 1249	iris
-T70	Condition 1250 1256	trauma
+T70	Observation 1250 1256	trauma
 T71	Observation 1263 1280	Macular thickness
 T72	Eq-Comparison 1281 1298	above 300 microns
-T73	Temporal-Connection 1299 1301	at
 T74	Study 1302 1310	baseline
 T75	Eq-Comparison 1316 1332	Currently taking
 T76	Drug 1335 1357	prostaglandin analogue
 T77	Condition 1378 1397	epiretinal membrane
-T78	Temporal-Connection 1405 1417	preoperative
 T79	Condition 1437 1450	lens fragment
-T80	Temporal-Connection 1451 1455	post
 T81	Procedure 1456 1467	operatively
 T82	Assertion 1474 1483	Inability
 T84	Encounter 1505 1517	appointments
-T85	And 1539 1542	who
 T86	Condition 1547 1555	pregnant
 T87	Condition 1557 1566	lactating
-T88	Or 1567 1569	or
 T89	Assertion 1570 1588	planning to become
 T90	Condition 1589 1597	pregnant
-T91	Temporal-Connection 1598 1604	during
 T92	Procedure 1619 1628	treatment
 T93	Negation 1056 1065	Inability
 T94	Negation 1474 1483	Inability
@@ -231,7 +189,7 @@ T136	Procedure-Name 1162 1169	surgery
 T137	Condition-Name 1191 1207	capsular rupture
 T138	Condition-Name 1209 1222	vitreous loss
 T139	Procedure-Name 1224 1240	zonular dialysis
-T140	Condition-Name 1250 1256	trauma
+T140	Observation-Name 1250 1256	trauma
 T141	Observation-Name 1263 1280	Macular thickness
 T142	Eq-Operator 1281 1286	above
 T143	Eq-Value 1287 1290	300
@@ -246,14 +204,11 @@ T152	Condition-Name 1547 1555	pregnant
 T153	Condition-Name 1557 1566	lactating
 T154	Condition-Name 1589 1597	pregnant
 T56	Encounter 145 155	outpatient
-T83	Encounter-Type 145 155	outpatient
 T155	Procedure-Name 207 226	phacoemulsification
 T156	Modifier 234 254	femtosecond assisted
 T16	Stability 273 288	Well-controlled
 T157	Condition-Name 496 506	abstinence
 T158	Procedure-Name 556 567	DepoProvera
-T34	And 613 617	with
-T159	And 651 653	in
 T160	Procedure-Name 768 775	condoms
 T41	Modifier 792 796	foam
 T161	Modifier 800 803	gel
@@ -262,9 +217,7 @@ T46	Observation 837 851	pregnancy test
 T162	Assertion 852 863	is required
 T163	Condition 902 918	menstrual period
 T164	Condition-Name 902 918	menstrual period
-T165	Temporal-Connection 881 885	from
 T49	Condition 940 955	sexually active
-T130	And 963 965	of
 T166	Observation 1069 1072	sit
 T57	Observation-Name 1069 1072	sit
 T167	Modifier 1073 1079	steady
@@ -276,36 +229,29 @@ T146	Modifier 1428 1436	Retained
 A1	Assertion-Type-Value E10 hypothetical
 A2	Assertion-Type-Value E20 hypothetical
 A3	Assertion-Type-Value E21 hypothetical
-A4	Temporal-Connection-Type-Value E23 during
 A5	Assertion-Type-Value E55 hypothetical
-A6	Temporal-Connection-Type-Value E62 during
-A7	Temporal-Connection-Type-Value E72 during
-A8	Temporal-Connection-Type-Value E77 before
-A9	Temporal-Connection-Type-Value E79 after
 A10	Assertion-Type-Value E81 hypothetical
 A11	Assertion-Type-Value E87 intention
-A12	Temporal-Connection-Type-Value E89 during
 A13	Life-Stage-And-Gender-Type T95 adult
 A14	Eq-Operator-Value T97 BETWEEN
 A15	Eq-Temporal-Unit-Value T99 year
 A16	Severity-Value T100 severe
 A17	Life-Stage-And-Gender-Type T108 female
 A18	Polarity-Value T117 negative
-A19	Observation-Type-Value T118 lab
-A20	Observation-Type-Value T123 lab
+A19	Observation-Type-Value E35 lab
+A20	Observation-Type-Value E46 lab
 A21	Eq-Operator-Value T124 GTEQ
 A22	Eq-Temporal-Unit-Value T126 day
 A24	Polarity-Value T128 normal
 A26	Life-Stage-And-Gender-Type T131 female
-A27	Observation-Type-Value T141 measurement
+A27	Observation-Type-Value E70 measurement
 A28	Eq-Operator-Value T142 GT
 A29	Eq-Temporal-Period-Value T145 present
 A31	Life-Stage-And-Gender-Type T151 female
-A32	Encounter-Type-Value T83 outpatient
+A32	Encounter-Type-Value E93 outpatient
 A33	Stability-Value T16 stable
 A34	Assertion-Type-Value E97 hypothetical
 A23	Eq-Temporal-Recency-Value T127 most-recent-time
-A35	Temporal-Connection-Type-Value E99 after
 R1	Using Arg1:E93 Arg2:E11
 R2	Using Arg1:E11 Arg2:E12
 R3	Using Arg1:E12 Arg2:E13
@@ -326,3 +272,33 @@ R17	Example-Of Arg1:E64 Arg2:E61
 R18	Example-Of Arg1:E65 Arg2:E61
 R19	Example-Of Arg1:E66 Arg2:E61
 R20	Example-Of Arg1:E69 Arg2:E61
+R21	And Arg1:E1 Arg2:E5
+R22	Or Arg1:E6 Arg2:E8
+R23	Or Arg1:E13 Arg2:E15
+R24	During Arg1:E22 Arg2:E24
+R25	Or Arg1:T115 Arg2:E33
+R26	Or Arg1:E37 Arg2:E39
+R27	Or Arg1:E41 Arg2:E95
+R28	Or Arg1:E39 Arg2:E43
+R29	Or Arg1:E96 Arg2:E45
+R30	Or Arg1:E52 Arg2:E54
+R31	And Arg1:E56 Arg2:E58
+R32	During Arg1:E61 Arg2:E63
+R33	Or Arg1:E66 Arg2:E69
+R34	During Arg1:E70 Arg2:E73
+R35	Before Arg1:E76 Arg2:E104
+R36	After Arg1:E78 Arg2:E80
+R37	And Arg1:T151 Arg2:E84
+R38	Or Arg1:E85 Arg2:E87
+R39	During Arg1:E88 Arg2:E90
+R40	And Arg1:E33 Arg2:E35
+R41	And Arg1:E33 Arg2:E36
+R42	After Arg1:E47 Arg2:E48
+R43	And Arg1:T131 Arg2:E50
+R44	Or Arg1:E17 Arg2:E18
+R45	Or Arg1:E26 Arg2:E27
+R46	Or Arg1:E27 Arg2:E28
+R47	Or Arg1:E30 Arg2:E31
+R48	Or Arg1:E64 Arg2:E65
+R49	Or Arg1:E65 Arg2:E66
+R50	Or Arg1:E84 Arg2:E85

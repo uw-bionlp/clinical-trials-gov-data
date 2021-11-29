@@ -1,19 +1,18 @@
 E1	Condition:T1 Name:T2
-E5	Condition:T5 Name:T6
+E5	Observation:T5 Name:T6
 E6	Eq-Comparison:T8 Temporal-Period:T9 Temporal-Unit:T12
 E7	Eq-Comparison:T10 Temporal-Period:T11 Temporal-Unit:T25
 E2	Condition:T13 Name:T14 Temporality:E6
 E4	Eq-Comparison:T15 Value:T16 Value2:T17 Operator:T19
-E8	Observation:T20 Name:T21 Eq-Comparison:E4 Temporality:E9
+E8	Observation:T20 Name:T21 Numeric-Filter:E4 Temporality:E9
 E9	Eq-Comparison:T22 Value:T23 Per:T24
-E10	Or:T26 Arg:E2 Arg2:E1
 E3	Observation:T3 Name:T4
 E11	Negation:T27 Negates:E3
 E12	Negation:T28 Negates:T7
 T1	Condition 203 216	marijuana use
 T2	Condition-Name 203 216	marijuana use
-T5	Condition 180 183	sex
-T6	Condition-Name 180 183	sex
+T5	Observation 180 183	sex
+T6	Observation-Name 180 183	sex
 T7	Language 396 403	English
 T8	Eq-Comparison 105 115	past-month
 T9	Eq-Temporal-Period 105 109	past
@@ -33,7 +32,6 @@ T22	Eq-Comparison 154 166	one occasion
 T23	Eq-Value 154 157	one
 T24	Eq-Unit 158 166	occasion
 T25	Eq-Temporal-Unit 197 202	month
-T26	Or 185 187	OR
 T3	Observation 227 249	medical marijuana card
 T4	Observation-Name 227 249	medical marijuana card
 T27	Negation 217 224	without
@@ -43,7 +41,8 @@ A2	Eq-Temporal-Period-Value T11 past
 A3	Eq-Temporal-Unit-Value T12 month
 A4	Eq-Operator-Value T18 GTEQ
 A5	Eq-Operator-Value T19 BETWEEN
-A6	Observation-Type-Value T21 social-habit
+A6	Observation-Type-Value E8 social-habit
 A7	Eq-Temporal-Unit-Value T25 month
 R1	Equivalent-To Arg1:E8 Arg2:E2
 R2	Caused-By Arg1:E5 Arg2:E8
+R3	Or Arg1:E2 Arg2:E1

@@ -11,11 +11,10 @@ E10	Condition:T19 Name:T20
 E11	Condition:T21 Name:T22
 E12	Condition:T23 Name:T24
 E13	Condition:T25 Name:T26
-E14	Condition:T27 Name:T28
+E14	Condition:T27
 E15	Modifier:T29 Modifies:E14
 E16	Modifier:T30 Modifies:E14
 E17	Modifier:T31 Modifies:E14
-E18	Or:T32 Arg:E16 Arg2:E15
 E19	Drug:T33 Name:T34 Temporality:E21
 E20	Eq-Comparison:T35 Temporal-Period:T36
 E21	Eq-Comparison:T37 Temporal-Period:T38
@@ -55,7 +54,6 @@ T28	Condition-Name 530 538	diseases
 T29	Modifier 519 529	intestinal
 T30	Modifier 509 514	liver
 T31	Modifier 501 507	kidney
-T32	Or 515 518	and
 T33	Drug 557 572	corticosteroids
 T34	Drug-Name 557 572	corticosteroids
 T35	Eq-Comparison 301 306	using
@@ -85,3 +83,9 @@ R3	Example-Of Arg1:E8 Arg2:E7
 R4	Example-Of Arg1:E9 Arg2:E7
 R5	Example-Of Arg1:E10 Arg2:E7
 R2	Caused-By Arg1:T41 Arg2:E5
+R6	Or Arg1:E16 Arg2:E15
+R7	Or Arg1:E6 Arg2:E7
+R8	Or Arg1:E8 Arg2:E9
+R9	Or Arg1:E9 Arg2:E10
+R10	Or Arg1:E12 Arg2:E13
+R11	Or Arg1:E17 Arg2:E16

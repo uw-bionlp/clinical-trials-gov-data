@@ -1,0 +1,12 @@
+E1	Death:T3
+E2	Condition:T4 Name:T5 Temporality:E3
+E3	Eq-Comparison:T6 Operator:T7 Value:T1 Value2:T2
+T1	Eq-Value 57 61	2008
+T2	Eq-Value 66 70	2017
+T3	Death 32 36	died
+T4	Condition 42 48	cancer
+T5	Condition-Name 42 48	cancer
+T6	Eq-Comparison 49 70	between 2008 and 2017
+T7	Eq-Operator 49 56	between
+A1	Eq-Operator-Value T7 BETWEEN
+R1	Caused-By Arg1:E1 Arg2:E2

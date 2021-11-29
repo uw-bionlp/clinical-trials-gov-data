@@ -1,7 +1,7 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
-E5	Observation:T5 Name:T6 Eq-Comparison:E16
-E6	Age:T12 Eq-Comparison:E11
+E5	Observation:T5 Name:T6 Numeric-Filter:E16
+E6	Age:T12 Numeric-Filter:E11
 E7	Eq-Comparison:T19 Operator:T7 Temporal-Unit:T10 Value:T18
 E2	Condition:T20 Name:T21
 E4	Observation:T22 Name:T23 Polarity:T24
@@ -12,7 +12,6 @@ E11	Eq-Comparison:T29 Operator:T30 Value:T13 Value2:T14 Temporal-Unit:T8
 E12	Condition:T31 Name:T32
 E13	Condition:T33 Name:T34
 E14	Negation:T35 Negates:E13
-E15	And:T36 Arg:E12 Arg2:E14
 E16	Eq-Comparison:T37 Operator:T38 Value:T15 Value2:T16 Unit:T11 Per:T39
 E17	Observation:T40 Name:T41 Stability:T42
 E18	Eq-Comparison:T43 Temporal-Period:T44 Value:T17 Temporal-Unit:T9
@@ -24,8 +23,7 @@ E23	Condition:T52 Name:T53
 E24	Observation:T54 Name:T55
 E25	Negation:T56 Negates:E24
 E26	Assertion:T57 Asserted:E25
-E27	Condition:T58 Name:T59
-E28	Temporal-Connection:T60 Arg:E17 Arg2:E18
+E27	Observation:T58 Name:T59
 T1	Condition 311 328	metabolic disease
 T2	Condition-Name 311 328	metabolic disease
 T3	Condition 361 375	hypothyroidism
@@ -61,7 +59,6 @@ T32	Condition-Name 134 144	overweight
 T33	Condition 153 158	obese
 T34	Condition-Name 153 158	obese
 T35	Negation 149 152	not
-T36	And 145 148	but
 T37	Eq-Comparison 168 191	between 25 and 30 kg/m2
 T38	Eq-Operator 168 175	between
 T39	Eq-Unit 189 191	m2
@@ -83,24 +80,24 @@ T54	Observation 429 437	exercise
 T55	Observation-Name 429 437	exercise
 T56	Negation 420 428	preclude
 T57	Assertion 414 419	would
-T58	Condition 443 449	smoker
-T59	Condition-Name 443 449	smoker
-T60	Temporal-Connection 211 217	during
-A1	Observation-Type-Value T6 vital
+T58	Observation 443 449	smoker
+T59	Observation-Name 443 449	smoker
+A1	Observation-Type-Value E5 vital
 A2	Eq-Operator-Value T7 LT
 A3	Eq-Temporal-Unit-Value T8 year
 A4	Eq-Temporal-Unit-Value T9 month
 A5	Eq-Temporal-Unit-Value T10 minute
-A6	Observation-Type-Value T23 lab
+A6	Observation-Type-Value E4 lab
 A7	Polarity-Value T24 normal
 A8	Eq-Operator-Value T30 BETWEEN
 A9	Eq-Operator-Value T38 BETWEEN
-A10	Observation-Type-Value T41 vital
+A10	Observation-Type-Value E17 vital
 A11	Stability-Value T42 stable
 A12	Eq-Temporal-Period-Value T44 past
-A13	Observation-Type-Value T46 social-habit
+A13	Observation-Type-Value E19 social-habit
 A14	Eq-Temporal-Unit-Value T49 week
 A15	Assertion-Type-Value E26 hypothetical
-A16	Temporal-Connection-Type-Value E28 during
 R1	Treatment-For Arg1:E9 Arg2:E8
 R2	Caused-By Arg1:E25 Arg2:E23
+R3	And Arg1:E12 Arg2:E14
+R4	During Arg1:E17 Arg2:E18

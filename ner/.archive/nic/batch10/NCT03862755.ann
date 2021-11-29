@@ -1,0 +1,55 @@
+E3	Procedure:T3 Name:T4
+E1	Temporal-Connection:T1 Arg:T7 Arg2:E2
+E2	Procedure:T2 Name:T6
+E4	And:T9 Arg:E3 Arg2:E11
+E5	Modifier:T10 Modifies:T7
+E6	Procedure:T11 Name:T12
+E7	Temporal-Connection:T13 Arg2:E6 Arg:E11
+E8	Encounter:T14 Location:T16 Duration:E10
+E9	And:T15 Arg:E6 Arg2:E8
+E10	Eq-Comparison:T17 Operator:T18 Value:T5 Temporal-Unit:T19
+E11	Encounter:T20 Location:T7
+E12	Procedure:T21 Name:T22 Temporality:E13
+E13	Eq-Comparison:T23 Temporal-Period:T24
+E14	Procedure:T25 Name:T26 Temporality:E16
+E15	Or:T27 Arg:E12 Arg2:E14
+E16	Eq-Comparison:T28 Temporal-Period:T29
+T3	Procedure 25 38	Lung surgical
+T4	Procedure-Name 25 38	Lung surgical
+T5	Eq-Value 170 172	24
+T1	Temporal-Connection 74 78	post
+T2	Procedure 78 87	operative
+T6	Procedure-Name 78 87	operative
+T7	Location 88 107	intensive care unit
+T8	Location 109 112	ICU
+T9	And 48 51	who
+T10	Modifier 65 73	thoracic
+T11	Procedure 131 138	surgery
+T12	Procedure-Name 131 138	surgery
+T13	Temporal-Connection 125 130	after
+T14	Encounter 143 149	stayed
+T15	And 139 142	and
+T16	Location 153 156	ICU
+T17	Eq-Comparison 161 178	at least 24 hours
+T18	Eq-Operator 161 169	at least
+T19	Eq-Temporal-Unit 173 178	hours
+T20	Encounter 57 61	sent
+T21	Procedure 220 240	inferior vena filter
+T22	Procedure-Name 220 240	inferior vena filter
+T23	Eq-Comparison 211 219	received
+T24	Eq-Temporal-Period 211 219	received
+T25	Procedure 245 271	anti-coagulation treatment
+T26	Procedure-Name 245 271	anti-coagulation treatment
+T27	Or 241 244	and
+T28	Eq-Comparison 272 279	history
+T29	Eq-Temporal-Period 272 279	history
+A1	Temporal-Connection-Type-Value E1 after
+A2	Location-Value T7 unit
+A3	Location-Value T8 unit
+A4	Temporal-Connection-Type-Value E7 after
+A5	Location-Value T16 unit
+A6	Eq-Operator-Value T18 GTEQ
+A7	Eq-Temporal-Unit-Value T19 hour
+A8	Eq-Temporal-Period-Value T24 past
+A9	Eq-Temporal-Period-Value T29 past
+R1	Abbrev-Of Arg1:T8 Arg2:T7

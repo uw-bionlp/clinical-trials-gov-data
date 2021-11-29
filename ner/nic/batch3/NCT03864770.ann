@@ -3,10 +3,9 @@ E3	Condition:T3 Name:T35 Minimum-Count:E4 Temporality:E5
 E4	Eq-Comparison:T4 Value:T36 Per:T37
 E5	Eq-Comparison:T5 Temporal-Period:T38 Value:T39 Temporal-Unit:T40
 E6	Modifier:T6 Modifies:T35
-E7	Or:T7 Arg:E6 Arg2:E8
 E9	Condition:T9 Name:T41
 E10	Drug:T10 Name:T57 Temporality:E33
-E11	Provider:T11 
+E11	Provider:T11
 E12	Eq-Comparison:T12 Temporal-Period:T43
 E13	Drug:T13 Temporality:E12
 E14	Modifier:T14 Modifies:T44
@@ -14,7 +13,7 @@ E15	Condition:T15 Name:T44
 E16	Drug:T16 Name:T45
 E17	Drug:T17 Name:T46
 E18	Other:T18 Is-Other:E19
-E19	Drug:T19 
+E19	Drug:T19
 E20	Study:T20 Stability:T48
 E21	Drug:T21 Name:T49
 E22	Drug:T22 Name:T50
@@ -22,13 +21,11 @@ E23	Drug:T23 Name:T51
 E24	Drug:T24 Name:T52
 E25	Condition:T25 Name:T53
 E26	Modifier:T26 Modifies:T54
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Modifier:T28 Modifies:T54
 E29	Procedure:T29 Name:T54
 E30	Condition:T30 Name:T42
-E31	Or:T31 Arg:E30 Arg2:E32
 E32	Condition:T32 Name:T55
-E2	Age:T56 
+E2	Age:T56
 E8	Modifier:T8 Modifies:T35
 E33	Eq-Comparison:T58 Temporal-Period:T59
 T1	Eq-Comparison 25 33	≥ 20 y/o
@@ -36,7 +33,6 @@ T3	Condition 48 52	NLCs
 T4	Eq-Comparison 58 70	4 times/week
 T5	Eq-Comparison 72 84	last 2 weeks
 T6	Modifier 102 111	nighttime
-T7	Or 112 114	or
 T9	Condition 158 163	MTrPs
 T10	Drug 167 180	gastrocnemius
 T11	Provider 231 247	Simons & Travell
@@ -55,11 +51,9 @@ T23	Drug 420 444	calcium channel blockers
 T24	Drug 446 461	anticonvulsants
 T25	Condition 468 514	Congenital lower limb musculoskeletal diseases
 T26	Modifier 516 526	Lower limb
-T27	Or 527 529	or
 T28	Modifier 530 535	spine
 T29	Procedure 536 543	surgery
 T30	Condition 549 563	Uncommunicated
-T31	Or 564 566	or
 T32	Condition 567 585	cognitive impaired
 T33	Eq-Operator 25 26	≥
 T34	Eq-Value 27 29	20
@@ -107,3 +101,10 @@ R7	Example-Of Arg1:E21 Arg2:E19
 R8	Example-Of Arg1:E22 Arg2:E19
 R9	Example-Of Arg1:E23 Arg2:E19
 R10	Example-Of Arg1:E24 Arg2:E19
+R11	Or Arg1:E6 Arg2:E8
+R12	Or Arg1:E26 Arg2:E28
+R13	Or Arg1:E30 Arg2:E32
+R14	Or Arg1:E16 Arg2:E17
+R15	Or Arg1:E21 Arg2:E22
+R16	Or Arg1:E22 Arg2:E23
+R17	Or Arg1:E23 Arg2:E24

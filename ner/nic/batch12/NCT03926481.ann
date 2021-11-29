@@ -1,13 +1,12 @@
-E4	Age:T9 Eq-Comparison:E5
+E4	Age:T9 Numeric-Filter:E5
 E5	Eq-Comparison:T13 Operator:T5 Temporal-Unit:T8 Value:T10
 E6	Eq-Comparison:T14 Operator:T6 Value:T11 Unit:T18
 E7	Eq-Comparison:T15 Operator:T7 Value:T12 Unit:T21
-E1	Observation:T16 Name:T17 Eq-Comparison:E6
-E2	Observation:T19 Name:T20 Eq-Comparison:E7
+E1	Observation:T16 Name:T17 Numeric-Filter:E6
+E2	Observation:T19 Name:T20 Numeric-Filter:E7
 E3	Condition:T23 Severity:T27
 E8	Modifier:T24 Modifies:E3
 E9	Modifier:T25 Modifies:E3
-E10	Or:T26 Arg:E8 Arg2:E9
 E11	Procedure:T28 Name:T29 Temporality:E12
 E12	Eq-Comparison:T30 Temporal-Period:T31
 T1	Language 25 32	English
@@ -35,7 +34,6 @@ T4	Location 225 228	WWC
 T23	Condition 453 460	illness
 T24	Modifier 426 432	mental
 T25	Modifier 436 452	life-threatening
-T26	Or 433 435	or
 T27	Severity 419 425	Severe
 T28	Procedure 477 494	bariatric surgery
 T29	Procedure-Name 477 494	bariatric surgery
@@ -51,8 +49,9 @@ A7	Location-Value T3 clinic
 A8	Location-Value T4 clinic
 A9	Severity-Value T27 severe
 A10	Eq-Temporal-Period-Value T31 past
-A11	Observation-Type-Value T17 measurement
-A12	Observation-Type-Value T20 measurement
+A11	Observation-Type-Value E1 measurement
+A12	Observation-Type-Value E2 measurement
 R1	If-Then Arg1:T2 Arg2:E1
 R2	If-Then Arg1:T22 Arg2:E2
 R3	Abbrev-Of Arg1:T4 Arg2:T3
+R4	Or Arg1:E8 Arg2:E9

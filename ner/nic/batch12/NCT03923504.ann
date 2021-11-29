@@ -3,19 +3,16 @@ E5	Condition:T5 Name:T6 Temporality:E20
 E2	Condition:T9 Name:T10 Stage:E4
 E1	Drug:T1 Name:T2
 E8	Assertion:T14 Asserted:E1
-E9	And:T15 Arg:E2 Arg2:E8
-E10	Observation:T8 Name:T16 Eq-Comparison:E12
+E10	Observation:T8 Name:T16 Numeric-Filter:E12
 E12	Eq-Comparison:T18 Unit:T21 Operator:T19 Value:T20
 E13	Contraindication:T22 Contraindicates:E14
 E14	Procedure:T23 Name:T7
 E15	Observation:T24 Name:T25
 E16	Modifier:T26 Modifies:T25
 E17	Modifier:T27 Modifies:T25
-E18	Or:T28 Arg:E16 Arg2:E17
 E19	Contraindication:T29 Contraindicates:E15
 E20	Eq-Comparison:T30 Temporal-Period:T31
 E4	Eq-Comparison:T11 Unit:T12 Value:T33 Value2:T13 Operator:T32
-E6	Or:T34 Arg:E7 Arg2:E21
 E7	Modifier:T35 Modifies:T10
 E21	Modifier:T36 Modifies:T10
 E11	Drug:T17 Name:T37
@@ -29,7 +26,6 @@ T10	Condition-Name 154 162	lymphoma
 T1	Drug 208 232	chemotherapeutic regimen
 T2	Drug-Name 208 232	chemotherapeutic regimen
 T14	Assertion 167 176	expect to
-T15	And 163 166	and
 T8	Observation 239 255	Capacity to walk
 T16	Observation-Name 239 255	Capacity to walk
 T18	Eq-Comparison 256 278	at least 2 city blocks
@@ -42,7 +38,6 @@ T24	Observation 375 383	exercise
 T25	Observation-Name 375 383	exercise
 T26	Modifier 384 392	training
 T27	Modifier 396 403	testing
-T28	Or 393 395	or
 T29	Contraindication 353 370	Contraindications
 T30	Eq-Comparison 409 415	Active
 T31	Eq-Temporal-Period 409 415	Active
@@ -51,15 +46,17 @@ T12	Eq-Unit 127 132	stage
 T13	Eq-Value 133 134	I
 T32	Eq-Operator 134 135	-
 T33	Eq-Value 135 137	IV
-T34	Or 143 145	or
 T35	Modifier 138 141	non
 T36	Modifier 146 153	Hodgkin
 T17	Drug 188 201	anthracycline
 T37	Drug-Name 188 201	anthracycline
 A1	Assertion-Type-Value E8 intention
 A3	Eq-Operator-Value T19 GTEQ
-A4	Observation-Type-Value T25 social-habit
-A5	Observation-Type-Value T16 social-habit
+A4	Observation-Type-Value E15 social-habit
+A5	Observation-Type-Value E10 social-habit
 A6	Eq-Temporal-Period-Value T31 present
 A7	Eq-Operator-Value T32 BETWEEN
 R1	Using Arg1:E1 Arg2:E11
+R2	And Arg1:E2 Arg2:E8
+R3	Or Arg1:E16 Arg2:E17
+R4	Or Arg1:E7 Arg2:E21

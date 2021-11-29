@@ -1,0 +1,347 @@
+E1	Observation:T1 Name:T2 Eq-Comparison:E2
+E2	Eq-Comparison:T3 Operator:T4 Value:T5
+E3	Eq-Comparison:T6 Value:T9 Unit:T10 Operator:T11
+E4	Observation:T7 Name:T8 Eq-Comparison:E3
+E5	Drug:T12 Stability:T13 Duration:E7
+E6	Modifier:T14 Modifies:E5
+E7	Eq-Comparison:T15 Operator:T16 Temporal-Unit:T18 Value:T17
+E8	Study:T19 
+E9	Temporal-Connection:T20 Arg:E7 Arg2:E8
+E10	Condition:T21 Name:T22
+E11	Observation:T23 Name:T24 Eq-Comparison:E12
+E12	Eq-Comparison:T25 Operator:T26 Value:T27
+E13	Observation:T28 Name:T29 Stability:T30 Eq-Comparison:E15 Duration:E17
+E14	And:T31 Arg:E11 Arg2:E13
+E15	Eq-Comparison:T32 Operator:T33 Value:T34 Unit:T35
+E16	Modifier:T36 Modifies:T29
+E17	Eq-Comparison:T37 Value:T38 Temporal-Unit:T39
+E18	Condition:T40 Name:T41
+E19	Procedure:T42 Name:T43
+E20	Condition:T45 Name:T46 Stability:T44
+E21	Modifier:T47 Modifies:T46
+E22	Modifier:T48 Modifies:T46
+E23	Modifier:T49 Modifies:T46
+E24	Or:T50 Arg:E22 Arg2:E21
+E25	Study:T51 Stability:T52
+E26	Assertion:T53 Asserted:T52
+E27	Observation:T54 Name:T55 Eq-Comparison:E28
+E28	Eq-Comparison:T56 Operator:T57 Value:T58 Unit:T59
+E29	Condition:T60 Name:T61
+E30	Condition:T62 Name:T63 Temporality:E31
+E31	Eq-Comparison:T64 Temporal-Period:T65
+E32	Condition:T66 Name:T67
+E33	Death:T68 
+E34	Risk:T69 Risk-For:E33
+E35	Condition:T70 Name:T71 Temporality:E36
+E36	Eq-Comparison:T72 Operator:T73 Temporal-Period:T74 Value:T75 Temporal-Unit:T76
+E37	Condition:T77 Name:T78
+E38	Modifier:T79 Modifies:T78
+E39	Observation:T80 Name:T81 Eq-Comparison:E40
+E40	Eq-Comparison:T82 Operator:T83 Value:T84 Unit:T85
+E41	Condition:T86 Name:T87
+E42	Or:T88 Arg:E37 Arg2:E41
+E43	Observation:T89 Name:T90 Eq-Comparison:E45
+E44	Modifier:T91 Modifies:T90
+E45	Eq-Comparison:T92 Operator:T93 Value:T94 Value2:T95
+E46	Condition:T96 Name:T97
+E47	Observation:T98 Name:T99 Eq-Comparison:E48
+E48	Eq-Comparison:T100 Value:T101 Value2:T102
+E49	Condition:T103 Name:T104 Temporality:E50 Temporality2:E51
+E50	Eq-Comparison:T105 Temporal-Period:T106
+E51	Eq-Comparison:T107 Operator:T108 Temporal-Period:T109 Value:T110 Temporal-Unit:T111
+E52	Exception:T112 From:E49 Except:E54
+E53	Modifier:T113 Modifies:T115
+E54	Condition:T114 Name:T115
+E55	Condition:T116 Name:T117 Temporality:E56
+E56	Eq-Comparison:T118 Temporal-Period:T119
+E57	Or:T120 Arg:E49 Arg2:E55
+E58	Procedure:T121 Name:T122
+E59	Modifier:T123 Modifies:T122
+E60	Assertion:T124 Asserted:E58
+E61	Observation:T125 Name:T126 Eq-Comparison:E62
+E62	Eq-Comparison:T127 Operator:T128 Value:T129 Unit:T130 Per:T131
+E63	Observation:T132 Name:T133 Eq-Comparison:E64
+E64	Eq-Comparison:T134 Operator:T135 Value:T136
+E65	Study:T137 
+E66	Temporal-Connection:T138 Arg:E63 Arg2:E65
+E67	Condition:T139 Name:T140
+E68	Observation:T141 Name:T142 Eq-Comparison:E69
+E69	Eq-Comparison:T143 Operator:T144 Value:T145 Unit:T146
+E70	Condition:T147 Name:T148
+E71	Modifier:T149 Modifies:T148
+E72	Modifier:T150 Modifies:T148
+E73	Or:T151 Arg:E72 Arg2:E71
+E74	Condition:T152 
+E75	Condition:T153 Name:T154 Stability:T155
+E76	Condition:T156 Name:T157
+E77	Procedure:T158 Name:T159
+E78	Procedure:T160 Name:T161
+E79	Condition:T162 Name:T163 Stability:T155
+E80	Or:T164 Arg:E75 Arg2:E79
+E81	Procedure:T165 Name:T166
+E82	Condition:T167 Name:T168
+E83	Or:T169 Arg:E81 Arg2:E82
+E84	Eq-Comparison:T170 Temporal-Period:T171
+E85	Drug:T172 Name:T173 Temporality:E84
+E86	Exception:T174 From:E85 Except:E87
+E87	Drug:T175 Name:T176
+E88	Condition:T177 Name:T178 Acuteness:T179
+E90	Condition:T180 Name:T181
+E91	Observation:T182 Name:T183 Polarity:T189 Severity:T190
+E92	Modifier:T184 Modifies:T183
+E93	Modifier:T185 Modifies:T183
+E94	Or:T186 Arg:E93 Arg2:E92
+E95	Study:T187 
+E96	Temporal-Connection:T188 Arg:E91 Arg2:E95
+T1	Observation 25 34	CAC score
+T2	Observation-Name 25 34	CAC score
+T3	Eq-Comparison 35 38	>10
+T4	Eq-Operator 35 36	>
+T5	Eq-Value 36 38	10
+T6	Eq-Comparison 67 80	10 % or above
+T7	Observation 44 65	Framingham risk score
+T8	Observation-Name 44 65	Framingham risk score
+T9	Eq-Value 67 69	10
+T10	Eq-Unit 70 71	%
+T11	Eq-Operator 72 80	or above
+T12	Drug 137 148	medications
+T13	Stability 118 124	stable
+T14	Modifier 125 136	concomitant
+T15	Eq-Comparison 153 170	at least 12 weeks
+T16	Eq-Operator 153 161	at least
+T17	Eq-Value 162 164	12
+T18	Eq-Temporal-Unit 165 170	weeks
+T19	Study 180 193	randomization
+T20	Temporal-Connection 171 179	prior to
+T21	Condition 213 221	diabetic
+T22	Condition-Name 213 221	diabetic
+T23	Observation 232 237	HbA1C
+T24	Observation-Name 232 237	HbA1C
+T25	Eq-Comparison 238 243	< 8.0
+T26	Eq-Operator 238 239	<
+T27	Eq-Value 240 243	8.0
+T28	Observation 256 261	HbA1C
+T29	Observation-Name 256 261	HbA1C
+T30	Stability 249 255	stable
+T31	And 245 248	and
+T32	Eq-Comparison 284 295	within 0.5%
+T33	Eq-Operator 284 290	within
+T34	Eq-Value 291 294	0.5
+T35	Eq-Unit 294 295	%
+T36	Modifier 268 283	variation range
+T37	Eq-Comparison 300 312	three months
+T38	Eq-Value 300 305	three
+T39	Eq-Temporal-Unit 306 312	months
+T40	Condition 339 355	Hypersensitivity
+T41	Condition-Name 339 355	Hypersensitivity
+T42	Procedure 359 370	AGE therapy
+T43	Procedure-Name 359 370	AGE therapy
+T44	Stability 377 385	Unstable
+T45	Condition 427 435	disorder
+T46	Condition-Name 427 435	disorder
+T47	Modifier 411 426	substance abuse
+T48	Modifier 395 406	psychiatric
+T49	Modifier 386 393	medical
+T50	Or 408 410	or
+T51	Study 480 485	study
+T52	Stability 445 454	interfere
+T53	Assertion 441 444	may
+T54	Observation 492 498	Weight
+T55	Observation-Name 492 498	Weight
+T56	Eq-Comparison 499 510	≥325 pounds
+T57	Eq-Operator 499 500	≥
+T58	Eq-Value 500 503	325
+T59	Eq-Unit 504 510	pounds
+T60	Condition 517 534	Bleeding disorder
+T61	Condition-Name 517 534	Bleeding disorder
+T62	Condition 552 573	myocardial infarction
+T63	Condition-Name 552 573	myocardial infarction
+T64	Eq-Comparison 541 548	History
+T65	Eq-Temporal-Period 541 548	History
+T66	Condition 580 586	Stroke
+T67	Condition-Name 580 586	Stroke
+T68	Death 592 608	Life-threatening
+T69	Risk 592 608	Life-threatening
+T70	Condition 609 619	arrhythmia
+T71	Condition-Name 609 619	arrhythmia
+T72	Eq-Comparison 620 641	within prior 6 months
+T73	Eq-Operator 620 626	within
+T74	Eq-Temporal-Period 627 632	prior
+T75	Eq-Value 633 634	6
+T76	Eq-Temporal-Unit 635 641	months
+T77	Condition 656 667	hypotension
+T78	Condition-Name 656 667	hypotension
+T79	Modifier 648 655	Resting
+T80	Observation 669 677	systolic
+T81	Observation-Name 669 677	systolic
+T82	Eq-Comparison 678 687	< 90 mmHg
+T83	Eq-Operator 678 679	<
+T84	Eq-Value 680 682	90
+T85	Eq-Unit 683 687	mmHg
+T86	Condition 692 704	hypertension
+T87	Condition-Name 692 704	hypertension
+T88	Or 689 691	or
+T89	Observation 714 728	blood pressure
+T90	Observation-Name 714 728	blood pressure
+T91	Modifier 706 713	resting
+T92	Eq-Comparison 729 737	>170/110
+T93	Eq-Operator 729 730	>
+T94	Eq-Value 730 733	170
+T95	Eq-Value 734 737	110
+T96	Condition 744 757	Heart failure
+T97	Condition-Name 744 757	Heart failure
+T98	Observation 758 762	NYHA
+T99	Observation-Name 758 762	NYHA
+T100	Eq-Comparison 769 778	III or IV
+T101	Eq-Value 769 772	III
+T102	Eq-Value 776 778	IV
+T103	Condition 796 806	malignancy
+T104	Condition-Name 796 806	malignancy
+T105	Eq-Comparison 785 792	History
+T106	Eq-Temporal-Period 785 792	History
+T107	Eq-Comparison 807 830	within the last 5 years
+T108	Eq-Operator 807 813	within
+T109	Eq-Temporal-Period 818 822	last
+T110	Eq-Value 823 824	5
+T111	Eq-Temporal-Unit 825 830	years
+T112	Exception 832 842	other than
+T113	Modifier 843 847	skin
+T114	Condition 848 854	cancer
+T115	Condition-Name 848 854	cancer
+T116	Condition 878 884	cancer
+T117	Condition-Name 878 884	cancer
+T118	Eq-Comparison 871 877	active
+T119	Eq-Temporal-Period 871 877	active
+T120	Or 856 858	or
+T121	Procedure 917 936	cancer chemotherapy
+T122	Procedure-Name 917 936	cancer chemotherapy
+T123	Modifier 905 916	concomitant
+T124	Assertion 891 904	would require
+T125	Observation 942 958	Serum creatinine
+T126	Observation-Name 942 958	Serum creatinine
+T127	Eq-Comparison 959 969	>1.4 mg/dl
+T128	Eq-Operator 959 960	>
+T129	Eq-Value 960 963	1.4
+T130	Eq-Unit 964 966	mg
+T131	Eq-Unit 967 969	dl
+T132	Observation 975 988	Triglycerides
+T133	Observation-Name 975 988	Triglycerides
+T134	Eq-Comparison 989 994	> 400
+T135	Eq-Operator 989 990	>
+T136	Eq-Value 991 994	400
+T137	Study 998 1006	baseline
+T138	Temporal-Connection 995 997	at
+T139	Condition 1018 1026	Diabetic
+T140	Condition-Name 1018 1026	Diabetic
+T141	Observation 1041 1046	HbA1C
+T142	Observation-Name 1041 1046	HbA1C
+T143	Eq-Comparison 1047 1052	> 8 %
+T144	Eq-Operator 1047 1048	>
+T145	Eq-Value 1049 1050	8
+T146	Eq-Unit 1051 1052	%
+T147	Condition 1075 1080	abuse
+T148	Condition-Name 1075 1080	abuse
+T149	Modifier 1067 1074	alcohol
+T150	Modifier 1059 1063	Drug
+T151	Or 1064 1066	or
+T152	Condition 1086 1096	Conditions
+T153	Condition 1137 1159	coronary calcification
+T154	Condition-Name 1137 1159	coronary calcification
+T155	Stability 1097 1108	interfering
+T156	Condition 1161 1172	metal clips
+T157	Condition-Name 1161 1172	metal clips
+T158	Procedure 1174 1180	bypass
+T159	Procedure-Name 1174 1180	bypass
+T160	Procedure 1191 1211	intracoronary stents
+T161	Procedure-Name 1191 1211	intracoronary stents
+T162	Condition 1217 1232	drug absorption
+T163	Condition-Name 1217 1232	drug absorption
+T164	Or 1213 1216	and
+T165	Procedure 1234 1254	partial ileal bypass
+T166	Procedure-Name 1234 1254	partial ileal bypass
+T167	Condition 1258 1280	malabsorption syndrome
+T168	Condition-Name 1258 1280	malabsorption syndrome
+T169	Or 1255 1257	or
+T170	Eq-Comparison 1288 1295	Current
+T171	Eq-Temporal-Period 1288 1295	Current
+T172	Drug 1303 1317	anticoagulants
+T173	Drug-Name 1303 1317	anticoagulants
+T174	Exception 1319 1329	except for
+T175	Drug 1330 1349	antiplatelet agents
+T176	Drug-Name 1330 1349	antiplatelet agents
+T177	Condition 1364 1377	renal failure
+T178	Condition-Name 1364 1377	renal failure
+T179	Acuteness 1356 1363	Chronic
+T180	Condition 1383 1396	Liver failure
+T181	Condition-Name 1383 1396	Liver failure
+T182	Observation 1431 1437	values
+T183	Observation-Name 1431 1437	values
+T184	Modifier 1419 1430	biochemical
+T185	Modifier 1402 1415	Hematological
+T186	Or 1416 1418	or
+T187	Study 1441 1449	baseline
+T188	Temporal-Connection 1438 1440	at
+T189	Polarity 1456 1484	outside the reference ranges
+T190	Severity 1510 1521	significant
+A1	Observation-Type-Value T2 clinical-score
+A2	Eq-Operator-Value T4 GT
+A3	Observation-Type-Value T8 measurement
+A4	Eq-Operator-Value T11 GTEQ
+A5	Stability-Value T13 stable
+A6	Eq-Operator-Value T16 GTEQ
+A7	Eq-Temporal-Unit-Value T18 week
+A8	Temporal-Connection-Type-Value E9 before
+A9	Observation-Type-Value T24 lab
+A10	Eq-Operator-Value T26 LT
+A11	Observation-Type-Value T29 lab
+A12	Stability-Value T30 stable
+A13	Eq-Operator-Value T33 LTEQ
+A14	Eq-Temporal-Unit-Value T39 month
+A15	Stability-Value T44 change
+A16	Stability-Value T52 change
+A17	Assertion-Type-Value E26 hypothetical
+A18	Observation-Type-Value T55 vital
+A19	Eq-Operator-Value T57 GTEQ
+A20	Eq-Temporal-Period-Value T65 past
+A21	Eq-Operator-Value T73 LTEQ
+A22	Eq-Temporal-Period-Value T74 past
+A23	Eq-Temporal-Unit-Value T76 month
+A24	Observation-Type-Value T81 vital
+A25	Eq-Operator-Value T83 LT
+A26	Observation-Type-Value T90 vital
+A27	Eq-Operator-Value T93 GT
+A28	Eq-Temporal-Period-Value T106 past
+A29	Eq-Operator-Value T108 LTEQ
+A30	Eq-Temporal-Period-Value T109 past
+A31	Eq-Temporal-Unit-Value T111 year
+A32	Eq-Temporal-Period-Value T119 present
+A33	Assertion-Type-Value E60 hypothetical
+A34	Observation-Type-Value T126 lab
+A35	Eq-Operator-Value T128 GT
+A36	Observation-Type-Value T133 lab
+A37	Eq-Operator-Value T135 GT
+A38	Temporal-Connection-Type-Value E66 during
+A39	Observation-Type-Value T142 lab
+A40	Eq-Operator-Value T144 GT
+A41	Stability-Value T155 change
+A42	Eq-Temporal-Period-Value T171 present
+A43	Observation-Type-Value T183 lab
+A44	Temporal-Connection-Type-Value E96 during
+A45	Polarity-Value T189 abnormal
+A46	Severity-Value T190 severe
+A47	Observation-Type-Value T99 clinical-score
+A48	Acuteness-Type-Value T179 chronic
+R1	If-Then Arg1:E10 Arg2:E11
+R2	Caused-By Arg1:E18 Arg2:E19
+R3	Caused-By Arg1:T52 Arg2:E20
+R4	Caused-By Arg1:E34 Arg2:E35
+R5	Equivalent-To Arg1:E39 Arg2:E37
+R6	Equivalent-To Arg1:E43 Arg2:E41
+R7	Treatment-For Arg1:E58 Arg2:E55
+R8	If-Then Arg1:E67 Arg2:E68
+R9	Caused-By Arg1:T155 Arg2:E74
+R10	Example-Of Arg1:E76 Arg2:E74
+R11	Example-Of Arg1:E77 Arg2:E74
+R12	Example-Of Arg1:E78 Arg2:E74
+R13	Example-Of Arg1:E81 Arg2:E74
+R14	Example-Of Arg1:E82 Arg2:E74

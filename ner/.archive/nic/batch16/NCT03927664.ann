@@ -1,0 +1,29 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E4	Age:T6 Eq-Comparison:E5
+E5	Eq-Comparison:T8 Operator:T5 Value:T7
+E2	Eq-Comparison:T9 Temporal-Period:T10
+E6	Procedure:T11 Name:T12 Temporality:E2
+E7	Eq-Comparison:T13 Operator:T14 Value:T15
+E8	Condition:T16 Name:T17 Minimum-Count:E7
+T1	Condition 48 71	peritoneal tuberculosis
+T2	Condition-Name 48 71	peritoneal tuberculosis
+T3	Condition 229 236	ascites
+T4	Condition-Name 229 236	ascites
+T5	Eq-Operator 169 170	<
+T6	Age 165 168	Age
+T7	Eq-Value 171 173	12
+T8	Eq-Comparison 169 173	< 12
+T9	Eq-Comparison 95 104	undergone
+T10	Eq-Temporal-Period 95 104	undergone
+T11	Procedure 107 139	computed tomographic examination
+T12	Procedure-Name 107 139	computed tomographic examination
+T13	Eq-Comparison 202 215	More than one
+T14	Eq-Operator 202 211	More than
+T15	Eq-Value 212 215	one
+T16	Condition 216 224	etiology
+T17	Condition-Name 216 224	etiology
+A1	Eq-Operator-Value T5 LT
+A2	Eq-Temporal-Period-Value T10 past
+A3	Eq-Operator-Value T14 GT
+R1	Caused-By Arg1:E3 Arg2:E8

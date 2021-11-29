@@ -1,0 +1,255 @@
+E1	Procedure:T1 Name:T2
+E7	Procedure:T7 Name:T8
+E10	Condition:T10 Name:T11
+E13	Condition:T13 Name:T14
+E15	Procedure:T15 Name:T16 Temporality:E25
+E19	Procedure:T19 Name:T20
+E21	Procedure:T21 Name:T22 Temporality:E25
+E24	Age:T30 Eq-Comparison:E39
+E25	Eq-Comparison:T37 Operator:T26 Value:T124 Temporal-Unit:T125
+E26	Eq-Comparison:T38 Value:T33 Operator:T73 Value2:T34
+E27	Eq-Comparison:T39 Temporal-Period:T40
+E28	Eq-Comparison:T41 Temporal-Period:T42 Temporal-Unit:T29 Value:T36
+E2	Condition:T5 Name:T6 Stage:E5
+E4	Modifier:T12 Modifies:T6
+E5	Eq-Comparison:T25 Unit:T28 Value:T31 Value2:T35
+E6	Procedure:T43 Name:T44
+E8	Condition:T45 Name:T46
+E9	Modifier:T47 Modifies:T46
+E11	Eq-Comparison:T48 Temporal-Period:T49
+E12	Procedure:T50 Name:T51 Temporality:E11
+E14	And:T52 Arg:E8 Arg2:E12
+E16	Or:T53 Arg:E12 Arg2:E7
+E18	Temporal-Connection:T54 Arg:E7 Arg2:E1
+E20	Procedure:T55 Name:T56
+E22	Modifier:T57 Modifies:T56
+E29	Indication:T58 Indication-For:E20
+E30	Procedure:T59 Name:T60
+E31	Coreference:T61 Refers-To:E8
+E32	Coreference:T62 Refers-To:E8
+E33	Or:T63 Arg:E31 Arg2:E32
+E34	And:T64 Arg:E1 Arg2:E31
+E35	And:T65 Arg:E30 Arg2:E20
+E36	Coreference:T66 Refers-To:E31
+E37	Coreference:T67 Refers-To:E32
+E38	Or:T68 Arg:E36 Arg2:E37
+E39	Eq-Comparison:T69 Value:T32 Temporal-Unit:T27 Operator:T70
+E40	Observation:T71 Name:T72 Eq-Comparison:E26
+E41	Procedure:T74 Name:T75
+E42	Modifier:T76 Modifies:T79
+E43	Modifier:T77 Modifies:T79
+E44	Condition:T78 Name:T79
+E45	Or:T80 Arg:E42 Arg2:E43
+E46	Condition:T81 Name:T82 Severity:T83
+E47	Procedure:T84 Name:T85
+E48	Negation:T86 Negates:E47
+E49	Assertion:T87 Asserted:E47
+E50	And:T88 Arg:E44 Arg2:E48
+E3	Condition:T3 Name:T4 Polarity:T89
+E51	Condition:T90 Name:T91
+E52	Modifier:T92 Modifies:T91
+E53	Modifier:T93 Modifies:T91
+E54	Or:T94 Arg:E53 Arg2:E52
+E55	Study:T95
+E56	Temporal-Connection:T96 Arg:E51 Arg2:E55
+E57	Condition:T97 Name:T98 Polarity:T99
+E58	Or:T100 Arg:E57 Arg2:E10
+E59	Study:T101 Study-Of:E60 Temporality:E28
+E60	Drug:T102
+E61	Other:T103 Is-Other:E59
+E62	Observation:T104 Name:T105 Polarity:T106
+E23	Condition:T23 Name:T24
+E63	Condition:T107 Name:T108
+E64	Condition:T109 Name:T110
+E65	Modifier:T111 Modifies:T108
+E66	Or:T112 Arg:E23 Arg2:E63
+E67	Condition:T113 Name:T114
+E68	Modifier:T115 Modifies:T114
+E17	Condition:T17 Name:T18
+E69	Modifier:T116 Modifies:T18
+E70	Condition:T117 Name:T118 Temporality:E27
+E71	Procedure:T119
+E72	Assertion:T120 Asserted:E71
+E73	Modifier:T121 Modifies:T14
+E74	Study:T122
+E75	Or:T123 Arg:E21 Arg2:E15
+E76	Temporal-Connection:T126 Arg:E25 Arg2:E74
+E77	Condition:T127 Name:T128
+E78	Modifier:T129 Modifies:E77
+E79	Procedure:T130 Name:T131
+E80	Or:T132 Arg:E19 Arg2:E79
+E81	Risk:T133 Risk-For:E79
+E82	Procedure:T134 Name:T135
+E83	Procedure:T136 Name:T137
+E84	Negation:T138 Negates:E82
+E85	Assertion:T139 Asserted:E84
+T1	Procedure 185 211	adjuvant chemoradiotherapy
+T2	Procedure-Name 185 211	adjuvant chemoradiotherapy
+T7	Procedure 163 172	resection
+T8	Procedure-Name 163 172	resection
+T9	Life-Stage-And-Gender 1069 1075	female
+T10	Condition 952 956	AIDS
+T11	Condition-Name 952 956	AIDS
+T13	Condition 1371 1386	febrile illness
+T14	Condition-Name 1371 1386	febrile illness
+T15	Procedure 1405 1417	chemotherapy
+T16	Procedure-Name 1405 1417	chemotherapy
+T19	Procedure 1499 1509	anesthesia
+T20	Procedure-Name 1499 1509	anesthesia
+T21	Procedure 1392 1401	Radiation
+T22	Procedure-Name 1392 1401	Radiation
+T26	Eq-Operator 1418 1424	within
+T27	Eq-Temporal-Unit 376 381	years
+T29	Eq-Temporal-Unit 1029 1034	weeks
+T30	Age 385 388	age
+T32	Eq-Value 373 375	18
+T33	Eq-Value 432 434	70
+T34	Eq-Value 435 438	100
+T36	Eq-Value 1027 1028	4
+T37	Eq-Comparison 1418 1432	within 4 weeks
+T38	Eq-Comparison 432 438	70-100
+T39	Eq-Comparison 1317 1323	Active
+T40	Eq-Temporal-Period 1317 1323	Active
+T41	Eq-Comparison 1021 1034	prior 4 weeks
+T42	Eq-Temporal-Period 1021 1026	prior
+T5	Condition 98 104	Glioma
+T6	Condition-Name 98 104	Glioma
+T12	Modifier 63 77	supratentorial
+T25	Eq-Comparison 82 97	Grade III or IV
+T28	Eq-Unit 82 87	Grade
+T31	Eq-Value 88 91	III
+T35	Eq-Value 95 97	IV
+T43	Procedure 25 39	Histologically
+T44	Procedure-Name 25 39	Histologically
+T45	Condition 117 123	Glioma
+T46	Condition-Name 117 123	Glioma
+T47	Modifier 106 116	High Grade
+T48	Eq-Comparison 134 143	undergone
+T49	Eq-Temporal-Period 134 143	undergone
+T50	Procedure 144 159	surgical biopsy
+T51	Procedure-Name 144 159	surgical biopsy
+T52	And 130 133	has
+T53	Or 160 162	or
+T54	Temporal-Connection 173 184	followed by
+T55	Procedure 304 310	biopsy
+T56	Procedure-Name 304 310	biopsy
+T57	Modifier 291 303	stereotactic
+T58	Indication 314 323	indicated
+T59	Procedure 269 276	imaging
+T60	Procedure-Name 269 276	imaging
+T61	Coreference 234 244	recurrence
+T62	Coreference 248 259	progression
+T63	Or 245 247	or
+T64	And 218 221	has
+T65	And 285 288	and
+T66	Coreference 344 354	recurrence
+T67	Coreference 355 366	progression
+T68	Or 354 355	/
+T69	Eq-Comparison 373 397	18 years of age or older
+T70	Eq-Operator 389 397	or older
+T71	Observation 403 431	Karnofsky Performance Status
+T72	Observation-Name 403 431	Karnofsky Performance Status
+T73	Eq-Operator 434 435	-
+T74	Procedure 445 448	MRI
+T75	Procedure-Name 445 448	MRI
+T76	Modifier 468 505	stereotactically accessible enhancing
+T77	Modifier 509 537	predominantly non- enhancing
+T78	Condition 538 542	mass
+T79	Condition-Name 538 542	mass
+T80	Or 506 508	or
+T81	Condition 609 620	mass effect
+T82	Condition-Name 609 620	mass effect
+T83	Severity 597 608	significant
+T84	Procedure 565 574	resection
+T85	Procedure-Name 565 574	resection
+T86	Negation 553 556	not
+T87	Assertion 557 564	require
+T88	And 543 547	that
+T3	Condition 767 781	organ function
+T4	Condition-Name 767 781	organ function
+T89	Polarity 758 766	Adequate
+T90	Condition 867 880	incapacitated
+T91	Condition-Name 867 880	incapacitated
+T92	Modifier 859 866	legally
+T93	Modifier 847 855	mentally
+T94	Or 856 858	or
+T95	Study 900 905	study
+T96	Temporal-Connection 881 892	at the time
+T97	Condition 918 921	HIV
+T98	Condition-Name 918 921	HIV
+T99	Polarity 922 923	+
+T100	Or 925 927	or
+T101	Study 1008 1013	study
+T102	Drug 1003 1007	drug
+T103	Other 979 986	another
+T104	Observation 1049 1063	pregnancy test
+T105	Observation-Name 1049 1063	pregnancy test
+T106	Polarity 1040 1048	Positive
+T23	Condition 1165 1185	Diffuse subependymal
+T24	Condition-Name 1165 1185	Diffuse subependymal
+T107	Condition 1217 1224	disease
+T108	Condition-Name 1217 1224	disease
+T109	Condition 1212 1215	CSF
+T110	Condition-Name 1212 1215	CSF
+T111	Modifier 1189 1210	Cerebral Spinal Fluid
+T112	Or 1186 1188	or
+T113	Condition 1230 1236	Tumors
+T114	Condition-Name 1230 1236	Tumors
+T115	Modifier 1251 1261	cerebellum
+T17	Condition 1267 1272	Tumor
+T18	Condition-Name 1267 1272	Tumor
+T116	Modifier 1273 1311	enhancement involving both hemispheres
+T117	Condition 1324 1333	infection
+T118	Condition-Name 1324 1333	infection
+T119	Procedure 1344 1353	treatment
+T120	Assertion 1334 1343	requiring
+T121	Modifier 1359 1370	Unexplained
+T122	Study 1436 1446	enrollment
+T123	Or 1402 1404	or
+T124	Eq-Value 1425 1426	4
+T125	Eq-Temporal-Unit 1427 1432	weeks
+T126	Temporal-Connection 1433 1435	of
+T127	Condition 1461 1469	diseases
+T128	Condition-Name 1461 1469	diseases
+T129	Modifier 1452 1460	Systemic
+T130	Procedure 1513 1522	operative
+T131	Procedure-Name 1513 1522	operative
+T132	Or 1510 1512	or
+T133	Risk 1523 1527	risk
+T134	Procedure 1554 1580	magnetic resonance imaging
+T135	Procedure-Name 1554 1580	magnetic resonance imaging
+T136	Procedure 1582 1585	MRI
+T137	Procedure-Name 1582 1585	MRI
+T138	Negation 1533 1542	Inability
+T139	Assertion 1533 1542	Inability
+A1	Life-Stage-And-Gender-Type T9 female
+A2	Eq-Operator-Value T26 LTEQ
+A3	Eq-Temporal-Unit-Value T27 year
+A5	Eq-Temporal-Unit-Value T29 week
+A7	Eq-Temporal-Period-Value T40 present
+A8	Eq-Temporal-Period-Value T42 past
+A4	Eq-Temporal-Period-Value T49 past
+A6	Temporal-Connection-Type-Value E18 before
+A9	Eq-Operator-Value T70 GTEQ
+A10	Observation-Type-Value T72 clinical-score
+A11	Eq-Operator-Value T73 BETWEEN
+A12	Severity-Value T83 severe
+A13	Assertion-Type-Value E49 hypothetical
+A14	Polarity-Value T89 normal
+A15	Temporal-Connection-Type-Value E56 during
+A16	Polarity-Value T99 positive
+A17	Polarity-Value T106 positive
+A18	Assertion-Type-Value E72 hypothetical
+A19	Eq-Temporal-Unit-Value T125 week
+A20	Temporal-Connection-Type-Value E76 before
+A21	Assertion-Type-Value E85 hypothetical
+R1	Found-By Arg1:E2 Arg2:E6
+R2	Equivalent-To Arg1:E8 Arg2:E2
+R3	Found-By Arg1:E32 Arg2:E30
+R4	Found-By Arg1:E44 Arg2:E41
+R5	Treatment-For Arg1:E47 Arg2:E46
+R6	If-Then Arg1:T9 Arg2:E62
+R7	Abbrev-Of Arg1:E64 Arg2:E65
+R8	Treatment-For Arg1:E71 Arg2:E70
+R9	Caused-By Arg1:E81 Arg2:E77
+R10	Abbrev-Of Arg1:E83 Arg2:E82

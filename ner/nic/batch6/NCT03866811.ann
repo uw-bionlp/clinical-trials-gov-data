@@ -1,4 +1,4 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T16 Operator:T17 Value:T18 Temporal-Unit:T19
 E3	Condition:T3 Name:T20 Temporality:E4
 E4	Eq-Comparison:T4 Temporal-Period:T23 Value:T24 Temporal-Unit:T25
@@ -10,12 +10,12 @@ E11	Negation:T11 Negates:T32
 E12	Assertion:T12 Asserted:E13
 E13	Condition:T13 Name:T33 Temporality:E14
 E14	Eq-Comparison:T14 Temporal-Period:T34 Temporal-Unit:T35
-E15	Encounter:T36 Type:T37
+E15	Encounter:T36
 E16	Modifier:T21 Modifies:T20
 E7	Eq-Comparison:T7 Temporal-Period:T22
 E17	Eq-Comparison:T27 Temporal-Period:T38
 E18	Condition:T39 Name:T30 Provider:E19 Temporality:E17
-E19	Provider:T40 Role:T41
+E19	Provider:T40
 E20	Eq-Comparison:T42 Temporal-Period:T43
 E10	Negation:T44 Negates:T10
 T1	Age 66 69	age
@@ -49,7 +49,6 @@ T33	Condition-Name 439 447	pregnant
 T34	Eq-Temporal-Period 455 459	next
 T35	Eq-Temporal-Unit 460 464	year
 T36	Encounter 32 52	emergency department
-T37	Encounter-Type 32 52	emergency department
 T21	Modifier 103 113	with males
 T7	Eq-Comparison 261 264	are
 T22	Eq-Temporal-Period 261 264	are
@@ -57,7 +56,6 @@ T27	Eq-Comparison 279 282	are
 T38	Eq-Temporal-Period 279 282	are
 T39	Condition 287 290	ill
 T40	Provider 317 336	attending physician
-T41	Provider-Role 317 336	attending physician
 T42	Eq-Comparison 342 345	are
 T43	Eq-Temporal-Period 342 345	are
 T10	Location 384 391	locally
@@ -71,7 +69,7 @@ A8	Eq-Temporal-Unit-Value T25 month
 A9	Eq-Temporal-Period-Value T26 present
 A11	Eq-Temporal-Period-Value T34 future
 A12	Eq-Temporal-Unit-Value T35 year
-A13	Encounter-Type-Value T37 emergency
+A13	Encounter-Type-Value E15 emergency
 A5	Eq-Temporal-Period-Value T22 present
 A6	Eq-Temporal-Period-Value T38 present
 A10	Eq-Temporal-Period-Value T43 present

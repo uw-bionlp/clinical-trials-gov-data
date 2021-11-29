@@ -1,0 +1,65 @@
+E1	Condition:T1 Name:T24
+E2	And:T2 Arg:T25 Arg2:E3
+E3	Negation:T3 Negates:E5
+E4	Modifier:T4 Modifies:T26
+E5	Condition:T5 Name:T26
+E6	Condition:T6 Name:T28
+E7	Risk:T7 Risk-For:E6 Polarity:T27
+E9	And:T9 Arg:T29 Arg2:E12
+E10	Eq-Comparison:T10 Operator:T30 Value:T31
+E11	Modifier:T11 Modifies:T38
+E12	Condition:T12 Name:T38 Temporality:E8 Minimum-Count:E10
+E13	Modifier:T13 Modifies:T38
+E14	And:T14 Arg:E12
+E15	Observation:T15 Name:T39 Eq-Comparison:E16
+E16	Eq-Comparison:T16 Value:T32 Value:T33 Value2:T40
+E18	Modifier:T18 Modifies:T34
+E19	Condition:T19 Name:T34
+E20	Modifier:T20 Modifies:T35
+E21	Condition:T21 Name:T35
+E22	Allergy:T22 Name:T36
+E8	Eq-Comparison:T8 Temporal-Period:T37
+T1	Condition 25 32	Healthy
+T2	And 42 46	with
+T3	Negation 47 49	no
+T4	Modifier 50 58	systemic
+T5	Condition 59 67	diseases
+T6	Condition 79 85	caries
+T7	Risk 86 90	risk
+T9	And 100 104	with
+T10	Eq-Comparison 121 133	at least one
+T11	Modifier 134 141	visible
+T12	Condition 149 152	WSL
+T13	Modifier 156 169	primary teeth
+T14	And 170 174	with
+T15	Observation 175 189	ICDAS II score
+T16	Eq-Comparison 193 201	1,2 or 3
+T18	Modifier 294 308	Selected tooth
+T19	Condition 314 330	cavitated lesion
+T20	Modifier 337 351	Selected tooth
+T21	Condition 357 371	enamel defects
+T22	Allergy 391 399	allergic
+T24	Condition-Name 25 32	Healthy
+T25	Life-Stage-And-Gender 33 41	children
+T26	Condition-Name 59 67	diseases
+T27	Polarity 74 78	High
+T28	Condition-Name 79 85	caries
+T29	Life-Stage-And-Gender 91 99	children
+T30	Eq-Operator 121 129	at least
+T31	Eq-Value 130 133	one
+T32	Eq-Value 193 194	1
+T33	Eq-Value 200 201	3
+T34	Condition-Name 314 330	cavitated lesion
+T35	Condition-Name 357 371	enamel defects
+T36	Allergy-Name 403 407	milk
+T8	Eq-Comparison 142 148	active
+T37	Eq-Temporal-Period 142 148	active
+T38	Condition-Name 149 152	WSL
+T39	Observation-Name 175 189	ICDAS II score
+T40	Eq-Value 195 196	2
+A2	Life-Stage-And-Gender-Type T25 child
+A3	Polarity-Value T27 high
+A4	Life-Stage-And-Gender-Type T29 child
+A5	Eq-Operator-Value T30 GTEQ
+A1	Eq-Temporal-Period-Value T37 present
+A6	Observation-Type-Value T39 clinical-score

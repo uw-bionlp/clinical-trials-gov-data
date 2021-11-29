@@ -1,16 +1,12 @@
-E1	Or:T1 Arg:T50 Arg2:T51
 E2	Eq-Comparison:T2 Operator:T52 Value:T53 Value:T54 Temporal-Unit:T55
 E3	Modifier:T3 Modifies:T56
 E4	Condition:T4 Name:T56
-E5	And:T5 Arg:E4 Arg2:E7
 E7	Condition:T7 Name:T57
-E8	And:T8 Arg:E7 Arg2:E11
 E9	Eq-Comparison:T9 Temporal-Period:T58
 E11	Procedure:T11 Name:T10 Temporality:E9
 E12	Procedure:T12 Name:T60
 E13	Other:T13 Is-Other:E14
-E14	Condition:T14 Name:T62 Severity:T61
-E15	Or:T15 Arg:E14 Arg2:E16
+E14	Condition:T14 Severity:T61
 E16	Condition:T16 Name:T63
 E17	Assertion:T17 Asserted:E18
 E18	Risk:T18
@@ -18,21 +14,17 @@ E19	Assertion:T19 Asserted:T64
 E20	Study:T20 Stability:T64
 E21	Eq-Comparison:T21 Temporal-Period:T65
 E22	Procedure:T22 Name:T66 Temporality:E21
-E23	Or:T23 Arg:E22 Arg2:E25
 E24	Other:T24 Is-Other:E25
 E25	Procedure:T25
 E26	Procedure:T26 Name:T67
-E27	Temporal-Connection:T27 Arg:E26 Arg2:E28
 E28	Study:T28
 E29	Procedure:T29 Name:T68 Temporality:E30
 E32	Procedure:T32 Name:T69 Temporality:E33
 E33	Eq-Comparison:T33 Temporal-Period:T70 Value:T71 Temporal-Unit:T72
 E34	Modifier:T34 Modifies:T73
-E35	Condition:T35 Name:T73
-E36	Condition:T36 Name:T87
-E37	Or:T37 Arg:E36 Arg2:E38
+E35	Observation:T35 Name:T73
+E36	Observation:T36 Name:T87
 E38	Condition:T38 Name:T88
-E40	Temporal-Connection:T40 Arg:E41
 E41	Procedure:T41 Name:T74
 E42	Eq-Comparison:T42 Temporal-Period:T75
 E43	Procedure:T43 Name:T76 Temporality:E42
@@ -42,7 +34,7 @@ E46	Modifier:T46 Modifies:T80
 E47	Condition:T47 Name:T80 Severity:T79
 E48	Condition:T48 Name:T82 Severity:T81 Provider:E53
 E49	Condition:T49 Name:T84 Severity:T83
-E39	Age:T39 Eq-Comparison:E2
+E39	Age:T39 Numeric-Filter:E2
 E6	Modifier:T6 Modifies:T57
 E10	Modifier:T59 Modifies:T10
 E50	Modifier:T85 Modifies:T66
@@ -50,20 +42,16 @@ E30	Eq-Comparison:T30 Temporal-Period:T86
 E31	Modifier:T31 Modifies:T69
 E51	Negation:T89 Negates:E46
 E52	Modifier:T90 Modifies:T80
-E53	Provider:T91 Type:T92
-T1	Or 30 33	and
+E53	Provider:T91
 T2	Eq-Comparison 50 73	between 18 and 80 years
 T3	Modifier 94 103	permanent
 T4	Condition 104 108	UVFP
-T5	And 109 112	and
 T7	Condition 126 141	glottal closure
-T8	And 142 145	and
 T9	Eq-Comparison 146 153	planned
 T11	Procedure 161 172	thyroplasty
 T12	Procedure 178 198	conventional implant
 T13	Other 333 338	other
 T14	Condition 351 358	disease
-T15	Or 359 361	or
 T16	Condition 362 370	disorder
 T17	Assertion 414 417	may
 T18	Risk 448 452	risk
@@ -71,21 +59,17 @@ T19	Assertion 508 511	may
 T20	Study 624 637	investigation
 T21	Eq-Comparison 643 652	Scheduled
 T22	Procedure 662 669	surgery
-T23	Or 670 672	or
 T24	Other 673 678	other
 T25	Procedure 679 689	procedures
 T26	Procedure 700 719	general anaesthesia
-T27	Temporal-Connection 720 726	during
 T28	Study 736 749	investigation
 T29	Procedure 759 784	medialization thyroplasty
 T32	Procedure 811 838	medialization laryngoplasty
 T33	Eq-Comparison 846 860	past two years
 T34	Modifier 879 900	structural vocal fold
-T35	Condition 901 908	lesions
-T36	Condition 917 922	polyp
-T37	Or 923 925	or
+T35	Observation 901 908	lesions
+T36	Observation 917 922	polyp
 T38	Condition 926 933	nodules
-T40	Temporal-Connection 946 950	post
 T41	Procedure 951 967	total cordectomy
 T42	Eq-Comparison 973 981	Previous
 T43	Procedure 982 1009	laryngeal framework surgery
@@ -117,7 +101,7 @@ T69	Procedure-Name 811 838	medialization laryngoplasty
 T70	Eq-Temporal-Period 846 850	past
 T71	Eq-Value 851 854	two
 T72	Eq-Temporal-Unit 855 860	years
-T73	Condition-Name 901 908	lesions
+T73	Observation-Name 901 908	lesions
 T74	Procedure-Name 951 967	total cordectomy
 T75	Eq-Temporal-Period 973 981	Previous
 T76	Procedure-Name 982 1009	laryngeal framework surgery
@@ -137,16 +121,13 @@ T85	Modifier 653 661	elective
 T30	Eq-Comparison 785 791	before
 T86	Eq-Temporal-Period 785 791	before
 T31	Modifier 801 810	injection
-T87	Condition-Name 917 922	polyp
+T87	Observation-Name 917 922	polyp
 T88	Condition-Name 926 933	nodules
 T89	Negation 1074 1077	non
 T90	Modifier 1088 1094	speech
 T91	Provider 1159 1176	speech therapists
-T92	Provider-Type 1159 1176	speech therapists
 A1	Assertion-Type-Value E17 hypothetical
 A2	Assertion-Type-Value E19 hypothetical
-A3	Temporal-Connection-Type-Value E27 during
-A5	Temporal-Connection-Type-Value E40 after
 A6	Life-Stage-And-Gender-Type T50 male
 A7	Life-Stage-And-Gender-Type T51 female
 A8	Eq-Operator-Value T52 BETWEEN
@@ -171,3 +152,11 @@ R6	Example-Of Arg1:E38 Arg2:E35
 R7	Example-Of Arg1:E44 Arg2:E43
 R8	Example-Of Arg1:E45 Arg2:E43
 R9	Equivalent-To Arg1:E48 Arg2:E47
+R10	Or Arg1:T50 Arg2:T51
+R11	And Arg1:E4 Arg2:E7
+R12	And Arg1:E7 Arg2:E11
+R13	Or Arg1:E14 Arg2:E16
+R14	Or Arg1:E22 Arg2:E25
+R15	During Arg1:E26 Arg2:E28
+R16	Or Arg1:E36 Arg2:E38
+R17	Or Arg1:E44 Arg2:E45

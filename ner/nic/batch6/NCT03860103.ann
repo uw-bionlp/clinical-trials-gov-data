@@ -3,18 +3,15 @@ E3	Modifier:T3 Modifies:T24
 E4	Condition:T4 Name:T24
 E5	Condition:T5 Name:T26 Polarity:T25 Temporality:E6
 E6	Eq-Comparison:T6 Operator:T27 Value:T28 Value:T29 Temporal-Unit:T30
-E7	Temporal-Connection:T7 Arg:E6 Arg2:E8
 E8	Condition:T8 Name:T31
-E9	Encounter:T9
+E9	
 E10	Condition:T10 Name:T33
-E11	Or:T11 Arg:E10 Arg2:E13
 E13	Condition:T13 Name:T34 Temporality:E14
 E14	Eq-Comparison:T14 Operator:T35 Value:T36 Temporal-Unit:T37
-E15	Temporal-Connection:T15 Arg:E14 Arg2:E16
 E16	Condition:T16 Name:T38
 E17	Observation:T17 Name:T41
 E19	Condition:T19 Name:T42 Minimum-Count:E18
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E12	Observation:T12 Name:T43
 E18	Eq-Comparison:T18 Operator:T44
 T2	Eq-Comparison 85 98	over 18 years
@@ -22,14 +19,11 @@ T3	Modifier 152 162	Mono-fetal
 T4	Condition 163 172	pregnancy
 T5	Condition 199 208	pregnancy
 T6	Eq-Comparison 209 232	between 11 and 42 weeks
-T7	Temporal-Connection 233 235	of
 T8	Condition 236 246	amenorrhea
 T9	Encounter 261 273	hospitalized
 T10	Condition 278 290	preeclampsia
-T11	Or 291 299	and / or
 T13	Condition 300 331	intrauterine growth retardation
 T14	Eq-Comparison 333 348	beyond 20 weeks
-T15	Temporal-Connection 349 351	of
 T16	Condition 352 362	amenorrhea
 T17	Observation 403 421	under guardianship
 T19	Condition 503 512	pregnancy
@@ -61,8 +55,6 @@ T43	Observation-Name 423 440	protected persons
 T40	Life-Stage-And-Gender 396 402	adults
 T18	Eq-Comparison 494 502	Multiple
 T44	Eq-Operator 494 502	Multiple
-A1	Temporal-Connection-Type-Value E7 after
-A2	Temporal-Connection-Type-Value E15 after
 A3	Life-Stage-And-Gender-Type T20 female
 A4	Eq-Operator-Value T21 GT
 A5	Eq-Temporal-Unit-Value T23 year
@@ -77,3 +69,7 @@ A13	Life-Stage-And-Gender-Type T40 adult
 A14	Eq-Operator-Value T44 GT
 R1	Treatment-For Arg1:E9 Arg2:E10
 R2	If-Then Arg1:T40 Arg2:E17
+R3	After Arg1:E6 Arg2:E8
+R4	Or Arg1:E10 Arg2:E13
+R5	After Arg1:E14 Arg2:E16
+R6	Or Arg1:E17 Arg2:E12

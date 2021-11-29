@@ -19,28 +19,24 @@ E33	Eq-Comparison:T45 Temporal-Period:T46
 E34	Eq-Comparison:T47 Temporal-Period:T48
 E2	Procedure:T49 Name:T50
 E4	Eq-Comparison:T31 Operator:T51 Value:T52 Unit:T53
-E6	Observation:T54 Name:T55 Eq-Comparison:E4 Eq-Comparison2:E8
+E6	Observation:T54 Name:T55 Numeric-Filter:E4 Numeric-Filter:E8
 E8	Eq-Comparison:T56 Operator:T57 Value:T58 Unit:T59
 E10	Condition:T60 Name:T61 Duration:E12
 E12	Eq-Comparison:T62 Operator:T63 Temporal-Unit:T64 Value:T32
 E14	Condition:T65 Name:T66
-E16	Or:T67 Arg:E23 Arg2:E14
 E18	Negation:T68 Negates:E23
 E20	Modifier:T69 Modifies:T10
-E22	Condition:T70 Name:T71 Temporality:E29
+E22	Observation:T70 Name:T71 Temporality:E29
 E24	Condition:T72 Name:T73
 E26	Condition:T74 Name:T75
 E35	Condition:T76 Name:T77
 E25	Drug:T25 Name:T26 Temporality:E30
 E36	Modifier:T78 Modifies:E25
 E37	Eq-Comparison:T79 Temporal-Period:T80 Value:T33 Temporal-Unit:T29
-E38	Temporal-Connection:T81 Arg:E25 Arg2:E37
 E39	Eq-Comparison:T82 Temporal-Period:T83
 E40	Modifier:T84 Modifies:T20
 E27	Modifier:T27 Modifies:T20
 E41	Modifier:T28 Modifies:T20
-E42	Or:T85 Arg:E27 Arg2:E40
-E43	Or:T86 Arg:E1 Arg2:E3
 E44	Modifier:T87 Modifies:E15
 E45	Eq-Comparison:T88 Temporal-Period:T89 Value:T34 Temporal-Unit:T30
 E46	Modifier:T90 Modifies:T71
@@ -106,11 +102,10 @@ T63	Eq-Operator 245 253	at least
 T64	Eq-Temporal-Unit 256 261	month
 T65	Condition 282 295	breastfeeding
 T66	Condition-Name 282 295	breastfeeding
-T67	Or 280 281	/
 T68	Negation 267 269	No
 T69	Modifier 332 341	bilateral
-T70	Condition 387 393	trauma
-T71	Condition-Name 387 393	trauma
+T70	Observation 387 393	trauma
+T71	Observation-Name 387 393	trauma
 T72	Condition 395 403	fracture
 T73	Condition-Name 395 403	fracture
 T74	Condition 517 522	tumor
@@ -122,14 +117,11 @@ T26	Drug-Name 550 564	corticosteroid
 T78	Modifier 582 590	shoulder
 T79	Eq-Comparison 602 615	last 3 months
 T80	Eq-Temporal-Period 602 606	last
-T81	Temporal-Connection 591 597	during
 T82	Eq-Comparison 632 638	recent
 T83	Eq-Temporal-Period 632 638	recent
 T84	Modifier 655 661	bypass
 T27	Modifier 645 651	breast
 T28	Modifier 639 643	lung
-T85	Or 652 654	or
-T86	Or 709 710	/
 T87	Modifier 821 834	same shoulder
 T88	Eq-Comparison 842 855	last 6 months
 T89	Eq-Temporal-Period 842 846	last
@@ -144,13 +136,24 @@ A7	Eq-Temporal-Period-Value T44 past
 A8	Eq-Temporal-Period-Value T46 past
 A9	Eq-Temporal-Period-Value T48 past
 A10	Eq-Operator-Value T51 GT
-A11	Observation-Type-Value T55 measurement
+A11	Observation-Type-Value E6 measurement
 A12	Eq-Operator-Value T57 GTEQ
 A13	Eq-Operator-Value T63 GTEQ
 A14	Eq-Temporal-Unit-Value T64 month
 A15	Eq-Temporal-Period-Value T80 past
-A16	Temporal-Connection-Type-Value E38 during
 A17	Eq-Temporal-Period-Value T83 recent
 A18	Eq-Temporal-Period-Value T89 past
 R1	Found-By Arg1:E7 Arg2:E2
 R2	Equivalent-To Arg1:E6 Arg2:E7
+R3	Or Arg1:E23 Arg2:E14
+R4	During Arg1:E25 Arg2:E37
+R5	Or Arg1:E27 Arg2:E40
+R6	Or Arg1:E1 Arg2:E3
+R7	Or Arg1:E11 Arg2:E26
+R8	Or Arg1:E13 Arg2:E21
+R9	Or Arg1:E17 Arg2:E11
+R10	Or Arg1:E21 Arg2:E17
+R11	Or Arg1:E22 Arg2:E24
+R12	Or Arg1:E24 Arg2:E13
+R13	Or Arg1:E26 Arg2:E35
+R14	Or Arg1:E41 Arg2:E27

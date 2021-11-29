@@ -1,17 +1,17 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4 Temporality:E16
 E5	Condition:T5 Name:T6 Severity:T38
-E10	Observation:T10 Name:T11 Eq-Comparison:E14
-E11	Age:T15 Eq-Comparison:E15
+E10	Observation:T10 Name:T11 Numeric-Filter:E14
+E11	Age:T15 Numeric-Filter:E15
 E13	Eq-Comparison:T22 Operator:T12 Value:T20
 E14	Eq-Comparison:T23 Operator:T13 Value:T21
 E15	Eq-Comparison:T24 Operator:T17 Value:T18 Temporal-Unit:T14 Value2:T19
 E2	Eq-Comparison:T25 Temporal-Period:T26
 E4	Procedure:T27 Name:T28 Temporality:E2
 E6	Procedure:T29 Name:T30
-E8	Observation:T16 Name:T31 Eq-Comparison:E9
+E8	Observation:T16 Name:T31 Numeric-Filter:E9
 E9	Eq-Comparison:T34 Value:T33 Operator:T35 Value2:T32
-E12	Observation:T36 Name:T37 Eq-Comparison:E13
+E12	Observation:T36 Name:T37 Numeric-Filter:E13
 E16	Eq-Comparison:T39 Temporal-Period:T40
 E7	Allergy:T7 Name:E17
 E17	Drug:T8
@@ -58,7 +58,7 @@ T7	Allergy 320 327	allergy
 T8	Drug 315 319	drug
 T41	Modifier 224 232	systemic
 A1	Life-Stage-And-Gender-Type T9 child
-A2	Observation-Type-Value T11 vital
+A2	Observation-Type-Value E10 vital
 A3	Eq-Operator-Value T12 GT
 A4	Eq-Operator-Value T13 GT
 A5	Eq-Temporal-Unit-Value T14 year
@@ -67,5 +67,5 @@ A7	Eq-Temporal-Period-Value T26 present
 A8	Eq-Operator-Value T35 BETWEEN
 A9	Severity-Value T38 severe
 A10	Eq-Temporal-Period-Value T40 recent
-A11	Observation-Type-Value T31 clinical-score
+A11	Observation-Type-Value E8 clinical-score
 R1	Using Arg1:E4 Arg2:E6

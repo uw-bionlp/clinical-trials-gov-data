@@ -4,7 +4,6 @@ E2	Assertion:T5 Asserted:E1
 E4	Condition:T6 Name:T7
 E5	Modifier:T8 Modifies:T7
 E6	Modifier:T9 Modifies:T7
-E7	Or:T10 Arg:E5 Arg2:E6
 T1	Procedure 50 75	Swan-Ganz catheterization
 T2	Procedure-Name 50 75	Swan-Ganz catheterization
 T3	Procedure 80 95	heart surgeries
@@ -14,6 +13,6 @@ T6	Condition 162 177	thrombus in the
 T7	Condition-Name 162 177	thrombus in the
 T8	Modifier 178 183	heart
 T9	Modifier 191 201	vena cavas
-T10	Or 184 186	or
 A1	Assertion-Type-Value E2 hypothetical
 R1	Using Arg1:E3 Arg2:E1
+R2	Or Arg1:E5 Arg2:E6

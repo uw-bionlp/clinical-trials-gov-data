@@ -2,15 +2,14 @@ E1	Condition:T1 Name:T2
 E3	Procedure:T3 Name:T4 Temporality:E14
 E4	Eq-Comparison:T12 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6
 E2	Observation:T13 Name:T14
-E5	Age:T15 Eq-Comparison:E4
+E5	Age:T15 Numeric-Filter:E4
 E6	Eq-Comparison:T16 Temporal-Unit:T19 Value:T18 Operator:T17
 E7	Observation:T20 Name:T21 Duration:E6
 E8	Eq-Comparison:T22 Temporal-Period:T23
-E9	Condition:T24 Name:T25
+E9	Observation:T24 Name:T25
 E10	Modifier:T26 Modifies:T25
 E11	Study:T27 Temporality:E12
 E12	Eq-Comparison:T28 Temporal-Recency:T29
-E13	Temporal-Connection:T30 Arg:E9 Arg2:E12
 E14	Eq-Comparison:T31 Temporal-Period:T32
 E15	Study:T33
 E16	Negation:T34 Negates:E15
@@ -19,7 +18,6 @@ E18	Eq-Comparison:T36 Temporal-Period:T37
 E19	Eq-Comparison:T39 Temporal-Period:T40 Value:T11 Temporal-Unit:T7
 E20	Modifier:T41 Modifies:T2
 E21	Modifier:T42 Modifies:T2
-E22	Or:T43 Arg:E20 Arg2:E21
 T1	Condition 474 482	disorder
 T2	Condition-Name 474 482	disorder
 T3	Procedure 318 341	physiotherapy treatment
@@ -43,13 +41,12 @@ T20	Observation 113 128	sports practice
 T21	Observation-Name 113 128	sports practice
 T22	Eq-Comparison 134 143	Currently
 T23	Eq-Temporal-Period 134 143	Currently
-T24	Condition 261 267	injury
-T25	Condition-Name 261 267	injury
+T24	Observation 261 267	injury
+T25	Observation-Name 261 267	injury
 T26	Modifier 245 260	musculoskeletal
 T27	Study 297 302	study
 T28	Eq-Comparison 283 292	beginning
 T29	Eq-Temporal-Recency 283 292	beginning
-T30	Temporal-Connection 268 279	at the time
 T31	Eq-Comparison 308 315	Receive
 T32	Eq-Temporal-Period 308 315	Receive
 T33	Study 359 364	study
@@ -62,18 +59,18 @@ T39	Eq-Comparison 414 427	last 6 months
 T40	Eq-Temporal-Period 414 418	last
 T41	Modifier 451 459	auditory
 T42	Modifier 463 473	vestibular
-T43	Or 460 462	or
 A1	Life-Stage-And-Gender-Type T5 female
 A2	Eq-Temporal-Unit-Value T6 year
 A3	Eq-Temporal-Unit-Value T7 month
 A4	Eq-Operator-Value T8 BETWEEN
-A5	Observation-Type-Value T14 social-habit
+A5	Observation-Type-Value E2 social-habit
 A6	Eq-Operator-Value T17 GT
 A7	Eq-Temporal-Unit-Value T19 year
-A8	Observation-Type-Value T21 social-habit
+A8	Observation-Type-Value E7 social-habit
 A9	Eq-Temporal-Period-Value T23 present
 A10	Eq-Temporal-Recency-Value T29 first-time
-A11	Temporal-Connection-Type-Value E13 during
 A12	Eq-Temporal-Period-Value T32 present
 A13	Eq-Temporal-Period-Value T37 past
 A14	Eq-Temporal-Period-Value T40 past
+R1	During Arg1:E9 Arg2:E12
+R2	Or Arg1:E20 Arg2:E21

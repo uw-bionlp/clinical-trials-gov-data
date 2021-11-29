@@ -7,33 +7,24 @@ E16	Eq-Comparison:T39 Operator:T21 Value:T35 Value2:T36
 E2	Birth:T3 Temporality:E3 Temporality2:E8
 E3	Eq-Comparison:T4 Operator:T40 Value:T22 Value2:T23 Temporal-Unit:T16
 E4	Condition:T41 Name:T42
-E6	Temporal-Connection:T43 Arg:E3 Arg2:E4
 E8	Eq-Comparison:T44 Value:T24 Value2:T25 Temporal-Unit:T17
-E10	And:T45 Arg:E4 Arg2:E12
 E12	Condition:T46 Name:T47
-E13	Temporal-Connection:T48 Arg:E8 Arg2:E12
 E17	Modifier:T49 Modifies:T2
 E7	Birth:T7 Temporality:E18
 E18	Eq-Comparison:T8 Operator:T27 Value:T30 Value2:T31 Temporal-Unit:T18
 E19	Condition:T29 Name:T52
-E20	Temporal-Connection:T53 Arg:E18 Arg2:E19
 E21	Eq-Comparison:T54 Value:T32 Value2:T33 Temporal-Unit:T19
-E22	And:T55 Arg:E19 Arg2:E23
 E23	Condition:T56 Name:T57
-E24	Temporal-Connection:T58 Arg:E21 Arg2:E23
 E25	Modifier:T59 Modifies:T6
 E26	Negation:T60 Negates:E5
 E27	Birth:T37 Location:T63
 E28	Negation:T64 Negates:T63
-E29	Encounter:T65 Type:T66 Location:T67
-E30	And:T68 Arg:E27 Arg2:E29
+E29	Encounter:T65 Location:T67
 E31	Modifier:T69 Modifies:T12
 E32	Condition:T70 Name:T71 Minimum-Count:E33
 E33	Eq-Comparison:T72 Operator:T73
 E34	Condition:T74 Name:T75
 E14	Condition:T14 Name:T15
-E35	Or:T76 Arg:E34 Arg2:E14
-E36	And:T77 Arg:T13 Arg2:E34
 E37	Death:T79
 E38	Modifier:T80 Modifies:E37
 T1	Condition 120 151	intrauterine growth restriction
@@ -70,12 +61,9 @@ T4	Eq-Comparison 35 55	between 24 + 0 weeks
 T40	Eq-Operator 35 42	between
 T41	Condition 59 69	amenorrhea
 T42	Condition-Name 59 69	amenorrhea
-T43	Temporal-Connection 56 58	of
 T44	Eq-Comparison 74 86	36 + 6 weeks
-T45	And 70 73	and
 T46	Condition 90 100	amenorrhea
 T47	Condition-Name 90 100	amenorrhea
-T48	Temporal-Connection 87 89	of
 T49	Modifier 111 119	isolated
 T50	Location 159 173	maternity ward
 T51	Location 181 207	hospital Femme-Mère-Enfant
@@ -84,12 +72,9 @@ T8	Eq-Comparison 312 332	between 24 + 0 weeks
 T27	Eq-Operator 312 319	between
 T29	Condition 336 346	amenorrhea
 T52	Condition-Name 336 346	amenorrhea
-T53	Temporal-Connection 333 335	of
 T54	Eq-Comparison 351 363	36 + 6 weeks
-T55	And 347 350	and
 T56	Condition 367 377	amenorrhea
 T57	Condition-Name 367 377	amenorrhea
-T58	Temporal-Connection 364 366	of
 T59	Modifier 391 399	isolated
 T60	Negation 383 390	without
 T61	Location 439 453	maternity ward
@@ -99,9 +84,7 @@ T37	Birth 572 576	born
 T63	Location 588 596	hospital
 T64	Negation 577 583	out of
 T65	Encounter 601 625	secondarily hospitalized
-T66	Encounter-Type 601 625	secondarily hospitalized
 T67	Location 633 643	department
-T68	And 597 600	and
 T69	Modifier 649 662	unaccompanied
 T70	Condition 689 700	pregnancies
 T71	Condition-Name 689 700	pregnancies
@@ -111,8 +94,6 @@ T74	Condition 720 733	malformations
 T75	Condition-Name 720 733	malformations
 T14	Condition 737 758	genetic abnormalities
 T15	Condition-Name 737 758	genetic abnormalities
-T76	Or 734 736	or
-T77	And 715 719	with
 T78	Life-Stage-And-Gender 803 808	fetal
 T79	Death 809 815	deaths
 T80	Modifier 816 824	in utero
@@ -124,18 +105,23 @@ A5	Eq-Temporal-Unit-Value T19 week
 A6	Eq-Operator-Value T20 BETWEEN
 A7	Eq-Operator-Value T21 BETWEEN
 A8	Eq-Operator-Value T40 BETWEEN
-A9	Temporal-Connection-Type-Value E6 after
-A10	Temporal-Connection-Type-Value E13 after
 A11	Location-Value T50 unit
 A12	Location-Value T51 hospital
 A13	Eq-Operator-Value T27 BETWEEN
-A14	Temporal-Connection-Type-Value E20 after
-A15	Temporal-Connection-Type-Value E24 after
 A16	Location-Value T61 unit
 A17	Location-Value T62 hospital
 A18	Life-Stage-And-Gender-Type T34 infant
 A19	Location-Value T63 hospital
-A20	Encounter-Type-Value T66 transfer
+A20	Encounter-Type-Value E29 transfer
 A21	Location-Value T67 unit
 A22	Eq-Operator-Value T73 GT
 A23	Life-Stage-And-Gender-Type T78 infant
+R1	After Arg1:E3 Arg2:E4
+R2	And Arg1:E4 Arg2:E12
+R3	After Arg1:E8 Arg2:E12
+R4	After Arg1:E18 Arg2:E19
+R5	And Arg1:E19 Arg2:E23
+R6	After Arg1:E21 Arg2:E23
+R7	And Arg1:E27 Arg2:E29
+R8	Or Arg1:E34 Arg2:E14
+R9	And Arg1:T13 Arg2:E34

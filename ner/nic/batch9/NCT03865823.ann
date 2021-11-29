@@ -1,7 +1,6 @@
 E1	Eq-Comparison:T1 Value:T12
 E2	Modifier:T2 Modifies:T13
 E3	Condition:T3 Name:T13
-E4	And:T4 Arg:E3 Arg2:E5
 E5	Indication:T5 Indication-For:E6
 E6	Procedure:T6 Name:T14
 E7	Condition:T7 Name:T15
@@ -9,11 +8,10 @@ E8	Negation:T8 Negates:E9
 E9	Condition:T9 Name:T16
 E10	Condition:T10 Name:T17
 E11	Condition:T11 Name:T19
-E12	Age:T18 Eq-Comparison:E1
+E12	Age:T18 Numeric-Filter:E1
 T1	Eq-Comparison 33 51	over the age of 18
 T2	Modifier 69 73	anus
 T3	Condition 74 81	fistula
-T4	And 82 86	with
 T5	Indication 87 97	indication
 T6	Procedure 102 120	surgical treatment
 T7	Condition 146 167	Cutaneous Suppuration
@@ -31,3 +29,5 @@ T18	Age 42 45	age
 T19	Condition-Name 210 214	boil
 R1	Example-Of Arg1:E10 Arg2:E7
 R2	Example-Of Arg1:E11 Arg2:E7
+R3	And Arg1:E3 Arg2:E5
+R4	Or Arg1:E10 Arg2:E11

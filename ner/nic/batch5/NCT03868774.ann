@@ -1,19 +1,16 @@
 E1	Modifier:T1 Modifies:T31
-E2	Or:T2 Arg:E1 Arg2:E3
 E3	Modifier:T3 Modifies:T31
 E4	Condition:T4 Name:T31 Severity:T29
 E5	Observation:T5 Name:T32
-E6	Observation:T6 Name:T33 Eq-Comparison:E7
+E6	Observation:T6 Name:T33 Numeric-Filter:E7
 E7	Eq-Comparison:T7 Operator:T34 Value:T35
-E8	Or:T8 Arg:E6 Arg2:E9
 E9	Observation:T9 Name:T30
-E10	Observation:T10 Name:T36 Eq-Comparison:E11 Temporality:E13
+E10	Observation:T10 Name:T36 Numeric-Filter:E11 Temporality:E13
 E11	Eq-Comparison:T11 Operator:T37 Value:T38
 E28	Eq-Comparison:T57 Value:T28 Operator:T56 Value2:T29
 E13	Eq-Comparison:T13 Value:T14 Operator:T16 Value2:T15 Temporal-Unit:T17 Operator2:T39
 E12	Procedure:T12 Temporality:E14
 E14	Eq-Comparison:T18 Temporal-Recency:T19
-E15	Temporal-Connection:T20 Arg:E13 Arg2:E14
 E16	Modifier:T21 Modifies:T23
 E17	Condition:T22 Name:T23
 E18	Condition:T24 Name:T25 Temporality:E19
@@ -21,20 +18,17 @@ E19	Eq-Comparison:T26 Operator:T27 Value:T40 Temporal-Unit:T41
 E20	Procedure:T42 Name:T43
 E21	Modifier:T44 Modifies:T43
 E22	Modifier:T45 Modifies:T43
-E23	Or:T46 Arg:E21 Arg2:E22
 E24	Procedure:T47 Name:T48
-E25	Condition:T49 Name:T50
+E25	Condition:T49
 E26	Condition:T51 Name:T52 Stability:T53
 E27	Condition:T55 Name:T58 Severity:T54
 E29	Risk:T59 Risk-For:E27
 T1	Modifier 41 45	uni-
-T2	Or 46 49	and
 T3	Modifier 50 57	bipolar
 T4	Condition 58 68	depression
 T5	Observation 143 157	Hamilton scale
 T6	Observation 165 171	HDS-17
 T7	Eq-Comparison 176 180	≥ 18
-T8	Or 181 187	and/or
 T9	Observation 190 199	sub-scale
 T10	Observation 201 205	HDSS
 T11	Eq-Comparison 216 219	≥ 9
@@ -60,7 +54,6 @@ T17	Eq-Temporal-Unit 233 238	hours
 T12	Procedure 256 265	treatment
 T18	Eq-Comparison 250 255	first
 T19	Eq-Temporal-Recency 250 255	first
-T20	Temporal-Connection 239 245	before
 T21	Modifier 291 298	Organic
 T22	Condition 299 312	brain disease
 T23	Condition-Name 299 312	brain disease
@@ -74,7 +67,6 @@ T42	Procedure 366 387	implanted metal parts
 T43	Procedure-Name 366 387	implanted metal parts
 T44	Modifier 395 400	brain
 T45	Modifier 404 409	chest
-T46	Or 401 403	or
 T47	Procedure 429 438	pacemaker
 T48	Procedure-Name 429 438	pacemaker
 T49	Condition 452 460	diseases
@@ -88,16 +80,15 @@ T58	Condition-Name 495 503	suicidal
 T59	Risk 504 510	danger
 A3	Severity-Value T28 moderate
 A4	Severity-Value T29 severe
-A5	Observation-Type-Value T32 clinical-score
+A5	Observation-Type-Value E5 clinical-score
 A6	Eq-Operator-Value T34 GTEQ
 A7	Eq-Operator-Value T37 GTEQ
 A8	Eq-Operator-Value T39 LTEQ
 A16	Eq-Operator-Value T56 BETWEEN
-A17	Observation-Type-Value T30 clinical-score
+A17	Observation-Type-Value E9 clinical-score
 A1	Eq-Operator-Value T16 BETWEEN
 A2	Eq-Temporal-Unit-Value T17 hour
 A9	Eq-Temporal-Recency-Value T19 first-time
-A10	Temporal-Connection-Type-Value E15 before
 A11	Eq-Operator-Value T27 LT
 A12	Eq-Temporal-Unit-Value T41 year
 A13	Stability-Value T53 change
@@ -105,3 +96,7 @@ A14	Severity-Value T54 severe
 R1	Abbrev-Of Arg1:E6 Arg2:E5
 R2	Abbrev-Of Arg1:E10 Arg2:E9
 R3	Caused-By Arg1:T53 Arg2:E25
+R4	Or Arg1:E1 Arg2:E3
+R5	Or Arg1:E6 Arg2:E9
+R6	Before Arg1:E13 Arg2:E14
+R7	Or Arg1:E21 Arg2:E22

@@ -1,5 +1,4 @@
 E1	Modifier:T1 Modifies:T104
-E2	Or:T2 Arg:E1 Arg2:E3
 E3	Modifier:T3 Modifies:T104
 E4	Condition:T4 Name:T104
 E5	Condition:T5 Name:T105
@@ -9,52 +8,43 @@ E9	Negation:T9 Negates:E10
 E10	Condition:T10 Name:T179
 E11	Condition:T11 Name:T109
 E13	Eq-Comparison:T13 Value:T110 Unit:T111 Operator:T112
-E16	Temporal-Connection:T16 Arg:E12 Arg2:E17
 E17	Condition:T17 Name:T15
 E18	Condition:T18 Name:T115
 E19	Condition:T19 Name:T116
 E20	Condition:T20 Name:T117
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Condition:T22 Name:T118
 E23	Modifier:T23 Modifies:T119
 E24	Condition:T24 Name:T119
 E25	Condition:T25 Name:T120
-E26	Observation:T26 Name:T121 Eq-Comparison:E27 Temporality:E28
+E26	Observation:T26 Name:T121 Numeric-Filter:E27 Temporality:E28
 E27	Eq-Comparison:T27 Operator:T122 Value:T123 Per:T114
 E28	Eq-Comparison:T28 Operator:T124 Value:T125 Temporal-Unit:T126
-E29	Temporal-Connection:T29 Arg:E28 Arg2:E30
 E30	Eq-Comparison:T30 Temporal-Recency:T127
 E31	Procedure:T31 Temporality:E30
 E32	Drug:T32 Name:T128
-E35	Observation:T35 Name:T33 Eq-Comparison:E36
+E35	Observation:T35 Name:T33 Numeric-Filter:E36
 E36	Eq-Comparison:T36 Operator:T129 Value:T130 Per:T34
-E37	Temporal-Connection:T37 Arg:E32 Arg2:E38
 E38	Eq-Comparison:T38 Temporal-Recency:T181
 E39	Procedure:T39 Temporality:E38
-E41	Observation:T41 Name:T131 Eq-Comparison:E42
+E41	Observation:T41 Name:T131 Numeric-Filter:E42
 E42	Eq-Comparison:T42 Operator:T182 Value:T183
-E43	Observation:T43 Name:T132 Eq-Comparison:E45
+E43	Observation:T43 Name:T132 Numeric-Filter:E45
 E45	Eq-Comparison:T45 Value:T134 Unit:T135 Per:T136
-E46	Observation:T46 Name:T137 Eq-Comparison:E49
-E47	And:T47 Arg:E46 Arg2:E48
-E48	Observation:T48 Name:T138 Eq-Comparison:E49
+E46	Observation:T46 Name:T137 Numeric-Filter:E49
+E48	Observation:T48 Name:T138 Numeric-Filter:E49
 E49	Eq-Comparison:T49 Operator:T139 Value:T140 Unit:T44
-E50	Observation:T50 Name:T141 Eq-Comparison:E51
+E50	Observation:T50 Name:T141 Numeric-Filter:E51
 E51	Eq-Comparison:T51 Operator:T142 Value:T143 Unit:T184
 E52	Eq-Comparison:T52 Temporal-Period:T144
 E53	Modifier:T53 Modifies:T145
 E54	Condition:T54 Name:T145 Temporality:E52
 E55	Condition:T55 Name:T146
-E56	Or:T56 Arg:E55 Arg2:E60
 E58	Modifier:T58 Modifies:T148
-E59	Or:T59 Arg:E58 Arg2:E15
 E60	Condition:T60 Name:T148
 E62	Observation:T62 Name:T149 Polarity:T147
 E63	Eq-Comparison:T63 Temporal-Period:T150
-E64	Or:T64 Arg:T61 Arg2:T151
 E66	Drug:T66 Name:T152 Temporality:E63 Dose:T61 Dose2:T151 Temporality2:E67
 E67	Eq-Comparison:T67 Operator:T153 Value:T154 Temporal-Unit:T155
-E68	Temporal-Connection:T68 Arg:E67 Arg2:E69
 E69	Eq-Comparison:T69 Temporal-Recency:T156
 E70	Study:T70 Study-Of:E71
 E71	Procedure:T71 Temporality:E69
@@ -66,38 +56,32 @@ E77	Eq-Comparison:T77 Temporal-Period:T163
 E78	Modifier:T78 Modifies:T165
 E79	Condition:T79 Name:T165 Severity:T164 Temporality:E77
 E80	Other:T80 Is-Other:E82
-E81	Modifier:T81 
+E81	Modifier:T81
 E82	Condition:T82 Name:T166 Temporality:E83
 E83	Eq-Comparison:T83 Operator:T167 Value:T168 Temporal-Unit:T169
-E84	Temporal-Connection:T84 Arg:E83 Arg2:E85
-E85	Study:T85 
+E85	Study:T85
 E86	Condition:T86 Name:T170
 E87	Assertion:T87 Asserted:E88
 E88	Negation:T88 Negates:E89
-E89	Study:T89 
+E89	Study:T89
 E90	Eq-Comparison:T90 Temporal-Period:T171
 E91	Modifier:T91 Modifies:T172
 E92	Procedure:T92 Name:T172 Temporality:E90
 E93	Eq-Comparison:T93 Temporal-Period:T173
 E94	Procedure:T94 Temporality:E93
 E95	Procedure:T95 Name:T174
-E96	And:T96 Arg:E95 Arg2:E97
 E97	Negation:T97 Negates:E98
 E98	Condition:T98 Name:T175
-E99	Or:T99 Arg:E98 Arg2:E101
 E100	Eq-Comparison:T100 Temporal-Period:T176
 E101	Procedure:T101 Name:T177 Temporality:E100
-E102	Or:T102 Arg:E101 Arg2:E103
 E103	Procedure:T103 Name:T178 Temporality:E100
 E6	Eq-Comparison:T6 Temporal-Period:T108
-E104	And:T180 Arg:E8 Arg2:E9
-E12	Observation:T12 Name:T14 Specimen:T113 Eq-Comparison:E13
+E12	Observation:T12 Name:T14 Specimen:T113 Numeric-Filter:E13
 E14	Assertion:T40 Asserted:E32
 E15	Modifier:T57 Modifies:T148
 E33	Modifier:T65 Modifies:T158
 E34	Negation:T74 Negates:E81
 T1	Modifier 25 35	Refractory
-T2	Or 36 38	or
 T3	Modifier 39 47	relapsed
 T4	Condition 48 51	AML
 T5	Condition 82 100	Refractory disease
@@ -107,12 +91,10 @@ T9	Negation 152 154	no
 T10	Condition 155 164	remission
 T11	Condition 176 192	Relapsed disease
 T13	Eq-Comparison 212 222	5% or more
-T16	Temporal-Connection 250 255	after
 T17	Condition 256 265	remission
 T18	Condition 291 294	AML
 T19	Condition 308 333	myelodysplastic syndromes
 T20	Condition 345 349	CMML
-T21	Or 351 353	or
 T22	Condition 354 382	myeloproliferative neoplasms
 T23	Modifier 384 393	secondary
 T24	Condition 394 397	AML
@@ -120,13 +102,11 @@ T25	Condition 399 405	ts-AML
 T26	Observation 431 454	Circulating blast count
 T27	Eq-Comparison 455 463	≤ 200/μL
 T28	Eq-Comparison 464 478	within 10 days
-T29	Temporal-Connection 479 487	prior to
 T30	Eq-Comparison 488 493	first
 T31	Procedure 503 512	treatment
 T32	Drug 514 525	Hydroxyurea
 T35	Observation 553 575	peripheral blast count
 T36	Eq-Comparison 576 584	≤ 200/μL
-T37	Temporal-Connection 585 590	until
 T38	Eq-Comparison 595 604	first day
 T39	Procedure 617 626	treatment
 T41	Observation 669 673	ECOG
@@ -134,7 +114,6 @@ T42	Eq-Comparison 674 677	≤ 2
 T43	Observation 683 713	Estimated creatinine clearance
 T45	Eq-Comparison 714 725	≥ 50 mL/min
 T46	Observation 731 734	AST
-T47	And 735 738	and
 T48	Observation 739 742	ALT
 T49	Eq-Comparison 743 754	≤ 3.0 x ULN
 T50	Observation 760 769	Bilirubin
@@ -143,16 +122,12 @@ T52	Eq-Comparison 807 813	Active
 T53	Modifier 814 817	CNS
 T54	Condition 818 826	Leukemia
 T55	Condition 839 852	HIV infection
-T56	Or 853 855	or
 T58	Modifier 862 873	hepatitis B
-T59	Or 874 876	or
 T60	Condition 889 898	infection
 T62	Observation 918 928	viral load
 T63	Eq-Comparison 952 960	received
-T64	Or 968 974	and/or
 T66	Drug 984 998	CYP3A inducers
 T67	Eq-Comparison 999 1012	within 7 days
-T68	Temporal-Connection 1013 1021	prior to
 T69	Eq-Comparison 1026 1036	initiation
 T70	Study 1040 1045	study
 T71	Procedure 1046 1055	treatment
@@ -167,7 +142,6 @@ T80	Other 1252 1257	other
 T81	Modifier 1262 1269	myeloid
 T82	Condition 1270 1280	malignancy
 T83	Eq-Comparison 1281 1295	within 2 years
-T84	Temporal-Connection 1296 1298	of
 T85	Study 1299 1304	entry
 T86	Condition 1329 1349	Psychiatric disorder
 T87	Assertion 1355 1360	would
@@ -179,13 +153,10 @@ T92	Procedure 1410 1426	organ transplant
 T93	Eq-Comparison 1428 1433	prior
 T94	Procedure 1434 1443	treatment
 T95	Procedure 1449 1452	SCT
-T96	And 1464 1467	but
 T97	Negation 1468 1471	not
 T98	Condition 1487 1491	GVHD
-T99	Or 1492 1494	or
 T100	Eq-Comparison 1504 1513	receiving
 T101	Procedure 1514 1531	immunosuppression
-T102	Or 1531 1532	/
 T103	Procedure 1532 1544	GVHD therapy
 T104	Condition-Name 48 51	AML
 T105	Condition-Name 82 100	Refractory disease
@@ -261,10 +232,9 @@ T177	Procedure-Name 1514 1531	immunosuppression
 T178	Procedure-Name 1532 1544	GVHD therapy
 T6	Eq-Comparison 131 136	prior
 T179	Condition-Name 155 164	remission
-T180	And 147 151	with
 T12	Observation 223 244	blasts in bone marrow
 T14	Observation-Name 223 229	blasts
-T113	Observation-Specimen 233 244	bone marrow
+T113	Specimen 233 244	bone marrow
 T15	Condition-Name 256 265	remission
 T114	Eq-Unit 461 463	μL
 T33	Observation-Name 553 575	peripheral blast count
@@ -280,31 +250,26 @@ T147	Polarity 907 917	detectable
 T61	Polarity 961 967	strong
 T65	Modifier 1095 1121	maximally tolerated levels
 T74	Negation 1258 1261	non
-A4	Temporal-Connection-Type-Value E16 after
-A5	Temporal-Connection-Type-Value E29 before
-A8	Temporal-Connection-Type-Value E37 before
-A10	Temporal-Connection-Type-Value E68 before
-A11	Temporal-Connection-Type-Value E84 before
 A12	Assertion-Type-Value E87 hypothetical
 A13	Eq-Operator-Value T106 GTEQ
 A14	Eq-Temporal-Period-Value T108 past
 A15	Eq-Operator-Value T112 GTEQ
-A17	Observation-Type-Value T121 lab
+A17	Observation-Type-Value E26 lab
 A18	Eq-Operator-Value T122 LTEQ
 A19	Eq-Operator-Value T124 LTEQ
 A20	Eq-Temporal-Unit-Value T126 day
 A21	Eq-Temporal-Recency-Value T127 first-time
 A22	Eq-Operator-Value T129 LTEQ
-A23	Observation-Type-Value T132 lab
+A23	Observation-Type-Value E43 lab
 A24	Eq-Operator-Value T133 GTEQ
 A25	Eq-Temporal-Unit-Value T136 minute
-A26	Observation-Type-Value T137 lab
-A27	Observation-Type-Value T138 lab
+A26	Observation-Type-Value E46 lab
+A27	Observation-Type-Value E48 lab
 A28	Eq-Operator-Value T139 LTEQ
-A29	Observation-Type-Value T141 lab
+A29	Observation-Type-Value E50 lab
 A30	Eq-Operator-Value T142 LTEQ
 A31	Eq-Temporal-Period-Value T144 present
-A32	Observation-Type-Value T149 lab
+A32	Observation-Type-Value E62 lab
 A33	Eq-Temporal-Period-Value T150 past
 A35	Eq-Operator-Value T153 LTEQ
 A36	Eq-Temporal-Unit-Value T155 day
@@ -320,8 +285,8 @@ A45	Eq-Temporal-Unit-Value T169 year
 A46	Eq-Temporal-Period-Value T171 past
 A47	Eq-Temporal-Period-Value T173 past
 A48	Eq-Temporal-Period-Value T176 present
-A1	Observation-Type-Value T14 lab
-A2	Observation-Type-Value T33 lab
+A1	Observation-Type-Value E12 lab
+A2	Observation-Type-Value E35 lab
 A3	Eq-Temporal-Recency-Value T181 first-time
 A6	Assertion-Type-Value E14 hypothetical
 A7	Eq-Operator-Value T182 LTEQ
@@ -340,3 +305,19 @@ R9	Found-By Arg1:E60 Arg2:E62
 R10	Found-By Arg1:E55 Arg2:E62
 R11	Caused-By Arg1:E88 Arg2:E86
 R12	Using Arg1:E94 Arg2:E95
+R13	Or Arg1:E1 Arg2:E3
+R14	After Arg1:E12 Arg2:E17
+R15	Or Arg1:E20 Arg2:E22
+R16	Before Arg1:E28 Arg2:E30
+R17	Before Arg1:E32 Arg2:E38
+R18	And Arg1:E46 Arg2:E48
+R19	Or Arg1:E55 Arg2:E60
+R20	Or Arg1:E58 Arg2:E15
+R21	Or Arg1:T61 Arg2:T151
+R22	Before Arg1:E67 Arg2:E69
+R23	Before Arg1:E83 Arg2:E85
+R24	And Arg1:E95 Arg2:E97
+R25	Or Arg1:E98 Arg2:E101
+R26	Or Arg1:E101 Arg2:E103
+R27	And Arg1:E8 Arg2:E9
+R28	Or Arg1:E24 Arg2:E25

@@ -2,11 +2,10 @@ E1	Procedure:T1 Name:T2 Temporality:E2
 E3	Procedure:T3 Name:T4
 E5	Procedure:T5 Name:T6
 E7	Procedure:T7 Name:T8
-E8	Age:T10 Eq-Comparison:E9
+E8	Age:T10 Numeric-Filter:E9
 E9	Eq-Comparison:T12 Operator:T9 Value:T11
 E2	Eq-Comparison:T13 Temporal-Period:T14
 E4	Modifier:T15 Modifies:E5
-E6	Or:T16 Arg:E7 Arg2:E5
 T1	Procedure 59 78	total thyroidectomy
 T2	Procedure-Name 59 78	total thyroidectomy
 T3	Procedure 118 139	partial thyroidectomy
@@ -22,6 +21,7 @@ T12	Eq-Comparison 43 46	>18
 T13	Eq-Comparison 48 58	undergoing
 T14	Eq-Temporal-Period 48 58	undergoing
 T15	Modifier 155 165	concurrent
-T16	Or 152 154	or
 A1	Eq-Operator-Value T9 GT
 A2	Eq-Temporal-Period-Value T14 present
+R1	Or Arg1:E7 Arg2:E5
+R2	Or Arg1:E3 Arg2:E7

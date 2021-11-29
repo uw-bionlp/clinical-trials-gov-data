@@ -1,4 +1,4 @@
-E1	Age:T4 Eq-Comparison:E2 Eq-Comparison2:E3
+E1	Age:T4 Numeric-Filter:E2 Numeric-Filter:E3
 E2	Eq-Comparison:T10 Operator:T1 Value:T8
 E3	Eq-Comparison:T11 Operator:T2 Value:T9
 E4	Eq-Comparison:T12 Operator:T5 Value:T6 Temporal-Unit:T3 Value2:T7
@@ -7,11 +7,10 @@ E6	Drug:T15 Name:T16 Temporality:E15
 E7	Observation:T17 Name:T18 Polarity:T19 Temporality:E9
 E8	Study:T20 Temporality:E9
 E9	Eq-Comparison:T21 Temporal-Recency:T22
-E10	Age:T23 Eq-Comparison:E4
+E10	Age:T23 Numeric-Filter:E4
 E11	Drug:T24 Name:T25
-E12	Procedure:T26 
+E12	Procedure:T26
 E13	Observation:T27 Name:T28 Polarity:T29
-E14	Or:T30 Arg:E2 Arg2:E3
 E15	Eq-Comparison:T31 Temporal-Period:T32
 T1	Eq-Operator 248 249	>
 T2	Eq-Operator 256 265	less than
@@ -42,17 +41,17 @@ T26	Procedure 144 153	treatment
 T27	Observation 225 238	folate levels
 T28	Observation-Name 225 238	folate levels
 T29	Polarity 216 224	abnormal
-T30	Or 253 255	or
 T31	Eq-Comparison 57 59	on
 T32	Eq-Temporal-Period 57 59	on
 A1	Eq-Operator-Value T1 GT
 A2	Eq-Operator-Value T2 LT
 A3	Eq-Temporal-Unit-Value T3 year
 A4	Eq-Operator-Value T5 BETWEEN
-A5	Observation-Type-Value T18 lab
+A5	Observation-Type-Value E7 lab
 A6	Polarity-Value T19 normal
-A8	Observation-Type-Value T28 lab
+A8	Observation-Type-Value E13 lab
 A9	Polarity-Value T29 abnormal
 A10	Eq-Temporal-Period-Value T32 present
 A7	Eq-Temporal-Recency-Value T22 first-time
 R2	Using Arg1:E12 Arg2:E11
+R1	Or Arg1:E2 Arg2:E3

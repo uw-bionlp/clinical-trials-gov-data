@@ -1,25 +1,19 @@
-E1	Or:T1 Arg:T83 Arg2:T84
 E2	Eq-Comparison:T2 Value:T85 Temporal-Unit:T86 Operator:T87
 E3	Eq-Comparison:T3 Operator:T89 Value:T88 Value2:T90
 E4	Condition:T4 Name:T91 Severity:T90
-E5	And:T5 Arg:E4 Arg2:E85
 E6	Eq-Comparison:T6 Operator:T92 Value:T93
 E7	Eq-Comparison:T7 Temporal-Period:T94
 E9	Eq-Comparison:T9 Value:T96 Operator:T97 Value:T98 Unit:T99
-E10	And:T10 Arg2:E11 Arg:E85
-E11	Observation:T11 Name:T100 Eq-Comparison:E12
+E11	Observation:T11 Name:T100 Numeric-Filter:E12
 E12	Eq-Comparison:T12 Operator:T101 Value:T143
 E13	Assertion:T13 Asserted:E14
 E14	Study:T14 Study-Of:E86
 E15	Assertion:T15 Asserted:E87
 E16	Condition:T16 Name:T146
 E17	Modifier:T17 Modifies:T146
-E18	Or:T18 Arg:E17 Arg2:E19
 E20	Condition:T20 Name:T102
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Condition:T22 Name:T103
-E23	Condition:T23 
-E24	Or:T24 Arg:E23 Arg2:E25
+E23	Condition:T23
 E25	Procedure:T25 Name:T104
 E26	Assertion:T26 Asserted:T27
 E28	Risk:T28 Stability:T27
@@ -30,12 +24,10 @@ E32	Condition:T32 Name:T106
 E33	Condition:T33 Name:T107
 E35	Condition:T35 Name:T109
 E36	Coreference:T36 Refers-To:E40
-E37	Or:T37 Arg:E36 Arg2:E38
 E38	Coreference:T38 Refers-To:E40
 E39	Study:T39 Study-Of:E40
-E40	Drug:T40 
+E40	Drug:T40
 E41	Modifier:T41 Modifies:E44
-E42	Or:T42 Arg:E41 Arg2:E43
 E43	Negation:T43 Negates:E88
 E44	Drug:T44 Temporality:E34
 E45	Assertion:T45 Asserted:T112
@@ -50,51 +42,42 @@ E53	Drug:T53 Name:T118
 E54	Eq-Comparison:T54 Temporal-Period:T119 Value:T120 Temporal-Unit:T121
 E55	Eq-Comparison:T55 Temporal-Period:T122
 E56	Modifier:T56 Modifies:T123
-E57	Condition:T57 Name:T123 Temporality:E55
+E57	Observation:T57 Name:T123 Temporality:E55
 E58	Drug:T58 Temporality:E60
 E59	Drug:T59 Name:T125
 E60	Eq-Comparison:T60 Temporal-Period:T126 Value:T127 Temporal-Unit:T128
 E61	Other:T61 Is-Other:E62
-E62	Study:T62 
+E62	Study:T62
 E63	Study:T63 Study-Of:E64
 E64	Drug:T64 Temporality:E65
 E65	Eq-Comparison:T65 Operator:T129 Value:T130 Temporal-Unit:T131
-E66	Temporal-Connection:T66 Arg:E65 Arg2:E67
-E67	Study:T67 
+E67	Study:T67
 E68	Eq-Comparison:T68 Temporal-Period:T132
 E69	Drug:T69 Name:T133 Temporality:E68
-E70	Or:T70 Arg:E69 Arg2:E72
 E71	Other:T71 Is-Other:E72
 E72	Procedure:T72 Name:T148
 E73	Eq-Comparison:T73 Temporal-Period:T134
 E74	Drug:T74 Name:T135 Temporality:E73
-E75	Temporal-Connection:T75 Arg:E74 Arg2:E76
-E76	Study:T76 
+E76	Study:T76
 E77	Drug:T77 Name:T137 Temporality:E90 Stability:T136
-E78	Temporal-Connection:T78 Arg:E77 Arg2:E79
-E79	Study:T79 
+E79	Study:T79
 E81	Eq-Comparison:T81 Temporal-Period:T138
 E82	Condition:T82 Name:T139 Temporality:E81
-E83	Age:T140 Eq-Comparison:E2
+E83	Age:T140 Numeric-Filter:E2
 E84	Modifier:T141 Modifies:T95
-E85	Observation:T142 Eq-Comparison:E9 Name:T95 Minimum-Count:E6 Temporality:E7
-E86	Procedure:T144 
+E85	Observation:T142 Numeric-Filter:E9 Name:T95 Minimum-Count:E6 Temporality:E7
+E86	Procedure:T144
 E87	Negation:T145 Negates:E16
 E19	Modifier:T19 Modifies:T146
-E27	Or:T147 Arg:E28 Arg2:E29
 E34	Eq-Comparison:T34 Temporal-Period:T110
 E88	Modifier:T108 Modifies:E44
-E89	And:T124 Arg:E62 Arg2:E64
 E90	Eq-Comparison:T149 Temporal-Period:T150
-T1	Or 30 32	or
 T2	Eq-Comparison 48 72	18 years of age or older
 T3	Eq-Comparison 92 110	moderate to severe
 T4	Condition 111 114	DLE
-T5	And 115 119	with
 T6	Eq-Comparison 120 132	at least one
 T7	Eq-Comparison 133 139	active
 T9	Eq-Comparison 163 174	0.5-1.0 cm2
-T10	And 177 181	with
 T11	Observation 182 187	CLASI
 T12	Eq-Comparison 188 191	≥ 5
 T13	Assertion 198 209	Willingness
@@ -102,12 +85,9 @@ T14	Study 235 240	study
 T15	Assertion 257 271	Willingness to
 T16	Condition 300 308	diseased
 T17	Modifier 318 325	natural
-T18	Or 326 328	or
 T20	Condition 374 383	Pregnancy
-T21	Or 384 386	or
 T22	Condition 387 401	breast feeding
 T23	Condition 411 420	condition
-T24	Or 421 423	or
 T25	Procedure 424 431	therapy
 T26	Assertion 467 470	may
 T28	Risk 478 482	risk
@@ -118,12 +98,10 @@ T32	Condition 569 588	Lupus Erythematosus
 T33	Condition 590 593	SLE
 T35	Condition 633 649	hypersensitivity
 T36	Coreference 664 676	constituents
-T37	Or 677 679	or
 T38	Coreference 680 690	excipients
 T39	Study 698 713	investigational
 T40	Drug 714 721	product
 T41	Modifier 738 750	prescription
-T42	Or 751 753	or
 T43	Negation 754 757	non
 T44	Drug 771 781	medication
 T45	Assertion 787 792	could
@@ -138,7 +116,7 @@ T53	Drug 947 968	mycophenolate mofetil
 T54	Eq-Comparison 977 989	past 1 month
 T55	Eq-Comparison 996 999	Use
 T56	Modifier 1003 1011	systemic
-T57	Condition 1012 1016	pain
+T57	Observation 1012 1016	pain
 T58	Drug 1017 1028	medications
 T59	Drug 1035 1044	oxycodone
 T60	Eq-Comparison 1052 1064	past 2 weeks
@@ -147,19 +125,15 @@ T62	Study 1113 1118	study
 T63	Study 1127 1142	investigational
 T64	Drug 1143 1147	drug
 T65	Eq-Comparison 1148 1162	within 4 weeks
-T66	Temporal-Connection 1163 1169	before
 T67	Study 1175 1180	study
 T68	Eq-Comparison 1186 1189	Use
 T69	Drug 1193 1211	immune-suppressant
-T70	Or 1212 1214	or
 T71	Other 1215 1220	other
 T72	Procedure 1221 1241	biological treatment
 T73	Eq-Comparison 1247 1255	Starting
 T74	Drug 1256 1277	antimalarial medicine
-T75	Temporal-Connection 1278 1283	after
 T76	Study 1301 1306	study
 T77	Drug 1353 1365	antimalarial
-T78	Temporal-Connection 1366 1372	before
 T79	Study 1373 1383	enrollment
 T81	Eq-Comparison 1421 1428	ongoing
 T82	Condition 1429 1438	infection
@@ -201,7 +175,7 @@ T119	Eq-Temporal-Period 977 981	past
 T120	Eq-Value 982 983	1
 T121	Eq-Temporal-Unit 984 989	month
 T122	Eq-Temporal-Period 996 999	Use
-T123	Condition-Name 1012 1016	pain
+T123	Observation-Name 1012 1016	pain
 T125	Drug-Name 1035 1044	oxycodone
 T126	Eq-Temporal-Period 1052 1056	past
 T127	Eq-Value 1057 1058	2
@@ -226,11 +200,9 @@ T145	Negation 272 277	avoid
 T19	Modifier 329 348	artificial sunlight
 T146	Condition-Name 300 308	diseased
 T27	Stability 471 475	pose
-T147	Or 498 500	or
 T34	Eq-Comparison 727 730	Use
 T108	Modifier 758 770	prescription
 T111	Procedure-Name 808 828	efficacy evaluations
-T124	And 1119 1123	with
 T148	Procedure-Name 1221 1241	biological treatment
 T149	Eq-Comparison 1325 1332	already
 T150	Eq-Temporal-Period 1325 1332	already
@@ -239,9 +211,6 @@ A2	Assertion-Type-Value E15 hypothetical
 A3	Assertion-Type-Value E26 hypothetical
 A4	Assertion-Type-Value E29 hypothetical
 A5	Assertion-Type-Value E45 hypothetical
-A6	Temporal-Connection-Type-Value E66 before
-A7	Temporal-Connection-Type-Value E75 after
-A8	Temporal-Connection-Type-Value E78 before
 A10	Life-Stage-And-Gender-Type T83 male
 A11	Life-Stage-And-Gender-Type T84 female
 A12	Eq-Temporal-Unit-Value T86 year
@@ -270,7 +239,7 @@ A34	Stability-Value T136 stable
 A35	Eq-Temporal-Period-Value T138 present
 A36	Stability-Value T27 change
 A37	Eq-Temporal-Period-Value T150 past
-A9	Observation-Type-Value T95 measurement
+A9	Observation-Type-Value E85 measurement
 R1	Caused-By Arg1:T27 Arg2:E23
 R2	Caused-By Arg1:T27 Arg2:E25
 R3	Abbrev-Of Arg1:E33 Arg2:E32
@@ -283,3 +252,20 @@ R9	Example-Of Arg1:E52 Arg2:E49
 R10	Example-Of Arg1:E53 Arg2:E49
 R11	Treatment-For Arg1:E58 Arg2:E57
 R12	Example-Of Arg1:E59 Arg2:E58
+R13	Or Arg1:T83 Arg2:T84
+R14	And Arg1:E4 Arg2:E85
+R15	And Arg1:E85 Arg2:E11
+R16	Or Arg1:E17 Arg2:E19
+R17	Or Arg1:E20 Arg2:E22
+R18	Or Arg1:E23 Arg2:E25
+R19	Or Arg1:E36 Arg2:E38
+R20	Or Arg1:E41 Arg2:E43
+R21	Before Arg1:E65 Arg2:E67
+R22	Or Arg1:E69 Arg2:E72
+R23	After Arg1:E74 Arg2:E76
+R24	Before Arg1:E77 Arg2:E79
+R25	Or Arg1:E28 Arg2:E29
+R26	And Arg1:E62 Arg2:E64
+R27	Or Arg1:E50 Arg2:E51
+R28	Or Arg1:E51 Arg2:E52
+R29	Or Arg1:E52 Arg2:E53

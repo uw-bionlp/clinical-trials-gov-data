@@ -1,5 +1,5 @@
 E1	Eq-Comparison:T1 Value:T3 Temporal-Unit:T4 Operator:T2
-E2	Age:T5 Eq-Comparison:E1
+E2	Age:T5 Numeric-Filter:E1
 E3	Condition:T6 Name:T7
 E4	Modifier:T8 Modifies:T7
 E5	Assertion:T9 Asserted:E6
@@ -10,27 +10,21 @@ E9	Negation:T18 Negates:E10
 E10	Procedure:T19 Name:T20 Temporality:E8
 E11	Modifier:T21 Modifies:T20
 E12	Modifier:T22 Modifies:T20
-E13	Or:T23 Arg:E12 Arg2:E11
-E14	Observation:T24 Name:T25 Eq-Comparison:E15
+E14	Observation:T24 Name:T25 Numeric-Filter:E15
 E15	Eq-Comparison:T26 Value:T27 Operator:T28 Value2:T29 Unit:T30
 E16	Procedure:T31 Name:T32
-E17	Temporal-Connection:T33 Arg:E19 Arg2:E16
 E18	Assertion:T34 Asserted:E16
-E19	Observation:T35 Name:T36 Eq-Comparison:E20
+E19	Condition:T35 Name:T36 Numeric-Filter:E20
 E20	Eq-Comparison:T37 Operator:T39 Value:T38 Unit:T40
-E21	Observation:T41 Name:T42 Eq-Comparison:E22
+E21	Observation:T41 Name:T42 Numeric-Filter:E22
 E22	Eq-Comparison:T43 Operator:T44 Value:T45 Unit:T46
-E23	Condition:T47 Name:T48 Acuteness:T49 Acuteness:T50
-E25	Or:T51 Arg:T49 Arg2:T50
-E26	Condition:T52 
-E27	Or:T53 Arg:E23 Arg2:E26
+E23	Condition:T47 Acuteness:T49 Acuteness:T50
+E26	Condition:T52
 E28	Risk:T54 Stability:T128
 E29	Study:T55 Stability:T56
-E30	Or:T57 Arg:E28 Arg2:T56
 E31	Assertion:T58 Asserted:T128
 E32	Condition:T59 Name:T60
 E33	Condition:T61 Name:T62
-E34	And:T63 Arg:E32 Arg2:E33
 E35	Condition:T64 Name:T65
 E36	Condition:T66 Name:T67
 E37	Condition:T68 Name:T69
@@ -41,14 +35,11 @@ E41	Condition:T76 Name:T77 Severity:T78
 E42	Condition:T79 Name:T80
 E43	Modifier:T81 Modifies:T80
 E44	Modifier:T82 Modifies:T80
-E45	Or:T83 Arg:E44 Arg2:E43
 E46	Procedure:T84 Name:T85
-E47	Temporal-Connection:T86 Arg:E49 Arg2:E46
 E48	Assertion:T87 Asserted:T88
 E49	Condition:T89 Name:T90 Stability:T88
 E50	Modifier:T91 Modifies:T90
 E51	Modifier:T92 Modifies:T90
-E52	Or:T93 Arg:E51 Arg2:E50
 E53	Condition:T94 Name:T95
 E54	Condition:T96 Name:T97
 E55	Condition:T98 Name:T99
@@ -57,14 +48,11 @@ E58	Condition:T104 Name:T105
 E59	Condition:T106 Name:T107
 E60	Condition:T108 Name:T110
 E61	Modifier:T109 Modifies:T110
-E62	Or:T111 Arg:E59 Arg2:E60
 E63	Procedure:T112 Name:T113 Stability:T114
 E64	Condition:T115 Name:T116
-E65	Condition:T117 Name:T118
-E66	And:T120 Arg:T119 Arg2:E65
+E65	Observation:T117 Name:T118
 E67	Observation:T121 Name:T122 Temporality:E70
 E68	Procedure:T123 Name:T124
-E69	Temporal-Connection:T125 Arg:E67 Arg2:E68
 E70	Eq-Comparison:T126 Temporal-Period:T127
 T1	Eq-Comparison 25 35	> 50 years
 T2	Eq-Operator 25 26	>
@@ -88,7 +76,6 @@ T19	Procedure 169 176	surgery
 T20	Procedure-Name 169 176	surgery
 T21	Modifier 162 168	ocular
 T22	Modifier 148 158	refractive
-T23	Or 159 161	or
 T24	Observation 192 209	IOL dioptre range
 T25	Observation-Name 192 209	IOL dioptre range
 T26	Eq-Comparison 211 220	18 to 27D
@@ -98,10 +85,9 @@ T29	Eq-Value 217 219	27
 T30	Eq-Unit 219 220	D
 T31	Procedure 239 248	operative
 T32	Procedure-Name 239 248	operative
-T33	Temporal-Connection 235 239	post
 T34	Assertion 226 234	Expected
-T35	Observation 249 260	astigmatism
-T36	Observation-Name 249 260	astigmatism
+T35	Condition 249 260	astigmatism
+T36	Condition-Name 249 260	astigmatism
 T37	Eq-Comparison 261 268	≤ 0.75D
 T38	Eq-Value 263 267	0.75
 T39	Eq-Operator 261 262	≤
@@ -116,19 +102,15 @@ T47	Condition 424 431	disease
 T48	Condition-Name 424 431	disease
 T49	Acuteness 407 412	Acute
 T50	Acuteness 416 423	chronic
-T51	Or 413 415	or
 T52	Condition 435 442	illness
-T53	Or 432 434	or
 T54	Risk 463 467	risk
 T55	Study 480 485	study
 T56	Stability 471 479	confound
-T57	Or 468 470	or
 T58	Assertion 448 453	would
 T59	Condition 500 517	diabetes mellitus
 T60	Condition-Name 500 517	diabetes mellitus
 T61	Condition 524 535	retinopathy
 T62	Condition-Name 524 535	retinopathy
-T63	And 519 523	with
 T64	Condition 538 555	immunocompromised
 T65	Condition-Name 538 555	immunocompromised
 T66	Condition 557 565	glaucoma
@@ -148,17 +130,14 @@ T79	Condition 744 757	abnormalities
 T80	Condition-Name 744 757	abnormalities
 T81	Modifier 736 743	zonular
 T82	Modifier 725 732	Capsule
-T83	Or 733 735	or
 T84	Procedure 778 787	operative
 T85	Procedure-Name 778 787	operative
-T86	Temporal-Connection 774 778	post
 T87	Assertion 763 766	may
 T88	Stability 767 773	affect
 T89	Condition 814 818	lens
 T90	Condition-Name 814 818	lens
 T91	Modifier 802 806	tilt
 T92	Modifier 788 798	centration
-T93	Or 799 801	or
 T94	Condition 825 851	pseudoexfoliation syndrome
 T95	Condition-Name 825 851	pseudoexfoliation syndrome
 T96	Condition 853 860	uveitis
@@ -174,51 +153,47 @@ T107	Condition-Name 935 959	abnormally shaped pupils
 T108	Condition 963 988	pupils that do not dilate
 T109	Modifier 989 1023	under mesopic/ scotopic conditions
 T110	Condition-Name 963 988	pupils that do not dilate
-T111	Or 960 962	or
 T112	Procedure 1045 1071	place the intraocular lens
 T113	Procedure-Name 1045 1071	place the intraocular lens
 T114	Stability 1030 1041	Instability
 T115	Condition 1108 1117	Pregnancy
 T116	Condition-Name 1108 1117	Pregnancy
-T117	Condition 1176 1192	reproductive age
-T118	Condition-Name 1176 1192	reproductive age
+T117	Observation 1176 1192	reproductive age
+T118	Observation-Name 1176 1192	reproductive age
 T119	Life-Stage-And-Gender 1167 1172	women
-T120	And 1173 1175	of
 T121	Observation 1119 1133	pregnancy test
 T122	Observation-Name 1119 1133	pregnancy test
 T123	Procedure 1152 1163	operatively
 T124	Procedure-Name 1152 1163	operatively
-T125	Temporal-Connection 1148 1151	pre
 T126	Eq-Comparison 1134 1141	will be
 T127	Eq-Temporal-Period 1134 1141	will be
 T128	Stability 454 462	increase
+T102	Polarity 907 919	non-reactive
 A1	Eq-Operator-Value T2 GT
 A2	Eq-Temporal-Unit-Value T4 year
 A3	Assertion-Type-Value E5 hypothetical
 A4	Eq-Operator-Value T13 LTEQ
 A5	Eq-Temporal-Unit-Value T15 month
 A6	Eq-Temporal-Period-Value T17 past
-A7	Observation-Type-Value T25 measurement
+A7	Observation-Type-Value E14 measurement
 A8	Eq-Operator-Value T28 BETWEEN
-A9	Temporal-Connection-Type-Value E17 after
 A10	Assertion-Type-Value E18 hypothetical
 A11	Observation-Type-Value T36 measurement
 A12	Eq-Operator-Value T39 LTEQ
-A13	Observation-Type-Value T42 measurement
+A13	Observation-Type-Value E21 measurement
 A14	Eq-Operator-Value T44 GT
 A16	Stability-Value T56 change
 A17	Assertion-Type-Value E31 hypothetical
 A18	Severity-Value T78 severe
-A19	Temporal-Connection-Type-Value E47 after
 A20	Assertion-Type-Value E48 hypothetical
 A21	Stability-Value T88 change
 A22	Stability-Value T114 change
 A23	Life-Stage-And-Gender-Type T119 female
-A24	Temporal-Connection-Type-Value E69 before
 A25	Eq-Temporal-Period-Value T127 future
 A26	Stability-Value T128 change
 A27	Acuteness-Type-Value T49 acute
 A28	Acuteness-Type-Value T50 chronic
+A15	Polarity-Value T102 non-reactive
 R2	Example-Of Arg1:E32 Arg2:E26
 R3	Example-Of Arg1:E33 Arg2:E26
 R4	Example-Of Arg1:E35 Arg2:E26
@@ -231,8 +206,25 @@ R10	Example-Of Arg1:E54 Arg2:E42
 R11	Example-Of Arg1:E55 Arg2:E42
 R12	If-Then Arg1:T119 Arg2:E67
 R1	Caused-By Arg1:T128 Arg2:E26
-T102	Polarity 907 919	non-reactive
-A15	Polarity-Value T102 non-reactive
-R14	Example-Of Arg1:E58 Arg2:E56	
-R15	Example-Of Arg1:E59 Arg2:E56	
-R16	Example-Of Arg1:E60 Arg2:E56	
+R14	Example-Of Arg1:E58 Arg2:E56
+R15	Example-Of Arg1:E59 Arg2:E56
+R16	Example-Of Arg1:E60 Arg2:E56
+R13	Or Arg1:E12 Arg2:E11
+R17	After Arg1:E19 Arg2:E16
+R18	Or Arg1:T49 Arg2:T50
+R19	Or Arg1:E23 Arg2:E26
+R20	Or Arg1:E28 Arg2:T56
+R21	And Arg1:E32 Arg2:E33
+R22	Or Arg1:E44 Arg2:E43
+R23	After Arg1:E49 Arg2:E46
+R24	Or Arg1:E51 Arg2:E50
+R25	Or Arg1:E59 Arg2:E60
+R26	And Arg1:T119 Arg2:E65
+R27	Before Arg1:E67 Arg2:E68
+R28	Or Arg1:E35 Arg2:E36
+R29	Or Arg1:E36 Arg2:E37
+R30	Or Arg1:E37 Arg2:E38
+R31	Or Arg1:E39 Arg2:E40
+R32	Or Arg1:E53 Arg2:E54
+R33	Or Arg1:E54 Arg2:E55
+R34	Or Arg1:E58 Arg2:E59

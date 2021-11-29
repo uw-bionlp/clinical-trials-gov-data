@@ -3,9 +3,8 @@ E2	Procedure:T2 Location:T51
 E3	Condition:T3 Name:T30
 E4	Condition:T4 Name:T31
 E5	Condition:T5 Name:T32
-E6	Temporal-Connection:T6 Arg:E7
-E7	Condition:T7 Name:T33
-E8	Condition:T8 
+E7	Observation:T7 Name:T33
+E8	Condition:T8
 E9	Condition:T9 Name:T34
 E11	Condition:T11 Name:T35 Acuteness:T10
 E12	Eq-Comparison:T12 Temporal-Period:T36
@@ -15,7 +14,7 @@ E16	Condition:T16 Name:T39 Acuteness:T15
 E18	Procedure:T18 Name:T40 Temporality:E19
 E19	Eq-Comparison:T19 Temporal-Period:T41
 E20	Modifier:T20 Modifies:T43
-E21	Condition:T21 Name:T43 Severity:T42
+E21	Observation:T21 Name:T43 Severity:T42
 E22	Eq-Comparison:T22 Temporal-Period:T44
 E23	Condition:T23 Name:T45 Temporality:E22
 E24	Condition:T24 Name:T46
@@ -25,15 +24,12 @@ E27	Condition:T27 Name:T49
 E28	Condition:T28 Name:T50
 E17	Condition:T17 Name:T52
 E29	Condition:T53 Name:T54
-E30	Or:T55 Arg:E24 Arg2:E17
-E31	Or:T56 Arg:E17 Arg2:E29
 T1	Condition 25 34	Psoriatic
 T2	Procedure 53 60	treated
 T3	Condition 128 151	cardiovascular diseases
 T4	Condition 153 180	peripheral vascular disease
 T5	Condition 181 205	congestive heart failure
-T6	Temporal-Connection 214 218	post
-T7	Condition 219 243	cerebrovascular accident
+T7	Observation 219 243	cerebrovascular accident
 T8	Condition 251 261	Conditions
 T9	Condition 271 295	harmful to the inner ear
 T10	Acuteness 297 304	chronic
@@ -46,7 +42,7 @@ T16	Condition 379 391	otitis media
 T18	Procedure 393 404	ear surgery
 T19	Eq-Comparison 412 416	past
 T20	Modifier 430 434	head
-T21	Condition 435 441	trauma
+T21	Observation 435 441	trauma
 T22	Eq-Comparison 449 453	past
 T23	Condition 455 475	ear drum perforation
 T24	Condition 513 520	vertigo
@@ -58,7 +54,7 @@ T29	Condition-Name 25 34	Psoriatic
 T30	Condition-Name 128 151	cardiovascular diseases
 T31	Condition-Name 153 180	peripheral vascular disease
 T32	Condition-Name 181 205	congestive heart failure
-T33	Condition-Name 219 243	cerebrovascular accident
+T33	Observation-Name 219 243	cerebrovascular accident
 T34	Condition-Name 271 295	harmful to the inner ear
 T35	Condition-Name 305 318	renal failure
 T36	Eq-Temporal-Period 319 326	history
@@ -68,7 +64,7 @@ T39	Condition-Name 379 391	otitis media
 T40	Procedure-Name 393 404	ear surgery
 T41	Eq-Temporal-Period 412 416	past
 T42	Severity 418 429	significant
-T43	Condition-Name 435 441	trauma
+T43	Observation-Name 435 441	trauma
 T44	Eq-Temporal-Period 449 453	past
 T45	Condition-Name 455 475	ear drum perforation
 T46	Condition-Name 513 520	vertigo
@@ -81,9 +77,6 @@ T17	Condition 522 531	dizziness
 T52	Condition-Name 522 531	dizziness
 T53	Condition 533 545	unsteadiness
 T54	Condition-Name 533 545	unsteadiness
-T55	Or 520 521	/
-T56	Or 531 532	/
-A1	Temporal-Connection-Type-Value E6 after
 A2	Eq-Temporal-Period-Value T36 past
 A3	Eq-Temporal-Period-Value T41 past
 A4	Severity-Value T42 severe
@@ -106,3 +99,8 @@ R12	Example-Of Arg1:E23 Arg2:E8
 R13	Example-Of Arg1:E26 Arg2:E25
 R14	Example-Of Arg1:E27 Arg2:E25
 R15	Example-Of Arg1:E28 Arg2:E25
+R16	Or Arg1:E24 Arg2:E17
+R17	Or Arg1:E17 Arg2:E29
+R18	Or Arg1:E16 Arg2:E18
+R19	Or Arg1:E26 Arg2:E27
+R20	Or Arg1:E27 Arg2:E28

@@ -1,0 +1,57 @@
+E1	Condition:T1 Name:T2 Acuteness:T33
+E3	Condition:T3 Name:T4
+E6	Age:T11 Eq-Comparison:E10
+E8	Age:T13 Eq-Comparison:E7
+E10	Eq-Comparison:T18 Operator:T7 Temporal-Unit:T9 Value:T15
+E11	Eq-Comparison:T19 Operator:T8 Value:T17 Unit:T25 Per:T26
+E2	Procedure:T5 Name:T6
+E4	Procedure:T12 Name:T20
+E5	Modifier:T21 Modifies:T20
+E7	Eq-Comparison:T14 Operator:T22 Value:T16 Temporal-Unit:T10
+E9	Observation:T23 Name:T24 Eq-Comparison:E11
+E12	Condition:T27 Name:T28
+E13	Modifier:T29 Modifies:T28
+E14	Modifier:T30 Modifies:T28
+E15	Modifier:T31 Modifies:T28
+E16	Or:T32 Arg:E14 Arg2:E15
+T1	Condition 303 322	atrial fibrillation
+T2	Condition-Name 303 322	atrial fibrillation
+T3	Condition 101 126	abdominal aortic aneurysm
+T4	Condition-Name 101 126	abdominal aortic aneurysm
+T7	Eq-Operator 73 74	>
+T8	Eq-Operator 218 219	>
+T9	Eq-Temporal-Unit 77 82	years
+T10	Eq-Temporal-Unit 192 197	years
+T11	Age 69 72	Age
+T13	Age 183 186	Age
+T15	Eq-Value 74 76	18
+T16	Eq-Value 189 191	18
+T17	Eq-Value 219 220	2
+T18	Eq-Comparison 73 82	>18 years
+T19	Eq-Comparison 218 225	>2mg/dl
+T5	Procedure 127 134	surgery
+T6	Procedure-Name 127 134	surgery
+T12	Procedure 170 177	surgery
+T20	Procedure-Name 170 177	surgery
+T21	Modifier 160 169	Emergency
+T14	Eq-Comparison 187 197	˂ 18 years
+T22	Eq-Operator 187 188	˂
+T23	Observation 207 217	Creatinine
+T24	Observation-Name 207 217	Creatinine
+T25	Eq-Unit 220 222	mg
+T26	Eq-Unit 223 225	dl
+T27	Condition 231 239	Diseases
+T28	Condition-Name 231 239	Diseases
+T29	Modifier 243 258	ascending aorta
+T30	Modifier 260 271	aortic arch
+T31	Modifier 275 289	thoracic aorta
+T32	Or 272 274	or
+T33	Acuteness 295 302	Chronic
+A1	Eq-Operator-Value T7 GT
+A2	Eq-Operator-Value T8 GT
+A3	Eq-Temporal-Unit-Value T9 year
+A4	Eq-Temporal-Unit-Value T10 year
+A5	Eq-Operator-Value T22 LT
+A6	Observation-Type-Value T24 lab
+A7	Acuteness-Type-Value T33 chronic
+R1	Treatment-For Arg1:E2 Arg2:E3

@@ -1,17 +1,16 @@
 E1	Procedure:T1 Name:T2 Location:T21
 E3	Condition:T3 Name:T4
 E7	Condition:T7 Name:T8
-E8	Age:T12 Eq-Comparison:E10
+E8	Age:T12 Numeric-Filter:E10
 E9	Eq-Comparison:T15 Operator:T9 Value:T13
 E10	Eq-Comparison:T16 Operator:T10 Temporal-Unit:T11 Value:T14
-E2	Observation:T17 Name:T18 Eq-Comparison:E9
+E2	Observation:T17 Name:T18 Numeric-Filter:E9
 E4	Condition:T19 Name:T20
-E6	Encounter:T22 Type:T23 Location:T24 Location2:T25 Location3:T26
+E6	Encounter:T22 Location:T24 Location2:T25 Location3:T26
 E11	Condition:T27 Name:T28
 E12	Assertion:T30 Asserted:E7
 E13	Negation:T31 Negates:E5
 E5	Condition:T5 Name:T6
-E14	And:T32 Arg:E7 Arg2:E13
 T1	Procedure 116 141	hyperbaric oxygen therapy
 T2	Procedure-Name 116 141	hyperbaric oxygen therapy
 T3	Condition 29 37	comatose
@@ -32,7 +31,6 @@ T19	Condition 78 103	carbon monoxide poisoning
 T20	Condition-Name 78 103	carbon monoxide poisoning
 T21	Location 147 181	tertiary hospital in Île de France
 T22	Encounter 215 227	Hospitalized
-T23	Encounter-Type 215 227	Hospitalized
 T24	Location 231 256	hyperbaric medicine unity
 T25	Location 260 285	Raymond Poincaré hospital
 T26	Location 289 296	Garches
@@ -43,13 +41,12 @@ T30	Assertion 369 375	signes
 T31	Negation 390 397	without
 T5	Condition 398 410	CO detection
 T6	Condition-Name 398 410	CO detection
-T32	And 386 389	and
 A1	Eq-Operator-Value T9 LT
 A2	Eq-Operator-Value T10 GTEQ
 A3	Eq-Temporal-Unit-Value T11 year
-A4	Observation-Type-Value T18 clinical-score
+A4	Observation-Type-Value E2 clinical-score
 A5	Location-Value T21 hospital
-A6	Encounter-Type-Value T23 inpatient
+A6	Encounter-Type-Value E6 inpatient
 A7	Location-Value T24 unit
 A8	Location-Value T25 hospital
 A9	Life-Stage-And-Gender-Type T29 female
@@ -58,3 +55,4 @@ R1	Equivalent-To Arg1:E2 Arg2:E3
 R2	Caused-By Arg1:E3 Arg2:E4
 R3	Treatment-For Arg1:E1 Arg2:E4
 R4	If-Then Arg1:T29 Arg2:E11
+R5	And Arg1:E7 Arg2:E13

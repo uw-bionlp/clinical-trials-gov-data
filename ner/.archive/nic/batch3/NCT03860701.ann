@@ -1,0 +1,75 @@
+E1	Condition:T1 Name:T21 Stage:E2
+E2	Eq-Comparison:T2 Unit:T22 Value:T23 Operator:T24 Value:T25
+E3	Observation:T3 Name:T26 Eq-Comparison:E4
+E4	Eq-Comparison:T4 Operator:T27 Operator:T28 Value:T29 Unit:T30
+E5	Observation:T5 Name:T31 Eq-Comparison:E6
+E6	Eq-Comparison:T6 Operator:T32 Value:T33 Temporal-Unit:T34
+E8	Condition:T8 Name:T36 Severity:T35
+E9	Negation:T9 Negates:E7
+E11	Condition:T11 Name:T37
+E12	Or:T12 Arg:E11 Arg2:E14
+E13	Modifier:T13 Modifies:T38
+E14	Condition:T14 Name:T38
+E15	Negation:T15 Negates:E21
+E16	Modifier:T16 Modifies:T40
+E17	Or:T17 Arg:E16 Arg2:E18
+E18	Modifier:T18 Modifies:T40
+E19	Condition:T19 Name:T40
+E20	Condition:T20 Name:T41 Stability:T39
+E7	Condition:T7 
+E10	Modifier:T10 Modifies:T37
+E21	Condition:T42 
+T1	Condition 39 42	NEC
+T2	Eq-Comparison 44 56	stages I-III
+T3	Observation 85 91	Weight
+T4	Eq-Comparison 92 118	greater or equal to 750 g.
+T5	Observation 124 139	Gestational age
+T6	Eq-Comparison 140 150	< 36 weeks
+T8	Condition 262 282	congenital anomalies
+T9	Negation 288 290	No
+T11	Condition 310 318	ischemia
+T12	Or 318 319	/
+T13	Modifier 319 323	limb
+T14	Condition 324 341	thrombotic events
+T15	Negation 348 350	No
+T16	Modifier 375 393	occlusive arterial
+T17	Or 394 396	or
+T18	Modifier 397 403	venous
+T19	Condition 404 414	thrombosis
+T20	Condition 420 431	Hemodynamic
+T21	Condition-Name 39 42	NEC
+T22	Eq-Unit 44 50	stages
+T23	Eq-Value 51 52	I
+T24	Eq-Operator 52 53	-
+T25	Eq-Value 53 56	III
+T26	Observation-Name 85 91	Weight
+T27	Eq-Operator 92 108	greater or equal
+T28	Eq-Operator 109 111	to
+T29	Eq-Value 112 115	750
+T30	Eq-Unit 116 118	g.
+T31	Observation-Name 124 139	Gestational age
+T32	Eq-Operator 140 141	<
+T33	Eq-Value 142 144	36
+T34	Eq-Temporal-Unit 145 150	weeks
+T35	Severity 256 261	major
+T36	Condition-Name 262 282	congenital anomalies
+T37	Condition-Name 310 318	ischemia
+T38	Condition-Name 324 341	thrombotic events
+T40	Condition-Name 404 414	thrombosis
+T41	Condition-Name 420 431	Hemodynamic
+T7	Condition 291 301	antecedent
+T10	Modifier 305 309	limb
+T42	Condition 351 361	antecedent
+T39	Stability 432 443	instability
+A1	Eq-Operator-Value T24 BETWEEN
+A2	Observation-Type-Value T26 vital
+A3	Eq-Operator-Value T27 GTEQ
+A4	Eq-Operator-Value T28 BETWEEN
+A5	Eq-Operator-Value T32 LT
+A6	Eq-Temporal-Unit-Value T34 week
+A7	Severity-Value T35 severe
+A8	Observation-Type-Value T31 measurement
+A9	Stability-Value T39 change
+R1	Caused-By Arg1:E11 Arg2:E7
+R2	Caused-By Arg1:E14 Arg2:E7
+R3	Caused-By Arg1:E19 Arg2:E21

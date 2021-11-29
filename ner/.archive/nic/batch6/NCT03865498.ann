@@ -1,0 +1,47 @@
+E1	Eq-Comparison:T1 Value:T7 Temporal-Unit:T8 Operator:T9
+E2	Or:T2 Arg:T10 Arg2:T11
+E3	Condition:T3 Name:T12
+E4	Condition:T4 Name:T15
+E6	Family-Member:T6 
+E7	Age:T18 Eq-Comparison:E1
+E8	Or:T21 Arg:T13 Arg2:T14
+E9	Condition:T22 Name:T23
+E10	Condition:T24 Name:T25
+E11	Condition:T26 Name:T17
+E5	Family-Member:T5 
+E12	Negation:T27 Negates:E11
+T1	Eq-Comparison 25 49	18 years of age or older
+T2	Or 61 63	or
+T3	Condition 131 139	dementia
+T4	Condition 513 527	abuse behavior
+T6	Family-Member 746 762	family caregiver
+T7	Eq-Value 25 27	18
+T8	Eq-Temporal-Unit 28 33	years
+T9	Eq-Operator 41 49	or older
+T10	Ethnicity 55 60	Black
+T11	Ethnicity 64 72	Hispanic
+T12	Condition-Name 131 139	dementia
+T13	Language 183 190	English
+T14	Language 194 201	Spanish
+T15	Condition-Name 513 527	abuse behavior
+T16	Life-Stage-And-Gender 721 729	children
+T17	Condition-Name 737 745	dementia
+T18	Age 37 40	age
+T19	Location 88 92	U.S.
+T20	Location 107 123	U.S. territories
+T21	Or 191 193	or
+T22	Condition 491 499	violence
+T23	Condition-Name 491 499	violence
+T24	Condition 501 511	misconduct
+T25	Condition-Name 501 511	misconduct
+T26	Condition 737 745	dementia
+T5	Family-Member 140 149	caregiver
+T27	Negation 731 734	not
+A1	Family-Member-Type E6 parent
+A2	Eq-Temporal-Unit-Value T8 year
+A3	Eq-Operator-Value T9 GTEQ
+A5	Life-Stage-And-Gender-Type T16 child
+A6	Location-Value T19 residence
+A7	Location-Value T20 residence
+A8	Family-Member-Type E5 parent
+R1	Example-Of Arg1:T20 Arg2:T19

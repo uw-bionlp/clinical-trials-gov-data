@@ -2,12 +2,11 @@ E1	Condition:T1 Name:T2 Severity:T3
 E2	Condition:T4 Name:T5
 E3	Eq-Comparison:T6 Value:T7 Value2:T8 Operator:T9
 E4	Condition:T10 Name:T11 Severity:T8
-E5	Or:T12 Arg:E2 Arg2:E4
-E6	Observation:T13 Name:T14 Eq-Comparison:E7
+E6	Observation:T13 Name:T14 Numeric-Filter:E7
 E7	Eq-Comparison:T15 Value:T16 Operator:T17 Value2:T18
 E8	Eq-Comparison:T19 Value:T20 Operator:T21 Value2:T22
 E9	Condition:T23 Name:T24 Severity:T22
-E10	Observation:T25 Name:T26 Eq-Comparison:E11
+E10	Observation:T25 Name:T26 Numeric-Filter:E11
 E11	Eq-Comparison:T27 Value:T28 Operator:T29 Value2:T30
 T1	Condition 46 66	cognitive impairment
 T2	Condition-Name 46 66	cognitive impairment
@@ -20,7 +19,6 @@ T8	Severity 89 93	mild
 T9	Eq-Operator 86 88	to
 T10	Condition 94 102	dementia
 T11	Condition-Name 94 102	dementia
-T12	Or 73 75	or
 T13	Observation 104 107	CDR
 T14	Observation-Name 104 107	CDR
 T15	Eq-Comparison 108 113	0.5-1
@@ -51,3 +49,4 @@ A9	Eq-Operator-Value T29 BETWEEN
 R1	Abbrev-Of Arg1:E2 Arg2:E1
 R2	Equivalent-To Arg1:E6 Arg2:E4
 R3	Equivalent-To Arg1:E10 Arg2:E9
+R4	Or Arg1:E2 Arg2:E4

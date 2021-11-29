@@ -3,7 +3,7 @@ E2	Modifier:T2 Modifies:T67
 E3	Condition:T3 Name:T67
 E4	Procedure:T4 Name:T68
 E5	Assertion:T5 Asserted:E4
-E6	Observation:T6 Name:T69 Eq-Comparison:E7
+E6	Observation:T6 Name:T69 Numeric-Filter:E7
 E7	Eq-Comparison:T7 Operator:T70 Value:T71 Temporal-Unit:T72
 E9	Modifier:T9 Modifies:T73
 E10	Condition:T10 Name:T73
@@ -12,42 +12,36 @@ E12	Condition:T12 Name:T75
 E13	Assertion:T13 Asserted:E14
 E14	Procedure:T14 Name:T76
 E15	Condition:T15 Name:T77
-E16	Or:T16 Arg:E15 Arg2:E17
 E17	Assertion:T17 Asserted:E18
 E18	Condition:T18 Name:T78
 E19	Condition:T19 Name:T79
-E20	Or:T20 Arg:E19 Arg2:E21
-E21	Condition:T21 
+E21	Condition:T21
 E22	Assertion:T22 Asserted:E23
 E23	Negation:T23 Negates:E24
 E24	Procedure:T24 Name:T80
-E25	Observation:T25 Name:T81 Eq-Comparison:E8
+E25	Observation:T25 Name:T81 Numeric-Filter:E8
 E26	Modifier:T26 Modifies:T84
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Eq-Comparison:T28 Temporal-Period:T83
 E29	Condition:T29 Name:T84 Temporality:E28 Temporality2:E30
 E30	Eq-Comparison:T30 Operator:T85 Value:T86 Temporal-Unit:T87
-E31	Temporal-Connection:T31 Arg:E30 Arg2:E32
-E32	Study:T32 
+E32	Study:T32
 E34	Eq-Comparison:T34 Temporal-Period:T88
 E35	Procedure:T35 Temporality:E34
 E36	Procedure:T36 Name:T89
 E37	Condition:T37 Name:T90
 E38	Condition:T38 Name:T91 Stage:E39
-E41	Observation:T41 Name:T92 Eq-Comparison:E42 Eq-Comparison2:E44
+E41	Observation:T41 Name:T92 Numeric-Filter:E42 Numeric-Filter:E44
 E42	Eq-Comparison:T42 Unit:T93 Operator:T94 Value:T95
-E43	Or:T43 Arg:E42 Arg2:E44
 E44	Eq-Comparison:T44 Operator:T96 Value:T97
-E45	Observation:T45 Name:T98 Eq-Comparison:E46
+E45	Observation:T45 Name:T98 Numeric-Filter:E46
 E46	Eq-Comparison:T46 Operator:T99 Value:T100
-E47	Observation:T47 Name:T101 Eq-Comparison:E48 Temporality:E49
+E47	Observation:T47 Name:T101 Numeric-Filter:E48 Temporality:E49
 E48	Eq-Comparison:T48 Value:T102 Unit:T103 Operator:T104
 E49	Eq-Comparison:T49 Temporal-Period:T105 Value:T106 Temporal-Unit:T107
-E50	Observation:T50 Name:T108 Eq-Comparison:E51
+E50	Observation:T50 Name:T108 Numeric-Filter:E51
 E51	Eq-Comparison:T51 Operator:T109 Value:T110
 E52	Negation:T52 Negates:E56
 E53	Modifier:T53 Modifies:T111
-E54	Or:T54 Arg:E53 Arg2:E55
 E55	Modifier:T55 Modifies:T111
 E56	Condition:T56 Name:T111
 E57	Condition:T57 Name:T112
@@ -55,7 +49,7 @@ E58	Condition:T58 Name:T113
 E59	Eq-Comparison:T59 Temporal-Period:T114
 E60	Condition:T60 Name:T115 Temporality:E59
 E61	Condition:T61 Name:T116 Temporality:E59
-E64	Age:T118 Eq-Comparison:E1
+E64	Age:T118 Numeric-Filter:E1
 E8	Eq-Comparison:T8 Value:T119
 E33	Modifier:T33 Modifies:E35
 E39	Eq-Comparison:T39 Value:T40 Operator:T82
@@ -74,22 +68,18 @@ T12	Condition 333 339	Cancer
 T13	Assertion 345 357	will require
 T14	Procedure 358 378	multiorgan resection
 T15	Condition 384 392	Pregnant
-T16	Or 393 395	or
 T17	Assertion 396 405	suspected
 T18	Condition 406 415	pregnancy
 T19	Condition 436 452	comorbid illness
-T20	Or 453 455	or
 T21	Condition 456 465	condition
 T22	Assertion 471 476	would
 T23	Negation 477 485	preclude
 T24	Procedure 497 504	surgery
 T25	Observation 506 509	ASA
 T26	Modifier 533 543	concurrent
-T27	Or 544 546	or
 T28	Eq-Comparison 547 555	previous
 T29	Condition 556 572	malignant tumors
 T30	Eq-Comparison 573 587	within 5 years
-T31	Temporal-Connection 588 594	before
 T32	Study 599 604	study
 T34	Eq-Comparison 629 639	undergoing
 T35	Procedure 650 660	procedures
@@ -98,7 +88,6 @@ T37	Condition 680 697	Liver dysfunction
 T38	Condition 699 709	child pugh
 T41	Observation 726 729	NRS
 T42	Eq-Comparison 730 738	score <2
-T43	Or 739 741	or
 T44	Eq-Comparison 742 744	>5
 T45	Observation 750 753	BMI
 T46	Eq-Comparison 754 764	under 18.5
@@ -109,7 +98,6 @@ T50	Observation 813 826	Serum albumin
 T51	Eq-Comparison 827 839	less than 30
 T52	Negation 840 847	without
 T53	Modifier 848 853	liver
-T54	Or 854 856	or
 T55	Modifier 857 862	renal
 T56	Condition 863 874	dysfunction
 T57	Condition 880 900	Chronic malnutrition
@@ -182,7 +170,6 @@ A1	Assertion-Type-Value E5 hypothetical
 A2	Assertion-Type-Value E13 hypothetical
 A3	Assertion-Type-Value E17 possible
 A4	Assertion-Type-Value E22 hypothetical
-A5	Temporal-Connection-Type-Value E31 before
 A7	Eq-Temporal-Unit-Value T65 year
 A8	Eq-Operator-Value T66 GTEQ
 A9	Eq-Operator-Value T70 GTEQ
@@ -191,20 +178,20 @@ A12	Eq-Temporal-Period-Value T83 past
 A13	Eq-Operator-Value T85 LTEQ
 A14	Eq-Temporal-Unit-Value T87 year
 A15	Eq-Temporal-Period-Value T88 present
-A16	Observation-Type-Value T92 clinical-score
+A16	Observation-Type-Value E41 clinical-score
 A17	Eq-Operator-Value T94 LT
 A18	Eq-Operator-Value T96 GT
-A19	Observation-Type-Value T98 vital
+A19	Observation-Type-Value E45 vital
 A20	Eq-Operator-Value T99 LT
-A21	Observation-Type-Value T101 measurement
+A21	Observation-Type-Value E47 measurement
 A22	Eq-Operator-Value T104 GTEQ
 A23	Eq-Temporal-Period-Value T105 past
 A24	Eq-Temporal-Unit-Value T107 month
-A25	Observation-Type-Value T108 lab
+A25	Observation-Type-Value E50 lab
 A26	Eq-Operator-Value T109 LT
 A27	Eq-Temporal-Period-Value T114 past
 A11	Eq-Operator-Value T82 LTEQ
-A28	Observation-Type-Value T81 clinical-score
+A28	Observation-Type-Value E25 clinical-score
 R1	Treatment-For Arg1:E14 Arg2:E12
 R2	Caused-By Arg1:E23 Arg2:E21
 R3	Caused-By Arg1:E23 Arg2:E19
@@ -212,3 +199,11 @@ R4	Example-Of Arg1:E25 Arg2:E21
 R5	Example-Of Arg1:E58 Arg2:E57
 R6	Example-Of Arg1:E60 Arg2:E57
 R7	Example-Of Arg1:E61 Arg2:E57
+R8	Or Arg1:E15 Arg2:E17
+R9	Or Arg1:E19 Arg2:E21
+R10	Or Arg1:E26 Arg2:E28
+R11	Before Arg1:E30 Arg2:E32
+R12	Or Arg1:E42 Arg2:E44
+R13	Or Arg1:E53 Arg2:E55
+R14	Or Arg1:E37 Arg2:E38
+R15	Or Arg1:E60 Arg2:E61

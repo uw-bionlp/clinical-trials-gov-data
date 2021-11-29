@@ -3,11 +3,11 @@ E3	Condition:T3 Name:T4 Temporality:E29
 E5	Condition:T5 Name:T6 Temporality:E26
 E7	Condition:T7 Name:T8 Temporality:E41
 E14	Condition:T14 Name:T15
-E16	Observation:T16 Name:T17 Eq-Comparison:E6
-E18	Observation:T18 Name:T19 Eq-Comparison:E19
-E20	Observation:T20 Name:T21 Eq-Comparison:E21
+E16	Observation:T16 Name:T17 Numeric-Filter:E6
+E18	Observation:T18 Name:T19 Numeric-Filter:E19
+E20	Observation:T20 Name:T21 Numeric-Filter:E21
 E22	Condition:T22 Name:T23
-E23	Age:T27 Eq-Comparison:E25
+E23	Age:T27 Numeric-Filter:E25
 E24	Eq-Comparison:T36 Operator:T24 Value:T31
 E25	Eq-Comparison:T37 Operator:T28 Value:T33 Value2:T34 Temporal-Unit:T26
 E26	Eq-Comparison:T38 Temporal-Period:T39
@@ -17,12 +17,12 @@ E4	Assertion:T46 Asserted:E2
 E6	Eq-Comparison:T47 Operator:T48 Value:T29
 E8	Condition:T49 Name:T50
 E9	Modifier:T51 Modifies:T10
-E10	Observation:T52 Name:T53 Eq-Comparison:E11
+E10	Observation:T52 Name:T53 Numeric-Filter:E11
 E11	Eq-Comparison:T54 Operator:T55 Temporal-Unit:T25 Value:T30 Per:T56
 E12	Family-Member:T57 Has:T58
 E13	Family-Member:T59 Has:E15
 E15	Family-Member:T60 Has:E17
-E17	Observation:T61 Name:T62 Eq-Comparison:E24
+E17	Observation:T61 Name:T62 Numeric-Filter:E24
 E19	Eq-Comparison:T64 Value:T32 Operator:T65
 E21	Eq-Comparison:T68 Operator:T69 Value:T35
 E28	Drug:T70
@@ -31,15 +31,11 @@ E31	Condition:T74
 E32	Procedure:T75 Name:T76 Stability:T77
 E27	Drug:T40 Name:T41
 E33	Drug:T78 Name:T79
-E34	Or:T80 Arg:E33 Arg2:E27
 E35	Study:T81
-E36	Temporal-Connection:T82 Arg:E27 Arg2:E35
 E37	Condition:T83 Name:T84
 E38	Modifier:T87 Modifies:T8
 E39	Modifier:T88 Modifies:T8
-E40	Or:T89 Arg:E39 Arg2:E38
 E41	Eq-Comparison:T90 Temporal-Period:T91
-E42	Or:T92 Arg:E22 Arg2:E1
 T1	Condition 826 866	attention-deficit/hyperactivity disorder
 T2	Condition-Name 826 866	attention-deficit/hyperactivity disorder
 T3	Condition 787 816	obsessive-compulsive disorder
@@ -119,27 +115,23 @@ T40	Drug 593 610	psychoactive drug
 T41	Drug-Name 593 610	psychoactive drug
 T78	Drug 582 589	Alcohol
 T79	Drug-Name 582 589	Alcohol
-T80	Or 590 592	or
 T81	Study 614 618	scan
-T82	Temporal-Connection 611 613	on
 T83	Condition 653 677	Neurodevelopmental delay
 T84	Condition-Name 653 677	Neurodevelopmental delay
 T85	Life-Stage-And-Gender 628 638	Adolescent
 T86	Life-Stage-And-Gender 683 693	Adolescent
 T87	Modifier 727 736	psychotic
 T88	Modifier 719 723	mood
-T89	Or 724 726	or
 T90	Eq-Comparison 708 715	History
 T91	Eq-Temporal-Period 708 715	History
-T92	Or 823 825	or
 T93	Life-Stage-And-Gender 751 761	Adolescent
 A1	Life-Stage-And-Gender-Type T10 female
 A2	Life-Stage-And-Gender-Type T11 adult
 A3	Life-Stage-And-Gender-Type T12 adult
 A4	Life-Stage-And-Gender-Type T13 adult
-A5	Observation-Type-Value T17 vital
-A6	Observation-Type-Value T19 vital
-A7	Observation-Type-Value T21 vital
+A5	Observation-Type-Value E16 vital
+A6	Observation-Type-Value E18 vital
+A7	Observation-Type-Value E20 vital
 A8	Eq-Operator-Value T24 GT
 A9	Eq-Temporal-Unit-Value T25 day
 A10	Eq-Temporal-Unit-Value T26 year
@@ -148,7 +140,7 @@ A12	Eq-Temporal-Period-Value T39 present
 A15	Eq-Temporal-Period-Value T43 past
 A14	Assertion-Type-Value E4 hypothetical
 A16	Eq-Operator-Value T48 LTEQ
-A17	Observation-Type-Value T53 social-habit
+A17	Observation-Type-Value E10 social-habit
 A18	Eq-Operator-Value T55 GTEQ
 A19	Eq-Temporal-Unit-Value T56 week
 A20	Family-Member-Type E12 mother
@@ -161,7 +153,6 @@ A26	Life-Stage-And-Gender-Type T67 child
 A27	Eq-Operator-Value T69 GTEQ
 A28	Stability-Value T73 change
 A29	Stability-Value T77 change
-A13	Temporal-Connection-Type-Value E36 during
 A30	Life-Stage-And-Gender-Type T85 child
 A31	Life-Stage-And-Gender-Type T86 child
 A32	Eq-Temporal-Period-Value T91 past
@@ -178,3 +169,7 @@ R9	If-Then Arg1:T86 Arg2:E7
 R10	Abbrev-Of Arg1:E22 Arg2:E3
 R11	Abbrev-Of Arg1:E14 Arg2:E1
 R12	If-Then Arg1:T93 Arg2:E3
+R13	Or Arg1:E33 Arg2:E27
+R14	During Arg1:E27 Arg2:E35
+R15	Or Arg1:E39 Arg2:E38
+R16	Or Arg1:E22 Arg2:E1

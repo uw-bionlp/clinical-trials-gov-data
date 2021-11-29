@@ -1,27 +1,24 @@
 E1	Condition:T1 Name:T52
-E2	And:T2 Arg:E1 Arg2:E3
-E3	Procedure:T3 
+E3	Procedure:T3
 E4	Condition:T4 Name:T54
 E5	Assertion:T5 Asserted:E6
 E6	Procedure:T6 Name:T55
 E8	Procedure:T8 Provider:E7
-E9	Study:T9 
+E9	Study:T9
 E10	Condition:T10 Name:T57
 E12	Observation:T12 Name:T58
-E13	Observation:T13 Name:T59 Eq-Comparison:E14
+E13	Observation:T13 Name:T59 Numeric-Filter:E14
 E14	Eq-Comparison:T14 Operator:T60 Value:T61 Unit:T62
 E15	Modifier:T15 Modifies:T63
 E16	Procedure:T16 Name:T63
 E17	Procedure:T17 Name:T64
-E18	Or:T18 Arg:E13 Arg2:E19
-E19	Observation:T19 Name:T11 Eq-Comparison:E20
+E19	Observation:T19 Name:T11 Numeric-Filter:E20
 E20	Eq-Comparison:T20 Operator:T65 Value:T66 Unit:T67
-E21	And:T21 Arg:E19 Arg2:E23
 E22	Modifier:T22 Modifies:T68
 E23	Condition:T23 Name:T68
-E24	Age:T24 Eq-Comparison:E25
+E24	Age:T24 Numeric-Filter:E25
 E25	Eq-Comparison:T25 Operator:T69 Value:T70 Temporal-Unit:T71
-E26	Age:T26 Eq-Comparison:E27
+E26	Age:T26 Numeric-Filter:E27
 E27	Eq-Comparison:T27 Operator:T72 Value:T73 Temporal-Unit:T74
 E28	Condition:T28 Name:T75
 E29	Other:T29 Is-Other:E30
@@ -32,28 +29,23 @@ E34	Condition:T34 Name:T81 Severity:T80
 E35	Eq-Comparison:T35 Temporal-Period:T82
 E36	Procedure:T36 Name:T84 Temporality:E35
 E37	Modifier:T37 Modifies:T86
-E38	Or:T38 Arg:E37 Arg2:E39
 E39	Modifier:T39 Modifies:T86
 E40	Procedure:T40 Name:T86
 E41	Exception:T41 From:E40 Except:E45
-E43	Or:T43 Arg:E31 Arg2:E44
 E44	Modifier:T44 Modifies:T88
 E45	Procedure:T45 Name:T88 Temporality:E46
 E46	Eq-Comparison:T46 Operator:T89 Value:T90 Temporal-Unit:T91
-E47	Temporal-Connection:T47 Arg:E46 Arg2:E48
-E48	Study:T48 
+E48	Study:T48
 E49	Condition:T49 Name:T92
-E50	Or:T50 Arg:E49 Arg2:E51
 E51	Condition:T51 Name:T93
 E52	Negation:T53 Negates:E3
 E53	Condition:T95 Name:T96
-E7	Provider:T7 Type:T56
+E7	Provider:T7
 E11	Modifier:T31 Modifies:T78
 E31	Modifier:T42 Modifies:T88
 E42	Condition:T83 Name:T85
-E54	Drug:T87 
+E54	Drug:T87
 T1	Condition 35 52	diabetes mellitus
-T2	And 53 56	and
 T3	Procedure 57 66	treatment
 T4	Condition 73 79	CI-DME
 T5	Assertion 80 89	requiring
@@ -67,10 +59,8 @@ T14	Eq-Comparison 269 282	> 300 microns
 T15	Modifier 286 301	spectral domain
 T16	Procedure 302 330	optical coherence tomography
 T17	Procedure 332 338	SD-OCT
-T18	Or 340 342	or
 T19	Observation 343 346	CST
 T20	Eq-Comparison 347 360	> 250 microns
-T21	And 361 365	with
 T22	Modifier 375 388	intra-retinal
 T23	Condition 389 414	cystic fluid accumulation
 T24	Age 450 453	age
@@ -86,18 +76,14 @@ T34	Condition 727 740	media opacity
 T35	Eq-Comparison 743 762	history of previous
 T36	Procedure 763 782	intraocular surgery
 T37	Modifier 794 801	macular
-T38	Or 802 804	or
 T39	Modifier 805 815	panretinal
 T40	Procedure 816 832	photocoagulation
 T41	Exception 834 840	except
-T43	Or 864 866	or
 T44	Modifier 867 883	keratorefractive
 T45	Procedure 884 891	surgery
 T46	Eq-Comparison 892 910	more than 6 months
-T47	Temporal-Connection 911 919	prior to
 T48	Study 920 930	enrollment
 T49	Condition 933 941	pregnant
-T50	Or 942 945	and
 T51	Condition 946 953	nursing
 T52	Condition-Name 35 52	diabetes mellitus
 T54	Condition-Name 73 79	CI-DME
@@ -141,7 +127,6 @@ T53	Negation 67 72	naïve
 T95	Condition 95 99	VEGF
 T96	Condition-Name 95 99	VEGF
 T7	Provider 112 130	retinal specialist
-T56	Provider-Type 112 130	retinal specialist
 T11	Observation-Name 343 346	CST
 T31	Modifier 671 682	age-related
 T42	Modifier 841 863	uncomplicated cataract
@@ -149,8 +134,7 @@ T83	Condition 967 978	sensitivity
 T85	Condition-Name 967 978	sensitivity
 T87	Drug 993 1015	supplement ingredients
 A1	Assertion-Type-Value E5 hypothetical
-A3	Temporal-Connection-Type-Value E47 before
-A4	Observation-Type-Value T58 measurement
+A4	Observation-Type-Value E12 measurement
 A5	Eq-Operator-Value T60 GT
 A7	Eq-Operator-Value T65 GT
 A8	Eq-Operator-Value T69 GT
@@ -176,3 +160,11 @@ R10	Example-Of Arg1:E34 Arg2:E30
 R11	Example-Of Arg1:E40 Arg2:E36
 R12	If-Then Arg1:E51 Arg2:T94
 R13	Caused-By Arg1:E42 Arg2:E54
+R14	And Arg1:E1 Arg2:E3
+R15	Or Arg1:E13 Arg2:E19
+R16	And Arg1:E19 Arg2:E23
+R17	Or Arg1:E37 Arg2:E39
+R18	Or Arg1:E31 Arg2:E44
+R19	Before Arg1:E46 Arg2:E48
+R20	Or Arg1:E49 Arg2:E51
+R21	Or Arg1:E32 Arg2:E33

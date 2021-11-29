@@ -2,16 +2,14 @@ E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4 Temporality:E13 Temporality2:E17
 E5	Condition:T5 Name:T6
 E10	Condition:T10 Name:T11 Polarity:T32
-E12	Observation:T12 Name:T13 Eq-Comparison:E15
+E12	Observation:T12 Name:T13 Numeric-Filter:E15
 E14	Condition:T14 Name:T15 Polarity:T33
 E15	Eq-Comparison:T22 Operator:T16 Value:T18
 E16	Eq-Comparison:T23 Operator:T17 Value:T20
 E2	Condition:T25 Name:T26 Minimum-Count:E6 Temporality:E19
-E4	Or:T28 Arg:T27 Arg2:T9
 E6	Eq-Comparison:T29 Value:T30 Unit:T31
-E8	Observation:T19 Name:T34 Eq-Comparison:E16
+E8	Observation:T19 Name:T34 Numeric-Filter:E16
 E9	Condition:T35 Name:T36
-E11	Or:T37 Arg:E9 Arg2:E5
 E13	Eq-Comparison:T38 Temporal-Period:T39
 E17	Eq-Comparison:T21 Temporal-Unit:T40 Value:T8 Temporal-Period:T7
 E7	Condition:T41 Name:T42 Temporality:E18
@@ -40,7 +38,6 @@ T24	Ethnicity 124 140	African American
 T25	Condition 180 195	trauma exposure
 T26	Condition-Name 180 195	trauma exposure
 T27	Life-Stage-And-Gender 157 166	childhood
-T28	Or 167 173	and/or
 T29	Eq-Comparison 197 224	3 total criterion A traumas
 T30	Eq-Value 197 198	3
 T31	Eq-Unit 205 224	criterion A traumas
@@ -50,7 +47,6 @@ T19	Observation 292 297	PHQ-9
 T34	Observation-Name 292 297	PHQ-9
 T35	Condition 365 372	bipolar
 T36	Condition-Name 365 372	bipolar
-T37	Or 374 376	or
 T38	Eq-Comparison 413 420	current
 T39	Eq-Temporal-Period 413 420	current
 T21	Eq-Comparison 445 457	past 1 month
@@ -73,8 +69,11 @@ A7	Eq-Temporal-Period-Value T39 present
 A9	Eq-Temporal-Unit-Value T40 month
 A10	Eq-Temporal-Period-Value T44 present
 A11	Eq-Temporal-Period-Value T46 past
-A12	Observation-Type-Value T34 survey-or-questionnaire
-A13	Observation-Type-Value T13 survey-or-questionnaire
+A12	Observation-Type-Value E8 survey-or-questionnaire
+A13	Observation-Type-Value E12 survey-or-questionnaire
 A8	Eq-Temporal-Period-Value T7 past
 R1	Equivalent-To Arg1:E12 Arg2:E10
 R2	Equivalent-To Arg1:E8 Arg2:E14
+R3	Or Arg1:T27 Arg2:T9
+R4	Or Arg1:E9 Arg2:E5
+R5	Or Arg1:E1 Arg2:E9

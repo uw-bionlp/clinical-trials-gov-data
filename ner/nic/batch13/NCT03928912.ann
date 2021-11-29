@@ -1,5 +1,5 @@
 E1	Condition:T1 Name:T2
-E2	Condition:T3 Name:T4
+E2	Observation:T3 Name:T4
 E3	Condition:T5 Name:T6
 E4	Condition:T7 Name:T8
 E5	Condition:T9 Name:T10
@@ -7,8 +7,8 @@ E6	Modifier:T11 Modifies:T2
 E7	Modifier:T12 Modifies:T6
 T1	Condition 42 50	fracture
 T2	Condition-Name 42 50	fracture
-T3	Condition 65 71	trauma
-T4	Condition-Name 65 71	trauma
+T3	Observation 65 71	trauma
+T4	Observation-Name 65 71	trauma
 T5	Condition 115 123	fracture
 T6	Condition-Name 115 123	fracture
 T7	Condition 138 143	tumor
@@ -19,3 +19,4 @@ T11	Modifier 29 41	tibial shaft
 T12	Modifier 102 114	tibial shaft
 R1	Caused-By Arg1:E1 Arg2:E2
 R2	Caused-By Arg1:E3 Arg2:E4
+R3	Or Arg1:E4 Arg2:E5

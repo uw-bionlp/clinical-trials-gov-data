@@ -6,7 +6,7 @@ E14	Condition:T14 Name:T15
 E16	Condition:T16 Name:T17
 E18	Condition:T18 Name:T19
 E20	Condition:T20 Name:T21
-E21	Age:T32 Eq-Comparison:E2
+E21	Age:T32 Numeric-Filter:E2
 E22	Eq-Comparison:T48 Operator:T25 Value:T36 Temporal-Unit:T68
 E23	Eq-Comparison:T49 Operator:T26 Value:T37
 E24	Eq-Comparison:T50 Operator:T27 Value:T42 Unit:T87
@@ -21,33 +21,26 @@ E7	Eq-Comparison:T56 Value:T57
 E9	Procedure:T7 Name:T58 Temporality:E11 Acuteness:T59
 E11	Eq-Comparison:T60 Operator:T24 Temporal-Recency:T62 Temporal-Unit:T61 Value:T35
 E13	Condition:T63 Name:T64 Severity:T65
-E15	And:T66 Arg:E9 Arg2:E13
-E17	Observation:T67 Name:T69 Eq-Comparison:E22
-E29	Observation:T76 Name:T77 Eq-Comparison:E23 Eq-Comparison2:E26
-E30	And:T78 Arg:E19 Arg2:E28
+E17	Observation:T67 Name:T69 Numeric-Filter:E22
+E29	Observation:T76 Name:T77 Numeric-Filter:E23 Numeric-Filter:E26
 E31	Eq-Comparison:T79 Value:T80 Operator:T81
-E27	Observation:T73 Name:T82 Eq-Comparison:E31 Severity:T133
+E27	Observation:T73 Name:T82 Numeric-Filter:E31 Severity:T133
 E19	Modifier:T70 Modifies:T82
 E28	Modifier:T71
-E32	Observation:T72 Name:T74 Eq-Comparison:E33
+E32	Observation:T72 Name:T74 Numeric-Filter:E33
 E33	Eq-Comparison:T75 Value:T41 Unit:T83 Operator:T84
-E34	Observation:T85 Name:T86 Eq-Comparison:E24
-E35	And:T88 Arg:E32 Arg2:E34
+E34	Observation:T85 Name:T86 Numeric-Filter:E24
 E36	Condition:T89 Name:T90 Stage:E37
 E37	Eq-Comparison:T44 Value:T43
 E38	Modifier:T91
-E40	Or:T93 Arg:E38 Arg2:E39
 E39	Procedure:T92 Name:T95
 E41	Modifier:T94 Modifies:T95
 E42	Eq-Comparison:T96 Operator:T28 Temporal-Recency:T97 Value:T45 Temporal-Unit:T98
 E43	Eq-Comparison:T99 Temporal-Period:T100
 E44	Assertion:T101 Asserted:E12
-E45	And:T102 Arg:E12 Arg2:E14
-E46	Temporal-Connection:T103 Arg:E47 Arg2:E16
-E47	Observation:T104 Name:T105 Eq-Comparison:E25
+E47	Observation:T104 Name:T105 Numeric-Filter:E25
 E48	Condition:T107 Name:T108 Stability:T109
 E49	Condition:T110 Name:T111
-E50	And:T112 Arg:E48 Arg2:E49
 E51	Assertion:T113 Asserted:E48 Asserted2:E49
 E52	Condition:T115 Name:T116 Severity:T114 Temporality:E53
 E53	Eq-Comparison:T117 Temporal-Period:T118
@@ -55,10 +48,8 @@ E55	Procedure:T121 Name:T122 Stability:T123
 E56	Assertion:T124 Asserted:T123
 E57	Condition:T125 Name:T126
 E58	Condition:T127 Name:T128
-E59	Or:T129 Arg:E57 Arg2:E58
 E60	Procedure:T22 Name:T131
 E61	Contraindication:T132 Contraindicates:E60
-E54	Or:T47 Arg:E20 Arg2:E18
 T1	Condition 63 79	Cerebral infarct
 T2	Condition-Name 63 79	Cerebral infarct
 T8	Procedure 536 550	recanalization
@@ -120,13 +111,11 @@ T62	Eq-Temporal-Recency 223 228	first
 T63	Condition 257 265	penumbra
 T64	Condition-Name 257 265	penumbra
 T65	Severity 245 256	significant
-T66	And 233 236	and
 T67	Observation 349 353	Tmax
 T68	Eq-Temporal-Unit 355 356	s
 T69	Observation-Name 349 353	Tmax
 T76	Observation 392 395	ADC
 T77	Observation-Name 392 395	ADC
-T78	And 358 361	and
 T40	Eq-Temporal-Unit 411 412	s
 T79	Eq-Comparison 417 428	1.8 or more
 T80	Eq-Value 417 420	1.8
@@ -143,12 +132,10 @@ T84	Eq-Operator 467 474	or more
 T85	Observation 479 499	ischemic core volume
 T86	Observation-Name 479 499	ischemic core volume
 T87	Eq-Unit 516 518	mL
-T88	And 475 478	and
 T89	Condition 552 556	TICI
 T90	Condition-Name 552 556	TICI
 T44	Eq-Comparison 557 561	2b-3
 T91	Modifier 579 584	alone
-T93	Or 585 587	or
 T92	Procedure 611 623	thrombolysis
 T94	Modifier 608 610	IV
 T95	Procedure-Name 611 623	thrombolysis
@@ -158,8 +145,6 @@ T98	Eq-Temporal-Unit 648 649	h
 T99	Eq-Comparison 762 769	History
 T100	Eq-Temporal-Period 762 769	History
 T101	Assertion 773 784	symptomatic
-T102	And 802 806	with
-T103	Temporal-Connection 827 830	pre
 T104	Observation 838 859	modified Rankin Scale
 T105	Observation-Name 838 859	modified Rankin Scale
 T106	Eq-Unit 860 865	score
@@ -168,7 +153,6 @@ T108	Condition-Name 899 906	infarct
 T109	Stability 885 891	impact
 T110	Condition 911 934	selective neuronal loss
 T111	Condition-Name 911 934	selective neuronal loss
-T112	And 907 910	and
 T113	Assertion 870 880	to measure
 T114	Severity 1019 1025	severe
 T115	Condition 1026 1046	cognitive impairment
@@ -183,13 +167,11 @@ T125	Condition 1151 1159	Pregnant
 T126	Condition-Name 1151 1159	Pregnant
 T127	Condition 1163 1177	breast-feeding
 T128	Condition-Name 1163 1177	breast-feeding
-T129	Or 1160 1162	or
 T130	Life-Stage-And-Gender 1178 1183	women
 T22	Procedure 1211 1214	MRI
 T131	Procedure-Name 1211 1214	MRI
 T132	Contraindication 1190 1207	Contraindications
 T133	Severity 306 316	critically
-T47	Or 1058 1060	or
 A2	Eq-Operator-Value T24 LTEQ
 A3	Eq-Operator-Value T25 GT
 A4	Eq-Operator-Value T26 LT
@@ -205,15 +187,14 @@ A13	Severity-Value T65 severe
 A14	Eq-Temporal-Unit-Value T68 second
 A16	Eq-Temporal-Unit-Value T40 second
 A17	Eq-Operator-Value T81 GTEQ
-A15	Observation-Type-Value T74 measurement
-A18	Observation-Type-Value T82 measurement
+A15	Observation-Type-Value E32 measurement
+A18	Observation-Type-Value E27 measurement
 A19	Eq-Operator-Value T84 GTEQ
-A20	Observation-Type-Value T86 measurement
+A20	Observation-Type-Value E34 measurement
 A21	Eq-Temporal-Recency-Value T97 first-time
 A22	Eq-Temporal-Unit-Value T98 hour
 A23	Eq-Temporal-Period-Value T100 past
 A24	Assertion-Type-Value E44 possible
-A25	Temporal-Connection-Type-Value E46 before
 A26	Stability-Value T109 change
 A27	Assertion-Type-Value E51 hypothetical
 A28	Severity-Value T114 severe
@@ -234,3 +215,12 @@ R8	Equivalent-To Arg1:E20 Arg2:E52
 R9	Caused-By Arg1:T123 Arg2:E18
 R10	If-Then Arg1:T130 Arg2:E58
 R11	Equivalent-To Arg1:E27 Arg2:E13
+R12	And Arg1:E9 Arg2:E13
+R13	And Arg1:E19 Arg2:E28
+R14	And Arg1:E32 Arg2:E34
+R15	Or Arg1:E38 Arg2:E39
+R16	And Arg1:E12 Arg2:E14
+R17	Before Arg1:E47 Arg2:E16
+R18	And Arg1:E48 Arg2:E49
+R19	Or Arg1:E57 Arg2:E58
+R20	Or Arg1:E20 Arg2:E18

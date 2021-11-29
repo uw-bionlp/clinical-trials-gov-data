@@ -2,14 +2,11 @@ E1	Procedure:T1 Name:T2 Temporality:E4
 E3	Condition:T3 Name:T4
 E2	Risk:T10 Risk-For:E3
 E4	Eq-Comparison:T13 Temporal-Period:T14
-E5	And:T15 Arg:T12 Arg2:E1
 E6	Condition:T17 Name:T18
 E7	Negation:T19 Negates:E6
 E8	Other:T20 Is-Other:T6
-E9	And:T21 Arg:E6 Arg2:T6
 E10	Condition:T23 Name:T24 Temporality:E13
 E11	Assertion:T25 Asserted:E10
-E12	And:T26 Arg:T22 Arg2:E11
 E13	Eq-Comparison:T27 Temporal-Period:T28 Value:T8 Temporal-Unit:T7
 T1	Procedure 146 169	permanent sterilization
 T2	Procedure-Name 146 169	permanent sterilization
@@ -25,18 +22,15 @@ T11	Life-Stage-And-Gender 57 62	Women
 T12	Life-Stage-And-Gender 121 126	Women
 T13	Eq-Comparison 136 145	undergone
 T14	Eq-Temporal-Period 136 145	undergone
-T15	And 127 130	who
 T16	Life-Stage-And-Gender 175 180	Women
 T17	Condition 185 200	sexually active
 T18	Condition-Name 185 200	sexually active
 T19	Negation 181 184	not
 T20	Other 213 220	partner
-T21	And 201 205	with
 T22	Life-Stage-And-Gender 226 231	Women
 T23	Condition 253 261	pregnant
 T24	Condition-Name 253 261	pregnant
 T25	Assertion 236 245	intend to
-T26	And 232 235	who
 T27	Eq-Comparison 269 283	next 12 months
 T28	Eq-Temporal-Period 269 273	next
 A1	Life-Stage-And-Gender-Type T6 male
@@ -49,3 +43,6 @@ A7	Life-Stage-And-Gender-Type T16 female
 A8	Life-Stage-And-Gender-Type T22 female
 A9	Assertion-Type-Value E11 intention
 A10	Eq-Temporal-Period-Value T28 future
+R1	And Arg1:T12 Arg2:E1
+R2	And Arg1:E6 Arg2:T6
+R3	And Arg1:T22 Arg2:E11

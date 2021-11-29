@@ -1,0 +1,114 @@
+E1	Condition:T1 Name:T2
+E3	Observation:T3 Name:T4 Eq-Comparison:E9
+E5	Procedure:T5 Name:T6 Temporality:E25
+E6	Age:T12 Eq-Comparison:E8
+E7	Eq-Comparison:T22 Operator:T7 Temporal-Unit:T9 Value:T19
+E8	Eq-Comparison:T23 Operator:T13 Value:T15 Value2:T16
+E9	Eq-Comparison:T24 Operator:T14 Value:T17 Value2:T18 Unit:T11 Per:T25
+E2	Condition:T26 Name:T27 Temporality:E4
+E4	Eq-Comparison:T28 Temporal-Period:T29
+E10	Condition:T30 Name:T31 Temporality:E7
+E11	Condition:T32 Name:T33 Temporality:E14
+E12	Assertion:T34 Asserted:E11
+E13	Or:T35 Arg:E1 Arg2:E11
+E14	Eq-Comparison:T36 Operator:T8 Temporal-Period:T37 Value:T20 Temporal-Unit:T10
+E15	Procedure:T38 Name:T39 Temporality:E17
+E16	Modifier:T40 Modifies:T39
+E17	Eq-Comparison:T41 Temporal-Period:T42
+E18	Study:T43 Study-Of:E20
+E19	Other:T44 Is-Other:E18
+E20	Procedure:T45 Name:T46
+E21	Or:T47 Arg:E15 Arg2:E20
+E22	Procedure:T48 Name:T49 Temporality:E24
+E23	Drug:T50
+E24	Eq-Comparison:T51 Temporal-Period:T52
+E25	Eq-Comparison:T53 Temporal-Period:T54
+E26	Condition:T55 Name:T56
+E27	Modifier:T21 Modifies:T56
+E28	Condition:T57
+E29	Procedure:T58 Name:T59
+E30	Procedure:T60 Name:T61
+E31	Observation:T62 Name:T63
+E32	Or:T64 Arg:E30 Arg2:E31
+E33	Contraindication:T65 Contraindicates:E31 Contraindicates2:E30 Contraindicates3:E29
+T1	Condition 154 161	nursing
+T2	Condition-Name 154 161	nursing
+T3	Observation 40 43	BMI
+T4	Observation-Name 40 43	BMI
+T5	Procedure 383 400	bariatric surgery
+T6	Procedure-Name 383 400	bariatric surgery
+T7	Eq-Operator 131 132	<
+T8	Eq-Operator 194 200	within
+T9	Eq-Temporal-Unit 134 140	months
+T10	Eq-Temporal-Unit 213 219	months
+T11	Eq-Unit 51 53	kg
+T12	Age 25 28	Age
+T13	Eq-Operator 31 32	-
+T14	Eq-Operator 47 48	-
+T15	Eq-Value 29 31	18
+T16	Eq-Value 32 34	70
+T17	Eq-Value 45 47	25
+T18	Eq-Value 48 50	45
+T19	Eq-Value 132 133	6
+T20	Eq-Value 210 212	12
+T22	Eq-Comparison 131 140	<6 months
+T23	Eq-Comparison 29 34	18-70
+T24	Eq-Comparison 45 56	25-45 kg/m2
+T25	Eq-Unit 54 56	m2
+T26	Condition 121 129	pregnant
+T27	Condition-Name 121 129	pregnant
+T28	Eq-Comparison 111 120	Currently
+T29	Eq-Temporal-Period 111 120	Currently
+T30	Condition 141 152	post-partum
+T31	Condition-Name 141 152	post-partum
+T32	Condition 185 193	pregnant
+T33	Condition-Name 185 193	pregnant
+T34	Assertion 166 184	planning to become
+T35	Or 163 165	or
+T36	Eq-Comparison 194 219	within the next 12 months
+T37	Eq-Temporal-Period 205 209	next
+T38	Procedure 261 280	weight loss program
+T39	Procedure-Name 261 280	weight loss program
+T40	Modifier 250 260	commercial
+T41	Eq-Comparison 226 233	Current
+T42	Eq-Temporal-Period 226 233	Current
+T43	Study 311 316	study
+T44	Other 284 289	other
+T45	Procedure 290 301	weight loss
+T46	Procedure-Name 290 301	weight loss
+T47	Or 281 283	or
+T48	Procedure 339 350	weight loss
+T49	Procedure-Name 339 350	weight loss
+T50	Drug 351 362	medications
+T51	Eq-Comparison 322 331	Currently
+T52	Eq-Temporal-Period 322 331	Currently
+T53	Eq-Comparison 368 378	Previously
+T54	Eq-Temporal-Period 368 378	Previously
+T55	Condition 406 423	Inability to walk
+T56	Condition-Name 406 423	Inability to walk
+T21	Modifier 424 449	2 blocks without stopping
+T57	Condition 459 476	medical condition
+T58	Procedure 487 498	weight loss
+T59	Procedure-Name 487 498	weight loss
+T60	Procedure 500 519	dietary restriction
+T61	Procedure-Name 500 519	dietary restriction
+T62	Observation 524 541	physical activity
+T63	Observation-Name 524 541	physical activity
+T64	Or 521 523	or
+T65	Contraindication 545 560	contraindicated
+A1	Observation-Type-Value T4 vital
+A2	Eq-Operator-Value T7 LT
+A3	Eq-Operator-Value T8 LTEQ
+A4	Eq-Temporal-Unit-Value T9 month
+A5	Eq-Temporal-Unit-Value T10 month
+A6	Eq-Operator-Value T13 BETWEEN
+A7	Eq-Operator-Value T14 BETWEEN
+A8	Eq-Temporal-Period-Value T29 present
+A9	Assertion-Type-Value E12 intention
+A10	Eq-Temporal-Period-Value T37 future
+A11	Eq-Temporal-Period-Value T42 present
+A12	Eq-Temporal-Period-Value T52 present
+A13	Eq-Temporal-Period-Value T54 past
+A14	Observation-Type-Value T63 social-habit
+R1	Using Arg1:E22 Arg2:E23
+R2	Caused-By Arg1:E33 Arg2:E28

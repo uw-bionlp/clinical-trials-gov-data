@@ -1,13 +1,13 @@
 E2	Condition:T2 Name:T3
 E4	Condition:T4 Name:T5
-E6	Condition:T6 Name:T84
+E6	Condition:T6
 E8	Condition:T8 Name:T9
 E10	Condition:T10 Name:T11
 E12	Condition:T12 Name:T13
 E14	Condition:T14 Name:T15
 E16	Condition:T16 Name:T17
 E18	Condition:T18 Name:T19
-E19	Age:T22 Eq-Comparison:E21
+E19	Age:T22 Numeric-Filter:E21
 E20	Eq-Comparison:T28 Operator:T20 Value:T26 Unit:T46
 E21	Eq-Comparison:T29 Operator:T23 Value:T24 Value2:T25
 E22	Eq-Comparison:T30 Temporal-Period:T31
@@ -16,42 +16,32 @@ E24	Eq-Comparison:T34 Temporal-Period:T35
 E25	Eq-Comparison:T36 Temporal-Period:T37
 E26	Eq-Comparison:T38 Temporal-Period:T39
 E27	Eq-Comparison:T40 Temporal-Period:T41
-E1	Or:T43 Arg:T1 Arg2:T42
-E3	Observation:T44 Name:T45 Eq-Comparison:E20
+E3	Observation:T44 Name:T45 Numeric-Filter:E20
 E5	Condition:T47 Name:T48 Temporality:E22
 E7	Modifier:T49 Modifies:T48
-E9	Or:T50 Arg:E7 Arg2:E11
 E11	Modifier:T51 Modifies:T48
 E13	Modifier:T52 Modifies:T48
 E15	Condition:T53 Name:T54 Temporality:E23
 E17	Modifier:T55 Modifies:T54
 E28	Condition:T56 Name:T57 Temporality:E25
-E29	Or:T58 Arg:E18 Arg2:E8
 E30	Condition:T59 Name:T60 Temporality:E24
-E31	Condition:T61 Name:T62 Stability:T70
+E31	Observation:T61 Name:T62 Stability:T70
 E32	Modifier:T63 Modifies:T62
 E33	Study:T64 Study-Of:E34
 E34	Observation:T65 Name:T66
 E35	Study:T67
-E36	Temporal-Connection:T68 Arg:E34 Arg2:E35
 E37	Assertion:T69 Asserted:E34
 E38	Assertion:T71 Asserted:T70
-E39	Condition:T72 Name:T73 Temporality:E26
+E39	Observation:T72 Name:T73 Temporality:E26
 E40	Modifier:T74 Modifies:T73
 E41	Modifier:T75 Modifies:T73
-E42	Or:T76 Arg:E40 Arg2:E41
-E43	Condition:T77 Name:T81 Temporality:E27 Acuteness:T82
+E43	Observation:T77 Name:T81 Temporality:E27 Acuteness:T82
 E44	Modifier:T78 Modifies:T81
 E45	Modifier:T79 Modifies:T81
-E46	Or:T80 Arg:E45 Arg2:E44
-E48	Or:T83 Arg:E39 Arg2:E43
-E49	Condition:T7 Name:T85
-E50	Or:T86 Arg:E6 Arg2:E49
-E51	Modifier:T87 Modifies:T84
-E52	Modifier:T88 Modifies:T84
-E53	Or:T89 Arg:E52 Arg2:E51
+E49	Observation:T7 Name:T85
+E51	Modifier:T87 Modifies:E6
+E52	Modifier:T88 Modifies:E6
 E54	Condition:T90 Name:T91
-E55	Or:T92 Arg:E54 Arg2:E16
 E57	Eq-Comparison:T94 Value:T27 Temporal-Unit:T21
 E58	Observation:T95 Name:T96 Duration:E57
 E59	Modifier:T97 Modifies:T96
@@ -97,14 +87,12 @@ T40	Eq-Comparison 548 555	history
 T41	Eq-Temporal-Period 548 555	history
 T1	Life-Stage-And-Gender 25 28	Men
 T42	Life-Stage-And-Gender 33 38	women
-T43	Or 29 32	and
 T44	Observation 118 123	Weigh
 T45	Observation-Name 118 123	Weigh
 T46	Eq-Unit 138 144	pounds
 T47	Condition 254 262	injuries
 T48	Condition-Name 254 262	injuries
 T49	Modifier 266 272	sacrum
-T50	Or 272 273	/
 T51	Modifier 273 281	buttocks
 T52	Modifier 282 295	with scarring
 T53	Condition 321 329	injuries
@@ -112,42 +100,34 @@ T54	Condition-Name 321 329	injuries
 T55	Modifier 312 320	pressure
 T56	Condition 474 488	skin condition
 T57	Condition-Name 474 488	skin condition
-T58	Or 503 505	or
 T59	Condition 450 460	malignancy
 T60	Condition-Name 450 460	malignancy
-T61	Condition 411 419	response
-T62	Condition-Name 411 419	response
+T61	Observation 411 419	response
+T62	Observation-Name 411 419	response
 T63	Modifier 402 410	vascular
 T64	Study 175 180	study
 T65	Observation 181 189	position
 T66	Observation-Name 181 189	position
 T67	Study 214 219	study
-T68	Temporal-Connection 198 206	duration
 T69	Assertion 153 160	able to
 T70	Stability 395 401	affect
 T71	Assertion 389 394	would
-T72	Condition 540 544	pain
-T73	Condition-Name 540 544	pain
+T72	Observation 540 544	pain
+T73	Observation-Name 540 544	pain
 T74	Modifier 530 534	neck
 T75	Modifier 535 539	back
-T76	Or 534 535	/
-T77	Condition 577 581	pain
+T77	Observation 577 581	pain
 T78	Modifier 572 576	back
 T79	Modifier 567 571	neck
-T80	Or 571 572	/
-T81	Condition-Name 577 581	pain
+T81	Observation-Name 577 581	pain
 T82	Acuteness 559 566	chronic
-T83	Or 545 547	or
 T84	Condition-Name 615 622	disease
-T7	Condition 623 629	injury
-T85	Condition-Name 623 629	injury
-T86	Or 622 623	/
+T7	Observation 623 629	injury
+T85	Observation-Name 623 629	injury
 T87	Modifier 603 614	spinal cord
 T88	Modifier 593 602	vertebral
-T89	Or 602 603	/
 T90	Condition 642 650	kyphosis
 T91	Condition-Name 642 650	kyphosis
-T92	Or 652 654	or
 T94	Eq-Comparison 761 772	120 minutes
 T95	Observation 724 730	remain
 T96	Observation-Name 724 730	remain
@@ -164,8 +144,7 @@ A8	Eq-Temporal-Period-Value T39 present
 A9	Eq-Temporal-Period-Value T41 past
 A10	Life-Stage-And-Gender-Type T1 male
 A11	Life-Stage-And-Gender-Type T42 female
-A12	Observation-Type-Value T45 vital
-A13	Temporal-Connection-Type-Value E36 during
+A12	Observation-Type-Value E3 vital
 A14	Assertion-Type-Value E37 hypothetical
 A15	Stability-Value T70 change
 A16	Assertion-Type-Value E38 hypothetical
@@ -178,3 +157,14 @@ R4	Abbrev-Of Arg1:T82 Arg2:E43
 R5	Example-Of Arg1:E10 Arg2:E49
 R6	Example-Of Arg1:E54 Arg2:E49
 R7	Example-Of Arg1:E16 Arg2:E49
+R8	Or Arg1:T1 Arg2:T42
+R9	Or Arg1:E7 Arg2:E11
+R10	Or Arg1:E18 Arg2:E8
+R11	During Arg1:E34 Arg2:E35
+R12	Or Arg1:E40 Arg2:E41
+R13	Or Arg1:E45 Arg2:E44
+R14	Or Arg1:E39 Arg2:E43
+R15	Or Arg1:E6 Arg2:E49
+R16	Or Arg1:E52 Arg2:E51
+R17	Or Arg1:E54 Arg2:E16
+R18	Or Arg1:E10 Arg2:E54

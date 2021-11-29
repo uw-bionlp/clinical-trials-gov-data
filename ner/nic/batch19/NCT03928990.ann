@@ -1,35 +1,30 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Eq-Comparison:T5 Temporal-Recency:T6
-E8	Age:T14 Eq-Comparison:E13
+E8	Age:T14 Numeric-Filter:E13
 E10	Eq-Comparison:T26 Value:T21 Temporal-Unit:T40
 E11	Eq-Comparison:T27 Temporal-Unit:T13 Operator:T46 Value:T47
 E12	Eq-Comparison:T28 Operator:T52 Value:T25 Temporal-Unit:T53
 E13	Eq-Comparison:T29 Operator:T16 Value:T17 Temporal-Unit:T12 Value2:T19
 E2	Observation:T9 Name:T10
-E4	Observation:T15 Name:T18 Eq-Comparison:E6
+E4	Observation:T15 Name:T18 Numeric-Filter:E6
 E6	Eq-Comparison:T20 Operator:T24 Value:T23 Value2:T22
 E9	Condition:T32 Name:T33
 E15	Procedure:T34 Name:T35
 E16	Condition:T36 Name:T37 Stability:T38 Temporality:E10
 E17	Study:T39
-E18	Temporal-Connection:T41 Arg:E10 Arg2:E17
 E19	Procedure:T42 Stability:T43 Temporality:E11
 E20	Study:T44
-E21	Temporal-Connection:T45 Arg:E11 Arg2:E20
 E22	Procedure:T48 Temporality:E5 Temporality2:E12
 E14	Condition:T30 Name:T31
 E23	Condition:T49 Name:T50
-E24	Or:T51 Arg:E14 Arg2:E23
 E25	Study:T54
-E26	Temporal-Connection:T55 Arg:E12 Arg2:E25
 E27	Procedure:T56 Name:T57 Stability:T58
 E28	Study:T59
-E29	Temporal-Connection:T60 Arg:E27 Arg2:E28
-E7	Observation:T7 Name:T8 Eq-Comparison:E30
+E7	Observation:T7 Name:T8 Numeric-Filter:E30
 E30	Eq-Comparison:T61 Value:T62 Unit:T63
 E31	Negation:T64 Negates:E7
-E32	Observation:T65 Name:T66 Eq-Comparison:E33
+E32	Observation:T65 Name:T66 Numeric-Filter:E33
 E33	Eq-Comparison:T67 Value:T68
 E34	Observation:T69 Name:T70
 T1	Condition 63 81	Multiple sclerosis
@@ -68,11 +63,9 @@ T37	Condition-Name 287 314	neurological symptomatology
 T38	Stability 270 283	Deterioration
 T39	Study 336 346	enrollment
 T40	Eq-Temporal-Unit 325 328	day
-T41	Temporal-Connection 329 335	before
 T42	Procedure 396 405	treatment
 T43	Stability 354 361	Changes
 T44	Study 429 439	enrollment
-T45	Temporal-Connection 422 428	before
 T46	Eq-Operator 406 412	within
 T47	Eq-Value 413 414	6
 T48	Procedure 465 474	treatment
@@ -80,16 +73,13 @@ T30	Condition 485 495	spasticity
 T31	Condition-Name 485 495	spasticity
 T49	Condition 499 506	fatigue
 T50	Condition-Name 499 506	fatigue
-T51	Or 496 498	or
 T52	Eq-Operator 507 513	within
 T53	Eq-Temporal-Unit 517 520	day
 T54	Study 528 538	enrollment
-T55	Temporal-Connection 521 527	before
 T56	Procedure 563 583	reeducation protocol
 T57	Procedure-Name 563 583	reeducation protocol
 T58	Stability 544 551	Changes
 T59	Study 615 620	study
-T60	Temporal-Connection 584 607	throughout the duration
 T7	Observation 688 711	resting metabolic value
 T8	Observation-Name 688 711	resting metabolic value
 T61	Eq-Comparison 676 683	3 times
@@ -106,20 +96,16 @@ A3	Eq-Operator-Value T11 LTEQ
 A4	Eq-Temporal-Unit-Value T12 year
 A5	Eq-Temporal-Unit-Value T13 month
 A6	Eq-Operator-Value T16 BETWEEN
-A1	Observation-Type-Value T10 clinical-score
+A1	Observation-Type-Value E2 clinical-score
 A2	Eq-Operator-Value T24 BETWEEN
 A8	Stability-Value T38 change
 A9	Eq-Temporal-Unit-Value T40 day
-A10	Temporal-Connection-Type-Value E18 before
 A11	Stability-Value T43 change
-A12	Temporal-Connection-Type-Value E21 before
 A13	Eq-Operator-Value T46 LTEQ
 A14	Eq-Temporal-Recency-Value T6 first-time
 A7	Eq-Operator-Value T52 LTEQ
 A15	Eq-Temporal-Unit-Value T53 day
-A16	Temporal-Connection-Type-Value E26 before
 A17	Stability-Value T58 change
-A18	Temporal-Connection-Type-Value E29 during
 R1	Abbrev-Of Arg1:E4 Arg2:E2
 R2	Using Arg1:E9 Arg2:E15
 R3	Treatment-For Arg1:E19 Arg2:E3
@@ -127,3 +113,8 @@ R4	Treatment-For Arg1:E22 Arg2:E14
 R5	Treatment-For Arg1:E22 Arg2:E23
 R6	Equivalent-To Arg1:E32 Arg2:E7
 R7	Abbrev-Of Arg1:E34 Arg2:E32
+R8	Before Arg1:E10 Arg2:E17
+R9	Before Arg1:E11 Arg2:E20
+R10	Or Arg1:E14 Arg2:E23
+R11	Before Arg1:E12 Arg2:E25
+R12	During Arg1:E27 Arg2:E28

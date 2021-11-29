@@ -12,13 +12,11 @@ E4	Modifier:T29 Modifies:T28
 E6	Assertion:T30 Asserted:E8
 E8	Procedure:T31
 E10	Procedure:T33 Name:T34 Location:T32
-E12	And:T35 Arg:E8 Arg2:E10
 E17	Eq-Comparison:T36 Temporal-Period:T37
 E18	Study:T38
-E19	Temporal-Connection:T39 Arg:E14 Arg2:E18
-E20	Observation:T40 Name:T41 Eq-Comparison:E15
+E20	Observation:T40 Name:T41 Numeric-Filter:E15
 E21	Observation:T42 Name:T43
-E22	Observation:T44 Name:T45 Eq-Comparison:E16
+E22	Observation:T44 Name:T45 Numeric-Filter:E16
 E23	Study:T46 Study-Of:E3
 E24	Assertion:T47 Asserted:E3
 E9	Eq-Comparison:T9 Temporal-Period:T10
@@ -26,14 +24,11 @@ E25	Condition:T48 Name:T49
 E26	Exception:T50 From:E5 Except:E7
 E27	Procedure:T51 Name:T52
 E28	Procedure:T53 Name:T54
-E29	Or:T55 Arg:E27 Arg2:E28
 E30	Observation:T56 Name:T57
 E31	Observation:T58 Name:T59
-E32	Or:T60 Arg:E31 Arg2:E30
 E33	Procedure:T61
 E34	Modifier:T62 Modifies:T14
 E35	Modifier:T63 Modifies:T14
-E36	Or:T64 Arg:E34 Arg2:E35
 T1	Procedure 205 217	chemotherapy
 T2	Procedure-Name 205 217	chemotherapy
 T3	Procedure 564 574	procedures
@@ -66,11 +61,9 @@ T31	Procedure 93 102	treatment
 T32	Location 130 153	UF Health Cancer Center
 T33	Procedure 107 122	supportive care
 T34	Procedure-Name 107 122	supportive care
-T35	And 103 106	and
 T36	Eq-Comparison 189 193	plan
 T37	Eq-Temporal-Period 189 193	plan
 T38	Study 293 303	enrollment
-T39	Temporal-Connection 290 292	of
 T40	Observation 309 324	Life expectancy
 T41	Observation-Name 309 324	Life expectancy
 T42	Observation 370 404	Eastern Cooperative Oncology Group
@@ -88,16 +81,13 @@ T51	Procedure 864 871	surgery
 T52	Procedure-Name 864 871	surgery
 T53	Procedure 875 893	hormonal treatment
 T54	Procedure-Name 875 893	hormonal treatment
-T55	Or 872 874	or
 T56	Observation 936 962	involuntarily incarcerated
 T57	Observation-Name 936 962	involuntarily incarcerated
 T58	Observation 906 915	Prisoners
 T59	Observation-Name 906 915	Prisoners
-T60	Or 916 918	or
 T61	Procedure 1007 1016	treatment
 T62	Modifier 1029 1040	psychiatric
 T63	Modifier 1044 1052	physical
-T64	Or 1041 1043	or
 A1	Eq-Operator-Value T15 LTEQ
 A2	Eq-Operator-Value T16 GT
 A3	Eq-Temporal-Unit-Value T17 day
@@ -106,8 +96,7 @@ A5	Eq-Operator-Value T19 BETWEEN
 A6	Assertion-Type-Value E6 intention
 A7	Location-Value T32 hospital
 A8	Eq-Temporal-Period-Value T37 future
-A9	Temporal-Connection-Type-Value E19 before
-A10	Observation-Type-Value T43 clinical-score
+A10	Observation-Type-Value E21 clinical-score
 A11	Assertion-Type-Value E24 hypothetical
 A12	Eq-Temporal-Period-Value T10 future
 R1	Treatment-For Arg1:E8 Arg2:E2
@@ -117,3 +106,9 @@ R4	Example-Of Arg1:E11 Arg2:E5
 R5	Example-Of Arg1:E27 Arg2:E5
 R6	Example-Of Arg1:E28 Arg2:E5
 R7	Treatment-For Arg1:E33 Arg2:E13
+R8	And Arg1:E8 Arg2:E10
+R9	Before Arg1:E14 Arg2:E18
+R10	Or Arg1:E27 Arg2:E28
+R11	Or Arg1:E31 Arg2:E30
+R12	Or Arg1:E34 Arg2:E35
+R13	Or Arg1:E11 Arg2:E27

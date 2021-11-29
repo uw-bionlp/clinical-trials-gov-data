@@ -2,23 +2,20 @@ E1	Condition:T1 Name:T2 Acuteness:T35
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6 Location:T32
 E8	Condition:T8 Name:T9
-E9	Age:T13 Eq-Comparison:E10
+E9	Age:T13 Numeric-Filter:E10
 E10	Eq-Comparison:T17 Operator:T10 Temporal-Unit:T12 Value:T15
 E11	Eq-Comparison:T18 Temporal-Period:T19
 E12	Eq-Comparison:T20 Temporal-Period:T21
 E2	Eq-Comparison:T22 Operator:T23 Value:T14 Temporal-Unit:T11
-E4	Age:T24 Eq-Comparison:E2
-E6	And:T25 Arg:E4 Arg2:E7
+E4	Age:T24 Numeric-Filter:E2
 E7	Procedure:T26 Name:T27 Temporality:E11 Location:T29
 E13	Modifier:T28 Modifies:T4
-E14	Or:T30 Arg:E7 Arg2:E5
 E15	Modifier:T31 Modifies:T6
 E16	Condition:T33 Name:T34
-E17	Encounter:T36 Type:T37 Duration:E18
+E17	Encounter:T36 Duration:E18
 E18	Eq-Comparison:T38 Operator:T39 Value:T16 Temporal-Unit:T40
 E19	Procedure:T41 Name:T42 Temporality:E12
-E20	Encounter:T44 Type:T45 Location:T43
-E21	Temporal-Connection:T46 Arg:E19 Arg2:E20
+E20	Encounter:T44 Location:T43
 E22	Negation:T47 Negates:T7
 T1	Condition 225 239	pyelonephritis
 T2	Condition-Name 225 239	pyelonephritis
@@ -44,19 +41,16 @@ T21	Eq-Temporal-Period 411 417	taking
 T22	Eq-Comparison 39 57	more than 18 years
 T23	Eq-Operator 39 48	more than
 T24	Age 52 57	years
-T25	And 58 61	who
 T26	Procedure 79 93	antibiotherapy
 T27	Procedure-Name 79 93	antibiotherapy
 T28	Modifier 98 105	urinary
 T29	Location 119 139	emergency department
-T30	Or 140 142	or
 T31	Modifier 152 159	urinary
 T32	Location 187 207	emergency department
 T33	Condition 209 217	cystitis
 T34	Condition-Name 209 217	cystitis
 T35	Acuteness 219 224	acute
 T36	Encounter 365 377	hospitalized
-T37	Encounter-Type 365 377	hospitalized
 T38	Eq-Comparison 378 396	more than 24 hours
 T39	Eq-Operator 378 387	more than
 T40	Eq-Temporal-Unit 391 396	hours
@@ -64,8 +58,6 @@ T41	Procedure 418 432	antibiotherapy
 T42	Procedure-Name 418 432	antibiotherapy
 T43	Location 465 485	emergency department
 T44	Encounter 454 461	arrival
-T45	Encounter-Type 454 461	arrival
-T46	Temporal-Connection 441 447	before
 T47	Negation 500 507	without
 A1	Eq-Operator-Value T10 LT
 A2	Eq-Temporal-Unit-Value T11 year
@@ -75,14 +67,17 @@ A5	Eq-Temporal-Period-Value T21 present
 A6	Eq-Operator-Value T23 GT
 A7	Location-Value T29 emergency-dept
 A8	Location-Value T32 emergency-dept
-A10	Encounter-Type-Value T37 inpatient
+A10	Encounter-Type-Value E17 inpatient
 A11	Eq-Operator-Value T39 GT
 A12	Eq-Temporal-Unit-Value T40 hour
 A13	Location-Value T43 emergency-dept
-A14	Encounter-Type-Value T45 emergency
-A15	Temporal-Connection-Type-Value E21 before
+A14	Encounter-Type-Value E20 emergency
 A16	Acuteness-Type-Value T35 acute
 R1	Treatment-For Arg1:E7 Arg2:E3
 R2	Example-Of Arg1:E16 Arg2:E5
 R3	Example-Of Arg1:E1 Arg2:E5
 R4	Example-Of Arg1:E8 Arg2:E5
+R5	And Arg1:E4 Arg2:E7
+R6	Or Arg1:E7 Arg2:E5
+R7	Before Arg1:E19 Arg2:E20
+R8	Or Arg1:E1 Arg2:E8

@@ -1,29 +1,26 @@
 E1	Condition:T1 Name:T2
 E3	Drug:T3 Name:T4 Stability:T33 Duration:E12
-E5	Observation:T5 Name:T6 Eq-Comparison:E8
+E5	Observation:T5 Name:T6 Numeric-Filter:E8
 E6	Eq-Comparison:T19 Operator:T7 Value:T14 Unit:T24
 E7	Eq-Comparison:T20 Operator:T8 Value:T18 Unit:T59 Per:T60
 E8	Eq-Comparison:T21 Operator:T11 Value:T12 Value2:T13
-E2	Observation:T22 Name:T23 Eq-Comparison:E6
+E2	Observation:T22 Name:T23 Numeric-Filter:E6
 E4	Observation:T25 Name:T26 Stability:T27 Temporality:E10
 E9	Observation:T28 Name:T29 Temporality:E10 Stability:T27
 E10	Eq-Comparison:T30 Temporal-Period:T31 Temporal-Unit:T9 Value:T15
-E11	And:T32 Arg:E4 Arg2:E9
 E12	Eq-Comparison:T34 Operator:T35 Value:T16 Temporal-Unit:T10
 E13	Condition:T36 Name:T37 Duration:E14
 E14	Eq-Comparison:T38 Operator:T39 Value:T17 Temporal-Unit:T40
-E15	Condition:T41 Name:T42 Temporality:E21
-E16	Modifier:T43 Modifies:T42
-E17	Modifier:T44 Modifies:T42
-E18	Modifier:T45 Modifies:T42
-E19	Modifier:T46 Modifies:T42
-E20	And:T47 Arg:E18 Arg2:E19
+E15	Condition:T41 Temporality:E21
+E16	Modifier:T43 Modifies:E15
+E17	Modifier:T44 Modifies:E15
+E18	Modifier:T45 Modifies:E15
+E19	Modifier:T46 Modifies:E15
 E21	Eq-Comparison:T48 Temporal-Period:T49
 E22	Procedure:T50
 E23	Condition:T51 Name:T52
 E24	Allergy:T53 Name:T54 Name2:T55
-E25	Or:T56 Arg:T54 Arg2:T55
-E26	Observation:T57 Name:T58 Eq-Comparison:E7
+E26	Observation:T57 Name:T58 Numeric-Filter:E7
 E27	Drug:T61 Name:T62
 E28	Drug:T63 Name:T64 Temporality:E29
 E29	Eq-Comparison:T65 Temporal-Period:T66
@@ -58,7 +55,6 @@ T28	Observation 83 97	dietary habits
 T29	Observation-Name 83 97	dietary habits
 T30	Eq-Comparison 106 119	last 3 months
 T31	Eq-Temporal-Period 106 110	last
-T32	And 79 82	and
 T33	Stability 125 131	Stable
 T34	Eq-Comparison 160 177	at least 3 months
 T35	Eq-Operator 160 168	at least
@@ -73,7 +69,6 @@ T43	Modifier 260 274	cardiovascular
 T44	Modifier 276 292	gastrointestinal
 T45	Modifier 294 299	renal
 T46	Modifier 304 320	endocrinological
-T47	And 300 303	and
 T48	Eq-Comparison 249 256	History
 T49	Eq-Temporal-Period 249 256	History
 T50	Procedure 339 340	t
@@ -82,7 +77,6 @@ T52	Condition-Name 349 365	weight reduction
 T53	Allergy 396 405	Allergies
 T54	Allergy-Name 409 413	milk
 T55	Allergy-Name 418 423	dairy
-T56	Or 414 417	and
 T57	Observation 438 457	Alcohol consumption
 T58	Observation-Name 438 457	Alcohol consumption
 T59	Eq-Unit 463 469	drinks
@@ -93,23 +87,28 @@ T63	Drug 521 528	insulin
 T64	Drug-Name 521 528	insulin
 T65	Eq-Comparison 511 520	Receiving
 T66	Eq-Temporal-Period 511 520	Receiving
-A1	Observation-Type-Value T6 vital
+A1	Observation-Type-Value E5 vital
 A2	Eq-Operator-Value T7 LT
 A3	Eq-Operator-Value T8 GT
 A4	Eq-Temporal-Unit-Value T9 month
 A5	Eq-Temporal-Unit-Value T10 month
 A6	Eq-Operator-Value T11 BETWEEN
-A7	Observation-Type-Value T23 lab
-A8	Observation-Type-Value T26 vital
+A7	Observation-Type-Value E2 lab
+A8	Observation-Type-Value E4 vital
 A9	Stability-Value T27 stable
-A10	Observation-Type-Value T29 social-habit
+A10	Observation-Type-Value E9 social-habit
 A11	Eq-Temporal-Period-Value T31 past
 A12	Stability-Value T33 stable
 A13	Eq-Operator-Value T35 GTEQ
 A14	Eq-Operator-Value T39 GT
 A15	Eq-Temporal-Unit-Value T40 year
 A16	Eq-Temporal-Period-Value T49 past
-A17	Observation-Type-Value T58 social-habit
+A17	Observation-Type-Value E26 social-habit
 A18	Eq-Temporal-Unit-Value T60 day
 A19	Eq-Temporal-Period-Value T66 present
 R1	Treatment-For Arg1:E22 Arg2:E23
+R2	And Arg1:E4 Arg2:E9
+R3	And Arg1:E18 Arg2:E19
+R4	Or Arg1:T54 Arg2:T55
+R5	Or Arg1:E16 Arg2:E17
+R6	Or Arg1:E17 Arg2:E18

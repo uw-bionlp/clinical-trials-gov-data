@@ -6,27 +6,23 @@ E10	Condition:T10 Name:T11
 E12	Condition:T12 Name:T13
 E14	Condition:T14 Name:T15
 E16	Condition:T16 Name:T17
-E17	Age:T29 Eq-Comparison:E18
+E17	Age:T29 Numeric-Filter:E18
 E18	Eq-Comparison:T37 Operator:T18 Temporal-Unit:T23 Value:T30
 E19	Eq-Comparison:T38 Operator:T19 Value:T31
 E20	Eq-Comparison:T39 Operator:T20 Temporal-Unit:T24 Value:T32
 E21	Eq-Comparison:T40 Operator:T22 Temporal-Unit:T28 Value:T36
 E22	Eq-Comparison:T41 Temporal-Period:T42
-E2	Or:T44 Arg:T7 Arg2:T43
 E4	Condition:T45 Name:T46 Stage:E6
 E6	Eq-Comparison:T47 Unit:T48 Value:T49
-E7	And:T50 Arg:E19 Arg2:E20
-E9	Temporal-Connection:T51 Arg:E20 Arg2:E4
 E11	Condition:T52 Name:T53
 E13	Condition:T54 Name:T55
-E15	Temporal-Connection:T56 Arg:E13 Arg2:E11
 E23	Eq-Comparison:T57 Value:T58 Value2:T59
 E24	Observation:T60 Name:T61 Severity:T59 Duration:E25 Temporality:E26
 E25	Eq-Comparison:T62 Operator:T63 Value:T33 Temporal-Unit:T25
 E26	Eq-Comparison:T64 Value:T34 Operator:T65 Temporal-Unit:T66 Per:T26
 E27	Negation:T67 Negates:E24
 E28	Condition:T68 Name:T69
-E29	Observation:T70 Name:T71 Eq-Comparison:E30
+E29	Observation:T70 Name:T71 Numeric-Filter:E30
 E30	Eq-Comparison:T72 Operator:T75 Value:T73 Value2:T74
 E31	Eq-Comparison:T76 Temporal-Period:T77
 E32	Eq-Comparison:T78 Temporal-Period:T79
@@ -36,7 +32,7 @@ E35	Condition:T84 Name:T85
 E36	Assertion:T87 Asserted:T86
 E37	Condition:T88 Name:T89 Temporality:E22
 E38	Other:T91 Is-Other:E8
-E39	Observation:T92 Name:T93 Eq-Comparison:E21
+E39	Observation:T92 Name:T93 Numeric-Filter:E21
 E40	Observation:T94 Name:T95
 E41	Negation:T96 Negates:E40
 E42	Assertion:T97 Asserted:E41
@@ -82,19 +78,15 @@ T41	Eq-Comparison 582 588	active
 T42	Eq-Temporal-Period 582 588	active
 T7	Life-Stage-And-Gender 69 72	Men
 T43	Life-Stage-And-Gender 77 82	women
-T44	Or 73 76	and
 T45	Condition 144 165	myocardial infarction
 T46	Condition-Name 144 165	myocardial infarction
 T47	Eq-Comparison 137 143	type I
 T48	Eq-Unit 137 141	type
 T49	Eq-Value 142 143	I
-T50	And 117 120	and
-T51	Temporal-Connection 131 136	after
 T52	Condition 198 200	MI
 T53	Condition-Name 198 200	MI
 T54	Condition 171 190	Physical inactivity
 T55	Condition-Name 171 190	Physical inactivity
-T56	Temporal-Connection 191 197	before
 T57	Eq-Comparison 227 247	moderate to vigorous
 T58	Severity 227 235	moderate
 T59	Severity 239 247	vigorous
@@ -151,11 +143,9 @@ A11	Eq-Temporal-Unit-Value T28 month
 A12	Eq-Temporal-Period-Value T42 present
 A13	Life-Stage-And-Gender-Type T7 male
 A14	Life-Stage-And-Gender-Type T43 female
-A15	Temporal-Connection-Type-Value E9 after
-A16	Temporal-Connection-Type-Value E15 before
 A17	Severity-Value T58 moderate
 A18	Severity-Value T59 severe
-A19	Observation-Type-Value T61 social-habit
+A19	Observation-Type-Value E24 social-habit
 A20	Eq-Operator-Value T63 GTEQ
 A21	Eq-Operator-Value T65 GTEQ
 A22	Eq-Temporal-Unit-Value T66 day
@@ -169,10 +159,16 @@ A28	Assertion-Type-Value E36 hypothetical
 A29	Severity-Value T90 severe
 A30	Assertion-Type-Value E42 hypothetical
 A31	Severity-Value T98 severe
-A32	Observation-Type-Value T71 clinical-score
+A32	Observation-Type-Value E29 clinical-score
 R1	Equivalent-To Arg1:E27 Arg2:E13
 R2	Caused-By Arg1:T86 Arg2:E35
 R3	Example-Of Arg1:E14 Arg2:E35
 R4	Example-Of Arg1:E37 Arg2:E35
 R5	Example-Of Arg1:E8 Arg2:E35
 R6	Example-Of Arg1:E10 Arg2:E35
+R7	Or Arg1:T7 Arg2:T43
+R8	And Arg1:E19 Arg2:E20
+R9	After Arg1:E20 Arg2:E4
+R10	Before Arg1:E13 Arg2:E11
+R11	Or Arg1:E8 Arg2:E10
+R12	Or Arg1:E37 Arg2:E12

@@ -1,19 +1,17 @@
 E1	Eq-Comparison:T10 Operator:T3 Temporal-Unit:T7 Value:T9
-E2	Encounter:T11 Type:T12 Duration:E3 Location:T44
+E2	Encounter:T11 Duration:E3 Location:T44
 E3	Eq-Comparison:T13 Operator:T14 Temporal-Unit:T6 Value:T8
-E4	Encounter:T15 Type:T16 Temporality:E1 Location:T21
-E5	Encounter:T17 Type:T18 Location:T19
-E6	Temporal-Connection:T20 Arg:E1 Arg2:E5
+E4	Encounter:T15 Temporality:E1 Location:T21
+E5	Encounter:T17 Location:T19
 E8	Exception:T24 From:E5 Except:E17
 E9	Condition:T25 Name:T26 Temporality:E10
 E10	Eq-Comparison:T27 Temporal-Period:T28
 E11	Negation:T29 Negates:E9
-E12	Encounter:T30 Type:T32 Location:T31
-E13	Temporal-Connection:T33 Arg:E9 Arg2:E12
+E12	Encounter:T30 Location:T31
 E14	Observation:T4 Name:T34 Location:T35
 E15	Observation:T5 Name:T36 Location:T37
-E16	Encounter:T38 Duration:E18
-E17	Encounter:T40 Type:T22 Duration:E7
+E16	Encounter:T38
+E17	Encounter:T40 Duration:E7
 E7	Eq-Comparison:T23 Value:T41
 E18	Eq-Comparison:T42 Value:T43
 T1	Language 220 227	English
@@ -25,17 +23,12 @@ T8	Eq-Value 54 55	4
 T9	Eq-Value 120 121	4
 T10	Eq-Comparison 113 128	within 4 months
 T11	Encounter 38 43	Spent
-T12	Encounter-Type 38 43	Spent
 T13	Eq-Comparison 44 60	more than 4 days
 T14	Eq-Operator 44 53	more than
 T15	Encounter 83 93	discharged
-T16	Encounter-Type 83 93	discharged
 T17	Encounter 132 155	transfer out of the ICU
-T18	Encounter-Type 132 140	transfer
 T19	Location 152 155	ICU
-T20	Temporal-Connection 129 131	of
 T21	Location 103 112	community
-T22	Encounter-Type 188 196	hospital
 T24	Exception 157 166	excluding
 T25	Condition 285 296	psychiatric
 T26	Condition-Name 285 296	psychiatric
@@ -44,8 +37,6 @@ T28	Eq-Temporal-Period 272 284	pre-existing
 T29	Negation 263 266	not
 T30	Encounter 329 337	transfer
 T31	Location 325 328	ICU
-T32	Encounter-Type 329 337	transfer
-T33	Temporal-Connection 318 320	in
 T4	Observation 351 356	Lives
 T34	Observation-Name 351 356	Lives
 T35	Location 379 386	Calgary
@@ -63,19 +54,19 @@ T44	Location 68 71	ICU
 A1	Eq-Operator-Value T3 LTEQ
 A4	Eq-Temporal-Unit-Value T6 day
 A5	Eq-Temporal-Unit-Value T7 month
-A6	Encounter-Type-Value T12 inpatient
+A6	Encounter-Type-Value E2 inpatient
 A7	Eq-Operator-Value T14 GT
-A8	Encounter-Type-Value T16 discharge
-A9	Encounter-Type-Value T18 transfer
+A8	Encounter-Type-Value E4 discharge
+A9	Encounter-Type-Value E5 transfer
 A10	Location-Value T19 unit
-A11	Temporal-Connection-Type-Value E6 after
 A12	Location-Value T21 residence
 A14	Eq-Temporal-Period-Value T28 past
 A15	Location-Value T31 unit
-A16	Encounter-Type-Value T32 transfer
-A17	Temporal-Connection-Type-Value E13 during
+A16	Encounter-Type-Value E12 transfer
 A2	Location-Value T35 residence
 A3	Location-Value T37 residence
 A18	Encounter-Type-Value T39 inpatient
-A13	Encounter-Type-Value T22 inpatient
+A13	Encounter-Type-Value E17 inpatient
 A19	Location-Value T44 unit
+R1	After Arg1:E1 Arg2:E5
+R2	During Arg1:E9 Arg2:E12

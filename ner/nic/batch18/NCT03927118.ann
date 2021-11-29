@@ -9,10 +9,8 @@ E2	Procedure:T19 Name:T20 Temporality:E4
 E4	Eq-Comparison:T21 Temporal-Recency:T22 Temporal-Period:T17
 E6	Procedure:T23 Name:T24 Temporality:E12
 E8	Assertion:T15 Asserted:E7 Asserted2:E5
-E10	Or:T16 Arg:E5 Arg2:E7
 E13	Condition:T18 Name:T25
 E14	Condition:T26 Name:T27
-E15	Or:T28 Arg:E9 Arg2:E14
 T1	Condition 127 161	Proliferative diabetic retinopathy
 T2	Condition-Name 127 161	Proliferative diabetic retinopathy
 T3	Condition 212 228	Optic disc edema
@@ -35,13 +33,13 @@ T23	Procedure 119 126	surgery
 T24	Procedure-Name 119 126	surgery
 T17	Eq-Temporal-Period 32 41	underwent
 T15	Assertion 183 192	suspicion
-T16	Or 171 173	or
 T18	Condition 193 211	Optic disc fatigue
 T25	Condition-Name 193 211	Optic disc fatigue
 T26	Condition 241 254	media opacity
 T27	Condition-Name 241 254	media opacity
-T28	Or 237 240	and
 A1	Eq-Temporal-Period-Value T14 past
 A4	Eq-Temporal-Recency-Value T22 first-time
 A5	Eq-Temporal-Period-Value T17 past
 A2	Assertion-Type-Value E8 possible
+R1	Or Arg1:E5 Arg2:E7
+R2	Or Arg1:E9 Arg2:E14

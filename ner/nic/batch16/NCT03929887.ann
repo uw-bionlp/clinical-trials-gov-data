@@ -17,7 +17,7 @@ E14	Observation:T16 Name:T36
 E17	Negation:T37 Negates:E14
 E18	Assertion:T38 Asserted:E17
 E19	Eq-Comparison:T39 Operator:T40 Value:T19 Unit:T41
-E20	Observation:T42 Name:T43 Eq-Comparison:E19 Eq-Comparison2:E22 Eq-Comparison3:E15
+E20	Observation:T42 Name:T43 Numeric-Filter:E19 Numeric-Filter:E22 Numeric-Filter:E15
 E21	Modifier:T44
 E22	Eq-Comparison:T45 Value:T20 Value2:T46 Unit:T15
 T1	Condition 38 56	glomerulonephritis
@@ -82,3 +82,8 @@ R4	Example-Of Arg1:E7 Arg2:E1
 R5	Example-Of Arg1:E3 Arg2:E1
 R6	Found-By Arg1:E1 Arg2:E4
 R7	Equivalent-To Arg1:E20 Arg2:E14
+R8	Or Arg1:E5 Arg2:E2
+R9	Or Arg1:E7 Arg2:E9
+R10	Or Arg1:E9 Arg2:E3
+R11	Or Arg1:E11 Arg2:E5
+R12	Or Arg1:E2 Arg2:E7

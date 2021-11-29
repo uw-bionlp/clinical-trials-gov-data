@@ -6,7 +6,7 @@ E10	Procedure:T10 Name:T11 Stability:T41
 E12	Procedure:T12 Name:T13
 E2	Eq-Comparison:T14 Temporal-Period:T15
 E4	Assertion:T16 Asserted:E3
-E6	Observation:T17 Name:T18 Eq-Comparison:E8
+E6	Observation:T17 Name:T18 Numeric-Filter:E8
 E8	Eq-Comparison:T9 Value:T20 Value2:T19 Operator:T21
 E9	Drug:T22 Name:T23
 E11	Assertion:T24 Asserted:E9
@@ -73,9 +73,10 @@ A7	Assertion-Type-Value E21 hypothetical
 A8	Stability-Value T41 change
 A9	Eq-Temporal-Period-Value T43 present
 A10	Acuteness-Type-Value T34 chronic
+A11	Observation-Type-Value E6 clinical-score
 R1	Using Arg1:E5 Arg2:E3
 R3	Caused-By Arg1:E17 Arg2:E16
 R4	Caused-By Arg1:E20 Arg2:E13
 R5	Caused-By Arg1:E22 Arg2:E14
 R2	Caused-By Arg1:T41 Arg2:E9
-A11	Observation-Type-Value T18 clinical-score
+R6	Or Arg1:E1 Arg2:E14

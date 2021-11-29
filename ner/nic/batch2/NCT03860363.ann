@@ -4,7 +4,7 @@ E5	Procedure:T5 Name:T6 Temporality:E15
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E10	Eq-Comparison:T14 Operator:T12 Value:T13
-E2	Age:T15 Eq-Comparison:E10
+E2	Age:T15 Numeric-Filter:E10
 E4	Modifier:T16 Modifies:E3
 E6	Procedure:T17 Name:T18
 E8	Assertion:T19 Asserted:E6
@@ -14,7 +14,6 @@ E14	Procedure:T25 Name:T26
 E15	Eq-Comparison:T27 Temporal-Period:T28
 E16	Modifier:T29 Modifies:E7 Modifies2:E17
 E17	Condition:T30 Name:T31
-E18	Or:T32 Arg:E7 Arg2:E17
 E19	Procedure:T33 Name:T34
 E20	Procedure:T35 Name:T36
 E21	Condition:T37 Name:T38
@@ -22,16 +21,14 @@ E22	Assertion:T39 Asserted:E21
 E23	Modifier:T40 Modifies:E25
 E24	Modifier:T41 Modifies:E25
 E25	Condition:T42 Temporality:E30
-E26	Drug:T43 
+E26	Drug:T43
 E28	Negation:T46 Negates:E4
 E29	Eq-Comparison:T47 Temporal-Period:T48
 E12	Modifier:T21 Modifies:T23
 E30	Eq-Comparison:T22 Temporal-Period:T49
-E31	Or:T50 Arg:E25 Arg2:E26
 E27	Study:T44 Temporality:E32
 E32	Eq-Comparison:T51 Temporal-Period:T52
 E33	Modifier:T53 Modifies:E27
-E34	Or:T54 Arg:E32 Arg2:E33
 E35	Assertion:T55 Asserted:T57
 E36	Study:T56 Stability:T57
 T1	Condition 398 417	Atrial fibrillation
@@ -63,7 +60,6 @@ T28	Eq-Temporal-Period 227 232	Prior
 T29	Modifier 254 264	Congenital
 T30	Condition 284 295	deformation
 T31	Condition-Name 284 295	deformation
-T32	Or 281 283	or
 T33	Procedure 301 319	Transplant surgery
 T34	Procedure-Name 301 319	Transplant surgery
 T35	Procedure 325 358	Ventricular Assist Device Surgery
@@ -81,13 +77,11 @@ T48	Eq-Temporal-Period 55 65	undergoing
 T21	Modifier 185 194	Emergency
 T22	Eq-Comparison 555 567	pre-existing
 T49	Eq-Temporal-Period 555 567	pre-existing
-T50	Or 602 604	or
 T45	Stability 605 616	interfering
 T44	Study 679 693	clinical trial
 T51	Eq-Comparison 640 648	previous
 T52	Eq-Temporal-Period 640 648	previous
 T53	Modifier 652 662	concurrent
-T54	Or 649 651	or
 T55	Assertion 736 741	might
 T56	Study 780 794	clinical trial
 T57	Stability 742 751	interfere
@@ -105,3 +99,6 @@ A11	Stability-Value T57 change
 R2	Equivalent-To Arg1:E2 Arg2:T11
 R1	Caused-By Arg1:T45 Arg2:E26
 R3	Caused-By Arg1:T57 Arg2:E27
+R4	Or Arg1:E7 Arg2:E17
+R5	Or Arg1:E25 Arg2:E26
+R6	Or Arg1:E32 Arg2:E33

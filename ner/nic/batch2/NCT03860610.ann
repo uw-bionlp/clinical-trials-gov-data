@@ -1,36 +1,32 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6
-E7	Observation:T7 Name:T8 Eq-Comparison:E20
+E7	Observation:T7 Name:T8 Numeric-Filter:E20
 E9	Condition:T9 Name:T10
-E11	Procedure:T11 
+E11	Procedure:T11
 E13	Procedure:T13 Name:T14 Temporality:E37
 E15	Condition:T15 Name:T16
 E17	Procedure:T17 Name:T18
-E18	Age:T25 Eq-Comparison:E19
+E18	Age:T25 Numeric-Filter:E19
 E19	Eq-Comparison:T31 Operator:T21 Temporal-Unit:T23 Value:T28
 E20	Eq-Comparison:T32 Operator:T22 Value:T29 Per:T86 Unit:T24
 E2	Procedure:T19 Name:T35
 E4	Procedure:T33 Name:T34
-E6	Or:T36 Arg:E2 Arg2:E4
 E8	Modifier:T37 Modifies:E2
 E10	Condition:T26 Name:T38
 E12	Modifier:T39 Modifies:E10
 E14	Procedure:T20 Name:T40
 E16	Procedure:T27 Name:T41
 E21	Eq-Comparison:T42 Temporal-Period:T43
-E22	Or:T44 Arg:E14 Arg2:E16
 E23	Condition:T45 Name:T46
-E25	Or:T49 Arg:E3 Arg2:E15
 E26	Condition:T50 Name:T51
-E27	Modifier:T52 
+E27	Modifier:T52
 E28	Modifier:T53 Modifies:E26
 E29	Condition:T54 Name:T55
 E30	Condition:T56 Name:T57
-E31	Condition:T58 Name:T59 Temporality:E35
+E31	Observation:T58 Name:T59 Temporality:E35
 E32	Modifier:T60 Modifies:E31
 E33	Modifier:T61 Modifies:E31
-E34	Or:T62 Arg:E32 Arg2:E33
 E35	Eq-Comparison:T63 Temporal-Period:T64
 E36	Condition:T65 Name:T66
 E37	Eq-Comparison:T67 Temporal-Period:T68
@@ -42,7 +38,6 @@ E42	Procedure:T79 Temporality:E43
 E43	Eq-Comparison:T80 Temporal-Period:T81
 E44	Modifier:T82 Modifies:T38
 E45	Modifier:T83 Modifies:T38
-E46	Or:T84 Arg:E44 Arg2:E45
 E47	Procedure:T85 Temporality:E21
 E48	Condition:T87 Name:T88 Stability:T89
 E24	Negation:T12 Negates:E11
@@ -78,7 +73,6 @@ T19	Procedure 53 56	THA
 T33	Procedure 60 63	TKA
 T34	Procedure-Name 60 63	TKA
 T35	Procedure-Name 53 56	THA
-T36	Or 57 59	or
 T37	Modifier 42 52	unilateral
 T26	Condition 182 184	OA
 T38	Condition-Name 182 184	OA
@@ -89,10 +83,8 @@ T27	Procedure 240 243	TKA
 T41	Procedure-Name 240 243	TKA
 T42	Eq-Comparison 204 211	planned
 T43	Eq-Temporal-Period 204 211	planned
-T44	Or 237 239	or
 T45	Condition 286 293	Healthy
 T46	Condition-Name 286 293	Healthy
-T49	Or 496 498	or
 T50	Condition 535 537	OA
 T51	Condition-Name 535 537	OA
 T52	Modifier 523 526	hip
@@ -101,11 +93,10 @@ T54	Condition 539 546	Healthy
 T55	Condition-Name 539 546	Healthy
 T56	Condition 620 627	Healthy
 T57	Condition-Name 620 627	Healthy
-T58	Condition 575 579	pain
-T59	Condition-Name 575 579	pain
+T58	Observation 575 579	pain
+T59	Observation-Name 575 579	pain
 T60	Modifier 587 604	lower extremities
 T61	Modifier 608 618	lower back
-T62	Or 605 607	or
 T63	Eq-Comparison 567 574	Current
 T64	Eq-Temporal-Period 567 574	Current
 T65	Condition 670 677	Healthy
@@ -127,7 +118,6 @@ T80	Eq-Comparison 76 84	received
 T81	Eq-Temporal-Period 76 84	received
 T82	Modifier 192 196	knee
 T83	Modifier 200 203	hip
-T84	Or 197 199	or
 T85	Procedure 218 227	treatment
 T86	Eq-Unit 357 359	m2
 T87	Condition 424 428	gait
@@ -135,7 +125,7 @@ T88	Condition-Name 424 428	gait
 T89	Stability 414 423	affecting
 T12	Negation 434 443	Inability
 T47	Assertion 434 443	Inability
-A1	Observation-Type-Value T8 measurement
+A1	Observation-Type-Value E7 measurement
 A2	Eq-Operator-Value T21 GTEQ
 A3	Eq-Operator-Value T22 GT
 A4	Eq-Temporal-Unit-Value T23 year
@@ -158,3 +148,8 @@ R10	Using Arg1:E47 Arg2:E16
 R11	Caused-By Arg1:T89 Arg2:E1
 R5	Caused-By Arg1:E24 Arg2:E3
 R6	Caused-By Arg1:E24 Arg2:E15
+R12	Or Arg1:E2 Arg2:E4
+R13	Or Arg1:E14 Arg2:E16
+R14	Or Arg1:E3 Arg2:E15
+R15	Or Arg1:E32 Arg2:E33
+R16	Or Arg1:E44 Arg2:E45

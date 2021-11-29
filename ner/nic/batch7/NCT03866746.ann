@@ -1,11 +1,11 @@
 E1	Eq-Comparison:T1 Operator:T34 Value:T35 Temporal-Unit:T36
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E3	Condition:T3 Name:T37
 E4	Observation:T4 Name:T38
-E5	Observation:T5 Name:T39 Eq-Comparison:E6
+E5	Observation:T5 Name:T39 Numeric-Filter:E6
 E6	Eq-Comparison:T6 Operator:T40 Value:T41 Unit:T42
 E7	Procedure:T7 Name:T43
-E9	Observation:T9 Name:T75 Eq-Comparison:E10
+E9	Observation:T9 Name:T75 Numeric-Filter:E10
 E10	Eq-Comparison:T10 Operator:T46 Value:T47 Value2:T11
 E13	Modifier:T13 Modifies:T49
 E14	Procedure:T14 Name:T49
@@ -26,7 +26,6 @@ E30	Condition:T30 Name:T72 Severity:T71
 E31	Other:T31 Is-Other:E32
 E32	Condition:T32 Name:T73
 E33	Condition:T33
-E8	And:T8 Arg:E3 Arg2:E4
 E34	Observation:T44 Name:T45
 E11	Modifier:T12 Modifies:T68
 E12	Procedure:T26 Name:T29 Stability:T74
@@ -96,7 +95,6 @@ T71	Severity 554 560	severe
 T72	Condition-Name 561 569	glaucoma
 T73	Condition-Name 581 606	retinal vascular diseases
 T74	Stability 628 634	impede
-T8	And 73 77	with
 T44	Observation 148 176	best corrected visual acuity
 T45	Observation-Name 148 176	best corrected visual acuity
 T75	Observation-Name 178 182	BCVA
@@ -107,7 +105,7 @@ T29	Procedure-Name 639 642	OCT
 T48	Modifier 643 657	interpretation
 A1	Eq-Operator-Value T34 GT
 A2	Eq-Temporal-Unit-Value T36 year
-A3	Observation-Type-Value T38 measurement
+A3	Observation-Type-Value E4 measurement
 A4	Eq-Operator-Value T40 GT
 A5	Eq-Operator-Value T46 BETWEEN
 A6	Eq-Operator-Value T51 LTEQ
@@ -122,7 +120,7 @@ A14	Eq-Temporal-Unit-Value T65 month
 A15	Eq-Temporal-Period-Value T66 past
 A16	Severity-Value T71 severe
 A17	Stability-Value T74 change
-A18	Observation-Type-Value T45 measurement
+A18	Observation-Type-Value E34 measurement
 R1	Abbrev-Of Arg1:E5 Arg2:E4
 R2	Found-By Arg1:E5 Arg2:E7
 R3	Abbrev-Of Arg1:E9 Arg2:E34
@@ -132,3 +130,4 @@ R6	Using Arg1:E18 Arg2:E19
 R7	Abbrev-Of Arg1:E22 Arg2:E21
 R8	Abbrev-Of Arg1:E28 Arg2:E27
 R9	Caused-By Arg1:T74 Arg2:E33
+R10	And Arg1:E3 Arg2:E4

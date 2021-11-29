@@ -8,7 +8,7 @@ E15	Condition:T15 Name:T16
 E17	Condition:T17 Name:T18
 E19	Condition:T19 Name:T20
 E21	Condition:T21 Name:T22 Stage:E46 Temporality:E28
-E22	Age:T29 Eq-Comparison:E1
+E22	Age:T29 Numeric-Filter:E1
 E23	Eq-Comparison:T47 Operator:T25 Temporal-Unit:T27 Value:T46
 E24	Eq-Comparison:T48 Operator:T30 Value:T39 Value2:T40 Temporal-Unit:T74
 E25	Eq-Comparison:T49 Operator:T31 Value:T42 Temporal-Unit:T78 Value2:T43
@@ -20,16 +20,15 @@ E2	Family-Member:T58
 E4	Observation:T2 Name:T59 Polarity:T60
 E6	Observation:T28 Name:T61
 E8	Eq-Comparison:T62 Value:T34 Operator:T63
-E10	Observation:T64 Name:T65 Temporality:E12 Eq-Comparison:E14 Eq-Comparison2:E20 Eq-Comparison3:E30 Minimum-Count:E33
+E10	Observation:T64 Name:T65 Temporality:E12 Numeric-Filter:E14 Numeric-Filter:E20 Numeric-Filter:E30 Minimum-Count:E33
 E12	Eq-Comparison:T23 Temporal-Period:T66 Temporal-Unit:T67
 E14	Eq-Comparison:T68 Operator:T69 Value:T35
 E16	Eq-Comparison:T70 Value:T36 Value2:T37 Temporal-Unit:T71
-E18	Age:T72 Eq-Comparison:E16
+E18	Age:T72 Numeric-Filter:E16
 E20	Eq-Comparison:T73 Value:T38
-E29	Age:T75 Eq-Comparison:E24
+E29	Age:T75 Numeric-Filter:E24
 E30	Eq-Comparison:T76 Operator:T77 Value:T41
-E31	Age:T79 Eq-Comparison:E25
-E32	Or:T80 Arg:E29 Arg2:E31
+E31	Age:T79 Numeric-Filter:E25
 E33	Eq-Comparison:T81 Operator:T82 Value:T44 Per:T83
 E34	Eq-Comparison:T45 Operator:T89 Value:T90 Unit:T91 Per:T92
 E35	Eq-Comparison:T84 Operator:T85 Value:T86
@@ -37,12 +36,10 @@ E36	Family-Member:T87 Has:E35
 E37	Modifier:T93 Modifies:E9
 E38	Eq-Comparison:T94 Temporal-Recency:T95
 E39	Modifier:T96 Modifies:T14
-E40	Or:T97 Arg:E15 Arg2:E13
 E41	Modifier:T99 Modifies:T4
 E42	Eq-Comparison:T24 Temporal-Period:T100 Temporal-Unit:T26 Value:T101
 E43	Condition:T102 Name:T103
 E44	Risk:T104 Risk-For:E43
-E45	Or:T105 Arg:E11 Arg2:E17
 E46	Eq-Comparison:T106 Unit:T107 Value:T108
 E47	Other:T109 Is-Other:E21
 E49	Study:T112
@@ -50,7 +47,6 @@ E50	Condition:T113 Name:T114
 E51	Risk:T116 Risk-For:E50 Severity:T115
 E52	Condition:T117 Name:T118
 E53	Procedure:T119
-E54	Or:T120 Arg:E50 Arg2:E52
 E48	Coreference:T110 Refers-To:E21 Stability:T121
 E56	Drug:T122 Stability:T125
 E57	Negation:T123 Negates:E56
@@ -132,7 +128,6 @@ T76	Eq-Comparison 368 384	later than 11:20
 T77	Eq-Operator 368 378	later than
 T78	Eq-Temporal-Unit 395 399	year
 T79	Age 400 404	olds
-T80	Or 364 367	and
 T81	Eq-Comparison 405 431	at least 3 nights per week
 T82	Eq-Operator 405 413	at least
 T83	Eq-Temporal-Unit 427 431	week
@@ -150,7 +145,6 @@ T93	Modifier 703 714	progressive
 T94	Eq-Comparison 756 761	onset
 T95	Eq-Temporal-Recency 756 761	onset
 T96	Modifier 846 854	periodic
-T97	Or 843 845	or
 T98	Severity 876 889	significantly
 T99	Modifier 900 909	pervasive
 T24	Eq-Comparison 978 993	past six months
@@ -159,7 +153,6 @@ T101	Eq-Value 983 986	six
 T102	Condition 1000 1007	suicide
 T103	Condition-Name 1000 1007	suicide
 T104	Risk 1008 1012	risk
-T105	Or 1031 1033	or
 T106	Eq-Comparison 1067 1073	Axis I
 T107	Eq-Unit 1067 1071	Axis
 T108	Eq-Value 1072 1073	I
@@ -172,7 +165,6 @@ T116	Risk 1109 1113	risk
 T117	Condition 1129 1143	decompensation
 T118	Condition-Name 1129 1143	decompensation
 T119	Procedure 1147 1156	treatment
-T120	Or 1122 1128	and/or
 T121	Stability 1187 1194	delayed
 T110	Coreference 1160 1183	that comorbid condition
 T122	Drug 1296 1307	medications
@@ -189,10 +181,10 @@ A10	Eq-Temporal-Period-Value T53 past
 A11	Eq-Temporal-Period-Value T55 present
 A12	Eq-Operator-Value T57 BETWEEN
 A13	Family-Member-Type E2 parent
-A1	Observation-Type-Value T59 survey-or-questionnaire
+A1	Observation-Type-Value E4 survey-or-questionnaire
 A14	Polarity-Value T60 low
 A15	Eq-Operator-Value T63 LTEQ
-A16	Observation-Type-Value T65 measurement
+A16	Observation-Type-Value E10 measurement
 A2	Eq-Temporal-Period-Value T66 past
 A17	Eq-Temporal-Unit-Value T67 month
 A18	Eq-Operator-Value T69 GT
@@ -224,3 +216,8 @@ R8	If-Then Arg1:E53 Arg2:E52
 R9	Treatment-For Arg1:E53 Arg2:E48
 R10	Caused-By Arg1:T121 Arg2:E49
 R11	Equivalent-To Arg1:E23 Arg2:T125
+R12	Or Arg1:E29 Arg2:E31
+R13	Or Arg1:E15 Arg2:E13
+R14	Or Arg1:E11 Arg2:E17
+R15	Or Arg1:E50 Arg2:E52
+R16	Or Arg1:E19 Arg2:E15

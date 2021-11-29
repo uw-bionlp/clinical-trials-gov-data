@@ -1,12 +1,10 @@
 E1	Condition:T1 Name:T40
-E2	And:T2 Arg:E1 Arg2:E4
 E3	Eq-Comparison:T3 Temporal-Period:T41
 E4	Drug:T4 Name:T42 Temporality:E3 Duration:E6
 E6	Eq-Comparison:T6 Operator:T43 Value:T44 Temporal-Unit:T45
 E7	Condition:T7 Name:T46
 E8	Condition:T8 Name:T47
-E9	Encounter:T9
-E10	Or:T10 Arg:E9 Arg2:E40
+E9	
 E11	Condition:T11 Name:T49 Severity:T48
 E12	Eq-Comparison:T12 Value:T51 Value:T52
 E13	Condition:T13 Name:T53 Temporality:E14
@@ -17,7 +15,6 @@ E17	Condition:T17 Name:T60 Temporality:E18
 E18	Eq-Comparison:T18 Operator:T61 Value:T62 Temporal-Unit:T63
 E19	Condition:T19 Name:T65 Severity:T64
 E20	Condition:T20 Name:T66
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Condition:T22 Name:T67
 E23	Condition:T23 Name:T68
 E24	Condition:T24 Name:T69
@@ -28,17 +25,16 @@ E28	Other:T28 Is-Other:E29
 E29	Study:T29 Study-Of:E30
 E30	Drug:T30 Temporality:E45 Temporality2:E31
 E31	Eq-Comparison:T31 Operator:T72 Temporal-Period:T73 Temporal-Unit:T74
-E32	Condition:T32 Name:T75
+E32	Condition:T32
 E33	Assertion:T33 Asserted:T76
 E34	Study:T34 Stability:T76
 E35	Eq-Comparison:T35 Temporal-Period:T77
 E36	Modifier:T36 Modifies:T78
-E37	Or:T37 Arg:E36 Arg2:E47
 E38	Condition:T38 Name:T78 Temporality:E35 Temporality2:E39
 E39	Eq-Comparison:T39 Operator:T79 Value:T80 Temporal-Unit:T81
 E5	Modifier:T5 Modifies:T46
-E40	Encounter:T83 Type:T84
-E41	Observation:T85 Name:T50 Eq-Comparison:E12
+E40	Encounter:T83
+E41	Observation:T85 Name:T50 Numeric-Filter:E12
 E42	Observation:T86 Name:T87
 E43	Observation:T88 Name:T89
 E44	Other:T90 Is-Other:E27
@@ -46,14 +42,12 @@ E45	Eq-Comparison:T91 Temporal-Period:T92
 E46	Assertion:T93 Asserted:E32
 E47	Modifier:T94 Modifies:T78
 T1	Condition 39 51	hypertension
-T2	And 52 55	and
 T3	Eq-Comparison 56 62	taking
 T4	Drug 63 85	antihypertensive drugs
 T6	Eq-Comparison 86 102	more than 1 year
 T7	Condition 138 150	hypertension
 T8	Condition 156 168	Hypertensive
 T9	Encounter 169 178	emergency
-T10	Or 179 182	and
 T11	Condition 203 216	heart failure
 T12	Eq-Comparison 223 233	III and IV
 T13	Condition 240 246	Angina
@@ -64,7 +58,6 @@ T17	Condition 309 334	Peripheral artery disease
 T18	Eq-Comparison 335 350	within 6 months
 T19	Condition 368 378	arrhythmia
 T20	Condition 385 408	ventricular tachycardia
-T21	Or 409 412	and
 T22	Condition 413 425	fibrillation
 T23	Condition 427 446	atrial fibrillation
 T24	Condition 448 462	atrial flutter
@@ -80,7 +73,6 @@ T33	Assertion 745 748	may
 T34	Study 786 791	study
 T35	Eq-Comparison 797 804	History
 T36	Modifier 808 812	drug
-T37	Or 813 815	or
 T38	Condition 824 834	dependence
 T39	Eq-Comparison 835 850	within 6 months
 T40	Condition-Name 39 51	hypertension
@@ -128,7 +120,6 @@ T81	Eq-Temporal-Unit 844 850	months
 T5	Modifier 128 137	Secondary
 T82	Encounter-Type 169 178	emergency
 T83	Encounter 183 190	urgency
-T84	Encounter-Type 183 190	urgency
 T85	Observation 218 222	NYHA
 T86	Observation 484 495	Night labor
 T87	Observation-Name 484 495	Night labor
@@ -159,10 +150,10 @@ A17	Eq-Temporal-Period-Value T77 past
 A18	Eq-Operator-Value T79 LTEQ
 A19	Eq-Temporal-Unit-Value T81 month
 A20	Encounter-Type-Value T82 emergency
-A21	Encounter-Type-Value T84 emergency
+A21	Encounter-Type-Value E40 emergency
 A22	Eq-Temporal-Period-Value T92 past
 A23	Assertion-Type-Value E46 possible
-A24	Observation-Type-Value T50 clinical-score
+A24	Observation-Type-Value E41 clinical-score
 R1	Treatment-For Arg1:E9 Arg2:E8
 R2	Treatment-For Arg1:E40 Arg2:E8
 R3	Equivalent-To Arg1:E41 Arg2:E11
@@ -171,3 +162,10 @@ R5	Example-Of Arg1:E22 Arg2:E19
 R6	Example-Of Arg1:E23 Arg2:E19
 R7	Example-Of Arg1:E24 Arg2:E19
 R8	Caused-By Arg1:T76 Arg2:E32
+R9	And Arg1:E1 Arg2:E4
+R10	Or Arg1:E9 Arg2:E40
+R11	Or Arg1:E20 Arg2:E22
+R12	Or Arg1:E36 Arg2:E47
+R13	Or Arg1:E22 Arg2:E23
+R14	Or Arg1:E23 Arg2:E24
+R15	Or Arg1:E42 Arg2:E43

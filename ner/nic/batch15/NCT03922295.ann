@@ -1,28 +1,22 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Procedure:T5 Name:T6
-E7	Condition:T7 Name:T8 Acuteness:T40
+E7	Condition:T7 Acuteness:T40
 E2	Condition:T11 Name:T12
 E4	Modifier:T13 Modifies:T12
 E6	Modifier:T14 Modifies:T12
-E8	Or:T15 Arg:E6 Arg2:E4
-E9	And:T16 Arg:E1 Arg2:E2
-E10	And:T17 Arg:E2 Arg2:E3
 E11	Condition:T18 Name:T19 Duration:E12
 E12	Eq-Comparison:T20 Operator:T21 Value:T10 Temporal-Unit:T9
 E13	Condition:T22 Name:T23
 E14	Procedure:T24 Name:T25 Temporality:E15
 E15	Eq-Comparison:T26 Temporal-Period:T27
-E16	Temporal-Connection:T28 Arg:E13 Arg2:E14
 E17	Modifier:T29 Modifies:T6
 E18	Modifier:T30 Modifies:T6
-E19	Or:T31 Arg:E17 Arg2:E18
 E20	Condition:T32 Name:T33
 E21	Condition:T34 Name:T35
 E22	Modifier:T36 Modifies:T35
-E23	Modifier:T37 Modifies:T8
-E24	Modifier:T38 Modifies:T8
-E25	Or:T39 Arg:E24 Arg2:E23
+E23	Modifier:T37 Modifies:E7
+E24	Modifier:T38 Modifies:E7
 T1	Condition 39 71	chronic suppurative otitis media
 T2	Condition-Name 39 71	chronic suppurative otitis media
 T3	Condition 130 154	limited anterior remnant
@@ -37,9 +31,6 @@ T11	Condition 95 124	tympanic membrane perforation
 T12	Condition-Name 95 124	tympanic membrane perforation
 T13	Modifier 86 94	subtotal
 T14	Modifier 77 82	total
-T15	Or 83 85	or
-T16	And 72 76	with
-T17	And 125 129	with
 T18	Condition 161 176	dry perforation
 T19	Condition-Name 161 176	dry perforation
 T20	Eq-Comparison 181 198	at least 3 months
@@ -50,10 +41,8 @@ T24	Procedure 262 275	myringoplasty
 T25	Procedure-Name 262 275	myringoplasty
 T26	Eq-Comparison 253 261	previous
 T27	Eq-Temporal-Period 253 261	previous
-T28	Temporal-Connection 247 252	after
 T29	Modifier 292 302	disruption
 T30	Modifier 306 314	fixation
-T31	Or 303 305	or
 T32	Condition 321 339	immune-compromised
 T33	Condition-Name 321 339	immune-compromised
 T34	Condition 372 381	diabetics
@@ -61,12 +50,16 @@ T35	Condition-Name 372 381	diabetics
 T36	Modifier 359 371	uncontrolled
 T37	Modifier 401 407	kidney
 T38	Modifier 391 396	liver
-T39	Or 397 400	and
 T40	Acuteness 383 390	chronic
 A1	Eq-Temporal-Unit-Value T9 month
 A2	Eq-Operator-Value T21 GTEQ
 A3	Eq-Temporal-Period-Value T27 past
-A4	Temporal-Connection-Type-Value E16 during
 A5	Acuteness-Type-Value T40 chronic
 R1	Example-Of Arg1:E21 Arg2:E20
 R2	Example-Of Arg1:E7 Arg2:E20
+R3	Or Arg1:E6 Arg2:E4
+R4	And Arg1:E1 Arg2:E2
+R5	And Arg1:E2 Arg2:E3
+R6	During Arg1:E13 Arg2:E14
+R7	Or Arg1:E17 Arg2:E18
+R8	Or Arg1:E24 Arg2:E23

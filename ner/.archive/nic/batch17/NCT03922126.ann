@@ -1,0 +1,101 @@
+E4	Observation:T4 Name:T5 Temporality:E10
+E7	Observation:T7 Name:T8 Temporality:E13
+E8	Age:T14 Eq-Comparison:E3
+E9	Eq-Comparison:T19 Operator:T10 Temporal-Unit:T13 Value:T18
+E10	Eq-Comparison:T20 Temporal-Period:T21 Value:T16 Temporal-Unit:T11
+E1	Birth:T22 
+E2	Temporal-Connection:T23 Arg:T2 Arg2:E1
+E3	Eq-Comparison:T24 Value:T15 Operator:T25
+E5	Birth:T27 Location:T26
+E6	Negation:T28 Negates:E5
+E11	Observation:T30 Name:T29
+E12	Or:T34 Arg:T32 Arg2:T33
+E13	Eq-Comparison:T9 Temporal-Period:T35 Value:T17 Temporal-Unit:T12
+E14	Negation:T36 Negates:E7
+E15	Condition:T37 Name:T38 Polarity:T39
+E16	Age:T40 Eq-Comparison:E9
+E17	Birth:T42 Location:T41
+E18	Or:T45 Arg:T43 Arg2:T44
+E19	Negation:T46 Negates:T43
+E20	Condition:T47 Name:T48
+E21	Condition:T49 Name:T50 Polarity:T51
+E22	Or:T52 Arg:E24 Arg2:E21
+E23	Assertion:T53 Asserted:E20
+E24	Negation:T54 Negates:E23
+E25	Birth:T6 
+E26	Temporal-Connection:T55 Arg:T1 Arg2:E25
+T1	Life-Stage-And-Gender 382 388	Female
+T2	Life-Stage-And-Gender 25 29	male
+T3	Life-Stage-And-Gender 50 55	adult
+T4	Observation 186 198	sex with men
+T5	Observation-Name 186 198	sex with men
+T7	Observation 425 437	sex with men
+T8	Observation-Name 425 437	sex with men
+T10	Eq-Operator 497 509	Younger than
+T11	Eq-Temporal-Unit 210 216	months
+T12	Eq-Temporal-Unit 453 459	months
+T13	Eq-Temporal-Unit 513 518	years
+T14	Age 56 60	aged
+T15	Eq-Value 61 63	18
+T16	Eq-Value 207 209	12
+T17	Eq-Value 450 452	12
+T18	Eq-Value 510 512	18
+T19	Eq-Comparison 497 518	Younger than 18 years
+T20	Eq-Comparison 202 216	past 12 months
+T21	Eq-Temporal-Period 202 206	past
+T22	Birth 38 43	birth
+T23	Temporal-Connection 35 37	at
+T24	Eq-Comparison 61 73	18 and older
+T25	Eq-Operator 64 73	and older
+T26	Location 102 118	continental U.S.
+T27	Birth 94 98	born
+T28	Negation 90 93	not
+T29	Observation-Name 79 88	immigrant
+T30	Observation 79 88	immigrant
+T31	Ethnicity 125 131	Latino
+T32	Ethnicity 154 160	Latinx
+T33	Ethnicity 164 172	Hispanic
+T34	Or 161 163	or
+T9	Eq-Comparison 445 459	last 12 months
+T35	Eq-Temporal-Period 445 449	last
+T36	Negation 414 417	not
+T37	Condition 479 482	HIV
+T38	Condition-Name 479 482	HIV
+T39	Polarity 483 491	positive
+T40	Age 519 522	old
+T41	Location 360 376	continental U.S.
+T42	Birth 348 352	Born
+T43	Ethnicity 327 333	Latino
+T44	Ethnicity 334 342	Hispanic
+T45	Or 333 334	/
+T46	Negation 311 314	not
+T47	Condition 248 251	HIV
+T48	Condition-Name 248 251	HIV
+T49	Condition 268 271	HIV
+T50	Condition-Name 268 271	HIV
+T51	Polarity 272 280	negative
+T52	Or 259 261	or
+T53	Assertion 234 241	knowing
+T54	Negation 230 233	not
+T6	Birth 397 402	birth
+T55	Temporal-Connection 394 396	at
+A1	Life-Stage-And-Gender-Type T1 female
+A2	Life-Stage-And-Gender-Type T2 male
+A3	Life-Stage-And-Gender-Type T3 adult
+A4	Eq-Operator-Value T10 LT
+A5	Eq-Temporal-Unit-Value T11 month
+A6	Eq-Temporal-Unit-Value T12 month
+A7	Eq-Temporal-Unit-Value T13 year
+A8	Eq-Temporal-Period-Value T21 past
+A9	Temporal-Connection-Type-Value E2 during
+A10	Eq-Operator-Value T25 GTEQ
+A11	Location-Value T26 residence
+A13	Eq-Temporal-Period-Value T35 past
+A14	Polarity-Value T39 positive
+A15	Location-Value T41 residence
+A16	Polarity-Value T51 negative
+A17	Assertion-Type-Value E23 hypothetical
+A12	Temporal-Connection-Type-Value E26 during
+R1	Equivalent-To Arg1:E6 Arg2:E11
+R2	Equivalent-To Arg1:T32 Arg2:T31
+R3	Equivalent-To Arg1:T33 Arg2:T31

@@ -12,30 +12,26 @@ E24	Eq-Comparison:T41 Operator:T25 Unit:T29 Value:T35
 E25	Eq-Comparison:T42 Operator:T26 Value:T36 Unit:T67 Per:T68
 E26	Eq-Comparison:T43 Operator:T27 Unit:T30 Value:T37
 E2	Eq-Comparison:T44 Temporal-Unit:T28 Operator:T45 Value:T31
-E4	Age:T46 Eq-Comparison:E2
+E4	Age:T46 Numeric-Filter:E2
 E6	Eq-Comparison:T48 Temporal-Period:T47
 E8	Procedure:T49 Name:T50
-E10	Observation:T51 Name:T52 Eq-Comparison:E21
+E10	Observation:T51 Name:T52 Numeric-Filter:E21
 E12	Observation:T54 Name:T55
-E14	Observation:T57 Name:T58 Eq-Comparison:E22
+E14	Observation:T57 Name:T58 Numeric-Filter:E22
 E15	Observation:T59 Name:T60
-E17	Observation:T61 Name:T62 Eq-Comparison:E23
+E17	Observation:T61 Name:T62 Numeric-Filter:E23
 E19	Condition:T64 Name:T65
-E27	And:T66 Arg:E17 Arg2:E19
 E20	Condition:T20 Name:T21
 E28	Observation:T69 Name:T70
-E29	Observation:T71 Name:T72 Eq-Comparison:E26
+E29	Observation:T71 Name:T72 Numeric-Filter:E26
 E18	Condition:T18 Name:T19
 E30	Condition:T73 Name:T74
 E31	Procedure:T75
-E32	Temporal-Connection:T76 Arg:E31 Arg2:E30
 E33	Procedure:T77 Name:T78
 E34	Condition:T79 Name:T80
 E35	Condition:T81 Name:T82
-E36	Or:T83 Arg:E34 Arg2:E35
 E37	Condition:T85 Name:T86
 E38	Condition:T87 Name:T88
-E39	Or:T89 Arg:E37 Arg2:E38
 E40	Condition:T90 Name:T91
 E41	Assertion:T92 Asserted:E40
 E42	Procedure:T93 Name:T94
@@ -46,9 +42,7 @@ E46	Assertion:T99 Asserted:E47
 E47	Negation:T100 Negates:E45
 E48	Condition:T101 Name:T102
 E49	Condition:T103 Name:T104
-E50	And:T105 Arg:E40 Arg2:E43
 E51	Assertion:T106 Asserted:E1
-E52	And:T107 Arg:E13 Arg2:E51
 E53	Observation:T108 Name:T109
 E7	Negation:T7 Negates:T15
 T1	Procedure 98 129	invasive hemodynamic monitoring
@@ -110,7 +104,6 @@ T62	Observation-Name 345 349	LVEF
 T63	Eq-Unit 354 355	%
 T64	Condition 360 380	mitral insufficiency
 T65	Condition-Name 360 380	mitral insufficiency
-T66	And 356 359	for
 T20	Condition 422 425	PAH
 T21	Condition-Name 422 425	PAH
 T67	Eq-Unit 475 476	m
@@ -124,20 +117,17 @@ T19	Condition-Name 559 622	Dilatation of the inferior vena cava under respirator
 T73	Condition 628 640	Sinus rhythm
 T74	Condition-Name 628 640	Sinus rhythm
 T75	Procedure 658 667	operative
-T76	Temporal-Connection 654 658	post
 T77	Procedure 681 688	Sedated
 T78	Procedure-Name 681 688	Sedated
 T79	Condition 872 880	Pregnant
 T80	Condition-Name 872 880	Pregnant
 T81	Condition 884 893	lactating
 T82	Condition-Name 884 893	lactating
-T83	Or 881 883	or
 T84	Life-Stage-And-Gender 894 899	women
 T85	Condition 978 1005	Discomfort to communication
 T86	Condition-Name 978 1005	Discomfort to communication
 T87	Condition 1009 1031	neuropsychic disorders
 T88	Condition-Name 1009 1031	neuropsychic disorders
-T89	Or 1006 1008	or
 T90	Condition 1123 1138	fluids overload
 T91	Condition-Name 1123 1138	fluids overload
 T92	Assertion 1139 1144	seems
@@ -153,9 +143,7 @@ T101	Condition 1345 1368	spontaneous ventilation
 T102	Condition-Name 1345 1368	spontaneous ventilation
 T103	Condition 1391 1402	non-sedated
 T104	Condition-Name 1391 1402	non-sedated
-T105	And 1172 1175	and
 T106	Assertion 89 97	need for
-T107	And 80 84	with
 T108	Observation 914 932	under guardianship
 T109	Observation-Name 914 932	under guardianship
 T7	Negation 1032 1041	Inability
@@ -168,14 +156,13 @@ A6	Eq-Operator-Value T27 LT
 A7	Eq-Temporal-Unit-Value T28 year
 A8	Eq-Operator-Value T45 GT
 A9	Eq-Temporal-Period-Value T47 future
-A10	Observation-Type-Value T55 measurement
-A11	Observation-Type-Value T58 measurement
-A12	Observation-Type-Value T60 measurement
-A13	Observation-Type-Value T62 measurement
+A10	Observation-Type-Value E12 measurement
+A11	Observation-Type-Value E14 measurement
+A12	Observation-Type-Value E15 measurement
+A13	Observation-Type-Value E17 measurement
 A14	Eq-Temporal-Unit-Value T68 second
-A15	Observation-Type-Value T70 measurement
-A16	Observation-Type-Value T72 measurement
-A17	Temporal-Connection-Type-Value E32 after
+A15	Observation-Type-Value E28 measurement
+A16	Observation-Type-Value E29 measurement
 A18	Life-Stage-And-Gender-Type T84 female
 A19	Assertion-Type-Value E41 hypothetical
 A20	Assertion-Type-Value E44 hypothetical
@@ -189,3 +176,11 @@ R6	Abbrev-Of Arg1:E29 Arg2:E28
 R7	Using Arg1:E33 Arg2:E9
 R8	If-Then Arg1:T84 Arg2:E35
 R9	Abbrev-Of Arg1:E45 Arg2:E16
+R1	And Arg1:E17 Arg2:E19
+R10	After Arg1:E31 Arg2:E30
+R11	Or Arg1:E34 Arg2:E35
+R12	Or Arg1:E37 Arg2:E38
+R13	And Arg1:E40 Arg2:E43
+R14	And Arg1:E13 Arg2:E51
+R15	Or Arg1:E11 Arg2:E49
+R16	Or Arg1:E48 Arg2:E11

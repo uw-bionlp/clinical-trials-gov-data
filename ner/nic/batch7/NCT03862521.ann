@@ -5,10 +5,8 @@ E5	Eq-Comparison:T5 Operator:T36 Value:T37 Temporal-Unit:T38
 E7	Eq-Comparison:T7 Temporal-Period:T39
 E8	Procedure:T8 Name:T40 Temporality:E7
 E9	Negation:T9 Negates:E6
-E11	Or:T11 Arg:T68 Arg2:T70
 E13	Eq-Comparison:T13 Temporal-Period:T45
 E14	Modifier:T14 Modifies:T46
-E15	Or:T15 Arg:E14 Arg2:E16
 E16	Modifier:T16 Modifies:T46
 E17	Condition:T17 Name:T46 Temporality:E13
 E18	Assertion:T18 Asserted:T47
@@ -20,9 +18,9 @@ E25	Eq-Comparison:T25 Temporal-Period:T55
 E26	Condition:T26 Name:T56 Temporality:E25
 E27	Condition:T27 Name:T59 Severity:T58 Temporality:E28
 E28	Eq-Comparison:T28 Temporal-Period:T60 Value:T61 Temporal-Unit:T62
-E29	Age:T64 Eq-Comparison:E2
+E29	Age:T64 Numeric-Filter:E2
 E3	Modifier:T3 Modifies:T35
-E6	Observation:T6 Name:T10 Eq-Comparison:E30 Polarity:T69
+E6	Observation:T6 Name:T10 Numeric-Filter:E30 Polarity:T69
 E10	Modifier:T41 Modifies:T10
 E30	Eq-Comparison:T42 Temporal-Period:T65
 E31	Eq-Comparison:T66 Temporal-Period:T43
@@ -37,10 +35,8 @@ T5	Eq-Comparison 118 135	at least 6 months
 T7	Eq-Comparison 158 163	using
 T8	Procedure 164 184	insulin pump therapy
 T9	Negation 190 193	Not
-T11	Or 260 262	or
 T13	Eq-Comparison 295 302	History
 T14	Modifier 306 315	endocrine
-T15	Or 316 318	or
 T16	Modifier 319 328	metabolic
 T17	Condition 329 337	disorder
 T18	Assertion 343 348	could
@@ -122,9 +118,9 @@ A19	Eq-Temporal-Period-Value T55 past
 A20	Severity-Value T58 severe
 A21	Eq-Temporal-Period-Value T60 past
 A22	Eq-Temporal-Unit-Value T62 month
-A1	Observation-Type-Value T10 social-habit
+A1	Observation-Type-Value E6 social-habit
 A2	Eq-Temporal-Period-Value T65 present
-A11	Observation-Type-Value T44 social-habit
+A11	Observation-Type-Value E12 social-habit
 A23	Polarity-Value T69 low
 A24	Polarity-Value T68 low
 A25	Polarity-Value T70 low
@@ -134,3 +130,5 @@ R1	Caused-By Arg1:T47 Arg2:E17
 R2	Equivalent-To Arg1:E23 Arg2:E24
 R3	If-Then Arg1:E23 Arg2:E21
 R4	Caused-By Arg1:T73 Arg2:E26
+R5	Or Arg1:T68 Arg2:T70
+R6	Or Arg1:E14 Arg2:E16

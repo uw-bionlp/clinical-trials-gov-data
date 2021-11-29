@@ -1,40 +1,33 @@
-E1	Or:T1 Arg:T80 Arg2:T3
-E2	Or:T2 Arg:T3 Arg2:T81
-E4	Observation:T4 Name:T38 Eq-Comparison:E5
+E4	Observation:T4 Name:T38 Numeric-Filter:E5
 E5	Eq-Comparison:T5 Operator:T39 Value:T40 Unit:T41 Per:T42
 E6	Condition:T6 Severity:T44
 E7	Modifier:T7 Modifies:T45
 E8	Condition:T8 Name:T45
-E9	Observation:T9 Name:T46 Eq-Comparison:E11
+E9	Observation:T9 Name:T46 Numeric-Filter:E11
 E11	Eq-Comparison:T11 Value:T48 Unit:T49 Per:T50 Operator:T47
-E12	Observation:T12 Name:T51 Eq-Comparison:E13
+E12	Observation:T12 Name:T51 Numeric-Filter:E13
 E13	Eq-Comparison:T13 Operator:T52 Value:T53 Unit2:T82 Per:T54
 E14	Observation:T14 Name:T55
-E16	Observation:T16 Name:T56 Eq-Comparison:E18
+E16	Observation:T16 Name:T56 Numeric-Filter:E18
 E18	Eq-Comparison:T18 Unit:T58 Per:T17 Value:T15 Operator:T57
 E19	Eq-Comparison:T19 Operator:T60 Value:T61 Unit:T62
 E20	Eq-Comparison:T20 Temporal-Period:T63
 E21	Drug:T21 Temporality:E20
 E22	Drug:T22 Name:T65 Duration:E25
-E23	Or:T23 Arg:E22 Arg2:E24
 E24	Drug:T24 Name:T66 Duration:E25
 E25	Eq-Comparison:T25 Operator:T67 Value:T68 Temporal-Unit:T69
 E26	Eq-Comparison:T26 Temporal-Period:T70
 E27	Condition:T27 Name:T71 Temporality:E26
 E28	Condition:T28 Name:T72 Temporality:E26
-E29	Or:T29 Arg:E28 Arg2:E30
 E30	Condition:T30 Name:T73 Temporality:E26
 E31	Eq-Comparison:T31 Temporal-Period:T74
 E32	Procedure:T32 Name:T75 Temporality:E31
-E33	Or:T33 Arg:E32 Arg2:E34
 E34	Procedure:T34 Name:T76 Temporality:E31
 E35	Assertion:T35 Asserted:T77
 E36	Condition:T36 Name:T64 Polarity:T78 Stability:T77
 E37	Procedure:T37 Name:T79
 E3	Modifier:T10 Modifies:T51
 E10	Exception:T59 From:E21 Except2:E24
-T1	Or 40 42	or
-T2	Or 57 58	/
 T4	Observation 83 86	BMI
 T5	Eq-Comparison 87 96	>18 kg/m2
 T6	Condition 206 223	medical condition
@@ -51,17 +44,14 @@ T19	Eq-Comparison 394 399	>6.4%
 T20	Eq-Comparison 406 409	Use
 T21	Drug 421 431	medication
 T22	Drug 434 457	oral contraceptive pill
-T23	Or 458 460	or
 T24	Drug 461 488	antihypertensive medication
 T25	Eq-Comparison 524 533	>6 months
 T26	Eq-Comparison 540 547	History
 T27	Condition 551 575	Irritable Bowel Syndrome
 T28	Condition 577 594	food intolerances
-T29	Or 595 597	or
 T30	Condition 602 628	gastrointestinal disorders
 T31	Eq-Comparison 634 642	Previous
 T32	Procedure 643 660	bariatric surgery
-T33	Or 662 664	or
 T34	Procedure 665 689	gastrointestinal surgery
 T35	Assertion 696 699	may
 T36	Condition 714 722	function
@@ -116,16 +106,16 @@ T17	Eq-Unit 389 392	mol
 T59	Exception 493 506	acceptable if
 T64	Condition-Name 714 722	function
 A1	Assertion-Type-Value E35 hypothetical
-A2	Observation-Type-Value T38 vital
+A2	Observation-Type-Value E4 vital
 A3	Eq-Operator-Value T39 GT
 A4	Severity-Value T44 severe
-A5	Observation-Type-Value T46 social-habit
+A5	Observation-Type-Value E9 social-habit
 A6	Eq-Operator-Value T47 GT
 A7	Eq-Temporal-Unit-Value T50 week
-A8	Observation-Type-Value T51 lab
+A8	Observation-Type-Value E12 lab
 A9	Eq-Operator-Value T52 GT
-A10	Observation-Type-Value T55 lab
-A11	Observation-Type-Value T56 lab
+A10	Observation-Type-Value E14 lab
+A11	Observation-Type-Value E16 lab
 A12	Eq-Operator-Value T57 GT
 A14	Eq-Operator-Value T60 GT
 A15	Eq-Temporal-Period-Value T63 present
@@ -141,3 +131,9 @@ R5	Example-Of Arg1:E24 Arg2:E21
 R3	Example-Of Arg1:E22 Arg2:E21
 R4	Caused-By Arg1:T77 Arg2:E34
 R6	Example-Of Arg1:E37 Arg2:E34
+R7	Or Arg1:T80 Arg2:T3
+R8	Or Arg1:T3 Arg2:T81
+R9	Or Arg1:E22 Arg2:E24
+R10	Or Arg1:E28 Arg2:E30
+R11	Or Arg1:E32 Arg2:E34
+R12	Or Arg1:E27 Arg2:E28

@@ -1,16 +1,15 @@
 E2	Eq-Comparison:T7 Operator:T8 Temporal-Unit:T3 Value:T5
-E3	Age:T9 Eq-Comparison:E2
-E4	And:T10 Arg:E3 Arg2:E6
+E3	Age:T9 Numeric-Filter:E2
 E5	Eq-Comparison:T11 Operator:T12 Temporal-Unit:T4 Value:T6
-E6	Age:T13 Eq-Comparison:E5
+E6	Age:T13 Numeric-Filter:E5
 E7	Condition:T14 Name:T15
 E8	Negation:T16 Negates:E7
-E9	Condition:T17 Temporality:E13 Name:T28
+E9	Condition:T17 Temporality:E13
 E10	Modifier:T18 Modifies:E9
 E11	Modifier:T19 Modifies:E9
 E12	Modifier:T20 Modifies:E9
 E13	Eq-Comparison:T21 Temporal-Period:T22
-E14	Procedure:T23 
+E14	Procedure:T23
 E1	Observation:T1 Name:T2 Stability:T29
 E15	Modifier:T24 Modifies:T2
 E16	Modifier:T25 Modifies:T2
@@ -23,7 +22,6 @@ T6	Eq-Value 70 72	45
 T7	Eq-Comparison 25 47	more or equal 18 years
 T8	Eq-Operator 25 38	more or equal
 T9	Age 48 51	old
-T10	And 52 55	and
 T11	Eq-Comparison 56 78	less or equal 45 years
 T12	Eq-Operator 56 69	less or equal
 T13	Age 79 82	old
@@ -51,7 +49,9 @@ A2	Eq-Temporal-Unit-Value T4 year
 A3	Eq-Operator-Value T8 GTEQ
 A4	Eq-Operator-Value T12 LTEQ
 A5	Eq-Temporal-Period-Value T22 past
-A6	Observation-Type-Value T2 measurement
+A6	Observation-Type-Value E1 measurement
 A7	Stability-Value T29 change
 A8	Assertion-Type-Value E18 hypothetical
 R1	Caused-By Arg1:T29 Arg2:E14
+R2	And Arg1:E3 Arg2:E6
+R3	Or Arg1:E12 Arg2:E11

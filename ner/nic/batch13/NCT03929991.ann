@@ -26,7 +26,6 @@ E2	Condition:T51 Name:T52
 E4	Eq-Comparison:T54 Temporal-Period:T55
 E6	Procedure:T56 Name:T57 Temporality:E4 Location:T58
 E8	Study:T59
-E10	Temporal-Connection:T60 Arg:E6 Arg2:E8
 E12	Condition:T61 Name:T62
 E14	Condition:T63 Name:T64
 E16	Condition:T65 Name:T66
@@ -42,15 +41,12 @@ E34	Negation:T80 Negates:E32
 E36	Modifier:T81 Modifies:T46
 E38	Modifier:T82 Modifies:T46
 E40	Modifier:T83 Modifies:T46
-E42	Or:T84 Arg:E38 Arg2:E36
-E31	Or:T31 Arg:E27 Arg2:E19
 E44	Modifier:T32 Modifies:T28
 E46	Modifier:T85
 E48	Modifier:T86 Modifies:T6
 E50	Modifier:T87 Modifies:T8
 E51	Modifier:T88 Modifies:T8
-E52	Encounter:T89 Type:T90
-E53	Temporal-Connection:T91 Arg:E19 Arg2:E52
+E52	Encounter:T89
 E54	Drug:T92 Name:T93
 T1	Condition 584 615	Sexually transmitted infections
 T2	Condition-Name 584 615	Sexually transmitted infections
@@ -109,7 +105,6 @@ T56	Procedure 57 60	C/S
 T57	Procedure-Name 57 60	C/S
 T58	Location 71 80	hospitals
 T59	Study 92 97	study
-T60	Temporal-Connection 81 87	during
 T61	Condition 266 278	repercussion
 T62	Condition-Name 266 278	repercussion
 T63	Condition 286 295	infection
@@ -133,24 +128,18 @@ T80	Negation 753 760	without
 T81	Modifier 822 828	rectal
 T82	Modifier 806 814	urethral
 T83	Modifier 797 804	vaginal
-T84	Or 815 821	and/or
-T31	Or 945 946	/
 T32	Modifier 919 933	Non-infectious
 T85	Modifier 257 265	systemic
 T86	Modifier 343 362	Lower tract urinary
 T87	Modifier 378 384	Fungal
 T88	Modifier 403 407	skin
 T89	Encounter 1038 1051	hospital stay
-T90	Encounter-Type 1038 1051	hospital stay
-T91	Temporal-Connection 1031 1037	during
 T92	Drug 1001 1014	prostaglandin
 T93	Drug-Name 1001 1014	prostaglandin
 A1	Life-Stage-And-Gender-Type T53 female
 A2	Eq-Temporal-Period-Value T55 present
 A3	Location-Value T58 hospital
-A4	Temporal-Connection-Type-Value E10 during
-A5	Encounter-Type-Value T90 inpatient
-A6	Temporal-Connection-Type-Value E53 during
+A5	Encounter-Type-Value E52 inpatient
 R1	Caused-By Arg1:E12 Arg2:E14
 R2	Example-Of Arg1:E13 Arg2:E7
 R3	Example-Of Arg1:E16 Arg2:E7
@@ -166,3 +155,19 @@ R12	Abbrev-Of Arg1:E46 Arg2:E12
 R13	Caused-By Arg1:E19 Arg2:E49
 R14	Caused-By Arg1:E19 Arg2:E47
 R15	Caused-By Arg1:E19 Arg2:E54
+R16	During Arg1:E6 Arg2:E8
+R17	Or Arg1:E38 Arg2:E36
+R18	Or Arg1:E27 Arg2:E19
+R19	During Arg1:E19 Arg2:E52
+R20	Or Arg1:E13 Arg2:E16
+R21	Or Arg1:E25 Arg2:E22
+R22	Or Arg1:E29 Arg2:E41
+R23	Or Arg1:E33 Arg2:E21
+R24	Or Arg1:E35 Arg2:E24
+R25	Or Arg1:E41 Arg2:E25
+R26	Or Arg1:E47 Arg2:E54
+R27	Or Arg1:E49 Arg2:E47
+R28	Or Arg1:E16 Arg2:E37
+R29	Or Arg1:E18 Arg2:E15
+R30	Or Arg1:E22 Arg2:E35
+R31	Or Arg1:E40 Arg2:E38

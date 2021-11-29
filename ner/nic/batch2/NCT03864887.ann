@@ -1,14 +1,11 @@
 E1	Condition:T1 Name:T24 Temporality:E24
-E2	Or:T2 Arg:E1 Arg2:E4
 E3	Modifier:T3 Modifies:T26
-E4	Condition:T4 Name:T26 Severity:T25 Temporality:E24
+E4	Observation:T4 Name:T26 Severity:T25 Temporality:E24
 E5	Condition:T5 Name:T27
 E6	Procedure:T6 Name:T28
 E7	Condition:T7 Name:T29
-E8	Or:T8 Arg:E7 Arg2:E28
 E9	Condition:T9 Name:T45
 E10	Procedure:T10 Name:T30
-E11	Or:T11 Arg:E10 Arg2:E12
 E13	Procedure:T13 Name:T31
 E16	Condition:T16 Name:T32
 E17	Eq-Comparison:T17 Temporal-Period:T33
@@ -19,22 +16,18 @@ E21	Eq-Comparison:T21 Temporal-Period:T14
 E22	Drug:T22 Name:T37 Temporality:E21
 E23	Drug:T23 Name:T38 Temporality:E21
 E24	Eq-Comparison:T39 Temporal-Period:T40
-E25	And:T41 Arg:E5 Arg2:E26
 E26	Assertion:T42 Asserted:E6
 E27	Observation:T43 Name:T44
 E28	Assertion:T46 Asserted:E9
 E12	Assertion:T12 Asserted:E13
 T1	Condition 47 58	brain death
-T2	Or 59 61	or
 T3	Modifier 70 75	brain
-T4	Condition 76 82	trauma
+T4	Observation 76 82	trauma
 T5	Condition 89 96	Healthy
 T6	Procedure 126 144	optical assessment
 T7	Condition 216 225	pregnancy
-T8	Or 226 228	or
 T9	Condition 242 252	conception
 T10	Procedure 277 293	vertebra surgery
-T11	Or 294 296	or
 T13	Procedure 310 317	surgery
 T16	Condition 427 431	AIDS
 T17	Eq-Comparison 433 439	Active
@@ -46,7 +39,7 @@ T22	Drug 512 526	anticoagulants
 T23	Drug 528 546	antiplatelet drugs
 T24	Condition-Name 47 58	brain death
 T25	Severity 62 69	serious
-T26	Condition-Name 76 82	trauma
+T26	Observation-Name 76 82	trauma
 T27	Condition-Name 89 96	Healthy
 T28	Procedure-Name 126 144	optical assessment
 T29	Condition-Name 216 225	pregnancy
@@ -61,7 +54,6 @@ T37	Drug-Name 512 526	anticoagulants
 T38	Drug-Name 528 546	antiplatelet drugs
 T39	Eq-Comparison 43 46	had
 T40	Eq-Temporal-Period 43 46	had
-T41	And 104 107	who
 T42	Assertion 112 125	interested in
 T43	Observation 148 170	hemodynamic parameters
 T44	Observation-Name 148 170	hemodynamic parameters
@@ -77,3 +69,10 @@ A5	Assertion-Type-Value E28 intention
 A6	Assertion-Type-Value E12 intention
 A7	Eq-Temporal-Period-Value T14 present
 R1	Using Arg1:E6 Arg2:E27
+R2	Or Arg1:E1 Arg2:E4
+R3	Or Arg1:E7 Arg2:E28
+R4	Or Arg1:E10 Arg2:E12
+R5	And Arg1:E5 Arg2:E26
+R6	Or Arg1:E18 Arg2:E19
+R7	Or Arg1:E19 Arg2:E20
+R8	Or Arg1:E22 Arg2:E23

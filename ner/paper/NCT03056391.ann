@@ -1,0 +1,14 @@
+T1	Contraindication 72 88	Contraindication
+E1	Contraindication:T1 Contraindicates:E4 Contraindicates2:E5
+T2	Allergy 92 99	allergy
+E2	Allergy:T2 
+T3	Or 89 91	or
+E3	Or:T3 Arg:E1 Arg2:E2
+T4	Drug 103 114	paracetamol
+E4	Drug:T4 Name:T5
+T5	Drug-Name 103 114	paracetamol
+T6	Drug 118 128	artesunate
+E5	Drug:T6 Name:T7
+T7	Drug-Name 118 128	artesunate
+T8	Or 115 117	or
+E6	Or:T8 Arg:E4 Arg2:E5

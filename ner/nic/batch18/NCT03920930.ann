@@ -3,7 +3,7 @@ E3	Condition:T3 Name:T4
 E5	Procedure:T5 Name:T6
 E7	Condition:T7 Name:T8
 E11	Procedure:T11 Name:T12 Temporality:E18 Acuteness:T50
-E14	Observation:T14 Name:T15 Eq-Comparison:E16
+E14	Observation:T14 Name:T15 Numeric-Filter:E16
 E15	Eq-Comparison:T29 Operator:T16 Value:T24
 E16	Eq-Comparison:T30 Operator:T18 Value:T25
 E17	Eq-Comparison:T31 Operator:T19 Temporal-Unit:T21 Value:T26
@@ -12,21 +12,19 @@ E19	Eq-Comparison:T33 Temporal-Period:T34
 E2	Modifier:T9 Modifies:T35
 E4	Procedure:T10 Name:T35 Temporality:E19
 E6	Procedure:T36 Name:T37
-E8	Observation:T38 Name:T39 Eq-Comparison:E15
+E8	Observation:T38 Name:T39 Numeric-Filter:E15
 E9	Condition:T40 Name:T41
 E10	Condition:T13 Name:T42 Severity:T43
-E12	Age:T44 Eq-Comparison:E17
+E12	Age:T44 Numeric-Filter:E17
 E13	Observation:T45 Name:T46
 E20	Study:T47 Temporality:E22
 E21	Other:T48 Is-Other:E20
 E22	Eq-Comparison:T49 Value:T27 Temporal-Unit:T22
 E24	Procedure:T51 Name:T52
 E25	Eq-Comparison:T53 Temporal-Period:T54
-E26	Temporal-Connection:T55 Arg:E18 Arg2:E25
 E27	Procedure:T56 Name:T57
-E28	Or:T58 Arg:E27 Arg2:E5
 E29	Allergy:T59 Name:E30
-E30	Drug:T60 
+E30	Drug:T60
 E31	Assertion:T61 Asserted:E27 Asserted2:E5
 T1	Condition 220 243	diabetic polyneuropathy
 T2	Condition-Name 220 243	diabetic polyneuropathy
@@ -82,14 +80,12 @@ T51	Procedure 482 489	surgery
 T52	Procedure-Name 482 489	surgery
 T53	Eq-Comparison 472 481	scheduled
 T54	Eq-Temporal-Period 472 481	scheduled
-T55	Temporal-Connection 465 471	before
 T56	Procedure 535 542	surgery
 T57	Procedure-Name 535 542	surgery
-T58	Or 543 545	or
 T59	Allergy 495 502	allergy
 T60	Drug 511 521	medication
 T61	Assertion 522 534	required for
-A2	Observation-Type-Value T15 vital
+A2	Observation-Type-Value E14 vital
 A3	Eq-Operator-Value T16 GT
 A4	Eq-Operator-Value T17 GT
 A5	Eq-Operator-Value T18 GT
@@ -101,10 +97,11 @@ A10	Eq-Temporal-Unit-Value T23 month
 A11	Eq-Temporal-Period-Value T34 present
 A1	Severity-Value T43 severe
 A12	Eq-Temporal-Period-Value T54 future
-A13	Temporal-Connection-Type-Value E26 before
 A14	Assertion-Type-Value E31 hypothetical
-A15	Observation-Type-Value T39 clinical-score
+A15	Observation-Type-Value E8 clinical-score
 A16	Acuteness-Type-Value T50 chronic
 R1	Using Arg1:E4 Arg2:E6
 R2	Equivalent-To Arg1:E8 Arg2:E3
 R3	Using Arg1:E27 Arg2:E30
+R4	Before Arg1:E18 Arg2:E25
+R5	Or Arg1:E27 Arg2:E5

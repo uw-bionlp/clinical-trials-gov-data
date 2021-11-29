@@ -5,11 +5,8 @@ E4	Procedure:T4 Name:T46 Temporality:E2 Temporality2:E1
 E5	Procedure:T5 Name:T47
 E6	Procedure:T6 Name:T48
 E8	Procedure:T8 Name:T50
-E9	Or:T9 Arg:E46 Arg2:E10
 E11	Procedure:T11 Name:T52
-E13	Or:T13 Arg:E49 Arg2:E14
 E14	Modifier:T14 Modifies:T53
-E15	Or:T15 Arg:E12 Arg2:T55
 E16	Procedure:T16 Name:T55
 E17	Condition:T17 Name:T57 Polarity:T56
 E18	Negation:T18 Negates:E20
@@ -18,13 +15,11 @@ E20	Condition:T20 Name:T59 Temporality:E19
 E21	Eq-Comparison:T21 Temporal-Period:T60
 E22	Procedure:T22 Name:T61 Temporality:E21
 E23	Procedure:T23 Name:T62
-E24	Or:T24 Arg:E23 Arg2:E25
 E25	Procedure:T25 Name:T63
 E26	Eq-Comparison:T26 Temporal-Period:T64
 E27	Eq-Comparison:T27 Temporal-Period:T65
 E28	Condition:T28 Name:T66 Temporality:E26 Temporality2:E27
 E29	Condition:T29 Name:T67
-E30	Or:T30 Arg:E29 Arg2:E31
 E31	Condition:T31 Name:T68 Duration:E32
 E32	Eq-Comparison:T32 Operator:T69 Value:T70 Unit:T71
 E33	Eq-Comparison:T33 Temporal-Period:T72
@@ -35,7 +30,6 @@ E38	Assertion:T38 Asserted:E39
 E39	Procedure:T39 Name:T76
 E40	Condition:T40 Name:T77
 E41	Procedure:T41 Name:T78
-E42	Or:T42 Arg:E41 Arg2:E44
 E44	Procedure:T44 Name:T79
 E45	Negation:T81 Negates:E3
 E7	Modifier:T7 Modifies:T47
@@ -43,7 +37,6 @@ E46	Modifier:T49 Modifies:T50
 E10	Modifier:T10 Modifies:T50
 E47	Modifier:T51 Modifies:T52
 E12	Procedure:T12 Name:T53
-E48	And:T82 Arg:E11 Arg2:E12
 E49	Modifier:T54 Modifies:T53
 E36	Modifier:T36 Modifies:T75
 T1	Eq-Comparison 34 43	scheduled
@@ -53,11 +46,8 @@ T4	Procedure 72 90	open-heart surgery
 T5	Procedure 95 123	coronary artery bypass graft
 T6	Procedure 125 129	CABG
 T8	Procedure 150 158	valvular
-T9	Or 166 168	or
 T11	Procedure 191 195	CABG
-T13	Or 214 216	or
 T14	Modifier 217 228	replacement
-T15	Or 230 232	or
 T16	Procedure 233 265	valve sparing aortic root repair
 T17	Condition 278 290	sinus rhythm
 T18	Negation 296 298	No
@@ -66,13 +56,11 @@ T20	Condition 321 340	atrial fibrillation
 T21	Eq-Comparison 366 371	Prior
 T22	Procedure 372 391	surgical procedures
 T23	Procedure 402 415	heart surgery
-T24	Or 416 419	and
 T25	Procedure 420 442	cardiopulmonary bypass
 T26	Eq-Comparison 452 457	prior
 T27	Eq-Comparison 469 476	history
 T28	Condition 480 499	atrial fibrillation
 T29	Condition 501 515	atrial flutter
-T30	Or 516 518	or
 T31	Condition 519 537	atrial tachycardia
 T32	Eq-Comparison 546 568	longer than 30 seconds
 T33	Eq-Comparison 574 587	Prior history
@@ -83,7 +71,6 @@ T38	Assertion 683 692	requiring
 T39	Procedure 693 711	surgical treatment
 T40	Condition 715 733	atrial arrhythmias
 T41	Procedure 742 766	pulmonary vein isolation
-T42	Or 767 769	or
 T44	Procedure 770 784	Maze procedure
 T45	Eq-Temporal-Period 34 43	scheduled
 T46	Procedure-Name 72 90	open-heart surgery
@@ -123,7 +110,6 @@ T49	Modifier 159 165	repair
 T10	Modifier 169 180	replacement
 T51	Modifier 182 190	combined
 T12	Procedure 201 206	valve
-T82	And 196 200	with
 T54	Modifier 207 213	repair
 T36	Modifier 634 650	supraventricular
 A1	Assertion-Type-Value E38 hypothetical
@@ -148,3 +134,12 @@ R9	Treatment-For Arg1:E35 Arg2:E37
 R10	Treatment-For Arg1:E39 Arg2:E40
 R11	Example-Of Arg1:E41 Arg2:E39
 R12	Example-Of Arg1:E44 Arg2:E39
+R13	Or Arg1:E46 Arg2:E10
+R14	Or Arg1:E49 Arg2:E14
+R15	Or Arg1:E12 Arg2:T55
+R16	Or Arg1:E23 Arg2:E25
+R17	Or Arg1:E29 Arg2:E31
+R18	Or Arg1:E41 Arg2:E44
+R19	And Arg1:E11 Arg2:E12
+R20	Or Arg1:E28 Arg2:E29
+R21	Or Arg1:E10 Arg2:E47

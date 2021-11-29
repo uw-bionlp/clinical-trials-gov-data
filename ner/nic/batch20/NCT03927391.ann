@@ -9,7 +9,7 @@ E17	Condition:T17 Name:T18
 E19	Condition:T19 Name:T20
 E21	Condition:T21 Name:T22
 E23	Condition:T23 Name:T24
-E26	Age:T38 Eq-Comparison:E20
+E26	Age:T38 Numeric-Filter:E20
 E27	Eq-Comparison:T50 Operator:T28 Temporal-Unit:T35 Value:T40
 E28	Eq-Comparison:T51 Operator:T29 Value:T41
 E29	Eq-Comparison:T52 Operator:T31 Value:T44 Temporal-Unit:T129
@@ -19,30 +19,25 @@ E32	Eq-Comparison:T55 Temporal-Period:T56
 E2	Condition:T61 Name:T62
 E4	Condition:T63 Name:T64
 E6	Modifier:T65 Modifies:T64
-E7	And:T66 Arg:T7 Arg2:E4
 E9	Eq-Comparison:T67 Temporal-Recency:T68
 E11	Eq-Comparison:T69 Temporal-Period:T70
 E12	Procedure:T71 Temporality:E9 Temporality2:E11
 E14	Drug:T72 Name:T73
-E16	And:T74 Arg:E4 Arg2:E12
 E18	Modifier:T27 Modifies:T73
 E20	Eq-Comparison:T75 Operator:T76 Value:T39 Temporal-Unit:T34
 E22	Assertion:T77
 E24	Study:T59
-E34	Temporal-Connection:T60 Arg:E24
 E35	Observation:T78 Specimen:T80 Name:T79
 E36	Assertion:T81 Asserted:E35
 E37	Observation:T82 Name:T83
 E38	Observation:T84 Name:T85
-E39	And:T86 Arg:E37 Arg2:E38
 E40	Assertion:T87 Asserted:E37 Asserted2:E38
-E41	Observation:T88 Name:T89 Eq-Comparison:E27
+E41	Observation:T88 Name:T89 Numeric-Filter:E27
 E42	Observation:T90 Name:T91
 E43	Observation:T92 Name:T93
-E44	And:T94 Arg:E42 Arg2:E43
 E45	Assertion:T95 Asserted:E42 Asserted2:E43
 E46	Condition:T96 Name:T97
-E47	Observation:T98 Name:T99 Eq-Comparison:E28
+E47	Observation:T98 Name:T99 Numeric-Filter:E28
 E48	Eq-Comparison:T100 Operator:T30 Unit:T101 Value:T42
 E49	Criteria-Count:T102 Min-Value:E50 Criteria:E51 Criteria2:E52 Criteria3:E1 Criteria4:E10 Criteria5:E53 Criteria6:E5 Criteria7:E8
 E50	Eq-Comparison:T103 Value:T104
@@ -52,38 +47,28 @@ E53	Condition:T109 Name:T110
 E54	Drug:T112 Name:T113 Stability:T111
 E55	Drug:T114 Name:T115 Stability:T111
 E56	Drug:T116 Name:T117 Stability:T111
-E57	Or:T118 Arg:E54 Arg2:E55
-E58	Or:T119 Arg:E55 Arg2:E56
 E59	Eq-Comparison:T120 Temporal-Period:T121 Value:T43 Temporal-Unit:T36
-E60	Temporal-Connection:T122 Arg:E56 Arg2:E59
 E61	Study:T123
-E62	Temporal-Connection:T124 Arg:E59 Arg2:E61
 E63	Drug:T125 Name:T126
 E64	Drug:T127 Name:T128 Temporality:E29
 E65	Study:T130 Temporality:E66
 E66	Eq-Comparison:T131 Temporal-Recency:T132
-E67	Temporal-Connection:T133 Arg:E29 Arg2:E66
 E68	Condition:T134
-E69	Condition:T135 Name:T136 Stability:T137
+E69	Observation:T135 Name:T136 Stability:T137
 E70	Condition:T138 Name:T139
-E71	Condition:T140 Name:T141 Stability:T142
+E71	Observation:T140 Name:T141 Stability:T142
 E72	Exception:T143 From:E71 Except:E19
-E73	Or:T144 Arg:E19 Arg2:E21
 E74	Coreference:T145 Refers-To:E13
 E75	Condition:T146 Name:T147 Temporality:E32
 E76	Condition:T148 Name:T149
 E77	Other:T150 Is-Other:E76
-E78	Or:T151 Arg:E75 Arg2:E76
 E79	Condition:T45 Name:T46
-E25	Condition:T25 Name:T26 Stability:T152 Temporality:E30
-E80	Or:T47 Arg:E79 Arg2:E25
+E25	Observation:T25 Name:T26 Stability:T152 Temporality:E30
 E81	Study:T153
-E82	Temporal-Connection:T154 Arg:E30 Arg2:E81
-E83	Observation:T155 Name:T156 Eq-Comparison:E31
+E83	Observation:T155 Name:T156 Numeric-Filter:E31
 E84	Condition:T157 Name:T158
 E33	Drug:T57
 E85	Modifier:T58 Modifies:E33
-E86	Or:T159 Arg:E33 Arg2:E85
 T1	Condition 800 821	cognitive disturbance
 T2	Condition-Name 800 821	cognitive disturbance
 T3	Condition 640 665	Central Nervous Disorders
@@ -139,7 +124,6 @@ T62	Condition-Name 25 30	Frail
 T63	Condition 60 66	cancer
 T64	Condition-Name 60 66	cancer
 T65	Modifier 51 59	prostate
-T66	And 46 50	with
 T67	Eq-Comparison 76 81	start
 T68	Eq-Temporal-Recency 76 81	start
 T69	Eq-Comparison 71 75	will
@@ -147,22 +131,19 @@ T70	Eq-Temporal-Period 71 75	will
 T71	Procedure 82 91	treatment
 T72	Drug 97 109	enzalutamide
 T73	Drug-Name 97 109	enzalutamide
-T74	And 67 70	who
 T27	Modifier 110 122	within label
 T75	Eq-Comparison 132 149	at least 18 years
 T76	Eq-Operator 132 140	at least
 T77	Assertion 171 187	able and willing
 T59	Study 230 239	screening
-T60	Temporal-Connection 221 229	prior to
 T78	Observation 290 303	blood samples
 T79	Observation-Name 296 303	samples
-T80	Observation-Specimen 290 295	blood
+T80	Specimen 290 295	blood
 T81	Assertion 270 289	possible to collect
 T82	Observation 348 362	questionnaires
 T83	Observation-Name 348 362	questionnaires
 T84	Observation 367 371	test
 T85	Observation-Name 367 371	test
-T86	And 363 366	and
 T87	Assertion 326 336	willing to
 T88	Observation 377 392	Life expectancy
 T89	Observation-Name 377 392	Life expectancy
@@ -170,7 +151,6 @@ T90	Observation 457 462	tests
 T91	Observation-Name 457 462	tests
 T92	Observation 467 481	questionnaires
 T93	Observation-Name 467 481	questionnaires
-T94	And 463 466	and
 T95	Assertion 412 422	Capable of
 T96	Condition 519 524	Frail
 T97	Condition-Name 519 524	Frail
@@ -194,13 +174,9 @@ T114	Drug 949 958	sedatives
 T115	Drug-Name 949 958	sedatives
 T116	Drug 959 974	benzodiazepines
 T117	Drug-Name 959 974	benzodiazepines
-T118	Or 948 949	/
-T119	Or 958 959	/
 T120	Eq-Comparison 982 994	last 2 weeks
 T121	Eq-Temporal-Period 982 986	last
-T122	Temporal-Connection 975 981	during
 T123	Study 1002 1007	study
-T124	Temporal-Connection 995 1001	before
 T125	Drug 1021 1037	psychostimulants
 T126	Drug-Name 1021 1037	psychostimulants
 T127	Drug 1046 1061	methylphenidate
@@ -209,40 +185,34 @@ T129	Eq-Temporal-Unit 1071 1075	week
 T130	Study 1088 1093	study
 T131	Eq-Comparison 1079 1084	start
 T132	Eq-Temporal-Recency 1079 1084	start
-T133	Temporal-Connection 1076 1078	of
 T134	Condition 1114 1132	medical conditions
-T135	Condition 1145 1154	cognition
-T136	Condition-Name 1145 1154	cognition
+T135	Observation 1145 1154	cognition
+T136	Observation-Name 1145 1154	cognition
 T137	Stability 1138 1144	affect
 T138	Condition 1156 1164	Dementia
 T139	Condition-Name 1156 1164	Dementia
-T140	Condition 1240 1249	cognition
-T141	Condition-Name 1240 1249	cognition
+T140	Observation 1240 1249	cognition
+T141	Observation-Name 1240 1249	cognition
 T142	Stability 1233 1239	affect
 T143	Exception 1250 1260	other than
-T144	Or 1272 1274	or
 T145	Coreference 1305 1316	the disease
 T146	Condition 1329 1338	infection
 T147	Condition-Name 1329 1338	infection
 T148	Condition 1348 1361	comorbidities
 T149	Condition-Name 1348 1361	comorbidities
 T150	Other 1342 1347	other
-T151	Or 1339 1341	or
 T45	Condition 1420 1427	fatigue
 T46	Condition-Name 1420 1427	fatigue
-T25	Condition 1431 1440	cognition
-T26	Condition-Name 1431 1440	cognition
-T47	Or 1428 1430	or
+T25	Observation 1431 1440	cognition
+T26	Observation-Name 1431 1440	cognition
 T152	Stability 1441 1447	change
 T153	Study 1466 1471	study
-T154	Temporal-Connection 1463 1465	of
 T155	Observation 1514 1524	MoCa score
 T156	Observation-Name 1514 1524	MoCa score
 T157	Condition 1534 1550	Hypersensitivity
 T158	Condition-Name 1534 1550	Hypersensitivity
 T57	Drug 1558 1574	active substance
 T58	Modifier 1581 1602	any of the excipients
-T159	Or 1575 1577	or
 A1	Life-Stage-And-Gender-Type T7 male
 A3	Eq-Operator-Value T28 GT
 A4	Eq-Operator-Value T29 LTEQ
@@ -259,26 +229,21 @@ A17	Eq-Temporal-Recency-Value T68 first-time
 A16	Eq-Temporal-Period-Value T70 future
 A2	Eq-Operator-Value T76 GTEQ
 A18	Assertion-Type-Value E22 hypothetical
-A15	Temporal-Connection-Type-Value E34 before
-A19	Observation-Type-Value T79 lab
+A19	Observation-Type-Value E35 lab
 A20	Assertion-Type-Value E36 hypothetical
-A21	Observation-Type-Value T83 survey-or-questionnaire
+A21	Observation-Type-Value E37 survey-or-questionnaire
 A22	Assertion-Type-Value E40 hypothetical
-A23	Observation-Type-Value T93 survey-or-questionnaire
+A23	Observation-Type-Value E43 survey-or-questionnaire
 A24	Assertion-Type-Value E45 hypothetical
-A25	Observation-Type-Value T99 clinical-score
+A25	Observation-Type-Value E47 clinical-score
 A26	Stability-Value T111 change
 A27	Eq-Temporal-Period-Value T121 past
-A28	Temporal-Connection-Type-Value E60 during
-A29	Temporal-Connection-Type-Value E62 before
 A30	Eq-Temporal-Unit-Value T129 week
 A31	Eq-Temporal-Recency-Value T132 first-time
-A32	Temporal-Connection-Type-Value E67 before
 A33	Stability-Value T137 change
 A34	Stability-Value T142 change
 A35	Stability-Value T152 change
-A36	Temporal-Connection-Type-Value E82 before
-A37	Observation-Type-Value T156 clinical-score
+A37	Observation-Type-Value E83 clinical-score
 R1	Using Arg1:E12 Arg2:E14
 R2	Example-Of Arg1:E64 Arg2:E63
 R3	Caused-By Arg1:T137 Arg2:E68
@@ -290,3 +255,26 @@ R8	Caused-By Arg1:T142 Arg2:E13
 R9	Caused-By Arg1:E21 Arg2:E74
 R10	Caused-By Arg1:E19 Arg2:E74
 R11	Caused-By Arg1:E84 Arg2:E33
+R12	And Arg1:T7 Arg2:E4
+R13	And Arg1:E4 Arg2:E12
+R14	And Arg1:E37 Arg2:E38
+R15	And Arg1:E42 Arg2:E43
+R16	Or Arg1:E54 Arg2:E55
+R17	Or Arg1:E55 Arg2:E56
+R18	During Arg1:E56 Arg2:E59
+R19	Before Arg1:E59 Arg2:E61
+R20	Before Arg1:E29 Arg2:E66
+R21	Or Arg1:E19 Arg2:E21
+R22	Or Arg1:E75 Arg2:E76
+R23	Or Arg1:E79 Arg2:E25
+R24	Before Arg1:E30 Arg2:E81
+R25	Or Arg1:E33 Arg2:E85
+R26	Or Arg1:E1 Arg2:E10
+R27	Or Arg1:E5 Arg2:E8
+R28	Or Arg1:E10 Arg2:E53
+R29	Or Arg1:E15 Arg2:E13
+R30	Or Arg1:E17 Arg2:E15
+R31	Or Arg1:E51 Arg2:E52
+R32	Or Arg1:E52 Arg2:E1
+R33	Or Arg1:E53 Arg2:E5
+R34	Or Arg1:E70 Arg2:E17

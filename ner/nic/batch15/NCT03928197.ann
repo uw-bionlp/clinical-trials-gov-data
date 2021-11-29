@@ -1,11 +1,11 @@
 E1	Condition:T1 Name:T2
-E8	Age:T11 Eq-Comparison:E2
+E8	Age:T11 Numeric-Filter:E2
 E2	Eq-Comparison:T18 Operator:T19 Value:T12 Temporal-Unit:T9 Value2:T13 Temporal-Unit2:T10
 E4	Condition:T20 Name:T21
 E3	Condition:T3 Name:T4 Stage:E6
 E5	Modifier:T5 Modifies:T2
 E6	Eq-Comparison:T6 Value:T7 Value2:T8
-E7	Observation:T14 Name:T15 Eq-Comparison:E9
+E7	Observation:T14 Name:T15 Numeric-Filter:E9
 E9	Eq-Comparison:T16 Operator:T17 Value:T22 Value2:T23
 E10	Drug:T24 Temporality:E11
 E11	Eq-Comparison:T25 Temporal-Period:T26
@@ -15,9 +15,7 @@ E14	Condition:T30 Temporality:E15
 E15	Eq-Comparison:T31 Temporal-Period:T32
 E16	Condition:T33 Name:T34
 E17	Condition:T37 Name:T38
-E18	And:T39 Arg:T36 Arg2:E17
 E19	Study:T40
-E20	Temporal-Connection:T41 Arg:E17 Arg2:E19
 E21	Procedure:T42 Name:T43
 E22	Procedure:T44 Name:T45
 E23	Procedure:T46 Name:T47
@@ -59,9 +57,7 @@ T35	Life-Stage-And-Gender 320 325	women
 T36	Life-Stage-And-Gender 331 336	Women
 T37	Condition 341 351	menstruate
 T38	Condition-Name 341 351	menstruate
-T39	And 337 340	who
 T40	Study 359 368	test date
-T41	Temporal-Connection 352 354	on
 T42	Procedure 393 422	implanted elektronical device
 T43	Procedure-Name 393 422	implanted elektronical device
 T44	Procedure 424 427	IPG
@@ -71,15 +67,17 @@ T47	Procedure-Name 429 438	Pacemaker
 A2	Eq-Temporal-Unit-Value T9 year
 A3	Eq-Temporal-Unit-Value T10 year
 A4	Eq-Operator-Value T19 BETWEEN
-A1	Observation-Type-Value T15 vital
+A1	Observation-Type-Value E7 vital
 A5	Eq-Operator-Value T17 BETWEEN
 A6	Eq-Temporal-Period-Value T26 present
 A7	Eq-Temporal-Period-Value T32 present
 A8	Life-Stage-And-Gender-Type T35 female
 A9	Life-Stage-And-Gender-Type T36 female
-A10	Temporal-Connection-Type-Value E20 during
 R1	If-Then Arg1:E4 Arg2:E1
 R2	Equivalent-To Arg1:E3 Arg2:E1
 R3	If-Then Arg1:T35 Arg2:E16
 R4	Example-Of Arg1:E22 Arg2:E21
 R5	Example-Of Arg1:E23 Arg2:E21
+R6	And Arg1:T36 Arg2:E17
+R7	During Arg1:E17 Arg2:E19
+R8	Or Arg1:E22 Arg2:E23

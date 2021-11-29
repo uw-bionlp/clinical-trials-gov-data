@@ -2,23 +2,21 @@ E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8 Stability:T37 Temporality:E18 Acuteness:T43
-E8	Age:T12 Eq-Comparison:E2 Eq-Comparison2:E9
+E8	Age:T12 Numeric-Filter:E2 Numeric-Filter:E9
 E9	Eq-Comparison:T16 Operator:T9 Temporal-Unit:T11 Value:T14
 E10	Eq-Comparison:T17 Operator:T10 Value:T15 Unit:T40
 E2	Eq-Comparison:T18 Operator:T19 Value:T13
-E4	And:T20 Arg:E2 Arg2:E9
 E6	Risk:T21 Risk-For:E1
-E11	And:T22 Arg:E5 Arg2:E3
 E12	Condition:T23 Name:T24
 E13	Condition:T25 Name:T26
 E14	Observation:T27 Name:T28
 E15	Condition:T29 Name:T30
 E16	Condition:T31 Name:T32 Stability:T44
-E17	Or:T33 Arg:E15 Arg2:E16
 E18	Eq-Comparison:T34 Temporal-Unit:T36 Temporal-Period:T35
-E19	Observation:T38 Name:T39 Eq-Comparison:E10
+E19	Observation:T38 Name:T39 Numeric-Filter:E10
 E20	Modifier:T41 Modifies:T26
 E21	Modifier:T42 Modifies:T26
+E22	Observation:T45 Name:T46
 T1	Condition 119 137	Metabolic syndrome
 T2	Condition-Name 119 137	Metabolic syndrome
 T3	Condition 160 174	morbid obesity
@@ -38,9 +36,7 @@ T16	Eq-Comparison 75 84	≤65 years
 T17	Eq-Comparison 513 526	less than 80%
 T18	Eq-Comparison 45 58	Older than 18
 T19	Eq-Operator 45 55	Older than
-T20	And 71 74	and
 T21	Risk 103 107	risk
-T22	And 156 159	and
 T23	Condition 253 273	Physical limitations
 T24	Condition-Name 253 273	Physical limitations
 T25	Condition 293 301	injuries
@@ -51,7 +47,6 @@ T29	Condition 388 396	dyspnoea
 T30	Condition-Name 388 396	dyspnoea
 T31	Condition 400 411	respiratory
 T32	Condition-Name 400 411	respiratory
-T33	Or 397 399	or
 T34	Eq-Comparison 478 488	last month
 T36	Eq-Temporal-Unit 483 488	month
 T37	Stability 461 470	worsening
@@ -62,6 +57,9 @@ T41	Modifier 281 292	restricting
 T42	Modifier 309 331	musculoskeletal system
 T43	Acuteness 430 437	Chronic
 T35	Eq-Temporal-Period 478 482	last
+T44	Stability 412 423	alterations
+T45	Observation 371 379	Exercise
+T46	Observation-Name 371 379	Exercise
 A1	Eq-Operator-Value T9 LTEQ
 A2	Eq-Operator-Value T10 LT
 A3	Eq-Temporal-Unit-Value T11 year
@@ -70,13 +68,12 @@ A6	Eq-Temporal-Unit-Value T36 month
 A7	Stability-Value T37 change
 A5	Eq-Temporal-Period-Value T35 past
 A8	Acuteness-Type-Value T43 chronic
+A9	Stability-Value T44 change
+A10	Observation-Type-Value E22 social-habit
 R1	Example-Of Arg1:E13 Arg2:E12
 R2	Example-Of Arg1:E14 Arg2:E12
-T44	Stability 412 423	alterations
-A9	Stability-Value T44 change
-T45	Observation 371 379	Exercise
-E22	Observation:T45 Name:T46
-T46	Observation-Name 371 379	Exercise
-A10	Observation-Type-Value T46 social-habit
-R3	Caused-By Arg1:E15 Arg2:E22	
-R4	Caused-By Arg1:E16 Arg2:E22	
+R3	Caused-By Arg1:E15 Arg2:E22
+R4	Caused-By Arg1:E16 Arg2:E22
+R5	And Arg1:E2 Arg2:E9
+R6	And Arg1:E5 Arg2:E3
+R7	Or Arg1:E15 Arg2:E16

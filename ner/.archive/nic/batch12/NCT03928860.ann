@@ -1,0 +1,91 @@
+E1	Condition:T1 Name:T2 Temporality:E2 Temporality2:E4
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6 Acuteness:T53
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12 Severity:T51
+E13	Procedure:T13 Name:T14
+E15	Condition:T15 Name:T16
+E19	Condition:T19 Name:T20
+E20	Eq-Comparison:T30 Operator:T24 Value:T27 Value2:T26
+E2	Eq-Comparison:T31 Temporal-Recency:T32
+E4	Eq-Comparison:T33 Operator:T34 Temporal-Unit:T22 Value:T25
+E8	Observation:T36 Name:T37 Eq-Comparison:E20
+E10	Condition:T38 Name:T39 Stage:E12
+E12	Eq-Comparison:T40 Unit:T41 Operator:T21 Value:T28
+E14	Eq-Comparison:T42 Temporal-Period:T43
+E16	Procedure:T44 Name:T45 Temporality:E14 Temporality2:E23
+E18	Modifier:T46 Modifies:T45
+E21	Modifier:T47 Modifies:T45
+E22	Or:T48 Arg:E18 Arg2:E21
+E23	Eq-Comparison:T49 Temporal-Unit:T23 Value:T29 Temporal-Period:T35
+E24	Modifier:T52 Modifies:T12
+E17	Modifier:T17 Modifies:T12
+E25	Or:T18 Arg:E17 Arg2:E24
+E26	Condition:T54 Name:T55
+T1	Condition 78 105	peripheral vascular disease
+T2	Condition-Name 78 105	peripheral vascular disease
+T3	Condition 375 396	myocardial infarction
+T4	Condition-Name 375 396	myocardial infarction
+T5	Condition 541 560	infectious diseases
+T6	Condition-Name 541 560	infectious diseases
+T7	Condition 340 355	unstable angina
+T8	Condition-Name 340 355	unstable angina
+T9	Condition 447 460	heart failure
+T10	Condition-Name 447 460	heart failure
+T11	Condition 507 514	failure
+T12	Condition-Name 507 514	failure
+T13	Procedure 520 528	dialysis
+T14	Procedure-Name 520 528	dialysis
+T15	Condition 421 427	stroke
+T16	Condition-Name 421 427	stroke
+T19	Condition 398 400	MI
+T20	Condition-Name 398 400	MI
+T21	Eq-Operator 159 164	up to
+T22	Eq-Temporal-Unit 50 56	months
+T23	Eq-Temporal-Unit 314 320	months
+T24	Eq-Operator 140 141	-
+T25	Eq-Value 48 49	3
+T26	Eq-Value 137 140	0.4
+T27	Eq-Value 141 144	1.4
+T28	Eq-Value 171 173	2b
+T29	Eq-Value 312 313	3
+T30	Eq-Comparison 137 144	0.4-1.4
+T31	Eq-Comparison 69 74	onset
+T32	Eq-Temporal-Recency 69 74	onset
+T33	Eq-Comparison 39 56	at least 3 months
+T34	Eq-Operator 39 47	at least
+T36	Observation 125 128	ABI
+T37	Observation-Name 125 128	ABI
+T38	Condition 191 221	Fontaine classification system
+T39	Condition-Name 191 221	Fontaine classification system
+T40	Eq-Comparison 159 173	up to Stage 2b
+T41	Eq-Unit 165 170	Stage
+T42	Eq-Comparison 256 266	undergoing
+T43	Eq-Temporal-Period 256 266	undergoing
+T44	Procedure 292 299	surgery
+T45	Procedure-Name 292 299	surgery
+T46	Modifier 267 275	vascular
+T47	Modifier 279 291	endovascular
+T48	Or 276 278	or
+T49	Eq-Comparison 307 320	last 3 months
+T51	Severity 480 491	significant
+T52	Modifier 501 506	renal
+T17	Modifier 492 497	liver
+T18	Or 498 500	or
+T53	Acuteness 535 540	Acute
+T54	Condition 580 589	neoplasia
+T55	Condition-Name 580 589	neoplasia
+T35	Eq-Temporal-Period 307 311	last
+A1	Eq-Operator-Value T21 LTEQ
+A2	Eq-Temporal-Unit-Value T22 month
+A3	Eq-Temporal-Unit-Value T23 month
+A4	Eq-Operator-Value T24 BETWEEN
+A5	Eq-Temporal-Recency-Value T32 first-time
+A6	Eq-Operator-Value T34 LTEQ
+A8	Eq-Temporal-Period-Value T43 present
+A10	Severity-Value T51 severe
+A7	Eq-Temporal-Period-Value T35 past
+A12	Acuteness-Type-Value T53 acute
+R1	Abbrev-Of Arg1:E19 Arg2:E3
+R2	Equivalent-To Arg1:E13 Arg2:E11

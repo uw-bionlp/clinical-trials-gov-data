@@ -1,0 +1,141 @@
+E1	Procedure:T1 Name:T2 Location:T29
+E3	Observation:T3 Name:T4
+E5	Observation:T5 Name:T6 Eq-Comparison:E7
+E6	Eq-Comparison:T16 Operator:T7 Value:T12 Per:T28 Unit:T27
+E7	Eq-Comparison:T17 Operator:T8 Unit:T10 Value:T13 Per:T34
+E2	Eq-Comparison:T18 Operator:T19 Value:T11 Temporal-Unit:T9 Operator2:T20
+E4	Age:T21 Eq-Comparison:E2
+E8	Condition:T23 Name:T24 Severity:T22
+E9	Observation:T25 Name:T26 Eq-Comparison:E6
+E10	Assertion:T30 Asserted:E1
+E11	Condition:T31 Name:T32
+E12	Eq-Comparison:T35 Temporal-Period:T36
+E13	Condition:T37 Name:T38 Temporality:E12
+E14	Modifier:T39 Modifies:T38
+E15	Modifier:T40 Modifies:T38
+E16	Or:T41 Arg:E15 Arg2:E14
+E17	Procedure:T42 Name:T43 Duration:E18
+E18	Eq-Comparison:T44 Temporal-Unit:T46 Value:T45
+E19	Procedure:T47 Name:T48
+E20	Modifier:T49 Modifies:T48
+E21	Modifier:T50 Modifies:T48
+E22	Or:T51 Arg:E21 Arg2:E20
+E23	Or:T52 Arg:E17 Arg2:E19
+E24	Other:T53 Is-Other:E19
+E25	Condition:T54 Name:T55
+E26	Modifier:T56 Modifies:T55
+E27	Modifier:T57 Modifies:T55
+E28	Other:T58 Is-Other:E25
+E29	Or:T59 Arg:E26 Arg2:E28
+E30	Condition:T60 Name:T61 Stability:T62 Severity:T63
+E31	Observation:T14 Name:T64 Minimum-Count:E33
+E32	Observation:T65 Name:T66
+E33	Eq-Comparison:T67 Value:T68
+E34	Negation:T69 Negates:E31
+E35	Observation:T15 Name:T70
+E36	Study:T71 Study-Of:E37 Study-Of2:E38
+E37	Drug:T72
+E38	Procedure:T73
+E39	Or:T74 Arg:E37 Arg2:E38
+E40	Contraindication:T75 Contraindicates:E37 Contraindicates2:E38
+T1	Procedure 167 197	kidney transplantation surgery
+T2	Procedure-Name 167 197	kidney transplantation surgery
+T3	Observation 333 348	Body Mass Index
+T4	Observation-Name 333 348	Body Mass Index
+T5	Observation 350 353	BMI
+T6	Observation-Name 350 353	BMI
+T7	Eq-Operator 138 139	<
+T8	Eq-Operator 355 356	>
+T9	Eq-Temporal-Unit 37 42	years
+T10	Eq-Unit 360 362	kg
+T11	Eq-Value 34 36	18
+T12	Eq-Value 139 141	30
+T13	Eq-Value 357 359	40
+T16	Eq-Comparison 138 148	<30 mL/min
+T17	Eq-Comparison 355 365	> 40 kg/m2
+T18	Eq-Comparison 25 51	At least 18 years or older
+T19	Eq-Operator 25 33	At least
+T20	Eq-Operator 43 51	or older
+T21	Age 46 51	older
+T22	Severity 72 78	severe
+T23	Condition 79 97	kidney dysfunction
+T24	Condition-Name 79 97	kidney dysfunction
+T25	Observation 110 137	plasma creatinine clearance
+T26	Observation-Name 110 137	plasma creatinine clearance
+T27	Eq-Unit 142 144	mL
+T28	Eq-Temporal-Unit 145 148	min
+T29	Location 205 236	University of Colorado Hospital
+T30	Assertion 155 163	Planning
+T31	Condition 313 321	Pregnant
+T32	Condition-Name 313 321	Pregnant
+T33	Life-Stage-And-Gender 322 327	women
+T34	Eq-Unit 363 365	m2
+T35	Eq-Comparison 371 383	Pre-existing
+T36	Eq-Temporal-Period 371 383	Pre-existing
+T37	Condition 406 416	dependency
+T38	Condition-Name 406 416	dependency
+T39	Modifier 394 405	ventilatory
+T40	Modifier 384 390	oxygen
+T41	Or 391 393	or
+T42	Procedure 429 435	oxygen
+T43	Procedure-Name 429 435	oxygen
+T44	Eq-Comparison 418 421	24h
+T45	Eq-Value 418 420	24
+T46	Eq-Temporal-Unit 420 421	h
+T47	Procedure 469 488	ventilatory support
+T48	Procedure-Name 469 488	ventilatory support
+T49	Modifier 460 468	invasive
+T50	Modifier 445 456	noninvasive
+T51	Or 457 459	or
+T52	Or 436 438	or
+T53	Other 439 444	other
+T54	Condition 547 554	disease
+T55	Condition-Name 547 554	disease
+T56	Modifier 524 537	neuromuscular
+T57	Modifier 513 522	pulmonary
+T58	Other 541 546	other
+T59	Or 538 540	or
+T60	Condition 582 604	respiratory functional
+T61	Condition-Name 582 604	respiratory functional
+T62	Stability 569 575	limits
+T63	Severity 560 568	severely
+T14	Observation 638 667	Metabolic Equivalent of Tasks
+T64	Observation-Name 638 667	Metabolic Equivalent of Tasks
+T65	Observation 669 673	METs
+T66	Observation-Name 669 673	METs
+T67	Eq-Comparison 636 637	4
+T68	Eq-Value 636 637	4
+T69	Negation 618 624	unable
+T15	Observation 683 713	climbing up 1 flight of stairs
+T70	Observation-Name 683 713	climbing up 1 flight of stairs
+T71	Study 768 773	study
+T72	Drug 782 793	medications
+T73	Procedure 797 810	interventions
+T74	Or 794 796	or
+T75	Contraindication 736 752	contraindication
+A1	Observation-Type-Value T4 vital
+A2	Observation-Type-Value T6 vital
+A3	Eq-Operator-Value T7 LT
+A4	Eq-Operator-Value T8 GT
+A5	Eq-Temporal-Unit-Value T9 year
+A6	Eq-Operator-Value T19 GTEQ
+A7	Eq-Operator-Value T20 GTEQ
+A8	Severity-Value T22 severe
+A9	Observation-Type-Value T26 lab
+A10	Eq-Temporal-Unit-Value T28 minute
+A11	Location-Value T29 hospital
+A12	Assertion-Type-Value E10 intention
+A13	Life-Stage-And-Gender-Type T33 female
+A14	Eq-Temporal-Period-Value T36 past
+A15	Eq-Temporal-Unit-Value T46 hour
+A16	Stability-Value T62 change
+A17	Severity-Value T63 severe
+R1	Equivalent-To Arg1:E9 Arg2:E8
+R2	If-Then Arg1:T33 Arg2:E11
+R3	Abbrev-Of Arg1:E5 Arg2:E3
+R4	Equivalent-To Arg1:E17 Arg2:E13
+R5	Equivalent-To Arg1:E19 Arg2:E13
+R6	Caused-By Arg1:T62 Arg2:E25
+R7	Abbrev-Of Arg1:E32 Arg2:E31
+R8	Example-Of Arg1:E35 Arg2:E32
+R9	Example-Of Arg1:E34 Arg2:E25

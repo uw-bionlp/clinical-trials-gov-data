@@ -1,0 +1,222 @@
+E1	Condition:T1 Name:T2
+E3	Procedure:T3 Name:T4 Temporality:E2
+E5	Procedure:T5 Name:T6
+E7	Condition:T7 Name:T8 Polarity:T58
+E9	Condition:T9 Name:T10
+E11	Procedure:T11 Name:T12 Stability:T62 Temporality:E18
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18
+E19	Procedure:T19 Name:T20 Temporality:E52
+E21	Procedure:T21 Name:T22
+E23	Observation:T23 Name:T24 Eq-Comparison:E34
+E25	Condition:T25 Name:T26
+E27	Condition:T27 Name:T28
+E29	Condition:T29 Name:T30
+E30	Eq-Comparison:T45 Operator:T31 Temporal-Unit:T37 Value:T39
+E31	Eq-Comparison:T46 Operator:T32 Value:T40 Unit:T63 Per:T64
+E32	Eq-Comparison:T47 Operator:T33 Value:T42 Unit:T78
+E33	Eq-Comparison:T48 Operator:T35 Value:T43 Unit:T99 Per:T100 Per2:T101
+E34	Eq-Comparison:T49 Operator:T36 Value:T44
+E2	Eq-Comparison:T50 Temporal-Period:T51
+E4	Modifier:T52 Modifies:T10
+E6	Procedure:T53 Temporality:E30
+E8	Study:T54 Temporality:E10
+E10	Eq-Comparison:T55 Temporal-Recency:T56
+E12	Temporal-Connection:T57 Arg:E30 Arg2:E8
+E14	Temporal-Connection:T59 Arg:E15 Arg2:E5
+E18	Eq-Comparison:T60 Temporal-Period:T61
+E16	Drug:T65 Name:T66 Dose:E31 Duration:E22
+E20	And:T67 Arg:E11 Arg2:E16
+E22	Eq-Comparison:T68 Operator:T69 Value:T41 Temporal-Unit:T38
+E24	Study:T70 Temporality:E26
+E26	Eq-Comparison:T71 Temporal-Recency:T72
+E28	Temporal-Connection:T73 Arg:E22 Arg2:E24
+E35	Observation:T74 Name:T75
+E36	Observation:T76 Name:T77 Eq-Comparison:E32
+E37	Observation:T79 Name:T80 Eq-Comparison:E38
+E38	Eq-Comparison:T81 Operator:T34 Unit:T82
+E39	Eq-Comparison:T83 Temporal-Period:T84
+E40	Drug:T85 Name:T86 Temporality:E39
+E41	Drug:T87 Name:T88
+E42	Or:T89 Arg:E40 Arg2:E41
+E43	Observation:T90 Name:T91 Polarity:T92 Severity:T93
+E44	And:T94 Arg:E1 Arg2:E13
+E45	Observation:T95 Name:T96
+E46	Observation:T97 Name:T98 Eq-Comparison:E33
+E47	Modifier:T102 Modifies:T26
+E48	Condition:T103 Name:T104
+E49	And:T105 Arg:E48 Arg2:E27
+E50	Condition:T106 Name:T107
+E51	Or:T108 Arg:E29 Arg2:E17
+E52	Eq-Comparison:T109 Temporal-Period:T115
+E53	Condition:T110 Name:T111
+E54	Condition:T112 Name:T113
+E55	Or:T114 Arg:E53 Arg2:E54
+E56	Exception:T116 From:E19 Except:E21
+E57	Assertion:T117 Asserted:E58
+E58	Procedure:T118 Name:T119
+E59	Other:T120 Is-Other:E58
+E60	Study:T121
+E61	Temporal-Connection:T122 Arg:E58 Arg2:E60
+T1	Condition 597 616	portal hypertension
+T2	Condition-Name 597 616	portal hypertension
+T3	Procedure 34 50	liver transplant
+T4	Procedure-Name 34 50	liver transplant
+T5	Procedure 181 197	liver transplant
+T6	Procedure-Name 181 197	liver transplant
+T7	Condition 137 162	polyneuropathy disability
+T8	Condition-Name 137 162	polyneuropathy disability
+T9	Condition 74 85	amyloidosis
+T10	Condition-Name 74 85	amyloidosis
+T11	Procedure 223 248	immunosuppressive regimen
+T12	Procedure-Name 223 248	immunosuppressive regimen
+T13	Condition 622 629	ascites
+T14	Condition-Name 622 629	ascites
+T15	Condition 164 167	PND
+T16	Condition-Name 164 167	PND
+T17	Condition 797 825	human immunodeficiency virus
+T18	Condition-Name 797 825	human immunodeficiency virus
+T19	Procedure 959 976	organ transplants
+T20	Procedure-Name 959 976	organ transplants
+T21	Procedure 988 1004	liver transplant
+T22	Procedure-Name 988 1004	liver transplant
+T23	Observation 841 881	New York Heart Association heart failure
+T24	Observation-Name 841 881	New York Heart Association heart failure
+T25	Condition 733 744	amyloidosis
+T26	Condition-Name 733 744	amyloidosis
+T27	Condition 769 780	hepatitis B
+T28	Condition-Name 769 780	hepatitis B
+T29	Condition 782 793	hepatitis C
+T30	Condition-Name 782 793	hepatitis C
+T31	Eq-Operator 86 87	≥
+T32	Eq-Operator 254 255	≤
+T33	Eq-Operator 367 368	≥
+T34	Eq-Operator 397 418	greater than or equal
+T35	Eq-Operator 683 684	≤
+T36	Eq-Operator 900 901	>
+T37	Eq-Temporal-Unit 90 96	months
+T38	Eq-Temporal-Unit 294 300	months
+T39	Eq-Value 87 89	12
+T40	Eq-Value 255 257	10
+T41	Eq-Value 292 293	3
+T42	Eq-Value 368 370	70
+T43	Eq-Value 684 686	30
+T44	Eq-Value 901 902	2
+T45	Eq-Comparison 86 96	≥12 months
+T46	Eq-Comparison 254 264	≤10 mg/day
+T47	Eq-Comparison 367 371	≥70%
+T48	Eq-Comparison 683 702	≤30 mL/min/1.73 m^2
+T49	Eq-Comparison 900 902	>2
+T50	Eq-Comparison 25 33	Received
+T51	Eq-Temporal-Period 25 33	Received
+T52	Modifier 68 73	hATTR
+T53	Procedure 55 64	treatment
+T54	Study 104 109	study
+T55	Eq-Comparison 110 115	start
+T56	Eq-Temporal-Recency 110 115	start
+T57	Temporal-Connection 97 103	before
+T58	Polarity 125 133	increase
+T59	Temporal-Connection 175 180	after
+T60	Eq-Comparison 207 215	received
+T61	Eq-Temporal-Period 207 215	received
+T62	Stability 216 222	stable
+T63	Eq-Unit 258 260	mg
+T64	Eq-Temporal-Unit 261 264	day
+T65	Drug 268 278	prednisone
+T66	Drug-Name 268 278	prednisone
+T67	And 249 253	with
+T68	Eq-Comparison 283 300	at least 3 months
+T69	Eq-Operator 283 291	at least
+T70	Study 308 313	study
+T71	Eq-Comparison 314 319	start
+T72	Eq-Temporal-Recency 314 319	start
+T73	Temporal-Connection 301 307	before
+T74	Observation 329 357	Karnofsky Performance Status
+T75	Observation-Name 329 357	Karnofsky Performance Status
+T76	Observation 359 362	KPS
+T77	Observation-Name 359 362	KPS
+T78	Eq-Unit 370 371	%
+T79	Observation 381 396	vitamin A level
+T80	Observation-Name 381 396	vitamin A level
+T81	Eq-Comparison 397 443	greater than or equal to lower limit of normal
+T82	Eq-Unit 422 443	lower limit of normal
+T83	Eq-Comparison 473 492	previously received
+T84	Eq-Temporal-Period 473 492	previously received
+T85	Drug 493 502	inotersen
+T86	Drug-Name 493 502	inotersen
+T87	Drug 506 515	patisiran
+T88	Drug-Name 506 515	patisiran
+T89	Or 503 505	or
+T90	Observation 548 567	liver function test
+T91	Observation-Name 548 567	liver function test
+T92	Polarity 568 581	abnormalities
+T93	Severity 536 547	significant
+T94	And 617 621	with
+T95	Observation 639 675	estimated glomerular filtration rate
+T96	Observation-Name 639 675	estimated glomerular filtration rate
+T97	Observation 677 681	eGFR
+T98	Observation-Name 677 681	eGFR
+T99	Eq-Unit 687 689	mL
+T100	Eq-Temporal-Unit 690 693	min
+T101	Eq-Unit 694 702	1.73 m^2
+T102	Modifier 718 732	leptomeningeal
+T103	Condition 754 763	infection
+T104	Condition-Name 754 763	infection
+T105	And 764 768	with
+T106	Condition 827 830	HIV
+T107	Condition-Name 827 830	HIV
+T108	Or 794 796	or
+T109	Eq-Comparison 950 958	received
+T110	Condition 911 927	wheelchair bound
+T111	Condition-Name 911 927	wheelchair bound
+T112	Condition 931 940	bedridden
+T113	Condition-Name 931 940	bedridden
+T114	Or 928 930	or
+T115	Eq-Temporal-Period 950 958	received
+T116	Exception 977 987	other than
+T117	Assertion 1010 1017	Will be
+T118	Procedure 1033 1052	tetramer stabilizer
+T119	Procedure-Name 1033 1052	tetramer stabilizer
+T120	Other 1027 1032	other
+T121	Study 1064 1069	study
+T122	Temporal-Connection 1053 1059	during
+A1	Eq-Operator-Value T31 GTEQ
+A2	Eq-Operator-Value T32 LTEQ
+A3	Eq-Operator-Value T33 GTEQ
+A4	Eq-Operator-Value T34 GTEQ
+A5	Eq-Operator-Value T35 LTEQ
+A6	Eq-Operator-Value T36 GT
+A7	Eq-Temporal-Unit-Value T37 month
+A8	Eq-Temporal-Unit-Value T38 month
+A9	Eq-Temporal-Period-Value T51 past
+A10	Eq-Temporal-Recency-Value T56 first-time
+A11	Temporal-Connection-Type-Value E12 before
+A12	Polarity-Value T58 high
+A13	Temporal-Connection-Type-Value E14 after
+A14	Eq-Temporal-Period-Value T61 past
+A15	Stability-Value T62 stable
+A16	Eq-Temporal-Unit-Value T64 day
+A17	Eq-Operator-Value T69 GTEQ
+A18	Eq-Temporal-Recency-Value T72 first-time
+A19	Temporal-Connection-Type-Value E28 before
+A20	Observation-Type-Value T75 clinical-score
+A21	Observation-Type-Value T80 lab
+A22	Eq-Unit-Value T82 ref-range-normal
+A23	Eq-Temporal-Period-Value T84 past
+A24	Observation-Type-Value T91 lab
+A25	Polarity-Value T92 abnormal
+A26	Severity-Value T93 severe
+A27	Observation-Type-Value T96 lab
+A28	Observation-Type-Value T98 lab
+A29	Eq-Temporal-Unit-Value T100 minute
+A30	Eq-Temporal-Period-Value T115 past
+A31	Assertion-Type-Value E57 hypothetical
+A32	Temporal-Connection-Type-Value E61 during
+A33	Observation-Type-Value T24 clinical-score
+R1	Using Arg1:E6 Arg2:E3
+R2	Treatment-For Arg1:E6 Arg2:E9
+R3	Abbrev-Of Arg1:E15 Arg2:E7
+R4	Abbrev-Of Arg1:E36 Arg2:E35
+R5	Abbrev-Of Arg1:E46 Arg2:E45
+R6	Abbrev-Of Arg1:E50 Arg2:E17

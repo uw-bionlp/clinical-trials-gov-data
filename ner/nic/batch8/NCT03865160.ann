@@ -1,38 +1,30 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T23 Operator:T24 Value:T25 Temporal-Unit:T26
-E3	And:T3 Arg:E1 Arg2:E22
 E4	Eq-Comparison:T4 Operator:T28 Value:T29 Value2:T27 Unit:T42 Unit2:T43
 E6	Condition:T6 Name:T31
 E7	Condition:T7 Name:T32
 E8	Condition:T8 Name:T33
-E10	Or:T10 Arg:E8 Arg2:E9
 E13	Eq-Comparison:T13 Operator:T35 Value:T36 Temporal-Unit:T37
 E14	Condition:T14 Name:T38
 E15	Modifier:T15 Modifies:T40
-E16	Or:T16 Arg:E15 Arg2:E17
 E17	Modifier:T17 Modifies:T40
 E18	Procedure:T18 Name:T40 Temporality:E11
-E19	Temporal-Connection:T19 Arg:E20 Arg2:E21
 E20	Procedure:T20
 E21	Drug:T21 Name:T41
-E22	Observation:T44 Eq-Comparison:E4 Name:T5
-E9	Observation:T9 Eq-Comparison:E13 Name:T34
+E22	Observation:T44 Numeric-Filter:E4 Name:T5
+E9	Observation:T9 Numeric-Filter:E13 Name:T34
 E11	Eq-Comparison:T11 Temporal-Period:T39
 T1	Age 34 38	aged
 T2	Eq-Comparison 39 51	6 - 11 years
-T3	And 52 56	with
 T4	Eq-Comparison 57 80	-1- to -10 diopters (D)
 T6	Condition 117 136	organic eye disease
 T7	Condition 138 148	strabismus
 T8	Condition 150 161	astigmatism
-T10	Or 162 170	and / or
 T13	Eq-Comparison 185 191	>1.5 D
 T14	Condition 193 204	prematurity
 T15	Modifier 213 218	mono-
-T16	Or 219 220	/
 T17	Modifier 221 231	multifocal
 T18	Procedure 232 246	contact lenses
-T19	Temporal-Connection 248 251	pre
 T20	Procedure 252 261	treatment
 T21	Drug 267 275	atropine
 T22	Life-Stage-And-Gender 25 33	Children
@@ -60,7 +52,6 @@ T9	Observation 171 184	anisometropia
 T11	Eq-Comparison 206 209	use
 T40	Procedure-Name 232 246	contact lenses
 T5	Observation-Name 81 87	myopia
-A1	Temporal-Connection-Type-Value E19 before
 A2	Life-Stage-And-Gender-Type T22 child
 A3	Eq-Operator-Value T24 BETWEEN
 A4	Eq-Temporal-Unit-Value T26 year
@@ -68,6 +59,12 @@ A6	Eq-Operator-Value T28 BETWEEN
 A7	Eq-Operator-Value T35 GT
 A8	Eq-Temporal-Unit-Value T37 day
 A9	Eq-Temporal-Period-Value T39 present
-A5	Observation-Type-Value T5 measurement
-A10	Observation-Type-Value T34 measurement
+A5	Observation-Type-Value E22 measurement
+A10	Observation-Type-Value E9 measurement
 R1	Abbrev-Of Arg1:T43 Arg2:T42
+R2	And Arg1:E1 Arg2:E22
+R3	Or Arg1:E8 Arg2:E9
+R4	Or Arg1:E15 Arg2:E17
+R5	Before Arg1:E20 Arg2:E21
+R6	Or Arg1:E6 Arg2:E7
+R7	Or Arg1:E7 Arg2:E8

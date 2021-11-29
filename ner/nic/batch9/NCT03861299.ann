@@ -3,11 +3,10 @@ E3	Procedure:T3 Name:T4 Provider:E33
 E9	Procedure:T9 Name:T10
 E12	Condition:T12 Name:T13
 E14	Condition:T14 Name:T15 Severity:T123
-E15	Age:T22 Eq-Comparison:E16 Eq-Comparison2:E17
+E15	Age:T22 Numeric-Filter:E16 Numeric-Filter:E17
 E16	Eq-Comparison:T27 Operator:T16 Temporal-Unit:T19 Value:T23
 E17	Eq-Comparison:T28 Operator:T17 Temporal-Unit:T20 Value:T24
 E18	Eq-Comparison:T29 Operator:T18 Temporal-Unit:T21 Value:T26 Temporal-Period:T111
-E2	And:T30 Arg:E16 Arg2:E17
 E4	Condition:T31 Name:T32
 E6	Modifier:T7 Modifies:T32
 E7	Procedure:T33 Name:T34
@@ -16,29 +15,26 @@ E10	Modifier:T36 Modifies:T32
 E11	Modifier:T37 Modifies:T39
 E13	Condition:T38 Name:T39 Provider:E20
 E19	Assertion:T40 Asserted:E13
-E20	Provider:T41 Type:T42
-E21	And:T43 Arg:E4 Arg2:E13
+E20	Provider:T41
 E22	Condition:T44 Name:T45
 E23	Modifier:T46 Modifies:T45
 E24	Modifier:T47 Modifies:T45
 E25	Modifier:T48 Modifies:T45
 E26	Modifier:T49 Modifies:T45
 E5	Modifier:T5 Modifies:T45
-E27	Or:T6 Arg:E26 Arg2:E5
 E28	Procedure:T8 Name:T50
 E29	Condition:T51 Name:T52 Stage:E30
 E30	Eq-Comparison:T53 Unit:T54 Value:T55 Value2:T56
 E31	Condition:T57 Name:T58
 E32	Assertion:T59 Asserted:E3
-E33	Provider:T60 Type:T61
-E34	Observation:T62 Name:T63 Eq-Comparison:E35
+E33	Provider:T60
+E34	Observation:T62 Name:T63 Numeric-Filter:E35
 E35	Eq-Comparison:T64 Value:T25 Operator:T65
 E36	Condition:T66 Name:T67
 E37	Modifier:T68 Modifies:T67
 E38	Modifier:T69 Modifies:T67
 E39	Modifier:T70 Modifies:T67
-E40	Or:T71 Arg:E38 Arg2:E39
-E41	Condition:T72 Name:T73
+E41	Observation:T72 Name:T73
 E42	Modifier:T74 Modifies:T73
 E43	Condition:T75 Name:T76 Severity:T78
 E44	Modifier:T77 Modifies:T76
@@ -68,9 +64,7 @@ E67	Modifier:T116 Modifies:T114
 E68	Condition:T117 Name:T118
 E69	Modifier:T119 Modifies:T118
 E70	Modifier:T120 Modifies:T118
-E71	Or:T121 Arg:E65 Arg2:E68
 E72	Exception:T122 From:E62 Except:E65 Except2:E68
-E73	Or:T124 Arg:E14 Arg2:E12
 T1	Procedure 144 164	contrast enhancement
 T2	Procedure-Name 144 164	contrast enhancement
 T3	Procedure 480 489	resection
@@ -95,7 +89,6 @@ T26	Eq-Value 1072 1073	5
 T27	Eq-Comparison 29 38	≥18 years
 T28	Eq-Comparison 43 53	≤ 90 years
 T29	Eq-Comparison 1056 1079	within the past 5 years
-T30	And 39 42	and
 T31	Condition 59 64	Tumor
 T32	Condition-Name 59 64	Tumor
 T7	Modifier 78 101	Glioblastoma Multiforme
@@ -108,8 +101,6 @@ T38	Condition 237 252	tumour necrosis
 T39	Condition-Name 237 252	tumour necrosis
 T40	Assertion 223 233	suggestive
 T41	Provider 272 279	surgeon
-T42	Provider-Type 272 279	surgeon
-T43	And 192 195	and
 T44	Condition 285 291	Tumors
 T45	Condition-Name 285 291	Tumors
 T46	Modifier 301 326	in or near eloquent areas
@@ -117,7 +108,6 @@ T47	Modifier 328 340	motor cortex
 T48	Modifier 342 356	sensory cortex
 T49	Modifier 358 385	subcortical pyramidal tract
 T5	Modifier 389 401	speech areas
-T6	Or 386 388	or
 T8	Procedure 418 421	MRI
 T50	Procedure-Name 418 421	MRI
 T51	Condition 423 429	Sawaya
@@ -130,7 +120,6 @@ T57	Condition 458 463	tumor
 T58	Condition-Name 458 463	tumor
 T59	Assertion 467 479	suitable for
 T60	Provider 504 516	neurosurgeon
-T61	Provider-Type 504 516	neurosurgeon
 T62	Observation 523 550	Karnofsky performance scale
 T63	Observation-Name 523 550	Karnofsky performance scale
 T64	Eq-Comparison 551 561	80 or more
@@ -140,9 +129,8 @@ T67	Condition-Name 617 623	Tumors
 T68	Modifier 631 641	cerebellum
 T69	Modifier 643 653	brain stem
 T70	Modifier 657 664	midline
-T71	Or 654 656	or
-T72	Condition 700 707	lesions
-T73	Condition-Name 700 707	lesions
+T72	Observation 700 707	lesions
+T73	Observation-Name 700 707	lesions
 T74	Modifier 670 699	Multifocal contrast enhancing
 T75	Condition 748 753	tumor
 T76	Condition-Name 748 753	tumor
@@ -191,10 +179,8 @@ T117	Condition 1166 1175	carcinoma
 T118	Condition-Name 1166 1175	carcinoma
 T119	Modifier 1183 1187	skin
 T120	Modifier 1155 1165	basal cell
-T121	Or 1152 1154	or
 T122	Exception 1089 1101	exception of
 T123	Severity 1194 1200	Severe
-T124	Or 1209 1211	or
 A1	Eq-Operator-Value T16 GTEQ
 A2	Eq-Operator-Value T17 LTEQ
 A3	Eq-Operator-Value T18 LTEQ
@@ -203,7 +189,7 @@ A5	Eq-Temporal-Unit-Value T20 year
 A6	Eq-Temporal-Unit-Value T21 year
 A7	Assertion-Type-Value E19 possible
 A8	Assertion-Type-Value E32 hypothetical
-A9	Observation-Type-Value T63 clinical-score
+A9	Observation-Type-Value E34 clinical-score
 A10	Eq-Operator-Value T65 GTEQ
 A11	Severity-Value T78 severe
 A12	Polarity-Value T81 low
@@ -225,3 +211,12 @@ R7	Example-Of Arg1:E9 Arg2:E48
 R8	Treatment-For Arg1:E55 Arg2:E56
 R9	Treatment-For Arg1:E64 Arg2:E65
 R10	Treatment-For Arg1:E64 Arg2:E68
+R11	And Arg1:E16 Arg2:E17
+R12	And Arg1:E4 Arg2:E13
+R13	Or Arg1:E26 Arg2:E5
+R14	Or Arg1:E38 Arg2:E39
+R15	Or Arg1:E65 Arg2:E68
+R16	Or Arg1:E14 Arg2:E12
+R17	Or Arg1:E24 Arg2:E25
+R18	Or Arg1:E25 Arg2:E26
+R19	Or Arg1:E37 Arg2:E38

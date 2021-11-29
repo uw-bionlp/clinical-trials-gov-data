@@ -1,5 +1,5 @@
 E1	Procedure:T1 Name:T2
-E3	Observation:T3 Name:T4 Eq-Comparison:E5
+E3	Observation:T3 Name:T4 Numeric-Filter:E5
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
@@ -8,13 +8,13 @@ E15	Procedure:T15 Name:T16
 E17	Condition:T17 Name:T18
 E19	Procedure:T19 Name:T20
 E21	Condition:T21 Name:T22
-E23	Observation:T23 Name:T24 Eq-Comparison:E50
-E25	Observation:T25 Name:T26 Eq-Comparison:E56
+E23	Observation:T23 Name:T24 Numeric-Filter:E50
+E25	Observation:T25 Name:T26 Numeric-Filter:E56
 E27	Condition:T27 Name:T28
 E29	Procedure:T29 Name:T30
 E33	Condition:T33 Name:T34
-E37	Observation:T37 Name:T38 Eq-Comparison:E41
-E38	Age:T52 Eq-Comparison:E6
+E37	Observation:T37 Name:T38 Numeric-Filter:E41
+E38	Age:T52 Numeric-Filter:E6
 E40	Eq-Comparison:T66 Operator:T39 Value:T59
 E41	Eq-Comparison:T67 Operator:T40 Value:T60
 E42	Eq-Comparison:T68 Operator:T41 Value:T63 Unit:T51
@@ -24,7 +24,6 @@ E5	Eq-Comparison:T5 Temporal-Unit:T42 Value:T54 Temporal-Unit2:T43 Value2:T55 Te
 E6	Eq-Comparison:T6 Operator:T74 Temporal-Unit:T46 Value:T58
 E8	Contraindication:T75 Contraindicates:E1
 E10	Negation:T76 Negates:E8
-E12	Or:T77 Arg:E13 Arg2:E19
 E14	Contraindication:T78 Contraindicates:E15
 E16	Observation:T53 Name:T79
 E18	Negation:T80 Negates:E16
@@ -42,19 +41,14 @@ E43	Condition:T96 Name:T97
 E44	Negation:T98 Negates:E43
 E45	Condition:T99 Name:T100
 E46	Condition:T101 Name:T102
-E47	Or:T103 Arg:E45 Arg2:E46
-E48	Observation:T104 Name:T105 Eq-Comparison:E40
-E49	Or:T106 Arg:E48 Arg2:E37
+E48	Observation:T104 Name:T105 Numeric-Filter:E40
 E50	Eq-Comparison:T107 Temporal-Unit:T47 Value:T61 Temporal-Unit2:T48 Value2:T62
-E51	Temporal-Connection:T108 Arg:E46 Arg2:E23
-E52	Observation:T109 Name:T110 Eq-Comparison:E42
+E52	Observation:T109 Name:T110 Numeric-Filter:E42
 E53	Condition:T111 Name:T112 Polarity:T113
 E31	Assertion:T31 Asserted:E33
 E35	Condition:T32 Name:T35
 E54	Condition:T114 Name:T36
-E55	And:T115 Arg:E35 Arg2:E54
 E56	Eq-Comparison:T116 Temporal-Unit:T49 Value:T64 Temporal-Unit2:T50 Value2:T65
-E57	Temporal-Connection:T117 Arg:E33 Arg2:E25
 E58	Eq-Comparison:T118 Temporal-Period:T119
 E59	Other:T120 Is-Other:E8
 T1	Procedure 258 274	vaginal delivery
@@ -128,7 +122,6 @@ T6	Eq-Comparison 195 213	more than 18 years
 T74	Eq-Operator 195 204	more than
 T75	Contraindication 237 254	contraindications
 T76	Negation 228 230	no
-T77	Or 325 327	or
 T78	Contraindication 354 371	contraindications
 T53	Observation 407 422	gestational age
 T79	Observation-Name 407 422	gestational age
@@ -155,12 +148,9 @@ T99	Condition 745 763	ruptured membranes
 T100	Condition-Name 745 763	ruptured membranes
 T101	Condition 773 788	oligohydramnios
 T102	Condition-Name 773 788	oligohydramnios
-T103	Or 764 766	or
 T104	Observation 801 804	AFI
 T105	Observation-Name 801 804	AFI
-T106	Or 809 811	or
 T107	Eq-Comparison 834 848	37weeks 6 days
-T108	Temporal-Connection 822 828	before
 T109	Observation 904 907	EFW
 T110	Observation-Name 904 907	EFW
 T111	Condition 937 940	HIV
@@ -171,9 +161,7 @@ T32	Condition 1007 1035	regular painful contractions
 T35	Condition-Name 1007 1035	regular painful contractions
 T36	Condition-Name 1041 1056	cervical change
 T114	Condition 1041 1056	cervical change
-T115	And 1036 1040	with
 T116	Eq-Comparison 1065 1079	37weeks 6 days
-T117	Temporal-Connection 1058 1064	before
 T118	Eq-Comparison 301 306	prior
 T119	Eq-Temporal-Period 301 306	prior
 T120	Other 231 236	other
@@ -193,10 +181,8 @@ A13	Life-Stage-And-Gender-Type T71 female
 A14	Eq-Operator-Value T74 GT
 A15	Assertion-Type-Value E22 hypothetical
 A16	Family-Member-Type E24 mother
-A17	Temporal-Connection-Type-Value E51 before
 A18	Polarity-Value T113 positive
 A19	Assertion-Type-Value E31 possible
-A20	Temporal-Connection-Type-Value E57 before
 A21	Eq-Temporal-Period-Value T119 past
 R1	Treatment-For Arg1:E20 Arg2:E27
 R2	Treatment-For Arg1:E29 Arg2:E21
@@ -206,3 +192,13 @@ R5	Example-Of Arg1:E26 Arg2:E21
 R6	Example-Of Arg1:E28 Arg2:E21
 R7	Equivalent-To Arg1:E48 Arg2:E46
 R8	Equivalent-To Arg1:E52 Arg2:E9
+R9	Or Arg1:E13 Arg2:E19
+R10	Or Arg1:E45 Arg2:E46
+R11	Or Arg1:E48 Arg2:E37
+R12	Before Arg1:E46 Arg2:E23
+R13	And Arg1:E35 Arg2:E54
+R14	Before Arg1:E33 Arg2:E25
+R15	Or Arg1:E11 Arg2:E17
+R16	Or Arg1:E17 Arg2:E26
+R17	Or Arg1:E32 Arg2:E34
+R18	Or Arg1:E34 Arg2:E36

@@ -30,51 +30,41 @@ E12	Drug:T79 Name:T80
 E14	Drug:T81 Name:T82
 E16	Condition:T83 Name:T84 Temporality:E34
 E34	Eq-Comparison:T85 Temporal-Period:T86
-E35	Condition:T88 Name:T89 Severity:T91 Temporality:E29
+E35	Observation:T88 Name:T89 Severity:T91 Temporality:E29
 E36	Modifier:T90 Modifies:T89
 E37	Modifier:T93 Modifies:T10
 E38	Modifier:T94 Modifies:T10
 E39	Modifier:T95 Modifies:T10
-E40	Or:T96 Arg:E38 Arg2:E37
 E41	Eq-Comparison:T97 Operator:T20 Value:T98 Temporal-Unit:T35
-E42	Condition:T99 Name:T100 Severity:T101
+E42	Observation:T99 Name:T100 Severity:T101
 E43	Modifier:T102 Modifies:T12
-E44	Or:T103 Arg:E42 Arg2:E11
 E45	Condition:T105 Name:T106 Temporality:E50
 E46	Modifier:T107 Modifies:T106
 E47	Modifier:T108 Modifies:T106
-E48	Or:T109 Arg:E47 Arg2:E46
 E49	Modifier:T110 Modifies:T106
 E50	Eq-Comparison:T111 Operator:T22 Temporal-Unit:T113 Value:T112
 E51	Drug:T114 Name:T115 Temporality:E33 Temporality2:E19
-E52	Observation:T117 Name:T118 Eq-Comparison:E53
+E52	Observation:T117 Name:T118 Numeric-Filter:E53
 E53	Eq-Comparison:T119 Operator:T24 Unit:T120
-E54	Observation:T121 Name:T122 Eq-Comparison:E20
-E55	Observation:T123 Name:T124 Eq-Comparison:E21
-E56	Or:T125 Arg:E54 Arg2:E55
-E57	Observation:T126 Name:T127 Eq-Comparison:E22
-E58	Or:T130 Arg:E22 Arg2:E23
+E54	Observation:T121 Name:T122 Numeric-Filter:E20
+E55	Observation:T123 Name:T124 Numeric-Filter:E21
+E57	Observation:T126 Name:T127 Numeric-Filter:E22
 E59	Drug:T131 Name:T132 Temporality:E31
-E60	Observation:T133 Name:T134 Eq-Comparison:E24
-E61	And:T135 Arg:E59 Arg2:E60
-E62	Observation:T136 Name:T137 Eq-Comparison:E25
-E63	Or:T138 Arg:E60 Arg2:E62
-E64	Observation:T140 Name:T141 Eq-Comparison:E26
+E60	Observation:T133 Name:T134 Numeric-Filter:E24
+E62	Observation:T136 Name:T137 Numeric-Filter:E25
+E64	Observation:T140 Name:T141 Numeric-Filter:E26
 E17	Modifier:T17 Modifies:T14
 E65	Other:T18 Is-Other:E17
 E66	Modifier:T142 Modifies:T14
 E67	Modifier:T143 Modifies:T14
 E68	Modifier:T144 Modifies:T14
-E69	Or:T146 Arg:E66 Arg2:E17
 E70	Allergy:T147 Name:E32
 E32	Drug:T68 Name:T69
 E71	Eq-Comparison:T148 Temporal-Recency:T149
 E72	Condition:T151 Name:T152 Temporality:E71
-E73	Temporal-Connection:T153 Arg:E27 Arg2:E71
 E74	Observation:T154 Name:T155
 E75	Negation:T156 Negates:E74
-E76	Encounter:T157 Type:T158
-E77	Temporal-Connection:T159 Arg:E75 Arg2:E76
+E76	Encounter:T157
 E78	Study:T160
 E79	Negation:T161 Negates:E78
 T1	Condition 117 132	ischemic stroke
@@ -160,28 +150,25 @@ T84	Condition-Name 330 348	hemorrhagic stroke
 T85	Eq-Comparison 326 329	had
 T86	Eq-Temporal-Period 326 329	had
 T87	Eq-Value 450 455	three
-T88	Condition 482 488	trauma
-T89	Condition-Name 482 488	trauma
+T88	Observation 482 488	trauma
+T89	Observation-Name 482 488	trauma
 T90	Modifier 477 481	head
 T91	Severity 469 476	serious
 T92	Eq-Value 505 510	three
 T93	Modifier 548 564	gastrointestinal
 T94	Modifier 539 543	lung
 T95	Modifier 524 537	urinary tract
-T96	Or 545 547	or
 T97	Eq-Comparison 576 598	within the three weeks
 T98	Eq-Value 587 592	three
-T99	Condition 613 619	trauma
-T100	Condition-Name 613 619	trauma
+T99	Observation 613 619	trauma
+T100	Observation-Name 613 619	trauma
 T101	Severity 605 612	serious
 T102	Modifier 623 628	major
-T103	Or 620 622	or
 T104	Eq-Value 657 660	two
 T105	Condition 692 700	puncture
 T106	Condition-Name 692 700	puncture
 T107	Modifier 683 691	arterial
 T108	Modifier 673 679	lumbar
-T109	Or 680 682	or
 T110	Modifier 706 727	non-compressible site
 T111	Eq-Comparison 728 743	within one week
 T112	Eq-Value 735 738	one
@@ -197,20 +184,16 @@ T121	Observation 889 906	systolic pressure
 T122	Observation-Name 889 906	systolic pressure
 T123	Observation 921 939	diastolic pressure
 T124	Observation-Name 921 939	diastolic pressure
-T125	Or 918 920	or
 T126	Observation 957 970	blood glucose
 T127	Observation-Name 957 970	blood glucose
 T128	Eq-Unit 984 986	mg
 T129	Eq-Unit 987 989	dL
-T130	Or 975 977	or
 T131	Drug 1011 1025	anticoagulants
 T132	Drug-Name 1011 1025	anticoagulants
 T133	Observation 1034 1064	International Normalized Ratio
 T134	Observation-Name 1034 1064	International Normalized Ratio
-T135	And 1026 1030	with
 T136	Observation 1074 1090	prothrombin time
 T137	Observation-Name 1074 1090	prothrombin time
-T138	Or 1071 1073	or
 T139	Eq-Temporal-Unit 1094 1097	sec
 T140	Observation 1099 1113	platelet count
 T141	Observation-Name 1099 1113	platelet count
@@ -220,7 +203,6 @@ T142	Modifier 1166 1172	kidney
 T143	Modifier 1160 1164	lung
 T144	Modifier 1153 1158	heart
 T145	Severity 1145 1152	serious
-T146	Or 1173 1175	or
 T147	Allergy 1206 1213	allergy
 T68	Drug 1239 1244	rt-PA
 T69	Drug-Name 1239 1244	rt-PA
@@ -229,13 +211,10 @@ T149	Eq-Temporal-Recency 1281 1290	last time
 T150	Eq-Temporal-Unit 1266 1271	hours
 T151	Condition 1303 1315	asymptomatic
 T152	Condition-Name 1303 1315	asymptomatic
-T153	Temporal-Connection 1272 1276	from
 T154	Observation 1336 1344	troponin
 T155	Observation-Name 1336 1344	troponin
 T156	Negation 1349 1352	not
 T157	Encounter 1365 1374	admission
-T158	Encounter-Type 1365 1374	admission
-T159	Temporal-Connection 1362 1364	at
 T160	Study 1398 1403	study
 T161	Negation 1380 1388	excluded
 A1	Eq-Operator-Value T19 LTEQ
@@ -269,22 +248,20 @@ A30	Severity-Value T91 severe
 A31	Severity-Value T101 severe
 A32	Eq-Temporal-Unit-Value T113 week
 A33	Eq-Temporal-Unit-Value T116 hour
-A34	Observation-Type-Value T118 measurement
+A34	Observation-Type-Value E52 measurement
 A35	Eq-Unit-Value T120 ref-range-high
-A36	Observation-Type-Value T122 vital
-A37	Observation-Type-Value T124 vital
-A38	Observation-Type-Value T127 lab
-A39	Observation-Type-Value T134 measurement
-A40	Observation-Type-Value T137 lab
+A36	Observation-Type-Value E54 vital
+A37	Observation-Type-Value E55 vital
+A38	Observation-Type-Value E57 lab
+A39	Observation-Type-Value E60 measurement
+A40	Observation-Type-Value E62 lab
 A41	Eq-Temporal-Unit-Value T139 second
-A42	Observation-Type-Value T141 lab
+A42	Observation-Type-Value E64 lab
 A43	Severity-Value T145 severe
 A23	Eq-Temporal-Recency-Value T149 most-recent-time
 A44	Eq-Temporal-Unit-Value T150 hour
-A45	Temporal-Connection-Type-Value E73 after
-A46	Observation-Type-Value T155 lab
-A47	Encounter-Type-Value T158 inpatient
-A48	Temporal-Connection-Type-Value E77 during
+A46	Observation-Type-Value E74 lab
+A47	Encounter-Type-Value E76 inpatient
 A49	Acuteness-Type-Value T75 acute
 R1	If-Then Arg1:E1 Arg2:E2
 R2	Using Arg1:E8 Arg2:E3
@@ -292,3 +269,17 @@ R3	Abbrev-Of Arg1:E14 Arg2:E12
 R4	Equivalent-To Arg1:E12 Arg2:E3
 R5	Caused-By Arg1:E52 Arg2:E51
 R6	If-Then Arg1:E76 Arg2:E79
+R7	Or Arg1:E38 Arg2:E37
+R8	Or Arg1:E42 Arg2:E11
+R9	Or Arg1:E47 Arg2:E46
+R10	Or Arg1:E54 Arg2:E55
+R11	Or Arg1:E22 Arg2:E23
+R12	And Arg1:E59 Arg2:E60
+R13	Or Arg1:E60 Arg2:E62
+R14	Or Arg1:E66 Arg2:E17
+R15	After Arg1:E27 Arg2:E71
+R16	During Arg1:E75 Arg2:E76
+R17	Or Arg1:E5 Arg2:E7
+R18	Or Arg1:E39 Arg2:E38
+R19	Or Arg1:E67 Arg2:E66
+R20	Or Arg1:E68 Arg2:E67

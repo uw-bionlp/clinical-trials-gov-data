@@ -1,18 +1,16 @@
-E1	Condition:T1 Name:T2
+E1	Observation:T1 Name:T2
 E2	Condition:T3 Temporality:E3 Severity:T12
 E3	Eq-Comparison:T4 Temporal-Period:T5
-E4	Or:T6 Arg:E1 Arg2:E2
 E5	Negation:T7 Negates:E1
 E6	Observation:T8 Name:T9
 E7	Assertion:T10 Asserted:E6
 E8	Negation:T11 Negates:E6
 E9	Eq-Comparison:T13 Temporal-Period:T14
-T1	Condition 105 117	able to walk
-T2	Condition-Name 105 117	able to walk
+T1	Observation 105 117	able to walk
+T2	Observation-Name 105 117	able to walk
 T3	Condition 138 147	diagnoses
 T4	Eq-Comparison 121 129	previous
 T5	Eq-Temporal-Period 121 129	previous
-T6	Or 118 120	or
 T7	Negation 101 104	Not
 T8	Observation 188 196	exercise
 T9	Observation-Name 188 196	exercise
@@ -22,8 +20,9 @@ T12	Severity 153 161	severely
 T13	Eq-Comparison 25 33	Previous
 T14	Eq-Temporal-Period 25 33	Previous
 A1	Eq-Temporal-Period-Value T5 past
-A2	Observation-Type-Value T9 social-habit
+A2	Observation-Type-Value E6 social-habit
 A3	Assertion-Type-Value E7 hypothetical
 A4	Severity-Value T12 severe
 A5	Eq-Temporal-Period-Value T14 past
 R1	Caused-By Arg1:E8 Arg2:E2
+R2	Or Arg1:E1 Arg2:E2

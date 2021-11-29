@@ -1,11 +1,10 @@
-E1	Age:T7 Eq-Comparison:E4
+E1	Age:T7 Numeric-Filter:E4
 E3	Eq-Comparison:T12 Operator:T3 Value:T9 Unit:T19
 E4	Eq-Comparison:T13 Operator:T4 Temporal-Unit:T6 Value:T10
 E5	Eq-Comparison:T14 Operator:T5 Value:T11 Unit:T22
 E6	Condition:T15 Name:T16
-E7	Observation:T17 Name:T18 Eq-Comparison:E3
-E2	Or:T8 Arg:T1 Arg2:T2
-E8	Observation:T20 Name:T21 Eq-Comparison:E5
+E7	Observation:T17 Name:T18 Numeric-Filter:E3
+E8	Observation:T20 Name:T21 Numeric-Filter:E5
 E9	Condition:T23 Name:T24
 T1	Language 90 97	Swedish
 T2	Language 101 108	English
@@ -25,7 +24,6 @@ T16	Condition-Name 25 35	Minor burn
 T17	Observation 37 41	TBSA
 T18	Observation-Name 37 41	TBSA
 T19	Eq-Unit 47 48	%
-T8	Or 98 100	or
 T20	Observation 285 289	TBSA
 T21	Observation-Name 285 289	TBSA
 T22	Eq-Unit 294 295	%
@@ -35,3 +33,5 @@ A1	Eq-Operator-Value T3 LT
 A2	Eq-Operator-Value T4 GTEQ
 A3	Eq-Operator-Value T5 LT
 A4	Eq-Temporal-Unit-Value T6 year
+R1	Or Arg1:T1 Arg2:T2
+R2	Or Arg1:E6 Arg2:E7

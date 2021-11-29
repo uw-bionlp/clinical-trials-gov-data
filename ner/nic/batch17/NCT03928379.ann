@@ -1,6 +1,6 @@
 E1	Condition:T1 Name:T2
 E3	Observation:T3 Name:T4
-E5	Observation:T5 Name:T6 Eq-Comparison:E30
+E5	Observation:T5 Name:T6 Numeric-Filter:E30
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14
@@ -13,50 +13,37 @@ E27	Eq-Comparison:T55 Operator:T30 Temporal-Unit:T34 Value:T47
 E28	Eq-Comparison:T56 Operator:T31 Temporal-Unit:T35 Value:T51
 E29	Eq-Comparison:T57 Operator:T32 Value:T52 Unit:T25 Per:T26 Per2:T53 Unit2:T116 Per3:T117 Per4:T118
 E30	Eq-Comparison:T58 Operator:T40 Value:T41 Value2:T42 Unit:T36 Per:T7 Unit2:T37 Per2:T8
-E2	Observation:T63 Name:T64 Eq-Comparison:E26
-E4	Observation:T45 Name:T65 Eq-Comparison:E6
+E2	Observation:T63 Name:T64 Numeric-Filter:E26
+E4	Observation:T45 Name:T65 Numeric-Filter:E6
 E6	Eq-Comparison:T66 Unit:T67
-E7	Observation:T68 Name:T69 Eq-Comparison:E14
-E8	Observation:T70 Name:T71 Eq-Comparison:E14
-E10	Observation:T72 Name:T73 Eq-Comparison:E14
-E12	Observation:T74 Name:T75 Eq-Comparison:E14
+E7	Observation:T68 Name:T69 Numeric-Filter:E14
+E8	Observation:T70 Name:T71 Numeric-Filter:E14
+E10	Observation:T72 Name:T73 Numeric-Filter:E14
+E12	Observation:T74 Name:T75 Numeric-Filter:E14
 E14	Eq-Comparison:T76 Operator:T29 Unit:T77
-E16	And:T78 Arg:E7 Arg2:E8
-E18	And:T79 Arg:E8 Arg2:E10
 E20	Study:T44
-E22	Temporal-Connection:T80 Arg:E12 Arg2:E20
-E33	Or:T83 Arg:E11 Arg2:E9
 E24	Modifier:T81 Modifies:T10
 E34	Modifier:T82 Modifies:T10
 E35	Modifier:T84
 E36	Condition:T85 Name:T86
-E37	Or:T87 Arg:E13 Arg2:E36
-E38	Encounter:T88 Type:T89 Duration:E31
+E38	Encounter:T88 Duration:E31
 E31	Eq-Comparison:T59 Value:T46 Temporal-Unit:T33
 E39	Study:T60
-E40	Temporal-Connection:T90 Arg:E31 Arg2:E39
 E41	Condition:T92 Name:T93
 E42	Assertion:T94 Asserted:E41
 E21	Observation:T21 Name:T22 Temporality:E27
 E32	Study:T48
-E43	Temporal-Connection:T61 Arg:E27 Arg2:E32
 E44	Procedure:T49 Name:T95
 E45	Study:T96
 E46	Study:T50
-E47	And:T97 Arg:E20 Arg2:E46
 E48	Study:T98
-E49	Or:T99 Arg:E45 Arg2:E48
-E50	Temporal-Connection:T100 Arg:E44 Arg2:E45
 E51	Study:T101
 E52	Risk:T102 Stability:T103
 E53	Modifier:T104
 E54	Study:T105
-E55	Temporal-Connection:T106 Arg:E17 Arg2:E54
 E56	Drug:T107 Name:T108 Stability:T109 Temporality:E28
-E57	Or:T110 Arg:E54 Arg2:T109
 E58	Study:T111
-E59	Temporal-Connection:T112 Arg:E28 Arg2:E58
-E61	Observation:T114 Name:T115 Eq-Comparison:E29
+E61	Observation:T114 Name:T115 Numeric-Filter:E29
 E25	Modifier:T113 Modifies:T2
 E60	Modifier:T119 Modifies:T12
 E62	Assertion:T120 Asserted:E21
@@ -124,22 +111,15 @@ T74	Observation 484 486	CK
 T75	Observation-Name 484 486	CK
 T76	Eq-Comparison 494 517	within the normal range
 T77	Eq-Unit 505 517	normal range
-T78	And 428 431	and
-T79	And 450 460	along with
 T44	Study 521 530	screening
-T80	Temporal-Connection 518 520	at
-T83	Or 589 591	or
 T81	Modifier 592 609	latent autoimmune
 T82	Modifier 619 628	in adults
 T84	Modifier 639 651	uncontrolled
 T85	Condition 702 720	hyperosmolar state
 T86	Condition-Name 702 720	hyperosmolar state
-T87	Or 699 701	or
 T88	Encounter 731 746	hospitalization
-T89	Encounter-Type 731 746	hospitalization
 T59	Eq-Comparison 751 759	6 months
 T60	Study 769 778	screening
-T90	Temporal-Connection 760 768	prior to
 T91	Severity 807 813	severe
 T92	Condition 857 872	neuroglycopenic
 T93	Condition-Name 857 872	neuroglycopenic
@@ -147,28 +127,21 @@ T94	Assertion 873 881	symptoms
 T21	Observation 896 924	assistance of another person
 T22	Observation-Name 896 924	assistance of another person
 T48	Study 964 969	Visit
-T61	Temporal-Connection 955 960	prior
 T62	Polarity 985 993	abnormal
 T49	Procedure 1021 1024	ECG
 T95	Procedure-Name 1021 1024	ECG
 T96	Study 1029 1038	screening
 T50	Study 535 538	Day
-T97	And 531 534	and
 T98	Study 1046 1049	Day
-T99	Or 1039 1045	and/or
-T100	Temporal-Connection 1026 1028	at
 T101	Study 1152 1157	study
 T102	Risk 1109 1114	risks
 T103	Stability 1095 1104	increases
 T104	Modifier 1202 1219	poorly controlled
 T105	Study 1236 1245	screening
-T106	Temporal-Connection 1233 1235	at
 T107	Drug 1262 1289	antihypertensive medication
 T108	Drug-Name 1262 1289	antihypertensive medication
 T109	Stability 1252 1258	change
-T110	Or 1247 1249	or
 T111	Study 1308 1317	screening
-T112	Temporal-Connection 1305 1307	of
 T114	Observation 1331 1367	estimated glomerular filtration rate
 T115	Observation-Name 1331 1367	estimated glomerular filtration rate
 T25	Eq-Unit 1372 1383	milliliters
@@ -180,8 +153,8 @@ T118	Eq-Unit 1448 1455	1.73 m²
 T113	Modifier 30 37	Type II
 T119	Modifier 573 579	Type 1
 T120	Assertion 882 891	requiring
-A1	Observation-Type-Value T4 vital
-A2	Observation-Type-Value T6 vital
+A1	Observation-Type-Value E3 vital
+A2	Observation-Type-Value E5 vital
 A3	Eq-Operator-Value T27 LT
 A4	Eq-Operator-Value T28 LTEQ
 A5	Eq-Operator-Value T29 LTEQ
@@ -192,27 +165,21 @@ A9	Eq-Temporal-Unit-Value T33 month
 A10	Eq-Temporal-Unit-Value T34 month
 A11	Eq-Temporal-Unit-Value T35 day
 A12	Eq-Operator-Value T40 BETWEEN
-A15	Observation-Type-Value T64 vital
-A16	Observation-Type-Value T65 lab
+A15	Observation-Type-Value E2 vital
+A16	Observation-Type-Value E4 lab
 A17	Eq-Unit-Value T67 ref-range-normal
-A18	Observation-Type-Value T69 lab
-A19	Observation-Type-Value T71 lab
-A20	Observation-Type-Value T73 lab
-A21	Observation-Type-Value T75 lab
+A18	Observation-Type-Value E7 lab
+A19	Observation-Type-Value E8 lab
+A20	Observation-Type-Value E10 lab
+A21	Observation-Type-Value E12 lab
 A22	Eq-Unit-Value T77 ref-range-normal
-A23	Temporal-Connection-Type-Value E22 during
-A24	Encounter-Type-Value T89 inpatient
-A13	Temporal-Connection-Type-Value E40 before
+A24	Encounter-Type-Value E38 inpatient
 A25	Severity-Value T91 severe
 A26	Assertion-Type-Value E42 possible
-A14	Temporal-Connection-Type-Value E43 before
 A27	Polarity-Value T62 abnormal
-A28	Temporal-Connection-Type-Value E50 during
 A29	Stability-Value T103 change
-A30	Temporal-Connection-Type-Value E55 during
 A31	Stability-Value T109 change
-A32	Temporal-Connection-Type-Value E59 before
-A33	Observation-Type-Value T115 lab
+A33	Observation-Type-Value E61 lab
 A34	Eq-Temporal-Unit-Value T26 minute
 A35	Eq-Temporal-Unit-Value T117 minute
 A36	Assertion-Type-Value E62 hypothetical
@@ -233,3 +200,17 @@ R14	Abbrev-Of Arg1:T116 Arg2:T25
 R15	Abbrev-Of Arg1:T118 Arg2:T53
 R16	Equivalent-To Arg1:E36 Arg2:E19
 R17	Treatment-For Arg1:E38 Arg2:E13
+R18	And Arg1:E7 Arg2:E8
+R19	And Arg1:E8 Arg2:E10
+R20	During Arg1:E12 Arg2:E20
+R21	Or Arg1:E11 Arg2:E9
+R22	Or Arg1:E13 Arg2:E36
+R23	Before Arg1:E31 Arg2:E39
+R24	Before Arg1:E27 Arg2:E32
+R25	And Arg1:E20 Arg2:E46
+R26	Or Arg1:E45 Arg2:E48
+R27	During Arg1:E44 Arg2:E45
+R28	During Arg1:E17 Arg2:E54
+R29	Or Arg1:E54 Arg2:T109
+R30	Before Arg1:E28 Arg2:E58
+R31	Or Arg1:E10 Arg2:E12

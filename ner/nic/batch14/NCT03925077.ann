@@ -10,12 +10,10 @@ E4	Assertion:T21 Asserted:E2
 E5	Observation:T22 Name:T23
 E7	Observation:T24 Name:T25
 E9	Condition:T26 Name:T27
-E11	Or:T28 Arg:E3 Arg2:E1
 E14	Eq-Comparison:T29 Operator:T31 Value:T30
 E15	Modifier:T32 Modifies:E3
 E16	Modifier:T33 Modifies:E3
-E17	Or:T34 Arg:E15 Arg2:E16
-E18	Age:T35 Eq-Comparison:E13
+E18	Age:T35 Numeric-Filter:E13
 E19	Negation:T37 Negates:E6
 E20	Assertion:T38 Asserted:E6
 E21	Eq-Comparison:T39 Temporal-Period:T40
@@ -52,13 +50,11 @@ T24	Observation 136 141	PAR-Q
 T25	Observation-Name 136 141	PAR-Q
 T26	Condition 156 159	SCI
 T27	Condition-Name 156 159	SCI
-T28	Or 222 224	or
 T29	Eq-Comparison 197 209	C5 and below
 T30	Eq-Value 197 199	C5
 T31	Eq-Operator 200 209	and below
 T32	Modifier 173 183	incomplete
 T33	Modifier 187 195	complete
-T34	Or 184 186	or
 T35	Age 292 296	ages
 T36	Severity 393 404	significant
 T37	Negation 428 436	prevents
@@ -78,7 +74,7 @@ T50	Assertion 661 669	impeding
 A1	Eq-Temporal-Unit-Value T14 year
 A2	Eq-Operator-Value T15 BETWEEN
 A3	Assertion-Type-Value E4 hypothetical
-A4	Observation-Type-Value T23 survey-or-questionnaire
+A4	Observation-Type-Value E5 survey-or-questionnaire
 A6	Eq-Operator-Value T31 LTEQ
 A7	Severity-Value T36 severe
 A8	Assertion-Type-Value E20 hypothetical
@@ -90,3 +86,5 @@ R2	Equivalent-To Arg1:E5 Arg2:E2
 R3	Caused-By Arg1:E3 Arg2:E9
 R4	Caused-By Arg1:E19 Arg2:E10
 R5	Caused-By Arg1:E26 Arg2:E8
+R6	Or Arg1:E3 Arg2:E1
+R7	Or Arg1:E15 Arg2:E16

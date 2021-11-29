@@ -1,0 +1,184 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Procedure:T5 Name:T6 Temporality:E6
+E7	Condition:T7 Name:T8
+E9	Procedure:T9 Name:T10
+E13	Procedure:T13 Name:T14
+E28	Age:T31 Eq-Comparison:E2
+E2	Eq-Comparison:T38 Temporal-Unit:T29 Value:T33 Value2:T32 Operator:T37
+E4	Or:T39 Arg:E3 Arg2:E1
+E6	Eq-Comparison:T40 Temporal-Period:T41
+E11	Procedure:T11 Name:T12
+E14	Modifier:T45 Modifies:T12
+E16	Modifier:T46 Modifies:T12
+E18	Or:T47 Arg:E14 Arg2:E16
+E20	Condition:T34 Name:T35 Polarity:T48 Stage:E12
+E15	Condition:T15 Name:T21 Stage:E8
+E8	Eq-Comparison:T16 Value:T18 Value2:T17 Operator:T19
+E10	And:T20 Arg:E5 Arg2:E15
+E12	Eq-Comparison:T22 Value:T24 Value2:T23 Operator:T25
+E17	Procedure:T26 
+E19	Assertion:T27 Asserted:E17
+E21	Condition:T28 Name:T30
+E22	Modifier:T36 Modifies:T30
+E23	Modifier:T42 Modifies:T30
+E24	Or:T43 Arg:E22 Arg2:E23
+E25	Temporal-Connection:T44 Arg:E13 Arg2:E21
+E26	Procedure:T49 
+E27	Temporal-Connection:T50 Arg:E30 Arg2:E26
+E29	Assertion:T51 Asserted:E30
+E30	Observation:T52 Name:T53 Duration:E31
+E31	Eq-Comparison:T54 Operator:T55 Temporal-Unit:T57 Value:T56
+E32	Procedure:T58 Name:T59 Temporality:E59
+E33	Study:T60 
+E34	Temporal-Connection:T61 Arg:E32 Arg2:E33
+E35	Encounter:T62 Type:T63
+E36	Assertion:T64 Asserted:E35
+E37	Negation:T65 Negates:E35
+E38	Condition:T66 Name:T67
+E39	Modifier:T68 Modifies:E38
+E40	Modifier:T69 Modifies:E38
+E41	Or:T70 Arg:E40 Arg2:E39
+E42	Condition:T71 Name:T72
+E43	Condition:T73 Name:T74
+E44	Condition:T75 Name:T76
+E45	Assertion:T77 Asserted:E44
+E46	Or:T78 Arg:E43 Arg2:E45
+E47	Study:T79 
+E48	Temporal-Connection:T80 Arg:E44 Arg2:E47
+E49	Condition:T81 Name:T82
+E50	Condition:T83 Name:T84
+E51	And:T85 Arg:E49 Arg2:E50
+E52	Condition:T86 Name:T87 Severity:T88
+E53	Condition:T89 Name:T90
+E54	Or:T91 Arg:E52 Arg2:E53
+E55	Condition:T92 Name:T93
+E56	Modifier:T94 Modifies:T93
+E57	Modifier:T95 Modifies:T93
+E58	Or:T96 Arg:E56 Arg2:E57
+E59	Eq-Comparison:T97 Temporal-Period:T98
+E60	Modifier:T99 
+T1	Condition 72 95	chronic lower back pain
+T2	Condition-Name 72 95	chronic lower back pain
+T3	Condition 52 67	SIJ arthropathy
+T4	Condition-Name 52 67	SIJ arthropathy
+T5	Procedure 128 162	endoscopic electrothermic ablation
+T6	Procedure-Name 128 162	endoscopic electrothermic ablation
+T7	Condition 97 101	CLBP
+T8	Condition-Name 97 101	CLBP
+T9	Procedure 245 253	ablation
+T10	Procedure-Name 245 253	ablation
+T13	Procedure 360 384	diagnostic SIJ injection
+T14	Procedure-Name 360 384	diagnostic SIJ injection
+T29	Eq-Temporal-Unit 40 45	years
+T31	Age 28 31	age
+T32	Eq-Value 32 34	18
+T33	Eq-Value 37 39	85
+T37	Eq-Operator 35 36	-
+T38	Eq-Comparison 32 45	18 - 85 years
+T39	Or 68 71	and
+T40	Eq-Comparison 120 127	undergo
+T41	Eq-Temporal-Period 120 127	undergo
+T11	Procedure 210 221	facet joint
+T12	Procedure-Name 210 221	facet joint
+T45	Modifier 191 196	L4-L5
+T46	Modifier 204 209	L5-S1
+T47	Or 197 203	and/or
+T34	Condition 290 303	spinal levels
+T35	Condition-Name 290 303	spinal levels
+T48	Polarity 282 289	Correct
+T15	Condition 166 179	spinal levels
+T16	Eq-Comparison 180 185	S1-S3
+T17	Eq-Value 180 182	S1
+T18	Eq-Value 183 185	S3
+T19	Eq-Operator 182 183	-
+T20	And 163 165	of
+T21	Condition-Name 166 179	spinal levels
+T22	Eq-Comparison 313 318	L4-S3
+T23	Eq-Value 313 315	L4
+T24	Eq-Value 316 318	S3
+T25	Eq-Operator 315 316	-
+T26	Procedure 326 333	treated
+T27	Assertion 320 325	to be
+T28	Condition 401 411	diagnostic
+T30	Condition-Name 427 439	Branch Block
+T36	Modifier 412 418	Medial
+T42	Modifier 419 426	Lateral
+T43	Or 418 419	/
+T44	Temporal-Connection 386 394	followed
+T49	Procedure 525 534	operative
+T50	Temporal-Connection 520 524	post
+T51	Assertion 486 495	likely to
+T52	Observation 496 519	follow standard of care
+T53	Observation-Name 496 519	follow standard of care
+T54	Eq-Comparison 549 567	at least 24 months
+T55	Eq-Operator 549 557	at least
+T56	Eq-Value 558 560	24
+T57	Eq-Temporal-Unit 561 567	months
+T58	Procedure 619 640	invasive back surgery
+T59	Procedure-Name 619 640	invasive back surgery
+T60	Study 651 656	study
+T61	Temporal-Connection 641 646	after
+T62	Encounter 705 711	visits
+T63	Encounter-Type 705 711	visits
+T64	Assertion 683 694	to complete
+T65	Negation 673 682	Inability
+T66	Condition 797 810	communication
+T67	Condition-Name 797 810	communication
+T68	Modifier 786 796	impossible
+T69	Modifier 773 782	Difficult
+T70	Or 783 785	or
+T71	Condition 833 846	Breastfeeding
+T72	Condition-Name 833 846	Breastfeeding
+T73	Condition 848 856	pregnant
+T74	Condition-Name 848 856	pregnant
+T75	Condition 880 889	pregnancy
+T76	Condition-Name 880 889	pregnancy
+T77	Assertion 873 877	plan
+T78	Or 857 859	or
+T79	Study 917 922	study
+T80	Temporal-Connection 890 895	while
+T81	Condition 937 959	neurological disorders
+T82	Condition-Name 937 959	neurological disorders
+T83	Condition 965 985	mobility limitations
+T84	Condition-Name 965 985	mobility limitations
+T85	And 960 964	with
+T86	Condition 1001 1020	Parkinson's disease
+T87	Condition-Name 1001 1020	Parkinson's disease
+T88	Severity 992 1000	advanced
+T89	Condition 1024 1042	multiple sclerosis
+T90	Condition-Name 1024 1042	multiple sclerosis
+T91	Or 1021 1023	or
+T92	Condition 1176 1184	implants
+T93	Condition-Name 1176 1184	implants
+T94	Modifier 1188 1196	thoracic
+T95	Modifier 1200 1212	lumbar spine
+T96	Or 1197 1199	or
+T97	Eq-Comparison 598 607	receiving
+T98	Eq-Temporal-Period 598 607	receiving
+T99	Modifier 928 936	Systemic
+A1	Eq-Temporal-Unit-Value T29 year
+A3	Eq-Operator-Value T37 BETWEEN
+A4	Eq-Temporal-Period-Value T41 future
+A5	Polarity-Value T48 normal
+A2	Eq-Operator-Value T19 BETWEEN
+A6	Eq-Operator-Value T25 BETWEEN
+A7	Assertion-Type-Value E19 hypothetical
+A8	Temporal-Connection-Type-Value E25 before
+A9	Temporal-Connection-Type-Value E27 after
+A10	Assertion-Type-Value E29 hypothetical
+A11	Eq-Operator-Value T55 GTEQ
+A12	Eq-Temporal-Unit-Value T57 month
+A13	Temporal-Connection-Type-Value E34 after
+A14	Encounter-Type-Value T63 outpatient
+A15	Assertion-Type-Value E36 hypothetical
+A16	Assertion-Type-Value E45 intention
+A17	Temporal-Connection-Type-Value E48 during
+A18	Severity-Value T88 severe
+A19	Eq-Temporal-Period-Value T98 present
+R1	Abbrev-Of Arg1:E7 Arg2:E1
+R2	Using Arg1:E9 Arg2:E11
+R3	Found-By Arg1:E13 Arg2:E17
+R4	Example-Of Arg1:E52 Arg2:E50
+R5	Example-Of Arg1:E53 Arg2:E50
+R6	Abbrev-Of Arg1:E60 Arg2:E49

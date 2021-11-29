@@ -1,0 +1,123 @@
+E1	Eq-Comparison:T1 Temporal-Period:T43
+E2	Modifier:T2 Modifies:T44
+E3	Procedure:T3 Name:T44 Temporality:E1
+E4	Observation:T4 Name:T45 Eq-Comparison:E5
+E5	Eq-Comparison:T5 Value:T46 Value2:T24
+E6	Contraindication:T6 Contraindicates:E8
+E8	Procedure:T8 Name:T47
+E10	Or:T10 Arg:E7 Arg2:E11
+E11	Modifier:T11 Modifies:T49
+E12	Condition:T12 Name:T49 Stability:T7
+E14	Condition:T14 Name:T50 Acuteness:T13
+E15	Or:T15 Arg:E14 Arg2:E17
+E17	Drug:T17 Name:T51
+E19	Condition:T19 Name:T52 Acuteness:T18
+E20	Or:T20 Arg:E19 Arg2:E22
+E21	Temporal-Connection:T21 Arg:E22
+E22	Drug:T22 Name:T53
+E25	Condition:T25 Name:T54
+E26	Or:T26 Arg:E25 Arg2:E27
+E27	Assertion:T27 Asserted:E29
+E28	Eq-Comparison:T28 Temporal-Period:T55
+E29	Drug:T29 Name:T56 Temporality:E28
+E30	Allergy:T30 Name:E31 Name2:E33
+E31	Drug:T31
+E32	Or:T32 Arg:E31 Arg2:E33
+E33	Drug:T33
+E34	Study:T34 Study-Of:E33
+E35	Condition:T35 Name:T57
+E36	Or:T36 Arg:E35 Arg2:E38
+E37	Modifier:T37 Modifies:T58
+E38	Procedure:T38 Name:T58
+E39	Condition:T39 Name:T59
+E40	Condition:T40 Name:T60
+E41	Condition:T41 Name:T61 Stability:T68
+E42	Condition:T42 Name:T62
+E7	Modifier:T9 Modifies:T49
+E9	Procedure:T16 Name:T48
+E16	Temporal-Connection:T63 Arg:E9 Arg2:E17
+E24	Procedure:T64 Name:T65
+E23	Procedure:T23 Name:T66
+E43	Temporal-Connection:T67 Arg:E29 Arg2:E23
+T1	Eq-Comparison 25 34	Scheduled
+T2	Modifier 39 47	elective
+T3	Procedure 48 59	thoracotomy
+T4	Observation 65 68	ASA
+T5	Eq-Comparison 76 79	1,2
+T6	Contraindication 161 177	contraindication
+T8	Procedure 198 230	thoracic paravertebral catheters
+T10	Or 255 258	and
+T11	Modifier 259 277	transverse process
+T12	Condition 278 287	fractures
+T13	Acuteness 297 304	chronic
+T14	Condition 305 323	painful conditions
+T15	Or 324 326	or
+T17	Drug 340 346	opioid
+T18	Acuteness 355 362	chronic
+T19	Condition 363 381	painful conditions
+T20	Or 382 384	or
+T21	Temporal-Connection 385 388	pre
+T22	Drug 398 404	opioid
+T25	Condition 414 439	Coagulation abnormalities
+T26	Or 440 442	or
+T27	Assertion 443 457	expectation to
+T28	Eq-Comparison 461 463	on
+T29	Drug 464 490	therapeutic anticoagulants
+T30	Allergy 512 519	Allergy
+T31	Drug 534 539	drugs
+T32	Or 539 540	/
+T33	Drug 540 546	agents
+T34	Study 555 560	study
+T35	Condition 575 596	Altered mental status
+T36	Or 597 599	or
+T37	Modifier 600 609	emergency
+T38	Procedure 610 617	surgery
+T39	Condition 623 642	Comorbid conditions
+T40	Condition 651 657	sepsis
+T41	Condition 668 674	angina
+T42	Condition 676 700	congestive heart failure
+T43	Eq-Temporal-Period 25 34	Scheduled
+T44	Procedure-Name 48 59	thoracotomy
+T45	Observation-Name 65 68	ASA
+T46	Eq-Value 76 77	1
+T47	Procedure-Name 198 230	thoracic paravertebral catheters
+T49	Condition-Name 278 287	fractures
+T50	Condition-Name 305 323	painful conditions
+T51	Drug-Name 340 346	opioid
+T52	Condition-Name 363 381	painful conditions
+T53	Drug-Name 398 404	opioid
+T54	Condition-Name 414 439	Coagulation abnormalities
+T55	Eq-Temporal-Period 461 463	on
+T56	Drug-Name 464 490	therapeutic anticoagulants
+T57	Condition-Name 575 596	Altered mental status
+T58	Procedure-Name 610 617	surgery
+T59	Condition-Name 623 642	Comorbid conditions
+T60	Condition-Name 651 657	sepsis
+T61	Condition-Name 668 674	angina
+T62	Condition-Name 676 700	congestive heart failure
+T24	Eq-Value 78 79	2
+T7	Stability 236 244	Unstable
+T9	Modifier 245 254	vertebral
+T16	Procedure 330 339	operative
+T48	Procedure-Name 330 339	operative
+T63	Temporal-Connection 327 330	pre
+T64	Procedure 388 397	operative
+T65	Procedure-Name 388 397	operative
+T23	Procedure 495 506	operatively
+T66	Procedure-Name 495 506	operatively
+T67	Temporal-Connection 491 495	post
+T68	Stability 659 667	unstable
+A1	Temporal-Connection-Type-Value E21 before
+A2	Assertion-Type-Value E27 hypothetical
+A3	Eq-Temporal-Period-Value T43 future
+A4	Eq-Temporal-Period-Value T55 present
+A5	Stability-Value T7 change
+A6	Temporal-Connection-Type-Value E16 before
+A7	Temporal-Connection-Type-Value E43 after
+A8	Stability-Value T68 change
+A9	Observation-Type-Value T45 clinical-score
+A10	Acuteness-Type-Value T13 chronic
+A11	Acuteness-Type-Value T18 chronic
+R1	Example-Of Arg1:E40 Arg2:E39
+R2	Example-Of Arg1:E41 Arg2:E39
+R3	Example-Of Arg1:E42 Arg2:E39

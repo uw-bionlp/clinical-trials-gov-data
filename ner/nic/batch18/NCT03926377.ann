@@ -5,21 +5,18 @@ E6	Eq-Comparison:T16 Temporal-Period:T17
 E2	Modifier:T18 Modifies:T4
 E7	Eq-Comparison:T19 Operator:T20 Temporal-Unit:T6 Value:T8
 E8	Drug:T21 Name:T22
-E9	Temporal-Connection:T23 Arg:E7 Arg2:E8
 E10	Procedure:T24
-E11	And:T25 Arg:E8 Arg2:E10
 E12	Procedure:T26 Temporality:E14
 E13	Drug:T27 Name:T28
 E14	Eq-Comparison:T29 Temporal-Period:T30
 E15	Procedure:T10
 E16	Drug:T31 Name:T32
 E17	Assertion:T33 Asserted:E15
-E18	Observation:T34 Name:T35 Eq-Comparison:E19 Minimum-Count:E1
+E18	Observation:T34 Name:T35 Numeric-Filter:E19 Minimum-Count:E1
 E19	Eq-Comparison:T36 Operator:T37 Value:T38 Unit:T39
 E1	Eq-Comparison:T1 Operator:T2 Value:T11 Unit:T40
-E20	Observation:T41 Name:T42 Eq-Comparison:E21
+E20	Observation:T41 Name:T42 Numeric-Filter:E21
 E21	Eq-Comparison:T43 Operator:T44 Unit:T45
-E22	Or:T46 Arg:E18 Arg2:E20
 E23	Condition:T47 Name:T48
 E24	Risk:T49 Risk-For:E23 Minimum-Count:E25 Severity:T53
 E25	Eq-Comparison:T50 Value:T51 Operator:T52
@@ -41,9 +38,7 @@ T19	Eq-Comparison 100 118	more than 3 months
 T20	Eq-Operator 100 109	more than
 T21	Drug 134 149	corticosteroids
 T22	Drug-Name 134 149	corticosteroids
-T23	Temporal-Connection 119 124	after
 T24	Procedure 154 161	treated
-T25	And 150 153	and
 T9	Insurance 409 434	national health insurance
 T26	Procedure 583 592	treatment
 T27	Drug 565 582	anti-osteoporotic
@@ -69,7 +64,6 @@ T42	Observation-Name 695 705	FRAX score
 T43	Eq-Comparison 706 750	above the therapeutic intervention threshold
 T44	Eq-Operator 706 711	above
 T45	Eq-Unit 716 750	therapeutic intervention threshold
-T46	Or 692 694	or
 T47	Condition 811 823	osteoporosis
 T48	Condition-Name 811 823	osteoporosis
 T49	Risk 794 798	risk
@@ -85,13 +79,12 @@ A3	Eq-Temporal-Unit-Value T7 month
 A4	Eq-Temporal-Period-Value T15 past
 A5	Eq-Temporal-Period-Value T17 past
 A6	Eq-Operator-Value T20 GT
-A7	Temporal-Connection-Type-Value E9 after
 A8	Eq-Temporal-Period-Value T30 present
 A9	Assertion-Type-Value E17 hypothetical
 A10	Eq-Operator-Value T37 LTEQ
 A11	Eq-Operator-Value T2 GTEQ
-A12	Observation-Type-Value T35 measurement
-A13	Observation-Type-Value T42 clinical-score
+A12	Observation-Type-Value E18 measurement
+A13	Observation-Type-Value E20 clinical-score
 A14	Eq-Operator-Value T44 GT
 A15	Eq-Unit-Value T45 ref-range-high
 A16	Eq-Operator-Value T52 GTEQ
@@ -99,3 +92,6 @@ A17	Severity-Value T53 severe
 R1	Treatment-For Arg1:E10 Arg2:E3
 R2	Using Arg1:E12 Arg2:E13
 R3	Using Arg1:E15 Arg2:E16
+R4	After Arg1:E7 Arg2:E8
+R5	And Arg1:E8 Arg2:E10
+R6	Or Arg1:E18 Arg2:E20

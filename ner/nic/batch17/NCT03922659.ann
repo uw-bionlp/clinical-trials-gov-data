@@ -7,20 +7,16 @@ E10	Eq-Comparison:T13 Operator:T11 Value:T12
 E11	Eq-Comparison:T14 Temporal-Period:T15
 E2	Condition:T16 Name:T17 Temporality:E11
 E4	Condition:T18 Name:T19
-E6	Or:T20 Arg:E2 Arg2:E4
-E8	Observation:T22 Name:T23 Eq-Comparison:E10
+E8	Observation:T22 Name:T23 Numeric-Filter:E10
 E12	Condition:T24 Name:T25
 E13	Other:T26 Is-Other:E12
 E14	Condition:T27 Name:T28
-E15	Or:T29 Arg:E12 Arg2:E14
-E16	Condition:T30 Name:T31 Temporality:E18
+E16	Observation:T30 Name:T31 Temporality:E18
 E17	Modifier:T32 Modifies:T31
 E18	Eq-Comparison:T33 Temporal-Period:T34
 E19	Condition:T35 Name:T36
-E20	Or:T37 Arg:E16 Arg2:E19
 E21	Other:T38 Is-Other:E3
 E22	Other:T39 Is-Other:E5
-E23	Or:T40 Arg:E3 Arg2:E5
 E24	Contraindication:T41 Contraindicates:E1
 E25	Other:T42 Is-Other:E24
 T1	Procedure 516 549	transcranial magnetic stimulation
@@ -42,7 +38,6 @@ T16	Condition 113 134	neurological diseases
 T17	Condition-Name 113 134	neurological diseases
 T18	Condition 139 161	psychological problems
 T19	Condition-Name 139 161	psychological problems
-T20	Or 135 138	and
 T21	Acuteness 256 261	Acute
 T22	Observation 283 287	CIWA
 T23	Observation-Name 283 287	CIWA
@@ -51,21 +46,22 @@ T25	Condition-Name 314 335	neurological diseases
 T26	Other 308 313	other
 T27	Condition 340 362	psychological problems
 T28	Condition-Name 340 362	psychological problems
-T29	Or 336 339	and
-T30	Condition 384 390	trauma
-T31	Condition-Name 384 390	trauma
+T30	Observation 384 390	trauma
+T31	Observation-Name 384 390	trauma
 T32	Modifier 378 383	brain
 T33	Eq-Comparison 373 377	ever
 T34	Eq-Temporal-Period 373 377	ever
 T35	Condition 395 401	damage
 T36	Condition-Name 395 401	damage
-T37	Or 391 394	and
 T38	Other 412 417	other
 T39	Other 447 452	other
-T40	Or 444 446	or
 T41	Contraindication 490 507	contraindications
 T42	Other 484 489	other
 A1	Eq-Operator-Value T11 GT
 A2	Eq-Temporal-Period-Value T15 past
 A4	Eq-Temporal-Period-Value T34 anytime
 A5	Acuteness-Type-Value T21 acute
+R1	Or Arg1:E2 Arg2:E4
+R2	Or Arg1:E12 Arg2:E14
+R3	Or Arg1:E16 Arg2:E19
+R4	Or Arg1:E3 Arg2:E5

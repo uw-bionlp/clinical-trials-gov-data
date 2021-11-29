@@ -3,10 +3,10 @@ E2	Eq-Comparison:T6 Operator:T4 Value:T5 Value2:T10 Temporal-Unit:T3
 E3	Condition:T7 Name:T8
 E4	Modifier:T11 Modifies:E1
 E5	Condition:T12 Name:T13 Minimum-Count:E6
-E7	Study:T15 
+E7	Study:T15
 E8	Condition:T16 Name:T17
 E9	Condition:T18 Name:T19
-E10	Observation:T20 Name:T21 Eq-Comparison:E2
+E10	Observation:T20 Name:T21 Numeric-Filter:E2
 E6	Eq-Comparison:T14 Operator:T22
 T1	Condition 91 100	pregnancy
 T2	Condition-Name 91 100	pregnancy
@@ -32,7 +32,7 @@ T22	Eq-Operator 127 135	Multiple
 T19	Condition-Name 154 170	Mental condition
 A1	Eq-Temporal-Unit-Value T3 week
 A2	Eq-Operator-Value T4 BETWEEN
-A3	Observation-Type-Value T21 measurement
+A3	Observation-Type-Value E10 measurement
 A4	Eq-Operator-Value T22 GT
 A5	Life-Stage-And-Gender-Type T9 female
 R1	Caused-By Arg1:E8 Arg2:E9

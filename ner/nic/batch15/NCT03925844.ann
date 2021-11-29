@@ -1,10 +1,9 @@
 E1	Condition:T1 Name:T2
-E2	Age:T4 Eq-Comparison:E3
+E2	Age:T4 Numeric-Filter:E3
 E3	Eq-Comparison:T9 Operator:T5 Value:T6 Value2:T7 Temporal-Unit:T3
 E4	Study:T8
 E5	Procedure:T10 Name:T11 Temporality:E6
 E6	Eq-Comparison:T12 Temporal-Period:T13
-E7	Temporal-Connection:T14 Arg:E1 Arg2:E8
 E8	Study:T15
 T1	Condition 200 208	dementia
 T2	Condition-Name 200 208	dementia
@@ -19,9 +18,8 @@ T10	Procedure 136 164	neuropsicological assessment
 T11	Procedure-Name 136 164	neuropsicological assessment
 T12	Eq-Comparison 127 131	done
 T13	Eq-Temporal-Period 127 131	done
-T14	Temporal-Connection 219 221	at
 T15	Study 222 230	baseline
 A1	Eq-Temporal-Unit-Value T3 year
 A2	Eq-Operator-Value T5 BETWEEN
 A3	Eq-Temporal-Period-Value T13 past
-A4	Temporal-Connection-Type-Value E7 during
+R1	During Arg1:E1 Arg2:E8

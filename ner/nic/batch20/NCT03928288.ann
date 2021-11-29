@@ -9,9 +9,8 @@ E8	Eq-Comparison:T15 Value:T16 Temporal-Unit:T61
 E9	Condition:T18 Name:T19
 E10	Procedure:T20 Name:T21
 E11	Procedure:T22 Name:T23 Temporality:E7
-E12	Temporal-Connection:T14 Arg:E7 Arg2:E13
 E13	Study:T27
-E14	Age:T28 Eq-Comparison:E15
+E14	Age:T28 Numeric-Filter:E15
 E15	Eq-Comparison:T29 Value:T30 Temporal-Unit:T31 Operator:T32 Value2:T33 Temporal-Unit2:T34
 E16	Eq-Comparison:T35 Operator:T36 Value:T37 Temporal-Unit:T38
 E17	Procedure:T39 Name:T40 Temporality:E1 Duration:E16
@@ -19,21 +18,15 @@ E18	Procedure:T41 Name:T42
 E19	Modifier:T43 Modifies:T42
 E20	Drug:T44 Name:T45
 E21	Procedure:T46 Name:T47
-E22	Or:T48 Arg:E20 Arg2:E21
-E23	Observation:T49 Name:T50 Temporality:E2 Duration:E27 Eq-Comparison:E26
+E23	Observation:T49 Name:T50 Temporality:E2 Duration:E27 Numeric-Filter:E26
 E24	Modifier:T51 Modifies:T50
 E26	Eq-Comparison:T53 Operator:T54 Value:T55
 E27	Eq-Comparison:T56 Operator:T57 Value:T58 Temporal-Unit:T59 Per:T60
-E28	Temporal-Connection:T62 Arg:E23 Arg2:E8
 E29	Study:T63
-E30	Temporal-Connection:T64 Arg:E8 Arg2:E29
 E31	Assertion:T65 Asserted:E32
-E32	Encounter:T66
+E32	
 E33	Condition:T67 Name:T68
 E34	Condition:T69 Name:T71
-E35	Temporal-Connection:T70 Arg:E33
-E36	Temporal-Connection:T72 Arg:E34
-E37	Or:T73 Arg:E33 Arg2:E34
 E38	Drug:T74 Name:T75
 E39	Contraindication:T76 Contraindicates:E38
 E40	Condition:T77 Name:T78
@@ -48,23 +41,18 @@ E48	Modifier:T89 Modifies:T88
 E49	Condition:T90 Name:T91 Severity:T95 Acuteness:T133
 E50	Modifier:T92 Modifies:T91
 E51	Modifier:T93 Modifies:T91
-E52	Or:T94 Arg:E50 Arg2:E51
 E53	Procedure:T96 Name:T97 Stability:T98
 E54	Assertion:T99 Asserted:T98
 E55	Study:T100
 E56	Assertion:T101 Asserted:E55
-E57	Or:T102 Arg:E53 Arg2:E56
 E58	Condition:T103 Name:T104
 E59	Condition:T105 Name:T106
 E60	Condition:T107 Name:T108 Temporality:E63
 E61	Assertion:T109 Asserted:E60
-E62	Or:T110 Arg:E59 Arg2:E61
 E63	Eq-Comparison:T111 Temporal-Period:T112 Value:T113 Temporal-Unit:T114
 E64	Condition:T115 Name:T116 Temporality:E3 Temporality2:E4
 E65	Modifier:T117 Modifies:T116
-E66	Or:T118 Arg:E3 Arg2:E4
 E67	Condition:T119 Name:T120 Temporality:E5 Temporality2:E6
-E68	Or:T121 Arg:E5 Arg2:E6
 E69	Drug:T122
 E70	Drug:T123 Name:T124 Stability:T126
 E71	Other:T125 Is-Other:E69
@@ -96,7 +84,6 @@ T23	Procedure-Name 87 98	laparoscopy
 T24	Eq-Operator 109 115	within
 T25	Eq-Value 116 117	3
 T26	Eq-Temporal-Unit 117 118	y
-T14	Temporal-Connection 119 127	prior to
 T27	Study 128 133	study
 T28	Age 148 151	Age
 T29	Eq-Comparison 152 172	15 years to 40 years
@@ -118,7 +105,6 @@ T44	Drug 268 289	norethindrone acetate
 T45	Drug-Name 268 289	norethindrone acetate
 T46	Procedure 294 328	levonorgestrel intrauterine device
 T47	Procedure-Name 294 328	levonorgestrel intrauterine device
-T48	Or 291 293	or
 T49	Observation 349 353	pain
 T50	Observation-Name 349 353	pain
 T51	Modifier 342 348	pelvic
@@ -132,18 +118,13 @@ T59	Eq-Temporal-Unit 475 479	days
 T60	Eq-Temporal-Unit 480 485	month
 T16	Eq-Value 495 496	2
 T61	Eq-Temporal-Unit 497 503	months
-T62	Temporal-Connection 486 490	over
 T63	Study 513 518	study
-T64	Temporal-Connection 504 512	prior to
 T65	Assertion 535 546	Willingness
 T66	Encounter 562 567	visit
 T67	Condition 619 627	menarche
 T68	Condition-Name 619 627	menarche
 T69	Condition 636 645	menopause
-T70	Temporal-Connection 615 618	Pre
 T71	Condition-Name 636 645	menopause
-T72	Temporal-Connection 631 635	post
-T73	Or 628 630	or
 T74	Drug 672 683	cabergoline
 T75	Drug-Name 672 683	cabergoline
 T76	Contraindication 651 668	Contraindications
@@ -164,7 +145,6 @@ T90	Condition 884 891	illness
 T91	Condition-Name 884 891	illness
 T92	Modifier 857 863	mental
 T93	Modifier 875 883	systemic
-T94	Or 864 866	or
 T95	Severity 845 856	Significant
 T96	Procedure 912 927	pain assessment
 T97	Procedure-Name 912 927	pain assessment
@@ -172,7 +152,6 @@ T98	Stability 903 911	confound
 T99	Assertion 897 902	might
 T100	Study 959 964	study
 T101	Assertion 935 945	ability to
-T102	Or 928 930	or
 T103	Condition 970 978	Pregnant
 T104	Condition-Name 970 978	Pregnant
 T105	Condition 980 993	breastfeeding
@@ -180,7 +159,6 @@ T106	Condition-Name 980 993	breastfeeding
 T107	Condition 1017 1025	pregnant
 T108	Condition-Name 1017 1025	pregnant
 T109	Assertion 998 1016	planning to become
-T110	Or 995 997	or
 T111	Eq-Comparison 1033 1046	next 6 months
 T112	Eq-Temporal-Period 1033 1037	next
 T113	Eq-Value 1038 1039	6
@@ -188,10 +166,8 @@ T114	Eq-Temporal-Unit 1040 1046	months
 T115	Condition 1123 1129	cancer
 T116	Condition-Name 1123 1129	cancer
 T117	Modifier 1116 1122	Breast
-T118	Or 1139 1141	or
 T119	Condition 1156 1178	Thromboembolic disease
 T120	Condition-Name 1156 1178	Thromboembolic disease
-T121	Or 1188 1190	or
 T122	Drug 1218 1223	drugs
 T123	Drug 1236 1244	dopamine
 T124	Drug-Name 1236 1244	dopamine
@@ -214,7 +190,6 @@ A6	Eq-Temporal-Period-Value T12 past
 A9	Life-Stage-And-Gender-Type T17 female
 A10	Eq-Operator-Value T24 LTEQ
 A11	Eq-Temporal-Unit-Value T26 year
-A7	Temporal-Connection-Type-Value E12 before
 A12	Eq-Temporal-Unit-Value T31 year
 A13	Eq-Operator-Value T32 BETWEEN
 A14	Eq-Temporal-Unit-Value T34 year
@@ -225,11 +200,7 @@ A18	Eq-Operator-Value T57 GTEQ
 A19	Eq-Temporal-Unit-Value T59 day
 A20	Eq-Temporal-Unit-Value T60 month
 A8	Eq-Temporal-Unit-Value T61 month
-A21	Temporal-Connection-Type-Value E28 during
-A22	Temporal-Connection-Type-Value E30 before
 A23	Assertion-Type-Value E31 hypothetical
-A24	Temporal-Connection-Type-Value E35 before
-A25	Temporal-Connection-Type-Value E36 after
 A26	Severity-Value T95 severe
 A27	Stability-Value T98 change
 A28	Assertion-Type-Value E54 hypothetical
@@ -254,3 +225,19 @@ R11	Caused-By Arg1:T126 Arg2:E69
 R12	Example-Of Arg1:E72 Arg2:E69
 R13	Example-Of Arg1:E73 Arg2:E69
 R14	Example-Of Arg1:E74 Arg2:E69
+R15	Before Arg1:E7 Arg2:E13
+R16	Or Arg1:E20 Arg2:E21
+R17	During Arg1:E23 Arg2:E8
+R18	Before Arg1:E8 Arg2:E29
+R19	Or Arg1:E33 Arg2:E34
+R20	Or Arg1:E50 Arg2:E51
+R21	Or Arg1:E53 Arg2:E56
+R22	Or Arg1:E59 Arg2:E61
+R23	Or Arg1:E3 Arg2:E4
+R24	Or Arg1:E5 Arg2:E6
+R25	Or Arg1:E18 Arg2:E20
+R26	Or Arg1:E42 Arg2:E43
+R27	Or Arg1:E43 Arg2:E44
+R28	Or Arg1:E58 Arg2:E59
+R29	Or Arg1:E72 Arg2:E73
+R30	Or Arg1:E73 Arg2:E74

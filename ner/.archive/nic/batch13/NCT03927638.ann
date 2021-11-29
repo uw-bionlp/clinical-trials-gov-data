@@ -1,0 +1,134 @@
+E1	Condition:T1 Name:T2 Temporality:E40
+E3	Condition:T3 Name:T4 Temporality:E40
+E5	Condition:T5 Name:T6 Temporality:E40
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10 Temporality:E23
+E11	Condition:T11 Name:T12 Temporality:E23
+E13	Condition:T13 Name:T14 Temporality:E23
+E15	Procedure:T15 Name:T16
+E17	Procedure:T17 Name:T18
+E18	Age:T21 Eq-Comparison:E38
+E19	Eq-Comparison:T27 Operator:T22 Value:T23 Value2:T24
+E2	Condition:T28 Name:T29
+E4	Condition:T31 Name:T32 Temporality:E40
+E6	Condition:T33 Name:T34 Temporality:E40
+E8	Condition:T35 Name:T36 Temporality:E40
+E10	Condition:T37 Name:T38 Temporality:E40
+E12	Modifier:T39 Modifies:T2
+E14	Modifier:T40 Modifies:T2
+E16	Or:T41 Arg:E14 Arg2:E12
+E20	Modifier:T42 Modifies:E5
+E21	Condition:T43 Acuteness:T44
+E22	Or:T45 Arg:E5 Arg2:E21
+E23	Eq-Comparison:T46 Temporal-Period:T47
+E24	Procedure:T48 Temporality:E23
+E25	Or:T49 Arg:E13 Arg2:E9
+E26	Observation:T50 Name:T51 Duration:E19
+E27	Negation:T52 Negates:E26
+E28	Negation:T53 Negates:E26
+E29	Or:T54 Arg:E27 Arg2:E28
+E30	Drug:T55 Name:T56 Temporality:E31
+E31	Eq-Comparison:T57 Temporal-Period:T58
+E32	Exception:T59 From:E15 Except:E17
+E33	Or:T60 Arg:E30 Arg2:E15
+E34	Condition:T61 Name:T62
+E35	Assertion:T63 Asserted:E36
+E36	Condition:T64 Name:T65
+E37	Or:T66 Arg:E34 Arg2:E35
+E38	Eq-Comparison:T67 Operator:T68 Temporal-Unit:T20 Value:T26 Value2:T25
+E39	Negation:T69 Negates:E18
+E40	Eq-Comparison:T70 Temporal-Period:T71
+E42	Death:T72 
+E43	Risk:T73 Risk-For:E42
+E44	Modifier:T74 Modifies:T16
+E45	Negation:T75 Negates:E44
+T1	Condition 172 181	dystrophy
+T2	Condition-Name 172 181	dystrophy
+T3	Condition 120 137	pulmonary disease
+T4	Condition-Name 120 137	pulmonary disease
+T5	Condition 196 204	diabetes
+T6	Condition-Name 196 204	diabetes
+T7	Condition 287 311	infectious mononucleosis
+T8	Condition-Name 287 311	infectious mononucleosis
+T9	Condition 344 363	infectious diseases
+T10	Condition-Name 344 363	infectious diseases
+T11	Condition 313 322	hepatitis
+T12	Condition-Name 313 322	hepatitis
+T13	Condition 324 333	pneumonia
+T14	Condition-Name 324 333	pneumonia
+T15	Procedure 510 526	hormonal therapy
+T16	Procedure-Name 510 526	hormonal therapy
+T17	Procedure 528 541	birth control
+T18	Procedure-Name 528 541	birth control
+T19	Eq-Temporal-Unit 442 449	minutes
+T20	Eq-Temporal-Unit 631 636	years
+T21	Age 640 643	age
+T22	Eq-Operator 438 439	-
+T23	Eq-Value 436 438	15
+T24	Eq-Value 439 441	20
+T25	Eq-Value 621 623	18
+T26	Eq-Value 628 630	50
+T27	Eq-Comparison 436 449	15-20 minutes
+T28	Condition 25 32	healthy
+T29	Condition-Name 25 32	healthy
+T30	Life-Stage-And-Gender 33 38	adult
+T31	Condition 82 88	cancer
+T32	Condition-Name 82 88	cancer
+T33	Condition 90 104	cardiac issues
+T34	Condition-Name 90 104	cardiac issues
+T35	Condition 106 118	hypertension
+T36	Condition-Name 106 118	hypertension
+T37	Condition 139 145	stroke
+T38	Condition-Name 139 145	stroke
+T39	Modifier 163 171	muscular
+T40	Modifier 147 159	neurological
+T41	Or 160 162	or
+T42	Modifier 183 195	uncontrolled
+T43	Condition 238 248	conditions
+T45	Or 206 208	or
+T46	Eq-Comparison 259 268	currently
+T47	Eq-Temporal-Period 259 268	currently
+T48	Procedure 275 282	treated
+T49	Or 335 337	or
+T50	Observation 397 418	stand in one position
+T51	Observation-Name 397 418	stand in one position
+T52	Negation 374 380	unable
+T53	Negation 384 393	unwilling
+T54	Or 381 383	or
+T55	Drug 470 487	nicotine products
+T56	Drug-Name 470 487	nicotine products
+T57	Eq-Comparison 466 469	Use
+T58	Eq-Temporal-Period 466 469	Use
+T59	Exception 545 549	okay
+T60	Or 489 491	or
+T61	Condition 561 569	pregnant
+T62	Condition-Name 561 569	pregnant
+T63	Assertion 573 582	trying to
+T64	Condition 590 598	pregnant
+T65	Condition-Name 590 598	pregnant
+T66	Or 570 572	or
+T67	Eq-Comparison 613 636	between 18 and 50 years
+T68	Eq-Operator 613 620	between
+T69	Negation 609 612	not
+T70	Eq-Comparison 71 78	history
+T71	Eq-Temporal-Period 71 78	history
+T44	Acuteness 230 237	chronic
+T72	Death 213 229	life threatening
+T73	Risk 213 229	life threatening
+T74	Modifier 496 509	contraceptive
+T75	Negation 492 495	non
+A1	Eq-Temporal-Unit-Value T19 minute
+A2	Eq-Temporal-Unit-Value T20 year
+A3	Eq-Operator-Value T22 BETWEEN
+A4	Life-Stage-And-Gender-Type T30 adult
+A5	Eq-Temporal-Period-Value T47 present
+A6	Eq-Temporal-Period-Value T58 present
+A7	Assertion-Type-Value E35 intention
+A8	Eq-Operator-Value T68 BETWEEN
+A9	Eq-Temporal-Period-Value T71 past
+A10	Acuteness-Type-Value T44 chronic
+R1	Treatment-For Arg1:E24 Arg2:E7
+R2	Caused-By Arg1:E43 Arg2:E21
+R3	Treatment-For Arg1:E24 Arg2:E11
+R4	Treatment-For Arg1:E24 Arg2:E13
+R5	Treatment-For Arg1:E24 Arg2:E9

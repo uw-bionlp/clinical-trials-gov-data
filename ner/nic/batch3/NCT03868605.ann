@@ -1,11 +1,11 @@
-E1	Age:T1 Eq-Comparison:E3
+E1	Age:T1 Numeric-Filter:E3
 E3	Eq-Comparison:T3 Value:T21 Temporal-Unit:T22 Operator:T20
 E4	Modifier:T4 Modifies:T23
 E6	Eq-Comparison:T6 Value:T24 Operator:T25 Value:T26 Unit:T27
 E7	Condition:T7 Name:T45 Polarity:T28
 E8	Study:T8 Study-Of:E9
 E9	Procedure:T9 Name:T29
-E10	Age:T10 Eq-Comparison:E11
+E10	Age:T10 Numeric-Filter:E11
 E11	Eq-Comparison:T11 Operator:T30 Value:T31 Temporal-Unit:T32
 E13	Eq-Comparison:T13 Operator:T34 Value:T35 Unit:T36
 E14	Condition:T14 Name:T37
@@ -14,11 +14,10 @@ E16	Procedure:T16 Name:T39
 E17	Contraindication:T17 Contraindicates:E16
 E18	Condition:T18 Name:T42 Severity:T41 Acuteness:T5
 E19	Condition:T19 Name:T44 Severity:T43
-E2	Observation:T2 Eq-Comparison:E6 Name:T23
+E2	Observation:T2 Numeric-Filter:E6 Name:T23
 E20	Modifier:T46 Modifies:T45
 E21	Negation:T47 Negates:E20
-E22	And:T48 Arg2:E7 Arg:E2
-E23	Observation:T49 Eq-Comparison:E13 Name:T33
+E23	Observation:T49 Numeric-Filter:E13 Name:T33
 T1	Age 25 28	age
 T3	Eq-Comparison 29 39	≥ 18 years
 T4	Modifier 45 55	colorectal
@@ -63,7 +62,6 @@ T2	Observation 56 63	lesions
 T45	Condition-Name 107 111	sign
 T46	Modifier 99 106	lifting
 T47	Negation 95 98	non
-T48	And 81 85	with
 T49	Observation 222 229	lesions
 T5	Acuteness 334 339	acute
 A1	Eq-Operator-Value T20 GTEQ
@@ -76,3 +74,4 @@ A8	Eq-Operator-Value T34 GT
 A10	Severity-Value T41 severe
 A11	Severity-Value T43 severe
 A12	Acuteness-Type-Value T5 acute
+R1	And Arg1:E2 Arg2:E7

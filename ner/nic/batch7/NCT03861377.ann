@@ -1,9 +1,9 @@
 E1	Procedure:T1 Name:T40
-E2	Age:T2 Eq-Comparison:E3
+E2	Age:T2 Numeric-Filter:E3
 E3	Eq-Comparison:T3 Value:T41 Operator:T42 Value:T43 Temporal-Unit:T44
 E4	Procedure:T4 Name:T45 Temporality:E5
 E5	Eq-Comparison:T5 Temporal-Period:T46
-E6	Observation:T6 Name:T47 Eq-Comparison:E7
+E6	Observation:T6 Name:T47 Numeric-Filter:E7
 E7	Eq-Comparison:T7 Operator:T48 Value:T49 Unit:T50
 E8	Eq-Comparison:T8 Operator:T51 Value:T52 Unit:T53 Per:T54
 E9	Eq-Comparison:T9 Temporal-Period:T55
@@ -11,32 +11,27 @@ E10	Condition:T10 Name:T56 Temporality:E9
 E11	Condition:T11 Name:T57
 E12	Modifier:T12 Modifies:T58
 E13	Condition:T13 Name:T58
-E14	Or:T14 Arg:E13 Arg2:E15
 E15	Condition:T15 Name:T59
 E16	Condition:T16 Name:T60
 E17	Condition:T17 Name:T61
 E18	Exception:T18 From:E17 Except:E19
 E19	Condition:T19 Name:T62
 E20	Condition:T20 Name:T63
-E21	And:T21 Arg:E20 Arg2:E22
-E22	Observation:T22 Name:T64 Eq-Comparison:E23
+E22	Observation:T22 Name:T64 Numeric-Filter:E23
 E23	Eq-Comparison:T23 Operator:T65 Value:T66 Unit:T67 Per:T68
-E24	Modifier:T24 Modifies:T69
-E25	Or:T25 Arg:E24 Arg2:E26
-E26	Modifier:T26 Modifies:T69
-E27	Condition:T27 Name:T69
+E24	Modifier:T24 Modifies:E27
+E26	Modifier:T26 Modifies:E27
+E27	Condition:T27
 E28	Condition:T28 Name:T70
 E29	Drug:T29 Name:T71
-E31	Or:T31 Arg:E41 Arg2:E32
 E32	Modifier:T32 Modifies:T70
 E33	Condition:T33 Name:T74
 E34	Condition:T34 Name:T75
 E35	Condition:T35 Name:T76
-E36	Observation:T36 Name:T77 Eq-Comparison:E37 Eq-Comparison2:E39
+E36	Observation:T36 Name:T77 Numeric-Filter:E37 Numeric-Filter:E39
 E37	Eq-Comparison:T37 Operator:T78 Value:T79
-E38	Or:T38 Arg:E37 Arg2:E39
 E39	Eq-Comparison:T39 Operator:T80 Value:T81 Unit:T82 Per:T83
-E40	Observation:T84 Name:T85 Eq-Comparison:E8
+E40	Observation:T84 Name:T85 Numeric-Filter:E8
 E41	Modifier:T86 Modifies:T70
 E30	Modifier:T30 Modifies:T70
 T1	Procedure 25 48	Gynecological procedure
@@ -52,30 +47,25 @@ T10	Condition 200 212	hypertension
 T11	Condition 218 226	Diabetes
 T12	Modifier 232 240	Ischemic
 T13	Condition 241 254	heart disease
-T14	Or 255 257	or
 T15	Condition 258 281	cerebrovascular disease
 T16	Condition 287 306	Heart valve disease
 T17	Condition 321 339	cardiac arrhythmia
 T18	Exception 340 350	other than
 T19	Condition 351 364	extrasystoles
 T20	Condition 379 386	anaemia
-T21	And 387 391	with
 T22	Observation 392 402	hemoglobin
 T23	Eq-Comparison 409 424	below 9.0 gr/dl
 T24	Modifier 431 437	Kidney
-T25	Or 438 440	or
 T26	Modifier 441 448	hepatic
 T27	Condition 449 456	disease
 T28	Condition 462 478	Hypersensitivity
 T29	Drug 483 491	propofol
-T31	Or 504 506	or
 T32	Modifier 507 514	peanuts
 T33	Condition 520 529	Pregnancy
 T34	Condition 535 546	Poor health
 T35	Condition 558 579	Illicit substance use
 T36	Observation 585 588	BMI
 T37	Eq-Comparison 589 592	<20
-T38	Or 593 595	or
 T39	Eq-Comparison 596 605	>35 kg/m2
 T40	Procedure-Name 25 48	Gynecological procedure
 T41	Eq-Value 58 60	18
@@ -126,15 +116,21 @@ T30	Modifier 493 497	soya
 A1	Eq-Operator-Value T42 BETWEEN
 A2	Eq-Temporal-Unit-Value T44 year
 A3	Eq-Temporal-Period-Value T46 future
-A4	Observation-Type-Value T47 vital
+A4	Observation-Type-Value E6 vital
 A5	Eq-Operator-Value T48 LT
 A6	Eq-Operator-Value T51 LT
 A7	Eq-Temporal-Unit-Value T54 minute
 A8	Eq-Temporal-Period-Value T55 past
-A9	Observation-Type-Value T64 lab
+A9	Observation-Type-Value E22 lab
 A10	Eq-Operator-Value T65 GT
-A11	Observation-Type-Value T77 vital
+A11	Observation-Type-Value E36 vital
 A12	Eq-Operator-Value T78 LT
 A13	Eq-Operator-Value T80 GT
-A14	Observation-Type-Value T85 vital
+A14	Observation-Type-Value E40 vital
 R1	Caused-By Arg1:E28 Arg2:E29
+R2	Or Arg1:E13 Arg2:E15
+R3	And Arg1:E20 Arg2:E22
+R4	Or Arg1:E24 Arg2:E26
+R5	Or Arg1:E41 Arg2:E32
+R6	Or Arg1:E37 Arg2:E39
+R7	Or Arg1:E30 Arg2:E41

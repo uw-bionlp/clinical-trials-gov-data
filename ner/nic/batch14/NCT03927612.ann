@@ -7,27 +7,22 @@ E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
 E23	Condition:T23 Name:T24
-E24	Age:T26 Eq-Comparison:E26
+E24	Age:T26 Numeric-Filter:E26
 E25	Eq-Comparison:T32 Operator:T25 Value:T31
 E26	Eq-Comparison:T33 Operator:T27 Value:T28 Value2:T29
 E2	Condition:T30 Name:T34
 E6	Modifier:T37 Modifies:T12
 E8	Modifier:T38 Modifies:T12
-E10	Or:T39 Arg:E8 Arg2:E6
-E12	Or:T40 Arg:E23 Arg2:E11
-E16	Or:T41 Arg:E4 Arg2:E14
 E4	Modifier:T20 Modifies:T12
 E14	Modifier:T21 Modifies:T12
-E18	Observation:T35 Name:T36 Eq-Comparison:E25
+E18	Observation:T35 Name:T36 Numeric-Filter:E25
 E17	Condition:T17 Name:T18
 E19	Eq-Comparison:T42 Temporal-Period:T43
 E20	Eq-Comparison:T44 Temporal-Period:T45
-E21	Or:T46 Arg:E19 Arg2:E20
 E22	Eq-Comparison:T47 Temporal-Period:T48
-E27	Or:T50 Arg:E7 Arg2:E5
 E28	Condition:T51 Name:T52 Temporality:E33
 E29	Condition:T53 Name:T54
-E30	Condition:T55 Name:T56
+E30	Observation:T55 Name:T56
 E31	Procedure:T22 Name:T57
 E32	Contraindication:T58 Contraindicates:E31
 E33	Eq-Comparison:T59 Temporal-Period:T60
@@ -63,9 +58,6 @@ T30	Condition 117 120	ODD
 T34	Condition-Name 117 120	ODD
 T37	Modifier 168 190	Unspecified Disruptive
 T38	Modifier 155 164	Specified
-T39	Or 165 167	or
-T40	Or 146 148	or
-T41	Or 209 212	and
 T20	Modifier 192 207	Impulse-Control
 T21	Modifier 213 220	Conduct
 T35	Observation 263 276	full-scale IQ
@@ -76,17 +68,15 @@ T42	Eq-Comparison 405 412	current
 T43	Eq-Temporal-Period 405 412	current
 T44	Eq-Comparison 416 420	past
 T45	Eq-Temporal-Period 416 420	past
-T46	Or 413 415	or
 T47	Eq-Comparison 448 455	current
 T48	Eq-Temporal-Period 448 455	current
 T49	Severity 456 461	major
-T50	Or 445 447	or
 T51	Condition 498 519	neurological problems
 T52	Condition-Name 498 519	neurological problems
 T53	Condition 527 535	epilepsy
 T54	Condition-Name 527 535	epilepsy
-T55	Condition 537 559	traumatic brain injury
-T56	Condition-Name 537 559	traumatic brain injury
+T55	Observation 537 559	traumatic brain injury
+T56	Observation-Name 537 559	traumatic brain injury
 T22	Procedure 588 591	MRI
 T57	Procedure-Name 588 591	MRI
 T58	Contraindication 566 583	Contraindications
@@ -100,9 +90,17 @@ A4	Eq-Temporal-Period-Value T45 past
 A5	Eq-Temporal-Period-Value T48 present
 A6	Severity-Value T49 severe
 A7	Eq-Temporal-Period-Value T60 past
-A8	Observation-Type-Value T36 clinical-score
+A8	Observation-Type-Value E18 clinical-score
 R1	Abbrev-Of Arg1:E2 Arg2:E3
 R2	Abbrev-Of Arg1:E23 Arg2:E9
 R3	Caused-By Arg1:E17 Arg2:E15
 R4	Example-Of Arg1:E29 Arg2:E28
 R5	Example-Of Arg1:E30 Arg2:E28
+R6	Or Arg1:E8 Arg2:E6
+R7	Or Arg1:E23 Arg2:E11
+R8	Or Arg1:E4 Arg2:E14
+R9	Or Arg1:E19 Arg2:E20
+R10	Or Arg1:E7 Arg2:E5
+R11	Or Arg1:E15 Arg2:E1
+R12	Or Arg1:E6 Arg2:E4
+R13	Or Arg1:E29 Arg2:E30

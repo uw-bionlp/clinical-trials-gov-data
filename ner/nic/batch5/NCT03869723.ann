@@ -2,17 +2,14 @@ E1	Eq-Comparison:T1 Temporal-Period:T19
 E2	Procedure:T2 Name:T20 Temporality:E1
 E3	Procedure:T3 Name:T21
 E4	Eq-Comparison:T4 Operator:T22 Temporal-Unit:T23 Value:T33
-E5	Age:T5 Eq-Comparison:E4
+E5	Age:T5 Numeric-Filter:E4
 E6	Eq-Comparison:T6 Value:T24 Temporal-Unit:T25
-E7	Temporal-Connection:T7 Arg:E6 Arg2:E8
 E8	Procedure:T8
 E9	Negation:T9 Negates:E12
-E10	Temporal-Connection:T10 Arg:E12 Arg2:E11
 E11	Procedure:T11 Name:T36
 E12	Procedure:T12 Name:T26
 E13	Procedure:T13 Name:T27
 E14	Condition:T14 Name:T28
-E15	Or:T15 Arg:E14 Arg2:E16
 E16	Condition:T16 Name:T29
 E17	Observation:T17 Name:T38
 E18	Observation:T18 Name:T32
@@ -26,15 +23,12 @@ T3	Procedure 69 94	mandibular reconstruction
 T4	Eq-Comparison 108 117	≥18 years
 T5	Age 118 121	old
 T6	Eq-Comparison 141 149	6 months
-T7	Temporal-Connection 150 155	after
 T8	Procedure 170 179	treatment
 T9	Negation 213 220	without
-T10	Temporal-Connection 221 225	post
 T11	Procedure 226 235	operative
 T12	Procedure 236 251	scan evaluation
 T13	Procedure 272 283	chirurgical
 T14	Condition 306 314	Pregnant
-T15	Or 315 317	or
 T16	Condition 318 325	nursing
 T17	Observation 343 363	requiring protection
 T18	Observation 365 377	guardianship
@@ -60,8 +54,6 @@ T37	Contraindication 284 300	contraindication
 T38	Observation-Name 343 363	requiring protection
 T39	Observation 379 390	supervision
 T40	Observation-Name 379 390	supervision
-A1	Temporal-Connection-Type-Value E7 after
-A2	Temporal-Connection-Type-Value E10 after
 A3	Eq-Temporal-Period-Value T19 past
 A4	Eq-Operator-Value T22 GTEQ
 A5	Eq-Temporal-Unit-Value T23 year
@@ -72,3 +64,7 @@ R1	Using Arg1:E2 Arg2:E3
 R2	If-Then Arg1:E16 Arg2:T30
 R3	Example-Of Arg1:E18 Arg2:E17
 R4	Example-Of Arg1:E22 Arg2:E17
+R5	After Arg1:E6 Arg2:E8
+R6	After Arg1:E12 Arg2:E11
+R7	Or Arg1:E14 Arg2:E16
+R8	Or Arg1:E18 Arg2:E22

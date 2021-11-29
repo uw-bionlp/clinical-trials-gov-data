@@ -1,26 +1,23 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T57 Operator:T58 Value2:T59
 E3	Eq-Comparison:T3 Temporal-Period:T61
 E4	Observation:T4 Name:T64
-E5	Observation:T5 Name:T65 Eq-Comparison:E6
+E5	Observation:T5 Name:T65 Numeric-Filter:E6
 E6	Eq-Comparison:T6 Operator:T66 Value:T67
 E7	Criteria-Count:T7 Min-Value:E64 Criteria:E8 Criteria2:E9 Criteria3:E10 Criteria4:E12 Criteria5:E13
 E8	Condition:T8 Name:T114
 E9	Condition:T9 Name:T70
 E10	Condition:T10 Name:T71
-E12	Condition:T12 Name:T73 Acuteness:T11
+E12	Observation:T12 Name:T73 Acuteness:T11
 E13	Condition:T13 Name:T74
-E14	Observation:T14 Name:T75 Eq-Comparison:E15
+E14	Observation:T14 Name:T75 Numeric-Filter:E15
 E15	Eq-Comparison:T15 Operator:T76 Value:T77 Unit:T72
 E16	Eq-Comparison:T16 Temporal-Period:T78
 E17	Procedure:T17 Name:T79 Temporality:E16
 E18	Procedure:T18 Name:T80
-E19	Or:T19 Arg:E18 Arg2:E20
 E20	Procedure:T20 Name:T81
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Procedure:T22 Name:T82
 E25	Procedure:T25 Name:T83
-E26	Or:T26 Arg:E25 Arg2:E27
 E27	Procedure:T27 Name:T118
 E28	Assertion:T28 Asserted:E67
 E29	Negation:T29 Negates:E27
@@ -32,21 +29,18 @@ E34	Procedure:T34 Name:T120
 E35	Modifier:T35 Modifies:T120
 E36	Condition:T36 Name:T89
 E37	Condition:T37 Name:T88
-E38	Condition:T38 Name:T121
+E38	Observation:T38 Name:T121
 E39	Modifier:T39 Modifies:T121
-E40	Or:T40 Arg:E38 Arg2:E41
 E41	Procedure:T41 Name:T90
-E42	Or:T42 Arg:E68 Arg2:E43
 E43	Modifier:T43 Modifies:T90
-E44	Observation:T44 Name:T91 Eq-Comparison:E45
+E44	Observation:T44 Name:T91 Numeric-Filter:E45
 E45	Eq-Comparison:T45 Operator:T92 Value:T93 Unit:T94
 E46	Negation:T46 Negates:E47
 E47	Procedure:T47 Name:T95
-E48	Observation:T48 Name:T125 Polarity:T124 Eq-Comparison:E49
+E48	Observation:T48 Name:T125 Polarity:T124 Numeric-Filter:E49
 E49	Eq-Comparison:T49 Operator:T97 Value:T98
-E51	Study:T51 
+E51	Study:T51
 E52	Modifier:T52 Modifies:T100
-E53	Or:T53 Arg:E52 Arg2:E54
 E54	Modifier:T54 Modifies:T100
 E55	Condition:T55 Name:T100 Severity:T99
 E56	Condition:T56 Name:T101
@@ -76,19 +70,16 @@ T8	Condition 413 435	subjective afflictions
 T9	Condition 462 488	Cardiovascular Dysfunction
 T10	Condition 493 515	Neurocognitive Disease
 T11	Acuteness 520 527	Chronic
-T12	Condition 528 532	Pain
+T12	Observation 528 532	Pain
 T13	Condition 544 555	Sleep Apnea
 T14	Observation 717 723	T-MoCA
 T15	Eq-Comparison 724 733	score <19
 T16	Eq-Comparison 797 802	Prior
 T17	Procedure 803 827	metallic device implants
 T18	Procedure 836 854	cardiac pacemakers
-T19	Or 854 855	/
 T20	Procedure 855 869	defibrillators
-T21	Or 870 872	or
 T22	Procedure 873 888	perfusion pumps
 T25	Procedure 918 940	Ferromagnetic implants
-T26	Or 941 943	or
 T27	Procedure 944 951	objects
 T28	Assertion 957 963	cannot
 T29	Negation 967 974	removed
@@ -100,11 +91,9 @@ T34	Procedure 1046 1052	valves
 T35	Modifier 1058 1069	steel parts
 T36	Condition 1071 1086	metal fragments
 T37	Condition 1088 1096	shrapnel
-T38	Condition 1098 1105	tattoos
+T38	Observation 1098 1105	tattoos
 T39	Modifier 1106 1118	near the eye
-T40	Or 1120 1122	or
 T41	Procedure 1123 1128	steel
-T42	Or 1138 1140	or
 T43	Modifier 1141 1148	jewelry
 T44	Observation 1154 1165	Body weight
 T45	Eq-Comparison 1166 1174	>450 lbs
@@ -114,7 +103,6 @@ T48	Observation 1234 1240	T-MoCA
 T49	Eq-Comparison 1248 1251	<20
 T51	Study 1356 1361	study
 T52	Modifier 1380 1390	behavioral
-T53	Or 1391 1393	or
 T54	Modifier 1394 1404	functional
 T55	Condition 1405 1415	disability
 T56	Condition 1423 1443	cognitive impairment
@@ -132,7 +120,7 @@ T68	Eq-Operator 383 391	at least
 T69	Eq-Value 392 395	one
 T70	Condition-Name 462 488	Cardiovascular Dysfunction
 T71	Condition-Name 493 515	Neurocognitive Disease
-T73	Condition-Name 528 532	Pain
+T73	Observation-Name 528 532	Pain
 T74	Condition-Name 544 555	Sleep Apnea
 T75	Observation-Name 717 723	T-MoCA
 T76	Eq-Operator 730 731	<
@@ -184,7 +172,7 @@ T118	Procedure-Name 944 951	objects
 T119	Negation 957 963	cannot
 T120	Procedure-Name 1046 1052	valves
 T88	Condition-Name 1088 1096	shrapnel
-T121	Condition-Name 1098 1105	tattoos
+T121	Observation-Name 1098 1105	tattoos
 T122	Modifier 1129 1137	implants
 T123	Assertion 1180 1189	Inability
 T124	Polarity 1230 1233	Low
@@ -193,17 +181,17 @@ A2	Assertion-Type-Value E28 hypothetical
 A4	Eq-Operator-Value T58 BETWEEN
 A5	Eq-Temporal-Period-Value T61 past
 A6	Eq-Temporal-Recency-Value T62 first-time
-A7	Observation-Type-Value T63 survey-or-questionnaire
-A8	Observation-Type-Value T64 clinical-score
+A7	Observation-Type-Value E61 survey-or-questionnaire
+A8	Observation-Type-Value E4 clinical-score
 A9	Eq-Operator-Value T66 GT
 A10	Eq-Operator-Value T68 GTEQ
 A11	Eq-Operator-Value T76 LT
 A12	Eq-Temporal-Period-Value T78 past
-A13	Observation-Type-Value T91 vital
+A13	Observation-Type-Value E44 vital
 A14	Eq-Operator-Value T92 GT
 A15	Eq-Operator-Value T97 LT
 A16	Severity-Value T99 severe
-A17	Observation-Type-Value T96 social-habit
+A17	Observation-Type-Value E57 social-habit
 A18	Eq-Operator-Value T104 BETWEEN
 A19	Eq-Temporal-Period-Value T105 present
 A20	Eq-Temporal-Period-Value T107 past
@@ -233,3 +221,15 @@ R18	Example-Of Arg1:E38 Arg2:E27
 R19	Example-Of Arg1:E41 Arg2:E27
 R20	Equivalent-To Arg1:E49 Arg2:T124
 R21	Caused-By Arg1:E55 Arg2:E56
+R22	Or Arg1:E18 Arg2:E20
+R23	Or Arg1:E20 Arg2:E22
+R24	Or Arg1:E25 Arg2:E27
+R25	Or Arg1:E38 Arg2:E41
+R26	Or Arg1:E68 Arg2:E43
+R27	Or Arg1:E52 Arg2:E54
+R28	Or Arg1:E30 Arg2:E31
+R29	Or Arg1:E31 Arg2:E32
+R30	Or Arg1:E32 Arg2:E33
+R31	Or Arg1:E33 Arg2:E34
+R32	Or Arg1:E36 Arg2:E37
+R33	Or Arg1:E37 Arg2:E38

@@ -13,21 +13,16 @@ E27	Procedure:T27 Name:T28
 E31	Procedure:T31 Name:T32
 E33	Procedure:T33 Name:T34
 E35	Procedure:T35 Name:T36 Stability:T64
-E36	Age:T39 Eq-Comparison:E2
+E36	Age:T39 Numeric-Filter:E2
 E2	Eq-Comparison:T41 Temporal-Unit:T38 Operator:T42 Value:T40
 E4	Eq-Comparison:T43 Temporal-Period:T44
 E6	Modifier:T45 Modifies:E3
-E8	Or:T46 Arg:E6 Arg2:E10
 E10	Modifier:T47
-E7	And:T7 Arg:E36 Arg2:E1
-E12	And:T8 Arg:E3 Arg2:E5
 E16	Condition:T48 Name:T49
 E18	Eq-Comparison:T51 Temporal-Period:T52
-E20	Or:T53 Arg:E33 Arg2:E31
 E21	Observation:T54 Name:T55
 E22	Procedure:T56 Temporality:E24 Location:T37 Name:T22
 E24	Eq-Comparison:T57 Temporal-Period:T58
-E26	And:T59 Arg:E27 Arg2:E25
 E14	Assertion:T21 Asserted:E9
 E28	Assertion:T29 Asserted:T64
 E29	Assertion:T30 Asserted:E27
@@ -71,23 +66,18 @@ T42	Eq-Operator 53 57	over
 T43	Eq-Comparison 92 101	scheduled
 T44	Eq-Temporal-Period 92 101	scheduled
 T45	Modifier 170 177	robotic
-T46	Or 178 180	or
 T47	Modifier 181 193	laparoscopic
-T7	And 74 77	who
-T8	And 195 199	with
 T48	Condition 521 529	Pregnant
 T49	Condition-Name 521 529	Pregnant
 T50	Life-Stage-And-Gender 530 535	women
 T51	Eq-Comparison 571 578	planned
 T52	Eq-Temporal-Period 571 578	planned
-T53	Or 600 602	or
 T54	Observation 652 661	prisoners
 T55	Observation-Name 652 661	prisoners
 T37	Location 739 759	Butterworth hospital
 T56	Procedure 717 724	surgery
 T57	Eq-Comparison 728 735	planned
 T58	Eq-Temporal-Period 728 735	planned
-T59	And 996 1007	in addition
 T21	Assertion 248 255	will be
 T22	Procedure-Name 717 724	surgery
 T29	Assertion 901 903	if
@@ -114,3 +104,9 @@ R2	Equivalent-To Arg1:E13 Arg2:E9
 R3	If-Then Arg1:T50 Arg2:E16
 R4	Equivalent-To Arg1:E33 Arg2:E23
 R5	Example-Of Arg1:E21 Arg2:E30
+R6	Or Arg1:E6 Arg2:E10
+R7	And Arg1:E36 Arg2:E1
+R8	And Arg1:E3 Arg2:E5
+R9	Or Arg1:E33 Arg2:E31
+R10	And Arg1:E27 Arg2:E25
+R11	Or Arg1:E13 Arg2:E11

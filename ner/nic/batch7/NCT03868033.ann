@@ -14,10 +14,10 @@ E14	Procedure:T14 Name:T39
 E15	Eq-Comparison:T15 Temporal-Period:T55
 E16	Other:T16 Is-Other:E17
 E17	Procedure:T17 Name:T40 Temporality:E15
-E24	Age:T51 Eq-Comparison:E2
+E24	Age:T51 Numeric-Filter:E2
 E3	Eq-Comparison:T3 Temporal-Period:T52
 E25	Modifier:T54 Modifies:T33
-E18	Observation:T18 Name:T19 Eq-Comparison:E19
+E18	Observation:T18 Name:T19 Numeric-Filter:E19
 E19	Eq-Comparison:T20 Operator:T21 Value:T22 Unit:T23 Per:T41
 E20	Allergy:T42 Name:E21
 E21	Drug:T43 Name:T44
@@ -89,7 +89,7 @@ A7	Eq-Temporal-Period-Value T36 past
 A8	Eq-Temporal-Period-Value T37 present
 A12	Eq-Temporal-Period-Value T52 past
 A13	Eq-Temporal-Period-Value T55 anytime
-A9	Observation-Type-Value T19 lab
+A9	Observation-Type-Value E18 lab
 A10	Eq-Operator-Value T21 LT
 A11	Eq-Temporal-Unit-Value T41 minute
 R1	If-Then Arg1:E1 Arg2:T25

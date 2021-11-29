@@ -1,0 +1,107 @@
+E1	Condition:T1 Name:T2
+E3	Procedure:T3 Name:T4 Temporality:E29
+E5	Procedure:T5 Name:T6 Temporality:E15
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E10	Eq-Comparison:T14 Operator:T12 Value:T13
+E2	Age:T15 Eq-Comparison:E10
+E4	Modifier:T16 Modifies:E3
+E6	Procedure:T17 Name:T18
+E8	Assertion:T19 Asserted:E6
+E11	Procedure:T20 Name:T23
+E13	Modifier:T24 Modifies:E14
+E14	Procedure:T25 Name:T26
+E15	Eq-Comparison:T27 Temporal-Period:T28
+E16	Modifier:T29 Modifies:E7 Modifies2:E17
+E17	Condition:T30 Name:T31
+E18	Or:T32 Arg:E7 Arg2:E17
+E19	Procedure:T33 Name:T34
+E20	Procedure:T35 Name:T36
+E21	Condition:T37 Name:T38
+E22	Assertion:T39 Asserted:E21
+E23	Modifier:T40 Modifies:E25
+E24	Modifier:T41 Modifies:E25
+E25	Condition:T42 Temporality:E30
+E26	Drug:T43 
+E28	Negation:T46 Negates:E4
+E29	Eq-Comparison:T47 Temporal-Period:T48
+E12	Modifier:T21 Modifies:T23
+E30	Eq-Comparison:T22 Temporal-Period:T49
+E31	Or:T50 Arg:E25 Arg2:E26
+E27	Study:T44 Temporality:E32
+E32	Eq-Comparison:T51 Temporal-Period:T52
+E33	Modifier:T53 Modifies:E27
+E34	Or:T54 Arg:E32 Arg2:E33
+E35	Assertion:T55 Asserted:T57
+E36	Study:T56 Stability:T57
+T1	Condition 398 417	Atrial fibrillation
+T2	Condition-Name 398 417	Atrial fibrillation
+T3	Procedure 79 94	cardiac surgery
+T4	Procedure-Name 79 94	cardiac surgery
+T5	Procedure 233 248	cardiac surgery
+T6	Procedure-Name 233 248	cardiac surgery
+T7	Condition 265 280	cardiac disease
+T8	Condition-Name 265 280	cardiac disease
+T9	Condition 800 809	Pregnancy
+T10	Condition-Name 800 809	Pregnancy
+T11	Life-Stage-And-Gender 25 30	Adult
+T12	Eq-Operator 36 37	≥
+T13	Eq-Value 38 40	18
+T14	Eq-Comparison 36 40	≥ 18
+T15	Age 32 35	age
+T16	Modifier 70 78	emergent
+T17	Procedure 128 159	mediastinal chest tube drainage
+T18	Procedure-Name 128 159	mediastinal chest tube drainage
+T19	Assertion 100 111	Anticipated
+T20	Procedure 195 202	surgery
+T23	Procedure-Name 195 202	surgery
+T24	Modifier 208 213	Re-do
+T25	Procedure 214 221	surgery
+T26	Procedure-Name 214 221	surgery
+T27	Eq-Comparison 227 232	Prior
+T28	Eq-Temporal-Period 227 232	Prior
+T29	Modifier 254 264	Congenital
+T30	Condition 284 295	deformation
+T31	Condition-Name 284 295	deformation
+T32	Or 281 283	or
+T33	Procedure 301 319	Transplant surgery
+T34	Procedure-Name 301 319	Transplant surgery
+T35	Procedure 325 358	Ventricular Assist Device Surgery
+T36	Procedure-Name 325 358	Ventricular Assist Device Surgery
+T37	Condition 374 392	pulmonary air leak
+T38	Condition-Name 374 392	pulmonary air leak
+T39	Assertion 364 373	Suspected
+T40	Modifier 568 575	medical
+T41	Modifier 579 590	psychiatric
+T42	Condition 591 600	condition
+T43	Drug 617 628	medications
+T46	Negation 66 69	non
+T47	Eq-Comparison 55 65	undergoing
+T48	Eq-Temporal-Period 55 65	undergoing
+T21	Modifier 185 194	Emergency
+T22	Eq-Comparison 555 567	pre-existing
+T49	Eq-Temporal-Period 555 567	pre-existing
+T50	Or 602 604	or
+T45	Stability 605 616	interfering
+T44	Study 679 693	clinical trial
+T51	Eq-Comparison 640 648	previous
+T52	Eq-Temporal-Period 640 648	previous
+T53	Modifier 652 662	concurrent
+T54	Or 649 651	or
+T55	Assertion 736 741	might
+T56	Study 780 794	clinical trial
+T57	Stability 742 751	interfere
+A1	Life-Stage-And-Gender-Type T11 adult
+A2	Eq-Operator-Value T12 GTEQ
+A3	Assertion-Type-Value E8 possible
+A5	Eq-Temporal-Period-Value T28 past
+A6	Assertion-Type-Value E22 possible
+A7	Eq-Temporal-Period-Value T48 present
+A4	Eq-Temporal-Period-Value T49 past
+A8	Stability-Value T45 change
+A9	Eq-Temporal-Period-Value T52 past
+A10	Assertion-Type-Value E35 hypothetical
+A11	Stability-Value T57 change
+R2	Equivalent-To Arg1:E2 Arg2:T11
+R1	Caused-By Arg1:T45 Arg2:E26
+R3	Caused-By Arg1:T57 Arg2:E27

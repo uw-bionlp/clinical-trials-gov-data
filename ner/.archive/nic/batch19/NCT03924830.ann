@@ -1,0 +1,91 @@
+E1	Condition:T1 Name:T2
+E2	Eq-Comparison:T5 Operator:T11 Value:T6
+E3	Condition:T12 Name:T13 Minimum-Count:E2
+E4	Eq-Comparison:T14 Operator:T15 Value:T7
+E5	Condition:T16 Name:T17 Minimum-Count:E4
+E6	Modifier:T18 Modifies:T17
+E7	Modifier:T19 Modifies:T17
+E8	Or:T20 Arg:E6 Arg2:E7
+E9	Condition:T21 Name:T22 Stability:T25
+E10	Modifier:T23 Modifies:T22
+E11	Or:T24 Arg:E5 Arg2:E9
+E12	Assertion:T26 Asserted:T25
+E13	Modifier:T27 Modifies:T22
+E15	Coreference:T30 Refers-To:E5
+E14	Condition:T28 Name:T29
+E16	Observation:T31 Name:T32 Eq-Comparison:E17
+E17	Eq-Comparison:T33 Operator:T34 Value:T8 Unit:T4
+E18	Condition:T35 Name:T36
+E19	Observation:T37 Name:T38 Eq-Comparison:E20
+E20	Eq-Comparison:T39 Operator:T40 Value:T9 Unit:T41
+E21	And:T42 Arg:E18 Arg2:E19
+E22	Condition:T43 Name:T44
+E23	Negation:T45 Negates:E22
+E24	Modifier:T46 Modifies:T44
+E25	Condition:T47 Name:T48
+E26	Or:T49 Arg:E1 Arg2:E25
+E27	Drug:T50 Name:T51 Temporality:E28
+E28	Eq-Comparison:T52 Temporal-Period:T53 Value:T10 Temporal-Unit:T3
+T1	Condition 416 435	periodontal disease
+T2	Condition-Name 416 435	periodontal disease
+T3	Eq-Temporal-Unit 507 511	days
+T4	Eq-Unit 243 245	mm
+T6	Eq-Value 56 58	20
+T7	Eq-Value 96 97	3
+T8	Eq-Value 241 242	2
+T9	Eq-Value 302 304	50
+T10	Eq-Value 504 506	30
+T5	Eq-Comparison 51 58	only 20
+T11	Eq-Operator 51 55	only
+T12	Condition 59 76	teeth in function
+T13	Condition-Name 59 76	teeth in function
+T14	Eq-Comparison 91 97	only 3
+T15	Eq-Operator 91 95	only
+T16	Condition 135 142	lesions
+T17	Condition-Name 135 142	lesions
+T18	Modifier 98 114	carious occlusal
+T19	Modifier 118 134	proximo-occlusal
+T20	Or 115 117	or
+T21	Condition 151 163	restorations
+T22	Condition-Name 151 163	restorations
+T23	Modifier 147 150	old
+T24	Or 144 146	or
+T25	Stability 180 187	changed
+T26	Assertion 169 179	need to be
+T27	Modifier 192 207	different teeth
+T30	Coreference 209 214	Those
+T28	Condition 215 222	lesions
+T29	Condition-Name 215 222	lesions
+T31	Observation 246 250	deep
+T32	Observation-Name 246 250	deep
+T33	Eq-Comparison 231 245	more than 2 mm
+T34	Eq-Operator 231 240	more than
+T35	Condition 264 278	exposed dentin
+T36	Condition-Name 264 278	exposed dentin
+T37	Observation 309 326	margins in enamel
+T38	Observation-Name 309 326	margins in enamel
+T39	Eq-Comparison 297 305	only 50%
+T40	Eq-Operator 297 301	only
+T41	Eq-Unit 304 305	%
+T42	And 280 283	and
+T43	Condition 353 373	periodontal mobility
+T44	Condition-Name 353 373	periodontal mobility
+T45	Negation 341 344	not
+T46	Modifier 328 333	Teeth
+T47	Condition 442 459	gingival bleeding
+T48	Condition-Name 442 459	gingival bleeding
+T49	Or 437 441	with
+T50	Drug 468 491	anti-inflammatory drugs
+T51	Drug-Name 468 491	anti-inflammatory drugs
+T52	Eq-Comparison 499 511	last 30 days
+T53	Eq-Temporal-Period 499 503	last
+A1	Eq-Temporal-Unit-Value T3 day
+A2	Eq-Operator-Value T11 EQ
+A3	Eq-Operator-Value T15 EQ
+A4	Stability-Value T25 change
+A5	Assertion-Type-Value E12 hypothetical
+A6	Observation-Type-Value T32 measurement
+A7	Eq-Operator-Value T34 GT
+A8	Eq-Operator-Value T40 EQ
+A9	Observation-Type-Value T38 measurement
+A10	Eq-Temporal-Period-Value T53 past

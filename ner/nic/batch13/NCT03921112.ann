@@ -1,15 +1,18 @@
 E1	Condition:T1 Name:T2
 E2	Procedure:T6 Name:T7
-E4	Observation:T8 Name:T9 Eq-Comparison:E13
-E5	Observation:T10 Name:T11 Eq-Comparison:E14
-E6	Observation:T12 Name:T13 Eq-Comparison:E15
+E4	Observation:T8 Name:T9 Numeric-Filter:E13
+E5	Observation:T10 Name:T11 Numeric-Filter:E14
+E6	Observation:T12 Name:T13 Numeric-Filter:E15
 E7	Condition:T14 Name:T15
 E8	Condition:T16 Name:T17
-E3	Observation:T3 Name:T4 Eq-Comparison:E9
+E3	Observation:T3 Name:T4 Numeric-Filter:E9
 E9	Eq-Comparison:T18 Operator:T20 Unit:T19 Value:T5
 E10	Drug:T21 Name:T22 Dose:T23 Temporality:E11
 E11	Eq-Comparison:T24 Temporal-Period:T25
 E12	Condition:T26 Name:T27
+E13	Eq-Comparison:T28 Value:T29
+E14	Eq-Comparison:T30 Value:T31
+E15	Eq-Comparison:T32 Value:T33
 T1	Condition 186 202	pleural effusion
 T2	Condition-Name 186 202	pleural effusion
 T5	Eq-Value 274 275	8
@@ -37,19 +40,16 @@ T24	Eq-Comparison 290 292	on
 T25	Eq-Temporal-Period 290 292	on
 T26	Condition 335 358	diaphragmatic paralysis
 T27	Condition-Name 335 358	diaphragmatic paralysis
-A1	Observation-Type-Value T4 clinical-score
+T28	Eq-Comparison 66 67	I
+T29	Eq-Value 66 67	I
+T30	Eq-Comparison 72 74	II
+T31	Eq-Value 72 74	II
+T32	Eq-Comparison 79 82	III
+T33	Eq-Value 79 82	III
+A1	Observation-Type-Value E3 clinical-score
 A2	Eq-Operator-Value T20 GT
 A3	Polarity-Value T23 high
 A4	Eq-Temporal-Period-Value T25 present
-A5	Observation-Type-Value T9 clinical-score
-T28	Eq-Comparison 66 67	I
-E13	Eq-Comparison:T28 Value:T29
-T29	Eq-Value 66 67	I
-A6	Observation-Type-Value T11 clinical-score
-T30	Eq-Comparison 72 74	II
-E14	Eq-Comparison:T30 Value:T31
-T31	Eq-Value 72 74	II
-A7	Observation-Type-Value T13 clinical-score
-T32	Eq-Comparison 79 82	III
-E15	Eq-Comparison:T32 Value:T33
-T33	Eq-Value 79 82	III
+A5	Observation-Type-Value E4 clinical-score
+A6	Observation-Type-Value E5 clinical-score
+A7	Observation-Type-Value E6 clinical-score

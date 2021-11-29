@@ -6,18 +6,17 @@ E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E13	Procedure:T13 Name:T14
 E15	Procedure:T15 Name:T16
-E16	Age:T21 Eq-Comparison:E19
+E16	Age:T21 Numeric-Filter:E19
 E17	Eq-Comparison:T25 Operator:T17 Value:T22
 E18	Eq-Comparison:T26 Operator:T18 Value:T23 Unit:T35 Per:T36
 E19	Eq-Comparison:T27 Operator:T19 Temporal-Unit:T20 Value:T24
 E2	Assertion:T28 Asserted:E5
-E4	Observation:T29 Name:T30 Eq-Comparison:E17 Temporality:E23
+E4	Observation:T29 Name:T30 Numeric-Filter:E17 Temporality:E23
 E6	Negation:T31 Negates:E4
 E8	Modifier:T32 Modifies:T10
-E10	Observation:T33 Name:T34 Eq-Comparison:E18
+E10	Observation:T33 Name:T34 Numeric-Filter:E18
 E12	Condition:T37 Name:T38 Temporality:E14
 E14	Eq-Comparison:T39 Temporal-Period:T40
-E20	Or:T41 Arg:E15 Arg2:E13
 E21	Condition:T42 Name:T43
 E22	Contraindication:T44 Contraindicates:E7
 E23	Eq-Comparison:T45 Temporal-Period:T46
@@ -61,7 +60,6 @@ T37	Condition 223 225	MI
 T38	Condition-Name 223 225	MI
 T39	Eq-Comparison 212 219	history
 T40	Eq-Temporal-Period 212 219	history
-T41	Or 231 233	or
 T42	Condition 365 374	Pregnancy
 T43	Condition-Name 365 374	Pregnancy
 T44	Contraindication 380 396	Contraindication
@@ -72,7 +70,9 @@ A2	Eq-Operator-Value T18 GT
 A3	Eq-Operator-Value T19 LT
 A4	Eq-Temporal-Unit-Value T20 year
 A5	Assertion-Type-Value E2 hypothetical
-A6	Observation-Type-Value T30 measurement
-A7	Observation-Type-Value T34 lab
+A6	Observation-Type-Value E4 measurement
+A7	Observation-Type-Value E10 lab
 A8	Eq-Temporal-Period-Value T40 past
 A9	Eq-Temporal-Period-Value T46 past
+R1	Or Arg1:E15 Arg2:E13
+R2	Or Arg1:E12 Arg2:E15

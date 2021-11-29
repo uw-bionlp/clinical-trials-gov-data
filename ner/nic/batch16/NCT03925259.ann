@@ -15,7 +15,7 @@ E29	Condition:T29 Name:T30
 E31	Procedure:T31 Name:T32
 E33	Condition:T33 Name:T34
 E35	Condition:T35 Name:T36 Temporality:E4
-E38	Age:T41 Eq-Comparison:E8
+E38	Age:T41 Numeric-Filter:E8
 E2	Risk:T43 Risk-For:E35 Severity:T46
 E4	Eq-Comparison:T44 Temporal-Period:T45
 E39	Eq-Comparison:T47 Temporal-Period:T48
@@ -26,28 +26,24 @@ E43	Eq-Comparison:T55 Temporal-Period:T56
 E8	Eq-Comparison:T57 Operator:T58 Value:T42
 E10	Condition:T59 Name:T60 Acuteness:T61
 E14	Condition:T62 Name:T63
-E16	Or:T64 Arg:E10 Arg2:E14
-E18	Encounter:T65 Type:T66 Provider:E1
+E18	Encounter:T65 Provider:E1
 E20	Condition:T67 Name:T68
-E22	Condition:T69 Name:T70
+E22	Observation:T69 Name:T70
 E24	Modifier:T71 Modifies:T70
 E26	Condition:T72 Name:T73
-E28	Or:T74 Arg:E26 Arg2:E25
-E30	Or:T75 Arg:E25 Arg2:E23
-E32	Or:T76 Arg:E29 Arg2:E33
-E34	Encounter:T77 Temporality:E39 Provider:E36
-E36	Provider:T78 Type:T79
-E1	Provider:T1 Type:T2
+E34	Encounter:T77 Temporality:E39
+E36	Provider:T78
+E1	Provider:T1
 E44	Condition:T80 Name:T81 Temporality:E40
-E45	Provider:T82 Type:T83
-E46	Encounter:T84 Temporality:E41 Provider:E45
+E45	Provider:T82
+E46	Encounter:T84 Temporality:E41
 E47	Eq-Comparison:T85 Value:T86 Operator:T87
-E48	Encounter:T88 Temporality:E43 Minimum-Count:E47 Stability:T37
+E48	Encounter:T88 Temporality:E43 Minimum-Count:E47
 E37	Negation:T89 Negates:T37
-E49	Encounter:T90 Type:T91 Temporality:E51
+E49	Encounter:T90 Temporality:E51
 E50	Condition:T92 Name:T93
 E51	Eq-Comparison:T94 Operator:T39 Temporal-Period:T95 Temporal-Unit:T40 Value:T96
-E52	Condition:T97 Name:T98 Temporality:E42
+E52	Observation:T97 Name:T98 Temporality:E42
 E53	Negation:T99 Negates:E31
 E54	Assertion:T100 Asserted:E53
 T3	Condition 241 261	somatoform disorders
@@ -108,28 +104,20 @@ T60	Condition-Name 35 60	physical health condition
 T61	Acuteness 25 34	Long term
 T62	Condition 65 95	comorbid mental health problem
 T63	Condition-Name 65 95	comorbid mental health problem
-T64	Or 61 64	and
 T65	Encounter 114 122	Referred
-T66	Encounter-Type 114 122	Referred
 T67	Condition 199 229	medically unexplained symptoms
 T68	Condition-Name 199 229	medically unexplained symptoms
-T69	Condition 470 474	pain
-T70	Condition-Name 470 474	pain
+T69	Observation 470 474	pain
+T70	Observation-Name 470 474	pain
 T71	Modifier 452 469	non-cardiac chest
 T72	Condition 505 518	Mental health
 T73	Condition-Name 505 518	Mental health
-T74	Or 529 543	in addition to
-T75	Or 552 554	or
-T76	Or 611 613	or
 T77	Encounter 640 648	accesses
 T78	Provider 664 686	mental health services
-T79	Provider-Type 664 686	mental health services
 T1	Provider 128 159	psychological therapies service
-T2	Provider-Type 128 159	psychological therapies service
 T80	Condition 739 755	substance misuse
 T81	Condition-Name 739 755	substance misuse
 T82	Provider 783 805	mental health services
-T83	Provider-Type 783 805	mental health services
 T84	Encounter 770 777	contact
 T85	Eq-Comparison 818 829	two or more
 T86	Eq-Value 818 821	two
@@ -139,14 +127,13 @@ T37	Stability 884 890	change
 T38	Severity 872 883	significant
 T89	Negation 864 871	without
 T90	Encounter 897 916	Inpatient admission
-T91	Encounter-Type 897 916	Inpatient admission
 T92	Condition 921 947	mental health difficulties
 T93	Condition-Name 921 947	mental health difficulties
 T94	Eq-Comparison 948 974	within the last five years
 T95	Eq-Temporal-Period 959 963	last
 T96	Eq-Value 964 968	five
-T97	Condition 991 1002	self-injury
-T98	Condition-Name 991 1002	self-injury
+T97	Observation 991 1002	self-injury
+T98	Observation-Name 991 1002	self-injury
 T99	Negation 1017 1027	reluctance
 T100	Assertion 1017 1027	reluctance
 T46	Severity 692 703	Significant
@@ -159,11 +146,11 @@ A6	Eq-Temporal-Period-Value T52 past
 A7	Eq-Temporal-Period-Value T54 past
 A8	Eq-Temporal-Period-Value T56 past
 A9	Eq-Operator-Value T58 GTEQ
-A10	Encounter-Type-Value T66 referral
+A10	Encounter-Type-Value E18 referral
 A11	Eq-Operator-Value T87 GTEQ
 A12	Stability-Value T37 change
 A13	Severity-Value T38 severe
-A14	Encounter-Type-Value T91 inpatient
+A14	Encounter-Type-Value E49 inpatient
 A15	Eq-Temporal-Period-Value T95 past
 A16	Assertion-Type-Value E54 hypothetical
 A17	Severity-Value T46 severe
@@ -184,3 +171,14 @@ R14	Example-Of Arg1:E29 Arg2:E26
 R15	Example-Of Arg1:E33 Arg2:E26
 R1	Equivalent-To Arg1:E48 Arg2:E46
 R16	Treatment-For Arg1:E49 Arg2:E50
+R17	Or Arg1:E10 Arg2:E14
+R18	Or Arg1:E26 Arg2:E25
+R19	Or Arg1:E25 Arg2:E23
+R20	Or Arg1:E29 Arg2:E33
+R21	Or Arg1:E5 Arg2:E9
+R22	Or Arg1:E7 Arg2:E5
+R23	Or Arg1:E11 Arg2:E7
+R24	Or Arg1:E15 Arg2:E17
+R25	Or Arg1:E17 Arg2:E21
+R26	Or Arg1:E27 Arg2:E29
+R27	Or Arg1:E22 Arg2:E19

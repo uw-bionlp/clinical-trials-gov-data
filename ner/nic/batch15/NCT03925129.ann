@@ -1,12 +1,12 @@
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6 Temporality:E39 Acuteness:T70
-E11	Observation:T11 Name:T12 Eq-Comparison:E24
+E11	Observation:T11 Name:T12 Numeric-Filter:E24
 E13	Procedure:T13 Name:T14
 E15	Procedure:T15 Name:T16
 E18	Procedure:T18 Name:T19 Temporality:E42
 E20	Condition:T20 Name:T21
-E22	Observation:T22 Name:T23 Eq-Comparison:E27
-E23	Age:T31 Eq-Comparison:E26
+E22	Observation:T22 Name:T23 Numeric-Filter:E27
+E23	Age:T31 Numeric-Filter:E26
 E24	Eq-Comparison:T37 Operator:T24 Temporal-Unit:T28 Value:T32
 E25	Eq-Comparison:T38 Operator:T25 Value:T33 Unit:T51
 E26	Eq-Comparison:T39 Operator:T26 Temporal-Unit:T29 Value:T34
@@ -18,17 +18,15 @@ E8	Modifier:T44 Modifies:T4
 E10	Modifier:T45 Modifies:T4
 E12	Procedure:T46 Name:T47
 E14	Observation:T17 Name:T48
-E16	Observation:T49 Name:T50 Eq-Comparison:E25
+E16	Observation:T49 Name:T50 Numeric-Filter:E25
 E7	Drug:T7
 E17	Contraindication:T8 Contraindicates:E15
 E1	Drug:T1 Name:T2
 E19	Drug:T52 Name:T53
-E21	Or:T54 Arg:E1 Arg2:E19
 E28	Allergy:T55 Name:E1
 E29	Allergy:T56 Name:E30
 E30	Drug:T57 Name:T58
 E31	Contraindication:T59 Contraindicates:E30
-E32	Or:T60 Arg:E31 Arg2:E29
 E33	Condition:T61 Name:T62 Temporality:E34
 E34	Eq-Comparison:T63 Temporal-Period:T64
 E35	Procedure:T65 Name:T66
@@ -37,10 +35,8 @@ E37	Procedure:T68 Name:T69
 E39	Eq-Comparison:T71 Temporal-Period:T72
 E9	Drug:T9 Name:T10
 E40	Eq-Comparison:T73 Temporal-Period:T74 Temporal-Unit:T30 Value:T35
-E41	Temporal-Connection:T75 Arg:E9 Arg2:E40
 E42	Eq-Comparison:T76 Temporal-Period:T77
 E43	Eq-Comparison:T78 Temporal-Period:T79
-E44	Or:T80 Arg:E43 Arg2:E42
 T3	Condition 103 112	pregnancy
 T4	Condition-Name 103 112	pregnancy
 T5	Condition 782 795	pain disorder
@@ -92,13 +88,11 @@ T1	Drug 560 572	mifepristone
 T2	Drug-Name 560 572	mifepristone
 T52	Drug 576 587	misoprostol
 T53	Drug-Name 576 587	misoprostol
-T54	Or 573 575	or
 T55	Allergy 549 556	Allergy
 T56	Allergy 613 620	allergy
 T57	Drug 624 633	ibuprofen
 T58	Drug-Name 624 633	ibuprofen
 T59	Contraindication 593 609	Contraindication
-T60	Or 610 612	or
 T61	Condition 650 668	cardiac arrhythmia
 T62	Condition-Name 650 668	cardiac arrhythmia
 T63	Eq-Comparison 639 646	History
@@ -115,13 +109,11 @@ T9	Drug 805 811	opioid
 T10	Drug-Name 805 811	opioid
 T73	Eq-Comparison 823 839	previous 30 days
 T74	Eq-Temporal-Period 823 831	previous
-T75	Temporal-Connection 816 822	during
 T76	Eq-Comparison 856 861	prior
 T77	Eq-Temporal-Period 856 861	prior
 T78	Eq-Comparison 845 852	Current
 T79	Eq-Temporal-Period 845 852	Current
-T80	Or 853 855	or
-A2	Observation-Type-Value T23 vital
+A2	Observation-Type-Value E22 vital
 A3	Eq-Operator-Value T24 LT
 A4	Eq-Operator-Value T25 GT
 A5	Eq-Operator-Value T26 GTEQ
@@ -130,11 +122,10 @@ A7	Eq-Temporal-Unit-Value T28 day
 A8	Eq-Temporal-Unit-Value T29 year
 A9	Eq-Temporal-Unit-Value T30 day
 A10	Assertion-Type-Value E4 intention
-A1	Observation-Type-Value T48 clinical-score
+A1	Observation-Type-Value E14 clinical-score
 A11	Eq-Temporal-Period-Value T64 past
 A12	Eq-Temporal-Period-Value T72 past
 A13	Eq-Temporal-Period-Value T74 past
-A14	Temporal-Connection-Type-Value E41 during
 A15	Eq-Temporal-Period-Value T77 past
 A16	Eq-Temporal-Period-Value T79 present
 A17	Acuteness-Type-Value T70 chronic
@@ -144,3 +135,9 @@ R3	Found-By Arg1:E11 Arg2:E12
 R4	Abbrev-Of Arg1:E16 Arg2:E14
 R5	Using Arg1:E15 Arg2:E7
 R6	Example-Of Arg1:E37 Arg2:E35
+R7	Or Arg1:E1 Arg2:E19
+R8	Or Arg1:E31 Arg2:E29
+R9	During Arg1:E9 Arg2:E40
+R10	Or Arg1:E43 Arg2:E42
+R11	Or Arg1:E6 Arg2:E10
+R12	Or Arg1:E8 Arg2:E6

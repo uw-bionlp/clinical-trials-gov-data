@@ -2,23 +2,19 @@ E4	Condition:T4 Name:T5
 E6	Condition:T6 Name:T7
 E8	Condition:T8 Name:T9
 E12	Observation:T12 Name:T13 Temporality:E33
-E13	Age:T18 Eq-Comparison:E14
+E13	Age:T18 Numeric-Filter:E14
 E14	Eq-Comparison:T25 Operator:T19 Value:T21 Temporal-Unit:T14 Value2:T22
 E2	Condition:T3 Name:T26
 E5	Condition:T29 Name:T30
 E9	Eq-Comparison:T33 Temporal-Period:T34 Temporal-Unit:T15 Value:T23
-E11	Temporal-Connection:T35 Arg:E5 Arg2:E9
 E15	Drug:T36 Name:T37 Temporality:E47
 E16	Eq-Comparison:T38 Temporal-Period:T41 Temporal-Unit:T40 Value:T39
-E17	Temporal-Connection:T42 Arg:E15 Arg2:E16
 E18	Negation:T43 Negates:E5
 E19	Condition:T44 Name:T45
 E20	Modifier:T46 Modifies:E19
 E21	Condition:T47 Name:T48 Severity:T49
 E22	Modifier:T50 Modifies:T48
 E23	Modifier:T52 Modifies:T48
-E24	Or:T54 Arg:E22 Arg2:E23
-E25	Or:T55 Arg:E6 Arg2:E8
 E26	Condition:T56 Name:T57 Temporality:E28
 E27	Assertion:T58 Asserted:E26
 E28	Eq-Comparison:T59 Temporal-Unit:T16 Value:T24
@@ -30,20 +26,16 @@ E33	Eq-Comparison:T68 Temporal-Unit:T17 Value:T70 Temporal-Period:T69
 E1	Observation:T1 Name:T2
 E7	Assertion:T20 Asserted:E1
 E3	Assertion:T27 Asserted:E1
-E34	And:T28 Arg:E3 Arg2:E7
-E35	Condition:T31 
+E35	Condition:T31
 E36	Modifier:T32 Modifies:E35
-E37	Or:T72 Arg:E19 Arg2:E35
 E38	Modifier:T73 Modifies:T48
 E10	Modifier:T10 Modifies:T48
 E39	Other:T11 Is-Other:E23
-E40	Or:T51 Arg:E8 Arg2:E27
 E41	Modifier:T53 Modifies:T5
-E42	Or:T62 Arg:E29 Arg2:E41
 E43	Eq-Comparison:T74 Temporal-Period:T75
 E44	Other:T76 Is-Other:E31
-E45	Modifier:T66 
-E46	Or:T77 Arg:E32 Arg2:E45
+E45	Modifier:T66
+E47	Eq-Comparison:T60 Temporal-Period:T71
 T4	Condition 664 669	abuse
 T5	Condition-Name 664 669	abuse
 T6	Condition 576 585	pregnancy
@@ -69,14 +61,12 @@ T29	Condition 334 342	headache
 T30	Condition-Name 334 342	headache
 T33	Eq-Comparison 354 371	pervious 3 months
 T34	Eq-Temporal-Period 354 362	pervious
-T35	Temporal-Connection 343 349	during
 T36	Drug 389 412	prophylactic medication
 T37	Drug-Name 389 412	prophylactic medication
 T38	Eq-Comparison 424 442	previous one month
 T39	Eq-Value 433 436	one
 T40	Eq-Temporal-Unit 437 442	month
 T41	Eq-Temporal-Period 424 432	previous
-T42	Temporal-Connection 413 419	during
 T43	Negation 331 333	No
 T44	Condition 459 467	headache
 T45	Condition-Name 459 467	headache
@@ -86,8 +76,6 @@ T48	Condition-Name 512 522	conditions
 T49	Severity 504 511	serious
 T50	Modifier 544 550	kidney
 T52	Modifier 560 566	organs
-T54	Or 551 553	or
-T55	Or 586 588	or
 T56	Condition 618 626	pregnant
 T57	Condition-Name 618 626	pregnant
 T58	Assertion 603 611	planning
@@ -104,40 +92,43 @@ T1	Observation 251 265	headache dairy
 T2	Observation-Name 251 265	headache dairy
 T20	Assertion 236 246	completing
 T27	Assertion 218 231	understanding
-T28	And 232 235	and
 T31	Condition 486 491	cause
 T32	Modifier 475 485	systematic
-T72	Or 468 470	or
 T73	Modifier 530 535	heart
 T10	Modifier 537 542	liver
 T11	Other 554 559	other
-T51	Or 600 602	or
 T53	Modifier 654 663	Substance
-T62	Or 650 653	and
 T74	Eq-Comparison 712 718	Taking
 T75	Eq-Temporal-Period 712 718	Taking
 T76	Other 723 728	other
 T66	Modifier 747 758	alternative
-T77	Or 743 746	and
+T60	Eq-Comparison 378 384	Taking
+T71	Eq-Temporal-Period 378 384	Taking
 A1	Eq-Temporal-Unit-Value T14 year
 A2	Eq-Temporal-Unit-Value T15 month
 A3	Eq-Temporal-Unit-Value T16 month
 A4	Eq-Temporal-Unit-Value T17 month
 A5	Eq-Operator-Value T19 BETWEEN
 A7	Eq-Temporal-Period-Value T34 past
-A8	Temporal-Connection-Type-Value E11 during
 A9	Eq-Temporal-Unit-Value T40 month
 A10	Eq-Temporal-Period-Value T41 past
-A11	Temporal-Connection-Type-Value E17 during
 A12	Severity-Value T49 severe
 A13	Assertion-Type-Value E27 intention
 A15	Eq-Temporal-Period-Value T69 past
 A6	Assertion-Type-Value E7 hypothetical
 A17	Assertion-Type-Value E3 hypothetical
 A18	Eq-Temporal-Period-Value T75 present
-A19	Observation-Type-Value T13 social-habit
-R1	Caused-By Arg1:E19 Arg2:E35
-T60	Eq-Comparison 378 384	Taking
-E47	Eq-Comparison:T60 Temporal-Period:T71
-T71	Eq-Temporal-Period 378 384	Taking
+A19	Observation-Type-Value E12 social-habit
 A14	Eq-Temporal-Period-Value T71 present
+R1	Caused-By Arg1:E19 Arg2:E35
+R2	During Arg1:E5 Arg2:E9
+R3	During Arg1:E15 Arg2:E16
+R4	Or Arg1:E22 Arg2:E23
+R5	Or Arg1:E6 Arg2:E8
+R6	And Arg1:E3 Arg2:E7
+R7	Or Arg1:E19 Arg2:E35
+R8	Or Arg1:E8 Arg2:E27
+R9	Or Arg1:E29 Arg2:E41
+R10	Or Arg1:E32 Arg2:E45
+R11	Or Arg1:E38 Arg2:E10
+R12	Or Arg1:E10 Arg2:E22

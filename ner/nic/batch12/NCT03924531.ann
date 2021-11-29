@@ -6,17 +6,15 @@ E10	Condition:T10 Name:T11 Severity:T38
 E12	Condition:T12 Name:T13 Severity:T37
 E14	Procedure:T14 Name:T15 Temporality:E25
 E16	Condition:T16 Name:T17
-E17	Age:T19 Eq-Comparison:E1
+E17	Age:T19 Numeric-Filter:E1
 E1	Eq-Comparison:T21 Temporal-Unit:T18 Operator:T22 Value:T20
 E3	Negation:T23 Negates:E7
 E5	Observation:T24 Name:T25
 E7	Observation:T26 Name:T27
-E9	And:T28 Arg:E7 Arg2:E5
 E11	Eq-Comparison:T29 Temporal-Period:T30
 E13	Drug:T31 Name:T32
 E15	Drug:T33 Name:T34
 E18	Eq-Comparison:T35 Temporal-Period:T36
-E19	Or:T39 Arg:E12 Arg2:E10
 E20	Condition:T40 Name:T41
 E21	Condition:T42 Name:T43
 E22	Condition:T45 Name:T46
@@ -50,7 +48,6 @@ T24	Observation 162 187	regular physical activity
 T25	Observation-Name 162 187	regular physical activity
 T26	Observation 133 145	healthy diet
 T27	Observation-Name 133 145	healthy diet
-T28	And 146 149	and
 T29	Eq-Comparison 256 263	Current
 T30	Eq-Temporal-Period 256 263	Current
 T31	Drug 296 301	drugs
@@ -61,7 +58,6 @@ T35	Eq-Comparison 318 325	Current
 T36	Eq-Temporal-Period 318 325	Current
 T37	Severity 372 378	severe
 T38	Severity 391 397	severe
-T39	Or 388 390	or
 T40	Condition 437 445	Pregnant
 T41	Condition-Name 437 445	Pregnant
 T42	Condition 448 456	Pregnant
@@ -76,7 +72,7 @@ T50	Eq-Comparison 415 417	On
 T51	Eq-Temporal-Period 415 417	On
 A1	Eq-Temporal-Unit-Value T18 year
 A2	Eq-Operator-Value T22 GT
-A3	Observation-Type-Value T25 social-habit
+A3	Observation-Type-Value E5 social-habit
 A4	Eq-Temporal-Period-Value T30 present
 A5	Eq-Temporal-Period-Value T36 present
 A6	Severity-Value T37 severe
@@ -91,3 +87,6 @@ R4	If-Then Arg1:T44 Arg2:E21
 R5	If-Then Arg1:T44 Arg2:E22
 R6	Equivalent-To Arg1:E24 Arg2:E22
 R7	Equivalent-To Arg1:E16 Arg2:E22
+R8	And Arg1:E7 Arg2:E5
+R9	Or Arg1:E12 Arg2:E10
+R10	Or Arg1:E13 Arg2:E15

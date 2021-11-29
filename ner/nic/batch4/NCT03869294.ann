@@ -1,23 +1,20 @@
 E1	Procedure:T1 Name:T23
 E2	Condition:T2 Name:T24
 E3	Modifier:T3 Modifies:T40
-E4	Or:T4 Arg:E3 Arg2:E5
 E5	Modifier:T5 Modifies:T40
 E6	Procedure:T6 Name:T42
-E7	Observation:T7 Name:T26 Eq-Comparison:E8
+E7	Observation:T7 Name:T26 Numeric-Filter:E8
 E8	Eq-Comparison:T8 Value:T27 Value:T28
 E9	Modifier:T9 Modifies:T30
 E10	Modifier:T10 Modifies:T30
-E11	And:T11 Arg:E25 Arg2:E12
 E12	Condition:T12 Name:T31 Polarity:T44
-E13	Age:T13 Eq-Comparison:E14
+E13	Age:T13 Numeric-Filter:E14
 E14	Eq-Comparison:T14 Operator:T33 Temporal-Unit:T34 Value:T32
 E15	Condition:T15 Name:T35
 E16	Other:T16 Is-Other:E17
 E18	Condition:T18 Name:T46 Acuteness:T47
 E19	Condition:T19 Name:T37
 E20	Condition:T20 Name:T38
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Condition:T22 Name:T39
 E23	Condition:T25 Name:T40
 E24	Negation:T41 Negates:E6
@@ -28,14 +25,12 @@ E17	Condition:T17 Name:T36
 T1	Procedure 27 41	Histologically
 T2	Condition 52 77	pancreatic adenocarcinoma
 T3	Modifier 80 96	Locally advanced
-T4	Or 97 99	or
 T5	Modifier 100 110	metastatic
 T6	Procedure 116 128	Chemotherapy
 T7	Observation 137 160	ECOG performance status
 T8	Eq-Comparison 164 170	0 or 1
 T9	Modifier 186 197	bone marrow
 T10	Modifier 199 204	liver
-T11	And 214 217	and
 T12	Condition 225 233	function
 T13	Age 261 264	Age
 T14	Eq-Comparison 265 274	≥80 years
@@ -44,7 +39,6 @@ T16	Other 301 306	other
 T18	Condition 330 338	diarrhea
 T19	Condition 340 355	cardiac disease
 T20	Condition 357 366	pregnancy
-T21	Or 367 369	or
 T22	Condition 370 384	breast feeding
 T23	Procedure-Name 27 41	Histologically
 T24	Condition-Name 52 77	pancreatic adenocarcinoma
@@ -72,9 +66,15 @@ T45	Modifier 277 282	Brain
 T17	Condition 307 319	malignancies
 T46	Condition-Name 330 338	diarrhea
 T47	Acuteness 322 329	Chronic
-A1	Observation-Type-Value T26 clinical-score
+A1	Observation-Type-Value E7 clinical-score
 A3	Eq-Operator-Value T33 GTEQ
 A4	Eq-Temporal-Unit-Value T34 year
 A5	Polarity-Value T44 normal
 A6	Acuteness-Type-Value T47 chronic
 R1	Found-By Arg1:E2 Arg2:E1
+R2	Or Arg1:E3 Arg2:E5
+R3	And Arg1:E25 Arg2:E12
+R4	Or Arg1:E20 Arg2:E22
+R5	Or Arg1:E9 Arg2:E10
+R6	Or Arg1:E18 Arg2:E19
+R7	Or Arg1:E19 Arg2:E20

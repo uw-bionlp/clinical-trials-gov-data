@@ -20,24 +20,19 @@ E17	Study:T32
 E20	Negation:T33 Negates:E17
 E21	Assertion:T34 Asserted:E20
 E22	Condition:T35 Name:T36 Acuteness:T38 Acuteness:T37
-E24	Or:T39 Arg:T38 Arg2:T37
 E25	Condition:T40 Name:T41 Stability:T42
 E26	Assertion:T43 Asserted:T42
 E27	Condition:T44 Name:T45 Severity:T51 Acuteness:T46
 E29	Modifier:T47 Modifies:T45
-E30	Or:T48 Arg:E29 Arg2:T46
 E31	Procedure:T49 Temporality:E19
 E32	Modifier:T50
-E33	Or:T52 Arg:T51 Arg2:E32
 E34	Condition:T53
 E35	Drug:T54 Name:T55
 E36	Assertion:T56 Asserted:E35
-E37	Or:T57 Arg:E27 Arg2:E34
 E38	Drug:T58 Name:T59 Acuteness:T60
 E40	Drug:T61 Name:T62
 E41	Condition:T63 Name:T64
 E42	Condition:T65 Name:T66
-E43	Or:T67 Arg:E41 Arg2:E42
 E44	Procedure:T69 Name:T70
 E45	Modifier:T71 Modifies:T70
 E46	Allergy:T72 Name:E47
@@ -85,7 +80,6 @@ T35	Condition 611 620	pathology
 T36	Condition-Name 611 620	pathology
 T37	Acuteness 603 610	chronic
 T38	Acuteness 594 599	acute
-T39	Or 600 602	or
 T40	Condition 649 662	immune system
 T41	Condition-Name 649 662	immune system
 T42	Stability 630 639	interfere
@@ -94,16 +88,13 @@ T44	Condition 695 704	pathology
 T45	Condition-Name 695 704	pathology
 T46	Acuteness 687 694	chronic
 T47	Modifier 672 683	progressive
-T48	Or 684 686	or
 T49	Procedure 739 749	treatments
 T50	Modifier 715 727	uncontrolled
 T51	Severity 705 711	severe
-T52	Or 712 714	or
 T53	Condition 755 764	pathology
 T54	Drug 797 816	immune impact drugs
 T55	Drug-Name 797 816	immune impact drugs
 T56	Assertion 765 774	requiring
-T57	Or 750 752	or
 T58	Drug 828 845	anti-inflammatory
 T59	Drug-Name 828 845	anti-inflammatory
 T60	Acuteness 818 827	long-term
@@ -113,7 +104,6 @@ T63	Condition 875 883	Pregnant
 T64	Condition-Name 875 883	Pregnant
 T65	Condition 887 896	lactating
 T66	Condition-Name 887 896	lactating
-T67	Or 884 886	or
 T68	Life-Stage-And-Gender 897 902	women
 T69	Procedure 936 944	biopsies
 T70	Procedure-Name 936 944	biopsies
@@ -132,7 +122,7 @@ A1	Life-Stage-And-Gender-Type T15 adult
 A2	Eq-Temporal-Period-Value T21 present
 A3	Family-Member-Type E4 parent
 A4	Assertion-Type-Value E8 hypothetical
-A5	Observation-Type-Value T27 lab
+A5	Observation-Type-Value E10 lab
 A6	Assertion-Type-Value E14 hypothetical
 A7	Assertion-Type-Value E21 hypothetical
 A9	Stability-Value T42 change
@@ -140,7 +130,7 @@ A10	Assertion-Type-Value E26 hypothetical
 A11	Severity-Value T51 severe
 A12	Assertion-Type-Value E36 hypothetical
 A13	Life-Stage-And-Gender-Type T68 female
-A14	Observation-Type-Value T76 lab
+A14	Observation-Type-Value E48 lab
 A15	Assertion-Type-Value E51 hypothetical
 A16	Assertion-Type-Value E52 hypothetical
 A17	Acuteness-Type-Value T38 acute
@@ -166,3 +156,15 @@ R17	Example-Of Arg1:E34 Arg2:E22
 R18	Example-Of Arg1:E38 Arg2:E35
 R19	Example-Of Arg1:E40 Arg2:E35
 R20	If-Then Arg1:T68 Arg2:E42
+R10	Or Arg1:T38 Arg2:T37
+R21	Or Arg1:E29 Arg2:T46
+R22	Or Arg1:T51 Arg2:E32
+R23	Or Arg1:E27 Arg2:E34
+R24	Or Arg1:E41 Arg2:E42
+R25	Or Arg1:E3 Arg2:E9
+R26	Or Arg1:E11 Arg2:E13
+R27	Or Arg1:E13 Arg2:E3
+R28	Or Arg1:E16 Arg2:E18
+R29	Or Arg1:E12 Arg2:E16
+R30	Or Arg1:E38 Arg2:E40
+R31	Or Arg1:E47 Arg2:E1

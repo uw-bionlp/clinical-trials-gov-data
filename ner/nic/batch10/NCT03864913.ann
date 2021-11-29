@@ -1,10 +1,9 @@
 E1	Procedure:T1 Name:T2 Temporality:E5 Temporality2:E6
-E2	Age:T6 Eq-Comparison:E3
+E2	Age:T6 Numeric-Filter:E3
 E3	Eq-Comparison:T10 Operator:T7 Value:T8 Value2:T9 Temporal-Unit:T5
 E4	Condition:T11 Name:T12
 E5	Eq-Comparison:T16 Temporal-Period:T17
 E6	Eq-Comparison:T18 Operator:T4
-E7	And:T19 Arg:T3 Arg2:E1
 T1	Procedure 148 168	testosterone therapy
 T2	Procedure-Name 148 168	testosterone therapy
 T3	Life-Stage-And-Gender 124 129	males
@@ -23,7 +22,6 @@ T15	Life-Stage-And-Gender 112 123	Transgender
 T16	Eq-Comparison 139 147	received
 T17	Eq-Temporal-Period 139 147	received
 T18	Eq-Comparison 176 180	past
-T19	And 130 133	who
 A1	Life-Stage-And-Gender-Type T3 male
 A2	Eq-Operator-Value T4 GTEQ
 A3	Eq-Temporal-Unit-Value T5 year
@@ -32,3 +30,4 @@ A5	Life-Stage-And-Gender-Type T13 transgender
 A6	Life-Stage-And-Gender-Type T14 male
 A7	Life-Stage-And-Gender-Type T15 transgender
 A8	Eq-Temporal-Period-Value T17 past
+R1	And Arg1:T3 Arg2:E1

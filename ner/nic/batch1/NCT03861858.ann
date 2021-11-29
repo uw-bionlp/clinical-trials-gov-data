@@ -1,37 +1,31 @@
 E2	Procedure:T2 Name:T3
 E4	Procedure:T4 Name:T5
-E6	Condition:T6 Name:T7
+E6	Observation:T6 Name:T7
 E8	Condition:T8 Name:T9
 E10	Condition:T10 Name:T11 Minimum-Count:E40
 E12	Condition:T12 Name:T13
 E14	Condition:T14 Name:T15
 E16	Condition:T16 Name:T17
-E17	Age:T25 Eq-Comparison:E20 Eq-Comparison2:E21
+E17	Age:T25 Numeric-Filter:E20 Numeric-Filter:E21
 E18	Eq-Comparison:T36 Operator:T19 Temporal-Unit:T23 Value:T32
 E19	Eq-Comparison:T37 Operator:T21 Value:T35
 E20	Eq-Comparison:T38 Operator:T26 Value:T28 Temporal-Unit:T22 Value2:T29
 E21	Eq-Comparison:T39 Operator:T27 Value:T30 Value2:T31
-E1	Or:T40 Arg:E20 Arg2:E21
-E3	Procedure:T41 
+E3	Procedure:T41
 E5	Procedure:T45 Name:T46
 E7	Exception:T47 From:E4 Except:E5 Except2:E2
 E9	Procedure:T48 Name:T49
 E11	Condition:T50 Name:T51 Temporality:E38
-E13	Or:T53 Arg:E6 Arg2:E15
 E15	Condition:T54 Name:T55
-E22	Or:T56 Arg:E15 Arg2:E8
 E24	Procedure:T58 Temporality:E47
-E25	Procedure:T60 
+E25	Procedure:T60
 E27	Eq-Comparison:T33 Operator:T65 Value:T66
-E28	Family-Member:T67 
-E29	Observation:T18 Name:T68 Location:T44 Location2:T43 Eq-Comparison:E18
+E28	Family-Member:T67
+E29	Observation:T18 Name:T68 Location:T44 Location2:T43 Numeric-Filter:E18
 E30	Negation:T69 Negates:E4
 E31	Assertion:T70 Asserted:E30
-E32	Temporal-Connection:T71 Arg:E4 Arg2:E9
 E33	Modifier:T72 Modifies:T46
 E34	Modifier:T73 Modifies:T46
-E35	Or:T74 Arg:E33 Arg2:E34
-E36	Or:T75 Arg:E5 Arg2:E2
 E37	Drug:T76 Name:T77
 E38	Eq-Comparison:T78 Operator:T20 Temporal-Period:T79 Value:T52 Temporal-Unit:T24
 E39	Modifier:T80 Modifies:T7
@@ -39,25 +33,23 @@ E40	Eq-Comparison:T34 Value:T81
 E41	Procedure:T82 Name:T83 Location:T84
 E42	Negation:T85 Negates:T84
 E43	Assertion:T86 Asserted:E41
-E23	Death:T57 
+E23	Death:T57
 E44	Risk:T61 Risk-For:E23
-E45	Or:T87 Arg:E14 Arg2:E44
-E46	Or:T88 Arg:E25 Arg2:E24
-E47	Eq-Comparison:T59 
+E47	Eq-Comparison:T59
 E48	Negation:T90 Negates:E24
 E49	Negation:T91 Negates:E48
 E50	Assertion:T92 Asserted:E48
 E51	Negation:T93 Negates:T62
-E52	Observation:T94 Name:T95 Eq-Comparison:E19
-E26	Procedure:T63 
+E52	Observation:T94 Name:T95 Numeric-Filter:E19
+E26	Procedure:T63
 E53	Observation:T64 Name:T96
 T1	Life-Stage-And-Gender 130 135	adult
 T2	Procedure 658 668	management
 T3	Procedure-Name 658 668	management
 T4	Procedure 556 568	talk therapy
 T5	Procedure-Name 556 568	talk therapy
-T6	Condition 757 768	self-injury
-T7	Condition-Name 757 768	self-injury
+T6	Observation 757 768	self-injury
+T7	Observation-Name 757 768	self-injury
 T8	Condition 802 824	substance use disorder
 T9	Condition-Name 802 824	substance use disorder
 T10	Condition 865 896	borderline personality disorder
@@ -87,7 +79,6 @@ T36	Eq-Comparison 496 508	< 45 minutes
 T37	Eq-Comparison 1188 1192	< 70
 T38	Eq-Comparison 29 40	13-17 years
 T39	Eq-Comparison 44 49	18-20
-T40	Or 41 43	or
 T41	Procedure 171 180	treatment
 T43	Location 488 494	clinic
 T44	Location 449 458	Residence
@@ -99,10 +90,8 @@ T49	Procedure-Name 585 596	DBT program
 T50	Condition 685 698	dysregulation
 T51	Condition-Name 685 698	dysregulation
 T52	Eq-Value 715 718	six
-T53	Or 769 775	and/or
 T54	Condition 776 791	suicide attempt
 T55	Condition-Name 776 791	suicide attempt
-T56	Or 792 798	and/or
 T58	Procedure 1104 1126	professional treatment
 T60	Procedure 1007 1016	treatment
 T62	Language 1162 1169	English
@@ -114,11 +103,8 @@ T18	Observation 466 484	commuting distance
 T68	Observation-Name 466 484	commuting distance
 T69	Negation 529 540	discontinue
 T70	Assertion 516 525	Agreement
-T71	Temporal-Connection 569 581	for duration
 T72	Modifier 616 618	AA
 T73	Modifier 619 621	NA
-T74	Or 618 619	/
-T75	Or 631 633	or
 T76	Drug 634 657	psychotropic medication
 T77	Drug-Name 634 657	psychotropic medication
 T78	Eq-Comparison 699 725	within the past six months
@@ -133,8 +119,6 @@ T85	Negation 969 972	not
 T86	Assertion 941 945	need
 T57	Death 1038 1054	life-threatening
 T61	Risk 1038 1054	life-threatening
-T87	Or 1035 1037	or
-T88	Or 1065 1067	or
 T59	Eq-Comparison 1076 1085	currently
 T89	Eq-Temporal-Period 1076 1085	currently
 T90	Negation 1146 1151	ended
@@ -160,12 +144,11 @@ A12	Location-Value T44 residence
 A13	Eq-Operator-Value T65 GTEQ
 A14	Family-Member-Type E28 parent
 A2	Assertion-Type-Value E31 hypothetical
-A15	Temporal-Connection-Type-Value E32 during
 A16	Eq-Temporal-Period-Value T79 past
 A17	Assertion-Type-Value E43 hypothetical
 A18	Eq-Temporal-Period-Value T89 present
 A19	Assertion-Type-Value E50 hypothetical
-A20	Observation-Type-Value T95 clinical-score
+A20	Observation-Type-Value E52 clinical-score
 R2	Using Arg1:E2 Arg2:E37
 R1	Equivalent-To Arg1:E6 Arg2:E11
 R3	Equivalent-To Arg1:E15 Arg2:E11
@@ -176,3 +159,11 @@ R7	Example-Of Arg1:E25 Arg2:E41
 R8	Caused-By Arg1:E44 Arg2:E16
 R9	Treatment-For Arg1:E25 Arg2:E16
 R10	Caused-By Arg1:E26 Arg2:E53
+R11	Or Arg1:E20 Arg2:E21
+R12	Or Arg1:E6 Arg2:E15
+R13	Or Arg1:E15 Arg2:E8
+R14	During Arg1:E4 Arg2:E9
+R15	Or Arg1:E33 Arg2:E34
+R16	Or Arg1:E5 Arg2:E2
+R17	Or Arg1:E14 Arg2:E44
+R18	Or Arg1:E25 Arg2:E24

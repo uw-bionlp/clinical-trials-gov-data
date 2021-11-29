@@ -15,61 +15,45 @@ E28	Eq-Comparison:T43 Operator:T31
 E2	Assertion:T25 Asserted:E1
 E4	Modifier:T27 Modifies:T2
 E6	Modifier:T29 Modifies:T2
-E7	And:T30 Arg:E1 Arg2:E5
 E9	Condition:T37 Name:T38
-E11	Or:T42 Arg:E5 Arg2:E9
 E13	Negation:T44 Negates:E3
-E15	And:T45 Arg:E9 Arg2:E13
 E17	Procedure:T46 Name:T47
 E19	Observation:T48 Name:T49 Polarity:T51
-E21	Temporal-Connection:T50 Arg:E19 Arg2:E17
 E22	Observation:T52 Name:T53 Polarity:T54
 E27	Observation:T55 Name:T56 Polarity:T57
 E29	Observation:T58 Name:T59 Polarity:T60
-E30	And:T61 Arg:E27 Arg2:E29
-E31	And:T62 Arg:T7 Arg2:E2
 E32	Procedure:T63 Name:T64
 E33	Observation:T65 Name:T66
 E34	Drug:T67 Name:T68
-E35	Or:T69 Arg:E34 Arg2:E33
 E8	Allergy:T8 Name:E36
 E36	Drug:T9 Name:T70
 E37	Eq-Comparison:T71 Temporal-Period:T72
 E38	Drug:T73 Name:T74 Temporality:E37
 E39	Drug:T75 Name:T76 Temporality:E37
-E40	Or:T77 Arg:E38 Arg2:E39
 E41	Condition:T78 Name:T79 Temporality:E42
 E42	Eq-Comparison:T80 Temporal-Period:T81
 E43	Condition:T82 Name:T83
-E44	Or:T84 Arg:E43 Arg2:E16
 E45	Eq-Comparison:T85 Temporal-Period:T86
 E46	Condition:T87 Name:T88 Temporality:E45
-E47	Or:T89 Arg:E16 Arg2:E46
 E48	Condition:T90 Name:T91
 E49	Condition:T92 Name:T93 Temporality:E50
 E50	Eq-Comparison:T94 Temporal-Period:T95
 E51	Condition:T96 Name:T97
 E52	Condition:T98 Name:T99
 E53	Condition:T100 Name:T101 Polarity:T102
-E54	Or:T103 Arg:E52 Arg2:E53
 E55	Procedure:T104 Name:T105
-E56	Temporal-Connection:T106 Arg:E23 Arg2:E55
-E57	Observation:T107 Name:T108 Eq-Comparison:E24
-E58	Or:T113 Arg:T22 Arg2:T114
+E57	Observation:T107 Name:T108 Numeric-Filter:E24
 E59	Procedure:T115 Name:T116
 E60	Assertion:T117 Asserted:E59
 E61	Procedure:T118 Name:T119
-E62	Temporal-Connection:T120 Arg:E12 Arg2:E61
 E63	Eq-Comparison:T121 Operator:T28 Value:T122 Temporal-Unit:T32
 E64	Procedure:T123 Name:T124
-E65	Temporal-Connection:T125 Arg:E63 Arg2:E64
 E66	Procedure:T126 Name:T127
 E67	Assertion:T128 Asserted:E66
-E68	Observation:T129 Name:T130 Eq-Comparison:E26
+E68	Observation:T129 Name:T130 Numeric-Filter:E26
 E69	Procedure:T131 Name:T132
-E70	Temporal-Connection:T133 Arg:E68 Arg2:E69
-E71	Observation:T135 Name:T136 Eq-Comparison:E28
-E72	Observation:T137 Name:T139 Polarity:T138 Eq-Comparison:E73
+E71	Observation:T135 Name:T136 Numeric-Filter:E28
+E72	Observation:T137 Name:T139 Polarity:T138 Numeric-Filter:E73
 E73	Eq-Comparison:T140 Operator:T141 Value:T142 Unit:T143
 T1	Procedure 81 104	total knee arthroplasty
 T2	Procedure-Name 81 104	total knee arthroplasty
@@ -108,17 +92,13 @@ T43	Eq-Comparison 1296 1300	>1.4
 T25	Assertion 44 51	plan to
 T27	Modifier 60 80	simultaneous primary
 T29	Modifier 108 128	bilateral knee joint
-T30	And 129 133	with
 T37	Condition 167 188	aseptic bone necrosis
 T38	Condition-Name 167 188	aseptic bone necrosis
-T42	Or 164 166	or
 T44	Negation 194 197	not
-T45	And 190 193	but
 T46	Procedure 260 269	operative
 T47	Procedure-Name 260 269	operative
 T48	Observation 270 284	platelet count
 T49	Observation-Name 270 284	platelet count
-T50	Temporal-Connection 257 260	pre
 T51	Polarity 250 256	normal
 T52	Observation 293 309	prothrombin time
 T53	Observation-Name 293 309	prothrombin time
@@ -129,15 +109,12 @@ T57	Polarity 311 317	normal
 T58	Observation 358 388	international normalized ratio
 T59	Observation-Name 358 388	international normalized ratio
 T60	Polarity 351 357	normal
-T61	And 347 350	and
-T62	And 40 43	who
 T63	Procedure 461 486	plasma volume restitution
 T64	Procedure-Name 461 486	plasma volume restitution
 T65	Observation 449 456	albumin
 T66	Observation-Name 449 456	albumin
 T67	Drug 411 441	balanced electrolyte solutions
 T68	Drug-Name 411 441	balanced electrolyte solutions
-T69	Or 442 448	and/or
 T8	Allergy 513 520	Allergy
 T9	Drug 524 539	tranexamic acid
 T70	Drug-Name 524 539	tranexamic acid
@@ -147,19 +124,16 @@ T73	Drug 556 564	warfarin
 T74	Drug-Name 556 564	warfarin
 T75	Drug 568 575	heparin
 T76	Drug-Name 568 575	heparin
-T77	Or 565 567	or
 T78	Condition 594 604	hemophilia
 T79	Condition-Name 594 604	hemophilia
 T80	Eq-Comparison 583 590	history
 T81	Eq-Temporal-Period 583 590	history
 T82	Condition 630 648	pulmonary embolism
 T83	Condition-Name 630 648	pulmonary embolism
-T84	Or 650 652	or
 T85	Eq-Comparison 674 678	were
 T86	Eq-Temporal-Period 674 678	were
 T87	Condition 679 687	pregnant
 T88	Condition-Name 679 687	pregnant
-T89	Or 671 673	or
 T90	Condition 712 735	cardiovascular problems
 T91	Condition-Name 712 735	cardiovascular problems
 T92	Condition 745 766	myocardiac infarction
@@ -173,29 +147,24 @@ T99	Condition-Name 825 849	thromboembolic disorders
 T100	Condition 887 904	general condition
 T101	Condition-Name 887 904	general condition
 T102	Polarity 873 886	deteriorating
-T103	Or 851 853	or
 T104	Procedure 914 923	operative
 T105	Procedure-Name 914 923	operative
-T106	Temporal-Connection 911 914	Pre
 T107	Observation 934 944	hemoglobin
 T108	Observation-Name 934 944	hemoglobin
 T109	Eq-Unit 958 959	g
 T110	Eq-Unit 960 962	dL
 T111	Eq-Unit 982 983	g
 T112	Eq-Unit 984 986	dL
-T113	Or 974 977	and
 T114	Life-Stage-And-Gender 990 995	males
 T115	Procedure 1009 1023	blood products
 T116	Procedure-Name 1009 1023	blood products
 T117	Assertion 998 1005	refusal
 T118	Procedure 1033 1042	operative
 T119	Procedure-Name 1033 1042	operative
-T120	Temporal-Connection 1030 1033	Pre
 T121	Eq-Comparison 1072 1088	within five days
 T122	Eq-Value 1079 1083	five
 T123	Procedure 1096 1103	surgery
 T124	Procedure-Name 1096 1103	surgery
-T125	Temporal-Connection 1089 1095	before
 T126	Procedure 1153 1179	antifibrinolytic treatment
 T127	Procedure-Name 1153 1179	antifibrinolytic treatment
 T128	Assertion 1128 1137	requiring
@@ -203,7 +172,6 @@ T129	Observation 1227 1241	platelet count
 T130	Observation-Name 1227 1241	platelet count
 T131	Procedure 1217 1226	operative
 T132	Procedure-Name 1217 1226	operative
-T133	Temporal-Connection 1214 1217	pre
 T134	Eq-Operator 1245 1246	<
 T135	Observation 1262 1292	international normalized ratio
 T136	Observation-Name 1262 1292	international normalized ratio
@@ -221,34 +189,29 @@ A6	Eq-Operator-Value T28 LTEQ
 A9	Eq-Operator-Value T31 GT
 A10	Eq-Temporal-Unit-Value T32 day
 A3	Assertion-Type-Value E2 intention
-A5	Observation-Type-Value T49 lab
-A7	Temporal-Connection-Type-Value E21 before
+A5	Observation-Type-Value E19 lab
 A8	Polarity-Value T51 normal
-A11	Observation-Type-Value T53 lab
+A11	Observation-Type-Value E22 lab
 A12	Polarity-Value T54 normal
-A13	Observation-Type-Value T56 lab
+A13	Observation-Type-Value E27 lab
 A14	Polarity-Value T57 normal
-A15	Observation-Type-Value T59 lab
+A15	Observation-Type-Value E29 lab
 A16	Polarity-Value T60 normal
-A17	Observation-Type-Value T66 lab
+A17	Observation-Type-Value E33 lab
 A18	Eq-Temporal-Period-Value T72 present
 A19	Eq-Temporal-Period-Value T81 past
 A20	Eq-Temporal-Period-Value T86 past
 A21	Eq-Temporal-Period-Value T95 past
 A22	Polarity-Value T102 low
-A23	Temporal-Connection-Type-Value E56 before
-A24	Observation-Type-Value T108 lab
+A24	Observation-Type-Value E57 lab
 A25	Life-Stage-And-Gender-Type T114 male
 A26	Assertion-Type-Value E60 hypothetical
-A27	Temporal-Connection-Type-Value E62 before
-A28	Temporal-Connection-Type-Value E65 before
 A29	Assertion-Type-Value E67 hypothetical
-A30	Observation-Type-Value T130 lab
-A31	Temporal-Connection-Type-Value E70 before
+A30	Observation-Type-Value E68 lab
 A32	Eq-Operator-Value T134 LT
-A33	Observation-Type-Value T136 lab
+A33	Observation-Type-Value E71 lab
 A34	Polarity-Value T138 abnormal
-A35	Observation-Type-Value T139 lab
+A35	Observation-Type-Value E72 lab
 A36	Eq-Operator-Value T141 GT
 A37	Eq-Unit-Value T143 ref-range-normal
 R1	Using Arg1:E32 Arg2:E33
@@ -263,3 +226,24 @@ R9	Treatment-For Arg1:E66 Arg2:E18
 R10	Equivalent-To Arg1:E68 Arg2:E20
 R11	Equivalent-To Arg1:E71 Arg2:E20
 R12	Equivalent-To Arg1:E72 Arg2:E20
+R13	And Arg1:E1 Arg2:E5
+R14	Or Arg1:E5 Arg2:E9
+R15	And Arg1:E9 Arg2:E13
+R16	Before Arg1:E19 Arg2:E17
+R17	And Arg1:E27 Arg2:E29
+R18	And Arg1:T7 Arg2:E2
+R19	Or Arg1:E34 Arg2:E33
+R20	Or Arg1:E38 Arg2:E39
+R21	Or Arg1:E43 Arg2:E16
+R22	Or Arg1:E16 Arg2:E46
+R23	Or Arg1:E52 Arg2:E53
+R24	Before Arg1:E23 Arg2:E55
+R25	Or Arg1:T22 Arg2:T114
+R26	Before Arg1:E12 Arg2:E61
+R27	Before Arg1:E63 Arg2:E64
+R28	Before Arg1:E68 Arg2:E69
+R29	Or Arg1:E10 Arg2:E43
+R30	Or Arg1:E14 Arg2:E51
+R31	Or Arg1:E41 Arg2:E10
+R32	Or Arg1:E64 Arg2:E18
+R33	Or Arg1:E66 Arg2:E20

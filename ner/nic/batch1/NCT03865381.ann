@@ -1,29 +1,23 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6
-E10	Age:T14 Eq-Comparison:E2
+E10	Age:T14 Numeric-Filter:E2
 E11	Eq-Comparison:T19 Operator:T11 Value:T17 Unit:T44
 E12	Eq-Comparison:T20 Operator:T12 Value:T18 Unit:T45
 E2	Eq-Comparison:T21 Operator:T22 Temporal-Unit:T13 Value:T15
 E4	Procedure:T16 Name:T23
 E6	Procedure:T24 Name:T25
-E7	Observation:T26 Name:T27 Eq-Comparison:E11 Eq-Comparison2:E12
+E7	Observation:T26 Name:T27 Numeric-Filter:E11 Numeric-Filter:E12
 E14	Condition:T10 Name:T30
 E15	Procedure:T31 Name:T32
-E16	Condition:T33 
-E17	Study:T35 
+E16	Condition:T33
+E17	Study:T35
 E18	Negation:T36 Negates:E17
-E19	Condition:T37 
-E20	Or:T39 Arg:E16 Arg2:E19
-E21	Or:T40 Arg:T8 Arg2:T7
+E19	Condition:T37
 E22	Modifier:T41 Modifies:T2
 E23	Assertion:T42 Asserted:E4 Asserted2:E6
-E24	Or:T43 Arg:E4 Arg2:E6
-E25	And:T46 Arg:E11 Arg2:E12
 E26	Procedure:T47 Temporality:E27 Location:T28 Location2:T29
 E27	Eq-Comparison:T48 Temporal-Period:T49
-E8	Or:T50 Arg:T28 Arg2:T29
-E9	Or:T9 Arg:E14 Arg2:E3
 E13	Assertion:T34 Asserted:E18
 T1	Condition 102 119	diabetes mellitus
 T2	Condition-Name 102 119	diabetes mellitus
@@ -58,21 +52,15 @@ T33	Condition 511 520	condition
 T35	Study 599 604	study
 T36	Negation 581 594	inappropriate
 T37	Condition 524 533	situation
-T39	Or 521 523	or
-T40	Or 30 33	and
 T41	Modifier 95 101	Type 2
 T42	Assertion 125 135	Willing to
-T43	Or 144 147	and
 T44	Eq-Unit 172 173	%
 T45	Eq-Unit 183 184	%
-T46	And 174 177	and
 T47	Procedure 213 217	care
 T48	Eq-Comparison 190 197	Receive
 T49	Eq-Temporal-Period 190 197	Receive
 T28	Location 223 249	Premier Medical Associates
 T29	Location 257 285	Palo Alto Medical Foundation
-T50	Or 250 252	or
-T9	Or 457 459	or
 T34	Assertion 581 594	inappropriate
 A1	Life-Stage-And-Gender-Type T7 female
 A2	Life-Stage-And-Gender-Type T8 male
@@ -80,7 +68,7 @@ A3	Eq-Operator-Value T11 GTEQ
 A4	Eq-Operator-Value T12 LTEQ
 A5	Eq-Temporal-Unit-Value T13 year
 A6	Eq-Operator-Value T22 GTEQ
-A7	Observation-Type-Value T27 lab
+A7	Observation-Type-Value E7 lab
 A8	Assertion-Type-Value E23 hypothetical
 A9	Eq-Temporal-Period-Value T49 present
 A10	Location-Value T28 clinic
@@ -89,3 +77,9 @@ A12	Assertion-Type-Value E13 hypothetical
 R1	Treatment-For Arg1:E26 Arg2:E5
 R2	Caused-By Arg1:E18 Arg2:E16
 R3	Caused-By Arg1:E18 Arg2:E19
+R4	Or Arg1:E16 Arg2:E19
+R5	Or Arg1:T8 Arg2:T7
+R6	Or Arg1:E4 Arg2:E6
+R7	And Arg1:E11 Arg2:E12
+R8	Or Arg1:T28 Arg2:T29
+R9	Or Arg1:E14 Arg2:E3

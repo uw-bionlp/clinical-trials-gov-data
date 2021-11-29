@@ -4,60 +4,51 @@ E3	Modifier:T6 Modifies:T5
 E4	Condition:T7 Minimum-Count:E1 Duration:E12
 E5	Condition:T8 Name:T9
 E6	Modifier:T10 Modifies:T9
-E7	Condition:T11 Name:T12
+E7	Observation:T11 Name:T12
 E8	Condition:T13 Name:T14
-E9	Condition:T15 Name:T16
+E9	Observation:T15 Name:T16
 E10	Condition:T17 Name:T18
-E11	Or:T19 Arg:E9 Arg2:E10
 E12	Eq-Comparison:T20 Operator:T21 Value:T22 Temporal-Unit:T23
 E13	Condition:T24
 E14	Procedure:T25 Name:T26
 E15	Modifier:T27 Modifies:T26
 E16	Modifier:T28 Modifies:T26
-E17	Or:T29 Arg:E16 Arg2:E15
 E18	Condition:T30 Name:T31 Minimum-Count:E19
 E19	Eq-Comparison:T32 Value:T33 Operator:T34
 E20	Condition:T35 Name:T36
 E21	Modifier:T37 Modifies:T36
-E22	Or:T38 Arg:E18 Arg2:E20
 E23	Condition:T39 Name:T40
 E24	Condition:T41 Name:T42
 E25	Condition:T43 Name:T44
 E26	Modifier:T45 Modifies:T44
 E27	Condition:T46 Name:T47
-E28	Or:T48 Arg:E27 Arg2:E25
 E29	Procedure:T49 Name:T50
 E30	Procedure:T51 Name:T52
 E31	Modifier:T53 Modifies:T52
 E32	Organism:T54 Name:T55
-E33	Observation:T56 Name:T57 Eq-Comparison:E34
+E33	Observation:T56 Name:T57 Numeric-Filter:E34
 E34	Eq-Comparison:T58 Operator:T59 Value:T60 Unit:T61 Per:T62
 E35	Organism:T63 Name:T64 Polarity:T65
-E36	Or:T66 Arg:E33 Arg2:E35
 E37	Condition:T67 Name:T68
 E38	Modifier:T69 Modifies:T68
 E39	Observation:T70 Name:T71
 E40	Modifier:T72 Modifies:T68
 E41	Organism:T73 Name:T74
 E42	Observation:T75 Specimen:T76
-E43	Observation:T77 Name:T78 Eq-Comparison:E45
-E44	Or:T79 Arg:E42 Arg2:E43
+E43	Observation:T77 Name:T78 Numeric-Filter:E45
 E45	Eq-Comparison:T80 Operator:T81 Value:T82
-E46	Observation:T83 Name:T84 Eq-Comparison:E48
-E47	Or:T85 Arg:E43 Arg2:E46
+E46	Observation:T83 Name:T84 Numeric-Filter:E48
 E48	Eq-Comparison:T86 Operator:T87 Value:T88
 E49	Condition:T89 Name:T90
 E50	Modifier:T91 Modifies:T90
 E51	Negation:T92 Negates:E49
 E52	Other:T93 Is-Other:E49
-E53	And:T94 Arg:E37 Arg2:E51
 E54	Eq-Comparison:T95 Temporal-Period:T96
 E55	Drug:T97 Name:T98 Temporality:E54
 E56	Drug:T99 Name:T100 Dose:E57 Duration:E58
 E57	Eq-Comparison:T101 Operator:T102 Value:T103 Unit:T104
 E58	Eq-Comparison:T105 Operator:T106 Temporal-Unit:T108 Value:T107
 E59	Condition:T109 Name:T110
-E60	Or:T111 Arg:E56 Arg2:E59
 E61	Drug:T112 Name:T113 Duration:E62 Temporality:E63
 E62	Eq-Comparison:T114 Operator:T115 Value:T116 Temporal-Unit:T117
 E63	Eq-Comparison:T118 Temporal-Period:T119 Temporal-Unit:T121 Value:T120
@@ -66,7 +57,6 @@ E65	Condition:T123 Name:T124 Temporality:E66
 E66	Eq-Comparison:T125 Temporal-Period:T126
 E67	Organism:T127 Name:T128
 E68	Organism:T129 Name:T130
-E69	Or:T131 Arg:E67 Arg2:E68
 E70	Condition:T132 Name:T133
 E71	Exception:T134 From:E68 Except:E70
 E72	Condition:T135 Name:T136
@@ -79,7 +69,6 @@ E78	Condition:T144 Name:T145 Acuteness:T153
 E79	Modifier:T146 Modifies:T145
 E80	Condition:T147 Name:T148
 E81	Modifier:T149 Modifies:T148
-E82	Or:T150 Arg:E78 Arg2:E80
 E83	Condition:T151 Name:T152
 T2	Eq-Value 65 68	one
 T3	Eq-Operator 69 76	or more
@@ -91,15 +80,14 @@ T7	Condition 77 94	clinical symptoms
 T8	Condition 124 134	hemoptysis
 T9	Condition-Name 124 134	hemoptysis
 T10	Modifier 114 123	recurrent
-T11	Condition 136 147	weight loss
-T12	Condition-Name 136 147	weight loss
+T11	Observation 136 147	weight loss
+T12	Observation-Name 136 147	weight loss
 T13	Condition 149 156	malaise
 T14	Condition-Name 149 156	malaise
-T15	Condition 158 163	fever
-T16	Condition-Name 158 163	fever
+T15	Observation 158 163	fever
+T16	Observation-Name 158 163	fever
 T17	Condition 168 175	dyspnea
 T18	Condition-Name 168 175	dyspnea
-T19	Or 164 167	and
 T20	Eq-Comparison 181 190	≥3 months
 T21	Eq-Operator 181 182	≥
 T22	Eq-Value 182 183	3
@@ -109,7 +97,6 @@ T25	Procedure 229 241	radiological
 T26	Procedure-Name 229 241	radiological
 T27	Modifier 218 228	persistent
 T28	Modifier 196 214	slowly progressive
-T29	Or 215 217	or
 T30	Condition 264 272	cavities
 T31	Condition-Name 264 272	cavities
 T32	Eq-Comparison 252 263	one or more
@@ -118,7 +105,6 @@ T34	Eq-Operator 256 263	or more
 T35	Condition 289 297	fibrosis
 T36	Condition-Name 289 297	fibrosis
 T37	Modifier 277 288	surrounding
-T38	Or 273 276	and
 T39	Condition 299 310	infiltrates
 T40	Condition-Name 299 310	infiltrates
 T41	Condition 312 325	consolidation
@@ -128,7 +114,6 @@ T44	Condition-Name 370 388	pleural thickening
 T45	Modifier 358 369	progressive
 T46	Condition 343 354	fungal ball
 T47	Condition-Name 343 354	fungal ball
-T48	Or 355 357	or
 T49	Procedure 393 412	computed tomography
 T50	Procedure-Name 393 412	computed tomography
 T51	Procedure 414 416	CT
@@ -146,7 +131,6 @@ T62	Eq-Unit 485 486	L
 T63	Organism 499 522	Aspergillus precipitins
 T64	Organism-Name 499 522	Aspergillus precipitins
 T65	Polarity 490 498	positive
-T66	Or 487 489	or
 T67	Condition 567 576	infection
 T68	Condition-Name 567 576	infection
 T69	Modifier 555 566	Aspergillus
@@ -156,16 +140,14 @@ T72	Modifier 437 450	immunological
 T73	Organism 588 599	Aspergillus
 T74	Organism-Name 588 599	Aspergillus
 T75	Observation 603 625	respiratory secretions
-T76	Observation-Specimen 603 625	respiratory secretions
+T76	Specimen 603 625	respiratory secretions
 T77	Observation 629 654	serum galactomannan index
 T78	Observation-Name 629 654	serum galactomannan index
-T79	Or 626 628	or
 T80	Eq-Comparison 655 659	>0.5
 T81	Eq-Operator 655 656	>
 T82	Eq-Value 656 659	0.5
 T83	Observation 663 687	BALF galactomannan index
 T84	Observation-Name 663 687	BALF galactomannan index
-T85	Or 660 662	or
 T86	Eq-Comparison 688 690	>1
 T87	Eq-Operator 688 689	>
 T88	Eq-Value 689 690	1
@@ -174,7 +156,6 @@ T90	Condition-Name 731 740	disorders
 T91	Modifier 721 730	pulmonary
 T92	Negation 702 711	exclusion
 T93	Other 715 720	other
-T94	And 692 695	and
 T95	Eq-Comparison 843 845	on
 T96	Eq-Temporal-Period 843 845	on
 T97	Drug 846 869	immunosuppressive drugs
@@ -191,7 +172,6 @@ T107	Eq-Value 930 931	3
 T108	Eq-Temporal-Unit 932 937	weeks
 T109	Condition 956 993	human immunodeficiency virus syndrome
 T110	Condition-Name 956 993	human immunodeficiency virus syndrome
-T111	Or 938 940	or
 T112	Drug 1006 1023	antifungal azoles
 T113	Drug-Name 1006 1023	antifungal azoles
 T114	Eq-Comparison 1028 1036	>3 weeks
@@ -211,7 +191,6 @@ T127	Organism 1118 1144	mycobacterium tuberculosis
 T128	Organism-Name 1118 1144	mycobacterium tuberculosis
 T129	Organism 1148 1160	mycobacteria
 T130	Organism-Name 1148 1160	mycobacteria
-T131	Or 1145 1147	or
 T132	Condition 1172 1184	tuberculosis
 T133	Condition-Name 1172 1184	tuberculosis
 T134	Exception 1161 1171	other than
@@ -230,7 +209,6 @@ T146	Modifier 1301 1312	necrotizing
 T147	Condition 1346 1359	aspergillosis
 T148	Condition-Name 1346 1359	aspergillosis
 T149	Modifier 1331 1345	angio-invasive
-T150	Or 1327 1330	and
 T151	Condition 1366 1375	pregnancy
 T152	Condition-Name 1366 1375	pregnancy
 T153	Acuteness 1293 1300	chronic
@@ -238,13 +216,13 @@ A1	Eq-Operator-Value T3 GTEQ
 A2	Eq-Operator-Value T21 GTEQ
 A3	Eq-Temporal-Unit-Value T23 month
 A4	Eq-Operator-Value T34 GTEQ
-A5	Observation-Type-Value T57 lab
+A5	Observation-Type-Value E33 lab
 A6	Eq-Operator-Value T59 GT
 A7	Polarity-Value T65 positive
-A8	Observation-Type-Value T71 lab
-A9	Observation-Type-Value T78 lab
+A8	Observation-Type-Value E39 lab
+A9	Observation-Type-Value E43 lab
 A10	Eq-Operator-Value T81 GT
-A11	Observation-Type-Value T84 lab
+A11	Observation-Type-Value E46 lab
 A12	Eq-Operator-Value T87 GT
 A13	Eq-Temporal-Period-Value T96 present
 A14	Eq-Operator-Value T102 GT
@@ -283,3 +261,19 @@ R24	Abbrev-Of Arg1:E72 Arg2:E70
 R25	Example-Of Arg1:E76 Arg2:E73
 R26	Example-Of Arg1:E78 Arg2:E73
 R27	Example-Of Arg1:E80 Arg2:E73
+R28	Or Arg1:E9 Arg2:E10
+R29	Or Arg1:E16 Arg2:E15
+R30	Or Arg1:E18 Arg2:E20
+R31	Or Arg1:E27 Arg2:E25
+R32	Or Arg1:E33 Arg2:E35
+R33	Or Arg1:E42 Arg2:E43
+R34	Or Arg1:E43 Arg2:E46
+R35	And Arg1:E37 Arg2:E51
+R36	Or Arg1:E56 Arg2:E59
+R37	Or Arg1:E67 Arg2:E68
+R38	Or Arg1:E78 Arg2:E80
+R39	Or Arg1:E5 Arg2:E7
+R40	Or Arg1:E7 Arg2:E8
+R41	Or Arg1:E8 Arg2:E9
+R42	Or Arg1:E20 Arg2:E23
+R43	Or Arg1:E23 Arg2:E24

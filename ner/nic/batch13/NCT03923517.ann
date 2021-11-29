@@ -5,7 +5,6 @@ E8	Condition:T8 Name:T9 Temporality:E5
 E10	Condition:T10 Name:T11
 E13	Condition:T13 Name:T14
 E2	Condition:T21 Name:T22
-E4	Or:T23 Arg:E6 Arg2:E1
 E5	Eq-Comparison:T24 Operator:T25 Temporal-Unit:T16 Value:T19
 E7	Condition:T26 Name:T27
 E9	Eq-Comparison:T28 Operator:T29 Value:T30 Per:T31
@@ -14,17 +13,14 @@ E12	Observation:T17 Name:T34 Temporality:E15
 E14	Condition:T35 Name:T36
 E15	Eq-Comparison:T37 Operator:T15 Value:T38 Per:T39
 E16	Condition:T40 Name:T41
-E17	Condition:T42 
+E17	Condition:T42
 E18	Exception:T43 From:E17 Except:E13
 E19	Condition:T44 Name:T45
-E20	Or:T46 Arg:E13 Arg2:E19
-E21	Or:T47 Arg:E19 Arg2:E22
 E22	Coreference:T48 Refers-To:E16 Duration:E23
 E23	Eq-Comparison:T49 Operator:T50 Temporal-Unit:T18 Value:T20
 E24	Negation:T51 Negates:T12
 E25	Condition:T52 Severity:T53
 E26	Condition:T54 Name:T55
-E27	Or:T56 Arg:E25 Arg2:E26
 E28	Eq-Comparison:T57 Value:T58 Temporal-Unit:T59
 E29	Study:T60 Duration:E28
 E30	Other:T61 Is-Other:E10
@@ -54,7 +50,6 @@ T19	Eq-Value 156 158	12
 T20	Eq-Value 729 731	12
 T21	Condition 57 60	YOD
 T22	Condition-Name 57 60	YOD
-T23	Or 128 130	or
 T24	Eq-Comparison 156 177	12 months ago or less
 T25	Eq-Operator 170 177	or less
 T26	Condition 240 243	YOD
@@ -78,8 +73,6 @@ T42	Condition 671 676	cause
 T43	Exception 677 687	other than
 T44	Condition 695 697	AD
 T45	Condition-Name 695 697	AD
-T46	Or 692 694	or
-T47	Or 698 700	or
 T48	Coreference 705 714	diagnosis
 T49	Eq-Comparison 718 738	older than 12 months
 T50	Eq-Operator 718 728	older than
@@ -88,7 +81,6 @@ T52	Condition 1010 1024	health problem
 T53	Severity 998 1009	significant
 T54	Condition 1028 1038	disability
 T55	Condition-Name 1028 1038	disability
-T56	Or 1025 1027	or
 T57	Eq-Comparison 413 424	eight weeks
 T58	Eq-Value 413 418	eight
 T59	Eq-Temporal-Unit 419 424	weeks
@@ -117,3 +109,7 @@ A13	Assertion-Type-Value E35 hypothetical
 R1	Abbrev-Of Arg1:E6 Arg2:E3
 R2	Abbrev-Of Arg1:E8 Arg2:E1
 R3	Caused-By Arg1:E10 Arg2:E17
+R4	Or Arg1:E6 Arg2:E1
+R5	Or Arg1:E13 Arg2:E19
+R6	Or Arg1:E19 Arg2:E22
+R7	Or Arg1:E25 Arg2:E26

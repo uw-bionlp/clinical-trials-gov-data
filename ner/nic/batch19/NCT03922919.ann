@@ -4,7 +4,7 @@ E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
-E12	Age:T15 Eq-Comparison:E14
+E12	Age:T15 Numeric-Filter:E14
 E14	Eq-Comparison:T19 Operator:T13 Temporal-Unit:T14 Value:T17
 E15	Eq-Comparison:T20 Temporal-Period:T21
 E2	Drug:T16 Name:T22
@@ -14,11 +14,9 @@ E8	Drug:T18 Name:T25
 E10	Modifier:T26 Modifies:T25
 E13	Drug:T27 Name:T28
 E16	Drug:T29 Name:T30
-E17	Or:T31 Arg:E13 Arg2:E16
 E18	Condition:T32 Name:T33
 E19	Drug:T34 Name:T35
 E20	Drug:T36 Name:T37
-E21	Or:T38 Arg:E19 Arg2:E20
 E22	Drug:T39 Name:T40
 E23	Other:T41 Is-Other:E22
 E24	Condition:T42 Name:T43 Severity:T44 Temporality:E15
@@ -28,20 +26,16 @@ E27	Other:T48 Is-Other:E25
 E28	Drug:T49 Name:T50
 E29	Drug:T51 Name:T52
 E30	Drug:T53 Name:T54
-E31	Or:T55 Arg:E29 Arg2:E30
 E32	Drug:T56 Name:T57
 E33	Modifier:T58 Modifies:T57
 E34	Condition:T59 Name:T60
-E35	Or:T62 Arg:E34 Arg2:E11
 E36	Assertion:T63 Asserted:E7
-E37	Or:T64 Arg:E7 Arg2:E9
 E38	Procedure:T65
 E39	Drug:T66 Name:T67
 E40	Assertion:T68 Asserted:E39
 E41	Assertion:T69 Asserted:E1
 E42	Eq-Comparison:T70 Unit:T71 Value:T72
 E43	Eq-Comparison:T73 Unit:T74 Value:T75
-E44	Or:T76 Arg:E1 Arg2:E3
 E45	Procedure:T77
 E46	Drug:T78 Name:T79
 T1	Condition 745 773	enterobacteriaceae infection
@@ -74,14 +68,12 @@ T27	Drug 133 143	cefotaxime
 T28	Drug-Name 133 143	cefotaxime
 T29	Drug 147 158	ceftriaxone
 T30	Drug-Name 147 158	ceftriaxone
-T31	Or 144 146	or
 T32	Condition 214 230	Hypersensitivity
 T33	Condition-Name 214 230	Hypersensitivity
 T34	Drug 234 245	ceftriaxone
 T35	Drug-Name 234 245	ceftriaxone
 T36	Drug 249 259	cefotaxime
 T37	Drug-Name 249 259	cefotaxime
-T38	Or 246 248	or
 T39	Drug 272 285	cephalosporin
 T40	Drug-Name 272 285	cephalosporin
 T41	Other 264 271	another
@@ -98,16 +90,13 @@ T51	Drug 495 506	monobactams
 T52	Drug-Name 495 506	monobactams
 T53	Drug 511 521	carbapenes
 T54	Drug-Name 511 521	carbapenes
-T55	Or 507 510	and
 T56	Drug 559 570	ceftriaxone
 T57	Drug-Name 559 570	ceftriaxone
 T58	Modifier 528 540	Subcutaneous
 T59	Condition 576 584	Pregnant
 T60	Condition-Name 576 584	Pregnant
 T61	Life-Stage-And-Gender 603 608	woman
-T62	Or 585 588	and
 T63	Assertion 614 623	Suspicion
-T64	Or 649 651	or
 T65	Procedure 707 716	treatment
 T66	Drug 695 706	ceftazidime
 T67	Drug-Name 695 706	ceftazidime
@@ -119,7 +108,6 @@ T72	Eq-Value 741 744	III
 T73	Eq-Comparison 777 786	group III
 T74	Eq-Unit 777 782	group
 T75	Eq-Value 783 786	III
-T76	Or 774 776	or
 T77	Procedure 835 844	treatment
 T78	Drug 826 834	cefepime
 T79	Drug-Name 826 834	cefepime
@@ -148,3 +136,10 @@ R14	Using Arg1:E38 Arg2:E39
 R15	Treatment-For Arg1:E38 Arg2:E9
 R16	Using Arg1:E45 Arg2:E46
 R17	Treatment-For Arg1:E45 Arg2:E3
+R18	Or Arg1:E13 Arg2:E16
+R19	Or Arg1:E19 Arg2:E20
+R20	Or Arg1:E29 Arg2:E30
+R21	Or Arg1:E34 Arg2:E11
+R22	Or Arg1:E7 Arg2:E9
+R23	Or Arg1:E1 Arg2:E3
+R24	Or Arg1:E28 Arg2:E29

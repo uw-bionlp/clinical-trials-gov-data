@@ -12,7 +12,7 @@ E21	Condition:T21 Name:T22
 E23	Condition:T23 Name:T24 Duration:E38
 E27	Condition:T27 Name:T28 Acuteness:T119
 E29	Condition:T29 Name:T30
-E30	Age:T38 Eq-Comparison:E36
+E30	Age:T38 Numeric-Filter:E36
 E32	Eq-Comparison:T50 Operator:T31 Value:T44
 E33	Eq-Comparison:T51 Operator:T32 Value:T45
 E34	Eq-Comparison:T52 Operator:T33 Value:T47
@@ -20,24 +20,20 @@ E35	Eq-Comparison:T53 Operator:T34 Value:T49
 E36	Eq-Comparison:T54 Operator:T40 Value:T41 Value2:T42 Temporal-Unit:T35
 E2	Condition:T37 Name:T39
 E4	Observation:T43 Name:T55
-E6	Observation:T56 Name:T57 Eq-Comparison:E32
+E6	Observation:T56 Name:T57 Numeric-Filter:E32
 E8	Condition:T58 Name:T59
 E10	Observation:T60 Name:T61
-E12	Observation:T46 Name:T62 Eq-Comparison:E34
+E12	Observation:T46 Name:T62 Numeric-Filter:E34
 E14	Procedure:T26 Name:T63
 E16	Contraindication:T64 Contraindicates:E14
 E18	Condition:T65 Name:T66
-E20	Or:T67 Arg:E19 Arg2:E21
-E22	Condition:T68 Name:T69 Severity:T70
+E22	Condition:T68 Severity:T70
 E24	Other:T71 Is-Other:E22
-E25	Modifier:T72 Modifies:T69
+E25	Modifier:T72 Modifies:E22
 E26	Exception:T73 From:E25 Except:E28
 E28	Condition:T74 Name:T75
-E31	Or:T76 Arg:E25 Arg2:E24
-E37	Or:T78 Arg:E7 Arg2:E23
 E38	Eq-Comparison:T79 Operator:T80 Value:T48 Temporal-Unit:T36
-E39	Observation:T81 Name:T82 Eq-Comparison:E35
-E40	Or:T83 Arg:E23 Arg2:E3
+E39	Observation:T81 Name:T82 Numeric-Filter:E35
 E41	Drug:T84 Name:T85 Temporality:E42 Dose:E43
 E42	Eq-Comparison:T86 Temporal-Period:T87
 E43	Eq-Comparison:T88 Per:T91 Operator:T89 Value:T90
@@ -52,7 +48,7 @@ E51	Drug:T108 Name:T109
 E52	Condition:T110 Name:T111
 E53	Condition:T112
 E54	Other:T113 Is-Other:E53
-E55	Condition:T114 Name:T115
+E55	Observation:T114 Name:T115
 E56	Modifier:T116 Modifies:T115
 E57	Condition:T117 Name:T118
 T1	Condition 962 983	restless leg syndrome
@@ -121,7 +117,6 @@ T63	Procedure-Name 461 464	MRI
 T64	Contraindication 440 456	contraindication
 T65	Condition 466 485	metallic body parts
 T66	Condition-Name 466 485	metallic body parts
-T67	Or 526 528	or
 T68	Condition 592 599	disease
 T69	Condition-Name 592 599	disease
 T70	Severity 584 591	serious
@@ -130,14 +125,11 @@ T72	Modifier 542 554	neurological
 T73	Exception 556 566	other than
 T74	Condition 567 569	AD
 T75	Condition-Name 567 569	AD
-T76	Or 571 573	or
 T77	Severity 660 665	major
-T78	Or 677 679	or
 T79	Eq-Comparison 692 710	more than 3 months
 T80	Eq-Operator 692 701	more than
 T81	Observation 712 716	Beck
 T82	Observation-Name 712 716	Beck
-T83	Or 721 723	or
 T84	Drug 781 793	neuroleptics
 T85	Drug-Name 781 793	neuroleptics
 T86	Eq-Comparison 774 777	use
@@ -168,8 +160,8 @@ T110	Condition 1022 1024	AD
 T111	Condition-Name 1022 1024	AD
 T112	Condition 1046 1052	causes
 T113	Other 1040 1045	other
-T114	Condition 1100 1107	lesions
-T115	Condition-Name 1100 1107	lesions
+T114	Observation 1100 1107	lesions
+T115	Observation-Name 1100 1107	lesions
 T116	Modifier 1070 1099	non-degenerative neurological
 T117	Condition 1113 1138	white matter hypersignals
 T118	Condition-Name 1113 1138	white matter hypersignals
@@ -181,8 +173,8 @@ A4	Eq-Operator-Value T34 GT
 A5	Eq-Temporal-Unit-Value T35 year
 A6	Eq-Temporal-Unit-Value T36 month
 A7	Eq-Operator-Value T40 BETWEEN
-A8	Observation-Type-Value T55 clinical-score
-A9	Observation-Type-Value T62 clinical-score
+A8	Observation-Type-Value E4 clinical-score
+A9	Observation-Type-Value E12 clinical-score
 A10	Severity-Value T70 severe
 A11	Severity-Value T77 severe
 A12	Eq-Operator-Value T80 GTEQ
@@ -206,3 +198,10 @@ R8	Caused-By Arg1:E29 Arg2:E53
 R9	If-Then Arg1:E52 Arg2:E29
 R10	If-Then Arg1:E52 Arg2:E57
 R11	If-Then Arg1:E52 Arg2:E27
+R12	Or Arg1:E19 Arg2:E21
+R13	Or Arg1:E25 Arg2:E24
+R14	Or Arg1:E7 Arg2:E23
+R15	Or Arg1:E23 Arg2:E3
+R16	Or Arg1:E13 Arg2:E5
+R17	Or Arg1:E17 Arg2:E19
+R18	Or Arg1:E18 Arg2:E9

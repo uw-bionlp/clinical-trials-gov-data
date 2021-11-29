@@ -3,11 +3,11 @@ E2	Eq-Comparison:T2 Temporal-Period:T17
 E3	Modifier:T3 Modifies:T30
 E4	Procedure:T4 Name:T30 Temporality:E2
 E5	Procedure:T5 Name:T18
-E6	Observation:T6 Name:T19 Eq-Comparison:E7
+E6	Observation:T6 Name:T19 Numeric-Filter:E7
 E7	Eq-Comparison:T7 Operator:T20 Value:T21 Temporal-Unit:T22
 E8	Condition:T8 Name:T24
 E11	Condition:T11 Name:T25
-E12	Observation:T12 Name:T23 Eq-Comparison:E17
+E12	Observation:T12 Name:T23 Numeric-Filter:E17
 E13	Condition:T13 Name:T27
 E15	Condition:T15 Name:T28
 E16	Modifier:T29 Modifies:T16
@@ -45,6 +45,7 @@ A2	Eq-Temporal-Period-Value T17 future
 A3	Eq-Operator-Value T20 LT
 A4	Eq-Temporal-Unit-Value T22 week
 A5	Eq-Operator-Value T26 GTEQ
-A6	Observation-Type-Value T19 measurement
-A7	Observation-Type-Value T23 vital
+A6	Observation-Type-Value E6 measurement
+A7	Observation-Type-Value E12 vital
 R1	Using Arg1:E4 Arg2:E5
+R2	Or Arg1:E8 Arg2:E11

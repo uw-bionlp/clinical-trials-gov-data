@@ -1,29 +1,23 @@
-E1	Age:T4 Eq-Comparison:E6
-E3	Age:T6 Eq-Comparison:E2
-E5	Age:T8 Eq-Comparison:E4
+E1	Age:T4 Numeric-Filter:E6
+E3	Age:T6 Numeric-Filter:E2
+E5	Age:T8 Numeric-Filter:E4
 E6	Eq-Comparison:T14 Operator:T9 Value:T10 Value2:T11 Temporal-Unit:T2
 E2	Eq-Comparison:T1 Operator:T7 Temporal-Unit:T3 Value:T12
 E4	Eq-Comparison:T18 Operator:T19 Value:T13
 E7	Negation:T21 Negates:T20
-E8	Encounter:T24 Location:T22 Location2:T23
+E8	Encounter:T24 Location:T22
 E9	Negation:T25 Negates:E8
 E10	Condition:T26 Name:T27 Polarity:T31
 E11	Modifier:T28 Modifies:T27
 E12	Modifier:T29 Modifies:T27
-E13	Or:T30 Arg:E11 Arg2:E12
 E15	Condition:T32 Name:T33
 E16	Procedure:T34 Name:T35
 E17	Study:T36
-E18	Temporal-Connection:T37 Arg:E16 Arg2:E17
 E19	Condition:T38 Name:T39
 E20	Modifier:T40 Modifies:T39
 E21	Modifier:T41 Modifies:T39
-E22	Or:T42 Arg:E20 Arg2:E21
 E23	Procedure:T43 Name:T44 Provider:E24
-E24	Provider:T45 Role:T46
-E25	Or:T47 Arg:E3 Arg2:E5
-E26	And:T50 Arg:T48 Arg2:E9
-E27	And:T51 Arg:T49 Arg2:T31
+E24	Provider:T45
 T2	Eq-Temporal-Unit 58 63	years
 T3	Eq-Temporal-Unit 269 274	years
 T4	Age 47 51	aged
@@ -53,27 +47,20 @@ T26	Condition 478 486	suicidal
 T27	Condition-Name 478 486	suicidal
 T28	Modifier 487 495	ideation
 T29	Modifier 503 511	behavior
-T30	Or 496 502	and/or
 T32	Condition 566 584	Cognitively unable
 T33	Condition-Name 566 584	Cognitively unable
 T34	Procedure 640 656	cognitive screen
 T35	Procedure-Name 640 656	cognitive screen
 T36	Study 684 692	baseline
-T37	Temporal-Connection 657 662	prior
 T38	Condition 136 144	suicidal
 T39	Condition-Name 136 144	suicidal
 T40	Modifier 145 153	ideation
 T41	Modifier 157 166	behaviors
-T42	Or 154 156	or
 T43	Procedure 172 188	universal screen
 T44	Procedure-Name 172 188	universal screen
 T45	Provider 198 219	primary care provider
-T46	Provider-Role 198 219	primary care provider
-T47	Or 279 281	or
 T48	Life-Stage-And-Gender 344 349	Youth
 T49	Life-Stage-And-Gender 448 453	Youth
-T50	And 350 353	who
-T51	And 454 457	who
 T31	Polarity 465 473	negative
 A2	Eq-Temporal-Unit-Value T2 year
 A3	Eq-Temporal-Unit-Value T3 year
@@ -84,9 +71,14 @@ A1	Eq-Operator-Value T7 LT
 A7	Eq-Operator-Value T19 GT
 A8	Location-Value T22 clinic
 A9	Location-Value T23 residence
-A10	Temporal-Connection-Type-Value E18 before
 A11	Life-Stage-And-Gender-Type T48 child
 A12	Life-Stage-And-Gender-Type T49 child
 A13	Polarity-Value T31 negative
 R1	Found-By Arg1:E15 Arg2:E16
 R2	Found-By Arg1:E19 Arg2:E23
+R3	Or Arg1:E11 Arg2:E12
+R4	Before Arg1:E16 Arg2:E17
+R5	Or Arg1:E20 Arg2:E21
+R6	Or Arg1:E3 Arg2:E5
+R7	And Arg1:T48 Arg2:E9
+R8	And Arg1:T49 Arg2:T31

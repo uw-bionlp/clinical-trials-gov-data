@@ -6,15 +6,14 @@ E6	Eq-Comparison:T29 Operator:T9 Value:T21 Per:T40 Unit:T16
 E7	Eq-Comparison:T30 Operator:T10 Unit:T17 Value:T23
 E8	Eq-Comparison:T31 Operator:T11 Unit:T18 Value:T24
 E9	Eq-Comparison:T32 Operator:T12 Value:T25 Unit:T52 Per:T53
-E2	Age:T34 Eq-Comparison:E4
+E2	Age:T34 Numeric-Filter:E4
 E10	Observation:T35 Name:T36
-E11	Observation:T37 Name:T38 Eq-Comparison:E5 Eq-Comparison2:E6
+E11	Observation:T37 Name:T38 Numeric-Filter:E5 Numeric-Filter:E6
 E12	Procedure:T42 Name:T43
-E13	Observation:T22 Name:T44 Eq-Comparison:E7 Eq-Comparison2:E8
+E13	Observation:T22 Name:T44 Numeric-Filter:E7 Numeric-Filter:E8
 E14	Procedure:T46 Name:T47
-E15	Observation:T48 Name:T49 Polarity:T50 Eq-Comparison:E9
-E16	Or:T51 Arg:E14 Arg2:E15
-E17	Observation:T54 Name:T55 Eq-Comparison:E18
+E15	Observation:T48 Name:T49 Polarity:T50 Numeric-Filter:E9
+E17	Observation:T54 Name:T55 Numeric-Filter:E18
 E18	Eq-Comparison:T56 Operator:T57 Value:T26 Temporal-Unit:T14
 E19	Eq-Comparison:T59 Temporal-Period:T60
 E20	Eq-Comparison:T61 Temporal-Period:T62
@@ -71,7 +70,6 @@ T47	Procedure-Name 308 319	dynamometer
 T48	Observation 361 371	gait speed
 T49	Observation-Name 361 371	gait speed
 T50	Polarity 354 360	slowly
-T51	Or 351 353	or
 T52	Eq-Unit 376 377	m
 T53	Eq-Temporal-Unit 378 379	s
 T54	Observation 416 431	life expectancy
@@ -98,13 +96,13 @@ A6	Eq-Operator-Value T12 LT
 A7	Eq-Temporal-Unit-Value T13 year
 A8	Eq-Temporal-Unit-Value T14 month
 A9	Life-Stage-And-Gender-Type T33 elderly
-A10	Observation-Type-Value T36 measurement
+A10	Observation-Type-Value E10 measurement
 A11	Life-Stage-And-Gender-Type T5 male
 A12	Life-Stage-And-Gender-Type T41 female
-A13	Observation-Type-Value T44 measurement
+A13	Observation-Type-Value E13 measurement
 A14	Life-Stage-And-Gender-Type T6 male
 A15	Life-Stage-And-Gender-Type T45 female
-A16	Observation-Type-Value T49 measurement
+A16	Observation-Type-Value E15 measurement
 A17	Polarity-Value T50 low
 A18	Eq-Temporal-Unit-Value T53 second
 A19	Eq-Operator-Value T57 LT
@@ -112,7 +110,7 @@ A20	Location-Value T58 residence
 A21	Eq-Temporal-Period-Value T60 past
 A22	Eq-Temporal-Period-Value T62 past
 A23	Eq-Temporal-Period-Value T64 past
-A24	Observation-Type-Value T68 social-habit
+A24	Observation-Type-Value E23 social-habit
 R1	Equivalent-To Arg1:E2 Arg2:T33
 R2	Abbrev-Of Arg1:E11 Arg2:E10
 R3	If-Then Arg1:T5 Arg2:E5
@@ -121,3 +119,4 @@ R5	Found-By Arg1:E11 Arg2:E12
 R6	If-Then Arg1:T6 Arg2:E7
 R7	If-Then Arg1:T45 Arg2:E8
 R8	Found-By Arg1:E13 Arg2:E14
+R9	Or Arg1:E14 Arg2:E15

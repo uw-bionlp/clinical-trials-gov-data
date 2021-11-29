@@ -1,30 +1,27 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Operator:T21 Value:T22 Temporal-Unit:T23
 E3	Condition:T3 Name:T24 Temporality:E4 Acuteness:T37
 E4	Eq-Comparison:T4 Temporal-Period:T25
 E5	Assertion:T5 Asserted:E9
-E7	Or:T7 Arg:E5 Arg2:E8
 E8	Assertion:T8 Asserted:E9
 E9	Condition:T9 Name:T26
 E10	Condition:T10 Name:T28 Acuteness:T27 Type:T6 Provider:E6
-E11	Encounter:T11 
+E11	
 E12	Drug:T12 Name:T30
 E14	Allergy:T14 Name:E15
 E15	Drug:T15 Name:T32
 E16	Condition:T16 Name:T34 Severity:T33
 E17	Eq-Comparison:T17 Per:T44 Operator:T41 Value:T42 Unit:T43
 E18	Condition:T18 Name:T35
-E19	Or:T19 Arg:E18 Arg2:E20
 E20	Condition:T20 Name:T36 Stability:T45
-E6	Provider:T38 Role:T39
+E6	Provider:T38
 E22	Assertion:T40 Asserted:E11
-E13	Observation:T13 Name:T31 Eq-Comparison:E17
+E13	Observation:T13 Name:T31 Numeric-Filter:E17
 T1	Age 25 28	Age
 T2	Eq-Comparison 29 47	more than 18 years
 T3	Condition 62 75	heart failure
 T4	Eq-Comparison 76 81	prior
 T5	Assertion 102 107	signs
-T7	Or 108 114	and or
 T8	Assertion 115 123	symptoms
 T9	Condition 127 140	heart failure
 T10	Condition 164 178	decompensation
@@ -35,7 +32,6 @@ T15	Drug 328 340	IV frusemide
 T16	Condition 354 370	renal impairment
 T17	Eq-Comparison 386 393	<30ml/m
 T18	Condition 400 417	Cardiogenic shock
-T19	Or 418 420	or
 T20	Condition 421 432	hemodynamic
 T21	Eq-Operator 29 38	more than
 T22	Eq-Value 39 41	18
@@ -55,7 +51,6 @@ T36	Condition-Name 421 432	hemodynamic
 T37	Acuteness 54 61	Chronic
 T6	Condition-Type 142 152	presenting
 T38	Provider 196 205	physician
-T39	Provider-Role 196 205	physician
 T40	Assertion 209 216	require
 T13	Observation 382 386	eGFR
 T31	Observation-Name 382 386	eGFR
@@ -73,7 +68,7 @@ A7	Encounter-Type-Value T29 inpatient
 A8	Severity-Value T33 severe
 A9	Condition-Type-Value T6 admitting
 A10	Assertion-Type-Value E22 hypothetical
-A11	Observation-Type-Value T31 lab
+A11	Observation-Type-Value E13 lab
 A12	Eq-Operator-Value T41 LT
 A13	Stability-Value T45 change
 A14	Acuteness-Type-Value T27 acute
@@ -82,3 +77,5 @@ R1	Found-By Arg1:E3 Arg2:E9
 R2	Using Arg1:E11 Arg2:E12
 R3	Treatment-For Arg1:E11 Arg2:E10
 R4	Equivalent-To Arg1:E13 Arg2:E16
+R5	Or Arg1:E5 Arg2:E8
+R6	Or Arg1:E18 Arg2:E20

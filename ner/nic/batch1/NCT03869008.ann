@@ -1,8 +1,8 @@
 E1	Condition:T1 Name:T2
-E2	Age:T5 Eq-Comparison:E3
+E2	Age:T5 Numeric-Filter:E3
 E3	Eq-Comparison:T8 Operator:T3 Temporal-Unit:T4 Value:T6
 E4	Condition:T9 Name:T10
-E5	Condition:T12 Name:T13 Temporality:E6
+E5	Observation:T12 Name:T13 Temporality:E6
 E6	Eq-Comparison:T14 Temporal-Period:T15
 E7	Condition:T16 Name:T17
 E8	Condition:T18 Name:T19
@@ -16,7 +16,6 @@ E15	Drug:T31 Name:T32 Temporality:E16
 E16	Eq-Comparison:T33 Temporal-Period:T34
 E17	Modifier:T35 Modifies:T17
 E18	Other:T36 Is-Other:E13
-E19	Or:T37 Arg:E12 Arg2:E13
 T1	Condition 44 72	Primary Raynaud's Phenomenon
 T2	Condition-Name 44 72	Primary Raynaud's Phenomenon
 T3	Eq-Operator 98 107	Less than
@@ -27,8 +26,8 @@ T8	Eq-Comparison 98 116	Less than 18 years
 T9	Condition 129 137	Pregnant
 T10	Condition-Name 129 137	Pregnant
 T11	Life-Stage-And-Gender 138 143	women
-T12	Condition 157 164	smokers
-T13	Condition-Name 157 164	smokers
+T12	Observation 157 164	smokers
+T13	Observation-Name 157 164	smokers
 T14	Eq-Comparison 149 156	Current
 T15	Eq-Temporal-Period 149 156	Current
 T16	Condition 183 189	ulcers
@@ -53,7 +52,6 @@ T33	Eq-Comparison 372 381	Currently
 T34	Eq-Temporal-Period 372 381	Currently
 T35	Modifier 175 182	Digital
 T36	Other 335 340	other
-T37	Or 332 334	or
 A1	Eq-Operator-Value T3 LT
 A2	Eq-Temporal-Unit-Value T4 year
 A3	Life-Stage-And-Gender-Type T11 female
@@ -65,3 +63,6 @@ R2	Example-Of Arg1:E11 Arg2:E9
 R3	Example-Of Arg1:E12 Arg2:E9
 R4	Example-Of Arg1:E13 Arg2:E9
 R5	If-Then Arg1:E4 Arg2:T11
+R6	Or Arg1:E12 Arg2:E13
+R7	Or Arg1:E10 Arg2:E11
+R8	Or Arg1:E11 Arg2:E12

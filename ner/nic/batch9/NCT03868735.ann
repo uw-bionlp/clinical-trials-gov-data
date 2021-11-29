@@ -2,23 +2,20 @@ E1	Procedure:T1 Name:T13
 E2	Procedure:T2 Name:T14
 E3	Procedure:T3 Name:T29 Temporality:E4
 E4	Eq-Comparison:T4 Operator:T15 Value:T16 Temporal-Unit:T17
-E5	Temporal-Connection:T5 Arg:E4 Arg2:E6
 E6	Study:T6
 E7	Eq-Comparison:T7 Operator:T18 Value:T19 Temporal-Unit:T20
 E8	Procedure:T8 Name:T21
 E9	Procedure:T9 Name:T22
-E10	Encounter:T10 Type:T31 Location:T23
+E10	Encounter:T10 Location:T23
 E11	Eq-Comparison:T11 Operator:T24 Value:T25 Temporal-Unit:T26
 E12	Procedure:T12 Name:T27 Duration:E11
 E13	Modifier:T28 Modifies:T13
-E14	Age:T30 Eq-Comparison:E7
+E14	Age:T30 Numeric-Filter:E7
 E15	Other:T32 Is-Other:T23
-E16	Temporal-Connection:T33 Arg:E10 Arg2:E12
 T1	Procedure 32 41	intubated
 T2	Procedure 55 72	endotracheal tube
 T3	Procedure 78 101	Mechanically ventilated
 T4	Eq-Comparison 102 120	less than 24 hours
-T5	Temporal-Connection 121 129	prior to
 T6	Study 130 140	enrollment
 T7	Eq-Comparison 166 184	Less than 18 years
 T8	Procedure 194 211	Tracheostomy tube
@@ -44,10 +41,7 @@ T27	Procedure-Name 316 338	mechanical ventilation
 T28	Modifier 25 31	Orally
 T29	Procedure-Name 78 101	Mechanically ventilated
 T30	Age 185 188	old
-T31	Encounter-Type 258 266	Transfer
 T32	Other 272 279	outside
-T33	Temporal-Connection 289 293	with
-A1	Temporal-Connection-Type-Value E5 before
 A2	Eq-Operator-Value T15 LT
 A3	Eq-Temporal-Unit-Value T17 hour
 A4	Eq-Operator-Value T18 LT
@@ -55,6 +49,7 @@ A5	Eq-Temporal-Unit-Value T20 year
 A6	Location-Value T23 hospital
 A7	Eq-Operator-Value T24 GT
 A8	Eq-Temporal-Unit-Value T26 hour
-A9	Encounter-Type-Value T31 transfer
-A10	Temporal-Connection-Type-Value E16 during
+A9	Encounter-Type-Value E10 transfer
 R1	Using Arg1:E1 Arg2:E2
+R2	Before Arg1:E4 Arg2:E6
+R3	During Arg1:E10 Arg2:E12

@@ -1,0 +1,210 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Observation:T5 Name:T6 Eq-Comparison:E28
+E9	Observation:T9 Name:T10 Eq-Comparison:E30
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Procedure:T15 Name:T16
+E19	Condition:T19 Name:T20
+E21	Condition:T21 Name:T22
+E23	Condition:T23 Name:T24
+E25	Condition:T25 Name:T26
+E27	Condition:T27 Name:T28
+E28	Eq-Comparison:T49 Operator:T29 Value:T39 Unit:T55
+E29	Eq-Comparison:T50 Operator:T30 Value:T40 Unit:T58
+E30	Eq-Comparison:T51 Operator:T31 Value:T41
+E31	Eq-Comparison:T52 Operator:T32 Value:T42
+E32	Eq-Comparison:T53 Operator:T33 Value:T43 Unit:T72
+E33	Eq-Comparison:T54 Operator:T34 Value:T44
+E4	Observation:T56 Name:T57 Eq-Comparison:E29
+E2	Modifier:T59 Modifies:T10
+E6	Procedure:T60 Name:T64
+E8	Modifier:T61 Modifies:T64
+E10	Modifier:T62 Modifies:T64
+E12	Or:T63 Arg:E8 Arg2:E10
+E14	Observation:T65 Name:T66
+E16	Observation:T67 Name:T68 Eq-Comparison:E31
+E18	Observation:T69 Name:T70 Eq-Comparison:E32
+E20	Modifier:T71 Modifies:T70
+E22	Observation:T73 Name:T74 Eq-Comparison:E33
+E7	Condition:T7 Name:T8
+E24	Negation:T75 Negates:E7
+E26	Procedure:T76 Name:T77
+E34	Negation:T78 Negates:E3
+E35	Or:T79 Arg:E24 Arg2:E34
+E36	Condition:T80 Name:T81
+E37	Negation:T82 Negates:E36
+E38	Observation:T83 Name:T84 Eq-Comparison:E40
+E39	Condition:T85 Name:T86
+E40	Eq-Comparison:T87 Operator:T88 Value:T45 Unit:T90 Per:T89
+E41	Condition:T91 Name:T92 Duration:E42
+E42	Eq-Comparison:T93 Value:T46 Operator:T94 Temporal-Unit:T36
+E43	Condition:T95
+E44	Modifier:T96 Modifies:E43
+E45	Or:T97 Arg:E23 Arg2:E27
+E46	Procedure:T98
+E47	Drug:T99 Name:T100
+E48	Drug:T101 Name:T102 Temporality:E50
+E49	Or:T103 Arg:E46 Arg2:E48
+E50	Eq-Comparison:T104 Operator:T35 Temporal-Period:T105 Value:T47 Temporal-Unit:T37
+E51	Study:T106
+E52	Temporal-Connection:T107 Arg:E50 Arg2:E51
+E53	Modifier:T108 Modifies:T16
+E54	Eq-Comparison:T109 Temporal-Period:T110 Value:T48 Temporal-Unit:T38
+E55	Temporal-Connection:T111 Arg:E15 Arg2:E54
+E56	Study:T112
+E57	Temporal-Connection:T113 Arg:E54 Arg2:E56
+E58	Procedure:T114
+E17	Drug:T17 Name:T18
+E59	Study:T115
+E60	Temporal-Connection:T116 Arg:E17 Arg2:E59
+T1	Condition 23 44	chronic periodontitis
+T2	Condition-Name 23 44	chronic periodontitis
+T3	Condition 409 427	alveolar bone loss
+T4	Condition-Name 409 427	alveolar bone loss
+T5	Observation 58 82	Clinical attachment loss
+T6	Observation-Name 58 82	Clinical attachment loss
+T9	Observation 118 127	Bone loss
+T10	Observation-Name 118 127	Bone loss
+T11	Condition 636 658	cardiovascular disease
+T12	Condition-Name 636 658	cardiovascular disease
+T13	Condition 660 681	immunologic disorders
+T14	Condition-Name 660 681	immunologic disorders
+T15	Procedure 879 900	periodontal treatment
+T16	Procedure-Name 879 900	periodontal treatment
+T19	Condition 683 692	hepatitis
+T20	Condition-Name 683 692	hepatitis
+T21	Condition 705 714	pregnancy
+T22	Condition-Name 705 714	pregnancy
+T23	Condition 716 725	lactation
+T24	Condition-Name 716 725	lactation
+T25	Condition 626 634	diabetes
+T26	Condition-Name 626 634	diabetes
+T27	Condition 729 738	menopause
+T28	Condition-Name 729 738	menopause
+T29	Eq-Operator 83 84	≥
+T30	Eq-Operator 108 109	≥
+T31	Eq-Operator 138 139	>
+T32	Eq-Operator 236 237	>
+T33	Eq-Operator 300 301	≤
+T34	Eq-Operator 327 328	<
+T35	Eq-Operator 818 824	within
+T36	Eq-Temporal-Unit 574 579	years
+T37	Eq-Temporal-Unit 836 842	months
+T38	Eq-Temporal-Unit 919 925	months
+T39	Eq-Value 85 86	5
+T40	Eq-Value 109 110	5
+T41	Eq-Value 139 141	30
+T42	Eq-Value 238 239	1
+T43	Eq-Value 302 303	3
+T44	Eq-Value 328 329	1
+T45	Eq-Value 524 526	10
+T46	Eq-Value 564 565	3
+T47	Eq-Value 834 835	3
+T48	Eq-Value 917 918	6
+T49	Eq-Comparison 83 88	≥ 5mm
+T50	Eq-Comparison 108 112	≥5mm
+T51	Eq-Comparison 138 142	>30%
+T52	Eq-Comparison 236 239	> 1
+T53	Eq-Comparison 300 305	≤ 3mm
+T54	Eq-Comparison 327 329	<1
+T55	Eq-Unit 86 88	mm
+T56	Observation 94 107	Probing depth
+T57	Observation-Name 94 107	Probing depth
+T58	Eq-Unit 110 112	mm
+T59	Modifier 159 164	teeth
+T60	Procedure 194 205	examination
+T61	Modifier 168 176	clinical
+T62	Modifier 181 193	radiographic
+T63	Or 177 180	and
+T64	Procedure-Name 194 205	examination
+T65	Observation 211 225	gingival index
+T66	Observation-Name 211 225	gingival index
+T67	Observation 227 229	GI
+T68	Observation-Name 227 229	GI
+T69	Observation 294 296	PD
+T70	Observation-Name 294 296	PD
+T71	Modifier 283 293	full-mouth
+T72	Eq-Unit 303 305	mm
+T73	Observation 312 326	Gingival index
+T74	Observation-Name 312 326	Gingival index
+T7	Condition 362 377	Attachment Loss
+T8	Condition-Name 362 377	Attachment Loss
+T75	Negation 345 347	no
+T76	Procedure 384 405	radiographic evidence
+T77	Procedure-Name 384 405	radiographic evidence
+T78	Negation 381 383	no
+T79	Or 378 380	or
+T80	Condition 455 462	smokers
+T81	Condition-Name 455 462	smokers
+T82	Negation 451 454	Non
+T83	Observation 507 513	smoked
+T84	Observation-Name 507 513	smoked
+T85	Condition 464 471	Smoking
+T86	Condition-Name 464 471	Smoking
+T87	Eq-Comparison 514 546	more than 10 cigarettes in a day
+T88	Eq-Operator 514 523	more than
+T89	Eq-Temporal-Unit 543 546	day
+T90	Eq-Unit 527 537	cigarettes
+T91	Condition 552 559	smoking
+T92	Condition-Name 552 559	smoking
+T93	Eq-Comparison 564 579	3 or more years
+T94	Eq-Operator 566 573	or more
+T95	Condition 615 624	condition
+T96	Modifier 606 614	systemic
+T97	Or 726 728	or
+T98	Procedure 761 770	treatment
+T99	Drug 750 760	antibiotic
+T100	Drug-Name 750 760	antibiotic
+T101	Drug 774 817	non-steroidal anti-inflammatory medications
+T102	Drug-Name 774 817	non-steroidal anti-inflammatory medications
+T103	Or 771 773	or
+T104	Eq-Comparison 818 842	within the last 3 months
+T105	Eq-Temporal-Period 829 833	last
+T106	Study 854 859	study
+T107	Temporal-Connection 843 849	before
+T108	Modifier 866 878	non-surgical
+T109	Eq-Comparison 912 925	last 6 months
+T110	Eq-Temporal-Period 912 916	last
+T111	Temporal-Connection 901 907	during
+T112	Study 937 942	study
+T113	Temporal-Connection 926 932	before
+T114	Procedure 949 958	treatment
+T17	Drug 964 989	Vitamin D supplementation
+T18	Drug-Name 964 989	Vitamin D supplementation
+T115	Study 1001 1006	study
+T116	Temporal-Connection 990 996	before
+A1	Eq-Operator-Value T29 GTEQ
+A2	Eq-Operator-Value T30 GTEQ
+A3	Eq-Operator-Value T31 GT
+A4	Eq-Operator-Value T32 GT
+A5	Eq-Operator-Value T33 LTEQ
+A6	Eq-Operator-Value T34 LT
+A7	Eq-Operator-Value T35 LTEQ
+A8	Eq-Temporal-Unit-Value T36 year
+A9	Eq-Temporal-Unit-Value T37 month
+A10	Eq-Temporal-Unit-Value T38 month
+A11	Observation-Type-Value T6 measurement
+A12	Observation-Type-Value T57 measurement
+A13	Observation-Type-Value T10 measurement
+A14	Observation-Type-Value T66 clinical-score
+A15	Observation-Type-Value T74 clinical-score
+A16	Observation-Type-Value T84 social-habit
+A17	Eq-Operator-Value T88 GT
+A18	Eq-Temporal-Unit-Value T89 day
+A19	Eq-Operator-Value T94 GTEQ
+A20	Eq-Temporal-Period-Value T105 past
+A21	Temporal-Connection-Type-Value E52 before
+A22	Eq-Temporal-Period-Value T110 past
+A23	Temporal-Connection-Type-Value E55 during
+A24	Temporal-Connection-Type-Value E57 before
+A25	Temporal-Connection-Type-Value E60 before
+R1	Found-By Arg1:E9 Arg2:E6
+R2	Abbrev-Of Arg1:E16 Arg2:E14
+R3	Found-By Arg1:E3 Arg2:E26
+R5	Example-Of Arg1:E25 Arg2:E43
+R4	Example-Of Arg1:E11 Arg2:E43
+R6	Example-Of Arg1:E13 Arg2:E43
+R7	Example-Of Arg1:E19 Arg2:E43
+R8	Using Arg1:E46 Arg2:E47
+R9	Using Arg1:E58 Arg2:E17

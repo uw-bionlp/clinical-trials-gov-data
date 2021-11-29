@@ -1,17 +1,13 @@
 E1	Condition:T1 Name:T55
 E2	Procedure:T2 Name:T90
-E3	Or:T3 Arg:E2 Arg2:E4
 E4	Procedure:T4 Name:T56
-E5	And:T5 Arg:E1 Arg2:E6
 E6	Condition:T6 Name:T91 Stability:T57 Duration:E7
 E7	Eq-Comparison:T7 Value:T58 Temporal-Unit:T59 Operator:T60
 E8	Negation:T8 Negates:E9
 E9	Procedure:T9 Name:T61
-E10	Or:T10 Arg:E9 Arg2:E55
 E11	Procedure:T11 Name:T62
 E12	Exception:T12 From:E11 Except:E13 Except2:E15
 E13	Drug:T13 Name:T63
-E14	Or:T14 Arg:E13 Arg2:E15
 E15	Drug:T15 Name:T64 Duration:E16
 E16	Eq-Comparison:T16 Value:T65 Temporal-Unit:T66
 E17	Observation:T17 Name:T68 Polarity:T67
@@ -21,50 +17,38 @@ E21	Condition:T21 Temporality:E19
 E22	Condition:T22 Name:T70
 E23	Condition:T23 Name:T71
 E24	Modifier:T24 Modifies:T72
-E25	Or:T25 Arg:E24 Arg2:E26
 E26	Modifier:T26 Modifies:T72
 E27	Condition:T27 Name:T72
 E28	Condition:T28 Name:T73
-E31	Or:T31 Arg:E20 Arg2:E32
 E32	Condition:T32 Name:T74
 E33	Condition:T33 Name:T75
-E34	Or:T34 Arg:E33 Arg2:E36
 E35	Modifier:T35 Modifies:T76
 E36	Condition:T36 Name:T76
-E38	Or:T38 Arg:E36 Arg2:E29
 E39	Eq-Comparison:T39 Temporal-Period:T77
 E41	Drug:T41 Name:T79
-E42	Or:T42 Arg:E41 Arg2:E43
 E43	Drug:T43 Name:T80
 E45	Drug:T45 Temporality:E30 Temporality2:E52
 E46	Drug:T46 Name:T82
 E47	Drug:T47 Name:T83
 E48	Drug:T48 Name:T84
-E49	Or:T49 Arg:E48 Arg2:E50
 E50	Drug:T50 Name:T85
 E51	Drug:T51 Name:T86
 E52	Eq-Comparison:T52 Operator:T87 Value:T88 Temporal-Unit:T89
-E53	Temporal-Connection:T53 Arg:E52 Arg2:E37
 E54	Study:T54 Temporality:E37
-E55	And:T92 Arg:E11
 E20	Condition:T20 Name:T29
 E29	Procedure:T30 Name:T37 Temporality:E39
 E30	Eq-Comparison:T40 Temporal-Period:T44
 E37	Eq-Comparison:T78 Temporal-Recency:T81
 T1	Condition 25 43	Ulcerative colitis
 T2	Procedure 72 81	histology
-T3	Or 82 85	and
 T4	Procedure 86 95	endoscopy
-T5	And 96 99	AND
 T6	Condition 110 119	remission
 T7	Eq-Comparison 124 140	3 months or more
 T8	Negation 141 148	without
 T9	Procedure 149 156	therapy
-T10	Or 157 159	or
 T11	Procedure 167 186	maintenance therapy
 T12	Exception 188 194	except
 T13	Drug 195 203	steroids
-T14	Or 204 207	and
 T15	Drug 208 219	antibiotics
 T16	Eq-Comparison 224 232	3 months
 T17	Observation 250 264	pregnancy test
@@ -74,30 +58,23 @@ T21	Condition 338 348	conditions
 T22	Condition 350 365	Chron's disease
 T23	Condition 367 385	bleeding disorders
 T24	Modifier 387 403	gastrointestinal
-T25	Or 404 406	or
 T26	Modifier 407 414	colonic
 T27	Condition 415 425	malignancy
 T28	Condition 427 441	Kidney disease
-T31	Or 469 471	or
 T32	Condition 472 485	hypercalcemia
 T33	Condition 487 499	Coagulopathy
-T34	Or 499 500	/
 T35	Modifier 500 510	hereditary
 T36	Condition 511 532	hemorrhagic disorders
-T38	Or 534 536	or
 T39	Eq-Comparison 537 546	receiving
 T41	Drug 568 576	Coumadin
-T42	Or 577 579	or
 T43	Drug 580 587	heparin
 T45	Drug 611 622	medications
 T46	Drug 624 631	Calcium
 T47	Drug 633 642	Vitamin D
 T48	Drug 644 661	fiber supplements
-T49	Or 662 665	and
 T50	Drug 666 703	Non-steroidal anti-inflammatory drugs
 T51	Drug 706 712	NSAIDs
 T52	Eq-Comparison 714 728	within 30 days
-T53	Temporal-Connection 729 731	of
 T54	Study 732 737	study
 T55	Condition-Name 25 43	Ulcerative colitis
 T56	Procedure-Name 86 95	endoscopy
@@ -134,7 +111,6 @@ T88	Eq-Value 721 723	30
 T89	Eq-Temporal-Unit 724 728	days
 T90	Procedure-Name 72 81	histology
 T91	Condition-Name 110 119	remission
-T92	And 160 164	with
 T20	Condition 453 468	kidney "stones"
 T29	Condition-Name 453 468	kidney "stones"
 T30	Procedure 547 558	therapeutic
@@ -143,13 +119,12 @@ T40	Eq-Comparison 594 602	Ingested
 T44	Eq-Temporal-Period 594 602	Ingested
 T78	Eq-Comparison 738 743	start
 T81	Eq-Temporal-Recency 738 743	start
-A1	Temporal-Connection-Type-Value E53 before
 A2	Stability-Value T57 stable
 A3	Eq-Temporal-Unit-Value T59 month
 A4	Eq-Operator-Value T60 GTEQ
 A5	Eq-Temporal-Unit-Value T66 month
 A6	Polarity-Value T67 negative
-A7	Observation-Type-Value T68 lab
+A7	Observation-Type-Value E17 lab
 A8	Eq-Temporal-Period-Value T69 past
 A9	Eq-Temporal-Period-Value T77 present
 A10	Eq-Operator-Value T87 LTEQ
@@ -173,3 +148,19 @@ R14	Example-Of Arg1:E47 Arg2:E45
 R15	Example-Of Arg1:E48 Arg2:E45
 R16	Example-Of Arg1:E50 Arg2:E45
 R17	Abbrev-Of Arg1:E51 Arg2:E50
+R18	Or Arg1:E2 Arg2:E4
+R19	And Arg1:E1 Arg2:E6
+R21	Or Arg1:E13 Arg2:E15
+R22	Or Arg1:E24 Arg2:E26
+R23	Or Arg1:E20 Arg2:E32
+R24	Or Arg1:E33 Arg2:E36
+R25	Or Arg1:E36 Arg2:E29
+R26	Or Arg1:E41 Arg2:E43
+R27	Or Arg1:E48 Arg2:E50
+R28	Before Arg1:E52 Arg2:E37
+R20	Or Arg1:E22 Arg2:E23
+R29	Or Arg1:E27 Arg2:E28
+R30	Or Arg1:E32 Arg2:E33
+R31	Or Arg1:E46 Arg2:E47
+R32	Or Arg1:E47 Arg2:E48
+R33	Or Arg1:E8 Arg2:E11	

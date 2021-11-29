@@ -3,10 +3,9 @@ E3	Procedure:T3 Name:T4
 E5	Procedure:T5 Name:T6
 E7	Condition:T7 Name:T49
 E9	Condition:T9 Name:T10
-E12	Age:T16 Eq-Comparison:E2
+E12	Age:T16 Numeric-Filter:E2
 E2	Eq-Comparison:T18 Operator:T13 Temporal-Unit:T15 Value:T17
 E4	Study:T19
-E6	Temporal-Connection:T20 Arg:E12 Arg2:E4
 E8	Condition:T21 Name:T22 Stage:E10
 E16	Procedure:T26 Name:T27
 E17	Negation:T28 Negates:E7
@@ -20,13 +19,11 @@ E23	Drug:T36 Name:T37
 E24	Drug:T38 Name:T39
 E25	Drug:T40 Name:T41
 E26	Drug:T42 Name:T43
-E27	Or:T44 Arg:E25 Arg2:E26
 E28	Condition:T45 Name:T46 Temporality:E29
 E29	Eq-Comparison:T47 Temporal-Period:T48
 E10	Eq-Comparison:T14 Unit:T23 Value:T24
 E13	Eq-Comparison:T25 Unit:T53 Value:T52 Operator:T51
 E14	Eq-Comparison:T54 Unit:T56 Value:T55
-E15	Or:T57 Arg:E13 Arg2:E14
 E30	Condition:T58 Name:T59
 E31	Assertion:T60 Asserted:E21
 T1	Procedure 212 233	orthodontic treatment
@@ -44,7 +41,6 @@ T16	Age 25 29	Aged
 T17	Eq-Value 30 32	18
 T18	Eq-Comparison 30 48	18 years and above
 T19	Study 69 78	treatment
-T20	Temporal-Connection 49 61	at the start
 T21	Condition 85 103	Molar relationship
 T22	Condition-Name 85 103	Molar relationship
 T26	Procedure 240 257	Maximum anchorage
@@ -68,7 +64,6 @@ T40	Drug 561 585	systemic corticosteroids
 T41	Drug-Name 561 585	systemic corticosteroids
 T42	Drug 589 613	calcium channel blockers
 T43	Drug-Name 589 613	calcium channel blockers
-T44	Or 586 588	or
 T45	Condition 651 670	periodontal disease
 T46	Condition-Name 651 670	periodontal disease
 T47	Eq-Comparison 644 650	Active
@@ -85,16 +80,21 @@ T53	Eq-Unit 124 137	unit Class II
 T54	Eq-Comparison 141 150	Class III
 T55	Eq-Value 147 150	III
 T56	Eq-Unit 141 146	Class
-T57	Or 138 140	or
 T58	Condition 620 637	Poor oral hygiene
 T59	Condition-Name 620 637	Poor oral hygiene
 T60	Assertion 459 468	requiring
 A1	Eq-Operator-Value T13 GTEQ
 A3	Eq-Temporal-Unit-Value T15 year
-A4	Temporal-Connection-Type-Value E6 during
 A2	Eq-Temporal-Period-Value T48 present
 A5	Eq-Operator-Value T51 LT
 A6	Assertion-Type-Value E31 hypothetical
 R1	Using Arg1:E3 Arg2:E1
 R2	Using Arg1:E16 Arg2:E5
 R3	Treatment-For Arg1:E21 Arg2:E20
+R4	During Arg1:E12 Arg2:E4
+R5	Or Arg1:E25 Arg2:E26
+R6	Or Arg1:E13 Arg2:E14
+R7	Or Arg1:E11 Arg2:E22
+R8	Or Arg1:E22 Arg2:E23
+R9	Or Arg1:E23 Arg2:E24
+R10	Or Arg1:E24 Arg2:E25

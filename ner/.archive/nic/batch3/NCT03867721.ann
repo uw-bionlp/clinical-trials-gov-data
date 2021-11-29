@@ -1,0 +1,79 @@
+E1	Condition:T1 Name:T26
+E3	Eq-Comparison:T3 Operator:T18 Value:T19 Value:T20
+E4	Negation:T4 Negates:E5
+E5	Assertion:T5 Asserted:E6
+E6	Procedure:T6 Name:T21
+E7	Modifier:T7 Modifies:T22
+E8	Procedure:T8 Name:T22
+E9	Temporal-Connection:T9 Arg:E8 Arg2:E10
+E10	Observation:T10 Name:T36
+E11	Condition:T11 Name:T23
+E12	Procedure:T12 Name:T44
+E13	Or:T13 Arg:E11 Arg2:E14
+E14	Condition:T14 Name:T25 Acuteness:T24
+E15	Temporal-Connection:T15 Arg:E14 Arg2:E16
+E16	Study:T16 
+E2	Encounter:T17 Location:T2 Temporality:E3
+E17	Procedure:T27 Name:T28
+E18	Modifier:T29 Modifies:T28
+E19	Procedure:T30 Name:T31
+E20	Modifier:T32 Modifies:T31
+E21	And:T33 Arg:E17 Arg2:E19
+E22	And:T34 Arg:E2 Arg2:E17
+E23	Modifier:T35 Modifies:T21
+E24	Observation:T37 Name:T38 Eq-Comparison:E25
+E25	Eq-Comparison:T39 Operator:T40 Value:T41 Unit:T42
+E26	Modifier:T43 Modifies:T23
+T1	Condition 53 57	NMDs
+T3	Eq-Comparison 111 149	between January 2015 and December 2018
+T4	Negation 247 249	no
+T5	Assertion 250 258	need for
+T6	Procedure 267 278	ventilation
+T7	Modifier 298 309	ineffective
+T8	Procedure 310 313	NIV
+T9	Temporal-Connection 314 320	during
+T10	Observation 321 326	sleep
+T11	Condition 412 422	oral leaks
+T12	Procedure 428 431	MPV
+T13	Or 432 434	or
+T14	Condition 452 473	respiratory infection
+T15	Temporal-Connection 474 480	during
+T16	Study 485 491	trials
+T18	Eq-Operator 111 118	between
+T19	Eq-Value 119 131	January 2015
+T20	Eq-Value 136 149	December 2018
+T21	Procedure-Name 267 278	ventilation
+T22	Procedure-Name 310 313	NIV
+T23	Condition-Name 412 422	oral leaks
+T24	Acuteness 446 451	acute
+T25	Condition-Name 452 473	respiratory infection
+T26	Condition-Name 53 57	NMDs
+T2	Location 72 110	Centre for Home Mechanical Ventilation
+T17	Encounter 58 67	attending
+T27	Procedure 171 174	MPV
+T28	Procedure-Name 171 174	MPV
+T29	Modifier 163 170	daytime
+T30	Procedure 204 207	NIV
+T31	Procedure-Name 204 207	NIV
+T32	Modifier 194 203	nocturnal
+T33	And 175 193	as an extension of
+T34	And 150 153	who
+T35	Modifier 259 266	daytime
+T36	Observation-Name 321 326	sleep
+T37	Observation 361 366	TcCO2
+T38	Observation-Name 361 366	TcCO2
+T39	Eq-Comparison 366 373	>49mmHg
+T40	Eq-Operator 366 367	>
+T41	Eq-Value 367 369	49
+T42	Eq-Unit 369 373	mmHg
+T43	Modifier 397 411	uncontrollable
+T44	Procedure-Name 428 431	MPV
+A1	Assertion-Type-Value E5 hypothetical
+A2	Temporal-Connection-Type-Value E9 during
+A3	Temporal-Connection-Type-Value E15 during
+A4	Eq-Operator-Value T18 BETWEEN
+A6	Location-Value T2 clinic
+A7	Eq-Operator-Value T40 GT
+A8	Acuteness-Type-Value T24 acute
+R1	Equivalent-To Arg1:E24 Arg2:E8
+R2	Caused-By Arg1:E11 Arg2:E12

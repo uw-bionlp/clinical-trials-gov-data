@@ -1,0 +1,52 @@
+E1	Condition:T1 Name:T2 Stage:E3
+E4	Condition:T4 Name:T5
+E5	Age:T7 Eq-Comparison:E6
+E6	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6
+E2	Procedure:T12 Name:T13 Temporality:E15
+E9	Encounter:T16 Type:T17 Provider:E10 Provider2:E8
+E10	Provider:T19 Type:T18
+E11	Condition:T20 Name:T21
+E12	Condition:T22 Name:T23 Temporality:E14
+E13	Condition:T24 Name:T25
+E3	Eq-Comparison:T3 Unit:T14 Value:T26 Value2:T15
+E14	Eq-Comparison:T28 Temporal-Period:T29
+E15	Eq-Comparison:T30 Temporal-Period:T31
+E8	Provider:T32 Role:T33
+T1	Condition 140 159	knee osteoarthritis
+T2	Condition-Name 140 159	knee osteoarthritis
+T4	Condition 412 426	morbid obesity
+T5	Condition-Name 412 426	morbid obesity
+T6	Eq-Temporal-Unit 64 69	years
+T7	Age 70 73	old
+T8	Eq-Operator 58 60	to
+T9	Eq-Value 55 57	40
+T10	Eq-Value 61 63	80
+T11	Eq-Comparison 55 69	40 to 80 years
+T12	Procedure 93 112	imaging examination
+T13	Procedure-Name 93 112	imaging examination
+T16	Encounter 228 236	referred
+T17	Encounter-Type 228 236	referred
+T18	Provider-Type 244 265	physiotherapy service
+T19	Provider 244 265	physiotherapy service
+T20	Condition 324 338	unable to walk
+T21	Condition-Name 324 338	unable to walk
+T22	Condition 362 368	cancer
+T23	Condition-Name 362 368	cancer
+T24	Condition 385 406	neurological diseases
+T25	Condition-Name 385 406	neurological diseases
+T3	Eq-Comparison 124 139	grade II or III
+T14	Eq-Unit 124 129	grade
+T15	Eq-Value 130 132	II
+T26	Eq-Value 136 139	III
+T28	Eq-Comparison 351 358	history
+T29	Eq-Temporal-Period 351 358	history
+T30	Eq-Comparison 83 92	underwent
+T31	Eq-Temporal-Period 83 92	underwent
+T32	Provider 271 280	physician
+T33	Provider-Role 271 280	physician
+A1	Eq-Temporal-Unit-Value T6 year
+A2	Eq-Operator-Value T8 BETWEEN
+A3	Encounter-Type-Value T17 referral
+A4	Eq-Temporal-Period-Value T29 past
+A5	Eq-Temporal-Period-Value T31 past
+R1	Found-By Arg1:E1 Arg2:E2

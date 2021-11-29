@@ -1,0 +1,13 @@
+T1	Condition 214 229	characteristics
+E1	Condition:T1 
+T2	Contraindication 230 246	contraindicating
+E2	Contraindication:T2 Contraindicates:E3
+T3	Drug 247 256	metformin
+E3	Drug:T3 Name:T4
+T4	Drug-Name 247 256	metformin
+T5	Drug 260 272	sulfonylurea
+E4	Drug:T5 Name:T6
+T6	Drug-Name 260 272	sulfonylurea
+T7	Or 257 259	or
+E5	Or:T7 Arg:E3 Arg2:E4
+R1	Caused-By Arg1:E2 Arg2:E1	

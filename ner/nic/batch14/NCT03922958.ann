@@ -16,22 +16,17 @@ E2	Eq-Comparison:T39 Temporal-Period:T40
 E3	Procedure:T41 Name:T42
 E5	Condition:T43
 E7	Condition:T44 Name:T45 Stability:T46
-E9	Or:T47 Arg:E7 Arg2:E24
-E11	Condition:T48 Name:T49
+E11	Condition:T48
 E13	Condition:T50 Name:T51
 E15	Condition:T52 Name:T53
 E17	Drug:T54 Name:T55
-E19	Or:T56 Arg:E14 Arg2:E17
 E21	Drug:T57 Name:T58
 E23	Drug:T59 Name:T60 Temporality:E27
-E25	Or:T61 Arg:E21 Arg2:E23
 E27	Eq-Comparison:T62 Temporal-Period:T63
 E29	Eq-Comparison:T64 Operator:T33 Temporal-Unit:T66 Value:T65 Temporal-Period:T8
-E33	Or:T67 Arg:E27 Arg2:E29
 E34	Procedure:T68 Name:T69
-E35	Temporal-Connection:T70 Arg:E26 Arg2:E34
 E36	Assertion:T71 Asserted:E4
-E37	Observation:T72 Name:T73 Eq-Comparison:E32
+E37	Observation:T72 Name:T73 Numeric-Filter:E32
 T1	Procedure 47 62	cardiac surgery
 T2	Procedure-Name 47 62	cardiac surgery
 T3	Life-Stage-And-Gender 29 35	adults
@@ -72,7 +67,6 @@ T43	Condition 132 139	Factors
 T44	Condition 152 167	immune function
 T45	Condition-Name 152 167	immune function
 T46	Stability 145 151	affect
-T47	Or 168 170	or
 T48	Condition 245 252	disease
 T49	Condition-Name 245 252	disease
 T50	Condition 297 307	malignancy
@@ -81,21 +75,17 @@ T52	Condition 334 337	HIV
 T53	Condition-Name 334 337	HIV
 T54	Drug 374 403	immunosuppressant medications
 T55	Drug-Name 374 403	immunosuppressant medications
-T56	Or 370 373	and
 T57	Drug 516 526	Prednisone
 T58	Drug-Name 516 526	Prednisone
 T59	Drug 536 543	steroid
 T60	Drug-Name 536 543	steroid
-T61	Or 527 529	or
 T62	Eq-Comparison 548 557	currently
 T63	Eq-Temporal-Period 548 557	currently
 T64	Eq-Comparison 561 586	within the past one month
 T65	Eq-Value 577 580	one
 T66	Eq-Temporal-Unit 581 586	month
-T67	Or 558 560	or
 T68	Procedure 616 623	surgery
 T69	Procedure-Name 616 623	surgery
-T70	Temporal-Connection 601 612	at the time
 T71	Assertion 639 648	requiring
 T72	Observation 695 698	GFR
 T73	Observation-Name 695 698	GFR
@@ -110,9 +100,8 @@ A5	Eq-Temporal-Period-Value T40 present
 A6	Stability-Value T46 change
 A7	Eq-Temporal-Period-Value T63 present
 A8	Eq-Temporal-Unit-Value T66 month
-A9	Temporal-Connection-Type-Value E35 during
 A10	Assertion-Type-Value E36 hypothetical
-A11	Observation-Type-Value T73 lab
+A11	Observation-Type-Value E37 lab
 A12	Eq-Temporal-Unit-Value T75 minute
 A13	Eq-Temporal-Period-Value T8 past
 R1	Using Arg1:E1 Arg2:E3
@@ -125,3 +114,11 @@ R7	Example-Of Arg1:E18 Arg2:E12
 R8	Example-Of Arg1:E20 Arg2:E16
 R9	Example-Of Arg1:E6 Arg2:E16
 R10	Treatment-For Arg1:E4 Arg2:E22
+R11	Or Arg1:E7 Arg2:E24
+R12	Or Arg1:E14 Arg2:E17
+R13	Or Arg1:E21 Arg2:E23
+R14	Or Arg1:E27 Arg2:E29
+R15	During Arg1:E26 Arg2:E34
+R16	Or Arg1:E20 Arg2:E6
+R17	Or Arg1:E13 Arg2:E12
+R18	Or Arg1:E15 Arg2:E18

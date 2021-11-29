@@ -1,12 +1,11 @@
 E1	Condition:T1 Name:T2 Severity:T20 Acuteness:T21
 E3	Condition:T3 Name:T4
-E4	Age:T6 Eq-Comparison:E2
+E4	Age:T6 Numeric-Filter:E2
 E2	Eq-Comparison:T9 Temporal-Unit:T5 Operator:T10 Value:T7
 E5	Eq-Comparison:T11 Operator:T12 Value:T8
 E6	Eq-Comparison:T14 Operator:T15 Value:T16
 E7	Condition:T17 Name:T18 Minimum-Count:E6
 E12	Condition:T23 Name:T24 Minimum-Count:E5
-E11	Or:T13 Arg2:T21 Arg:T20
 E8	Condition:T19 Name:T22
 E9	Modifier:T25 Modifies:T18
 E13	Negation:T26 Negates:E9
@@ -31,7 +30,6 @@ T18	Condition-Name 179 195	cervical lesions
 T21	Acuteness 274 281	chronic
 T23	Condition 109 130	teeth under occlusion
 T24	Condition-Name 109 130	teeth under occlusion
-T13	Or 271 273	or
 T20	Severity 264 270	severe
 T19	Condition 48 65	good oral hygiene
 T22	Condition-Name 48 65	good oral hygiene
@@ -45,3 +43,4 @@ A3	Eq-Operator-Value T12 GTEQ
 A4	Eq-Operator-Value T15 GTEQ
 A5	Severity-Value T20 severe
 A6	Acuteness-Type-Value T21 chronic
+R1	Or Arg1:T20 Arg2:T21

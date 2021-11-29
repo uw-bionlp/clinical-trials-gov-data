@@ -1,0 +1,56 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4 Acuteness:T26
+E2	Condition:T5 Name:T6 Polarity:T32
+E4	Condition:T7 Name:T8
+E5	Condition:T9 Name:T10
+E6	Observation:T11 Name:T12 Severity:T14 Severity2:T13
+E7	Or:T15 Arg:T13 Arg2:T14
+E8	Condition:T16 Name:T17
+E9	Condition:T18 Name:T19 Severity:T20
+E10	Or:T21 Arg:E8 Arg2:E9
+E11	Modifier:T22 Modifies:T2
+E12	Modifier:T23 Modifies:T2
+E13	Or:T24 Arg:E11 Arg2:E12
+E14	Modifier:T25 Modifies:T4
+E15	Or:T27 Arg:T26 Arg2:E14
+E16	Condition:T28 Name:T29
+E17	Negation:T30 Negates:E8
+E18	Modifier:T31 Modifies:T29
+T1	Condition 255 265	impairment
+T2	Condition-Name 255 265	impairment
+T3	Condition 332 339	illness
+T4	Condition-Name 332 339	illness
+T5	Condition 32 41	cognition
+T6	Condition-Name 32 41	cognition
+T7	Condition 47 65	Poor sleep quality
+T8	Condition-Name 47 65	Poor sleep quality
+T9	Condition 97 101	pain
+T10	Condition-Name 97 101	pain
+T11	Observation 137 154	physical activity
+T12	Observation-Name 137 154	physical activity
+T13	Severity 120 124	mild
+T14	Severity 128 136	moderate
+T15	Or 125 127	to
+T16	Condition 185 195	ambulatory
+T17	Condition-Name 185 195	ambulatory
+T18	Condition 213 230	impaired mobility
+T19	Condition-Name 213 230	impaired mobility
+T20	Severity 204 212	severely
+T21	Or 196 198	or
+T22	Modifier 237 243	Visual
+T23	Modifier 247 254	hearing
+T24	Or 244 246	or
+T25	Modifier 323 331	terminal
+T26	Acuteness 312 317	acute
+T27	Or 318 320	or
+T28	Condition 357 361	pain
+T29	Condition-Name 357 361	pain
+T30	Negation 181 184	Non
+T31	Modifier 345 356	Neuropathic
+A1	Observation-Type-Value T12 social-habit
+A2	Severity-Value T13 mild
+A3	Severity-Value T14 moderate
+A4	Severity-Value T20 severe
+A6	Acuteness-Type-Value T26 acute
+T32	Polarity 25 31	Intact
+A5	Polarity-Value T32 normal

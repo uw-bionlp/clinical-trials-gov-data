@@ -1,0 +1,41 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E4	Age:T7 Eq-Comparison:E5
+E5	Eq-Comparison:T9 Operator:T5 Temporal-Unit:T6 Value:T8
+E2	Procedure:T10 Name:T11 Temporality:E6
+E6	Eq-Comparison:T12 Temporal-Period:T13
+E7	Condition:T14 Name:T15
+E8	Or:T16 Arg:E7 Arg2:E1
+E9	Condition:T17 Name:T18 Temporality:E11
+E10	Or:T19 Arg:E9 Arg2:E3
+E11	Eq-Comparison:T20 Temporal-Period:T21
+E12	Modifier:T22 Modifies:T15
+E13	Negation:T23 Negates:E12
+T1	Condition 119 138	spondyloarthropathy
+T2	Condition-Name 119 138	spondyloarthropathy
+T3	Condition 226 256	congenital spondyloarthropathy
+T4	Condition-Name 226 256	congenital spondyloarthropathy
+T5	Eq-Operator 29 30	≥
+T6	Eq-Temporal-Unit 33 38	years
+T7	Age 25 28	Age
+T8	Eq-Value 30 32	50
+T9	Eq-Comparison 29 38	≥50 years
+T10	Procedure 55 76	surgical intervention
+T11	Procedure-Name 55 76	surgical intervention
+T12	Eq-Comparison 44 54	Undergoing
+T13	Eq-Temporal-Period 44 54	Undergoing
+T14	Condition 96 111	spinal stenosis
+T15	Condition-Name 96 111	spinal stenosis
+T16	Or 112 118	and/or
+T17	Condition 196 222	congenital spinal stenosis
+T18	Condition-Name 196 222	congenital spinal stenosis
+T19	Or 223 225	or
+T20	Eq-Comparison 185 192	History
+T21	Eq-Temporal-Period 185 192	History
+T22	Modifier 85 95	congenital
+T23	Negation 81 84	non
+A1	Eq-Operator-Value T5 GTEQ
+A2	Eq-Temporal-Unit-Value T6 year
+A3	Eq-Temporal-Period-Value T13 present
+A4	Eq-Temporal-Period-Value T21 past
+R1	Treatment-For Arg1:E2 Arg2:E7

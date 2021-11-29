@@ -1,0 +1,84 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E15	Eq-Comparison:T23 Operator:T17 Value:T21 Value2:T22 Operator2:T47 Unit:T48
+E2	Condition:T24 Name:T25
+E4	Procedure:T26 Name:T27 Temporality:E8
+E6	Modifier:T28 Modifies:T27
+E8	Eq-Comparison:T29 Temporal-Recency:T30
+E10	Procedure:T13 Name:T31 Temporality:E13 Temporality2:E16
+E12	Modifier:T14
+E13	Eq-Comparison:T32 Operator:T33 Value:T18
+E16	Eq-Comparison:T34 Temporal-Recency:T35
+E14	Observation:T16 Name:T36
+E17	Negation:T37 Negates:E14
+E18	Assertion:T38 Asserted:E17
+E19	Eq-Comparison:T39 Operator:T40 Value:T19 Unit:T41
+E20	Observation:T42 Name:T43 Eq-Comparison:E19 Eq-Comparison2:E22 Eq-Comparison3:E15
+E21	Modifier:T44
+E22	Eq-Comparison:T45 Value:T20 Value2:T46 Unit:T15
+T1	Condition 38 56	glomerulonephritis
+T2	Condition-Name 38 56	glomerulonephritis
+T3	Condition 85 100	lupus nephritis
+T4	Condition-Name 85 100	lupus nephritis
+T5	Condition 63 67	FSGS
+T6	Condition-Name 63 67	FSGS
+T7	Condition 73 77	IgAN
+T8	Condition-Name 73 77	IgAN
+T9	Condition 79 83	RPGN
+T10	Condition-Name 79 83	RPGN
+T11	Condition 58 61	MCD
+T12	Condition-Name 58 61	MCD
+T15	Eq-Unit 693 695	mm
+T17	Eq-Operator 714 715	-
+T18	Eq-Value 227 231	2010
+T19	Eq-Value 657 658	2
+T20	Eq-Value 684 686	10
+T21	Eq-Value 712 714	10
+T22	Eq-Value 715 717	15
+T23	Eq-Comparison 707 728	over 10-15 glomerulus
+T24	Condition 69 71	MN
+T25	Condition-Name 69 71	MN
+T26	Procedure 138 144	biopsy
+T27	Procedure-Name 138 144	biopsy
+T28	Modifier 131 137	kidney
+T29	Eq-Comparison 114 119	first
+T30	Eq-Temporal-Recency 114 119	first
+T13	Procedure 214 220	biopsy
+T14	Modifier 207 213	kidney
+T31	Procedure-Name 214 220	biopsy
+T32	Eq-Comparison 221 231	since 2010
+T33	Eq-Operator 221 226	since
+T34	Eq-Comparison 190 195	First
+T35	Eq-Temporal-Recency 190 195	First
+T16	Observation 592 605	kidney tissue
+T36	Observation-Name 592 605	kidney tissue
+T37	Negation 581 584	Not
+T38	Assertion 585 591	enough
+T39	Eq-Comparison 647 664	more than 2 cores
+T40	Eq-Operator 647 656	more than
+T41	Eq-Unit 659 664	cores
+T42	Observation 668 682	kidney tissues
+T43	Observation-Name 668 682	kidney tissues
+T44	Modifier 585 591	enough
+T45	Eq-Comparison 684 695	10 x 1.2 mm
+T46	Eq-Value 689 692	1.2
+T47	Eq-Operator 707 711	over
+T48	Eq-Unit 718 728	glomerulus
+A1	Eq-Operator-Value T17 BETWEEN
+A2	Eq-Temporal-Recency-Value T30 first-time
+A3	Eq-Operator-Value T33 GTEQ
+A4	Eq-Temporal-Recency-Value T35 first-time
+A5	Assertion-Type-Value E18 hypothetical
+A6	Eq-Operator-Value T40 GT
+A7	Eq-Operator-Value T47 GT
+R1	Example-Of Arg1:E11 Arg2:E1
+R2	Example-Of Arg1:E5 Arg2:E1
+R3	Example-Of Arg1:E2 Arg2:E1
+R4	Example-Of Arg1:E7 Arg2:E1
+R5	Example-Of Arg1:E3 Arg2:E1
+R6	Found-By Arg1:E1 Arg2:E4
+R7	Equivalent-To Arg1:E20 Arg2:E14

@@ -12,10 +12,8 @@ E22	Eq-Comparison:T44 Temporal-Period:T45
 E2	Condition:T48 Name:T49 Temporality:E4
 E4	Eq-Comparison:T50 Operator:T51 Value:T22 Temporal-Unit:T18
 E6	Study:T38
-E8	Temporal-Connection:T39 Arg:E4 Arg2:E6
-E10	Observation:T52 Name:T53 Eq-Comparison:E12
+E10	Observation:T52 Name:T53 Numeric-Filter:E12
 E12	Eq-Comparison:T54 Value:T23 Unit:T21
-E19	And:T55 Arg:E6 Arg2:E10
 E24	Modifier:T56 Modifies:E10
 E25	Condition:T57 Name:T58 Temporality:E17 Severity:T61
 E26	Eq-Comparison:T59 Value:T60 Value2:T61
@@ -24,16 +22,13 @@ E28	Procedure:T64 Temporality:E27
 E29	Modifier:T65 Modifies:E28
 E30	Drug:T66 Name:T67 Dose:E14 Duration:E15
 E31	Study:T70
-E32	Temporal-Connection:T71 Arg:E15 Arg2:E31
 E33	Assertion:T72 Asserted:E1
 E34	Modifier:T73 Modifies:T4
 E35	Other:T74 Is-Other:E3
-E36	Or:T75 Arg:E1 Arg2:E3
 E37	Eq-Comparison:T76 Temporal-Period:T77
 E38	Modifier:T78 Modifies:E40
 E39	Condition:T79 Name:T80
 E40	Procedure:T81 Temporality:E20 Temporality2:E37
-E41	Or:T82 Arg:E37 Arg2:E20
 E42	Drug:T83 Name:T84
 E43	Drug:T85 Name:T86
 E44	Drug:T26 Name:T87
@@ -46,18 +41,14 @@ E50	Drug:T98 Name:T99
 E51	Drug:T100 Name:T101
 E52	Drug:T27 Name:T102
 E53	Drug:T103 Name:T104
-E54	Or:T105 Arg:E52 Arg2:E53
 E55	Drug:T106 Name:T107
 E9	Drug:T9 Name:T10
 E56	Drug:T28 Name:T29
 E57	Modifier:T108 Modifies:T29
 E58	Modifier:T109 Modifies:T29
-E59	Or:T110 Arg:E57 Arg2:E58
-E60	Or:T111 Arg:E9 Arg2:E56
 E61	Condition:T112 Name:T113
 E62	Drug:T114 Name:T115
 E63	Procedure:T116
-E64	Or:T117 Arg:E61 Arg2:E63
 E65	Procedure:T118 Name:T119 Temporality:E18
 E21	Modifier:T42 Modifies:T119
 E66	Exception:T43 From:E65 Except:E5
@@ -70,7 +61,6 @@ E11	Modifier:T8 Modifies:T14
 E71	Modifier:T11 Modifies:T14
 E72	Modifier:T12 Modifies:T14
 E73	Modifier:T124 Modifies:T14
-E74	Or:T125 Arg:E68 Arg2:E67
 E75	Study:T126 Stability:T127
 E76	Assertion:T128 Asserted:T127
 E77	Drug:T129 Temporality:E16
@@ -78,14 +68,12 @@ E78	Study:T130 Study-Of:E77
 E79	Procedure:T131
 E80	Other:T132 Is-Other:E78
 E23	Study:T46
-E81	Temporal-Connection:T47 Arg:E16 Arg2:E23
 E82	Condition:T133
 E83	Risk:T134 Severity:T135
 E84	Study:T136 Stability:T137
 E85	Assertion:T138 Asserted:T137
 E86	Study:T139 Stability:T140
 E87	Assertion:T141 Asserted:T140
-E88	Or:T142 Arg:E84 Arg2:E87
 T1	Condition 360 375	Crohn's Disease
 T2	Condition-Name 360 375	Crohn's Disease
 T3	Condition 407 422	bowel disorders
@@ -122,11 +110,9 @@ T49	Condition-Name 50 52	UC
 T50	Eq-Comparison 57 74	at least 3 months
 T51	Eq-Operator 57 65	at least
 T38	Study 84 93	screening
-T39	Temporal-Connection 75 83	prior to
 T52	Observation 100 122	minimum disease extent
 T53	Observation-Name 100 122	minimum disease extent
 T54	Eq-Comparison 126 131	15 cm
-T55	And 95 99	with
 T56	Modifier 141 151	anal verge
 T57	Condition 185 187	UC
 T58	Condition-Name 185 187	UC
@@ -142,18 +128,15 @@ T67	Drug-Name 239 254	oral mesalamine
 T68	Eq-Unit 260 261	g
 T69	Eq-Temporal-Unit 262 265	day
 T70	Study 284 293	screening
-T71	Temporal-Connection 279 283	from
 T72	Assertion 325 333	Possible
 T73	Modifier 394 406	inflammatory
 T74	Other 379 384	other
-T75	Or 376 378	or
 T76	Eq-Comparison 428 435	Ongoing
 T77	Eq-Temporal-Period 428 435	Ongoing
 T78	Modifier 439 445	failed
 T79	Condition 466 468	UC
 T80	Condition-Name 466 468	UC
 T81	Procedure 452 461	treatment
-T82	Or 436 438	or
 T83	Drug 474 486	methotrexate
 T84	Drug-Name 474 486	methotrexate
 T85	Drug 488 500	azathioprine
@@ -178,7 +161,6 @@ T27	Drug 623 629	FK-506
 T102	Drug-Name 623 629	FK-506
 T103	Drug 635 644	biologics
 T104	Drug-Name 635 644	biologics
-T105	Or 632 634	or
 T106	Drug 652 673	TNF-alpha-antagonists
 T107	Drug-Name 652 673	TNF-alpha-antagonists
 T9	Drug 675 698	anti-integrin therapies
@@ -187,14 +169,11 @@ T28	Drug 703 719	agents targeting
 T29	Drug-Name 703 719	agents targeting
 T108	Modifier 720 725	IL-12
 T109	Modifier 729 734	IL-23
-T110	Or 726 728	or
-T111	Or 700 702	or
 T112	Condition 751 778	immunosuppressive condition
 T113	Condition-Name 751 778	immunosuppressive condition
 T114	Drug 797 826	immunosuppressive medications
 T115	Drug-Name 797 826	immunosuppressive medications
 T116	Procedure 782 791	treatment
-T117	Or 779 781	or
 T118	Procedure 849 870	surgical intervention
 T119	Procedure-Name 849 870	surgical intervention
 T42	Modifier 892 914	gastrointestinal tract
@@ -208,7 +187,6 @@ T8	Modifier 1001 1010	endocrine
 T11	Modifier 992 999	hepatic
 T12	Modifier 985 990	renal
 T124	Modifier 969 983	cardiovascular
-T125	Or 1068 1070	or
 T126	Study 1222 1229	results
 T127	Stability 1154 1160	impact
 T128	Assertion 1148 1153	might
@@ -217,7 +195,6 @@ T130	Study 1260 1275	investigational
 T131	Procedure 1235 1244	Treatment
 T132	Other 1254 1259	other
 T46	Study 1301 1309	baseline
-T47	Temporal-Connection 1292 1300	prior to
 T133	Condition 1343 1352	condition
 T134	Risk 1461 1465	risk
 T135	Severity 1449 1460	significant
@@ -227,7 +204,6 @@ T138	Assertion 1467 1470	may
 T139	Study 1574 1579	study
 T140	Stability 1506 1515	interfere
 T141	Assertion 1502 1505	may
-T142	Or 1499 1501	or
 A1	Eq-Operator-Value T15 GTEQ
 A2	Eq-Operator-Value T16 GTEQ
 A3	Eq-Operator-Value T17 LTEQ
@@ -239,18 +215,15 @@ A8	Eq-Temporal-Period-Value T37 past
 A10	Eq-Temporal-Period-Value T41 past
 A12	Eq-Temporal-Period-Value T45 past
 A14	Eq-Operator-Value T51 GTEQ
-A9	Temporal-Connection-Type-Value E8 before
-A15	Observation-Type-Value T53 measurement
+A15	Observation-Type-Value E10 measurement
 A16	Severity-Value T60 mild
 A17	Severity-Value T61 moderate
 A18	Eq-Temporal-Period-Value T63 present
 A19	Eq-Temporal-Unit-Value T69 day
-A20	Temporal-Connection-Type-Value E32 after
 A21	Assertion-Type-Value E33 possible
 A22	Eq-Temporal-Period-Value T77 present
 A11	Stability-Value T127 change
 A23	Assertion-Type-Value E76 hypothetical
-A13	Temporal-Connection-Type-Value E81 before
 A24	Severity-Value T135 severe
 A25	Stability-Value T137 change
 A26	Assertion-Type-Value E85 hypothetical
@@ -279,3 +252,29 @@ R21	Using Arg1:E79 Arg2:E77
 R22	Caused-By Arg1:E83 Arg2:E82
 R23	Caused-By Arg1:T137 Arg2:E82
 R24	Caused-By Arg1:T140 Arg2:E82
+R1	Before Arg1:E4 Arg2:E6
+R25	And Arg1:E6 Arg2:E10
+R26	After Arg1:E15 Arg2:E31
+R27	Or Arg1:E1 Arg2:E3
+R28	Or Arg1:E37 Arg2:E20
+R29	Or Arg1:E52 Arg2:E53
+R30	Or Arg1:E57 Arg2:E58
+R31	Or Arg1:E9 Arg2:E56
+R32	Or Arg1:E61 Arg2:E63
+R33	Or Arg1:E68 Arg2:E67
+R34	Before Arg1:E16 Arg2:E23
+R35	Or Arg1:E84 Arg2:E87
+R36	Or Arg1:E42 Arg2:E43
+R37	Or Arg1:E44 Arg2:E45
+R38	Or Arg1:E45 Arg2:E46
+R39	Or Arg1:E46 Arg2:E47
+R40	Or Arg1:E47 Arg2:E48
+R41	Or Arg1:E50 Arg2:E51
+R42	Or Arg1:E55 Arg2:E9
+R43	Or Arg1:E69 Arg2:E68
+R44	Or Arg1:E70 Arg2:E69
+R45	Or Arg1:E7 Arg2:E70
+R46	Or Arg1:E11 Arg2:E7
+R47	Or Arg1:E71 Arg2:E11
+R48	Or Arg1:E72 Arg2:E71
+R49	Or Arg1:E73 Arg2:E72

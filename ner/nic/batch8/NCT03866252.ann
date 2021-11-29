@@ -2,80 +2,67 @@ E1	Condition:T1 Name:T46 Severity:T45
 E3	Eq-Comparison:T3 Operator:T48 Value:T49 Temporal-Unit:T50
 E4	Eq-Comparison:T4 Operator:T52 Value:T53 Temporal-Unit:T54
 E5	Eq-Comparison:T5 Temporal-Period:T55
-E6	Or:T6 Arg:E5 Arg2:E7
 E7	Eq-Comparison:T7 Temporal-Period:T56
 E8	Condition:T8 Name:T57 Temporality:E5 Temporality2:E7
 E9	Eq-Comparison:T9 Temporal-Period:T58
-E10	Or:T10 Arg:E9 Arg2:E11
 E11	Eq-Comparison:T11 Temporal-Period:T59
 E12	Condition:T12 Name:T60 Temporality:E9 Temporality2:E11
 E14	Condition:T14 Name:T61
 E15	Negation:T15 Negates:E45
-E16	Or:T16 Arg:E15 Arg2:E17
 E17	Negation:T17 Negates:E45
 E18	Drug:T18 Name:T62
 E19	Condition:T19 Name:T63
-E20	Or:T20 Arg:E19 Arg2:E21
 E21	Condition:T21 Name:T64
 E22	Condition:T22 Name:T65
 E23	Drug:T23 Name:T66
 E24	Condition:T24 Name:T67
 E25	Condition:T25 Name:T68
 E26	Condition:T26 Name:T79
-E29	Or:T29 Arg:E30
 E30	Assertion:T30 Asserted:E32
 E31	Negation:T31 Negates:E32
 E32	Modifier:T32
 E33	Modifier:T33 Modifies:T69
-E34	Or:T34 Arg:E33 Arg2:E35
 E35	Modifier:T35 Modifies:T69
 E36	Condition:T36 Name:T69
 E37	Procedure:T37 Name:T70
-E38	Observation:T38 Name:T71 Eq-Comparison:E39
+E38	Observation:T38 Name:T71 Numeric-Filter:E39
 E39	Eq-Comparison:T39 Operator:T72 Value:T73 Unit:T74
 E40	Condition:T40 Name:T75
 E41	Risk:T41 Risk-For:E40
-E42	Or:T42 Arg:E41 Arg2:E43
 E43	Assertion:T43 Asserted:E44
-E2	Age:T2 Eq-Comparison:E3
-E28	Age:T28 Eq-Comparison:E4
+E2	Age:T2 Numeric-Filter:E3
+E28	Age:T28 Numeric-Filter:E4
 E13	Family-Member:T13 Has:E14
 E45	Negation:T47 Negates:E18
 E46	Assertion:T77 Asserted:E15
 E47	Assertion:T78 Asserted:E17
 E27	Modifier:T27 Modifies:T68
-E44	Encounter:T44 Type:T76
+E44	Encounter:T44
 E48	Condition:T80 Name:T81
 T1	Condition 31 50	Depressive Disorder
 T3	Eq-Comparison 131 141	> 25 years
 T4	Eq-Comparison 220 230	< 25 years
 T5	Eq-Comparison 261 265	past
-T6	Or 266 268	or
 T7	Eq-Comparison 269 276	present
 T8	Condition 277 295	psychotic disorder
 T9	Eq-Comparison 326 330	past
-T10	Or 331 333	or
 T11	Eq-Comparison 334 341	present
 T12	Condition 342 358	bipolar disorder
 T14	Condition 393 411	psychotic disorder
 T15	Negation 417 423	Unable
-T16	Or 424 426	or
 T17	Negation 427 436	unwilling
 T18	Drug 452 477	antidepressant medication
 T19	Condition 483 492	Pregnancy
-T20	Or 493 495	or
 T21	Condition 496 509	breastfeeding
 T22	Condition 521 537	hypersensitivity
 T23	Drug 541 544	LSD
 T24	Condition 550 567	Somatic disorders
 T25	Condition 578 600	central nervous system
 T26	Condition 602 605	CNS
-T29	Or 630 632	or
 T30	Assertion 633 642	suspected
 T31	Negation 643 646	non
 T32	Modifier 647 657	compliance
 T33	Modifier 659 663	drug
-T34	Or 664 666	or
 T35	Modifier 667 674	alcohol
 T36	Condition 675 680	abuse
 T37	Procedure 686 700	Metal implants
@@ -83,7 +70,6 @@ T38	Observation 706 712	Weight
 T39	Eq-Comparison 713 720	< 42 kg
 T40	Condition 726 733	Suicide
 T41	Risk 734 738	risk
-T42	Or 739 741	or
 T43	Assertion 747 756	likely to
 T45	Severity 25 30	Major
 T46	Condition-Name 31 50	Depressive Disorder
@@ -124,7 +110,6 @@ T78	Assertion 427 436	unwilling
 T27	Modifier 607 618	involvement
 T79	Condition-Name 602 605	CNS
 T44	Encounter 777 792	hospitalisation
-T76	Encounter-Type 777 792	hospitalisation
 T80	Condition 765 776	psychiatric
 T81	Condition-Name 765 776	psychiatric
 A1	Assertion-Type-Value E30 possible
@@ -138,12 +123,19 @@ A8	Eq-Temporal-Period-Value T55 past
 A9	Eq-Temporal-Period-Value T56 present
 A10	Eq-Temporal-Period-Value T58 past
 A11	Eq-Temporal-Period-Value T59 present
-A12	Observation-Type-Value T71 vital
+A12	Observation-Type-Value E38 vital
 A13	Eq-Operator-Value T72 LT
 A14	Assertion-Type-Value E46 hypothetical
 A15	Assertion-Type-Value E47 hypothetical
-A16	Encounter-Type-Value T76 inpatient
+A16	Encounter-Type-Value E44 inpatient
 R1	Caused-By Arg1:E22 Arg2:E23
 R2	Abbrev-Of Arg1:E26 Arg2:E25
 R3	Example-Of Arg1:E25 Arg2:E24
 R4	Treatment-For Arg1:E44 Arg2:E48
+R5	Or Arg1:E5 Arg2:E7
+R6	Or Arg1:E9 Arg2:E11
+R7	Or Arg1:E15 Arg2:E17
+R8	Or Arg1:E19 Arg2:E21
+R9	Or Arg1:E33 Arg2:E35
+R10	Or Arg1:E41 Arg2:E43
+R11	Or Arg1:E32 Arg2:E33

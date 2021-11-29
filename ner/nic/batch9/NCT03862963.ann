@@ -1,10 +1,8 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T26 Operator:T27 Value:T28 Temporal-Unit:T29
-E3	Observation:T3 Name:T30 Eq-Comparison:E4
+E3	Observation:T3 Name:T30 Numeric-Filter:E4
 E4	Eq-Comparison:T4 Operator:T31 Value:T32 Unit:T33
-E5	Or:T5 Arg:E3 Arg2:E6
 E6	Condition:T6 Name:T34
-E7	And:T7 Arg:E6 Arg2:E10
 E8	Eq-Comparison:T8 Temporal-Period:T35
 E9	Condition:T9 Name:T36
 E10	Drug:T10 Temporality:E8
@@ -13,7 +11,6 @@ E12	Eq-Comparison:T12 Operator:T39 Temporal-Unit:T40
 E13	Condition:T13 Name:T42
 E14	Drug:T14 Stability:T41 Temporality:E12
 E15	Modifier:T15 Modifies:E18
-E16	Or:T16 Arg:E15 Arg2:E17
 E17	Modifier:T17 Modifies:E18
 E18	Condition:T18
 E19	Assertion:T19 Asserted:T43
@@ -23,14 +20,12 @@ E22	Condition:T22 Name:T46 Stability:T55
 E23	Condition:T23 Name:T48 Severity:T47
 E24	Eq-Comparison:T24 Temporal-Period:T49
 E25	Procedure:T25 Name:T50 Temporality:E24
-E26	Provider:T53 Role:T54
+E26	Provider:T53
 T1	Age 75 79	Aged
 T2	Eq-Comparison 80 93	18 - 75 years
 T3	Observation 99 104	HbA1c
 T4	Eq-Comparison 105 111	≥ 8.0%
-T5	Or 112 114	or
 T6	Condition 130 133	T2D
-T7	And 134 137	and
 T8	Eq-Comparison 138 144	taking
 T9	Condition 145 153	diabetes
 T10	Drug 154 164	medication
@@ -39,7 +34,6 @@ T12	Eq-Comparison 284 293	≤3 months
 T13	Condition 307 315	diabetes
 T14	Drug 324 334	medication
 T15	Modifier 349 357	physical
-T16	Or 358 360	or
 T17	Modifier 361 368	medical
 T18	Condition 369 378	condition
 T19	Assertion 384 389	would
@@ -77,12 +71,11 @@ T50	Procedure-Name 580 602	lifestyle intervention
 T51	Location 41 69	Republic of Marshall Islands
 T52	Location 208 232	Diabetes Wellness Center
 T53	Provider 239 249	physicians
-T54	Provider-Role 239 249	physicians
 T55	Stability 467 475	unstable
 A1	Assertion-Type-Value E19 hypothetical
 A2	Eq-Operator-Value T27 BETWEEN
 A3	Eq-Temporal-Unit-Value T29 year
-A4	Observation-Type-Value T30 lab
+A4	Observation-Type-Value E3 lab
 A5	Eq-Operator-Value T31 GTEQ
 A6	Eq-Temporal-Period-Value T35 present
 A7	Eq-Temporal-Period-Value T38 recent
@@ -102,3 +95,6 @@ R4	Treatment-For Arg1:E14 Arg2:E13
 R5	Caused-By Arg1:T43 Arg2:E18
 R6	Example-Of Arg1:E21 Arg2:E18
 R7	Example-Of Arg1:E22 Arg2:E18
+R8	Or Arg1:E3 Arg2:E6
+R9	And Arg1:E6 Arg2:E10
+R10	Or Arg1:E15 Arg2:E17

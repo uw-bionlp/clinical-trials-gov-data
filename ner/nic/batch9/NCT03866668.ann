@@ -1,8 +1,6 @@
-E1	Encounter:T1
+E1	
 E2	Eq-Comparison:T2 Value:T41 Operator:T42 Value:T43 Temporal-Unit:T44
-E3	Age:T3 Eq-Comparison:E2
-E4	Or:T4 Arg:T45 Arg2:T46
-E5	And:T5 Arg:T46 Arg2:E6
+E3	Age:T3 Numeric-Filter:E2
 E6	Condition:T6 Name:T47
 E7	Condition:T7 Name:T48
 E9	Assertion:T9 Asserted:E40
@@ -16,34 +14,28 @@ E18	Drug:T18 Name:T56 Temporality:E17
 E19	Negation:T19 Negates:E21
 E20	Eq-Comparison:T20 Temporal-Period:T57
 E21	Procedure:T21 Name:T74 Stability:T58 Temporality:E20
-E22	Temporal-Connection:T22 Arg:E21 Arg2:E24
 E23	Modifier:T23 Modifies:E24
 E24	Study:T24
 E25	Condition:T25 Name:T60
 E26	Condition:T26 Name:T61
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Condition:T28 Name:T62
 E29	Eq-Comparison:T29 Temporal-Period:T63
 E30	Drug:T30 Name:T64
 E31	Eq-Comparison:T31 Temporal-Period:T65
 E32	Condition:T32 Temporality:E31
 E33	Condition:T33 Name:T66 Stability:T75
-E34	Or:T34 Arg:E33 Arg2:E35
 E35	Condition:T35 Name:T68 Severity:T67
 E36	Modifier:T36 Modifies:T70
-E37	Or:T37 Arg:E36 Arg2:E38
 E38	Modifier:T38 Modifies:T70
 E39	Condition:T39 Name:T70 Severity:T69
 E8	Provider:T8
-E40	Encounter:T71 Type:T73 Location:T72 Provider:E8
+E40	Encounter:T71 Location:T72 Provider:E8
 E12	Drug:T12
 E13	Modifier:T13 Modifies:E14
 E41	Study:T59 Study-Of:E30 Temporality:E29
 T1	Encounter 25 36	outpatients
 T2	Eq-Comparison 37 49	2 to 6 years
 T3	Age 53 56	age
-T4	Or 69 72	and
-T5	And 81 84	who
 T6	Condition 100 107	healthy
 T7	Condition 127 151	autism spectrum disorder
 T9	Assertion 333 338	could
@@ -57,22 +49,18 @@ T18	Drug 594 604	fluoxetine
 T19	Negation 612 614	no
 T20	Eq-Comparison 615 622	planned
 T21	Procedure 634 660	psychosocial interventions
-T22	Temporal-Connection 661 667	during
 T23	Modifier 672 682	open-label
 T24	Study 683 688	trial
 T25	Condition 734 747	schizophrenia
 T26	Condition 749 773	schizoaffective disorder
-T27	Or 775 777	or
 T28	Condition 778 796	psychotic disorder
 T29	Eq-Comparison 827 832	prior
 T30	Drug 851 863	Esomeprazole
 T31	Eq-Comparison 870 876	active
 T32	Condition 877 893	medical problems
 T33	Condition 911 919	seizures
-T34	Or 921 923	or
 T35	Condition 936 952	physical illness
 T36	Modifier 968 973	liver
-T37	Or 974 976	or
 T38	Modifier 977 982	renal
 T39	Condition 983 992	pathology
 T40	Encounter-Type 25 36	outpatients
@@ -107,7 +95,6 @@ T70	Condition-Name 983 992	pathology
 T8	Provider 315 328	care provider
 T71	Encounter 372 378	visits
 T72	Location 365 371	clinic
-T73	Encounter-Type 372 378	visits
 T12	Drug 502 510	compound
 T13	Modifier 524 535	concomitant
 T49	Eq-Temporal-Period 589 593	took
@@ -117,7 +104,6 @@ T75	Stability 902 910	unstable
 A1	Assertion-Type-Value E9 hypothetical
 A2	Assertion-Type-Value E10 hypothetical
 A3	Assertion-Type-Value E11 hypothetical
-A5	Temporal-Connection-Type-Value E22 during
 A6	Encounter-Type-Value T40 outpatient
 A7	Eq-Operator-Value T42 BETWEEN
 A8	Eq-Temporal-Unit-Value T44 year
@@ -134,9 +120,16 @@ A18	Eq-Temporal-Period-Value T65 present
 A19	Severity-Value T67 severe
 A20	Severity-Value T69 severe
 A21	Location-Value T72 clinic
-A22	Encounter-Type-Value T73 outpatient
+A22	Encounter-Type-Value E40 outpatient
 A4	Eq-Temporal-Period-Value T49 past
 A23	Stability-Value T75 change
 R1	If-Then Arg1:E18 Arg2:E14
 R2	Example-Of Arg1:E33 Arg2:E32
 R3	Example-Of Arg1:E39 Arg2:E35
+R4	Or Arg1:T45 Arg2:T46
+R5	And Arg1:T46 Arg2:E6
+R6	During Arg1:E21 Arg2:E24
+R7	Or Arg1:E26 Arg2:E28
+R8	Or Arg1:E33 Arg2:E35
+R9	Or Arg1:E36 Arg2:E38
+R10	Or Arg1:E25 Arg2:E26

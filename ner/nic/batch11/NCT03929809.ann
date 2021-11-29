@@ -8,13 +8,10 @@ E24	Condition:T24 Name:T25 Temporality:E58
 E26	Procedure:T26 Name:T27
 E28	Condition:T28 Name:T29
 E29	Eq-Comparison:T55 Operator:T30 Temporal-Unit:T34 Value:T36
-E1	And:T1 Arg:T3 Arg2:T2
 E2	Eq-Comparison:T57 Operator:T58 Temporal-Unit:T33 Value:T35
 E3	Assertion:T59 Asserted:E6
 E7	Condition:T61 Name:T62
 E9	Condition:T63 Name:T64 Polarity:T66
-E11	Or:T67 Arg:T65 Arg2:T66
-E13	And:T68 Arg:E7 Arg2:E9
 E15	Condition:T69 Name:T70
 E17	Procedure:T71 Name:T72
 E19	Modifier:T73 Modifies:E17
@@ -22,39 +19,31 @@ E21	Assertion:T74 Asserted:E17
 E23	Observation:T76 Name:T77
 E25	Eq-Comparison:T78 Operator:T80 Unit:T79 Value:T37
 E27	Condition:T38 Name:T40
-E30	And:T39 Arg:E23 Arg2:E27
-E10	Observation:T10 Name:T11 Eq-Comparison:E12 Eq-Comparison2:E31
+E10	Observation:T10 Name:T11 Numeric-Filter:E12 Numeric-Filter:E31
 E12	Eq-Comparison:T12 Unit:T41 Value:T13
 E31	Eq-Comparison:T42 Value:T44 Operator:T31 Unit:T43
 E33	Condition:T83 Name:T84
-E34	Or:T87 Arg:T85 Arg2:T86
 E35	Condition:T88 Name:T89 Polarity:T86
 E32	Condition:T81 Name:T82
-E36	Observation:T90 Name:T91 Eq-Comparison:E37
+E36	Observation:T90 Name:T91 Numeric-Filter:E37
 E37	Eq-Comparison:T92 Operator:T46 Unit:T47 Value:T45
 E38	Eq-Comparison:T48 Operator:T49 Unit:T50 Value:T51
-E39	And:T52 Arg:E37 Arg2:E38
-E40	And:T93 Arg:E36 Arg2:E41
 E41	Condition:T94 Name:T95
-E14	Observation:T14 Name:T15 Eq-Comparison:E42 Eq-Comparison2:E16
+E14	Observation:T14 Name:T15 Numeric-Filter:E42 Numeric-Filter:E16
 E42	Eq-Comparison:T96 Unit:T16 Value:T53
 E16	Eq-Comparison:T17 Operator:T32 Value:T54 Unit:T97
 E43	Condition:T98 Name:T99
 E44	Condition:T100 Name:T101 Polarity:T102
-E45	And:T103 Arg:E43 Arg2:E44
 E5	Modifier:T60 Modifies:E18
 E46	Modifier:T104 Modifies:E18
-E47	Or:T105 Arg:E46 Arg2:E5
 E48	Contraindication:T106 Contraindicates:E49
 E49	Procedure:T107 Name:T108
 E50	Condition:T109 Name:T110
 E51	Condition:T111 Name:T112
-E52	Or:T113 Arg:E50 Arg2:E51
 E53	Negation:T114 Negates:E20
 E54	Assertion:T115 Asserted:E53
 E55	Condition:T116 Name:T117
 E56	Assertion:T118 Asserted:E22
-E57	Or:T119 Arg:E22 Arg2:E55
 E58	Eq-Comparison:T120 Temporal-Period:T121
 E60	Negation:T123 Negates:E37
 E61	Negation:T124 Negates:E38
@@ -95,7 +84,6 @@ T51	Eq-Value 832 834	40
 T53	Eq-Value 929 931	60
 T54	Eq-Value 981 983	85
 T55	Eq-Comparison 241 265	no greater than 10 years
-T1	And 53 56	who
 T56	Severity 116 122	severe
 T57	Eq-Comparison 180 197	at least 6 months
 T58	Eq-Operator 180 188	at least
@@ -106,8 +94,6 @@ T63	Condition 319 326	hearing
 T64	Condition-Name 319 326	hearing
 T65	Polarity 295 301	normal
 T66	Polarity 306 317	near-normal
-T67	Or 303 305	or
-T68	And 290 294	with
 T69	Condition 333 343	Poorer ear
 T70	Condition-Name 333 343	Poorer ear
 T71	Procedure 355 364	implanted
@@ -122,7 +108,6 @@ T79	Eq-Unit 449 454	dB HL
 T80	Eq-Operator 455 465	or greater
 T38	Condition 531 562	monosyllabic word understanding
 T40	Condition-Name 531 562	monosyllabic word understanding
-T39	And 526 530	with
 T10	Observation 586 599	CNC Word Test
 T11	Observation-Name 586 599	CNC Word Test
 T12	Eq-Comparison 603 609	60 dBA
@@ -135,7 +120,6 @@ T83	Condition 670 687	contralateral ear
 T84	Condition-Name 670 687	contralateral ear
 T85	Polarity 690 696	normal
 T86	Polarity 700 711	near-normal
-T87	Or 697 699	or
 T88	Condition 712 719	hearing
 T89	Condition-Name 712 719	hearing
 T81	Condition 658 668	Better ear
@@ -147,8 +131,6 @@ T47	Eq-Unit 770 775	dB HL
 T48	Eq-Comparison 820 840	poorer than 40 dB HL
 T49	Eq-Operator 820 831	poorer than
 T50	Eq-Unit 835 840	dB HL
-T52	And 813 816	and
-T93	And 852 856	with
 T94	Condition 857 888	monosyllabic word understanding
 T95	Condition-Name 857 888	monosyllabic word understanding
 T14	Observation 912 925	CNC Word Test
@@ -162,10 +144,8 @@ T99	Condition-Name 1047 1061	Patent cochlea
 T100	Condition 1073 1089	cochlear anatomy
 T101	Condition-Name 1073 1089	cochlear anatomy
 T102	Polarity 1066 1072	normal
-T103	And 1062 1065	and
 T60	Modifier 1127 1140	psychological
 T104	Modifier 1116 1123	Medical
-T105	Or 1124 1126	or
 T106	Contraindication 1157 1171	contraindicate
 T107	Procedure 1183 1190	surgery
 T108	Procedure-Name 1183 1190	surgery
@@ -173,13 +153,11 @@ T109	Condition 1197 1209	Ossification
 T110	Condition-Name 1197 1209	Ossification
 T111	Condition 1223 1239	cochlear anomaly
 T112	Condition-Name 1223 1239	cochlear anomaly
-T113	Or 1210 1212	or
 T114	Negation 1251 1258	prevent
 T115	Assertion 1245 1250	might
 T116	Condition 1495 1513	prosthetic devices
 T117	Condition-Name 1495 1513	prosthetic devices
 T118	Assertion 1319 1331	expectations
-T119	Or 1491 1494	and
 T120	Eq-Comparison 1618 1624	Active
 T121	Eq-Temporal-Period 1618 1624	Active
 T123	Negation 752 754	no
@@ -225,3 +203,14 @@ R7	Treatment-For Arg1:E49 Arg2:E18
 R8	Caused-By Arg1:E53 Arg2:E51
 R9	Treatment-For Arg1:E26 Arg2:E28
 R10	Caused-By Arg1:E48 Arg2:E18
+R11	And Arg1:T3 Arg2:T2
+R12	Or Arg1:T65 Arg2:T66
+R13	And Arg1:E7 Arg2:E9
+R14	And Arg1:E23 Arg2:E27
+R15	Or Arg1:T85 Arg2:T86
+R16	And Arg1:E37 Arg2:E38
+R17	And Arg1:E36 Arg2:E41
+R18	And Arg1:E43 Arg2:E44
+R19	Or Arg1:E46 Arg2:E5
+R20	Or Arg1:E50 Arg2:E51
+R21	Or Arg1:E22 Arg2:E55

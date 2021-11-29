@@ -1,6 +1,6 @@
 E1	Procedure:T1 Name:T2
-E2	Age:T9 Eq-Comparison:E4
-E3	Age:T10 Eq-Comparison:E15
+E2	Age:T9 Numeric-Filter:E4
+E3	Age:T10 Numeric-Filter:E15
 E4	Eq-Comparison:T16 Operator:T4 Temporal-Unit:T8 Value:T11
 E5	Eq-Comparison:T17 Operator:T5 Value:T12 Unit:T26
 E6	Eq-Comparison:T18 Operator:T6 Value:T13 Unit:T29
@@ -8,9 +8,9 @@ E7	Eq-Comparison:T19 Operator:T7 Value:T14 Unit:T32
 E8	Condition:T20 Name:T21
 E9	Modifier:T22 Modifies:T21
 E10	Modifier:T23 Modifies:T21
-E11	Observation:T24 Name:T25 Eq-Comparison:E5
-E12	Observation:T27 Name:T28 Eq-Comparison:E6
-E13	Observation:T30 Name:T31 Eq-Comparison:E7
+E11	Observation:T24 Name:T25 Numeric-Filter:E5
+E12	Observation:T27 Name:T28 Numeric-Filter:E6
+E13	Observation:T30 Name:T31 Numeric-Filter:E7
 E14	Condition:T33 Name:T34
 E15	Eq-Comparison:T35 Operator:T36 Value:T15
 E16	Condition:T37 Name:T38
@@ -75,8 +75,8 @@ A3	Eq-Operator-Value T5 LT
 A4	Eq-Operator-Value T6 LT
 A5	Eq-Operator-Value T7 LT
 A6	Eq-Temporal-Unit-Value T8 year
-A7	Observation-Type-Value T25 measurement
-A8	Observation-Type-Value T28 measurement
+A7	Observation-Type-Value E11 measurement
+A8	Observation-Type-Value E12 measurement
 A9	Eq-Operator-Value T36 LT
 A10	Assertion-Type-Value E23 hypothetical
 R1	Equivalent-To Arg1:E11 Arg2:E8

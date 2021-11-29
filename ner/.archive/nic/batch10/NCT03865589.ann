@@ -1,0 +1,377 @@
+E1	Procedure:T1 Name:T2 Temporality:E2 Temporality2:E4
+E3	Condition:T3 Name:T4
+E5	Observation:T5 Name:T6 Eq-Comparison:E42
+E7	Observation:T7 Name:T8 Eq-Comparison:E43 Eq-Comparison2:E44
+E9	Observation:T9 Name:T10 Eq-Comparison:E45 Eq-Comparison2:E46
+E11	Observation:T11 Name:T12 Eq-Comparison:E47 Eq-Comparison2:E48
+E13	Procedure:T13 Name:T14
+E15	Procedure:T15 Name:T16
+E19	Condition:T19 Name:T20
+E23	Condition:T23 Name:T24
+E25	Condition:T25 Name:T26
+E27	Condition:T27 Name:T28
+E29	Condition:T29 Name:T30
+E31	Condition:T31 Name:T32 Temporality:E102
+E37	Condition:T37 Name:T38
+E39	Condition:T39 Name:T40
+E41	Condition:T41 Name:T42
+E42	Eq-Comparison:T90 Operator:T44 Value:T72 Unit:T114
+E43	Eq-Comparison:T91 Operator:T45 Value:T73 Unit:T119
+E44	Eq-Comparison:T92 Operator:T46 Value:T74 Unit:T121
+E45	Eq-Comparison:T93 Operator:T47 Value:T75 Unit:T130
+E46	Eq-Comparison:T94 Operator:T48 Value:T76 Unit:T132
+E47	Eq-Comparison:T95 Operator:T49 Value:T77 Unit:T141
+E48	Eq-Comparison:T96 Operator:T50 Value:T78 Unit:T142
+E49	Eq-Comparison:T97 Operator:T51 Value:T79 Unit:T148 Per:T63
+E50	Eq-Comparison:T98 Operator:T52 Value:T80 Unit:T151 Per:T64
+E51	Eq-Comparison:T99 Operator:T53 Value:T81 Unit:T158 Per:T65
+E52	Eq-Comparison:T100 Operator:T54 Value:T82 Unit:T160 Per:T66
+E53	Eq-Comparison:T101 Operator:T55 Value:T83 Unit:T168 Per:T67
+E54	Eq-Comparison:T102 Operator:T56 Value:T84 Unit:T170 Per:T68
+E55	Eq-Comparison:T103 Operator:T57 Value:T85 Unit:T179 Per:T180 Per2:T181
+E56	Eq-Comparison:T104 Operator:T58 Value:T86 Unit:T182 Per:T183
+E57	Eq-Comparison:T105 Operator:T59 Temporal-Unit:T61 Value:T87
+E58	Eq-Comparison:T106 Operator:T60 Temporal-Unit:T62 Value:T89
+E2	Eq-Comparison:T107 Temporal-Period:T108
+E4	Eq-Comparison:T109 Operator:T110 Value:T70 Value2:T71
+E6	Eq-Comparison:T111 Value:T112
+E8	Criteria-Count:T113 Min-Value:E6 Criteria:E5 Criteria3:E22 Criteria2:E12 Criteria4:E36 Criteria5:E63 Criteria6:E69 Criteria7:E75 Criteria8:E81
+E10	Modifier:T115 Modifies:E42
+E12	Drug:T116 Name:T117
+E14	And:T118 Arg:E12 Arg2:E7
+E16	Modifier:T120 Modifies:E43
+E18	Or:T122 Arg:E43 Arg2:E44
+E20	Modifier:T123 Modifies:E44
+E22	Drug:T124 Name:T125
+E24	Drug:T126 Name:T127
+E26	And:T128 Arg:E22 Arg2:E24
+E28	And:T129 Arg:E24 Arg2:E9
+E30	Modifier:T131 Modifies:E45
+E32	Modifier:T133 Modifies:E46
+E34	Or:T134 Arg:E45 Arg2:E46
+E36	Drug:T135 Name:T136
+E38	Drug:T137 Name:T138
+E40	And:T139 Arg:E36 Arg2:E38
+E59	And:T140 Arg:E38 Arg2:E11
+E60	Modifier:T143 Modifies:E47
+E61	Modifier:T144 Modifies:E48
+E62	Or:T145 Arg:E47 Arg2:E48
+E63	Drug:T146 Name:T147 Dose:E49 Dose2:E50
+E64	Modifier:T149 Modifies:E49
+E65	Modifier:T150 Modifies:E50
+E66	Or:T152 Arg:E49 Arg2:E50
+E67	Drug:T153 Name:T154
+E68	And:T155 Arg:E63 Arg2:E67
+E69	Drug:T156 Name:T157 Dose:E51 Dose2:E52
+E70	Modifier:T159 Modifies:E51
+E71	Or:T161 Arg:E51 Arg2:E52
+E72	Modifier:T162 Modifies:E52
+E73	Drug:T163 Name:T164
+E74	And:T165 Arg:E69 Arg2:E73
+E75	Drug:T166 Name:T167 Dose:E53 Dose2:E54
+E76	Modifier:T169 Modifies:E53
+E77	Modifier:T171 Modifies:E54
+E78	Or:T172 Arg:E53 Arg2:E54
+E79	Drug:T173 Name:T174
+E80	And:T175 Arg:E75 Arg2:E79
+E81	Drug:T69 Name:T176
+E82	Observation:T177 Name:T178 Eq-Comparison:E55 Eq-Comparison2:E56
+E83	Or:T184 Arg:E55 Arg2:E56
+E84	Or:T185 Arg:E8 Arg2:E13
+E17	Drug:T17 Name:T18
+E85	Drug:T186 Name:T187
+E86	Or:T188 Arg:E17 Arg2:E85
+E87	Risk:T189 Polarity:T21 Risk-For:E37
+E21	Or:T22 Arg:E13 Arg2:E87
+E88	Condition:T190 Name:T191
+E33	Procedure:T33 
+E35	Drug:T34 Name:T35 Temporality:E57
+E89	Drug:T36 Name:T88 Temporality:E57
+E90	Or:T192 Arg:E35 Arg2:E89
+E91	Encounter:T193 Type:T194
+E92	Procedure:T195 Name:T196
+E93	Temporal-Connection:T197 Arg:E57 Arg2:E91
+E94	Eq-Comparison:T198 Value:T199
+E95	Procedure:T200 Name:T201 Minimum-Count:E94 Temporality:E58
+E96	Modifier:T202 Modifies:T201
+E97	Coreference:T203 Refers-To:E95
+E98	Temporal-Connection:T204 Arg:E58 Arg2:E97
+E99	Modifier:T205 Modifies:T32
+E100	Modifier:T206 Modifies:T32
+E101	Or:T207 Arg:E100 Arg2:E99
+E102	Eq-Comparison:T208 Temporal-Period:T209
+E103	Condition:T210 
+E104	Other:T211 Is-Other:E103
+E105	Or:T212 Arg:E31 Arg2:E103
+E106	Risk:T213 Polarity:T214 Risk-For:E41 Stability:T215
+E107	Procedure:T43 Name:T216
+E108	Contraindication:T217 Contraindicates:E107
+E109	Condition:T218 Name:T219
+E110	Assertion:T220 Asserted:E41
+T1	Procedure 50 76	myeloablative conditioning
+T2	Procedure-Name 50 76	myeloablative conditioning
+T3	Condition 89 92	HCT
+T4	Condition-Name 89 92	HCT
+T5	Observation 168 171	TBI
+T6	Observation-Name 168 171	TBI
+T7	Observation 228 231	TBI
+T8	Observation-Name 228 231	TBI
+T9	Observation 321 324	TBI
+T10	Observation-Name 321 324	TBI
+T11	Observation 414 417	TBI
+T12	Observation-Name 414 417	TBI
+T13	Procedure 906 932	myeloablative conditioning
+T14	Procedure-Name 906 932	myeloablative conditioning
+T15	Procedure 1025 1036	prophylaxis
+T16	Procedure-Name 1025 1036	prophylaxis
+T19	Condition 1020 1024	GVHD
+T20	Condition-Name 1020 1024	GVHD
+T23	Condition 1325 1340	steatohepatitis
+T24	Condition-Name 1325 1340	steatohepatitis
+T25	Condition 1139 1152	Osteopetrosis
+T26	Condition-Name 1139 1152	Osteopetrosis
+T27	Condition 1310 1323	iron overload
+T28	Condition-Name 1310 1323	iron overload
+T29	Condition 1154 1165	Thalassemia
+T30	Condition-Name 1154 1165	Thalassemia
+T31	Condition 1375 1384	hepatitis
+T32	Condition-Name 1375 1384	hepatitis
+T37	Condition 1077 1080	SOS
+T38	Condition-Name 1077 1080	SOS
+T39	Condition 1134 1137	HLH
+T40	Condition-Name 1134 1137	HLH
+T41	Condition 1462 1465	SOS
+T42	Condition-Name 1462 1465	SOS
+T44	Eq-Operator 172 174	>=
+T45	Eq-Operator 233 234	>
+T46	Eq-Operator 255 256	>
+T47	Eq-Operator 326 327	>
+T48	Eq-Operator 348 349	>
+T49	Eq-Operator 419 420	>
+T50	Eq-Operator 441 442	>
+T51	Eq-Operator 498 499	>
+T52	Eq-Operator 516 517	>
+T53	Eq-Operator 584 585	>
+T54	Eq-Operator 601 602	>
+T55	Eq-Operator 663 664	>
+T56	Eq-Operator 680 681	>
+T57	Eq-Operator 760 761	>
+T58	Eq-Operator 781 782	>
+T59	Eq-Operator 1207 1213	within
+T60	Eq-Operator 1284 1290	within
+T61	Eq-Temporal-Unit 1216 1222	months
+T62	Eq-Temporal-Unit 1293 1299	months
+T63	Eq-Unit 507 509	kg
+T64	Eq-Unit 523 525	kg
+T65	Eq-Unit 592 594	kg
+T66	Eq-Unit 609 611	kg
+T67	Eq-Unit 671 673	kg
+T68	Eq-Unit 688 690	kg
+T70	Eq-Value 101 109	4/1/2019
+T71	Eq-Value 114 124	12/31/2120
+T72	Eq-Value 175 179	1200
+T73	Eq-Value 235 238	500
+T74	Eq-Value 257 260	800
+T75	Eq-Value 328 331	500
+T76	Eq-Value 350 353	800
+T77	Eq-Value 421 424	500
+T78	Eq-Value 443 446	800
+T79	Eq-Value 500 503	7.2
+T80	Eq-Value 517 520	9.0
+T81	Eq-Value 585 588	7.2
+T82	Eq-Value 602 605	9.0
+T83	Eq-Value 664 667	7.2
+T84	Eq-Value 681 684	9.0
+T85	Eq-Value 761 763	75
+T86	Eq-Value 782 787	18270
+T87	Eq-Value 1214 1215	3
+T89	Eq-Value 1291 1292	6
+T90	Eq-Comparison 172 183	>= 1200 cGy
+T91	Eq-Comparison 233 242	> 500 cGy
+T92	Eq-Comparison 255 263	> 800cGy
+T93	Eq-Comparison 326 335	> 500 cGy
+T94	Eq-Comparison 348 357	> 800 cGy
+T95	Eq-Comparison 419 428	> 500 cGy
+T96	Eq-Comparison 441 450	> 800 cGy
+T97	Eq-Comparison 498 509	> 7.2 mg/kg
+T98	Eq-Comparison 516 525	>9.0mg/kg
+T99	Eq-Comparison 584 594	>7.2 mg/kg
+T100	Eq-Comparison 601 611	>9.0 mg/kg
+T101	Eq-Comparison 663 673	>7.2 mg/kg
+T102	Eq-Comparison 680 690	>9.0 mg/kg
+T103	Eq-Comparison 760 777	>75 mg/L per hour
+T104	Eq-Comparison 781 809	>18270 microMolar per minute
+T105	Eq-Comparison 1207 1222	within 3 months
+T106	Eq-Comparison 1284 1299	within 6 months
+T107	Eq-Comparison 37 47	undergoing
+T108	Eq-Temporal-Period 37 47	undergoing
+T109	Eq-Comparison 93 124	between 4/1/2019 and 12/31/2120
+T110	Eq-Operator 93 100	between
+T111	Eq-Comparison 136 139	one
+T112	Eq-Value 136 139	one
+T113	Criteria-Count 143 156	the following
+T114	Eq-Unit 180 183	cGy
+T115	Modifier 185 197	fractionated
+T116	Drug 209 225	Cyclophosphamide
+T117	Drug-Name 209 225	Cyclophosphamide
+T118	And 226 227	+
+T119	Eq-Unit 239 242	cGy
+T120	Modifier 244 250	single
+T121	Eq-Unit 260 263	cGy
+T122	Or 252 254	or
+T123	Modifier 265 277	fractionated
+T124	Drug 290 306	Cyclophosphamide
+T125	Drug-Name 290 306	Cyclophosphamide
+T126	Drug 309 318	Etoposide
+T127	Drug-Name 309 318	Etoposide
+T128	And 307 308	+
+T129	And 319 320	+
+T130	Eq-Unit 332 335	cGy
+T131	Modifier 337 343	single
+T132	Eq-Unit 354 357	cGy
+T133	Modifier 359 371	fractionated
+T134	Or 345 347	or
+T135	Drug 384 400	Cyclophosphamide
+T136	Drug-Name 384 400	Cyclophosphamide
+T137	Drug 403 411	Thiotepa
+T138	Drug-Name 403 411	Thiotepa
+T139	And 401 402	+
+T140	And 412 413	+
+T141	Eq-Unit 425 428	cGy
+T142	Eq-Unit 447 450	cGy
+T143	Modifier 430 436	single
+T144	Modifier 452 464	fractionated
+T145	Or 438 440	or
+T146	Drug 477 485	Busulfan
+T147	Drug-Name 477 485	Busulfan
+T148	Eq-Unit 504 506	mg
+T149	Modifier 510 512	IV
+T150	Modifier 526 532	orally
+T151	Eq-Unit 520 522	mg
+T152	Or 513 515	or
+T153	Drug 536 552	Cyclophosphamide
+T154	Drug-Name 536 552	Cyclophosphamide
+T155	And 534 535	+
+T156	Drug 563 571	Busulfan
+T157	Drug-Name 563 571	Busulfan
+T158	Eq-Unit 589 591	mg
+T159	Modifier 595 597	IV
+T160	Eq-Unit 606 608	mg
+T161	Or 598 600	or
+T162	Modifier 612 618	orally
+T163	Drug 622 631	Melphalan
+T164	Drug-Name 622 631	Melphalan
+T165	And 620 621	+
+T166	Drug 642 650	Busulfan
+T167	Drug-Name 642 650	Busulfan
+T168	Eq-Unit 668 670	mg
+T169	Modifier 674 676	IV
+T170	Eq-Unit 685 687	mg
+T171	Modifier 691 697	orally
+T172	Or 677 679	or
+T173	Drug 701 709	Thiotepa
+T174	Drug-Name 701 709	Thiotepa
+T175	And 699 700	+
+T69	Drug 726 734	Busulfan
+T176	Drug-Name 726 734	Busulfan
+T177	Observation 735 756	cumulative plasma AUC
+T178	Observation-Name 735 756	cumulative plasma AUC
+T179	Eq-Unit 764 766	mg
+T180	Eq-Unit 767 768	L
+T181	Eq-Temporal-Unit 773 777	hour
+T182	Eq-Unit 788 798	microMolar
+T183	Eq-Temporal-Unit 803 809	minute
+T184	Or 778 780	or
+T185	Or 878 880	OR
+T17	Drug 991 1000	sirolimus
+T18	Drug-Name 991 1000	sirolimus
+T186	Drug 1005 1015	tacrolimus
+T187	Drug-Name 1005 1015	tacrolimus
+T188	Or 1001 1004	and
+T189	Risk 1068 1072	risk
+T21	Polarity 1063 1067	high
+T22	Or 1038 1040	OR
+T190	Condition 1119 1132	Neuroblastoma
+T191	Condition-Name 1119 1132	Neuroblastoma
+T33	Procedure 1167 1176	treatment
+T34	Drug 1182 1192	inotuzumab
+T35	Drug-Name 1182 1192	inotuzumab
+T36	Drug 1196 1206	gemtuzumab
+T88	Drug-Name 1196 1206	gemtuzumab
+T192	Or 1193 1195	or
+T193	Encounter 1237 1246	admission
+T194	Encounter-Type 1237 1246	admission
+T195	Procedure 1232 1236	HSCT
+T196	Procedure-Name 1232 1236	HSCT
+T197	Temporal-Connection 1223 1231	prior to
+T198	Eq-Comparison 1248 1251	2nd
+T199	Eq-Value 1248 1251	2nd
+T200	Procedure 1252 1256	HSCT
+T201	Procedure-Name 1252 1256	HSCT
+T202	Modifier 1266 1279	myeloablative
+T203	Coreference 1303 1308	prior
+T204	Temporal-Connection 1300 1302	of
+T205	Modifier 1365 1374	infection
+T206	Modifier 1349 1361	inflammatory
+T207	Or 1362 1364	or
+T208	Eq-Comparison 1342 1348	active
+T209	Eq-Temporal-Period 1342 1348	active
+T210	Condition 1398 1407	condition
+T211	Other 1392 1397	other
+T212	Or 1385 1387	or
+T213	Risk 1443 1447	risk
+T214	Polarity 1436 1442	higher
+T215	Stability 1414 1418	puts
+T43	Procedure 1532 1538	US SWE
+T216	Procedure-Name 1532 1538	US SWE
+T217	Contraindication 1512 1528	contraindication
+T218	Condition 1545 1565	unable to hold still
+T219	Condition-Name 1545 1565	unable to hold still
+T220	Assertion 1451 1461	developing
+A1	Eq-Operator-Value T44 GTEQ
+A2	Eq-Operator-Value T45 GT
+A3	Eq-Operator-Value T46 GT
+A4	Eq-Operator-Value T47 GT
+A5	Eq-Operator-Value T48 GT
+A6	Eq-Operator-Value T49 GT
+A7	Eq-Operator-Value T50 GT
+A8	Eq-Operator-Value T51 GT
+A9	Eq-Operator-Value T52 GT
+A10	Eq-Operator-Value T53 GT
+A11	Eq-Operator-Value T54 GT
+A12	Eq-Operator-Value T55 GT
+A13	Eq-Operator-Value T56 GT
+A14	Eq-Operator-Value T57 GT
+A15	Eq-Operator-Value T58 GT
+A16	Eq-Operator-Value T59 LTEQ
+A17	Eq-Operator-Value T60 LTEQ
+A18	Eq-Temporal-Unit-Value T61 month
+A19	Eq-Temporal-Unit-Value T62 month
+A20	Eq-Temporal-Period-Value T108 present
+A21	Eq-Operator-Value T110 BETWEEN
+A22	Observation-Type-Value T6 lab
+A23	Observation-Type-Value T8 lab
+A24	Observation-Type-Value T10 lab
+A25	Observation-Type-Value T12 lab
+A26	Observation-Type-Value T178 lab
+A27	Eq-Temporal-Unit-Value T181 hour
+A28	Eq-Temporal-Unit-Value T183 minute
+A29	Polarity-Value T21 high
+A30	Encounter-Type-Value T194 inpatient
+A31	Temporal-Connection-Type-Value E93 before
+A32	Temporal-Connection-Type-Value E98 before
+A33	Eq-Temporal-Period-Value T209 present
+A34	Polarity-Value T214 high
+A35	Stability-Value T215 change
+A36	Assertion-Type-Value E110 hypothetical
+R1	Treatment-For Arg1:E1 Arg2:E3
+R2	Equivalent-To Arg1:E8 Arg2:E1
+R3	Treatment-For Arg1:E15 Arg2:E19
+R4	Using Arg1:E15 Arg2:E85
+R5	Using Arg1:E15 Arg2:E17
+R6	Using Arg1:E13 Arg2:E15
+R7	Using Arg1:E33 Arg2:E35
+R8	Using Arg1:E91 Arg2:E92
+R9	Caused-By Arg1:T215 Arg2:E103
+R10	Example-Of Arg1:E109 Arg2:E108
+R11	Using Arg1:E33 Arg2:E89

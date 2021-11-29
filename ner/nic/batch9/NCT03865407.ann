@@ -1,13 +1,12 @@
 E1	Condition:T1 Name:T26 Stage:E2 Acuteness:T47
 E2	Eq-Comparison:T2 Unit:T27 Value:T28 Operator:T29 Value2:T30
 E3	Condition:T3 Name:T31
-E4	Observation:T4 Name:T32 Eq-Comparison:E5
+E4	Observation:T4 Name:T32 Numeric-Filter:E5
 E5	Eq-Comparison:T5 Operator:T33 Value:T34 Unit:T35 Per:T36
 E6	Contraindication:T6 Contraindicates:E7
 E7	Drug:T7 Name:T37
 E8	Observation:T8 Name:T39 Polarity:T38
 E9	Eq-Comparison:T9 Temporal-Period:T40
-E10	Or:T10 Arg:T41 Arg2:T11
 E12	Procedure:T12 Name:T42 Acuteness:T41 Temporality:E9 Acuteness:T11
 E13	Modifier:T13 Modifies:T43
 E14	Condition:T14 Name:T43
@@ -15,12 +14,10 @@ E15	Condition:T15 Name:T44
 E16	Modifier:T16 Modifies:T45
 E17	Condition:T17 Name:T45
 E18	Condition:T18 Name:T46
-E19	Modifier:T19 Modifies:T48
-E20	Or:T20 Arg:E19 Arg2:E21
-E21	Modifier:T21 Modifies:T48
-E22	Condition:T22 Name:T48
+E19	Modifier:T19 Modifies:E22
+E21	Modifier:T21 Modifies:E22
+E22	Condition:T22
 E23	Condition:T23 Name:T49
-E24	Or:T24 Arg:E23 Arg2:E25
 E25	Condition:T25 Name:T50
 T1	Condition 33 47	Kidney Disease
 T2	Eq-Comparison 48 57	stage 1-5
@@ -31,7 +28,6 @@ T6	Contraindication 120 136	Contraindication
 T7	Drug 140 151	Allopurinol
 T8	Observation 175 195	liver function tests
 T9	Eq-Comparison 201 210	Receiving
-T10	Or 217 219	or
 T11	Acuteness 220 227	chronic
 T12	Procedure 228 236	dialysis
 T13	Modifier 242 249	Primary
@@ -41,11 +37,9 @@ T16	Modifier 299 317	Autosomal Dominant
 T17	Condition 318 343	Polycystic Kidney Disease
 T18	Condition 349 359	Cystinosis
 T19	Modifier 365 372	Bartter
-T20	Or 373 375	or
 T21	Modifier 376 384	Gitelman
 T22	Condition 385 392	Disease
 T23	Condition 398 406	Pregnant
-T24	Or 407 409	or
 T25	Condition 410 417	nursing
 T26	Condition-Name 33 47	Kidney Disease
 T27	Eq-Unit 48 53	stage
@@ -73,12 +67,15 @@ T49	Condition-Name 398 406	Pregnant
 T50	Condition-Name 410 417	nursing
 T47	Acuteness 25 32	Chronic
 A1	Eq-Operator-Value T29 BETWEEN
-A2	Observation-Type-Value T32 lab
+A2	Observation-Type-Value E4 lab
 A3	Eq-Operator-Value T33 GTEQ
 A4	Polarity-Value T38 high
-A5	Observation-Type-Value T39 lab
+A5	Observation-Type-Value E8 lab
 A6	Eq-Temporal-Period-Value T40 present
 A8	Acuteness-Type-Value T41 acute
 A9	Acuteness-Type-Value T11 chronic
 A10	Acuteness-Type-Value T47 chronic
 R1	Equivalent-To Arg1:E4 Arg2:E3
+R2	Or Arg1:T41 Arg2:T11
+R3	Or Arg1:E19 Arg2:E21
+R4	Or Arg1:E23 Arg2:E25

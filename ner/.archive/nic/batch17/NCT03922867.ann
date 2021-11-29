@@ -1,0 +1,57 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10 Temporality:E21
+E11	Condition:T11 Name:T12 Temporality:E20
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18 Acuteness:T31
+E19	Condition:T19 Name:T20
+E20	Eq-Comparison:T21 Temporal-Period:T22
+E21	Eq-Comparison:T23 Temporal-Period:T24
+E2	Condition:T25 Name:T26
+E4	Procedure:T27
+E6	Negation:T28 Negates:E4
+E8	Condition:T29 Name:T30
+T1	Condition 55 67	fibromyalgia
+T2	Condition-Name 55 67	fibromyalgia
+T3	Condition 258 290	obesity hypoventilation syndrome
+T4	Condition-Name 258 290	obesity hypoventilation syndrome
+T5	Condition 326 352	Bipolar affective disorder
+T6	Condition-Name 326 352	Bipolar affective disorder
+T7	Condition 233 256	obstructive sleep apnea
+T8	Condition-Name 233 256	obstructive sleep apnea
+T9	Condition 304 324	psychiatric disorder
+T10	Condition-Name 304 324	psychiatric disorder
+T11	Condition 196 210	sleep disorder
+T12	Condition-Name 196 210	sleep disorder
+T13	Condition 375 388	schizophrenia
+T14	Condition-Name 375 388	schizophrenia
+T15	Condition 363 373	depression
+T16	Condition-Name 363 373	depression
+T17	Condition 435 451	fatigue syndrome
+T18	Condition-Name 435 451	fatigue syndrome
+T19	Condition 457 471	Morbid obesity
+T20	Condition-Name 457 471	Morbid obesity
+T21	Eq-Comparison 189 195	Active
+T22	Eq-Temporal-Period 189 195	Active
+T23	Eq-Comparison 297 303	Active
+T24	Eq-Temporal-Period 297 303	Active
+T25	Condition 77 85	insomnia
+T26	Condition-Name 77 85	insomnia
+T27	Procedure 224 231	treated
+T28	Negation 220 223	not
+T29	Condition 354 361	anxiety
+T30	Condition-Name 354 361	anxiety
+T31	Acuteness 427 434	Chronic
+A1	Eq-Temporal-Period-Value T22 present
+A2	Eq-Temporal-Period-Value T24 present
+A3	Acuteness-Type-Value T31 chronic
+R1	Treatment-For Arg1:E4 Arg2:E11
+R2	Example-Of Arg1:E7 Arg2:E11
+R3	Example-Of Arg1:E3 Arg2:E11
+R4	Example-Of Arg1:E5 Arg2:E9
+R5	Example-Of Arg1:E8 Arg2:E9
+R6	Example-Of Arg1:E15 Arg2:E9
+R7	Example-Of Arg1:E13 Arg2:E9

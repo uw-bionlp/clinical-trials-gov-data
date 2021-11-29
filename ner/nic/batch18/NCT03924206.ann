@@ -6,7 +6,6 @@ E2	Eq-Comparison:T10 Temporal-Period:T11
 E4	Eq-Comparison:T12 Operator:T13 Temporal-Unit:T14 Value:T9
 E6	Contraindication:T15 Contraindicates:E3
 E8	Procedure:T16 Name:T17
-E9	Or:T18 Arg:E5 Arg2:E8
 E10	Procedure:T19 Name:T20
 T1	Procedure 26 45	surgical procedures
 T2	Procedure-Name 26 45	surgical procedures
@@ -25,10 +24,10 @@ T14	Eq-Temporal-Unit 85 89	hour
 T15	Contraindication 131 147	contraindication
 T16	Procedure 203 241	implantable cardioverter-defibrillator
 T17	Procedure-Name 203 241	implantable cardioverter-defibrillator
-T18	Or 200 202	or
 T19	Procedure 270 302	implanted neurostimulator device
 T20	Procedure-Name 270 302	implanted neurostimulator device
 A1	Eq-Temporal-Period-Value T11 future
 A2	Eq-Operator-Value T13 GT
 A3	Eq-Temporal-Unit-Value T14 hour
 R1	Abbrev-Of Arg1:E7 Arg2:E8
+R2	Or Arg1:E5 Arg2:E8

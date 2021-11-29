@@ -1,17 +1,15 @@
 E1	Procedure:T1 Name:T2 Duration:E4 Temporality:E3 Temporality2:E10
 E5	Procedure:T5 Name:T6 Minimum-Count:E12
-E6	Age:T10 Eq-Comparison:E7
+E6	Age:T10 Numeric-Filter:E7
 E7	Eq-Comparison:T16 Operator:T11 Value:T12 Temporal-Unit:T7 Value2:T13
 E2	Condition:T17 Name:T18 Polarity:T19
 E4	Eq-Comparison:T21 Operator:T22 Value:T14 Temporal-Unit:T8
 E3	Eq-Comparison:T3 Temporal-Period:T4
 E8	Eq-Comparison:T23 Operator:T24 Value:T25
-E9	Encounter:T26 Location:T27 Minimum-Count:E8
+E9	Encounter:T26 Location:T27
 E10	Eq-Comparison:T28 Temporal-Recency:T29
-E11	Temporal-Connection:T30 Arg:E9 Arg2:E10
 E12	Eq-Comparison:T31 Operator:T32 Value:T33
-E13	And:T34 Arg:E9 Arg2:E5
-E14	Encounter:T35 Location:T39 Duration:E16
+E14	Encounter:T35 Location:T39
 E15	Assertion:T36 Asserted:E14
 E16	Eq-Comparison:T37 Operator:T38 Value:T15 Temporal-Unit:T9
 T1	Procedure 97 100	ART
@@ -43,11 +41,9 @@ T26	Encounter 168 176	attended
 T27	Location 181 187	clinic
 T28	Eq-Comparison 235 245	initiation
 T29	Eq-Temporal-Recency 235 245	initiation
-T30	Temporal-Connection 229 234	since
 T31	Eq-Comparison 280 293	at least once
 T32	Eq-Operator 280 288	at least
 T33	Eq-Value 289 293	once
-T34	And 246 249	AND
 T35	Encounter 365 369	care
 T36	Assertion 345 353	Planning
 T37	Eq-Comparison 391 409	at least 12 months
@@ -64,8 +60,9 @@ A8	Eq-Temporal-Period-Value T4 present
 A9	Eq-Operator-Value T24 GTEQ
 A10	Location-Value T27 clinic
 A11	Eq-Temporal-Recency-Value T29 first-time
-A12	Temporal-Connection-Type-Value E11 after
 A13	Eq-Operator-Value T32 GTEQ
 A14	Assertion-Type-Value E15 intention
 A15	Eq-Operator-Value T38 GTEQ
 A16	Location-Value T39 hospital
+R1	After Arg1:E9 Arg2:E10
+R2	And Arg1:E9 Arg2:E5

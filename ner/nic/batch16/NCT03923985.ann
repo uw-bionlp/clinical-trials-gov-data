@@ -6,7 +6,7 @@ E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
-E16	Age:T18 Eq-Comparison:E4
+E16	Age:T18 Numeric-Filter:E4
 E17	Eq-Comparison:T21 Temporal-Period:T22
 E18	Eq-Comparison:T23 Temporal-Period:T24
 E19	Eq-Comparison:T25 Temporal-Period:T26
@@ -18,32 +18,21 @@ E8	Negation:T37 Negates:E5
 E10	Procedure:T38 Name:T39 Polarity:T43
 E12	Modifier:T40 Modifies:T39
 E14	Modifier:T41 Modifies:T39
-E22	And:T42 Arg:E14 Arg2:E12
-E23	And:T45 Arg:T44 Arg2:E7
 E24	Condition:T46 Name:T47
-E25	And:T49 Arg:T48 Arg2:E24
 E26	Assertion:T50 Asserted:E28
 E27	Condition:T51 Name:T52 Temporality:E18
 E28	Condition:T53 Name:T54
-E29	Or:T55 Arg:E28 Arg2:E27
 E30	Drug:T57 Name:T58
 E31	Condition:T59 Name:T60
 E32	Allergy:T61 Name:E30
-E33	Or:T62 Arg:E32 Arg2:E31
-E34	And:T63 Arg:T56 Arg2:E13
 E35	Condition:T65 Name:T66
 E36	Condition:T67 Name:T68
-E37	Or:T69 Arg:E35 Arg2:E36
-E38	And:T70 Arg:T64 Arg2:E35
 E20	Drug:T27 Name:T28 Temporality:E19
-E39	And:T72 Arg:T71 Arg2:E20
-E40	And:T74 Arg:T73 Arg2:E41
 E41	Procedure:T75 Temporality:E21
 E42	Modifier:T76 Modifies:T16
 E43	Modifier:T77 Modifies:E1
 E45	Condition:T79 Name:T80
 E46	Condition:T82 Name:T83
-E47	Or:T84 Arg:T81 Arg2:E46
 T1	Condition 680 704	noncommunicable diseases
 T2	Condition-Name 680 704	noncommunicable diseases
 T3	Condition 297 320	endometrial hyperplasia
@@ -83,41 +72,31 @@ T38	Procedure 167 178	examination
 T39	Procedure-Name 167 178	examination
 T40	Modifier 158 166	clinical
 T41	Modifier 138 153	bacteriological
-T42	And 154 157	and
 T43	Polarity 129 137	Negative
 T44	Life-Stage-And-Gender 204 209	Women
-T45	And 210 214	with
 T46	Condition 261 277	vaginal bleeding
 T47	Condition-Name 261 277	vaginal bleeding
 T48	Life-Stage-And-Gender 238 243	Women
-T49	And 244 248	with
 T50	Assertion 326 335	Suspicion
 T51	Condition 359 368	neoplasia
 T52	Condition-Name 359 368	neoplasia
 T53	Condition 339 348	neoplasia
 T54	Condition-Name 339 348	neoplasia
-T55	Or 349 351	or
 T56	Life-Stage-And-Gender 374 379	Women
 T57	Drug 451 460	probiotic
 T58	Drug-Name 451 460	probiotic
 T59	Condition 409 425	hypersensitivity
 T60	Condition-Name 409 425	hypersensitivity
 T61	Allergy 398 405	allergy
-T62	Or 406 408	or
-T63	And 380 384	with
 T64	Life-Stage-And-Gender 466 471	Women
 T65	Condition 477 504	immunosuppressive disorders
 T66	Condition-Name 477 504	immunosuppressive disorders
 T67	Condition 513 516	HIV
 T68	Condition-Name 513 516	HIV
-T69	Or 505 507	or
-T70	And 472 476	with
 T71	Life-Stage-And-Gender 522 527	Women
 T27	Drug 552 562	probiotics
 T28	Drug-Name 552 562	probiotics
-T72	And 528 531	who
 T73	Life-Stage-And-Gender 599 604	Women
-T74	And 605 608	who
 T75	Procedure 624 633	treatment
 T76	Modifier 638 645	vaginal
 T77	Modifier 666 679	decompensated
@@ -127,7 +106,6 @@ T80	Condition-Name 749 757	Pregnant
 T81	Life-Stage-And-Gender 758 763	women
 T82	Condition 778 798	precocious menopause
 T83	Condition-Name 778 798	precocious menopause
-T84	Or 764 766	or
 A1	Eq-Temporal-Unit-Value T17 year
 A2	Eq-Temporal-Period-Value T22 present
 A3	Eq-Temporal-Period-Value T24 present
@@ -152,3 +130,15 @@ R3	Treatment-For Arg1:E41 Arg2:E15
 R4	Example-Of Arg1:E9 Arg2:E1
 R5	Example-Of Arg1:E11 Arg2:E1
 R6	If-Then Arg1:T81 Arg2:E45
+R7	And Arg1:E14 Arg2:E12
+R8	And Arg1:T44 Arg2:E7
+R9	And Arg1:T48 Arg2:E24
+R10	Or Arg1:E28 Arg2:E27
+R11	Or Arg1:E32 Arg2:E31
+R12	And Arg1:T56 Arg2:E13
+R13	Or Arg1:E35 Arg2:E36
+R14	And Arg1:T64 Arg2:E35
+R15	And Arg1:T71 Arg2:E20
+R16	And Arg1:T73 Arg2:E41
+R17	Or Arg1:T81 Arg2:E46
+R18	Or Arg1:E9 Arg2:E11

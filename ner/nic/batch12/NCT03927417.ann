@@ -10,24 +10,17 @@ E17	Procedure:T17 Name:T18
 E19	Procedure:T19 Name:T20
 E2	Procedure:T23 Name:T24
 E4	Procedure:T25 Name:T26
-E6	Or:T27 Arg:E15 Arg2:E19
 E8	Procedure:T28 Name:T29
 E10	Modifier:T30 Modifies:T29
 E12	Modifier:T31 Modifies:T29
-E14	Or:T32 Arg:E10 Arg2:E12
-E16	Or:T33 Arg:E13 Arg2:E17
 E18	Observation:T34 Name:T35 Temporality:E23
 E20	Modifier:T36 Modifies:T35
 E21	Modifier:T37 Modifies:T35
-E22	Or:T38 Arg:E21 Arg2:E20
 E23	Eq-Comparison:T39 Temporal-Period:T40
 E24	Condition:T41 Name:T42
 E25	Modifier:T43 Modifies:T42
 E26	Modifier:T44 Modifies:T42
-E27	Or:T45 Arg:E25 Arg2:E26
-E28	Or:T46 Arg:E3 Arg2:E1
 E29	Eq-Comparison:T47 Temporal-Period:T48
-E30	And:T49 Arg:E24 Arg2:E3
 E31	Condition:T50 Name:T51 Stability:T52
 E32	Eq-Comparison:T53 Temporal-Period:T54
 E33	Eq-Comparison:T55 Temporal-Period:T56
@@ -58,29 +51,22 @@ T23	Procedure 655 664	Vasectomy
 T24	Procedure-Name 655 664	Vasectomy
 T25	Procedure 625 632	Surgery
 T26	Procedure-Name 625 632	Surgery
-T27	Or 577 578	/
 T28	Procedure 394 401	Surgery
 T29	Procedure-Name 394 401	Surgery
 T30	Modifier 409 416	ovaries
 T31	Modifier 419 431	adnex region
-T32	Or 417 418	/
-T33	Or 342 344	or
 T34	Observation 257 265	donation
 T35	Observation-Name 257 265	donation
 T36	Modifier 251 256	sperm
 T37	Modifier 240 246	oocyte
-T38	Or 247 250	and
 T39	Eq-Comparison 228 235	planned
 T40	Eq-Temporal-Period 228 235	planned
 T41	Condition 55 66	infertility
 T42	Condition-Name 55 66	infertility
 T43	Modifier 35 42	primary
 T44	Modifier 45 54	secondary
-T45	Or 43 44	/
-T46	Or 98 99	/
 T47	Eq-Comparison 75 93	planned to undergo
 T48	Eq-Temporal-Period 75 93	planned to undergo
-T49	And 67 70	who
 T50	Condition 607 612	semen
 T51	Condition-Name 607 612	semen
 T52	Stability 595 602	impacts
@@ -98,3 +84,10 @@ A6	Eq-Temporal-Period-Value T54 past
 A7	Eq-Temporal-Period-Value T56 past
 R1	Caused-By Arg1:T52 Arg2:E19
 R2	Caused-By Arg1:T52 Arg2:E15
+R3	Or Arg1:E15 Arg2:E19
+R4	Or Arg1:E10 Arg2:E12
+R5	Or Arg1:E13 Arg2:E17
+R6	Or Arg1:E21 Arg2:E20
+R7	Or Arg1:E25 Arg2:E26
+R8	Or Arg1:E3 Arg2:E1
+R9	And Arg1:E24 Arg2:E3

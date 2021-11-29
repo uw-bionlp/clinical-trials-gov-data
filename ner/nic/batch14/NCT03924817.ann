@@ -1,18 +1,16 @@
 E1	Condition:T1 Name:T2
-E2	Age:T8 Eq-Comparison:E3
+E2	Age:T8 Numeric-Filter:E3
 E3	Eq-Comparison:T12 Operator:T4 Temporal-Unit:T7 Value:T9
 E4	Eq-Comparison:T13 Operator:T5 Value:T10 Temporal-Unit:T19
 E5	Eq-Comparison:T14 Operator:T6 Value:T11 Unit:T34
 E6	Procedure:T15 Name:T16
-E7	Observation:T17 Name:T18 Eq-Comparison:E4
+E7	Observation:T17 Name:T18 Numeric-Filter:E4
 E8	Condition:T20 Name:T21
 E9	Condition:T22 Name:T23 Severity:T24
-E10	Or:T25 Arg:E8 Arg2:E9
 E11	Condition:T26 Name:T27
 E12	Procedure:T28 Name:T29
-E13	Or:T30 Arg:E11 Arg2:E12
 E14	Condition:T3 Name:T31
-E15	Observation:T32 Name:T33 Eq-Comparison:E5
+E15	Observation:T32 Name:T33 Numeric-Filter:E5
 E16	Procedure:T35 Name:T36
 E17	Negation:T37 Negates:E16
 E18	Condition:T38 Name:T39
@@ -40,12 +38,10 @@ T21	Condition-Name 333 344	loose teeth
 T22	Condition 356 368	parodontitis
 T23	Condition-Name 356 368	parodontitis
 T24	Severity 349 355	severe
-T25	Or 345 348	and
 T26	Condition 399 412	missing teeth
 T27	Condition-Name 399 412	missing teeth
 T28	Procedure 416 443	removable tooth replacement
 T29	Procedure-Name 416 443	removable tooth replacement
-T30	Or 413 415	or
 T3	Condition 512 526	missing molars
 T31	Condition-Name 512 526	missing molars
 T32	Observation 541 559	maximum protrusion
@@ -64,6 +60,8 @@ A4	Eq-Temporal-Unit-Value T7 year
 A5	Eq-Temporal-Unit-Value T19 hour
 A6	Severity-Value T24 severe
 A7	Assertion-Type-Value E19 hypothetical
-A8	Observation-Type-Value T33 measurement
+A8	Observation-Type-Value E15 measurement
 R1	Equivalent-To Arg1:E7 Arg2:E1
 R2	Caused-By Arg1:E17 Arg2:E18
+R3	Or Arg1:E8 Arg2:E9
+R4	Or Arg1:E11 Arg2:E12

@@ -4,22 +4,20 @@ E5	Procedure:T5 Name:T6
 E7	Condition:T7 Name:T8
 E10	Procedure:T10 Name:T11
 E12	Condition:T12 Name:T13
-E13	Age:T15 Eq-Comparison:E14
+E13	Age:T15 Numeric-Filter:E14
 E14	Eq-Comparison:T17 Operator:T14 Value:T16 Temporal-Unit:T18
 E2	Modifier:T19 Modifies:E7
 E4	Modifier:T20 Modifies:T8
 E6	Provider:T21
 E8	Negation:T22 Negates:E3
-E9	And:T23 Arg:E5 Arg2:E8
 E11	Procedure:T24 Name:T25
 E15	Procedure:T26 Name:T27
-E16	Or:T28 Arg:E11 Arg2:E15
 E17	Contraindication:T29 Contraindicates:E11
-E18	Condition:T30 Name:T31 Temporality:E21 Temporality2:E20
+E18	Observation:T30 Name:T31 Temporality:E21 Temporality2:E20
 E19	Modifier:T32 Modifies:T31
 E20	Eq-Comparison:T33 Temporal-Period:T34
 E21	Eq-Comparison:T35 Temporal-Period:T36
-E22	Condition:T37 Name:T38
+E22	Observation:T37 Name:T38
 E23	Modifier:T39 Modifies:T38
 E24	Condition:T40
 E25	Modifier:T41 Modifies:E24
@@ -50,22 +48,20 @@ T19	Modifier 41 48	primary
 T20	Modifier 84 92	shoulder
 T21	Provider 138 151	Dr. Armstrong
 T22	Negation 201 204	not
-T23	And 197 200	and
 T24	Procedure 385 387	CT
 T25	Procedure-Name 385 387	CT
 T26	Procedure 388 391	EMG
 T27	Procedure-Name 388 391	EMG
-T28	Or 387 388	/
 T29	Contraindication 364 381	contraindications
-T30	Condition 458 464	trauma
-T31	Condition-Name 458 464	trauma
+T30	Observation 458 464	trauma
+T31	Observation-Name 458 464	trauma
 T32	Modifier 472 480	shoulder
 T33	Eq-Comparison 451 457	recent
 T34	Eq-Temporal-Period 451 457	recent
 T35	Eq-Comparison 440 447	History
 T36	Eq-Temporal-Period 440 447	History
-T37	Condition 504 508	pain
-T38	Condition-Name 504 508	pain
+T37	Observation 504 508	pain
+T38	Observation-Name 504 508	pain
 T39	Modifier 486 503	Atypical shoulder
 T40	Condition 539 548	pathology
 T41	Modifier 530 538	shoulder
@@ -85,3 +81,6 @@ A5	Assertion-Type-Value E26 possible
 A6	Eq-Temporal-Period-Value T49 past
 R1	Example-Of Arg1:E27 Arg2:E24
 R2	Example-Of Arg1:E28 Arg2:E24
+R3	And Arg1:E5 Arg2:E8
+R4	Or Arg1:E11 Arg2:E15
+R5	Or Arg1:E27 Arg2:E28

@@ -13,12 +13,11 @@ E17	Eq-Comparison:T33 Temporal-Period:T34
 E18	Eq-Comparison:T35 Temporal-Period:T36
 E19	Eq-Comparison:T37 Temporal-Period:T38
 E20	Eq-Comparison:T39 Temporal-Period:T40
-E21	Temporal-Connection:T41 Arg:E14 Arg2:E62
 E2	Modifier:T43 Modifies:T2
 E4	Eq-Comparison:T44 Operator:T45 Value:T19 Temporal-Unit:T16
 E6	Procedure:T46 Name:T47 Temporality:E16
 E8	Assertion:T48 Asserted:E3
-E22	Observation:T49 Name:T50 Eq-Comparison:E12
+E22	Observation:T49 Name:T50 Numeric-Filter:E12
 E10	Observation:T51 Name:T52
 E23	Condition:T53 Name:T54
 E24	Condition:T55 Name:T56
@@ -29,36 +28,26 @@ E28	Drug:T62 Name:T63
 E29	Study:T64 Study-Of:E28
 E30	Condition:T21 Name:T65
 E31	Study:T66
-E32	Temporal-Connection:T67 Arg:E30 Arg2:E31
 E33	Condition:T68 Name:T69 Temporality:E18 Temporality2:E13
 E34	Study:T23
-E35	Temporal-Connection:T70 Arg:E13 Arg2:E34
 E36	Modifier:T71 Modifies:E5
 E37	Condition:T73 Name:T74
-E38	And:T75 Arg:T72 Arg2:E37
 E39	Assertion:T76 Asserted:E9
-E40	Or:T77 Arg:E11 Arg2:E39
 E41	Condition:T79 Name:T80
-E42	And:T81 Arg:T78 Arg2:E41
 E43	Negation:T82 Negates:E7
-E44	And:T83 Arg:E41 Arg2:E43
 E45	Condition:T84
 E46	Risk:T85 Severity:T86
 E47	Study:T87 Stability:T88
 E48	Assertion:T89 Asserted:T88
 E49	Study:T90 Stability:T91
 E50	Assertion:T92 Asserted:T91
-E51	Or:T93 Arg:E47 Arg2:E50
 E52	Study:T94 Study-Of:E54 Temporality:E19
 E53	Drug:T95
 E54	Procedure:T96
-E55	Or:T97 Arg:E53 Arg2:E54
 E56	Drug:T98
 E57	Procedure:T99 Temporality:E14
 E58	Study:T100 Temporality:E59 Study-Of:E56
 E59	Eq-Comparison:T101 Temporal-Period:T102
-E60	Or:T103 Arg:E52 Arg2:E58
-E61	Or:T104 Arg:E56 Arg2:E57
 E62	Study:T25
 T1	Condition 53 68	dry eye disease
 T2	Condition-Name 53 68	dry eye disease
@@ -97,7 +86,6 @@ T37	Eq-Comparison 994 1003	currently
 T38	Eq-Temporal-Period 994 1003	currently
 T39	Eq-Comparison 719 724	using
 T40	Eq-Temporal-Period 719 724	using
-T41	Temporal-Connection 1118 1123	prior
 T43	Modifier 72 81	both eyes
 T44	Eq-Comparison 86 103	at least 6 months
 T45	Eq-Operator 86 94	at least
@@ -123,24 +111,18 @@ T64	Study 407 412	study
 T21	Condition 447 465	slit lamp findings
 T65	Condition-Name 447 465	slit lamp findings
 T66	Study 469 474	Visit
-T67	Temporal-Connection 466 468	at
 T68	Condition 501 526	lacrimal duct obstruction
 T69	Condition-Name 501 526	lacrimal duct obstruction
 T23	Study 547 552	Visit
-T70	Temporal-Connection 544 546	of
 T71	Modifier 569 581	uncontrolled
 T72	Life-Stage-And-Gender 610 615	woman
 T73	Condition 623 631	pregnant
 T74	Condition-Name 623 631	pregnant
-T75	And 616 619	who
 T76	Assertion 644 652	planning
-T77	Or 641 643	or
 T78	Life-Stage-And-Gender 676 681	woman
 T79	Condition 685 707	childbearing potential
 T80	Condition-Name 685 707	childbearing potential
-T81	And 682 684	of
 T82	Negation 715 718	not
-T83	And 708 711	who
 T84	Condition 775 784	condition
 T85	Risk 870 874	risk
 T86	Severity 858 869	significant
@@ -150,18 +132,14 @@ T89	Assertion 876 879	may
 T90	Study 979 984	study
 T91	Stability 915 924	interfere
 T92	Assertion 911 914	may
-T93	Or 908 910	or
 T94	Study 1050 1055	study
 T95	Drug 1035 1039	drug
 T96	Procedure 1043 1049	device
-T97	Or 1040 1042	or
 T98	Drug 1088 1092	drug
 T99	Procedure 1096 1102	device
 T100	Study 1072 1087	investigational
 T101	Eq-Comparison 1064 1068	used
 T102	Eq-Temporal-Period 1064 1068	used
-T103	Or 1056 1058	or
-T104	Or 1093 1095	or
 T25	Study 1127 1132	Visit
 A1	Eq-Operator-Value T13 GTEQ
 A2	Eq-Operator-Value T14 LTEQ
@@ -177,8 +155,6 @@ A11	Eq-Temporal-Period-Value T38 present
 A12	Eq-Temporal-Period-Value T40 present
 A14	Eq-Operator-Value T45 GTEQ
 A15	Assertion-Type-Value E8 possible
-A16	Temporal-Connection-Type-Value E32 during
-A17	Temporal-Connection-Type-Value E35 before
 A18	Life-Stage-And-Gender-Type T72 female
 A19	Assertion-Type-Value E39 intention
 A20	Life-Stage-And-Gender-Type T78 female
@@ -188,9 +164,20 @@ A23	Assertion-Type-Value E48 hypothetical
 A24	Stability-Value T91 change
 A25	Assertion-Type-Value E50 hypothetical
 A26	Eq-Temporal-Period-Value T102 past
-A13	Temporal-Connection-Type-Value E21 before
 R1	Treatment-For Arg1:E6 Arg2:E3
 R2	Abbrev-Of Arg1:E28 Arg2:E27
 R3	Caused-By Arg1:E46 Arg2:E45
 R4	Caused-By Arg1:T88 Arg2:E45
 R5	Caused-By Arg1:T91 Arg2:E45
+R6	Before Arg1:E14 Arg2:E62
+R7	During Arg1:E30 Arg2:E31
+R8	Before Arg1:E13 Arg2:E34
+R9	And Arg1:T72 Arg2:E37
+R10	Or Arg1:E11 Arg2:E39
+R11	And Arg1:T78 Arg2:E41
+R12	And Arg1:E41 Arg2:E43
+R13	Or Arg1:E47 Arg2:E50
+R14	Or Arg1:E53 Arg2:E54
+R15	Or Arg1:E52 Arg2:E58
+R16	Or Arg1:E56 Arg2:E57
+R17	Or Arg1:E37 Arg2:E11

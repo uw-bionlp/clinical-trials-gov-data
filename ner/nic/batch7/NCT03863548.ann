@@ -1,5 +1,5 @@
 E1	Eq-Comparison:T1 Operator:T37 Value:T38 Temporal-Unit:T39
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E4	Condition:T4 Name:T3
 E5	Assertion:T5 Asserted:E7
 E6	Eq-Comparison:T6 Temporal-Period:T41
@@ -11,26 +11,21 @@ E11	Observation:T11 Name:T46
 E12	Condition:T12 Name:T47
 E13	Condition:T13 Name:T48
 E14	Condition:T14 Name:T49
-E15	Or:T15 Arg:E14 Arg2:E16
 E16	Condition:T16 Name:T50
 E17	Study:T17 Temporality:E3
 E18	Modifier:T18 Modifies:T53
-E19	Or:T19 Arg:E18 Arg2:E20
 E20	Modifier:T20 Modifies:T53
 E21	Condition:T21 Name:T53
 E22	Negation:T22 Negates:E21
 E23	Drug:T23
 E24	Eq-Comparison:T24 Operator:T54 Temporal-Period:T55 Value:T56 Temporal-Unit:T57
-E25	Temporal-Connection:T25 Arg:E38 Arg2:E26
 E26	Procedure:T26 Name:T58
-E27	Or:T27 Arg:T59 Arg2:E28
 E28	Modifier:T28 Modifies:T60
 E29	Condition:T29 Name:T60 Severity:T59
 E30	Modifier:T30 Modifies:T61
 E31	Condition:T31 Name:T61
 E32	Condition:T32 Name:T62
 E33	Modifier:T33 Modifies:T64
-E34	Or:T34 Arg:E33 Arg2:E35
 E35	Modifier:T35 Modifies:T64
 E36	Condition:T36 Name:T64
 E3	Eq-Comparison:T40 Temporal-Period:T65
@@ -49,26 +44,21 @@ T11	Observation 308 324	legal protection
 T12	Condition 372 392	mentally incompetent
 T13	Condition 398 406	pregnant
 T14	Condition 408 418	parturient
-T15	Or 419 421	or
 T16	Condition 422 435	breastfeeding
 T17	Study 533 538	study
 T18	Modifier 558 566	physical
-T19	Or 567 569	or
 T20	Modifier 570 576	mental
 T21	Condition 577 587	disability
 T22	Negation 598 601	not
 T23	Drug 698 705	product
 T24	Eq-Comparison 706 734	within the previous 3 months
-T25	Temporal-Connection 784 790	during
 T26	Procedure 795 823	ophthalmological examination
-T27	Or 842 844	or
 T28	Modifier 845 858	proliferating
 T29	Condition 859 879	diabetic retinopathy
 T30	Modifier 890 903	intra-vitreal
 T31	Condition 904 914	hemorrhage
 T32	Condition 925 954	tractional retinal detachment
 T33	Modifier 965 975	subretinal
-T34	Or 976 978	or
 T35	Modifier 979 993	retrohyaloidal
 T36	Condition 994 1002	hematoma
 T37	Eq-Operator 89 93	over
@@ -103,7 +93,6 @@ T65	Eq-Temporal-Period 505 525	already participated
 T66	Study 665 670	study
 T67	Criteria-Count 770 783	the following
 A1	Assertion-Type-Value E5 hypothetical
-A2	Temporal-Connection-Type-Value E25 during
 A3	Eq-Operator-Value T37 GT
 A4	Eq-Temporal-Unit-Value T39 year
 A5	Eq-Temporal-Period-Value T41 future
@@ -119,3 +108,11 @@ R2	Example-Of Arg1:E8 Arg2:E7
 R3	Example-Of Arg1:E9 Arg2:E7
 R4	Example-Of Arg1:E10 Arg2:E7
 R5	If-Then Arg1:T51 Arg2:E16
+R6	Or Arg1:E14 Arg2:E16
+R7	Or Arg1:E18 Arg2:E20
+R8	During Arg1:E38 Arg2:E26
+R9	Or Arg1:T59 Arg2:E28
+R10	Or Arg1:E33 Arg2:E35
+R11	Or Arg1:E8 Arg2:E9
+R12	Or Arg1:E9 Arg2:E10
+R13	Or Arg1:E13 Arg2:E14

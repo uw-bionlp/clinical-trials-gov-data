@@ -3,22 +3,20 @@ E2	Condition:T2 Name:T41
 E3	Eq-Comparison:T3 Operator:T42 Value:T43 Unit:T46 Unit2:T34
 E4	Condition:T4 Name:T47
 E5	Eq-Comparison:T5 Operator:T48 Value:T49 Unit:T50
-E6	Observation:T6 Name:T51 Eq-Comparison:E5
+E6	Observation:T6 Name:T51 Numeric-Filter:E5
 E7	Condition:T7 Name:T52
 E8	Eq-Comparison:T8 Operator:T53 Value:T54 Unit:T55
 E9	Condition:T9 Name:T58
-E10	Condition:T10 Name:T73
+E10	Observation:T10 Name:T73
 E11	Eq-Comparison:T11 Temporal-Period:T59
 E12	Drug:T12 Temporality:E11
 E13	Drug:T13 Temporality:E37
 E14	Condition:T14 Name:T61
 E15	Modifier:T15 Modifies:T62
-E16	Or:T16 Arg:E15 Arg2:E17
 E17	Modifier:T17 Modifies:T62
 E18	Drug:T18 Name:T62
 E19	Procedure:T19 Name:T63
-E20	Or:T20 Arg:E19 Arg2:E21
-E21	Modifier:T21 
+E21	Modifier:T21
 E23	Condition:T23 Name:T64
 E24	Condition:T24 Name:T65
 E25	Eq-Comparison:T25 Temporal-Period:T66
@@ -28,13 +26,11 @@ E28	Procedure:T28 Name:T69 Temporality:E27
 E29	Condition:T29 Name:T70
 E30	Procedure:T30 Name:T79
 E31	Modifier:T31 Modifies:T79
-E32	Or:T32 Arg:E31 Arg2:E33
 E33	Modifier:T33 Modifies:T79
 E35	Procedure:T35 Name:T71
-E22	Age:T22 Eq-Comparison:E1
-E36	Observation:T44 Name:T57 Polarity:T56 Eq-Comparison:E8
+E22	Age:T22 Numeric-Filter:E1
+E36	Observation:T44 Name:T57 Polarity:T56 Numeric-Filter:E8
 E37	Eq-Comparison:T74 Temporal-Period:T60
-E38	And:T75 Arg:E13 Arg2:E14
 E39	Condition:T76 Name:T77
 E40	Modifier:T78 Modifies:T64
 T1	Eq-Comparison 30 41	18-50 years
@@ -46,17 +42,15 @@ T6	Observation 122 152	progressive motile spermatozoa
 T7	Condition 159 175	teratozoospermia
 T8	Eq-Comparison 177 181	< 4%
 T9	Condition 221 232	azoospermia
-T10	Condition 238 243	smoke
+T10	Observation 238 243	smoke
 T11	Eq-Comparison 249 252	use
 T12	Drug 253 258	drugs
 T13	Drug 268 273	drugs
 T14	Condition 286 304	fertility toxicity
 T15	Modifier 328 341	environmental
-T16	Or 342 344	or
 T17	Modifier 345 363	occupational toxic
 T18	Drug 364 374	substances
 T19	Procedure 394 403	radiation
-T20	Or 404 406	or
 T21	Modifier 407 411	heat
 T23	Condition 439 444	mumps
 T24	Condition 450 479	sexually transmitted diseases
@@ -67,7 +61,6 @@ T28	Procedure 525 543	testicular torsion
 T29	Condition 549 572	genitourinary anomalies
 T30	Procedure 578 589	alterations
 T31	Modifier 597 607	epididymis
-T32	Or 608 610	or
 T33	Modifier 611 619	deferens
 T35	Procedure 625 641	inguinal surgery
 T36	Life-Stage-And-Gender 25 29	male
@@ -105,9 +98,8 @@ T70	Condition-Name 549 572	genitourinary anomalies
 T22	Age 36 41	years
 T44	Observation 189 194	forms
 T57	Observation-Name 189 194	forms
-T73	Condition-Name 238 243	smoke
+T73	Observation-Name 238 243	smoke
 T74	Eq-Comparison 264 267	use
-T75	And 274 278	with
 T76	Condition 417 425	orchitis
 T77	Condition-Name 417 425	orchitis
 T78	Modifier 426 435	secondary
@@ -119,7 +111,7 @@ A2	Eq-Operator-Value T38 BETWEEN
 A3	Eq-Temporal-Unit-Value T40 year
 A4	Eq-Operator-Value T42 LT
 A5	Eq-Operator-Value T48 LT
-A6	Observation-Type-Value T51 lab
+A6	Observation-Type-Value E6 lab
 A7	Eq-Operator-Value T53 LT
 A8	Polarity-Value T56 normal
 A9	Eq-Temporal-Period-Value T59 present
@@ -128,3 +120,7 @@ A11	Eq-Temporal-Period-Value T66 past
 A12	Eq-Temporal-Period-Value T68 past
 R2	Equivalent-To Arg1:E6 Arg2:E4
 R3	Equivalent-To Arg1:E36 Arg2:E7
+R1	Or Arg1:E15 Arg2:E17
+R4	Or Arg1:E19 Arg2:E21
+R5	Or Arg1:E31 Arg2:E33
+R6	And Arg1:E13 Arg2:E14

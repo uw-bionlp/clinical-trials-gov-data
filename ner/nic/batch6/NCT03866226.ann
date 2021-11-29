@@ -1,4 +1,4 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T62 Operator:T63 Value:T64 Temporal-Unit:T65
 E3	Procedure:T3 Name:T119
 E4	Eq-Comparison:T4 Temporal-Period:T66
@@ -22,7 +22,6 @@ E21	Eq-Comparison:T21 Temporal-Period:T82
 E22	Other:T22 Is-Other:E23
 E23	Condition:T23 Name:T83 Temporality:E21
 E24	Condition:T24 Name:T84
-E25	Or:T25 Arg:E24 Arg2:E26
 E26	Condition:T26 Name:T85
 E27	Condition:T27 Name:T86
 E28	Condition:T28 Name:T87
@@ -31,17 +30,14 @@ E30	Condition:T30 Name:T88
 E31	Eq-Comparison:T31 Temporal-Period:T89
 E32	Condition:T32 Name:T90 Temporality:E31
 E33	Observation:T33 Name:T91
-E34	Observation:T34 Name:T92 Eq-Comparison:E35
+E34	Observation:T34 Name:T92 Numeric-Filter:E35
 E35	Eq-Comparison:T35 Unit:T93 Value:T94 Operator:T124 Value2:T125
 E36	Eq-Comparison:T36 Temporal-Period:T95
 E37	Condition:T37 Name:T96 Temporality:E36
-E38	Or:T38 Arg:E37 Arg2:E41
 E39	Modifier:T39 Modifies:T98
-E40	Or:T40 Arg:E39 Arg2:E65
 E41	Condition:T41 Name:T98
 E42	Eq-Comparison:T42 Temporal-Period:T99
 E43	Modifier:T43 Modifies:T100
-E44	Or:T44 Arg:E43 Arg2:E45
 E45	Modifier:T45 Modifies:T100
 E46	Condition:T46 Name:T100 Temporality:E42
 E47	Eq-Comparison:T47 Temporal-Period:T101
@@ -57,7 +53,6 @@ E58	Condition:T58 Name:T115
 E61	Eq-Comparison:T61 Operator:T116 Value:T117 Temporal-Unit:T118
 E62	Observation:T120 Name:T121
 E63	Assertion:T122 Asserted:E3 Asserted2:E62
-E64	And:T123 Arg:E3 Arg2:E62
 E65	Modifier:T97 Modifies:T98
 E48	Family-Member:T57 Has:E58
 E57	Procedure:T126 Name:T127 Temporality:E61
@@ -85,7 +80,6 @@ T21	Eq-Comparison 456 463	History
 T22	Other 467 472	other
 T23	Condition 473 488	sleep disorders
 T24	Condition 500 510	narcolepsy
-T25	Or 510 511	/
 T26	Condition 511 523	hypersomnias
 T27	Condition 525 556	circadian rhythm sleep disorder
 T28	Condition 558 569	parasomnias
@@ -98,13 +92,10 @@ T34	Observation 663 667	NYHA
 T35	Eq-Comparison 669 678	Class Ⅲ-Ⅳ
 T36	Eq-Comparison 684 691	History
 T37	Condition 695 714	atrial fibrillation
-T38	Or 715 718	and
 T39	Modifier 728 734	atrial
-T40	Or 735 737	or
 T41	Condition 750 763	extrasystoles
 T42	Eq-Comparison 769 776	Ongoing
 T43	Modifier 777 786	substance
-T44	Or 787 789	or
 T45	Modifier 790 797	alcohol
 T46	Condition 798 803	abuse
 T47	Eq-Comparison 809 828	Currently receiving
@@ -177,7 +168,6 @@ T119	Procedure-Name 112 116	test
 T120	Observation 142 155	questionnaire
 T121	Observation-Name 142 155	questionnaire
 T122	Assertion 83 93	Capable of
-T123	And 117 120	and
 T124	Eq-Operator 676 677	-
 T125	Eq-Value 677 678	Ⅳ
 T97	Modifier 738 749	ventricular
@@ -206,12 +196,12 @@ A19	Eq-Operator-Value T112 LTEQ
 A20	Eq-Temporal-Unit-Value T114 week
 A21	Eq-Operator-Value T116 LTEQ
 A22	Eq-Temporal-Unit-Value T118 week
-A23	Observation-Type-Value T121 survey-or-questionnaire
+A23	Observation-Type-Value E62 survey-or-questionnaire
 A24	Assertion-Type-Value E63 hypothetical
 A25	Eq-Operator-Value T124 BETWEEN
 A14	Eq-Temporal-Period-Value T48 present
-A26	Observation-Type-Value T91 clinical-score
-A27	Observation-Type-Value T92 clinical-score
+A26	Observation-Type-Value E33 clinical-score
+A27	Observation-Type-Value E34 clinical-score
 R1	Example-Of Arg1:E6 Arg2:E5
 R2	Example-Of Arg1:E7 Arg2:E5
 R3	Example-Of Arg1:E8 Arg2:E5
@@ -231,3 +221,17 @@ R16	Equivalent-To Arg1:E33 Arg2:E32
 R17	Abbrev-Of Arg1:E34 Arg2:E33
 R18	If-Then Arg1:E51 Arg2:T108
 R19	Treatment-For Arg1:E57 Arg2:E58
+R20	Or Arg1:E24 Arg2:E26
+R21	Or Arg1:E37 Arg2:E41
+R22	Or Arg1:E39 Arg2:E65
+R23	Or Arg1:E43 Arg2:E45
+R24	And Arg1:E3 Arg2:E62
+R25	Or Arg1:E6 Arg2:E7
+R26	Or Arg1:E7 Arg2:E8
+R27	Or Arg1:E8 Arg2:E9
+R28	Or Arg1:E9 Arg2:E10
+R29	Or Arg1:E10 Arg2:E11
+R30	Or Arg1:E11 Arg2:E12
+R31	Or Arg1:E12 Arg2:E13
+R32	Or Arg1:E26 Arg2:E27
+R33	Or Arg1:E27 Arg2:E28

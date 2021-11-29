@@ -12,7 +12,7 @@ E26	Condition:T26 Name:T27
 E30	Condition:T30 Name:T31
 E34	Condition:T34 Name:T35 Temporality:E64
 E36	Condition:T36 Name:T37 Temporality:E93
-E37	Age:T49 Eq-Comparison:E38
+E37	Age:T49 Numeric-Filter:E38
 E38	Eq-Comparison:T58 Operator:T38 Temporal-Unit:T44 Value:T50
 E39	Eq-Comparison:T59 Operator:T39 Value:T52 Unit:T84
 E40	Eq-Comparison:T60 Operator:T40 Value:T53 Unit:T102
@@ -21,55 +21,41 @@ E42	Eq-Comparison:T62 Operator:T42 Value:T55 Temporal-Unit:T48
 E43	Eq-Comparison:T63 Operator:T43 Value:T56 Temporal-Unit:T115
 E44	Eq-Comparison:T64 Temporal-Period:T65
 E45	Eq-Comparison:T66 Temporal-Period:T67
-E1	Or:T69 Arg:T1 Arg2:T68
 E3	Condition:T10 Name:T11 Temporality:E9 Duration:E10 Duration2:E11
 E5	Condition:T14 Name:T15 Temporality:E9 Duration:E10 Duration2:E11
-E7	Or:T70 Arg:E3 Arg2:E5
 E9	Eq-Comparison:T71 Temporal-Unit:T45 Per:T72
 E10	Eq-Comparison:T73 Value:T51 Temporal-Unit:T46 Per:T74
 E11	Eq-Comparison:T75 Operator:T76 Value:T77 Temporal-Unit:T47
-E13	Or:T78 Arg:E4 Arg2:E8
 E14	Eq-Comparison:T79 Value:T80 Value2:T81
-E15	Observation:T82 Name:T83 Eq-Comparison:E39
+E15	Observation:T82 Name:T83 Numeric-Filter:E39
 E17	Condition:T85 Name:T86
 E19	Drug:T87 Name:T88
-E21	Temporal-Connection:T89 Arg:E17 Arg2:E19
-E23	And:T90 Arg:E15 Arg2:E25
 E25	Assertion:T91 Asserted:E17
 E27	Observation:T92 Name:T93
 E29	Procedure:T94 Name:T95
-E31	Temporal-Connection:T96 Arg:E27 Arg2:E29
 E33	Observation:T97 Name:T98
-E35	Or:T99 Arg:E27 Arg2:E33
-E46	Observation:T100 Name:T101 Eq-Comparison:E40
+E46	Observation:T100 Name:T101 Numeric-Filter:E40
 E47	Procedure:T103 Name:T104
-E48	Observation:T105 Name:T106 Eq-Comparison:E41
-E49	Temporal-Connection:T108 Arg:E48 Arg2:E47
-E50	And:T109 Arg:E46 Arg2:E47
+E48	Observation:T105 Name:T106 Numeric-Filter:E41
 E52	Observation:T112 Name:T111 Temporality:E44 Duration:E42
 E53	Procedure:T113 Name:T114
 E54	Drug:T116 Name:T117 Duration:E43
 E55	Drug:T118 Name:T119 Duration:E43
-E56	Or:T120 Arg:E54 Arg2:E55
 E57	Assertion:T121 Asserted:E16
 E58	Modifier:T122 Modifies:T17
 E59	Modifier:T123 Modifies:T17
-E60	Or:T124 Arg:E58 Arg2:E59
 E61	Drug:T125 Name:T126
 E62	Procedure:T127
-E63	Condition:T128 Name:T129
+E63	Condition:T128
 E64	Eq-Comparison:T130 Temporal-Period:T131 Value:T132 Temporal-Unit:T133
 E65	Procedure:T134
 E66	Condition:T135 Name:T136 Temporality:E67
 E67	Eq-Comparison:T137 Temporal-Period:T138
 E68	Modifier:T139 Modifies:T136
-E69	Or:T140 Arg:E67 Arg2:E68
-E70	Condition:T141 Name:T142 Severity:T145
-E71	Or:T143 Arg:E70 Arg2:E18
+E70	Condition:T141 Severity:T145
 E72	Other:T144 Is-Other:E70
-E73	Modifier:T146 Modifies:T142 Modifies2:T19
-E74	Condition:T148 Name:T149 Severity:T147
-E75	Or:T150 Arg:E74 Arg2:E20
+E73	Modifier:T146 Modifies:E70 Modifies2:T19
+E74	Condition:T148 Severity:T147
 E28	Condition:T28 Name:T29
 E76	Modifier:T151 Modifies:T29
 E77	Modifier:T152 Modifies:T29
@@ -88,9 +74,7 @@ E88	Assertion:T163 Asserted:T162
 E89	Assertion:T164 Asserted:E86
 E90	Condition:T165 Name:T166 Temporality:E45
 E91	Assertion:T167 Asserted:E90
-E92	Or:T168 Arg:E36 Arg2:E90
 E93	Eq-Comparison:T169 Temporal-Period:T170
-E96	Or:T173 Arg:E89 Arg2:E88
 T2	Condition 192 210	airway obstruction
 T3	Condition-Name 192 210	airway obstruction
 T4	Condition 226 236	bronchitis
@@ -150,12 +134,10 @@ T66	Eq-Comparison 1581 1588	current
 T67	Eq-Temporal-Period 1581 1588	current
 T1	Life-Stage-And-Gender 25 28	Men
 T68	Life-Stage-And-Gender 29 34	Women
-T69	Or 28 29	/
 T10	Condition 238 243	cough
 T11	Condition-Name 238 243	cough
 T14	Condition 244 250	sputum
 T15	Condition-Name 244 250	sputum
-T70	Or 243 244	/
 T71	Eq-Comparison 259 270	days a week
 T72	Eq-Temporal-Unit 266 270	week
 T73	Eq-Comparison 275 293	3 months in a year
@@ -163,7 +145,6 @@ T74	Eq-Temporal-Unit 289 293	year
 T75	Eq-Comparison 298 327	at least two successive years
 T76	Eq-Operator 298 306	at least
 T77	Eq-Value 307 310	two
-T78	Or 329 335	and/or
 T79	Eq-Comparison 364 382	moderate or severe
 T80	Severity 364 372	moderate
 T81	Severity 376 382	severe
@@ -174,17 +155,13 @@ T85	Condition 454 468	produce sputum
 T86	Condition-Name 454 468	produce sputum
 T87	Drug 475 503	hypertonic saline production
 T88	Drug-Name 475 503	hypertonic saline production
-T89	Temporal-Connection 469 474	after
-T90	And 439 442	and
 T91	Assertion 443 453	ability to
 T92	Observation 529 533	FEV1
 T93	Observation-Name 529 533	FEV1
 T94	Procedure 514 528	bronchodilator
 T95	Procedure-Name 514 528	bronchodilator
-T96	Temporal-Connection 509 513	Post
 T97	Observation 534 555	Forced Vital Capacity
 T98	Observation-Name 534 555	Forced Vital Capacity
-T99	Or 533 534	/
 T100	Observation 557 560	FVC
 T101	Observation-Name 557 560	FVC
 T102	Eq-Unit 572 573	%
@@ -193,8 +170,6 @@ T104	Procedure-Name 583 597	bronchodilator
 T105	Observation 598 602	FEV1
 T106	Observation-Name 598 602	FEV1
 T107	Eq-Unit 606 607	%
-T108	Temporal-Connection 578 582	post
-T109	And 574 577	and
 T111	Observation-Name 621 628	smoking
 T112	Observation 621 628	smoking
 T113	Procedure 707 712	X-ray
@@ -204,11 +179,9 @@ T116	Drug 735 746	prednisolon
 T117	Drug-Name 735 746	prednisolon
 T118	Drug 747 758	antibiotics
 T119	Drug-Name 747 758	antibiotics
-T120	Or 746 747	/
 T121	Assertion 764 772	Need for
 T122	Modifier 804 812	invasive
 T123	Modifier 816 828	non-invasive
-T124	Or 813 815	or
 T125	Drug 850 874	immune-modulating agents
 T126	Drug-Name 850 874	immune-modulating agents
 T127	Procedure 835 844	Treatment
@@ -224,17 +197,14 @@ T136	Condition-Name 984 990	asthma
 T137	Eq-Comparison 952 958	Former
 T138	Eq-Temporal-Period 952 958	Former
 T139	Modifier 959 970	concomitant
-T140	Or 958 959	/
 T141	Condition 1028 1035	disease
 T142	Condition-Name 1028 1035	disease
-T143	Or 1036 1038	or
 T144	Other 1012 1017	other
 T145	Severity 1000 1011	significant
 T146	Modifier 1018 1027	pulmonary
 T147	Severity 1059 1070	significant
 T148	Condition 1071 1078	disease
 T149	Condition-Name 1071 1078	disease
-T150	Or 1079 1081	or
 T57	Severity 1130 1141	significant
 T28	Condition 1329 1339	impairment
 T29	Condition-Name 1329 1339	impairment
@@ -257,12 +227,10 @@ T164	Assertion 1385 1388	may
 T165	Condition 1614 1622	pregnant
 T166	Condition-Name 1614 1622	pregnant
 T167	Assertion 1589 1613	willingness for becoming
-T168	Or 1579 1580	/
 T169	Eq-Comparison 1561 1569	Existing
 T170	Eq-Temporal-Period 1561 1569	Existing
 T171	Acuteness 184 191	chronic
 T172	Acuteness 218 225	chronic
-T173	Or 1459 1461	or
 A1	Eq-Operator-Value T38 GT
 A2	Eq-Operator-Value T39 GT
 A3	Eq-Operator-Value T40 LT
@@ -283,14 +251,11 @@ A17	Eq-Temporal-Unit-Value T74 year
 A18	Eq-Operator-Value T76 GTEQ
 A19	Severity-Value T80 severe
 A20	Severity-Value T81 severe
-A21	Observation-Type-Value T83 lab
-A22	Temporal-Connection-Type-Value E21 after
+A21	Observation-Type-Value E15 lab
 A23	Assertion-Type-Value E25 hypothetical
-A24	Observation-Type-Value T93 lab
-A25	Temporal-Connection-Type-Value E31 after
-A26	Observation-Type-Value T98 lab
-A27	Observation-Type-Value T106 lab
-A28	Temporal-Connection-Type-Value E49 after
+A24	Observation-Type-Value E27 lab
+A26	Observation-Type-Value E33 lab
+A27	Observation-Type-Value E48 lab
 A29	Eq-Temporal-Unit-Value T115 hour
 A30	Assertion-Type-Value E57 hypothetical
 A31	Eq-Temporal-Period-Value T131 past
@@ -304,7 +269,7 @@ A38	Assertion-Type-Value E88 hypothetical
 A39	Assertion-Type-Value E89 hypothetical
 A40	Assertion-Type-Value E91 intention
 A41	Eq-Temporal-Period-Value T170 present
-A42	Observation-Type-Value T111 social-habit
+A42	Observation-Type-Value E52 social-habit
 A43	Acuteness-Type-Value T171 chronic
 A44	Acuteness-Type-Value T172 chronic
 R1	Caused-By Arg1:E2 Arg2:E4
@@ -321,3 +286,28 @@ R11	Example-Of Arg1:E30 Arg2:E28
 R12	Example-Of Arg1:E28 Arg2:E20
 R13	Caused-By Arg1:E86 Arg2:E20
 R14	Caused-By Arg1:T162 Arg2:E20
+R15	Or Arg1:T1 Arg2:T68
+R16	Or Arg1:E3 Arg2:E5
+R17	Or Arg1:E4 Arg2:E8
+R18	After Arg1:E17 Arg2:E19
+R19	And Arg1:E15 Arg2:E25
+R20	After Arg1:E27 Arg2:E29
+R21	Or Arg1:E27 Arg2:E33
+R22	After Arg1:E48 Arg2:E47
+R23	And Arg1:E46 Arg2:E47
+R24	Or Arg1:E54 Arg2:E55
+R25	Or Arg1:E58 Arg2:E59
+R26	Or Arg1:E67 Arg2:E68
+R27	Or Arg1:E70 Arg2:E18
+R28	Or Arg1:E74 Arg2:E20
+R29	Or Arg1:E36 Arg2:E90
+R30	Or Arg1:E89 Arg2:E88
+R31	Or Arg1:E77 Arg2:E76
+R32	Or Arg1:E78 Arg2:E77
+R33	Or Arg1:E80 Arg2:E79
+R34	Or Arg1:E81 Arg2:E80
+R35	Or Arg1:E82 Arg2:E81
+R36	Or Arg1:E83 Arg2:E82
+R37	Or Arg1:E32 Arg2:E83
+R38	Or Arg1:E84 Arg2:E32
+R39	Or Arg1:E85 Arg2:E84

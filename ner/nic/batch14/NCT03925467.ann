@@ -7,14 +7,14 @@ E15	Procedure:T15 Name:T16 Temporality:E28
 E17	Condition:T17 Name:T18
 E19	Condition:T19 Name:T20
 E21	Procedure:T21 Name:T22
-E26	Age:T31 Eq-Comparison:E8
+E26	Age:T31 Numeric-Filter:E8
 E27	Eq-Comparison:T35 Operator:T27 Value:T33 Temporal-Unit:T47
 E28	Eq-Comparison:T36 Temporal-Unit:T30 Value:T34 Temporal-Period:T28
 E2	Criteria-Count:T37 Min-Value:E4 Max-Value:E6 Criteria:E26 Criteria2:E10 Criteria3:E1 Criteria4:E12 Criteria5:E3 Criteria6:E16
 E4	Eq-Comparison:T38 Operator:T39 Value:T40
 E6	Eq-Comparison:T41 Value:T42
 E8	Eq-Comparison:T43 Operator:T44 Temporal-Unit:T29 Value:T32
-E10	Observation:T45 Name:T46 Eq-Comparison:E27
+E10	Observation:T45 Name:T46 Numeric-Filter:E27
 E1	Condition:T1 Name:T2
 E12	Condition:T48 Name:T49
 E3	Condition:T3 Name:T4
@@ -24,19 +24,15 @@ E18	Condition:T53 Name:T54
 E20	Condition:T55 Name:T56
 E22	Condition:T57 Acuteness:T58
 E24	Modifier:T59 Modifies:E11
-E29	Or:T60 Arg:E11 Arg2:E9
 E30	Condition:T61 Name:T62
 E31	Modifier:T63 Modifies:T62
 E32	Modifier:T64 Modifies:T62
-E33	Or:T65 Arg:E32 Arg2:E31
 E34	Modifier:T66 Modifies:T16
 E35	Modifier:T67 Modifies:T16
-E36	Or:T68 Arg:E35 Arg2:E34
-E37	Condition:T69 Name:T70
+E37	Observation:T69 Name:T70
 E38	Condition:T71 Name:T72
 E39	Condition:T73 Name:T74 Severity:T75
 E40	Condition:T76 Name:T77
-E41	Or:T78 Arg:E39 Arg2:E40
 E23	Modifier:T23 Modifies:T20
 E25	Modifier:T24 Modifies:T20
 E42	Modifier:T25 Modifies:T20
@@ -102,18 +98,15 @@ T56	Condition-Name 341 351	Malignancy
 T57	Condition 368 385	medical condition
 T58	Acuteness 362 367	acute
 T59	Modifier 392 409	Poorly controlled
-T60	Or 419 421	or
 T61	Condition 460 472	nerve defect
 T62	Condition-Name 460 472	nerve defect
 T63	Modifier 452 459	sensory
 T64	Modifier 443 448	motor
-T65	Or 449 451	or
 T66	Modifier 653 668	hyaluronic acid
 T67	Modifier 628 649	intra-articular solid
-T68	Or 650 652	or
 T28	Eq-Temporal-Period 686 690	past
-T69	Condition 730 736	trauma
-T70	Condition-Name 730 736	trauma
+T69	Observation 730 736	trauma
+T70	Observation-Name 730 736	trauma
 T71	Condition 759 770	deformation
 T72	Condition-Name 759 770	deformation
 T73	Condition 789 794	varus
@@ -121,7 +114,6 @@ T74	Condition-Name 789 794	varus
 T75	Severity 777 783	Severe
 T76	Condition 798 816	valgus deformation
 T77	Condition-Name 798 816	valgus deformation
-T78	Or 795 797	or
 T23	Modifier 870 897	secondary degenerative knee
 T24	Modifier 856 868	inflammatory
 T25	Modifier 844 854	infectious
@@ -144,3 +136,10 @@ A2	Eq-Temporal-Period-Value T28 past
 A9	Severity-Value T75 severe
 A10	Acuteness-Type-Value T58 acute
 R1	Caused-By Arg1:E19 Arg2:E17
+R2	Or Arg1:E11 Arg2:E9
+R3	Or Arg1:E32 Arg2:E31
+R4	Or Arg1:E35 Arg2:E34
+R5	Or Arg1:E39 Arg2:E40
+R6	Or Arg1:E25 Arg2:E23
+R7	Or Arg1:E42 Arg2:E25
+R8	Or Arg1:E43 Arg2:E42

@@ -1,39 +1,32 @@
 E1	Eq-Comparison:T1 Operator:T33 Temporal-Unit:T34
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E3	Condition:T3 Name:T36
 E4	Risk:T4 Risk-For:E3 Polarity:T35
 E6	Observation:T6 Name:T38
 E7	Observation:T7 Name:T39
 E8	Modifier:T8 Modifies:T5
-E9	Or:T9 Arg:E8 Arg2:E5
 E10	Condition:T10 Name:T5 Polarity:T40
-E11	Modifier:T11 
+E11	Modifier:T11
 E12	Condition:T12 Name:T42
-E13	Or:T13 Arg:E11 Arg2:E14
 E14	Modifier:T14 Modifies:T43
 E15	Condition:T15 Name:T44
 E16	Condition:T16 Name:T45
 E17	Observation:T17 Name:T46
-E18	Or:T18 Arg:E17 Arg2:E33
 E19	Negation:T19 Negates:T48
-E20	Or:T20 Arg:E34 Arg2:E21
 E21	Negation:T21 Negates:T56
 E22	Condition:T22 Name:T49 Location:T50 Location2:T57
 E24	Assertion:T24 Asserted:E25
-E25	Encounter:T25 
+E25	
 E26	Eq-Comparison:T26 Temporal-Period:T51
 E27	Modifier:T27 Modifies:T59
-E28	Temporal-Connection:T28 Arg:E23 Arg2:E30
-E30	Encounter:T30 Type:T29
+E30	Encounter:T30
 E31	Study:T31 Temporality:E29
 E5	Modifier:T37 Modifies:T5
 E32	Condition:T41 Name:T43
 E33	Observation:T53 Name:T47
 E34	Negation:T55 Negates:T54
-E35	Or:T58 Arg:T50 Arg2:T57
 E23	Procedure:T23 Name:T59 Temporality:E26
 E36	Modifier:T60 Modifies:T59
-E37	Or:T61 Arg:E27 Arg2:E36
 E29	Eq-Comparison:T52 Temporal-Period:T62
 T1	Eq-Comparison 82 91	≥18 years
 T2	Age 92 95	old
@@ -42,25 +35,20 @@ T4	Risk 135 139	risk
 T6	Observation 148 180	homelessness risk screening tool
 T7	Observation 182 186	HRST
 T8	Modifier 224 231	alcohol
-T9	Or 232 234	or
 T10	Condition 240 243	use
 T11	Modifier 300 309	Medically
 T12	Condition 317 331	critically ill
-T13	Or 333 335	or
 T14	Modifier 336 351	psychiatrically
 T15	Condition 426 443	cognitive deficit
 T16	Condition 445 466	profound intoxication
 T17	Observation 474 486	Incarcerated
-T18	Or 487 489	or
 T19	Negation 514 520	Unable
-T20	Or 577 583	and/or
 T21	Negation 584 590	cannot
 T22	Condition 625 633	homeless
 T24	Assertion 714 720	can be
 T25	Encounter 733 742	follow-up
 T26	Eq-Comparison 753 769	already received
 T27	Modifier 782 796	peer navigator
-T28	Temporal-Connection 830 836	during
 T30	Encounter 845 853	ED visit
 T31	Study 892 897	study
 T32	Location 45 72	Bellevue Hospital Center ED
@@ -89,16 +77,12 @@ T55	Negation 565 572	outside
 T56	Location 598 601	NYC
 T50	Location 649 656	shelter
 T57	Location 667 674	streets
-T58	Or 657 659	or
 T23	Procedure 807 829	social worker services
 T59	Procedure-Name 807 829	social worker services
 T60	Modifier 797 806	addiction
-T61	Or 796 797	/
-T29	Encounter-Type 845 853	ED visit
 T52	Eq-Comparison 864 884	already participated
 T62	Eq-Temporal-Period 864 884	already participated
 A1	Assertion-Type-Value E24 hypothetical
-A2	Temporal-Connection-Type-Value E28 during
 A3	Location-Value T32 hospital
 A4	Eq-Operator-Value T33 GTEQ
 A5	Eq-Temporal-Unit-Value T34 year
@@ -109,8 +93,16 @@ A7	Location-Value T54 residence
 A9	Location-Value T56 residence
 A12	Location-Value T50 residence
 A13	Location-Value T57 residence
-A11	Encounter-Type-Value T29 emergency
+A11	Encounter-Type-Value E30 emergency
 A14	Eq-Temporal-Period-Value T62 past
 R1	Abbrev-Of Arg1:E7 Arg2:E6
 R2	Found-By Arg1:E4 Arg2:E6
 R3	Example-Of Arg1:E12 Arg2:E32
+R4	Or Arg1:E8 Arg2:E5
+R5	Or Arg1:E11 Arg2:E14
+R6	Or Arg1:E17 Arg2:E33
+R7	Or Arg1:E34 Arg2:E21
+R8	During Arg1:E23 Arg2:E30
+R9	Or Arg1:T50 Arg2:T57
+R10	Or Arg1:E27 Arg2:E36
+R11	Or Arg1:E15 Arg2:E16

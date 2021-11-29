@@ -1,30 +1,24 @@
 E1	Modifier:T1 Modifies:T36
-E2	Condition:T2 Name:T36
-E3	Condition:T3 Name:T37 Stability:T71
-E6	Or:T6 Arg:E5 Arg2:E7
+E2	Observation:T2 Name:T36
+E3	Observation:T3 Name:T37 Stability:T71
 E7	Procedure:T7 Name:T39
-E12	Temporal-Connection:T12 Arg:E11 Arg2:E14
 E13	Eq-Comparison:T13 Value:T40 Temporal-Unit:T41 Value:T42 Temporal-Unit:T43
-E14	Observation:T14 Name:T44 Eq-Comparison:E13
+E14	Observation:T14 Name:T44 Numeric-Filter:E13
 E15	Condition:T15 Name:T46 Stability:T45
 E16	Negation:T16 Negates:E15
-E18	Observation:T18 Name:T47 Eq-Comparison:E21 Eq-Comparison2:E23
-E19	Temporal-Connection:T19 Arg:E18 Arg2:E20
-E20	Study:T20 
+E18	Observation:T18 Name:T47 Numeric-Filter:E21 Numeric-Filter:E23
+E20	Study:T20
 E21	Eq-Comparison:T21 Operator:T48 Value:T49 Temporal-Unit:T50 Value:T51 Temporal-Unit:T52
-E22	And:T22 Arg:E21 Arg2:E23
 E23	Eq-Comparison:T23 Value:T53 Temporal-Unit:T54 Value:T55 Temporal-Unit:T56
 E24	Procedure:T24 Name:T57 Temporality:E17
 E25	Observation:T25 Name:T17
-E26	Observation:T26 Name:T58 Eq-Comparison:E28 Temporality:E29
+E26	Observation:T26 Name:T58 Numeric-Filter:E28 Temporality:E29
 E27	Procedure:T27 Name:T59 Provider:E31
 E28	Eq-Comparison:T28 Operator:T61 Value:T62 Unit:T63
 E29	Eq-Comparison:T29 Operator:T64 Value:T65 Temporal-Unit:T66
-E30	Temporal-Connection:T30 Arg:E26 Arg2:E32
-E32	Study:T32 
+E32	Study:T32
 E33	Negation:T33 Negates:E34
 E34	Observation:T34 Name:T68
-E35	And:T35 Arg:T69 Arg2:E38
 E4	Modifier:T4 Modifies:T37
 E36	Modifier:T70 Modifies:T37
 E5	Modifier:T5 Modifies:T37
@@ -34,23 +28,19 @@ E8	Negation:T8 Negates:E3
 E9	Modifier:T9 Modifies:T46
 E37	Modifier:T38 Modifies:T46
 E17	Eq-Comparison:T72 Temporal-Recency:T73
-E31	Provider:T31 Role:T60
-E38	Assertion:T67 
+E31	Provider:T31
+E38	Assertion:T67
 T1	Modifier 25 34	Singleton
-T2	Condition 35 44	gestation
-T3	Condition 61 70	gestation
-T6	Or 113 115	or
+T2	Observation 35 44	gestation
+T3	Observation 61 70	gestation
 T7	Procedure 116 131	therapeutically
-T12	Temporal-Connection 179 185	before
 T13	Eq-Comparison 186 201	13 weeks 6 days
 T14	Observation 210 225	gestational age
 T15	Condition 261 271	gestations
 T16	Negation 298 301	not
 T18	Observation 317 332	Gestational age
-T19	Temporal-Connection 333 335	at
 T20	Study 336 349	randomization
 T21	Eq-Comparison 350 373	between 16 weeks 0 days
-T22	And 374 377	and
 T23	Eq-Comparison 378 393	23 weeks 6 days
 T24	Procedure 455 465	ultrasound
 T25	Observation 482 497	Gestational Age
@@ -58,13 +48,11 @@ T26	Observation 504 519	Cervical length
 T27	Procedure 523 547	transvaginal examination
 T28	Eq-Comparison 551 578	less than or equal to 20 mm
 T29	Eq-Comparison 579 593	within 10 days
-T30	Temporal-Connection 594 602	prior to
 T32	Study 622 627	study
 T33	Negation 660 662	no
 T34	Observation 669 684	cervical length
-T35	And 727 730	who
-T36	Condition-Name 35 44	gestation
-T37	Condition-Name 61 70	gestation
+T36	Observation-Name 35 44	gestation
+T37	Observation-Name 61 70	gestation
 T39	Procedure-Name 116 131	therapeutically
 T40	Eq-Value 186 188	13
 T41	Eq-Temporal-Unit 189 194	weeks
@@ -107,11 +95,7 @@ T17	Observation-Name 482 497	Gestational Age
 T72	Eq-Comparison 446 454	earliest
 T73	Eq-Temporal-Recency 446 454	earliest
 T31	Provider 638 649	sonographer
-T60	Provider-Role 638 649	sonographer
 T67	Assertion 735 745	ineligible
-A2	Temporal-Connection-Type-Value E12 before
-A4	Temporal-Connection-Type-Value E19 during
-A5	Temporal-Connection-Type-Value E30 before
 A6	Eq-Temporal-Unit-Value T41 week
 A7	Eq-Temporal-Unit-Value T43 day
 A9	Eq-Operator-Value T48 BETWEEN
@@ -119,20 +103,26 @@ A10	Eq-Temporal-Unit-Value T50 week
 A11	Eq-Temporal-Unit-Value T52 day
 A12	Eq-Temporal-Unit-Value T54 week
 A13	Eq-Temporal-Unit-Value T56 day
-A14	Observation-Type-Value T58 measurement
+A14	Observation-Type-Value E26 measurement
 A16	Eq-Operator-Value T61 LTEQ
 A17	Eq-Operator-Value T64 LTEQ
 A18	Eq-Temporal-Unit-Value T66 day
-A20	Observation-Type-Value T68 measurement
+A20	Observation-Type-Value E34 measurement
 A21	Life-Stage-And-Gender-Type T69 female
 A22	Stability-Value T71 change
-A1	Observation-Type-Value T44 measurement
+A1	Observation-Type-Value E14 measurement
 A8	Stability-Value T45 change
-A3	Observation-Type-Value T47 measurement
-A23	Observation-Type-Value T17 measurement
+A3	Observation-Type-Value E18 measurement
+A23	Observation-Type-Value E25 measurement
 A24	Eq-Temporal-Recency-Value T73 first-time
 A15	Assertion-Type-Value E38 hypothetical
 R1	Caused-By Arg1:E3 Arg2:E7
 R2	Found-By Arg1:E18 Arg2:E24
 R3	Using Arg1:E24 Arg2:E25
 R4	Found-By Arg1:E26 Arg2:E27
+R5	Or Arg1:E5 Arg2:E7
+R6	Before Arg1:E11 Arg2:E14
+R7	During Arg1:E18 Arg2:E20
+R8	And Arg1:E21 Arg2:E23
+R9	Before Arg1:E26 Arg2:E32
+R10	And Arg1:T69 Arg2:E38

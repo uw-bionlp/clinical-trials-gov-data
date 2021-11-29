@@ -1,0 +1,356 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6 Acuteness:T131
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Observation:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18
+E19	Condition:T19 Name:T20
+E21	Modifier:T21 Modifies:T16
+E23	Condition:T23 Name:T24
+E27	Observation:T27 Name:T28 Eq-Comparison:E48
+E29	Condition:T29 Name:T30
+E31	Procedure:T31 Name:T32 Temporality:E80
+E33	Condition:T33 Name:T34
+E35	Condition:T35 Name:T36
+E37	Condition:T37 Name:T38
+E39	Condition:T39 Name:T40 Severity:T169
+E41	Condition:T41 Name:T42
+E43	Condition:T43 Name:T44 Temporality:E84
+E44	Age:T68 Eq-Comparison:E49
+E45	Eq-Comparison:T83 Operator:T45 Value:T69 Unit:T102 Per:T103
+E46	Eq-Comparison:T84 Operator:T46 Value:T70 Unit:T107 Unit2:T108
+E47	Eq-Comparison:T85 Operator:T47 Value:T71 Unit:T119
+E48	Eq-Comparison:T86 Operator:T48 Unit:T62 Value:T72 Per:T128
+E49	Eq-Comparison:T87 Operator:T49 Temporal-Unit:T59 Value:T73
+E50	Eq-Comparison:T88 Operator:T50 Unit:T63 Value:T74
+E51	Eq-Comparison:T89 Operator:T51 Unit:T64 Value:T75
+E52	Eq-Comparison:T90 Operator:T52 Unit:T65 Value:T76
+E53	Eq-Comparison:T91 Operator:T53 Unit:T66 Value:T77
+E54	Eq-Comparison:T92 Operator:T54 Value:T78 Unit:T156 Per:T157
+E55	Eq-Comparison:T93 Operator:T57 Value:T81 Unit:T192 Per:T193 Per2:T194
+E56	Eq-Comparison:T94 Operator:T58 Value:T82 Unit:T67 Per:T199
+E2	Modifier:T95 Modifies:T98
+E4	Modifier:T96
+E6	Condition:T97 Name:T98 Severity:T99
+E8	Or:T100 Arg:T101 Arg2:T99
+E10	Observation:T104 Name:T105 Eq-Comparison:E45 Eq-Comparison2:E46
+E12	Or:T109 Arg:T106 Arg2:T25
+E14	Observation:T110 Name:T111
+E16	Observation:T112 Name:T113 Eq-Comparison:E18
+E18	Eq-Comparison:T26 Unit:T114 Value:T115 Value2:T116
+E20	Observation:T117 Name:T118 Eq-Comparison:E47
+E22	Procedure:T120 Name:T121
+E24	Modifier:T122 Modifies:T126
+E25	Modifier:T123 Modifies:T126
+E26	Or:T124 Arg:E25 Arg2:E24
+E28	Observation:T125 Name:T126 Polarity:T127
+E30	Procedure:T129 Name:T130
+E34	Or:T132 Arg:E5 Arg2:E9
+E36	Condition:T133
+E38	Other:T134 Is-Other:E36
+E40	Condition:T135 Name:T136
+E42	Or:T137 Arg:E1 Arg2:E40
+E57	Modifier:T22 Modifies:T16
+E58	Or:T138 Arg:E21 Arg2:E57
+E59	Observation:T139 Name:T140 Eq-Comparison:E60
+E60	Eq-Comparison:T141 Unit:T142 Value:T143
+E61	Modifier:T144 Modifies:T20
+E62	Study:T145
+E63	Temporal-Connection:T146 Arg:E19 Arg2:E62
+E64	Or:T147 Arg:E59 Arg2:E19
+E65	Observation:T148 Name:T149 Eq-Comparison:E50 Eq-Comparison2:E51
+E66	Or:T150 Arg:E50 Arg2:E51
+E67	Observation:T151 Name:T152 Eq-Comparison:E52 Eq-Comparison2:E53
+E68	Or:T153 Arg:E52 Arg2:E53
+E69	Observation:T154 Name:T155 Eq-Comparison:E54
+E70	Condition:T158 Name:T159 Severity:T161
+E71	Modifier:T160 Modifies:T159
+E72	Modifier:T162 Modifies:T30
+E73	Condition:T163 Name:T164
+E74	Condition:T165
+E75	Modifier:T166 Modifies:E74
+E76	Condition:T167 Name:T168
+E77	Condition:T170 Name:T171
+E78	Or:T172 Arg:E77 Arg2:E35
+E79	Or:T173 Arg:E33 Arg2:E31
+E80	Eq-Comparison:T174 Operator:T55 Temporal-Period:T175 Temporal-Unit:T60 Value:T79
+E81	Study:T176
+E82	Temporal-Connection:T177 Arg:E80 Arg2:E81
+E83	Or:T178 Arg:E41 Arg2:E43
+E84	Eq-Comparison:T179 Operator:T56 Temporal-Period:T180 Value:T80 Temporal-Unit:T61
+E85	Study:T181
+E86	Temporal-Connection:T182 Arg:E84 Arg2:E85
+E87	Condition:T183 Name:T184
+E88	Modifier:T185 Modifies:T184
+E89	Modifier:T186 Modifies:T184
+E90	Or:T187 Arg:E89 Arg2:E88
+E91	Condition:T188 Name:T189
+E92	Observation:T190 Name:T191 Eq-Comparison:E55
+E93	Condition:T195 Name:T196
+E94	Observation:T197 Name:T198 Eq-Comparison:E56
+T1	Condition 607 635	left ventricular hypertrophy
+T2	Condition-Name 607 635	left ventricular hypertrophy
+T3	Condition 726 751	constrictive pericarditis
+T4	Condition-Name 726 751	constrictive pericarditis
+T5	Condition 542 556	atrial flutter
+T6	Condition-Name 542 556	atrial flutter
+T7	Condition 477 496	myocardial ischemia
+T8	Condition-Name 477 496	myocardial ischemia
+T9	Condition 560 579	atrial fibrillation
+T10	Condition-Name 560 579	atrial fibrillation
+T11	Observation 348 363	Body mass index
+T12	Observation-Name 348 363	Body mass index
+T13	Condition 709 724	aortic stenosis
+T14	Condition-Name 709 724	aortic stenosis
+T15	Condition 693 707	cardiomyopathy
+T16	Condition-Name 693 707	cardiomyopathy
+T17	Condition 188 201	heart failure
+T18	Condition-Name 188 201	heart failure
+T19	Condition 807 820	heart failure
+T20	Condition-Name 807 820	heart failure
+T21	Modifier 669 681	hypertrophic
+T23	Condition 950 956	Anemia
+T24	Condition-Name 950 956	Anemia
+T27	Observation 365 368	BMI
+T28	Observation-Name 365 368	BMI
+T29	Condition 1042 1054	hypertension
+T30	Condition-Name 1042 1054	hypertension
+T31	Procedure 1218 1246	myocardial revascularization
+T32	Procedure-Name 1218 1246	myocardial revascularization
+T33	Condition 1193 1214	Myocardial infarction
+T34	Condition-Name 1193 1214	Myocardial infarction
+T35	Condition 1167 1186	myocardial diseases
+T36	Condition-Name 1167 1186	myocardial diseases
+T37	Condition 1103 1120	pulmonary disease
+T38	Condition-Name 1103 1120	pulmonary disease
+T39	Condition 1137 1144	obesity
+T40	Condition-Name 1137 1144	obesity
+T41	Condition 1291 1297	Stroke
+T42	Condition-Name 1291 1297	Stroke
+T43	Condition 1301 1304	TIA
+T44	Condition-Name 1301 1304	TIA
+T45	Eq-Operator 94 95	≥
+T46	Eq-Operator 117 118	≥
+T47	Eq-Operator 243 244	>
+T48	Eq-Operator 370 371	>
+T49	Eq-Operator 448 449	≤
+T50	Eq-Operator 864 865	<
+T51	Eq-Operator 878 879	>
+T52	Eq-Operator 920 921	<
+T53	Eq-Operator 933 934	>
+T54	Eq-Operator 961 962	<
+T55	Eq-Operator 1247 1253	within
+T56	Eq-Operator 1305 1311	within
+T57	Eq-Operator 1433 1434	<
+T58	Eq-Operator 1513 1514	>
+T59	Eq-Temporal-Unit 453 458	years
+T60	Eq-Temporal-Unit 1265 1271	months
+T61	Eq-Temporal-Unit 1323 1329	months
+T62	Eq-Unit 375 377	kg
+T63	Eq-Unit 870 874	mmHg
+T64	Eq-Unit 884 888	mmHg
+T65	Eq-Unit 925 929	mmHg
+T66	Eq-Unit 939 943	mmHg
+T67	Eq-Unit 1518 1522	mmol
+T68	Age 444 447	Age
+T69	Eq-Value 95 98	109
+T70	Eq-Value 118 121	132
+T71	Eq-Value 245 247	50
+T72	Eq-Value 372 374	30
+T73	Eq-Value 450 452	18
+T74	Eq-Value 866 869	110
+T75	Eq-Value 880 883	180
+T76	Eq-Value 922 924	40
+T77	Eq-Value 935 938	100
+T78	Eq-Value 963 966	100
+T79	Eq-Value 1263 1264	3
+T80	Eq-Value 1321 1322	3
+T81	Eq-Value 1435 1437	30
+T82	Eq-Value 1514 1517	5.2
+T83	Eq-Comparison 94 103	≥109 g/m²
+T84	Eq-Comparison 117 126	≥132 g/m²
+T85	Eq-Comparison 243 248	> 50%
+T86	Eq-Comparison 370 380	> 30 kg/m²
+T87	Eq-Comparison 448 458	≤ 18 years
+T88	Eq-Comparison 864 874	< 110 mmHg
+T89	Eq-Comparison 878 888	> 180 mmHg
+T90	Eq-Comparison 920 929	< 40 mmHg
+T91	Eq-Comparison 933 943	> 100 mmHg
+T92	Eq-Comparison 961 970	< 100 g/l
+T93	Eq-Comparison 1433 1452	< 30 ml/min/1.73 m²
+T94	Eq-Comparison 1513 1524	>5.2 mmol/L
+T95	Modifier 41 70	hypertensive left ventricular
+T96	Modifier 72 74	LV
+T97	Condition 76 87	hypertrophy
+T98	Condition-Name 76 87	hypertrophy
+T99	Severity 34 40	severe
+T100	Or 33 34	/
+T101	Severity 25 33	Moderate
+T102	Eq-Unit 99 100	g
+T103	Eq-Unit 101 103	m²
+T104	Observation 89 93	LVMi
+T105	Observation-Name 89 93	LVMi
+T106	Life-Stage-And-Gender 107 112	women
+T25	Life-Stage-And-Gender 130 133	men
+T107	Eq-Unit 122 123	g
+T108	Eq-Unit 124 126	m²
+T109	Or 113 116	and
+T110	Observation 141 167	New York Heart Association
+T111	Observation-Name 141 167	New York Heart Association
+T112	Observation 169 173	NYHA
+T113	Observation-Name 169 173	NYHA
+T26	Eq-Comparison 175 187	class II-III
+T114	Eq-Unit 175 180	class
+T115	Eq-Value 181 183	II
+T116	Eq-Value 184 187	III
+T117	Observation 208 242	Left ventricular ejection fraction
+T118	Observation-Name 208 242	Left ventricular ejection fraction
+T119	Eq-Unit 247 248	%
+T120	Procedure 326 342	echocardiography
+T121	Procedure-Name 326 342	echocardiography
+T122	Modifier 309 322	peak exercise
+T123	Modifier 298 302	rest
+T124	Or 303 305	or
+T125	Observation 265 285	LV filling pressures
+T126	Observation-Name 265 285	LV filling pressures
+T127	Polarity 255 264	Increased
+T128	Eq-Unit 378 380	m²
+T129	Procedure 504 527	stress echocardiography
+T130	Procedure-Name 504 527	stress echocardiography
+T131	Acuteness 534 541	Chronic
+T132	Or 557 559	or
+T133	Condition 598 603	cause
+T134	Other 586 597	Alternative
+T135	Condition 640 667	impaired diastolic function
+T136	Condition-Name 640 667	impaired diastolic function
+T137	Or 636 639	and
+T22	Modifier 682 692	restictive
+T138	Or 681 682	/
+T139	Observation 768 772	NYHA
+T140	Observation-Name 768 772	NYHA
+T141	Eq-Comparison 773 789	classification I
+T142	Eq-Unit 773 787	classification
+T143	Eq-Value 788 789	I
+T144	Modifier 793 806	decompensated
+T145	Study 824 833	screening
+T146	Temporal-Connection 821 823	at
+T147	Or 790 792	or
+T148	Observation 840 863	Systolic blood pressure
+T149	Observation-Name 840 863	Systolic blood pressure
+T150	Or 875 877	or
+T151	Observation 895 919	Diastolic blood pressure
+T152	Observation-Name 895 919	Diastolic blood pressure
+T153	Or 930 932	or
+T154	Observation 958 960	Hb
+T155	Observation-Name 958 960	Hb
+T156	Eq-Unit 967 968	g
+T157	Eq-Unit 969 970	l
+T158	Condition 1001 1025	structural valve disease
+T159	Condition-Name 1001 1025	structural valve disease
+T160	Modifier 990 1000	left sided
+T161	Severity 978 989	Significant
+T162	Modifier 1032 1041	Secondary
+T163	Condition 1061 1068	Dyspnea
+T164	Condition-Name 1061 1068	Dyspnea
+T165	Condition 1088 1094	causes
+T166	Modifier 1076 1087	non-cardiac
+T167	Condition 1122 1128	anemia
+T168	Condition-Name 1122 1128	anemia
+T169	Severity 1130 1136	severe
+T170	Condition 1146 1162	primary valvular
+T171	Condition-Name 1146 1162	primary valvular
+T172	Or 1164 1166	or
+T173	Or 1215 1217	or
+T174	Eq-Comparison 1247 1271	within the last 3 months
+T175	Eq-Temporal-Period 1258 1262	last
+T176	Study 1275 1284	screening
+T177	Temporal-Connection 1272 1274	of
+T178	Or 1298 1300	or
+T179	Eq-Comparison 1305 1329	within the last 3 months
+T180	Eq-Temporal-Period 1316 1320	last
+T181	Study 1333 1342	screening
+T182	Temporal-Connection 1330 1332	of
+T183	Condition 1377 1385	diseases
+T184	Condition-Name 1377 1385	diseases
+T185	Modifier 1365 1376	oncological
+T186	Modifier 1349 1360	Autoimmunic
+T187	Or 1361 1364	and
+T188	Condition 1392 1415	Impaired renal function
+T189	Condition-Name 1392 1415	Impaired renal function
+T190	Observation 1428 1432	eGFR
+T191	Observation-Name 1428 1432	eGFR
+T192	Eq-Unit 1438 1440	ml
+T193	Eq-Unit 1441 1444	min
+T194	Eq-Unit 1445 1452	1.73 m²
+T195	Condition 1459 1482	Impaired liver function
+T196	Condition-Name 1459 1482	Impaired liver function
+T197	Observation 1489 1512	Potassium concentration
+T198	Observation-Name 1489 1512	Potassium concentration
+T199	Eq-Unit 1523 1524	L
+A1	Observation-Type-Value T12 vital
+A2	Observation-Type-Value T28 vital
+A3	Eq-Operator-Value T45 GTEQ
+A4	Eq-Operator-Value T46 GTEQ
+A5	Eq-Operator-Value T47 GT
+A6	Eq-Operator-Value T48 GT
+A7	Eq-Operator-Value T49 LTEQ
+A8	Eq-Operator-Value T50 LT
+A9	Eq-Operator-Value T51 GT
+A10	Eq-Operator-Value T52 LT
+A11	Eq-Operator-Value T53 GT
+A12	Eq-Operator-Value T54 LT
+A13	Eq-Operator-Value T55 LTEQ
+A14	Eq-Operator-Value T56 LTEQ
+A15	Eq-Operator-Value T57 LT
+A16	Eq-Operator-Value T58 GT
+A17	Eq-Temporal-Unit-Value T59 year
+A18	Eq-Temporal-Unit-Value T60 month
+A19	Eq-Temporal-Unit-Value T61 month
+A20	Severity-Value T99 severe
+A21	Severity-Value T101 moderate
+A22	Observation-Type-Value T105 measurement
+A23	Life-Stage-And-Gender-Type T106 female
+A24	Life-Stage-And-Gender-Type T25 male
+A25	Observation-Type-Value T118 measurement
+A26	Polarity-Value T127 high
+A27	Temporal-Connection-Type-Value E63 during
+A28	Observation-Type-Value T149 vital
+A29	Observation-Type-Value T152 vital
+A30	Observation-Type-Value T155 lab
+A31	Severity-Value T161 severe
+A32	Severity-Value T169 severe
+A33	Eq-Temporal-Period-Value T175 past
+A34	Temporal-Connection-Type-Value E82 before
+A35	Eq-Temporal-Period-Value T180 past
+A36	Temporal-Connection-Type-Value E86 before
+A37	Observation-Type-Value T191 lab
+A38	Observation-Type-Value T198 lab
+A39	Observation-Type-Value T111 clinical-score
+A40	Observation-Type-Value T113 clinical-score
+A41	Observation-Type-Value T140 clinical-score
+A42	Acuteness-Type-Value T131 chronic
+R1	Abbrev-Of Arg1:E4 Arg2:E2
+R2	Equivalent-To Arg1:E10 Arg2:E6
+R3	If-Then Arg1:T106 Arg2:E45
+R4	If-Then Arg1:T25 Arg2:E46
+R5	Abbrev-Of Arg1:E16 Arg2:E14
+R6	Found-By Arg1:E28 Arg2:E22
+R7	Abbrev-Of Arg1:E27 Arg2:E11
+R8	Found-By Arg1:E7 Arg2:E30
+R9	Caused-By Arg1:E1 Arg2:E36
+R10	Caused-By Arg1:E40 Arg2:E36
+R11	Example-Of Arg1:E15 Arg2:E36
+R12	Example-Of Arg1:E13 Arg2:E36
+R13	Example-Of Arg1:E3 Arg2:E36
+R14	Equivalent-To Arg1:E69 Arg2:E23
+R15	Caused-By Arg1:E73 Arg2:E74
+R16	Example-Of Arg1:E37 Arg2:E74
+R17	Example-Of Arg1:E76 Arg2:E74
+R18	Example-Of Arg1:E39 Arg2:E74
+R19	Example-Of Arg1:E77 Arg2:E74
+R20	Example-Of Arg1:E77 Arg2:E74
+R21	Example-Of Arg1:E35 Arg2:E74
+R22	Equivalent-To Arg1:E92 Arg2:E91

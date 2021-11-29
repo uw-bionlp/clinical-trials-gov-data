@@ -16,12 +16,11 @@ E36	Eq-Comparison:T49 Temporal-Period:T50
 E37	Eq-Comparison:T51 Temporal-Period:T52
 E2	Condition:T53 Name:T54
 E4	Eq-Comparison:T38 Operator:T40 Value:T39 Temporal-Unit:T35
-E6	Or:T55 Arg:E1 Arg2:E3
-E5	Encounter:T5 Duration:E8
+E5	Encounter:T5
 E7	Assertion:T6 Asserted:E5
 E8	Eq-Comparison:T7 Operator:T8 Value:T41 Temporal-Unit:T36
 E10	Condition:T56 Severity:T57
-E12	Encounter:T58
+E12	
 E14	Negation:T59 Negates:E12
 E15	Assertion:T60 Asserted:E12
 E17	Condition:T61 Name:T62
@@ -47,14 +46,11 @@ E46	Assertion:T86 Asserted:E32
 E47	Procedure:T88 Name:T89
 E48	Other:T90 Is-Other:E47
 E49	Study:T91
-E50	Temporal-Connection:T92 Arg:E33 Arg2:E49
 E51	Other:T93 Is-Other:E26
 E52	Condition:T94 Temporality:E36
-E53	Or:T95 Arg:E26 Arg2:E52
 E54	Modifier:T96 Modifies:T31
 E55	Modifier:T97 Modifies:T31
 E56	Modifier:T98 Modifies:T31
-E57	Or:T99 Arg:E55 Arg2:E56
 E58	Assertion:T101 Asserted:T100
 E59	Condition:T102 Name:T103 Severity:T104
 E60	Condition:T105 Name:T106
@@ -107,7 +103,6 @@ T53	Condition 47 56	Diabetics
 T54	Condition-Name 47 56	Diabetics
 T38	Eq-Comparison 98 114	at least 5 years
 T40	Eq-Operator 98 106	at least
-T55	Or 124 126	or
 T5	Encounter 200 209	follow-up
 T6	Assertion 181 188	Able to
 T7	Eq-Comparison 210 222	over 3 years
@@ -155,14 +150,11 @@ T88	Procedure 1230 1249	intraocular surgery
 T89	Procedure-Name 1230 1249	intraocular surgery
 T90	Other 1224 1229	other
 T91	Study 1275 1285	enrollment
-T92	Temporal-Connection 1272 1274	of
 T93	Other 1302 1309	another
 T94	Condition 1325 1334	condition
-T95	Or 1322 1324	or
 T96	Modifier 1358 1367	perfusion
 T97	Modifier 1369 1381	permeability
 T98	Modifier 1386 1401	retinal anatomy
-T99	Or 1383 1385	or
 T100	Stability 1344 1349	alter
 T101	Assertion 1340 1343	may
 T102	Condition 1419 1432	media opacity
@@ -195,12 +187,11 @@ A12	Severity-Value T57 severe
 A13	Assertion-Type-Value E15 hypothetical
 A14	Assertion-Type-Value E29 hypothetical
 A15	Assertion-Type-Value E42 hypothetical
-A16	Observation-Type-Value T80 measurement
+A16	Observation-Type-Value E43 measurement
 A17	Eq-Operator-Value T82 LT
 A18	Stability-Value T32 stable
 A19	Assertion-Type-Value E46 hypothetical
 A20	Severity-Value T87 severe
-A21	Temporal-Connection-Type-Value E50 before
 A22	Stability-Value T100 change
 A23	Assertion-Type-Value E58 hypothetical
 A24	Severity-Value T104 severe
@@ -221,3 +212,14 @@ R13	Example-Of Arg1:E60 Arg2:E59
 R14	Example-Of Arg1:E61 Arg2:E59
 R15	Example-Of Arg1:E62 Arg2:E59
 R16	Caused-By Arg1:T114 Arg2:E59
+R17	Or Arg1:E1 Arg2:E3
+R18	Before Arg1:E33 Arg2:E49
+R19	Or Arg1:E26 Arg2:E52
+R20	Or Arg1:E55 Arg2:E56
+R21	Or Arg1:E9 Arg2:E21
+R22	Or Arg1:E20 Arg2:E22
+R23	Or Arg1:E28 Arg2:E20
+R24	Or Arg1:E21 Arg2:E23
+R25	Or Arg1:E54 Arg2:E55
+R26	Or Arg1:E60 Arg2:E61
+R27	Or Arg1:E61 Arg2:E62

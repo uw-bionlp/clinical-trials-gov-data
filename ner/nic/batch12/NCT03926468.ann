@@ -6,16 +6,12 @@ E2	Condition:T11 Name:T12
 E4	Condition:T13 Name:T14
 E7	Modifier:T15 Modifies:T12
 E8	Modifier:T16 Modifies:T12
-E9	Or:T17 Arg:E8 Arg2:E7
-E10	Observation:T18 Name:T19 Eq-Comparison:E6
+E10	Observation:T18 Name:T19 Numeric-Filter:E6
 E12	Condition:T22 Name:T23 Stage:E11
-E14	Or:T26 Arg:E5 Arg2:E3
-E15	Or:T27 Arg:E3 Arg2:E1
 E11	Eq-Comparison:T20 Unit:T21 Value:T28
 E13	Eq-Comparison:T24 Unit:T25 Value:T29
 E16	Modifier:T30 Modifies:T23
 E17	Modifier:T31 Modifies:T23
-E18	Or:T32 Arg:E17 Arg2:E16
 T1	Procedure 295 318	multimodality treatment
 T2	Procedure-Name 295 318	multimodality treatment
 T3	Procedure 274 291	chemoradiotherapy
@@ -32,13 +28,10 @@ T13	Condition 89 94	HNSCC
 T14	Condition-Name 89 94	HNSCC
 T15	Modifier 59 63	neck
 T16	Modifier 50 54	head
-T17	Or 55 58	and
 T18	Observation 101 123	WHO performance status
 T19	Observation-Name 101 123	WHO performance status
 T22	Condition 192 202	metastasis
 T23	Condition-Name 192 202	metastasis
-T26	Or 271 273	or
-T27	Or 292 294	or
 T20	Eq-Comparison 142 151	stage III
 T21	Eq-Unit 142 147	stage
 T28	Eq-Value 148 151	III
@@ -47,7 +40,10 @@ T25	Eq-Unit 212 217	stage
 T29	Eq-Value 218 220	IV
 T30	Modifier 187 191	neck
 T31	Modifier 166 182	bulky T3 primary
-T32	Or 183 186	+/-
 A1	Eq-Operator-Value T7 BETWEEN
-A2	Observation-Type-Value T19 clinical-score
+A2	Observation-Type-Value E10 clinical-score
 R1	Abbrev-Of Arg1:E4 Arg2:E2
+R2	Or Arg1:E8 Arg2:E7
+R3	Or Arg1:E5 Arg2:E3
+R4	Or Arg1:E3 Arg2:E1
+R5	Or Arg1:E17 Arg2:E16

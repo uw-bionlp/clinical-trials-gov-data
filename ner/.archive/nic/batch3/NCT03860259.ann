@@ -1,0 +1,58 @@
+E1	Eq-Comparison:T1 Operator:T17 Value:T18 Temporal-Unit:T19
+E2	Age:T2 Eq-Comparison:E1
+E3	Eq-Comparison:T3 Temporal-Period:T20
+E5	Modifier:T5 Modifies:T22
+E6	Procedure:T6 Name:T22 Temporality:E3
+E7	Condition:T7 Name:T23
+E9	Condition:T9 Name:T24 Acuteness:T8
+E10	Eq-Comparison:T10 Per:T25
+E11	Drug:T11 Name:T26 Temporality:E10
+E12	Condition:T12 Name:T27
+E13	Assertion:T13 Asserted:T28
+E14	Procedure:T14 Name:T32 Stability:T28
+E15	Condition:T15 Name:T29
+E16	Condition:T16 Name:T30
+E4	Procedure:T4 Name:T21
+E17	Assertion:T31 Asserted:E4
+T1	Eq-Comparison 36 57	greater than 18 years
+T2	Age 61 64	age
+T3	Eq-Comparison 142 151	scheduled
+T5	Modifier 163 171	elective
+T6	Procedure 172 192	rotator cuff surgery
+T7	Condition 270 287	Opioid dependence
+T8	Acuteness 322 329	chronic
+T9	Condition 330 344	pain condition
+T10	Eq-Comparison 351 356	daily
+T11	Drug 357 363	opioid
+T12	Condition 383 406	Anatomical malformation
+T13	Assertion 444 447	may
+T14	Procedure 484 495	nerve block
+T15	Condition 501 518	Raynaud's disease
+T16	Condition 534 546	Vasculopathy
+T17	Eq-Operator 36 48	greater than
+T18	Eq-Value 49 51	18
+T19	Eq-Temporal-Unit 52 57	years
+T20	Eq-Temporal-Period 142 151	scheduled
+T22	Procedure-Name 172 192	rotator cuff surgery
+T23	Condition-Name 270 287	Opioid dependence
+T24	Condition-Name 330 344	pain condition
+T25	Eq-Temporal-Unit 351 356	daily
+T26	Drug-Name 357 363	opioid
+T27	Condition-Name 383 406	Anatomical malformation
+T28	Stability 448 457	interfere
+T29	Condition-Name 501 518	Raynaud's disease
+T30	Condition-Name 534 546	Vasculopathy
+T4	Procedure 226 244	interscalene block
+T21	Procedure-Name 226 244	interscalene block
+T31	Assertion 210 222	consented to
+T32	Procedure-Name 484 495	nerve block
+A1	Assertion-Type-Value E13 hypothetical
+A2	Eq-Operator-Value T17 GT
+A3	Eq-Temporal-Unit-Value T19 year
+A4	Eq-Temporal-Period-Value T20 future
+A6	Eq-Temporal-Unit-Value T25 day
+A7	Stability-Value T28 change
+A5	Assertion-Type-Value E17 hypothetical
+A8	Acuteness-Type-Value T8 chronic
+R1	Treatment-For Arg1:E11 Arg2:E9
+R2	Caused-By Arg1:T28 Arg2:E12

@@ -1,12 +1,10 @@
 E1	Eq-Comparison:T1 Value:T32 Operator:T33 Value2:T34
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E3	Modifier:T3 Modifies:T35
 E4	Condition:T4 Name:T35 Duration:E5 Acuteness:T55
 E5	Eq-Comparison:T5 Operator:T36 Value:T37 Temporal-Unit:T53
-E6	And:T6 Arg:E4 Arg2:E8
 E7	Modifier:T7 Modifies:T38
-E8	Condition:T8 Name:T38 Acuteness:T54
-E9	Or:T9 Arg:E8 Arg2:E11
+E8	Observation:T8 Name:T38 Acuteness:T54
 E10	Modifier:T10 Modifies:T39
 E11	Condition:T11 Name:T39
 E12	Procedure:T12 Name:T40
@@ -21,10 +19,9 @@ E20	Eq-Comparison:T20 Temporal-Period:T48
 E21	Condition:T21 Name:T49
 E22	Other:T22 Is-Other:E26
 E23	Modifier:T23 Modifies:T50
-E24	Or:T24 Arg:E23 Arg2:E25
 E25	Modifier:T25 Modifies:T50
 E26	Condition:T26 Name:T50
-E27	Condition:T27 Name:T51
+E27	Observation:T27 Name:T51
 E28	Assertion:T28 Asserted:E29
 E29	Negation:T29 Negates:E30
 E30	Assertion:T30 Asserted:E31
@@ -34,10 +31,8 @@ T2	Age 31 34	age
 T3	Modifier 48 53	ankle
 T4	Condition 54 60	sprain
 T5	Eq-Comparison 61 78	more than 3months
-T6	And 79 83	with
 T7	Modifier 92 97	ankle
-T8	Condition 98 102	pain
-T9	Or 103 105	or
+T8	Observation 98 102	pain
 T10	Modifier 106 117	instability
 T11	Condition 118 127	sensation
 T12	Procedure 133 143	Ultrasound
@@ -52,10 +47,9 @@ T20	Eq-Comparison 279 286	history
 T21	Condition 292 312	Cognitive impairment
 T22	Other 318 323	Other
 T23	Modifier 324 336	neurological
-T24	Or 337 339	or
 T25	Modifier 340 348	muscular
 T26	Condition 349 358	disorders
-T27	Condition 370 374	pain
+T27	Observation 370 374	pain
 T28	Assertion 375 380	could
 T29	Negation 381 384	not
 T30	Assertion 385 393	tolerate
@@ -66,7 +60,7 @@ T34	Eq-Value 28 30	70
 T35	Condition-Name 54 60	sprain
 T36	Eq-Operator 61 70	more than
 T37	Eq-Value 71 72	3
-T38	Condition-Name 98 102	pain
+T38	Observation-Name 98 102	pain
 T39	Condition-Name 118 127	sensation
 T40	Procedure-Name 133 143	Ultrasound
 T41	Condition-Name 175 190	ligament sprain
@@ -79,7 +73,7 @@ T47	Condition-Name 270 278	fracture
 T48	Eq-Temporal-Period 279 286	history
 T49	Condition-Name 292 312	Cognitive impairment
 T50	Condition-Name 349 358	disorders
-T51	Condition-Name 370 374	pain
+T51	Observation-Name 370 374	pain
 T52	Procedure-Name 394 405	examination
 T53	Eq-Temporal-Unit 72 78	months
 T54	Acuteness 84 91	chronic
@@ -97,3 +91,6 @@ A11	Acuteness-Type-Value T54 chronic
 A12	Acuteness-Type-Value T55 chronic
 R1	Found-By Arg1:E14 Arg2:E12
 R2	Caused-By Arg1:E29 Arg2:E27
+R3	And Arg1:E4 Arg2:E8
+R4	Or Arg1:E8 Arg2:E11
+R5	Or Arg1:E23 Arg2:E25

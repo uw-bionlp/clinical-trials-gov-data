@@ -1,0 +1,19 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E2	Observation:T5 Name:T6 Eq-Comparison:E4
+E4	Eq-Comparison:T7 Value:T8 Value2:T9
+E5	Modifier:T10 Modifies:T4
+E6	Modifier:T11 Modifies:T2
+T1	Procedure 120 141	liver transplantation
+T2	Procedure-Name 120 141	liver transplantation
+T3	Procedure 91 102	hepatectomy
+T4	Procedure-Name 91 102	hepatectomy
+T5	Observation 46 49	ASA
+T6	Observation-Name 46 49	ASA
+T7	Eq-Comparison 50 57	I or II
+T8	Eq-Value 50 51	I
+T9	Eq-Value 55 57	II
+T10	Modifier 80 90	right lobe
+T11	Modifier 107 119	living donor
+A1	Observation-Type-Value T6 clinical-score
+R1	Using Arg1:E1 Arg2:E3

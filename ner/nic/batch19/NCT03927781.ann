@@ -10,19 +10,18 @@ E17	Eq-Comparison:T23 Temporal-Period:T24
 E18	Eq-Comparison:T25 Temporal-Period:T26
 E2	Modifier:T27 Modifies:T6
 E4	Provider:T28
-E6	Age:T31 Eq-Comparison:E15
-E8	Observation:T32 Name:T33 Eq-Comparison:E16
+E6	Age:T31 Numeric-Filter:E15
+E8	Observation:T32 Name:T33 Numeric-Filter:E16
 E10	Procedure:T37 Name:T38 Acuteness:T29
 E12	Modifier:T39 Modifies:T38
 E19	Condition:T41 Name:T42 Temporality:E17
 E20	Drug:T43 Name:T44 Acuteness:T45
-E14	Encounter:T14 Type:T15 Temporality:E22
+E14	Encounter:T14 Temporality:E22
 E22	Eq-Comparison:T46 Temporal-Period:T47
 E23	Negation:T48 Negates:T13
 E24	Drug:T49 Name:T50
 E25	Allergy:T51 Name:E24
 E26	Condition:T52 Name:T53
-E27	Or:T54 Arg:E7 Arg2:E26
 T1	Condition 205 224	Renal insufficiency
 T2	Condition-Name 205 224	Renal insufficiency
 T3	Procedure 57 72	stent placement
@@ -66,7 +65,6 @@ T43	Drug 360 373	gabapentinoid
 T44	Drug-Name 360 373	gabapentinoid
 T45	Acuteness 352 359	Chronic
 T14	Encounter 392 417	inpatient hospitalization
-T15	Encounter-Type 392 417	inpatient hospitalization
 T46	Eq-Comparison 383 387	Plan
 T47	Eq-Temporal-Period 383 387	Plan
 T48	Negation 438 447	Inability
@@ -75,7 +73,6 @@ T50	Drug-Name 516 529	gabapentinoid
 T51	Allergy 505 512	Allergy
 T52	Condition 552 571	hepatic dysfunction
 T53	Condition-Name 552 571	hepatic dysfunction
-T54	Or 549 551	or
 T29	Acuteness 260 267	Chronic
 A1	Eq-Operator-Value T16 GTEQ
 A2	Eq-Operator-Value T17 LT
@@ -83,12 +80,13 @@ A3	Eq-Temporal-Unit-Value T18 year
 A4	Eq-Temporal-Period-Value T24 past
 A5	Eq-Temporal-Period-Value T26 present
 A6	Location-Value T30 hospital
-A7	Observation-Type-Value T33 lab
+A7	Observation-Type-Value E8 lab
 A8	Eq-Temporal-Unit-Value T35 minute
-A9	Encounter-Type-Value T15 inpatient
+A9	Encounter-Type-Value E14 inpatient
 A10	Eq-Temporal-Period-Value T47 future
 A11	Acuteness-Type-Value T40 chronic
 A12	Acuteness-Type-Value T45 chronic
 A13	Acuteness-Type-Value T29 chronic
 R1	Using Arg1:E5 Arg2:E3
 R2	Equivalent-To Arg1:E8 Arg2:E1
+R3	Or Arg1:E7 Arg2:E26

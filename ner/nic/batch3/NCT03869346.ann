@@ -1,4 +1,4 @@
-E1	Observation:T1 Name:T36 Eq-Comparison:E19
+E1	Observation:T1 Name:T36 Numeric-Filter:E19
 E2	Eq-Comparison:T2 Temporal-Period:T37
 E3	Procedure:T3 Name:T38 Temporality:E2
 E5	Condition:T5 Name:T39
@@ -6,28 +6,23 @@ E6	Procedure:T6 Name:T40
 E7	Procedure:T7 Name:T41
 E8	Procedure:T8 Name:T42
 E9	Procedure:T9 Name:T43
-E10	Or:T10 Arg:E5 Arg2:E11
 E11	Condition:T11 Name:T44
-E12	Age:T12 Eq-Comparison:E13
+E12	Age:T12 Numeric-Filter:E13
 E13	Eq-Comparison:T13 Value:T45 Operator:T46 Value:T47 Temporal-Unit:T48
-E14	Observation:T14 Name:T49 Eq-Comparison:E15
+E14	Observation:T14 Name:T49 Numeric-Filter:E15
 E15	Eq-Comparison:T15 Value:T50 Operator:T51 Value:T52 Unit:T73 Per:T74
-E16	Observation:T16 Name:T53 Eq-Comparison:E17
+E16	Observation:T16 Name:T53 Numeric-Filter:E17
 E17	Eq-Comparison:T17 Value:T54 Operator:T55 Value:T56 Unit:T57
 E20	Condition:T20 Name:T58 Temporality:E21
 E21	Eq-Comparison:T21 Operator:T59 Value:T60 Temporal-Unit:T61
 E22	Eq-Comparison:T22 Temporal-Period:T62
 E23	Allergy:T23 Temporality:E22
-E24	Or:T24 Arg:E23 Arg2:E26
 E26	Drug:T26 Name:T63 Temporality:E22 Acuteness:T25
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Drug:T28 Name:T64 Temporality:E22
 E29	Observation:T29 Name:T65
-E30	Temporal-Connection:T30 Arg:E29 Arg2:E31
 E31	Procedure:T31 Name:T76
 E32	Condition:T32 Name:T66
 E33	Condition:T33 Name:T67
-E34	Or:T34 Arg:E33 Arg2:E35
 E35	Condition:T35 Name:T68
 E19	Eq-Comparison:T19 Unit:T69 Value:T70 Value2:T71
 E36	Modifier:T72 Modifies:T38
@@ -41,7 +36,6 @@ T6	Procedure 151 184	laparoscopic ovarian cyst removal
 T7	Procedure 186 213	laparoscopic tubal ligation
 T8	Procedure 215 242	laparoscopic tubal drainage
 T9	Procedure 244 271	laparoscopic salpingoplasty
-T10	Or 279 281	or
 T11	Condition 282 296	breast disease
 T12	Age 303 307	Aged
 T13	Eq-Comparison 308 319	18-45 years
@@ -53,17 +47,13 @@ T20	Condition 467 500	upper respiratory tract infection
 T21	Eq-Comparison 501 515	within 2 weeks
 T22	Eq-Comparison 521 528	history
 T23	Allergy 532 539	allergy
-T24	Or 540 542	or
 T25	Acuteness 543 552	long-term
 T26	Drug 560 568	propofol
-T27	Or 569 572	and
 T28	Drug 573 580	opioids
 T29	Observation 586 611	self-rating anxiety scale
-T30	Temporal-Connection 612 618	before
 T31	Procedure 619 628	operation
 T32	Condition 639 646	anxiety
 T33	Condition 652 661	pregnancy
-T34	Or 662 664	or
 T35	Condition 665 674	lactation
 T36	Observation-Name 25 62	American Society of Anesthesiologists
 T37	Eq-Temporal-Period 82 89	undergo
@@ -109,19 +99,18 @@ T74	Eq-Unit 349 351	m2
 T18	Condition 445 461	Difficult airway
 T75	Condition-Name 445 461	Difficult airway
 T76	Procedure-Name 619 628	operation
-A1	Temporal-Connection-Type-Value E30 before
 A2	Eq-Temporal-Period-Value T37 present
 A3	Eq-Operator-Value T46 BETWEEN
 A4	Eq-Temporal-Unit-Value T48 year
-A5	Observation-Type-Value T49 vital
+A5	Observation-Type-Value E14 vital
 A6	Eq-Operator-Value T51 BETWEEN
-A7	Observation-Type-Value T53 vital
+A7	Observation-Type-Value E16 vital
 A8	Eq-Operator-Value T55 BETWEEN
 A9	Eq-Operator-Value T59 LTEQ
 A10	Eq-Temporal-Unit-Value T61 week
 A11	Eq-Temporal-Period-Value T62 past
-A12	Observation-Type-Value T65 clinical-score
-A13	Observation-Type-Value T36 clinical-score
+A12	Observation-Type-Value E29 clinical-score
+A13	Observation-Type-Value E1 clinical-score
 A14	Acuteness-Type-Value T25 chronic
 R1	Treatment-For Arg1:E3 Arg2:E5
 R2	Example-Of Arg1:E6 Arg2:E3
@@ -130,3 +119,11 @@ R4	Example-Of Arg1:E8 Arg2:E3
 R5	Example-Of Arg1:E9 Arg2:E3
 R6	Treatment-For Arg1:E3 Arg2:E11
 R7	Found-By Arg1:E32 Arg2:E29
+R8	Or Arg1:E5 Arg2:E11
+R9	Or Arg1:E23 Arg2:E26
+R10	Or Arg1:E26 Arg2:E28
+R11	Before Arg1:E29 Arg2:E31
+R12	Or Arg1:E33 Arg2:E35
+R13	Or Arg1:E6 Arg2:E7
+R14	Or Arg1:E7 Arg2:E8
+R15	Or Arg1:E8 Arg2:E9

@@ -1,6 +1,5 @@
 E1	Eq-Comparison:T1 Temporal-Period:T22
 E2	Procedure:T2 Name:T23 Temporality:E1
-E3	Or:T3 Arg:E2 Arg2:E4
 E4	Procedure:T4 Name:T24
 E5	Procedure:T5 Name:T26 Temporality:E22
 E6	Negation:T6 Negates:E7
@@ -10,10 +9,9 @@ E9	Modifier:T9 Modifies:T27
 E10	Procedure:T10 Name:T27
 E11	Eq-Comparison:T11 Temporal-Period:T28
 E12	Drug:T12 Name:T29 Temporality:E11
-E13	Temporal-Connection:T13 Arg:E12 Arg2:E14
 E14	Eq-Comparison:T14 Temporal-Period:T30 Value:T31 Temporal-Unit:T32
 E15	Eq-Comparison:T15 Temporal-Period:T33
-E16	Condition:T16 Name:T34 Temporality:E15
+E16	Condition:T16 Temporality:E15
 E17	Assertion:T17 Asserted:T35
 E18	Condition:T18 Name:T36 Stability:T35
 E19	Assertion:T19 Asserted:E20
@@ -21,10 +19,8 @@ E20	Negation:T20 Negates:E21
 E21	Study:T21
 E22	Eq-Comparison:T37 Temporal-Period:T25
 E23	Procedure:T38 Name:T39
-E24	Temporal-Connection:T40 Arg:E5 Arg2:E23
 T1	Eq-Comparison 38 50	will undergo
 T2	Procedure 51 62	septoplasty
-T3	Or 62 63	/
 T4	Procedure 63 90	septorhinoplasty procedures
 T5	Procedure 122 135	nasal packing
 T6	Negation 228 231	not
@@ -34,7 +30,6 @@ T9	Modifier 270 278	revision
 T10	Procedure 279 288	surgeries
 T11	Eq-Comparison 312 318	taking
 T12	Drug 319 334	antidepressants
-T13	Temporal-Connection 335 341	during
 T14	Eq-Comparison 346 359	last 6 months
 T15	Eq-Comparison 386 393	history
 T16	Condition 399 406	disease
@@ -60,10 +55,8 @@ T35	Stability 416 422	affect
 T37	Eq-Comparison 109 121	will receive
 T38	Procedure 145 184	septoplasty septorhinoplasty procedures
 T39	Procedure-Name 145 184	septoplasty septorhinoplasty procedures
-T40	Temporal-Connection 136 138	at
 T36	Condition-Name 423 430	anxiety
 A1	Assertion-Type-Value E7 hypothetical
-A2	Temporal-Connection-Type-Value E13 during
 A3	Assertion-Type-Value E17 hypothetical
 A4	Assertion-Type-Value E19 hypothetical
 A5	Eq-Temporal-Period-Value T22 future
@@ -73,5 +66,7 @@ A8	Eq-Temporal-Period-Value T30 past
 A9	Eq-Temporal-Unit-Value T32 month
 A10	Eq-Temporal-Period-Value T33 past
 A11	Stability-Value T35 change
-A12	Temporal-Connection-Type-Value E24 during
 R1	Caused-By Arg1:T35 Arg2:E16
+R2	Or Arg1:E2 Arg2:E4
+R3	During Arg1:E12 Arg2:E14
+R4	During Arg1:E5 Arg2:E23

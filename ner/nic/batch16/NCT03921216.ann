@@ -4,7 +4,6 @@ E16	Eq-Comparison:T20 Temporal-Period:T21
 E1	Eq-Comparison:T1 Temporal-Period:T2
 E2	Procedure:T7 Name:T8 Temporality:E1
 E4	Condition:T9 Name:T10 Acuteness:T48
-E6	And:T11 Arg:E2 Arg2:E4
 E7	Condition:T12
 E8	Other:T13 Is-Other:E7
 E9	Procedure:T14 Name:T15 Temporality:E16
@@ -14,11 +13,9 @@ E12	Condition:T22 Name:T23
 E13	Risk:T24 Risk-For:E12 Polarity:T25
 E14	Modifier:T26 Modifies:T23
 E15	Condition:T27 Name:T28
-E17	And:T29 Arg:E12 Arg2:E15
 E18	Modifier:T30 Modifies:T28
 E19	Procedure:T31 Name:T32
 E20	Condition:T33 Name:T34 Polarity:T35
-E22	And:T36 Arg:E19 Arg2:E20
 E23	Drug:T37 Name:T38
 E24	Procedure:T39
 E25	Condition:T40 Name:T41
@@ -39,7 +36,6 @@ T7	Procedure 81 93	hemodialysis
 T8	Procedure-Name 81 93	hemodialysis
 T9	Condition 120 134	kidney disease
 T10	Condition-Name 120 134	kidney disease
-T11	And 94 97	and
 T12	Condition 144 150	causes
 T13	Other 138 143	other
 T14	Procedure 162 174	hemodialysis
@@ -54,13 +50,11 @@ T24	Risk 237 241	risk
 T26	Modifier 272 276	skin
 T27	Condition 287 325	vesicles containing interstitial fluid
 T28	Condition-Name 287 325	vesicles containing interstitial fluid
-T29	And 277 282	where
 T30	Modifier 336 365	emptied of interstitial fluid
 T31	Procedure 373 384	fine needle
 T32	Procedure-Name 373 384	fine needle
 T33	Condition 393 405	bladder roof
 T34	Condition-Name 393 405	bladder roof
-T36	And 385 388	and
 T37	Drug 437 445	Warfarin
 T38	Drug-Name 437 445	Warfarin
 T39	Procedure 422 431	Treatment
@@ -93,3 +87,7 @@ R8	Treatment-For Arg1:E23 Arg2:E25
 R4	Caused-By Arg1:E13 Arg2:E10
 R5	Equivalent-To Arg1:E27 Arg2:E25
 R9	Abbrev-Of Arg1:E28 Arg2:E27
+R10	And Arg1:E2 Arg2:E4
+R11	And Arg1:E12 Arg2:E15
+R12	And Arg1:E19 Arg2:E20
+R13	Or Arg1:E27 Arg2:E28

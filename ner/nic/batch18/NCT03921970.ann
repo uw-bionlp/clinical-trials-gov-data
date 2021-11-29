@@ -4,7 +4,7 @@ E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E9	Procedure:T9 Name:T10
 E2	Observation:T11 Name:T12
-E4	Observation:T13 Name:T14 Eq-Comparison:E6
+E4	Observation:T13 Name:T14 Numeric-Filter:E6
 E6	Eq-Comparison:T15 Unit:T16 Value:T17 Value2:T18 Operator:T19
 E8	Eq-Comparison:T20 Temporal-Period:T21
 E10	Procedure:T22 Name:T23
@@ -12,11 +12,9 @@ E11	Drug:T24 Name:T25
 E12	Procedure:T26 Temporality:E13
 E13	Eq-Comparison:T27 Temporal-Period:T28
 E14	Drug:T29 Name:T30
-E15	Or:T32 Arg:T31 Arg2:E14
 E16	Allergy:T33 Name:E14 Name2:T31
 E17	Condition:T34 Name:T35
 E18	Modifier:T36 Modifies:T35
-E19	Or:T37 Arg:E5 Arg2:E7
 E20	Negation:T38 Negates:E9
 E21	Assertion:T39 Asserted:E9
 T1	Procedure 108 139	laparoscopic sleeve gastrectomy
@@ -50,20 +48,20 @@ T28	Eq-Temporal-Period 214 223	Receiving
 T29	Drug 281 287	opioid
 T30	Drug-Name 281 287	opioid
 T31	Allergy-Name 259 276	local anesthetics
-T32	Or 277 280	and
 T33	Allergy 288 295	allergy
 T34	Condition 301 310	Infection
 T35	Condition-Name 301 310	Infection
 T36	Modifier 318 357	skin at the site of the needle puncture
-T37	Or 373 375	or
 T38	Negation 407 410	not
 T39	Assertion 411 417	accept
 A1	Eq-Operator-Value T19 BETWEEN
 A2	Eq-Temporal-Period-Value T21 future
 A3	Eq-Temporal-Period-Value T28 present
 A4	Assertion-Type-Value E21 hypothetical
-A5	Observation-Type-Value T12 clinical-score
-A6	Observation-Type-Value T14 clinical-score
+A5	Observation-Type-Value E2 clinical-score
+A6	Observation-Type-Value E4 clinical-score
 R1	Abbrev-Of Arg1:E4 Arg2:E2
 R2	Using Arg1:E1 Arg2:E10
 R3	Using Arg1:E12 Arg2:E11
+R4	Or Arg1:T31 Arg2:E14
+R5	Or Arg1:E5 Arg2:E7

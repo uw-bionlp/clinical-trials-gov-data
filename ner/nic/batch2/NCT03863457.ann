@@ -1,9 +1,7 @@
 E1	Eq-Comparison:T1 Operator:T49 Value:T50 Temporal-Unit:T51
-E2	Age:T2 Eq-Comparison:E1
-E3	Or:T3 Arg2:E4 Arg:E49
+E2	Age:T2 Numeric-Filter:E1
 E4	Assertion:T4 Asserted:E8
 E5	Modifier:T5 Modifies:T52
-E6	Or:T6 Arg:E5 Arg2:E7
 E7	Modifier:T7 Modifies:T52
 E8	Condition:T8 Name:T52
 E9	Eq-Comparison:T9 Operator:T53 Value:T54
@@ -16,39 +14,30 @@ E16	Procedure:T16 Name:T63
 E17	Procedure:T17 Name:T64
 E19	Procedure:T19 Name:T65
 E20	Procedure:T20 Name:T66 Minimum-Count:E21
-E22	Condition:T22 Name:T67
-E26	And:T26 Arg:T68 Arg2:T69
+E22	Observation:T22 Name:T67
 E27	Condition:T27 Name:T69
-E28	Or:T28 Arg:E27 Arg2:E29
 E29	Condition:T29 Name:T70
-E30	Temporal-Connection:T30 Arg:E29 Arg2:E31
-E31	Study:T31 
+E31	Study:T31
 E32	Observation:T32 Name:T71
 E34	Condition:T34 Name:T73
-E35	Temporal-Connection:T35 Arg:E32 Arg2:E36
-E36	Study:T36 
+E36	Study:T36
 E37	Negation:T37 Negates:E38
 E38	Procedure:T38 Name:T74
 E40	Eq-Comparison:T40 Temporal-Period:T75
 E41	Condition:T41 Temporality:E40
 E42	Condition:T42 Temporality:E40 Name:T23
-E43	Or:T43 Arg:E42 Arg2:E44
 E44	Condition:T44 Name:T76 Temporality:E40
-E46	Condition:T46 
+E46	Condition:T46
 E47	Assertion:T47 Asserted:T33
 E48	Study:T48 Stability:T33
-E18	Or:T18 Arg:E17 Arg2:E19
 E21	Eq-Comparison:T21 Operator:T79 Value:T80
 E49	Modifier:T77 Modifies:T52
-E50	Observation:T55 Eq-Comparison:E11 Name:T78 Minimum-Count:E9
+E50	Observation:T55 Numeric-Filter:E11 Name:T78 Minimum-Count:E9
 E24	Assertion:T24 Asserted:E37
-E23	And:T25 Arg:T72 Arg2:E34
 T1	Eq-Comparison 46 56	≥ 18 years
 T2	Age 60 63	age
-T3	Or 75 77	or
 T4	Assertion 78 87	suspected
 T5	Modifier 88 95	primary
-T6	Or 96 98	or
 T7	Modifier 99 116	metastatic breast
 T8	Condition 117 123	cancer
 T9	Eq-Comparison 130 142	At least one
@@ -61,23 +50,18 @@ T16	Procedure 218 228	ultrasound
 T17	Procedure 230 237	FDG-PET
 T19	Procedure 238 240	CT
 T20	Procedure 260 267	imaging
-T22	Condition 290 296	lesion
-T26	And 583 586	who
+T22	Observation 290 296	lesion
 T27	Condition 591 599	pregnant
-T28	Or 600 602	or
 T29	Condition 603 617	breast feeding
-T30	Temporal-Connection 618 629	at the time
 T31	Study 633 642	screening
 T32	Observation 646 666	urine pregnancy test
 T34	Condition 697 720	child-bearing potential
-T35	Temporal-Connection 721 723	at
 T36	Study 724 733	screening
 T37	Negation 740 749	Inability
 T38	Procedure 762 780	imaging procedures
 T40	Eq-Comparison 847 854	current
 T41	Condition 855 872	medical condition
 T42	Condition 874 881	illness
-T43	Or 883 885	or
 T44	Condition 886 894	disorder
 T46	Condition 1010 1019	condition
 T47	Assertion 1025 1030	could
@@ -99,7 +83,7 @@ T63	Procedure-Name 218 228	ultrasound
 T64	Procedure-Name 230 237	FDG-PET
 T65	Procedure-Name 238 240	CT
 T66	Procedure-Name 260 267	imaging
-T67	Condition-Name 290 296	lesion
+T67	Observation-Name 290 296	lesion
 T68	Life-Stage-And-Gender 575 582	Females
 T69	Condition-Name 591 599	pregnant
 T70	Condition-Name 603 617	breast feeding
@@ -109,7 +93,6 @@ T73	Condition-Name 697 720	child-bearing potential
 T74	Procedure-Name 762 780	imaging procedures
 T75	Eq-Temporal-Period 847 854	current
 T76	Condition-Name 886 894	disorder
-T18	Or 237 238	/
 T21	Eq-Comparison 243 251	Only one
 T79	Eq-Operator 243 247	Only
 T80	Eq-Value 248 251	one
@@ -118,24 +101,21 @@ T78	Observation-Name 143 149	lesion
 T55	Observation 143 149	lesion
 T24	Assertion 740 749	Inability
 T23	Condition-Name 874 881	illness
-T25	And 694 696	of
 T33	Stability 1031 1041	compromise
 A1	Assertion-Type-Value E4 possible
-A4	Temporal-Connection-Type-Value E30 during
-A6	Temporal-Connection-Type-Value E35 during
 A7	Assertion-Type-Value E47 hypothetical
 A8	Eq-Operator-Value T49 GTEQ
 A9	Eq-Temporal-Unit-Value T51 year
 A10	Eq-Operator-Value T53 GTEQ
 A12	Eq-Operator-Value T56 GTEQ
 A13	Life-Stage-And-Gender-Type T68 female
-A14	Observation-Type-Value T71 lab
+A14	Observation-Type-Value E32 lab
 A15	Life-Stage-And-Gender-Type T72 female
 A16	Eq-Temporal-Period-Value T75 present
 A2	Eq-Operator-Value T79 EQ
 A5	Assertion-Type-Value E24 hypothetical
 A3	Stability-Value T33 change
-A11	Observation-Type-Value T78 measurement
+A11	Observation-Type-Value E50 measurement
 R1	Example-Of Arg1:E13 Arg2:E12
 R2	Example-Of Arg1:E14 Arg2:E12
 R3	Example-Of Arg1:E15 Arg2:E12
@@ -146,3 +126,17 @@ R7	Found-By Arg1:E22 Arg2:E20
 R10	If-Then Arg1:T72 Arg2:E32
 R9	Caused-By Arg1:T33 Arg2:E46
 R8	Found-By Arg1:E50 Arg2:E12
+R11	Or Arg1:E49 Arg2:E4
+R12	Or Arg1:E5 Arg2:E7
+R13	And Arg1:T68 Arg2:T69
+R14	Or Arg1:E27 Arg2:E29
+R15	During Arg1:E29 Arg2:E31
+R16	During Arg1:E32 Arg2:E36
+R17	Or Arg1:E42 Arg2:E44
+R18	Or Arg1:E17 Arg2:E19
+R19	And Arg1:T72 Arg2:E34
+R20	Or Arg1:E13 Arg2:E14
+R21	Or Arg1:E14 Arg2:E15
+R22	Or Arg1:E15 Arg2:E16
+R23	Or Arg1:E16 Arg2:E17
+R24	Or Arg1:E41 Arg2:E42

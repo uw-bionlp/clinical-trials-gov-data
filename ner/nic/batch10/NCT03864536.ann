@@ -1,8 +1,8 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6
-E7	Observation:T7 Name:T8 Eq-Comparison:E9
-E8	Age:T10 Eq-Comparison:E10
+E7	Observation:T7 Name:T8 Numeric-Filter:E9
+E8	Age:T10 Numeric-Filter:E10
 E9	Eq-Comparison:T15 Operator:T9 Value:T14
 E10	Eq-Comparison:T16 Operator:T11 Value:T12 Value2:T13
 E2	Condition:T17 Name:T18
@@ -10,8 +10,6 @@ E4	Condition:T19 Name:T20 Severity:T22
 E6	Modifier:T21 Modifies:T20
 E11	Modifier:T23 Modifies:T20
 E12	Negation:T24 Negates:E4
-E13	Or:T25 Arg:E3 Arg2:E1
-E14	Or:T26 Arg:E11 Arg2:E6
 E15	Condition:T27 Name:T28
 E16	Negation:T29 Negates:E15
 E17	Observation:T30 Name:T31
@@ -39,8 +37,6 @@ T21	Modifier 225 236	psychiatric
 T22	Severity 218 224	severe
 T23	Modifier 171 183	neurological
 T24	Negation 168 170	No
-T25	Or 258 260	or
-T26	Or 215 217	or
 T27	Condition 297 305	insomnia
 T28	Condition-Name 297 305	insomnia
 T29	Negation 294 296	No
@@ -50,8 +46,10 @@ T32	Ethnicity 25 41	African American
 A1	Eq-Operator-Value T9 LTEQ
 A2	Eq-Operator-Value T11 BETWEEN
 A3	Severity-Value T22 severe
-A4	Observation-Type-Value T31 clinical-score
+A4	Observation-Type-Value E17 clinical-score
 R1	Example-Of Arg1:E5 Arg2:E4
 R2	Example-Of Arg1:E3 Arg2:E4
 R3	Example-Of Arg1:E1 Arg2:E4
 R4	Abbrev-Of Arg1:E7 Arg2:E17
+R5	Or Arg1:E3 Arg2:E1
+R6	Or Arg1:E11 Arg2:E6

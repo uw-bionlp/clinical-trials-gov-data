@@ -9,32 +9,26 @@ E11	Eq-Comparison:T24 Operator:T12 Value:T20 Unit:T51
 E4	Condition:T26 Name:T27 Minimum-Count:E6
 E6	Eq-Comparison:T28 Value:T29
 E12	Observation:T30 Name:T31
-E13	Observation:T32 Name:T33 Eq-Comparison:E8
+E13	Condition:T32 Name:T33 Numeric-Filter:E8
 E14	Observation:T34 Name:T35
-E15	Observation:T36 Name:T37 Eq-Comparison:E9
+E15	Observation:T36 Name:T37 Numeric-Filter:E9
 E16	Eq-Comparison:T38 Operator:T39 Unit:T15 Value:T18
-E17	Observation:T40 Name:T41 Eq-Comparison:E16
+E17	Observation:T40 Name:T41 Numeric-Filter:E16
 E18	Observation:T42 Name:T43
-E19	Observation:T44 Name:T45 Eq-Comparison:E10
+E19	Observation:T44 Name:T45 Numeric-Filter:E10
 E20	Observation:T47 Name:T48
-E21	Observation:T49 Name:T50 Eq-Comparison:E11
-E22	Condition:T52 Name:T81
-E23	And:T53 Arg:E7 Arg2:E3
+E21	Observation:T49 Name:T50 Numeric-Filter:E11
+E22	Condition:T52
 E24	Eq-Comparison:T54 Temporal-Period:T55
 E25	Drug:T56
-E26	Or:T57 Arg:E3 Arg2:E25
 E27	Condition:T58 Name:T59
 E28	Condition:T60 Name:T61
 E29	Condition:T62 Name:T63
-E30	Or:T64 Arg:E28 Arg2:E29
 E31	Condition:T66 Name:T67
 E32	Condition:T68 Name:T71
 E33	Modifier:T69 Modifies:T71
 E34	Modifier:T70 Modifies:T71
-E35	Or:T72 Arg:E33 Arg2:E34
 E36	Procedure:T73 Name:T74
-E37	Or:T75 Arg:E5 Arg2:E36
-E38	And:T76 Arg:E15 Arg2:E17
 E2	Condition:T77 Name:T78
 E39	Modifier:T79
 E40	Modifier:T80
@@ -68,8 +62,8 @@ T28	Eq-Comparison 108 111	one
 T29	Eq-Value 108 111	one
 T30	Observation 143 156	probing depth
 T31	Observation-Name 143 156	probing depth
-T32	Observation 158 160	PD
-T33	Observation-Name 158 160	PD
+T32	Condition 158 160	PD
+T33	Condition-Name 158 160	PD
 T34	Observation 169 194	clinical attachment level
 T35	Observation-Name 169 194	clinical attachment level
 T36	Observation 196 199	CAL
@@ -89,18 +83,15 @@ T49	Observation 389 393	FMBS
 T50	Observation-Name 389 393	FMBS
 T51	Eq-Unit 398 399	%
 T52	Condition 468 476	diseases
-T53	And 494 497	and
 T54	Eq-Comparison 525 530	using
 T55	Eq-Temporal-Period 525 530	using
 T56	Drug 531 542	medications
-T57	Or 522 524	or
 T58	Condition 555 574	periodontal tissues
 T59	Condition-Name 555 574	periodontal tissues
 T60	Condition 576 584	pregnant
 T61	Condition-Name 576 584	pregnant
 T62	Condition 588 597	lactating
 T63	Condition-Name 588 597	lactating
-T64	Or 585 587	or
 T65	Life-Stage-And-Gender 598 603	women
 T66	Condition 609 635	One-wall intrabony defects
 T67	Condition-Name 609 635	One-wall intrabony defects
@@ -108,11 +99,8 @@ T68	Condition 641 648	Defects
 T69	Modifier 662 668	buccal
 T70	Modifier 673 686	lingual sites
 T71	Condition-Name 641 648	Defects
-T72	Or 669 672	and
 T73	Procedure 743 776	restoration in the relevant teeth
 T74	Procedure-Name 743 776	restoration in the relevant teeth
-T75	Or 736 742	and/or
-T76	And 207 210	and
 T25	Severity 73 81	advanced
 T77	Condition 38 45	healthy
 T78	Condition-Name 38 45	healthy
@@ -124,12 +112,12 @@ A2	Eq-Operator-Value T10 GTEQ
 A3	Eq-Operator-Value T11 LTEQ
 A4	Eq-Operator-Value T12 LTEQ
 A5	Eq-Operator-Value T39 GTEQ
-A6	Observation-Type-Value T43 clinical-score
-A7	Observation-Type-Value T48 clinical-score
+A6	Observation-Type-Value E18 clinical-score
+A7	Observation-Type-Value E20 clinical-score
 A8	Eq-Temporal-Period-Value T55 present
 A9	Life-Stage-And-Gender-Type T65 female
 A10	Severity-Value T25 severe
-A11	Observation-Type-Value T31 measurement
+A11	Observation-Type-Value E12 measurement
 R1	Abbrev-Of Arg1:E13 Arg2:E12
 R2	Abbrev-Of Arg1:E15 Arg2:E14
 R3	Abbrev-Of Arg1:E19 Arg2:E18
@@ -141,3 +129,10 @@ R8	Caused-By Arg1:E27 Arg2:E25
 R9	If-Then Arg1:T65 Arg2:E29
 R10	Abbrev-Of Arg1:E39 Arg2:E2
 R11	Abbrev-Of Arg1:E40 Arg2:E22
+R12	And Arg1:E7 Arg2:E3
+R13	Or Arg1:E3 Arg2:E25
+R14	Or Arg1:E28 Arg2:E29
+R15	Or Arg1:E33 Arg2:E34
+R16	Or Arg1:E5 Arg2:E36
+R17	And Arg1:E15 Arg2:E17
+R18	Or Arg1:E27 Arg2:E28

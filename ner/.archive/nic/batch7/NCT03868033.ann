@@ -1,0 +1,98 @@
+E1	Condition:T1 Name:T24
+E2	Eq-Comparison:T2 Operator:T27 Temporal-Unit:T28 Value:T50
+E4	Drug:T4 Name:T29
+E5	Procedure:T5 Temporality:E3 Duration:E6
+E6	Eq-Comparison:T6 Operator:T30 Value:T31 Temporal-Unit:T32
+E7	Condition:T7 Name:T53
+E8	Condition:T8 Name:T33
+E9	Condition:T9 Name:T34
+E10	Condition:T10 Name:T35 Temporality:E11
+E11	Eq-Comparison:T11 Temporal-Period:T36
+E12	Eq-Comparison:T12 Temporal-Period:T37
+E13	Procedure:T13 Name:T38 Temporality:E12
+E14	Procedure:T14 Name:T39
+E15	Eq-Comparison:T15 Temporal-Period:T55
+E16	Other:T16 Is-Other:E17
+E17	Procedure:T17 Name:T40 Temporality:E15
+E24	Age:T51 Eq-Comparison:E2
+E3	Eq-Comparison:T3 Temporal-Period:T52
+E25	Modifier:T54 Modifies:T33
+E18	Observation:T18 Name:T19 Eq-Comparison:E19
+E19	Eq-Comparison:T20 Operator:T21 Value:T22 Unit:T23 Per:T41
+E20	Allergy:T42 Name:E21
+E21	Drug:T43 Name:T44
+E22	Condition:T45 Name:T46
+E23	Drug:T47 Name:T48
+E26	Contraindication:T49 Contraindicates:E23
+T1	Condition 25 39	Postmenopausal
+T2	Eq-Comparison 55 63	>50-year
+T4	Drug 79 88	Denosumab
+T5	Procedure 89 98	treatment
+T6	Eq-Comparison 99 108	≥ 2 years
+T7	Condition 116 128	osteoporosis
+T8	Condition 164 176	osteoporosis
+T9	Condition 182 204	metabolic bone disease
+T10	Condition 210 216	cancer
+T11	Eq-Comparison 217 224	history
+T12	Eq-Comparison 230 240	continuous
+T13	Procedure 241 256	steroid therapy
+T14	Procedure 262 289	hormone replacement therapy
+T15	Eq-Comparison 295 299	ever
+T16	Other 309 314	other
+T17	Procedure 323 348	anti-resorptive treatment
+T24	Condition-Name 25 39	Postmenopausal
+T25	Life-Stage-And-Gender 40 45	women
+T26	Life-Stage-And-Gender 51 54	Men
+T27	Eq-Operator 55 56	>
+T28	Eq-Temporal-Unit 59 63	year
+T29	Drug-Name 79 88	Denosumab
+T30	Eq-Operator 99 100	≥
+T31	Eq-Value 101 102	2
+T32	Eq-Temporal-Unit 103 108	years
+T33	Condition-Name 164 176	osteoporosis
+T34	Condition-Name 182 204	metabolic bone disease
+T35	Condition-Name 210 216	cancer
+T36	Eq-Temporal-Period 217 224	history
+T37	Eq-Temporal-Period 230 240	continuous
+T38	Procedure-Name 241 256	steroid therapy
+T39	Procedure-Name 262 289	hormone replacement therapy
+T40	Procedure-Name 323 348	anti-resorptive treatment
+T50	Eq-Value 56 58	50
+T51	Age 64 67	old
+T3	Eq-Comparison 73 78	After
+T52	Eq-Temporal-Period 73 78	After
+T53	Condition-Name 116 128	osteoporosis
+T54	Modifier 154 163	secondary
+T55	Eq-Temporal-Period 295 299	ever
+T18	Observation 354 390	estimated Glomerular filtration rate
+T19	Observation-Name 354 390	estimated Glomerular filtration rate
+T20	Eq-Comparison 391 402	< 35 mL/min
+T21	Eq-Operator 391 392	<
+T22	Eq-Value 393 395	35
+T23	Eq-Unit 396 398	mL
+T41	Eq-Temporal-Unit 399 402	min
+T42	Allergy 409 416	allergy
+T43	Drug 420 435	Zoledronic acid
+T44	Drug-Name 420 435	Zoledronic acid
+T45	Condition 441 454	hypocalcaemia
+T46	Condition-Name 441 454	hypocalcaemia
+T47	Drug 490 505	Zoledronic acid
+T48	Drug-Name 490 505	Zoledronic acid
+T49	Contraindication 465 482	contraindications
+A1	Life-Stage-And-Gender-Type T25 female
+A2	Life-Stage-And-Gender-Type T26 male
+A3	Eq-Operator-Value T27 GT
+A4	Eq-Temporal-Unit-Value T28 year
+A5	Eq-Operator-Value T30 GTEQ
+A6	Eq-Temporal-Unit-Value T32 year
+A7	Eq-Temporal-Period-Value T36 past
+A8	Eq-Temporal-Period-Value T37 present
+A12	Eq-Temporal-Period-Value T52 past
+A13	Eq-Temporal-Period-Value T55 anytime
+A9	Observation-Type-Value T19 lab
+A10	Eq-Operator-Value T21 LT
+A11	Eq-Temporal-Unit-Value T41 minute
+R1	If-Then Arg1:E1 Arg2:T25
+R2	If-Then Arg1:T26 Arg2:E24
+R3	Using Arg1:E5 Arg2:E4
+R4	Treatment-For Arg1:E5 Arg2:E7

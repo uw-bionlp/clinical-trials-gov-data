@@ -1,6 +1,5 @@
 E1	Eq-Comparison:T1 Value:T10 Operator:T11
 E2	Condition:T2 Name:T12 Minimum-Count:E1
-E3	Temporal-Connection:T3 Arg:E2 Arg2:E4
 E6	Modifier:T6 Modifies:T15
 E7	Procedure:T7 Name:T15
 E8	Negation:T8 Negates:E9
@@ -9,7 +8,6 @@ E4	Procedure:T4 Name:T5
 E5	Modifier:T14 Modifies:T5
 T1	Eq-Comparison 39 50	one or more
 T2	Condition 61 76	hip dislocation
-T3	Temporal-Connection 77 82	after
 T6	Modifier 118 125	primary
 T7	Procedure 126 129	THA
 T8	Negation 130 137	without
@@ -22,5 +20,5 @@ T4	Procedure 93 96	THA
 T5	Procedure-Name 93 96	THA
 T14	Modifier 85 92	primary
 T15	Procedure-Name 126 129	THA
-A1	Temporal-Connection-Type-Value E3 after
 A2	Eq-Operator-Value T11 GTEQ
+R1	After Arg1:E2 Arg2:E4

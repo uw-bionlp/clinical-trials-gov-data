@@ -16,12 +16,10 @@ E15	Drug:T23 Name:T24
 E16	Negation:T25 Negates:E15
 E17	Eq-Comparison:T26 Temporal-Period:T27
 E18	Drug:T28 Temporality:E17
-E19	And:T29 Arg:E18 Arg2:E16
 E20	Study:T30 Study-Of:E22
 E21	Other:T31 Is-Other:E20
 E22	Drug:T32
 E23	Assertion:T33 Asserted:E22
-E24	And:T34 Arg:E18 Arg2:E23
 T7	Drug 79 98	anetumab ravtansine
 T8	Drug-Name 79 98	anetumab ravtansine
 T9	Study 106 111	study
@@ -50,15 +48,13 @@ T25	Negation 580 583	not
 T26	Eq-Comparison 540 549	receiving
 T27	Eq-Temporal-Period 540 549	receiving
 T28	Drug 567 575	agent(s)
-T29	And 576 579	but
 T30	Study 696 701	study
 T31	Other 672 679	outside
 T32	Drug 666 671	agent
 T33	Assertion 633 640	able to
-T34	And 625 628	and
 A1	Eq-Temporal-Period-Value T3 present
 A2	Assertion-Type-Value E7 hypothetical
-A3	Observation-Type-Value T11 lab
+A3	Observation-Type-Value E8 lab
 A4	Polarity-Value T12 positive
 A5	Eq-Temporal-Period-Value T15 present
 A6	Eq-Temporal-Period-Value T18 present
@@ -68,3 +64,5 @@ A9	Assertion-Type-Value E23 hypothetical
 R1	If-Then Arg1:E1 Arg2:E5
 R2	If-Then Arg1:E9 Arg2:E8
 R3	If-Then Arg1:E11 Arg2:E13
+R4	And Arg1:E18 Arg2:E16
+R5	And Arg1:E18 Arg2:E23

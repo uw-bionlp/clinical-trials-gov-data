@@ -2,21 +2,17 @@ E1	Indication:T1 Indication-For:E50
 E2	Condition:T2 Name:T50
 E3	Condition:T3 Name:T52
 E4	Modifier:T4 Modifies:T82
-E5	Or:T5 Arg:E4 Arg2:E6
 E6	Modifier:T6 Modifies:T82
 E7	Condition:T7 Name:T53
 E8	Condition:T8 Name:T54
 E9	Modifier:T9 Modifies:T55
 E10	Condition:T10 Name:T55
-E11	And:T11 Arg:E10 Arg2:E12
 E12	Observation:T12 Name:T91 Polarity:T92
 E13	Assertion:T13 Asserted:E14
 E14	Procedure:T14 Name:T56
 E15	Condition:T15 Name:T57
-E16	And:T16 Arg:E15 Arg2:E17
-E17	Observation:T17 Name:T58 Eq-Comparison:E20
+E17	Observation:T17 Name:T58 Numeric-Filter:E20
 E20	Eq-Comparison:T20 Operator:T60 Value:T61 Value2:T18
-E21	Or:T21 Arg:E17 Arg2:E22
 E22	Negation:T22 Negates:E23
 E23	Assertion:T23 Asserted:E24
 E24	Condition:T24 Name:T62
@@ -28,7 +24,6 @@ E30	Procedure:T30 Name:T69
 E31	Modifier:T31 Modifies:T100
 E32	Modifier:T32 Modifies:T100
 E33	Modifier:T33 Modifies:T100
-E34	Or:T34 Arg:E33 Arg2:E35
 E35	Modifier:T35 Modifies:T100
 E36	Eq-Comparison:T36 Operator:T70 Value:T71 Unit:T72
 E37	Condition:T37 Name:T73 Polarity:T101
@@ -38,46 +33,38 @@ E40	Assertion:T40 Asserted:E41
 E41	Procedure:T41 Name:T75
 E42	Condition:T42 Name:T76
 E43	Condition:T43 Name:T78 Severity:T77
-E44	And:T44 Arg:E43 Arg2:E62
 E45	Modifier:T45 Modifies:T104
-E46	Or:T46 Arg:E45 Arg2:E47
 E47	Modifier:T47 Modifies:T104
 E48	Condition:T48 Name:T79
 E49	Procedure:T49 Name:T105
 E50	Procedure:T80 Name:T81
 E51	Condition:T51 Name:T82
 E52	Modifier:T83 Modifies:T53
-E53	Observation:T84 Name:T85 Eq-Comparison:E55
-E54	And:T86 Arg:E7 Arg2:E53
+E53	Observation:T84 Name:T85 Numeric-Filter:E55
 E55	Eq-Comparison:T87 Operator:T88 Value:T89 Value2:T90
 E56	Modifier:T93 Modifies:T57
 E18	Eq-Comparison:T19 Value:T59
 E19	Modifier:T94 Modifies:T63
-E57	Observation:T95 Eq-Comparison:E27 Minimum-Count:E18 Name:T63
+E57	Observation:T95 Numeric-Filter:E27 Minimum-Count:E18 Name:T63
 E58	Eq-Comparison:T96 Operator:T97
 E59	Assertion:T98 Asserted:E29
-E60	Observation:T99 Name:T100 Eq-Comparison:E36
-E61	And:T102 Arg:E42 Arg2:E43
+E60	Observation:T99 Name:T100 Numeric-Filter:E36
 E62	Condition:T103 Name:T104
 T1	Indication 48 58	indication
 T2	Condition 63 66	ASD
 T3	Condition 118 146	Impaired functional capacity
 T4	Modifier 158 170	Right atrial
-T5	Or 171 177	and/or
 T6	Modifier 178 180	RV
 T7	Condition 218 223	shunt
 T8	Condition 256 276	Paradoxical embolism
 T9	Modifier 297 314	isolated secundum
 T10	Condition 315 318	ASD
-T11	And 319 323	with
 T12	Observation 335 339	rims
 T13	Assertion 340 352	suitable for
 T14	Procedure 353 367	device closure
 T15	Condition 400 403	ASD
-T16	And 404 408	with
 T17	Observation 409 414	Qp/Qs
 T20	Eq-Comparison 415 421	<1.5:1
-T21	Or 422 424	or
 T22	Negation 425 427	no
 T23	Assertion 428 433	signs
 T24	Condition 437 455	RV volume overload
@@ -89,7 +76,6 @@ T30	Procedure 542 562	percutaneous closure
 T31	Modifier 569 577	Anterior
 T32	Modifier 579 588	posterior
 T33	Modifier 590 598	superior
-T34	Or 600 602	or
 T35	Modifier 603 611	inferior
 T36	Eq-Comparison 616 621	<5 mm
 T37	Condition 637 662	pulmonary venous drainage
@@ -99,9 +85,7 @@ T40	Assertion 705 714	requiring
 T41	Procedure 715 730	cardiac surgery
 T42	Condition 737 740	ASD
 T43	Condition 753 784	pulmonary arterial hypertension
-T44	And 785 788	and
 T45	Modifier 789 802	bidirectional
-T46	Or 803 805	or
 T47	Modifier 806 819	right-to-left
 T48	Condition 835 855	Intracardiac thrombi
 T49	Procedure 869 885	echocardiography
@@ -140,7 +124,6 @@ T53	Condition-Name 218 223	shunt
 T83	Modifier 204 217	Left-to-right
 T84	Observation 230 236	Qp: Qs
 T85	Observation-Name 230 236	Qp: Qs
-T86	And 224 228	with
 T87	Eq-Comparison 238 244	≥1.5:1
 T88	Eq-Operator 238 239	≥
 T89	Eq-Value 239 242	1.5
@@ -159,7 +142,6 @@ T98	Assertion 527 537	unsuitable
 T99	Observation 612 615	rim
 T100	Observation-Name 612 615	rim
 T101	Polarity 628 636	Abnormal
-T102	And 741 745	with
 T103	Condition 820 828	shunting
 T104	Condition-Name 820 828	shunting
 T105	Procedure-Name 869 885	echocardiography
@@ -170,10 +152,10 @@ A6	Eq-Operator-Value T60 LT
 A7	Eq-Operator-Value T65 GT
 A8	Eq-Operator-Value T70 LT
 A9	Severity-Value T77 severe
-A4	Observation-Type-Value T85 measurement
+A4	Observation-Type-Value E53 measurement
 A10	Eq-Operator-Value T88 GTEQ
 A11	Polarity-Value T92 normal
-A5	Observation-Type-Value T58 measurement
+A5	Observation-Type-Value E17 measurement
 A12	Eq-Operator-Value T97 GT
 A13	Assertion-Type-Value E59 hypothetical
 A14	Polarity-Value T101 abnormal
@@ -185,3 +167,14 @@ R5	Treatment-For Arg1:E26 Arg2:E57
 R6	Treatment-For Arg1:E30 Arg2:E28
 R7	Treatment-For Arg1:E41 Arg2:E39
 R8	Found-By Arg1:E48 Arg2:E49
+R9	Or Arg1:E4 Arg2:E6
+R10	And Arg1:E10 Arg2:E12
+R11	And Arg1:E15 Arg2:E17
+R12	Or Arg1:E17 Arg2:E22
+R13	Or Arg1:E33 Arg2:E35
+R14	And Arg1:E43 Arg2:E62
+R15	Or Arg1:E45 Arg2:E47
+R16	And Arg1:E7 Arg2:E53
+R17	And Arg1:E42 Arg2:E43
+R18	Or Arg1:E31 Arg2:E32
+R19	Or Arg1:E32 Arg2:E33

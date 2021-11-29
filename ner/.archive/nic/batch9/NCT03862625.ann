@@ -1,0 +1,254 @@
+E1	Condition:T1 Name:T2 Provider:E82
+E3	Procedure:T3 Name:T4
+E5	Observation:T5 Name:T6 Eq-Comparison:E34
+E7	Condition:T7 Name:T8 Stability:T134
+E9	Procedure:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Condition:T17 Name:T18
+E19	Procedure:T19 Name:T20
+E20	Age:T23 Eq-Comparison:E22
+E21	Eq-Comparison:T37 Operator:T21 Value:T34 Unit:T98
+E22	Eq-Comparison:T38 Operator:T24 Value:T26 Value2:T27 Temporal-Unit:T22
+E23	Eq-Comparison:T39 Operator:T25 Value:T28 Unit:T44 Value2:T29
+E2	Study:T40
+E4	Temporal-Connection:T41 Arg:E20 Arg2:E2
+E6	Observation:T42 Name:T43 Eq-Comparison:E23
+E8	Observation:T45 Name:T46 Eq-Comparison:E10
+E10	Eq-Comparison:T47 Operator:T48 Value:T30 Unit:T49
+E12	Family-Member:T50 Has:E16
+E14	Procedure:T51 Name:T52
+E16	Negation:T53 Negates:E14
+E18	Assertion:T54 Asserted:E14
+E24	Or:T55 Arg:E8 Arg2:E12
+E25	Eq-Comparison:T56 Temporal-Period:T57
+E26	Procedure:T58 Name:T59 Temporality:E25
+E27	Negation:T60 Negates:E26
+E28	Procedure:T61 Name:T62
+E29	Assertion:T63 Asserted:E28
+E30	Or:T64 Arg:E15 Arg2:E29
+E31	Family-Member:T65 Has:E32
+E32	Negation:T66 Negates:E28
+E33	Assertion:T67 Asserted:E28
+E34	Eq-Comparison:T68 Value:T31 Value2:T32
+E35	Condition:T69 Name:T70
+E36	Observation:T71 Name:T72
+E37	Modifier:T73 Modifies:T72
+E38	Negation:T74 Negates:E36
+E39	Assertion:T75 Asserted:E38
+E40	Modifier:T76 Modifies:T20
+E41	Assertion:T77 Asserted:E19 Asserted2:E42
+E42	Negation:T78 Negates:E3
+E43	And:T79 Arg:E19 Arg2:E42
+E44	Modifier:T80 Modifies:T4
+E45	Or:T81 Arg:E17 Arg2:E44
+E46	Encounter:T82 Duration:E47
+E47	Eq-Comparison:T83 Value:T33 Temporal-Unit:T84
+E48	Temporal-Connection:T85 Arg:E3 Arg2:E47
+E49	Procedure:T86 Name:T87 Temporality:E50
+E50	Eq-Comparison:T88 Temporal-Period:T89
+E51	Condition:T90 Name:T91
+E52	Condition:T92 Name:T93
+E53	Modifier:T94 Modifies:T93
+E54	Observation:T95 Name:T96 Eq-Comparison:E21 Eq-Comparison2:E56
+E55	Modifier:T97 Modifies:T96
+E56	Eq-Comparison:T99 Operator:T100 Value:T35 Unit:T101
+E57	Or:T102 Arg:E21 Arg2:E56
+E58	Procedure:T103 Name:T104
+E59	And:T105 Arg:E54 Arg2:E58
+E60	Family-Member:T106 Has:E58
+E61	Assertion:T107 Asserted:E58
+E62	Condition:T108 Name:T109 Temporality:E63
+E63	Eq-Comparison:T110 Operator:T111 Value:T36 Temporal-Unit:T112
+E64	Study:T113
+E65	Temporal-Connection:T114 Arg:E63 Arg2:E64
+E66	Condition:T115 Name:T116
+E67	Condition:T117 Name:T118
+E68	Or:T119 Arg:E66 Arg2:E67
+E69	Observation:T120 Name:T121
+E70	Modifier:T122 Modifies:T121
+E71	Modifier:T123 Modifies:T121
+E72	And:T124 Arg:E70 Arg2:E71
+E73	Negation:T125 Negates:E69
+E74	Assertion:T126 Asserted:E73
+E75	Observation:T127 Name:T128
+E76	Negation:T129 Negates:E75
+E77	Assertion:T130 Asserted:E76
+E78	Condition:T131 Name:T132
+E79	Negation:T133 Negates:E13
+E80	Negation:T135 Negates:T134
+E81	Modifier:T136 Modifies:T10
+E82	Provider:T137
+T1	Condition 116 130	cerebral palsy
+T2	Condition-Name 116 130	cerebral palsy
+T3	Procedure 667 692	therapeutic interventions
+T4	Procedure-Name 667 692	therapeutic interventions
+T5	Observation 464 506	Gross Motor Function Classification System
+T6	Observation-Name 464 506	Gross Motor Function Classification System
+T7	Condition 1372 1390	epileptic seizures
+T8	Condition-Name 1372 1390	epileptic seizures
+T9	Procedure 1418 1433	bone operations
+T10	Procedure-Name 1418 1433	bone operations
+T11	Condition 1231 1245	pressure ulcer
+T12	Condition-Name 1231 1245	pressure ulcer
+T13	Condition 1345 1359	cerebral palsy
+T14	Condition-Name 1345 1359	cerebral palsy
+T15	Condition 341 350	scoliosis
+T16	Condition-Name 341 350	scoliosis
+T17	Condition 697 706	scoliosis
+T18	Condition-Name 697 706	scoliosis
+T19	Procedure 638 645	therapy
+T20	Procedure-Name 638 645	therapy
+T21	Eq-Operator 925 934	less than
+T22	Eq-Temporal-Unit 49 54	years
+T23	Age 58 61	age
+T24	Eq-Operator 43 45	to
+T25	Eq-Operator 184 191	between
+T26	Eq-Value 41 42	6
+T27	Eq-Value 46 48	15
+T28	Eq-Value 192 194	10
+T29	Eq-Value 195 197	40
+T30	Eq-Value 225 227	40
+T31	Eq-Value 513 514	4
+T32	Eq-Value 518 519	5
+T33	Eq-Value 740 741	3
+T34	Eq-Value 935 937	10
+T35	Eq-Value 959 961	40
+T36	Eq-Value 1089 1090	1
+T37	Eq-Comparison 925 945	less than 10 degrees
+T38	Eq-Comparison 41 54	6 to 15 years
+T39	Eq-Comparison 184 205	between 10-40 degrees
+T40	Study 69 78	inclusion
+T41	Temporal-Connection 62 68	during
+T42	Observation 170 180	Cobb angle
+T43	Observation-Name 170 180	Cobb angle
+T44	Eq-Unit 198 205	degrees
+T45	Observation 208 218	Cobb angle
+T46	Observation-Name 208 218	Cobb angle
+T47	Eq-Comparison 219 235	above 40 degrees
+T48	Eq-Operator 219 224	above
+T49	Eq-Unit 228 235	degrees
+T50	Family-Member 255 262	parents
+T51	Procedure 285 294	operation
+T52	Procedure-Name 285 294	operation
+T53	Negation 268 271	not
+T54	Assertion 272 280	accepted
+T55	Or 236 239	and
+T56	Eq-Comparison 313 320	history
+T57	Eq-Temporal-Period 313 320	history
+T58	Procedure 324 333	operation
+T59	Procedure-Name 324 333	operation
+T60	Negation 310 312	no
+T61	Procedure 374 383	operation
+T62	Procedure-Name 374 383	operation
+T63	Assertion 358 369	decision of
+T64	Or 351 353	or
+T65	Family-Member 432 439	parents
+T66	Negation 388 391	not
+T67	Assertion 397 405	accepted
+T68	Eq-Comparison 513 519	4 or 5
+T69	Condition 525 544	Lack of contracture
+T70	Condition-Name 525 544	Lack of contracture
+T71	Observation 556 563	sitting
+T72	Observation-Name 556 563	sitting
+T73	Modifier 571 586	lower extremity
+T74	Negation 548 555	prevent
+T75	Assertion 548 555	prevent
+T76	Modifier 628 637	intensive
+T77	Assertion 600 608	agree to
+T78	Negation 658 662	stop
+T79	And 654 657	and
+T80	Modifier 711 728	lower extremities
+T81	Or 707 710	and
+T82	Encounter 748 757	follow-up
+T83	Eq-Comparison 740 747	3-month
+T84	Eq-Temporal-Unit 742 747	month
+T85	Temporal-Connection 729 735	during
+T86	Procedure 810 819	operation
+T87	Procedure-Name 810 819	operation
+T88	Eq-Comparison 799 806	history
+T89	Eq-Temporal-Period 799 806	history
+T90	Condition 827 836	scoliosis
+T91	Condition-Name 827 836	scoliosis
+T92	Condition 846 855	deformity
+T93	Condition-Name 846 855	deformity
+T94	Modifier 863 877	spine is rigid
+T95	Observation 890 899	curvature
+T96	Observation-Name 890 899	curvature
+T97	Modifier 916 921	spine
+T98	Eq-Unit 938 945	degrees
+T99	Eq-Comparison 949 969	more than 40 degrees
+T100	Eq-Operator 949 958	more than
+T101	Eq-Unit 962 969	degrees
+T102	Or 946 948	or
+T103	Procedure 992 1001	operation
+T104	Procedure-Name 992 1001	operation
+T105	And 977 991	patients whose
+T106	Family-Member 1030 1036	family
+T107	Assertion 1002 1022	decision is accepted
+T108	Condition 1051 1071	seating modification
+T109	Condition-Name 1051 1071	seating modification
+T110	Eq-Comparison 1080 1095	at least 1 year
+T111	Eq-Operator 1080 1088	at least
+T112	Eq-Temporal-Unit 1091 1095	year
+T113	Study 1125 1130	study
+T114	Temporal-Connection 1096 1102	before
+T115	Condition 1145 1155	spasticity
+T116	Condition-Name 1145 1155	spasticity
+T117	Condition 1160 1171	contracture
+T118	Condition-Name 1160 1171	contracture
+T119	Or 1156 1159	and
+T120	Observation 1183 1190	sitting
+T121	Observation-Name 1183 1190	sitting
+T122	Modifier 1198 1201	hip
+T123	Modifier 1206 1216	knee joint
+T124	And 1202 1205	and
+T125	Negation 1175 1182	prevent
+T126	Assertion 1175 1182	prevent
+T127	Observation 1274 1281	sitting
+T128	Observation-Name 1274 1281	sitting
+T129	Negation 1249 1256	prevent
+T130	Assertion 1249 1256	prevent
+T131	Condition 1307 1318	comorbidity
+T132	Condition-Name 1307 1318	comorbidity
+T133	Negation 1327 1330	not
+T134	Stability 1395 1405	controlled
+T135	Negation 1391 1394	not
+T136	Modifier 1438 1448	hip joints
+T137	Provider 136 146	specialist
+A1	Eq-Operator-Value T21 LT
+A2	Eq-Temporal-Unit-Value T22 year
+A3	Eq-Operator-Value T24 BETWEEN
+A4	Eq-Operator-Value T25 BETWEEN
+A5	Temporal-Connection-Type-Value E4 during
+A6	Observation-Type-Value T43 measurement
+A7	Observation-Type-Value T46 measurement
+A8	Eq-Operator-Value T48 GT
+A9	Family-Member-Type E12 parent
+A10	Assertion-Type-Value E18 hypothetical
+A11	Eq-Temporal-Period-Value T57 past
+A12	Assertion-Type-Value E29 hypothetical
+A13	Family-Member-Type E31 parent
+A14	Assertion-Type-Value E33 hypothetical
+A15	Assertion-Type-Value E39 hypothetical
+A16	Assertion-Type-Value E41 hypothetical
+A17	Eq-Temporal-Unit-Value T84 month
+A18	Temporal-Connection-Type-Value E48 during
+A19	Eq-Temporal-Period-Value T89 past
+A20	Observation-Type-Value T96 measurement
+A21	Eq-Operator-Value T100 GT
+A22	Assertion-Type-Value E61 hypothetical
+A23	Eq-Operator-Value T111 GTEQ
+A24	Eq-Temporal-Unit-Value T112 year
+A25	Temporal-Connection-Type-Value E65 before
+A26	Assertion-Type-Value E74 hypothetical
+A27	Assertion-Type-Value E77 hypothetical
+A28	Stability-Value T134 stable
+R1	Caused-By Arg1:E27 Arg2:E15
+R2	Caused-By Arg1:E38 Arg2:E35
+R3	Treatment-For Arg1:E3 Arg2:E17
+R4	Caused-By Arg1:E49 Arg2:E51
+R5	Caused-By Arg1:E73 Arg2:E67
+R6	Caused-By Arg1:E76 Arg2:E11
+R7	Caused-By Arg1:E78 Arg2:E13

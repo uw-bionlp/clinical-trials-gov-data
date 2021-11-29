@@ -5,17 +5,14 @@ E2	Negation:T8 Negates:E5 Negates2:E3 Negates3:E1 Negates4:E4
 E4	Condition:T9 Name:T10 Temporality:E9
 E6	Modifier:T11 Modifies:T10
 E7	Modifier:T12 Modifies:T10
-E8	Or:T13 Arg:E6 Arg2:E7
 E9	Eq-Comparison:T14 Temporal-Period:T15 Temporal-Unit:T7 Value:T16
 E10	Study:T17
 E11	Negation:T18 Negates:E10
-E12	Condition:T19 Name:T20
+E12	Observation:T19 Name:T20
 E13	Modifier:T21 Modifies:T20
 E14	Modifier:T22 Modifies:T20
-E15	Or:T23 Arg:E14 Arg2:E13
 E16	Modifier:T24 Modifies:T20
 E17	Study:T25
-E18	Temporal-Connection:T26 Arg:E12 Arg2:E17
 T1	Condition 83 105	cardiovascular disease
 T2	Condition-Name 83 105	cardiovascular disease
 T3	Condition 68 76	diabetes
@@ -28,20 +25,19 @@ T9	Condition 147 155	injuries
 T10	Condition-Name 147 155	injuries
 T11	Modifier 116 126	upper limb
 T12	Modifier 131 146	spinal muscular
-T13	Or 127 130	and
 T14	Eq-Comparison 163 178	last six months
 T15	Eq-Temporal-Period 163 167	last
 T16	Eq-Value 168 171	six
 T17	Study 219 224	study
 T18	Negation 204 211	absence
-T19	Condition 285 291	injury
-T20	Condition-Name 285 291	injury
+T19	Observation 285 291	injury
+T20	Observation-Name 285 291	injury
 T21	Modifier 270 284	osteoarticular
 T22	Modifier 253 266	muscle-tendon
-T23	Or 267 269	or
 T24	Modifier 299 310	upper limbs
 T25	Study 322 327	study
-T26	Temporal-Connection 311 317	during
 A1	Eq-Temporal-Unit-Value T7 month
 A2	Eq-Temporal-Period-Value T15 past
-A3	Temporal-Connection-Type-Value E18 during
+R1	Or Arg1:E6 Arg2:E7
+R2	Or Arg1:E14 Arg2:E13
+R3	During Arg1:E12 Arg2:E17

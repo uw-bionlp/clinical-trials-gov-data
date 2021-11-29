@@ -1,11 +1,10 @@
 E2	Condition:T2 Name:T3
 E4	Condition:T4 Name:T5
 E6	Procedure:T6 Name:T7 Temporality:E9
-E7	Age:T11 Eq-Comparison:E10
+E7	Age:T11 Numeric-Filter:E10
 E9	Eq-Comparison:T17 Operator:T9 Temporal-Unit:T10 Value:T16
 E10	Eq-Comparison:T18 Operator:T13 Value:T14 Value2:T15
 E1	Condition:T19 Name:T20 Temporality:E5
-E3	Or:T21 Arg:E1 Arg2:E2
 E5	Eq-Comparison:T22 Temporal-Period:T23
 E11	Negation:T24 Negates:E1
 E8	Negation:T12 Negates:E4
@@ -35,7 +34,6 @@ T17	Eq-Comparison 295 312	the past 2 months
 T18	Eq-Comparison 105 110	21-45
 T19	Condition 63 71	pregnant
 T20	Condition-Name 63 71	pregnant
-T21	Or 72 74	or
 T22	Eq-Comparison 53 62	currently
 T23	Eq-Temporal-Period 53 62	currently
 T24	Negation 49 52	Not
@@ -63,3 +61,4 @@ A7	Assertion-Type-Value E14 intention
 A8	Eq-Temporal-Period-Value T30 present
 A9	Location-Value T31 residence
 A10	Eq-Temporal-Period-Value T37 present
+R1	Or Arg1:E1 Arg2:E2

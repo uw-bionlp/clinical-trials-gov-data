@@ -1,5 +1,5 @@
 E1	Condition:T1 Name:T2 Code:T19
-E2	Encounter:T6 Type:T7 Location:T8 Temporality:E3
+E2	Encounter:T6 Location:T8 Temporality:E3
 E3	Eq-Comparison:T9 Operator:T10 Value:T3 Value2:T4
 E4	Condition:T5 Name:T11 Code:T12
 E5	Condition:T13 Name:T14 Code:T15
@@ -7,48 +7,46 @@ E6	Condition:T16 Name:T17 Code:T18
 E7	Condition:T20 Name:T21
 E8	Modifier:T22 Modifies:T21
 E9	Modifier:T23 Modifies:T21
-E10	Or:T24 Arg:E9 Arg2:E8
 E11	Condition:T25 Name:T26
-E12	Condition:T27 Name:T28
+E12	Observation:T27 Name:T28
 E13	Condition:T29 Name:T30
 E14	Procedure:T31 Name:T32
-E15	Or:T33 Arg:E13 Arg2:E14
 T1	Condition 201 219	Spastic hemiplegia
 T2	Condition-Name 201 219	Spastic hemiplegia
 T3	Eq-Value 68 80	January 2015
 T4	Eq-Value 85 94	July 2018
 T6	Encounter 31 43	hospitalized
-T7	Encounter-Type 31 43	hospitalized
 T8	Location 51 59	hospital
 T9	Eq-Comparison 60 94	between January 2015 and July 2018
 T10	Eq-Operator 60 67	between
 T5	Condition 122 132	hemiplegia
 T11	Condition-Name 122 132	hemiplegia
-T12	Condition-Code 134 137	G81
+T12	Code 134 137	G81
 T13	Condition 140 158	flaccid hemiplegia
 T14	Condition-Name 140 158	flaccid hemiplegia
-T15	Condition-Code 160 165	G81.0
+T15	Code 160 165	G81.0
 T16	Condition 168 191	hemiplegia, unspecified
 T17	Condition-Name 168 191	hemiplegia, unspecified
-T18	Condition-Code 193 198	G81.9
-T19	Condition-Code 221 226	G81.1
+T18	Code 193 198	G81.9
+T19	Code 221 226	G81.1
 T20	Condition 263 269	stroke
 T21	Condition-Name 263 269	stroke
 T22	Modifier 251 262	hemorrhagic
 T23	Modifier 239 247	ischemic
-T24	Or 248 250	or
 T25	Condition 301 311	hemiplegic
 T26	Condition-Name 301 311	hemiplegic
-T27	Condition 319 325	trauma
-T28	Condition-Name 319 325	trauma
+T27	Observation 319 325	trauma
+T28	Observation-Name 319 325	trauma
 T29	Condition 327 333	cancer
 T30	Condition-Name 327 333	cancer
 T31	Procedure 338 360	intracranial operation
 T32	Procedure-Name 338 360	intracranial operation
-T33	Or 334 337	and
-A1	Encounter-Type-Value T7 inpatient
+A1	Encounter-Type-Value E2 inpatient
 A2	Location-Value T8 hospital
 A3	Eq-Operator-Value T10 BETWEEN
 R1	Caused-By Arg1:E11 Arg2:E12
 R2	Caused-By Arg1:E11 Arg2:E13
 R3	Caused-By Arg1:E11 Arg2:E14
+R4	Or Arg1:E9 Arg2:E8
+R5	Or Arg1:E13 Arg2:E14
+R6	Or Arg1:E12 Arg2:E13

@@ -1,21 +1,18 @@
 E3	Condition:T3 Name:T4 Duration:E6
 E5	Condition:T5 Name:T6
 E7	Procedure:T7 Name:T8
-E8	Age:T17 Eq-Comparison:E14
-E9	Age:T18 Eq-Comparison:E11
+E8	Age:T17 Numeric-Filter:E14
+E9	Age:T18 Numeric-Filter:E11
 E10	Eq-Comparison:T23 Operator:T9 Value:T19
 E11	Eq-Comparison:T24 Operator:T11 Temporal-Unit:T15 Value:T21
 E1	Observation:T1 Name:T2
 E2	Assertion:T25 Asserted:E1
 E4	Observation:T26 Name:T27
 E6	Eq-Comparison:T28 Operator:T29 Temporal-Unit:T13 Value:T30
-E12	Observation:T31 Name:T32 Eq-Comparison:E10
-E13	And:T33 Arg:E3 Arg2:E12
+E12	Observation:T31 Name:T32 Numeric-Filter:E10
 E14	Eq-Comparison:T34 Operator:T35 Temporal-Unit:T14 Value:T20
-E15	And:T10 Arg:E8 Arg2:E9
 E16	Condition:T12 Name:T36
 E17	Condition:T37 Name:T38
-E18	Or:T39 Arg:E16 Arg2:E17
 E19	Procedure:T40 Name:T41
 E20	Contraindication:T42 Contraindicates:E19
 E21	Condition:T43 Name:T44
@@ -54,15 +51,12 @@ T29	Eq-Operator 215 224	more than
 T30	Eq-Value 225 228	six
 T31	Observation 243 269	visual analogue pain scale
 T32	Observation-Name 243 269	visual analogue pain scale
-T33	And 236 240	with
 T34	Eq-Comparison 497 514	at least 18 years
 T35	Eq-Operator 497 505	at least
-T10	And 523 526	and
 T12	Condition 583 591	Pregnant
 T36	Condition-Name 583 591	Pregnant
 T37	Condition 595 608	breastfeeding
 T38	Condition-Name 595 608	breastfeeding
-T39	Or 592 594	or
 T40	Procedure 670 679	fMRI scan
 T41	Procedure-Name 670 679	fMRI scan
 T42	Contraindication 637 653	contraindication
@@ -84,10 +78,15 @@ A7	Eq-Temporal-Unit-Value T15 year
 A8	Eq-Temporal-Unit-Value T16 minute
 A9	Assertion-Type-Value E2 hypothetical
 A10	Eq-Operator-Value T29 GT
-A11	Observation-Type-Value T32 measurement
+A11	Observation-Type-Value E12 measurement
 A12	Eq-Operator-Value T35 GTEQ
 A13	Eq-Temporal-Period-Value T49 past
 R1	Example-Of Arg1:E7 Arg2:E20
 R2	Example-Of Arg1:E21 Arg2:E20
 R3	Example-Of Arg1:E5 Arg2:E20
 R4	Example-Of Arg1:E22 Arg2:E20
+R5	And Arg1:E3 Arg2:E12
+R6	And Arg1:E8 Arg2:E9
+R7	Or Arg1:E16 Arg2:E17
+R8	Or Arg1:E5 Arg2:E22
+R9	Or Arg1:E21 Arg2:E5

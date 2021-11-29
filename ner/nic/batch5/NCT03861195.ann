@@ -1,17 +1,15 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Operator:T57 Temporal-Unit:T58 Value:T83
-E3	Observation:T3 Name:T59 Eq-Comparison:E4
+E3	Observation:T3 Name:T59 Numeric-Filter:E4
 E4	Eq-Comparison:T4 Operator:T60 Unit:T61 Value:T84 Per:T62
 E5	Indication:T5 Indication-For:E6
 E6	Procedure:T6 Name:T63
 E7	Condition:T7 Name:T64
-E8	Or:T8 Arg:E7 Arg2:E9
 E9	Procedure:T9 Name:T65
 E10	Modifier:T10 Modifies:T66
 E11	Condition:T11 Name:T66
 E12	Indication:T12 Indication-For:E13 Indication-For2:E17
 E13	Procedure:T13 Name:T67
-E14	Or:T14 Arg:E13 Arg2:E17
 E15	Modifier:T15 Modifies:T85
 E16	Modifier:T16 Modifies:T85
 E17	Procedure:T17 Name:T85
@@ -20,14 +18,12 @@ E19	Condition:T19 Name:T70
 E20	Indication:T20 Indication-For:E22 Indication-For2:E26
 E21	Modifier:T21 Modifies:T71
 E22	Procedure:T22 Name:T71
-E23	Or:T23 Arg:E22 Arg2:E26
 E24	Modifier:T24 Modifies:T88
 E25	Modifier:T25 Modifies:T88
 E26	Procedure:T26 Name:T88
 E27	Modifier:T27 Modifies:T72
 E28	Condition:T28 Name:T72
 E29	Modifier:T29 Modifies:T90
-E30	Or:T30 Arg:E29 Arg2:E31
 E31	Modifier:T31 Modifies:T90
 E32	Assertion:T32 Asserted:E33
 E33	Procedure:T33 Name:T73
@@ -38,29 +34,22 @@ E37	Condition:T37 Name:T75
 E38	Modifier:T38 Modifies:E39
 E39	Contraindication:T39 Contraindicates:E40
 E40	Procedure:T40 Name:T76
-E41	And:T41 Arg:T77 Arg2:E42
 E42	Procedure:T42 Name:T78
-E43	Or:T43 Arg:E42 Arg2:E45
 E44	Other:T44 Is-Other:E45
 E45	Procedure:T45 Name:T79
-E46	And:T46 Arg:T80 Arg2:E47
 E47	Condition:T47 Name:T95
 E49	Condition:T49 Name:T82
 E50	Other:T50 Is-Other:E48
 E51	Modifier:T51 Modifies:E48
-E52	Or:T52 Arg:E51 Arg2:E53
 E53	Modifier:T53 Modifies:E48
 E54	Negation:T54 Negates:E55
 E55	Procedure:T55 Name:T81
 E57	Modifier:T68 Modifies:T85
-E58	Or:T69 Arg:E15 Arg2:E57
 E59	Modifier:T86 Modifies:T88
-E60	Or:T87 Arg:E24 Arg2:E59
 E61	Observation:T89 Name:T90
 E62	Procedure:T91 Name:T92
 E63	Contraindication:T93 Contraindicates:E62
-E64	And:T94 Arg:E45 Arg2:E62
-E48	Condition:T48 
+E48	Condition:T48
 E65	Assertion:T96 Asserted:E54
 T1	Age 25 28	age
 T2	Eq-Comparison 29 38	≥18 years
@@ -69,13 +58,11 @@ T4	Eq-Comparison 48 57	≤40 kg/m2
 T5	Indication 63 73	indication
 T6	Procedure 78 90	hysterectomy
 T7	Condition 95 109	benign disease
-T8	Or 110 112	or
 T9	Procedure 113 133	prophylactic surgery
 T10	Modifier 141 151	hereditary
 T11	Condition 152 158	cancer
 T12	Indication 164 174	indication
 T13	Procedure 179 199	radical hysterectomy
-T14	Or 200 206	and/or
 T15	Modifier 207 213	pelvic
 T16	Modifier 228 241	sentinel-node
 T17	Procedure 243 258	lymphadenectomy
@@ -84,14 +71,12 @@ T19	Condition 272 278	cancer
 T20	Indication 284 294	indication
 T21	Modifier 299 315	modified radical
 T22	Procedure 316 328	hysterectomy
-T23	Or 329 335	and/or
 T24	Modifier 336 342	pelvic
 T25	Modifier 357 370	sentinel-node
 T26	Procedure 372 387	lymphadenectomy
 T27	Modifier 392 403	endometrial
 T28	Condition 404 410	cancer
 T29	Modifier 424 430	uterus
-T30	Or 431 434	and
 T31	Modifier 435 441	vagina
 T32	Assertion 442 452	allows for
 T33	Procedure 453 462	retrieval
@@ -102,17 +87,13 @@ T37	Condition 590 599	adhesions
 T38	Modifier 605 623	anaesthesiological
 T39	Contraindication 624 641	contraindications
 T40	Procedure 645 656	laparoscopy
-T41	And 668 672	with
 T42	Procedure 673 682	pacemaker
-T43	Or 683 685	or
 T44	Other 686 691	other
 T45	Procedure 692 700	implants
-T46	And 750 754	with
 T47	Condition 761 786	defects of the hemostasis
 T49	Condition 792 801	pregnancy
 T50	Other 807 812	other
 T51	Modifier 813 821	internal
-T52	Or 822 824	or
 T53	Modifier 825 835	anatomical
 T54	Negation 850 858	preclude
 T55	Procedure 861 886	minimal invasive approach
@@ -142,17 +123,14 @@ T82	Condition-Name 792 801	pregnancy
 T83	Eq-Value 30 32	18
 T84	Eq-Value 49 51	40
 T68	Modifier 215 226	para-aortic
-T69	Or 214 215	/
 T85	Procedure-Name 243 258	lymphadenectomy
 T86	Modifier 344 355	para-aortic
-T87	Or 343 344	/
 T88	Procedure-Name 372 387	lymphadenectomy
 T89	Observation 416 420	size
 T90	Observation-Name 416 420	size
 T91	Procedure 707 721	electrosurgery
 T92	Procedure-Name 707 721	electrosurgery
 T93	Contraindication 725 738	to be avoided
-T94	And 701 706	where
 T95	Condition-Name 761 786	defects of the hemostasis
 T48	Condition 836 844	criteria
 T81	Procedure-Name 861 886	minimal invasive approach
@@ -160,11 +138,11 @@ T96	Assertion 850 858	preclude
 A1	Assertion-Type-Value E32 hypothetical
 A2	Eq-Operator-Value T57 GTEQ
 A3	Eq-Temporal-Unit-Value T58 year
-A4	Observation-Type-Value T59 vital
+A4	Observation-Type-Value E3 vital
 A5	Eq-Operator-Value T60 LTEQ
 A6	Life-Stage-And-Gender-Type T77 female
 A7	Life-Stage-And-Gender-Type T80 female
-A8	Observation-Type-Value T90 measurement
+A8	Observation-Type-Value E61 measurement
 A9	Assertion-Type-Value E65 hypothetical
 R1	Treatment-For Arg1:E6 Arg2:E7
 R2	Caused-By Arg1:E7 Arg2:E11
@@ -175,3 +153,14 @@ R6	Treatment-For Arg1:E26 Arg2:E28
 R7	Treatment-For Arg1:E33 Arg2:E35
 R8	Caused-By Arg1:E33 Arg2:E61
 R9	Caused-By Arg1:E54 Arg2:E48
+R10	Or Arg1:E7 Arg2:E9
+R11	Or Arg1:E13 Arg2:E17
+R12	Or Arg1:E22 Arg2:E26
+R13	Or Arg1:E29 Arg2:E31
+R14	And Arg1:T77 Arg2:E42
+R15	Or Arg1:E42 Arg2:E45
+R16	And Arg1:T80 Arg2:E47
+R17	Or Arg1:E51 Arg2:E53
+R18	Or Arg1:E15 Arg2:E57
+R19	Or Arg1:E24 Arg2:E59
+R20	And Arg1:E45 Arg2:E62

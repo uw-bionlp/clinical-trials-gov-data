@@ -3,8 +3,6 @@ E3	Condition:T3 Name:T4
 E2	Procedure:T6 Name:T7
 E5	Procedure:T8 Name:T9
 E6	Procedure:T10 Name:T11
-E7	Or:T12 Arg:E2 Arg2:E5
-E8	Or:T13 Arg:E5 Arg2:E6
 E11	Procedure:T17 Name:T18
 E12	Negation:T19 Negates:E3
 T1	Condition 139 154	pleural disease
@@ -17,8 +15,6 @@ T8	Procedure 178 196	bedside ultrasound
 T9	Procedure-Name 178 196	bedside ultrasound
 T10	Procedure 200 219	Computed Tomography
 T11	Procedure-Name 200 219	Computed Tomography
-T12	Or 175 177	or
-T13	Or 197 199	or
 T17	Procedure 382 394	radiographic
 T18	Procedure-Name 382 394	radiographic
 T19	Negation 379 381	no
@@ -26,3 +22,5 @@ R1	Found-By Arg1:E1 Arg2:E2
 R2	Found-By Arg1:E1 Arg2:E5
 R3	Found-By Arg1:E1 Arg2:E6
 R4	Found-By Arg1:E3 Arg2:E11
+R5	Or Arg1:E2 Arg2:E5
+R6	Or Arg1:E5 Arg2:E6

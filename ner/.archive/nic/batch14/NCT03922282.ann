@@ -1,0 +1,78 @@
+E1	Procedure:T1 Name:T2 Temporality:E19
+E3	Procedure:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8 Polarity:T43
+E2	Procedure:T14 Name:T15 Temporality:E4
+E4	Eq-Comparison:T16 Temporal-Period:T17
+E6	Procedure:T18 Name:T19 Temporality:E18
+E8	Assertion:T20 Asserted:E3
+E9	Eq-Comparison:T21 Temporal-Unit:T9 Operator:T23 Value:T11
+E10	Eq-Comparison:T10 Temporal-Unit:T22 Value:T12 Operator:T24
+E11	Or:T25 Arg:E9 Arg2:E10
+E12	Age:T26 Eq-Comparison:E9
+E13	Observation:T27 Name:T28 Polarity:T29
+E14	Observation:T30 Name:T31 Eq-Comparison:E15
+E15	Eq-Comparison:T32 Operator:T33 Value:T13
+E16	Condition:T34 Name:T35
+E17	Or:T36 Arg:E16 Arg2:E5
+E18	Eq-Comparison:T37 Temporal-Period:T38
+E19	Eq-Comparison:T39 Temporal-Period:T40
+E20	Modifier:T41 Modifies:T2
+E21	Modifier:T42 Modifies:T4
+T1	Procedure 157 169	radiotherapy
+T2	Procedure-Name 157 169	radiotherapy
+T3	Procedure 208 218	dissection
+T4	Procedure-Name 208 218	dissection
+T5	Condition 381 390	pregnancy
+T6	Condition-Name 381 390	pregnancy
+T7	Condition 273 290	general condition
+T8	Condition-Name 273 290	general condition
+T9	Eq-Temporal-Unit 241 246	years
+T11	Eq-Value 238 240	18
+T12	Eq-Value 255 257	70
+T13	Eq-Value 356 357	3
+T14	Procedure 47 62	thyroid surgery
+T15	Procedure-Name 47 62	thyroid surgery
+T16	Eq-Comparison 37 46	will have
+T17	Eq-Temporal-Period 37 46	will have
+T18	Procedure 110 125	thyroid surgery
+T19	Procedure-Name 110 125	thyroid surgery
+T20	Assertion 195 199	need
+T21	Eq-Comparison 232 246	under 18 years
+T22	Eq-Temporal-Unit 258 263	years
+T10	Eq-Comparison 250 263	over 70 years
+T23	Eq-Operator 232 237	under
+T24	Eq-Operator 250 254	over
+T25	Or 247 249	or
+T26	Age 241 246	years
+T27	Observation 301 338	American Society of Anesthesiologists
+T28	Observation-Name 301 338	American Society of Anesthesiologists
+T29	Polarity 296 300	High
+T30	Observation 339 342	ASA
+T31	Observation-Name 339 342	ASA
+T32	Eq-Comparison 351 357	over 3
+T33	Eq-Operator 351 355	over
+T34	Condition 364 377	Breast feeder
+T35	Condition-Name 364 377	Breast feeder
+T36	Or 378 380	or
+T37	Eq-Comparison 100 109	underwent
+T38	Eq-Temporal-Period 100 109	underwent
+T39	Eq-Comparison 143 152	underwent
+T40	Eq-Temporal-Period 143 152	underwent
+T41	Modifier 173 177	neck
+T42	Modifier 203 207	neck
+A1	Eq-Temporal-Unit-Value T9 year
+A3	Eq-Temporal-Period-Value T17 future
+A4	Assertion-Type-Value E8 hypothetical
+A5	Eq-Temporal-Unit-Value T22 year
+A2	Eq-Operator-Value T23 LT
+A6	Eq-Operator-Value T24 GT
+A7	Polarity-Value T29 high
+A8	Eq-Operator-Value T33 GT
+A9	Eq-Temporal-Period-Value T38 past
+A10	Eq-Temporal-Period-Value T40 past
+A11	Observation-Type-Value T28 clinical-score
+A12	Observation-Type-Value T31 clinical-score
+R1	Abbrev-Of Arg1:E14 Arg2:E13
+T43	Polarity 269 272	Bad
+A13	Polarity-Value T43 abnormal

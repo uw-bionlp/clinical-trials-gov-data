@@ -1,5 +1,5 @@
 E1	Condition:T1 Name:T34
-E2	Age:T2 Eq-Comparison:E3
+E2	Age:T2 Numeric-Filter:E3
 E3	Eq-Comparison:T3 Value:T36 Operator:T37 Value:T38 Temporal-Unit:T39
 E4	Procedure:T4 Name:T40
 E5	Procedure:T5 Name:T41
@@ -13,26 +13,23 @@ E12	Condition:T12 Name:T48
 E13	Condition:T13 Name:T49
 E14	Condition:T14 Name:T50
 E15	Condition:T15 Name:T51
-E16	Modifier:T16 Modifies:T52
-E17	Or:T17 Arg:E16 Arg2:E18
-E18	Modifier:T18 Modifies:T52
-E19	Condition:T19 Name:T52
+E16	Modifier:T16 Modifies:E19
+E18	Modifier:T18 Modifies:E19
+E19	Condition:T19
 E20	Condition:T20 Name:T53
 E21	Modifier:T21 Modifies:T53
-E22	Or:T22 Arg:E34 Arg2:E23
 E23	Modifier:T23 Modifies:T53
 E24	Condition:T24 Name:T54
 E25	Condition:T25 Name:T55
 E26	Condition:T26 Name:T56
-E27	Observation:T27 Name:T57 Eq-Comparison:E28 Eq-Comparison2:E30
+E27	Observation:T27 Name:T57 Numeric-Filter:E28 Numeric-Filter:E30
 E28	Eq-Comparison:T28 Operator:T58 Value:T59
-E29	Or:T29 Arg:E28 Arg2:E30
 E30	Eq-Comparison:T30 Operator:T60 Value:T61 Unit:T62 Per:T63
-E31	Observation:T31 Name:T64 Eq-Comparison:E32
+E31	Observation:T31 Name:T64 Numeric-Filter:E32
 E32	Eq-Comparison:T32 Operator:T65 Value:T66 Unit:T67
 E33	Eq-Comparison:T33 Operator:T69 Value:T70 Unit:T71 Per:T72
 E34	Modifier:T73 Modifies:T53
-E35	Observation:T74 Name:T68 Eq-Comparison:E33
+E35	Observation:T74 Name:T68 Numeric-Filter:E33
 T1	Condition 25 32	Healthy
 T2	Age 44 47	Age
 T3	Eq-Comparison 48 59	18-50 years
@@ -49,19 +46,16 @@ T13	Condition 259 278	Heart valve disease
 T14	Condition 293 311	cardiac arrhythmia
 T15	Condition 317 324	Anaemia
 T16	Modifier 330 336	Kidney
-T17	Or 337 339	or
 T18	Modifier 340 347	hepatic
 T19	Condition 348 355	disease
 T20	Condition 361 377	Hypersensitivity
 T21	Modifier 382 386	soya
-T22	Or 393 395	or
 T23	Modifier 396 403	peanuts
 T24	Condition 409 418	Pregnancy
 T25	Condition 424 435	Poor health
 T26	Condition 447 464	Illicit substance
 T27	Observation 474 477	BMI
 T28	Eq-Comparison 478 481	<20
-T29	Or 482 484	or
 T30	Eq-Comparison 485 494	>35 kg/m2
 T31	Observation 500 503	SBP
 T32	Eq-Comparison 504 513	>150 mmHg
@@ -112,12 +106,16 @@ A2	Eq-Operator-Value T37 BETWEEN
 A3	Eq-Temporal-Unit-Value T39 year
 A4	Eq-Temporal-Period-Value T42 past
 A6	Eq-Temporal-Unit-Value T46 year
-A7	Observation-Type-Value T57 vital
+A7	Observation-Type-Value E27 vital
 A8	Eq-Operator-Value T58 LT
 A9	Eq-Operator-Value T60 GT
 A10	Eq-Operator-Value T65 GT
 A12	Eq-Operator-Value T69 GT
 A13	Eq-Temporal-Unit-Value T72 minute
 A5	Eq-Operator-Value T45 GT
-A14	Observation-Type-Value T64 vital
-A15	Observation-Type-Value T68 vital
+A14	Observation-Type-Value E31 vital
+A15	Observation-Type-Value E35 vital
+R1	Or Arg1:E16 Arg2:E18
+R2	Or Arg1:E34 Arg2:E23
+R3	Or Arg1:E28 Arg2:E30
+R4	Or Arg1:E21 Arg2:E34

@@ -4,24 +4,19 @@ E5	Condition:T5 Name:T6 Temporality:E20
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E2	Condition:T14 Name:T15
-E4	Or:T16 Arg:E7 Arg2:E9
-E6	Condition:T17 Name:T18 Severity:T19
+E6	Condition:T17 Severity:T19
 E8	Modifier:T20 Modifies:T6
 E10	Modifier:T21 Modifies:T6
-E11	Or:T22 Arg:E8 Arg2:E10
 E12	Allergy:T23 Name:E1 Name2:E23
 E13	Drug:T24 Name:T25 Temporality:E18
 E14	Drug:T26 Name:T27 Temporality:E18
 E15	Drug:T28 Name:T29 Temporality:E18
-E16	Or:T30 Arg:E14 Arg2:E15
-E17	Study:T31 
+E17	Study:T31
 E18	Eq-Comparison:T32 Temporal-Unit:T11 Value:T12
-E19	Temporal-Connection:T33 Arg:E18 Arg2:E17
 E20	Eq-Comparison:T34 Temporal-Period:T35
 E21	Organism:T36 Name:T37
 E22	Study:T38 Study-Of:E23
-E23	Drug:T39 
-E24	Or:T40 Arg:E1 Arg2:E23
+E23	Drug:T39
 T1	Drug 222 234	pantoprazole
 T2	Drug-Name 222 234	pantoprazole
 T3	Condition 45 54	infection
@@ -37,13 +32,11 @@ T12	Eq-Value 345 346	4
 T13	Polarity 22 30	Positive
 T14	Condition 92 102	malignancy
 T15	Condition-Name 92 102	malignancy
-T16	Or 118 120	or
 T17	Condition 159 167	diseases
 T18	Condition-Name 159 167	diseases
 T19	Severity 147 158	significant
 T20	Modifier 184 188	drug
 T21	Modifier 192 199	alcohol
-T22	Or 189 191	or
 T23	Allergy 211 218	Allergy
 T24	Drug 297 317	anti-secretory drugs
 T25	Drug-Name 297 317	anti-secretory drugs
@@ -51,20 +44,22 @@ T26	Drug 319 330	antibiotics
 T27	Drug-Name 319 330	antibiotics
 T28	Drug 334 344	probiotics
 T29	Drug-Name 334 344	probiotics
-T30	Or 331 333	or
 T31	Study 367 377	enrollment
 T32	Eq-Comparison 345 352	4 weeks
-T33	Temporal-Connection 353 362	preceding
 T34	Eq-Comparison 173 180	History
 T35	Eq-Temporal-Period 173 180	History
 T36	Organism 35 44	H. pylori
 T37	Organism-Name 35 44	H. pylori
 T38	Study 279 284	study
 T39	Drug 245 254	component
-T40	Or 235 237	or
 A1	Eq-Temporal-Unit-Value T11 week
 A2	Polarity-Value T13 positive
 A3	Severity-Value T19 severe
-A4	Temporal-Connection-Type-Value E19 before
 A5	Eq-Temporal-Period-Value T35 past
 R1	Caused-By Arg1:E3 Arg2:E21
+R2	Or Arg1:E7 Arg2:E9
+R3	Or Arg1:E8 Arg2:E10
+R4	Or Arg1:E14 Arg2:E15
+R5	Before Arg1:E18 Arg2:E17
+R6	Or Arg1:E1 Arg2:E23
+R7	Or Arg1:E13 Arg2:E14

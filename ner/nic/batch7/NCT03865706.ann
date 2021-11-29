@@ -1,40 +1,34 @@
-E1	Encounter:T1 Location:T69
+E1	Encounter:T1
 E2	Assertion:T2 Asserted:T69
-E3	Age:T3 Eq-Comparison:E4
+E3	Age:T3 Numeric-Filter:E4
 E4	Eq-Comparison:T4 Operator:T70 Value:T71 Temporal-Unit:T72
-E6	Temporal-Connection:T6 Arg2:E7 Arg:E3
-E7	Encounter:T7
+E7	
 E8	Condition:T8 Name:T74
 E10	Assertion:T10 Asserted:E11
 E11	Condition:T11 Name:T76
-E12	Observation:T12 Name:T33 Eq-Comparison:E13
+E12	Observation:T12 Name:T33 Numeric-Filter:E13
 E13	Eq-Comparison:T13 Operator:T77 Value:T75 Unit:T122
 E15	Eq-Comparison:T15 Temporal-Period:T78
 E16	Modifier:T16 Modifies:T79
 E17	Drug:T17 Name:T79 Temporality:E15 Temporality2:E18
 E18	Eq-Comparison:T18 Operator:T80 Temporal-Period:T81 Value:T82 Temporal-Unit:T83
-E19	Or:T19 Arg:E17 Arg2:E20
 E21	Assertion:T21 Asserted:E22
 E22	Study:T22 Temporality:E23
 E23	Eq-Comparison:T23 Operator:T84 Value:T85 Temporal-Unit:T86
-E24	Temporal-Connection:T24 Arg:E23 Arg2:E26
-E26	Encounter:T26 Location:T25
+E26	Encounter:T26
 E27	Study:T27 Temporality:E28
 E28	Eq-Comparison:T28 Operator:T89 Value:T90 Temporal-Unit:T91
-E29	Temporal-Connection:T29 Arg:E28 Arg2:E31
-E31	Encounter:T31 Location:T30
+E31	Encounter:T31
 E32	Assertion:T32 Asserted:E66
 E33	Modifier:T34 Modifies:T94
-E34	Or:T35 Arg:E33 Arg2:E25
 E35	Procedure:T36 Name:T94
 E37	Allergy:T38 Name:E36
 E38	Condition:T39 Name:T95
-E39	Observation:T40 Name:T96 Eq-Comparison:E40
+E39	Observation:T40 Name:T96 Numeric-Filter:E40
 E40	Eq-Comparison:T41 Value:T97 Unit:T98 Operator:T125 Per:T99
 E41	Condition:T42 Name:T100
 E42	Eq-Comparison:T43 Temporal-Period:T101
 E43	Procedure:T44 Name:T102 Temporality:E42
-E44	Or:T45 Arg:E43 Arg2:E45
 E45	Procedure:T46 Name:T103 Temporality:E30
 E46	Drug:T47 Name:T104 Dose:E47
 E47	Eq-Comparison:T48 Value:T105 Unit:T106 Operator:T128 Per:T107
@@ -42,22 +36,16 @@ E48	Drug:T49 Name:T108
 E49	Drug:T50 Name:T109
 E50	Drug:T51 Name:T110
 E51	Drug:T52 Name:T111
-E52	Or:T53 Arg:E51 Arg2:E53
 E53	Drug:T54 Name:T112
 E54	Procedure:T55 Name:T113 Temporality:E56
 E56	Eq-Comparison:T57 Operator:T115 Value:T116 Temporal-Unit:T117
-E57	Or:T58 Arg:E54 Arg2:E58
 E58	Condition:T59 Name:T114
 E59	Observation:T60 Name:T118
 E60	Observation:T61 Name:T119
-E61	Or:T62 Arg:E60 Arg2:E62
 E62	Observation:T63 Name:T120
 E63	Observation:T64 Name:T129
-E64	Or:T65 Arg:E63 Arg2:E65
 E66	Negation:T67 Negates:E35
 E5	Modifier:T5 Modifies:T76
-E9	Or:T9 Arg:E5 Arg2:E10
-E14	And:T123 Arg:E11 Arg2:E12
 E20	Coreference:T20 Refers-To:E17
 E67	Assertion:T124 Asserted:E20
 E25	Modifier:T87 Modifies:T94
@@ -69,7 +57,6 @@ T1	Encounter 25 37	Hospitalized
 T2	Assertion 44 52	eligible
 T3	Age 70 73	Age
 T4	Eq-Comparison 74 84	≥ 18 years
-T6	Temporal-Connection 89 100	at the time
 T7	Encounter 104 119	hospitalization
 T8	Condition 130 136	sepsis
 T10	Assertion 195 204	suspected
@@ -80,19 +67,15 @@ T15	Eq-Comparison 266 274	Received
 T16	Modifier 275 289	broad-spectrum
 T17	Drug 290 301	antibiotics
 T18	Eq-Comparison 302 326	within the last 24 hours
-T19	Or 327 329	or
 T21	Assertion 370 377	Able to
 T22	Study 387 397	enrollment
 T23	Eq-Comparison 398 412	within 4 hours
-T24	Temporal-Connection 413 415	of
 T26	Encounter 420 429	admission
 T27	Study 456 468	intervention
 T28	Eq-Comparison 469 483	within 6 hours
-T29	Temporal-Connection 484 486	of
 T31	Encounter 491 500	admission
 T32	Assertion 526 535	Inability
 T34	Modifier 547 551	oral
-T35	Or 552 554	or
 T36	Procedure 563 569	fluids
 T38	Allergy 582 589	allergy
 T39	Condition 595 607	Hyponatremia
@@ -101,7 +84,6 @@ T41	Eq-Comparison 622 632	≤128 mEq/L
 T42	Condition 639 656	Immunosuppression
 T43	Eq-Comparison 669 676	history
 T44	Procedure 680 702	solid organ transplant
-T45	Or 703 705	or
 T46	Procedure 720 741	ablative chemotherapy
 T47	Drug 743 751	steroids
 T48	Eq-Comparison 773 782	≥5 mg/day
@@ -109,18 +91,14 @@ T49	Drug 783 793	prednisone
 T50	Drug 795 810	antimetabolites
 T51	Drug 812 828	anti-TNFα agents
 T52	Drug 830 852	calcineurin inhibitors
-T53	Or 854 856	or
 T54	Drug 857 870	mycophenolate
 T55	Procedure 876 883	Surgery
 T57	Eq-Comparison 915 929	within 30 days
-T58	Or 930 932	or
 T59	Condition 939 960	intestinal strictures
 T60	Observation 966 984	Do Not Resuscitate
 T61	Observation 986 989	DNR
-T62	Or 991 993	or
 T63	Observation 994 1009	Do Not Intubate
 T64	Observation 1011 1014	DNI
-T65	Or 1024 1026	or
 T67	Negation 526 535	Inability
 T68	Encounter-Type 25 37	Hospitalized
 T69	Location 61 64	ICU
@@ -172,12 +150,10 @@ T118	Observation-Name 966 984	Do Not Resuscitate
 T119	Observation-Name 986 989	DNR
 T120	Observation-Name 994 1009	Do Not Intubate
 T5	Modifier 186 191	known
-T9	Or 192 194	or
 T33	Observation-Name 222 232	SOFA score
 T75	Eq-Value 237 238	2
 T14	Eq-Operator 246 251	above
 T122	Eq-Unit 252 260	baseline
-T123	And 215 219	with
 T20	Coreference 330 337	ordered
 T124	Assertion 342 364	pending administration
 T25	Location 416 419	ICU
@@ -195,11 +171,8 @@ T129	Observation-Name 1011 1014	DNI
 T66	Observation 1028 1049	no escalation of care
 T121	Observation-Name 1028 1049	no escalation of care
 A1	Assertion-Type-Value E2 hypothetical
-A2	Temporal-Connection-Type-Value E6 during
 A3	Assertion-Type-Value E10 possible
 A4	Assertion-Type-Value E21 hypothetical
-A5	Temporal-Connection-Type-Value E24 after
-A6	Temporal-Connection-Type-Value E29 after
 A7	Assertion-Type-Value E32 hypothetical
 A8	Encounter-Type-Value T68 inpatient
 A9	Location-Value T69 unit
@@ -217,12 +190,12 @@ A21	Encounter-Type-Value T88 inpatient
 A22	Eq-Operator-Value T89 LTEQ
 A23	Eq-Temporal-Unit-Value T91 hour
 A25	Encounter-Type-Value T93 inpatient
-A26	Observation-Type-Value T96 lab
+A26	Observation-Type-Value E39 lab
 A27	Eq-Temporal-Period-Value T101 past
 A28	Eq-Temporal-Unit-Value T107 day
 A29	Eq-Operator-Value T115 LTEQ
 A30	Eq-Temporal-Unit-Value T117 day
-A32	Observation-Type-Value T33 clinical-score
+A32	Observation-Type-Value E12 clinical-score
 A33	Eq-Operator-Value T14 GT
 A34	Eq-Unit-Value T122 ref-range-normal
 A35	Assertion-Type-Value E67 hypothetical
@@ -243,3 +216,19 @@ R9	Equivalent-To Arg1:E51 Arg2:E41
 R10	Equivalent-To Arg1:E53 Arg2:E41
 R11	Abbrev-Of Arg1:E60 Arg2:E59
 R12	Abbrev-Of Arg1:E63 Arg2:E62
+R13	During Arg1:E3 Arg2:E7
+R14	Or Arg1:E17 Arg2:E20
+R15	After Arg1:E23 Arg2:E26
+R16	After Arg1:E28 Arg2:E31
+R17	Or Arg1:E33 Arg2:E25
+R18	Or Arg1:E43 Arg2:E45
+R19	Or Arg1:E51 Arg2:E53
+R20	Or Arg1:E54 Arg2:E58
+R21	Or Arg1:E60 Arg2:E62
+R22	Or Arg1:E63 Arg2:E65
+R23	Or Arg1:E5 Arg2:E10
+R24	And Arg1:E11 Arg2:E12
+R25	Or Arg1:E45 Arg2:E46
+R26	Or Arg1:E48 Arg2:E49
+R27	Or Arg1:E49 Arg2:E50
+R28	Or Arg1:E50 Arg2:E51

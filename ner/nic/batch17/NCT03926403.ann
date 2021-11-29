@@ -1,8 +1,8 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Procedure:T5 Name:T6 Temporality:E16
-E10	Age:T17 Eq-Comparison:E12
-E11	Age:T18 Eq-Comparison:E14
+E10	Age:T17 Numeric-Filter:E12
+E11	Age:T18 Numeric-Filter:E14
 E12	Eq-Comparison:T22 Operator:T12 Temporal-Unit:T15 Value:T19
 E13	Eq-Comparison:T23 Operator:T13 Value:T20
 E14	Eq-Comparison:T24 Operator:T14 Temporal-Unit:T16 Value:T21
@@ -12,19 +12,16 @@ E2	Modifier:T29 Modifies:T6
 E4	Eq-Comparison:T30 Temporal-Period:T31
 E6	Procedure:T32 Name:T33 Temporality:E4 Location:T34
 E8	Procedure:T35 Name:T36
-E9	Observation:T9 Name:T10 Temporality:E17 Eq-Comparison:E13
+E9	Observation:T9 Name:T10 Temporality:E17 Numeric-Filter:E13
 E17	Eq-Comparison:T37 Temporal-Recency:T38
 E18	Procedure:T39 Name:T40
 E19	Eq-Comparison:T41 Temporal-Period:T42
-E20	Encounter:T43 Type:T44 Temporality:E19
-E21	Encounter:T45 Type:T46
-E22	Or:T47 Arg:E20 Arg2:E21
+E20	Encounter:T43 Temporality:E19
+E21	Encounter:T45
 E23	Observation:T48 Name:T49
 E24	Observation:T50 Name:T51
-E25	Or:T52 Arg:E23 Arg2:E24
 E7	Condition:T7 Name:T8
 E26	Condition:T54 Name:T55
-E27	Or:T56 Arg:E7 Arg2:E26
 T1	Condition 736 755	cognitive disorders
 T2	Condition-Name 736 755	cognitive disorders
 T3	Condition 761 780	Alzheimer's disease
@@ -66,21 +63,16 @@ T40	Procedure-Name 416 435	general anaesthesia
 T41	Eq-Comparison 450 457	treated
 T42	Eq-Temporal-Period 450 457	treated
 T43	Encounter 474 488	inpatient care
-T44	Encounter-Type 474 488	inpatient care
 T45	Encounter 511 529	ambulatory circuit
-T46	Encounter-Type 511 529	ambulatory circuit
-T47	Or 489 491	or
 T48	Observation 543 561	under guardianship
 T49	Observation-Name 543 561	under guardianship
 T50	Observation 565 576	trusteeship
 T51	Observation-Name 565 576	trusteeship
-T52	Or 562 564	or
 T53	Life-Stage-And-Gender 582 587	Minor
 T7	Condition 804 808	deaf
 T8	Condition-Name 804 808	deaf
 T54	Condition 812 828	hearing-impaired
 T55	Condition-Name 812 828	hearing-impaired
-T56	Or 809 811	or
 A1	Life-Stage-And-Gender-Type T11 adult
 A2	Eq-Operator-Value T12 GTEQ
 A3	Eq-Operator-Value T13 GTEQ
@@ -91,11 +83,14 @@ A7	Eq-Temporal-Period-Value T26 past
 A8	Eq-Temporal-Period-Value T28 present
 A9	Eq-Temporal-Period-Value T31 past
 A10	Location-Value T34 clinic
-A11	Observation-Type-Value T10 survey-or-questionnaire
+A11	Observation-Type-Value E9 survey-or-questionnaire
 A12	Eq-Temporal-Recency-Value T38 first-time
 A13	Eq-Temporal-Period-Value T42 past
-A14	Encounter-Type-Value T44 inpatient
-A15	Encounter-Type-Value T46 outpatient
+A14	Encounter-Type-Value E20 inpatient
+A15	Encounter-Type-Value E21 outpatient
 A16	Life-Stage-And-Gender-Type T53 child
 R1	Using Arg1:E6 Arg2:E8
 R2	Example-Of Arg1:E3 Arg2:E1
+R3	Or Arg1:E20 Arg2:E21
+R4	Or Arg1:E23 Arg2:E24
+R5	Or Arg1:E7 Arg2:E26

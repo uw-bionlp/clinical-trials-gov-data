@@ -3,14 +3,12 @@ E2	Eq-Comparison:T2 Temporal-Recency:T121
 E3	Procedure:T3 Name:T76 Temporality:E2 Temporality2:E4
 E4	Eq-Comparison:T4 Temporal-Period:T77 Value:T5 Value2:T6
 E8	Eq-Comparison:T8 Operator:T81 Value:T82 Temporal-Unit:T83
-E9	Age:T9 Eq-Comparison:E8 Eq-Comparison2:E12
-E11	And:T11 Arg:E8 Arg2:E12
+E9	Age:T9 Numeric-Filter:E8 Numeric-Filter:E12
 E12	Eq-Comparison:T12 Operator:T85 Value:T86 Temporal-Unit:T87
 E14	Eq-Comparison:T14 Temporal-Period:T88
 E15	Study:T15 Temporality:E14
 E16	Study:T16 Study-Of:E5
 E17	Condition:T17 Name:T91
-E18	Or:T18 Arg:E17 Arg2:E19
 E19	Condition:T19 Name:T92
 E20	Allergy:T20 Name:T21
 E22	Condition:T22 Name:T94
@@ -18,41 +16,30 @@ E23	Condition:T23 Name:T95
 E24	Condition:T24 Name:T97 Severity:T96
 E25	Modifier:T25 Modifies:T97
 E26	Modifier:T26 Modifies:T97
-E27	Or:T27 Arg:E24 Arg2:E28
 E28	Condition:T28 Name:T98
 E30	Modifier:T30 Modifies:T98
 E31	Modifier:T31 Modifies:E30
-E32	Or:T32 Arg:E31 Arg2:E35
 E35	Modifier:T35 Modifies:E30
-E36	Or:T36 Arg:E35 Arg2:E37
 E37	Modifier:T37 Modifies:E30
-E38	Or:T38 Arg:E37 Arg2:E39
 E39	Modifier:T39 Modifies:E30
-E40	Or:T40 Arg:E39 Arg2:E41
 E41	Procedure:T41 Name:T99
-E43	Or:T43 Arg:T42 Arg2:E44
 E44	Eq-Comparison:T44 Temporal-Period:T100
-E45	Condition:T45 Name:T101 Temporality:E44 Acuteness:T42
-E46	Or:T46 Arg:E45 Arg2:E47
+E45	Observation:T45 Name:T101 Temporality:E44 Acuteness:T42
 E47	Condition:T47
 E48	Assertion:T48 Asserted:T102
 E49	Procedure:T49 Name:T104 Polarity:T103 Stability:T102
-E50	Or:T50 Arg:E49 Arg2:E51
 E51	Procedure:T51 Name:T93
 E52	Condition:T52 Name:T105
-E53	Or:T53 Arg:E52 Arg2:E55
 E54	Modifier:T54 Modifies:T106
 E55	Condition:T55 Name:T106
-E57	Or:T57 Arg:E29 Arg2:E59
-E58	Modifier:T58 Modifies:T108
-E59	Condition:T59 Name:T108
+E58	Modifier:T58 Modifies:E59
+E59	Condition:T59
 E60	Condition:T60 Name:T109
 E61	Condition:T61 Name:T110 Stage:E62
 E62	Eq-Comparison:T62 Value:T111 Value:T112
 E63	Eq-Comparison:T63 Temporal-Period:T123
 E64	Procedure:T64 Name:T113 Temporality:E63
 E65	Modifier:T65 Modifies:T114
-E66	Or:T66 Arg:E65 Arg2:E67
 E67	Modifier:T67 Modifies:T114
 E68	Condition:T68 Name:T114
 E69	Condition:T69 Name:T115
@@ -65,8 +52,6 @@ E75	Procedure:T75 Name:T120 Temporality:E74
 E5	Procedure:T10 Name:T13
 E6	Observation:T79 Name:T89
 E7	Observation:T80 Name:T90
-E10	Or:T84 Arg:E6 Arg2:E7
-E13	Temporal-Connection:T29 Arg:E41 Arg2:E21
 E21	Procedure:T33 Name:T34
 E29	Condition:T122 Name:T107 Acuteness:T56
 T1	Assertion 33 42	requiring
@@ -75,13 +60,11 @@ T3	Procedure 51 72	total knee prosthesis
 T4	Eq-Comparison 74 110	scheduled between Tuesday and Friday
 T8	Eq-Comparison 300 317	at least 18 years
 T9	Age 318 321	old
-T11	And 326 329	and
 T12	Eq-Comparison 330 344	under 90 years
 T14	Eq-Comparison 435 443	previous
 T15	Study 444 449	study
 T16	Study 463 468	study
 T17	Condition 667 675	pregnant
-T18	Or 676 678	or
 T19	Condition 679 692	breastfeeding
 T20	Allergy 713 721	allergic
 T22	Condition 762 786	contralateral amputation
@@ -89,34 +72,24 @@ T23	Condition 788 803	pressure ulcers
 T24	Condition 812 836	Obstructive Arteriopathy
 T25	Modifier 840 851	Lower Limbs
 T26	Modifier 853 864	lymphoedema
-T27	Or 865 867	or
 T28	Condition 868 888	thromboembolic event
 T30	Modifier 896 906	lower limb
 T31	Modifier 908 919	ipsilateral
-T32	Or 920 928	and / or
 T35	Modifier 929 942	contralateral
-T36	Or 943 944	/
 T37	Modifier 945 956	superficial
-T38	Or 957 959	or
 T39	Modifier 960 964	deep
-T40	Or 965 967	or
 T41	Procedure 994 1001	Doppler
 T42	Acuteness 1025 1032	chronic
-T43	Or 1033 1035	or
 T44	Eq-Comparison 1036 1042	active
-T45	Condition 1043 1049	wounds
-T46	Or 1050 1052	or
+T45	Observation 1043 1049	wounds
 T47	Condition 1057 1062	cause
 T48	Assertion 1068 1075	hinders
 T49	Procedure 1083 1097	rehabilitation
-T50	Or 1098 1100	or
 T51	Procedure 1122 1129	bandage
 T52	Condition 1151 1157	stroke
-T53	Or 1158 1159	/
 T54	Modifier 1160 1169	Disabling
 T55	Condition 1170 1192	Neurological Pathology
 T56	Acuteness 1194 1201	Chronic
-T57	Or 1226 1227	/
 T58	Modifier 1228 1236	Systemic
 T59	Condition 1237 1244	Disease
 T60	Condition 1264 1285	Hepatic insufficiency
@@ -125,7 +98,6 @@ T62	Eq-Comparison 1327 1341	stages 3 and 4
 T63	Eq-Comparison 1364 1366	on
 T64	Procedure 1367 1375	dialysis
 T65	Modifier 1398 1407	cognitive
-T66	Or 1408 1410	or
 T67	Modifier 1411 1421	behavioral
 T68	Condition 1422 1431	disorders
 T69	Condition 1433 1452	Parkinson's disease
@@ -156,7 +128,7 @@ T97	Condition-Name 812 836	Obstructive Arteriopathy
 T98	Condition-Name 868 888	thromboembolic event
 T99	Procedure-Name 994 1001	Doppler
 T100	Eq-Temporal-Period 1036 1042	active
-T101	Condition-Name 1043 1049	wounds
+T101	Observation-Name 1043 1049	wounds
 T102	Stability 1068 1075	hinders
 T103	Polarity 1076 1082	normal
 T104	Procedure-Name 1083 1097	rehabilitation
@@ -184,9 +156,7 @@ T10	Procedure 451 462	therapeutic
 T13	Procedure-Name 451 462	therapeutic
 T79	Observation 598 624	under safeguard of justice
 T80	Observation 628 646	state guardianship
-T84	Or 625 627	or
 T21	Allergy-Name 725 739	latex bandages
-T29	Temporal-Connection 980 984	post
 T33	Procedure 984 993	operative
 T34	Procedure-Name 984 993	operative
 T93	Procedure-Name 1122 1129	bandage
@@ -208,7 +178,6 @@ A16	Stability-Value T102 change
 A17	Polarity-Value T103 normal
 A18	Eq-Temporal-Period-Value T119 past
 A19	Eq-Temporal-Recency-Value T121 first-time
-A2	Temporal-Connection-Type-Value E13 after
 A6	Eq-Temporal-Period-Value T123 present
 A20	Acuteness-Type-Value T42 chronic
 A21	Acuteness-Type-Value T56 chronic
@@ -220,3 +189,24 @@ R5	Example-Of Arg1:E70 Arg2:E68
 R6	Example-Of Arg1:E71 Arg2:E68
 R7	Example-Of Arg1:E72 Arg2:E68
 R8	Example-Of Arg1:E73 Arg2:E68
+R9	And Arg1:E8 Arg2:E12
+R10	Or Arg1:E17 Arg2:E19
+R11	Or Arg1:E24 Arg2:E28
+R12	Or Arg1:E31 Arg2:E35
+R13	Or Arg1:E35 Arg2:E37
+R14	Or Arg1:E37 Arg2:E39
+R15	Or Arg1:E39 Arg2:E41
+R16	Or Arg1:T42 Arg2:E44
+R17	Or Arg1:E45 Arg2:E47
+R18	Or Arg1:E49 Arg2:E51
+R19	Or Arg1:E52 Arg2:E55
+R20	Or Arg1:E29 Arg2:E59
+R21	Or Arg1:E65 Arg2:E67
+R22	Or Arg1:E6 Arg2:E7
+R23	After Arg1:E41 Arg2:E21
+R24	Or Arg1:E22 Arg2:E23
+R25	Or Arg1:E25 Arg2:E26
+R26	Or Arg1:E69 Arg2:E70
+R27	Or Arg1:E70 Arg2:E71
+R28	Or Arg1:E71 Arg2:E72
+R29	Or Arg1:E72 Arg2:E73

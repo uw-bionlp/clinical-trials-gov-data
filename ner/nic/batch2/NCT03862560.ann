@@ -1,11 +1,10 @@
 E1	Eq-Comparison:T7 Operator:T3 Value:T4 Value2:T5 Temporal-Unit:T1
 E2	Condition:T9 Name:T10
-E3	Age:T11 Eq-Comparison:E1
+E3	Age:T11 Numeric-Filter:E1
 E4	Eq-Comparison:T12 Operator:T13 Temporal-Unit:T2 Value:T6
 E5	Observation:T14 Duration:E4 Name:T20 Temporality:E7
-E6	Condition:T16 Name:T17
+E6	Observation:T16 Name:T17
 E7	Eq-Comparison:T18 Temporal-Period:T19
-E8	And:T21 Arg:E3 Arg2:E5
 E9	Negation:T22 Negates:T15
 T1	Eq-Temporal-Unit 71 76	years
 T2	Eq-Temporal-Unit 120 125	years
@@ -22,16 +21,16 @@ T12	Eq-Comparison 109 125	at least 3 years
 T13	Eq-Operator 109 117	at least
 T14	Observation 100 108	training
 T15	Ethnicity 156 165	caucasian
-T16	Condition 167 173	injury
-T17	Condition-Name 167 173	injury
+T16	Observation 167 173	injury
+T17	Observation-Name 167 173	injury
 T18	Eq-Comparison 89 96	history
 T19	Eq-Temporal-Period 89 96	history
 T20	Observation-Name 100 108	training
-T21	And 82 86	with
 T22	Negation 152 155	Non
 A1	Eq-Temporal-Unit-Value T1 year
 A2	Eq-Temporal-Unit-Value T2 year
 A3	Eq-Operator-Value T3 BETWEEN
 A4	Eq-Operator-Value T13 GTEQ
 A5	Eq-Temporal-Period-Value T19 past
-A6	Observation-Type-Value T20 social-habit
+A6	Observation-Type-Value E5 social-habit
+R1	And Arg1:E3 Arg2:E5

@@ -1,0 +1,8 @@
+T1	Condition 2 10	diseases
+E1	Condition:T1 
+T2	Stability 16 22	affect
+A1	Stability-Value T2 change
+T3	Observation 23 43	respiratory function
+E2	Observation:T3 Name:T4 Stability:T2
+T4	Observation-Name 23 43	respiratory function
+R1	Caused-By Arg1:T2 Arg2:E1	

@@ -1,0 +1,197 @@
+E4	Condition:T4 Name:T5
+E6	Condition:T6 Name:T7
+E8	Condition:T8 Name:T9
+E10	Condition:T10 Name:T11
+E12	Condition:T12 Name:T13
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17
+E18	Condition:T18 Name:T19
+E20	Condition:T20 Name:T21
+E22	Condition:T22 Name:T23
+E26	Condition:T26 Name:T27
+E28	Procedure:T28 Name:T29 Temporality:E43
+E30	Condition:T30 Name:T31
+E32	Condition:T32 Name:T33
+E34	Drug:T34 Name:T35 Temporality:E60
+E36	Condition:T36 Name:T37
+E37	Age:T39 Eq-Comparison:E41
+E38	Age:T40 Eq-Comparison:E40
+E39	Age:T41 Eq-Comparison:E29
+E40	Eq-Comparison:T47 Operator:T38 Value:T46
+E41	Eq-Comparison:T48 Operator:T42 Value:T43 Value2:T44
+E42	Eq-Comparison:T49 Temporal-Period:T50
+E43	Eq-Comparison:T51 Temporal-Period:T52
+E1	Condition:T45 Name:T53 Temporality:E42
+E2	Condition:T54 Name:T55
+E3	Encounter:T56 Type:T57
+E5	Procedure:T58
+E7	Assertion:T59 Asserted:E3
+E9	Condition:T60 Name:T61
+E11	Negation:T62 Negates:E9
+E13	Family-Member:T63 Has:E15
+E15	Procedure:T64
+E17	Assertion:T65 Asserted:E15
+E19	Family-Member:T66
+E21	Condition:T67 Name:T68
+E23	And:T69 Arg:T2 Arg2:E21
+E25	Condition:T70 Name:T71
+E27	Negation:T72 Negates:E25
+E29	Eq-Comparison:T74 Unit:T75
+E31	Negation:T76 Negates:E39
+E33	Condition:T78 Name:T79
+E35	Condition:T81 Name:T82
+E44	Condition:T84 Name:T85
+E45	Or:T86 Arg:E6 Arg2:E12
+E46	Condition:T87 Name:T88
+E47	Or:T89 Arg:E20 Arg2:E46
+E48	Modifier:T90 Modifies:T21
+E49	Procedure:T91 Stability:T92
+E50	Assertion:T93 Asserted:T92
+E24	Drug:T24 Name:T25 Temporality:E51
+E51	Eq-Comparison:T94 Temporal-Period:T95
+E52	Family-Member:T96 Has:E8
+E53	Condition:T97 Name:T98
+E54	Or:T99 Arg:E10 Arg2:E14
+E55	Condition:T100 Name:T101
+E56	Modifier:T102 Modifies:T33
+E57	Or:T103 Arg:E32 Arg2:E55
+E58	Procedure:T104 Stability:T106
+E59	Assertion:T105 Asserted:T106
+E60	Eq-Comparison:T107 Temporal-Period:T108
+T1	Language 195 202	English
+T3	Language 625 632	English
+T4	Condition 836 860	developmental disability
+T5	Condition-Name 836 860	developmental disability
+T6	Condition 908 932	autism spectrum disorder
+T7	Condition-Name 908 932	autism spectrum disorder
+T8	Condition 1204 1228	developmental disability
+T9	Condition-Name 1204 1228	developmental disability
+T10	Condition 1276 1300	autism spectrum disorder
+T11	Condition-Name 1276 1300	autism spectrum disorder
+T12	Condition 937 960	intellectual disability
+T13	Condition-Name 937 960	intellectual disability
+T14	Condition 1305 1328	intellectual disability
+T15	Condition-Name 1305 1328	intellectual disability
+T16	Condition 873 889	bipolar disorder
+T17	Condition-Name 873 889	bipolar disorder
+T18	Condition 1241 1257	bipolar disorder
+T19	Condition-Name 1241 1257	bipolar disorder
+T20	Condition 987 995	disorder
+T21	Condition-Name 987 995	disorder
+T22	Condition 862 871	psychosis
+T23	Condition-Name 862 871	psychosis
+T26	Condition 1230 1239	psychosis
+T27	Condition-Name 1230 1239	psychosis
+T28	Procedure 1127 1147	psychosocial therapy
+T29	Procedure-Name 1127 1147	psychosocial therapy
+T30	Condition 1015 1018	TBI
+T31	Condition-Name 1015 1018	TBI
+T32	Condition 1356 1364	disorder
+T33	Condition-Name 1356 1364	disorder
+T34	Drug 1454 1479	anti-psychotic medication
+T35	Drug-Name 1454 1479	anti-psychotic medication
+T36	Condition 1384 1387	TBI
+T37	Condition-Name 1384 1387	TBI
+T38	Eq-Operator 531 532	>
+T39	Age 36 39	Age
+T40	Age 527 530	Age
+T41	Age 749 752	age
+T42	Eq-Operator 42 43	-
+T43	Eq-Value 40 42	12
+T44	Eq-Value 43 45	18
+T46	Eq-Value 532 534	18
+T47	Eq-Comparison 531 534	>18
+T48	Eq-Comparison 40 45	12-18
+T49	Eq-Comparison 51 60	Currently
+T50	Eq-Temporal-Period 51 60	Currently
+T51	Eq-Comparison 1116 1126	Concurrent
+T52	Eq-Temporal-Period 1116 1126	Concurrent
+T45	Condition 116 132	Anorexia Nervosa
+T53	Condition-Name 116 132	Anorexia Nervosa
+T54	Condition 148 154	stable
+T55	Condition-Name 148 154	stable
+T56	Encounter 159 169	outpatient
+T57	Encounter-Type 159 169	outpatient
+T58	Procedure 170 179	treatment
+T59	Assertion 155 158	for
+T60	Condition 211 230	co-morbid condition
+T61	Condition-Name 211 230	co-morbid condition
+T62	Negation 208 210	No
+T63	Family-Member 403 409	parent
+T64	Procedure 452 461	treatment
+T65	Assertion 431 441	willing to
+T66	Family-Member 514 521	Parents
+T67	Condition 566 568	AN
+T68	Condition-Name 566 568	AN
+T2	Life-Stage-And-Gender 540 545	Child
+T69	And 546 550	with
+T70	Condition 641 660	co-morbid condition
+T71	Condition-Name 641 660	co-morbid condition
+T72	Negation 638 640	No
+T73	Life-Stage-And-Gender 714 724	Adolescent
+T74	Eq-Comparison 753 758	range
+T75	Eq-Unit 753 758	range
+T76	Negation 741 748	outside
+T77	Life-Stage-And-Gender 730 740	Adolescent
+T78	Condition 775 782	adopted
+T79	Condition-Name 775 782	adopted
+T80	Life-Stage-And-Gender 764 774	Adolescent
+T81	Condition 788 796	Pregnant
+T82	Condition-Name 788 796	Pregnant
+T83	Life-Stage-And-Gender 797 807	adolescent
+T84	Condition 891 906	substance abuse
+T85	Condition-Name 891 906	substance abuse
+T86	Or 934 936	or
+T87	Condition 999 1005	injury
+T88	Condition-Name 999 1005	injury
+T89	Or 996 998	or
+T90	Modifier 981 986	brain
+T91	Procedure 1063 1072	treatment
+T92	Stability 1031 1037	impact
+T93	Assertion 1025 1030	could
+T24	Drug 1085 1110	anti-psychotic medication
+T25	Drug-Name 1085 1110	anti-psychotic medication
+T94	Eq-Comparison 1078 1081	Use
+T95	Eq-Temporal-Period 1078 1081	Use
+T96	Family-Member 1168 1175	Parents
+T97	Condition 1259 1274	substance abuse
+T98	Condition-Name 1259 1274	substance abuse
+T99	Or 1302 1304	or
+T100	Condition 1368 1374	injury
+T101	Condition-Name 1368 1374	injury
+T102	Modifier 1350 1355	brain
+T103	Or 1365 1367	or
+T104	Procedure 1432 1441	treatment
+T105	Assertion 1394 1399	could
+T106	Stability 1400 1406	impact
+T107	Eq-Comparison 1447 1450	Use
+T108	Eq-Temporal-Period 1447 1450	Use
+A2	Eq-Operator-Value T38 GT
+A3	Eq-Operator-Value T42 BETWEEN
+A4	Eq-Temporal-Period-Value T50 present
+A5	Eq-Temporal-Period-Value T52 present
+A6	Encounter-Type-Value T57 outpatient
+A7	Assertion-Type-Value E7 hypothetical
+A8	Family-Member-Type E13 parent
+A9	Assertion-Type-Value E17 hypothetical
+A10	Family-Member-Type E19 parent
+A1	Life-Stage-And-Gender-Type T2 child
+A11	Life-Stage-And-Gender-Type T73 child
+A12	Eq-Unit-Value T75 ref-range-high
+A13	Life-Stage-And-Gender-Type T77 child
+A14	Life-Stage-And-Gender-Type T80 child
+A15	Life-Stage-And-Gender-Type T83 child
+A16	Stability-Value T92 change
+A17	Assertion-Type-Value E50 hypothetical
+A18	Eq-Temporal-Period-Value T95 present
+A19	Family-Member-Type E52 parent
+A20	Assertion-Type-Value E59 hypothetical
+A21	Stability-Value T106 change
+A22	Eq-Temporal-Period-Value T108 present
+R1	Using Arg1:E3 Arg2:E5
+R2	If-Then Arg1:E19 Arg2:E38
+R3	If-Then Arg1:T73 Arg2:T77
+R4	Example-Of Arg1:E30 Arg2:E46
+R5	Caused-By Arg1:T92 Arg2:E46
+R6	Example-Of Arg1:E36 Arg2:E55
+R7	Caused-By Arg1:T106 Arg2:E55

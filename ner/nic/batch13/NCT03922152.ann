@@ -1,17 +1,15 @@
 E3	Procedure:T3 Name:T4
-E4	Age:T8 Eq-Comparison:E5
+E4	Age:T8 Numeric-Filter:E5
 E5	Eq-Comparison:T11 Operator:T5 Temporal-Unit:T7 Value:T9
 E6	Eq-Comparison:T12 Operator:T6 Value:T10
 E2	Condition:T13 Name:T14 Severity:T32
 E1	Coreference:T1 Refers-To:E2
 E7	Condition:T2 Name:T15 Minimum-Count:E8
 E8	Eq-Comparison:T16 Operator:T17
-E9	Or:T18 Arg:E1 Arg2:E7
 E10	Condition:T19 Name:T20
-E11	Or:T21 Arg:E7 Arg2:E10
 E12	Negation:T22 Negates:E3
 E13	Observation:T23 Name:T24
-E14	Observation:T25 Name:T26 Eq-Comparison:E6
+E14	Observation:T25 Name:T26 Numeric-Filter:E6
 E15	Procedure:T27 Name:T28 Temporality:E17
 E16	Modifier:T29 Modifies:T28
 E17	Eq-Comparison:T30 Temporal-Period:T31
@@ -33,10 +31,8 @@ T2	Condition 163 176	comorbidities
 T15	Condition-Name 163 176	comorbidities
 T16	Eq-Comparison 154 162	multiple
 T17	Eq-Operator 154 162	multiple
-T18	Or 135 141	and/or
 T19	Condition 184 207	poor performance status
 T20	Condition-Name 184 207	poor performance status
-T21	Or 177 183	and/or
 T22	Negation 79 87	excluded
 T23	Observation 233 267	Eastern Cooperative Oncology Group
 T24	Observation-Name 233 267	Eastern Cooperative Oncology Group
@@ -55,9 +51,11 @@ A3	Eq-Temporal-Unit-Value T7 year
 A4	Eq-Operator-Value T17 GT
 A5	Eq-Temporal-Period-Value T31 past
 A6	Severity-Value T32 severe
-A7	Observation-Type-Value T24 clinical-score
-A8	Observation-Type-Value T26 clinical-score
+A7	Observation-Type-Value E13 clinical-score
+A8	Observation-Type-Value E14 clinical-score
 R1	Caused-By Arg1:E12 Arg2:E1
 R2	Caused-By Arg1:E12 Arg2:E7
 R3	Caused-By Arg1:E12 Arg2:E10
 R4	Abbrev-Of Arg1:E14 Arg2:E13
+R5	Or Arg1:E1 Arg2:E7
+R6	Or Arg1:E7 Arg2:E10

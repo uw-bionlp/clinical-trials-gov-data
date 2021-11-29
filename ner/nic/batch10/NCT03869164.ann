@@ -6,8 +6,8 @@ E9	Procedure:T9 Name:T10 Temporality:E22
 E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16 Acuteness:T110
-E19	Observation:T19 Name:T20 Eq-Comparison:E25
-E20	Age:T31 Eq-Comparison:E2
+E19	Observation:T19 Name:T20 Numeric-Filter:E25
+E20	Age:T31 Numeric-Filter:E2
 E21	Eq-Comparison:T39 Operator:T21 Value:T33
 E22	Eq-Comparison:T40 Operator:T22 Temporal-Unit:T28 Value:T35 Temporal-Period:T79
 E23	Eq-Comparison:T41 Operator:T23 Temporal-Unit:T29 Value:T36
@@ -15,25 +15,21 @@ E24	Eq-Comparison:T42 Operator:T24 Value:T37 Unit:T30
 E25	Eq-Comparison:T43 Operator:T25 Value:T38 Unit:T134
 E2	Eq-Comparison:T44 Operator:T45 Value:T32 Temporal-Unit:T26
 E4	Eq-Comparison:T46 Value:T47 Operator:T49 Value2:T48
-E6	Or:T51 Arg:E4 Arg2:T50
 E8	Condition:T52 Name:T53 Severity:T50
 E10	Condition:T54 Name:T55
 E12	Observation:T56 Name:T57
-E14	Observation:T58 Name:T59 Eq-Comparison:E21
+E14	Observation:T58 Name:T59 Numeric-Filter:E21
 E16	Assertion:T60 Asserted:E10
 E18	Condition:T61 Name:T62
 E26	Modifier:T63 Modifies:T62
 E27	Modifier:T64 Modifies:T62
-E28	Or:T65 Arg:E27 Arg2:E26
 E29	Modifier:T66 Modifies:T62
 E30	Risk:T67 Polarity:T68 Risk-For:E31
 E31	Procedure:T69 Name:T70
 E32	Eq-Comparison:T72 Temporal-Period:T73 Value:T34 Temporal-Unit:T27
 E33	Procedure:T74
-E34	Temporal-Connection:T75 Arg:E32 Arg2:E33
 E35	Modifier:T76 Modifies:T10
 E36	Modifier:T77 Modifies:T10
-E37	Or:T78 Arg:E35 Arg2:E36
 E38	Assertion:T80 Asserted:E5
 E39	Other:T81 Is-Other:E5
 E40	Procedure:T82 Name:T83
@@ -41,18 +37,14 @@ E41	Condition:T84 Name:T85
 E42	Modifier:T86 Modifies:T85
 E43	Modifier:T87 Modifies:T85
 E44	Modifier:T88 Modifies:T85
-E45	Or:T89 Arg:E43 Arg2:E44
-E46	Observation:T90 Name:T91 Eq-Comparison:E23
-E47	Or:T94 Arg:T92 Arg2:T93
+E46	Observation:T90 Name:T91 Numeric-Filter:E23
 E48	Modifier:T95 Modifies:T8
 E49	Modifier:T96 Modifies:T8
-E50	Or:T97 Arg:E49 Arg2:E48
-E51	Observation:T98 Name:T99 Eq-Comparison:E24
+E51	Observation:T98 Name:T99 Numeric-Filter:E24
 E52	Procedure:T101
 E53	Negation:T102 Negates:E52
 E54	Condition:T103 Name:T104 Temporality:E55
 E55	Eq-Comparison:T105 Temporal-Period:T106
-E56	Or:T107 Arg:E13 Arg2:E11
 E57	Condition:T108 Name:T109
 E58	Procedure:T111
 E59	Negation:T112 Negates:E58
@@ -63,16 +55,12 @@ E62	Negation:T116 Negates:E17
 E63	Assertion:T117 Asserted:E62
 E64	Condition:T118 Name:T119 Severity:T120
 E65	Modifier:T121 Modifies:T119
-E66	Or:T122 Arg:E65 Arg2:T120
 E67	Modifier:T123 Modifies:T119
 E68	Modifier:T124 Modifies:T119
-E69	Or:T125 Arg:E67 Arg2:E68
 E70	Condition:T126 Name:T127 Severity:T128
 E71	Modifier:T129 Modifies:T127
 E72	Modifier:T130 Modifies:T127
-E73	Or:T131 Arg:E71 Arg2:E72
 E74	Negation:T132 Negates:E71
-E75	Or:T133 Arg:T127 Arg2:E19
 E76	Study:T135
 E77	Other:T136 Is-Other:E76
 T1	Condition 435 456	myocardial infarction
@@ -123,7 +111,6 @@ T47	Severity 55 63	moderate
 T48	Severity 67 73	severe
 T49	Eq-Operator 64 66	to
 T50	Severity 77 83	severe
-T51	Or 74 76	or
 T52	Condition 84 104	mitral regurgitation
 T53	Condition-Name 84 104	mitral regurgitation
 T54	Condition 193 195	MR
@@ -137,7 +124,6 @@ T61	Condition 246 259	malcoaptation
 T62	Condition-Name 246 259	malcoaptation
 T63	Modifier 274 305	P2 scallops of the mitral valve
 T64	Modifier 267 269	A2
-T65	Or 270 273	and
 T66	Modifier 206 240	primary regurgitant jet originated
 T67	Risk 317 321	risk
 T68	Polarity 312 316	high
@@ -147,10 +133,8 @@ T71	Acuteness 429 434	acute
 T72	Eq-Comparison 464 477	prior 4 weeks
 T73	Eq-Temporal-Period 464 469	prior
 T74	Procedure 494 503	treatment
-T75	Temporal-Connection 478 480	of
 T76	Modifier 514 528	interventional
 T77	Modifier 532 540	surgical
-T78	Or 529 531	or
 T79	Eq-Temporal-Period 584 589	prior
 T80	Assertion 600 608	need for
 T81	Other 613 618	other
@@ -161,15 +145,12 @@ T85	Condition-Name 671 683	intracardiac
 T86	Modifier 684 688	mass
 T87	Modifier 690 698	thrombus
 T88	Modifier 703 713	vegetation
-T89	Or 700 702	or
 T90	Observation 720 735	life expectancy
 T91	Observation-Name 720 735	life expectancy
 T92	Severity 759 767	moderate
 T93	Severity 771 777	severe
-T94	Or 768 770	or
 T95	Modifier 797 810	regurgitation
 T96	Modifier 785 793	stenosis
-T97	Or 794 796	or
 T98	Observation 817 842	mitral valve orifice area
 T99	Observation-Name 817 842	mitral valve orifice area
 T100	Severity 868 879	significant
@@ -179,7 +160,6 @@ T103	Condition 915 935	mitral valvuloplasty
 T104	Condition-Name 915 935	mitral valvuloplasty
 T105	Eq-Comparison 904 911	history
 T106	Eq-Temporal-Period 904 911	history
-T107	Or 965 968	and
 T108	Condition 1009 1026	cardiogenic shock
 T109	Condition-Name 1009 1026	cardiogenic shock
 T110	Acuteness 1028 1033	acute
@@ -196,18 +176,14 @@ T118	Condition 1175 1180	cleft
 T119	Condition-Name 1175 1180	cleft
 T120	Severity 1163 1174	significant
 T121	Modifier 1146 1159	calcification
-T122	Or 1160 1162	or
 T123	Modifier 1184 1198	area of the A2
 T124	Modifier 1206 1217	P2 scallops
-T125	Or 1199 1205	and/or
 T126	Condition 1231 1244	regurgitation
 T127	Condition-Name 1231 1244	regurgitation
 T128	Severity 1219 1230	significant
 T129	Modifier 1252 1254	A2
 T130	Modifier 1258 1269	P2 scallops
-T131	Or 1255 1257	or
 T132	Negation 1245 1251	beyond
-T133	Or 1270 1273	and
 T134	Eq-Unit 1302 1304	mm
 T135	Study 1318 1333	clinical trials
 T136	Other 1312 1317	Other
@@ -228,20 +204,19 @@ A14	Severity-Value T50 severe
 A15	Assertion-Type-Value E16 possible
 A16	Polarity-Value T68 high
 A18	Eq-Temporal-Period-Value T73 past
-A19	Temporal-Connection-Type-Value E34 before
 A20	Eq-Temporal-Period-Value T79 past
 A21	Assertion-Type-Value E38 hypothetical
 A22	Severity-Value T92 moderate
 A23	Severity-Value T93 severe
-A24	Observation-Type-Value T99 measurement
+A24	Observation-Type-Value E51 measurement
 A25	Severity-Value T100 severe
 A26	Eq-Temporal-Period-Value T106 past
 A28	Assertion-Type-Value E63 hypothetical
 A29	Severity-Value T120 severe
 A30	Severity-Value T128 severe
-A31	Observation-Type-Value T20 measurement
-A32	Observation-Type-Value T57 clinical-score
-A33	Observation-Type-Value T59 clinical-score
+A31	Observation-Type-Value E19 measurement
+A32	Observation-Type-Value E12 clinical-score
+A33	Observation-Type-Value E14 clinical-score
 A34	Acuteness-Type-Value T71 acute
 A35	Acuteness-Type-Value T110 acute
 R1	Abbrev-Of Arg1:E14 Arg2:E12
@@ -252,3 +227,16 @@ R5	Treatment-For Arg1:E58 Arg2:E57
 R6	Treatment-For Arg1:E58 Arg2:E15
 R7	Caused-By Arg1:E62 Arg2:E60
 R8	Example-Of Arg1:E64 Arg2:E60
+R9	Or Arg1:E4 Arg2:T50
+R10	Or Arg1:E27 Arg2:E26
+R11	Before Arg1:E32 Arg2:E33
+R12	Or Arg1:E35 Arg2:E36
+R13	Or Arg1:E43 Arg2:E44
+R14	Or Arg1:T92 Arg2:T93
+R15	Or Arg1:E49 Arg2:E48
+R16	Or Arg1:E13 Arg2:E11
+R17	Or Arg1:E65 Arg2:T120
+R18	Or Arg1:E67 Arg2:E68
+R19	Or Arg1:E71 Arg2:E72
+R20	Or Arg1:T127 Arg2:E19
+R21	Or Arg1:E42 Arg2:E43

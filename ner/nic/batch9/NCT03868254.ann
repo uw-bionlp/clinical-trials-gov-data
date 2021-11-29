@@ -1,7 +1,6 @@
 E1	Procedure:T1
 E4	Modifier:T4 Modifies:T16
 E5	Condition:T5 Name:T16
-E7	Or:T7 Arg:E6 Arg2:E9
 E8	Modifier:T8 Modifies:T18
 E9	Procedure:T9 Name:T18
 E11	Procedure:T11 Name:T20 Temporality:E13
@@ -14,7 +13,6 @@ E14	Modifier:T14 Modifies:T20
 T1	Procedure 29 36	treated
 T4	Modifier 63 81	primary open angle
 T5	Condition 82 90	glaucoma
-T7	Or 117 119	or
 T8	Modifier 120 134	in combination
 T9	Procedure 140 159	phacoemulsification
 T11	Procedure 172 181	Gel Stent
@@ -34,3 +32,4 @@ T14	Modifier 165 171	XEN 45
 A1	Eq-Operator-Value T22 BETWEEN
 R1	Using Arg1:E1 Arg2:E3
 R2	Treatment-For Arg1:E1 Arg2:E5
+R3	Or Arg1:E6 Arg2:E9

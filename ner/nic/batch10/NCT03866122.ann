@@ -2,7 +2,6 @@ E1	Eq-Comparison:T2 Temporal-Period:T3
 E2	Procedure:T5 Temporality:E1 Location:T4 Location2:T6
 E3	Modifier:T7 Modifies:T6
 E4	Modifier:T8 Modifies:T6
-E5	Or:T9 Arg:E3 Arg2:E4
 E6	Family-Member:T1
 E7	Modifier:T10 Modifies:T12
 E8	Condition:T11 Name:T12
@@ -24,7 +23,6 @@ T5	Procedure 56 63	treated
 T6	Location 95 99	ward
 T7	Modifier 79 87	neonatal
 T8	Modifier 91 94	KMC
-T9	Or 88 90	or
 T1	Family-Member 162 171	caregiver
 T10	Modifier 354 358	skin
 T11	Condition 359 369	irritation
@@ -53,3 +51,4 @@ A6	Polarity-Value T26 high
 A7	Assertion-Type-Value E19 hypothetical
 R1	Caused-By Arg1:E14 Arg2:E10
 R2	Using Arg1:E16 Arg2:E18
+R3	Or Arg1:E3 Arg2:E4

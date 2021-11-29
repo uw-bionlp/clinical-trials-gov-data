@@ -3,13 +3,13 @@ E3	Procedure:T3 Name:T4
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
-E10	Age:T12 Eq-Comparison:E17
+E10	Age:T12 Numeric-Filter:E17
 E11	Eq-Comparison:T15 Operator:T11 Value:T14 Unit:T42
 E12	Eq-Comparison:T16 Temporal-Period:T17
 E2	Contraindication:T18 Contraindicates:E3
 E4	Negation:T19 Negates:E2
 E6	Condition:T20 Name:T21 Stability:T22
-E8	Condition:T23 Name:T24
+E8	Condition:T23
 E13	Other:T25 Is-Other:E8
 E14	Negation:T26 Negates:E8
 E15	Condition:T27 Name:T28 Stability:T29
@@ -19,8 +19,7 @@ E18	Condition:T33 Name:T34 Temporality:E12
 E19	Condition:T35 Name:T36
 E20	Modifier:T37 Modifies:T2
 E21	Modifier:T38 Modifies:T2
-E22	Or:T39 Arg:E21 Arg2:E20
-E23	Observation:T40 Name:T41 Eq-Comparison:E11
+E23	Observation:T40 Name:T41 Numeric-Filter:E11
 T1	Condition 437 451	cardiomyopathy
 T2	Condition-Name 437 451	cardiomyopathy
 T3	Procedure 49 72	pulmonary physiotherapy
@@ -59,7 +58,6 @@ T35	Condition 347 359	malignancies
 T36	Condition-Name 347 359	malignancies
 T37	Modifier 424 436	hypertrophic
 T38	Modifier 413 420	dilated
-T39	Or 421 423	or
 T40	Observation 468 470	EF
 T41	Observation-Name 468 470	EF
 T42	Eq-Unit 474 475	%
@@ -69,6 +67,8 @@ A3	Stability-Value T22 stable
 A4	Stability-Value T29 change
 A5	Assertion-Type-Value E16 hypothetical
 A6	Eq-Operator-Value T32 LT
-A7	Observation-Type-Value T41 measurement
+A7	Observation-Type-Value E23 measurement
 R1	Caused-By Arg1:T29 Arg2:E8
 R2	Equivalent-To Arg1:E23 Arg2:E5
+R3	Or Arg1:E21 Arg2:E20
+R4	Or Arg1:E1 Arg2:E5

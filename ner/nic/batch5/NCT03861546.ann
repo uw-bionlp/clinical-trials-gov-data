@@ -1,64 +1,53 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Operator:T59 Value:T60 Temporal-Unit:T61
 E3	Condition:T3 Name:T62
-E4	Or:T4 Arg:E3 Arg2:E5
 E5	Condition:T5 Name:T63
-E6	Observation:T6 Name:T64 Eq-Comparison:E7
+E6	Observation:T6 Name:T64 Numeric-Filter:E7
 E7	Eq-Comparison:T7 Operator:T65 Value:T66 Unit:T67
-E10	Observation:T10 Name:T68 Eq-Comparison:E11
+E10	Observation:T10 Name:T68 Numeric-Filter:E11
 E11	Eq-Comparison:T11 Operator:T69 Value:T70
-E12	Or:T12 Arg:E10 Arg2:E13
-E13	Observation:T13 Name:T71 Eq-Comparison:E14
+E13	Observation:T13 Name:T71 Numeric-Filter:E14
 E14	Eq-Comparison:T14 Operator:T72 Value:T73
 E15	Family-Member:T15 Has:E8
 E16	Assertion:T16 Asserted:E8
 E17	Eq-Comparison:T17 Operator:T75 Value:T76
 E18	Condition:T18 Name:T77
-E19	Or:T19 Arg:E18 Arg2:E20
 E20	Condition:T20 Name:T78
 E21	Other:T21 Is-Other:E22
-E22	Condition:T22 
+E22	Condition:T22
 E23	Drug:T23 Name:T79
 E24	Modifier:T24 Modifies:T80
 E25	Modifier:T25 Modifies:T80
 E26	Condition:T26 Name:T80
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Procedure:T28 Name:T81
 E29	Modifier:T29 Modifies:T80
 E30	Condition:T30 Name:T83
-E31	Or:T31 Arg:E30 Arg2:E32
 E32	Risk:T32 Risk-For:E59
-E33	Condition:T33 
-E34	And:T34 Arg:E33 Arg2:E35
-E35	Observation:T35 Name:T85 Eq-Comparison:E36
+E33	Condition:T33
+E35	Observation:T35 Name:T85 Numeric-Filter:E36
 E36	Eq-Comparison:T36 Operator:T86 Value:T87 Temporal-Unit:T88
-E37	Condition:T37 Name:T90
-E38	Or:T38 Arg:E37 Arg2:E39
+E37	Condition:T37
 E39	Condition:T39 Name:T92 Severity:T91
 E40	Modifier:T40 Modifies:T93
 E41	Condition:T41 Name:T93
-E42	Or:T42 Arg:E41 Arg2:E44
 E43	Eq-Comparison:T43 Unit:T94 Value:T95
 E44	Condition:T44 Name:T96 Stage:E43
 E45	Assertion:T45 Asserted:E57
 E46	Observation:T47 Name:T97
 E47	Condition:T48 Name:T98
 E48	Condition:T49 Name:T99
-E49	Or:T50 Arg:E48 Arg2:E50
 E50	Condition:T51 Polarity:T107 Name:T100
 E51	Modifier:T52 Modifies:T101
-E52	Or:T53 Arg:E51 Arg2:E65
 E53	Condition:T54 Name:T101
 E54	Condition:T55 Name:T102
-E55	Or:T56 Arg:E54 Arg2:E56
 E56	Negation:T57 Negates:T109
 E57	Negation:T58 Negates:E46
 E8	Procedure:T8 Name:T9
 E9	Modifier:T46 Modifies:T77
 E58	Modifier:T103 Modifies:T78
-E59	Death:T82 
-E60	Modifier:T84 Modifies:T90
-E61	Study:T89 
+E59	Death:T82
+E60	Modifier:T84 Modifies:E37
+E61	Study:T89
 E62	Negation:T104 Negates:E61
 E63	Assertion:T105 Asserted:E62
 E64	Modifier:T106 Modifies:T97
@@ -66,20 +55,17 @@ E65	Modifier:T108 Modifies:T101
 T1	Age 25 28	age
 T2	Eq-Comparison 29 39	> 18 years
 T3	Condition 69 80	prediabetes
-T4	Or 81 83	or
 T5	Condition 84 87	T2D
 T6	Observation 100 103	A1c
 T7	Eq-Comparison 107 113	≥ 5.7%
 T10	Observation 115 139	2-hour post-load glucose
 T11	Eq-Comparison 143 147	>140
-T12	Or 149 151	or
 T13	Observation 152 155	FBG
 T14	Eq-Comparison 159 163	>100
 T15	Family-Member 173 179	family
 T16	Assertion 195 205	willing to
 T17	Eq-Comparison 297 309	at least one
 T18	Condition 408 416	diabetes
-T19	Or 417 419	or
 T20	Condition 420 428	diabetes
 T21	Other 442 447	other
 T22	Condition 448 458	conditions
@@ -87,35 +73,27 @@ T23	Drug 465 472	steroid
 T24	Modifier 473 480	induced
 T25	Modifier 482 492	pancreatic
 T26	Condition 493 506	insufficiency
-T27	Or 508 510	or
 T28	Procedure 511 523	chemotherapy
 T29	Modifier 524 531	induced
 T30	Condition 539 549	malignancy
-T31	Or 550 552	or
 T32	Risk 553 569	life-threatening
 T33	Condition 570 577	illness
-T34	And 578 582	with
 T35	Observation 583 598	life expectancy
 T36	Eq-Comparison 602 610	<5 years
 T37	Condition 627 634	disease
-T38	Or 635 637	or
 T39	Condition 646 653	illness
 T40	Modifier 689 698	end-stage
 T41	Condition 699 712	renal disease
-T42	Or 713 715	or
 T43	Eq-Comparison 716 724	class IV
 T44	Condition 725 749	congestive heart failure
 T45	Assertion 757 766	inability
 T47	Observation 791 808	physical activity
 T48	Condition 815 824	pregnancy
 T49	Condition 841 859	cognitive deficits
-T50	Or 860 862	or
 T51	Condition 871 895	decision-making capacity
 T52	Modifier 902 909	alcohol
-T53	Or 910 912	or
 T54	Condition 923 928	abuse
 T55	Condition 935 947	homelessness
-T56	Or 948 950	or
 T57	Negation 951 953	no
 T58	Negation 757 766	inability
 T59	Eq-Operator 29 30	>
@@ -177,16 +155,16 @@ A3	Assertion-Type-Value E16 hypothetical
 A4	Assertion-Type-Value E45 hypothetical
 A5	Eq-Operator-Value T59 GT
 A6	Eq-Temporal-Unit-Value T61 year
-A7	Observation-Type-Value T64 lab
+A7	Observation-Type-Value E6 lab
 A8	Eq-Operator-Value T65 GTEQ
-A9	Observation-Type-Value T68 lab
+A9	Observation-Type-Value E10 lab
 A10	Eq-Operator-Value T69 GT
 A11	Eq-Operator-Value T72 GT
 A12	Eq-Operator-Value T75 GTEQ
 A13	Eq-Operator-Value T86 LT
 A14	Eq-Temporal-Unit-Value T88 year
 A15	Severity-Value T91 severe
-A16	Observation-Type-Value T97 social-habit
+A16	Observation-Type-Value E46 social-habit
 A1	Assertion-Type-Value E63 hypothetical
 A17	Polarity-Value T107 low
 A18	Location-Value T109 residence
@@ -202,3 +180,15 @@ R9	Caused-By Arg1:E62 Arg2:E39
 R10	Caused-By Arg1:E62 Arg2:E37
 R11	Example-Of Arg1:E41 Arg2:E39
 R12	Example-Of Arg1:E44 Arg2:E39
+R13	Or Arg1:E3 Arg2:E5
+R14	Or Arg1:E10 Arg2:E13
+R15	Or Arg1:E18 Arg2:E20
+R16	Or Arg1:E26 Arg2:E28
+R17	Or Arg1:E30 Arg2:E32
+R18	And Arg1:E33 Arg2:E35
+R19	Or Arg1:E37 Arg2:E39
+R20	Or Arg1:E41 Arg2:E44
+R21	Or Arg1:E48 Arg2:E50
+R22	Or Arg1:E51 Arg2:E65
+R23	Or Arg1:E54 Arg2:E56
+R24	Or Arg1:E24 Arg2:E25

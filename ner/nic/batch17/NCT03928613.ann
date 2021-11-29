@@ -4,13 +4,12 @@ E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14
-E14	Age:T15 Eq-Comparison:E2
+E14	Age:T15 Numeric-Filter:E2
 E2	Eq-Comparison:T21 Operator:T22 Value:T16
 E4	Condition:T23 Name:T24
 E3	Observation:T3 Name:T4
-E6	Observation:T26 Name:T27 Eq-Comparison:E8
+E6	Observation:T26 Name:T27 Numeric-Filter:E8
 E8	Eq-Comparison:T28 Value:T17 Value2:T18
-E10	And:T29 Arg:E1 Arg2:E3
 E12	Condition:T30 Name:T31
 E15	Condition:T19 Name:T20
 E16	Modifier:T32 Modifies:T20
@@ -51,7 +50,6 @@ T4	Observation-Name 170 194	Clinical Dementia Rating
 T26	Observation 195 198	CDR
 T27	Observation-Name 195 198	CDR
 T28	Eq-Comparison 203 211	0 or 0.5
-T29	And 166 169	and
 T30	Condition 279 302	neurological conditions
 T31	Condition-Name 279 302	neurological conditions
 T19	Condition 364 374	hemorrhage
@@ -77,7 +75,7 @@ T49	Negation 610 622	difficulties
 T50	Assertion 590 595	could
 A2	Eq-Operator-Value T22 GT
 A3	Severity-Value T25 mild
-A4	Observation-Type-Value T4 clinical-score
+A4	Observation-Type-Value E3 clinical-score
 A1	Severity-Value T38 severe
 A5	Assertion-Type-Value E21 possible
 A6	Stability-Value T44 change
@@ -91,3 +89,6 @@ R5	Example-Of Arg1:E17 Arg2:E12
 R6	Example-Of Arg1:E5 Arg2:E12
 R7	Caused-By Arg1:T44 Arg2:E20
 R8	Caused-By Arg1:E26 Arg2:E24
+R9	And Arg1:E1 Arg2:E3
+R10	Or Arg1:E13 Arg2:E11
+R11	Or Arg1:E17 Arg2:E5

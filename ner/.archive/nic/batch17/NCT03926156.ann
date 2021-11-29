@@ -1,0 +1,130 @@
+E1	Condition:T1 Name:T2 Severity:T33
+E3	Procedure:T3 Name:T4 Temporality:E21
+E5	Procedure:T5 Name:T6
+E8	Condition:T8 Name:T9 Severity:T53
+E10	Procedure:T10 Name:T11
+E13	Eq-Comparison:T21 Operator:T14 Value:T18 Temporal-Unit:T31
+E14	Eq-Comparison:T22 Operator:T16 Value:T20 Unit:T58 Per:T59
+E15	Eq-Comparison:T23 Temporal-Period:T24
+E16	Eq-Comparison:T25 Temporal-Period:T26 Value:T19 Temporal-Unit:T17
+E2	Study:T27 Study-Of:E5
+E4	Assertion:T28 Asserted:E5
+E6	Or:T30 Arg:T7 Arg2:T29
+E7	Age:T32 Eq-Comparison:E13
+E9	Eq-Comparison:T35 Value:T34 Value2:T33 Operator:T36
+E11	Condition:T37 Name:T38 Temporality:E15 Temporality2:E16
+E17	And:T39 Arg:E1 Arg2:E11
+E18	Procedure:T15 Name:T40
+E19	Indication:T41 Indication-For:E3
+E20	Study:T42
+E21	Eq-Comparison:T43 Temporal-Period:T44
+E22	Temporal-Connection:T45 Arg:E21 Arg2:E20
+E23	And:T46 Arg:E11 Arg2:E3
+E24	Assertion:T47 Asserted:E10
+E12	Drug:T12 Name:T13
+E25	Assertion:T48 Asserted:E12
+E26	And:T49 Arg:E24 Arg2:E25
+E27	Modifier:T50 Modifies:T52
+E28	Condition:T51 Name:T52
+E29	Observation:T54 Name:T55
+E30	Observation:T56 Name:T57 Eq-Comparison:E14
+E31	Condition:T60
+E32	Condition:T61 Name:T62
+E33	Risk:T63 Risk-For:E32 Polarity:T64
+E34	Allergy:T65 Name:E35 Name2:E37
+E35	Drug:T67 Name:T66
+E36	Or:T68 Arg:E35 Arg2:E37
+E37	Drug:T69 Name:T70
+T1	Condition 256 271	mitral stenosis
+T2	Condition-Name 256 271	mitral stenosis
+T3	Procedure 391 406	anticoagulation
+T4	Procedure-Name 391 406	anticoagulation
+T5	Procedure 126 136	procedures
+T6	Procedure-Name 126 136	procedures
+T8	Condition 606 623	renal dysfunction
+T9	Condition-Name 606 623	renal dysfunction
+T10	Procedure 484 499	oral medication
+T11	Procedure-Name 484 499	oral medication
+T14	Eq-Operator 203 204	≥
+T16	Eq-Operator 653 654	<
+T17	Eq-Temporal-Unit 370 376	months
+T18	Eq-Value 205 207	18
+T19	Eq-Value 367 369	12
+T20	Eq-Value 654 656	15
+T21	Eq-Comparison 203 216	≥ 18 year-old
+T22	Eq-Comparison 653 663	<15 mL/min
+T23	Eq-Comparison 283 290	history
+T24	Eq-Temporal-Period 283 290	history
+T25	Eq-Comparison 361 376	prior 12 months
+T26	Eq-Temporal-Period 361 366	prior
+T27	Study 120 125	study
+T28	Assertion 89 100	willingness
+T7	Life-Stage-And-Gender 189 192	Men
+T29	Life-Stage-And-Gender 197 202	women
+T30	Or 193 196	and
+T31	Eq-Temporal-Unit 208 212	year
+T32	Age 213 216	old
+T33	Severity 249 255	severe
+T34	Severity 237 245	moderate
+T35	Eq-Comparison 237 255	moderate to severe
+T36	Eq-Operator 246 248	to
+T37	Condition 294 296	AF
+T38	Condition-Name 294 296	AF
+T39	And 272 275	who
+T15	Procedure 331 349	electrical tracing
+T40	Procedure-Name 331 349	electrical tracing
+T41	Indication 410 419	indicated
+T42	Study 456 461	study
+T43	Eq-Comparison 424 435	planned for
+T44	Eq-Temporal-Period 424 435	planned for
+T45	Temporal-Connection 440 448	duration
+T46	And 377 380	and
+T47	Assertion 468 478	Ability to
+T12	Drug 532 543	rivaroxaban
+T13	Drug-Name 532 543	rivaroxaban
+T48	Assertion 507 517	willing to
+T49	And 500 503	and
+T50	Modifier 577 588	Left atrial
+T51	Condition 589 593	clot
+T52	Condition-Name 589 593	clot
+T53	Severity 599 605	Severe
+T54	Observation 625 645	creatinine clearance
+T55	Observation-Name 625 645	creatinine clearance
+T56	Observation 647 651	CrCl
+T57	Observation-Name 647 651	CrCl
+T58	Eq-Unit 657 659	mL
+T59	Eq-Temporal-Unit 660 663	min
+T60	Condition 687 696	condition
+T61	Condition 728 736	bleeding
+T62	Condition-Name 728 736	bleeding
+T63	Risk 720 724	risk
+T64	Polarity 715 719	high
+T65	Allergy 742 750	Allergic
+T66	Drug-Name 754 764	rivaroxabn
+T67	Drug 754 764	rivaroxabn
+T68	Or 764 765	/
+T69	Drug 765 773	warfarin
+T70	Drug-Name 765 773	warfarin
+A1	Eq-Operator-Value T14 GTEQ
+A3	Eq-Operator-Value T16 LT
+A4	Eq-Temporal-Unit-Value T17 month
+A5	Eq-Temporal-Period-Value T24 past
+A6	Eq-Temporal-Period-Value T26 past
+A7	Assertion-Type-Value E4 hypothetical
+A8	Life-Stage-And-Gender-Type T7 male
+A9	Life-Stage-And-Gender-Type T29 female
+A10	Eq-Temporal-Unit-Value T31 year
+A11	Severity-Value T33 severe
+A12	Severity-Value T34 moderate
+A13	Eq-Operator-Value T36 BETWEEN
+A2	Eq-Temporal-Period-Value T44 future
+A14	Temporal-Connection-Type-Value E22 during
+A15	Assertion-Type-Value E24 hypothetical
+A16	Assertion-Type-Value E25 hypothetical
+A17	Severity-Value T53 severe
+A18	Observation-Type-Value T55 lab
+A19	Eq-Temporal-Unit-Value T59 minute
+A20	Polarity-Value T64 high
+R1	Found-By Arg1:E11 Arg2:E18
+R2	Abbrev-Of Arg1:E30 Arg2:E29
+R3	Caused-By Arg1:E33 Arg2:E31

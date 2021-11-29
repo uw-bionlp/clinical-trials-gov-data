@@ -21,9 +21,8 @@ E22	Condition:T22 Name:T39
 E23	Assertion:T23 Asserted:E24
 E24	Negation:T24 Negates:E26
 E25	Study:T25 Study-Of:E26
-E26	Procedure:T26 
+E26	Procedure:T26
 E8	Modifier:T8 Modifies:T30
-E20	And:T31 Arg:E19 Arg2:E21
 T1	Modifier 38 47	germ cell
 T2	Condition 48 53	tumor
 T3	Eq-Comparison 102 104	on
@@ -62,10 +61,10 @@ T38	Observation-Name 351 354	PSA
 T39	Condition-Name 361 380	Cognitive condition
 T8	Modifier 170 189	germ cell component
 T20	Polarity 338 350	undetectable
-T31	And 333 337	with
 A1	Assertion-Type-Value E23 hypothetical
 A2	Eq-Temporal-Period-Value T28 present
 A3	Eq-Temporal-Period-Value T32 past
-A4	Observation-Type-Value T38 lab
+A4	Observation-Type-Value E21 lab
 A5	Polarity-Value T20 negative
 R1	Caused-By Arg1:E24 Arg2:E22
+R2	And Arg1:E19 Arg2:E21

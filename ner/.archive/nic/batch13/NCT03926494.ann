@@ -1,0 +1,60 @@
+E1	Procedure:T1 Name:T2 Location:T21
+E3	Condition:T3 Name:T4
+E7	Condition:T7 Name:T8
+E8	Age:T12 Eq-Comparison:E10
+E9	Eq-Comparison:T15 Operator:T9 Value:T13
+E10	Eq-Comparison:T16 Operator:T10 Temporal-Unit:T11 Value:T14
+E2	Observation:T17 Name:T18 Eq-Comparison:E9
+E4	Condition:T19 Name:T20
+E6	Encounter:T22 Type:T23 Location:T24 Location2:T25 Location3:T26
+E11	Condition:T27 Name:T28
+E12	Assertion:T30 Asserted:E7
+E13	Negation:T31 Negates:E5
+E5	Condition:T5 Name:T6
+E14	And:T32 Arg:E7 Arg2:E13
+T1	Procedure 116 141	hyperbaric oxygen therapy
+T2	Procedure-Name 116 141	hyperbaric oxygen therapy
+T3	Condition 29 37	comatose
+T4	Condition-Name 29 37	comatose
+T7	Condition 379 385	stroke
+T8	Condition-Name 379 385	stroke
+T9	Eq-Operator 67 68	<
+T10	Eq-Operator 198 199	≥
+T11	Eq-Temporal-Unit 203 208	years
+T12	Age 193 197	Aged
+T13	Eq-Value 68 69	8
+T14	Eq-Value 200 202	18
+T15	Eq-Comparison 67 69	<8
+T16	Eq-Comparison 198 208	≥ 18 years
+T17	Observation 48 66	Glasgow coma score
+T18	Observation-Name 48 66	Glasgow coma score
+T19	Condition 78 103	carbon monoxide poisoning
+T20	Condition-Name 78 103	carbon monoxide poisoning
+T21	Location 147 181	tertiary hospital in Île de France
+T22	Encounter 215 227	Hospitalized
+T23	Encounter-Type 215 227	Hospitalized
+T24	Location 231 256	hyperbaric medicine unity
+T25	Location 260 285	Raymond Poincaré hospital
+T26	Location 289 296	Garches
+T27	Condition 323 331	Pregnant
+T28	Condition-Name 323 331	Pregnant
+T29	Life-Stage-And-Gender 332 337	woman
+T30	Assertion 369 375	signes
+T31	Negation 390 397	without
+T5	Condition 398 410	CO detection
+T6	Condition-Name 398 410	CO detection
+T32	And 386 389	and
+A1	Eq-Operator-Value T9 LT
+A2	Eq-Operator-Value T10 GTEQ
+A3	Eq-Temporal-Unit-Value T11 year
+A4	Observation-Type-Value T18 clinical-score
+A5	Location-Value T21 hospital
+A6	Encounter-Type-Value T23 inpatient
+A7	Location-Value T24 unit
+A8	Location-Value T25 hospital
+A9	Life-Stage-And-Gender-Type T29 female
+A10	Assertion-Type-Value E12 possible
+R1	Equivalent-To Arg1:E2 Arg2:E3
+R2	Caused-By Arg1:E3 Arg2:E4
+R3	Treatment-For Arg1:E1 Arg2:E4
+R4	If-Then Arg1:T29 Arg2:E11

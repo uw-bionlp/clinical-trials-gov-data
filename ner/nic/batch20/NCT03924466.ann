@@ -2,7 +2,7 @@ E1	Condition:T1 Name:T2 Temporality:E35
 E3	Condition:T3 Name:T4 Temporality:E23
 E5	Condition:T5 Name:T6
 E7	Death:T7
-E8	Age:T14 Eq-Comparison:E13
+E8	Age:T14 Numeric-Filter:E13
 E9	Eq-Comparison:T21 Operator:T9 Value:T20 Temporal-Unit:T62
 E2	Risk:T22 Risk-For:E7 Polarity:T87
 E6	Condition:T23 Temporality:E4
@@ -12,19 +12,16 @@ E13	Eq-Comparison:T28 Value:T15 Temporal-Unit:T10 Operator:T29
 E14	Condition:T30 Name:T31
 E15	Modifier:T32 Modifies:T31
 E16	Modifier:T33 Modifies:T31
-E17	Or:T34 Arg:E16 Arg2:E15
 E18	Eq-Comparison:T35 Operator:T36 Value:T16
-E20	Observation:T39 Eq-Comparison:E22 Name:T38 Minimum-Count:E18
-E21	And:T40 Arg:E14 Arg2:E20
+E20	Observation:T39 Numeric-Filter:E22 Name:T38 Minimum-Count:E18
 E22	Eq-Comparison:T41 Operator:T42 Value:T17 Unit:T11
 E24	Modifier:T45 Modifies:T38
 E25	Modifier:T46 Modifies:T44
 E26	Eq-Comparison:T47 Operator:T49 Value:T18 Unit:T12
-E27	Observation:T48 Eq-Comparison:E26 Name:T44
+E27	Observation:T48 Numeric-Filter:E26 Name:T44
 E28	Modifier:T50 Modifies:E27
-E29	Observation:T51 Name:T52 Eq-Comparison:E30
+E29	Observation:T51 Name:T52 Numeric-Filter:E30
 E30	Eq-Comparison:T53 Operator:T54 Value:T19 Unit:T13
-E31	And:T55 Arg:E27 Arg2:E29
 E32	Study:T56
 E33	Negation:T57 Negates:E32
 E34	Condition:T58 Name:T59 Temporality:E19
@@ -36,7 +33,6 @@ E39	Death:T70
 E40	Risk:T71 Risk-For:E39
 E41	Other:T72 Is-Other:E38
 E42	Modifier:T73 Modifies:T6
-E43	Or:T74 Arg:E38 Arg2:E5
 E44	Procedure:T75 Name:T76
 E45	Study:T77 Study-Of:E44 Stability:T78
 E46	Condition:T79 Name:T80
@@ -45,7 +41,6 @@ E48	Assertion:T82 Asserted:E49
 E49	Study:T83
 E50	Assertion:T84
 E51	Assertion:T85
-E52	Or:T86 Arg:E50 Arg2:E51
 E4	Eq-Comparison:T8 Temporal-Period:T25
 E11	Criteria-Count:T88 Criteria:E8 Criteria2:E14 Criteria3:E20 Criteria4:E27 Criteria5:E27 Criteria6:E29
 E19	Eq-Comparison:T37 Temporal-Period:T43
@@ -81,12 +76,10 @@ T30	Condition 247 256	carcinoma
 T31	Condition-Name 247 256	carcinoma
 T32	Modifier 221 246	distantly advanced breast
 T33	Modifier 210 217	locally
-T34	Or 218 220	or
 T35	Eq-Comparison 263 273	at least 1
 T36	Eq-Operator 263 271	at least
 T38	Observation-Name 274 280	lesion
 T39	Observation 274 280	lesion
-T40	And 258 262	with
 T41	Eq-Comparison 284 298	at least 12 mm
 T42	Eq-Operator 284 292	at least
 T44	Observation-Name 332 342	metastases
@@ -100,7 +93,6 @@ T51	Observation 398 408	short axis
 T52	Observation-Name 398 408	short axis
 T53	Eq-Comparison 409 423	at least 12 mm
 T54	Eq-Operator 409 417	at least
-T55	And 390 393	and
 T56	Study 482 487	study
 T57	Negation 459 462	not
 T58	Condition 554 562	pregnant
@@ -119,7 +111,6 @@ T70	Death 766 782	life-threatening
 T71	Risk 766 782	life-threatening
 T72	Other 760 765	other
 T73	Modifier 794 806	organ system
-T74	Or 791 793	or
 T75	Procedure 945 964	radiopharmaceutical
 T76	Procedure-Name 945 964	radiopharmaceutical
 T77	Study 940 944	test
@@ -131,7 +122,6 @@ T82	Assertion 1052 1060	unlikely
 T83	Study 1103 1108	study
 T84	Assertion 1129 1138	unwilling
 T85	Assertion 1146 1152	unable
-T86	Or 1139 1145	and/or
 T8	Eq-Comparison 1225 1237	pre-existing
 T25	Eq-Temporal-Period 1225 1237	pre-existing
 T87	Polarity 1194 1203	increased
@@ -157,8 +147,8 @@ A14	Assertion-Type-Value E50 hypothetical
 A15	Assertion-Type-Value E51 hypothetical
 A16	Eq-Temporal-Period-Value T25 past
 A17	Polarity-Value T87 high
-A18	Observation-Type-Value T38 measurement
-A19	Observation-Type-Value T44 measurement
+A18	Observation-Type-Value E20 measurement
+A19	Observation-Type-Value E27 measurement
 A20	Eq-Temporal-Period-Value T43 present
 A21	Eq-Temporal-Period-Value T90 present
 R1	Caused-By Arg1:E7 Arg2:E6
@@ -166,3 +156,8 @@ R2	Equivalent-To Arg1:E9 Arg2:E35
 R3	Caused-By Arg1:E36 Arg2:E1
 R4	Caused-By Arg1:E40 Arg2:E38
 R5	Caused-By Arg1:T78 Arg2:E5
+R6	Or Arg1:E16 Arg2:E15
+R7	And Arg1:E14 Arg2:E20
+R8	And Arg1:E27 Arg2:E29
+R9	Or Arg1:E38 Arg2:E5
+R10	Or Arg1:E50 Arg2:E51

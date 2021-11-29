@@ -2,19 +2,15 @@ E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E12	Condition:T12 Name:T13
 E13	Eq-Comparison:T17 Temporal-Period:T18
-E2	And:T16 Arg:T14 Arg2:E1
 E4	Eq-Comparison:T19 Value:T15 Operator:T20
-E5	Age:T21 Eq-Comparison:E4
-E7	And:T22 Arg:E1 Arg2:E5
+E5	Age:T21 Numeric-Filter:E4
 E8	Study:T23
-E9	Temporal-Connection:T24 Arg:E5 Arg2:E8
-E10	Provider:T25 Role:T26
-E6	Provider:T6 Role:T7
+E10	Provider:T25
+E6	Provider:T6
 E11	Procedure:T8 Name:T10 Temporality:E13
 E14	Procedure:T30 Name:T31
 E15	Exception:T32 From:E11 Except:E14
 E16	Study:T11 Stability:T35
-E17	Temporal-Connection:T33 Arg:E12 Arg2:E16
 E18	Negation:T34 Negates:E16
 E20	Assertion:T37 Asserted:T35
 E19	Modifier:T36 Modifies:T2
@@ -31,19 +27,14 @@ T17	Eq-Comparison 515 520	using
 T18	Eq-Temporal-Period 515 520	using
 T5	Location 46 78	Children's Healthcare of Atlanta
 T14	Location 80 84	CHOA
-T16	And 86 90	with
 T19	Eq-Comparison 116 127	12 or older
 T20	Eq-Operator 119 127	or older
 T21	Age 122 127	older
-T22	And 112 115	are
 T23	Study 143 156	participation
-T24	Temporal-Connection 128 139	at the time
 T25	Provider 248 254	Nurses
-T26	Provider-Role 248 254	Nurses
 T27	Location 258 262	CHOA
 T28	Location 300 304	CHOA
 T6	Provider 310 320	Physicians
-T7	Provider-Role 310 320	Physicians
 T29	Location 332 336	CHOA
 T8	Procedure 523 545	care coordination tool
 T10	Procedure-Name 523 545	care coordination tool
@@ -51,7 +42,6 @@ T30	Procedure 557 560	GTG
 T31	Procedure-Name 557 560	GTG
 T32	Exception 546 556	other than
 T11	Study 638 643	study
-T33	Temporal-Connection 627 633	during
 T34	Negation 659 667	excluded
 T35	Stability 702 713	confounding
 T37	Assertion 684 695	in order to
@@ -61,8 +51,10 @@ T39	Modifier 205 211	Type 2
 A2	Eq-Temporal-Period-Value T18 present
 A1	Location-Value T5 hospital
 A3	Eq-Operator-Value T20 GTEQ
-A4	Temporal-Connection-Type-Value E9 during
-A5	Temporal-Connection-Type-Value E17 during
 A6	Stability-Value T35 change
 A8	Assertion-Type-Value E20 hypothetical
 R1	Abbrev-Of Arg1:T14 Arg2:T5
+R2	And Arg1:T14 Arg2:E1
+R3	And Arg1:E1 Arg2:E5
+R4	During Arg1:E5 Arg2:E8
+R5	During Arg1:E12 Arg2:E16

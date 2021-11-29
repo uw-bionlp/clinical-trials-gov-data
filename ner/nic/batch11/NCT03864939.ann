@@ -10,17 +10,13 @@ E4	Condition:T20 Name:T21
 E6	Condition:T22 Name:T23
 E8	Procedure:T24
 E10	Negation:T25 Negates:E8
-E12	Temporal-Connection:T13 Arg:E9 Arg2:E13
 E13	Procedure:T26
 E15	Observation:T27 Name:T28
-E16	Temporal-Connection:T29 Arg:E3 Arg2:E17
 E17	Procedure:T31
 E18	Condition:T32 Name:T33
 E19	Modifier:T34
 E20	Modifier:T35 Modifies:T33
-E21	Or:T36 Arg:E19 Arg2:E20
 E22	Observation:T37 Name:T38
-E23	Temporal-Connection:T39 Arg:E22 Arg2:E24
 E24	Procedure:T41
 E25	Observation:T42 Name:T43
 E26	Modifier:T14 Modifies:E4
@@ -56,20 +52,16 @@ T22	Condition 143 149	cancer
 T23	Condition-Name 143 149	cancer
 T24	Procedure 121 130	treatment
 T25	Negation 112 114	no
-T13	Temporal-Connection 213 216	pre
 T26	Procedure 216 225	operative
 T27	Observation 296 300	IIEF
 T28	Observation-Name 296 300	IIEF
-T29	Temporal-Connection 261 264	pre
 T31	Procedure 264 273	operative
 T32	Condition 356 362	cancer
 T33	Condition-Name 356 362	cancer
 T34	Modifier 314 326	metastasized
 T35	Modifier 330 346	locally advanced
-T36	Or 327 329	or
 T37	Observation 379 389	assessment
 T38	Observation-Name 379 389	assessment
-T39	Temporal-Connection 366 369	pre
 T41	Procedure 369 378	operative
 T42	Observation 240 254	24hrs pad-test
 T43	Observation-Name 240 254	24hrs pad-test
@@ -87,9 +79,6 @@ T51	Modifier 417 423	pelvis
 T52	Study 517 522	study
 T53	Other 509 516	another
 A1	Eq-Operator-Value T15 BETWEEN
-A2	Temporal-Connection-Type-Value E12 before
-A3	Temporal-Connection-Type-Value E16 before
-A4	Temporal-Connection-Type-Value E23 before
 A5	Eq-Temporal-Period-Value T45 past
 A6	Eq-Temporal-Period-Value T47 past
 R1	Treatment-For Arg1:E8 Arg2:E6
@@ -98,3 +87,7 @@ R3	Equivalent-To Arg1:E15 Arg2:E3
 R4	Found-By Arg1:E18 Arg2:E22
 R5	Found-By Arg1:E9 Arg2:E25
 R6	Treatment-For Arg1:E7 Arg2:E31
+R7	Before Arg1:E9 Arg2:E13
+R8	Before Arg1:E3 Arg2:E17
+R9	Or Arg1:E19 Arg2:E20
+R10	Before Arg1:E22 Arg2:E24

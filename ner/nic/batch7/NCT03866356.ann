@@ -5,13 +5,11 @@ E4	Negation:T4 Negates:E5
 E5	Condition:T5 Name:T18
 E6	Condition:T6 Name:T20
 E7	Condition:T7 Name:T21
-E8	Or:T8 Arg:E7 Arg2:E10
 E9	Eq-Comparison:T9 Temporal-Period:T22
 E10	Procedure:T10 Temporality:E9
-E14	Age:T23 Eq-Comparison:E1
-E15	And:T26 Arg:E14 Arg2:E3
+E14	Age:T23 Numeric-Filter:E1
 E16	Condition:T27 Name:T28
-E17	Condition:T29 Name:T30 Stability:T19
+E17	Observation:T29 Name:T30 Stability:T19
 E18	Condition:T31 Name:T32
 T1	Eq-Comparison 67 77	≥ 18 years
 T2	Eq-Comparison 89 96	initial
@@ -20,7 +18,6 @@ T4	Negation 137 139	no
 T5	Condition 140 156	sensory disorder
 T6	Condition 279 288	pregnancy
 T7	Condition 304 327	urinary tract infection
-T8	Or 328 331	and
 T9	Eq-Comparison 332 340	previous
 T10	Procedure 341 350	treatment
 T14	Life-Stage-And-Gender 59 65	female
@@ -35,11 +32,10 @@ T22	Eq-Temporal-Period 332 340	previous
 T23	Age 72 77	years
 T24	Eq-Temporal-Recency 89 96	initial
 T25	Condition-Name 110 112	SI
-T26	And 79 85	having
 T27	Condition 120 128	literate
 T28	Condition-Name 120 128	literate
-T29	Condition 167 180	communication
-T30	Condition-Name 167 180	communication
+T29	Observation 167 180	communication
+T30	Observation-Name 167 180	communication
 T31	Condition 355 357	SI
 T32	Condition-Name 355 357	SI
 A2	Life-Stage-And-Gender-Type T14 female
@@ -50,3 +46,5 @@ A6	Eq-Temporal-Period-Value T22 past
 A7	Eq-Temporal-Recency-Value T24 first-time
 R1	Caused-By Arg1:T19 Arg2:E5
 R2	Treatment-For Arg1:E10 Arg2:E18
+R3	Or Arg1:E7 Arg2:E10
+R4	And Arg1:E14 Arg2:E3

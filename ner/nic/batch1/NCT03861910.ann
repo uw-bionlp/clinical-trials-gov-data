@@ -9,7 +9,7 @@ E15	Condition:T15 Name:T16
 E17	Condition:T17 Name:T18
 E19	Condition:T19 Name:T20
 E21	Condition:T21 Name:T22
-E24	Age:T29 Eq-Comparison:E25
+E24	Age:T29 Numeric-Filter:E25
 E25	Eq-Comparison:T34 Operator:T30 Value:T31 Temporal-Unit:T25 Value2:T32
 E2	Condition:T35 Name:T27
 E8	Drug:T39 Name:T40
@@ -17,13 +17,11 @@ E10	Condition:T41 Name:T42
 E12	Drug:T43 Name:T44
 E16	Condition:T45 Name:T46
 E18	Modifier:T28 Modifies:E21
-E20	Condition:T47 Name:T48 Acuteness:T49
+E20	Condition:T47 Acuteness:T49
 E23	Condition:T50 Name:T51
 E26	Modifier:T52 Modifies:E23
 E28	Condition:T54 Name:T55
 E30	Condition:T57 Name:T58
-E32	Temporal-Connection:T61 Arg:E43 Arg2:E44
-E33	Temporal-Connection:T62 Arg:E41 Arg2:E43
 E4	Modifier:T36 Modifies:T27
 E6	Other:T37 Is-Other:E14
 E14	Allergy:T23 Name:T24
@@ -33,13 +31,11 @@ E36	Modifier:T64 Modifies:T4
 E37	Eq-Comparison:T65 Temporal-Period:T66
 E38	Modifier:T67 Modifies:T58
 E39	Modifier:T68 Modifies:T58
-E40	Or:T69 Arg:E38 Arg2:E39
 E31	Drug:T59 Name:T60
 E41	Drug:T70 Name:T71
-E42	Or:T72 Arg:E31 Arg2:E41
 E43	Eq-Comparison:T73 Value:T33 Temporal-Unit:T26
-E44	Study:T74 
-E45	Modifier:T75 Modifies:T48
+E44	Study:T74
+E45	Modifier:T75 Modifies:E20
 T1	Condition 483 510	inflammatory bowel diseases
 T2	Condition-Name 483 510	inflammatory bowel diseases
 T3	Condition 276 298	eosinophilic disorders
@@ -93,8 +89,6 @@ T55	Condition-Name 585 595	malignancy
 T56	Acuteness 602 609	chronic
 T57	Condition 635 648	malformations
 T58	Condition-Name 635 648	malformations
-T61	Temporal-Connection 766 772	before
-T62	Temporal-Connection 747 753	during
 T36	Modifier 46 58	IgE-mediated
 T37	Other 183 188	other
 T23	Allergy 194 203	allergies
@@ -106,23 +100,23 @@ T65	Eq-Comparison 400 406	active
 T66	Eq-Temporal-Period 400 406	active
 T67	Modifier 656 672	gastrointestinal
 T68	Modifier 680 697	respiratory tract
-T69	Or 673 679	and/or
 T59	Drug 722 732	prebiotics
 T60	Drug-Name 722 732	prebiotics
 T70	Drug 736 746	probiotics
 T71	Drug-Name 736 746	probiotics
-T72	Or 733 735	or
 T73	Eq-Comparison 758 765	4 weeks
 T74	Study 773 782	enrolment
 T75	Modifier 343 351	systemic
 A1	Eq-Temporal-Unit-Value T25 month
 A2	Eq-Temporal-Unit-Value T26 week
 A3	Eq-Operator-Value T30 BETWEEN
-A4	Temporal-Connection-Type-Value E33 during
 A5	Eq-Temporal-Period-Value T66 present
-A6	Temporal-Connection-Type-Value E32 before
 A7	Acuteness-Type-Value T49 chronic
 A8	Acuteness-Type-Value T53 chronic
 A9	Acuteness-Type-Value T56 chronic
 R1	Caused-By Arg1:E10 Arg2:E8
 R2	Caused-By Arg1:E19 Arg2:E12
+R3	Before Arg1:E43 Arg2:E44
+R4	During Arg1:E41 Arg2:E43
+R5	Or Arg1:E38 Arg2:E39
+R6	Or Arg1:E31 Arg2:E41

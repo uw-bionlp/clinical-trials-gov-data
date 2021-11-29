@@ -3,18 +3,17 @@ E3	Condition:T3 Name:T4
 E4	Eq-Comparison:T13 Operator:T6 Value:T10
 E5	Eq-Comparison:T14 Temporal-Period:T15
 E6	Eq-Comparison:T16 Temporal-Period:T17
-E2	Observation:T18 Name:T19 Eq-Comparison:E7
+E2	Observation:T18 Name:T19 Numeric-Filter:E7
 E7	Eq-Comparison:T20 Value:T21 Value2:T22
 E8	Procedure:T23 Temporality:E5 Minimum-Count:E4
 E9	Procedure:T24 Name:T25 Temporality:E6
-E10	Or:T26 Arg:E1 Arg2:E9
 E11	Eq-Comparison:T27 Operator:T28 Value:T11 Temporal-Unit:T8
-E12	Age:T29 Eq-Comparison:E11
+E12	Age:T29 Numeric-Filter:E11
 E13	Condition:T30 Name:T31
-E14	Observation:T32 Name:T33 Eq-Comparison:E15
+E14	Observation:T32 Name:T33 Numeric-Filter:E15
 E15	Eq-Comparison:T34 Value:T35 Operator:T7
 E16	Eq-Comparison:T36 Operator:T37 Value:T12 Temporal-Unit:T9
-E17	Age:T38 Eq-Comparison:E16
+E17	Age:T38 Numeric-Filter:E16
 E18	Condition:T39 Name:T40
 T1	Procedure 97 105	incision
 T2	Procedure-Name 97 105	incision
@@ -41,7 +40,6 @@ T22	Eq-Value 34 36	II
 T23	Procedure 72 82	treatments
 T24	Procedure 110 118	drainage
 T25	Procedure-Name 110 118	drainage
-T26	Or 106 109	and
 T27	Eq-Comparison 132 145	Over 16 years
 T28	Eq-Operator 132 136	Over
 T29	Age 140 145	years
@@ -65,6 +63,7 @@ A6	Eq-Temporal-Period-Value T15 past
 A7	Eq-Temporal-Period-Value T17 past
 A8	Eq-Operator-Value T28 GT
 A9	Eq-Operator-Value T37 LT
-A10	Observation-Type-Value T19 clinical-score
-A11	Observation-Type-Value T33 clinical-score
+A10	Observation-Type-Value E2 clinical-score
+A11	Observation-Type-Value E14 clinical-score
 R1	Treatment-For Arg1:E8 Arg2:E3
+R2	Or Arg1:E1 Arg2:E9

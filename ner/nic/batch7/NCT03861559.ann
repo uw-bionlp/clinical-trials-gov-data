@@ -3,22 +3,17 @@ E4	Condition:T4 Name:T100 Duration:E2
 E5	Observation:T5 Name:T102 Polarity:T101 Temporality:E7 Temporality2:E9
 E6	Drug:T6
 E7	Eq-Comparison:T7 Temporal-Period:T103
-E8	Or:T8 Arg:E7 Arg2:E9
 E9	Eq-Comparison:T9 Operator:T104 Temporal-Period:T105 Temporal-Unit:T106
 E10	Condition:T10 Name:T107
-E11	And:T11 Arg:E10 Arg2:E12
-E12	Condition:T12 Name:T110 Severity:T109 Stability:T108
+E12	Condition:T12 Severity:T109 Stability:T108
 E13	Exception:T13 From:E12 Except:E14
 E14	Condition:T14 Name:T111
 E15	Assertion:T15 Asserted:T112
 E16	Study:T16 Stability:T112 Study-Of:E18
 E18	Condition:T18 Name:T113
-E19	And:T19 Arg:T114 Arg2:E20
 E20	Condition:T20 Name:T115
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Condition:T22 Name:T116
 E24	Condition:T24 Name:T118
-E25	And:T25 Arg:E24 Arg2:E26
 E26	Negation:T26 Negates:E28
 E27	Eq-Comparison:T27 Temporal-Period:T119
 E28	Procedure:T28 Name:T120 Temporality:E27
@@ -26,11 +21,9 @@ E29	Condition:T29 Name:T121
 E30	Assertion:T30 Asserted:E31
 E31	Procedure:T31 Name:T122
 E32	Modifier:T32 Modifies:T123
-E33	Or:T33 Arg:E32 Arg2:E34
 E34	Modifier:T34 Modifies:T123
 E35	Drug:T35 Name:T123
 E36	Drug:T36 Name:T124
-E37	Or:T37 Arg:E36 Arg2:E38
 E38	Drug:T38 Name:T125
 E39	Modifier:T39 Modifies:E50
 E40	Modifier:T40 Modifies:E50
@@ -41,10 +34,8 @@ E44	Modifier:T44
 E45	Modifier:T45
 E46	Modifier:T46
 E47	Modifier:T47
-E48	Or:T48 Arg:E47 Arg2:E49
 E49	Other:T49
 E50	Condition:T50 Severity:T127 Severity2:T126
-E51	Or:T51 Arg:E50 Arg2:E52
 E52	Condition:T52 Name:T128
 E53	Assertion:T53 Asserted:T129
 E54	Study:T54 Stability:T129
@@ -56,7 +47,6 @@ E59	Procedure:T59 Name:T132 Temporality:E58
 E60	Exception:T60 From:E59 Except:E61
 E61	Procedure:T61 Name:T133
 E62	Modifier:T62 Modifies:T136
-E63	Or:T63 Arg:E62 Arg2:E64
 E64	Modifier:T64 Modifies:T136
 E65	Condition:T65 Name:T136 Severity:T134
 E66	Eq-Comparison:T66 Temporal-Period:T135
@@ -66,22 +56,17 @@ E69	Eq-Comparison:T69 Operator:T137 Temporal-Period:T138 Value:T139 Temporal-Uni
 E70	Modifier:T70 Modifies:T141
 E71	Condition:T71 Name:T141
 E72	Condition:T72 Name:T142
-E73	Or:T73 Arg:E72 Arg2:E74
 E74	Condition:T74 Name:T143
 E75	Condition:T75 Name:T145 Stability:T144
 E76	Eq-Comparison:T76 Temporal-Period:T146
 E78	Allergy:T78 Name:E100 Minimum-Count:E77 Temporality:E76
-E79	Or:T79 Arg:E78 Arg2:E80
 E80	Allergy:T80 Name:E81 Name2:E83
 E81	Drug:T81 Name:T148
-E82	Or:T82 Arg:E81 Arg2:E83
 E83	Drug:T83 Name:T149
 E84	Modifier:T84 Modifies:T151
 E85	Modifier:T85 Modifies:T151
-E86	Or:T86 Arg:E85 Arg2:E87
 E87	Modifier:T87 Modifies:T151
 E88	Drug:T88 Name:T151
-E89	Or:T89 Arg:E88 Arg2:E90
 E90	Drug:T90 Name:T152
 E92	Condition:T92 Name:T153
 E93	Eq-Comparison:T93 Temporal-Period:T154
@@ -89,8 +74,6 @@ E95	Drug:T95 Temporality:E93 Acuteness:T94
 E96	Assertion:T96 Asserted:T155
 E98	Condition:T98 Name:T156 Stability:T155
 E1	Negation:T3 Negates:T108
-E3	And:T17 Arg:T117 Arg2:E24
-E17	Or:T23 Arg2:E55 Arg:E52
 E23	Assertion:T158 Asserted:E55
 E99	Modifier:T159 Modifies:T142
 E77	Eq-Comparison:T77 Operator:T160
@@ -100,22 +83,17 @@ T4	Condition 58 75	allergic rhinitis
 T5	Observation 96 105	skin test
 T6	Drug 135 143	allergen
 T7	Eq-Comparison 145 152	current
-T8	Or 154 156	or
 T9	Eq-Comparison 192 212	within the past year
 T10	Condition 225 236	good health
-T11	And 237 240	and
 T12	Condition 286 293	disease
 T13	Exception 295 305	other than
 T14	Condition 306 323	allergic rhinitis
 T15	Assertion 330 335	would
 T16	Study 355 360	study
 T18	Condition 396 413	allergic rhinitis
-T19	And 445 448	who
 T20	Condition 453 461	pregnant
-T21	Or 462 464	or
 T22	Condition 465 478	breastfeeding
 T24	Condition 493 515	childbearing potential
-T25	And 516 519	who
 T26	Negation 524 527	not
 T27	Eq-Comparison 528 533	using
 T28	Procedure 556 569	birth control
@@ -123,11 +101,9 @@ T29	Condition 579 585	asthma
 T30	Assertion 591 599	requires
 T31	Procedure 600 607	therapy
 T32	Modifier 613 620	inhaled
-T33	Or 621 623	or
 T34	Modifier 624 632	systemic
 T35	Drug 633 648	corticosteroids
 T36	Drug 650 658	cromolyn
-T37	Or 660 662	or
 T38	Drug 663 673	nedocromil
 T39	Modifier 695 700	renal
 T40	Modifier 702 709	hepatic
@@ -138,10 +114,8 @@ T44	Modifier 752 761	metabolic
 T45	Modifier 763 778	cerebrovascular
 T46	Modifier 780 791	respiratory
 T47	Modifier 793 809	gastrointestinal
-T48	Or 811 813	or
 T49	Other 814 819	other
 T50	Condition 832 847	medical illness
-T51	Or 848 850	or
 T52	Condition 851 859	disorder
 T53	Assertion 904 909	could
 T54	Study 929 934	study
@@ -153,7 +127,6 @@ T59	Procedure 1006 1019	immunotherapy
 T60	Exception 1029 1038	exception
 T61	Procedure 1042 1061	maintenance therapy
 T62	Modifier 1096 1113	upper respiratory
-T63	Or 1114 1116	or
 T64	Modifier 1117 1122	sinus
 T65	Condition 1123 1132	infection
 T66	Eq-Comparison 1142 1146	used
@@ -163,22 +136,17 @@ T69	Eq-Comparison 1171 1198	within the previous 30 days
 T70	Modifier 1208 1224	nasal structural
 T71	Condition 1225 1238	abnormalities
 T72	Condition 1256 1268	nasal polyps
-T73	Or 1269 1272	and
 T74	Condition 1280 1296	septal deviation
 T75	Condition 1332 1346	nasal air flow
 T76	Eq-Comparison 1358 1365	history
 T78	Allergy 1383 1392	allergies
-T79	Or 1393 1395	or
 T80	Allergy 1399 1406	allergy
 T81	Drug 1410 1424	antihistamines
-T82	Or 1425 1427	or
 T83	Drug 1428 1438	corticoids
 T84	Modifier 1464 1469	nasal
 T85	Modifier 1471 1475	oral
-T86	Or 1476 1478	or
 T87	Modifier 1479 1485	ocular
 T88	Drug 1486 1499	decongestants
-T89	Or 1501 1503	or
 T90	Drug 1504 1532	nasal topical antihistamines
 T92	Condition 1578 1600	rhinitis medicamentosa
 T93	Eq-Comparison 1609 1614	using
@@ -244,8 +212,6 @@ T156	Condition-Name 1683 1700	allergic rhinitis
 T1	Eq-Temporal-Unit 33 37	year
 T157	Eq-Value 31 32	2
 T3	Negation 241 248	free of
-T17	And 490 492	of
-T23	Or 936 938	or
 T158	Assertion 939 947	required
 T135	Eq-Temporal-Period 1142 1146	used
 T159	Modifier 1250 1255	large
@@ -259,7 +225,7 @@ A4	Assertion-Type-Value E56 hypothetical
 A5	Assertion-Type-Value E96 hypothetical
 A6	Eq-Temporal-Period-Value T99 past
 A7	Polarity-Value T101 positive
-A8	Observation-Type-Value T102 lab
+A8	Observation-Type-Value E5 lab
 A9	Eq-Temporal-Period-Value T103 present
 A10	Eq-Operator-Value T104 LTEQ
 A11	Eq-Temporal-Period-Value T105 past
@@ -300,3 +266,30 @@ R9	Example-Of Arg1:E72 Arg2:E71
 R10	Example-Of Arg1:E74 Arg2:E71
 R11	Caused-By Arg1:T144 Arg2:E71
 R12	Caused-By Arg1:T155 Arg2:E95
+R13	Or Arg1:E7 Arg2:E9
+R14	And Arg1:E10 Arg2:E12
+R15	And Arg1:T114 Arg2:E20
+R16	Or Arg1:E20 Arg2:E22
+R17	And Arg1:E24 Arg2:E26
+R18	Or Arg1:E32 Arg2:E34
+R19	Or Arg1:E36 Arg2:E38
+R20	Or Arg1:E47 Arg2:E49
+R21	Or Arg1:E50 Arg2:E52
+R22	Or Arg1:E62 Arg2:E64
+R23	Or Arg1:E72 Arg2:E74
+R24	Or Arg1:E78 Arg2:E80
+R25	Or Arg1:E81 Arg2:E83
+R26	Or Arg1:E85 Arg2:E87
+R27	Or Arg1:E88 Arg2:E90
+R28	And Arg1:T117 Arg2:E24
+R29	Or Arg1:E52 Arg2:E55
+R30	Or Arg1:E35 Arg2:E36
+R31	Or Arg1:E39 Arg2:E40
+R32	Or Arg1:E40 Arg2:E41
+R33	Or Arg1:E41 Arg2:E42
+R34	Or Arg1:E42 Arg2:E43
+R35	Or Arg1:E43 Arg2:E44
+R36	Or Arg1:E44 Arg2:E45
+R37	Or Arg1:E45 Arg2:E46
+R38	Or Arg1:E46 Arg2:E47
+R39	Or Arg1:E84 Arg2:E85

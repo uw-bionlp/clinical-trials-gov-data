@@ -5,28 +5,21 @@ E6	Eq-Comparison:T18 Operator:T7 Unit:T12 Value:T14
 E7	Eq-Comparison:T19 Temporal-Unit:T10 Value:T16 Temporal-Period:T8
 E8	Eq-Comparison:T20 Temporal-Unit:T11 Value:T17 Temporal-Period:T9
 E2	Condition:T21 Name:T22 Temporality:E31
-E4	And:T25 Arg:E2 Arg2:E3
 E9	Modifier:T26 Modifies:T4
 E10	Study:T27
-E11	Temporal-Connection:T13 Arg:E9 Arg2:E10
-E12	And:T28 Arg:E10 Arg2:E13
 E13	Study:T29
-E14	Condition:T30 Name:T31
+E14	Observation:T30 Name:T31
 E15	Condition:T32 Name:T33
 E16	Modifier:T34 Modifies:T33
 E17	Modifier:T35 Modifies:T33
-E18	Or:T36 Arg:E16 Arg2:E17
 E19	Exception:T37 From:E15 Except:E5
 E20	Procedure:T38 Name:T39 Temporality:E21
 E21	Eq-Comparison:T40 Temporal-Period:T41
-E22	Observation:T42 Name:T43 Eq-Comparison:E6
+E22	Observation:T42 Name:T43 Numeric-Filter:E6
 E23	Study:T15
 E24	Study:T44
-E25	Or:T45 Arg:E23 Arg2:E24
-E26	Temporal-Connection:T46 Arg:E22 Arg2:E23
 E27	Drug:T47 Name:T48 Temporality:E7
 E28	Drug:T49 Name:T50 Temporality:E8
-E29	Or:T51 Arg:E27 Arg2:E28
 E30	Modifier:T52 Modifies:E1
 E31	Eq-Comparison:T53 Temporal-Period:T54
 E32	Modifier:T55 Modifies:T39
@@ -50,19 +43,15 @@ T21	Condition 36 47	blepharitis
 T22	Condition-Name 36 47	blepharitis
 T23	Stability 90 102	exacerbation
 T24	Acuteness 84 89	acute
-T25	And 48 51	and
 T26	Modifier 121 130	both eyes
 T27	Study 134 143	Screening
-T13	Temporal-Connection 131 133	at
-T28	And 144 147	and
 T29	Study 148 156	Baseline
-T30	Condition 193 221	best-corrected visual acuity
-T31	Condition-Name 193 221	best-corrected visual acuity
+T30	Observation 193 221	best-corrected visual acuity
+T31	Observation-Name 193 221	best-corrected visual acuity
 T32	Condition 247 258	abnormality
 T33	Condition-Name 247 258	abnormality
 T34	Modifier 266 273	eyelids
 T35	Modifier 277 283	lashes
-T36	Or 274 276	or
 T37	Exception 285 295	other than
 T38	Procedure 329 336	surgery
 T39	Procedure-Name 329 336	surgery
@@ -72,15 +61,12 @@ T42	Observation 342 345	IOP
 T43	Observation-Name 342 345	IOP
 T15	Study 359 368	Screening
 T44	Study 372 380	Baseline
-T45	Or 369 371	or
-T46	Temporal-Connection 356 358	at
 T47	Drug 406 414	steroids
 T48	Drug-Name 406 414	steroids
 T8	Eq-Temporal-Period 422 426	past
 T9	Eq-Temporal-Period 455 459	past
 T49	Drug 438 447	retinoids
 T50	Drug-Name 438 447	retinoids
-T51	Or 435 437	or
 T52	Modifier 475 487	uncontrolled
 T53	Eq-Comparison 25 32	history
 T54	Eq-Temporal-Period 25 32	history
@@ -89,11 +75,16 @@ A1	Eq-Operator-Value T7 GT
 A4	Eq-Temporal-Unit-Value T10 day
 A5	Eq-Temporal-Unit-Value T11 month
 A6	Stability-Value T23 change
-A8	Temporal-Connection-Type-Value E11 during
 A9	Eq-Temporal-Period-Value T41 past
-A10	Observation-Type-Value T43 measurement
-A11	Temporal-Connection-Type-Value E26 during
+A10	Observation-Type-Value E22 measurement
 A2	Eq-Temporal-Period-Value T8 past
 A3	Eq-Temporal-Period-Value T9 past
 A12	Eq-Temporal-Period-Value T54 past
 A13	Acuteness-Type-Value T24 acute
+R1	And Arg1:E2 Arg2:E3
+R2	During Arg1:E9 Arg2:E10
+R3	And Arg1:E10 Arg2:E13
+R4	Or Arg1:E16 Arg2:E17
+R5	Or Arg1:E23 Arg2:E24
+R6	During Arg1:E22 Arg2:E23
+R7	Or Arg1:E27 Arg2:E28

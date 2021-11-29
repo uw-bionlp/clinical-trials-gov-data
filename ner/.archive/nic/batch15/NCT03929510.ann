@@ -1,0 +1,223 @@
+E1	Observation:T1 Name:T2
+E4	Observation:T4 Name:T5
+E6	Observation:T6 Name:T7
+E8	Observation:T8 Name:T9 Eq-Comparison:E26
+E10	Condition:T10 Name:T11 Polarity:T72
+E12	Condition:T12 Name:T13
+E14	Condition:T14 Name:T15
+E16	Condition:T16 Name:T17 Acuteness:T84
+E18	Condition:T18 Name:T19
+E20	Condition:T20 Name:T21
+E22	Condition:T22 Name:T23 Temporality:E24
+E23	Eq-Comparison:T38 Operator:T24 Unit:T30 Value:T35
+E24	Eq-Comparison:T39 Operator:T25 Temporal-Unit:T27 Value:T36
+E25	Eq-Comparison:T40 Operator:T26 Temporal-Unit:T28 Value:T37
+E26	Eq-Comparison:T41 Operator:T31 Value:T34 Value2:T33 Unit:T29 Per:T66
+E2	Eq-Comparison:T42 Temporal-Period:T43
+E28	Eq-Comparison:T46 Temporal-Period:T47
+E29	Eq-Comparison:T48 Temporal-Period:T49
+E3	Condition:T52 Name:T53
+E5	Procedure:T54 Name:T55
+E7	And:T44 Arg:T3 Arg2:E3
+E9	Procedure:T45 Name:T56
+E11	Modifier:T57 Modifies:T56
+E13	Observation:T58 Name:T59
+E15	And:T60 Arg:E4 Arg2:E13
+E17	Observation:T61 Name:T62
+E19	Procedure:T32 Name:T63
+E21	Observation:T64 Name:T65
+E27	Observation:T67 Name:T68 Eq-Comparison:E23
+E31	Eq-Comparison:T69 Value:T70 Unit:T71
+E32	Condition:T73 Name:T74
+E33	Study:T75
+E34	Temporal-Connection:T76 Arg:E32 Arg2:E33
+E35	Family-Member:T77 Has:E14
+E36	Modifier:T78 Modifies:T15
+E37	Modifier:T79 Modifies:E35
+E38	Or:T80 Arg:E33 Arg2:E35
+E39	Condition:T81 Name:T82
+E40	Or:T83 Arg:E18 Arg2:E39
+E41	Condition:T85 Name:T86 Temporality:E28
+E42	Or:T87 Arg:E16 Arg2:E41
+E43	Eq-Comparison:T88 Temporal-Period:T89
+E44	Or:T90 Arg:E43 Arg2:E29
+E45	Condition:T91 Name:T92 Temporality:E29
+E46	Condition:T93 Name:T94
+E47	Modifier:T95 Modifies:T94
+E48	Modifier:T96 Modifies:T94
+E49	Or:T97 Arg:E47 Arg2:E48
+E50	Procedure:T98
+E51	Procedure:T99
+E52	Or:T100 Arg:E50 Arg2:E51
+E53	Exception:T101 From:E45 Except:E46
+E54	Condition:T102 Name:T103 Temporality:E2
+E55	Condition:T104 Name:T105
+E56	Or:T106 Arg:E54 Arg2:E55
+E57	Or:T107 Arg:E55 Arg2:E20
+E58	Or:T108 Arg:E20 Arg2:E22
+E59	Study:T109
+E60	Temporal-Connection:T110 Arg:E24 Arg2:E59
+E61	Drug:T111 Name:T112
+E62	Drug:T113 Name:T114 Temporality:E25
+E63	Or:T115 Arg:E61 Arg2:E62
+E64	Observation:T116 Name:T117 Polarity:T118
+E30	Temporal-Connection:T50 Arg:E25 Arg2:E64
+E65	Modifier:T51 Modifies:T94
+E66	Other:T119 Is-Other:E20
+T1	Observation 170 184	blood pressure
+T2	Observation-Name 170 184	blood pressure
+T3	Life-Stage-And-Gender 25 29	Male
+T4	Observation 186 188	BP
+T5	Observation-Name 186 188	BP
+T6	Observation 272 287	Body mass index
+T7	Observation-Name 272 287	Body mass index
+T8	Observation 289 292	BMI
+T9	Observation-Name 289 292	BMI
+T10	Condition 448 476	human immunodeficiency virus
+T11	Condition-Name 448 476	human immunodeficiency virus
+T12	Condition 389 414	immunodeficiency disorder
+T13	Condition-Name 389 414	immunodeficiency disorder
+T14	Condition 542 558	immunodeficiency
+T15	Condition-Name 542 558	immunodeficiency
+T16	Condition 657 675	chronic infections
+T17	Condition-Name 657 675	chronic infections
+T18	Condition 565 591	Infection with hepatitis B
+T19	Condition-Name 565 591	Infection with hepatitis B
+T20	Condition 937 953	illicit drug use
+T21	Condition-Name 937 953	illicit drug use
+T22	Condition 957 967	dependence
+T23	Condition-Name 957 967	dependence
+T24	Eq-Operator 341 342	>
+T25	Eq-Operator 968 974	within
+T26	Eq-Operator 1047 1053	within
+T27	Eq-Temporal-Unit 977 983	months
+T28	Eq-Temporal-Unit 1056 1062	months
+T29	Eq-Unit 310 312	kg
+T30	Eq-Unit 345 347	kg
+T31	Eq-Operator 302 304	to
+T33	Eq-Value 297 301	17.5
+T34	Eq-Value 305 309	30.5
+T35	Eq-Value 342 344	50
+T36	Eq-Value 975 976	6
+T37	Eq-Value 1054 1055	3
+T38	Eq-Comparison 341 347	>50 kg
+T39	Eq-Comparison 968 983	within 6 months
+T40	Eq-Comparison 1047 1062	within 3 months
+T41	Eq-Comparison 297 315	17.5 to 30.5 kg/m2
+T42	Eq-Comparison 877 884	History
+T43	Eq-Temporal-Period 877 884	History
+T46	Eq-Comparison 689 696	history
+T47	Eq-Temporal-Period 689 696	history
+T48	Eq-Comparison 742 749	history
+T49	Eq-Temporal-Period 742 749	history
+T52	Condition 51 58	healthy
+T53	Condition-Name 51 58	healthy
+T54	Procedure 76 94	medical evaluation
+T55	Procedure-Name 76 94	medical evaluation
+T44	And 43 46	who
+T45	Procedure 138 158	physical examination
+T56	Procedure-Name 138 158	physical examination
+T57	Modifier 133 137	full
+T58	Observation 194 204	pulse rate
+T59	Observation-Name 194 204	pulse rate
+T60	And 190 193	and
+T61	Observation 206 208	PR
+T62	Observation-Name 206 208	PR
+T32	Procedure 223 234	12 lead ECG
+T63	Procedure-Name 223 234	12 lead ECG
+T64	Observation 249 265	laboratory tests
+T65	Observation-Name 249 265	laboratory tests
+T66	Eq-Unit 313 315	m2
+T67	Observation 329 340	body weight
+T68	Observation-Name 329 340	body weight
+T69	Eq-Comparison 349 355	110 lb
+T70	Eq-Value 349 352	110
+T71	Eq-Unit 353 355	lb
+T72	Polarity 426 434	positive
+T73	Condition 478 481	HIV
+T74	Condition-Name 478 481	HIV
+T75	Study 486 495	screening
+T76	Temporal-Connection 483 485	at
+T77	Family-Member 515 523	relative
+T78	Modifier 531 541	hereditary
+T79	Modifier 502 514	first degree
+T80	Or 497 499	or
+T81	Condition 595 614	hepatitis C viruses
+T82	Condition-Name 595 614	hepatitis C viruses
+T83	Or 592 594	or
+T84	Acuteness 648 653	acute
+T85	Condition 679 688	infection
+T86	Condition-Name 679 688	infection
+T87	Or 676 678	or
+T88	Eq-Comparison 729 736	present
+T89	Eq-Temporal-Period 729 736	present
+T90	Or 737 739	or
+T91	Condition 753 763	malignancy
+T92	Condition-Name 753 763	malignancy
+T93	Condition 852 858	cancer
+T94	Condition-Name 852 858	cancer
+T95	Modifier 809 834	non metastatic basal cell
+T96	Modifier 838 851	squamous cell
+T97	Or 835 837	or
+T98	Procedure 790 797	treated
+T99	Procedure 801 808	excised
+T100	Or 798 800	or
+T101	Exception 764 774	other than
+T102	Condition 888 901	alcohol abuse
+T103	Condition-Name 888 901	alcohol abuse
+T104	Condition 905 919	binge drinking
+T105	Condition-Name 905 919	binge drinking
+T106	Or 902 904	or
+T107	Or 920 926	and/or
+T108	Or 954 956	or
+T109	Study 987 996	Screening
+T110	Temporal-Connection 984 986	of
+T111	Drug 1010 1017	tobacco
+T112	Drug-Name 1010 1017	tobacco
+T113	Drug 1018 1026	nicotine
+T114	Drug-Name 1018 1026	nicotine
+T115	Or 1017 1018	/
+T116	Observation 1091 1110	urine cotinine test
+T117	Observation-Name 1091 1110	urine cotinine test
+T118	Polarity 1082 1090	positive
+T50	Temporal-Connection 1063 1068	prior
+T51	Modifier 866 870	skin
+T119	Other 931 936	other
+A1	Life-Stage-And-Gender-Type T3 male
+A2	Observation-Type-Value T7 vital
+A3	Observation-Type-Value T9 vital
+A4	Eq-Operator-Value T24 GT
+A5	Eq-Operator-Value T25 LTEQ
+A6	Eq-Operator-Value T26 LTEQ
+A7	Eq-Temporal-Unit-Value T27 month
+A8	Eq-Temporal-Unit-Value T28 month
+A9	Eq-Operator-Value T31 BETWEEN
+A10	Eq-Temporal-Period-Value T43 past
+A12	Eq-Temporal-Period-Value T47 past
+A13	Eq-Temporal-Period-Value T49 past
+A11	Observation-Type-Value T5 vital
+A15	Observation-Type-Value T2 vital
+A16	Observation-Type-Value T59 vital
+A17	Observation-Type-Value T62 vital
+A18	Observation-Type-Value T65 lab
+A19	Observation-Type-Value T68 vital
+A20	Polarity-Value T72 positive
+A21	Temporal-Connection-Type-Value E34 during
+A23	Eq-Temporal-Period-Value T89 present
+A24	Temporal-Connection-Type-Value E60 before
+A25	Observation-Type-Value T117 lab
+A26	Polarity-Value T118 positive
+A14	Temporal-Connection-Type-Value E30 before
+A27	Acuteness-Type-Value T84 acute
+R1	Found-By Arg1:E3 Arg2:E5
+R2	Abbrev-Of Arg1:E4 Arg2:E1
+R3	Abbrev-Of Arg1:E17 Arg2:E13
+R4	Example-Of Arg1:E4 Arg2:E9
+R5	Example-Of Arg1:E13 Arg2:E9
+R6	Example-Of Arg1:E19 Arg2:E9
+R7	Example-Of Arg1:E21 Arg2:E9
+R8	Abbrev-Of Arg1:E8 Arg2:E6
+R9	Equivalent-To Arg1:E31 Arg2:E23
+R10	Abbrev-Of Arg1:E32 Arg2:E10
+R11	Example-Of Arg1:E10 Arg2:E12
+R12	Treatment-For Arg1:E51 Arg2:E46

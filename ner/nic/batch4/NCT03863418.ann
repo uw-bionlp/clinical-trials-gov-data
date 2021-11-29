@@ -1,10 +1,10 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T80 Operator:T81 Value:T82 Temporal-Unit:T83
 E3	Condition:T3 Name:T84
 E4	Observation:T4 Name:T133
-E5	Age:T5 Eq-Comparison:E6
+E5	Age:T5 Numeric-Filter:E6
 E6	Eq-Comparison:T6 Operator:T85 Value:T86 Temporal-Unit:T87
-E7	Age:T7 Eq-Comparison:E8
+E7	Age:T7 Numeric-Filter:E8
 E8	Eq-Comparison:T8 Operator:T88 Value:T89 Temporal-Unit:T90
 E9	Modifier:T9 Modifies:T91
 E10	Condition:T10 Name:T91
@@ -12,8 +12,8 @@ E11	Condition:T11 Name:T92
 E12	Allergy:T12 Name:T134
 E13	Other:T13 Is-Other:E14
 E14	Condition:T14 Name:T93
-E15	Modifier:T15 Modifies:T94
-E16	Condition:T16 Name:T94 Acuteness:T74
+E15	Modifier:T15 Modifies:E16
+E16	Condition:T16 Acuteness:T74
 E17	Condition:T17 Name:T95
 E18	Eq-Comparison:T18 Temporal-Period:T96
 E19	Condition:T19 Name:T97 Temporality:E18
@@ -27,52 +27,36 @@ E27	Condition:T27 Name:T104
 E29	Condition:T29 Name:T105 Acuteness:T28
 E30	Condition:T30 Name:T106
 E31	Modifier:T31 Modifies:T106
-E32	Or:T32 Arg:E31 Arg2:E33
 E34	Drug:T34 Name:T108
-E35	Or:T35 Arg:E80 Arg2:E39
 E36	Modifier:T36 Modifies:T109
-E37	Or:T37 Arg:E36 Arg2:E38
 E38	Modifier:T38 Modifies:T109
 E39	Drug:T39 Name:T109
-E40	Temporal-Connection:T40 Arg:E39 Arg2:E41
 E41	Eq-Comparison:T41 Value:T110 Temporal-Unit:T111
-E42	Temporal-Connection:T42 Arg:E41 Arg2:E43
-E43	Study:T43 
+E43	Study:T43
 E44	Procedure:T44 Temporality:E49
 E45	Drug:T45 Name:T112
 E46	Drug:T46 Name:T113
-E47	Or:T47 Arg:E46 Arg2:E48
 E48	Drug:T48 Name:T114
 E49	Eq-Comparison:T49 Value:T115 Temporal-Unit:T116
-E50	Temporal-Connection:T50 Arg:E49 Arg2:E51
-E51	Study:T51 
+E51	Study:T51
 E52	Drug:T52 Name:T118 Temporality:E58
-E53	Or:T53 Arg:E52 Arg2:E55
 E55	Drug:T55 Name:T119 Temporality:E58
-E56	Or:T56 Arg:E55 Arg2:E57
 E57	Procedure:T57 Name:T120 Temporality:E58
 E58	Eq-Comparison:T58 Temporal-Period:T121 Value:T122 Temporal-Unit:T123
 E59	Drug:T59 Name:T125
-E60	Or:T60 Arg:E59 Arg2:E61
-E61	Drug:T61 
-E62	Temporal-Connection:T62 Arg:E61 Arg2:E63
+E61	Drug:T61
 E63	Eq-Comparison:T63 Value:T127 Temporal-Unit:T128
-E64	Temporal-Connection:T64 Arg:E63 Arg2:E65
-E65	Study:T65 
+E65	Study:T65
 E66	Other:T66 Is-Other:E67
 E67	Study:T67 Study-Of:E70
 E68	Study:T68 Study-Of:E70
-E69	Or:T69 Arg:E68 Arg2:E82
 E70	Drug:T70 Temporality:E72
-E71	Or:T71 Arg:E83 Arg2:E72
 E72	Eq-Comparison:T72 Operator:T129 Value:T130 Temporal-Unit:T131
-E73	Temporal-Connection:T73 Arg:E72 Arg2:E75
-E75	Study:T75 
+E75	Study:T75
 E76	Condition:T76 Name:T132
 E77	Study:T77 Study-Of:E78
-E78	Drug:T78 
+E78	Drug:T78
 E33	Modifier:T33 Modifies:T106
-E79	Or:T107 Arg:E34 Arg2:E80
 E80	Drug:T135 Name:T136
 E54	Modifier:T54 Modifies:T125
 E81	Condition:T117 Name:T124
@@ -109,46 +93,31 @@ T28	Acuteness 536 543	chronic
 T29	Condition 544 562	pulmonary diseases
 T30	Condition 569 582	malformations
 T31	Modifier 590 606	gastrointestinal
-T32	Or 607 613	and/or
 T34	Drug 656 666	prebiotics
-T35	Or 678 679	/
 T36	Modifier 679 688	symbiotic
-T37	Or 688 689	/
 T38	Modifier 689 697	systemic
 T39	Drug 698 714	immunomodulators
-T40	Temporal-Connection 715 721	during
 T41	Eq-Comparison 726 733	4 weeks
-T42	Temporal-Connection 734 740	before
 T43	Study 741 750	enrolment
 T44	Procedure 757 767	treatments
 T45	Drug 773 797	topical immunomodulators
 T46	Drug 799 809	Tacrolimus
-T47	Or 810 812	or
 T48	Drug 813 825	Pimecrolimus
 T49	Eq-Comparison 827 848	over the three months
-T50	Temporal-Connection 849 857	prior to
 T51	Study 858 867	enrolment
 T52	Drug 881 896	corticosteroids
-T53	Or 897 899	or
 T55	Drug 900 923	calcineurin antagonists
-T56	Or 924 926	or
 T57	Procedure 927 939	phototherapy
 T58	Eq-Comparison 947 963	previous 4 weeks
 T59	Drug 986 997	antibiotics
-T60	Or 998 1000	or
 T61	Drug 1014 1019	drugs
-T62	Temporal-Connection 1020 1026	during
 T63	Eq-Comparison 1027 1034	4 weeks
-T64	Temporal-Connection 1035 1041	before
 T65	Study 1042 1047	study
 T66	Other 1203 1208	other
 T67	Study 1209 1216	studies
 T68	Study 1227 1242	investigational
-T69	Or 1243 1245	or
 T70	Drug 1255 1263	products
-T71	Or 1278 1280	or
 T72	Eq-Comparison 1281 1297	within two weeks
-T73	Temporal-Connection 1298 1306	prior to
 T75	Study 1322 1327	study
 T76	Condition 1334 1350	hypersensitivity
 T77	Study 1378 1383	study
@@ -206,7 +175,6 @@ T132	Condition-Name 1334 1350	hypersensitivity
 T133	Observation-Name 100 112	SCORAD index
 T134	Allergy-Name 218 222	food
 T33	Modifier 614 631	respiratory tract
-T107	Or 666 667	/
 T135	Drug 668 678	probiotics
 T136	Drug-Name 668 678	probiotics
 T54	Modifier 977 985	systemic
@@ -215,12 +183,6 @@ T124	Condition-Name 1006 1013	mycotic
 T126	Modifier 1246 1254	marketed
 T137	Modifier 1264 1277	concomitantly
 T74	Acuteness 269 276	chronic
-A1	Temporal-Connection-Type-Value E40 during
-A2	Temporal-Connection-Type-Value E42 before
-A3	Temporal-Connection-Type-Value E50 before
-A4	Temporal-Connection-Type-Value E62 during
-A5	Temporal-Connection-Type-Value E64 before
-A6	Temporal-Connection-Type-Value E73 before
 A7	Life-Stage-And-Gender-Type T79 child
 A8	Eq-Operator-Value T81 BETWEEN
 A9	Eq-Temporal-Unit-Value T83 month
@@ -236,7 +198,7 @@ A19	Eq-Temporal-Unit-Value T123 week
 A21	Eq-Temporal-Unit-Value T128 week
 A22	Eq-Operator-Value T129 LTEQ
 A23	Eq-Temporal-Unit-Value T131 week
-A24	Observation-Type-Value T133 clinical-score
+A24	Observation-Type-Value E4 clinical-score
 A25	Acuteness-Type-Value T22 chronic
 A26	Acuteness-Type-Value T28 chronic
 A27	Acuteness-Type-Value T74 chronic
@@ -246,3 +208,19 @@ R3	Example-Of Arg1:E46 Arg2:E45
 R4	Example-Of Arg1:E48 Arg2:E45
 R5	Treatment-For Arg1:E61 Arg2:E81
 R6	Caused-By Arg1:E76 Arg2:E78
+R7	Or Arg1:E31 Arg2:E33
+R8	Or Arg1:E80 Arg2:E39
+R9	Or Arg1:E36 Arg2:E38
+R10	During Arg1:E39 Arg2:E41
+R11	Before Arg1:E41 Arg2:E43
+R12	Or Arg1:E46 Arg2:E48
+R13	Before Arg1:E49 Arg2:E51
+R14	Or Arg1:E52 Arg2:E55
+R15	Or Arg1:E55 Arg2:E57
+R16	Or Arg1:E59 Arg2:E61
+R17	During Arg1:E61 Arg2:E63
+R18	Before Arg1:E63 Arg2:E65
+R19	Or Arg1:E68 Arg2:E82
+R20	Or Arg1:E83 Arg2:E72
+R21	Before Arg1:E72 Arg2:E75
+R22	Or Arg1:E34 Arg2:E80

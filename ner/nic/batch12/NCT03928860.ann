@@ -10,18 +10,16 @@ E19	Condition:T19 Name:T20
 E20	Eq-Comparison:T30 Operator:T24 Value:T27 Value2:T26
 E2	Eq-Comparison:T31 Temporal-Recency:T32
 E4	Eq-Comparison:T33 Operator:T34 Temporal-Unit:T22 Value:T25
-E8	Observation:T36 Name:T37 Eq-Comparison:E20
+E8	Observation:T36 Name:T37 Numeric-Filter:E20
 E10	Condition:T38 Name:T39 Stage:E12
 E12	Eq-Comparison:T40 Unit:T41 Operator:T21 Value:T28
 E14	Eq-Comparison:T42 Temporal-Period:T43
 E16	Procedure:T44 Name:T45 Temporality:E14 Temporality2:E23
 E18	Modifier:T46 Modifies:T45
 E21	Modifier:T47 Modifies:T45
-E22	Or:T48 Arg:E18 Arg2:E21
 E23	Eq-Comparison:T49 Temporal-Unit:T23 Value:T29 Temporal-Period:T35
 E24	Modifier:T52 Modifies:T12
 E17	Modifier:T17 Modifies:T12
-E25	Or:T18 Arg:E17 Arg2:E24
 E26	Condition:T54 Name:T55
 T1	Condition 78 105	peripheral vascular disease
 T2	Condition-Name 78 105	peripheral vascular disease
@@ -67,12 +65,10 @@ T44	Procedure 292 299	surgery
 T45	Procedure-Name 292 299	surgery
 T46	Modifier 267 275	vascular
 T47	Modifier 279 291	endovascular
-T48	Or 276 278	or
 T49	Eq-Comparison 307 320	last 3 months
 T51	Severity 480 491	significant
 T52	Modifier 501 506	renal
 T17	Modifier 492 497	liver
-T18	Or 498 500	or
 T53	Acuteness 535 540	Acute
 T54	Condition 580 589	neoplasia
 T55	Condition-Name 580 589	neoplasia
@@ -89,3 +85,5 @@ A7	Eq-Temporal-Period-Value T35 past
 A12	Acuteness-Type-Value T53 acute
 R1	Abbrev-Of Arg1:E19 Arg2:E3
 R2	Equivalent-To Arg1:E13 Arg2:E11
+R3	Or Arg1:E18 Arg2:E21
+R4	Or Arg1:E17 Arg2:E24

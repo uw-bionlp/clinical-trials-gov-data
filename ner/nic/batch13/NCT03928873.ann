@@ -7,19 +7,14 @@ E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14
 E15	Procedure:T15 Name:T16
 E17	Condition:T17 Name:T18
-E22	Age:T24 Eq-Comparison:E2
+E22	Age:T24 Numeric-Filter:E2
 E2	Eq-Comparison:T27 Operator:T28 Temporal-Unit:T23 Value:T25
 E4	Eq-Comparison:T29 Unit:T32 Value:T30 Value2:T26 Operator:T31
 E6	Study:T19
-E8	Temporal-Connection:T20 Arg:E11 Arg2:E6
-E10	Or:T21 Arg:E15 Arg2:E11
 E12	Condition:T22 Name:T33 Temporality:E24
-E14	Or:T34 Arg:E3 Arg2:E12
 E16	Condition:T35 Name:T36
 E18	Condition:T37 Name:T38
 E19	Procedure:T39 Name:T40
-E20	Or:T41 Arg:E7 Arg2:E19
-E21	Or:T42 Arg:E19 Arg2:E17
 E23	Eq-Comparison:T43 Temporal-Period:T44
 E24	Eq-Comparison:T45 Temporal-Period:T46
 E25	Procedure:T47 Temporality:E23
@@ -53,19 +48,14 @@ T30	Eq-Value 65 66	3
 T31	Eq-Operator 64 65	~
 T32	Eq-Unit 57 62	Grade
 T19	Study 266 271	study
-T20	Temporal-Connection 255 261	before
-T21	Or 216 218	or
 T22	Condition 331 345	nerve injuries
 T33	Condition-Name 331 345	nerve injuries
-T34	Or 319 321	or
 T35	Condition 401 416	local infection
 T36	Condition-Name 401 416	local infection
 T37	Condition 418 428	malignancy
 T38	Condition-Name 418 428	malignancy
 T39	Procedure 476 493	cardiac pacemaker
 T40	Procedure-Name 476 493	cardiac pacemaker
-T41	Or 473 475	or
-T42	Or 495 498	and
 T43	Eq-Comparison 144 152	Previous
 T44	Eq-Temporal-Period 144 152	Previous
 T45	Eq-Comparison 322 330	previous
@@ -75,7 +65,12 @@ T48	Modifier 353 370	upper extremities
 A1	Eq-Temporal-Unit-Value T23 year
 A2	Eq-Operator-Value T28 GT
 A3	Eq-Operator-Value T31 BETWEEN
-A4	Temporal-Connection-Type-Value E8 before
 A5	Eq-Temporal-Period-Value T44 past
 A6	Eq-Temporal-Period-Value T46 past
 R1	Using Arg1:E25 Arg2:E9
+R2	Before Arg1:E11 Arg2:E6
+R3	Or Arg1:E15 Arg2:E11
+R4	Or Arg1:E3 Arg2:E12
+R5	Or Arg1:E7 Arg2:E19
+R6	Or Arg1:E19 Arg2:E17
+R7	Or Arg1:E9 Arg2:E15

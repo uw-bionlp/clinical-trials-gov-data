@@ -1,31 +1,24 @@
 E1	Family-Member:T1
-E2	Temporal-Connection:T2 Arg:E1 Arg2:E3
 E3	Study:T3 Study-Of:E18
 E4	Eq-Comparison:T4 Operator:T14 Value:T15 Temporal-Unit:T16
-E5	And:T5 Arg:E4 Arg2:E6
 E6	Eq-Comparison:T6 Operator:T17 Value:T18 Temporal-Unit:T19
 E7	Condition:T7 Name:T28
 E8	Family-Member:T8
-E9	Temporal-Connection:T9 Arg:E8 Arg2:E10
 E10	Study:T10 Study-Of:E19
 E11	Eq-Comparison:T11 Operator:T20 Value:T21 Temporal-Unit:T22
 E12	Negation:T12 Negates:E13
 E13	Condition:T13 Name:T26
-E14	Age:T27 Eq-Comparison:E4 Eq-Comparison2:E6
-E15	Age:T29 Eq-Comparison:E16 Eq-Comparison2:E11
+E14	Age:T27 Numeric-Filter:E4 Numeric-Filter:E6
+E15	Age:T29 Numeric-Filter:E16 Numeric-Filter:E11
 E16	Eq-Comparison:T30 Operator:T23 Value:T24 Temporal-Unit:T25
-E17	And:T31 Arg:E11 Arg2:E16
 E18	Procedure:T32
 E19	Procedure:T33
 T1	Family-Member 83 90	parents
-T2	Temporal-Connection 91 97	before
 T3	Study 102 107	study
 T4	Eq-Comparison 158 177	older than 6 months
-T5	And 178 181	and
 T6	Eq-Comparison 182 203	younger than 80 years
 T7	Condition 240 255	Wilson dis-ease
 T8	Family-Member 325 332	parents
-T9	Temporal-Connection 333 339	before
 T10	Study 344 349	study
 T11	Eq-Comparison 399 420	younger than 6 months
 T12	Negation 450 452	No
@@ -47,13 +40,10 @@ T27	Age 158 163	older
 T28	Condition-Name 240 255	Wilson dis-ease
 T29	Age 425 430	older
 T30	Eq-Comparison 425 444	older than 80 years
-T31	And 421 424	and
 T32	Procedure 116 126	procedures
 T33	Procedure 358 368	procedures
 A1	Family-Member-Type E1 parent
-A2	Temporal-Connection-Type-Value E2 before
 A3	Family-Member-Type E8 parent
-A4	Temporal-Connection-Type-Value E9 before
 A5	Eq-Operator-Value T14 GT
 A6	Eq-Temporal-Unit-Value T16 month
 A7	Eq-Operator-Value T17 LT
@@ -62,3 +52,7 @@ A9	Eq-Operator-Value T20 LT
 A10	Eq-Temporal-Unit-Value T22 month
 A11	Eq-Operator-Value T23 GT
 A12	Eq-Temporal-Unit-Value T25 year
+R1	Before Arg1:E1 Arg2:E3
+R2	And Arg1:E4 Arg2:E6
+R3	Before Arg1:E8 Arg2:E10
+R4	And Arg1:E11 Arg2:E16

@@ -4,23 +4,19 @@ E5	Procedure:T5 Name:T6 Temporality:E37
 E7	Procedure:T7 Name:T8 Temporality:E43 Temporality2:E42
 E9	Procedure:T9 Name:T10
 E11	Condition:T11 Name:T12
-E14	Age:T22 Eq-Comparison:E25
-E15	Age:T23 Eq-Comparison:E12
+E14	Age:T22 Numeric-Filter:E25
+E15	Age:T23 Numeric-Filter:E12
 E16	Eq-Comparison:T32 Operator:T13 Temporal-Unit:T18 Value:T30
 E17	Eq-Comparison:T33 Operator:T14 Temporal-Unit:T19 Value:T31
 E2	Condition:T34 Name:T35
-E4	Or:T36 Arg:E2 Arg2:E1
 E6	Condition:T37 Name:T38
 E8	Condition:T39 Name:T40 Temporality:E63
 E18	Modifier:T41 Modifies:T40
 E19	Modifier:T42 Modifies:T40
-E20	Or:T43 Arg:E18 Arg2:E19
 E10	Negation:T44 Negates:E6
-E21	Or:T45 Arg:E6 Arg2:E8
-E22	Or:T46 Arg:E1 Arg2:E10
 E23	Eq-Comparison:T47 Operator:T49 Value:T24 Value2:T25
 E25	Eq-Comparison:T52 Temporal-Unit:T16 Value:T27 Value2:T26 Operator:T53
-E26	Age:T54 Eq-Comparison:E23
+E26	Age:T54 Numeric-Filter:E23
 E12	Eq-Comparison:T20 Temporal-Unit:T17 Operator:T55 Value:T28 Value2:T29
 E27	Condition:T56 Name:T57
 E28	Observation:T58 Name:T59
@@ -30,32 +26,25 @@ E31	Modifier:T62 Modifies:T59
 E32	Modifier:T63 Modifies:T59
 E33	Modifier:T64 Modifies:T59
 E34	Modifier:T65 Modifies:T59
-E35	Or:T66 Arg:E34 Arg2:E33
-E36	Or:T67 Arg:E32 Arg2:E33
 E37	Eq-Comparison:T68 Temporal-Period:T69
 E38	Modifier:T70 Modifies:T6
 E39	Modifier:T71 Modifies:T6
-E40	Or:T72 Arg:E38 Arg2:E39
 E41	Condition:T73 Name:T74 Temporality:E64
 E42	Eq-Comparison:T75 Temporal-Period:T76
 E43	Eq-Comparison:T78 Temporal-Period:T77
-E44	Or:T79 Arg:E42 Arg2:E43
 E45	Modifier:T80 Modifies:T8
 E46	Modifier:T81 Modifies:T8
-E47	Or:T82 Arg:E45 Arg2:E46
 E48	Drug:T83 Name:T84
 E49	Drug:T85 Name:T86
 E50	Drug:T87 Name:T88
-E51	Or:T89 Arg:E48 Arg2:E49
 E52	Exception:T90 From:E7 Except:E48 Except2:E49
 E53	Eq-Comparison:T91 Temporal-Period:T92
 E54	Eq-Comparison:T93 Temporal-Period:T94
-E55	Or:T95 Arg:E53 Arg2:E54
 E56	Drug:T96 Name:T97 Temporality:E54 Temporality2:E53
 E57	Drug:T98 Name:T99
-E58	Study:T100 
+E58	Study:T100
 E59	Contraindication:T101 Contraindicates:E58
-E60	Condition:T102 
+E60	Condition:T102
 E62	Organism:T104 Name:T105
 E63	Eq-Comparison:T106 Temporal-Period:T107
 E64	Eq-Comparison:T108 Temporal-Period:T109
@@ -97,17 +86,13 @@ T32	Eq-Comparison 889 904	within 3 months
 T33	Eq-Comparison 1040 1055	within 3 months
 T34	Condition 97 101	HIES
 T35	Condition-Name 97 101	HIES
-T36	Or 102 104	or
 T37	Condition 199 212	immune defect
 T38	Condition-Name 199 212	immune defect
 T39	Condition 259 269	infections
 T41	Modifier 227 235	invasive
 T42	Modifier 239 248	recurrent
-T43	Or 236 238	or
 T40	Condition-Name 259 269	infections
 T44	Negation 155 158	not
-T45	Or 213 215	or
-T46	Or 132 134	or
 T47	Eq-Comparison 363 378	18 and 65 years
 T49	Eq-Operator 366 369	and
 T52	Eq-Comparison 422 436	7 and 65 years
@@ -125,36 +110,29 @@ T62	Modifier 568 571	RNA
 T63	Modifier 573 582	bacterial
 T64	Modifier 587 602	fungal cultures
 T65	Modifier 614 628	tissue samples
-T66	Or 604 607	and
-T67	Or 583 586	and
 T68	Eq-Comparison 791 801	undergoing
 T69	Eq-Temporal-Period 791 801	undergoing
 T70	Modifier 802 809	blister
 T71	Modifier 813 817	skin
-T72	Or 810 812	or
 T73	Condition 848 864	keloid formation
 T74	Condition-Name 848 864	keloid formation
 T75	Eq-Comparison 871 878	Current
 T76	Eq-Temporal-Period 871 878	Current
 T77	Eq-Temporal-Period 882 887	prior
 T78	Eq-Comparison 882 887	prior
-T79	Or 879 881	or
 T80	Modifier 906 919	anticoagulant
 T81	Modifier 923 936	anti-platelet
-T82	Or 920 922	or
 T83	Drug 957 964	aspirin
 T84	Drug-Name 957 964	aspirin
 T85	Drug 968 1005	non-steroidal anti-inflammatory drugs
 T86	Drug-Name 968 1005	non-steroidal anti-inflammatory drugs
 T87	Drug 1007 1013	NSAIDs
 T88	Drug-Name 1007 1013	NSAIDs
-T89	Or 965 967	or
 T90	Exception 946 956	other than
 T91	Eq-Comparison 1022 1029	Current
 T92	Eq-Temporal-Period 1022 1029	Current
 T93	Eq-Comparison 1033 1038	prior
 T94	Eq-Temporal-Period 1033 1038	prior
-T95	Or 1030 1032	or
 T96	Drug 1064 1086	immunomodulatory drugs
 T97	Drug-Name 1064 1086	immunomodulatory drugs
 T98	Drug 1108 1116	steroids
@@ -205,3 +183,17 @@ R10	Caused-By Arg1:E59 Arg2:E60
 R11	Caused-By Arg1:E8 Arg2:E62
 R1	If-Then Arg1:E13 Arg2:E8
 R2	If-Then Arg1:E24 Arg2:E26
+R12	Or Arg1:E2 Arg2:E1
+R13	Or Arg1:E18 Arg2:E19
+R14	Or Arg1:E6 Arg2:E8
+R15	Or Arg1:E1 Arg2:E10
+R16	Or Arg1:E34 Arg2:E33
+R17	Or Arg1:E32 Arg2:E33
+R18	Or Arg1:E38 Arg2:E39
+R19	Or Arg1:E42 Arg2:E43
+R20	Or Arg1:E45 Arg2:E46
+R21	Or Arg1:E48 Arg2:E49
+R22	Or Arg1:E53 Arg2:E54
+R23	Or Arg1:E9 Arg2:E57
+R24	Or Arg1:E30 Arg2:E31
+R25	Or Arg1:E31 Arg2:E32

@@ -1,21 +1,17 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T79 Operator:T80 Value2:T81
 E3	Eq-Comparison:T3 Temporal-Period:T82
 E4	Condition:T4 Name:T83 Temporality:E3
-E5	Or:T5 Arg:E4 Arg2:E7
 E6	Modifier:T6 Modifies:T84
 E7	Condition:T7 Name:T84
-E8	Or:T8 Arg:E7 Arg2:E9
-E9	Observation:T9 Name:T85 Eq-Comparison:E10
+E9	Observation:T9 Name:T85 Numeric-Filter:E10
 E10	Eq-Comparison:T10 Operator:T86 Value:T143
 E12	Assertion:T12 Asserted:E15 Asserted2:E18
-E13	And:T13 Arg:E12 Arg2:E14
 E14	Assertion:T14 Asserted:E15 Asserted2:E18
 E15	Procedure:T15 Name:T88
 E16	Modifier:T16 Modifies:T11
-E17	Or:T17 Arg:E16 Arg2:E11
 E18	Procedure:T18 Name:T11
-E19	Observation:T19 Name:T144 Eq-Comparison:E20
+E19	Observation:T19 Name:T144 Numeric-Filter:E20
 E20	Eq-Comparison:T20 Operator:T89 Value:T90
 E21	Condition:T21 Name:T92
 E22	Condition:T22 Name:T93
@@ -24,49 +20,42 @@ E24	Condition:T24 Name:T95 Stage:E26
 E27	Eq-Comparison:T27 Temporal-Period:T98
 E28	Condition:T28 Name:T99 Temporality:E27
 E29	Assertion:T29 Asserted:E28
-E30	Or:T30 Arg:E29 Arg2:E31
 E31	Assertion:T31 Asserted:E28
-E32	Or:T32 Arg:E31 Arg2:E79
 E34	Eq-Comparison:T34 Operator:T101 Value:T102 Temporal-Unit:T103
 E35	Condition:T35 Name:T105 Severity:T104
-E36	Observation:T36 Name:T106 Eq-Comparison:E37
+E36	Observation:T36 Name:T106 Numeric-Filter:E37
 E37	Eq-Comparison:T37 Operator:T107 Value:T108
 E38	Condition:T38 Name:T109
 E39	Condition:T39 Name:T110
 E40	Condition:T40 Name:T111
-E41	Condition:T41 Name:T112
+E41	Observation:T41 Name:T112
 E42	Modifier:T42 Modifies:T113
 E43	Condition:T43 Name:T113
 E44	Eq-Comparison:T44 Temporal-Period:T114
 E45	Drug:T45 Temporality:E44
-E46	Condition:T46 Name:T117 Stability:T116
+E46	Observation:T46 Name:T117 Stability:T116
 E47	Drug:T47 Name:T118 Dose:E51
-E48	Or:T48 Arg:E47 Arg2:E49
 E49	Drug:T49 Name:T119 Dose:E51
 E51	Eq-Comparison:T51 Operator:T120 Value:T121 Unit:T122 Per:T123
 E52	Drug:T52 Name:T124
 E53	Drug:T53 Name:T125
 E54	Eq-Comparison:T54 Temporal-Period:T126
 E55	Modifier:T55 Modifies:T127
-E56	Or:T56 Arg:E55 Arg2:E57
 E57	Modifier:T57 Modifies:T127
 E58	Condition:T58 Name:T127 Temporality:E54 Temporality2:E61
-E59	Or:T59 Arg2:E60 Arg:T127
 E60	Modifier:T60 Modifies:T127
 E61	Eq-Comparison:T61 Operator:T128 Temporal-Period:T129 Temporal-Unit:T130
 E62	Condition:T62 Stability:T50 Severity:T132 Acuteness:T131
 E63	Condition:T63 Name:T134
-E65	Condition:T65 Name:T136
+E65	Observation:T65 Name:T136
 E66	Negation:T66 Negates:E50
 E67	Eq-Comparison:T67 Temporal-Period:T137
 E68	Procedure:T68 Temporality:E67
 E69	Condition:T69 Name:T138
 E70	Negation:T70 Negates:E64
 E74	Eq-Comparison:T74 Operator:T141 Value:T139 Per:T140
-E75	Temporal-Connection:T75 Arg:E74 Arg2:E76
 E76	Eq-Comparison:T76 Temporal-Unit:T142
-E77	Temporal-Connection:T77 Arg:E76 Arg2:E78
-E78	Study:T78 
+E78	Study:T78
 E11	Modifier:T87 Modifies:T11
 E26	Eq-Comparison:T26 Value:T96 Value2:T25
 E25	Modifier:T97 Modifies:T95
@@ -74,30 +63,25 @@ E33	Coreference:T33 Refers-To:E28 Temporality:E79 Temporality2:E34
 E79	Eq-Comparison:T145 Temporal-Period:T100
 E80	Assertion:T115 Asserted:T116
 E50	Condition:T64 Name:T135 Acuteness:T133
-E64	Negation:T146 
+E64	Negation:T146
 E71	Observation:T71 Name:T147
 E81	Modifier:T148 Modifies:T147
 E82	Observation:T149 Name:T150
 E83	Modifier:T151 Modifies:T150
 E84	Negation:T152 Negates:E83
-E85	Or:T153 Arg:E71 Arg2:E82
 E72	Coreference:T72 Refers-To:E82 Temporality:E74
 T1	Age 25 28	Age
 T2	Eq-Comparison 29 34	18-29
 T3	Eq-Comparison 41 48	Current
 T4	Condition 62 65	MDD
-T5	Or 65 66	/
 T6	Modifier 66 76	persistent
 T7	Condition 77 96	depressive disorder
-T8	Or 97 99	or
 T9	Observation 100 104	HDRS
 T10	Eq-Comparison 105 132	greater than or equal to 12
 T12	Assertion 226 233	Willing
-T13	And 234 237	and
 T14	Assertion 238 245	able to
 T15	Procedure 255 258	MRI
 T16	Modifier 260 264	mood
-T17	Or 266 269	and
 T18	Procedure 289 296	testing
 T19	Observation 301 303	IQ
 T20	Eq-Comparison 304 308	> 85
@@ -108,9 +92,7 @@ T24	Condition 489 496	bipolar
 T27	Eq-Comparison 521 527	Active
 T28	Condition 528 545	suicidal ideation
 T29	Assertion 547 553	intent
-T30	Or 555 557	or
 T31	Assertion 558 562	plan
-T32	Or 564 566	or
 T34	Eq-Comparison 580 593	within 1 year
 T35	Condition 607 617	depression
 T36	Observation 619 623	HDRS
@@ -118,38 +100,33 @@ T37	Eq-Comparison 624 628	> 30
 T38	Condition 636 657	Neurological disorder
 T39	Condition 659 667	epilepsy
 T40	Condition 669 687	multiple sclerosis
-T41	Condition 689 711	traumatic brain injury
+T41	Observation 689 711	traumatic brain injury
 T42	Modifier 713 721	clinical
 T43	Condition 722 728	stroke
 T44	Eq-Comparison 736 739	Use
 T45	Drug 743 754	medications
-T46	Condition 788 797	cognition
+T46	Observation 788 797	cognition
 T47	Drug 799 814	benzodiazepines
-T48	Or 815 818	and
 T49	Drug 819 828	lorazepam
 T51	Eq-Comparison 841 852	> 1mg daily
 T52	Drug 854 863	narcotics
 T53	Drug 865 881	anticholinergics
 T54	Eq-Comparison 889 896	History
 T55	Modifier 900 907	alcohol
-T56	Or 908 910	or
 T57	Modifier 911 915	drug
 T58	Condition 916 921	abuse
-T59	Or 922 924	or
 T60	Modifier 925 935	dependence
 T61	Eq-Comparison 936 952	within past year
 T62	Condition 983 998	medical illness
 T63	Condition 1004 1010	cancer
-T65	Condition 1055 1065	metastases
+T65	Observation 1055 1065	metastases
 T66	Negation 1071 1079	excluded
 T67	Eq-Comparison 1085 1097	past history
 T68	Procedure 1114 1121	treated
 T69	Condition 1122 1128	cancer
 T70	Negation 1134 1137	not
 T74	Eq-Comparison 1293 1316	twice weekly or greater
-T75	Temporal-Connection 1317 1323	during
 T76	Eq-Comparison 1328 1332	year
-T77	Temporal-Connection 1333 1341	prior to
 T78	Study 1342 1351	screening
 T79	Eq-Value 29 31	18
 T80	Eq-Operator 31 32	-
@@ -182,11 +159,11 @@ T108	Eq-Value 626 628	30
 T109	Condition-Name 636 657	Neurological disorder
 T110	Condition-Name 659 667	epilepsy
 T111	Condition-Name 669 687	multiple sclerosis
-T112	Condition-Name 689 711	traumatic brain injury
+T112	Observation-Name 689 711	traumatic brain injury
 T113	Condition-Name 722 728	stroke
 T114	Eq-Temporal-Period 736 739	Use
 T116	Stability 778 784	impact
-T117	Condition-Name 788 797	cognition
+T117	Observation-Name 788 797	cognition
 T118	Drug-Name 799 814	benzodiazepines
 T119	Drug-Name 819 828	lorazepam
 T120	Eq-Operator 841 842	>
@@ -203,7 +180,7 @@ T130	Eq-Temporal-Unit 948 952	year
 T131	Acuteness 959 964	Acute
 T132	Severity 966 972	severe
 T134	Condition-Name 1004 1010	cancer
-T136	Condition-Name 1055 1065	metastases
+T136	Observation-Name 1055 1065	metastases
 T137	Eq-Temporal-Period 1085 1097	past history
 T138	Condition-Name 1122 1128	cancer
 T139	Eq-Value 1293 1298	twice
@@ -232,12 +209,9 @@ T149	Observation 1227 1239	verbal games
 T150	Observation-Name 1227 1239	verbal games
 T151	Modifier 1219 1226	fluency
 T152	Negation 1215 1218	non
-T153	Or 1194 1196	or
 T72	Coreference 1258 1274	these procedures
 A1	Assertion-Type-Value E12 hypothetical
 A2	Assertion-Type-Value E14 hypothetical
-A4	Temporal-Connection-Type-Value E75 during
-A5	Temporal-Connection-Type-Value E77 before
 A6	Eq-Operator-Value T80 BETWEEN
 A7	Eq-Temporal-Period-Value T82 present
 A8	Eq-Operator-Value T86 GTEQ
@@ -265,9 +239,10 @@ A9	Assertion-Type-Value E29 intention
 A32	Assertion-Type-Value E31 intention
 A18	Assertion-Type-Value E80 hypothetical
 A33	Stability-Value T50 change
-A35	Observation-Type-Value T147 social-habit
-A36	Observation-Type-Value T150 social-habit
+A35	Observation-Type-Value E71 social-habit
+A36	Observation-Type-Value E82 social-habit
 A37	Acuteness-Type-Value T131 acute
+A3	Acuteness-Type-Value T133 acute
 R1	Equivalent-To Arg1:E36 Arg2:E35
 R2	Example-Of Arg1:E39 Arg2:E38
 R3	Example-Of Arg1:E40 Arg2:E38
@@ -283,4 +258,21 @@ R12	Example-Of Arg1:E53 Arg2:E45
 R13	Caused-By Arg1:E50 Arg2:E63
 R14	Example-Of Arg1:E65 Arg2:E50
 R15	Treatment-For Arg1:E68 Arg2:E69
-A3	Acuteness-Type-Value T133 acute
+R16	Or Arg1:E4 Arg2:E7
+R17	Or Arg1:E7 Arg2:E9
+R18	And Arg1:E12 Arg2:E14
+R19	Or Arg1:E16 Arg2:E11
+R20	Or Arg1:E29 Arg2:E31
+R21	Or Arg1:E31 Arg2:E79
+R22	Or Arg1:E47 Arg2:E49
+R23	Or Arg1:E55 Arg2:E57
+R24	Or Arg1:T127 Arg2:E60
+R25	During Arg1:E74 Arg2:E76
+R26	Before Arg1:E76 Arg2:E78
+R27	Or Arg1:E71 Arg2:E82
+R28	Or Arg1:E21 Arg2:E22
+R29	Or Arg1:E22 Arg2:E23
+R30	Or Arg1:E23 Arg2:E24
+R31	Or Arg1:E39 Arg2:E40
+R32	Or Arg1:E40 Arg2:E41
+R33	Or Arg1:E52 Arg2:E53

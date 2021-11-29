@@ -6,16 +6,15 @@ E5	Condition:T5 Name:T22 Acuteness:T21
 E6	Condition:T6 Name:T23
 E7	Condition:T7 Name:T24
 E9	Modifier:T9 Modifies:T26
-E10	Or:T10 Arg:E9 Arg2:E11
 E11	Modifier:T11 Modifies:T26
 E12	Condition:T12 Name:T26
 E13	Condition:T13 Name:T27
-E14	Observation:T14 Name:T28 Eq-Comparison:E15
+E14	Observation:T14 Name:T28 Numeric-Filter:E15
 E15	Eq-Comparison:T15 Value:T29
 E17	Eq-Comparison:T17 Operator:T30 Value:T31
 E18	Condition:T18 Name:T32
 E8	Modifier:T8 Modifies:T26
-E16	Age:T16 Eq-Comparison:E17
+E16	Age:T16 Numeric-Filter:E17
 T1	Modifier 25 32	complex
 T2	Condition 33 45	anal fistula
 T3	Negation 105 108	Non
@@ -24,7 +23,6 @@ T5	Condition 145 151	sepsis
 T6	Condition 157 184	inflammatory bowel diseases
 T7	Condition 190 205	simple fistulas
 T9	Modifier 232 248	intersphincteric
-T10	Or 249 252	and
 T11	Modifier 253 273	low transsphincteric
 T12	Condition 274 281	fistula
 T13	Condition 288 296	pregnant
@@ -48,6 +46,8 @@ T32	Condition-Name 341 358	immunocompromised
 T8	Modifier 218 230	subcutaneous
 T16	Age 323 331	patients
 A2	Eq-Operator-Value T30 LT
-A3	Observation-Type-Value T28 clinical-score
+A3	Observation-Type-Value E14 clinical-score
 A4	Acuteness-Type-Value T21 acute
 R1	Equivalent-To Arg1:E12 Arg2:E7
+R2	Or Arg1:E9 Arg2:E11
+R3	Or Arg1:E8 Arg2:E9

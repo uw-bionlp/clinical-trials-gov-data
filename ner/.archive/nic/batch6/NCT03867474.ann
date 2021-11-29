@@ -1,0 +1,118 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Operator:T42 Value:T43 Temporal-Unit:T44
+E3	Eq-Comparison:T3 Temporal-Period:T47
+E4	Modifier:T4 Modifies:T68
+E5	Or:T5 Arg:E4 Arg2:E6
+E6	Other:T6 Is-Other:E7
+E8	Procedure:T8 Name:T68 Temporality:E3
+E9	Or:T9 Arg:E8 Arg2:E46
+E10	Modifier:T10 Modifies:T70
+E11	Or:T11 Arg:E10 Arg2:E47
+E12	Eq-Comparison:T12 Value:T49 Operator:T50
+E13	Observation:T13 Name:T51 Eq-Comparison:E12
+E14	Observation:T14 Name:T52
+E15	Condition:T15 Name:T53
+E16	Or:T16 Arg:E15 Arg2:E18
+E17	Other:T17 Is-Other:E18
+E18	Condition:T18 Name:T54
+E42	Observation:T62 Name:T63
+E43	Condition:T64 Name:T46
+E44	Condition:T65 Name:T66
+E45	Or:T67 Arg:E43 Arg2:E44
+E7	Modifier:T7 Modifies:T68
+E46	Observation:T69 Name:T70 Temporality:E48
+E47	Modifier:T71 Modifies:T70
+E48	Eq-Comparison:T72 Per:T48
+E49	Condition:T73 Name:T74 Polarity:T75
+E19	Observation:T19 Name:T20
+E20	Observation:T21 Name:T22 Eq-Comparison:E21
+E21	Eq-Comparison:T23 Value:T24 Operator:T25 Value2:T26
+E22	Procedure:T27 Name:T28
+E23	Procedure:T29
+E24	Modifier:T30 Modifies:E23
+E25	Procedure:T31 Name:T32
+E26	Procedure:T33 Name:T34
+E27	Or:T35 Arg:E25 Arg2:E26
+E28	Study:T36
+E29	Temporal-Connection:T37 Arg:E26 Arg2:E28
+T1	Age 80 83	age
+T2	Eq-Comparison 84 94	≥ 60 years
+T3	Eq-Comparison 276 292	history of prior
+T4	Modifier 314 318	MBSR
+T5	Or 319 321	or
+T6	Other 322 327	other
+T8	Procedure 346 359	interventions
+T9	Or 361 363	or
+T10	Modifier 398 409	mindfulness
+T11	Or 410 412	or
+T12	Eq-Comparison 459 471	5 or greater
+T13	Observation 479 505	Geriatric Depression Scale
+T14	Observation 507 510	GDS
+T15	Condition 516 526	alcoholism
+T16	Or 527 533	and/or
+T17	Other 534 539	other
+T18	Condition 540 555	substance abuse
+T42	Eq-Operator 84 85	≥
+T43	Eq-Value 86 88	60
+T44	Eq-Temporal-Unit 89 94	years
+T45	Language 100 107	English
+T46	Condition-Name 236 239	SCD
+T47	Eq-Temporal-Period 276 292	history of prior
+T48	Eq-Temporal-Unit 390 396	weekly
+T49	Eq-Value 459 460	5
+T50	Eq-Operator 461 471	or greater
+T51	Observation-Name 479 505	Geriatric Depression Scale
+T52	Observation-Name 507 510	GDS
+T53	Condition-Name 516 526	alcoholism
+T54	Condition-Name 540 555	substance abuse
+T62	Observation 121 141	living independently
+T63	Observation-Name 121 141	living independently
+T64	Condition 236 239	SCD
+T65	Condition 243 246	MCI
+T66	Condition-Name 243 246	MCI
+T67	Or 240 242	or
+T7	Modifier 328 345	mindfulness-based
+T68	Procedure-Name 346 359	interventions
+T69	Observation 418 426	practice
+T70	Observation-Name 418 426	practice
+T71	Modifier 413 417	yoga
+T72	Eq-Comparison 390 396	weekly
+T73	Condition 436 440	mood
+T74	Condition-Name 436 440	mood
+T75	Polarity 432 435	low
+T19	Observation 727 756	Montreal Cognitive Assessment
+T20	Observation-Name 727 756	Montreal Cognitive Assessment
+T21	Observation 758 762	MoCA
+T22	Observation-Name 758 762	MoCA
+T23	Eq-Comparison 767 777	23 (+/- 4)
+T24	Eq-Value 767 769	23
+T25	Eq-Operator 771 774	+/-
+T26	Eq-Value 775 776	4
+T27	Procedure 941 970	cognitive behavioural therapy
+T28	Procedure-Name 941 970	cognitive behavioural therapy
+T29	Procedure 927 932	group
+T30	Modifier 916 926	concurrent
+T31	Procedure 972 975	CBT
+T32	Procedure-Name 972 975	CBT
+T33	Procedure 980 1004	memory training programs
+T34	Procedure-Name 980 1004	memory training programs
+T35	Or 977 979	or
+T36	Study 1036 1041	study
+T37	Temporal-Connection 1023 1028	while
+A1	Eq-Operator-Value T42 GTEQ
+A2	Eq-Temporal-Unit-Value T44 year
+A3	Eq-Temporal-Period-Value T47 past
+A4	Eq-Temporal-Unit-Value T48 week
+A5	Eq-Operator-Value T50 GTEQ
+A6	Observation-Type-Value T51 clinical-score
+A8	Observation-Type-Value T63 social-habit
+A9	Observation-Type-Value T70 social-habit
+A10	Polarity-Value T75 low
+A7	Observation-Type-Value T20 clinical-score
+A11	Eq-Operator-Value T25 PLUS-MINUS
+A12	Temporal-Connection-Type-Value E29 during
+R1	Abbrev-Of Arg1:E14 Arg2:E13
+R2	Equivalent-To Arg1:E13 Arg2:E49
+R3	Abbrev-Of Arg1:E20 Arg2:E19
+R4	Example-Of Arg1:E22 Arg2:E23
+R5	Abbrev-Of Arg1:E25 Arg2:E22

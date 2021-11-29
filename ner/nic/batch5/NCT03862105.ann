@@ -1,8 +1,6 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T19 Temporal-Unit:T20 Operator:T18
-E3	Age:T3 Eq-Comparison:E18
-E5	Or:T5 Arg:T24 Arg2:T25
-E6	And:T6 Arg:T25 Arg2:E8
+E3	Age:T3 Numeric-Filter:E18
 E7	Modifier:T7 Modifies:T26
 E8	Condition:T8 Name:T26
 E9	Eq-Comparison:T9 Temporal-Period:T27
@@ -17,8 +15,6 @@ E18	Eq-Comparison:T39 Operator:T21 Temporal-Unit:T23 Value:T22
 T1	Age 8 11	Age
 T2	Eq-Comparison 0 21	Minimum Age: 18 Years
 T3	Age 30 33	Age
-T5	Or 110 112	or
-T6	And 129 133	with
 T7	Modifier 134 150	invasive bladder
 T8	Condition 151 157	cancer
 T9	Eq-Comparison 158 167	scheduled
@@ -66,3 +62,5 @@ A11	Eq-Temporal-Unit-Value T32 day
 A12	Severity-Value T34 severe
 R1	Treatment-For Arg1:E10 Arg2:E8
 R2	Treatment-For Arg1:E14 Arg2:E16
+R3	Or Arg1:T24 Arg2:T25
+R4	And Arg1:T25 Arg2:E8

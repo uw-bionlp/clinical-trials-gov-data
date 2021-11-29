@@ -1,0 +1,72 @@
+E1	Condition:T1 Name:T2 Temporality:E18
+E3	Procedure:T3 Name:T4 Temporality:E15
+E5	Procedure:T5 Name:T6 Temporality:E8
+E6	Age:T11 Eq-Comparison:E7
+E7	Eq-Comparison:T17 Operator:T7 Temporal-Unit:T9 Value:T13
+E8	Eq-Comparison:T18 Operator:T8 Value:T16 Temporal-Unit:T31 Temporal-Period:T32
+E9	Eq-Comparison:T19 Operator:T12 Value:T14 Unit:T10 Value2:T15
+E2	Condition:T20 
+E4	Modifier:T21 Modifies:E2
+E10	Negation:T22 Negates:E2
+E11	Condition:T23 Name:T24
+E12	Observation:T25 Name:T26 Eq-Comparison:E9
+E13	Modifier:T27 Modifies:T2
+E14	Modifier:T28 Modifies:T4
+E15	Eq-Comparison:T29 Temporal-Period:T30
+E16	Condition:T33 Name:T34 Temporality:E21
+E17	Modifier:T35 Modifies:E16
+E18	Eq-Comparison:T36 Temporal-Period:T37
+E19	Modifier:T38 Modifies:T4
+E20	Or:T39 Arg:E14 Arg2:E19
+E21	Eq-Comparison:T40 Temporal-Period:T41
+T1	Condition 334 341	disease
+T2	Condition-Name 334 341	disease
+T3	Procedure 357 369	radiotherapy
+T4	Procedure-Name 357 369	radiotherapy
+T5	Procedure 400 412	Chemotherapy
+T6	Procedure-Name 400 412	Chemotherapy
+T7	Eq-Operator 136 148	younger than
+T8	Eq-Operator 413 419	within
+T9	Eq-Temporal-Unit 152 157	years
+T10	Eq-Unit 267 269	mm
+T11	Age 158 161	old
+T12	Eq-Operator 263 264	-
+T13	Eq-Value 149 151	25
+T14	Eq-Value 261 263	15
+T15	Eq-Value 264 266	20
+T16	Eq-Value 429 431	12
+T17	Eq-Comparison 136 157	younger than 25 years
+T18	Eq-Comparison 413 437	within the past 12-month
+T19	Eq-Comparison 261 269	15-20 mm
+T20	Condition 48 55	disease
+T21	Modifier 56 80	affecting bone formation
+T22	Negation 34 43	free from
+T23	Condition 204 225	hemifacial microsomia
+T24	Condition-Name 204 225	hemifacial microsomia
+T25	Observation 231 248	Distraction range
+T26	Observation-Name 231 248	Distraction range
+T27	Modifier 312 333	uncontrolled systemic
+T28	Modifier 373 377	head
+T29	Eq-Comparison 348 356	Previous
+T30	Eq-Temporal-Period 348 356	Previous
+T31	Eq-Temporal-Unit 432 437	month
+T32	Eq-Temporal-Period 424 428	past
+T33	Condition 461 470	infection
+T34	Condition-Name 461 470	infection
+T35	Modifier 478 494	distraction site
+T36	Eq-Comparison 300 308	presence
+T37	Eq-Temporal-Period 300 308	presence
+T38	Modifier 382 393	neck region
+T39	Or 378 381	and
+T40	Eq-Comparison 454 460	active
+T41	Eq-Temporal-Period 454 460	active
+A1	Eq-Operator-Value T7 LT
+A2	Eq-Operator-Value T8 LTEQ
+A3	Eq-Temporal-Unit-Value T9 year
+A4	Eq-Operator-Value T12 BETWEEN
+A5	Observation-Type-Value T26 measurement
+A6	Eq-Temporal-Period-Value T30 past
+A7	Eq-Temporal-Unit-Value T31 month
+A8	Eq-Temporal-Period-Value T32 past
+A9	Eq-Temporal-Period-Value T37 present
+A10	Eq-Temporal-Period-Value T41 present

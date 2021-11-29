@@ -1,9 +1,9 @@
 E1	Condition:T1 Name:T12
-E2	Observation:T2 Name:T26 Eq-Comparison:E3
+E2	Observation:T2 Name:T26 Numeric-Filter:E3
 E3	Eq-Comparison:T3 Operator:T13 Value:T14 Operator:T15 Value:T16
 E5	Eq-Comparison:T5 Operator:T17 Value:T18 Temporal-Unit:T19
 E6	Eq-Comparison:T6 Operator:T20 Value:T21 Temporal-Unit:T22
-E7	Age:T7 Eq-Comparison:E6
+E7	Age:T7 Numeric-Filter:E6
 E8	Condition:T8 Name:T23
 E9	Procedure:T9 Name:T24
 E10	Negation:T10 Negates:E11
@@ -43,5 +43,5 @@ A3	Eq-Operator-Value T17 LTEQ
 A4	Eq-Temporal-Unit-Value T19 hour
 A5	Eq-Operator-Value T20 LT
 A6	Eq-Temporal-Unit-Value T22 year
-A7	Observation-Type-Value T26 measurement
+A7	Observation-Type-Value E2 measurement
 A8	Assertion-Type-Value E12 hypothetical

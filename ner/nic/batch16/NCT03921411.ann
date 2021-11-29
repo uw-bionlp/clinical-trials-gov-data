@@ -2,7 +2,7 @@ E1	Procedure:T1 Name:T2 Temporality:E33
 E3	Procedure:T3 Name:T4
 E9	Condition:T9 Name:T10
 E11	Procedure:T11 Name:T12
-E12	Age:T25 Eq-Comparison:E13
+E12	Age:T25 Numeric-Filter:E13
 E13	Eq-Comparison:T36 Operator:T13 Value:T26 Temporal-Unit:T27 Value2:T21 Operator2:T14
 E15	Eq-Comparison:T38 Operator:T15 Value:T29
 E16	Eq-Comparison:T39 Operator:T16 Value:T30
@@ -12,47 +12,38 @@ E19	Eq-Comparison:T42 Operator:T19 Value:T34 Temporal-Unit:T87
 E20	Eq-Comparison:T43 Operator:T20 Value:T35 Temporal-Unit:T103
 E21	Eq-Comparison:T44 Temporal-Period:T45
 E22	Eq-Comparison:T46 Temporal-Period:T47
-E2	Or:T48 Arg:T8 Arg2:T5
 E4	Condition:T37 Name:T49 Duration:E7 Acuteness:T50
 E7	Eq-Comparison:T51 Operator:T52 Value:T28 Temporal-Unit:T22
 E6	Observation:T6 Name:T7
-E8	Observation:T53 Name:T54 Eq-Comparison:E15
-E10	Observation:T55 Name:T56 Eq-Comparison:E16
-E14	Observation:T57 Name:T58 Eq-Comparison:E17
+E8	Observation:T53 Name:T54 Numeric-Filter:E15
+E10	Observation:T55 Name:T56 Numeric-Filter:E16
+E14	Observation:T57 Name:T58 Numeric-Filter:E17
 E23	Eq-Comparison:T62 Temporal-Period:T63
 E24	Drug:T64 Name:T65 Temporality:E21 Temporality2:E23
 E25	Condition:T67 Name:T68
 E26	Assertion:T69 Asserted:E25
 E27	Condition:T70 Name:T71
 E28	Assertion:T72 Asserted:E27 Asserted2:E3
-E29	Or:T73 Arg:E27 Arg2:E3
 E30	Study:T74
-E31	Temporal-Connection:T75 Arg:E3 Arg2:E30
 E32	Study:T76 Study-Of:E1
 E33	Eq-Comparison:T77 Temporal-Recency:T78
-E34	Temporal-Connection:T79 Arg:E35 Arg2:E33
 E35	Eq-Comparison:T80 Value:T32 Temporal-Unit:T23
-E36	And:T81 Arg:E30 Arg2:E35
-E37	Observation:T82 Name:T83 Eq-Comparison:E18
+E37	Observation:T82 Name:T83 Numeric-Filter:E18
 E38	Condition:T84 Name:T85 Temporality:E19
 E39	Modifier:T86 Modifies:T85
 E40	Condition:T88 Name:T89
-E41	Or:T90 Arg:E38 Arg2:E40
 E42	Procedure:T91
 E43	Modifier:T92 Modifies:T12
 E44	Modifier:T93 Modifies:T12
-E45	Or:T94 Arg:E44 Arg2:E43
 E46	Assertion:T95 Asserted:E42
 E47	Drug:T96 Name:T97 Temporality:E20
 E48	Drug:T98 Name:T99 Temporality:E20
 E49	Drug:T100 Name:T101 Temporality:E20
-E50	Or:T102 Arg:E48 Arg2:E49
 E51	Condition:T104 Name:T105 Temporality:E22
 E52	Drug:T106 Name:T107
 E53	Drug:T108 Name:T109
 E54	Modifier:T110 Modifies:T109
 E55	Modifier:T111 Modifies:T109
-E56	Or:T112 Arg:E55 Arg2:E54
 E57	Condition:T113 Severity:T114
 T1	Procedure 535 549	drug injection
 T2	Procedure-Name 535 549	drug injection
@@ -95,7 +86,6 @@ T44	Eq-Comparison 289 296	history
 T45	Eq-Temporal-Period 289 296	history
 T46	Eq-Comparison 774 781	History
 T47	Eq-Temporal-Period 774 781	History
-T48	Or 33 35	or
 T14	Eq-Operator 57 59	to
 T21	Eq-Value 62 64	18
 T27	Eq-Temporal-Unit 65 70	years
@@ -126,15 +116,11 @@ T69	Assertion 370 379	potential
 T70	Condition 406 415	abstinent
 T71	Condition-Name 406 415	abstinent
 T72	Assertion 385 393	agree to
-T73	Or 416 418	or
 T74	Study 491 496	study
-T75	Temporal-Connection 476 486	throughout
 T76	Study 529 534	study
 T77	Eq-Comparison 524 528	last
 T78	Eq-Temporal-Recency 524 528	last
-T79	Temporal-Connection 514 519	after
 T80	Eq-Comparison 505 513	12 weeks
-T81	And 497 500	and
 T82	Observation 579 590	Body weight
 T83	Observation-Name 579 590	Body weight
 T84	Condition 614 623	infection
@@ -143,11 +129,9 @@ T86	Modifier 604 613	Cutaneous
 T87	Eq-Temporal-Unit 633 637	week
 T88	Condition 645 654	infection
 T89	Condition-Name 645 654	infection
-T90	Or 638 640	or
 T91	Procedure 665 674	treatment
 T92	Modifier 688 698	parenteral
 T93	Modifier 680 684	oral
-T94	Or 685 687	or
 T95	Assertion 655 664	requiring
 T96	Drug 712 722	antivirals
 T97	Drug-Name 712 722	antivirals
@@ -155,7 +139,6 @@ T98	Drug 724 738	antiparasitics
 T99	Drug-Name 724 738	antiparasitics
 T100	Drug 743 754	antifungals
 T101	Drug-Name 743 754	antifungals
-T102	Or 740 742	or
 T103	Eq-Temporal-Unit 764 768	week
 T104	Condition 785 801	hypersensitivity
 T105	Condition-Name 785 801	hypersensitivity
@@ -165,7 +148,6 @@ T108	Drug 891 910	monoclonal antibody
 T109	Drug-Name 891 910	monoclonal antibody
 T110	Modifier 874 885	recombinant
 T111	Modifier 856 870	plasma-derived
-T112	Or 871 873	or
 T113	Condition 944 949	issue
 T114	Severity 932 943	significant
 A1	Life-Stage-And-Gender-Type T5 female
@@ -184,17 +166,15 @@ A15	Eq-Temporal-Period-Value T47 past
 A4	Eq-Operator-Value T14 BETWEEN
 A11	Eq-Temporal-Unit-Value T27 year
 A16	Eq-Operator-Value T52 GTEQ
-A17	Observation-Type-Value T7 clinical-score
-A18	Observation-Type-Value T56 clinical-score
-A19	Observation-Type-Value T58 measurement
+A17	Observation-Type-Value E6 clinical-score
+A18	Observation-Type-Value E10 clinical-score
+A19	Observation-Type-Value E14 measurement
 A20	Eq-Temporal-Period-Value T63 recent
 A21	Life-Stage-And-Gender-Type T66 female
 A22	Assertion-Type-Value E26 hypothetical
 A23	Assertion-Type-Value E28 hypothetical
-A24	Temporal-Connection-Type-Value E31 during
 A25	Eq-Temporal-Recency-Value T78 most-recent-time
-A26	Temporal-Connection-Type-Value E34 after
-A27	Observation-Type-Value T83 vital
+A27	Observation-Type-Value E37 vital
 A28	Eq-Temporal-Unit-Value T87 week
 A29	Assertion-Type-Value E46 hypothetical
 A30	Eq-Temporal-Unit-Value T103 week
@@ -209,3 +189,14 @@ R6	Treatment-For Arg1:E42 Arg2:E40
 R7	Example-Of Arg1:E9 Arg2:E51
 R8	Caused-By Arg1:E51 Arg2:E52
 R9	Example-Of Arg1:E53 Arg2:E52
+R10	Or Arg1:T8 Arg2:T5
+R11	Or Arg1:E27 Arg2:E3
+R12	During Arg1:E3 Arg2:E30
+R13	After Arg1:E35 Arg2:E33
+R14	And Arg1:E30 Arg2:E35
+R15	Or Arg1:E38 Arg2:E40
+R16	Or Arg1:E44 Arg2:E43
+R17	Or Arg1:E48 Arg2:E49
+R18	Or Arg1:E55 Arg2:E54
+R19	Or Arg1:E11 Arg2:E47
+R20	Or Arg1:E47 Arg2:E48

@@ -4,41 +4,34 @@ E6	Procedure:T6 Name:T7 Temporality:E24
 E10	Condition:T10 Name:T11
 E13	Procedure:T13 Name:T14 Stability:T51
 E15	Condition:T15 Name:T16
-E17	Condition:T17 Name:T18 Temporality:E42
+E17	Observation:T17 Name:T18 Temporality:E42
 E19	Procedure:T19 Name:T20
 E21	Procedure:T21 Name:T22
-E22	Age:T29 Eq-Comparison:E26
+E22	Age:T29 Numeric-Filter:E26
 E23	Eq-Comparison:T38 Operator:T23 Temporal-Unit:T26 Value:T35 Temporal-Period:T48
 E24	Eq-Comparison:T39 Operator:T24 Temporal-Unit:T27 Value:T36 Temporal-Period:T65
 E25	Eq-Comparison:T40 Operator:T25 Temporal-Unit:T28 Value:T37
 E26	Eq-Comparison:T41 Operator:T30 Value:T33 Value2:T34
 E1	Condition:T42 Name:T43
-E3	Observation:T44 Name:T45 Eq-Comparison:E5
+E3	Observation:T44 Name:T45 Numeric-Filter:E5
 E5	Eq-Comparison:T46 Value:T31 Value2:T32
 E7	Drug:T1 Stability:T47 Temporality:E23
 E9	Negation:T49 Negates:E7
-E8	Or:T9 Arg:T50 Arg2:T8
 E11	Negation:T52 Negates:T51
-E12	Or:T53 Arg:T8 Arg2:E11
 E14	Risk:T54 Severity:T55 Stability:T56
 E16	Assertion:T57 Asserted:T56
 E20	Condition:T59 Name:T60
 E27	Assertion:T61 Asserted:E4
 E18	Drug:T58 Name:T62
 E28	Assertion:T63 Asserted:E18
-E29	Or:T64 Arg:E4 Arg2:E6
 E30	Eq-Comparison:T66 Temporal-Period:T67
-E31	Or:T68 Arg:E6 Arg2:E2
 E32	Study:T69 Temporality:E34
 E33	Other:T70 Is-Other:E32
 E34	Eq-Comparison:T71 Temporal-Period:T72
 E35	Study:T73 Temporality:E38 Study-Of:E36 Study-Of2:E21 Temporality2:E25
-E36	Drug:T74 
-E37	Or:T75 Arg:E32 Arg2:E35
+E36	Drug:T74
 E38	Eq-Comparison:T76 Temporal-Period:T77
-E39	Or:T78 Arg:E36 Arg2:E21
-E40	Study:T79 
-E41	Temporal-Connection:T80 Arg:E25 Arg2:E40
+E40	Study:T79
 E42	Eq-Comparison:T81 Temporal-Period:T82
 T2	Condition 552 565	cardiac event
 T3	Condition-Name 552 565	cardiac event
@@ -53,8 +46,8 @@ T13	Procedure 377 381	diet
 T14	Procedure-Name 377 381	diet
 T15	Condition 572 584	heart attack
 T16	Condition-Name 572 584	heart attack
-T17	Condition 750 762	renal stones
-T18	Condition-Name 750 762	renal stones
+T17	Observation 750 762	renal stones
+T18	Observation-Name 750 762	renal stones
 T19	Procedure 586 597	angioplasty
 T20	Procedure-Name 586 597	angioplasty
 T21	Procedure 686 693	therapy
@@ -89,10 +82,8 @@ T48	Eq-Temporal-Period 264 268	past
 T49	Negation 231 233	No
 T50	Location 315 327	nursing home
 T8	Location 331 357	dementia special care unit
-T9	Or 328 330	or
 T51	Stability 369 376	control
 T52	Negation 362 368	cannot
-T53	Or 359 361	or
 T54	Risk 429 433	risk
 T55	Severity 413 420	serious
 T56	Stability 401 412	confounding
@@ -103,23 +94,18 @@ T61	Assertion 479 488	requiring
 T58	Drug 444 451	insulin
 T62	Drug-Name 444 451	insulin
 T63	Assertion 452 461	requiring
-T64	Or 502 504	or
 T65	Eq-Temporal-Period 526 530	past
 T66	Eq-Comparison 545 551	recent
 T67	Eq-Temporal-Period 545 551	recent
-T68	Or 540 542	or
 T69	Study 635 649	clinical trial
 T70	Other 627 634	another
 T71	Eq-Comparison 610 623	Participating
 T72	Eq-Temporal-Period 610 623	Participating
 T73	Study 662 677	investigational
 T74	Drug 678 682	drug
-T75	Or 650 652	or
 T76	Eq-Comparison 653 658	using
 T77	Eq-Temporal-Period 653 658	using
-T78	Or 683 685	or
 T79	Study 716 725	Screening
-T80	Temporal-Connection 709 711	of
 T81	Eq-Comparison 739 746	history
 T82	Eq-Temporal-Period 739 746	history
 A1	Eq-Operator-Value T23 LTEQ
@@ -129,7 +115,7 @@ A4	Eq-Temporal-Unit-Value T26 day
 A5	Eq-Temporal-Unit-Value T27 year
 A6	Eq-Temporal-Unit-Value T28 day
 A7	Eq-Operator-Value T30 BETWEEN
-A8	Observation-Type-Value T45 clinical-score
+A8	Observation-Type-Value E3 clinical-score
 A9	Stability-Value T47 change
 A10	Eq-Temporal-Period-Value T48 past
 A11	Location-Value T50 residence
@@ -144,12 +130,20 @@ A19	Eq-Temporal-Period-Value T65 past
 A20	Eq-Temporal-Period-Value T67 recent
 A21	Eq-Temporal-Period-Value T72 present
 A22	Eq-Temporal-Period-Value T77 present
-A23	Temporal-Connection-Type-Value E41 before
 A24	Eq-Temporal-Period-Value T82 past
 R1	Example-Of Arg1:E10 Arg2:E14
 R2	Treatment-For Arg1:E4 Arg2:E20
 R3	Treatment-For Arg1:E18 Arg2:E10
 R4	Example-Of Arg1:E15 Arg2:E2
 R5	Example-Of Arg1:E19 Arg2:E2
-R6	Example-Of Arg1:E20 Arg2:E14	
-R7	Example-Of Arg1:E2 Arg2:E14	
+R6	Example-Of Arg1:E20 Arg2:E14
+R7	Example-Of Arg1:E2 Arg2:E14
+R8	Or Arg1:T50 Arg2:T8
+R9	Or Arg1:T8 Arg2:E11
+R10	Or Arg1:E4 Arg2:E6
+R11	Or Arg1:E6 Arg2:E2
+R12	Or Arg1:E32 Arg2:E35
+R13	Or Arg1:E36 Arg2:E21
+R14	Before Arg1:E25 Arg2:E40
+R15	Or Arg1:E10 Arg2:E20
+R16	Or Arg1:E15 Arg2:E19

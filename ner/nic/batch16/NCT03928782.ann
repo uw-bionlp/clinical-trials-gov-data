@@ -1,15 +1,14 @@
 E1	Procedure:T1 Name:T2
 E3	Procedure:T3 Name:T4 Temporality:E7
-E4	Age:T7 Eq-Comparison:E12
+E4	Age:T7 Numeric-Filter:E12
 E2	Condition:T11 Name:T12 Acuteness:T13
 E6	Assertion:T14 Asserted:E3
 E7	Eq-Comparison:T15 Operator:T5 Value:T16 Temporal-Unit:T17
 E8	Procedure:T18
 E9	Assertion:T19 Asserted:E8
-E10	And:T20 Arg:E3 Arg2:E9
 E11	Modifier:T21 Modifies:T2
 E12	Eq-Comparison:T22 Value:T9 Temporal-Unit:T6 Operator:T8 Value2:T10
-E5	Condition:T23 Name:T24 Severity:T27
+E5	Condition:T23 Severity:T27
 E13	Modifier:T25 Modifies:E5
 E14	Other:T26 Is-Other:E5
 E15	Study:T28
@@ -34,7 +33,6 @@ T16	Eq-Value 105 108	one
 T17	Eq-Temporal-Unit 109 114	month
 T18	Procedure 127 137	pretreated
 T19	Assertion 119 126	will be
-T20	And 115 118	and
 T21	Modifier 164 186	peripheral blood cells
 T22	Eq-Comparison 247 270	between 18 and 50 years
 T8	Eq-Operator 247 254	between
@@ -62,3 +60,4 @@ A11	Stability-Value T33 change
 A12	Acuteness-Type-Value T13 acute
 R1	Using Arg1:E8 Arg2:E1
 R2	Caused-By Arg1:T33 Arg2:E17
+R3	And Arg1:E3 Arg2:E9

@@ -1,7 +1,7 @@
 E1	Condition:T1 Name:T34
-E2	Age:T2 Eq-Comparison:E3
+E2	Age:T2 Numeric-Filter:E3
 E3	Eq-Comparison:T3 Value:T35 Operator:T36 Value:T37 Temporal-Unit:T38
-E4	Observation:T4 Name:T39 Eq-Comparison:E5
+E4	Observation:T4 Name:T39 Numeric-Filter:E5
 E5	Eq-Comparison:T5 Unit:T40 Value:T41 Operator:T42 Value:T43
 E6	Observation:T6 Name:T44
 E7	Observation:T7 Name:T46
@@ -11,15 +11,12 @@ E11	Negation:T11 Negates:E12
 E12	Condition:T12 Name:T69
 E13	Drug:T13 Name:T49
 E15	Eq-Comparison:T15 Value:T51 Temporal-Unit:T52
-E16	Temporal-Connection:T16 Arg:E15 Arg2:E17
-E17	Study:T17 
+E17	Study:T17
 E18	Modifier:T18 Modifies:T53
 E19	Procedure:T19 Name:T53 Temporality:E20
 E20	Eq-Comparison:T20 Value:T54 Temporal-Unit:T55
-E21	Temporal-Connection:T21 Arg:E20 Arg2:E22
-E22	Study:T22 
+E22	Study:T22
 E23	Condition:T23 Name:T56
-E24	Or:T24 Arg:E23 Arg2:E25
 E25	Condition:T25 Name:T57
 E26	Condition:T26 Name:T58
 E27	Condition:T27 Name:T61 Severity:T60
@@ -48,15 +45,12 @@ T11	Negation 303 306	Non
 T12	Condition 307 317	ambulatory
 T13	Drug 323 340	Botulinum toxin A
 T15	Eq-Comparison 352 362	six months
-T16	Temporal-Connection 363 371	prior to
 T17	Study 372 382	enrollment
 T18	Modifier 388 398	Lower limb
 T19	Procedure 399 406	surgery
 T20	Eq-Comparison 407 416	two years
-T21	Temporal-Connection 417 425	prior to
 T22	Study 426 436	enrollment
 T23	Condition 454 460	ataxia
-T24	Or 461 463	or
 T25	Condition 464 472	dystonia
 T26	Condition 478 496	Cognitive problems
 T27	Condition 534 548	co-morbidities
@@ -108,23 +102,21 @@ T70	Observation 509 521	measurements
 T71	Observation-Name 509 521	measurements
 T72	Procedure 683 688	tasks
 T73	Assertion 650 657	prevent
-A1	Temporal-Connection-Type-Value E16 before
-A2	Temporal-Connection-Type-Value E21 before
 A3	Eq-Operator-Value T36 BETWEEN
 A4	Eq-Temporal-Unit-Value T38 year
-A5	Observation-Type-Value T39 clinical-score
+A5	Observation-Type-Value E4 clinical-score
 A6	Eq-Operator-Value T42 BETWEEN
-A8	Observation-Type-Value T46 clinical-score
+A8	Observation-Type-Value E7 clinical-score
 A10	Eq-Temporal-Unit-Value T52 month
 A11	Eq-Temporal-Unit-Value T55 year
 A12	Stability-Value T59 change
 A13	Severity-Value T60 severe
 A14	Severity-Value T62 severe
 A15	Stability-Value T67 change
-A16	Observation-Type-Value T44 clinical-score
+A16	Observation-Type-Value E6 clinical-score
 A7	Eq-Operator-Value T68 EQ
 A17	Assertion-Type-Value E9 hypothetical
-A9	Observation-Type-Value T71 measurement
+A9	Observation-Type-Value E35 measurement
 A18	Assertion-Type-Value E37 hypothetical
 R1	Equivalent-To Arg1:E7 Arg2:E6
 R2	Equivalent-To Arg1:E8 Arg2:E7
@@ -135,3 +127,8 @@ R6	Example-Of Arg1:E30 Arg2:E27
 R7	Example-Of Arg1:E31 Arg2:E27
 R8	Example-Of Arg1:E32 Arg2:E27
 R9	Caused-By Arg1:E33 Arg2:E32
+R10	Before Arg1:E15 Arg2:E17
+R11	Before Arg1:E20 Arg2:E22
+R12	Or Arg1:E23 Arg2:E25
+R13	Or Arg1:E30 Arg2:E31
+R14	Or Arg1:E31 Arg2:E32

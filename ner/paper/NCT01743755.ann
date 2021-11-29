@@ -1,0 +1,33 @@
+T1	Assertion 433 440	require
+E1	Assertion:T1 Asserted:E2
+A1	Assertion-Type-Value E1 hypothetical
+T2	Location 441 460	intensive care unit
+A2	Location-Value T2 unit
+T3	Procedure 461 470	treatment
+E2	Procedure:T3 Location:T2
+T4	Condition 345 382	chronic obstructive pulmonary disease
+E3	Condition:T4 Name:T5
+T5	Condition-Name 345 382	chronic obstructive pulmonary disease
+T6	Eq-Comparison 391 393	on
+E4	Eq-Comparison:T6 
+T7	Eq-Temporal-Period 391 393	on
+A3	Eq-Temporal-Period-Value T7 present
+T8	Drug 394 418	systemic corticosteroids
+E5	Drug:T8 Name:T9 Temporality:E4
+T9	Drug-Name 394 418	systemic corticosteroids
+T10	And 383 390	who are
+E6	And:T10 Arg:E3 Arg2:E5
+T11	Drug 230 258	immunosuppressive medication
+E7	Drug:T11 Name:T12 Temporality:E9
+T12	Drug-Name 230 258	immunosuppressive medication
+T13	Eq-Comparison 221 229	received
+E8	Eq-Comparison:T13 Temporal-Period:T14
+T14	Eq-Temporal-Period 221 229	received
+A4	Eq-Temporal-Period-Value T14 past
+T15	Eq-Comparison 266 278	last 6 weeks
+E9	Eq-Comparison:T15 Temporal-Period:T16 Value:T17 Temporal-Unit:T18
+T16	Eq-Temporal-Period 266 270	last
+A5	Eq-Temporal-Period-Value T16 past
+T17	Eq-Value 271 272	6
+T18	Eq-Temporal-Unit 273 278	weeks
+A6	Eq-Temporal-Unit-Value T18 week

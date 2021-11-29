@@ -1,10 +1,8 @@
 E1	Eq-Comparison:T1 Operator:T16 Value:T17 Temporal-Unit:T18
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E3	Eq-Comparison:T3 Temporal-Period:T19
 E4	Procedure:T4 Name:T20 Temporality:E3
 E5	Condition:T5 Name:T21
-E6	Or:T6 Arg:E16 Arg2:E7
-E7	Negation:T7 Negates:E8
 E8	Procedure:T8 Name:T23
 E9	Procedure:T9 Name:T33
 E10	Eq-Comparison:T10 Value:T24 Operator:T25 Value:T26 Unit:T27
@@ -13,7 +11,6 @@ E12	Procedure:T12 Name:T29 Temporality:E11
 E13	Procedure:T13 Name:T30
 E14	Negation:T14 Negates:E15
 E15	Procedure:T15 Name:T31
-E16	And:T22 Arg:E5
 E17	Modifier:T32 Modifies:T23
 E18	Modifier:T34 Modifies:T29
 T1	Eq-Comparison 38 51	over 18 years
@@ -21,8 +18,6 @@ T2	Age 55 58	age
 T3	Eq-Comparison 59 69	undergoing
 T4	Procedure 70 95	gastric resection surgery
 T5	Condition 103 109	cancer
-T6	Or 117 119	or
-T7	Negation 120 123	not
 T8	Procedure 142 158	recovery program
 T9	Procedure 160 164	ERAS
 T10	Eq-Comparison 219 225	0-100%
@@ -46,7 +41,6 @@ T28	Eq-Temporal-Period 262 272	undergoing
 T29	Procedure-Name 283 290	surgery
 T30	Procedure-Name 301 322	Endoscopic procedures
 T31	Procedure-Name 337 364	oncological gastric surgery
-T22	And 110 116	within
 T32	Modifier 130 141	intensified
 T33	Procedure-Name 160 164	ERAS
 T34	Modifier 273 282	emergency

@@ -1,18 +1,15 @@
-E1	Observation:T1 Name:T37 Eq-Comparison:E2
+E1	Observation:T1 Name:T37 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T38 Operator:T39 Value:T40
-E3	Or:T3 Arg:T41 Arg2:T42
-E4	Age:T4 Eq-Comparison:E5
+E4	Age:T4 Numeric-Filter:E5
 E5	Eq-Comparison:T5 Operator:T43 Value:T44 Operator:T45 Value:T46 Temporal-Unit:T47
-E7	And:T7 Arg:E4 Arg2:E8
 E8	Assertion:T8 Asserted:E9
 E9	Procedure:T9 Name:T49
 E10	Procedure:T10 Name:T50 Duration:E11
 E11	Eq-Comparison:T11 Operator:T52 Value:T53 Temporal-Unit:T54
 E12	Eq-Comparison:T12 Operator:T55 Value:T56 Temporal-Unit:T57
-E13	Observation:T13 Name:T58 Eq-Comparison:E14
+E13	Observation:T13 Name:T58 Numeric-Filter:E14
 E14	Eq-Comparison:T14 Operator:T59 Value:T48
 E15	Condition:T15 Name:T60
-E16	Or:T16 Arg:E15 Arg2:E17
 E17	Risk:T17 Risk-For:E18 Polarity:T61
 E18	Condition:T18 Name:T62
 E19	Contraindication:T19 Contraindicates:E21
@@ -24,22 +21,19 @@ E25	Condition:T25 Name:T68
 E26	Allergy:T26 Name:E27 Name2:E28 Name3:E30
 E27	Procedure:T27 Name:T69
 E28	Drug:T28 Name:T70
-E29	Or:T29 Arg:E28 Arg2:E30
 E30	Drug:T30
 E31	Study:T31 Study-Of:E30
 E33	Eq-Comparison:T33 Temporal-Period:T71
 E34	Drug:T34 Name:T72 Temporality:E33 Acuteness:T32
 E35	Condition:T35 Name:T73 Temporality:E37
 E36	Assertion:T36 Asserted:E35
-E6	Age:T6 Eq-Comparison:E12
+E6	Age:T6 Numeric-Filter:E12
 E20	Eq-Comparison:T20 Temporal-Period:T51
 E37	Eq-Comparison:T63 Temporal-Period:T74
 T1	Observation 25 28	ASA
 T2	Eq-Comparison 29 34	I-III
-T3	Or 40 43	and
 T4	Age 60 64	aged
 T5	Eq-Comparison 65 87	between 18 to 80 years
-T7	And 93 96	who
 T8	Assertion 97 109	will receive
 T9	Procedure 110 127	spinal anesthesia
 T10	Procedure 132 141	surgeries
@@ -48,7 +42,6 @@ T12	Eq-Comparison 204 225	younger than 18 years
 T13	Observation 236 239	ASA
 T14	Eq-Comparison 256 258	>3
 T15	Condition 265 282	Immunosuppression
-T16	Or 283 285	or
 T17	Risk 291 295	risk
 T18	Condition 299 308	infection
 T19	Contraindication 315 332	Contraindications
@@ -60,7 +53,6 @@ T25	Condition 485 505	cognitive impairment
 T26	Allergy 511 520	Allergies
 T27	Procedure 524 541	local anesthetics
 T28	Drug 543 553	analgesics
-T29	Or 554 556	or
 T30	Drug 561 571	medication
 T31	Study 584 589	study
 T32	Acuteness 610 617	chronic
@@ -125,8 +117,13 @@ A16	Polarity-Value T61 high
 A18	Eq-Temporal-Period-Value T71 present
 A9	Eq-Temporal-Period-Value T51 past
 A10	Eq-Temporal-Period-Value T74 past
-A19	Observation-Type-Value T37 clinical-score
-A20	Observation-Type-Value T58 clinical-score
+A19	Observation-Type-Value E1 clinical-score
+A20	Observation-Type-Value E13 clinical-score
 A21	Acuteness-Type-Value T32 chronic
 R1	Using Arg1:E10 Arg2:E9
 R2	Example-Of Arg1:E22 Arg2:E19
+R3	Or Arg1:T41 Arg2:T42
+R4	And Arg1:E4 Arg2:E8
+R5	Or Arg1:E15 Arg2:E17
+R6	Or Arg1:E28 Arg2:E30
+R7	Or Arg1:E27 Arg2:E28

@@ -1,45 +1,34 @@
 E1	Assertion:T1 Asserted:E40
 E2	Eq-Comparison:T2 Unit:T3 Value:T5 Value2:T4 Operator:T6
-E3	Observation:T7 Name:T8 Eq-Comparison:E2
+E3	Observation:T7 Name:T8 Numeric-Filter:E2
 E4	Observation:T9 Name:T10
 E5	Negation:T11 Negates:E6
 E6	Procedure:T12 Name:T13
 E7	Procedure:T14
 E9	Procedure:T16 Name:T17
-E10	Temporal-Connection:T18 Arg:E9 Arg2:E48
 E11	Drug:T21 Name:T22 Temporality:E56
 E12	Eq-Comparison:T24 Operator:T27 Temporal-Unit:T25 Value:T26
-E13	Temporal-Connection:T28 Arg:E12 Arg2:E47
 E14	Drug:T30 Name:T31 Dose2:E8 Dose:E16
 E16	Eq-Comparison:T33 Operator:T37 Value:T34 Unit:T35 Value2:T36 Unit2:T38 Per:T39
 E17	Exception:T40 From:E11 Except:E14
 E18	Drug:T41 Name:T42
 E22	Eq-Comparison:T48 Operator:T49 Temporal-Unit:T51 Value:T50
-E23	Temporal-Connection:T52 Arg:E22 Arg2:E44
 E24	Condition:T55 Name:T56 Temporality:E25 Temporality2:E49 Temporality3:E27
 E25	Eq-Comparison:T57 Temporal-Period:T58
 E27	Eq-Comparison:T60 Temporal-Period:T61
-E28	Procedure:T62 Name:T63 Temporality:E54
-E29	Procedure:T64 Name:T65
-E30	Procedure:T66 Name:T67
+E28	Procedure:T62 Name:T63 Temporality:E54 Temporality2:E36
+E29	Procedure:T64 Name:T65 Temporality:E54 Temporality2:E36
+E30	Procedure:T66 Name:T67 Temporality:E54 Temporality2:E36
 E31	Procedure:T68 Name:T69
-E32	Procedure:T70 Name:T71
-E33	Procedure:T72 Name:T73 Temporality:E36
-E35	Temporal-Connection:T76 Arg:E36 Arg2:E46
+E32	Procedure:T70 Name:T71 Temporality:E54 Temporality2:E36
+E33	Procedure:T72 Name:T73 Temporality:E36 Temporality2:E54
 E36	Eq-Comparison:T78 Operator:T79 Temporal-Unit:T81 Value:T80
 E37	Drug:T82 Name:T83 Temporality:E39 Temporality2:E55
-E38	Temporal-Connection:T85 Arg:E39 Arg2:E45
 E39	Eq-Comparison:T87 Operator:T88 Temporal-Unit:T90 Value:T89
 E8	Eq-Comparison:T15 Value:T32
-E15	Or:T44 Arg:E32 Arg2:E33
-E19	Or:T45 Arg:E21 Arg2:E26
-E20	Or:T47 Arg:T42 Arg2:E21
 E21	Drug:T59 Name:T43
 E26	Drug:T74 Name:T46 Temporality:E22
-E34	Or:T92 Arg:E25 Arg2:E27
 E40	Observation:T93 Name:T94
-E41	And:T95 Arg:E40 Arg2:E3
-E42	Or:T96 Arg:E6 Arg2:E7
 E43	Assertion:T97 Asserted:E5
 E44	Study:T19
 E45	Study:T29
@@ -48,7 +37,6 @@ E47	Study:T23
 E48	Study:T20
 E49	Eq-Comparison:T98 Temporal-Period:T99
 E50	Study:T54
-E51	Temporal-Connection:T75 Arg:E53 Arg2:E50
 E52	Assertion:T77 Asserted:E53
 E53	Coreference:T84 Refers-To:E26
 E54	Eq-Comparison:T86 Temporal-Period:T91
@@ -71,14 +59,12 @@ T13	Procedure-Name 267 292	dermatological procedures
 T14	Procedure 296 306	treatments
 T16	Procedure 333 350	wrinkle reduction
 T17	Procedure-Name 333 350	wrinkle reduction
-T18	Temporal-Connection 371 377	during
 T21	Drug 447 460	anticoagulant
 T22	Drug-Name 447 460	anticoagulant
 T24	Eq-Comparison 529 543	within 2 weeks
 T25	Eq-Temporal-Unit 538 543	weeks
 T26	Eq-Value 536 537	2
 T27	Eq-Operator 529 535	within
-T28	Temporal-Connection 544 546	of
 T30	Drug 495 502	aspirin
 T31	Drug-Name 495 502	aspirin
 T33	Eq-Comparison 504 526	100mg, up to 300mg/day
@@ -97,7 +83,6 @@ T48	Eq-Comparison 654 667	within 1 week
 T49	Eq-Operator 654 660	within
 T50	Eq-Value 661 662	1
 T51	Eq-Temporal-Unit 663 667	week
-T52	Temporal-Connection 668 670	of
 T55	Condition 766 783	bleeding disorder
 T56	Condition-Name 766 783	bleeding disorder
 T57	Eq-Comparison 787 791	past
@@ -116,30 +101,22 @@ T70	Procedure 905 924	wrinkle improvement
 T71	Procedure-Name 905 924	wrinkle improvement
 T72	Procedure 928 947	acne scar treatment
 T73	Procedure-Name 928 947	acne scar treatment
-T76	Temporal-Connection 983 985	of
 T78	Eq-Comparison 967 982	within 24 weeks
 T79	Eq-Operator 967 973	within
 T80	Eq-Value 974 976	24
 T81	Eq-Temporal-Unit 977 982	weeks
 T82	Drug 1033 1055	hyaluronic acid filler
 T83	Drug-Name 1033 1055	hyaluronic acid filler
-T85	Temporal-Connection 1072 1074	of
 T87	Eq-Comparison 1056 1071	within 24 weeks
 T88	Eq-Operator 1056 1062	within
 T89	Eq-Value 1063 1065	24
 T90	Eq-Temporal-Unit 1066 1071	weeks
 T15	Eq-Comparison 484 487	low
 T32	Eq-Value 484 487	low
-T44	Or 925 927	or
-T45	Or 642 644	or
-T47	Or 601 603	or
 T59	Drug 604 641	non-steroidal anti-inflammatory drugs
 T74	Drug 645 653	Collagen
-T92	Or 792 794	or
 T93	Observation 70 103	appearance of the nasolabial fold
 T94	Observation-Name 70 103	appearance of the nasolabial fold
-T95	And 130 133	and
-T96	Or 293 295	or
 T97	Assertion 231 243	consented to
 T19	Study 687 696	screening
 T29	Study 1091 1100	screening
@@ -149,7 +126,6 @@ T20	Study 399 404	study
 T98	Eq-Comparison 755 762	History
 T99	Eq-Temporal-Period 755 762	History
 T54	Study 744 749	study
-T75	Temporal-Connection 719 725	during
 T77	Assertion 705 712	require
 T84	Coreference 713 718	these
 T86	Eq-Comparison 808 816	Received
@@ -161,7 +137,7 @@ T103	Eq-Temporal-Period 431 443	Administered
 T104	Eq-Comparison 578 590	Administered
 T105	Eq-Temporal-Period 578 590	Administered
 A1	Eq-Operator-Value T6 BETWEEN
-A2	Observation-Type-Value T8 clinical-score
+A2	Observation-Type-Value E3 clinical-score
 A5	Eq-Temporal-Unit-Value T25 week
 A6	Eq-Operator-Value T27 LTEQ
 A8	Eq-Operator-Value T37 BETWEEN
@@ -176,13 +152,7 @@ A3	Eq-Temporal-Period-Value T58 past
 A13	Eq-Temporal-Period-Value T61 present
 A21	Assertion-Type-Value E1 intention
 A14	Assertion-Type-Value E43 hypothetical
-A4	Temporal-Connection-Type-Value E10 during
-A7	Temporal-Connection-Type-Value E13 before
-A12	Temporal-Connection-Type-Value E23 before
-A15	Temporal-Connection-Type-Value E38 before
-A18	Temporal-Connection-Type-Value E35 before
 A22	Eq-Temporal-Period-Value T99 past
-A23	Temporal-Connection-Type-Value E51 during
 A24	Assertion-Type-Value E52 hypothetical
 A25	Eq-Temporal-Period-Value T91 past
 A26	Eq-Temporal-Period-Value T101 past
@@ -191,3 +161,17 @@ A28	Eq-Temporal-Period-Value T105 past
 R1	Abbrev-Of Arg1:E4 Arg2:E3
 R2	Example-Of Arg1:E9 Arg2:E7
 R4	Example-Of Arg1:E31 Arg2:E30
+R3	During Arg1:E9 Arg2:E48
+R5	Before Arg1:E12 Arg2:E47
+R6	Before Arg1:E22 Arg2:E44
+R7	Before Arg1:E36 Arg2:E46
+R8	Before Arg1:E39 Arg2:E45
+R9	Or Arg1:E32 Arg2:E33
+R10	Or Arg1:E21 Arg2:E26
+R11	Or Arg1:T42 Arg2:E21
+R12	Or Arg1:E25 Arg2:E27
+R13	And Arg1:E40 Arg2:E3
+R14	Or Arg1:E6 Arg2:E7
+R15	During Arg1:E53 Arg2:E50
+R16	Or Arg1:E28 Arg2:E29
+R17	Or Arg1:E29 Arg2:E30

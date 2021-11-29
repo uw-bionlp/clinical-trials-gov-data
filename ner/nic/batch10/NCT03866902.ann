@@ -1,7 +1,7 @@
-E4	Observation:T4 Name:T5 Eq-Comparison:E11
-E7	Observation:T7 Name:T8 Eq-Comparison:E12
-E8	Age:T15 Eq-Comparison:E1
-E9	Age:T16 Eq-Comparison:E14
+E4	Observation:T4 Name:T5 Numeric-Filter:E11
+E7	Observation:T7 Name:T8 Numeric-Filter:E12
+E8	Age:T15 Numeric-Filter:E1
+E9	Age:T16 Numeric-Filter:E14
 E11	Eq-Comparison:T27 Operator:T9 Value:T23 Per:T41 Unit:T13
 E12	Eq-Comparison:T28 Operator:T10 Value:T26 Unit:T14
 E13	Eq-Comparison:T29 Operator:T18 Value:T22 Value2:T21
@@ -10,7 +10,7 @@ E1	Eq-Comparison:T31 Value:T20 Temporal-Unit:T11 Operator:T32
 E2	Negation:T35 Negates:T34
 E3	Observation:T36 Name:T37
 E5	Negation:T38 Negates:E3
-E6	Observation:T39 Name:T40 Eq-Comparison:E13
+E6	Observation:T39 Name:T40 Numeric-Filter:E13
 E15	Family-Member:T2
 E16	Family-Member:T3
 E17	Study:T42
@@ -82,8 +82,8 @@ T54	Negation 699 709	difficulty
 T55	Condition 726 748	psychological problems
 T56	Condition-Name 726 748	psychological problems
 T57	Family-Member 23 30	mothers
-A3	Observation-Type-Value T5 vital
-A4	Observation-Type-Value T8 vital
+A3	Observation-Type-Value E4 vital
+A4	Observation-Type-Value E7 vital
 A5	Eq-Operator-Value T9 GT
 A6	Eq-Operator-Value T10 GT
 A7	Eq-Temporal-Unit-Value T11 year
@@ -91,12 +91,12 @@ A8	Eq-Temporal-Unit-Value T12 year
 A9	Eq-Operator-Value T18 BETWEEN
 A10	Eq-Operator-Value T19 BETWEEN
 A11	Eq-Operator-Value T32 GTEQ
-A12	Observation-Type-Value T40 clinical-score
+A12	Observation-Type-Value E6 clinical-score
 A1	Family-Member-Type E15 child
 A2	Family-Member-Type E16 child
 A14	Family-Member-Type E18 mother
 A13	Family-Member-Type E19 child
-A15	Observation-Type-Value T53 social-habit
+A15	Observation-Type-Value E24 social-habit
 A16	Family-Member-Type E27 mother
 R1	Equivalent-To Arg1:E6 Arg2:E3
 R2	Equivalent-To Arg1:E6 Arg2:T34

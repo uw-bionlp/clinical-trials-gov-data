@@ -5,7 +5,7 @@ E10	Condition:T10 Name:T11
 E12	Condition:T12 Name:T13
 E14	Condition:T14 Name:T15
 E16	Condition:T16 Name:T17
-E18	Condition:T18 Name:T19 Severity:T36
+E18	Condition:T18 Severity:T36 Acuteness:T19
 E20	Condition:T20 Name:T21
 E22	Condition:T22 Name:T23
 E27	Condition:T27 Name:T28
@@ -16,26 +16,19 @@ E6	Condition:T25 Name:T26
 E7	Modifier:T33 Modifies:E12
 E9	Condition:T34 Name:T35
 E11	Condition:T37 Name:T38
-E13	And:T39 Arg:T1 Arg2:E5
-E15	Or:T41 Arg:E5 Arg2:E1
 E17	Eq-Comparison:T29 Operator:T42
-E19	Observation:T43 Name:T44 Eq-Comparison:E17
+E19	Observation:T43 Name:T44 Numeric-Filter:E17
 E21	Eq-Comparison:T4 Operator:T45 Value:T46 Temporal-Unit:T47 Per:T48
 E23	Assertion:T49 Asserted:E25
 E24	Eq-Comparison:T50 Temporal-Period:T51
 E25	Observation:T52 Name:T53 Temporality:E24 Minimum-Count:E21
-E26	And:T54 Arg:E19 Arg2:E23
-E28	And:T55 Arg:T24 Arg2:E27
-E29	Or:T56 Arg:E6 Arg2:E12
 E30	Condition:T57 Name:T58
 E31	Modifier:T59 Modifies:T58
 E32	Modifier:T60 Modifies:T58
 E33	Modifier:T61 Modifies:T58
-E34	Or:T62 Arg:E32 Arg2:E31
 E35	Other:T63 Is-Other:E18
 E36	Modifier:T64 Modifies:T21
 E37	Modifier:T65 Modifies:T21
-E38	Or:T66 Arg:E37 Arg2:E36
 T1	Life-Stage-And-Gender 25 33	Children
 T2	Condition 60 66	autism
 T3	Condition-Name 60 66	autism
@@ -52,8 +45,7 @@ T14	Condition 382 400	Fragile X Syndrome
 T15	Condition-Name 382 400	Fragile X Syndrome
 T16	Condition 402 419	Angelman Syndrome
 T17	Condition-Name 402 419	Angelman Syndrome
-T18	Condition 550 566	chronic diseases
-T19	Condition-Name 550 566	chronic diseases
+T18	Condition 558 566	diseases
 T20	Condition 593 600	failure
 T21	Condition-Name 593 600	failure
 T22	Condition 367 380	Rett Syndrome
@@ -72,9 +64,7 @@ T35	Condition-Name 444 462	tuberous sclerosis
 T36	Severity 542 549	serious
 T37	Condition 630 636	tumors
 T38	Condition-Name 630 636	tumors
-T39	And 34 38	with
 T40	Polarity 46 50	high
-T41	Or 43 45	or
 T29	Eq-Comparison 102 110	at least
 T42	Eq-Operator 102 110	at least
 T43	Observation 111 133	middle school educated
@@ -89,19 +79,15 @@ T50	Eq-Comparison 182 189	planned
 T51	Eq-Temporal-Period 182 189	planned
 T52	Observation 190 209	practice activities
 T53	Observation-Name 190 209	practice activities
-T54	And 135 138	and
-T55	And 274 278	with
-T56	Or 325 327	or
 T57	Condition 499 511	disabilities
 T58	Condition-Name 499 511	disabilities
 T59	Modifier 490 498	physical
 T60	Modifier 477 485	auditory
 T61	Modifier 469 475	Visual
-T62	Or 486 489	and
 T63	Other 536 541	other
 T64	Modifier 586 592	kidney
 T65	Modifier 576 581	liver
-T66	Or 582 585	and
+T19	Acuteness 550 557	chronic
 A1	Life-Stage-And-Gender-Type T1 child
 A3	Life-Stage-And-Gender-Type T24 child
 A4	Severity-Value T36 severe
@@ -113,6 +99,7 @@ A8	Eq-Temporal-Unit-Value T47 hour
 A9	Eq-Temporal-Unit-Value T48 week
 A10	Assertion-Type-Value E23 hypothetical
 A11	Eq-Temporal-Period-Value T51 future
+A12	Acuteness-Type-Value T19 chronic
 R1	Caused-By Arg1:E27 Arg2:E6
 R2	Caused-By Arg1:E27 Arg2:E12
 R3	Example-Of Arg1:E22 Arg2:E12
@@ -123,3 +110,17 @@ R7	Example-Of Arg1:E9 Arg2:E12
 R8	Example-Of Arg1:E20 Arg2:E18
 R9	Example-Of Arg1:E8 Arg2:E18
 R10	Example-Of Arg1:E11 Arg2:E18
+R11	And Arg1:T1 Arg2:E5
+R12	Or Arg1:E5 Arg2:E1
+R13	And Arg1:E19 Arg2:E23
+R14	And Arg1:T24 Arg2:E27
+R15	Or Arg1:E6 Arg2:E12
+R16	Or Arg1:E32 Arg2:E31
+R17	Or Arg1:E37 Arg2:E36
+R18	Or Arg1:E8 Arg2:E11
+R19	Or Arg1:E10 Arg2:E9
+R20	Or Arg1:E14 Arg2:E16
+R21	Or Arg1:E16 Arg2:E10
+R22	Or Arg1:E20 Arg2:E8
+R23	Or Arg1:E22 Arg2:E14
+R24	Or Arg1:E33 Arg2:E32

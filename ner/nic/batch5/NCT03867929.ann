@@ -12,13 +12,11 @@ E12	Condition:T12 Name:T31
 E13	Condition:T13 Name:T32 Acuteness:T52
 E14	Condition:T14 Name:T33 Temporality:E31
 E15	Condition:T15 Name:T34 Temporality:E32
-E16	Or:T16 Arg:E15 Arg2:E17
 E17	Procedure:T17
-E18	Condition:T18 Name:T35
+E18	Observation:T18 Name:T35
 E19	Eq-Comparison:T19 Temporal-Period:T36
 E20	Procedure:T20 Name:T37 Temporality:E19
 E21	Procedure:T21 Name:T38 Temporality:E19
-E22	Or:T22 Arg:E21 Arg2:E24
 E23	Modifier:T23 Modifies:T39
 E24	Procedure:T24 Name:T39 Temporality:E19
 E25	Eq-Comparison:T40 Temporal-Period:T41
@@ -43,13 +41,11 @@ T12	Condition 363 375	malignencies
 T13	Condition 390 404	kidney failure
 T14	Condition 423 441	metabolic syndrome
 T15	Condition 460 480	psychiatric diseases
-T16	Or 481 487	and/or
 T17	Procedure 488 505	medical treatment
-T18	Condition 512 519	Smoking
+T18	Observation 512 519	Smoking
 T19	Eq-Comparison 526 533	History
 T20	Procedure 537 551	pelvic surgery
 T21	Procedure 553 568	cardiac surgery
-T22	Or 569 572	and
 T23	Modifier 573 579	pelvic
 T24	Procedure 580 592	radiotherapy
 T25	Condition-Name 37 57	erectile dysfunction
@@ -61,7 +57,7 @@ T30	Condition-Name 286 309	heamatological diseases
 T32	Condition-Name 390 404	kidney failure
 T33	Condition-Name 423 441	metabolic syndrome
 T34	Condition-Name 460 480	psychiatric diseases
-T35	Condition-Name 512 519	Smoking
+T35	Observation-Name 512 519	Smoking
 T36	Eq-Temporal-Period 526 533	History
 T37	Procedure-Name 537 551	pelvic surgery
 T38	Procedure-Name 553 568	cardiac surgery
@@ -96,3 +92,6 @@ A8	Eq-Temporal-Period-Value T54 present
 A9	Eq-Temporal-Period-Value T56 present
 A10	Acuteness-Type-Value T52 chronic
 R1	Treatment-For Arg1:E17 Arg2:E15
+R2	Or Arg1:E15 Arg2:E17
+R3	Or Arg1:E21 Arg2:E24
+R4	Or Arg1:E20 Arg2:E21

@@ -9,7 +9,6 @@ E2	Allergy:T20 Name:E1
 E4	Allergy:T22 Name:E6 Name2:E8
 E6	Drug:T23 Name:T24
 E8	Drug:T25 Name:T26
-E10	Or:T27 Arg:E6 Arg2:E8
 E12	Drug:T28 Name:T29
 E14	Drug:T30 Temporality:E37
 E16	Drug:T32 Name:T33
@@ -19,20 +18,16 @@ E19	Condition:T38 Name:T39
 E20	Condition:T40 Name:T41
 E21	Condition:T42 Name:T43
 E22	Condition:T44 Name:T45
-E23	Observation:T46 Name:T47 Eq-Comparison:E24
+E23	Observation:T46 Name:T47 Numeric-Filter:E24
 E24	Eq-Comparison:T48 Operator:T49 Value:T18 Per:T50 Unit:T51
 E25	Risk:T52 Polarity:T74 Risk-For:E3 Risk-For2:E26
 E26	Condition:T53 Name:T54
-E27	Or:T55 Arg:E3 Arg2:E26
 E28	Condition:T56 Name:T57
 E29	Condition:T58 Severity:T60
 E30	Study:T61 Stability:T59
 E31	Condition:T62 Name:T63 Temporality:E42 Temporality2:E43
 E32	Condition:T64 Name:T65 Temporality:E42 Temporality2:E43
-E33	Or:T66 Arg:E31 Arg2:E32
 E34	Condition:T67 Name:T68
-E35	Or:T69 Arg:E15 Arg2:E13
-E36	Or:T70 Arg:E34 Arg2:E5
 E1	Drug:T2 Name:T21
 E37	Eq-Comparison:T19 Per:T71
 E38	Other:T72 Is-Other:E14
@@ -41,7 +36,6 @@ E40	Modifier:T73 Modifies:T43
 E41	Assertion:T75 Asserted:T59
 E42	Eq-Comparison:T76 Temporal-Period:T77
 E43	Eq-Comparison:T78 Temporal-Period:T79
-E44	Or:T80 Arg:E42 Arg2:E43
 T1	Language 90 96	German
 T3	Condition 565 571	stroke
 T4	Condition-Name 565 571	stroke
@@ -65,7 +59,6 @@ T23	Drug 240 265	components of amisulpride
 T24	Drug-Name 240 265	components of amisulpride
 T25	Drug 268 284	placebo capsules
 T26	Drug-Name 268 284	placebo capsules
-T27	Or 266 267	/
 T28	Drug 290 297	lactose
 T29	Drug-Name 290 297	lactose
 T30	Drug 326 336	medication
@@ -92,7 +85,6 @@ T51	Eq-Unit 531 533	ml
 T52	Risk 556 560	risk
 T53	Condition 575 585	thrombosis
 T54	Condition-Name 575 585	thrombosis
-T55	Or 572 574	or
 T56	Condition 598 629	prolongation of the QT interval
 T57	Condition-Name 598 629	prolongation of the QT interval
 T58	Condition 652 669	medical condition
@@ -102,12 +94,9 @@ T62	Condition 755 772	Suicidal thoughts
 T63	Condition-Name 755 772	Suicidal thoughts
 T64	Condition 776 792	suicide attempts
 T65	Condition-Name 776 792	suicide attempts
-T66	Or 773 775	or
 T17	Severity 825 836	Substantial
 T67	Condition 898 908	drug abuse
 T68	Condition-Name 898 908	drug abuse
-T69	Or 951 953	or
-T70	Or 910 912	or
 T2	Drug 197 208	Amisulpride
 T19	Eq-Comparison 304 309	Daily
 T71	Eq-Temporal-Unit 304 309	Daily
@@ -121,17 +110,17 @@ T76	Eq-Comparison 800 804	past
 T77	Eq-Temporal-Period 800 804	past
 T78	Eq-Comparison 811 818	present
 T79	Eq-Temporal-Period 811 818	present
-T80	Or 805 807	or
 A2	Eq-Operator-Value T49 LT
 A3	Severity-Value T60 severe
 A1	Eq-Temporal-Unit-Value T71 day
-A4	Observation-Type-Value T47 lab
+A4	Observation-Type-Value E23 lab
 A5	Polarity-Value T74 high
 A6	Stability-Value T59 change
 A7	Assertion-Type-Value E41 hypothetical
 A8	Eq-Temporal-Period-Value T77 past
 A9	Eq-Temporal-Period-Value T79 present
 A10	Severity-Value T17 severe
+A11	Eq-Temporal-Unit-Value T50 minute
 R1	Example-Of Arg1:E12 Arg2:E8
 R2	Example-Of Arg1:E16 Arg2:E14
 R3	Example-Of Arg1:E19 Arg2:E18
@@ -143,6 +132,13 @@ R8	Example-Of Arg1:E34 Arg2:E7
 R9	Example-Of Arg1:E5 Arg2:E7
 R10	Equivalent-To Arg1:E23 Arg2:E22
 R11	Caused-By Arg1:T59 Arg2:E29
-T81	Or 458 460	or
-E45	Or:T81 Arg:E20 Arg2:E21
-A11	Eq-Temporal-Unit-Value T50 minute
+R12	Or Arg1:E6 Arg2:E8
+R13	Or Arg1:E3 Arg2:E26
+R14	Or Arg1:E31 Arg2:E32
+R15	Or Arg1:E15 Arg2:E13
+R16	Or Arg1:E34 Arg2:E5
+R17	Or Arg1:E42 Arg2:E43
+R18	Or Arg1:E20 Arg2:E21
+R19	Or Arg1:E9 Arg2:E34
+R20	Or Arg1:E11 Arg2:E9
+R21	Or Arg1:E19 Arg2:E20

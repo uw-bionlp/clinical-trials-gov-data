@@ -1,24 +1,20 @@
 E1	Negation:T1 Negates:E2
-E2	Condition:T2 Name:T27
+E2	Observation:T2 Name:T27
 E3	Observation:T3 Name:T28
-E4	Observation:T4 Name:T29 Eq-Comparison:E5
+E4	Observation:T4 Name:T29 Numeric-Filter:E5
 E5	Eq-Comparison:T5 Value:T30 Operator:T31 Value:T32
 E6	Observation:T6 Name:T23 Temporality:E23
 E7	Observation:T7 Name:T34
-E8	Temporal-Connection:T8 Arg:E7 Arg2:E9
 E9	Eq-Comparison:T9 Temporal-Period:T35 Value:T36 Temporal-Unit:T37
-E10	Or:T10 Arg:E28 Arg2:E29
-E11	Condition:T11 Name:T38 Acuteness:T61
+E11	Condition:T11 Acuteness:T61
 E12	Condition:T12 Name:T39
 E13	Condition:T13 Name:T40 Temporality:E14
 E14	Eq-Comparison:T14 Operator:T41 Value:T42 Temporal-Unit:T43
 E15	Condition:T15 Name:T44
-E16	Or:T16 Arg:E15 Arg2:E17
 E17	Assertion:T17 Asserted:E18
 E18	Condition:T18 Name:T45
 E19	Allergy:T19 Name:T46 Name2:T20
-E21	Or:T21 Arg:T46 Arg2:T20
-E24	Observation:T24 Name:T48 Stability:T47 Eq-Comparison:E25 Temporality:E26
+E24	Observation:T24 Name:T48 Stability:T47 Numeric-Filter:E25 Temporality:E26
 E25	Eq-Comparison:T25 Operator:T49 Value:T50 Unit:T51
 E26	Eq-Comparison:T26 Temporal-Period:T52 Value:T53 Temporal-Unit:T54
 E23	Eq-Comparison:T55 Temporal-Period:T33
@@ -26,29 +22,25 @@ E27	Modifier:T56 Modifies:T34
 E28	Condition:T57 Name:T58
 E29	Condition:T59 Name:T60
 T1	Negation 25 28	non
-T2	Condition 29 36	smoking
+T2	Observation 29 36	smoking
 T3	Observation 42 57	body mass index
 T4	Observation 59 62	BMI
 T5	Eq-Comparison 64 73	18.5-24.9
 T6	Observation 79 93	recreationally
 T7	Observation 153 168	weight training
-T8	Temporal-Connection 169 175	during
 T9	Eq-Comparison 180 197	previous 12 month
-T10	Or 214 216	or
 T11	Condition 248 255	disease
 T12	Condition 261 269	pregnant
 T13	Condition 271 281	postpartum
 T14	Eq-Comparison 282 298	up to six months
 T15	Condition 300 309	lactating
-T16	Or 311 313	or
 T17	Assertion 314 326	intention to
 T18	Condition 334 342	pregnant
 T19	Allergy 348 355	allergy
-T21	Or 364 366	or
 T24	Observation 387 398	body weight
 T25	Eq-Comparison 399 418	more than 10 pounds
 T26	Eq-Comparison 426 443	past three months
-T27	Condition-Name 29 36	smoking
+T27	Observation-Name 29 36	smoking
 T28	Observation-Name 42 57	body mass index
 T29	Observation-Name 59 62	BMI
 T30	Eq-Value 64 68	18.5
@@ -85,10 +77,9 @@ T59	Condition 217 222	vegan
 T60	Condition-Name 217 222	vegan
 T61	Acuteness 240 247	chronic
 T20	Allergy-Name 367 370	soy
-A1	Temporal-Connection-Type-Value E8 during
 A2	Assertion-Type-Value E17 intention
-A3	Observation-Type-Value T28 vital
-A4	Observation-Type-Value T29 vital
+A3	Observation-Type-Value E3 vital
+A4	Observation-Type-Value E4 vital
 A5	Eq-Operator-Value T31 BETWEEN
 A6	Eq-Temporal-Period-Value T33 present
 A7	Eq-Temporal-Period-Value T35 past
@@ -96,11 +87,16 @@ A8	Eq-Temporal-Unit-Value T37 month
 A9	Eq-Operator-Value T41 LTEQ
 A10	Eq-Temporal-Unit-Value T43 month
 A11	Stability-Value T47 change
-A12	Observation-Type-Value T48 vital
+A12	Observation-Type-Value E24 vital
 A13	Eq-Operator-Value T49 GT
 A14	Eq-Temporal-Period-Value T52 past
 A15	Eq-Temporal-Unit-Value T54 month
-A16	Observation-Type-Value T23 social-habit
-A17	Observation-Type-Value T34 social-habit
+A16	Observation-Type-Value E6 social-habit
+A17	Observation-Type-Value E7 social-habit
 A18	Acuteness-Type-Value T61 chronic
 R1	Abbrev-Of Arg1:E4 Arg2:E3
+R2	During Arg1:E7 Arg2:E9
+R3	Or Arg1:E28 Arg2:E29
+R4	Or Arg1:E15 Arg2:E17
+R5	Or Arg1:T46 Arg2:T20
+R6	Or Arg1:E12 Arg2:E13

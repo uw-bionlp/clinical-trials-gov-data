@@ -6,7 +6,7 @@ E3	Observation:T3 Name:T4 Stability:T16
 E4	Observation:T13 Name:T14
 E7	Negation:T15 Negates:T16
 E8	Assertion:T17 Asserted:E3
-E9	Age:T18 Eq-Comparison:E6
+E9	Age:T18 Numeric-Filter:E6
 T1	Condition 283 311	Clinically Isolated Syndrome
 T2	Condition-Name 283 311	Clinically Isolated Syndrome
 T5	Condition 399 414	Visual function
@@ -27,7 +27,7 @@ T17	Assertion 489 499	ability to
 T18	Age 682 685	age
 A1	Eq-Operator-Value T7 LT
 A2	Eq-Temporal-Unit-Value T8 year
-A3	Observation-Type-Value T4 clinical-score
+A3	Observation-Type-Value E3 clinical-score
 A4	Stability-Value T16 change
 A5	Assertion-Type-Value E8 hypothetical
 R1	Example-Of Arg1:E1 Arg2:E2

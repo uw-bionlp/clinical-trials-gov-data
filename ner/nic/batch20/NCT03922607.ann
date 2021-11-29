@@ -1,31 +1,25 @@
 E1	Condition:T1 Name:T2 Severity:T22 Acuteness:T21
 E3	Condition:T3 Name:T4
-E4	Age:T7 Eq-Comparison:E2
-E5	Age:T8 Eq-Comparison:E11
+E4	Age:T7 Numeric-Filter:E2
+E5	Age:T8 Numeric-Filter:E11
 E6	Eq-Comparison:T15 Temporal-Period:T16
 E2	Eq-Comparison:T17 Operator:T18 Value:T9 Value2:T10 Temporal-Unit:T5
 E7	Condition:T19 Name:T11
-E8	And:T20 Arg:E4 Arg2:E7
 E10	Eq-Comparison:T24 Value:T23 Value2:T22 Operator:T25
 E11	Eq-Comparison:T26 Operator:T27 Value:T12 Value2:T13 Temporal-Unit:T6
 E12	Study:T14
-E13	Temporal-Connection:T28 Arg:E5 Arg2:E12
-E14	And:T29 Arg:E7 Arg2:E1
 E15	Condition:T30 Name:T31 Temporality:E6
-E16	Condition:T32 Name:T33 Severity:T44
-E17	Or:T34 Arg:E16 Arg2:E3
-E18	Modifier:T35 Modifies:T33
-E19	Modifier:T36 Modifies:T33
-E20	Or:T37 Arg:E19 Arg2:E18
-E21	Modifier:T38 Modifies:T33
-E22	Modifier:T39 Modifies:T33
-E23	Modifier:T40 Modifies:T33
-E24	Modifier:T41 Modifies:T33
-E25	Modifier:T42 Modifies:T33
-E26	Modifier:T43 Modifies:T33
+E16	Condition:T32 Severity:T44
+E18	Modifier:T35 Modifies:E16
+E19	Modifier:T36 Modifies:E16
+E21	Modifier:T38 Modifies:E16
+E22	Modifier:T39 Modifies:E16
+E23	Modifier:T40 Modifies:E16
+E24	Modifier:T41 Modifies:E16
+E25	Modifier:T42 Modifies:E16
+E26	Modifier:T43 Modifies:E16
 E27	Condition:T45
 E28	Modifier:T46 Modifies:E27
-E29	Or:T47 Arg:E3 Arg2:E27
 T1	Condition 166 182	plaque psoriasis
 T2	Condition-Name 166 182	plaque psoriasis
 T3	Condition 531 539	disorder
@@ -44,7 +38,6 @@ T17	Eq-Comparison 45 68	between 18 and 55 years
 T18	Eq-Operator 45 52	between
 T19	Condition 83 102	general good health
 T11	Condition-Name 83 102	general good health
-T20	And 76 79	and
 T21	Acuteness 158 165	chronic
 T22	Severity 151 157	severe
 T23	Severity 139 147	moderate
@@ -53,16 +46,12 @@ T25	Eq-Operator 148 150	to
 T26	Eq-Comparison 183 206	between 18 and 75 years
 T27	Eq-Operator 183 190	between
 T14	Study 244 254	enrollment
-T28	Temporal-Connection 229 240	at the time
-T29	And 118 121	and
 T30	Condition 396 404	epilepsy
 T31	Condition-Name 396 404	epilepsy
 T32	Condition 520 527	disease
 T33	Condition-Name 520 527	disease
-T34	Or 528 530	or
 T35	Modifier 508 519	psychiatric
 T36	Modifier 493 504	hematologic
-T37	Or 505 507	or
 T38	Modifier 478 491	opthalmologic
 T39	Modifier 460 476	gastrointestinal
 T40	Modifier 451 458	hepatic
@@ -72,7 +61,6 @@ T43	Modifier 422 429	cardiac
 T44	Severity 410 421	significant
 T45	Condition 561 576	medical illness
 T46	Modifier 548 560	uncontrolled
-T47	Or 541 543	or
 A1	Eq-Temporal-Unit-Value T5 year
 A2	Eq-Temporal-Unit-Value T6 year
 A3	Eq-Temporal-Period-Value T16 past
@@ -81,6 +69,17 @@ A5	Severity-Value T22 severe
 A6	Severity-Value T23 moderate
 A7	Eq-Operator-Value T25 BETWEEN
 A8	Eq-Operator-Value T27 BETWEEN
-A9	Temporal-Connection-Type-Value E13 during
 A10	Severity-Value T44 severe
 A11	Acuteness-Type-Value T21 chronic
+R1	And Arg1:E4 Arg2:E7
+R2	During Arg1:E5 Arg2:E12
+R3	And Arg1:E7 Arg2:E1
+R4	Or Arg1:E16 Arg2:E3
+R5	Or Arg1:E19 Arg2:E18
+R6	Or Arg1:E3 Arg2:E27
+R7	Or Arg1:E21 Arg2:E19
+R8	Or Arg1:E22 Arg2:E21
+R9	Or Arg1:E23 Arg2:E22
+R10	Or Arg1:E24 Arg2:E23
+R11	Or Arg1:E25 Arg2:E24
+R12	Or Arg1:E26 Arg2:E25

@@ -1,6 +1,6 @@
 E1	Procedure:T1 Name:T2
 E3	Procedure:T3 Name:T4
-E6	Age:T13 Eq-Comparison:E2
+E6	Age:T13 Numeric-Filter:E2
 E7	Eq-Comparison:T22 Operator:T8 Value:T16 Unit:T38
 E8	Eq-Comparison:T23 Operator:T9 Value:T17 Unit:T43
 E9	Eq-Comparison:T24 Operator:T10 Temporal-Unit:T12 Value:T21
@@ -9,31 +9,25 @@ E4	Condition:T27 Name:T28 Polarity:T30
 E10	Modifier:T29 Modifies:T28
 E11	Modifier:T31 Modifies:T28
 E12	Procedure:T32 Name:T33
-E13	Observation:T34 Name:T35 Eq-Comparison:E7
+E13	Observation:T34 Name:T35 Numeric-Filter:E7
 E14	Observation:T36 Name:T37
-E15	Observation:T39 Name:T40 Eq-Comparison:E8
+E15	Observation:T39 Name:T40 Numeric-Filter:E8
 E16	Observation:T41 Name:T42
 E17	Condition:T44 Name:T45
 E18	Condition:T46 Name:T47 Polarity:T49
-E19	Or:T48 Arg:E17 Arg2:E18
-E20	Observation:T50 Name:T51 Eq-Comparison:E21
+E20	Observation:T50 Name:T51 Numeric-Filter:E21
 E21	Eq-Comparison:T52 Value:T18 Value2:T19 Value3:T20
 E22	Condition:T53 Name:T54
 E23	Eq-Comparison:T7 Operator:T59 Unit:T56 Value:T57 Value2:T58
 E24	Procedure:T60 Name:T61
 E25	Assertion:T62 Asserted:E24
-E26	Temporal-Connection:T63 Arg:E24 Arg2:E3
-E27	Modifier:T64 Modifies:E3
-E28	Or:T65 Arg:E27 Arg2:E26
+E27	Modifier:T64 Modifies:E24
 E5	Observation:T5 Name:T6 Temporality:E9
-E29	Modifier:T66
-E30	Modifier:T67
-E31	Or:T68 Arg:E30 Arg2:E29
-E32	Study:T69
-E33	Temporal-Connection:T70 Arg:E9 Arg2:E32
+E29	Modifier:T66 
+E30	Modifier:T67 
+E32	Study:T69 
 E34	Negation:T71 Negates:E1
-E35	Or:T72 Arg:E36 Arg2:E34
-E36	Negation:T73
+E36	Negation:T73 Negates:E1
 E37	Assertion:T74 Asserted:E34
 E38	Assertion:T75 Asserted:E36
 T1	Procedure 473 492	genetic counselling
@@ -80,7 +74,6 @@ T44	Condition 212 216	HER2
 T45	Condition-Name 212 216	HER2
 T46	Condition 217 220	neu
 T47	Condition-Name 217 220	neu
-T48	Or 216 217	/
 T49	Polarity 221 229	negative
 T50	Observation 231 234	IHC
 T51	Observation-Name 231 234	IHC
@@ -96,18 +89,13 @@ T59	Eq-Operator 275 276	-
 T60	Procedure 301 308	surgery
 T61	Procedure-Name 301 308	surgery
 T62	Assertion 285 292	Able to
-T63	Temporal-Connection 321 325	post
 T64	Modifier 310 317	primary
-T65	Or 318 320	or
 T5	Observation 377 385	material
 T6	Observation-Name 377 385	material
 T66	Modifier 369 376	bioptic
 T67	Modifier 360 368	surgical
-T68	Or 368 369	/
 T69	Study 407 416	enrolment
-T70	Temporal-Connection 402 406	from
 T71	Negation 452 461	unwilling
-T72	Or 449 451	or
 T73	Negation 442 448	unable
 T74	Assertion 452 461	unwilling
 T75	Assertion 442 448	unable
@@ -118,14 +106,12 @@ A4	Eq-Temporal-Unit-Value T11 year
 A5	Eq-Temporal-Unit-Value T12 month
 A6	Eq-Operator-Value T26 BETWEEN
 A7	Polarity-Value T30 negative
-A8	Observation-Type-Value T35 lab
-A9	Observation-Type-Value T40 lab
+A8	Observation-Type-Value E13 lab
+A9	Observation-Type-Value E15 lab
 A10	Polarity-Value T49 negative
 A11	Polarity-Value T55 negative
 A12	Eq-Operator-Value T59 BETWEEN
 A13	Assertion-Type-Value E25 hypothetical
-A14	Temporal-Connection-Type-Value E26 after
-A15	Temporal-Connection-Type-Value E33 after
 A16	Assertion-Type-Value E37 hypothetical
 A17	Assertion-Type-Value E38 hypothetical
 R1	Found-By Arg1:E4 Arg2:E12
@@ -133,3 +119,9 @@ R2	Abbrev-Of Arg1:E14 Arg2:E13
 R3	Abbrev-Of Arg1:E16 Arg2:E15
 R4	Equivalent-To Arg1:E22 Arg2:T55
 R5	Equivalent-To Arg1:E20 Arg2:E18
+R6	Or Arg1:E17 Arg2:E18
+R7	After Arg1:E24 Arg2:E3
+R9	Or Arg1:E30 Arg2:E29
+R10	After Arg1:E9 Arg2:E32
+R11	Or Arg1:E36 Arg2:E34
+R8	Or Arg1:E27 Arg2:E3	

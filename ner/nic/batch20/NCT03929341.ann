@@ -10,22 +10,20 @@ E20	Condition:T20 Name:T21
 E22	Condition:T22 Name:T23 Severity:T95
 E24	Condition:T24 Name:T25
 E29	Condition:T29 Name:T30
-E33	Age:T40 Eq-Comparison:E35
+E33	Age:T40 Numeric-Filter:E35
 E35	Eq-Comparison:T46 Operator:T34 Temporal-Unit:T37 Value:T42
 E36	Eq-Comparison:T47 Operator:T35 Value:T44 Unit:T31 Per:T108 Per2:T109
 E37	Eq-Comparison:T48 Operator:T36 Temporal-Unit:T39 Value:T45 Temporal-Period:T110
 E38	Eq-Comparison:T49 Temporal-Period:T50
 E39	Eq-Comparison:T51 Temporal-Period:T52
 E40	Eq-Comparison:T53 Temporal-Period:T54
-E2	Or:T56 Arg:T13 Arg2:T55
-E4	Condition:T41 Name:T57 Stability:T59
+E4	Observation:T41 Name:T57 Stability:T59
 E6	Modifier:T58 Modifies:T57
 E8	Modifier:T60 Modifies:T57
 E10	Assertion:T61 Asserted:E8
-E12	Or:T62 Arg:E4 Arg2:E8
 E11	Eq-Comparison:T11 Temporal-Period:T12
 E13	Procedure:T63 Name:T64 Temporality:E11
-E15	Condition:T65 Name:T71
+E15	Observation:T65 Name:T71
 E17	Modifier:T66 Modifies:T64
 E19	Modifier:T67 Modifies:T64
 E21	Modifier:T68 Modifies:T71
@@ -33,12 +31,9 @@ E23	Negation:T69 Negates:E17
 E25	Negation:T70 Negates:E19
 E27	Modifier:T72
 E28	Assertion:T73 Asserted:E27
-E30	Or:T74 Arg:E15 Arg2:E27
-E31	Or:T78 Arg:E1 Arg2:E7
 E34	Modifier:T79 Modifies:T6
 E41	Negation:T80 Negates:E34
 E42	Other:T81 Is-Other:E9
-E43	Or:T82 Arg:E5 Arg2:E9
 E26	Procedure:T26 Name:T27
 E44	Modifier:T83 Modifies:T27
 E45	Assertion:T84 Asserted:E26
@@ -50,12 +45,10 @@ E50	Eq-Comparison:T90 Temporal-Period:T91 Value:T43 Temporal-Unit:T38
 E51	Allergy:T92 Severity:T93 Name:T94
 E52	Drug:T96 Name:T97
 E53	Drug:T98 Name:T99
-E54	Or:T100 Arg:E52 Arg2:E53
 E55	Study:T101
 E56	Assertion:T102 Asserted:E55
 E57	Assertion:T104 Asserted:T103
-E58	Or:T105 Arg:E18 Arg2:E20
-E59	Observation:T106 Name:T107 Eq-Comparison:E36 Temporality:E37
+E59	Observation:T106 Name:T107 Numeric-Filter:E36 Temporality:E37
 E60	Condition:T111 Name:T112
 E32	Observation:T32 Name:T33
 E61	Assertion:T113 Asserted:E32
@@ -105,36 +98,31 @@ T52	Eq-Temporal-Period 534 544	Previously
 T53	Eq-Comparison 472 477	Prior
 T54	Eq-Temporal-Period 472 477	Prior
 T55	Life-Stage-And-Gender 33 38	women
-T56	Or 29 32	and
-T41	Condition 79 83	pain
-T57	Condition-Name 79 83	pain
+T41	Observation 79 83	pain
+T57	Observation-Name 79 83	pain
 T58	Modifier 73 78	chest
 T59	Stability 66 72	Stable
 T60	Modifier 87 97	equivalent
 T61	Assertion 98 106	symptoms
-T62	Or 84 86	or
 T11	Eq-Comparison 112 119	Planned
 T12	Eq-Temporal-Period 112 119	Planned
 T63	Procedure 145 152	testing
 T64	Procedure-Name 145 152	testing
-T65	Condition 176 180	pain
+T65	Observation 176 180	pain
 T66	Modifier 136 144	invasive
 T67	Modifier 124 130	urgent
 T68	Modifier 170 175	chest
 T69	Negation 132 135	non
 T70	Negation 120 123	non
-T71	Condition-Name 176 180	pain
+T71	Observation-Name 176 180	pain
 T72	Modifier 184 194	equivalent
 T73	Assertion 195 203	symptoms
-T74	Or 181 183	or
 T75	Acuteness 229 234	Acute
 T76	Acuteness 264 269	acute
 T77	Stability 295 303	unstable
-T78	Or 292 294	or
 T79	Modifier 322 330	ischemic
 T80	Negation 318 321	non
 T81	Other 349 354	other
-T82	Or 346 348	or
 T26	Procedure 433 451	cardiac evaluation
 T27	Procedure-Name 433 451	cardiac evaluation
 T83	Modifier 426 432	urgent
@@ -155,12 +143,10 @@ T96	Drug 719 727	Benadryl
 T97	Drug-Name 719 727	Benadryl
 T98	Drug 730 740	Prednisone
 T99	Drug-Name 730 740	Prednisone
-T100	Or 728 729	&
 T101	Study 764 769	study
 T102	Assertion 741 744	may
 T103	Stability 686 696	controlled
 T104	Assertion 679 682	can
-T105	Or 790 792	or
 T106	Observation 806 842	estimated Glomerular Filtration Rate
 T107	Observation-Name 806 842	estimated Glomerular Filtration Rate
 T31	Eq-Unit 845 847	ml
@@ -195,10 +181,10 @@ A22	Severity-Value T95 mild
 A23	Assertion-Type-Value E56 hypothetical
 A24	Stability-Value T103 stable
 A25	Assertion-Type-Value E57 hypothetical
-A26	Observation-Type-Value T107 lab
+A26	Observation-Type-Value E59 lab
 A27	Eq-Temporal-Unit-Value T108 minute
 A28	Eq-Temporal-Period-Value T110 past
-A29	Observation-Type-Value T33 lab
+A29	Observation-Type-Value E32 lab
 A30	Assertion-Type-Value E61 hypothetical
 A31	Acuteness-Type-Value T75 acute
 A32	Acuteness-Type-Value T76 acute
@@ -217,3 +203,10 @@ R12	Treatment-For Arg1:E16 Arg2:E22
 R13	Caused-By Arg1:E22 Arg2:E51
 R14	Equivalent-To Arg1:E59 Arg2:E20
 R15	If-Then Arg1:E60 Arg2:E32
+R16	Or Arg1:T13 Arg2:T55
+R17	Or Arg1:E4 Arg2:E8
+R18	Or Arg1:E15 Arg2:E27
+R19	Or Arg1:E1 Arg2:E7
+R20	Or Arg1:E5 Arg2:E9
+R21	Or Arg1:E52 Arg2:E53
+R22	Or Arg1:E18 Arg2:E20

@@ -2,54 +2,45 @@ E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4 Temporality:E29
 E5	Condition:T5 Name:T6
 E7	Drug:T7 Name:T8
-E8	Age:T14 Eq-Comparison:E9
+E8	Age:T14 Numeric-Filter:E9
 E9	Eq-Comparison:T19 Operator:T9 Temporal-Unit:T13 Value:T15
 E10	Eq-Comparison:T20 Operator:T10 Value:T16
 E11	Eq-Comparison:T21 Operator:T11 Value:T17 Value2:T38
 E12	Eq-Comparison:T22 Operator:T12 Value:T18
 E2	Condition:T23 Name:T24
-E4	Condition:T25 Name:T26 Acuteness:T27
+E4	Observation:T25 Name:T26 Acuteness:T27
 E6	Modifier:T28 Modifies:T26
-E13	Observation:T29 Name:T30 Eq-Comparison:E10
+E13	Observation:T29 Name:T30 Numeric-Filter:E10
 E14	Condition:T31 Name:T32
 E15	Condition:T33 Name:T34 Stability:T35
-E16	Observation:T36 Name:T37 Eq-Comparison:E11
-E17	And:T39 Arg:E14 Arg2:E15
-E18	Observation:T40 Name:T41 Eq-Comparison:E12
-E19	And:T42 Arg:E1 Arg2:E18
+E16	Observation:T36 Name:T37 Numeric-Filter:E11
+E18	Observation:T40 Name:T41 Numeric-Filter:E12
 E20	Eq-Comparison:T43 Temporal-Period:T44
 E21	Drug:T45 Name:T46 Temporality:E20
 E22	Drug:T47 Name:T48
 E23	Exception:T49 From:E21 Except:E22
 E24	Modifier:T50 Modifies:T6
 E25	Modifier:T51 Modifies:T6
-E26	Or:T52 Arg:E25 Arg2:E24
 E27	Condition:T53 Name:T54
 E28	Modifier:T55 Modifies:T54
 E29	Eq-Comparison:T56 Temporal-Period:T57
 E30	Family-Member:T58 Has:E3
 E31	Family-Member:T59 Has:E3
-E32	Or:T60 Arg:E30 Arg2:E31
 E33	Condition:T61 Name:T62
 E34	Condition:T63 Name:T64
-E35	Or:T65 Arg:E33 Arg2:E34
 E36	Observation:T67 Name:T68
 E37	Condition:T69 Name:T70
 E38	Condition:T71 Name:T72
-E39	Or:T73 Arg:E37 Arg2:E38
 E40	Modifier:T74 Modifies:E7
-E41	Condition:T75 Name:T76
+E41	Observation:T75 Name:T76
 E42	Assertion:T77 Asserted:E41
 E43	Modifier:T78 Modifies:T76
 E44	Modifier:T79 Modifies:T76
 E45	Modifier:T80 Modifies:T76
-E46	Or:T81 Arg:E44 Arg2:E45
 E47	Drug:T82 Name:T83 Temporality:E49
 E48	Modifier:T84
 E49	Eq-Comparison:T85 Temporal-Period:T86
 E50	Modifier:T87 Modifies:T76
-E51	Or:T88 Arg:E42 Arg2:E50
-E52	Or:T89 Arg:E27 Arg2:E3
 T1	Condition 318 340	Consciousness disorder
 T2	Condition-Name 318 340	Consciousness disorder
 T3	Condition 611 633	malignant hyperthermia
@@ -74,8 +65,8 @@ T21	Eq-Comparison 216 219	<90
 T22	Eq-Comparison 360 363	<15
 T23	Condition 25 34	Conscious
 T24	Condition-Name 25 34	Conscious
-T25	Condition 74 78	pain
-T26	Condition-Name 74 78	pain
+T25	Observation 74 78	pain
+T26	Observation-Name 74 78	pain
 T27	Acuteness 68 73	Acute
 T28	Modifier 82 102	monotraumatic origin
 T29	Observation 108 112	Pain
@@ -88,10 +79,8 @@ T35	Stability 190 198	unstable
 T36	Observation 213 215	PA
 T37	Observation-Name 213 215	PA
 T38	Eq-Value 220 222	60
-T39	And 185 189	with
 T40	Observation 346 359	Glasgow score
 T41	Observation-Name 346 359	Glasgow score
-T42	And 341 345	with
 T43	Eq-Comparison 385 401	already received
 T44	Eq-Temporal-Period 385 401	already received
 T45	Drug 402 412	analgesics
@@ -101,7 +90,6 @@ T48	Drug-Name 436 447	paracetamol
 T49	Exception 423 432	exception
 T50	Modifier 524 531	hepatic
 T51	Modifier 515 520	Renal
-T52	Or 521 523	or
 T53	Condition 553 569	Hypersensitivity
 T54	Condition-Name 553 569	Hypersensitivity
 T55	Modifier 573 596	fluoridated anesthetics
@@ -109,12 +97,10 @@ T56	Eq-Comparison 600 607	history
 T57	Eq-Temporal-Period 600 607	history
 T58	Family-Member 641 648	patient
 T59	Family-Member 652 658	family
-T60	Or 649 651	or
 T61	Condition 664 672	Pregnant
 T62	Condition-Name 664 672	Pregnant
 T63	Condition 676 683	nursing
 T64	Condition-Name 676 683	nursing
-T65	Or 673 675	or
 T66	Life-Stage-And-Gender 684 689	woman
 T67	Observation 709 728	judicial protection
 T68	Observation-Name 709 728	judicial protection
@@ -122,30 +108,26 @@ T69	Condition 734 751	Non communicating
 T70	Condition-Name 734 751	Non communicating
 T71	Condition 768 797	difficulties of understanding
 T72	Condition-Name 768 797	difficulties of understanding
-T73	Or 760 762	or
 T74	Modifier 823 844	Intravenous injection
-T75	Condition 249 255	trauma
-T76	Condition-Name 249 255	trauma
+T75	Observation 249 255	trauma
+T76	Observation-Name 249 255	trauma
 T77	Assertion 229 238	Suspected
 T78	Modifier 263 268	chest
 T79	Modifier 270 277	abdomen
 T80	Modifier 281 287	pelvis
-T81	Or 278 280	or
 T82	Drug 500 509	analgesia
 T83	Drug-Name 500 509	analgesia
 T84	Modifier 475 486	intravenous
 T85	Eq-Comparison 462 471	receiving
 T86	Eq-Temporal-Period 462 471	receiving
 T87	Modifier 242 248	proven
-T88	Or 239 241	or
-T89	Or 597 599	or
 A1	Eq-Operator-Value T9 GTEQ
 A2	Eq-Operator-Value T10 GT
 A3	Eq-Operator-Value T11 LT
 A4	Eq-Operator-Value T12 LT
 A5	Eq-Temporal-Unit-Value T13 year
 A7	Stability-Value T35 change
-A9	Observation-Type-Value T41 clinical-score
+A9	Observation-Type-Value E18 clinical-score
 A10	Eq-Temporal-Period-Value T44 past
 A11	Eq-Temporal-Period-Value T57 past
 A12	Family-Member-Type E30 patient
@@ -156,3 +138,13 @@ A15	Acuteness-Type-Value T27 acute
 R1	Equivalent-To Arg1:E16 Arg2:E15
 R2	If-Then Arg1:T66 Arg2:E34
 R3	Abbrev-Of Arg1:E48 Arg2:E47
+R4	And Arg1:E14 Arg2:E15
+R5	And Arg1:E1 Arg2:E18
+R6	Or Arg1:E25 Arg2:E24
+R7	Or Arg1:E30 Arg2:E31
+R8	Or Arg1:E33 Arg2:E34
+R9	Or Arg1:E37 Arg2:E38
+R10	Or Arg1:E44 Arg2:E45
+R11	Or Arg1:E42 Arg2:E50
+R12	Or Arg1:E27 Arg2:E3
+R13	Or Arg1:E43 Arg2:E44

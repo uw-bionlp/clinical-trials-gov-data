@@ -1,27 +1,24 @@
 E1	Eq-Comparison:T1 Value:T89 Value:T90 Operator:T149
 E2	Modifier:T2 Modifies:T92
-E3	And:T3 Arg:E2 Arg2:E90
 E4	Condition:T4 Name:T92
 E5	Assertion:T5 Asserted:E7
 E6	Modifier:T6 Modifies:T154
 E7	Procedure:T7 Name:T154
 E8	Condition:T8 Name:T93 Polarity:T157
 E9	Negation:T9 Negates:E10
-E10	Condition:T10 Name:T155
+E10	Condition:T10
 E11	Assertion:T11 Asserted:T94
 E12	Study:T12 Stability:T94
 E13	Assertion:T13 Asserted:E14 Asserted2:E96
 E14	Assertion:T14 Asserted:E15 Asserted2:E96
-E15	Study:T15 
+E15	Study:T15
 E16	Study:T16 Study-Of:E96
 E17	Procedure:T17 Name:T95
-E18	Or:T18 Arg:E17 Arg2:E19
 E19	Procedure:T19 Name:T161
-E20	Condition:T20 Name:T97 Polarity:T96
-E21	Observation:T21 Name:T98 Eq-Comparison:E22
+E20	Observation:T20 Name:T97 Polarity:T96
+E21	Observation:T21 Name:T98 Numeric-Filter:E22
 E22	Eq-Comparison:T22 Value:T99
-E23	And:T23 Arg:E21 Arg2:E24
-E24	Observation:T24 Name:T101 Eq-Comparison:E25
+E24	Observation:T24 Name:T101 Numeric-Filter:E25
 E25	Eq-Comparison:T25 Value:T102 Operator:T103 Unit:T100
 E26	Modifier:T26 Modifies:T105
 E27	Condition:T27 Name:T105 Severity:T104
@@ -29,7 +26,6 @@ E28	Condition:T28 Name:T106
 E29	Condition:T29 Name:T107
 E30	Condition:T30 Name:T108
 E31	Condition:T31 Name:T109
-E32	Or:T32 Arg:E31 Arg2:E33
 E33	Condition:T33 Name:T110
 E34	Condition:T34 Severity:T111
 E35	Modifier:T35 Modifies:T112
@@ -37,7 +33,6 @@ E36	Condition:T36 Name:T112
 E37	Modifier:T37 Modifies:T113
 E38	Condition:T38 Name:T113
 E39	Condition:T39 Name:T114
-E40	Or:T40 Arg:E39 Arg2:E42
 E41	Modifier:T41 Modifies:T115
 E42	Condition:T42 Name:T115
 E43	Condition:T43 Name:T117 Severity:T116
@@ -45,20 +40,15 @@ E44	Condition:T44 Name:T118
 E45	Condition:T45 Name:T119
 E46	Condition:T46 Name:T120
 E47	Condition:T47 Name:T122 Severity:T121
-E48	Or:T48 Arg:E47 Arg2:E49
 E49	Condition:T49 Name:T123
 E50	Condition:T50 Name:T124
-E51	Or:T51 Arg:E50 Arg2:E52
 E52	Condition:T52 Name:T126 Severity:T125
 E53	Condition:T53 Name:T127
-E54	Temporal-Connection:T54 Arg:E53 Arg2:E55
-E55	Study:T55 
-E56	Observation:T56 Name:T128 Eq-Comparison:E57
+E55	Study:T55
+E56	Observation:T56 Name:T128 Numeric-Filter:E57
 E57	Eq-Comparison:T57 Value:T129 Unit:T130 Operator:T131
 E59	Modifier:T59 Modifies:T132 Modifies2:T162
-E60	Or:T60 Arg:E59 Arg2:E97
 E61	Condition:T61 Name:T132 Temporality:E64
-E62	Or:T62 Arg:E61 Arg2:E63
 E63	Condition:T63 Name:T162 Temporality:E64
 E64	Eq-Comparison:T64 Operator:T133 Temporal-Period:T134 Value:T135 Temporal-Unit:T136
 E65	Procedure:T65 Name:T137
@@ -68,30 +58,21 @@ E68	Procedure:T68 Name:T139
 E69	Procedure:T69 Name:T140
 E70	Procedure:T70 Name:T141
 E71	Condition:T71 Name:T142
-E72	Or:T72 Arg:E71 Arg2:E74
 E74	Condition:T74 Name:T164
 E75	Modifier:T75 Modifies:T164
-E76	Or:T76 Arg:E75 Arg2:E77
 E77	Modifier:T77 Modifies:T164
-E78	And:T78 Arg:T143 Arg2:E79
 E79	Condition:T79 Name:T144
-E80	Or:T80 Arg:E79 Arg2:E81
 E81	Assertion:T81 Asserted:E82
 E82	Condition:T82 Name:T145
 E83	Negation:T83 Negates:E82
 E84	Contraindication:T84 Contraindicates:E99
 E85	Eq-Comparison:T85 Temporal-Period:T147
 E86	Condition:T86 Name:T148 Temporality:E85 Severity:T146
-E87	Or:T87 Arg:E86 Arg2:E88
 E88	Condition:T88 Name:T168
-E89	Age:T150 Eq-Comparison:E1
+E89	Age:T150 Numeric-Filter:E1
 E90	Modifier:T151 Modifies:T92
 E91	Modifier:T152 Modifies:T154
-E92	And:T153 Arg:E91 Arg2:E6
-E93	And:T156 Arg:E8 Arg2:E9
-E94	And:T158 Arg:E13 Arg2:E14
-E95	And:T159 Arg:E15 Arg2:E16
-E96	Procedure:T160 
+E96	Procedure:T160
 E58	Modifier:T58 Modifies:E57
 E97	Modifier:T163 Modifies:T132 Modifies2:T162
 E73	Modifier:T73 Modifies:T164
@@ -99,7 +80,6 @@ E98	Modifier:T165 Modifies:T164
 E99	Procedure:T166 Name:T167
 T1	Eq-Comparison 25 54	Between the ages of 60 and 85
 T2	Modifier 89 95	Visual
-T3	And 96 99	and
 T4	Condition 109 115	acuity
 T5	Assertion 116 128	adequate for
 T6	Modifier 129 147	neuropsychological
@@ -114,12 +94,10 @@ T14	Assertion 273 280	able to
 T15	Study 317 322	study
 T16	Study 334 339	study
 T17	Procedure 361 364	MRI
-T18	Or 365 368	and
 T19	Procedure 369 372	PET
-T20	Condition 386 395	cognition
+T20	Observation 386 395	cognition
 T21	Observation 409 433	Clinical Dementia Rating
 T22	Eq-Comparison 437 438	0
-T23	And 439 442	and
 T24	Observation 445 474	Mini-Mental State Examination
 T25	Eq-Comparison 475 496	score of 27 or higher
 T26	Modifier 535 544	co-morbid
@@ -128,7 +106,6 @@ T28	Condition 572 591	Parkinson's disease
 T29	Condition 593 611	multiple sclerosis
 T30	Condition 613 623	brain cyst
 T31	Condition 625 630	tumor
-T32	Or 631 633	or
 T33	Condition 634 642	aneurysm
 T34	Condition 655 672	health conditions
 T35	Modifier 681 693	uncontrolled
@@ -136,7 +113,6 @@ T36	Condition 694 711	diabetes mellitus
 T37	Modifier 713 725	uncontrolled
 T38	Condition 726 738	hypertension
 T39	Condition 740 762	nutritional deficiency
-T40	Or 763 765	or
 T41	Modifier 766 778	uncontrolled
 T42	Condition 779 794	thyroid disease
 T43	Condition 813 834	psychiatric disorders
@@ -144,20 +120,15 @@ T44	Condition 843 856	schizophrenia
 T45	Condition 858 874	bipolar disorder
 T46	Condition 876 892	anxiety disorder
 T47	Condition 900 919	depressive disorder
-T48	Or 921 923	or
 T49	Condition 924 964	attention-deficit hyperactivity disorder
 T50	Condition 999 1007	dementia
-T51	Or 1008 1010	or
 T52	Condition 1016 1036	cognitive impairment
 T53	Condition 1043 1063	Cognitive impairment
-T54	Temporal-Connection 1076 1078	at
 T55	Study 1079 1087	baseline
 T56	Observation 1115 1138	neuropsychological test
 T57	Eq-Comparison 1142 1157	1.5 SDs or more
 T59	Modifier 1186 1193	Alcohol
-T60	Or 1194 1196	or
 T61	Condition 1207 1212	abuse
-T62	Or 1213 1215	or
 T63	Condition 1216 1226	dependence
 T64	Eq-Comparison 1227 1250	within the past 2 years
 T65	Procedure 1275 1278	MRI
@@ -167,21 +138,16 @@ T68	Procedure 1315 1329	aneurysm clips
 T69	Procedure 1331 1354	artificial heart valves
 T70	Procedure 1356 1368	ear implants
 T71	Condition 1370 1385	metal fragments
-T72	Or 1386 1388	or
 T74	Condition 1397 1404	objects
 T75	Modifier 1418 1422	skin
-T76	Or 1423 1425	or
 T77	Modifier 1426 1430	body
-T78	And 1440 1443	who
 T79	Condition 1448 1456	pregnant
-T80	Or 1457 1459	or
 T81	Assertion 1460 1469	trying to
 T82	Condition 1474 1482	pregnant
 T83	Negation 1492 1500	excluded
 T84	Contraindication 1511 1528	contraindications
 T85	Eq-Comparison 1547 1552	prior
 T86	Condition 1553 1571	radiation exposure
-T87	Or 1572 1575	and
 T88	Condition 1576 1585	pregnancy
 T89	Eq-Value 45 47	60
 T90	Eq-Value 52 54	85
@@ -191,7 +157,7 @@ T93	Condition-Name 184 198	general health
 T94	Stability 230 239	interfere
 T95	Procedure-Name 361 364	MRI
 T96	Polarity 379 385	Normal
-T97	Condition-Name 386 395	cognition
+T97	Observation-Name 386 395	cognition
 T98	Observation-Name 409 433	Clinical Dementia Rating
 T99	Eq-Value 437 438	0
 T101	Observation-Name 445 474	Mini-Mental State Examination
@@ -246,13 +212,9 @@ T149	Eq-Operator 25 32	Between
 T150	Age 37 41	ages
 T151	Modifier 100 108	auditory
 T152	Modifier 152 164	computerized
-T153	And 148 151	and
 T154	Procedure-Name 165 172	testing
 T155	Condition-Name 207 214	disease
-T156	And 199 203	with
 T157	Polarity 179 183	Good
-T158	And 269 272	and
-T159	And 323 326	and
 T160	Procedure 340 350	procedures
 T161	Procedure-Name 369 372	PET
 T100	Eq-Unit 475 480	score
@@ -269,11 +231,10 @@ A1	Assertion-Type-Value E5 hypothetical
 A2	Assertion-Type-Value E11 hypothetical
 A3	Assertion-Type-Value E13 hypothetical
 A4	Assertion-Type-Value E14 hypothetical
-A5	Temporal-Connection-Type-Value E54 during
 A6	Assertion-Type-Value E81 intention
 A7	Stability-Value T94 change
 A8	Polarity-Value T96 normal
-A9	Observation-Type-Value T101 clinical-score
+A9	Observation-Type-Value E24 clinical-score
 A10	Eq-Operator-Value T103 GTEQ
 A11	Severity-Value T104 severe
 A12	Severity-Value T111 severe
@@ -289,8 +250,8 @@ A21	Severity-Value T146 severe
 A22	Eq-Temporal-Period-Value T147 past
 A23	Eq-Operator-Value T149 BETWEEN
 A24	Polarity-Value T157 normal
-A25	Observation-Type-Value T98 clinical-score
-A26	Observation-Type-Value T128 clinical-score
+A25	Observation-Type-Value E21 clinical-score
+A26	Observation-Type-Value E56 clinical-score
 R1	Treatment-For Arg1:E7 Arg2:E4
 R2	Caused-By Arg1:T94 Arg2:E10
 R3	Example-Of Arg1:E17 Arg2:E96
@@ -320,3 +281,33 @@ R26	Example-Of Arg1:E71 Arg2:E66
 R27	Example-Of Arg1:E74 Arg2:E66
 R28	Example-Of Arg1:E86 Arg2:E84
 R29	Example-Of Arg1:E88 Arg2:E84
+R30	And Arg1:E2 Arg2:E90
+R31	Or Arg1:E17 Arg2:E19
+R32	And Arg1:E21 Arg2:E24
+R33	Or Arg1:E31 Arg2:E33
+R34	Or Arg1:E39 Arg2:E42
+R35	Or Arg1:E47 Arg2:E49
+R36	Or Arg1:E50 Arg2:E52
+R37	During Arg1:E53 Arg2:E55
+R38	Or Arg1:E59 Arg2:E97
+R39	Or Arg1:E61 Arg2:E63
+R40	Or Arg1:E71 Arg2:E74
+R41	Or Arg1:E75 Arg2:E77
+R42	And Arg1:T143 Arg2:E79
+R43	Or Arg1:E79 Arg2:E81
+R44	Or Arg1:E86 Arg2:E88
+R45	And Arg1:E91 Arg2:E6
+R46	And Arg1:E8 Arg2:E9
+R47	And Arg1:E13 Arg2:E14
+R48	And Arg1:E15 Arg2:E16
+R49	Or Arg1:E28 Arg2:E29
+R50	Or Arg1:E29 Arg2:E30
+R51	Or Arg1:E30 Arg2:E31
+R52	Or Arg1:E38 Arg2:E39
+R53	Or Arg1:E44 Arg2:E45
+R54	Or Arg1:E45 Arg2:E46
+R55	Or Arg1:E67 Arg2:E68
+R56	Or Arg1:E68 Arg2:E69
+R57	Or Arg1:E69 Arg2:E70
+R58	Or Arg1:E70 Arg2:E71
+R59	Or Arg1:E98 Arg2:E75

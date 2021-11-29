@@ -8,36 +8,31 @@ E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
 E17	Condition:T17 Name:T18
 E21	Procedure:T21 Name:T22
-E29	Observation:T29 Name:T30 Eq-Comparison:E10
-E30	Age:T36 Eq-Comparison:E2
+E29	Observation:T29 Name:T30 Numeric-Filter:E10
+E30	Age:T36 Numeric-Filter:E2
 E31	Eq-Comparison:T44 Operator:T31 Value:T41 Unit:T55
 E32	Eq-Comparison:T45 Operator:T32 Value:T42 Unit:T67 Per:T68
 E2	Eq-Comparison:T46 Temporal-Unit:T34 Value:T38 Operator:T47 Value2:T37
 E4	Modifier:T27 Modifies:T4
 E10	Eq-Comparison:T49 Operator:T50 Value:T39
-E12	Condition:T19 Name:T20
+E12	Observation:T19 Name:T20
 E14	Drug:T23 Name:T24 Temporality:E42 Dose:E20
 E16	Procedure:T51 Name:T52
-E18	Temporal-Connection:T53 Arg:E14 Arg2:E16
 E20	Eq-Comparison:T59 Operator:T54 Value:T40 Unit:T58
 E22	Observation:T60 Name:T61
-E23	Observation:T62 Name:T63 Eq-Comparison:E31
-E26	Or:T69 Arg:E21 Arg2:E9
+E23	Observation:T62 Name:T63 Numeric-Filter:E31
 E27	Modifier:T70 Modifies:T8
-E28	Or:T71 Arg:E27 Arg2:E44
 E33	Procedure:T73 Name:T74 Temporality:E45 Temporality2:E34
 E34	Eq-Comparison:T75 Operator:T33 Temporal-Unit:T35 Value:T43 Temporal-Period:T94
-E35	Observation:T76 Name:T77 Eq-Comparison:E36
+E35	Observation:T76 Name:T77 Numeric-Filter:E36
 E36	Eq-Comparison:T78 Value:T79 Operator:T81 Value2:T80
 E37	Eq-Comparison:T82 Temporal-Period:T83
 E6	Contraindication:T28 Contraindicates:E38 Contraindicates2:E39
 E8	Allergy:T48 Name:E38 Name2:E39
 E38	Drug:T84 Name:T85
 E39	Drug:T86 Name:T87
-E40	Or:T88 Arg:E38 Arg2:E39
-E41	Or:T89 Arg:E6 Arg2:E8
 E42	Eq-Comparison:T90 Per:T91
-E19	Observation:T25 Name:T26 Eq-Comparison:E32
+E19	Observation:T25 Name:T26 Numeric-Filter:E32
 E24	Eq-Comparison:T56 Temporal-Period:T66
 E43	Assertion:T64 Asserted:E21 Asserted2:E9
 E44	Modifier:T65 Modifies:T8
@@ -85,13 +80,12 @@ T47	Eq-Operator 28 29	-
 T27	Modifier 78 105	primary unilateral elective
 T49	Eq-Comparison 182 189	over 40
 T50	Eq-Operator 182 186	over
-T19	Condition 289 293	pain
-T20	Condition-Name 289 293	pain
+T19	Observation 289 293	pain
+T20	Observation-Name 289 293	pain
 T23	Drug 274 280	opioid
 T24	Drug-Name 274 280	opioid
 T51	Procedure 309 316	surgery
 T52	Procedure-Name 309 316	surgery
-T53	Temporal-Connection 302 308	before
 T54	Eq-Operator 317 329	in excess of
 T58	Eq-Unit 365 367	mg
 T59	Eq-Comparison 317 367	in excess of systemic morphine equivalent to 10 mg
@@ -102,9 +96,7 @@ T63	Observation-Name 393 395	EF
 T66	Eq-Temporal-Period 463 470	History
 T67	Eq-Unit 450 452	mL
 T68	Eq-Unit 453 456	min
-T69	Or 524 526	or
 T70	Modifier 555 565	neurologic
-T71	Or 566 568	or
 T72	Eq-Temporal-Period 671 676	Prior
 T73	Procedure 677 684	surgery
 T74	Procedure-Name 677 684	surgery
@@ -123,8 +115,6 @@ T84	Drug 227 249	opioid pain medication
 T85	Drug-Name 227 249	opioid pain medication
 T86	Drug 253 261	ketamine
 T87	Drug-Name 253 261	ketamine
-T88	Or 250 252	or
-T89	Or 213 215	or
 T90	Eq-Comparison 268 273	Daily
 T91	Eq-Temporal-Unit 268 273	Daily
 T55	Eq-Unit 409 410	%
@@ -137,7 +127,7 @@ T65	Modifier 569 580	psychiatric
 T92	Eq-Comparison 671 676	Prior
 T93	Modifier 688 704	ipsilateral knee
 T94	Eq-Temporal-Period 716 720	last
-A1	Observation-Type-Value T30 vital
+A1	Observation-Type-Value E29 vital
 A2	Eq-Operator-Value T31 LT
 A3	Eq-Operator-Value T32 LT
 A4	Eq-Operator-Value T33 LTEQ
@@ -146,17 +136,17 @@ A6	Eq-Temporal-Unit-Value T35 month
 A7	Eq-Operator-Value T47 BETWEEN
 A8	Eq-Operator-Value T50 GT
 A9	Eq-Operator-Value T54 GT
-A11	Observation-Type-Value T61 measurement
-A12	Observation-Type-Value T63 measurement
+A11	Observation-Type-Value E22 measurement
+A12	Observation-Type-Value E23 measurement
 A13	Eq-Temporal-Period-Value T66 past
 A14	Eq-Temporal-Period-Value T72 past
 A15	Eq-Operator-Value T81 BETWEEN
 A16	Eq-Temporal-Period-Value T83 present
 A18	Eq-Temporal-Unit-Value T91 day
-A10	Observation-Type-Value T26 lab
+A10	Observation-Type-Value E19 lab
 A17	Assertion-Type-Value E43 intention
 A19	Eq-Temporal-Period-Value T94 past
-A20	Observation-Type-Value T77 clinical-score
+A20	Observation-Type-Value E35 clinical-score
 A21	Acuteness-Type-Value T57 chronic
 R2	Treatment-For Arg1:E14 Arg2:E12
 R3	Abbrev-Of Arg1:E23 Arg2:E22
@@ -164,4 +154,10 @@ R4	Example-Of Arg1:E13 Arg2:E7
 R5	Example-Of Arg1:E1 Arg2:E7
 R6	Example-Of Arg1:E15 Arg2:E7
 R1	Using Arg1:E3 Arg2:E11
-A22	Temporal-Connection-Type-Value E18 before
+R7	Before Arg1:E14 Arg2:E16
+R8	Or Arg1:E21 Arg2:E9
+R9	Or Arg1:E27 Arg2:E44
+R10	Or Arg1:E38 Arg2:E39
+R11	Or Arg1:E6 Arg2:E8
+R12	Or Arg1:E1 Arg2:E15
+R13	Or Arg1:E13 Arg2:E1

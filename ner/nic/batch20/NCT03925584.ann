@@ -2,23 +2,20 @@ E1	Procedure:T1 Name:T2 Temporality:E14
 E3	Procedure:T3 Name:T4
 E5	Procedure:T5 Name:T6
 E7	Condition:T7 Name:T8 Temporality:E13
-E10	Age:T15 Eq-Comparison:E12
+E10	Age:T15 Numeric-Filter:E12
 E11	Eq-Comparison:T22 Operator:T11 Temporal-Unit:T12 Value:T17
 E12	Eq-Comparison:T23 Operator:T16 Value:T18 Value2:T19 Temporal-Unit:T13
 E13	Eq-Comparison:T24 Temporal-Period:T25
-E2	Observation:T26 Name:T27 Eq-Comparison:E11
+E2	Observation:T26 Name:T27 Numeric-Filter:E11
 E4	Modifier:T28 Modifies:T4
 E6	Eq-Comparison:T29 Value:T20 Temporal-Unit:T30
-E8	Temporal-Connection:T31 Arg:E6 Arg2:E3
 E14	Eq-Comparison:T32 Temporal-Period:T33
-E15	Observation:T14 Name:T21 Eq-Comparison:E18
+E15	Observation:T14 Name:T21 Numeric-Filter:E18
 E16	Modifier:T34 Modifies:T21
-E17	Temporal-Connection:T35 Arg:E15 Arg2:E5
 E18	Eq-Comparison:T36 Value:T37 Unit:T38 Operator:T39
 E19	Condition:T40 Name:T41 Stability:T42
 E20	Death:T43
 E21	Risk:T44 Risk-For:E20
-E22	Or:T45 Arg:E19 Arg2:E21
 E9	Condition:T9 Name:T10
 E23	Assertion:T46 Asserted:E7
 T1	Procedure 150 172	mechanical ventilation
@@ -47,13 +44,11 @@ T27	Observation-Name 47 56	gestation
 T28	Modifier 110 120	congenital
 T29	Eq-Comparison 96 104	24 hours
 T30	Eq-Temporal-Unit 99 104	hours
-T31	Temporal-Connection 105 109	post
 T32	Eq-Comparison 140 149	Receiving
 T33	Eq-Temporal-Period 140 149	Receiving
 T14	Observation 178 200	Background noise level
 T21	Observation-Name 178 200	Background noise level
 T34	Modifier 205 212	bedside
-T35	Temporal-Connection 214 225	at the time
 T36	Eq-Comparison 251 263	55dB or less
 T37	Eq-Value 251 253	55
 T38	Eq-Unit 253 255	dB
@@ -63,7 +58,6 @@ T41	Condition-Name 290 305	Hemodynamically
 T42	Stability 306 314	unstable
 T43	Death 318 329	end of life
 T44	Risk 318 329	end of life
-T45	Or 315 317	or
 T9	Condition 390 408	hearing impairment
 T10	Condition-Name 390 408	hearing impairment
 T46	Assertion 435 444	suspected
@@ -72,11 +66,12 @@ A2	Eq-Temporal-Unit-Value T12 week
 A3	Eq-Temporal-Unit-Value T13 day
 A4	Eq-Operator-Value T16 BETWEEN
 A5	Eq-Temporal-Period-Value T25 present
-A6	Observation-Type-Value T27 measurement
+A6	Observation-Type-Value E2 measurement
 A7	Eq-Temporal-Unit-Value T30 hour
-A8	Temporal-Connection-Type-Value E8 after
 A9	Eq-Temporal-Period-Value T33 present
-A10	Temporal-Connection-Type-Value E17 during
 A11	Eq-Operator-Value T39 LTEQ
 A12	Stability-Value T42 change
 A13	Assertion-Type-Value E23 possible
+R1	After Arg1:E6 Arg2:E3
+R2	During Arg1:E15 Arg2:E5
+R3	Or Arg1:E19 Arg2:E21

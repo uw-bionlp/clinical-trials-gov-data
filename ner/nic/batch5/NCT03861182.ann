@@ -1,24 +1,21 @@
 E1	Eq-Comparison:T1 Operator:T35 Value:T36 Temporal-Unit:T37
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E3	Condition:T3 Name:T38
-E4	Age:T4 Eq-Comparison:E5
+E4	Age:T4 Numeric-Filter:E5
 E5	Eq-Comparison:T5 Operator:T39 Value:T41 Temporal-Unit:T42 Value2:T40 Temporal-Unit2:T67
 E8	Eq-Comparison:T8 Value:T43 Temporal-Unit:T44 Operator:T68
 E9	Condition:T9 Name:T45
-E12	And:T12 Arg:E6 Arg2:E14
 E13	Eq-Comparison:T13 Value:T47 Unit:T48
-E14	Observation:T14 Name:T49 Eq-Comparison:E13
-E15	Encounter:T15 Location:T51 Location2:T52
+E14	Observation:T14 Name:T49 Numeric-Filter:E13
+E15	Encounter:T15 Location:T51
 E16	Observation:T16 Name:T54
 E17	Modifier:T17 Modifies:T56
 E18	Condition:T18 Name:T56
 E19	Condition:T19 Name:T57
 E20	Drug:T20 Stability:T58
 E21	Condition:T21 Name:T59 Stability:T58
-E22	Temporal-Connection:T22 Arg:E21 Arg2:E23
 E23	Eq-Comparison:T23 Value:T60 Temporal-Unit:T73
-E24	Temporal-Connection:T24 Arg:E23 Arg2:E25
-E25	Study:T25 
+E25	Study:T25
 E27	Risk:T27 Risk-For:E28
 E28	Condition:T28 Name:T61
 E29	Eq-Comparison:T29 Operator:T62 Value:T63 Per:T64
@@ -27,9 +24,7 @@ E31	Drug:T31 Name:T66
 E32	Procedure:T32 Temporality:E30
 E7	Condition:T7 Name:T34
 E6	Birth:T6 Temporality:E8
-E33	Temporal-Connection:T69 Arg:E8 Arg2:E9
 E10	Eq-Comparison:T10 Value:T11 Temporal-Unit:T46
-E11	Temporal-Connection:T70 Arg:E9 Arg2:E10
 E34	Condition:T53 Name:T71
 E35	Assertion:T72 Asserted:T58
 T1	Eq-Comparison 49 62	Over 18 years
@@ -39,7 +34,6 @@ T4	Age 85 89	Aged
 T5	Eq-Comparison 90 120	between 1h of life and 28 days
 T8	Eq-Comparison 139 153	beyond 33 Week
 T9	Condition 157 167	Amenorrhea
-T12	And 175 178	and
 T13	Eq-Comparison 179 182	2kg
 T14	Observation 186 198	birth weight
 T15	Encounter 204 216	Hospitalized
@@ -49,9 +43,7 @@ T18	Condition 427 447	inflammatory disease
 T19	Condition 453 481	Transient inflammatory state
 T20	Drug 491 495	drug
 T21	Condition 514 533	coagulation cascade
-T22	Temporal-Connection 534 540	during
 T23	Eq-Comparison 545 548	48h
-T24	Temporal-Connection 549 558	preceding
 T25	Study 563 571	sampling
 T27	Risk 587 591	Risk
 T28	Condition 595 601	anemia
@@ -94,40 +86,39 @@ T40	Eq-Value 98 99	1
 T67	Eq-Temporal-Unit 99 100	h
 T6	Birth 134 138	Born
 T68	Eq-Operator 139 145	beyond
-T69	Temporal-Connection 154 156	of
 T10	Eq-Comparison 170 174	1day
 T11	Eq-Value 170 171	1
 T46	Eq-Temporal-Unit 171 174	day
-T70	Temporal-Connection 168 169	+
 T53	Condition 392 399	Healthy
 T71	Condition-Name 392 399	Healthy
 T59	Condition-Name 514 533	coagulation cascade
 T72	Assertion 501 509	modifies
 T73	Eq-Temporal-Unit 547 548	h
 T26	Life-Stage-And-Gender 572 580	Neonates
-A1	Temporal-Connection-Type-Value E22 during
-A2	Temporal-Connection-Type-Value E24 before
 A3	Life-Stage-And-Gender-Type T33 adult
 A4	Eq-Operator-Value T35 GT
 A5	Eq-Temporal-Unit-Value T37 year
 A6	Eq-Operator-Value T39 BETWEEN
 A8	Eq-Temporal-Unit-Value T42 day
 A9	Eq-Temporal-Unit-Value T44 week
-A10	Observation-Type-Value T49 vital
+A10	Observation-Type-Value E14 vital
 A11	Encounter-Type-Value T50 inpatient
 A12	Location-Value T51 unit
 A13	Location-Value T52 hospital
-A15	Observation-Type-Value T54 lab
+A15	Observation-Type-Value E16 lab
 A16	Life-Stage-And-Gender-Type T55 adult
 A17	Stability-Value T58 change
 A19	Eq-Operator-Value T62 LT
 A20	Eq-Temporal-Period-Value T65 present
 A7	Eq-Temporal-Unit-Value T67 hour
 A21	Eq-Operator-Value T68 GT
-A22	Temporal-Connection-Type-Value E33 after
 A23	Eq-Temporal-Unit-Value T46 day
-A24	Temporal-Connection-Type-Value E11 after
 A14	Assertion-Type-Value E35 hypothetical
 A18	Eq-Temporal-Unit-Value T73 hour
 A25	Life-Stage-And-Gender-Type T26 infant
 R1	Using Arg1:E32 Arg2:E31
+R2	And Arg1:E6 Arg2:E14
+R3	During Arg1:E21 Arg2:E23
+R4	Before Arg1:E23 Arg2:E25
+R5	After Arg1:E8 Arg2:E9
+R6	After Arg1:E9 Arg2:E10

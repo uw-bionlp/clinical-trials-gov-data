@@ -1,63 +1,59 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Operator:T39 Value:T40
 E3	Procedure:T3 Name:T41
 E4	Modifier:T4 Modifies:T42
 E5	Condition:T5 Name:T42
-E7	Condition:T7 Name:T44
+E7	Observation:T7 Name:T44
 E8	Condition:T8 Name:T45
 E9	Condition:T9 Name:T46
 E10	Condition:T10 Name:T47
-E11	And:T11 Arg:E10 Arg2:E14
 E13	Condition:T13 Name:T49
 E14	Risk:T14 Polarity:T48 Risk-For:E13
 E15	Family-Member:T15 Has:E13
 E18	Eq-Comparison:T18 Operator:T51 Value:T52 Unit:T53
 E25	Contraindication:T25 Contraindicates:E30
 E26	Modifier:T26 Modifies:T58
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Modifier:T28 Modifies:T58
 E30	Procedure:T30 Name:T58
 E32	Other:T32 Is-Other:E34
-E33	Procedure:T33 
+E33	Procedure:T33
 E34	Study:T34 Study-Of:E33 Study-Of2:E35
 E35	Procedure:T35 Name:T61
-E36	Or:T36 Arg:E35 Arg2:T19
 E38	Study:T38 Stability:T19
 E39	Indication:T62 Indication-For:E3
 E40	Procedure:T63 Name:T64
 E6	Modifier:T6 Modifies:T44
-E16	Risk:T16 Eq-Comparison:E18
+E16	Risk:T16 Numeric-Filter:E18
 E17	Observation:T17 Name:T59
+E12	Condition:T12 Name:T55
+E19	Modifier:T20 Modifies:T55
 T1	Age 20 23	Age
 T2	Eq-Comparison 25 29	≥ 18
 T3	Procedure 46 67	breast reconstruction
 T4	Modifier 94 100	breast
 T5	Condition 101 107	cancer
-T7	Condition 122 129	lesions
+T7	Observation 122 129	lesions
 T8	Condition 131 135	DCIS
 T9	Condition 137 141	LCIS
 T10	Condition 144 160	mutation carrier
-T11	And 161 165	with
 T13	Condition 176 189	breast cancer
 T14	Risk 190 194	risk
 T15	Family-Member 203 217	family history
 T18	Eq-Comparison 233 238	> 15%
 T25	Contraindication 509 526	contraindications
 T26	Modifier 535 548	mesh-assisted
-T27	Or 549 551	or
 T28	Modifier 552 574	plastic-reconstructive
 T30	Procedure 575 589	breast surgery
 T32	Other 722 729	another
 T33	Procedure 730 739	operative
 T34	Study 740 754	clinical trial
 T35	Procedure 785 814	reconstructive breast surgery
-T36	Or 815 821	and/or
 T38	Study 870 875	trial
 T39	Eq-Operator 25 26	≥
 T40	Eq-Value 27 29	18
 T41	Procedure-Name 46 67	breast reconstruction
 T42	Condition-Name 101 107	cancer
-T44	Condition-Name 122 129	lesions
+T44	Observation-Name 122 129	lesions
 T45	Condition-Name 131 135	DCIS
 T46	Condition-Name 137 141	LCIS
 T47	Condition-Name 144 160	mutation carrier
@@ -77,6 +73,8 @@ T6	Modifier 109 121	precancerous
 T16	Risk 228 232	risk
 T17	Observation 649 675	institution under judicial
 T19	Stability 822 832	influences
+T12	Condition 476 489	breast cancer
+T20	Modifier 465 475	Metastatic
 A2	Eq-Operator-Value T39 GTEQ
 A3	Polarity-Value T48 high
 A5	Eq-Operator-Value T51 GT
@@ -91,7 +89,7 @@ R7	Example-Of Arg1:E14 Arg2:E39
 R8	Equivalent-To Arg1:E16 Arg2:E15
 R9	Example-Of Arg1:E15 Arg2:E39
 R10	Caused-By Arg1:T19 Arg2:E34
-T12	Condition 476 489	breast cancer
-E12	Condition:T12 Name:T55
-T20	Modifier 465 475	Metastatic
-E19	Modifier:T20 Modifies:T55
+R11	And Arg1:E10 Arg2:E14
+R12	Or Arg1:E26 Arg2:E28
+R13	Or Arg1:E35 Arg2:T19
+R14	Or Arg1:E8 Arg2:E9

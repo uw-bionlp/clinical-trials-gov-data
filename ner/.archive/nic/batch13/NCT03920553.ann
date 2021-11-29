@@ -1,0 +1,106 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4 Temporality:E31
+E5	Condition:T5 Name:T6
+E11	Condition:T11 Name:T12 Stability:T51
+E12	Eq-Comparison:T17 Operator:T13 Value:T15 Unit:T26
+E13	Eq-Comparison:T18 Value:T16 Unit:T29
+E2	Negation:T14 Negates:E5
+E4	Condition:T10 Name:T9
+E6	Observation:T19 Name:T20
+E8	Assertion:T21 Asserted:E1
+E9	Or:T22 Arg:E6 Arg2:E8
+E7	Procedure:T7 Name:T8
+E10	Assertion:T23 Asserted:E7
+E14	Observation:T24 Name:T25 Eq-Comparison:E12
+E15	Observation:T27 Name:T28 Eq-Comparison:E13
+E16	Negation:T30 Negates:E3
+E17	Observation:T31 Name:T32
+E18	Negation:T33 Negates:E17
+E19	Condition:T34 
+E20	Condition:T35 Name:T36 Temporality:E32
+E21	Condition:T37 Name:T38
+E22	Or:T39 Arg:E20 Arg2:E21
+E23	Condition:T40 Name:T41 Temporality:E33
+E24	Eq-Comparison:T42 Temporal-Period:T43
+E25	Drug:T44 Temporality:E24
+E27	Assertion:T47 Asserted:T45
+E28	Or:T48 Arg:E23 Arg2:E25
+E29	Study:T49 Stability:T45
+E30	Assertion:T50 Asserted:T51
+E31	Eq-Comparison:T52 Temporal-Period:T53
+E26	Modifier:T46 Modifies:E5
+E32	Eq-Comparison:T54 Temporal-Period:T55
+E33	Eq-Comparison:T56 Temporal-Period:T57
+T1	Procedure 180 201	periodontal treatment
+T2	Procedure-Name 180 201	periodontal treatment
+T3	Procedure 345 364	periodontal surgery
+T4	Procedure-Name 345 364	periodontal surgery
+T5	Condition 37 44	disease
+T6	Condition-Name 37 44	disease
+T11	Condition 476 489	wound healing
+T12	Condition-Name 476 489	wound healing
+T13	Eq-Operator 282 283	<
+T15	Eq-Value 283 285	15
+T16	Eq-Value 309 310	3
+T17	Eq-Comparison 282 286	<15%
+T18	Eq-Comparison 308 312	<3mm
+T14	Negation 25 27	No
+T9	Condition-Name 67 98	high labial frenulum attachment
+T10	Condition 67 98	high labial frenulum attachment
+T19	Observation 137 158	periodontally healthy
+T20	Observation-Name 137 158	periodontally healthy
+T21	Assertion 164 179	requirement for
+T22	Or 159 161	or
+T7	Procedure 226 251	removing of dental plaque
+T8	Procedure-Name 226 251	removing of dental plaque
+T23	Assertion 207 212	would
+T24	Observation 258 281	full mouth plaque score
+T25	Observation-Name 258 281	full mouth plaque score
+T26	Eq-Unit 285 286	%
+T27	Observation 287 307	probing pocket depth
+T28	Observation-Name 287 307	probing pocket depth
+T29	Eq-Unit 310 312	mm
+T30	Negation 331 333	no
+T31	Observation 421 433	oral hygiene
+T32	Observation-Name 421 433	oral hygiene
+T33	Negation 391 394	not
+T34	Condition 448 457	condition
+T35	Condition 501 509	pregnant
+T36	Condition-Name 501 509	pregnant
+T37	Condition 513 522	lactating
+T38	Condition-Name 513 522	lactating
+T39	Or 510 512	or
+T40	Condition 534 551	cigarette smokers
+T42	Eq-Comparison 555 567	were takiing
+T43	Eq-Temporal-Period 555 567	were takiing
+T44	Drug 572 582	medication
+T47	Assertion 588 593	might
+T48	Or 552 554	or
+T49	Study 620 625	study
+T50	Assertion 463 468	could
+T51	Stability 469 475	affect
+T41	Condition-Name 534 551	cigarette smokers
+T45	Stability 594 600	affect
+T52	Eq-Comparison 334 341	history
+T53	Eq-Temporal-Period 334 341	history
+T46	Modifier 28 36	systemic
+T54	Eq-Comparison 496 500	were
+T55	Eq-Temporal-Period 496 500	were
+T56	Eq-Comparison 529 533	were
+T57	Eq-Temporal-Period 529 533	were
+A1	Eq-Operator-Value T13 LT
+A2	Assertion-Type-Value E8 hypothetical
+A3	Assertion-Type-Value E10 hypothetical
+A4	Observation-Type-Value T25 clinical-score
+A6	Eq-Temporal-Period-Value T43 past
+A7	Assertion-Type-Value E27 hypothetical
+A8	Assertion-Type-Value E30 hypothetical
+A9	Stability-Value T51 change
+A10	Eq-Temporal-Period-Value T53 past
+A5	Observation-Type-Value T28 measurement
+A11	Eq-Temporal-Period-Value T55 past
+A12	Eq-Temporal-Period-Value T57 past
+A13	Stability-Value T45 change
+R1	Using Arg1:E1 Arg2:E7
+R2	Caused-By Arg1:T51 Arg2:E19
+R3	Caused-By Arg1:T45 Arg2:E25

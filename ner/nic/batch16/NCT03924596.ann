@@ -1,5 +1,5 @@
 E1	Condition:T1 Name:T2
-E3	Observation:T3 Name:T4 Eq-Comparison:E6
+E3	Observation:T3 Name:T4 Numeric-Filter:E6
 E5	Condition:T5 Name:T6
 E6	Eq-Comparison:T9 Operator:T7 Value:T8 Unit:T10
 E2	Condition:T11 Name:T12
@@ -34,9 +34,10 @@ T21	Condition 239 241	DM
 T22	Condition-Name 239 241	DM
 T23	Condition-Name 224 237	comorbidities
 A1	Eq-Operator-Value T7 LTEQ
-A2	Observation-Type-Value T4 measurement
+A2	Observation-Type-Value E3 measurement
 R1	Example-Of Arg1:E4 Arg2:E2
 R2	Example-Of Arg1:E1 Arg2:E2
 R3	Example-Of Arg1:E7 Arg2:E2
 R4	Example-Of Arg1:E12 Arg2:E11
 R5	Example-Of Arg1:E5 Arg2:E11
+R6	Or Arg1:E12 Arg2:E5

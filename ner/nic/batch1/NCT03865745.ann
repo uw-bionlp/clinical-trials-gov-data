@@ -1,17 +1,17 @@
 E1	Condition:T1 Name:T2
 E6	Condition:T6 Name:T7 Severity:T44
-E8	Condition:T8 Name:T9 Acuteness:T4
+E8	Condition:T8 Acuteness:T4
 E10	Condition:T10 Name:T11
 E12	Procedure:T12 Name:T13
 E14	Condition:T14 Name:T15
 E16	Procedure:T16 Name:T17
 E18	Condition:T18 Name:T19
-E21	Age:T26 Eq-Comparison:E2
+E21	Age:T26 Numeric-Filter:E2
 E3	Condition:T34 Name:T35
 E5	Condition:T36 Name:T37
 E7	Condition:T38 Name:T39
-E11	Encounter:T42 Type:T43 Location:T40
-E15	Condition:T46 Name:T47 Severity:T45
+E11	Encounter:T42 Location:T40
+E15	Observation:T46 Name:T47 Severity:T45
 E17	Condition:T49 Name:T50 Severity:T48
 E19	Condition:T51 Name:T52
 E22	Assertion:T53 Asserted:E8
@@ -20,7 +20,6 @@ E25	Drug:T58 Name:T59
 E26	Procedure:T60 Temporality:E4 Duration:E24 Temporality2:E13
 E27	Procedure:T62 Name:T63
 E28	Exception:T64 From:E12 Except:E16 Except2:E27
-E29	Or:T65 Arg:E16 Arg2:E27
 E30	Drug:T66 Name:T67 Temporality:E43 Temporality2:E33
 E31	Drug:T68 Name:T69 Temporality:E43 Temporality2:E33
 E32	Drug:T70 Name:T71 Temporality:E43 Temporality2:E33
@@ -29,21 +28,14 @@ E20	Study:T20 Temporality:E47
 E34	Study:T21 Temporality:E47
 E35	Study:T75 Temporality2:E38
 E36	Study:T76 Temporality2:E38
-E37	Or:T29 Arg:E34 Arg2:E35
 E38	Eq-Comparison:T54 Operator:T24 Temporal-Unit:T77 Temporal-Period:T92
-E39	Or:T78 Arg:T3 Arg2:T30
 E2	Eq-Comparison:T31 Value:T27 Operator:T33 Value2:T32
-E9	And:T41 Arg:E11 Arg2:E1
 E40	Assertion:T79 Asserted:E1
 E4	Eq-Comparison:T5 Temporal-Period:T61
 E13	Eq-Comparison:T80 Operator:T22 Temporal-Period:T81 Value:T82 Temporal-Unit:T83
-E41	Or:T84 Arg:E10 Arg2:E12
 E42	Modifier:T85 Modifies:T17
 E43	Eq-Comparison:T86 Temporal-Period:T87
-E23	Or:T25 Arg:E31 Arg2:E32
 E44	Other:T23 Is-Other:E20
-E45	Or:T88 Arg:E20 Arg2:E34
-E46	Or:T89 Arg:E35 Arg2:E36
 E47	Eq-Comparison:T90 Temporal-Period:T91
 T1	Condition 116 127	climacteric
 T2	Condition-Name 116 127	climacteric
@@ -77,11 +69,10 @@ T37	Condition-Name 195 202	fatigue
 T38	Condition 204 216	helplessness
 T39	Condition-Name 204 216	helplessness
 T42	Encounter 67 74	visited
-T43	Encounter-Type 67 74	visited
 T44	Severity 462 468	severe
 T45	Severity 489 495	severe
-T46	Condition 496 502	trauma
-T47	Condition-Name 496 502	trauma
+T46	Observation 496 502	trauma
+T47	Observation-Name 496 502	trauma
 T48	Severity 504 510	severe
 T49	Condition 511 519	diarrhea
 T50	Condition-Name 511 519	diarrhea
@@ -97,7 +88,6 @@ T60	Procedure 580 589	treatment
 T62	Procedure 808 822	hernia surgery
 T63	Procedure-Name 808 822	hernia surgery
 T64	Exception 774 780	except
-T65	Or 805 807	or
 T66	Drug 842 865	health functional foods
 T67	Drug-Name 842 865	health functional foods
 T68	Drug 867 887	lactic acid bacteria
@@ -111,13 +101,10 @@ T20	Study 984 1000	clinical studies
 T21	Study 1004 1016	human trials
 T75	Study 1038 1053	clinical trials
 T76	Study 1057 1080	human application tests
-T29	Or 1018 1020	or
 T54	Eq-Comparison 1081 1102	within the past month
 T77	Eq-Temporal-Unit 1097 1102	month
-T78	Or 42 45	and
 T31	Eq-Comparison 32 37	40~75
 T40	Location 79 96	menopausal clinic
-T41	And 97 101	with
 T79	Assertion 128 136	symptoms
 T4	Acuteness 447 452	acute
 T5	Eq-Comparison 558 565	history
@@ -126,14 +113,10 @@ T80	Eq-Comparison 612 636	within the last 6 months
 T81	Eq-Temporal-Period 623 627	last
 T82	Eq-Value 628 629	6
 T83	Eq-Temporal-Unit 630 636	months
-T84	Or 745 747	or
 T85	Modifier 785 791	simple
 T86	Eq-Comparison 835 841	taking
 T87	Eq-Temporal-Period 835 841	taking
-T25	Or 889 892	and
 T23	Other 978 983	other
-T88	Or 1001 1003	or
-T89	Or 1054 1056	or
 T90	Eq-Comparison 951 960	currently
 T91	Eq-Temporal-Period 951 960	currently
 T92	Eq-Temporal-Period 1092 1096	past
@@ -141,7 +124,7 @@ A1	Eq-Operator-Value T22 LTEQ
 A3	Eq-Operator-Value T24 LTEQ
 A5	Life-Stage-And-Gender-Type T3 male
 A6	Eq-Operator-Value T33 BETWEEN
-A7	Encounter-Type-Value T43 outpatient
+A7	Encounter-Type-Value E11 outpatient
 A8	Severity-Value T44 severe
 A9	Severity-Value T45 severe
 A10	Severity-Value T48 severe
@@ -171,3 +154,15 @@ R8	Example-Of Arg1:E18 Arg2:E10
 R9	Example-Of Arg1:E14 Arg2:E10
 R3	Example-Of Arg1:E7 Arg2:E3
 R10	Using Arg1:E26 Arg2:E25
+R11	Or Arg1:E16 Arg2:E27
+R12	Or Arg1:E34 Arg2:E35
+R13	Or Arg1:T3 Arg2:T30
+R14	And Arg1:E11 Arg2:E1
+R15	Or Arg1:E10 Arg2:E12
+R16	Or Arg1:E31 Arg2:E32
+R17	Or Arg1:E20 Arg2:E34
+R18	Or Arg1:E35 Arg2:E36
+R19	Or Arg1:E18 Arg2:E14
+R20	Or Arg1:E5 Arg2:E7
+R21	Or Arg1:E17 Arg2:E19
+R22	Or Arg1:E30 Arg2:E31

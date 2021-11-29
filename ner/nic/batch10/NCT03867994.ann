@@ -1,24 +1,23 @@
 E1	Condition:T1 Name:T2 Temporality:E28
 E3	Condition:T3 Name:T4
-E6	Observation:T6 Name:T7 Eq-Comparison:E34
+E6	Observation:T6 Name:T7 Numeric-Filter:E34
 E8	Observation:T8 Name:T9 Stability:T122 Polarity:T123
-E10	Observation:T10 Name:T11 Eq-Comparison:E17
+E10	Observation:T10 Name:T11 Numeric-Filter:E17
 E12	Procedure:T12 Name:T13
 E14	Condition:T14 Name:T15
-E15	Age:T26 Eq-Comparison:E2
+E15	Age:T26 Numeric-Filter:E2
 E16	Eq-Comparison:T34 Operator:T16 Value:T29 Unit:T42 Per:T43
 E17	Eq-Comparison:T35 Operator:T17 Value:T31 Value2:T127 Unit:T25
 E18	Eq-Comparison:T36 Value:T32 Temporal-Period:T19 Temporal-Unit:T135
 E19	Eq-Comparison:T37 Temporal-Unit:T24 Value:T33 Temporal-Period:T20
 E2	Eq-Comparison:T38 Operator:T39 Value:T27 Value2:T28 Temporal-Unit:T21
-E4	Observation:T40 Name:T41 Eq-Comparison:E16
+E4	Observation:T40 Name:T41 Numeric-Filter:E16
 E5	Drug:T44 Name:T45 Temporality:E7 Dose:E9
 E7	Eq-Comparison:T46 Temporal-Period:T47
 E9	Eq-Comparison:T48 Value:T49
 E11	Eq-Comparison:T50 Value:T54 Unit:T55
 E13	Drug:T51 Name:T52
 E20	Other:T53 Is-Other:E13
-E21	Or:T56 Arg:E11 Arg2:E13
 E22	Condition:T57 Name:T58
 E23	Risk:T59 Severity:T61 Risk-For:E22
 E24	Eq-Comparison:T62 Value:T60 Value2:T61 Operator:T63
@@ -28,15 +27,13 @@ E27	Assertion:T67 Asserted:E26
 E28	Eq-Comparison:T68 Temporal-Period:T69
 E29	Condition:T70 Name:T71 Polarity:T72
 E30	Observation:T5 Name:T73
-E31	Observation:T74 Name:T75 Eq-Comparison:E34
+E31	Observation:T74 Name:T75 Numeric-Filter:E34
 E32	Observation:T76 Name:T77
-E33	Or:T78 Arg:E31 Arg2:E32
 E34	Eq-Comparison:T79 Value:T80 Unit:T81
 E35	Condition:T82 Name:T83 Temporality:E36
 E36	Eq-Comparison:T84 Temporal-Period:T85
 E37	Drug:T86 Name:T87
 E38	Drug:T88 Name:T89
-E39	Or:T90 Arg:E37 Arg2:E38
 E40	Contraindication:T91 Contraindicates:E37 Contraindicates2:E38
 E41	Drug:T92 Name:T93 Temporality:E43
 E42	Drug:T94 Name:T95 Temporality:E43
@@ -50,12 +47,9 @@ E49	Drug:T106 Name:T107
 E50	Drug:T108 Name:T109
 E51	Drug:T110 Name:T111
 E52	Drug:T112 Name:T113
-E53	Or:T114 Arg:E51 Arg2:E52
 E54	Eq-Comparison:T115 Value:T30 Temporal-Unit:T22
 E55	Procedure:T116 Name:T117
-E56	Temporal-Connection:T118 Arg:E54 Arg2:E55
 E57	Condition:T119 Name:T120 Stability:T121
-E58	Or:T124 Arg:T123 Arg2:T122
 E59	Condition:T125 Name:T126
 E60	Assertion:T128 Asserted:E12
 E61	Drug:T129 Name:T130 Temporality:E62
@@ -63,8 +57,6 @@ E62	Eq-Comparison:T18 Temporal-Period:T131 Value:T132 Temporal-Unit:T23
 E63	Drug:T133 Name:T134 Temporality:E18
 E64	Procedure:T136 Name:T137 Temporality:E19
 E65	Procedure:T138 Name:T139
-E66	Temporal-Connection:T140 Arg:E19 Arg2:E65
-E67	Or:T141 Arg:E18 Arg2:E64
 T1	Condition 293 314	myocardial infarction
 T2	Condition-Name 293 314	myocardial infarction
 T3	Condition 316 321	STEMI
@@ -116,7 +108,6 @@ T52	Drug-Name 177 184	statins
 T53	Other 171 176	other
 T54	Eq-Value 143 145	40
 T55	Eq-Unit 146 148	mg
-T56	Or 149 151	or
 T57	Condition 218 221	CIN
 T58	Condition-Name 218 221	CIN
 T59	Risk 209 213	risk
@@ -139,7 +130,6 @@ T74	Observation 437 440	AST
 T75	Observation-Name 437 440	AST
 T76	Observation 446 470	Alanine aminotransferase
 T77	Observation-Name 446 470	Alanine aminotransferase
-T78	Or 442 445	and
 T79	Eq-Comparison 477 514	three times the upper limit of normal
 T80	Eq-Value 477 482	three
 T81	Eq-Unit 493 514	upper limit of normal
@@ -151,7 +141,6 @@ T86	Drug 569 579	carvedilol
 T87	Drug-Name 569 579	carvedilol
 T88	Drug 584 596	atorvastatin
 T89	Drug-Name 584 596	atorvastatin
-T90	Or 581 583	or
 T91	Contraindication 549 565	contraindication
 T92	Drug 630 638	vitamins
 T93	Drug-Name 630 638	vitamins
@@ -175,17 +164,14 @@ T110	Drug 753 765	theophylline
 T111	Drug-Name 753 765	theophylline
 T112	Drug 769 786	N-acetyl cysteine
 T113	Drug-Name 769 786	N-acetyl cysteine
-T114	Or 766 768	or
 T115	Eq-Comparison 787 793	7 days
 T116	Procedure 803 805	CC
 T117	Procedure-Name 803 805	CC
-T118	Temporal-Connection 794 802	prior to
 T119	Condition 812 827	Hemodynamically
 T120	Condition-Name 812 827	Hemodynamically
 T121	Stability 828 836	unstable
 T122	Stability 870 878	unstable
 T123	Polarity 858 866	abnormal
-T124	Or 867 869	or
 T125	Condition 906 917	hypotension
 T126	Condition-Name 906 917	hypotension
 T127	Eq-Value 947 949	60
@@ -204,8 +190,6 @@ T137	Procedure-Name 1131 1145	contrast agent
 T20	Eq-Temporal-Period 1153 1157	past
 T138	Procedure 1174 1197	cardiac catheterization
 T139	Procedure-Name 1174 1197	cardiac catheterization
-T140	Temporal-Connection 1165 1173	prior to
-T141	Or 1114 1116	or
 A1	Eq-Operator-Value T16 LTEQ
 A2	Eq-Operator-Value T17 LT
 A6	Eq-Temporal-Unit-Value T21 year
@@ -213,7 +197,7 @@ A7	Eq-Temporal-Unit-Value T22 day
 A8	Eq-Temporal-Unit-Value T23 month
 A9	Eq-Temporal-Unit-Value T24 day
 A10	Eq-Operator-Value T39 BETWEEN
-A11	Observation-Type-Value T41 lab
+A11	Observation-Type-Value E4 lab
 A12	Eq-Temporal-Period-Value T47 present
 A13	Severity-Value T49 moderate
 A14	Severity-Value T60 moderate
@@ -222,26 +206,24 @@ A16	Eq-Operator-Value T63 BETWEEN
 A17	Assertion-Type-Value E27 hypothetical
 A18	Eq-Temporal-Period-Value T69 present
 A19	Polarity-Value T72 high
-A20	Observation-Type-Value T73 lab
-A21	Observation-Type-Value T75 lab
-A22	Observation-Type-Value T77 lab
-A23	Observation-Type-Value T7 lab
+A20	Observation-Type-Value E30 lab
+A21	Observation-Type-Value E31 lab
+A22	Observation-Type-Value E32 lab
+A23	Observation-Type-Value E6 lab
 A24	Eq-Unit-Value T81 ref-range-normal
 A25	Eq-Temporal-Period-Value T85 present
 A26	Eq-Temporal-Period-Value T97 present
 A27	Eq-Temporal-Period-Value T103 present
-A28	Temporal-Connection-Type-Value E56 before
 A29	Stability-Value T121 change
 A30	Stability-Value T122 change
-A31	Observation-Type-Value T9 vital
+A31	Observation-Type-Value E8 vital
 A32	Polarity-Value T123 abnormal
-A33	Observation-Type-Value T11 vital
+A33	Observation-Type-Value E10 vital
 A34	Assertion-Type-Value E60 hypothetical
 A3	Eq-Temporal-Period-Value T131 past
 A4	Eq-Temporal-Period-Value T19 past
 A35	Eq-Temporal-Unit-Value T135 hour
 A5	Eq-Temporal-Period-Value T20 past
-A36	Temporal-Connection-Type-Value E66 before
 R1	Equivalent-To Arg1:E11 Arg2:E9
 R2	Abbrev-Of Arg1:E3 Arg2:E1
 R3	Abbrev-Of Arg1:E31 Arg2:E30
@@ -257,3 +239,16 @@ R12	Example-Of Arg1:E52 Arg2:E44
 R13	Equivalent-To Arg1:E8 Arg2:E57
 R14	Equivalent-To Arg1:E10 Arg2:E59
 R15	Equivalent-To Arg1:E59 Arg2:E57
+R16	Or Arg1:E11 Arg2:E13
+R17	Or Arg1:E31 Arg2:E32
+R18	Or Arg1:E37 Arg2:E38
+R19	Or Arg1:E51 Arg2:E52
+R20	Before Arg1:E54 Arg2:E55
+R21	Or Arg1:T123 Arg2:T122
+R22	Before Arg1:E19 Arg2:E65
+R23	Or Arg1:E18 Arg2:E64
+R24	Or Arg1:E41 Arg2:E42
+R25	Or Arg1:E46 Arg2:E48
+R26	Or Arg1:E48 Arg2:E49
+R27	Or Arg1:E49 Arg2:E50
+R28	Or Arg1:E50 Arg2:E51

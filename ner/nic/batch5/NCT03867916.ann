@@ -1,14 +1,11 @@
 E1	Condition:T1 Name:T24
-E2	Or:T2 Arg:T27 Arg2:T28
 E3	Eq-Comparison:T3 Temporal-Period:T29
 E4	Condition:T4 Name:T30 Temporality:E3
 E5	Condition:T5 Name:T31
 E6	Condition:T6 Name:T32
-E7	Or:T7 Arg:T35 Arg2:T36
 E8	Eq-Comparison:T8 Unit:T37 Value:T38 Operator:T39 Value:T40
 E9	Modifier:T9 Modifies:T41
 E10	Modifier:T10 Modifies:T41
-E11	Or:T11 Arg:E10 Arg2:E12
 E12	Modifier:T12 Modifies:T41
 E13	Condition:T13 Name:T41 Stage:E8
 E14	Negation:T14 Negates:E16
@@ -18,23 +15,18 @@ E17	Assertion:T17 Asserted:E18
 E18	Study:T18 Duration:E19
 E19	Eq-Comparison:T19 Value:T43 Temporal-Unit:T44
 E20	Modifier:T20 Modifies:E23
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Modifier:T22 Modifies:E23
 E23	Condition:T23
-E24	Provider:T48 Role:T49
+E24	Provider:T48
 E25	Provider:T50
-E26	And:T52 Arg:T51 Arg2:E6
 T1	Condition 58 64	Cancer
-T2	Or 171 173	or
 T3	Eq-Comparison 192 199	history
 T4	Condition 203 209	cancer
 T5	Condition 326 332	cancer
 T6	Condition 492 498	cancer
-T7	Or 635 637	or
 T8	Eq-Comparison 654 665	stage I-III
 T9	Modifier 666 676	colorectal
 T10	Modifier 678 682	lung
-T11	Or 684 686	or
 T12	Modifier 687 692	liver
 T13	Condition 693 699	cancer
 T14	Negation 705 708	not
@@ -44,7 +36,6 @@ T17	Assertion 776 786	willing to
 T18	Study 799 804	study
 T19	Eq-Comparison 809 819	six months
 T20	Modifier 849 856	medical
-T21	Or 857 859	or
 T22	Modifier 860 873	psychological
 T23	Condition 874 884	conditions
 T24	Condition-Name 58 64	Cancer
@@ -72,10 +63,8 @@ T45	Ethnicity 94 108	Asian American
 T46	Location 119 132	San Francisco
 T47	Ethnicity 311 325	Asian American
 T48	Provider 401 411	physicians
-T49	Provider-Role 401 411	physicians
 T50	Provider 422 442	health professionals
 T51	Ethnicity 463 477	Asian American
-T52	And 487 491	with
 T53	Ethnicity 558 572	Asian American
 T54	Location 583 596	San Francisco
 A1	Assertion-Type-Value E17 hypothetical
@@ -86,3 +75,9 @@ A5	Eq-Temporal-Unit-Value T44 month
 A6	Location-Value T46 residence
 A7	Location-Value T54 residence
 R1	Treatment-For Arg1:E16 Arg2:E13
+R2	Or Arg1:T27 Arg2:T28
+R3	Or Arg1:T35 Arg2:T36
+R4	Or Arg1:E10 Arg2:E12
+R5	Or Arg1:E20 Arg2:E22
+R6	And Arg1:T51 Arg2:E6
+R7	Or Arg1:E9 Arg2:E10

@@ -1,0 +1,198 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12 Severity:T95
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16 Temporality:E46 Temporality2:E42
+E17	Condition:T17 Name:T18
+E19	Condition:T19 Name:T20 Severity:T100
+E21	Condition:T21 Name:T22 Temporality:E45
+E26	Condition:T26 Name:T27
+E28	Condition:T28 Name:T29
+E30	Condition:T30 Name:T31
+E32	Condition:T32 Name:T33 Temporality:E44
+E34	Condition:T34 Name:T35
+E36	Condition:T36 Name:T37
+E38	Condition:T38 Name:T39
+E40	Condition:T40 Name:T41
+E41	Age:T45 Eq-Comparison:E43
+E42	Eq-Comparison:T50 Operator:T42 Temporal-Unit:T44 Value:T49
+E43	Eq-Comparison:T51 Operator:T46 Value:T47 Value2:T48 Temporal-Unit:T43
+E44	Eq-Comparison:T52 Temporal-Period:T53
+E45	Eq-Comparison:T54 Temporal-Period:T55
+E46	Eq-Comparison:T56 Temporal-Period:T57
+E2	Or:T58 Arg:T25 Arg2:T23
+E4	And:T59 Arg:E41 Arg2:E3
+E6	Assertion:T60 Asserted:E32
+E8	Condition:T61 Name:T62
+E10	Criteria-Count:T63 Min-Value:E12 Criteria:E8 Criteria2:E1 Criteria3:E34 Criteria4:E36
+E12	Eq-Comparison:T64 Value:T65
+E14	Or:T66 Arg:E26 Arg2:E1
+E16	Modifier:T67 Modifies:T2
+E18	Condition:T68 Name:T69
+E20	Criteria-Count:T70 Min-Value:E22 Criteria:E13 Criteria2:E5 Criteria3:E17 Criteria4:E7
+E22	Eq-Comparison:T71 Value:T72
+E23	Or:T73 Arg:E5 Arg2:E17
+E24	Or:T74 Arg:E17 Arg2:E7
+E25	Modifier:T75
+E27	Drug:T76 Name:T77
+E29	Drug:T78 Name:T79
+E31	Or:T80 Arg:E27 Arg2:E29
+E33	Observation:T81 Name:T82
+E35	Observation:T83 Name:T84 Eq-Comparison:E37
+E37	Eq-Comparison:T85 Unit:T86 Operator:T87 Value:T88 Value2:T89
+E39	Condition:T90 Name:T91
+E47	Condition:T92 Name:T93
+E48	Or:T94 Arg:E47 Arg2:E33
+E49	Condition:T96 Name:T97
+E50	Or:T98 Arg:E11 Arg2:E49
+E51	Modifier:T99 Modifies:T22
+E52	Or:T101 Arg:E21 Arg2:E19
+E53	Modifier:T102 Modifies:T16
+E54	Study:T103
+E55	Temporal-Connection:T104 Arg:E42 Arg2:E54
+E56	Encounter:T105 Type:T106
+E57	Drug:T107
+E58	Or:T108 Arg:E38 Arg2:E57
+E59	Other:T109 Is-Other:E57
+T1	Condition 247 278	pulmonary arterial hypertension
+T2	Condition-Name 247 278	pulmonary arterial hypertension
+T3	Condition 88 119	pulmonary arterial hypertension
+T4	Condition-Name 88 119	pulmonary arterial hypertension
+T5	Condition 403 434	mixed connective tissue disease
+T6	Condition-Name 403 434	mixed connective tissue disease
+T7	Condition 468 487	lupus erythematosus
+T8	Condition-Name 468 487	lupus erythematosus
+T9	Condition 337 363	connective tissue diseases
+T10	Condition-Name 337 363	connective tissue diseases
+T11	Condition 709 730	systemic hypertension
+T12	Condition-Name 709 730	systemic hypertension
+T13	Condition 382 401	limited scleroderma
+T14	Condition-Name 382 401	limited scleroderma
+T15	Condition 863 882	right heart failure
+T16	Condition-Name 863 882	right heart failure
+T17	Condition 438 454	overlap syndrome
+T18	Condition-Name 438 454	overlap syndrome
+T19	Condition 817 832	cardiac disease
+T20	Condition-Name 817 832	cardiac disease
+T21	Condition 773 786	heart disease
+T22	Condition-Name 773 786	heart disease
+T23	Life-Stage-And-Gender 42 49	females
+T24	Life-Stage-And-Gender 25 30	Adult
+T25	Life-Stage-And-Gender 32 37	males
+T26	Condition 228 232	IPAH
+T27	Condition-Name 228 232	IPAH
+T28	Condition 280 284	HPAH
+T29	Condition-Name 280 284	HPAH
+T30	Condition 121 124	PAH
+T31	Condition-Name 121 124	PAH
+T32	Condition 166 169	PAH
+T33	Condition-Name 166 169	PAH
+T34	Condition 296 299	PAH
+T35	Condition-Name 296 299	PAH
+T36	Condition 498 501	PAH
+T37	Condition-Name 498 501	PAH
+T38	Condition 938 941	PAH
+T39	Condition-Name 938 941	PAH
+T40	Condition 975 978	PAH
+T41	Condition-Name 975 978	PAH
+T42	Eq-Operator 883 889	within
+T43	Eq-Temporal-Unit 65 70	years
+T44	Eq-Temporal-Unit 893 897	days
+T45	Age 51 55	aged
+T46	Eq-Operator 59 61	to
+T47	Eq-Value 56 58	18
+T48	Eq-Value 62 64	75
+T49	Eq-Value 890 892	30
+T50	Eq-Comparison 883 897	within 30 days
+T51	Eq-Comparison 56 70	18 to 75 years
+T52	Eq-Comparison 133 140	current
+T53	Eq-Temporal-Period 133 140	current
+T54	Eq-Comparison 751 758	History
+T55	Eq-Temporal-Period 751 758	History
+T56	Eq-Comparison 838 845	History
+T57	Eq-Temporal-Period 838 845	History
+T58	Or 38 41	and
+T59	And 83 87	with
+T60	Assertion 154 165	symptomatic
+T61	Condition 216 226	Idiopathic
+T62	Condition-Name 216 226	Idiopathic
+T63	Criteria-Count 191 204	the following
+T64	Eq-Comparison 184 187	one
+T65	Eq-Value 184 187	one
+T66	Or 234 236	or
+T67	Modifier 237 246	heritable
+T68	Condition 365 369	CTDs
+T69	Condition-Name 365 369	CTDs
+T70	Criteria-Count 323 336	the following
+T71	Eq-Comparison 316 319	one
+T72	Eq-Value 316 319	one
+T73	Or 435 437	or
+T74	Or 456 458	or
+T75	Modifier 459 467	systemic
+T76	Drug 518 528	anorexigen
+T77	Drug-Name 518 528	anorexigen
+T78	Drug 532 547	methamphetamine
+T79	Drug-Name 532 547	methamphetamine
+T80	Or 529 531	or
+T81	Observation 589 615	New York Heart Association
+T82	Observation-Name 589 615	New York Heart Association
+T83	Observation 617 621	NYHA
+T84	Observation-Name 617 621	NYHA
+T85	Eq-Comparison 634 645	class II-IV
+T86	Eq-Unit 634 639	class
+T87	Eq-Operator 642 643	-
+T88	Eq-Value 640 642	II
+T89	Eq-Value 643 645	IV
+T90	Condition 557 582	World Health Organization
+T91	Condition-Name 557 582	World Health Organization
+T92	Condition 584 587	WHO
+T93	Condition-Name 584 587	WHO
+T94	Or 588 589	/
+T95	Severity 697 708	significant
+T96	Condition 734 745	hypotension
+T97	Condition-Name 734 745	hypotension
+T98	Or 731 733	or
+T99	Modifier 762 772	left-sided
+T100	Severity 805 816	significant
+T101	Or 787 793	and/or
+T102	Modifier 849 862	decompensated
+T103	Study 901 910	screening
+T104	Temporal-Connection 898 900	of
+T105	Encounter 918 933	hospitalization
+T106	Encounter-Type 918 933	hospitalization
+T107	Drug 979 989	medication
+T108	Or 942 944	or
+T109	Other 964 974	additional
+A1	Life-Stage-And-Gender-Type T23 female
+A2	Life-Stage-And-Gender-Type T24 adult
+A3	Life-Stage-And-Gender-Type T25 male
+A4	Eq-Operator-Value T42 LTEQ
+A5	Eq-Temporal-Unit-Value T43 year
+A6	Eq-Temporal-Unit-Value T44 day
+A7	Eq-Operator-Value T46 BETWEEN
+A8	Eq-Temporal-Period-Value T53 present
+A9	Eq-Temporal-Period-Value T55 past
+A10	Eq-Temporal-Period-Value T57 past
+A11	Assertion-Type-Value E6 possible
+A12	Eq-Operator-Value T87 BETWEEN
+A13	Severity-Value T95 severe
+A14	Severity-Value T100 severe
+A15	Temporal-Connection-Type-Value E55 before
+A16	Encounter-Type-Value T106 inpatient
+A17	Observation-Type-Value T82 clinical-score
+A18	Observation-Type-Value T84 clinical-score
+R1	Abbrev-Of Arg1:E30 Arg2:E3
+R2	Abbrev-Of Arg1:E26 Arg2:E8
+R3	Abbrev-Of Arg1:E28 Arg2:E1
+R4	Abbrev-Of Arg1:E18 Arg2:E9
+R5	Caused-By Arg1:E34 Arg2:E9
+R6	Abbrev-Of Arg1:E25 Arg2:E7
+R7	Caused-By Arg1:E36 Arg2:E27
+R8	Abbrev-Of Arg1:E35 Arg2:E33
+R9	Abbrev-Of Arg1:E47 Arg2:E39
+R10	Treatment-For Arg1:E56 Arg2:E38
+R11	Example-Of Arg1:E56 Arg2:E15
+R12	Treatment-For Arg1:E57 Arg2:E40

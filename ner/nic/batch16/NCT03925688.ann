@@ -11,34 +11,27 @@ E16	Eq-Comparison:T22 Temporal-Period:T23
 E2	Condition:T18 Name:T19 Temporality:E13
 E4	Modifier:T26 Modifies:T19
 E6	Condition:T27 Name:T28
-E8	Or:T29 Arg:E2 Arg2:E6
 E10	Procedure:T30 Name:T31
 E14	Coreference:T32 Refers-To:E6
 E18	Condition:T33 Name:T34
 E19	Procedure:T35 Name:T36
 E20	Procedure:T37 Name:T38
 E21	Eq-Comparison:T39 Operator:T40 Value:T41
-E22	Age:T42 Eq-Comparison:E21
+E22	Age:T42 Numeric-Filter:E21
 E23	Condition:T43 Name:T44 Stability:T48
 E24	Modifier:T45 Modifies:T44
 E25	Modifier:T46 Modifies:T44
-E26	And:T47 Arg:E25 Arg2:E24
-E27	Condition:T49 Name:T50
-E28	Or:T51 Arg:E1 Arg2:E27
+E27	Condition:T49
 E29	Negation:T53 Negates:E1
 E30	Condition:T54 Name:T55 Temporality:E15
 E31	Condition:T56 Name:T57
-E32	Or:T58 Arg:E30 Arg2:E31
-E33	Or:T59 Arg:E3 Arg2:E7
-E34	Or:T60 Arg:E7 Arg2:E5
 E35	Modifier:T61 Modifies:T6
-E36	Observation:T62 Name:T63 Eq-Comparison:E12
+E36	Observation:T62 Name:T63 Numeric-Filter:E12
 E37	Condition:T66 Name:T67 Stability:T73
 E38	Modifier:T68 Modifies:T67
 E39	Modifier:T69 Modifies:T67
 E40	Modifier:T70 Modifies:T67
 E41	Modifier:T71 Modifies:T67
-E42	Or:T72 Arg:E40 Arg2:E39
 E43	Assertion:T74 Asserted:T73
 E17	Drug:T24 Temporality:E16
 E44	Condition:T25 Name:T75 Stability:T76
@@ -54,7 +47,6 @@ E53	Drug:T102 Name:T103
 E54	Condition:T104 Name:T105
 E55	Drug:T106
 E56	Drug:T108 Name:T109
-E57	Or:T110 Arg:E47 Arg2:E49
 T1	Procedure 454 463	injection
 T2	Procedure-Name 454 463	injection
 T3	Condition 565 583	metabolic syndrome
@@ -81,7 +73,6 @@ T19	Condition-Name 64 72	fracture
 T26	Modifier 52 63	elbow joint
 T27	Condition 76 87	dislocation
 T28	Condition-Name 76 87	dislocation
-T29	Or 73 75	or
 T30	Procedure 157 167	X-ray test
 T31	Procedure-Name 157 167	X-ray test
 T32	Coreference 144 153	diagnosed
@@ -99,20 +90,15 @@ T43	Condition 434 439	state
 T44	Condition-Name 434 439	state
 T45	Modifier 427 433	mental
 T46	Modifier 414 422	physical
-T47	And 423 426	and
 T48	Stability 407 413	stable
 T49	Condition 467 475	diseases
 T50	Condition-Name 467 475	diseases
-T51	Or 464 466	or
 T52	Acuteness 448 453	acute
 T53	Negation 440 447	without
 T54	Condition 520 537	diabetes mellitus
 T55	Condition-Name 520 537	diabetes mellitus
 T56	Condition 541 563	impaired blood glucose
 T57	Condition-Name 541 563	impaired blood glucose
-T58	Or 538 540	or
-T59	Or 584 587	and
-T60	Or 593 595	or
 T61	Modifier 596 601	renal
 T62	Observation 615 625	creatinine
 T63	Observation-Name 615 625	creatinine
@@ -124,7 +110,6 @@ T68	Modifier 709 713	body
 T69	Modifier 684 691	protein
 T70	Modifier 674 679	lipid
 T71	Modifier 665 672	glucose
-T72	Or 680 683	and
 T73	Stability 655 664	influence
 T74	Assertion 644 654	apparently
 T24	Drug 745 750	drugs
@@ -162,14 +147,13 @@ T105	Condition-Name 958 963	tumor
 T106	Drug 964 969	drugs
 T108	Drug 978 994	cyclophosphamide
 T109	Drug-Name 978 994	cyclophosphamide
-T110	Or 860 862	or
 A1	Eq-Operator-Value T13 GTEQ
 A2	Eq-Temporal-Period-Value T17 past
 A4	Eq-Temporal-Period-Value T21 past
 A5	Eq-Temporal-Period-Value T23 past
 A3	Eq-Operator-Value T40 GT
 A7	Stability-Value T48 stable
-A9	Observation-Type-Value T63 lab
+A9	Observation-Type-Value E36 lab
 A10	Stability-Value T73 change
 A11	Assertion-Type-Value E43 possible
 A6	Stability-Value T76 change
@@ -193,3 +177,16 @@ R10	Equivalent-To Arg1:E50 Arg2:T92
 R11	Treatment-For Arg1:E51 Arg2:E9
 R12	Treatment-For Arg1:E55 Arg2:E54
 R13	Example-Of Arg1:E56 Arg2:E55
+R14	Or Arg1:E2 Arg2:E6
+R15	And Arg1:E25 Arg2:E24
+R16	Or Arg1:E1 Arg2:E27
+R17	Or Arg1:E30 Arg2:E31
+R18	Or Arg1:E3 Arg2:E7
+R19	Or Arg1:E7 Arg2:E5
+R20	Or Arg1:E40 Arg2:E39
+R21	Or Arg1:E47 Arg2:E49
+R22	Or Arg1:E31 Arg2:E3
+R23	Or Arg1:E41 Arg2:E40
+R24	Or Arg1:E45 Arg2:E46
+R25	Or Arg1:E51 Arg2:E52
+R26	Or Arg1:E52 Arg2:E53

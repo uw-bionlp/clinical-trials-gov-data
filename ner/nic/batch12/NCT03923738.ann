@@ -4,14 +4,12 @@ E3	Drug:T8 Name:T14 Dose:E6
 E4	Eq-Comparison:T15 Temporal-Period:T16
 E5	Assertion:T17 Asserted:E3
 E6	Eq-Comparison:T18 Value:T9 Per:T7 Unit:T19 Unit2:T20
-E8	Drug:T21 
+E8	Drug:T21
 E9	Exception:T23 From:E8 Except:E10
 E10	Drug:T24 Name:T22 Temporality:E2
 E11	Eq-Comparison:T25 Value:T11 Unit:T26
-E12	Or:T27 Arg:E2 Arg2:E11
-E13	Study:T28 
-E14	Temporal-Connection:T29 Arg:E11 Arg2:E13
-E15	Condition:T30 Name:T31 Severity:T33
+E13	Study:T28
+E15	Condition:T30 Severity:T33
 E16	Modifier:T32 Modifies:E15
 E17	Condition:T34 Name:T35 Temporality:E22 Temporality2:E23
 E18	Modifier:T36 Modifies:T35
@@ -20,14 +18,13 @@ E20	Modifier:T38 Modifies:T35
 E21	Modifier:T39 Modifies:T35
 E22	Eq-Comparison:T40 Temporal-Period:T41
 E23	Eq-Comparison:T43 Temporal-Period:T42
-E24	Or:T44 Arg:E23 Arg2:E22
 E25	Condition:T45 Name:T46 Temporality:E26
 E26	Eq-Comparison:T47 Temporal-Period:T48
 E27	Drug:T49 Temporality:E28
 E28	Eq-Comparison:T50 Operator:T4 Temporal-Unit:T6 Value:T12 Temporal-Period:T55
 E7	Procedure:T51 Temporality:E4
 E29	Study:T52 Study-Of:E8
-E30	Procedure:T53 
+E30	Procedure:T53
 E31	Other:T54 Is-Other:E29
 T1	Condition 38 41	GCA
 T2	Condition-Name 38 41	GCA
@@ -54,9 +51,7 @@ T23	Exception 259 266	besides
 T24	Drug 267 270	TCZ
 T25	Eq-Comparison 291 303	5 half-lives
 T26	Eq-Unit 293 303	half-lives
-T27	Or 288 290	or
 T28	Study 363 372	screening
-T29	Temporal-Connection 354 359	prior
 T30	Condition 412 419	disease
 T31	Condition-Name 412 419	disease
 T32	Modifier 399 411	uncontrolled
@@ -71,7 +66,6 @@ T40	Eq-Comparison 450 460	history of
 T41	Eq-Temporal-Period 450 460	history of
 T42	Eq-Temporal-Period 432 446	active current
 T43	Eq-Comparison 432 446	active current
-T44	Or 447 449	or
 T45	Condition 545 547	TB
 T46	Condition-Name 545 547	TB
 T47	Eq-Comparison 538 544	Active
@@ -90,7 +84,6 @@ A3	Eq-Temporal-Unit-Value T5 week
 A4	Eq-Temporal-Unit-Value T6 year
 A5	Eq-Temporal-Period-Value T16 present
 A6	Assertion-Type-Value E5 hypothetical
-A7	Temporal-Connection-Type-Value E14 before
 A8	Severity-Value T33 severe
 A9	Eq-Temporal-Period-Value T41 past
 A10	Eq-Temporal-Period-Value T42 present
@@ -100,3 +93,9 @@ R1	Equivalent-To Arg1:E11 Arg2:E2
 R2	Treatment-For Arg1:E27 Arg2:E25
 R3	Using Arg1:E7 Arg2:E3
 R4	Using Arg1:E30 Arg2:E8
+R5	Or Arg1:E2 Arg2:E11
+R6	Before Arg1:E11 Arg2:E13
+R7	Or Arg1:E23 Arg2:E22
+R8	Or Arg1:E19 Arg2:E18
+R9	Or Arg1:E20 Arg2:E19
+R10	Or Arg1:E21 Arg2:E20

@@ -1,0 +1,106 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Value:T29 Operator:T30 Value:T31 Temporal-Unit:T32
+E3	Observation:T3 Name:T33 Eq-Comparison:E4
+E4	Eq-Comparison:T4 Value:T34 Operator:T35 Value:T36
+E5	Observation:T5 Name:T37
+E6	Modifier:T6 Modifies:T38
+E7	Procedure:T7 Name:T38
+E8	Procedure:T8 Name:T39
+E9	Age:T9 Eq-Comparison:E10 Eq-Comparison2:E12
+E10	Eq-Comparison:T10 Operator:T40 Value:T41
+E11	Or:T11 Arg:E10 Arg2:E12
+E12	Eq-Comparison:T12 Operator:T42 Value:T43
+E13	Observation:T13 Name:T44
+E15	Eq-Comparison:T15 Value:T45 Operator:T46 Value:T47
+E16	Allergy:T16 Name:E17
+E17	Drug:T17 Name:T48
+E18	Modifier:T18 Modifies:T49
+E19	Condition:T19 Name:T49
+E20	Or:T20 Arg:E19 Arg2:E21
+E21	Condition:T21 Name:T50
+E22	Modifier:T22 Modifies:T51 Modifies2:T50
+E23	Procedure:T23 Name:T51
+E24	Condition:T24 Name:T52
+E25	Observation:T25 Name:T53
+E26	Observation:T26 Name:T54 Eq-Comparison:E27
+E27	Eq-Comparison:T27 Operator:T55 Value:T56 Unit:T57 Per:T58
+E28	Condition:T28 Name:T59
+E14	Observation:T14 Name:T60 Eq-Comparison:E15
+E29	Modifier:T61 Modifies:T59
+T1	Age 35 38	age
+T2	Eq-Comparison 44 58	18 to 60 years
+T3	Observation 85 88	ASA
+T4	Eq-Comparison 89 93	I-II
+T5	Observation 102 139	American Society of Anesthesiologists
+T6	Modifier 147 171	Elective unilateral open
+T7	Procedure 172 194	inguinal hernia repair
+T8	Procedure 207 224	spinal anesthesia
+T9	Age 250 253	age
+T10	Eq-Comparison 254 258	< 18
+T11	Or 259 261	or
+T12	Eq-Comparison 262 266	> 60
+T13	Observation 273 309	American society of anesthesiologist
+T15	Eq-Comparison 315 327	class III-IV
+T16	Allergy 340 347	allergy
+T17	Drug 351 380	amino amide local anesthetics
+T18	Modifier 387 391	skin
+T19	Condition 392 401	infection
+T20	Or 402 405	and
+T21	Condition 406 414	diseases
+T22	Modifier 418 422	site
+T23	Procedure 426 435	injection
+T24	Condition 442 463	coagulation disorders
+T25	Observation 484 499	body mass index
+T26	Observation 501 504	BMI
+T27	Eq-Comparison 506 516	> 35 kg/m2
+T28	Condition 531 538	hernias
+T29	Eq-Value 44 46	18
+T30	Eq-Operator 47 49	to
+T31	Eq-Value 50 52	60
+T32	Eq-Temporal-Unit 53 58	years
+T33	Observation-Name 85 88	ASA
+T34	Eq-Value 89 90	I
+T35	Eq-Operator 90 91	-
+T36	Eq-Value 91 93	II
+T37	Observation-Name 102 139	American Society of Anesthesiologists
+T38	Procedure-Name 172 194	inguinal hernia repair
+T39	Procedure-Name 207 224	spinal anesthesia
+T40	Eq-Operator 254 255	<
+T41	Eq-Value 256 258	18
+T42	Eq-Operator 262 263	>
+T43	Eq-Value 264 266	60
+T44	Observation-Name 273 309	American society of anesthesiologist
+T45	Eq-Value 321 324	III
+T46	Eq-Operator 324 325	-
+T47	Eq-Value 325 327	IV
+T48	Drug-Name 351 380	amino amide local anesthetics
+T49	Condition-Name 392 401	infection
+T50	Condition-Name 406 414	diseases
+T51	Procedure-Name 426 435	injection
+T52	Condition-Name 442 463	coagulation disorders
+T53	Observation-Name 484 499	body mass index
+T54	Observation-Name 501 504	BMI
+T55	Eq-Operator 506 507	>
+T56	Eq-Value 508 510	35
+T57	Eq-Unit 511 513	kg
+T58	Eq-Unit 514 516	m2
+T59	Condition-Name 531 538	hernias
+T14	Observation 311 314	ASA
+T60	Observation-Name 311 314	ASA
+T61	Modifier 523 530	scrotal
+A1	Eq-Operator-Value T30 BETWEEN
+A2	Eq-Temporal-Unit-Value T32 year
+A3	Eq-Operator-Value T35 BETWEEN
+A4	Eq-Operator-Value T40 LT
+A5	Eq-Operator-Value T42 GT
+A6	Eq-Operator-Value T46 BETWEEN
+A7	Observation-Type-Value T53 vital
+A8	Observation-Type-Value T54 vital
+A9	Eq-Operator-Value T55 GT
+A10	Observation-Type-Value T33 clinical-score
+A11	Observation-Type-Value T37 clinical-score
+A12	Observation-Type-Value T44 clinical-score
+A13	Observation-Type-Value T60 clinical-score
+R1	Abbrev-Of Arg1:E3 Arg2:E5
+R2	Abbrev-Of Arg1:E14 Arg2:E13
+R3	Abbrev-Of Arg1:E26 Arg2:E25

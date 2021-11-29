@@ -1,20 +1,16 @@
 E2	Condition:T2 Name:T3
 E4	Condition:T4 Name:T5
 E8	Condition:T8 Name:T9
-E1	Encounter:T12 Type:T13 Location:T10 Location2:T11
-E3	Provider:T14 Type:T15
+E1	Encounter:T12 Location:T10 Location2:T11
+E3	Provider:T14
 E5	Exception:T16 From:T10 Except:E3
 E7	Drug:T17 Name:T18 Temporality:E9
 E9	Eq-Comparison:T19 Temporal-Period:T20
 E10	Drug:T21 Name:T22
-E11	Encounter:T23 Type:T24
-E12	Temporal-Connection:T25 Arg:E10 Arg2:E11
-E13	Or:T26 Arg:E7 Arg2:E10
+E11	Encounter:T23
 E14	Negation:T27 Negates:T7
-E15	Or:T30 Arg:T28 Arg2:T29
-E16	Encounter:T31 Type:T32 Location:T28 Location2:T29
-E17	Encounter:T33 Type:T34
-E18	Temporal-Connection:T35 Arg2:E17 Arg:E6
+E16	Encounter:T31 Location:T28 Location2:T29
+E17	Encounter:T33
 E6	Death:T6
 T1	Life-Stage-And-Gender 25 30	Adult
 T2	Condition 280 305	graft versus host disease
@@ -26,9 +22,7 @@ T9	Condition-Name 307 311	GVHD
 T10	Location 51 87	Vanderbilt University Medical Center
 T11	Location 89 93	VUMC
 T12	Encounter 39 47	admitted
-T13	Encounter-Type 39 47	admitted
 T14	Provider 106 122	surgery services
-T15	Provider-Type 106 113	surgery
 T16	Exception 96 105	excluding
 T17	Drug 134 153	long acting inhaler
 T18	Drug-Name 134 153	long acting inhaler
@@ -37,31 +31,26 @@ T20	Eq-Temporal-Period 129 131	on
 T21	Drug 170 189	long acting inhaler
 T22	Drug-Name 170 189	long acting inhaler
 T23	Encounter 197 206	admission
-T24	Encounter-Type 197 206	admission
-T25	Temporal-Connection 190 196	during
-T26	Or 154 156	or
 T27	Negation 318 320	no
 T28	Location 364 388	post-acute care facility
 T29	Location 392 409	inpatient hospice
-T30	Or 389 391	or
 T31	Encounter 347 356	discharge
-T32	Encounter-Type 347 356	discharge
 T33	Encounter 428 443	hospitalization
-T34	Encounter-Type 428 443	hospitalization
-T35	Temporal-Connection 421 427	during
 T6	Death 415 420	death
 T7	Insurance 332 341	insurance
 A1	Life-Stage-And-Gender-Type T1 adult
 A2	Location-Value T10 hospital
 A3	Location-Value T11 hospital
-A4	Encounter-Type-Value T13 inpatient
+A4	Encounter-Type-Value E1 inpatient
 A5	Eq-Temporal-Period-Value T20 present
-A6	Encounter-Type-Value T24 inpatient
-A7	Temporal-Connection-Type-Value E12 during
+A6	Encounter-Type-Value E11 inpatient
 A8	Location-Value T28 clinic
 A9	Location-Value T29 hospital
-A10	Encounter-Type-Value T32 discharge
-A11	Encounter-Type-Value T34 inpatient
-A12	Temporal-Connection-Type-Value E18 during
+A10	Encounter-Type-Value E16 discharge
+A11	Encounter-Type-Value E17 inpatient
 R1	Abbrev-Of Arg1:T11 Arg2:T10
 R2	Abbrev-Of Arg1:E8 Arg2:E2
+R3	During Arg1:E10 Arg2:E11
+R4	Or Arg1:E7 Arg2:E10
+R5	Or Arg1:T28 Arg2:T29
+R6	During Arg1:E6 Arg2:E17

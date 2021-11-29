@@ -4,26 +4,24 @@ E6	Procedure:T6 Name:T7 Temporality:E23 Acuteness:T41
 E8	Procedure:T8 Name:T9 Temporality:E24
 E10	Condition:T10 Name:T11
 E12	Condition:T12 Name:T13
-E19	Age:T22 Eq-Comparison:E21
+E19	Age:T22 Numeric-Filter:E21
 E20	Eq-Comparison:T34 Operator:T20 Value:T33 Temporal-Period:T68 Temporal-Unit:T69
 E21	Eq-Comparison:T35 Operator:T23 Value:T25 Value2:T26 Temporal-Unit:T21
 E22	Eq-Comparison:T36 Operator:T24 Value:T27 Value2:T28 Unit:T1 Per:T16 Per2:T17
 E23	Eq-Comparison:T37 Temporal-Period:T38
 E24	Eq-Comparison:T39 Temporal-Period:T40
 E26	Eq-Comparison:T43 Temporal-Period:T44
-E1	Observation:T45 Name:T46 Eq-Comparison:E22
+E1	Observation:T45 Name:T46 Numeric-Filter:E22
 E5	Condition:T14 Name:T15
 E7	Condition:T18 Name:T19
-E11	Observation:T42 Name:T48 Eq-Comparison:E13
+E11	Observation:T42 Name:T48 Numeric-Filter:E13
 E13	Eq-Comparison:T49 Unit:T50 Value:T29 Value2:T30
-E14	And:T51 Arg:E12 Arg2:E11
-E15	Condition:T52 Name:T53 Stage:E16
+E15	Observation:T52 Name:T53 Stage:E16
 E16	Eq-Comparison:T54 Unit:T55 Value:T31 Value2:T32
 E17	Condition:T56 Name:T57
 E18	Condition:T59 Name:T60
-E25	Condition:T61 Name:T62
-E27	Condition:T63 Name:T64
-E28	Or:T65 Arg:E25 Arg2:E27
+E25	Observation:T61 Name:T62
+E27	Observation:T63 Name:T64
 E29	Drug:T66 Name:T67 Temporality:E26 Temporality2:E20
 E30	Modifier:T70 Modifies:T72
 E31	Procedure:T71 Name:T72
@@ -76,9 +74,8 @@ T42	Observation 401 405	NYHA
 T48	Observation-Name 401 405	NYHA
 T49	Eq-Comparison 406 418	class 3 or 4
 T50	Eq-Unit 406 411	class
-T51	And 396 400	with
-T52	Condition 447 457	Child-pugh
-T53	Condition-Name 447 457	Child-pugh
+T52	Observation 447 457	Child-pugh
+T53	Observation-Name 447 457	Child-pugh
 T54	Eq-Comparison 458 470	class 2 or 3
 T55	Eq-Unit 458 463	class
 T56	Condition 477 485	Pregnant
@@ -86,11 +83,10 @@ T57	Condition-Name 477 485	Pregnant
 T58	Life-Stage-And-Gender 486 491	women
 T59	Condition 497 510	Single kidney
 T60	Condition-Name 497 510	Single kidney
-T61	Condition 518 524	trauma
-T62	Condition-Name 518 524	trauma
-T63	Condition 528 536	donation
-T64	Condition-Name 528 536	donation
-T65	Or 525 527	or
+T61	Observation 518 524	trauma
+T62	Observation-Name 518 524	trauma
+T63	Observation 528 536	donation
+T64	Observation-Name 528 536	donation
 T66	Drug 564 587	immunosuppressive agent
 T67	Drug-Name 564 587	immunosuppressive agent
 T68	Eq-Temporal-Period 599 603	past
@@ -105,12 +101,12 @@ A4	Eq-Operator-Value T24 BETWEEN
 A5	Eq-Temporal-Period-Value T38 past
 A6	Eq-Temporal-Period-Value T40 past
 A8	Eq-Temporal-Period-Value T44 past
-A9	Observation-Type-Value T46 lab
+A9	Observation-Type-Value E1 lab
 A10	Eq-Temporal-Unit-Value T16 minute
 A7	Life-Stage-And-Gender-Type T58 female
 A11	Eq-Temporal-Period-Value T68 past
 A12	Eq-Temporal-Unit-Value T69 year
-A13	Observation-Type-Value T48 clinical-score
+A13	Observation-Type-Value E11 clinical-score
 A14	Acuteness-Type-Value T41 chronic
 R1	Abbrev-Of Arg1:E7 Arg2:E5
 R2	Equivalent-To Arg1:E15 Arg2:E10
@@ -118,3 +114,5 @@ R3	If-Then Arg1:T58 Arg2:E17
 R4	Caused-By Arg1:E18 Arg2:E25
 R5	Caused-By Arg1:E18 Arg2:E27
 R6	Found-By Arg1:E4 Arg2:E31
+R7	And Arg1:E12 Arg2:E11
+R8	Or Arg1:E25 Arg2:E27

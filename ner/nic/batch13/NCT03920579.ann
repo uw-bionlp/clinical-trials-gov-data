@@ -1,35 +1,29 @@
 E1	Observation:T1 Name:T2
-E3	Observation:T3 Name:T4 Eq-Comparison:E25 Eq-Comparison2:E26
+E3	Observation:T3 Name:T4 Numeric-Filter:E25 Numeric-Filter:E26
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12 Temporality:E53
 E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
-E20	Age:T29 Eq-Comparison:E22
+E20	Age:T29 Numeric-Filter:E22
 E22	Eq-Comparison:T36 Operator:T21 Value:T31 Temporal-Unit:T30 Operator2:T32 Value2:T26 Operator3:T22
 E24	Eq-Comparison:T38 Operator:T23 Unit:T27 Value:T33
 E25	Eq-Comparison:T39 Operator:T24 Value:T34
 E26	Eq-Comparison:T40 Operator:T25 Value:T35 Unit:T28 Per:T45
 E2	Condition:T41 Name:T42
-E4	Observation:T37 Name:T43 Eq-Comparison:E24
-E6	And:T44 Arg:E25 Arg2:E26
+E4	Observation:T37 Name:T43 Numeric-Filter:E24
 E8	Negation:T46 Negates:E5
-E10	Or:T47 Arg:E5 Arg2:E7
-E12	Procedure:T48 
+E12	Procedure:T48
 E14	Assertion:T49 Asserted:E12
 E18	Condition:T50 Name:T51
 E16	Assertion:T52 Asserted:E18
 E21	Modifier:T53 Modifies:E18
-E27	Or:T55 Arg2:E21 Arg:E16
 E28	Negation:T56 Negates:E18
-E29	And:T57 Arg:E12 Arg2:E28
-E30	Study:T58 
+E30	Study:T58
 E31	Observation:T59 Name:T60
 E32	Observation:T61 Name:T62
-E33	And:T63 Arg:E32 Arg2:E31
 E34	Assertion:T64 Asserted:E30
-E35	Temporal-Connection:T65 Arg:E31 Arg2:E30
 E17	Modifier:T17 Modifies:T12
 E36	Modifier:T18 Modifies:T12
 E37	Modifier:T66 Modifies:T12
@@ -40,14 +34,12 @@ E41	Modifier:T70 Modifies:T12
 E42	Modifier:T71 Modifies:T12
 E43	Modifier:T72 Modifies:T12
 E44	Modifier:T73 Modifies:T12
-E45	Or:T74 Arg:E43 Arg2:E44
 E46	Drug:T75 Stability:T54
 E47	Modifier:T76 Modifies:E46
 E48	Modifier:T77 Modifies:E46
 E49	Modifier:T78 Modifies:E46
 E50	Modifier:T79 Modifies:E46
 E19	Condition:T19 Name:T20
-E52	Or:T81 Arg:E15 Arg2:E9
 E23	Assertion:T80 Asserted:T54
 E53	Eq-Comparison:T82 Temporal-Period:T83
 T1	Observation 116 131	body mass index
@@ -89,27 +81,21 @@ T30	Eq-Temporal-Unit 69 74	years
 T32	Eq-Operator 61 64	and
 T37	Observation 84 90	Weight
 T43	Observation-Name 84 90	Weight
-T44	And 147 150	and
 T45	Eq-Unit 161 163	m2
 T46	Negation 184 186	no
-T47	Or 214 216	or
 T48	Procedure 243 252	treatment
 T49	Assertion 233 242	requiring
 T50	Condition 269 281	pathological
 T51	Condition-Name 269 281	pathological
 T52	Assertion 282 290	symptoms
 T53	Modifier 294 302	findings
-T55	Or 291 293	or
 T56	Negation 266 268	no
-T57	And 253 256	and
 T58	Study 407 416	screening
 T59	Observation 388 391	ECG
 T60	Observation-Name 388 391	ECG
 T61	Observation 373 383	laboratory
 T62	Observation-Name 373 383	laboratory
-T63	And 384 387	and
 T64	Assertion 335 343	eligible
-T65	Temporal-Connection 400 406	during
 T17	Modifier 644 657	hepatobiliary
 T18	Modifier 659 664	renal
 T66	Modifier 666 680	cardiovascular
@@ -120,7 +106,6 @@ T70	Modifier 724 737	hematological
 T71	Modifier 739 749	neurologic
 T72	Modifier 751 762	psychiatric
 T73	Modifier 766 781	musculoskeletal
-T74	Or 763 765	or
 T75	Drug 860 864	drug
 T76	Modifier 802 812	absorption
 T77	Modifier 814 826	distribution
@@ -128,13 +113,12 @@ T78	Modifier 828 838	metabolism
 T79	Modifier 843 852	excretion
 T19	Condition 870 886	Genetic problems
 T20	Condition-Name 870 886	Genetic problems
-T81	Or 942 944	or
 T54	Stability 792 801	affecting
 T80	Assertion 792 801	affecting
 T82	Eq-Comparison 621 628	History
 T83	Eq-Temporal-Period 621 628	History
-A1	Observation-Type-Value T2 vital
-A2	Observation-Type-Value T4 vital
+A1	Observation-Type-Value E1 vital
+A2	Observation-Type-Value E3 vital
 A3	Eq-Operator-Value T21 GTEQ
 A5	Eq-Operator-Value T23 GTEQ
 A6	Eq-Operator-Value T24 GTEQ
@@ -142,13 +126,12 @@ A7	Eq-Operator-Value T25 LTEQ
 A4	Eq-Operator-Value T22 LTEQ
 A8	Eq-Temporal-Unit-Value T30 year
 A9	Eq-Operator-Value T32 BETWEEN
-A10	Observation-Type-Value T43 vital
+A10	Observation-Type-Value E4 vital
 A11	Assertion-Type-Value E14 hypothetical
 A12	Assertion-Type-Value E16 possible
-A13	Observation-Type-Value T60 measurement
-A14	Observation-Type-Value T62 lab
+A13	Observation-Type-Value E31 measurement
+A14	Observation-Type-Value E32 lab
 A15	Assertion-Type-Value E34 hypothetical
-A16	Temporal-Connection-Type-Value E35 during
 A17	Stability-Value T54 change
 A18	Assertion-Type-Value E23 hypothetical
 A19	Eq-Temporal-Period-Value T83 past
@@ -158,3 +141,22 @@ R3	Example-Of Arg1:E13 Arg2:E19
 R4	Example-Of Arg1:E15 Arg2:E19
 R5	Example-Of Arg1:E9 Arg2:E19
 R6	Caused-By Arg1:T54 Arg2:E11
+R7	And Arg1:E25 Arg2:E26
+R8	Or Arg1:E5 Arg2:E7
+R9	Or Arg1:E16 Arg2:E21
+R10	And Arg1:E12 Arg2:E28
+R11	And Arg1:E32 Arg2:E31
+R12	During Arg1:E31 Arg2:E30
+R13	Or Arg1:E43 Arg2:E44
+R14	Or Arg1:E15 Arg2:E9
+R15	Or Arg1:E13 Arg2:E15
+R16	Or Arg1:E17 Arg2:E36
+R17	Or Arg1:E36 Arg2:E37
+R18	Or Arg1:E37 Arg2:E38
+R19	Or Arg1:E38 Arg2:E39
+R20	Or Arg1:E39 Arg2:E40
+R21	Or Arg1:E40 Arg2:E41
+R22	Or Arg1:E41 Arg2:E42
+R23	Or Arg1:E42 Arg2:E43
+R24	Or Arg1:E47 Arg2:E48
+R25	Or Arg1:E48 Arg2:E49

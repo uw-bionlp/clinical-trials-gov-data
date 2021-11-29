@@ -1,6 +1,6 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4 Acuteness:T108
-E5	Observation:T5 Name:T6 Polarity:T116 Eq-Comparison:E21
+E5	Observation:T5 Name:T6 Polarity:T116 Numeric-Filter:E21
 E7	Procedure:T7 Name:T8 Stability:T106 Temporality:E19
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
@@ -15,32 +15,27 @@ E20	Eq-Comparison:T49 Operator:T22 Value:T40 Unit:T114 Per:T115
 E21	Eq-Comparison:T50 Operator:T23 Value:T41 Temporal-Unit:T117 Per:T118
 E22	Eq-Comparison:T51 Operator:T24 Value:T42 Value2:T128 Unit:T28
 E23	Eq-Comparison:T52 Operator:T29 Value:T30 Value2:T31 Unit:T55 Per:T56
-E2	Observation:T53 Name:T54 Eq-Comparison:E23
-E4	Observation:T57 Name:T58 Eq-Comparison:E14
-E6	Or:T61 Arg:T60 Arg2:T62
-E8	Observation:T63 Name:T64 Eq-Comparison:E15
-E10	Or:T69 Arg:T68 Arg2:T70
-E12	Observation:T71 Name:T72 Eq-Comparison:E16
-E24	Observation:T75 Name:T76 Eq-Comparison:E17
-E25	Observation:T78 Name:T79 Eq-Comparison:E18
-E26	Observation:T82 Name:T83 Stability:T84 Eq-Comparison:E27 Temporality:E28
+E2	Observation:T53 Name:T54 Numeric-Filter:E23
+E4	Observation:T57 Name:T58 Numeric-Filter:E14
+E8	Observation:T63 Name:T64 Numeric-Filter:E15
+E12	Observation:T71 Name:T72 Numeric-Filter:E16
+E24	Observation:T75 Name:T76 Numeric-Filter:E17
+E25	Observation:T78 Name:T79 Numeric-Filter:E18
+E26	Observation:T82 Name:T83 Stability:T84 Numeric-Filter:E27 Temporality:E28
 E27	Eq-Comparison:T85 Operator:T86 Value:T87 Unit:T27
 E28	Eq-Comparison:T88 Temporal-Period:T89 Value:T37 Temporal-Unit:T90
 E29	Condition:T91 Name:T92
 E30	Allergy:T93 Name:T94
-E31	Or:T95 Arg:E30 Arg2:E9
 E32	Drug:T96 Name:T97 Temporality:E33 Temporality2:E36
 E33	Eq-Comparison:T98 Temporal-Period:T99
 E34	Drug:T100 Name:T101 Temporality:E36
-E35	Or:T102 Arg:E32 Arg2:E34
 E36	Eq-Comparison:T103 Operator:T20 Temporal-Period:T104 Value:T38 Temporal-Unit:T105
-E38	Condition:T109 Name:T110
-E39	Observation:T111 Name:T112 Polarity:T113 Eq-Comparison:E20
+E38	Observation:T109 Name:T110
+E39	Observation:T111 Name:T112 Polarity:T113 Numeric-Filter:E20
 E40	Eq-Comparison:T119 Temporal-Period:T120
 E41	Drug:T121 Name:T122 Temporality:E40
 E42	Drug:T123 Name:T124 Temporality:E40
-E43	Or:T125 Arg:E41 Arg2:E42
-E44	Observation:T126 Name:T127 Eq-Comparison:E22
+E44	Observation:T126 Name:T127 Numeric-Filter:E22
 T1	Condition 464 490	gastrointestinal disorders
 T2	Condition-Name 464 490	gastrointestinal disorders
 T3	Condition 504 512	diarrhea
@@ -101,7 +96,6 @@ T57	Observation 58 65	Waist C
 T58	Observation-Name 58 65	Waist C
 T59	Eq-Value 70 73	102
 T60	Life-Stage-And-Gender 78 79	F
-T61	Or 79 80	/
 T62	Life-Stage-And-Gender 80 81	M
 T63	Observation 87 98	Serum HDL-C
 T64	Observation-Name 87 98	Serum HDL-C
@@ -109,7 +103,6 @@ T65	Eq-Value 104 106	40
 T66	Eq-Unit 107 109	mg
 T67	Eq-Unit 110 112	dl
 T68	Life-Stage-And-Gender 114 115	F
-T69	Or 115 116	/
 T70	Life-Stage-And-Gender 116 117	M
 T71	Observation 123 131	Serum TG
 T72	Observation-Name 123 131	Serum TG
@@ -135,22 +128,20 @@ T91	Condition 269 279	Vegetarian
 T92	Condition-Name 269 279	Vegetarian
 T93	Allergy 290 299	allergies
 T94	Allergy-Name 285 289	Food
-T95	Or 300 302	or
 T96	Drug 336 355	dietary supplements
 T97	Drug-Name 336 355	dietary supplements
 T98	Eq-Comparison 328 332	User
 T99	Eq-Temporal-Period 328 332	User
 T100	Drug 359 369	probiotics
 T101	Drug-Name 359 369	probiotics
-T102	Or 356 358	or
 T103	Eq-Comparison 371 387	within past 1-mo
 T104	Eq-Temporal-Period 378 382	past
 T105	Eq-Temporal-Unit 385 387	mo
 T106	Stability 416 423	changes
 T107	Eq-Temporal-Unit 451 453	mo
 T108	Acuteness 496 503	Chronic
-T109	Condition 518 524	Smoker
-T110	Condition-Name 518 524	Smoker
+T109	Observation 518 524	Smoker
+T110	Observation-Name 518 524	Smoker
 T111	Observation 537 544	alcohol
 T112	Observation-Name 537 544	alcohol
 T113	Polarity 530 536	Excess
@@ -165,7 +156,6 @@ T121	Drug 610 620	antibiotic
 T122	Drug-Name 610 620	antibiotic
 T123	Drug 624 647	anti-inflammatory agent
 T124	Drug-Name 624 647	anti-inflammatory agent
-T125	Or 621 623	or
 T126	Observation 657 659	BP
 T127	Observation-Name 657 659	BP
 T128	Eq-Value 665 667	90
@@ -180,17 +170,17 @@ A8	Eq-Operator-Value T22 GT
 A9	Eq-Operator-Value T23 GT
 A10	Eq-Operator-Value T24 GT
 A11	Eq-Operator-Value T29 BETWEEN
-A12	Observation-Type-Value T54 lab
-A13	Observation-Type-Value T58 measurement
+A12	Observation-Type-Value E2 lab
+A13	Observation-Type-Value E4 measurement
 A14	Life-Stage-And-Gender-Type T60 female
 A15	Life-Stage-And-Gender-Type T62 male
-A16	Observation-Type-Value T64 lab
+A16	Observation-Type-Value E8 lab
 A17	Life-Stage-And-Gender-Type T68 female
 A18	Life-Stage-And-Gender-Type T70 male
-A19	Observation-Type-Value T72 lab
-A20	Observation-Type-Value T76 vital
-A21	Observation-Type-Value T79 lab
-A22	Observation-Type-Value T83 vital
+A19	Observation-Type-Value E12 lab
+A20	Observation-Type-Value E24 vital
+A21	Observation-Type-Value E25 lab
+A22	Observation-Type-Value E26 vital
 A23	Stability-Value T84 change
 A24	Eq-Operator-Value T86 PLUS-MINUS
 A25	Eq-Temporal-Period-Value T89 past
@@ -200,13 +190,19 @@ A28	Eq-Temporal-Period-Value T104 past
 A29	Eq-Temporal-Unit-Value T105 month
 A30	Stability-Value T106 change
 A31	Eq-Temporal-Unit-Value T107 month
-A32	Observation-Type-Value T112 social-habit
+A32	Observation-Type-Value E39 social-habit
 A33	Polarity-Value T113 high
 A34	Eq-Temporal-Unit-Value T115 day
 A35	Polarity-Value T116 high
-A36	Observation-Type-Value T6 social-habit
+A36	Observation-Type-Value E5 social-habit
 A37	Eq-Temporal-Unit-Value T117 hour
 A38	Eq-Temporal-Unit-Value T118 week
 A39	Eq-Temporal-Period-Value T120 recent
-A40	Observation-Type-Value T127 vital
+A40	Observation-Type-Value E44 vital
 A41	Acuteness-Type-Value T108 chronic
+R1	Or Arg1:T60 Arg2:T62
+R2	Or Arg1:T68 Arg2:T70
+R3	Or Arg1:E30 Arg2:E9
+R4	Or Arg1:E32 Arg2:E34
+R5	Or Arg1:E41 Arg2:E42
+R6	Or Arg1:E11 Arg2:E13

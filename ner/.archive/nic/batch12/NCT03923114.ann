@@ -1,0 +1,147 @@
+E1	Procedure:T1 Name:T2
+E3	Procedure:T3 Name:T4
+E5	Condition:T5 Name:T6
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Condition:T15 Name:T16
+E17	Procedure:T17 Name:T18
+E19	Condition:T19 Name:T20
+E21	Condition:T21 Name:T22
+E22	Age:T31 Eq-Comparison:E25
+E23	Age:T32 Eq-Comparison:E26
+E24	Age:T33 Eq-Comparison:E28
+E25	Eq-Comparison:T42 Operator:T23 Temporal-Unit:T27 Value:T34
+E26	Eq-Comparison:T43 Operator:T24 Temporal-Unit:T28 Value:T37
+E27	Eq-Comparison:T44 Operator:T25 Temporal-Unit:T29 Value:T40
+E28	Eq-Comparison:T45 Operator:T26 Temporal-Unit:T30 Value:T41
+E2	Procedure:T35 Name:T36
+E4	Observation:T46 Name:T47
+E6	Observation:T48 Name:T49
+E8	Negation:T50 Negates:E6
+E10	Procedure:T38 Name:T39
+E12	Observation:T51 Name:T52
+E14	Observation:T53 Name:T54
+E16	Negation:T55 Negates:E14
+E18	Condition:T56 Name:T57 Temporality:E27
+E20	Assertion:T58 Asserted:E18
+E29	Or:T59 Arg:E15 Arg2:E20
+E30	Study:T60 
+E31	Temporal-Connection:T61 Arg:E27 Arg2:E30
+E32	Modifier:T62 Modifies:T22
+E33	Modifier:T63 Modifies:T22
+E34	Modifier:T64 Modifies:T22
+E35	Or:T65 Arg:E33 Arg2:E34
+E36	Modifier:T66 Modifies:T22
+E37	Modifier:T67 Modifies:T22
+E38	Procedure:T68 Name:T69
+E39	Or:T70 Arg:E38 Arg2:E17
+E40	Procedure:T71 Name:T72
+E41	Procedure:T73 Name:T74
+E42	Procedure:T75 Name:T76
+E43	Procedure:T77 Name:T78
+E44	Procedure:T79 Name:T80
+E45	Modifier:T81 Modifies:T6
+E46	Modifier:T82 Modifies:T76
+E47	Modifier:T83 Modifies:T8
+E48	Procedure:T84 
+T1	Procedure 862 880	bladder stimulator
+T2	Procedure-Name 862 880	bladder stimulator
+T3	Procedure 960 976	Cochlear implant
+T4	Procedure-Name 960 976	Cochlear implant
+T5	Condition 111 119	diabetes
+T6	Condition-Name 111 119	diabetes
+T7	Condition 302 310	diabetes
+T8	Condition-Name 302 310	diabetes
+T9	Condition 427 440	Liver disease
+T10	Condition-Name 427 440	Liver disease
+T11	Condition 446 459	Renal disease
+T12	Condition-Name 446 459	Renal disease
+T13	Condition 543 556	Breastfeeding
+T14	Condition-Name 543 556	Breastfeeding
+T15	Condition 465 474	Pregnancy
+T16	Condition-Name 465 474	Pregnancy
+T17	Procedure 778 787	pacemaker
+T18	Procedure-Name 778 787	pacemaker
+T19	Condition 581 599	Pituitary disorder
+T20	Condition-Name 581 599	Pituitary disorder
+T21	Condition 713 718	brain
+T22	Condition-Name 713 718	brain
+T23	Eq-Operator 63 64	≥
+T24	Eq-Operator 254 255	≥
+T25	Eq-Operator 506 512	within
+T26	Eq-Operator 566 567	<
+T27	Eq-Temporal-Unit 67 72	years
+T28	Eq-Temporal-Unit 258 263	years
+T29	Eq-Temporal-Unit 515 521	months
+T30	Eq-Temporal-Unit 570 575	years
+T31	Age 59 62	Age
+T32	Age 250 253	Age
+T33	Age 562 565	Age
+T34	Eq-Value 64 66	18
+T37	Eq-Value 255 257	18
+T40	Eq-Value 513 514	6
+T41	Eq-Value 567 569	18
+T42	Eq-Comparison 63 72	≥18 years
+T43	Eq-Comparison 254 263	≥18 years
+T44	Eq-Comparison 506 521	within 6 months
+T45	Eq-Comparison 566 575	<18 years
+T35	Procedure 152 169	GLP-1RA treatment
+T36	Procedure-Name 152 169	GLP-1RA treatment
+T46	Observation 44 52	response
+T47	Observation-Name 44 52	response
+T48	Observation 225 243	treatment response
+T49	Observation-Name 225 243	treatment response
+T50	Negation 217 224	without
+T38	Procedure 346 363	GLP-1RA treatment
+T39	Procedure-Name 346 363	GLP-1RA treatment
+T51	Observation 140 148	response
+T52	Observation-Name 140 148	response
+T53	Observation 334 342	response
+T54	Observation-Name 334 342	response
+T55	Negation 331 333	no
+T56	Condition 497 505	pregnant
+T57	Condition-Name 497 505	pregnant
+T58	Assertion 482 489	wish to
+T59	Or 475 477	or
+T60	Study 532 537	study
+T61	Temporal-Connection 522 527	after
+T62	Modifier 682 691	Fragments
+T63	Modifier 693 698	clips
+T64	Modifier 702 709	devices
+T65	Or 699 701	or
+T66	Modifier 720 724	eyes
+T67	Modifier 726 738	spinal canal
+T68	Procedure 749 774	Implantable defibrillator
+T69	Procedure-Name 749 774	Implantable defibrillator
+T70	Or 775 777	or
+T71	Procedure 845 860	Neurostimulator
+T72	Procedure-Name 845 860	Neurostimulator
+T73	Procedure 882 908	non-removable insulin pump
+T74	Procedure-Name 882 908	non-removable insulin pump
+T75	Procedure 919 940	Metal tissue-expander
+T76	Procedure-Name 919 940	Metal tissue-expander
+T77	Procedure 987 1019	Ossicular replacement prosthesis
+T78	Procedure-Name 987 1019	Ossicular replacement prosthesis
+T79	Procedure 806 834	Mandibular magnetic implants
+T80	Procedure-Name 806 834	Mandibular magnetic implants
+T81	Modifier 104 110	type 2
+T82	Modifier 944 949	chest
+T83	Modifier 295 301	type 2
+T84	Procedure 34 43	treatment
+A1	Eq-Operator-Value T23 GTEQ
+A2	Eq-Operator-Value T24 GTEQ
+A3	Eq-Operator-Value T25 LTEQ
+A4	Eq-Operator-Value T26 LT
+A5	Eq-Temporal-Unit-Value T27 year
+A6	Eq-Temporal-Unit-Value T28 year
+A7	Eq-Temporal-Unit-Value T29 month
+A8	Eq-Temporal-Unit-Value T30 year
+A9	Assertion-Type-Value E20 intention
+A10	Temporal-Connection-Type-Value E31 after
+R1	If-Then Arg1:E4 Arg2:E22
+R2	If-Then Arg1:E8 Arg2:E23
+R3	Caused-By Arg1:E12 Arg2:E2
+R4	Caused-By Arg1:E14 Arg2:E10
+R5	Caused-By Arg1:E4 Arg2:E48

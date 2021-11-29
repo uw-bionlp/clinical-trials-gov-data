@@ -5,20 +5,15 @@ E10	Procedure:T10 Name:T11
 E1	Eq-Comparison:T2 Operator:T21 Temporal-Unit:T18 Value:T19
 E2	Coreference:T7 Refers-To:E5 Severity:T22
 E6	Indication:T26 Indication-For:E10
-E9	Or:T27 Arg:E10 Arg2:E8
 E11	Condition:T12 Name:T13
 E12	Condition:T14 Name:T15
 E13	Condition:T16 Name:T17
-E14	Or:T28 Arg:E12 Arg2:E13
 E15	Condition:T29 Name:T30
 E16	Drug:T31
 E17	Modifier:T32 Modifies:T30
 E18	Modifier:T33 Modifies:T30
-E19	Or:T34 Arg:E17 Arg2:E16
 E20	Study:T35
 E21	Study:T36
-E22	Or:T37 Arg:E20 Arg2:E21
-E23	Temporal-Connection:T38 Arg:E15 Arg2:E20
 E24	Condition:T39 Name:T40 Temporality:E25 Temporality2:E27
 E25	Eq-Comparison:T41 Temporal-Period:T42
 E26	Drug:T20 Name:T43 Temporality:E28
@@ -42,24 +37,19 @@ T7	Coreference 254 261	disease
 T22	Severity 247 253	severe
 T23	Severity 235 243	Moderate
 T26	Indication 267 276	Candidate
-T27	Or 294 296	or
 T12	Condition 390 409	psoriatic arthritis
 T13	Condition-Name 390 409	psoriatic arthritis
 T14	Condition 411 434	erythrodermic psoriasis
 T15	Condition-Name 411 434	erythrodermic psoriasis
 T16	Condition 439 469	generalized pustular psoriasis
 T17	Condition-Name 439 469	generalized pustular psoriasis
-T28	Or 436 438	or
 T29	Condition 529 538	psoriasis
 T30	Condition-Name 529 538	psoriasis
 T31	Drug 516 520	drug
 T32	Modifier 504 511	inverse
 T33	Modifier 495 502	Guttate
-T34	Or 513 515	or
 T35	Study 542 551	Screening
 T36	Study 555 563	Baseline
-T37	Or 552 554	or
-T38	Temporal-Connection 539 541	at
 T39	Condition 587 596	infection
 T40	Condition-Name 587 596	infection
 T41	Eq-Comparison 580 586	recent
@@ -77,9 +67,15 @@ A2	Stability-Value T1 stable
 A3	Eq-Operator-Value T21 GTEQ
 A4	Severity-Value T22 severe
 A5	Severity-Value T23 severe
-A6	Temporal-Connection-Type-Value E23 during
 A7	Eq-Temporal-Period-Value T42 recent
 A8	Eq-Temporal-Period-Value T45 past
 A9	Eq-Temporal-Period-Value T47 past
 A10	Eq-Operator-Value T48 BETWEEN
 R1	Caused-By Arg1:E15 Arg2:E16
+R2	Or Arg1:E10 Arg2:E8
+R3	Or Arg1:E12 Arg2:E13
+R4	Or Arg1:E17 Arg2:E16
+R5	Or Arg1:E20 Arg2:E21
+R6	During Arg1:E15 Arg2:E20
+R7	Or Arg1:E11 Arg2:E12
+R8	Or Arg1:E18 Arg2:E17

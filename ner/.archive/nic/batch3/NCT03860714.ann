@@ -1,0 +1,93 @@
+E1	Negation:T1 Negates:E26
+E2	Procedure:T2 Name:T26
+E3	Age:T3 Eq-Comparison:E4
+E4	Eq-Comparison:T4 Operator:T27 Value:T28 Temporal-Unit:T29
+E6	Observation:T6 Name:T32 Eq-Comparison:E7
+E7	Eq-Comparison:T7 Operator:T33 Value:T34 Unit:T5
+E8	Observation:T8 Name:T30 Eq-Comparison:E9
+E9	Eq-Comparison:T9 Operator:T35 Value:T36 Unit:T37
+E10	Eq-Comparison:T10 Operator:T39 Value:T40 Unit:T51
+E11	Temporal-Connection:T11 Arg:E27 Arg2:E12
+E12	Condition:T12 Name:T41
+E13	Condition:T13 Name:T54 Stability:T42
+E14	Condition:T14 Name:T43
+E15	Or:T15 Arg:E14 Arg2:E16
+E19	Condition:T19 Name:T45 Severity:T17 Acuteness:T18
+E20	Or:T20 Arg:E19 Arg2:E21
+E21	Condition:T21 Name:T46
+E22	Modifier:T22 Modifies:T47
+E23	Or:T23 Arg:E22 Arg2:E24
+E24	Modifier:T24 Modifies:T47
+E25	Condition:T25 Name:T47 Severity:T55
+E26	Modifier:T48 Modifies:T26
+E5	Observation:T38 Name:T50 Eq-Comparison:E10
+E27	Procedure:T52 Name:T53
+E16	Condition:T16 Name:T44
+T1	Negation 25 28	Non
+T2	Procedure 37 44	surgery
+T3	Age 65 68	Age
+T4	Eq-Comparison 72 105	greater than or equal to 60 years
+T6	Observation 160 164	MMSE
+T7	Eq-Comparison 185 219	greater than or equal to 17 points
+T8	Observation 221 235	primary school
+T9	Eq-Comparison 239 273	greater than or equal to 20 points
+T10	Eq-Comparison 302 321	more than 24 points
+T11	Temporal-Connection 402 405	pre
+T12	Condition 415 423	delirium
+T13	Condition 458 470	hypertension
+T14	Condition 479 495	pheochromocytoma
+T15	Or 496 498	or
+T18	Acuteness 527 534	chronic
+T19	Condition 535 564	obstructive pulmonary disease
+T20	Or 565 567	or
+T21	Condition 568 592	congestive heart failure
+T22	Modifier 602 607	liver
+T23	Or 608 611	and
+T24	Modifier 612 618	kidney
+T25	Condition 619 630	dysfunction
+T26	Procedure-Name 37 44	surgery
+T27	Eq-Operator 72 93	greater than or equal
+T28	Eq-Value 97 99	60
+T29	Eq-Temporal-Unit 100 105	years
+T31	Language 146 153	chinese
+T32	Observation-Name 160 164	MMSE
+T33	Eq-Operator 185 206	greater than or equal
+T34	Eq-Value 210 212	17
+T35	Eq-Operator 239 260	greater than or equal
+T36	Eq-Value 264 266	20
+T37	Eq-Unit 267 273	points
+T39	Eq-Operator 302 311	more than
+T40	Eq-Value 312 314	24
+T41	Condition-Name 415 423	delirium
+T42	Stability 449 457	Unstable
+T43	Condition-Name 479 495	pheochromocytoma
+T44	Condition-Name 499 516	aortic dissection
+T45	Condition-Name 535 564	obstructive pulmonary disease
+T46	Condition-Name 568 592	congestive heart failure
+T47	Condition-Name 619 630	dysfunction
+T48	Modifier 29 36	cardiac
+T49	Ethnicity 112 127	Han Nationality
+T5	Eq-Unit 213 219	points
+T30	Observation-Name 221 235	primary school
+T38	Observation 275 298	higher secondary school
+T50	Observation-Name 275 298	higher secondary school
+T51	Eq-Unit 315 321	points
+T52	Procedure 405 414	operative
+T53	Procedure-Name 405 414	operative
+T54	Condition-Name 458 470	hypertension
+T16	Condition 499 516	aortic dissection
+T17	Severity 520 526	Severe
+T55	Severity 595 601	Severe
+A1	Temporal-Connection-Type-Value E11 before
+A2	Eq-Operator-Value T27 GTEQ
+A3	Eq-Temporal-Unit-Value T29 year
+A4	Observation-Type-Value T32 clinical-score
+A5	Eq-Operator-Value T33 GTEQ
+A6	Eq-Operator-Value T35 GTEQ
+A8	Eq-Operator-Value T39 GT
+A9	Stability-Value T42 change
+A7	Severity-Value T17 severe
+A10	Severity-Value T55 severe
+A11	Acuteness-Type-Value T18 chronic
+R1	Example-Of Arg1:E14 Arg2:E13
+R2	Example-Of Arg1:E16 Arg2:E13

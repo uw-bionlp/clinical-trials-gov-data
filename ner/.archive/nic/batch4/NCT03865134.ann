@@ -1,0 +1,104 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Operator:T27 Value:T28 Operator:T29 Value:T30 Temporal-Unit:T31
+E4	Observation:T4 Name:T32 Eq-Comparison:E5
+E5	Eq-Comparison:T5 Value:T33 Operator:T34 Value2:T35
+E6	Eq-Comparison:T6 Operator:T36 Temporal-Unit:T37
+E7	Condition:T7 Name:T38
+E9	Modifier:T9 Modifies:T40
+E10	Modifier:T10 Modifies:T40
+E11	Or:T11 Arg:E10 Arg2:E12
+E12	Negation:T12 Negates:E3
+E13	Condition:T13 Name:T40
+E14	Procedure:T14 Name:T41
+E15	Or:T15 Arg:E14 Arg2:E16
+E16	Procedure:T16 Name:T42
+E18	And:T18 Arg2:E28 Arg:T17
+E19	Procedure:T19 Name:T43
+E20	Procedure:T20 Name:T39
+E21	Negation:T21 Negates:E22 Negates2:E24
+E22	Procedure:T22 Name:T46 Minimum-Count:E17 Temporality:E29
+E23	Or:T23 Arg:E22 Arg2:E24
+E24	Procedure:T24 Name:T47 Minimum-Count:E17 Temporality:E29
+E25	Assertion:T25 Asserted:E31
+E26	Study:T26 
+E3	Modifier:T3 Modifies:T40
+E8	Assertion:T8 Asserted:E14 Asserted2:E16
+E27	Assertion:T49 Asserted:E28
+E28	Negation:T50 Negates:E19
+E17	Eq-Comparison:T51 Value:T44 Operator:T45
+E29	Eq-Comparison:T52 Temporal-Period:T53
+E30	Family-Member:T54 Has:E31
+E31	Negation:T55 Negates:E26
+E32	Or:T56 Arg:T48 Arg2:E30
+T1	Age 25 28	Age
+T2	Eq-Comparison 35 52	between 2-6 years
+T4	Observation 65 80	Gestational age
+T5	Eq-Comparison 87 92	26-34
+T6	Eq-Comparison 97 110	between weeks
+T7	Condition 137 163	retinopathy of prematurity
+T9	Modifier 169 181	Neurological
+T10	Modifier 183 193	hereditary
+T11	Or 194 197	and
+T12	Negation 198 201	not
+T13	Condition 219 226	disease
+T14	Procedure 248 267	visual examinations
+T15	Or 268 271	and
+T16	Procedure 272 297	physiotherapy evaluations
+T18	And 407 410	who
+T19	Procedure 432 460	Optical Kohlerans Tomography
+T20	Procedure 462 465	OCT
+T21	Negation 472 475	Not
+T22	Procedure 512 527	eye examination
+T23	Or 528 530	or
+T24	Procedure 531 556	physiotherapy assessments
+T25	Assertion 600 608	agree to
+T26	Study 628 633	study
+T27	Eq-Operator 35 42	between
+T28	Eq-Value 43 44	2
+T29	Eq-Operator 44 45	-
+T30	Eq-Value 45 46	6
+T31	Eq-Temporal-Unit 47 52	years
+T32	Observation-Name 65 80	Gestational age
+T33	Eq-Value 87 89	26
+T34	Eq-Operator 89 90	-
+T35	Eq-Value 90 92	34
+T36	Eq-Operator 97 104	between
+T37	Eq-Temporal-Unit 105 110	weeks
+T38	Condition-Name 137 163	retinopathy of prematurity
+T40	Condition-Name 219 226	disease
+T41	Procedure-Name 248 267	visual examinations
+T42	Procedure-Name 272 297	physiotherapy evaluations
+T43	Procedure-Name 432 460	Optical Kohlerans Tomography
+T44	Eq-Value 493 496	one
+T45	Eq-Operator 497 504	or more
+T46	Procedure-Name 512 527	eye examination
+T47	Procedure-Name 531 556	physiotherapy assessments
+T48	Life-Stage-And-Gender 568 576	children
+T3	Modifier 209 218	metabolic
+T8	Assertion 232 247	Compliance with
+T39	Procedure-Name 462 465	OCT
+T49	Assertion 420 431	comply with
+T50	Negation 416 419	not
+T17	Life-Stage-And-Gender 401 406	child
+T51	Eq-Comparison 493 504	one or more
+T52	Eq-Comparison 476 489	participating
+T53	Eq-Temporal-Period 476 489	participating
+T54	Family-Member 581 588	parents
+T55	Negation 596 599	not
+T56	Or 577 580	and
+A2	Assertion-Type-Value E25 hypothetical
+A3	Eq-Operator-Value T27 BETWEEN
+A4	Eq-Operator-Value T29 BETWEEN
+A5	Eq-Temporal-Unit-Value T31 year
+A6	Eq-Operator-Value T34 BETWEEN
+A7	Eq-Operator-Value T36 BETWEEN
+A8	Eq-Temporal-Unit-Value T37 week
+A9	Eq-Operator-Value T45 GTEQ
+A10	Life-Stage-And-Gender-Type T48 child
+A11	Observation-Type-Value T32 measurement
+A12	Assertion-Type-Value E8 hypothetical
+A13	Assertion-Type-Value E27 hypothetical
+A1	Life-Stage-And-Gender-Type T17 child
+A14	Eq-Temporal-Period-Value T53 past
+A15	Family-Member-Type E30 parent
+R1	Abbrev-Of Arg1:E20 Arg2:E19

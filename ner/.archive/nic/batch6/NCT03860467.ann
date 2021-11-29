@@ -1,0 +1,46 @@
+E1	Encounter:T1 Location:T10 Location2:T11
+E2	Eq-Comparison:T2 Value:T12 Operator:T13
+E3	Condition:T3 Name:T14 Minimum-Count:E2
+E4	Or:T4 Arg:E9 Arg2:E5
+E5	Procedure:T5 Name:T15
+E6	Temporal-Connection:T6 Arg:E3 Arg2:E10
+E7	Condition:T7 Name:T17 Stability:T24
+E8	Condition:T8 Name:T18
+E9	Modifier:T19 Modifies:T14
+E10	Encounter:T16 Type:T20 Location:T21
+E11	Condition:T22 Name:T23
+T1	Encounter 25 33	admitted
+T2	Eq-Comparison 97 108	one or more
+T3	Condition 109 127	epileptic seizures
+T4	Or 149 155	and/or
+T5	Procedure 159 162	EEG
+T6	Temporal-Connection 164 170	during
+T7	Condition 225 243	epileptic seizures
+T8	Condition 262 280	Status epilepticus
+T9	Encounter-Type 25 33	admitted
+T10	Location 41 44	ICU
+T11	Location 52 77	University Hospital Basel
+T12	Eq-Value 97 100	one
+T13	Eq-Operator 101 108	or more
+T14	Condition-Name 109 127	epileptic seizures
+T15	Procedure-Name 159 162	EEG
+T17	Condition-Name 225 243	epileptic seizures
+T18	Condition-Name 262 280	Status epilepticus
+T19	Modifier 138 148	clinically
+T16	Encounter 181 185	stay
+T20	Encounter-Type 181 185	stay
+T21	Location 177 180	ICU
+T22	Condition 282 284	SE
+T23	Condition-Name 282 284	SE
+T24	Stability 244 256	transforming
+A1	Temporal-Connection-Type-Value E6 during
+A2	Encounter-Type-Value T9 inpatient
+A3	Location-Value T10 unit
+A4	Location-Value T11 hospital
+A5	Eq-Operator-Value T13 GTEQ
+A6	Encounter-Type-Value T20 inpatient
+A7	Location-Value T21 unit
+A8	Stability-Value T24 change
+R1	Found-By Arg1:E3 Arg2:E5
+R2	Abbrev-Of Arg1:E11 Arg2:E8
+R3	Caused-By Arg1:T24 Arg2:E8

@@ -12,43 +12,35 @@ E25	Eq-Comparison:T37 Operator:T27 Value:T36 Unit:T29
 E2	Assertion:T39 Asserted:T2
 E4	Condition:T40 Name:T41
 E5	Eq-Comparison:T12 Operator:T13 Value:T42 Temporal-Unit:T28
-E7	Condition:T44 Name:T45 Duration:E5
+E7	Observation:T44 Name:T45 Duration:E5
 E9	Condition:T43 Name:T46 Stability:T33
 E12	Condition:T48 Name:T49
-E13	Or:T50 Arg:E16 Arg2:E12
 E15	Condition:T51 Name:T52
 E17	Modifier:T53 Modifies:E15
 E19	Condition:T54 Name:T55
 E20	Condition:T56 Name:T57
 E22	Condition:T58 Name:T59 Stability:T80
 E23	Condition:T60 Name:T61
-E27	Condition:T62 Name:T63
+E27	Observation:T62 Name:T63
 E28	Condition:T64 Name:T65 Polarity:T88
 E29	Observation:T66 Name:T67
 E30	Family-Member:T68 Has:T23
 E32	Assertion:T70 Asserted:E24
 E33	Procedure:T71 Provider:E34
-E34	Provider:T72 
+E34	Provider:T72
 E26	Criteria-Count:T20 Min-Value:E35 Criteria:E9 Criteria2:E12 Criteria3:E15 Criteria4:E19 Criteria5:E20 Criteria6:E22
 E35	Eq-Comparison:T30 Value:T31
-E36	And:T32 Arg:E7 Arg2:E26
 E11	Modifier:T35 Modifies:T49
 E37	Modifier:T38 Modifies:T49
-E38	Or:T47 Arg:E11 Arg2:E37
 E39	Modifier:T73 Modifies:T52
 E40	Modifier:T74 Modifies:T57
 E41	Modifier:T75 Modifies:T57
 E42	Negation:T76 Negates:E41
 E43	Modifier:T77 Modifies:T59
 E44	Modifier:T78 Modifies:T59
-E45	Or:T79 Arg:E43 Arg2:E44
-E46	Or:T81 Arg:E18 Arg2:E23
 E47	Modifier:T82 Modifies:T15
 E48	Modifier:T83 Modifies:T15
-E49	Or:T84 Arg:E47 Arg2:E48
-E50	Observation:T85 Name:T86 Eq-Comparison:E25
-E51	And:T87 Arg:E27 Arg2:E28
-E52	Or:T89 Arg:E28 Arg2:E21
+E50	Observation:T85 Name:T86 Numeric-Filter:E25
 E31	Negation:T69 Negates:E24
 E53	Family-Member:T26 Has:E31
 T1	Condition 120 136	Kawasaki disease
@@ -84,13 +76,12 @@ T41	Condition-Name 252 254	KD
 T12	Eq-Comparison 347 365	at least five days
 T13	Eq-Operator 347 355	at least
 T42	Eq-Value 356 360	five
-T44	Condition 337 342	fever
-T45	Condition-Name 337 342	fever
+T44	Observation 337 342	fever
+T45	Observation-Name 337 342	fever
 T43	Condition 423 445	peripheral extremities
 T46	Condition-Name 423 445	peripheral extremities
 T48	Condition 466 472	oedema
 T49	Condition-Name 466 472	oedema
-T50	Or 462 465	and
 T51	Condition 505 528	membranous desquamation
 T52	Condition-Name 505 528	membranous desquamation
 T53	Modifier 491 503	Convalescent
@@ -102,8 +93,8 @@ T58	Condition 671 677	cavity
 T59	Condition-Name 671 677	cavity
 T60	Condition 692 708	cracking of lips
 T61	Condition-Name 692 708	cracking of lips
-T62	Condition 959 964	fever
-T63	Condition-Name 959 964	fever
+T62	Observation 959 964	fever
+T63	Observation-Name 959 964	fever
 T64	Condition 1021 1024	CRP
 T65	Condition-Name 1021 1024	CRP
 T66	Observation 1028 1054	echocardiographic evidence
@@ -115,29 +106,22 @@ T72	Provider 77 86	clinician
 T20	Criteria-Count 379 401	the following criteria
 T30	Eq-Comparison 371 375	four
 T31	Eq-Value 371 375	four
-T32	And 366 370	plus
 T33	Stability 408 415	Changes
 T34	Acuteness 446 451	Acute
 T35	Modifier 476 481	hands
 T38	Modifier 486 490	feet
-T47	Or 482 485	and
 T73	Modifier 532 542	fingertips
 T74	Modifier 576 594	Bilateral painless
 T75	Modifier 633 640	exudate
 T76	Negation 625 632	without
 T77	Modifier 657 661	lips
 T78	Modifier 666 670	oral
-T79	Or 662 665	and
 T80	Stability 646 653	Changes
-T81	Or 688 691	and
 T82	Modifier 750 754	oral
 T83	Modifier 759 777	pharyngeal mucosae
-T84	Or 755 758	and
 T85	Observation 816 824	diameter
 T86	Observation-Name 816 824	diameter
-T87	And 965 968	and
 T88	Polarity 1008 1017	elevation
-T89	Or 1025 1027	or
 T69	Negation 1181 1184	not
 T26	Family-Member 1165 1173	children
 A1	Life-Stage-And-Gender-Type T5 child
@@ -146,11 +130,11 @@ A4	Eq-Operator-Value T27 GT
 A5	Eq-Temporal-Unit-Value T28 day
 A7	Assertion-Type-Value E2 possible
 A8	Eq-Operator-Value T13 GTEQ
-A9	Observation-Type-Value T67 lab
+A9	Observation-Type-Value E29 lab
 A10	Assertion-Type-Value E32 possible
 A6	Stability-Value T33 change
 A12	Stability-Value T80 change
-A13	Observation-Type-Value T86 measurement
+A13	Observation-Type-Value E50 measurement
 A14	Polarity-Value T88 high
 A15	Family-Member-Type E30 parent
 A3	Family-Member-Type E53 child
@@ -163,3 +147,13 @@ R5	Example-Of Arg1:E23 Arg2:E22
 R6	Example-Of Arg1:E8 Arg2:E22
 R7	Example-Of Arg1:E14 Arg2:E22
 R8	Found-By Arg1:E6 Arg2:E50
+R9	Or Arg1:E16 Arg2:E12
+R10	And Arg1:E7 Arg2:E26
+R11	Or Arg1:E11 Arg2:E37
+R12	Or Arg1:E43 Arg2:E44
+R13	Or Arg1:E18 Arg2:E23
+R14	Or Arg1:E47 Arg2:E48
+R15	And Arg1:E27 Arg2:E28
+R16	Or Arg1:E28 Arg2:E21
+R17	Or Arg1:E8 Arg2:E14
+R18	Or Arg1:E23 Arg2:E8

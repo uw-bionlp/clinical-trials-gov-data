@@ -21,8 +21,8 @@ def main():
     annotations = [ BratDocument(k, v[0], v[1], v[2], surface_only=True) for k,v in brat_train_raw.items() ]
 
     for ann in annotations:
-        if 'training' not in ann.path: continue
-        #if ann.doc_id != 'NCT03931772': continue
+        #if 'batch1' not in ann.path: continue
+        #if ann.doc_id != 'NCT03861910': continue
         drop_t = []
         drop_e = []
         drop_a = []
@@ -41,8 +41,11 @@ def main():
             t = e.get_T()
 
             # Check type consistency
-            if t.span.lower() in type_check:
-                correct_type = type_check[t.span.lower()]
+            span = t.span.lower()
+            if 'injury' in span  or 'accident' in span or 'wound' in span:
+                span = 'injury'
+            if span in type_check and t.type != 'Modifier':
+                correct_type = type_check[span]
                 t.type = correct_type
                 ann.Ts[t.id] = t
                 for arg in e.args:
@@ -51,10 +54,30 @@ def main():
                     if arg.type == 'Name':
                         arg.val.type = f'{correct_type}-Name'
                         ann.Ts[arg.val.id] = arg.val
-                    
+
+            # 'Disease' should not be named
+            if t.span.lower() == 'disease' or t.span.lower() == 'diseases':
+                to_del = -1
+                cond_name = None
+                
+                # Remove the 'Name' relation
+                for i, arg in enumerate(e.args):
+                    if arg.type == 'Name':
+                        to_del = i
+                        cond_name = arg.val
+                        break
+                if cond_name:
+                    modifiers = [ x for _, x in ann.Es.items() if any([ a for a in x.args if a.val == arg.val ])]
+                    for x in modifiers:
+                        for a in x.args:
+                            if a.type != 'Name' and a.val == cond_name:
+                                a.val = e
+                        ann.Es[x.id] = x
+                    del e.args[to_del]
+
             # Numeric-filter
             for arg in e.args[1:]:
-                if arg.type == 'Eq-Comparison':
+                if arg.type.startswith('Eq-Comparison'):
                     arg.type = 'Numeric-Filter'
 
             # Encounter-Type
@@ -122,7 +145,7 @@ def main():
                             new_id = [ id for id in newRs if id not in ann.Rs ][0]
                             new_r = BratR(a.capitalize(), arg1, arg2, new_id, -1)
                             ann.Rs[new_r.id] = new_r
-        
+
         for x in drop_e:
             if x:
                 del ann.Es[x.id]
@@ -133,19 +156,33 @@ def main():
             if x:
                 del ann.As[x.id]
 
+        to_del = []
+        for _, r in ann.Rs.items():
+            d = False
+            if r.arg1.id not in ann.Es and r.arg1.id not in ann.Ts:
+                d = True
+            if r.arg2.id not in ann.Es and r.arg2.id not in ann.Ts:
+                d = True
+            if d:
+                to_del.append(r.id)
+            
+        for d in to_del:
+            print(f'Deleting relation from {Path(ann.path).stem}/{ann.doc_id}: {ann.Rs[d].type} - "{ann.Rs[d].arg1.get_T().span}" - "{ann.Rs[d].arg2.get_T().span}"')
+            del ann.Rs[d]
+
     # 2nd pass
     orable = ['Modifier','Condition','Procedure','Drug','Observation','Organism']
     for ann in annotations:
-        if 'training' not in ann.path: continue
-        #if ann.doc_id != 'NCT03931772': continue
+        #if 'batch2' not in ann.path: continue
+        #if ann.doc_id != 'NCT03861494': continue
 
         # Infer Ors by ','
         for _, e in ann.Es.items():
-            if e.get_T().type in orable:
-                t = e.get_T()
+            t = e.get_T()
+            if t and t.type in orable:
                 foll_chars = ann.raw_text[t.char_end_idx:t.char_end_idx+2].strip()
                 if foll_chars == ',':
-                    foll = [ e2 for _, e2 in ann.Es.items() if e2.get_T().char_beg_idx == t.char_end_idx + 2 and e2.get_T().type in orable ]
+                    foll = [ e2 for _, e2 in ann.Es.items() if e2.get_T() and e2.get_T().char_beg_idx == t.char_end_idx + 2 and e2.get_T().type in orable ]
                     if any(foll):
                         foll = foll[0]
                         if (t.type == 'Modifier' and foll.get_T().type != 'Modifier') or (t.type != 'Modifier' and foll.get_T().type == 'Modifier'):
@@ -229,6 +266,7 @@ type_check = {
     'renal stones': Observation,
     'reproductive age': Observation,
     'response': Observation,
+    'resistance': Observation,
     'rosc': Observation,
     'sedentary': Observation,
     'sex': Observation,
@@ -243,6 +281,7 @@ type_check = {
     'tbi': Observation,
     'teeth mobility': Observation,
     'toxicities': Observation,
+    'trauma': Observation,
     'visual acuity': Observation,
     'weight loss': Observation,
     'wound': Observation

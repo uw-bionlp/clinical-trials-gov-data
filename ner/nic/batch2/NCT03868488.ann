@@ -4,19 +4,15 @@ E1	Observation:T6 Name:T7 Minimum-Count:E2 Duration:E3
 E2	Eq-Comparison:T8 Operator:T9 Value:T10 Temporal-Unit:T11 Per:T12
 E3	Eq-Comparison:T13 Operator:T14 Value:T15 Temporal-Unit:T16
 E6	Observation:T17 Name:T18
-E7	Observation:T19 Name:T20 Eq-Comparison:E8
+E7	Observation:T19 Name:T20 Numeric-Filter:E8
 E8	Eq-Comparison:T21 Operator:T22 Value:T23
 E9	Eq-Comparison:T24 Temporal-Period:T25
 E10	Eq-Comparison:T26 Temporal-Period:T27
-E11	Or:T28 Arg:E9 Arg2:E10
 E12	Drug:T29 Name:T30 Temporality:E9 Temporality2:E10
 E13	Observation:T31 Name:T32 Temporality:E9 Temporality2:E10
-E14	Or:T33 Arg:E12 Arg2:E13
 E15	Eq-Comparison:T34 Temporal-Period:T35
 E16	Eq-Comparison:T36 Temporal-Period:T37
 E17	Condition:T38 Name:T40 Temporality:E15 Temporality2:E16
-E18	Or:T39 Arg:E15 Arg2:E16
-E19	Or:T41 Arg:E20 Arg2:E21
 E20	Modifier:T42 Modifies:T40
 E21	Modifier:T43 Modifies:T40
 E22	Eq-Comparison:T44 Temporal-Period:T45
@@ -48,20 +44,16 @@ T24	Eq-Comparison 454 461	Current
 T25	Eq-Temporal-Period 454 461	Current
 T26	Eq-Comparison 465 472	history
 T27	Eq-Temporal-Period 465 472	history
-T28	Or 462 464	or
 T29	Drug 483 501	illegal substances
 T30	Drug-Name 483 501	illegal substances
 T31	Observation 506 514	gambling
 T32	Observation-Name 506 514	gambling
-T33	Or 502 505	and
 T34	Eq-Comparison 521 528	Current
 T35	Eq-Temporal-Period 521 528	Current
 T36	Eq-Comparison 532 539	history
 T37	Eq-Temporal-Period 532 539	history
 T38	Condition 571 578	illness
-T39	Or 529 531	or
 T40	Condition-Name 571 578	illness
-T41	Or 555 557	or
 T42	Modifier 543 554	psychiatric
 T43	Modifier 558 570	neurological
 T44	Eq-Comparison 585 592	Current
@@ -69,18 +61,22 @@ T45	Eq-Temporal-Period 585 592	Current
 T46	Drug 600 624	psychotropic medications
 T47	Drug-Name 600 624	psychotropic medications
 A1	Eq-Operator-Value T3 GTEQ
-A2	Observation-Type-Value T7 social-habit
+A2	Observation-Type-Value E1 social-habit
 A3	Eq-Operator-Value T9 GT
 A4	Eq-Temporal-Unit-Value T11 hour
 A5	Eq-Temporal-Unit-Value T12 week
 A6	Eq-Operator-Value T14 GTEQ
 A7	Eq-Temporal-Unit-Value T16 month
-A8	Observation-Type-Value T18 survey-or-questionnaire
+A8	Observation-Type-Value E6 survey-or-questionnaire
 A9	Eq-Operator-Value T22 GTEQ
 A10	Eq-Temporal-Period-Value T25 present
 A11	Eq-Temporal-Period-Value T27 past
-A12	Observation-Type-Value T32 social-habit
+A12	Observation-Type-Value E13 social-habit
 A13	Eq-Temporal-Period-Value T35 present
 A14	Eq-Temporal-Period-Value T37 past
 A15	Eq-Temporal-Period-Value T45 present
 R1	Abbrev-Of Arg1:E7 Arg2:E6
+R2	Or Arg1:E9 Arg2:E10
+R3	Or Arg1:E12 Arg2:E13
+R4	Or Arg1:E15 Arg2:E16
+R5	Or Arg1:E20 Arg2:E21

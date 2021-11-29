@@ -1,31 +1,28 @@
 E1	Eq-Comparison:T1 Operator:T24 Value:T25 Temporal-Unit:T26
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E3	Condition:T3 Name:T28
 E4	Procedure:T4
 E5	Drug:T5 Name:T29
-E6	Or:T6 Arg:E5 Arg2:E7
 E7	Drug:T7 Name:T30
 E8	Procedure:T8 Name:T31
 E9	Condition:T9 Name:T32
 E10	Modifier:T10 Modifies:T33
 E11	Condition:T11 Name:T33
 E12	Observation:T12 Name:T34
-E13	Observation:T13 Name:T35 Eq-Comparison:E14
+E13	Observation:T13 Name:T35 Numeric-Filter:E14
 E14	Eq-Comparison:T14 Unit:T36 Value:T37
 E15	Condition:T15 Name:T38
 E18	Procedure:T18 Name:T40
 E19	Procedure:T19 Name:T41 Temporality:E20
 E20	Eq-Comparison:T20 Temporal-Period:T42 Value:T43 Temporal-Unit:T44
-E21	Encounter:T21 Type:T45 Temporality:E23
+E21	Encounter:T21 Temporality:E23
 E22	Condition:T22 Name:T46
 E23	Eq-Comparison:T23 Temporal-Period:T47 Value:T48 Temporal-Unit:T49
-E24	Or:T51 Arg:T27 Arg2:T50
 T1	Eq-Comparison 25 35	≥ 20 years
 T2	Age 39 42	age
 T3	Condition 100 102	AF
 T4	Procedure 108 115	treated
 T5	Drug 121 129	warfarin
-T6	Or 130 132	or
 T7	Drug 133 138	NOACs
 T8	Procedure 143 158	anticoagulation
 T9	Condition 200 222	psychological diseases
@@ -61,24 +58,24 @@ T41	Procedure-Name 401 416	cardiac surgery
 T42	Eq-Temporal-Period 424 428	past
 T43	Eq-Value 429 434	three
 T44	Eq-Temporal-Unit 435 441	months
-T45	Encounter-Type 447 459	hospitalized
 T46	Condition-Name 464 466	AF
 T47	Eq-Temporal-Period 474 478	past
 T48	Eq-Value 479 484	three
 T49	Eq-Temporal-Unit 485 491	months
 T50	Language 70 79	Taiwanese
-T51	Or 67 69	or
 A1	Eq-Operator-Value T24 GTEQ
 A2	Eq-Temporal-Unit-Value T26 year
 A3	Eq-Temporal-Period-Value T42 past
 A4	Eq-Temporal-Unit-Value T44 month
-A5	Encounter-Type-Value T45 inpatient
+A5	Encounter-Type-Value E21 inpatient
 A6	Eq-Temporal-Period-Value T47 past
 A7	Eq-Temporal-Unit-Value T49 month
-A8	Observation-Type-Value T34 clinical-score
-A9	Observation-Type-Value T35 clinical-score
+A8	Observation-Type-Value E12 clinical-score
+A9	Observation-Type-Value E13 clinical-score
 R1	Using Arg1:E4 Arg2:E5
 R2	Using Arg1:E4 Arg2:E8
 R3	Using Arg1:E4 Arg2:E7
 R4	Abbrev-Of Arg1:E13 Arg2:E12
 R5	Treatment-For Arg1:E21 Arg2:E22
+R6	Or Arg1:E5 Arg2:E7
+R7	Or Arg1:T27 Arg2:T50

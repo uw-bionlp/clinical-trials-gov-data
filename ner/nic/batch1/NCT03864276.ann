@@ -5,14 +5,13 @@ E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12 Stability:T37
 E13	Condition:T13 Name:T14 Severity:T41
 E15	Condition:T15 Name:T16
-E17	Observation:T17 Name:T18 Eq-Comparison:E19
+E17	Observation:T17 Name:T18 Numeric-Filter:E19
 E18	Eq-Comparison:T25 Operator:T19 Value:T23 Unit:T21
 E19	Eq-Comparison:T26 Operator:T20 Value:T24 Per:T42 Unit:T22
-E2	Modifier:T27 
+E2	Modifier:T27 Modifies:E3
 E4	Condition:T28 Name:T29 Temporality:E14
-E6	Modifier:T31 
-E8	Observation:T32 Name:T33 Eq-Comparison:E18
-E10	And:T34 Arg:E9 Arg2:E1
+E6	Modifier:T31 Modifies:E15
+E8	Observation:T32 Name:T33 Numeric-Filter:E18
 E12	Eq-Comparison:T35 Temporal-Period:T36
 E14	Eq-Comparison:T38 Temporal-Period:T30
 E16	Procedure:T39 Name:T40
@@ -49,7 +48,6 @@ T30	Eq-Temporal-Period 193 199	recent
 T31	Modifier 234 246	uncontrolled
 T32	Observation 261 273	diastolic BP
 T33	Observation-Name 261 273	diastolic BP
-T34	And 55 58	who
 T35	Eq-Comparison 72 79	planned
 T36	Eq-Temporal-Period 72 79	planned
 T37	Stability 169 177	unstable
@@ -61,16 +59,15 @@ T42	Eq-Unit 360 362	m2
 T7	Allergy 372 379	allergy
 T8	Drug 383 391	propofol
 T43	Drug-Name 383 391	propofol
-A1	Observation-Type-Value T18 vital
+A1	Observation-Type-Value E17 vital
 A2	Eq-Operator-Value T19 GT
 A3	Eq-Operator-Value T20 GT
-A5	Observation-Type-Value T33 vital
+A5	Observation-Type-Value E8 vital
 A6	Eq-Temporal-Period-Value T36 future
 A7	Stability-Value T37 change
 A4	Eq-Temporal-Period-Value T30 recent
 A8	Severity-Value T41 severe
-R1	Abbrev-Of Arg1:E2 Arg2:E3
 R2	Abbrev-Of Arg1:E4 Arg2:E5
-R3	Abbrev-Of Arg1:E6 Arg2:E15
 R4	Equivalent-To Arg1:E8 Arg2:E15
 R5	Equivalent-To Arg1:E17 Arg2:E13
+R1	And Arg1:E9 Arg2:E1

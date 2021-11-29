@@ -1,15 +1,15 @@
-E5	Age:T11 Eq-Comparison:E6
+E5	Age:T11 Numeric-Filter:E6
 E6	Eq-Comparison:T17 Operator:T12 Value:T13 Value2:T14
 E1	Eq-Comparison:T18 Operator:T19 Temporal-Unit:T9 Value:T15 Temporal-Period:T41
-E3	Condition:T20 Name:T21 Temporality:E21
+E3	Observation:T20 Name:T21 Temporality:E21
 E7	Eq-Comparison:T22 Operator:T6 Temporal-Unit:T10 Value:T16 Temporal-Period:T47
 E8	Condition:T23 Name:T24 Temporality:E24
 E9	Negation:T25 Negates:E8
 E11	Negation:T28 Negates:E10
 E16	Condition:T34 Name:T35 Temporality:E28
-E20	Observation:T40 Eq-Comparison:E1 Name:T39
+E20	Observation:T40 Numeric-Filter:E1 Name:T39
 E21	Eq-Comparison:T42 Temporal-Period:T43
-E22	Condition:T44 Name:T45 Temporality:E7
+E22	Observation:T44 Name:T45 Temporality:E7
 E23	Negation:T46 Negates:E22
 E24	Eq-Comparison:T48 Temporal-Period:T49
 E25	Modifier:T50 Modifies:T24
@@ -18,7 +18,7 @@ E10	Procedure:T26 Name:T27 Temporality:E12
 E26	Condition:T53 Name:T54
 E27	Modifier:T55 Modifies:T54
 E2	Eq-Comparison:T2 Temporal-Period:T3
-E13	Encounter:T56 Temporality:E2 Location:T57 Location2:T59
+E13	Encounter:T56 Temporality:E2 Location:T57
 E14	Negation:T30 Negates:T32
 E15	Modifier:T31 Modifies:T35
 E28	Eq-Comparison:T33 Temporal-Period:T60
@@ -42,8 +42,8 @@ T16	Eq-Value 134 136	15
 T17	Eq-Comparison 29 34	55-80
 T18	Eq-Comparison 47 81	at least 30 pack-years in lifetime
 T19	Eq-Operator 47 55	at least
-T20	Condition 97 103	smoker
-T21	Condition-Name 97 103	smoker
+T20	Observation 97 103	smoker
+T21	Observation-Name 97 103	smoker
 T22	Eq-Comparison 118 142	within the last 15 years
 T23	Condition 194 200	cancer
 T24	Condition-Name 194 200	cancer
@@ -57,8 +57,8 @@ T40	Observation 40 46	smoked
 T41	Eq-Temporal-Period 73 81	lifetime
 T42	Eq-Comparison 90 96	former
 T43	Eq-Temporal-Period 90 96	former
-T44	Condition 110 117	smoking
-T45	Condition-Name 110 117	smoking
+T44	Observation 110 117	smoking
+T45	Observation-Name 110 117	smoking
 T46	Negation 105 109	quit
 T47	Eq-Temporal-Period 129 133	last
 T48	Eq-Comparison 172 185	prior history
@@ -116,4 +116,4 @@ A21	Eq-Temporal-Period-Value T67 past
 R1	Treatment-For Arg1:E10 Arg2:E26
 R2	Abbrev-Of Arg1:T58 Arg2:T57
 R3	Treatment-For Arg1:E17 Arg2:E18
-R4	If-Then Arg1:E23 Arg2:E3	
+R4	If-Then Arg1:E23 Arg2:E3

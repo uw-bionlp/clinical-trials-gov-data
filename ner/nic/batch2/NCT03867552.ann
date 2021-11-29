@@ -1,26 +1,24 @@
 E2	Eq-Comparison:T2 Operator:T28 Value:T29 Temporal-Unit:T30
-E3	Age:T3 Eq-Comparison:E2
+E3	Age:T3 Numeric-Filter:E2
 E4	Eq-Comparison:T4 Temporal-Period:T31
 E5	Procedure:T5 Name:T32 Temporality:E4
 E6	Condition:T6 Name:T33
 E7	Condition:T7 Name:T34
 E8	Procedure:T8 Name:T35
-E9	Or:T9 Arg:E8 Arg2:E10
 E10	Procedure:T10 Name:T36
 E11	Eq-Comparison:T11 Operator:T38 Value:T39 Temporal-Unit:T40
-E12	Age:T12 Eq-Comparison:E11
+E12	Age:T12 Numeric-Filter:E11
 E13	Condition:T13 Name:T42
-E14	Condition:T14 
-E16	Condition:T16 Name:T43 Acuteness:T15
+E14	Condition:T14
+E16	Observation:T16 Name:T43 Acuteness:T15
 E17	Condition:T17 Name:T44
 E18	Condition:T18 Name:T45
 E19	Modifier:T19 Modifies:T45
-E20	Or:T20 Arg:E18 Arg2:E22
 E22	Condition:T22 Name:T46
-E23	Condition:T23 
-E24	Condition:T24 Name:T48 Acuteness:T47
+E23	Condition:T23
+E24	Observation:T24 Name:T48 Acuteness:T47
 E25	Modifier:T25 Modifies:T49
-E26	Condition:T26 Name:T49
+E26	Observation:T26 Name:T49
 T2	Eq-Comparison 31 41	≥ 18 years
 T3	Age 42 45	old
 T4	Eq-Comparison 51 61	undergoing
@@ -28,23 +26,21 @@ T5	Procedure 62 82	laparoscopic surgery
 T6	Condition 87 100	endometriosis
 T7	Condition 102 117	uterine myoma's
 T8	Procedure 119 131	hysterectomy
-T9	Or 132 134	or
 T10	Procedure 135 144	colpopexy
 T11	Eq-Comparison 177 187	< 18 years
 T12	Age 188 191	old
 T13	Condition 208 217	Pregnancy
 T14	Condition 223 233	Conditions
 T15	Acuteness 250 257	chronic
-T16	Condition 258 262	pain
+T16	Observation 258 262	pain
 T17	Condition 272 293	peripheral neuropathy
 T18	Condition 295 304	pathology
 T19	Modifier 312 328	vertebral column
-T20	Or 329 332	and
 T22	Condition 333 356	osteo-articular disease
 T23	Condition 363 373	Conditions
-T24	Condition 388 392	pain
+T24	Observation 388 392	pain
 T25	Modifier 398 407	abdominal
-T26	Condition 408 414	trauma
+T26	Observation 408 414	trauma
 T27	Life-Stage-And-Gender 25 30	Woman
 T28	Eq-Operator 31 32	≥
 T29	Eq-Value 33 35	18
@@ -61,13 +57,13 @@ T39	Eq-Value 179 181	18
 T40	Eq-Temporal-Unit 182 187	years
 T41	Life-Stage-And-Gender 197 202	Males
 T42	Condition-Name 208 217	Pregnancy
-T43	Condition-Name 258 262	pain
+T43	Observation-Name 258 262	pain
 T44	Condition-Name 272 293	peripheral neuropathy
 T45	Condition-Name 295 304	pathology
 T46	Condition-Name 333 356	osteo-articular disease
 T47	Acuteness 382 387	acute
-T48	Condition-Name 388 392	pain
-T49	Condition-Name 408 414	trauma
+T48	Observation-Name 388 392	pain
+T49	Observation-Name 408 414	trauma
 A1	Life-Stage-And-Gender-Type T27 female
 A2	Eq-Operator-Value T28 GTEQ
 A3	Eq-Temporal-Unit-Value T30 year
@@ -88,3 +84,8 @@ R7	Example-Of Arg1:E18 Arg2:E14
 R8	Example-Of Arg1:E22 Arg2:E14
 R9	Caused-By Arg1:E24 Arg2:E23
 R10	Example-Of Arg1:E26 Arg2:E23
+R11	Or Arg1:E8 Arg2:E10
+R12	Or Arg1:E18 Arg2:E22
+R13	Or Arg1:E6 Arg2:E7
+R14	Or Arg1:E7 Arg2:E8
+R15	Or Arg1:E17 Arg2:E18

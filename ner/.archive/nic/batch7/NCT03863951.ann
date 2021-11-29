@@ -1,0 +1,157 @@
+E1	Eq-Comparison:T1 Temporal-Recency:T46
+E2	Condition:T2 Name:T49 Acuteness:T48 Temporality:E1 Temporality2:E3
+E3	Eq-Comparison:T3 Operator:T50 Value:T51 Temporal-Unit:T52
+E5	Procedure:T5 Name:T53
+E6	Or:T6 Arg:E5 Arg2:E7
+E7	Procedure:T7 Name:T54
+E8	Negation:T8 Negates:E10
+E9	Eq-Comparison:T9 Temporal-Period:T55
+E10	Condition:T10 Name:T56 Temporality:E9
+E11	Or:T11 Arg:E10 Arg2:E12
+E12	Drug:T12 Name:T58
+E13	Or:T13 Arg:E12 Arg2:E14
+E14	Drug:T14 Name:T59
+E15	Or:T15 Arg:T60 Arg2:T62
+E16	Condition:T16 Name:T63 Severity:T60 Severity2:T62
+E17	Condition:T17 Name:T64
+E18	Condition:T18 Name:T65
+E19	Or:T19 Arg:E18 Arg2:E20
+E20	Condition:T20 Name:T66
+E21	Eq-Comparison:T21 Temporal-Period:T67
+E22	Condition:T22 Name:T68 Temporality:E21
+E23	Or:T23 Arg:E22 Arg2:E25
+E24	Other:T24 Is-Other:E25
+E25	Condition:T25 Name:T69
+E26	Or:T26 Arg:E25 Arg2:E27
+E27	Drug:T27 Name:T71 Temporality:E4
+E28	Or:T28 Arg:E27 Arg2:E29
+E29	Drug:T29 Name:T72
+E30	Drug:T30 Name:T73 Temporality:E31
+E31	Eq-Comparison:T31 Temporal-Period:T74 Value:T75 Temporal-Unit:T76
+E32	Condition:T32 Name:T78 Severity:T77
+E33	Or:T33 Arg:E32 Arg2:E34
+E34	Condition:T34 Name:T79
+E35	Condition:T35 Name:T80
+E36	Condition:T36 Name:T81
+E37	Or:T37 Arg:E36 Arg2:E38
+E38	Condition:T38 Name:T82
+E39	Or:T39 Arg:E38 Arg2:E40
+E40	Condition:T40 Name:T83
+E41	Eq-Comparison:T41 Temporal-Period:T85
+E42	Condition:T42 Name:T86 Temporality:E41
+E43	Condition:T43 Name:T87
+E44	Or:T44 Arg:E43 Arg2:E45
+E45	Condition:T45 Name:T88
+E47	Condition:T47 Name:T89
+E46	Modifier:T90 Modifies:T49
+E4	Eq-Comparison:T57 Temporal-Period:T4
+T1	Eq-Comparison 44 54	first ever
+T2	Condition 70 76	stroke
+T3	Eq-Comparison 87 101	within 2 weeks
+T5	Procedure 124 126	CT
+T6	Or 127 129	or
+T7	Procedure 130 133	MRI
+T8	Negation 144 146	no
+T9	Eq-Comparison 147 154	history
+T10	Condition 158 168	depression
+T11	Or 169 171	or
+T12	Drug 179 194	antidepressants
+T13	Or 195 197	or
+T14	Drug 198 212	antipsychotics
+T15	Or 319 321	or
+T16	Condition 329 336	illness
+T17	Condition 345 354	infection
+T18	Condition 355 368	heart failure
+T19	Or 369 372	and
+T20	Condition 373 378	tumor
+T21	Eq-Comparison 385 393	previous
+T22	Condition 407 417	depression
+T23	Or 418 420	or
+T24	Other 421 426	other
+T25	Condition 427 442	mental disorder
+T26	Or 443 445	or
+T27	Drug 472 487	antidepressants
+T28	Or 488 490	or
+T29	Drug 491 505	antipsychotics
+T30	Drug 512 523	antibiotics
+T31	Eq-Comparison 531 545	last two weeks
+T32	Condition 559 566	aphasia
+T33	Or 567 569	or
+T34	Condition 570 580	dysarthria
+T35	Condition 581 605	irritable bowel syndrome
+T36	Condition 606 612	asthma
+T37	Or 613 616	and
+T38	Condition 617 625	pregnant
+T39	Or 626 628	or
+T40	Condition 629 638	lactating
+T41	Eq-Comparison 653 669	previous history
+T42	Condition 673 693	neurological illness
+T43	Condition 704 706	AD
+T44	Or 707 710	and
+T45	Condition 711 713	PD
+T47	Condition 720 746	Inflammatory bowel disease
+T48	Acuteness 55 60	acute
+T49	Condition-Name 70 76	stroke
+T50	Eq-Operator 87 93	within
+T51	Eq-Value 94 95	2
+T52	Eq-Temporal-Unit 96 101	weeks
+T53	Procedure-Name 124 126	CT
+T54	Procedure-Name 130 133	MRI
+T55	Eq-Temporal-Period 147 154	history
+T56	Condition-Name 158 168	depression
+T58	Drug-Name 179 194	antidepressants
+T59	Drug-Name 198 212	antipsychotics
+T60	Severity 301 318	significant acute
+T62	Severity 322 328	severe
+T63	Condition-Name 329 336	illness
+T64	Condition-Name 345 354	infection
+T65	Condition-Name 355 368	heart failure
+T66	Condition-Name 373 378	tumor
+T67	Eq-Temporal-Period 385 393	previous
+T68	Condition-Name 407 417	depression
+T69	Condition-Name 427 442	mental disorder
+T71	Drug-Name 472 487	antidepressants
+T72	Drug-Name 491 505	antipsychotics
+T73	Drug-Name 512 523	antibiotics
+T74	Eq-Temporal-Period 531 535	last
+T75	Eq-Value 536 539	two
+T76	Eq-Temporal-Unit 540 545	weeks
+T77	Severity 552 558	severe
+T78	Condition-Name 559 566	aphasia
+T79	Condition-Name 570 580	dysarthria
+T80	Condition-Name 581 605	irritable bowel syndrome
+T81	Condition-Name 606 612	asthma
+T82	Condition-Name 617 625	pregnant
+T83	Condition-Name 629 638	lactating
+T84	Life-Stage-And-Gender 639 644	women
+T85	Eq-Temporal-Period 653 669	previous history
+T86	Condition-Name 673 693	neurological illness
+T87	Condition-Name 704 706	AD
+T88	Condition-Name 711 713	PD
+T89	Condition-Name 720 746	Inflammatory bowel disease
+T46	Eq-Temporal-Recency 44 54	first ever
+T90	Modifier 61 69	ischemic
+T4	Eq-Temporal-Period 454 462	recently
+T57	Eq-Comparison 454 462	recently
+A2	Eq-Operator-Value T50 LTEQ
+A3	Eq-Temporal-Unit-Value T52 week
+A4	Eq-Temporal-Period-Value T55 past
+A6	Severity-Value T60 severe
+A8	Severity-Value T62 severe
+A9	Eq-Temporal-Period-Value T67 past
+A11	Eq-Temporal-Period-Value T74 past
+A12	Eq-Temporal-Unit-Value T76 week
+A13	Severity-Value T77 severe
+A14	Life-Stage-And-Gender-Type T84 female
+A15	Eq-Temporal-Period-Value T85 past
+A16	Eq-Temporal-Recency-Value T46 first-time
+A5	Eq-Temporal-Period-Value T4 recent
+A17	Acuteness-Type-Value T48 acute
+R1	Found-By Arg1:E2 Arg2:E5
+R2	Found-By Arg1:E2 Arg2:E7
+R3	Example-Of Arg1:E17 Arg2:E16
+R4	Example-Of Arg1:E18 Arg2:E16
+R5	Example-Of Arg1:E20 Arg2:E16
+R6	If-Then Arg1:T84 Arg2:E40
+R7	Example-Of Arg1:E43 Arg2:E42
+R8	Example-Of Arg1:E45 Arg2:E42

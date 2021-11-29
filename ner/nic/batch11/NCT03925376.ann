@@ -1,10 +1,9 @@
 E1	Procedure:T1 Name:T2 Temporality:E4
-E2	Age:T5 Eq-Comparison:E3
+E2	Age:T5 Numeric-Filter:E3
 E3	Eq-Comparison:T7 Operator:T3 Temporal-Unit:T4 Value:T6
 E4	Eq-Comparison:T8 Temporal-Period:T9
 E5	Observation:T10 Name:T11
 E6	Observation:T12 Name:T13
-E7	Or:T14 Arg:E5 Arg2:E6
 T1	Procedure 50 65	cardiac surgery
 T2	Procedure-Name 50 65	cardiac surgery
 T3	Eq-Operator 95 96	<
@@ -18,7 +17,7 @@ T10	Observation 127 136	DNR order
 T11	Observation-Name 127 136	DNR order
 T12	Observation 140 168	"do not escalate care" order
 T13	Observation-Name 140 168	"do not escalate care" order
-T14	Or 137 139	or
 A1	Eq-Operator-Value T3 LT
 A2	Eq-Temporal-Unit-Value T4 year
 A3	Eq-Temporal-Period-Value T9 present
+R1	Or Arg1:E5 Arg2:E6

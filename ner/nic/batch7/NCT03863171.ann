@@ -2,7 +2,7 @@ E1	Condition:T1 Name:T33
 E2	Condition:T2 Name:T34
 E4	Condition:T4 Name:T35
 E6	Condition:T6 Name:T36
-E7	Age:T7 Eq-Comparison:E8
+E7	Age:T7 Numeric-Filter:E8
 E8	Eq-Comparison:T8 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
 E9	Procedure:T9 Name:T41
 E10	Procedure:T10 Name:T61
@@ -16,8 +16,7 @@ E19	Negation:T19 Negates:E20
 E20	Procedure:T20 Name:T48
 E21	Procedure:T21 Name:T49
 E22	Eq-Comparison:T22 Temporal-Period:T50
-E23	Condition:T23 Name:T51 Temporality:E22
-E24	Or:T24 Arg:E23 Arg2:E25
+E23	Observation:T23 Name:T51 Temporality:E22
 E25	Condition:T25 Name:T52 Temporality:E22
 E26	Eq-Comparison:T26 Temporal-Period:T53
 E27	Procedure:T27 Name:T54 Temporality:E26 Temporality2:E28
@@ -48,8 +47,7 @@ T19	Negation 577 583	unable
 T20	Procedure 595 621	magnetic resonance rmaging
 T21	Procedure 623 626	MRI
 T22	Eq-Comparison 653 660	history
-T23	Condition 664 672	bleeding
-T24	Or 673 676	and
+T23	Observation 664 672	bleeding
 T25	Condition 677 696	cerebral infarction
 T26	Eq-Comparison 719 726	history
 T27	Procedure 730 737	surgery
@@ -75,7 +73,7 @@ T47	Procedure-Name 554 557	FFA
 T48	Procedure-Name 595 621	magnetic resonance rmaging
 T49	Procedure-Name 623 626	MRI
 T50	Eq-Temporal-Period 653 660	history
-T51	Condition-Name 664 672	bleeding
+T51	Observation-Name 664 672	bleeding
 T52	Condition-Name 677 696	cerebral infarction
 T53	Eq-Temporal-Period 719 726	history
 T54	Procedure-Name 730 737	surgery
@@ -110,3 +108,5 @@ R5	Example-Of Arg1:E14 Arg2:E13
 R6	Example-Of Arg1:E15 Arg2:E13
 R7	Example-Of Arg1:E16 Arg2:E13
 R8	Abbrev-Of Arg1:E21 Arg2:E20
+R9	Or Arg1:E23 Arg2:E25
+R10	Or Arg1:E15 Arg2:E16

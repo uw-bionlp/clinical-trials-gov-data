@@ -2,16 +2,15 @@ E1	Procedure:T1 Name:T2
 E3	Condition:T3 Name:T4
 E6	Condition:T6 Name:T7
 E2	Eq-Comparison:T10 Operator:T11 Value:T9
-E4	Age:T12 Eq-Comparison:E2
+E4	Age:T12 Numeric-Filter:E2
 E5	Condition:T13 Name:T14
 E7	Eq-Comparison:T15 Operator:T16 Value:T17
 E8	Criteria-Count:T18 Min-Value:E7 Temporality:E9 Criteria:E6 Criteria2:E10 Criteria3:E11 Criteria4:E12
 E9	Eq-Comparison:T19 Temporal-Period:T20 Temporal-Unit:T8 Value:T21
 E10	Condition:T22 Name:T23
-E11	Condition:T24 Name:T25
+E11	Observation:T24 Name:T25
 E12	Condition:T26 Name:T27
 E13	Assertion:T28 Asserted:E12
-E14	Or:T29 Arg:E3 Arg2:E13
 E15	Assertion:T30 Asserted:E1
 T1	Procedure 318 338	relaxation technique
 T2	Procedure-Name 318 338	relaxation technique
@@ -36,12 +35,11 @@ T20	Eq-Temporal-Period 140 149	preceding
 T21	Eq-Value 150 153	two
 T22	Condition 177 184	fatigue
 T23	Condition-Name 177 184	fatigue
-T24	Condition 186 190	pain
-T25	Condition-Name 186 190	pain
+T24	Observation 186 190	pain
+T25	Observation-Name 186 190	pain
 T26	Condition 215 225	depression
 T27	Condition-Name 215 225	depression
 T28	Assertion 203 211	symptoms
-T29	Or 200 202	or
 T30	Assertion 273 280	able to
 A1	Eq-Temporal-Unit-Value T8 week
 A2	Eq-Operator-Value T11 GT
@@ -49,3 +47,7 @@ A3	Eq-Operator-Value T16 GTEQ
 A4	Eq-Temporal-Period-Value T20 past
 A5	Assertion-Type-Value E13 possible
 A6	Assertion-Type-Value E15 hypothetical
+R1	Or Arg1:E3 Arg2:E13
+R2	Or Arg1:E6 Arg2:E10
+R3	Or Arg1:E10 Arg2:E11
+R4	Or Arg1:E11 Arg2:E3

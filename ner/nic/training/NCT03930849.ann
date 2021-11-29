@@ -1,14 +1,12 @@
 E9	Condition:T9 Name:T10
-E2	Drug:T15 Name:T16 Stability:T27
-E4	Encounter:T17 Type:T18 Temporality:E8 Provider:E14
+E2	Drug:T15 Name:T16 Stability:T27 Temporality:E11
+E4	Encounter:T17 Temporality:E8 Provider:E14
 E8	Eq-Comparison:T20 Temporal-Unit:T12 Value:T13 Temporal-Period:T22
 E10	Condition:T21 Name:T2
 E1	Condition:T1 Name:T4
 E3	Condition:T3 Name:T6
 E7	Condition:T7 Name:T8 Temporality:E5
-E6	Or:T19 Arg:E3 Arg2:E7
 E11	Eq-Comparison:T23 Temporal-Recency:T25
-E12	Or:T26 Arg:E11 Arg2:T27
 E5	Eq-Comparison:T5 Temporal-Period:T29
 E14	Provider:T30
 E15	Study:T31
@@ -25,15 +23,12 @@ T13	Eq-Value 268 270	12
 T15	Drug 99 124	antidepressant medication
 T16	Drug-Name 99 124	antidepressant medication
 T17	Encounter 214 235	Follow-up appointment
-T18	Encounter-Type 214 235	Follow-up appointment
 T20	Eq-Comparison 263 276	next 12 weeks
 T21	Condition 476 495	cognitive disorders
 T1	Condition 497 516	psychotic disorders
 T3	Condition 518 534	bipolar disorder
 T7	Condition 546 561	substance abuse
-T19	Or 536 538	or
 T23	Eq-Comparison 67 77	Initiating
-T26	Or 78 80	or
 T5	Eq-Comparison 539 545	active
 T29	Eq-Temporal-Period 539 545	active
 T30	Provider 247 255	provider
@@ -45,10 +40,14 @@ T14	Location 20 22	VA
 T24	Provider 323 332	Providers
 T28	Location 320 322	VA
 A1	Eq-Temporal-Unit-Value T12 week
-A3	Encounter-Type-Value T18 outpatient
+A3	Encounter-Type-Value E4 outpatient
 A8	Eq-Temporal-Period-Value T29 present
 A5	Eq-Temporal-Period-Value T22 future
 A7	Stability-Value T27 change
 A6	Eq-Temporal-Recency-Value T25 first-time
 A2	Location-Value T14 hospital
 A4	Location-Value T28 hospital
+R1	Or Arg1:E3 Arg2:E7
+R2	Or Arg1:E11 Arg2:T27
+R3	Or Arg1:E10 Arg2:E1
+R4	Or Arg1:E1 Arg2:E3

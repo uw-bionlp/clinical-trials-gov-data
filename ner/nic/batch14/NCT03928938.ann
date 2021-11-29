@@ -1,13 +1,12 @@
 E1	Procedure:T1 Name:T2 Temporality:E4
 E5	Procedure:T5 Name:T6 Temporality:E8
-E6	Age:T10 Eq-Comparison:E7
+E6	Age:T10 Numeric-Filter:E7
 E7	Eq-Comparison:T17 Operator:T8 Value:T13 Temporal-Unit:T26
 E8	Eq-Comparison:T18 Operator:T9 Value:T16 Temporal-Unit:T3
 E9	Eq-Comparison:T19 Operator:T11 Value:T14 Value2:T15
 E2	Condition:T20 Name:T21 Severity:T22
 E4	Eq-Comparison:T23 Operator:T7 Operator2:T24 Value:T12 Temporal-Unit:T25
-E10	Observation:T27 Name:T28 Eq-Comparison:E9
-E3	Temporal-Connection:T4 Arg:E8
+E10	Observation:T27 Name:T28 Numeric-Filter:E9
 E11	Condition:T29 Name:T30
 E12	Study:T31 Stability:T32
 T1	Procedure 76 111	Immune checkpoint inhibitor therapy
@@ -37,7 +36,6 @@ T26	Eq-Temporal-Unit 150 151	y
 T27	Observation 157 161	ECOG
 T28	Observation-Name 157 161	ECOG
 T3	Eq-Temporal-Unit 289 292	wks
-T4	Temporal-Connection 293 296	ago
 T29	Condition 302 323	General vulnerability
 T30	Condition-Name 302 323	General vulnerability
 T31	Study 359 364	trial
@@ -50,8 +48,7 @@ A5	Severity-Value T22 severe
 A6	Eq-Operator-Value T24 PLUS-MINUS
 A7	Eq-Temporal-Unit-Value T25 week
 A8	Eq-Temporal-Unit-Value T26 year
-A9	Observation-Type-Value T28 measurement
+A9	Observation-Type-Value E10 measurement
 A10	Eq-Temporal-Unit-Value T3 week
-A11	Temporal-Connection-Type-Value E3 before
 A12	Stability-Value T32 change
 R1	Caused-By Arg1:T32 Arg2:E11

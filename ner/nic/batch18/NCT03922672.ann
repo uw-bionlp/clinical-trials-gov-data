@@ -1,6 +1,6 @@
 E1	Condition:T1 Name:T2 Stage:E7
-E2	Age:T12 Eq-Comparison:E6
-E3	Age:T13 Eq-Comparison:E8
+E2	Age:T12 Numeric-Filter:E6
+E3	Age:T13 Numeric-Filter:E8
 E4	Eq-Comparison:T25 Operator:T7 Temporal-Unit:T10 Value:T19
 E5	Eq-Comparison:T26 Operator:T8 Temporal-Unit:T11 Value:T24
 E6	Eq-Comparison:T27 Operator:T14 Value:T17 Value2:T18 Temporal-Unit:T9
@@ -9,10 +9,8 @@ E8	Eq-Comparison:T29 Operator:T16 Value:T22 Value2:T23
 E9	Eq-Comparison:T30 Temporal-Period:T31
 E10	Condition:T32 Name:T33
 E11	Observation:T34 Name:T36 Temporality:E9
-E12	And:T35 Arg:T5 Arg2:E10
 E13	Condition:T37 Name:T38
 E14	Observation:T39 Name:T40 Duration:E4
-E15	And:T41 Arg:T6 Arg2:E13
 E16	Observation:T43 Name:T44 Duration:E5
 T1	Condition 268 287	Parkinson's disease
 T2	Condition-Name 268 287	Parkinson's disease
@@ -48,13 +46,11 @@ T31	Eq-Temporal-Period 50 59	currently
 T32	Condition 97 99	PD
 T33	Condition-Name 97 99	PD
 T34	Observation 62 79	primary caregiver
-T35	And 92 96	with
 T36	Observation-Name 62 79	primary caregiver
 T37	Condition 249 251	PD
 T38	Condition-Name 249 251	PD
 T39	Observation 181 195	music training
 T40	Observation-Name 181 195	music training
-T41	And 244 248	with
 T42	Eq-Unit 258 263	Stage
 T43	Observation 353 367	music training
 T44	Observation-Name 353 367	music training
@@ -69,3 +65,5 @@ A8	Eq-Operator-Value T14 BETWEEN
 A9	Eq-Operator-Value T15 BETWEEN
 A10	Eq-Operator-Value T16 BETWEEN
 A11	Eq-Temporal-Period-Value T31 present
+R1	And Arg1:T5 Arg2:E10
+R2	And Arg1:T6 Arg2:E13

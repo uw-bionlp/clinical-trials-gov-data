@@ -1,0 +1,119 @@
+E1	Procedure:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6
+E9	Procedure:T9 Name:T10
+E11	Procedure:T11 Name:T12
+E12	Age:T15 Eq-Comparison:E4
+E14	Eq-Comparison:T19 Operator:T13 Value:T18 Unit:T22
+E2	Modifier:T20 Modifies:T6
+E4	Eq-Comparison:T21 Operator:T16 Value:T17 Temporal-Unit:T14
+E6	Indication:T23 Indication-For:E1
+E8	Modifier:T24 Modifies:E1
+E10	Condition:T25 Name:T26
+E13	Modifier:T27 Modifies:T26
+E15	Condition:T28 Name:T29 Severity:T30
+E16	Modifier:T31 Modifies:T29
+E17	Condition:T32 Name:T33 Polarity:T34
+E18	And:T35 Arg:E15 Arg2:E17
+E19	Modifier:T36 Modifies:T38
+E20	Condition:T37 Name:T38
+E7	Condition:T7 Name:T8
+E21	Modifier:T39 Modifies:T8
+E22	Or:T40 Arg:E20 Arg2:E7
+E23	Condition:T41 Name:T42
+E24	Modifier:T43 Modifies:T42
+E25	Procedure:T44 Name:T45
+E26	Observation:T46 Name:T47
+E27	Modifier:T48 Modifies:T47
+E28	Modifier:T49 Modifies:T47
+E29	Or:T50 Arg:E28 Arg2:E27
+E30	Temporal-Connection:T51 Arg:E25 Arg2:E26
+E31	Procedure:T52 Name:T53
+E32	Modifier:T54 Modifies:T12
+E33	Temporal-Connection:T55 Arg2:E11 Arg:E31
+E34	Study:T57
+E35	Observation:T58 Name:T60
+E36	Modifier:T59 Modifies:T60
+E37	Modifier:T61 Modifies:T60
+E38	Negation:T62
+E39	Negation:T63 Negates:E35
+E40	Or:T64 Arg:E38 Arg2:E39
+E41	Assertion:T65 Asserted:E39
+E42	Assertion:T66 Asserted:E38
+T1	Procedure 128 145	caesarean section
+T2	Procedure-Name 128 145	caesarean section
+T3	Condition 77 91	Term Pregnancy
+T4	Condition-Name 77 91	Term Pregnancy
+T5	Condition 35 44	pregnancy
+T6	Condition-Name 35 44	pregnancy
+T9	Procedure 433 450	Caesarean section
+T10	Procedure-Name 433 450	Caesarean section
+T11	Procedure 520 530	anesthesia
+T12	Procedure-Name 520 530	anesthesia
+T13	Eq-Operator 92 93	≥
+T14	Eq-Temporal-Unit 62 67	years
+T15	Age 50 53	Age
+T17	Eq-Value 59 61	18
+T18	Eq-Value 94 96	37
+T19	Eq-Comparison 92 98	≥ 37SA
+T20	Modifier 25 34	Monofetal
+T21	Eq-Comparison 54 67	over 18 years
+T16	Eq-Operator 54 58	over
+T22	Eq-Unit 96 98	SA
+T23	Indication 104 114	Indication
+T24	Modifier 119 127	Elective
+T25	Condition 178 187	pathology
+T26	Condition-Name 178 187	pathology
+T27	Modifier 172 177	Fetal
+T28	Condition 230 248	growth retardation
+T29	Condition-Name 230 248	growth retardation
+T30	Severity 223 229	severe
+T31	Modifier 210 222	intrauterine
+T32	Condition 254 261	Doppler
+T33	Condition-Name 254 261	Doppler
+T34	Polarity 262 275	abnormalities
+T35	And 249 253	with
+T36	Modifier 277 282	fetal
+T37	Condition 283 295	malformation
+T38	Condition-Name 283 295	malformation
+T7	Condition 313 327	genetic defect
+T8	Condition-Name 313 327	genetic defect
+T39	Modifier 307 312	fetal
+T40	Or 296 298	or
+T41	Condition 334 341	Anomaly
+T42	Condition-Name 334 341	Anomaly
+T43	Modifier 345 363	placental adhesion
+T44	Procedure 370 379	Caesarean
+T45	Procedure-Name 370 379	Caesarean
+T46	Observation 417 426	emergency
+T47	Observation-Name 417 426	emergency
+T48	Modifier 407 416	obstetric
+T49	Modifier 396 403	medical
+T50	Or 404 406	or
+T51	Temporal-Connection 380 392	in a context
+T52	Procedure 467 485	general anesthesia
+T53	Procedure-Name 467 485	general anesthesia
+T54	Modifier 507 519	locoregional
+T55	Temporal-Connection 486 495	following
+T56	Life-Stage-And-Gender 552 557	woman
+T57	Study 580 585	study
+T58	Observation 639 656	acid-base balance
+T59	Modifier 630 638	neonatal
+T60	Observation-Name 639 656	acid-base balance
+T61	Modifier 664 678	umbilical cord
+T62	Negation 592 605	Impossibility
+T63	Negation 609 616	failure
+T64	Or 606 608	or
+T65	Assertion 609 616	failure
+T66	Assertion 592 605	Impossibility
+A1	Eq-Operator-Value T13 GTEQ
+A2	Eq-Temporal-Unit-Value T14 year
+A3	Eq-Operator-Value T16 GT
+A4	Severity-Value T30 severe
+A5	Polarity-Value T34 abnormal
+A6	Temporal-Connection-Type-Value E30 during
+A7	Temporal-Connection-Type-Value E33 after
+A8	Life-Stage-And-Gender-Type T56 female
+A9	Assertion-Type-Value E41 hypothetical
+A10	Assertion-Type-Value E42 hypothetical
+R1	Using Arg1:E9 Arg2:E31

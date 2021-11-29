@@ -19,29 +19,24 @@ E4	Eq-Comparison:T42 Value:T43 Unit:T44
 E6	Eq-Comparison:T45 Temporal-Period:T46
 E8	Procedure:T47
 E10	Negation:T48 Negates:E8
-E12	And:T49 Arg:E3 Arg2:E10
-E14	And:T52 Arg:T50 Arg2:T51
 E16	Eq-Comparison:T31 Value:T32 Temporal-Unit:T29
-E18	Age:T53 Eq-Comparison:E16
-E20	Observation:T54 Name:T55 Eq-Comparison:E22
+E18	Age:T53 Numeric-Filter:E16
+E20	Observation:T54 Name:T55 Numeric-Filter:E22
 E22	Eq-Comparison:T56 Value:T33 Unit:T57
-E24	Observation:T59 Name:T60 Eq-Comparison:E27
+E24	Observation:T59 Name:T60 Numeric-Filter:E27
 E26	Condition:T61 Name:T62
 E31	Negation:T63 Negates:E26
-E32	And:T64 Arg:E20 Arg2:E24
 E33	Modifier:T66 Modifies:T8
 E34	Negation:T67 Negates:E33
 E35	Modifier:T68 Modifies:T10
 E36	Condition:T70 Name:T71 Severity:T72
 E37	Condition:T73 Name:T74
-E38	Condition:T75 Name:T76 Polarity:T77
-E39	Or:T78 Arg:E15 Arg2:E13
+E38	Observation:T75 Name:T76 Polarity:T77
 E41	Eq-Comparison:T80 Temporal-Period:T81
 E42	Condition:T82 Name:T83 Temporality:E29
-E43	Condition:T84 Name:T85 Severity:T86
+E43	Observation:T84 Name:T85 Severity:T86
 E44	Condition:T87 Name:T88 Stability:T89
 E45	Condition:T90 Name:T91 Polarity:T92
-E46	Or:T93 Arg:E44 Arg2:E45
 E47	Negation:T94 Negates:E17
 E48	Assertion:T95 Asserted:E47
 E49	Condition:T96 Name:T97
@@ -51,14 +46,12 @@ E52	Assertion:T100 Asserted:E51
 E53	Assertion:T102 Asserted:T101
 E54	Condition:T103 Name:T104
 E55	Risk:T105 Risk-For:E54 Polarity:T106
-E56	Or:T107 Arg:E19 Arg2:E55
 E57	Negation:T108 Negates:E23
 E58	Assertion:T109 Asserted:E57
 E59	Family-Member:T110
 E60	Negation:T111 Negates:E59
 E61	Condition:T112 Name:T113
 E62	Condition:T114 Name:T115
-E63	Or:T116 Arg:E61 Arg2:E62
 T1	Condition 54 67	renal failure
 T2	Condition-Name 54 67	renal failure
 T3	Procedure 164 189	renal replacement therapy
@@ -106,10 +99,8 @@ T45	Eq-Comparison 156 163	undergo
 T46	Eq-Temporal-Period 156 163	undergo
 T47	Procedure 219 228	treatment
 T48	Negation 198 201	not
-T49	And 190 193	but
 T50	Language 272 280	Mandarin
 T51	Language 285 291	Taiwan
-T52	And 281 284	and
 T31	Eq-Comparison 308 316	20 years
 T53	Age 298 302	Ages
 T54	Observation 375 379	MMSE
@@ -122,7 +113,6 @@ T60	Observation-Name 436 452	national minimum
 T61	Condition 488 496	educated
 T62	Condition-Name 488 496	educated
 T63	Negation 484 487	not
-T64	And 428 431	and
 T65	Eq-Unit 505 511	points
 T66	Modifier 575 584	emergency
 T67	Negation 571 574	non
@@ -133,17 +123,16 @@ T71	Condition-Name 667 672	shock
 T72	Severity 660 666	severe
 T73	Condition 674 692	low blood pressure
 T74	Condition-Name 674 692	low blood pressure
-T75	Condition 704 712	bleeding
-T76	Condition-Name 704 712	bleeding
+T75	Observation 704 712	bleeding
+T76	Observation-Name 704 712	bleeding
 T77	Polarity 698 703	large
-T78	Or 788 790	or
 T79	Acuteness 752 759	chronic
 T80	Eq-Comparison 760 766	active
 T81	Eq-Temporal-Period 760 766	active
 T82	Condition 824 830	cancer
 T83	Condition-Name 824 830	cancer
-T84	Condition 868 876	bleeding
-T85	Condition-Name 868 876	bleeding
+T84	Observation 868 876	bleeding
+T85	Observation-Name 868 876	bleeding
 T86	Severity 861 867	Severe
 T87	Condition 900 919	peritoneal function
 T88	Condition-Name 900 919	peritoneal function
@@ -151,7 +140,6 @@ T89	Stability 892 896	Loss
 T90	Condition 933 952	peritoneal adhesion
 T91	Condition-Name 933 952	peritoneal adhesion
 T92	Polarity 923 932	extensive
-T93	Or 920 922	or
 T94	Negation 954 960	unable
 T95	Assertion 954 960	unable
 T96	Condition 1012 1033	physiological defects
@@ -165,7 +153,6 @@ T103	Condition 1101 1110	infection
 T104	Condition-Name 1101 1110	infection
 T105	Risk 1091 1100	chance of
 T106	Polarity 1078 1086	increase
-T107	Or 1075 1077	or
 T108	Negation 1158 1164	unable
 T109	Assertion 1158 1164	unable
 T110	Family-Member 1213 1227	family members
@@ -174,7 +161,6 @@ T112	Condition 1274 1287	poor eyesight
 T113	Condition-Name 1274 1287	poor eyesight
 T114	Condition 1298 1318	difficulty operating
 T115	Condition-Name 1298 1318	difficulty operating
-T116	Or 1289 1292	and
 A1	Eq-Operator-Value T27 LT
 A2	Eq-Operator-Value T28 LT
 A3	Eq-Temporal-Unit-Value T29 year
@@ -200,3 +186,12 @@ R1	Equivalent-To Arg1:E20 Arg2:E5
 R2	If-Then Arg1:E31 Arg2:E28
 R3	Treatment-For Arg1:E50 Arg2:E49
 R4	Example-Of Arg1:E21 Arg2:E55
+R5	And Arg1:E3 Arg2:E10
+R6	And Arg1:T50 Arg2:T51
+R7	And Arg1:E20 Arg2:E24
+R8	Or Arg1:E15 Arg2:E13
+R9	Or Arg1:E44 Arg2:E45
+R10	Or Arg1:E19 Arg2:E55
+R11	Or Arg1:E61 Arg2:E62
+R12	Or Arg1:E11 Arg2:E15
+R13	Or Arg1:E36 Arg2:E37

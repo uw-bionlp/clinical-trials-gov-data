@@ -1,14 +1,11 @@
 E1	Condition:T1 Name:T35
-E2	Or:T2 Arg:E1 Arg2:E4
 E3	Modifier:T3 Modifies:T36
 E4	Condition:T4 Name:T36
-E5	And:T5 Arg:E4 Arg2:E7
 E6	Eq-Comparison:T6 Temporal-Period:T37
 E7	Procedure:T7 Name:T38 Temporality:E6
-E8	And:T8 Arg:E7 Arg2:E9
 E9	Negation:T9 Negates:E10
 E10	Procedure:T10 
-E11	Age:T11 Eq-Comparison:E12
+E11	Age:T11 Numeric-Filter:E12
 E12	Eq-Comparison:T12 Operator:T39 Value:T40 Temporal-Unit:T41
 E13	Drug:T13 Name:T42 Temporality:E14
 E14	Eq-Comparison:T14 Operator:T43 Temporal-Unit:T44 Value:T64
@@ -21,26 +18,21 @@ E21	Condition:T21 Name:T49 Acuteness:T20
 E22	Condition:T22 Name:T50
 E24	Condition:T24 Name:T52
 E25	Condition:T25 Name:T53
-E26	Or:T26 Arg:E25 Arg2:E27
 E27	Condition:T27 Name:T54
 E28	Condition:T28 Name:T55
-E29	Or:T29 Arg:E28 Arg2:E30
 E30	Condition:T30 Name:T56
 E31	Negation:T31 Negates:E32
-E32	Encounter:T32 Minimum-Count:E33 Minimum-Count2:E34
+E32	Encounter:T32 Minimum-Count:E33
 E33	Eq-Comparison:T33 Value:T57 Operator:T58 Value:T59 Temporal-Unit:T60
 E34	Eq-Comparison:T34 Value:T61 Temporal-Unit:T62 Operator:T65
 E35	Modifier:T63 Modifies:T35
 E23	Modifier:T23 Modifies:T52
 E36	Assertion:T51 Asserted:E31
 T1	Condition 59 68	gonorrhea
-T2	Or 69 71	or
 T3	Modifier 72 82	gonococcal
 T4	Condition 83 93	urethritis
-T5	And 94 97	who
 T6	Eq-Comparison 102 112	undergoing
 T7	Procedure 113 141	pharyngeal gonorrhea testing
-T8	And 143 146	who
 T9	Negation 151 154	not
 T10	Procedure 159 166	treated
 T11	Age 193 196	Age
@@ -57,10 +49,8 @@ T21	Condition 367 386	renal insufficiency
 T22	Condition 388 408	renal cell carcinoma
 T24	Condition 431 440	infection
 T25	Condition 446 454	syphilis
-T26	Or 455 457	or
 T27	Condition 458 467	chlamydia
 T28	Condition 473 482	Pregnancy
-T29	Or 483 489	and/or
 T30	Condition 490 497	nursing
 T31	Negation 503 509	Unable
 T32	Encounter 526 541	follow-up visit
@@ -117,3 +107,9 @@ R4	Example-Of Arg1:E21 Arg2:E18
 R5	Example-Of Arg1:E22 Arg2:E18
 R6	Example-Of Arg1:E24 Arg2:E25
 R7	Example-Of Arg1:E24 Arg2:E27
+R8	Or Arg1:E1 Arg2:E4
+R9	And Arg1:E4 Arg2:E7
+R10	And Arg1:E7 Arg2:E9
+R11	Or Arg1:E25 Arg2:E27
+R12	Or Arg1:E28 Arg2:E30
+R13	Or Arg1:E21 Arg2:E22

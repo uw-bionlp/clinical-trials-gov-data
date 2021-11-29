@@ -1,16 +1,13 @@
 E1	Modifier:T1 Modifies:T24
-E2	Or:T2 Arg:E1 Arg2:E3
 E3	Modifier:T3 Modifies:T24
 E4	Condition:T4 Name:T24
 E5	Condition:T5 Name:T25
 E6	Condition:T6 Name:T26
 E7	Condition:T7 Name:T27
 E8	Condition:T8 Name:T28
-E9	Or:T9 Arg:E8 Arg2:E11
 E10	Modifier:T10 Modifies:T29
 E11	Condition:T11 Name:T29
 E12	Procedure:T12
-E13	And:T13 Arg:E12 Arg2:T30
 E14	Modifier:T14 Modifies:T31
 E15	Condition:T15 Name:T31 Stability:T30
 E16	Eq-Comparison:T16 Temporal-Period:T32
@@ -19,22 +16,19 @@ E18	Procedure:T18 Name:T34
 E19	Contraindication:T19 Contraindicates:E20
 E20	Procedure:T20 Name:T35
 E21	Procedure:T21 Name:T36
-E22	Observation:T22 Name:T37 Eq-Comparison:E23
+E22	Observation:T22 Name:T37 Numeric-Filter:E23
 E23	Eq-Comparison:T23 Operator:T38 Value:T39 Temporal-Unit:T40
 E24	Condition:T41 Name:T42
 T1	Modifier 137 142	early
-T2	Or 143 145	or
 T3	Modifier 146 163	metastatic breast
 T4	Condition 164 170	cancer
 T5	Condition 172 180	lymphoma
 T6	Condition 182 189	sarcoma
 T7	Condition 191 199	leukemia
 T8	Condition 201 208	myeloma
-T9	Or 210 212	or
 T10	Modifier 213 217	lung
 T11	Condition 218 224	cancer
 T12	Procedure 240 247	treated
-T13	And 248 251	and
 T14	Modifier 270 275	brain
 T15	Condition 276 286	metastasis
 T16	Eq-Comparison 308 317	Scheduled
@@ -72,3 +66,10 @@ R1	Treatment-For Arg1:E12 Arg2:E15
 R2	Treatment-For Arg1:E17 Arg2:E24
 R3	Example-Of Arg1:E18 Arg2:E17
 R4	Abbrev-Of Arg1:E21 Arg2:E20
+R5	Or Arg1:E1 Arg2:E3
+R6	Or Arg1:E8 Arg2:E11
+R7	And Arg1:E12 Arg2:T30
+R8	Or Arg1:E4 Arg2:E5
+R9	Or Arg1:E5 Arg2:E6
+R10	Or Arg1:E6 Arg2:E7
+R11	Or Arg1:E7 Arg2:E8

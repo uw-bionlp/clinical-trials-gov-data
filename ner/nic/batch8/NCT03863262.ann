@@ -3,9 +3,9 @@ E4	Eq-Comparison:T4 Operator:T16 Value:T17 Temporal-Unit:T18
 E6	Negation:T6 Negates:T20 Negates2:T5
 E7	Condition:T7 Name:T12 Acuteness:T13
 E8	Assertion:T8 Asserted:E9
-E9	Encounter:T9 Location:T21
-E1	Age:T1 Eq-Comparison:E3
-E2	Age:T2 Eq-Comparison:E4
+E9	Encounter:T9
+E1	Age:T1 Numeric-Filter:E3
+E2	Age:T2 Numeric-Filter:E4
 T3	Eq-Comparison 419 432	were 18 years
 T4	Eq-Comparison 471 489	less than 18 years
 T6	Negation 590 593	not
@@ -37,5 +37,5 @@ A12	Location-Value T21 hospital
 A13	Encounter-Type-Value T22 inpatient
 A4	Location-Value T11 clinic
 A1	Location-Value T5 hospital
-R1	Treatment-For Arg1:E9 Arg2:E7
 A5	Acuteness-Type-Value T13 acute
+R1	Treatment-For Arg1:E9 Arg2:E7

@@ -1,7 +1,7 @@
 E1	Observation:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Observation:T5 Name:T6
-E7	Observation:T7 Name:T8 Eq-Comparison:E6
+E7	Observation:T7 Name:T8 Numeric-Filter:E6
 E9	Condition:T9 Name:T10
 E12	Condition:T12 Name:T13
 E14	Condition:T14 Name:T15
@@ -12,33 +12,27 @@ E22	Condition:T22 Name:T23
 E24	Condition:T24 Name:T25
 E28	Condition:T28 Name:T29
 E30	Condition:T30 Name:T31
-E31	Age:T33 Eq-Comparison:E32
+E31	Age:T33 Numeric-Filter:E32
 E32	Eq-Comparison:T38 Operator:T34 Value:T35 Value2:T36 Temporal-Unit:T32
 E33	Eq-Comparison:T39 Temporal-Period:T40
 E2	Condition:T41 Name:T42
-E4	Or:T43 Arg:E2 Arg2:E3
 E6	Eq-Comparison:T44 Value:T37 Operator:T45
 E8	Criteria-Count:T46 Min-Value:E10 Max-Value:E11 Criteria:E13 Criteria2:E15 Criteria3:E9
 E10	Eq-Comparison:T47 Value:T48
 E11	Eq-Comparison:T49 Value:T50
 E13	Condition:T51 Name:T52
 E15	Condition:T53 Name:T54
-E17	Or:T55 Arg:E15 Arg2:E9
-E19	Condition:T56 Name:T57
+E19	Condition:T56
 E21	Condition:T59 Name:T60 Stability:T58
 E23	Assertion:T61 Asserted:T58
 E25	Modifier:T62 Modifies:T13
-E27	Condition:T63 Name:T64
+E27	Observation:T63 Name:T64
 E29	Condition:T65 Name:T66
-E34	Or:T68 Arg:E29 Arg2:E20
 E35	Modifier:T69 Modifies:T19
 E26	Modifier:T26 Modifies:T19
-E36	Or:T27 Arg:E35 Arg2:E26
 E37	Condition:T70 Name:T71 Temporality:E33
 E38	Other:T72 Is-Other:E22
 E39	Exception:T73 From:E20 Except:E24 Except2:E16
-E40	Or:T74 Arg:E24 Arg2:E16
-E41	Or:T75 Arg:E28 Arg2:E30
 E42	Condition:T76 Name:T77
 E43	Risk:T78 Risk-For:E42
 E44	Risk:T79
@@ -82,7 +76,6 @@ T39	Eq-Comparison 620 627	history
 T40	Eq-Temporal-Period 620 627	history
 T41	Condition 59 69	overweight
 T42	Condition-Name 59 69	overweight
-T43	Or 70 72	or
 T44	Eq-Comparison 147 157	25 or more
 T45	Eq-Operator 150 157	or more
 T46	Criteria-Count 173 181	of these
@@ -94,7 +87,6 @@ T51	Condition 194 213	sedentary lifestyle
 T52	Condition-Name 194 213	sedentary lifestyle
 T53	Condition 215 224	poor diet
 T54	Condition-Name 215 224	poor diet
-T55	Or 225 228	and
 T56	Condition 417 424	disease
 T57	Condition-Name 417 424	disease
 T58	Stability 434 440	affect
@@ -102,28 +94,24 @@ T59	Condition 445 467	central nervous system
 T60	Condition-Name 445 467	central nervous system
 T61	Assertion 430 433	may
 T62	Modifier 469 474	brain
-T63	Condition 486 508	traumatic brain injury
-T64	Condition-Name 486 508	traumatic brain injury
+T63	Observation 486 508	traumatic brain injury
+T64	Observation-Name 486 508	traumatic brain injury
 T65	Condition 537 558	psychiatric diagnoses
 T66	Condition-Name 537 558	psychiatric diagnoses
 T67	Acuteness 562 567	acute
-T68	Or 559 561	or
 T69	Modifier 599 609	dependence
 T26	Modifier 613 618	abuse
-T27	Or 610 612	or
 T70	Condition 631 644	schizophrenia
 T71	Condition-Name 631 644	schizophrenia
 T72	Other 648 653	other
 T73	Exception 682 692	except for
-T74	Or 710 712	or
-T75	Or 770 772	or
 T76	Condition 830 837	Suicide
 T77	Condition-Name 830 837	Suicide
 T78	Risk 838 842	risk
 T79	Risk 188 192	risk
-A1	Observation-Type-Value T2 vital
-A2	Observation-Type-Value T6 vital
-A3	Observation-Type-Value T8 vital
+A1	Observation-Type-Value E1 vital
+A2	Observation-Type-Value E5 vital
+A3	Observation-Type-Value E7 vital
 A4	Eq-Temporal-Unit-Value T32 year
 A5	Eq-Operator-Value T34 BETWEEN
 A6	Eq-Temporal-Period-Value T40 past
@@ -140,3 +128,12 @@ R6	Example-Of Arg1:E14 Arg2:E21
 R7	Example-Of Arg1:E18 Arg2:E20
 R8	Example-Of Arg1:E37 Arg2:E20
 R9	Example-Of Arg1:E22 Arg2:E20
+R10	Or Arg1:E2 Arg2:E3
+R11	Or Arg1:E15 Arg2:E9
+R12	Or Arg1:E29 Arg2:E20
+R13	Or Arg1:E35 Arg2:E26
+R14	Or Arg1:E24 Arg2:E16
+R15	Or Arg1:E28 Arg2:E30
+R16	Or Arg1:E12 Arg2:E27
+R17	Or Arg1:E13 Arg2:E15
+R18	Or Arg1:E27 Arg2:E14

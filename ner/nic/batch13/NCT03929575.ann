@@ -1,24 +1,22 @@
-E1	Observation:T1 Name:T2 Eq-Comparison:E2
-E4	Observation:T4 Name:T5 Eq-Comparison:E15
+E1	Observation:T1 Name:T2 Numeric-Filter:E2
+E4	Observation:T4 Name:T5 Numeric-Filter:E15
 E5	Eq-Comparison:T14 Operator:T6 Value:T12 Per:T24 Temporal-Unit:T23
 E2	Eq-Comparison:T15 Per:T16 Value:T10 Value2:T11 Unit:T8 Operator:T17
-E3	Condition:T18 Name:T19
+E3	Observation:T18 Name:T19
 E6	Negation:T20 Negates:E3
-E7	Observation:T21 Name:T22 Eq-Comparison:E5
+E7	Observation:T21 Name:T22 Numeric-Filter:E5
 E8	Observation:T25 Name:T26
 E9	Negation:T27 Negates:E8
 E10	Condition:T28
 E11	Condition:T29 Name:T30
 E12	Condition:T32 Name:T33
 E13	Assertion:T34 Asserted:E12
-E14	Or:T36 Arg:T31 Arg2:T35
 E15	Eq-Comparison:T37 Operator:T7 Value:T13 Unit:T9 Per:T38
-E16	Condition:T39 Name:T40 Temporality:E17
+E16	Observation:T39 Name:T40 Temporality:E17
 E17	Eq-Comparison:T41 Temporal-Period:T42
 E18	Observation:T43 Name:T44
 E19	Observation:T45 Name:T46
 E21	Assertion:T49 Asserted:E12
-E22	Or:T50 Arg:E13 Arg2:E21
 E20	Observation:T47 Name:T48
 E23	Assertion:T51 Asserted:E9
 T1	Observation 25 40	Body Mass Index
@@ -38,8 +36,8 @@ T14	Eq-Comparison 199 216	>4 hours per week
 T15	Eq-Comparison 41 67	between 18.5 and 35 kg/m^2
 T16	Eq-Unit 64 67	m^2
 T17	Eq-Operator 41 48	between
-T18	Condition 77 84	smoking
-T19	Condition-Name 77 84	smoking
+T18	Observation 77 84	smoking
+T19	Observation-Name 77 84	smoking
 T20	Negation 73 76	Non
 T21	Observation 180 197	physical activity
 T22	Observation-Name 180 197	physical activity
@@ -56,11 +54,10 @@ T32	Condition 393 401	pregnant
 T33	Condition-Name 393 401	pregnant
 T34	Assertion 366 375	expecting
 T35	Life-Stage-And-Gender 360 365	women
-T36	Or 357 359	or
 T37	Eq-Comparison 411 445	greater than or equal to 35 kg/m^2
 T38	Eq-Unit 442 445	m^2
-T39	Condition 459 465	smoker
-T40	Condition-Name 459 465	smoker
+T39	Observation 459 465	smoker
+T40	Observation-Name 459 465	smoker
 T41	Eq-Comparison 451 458	Current
 T42	Eq-Temporal-Period 451 458	Current
 T43	Observation 98 126	Health History Questionnaire
@@ -68,27 +65,26 @@ T44	Observation-Name 98 126	Health History Questionnaire
 T45	Observation 307 335	Health History Questionnaire
 T46	Observation-Name 307 335	Health History Questionnaire
 T49	Assertion 376 382	trying
-T50	Or 375 376	/
 T47	Observation 479 507	Health History Questionnaire
 T48	Observation-Name 479 507	Health History Questionnaire
 T51	Assertion 267 275	prohibit
-A1	Observation-Type-Value T2 vital
-A2	Observation-Type-Value T5 vital
+A1	Observation-Type-Value E1 vital
+A2	Observation-Type-Value E4 vital
 A3	Eq-Operator-Value T6 GT
 A4	Eq-Operator-Value T7 GTEQ
 A5	Eq-Operator-Value T17 BETWEEN
 A6	Eq-Temporal-Unit-Value T23 hour
 A7	Eq-Temporal-Unit-Value T24 week
-A8	Observation-Type-Value T22 social-habit
-A9	Observation-Type-Value T26 social-habit
+A8	Observation-Type-Value E7 social-habit
+A9	Observation-Type-Value E8 social-habit
 A10	Life-Stage-And-Gender-Type T31 female
 A11	Assertion-Type-Value E13 intention
 A12	Life-Stage-And-Gender-Type T35 female
 A13	Eq-Temporal-Period-Value T42 present
-A14	Observation-Type-Value T44 survey-or-questionnaire
-A15	Observation-Type-Value T46 survey-or-questionnaire
+A14	Observation-Type-Value E18 survey-or-questionnaire
+A15	Observation-Type-Value E19 survey-or-questionnaire
 A17	Assertion-Type-Value E21 intention
-A16	Observation-Type-Value T48 survey-or-questionnaire
+A16	Observation-Type-Value E20 survey-or-questionnaire
 A18	Assertion-Type-Value E23 hypothetical
 R1	Caused-By Arg1:E9 Arg2:E10
 R2	If-Then Arg1:T31 Arg2:E11
@@ -96,3 +92,5 @@ R3	If-Then Arg1:T35 Arg2:E12
 R4	Found-By Arg1:E3 Arg2:E18
 R5	Found-By Arg1:E19 Arg2:E8
 R6	Found-By Arg1:E16 Arg2:E20
+R7	Or Arg1:T31 Arg2:T35
+R8	Or Arg1:E13 Arg2:E21

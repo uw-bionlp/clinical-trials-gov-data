@@ -1,0 +1,93 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Operator:T30 Value:T31 Operator:T32 Value:T33 Temporal-Unit:T34
+E4	Condition:T4 Name:T35
+E5	Condition:T5 Name:T36
+E6	Age:T6 Eq-Comparison:E7
+E7	Eq-Comparison:T7 Operator:T37 Value:T38 Operator:T39 Value:T40 Temporal-Unit:T41
+E9	Negation:T9 Negates:E10
+E10	Condition:T10 Name:T42
+E11	Eq-Comparison:T11 Temporal-Period:T43
+E12	Eq-Comparison:T12
+E13	Modifier:T13 Modifies:T46
+E14	Or:T14 Arg:E13 Arg2:E15
+E15	Modifier:T15 Modifies:T46
+E16	Condition:T16 Name:T46 Severity:T45 Temporality:E11
+E17	Condition:T17 Name:T47
+E18	Modifier:T18 Modifies:T48
+E19	Or:T19 Arg:E18 Arg2:E20
+E20	Modifier:T20 Modifies:T48
+E21	Condition:T21 Name:T48
+E22	Or:T22 Arg:E21 Arg2:E24
+E24	Condition:T24 Name:T49 Acuteness:T23
+E25	Negation:T25 Negates:E8 Negates2:E27
+E26	Or:T26 Arg:E8 Arg2:E27
+E27	Procedure:T27
+E3	Modifier:T3 Modifies:T35
+E8	Procedure:T8
+E29	Assertion:T50 Asserted:E25
+E30	Condition:T29 Name:T51
+E28	Other:T28 Is-Other:E30
+E31	Modifier:T52 Modifies:T51
+T1	Age 44 47	Age
+T2	Eq-Comparison 48 67	between 30-70 years
+T4	Condition 86 94	diabetes
+T5	Condition 101 108	Healthy
+T6	Age 127 130	Age
+T7	Eq-Comparison 131 150	between 30-70 years
+T9	Negation 162 169	without
+T10	Condition 170 178	diabetes
+T11	Eq-Comparison 204 211	history
+T12	Eq-Comparison 215 230	moderate-severe
+T13	Modifier 231 238	somatic
+T14	Or 239 241	or
+T15	Modifier 242 251	autonomic
+T16	Condition 252 262	neuropathy
+T17	Condition 264 286	cardiovascular disease
+T18	Modifier 288 304	preproliferative
+T19	Or 305 307	or
+T20	Modifier 308 321	proliferative
+T21	Condition 322 333	retinopathy
+T22	Or 335 338	and
+T23	Acuteness 339 346	chronic
+T24	Condition 347 360	renal failure
+T25	Negation 366 372	unable
+T26	Or 397 399	or
+T27	Procedure 400 411	assessments
+T28	Other 417 422	other
+T29	Condition 434 442	diseases
+T30	Eq-Operator 48 55	between
+T31	Eq-Value 56 58	30
+T32	Eq-Operator 58 59	-
+T33	Eq-Value 59 61	70
+T34	Eq-Temporal-Unit 62 67	years
+T35	Condition-Name 86 94	diabetes
+T36	Condition-Name 101 108	Healthy
+T37	Eq-Operator 131 138	between
+T38	Eq-Value 139 141	30
+T39	Eq-Operator 141 142	-
+T40	Eq-Value 142 144	70
+T41	Eq-Temporal-Unit 145 150	years
+T42	Condition-Name 170 178	diabetes
+T43	Eq-Temporal-Period 204 211	history
+T44	Severity 215 223	moderate
+T45	Severity 224 230	severe
+T46	Condition-Name 252 262	neuropathy
+T47	Condition-Name 264 286	cardiovascular disease
+T48	Condition-Name 322 333	retinopathy
+T49	Condition-Name 347 360	renal failure
+T3	Modifier 79 85	type 2
+T8	Procedure 388 396	programs
+T50	Assertion 366 372	unable
+T51	Condition-Name 434 442	diseases
+T52	Modifier 423 433	systematic
+A1	Eq-Operator-Value T30 BETWEEN
+A2	Eq-Operator-Value T32 BETWEEN
+A3	Eq-Temporal-Unit-Value T34 year
+A4	Eq-Operator-Value T37 BETWEEN
+A5	Eq-Operator-Value T39 BETWEEN
+A6	Eq-Temporal-Unit-Value T41 year
+A7	Eq-Temporal-Period-Value T43 past
+A8	Severity-Value T44 moderate
+A9	Severity-Value T45 severe
+A10	Assertion-Type-Value E29 hypothetical
+A11	Acuteness-Type-Value T23 chronic

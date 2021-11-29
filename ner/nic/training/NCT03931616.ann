@@ -6,7 +6,7 @@ E9	Condition:T9 Name:T10 Acuteness:T6
 E11	Procedure:T11 Name:T12
 E17	Condition:T17 Name:T18 Temporality:E27
 E19	Condition:T19 Name:T20
-E21	Observation:T21 Name:T22 Eq-Comparison:E24
+E21	Observation:T21 Name:T22 Numeric-Filter:E24
 E22	Eq-Comparison:T41 Operator:T24 Value:T35 Temporal-Unit:T52
 E23	Eq-Comparison:T42 Operator:T25 Value:T36
 E24	Eq-Comparison:T43 Operator:T26 Value:T37
@@ -15,23 +15,16 @@ E26	Eq-Comparison:T45 Operator:T28 Temporal-Unit:T30 Value:T39
 E27	Eq-Comparison:T46 Operator:T29 Temporal-Unit:T31 Value:T40
 E12	Condition:T49 Code:T50
 E13	Exception:T51 Except:E12 From:E1
-E14	Observation:T53 Name:T54 Eq-Comparison:E22
-E18	Observation:T56 Name:T57 Eq-Comparison:E23
+E14	Observation:T53 Name:T54 Numeric-Filter:E22
+E18	Observation:T56 Name:T57 Numeric-Filter:E23
 E20	Condition:T58 Name:T59
 E30	Modifier:T61
-E32	Observation:T63 Name:T64 Eq-Comparison:E25
-E35	Temporal-Connection:T68 Arg:E26 Arg2:E28
+E32	Observation:T63 Name:T64 Numeric-Filter:E25
 E37	Study:T71
-E38	Temporal-Connection:T73 Arg:E27 Arg2:E37
 E39	Contraindication:T75 Contraindicates:E40
 E40	Procedure:T76 Name:T77
-E2	Or:T32 Arg:E3 Arg2:E19
-E6	Or:T33 Arg:E30 Arg2:E8
 E8	Modifier:T34 Modifies:E5
-E10	And:T60 Arg:E5 Arg2:E32
 E4	Condition:T8 Name:T16
-E15	Temporal-Connection:T15 Arg:E18 Arg2:E4
-E16	And:T48 Arg:E40 Arg2:E11
 E28	Study:T62
 E29	Assertion:T66 Asserted:E9
 E31	Condition:T67 Name:T69 Stability:T70
@@ -75,7 +68,7 @@ T45	Eq-Comparison 857 871	within 4 weeks
 T46	Eq-Comparison 917 932	within 3 months
 T13	Condition-Type 243 248	Final
 T49	Condition 346 351	G45.4
-T50	Condition-Code 346 351	G45.4
+T50	Code 346 351	G45.4
 T51	Exception 339 345	except
 T52	Eq-Temporal-Unit 392 397	hours
 T53	Observation 368 387	onset-to-alarm time
@@ -88,23 +81,16 @@ T61	Modifier 706 715	Malignant
 T63	Observation 753 768	life expectancy
 T64	Observation-Name 753 768	life expectancy
 T65	Eq-Temporal-Unit 773 777	year
-T68	Temporal-Connection 872 878	before
 T71	Study 940 955	study inclusion
-T73	Temporal-Connection 933 939	before
 T75	Contraindication 970 987	contraindications
 T76	Procedure 992 1004	thrombolysis
 T77	Procedure-Name 992 1004	thrombolysis
-T14	Condition-Code 279 290	ICD 10: I63
-T23	Condition-Code 327 338	ICD 10: G45
-T32	Or 292 294	or
-T33	Or 716 718	or
+T14	Code 279 290	ICD 10: I63
+T23	Code 327 338	ICD 10: G45
 T34	Modifier 719 724	other
 T47	Severity 725 731	severe
-T60	And 748 752	with
 T6	Acuteness 35 40	acute
 T8	Condition 419 425	stroke
-T15	Temporal-Connection 415 418	Pre
-T48	And 1005 1008	AND
 T55	Procedure-Name 849 856	surgery
 T62	Study 879 884	study
 T66	Assertion 25 34	Suspected
@@ -123,15 +109,19 @@ A8	Eq-Temporal-Unit-Value T30 week
 A9	Eq-Temporal-Unit-Value T31 month
 A1	Condition-Type-Value T13 discharge
 A10	Eq-Temporal-Unit-Value T52 hour
-A11	Observation-Type-Value T57 clinical-score
+A11	Observation-Type-Value E18 clinical-score
 A12	Eq-Temporal-Unit-Value T65 year
 A15	Severity-Value T47 severe
-A17	Temporal-Connection-Type-Value E15 before
-A13	Temporal-Connection-Type-Value E35 before
-A14	Temporal-Connection-Type-Value E38 before
 A18	Assertion-Type-Value E29 possible
 A19	Stability-Value T70 change
 A20	Assertion-Type-Value E33 possible
 A21	Acuteness-Type-Value T6 acute
 R2	Abbrev-Of Arg1:E19 Arg2:E1
 R4	Equivalent-To Arg1:E20 Arg2:E18
+R1	Before Arg1:E26 Arg2:E28
+R3	Before Arg1:E27 Arg2:E37
+R5	Or Arg1:E3 Arg2:E19
+R6	Or Arg1:E30 Arg2:E8
+R7	And Arg1:E5 Arg2:E32
+R8	Before Arg1:E18 Arg2:E4
+R9	And Arg1:E40 Arg2:E11

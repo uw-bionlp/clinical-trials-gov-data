@@ -1,13 +1,13 @@
 E1	Procedure:T1 Name:T2 Minimum-Count:E33 Temporality:E35
 E5	Condition:T5 Name:T6
-E10	Observation:T10 Name:T11 Eq-Comparison:E11
+E10	Observation:T10 Name:T11 Numeric-Filter:E11
 E12	Procedure:T12 Name:T13
 E14	Condition:T14 Name:T15
 E16	Procedure:T16 Name:T17
 E18	Procedure:T18 Name:T19
 E20	Condition:T20 Name:T21
 E22	Condition:T22 Name:T23
-E24	Condition:T24 Name:T25
+E24	Condition:T24
 E26	Condition:T26 Name:T27
 E28	Condition:T28 Name:T29
 E30	Condition:T30 Name:T31 Stability:T162
@@ -15,17 +15,16 @@ E34	Condition:T34 Name:T35
 E38	Condition:T38 Name:T39
 E40	Condition:T40 Name:T41 Severity:T165 Temporality:E89
 E41	Eq-Comparison:T57 Operator:T47 Value:T53 Unit:T46 Value2:T54
-E2	Age:T58 Eq-Comparison:E4
+E2	Age:T58 Numeric-Filter:E4
 E4	Eq-Comparison:T60 Operator:T61 Value:T48 Value2:T59
-E6	Observation:T62 Name:T63 Eq-Comparison:E8 Eq-Comparison2:E9
+E6	Observation:T62 Name:T63 Numeric-Filter:E8 Numeric-Filter:E9
 E8	Eq-Comparison:T64 Value:T49 Unit:T42 Operator:T65
 E9	Eq-Comparison:T66 Value:T50 Unit:T43 Operator:T67
 E11	Eq-Comparison:T68 Value:T51 Operator:T69 Unit:T44 Per:T70
-E13	And:T71 Arg:E6 Arg2:E10
-E15	Observation:T72 Name:T73 Eq-Comparison:E17
+E15	Observation:T72 Name:T73 Numeric-Filter:E17
 E17	Eq-Comparison:T74 Value:T52 Operator:T76 Value2:T75 Unit:T45
-E19	Observation:T77 Name:T78 Eq-Comparison:E41
-E7	Observation:T7 Name:T8 Eq-Comparison:E23
+E19	Observation:T77 Name:T78 Numeric-Filter:E41
+E7	Observation:T7 Name:T8 Numeric-Filter:E23
 E21	Modifier:T79 Modifies:T8
 E23	Eq-Comparison:T80 Value:T55 Operator:T81 Value2:T82 Unit:T83 Per:T84
 E25	Condition:T85 Name:T86
@@ -63,29 +62,25 @@ E64	Condition:T133 Name:T134
 E65	Observation:T135 Specimen:T136
 E66	Assertion:T137 Asserted:E65
 E67	Study:T138
-E68	Temporal-Connection:T139 Arg:E65 Arg2:E67
 E69	Procedure:T140 Name:T141
 E70	Observation:T142 Name:T143
 E71	Procedure:T144 Name:T145
 E72	Modifier:T146 Modifies:T145
-E73	And:T147 Arg:E70 Arg2:E71
 E74	Study:T148
 E75	Assertion:T149 Asserted:E74
-E76	Condition:T150 Name:T151 Severity:T152
-E32	Modifier:T32 Modifies:T25
-E36	Modifier:T33 Modifies:T25
-E77	Modifier:T36 Modifies:T25
-E78	Modifier:T37 Modifies:T25
-E79	Modifier:T153 Modifies:T25
-E80	Modifier:T154 Modifies:T25
+E76	Condition:T150 Severity:T152
+E32	Modifier:T32 Modifies:E24
+E36	Modifier:T33 Modifies:E24
+E77	Modifier:T36 Modifies:E24
+E78	Modifier:T37 Modifies:E24
+E79	Modifier:T153 Modifies:E24
+E80	Modifier:T154 Modifies:E24
 E81	Procedure:T155 Name:T156 Temporality:E82
 E82	Eq-Comparison:T157 Temporal-Period:T158
-E83	Or:T159 Arg:E22 Arg2:E81
 E84	Drug:T160 Name:T161
 E85	Assertion:T163 Asserted:T162
 E86	Drug:T164
 E87	Drug:T166
-E88	Or:T167 Arg:E40 Arg2:E38
 E89	Eq-Comparison:T168 Temporal-Period:T169
 T1	Procedure 300 321	contraceptive methods
 T2	Procedure-Name 300 321	contraceptive methods
@@ -148,7 +143,6 @@ T67	Eq-Operator 82 91	or higher
 T68	Eq-Comparison 101 111	18~27kg/m2
 T69	Eq-Operator 103 104	~
 T70	Eq-Unit 109 111	m2
-T71	And 93 96	and
 T72	Observation 117 120	SBP
 T73	Observation-Name 117 120	SBP
 T74	Eq-Comparison 121 131	90~150mmHg
@@ -218,10 +212,9 @@ T132	Procedure-Name 649 667	Coitus interruptus
 T133	Condition 669 678	Abstinent
 T134	Condition-Name 669 678	Abstinent
 T135	Observation 831 843	blood sample
-T136	Observation-Specimen 831 836	blood
+T136	Specimen 831 836	blood
 T137	Assertion 807 819	will be able
 T138	Study 851 865	clinical trial
-T139	Temporal-Connection 844 850	during
 T140	Procedure 936 956	physical examination
 T141	Procedure-Name 936 956	physical examination
 T142	Observation 958 966	lab test
@@ -229,7 +222,6 @@ T143	Observation-Name 958 966	lab test
 T144	Procedure 971 990	medical examination
 T145	Procedure-Name 971 990	medical examination
 T146	Modifier 991 1003	by interview
-T147	And 967 970	and
 T148	Study 918 932	clinical trial
 T149	Assertion 894 917	suitable to participate
 T150	Condition 1164 1171	disease
@@ -245,7 +237,6 @@ T155	Procedure 1323 1330	surgery
 T156	Procedure-Name 1323 1330	surgery
 T157	Eq-Comparison 1312 1319	history
 T158	Eq-Temporal-Period 1312 1319	history
-T159	Or 1309 1311	or
 T160	Drug 1364 1368	drug
 T161	Drug-Name 1364 1368	drug
 T162	Stability 1343 1349	affect
@@ -253,30 +244,28 @@ T163	Assertion 1337 1342	would
 T164	Drug 1409 1413	drug
 T165	Severity 1397 1408	significant
 T166	Drug 1450 1454	drug
-T167	Or 1447 1449	or
 T168	Eq-Comparison 1375 1382	History
 T169	Eq-Temporal-Period 1375 1382	History
 A1	Life-Stage-And-Gender-Type T9 female
-A2	Observation-Type-Value T11 vital
+A2	Observation-Type-Value E10 vital
 A3	Eq-Operator-Value T47 BETWEEN
 A4	Eq-Operator-Value T61 BETWEEN
-A5	Observation-Type-Value T63 vital
+A5	Observation-Type-Value E6 vital
 A6	Eq-Operator-Value T65 GTEQ
 A7	Eq-Operator-Value T67 GTEQ
 A8	Eq-Operator-Value T69 BETWEEN
-A9	Observation-Type-Value T73 vital
+A9	Observation-Type-Value E15 vital
 A10	Eq-Operator-Value T76 BETWEEN
-A11	Observation-Type-Value T78 vital
-A12	Observation-Type-Value T8 lab
+A11	Observation-Type-Value E19 vital
+A12	Observation-Type-Value E7 lab
 A13	Eq-Operator-Value T81 BETWEEN
 A14	Assertion-Type-Value E31 hypothetical
 A15	Eq-Operator-Value T91 GTEQ
 A16	Eq-Temporal-Period-Value T93 present
 A17	Assertion-Type-Value E37 hypothetical
-A18	Observation-Type-Value T127 vital
+A18	Observation-Type-Value E60 vital
 A19	Assertion-Type-Value E66 hypothetical
-A20	Temporal-Connection-Type-Value E68 during
-A21	Observation-Type-Value T143 lab
+A21	Observation-Type-Value E70 lab
 A22	Assertion-Type-Value E75 hypothetical
 A23	Severity-Value T152 severe
 A24	Eq-Temporal-Period-Value T158 past
@@ -307,3 +296,23 @@ R20	Using Arg1:E30 Arg2:E84
 R21	Caused-By Arg1:T162 Arg2:E81
 R22	Caused-By Arg1:E40 Arg2:E86
 R23	Caused-By Arg1:E38 Arg2:E87
+R24	And Arg1:E6 Arg2:E10
+R25	During Arg1:E65 Arg2:E67
+R26	And Arg1:E70 Arg2:E71
+R27	Or Arg1:E22 Arg2:E81
+R28	Or Arg1:E40 Arg2:E38
+R29	Or Arg1:E14 Arg2:E42
+R30	Or Arg1:E26 Arg2:E28
+R31	Or Arg1:E28 Arg2:E20
+R32	Or Arg1:E39 Arg2:E14
+R33	Or Arg1:E46 Arg2:E16
+R34	Or Arg1:E47 Arg2:E18
+R35	Or Arg1:E60 Arg2:E62
+R36	Or Arg1:E62 Arg2:E63
+R37	Or Arg1:E63 Arg2:E64
+R38	Or Arg1:E69 Arg2:E70
+R39	Or Arg1:E32 Arg2:E77
+R40	Or Arg1:E36 Arg2:E32
+R41	Or Arg1:E77 Arg2:E78
+R42	Or Arg1:E78 Arg2:E79
+R43	Or Arg1:E79 Arg2:E80

@@ -1,12 +1,9 @@
-E1	Or:T1 Arg:T52 Arg2:T53
 E2	Eq-Comparison:T2 Operator:T54 Value:T55 Temporal-Unit:T56
-E3	Age:T3 Eq-Comparison:E2
-E4	Temporal-Connection:T4 Arg:E5
-E5	Study:T5 
-E6	Observation:T6 Name:T57 Eq-Comparison:E7
+E3	Age:T3 Numeric-Filter:E2
+E5	Study:T5
+E6	Observation:T6 Name:T57 Numeric-Filter:E7
 E7	Eq-Comparison:T7 Value:T60 Unit:T61 Operator:T58 Per:T62
 E8	Modifier:T8 Modifies:T63
-E9	Or:T9 Arg:E8 Arg2:E10
 E10	Procedure:T10 Name:T59
 E11	Modifier:T11 Modifies:T63
 E12	Condition:T12 Name:T63
@@ -14,58 +11,46 @@ E13	Indication:T13 Indication-For:E15
 E14	Modifier:T14 Modifies:T64
 E15	Condition:T15 Name:T64
 E16	Condition:T16 Name:T65
-E17	Or:T17 Arg:E16 Arg2:E18
 E18	Condition:T18 Name:T66
 E19	Study:T19 Temporality:E52 Study-Of:E20 Study-Of2:E53
-E20	Drug:T20 
+E20	Drug:T20
 E21	Negation:T21 Negates:E56
-E22	Temporal-Connection:T22 Arg:E21 Arg2:E23
-E23	Study:T23 
+E23	Study:T23
 E24	Procedure:T24 Name:T67
 E25	Condition:T25 Name:T68
 E26	Modifier:T26 Modifies:E29
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Modifier:T28 Modifies:E29
-E29	Condition:T29 
+E29	Condition:T29
 E30	Assertion:T30 Asserted:T70
 E31	Eq-Comparison:T31 Temporal-Period:T71
 E32	Procedure:T32 Name:T72 Temporality:E31 Temporality2:E35
-E33	Or:T33 Arg:E58 Arg2:E34
 E34	Modifier:T34 Modifies:T72
 E35	Eq-Comparison:T35 Temporal-Period:T73 Value:T74 Temporal-Unit:T75
 E36	Procedure:T36 Name:T76
 E37	Procedure:T37 Name:T77
 E38	Procedure:T38 Name:T78
-E39	Or:T39 Arg:E38 Arg2:E40
 E40	Procedure:T40 Name:T79
 E41	Condition:T41 Name:T80
 E42	Procedure:T42 Name:T95
-E43	Or:T43 Arg:E42 Arg2:E44
 E44	Procedure:T44 Name:T96
 E45	Modifier:T45 Modifies:T81
 E46	Procedure:T46 Name:T81
-E47	Observation:T47 Name:T82 Eq-Comparison:E50
-E48	Or:T48 Arg:E47 Arg2:E49
-E49	Observation:T49 Name:T98 Eq-Comparison:E50
+E47	Observation:T47 Name:T82 Numeric-Filter:E50
+E49	Observation:T49 Name:T98 Numeric-Filter:E50
 E50	Eq-Comparison:T50 Operator:T83 Value:T84 Unit:T99
 E51	Procedure:T51 Name:T85
 E52	Eq-Comparison:T86 Temporal-Period:T87
 E53	Procedure:T88 Name:T89
 E54	Other:T90 Is-Other:E53
-E55	Or:T91 Arg:E20 Arg2:E53
 E56	Assertion:T92 Asserted:E21
-E57	Or:T93 Arg:E25 Arg2:E29
 E58	Modifier:T94 Modifies:T72
 E59	Assertion:T97 Asserted:E46
-T1	Or 29 32	and
 T2	Eq-Comparison 39 52	over 18 years
 T3	Age 53 56	old
-T4	Temporal-Connection 145 151	before
 T5	Study 156 161	study
 T6	Observation 193 196	BMI
 T7	Eq-Comparison 197 232	equal to or greater than 30 Kg / m2
 T8	Modifier 252 260	clinical
-T9	Or 261 264	and
 T10	Procedure 265 277	radiological
 T11	Modifier 290 294	knee
 T12	Condition 295 309	osteoarthritis
@@ -73,38 +58,31 @@ T13	Indication 330 340	indication
 T14	Modifier 345 352	primary
 T15	Condition 353 356	TKA
 T16	Condition 413 422	Pregnancy
-T17	Or 423 425	or
 T18	Condition 426 435	lactation
 T19	Study 561 566	study
 T20	Drug 572 581	medicines
 T21	Negation 628 637	inability
-T22	Temporal-Connection 680 686	during
 T23	Study 710 715	study
 T24	Procedure 784 804	physical examination
 T25	Condition 806 819	abnormalities
 T26	Modifier 878 884	social
-T27	Or 885 887	or
 T28	Modifier 888 900	psychosocial
 T29	Condition 901 908	factors
 T30	Assertion 914 919	could
 T31	Eq-Comparison 964 972	previous
 T32	Procedure 973 991	surgical procedure
-T33	Or 995 997	or
 T34	Modifier 998 1013	around the knee
 T35	Eq-Comparison 1021 1035	last 12 months
 T36	Procedure 1045 1070	proximal tibial osteotomy
 T37	Procedure 1072 1089	femoral osteotomy
 T38	Procedure 1091 1105	open reduction
-T39	Or 1106 1109	and
 T40	Procedure 1110 1127	internal fixation
 T41	Condition 1134 1142	fracture
 T42	Procedure 1144 1156	patellectomy
-T43	Or 1157 1159	or
 T44	Procedure 1160 1180	patellar realignment
 T45	Modifier 1195 1217	simultaneous bilateral
 T46	Procedure 1218 1221	TKA
 T47	Observation 1235 1246	varus angle
-T48	Or 1247 1249	or
 T49	Observation 1250 1256	valgus
 T50	Eq-Comparison 1257 1263	≥ 15 °
 T51	Procedure 1270 1302	Total revision knee arthroplasty
@@ -146,9 +124,7 @@ T87	Eq-Temporal-Period 542 555	participating
 T88	Procedure 591 606	medical devices
 T89	Procedure-Name 591 606	medical devices
 T90	Other 585 590	other
-T91	Or 582 584	or
 T92	Assertion 628 637	inability
-T93	Or 860 862	or
 T69	Polarity 927 935	negative
 T94	Modifier 992 994	on
 T95	Procedure-Name 1144 1156	patellectomy
@@ -156,14 +132,12 @@ T96	Procedure-Name 1160 1180	patellar realignment
 T97	Assertion 1188 1192	Need
 T98	Observation-Name 1250 1256	valgus
 T99	Eq-Unit 1262 1263	°
-A1	Temporal-Connection-Type-Value E4 before
-A2	Temporal-Connection-Type-Value E22 during
 A3	Assertion-Type-Value E30 hypothetical
 A4	Life-Stage-And-Gender-Type T52 male
 A5	Life-Stage-And-Gender-Type T53 female
 A6	Eq-Operator-Value T54 GT
 A7	Eq-Temporal-Unit-Value T56 year
-A8	Observation-Type-Value T57 vital
+A8	Observation-Type-Value E6 vital
 A9	Eq-Operator-Value T58 GTEQ
 A12	Stability-Value T70 change
 A13	Eq-Temporal-Period-Value T71 past
@@ -174,8 +148,8 @@ A10	Eq-Temporal-Period-Value T87 present
 A17	Assertion-Type-Value E56 hypothetical
 A11	Polarity-Value T69 negative
 A18	Assertion-Type-Value E59 hypothetical
-A19	Observation-Type-Value T98 measurement
-A20	Observation-Type-Value T82 measurement
+A19	Observation-Type-Value E49 measurement
+A20	Observation-Type-Value E47 measurement
 R1	Found-By Arg1:E12 Arg2:E10
 R2	Caused-By Arg1:T70 Arg2:E29
 R3	Caused-By Arg1:T70 Arg2:E25
@@ -188,3 +162,18 @@ R9	Example-Of Arg1:E38 Arg2:E32
 R10	Example-Of Arg1:E40 Arg2:E32
 R11	Example-Of Arg1:E42 Arg2:E32
 R12	Example-Of Arg1:E44 Arg2:E32
+R13	Or Arg1:T52 Arg2:T53
+R14	Or Arg1:E8 Arg2:E10
+R15	Or Arg1:E16 Arg2:E18
+R16	During Arg1:E21 Arg2:E23
+R17	Or Arg1:E26 Arg2:E28
+R18	Or Arg1:E58 Arg2:E34
+R19	Or Arg1:E38 Arg2:E40
+R20	Or Arg1:E42 Arg2:E44
+R21	Or Arg1:E47 Arg2:E49
+R22	Or Arg1:E20 Arg2:E53
+R23	Or Arg1:E25 Arg2:E29
+R24	Or Arg1:E24 Arg2:E25
+R25	Or Arg1:E36 Arg2:E37
+R26	Or Arg1:E37 Arg2:E38
+R27	Or Arg1:E41 Arg2:E42

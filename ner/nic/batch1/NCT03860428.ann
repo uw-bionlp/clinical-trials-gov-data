@@ -1,9 +1,9 @@
-E1	Observation:T1 Name:T2 Eq-Comparison:E18
+E1	Observation:T1 Name:T2 Numeric-Filter:E18
 E3	Condition:T3 Name:T4
 E7	Condition:T7 Name:T8 Stage:E22
 E9	Condition:T9 Name:T10
-E10	Observation:T25 Eq-Comparison:E13 Name:T51
-E11	Age:T26 Eq-Comparison:E15
+E10	Observation:T25 Numeric-Filter:E13 Name:T51
+E11	Age:T26 Numeric-Filter:E15
 E13	Eq-Comparison:T41 Operator:T11 Temporal-Unit:T20 Value:T29
 E14	Eq-Comparison:T42 Operator:T12 Value:T30 Unit:T54
 E15	Eq-Comparison:T43 Operator:T13 Value:T31 Temporal-Unit:T55
@@ -14,31 +14,27 @@ E19	Eq-Comparison:T47 Operator:T17 Value:T38 Unit:T23
 E20	Eq-Comparison:T48 Operator:T18 Value:T39 Unit:T86 Per:T87
 E21	Eq-Comparison:T49 Operator:T19 Value:T40 Unit:T24 Per:T90 Per2:T91
 E22	Eq-Comparison:T50 Operator:T28 Value:T36 Unit:T78 Value2:T37
-E4	Observation:T52 Name:T53 Eq-Comparison:E14
+E4	Observation:T52 Name:T53 Numeric-Filter:E14
 E6	Condition:T56 Name:T57
-E8	Observation:T58 Name:T59 Eq-Comparison:E16
-E23	Observation:T60 Name:T61 Eq-Comparison:E17
+E8	Observation:T58 Name:T59 Numeric-Filter:E16
+E23	Observation:T60 Name:T61 Numeric-Filter:E17
 E24	Condition:T62 Name:T63
 E25	Condition:T64 Name:T65
-E26	Or:T66 Arg:E25 Arg2:E27
 E27	Condition:T67 Name:T68
 E28	Condition:T69 Name:T70
 E29	Exception:T71 From:E24 Except:E25 Except2:E27 Except3:E28
 E31	Condition:T74 Name:T75
 E32	Condition:T76 Name:T77 Temporality:E34
 E34	Eq-Comparison:T80 Operator:T81 Value:T35 Temporal-Unit:T82
-E35	Or:T83 Arg:E7 Arg2:E31
-E36	Observation:T84 Name:T85 Eq-Comparison:E19
-E37	Observation:T88 Name:T89 Eq-Comparison:E20
+E36	Observation:T84 Name:T85 Numeric-Filter:E19
+E37	Observation:T88 Name:T89 Numeric-Filter:E20
 E38	Assertion:T92 Asserted:E9
 E39	Condition:T93 Name:T94
 E40	Assertion:T95 Asserted:E39
-E2	Observation:T96 Eq-Comparison:E21 Name:T5
-E30	Or:T73 Arg:E23 Arg2:E1
+E2	Observation:T96 Numeric-Filter:E21 Name:T5
 E12	Assertion:T27 Asserted:E9
-E33	Or:T79 Arg:E38 Arg2:E12
 E41	Assertion:T97 Asserted:E39
-E42	Or:T98 Arg:E40 Arg2:E41
+E5	Modifier:T6 Modifies:T94
 T1	Observation 241 254	gestation age
 T2	Observation-Name 241 254	gestation age
 T3	Condition 433 453	hemorrhagic syndrome
@@ -100,7 +96,6 @@ T62	Condition 316 339	Congenital heart defect
 T63	Condition-Name 316 339	Congenital heart defect
 T64	Condition 352 355	PDA
 T65	Condition-Name 352 355	PDA
-T66	Or 356 362	and/or
 T67	Condition 363 383	patent foramen ovale
 T68	Condition-Name 363 383	patent foramen ovale
 T69	Condition 385 388	PFO
@@ -113,7 +108,6 @@ T77	Condition-Name 492 495	IVH
 T80	Eq-Comparison 497 518	in the first 48 hours
 T81	Eq-Operator 497 509	in the first
 T82	Eq-Temporal-Unit 513 518	hours
-T83	Or 519 521	or
 T84	Observation 543 557	platelet count
 T85	Observation-Name 543 557	platelet count
 T86	Eq-Unit 621 625	μmol
@@ -130,12 +124,10 @@ T51	Observation-Name 25 40	Gestational age
 T96	Observation 633 641	Oliguria
 T78	Eq-Unit 526 531	grade
 T72	Eq-Unit 232 233	g
-T73	Or 234 240	and/or
 T27	Assertion 668 676	apparent
-T79	Or 667 668	/
 T97	Assertion 696 704	apparent
-T98	Or 695 696	/
 T5	Observation-Name 633 641	Oliguria
+T6	Modifier 705 709	lung
 A1	Eq-Operator-Value T11 LT
 A2	Eq-Operator-Value T12 LT
 A3	Eq-Operator-Value T13 LT
@@ -148,23 +140,26 @@ A9	Eq-Operator-Value T19 LT
 A10	Eq-Temporal-Unit-Value T20 week
 A11	Eq-Temporal-Unit-Value T21 week
 A12	Eq-Operator-Value T28 BETWEEN
-A13	Observation-Type-Value T53 vital
+A13	Observation-Type-Value E4 vital
 A14	Eq-Temporal-Unit-Value T55 hour
-A15	Observation-Type-Value T59 measurement
-A16	Observation-Type-Value T61 vital
+A15	Observation-Type-Value E8 measurement
+A16	Observation-Type-Value E23 vital
 A19	Eq-Operator-Value T81 LTEQ
 A20	Eq-Temporal-Unit-Value T82 hour
-A21	Observation-Type-Value T85 lab
+A21	Observation-Type-Value E36 lab
 A22	Assertion-Type-Value E38 possible
 A23	Assertion-Type-Value E40 possible
-A24	Observation-Type-Value T51 measurement
-A25	Observation-Type-Value T89 lab
-A17	Observation-Type-Value T2 measurement
+A24	Observation-Type-Value E10 measurement
+A25	Observation-Type-Value E37 lab
+A17	Observation-Type-Value E1 measurement
 A18	Assertion-Type-Value E12 possible
 A26	Assertion-Type-Value E41 possible
-A27	Observation-Type-Value T5 measurement
+A27	Observation-Type-Value E2 measurement
 R1	Abbrev-Of Arg1:E28 Arg2:E27
 R3	Abbrev-Of Arg1:E32 Arg2:E31
 R2	Treatment-For Arg1:E8 Arg2:E6
-T6	Modifier 705 709	lung
-E5	Modifier:T6 Modifies:T94
+R4	Or Arg1:E25 Arg2:E27
+R5	Or Arg1:E7 Arg2:E31
+R6	Or Arg1:E23 Arg2:E1
+R7	Or Arg1:E38 Arg2:E12
+R8	Or Arg1:E40 Arg2:E41

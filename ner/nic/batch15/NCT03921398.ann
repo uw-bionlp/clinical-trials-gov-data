@@ -11,8 +11,8 @@ E21	Condition:T21 Name:T22
 E23	Condition:T23 Name:T24
 E25	Condition:T25 Name:T26
 E27	Condition:T27 Name:T28
-E28	Age:T33 Eq-Comparison:E30
-E29	Age:T34 Eq-Comparison:E31
+E28	Age:T33 Numeric-Filter:E30
+E29	Age:T34 Numeric-Filter:E31
 E30	Eq-Comparison:T37 Operator:T29 Temporal-Unit:T31 Value:T35
 E31	Eq-Comparison:T38 Operator:T30 Temporal-Unit:T32 Value:T36
 E2	Eq-Comparison:T39 Temporal-Period:T40
@@ -23,7 +23,6 @@ E10	Allergy:T47 Temporality:E12
 E12	Eq-Comparison:T48 Temporal-Period:T49
 E14	Condition:T50 Name:T51
 E16	Condition:T52 Name:T53
-E18	Or:T54 Arg:E14 Arg2:E16
 E19	Negation:T56 Negates:E25
 E20	Procedure:T57 Name:T58
 E22	Eq-Comparison:T59 Temporal-Period:T60
@@ -32,10 +31,8 @@ E26	Negation:T63 Negates:E1
 E32	Drug:T64 Name:T65
 E33	Negation:T66 Negates:E27
 E34	Procedure:T67
-E35	Temporal-Connection:T68 Arg:E13 Arg2:E34
 E36	Condition:T69 Name:T70
 E37	Condition:T71 Name:T72
-E38	Or:T73 Arg:E36 Arg2:E37
 E39	Procedure:T75 Name:T76
 E40	Observation:T77 Name:T78
 E41	Observation:T79 Name:T80
@@ -94,7 +91,6 @@ T50	Condition 355 363	Pregnant
 T51	Condition-Name 355 363	Pregnant
 T52	Condition 367 380	breastfeeding
 T53	Condition-Name 367 380	breastfeeding
-T54	Or 364 366	or
 T55	Life-Stage-And-Gender 381 386	women
 T56	Negation 477 480	non
 T57	Procedure 520 526	Biopsy
@@ -108,12 +104,10 @@ T64	Drug 638 653	corticosteroids
 T65	Drug-Name 638 653	corticosteroids
 T66	Negation 750 753	non
 T67	Procedure 839 848	treatment
-T68	Temporal-Connection 833 838	under
 T69	Condition 854 862	Pregnant
 T70	Condition-Name 854 862	Pregnant
 T71	Condition 866 879	breastfeeding
 T72	Condition-Name 866 879	breastfeeding
-T73	Or 863 865	or
 T74	Life-Stage-And-Gender 880 885	women
 T75	Procedure 773 800	Immunosuppressive treatment
 T76	Procedure-Name 773 800	Immunosuppressive treatment
@@ -137,7 +131,6 @@ A10	Eq-Temporal-Period-Value T49 present
 A11	Life-Stage-And-Gender-Type T55 female
 A12	Eq-Temporal-Period-Value T60 present
 A13	Eq-Temporal-Recency-Value T62 first-time
-A14	Temporal-Connection-Type-Value E35 during
 A15	Life-Stage-And-Gender-Type T74 female
 R1	Example-Of Arg1:E15 Arg2:E10
 R2	Found-By Arg1:E9 Arg2:E20
@@ -146,3 +139,6 @@ R4	Caused-By Arg1:E17 Arg2:E13
 R5	If-Then Arg1:T74 Arg2:E37
 R6	If-Then Arg1:T55 Arg2:E16
 R7	Equivalent-To Arg1:E40 Arg2:E41
+R8	Or Arg1:E14 Arg2:E16
+R9	During Arg1:E13 Arg2:E34
+R10	Or Arg1:E36 Arg2:E37

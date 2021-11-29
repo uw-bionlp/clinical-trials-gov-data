@@ -1,8 +1,7 @@
-E1	Age:T1 Eq-Comparison:E6
+E1	Age:T1 Numeric-Filter:E6
 E2	Procedure:T4 Name:T5 Temporality:E3
 E3	Eq-Comparison:T6 Temporal-Period:T7
 E4	Condition:T8 Name:T9
-E5	And:T10 Arg:E2 Arg2:E4
 E6	Eq-Comparison:T11 Operator:T12 Temporal-Unit:T13 Value:T2
 E7	Procedure:T14 Name:T15 Temporality:E8
 E8	Eq-Comparison:T16 Temporal-Period:T17
@@ -16,7 +15,6 @@ T6	Eq-Comparison 33 38	to be
 T7	Eq-Temporal-Period 33 38	to be
 T8	Condition 70 94	congenital heart disease
 T9	Condition-Name 70 94	congenital heart disease
-T10	And 48 52	with
 T11	Eq-Comparison 124 142	older than 1 month
 T12	Eq-Operator 124 134	older than
 T13	Eq-Temporal-Unit 137 142	month
@@ -30,3 +28,4 @@ A2	Eq-Temporal-Period-Value T7 future
 A3	Eq-Operator-Value T12 GT
 A4	Eq-Temporal-Unit-Value T13 month
 A5	Eq-Temporal-Period-Value T17 future
+R1	And Arg1:E2 Arg2:E4

@@ -1,14 +1,12 @@
 E1	Condition:T1 Name:T2 Severity:T19 Temporality:E10
 E3	Condition:T3 Name:T4
 E8	Procedure:T8 Name:T9 Temporality:E11
-E9	Age:T11 Eq-Comparison:E2
+E9	Age:T11 Numeric-Filter:E2
 E10	Eq-Comparison:T13 Temporal-Period:T14
 E11	Eq-Comparison:T15 Temporal-Period:T16
 E2	Eq-Comparison:T17 Value:T12 Temporal-Unit:T10 Operator:T18
 E4	Modifier:T5 Modifies:T4
 E5	Modifier:T6 Modifies:T4
-E6	Or:T20 Arg:E4 Arg2:E5
-E7	Or:T21 Arg:E1 Arg2:E3
 T1	Condition 145 167	psychological disorder
 T2	Condition-Name 145 167	psychological disorder
 T3	Condition 171 180	substance
@@ -28,10 +26,10 @@ T18	Eq-Operator 41 48	or more
 T19	Severity 137 144	serious
 T5	Modifier 181 186	abuse
 T6	Modifier 189 199	dependence
-T20	Or 187 188	/
-T21	Or 168 170	or
 A1	Eq-Temporal-Unit-Value T10 year
 A2	Eq-Temporal-Period-Value T14 present
 A3	Eq-Temporal-Period-Value T16 present
 A4	Eq-Operator-Value T18 GTEQ
 A5	Severity-Value T19 severe
+R1	Or Arg1:E4 Arg2:E5
+R2	Or Arg1:E1 Arg2:E3

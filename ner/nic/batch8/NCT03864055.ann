@@ -1,22 +1,18 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T26 Temporal-Unit:T27 Operator:T28
 E3	Modifier:T3 Modifies:T38
-E4	Or:T4 Arg:E3 Arg2:E5
 E5	Procedure:T5 Name:T39
 E7	Procedure:T7 Name:T42
 E8	Procedure:T8 Name:T29
-E9	Or:T9 Arg:E8 Arg2:E10
 E10	Procedure:T10 Name:T30
-E11	Age:T11 Eq-Comparison:E12
+E11	Age:T11 Numeric-Filter:E12
 E12	Eq-Comparison:T12 Operator:T31 Value:T32 Temporal-Unit:T33
 E13	Modifier:T13 Modifies:T16
-E14	Or:T14 Arg:E13 Arg2:E15
 E15	Procedure:T15 Name:T43
 E17	Condition:T17 Name:T16
 E18	Negation:T18 Negates:E27
 E19	Procedure:T19 Name:T47
 E20	Procedure:T20 Name:T34
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Procedure:T22 Name:T35
 E23	Eq-Comparison:T23 Temporal-Period:T36
 E24	Modifier:T24 Modifies:T37
@@ -28,22 +24,18 @@ E27	Condition:T45 Name:T46
 T1	Age 25 28	age
 T2	Eq-Comparison 32 51	18 years or younger
 T3	Modifier 88 96	clinical
-T4	Or 97 99	or
 T5	Procedure 100 112	radiological
 T7	Procedure 191 204	imaging study
 T8	Procedure 213 215	CT
-T9	Or 216 218	or
 T10	Procedure 219 222	MRI
 T11	Age 258 261	age
 T12	Eq-Comparison 262 276	above 18 years
 T13	Modifier 292 300	clinical
-T14	Or 301 303	or
 T15	Procedure 304 316	radiological
 T17	Condition 328 339	mastoiditis
 T18	Negation 367 371	Lack
 T19	Procedure 403 416	imaging study
 T20	Procedure 425 427	CT
-T21	Or 428 430	or
 T22	Procedure 431 434	MRI
 T23	Eq-Comparison 441 449	previous
 T24	Modifier 450 460	unprovoked
@@ -85,3 +77,7 @@ R5	Found-By Arg1:E17 Arg2:E15
 R6	Found-By Arg1:E27 Arg2:E19
 R7	Equivalent-To Arg1:E20 Arg2:E19
 R8	Equivalent-To Arg1:E22 Arg2:E19
+R9	Or Arg1:E3 Arg2:E5
+R10	Or Arg1:E8 Arg2:E10
+R11	Or Arg1:E13 Arg2:E15
+R12	Or Arg1:E20 Arg2:E22

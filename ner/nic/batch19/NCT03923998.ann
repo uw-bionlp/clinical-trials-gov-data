@@ -9,15 +9,12 @@ E9	Modifier:T18 Modifies:T14
 E1	Condition:T1 Name:T2
 E11	Modifier:T20 Modifies:T2
 E12	Modifier:T21 Modifies:T2
-E13	Or:T22 Arg:E11 Arg2:E12
 E14	Eq-Comparison:T23 Temporal-Recency:T24
-E15	Or:T25 Arg:E14 Arg2:E8
 E16	Condition:T26 Name:T27 Temporality:E8
 E17	Procedure:T28
 E18	Modifier:T29 Modifies:T27
 E19	Condition:T30 Name:T31
 E20	Contraindication:T32 Contraindicates:E3
-E21	Or:T33 Arg:E7 Arg2:E5
 E10	Procedure:T19 Name:T34
 E22	Assertion:T35 Asserted:E10
 E23	Modifier:T36 Modifies:T2
@@ -42,10 +39,8 @@ T1	Condition 136 154	squamous carcinoma
 T2	Condition-Name 136 154	squamous carcinoma
 T20	Modifier 160 180	invasion of mandible
 T21	Modifier 184 191	maxilla
-T22	Or 181 183	or
 T23	Eq-Comparison 198 203	Newly
 T24	Eq-Temporal-Recency 198 203	Newly
-T25	Or 214 216	or
 T26	Condition 238 261	squamous cell carcinoma
 T27	Condition-Name 238 261	squamous cell carcinoma
 T28	Procedure 228 237	untreated
@@ -53,7 +48,6 @@ T29	Modifier 269 280	oral cavity
 T30	Condition 321 339	distant metastases
 T31	Condition-Name 321 339	distant metastases
 T32	Contraindication 360 376	contraindication
-T33	Or 432 434	or
 T19	Procedure 109 119	Surgically
 T34	Procedure-Name 109 119	Surgically
 T35	Assertion 120 130	resectable
@@ -65,3 +59,6 @@ A3	Assertion-Type-Value E22 hypothetical
 R1	Found-By Arg1:E4 Arg2:E2
 R2	Treatment-For Arg1:E10 Arg2:E1
 R3	Treatment-For Arg1:E17 Arg2:E16
+R4	Or Arg1:E11 Arg2:E12
+R5	Or Arg1:E14 Arg2:E8
+R6	Or Arg1:E7 Arg2:E5

@@ -1,0 +1,79 @@
+E1	Risk:T1 Polarity:T18 Risk-For:E3
+E3	Condition:T3 Name:T19
+E4	Eq-Comparison:T4 Temporal-Period:T20 Temporal-Unit:T21
+E5	Condition:T5 Name:T22 Temporality:E4
+E6	Condition:T6 Name:T37 Temporality:E4
+E7	Condition:T7 Name2:T39 Temporality:E4
+E8	Assertion:T8 Asserted:E9
+E9	Procedure:T9 Name:T41
+E10	Condition:T10 Name:T25
+E12	Observation:T12 Name:T28 Polarity:T27
+E13	Observation:T13 Name:T29 Eq-Comparison:E14
+E14	Eq-Comparison:T14 Value:T30 Unit:T31 Operator:T26 Per:T32
+E15	Condition:T15 Name:T33
+E16	Condition:T16 Name:T34
+E17	Condition:T35 Name:T36
+E2	Modifier:T2 Modifies:T22
+E18	Modifier:T38 Modifies:T39
+E19	Modifier:T23 Modifies:T39
+E20	Modifier:T24 Modifies:T39
+E21	Or:T40 Arg:E19 Arg2:E20
+E11	Negation:T11 Negates:E10
+E22	And:T42 Arg:E12 Arg2:E15
+T1	Risk 84 98	risk behaviors
+T3	Condition 103 106	HIV
+T4	Eq-Comparison 108 118	past-month
+T5	Condition 129 144	syringe sharing
+T6	Condition 146 163	transactional sex
+T7	Condition 176 179	sex
+T8	Assertion 366 378	eligible for
+T9	Procedure 379 383	PrEP
+T10	Condition 395 398	HIV
+T12	Observation 427 441	renal function
+T13	Observation 443 473	estimated creatinine clearance
+T14	Eq-Comparison 474 484	≥60 ml/min
+T15	Condition 502 519	hepatitis B virus
+T16	Condition 521 524	HBV
+T17	Life-Stage-And-Gender 44 49	adult
+T18	Polarity 79 83	high
+T19	Condition-Name 103 106	HIV
+T20	Eq-Temporal-Period 108 112	past
+T21	Eq-Temporal-Unit 113 118	month
+T22	Condition-Name 129 144	syringe sharing
+T25	Condition-Name 395 398	HIV
+T27	Polarity 418 426	adequate
+T28	Observation-Name 427 441	renal function
+T29	Observation-Name 443 473	estimated creatinine clearance
+T30	Eq-Value 475 477	60
+T31	Eq-Unit 478 480	ml
+T32	Eq-Temporal-Unit 481 484	min
+T33	Condition-Name 502 519	hepatitis B virus
+T34	Condition-Name 521 524	HBV
+T35	Condition 50 54	PWID
+T36	Condition-Name 50 54	PWID
+T2	Modifier 119 128	receptive
+T37	Condition-Name 146 163	transactional sex
+T38	Modifier 165 175	condomless
+T39	Condition-Name 176 179	sex
+T23	Modifier 188 200	HIV-infected
+T24	Modifier 204 226	unknown status partner
+T40	Or 201 203	or
+T41	Procedure-Name 379 383	PrEP
+T11	Negation 399 409	uninfected
+T26	Eq-Operator 474 475	≥
+T42	And 487 490	and
+A1	Assertion-Type-Value E8 hypothetical
+A2	Life-Stage-And-Gender-Type T17 adult
+A3	Polarity-Value T18 high
+A4	Eq-Temporal-Period-Value T20 past
+A5	Eq-Temporal-Unit-Value T21 month
+A6	Polarity-Value T27 normal
+A7	Observation-Type-Value T28 lab
+A8	Observation-Type-Value T29 lab
+A9	Eq-Temporal-Unit-Value T32 minute
+A10	Eq-Operator-Value T26 GTEQ
+R1	Example-Of Arg1:E5 Arg2:E1
+R2	Example-Of Arg1:E6 Arg2:E1
+R3	Example-Of Arg1:E7 Arg2:E1
+R4	Equivalent-To Arg1:E13 Arg2:E12
+R5	Abbrev-Of Arg1:E16 Arg2:E15

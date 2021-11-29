@@ -1,10 +1,10 @@
-E1	Procedure:T1
+E1	Procedure:T1 
 E3	Observation:T3 Name:T4
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
-E13	Observation:T13 Name:T14 Eq-Comparison:E20
+E13	Observation:T13 Name:T14 Numeric-Filter:E20
 E15	Observation:T15 Name:T16
 E18	Eq-Comparison:T32 Operator:T19 Temporal-Unit:T21 Value:T30
 E19	Eq-Comparison:T33 Operator:T20 Temporal-Unit:T22 Value:T31
@@ -14,14 +14,11 @@ E23	Eq-Comparison:T39 Temporal-Period:T40
 E2	Drug:T24 Name:T25
 E4	Negation:T48 Negates:E2
 E6	Assertion:T49 Asserted:E4
-E8	Assertion:T50
-E10	And:T51 Arg:E8 Arg2:E6
+E8	Assertion:T50 
 E12	Drug:T52 Name:T53 Temporality:E17
-E14	Study:T17
-E16	Temporal-Connection:T18 Arg:E17 Arg2:E14
+E14	Study:T17 
 E17	Eq-Comparison:T41 Temporal-Unit:T42 Value:T29
-E24	Encounter:T54 Type:T55
-E27	Temporal-Connection:T56 Arg:E14 Arg2:E24
+E24	Encounter:T54 
 E21	Condition:T35 Name:T36 Temporality:E30
 E28	Modifier:T57 Modifies:E21
 E29	Negation:T58 Negates:E21
@@ -29,20 +26,14 @@ E30	Eq-Comparison:T59 Temporal-Period:T60
 E31	Condition:T61 Name:T62
 E32	Modifier:T63 Modifies:T62
 E33	Allergy:T64 Name:T66 Name2:T65 Temporality:E22
-E34	Or:T67 Arg:T65 Arg2:T66
 E35	Procedure:T68 Temporality:E38
 E36	Drug:T69 Name:T70 Temporality:E18
 E37	Negation:T71 Negates:E36
 E38	Eq-Comparison:T72 Temporal-Period:T73
-E25	Temporal-Connection:T43 Arg:E18 Arg2:E39
-E39	Study:T44
-E40	Condition:T74 Name:T75 Temporality:E19
-E26	Temporal-Connection:T45 Arg:E19 Arg2:E1
-E41	Encounter:T2 Type:T46
-E42	Temporal-Connection:T76 Arg:E41
-E43	And:T77 Arg:E1 Arg2:E42
+E39	Study:T44 
+E40	Observation:T74 Name:T75 Temporality:E19
+E41	Encounter:T2 
 E44	Condition:T78 Name:T79 Temporality:E23
-E45	Or:T80 Arg:E44 Arg2:E7
 T1	Procedure 690 709	drug administration
 T3	Observation 44 59	Body Mass Index
 T4	Observation-Name 44 59	Body Mass Index
@@ -82,16 +73,12 @@ T25	Drug-Name 152 159	alcohol
 T48	Negation 139 146	abstain
 T49	Assertion 124 138	willingness to
 T50	Assertion 112 119	Ability
-T51	And 120 123	and
 T52	Drug 161 175	methylxanthine
 T53	Drug-Name 161 175	methylxanthine
 T17	Study 290 295	entry
-T18	Temporal-Connection 281 289	prior to
 T41	Eq-Comparison 276 280	48 h
 T42	Eq-Temporal-Unit 279 280	h
 T54	Encounter 334 343	discharge
-T55	Encounter-Type 334 343	discharge
-T56	Temporal-Connection 328 333	until
 T35	Condition 379 388	pathology
 T36	Condition-Name 379 388	pathology
 T57	Modifier 373 378	major
@@ -104,28 +91,21 @@ T63	Modifier 437 445	relevant
 T64	Allergy 519 528	allergies
 T65	Allergy-Name 502 506	drug
 T66	Allergy-Name 514 518	food
-T67	Or 507 513	and/or
 T68	Procedure 550 559	treatment
 T69	Drug 569 588	topical medications
 T70	Drug-Name 569 588	topical medications
 T71	Negation 565 568	non
 T72	Eq-Comparison 542 549	routine
 T73	Eq-Temporal-Period 542 549	routine
-T43	Temporal-Connection 604 612	prior to
 T44	Study 613 618	entry
-T74	Condition 658 665	Smoking
-T75	Condition-Name 658 665	Smoking
-T45	Temporal-Connection 681 689	prior to
+T74	Observation 658 665	Smoking
+T75	Observation-Name 658 665	Smoking
 T2	Encounter 726 741	follow-up visit
-T46	Encounter-Type 726 741	follow-up visit
-T76	Temporal-Connection 714 721	through
-T77	And 710 713	and
 T78	Condition 758 771	alcohol abuse
 T79	Condition-Name 758 771	alcohol abuse
-T80	Or 772 774	or
-A1	Observation-Type-Value T4 vital
-A2	Observation-Type-Value T14 vital
-A3	Observation-Type-Value T16 vital
+A1	Observation-Type-Value E3 vital
+A2	Observation-Type-Value E13 vital
+A3	Observation-Type-Value E15 vital
 A4	Eq-Operator-Value T19 LTEQ
 A5	Eq-Operator-Value T20 LTEQ
 A6	Eq-Temporal-Unit-Value T21 day
@@ -135,17 +115,22 @@ A10	Eq-Temporal-Period-Value T38 past
 A11	Eq-Temporal-Period-Value T40 past
 A15	Assertion-Type-Value E6 hypothetical
 A16	Assertion-Type-Value E8 hypothetical
-A12	Temporal-Connection-Type-Value E16 before
 A17	Eq-Temporal-Unit-Value T42 hour
-A18	Encounter-Type-Value T55 discharge
-A19	Temporal-Connection-Type-Value E27 before
+A18	Encounter-Type-Value E24 discharge
 A9	Eq-Temporal-Period-Value T60 past
 A20	Eq-Temporal-Period-Value T73 present
-A13	Temporal-Connection-Type-Value E25 before
-A14	Temporal-Connection-Type-Value E26 before
-A21	Encounter-Type-Value T46 outpatient
-A22	Temporal-Connection-Type-Value E42 during
+A21	Encounter-Type-Value E41 outpatient
 R1	Abbrev-Of Arg1:E15 Arg2:E3
 R2	Using Arg1:E35 Arg2:E36
 R3	Example-Of Arg1:E9 Arg2:E11
 R4	Example-Of Arg1:E11 Arg2:E7
+R5	And Arg1:E8 Arg2:E6
+R6	Before Arg1:E17 Arg2:E14
+R7	Before Arg1:E14 Arg2:E24
+R8	Or Arg1:T65 Arg2:T66
+R9	Before Arg1:E18 Arg2:E39
+R10	Before Arg1:E19 Arg2:E1
+R12	Or Arg1:E44 Arg2:E7
+R11	Or Arg1:E2 Arg2:E12
+R13	Before Arg1:E40 Arg2:E41	
+R14	And Arg1:E1 Arg2:E41	

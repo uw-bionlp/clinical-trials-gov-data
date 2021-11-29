@@ -1,11 +1,11 @@
-E5	Observation:T5 Name:T6 Eq-Comparison:E37
+E5	Observation:T5 Name:T6 Numeric-Filter:E37
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E17	Condition:T17 Name:T18
-E19	Observation:T19 Name:T20 Eq-Comparison:E28 Eq-Comparison2:E29
-E20	Age:T48 Eq-Comparison:E36
-E21	Age:T49 Eq-Comparison:E27 Eq-Comparison2:E26
+E19	Observation:T19 Name:T20 Numeric-Filter:E28 Numeric-Filter:E29
+E20	Age:T48 Numeric-Filter:E36
+E21	Age:T49 Numeric-Filter:E27 Numeric-Filter:E26
 E22	Eq-Comparison:T77 Operator:T21 Value:T56 Unit:T113 Per:T114
 E23	Eq-Comparison:T78 Operator:T22 Value:T57 Unit:T117 Per:T118
 E24	Eq-Comparison:T79 Operator:T23 Value:T58 Unit:T121 Per:T122
@@ -28,21 +28,19 @@ E40	Eq-Comparison:T97 Temporal-Period:T98 Value:T61 Temporal-Unit:T37
 E41	Eq-Comparison:T99 Temporal-Period:T100 Value:T62 Temporal-Unit:T38
 E44	Eq-Comparison:T105 Temporal-Period:T106 Value:T74 Temporal-Unit:T42
 E45	Eq-Comparison:T107 Temporal-Period:T108 Value:T76 Temporal-Unit:T43
-E2	Or:T109 Arg:T4 Arg2:T3
-E3	Observation:T111 Name:T112 Eq-Comparison:E22
-E4	Observation:T115 Name:T116 Eq-Comparison:E23
-E6	Observation:T119 Name:T120 Eq-Comparison:E24
-E8	Observation:T123 Name:T124 Eq-Comparison:E25
+E3	Observation:T111 Name:T112 Numeric-Filter:E22
+E4	Observation:T115 Name:T116 Numeric-Filter:E23
+E6	Observation:T119 Name:T120 Numeric-Filter:E24
+E8	Observation:T123 Name:T124 Numeric-Filter:E25
 E10	Modifier:T125 Modifies:T124
 E12	Modifier:T126 Modifies:T124
-E14	Or:T127 Arg:E12 Arg2:E10
 E16	Observation:T129 Name:T130 Stability:T131 Temporality:E39
 E18	Eq-Comparison:T132 Operator:T133 Value:T134 Unit:T45
 E1	Observation:T1 Name:T2 Stability:T135 Temporality:E40
 E46	Drug:T136 Stability:T137 Temporality:E41
-E47	Condition:T138 Name:T139
+E47	Observation:T138 Name:T139
 E48	Negation:T140 Negates:E47
-E50	Observation:T143 Eq-Comparison:E52 Name:T142
+E50	Observation:T143 Numeric-Filter:E52 Name:T142
 E51	Negation:T144 Negates:E50
 E52	Eq-Comparison:T145 Operator:T146 Value:T63 Unit:T147 Per:T148
 E53	Condition:T149 Name:T150
@@ -55,38 +53,29 @@ E59	Condition:T159 Name:T160
 E60	Condition:T161 Name:T162
 E61	Negation:T163 Negates:E59
 E62	Negation:T164 Negates:E60
-E63	And:T165 Arg:E61 Arg2:E62
 E64	Procedure:T166 Name:T167
 E65	Assertion:T168 Asserted:E64
 E66	Modifier:T169 Modifies:T167
 E67	Modifier:T170 Modifies:T167
-E68	Or:T171 Arg:E66 Arg2:E67
-E69	Or:T172 Arg:E26 Arg2:E27
-E70	Or:T173 Arg:E28 Arg2:E29
-E13	Observation:T13 Name:T14 Eq-Comparison:E30
+E13	Observation:T13 Name:T14 Numeric-Filter:E30
 E71	Modifier:T175 Modifies:T14
-E72	Observation:T178 Name:T179 Eq-Comparison:E31
+E72	Observation:T178 Name:T179 Numeric-Filter:E31
 E73	Observation:T182 Name:T183
-E74	Observation:T186 Name:T187 Eq-Comparison:E33
+E74	Observation:T186 Name:T187 Numeric-Filter:E33
 E75	Modifier:T188 Modifies:T187
 E76	Modifier:T189 Modifies:T187
-E77	Or:T190 Arg:E76 Arg2:E75
 E78	Observation:T192 Name:T193 Stability:T194 Temporality:E34
 E42	Eq-Comparison:T102 Operator:T195 Value:T196 Unit:T47
-E79	Observation:T197 Name:T15 Stability:T16 Eq-Comparison:E35
+E79	Observation:T197 Name:T15 Stability:T16 Numeric-Filter:E35
 E15	Drug:T103 Stability:T198 Temporality:E44
 E43	Drug:T199 Temporality:E38
-E80	And:T200 Arg:E15 Arg2:E43
-E82	Observation:T203 Eq-Comparison:E83 Name:T202
+E82	Observation:T203 Numeric-Filter:E83 Name:T202
 E83	Eq-Comparison:T204 Operator:T205 Value:T75 Unit:T206 Per:T207
 E84	Condition:T208 Name:T209
 E85	Condition:T210 Name:T211
-E86	Or:T212 Arg:E7 Arg2:E17
-E87	Temporal-Connection:T213 Arg:E85 Arg2:E45
 E88	Study:T214 Temporality:E45
 E89	Condition:T215 Name:T218
 E90	Condition:T216 Name:T217
-E91	Or:T219 Arg:E89 Arg2:E90
 T3	Life-Stage-And-Gender 33 39	female
 T4	Life-Stage-And-Gender 25 29	Male
 T5	Observation 66 69	BMI
@@ -186,7 +175,6 @@ T105	Eq-Comparison 1067 1081	6 months prior
 T106	Eq-Temporal-Period 1076 1081	prior
 T107	Eq-Comparison 1307 1321	6 months prior
 T108	Eq-Temporal-Period 1316 1321	prior
-T109	Or 30 32	or
 T110	Eq-Unit 79 81	m2
 T111	Observation 87 104	Total cholesterol
 T112	Observation-Name 87 104	Total cholesterol
@@ -204,7 +192,6 @@ T123	Observation 216 230	blood pressure
 T124	Observation-Name 216 230	blood pressure
 T125	Modifier 206 215	diastolic
 T126	Modifier 197 205	Systolic
-T127	Or 205 206	/
 T128	Eq-Value 237 239	90
 T129	Observation 245 256	Body weight
 T130	Observation-Name 245 256	Body weight
@@ -217,8 +204,8 @@ T2	Observation-Name 303 320	physical activity
 T135	Stability 296 302	Stable
 T136	Drug 349 359	Medication
 T137	Stability 364 370	stable
-T138	Condition 399 406	smoking
-T139	Condition-Name 399 406	smoking
+T138	Observation 399 406	smoking
+T139	Observation-Name 399 406	smoking
 T140	Negation 395 398	Non
 T142	Observation-Name 416 424	drinking
 T143	Observation 416 424	drinking
@@ -243,15 +230,11 @@ T161	Condition 555 564	lactating
 T162	Condition-Name 555 564	lactating
 T163	Negation 534 537	Non
 T164	Negation 551 554	not
-T165	And 547 550	and
 T166	Procedure 635 640	diets
 T167	Procedure-Name 635 640	diets
 T168	Assertion 592 608	willing and able
 T169	Modifier 642 662	lacto-ovo vegetarian
 T170	Modifier 667 677	omnivorous
-T171	Or 663 666	and
-T172	Or 709 711	or
-T173	Or 741 743	or
 T174	Eq-Unit 751 753	m2
 T13	Observation 767 790	serum total cholesterol
 T14	Observation-Name 767 790	serum total cholesterol
@@ -270,7 +253,6 @@ T186	Observation 903 917	blood pressure
 T187	Observation-Name 903 917	blood pressure
 T188	Modifier 893 902	diastolic
 T189	Modifier 884 892	Systolic
-T190	Or 892 893	/
 T191	Eq-Value 924 926	90
 T192	Observation 932 943	Body weight
 T193	Observation-Name 932 943	Body weight
@@ -285,7 +267,6 @@ T16	Stability 984 990	Stable
 T103	Drug 1039 1049	Medication
 T198	Stability 1054 1062	unstable
 T199	Drug 1092 1103	medications
-T200	And 1082 1085	and
 T202	Observation-Name 1122 1130	Drinking
 T203	Observation 1122 1130	Drinking
 T204	Eq-Comparison 1131 1167	more than 2 alcoholic drinks per day
@@ -296,18 +277,15 @@ T208	Condition 1173 1181	Diabetic
 T209	Condition-Name 1173 1181	Diabetic
 T210	Condition 1240 1261	cardiovascular events
 T211	Condition-Name 1240 1261	cardiovascular events
-T212	Or 1285 1287	or
-T213	Temporal-Connection 1296 1302	during
 T214	Study 1329 1334	study
 T215	Condition 1340 1348	Pregnant
 T216	Condition 1352 1361	lactating
 T217	Condition-Name 1352 1361	lactating
 T218	Condition-Name 1340 1348	Pregnant
-T219	Or 1349 1351	or
 A1	Life-Stage-And-Gender-Type T3 female
 A2	Life-Stage-And-Gender-Type T4 male
-A3	Observation-Type-Value T6 vital
-A4	Observation-Type-Value T20 vital
+A3	Observation-Type-Value E5 vital
+A4	Observation-Type-Value E19 vital
 A5	Eq-Operator-Value T21 LT
 A6	Eq-Operator-Value T22 LT
 A7	Eq-Operator-Value T23 LT
@@ -340,37 +318,47 @@ A33	Eq-Temporal-Period-Value T100 past
 A35	Eq-Temporal-Period-Value T104 past
 A36	Eq-Temporal-Period-Value T106 past
 A37	Eq-Temporal-Period-Value T108 past
-A38	Observation-Type-Value T112 lab
-A39	Observation-Type-Value T116 lab
-A40	Observation-Type-Value T120 lab
-A41	Observation-Type-Value T124 vital
-A42	Observation-Type-Value T130 vital
+A38	Observation-Type-Value E3 lab
+A39	Observation-Type-Value E4 lab
+A40	Observation-Type-Value E6 lab
+A41	Observation-Type-Value E8 vital
+A42	Observation-Type-Value E16 vital
 A43	Stability-Value T131 stable
 A44	Eq-Operator-Value T133 PLUS-MINUS
-A45	Observation-Type-Value T2 social-habit
+A45	Observation-Type-Value E1 social-habit
 A46	Stability-Value T135 stable
 A47	Stability-Value T137 stable
 A48	Eq-Operator-Value T146 GT
 A49	Eq-Temporal-Unit-Value T148 day
 A51	Assertion-Type-Value E65 hypothetical
-A52	Observation-Type-Value T14 lab
-A53	Observation-Type-Value T179 lab
-A54	Observation-Type-Value T183 lab
-A55	Observation-Type-Value T187 vital
-A56	Observation-Type-Value T193 vital
+A52	Observation-Type-Value E13 lab
+A53	Observation-Type-Value E72 lab
+A54	Observation-Type-Value E73 lab
+A55	Observation-Type-Value E74 vital
+A56	Observation-Type-Value E78 vital
 A57	Stability-Value T194 stable
 A34	Eq-Temporal-Period-Value T101 past
 A58	Eq-Operator-Value T195 PLUS-MINUS
-A59	Observation-Type-Value T15 social-habit
+A59	Observation-Type-Value E79 social-habit
 A60	Stability-Value T16 stable
 A61	Stability-Value T198 change
 A62	Eq-Operator-Value T205 GT
 A63	Eq-Temporal-Unit-Value T207 day
-A64	Temporal-Connection-Type-Value E87 during
-A65	Observation-Type-Value T142 social-habit
-A66	Observation-Type-Value T202 social-habit
+A65	Observation-Type-Value E50 social-habit
+A66	Observation-Type-Value E82 social-habit
+A50	Acuteness-Type-Value T157 acute
 R1	Equivalent-To Arg1:E18 Arg2:T131
 R2	Equivalent-To Arg1:E42 Arg2:T194
 R3	Example-Of Arg1:E7 Arg2:E85
 R4	Example-Of Arg1:E17 Arg2:E85
-A50	Acuteness-Type-Value T157 acute
+R5	Or Arg1:T4 Arg2:T3
+R6	Or Arg1:E12 Arg2:E10
+R7	And Arg1:E61 Arg2:E62
+R8	Or Arg1:E66 Arg2:E67
+R9	Or Arg1:E26 Arg2:E27
+R10	Or Arg1:E28 Arg2:E29
+R11	Or Arg1:E76 Arg2:E75
+R12	And Arg1:E15 Arg2:E43
+R13	Or Arg1:E7 Arg2:E17
+R14	During Arg1:E85 Arg2:E45
+R15	Or Arg1:E89 Arg2:E90

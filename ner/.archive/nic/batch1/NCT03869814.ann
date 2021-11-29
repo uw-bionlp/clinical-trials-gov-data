@@ -1,0 +1,225 @@
+E1	Modifier:T1 Modifies:E16
+E3	Modifier:T3 Modifies:E16
+E5	Modifier:T5 Modifies:E16
+E7	Modifier:T7 Modifies:E16
+E9	Procedure:T9 Name:T10
+E15	Procedure:T15 Name:T16
+E17	Procedure:T17 Name:T18
+E21	Procedure:T21 Name:T22
+E23	Procedure:T23 Name:T24
+E25	Condition:T25 Name:T26 Temporality:E52 Temporality3:E53
+E27	Procedure:T27 Name:T28 Temporality:E66
+E29	Procedure:T29 Name:T30 Temporality:E67 Temporality2:E54
+E30	Age:T44 Eq-Comparison:E2
+E32	Age:T46 Eq-Comparison:E34
+E34	Eq-Comparison:T50 Operator:T33 Temporal-Unit:T40 Value:T49
+E2	Eq-Comparison:T19 Operator:T31 Temporal-Unit:T39 Value:T48
+E4	Condition:T20 Name:T51
+E6	Assertion:T52 Asserted:E4
+E12	Procedure:T55 Name:T45
+E14	Procedure:T56 Name:T53
+E16	Condition:T57 Name:T59
+E18	Modifier:T58 Modifies:E16
+E19	Modifier:T60 Modifies:E16
+E20	Modifier:T61 Modifies:E16
+E22	Modifier:T62 Modifies:E16
+E24	Or:T2 Arg:E1 Arg2:E3
+E26	Or:T4 Arg:E12 Arg2:E14
+E28	Or:T32 Arg:E35 Arg2:E36
+E35	Modifier:T63 Modifies:E9
+E36	Modifier:T64 Modifies:E9
+E38	Procedure:T67 Name:T68
+E11	Condition:T11 Name:T12 Temporality:E39
+E39	Eq-Comparison:T69 Temporal-Period:T70
+E40	Procedure:T71 Temporality:E44
+E44	Eq-Comparison:T79 Value:T81 Temporal-Unit:T41 Operator:T34 Temporal-Period:T80
+E45	Procedure:T82 Name:T83 Temporality:E46
+E46	Eq-Comparison:T84 Temporal-Unit:T86 Temporal-Period:T85
+E48	Modifier:T88 Modifies:E21
+E49	Procedure:T89 Name:T90
+E50	Modifier:T91 Modifies:T26
+E51	Or:T93 Arg:E50 Arg2:E52
+E52	Eq-Comparison:T94 Temporal-Period:T95
+E53	Eq-Comparison:T96 Temporal-Period:T97 Value:T98 Temporal-Unit:T42 Operator:T36
+E54	Eq-Comparison:T99 Operator:T37 Temporal-Unit:T101 Temporal-Period:T100
+E55	Condition:T103 Name:T104 Severity:T102 Temporality:E56
+E56	Eq-Comparison:T105 Temporal-Unit:T43 Operator:T38 Temporal-Period:T106 Value:T107
+E57	Condition:T108 Name:T109
+E58	Condition:T110 Name:T111
+E59	Condition:T112 Name:T113
+E8	Assertion:T6 Asserted:E4
+E10	Assertion:T8 Asserted:E4
+E31	Modifier:T54 Modifies:T53
+E60	Negation:T114 Negates:E31
+E37	Condition:T65 Name:T66
+E61	Modifier:T115 Modifies:T66
+E62	Assertion:T116 Asserted:E9
+E33	Negation:T47 Negates:E40
+E63	Or:T117 Arg:E33 Arg2:E64
+E64	And:T118 Arg:E11 Arg2:E40
+E13	Modifier:T13 Modifies:E40
+E41	Modifier:T14 Modifies:E40
+E42	Modifier:T72 Modifies:E40
+E43	Or:T73 Arg:E41 Arg2:E42
+E47	Condition:T74 Name:T75
+E65	Negation:T76 Negates:E47
+E66	Eq-Comparison:T77 Temporal-Period:T78
+E67	Eq-Comparison:T87 Temporal-Period:T92
+T1	Modifier 265 273	pancreas
+T3	Modifier 277 285	prostate
+T5	Modifier 252 257	liver
+T7	Modifier 259 263	lung
+T9	Procedure 341 348	work-up
+T10	Procedure-Name 341 348	work-up
+T15	Procedure 731 749	invasive procedure
+T16	Procedure-Name 731 749	invasive procedure
+T17	Procedure 800 810	anesthesia
+T18	Procedure-Name 800 810	anesthesia
+T21	Procedure 906 923	immune modulation
+T22	Procedure-Name 906 923	immune modulation
+T23	Procedure 852 868	systemic therapy
+T24	Procedure-Name 852 868	systemic therapy
+T25	Condition 983 992	pregnancy
+T26	Condition-Name 983 992	pregnancy
+T27	Procedure 1044 1072	organ tissue transplantation
+T28	Procedure-Name 1044 1072	organ tissue transplantation
+T29	Procedure 1093 1118	blood product transfusion
+T30	Procedure-Name 1093 1118	blood product transfusion
+T31	Eq-Operator 29 53	greater than or equal to
+T33	Eq-Operator 547 556	less than
+T34	Eq-Operator 682 688	within
+T35	Eq-Operator 812 818	within
+T36	Eq-Operator 993 999	within
+T37	Eq-Operator 1119 1125	within
+T38	Eq-Operator 1161 1167	within
+T39	Eq-Temporal-Unit 57 62	years
+T40	Eq-Temporal-Unit 560 565	years
+T41	Eq-Temporal-Unit 699 705	months
+T42	Eq-Temporal-Unit 1016 1022	months
+T43	Eq-Temporal-Unit 1178 1184	months
+T44	Age 25 28	Age
+T46	Age 543 546	Age
+T48	Eq-Value 54 56	21
+T49	Eq-Value 557 559	21
+T50	Eq-Comparison 547 565	less than 21 years
+T19	Eq-Comparison 29 62	greater than or equal to 21 years
+T20	Condition 94 104	malignancy
+T51	Condition-Name 94 104	malignancy
+T52	Assertion 81 90	suspicion
+T55	Procedure 131 146	imaging studies
+T56	Procedure 168 176	biopsies
+T57	Condition 201 207	cancer
+T58	Modifier 215 222	bladder
+T59	Condition-Name 201 207	cancer
+T60	Modifier 224 230	breast
+T61	Modifier 232 242	colorectal
+T62	Modifier 244 250	kidney
+T2	Or 274 276	or
+T4	Or 148 154	and/or
+T32	Or 325 331	and/or
+T63	Modifier 317 324	medical
+T64	Modifier 332 340	surgical
+T67	Procedure 406 424	pathologic staging
+T68	Procedure-Name 406 424	pathologic staging
+T11	Condition 585 591	cancer
+T12	Condition-Name 585 591	cancer
+T69	Eq-Comparison 579 584	prior
+T70	Eq-Temporal-Period 579 584	prior
+T71	Procedure 623 632	treatment
+T79	Eq-Comparison 682 705	within prior six months
+T80	Eq-Temporal-Period 689 694	prior
+T81	Eq-Value 695 698	six
+T82	Procedure 716 723	surgery
+T83	Procedure-Name 716 723	surgery
+T84	Eq-Comparison 812 830	within prior month
+T85	Eq-Temporal-Period 819 824	prior
+T86	Eq-Temporal-Unit 825 830	month
+T88	Modifier 885 905	molecularly targeted
+T89	Procedure 931 952	monoclonal antibodies
+T90	Procedure-Name 931 952	monoclonal antibodies
+T91	Modifier 963 973	concurrent
+T93	Or 974 976	or
+T94	Eq-Comparison 977 982	prior
+T95	Eq-Temporal-Period 977 982	prior
+T96	Eq-Comparison 993 1022	within previous twelve months
+T97	Eq-Temporal-Period 1000 1008	previous
+T98	Eq-Value 1009 1015	twelve
+T99	Eq-Comparison 1119 1137	within prior month
+T100	Eq-Temporal-Period 1126 1131	prior
+T101	Eq-Temporal-Unit 1132 1137	month
+T102	Severity 1148 1153	major
+T103	Condition 1154 1160	trauma
+T104	Condition-Name 1154 1160	trauma
+T105	Eq-Comparison 1161 1184	within prior six months
+T106	Eq-Temporal-Period 1168 1173	prior
+T107	Eq-Value 1174 1177	six
+T108	Condition 1192 1203	burn injury
+T109	Condition-Name 1192 1203	burn injury
+T110	Condition 1205 1227	extremity crush injury
+T111	Condition-Name 1205 1227	extremity crush injury
+T112	Condition 1229 1251	motor vehicle accident
+T113	Condition-Name 1229 1251	motor vehicle accident
+T6	Assertion 114 119	signs
+T8	Assertion 121 129	symptoms
+T45	Procedure-Name 131 146	imaging studies
+T53	Procedure-Name 168 176	biopsies
+T54	Modifier 159 167	surgical
+T114	Negation 155 158	non
+T65	Condition 376 382	cancer
+T66	Condition-Name 376 382	cancer
+T115	Modifier 361 375	organ-specific
+T116	Assertion 292 305	Candidate for
+T47	Negation 603 610	without
+T117	Or 611 613	or
+T118	And 614 618	with
+T13	Modifier 640 647	medical
+T14	Modifier 649 657	surgical
+T72	Modifier 662 680	radiation oncology
+T73	Or 659 661	or
+T74	Condition 845 851	cancer
+T75	Condition-Name 845 851	cancer
+T76	Negation 841 844	non
+T77	Eq-Comparison 1033 1040	history
+T78	Eq-Temporal-Period 1033 1040	history
+T87	Eq-Comparison 1082 1089	history
+T92	Eq-Temporal-Period 1082 1089	history
+A1	Eq-Operator-Value T31 GTEQ
+A3	Eq-Operator-Value T33 LT
+A4	Eq-Operator-Value T34 LTEQ
+A5	Eq-Operator-Value T35 LTEQ
+A6	Eq-Operator-Value T36 LTEQ
+A7	Eq-Operator-Value T37 LTEQ
+A8	Eq-Operator-Value T38 LTEQ
+A9	Eq-Temporal-Unit-Value T39 year
+A10	Eq-Temporal-Unit-Value T40 year
+A11	Eq-Temporal-Unit-Value T41 month
+A12	Eq-Temporal-Unit-Value T42 month
+A13	Eq-Temporal-Unit-Value T43 month
+A14	Assertion-Type-Value E6 possible
+A16	Eq-Temporal-Period-Value T70 past
+A17	Eq-Temporal-Period-Value T80 past
+A18	Eq-Temporal-Period-Value T85 past
+A19	Eq-Temporal-Unit-Value T86 month
+A21	Eq-Temporal-Period-Value T95 past
+A22	Eq-Temporal-Period-Value T97 past
+A23	Eq-Temporal-Period-Value T100 past
+A24	Eq-Temporal-Unit-Value T101 month
+A25	Severity-Value T102 severe
+A26	Eq-Temporal-Period-Value T106 past
+A27	Assertion-Type-Value E8 possible
+A28	Assertion-Type-Value E10 possible
+A2	Assertion-Type-Value E62 hypothetical
+A15	Eq-Temporal-Period-Value T78 past
+A20	Eq-Temporal-Period-Value T92 past
+R3	Found-By Arg1:E4 Arg2:E12
+R4	Found-By Arg1:E4 Arg2:E14
+R11	Example-Of Arg1:E15 Arg2:E45
+R12	Using Arg1:E15 Arg2:E17
+R13	Using Arg1:E21 Arg2:E23
+R14	Example-Of Arg1:E49 Arg2:E21
+R15	Example-Of Arg1:E57 Arg2:E55
+R16	Example-Of Arg1:E58 Arg2:E55
+R17	Example-Of Arg1:E59 Arg2:E55
+R1	Treatment-For Arg1:E9 Arg2:E37
+R2	Using Arg1:E9 Arg2:E38
+R5	Treatment-For Arg1:E23 Arg2:E47

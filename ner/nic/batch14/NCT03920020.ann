@@ -18,11 +18,9 @@ E14	Assertion:T36 Asserted:E11
 E16	Modifier:T37 Modifies:T10
 E19	Modifier:T38 Modifies:T16
 E20	Modifier:T39 Modifies:T16
-E21	Or:T40 Arg:E20 Arg2:E19
 E22	Eq-Comparison:T41 Temporal-Unit:T42 Value:T24 Temporal-Period:T43
 E23	Condition:T44 Name:T45 Stability:T49
 E24	Condition:T46 Name:T47 Stability:T49
-E25	Or:T48 Arg:E17 Arg2:E24
 E26	Assertion:T50 Asserted:T49
 E27	Eq-Comparison:T51 Temporal-Period:T52
 E28	Eq-Comparison:T53 Temporal-Period:T54
@@ -66,14 +64,12 @@ T36	Assertion 333 345	capacity for
 T37	Modifier 413 426	seconder knee
 T38	Modifier 477 482	spine
 T39	Modifier 458 473	lower extremity
-T40	Or 474 476	or
 T41	Eq-Comparison 535 547	last 1 month
 T42	Eq-Temporal-Unit 542 547	month
 T44	Condition 605 620	muscle strength
 T45	Condition-Name 605 620	muscle strength
 T46	Condition 634 646	coordination
 T47	Condition-Name 634 646	coordination
-T48	Or 630 633	and
 T49	Stability 598 604	affect
 T43	Eq-Temporal-Period 535 539	last
 T50	Assertion 593 597	will
@@ -96,3 +92,6 @@ A11	Eq-Temporal-Period-Value T52 past
 A12	Eq-Temporal-Period-Value T54 past
 R1	Treatment-For Arg1:E13 Arg2:E7
 R2	Caused-By Arg1:T49 Arg2:E3
+R3	Or Arg1:E20 Arg2:E19
+R4	Or Arg1:E17 Arg2:E24
+R5	Or Arg1:E23 Arg2:E17

@@ -1,0 +1,58 @@
+E4	Age:T9 Eq-Comparison:E5
+E5	Eq-Comparison:T13 Operator:T5 Temporal-Unit:T8 Value:T10
+E6	Eq-Comparison:T14 Operator:T6 Value:T11 Unit:T18
+E7	Eq-Comparison:T15 Operator:T7 Value:T12 Unit:T21
+E1	Observation:T16 Name:T17 Eq-Comparison:E6
+E2	Observation:T19 Name:T20 Eq-Comparison:E7
+E3	Condition:T23 Severity:T27
+E8	Modifier:T24 Modifies:E3
+E9	Modifier:T25 Modifies:E3
+E10	Or:T26 Arg:E8 Arg2:E9
+E11	Procedure:T28 Name:T29 Temporality:E12
+E12	Eq-Comparison:T30 Temporal-Period:T31
+T1	Language 25 32	English
+T5	Eq-Operator 51 52	≥
+T6	Eq-Operator 92 93	>
+T7	Eq-Operator 136 137	>
+T8	Eq-Temporal-Unit 55 60	years
+T9	Age 47 50	Age
+T10	Eq-Value 52 54	65
+T11	Eq-Value 93 95	25
+T12	Eq-Value 137 139	30
+T13	Eq-Comparison 51 60	≥65 years
+T14	Eq-Comparison 92 96	>25%
+T15	Eq-Comparison 136 140	>30%
+T16	Observation 83 91	Body Fat
+T17	Observation-Name 83 91	Body Fat
+T18	Eq-Unit 95 96	%
+T2	Life-Stage-And-Gender 101 104	Men
+T19	Observation 127 135	Body Fat
+T20	Observation-Name 127 135	Body Fat
+T21	Eq-Unit 139 140	%
+T22	Life-Stage-And-Gender 145 150	Women
+T3	Location 177 223	Dartmouth Hitchcock Weight and Wellness Center
+T4	Location 225 228	WWC
+T23	Condition 453 460	illness
+T24	Modifier 426 432	mental
+T25	Modifier 436 452	life-threatening
+T26	Or 433 435	or
+T27	Severity 419 425	Severe
+T28	Procedure 477 494	bariatric surgery
+T29	Procedure-Name 477 494	bariatric surgery
+T30	Eq-Comparison 466 473	History
+T31	Eq-Temporal-Period 466 473	History
+A1	Eq-Operator-Value T5 GTEQ
+A2	Eq-Operator-Value T6 GT
+A3	Eq-Operator-Value T7 GT
+A4	Eq-Temporal-Unit-Value T8 year
+A5	Life-Stage-And-Gender-Type T2 male
+A6	Life-Stage-And-Gender-Type T22 female
+A7	Location-Value T3 clinic
+A8	Location-Value T4 clinic
+A9	Severity-Value T27 severe
+A10	Eq-Temporal-Period-Value T31 past
+A11	Observation-Type-Value T17 measurement
+A12	Observation-Type-Value T20 measurement
+R1	If-Then Arg1:T2 Arg2:E1
+R2	If-Then Arg1:T22 Arg2:E2
+R3	Abbrev-Of Arg1:T4 Arg2:T3

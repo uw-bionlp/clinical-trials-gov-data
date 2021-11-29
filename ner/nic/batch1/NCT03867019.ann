@@ -7,7 +7,7 @@ E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
 E17	Condition:T17 Name:T18
 E19	Condition:T19 Name:T20
-E21	Condition:T21 Name:T22 Temporality:E46
+E21	Observation:T21 Name:T22 Temporality:E46
 E23	Condition:T23 Name:T24 Temporality:E48
 E25	Condition:T25 Name:T26 Temporality:E48
 E27	Condition:T27 Name:T28 Temporality:E48
@@ -27,21 +27,19 @@ E55	Condition:T55 Name:T56
 E2	Condition:T57 Name:T58
 E6	Condition:T59 Name:T60
 E8	Condition:T61 Name:T62
-E10	Condition:T64 Name:T65
-E12	Study:T66 
-E14	Temporal-Connection:T67 Arg:E10 Arg2:E12
+E10	Observation:T64 Name:T65
+E12	Study:T66
 E16	Condition:T68 Name:T69 Temporality:E44 Temporality2:E46
-E18	Condition:T70 Name:T71 Temporality:E44
-E20	Or:T72 Arg:E16 Arg2:E18
+E18	Observation:T70 Name:T71 Temporality:E44
 E22	Condition:T41 Name:T42
 E24	Condition:T74 Name:T75
 E26	Condition:T76 Name:T77
-E28	Condition:T78 
+E28	Condition:T78
 E30	Risk:T80 Risk-For:E32 Risk-For2:E34 Polarity:T104
 E32	Condition:T81 Name:T82
 E34	Condition:T83 Name:T84
-E36	Provider:T85 Type:T86
-E38	Provider:T87 
+E36	Provider:T85
+E38	Provider:T87
 E40	Criteria-Count:T89 Criteria:E2 Criteria2:E4
 E4	Observation:T9 Name:T10 Polarity:T90
 E41	Negation:T91 Negates:E13
@@ -50,10 +48,8 @@ E9	Modifier:T63 Modifies:T16
 E44	Eq-Comparison:T93 Temporal-Period:T94
 E46	Eq-Comparison:T73 Temporal-Period:T95 Temporal-Unit:T96
 E48	Eq-Comparison:T97 Temporal-Period:T98
-E50	Or:T99 Arg:E31 Arg2:E23
-E52	Procedure:T100 
+E52	Procedure:T100
 E54	Drug:T101 Name:T102
-E56	Or:T79 Arg:E32 Arg2:E34
 E57	Modifier:T103 Modifies:T84
 E58	Procedure:T88 Provider:E38
 E59	Assertion:T105 Asserted:E58
@@ -75,8 +71,8 @@ T17	Condition 598 619	Familial Dysautonomia
 T18	Condition-Name 598 619	Familial Dysautonomia
 T19	Condition 626 645	Diabetic Neuropathy
 T20	Condition-Name 626 645	Diabetic Neuropathy
-T21	Condition 699 702	TBI
-T22	Condition-Name 699 702	TBI
+T21	Observation 699 702	TBI
+T22	Observation-Name 699 702	TBI
 T23	Condition 779 805	Central Positional Vertigo
 T24	Condition-Name 779 805	Central Positional Vertigo
 T25	Condition 752 770	Multiple Sclerosis
@@ -115,15 +111,13 @@ T59	Condition 453 462	dizziness
 T60	Condition-Name 453 462	dizziness
 T61	Condition 465 483	spinning sensation
 T62	Condition-Name 465 483	spinning sensation
-T64	Condition 535 539	pain
-T65	Condition-Name 535 539	pain
+T64	Observation 535 539	pain
+T65	Observation-Name 535 539	pain
 T66	Study 554 564	assessment
-T67	Temporal-Connection 540 553	in the day of
 T68	Condition 663 671	Whiplash
 T69	Condition-Name 663 671	Whiplash
-T70	Condition 675 697	Traumatic Brain Injury
-T71	Condition-Name 675 697	Traumatic Brain Injury
-T72	Or 672 674	or
+T70	Observation 675 697	Traumatic Brain Injury
+T71	Observation-Name 675 697	Traumatic Brain Injury
 T41	Condition 836 839	CHD
 T42	Condition-Name 836 839	CHD
 T74	Condition 1040 1056	Menier's Disease
@@ -137,7 +131,6 @@ T82	Condition-Name 1159 1170	subluxation
 T83	Condition 1173 1184	dislocation
 T84	Condition-Name 1173 1184	dislocation
 T85	Provider 1298 1325	Vestibular physiotherapists
-T86	Provider-Type 1298 1325	Vestibular physiotherapists
 T87	Provider 1218 1238	Health professionals
 T89	Criteria-Count 79 101	the following criteria
 T9	Observation 313 344	Dix-Hallpike / Supine Roll Test
@@ -153,17 +146,14 @@ T95	Eq-Temporal-Period 711 715	last
 T96	Eq-Temporal-Unit 716 720	year
 T97	Eq-Comparison 727 734	History
 T98	Eq-Temporal-Period 727 734	History
-T99	Or 776 778	or
 T100	Procedure 940 949	treatment
 T101	Drug 953 967	Beta- Blockers
 T102	Drug-Name 953 967	Beta- Blockers
-T79	Or 1171 1172	/
 T103	Modifier 1192 1211	Atlanto-axial joint
 T104	Polarity 1146 1150	high
 T88	Procedure 1262 1267	treat
 T105	Assertion 1247 1261	specialized to
-A2	Temporal-Connection-Type-Value E14 during
-A1	Observation-Type-Value T10 clinical-score
+A1	Observation-Type-Value E4 clinical-score
 A4	Polarity-Value T90 positive
 A5	Eq-Temporal-Period-Value T94 past
 A3	Eq-Temporal-Period-Value T95 past
@@ -185,3 +175,12 @@ R13	Using Arg1:E52 Arg2:E54
 R8	Caused-By Arg1:E30 Arg2:E28
 R9	Treatment-For Arg1:E58 Arg2:E55
 R14	Example-Of Arg1:E36 Arg2:E38
+R15	During Arg1:E10 Arg2:E12
+R16	Or Arg1:E16 Arg2:E18
+R17	Or Arg1:E31 Arg2:E23
+R18	Or Arg1:E32 Arg2:E34
+R19	Or Arg1:E37 Arg2:E33
+R20	Or Arg1:E51 Arg2:E53
+R21	Or Arg1:E53 Arg2:E24
+R22	Or Arg1:E24 Arg2:E26
+R23	Or Arg1:E26 Arg2:E49

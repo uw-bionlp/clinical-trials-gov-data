@@ -1,8 +1,8 @@
 E1	Condition:T1 Name:T2 Severity:T41 Acuteness:T42
-E3	Condition:T3 Name:T4 Severity:T39
+E3	Condition:T3 Severity:T39
 E5	Procedure:T5 Name:T6 Temporality:E13
 E7	Condition:T7 Name:T8
-E8	Age:T13 Eq-Comparison:E9 Eq-Comparison2:E10
+E8	Age:T13 Numeric-Filter:E9 Numeric-Filter:E10
 E9	Eq-Comparison:T17 Operator:T9 Value:T14
 E10	Eq-Comparison:T18 Operator:T10 Temporal-Unit:T12 Value:T15
 E11	Eq-Comparison:T19 Operator:T11 Value:T16 Unit:T37 Unit2:T38
@@ -14,18 +14,16 @@ E4	Assertion:T28 Asserted:E2
 E6	Observation:T29 Name:T30
 E15	Observation:T31 Name:T32
 E16	Assertion:T33 Asserted:E15
-E17	Or:T34 Arg:E9 Arg2:E10
-E18	Observation:T35 Name:T36 Eq-Comparison:E11
+E18	Observation:T35 Name:T36 Numeric-Filter:E11
 E19	Modifier:T40 Modifies:E3
 E21	Drug:T43 Temporality:E24
 E22	Drug:T44 Name:T45
 E23	Drug:T46 Name:T47
 E24	Eq-Comparison:T48 Temporal-Period:T49
 E25	Drug:T50 Name:T51
-E26	Or:T52 Arg:E23 Arg2:E25
 E27	Organism:T53 Name:T54
 E28	Condition:T55 Name:T56 Temporality:E12
-E29	Condition:T57 Name:T58 Temporality:E14
+E29	Observation:T57 Name:T58 Temporality:E14
 E30	Modifier:T59 Modifies:T58
 T1	Condition 266 279	liver disease
 T2	Condition-Name 266 279	liver disease
@@ -60,7 +58,6 @@ T30	Observation-Name 87 103	serum pepsinogen
 T31	Observation 59 76	Serologic markers
 T32	Observation-Name 59 76	Serologic markers
 T33	Assertion 104 110	can be
-T34	Or 154 156	or
 T35	Observation 181 203	serum hemoglobin level
 T36	Observation-Name 181 203	serum hemoglobin level
 T37	Eq-Unit 209 210	g
@@ -78,13 +75,12 @@ T48	Eq-Comparison 285 288	Use
 T49	Eq-Temporal-Period 285 288	Use
 T50	Drug 376 387	antibiotics
 T51	Drug-Name 376 387	antibiotics
-T52	Or 373 375	or
 T53	Organism 404 413	H. pylori
 T54	Organism-Name 404 413	H. pylori
 T55	Condition 414 425	eradication
 T56	Condition-Name 414 425	eradication
-T57	Condition 504 512	bleeding
-T58	Condition-Name 504 512	bleeding
+T57	Observation 504 512	bleeding
+T58	Observation-Name 504 512	bleeding
 T59	Modifier 481 503	upper gastrointestinal
 A1	Eq-Operator-Value T9 LT
 A2	Eq-Operator-Value T10 GT
@@ -94,10 +90,10 @@ A5	Eq-Temporal-Period-Value T21 past
 A6	Eq-Temporal-Period-Value T23 past
 A7	Eq-Temporal-Period-Value T25 past
 A8	Assertion-Type-Value E4 hypothetical
-A9	Observation-Type-Value T30 lab
-A10	Observation-Type-Value T32 lab
+A9	Observation-Type-Value E6 lab
+A10	Observation-Type-Value E15 lab
 A11	Assertion-Type-Value E16 hypothetical
-A12	Observation-Type-Value T36 lab
+A12	Observation-Type-Value E18 lab
 A13	Severity-Value T39 severe
 A14	Severity-Value T41 severe
 A15	Eq-Temporal-Period-Value T49 present
@@ -108,3 +104,6 @@ R3	Example-Of Arg1:E22 Arg2:E21
 R4	Example-Of Arg1:E23 Arg2:E21
 R5	Example-Of Arg1:E25 Arg2:E21
 R6	Caused-By Arg1:E28 Arg2:E27
+R7	Or Arg1:E9 Arg2:E10
+R8	Or Arg1:E23 Arg2:E25
+R9	Or Arg1:E22 Arg2:E23

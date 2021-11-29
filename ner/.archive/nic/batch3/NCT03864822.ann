@@ -1,0 +1,266 @@
+E2	Condition:T2 Name:T83
+E3	Or:T3 Arg:T84 Arg2:T85
+E4	Age:T4 Eq-Comparison:E5
+E5	Eq-Comparison:T5 Value:T86 Operator:T87 Value:T88 Temporal-Unit:T89
+E6	Condition:T6 Name:T91 Temporality:E1 Minimum-Count:E7 Duration:E8
+E7	Eq-Comparison:T7 Operator:T92 Value:T93 Per:T95 Temporal-Unit:T134
+E8	Eq-Comparison:T8 Operator:T96 Value:T97 Temporal-Unit:T98
+E9	Assertion:T9 Asserted:T99
+E11	Condition:T11 Name:T101
+E12	Modifier:T12 Modifies:T101
+E15	And:T15 Arg:E12 Arg2:E16
+E16	Modifier:T16 Modifies:T101
+E17	Modifier:T17 Modifies:T102
+E18	Condition:T18 Name:T102
+E19	Temporal-Connection:T19 Arg:E11 Arg2:E13
+E20	Condition:T20 Name:T104
+E21	Modifier:T21 Modifies:T105
+E22	Condition:T22 Name:T105
+E23	Condition:T23 Name:T106
+E24	Eq-Comparison:T24 Temporal-Period:T107
+E25	Assertion:T25 Asserted:E27
+E26	Eq-Comparison:T26 Temporal-Period:T108
+E27	Procedure:T27 Temporality:E24 Temporality2:E26
+E28	Modifier:T28 Modifies:T109
+E29	Condition:T29 Name:T109
+E30	Assertion:T30 Asserted:E14
+E31	Condition:T31 Name:T110
+E32	Condition:T32 Name:T111
+E33	Modifier:T33 Modifies:T112
+E34	Condition:T34 Name:T112
+E35	Condition:T35 Name:T114 Severity:T113
+E37	Or:T37 Arg:E36 Arg2:E38
+E38	Condition:T38 Name:T116
+E39	Condition:T39 Name:T117
+E40	Modifier:T40 Modifies:T117
+E41	Modifier:T41 Modifies:T118
+E42	Or:T42 Arg:E41 Arg2:E43
+E43	Modifier:T43 Modifies:T118
+E44	Condition:T44 Name:T118
+E45	Or:T45 Arg:E44 Arg2:E47
+E46	Modifier:T46 Modifies:T119
+E47	Condition:T47 Name:T119
+E48	Condition:T48 Name:T120
+E49	Drug:T49 Name:T121
+E50	Drug:T50 Name:T122
+E51	Or:T51 Arg:E50 Arg2:E53
+E52	Other:T52 Is-Other:E53
+E53	Drug:T53 
+E54	Eq-Comparison:T54 Temporal-Period:T123
+E55	Or:T55 Arg:E54 Arg2:E56
+E56	Eq-Comparison:T56 Temporal-Period:T124
+E57	Modifier:T57 Modifies:T125
+E58	Modifier:T58 Modifies:T125
+E59	Modifier:T59 
+E60	Or:T60 Arg:E59 Arg2:E62
+E61	Other:T61 Is-Other:E62
+E62	Condition:T62 Name:T125 Temporality:E54 Temporality2:E56
+E63	Assertion:T63 Asserted:T126
+E64	Study:T64 Stability:T126
+E65	Eq-Comparison:T65 Temporal-Period:T127
+E66	Or:T66 Arg:E65 Arg2:E67
+E67	Eq-Comparison:T67 Temporal-Period:T128
+E69	Or:T69 Arg:T68 Arg2:E70
+E70	Modifier:T70 Modifies:T129
+E71	Condition:T71 Name:T129 Temporality:E65 Temporality2:E67 Acuteness:T68
+E73	Exception:T73 From:E71 Except:E75
+E74	Modifier:T74 Modifies:T130
+E75	Condition:T75 Name:T130
+E76	Eq-Comparison:T76 Temporal-Period:T131
+E77	Drug:T77 Name:T132 Temporality:E76
+E78	Or:T78 Arg:E77 Arg2:E80
+E79	Other:T79 Is-Other:E80
+E80	Drug:T80 Temporality:E76
+E81	Assertion:T81 Asserted:T133
+E82	Study:T82 Stability:T133
+E1	Eq-Comparison:T1 Temporal-Period:T90
+E83	Observation:T135 Name:T136 Temporality:E10 Stability:T99
+E10	Eq-Comparison:T10 Per:T100
+E13	Study:T13 
+E14	Condition:T14 
+E36	Drug:T36 Name:T115
+E84	Modifier:T137 Modifies:T115
+T2	Condition 35 42	healthy
+T3	Or 47 50	and
+T4	Age 62 66	Aged
+T5	Eq-Comparison 67 78	18-60 years
+T6	Condition 95 99	pain
+T7	Eq-Comparison 101 117	>3days pain/week
+T8	Eq-Comparison 135 152	at least 3 months
+T9	Assertion 154 167	sufficient to
+T11	Condition 196 200	Pain
+T12	Modifier 208 270	region posteriorly between the inferior border of the 12th rib
+T15	And 271 274	and
+T16	Modifier 279 297	lower gluteal fold
+T17	Modifier 299 307	low back
+T18	Condition 308 312	pain
+T19	Temporal-Connection 314 325	at the time
+T20	Condition 414 423	Pregnancy
+T21	Modifier 429 437	Low back
+T22	Condition 438 442	pain
+T23	Condition 459 471	menstruation
+T24	Eq-Comparison 477 486	Currently
+T25	Assertion 487 494	seeking
+T26	Eq-Comparison 495 501	active
+T27	Procedure 502 511	treatment
+T28	Modifier 516 524	low back
+T29	Condition 525 529	pain
+T30	Assertion 545 553	symptoms
+T31	Condition 560 565	fever
+T32	Condition 567 574	malaise
+T33	Modifier 576 587	progressive
+T34	Condition 588 606	neurologic deficit
+T35	Condition 620 626	trauma
+T37	Or 657 659	or
+T38	Condition 660 672	osteoporosis
+T39	Condition 674 678	pain
+T40	Modifier 688 693	night
+T41	Modifier 695 702	urinary
+T42	Or 703 705	or
+T43	Modifier 706 712	faecal
+T44	Condition 713 725	incontinence
+T45	Or 727 729	or
+T46	Modifier 730 740	unintended
+T47	Condition 741 752	weight loss
+T48	Condition 759 773	Drug addiction
+T49	Drug 796 804	cannabis
+T50	Drug 806 813	opioids
+T51	Or 814 816	or
+T52	Other 817 822	other
+T53	Drug 823 828	drugs
+T54	Eq-Comparison 834 841	Current
+T55	Or 842 844	or
+T56	Eq-Comparison 845 853	previous
+T57	Modifier 854 864	neurologic
+T58	Modifier 866 881	musculoskeletal
+T59	Modifier 883 889	mental
+T60	Or 891 893	or
+T61	Other 894 899	other
+T62	Condition 900 909	illnesses
+T63	Assertion 916 919	may
+T64	Study 931 936	trial
+T65	Eq-Comparison 942 949	Current
+T66	Or 950 952	or
+T67	Eq-Comparison 953 961	previous
+T68	Acuteness 962 969	chronic
+T69	Or 970 972	or
+T70	Modifier 973 982	recurrent
+T71	Condition 983 997	pain condition
+T73	Exception 998 1008	other than
+T74	Modifier 1009 1017	low back
+T75	Condition 1018 1022	pain
+T76	Eq-Comparison 1028 1035	Current
+T77	Drug 1051 1071	analgesic medication
+T78	Or 1072 1074	or
+T79	Other 1075 1080	other
+T80	Drug 1081 1091	medication
+T81	Assertion 1098 1101	may
+T82	Study 1113 1118	trial
+T83	Condition-Name 35 42	healthy
+T84	Life-Stage-And-Gender 43 46	men
+T85	Life-Stage-And-Gender 51 56	women
+T86	Eq-Value 67 69	18
+T87	Eq-Operator 69 70	-
+T88	Eq-Value 70 72	60
+T89	Eq-Temporal-Unit 73 78	years
+T90	Eq-Temporal-Period 84 94	Continuous
+T91	Condition-Name 95 99	pain
+T92	Eq-Operator 101 102	>
+T93	Eq-Value 102 103	3
+T94	Condition-Name 108 112	pain
+T95	Eq-Temporal-Unit 113 117	week
+T96	Eq-Operator 135 143	at least
+T97	Eq-Value 144 145	3
+T98	Eq-Temporal-Unit 146 152	months
+T99	Stability 168 173	limit
+T101	Condition-Name 196 200	Pain
+T102	Condition-Name 308 312	pain
+T103	Language 381 388	English
+T104	Condition-Name 414 423	Pregnancy
+T105	Condition-Name 438 442	pain
+T106	Condition-Name 459 471	menstruation
+T107	Eq-Temporal-Period 477 486	Currently
+T108	Eq-Temporal-Period 495 501	active
+T109	Condition-Name 525 529	pain
+T110	Condition-Name 560 565	fever
+T111	Condition-Name 567 574	malaise
+T112	Condition-Name 588 606	neurologic deficit
+T113	Severity 608 619	significant
+T114	Condition-Name 620 626	trauma
+T115	Drug-Name 638 652	corticosteroid
+T116	Condition-Name 660 672	osteoporosis
+T117	Condition-Name 674 678	pain
+T118	Condition-Name 713 725	incontinence
+T119	Condition-Name 741 752	weight loss
+T120	Condition-Name 759 773	Drug addiction
+T121	Drug-Name 796 804	cannabis
+T122	Drug-Name 806 813	opioids
+T123	Eq-Temporal-Period 834 841	Current
+T124	Eq-Temporal-Period 845 853	previous
+T125	Condition-Name 900 909	illnesses
+T126	Stability 920 926	affect
+T127	Eq-Temporal-Period 942 949	Current
+T128	Eq-Temporal-Period 953 961	previous
+T129	Condition-Name 983 997	pain condition
+T130	Condition-Name 1018 1022	pain
+T131	Eq-Temporal-Period 1028 1035	Current
+T132	Drug-Name 1051 1071	analgesic medication
+T133	Stability 1102 1108	affect
+T1	Eq-Comparison 84 94	Continuous
+T134	Eq-Temporal-Unit 103 107	days
+T135	Observation 180 190	activities
+T136	Observation-Name 180 190	activities
+T10	Eq-Comparison 174 179	daily
+T100	Eq-Temporal-Unit 174 179	daily
+T13	Study 329 340	recruitment
+T14	Condition 535 544	Red flags
+T36	Drug 638 652	corticosteroid
+T137	Modifier 628 637	prolonged
+A1	Assertion-Type-Value E9 hypothetical
+A2	Temporal-Connection-Type-Value E19 during
+A3	Assertion-Type-Value E25 intention
+A4	Assertion-Type-Value E30 possible
+A5	Assertion-Type-Value E63 hypothetical
+A6	Assertion-Type-Value E81 hypothetical
+A7	Life-Stage-And-Gender-Type T84 male
+A8	Life-Stage-And-Gender-Type T85 female
+A9	Eq-Operator-Value T87 BETWEEN
+A10	Eq-Temporal-Unit-Value T89 year
+A11	Eq-Temporal-Period-Value T90 present
+A12	Eq-Operator-Value T92 GT
+A13	Eq-Temporal-Unit-Value T95 week
+A14	Eq-Operator-Value T96 GTEQ
+A15	Eq-Temporal-Unit-Value T98 month
+A16	Stability-Value T99 change
+A18	Eq-Temporal-Period-Value T107 present
+A19	Eq-Temporal-Period-Value T108 present
+A20	Severity-Value T113 severe
+A21	Eq-Temporal-Period-Value T123 present
+A22	Eq-Temporal-Period-Value T124 past
+A23	Stability-Value T126 change
+A24	Eq-Temporal-Period-Value T127 present
+A25	Eq-Temporal-Period-Value T128 past
+A26	Eq-Temporal-Period-Value T131 present
+A27	Stability-Value T133 change
+A28	Eq-Temporal-Unit-Value T134 day
+A17	Eq-Temporal-Unit-Value T100 day
+A29	Observation-Type-Value T136 social-habit
+A30	Acuteness-Type-Value T68 chronic
+R1	Caused-By Arg1:T99 Arg2:E6
+R2	Equivalent-To Arg1:E18 Arg2:E11
+R3	Caused-By Arg1:E22 Arg2:E23
+R4	Treatment-For Arg1:E27 Arg2:E29
+R5	Example-Of Arg1:E31 Arg2:E14
+R6	Example-Of Arg1:E32 Arg2:E14
+R7	Example-Of Arg1:E34 Arg2:E14
+R8	Example-Of Arg1:E36 Arg2:E14
+R9	Example-Of Arg1:E38 Arg2:E14
+R10	Example-Of Arg1:E39 Arg2:E14
+R11	Example-Of Arg1:E44 Arg2:E14
+R12	Example-Of Arg1:E47 Arg2:E14
+R13	Equivalent-To Arg1:E49 Arg2:E48
+R14	Equivalent-To Arg1:E50 Arg2:E48
+R15	Equivalent-To Arg1:E53 Arg2:E48
+R16	Caused-By Arg1:T126 Arg2:E62
+R17	Caused-By Arg1:T133 Arg2:E80
+R18	Caused-By Arg1:T133 Arg2:E77

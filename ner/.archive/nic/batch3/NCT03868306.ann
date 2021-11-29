@@ -1,0 +1,45 @@
+E1	Condition:T1 Name:T14
+E2	Observation:T2 Name:T15 Eq-Comparison:E3
+E3	Eq-Comparison:T3 Operator:T16 Value:T17 Unit:T18
+E4	And:T4 Arg:E2 Arg2:E5
+E5	Observation:T5 Name:T19 Eq-Comparison:E6
+E6	Eq-Comparison:T6 Unit:T20 Operator:T26
+E8	Condition:T8 Name:T21
+E9	Condition:T9 Name:T22 Acuteness:T7
+E10	Or:T10 Arg:E9 Arg2:E11
+E11	Condition:T11 Name:T23 Acuteness:T7
+E12	Condition:T12 Name:T24
+E13	Condition:T13 Name:T25
+T1	Condition 43 72	microcytic hypochromic anemia
+T2	Observation 94 97	MCV
+T3	Eq-Comparison 98 113	less than 80 fl
+T4	And 114 117	and
+T5	Observation 118 120	HB
+T6	Eq-Comparison 127 164	below the lower limit of normal value
+T8	Condition 220 242	Beta thalassemia major
+T9	Condition 267 275	diseases
+T10	Or 276 278	or
+T11	Condition 279 289	infections
+T12	Condition 297 311	Lead poisoning
+T13	Condition 319 340	Sideroblastic anaemia
+T14	Condition-Name 43 72	microcytic hypochromic anemia
+T15	Observation-Name 94 97	MCV
+T16	Eq-Operator 98 107	less than
+T17	Eq-Value 108 110	80
+T18	Eq-Unit 111 113	fl
+T19	Observation-Name 118 120	HB
+T20	Eq-Unit 137 164	lower limit of normal value
+T21	Condition-Name 220 242	Beta thalassemia major
+T22	Condition-Name 267 275	diseases
+T23	Condition-Name 279 289	infections
+T24	Condition-Name 297 311	Lead poisoning
+T25	Condition-Name 319 340	Sideroblastic anaemia
+T26	Eq-Operator 127 132	below
+T7	Acuteness 259 266	Chronic
+A1	Eq-Operator-Value T16 LT
+A2	Eq-Unit-Value T20 ref-range-normal
+A3	Observation-Type-Value T15 lab
+A4	Observation-Type-Value T19 lab
+A5	Eq-Operator-Value T26 LT
+A6	Acuteness-Type-Value T7 chronic
+R1	Equivalent-To Arg1:E2 Arg2:E1

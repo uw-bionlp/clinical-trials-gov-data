@@ -1,61 +1,51 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T31 Operator:T32 Value:T33 Temporal-Unit:T34
-E3	Temporal-Connection:T3 Arg:E2 Arg2:E4
 E4	Procedure:T4 Name:T35
 E5	Condition:T5 Name:T36
-E6	Or:T6 Arg:E5 Arg2:E7
 E7	Condition:T7 Name:T37
 E8	Eq-Comparison:T8 Temporal-Period:T38
 E9	Modifier:T9 Modifies:T39
 E10	Procedure:T10 Name:T39 Temporality:E8
 E11	Condition:T11 Name:T41 Severity:T40
 E12	Condition:T12 Name:T42
-E13	Or:T13 Arg:E12 Arg2:E14
 E14	Condition:T14 Name:T43
-E16	Condition:T16 Name:T44 Acuteness:T15
+E16	Observation:T16 Name:T44 Acuteness:T15
 E17	Eq-Comparison:T17 Temporal-Period:T45
 E18	Drug:T18 Name:T46 Temporality:E17 Temporality2:E19
 E19	Eq-Comparison:T19 Temporal-Period:T47 Value:T48 Temporal-Unit:T49
 E20	Condition:T20 Name:T50
-E21	Modifier:T21 Modifies:T51
-E22	Or:T22 Arg:E21 Arg2:E23
-E23	Modifier:T23 Modifies:T51
-E24	Condition:T24 Name:T51
+E21	Modifier:T21 Modifies:E24
+E23	Modifier:T23 Modifies:E24
+E24	Condition:T24
 E25	Condition:T25 Name:T52
-E26	Observation:T26 Name:T53 Eq-Comparison:E27
+E26	Observation:T26 Name:T53 Numeric-Filter:E27
 E27	Eq-Comparison:T27 Operator:T54 Value:T55
 E28	Condition:T28 Name:T56
-E29	Or:T29 Arg:E28 Arg2:E30
 E30	Condition:T30 Name:T57
 T1	Age 28 32	aged
 T2	Eq-Comparison 33 44	10-18 years
-T3	Temporal-Connection 45 56	at the time
 T4	Procedure 60 67	surgery
 T5	Condition 93 113	idiopathic scoliosis
-T6	Or 114 120	and/or
 T7	Condition 121 129	kyphosis
 T8	Eq-Comparison 138 148	undergoing
 T9	Modifier 149 157	elective
 T10	Procedure 158 181	posterior spinal fusion
 T11	Condition 202 218	systemic disease
 T12	Condition 259 282	neuromuscular scoliosis
-T13	Or 283 289	and/or
 T14	Condition 290 298	kyphosis
 T15	Acuteness 319 326	chronic
-T16	Condition 327 331	pain
+T16	Observation 327 331	pain
 T17	Eq-Comparison 337 341	Used
 T18	Drug 342 349	opioids
 T19	Eq-Comparison 357 370	past 6 months
 T20	Condition 376 395	Developmental delay
 T21	Modifier 401 406	Liver
-T22	Or 407 409	or
 T23	Modifier 410 416	kidney
 T24	Condition 417 424	disease
 T25	Condition 430 453	Obstructive sleep apnea
 T26	Observation 459 474	Body mass index
 T27	Eq-Comparison 475 478	>40
 T28	Condition 487 495	pregnant
-T29	Or 496 498	or
 T30	Condition 499 512	breastfeeding
 T31	Eq-Value 33 35	10
 T32	Eq-Operator 35 36	-
@@ -70,7 +60,7 @@ T40	Severity 197 201	mild
 T41	Condition-Name 202 218	systemic disease
 T42	Condition-Name 259 282	neuromuscular scoliosis
 T43	Condition-Name 290 298	kyphosis
-T44	Condition-Name 327 331	pain
+T44	Observation-Name 327 331	pain
 T45	Eq-Temporal-Period 337 341	Used
 T46	Drug-Name 342 349	opioids
 T47	Eq-Temporal-Period 357 361	past
@@ -84,7 +74,6 @@ T54	Eq-Operator 475 476	>
 T55	Eq-Value 476 478	40
 T56	Condition-Name 487 495	pregnant
 T57	Condition-Name 499 512	breastfeeding
-A1	Temporal-Connection-Type-Value E3 during
 A2	Eq-Operator-Value T32 BETWEEN
 A3	Eq-Temporal-Unit-Value T34 year
 A4	Eq-Temporal-Period-Value T38 present
@@ -92,6 +81,11 @@ A5	Severity-Value T40 mild
 A6	Eq-Temporal-Period-Value T45 present
 A7	Eq-Temporal-Period-Value T47 past
 A8	Eq-Temporal-Unit-Value T49 month
-A9	Observation-Type-Value T53 vital
+A9	Observation-Type-Value E26 vital
 A10	Eq-Operator-Value T54 GT
 A11	Acuteness-Type-Value T15 chronic
+R1	During Arg1:E2 Arg2:E4
+R2	Or Arg1:E5 Arg2:E7
+R3	Or Arg1:E12 Arg2:E14
+R4	Or Arg1:E21 Arg2:E23
+R5	Or Arg1:E28 Arg2:E30

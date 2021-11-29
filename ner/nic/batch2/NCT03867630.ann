@@ -1,12 +1,10 @@
 E1	Eq-Comparison:T1 Value:T19 Operator:T20 Value:T21 Temporal-Unit:T22
-E2	Age:T2 Eq-Comparison:E1
+E2	Age:T2 Numeric-Filter:E1
 E3	Condition:T3 Name:T23
 E4	Condition:T4 Name:T24
-E5	Condition:T5 Name:T25 Acuteness:T10
-E6	Or:T6 Arg:E5 Arg2:E8
+E5	Observation:T5 Name:T25 Acuteness:T10
 E7	Modifier:T7 Modifies:T26
-E8	Condition:T8 Name:T26
-E9	And:T9 Arg:E8 Arg2:E13
+E8	Observation:T8 Name:T26
 E12	Modifier:T12 Modifies:T27
 E13	Procedure:T13 Name:T27
 E14	Eq-Comparison:T14 Temporal-Period:T28
@@ -19,11 +17,9 @@ T1	Eq-Comparison 25 39	20 to 80 years
 T2	Age 40 43	old
 T3	Condition 65 79	herniated disc
 T4	Condition 81 96	spinal stenosis
-T5	Condition 133 137	pain
-T6	Or 138 141	and
+T5	Observation 133 137	pain
 T7	Modifier 142 157	lower extremity
-T8	Condition 158 162	pain
-T9	And 163 166	who
+T8	Observation 158 162	pain
 T12	Modifier 186 192	lumbar
 T13	Procedure 193 220	epidural steroid injections
 T14	Eq-Comparison 243 252	performed
@@ -37,8 +33,8 @@ T21	Eq-Value 31 33	80
 T22	Eq-Temporal-Unit 34 39	years
 T23	Condition-Name 65 79	herniated disc
 T24	Condition-Name 81 96	spinal stenosis
-T25	Condition-Name 133 137	pain
-T26	Condition-Name 158 162	pain
+T25	Observation-Name 133 137	pain
+T26	Observation-Name 158 162	pain
 T27	Procedure-Name 193 220	epidural steroid injections
 T28	Eq-Temporal-Period 243 252	performed
 T29	Procedure-Name 253 286	percutaneous epidural neuroplasty
@@ -53,3 +49,6 @@ A5	Acuteness-Type-Value T10 chronic
 R1	Treatment-For Arg1:E13 Arg2:E8
 R2	Treatment-For Arg1:E13 Arg2:E5
 R3	Using Arg1:E15 Arg2:E16
+R4	Or Arg1:E5 Arg2:E8
+R5	And Arg1:E8 Arg2:E13
+R6	Or Arg1:E3 Arg2:E4

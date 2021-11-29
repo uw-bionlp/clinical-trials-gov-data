@@ -1,15 +1,12 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Value:T18 Temporal-Unit:T19 Operator:T17
 E4	Procedure:T4 Name:T20
 E5	Allergy:T5 Name:E6
 E6	Drug:T6 Name:T27
 E7	Eq-Comparison:T7 Temporal-Period:T21
 E8	Condition:T8 Name:T22 Temporality:E7
-E9	And:T9 Arg:T23 Arg2:E10
 E10	Condition:T10 Name:T24
-E11	Or:T11 Arg:E10 Arg2:E12
 E12	Condition:T12 Name:T25
-E13	Or:T13 Arg:E12 Arg2:E14
 E14	Assertion:T14 Asserted:E15
 E15	Condition:T15 Name:T26
 E3	Modifier:T3 Modifies:T20
@@ -20,11 +17,8 @@ T5	Allergy 310 319	allergies
 T6	Drug 323 330	iodides
 T7	Eq-Comparison 342 349	history
 T8	Condition 353 365	coagulopathy
-T9	And 377 380	who
 T10	Condition 385 393	pregnant
-T11	Or 394 396	or
 T12	Condition 397 410	breastfeeding
-T13	Or 412 414	or
 T14	Assertion 424 435	possibility
 T15	Condition 439 448	pregnancy
 T18	Eq-Value 68 70	18
@@ -44,3 +38,6 @@ A3	Eq-Temporal-Unit-Value T19 year
 A4	Eq-Temporal-Period-Value T21 past
 A5	Life-Stage-And-Gender-Type T23 female
 A2	Eq-Operator-Value T17 GTEQ
+R1	And Arg1:T23 Arg2:E10
+R2	Or Arg1:E10 Arg2:E12
+R3	Or Arg1:E12 Arg2:E14

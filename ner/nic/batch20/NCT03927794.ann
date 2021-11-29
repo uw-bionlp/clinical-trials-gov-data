@@ -1,7 +1,7 @@
 E1	Condition:T1 Name:T2 Minimum-Count:E10 Stage:E4
 E6	Condition:T6 Name:T7 Minimum-Count:E27 Minimum-Count2:E28 Stage:E31
 E8	Condition:T8 Name:T9
-E9	Age:T14 Eq-Comparison:E16
+E9	Age:T14 Numeric-Filter:E16
 E10	Eq-Comparison:T34 Operator:T10 Value:T20
 E11	Eq-Comparison:T35 Operator:T11 Value:T32
 E12	Eq-Comparison:T36 Operator:T12 Value:T33 Temporal-Unit:T88
@@ -12,36 +12,30 @@ E17	Eq-Comparison:T41 Operator:T19 Value:T30 Value2:T31
 E2	Modifier:T3 Modifies:T2
 E3	Modifier:T4 Modifies:T2
 E4	Eq-Comparison:T42 Unit:T43 Value:T44
-E5	Observation:T45 Name:T46 Eq-Comparison:E13
-E7	And:T47 Arg:E1 Arg2:E5
-E18	Condition:T48 Name:T49 Polarity:T50 Stability:T51
+E5	Observation:T45 Name:T46 Numeric-Filter:E13
+E18	Observation:T48 Name:T49 Polarity:T50 Stability:T51
 E19	Assertion:T52 Asserted:T51 Asserted2:E21
 E20	Family-Member:T5 Has:E18
 E21	Study:T53
-E22	And:T54 Arg:E20 Arg2:E21
-E23	Observation:T55 Name:T56 Polarity:T57 Eq-Comparison:E14
+E23	Observation:T55 Name:T56 Polarity:T57 Numeric-Filter:E14
 E24	Modifier:T58 Modifies:T56
-E25	Observation:T61 Name:T62 Polarity:T63 Eq-Comparison:E15
-E26	And:T64 Arg:E23 Arg2:E25
+E25	Observation:T61 Name:T62 Polarity:T63 Numeric-Filter:E15
 E15	Eq-Comparison:T17 Value:T24 Operator:T39 Value2:T25
 E27	Eq-Comparison:T65 Value:T28
 E28	Eq-Comparison:T66 Value:T29
 E29	Modifier:T67 Modifies:T7
 E30	Modifier:T68 Modifies:T7
 E31	Eq-Comparison:T69 Unit:T70 Value:T71
-E32	Observation:T72 Name:T73 Eq-Comparison:E17
-E33	And:T74 Arg:E6 Arg2:E32
+E32	Observation:T72 Name:T73 Numeric-Filter:E17
 E34	Modifier:T75 Modifies:T9
-E35	Observation:T76 Name:T77 Eq-Comparison:E11
-E36	And:T78 Arg:E8 Arg2:E35
+E35	Observation:T76 Name:T77 Numeric-Filter:E11
 E37	Drug:T79 Temporality:E38
 E38	Eq-Comparison:T80 Temporal-Period:T81
 E39	Observation:T82 Name:T83 Stability:T84
-E40	Observation:T85 Name:T86 Polarity:T87 Eq-Comparison:E12
-E41	Observation:T89 Name:T90 Eq-Comparison:E43
+E40	Observation:T85 Name:T86 Polarity:T87 Numeric-Filter:E12
+E41	Observation:T89 Name:T90 Numeric-Filter:E43
 E42	Modifier:T91 Modifies:T90
 E43	Eq-Comparison:T92 Operator:T93 Value:T94
-E44	Or:T95 Arg:E40 Arg2:E41
 T1	Condition 62 76	carious lesion
 T2	Condition-Name 62 76	carious lesion
 T6	Condition 458 473	carious lesions
@@ -83,15 +77,13 @@ T43	Eq-Unit 78 83	Class
 T44	Eq-Value 84 85	V
 T45	Observation 90 102	ICDAS scores
 T46	Observation-Name 90 102	ICDAS scores
-T47	And 87 89	of
-T48	Condition 174 186	oral hygiene
-T49	Condition-Name 174 186	oral hygiene
+T48	Observation 174 186	oral hygiene
+T49	Observation-Name 174 186	oral hygiene
 T50	Polarity 169 173	good
 T51	Stability 160 168	maintain
 T52	Assertion 140 156	willing and able
 T5	Family-Member 197 205	children
 T53	Study 217 222	study
-T54	And 206 209	and
 T55	Observation 250 256	Saliva
 T56	Observation-Name 250 256	Saliva
 T57	Polarity 260 266	normal
@@ -101,7 +93,6 @@ T60	Eq-Temporal-Unit 284 287	sec
 T61	Observation 306 315	saliva pH
 T62	Observation-Name 306 315	saliva pH
 T63	Polarity 298 305	healthy
-T64	And 289 292	and
 T17	Eq-Comparison 316 325	6.75-7.25
 T24	Eq-Value 316 320	6.75
 T25	Eq-Value 321 325	7.25
@@ -115,11 +106,9 @@ T70	Eq-Unit 474 479	Class
 T71	Eq-Value 480 481	V
 T72	Observation 485 496	ICDAS score
 T73	Observation-Name 485 496	ICDAS score
-T74	And 482 484	of
 T75	Modifier 527 549	Primary anterior teeth
 T76	Observation 591 596	ICDAS
 T77	Observation-Name 591 596	ICDAS
-T78	And 586 590	with
 T79	Drug 618 628	medication
 T80	Eq-Comparison 615 617	on
 T81	Eq-Temporal-Period 615 617	on
@@ -136,7 +125,6 @@ T91	Modifier 737 743	acidic
 T92	Eq-Comparison 753 757	˂5.8
 T93	Eq-Operator 753 754	˂
 T94	Eq-Value 754 757	5.8
-T95	Or 729 731	or
 A2	Eq-Operator-Value T10 GTEQ
 A3	Eq-Operator-Value T11 GTEQ
 A4	Eq-Operator-Value T12 GT
@@ -145,27 +133,33 @@ A6	Eq-Operator-Value T15 BETWEEN
 A7	Eq-Operator-Value T16 BETWEEN
 A9	Eq-Operator-Value T18 BETWEEN
 A10	Eq-Operator-Value T19 BETWEEN
-A11	Observation-Type-Value T46 clinical-score
+A11	Observation-Type-Value E5 clinical-score
 A12	Polarity-Value T50 normal
 A13	Stability-Value T51 stable
 A14	Assertion-Type-Value E19 hypothetical
 A1	Family-Member-Type E20 child
 A15	Polarity-Value T57 normal
 A16	Eq-Temporal-Unit-Value T60 second
-A17	Observation-Type-Value T62 lab
-A18	Observation-Type-Value T56 measurement
+A17	Observation-Type-Value E25 lab
+A18	Observation-Type-Value E23 measurement
 A19	Polarity-Value T63 normal
 A8	Eq-Operator-Value T39 BETWEEN
-A20	Observation-Type-Value T73 clinical-score
-A21	Observation-Type-Value T77 clinical-score
+A20	Observation-Type-Value E32 clinical-score
+A21	Observation-Type-Value E35 clinical-score
 A22	Eq-Temporal-Period-Value T81 present
-A23	Observation-Type-Value T83 measurement
+A23	Observation-Type-Value E39 measurement
 A24	Stability-Value T84 change
-A25	Observation-Type-Value T86 measurement
+A25	Observation-Type-Value E40 measurement
 A26	Polarity-Value T87 low
 A27	Eq-Temporal-Unit-Value T88 second
-A28	Observation-Type-Value T90 lab
+A28	Observation-Type-Value E41 lab
 A29	Eq-Operator-Value T93 LT
 R1	Equivalent-To Arg1:E15 Arg2:T63
 R2	Caused-By Arg1:T84 Arg2:E37
 R3	Equivalent-To Arg1:E12 Arg2:T87
+R4	And Arg1:E1 Arg2:E5
+R5	And Arg1:E20 Arg2:E21
+R6	And Arg1:E23 Arg2:E25
+R7	And Arg1:E6 Arg2:E32
+R8	And Arg1:E8 Arg2:E35
+R9	Or Arg1:E40 Arg2:E41

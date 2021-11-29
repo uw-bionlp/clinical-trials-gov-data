@@ -1,42 +1,34 @@
 E1	Eq-Comparison:T1 Value:T19 Operator:T20 Temporal-Unit:T21 Value2:T45
-E2	Observation:T2 Name:T23 Eq-Comparison:E3 Eq-Comparison2:E5
+E2	Observation:T2 Name:T23 Numeric-Filter:E3 Numeric-Filter:E5
 E3	Eq-Comparison:T3 Operator:T24 Value:T25
-E4	And:T4 Arg:E3 Arg2:E5
 E5	Eq-Comparison:T5 Operator:T26 Value:T27 Unit:T28 Per:T29
 E6	Condition:T6 Name:T47 Polarity:T30
 E7	Condition:T7 Name:T33 Polarity:T32
-E8	And:T8 Arg:E7 Arg2:E9
 E9	Condition:T9 Name:T34 Polarity:T32
-E10	Temporal-Connection:T10 Arg:E9 Arg2:E11
 E11	Procedure:T11 Name:T35
 E12	Eq-Comparison:T12 Operator:T36 Value:T37 Temporal-Unit:T38
 E13	Condition:T13 Name:T39
 E14	Condition:T14 Name:T41
 E15	Eq-Comparison:T15 Temporal-Period:T42
 E16	Procedure:T16 Name:T43 Temporality:E15
-E17	Or:T17 Arg:E16 Arg2:E18
 E18	Procedure:T18 Name:T44 Temporality:E15
-E19	Age:T46 Eq-Comparison:E1
+E19	Age:T46 Numeric-Filter:E1
 E20	Modifier:T31 Modifies:T47
-E21	Age:T48 Eq-Comparison:E12
+E21	Age:T48 Numeric-Filter:E12
 E22	Modifier:T40 Modifies:T41
 T1	Eq-Comparison 25 35	18-35-year
 T2	Observation 51 54	BMI
 T3	Eq-Comparison 56 59	>18
-T4	And 60 63	and
 T5	Eq-Comparison 64 74	< 30 kg/m2
 T6	Condition 94 103	karyotype
 T7	Condition 116 122	uterus
-T8	And 123 126	and
 T9	Condition 127 134	ovaries
-T10	Temporal-Connection 135 137	at
 T11	Procedure 138 161	transvaginal ultrasound
 T12	Eq-Comparison 187 197	> 35 years
 T13	Condition 203 215	PCO syndrome
 T14	Condition 235 254	follicle aspiration
 T15	Eq-Comparison 260 267	History
 T16	Procedure 271 283	chemotherapy
-T17	Or 284 286	or
 T18	Procedure 287 299	radiotherapy
 T19	Eq-Value 25 27	18
 T20	Eq-Operator 27 28	-
@@ -68,11 +60,10 @@ T47	Condition-Name 94 103	karyotype
 T31	Modifier 87 93	female
 T48	Age 192 197	years
 T40	Modifier 230 234	Null
-A1	Temporal-Connection-Type-Value E10 during
 A2	Eq-Operator-Value T20 BETWEEN
 A3	Eq-Temporal-Unit-Value T21 year
 A4	Life-Stage-And-Gender-Type T22 female
-A5	Observation-Type-Value T23 vital
+A5	Observation-Type-Value E2 vital
 A6	Eq-Operator-Value T24 GT
 A7	Eq-Operator-Value T26 LT
 A8	Polarity-Value T30 normal
@@ -82,3 +73,7 @@ A12	Eq-Temporal-Unit-Value T38 year
 A13	Eq-Temporal-Period-Value T42 past
 R1	Found-By Arg1:E7 Arg2:E11
 R2	Found-By Arg1:E9 Arg2:E11
+R3	And Arg1:E3 Arg2:E5
+R4	And Arg1:E7 Arg2:E9
+R5	During Arg1:E9 Arg2:E11
+R6	Or Arg1:E16 Arg2:E18

@@ -2,7 +2,6 @@ E1	Eq-Comparison:T1 Value:T30 Temporal-Unit:T31 Operator:T32
 E2	Modifier:T2 Modifies:T33
 E3	Condition:T3 Name:T33
 E4	Condition:T4 Name:T34
-E5	Or:T5 Arg:E4 Arg2:E7
 E6	Modifier:T6 Modifies:T35
 E7	Condition:T7 Name:T35
 E8	Negation:T8 Negates:E10
@@ -14,26 +13,20 @@ E13	Assertion:T13
 E15	Study:T15
 E16	Other:T16 Is-Other:E17
 E17	Condition:T17 Name:T39
-E18	Or:T18 Arg:E17 Arg2:E20
 E19	Modifier:T19 Modifies:T40
 E20	Condition:T20 Name:T40
-E21	Temporal-Connection:T21 Arg:E20 Arg2:E31
 E22	Modifier:T22 Modifies:T41
 E23	Condition:T23 Name:T41
 E24	Condition:T24 Name:T42
-E25	Or:T25 Arg:E24 Arg2:E26
 E26	Condition:T26 Name:T43
 E27	Observation:T27 Name:T45
 E28	Observation:T28 Name:T46
-E29	Age:T47 Eq-Comparison:E1
-E30	And:T48 Arg:T29 Arg2:E3
-E14	Or:T49 Arg:T38 Arg2:T14
+E29	Age:T47 Numeric-Filter:E1
 E31	Coreference:T50 Refers-To:E3
 T1	Eq-Comparison 32 56	18 years of age or older
 T2	Modifier 80 89	essential
 T3	Condition 90 104	thrombocytosis
 T4	Condition 106 131	prefibrotic myelofibrosis
-T5	Or 132 134	or
 T6	Modifier 135 140	overt
 T7	Condition 141 154	myelofibrosis
 T8	Negation 208 211	not
@@ -45,14 +38,11 @@ T13	Assertion 345 357	consented to
 T15	Study 502 507	study
 T16	Other 582 589	another
 T17	Condition 590 610	hematologic neoplasm
-T18	Or 611 613	or
 T19	Modifier 614 625	progressive
 T20	Condition 626 632	cancer
-T21	Temporal-Connection 633 644	at the time
 T22	Modifier 692 701	secondary
 T23	Condition 702 715	myelofibrosis
 T24	Condition 722 730	Pregnant
-T25	Or 731 733	or
 T26	Condition 734 747	breastfeeding
 T27	Observation 767 784	prived of liberty
 T28	Observation 850 874	legal protection measure
@@ -75,12 +65,9 @@ T44	Life-Stage-And-Gender 748 753	woman
 T45	Observation-Name 767 784	prived of liberty
 T46	Observation-Name 850 874	legal protection measure
 T47	Age 44 47	age
-T48	And 58 62	with
 T14	Location 453 458	Brest
-T49	Or 450 452	or
 T50	Coreference 648 657	diagnosis
 A1	Assertion-Type-Value E13 hypothetical
-A2	Temporal-Connection-Type-Value E21 during
 A3	Life-Stage-And-Gender-Type T29 adult
 A4	Eq-Temporal-Unit-Value T31 year
 A5	Eq-Operator-Value T32 GTEQ
@@ -91,3 +78,10 @@ A9	Location-Value T14 hospital
 R1	Equivalent-To Arg1:E1 Arg2:T29
 R2	Treatment-For Arg1:E10 Arg2:E11
 R3	If-Then Arg1:T44 Arg2:E26
+R4	Or Arg1:E4 Arg2:E7
+R5	Or Arg1:E17 Arg2:E20
+R6	During Arg1:E20 Arg2:E31
+R7	Or Arg1:E24 Arg2:E26
+R8	And Arg1:T29 Arg2:E3
+R9	Or Arg1:T38 Arg2:T14
+R10	Or Arg1:E3 Arg2:E4

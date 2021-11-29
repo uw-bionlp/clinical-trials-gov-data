@@ -2,13 +2,12 @@ E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6 Temporality:E10
 E2	Eq-Comparison:T8 Temporal-Unit:T10 Value:T11 Operator:T9
-E4	Age:T14 Eq-Comparison:E2
-E6	Encounter:T12 Type:T15
-E7	Encounter:T16 Type:T17 Location:T18
+E4	Age:T14 Numeric-Filter:E2
+E6	Encounter:T12
+E7	Encounter:T16 Location:T18
 E8	Drug:T19 Name:T20 Stability:T21
 E9	Drug:T22 Name:T23
 E10	Eq-Comparison:T13 Temporal-Recency:T24 Temporal-Unit:T26 Value:T25
-E11	Temporal-Connection:T27 Arg:E9 Arg2:E10
 T1	Condition 87 103	3GCRE bacteremia
 T2	Condition-Name 87 103	3GCRE bacteremia
 T3	Condition 247 271	Polymicrobial bacteremia
@@ -22,9 +21,7 @@ T8	Eq-Comparison 50 67	18 years or above
 T9	Eq-Operator 59 67	or above
 T14	Age 45 49	ages
 T12	Encounter 118 126	admitted
-T15	Encounter-Type 118 126	admitted
 T16	Encounter 215 225	transition
-T17	Encounter-Type 215 225	transition
 T18	Location 229 241	hospice care
 T19	Drug 197 207	antibiotic
 T20	Drug-Name 197 207	antibiotic
@@ -35,15 +32,14 @@ T13	Eq-Comparison 304 321	24 hours of first
 T24	Eq-Temporal-Recency 316 321	first
 T25	Eq-Value 304 306	24
 T26	Eq-Temporal-Unit 307 312	hours
-T27	Temporal-Connection 298 303	after
 A1	Life-Stage-And-Gender-Type T7 adult
 A2	Eq-Temporal-Unit-Value T10 year
 A3	Eq-Operator-Value T9 GTEQ
-A4	Encounter-Type-Value T15 inpatient
-A5	Encounter-Type-Value T17 transfer
+A4	Encounter-Type-Value E6 inpatient
+A5	Encounter-Type-Value E7 transfer
 A6	Location-Value T18 clinic
 A7	Stability-Value T21 change
 A8	Eq-Temporal-Recency-Value T24 first-time
 A9	Eq-Temporal-Unit-Value T26 hour
-A10	Temporal-Connection-Type-Value E11 after
 R1	Caused-By Arg1:T21 Arg2:E7
+R2	After Arg1:E9 Arg2:E10

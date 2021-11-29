@@ -1,16 +1,10 @@
-E1	Or:T1 Arg:T21 Arg2:T22
 E2	Eq-Comparison:T2 Value:T23 Operator:T24 Value:T25
 E3	Procedure:T3 Name:T27 Temporality:E2 Temporality2:E21
-E4	Or:T4 Arg:E22 Arg2:E5
 E5	Modifier:T5 Modifies:T27
-E6	Or:T6 Arg:E5 Arg2:E7
 E7	Modifier:T7 Modifies:T27
-E8	Or:T8 Arg:E7 Arg2:E9
 E9	Modifier:T9 Modifies:T27
-E10	Or:T10 Arg2:E11 Arg:E24
 E11	Death:T11
 E12	Negation:T12 Negates:E13
-E14	Temporal-Connection:T14 Arg:E13 Arg2:E26
 E16	Procedure:T16 Name:T42 Duration:E17
 E17	Eq-Comparison:T17 Operator:T30 Value:T31 Temporal-Unit:T32
 E18	Assertion:T18 Asserted:E19
@@ -23,21 +17,14 @@ E13	Immunization:T13
 E25	Condition:T28 Name:T40
 E26	Coreference:T41 Refers-To:E3
 E27	Observation:T43 Name:T44
-E28	And:T45 Arg:E27 Arg2:E20
 E15	Death:T15
-T1	Or 42 45	and
 T2	Eq-Comparison 96 108	2008 to 2015
 T3	Procedure 127 137	transplant
-T4	Or 138 139	/
 T5	Modifier 140 145	heart
-T6	Or 146 147	/
 T7	Modifier 148 152	lung
-T8	Or 153 154	/
 T9	Modifier 155 166	liver donor
-T10	Or 174 176	or
 T11	Death 177 185	deceased
 T12	Negation 187 190	non
-T14	Temporal-Connection 210 216	before
 T16	Procedure 269 274	graft
 T17	Eq-Comparison 275 284	> 2 years
 T18	Assertion 297 306	agreed to
@@ -66,9 +53,7 @@ T41	Coreference 217 231	the transplant
 T42	Procedure-Name 269 274	graft
 T43	Observation 378 381	DNA
 T44	Observation-Name 378 381	DNA
-T45	And 382 385	and
 T15	Death 167 173	living
-A1	Temporal-Connection-Type-Value E14 before
 A2	Assertion-Type-Value E18 hypothetical
 A3	Life-Stage-And-Gender-Type T21 adult
 A4	Life-Stage-And-Gender-Type T22 child
@@ -76,9 +61,16 @@ A5	Eq-Operator-Value T24 BETWEEN
 A6	Eq-Temporal-Recency-Value T26 first-time
 A7	Eq-Operator-Value T30 GT
 A8	Eq-Temporal-Unit-Value T32 year
-A9	Observation-Type-Value T34 lab
+A9	Observation-Type-Value E20 lab
 A10	Location-Value T35 residence
-A11	Observation-Type-Value T44 lab
+A11	Observation-Type-Value E27 lab
 R1	Treatment-For Arg1:E13 Arg2:E25
 R2	Using Arg1:E19 Arg2:E27
 R3	Using Arg1:E19 Arg2:E20
+R4	Or Arg1:T21 Arg2:T22
+R5	Or Arg1:E22 Arg2:E5
+R6	Or Arg1:E5 Arg2:E7
+R7	Or Arg1:E7 Arg2:E9
+R8	Or Arg1:E24 Arg2:E11
+R9	Before Arg1:E13 Arg2:E26
+R10	And Arg1:E27 Arg2:E20

@@ -1,0 +1,128 @@
+E1	Eq-Comparison:T1 Value:T31 Temporal-Unit:T32 Operator:T33
+E2	Temporal-Connection:T2 Arg:E30 Arg2:E3
+E3	Study:T3 
+E4	Modifier:T4 Modifies:T34
+E5	Condition:T5 Name:T34
+E6	Procedure:T6 Name:T35
+E7	Eq-Comparison:T7 Operator:T36 Value:T37 Operator:T38 Value:T39 Temporal-Unit:T40
+E8	Observation:T8 Name:T41 Eq-Comparison:E7
+E9	Observation:T9 Name:T42 Eq-Comparison:E10
+E10	Eq-Comparison:T10 Value:T43 Operator:T44 Value:T45 Temporal-Unit:T46
+E11	Temporal-Connection:T11 Arg:E9 Arg2:E12
+E12	Study:T12 
+E13	Condition:T13 Name:T47
+E14	Temporal-Connection:T14 Arg:E13 Arg2:E15
+E15	Condition:T15 Name:T48
+E16	Or:T16 Arg:E15 Arg2:E17
+E17	Condition:T17 Name:T49 Temporality:E32
+E18	Contraindication:T18 Contraindicates:E19
+E19	Drug:T19 Name:T50 Dose:E20
+E20	Eq-Comparison:T20 Value:T51 Unit:T52 Operator:T61 Unit2:T62
+E21	Eq-Comparison:T21 
+E22	Eq-Comparison:T22 Temporal-Period:T53
+E23	Drug:T23 Name:T54 Temporality:E22
+E24	Condition:T24 Name:T55
+E25	Condition:T25 Name:T64
+E26	Or:T26 Arg:E25 Arg2:E27
+E27	Condition:T27 
+E28	Assertion:T28 Asserted:T65
+E29	Risk:T29 
+E30	Age:T56 Eq-Comparison:E1
+E31	Assertion:T57 Asserted:E6
+E32	Eq-Comparison:T58 Temporal-Period:T59
+E33	Modifier:T60 Modifies:T50
+E34	Modifier:T63 Modifies:T55
+E35	Study:T66 Stability:T65
+E36	Or:T67 Arg:E35 Arg2:E29
+T1	Eq-Comparison 31 55	18 years of age or older
+T2	Temporal-Connection 56 58	at
+T3	Study 59 69	enrollment
+T4	Modifier 94 110	viable singleton
+T5	Condition 111 120	pregnancy
+T6	Procedure 153 166	GDM screening
+T7	Eq-Comparison 167 186	between 24-28 weeks
+T8	Observation 187 196	gestation
+T9	Observation 216 231	gestational age
+T10	Eq-Comparison 235 246	24-28 weeks
+T11	Temporal-Connection 247 249	at
+T12	Study 254 263	Screening
+T13	Condition 369 377	diabetes
+T14	Temporal-Connection 378 384	before
+T15	Condition 385 394	pregnancy
+T16	Or 395 397	or
+T17	Condition 430 433	GDM
+T18	Contraindication 443 460	contraindications
+T19	Drug 479 486	glucose
+T20	Eq-Comparison 496 516	up to 100 g of sugar
+T21	Eq-Comparison 519 520	3
+T22	Eq-Comparison 525 531	taking
+T23	Drug 532 541	metformin
+T24	Condition 582 589	illness
+T25	Condition 591 598	disease
+T26	Or 599 601	or
+T27	Condition 602 611	condition
+T28	Assertion 667 673	likely
+T29	Risk 789 793	risk
+T30	Life-Stage-And-Gender 25 30	Women
+T31	Eq-Value 31 33	18
+T32	Eq-Temporal-Unit 34 39	years
+T33	Eq-Operator 47 55	or older
+T34	Condition-Name 111 120	pregnancy
+T35	Procedure-Name 153 166	GDM screening
+T36	Eq-Operator 167 174	between
+T37	Eq-Value 175 177	24
+T38	Eq-Operator 177 178	-
+T39	Eq-Value 178 180	28
+T40	Eq-Temporal-Unit 181 186	weeks
+T41	Observation-Name 187 196	gestation
+T42	Observation-Name 216 231	gestational age
+T43	Eq-Value 235 237	24
+T44	Eq-Operator 237 238	-
+T45	Eq-Value 238 240	28
+T46	Eq-Temporal-Unit 241 246	weeks
+T47	Condition-Name 369 377	diabetes
+T48	Condition-Name 385 394	pregnancy
+T49	Condition-Name 430 433	GDM
+T50	Drug-Name 479 486	glucose
+T51	Eq-Value 502 505	100
+T52	Eq-Unit 506 507	g
+T53	Eq-Temporal-Period 525 531	taking
+T54	Drug-Name 532 541	metformin
+T55	Condition-Name 582 589	illness
+T56	Age 43 46	age
+T57	Assertion 129 144	recommended for
+T58	Eq-Comparison 402 409	already
+T59	Eq-Temporal-Period 402 409	already
+T60	Modifier 465 478	drinking oral
+T61	Eq-Operator 496 501	up to
+T62	Eq-Unit 511 516	sugar
+T63	Modifier 570 581	concomitant
+T64	Condition-Name 591 598	disease
+T65	Stability 677 684	prevent
+T66	Study 735 743	protocol
+T67	Or 745 747	or
+A1	Temporal-Connection-Type-Value E2 during
+A2	Temporal-Connection-Type-Value E11 during
+A3	Temporal-Connection-Type-Value E14 before
+A4	Assertion-Type-Value E28 hypothetical
+A5	Life-Stage-And-Gender-Type T30 female
+A6	Eq-Temporal-Unit-Value T32 year
+A7	Eq-Operator-Value T33 GTEQ
+A8	Eq-Operator-Value T36 BETWEEN
+A9	Eq-Operator-Value T38 BETWEEN
+A10	Eq-Temporal-Unit-Value T40 week
+A11	Observation-Type-Value T41 measurement
+A12	Eq-Operator-Value T44 BETWEEN
+A13	Eq-Temporal-Unit-Value T46 week
+A14	Eq-Temporal-Period-Value T53 present
+A15	Assertion-Type-Value E31 hypothetical
+A16	Observation-Type-Value T42 measurement
+A17	Eq-Temporal-Period-Value T59 past
+A18	Eq-Operator-Value T61 LTEQ
+A19	Stability-Value T65 change
+R1	Caused-By Arg1:T65 Arg2:E24
+R2	Caused-By Arg1:T65 Arg2:E25
+R3	Caused-By Arg1:T65 Arg2:E27
+R4	Caused-By Arg1:E29 Arg2:E24
+R5	Caused-By Arg1:E29 Arg2:E25
+R6	Caused-By Arg1:E29 Arg2:E27

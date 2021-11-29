@@ -1,0 +1,132 @@
+E1	Observation:T1 Name:T36 Eq-Comparison:E19
+E2	Eq-Comparison:T2 Temporal-Period:T37
+E3	Procedure:T3 Name:T38 Temporality:E2
+E5	Condition:T5 Name:T39
+E6	Procedure:T6 Name:T40
+E7	Procedure:T7 Name:T41
+E8	Procedure:T8 Name:T42
+E9	Procedure:T9 Name:T43
+E10	Or:T10 Arg:E5 Arg2:E11
+E11	Condition:T11 Name:T44
+E12	Age:T12 Eq-Comparison:E13
+E13	Eq-Comparison:T13 Value:T45 Operator:T46 Value:T47 Temporal-Unit:T48
+E14	Observation:T14 Name:T49 Eq-Comparison:E15
+E15	Eq-Comparison:T15 Value:T50 Operator:T51 Value:T52 Unit:T73 Per:T74
+E16	Observation:T16 Name:T53 Eq-Comparison:E17
+E17	Eq-Comparison:T17 Value:T54 Operator:T55 Value:T56 Unit:T57
+E20	Condition:T20 Name:T58 Temporality:E21
+E21	Eq-Comparison:T21 Operator:T59 Value:T60 Temporal-Unit:T61
+E22	Eq-Comparison:T22 Temporal-Period:T62
+E23	Allergy:T23 Temporality:E22
+E24	Or:T24 Arg:E23 Arg2:E26
+E26	Drug:T26 Name:T63 Temporality:E22 Acuteness:T25
+E27	Or:T27 Arg:E26 Arg2:E28
+E28	Drug:T28 Name:T64 Temporality:E22
+E29	Observation:T29 Name:T65
+E30	Temporal-Connection:T30 Arg:E29 Arg2:E31
+E31	Procedure:T31 Name:T76
+E32	Condition:T32 Name:T66
+E33	Condition:T33 Name:T67
+E34	Or:T34 Arg:E33 Arg2:E35
+E35	Condition:T35 Name:T68
+E19	Eq-Comparison:T19 Unit:T69 Value:T70 Value2:T71
+E36	Modifier:T72 Modifies:T38
+E4	Modifier:T4 Modifies:T39
+E18	Condition:T18 Name:T75
+T1	Observation 25 62	American Society of Anesthesiologists
+T2	Eq-Comparison 82 89	undergo
+T3	Procedure 99 106	surgery
+T5	Condition 118 139	Reproductive diseases
+T6	Procedure 151 184	laparoscopic ovarian cyst removal
+T7	Procedure 186 213	laparoscopic tubal ligation
+T8	Procedure 215 242	laparoscopic tubal drainage
+T9	Procedure 244 271	laparoscopic salpingoplasty
+T10	Or 279 281	or
+T11	Condition 282 296	breast disease
+T12	Age 303 307	Aged
+T13	Eq-Comparison 308 319	18-45 years
+T14	Observation 325 340	Body Mass Index
+T15	Eq-Comparison 341 351	18-25kg/m2
+T16	Observation 352 363	body weight
+T17	Eq-Comparison 364 379	40-65 kilograms
+T20	Condition 467 500	upper respiratory tract infection
+T21	Eq-Comparison 501 515	within 2 weeks
+T22	Eq-Comparison 521 528	history
+T23	Allergy 532 539	allergy
+T24	Or 540 542	or
+T25	Acuteness 543 552	long-term
+T26	Drug 560 568	propofol
+T27	Or 569 572	and
+T28	Drug 573 580	opioids
+T29	Observation 586 611	self-rating anxiety scale
+T30	Temporal-Connection 612 618	before
+T31	Procedure 619 628	operation
+T32	Condition 639 646	anxiety
+T33	Condition 652 661	pregnancy
+T34	Or 662 664	or
+T35	Condition 665 674	lactation
+T36	Observation-Name 25 62	American Society of Anesthesiologists
+T37	Eq-Temporal-Period 82 89	undergo
+T38	Procedure-Name 99 106	surgery
+T39	Condition-Name 118 139	Reproductive diseases
+T40	Procedure-Name 151 184	laparoscopic ovarian cyst removal
+T41	Procedure-Name 186 213	laparoscopic tubal ligation
+T42	Procedure-Name 215 242	laparoscopic tubal drainage
+T43	Procedure-Name 244 271	laparoscopic salpingoplasty
+T44	Condition-Name 282 296	breast disease
+T45	Eq-Value 308 310	18
+T46	Eq-Operator 310 311	-
+T47	Eq-Value 311 313	45
+T48	Eq-Temporal-Unit 314 319	years
+T49	Observation-Name 325 340	Body Mass Index
+T50	Eq-Value 341 343	18
+T51	Eq-Operator 343 344	-
+T52	Eq-Value 344 346	25
+T53	Observation-Name 352 363	body weight
+T54	Eq-Value 364 366	40
+T55	Eq-Operator 366 367	-
+T56	Eq-Value 367 369	65
+T57	Eq-Unit 370 379	kilograms
+T58	Condition-Name 467 500	upper respiratory tract infection
+T59	Eq-Operator 501 507	within
+T60	Eq-Value 508 509	2
+T61	Eq-Temporal-Unit 510 515	weeks
+T62	Eq-Temporal-Period 521 528	history
+T63	Drug-Name 560 568	propofol
+T64	Drug-Name 573 580	opioids
+T65	Observation-Name 586 611	self-rating anxiety scale
+T66	Condition-Name 639 646	anxiety
+T67	Condition-Name 652 661	pregnancy
+T68	Condition-Name 665 674	lactation
+T19	Eq-Comparison 63 72	GradeⅠ－II
+T69	Eq-Unit 63 68	Grade
+T70	Eq-Value 68 69	Ⅰ
+T71	Eq-Value 70 72	II
+T72	Modifier 90 98	elective
+T4	Modifier 111 117	benign
+T73	Eq-Unit 346 348	kg
+T74	Eq-Unit 349 351	m2
+T18	Condition 445 461	Difficult airway
+T75	Condition-Name 445 461	Difficult airway
+T76	Procedure-Name 619 628	operation
+A1	Temporal-Connection-Type-Value E30 before
+A2	Eq-Temporal-Period-Value T37 present
+A3	Eq-Operator-Value T46 BETWEEN
+A4	Eq-Temporal-Unit-Value T48 year
+A5	Observation-Type-Value T49 vital
+A6	Eq-Operator-Value T51 BETWEEN
+A7	Observation-Type-Value T53 vital
+A8	Eq-Operator-Value T55 BETWEEN
+A9	Eq-Operator-Value T59 LTEQ
+A10	Eq-Temporal-Unit-Value T61 week
+A11	Eq-Temporal-Period-Value T62 past
+A12	Observation-Type-Value T65 clinical-score
+A13	Observation-Type-Value T36 clinical-score
+A14	Acuteness-Type-Value T25 chronic
+R1	Treatment-For Arg1:E3 Arg2:E5
+R2	Example-Of Arg1:E6 Arg2:E3
+R3	Example-Of Arg1:E7 Arg2:E3
+R4	Example-Of Arg1:E8 Arg2:E3
+R5	Example-Of Arg1:E9 Arg2:E3
+R6	Treatment-For Arg1:E3 Arg2:E11
+R7	Found-By Arg1:E32 Arg2:E29

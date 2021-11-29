@@ -6,14 +6,13 @@ E5	Modifier:T5 Modifies:T22
 E6	Procedure:T6 Name:T22
 E7	Condition:T7 Name:T23
 E8	Condition:T8 Name:T24
-E9	Observation:T9 Name:T25 Eq-Comparison:E10
+E9	Observation:T9 Name:T25 Numeric-Filter:E10
 E10	Eq-Comparison:T10 Unit:T26 Operator:T27 Value:T28
 E12	Condition:T12 Name:T30 Severity:T29
 E13	Condition:T13 Name:T31
 E14	Condition:T14 Name:T32
 E15	Condition:T15 Name:T11 Severity:T33
 E16	Modifier:T16 Modifies:T11
-E17	Or:T17 Arg:E16 Arg2:E18
 E18	Modifier:T18 Modifies:T11
 E19	Procedure:T19 Name:T34
 E11	Modifier:T35 Modifies:T34
@@ -32,7 +31,6 @@ T13	Condition 271 293	inflammatory arthritis
 T14	Condition 304 324	rheumatoid arthritis
 T15	Condition 340 351	instability
 T16	Modifier 355 359	knee
-T17	Or 360 362	or
 T18	Modifier 363 366	hip
 T19	Procedure 384 391	surgery
 T20	Procedure-Name 37 60	total knee arthroplasty
@@ -55,8 +53,9 @@ T35	Modifier 375 383	revision
 A1	Eq-Operator-Value T27 GT
 A2	Severity-Value T29 severe
 A3	Severity-Value T33 severe
-A4	Observation-Type-Value T25 clinical-score
+A4	Observation-Type-Value E9 clinical-score
 R1	Treatment-For Arg1:E2 Arg2:E4
 R2	Treatment-For Arg1:E6 Arg2:E7
 R3	Caused-By Arg1:E7 Arg2:E8
 R4	Example-Of Arg1:E14 Arg2:E13
+R5	Or Arg1:E16 Arg2:E18

@@ -1,0 +1,295 @@
+E1	Age:T1 Eq-Comparison:E2
+E2	Eq-Comparison:T2 Value:T85 Temporal-Unit:T86 Operator:T87
+E3	Eq-Comparison:T3 Operator:T88 Value:T89 Temporal-Unit:T90
+E4	Modifier:T4 Modifies:T91
+E5	Modifier:T5 Modifies:T91
+E6	Or:T6 Arg:E5 Arg2:E7
+E7	Modifier:T7 Modifies:T91
+E8	Condition:T8 Name:T91 Temporality:E3
+E9	Assertion:T9 Asserted:E11
+E11	Procedure:T11 Name:T10 Location:T92
+E12	Assertion:T12 Asserted:E14
+E13	Drug:T13 Name:T145
+E14	Procedure:T14 Name:T93
+E15	Assertion:T15 Asserted:E16
+E16	Procedure:T16 Name:T94 Location:T96
+E17	Condition:T17 Name:T95
+E19	Condition:T19 Name:T98
+E20	Eq-Comparison:T20 Temporal-Period:T99
+E21	Procedure:T21 Temporality:E20
+E22	Modifier:T22 Modifies:T100
+E23	Condition:T23 Name:T100
+E24	And:T24 Arg:E21 Arg2:E25
+E25	Negation:T25 Negates:E27
+E26	Eq-Comparison:T26 Temporal-Period:T101
+E27	Procedure:T27 Name:T102 Temporality:E26 Temporality2:E29
+E28	Condition:T28 Name:T103
+E29	Eq-Comparison:T29 Operator:T104 Value:T105 Temporal-Unit:T106
+E30	Eq-Comparison:T30 Temporal-Period:T107
+E31	Modifier:T31 Modifies:T108
+E32	Or:T32 Arg:E31 Arg2:E33
+E33	Modifier:T33 Modifies:T108
+E34	Condition:T34 Name:T108 Temporality:E30
+E35	Eq-Comparison:T35 Temporal-Period:T109
+E36	Condition:T36 Name:T110 Temporality:E35
+E37	Condition:T37 Name:T111
+E38	Procedure:T38 Name:T112
+E39	Or:T39 Arg:E38 Arg2:E41
+E41	Procedure:T41 Name:T18
+E42	Eq-Comparison:T42 Temporal-Period:T113
+E43	Condition:T43 Name:T114 Temporality:E42
+E44	Condition:T44 Name:T115 Severity:T148
+E45	Or:T45 Arg:E44 Arg2:E47
+E46	Modifier:T46 Modifies:T116
+E47	Condition:T47 Name:T116
+E48	Modifier:T48 Modifies:T40
+E49	Condition:T49 Name:T40
+E50	Modifier:T50 Modifies:T117
+E51	Condition:T51 Name:T117
+E52	Or:T52 Arg:E51 Arg2:E54
+E54	Condition:T54 Name:T119 Severity:T118 Acuteness:T53
+E55	Condition:T55 Name:T120
+E56	Eq-Comparison:T56 Temporal-Period:T121
+E57	Modifier:T57 Modifies:T122
+E58	Condition:T58 Name:T122 Temporality:E56
+E60	Condition:T60 Name:T124 Severity:T123 Acuteness:T59
+E61	Condition:T61 Name:T125
+E62	Observation:T62 Name:T126 Eq-Comparison:E63
+E63	Eq-Comparison:T63 Operator:T127 Value:T128 Unit:T129
+E64	Condition:T64 Name:T130
+E65	Condition:T65 Name:T131
+E66	Or:T66 Arg:E65 Arg2:E67
+E67	Procedure:T67 Name:T149
+E68	Eq-Comparison:T68 Temporal-Period:T132
+E69	Condition:T69 Name:T133 Temporality:E68
+E70	Modifier:T70 Modifies:T134
+E71	Condition:T71 Name:T134
+E72	Condition:T72 Name:T136 Severity:T135
+E73	Observation:T73 Name:T137 Eq-Comparison:E74
+E74	Eq-Comparison:T74 Unit:T138 Value:T139
+E75	Or:T75 Arg:E73 Arg2:E76
+E76	Condition:T76 Name:T140 Temporality:E77
+E77	Eq-Comparison:T77 Operator:T141 Temporal-Period:T142 Value:T143 Temporal-Unit:T144
+E78	Negation:T78 Negates:E18
+E79	Modifier:T79 Modifies:T151
+E80	Or:T80 Arg:E78 Arg2:E81
+E81	Condition:T81 Name:T153
+E82	Allergy:T82 
+E83	Or:T83 Arg:E82 Arg2:E85
+E10	Modifier:T146 Modifies:T93
+E84	Modifier:T147 Modifies:T145
+E18	Observation:T150 Name:T151
+E40	Assertion:T152 Asserted:E78
+E85	Observation:T154 Name:T155
+T1	Age 31 34	age
+T2	Eq-Comparison 35 52	18 years or older
+T3	Eq-Comparison 69 83	within 8 weeks
+T4	Modifier 97 107	resectable
+T5	Modifier 109 130	borderline resectable
+T6	Or 132 134	or
+T7	Modifier 135 164	locally advanced unresectable
+T8	Condition 165 169	PDAC
+T9	Assertion 239 247	Planning
+T11	Procedure 259 262	TNT
+T12	Assertion 276 284	Planning
+T13	Drug 305 315	FOLFIRINOX
+T14	Procedure 332 344	chemotherapy
+T15	Assertion 351 359	Planning
+T16	Procedure 371 389	surgical resection
+T17	Condition 393 397	PDAC
+T19	Condition 462 480	Metastatic disease
+T20	Eq-Comparison 487 495	Previous
+T21	Procedure 496 505	treatment
+T22	Modifier 510 518	pancreas
+T23	Condition 519 533	adenocarcinoma
+T24	And 534 537	and
+T25	Negation 538 540	no
+T26	Eq-Comparison 541 546	prior
+T27	Procedure 547 554	therapy
+T28	Condition 563 569	cancer
+T29	Eq-Comparison 570 584	within 5 years
+T30	Eq-Comparison 597 604	history
+T31	Modifier 608 617	cognitive
+T32	Or 618 620	or
+T33	Modifier 621 632	psychologic
+T34	Condition 633 643	impairment
+T35	Eq-Comparison 656 663	history
+T36	Condition 667 686	physical impairment
+T37	Condition 695 705	immobility
+T38	Procedure 714 726	walking aids
+T39	Or 728 730	or
+T41	Procedure 740 754	wheelchair use
+T42	Eq-Comparison 767 774	history
+T43	Condition 792 816	orthopedic comorbidities
+T44	Condition 827 841	osteoarthritis
+T45	Or 842 844	or
+T46	Modifier 845 855	rheumatoid
+T47	Condition 856 865	arthritis
+T48	Modifier 867 884	mobility-limiting
+T49	Condition 885 896	amputations
+T50	Modifier 898 908	orthopedic
+T51	Condition 909 917	injuries
+T52	Or 919 921	or
+T53	Acuteness 933 940	chronic
+T54	Condition 941 945	pain
+T55	Condition 952 964	fibromyalgia
+T56	Eq-Comparison 978 985	history
+T57	Modifier 1003 1012	pulmonary
+T58	Condition 1013 1026	comorbidities
+T59	Acuteness 1035 1042	chronic
+T60	Condition 1043 1072	obstructive pulmonary disease
+T61	Condition 1074 1078	COPD
+T62	Observation 1091 1095	FEV1
+T63	Eq-Comparison 1096 1101	≤ 50%
+T64	Condition 1103 1112	emphysema
+T65	Condition 1114 1139	interstitial lung disease
+T66	Or 1141 1147	and/or
+T67	Procedure 1155 1174	supplemental oxygen
+T68	Eq-Comparison 1187 1194	history
+T69	Condition 1212 1240	cardiovascular comorbidities
+T70	Modifier 1242 1254	uncontrolled
+T71	Condition 1255 1267	hypertension
+T72	Condition 1276 1300	congestive heart failure
+T73	Observation 1302 1306	NYHA
+T74	Eq-Comparison 1307 1315	Class IV
+T75	Or 1318 1324	and/or
+T76	Condition 1325 1346	myocardial infarction
+T77	Eq-Comparison 1347 1371	within the last 6 months
+T78	Negation 1378 1387	Inability
+T79	Modifier 1421 1432	oral routes
+T80	Or 1433 1439	and/or
+T81	Condition 1461 1485	nutritional restrictions
+T82	Allergy 1487 1496	allergies
+T83	Or 1498 1504	and/or
+T84	Life-Stage-And-Gender 24 30	Adults
+T85	Eq-Value 35 37	18
+T86	Eq-Temporal-Unit 38 43	years
+T87	Eq-Operator 44 52	or older
+T88	Eq-Operator 69 75	within
+T89	Eq-Value 76 77	8
+T90	Eq-Temporal-Unit 78 83	weeks
+T92	Location 266 269	MGH
+T93	Procedure-Name 332 344	chemotherapy
+T94	Procedure-Name 371 389	surgical resection
+T95	Condition-Name 393 397	PDAC
+T96	Location 401 404	MGH
+T97	Language 429 436	English
+T98	Condition-Name 462 480	Metastatic disease
+T99	Eq-Temporal-Period 487 495	Previous
+T100	Condition-Name 519 533	adenocarcinoma
+T101	Eq-Temporal-Period 541 546	prior
+T102	Procedure-Name 547 554	therapy
+T103	Condition-Name 563 569	cancer
+T104	Eq-Operator 570 576	within
+T105	Eq-Value 577 578	5
+T106	Eq-Temporal-Unit 579 584	years
+T107	Eq-Temporal-Period 597 604	history
+T108	Condition-Name 633 643	impairment
+T109	Eq-Temporal-Period 656 663	history
+T110	Condition-Name 667 686	physical impairment
+T111	Condition-Name 695 705	immobility
+T112	Procedure-Name 714 726	walking aids
+T113	Eq-Temporal-Period 767 774	history
+T114	Condition-Name 792 816	orthopedic comorbidities
+T115	Condition-Name 827 841	osteoarthritis
+T116	Condition-Name 856 865	arthritis
+T117	Condition-Name 909 917	injuries
+T118	Severity 922 932	widespread
+T119	Condition-Name 941 945	pain
+T120	Condition-Name 952 964	fibromyalgia
+T121	Eq-Temporal-Period 978 985	history
+T122	Condition-Name 1013 1026	comorbidities
+T123	Severity 1028 1034	severe
+T124	Condition-Name 1043 1072	obstructive pulmonary disease
+T125	Condition-Name 1074 1078	COPD
+T126	Observation-Name 1091 1095	FEV1
+T127	Eq-Operator 1096 1097	≤
+T128	Eq-Value 1098 1100	50
+T129	Eq-Unit 1100 1101	%
+T130	Condition-Name 1103 1112	emphysema
+T131	Condition-Name 1114 1139	interstitial lung disease
+T132	Eq-Temporal-Period 1187 1194	history
+T133	Condition-Name 1212 1240	cardiovascular comorbidities
+T134	Condition-Name 1255 1267	hypertension
+T135	Severity 1269 1275	severe
+T136	Condition-Name 1276 1300	congestive heart failure
+T137	Observation-Name 1302 1306	NYHA
+T138	Eq-Unit 1307 1312	Class
+T139	Eq-Value 1313 1315	IV
+T140	Condition-Name 1325 1346	myocardial infarction
+T141	Eq-Operator 1347 1353	within
+T142	Eq-Temporal-Period 1358 1362	last
+T143	Eq-Value 1363 1364	6
+T144	Eq-Temporal-Unit 1365 1371	months
+T91	Condition-Name 165 169	PDAC
+T10	Procedure-Name 259 262	TNT
+T145	Drug-Name 305 315	FOLFIRINOX
+T146	Modifier 320 331	neoadjuvant
+T147	Modifier 296 304	modified
+T18	Procedure-Name 740 754	wheelchair use
+T40	Condition-Name 885 896	amputations
+T148	Severity 818 826	advanced
+T149	Procedure-Name 1155 1174	supplemental oxygen
+T150	Observation 1400 1404	diet
+T151	Observation-Name 1400 1404	diet
+T152	Assertion 1378 1387	Inability
+T153	Condition-Name 1461 1485	nutritional restrictions
+T154	Observation 1505 1524	dietary preferences
+T155	Observation-Name 1505 1524	dietary preferences
+A1	Assertion-Type-Value E9 intention
+A2	Assertion-Type-Value E12 intention
+A3	Assertion-Type-Value E15 intention
+A5	Life-Stage-And-Gender-Type T84 adult
+A6	Eq-Temporal-Unit-Value T86 year
+A7	Eq-Operator-Value T87 GTEQ
+A8	Eq-Operator-Value T88 LTEQ
+A9	Eq-Temporal-Unit-Value T90 week
+A10	Location-Value T92 hospital
+A11	Location-Value T96 hospital
+A12	Eq-Temporal-Period-Value T99 past
+A13	Eq-Temporal-Period-Value T101 past
+A14	Eq-Operator-Value T104 LTEQ
+A15	Eq-Temporal-Unit-Value T106 year
+A16	Eq-Temporal-Period-Value T107 past
+A17	Eq-Temporal-Period-Value T109 past
+A18	Eq-Temporal-Period-Value T113 past
+A19	Severity-Value T118 severe
+A20	Eq-Temporal-Period-Value T121 past
+A21	Severity-Value T123 severe
+A22	Observation-Type-Value T126 lab
+A23	Eq-Operator-Value T127 LTEQ
+A24	Eq-Temporal-Period-Value T132 past
+A25	Severity-Value T135 severe
+A26	Eq-Operator-Value T141 LTEQ
+A27	Eq-Temporal-Period-Value T142 past
+A28	Eq-Temporal-Unit-Value T144 month
+A4	Severity-Value T148 severe
+A29	Observation-Type-Value T151 social-habit
+A30	Assertion-Type-Value E40 hypothetical
+A31	Observation-Type-Value T155 social-habit
+A32	Observation-Type-Value T137 clinical-score
+A33	Acuteness-Type-Value T53 chronic
+A34	Acuteness-Type-Value T59 chronic
+R1	Using Arg1:E14 Arg2:E13
+R2	Treatment-For Arg1:E16 Arg2:E17
+R3	Treatment-For Arg1:E21 Arg2:E23
+R4	Treatment-For Arg1:E27 Arg2:E28
+R5	Example-Of Arg1:E37 Arg2:E36
+R6	Example-Of Arg1:E38 Arg2:E36
+R7	Example-Of Arg1:E41 Arg2:E36
+R8	Example-Of Arg1:E44 Arg2:E43
+R9	Example-Of Arg1:E47 Arg2:E43
+R10	Example-Of Arg1:E49 Arg2:E43
+R11	Example-Of Arg1:E51 Arg2:E43
+R12	Example-Of Arg1:E54 Arg2:E43
+R13	Example-Of Arg1:E55 Arg2:E54
+R14	Example-Of Arg1:E60 Arg2:E58
+R15	Abbrev-Of Arg1:E61 Arg2:E60
+R16	Equivalent-To Arg1:E62 Arg2:E61
+R17	Example-Of Arg1:E64 Arg2:E58
+R18	Example-Of Arg1:E65 Arg2:E58
+R19	Example-Of Arg1:E67 Arg2:E58
+R20	Example-Of Arg1:E71 Arg2:E69
+R21	Example-Of Arg1:E72 Arg2:E69
+R22	Equivalent-To Arg1:E73 Arg2:E72
+R23	Example-Of Arg1:E76 Arg2:E69

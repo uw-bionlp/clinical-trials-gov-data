@@ -1,26 +1,21 @@
-E1	Or:T1 Arg:T30 Arg2:T17
 E2	Eq-Comparison:T2 Value:T18 Operator:T19 Value:T20 Temporal-Unit:T21
-E3	Age:T3 Eq-Comparison:E2
+E3	Age:T3 Numeric-Filter:E2
 E4	Eq-Comparison:T4 Unit:T22 Value:T23
 E5	Eq-Comparison:T5 Temporal-Period:T24
 E6	Procedure:T6 Name:T25 Temporality:E5
 E7	Assertion:T7 Asserted:E9
 E8	Modifier:T8 Modifies:T26
 E9	Condition:T9 Name:T26
-E11	Or:T11 Arg:E10 Arg2:E12
 E12	Condition:T12 Name:T41
 E13	Condition:T13 Name:T27
 E14	Condition:T14 Name:T28
-E15	Or:T15 Arg:E14 Arg2:E16
 E16	Condition:T16 Name:T29
 E17	Condition:T31 Name:T32 Stage:E4
-E18	And:T33 Arg:E3 Arg2:E17
 E19	Procedure:T35 Name:T36 Temporality:E21
 E20	Modifier:T37 Modifies:T36
 E21	Eq-Comparison:T38 Temporal-Period:T39
-E22	Encounter:T40 Location:T34
+E22	Encounter:T40
 E10	Provider:T10
-T1	Or 30 33	and
 T2	Eq-Comparison 45 58	7 to 12 years
 T3	Age 59 62	old
 T4	Eq-Comparison 68 76	class II
@@ -29,11 +24,9 @@ T6	Procedure 281 301	orthopedic treatment
 T7	Assertion 321 326	signs
 T8	Modifier 330 337	condyle
 T9	Condition 338 346	injuries
-T11	Or 377 379	or
 T12	Condition 392 397	cleft
 T13	Condition 417 426	syndromes
 T14	Condition 442 464	craniofacial anomalies
-T15	Or 465 468	and
 T16	Condition 469 487	muscle alterations
 T17	Life-Stage-And-Gender 34 39	girls
 T18	Eq-Value 45 46	7
@@ -51,7 +44,6 @@ T29	Condition-Name 469 487	muscle alterations
 T30	Life-Stage-And-Gender 25 29	Boys
 T31	Condition 77 100	skeletal classification
 T32	Condition-Name 77 100	skeletal classification
-T33	And 63 67	with
 T34	Location 133 146	dental clinic
 T35	Procedure 192 215	myofunctional apparatus
 T36	Procedure-Name 192 215	myofunctional apparatus
@@ -71,3 +63,7 @@ A7	Location-Value T34 clinic
 A8	Eq-Temporal-Period-Value T39 future
 R1	Caused-By Arg1:E13 Arg2:E14
 R2	Caused-By Arg1:E13 Arg2:E16
+R3	Or Arg1:T30 Arg2:T17
+R4	Or Arg1:E10 Arg2:E12
+R5	Or Arg1:E14 Arg2:E16
+R6	And Arg1:E3 Arg2:E17

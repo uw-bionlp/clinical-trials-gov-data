@@ -4,44 +4,39 @@ E3	Eq-Comparison:T5 Temporal-Period:T6 Value:T71 Temporal-Unit:T72
 E4	Condition:T7 Name:T8 Stage:E5
 E5	Eq-Comparison:T9 Unit:T10 Value:T11
 E6	Eq-Comparison:T12 Operator:T13 Value:T14
-E7	Observation:T15 Name:T16 Eq-Comparison:E6
-E8	And:T17 Arg:E4 Arg2:E7
-E9	Observation:T18 Name:T19 Eq-Comparison:E14
+E7	Observation:T15 Name:T16 Numeric-Filter:E6
+E9	Observation:T18 Name:T19 Numeric-Filter:E14
 E10	Modifier:T20 Modifies:T19
 E11	Modifier:T21 Modifies:T19
-E12	Or:T22 Arg:E10 Arg2:E11
-E13	And:T23 Arg:E7 Arg2:E9
 E14	Eq-Comparison:T24 Operator:T25 Value:T26 Unit:T27
 E15	Procedure:T28 Name:T29
 E16	Procedure:T30 Name:T31
 E17	Observation:T32 Name:T33
-E18	Observation:T34 Name:T35 Eq-Comparison:E19
+E18	Observation:T34 Name:T35 Numeric-Filter:E19
 E19	Eq-Comparison:T36 Operator:T37 Value:T38 Unit:T39
 E20	Observation:T40 Name:T41
-E21	Observation:T42 Name:T43 Eq-Comparison:E22
+E21	Condition:T42 Name:T43 Numeric-Filter:E22
 E22	Eq-Comparison:T44 Operator:T45 Value:T46 Unit:T47
-E23	Condition:T48 Name:T49
+E23	Observation:T48 Name:T49
 E24	Negation:T50 Negates:E25
 E25	Modifier:T51 Modifies:T49
 E26	Condition:T52 Name:T53
-E27	Condition:T54 Name:T55
+E27	Observation:T54 Name:T55
 E28	Negation:T56 Negates:E27
 E29	Drug:T57 Name:T58 Temporality:E1 Temporality2:E2
 E30	Drug:T59 Temporality:E2
 E31	Other:T60 Is-Other:E30
-E32	Or:T61 Arg:E29 Arg2:E30
 E33	Negation:T62 Negates:E29
 E34	Condition:T63 Name:T64 Stability:T65
 E35	Procedure:T68 Name:T69 Temporality:E3
 E36	Negation:T70 Negates:E35
-E37	Age:T73 Eq-Comparison:E38
+E37	Age:T73 Numeric-Filter:E38
 E38	Eq-Comparison:T74 Operator:T75 Value:T76 Value2:T77 Temporal-Unit:T78
 E39	Condition:T79 Name:T80
 E40	Condition:T81 Name:T82
 E41	Condition:T83 Name:T84
-E42	Or:T85 Arg:E40 Arg2:E41
 E43	Procedure:T86 Name:T87
-E44	Observation:T88 Name:T89 Eq-Comparison:E45
+E44	Observation:T88 Name:T89 Numeric-Filter:E45
 E45	Eq-Comparison:T90 Operator:T91 Unit:T92 Value:T93
 T1	Eq-Comparison 383 390	history
 T2	Eq-Temporal-Period 383 390	history
@@ -59,13 +54,10 @@ T13	Eq-Operator 64 72	at least
 T14	Eq-Value 73 76	one
 T15	Observation 77 82	tooth
 T16	Observation-Name 77 82	tooth
-T17	And 57 63	having
 T18	Observation 121 140	intraosseous defect
 T19	Observation-Name 121 140	intraosseous defect
 T20	Modifier 88 96	one wall
 T21	Modifier 100 120	combined1- to 2-wall
-T22	Or 97 99	or
-T23	And 83 87	with
 T24	Eq-Comparison 141 147	≥ 3 mm
 T25	Eq-Operator 141 142	≥
 T26	Eq-Value 143 144	3
@@ -84,26 +76,25 @@ T38	Eq-Value 255 256	5
 T39	Eq-Unit 256 258	mm
 T40	Observation 263 275	pocket depth
 T41	Observation-Name 263 275	pocket depth
-T42	Observation 277 279	PD
-T43	Observation-Name 277 279	PD
+T42	Condition 277 279	PD
+T43	Condition-Name 277 279	PD
 T44	Eq-Comparison 281 287	≥ 6 mm
 T45	Eq-Operator 281 282	≥
 T46	Eq-Value 283 284	6
 T47	Eq-Unit 285 287	mm
-T48	Condition 294 300	Defect
-T49	Condition-Name 294 300	Defect
+T48	Observation 294 300	Defect
+T49	Observation-Name 294 300	Defect
 T50	Negation 301 304	not
 T51	Modifier 320 339	root furcation area
 T52	Condition 345 356	Vital teeth
 T53	Condition-Name 345 356	Vital teeth
-T54	Condition 366 373	smokers
-T55	Condition-Name 366 373	smokers
+T54	Observation 366 373	smokers
+T55	Observation-Name 366 373	smokers
 T56	Negation 362 365	Non
 T57	Drug 404 415	antibiotics
 T58	Drug-Name 404 415	antibiotics
 T59	Drug 425 436	medications
 T60	Other 419 424	other
-T61	Or 416 418	or
 T62	Negation 380 382	No
 T63	Condition 451 463	periodontium
 T64	Condition-Name 451 463	periodontium
@@ -127,7 +118,6 @@ T81	Condition 795 804	Pregnancy
 T82	Condition-Name 795 804	Pregnancy
 T83	Condition 808 822	breast feeding
 T84	Condition-Name 808 822	breast feeding
-T85	Or 805 807	or
 T86	Procedure 847 868	orthodontic appliance
 T87	Procedure-Name 847 868	orthodontic appliance
 T88	Observation 874 888	Teeth mobility
@@ -140,11 +130,11 @@ A1	Eq-Temporal-Period-Value T2 past
 A2	Eq-Temporal-Period-Value T4 past
 A3	Eq-Temporal-Period-Value T6 past
 A4	Eq-Operator-Value T13 GTEQ
-A5	Observation-Type-Value T19 measurement
+A5	Observation-Type-Value E9 measurement
 A6	Eq-Operator-Value T25 GTEQ
-A7	Observation-Type-Value T33 measurement
+A7	Observation-Type-Value E17 measurement
 A8	Eq-Operator-Value T37 GTEQ
-A9	Observation-Type-Value T41 measurement
+A9	Observation-Type-Value E20 measurement
 A10	Eq-Operator-Value T45 GTEQ
 A11	Stability-Value T65 change
 A12	Eq-Temporal-Unit-Value T67 month
@@ -152,10 +142,16 @@ A13	Eq-Temporal-Unit-Value T72 month
 A14	Eq-Operator-Value T75 BETWEEN
 A15	Eq-Temporal-Unit-Value T78 month
 A16	Eq-Operator-Value T91 GT
-A17	Observation-Type-Value T89 clinical-score
+A17	Observation-Type-Value E44 clinical-score
 R1	Found-By Arg1:E9 Arg2:E15
 R2	Found-By Arg1:E9 Arg2:E16
 R3	Abbrev-Of Arg1:E18 Arg2:E17
 R4	Abbrev-Of Arg1:E21 Arg2:E20
 R5	Caused-By Arg1:T65 Arg2:E30
 R6	Caused-By Arg1:T65 Arg2:E29
+R7	And Arg1:E4 Arg2:E7
+R8	Or Arg1:E10 Arg2:E11
+R9	And Arg1:E7 Arg2:E9
+R10	Or Arg1:E29 Arg2:E30
+R11	Or Arg1:E40 Arg2:E41
+R12	Or Arg1:E15 Arg2:E16

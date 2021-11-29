@@ -1,0 +1,96 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E5	Condition:T5 Name:T6 Polarity:T30
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Procedure:T15 Name:T16
+E17	Condition:T17 Name:T18
+E18	Age:T21 Eq-Comparison:E2
+E19	Eq-Comparison:T24 Operator:T19 Value:T23 Unit:T41 Per:T42 Value2:T43 Unit2:T44
+E2	Eq-Comparison:T25 Operator:T26 Temporal-Unit:T20 Value:T22
+E4	And:T27 Arg:E18 Arg2:E1
+E6	Procedure:T28 Name:T29
+E8	Or:T31 Arg:E5 Arg2:E3
+E10	Or:T32 Arg:E1 Arg2:E3
+E12	Or:T33 Arg:E13 Arg2:E17
+E14	Procedure:T34 Name:T35
+E16	Or:T36 Arg:E15 Arg2:E14
+E20	Condition:T37 Name:T38
+E21	Observation:T39 Name:T40 Eq-Comparison:E19
+E22	Procedure:T45 Name:T46
+E23	Procedure:T47 Name:T48
+E24	Or:T49 Arg:E22 Arg2:E23
+E25	Negation:T50 Negates:E22
+E26	Assertion:T51 Asserted:E25
+E27	Condition:T52
+E28	Assertion:T53 Asserted:E1 Polarity:T54
+E29	Modifier:T55 Modifies:T8
+T1	Condition 81 100	cardiac sarcoidosis
+T2	Condition-Name 81 100	cardiac sarcoidosis
+T3	Condition 122 146	extracardiac sarcoidosis
+T4	Condition-Name 122 146	extracardiac sarcoidosis
+T5	Condition 163 166	HRS
+T6	Condition-Name 163 166	HRS
+T7	Condition 266 274	diabetes
+T8	Condition-Name 266 274	diabetes
+T9	Condition 219 242	Coronary artery disease
+T10	Condition-Name 219 242	Coronary artery disease
+T11	Condition 280 294	Claustrophobia
+T12	Condition-Name 280 294	Claustrophobia
+T13	Condition 300 309	Pregnancy
+T14	Condition-Name 300 309	Pregnancy
+T15	Procedure 335 344	pacemaker
+T16	Procedure-Name 335 344	pacemaker
+T17	Condition 310 317	nursing
+T18	Condition-Name 310 317	nursing
+T19	Eq-Operator 464 465	<
+T20	Eq-Temporal-Unit 45 50	years
+T21	Age 54 57	age
+T22	Eq-Value 42 44	18
+T23	Eq-Value 465 467	45
+T24	Eq-Comparison 464 482	<45 ml/min/1.73 m2
+T25	Eq-Comparison 31 50	older than 18 years
+T26	Eq-Operator 31 41	older than
+T27	And 58 62	with
+T28	Procedure 108 114	biopsy
+T29	Procedure-Name 108 114	biopsy
+T30	Polarity 154 162	positive
+T31	Or 147 153	and/or
+T32	Or 101 107	and/or
+T33	Or 309 310	/
+T34	Procedure 348 396	automatic implantable cardioverter-defibrillator
+T35	Procedure-Name 348 396	automatic implantable cardioverter-defibrillator
+T36	Or 345 347	or
+T37	Condition 402 425	Impaired renal function
+T38	Condition-Name 402 425	Impaired renal function
+T39	Observation 427 463	estimated glomerular filtration rate
+T40	Observation-Name 427 463	estimated glomerular filtration rate
+T41	Eq-Unit 468 470	ml
+T42	Eq-Temporal-Unit 471 474	min
+T43	Eq-Value 475 479	1.73
+T44	Eq-Unit 480 482	m2
+T45	Procedure 528 531	PET
+T46	Procedure-Name 528 531	PET
+T47	Procedure 532 535	MRI
+T48	Procedure-Name 532 535	MRI
+T49	Or 531 532	/
+T50	Negation 507 516	Inability
+T51	Assertion 520 527	undergo
+T52	Condition 553 562	condition
+T53	Assertion 68 77	suspicion
+T54	Polarity 63 67	high
+T55	Modifier 248 265	Insulin dependent
+A1	Eq-Operator-Value T19 LT
+A2	Eq-Temporal-Unit-Value T20 year
+A3	Eq-Operator-Value T26 GT
+A4	Polarity-Value T30 positive
+A5	Observation-Type-Value T40 lab
+A6	Eq-Temporal-Unit-Value T42 minute
+A7	Assertion-Type-Value E26 hypothetical
+A8	Assertion-Type-Value E28 possible
+A9	Polarity-Value T54 high
+R1	Found-By Arg1:E3 Arg2:E6
+R2	Equivalent-To Arg1:E21 Arg2:E20
+R3	Caused-By Arg1:E25 Arg2:E27

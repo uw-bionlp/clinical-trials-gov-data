@@ -6,13 +6,9 @@ E5	Procedure:T5 Name:T28
 E6	Study:T6 Study-Of:E19
 E7	Assertion:T7 Asserted:E20
 E8	Condition:T8 Name:T21
-E9	Or:T9 Arg:E8 Arg2:E10
 E10	Condition:T10 Name:T22
-E11	Temporal-Connection:T11 Arg:E10 Arg2:E12
 E12	Study:T12
-E13	Or:T13 Arg:T23 Arg2:T24
 E14	Assertion:T14 Asserted:E25
-E16	Temporal-Connection:T16 Arg:E25 Arg2:E17
 E17	Study:T17
 E18	Eq-Comparison:T25 Value:T26
 E19	Procedure:T29
@@ -20,7 +16,6 @@ E20	Study:T30 Temporality:E21 Study-Of:E22 Study-Of2:E23
 E21	Eq-Comparison:T31 Temporal-Period:T19
 E22	Drug:T32 Name:T33
 E23	Drug:T34 Name:T35
-E24	Or:T36 Arg:E22 Arg2:E23
 E25	Condition:T15 Name:T37
 T1	Condition 58 62	LOPD
 T2	Criteria-Count 96 109	the following
@@ -30,13 +25,9 @@ T5	Procedure 156 170	GAA genotyping
 T6	Study 234 239	study
 T7	Assertion 312 324	eligible for
 T8	Condition 414 422	pregnant
-T9	Or 423 425	or
 T10	Condition 426 439	breastfeeding
-T11	Temporal-Connection 440 442	at
 T12	Study 443 452	screening
-T13	Or 481 483	or
 T14	Assertion 495 503	planning
-T16	Temporal-Connection 524 530	during
 T17	Study 535 540	study
 T18	Condition-Name 58 62	LOPD
 T19	Eq-Temporal-Period 342 349	ongoing
@@ -56,15 +47,17 @@ T32	Drug 371 377	ATB200
 T33	Drug-Name 371 377	ATB200
 T34	Drug 378 384	AT2221
 T35	Drug-Name 378 384	AT2221
-T36	Or 377 378	/
 T15	Condition 507 523	conceive a child
 T37	Condition-Name 507 523	conceive a child
 A1	Assertion-Type-Value E7 hypothetical
-A2	Temporal-Connection-Type-Value E11 during
 A3	Assertion-Type-Value E14 intention
-A5	Temporal-Connection-Type-Value E16 during
 A6	Eq-Temporal-Period-Value T19 present
 A7	Life-Stage-And-Gender-Type T20 female
 A8	Life-Stage-And-Gender-Type T23 male
 A9	Life-Stage-And-Gender-Type T24 female
 R1	If-Then Arg1:T20 Arg2:E8
+R2	Or Arg1:E8 Arg2:E10
+R3	During Arg1:E10 Arg2:E12
+R4	Or Arg1:T23 Arg2:T24
+R5	During Arg1:E25 Arg2:E17
+R6	Or Arg1:E22 Arg2:E23

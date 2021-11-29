@@ -1,5 +1,5 @@
-E1	Observation:T1 Name:T2 Eq-Comparison:E2
-E3	Condition:T3 Acuteness:T4 Name:T31 Acuteness:T13
+E1	Observation:T1 Name:T2 Numeric-Filter:E2
+E3	Condition:T3 Acuteness:T4 Acuteness:T13
 E5	Condition:T5 Name:T6
 E2	Eq-Comparison:T14 Operator:T15 Value:T11 Value2:T12 Unit:T10 Per:T32
 E9	Allergy:T17 Name:T18
@@ -8,21 +8,16 @@ E7	Drug:T7
 E13	Drug:T24 Name:T8
 E14	Condition:T25 Name:T26
 E15	Condition:T27 Name:T28
-E8	Or:T16 Arg:T13 Arg2:T4
-E11	Or:T21 Arg:E6 Arg2:E10
 E6	Modifier:T19
 E10	Modifier:T20 Modifies:T6
 E16	Coreference:T29 Refers-To:E7 Refers-To2:E13
-E17	Or:T30 Arg:E13 Arg2:E16
 E18	Observation:T33 Name:T34 Duration:E21
 E19	Assertion:T35 Asserted:E18
 E20	Study:T36
 E21	Eq-Comparison:T37 Value:T38 Temporal-Unit:T39
 E22	Condition:T40 Name:T41
-E23	Or:T42 Arg:E14 Arg2:E22
 E24	Drug:T43 Temporality:E29
 E25	Study:T44
-E26	Temporal-Connection:T45 Arg:E24 Arg2:E25
 E27	Negation:T46 Negates:E24
 E28	Negation:T47 Negates:E27
 E29	Eq-Comparison:T48 Temporal-Period:T49
@@ -49,13 +44,10 @@ T24	Drug 346 371	micronutrient supplements
 T25	Condition 386 397	Vegetarians
 T27	Condition 36 43	healthy
 T28	Condition-Name 36 43	healthy
-T16	Or 223 225	or
-T21	Or 266 268	or
 T4	Acuteness 226 231	acute
 T19	Modifier 258 265	smoking
 T20	Modifier 269 276	alcohol
 T29	Coreference 376 380	both
-T30	Or 373 375	or
 T31	Condition-Name 232 240	diseases
 T32	Eq-Unit 90 92	m2
 T33	Observation 109 112	eat
@@ -68,10 +60,8 @@ T39	Eq-Temporal-Unit 158 162	week
 T26	Condition-Name 386 397	Vegetarians
 T40	Condition 408 426	unable to eat meat
 T41	Condition-Name 408 426	unable to eat meat
-T42	Or 399 401	or
 T43	Drug 524 535	medications
 T44	Study 547 552	study
-T45	Temporal-Connection 536 542	during
 T46	Negation 504 511	refrain
 T47	Negation 494 500	Unable
 T48	Eq-Comparison 517 523	taking
@@ -80,14 +70,19 @@ T9	Life-Stage-And-Gender 44 47	men
 T50	Assertion 25 35	Apparently
 T51	Eq-Comparison 288 291	Use
 T52	Eq-Temporal-Period 288 291	Use
-A1	Observation-Type-Value T2 vital
+A1	Observation-Type-Value E1 vital
 A2	Eq-Operator-Value T15 BETWEEN
 A5	Assertion-Type-Value E19 hypothetical
 A6	Eq-Temporal-Unit-Value T39 week
-A3	Temporal-Connection-Type-Value E26 during
 A7	Eq-Temporal-Period-Value T49 present
 A8	Life-Stage-And-Gender-Type T9 male
 A9	Assertion-Type-Value E30 possible
 A10	Eq-Temporal-Period-Value T52 present
 A11	Acuteness-Type-Value T4 acute
 A12	Acuteness-Type-Value T13 chronic
+R1	Or Arg1:T13 Arg2:T4
+R2	Or Arg1:E6 Arg2:E10
+R3	Or Arg1:E13 Arg2:E16
+R4	Or Arg1:E14 Arg2:E22
+R5	During Arg1:E24 Arg2:E25
+R6	Or Arg1:E7 Arg2:E13

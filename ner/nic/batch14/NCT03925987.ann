@@ -13,41 +13,35 @@ E23	Procedure:T23 Name:T24 Temporality:E30
 E25	Condition:T25 Name:T26
 E27	Condition:T27 Name:T28
 E31	Condition:T31 Name:T32
-E34	Age:T41 Eq-Comparison:E38
+E34	Age:T41 Numeric-Filter:E38
 E35	Eq-Comparison:T50 Operator:T35 Value:T44 Unit:T43
 E36	Eq-Comparison:T51 Operator:T36 Value:T45 Unit:T59
 E37	Eq-Comparison:T52 Temporal-Unit:T40 Value:T49 Temporal-Period:T38
 E38	Eq-Comparison:T53 Operator:T42 Value:T46 Value2:T47 Temporal-Unit:T39
 E2	Observation:T29 Name:T30
-E4	Observation:T37 Name:T54 Eq-Comparison:E35
+E4	Observation:T37 Name:T54 Numeric-Filter:E35
 E6	Observation:T55 Name:T56
-E8	Observation:T57 Name:T58 Eq-Comparison:E36
+E8	Observation:T57 Name:T58 Numeric-Filter:E36
 E10	Procedure:T60
 E12	Assertion:T61 Asserted:E10
 E14	Eq-Comparison:T48 Temporal-Unit:T62 Value:T63
 E16	Assertion:T64 Asserted:E13
-E18	And:T65 Arg:E10 Arg2:E13
-E20	Or:T66 Arg:E27 Arg2:E17
-E22	Or:T67 Arg:E17 Arg2:E1
 E24	Eq-Comparison:T68 Temporal-Period:T69
 E26	Eq-Comparison:T70 Operator:T71 Value:T72
 E28	Drug:T73 Name:T74 Temporality:E29
 E29	Eq-Comparison:T75 Temporal-Period:T76
 E30	Eq-Comparison:T77 Temporal-Period:T78
-E32	Or:T79 Arg:E23 Arg2:E9
-E39	Encounter:T80 Type:T81 Temporality:E40
+E39	Encounter:T80 Temporality:E40
 E40	Eq-Comparison:T82 Temporal-Period:T83
 E33	Condition:T33 Name:T34 Temporality:E41
 E41	Eq-Comparison:T84 Temporal-Period:T85
 E42	Modifier:T86 Modifies:T34
 E43	Modifier:T87 Modifies:T34
-E44	Or:T88 Arg:E42 Arg2:E43
 E45	Condition:T89 Name:T90 Temporality:E51
 E46	Modifier:T91 Modifies:T90
 E47	Modifier:T92 Modifies:T90
 E48	Modifier:T93 Modifies:T90
-E49	Or:T94 Arg:E46 Arg2:E47
-E50	Condition:T95 Name:T96 Severity:T97
+E50	Observation:T95 Name:T96 Severity:T97
 E51	Eq-Comparison:T98 Temporal-Period:T99
 E52	Condition:T100 Name:T101
 E53	Modifier:T102 Modifies:T96
@@ -112,9 +106,6 @@ T48	Eq-Comparison 376 383	10-week
 T62	Eq-Temporal-Unit 379 383	week
 T63	Eq-Value 376 378	10
 T64	Assertion 351 361	willing to
-T65	And 347 350	and
-T66	Or 489 491	or
-T67	Or 509 511	or
 T68	Eq-Comparison 547 554	Current
 T69	Eq-Temporal-Period 547 554	Current
 T70	Eq-Comparison 578 588	> moderate
@@ -127,9 +118,7 @@ T75	Eq-Comparison 621 637	Currently taking
 T76	Eq-Temporal-Period 621 637	Currently taking
 T77	Eq-Comparison 669 688	Currently receiving
 T78	Eq-Temporal-Period 669 688	Currently receiving
-T79	Or 702 703	/
 T80	Encounter 761 770	inpatient
-T81	Encounter-Type 761 770	inpatient
 T82	Eq-Comparison 731 740	Currently
 T83	Eq-Temporal-Period 731 740	Currently
 T33	Condition 783 800	suicidal ideation
@@ -138,15 +127,13 @@ T84	Eq-Comparison 776 782	Active
 T85	Eq-Temporal-Period 776 782	Active
 T86	Modifier 806 812	intent
 T87	Modifier 816 820	plan
-T88	Or 813 815	or
 T89	Condition 881 889	problems
 T90	Condition-Name 881 889	problems
 T91	Modifier 869 880	respiratory
 T92	Modifier 851 865	cardiovascular
 T93	Modifier 837 849	neurological
-T94	Or 866 868	or
-T95	Condition 918 924	injury
-T96	Condition-Name 918 924	injury
+T95	Observation 918 924	injury
+T96	Observation-Name 918 924	injury
 T97	Severity 905 911	severe
 T98	Eq-Comparison 826 833	History
 T99	Eq-Temporal-Period 826 833	History
@@ -158,9 +145,9 @@ A2	Eq-Operator-Value T36 GT
 A5	Eq-Temporal-Unit-Value T39 year
 A6	Eq-Temporal-Unit-Value T40 month
 A7	Eq-Operator-Value T42 BETWEEN
-A3	Observation-Type-Value T30 clinical-score
-A8	Observation-Type-Value T56 clinical-score
-A9	Observation-Type-Value T58 clinical-score
+A3	Observation-Type-Value E2 clinical-score
+A8	Observation-Type-Value E6 clinical-score
+A9	Observation-Type-Value E8 clinical-score
 A10	Assertion-Type-Value E12 intention
 A11	Eq-Temporal-Unit-Value T62 week
 A12	Assertion-Type-Value E16 hypothetical
@@ -170,7 +157,7 @@ A15	Severity-Value T72 moderate
 A4	Eq-Temporal-Period-Value T38 past
 A16	Eq-Temporal-Period-Value T76 present
 A17	Eq-Temporal-Period-Value T78 present
-A18	Encounter-Type-Value T81 inpatient
+A18	Encounter-Type-Value E39 inpatient
 A19	Eq-Temporal-Period-Value T83 present
 A20	Eq-Temporal-Period-Value T85 present
 A21	Severity-Value T97 severe
@@ -184,3 +171,15 @@ R6	Abbrev-Of Arg1:E8 Arg2:E6
 R7	Example-Of Arg1:E31 Arg2:E45
 R8	Example-Of Arg1:E50 Arg2:E45
 R9	Treatment-For Arg1:E9 Arg2:E52
+R10	And Arg1:E10 Arg2:E13
+R11	Or Arg1:E27 Arg2:E17
+R12	Or Arg1:E17 Arg2:E1
+R13	Or Arg1:E23 Arg2:E9
+R14	Or Arg1:E42 Arg2:E43
+R15	Or Arg1:E46 Arg2:E47
+R16	Or Arg1:E3 Arg2:E5
+R17	Or Arg1:E5 Arg2:E19
+R18	Or Arg1:E15 Arg2:E21
+R19	Or Arg1:E19 Arg2:E25
+R20	Or Arg1:E21 Arg2:E27
+R21	Or Arg1:E48 Arg2:E47

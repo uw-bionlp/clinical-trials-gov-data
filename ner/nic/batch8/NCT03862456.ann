@@ -11,21 +11,18 @@ E11	Eq-Comparison:T11 Operator:T72 Value:T73 Unit:T74
 E12	Eq-Comparison:T12 Operator:T75 Value:T76 Unit:T77
 E15	Procedure:T15 Name:T78
 E16	Eq-Comparison:T16
-E17	Condition:T17 Name:T81 Severity:T80 Minimum-Count:E18
+E17	Observation:T17 Name:T81 Severity:T80 Minimum-Count:E18
 E18	Eq-Comparison:T18 Operator:T82 Value:T83 Unit:T84
 E21	Organism:T21 Name:T114
-E23	Temporal-Connection:T23 Arg:E14 Arg2:E25
 E25	Study:T25
 E27	Modifier:T27 Modifies:E28
-E28	Encounter:T28
+E28	
 E29	Modifier:T29 Modifies:T85
 E30	Condition:T30 Name:T85
 E31	Condition:T31 Name:T86
-E32	Or:T32 Arg:E31 Arg2:E33
 E33	Condition:T33 Name:T87
 E34	Modifier:T34 Modifies:T89
 E35	Condition:T35 Name:T89
-E36	Or:T36 Arg:E35 Arg2:E39
 E38	Eq-Comparison:T38 Temporal-Period:T90
 E39	Drug:T39 Temporality:E38
 E40	Assertion:T40 Asserted:T91
@@ -39,23 +36,17 @@ E48	Eq-Comparison:T48 Temporal-Period:T96 Value:T97 Temporal-Unit:T98
 E49	Eq-Comparison:T49 Temporal-Period:T99
 E50	Procedure:T50 Name:T100 Temporality:E51
 E51	Eq-Comparison:T51 Value:T101 Temporal-Unit:T102
-E52	Temporal-Connection:T52 Arg:E51 Arg2:E44
 E53	Study:T53 Temporality:E44
 E54	Allergy:T54 Name:E55 Name2:E57
 E55	Drug:T55 Name:T103
-E56	Or:T56 Arg:E55 Arg2:E57
 E58	Allergy:T58 Name:E59 Name2:E61
 E59	Drug:T59 Name:T104
-E60	Or:T60 Arg:E59 Arg2:E61
 E61	Coreference:T61 Refers-To:E59
 E62	Drug:T62 Name:T105
-E4	Observation:T70 Name:T106 Eq-Comparison:E11
+E4	Observation:T70 Name:T106 Numeric-Filter:E11
 E13	Condition:T13 Name:T107 Minimum-Count:E12
 E14	Observation:T14 Specimen:T22
 E22	Modifier:T24
-E24	Or:T26 Arg:E22 Arg2:E27
-E26	And:T110 Arg:E25 Arg2:E28
-E37	Or:T37 Arg:E41 Arg2:E42
 E44	Eq-Comparison:T95 Temporal-Recency:T111
 E57	Coreference:T57 Refers-To:E55
 E64	Drug:T112 Name:T113
@@ -73,21 +64,18 @@ T11	Eq-Comparison 219 225	> 6 mm
 T12	Eq-Comparison 229 241	at least 30%
 T15	Procedure 269 281	radiographic
 T16	Eq-Comparison 294 309	moderate-severe
-T17	Condition 310 319	bone loss
+T17	Observation 310 319	bone loss
 T18	Eq-Comparison 323 335	at least 30%
 T21	Organism 372 385	P. gingivalis
-T23	Temporal-Connection 409 417	taken at
 T25	Study 422 431	screening
 T27	Modifier 473 486	root planning
 T28	Encounter 487 492	visit
 T29	Modifier 524 536	Systemically
 T30	Condition 537 544	healthy
 T31	Condition 580 588	Pregnant
-T32	Or 589 591	or
 T33	Condition 592 601	lactating
 T34	Modifier 625 633	systemic
 T35	Condition 634 643	pathology
-T36	Or 644 652	and / or
 T38	Eq-Comparison 653 659	taking
 T39	Drug 660 670	medication
 T40	Assertion 676 679	may
@@ -101,14 +89,11 @@ T48	Eq-Comparison 824 841	previous 6 months
 T49	Eq-Comparison 853 861	received
 T50	Procedure 862 883	periodontal treatment
 T51	Eq-Comparison 891 899	6 months
-T52	Temporal-Connection 900 908	prior to
 T53	Study 930 935	study
 T54	Allergy 951 959	allergic
 T55	Drug 963 976	metronidazole
-T56	Or 978 980	or
 T58	Allergy 1066 1074	allergic
 T59	Drug 1078 1090	azithromycin
-T60	Or 1092 1094	or
 T61	Coreference 1123 1154	commercial formulations thereof
 T62	Drug 1156 1165	Zithromax
 T63	Condition-Name 38 51	periodontitis
@@ -128,7 +113,7 @@ T77	Eq-Unit 240 241	%
 T78	Procedure-Name 269 281	radiographic
 T79	Severity 294 302	moderate
 T80	Severity 303 309	severe
-T81	Condition-Name 310 319	bone loss
+T81	Observation-Name 310 319	bone loss
 T82	Eq-Operator 323 331	at least
 T83	Eq-Value 332 334	30
 T84	Eq-Unit 334 335	%
@@ -158,11 +143,8 @@ T106	Observation-Name 216 218	PS
 T13	Condition 249 254	teeth
 T107	Condition-Name 249 254	teeth
 T14	Observation 389 408	subgingival samples
-T22	Observation-Specimen 389 408	subgingival samples
+T22	Specimen 389 408	subgingival samples
 T24	Modifier 456 468	post-scaling
-T26	Or 469 472	and
-T110	And 438 448	as well as
-T37	Or 713 721	and / or
 T44	Procedure-Name 793 816	antimicrobial treatment
 T95	Eq-Comparison 913 922	beginning
 T111	Eq-Temporal-Recency 913 922	beginning
@@ -172,12 +154,10 @@ T113	Drug-Name 1042 1048	Flagyl
 T114	Organism-Name 372 385	P. gingivalis
 T19	Modifier 343 352	dentition
 A1	Assertion-Type-Value E3 hypothetical
-A4	Temporal-Connection-Type-Value E23 during
 A7	Assertion-Type-Value E40 hypothetical
 A8	Assertion-Type-Value E42 hypothetical
-A9	Temporal-Connection-Type-Value E52 before
 A10	Eq-Operator-Value T68 GTEQ
-A11	Observation-Type-Value T71 measurement
+A11	Observation-Type-Value E10 measurement
 A12	Eq-Operator-Value T72 GT
 A13	Eq-Operator-Value T75 GTEQ
 A14	Severity-Value T79 moderate
@@ -202,3 +182,12 @@ R8	Equivalent-To Arg1:E50 Arg2:E49
 R9	Example-Of Arg1:E64 Arg2:E57
 R10	Example-Of Arg1:E62 Arg2:E61
 R4	Found-By Arg1:E21 Arg2:E14
+R11	During Arg1:E14 Arg2:E25
+R12	Or Arg1:E31 Arg2:E33
+R13	Or Arg1:E35 Arg2:E39
+R14	Before Arg1:E51 Arg2:E44
+R15	Or Arg1:E55 Arg2:E57
+R16	Or Arg1:E59 Arg2:E61
+R17	Or Arg1:E22 Arg2:E27
+R18	And Arg1:E25 Arg2:E28
+R19	Or Arg1:E41 Arg2:E42

@@ -1,13 +1,11 @@
 E1	Condition:T1 Name:T31 Polarity:T56
 E2	Condition:T2 Name:T32
 E3	Condition:T3 Name:T33 Polarity:T58
-E4	Or:T4 Arg:E3 Arg2:E5
 E5	Observation:T5 Specimen:T34
 E7	Eq-Comparison:T7 Temporal-Period:T35
 E8	Procedure:T8 Name:T37 Temporality:E7 Location:T38
 E9	Condition:T9 Name:T39
 E10	Condition:T10 Name:T40
-E11	And:T11 Arg:E10 Arg2:E13
 E12	Modifier:T12 Modifies:T41
 E13	Condition:T13 Name:T41
 E14	Observation:T14 Specimen:T42
@@ -23,28 +21,22 @@ E24	Procedure:T24 Name:T49
 E25	Procedure:T25 Name:T50
 E26	Procedure:T26 Name:T51 Temporality:E27
 E27	Eq-Comparison:T27 Operator:T52 Temporal-Period:T53 Temporal-Unit:T54
-E28	Or:T28 Arg:E26 Arg2:E29
 E29	Procedure:T29 Name:T55 Temporality:E18
 E30	Negation:T30 Negates:E29
-E31	And:T57 Arg:E1 Arg2:E2
 E6	Modifier:T6 Modifies:E5
 E32	Condition:T59 Name:T60 Polarity:T61
 E33	Indication:T36 Indication-For:E8
-E34	And:T62 Arg:E32 Arg2:E8
 E35	Modifier:T63 Modifies:E14
-E36	And:T65 Arg:E15 Arg2:E17
 E37	Indication:T66 Indication-For:E17
 E18	Eq-Comparison:T18 Temporal-Period:T46
 T1	Condition 25 29	LMNA
 T2	Condition 42 67	pathogenic LMNA mutations
 T3	Condition 72 76	LMNA
-T4	Or 78 81	and
 T5	Observation 82 106	heart myocardial samples
 T7	Eq-Comparison 159 179	scheduled to undergo
 T8	Procedure 201 222	heart transplantation
 T9	Condition 264 269	DCMWT
 T10	Condition 291 311	heart muscle failure
-T11	And 312 315	but
 T12	Modifier 321 330	wild-type
 T13	Condition 331 341	lamin gene
 T14	Observation 343 367	Heart myocardial samples
@@ -60,7 +52,6 @@ T24	Procedure 730 764	cardiac magnetic resonance imaging
 T25	Procedure 766 769	MRI
 T26	Procedure 802 819	blood transfusion
 T27	Eq-Comparison 820 841	within the last month
-T28	Or 842 845	and
 T29	Procedure 862 875	haemodialysis
 T30	Negation 884 892	excluded
 T31	Condition-Name 25 29	LMNA
@@ -72,7 +63,7 @@ T38	Location 230 247	Papworth Hospital
 T39	Condition-Name 264 269	DCMWT
 T40	Condition-Name 291 311	heart muscle failure
 T41	Condition-Name 331 341	lamin gene
-T42	Observation-Specimen 343 367	Heart myocardial samples
+T42	Specimen 343 367	Heart myocardial samples
 T43	Eq-Temporal-Period 420 429	scheduled
 T44	Procedure-Name 462 483	heart transplantation
 T45	Location 491 508	Papworth Hospital
@@ -86,18 +77,15 @@ T53	Eq-Temporal-Period 831 835	last
 T54	Eq-Temporal-Unit 836 841	month
 T55	Procedure-Name 862 875	haemodialysis
 T56	Polarity 29 30	+
-T57	And 37 41	with
 T58	Polarity 76 77	+
-T34	Observation-Specimen 82 106	heart myocardial samples
+T34	Specimen 82 106	heart myocardial samples
 T6	Modifier 116 132	explanted hearts
 T59	Condition 136 140	LMNA
 T60	Condition-Name 136 140	LMNA
 T61	Polarity 140 141	+
 T36	Indication 191 200	indicated
-T62	And 151 154	who
 T63	Modifier 377 393	explanted hearts
 T64	Condition-Name 397 402	DCMWT
-T65	And 412 415	who
 T66	Indication 452 461	indicated
 T18	Eq-Comparison 855 861	having
 T46	Eq-Temporal-Period 855 861	having
@@ -116,3 +104,9 @@ A3	Eq-Temporal-Period-Value T46 present
 R1	Equivalent-To Arg1:E10 Arg2:E9
 R2	Caused-By Arg1:E21 Arg2:E19
 R3	Abbrev-Of Arg1:E25 Arg2:E24
+R4	Or Arg1:E3 Arg2:E5
+R5	And Arg1:E10 Arg2:E13
+R6	Or Arg1:E26 Arg2:E29
+R7	And Arg1:E1 Arg2:E2
+R8	And Arg1:E32 Arg2:E8
+R9	And Arg1:E15 Arg2:E17

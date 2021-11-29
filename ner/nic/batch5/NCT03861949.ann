@@ -1,34 +1,30 @@
-E1	Observation:T1 Name:T28 Eq-Comparison:E2
+E1	Observation:T1 Name:T28 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Unit:T29 Value:T30 Value:T31
 E3	Eq-Comparison:T3 Temporal-Period:T32
 E4	Procedure:T4 Name:T33 Temporality:E3
 E5	Procedure:T5 Name:T34
 E6	Assertion:T6 Asserted:E7 Asserted2:E27
 E7	Procedure:T7 Name:T35
-E8	Modifier:T8 Modifies:T37
-E9	Or:T9 Arg:E8 Arg2:E10
-E10	Modifier:T10 Modifies:T37
-E11	Condition:T11 Name:T37 Severity:T36
+E8	Modifier:T8 Modifies:E11
+E10	Modifier:T10 Modifies:E11
+E11	Condition:T11 Severity:T36
 E12	Condition:T12 Name:T38
 E13	Eq-Comparison:T13 Temporal-Period:T40
 E14	Condition:T14 Name:T41 Temporality:E13
-E15	Observation:T15 Name:T42 Eq-Comparison:E16
+E15	Observation:T15 Name:T42 Numeric-Filter:E16
 E16	Eq-Comparison:T16 Operator:T43 Value:T44 Unit:T45 Per:T46
-E17	Observation:T17 Name:T47 Eq-Comparison:E18
+E17	Observation:T17 Name:T47 Numeric-Filter:E18
 E18	Eq-Comparison:T18 Operator:T48 Value:T49 Unit:T50 Per:T51
 E19	Eq-Comparison:T19 Temporal-Period:T66
 E20	Negation:T20 Negates:E21
 E21	Condition:T21 Name:T52 Temporality:E19 Duration:E22
 E22	Eq-Comparison:T22 Operator:T53 Value:T54 Temporal-Unit:T55
-E23	Observation:T23 Name:T56 Eq-Comparison:E24
+E23	Observation:T23 Name:T56 Numeric-Filter:E24
 E24	Eq-Comparison:T24 Operator:T57 Value:T58 Unit:T59
 E25	Observation:T25 Name:T60
 E26	Condition:T26 Name:T61
 E27	Procedure:T62 Name:T63
-E28	Or:T64 Arg:E7 Arg2:E27
 E29	Modifier:T65 Modifies:T35
-E30	And:T67 Arg:E21 Arg2:E23
-E31	Temporal-Connection:T68 Arg:E23 Arg2:E25
 E32	Modifier:T69 Modifies:T60
 E33	Modifier:T70 Modifies:T61
 T1	Observation 43 46	ASA
@@ -39,7 +35,6 @@ T5	Procedure 97 116	general anaesthesia
 T6	Assertion 142 153	anticipated
 T7	Procedure 164 180	mask ventilation
 T8	Modifier 227 244	cardiorespiratory
-T9	Or 245 247	or
 T10	Modifier 248 263	cerebrovascular
 T11	Condition 264 271	disease
 T12	Condition 277 285	pregnant
@@ -94,11 +89,8 @@ T60	Observation-Name 458 467	breathing
 T61	Condition-Name 485 491	phobia
 T62	Procedure 182 192	intubation
 T63	Procedure-Name 182 192	intubation
-T64	Or 180 181	/
 T65	Modifier 154 163	difficult
 T66	Eq-Temporal-Period 405 409	were
-T67	And 434 440	having
-T68	Temporal-Connection 452 457	while
 T69	Modifier 471 479	room air
 T70	Modifier 495 503	facemask
 A1	Assertion-Type-Value E6 hypothetical
@@ -107,16 +99,19 @@ A3	Eq-Temporal-Period-Value T32 present
 A4	Severity-Value T36 severe
 A5	Life-Stage-And-Gender-Type T39 female
 A6	Eq-Temporal-Period-Value T40 past
-A7	Observation-Type-Value T42 vital
+A7	Observation-Type-Value E15 vital
 A8	Eq-Operator-Value T43 GT
-A9	Observation-Type-Value T47 lab
+A9	Observation-Type-Value E17 lab
 A10	Eq-Operator-Value T48 LT
 A11	Eq-Operator-Value T53 GT
 A12	Eq-Temporal-Unit-Value T55 hour
 A13	Eq-Operator-Value T57 LT
 A14	Eq-Temporal-Period-Value T66 past
-A15	Observation-Type-Value T56 vital
-A16	Temporal-Connection-Type-Value E31 during
-A17	Observation-Type-Value T28 clinical-score
+A15	Observation-Type-Value E23 vital
+A17	Observation-Type-Value E1 clinical-score
 R1	Using Arg1:E4 Arg2:E5
 R2	If-Then Arg1:E12 Arg2:T39
+R3	Or Arg1:E8 Arg2:E10
+R4	Or Arg1:E7 Arg2:E27
+R5	And Arg1:E21 Arg2:E23
+R6	During Arg1:E23 Arg2:E25

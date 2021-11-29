@@ -5,26 +5,22 @@ E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Procedure:T11 Name:T12
 E15	Condition:T15 Name:T16
-E16	Age:T22 Eq-Comparison:E17
+E16	Age:T22 Numeric-Filter:E17
 E17	Eq-Comparison:T25 Operator:T17 Temporal-Unit:T21 Value:T23
 E18	Eq-Comparison:T26 Operator:T18 Value:T24
 E19	Eq-Comparison:T27 Temporal-Period:T28
 E2	Modifier:T29 Modifies:T2
-E4	Observation:T30 Name:T31 Eq-Comparison:E18
+E4	Observation:T30 Name:T31 Numeric-Filter:E18
 E6	Condition:T32 Name:T33
-E8	Or:T34 Arg:E5 Arg2:E6
 E10	Observation:T35 Name:T36 Polarity:T37
 E12	Negation:T38 Negates:E10
-E14	Temporal-Connection:T39 Arg:E10 Arg2:E11
 E20	Condition:T40 Name:T41 Severity:T42
 E21	Condition:T43 Name:T44
-E22	Temporal-Connection:T45 Arg:E20 Arg2:E21
 E23	Condition:T46 Name:T47 Severity:T48
 E24	Condition:T49 Name:T50
-E25	Or:T51 Arg:E24 Arg2:E15
 E26	Condition:T52 Name:T53
 E13	Modifier:T13 Modifies:T16
-E27	Observation:T14 Name:T54 Eq-Comparison:E28
+E27	Observation:T14 Name:T54 Numeric-Filter:E28
 E28	Eq-Comparison:T55 Unit:T56 Operator:T19 Value:T57
 E29	Drug:T58 Name:T59
 E30	Contraindication:T60 Contraindicates:E29
@@ -32,7 +28,6 @@ E31	Modifier:T61 Modifies:T63
 E32	Condition:T62 Name:T63
 E33	Condition:T65 Name:T66 Stage:E34
 E34	Eq-Comparison:T67 Unit:T68 Operator:T20 Value:T69
-E35	Or:T70 Arg:E3 Arg2:E7
 T1	Condition 83 93	depression
 T2	Condition-Name 83 93	depression
 T3	Condition 604 626	cardiovascular disease
@@ -64,24 +59,20 @@ T30	Observation 95 105	EPDS score
 T31	Observation-Name 95 105	EPDS score
 T32	Condition 227 249	communication barriers
 T33	Condition-Name 227 249	communication barriers
-T34	Or 224 226	or
 T35	Observation 270 283	communication
 T36	Observation-Name 270 283	communication
 T37	Polarity 263 269	normal
 T38	Negation 255 262	prevent
-T39	Temporal-Connection 284 290	before
 T40	Condition 315 328	complications
 T41	Condition-Name 315 328	complications
 T42	Severity 308 314	Severe
 T43	Condition 336 345	pregnancy
 T44	Condition-Name 336 345	pregnancy
-T45	Temporal-Connection 329 335	during
 T46	Condition 362 374	preeclampsia
 T47	Condition-Name 362 374	preeclampsia
 T48	Severity 355 361	severe
 T49	Condition 376 392	placenta accreta
 T50	Condition-Name 376 392	placenta accreta
-T51	Or 394 396	or
 T52	Condition 404 455	Hemolysis, Elevated Liver enzymes and Low Platelets
 T53	Condition-Name 404 455	Hemolysis, Elevated Liver enzymes and Low Platelets
 T13	Modifier 457 465	syndrome
@@ -102,21 +93,18 @@ T66	Condition-Name 628 642	heart function
 T67	Eq-Comparison 643 662	classification ≥III
 T68	Eq-Unit 643 657	classification
 T69	Eq-Value 659 662	III
-T70	Or 665 667	or
 A1	Eq-Operator-Value T17 GTEQ
 A2	Eq-Operator-Value T18 GTEQ
 A3	Eq-Operator-Value T19 GTEQ
 A4	Eq-Operator-Value T20 GTEQ
 A5	Eq-Temporal-Unit-Value T21 year
 A6	Eq-Temporal-Period-Value T28 past
-A7	Observation-Type-Value T31 clinical-score
+A7	Observation-Type-Value E4 clinical-score
 A8	Polarity-Value T37 normal
-A9	Temporal-Connection-Type-Value E14 before
 A10	Severity-Value T42 severe
-A11	Temporal-Connection-Type-Value E22 during
 A12	Severity-Value T48 severe
 A13	Severity-Value T64 severe
-A14	Observation-Type-Value T54 clinical-score
+A14	Observation-Type-Value E27 clinical-score
 R1	Equivalent-To Arg1:E4 Arg2:E1
 R2	Example-Of Arg1:E9 Arg2:E5
 R3	Caused-By Arg1:E12 Arg2:E6
@@ -127,3 +115,9 @@ R7	Abbrev-Of Arg1:E15 Arg2:E26
 R8	Example-Of Arg1:E32 Arg2:E30
 R9	Example-Of Arg1:E3 Arg2:E30
 R10	Example-Of Arg1:E33 Arg2:E30
+R11	Or Arg1:E5 Arg2:E6
+R12	Before Arg1:E10 Arg2:E11
+R13	During Arg1:E20 Arg2:E21
+R14	Or Arg1:E24 Arg2:E15
+R15	Or Arg1:E3 Arg2:E7
+R16	Or Arg1:E23 Arg2:E24

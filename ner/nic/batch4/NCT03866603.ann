@@ -1,22 +1,18 @@
 E1	Condition:T1 Name:T22
-E2	Or:T2 Arg:E1 Arg2:E3
 E3	Family-Member:T3 Has:E4
 E4	Condition:T4 Name:T23
-E5	Or:T5 Arg:E3 Arg2:E6
 E6	Risk:T6 Polarity:T24 Risk-For:E8
 E7	Modifier:T7 Modifies:T25
 E8	Condition:T8 Name:T25 Temporality:E23
 E9	Eq-Comparison:T9 Operator:T26 Value:T28 Temporal-Unit:T29
-E10	Age:T10 Eq-Comparison:E9
+E10	Age:T10 Numeric-Filter:E9
 E11	Negation:T11 Negates:E12
 E12	Condition:T12 Name:T30
-E13	Or:T13 Arg:E12 Arg2:E25
 E14	Family-Member:T14 Has:E15
 E15	Condition:T15 Name:T31
-E16	Or:T16 Arg:E25 Arg2:E26
 E17	Risk:T17 Polarity:T32
 E18	Eq-Comparison:T18 Operator:T33 Value:T34 Temporal-Unit:T35
-E19	Age:T19 Eq-Comparison:E18
+E19	Age:T19 Numeric-Filter:E18
 E20	Eq-Comparison:T20 Temporal-Period:T36
 E21	Study:T21 Temporality:E20
 E22	Modifier:T37 Modifies:T23
@@ -26,10 +22,8 @@ E25	Negation:T40 Negates:E14
 E26	Negation:T41 Negates:E17
 E27	Observation:T42 Name:T43
 T1	Condition 126 145	Parkinson's disease
-T2	Or 146 148	or
 T3	Family-Member 169 182	family member
 T4	Condition 211 223	parkinsonism
-T5	Or 224 226	or
 T6	Risk 249 253	risk
 T7	Modifier 273 278	early
 T8	Condition 279 281	PD
@@ -37,10 +31,8 @@ T9	Eq-Comparison 313 344	equal to or older than 18 years
 T10	Age 345 348	old
 T11	Negation 438 441	not
 T12	Condition 457 476	Parkinson's disease
-T13	Or 477 479	or
 T14	Family-Member 504 517	family member
 T15	Condition 546 558	parkinsonism
-T16	Or 559 561	or
 T17	Risk 588 592	risk
 T18	Eq-Comparison 629 650	younger than 18 years
 T19	Age 651 654	old
@@ -76,3 +68,7 @@ A6	Eq-Operator-Value T33 LT
 A7	Eq-Temporal-Unit-Value T35 year
 A8	Eq-Temporal-Period-Value T36 past
 A9	Eq-Temporal-Recency-Value T39 first-time
+R1	Or Arg1:E1 Arg2:E3
+R2	Or Arg1:E3 Arg2:E6
+R3	Or Arg1:E12 Arg2:E25
+R4	Or Arg1:E25 Arg2:E26

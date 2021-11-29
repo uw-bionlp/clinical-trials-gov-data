@@ -1,38 +1,35 @@
 E1	Condition:T1 Name:T30
-E2	Or:T2 Arg:E1 Arg2:E4
 E4	Condition:T4 Name:T31
-E6	Condition:T6 Name:T32
+E6	Observation:T6 Name:T32
 E7	Condition:T7 Name:T33
 E8	Modifier:T8 Modifies:T34
 E9	Condition:T9 Name:T34
 E10	Modifier:T10 Modifies:T35
-E11	Condition:T11 Name:T35
+E11	Observation:T11 Name:T35
 E12	Condition:T12 Name:T3
 E13	Condition:T13 Name:T36
 E15	Drug:T15 Acuteness:T14
 E18	Drug:T18 Acuteness:T17
 E19	Modifier:T19 Modifies:T38
-E20	Or:T20 Arg:E19 Arg2:E21
 E21	Modifier:T21 Modifies:T38
 E22	Condition:T22 Name:T38 Stability:T45
 E24	Other:T24 Is-Other:E25
-E25	Condition:T25 Name:T40
+E25	Condition:T25
 E26	Condition:T26 Name:T41
 E27	Condition:T27 Name:T42
 E28	Negation:T28 Negates:E16
 E29	Condition:T29 Name:T43
 E3	Condition:T16 Name:T44 Polarity:T37 Stability:T5
-E5	Modifier:T23 
+E5	Modifier:T23
 E16	Modifier:T39 Modifies:T43
 T1	Condition 38 44	stroke
-T2	Or 45 46	/
 T4	Condition 47 70	cerebrovascular disease
-T6	Condition 76 98	traumatic brain injury
+T6	Observation 76 98	traumatic brain injury
 T7	Condition 104 122	multiple sclerosis
 T8	Modifier 128 139	spinal cord
 T9	Condition 140 148	injuries
 T10	Modifier 160 171	spinal cord
-T11	Condition 172 179	lesions
+T11	Observation 172 179	lesions
 T12	Condition 185 197	myelopathies
 T13	Condition 242 267	heterotopic ossifications
 T14	Acuteness 274 281	chronic
@@ -40,7 +37,6 @@ T15	Drug 300 305	drugs
 T17	Acuteness 339 346	chronic
 T18	Drug 365 370	drugs
 T19	Modifier 386 390	bone
-T20	Or 391 393	or
 T21	Modifier 394 400	muscle
 T22	Condition 401 405	loss
 T24	Other 423 428	other
@@ -51,10 +47,10 @@ T28	Negation 487 490	non
 T29	Condition 501 520	fatty liver disease
 T30	Condition-Name 38 44	stroke
 T31	Condition-Name 47 70	cerebrovascular disease
-T32	Condition-Name 76 98	traumatic brain injury
+T32	Observation-Name 76 98	traumatic brain injury
 T33	Condition-Name 104 122	multiple sclerosis
 T34	Condition-Name 140 148	injuries
-T35	Condition-Name 172 179	lesions
+T35	Observation-Name 172 179	lesions
 T36	Condition-Name 242 267	heterotopic ossifications
 T37	Polarity 325 333	increase
 T38	Condition-Name 401 405	loss
@@ -82,3 +78,6 @@ R5	Abbrev-Of Arg1:E5 Arg2:E25
 R6	Example-Of Arg1:E26 Arg2:E25
 R7	Example-Of Arg1:E27 Arg2:E25
 R8	Example-Of Arg1:E29 Arg2:E25
+R9	Or Arg1:E1 Arg2:E4
+R10	Or Arg1:E19 Arg2:E21
+R11	Or Arg1:E26 Arg2:E27

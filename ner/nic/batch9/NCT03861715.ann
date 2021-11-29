@@ -1,8 +1,8 @@
 E1	Observation:T1 Name:T2
-E3	Condition:T3 Name:T4 Polarity:T9
-E5	Observation:T5 Name:T6 Eq-Comparison:E37
+E3	Observation:T3 Name:T4 Polarity:T9
+E5	Observation:T5 Name:T6 Numeric-Filter:E37
 E10	Condition:T10 Name:T11 Temporality:E34
-E12	Condition:T12 Name:T13
+E12	Condition:T12
 E14	Condition:T14 Name:T15
 E16	Condition:T16 Name:T17
 E18	Condition:T18 Name:T19
@@ -13,40 +13,32 @@ E26	Procedure:T26 Name:T27 Temporality:E40
 E28	Condition:T28 Name:T29
 E30	Condition:T30 Name:T31
 E32	Condition:T32 Name:T33 Severity:T92
-E33	Age:T39 Eq-Comparison:E36
+E33	Age:T39 Numeric-Filter:E36
 E35	Eq-Comparison:T53 Operator:T34 Value:T51 Unit:T40 Per:T59
 E36	Eq-Comparison:T54 Operator:T41 Value:T45 Value2:T46 Temporal-Unit:T36
 E37	Eq-Comparison:T55 Operator:T42 Value:T47 Per:T8 Unit:T38 Value2:T48
 E38	Eq-Comparison:T56 Operator:T43 Value:T49 Temporal-Unit:T37 Value2:T50
 E39	Eq-Comparison:T57 Operator:T44 Value:T52 Value2:T64 Unit:T65 Per:T66
-E2	Observation:T7 Name:T58 Eq-Comparison:E35
+E2	Observation:T7 Name:T58 Numeric-Filter:E35
 E4	Observation:T35 Name:T60
 E6	Modifier:T61 Modifies:T60
 E7	Eq-Comparison:T62 Unit:T63
-E8	And:T68 Arg:T67 Arg2:E30
-E9	Or:T69 Arg:E30 Arg2:E14
 E11	Other:T70 Is-Other:E14
 E13	Modifier:T72 Modifies:T17
-E15	And:T73 Arg:T71 Arg2:E16
-E17	And:T75 Arg:T74 Arg2:E18
 E19	Condition:T76 Name:T77
 E21	Condition:T78 Name:T79 Polarity:T80
-E23	Modifier:T82 Modifies:T13
-E25	Modifier:T83 Modifies:T13
-E27	Or:T84 Arg:E25 Arg2:E23
-E29	And:T85 Arg:T81 Arg2:E12
+E23	Modifier:T82 Modifies:E12
+E25	Modifier:T83 Modifies:E12
 E31	Eq-Comparison:T86 Unit:T87 Value:T88 Value2:T89
 E34	Eq-Comparison:T90 Temporal-Period:T91
 E40	Eq-Comparison:T93 Temporal-Period:T94
-E41	Temporal-Connection:T95 Arg:E32 Arg2:E40
 E42	Contraindication:T96 Contraindicates:E43
 E43	Drug:T97 Name:T98
-E44	Or:T99 Arg:E26 Arg2:E42
 E45	Condition:T100 Name:T101 Polarity:T102
 T1	Observation 47 62	body mass index
 T2	Observation-Name 47 62	body mass index
-T3	Condition 94 109	menstrual cycle
-T4	Condition-Name 94 109	menstrual cycle
+T3	Observation 94 109	menstrual cycle
+T4	Observation-Name 94 109	menstrual cycle
 T5	Observation 64 67	BMI
 T6	Observation-Name 64 67	BMI
 T10	Condition 618 639	recurrent miscarriage
@@ -110,14 +102,10 @@ T64	Eq-Value 248 249	1
 T65	Eq-Unit 253 255	IU
 T66	Eq-Unit 256 257	l
 T67	Life-Stage-And-Gender 285 290	women
-T68	And 291 295	with
-T69	Or 305 308	and
 T70	Other 309 314	other
 T71	Life-Stage-And-Gender 338 343	women
 T72	Modifier 349 359	hereditary
-T73	And 344 348	with
 T74	Life-Stage-And-Gender 383 388	women
-T75	And 389 393	with
 T76	Condition 409 424	QT prolongation
 T77	Condition-Name 409 424	QT prolongation
 T78	Condition 453 466	liver enzymes
@@ -126,8 +114,6 @@ T80	Polarity 444 452	elevated
 T81	Life-Stage-And-Gender 498 503	women
 T82	Modifier 525 535	autoimmune
 T83	Modifier 509 521	inflammatory
-T84	Or 522 524	or
-T85	And 504 508	with
 T86	Eq-Comparison 588 600	stage III/IV
 T87	Eq-Unit 588 593	stage
 T88	Eq-Value 594 597	III
@@ -137,16 +123,14 @@ T91	Eq-Temporal-Period 607 614	history
 T92	Severity 646 652	severe
 T93	Eq-Comparison 663 671	previous
 T94	Eq-Temporal-Period 663 671	previous
-T95	Temporal-Connection 658 660	in
 T96	Contraindication 697 713	contraindication
 T97	Drug 729 743	gonadotrophins
 T98	Drug-Name 729 743	gonadotrophins
-T99	Or 690 692	or
 T100	Condition 558 567	karyotype
 T101	Condition-Name 558 567	karyotype
 T102	Polarity 549 557	abnormal
-A1	Observation-Type-Value T2 vital
-A2	Observation-Type-Value T6 vital
+A1	Observation-Type-Value E1 vital
+A2	Observation-Type-Value E5 vital
 A3	Eq-Operator-Value T34 GTEQ
 A5	Eq-Temporal-Unit-Value T36 year
 A6	Eq-Temporal-Unit-Value T37 day
@@ -155,8 +139,8 @@ A8	Eq-Operator-Value T42 BETWEEN
 A9	Eq-Operator-Value T43 BETWEEN
 A10	Eq-Operator-Value T44 BETWEEN
 A11	Polarity-Value T9 normal
-A12	Observation-Type-Value T58 lab
-A4	Observation-Type-Value T60 lab
+A12	Observation-Type-Value E2 lab
+A4	Observation-Type-Value E4 lab
 A13	Eq-Unit-Value T63 ref-range-normal
 A14	Life-Stage-And-Gender-Type T67 female
 A15	Life-Stage-And-Gender-Type T71 female
@@ -166,7 +150,17 @@ A18	Life-Stage-And-Gender-Type T81 female
 A19	Eq-Temporal-Period-Value T91 past
 A20	Severity-Value T92 severe
 A21	Eq-Temporal-Period-Value T94 past
-A22	Temporal-Connection-Type-Value E41 during
 A23	Polarity-Value T102 abnormal
 R1	Abbrev-Of Arg1:E5 Arg2:E1
 R2	Equivalent-To Arg1:E39 Arg2:E7
+R3	And Arg1:T67 Arg2:E30
+R4	Or Arg1:E30 Arg2:E14
+R5	And Arg1:T71 Arg2:E16
+R6	And Arg1:T74 Arg2:E18
+R7	Or Arg1:E25 Arg2:E23
+R8	And Arg1:T81 Arg2:E12
+R9	During Arg1:E32 Arg2:E40
+R10	Or Arg1:E26 Arg2:E42
+R11	Or Arg1:E18 Arg2:E19
+R12	Or Arg1:E22 Arg2:E28
+R13	Or Arg1:E21 Arg2:E22

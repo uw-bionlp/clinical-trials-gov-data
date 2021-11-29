@@ -4,22 +4,17 @@ E5	Condition:T5 Name:T6 Temporality:E26
 E7	Condition:T7 Name:T8 Acuteness:T41
 E9	Procedure:T9 Name:T10
 E2	Observation:T15 Name:T16
-E4	Observation:T17 Name:T18 Eq-Comparison:E6
+E4	Observation:T17 Name:T18 Numeric-Filter:E6
 E6	Eq-Comparison:T19 Value:T12 Value2:T13
-E8	Encounter:T21 Location:T22
-E10	Temporal-Connection:T23 Arg:E8 Arg2:E1
+E8	Encounter:T21
 E11	Modifier:T25 Modifies:E9
 E12	Modifier:T26 Modifies:E9
-E13	Or:T27 Arg:E11 Arg2:E12
 E14	Procedure:T28 Name:T29 Temporality:E18
 E15	Procedure:T30 Name:T31 Temporality:E16
 E16	Eq-Comparison:T33 Temporal-Period:T32
-E17	Temporal-Connection:T34 Arg:E16 Arg2:E18
 E18	Eq-Comparison:T36 Temporal-Unit:T11 Value:T14
 E19	Modifier:T37 Modifies:T4
 E20	Modifier:T38 Modifies:T4
-E21	Or:T39 Arg:E19 Arg2:E20
-E22	Or:T40 Arg:E3 Arg2:E7
 E24	Modifier:T42 Modifies:E3
 E25	Modifier:T43 Modifies:E7
 E26	Eq-Comparison:T44 Temporal-Period:T45
@@ -45,22 +40,17 @@ T18	Observation-Name 91 94	ASA
 T19	Eq-Comparison 96 102	1 or 2
 T21	Encounter 108 115	Managed
 T22	Location 148 184	University Hospital of Saint-Etienne
-T23	Temporal-Connection 185 188	for
 T25	Modifier 244 250	Single
 T26	Modifier 254 263	bilateral
-T27	Or 251 253	or
 T28	Procedure 373 391	general anesthesia
 T29	Procedure-Name 373 391	general anesthesia
 T30	Procedure 427 434	surgery
 T31	Procedure-Name 427 434	surgery
 T32	Eq-Temporal-Period 419 426	current
 T33	Eq-Comparison 419 426	current
-T34	Temporal-Connection 406 414	prior to
 T36	Eq-Comparison 399 405	7 days
 T37	Modifier 472 489	insulin-dependent
 T38	Modifier 497 514	insulin-dependent
-T39	Or 490 492	or
-T40	Or 548 550	or
 T41	Acuteness 551 558	chronic
 T42	Modifier 529 547	dysautonomic stage
 T43	Modifier 575 594	dysautonomous stage
@@ -70,10 +60,13 @@ T20	Negation 493 496	non
 A1	Eq-Temporal-Unit-Value T11 day
 A3	Location-Value T22 hospital
 A5	Eq-Temporal-Period-Value T32 present
-A7	Temporal-Connection-Type-Value E10 during
 A8	Eq-Temporal-Period-Value T45 past
-A2	Temporal-Connection-Type-Value E17 before
-A9	Observation-Type-Value T16 clinical-score
-A10	Observation-Type-Value T18 clinical-score
+A9	Observation-Type-Value E2 clinical-score
+A10	Observation-Type-Value E4 clinical-score
 A11	Acuteness-Type-Value T41 chronic
 R1	Abbrev-Of Arg1:E4 Arg2:E2
+R2	During Arg1:E8 Arg2:E1
+R3	Or Arg1:E11 Arg2:E12
+R4	Before Arg1:E16 Arg2:E18
+R5	Or Arg1:E19 Arg2:E20
+R6	Or Arg1:E3 Arg2:E7

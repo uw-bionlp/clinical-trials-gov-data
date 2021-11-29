@@ -1,0 +1,162 @@
+E1	Procedure:T1 Name:T2 Temporality:E39
+E3	Condition:T3 Name:T4
+E5	Procedure:T5 Name:T6
+E7	Procedure:T7 Name:T8
+E9	Condition:T9 Name:T10
+E11	Condition:T11 Name:T12
+E13	Procedure:T13 Name:T14
+E15	Organism:T15 Name:T16
+E17	Condition:T17 Name:T18
+E19	Procedure:T19 Name:T20
+E21	Condition:T21 Name:T22
+E23	Condition:T23 Name:T24
+E25	Condition:T25 Name:T26
+E2	Organism:T30 Name:T31
+E4	Or:T32 Arg:E2 Arg2:E15
+E6	Observation:T33 Name:T34 Specimen:T64 Minimum-Count:E35 Polarity:T68
+E8	Observation:T35 Name:T36
+E10	Condition:T37 Name:T38
+E12	Drug:T39 Name:T40
+E14	Modifier:T41 Modifies:E7
+E16	Or:T42 Arg:E5 Arg2:E7
+E18	Modifier:T43 Modifies:E11
+E20	Procedure:T44 Name:T80
+E22	Modifier:T45 Modifies:E20
+E24	Modifier:T46 Modifies:E20
+E26	Or:T47 Arg:E24 Arg2:E22
+E27	Eq-Comparison:T48 Value:T28 Operator:T27 Temporal-Unit:T49 Temporal-Recency:T84
+E28	Procedure:T50 Name:T51 Temporality:E29
+E29	Eq-Comparison:T52 Temporal-Unit:T29 Value:T54 Operator:T53
+E30	Modifier:T55 Modifies:E23
+E31	Procedure:T56 Name:T57
+E32	Condition:T58 Name:T59
+E33	Condition:T60 Name:T61
+E34	Or:T63 Arg:E32 Arg2:T61
+E35	Eq-Comparison:T65 Operator:T66 Value:T67
+E36	Condition:T69 Name:T70
+E37	Observation:T71 Name:T72
+E38	Negation:T73 Negates:E37
+E39	Eq-Comparison:T74 Temporal-Period:T75
+E40	Procedure:T76 Name:T77
+E41	Condition:T78 Name:T79
+E42	Procedure:T81 Name:T82 Temporality:E27
+E43	Negation:T83 Negates:E42
+E44	Modifier:T85 Modifies:T4
+T1	Procedure 514 541	immunosuppressive therapies
+T2	Procedure-Name 514 541	immunosuppressive therapies
+T3	Condition 903 912	infection
+T4	Condition-Name 903 912	infection
+T5	Procedure 595 617	solid organ transplant
+T6	Procedure-Name 595 617	solid organ transplant
+T7	Procedure 643 663	stem cell transplant
+T8	Procedure-Name 643 663	stem cell transplant
+T9	Condition 811 830	Urinary obstruction
+T10	Condition-Name 811 830	Urinary obstruction
+T11	Condition 728 745	immune deficiency
+T12	Condition-Name 728 745	immune deficiency
+T13	Procedure 560 572	chemotherapy
+T14	Procedure-Name 560 572	chemotherapy
+T15	Organism 51 58	E. coli
+T16	Organism-Name 51 58	E. coli
+T17	Condition 190 200	bacteremia
+T18	Condition-Name 190 200	bacteremia
+T19	Procedure 574 584	biotherapy
+T20	Procedure-Name 574 584	biotherapy
+T21	Condition 751 761	bacteremia
+T22	Condition-Name 751 761	bacteremia
+T23	Condition 982 992	infectious
+T24	Condition-Name 982 992	infectious
+T25	Condition 1038 1047	pneumonia
+T26	Condition-Name 1038 1047	pneumonia
+T27	Eq-Operator 842 848	within
+T28	Eq-Value 859 861	24
+T30	Organism 38 47	S. aureus
+T31	Organism-Name 38 47	S. aureus
+T32	Or 48 50	or
+T33	Observation 118 131	blood culture
+T34	Observation-Name 124 131	culture
+T35	Observation 164 174	blood test
+T36	Observation-Name 164 174	blood test
+T37	Condition 458 475	Immunocompromised
+T38	Condition-Name 458 475	Immunocompromised
+T39	Drug 543 558	corticosteroids
+T40	Drug-Name 543 558	corticosteroids
+T41	Modifier 629 642	hematopoietic
+T42	Or 626 628	or
+T43	Modifier 717 727	Congenital
+T44	Procedure 797 805	catheter
+T45	Modifier 789 796	central
+T46	Modifier 775 785	peripheral
+T47	Or 786 788	or
+T48	Eq-Comparison 842 867	within the first 24 hours
+T49	Eq-Temporal-Unit 862 867	hours
+T50	Procedure 923 932	undrained
+T51	Procedure-Name 923 932	undrained
+T52	Eq-Comparison 933 954	in the first 24 hours
+T53	Eq-Operator 933 935	in
+T54	Eq-Value 946 948	24
+T29	Eq-Temporal-Unit 949 954	hours
+T55	Modifier 974 981	primary
+T56	Procedure 1014 1037	mechanically ventilated
+T57	Procedure-Name 1014 1037	mechanically ventilated
+T58	Condition 1053 1061	Pregnant
+T59	Condition-Name 1053 1061	Pregnant
+T60	Condition 1065 1074	lactating
+T61	Condition-Name 1065 1074	lactating
+T62	Life-Stage-And-Gender 1075 1080	woman
+T63	Or 1062 1064	or
+T64	Observation-Specimen 118 123	blood
+T65	Eq-Comparison 96 108	at least one
+T66	Eq-Operator 96 104	at least
+T67	Eq-Value 105 108	one
+T68	Polarity 109 117	positive
+T69	Condition 59 84	bacteriostatic bacteremia
+T70	Condition-Name 59 84	bacteriostatic bacteremia
+T71	Observation 223 242	judicial protection
+T72	Observation-Name 223 242	judicial protection
+T73	Negation 206 209	not
+T74	Eq-Comparison 506 513	current
+T75	Eq-Temporal-Period 506 513	current
+T76	Procedure 674 686	chemotherapy
+T77	Procedure-Name 674 686	chemotherapy
+T78	Condition 695 706	neutropenia
+T79	Condition-Name 695 706	neutropenia
+T80	Procedure-Name 797 805	catheter
+T81	Procedure 835 841	lifted
+T82	Procedure-Name 835 841	lifted
+T83	Negation 831 834	not
+T84	Eq-Temporal-Recency 853 858	first
+T85	Modifier 887 902	Intra-abdominal
+A1	Eq-Operator-Value T27 LTEQ
+A2	Observation-Type-Value T34 lab
+A3	Eq-Temporal-Unit-Value T49 hour
+A4	Eq-Operator-Value T53 LTEQ
+A5	Life-Stage-And-Gender-Type T62 female
+A6	Eq-Operator-Value T66 GTEQ
+A7	Polarity-Value T68 positive
+A8	Observation-Type-Value T36 lab
+A9	Eq-Temporal-Period-Value T75 present
+A10	Eq-Temporal-Recency-Value T84 first-time
+A11	Eq-Temporal-Unit-Value T29 hour
+R3	Example-Of Arg1:E12 Arg2:E1
+R4	Example-Of Arg1:E13 Arg2:E1
+R5	Example-Of Arg1:E19 Arg2:E1
+R6	Caused-By Arg1:E21 Arg2:E20
+R7	Caused-By Arg1:E25 Arg2:E23
+R1	Found-By Arg1:E36 Arg2:E6
+R2	Caused-By Arg1:E36 Arg2:E2
+R8	Caused-By Arg1:E36 Arg2:E15
+R9	Found-By Arg1:E17 Arg2:E8
+R10	Equivalent-To Arg1:E1 Arg2:E10
+R11	Caused-By Arg1:E41 Arg2:E40
+R12	Equivalent-To Arg1:E5 Arg2:E10
+R13	Equivalent-To Arg1:E41 Arg2:E10
+R14	Equivalent-To Arg1:E11 Arg2:E10
+R15	Equivalent-To Arg1:E21 Arg2:E10
+R16	Treatment-For Arg1:E42 Arg2:E9
+R17	Equivalent-To Arg1:E9 Arg2:E10
+R18	Treatment-For Arg1:E28 Arg2:E3
+R19	Equivalent-To Arg1:E3 Arg2:E10
+R20	Treatment-For Arg1:E31 Arg2:E25
+R21	Equivalent-To Arg1:E23 Arg2:E10
+R22	If-Then Arg1:E33 Arg2:T62

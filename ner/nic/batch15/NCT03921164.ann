@@ -1,14 +1,13 @@
 E1	Procedure:T1 Name:T2
 E3	Procedure:T3 Name:T4 Temporality:E7
-E4	Age:T9 Eq-Comparison:E6
+E4	Age:T9 Numeric-Filter:E6
 E5	Eq-Comparison:T12 Operator:T5 Temporal-Unit:T7 Value:T10
 E6	Eq-Comparison:T13 Operator:T6 Temporal-Unit:T8 Value:T11
-E2	Age:T14 Eq-Comparison:E5
+E2	Age:T14 Numeric-Filter:E5
 E7	Eq-Comparison:T15 Temporal-Period:T16
 E8	Procedure:T17 Name:T18
 E9	Observation:T19 Name:T20
 E10	Observation:T21 Name:T22
-E11	And:T23 Arg:E9 Arg2:E10
 E12	Assertion:T24 Asserted:E9
 E13	Condition:T25 Name:T26
 E14	Observation:T28 Name:T29
@@ -34,7 +33,6 @@ T19	Observation 174 196	mean arterial pressure
 T20	Observation-Name 174 196	mean arterial pressure
 T21	Observation 201 215	cardiac output
 T22	Observation-Name 201 215	cardiac output
-T23	And 197 200	and
 T24	Assertion 137 146	requiring
 T25	Condition 305 313	Pregnant
 T26	Condition-Name 305 313	Pregnant
@@ -46,10 +44,11 @@ A2	Eq-Operator-Value T6 LT
 A3	Eq-Temporal-Unit-Value T7 year
 A4	Eq-Temporal-Unit-Value T8 year
 A5	Eq-Temporal-Period-Value T16 future
-A6	Observation-Type-Value T20 measurement
-A7	Observation-Type-Value T22 measurement
+A6	Observation-Type-Value E9 measurement
+A7	Observation-Type-Value E10 measurement
 A8	Assertion-Type-Value E12 hypothetical
 A9	Life-Stage-And-Gender-Type T27 female
 R1	Using Arg1:E1 Arg2:E8
 R2	Using Arg1:E8 Arg2:E9
 R3	If-Then Arg1:T27 Arg2:E13
+R4	And Arg1:E9 Arg2:E10

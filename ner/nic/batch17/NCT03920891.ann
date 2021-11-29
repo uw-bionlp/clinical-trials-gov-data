@@ -12,7 +12,7 @@ E23	Condition:T23 Name:T24
 E25	Condition:T25 Name:T26 Severity:T82
 E27	Procedure:T27 Name:T28
 E29	Condition:T29 Name:T30 Stability:T80
-E30	Age:T36 Eq-Comparison:E32 Eq-Comparison2:E31
+E30	Age:T36 Numeric-Filter:E32 Numeric-Filter:E31
 E31	Eq-Comparison:T41 Operator:T31 Value:T37
 E32	Eq-Comparison:T42 Operator:T32 Temporal-Unit:T35 Value:T38
 E33	Eq-Comparison:T43 Operator:T33 Value:T39 Unit:T59
@@ -21,17 +21,12 @@ E35	Eq-Comparison:T45 Temporal-Period:T46
 E37	Eq-Comparison:T49 Temporal-Period:T50
 E2	Modifier:T53 Modifies:T4
 E4	Eq-Comparison:T54 Temporal-Period:T55
-E5	And:T5 Arg:E3 Arg2:E7
-E6	And:T6 Arg:E31 Arg2:E32
-E8	And:T56 Arg:E7 Arg2:E30
-E10	Observation:T57 Name:T58 Eq-Comparison:E33
+E10	Observation:T57 Name:T58 Numeric-Filter:E33
 E12	Modifier:T60 Modifies:T2
 E14	Drug:T61 Name:T62
 E16	Procedure:T63
-E18	Temporal-Connection:T64 Arg:E1 Arg2:E16
 E20	Drug:T65 Name:T66
 E22	Negation:T67 Negates:E20
-E24	Or:T68 Arg:E16 Arg2:E22
 E26	Assertion:T69 Asserted:E20
 E28	Indication:T70 Indication-For:E9
 E39	Assertion:T71 Asserted:E15
@@ -39,29 +34,24 @@ E40	Condition:T72 Name:T73
 E41	Modifier:T74 Modifies:T73
 E42	Condition:T75 Name:T76 Severity:T77
 E43	Modifier:T78 Modifies:T30
-E44	Or:T79 Arg:E42 Arg2:E29
 E45	Modifier:T81 Modifies:T30
 E46	Modifier:T83 Modifies:T26
 E47	Procedure:T84 Name:T85
-E48	Or:T86 Arg:E25 Arg2:E47
 E49	Procedure:T87 Name:T51
 E38	Negation:T52 Negates:E47
 E50	Assertion:T88 Asserted:E47
 E36	Other:T47 Is-Other:E27
 E51	Modifier:T48 Modifies:T28
-E52	Or:T89 Arg:E19 Arg2:E27
-E53	Condition:T90 Name:T91 Temporality:E37
+E53	Observation:T90 Name:T91 Temporality:E37
 E54	Modifier:T92 Modifies:T91
 E55	Contraindication:T93 Contraindicates:E13 Contraindicates2:E57
 E56	Assertion:T94 Asserted:E21
 E57	Drug:T95 Name:T96
-E58	Or:T97 Arg:E13 Arg2:E57
 E59	Modifier:T98 Modifies:T24
 E60	Condition:T99 Name:T100 Severity:T101
-E61	Observation:T102 Name:T103 Eq-Comparison:E34
+E61	Observation:T102 Name:T103 Numeric-Filter:E34
 E62	Condition:T105 Name:T106
 E63	Condition:T107 Name:T108
-E64	Or:T109 Arg:E62 Arg2:E63
 E65	Condition:T110 Name:T111
 T1	Condition 212 231	atrial fibrillation
 T2	Condition-Name 212 231	atrial fibrillation
@@ -112,9 +102,6 @@ T50	Eq-Temporal-Period 869 875	active
 T53	Modifier 41 71	hemodynamic corrected valvular
 T54	Eq-Comparison 99 108	scheduled
 T55	Eq-Temporal-Period 99 108	scheduled
-T5	And 92 95	who
-T6	And 140 143	and
-T56	And 132 135	and
 T57	Observation 169 185	Left atrium size
 T58	Observation-Name 169 185	Left atrium size
 T59	Eq-Unit 190 192	mm
@@ -122,11 +109,9 @@ T60	Modifier 201 211	paroxysmal
 T61	Drug 258 277	antiarrhythmic drug
 T62	Drug-Name 258 277	antiarrhythmic drug
 T63	Procedure 278 287	treatment
-T64	Temporal-Connection 251 257	during
 T65	Drug 313 332	antiarrhythmic drug
 T66	Drug-Name 313 332	antiarrhythmic drug
 T67	Negation 294 297	not
-T68	Or 288 290	or
 T69	Assertion 298 305	able to
 T70	Indication 357 366	indicated
 T71	Assertion 400 413	prevention of
@@ -137,29 +122,25 @@ T75	Condition 558 578	cardiac malformation
 T76	Condition-Name 558 578	cardiac malformation
 T77	Severity 551 557	severe
 T78	Modifier 584 594	structural
-T79	Or 579 581	or
 T80	Stability 633 641	affected
 T81	Modifier 617 632	hemodynamically
 T82	Severity 664 670	severe
 T83	Modifier 671 676	renal
 T84	Procedure 691 701	CT imaging
 T85	Procedure-Name 691 701	CT imaging
-T86	Or 688 690	or
 T87	Procedure 719 733	contrast media
 T51	Procedure-Name 719 733	contrast media
 T52	Negation 702 712	difficulty
 T88	Assertion 702 712	difficulty
 T47	Other 825 830	other
 T48	Modifier 831 838	cardiac
-T89	Or 822 824	or
-T90	Condition 885 893	bleeding
-T91	Condition-Name 885 893	bleeding
+T90	Observation 885 893	bleeding
+T91	Observation-Name 885 893	bleeding
 T92	Modifier 876 884	internal
 T93	Contraindication 916 933	contraindications
 T94	Assertion 966 979	prevention of
 T95	Drug 1005 1025	antiarrhythmic drugs
 T96	Drug-Name 1005 1025	antiarrhythmic drugs
-T97	Or 1001 1004	and
 T98	Modifier 1048 1060	non-valvular
 T99	Condition 1112 1128	comorbid disease
 T100	Condition-Name 1112 1128	comorbid disease
@@ -171,7 +152,6 @@ T105	Condition 1173 1185	Drug addicts
 T106	Condition-Name 1173 1185	Drug addicts
 T107	Condition 1189 1199	alcoholics
 T108	Condition-Name 1189 1199	alcoholics
-T109	Or 1186 1188	or
 T110	Condition 1252 1263	illiterates
 T111	Condition-Name 1252 1263	illiterates
 A1	Eq-Operator-Value T31 GTEQ
@@ -182,8 +162,7 @@ A5	Eq-Temporal-Unit-Value T35 year
 A6	Eq-Temporal-Period-Value T46 past
 A8	Eq-Temporal-Period-Value T50 present
 A10	Eq-Temporal-Period-Value T55 future
-A11	Observation-Type-Value T58 measurement
-A12	Temporal-Connection-Type-Value E18 during
+A11	Observation-Type-Value E10 measurement
 A13	Assertion-Type-Value E26 hypothetical
 A14	Assertion-Type-Value E39 hypothetical
 A15	Severity-Value T77 severe
@@ -200,3 +179,13 @@ R4	Caused-By Arg1:E17 Arg2:E29
 R5	Using Arg1:E47 Arg2:E49
 R6	Treatment-For Arg1:E11 Arg2:E19
 R7	Treatment-For Arg1:E13 Arg2:E21
+R8	And Arg1:E3 Arg2:E7
+R9	And Arg1:E31 Arg2:E32
+R10	And Arg1:E7 Arg2:E30
+R11	During Arg1:E1 Arg2:E16
+R12	Or Arg1:E16 Arg2:E22
+R13	Or Arg1:E42 Arg2:E29
+R14	Or Arg1:E25 Arg2:E47
+R15	Or Arg1:E19 Arg2:E27
+R16	Or Arg1:E13 Arg2:E57
+R17	Or Arg1:E62 Arg2:E63

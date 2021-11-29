@@ -8,7 +8,6 @@ E7	Condition:T7 Name:T29
 E8	Eq-Comparison:T8 Temporal-Period:T30
 E9	Procedure:T9 Name:T31 Temporality:E8
 E10	Modifier:T10 Modifies:T37
-E11	Or:T11 Arg:E10 Arg2:E20
 E12	Condition:T12 Name:T37
 E13	Study:T13
 E14	Condition:T14 Name:T32
@@ -16,7 +15,7 @@ E15	Allergy:T15 Name:E16
 E16	Drug:T16 Name:T33
 E17	Eq-Comparison:T17 Temporal-Period:T34
 E18	Procedure:T18 Name:T35 Temporality:E17
-E19	Condition:T36 Name:T26 Stage:E3 Stage2:E2
+E19	Observation:T36 Name:T26 Stage:E3 Stage2:E2
 E20	Modifier:T38 Modifies:T37
 T1	Risk 44 48	risk
 T2	Eq-Comparison 49 68	class II, class III
@@ -28,7 +27,6 @@ T7	Condition 127 156	gynecologic related disorders
 T8	Eq-Comparison 171 181	undergoing
 T9	Procedure 182 192	laparotomy
 T10	Modifier 202 208	benign
-T11	Or 209 212	and
 T12	Condition 223 232	diagnoses
 T13	Study 258 263	study
 T14	Condition 289 298	Pregnancy
@@ -43,7 +41,7 @@ T22	Eq-Unit 59 64	class
 T23	Eq-Value 65 68	III
 T24	Eq-Unit 70 75	class
 T25	Eq-Value 76 78	IV
-T26	Condition-Name 89 95	wounds
+T26	Observation-Name 89 95	wounds
 T27	Eq-Temporal-Period 101 111	Undergoing
 T28	Procedure-Name 112 122	laparotomy
 T29	Condition-Name 127 156	gynecologic related disorders
@@ -53,7 +51,7 @@ T32	Condition-Name 289 298	Pregnancy
 T33	Drug-Name 315 324	triclosan
 T34	Eq-Temporal-Period 339 349	undergoing
 T35	Procedure-Name 350 355	HIPEC
-T36	Condition 89 95	wounds
+T36	Observation 89 95	wounds
 T37	Condition-Name 223 232	diagnoses
 T38	Modifier 213 222	malignant
 A1	Polarity-Value T19 high
@@ -63,3 +61,4 @@ A4	Eq-Temporal-Period-Value T34 present
 R1	Caused-By Arg1:E1 Arg2:E19
 R2	Treatment-For Arg1:E6 Arg2:E7
 R3	Treatment-For Arg1:E9 Arg2:E12
+R4	Or Arg1:E10 Arg2:E20

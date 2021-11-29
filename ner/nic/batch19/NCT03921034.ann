@@ -2,42 +2,37 @@ E1	Condition:T1 Name:T2 Acuteness:T57
 E3	Procedure:T3 Name:T4
 E5	Condition:T5 Name:T6 Temporality:E45
 E7	Procedure:T7 Name:T8
-E9	Observation:T9 Name:T10 Eq-Comparison:E47
+E9	Observation:T9 Name:T10 Numeric-Filter:E47
 E11	Procedure:T11 Name:T12
 E13	Drug:T13 Name:T14 Duration:E44 Temporality:E42
 E15	Procedure:T15 Name:T16
-E16	Age:T24 Eq-Comparison:E6
+E16	Age:T24 Numeric-Filter:E6
 E17	Eq-Comparison:T30 Operator:T19 Value:T26
 E18	Eq-Comparison:T31 Operator:T20 Value:T27
 E19	Eq-Comparison:T32 Temporal-Period:T33
 E2	Modifier:T34 Modifies:T4
 E4	Modifier:T35 Modifies:T4
 E6	Eq-Comparison:T36 Value:T25 Temporal-Unit:T22 Operator:T37
-E8	Observation:T18 Name:T38 Eq-Comparison:E10
+E8	Observation:T18 Name:T38 Numeric-Filter:E10
 E10	Eq-Comparison:T39 Operator:T42 Value:T40 Value2:T41
 E12	Modifier:T43 Modifies:T16
 E14	Modifier:T44 Modifies:T16
-E20	Or:T45 Arg:E14 Arg2:E12
 E21	Assertion:T46 Asserted:E15
 E22	Study:T47
 E23	Contraindication:T48 Contraindicates:E7 Contraindicates2:E11
 E24	Modifier:T49 Modifies:T12
-E25	Or:T50 Arg:E7 Arg2:E11
 E26	Allergy:T51 Name:E27
 E27	Procedure:T52 Name:T53
 E28	Allergy:T54 Name:E29
 E29	Drug:T55 Name:T56
-E31	Observation:T58 Name:T59 Eq-Comparison:E17
-E32	Observation:T60 Name:T61 Eq-Comparison:E18
-E33	Or:T62 Arg:E31 Arg2:E32
-E34	And:T63 Arg:E1 Arg2:E31
-E35	Condition:T64 Name:T65 Acuteness:T66
+E31	Condition:T58 Name:T59 Numeric-Filter:E17
+E32	Observation:T60 Name:T61 Numeric-Filter:E18
+E35	Observation:T64 Name:T65 Acuteness:T66
 E37	Modifier:T67 Modifies:T65
 E38	Negation:T68 Negates:E37
 E39	Drug:T69 Name:T70 Temporality:E19 Acuteness:T71
 E41	Eq-Comparison:T72 Per:T73
 E42	Eq-Comparison:T74 Per:T75
-E43	Or:T76 Arg:E41 Arg2:E42
 E44	Eq-Comparison:T77 Value:T28 Temporal-Unit:T23 Operator:T78
 E45	Eq-Comparison:T79 Temporal-Period:T80
 E46	Modifier:T81 Modifies:T6
@@ -86,12 +81,10 @@ T41	Eq-Value 122 125	III
 T42	Eq-Operator 121 122	-
 T43	Modifier 154 169	combined spinal
 T44	Modifier 144 150	spinal
-T45	Or 151 153	or
 T46	Assertion 131 143	Eligible for
 T47	Study 274 279	trial
 T48	Contraindication 305 321	Contraindication
 T49	Modifier 348 358	peripheral
-T50	Or 345 347	or
 T51	Allergy 377 384	Allergy
 T52	Procedure 388 405	local anesthetics
 T53	Procedure-Name 388 405	local anesthetics
@@ -99,14 +92,12 @@ T54	Allergy 411 418	Allergy
 T55	Drug 422 428	NSAIDs
 T56	Drug-Name 422 428	NSAIDs
 T57	Acuteness 434 441	Chronic
-T58	Observation 467 469	Cr
-T59	Observation-Name 467 469	Cr
+T58	Condition 467 469	Cr
+T59	Condition-Name 467 469	Cr
 T60	Observation 479 482	GFR
 T61	Observation-Name 479 482	GFR
-T62	Or 476 478	or
-T63	And 462 466	with
-T64	Condition 506 510	pain
-T65	Condition-Name 506 510	pain
+T64	Observation 506 510	pain
+T65	Observation-Name 506 510	pain
 T66	Acuteness 498 505	chronic
 T67	Modifier 540 550	knee joint
 T68	Negation 519 522	not
@@ -117,14 +108,13 @@ T72	Eq-Comparison 600 605	daily
 T73	Eq-Temporal-Unit 600 605	daily
 T74	Eq-Comparison 616 621	daily
 T75	Eq-Temporal-Unit 616 621	daily
-T76	Or 606 608	or
 T77	Eq-Comparison 637 655	3 months or longer
 T78	Eq-Operator 646 655	or longer
 T79	Eq-Comparison 669 681	pre-existing
 T80	Eq-Temporal-Period 669 681	pre-existing
 T81	Modifier 718 732	operative site
 T82	Eq-Comparison 754 781	greater than or equal to 40
-A1	Observation-Type-Value T10 vital
+A1	Observation-Type-Value E9 vital
 A2	Eq-Operator-Value T19 GT
 A3	Eq-Operator-Value T20 LT
 A4	Eq-Operator-Value T21 GTEQ
@@ -135,13 +125,19 @@ A8	Eq-Operator-Value T37 GTEQ
 A9	Eq-Operator-Value T42 BETWEEN
 A10	Assertion-Type-Value E21 hypothetical
 A11	Observation-Type-Value T59 lab
-A12	Observation-Type-Value T61 lab
+A12	Observation-Type-Value E32 lab
 A13	Eq-Temporal-Unit-Value T73 day
 A14	Eq-Temporal-Unit-Value T75 day
 A15	Eq-Operator-Value T78 GTEQ
 A16	Eq-Temporal-Period-Value T80 past
-A17	Observation-Type-Value T38 clinical-score
+A17	Observation-Type-Value E8 clinical-score
 A18	Acuteness-Type-Value T57 chronic
 A19	Acuteness-Type-Value T66 chronic
 A20	Acuteness-Type-Value T71 chronic
 R1	Equivalent-To Arg1:E13 Arg2:E39
+R2	Or Arg1:E14 Arg2:E12
+R3	Or Arg1:E7 Arg2:E11
+R4	Or Arg1:E31 Arg2:E32
+R5	And Arg1:E1 Arg2:E31
+R6	Or Arg1:E41 Arg2:E42
+R7	Or Arg1:E4 Arg2:E2

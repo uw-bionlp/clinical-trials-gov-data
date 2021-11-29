@@ -8,22 +8,19 @@ E13	Procedure:T13 Name:T14
 E15	Procedure:T15 Name:T16
 E17	Procedure:T17 Name:T18
 E21	Procedure:T21 Name:T22
-E26	Age:T31 Eq-Comparison:E2
+E26	Age:T31 Numeric-Filter:E2
 E27	Eq-Comparison:T34 Temporal-Unit:T30 Value:T33 Temporal-Period:T23
 E2	Eq-Comparison:T35 Temporal-Unit:T29 Value:T32 Operator:T36
 E4	Eq-Comparison:T37 Temporal-Period:T38
 E6	Procedure:T39 Name:T40 Temporality:E4
 E8	Modifier:T41 Modifies:T40
 E10	Modifier:T42 Modifies:T40
-E12	Or:T43 Arg:E10 Arg2:E8
 E14	Modifier:T44 Modifies:T18
-E16	Or:T45 Arg:E14 Arg2:E18
 E18	Modifier:T46 Modifies:T18
 E19	Eq-Comparison:T19 Temporal-Period:T20
 E20	Drug:T25 Name:T26 Temporality:E27
-E22	Temporal-Connection:T47 Arg:E27 Arg2:E11
 E24	Allergy:T48 Name:E25
-E25	Drug:T49 
+E25	Drug:T49
 E28	Observation:T50 Name:T51 Temporality:E29
 E29	Eq-Comparison:T52 Temporal-Period:T53
 E30	Negation:T54 Negates:T27
@@ -63,15 +60,12 @@ T39	Procedure 119 126	surgery
 T40	Procedure-Name 119 126	surgery
 T41	Modifier 110 118	hindfoot
 T42	Modifier 93 106	primary ankle
-T43	Or 107 109	or
 T44	Modifier 231 242	debridement
-T45	Or 242 243	/
 T46	Modifier 243 251	transfer
 T19	Eq-Comparison 375 385	undergoing
 T20	Eq-Temporal-Period 375 385	undergoing
 T25	Drug 443 466	opioid pain medications
 T26	Drug-Name 443 466	opioid pain medications
-T47	Temporal-Connection 488 496	prior to
 T48	Allergy 539 548	allergies
 T49	Drug 563 574	medications
 T50	Observation 654 666	incarcerated
@@ -86,7 +80,6 @@ A3	Eq-Temporal-Unit-Value T30 month
 A4	Eq-Operator-Value T36 GTEQ
 A5	Eq-Temporal-Period-Value T38 present
 A6	Eq-Temporal-Period-Value T20 present
-A7	Temporal-Connection-Type-Value E22 before
 A8	Eq-Temporal-Period-Value T53 present
 A1	Eq-Temporal-Period-Value T23 past
 R2	Example-Of Arg1:E13 Arg2:E6
@@ -97,3 +90,12 @@ R6	Example-Of Arg1:E17 Arg2:E6
 R7	Example-Of Arg1:E15 Arg2:E6
 R8	Example-Of Arg1:E5 Arg2:E6
 R9	Example-Of Arg1:E21 Arg2:E6
+R1	Or Arg1:E10 Arg2:E8
+R10	Or Arg1:E14 Arg2:E18
+R11	Before Arg1:E27 Arg2:E11
+R12	Or Arg1:E1 Arg2:E17
+R13	Or Arg1:E3 Arg2:E7
+R14	Or Arg1:E5 Arg2:E21
+R15	Or Arg1:E7 Arg2:E1
+R16	Or Arg1:E13 Arg2:E3
+R17	Or Arg1:E15 Arg2:E5

@@ -1,6 +1,6 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4
-E4	Age:T6 Eq-Comparison:E2
+E4	Age:T6 Numeric-Filter:E2
 E2	Eq-Comparison:T9 Operator:T10 Value:T7 Temporal-Unit:T5
 E5	Observation:T11 Name:T12
 E6	Negation:T13 Negates:E5
@@ -29,7 +29,7 @@ T18	Assertion 286 292	Unable
 A1	Eq-Temporal-Unit-Value T5 year
 A2	Location-Value T8 hospital
 A3	Eq-Operator-Value T10 GT
-A4	Observation-Type-Value T12 survey-or-questionnaire
+A4	Observation-Type-Value E5 survey-or-questionnaire
 A5	Assertion-Type-Value E7 hypothetical
 A6	Assertion-Type-Value E10 hypothetical
 R1	Caused-By Arg1:E9 Arg2:E1

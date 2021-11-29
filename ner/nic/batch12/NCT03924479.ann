@@ -1,48 +1,43 @@
-E1	Observation:T1 Name:T2
+E1	Condition:T1 Name:T2
 E2	Eq-Comparison:T4 Temporal-Unit:T7 Value:T6 Operator:T5
-E3	Age:T8 Eq-Comparison:E2
+E3	Age:T8 Numeric-Filter:E2
 E4	Condition:T9 Name:T10
 E5	Condition:T11 Name:T12
-E6	Or:T13 Arg:E4 Arg2:E5
 E7	Negation:T14 Negates:E4
 E8	Condition:T15 Name:T16
 E9	Modifier:T17 Modifies:T16
 E10	Modifier:T18 Modifies:T16
 E11	Modifier:T19 Modifies:T16
 E12	Modifier:T20 Modifies:T16
-E13	Or:T21 Arg:E11 Arg2:E12
 E14	Condition:T22 Name:T23 Duration:E18
 E15	Drug:T24 Temporality:E17 Stability:T112
 E16	Negation:T25 Negates:T112
 E17	Eq-Comparison:T26 Temporal-Unit:T29 Operator:T27 Value:T28
 E18	Eq-Comparison:T30 Temporal-Unit:T33 Value:T32 Operator:T31
-E19	Observation:T34 Eq-Comparison:E20 Name:T35
+E19	Observation:T34 Numeric-Filter:E20 Name:T35
 E20	Eq-Comparison:T36 Unit:T37 Value:T40 Value2:T39 Operator:T38
-E21	Condition:T41 Temporality:E23 Name:T42
+E21	Observation:T41 Temporality:E23 Name:T42
 E22	Negation:T43 Negates:E21
 E23	Eq-Comparison:T44 Temporal-Period:T45
 E24	Eq-Comparison:T46 Unit:T49 Per:T50 Value:T48 Operator:T47
 E25	Condition:T51 Name:T52
 E26	Negation:T53 Negates:E25
 E27	Observation:T55 Name:T56
-E28	And:T57 Arg:T54 Arg2:E27
 E29	Condition:T58 Name:T59
 E30	Condition:T60 Name:T61
-E31	Or:T62 Arg:E29 Arg2:E30
 E32	Negation:T63 Negates:E29
 E33	Condition:T64 Name:T65 Severity:T66 Temporality:E60
-E34	Observation:T67 Name:T68 Eq-Comparison:E35
+E34	Observation:T67 Name:T68 Numeric-Filter:E35
 E35	Eq-Comparison:T69 Value:T71 Operator:T70 Unit:T72 Per:T73
-E36	Condition:T74 Temporality:E37 Name:T75
+E36	Observation:T74 Temporality:E37 Name:T75
 E37	Eq-Comparison:T76 Temporal-Period:T77
-E38	Observation:T78 Name:T79 Eq-Comparison:E40
-E39	Or:T80 Arg:E36 Arg2:E38
+E38	Observation:T78 Name:T79 Numeric-Filter:E40
 E40	Eq-Comparison:T81 Per:T85 Unit:T84 Value:T83 Operator:T82
 E41	Condition:T86 Name:T87
 E42	Condition:T89 Name:T90
 E43	Allergy:T91 Name:T92 Temporality:E55
 E44	Condition:T93 Name:T94
-E45	Observation:T95 Name:T96 Eq-Comparison:E46 Temporality:E47
+E45	Observation:T95 Name:T96 Numeric-Filter:E46 Temporality:E47
 E46	Eq-Comparison:T97 Operator:T98 Value:T99 Unit:T100 Per:T101
 E47	Eq-Comparison:T102 Operator:T103 Temporal-Unit:T105 Value:T104 Temporal-Period:T128
 E48	Condition:T106 Name:T107
@@ -53,13 +48,12 @@ E52	Assertion:T114 Asserted:E50
 E53	Eq-Comparison:T115 Temporal-Period:T116
 E54	Eq-Comparison:T117 Temporal-Period:T118
 E55	Eq-Comparison:T119 Temporal-Period:T120
-E57	Provider:T123 
-E58	Study:T124 
+E57	Provider:T123
+E58	Study:T124
 E56	Condition:T121 Name:T122
-E59	Temporal-Connection:T125 Arg:E58
 E60	Eq-Comparison:T126 Temporal-Period:T127
-T1	Observation 0 7	Healthy
-T2	Observation-Name 0 7	Healthy
+T1	Condition 0 7	Healthy
+T2	Condition-Name 0 7	Healthy
 T3	Life-Stage-And-Gender 18 24	Adults
 T4	Eq-Comparison 26 35	≥21 years
 T5	Eq-Operator 26 27	≥
@@ -70,7 +64,6 @@ T9	Condition 64 74	history of
 T10	Condition-Name 75 80	HFpEF
 T11	Condition 84 89	HFrEF
 T12	Condition-Name 84 89	HFrEF
-T13	Or 81 83	or
 T14	Negation 51 58	absence
 T15	Condition 135 178	diseases affecting the neuromuscular system
 T16	Condition-Name 135 178	diseases affecting the neuromuscular system
@@ -78,7 +71,6 @@ T17	Modifier 91 100	pulmonary
 T18	Modifier 102 112	neurologic
 T19	Modifier 114 124	orthopedic
 T20	Modifier 129 134	other
-T21	Or 126 128	or
 T22	Condition 602 607	HFpEF
 T23	Condition-Name 602 607	HFpEF
 T24	Drug 649 659	medication
@@ -97,7 +89,7 @@ T37	Eq-Unit 753 758	class
 T38	Eq-Operator 760 761	-
 T39	Eq-Value 759 760	I
 T40	Eq-Value 761 764	III
-T41	Condition 783 790	smokers
+T41	Observation 783 790	smokers
 T43	Negation 779 782	non
 T44	Eq-Comparison 771 778	Current
 T45	Eq-Temporal-Period 771 778	Current
@@ -112,12 +104,10 @@ T53	Negation 824 827	Non
 T54	Life-Stage-And-Gender 837 842	women
 T55	Observation 868 884	able to exercise
 T56	Observation-Name 868 884	able to exercise
-T57	And 844 847	and
 T58	Condition 899 921	orthopedic limitations
 T59	Condition-Name 899 921	orthopedic limitations
 T60	Condition 925 948	neuromuscular disorders
 T61	Condition-Name 925 948	neuromuscular disorders
-T62	Or 922 924	or
 T63	Negation 891 898	without
 T64	Condition 1024 1035	arrhythmias
 T65	Condition-Name 1024 1035	arrhythmias
@@ -129,12 +119,11 @@ T70	Eq-Operator 1057 1058	>
 T71	Eq-Value 1058 1060	35
 T72	Eq-Unit 1061 1063	kg
 T73	Eq-Unit 1064 1066	m2
-T74	Condition 1080 1087	smokers
+T74	Observation 1080 1087	smokers
 T76	Eq-Comparison 1072 1079	current
 T77	Eq-Temporal-Period 1072 1079	current
 T78	Observation 1095 1110	smoking history
 T79	Observation-Name 1095 1110	smoking history
-T80	Or 1088 1094	and/or
 T81	Eq-Comparison 1111 1125	>15 pack years
 T82	Eq-Operator 1111 1112	>
 T83	Eq-Value 1112 1114	15
@@ -169,8 +158,8 @@ T35	Observation-Name 726 752	New York Heart Association
 T111	Stability 638 644	stable
 T112	Stability 660 667	changes
 T113	Coreference 699 708	diagnosis
-T42	Condition-Name 783 790	smokers
-T75	Condition-Name 1080 1087	smokers
+T42	Observation-Name 783 790	smokers
+T75	Observation-Name 1080 1087	smokers
 T114	Assertion 1383 1390	able to
 T115	Eq-Comparison 630 637	history
 T116	Eq-Temporal-Period 630 637	history
@@ -182,7 +171,6 @@ T123	Provider 345 356	Dr. Borlaug
 T124	Study 384 394	enrollment
 T121	Condition 226 231	HFpEF
 T122	Condition-Name 226 231	HFpEF
-T125	Temporal-Connection 375 383	prior to
 T126	Eq-Comparison 1003 1010	history
 T127	Eq-Temporal-Period 1003 1010	history
 T128	Eq-Temporal-Period 1307 1311	past
@@ -198,32 +186,38 @@ A11	Eq-Temporal-Period-Value T45 present
 A12	Eq-Operator-Value T47 LT
 A13	Eq-Temporal-Unit-Value T50 year
 A14	Life-Stage-And-Gender-Type T54 female
-A15	Observation-Type-Value T56 social-habit
+A15	Observation-Type-Value E27 social-habit
 A16	Severity-Value T66 severe
-A17	Observation-Type-Value T68 vital
+A17	Observation-Type-Value E34 vital
 A18	Eq-Operator-Value T70 GT
 A20	Eq-Temporal-Period-Value T77 present
-A21	Observation-Type-Value T79 social-habit
+A21	Observation-Type-Value E38 social-habit
 A22	Eq-Operator-Value T82 GT
 A23	Eq-Temporal-Unit-Value T85 year
 A24	Life-Stage-And-Gender-Type T88 female
-A25	Observation-Type-Value T96 lab
+A25	Observation-Type-Value E45 lab
 A26	Eq-Operator-Value T98 GTEQ
 A27	Eq-Operator-Value T103 LTEQ
 A28	Eq-Temporal-Unit-Value T105 month
-A29	Observation-Type-Value T109 social-habit
+A29	Observation-Type-Value E49 social-habit
 A8	Stability-Value T111 stable
 A30	Stability-Value T112 change
 A10	Assertion-Type-Value E52 hypothetical
 A31	Eq-Temporal-Period-Value T116 past
 A32	Eq-Temporal-Period-Value T118 past
 A33	Eq-Temporal-Period-Value T120 past
-A19	Temporal-Connection-Type-Value E59 before
 A34	Eq-Temporal-Period-Value T127 past
 A35	Eq-Temporal-Period-Value T128 past
-A36	Observation-Type-Value T35 clinical-score
+A36	Observation-Type-Value E19 clinical-score
 R1	Equivalent-To Arg1:E3 Arg2:T3
 R2	If-Then Arg1:T54 Arg2:E25
 R3	Equivalent-To Arg1:E32 Arg2:E27
 R4	If-Then Arg1:T88 Arg2:E41
 R5	Equivalent-To Arg1:E16 Arg2:T111
+R6	Or Arg1:E4 Arg2:E5
+R7	Or Arg1:E11 Arg2:E12
+R8	And Arg1:T54 Arg2:E27
+R9	Or Arg1:E29 Arg2:E30
+R10	Or Arg1:E36 Arg2:E38
+R11	Or Arg1:E9 Arg2:E10
+R12	Or Arg1:E10 Arg2:E11

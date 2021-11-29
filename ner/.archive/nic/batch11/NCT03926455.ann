@@ -1,0 +1,144 @@
+E4	Condition:T4 Name:T5
+E6	Procedure:T6 Name:T7 Temporality:E39
+E8	Condition:T8 Name:T9 Temporality:E29 Temporality2:E40
+E10	Condition:T10 Name:T11 Polarity:T57
+E11	Age:T15 Eq-Comparison:E12
+E12	Eq-Comparison:T20 Operator:T16 Value:T17 Value2:T18 Temporal-Unit:T13
+E1	Or:T23 Arg:T1 Arg2:T22
+E3	Condition:T24 Name:T25
+E5	Negation:T26 Negates:E3
+E7	And:T27 Arg:T22 Arg2:E5
+E9	Condition:T28 Name:T29
+E13	Assertion:T30 Asserted:E9
+E14	Study:T31
+E15	Temporal-Connection:T32 Arg:E9 Arg2:E14
+E16	Observation:T12 Polarity:T33 Name:T34
+E17	Condition:T35 Name:T3 Temporality:E38
+E2	Modifier:T2 Modifies:T3
+E18	Modifier:T36 Modifies:T3
+E19	Or:T37 Arg:E2 Arg2:E18
+E20	Or:T38 Arg:E17 Arg2:E4
+E21	Procedure:T39
+E23	Condition:T41 Name:T42
+E24	Drug:T43
+E25	Observation:T44 Name:T45 Polarity:T48
+E26	Study:T46
+E27	Temporal-Connection:T47 Arg:E25 Arg2:E26
+E28	Or:T49 Arg:E6 Arg2:E25
+E29	Eq-Comparison:T50 Temporal-Unit:T14 Value:T19 Temporal-Period:T51
+E30	Condition:T52 Name:T53 Polarity:T57
+E31	Condition:T54 Name:T55 Polarity:T57
+E32	Or:T56 Arg:E31 Arg2:E10
+E33	Condition:T58
+E34	Condition:T59 Name:T60
+E36	Assertion:T63 Asserted:T40
+E37	Or:T64 Arg:E33 Arg2:E34
+E22	Observation:T61 Name:T62 Stability:T40
+E38	Eq-Comparison:T65 Temporal-Period:T66
+E39	Eq-Comparison:T67 Temporal-Period:T68
+E40	Eq-Comparison:T69 Temporal-Period:T70
+E35	Study:T71 Study-Of:E24
+E41	Condition:T72 Name:T73
+E42	Modifier:T74 Modifies:T42
+E43	Assertion:T75 Asserted:E23
+E44	Or:T76 Arg:E42 Arg2:E43
+T3	Condition-Name 336 343	illness
+T4	Condition 347 363	medical disorder
+T5	Condition-Name 347 363	medical disorder
+T6	Procedure 503 522	Typhoid vaccination
+T7	Procedure-Name 503 522	Typhoid vaccination
+T8	Condition 589 606	Typhoid infection
+T9	Condition-Name 589 606	Typhoid infection
+T10	Condition 661 664	HCV
+T11	Condition-Name 661 664	HCV
+T13	Eq-Temporal-Unit 140 145	years
+T14	Eq-Temporal-Unit 625 631	months
+T15	Age 126 130	aged
+T16	Eq-Operator 134 136	to
+T17	Eq-Value 131 133	18
+T18	Eq-Value 137 139	55
+T19	Eq-Value 623 624	6
+T20	Eq-Comparison 131 145	18 to 55 years
+T1	Life-Stage-And-Gender 39 42	men
+T21	Life-Stage-And-Gender 33 38	adult
+T22	Life-Stage-And-Gender 46 51	women
+T23	Or 43 45	or
+T24	Condition 64 72	pregnant
+T25	Condition-Name 64 72	pregnant
+T26	Negation 60 63	not
+T27	And 52 55	who
+T28	Condition 95 103	pregnant
+T29	Condition-Name 95 103	pregnant
+T30	Assertion 76 87	planning to
+T31	Study 111 116	study
+T32	Temporal-Connection 104 110	during
+T12	Observation 161 182	laboratory parameters
+T33	Polarity 190 196	normal
+T34	Observation-Name 161 182	laboratory parameters
+T35	Condition 336 343	illness
+T2	Modifier 312 320	physical
+T36	Modifier 324 335	psychiatric
+T37	Or 321 323	or
+T38	Or 344 346	or
+T39	Procedure 378 387	treatment
+T41	Condition 413 429	hypersensitivity
+T42	Condition-Name 413 429	hypersensitivity
+T43	Drug 449 456	product
+T44	Observation 535 553	anti-Vi antibodies
+T45	Observation-Name 535 553	anti-Vi antibodies
+T46	Study 557 566	screening
+T47	Temporal-Connection 554 556	at
+T48	Polarity 526 534	elevated
+T49	Or 523 525	or
+T50	Eq-Comparison 614 631	previous 6 months
+T52	Condition 646 649	HIV
+T53	Condition-Name 646 649	HIV
+T54	Condition 651 656	HBsAg
+T55	Condition-Name 651 656	HBsAg
+T56	Or 658 660	or
+T57	Polarity 637 645	Positive
+T58	Condition 687 696	condition
+T59	Condition 700 711	abnormality
+T60	Condition-Name 700 711	abnormality
+T63	Assertion 754 757	may
+T64	Or 697 699	or
+T40	Stability 758 768	compromise
+T61	Observation 773 779	safety
+T62	Observation-Name 773 779	safety
+T65	Eq-Comparison 301 308	history
+T66	Eq-Temporal-Period 301 308	history
+T67	Eq-Comparison 494 502	Previous
+T68	Eq-Temporal-Period 494 502	Previous
+T69	Eq-Comparison 578 585	history
+T70	Eq-Temporal-Period 578 585	history
+T51	Eq-Temporal-Period 614 622	previous
+T71	Study 433 448	investigational
+T72	Condition 462 479	Immunocompromised
+T73	Condition-Name 462 479	Immunocompromised
+T74	Modifier 394 399	Known
+T75	Assertion 403 412	suspected
+T76	Or 400 402	or
+A2	Eq-Temporal-Unit-Value T13 year
+A3	Eq-Temporal-Unit-Value T14 month
+A4	Eq-Operator-Value T16 BETWEEN
+A5	Life-Stage-And-Gender-Type T1 male
+A6	Life-Stage-And-Gender-Type T21 adult
+A7	Life-Stage-And-Gender-Type T22 female
+A8	Assertion-Type-Value E13 hypothetical
+A9	Temporal-Connection-Type-Value E15 during
+A1	Polarity-Value T33 normal
+A10	Observation-Type-Value T34 lab
+A12	Observation-Type-Value T45 lab
+A13	Temporal-Connection-Type-Value E27 during
+A14	Polarity-Value T48 high
+A16	Polarity-Value T57 positive
+A17	Assertion-Type-Value E36 hypothetical
+A11	Stability-Value T40 change
+A18	Eq-Temporal-Period-Value T66 past
+A19	Eq-Temporal-Period-Value T68 past
+A20	Eq-Temporal-Period-Value T70 past
+A15	Eq-Temporal-Period-Value T51 past
+A21	Assertion-Type-Value E43 hypothetical
+R1	Treatment-For Arg1:E21 Arg2:E4
+R2	Caused-By Arg1:E23 Arg2:E24
+R3	Caused-By Arg1:T40 Arg2:E34

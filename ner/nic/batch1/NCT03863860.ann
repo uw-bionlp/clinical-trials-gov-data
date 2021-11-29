@@ -11,7 +11,6 @@ E2	Condition:T27 Name:T28 Severity:T36
 E4	Condition:T29 Name:T30
 E13	Modifier:T33 Modifies:E2
 E14	Modifier:T34 Modifies:E2
-E15	Or:T35 Arg:E14 Arg2:E13
 E16	Procedure:T37 Name:T38
 E17	Procedure:T39 Name:T40 Temporality:E18 Minimum-Count:E8
 E18	Eq-Comparison:T41 Temporal-Period:T42
@@ -19,40 +18,33 @@ E19	Modifier:T43 Modifies:E1
 E20	Condition:T44 Name:T48
 E21	Condition:T45 Name:T50
 E22	Condition:T46 Name:T49
-E23	Condition:T47 Name:T51
-E24	Or:T52 Arg:E20 Arg2:E21
+E23	Observation:T47 Name:T51
 E25	Procedure:T53 Name:T54 Temporality:E39
 E26	Procedure:T55 Temporality:E42
 E27	Drug:T57 Name:T58
 E28	Drug:T59 Name:T60
-E30	Drug:T63 
+E30	Drug:T63
 E31	Modifier:T65 Modifies:E30
 E32	Study:T66 Study-Of:E49
-E33	Procedure:T68 
-E34	Temporal-Connection:T69 Arg:E5 Arg2:E56
+E33	Procedure:T68
 E35	Drug:T70 Temporality:E56
-E6	Modifier:T31 
+E6	Modifier:T31
 E36	Modifier:T32 Modifies:T30
-E37	Or:T72 Arg:E6 Arg2:E36
 E38	Eq-Comparison:T73 Temporal-Recency:T74
 E39	Eq-Comparison:T75 Temporal-Recency:T76
 E40	Assertion:T77 Asserted:E25
-E41	Temporal-Connection:T78 Arg:E9 Arg2:E39
 E42	Eq-Comparison:T79 Temporal-Period:T80
 E43	Modifier:T56 Modifies:T58
 E44	Study:T81 Study-Of:E29
 E45	Other:T82 Is-Other:E44
 E29	Procedure:T61 Temporality:E10
-E46	Drug:T62 
+E46	Drug:T62
 E47	Eq-Comparison:T83 Temporal-Recency:T84
-E48	Temporal-Connection:T85 Arg:E10 Arg2:E47
 E49	Drug:T86 Temporality:E47
 E50	Condition:T64 Name:T87
 E51	Assertion:T88 Asserted:E7 Asserted2:E3
 E52	Assertion:T89 Asserted:E33
-E53	And:T90 Arg:E3 Arg2:E52
 E54	Eq-Comparison:T91 Temporal-Period:T92
-E55	Or:T93 Arg:E33 Arg2:E5
 E56	Eq-Comparison:T71 Temporal-Recency:T94
 T1	Procedure 303 323	chemotherapy regimen
 T2	Procedure-Name 303 323	chemotherapy regimen
@@ -86,7 +78,6 @@ T29	Condition 148 154	cancer
 T30	Condition-Name 148 154	cancer
 T33	Modifier 71 91	endometrioid ovarian
 T34	Modifier 61 67	serous
-T35	Or 68 70	or
 T36	Severity 50 60	high-grade
 T37	Procedure 25 39	Histologically
 T38	Procedure-Name 25 39	Histologically
@@ -98,12 +89,11 @@ T43	Modifier 288 302	platinum-based
 T44	Condition 221 238	Complete response
 T45	Condition 247 263	partial response
 T46	Condition 240 242	CR
-T47	Condition 265 267	PR
+T47	Observation 265 267	PR
 T48	Condition-Name 221 238	Complete response
 T49	Condition-Name 240 242	CR
 T50	Condition-Name 247 263	partial response
-T51	Condition-Name 265 267	PR
-T52	Or 244 246	or
+T51	Observation-Name 265 267	PR
 T53	Procedure 412 420	platinum
 T54	Procedure-Name 412 420	platinum
 T55	Procedure 452 461	treatment
@@ -116,17 +106,14 @@ T65	Modifier 668 686	molecular targeted
 T66	Study 657 662	study
 T67	Eq-Unit 639 649	half-lives
 T68	Procedure 793 801	drainage
-T69	Temporal-Connection 858 866	prior to
 T70	Drug 877 891	administration
 T31	Modifier 110 128	primary peritoneal
 T32	Modifier 133 147	fallopian tube
-T72	Or 129 132	and
 T73	Eq-Comparison 283 287	last
 T74	Eq-Temporal-Recency 283 287	last
 T75	Eq-Comparison 399 403	last
 T76	Eq-Temporal-Recency 399 403	last
 T77	Assertion 359 369	Ability to
-T78	Temporal-Connection 393 398	after
 T79	Eq-Comparison 446 451	Prior
 T80	Eq-Temporal-Period 446 451	Prior
 T56	Modifier 505 514	inhibitor
@@ -136,16 +123,13 @@ T61	Procedure 564 573	treatment
 T62	Drug 559 563	drug
 T83	Eq-Comparison 602 607	first
 T84	Eq-Temporal-Recency 602 607	first
-T85	Temporal-Connection 589 597	prior to
 T86	Drug 663 667	drug
 T64	Condition 692 698	cancer
 T87	Condition-Name 692 698	cancer
 T88	Assertion 735 743	symptoms
 T89	Assertion 785 789	need
-T90	And 781 784	who
 T91	Eq-Comparison 815 824	undergone
 T92	Eq-Temporal-Period 815 824	undergone
-T93	Or 803 805	or
 T71	Eq-Comparison 871 876	first
 T94	Eq-Temporal-Recency 871 876	first
 A1	Eq-Operator-Value T9 GTEQ
@@ -158,14 +142,11 @@ A7	Eq-Temporal-Unit-Value T15 week
 A8	Eq-Temporal-Unit-Value T16 month
 A9	Severity-Value T36 severe
 A11	Eq-Temporal-Period-Value T42 past
-A12	Temporal-Connection-Type-Value E34 before
 A10	Eq-Temporal-Recency-Value T74 most-recent-time
 A13	Eq-Temporal-Recency-Value T76 most-recent-time
 A14	Assertion-Type-Value E40 hypothetical
-A15	Temporal-Connection-Type-Value E41 after
 A16	Eq-Temporal-Period-Value T80 past
 A17	Eq-Temporal-Recency-Value T84 first-time
-A18	Temporal-Connection-Type-Value E48 before
 A19	Assertion-Type-Value E51 possible
 A20	Assertion-Type-Value E52 hypothetical
 A21	Eq-Temporal-Period-Value T92 past
@@ -182,3 +163,12 @@ R1	Using Arg1:E29 Arg2:E46
 R10	Equivalent-To Arg1:E11 Arg2:E47
 R11	Treatment-For Arg1:E30 Arg2:E50
 R12	Example-Of Arg1:E30 Arg2:E49
+R13	Or Arg1:E14 Arg2:E13
+R14	Or Arg1:E20 Arg2:E21
+R15	Before Arg1:E5 Arg2:E56
+R16	Or Arg1:E6 Arg2:E36
+R17	After Arg1:E9 Arg2:E39
+R18	Before Arg1:E10 Arg2:E47
+R19	And Arg1:E3 Arg2:E52
+R20	Or Arg1:E33 Arg2:E5
+R21	Or Arg1:E7 Arg2:E3

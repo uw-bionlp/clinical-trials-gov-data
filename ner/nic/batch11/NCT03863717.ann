@@ -1,30 +1,25 @@
 E1	Condition:T1 Name:T2 Stability:T12
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
-E8	Age:T11 Eq-Comparison:E10
+E8	Age:T11 Numeric-Filter:E10
 E10	Eq-Comparison:T14 Operator:T9 Temporal-Unit:T10 Value:T13
 E2	Observation:T15 Name:T16
 E4	Observation:T17 Name:T18
-E6	And:T19 Arg:E4 Arg2:E2
-E11	Condition:T20 Name:T21
-E12	Modifier:T22 Modifies:T21
+E11	Condition:T20
+E12	Modifier:T22 Modifies:E11
 E13	Modifier:T23
-E14	Or:T24 Arg:E13 Arg2:E12
 E15	Modifier:T25 Modifies:E7
-E16	Condition:T26 Severity:T27 Name:T36
+E16	Condition:T26 Severity:T27
 E17	Modifier:T28 Modifies:E16
-E18	Or:T29 Arg:E15 Arg2:E16
 E19	Condition:T30 Name:T31
 E20	Modifier:T32 Modifies:T31
 E21	Modifier:T33
-E22	Or:T34 Arg:E21 Arg2:E20
 E3	Condition:T3 Name:T4
 E23	Assertion:T35 Asserted:E3
 E25	Condition:T39 Name:T40 Temporality:E26
 E26	Eq-Comparison:T41 Temporal-Period:T42
 E27	Negation:T43 Negates:E25
 E29	Coreference:T45 Stability:T44 Refers-To:E5
-E30	Or:T46 Arg:E25 Arg2:E29
 E24	Condition:T37 Stability:T38
 T1	Condition 438 453	cardiac disease
 T2	Condition-Name 438 453	cardiac disease
@@ -41,22 +36,18 @@ T15	Observation 83 106	pulmonary function test
 T16	Observation-Name 83 106	pulmonary function test
 T17	Observation 56 76	clinical examination
 T18	Observation-Name 56 76	clinical examination
-T19	And 77 80	and
 T20	Condition 492 500	diseases
 T21	Condition-Name 492 500	diseases
 T22	Modifier 479 491	neurological
 T23	Modifier 459 474	Musculoskeletal
-T24	Or 475 478	and
 T25	Modifier 583 594	final stage
 T26	Condition 612 619	disease
 T27	Severity 604 611	serious
 T28	Modifier 620 631	final stage
-T29	Or 595 597	or
 T30	Condition 674 684	impairment
 T31	Condition-Name 674 684	impairment
 T32	Modifier 662 673	psychiatric
 T33	Modifier 649 658	cognitive
-T34	Or 659 661	or
 T3	Condition 707 742	inability to follow simple commands
 T4	Condition-Name 707 742	inability to follow simple commands
 T35	Assertion 690 695	would
@@ -66,7 +57,6 @@ T41	Eq-Comparison 147 153	recent
 T42	Eq-Temporal-Period 147 153	recent
 T43	Negation 139 146	without
 T45	Coreference 207 218	the disease
-T46	Or 184 186	or
 T36	Condition-Name 612 619	disease
 T12	Stability 429 437	Unstable
 T37	Condition 119 137	clinical condition
@@ -74,7 +64,7 @@ T38	Stability 112 118	Stable
 T44	Stability 191 203	exacerbation
 A1	Eq-Operator-Value T9 LT
 A2	Eq-Temporal-Unit-Value T10 year
-A3	Observation-Type-Value T16 lab
+A3	Observation-Type-Value E2 lab
 A4	Severity-Value T27 severe
 A6	Eq-Temporal-Period-Value T42 recent
 A5	Assertion-Type-Value E23 hypothetical
@@ -85,3 +75,8 @@ R1	Found-By Arg1:E5 Arg2:E4
 R3	Caused-By Arg1:E3 Arg2:E19
 R4	Equivalent-To Arg1:E27 Arg2:E24
 R2	Found-By Arg1:E5 Arg2:E2
+R5	And Arg1:E4 Arg2:E2
+R6	Or Arg1:E13 Arg2:E12
+R7	Or Arg1:E15 Arg2:E16
+R8	Or Arg1:E21 Arg2:E20
+R9	Or Arg1:E25 Arg2:E29

@@ -1,10 +1,10 @@
 E1	Procedure:T1 Name:T2 Temporality:E4
 E3	Procedure:T3 Name:T4 Duration:E7
 E8	Condition:T8 Name:T9
-E10	Observation:T10 Name:T11 Eq-Comparison:E19
-E12	Observation:T12 Name:T13 Eq-Comparison:E27
+E10	Observation:T10 Name:T11 Numeric-Filter:E19
+E12	Observation:T12 Name:T13 Numeric-Filter:E27
 E15	Procedure:T15 Name:T16
-E16	Age:T29 Eq-Comparison:E2
+E16	Age:T29 Numeric-Filter:E2
 E17	Eq-Comparison:T41 Operator:T17 Value:T32
 E18	Eq-Comparison:T42 Operator:T18 Value:T33
 E19	Eq-Comparison:T43 Operator:T19 Unit:T27 Value:T34 Unit2:T124
@@ -15,14 +15,13 @@ E23	Eq-Comparison:T47 Operator:T24 Value:T39 Unit:T89 Per:T90
 E24	Eq-Comparison:T48 Operator:T25 Value:T40 Unit:T93
 E2	Eq-Comparison:T49 Value:T30 Temporal-Unit:T26 Operator:T50
 E4	Eq-Comparison:T51 Temporal-Period:T52
-E6	And:T53 Arg:E1 Arg2:E3
 E7	Eq-Comparison:T54 Operator:T55 Temporal-Unit:T56 Value:T31
-E5	Condition:T5 
-E9	Observation:T6 Name:T57 Eq-Comparison:E17
-E11	Observation:T58 Name:T59 Eq-Comparison:E18
-E13	Observation:T60 Name:T61 Eq-Comparison:E20
+E5	Condition:T5
+E9	Observation:T6 Name:T57 Numeric-Filter:E17
+E11	Observation:T58 Name:T59 Numeric-Filter:E18
+E13	Observation:T60 Name:T61 Numeric-Filter:E20
 E14	Observation:T62 Name:T63
-E25	Observation:T64 Name:T65 Eq-Comparison:E21
+E25	Observation:T64 Name:T65 Numeric-Filter:E21
 E26	Observation:T66 Name:T67
 E27	Eq-Comparison:T68 Operator:T22 Value:T37 Unit:T28 Unit2:T123
 E28	Procedure:T69 Name:T70
@@ -33,30 +32,23 @@ E32	Negation:T75 Negates:E31
 E33	Drug:T76 Name:T77 Temporality:E34
 E34	Eq-Comparison:T78 Temporal-Period:T79
 E35	Observation:T80 Name:T81 Stability:T82
-E36	Or:T83 Arg2:E35 Arg:E32
-E37	And:T84 Arg:E35 Arg2:E33
-E38	Observation:T85 Name:T86 Eq-Comparison:E22
-E39	Observation:T87 Name:T88 Eq-Comparison:E23
-E40	Observation:T91 Name:T92 Eq-Comparison:E24
+E38	Observation:T85 Name:T86 Numeric-Filter:E22
+E39	Observation:T87 Name:T88 Numeric-Filter:E23
+E40	Observation:T91 Name:T92 Numeric-Filter:E24
 E41	Drug:T94 Name:T95
 E42	Assertion:T96 Asserted:E41
 E43	Negation:T97 Negates:E41
 E44	Condition:T98 Name:T99 Stability:T100
 E45	Drug:T101 Name:T102
-E46	And:T103 Arg:E44 Arg2:E45
-E47	Or:T104 Arg:E43 Arg2:E44
 E48	Condition:T105 Name:T106
 E49	Condition:T107 Name:T108
-E50	And:T109 Arg:E48 Arg2:E49
 E51	Condition:T110 Name:T111 Severity:T112
 E52	Negation:T113 Negates:E51
 E53	Procedure:T114 Name:T115
 E54	Negation:T116 Negates:E15
-E55	Study:T117 
-E56	Temporal-Connection:T118 Arg:E54 Arg2:E55
+E55	Study:T117
 E57	Modifier:T120 Modifies:T4
 E58	Modifier:T121 Modifies:T2
-E59	And:T122 Arg:E9 Arg2:E11
 T1	Procedure 103 113	intubation
 T2	Procedure-Name 103 113	intubation
 T3	Procedure 129 140	ventilation
@@ -106,7 +98,6 @@ T49	Eq-Comparison 45 61	18 years or more
 T50	Eq-Operator 54 61	or more
 T51	Eq-Comparison 80 89	Receiving
 T52	Eq-Temporal-Period 80 89	Receiving
-T53	And 114 117	and
 T54	Eq-Comparison 145 163	more than 12 hours
 T55	Eq-Operator 145 154	more than
 T56	Eq-Temporal-Unit 158 163	hours
@@ -138,8 +129,6 @@ T79	Eq-Temporal-Period 691 696	using
 T80	Observation 663 674	vital signs
 T81	Observation-Name 663 674	vital signs
 T82	Stability 679 685	stable
-T83	Or 660 662	or
-T84	And 686 690	with
 T85	Observation 729 739	Heart rate
 T86	Observation-Name 729 739	Heart rate
 T14	Eq-Temporal-Unit 745 748	min
@@ -159,13 +148,10 @@ T99	Condition-Name 858 871	mental status
 T100	Stability 876 882	stable
 T101	Drug 888 897	sedatives
 T102	Drug-Name 888 897	sedatives
-T103	And 883 887	with
-T104	Or 855 857	or
 T105	Condition 925 945	respiratory stimulus
 T106	Condition-Name 925 945	respiratory stimulus
 T107	Condition 963 980	spontaneous cough
 T108	Condition-Name 963 980	spontaneous cough
-T109	And 947 950	and
 T110	Condition 1017 1044	tracheobronchial secretions
 T111	Condition-Name 1017 1044	tracheobronchial secretions
 T112	Severity 1007 1016	excessive
@@ -174,10 +160,8 @@ T114	Procedure 1070 1082	Tracheostomy
 T115	Procedure-Name 1070 1082	Tracheostomy
 T116	Negation 1107 1111	stop
 T117	Study 1145 1155	enrollment
-T118	Temporal-Connection 1138 1144	before
 T120	Modifier 118 128	mechanical
 T121	Modifier 90 102	endotracheal
-T122	And 333 337	with
 T123	Eq-Unit 514 517	H20
 T124	Eq-Unit 360 363	H2O
 A1	Life-Stage-And-Gender-Type T7 adult
@@ -195,24 +179,31 @@ A12	Eq-Operator-Value T50 GTEQ
 A13	Eq-Temporal-Period-Value T52 present
 A14	Eq-Operator-Value T55 GT
 A15	Eq-Temporal-Unit-Value T56 hour
-A16	Observation-Type-Value T57 measurement
-A17	Observation-Type-Value T59 measurement
-A18	Observation-Type-Value T11 measurement
-A19	Observation-Type-Value T61 measurement
-A20	Observation-Type-Value T63 measurement
-A22	Observation-Type-Value T67 measurement
+A16	Observation-Type-Value E9 measurement
+A17	Observation-Type-Value E11 measurement
+A18	Observation-Type-Value E10 measurement
+A19	Observation-Type-Value E13 measurement
+A20	Observation-Type-Value E14 measurement
+A22	Observation-Type-Value E26 measurement
 A24	Assertion-Type-Value E30 possible
 A25	Eq-Temporal-Period-Value T79 present
 A26	Stability-Value T82 stable
-A27	Observation-Type-Value T86 vital
+A27	Observation-Type-Value E38 vital
 A28	Eq-Temporal-Unit-Value T14 minute
-A29	Observation-Type-Value T88 lab
-A30	Observation-Type-Value T92 lab
+A29	Observation-Type-Value E39 lab
+A30	Observation-Type-Value E40 lab
 A31	Assertion-Type-Value E42 hypothetical
 A32	Stability-Value T100 stable
 A33	Severity-Value T112 severe
-A34	Temporal-Connection-Type-Value E56 before
-A21	Observation-Type-Value T81 vital
+A21	Observation-Type-Value E35 vital
 R1	Abbrev-Of Arg1:E25 Arg2:E14
 R2	Abbrev-Of Arg1:E12 Arg2:E26
 R3	Found-By Arg1:E8 Arg2:E28
+R4	And Arg1:E1 Arg2:E3
+R5	Or Arg1:E32 Arg2:E35
+R6	And Arg1:E35 Arg2:E33
+R7	And Arg1:E44 Arg2:E45
+R8	Or Arg1:E43 Arg2:E44
+R9	And Arg1:E48 Arg2:E49
+R10	Before Arg1:E54 Arg2:E55
+R11	And Arg1:E9 Arg2:E11

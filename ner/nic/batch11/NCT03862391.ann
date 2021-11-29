@@ -3,19 +3,17 @@ E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
-E2	Observation:T15 Name:T16 Eq-Comparison:E4
+E2	Observation:T15 Name:T16 Numeric-Filter:E4
 E4	Eq-Comparison:T17 Operator:T18 Value:T11 Value2:T12
 E6	Procedure:T19 Name:T20 Temporality:E20
 E8	Procedure:T21 Name:T22
-E11	Observation:T27 Name:T28 Eq-Comparison:E12
+E11	Observation:T27 Name:T28 Numeric-Filter:E12
 E12	Eq-Comparison:T29 Operator:T30 Value:T13 Value2:T14
 E13	Family-Member:T31 Has:E1
 E14	Condition:T32 Name:T33 Temporality:E21
-E10	Encounter:T25 Location:T23
-E16	Encounter:T36 Location:T34
-E17	And:T37 Arg:E14 Arg2:E16
+E10	Encounter:T25
+E16	Encounter:T36
 E18	Family-Member:T38 Has:E1
-E19	Or:T39 Arg:E18 Arg2:E13
 E20	Eq-Comparison:T35 Temporal-Period:T40
 E21	Eq-Comparison:T41 Temporal-Period:T42
 E22	Eq-Comparison:T43 Temporal-Period:T44
@@ -53,9 +51,7 @@ T33	Condition-Name 356 362	asthma
 T34	Location 384 403	intensive care unit
 T25	Encounter 124 135	followed up
 T36	Encounter 367 376	follow-up
-T37	And 363 366	and
 T38	Family-Member 284 291	patient
-T39	Or 292 294	or
 T35	Eq-Comparison 54 63	underwent
 T40	Eq-Temporal-Period 54 63	underwent
 T41	Eq-Comparison 345 352	history
@@ -71,7 +67,11 @@ A7	Family-Member-Type E18 patient
 A8	Eq-Temporal-Period-Value T40 past
 A9	Eq-Temporal-Period-Value T42 past
 A10	Eq-Temporal-Period-Value T44 past
-A11	Observation-Type-Value T28 clinical-score
+A11	Observation-Type-Value E11 clinical-score
+A4	Observation-Type-Value E2 clinical-score
 R1	Using Arg1:E6 Arg2:E8
 R2	Abbrev-Of Arg1:T23 Arg2:T24
-A4	Observation-Type-Value T16 clinical-score
+R3	And Arg1:E14 Arg2:E16
+R4	Or Arg1:E18 Arg2:E13
+R5	Or Arg1:E3 Arg2:E9
+R6	Or Arg1:E7 Arg2:E5

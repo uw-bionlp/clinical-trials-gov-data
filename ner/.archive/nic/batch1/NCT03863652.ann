@@ -1,0 +1,47 @@
+E1	Procedure:T1 Name:T2
+E2	Age:T5 Eq-Comparison:E3
+E3	Eq-Comparison:T7 Operator:T3 Temporal-Unit:T4 Value:T6
+E4	Condition:T8 Name:T9
+E6	Condition:T11 Name:T12
+E7	Negation:T13 Negates:E6
+E8	Condition:T15 Name:T16
+E9	Condition:T17 Name:T18 Temporality:E15
+E10	Assertion:T19 Asserted:E9
+E11	Temporal-Connection:T20 Arg2:E12 Arg:E15
+E12	Study:T21 
+E13	Assertion:T22 Asserted:E1
+E5	And:T10 Arg:T14 Arg2:E8
+E14	And:T23 Arg:E8 Arg2:E10
+E15	Eq-Comparison:T24 Temporal-Period:T25
+T1	Procedure 58 61	PCI
+T2	Procedure-Name 58 61	PCI
+T3	Eq-Operator 34 35	≥
+T4	Eq-Temporal-Unit 38 43	years
+T5	Age 44 47	old
+T6	Eq-Value 35 37	18
+T7	Eq-Comparison 34 43	≥18 years
+T8	Condition 84 112	palpable distal radial arter
+T9	Condition-Name 84 112	palpable distal radial arter
+T11	Condition 257 286	palpable distal radial artery
+T12	Condition-Name 257 286	palpable distal radial artery
+T13	Negation 253 256	not
+T14	Life-Stage-And-Gender 292 298	Female
+T15	Condition 302 324	childbearing potential
+T16	Condition-Name 302 324	childbearing potential
+T17	Condition 355 363	pregnant
+T18	Condition-Name 355 363	pregnant
+T19	Assertion 330 344	possibly plans
+T20	Temporal-Connection 373 378	after
+T21	Study 400 405	study
+T22	Assertion 48 57	requiring
+T10	And 299 301	of
+T23	And 326 329	who
+T24	Eq-Comparison 364 372	any time
+T25	Eq-Temporal-Period 364 372	any time
+A1	Eq-Operator-Value T3 GTEQ
+A2	Eq-Temporal-Unit-Value T4 year
+A3	Life-Stage-And-Gender-Type T14 female
+A4	Assertion-Type-Value E10 intention
+A5	Temporal-Connection-Type-Value E11 after
+A6	Assertion-Type-Value E13 hypothetical
+A7	Eq-Temporal-Period-Value T25 anytime

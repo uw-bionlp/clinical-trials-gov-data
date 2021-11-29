@@ -1,7 +1,6 @@
 E1	Condition:T1 Name:T72
 E2	Modifier:T2 Modifies:T127
-E3	Or:T3 Arg:E2 Arg2:E4
-E5	Provider:T5 Type:T73
+E5	Provider:T5
 E7	Condition:T7 Name:T74
 E8	Exception:T8 From:E7 Except:E9
 E9	Condition:T9 Name:T6
@@ -14,28 +13,23 @@ E15	Drug:T15 Name:T80 Temporality:E13
 E16	Drug:T16 Name:T81 Temporality:E13
 E17	Drug:T17 Name:T82 Temporality:E13
 E18	Drug:T18 Name:T83 Temporality:E13
-E19	Or:T19 Arg:E18 Arg2:E20
 E20	Drug:T20 Name:T84 Temporality:E13
 E21	Other:T21 Is-Other:E24
 E22	Negation:T22 Negates:E23
 E23	Condition:T23 Name:T85
-E24	Condition:T24 
+E24	Condition:T24
 E25	Condition:T25 Name:T86
 E26	Condition:T26 Name:T87
-E27	Or:T27 Arg:E26 Arg2:E28
 E28	Condition:T28 Name:T88
 E29	Procedure:T29 Name:T90
-E30	Temporal-Connection:T30 Arg:E29 Arg2:E31
-E31	Study:T31 
+E31	Study:T31
 E32	Other:T32 Is-Other:E33
-E33	Study:T33 
-E34	Or:T34 Arg:E33 Arg2:E36
+E33	Study:T33
 E35	Eq-Comparison:T35 Temporal-Period:T91
 E36	Drug:T36 Temporality:E35
 E37	Eq-Comparison:T37 Temporal-Period:T92
 E38	Drug:T38 Name:T93 Temporality:E37
 E39	Drug:T39 Name:T94
-E40	Or:T40 Arg:E39 Arg2:E41
 E41	Drug:T41 Name:T95 Temporality:E37
 E42	Eq-Comparison:T42 Temporal-Period:T96
 E43	Drug:T43 Name:T97 Temporality:E42
@@ -58,22 +52,19 @@ E59	Drug:T59 Name:T113 Temporality:E42
 E60	Drug:T60 Name:T114 Temporality:E42
 E61	Drug:T61 Name:T115 Temporality:E42
 E62	Drug:T62 Name:T116 Temporality:E42
-E63	Or:T63 Arg:E62 Arg2:E64
 E64	Drug:T64 Name:T117 Temporality:E42
-E65	Condition:T65 Name:T118
+E65	Observation:T65 Name:T118
 E66	Eq-Comparison:T66 Value:T119 Operator:T120
-E68	Observation:T68 Name:T121 Eq-Comparison:E69
+E68	Observation:T68 Name:T121 Numeric-Filter:E69
 E69	Eq-Comparison:T69 Operator:T122 Value:T123 Per:T129
 E71	Observation:T71 Name:T124
 E72	Procedure:T126 Name:T127 Provider:E5
 E4	Modifier:T4 Modifies:T127
 E6	Modifier:T67 Modifies:E66
-E73	Temporal-Connection:T130 Arg:E68 Arg2:E74
 E70	Observation:T70 Name:T125
-E74	Study:T131 
+E74	Study:T131
 T1	Condition 42 62	pseudoachondroplasia
 T2	Modifier 102 111	in person
-T3	Or 112 114	or
 T5	Provider 141 170	skeletal dysplasia specialist
 T7	Condition 183 190	Healthy
 T8	Exception 191 197	beyond
@@ -87,7 +78,6 @@ T15	Drug 333 343	lovastatin
 T16	Drug 345 357	ketoconazole
 T17	Drug 359 371	itraconazole
 T18	Drug 373 385	fexofenadine
-T19	Or 386 389	and
 T20	Drug 390 399	triazolam
 T21	Other 406 411	Other
 T22	Negation 412 415	non
@@ -95,20 +85,16 @@ T23	Condition 416 436	pseudoachondroplasia
 T24	Condition 445 462	health conditions
 T25	Condition 469 476	cancers
 T26	Condition 483 492	Pregnancy
-T27	Or 493 495	or
 T28	Condition 496 509	breastfeeding
 T29	Procedure 535 548	contraception
-T30	Temporal-Connection 549 555	during
 T31	Study 560 565	study
 T32	Other 589 596	another
 T33	Study 606 611	study
-T34	Or 612 618	and/or
 T35	Eq-Comparison 619 624	using
 T36	Drug 625 647	investigational agents
 T37	Eq-Comparison 654 657	Use
 T38	Drug 661 690	Non-steroid anti-inflammatory
 T39	Drug 692 698	NSAIDs
-T40	Or 700 702	or
 T41	Drug 703 710	aspirin
 T42	Eq-Comparison 717 724	Current
 T43	Drug 732 742	Alfentanil
@@ -131,9 +117,8 @@ T59	Drug 933 943	Tizanidine
 T60	Drug 945 957	Thioridazine
 T61	Drug 959 971	Fosphenytoin
 T62	Drug 973 982	Phenytoin
-T63	Or 983 985	or
 T64	Drug 986 994	Warfarin
-T65	Condition 1019 1023	pain
+T65	Observation 1019 1023	pain
 T66	Eq-Comparison 1027 1038	2 or higher
 T68	Observation 1063 1077	Platelet count
 T69	Eq-Comparison 1078 1097	below 50,000 per ul
@@ -183,7 +168,7 @@ T114	Drug-Name 945 957	Thioridazine
 T115	Drug-Name 959 971	Fosphenytoin
 T116	Drug-Name 973 982	Phenytoin
 T117	Drug-Name 986 994	Warfarin
-T118	Condition-Name 1019 1023	pain
+T118	Observation-Name 1019 1023	pain
 T119	Eq-Value 1027 1028	2
 T120	Eq-Operator 1029 1038	or higher
 T121	Observation-Name 1063 1077	Platelet count
@@ -194,14 +179,11 @@ T125	Observation-Name 1132 1135	CBC
 T126	Procedure 75 94	clinical assessment
 T127	Procedure-Name 75 94	clinical assessment
 T4	Modifier 118 137	photographic review
-T73	Provider-Type 141 170	skeletal dysplasia specialist
 T6	Condition-Name 198 218	pseudoachondroplasia
 T67	Modifier 1042 1056	10 point scale
 T129	Eq-Unit 1095 1097	ul
-T130	Temporal-Connection 1098 1100	on
 T70	Observation 1132 1135	CBC
 T131	Study 1101 1109	baseline
-A1	Temporal-Connection-Type-Value E30 during
 A2	Eq-Temporal-Period-Value T76 present
 A3	Eq-Temporal-Period-Value T78 present
 A4	Life-Stage-And-Gender-Type T89 female
@@ -209,10 +191,9 @@ A5	Eq-Temporal-Period-Value T91 present
 A6	Eq-Temporal-Period-Value T92 present
 A7	Eq-Temporal-Period-Value T96 present
 A8	Eq-Operator-Value T120 GTEQ
-A9	Observation-Type-Value T121 lab
+A9	Observation-Type-Value E68 lab
 A10	Eq-Operator-Value T122 LT
-A11	Observation-Type-Value T124 lab
-A12	Temporal-Connection-Type-Value E73 during
+A11	Observation-Type-Value E71 lab
 R1	Found-By Arg1:E1 Arg2:E72
 R2	Caused-By Arg1:E10 Arg2:E9
 R3	Caused-By Arg1:E24 Arg2:E23
@@ -221,3 +202,34 @@ R5	If-Then Arg1:T89 Arg2:E29
 R6	Abbrev-Of Arg1:E39 Arg2:E38
 R7	Abbrev-Of Arg1:E70 Arg2:E71
 R8	Using Arg1:E74 Arg2:E71
+R9	Or Arg1:E2 Arg2:E4
+R10	Or Arg1:E18 Arg2:E20
+R11	Or Arg1:E26 Arg2:E28
+R12	During Arg1:E29 Arg2:E31
+R13	Or Arg1:E33 Arg2:E36
+R14	Or Arg1:E39 Arg2:E41
+R15	Or Arg1:E62 Arg2:E64
+R16	During Arg1:E68 Arg2:E74
+R17	Or Arg1:E14 Arg2:E15
+R18	Or Arg1:E15 Arg2:E16
+R19	Or Arg1:E16 Arg2:E17
+R20	Or Arg1:E17 Arg2:E18
+R21	Or Arg1:E43 Arg2:E44
+R22	Or Arg1:E44 Arg2:E45
+R23	Or Arg1:E45 Arg2:E46
+R24	Or Arg1:E46 Arg2:E47
+R25	Or Arg1:E47 Arg2:E48
+R26	Or Arg1:E48 Arg2:E49
+R27	Or Arg1:E49 Arg2:E50
+R28	Or Arg1:E50 Arg2:E51
+R29	Or Arg1:E51 Arg2:E52
+R30	Or Arg1:E52 Arg2:E53
+R31	Or Arg1:E53 Arg2:E54
+R32	Or Arg1:E54 Arg2:E55
+R33	Or Arg1:E55 Arg2:E56
+R34	Or Arg1:E56 Arg2:E57
+R35	Or Arg1:E57 Arg2:E58
+R36	Or Arg1:E58 Arg2:E59
+R37	Or Arg1:E59 Arg2:E60
+R38	Or Arg1:E60 Arg2:E61
+R39	Or Arg1:E61 Arg2:E62

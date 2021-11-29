@@ -1,0 +1,337 @@
+E2	Condition:T2 Name:T98 Severity:T97
+E3	Condition:T3 Name:T99
+E4	Eq-Comparison:T4 Temporal-Recency:T29
+E5	Modifier:T5 Modifies:T101
+E6	Or:T6 Arg:E5 Arg2:E96
+E7	Condition:T7 Name:T101 Temporality:E4
+E8	Condition:T8 Name:T102
+E9	Condition:T9 Name:T103
+E10	Condition:T10 Name:T104
+E11	Condition:T11 Name:T105
+E12	Condition:T12 Name:T107 Severity:T106
+E14	Condition:T14 Name:T109
+E15	Condition:T15 Name:T111 Severity:T110
+E16	Or:T16 Arg:E12 Arg2:E17
+E17	Condition:T17 Name:T112
+E18	Modifier:T18 Modifies:T112
+E19	And:T19 Arg:E18 Arg2:E13
+E20	Procedure:T20 Name:T113
+E21	Condition:T21 Name:T114
+E22	Condition:T22 Name:T115 Polarity:T108
+E23	Modifier:T23 Modifies:T118
+E24	Modifier:T24 Modifies:T118
+E25	Or:T25 Arg:E24 Arg2:E26
+E26	Modifier:T26 Modifies:T118
+E27	Condition:T27 Name:T118 Severity:T116
+E29	Drug:T30 
+E30	And:T31 Arg:E29 Arg2:E31
+E31	Negation:T32 Negates:E28
+E32	Or:T33 Arg:E27 Arg2:E33
+E33	Observation:T34 Name:T119 Eq-Comparison:E34
+E34	Eq-Comparison:T35 Operator:T120 Value:T121 Unit:T122
+E36	Observation:T37 Name:T124 Severity:T123 Polarity:T36
+E37	Observation:T38 Name:T125 Eq-Comparison:E38
+E38	Eq-Comparison:T39 Operator:T126 Unit:T127 Value:T117
+E39	Or:T40 Arg:E37 Arg2:E40
+E40	Observation:T41 Name:T128 Minimum-Count:E35 Temporality:E42
+E41	Eq-Comparison:T42 Operator:T129 Unit:T130 Value:T178
+E42	Eq-Comparison:T43 Operator:T132 Value:T133 Temporal-Unit:T134
+E44	Encounter:T45 
+E45	Exception:T46 From:E44 Except:E47
+E47	Procedure:T48 Name:T135
+E48	Condition:T49 Name:T136
+E49	Eq-Comparison:T50 Operator:T137 Value:T138 Unit:T140
+E54	Condition:T55 Name:T141 Polarity:T52
+E55	Condition:T56 Name:T142
+E56	Observation:T57 Name:T143 Eq-Comparison:E57
+E57	Eq-Comparison:T58 Operator:T144 Value:T145 Unit:T146 Per:T147
+E58	Or:T59 Arg:E56 Arg2:E59
+E59	Observation:T60 Name:T148 Eq-Comparison:E50
+E60	Negation:T61 Negates:E62
+E61	Other:T62 Is-Other:E62
+E62	Condition:T63 Name:T149
+E63	Condition:T64 Name:T150
+E65	Condition:T66 Name:T153
+E66	Modifier:T67 Modifies:T154
+E67	Condition:T68 Name:T154
+E70	Observation:T71 Name:T155
+E71	Assertion:T72 Asserted:E53
+E72	Or:T73 Arg:T156 Arg2:T69
+E73	Eq-Comparison:T74 Temporal-Period:T157
+E74	Assertion:T75 Asserted:E75
+E75	Condition:T76 Name:T158 Temporality:E73
+E76	And:T77 Arg:E75 Arg2:E77
+E77	Condition:T78 Name:T160 Severity:T159
+E78	Eq-Comparison:T79 Temporal-Period:T161
+E79	Condition:T80 Name:T162 Temporality:E78
+E80	Eq-Comparison:T81 Temporal-Period:T163
+E81	Condition:T82 Name:T164 Temporality:E80
+E82	Eq-Comparison:T83 Temporal-Period:T165
+E83	Condition:T84 Name:T166 Temporality:E82
+E84	Condition:T85 Name:T167
+E85	Observation:T86 Name:T168 Eq-Comparison:E86
+E86	Eq-Comparison:T87 Operator:T169 Value:T170 Unit:T171 Per:T172
+E87	Eq-Comparison:T88 Operator:T173 Value:T174 Unit:T175
+E88	Or:T89 Arg:E64 Arg2:E89
+E89	Condition:T90 Name:T182
+E90	Negation:T91 Negates:E91
+E91	Procedure:T92 Name:T183
+E92	Procedure:T93 Name:T176
+E94	Procedure:T95 Name:T177
+E1	Assertion:T1 Asserted:E3
+E96	Modifier:T100 Modifies:T101
+E13	Modifier:T13 Modifies:T112
+E28	Condition:T28 
+E95	Other:T96 Is-Other:E28
+E35	Eq-Comparison:T179 Value:T131 Unit:T180
+E43	Temporal-Connection:T44 Arg:E40 Arg2:E44
+E50	Eq-Comparison:T53 Value:T54
+E51	And:T139 Arg:E59 Arg2:E60
+E52	And:T65 Arg:E65 Arg2:E67
+E53	Study:T70 
+E64	Observation:T151 Name:T181 Eq-Comparison:E87
+E68	Assertion:T184 Asserted:E90
+E69	Contraindication:T94 Contraindicates:E94
+T2	Condition 26 39	Pre-Eclampsia
+T3	Condition 68 102	central nervous system dysfunction
+T4	Eq-Comparison 104 113	New onset
+T5	Modifier 114 122	cerebral
+T6	Or 123 125	or
+T7	Condition 133 144	disturbance
+T8	Condition 155 164	Photopsia
+T9	Condition 166 175	scotomata
+T10	Condition 177 195	cortical blindness
+T11	Condition 197 214	retinal vasospasm
+T12	Condition 228 236	headache
+T14	Condition 242 256	incapacitating
+T15	Condition 269 277	headache
+T16	Or 294 296	or
+T17	Condition 297 305	headache
+T18	Modifier 311 319	persists
+T19	And 320 323	and
+T20	Procedure 343 360	analgesic therapy
+T21	Condition 366 387	Altered mental status
+T22	Condition 393 400	Hepatic
+T23	Modifier 421 437	persistent right
+T24	Modifier 438 452	upper quadrant
+T25	Or 453 455	or
+T26	Modifier 456 466	epigastric
+T27	Condition 467 471	pain
+T30	Drug 488 498	medication
+T31	And 499 502	and
+T32	Negation 503 506	not
+T33	Or 549 551	or
+T34	Observation 552 584	serum transaminase concentration
+T35	Eq-Comparison 585 599	≥ twice normal
+T37	Observation 622 636	blood pressure
+T38	Observation 648 671	Systolic blood pressure
+T39	Eq-Comparison 672 681	≥160 mmHg
+T40	Or 682 684	or
+T41	Observation 685 709	diastolic blood pressure
+T42	Eq-Comparison 710 719	≥110 mmHg
+T43	Eq-Comparison 737 762	at least four hours apart
+T45	Encounter 787 794	bedrest
+T46	Exception 796 802	unless
+T48	Procedure 821 845	antihypertensive therapy
+T49	Condition 853 869	Thrombocytopenia
+T50	Eq-Comparison 871 896	<100,000 platelets/microL
+T55	Condition 903 908	Renal
+T56	Condition 922 953	Progressive renal insufficiency
+T57	Observation 955 971	serum creatinine
+T58	Eq-Comparison 972 982	>1.1 mg/dL
+T59	Or 983 985	or
+T60	Observation 998 1028	serum creatinine concentration
+T61	Negation 1036 1043	absence
+T62	Other 1047 1052	other
+T63	Condition 1053 1066	renal disease
+T64	Condition 1074 1089	Pulmonary edema
+T66	Condition 1115 1123	pregnant
+T67	Modifier 1138 1151	uncomplicated
+T68	Condition 1152 1161	pregnancy
+T71	Observation 1181 1196	gestational age
+T72	Assertion 1197 1204	will be
+T73	Or 1240 1242	or
+T74	Eq-Comparison 1284 1291	History
+T75	Assertion 1295 1306	symptomatic
+T76	Condition 1307 1330	cerebrovascular disease
+T77	And 1331 1335	with
+T78	Condition 1348 1364	residual deficit
+T79	Eq-Comparison 1370 1377	History
+T80	Condition 1381 1391	alcoholism
+T81	Eq-Comparison 1397 1404	History
+T82	Condition 1408 1427	psychiatric illness
+T83	Eq-Comparison 1433 1440	History
+T84	Condition 1444 1458	claustrophobia
+T85	Condition 1464 1477	Renal failure
+T86	Observation 1479 1489	creatinine
+T87	Eq-Comparison 1490 1501	> 2.0 mg/dl
+T88	Eq-Comparison 1522 1543	less than a 7th grade
+T89	Or 1554 1556	or
+T90	Condition 1557 1571	unable to read
+T91	Negation 1581 1587	unable
+T92	Procedure 1601 1627	neuropsychological testing
+T93	Procedure 1647 1662	bodily implants
+T95	Procedure 1674 1677	MRI
+T97	Severity 19 25	Severe
+T98	Condition-Name 26 39	Pre-Eclampsia
+T99	Condition-Name 68 102	central nervous system dysfunction
+T101	Condition-Name 133 144	disturbance
+T102	Condition-Name 155 164	Photopsia
+T103	Condition-Name 166 175	scotomata
+T104	Condition-Name 177 195	cortical blindness
+T105	Condition-Name 197 214	retinal vasospasm
+T106	Severity 221 227	Severe
+T107	Condition-Name 228 236	headache
+T109	Condition-Name 242 256	incapacitating
+T110	Severity 263 268	worst
+T111	Condition-Name 269 277	headache
+T112	Condition-Name 297 305	headache
+T113	Procedure-Name 343 360	analgesic therapy
+T114	Condition-Name 366 387	Altered mental status
+T115	Condition-Name 393 400	Hepatic
+T116	Severity 414 420	Severe
+T118	Condition-Name 467 471	pain
+T119	Observation-Name 552 584	serum transaminase concentration
+T120	Eq-Operator 585 586	≥
+T121	Eq-Value 587 592	twice
+T122	Eq-Unit 593 599	normal
+T123	Severity 615 621	Severe
+T124	Observation-Name 622 636	blood pressure
+T125	Observation-Name 648 671	Systolic blood pressure
+T126	Eq-Operator 672 673	≥
+T127	Eq-Unit 677 681	mmHg
+T128	Observation-Name 685 709	diastolic blood pressure
+T129	Eq-Operator 710 711	≥
+T130	Eq-Unit 715 719	mmHg
+T131	Eq-Value 723 726	two
+T132	Eq-Operator 737 745	at least
+T133	Eq-Value 746 750	four
+T134	Eq-Temporal-Unit 751 756	hours
+T135	Procedure-Name 821 845	antihypertensive therapy
+T136	Condition-Name 853 869	Thrombocytopenia
+T137	Eq-Operator 871 872	<
+T138	Eq-Value 872 879	100,000
+T140	Eq-Unit 890 896	microL
+T141	Condition-Name 903 908	Renal
+T142	Condition-Name 922 953	Progressive renal insufficiency
+T143	Observation-Name 955 971	serum creatinine
+T144	Eq-Operator 972 973	>
+T145	Eq-Value 973 976	1.1
+T146	Eq-Unit 977 979	mg
+T147	Eq-Unit 980 982	dL
+T148	Observation-Name 998 1028	serum creatinine concentration
+T149	Condition-Name 1053 1066	renal disease
+T150	Condition-Name 1074 1089	Pulmonary edema
+T152	Language 1098 1105	English
+T153	Condition-Name 1115 1123	pregnant
+T154	Condition-Name 1152 1161	pregnancy
+T155	Observation-Name 1181 1196	gestational age
+T156	Location 1223 1239	antenatal clinic
+T157	Eq-Temporal-Period 1284 1291	History
+T158	Condition-Name 1307 1330	cerebrovascular disease
+T159	Severity 1336 1347	substantial
+T160	Condition-Name 1348 1364	residual deficit
+T161	Eq-Temporal-Period 1370 1377	History
+T162	Condition-Name 1381 1391	alcoholism
+T163	Eq-Temporal-Period 1397 1404	History
+T164	Condition-Name 1408 1427	psychiatric illness
+T165	Eq-Temporal-Period 1433 1440	History
+T166	Condition-Name 1444 1458	claustrophobia
+T167	Condition-Name 1464 1477	Renal failure
+T168	Observation-Name 1479 1489	creatinine
+T169	Eq-Operator 1490 1491	>
+T170	Eq-Value 1492 1495	2.0
+T171	Eq-Unit 1496 1498	mg
+T172	Eq-Unit 1499 1501	dl
+T173	Eq-Operator 1522 1531	less than
+T174	Eq-Value 1534 1537	7th
+T175	Eq-Unit 1538 1543	grade
+T176	Procedure-Name 1647 1662	bodily implants
+T177	Procedure-Name 1674 1677	MRI
+T1	Assertion 56 64	Symptoms
+T29	Eq-Temporal-Recency 104 113	New onset
+T100	Modifier 126 132	visual
+T13	Modifier 324 334	progresses
+T108	Polarity 401 412	abnormality
+T28	Condition 539 548	diagnosis
+T96	Other 527 538	alternative
+T36	Polarity 637 646	elevation
+T117	Eq-Value 673 676	160
+T178	Eq-Value 711 714	110
+T179	Eq-Comparison 723 736	two occasions
+T180	Eq-Unit 727 736	occasions
+T44	Temporal-Connection 763 786	while the patient is on
+T52	Polarity 909 920	abnormality
+T53	Eq-Comparison 986 994	doubling
+T54	Eq-Value 986 994	doubling
+T139	And 1029 1035	in the
+T65	And 1133 1137	with
+T69	Location 1247 1257	labor ward
+T70	Study 1205 1213	enrolled
+T151	Observation 1544 1553	education
+T181	Observation-Name 1544 1553	education
+T182	Condition-Name 1557 1571	unable to read
+T183	Procedure-Name 1601 1627	neuropsychological testing
+T184	Assertion 1581 1587	unable
+T94	Contraindication 1663 1669	unsafe
+T47	Observation-Name 880 889	platelets
+A3	Assertion-Type-Value E71 hypothetical
+A4	Assertion-Type-Value E74 possible
+A5	Severity-Value T97 severe
+A6	Severity-Value T106 severe
+A7	Severity-Value T110 severe
+A8	Severity-Value T116 severe
+A9	Observation-Type-Value T119 lab
+A10	Eq-Operator-Value T120 GTEQ
+A11	Eq-Unit-Value T122 ref-range-normal
+A12	Severity-Value T123 severe
+A13	Observation-Type-Value T124 vital
+A14	Observation-Type-Value T125 vital
+A15	Eq-Operator-Value T126 GTEQ
+A16	Observation-Type-Value T128 vital
+A17	Eq-Operator-Value T129 GTEQ
+A18	Eq-Operator-Value T132 GTEQ
+A19	Eq-Temporal-Unit-Value T134 hour
+A20	Eq-Operator-Value T137 LT
+A21	Observation-Type-Value T143 lab
+A22	Eq-Operator-Value T144 GT
+A23	Observation-Type-Value T148 lab
+A24	Location-Value T156 clinic
+A25	Eq-Temporal-Period-Value T157 past
+A26	Severity-Value T159 severe
+A27	Eq-Temporal-Period-Value T161 past
+A28	Eq-Temporal-Period-Value T163 past
+A29	Eq-Temporal-Period-Value T165 past
+A30	Observation-Type-Value T168 lab
+A31	Eq-Operator-Value T169 GT
+A32	Eq-Operator-Value T173 LT
+A1	Assertion-Type-Value E1 possible
+A33	Eq-Temporal-Recency-Value T29 first-time
+A34	Polarity-Value T108 abnormal
+A2	Polarity-Value T36 high
+A35	Temporal-Connection-Type-Value E43 during
+A37	Polarity-Value T52 abnormal
+A38	Location-Value T69 unit
+A39	Assertion-Type-Value E68 hypothetical
+A36	Observation-Type-Value T47 lab
+R1	Equivalent-To Arg1:E3 Arg2:E2
+R2	Equivalent-To Arg1:E7 Arg2:E3
+R3	Example-Of Arg1:E8 Arg2:E7
+R4	Example-Of Arg1:E9 Arg2:E7
+R5	Example-Of Arg1:E10 Arg2:E7
+R6	Example-Of Arg1:E11 Arg2:E7
+R8	Example-Of Arg1:E14 Arg2:E12
+R9	Example-Of Arg1:E15 Arg2:E12
+R10	Treatment-For Arg1:E20 Arg2:E17
+R11	Equivalent-To Arg1:E17 Arg2:E2
+R7	Treatment-For Arg1:E29 Arg2:E27
+R12	Caused-By Arg1:E27 Arg2:E28
+R13	Equivalent-To Arg1:E37 Arg2:E36
+R14	Equivalent-To Arg1:E40 Arg2:E41
+R15	Equivalent-To Arg1:E40 Arg2:E36
+R17	Equivalent-To Arg1:E55 Arg2:E54
+R18	Equivalent-To Arg1:E56 Arg2:E55
+R19	Equivalent-To Arg1:E59 Arg2:E56
+R20	Equivalent-To Arg1:E85 Arg2:E84
+R21	Caused-By Arg1:E90 Arg2:E89
+R22	Caused-By Arg1:E69 Arg2:E92

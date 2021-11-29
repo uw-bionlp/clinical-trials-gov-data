@@ -1,24 +1,18 @@
 E1	Condition:T1 Name:T2
 E2	Condition:T3 Name:T4
-E3	And:T5 Arg:E1 Arg2:E2
 E4	Procedure:T6 Name:T7
 E5	Observation:T8 Name:T9
-E6	And:T10 Arg:E4 Arg2:E5
 E7	Drug:T11 Name:T12
-E8	Or:T13 Arg:E5 Arg2:E7
-E9	Age:T14 Eq-Comparison:E10
+E9	Age:T14 Numeric-Filter:E10
 E10	Eq-Comparison:T15 Operator:T17 Value:T16
-E11	Or:T20 Arg:T18 Arg2:T19
 E12	Eq-Comparison:T21 Temporal-Period:T22
 E13	Drug:T23 Temporality:E12
-E14	Observation:T24 Name:T25 Eq-Comparison:E15
+E14	Observation:T24 Name:T25 Numeric-Filter:E15
 E15	Eq-Comparison:T26 Operator:T27 Value:T28 Unit:T29 Per:T30
 E16	Eq-Comparison:T31 Value:T32 Unit:T33
-E17	Or:T34 Arg:E15 Arg2:E16
 E18	Condition:T35 Name:T36
 E19	Condition:T37 Name:T38
 E20	Condition:T39 Name:T40
-E21	Or:T41 Arg:E18 Arg2:E20
 E22	Observation:T42 Name:T43 Temporality:E23
 E23	Eq-Comparison:T44 Temporal-Period:T45 Value:T46 Temporal-Unit:T47
 E24	Condition:T48 Name:T49
@@ -26,22 +20,18 @@ E25	Condition:T50 Name:T51
 E26	Condition:T52 Name:T53
 E27	Condition:T54 Name:T55
 E28	Condition:T56 Name:T57
-E29	Or:T58 Arg:E27 Arg2:E28
 E30	Condition:T59 Severity:T60
 E31	Drug:T61 Name:T62 Temporality:E33
 E32	Drug:T63 Name:T64 Temporality:E33
 E33	Eq-Comparison:T65 Temporal-Period:T66
-E34	Or:T67 Arg:E31 Arg2:E32
 E35	Drug:T68 Name:T69 Temporality:E36
 E36	Eq-Comparison:T70 Value:T71 Temporal-Unit:T72 Operator:T73
 E37	Study:T74
-E38	Temporal-Connection:T75 Arg:E36 Arg2:E37
 E39	Negation:T76 Negates:E35
 E40	Assertion:T77 Asserted:E39
 E41	Exception:T78 From:E32 Except:E40
 E42	Allergy:T79 Name:T82
 E43	Condition:T80 Name:T81
-E44	Or:T83 Arg:E42 Arg2:E43
 E45	Condition:T84 Name:T85
 E46	Condition:T86 Name:T87
 E47	Drug:T88
@@ -49,7 +39,6 @@ E48	Drug:T89 Name:T90
 E49	Exception:T91 From:E47 Except:E48
 E50	Condition:T92 Name:T93
 E51	Condition:T94 Name:T95
-E52	Or:T96 Arg:E50 Arg2:E51
 E53	Observation:T97 Name:T98 Temporality:E54
 E54	Eq-Comparison:T99 Temporal-Period:T100 Value:T101 Temporal-Unit:T102
 E55	Condition:T103 Name:T104
@@ -57,44 +46,36 @@ E56	Condition:T105 Name:T106
 E57	Condition:T107 Name:T108
 E58	Condition:T109 Name:T110
 E59	Condition:T111 Name:T112
-E60	Or:T113 Arg:E58 Arg2:E59
 E61	Condition:T114 Severity:T115
 E62	Condition:T116 Name:T117
 E63	Exception:T118 From:E61 Except:E62
 E64	Eq-Comparison:T119 Temporal-Period:T120
 E65	Drug:T121 Name:T122 Temporality:E64
 E66	Drug:T123 Name:T124 Temporality:E64
-E67	Or:T125 Arg:E65 Arg2:E66
 E68	Negation:T126 Negates:E70
 E69	Assertion:T127 Asserted:E68
 E70	Drug:T128 Name:T129 Temporality:E71
 E71	Eq-Comparison:T130 Value:T131 Temporal-Unit:T132
 E72	Study:T133
-E73	Temporal-Connection:T134 Arg:E71 Arg2:E72
 E74	Exception:T135 From:E66 Except:E69
 E75	Allergy:T137 Name:T136
 E76	Condition:T138 Name:T139
-E77	Or:T140 Arg:E75 Arg2:E76
 T1	Condition 20 27	Healthy
 T2	Condition-Name 20 27	Healthy
 T3	Condition 32 35	T2D
 T4	Condition-Name 32 35	T2D
-T5	And 28 31	and
 T6	Procedure 51 55	diet
 T7	Procedure-Name 51 55	diet
 T8	Observation 60 69	lifestyle
 T9	Observation-Name 60 69	lifestyle
-T10	And 56 59	and
 T11	Drug 73 82	metformin
 T12	Drug-Name 73 82	metformin
-T13	Or 70 72	or
 T14	Age 96 99	Age
 T15	Eq-Comparison 100 103	18+
 T16	Eq-Value 100 102	18
 T17	Eq-Operator 102 103	+
 T18	Life-Stage-And-Gender 105 110	males
 T19	Life-Stage-And-Gender 115 122	females
-T20	Or 111 114	and
 T21	Eq-Comparison 173 179	taking
 T22	Eq-Temporal-Period 173 179	taking
 T23	Drug 191 201	medication
@@ -108,14 +89,12 @@ T30	Eq-Unit 226 229	mol
 T31	Eq-Comparison 234 238	6.5%
 T32	Eq-Value 234 237	6.5
 T33	Eq-Unit 237 238	%
-T34	Or 231 233	or
 T35	Condition 245 253	pregnant
 T36	Condition-Name 245 253	pregnant
 T37	Condition 153 160	healthy
 T38	Condition-Name 153 160	healthy
 T39	Condition 257 270	breastfeeding
 T40	Condition-Name 257 270	breastfeeding
-T41	Or 254 256	or
 T42	Observation 276 290	blood donation
 T43	Observation-Name 276 290	blood donation
 T44	Eq-Comparison 298 315	last three months
@@ -132,7 +111,6 @@ T54	Condition 410 422	binge eating
 T55	Condition-Name 410 422	binge eating
 T56	Condition 426 447	night eating syndrome
 T57	Condition-Name 426 447	night eating syndrome
-T58	Or 423 425	or
 T59	Condition 466 478	health issue
 T60	Severity 454 465	significant
 T61	Drug 491 498	vitamin
@@ -141,7 +119,6 @@ T63	Drug 502 521	mineral supplements
 T64	Drug-Name 502 521	mineral supplements
 T65	Eq-Comparison 484 490	taking
 T66	Eq-Temporal-Period 484 490	taking
-T67	Or 499 501	or
 T68	Drug 556 571	supplementation
 T69	Drug-Name 556 571	supplementation
 T70	Eq-Comparison 572 587	2 weeks or more
@@ -149,7 +126,6 @@ T71	Eq-Value 572 573	2
 T72	Eq-Temporal-Unit 574 579	weeks
 T73	Eq-Operator 580 587	or more
 T74	Study 612 617	study
-T75	Temporal-Connection 588 594	before
 T76	Negation 544 555	discontinue
 T77	Assertion 535 543	agree to
 T78	Exception 523 529	unless
@@ -157,7 +133,6 @@ T79	Allergy 629 638	allergies
 T80	Condition 639 651	intolerances
 T81	Condition-Name 639 651	intolerances
 T82	Allergy-Name 624 628	Food
-T83	Or 638 639	/
 T84	Condition 660 663	T2D
 T85	Condition-Name 660 663	T2D
 T86	Condition 677 680	T2D
@@ -170,7 +145,6 @@ T92	Condition 732 740	pregnant
 T93	Condition-Name 732 740	pregnant
 T94	Condition 744 757	breastfeeding
 T95	Condition-Name 744 757	breastfeeding
-T96	Or 741 743	or
 T97	Observation 763 777	blood donation
 T98	Observation-Name 763 777	blood donation
 T99	Eq-Comparison 785 802	last three months
@@ -187,7 +161,6 @@ T109	Condition 897 909	binge eating
 T110	Condition-Name 897 909	binge eating
 T111	Condition 913 934	night eating syndrome
 T112	Condition-Name 913 934	night eating syndrome
-T113	Or 910 912	or
 T114	Condition 963 975	health issue
 T115	Severity 951 962	significant
 T116	Condition 987 990	T2D
@@ -199,7 +172,6 @@ T121	Drug 1003 1010	vitamin
 T122	Drug-Name 1003 1010	vitamin
 T123	Drug 1014 1033	mineral supplements
 T124	Drug-Name 1014 1033	mineral supplements
-T125	Or 1011 1013	or
 T126	Negation 1056 1067	discontinue
 T127	Assertion 1047 1055	agree to
 T128	Drug 1068 1083	supplementation
@@ -208,37 +180,33 @@ T130	Eq-Comparison 1084 1091	2 weeks
 T131	Eq-Value 1084 1085	2
 T132	Eq-Temporal-Unit 1086 1091	weeks
 T133	Study 1116 1121	study
-T134	Temporal-Connection 1092 1098	before
 T135	Exception 1035 1046	unless they
 T136	Allergy-Name 1128 1132	food
 T137	Allergy 1133 1142	allergies
 T138	Condition 1143 1155	intolerances
 T139	Condition-Name 1143 1155	intolerances
-T140	Or 1142 1143	/
-A1	Observation-Type-Value T9 social-habit
+A1	Observation-Type-Value E5 social-habit
 A2	Eq-Operator-Value T17 GTEQ
 A3	Life-Stage-And-Gender-Type T18 male
 A4	Life-Stage-And-Gender-Type T19 female
 A5	Eq-Temporal-Period-Value T22 present
-A6	Observation-Type-Value T25 lab
+A6	Observation-Type-Value E14 lab
 A7	Eq-Operator-Value T27 GT
-A8	Observation-Type-Value T43 social-habit
+A8	Observation-Type-Value E22 social-habit
 A9	Eq-Temporal-Period-Value T45 past
 A10	Eq-Temporal-Unit-Value T47 month
 A11	Severity-Value T60 severe
 A12	Eq-Temporal-Period-Value T66 present
 A13	Eq-Temporal-Unit-Value T72 week
 A14	Eq-Operator-Value T73 GTEQ
-A15	Temporal-Connection-Type-Value E38 before
 A16	Assertion-Type-Value E40 hypothetical
-A17	Observation-Type-Value T98 social-habit
+A17	Observation-Type-Value E53 social-habit
 A18	Eq-Temporal-Period-Value T100 past
 A19	Eq-Temporal-Unit-Value T102 month
 A20	Severity-Value T115 severe
 A21	Eq-Temporal-Period-Value T120 present
 A22	Assertion-Type-Value E69 hypothetical
 A23	Eq-Temporal-Unit-Value T132 week
-A24	Temporal-Connection-Type-Value E73 before
 R1	Treatment-For Arg1:E4 Arg2:E2
 R2	Treatment-For Arg1:E7 Arg2:E2
 R3	If-Then Arg1:E19 Arg2:E13
@@ -252,3 +220,22 @@ R10	Example-Of Arg1:E57 Arg2:E55
 R11	Example-Of Arg1:E58 Arg2:E55
 R12	Example-Of Arg1:E59 Arg2:E55
 R13	If-Then Arg1:E45 Arg2:E46
+R14	And Arg1:E1 Arg2:E2
+R15	And Arg1:E4 Arg2:E5
+R16	Or Arg1:E5 Arg2:E7
+R17	Or Arg1:T18 Arg2:T19
+R18	Or Arg1:E15 Arg2:E16
+R19	Or Arg1:E18 Arg2:E20
+R20	Or Arg1:E27 Arg2:E28
+R21	Or Arg1:E31 Arg2:E32
+R22	Before Arg1:E36 Arg2:E37
+R23	Or Arg1:E42 Arg2:E43
+R24	Or Arg1:E50 Arg2:E51
+R25	Or Arg1:E58 Arg2:E59
+R26	Or Arg1:E65 Arg2:E66
+R27	Before Arg1:E71 Arg2:E72
+R28	Or Arg1:E75 Arg2:E76
+R29	Or Arg1:E25 Arg2:E26
+R30	Or Arg1:E26 Arg2:E27
+R31	Or Arg1:E56 Arg2:E57
+R32	Or Arg1:E57 Arg2:E58

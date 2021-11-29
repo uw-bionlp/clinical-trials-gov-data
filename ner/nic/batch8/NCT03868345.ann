@@ -1,16 +1,14 @@
-E1	Or:T1 Arg:T25 Arg2:T26
-E2	Age:T2 Eq-Comparison:E3
+E2	Age:T2 Numeric-Filter:E3
 E3	Eq-Comparison:T3 Value:T27 Operator:T28
 E4	Modifier:T4 Modifies:T29
 E5	Assertion:T5 Asserted:E8
-E6	Or:T6 Arg:E5 Arg2:E7
 E7	Assertion:T7 Asserted:E8
 E8	Condition:T8 Name:T29
 E9	Eq-Comparison:T9 Value:T30 Operator:T31
-E10	Observation:T10 Name:T37 Eq-Comparison:E9
+E10	Observation:T10 Name:T37 Numeric-Filter:E9
 E11	Condition:T11 Name:T38
 E12	Eq-Comparison:T12 Temporal-Period:T32
-E13	Encounter:T13
+E13	
 E14	Study:T14 Study-Of:E28
 E15	Assertion:T15 Asserted:E16
 E16	Condition:T16 Name:T34
@@ -26,18 +24,13 @@ E25	Modifier:T39 Modifies:T38
 E26	Modifier:T40 Modifies:T38
 E27	Assertion:T41 Asserted:E13 Asserted2:E14
 E28	Procedure:T42
-E29	And:T43 Arg:E13 Arg2:E14
 E30	Negation:T33 Negates:E16
-E31	And:T44 Arg:E16 Arg2:E17
 E32	Modifier:T45 Modifies:E19
-E33	Or:T46 Arg:E21 Arg2:E32
 E34	Negation:T47 Negates:E24
-T1	Or 30 32	or
 T2	Age 41 44	age
 T3	Eq-Comparison 45 56	21 or older
 T4	Modifier 78 86	definite
 T5	Assertion 88 96	probable
-T6	Or 98 100	or
 T7	Assertion 101 109	possible
 T8	Condition 110 113	ALS
 T9	Eq-Comparison 169 190	score of 2 or greater
@@ -72,12 +65,9 @@ T39	Modifier 246 258	intelligible
 T40	Modifier 264 285	occasional repetition
 T41	Assertion 334 365	willingness and medical ability
 T42	Procedure 408 418	procedures
-T43	And 398 401	and
 T33	Negation 741 743	NO
 T35	Condition-Name 855 864	cognitive
-T44	And 800 803	and
 T45	Modifier 1077 1083	social
-T46	Or 1074 1076	or
 T47	Negation 1257 1267	unsuitable
 A1	Assertion-Type-Value E15 possible
 A2	Assertion-Type-Value E18 possible
@@ -91,8 +81,14 @@ A9	Eq-Temporal-Period-Value T32 future
 A10	Stability-Value T36 change
 A11	Assertion-Type-Value E5 possible
 A12	Assertion-Type-Value E7 possible
-A13	Observation-Type-Value T37 clinical-score
+A13	Observation-Type-Value E10 clinical-score
 A14	Assertion-Type-Value E27 hypothetical
 R1	Equivalent-To Arg1:E11 Arg2:E10
 R2	Equivalent-To Arg1:E13 Arg2:E12
 R3	Caused-By Arg1:T36 Arg2:E19
+R4	Or Arg1:T25 Arg2:T26
+R5	Or Arg1:E5 Arg2:E7
+R6	And Arg1:E13 Arg2:E14
+R7	And Arg1:E16 Arg2:E17
+R8	Or Arg1:E21 Arg2:E32
+R9	Or Arg1:E20 Arg2:E21

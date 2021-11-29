@@ -1,23 +1,22 @@
-E1	Condition:T1 Name:T2 Temporality:E18
+E1	Condition:T1 Temporality:E18
 E3	Procedure:T3 Name:T4 Temporality:E15
 E5	Procedure:T5 Name:T6 Temporality:E8
-E6	Age:T11 Eq-Comparison:E7
+E6	Age:T11 Numeric-Filter:E7
 E7	Eq-Comparison:T17 Operator:T7 Temporal-Unit:T9 Value:T13
 E8	Eq-Comparison:T18 Operator:T8 Value:T16 Temporal-Unit:T31 Temporal-Period:T32
 E9	Eq-Comparison:T19 Operator:T12 Value:T14 Unit:T10 Value2:T15
-E2	Condition:T20 
+E2	Condition:T20
 E4	Modifier:T21 Modifies:E2
 E10	Negation:T22 Negates:E2
 E11	Condition:T23 Name:T24
-E12	Observation:T25 Name:T26 Eq-Comparison:E9
-E13	Modifier:T27 Modifies:T2
+E12	Observation:T25 Name:T26 Numeric-Filter:E9
+E13	Modifier:T27 Modifies:E1
 E14	Modifier:T28 Modifies:T4
 E15	Eq-Comparison:T29 Temporal-Period:T30
 E16	Condition:T33 Name:T34 Temporality:E21
 E17	Modifier:T35 Modifies:E16
 E18	Eq-Comparison:T36 Temporal-Period:T37
 E19	Modifier:T38 Modifies:T4
-E20	Or:T39 Arg:E14 Arg2:E19
 E21	Eq-Comparison:T40 Temporal-Period:T41
 T1	Condition 334 341	disease
 T2	Condition-Name 334 341	disease
@@ -57,16 +56,16 @@ T35	Modifier 478 494	distraction site
 T36	Eq-Comparison 300 308	presence
 T37	Eq-Temporal-Period 300 308	presence
 T38	Modifier 382 393	neck region
-T39	Or 378 381	and
 T40	Eq-Comparison 454 460	active
 T41	Eq-Temporal-Period 454 460	active
 A1	Eq-Operator-Value T7 LT
 A2	Eq-Operator-Value T8 LTEQ
 A3	Eq-Temporal-Unit-Value T9 year
 A4	Eq-Operator-Value T12 BETWEEN
-A5	Observation-Type-Value T26 measurement
+A5	Observation-Type-Value E12 measurement
 A6	Eq-Temporal-Period-Value T30 past
 A7	Eq-Temporal-Unit-Value T31 month
 A8	Eq-Temporal-Period-Value T32 past
 A9	Eq-Temporal-Period-Value T37 present
 A10	Eq-Temporal-Period-Value T41 present
+R1	Or Arg1:E14 Arg2:E19

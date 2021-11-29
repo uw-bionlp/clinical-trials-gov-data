@@ -1,30 +1,24 @@
-E7	Condition:T7 Name:T8
-E12	Age:T18 Eq-Comparison:E13
+E7	Condition:T7 
+E12	Age:T18 Numeric-Filter:E13
 E13	Eq-Comparison:T23 Operator:T13 Temporal-Unit:T14 Value:T19
 E14	Eq-Comparison:T24 Temporal-Period:T25
 E15	Eq-Comparison:T26 Temporal-Period:T27
 E17	Eq-Comparison:T30 Temporal-Period:T31
-E1	Or:T36 Arg:T2 Arg2:T1
 E2	Condition:T37 Name:T38 Duration:E4
 E4	Eq-Comparison:T39 Value:T20 Temporal-Unit:T15 Operator:T40
-E6	Temporal-Connection:T32 Arg2:E8
-E8	Study:T33
+E8	Study:T33 
 E10	Condition:T41 Name:T42 Duration:E18
 E18	Eq-Comparison:T43 Value:T21 Temporal-Unit:T16 Operator:T44
-E20	Temporal-Connection:T45 Arg:E4 Arg2:E6
-E21	Temporal-Connection:T46 Arg:E18 Arg2:E22
 E22	Eq-Comparison:T47 Temporal-Period:T48 Value:T22 Temporal-Unit:T17
-E19	Temporal-Connection:T34 Arg:E22 Arg2:E23
-E23	Study:T35
+E23	Study:T35 
 E24	Procedure:T49 Name:T50
 E25	Eq-Comparison:T51 Unit:T52 Value:T53 Value2:T54
 E26	Procedure:T55 Name:T56 Temporality:E14
 E3	Modifier:T3 Modifies:T56
 E9	Modifier:T4 Modifies:T56
-E27	Or:T9 Arg:E3 Arg2:E9
-E5	Modifier:T5
-E11	Modifier:T6
-E16	Modifier:T10 Modifies:T8
+E5	Modifier:T5 
+E11	Modifier:T6 
+E16	Modifier:T10 Modifies:E7
 E28	Other:T11 Is-Other:E7
 E29	Study:T12 Stability:T28
 E30	Assertion:T29 Asserted:T28
@@ -37,7 +31,6 @@ E36	Condition:T67 Name:T68
 T1	Life-Stage-And-Gender 33 39	Female
 T2	Life-Stage-And-Gender 25 29	Male
 T7	Condition 405 413	disorder
-T8	Condition-Name 405 413	disorder
 T13	Eq-Operator 45 46	≥
 T14	Eq-Temporal-Unit 50 55	years
 T15	Eq-Temporal-Unit 88 94	months
@@ -55,22 +48,17 @@ T26	Eq-Comparison 337 343	Active
 T27	Eq-Temporal-Period 337 343	Active
 T30	Eq-Comparison 457 463	taking
 T31	Eq-Temporal-Period 457 463	taking
-T36	Or 30 32	or
 T37	Condition 72 81	heartburn
 T38	Condition-Name 72 81	heartburn
 T39	Eq-Comparison 86 102	3 months or more
 T40	Eq-Operator 95 102	or more
-T32	Temporal-Connection 110 118	prior to
 T33	Study 119 132	randomization
 T41	Condition 156 165	heartburn
 T42	Condition-Name 156 165	heartburn
 T43	Eq-Comparison 170 184	2 days or more
 T44	Eq-Operator 177 184	or more
-T45	Temporal-Connection 103 109	during
-T46	Temporal-Connection 185 191	during
 T47	Eq-Comparison 196 207	last 7 days
 T48	Eq-Temporal-Period 196 200	last
-T34	Temporal-Connection 208 216	prior to
 T35	Study 217 230	randomization
 T49	Procedure 257 265	EGD test
 T50	Procedure-Name 257 265	EGD test
@@ -82,7 +70,6 @@ T55	Procedure 292 299	Surgery
 T56	Procedure-Name 292 299	Surgery
 T3	Modifier 311 318	stomach
 T4	Modifier 322 331	esophagus
-T9	Or 319 321	or
 T5	Modifier 363 370	stomach
 T6	Modifier 372 381	esophagus
 T10	Modifier 398 404	system
@@ -114,15 +101,11 @@ A8	Eq-Temporal-Period-Value T25 past
 A9	Eq-Temporal-Period-Value T27 present
 A11	Eq-Temporal-Period-Value T31 present
 A14	Eq-Operator-Value T40 GTEQ
-A12	Temporal-Connection-Type-Value E6 before
 A15	Eq-Operator-Value T44 GTEQ
-A16	Temporal-Connection-Type-Value E20 during
-A17	Temporal-Connection-Type-Value E21 during
 A18	Eq-Temporal-Period-Value T48 past
-A13	Temporal-Connection-Type-Value E19 before
 A10	Stability-Value T28 change
 A19	Assertion-Type-Value E30 hypothetical
-A20	Observation-Type-Value T61 lab
+A20	Observation-Type-Value E34 lab
 A21	Polarity-Value T62 abnormal
 A22	Severity-Value T63 severe
 A23	Life-Stage-And-Gender-Type T66 female
@@ -131,3 +114,9 @@ R1	Caused-By Arg1:T28 Arg2:E7
 R2	Equivalent-To Arg1:E34 Arg2:T62
 R3	If-Then Arg1:T66 Arg2:E35
 R4	If-Then Arg1:T69 Arg2:E36
+R5	Or Arg1:T2 Arg2:T1
+R7	During Arg1:E18 Arg2:E22
+R8	Before Arg1:E22 Arg2:E23
+R9	Or Arg1:E3 Arg2:E9
+R6	Or Arg1:E5 Arg2:E11
+R10	Before Arg1:E4 Arg2:E8	

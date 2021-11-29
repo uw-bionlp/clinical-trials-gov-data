@@ -1,26 +1,21 @@
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Temporal-Unit:T5 Value:T4 Operator:T3
 E3	Condition:T6 Name:T7
 E4	Negation:T8 Negates:E3
 E5	Procedure:T9 Name:T10
-E6	And:T11 Arg:E3 Arg2:E5
-E7	Age:T12 Eq-Comparison:E8
+E7	Age:T12 Numeric-Filter:E8
 E8	Eq-Comparison:T13 Temporal-Unit:T16 Value:T15 Operator:T14
 E9	Condition:T17 Name:T18
 E10	Condition:T19 Name:T20
-E11	Or:T21 Arg:E9 Arg2:E10
 E12	Condition:T22 Name:T23
-E13	Condition:T24 Name:T25
+E13	Observation:T24 Name:T25
 E14	Procedure:T26 Name:T27
 E15	Procedure:T28 Name:T29
-E16	Or:T30 Arg:E14 Arg2:E15
 E17	Condition:T31 Name:T32
 E18	Procedure:T33 Name:T44
-E19	Temporal-Connection:T34 Arg:E18 Arg2:E20
 E20	Observation:T35 Name:T36
 E21	Procedure:T37 Name:T38 Temporality:E30
 E22	Procedure:T39 Name:T40 Temporality:E29
-E23	And:T41 Arg:E21 Arg2:E22
 E24	Procedure:T42 Name:T43 Temporality:E26
 E25	Procedure:T45 Name:T46 Temporality:E28
 E26	Eq-Comparison:T47 Temporal-Period:T48
@@ -37,7 +32,6 @@ T7	Condition-Name 70 88	systemic infection
 T8	Negation 67 69	No
 T9	Procedure 107 127	laparoscopic surgery
 T10	Procedure-Name 107 127	laparoscopic surgery
-T11	And 89 92	and
 T12	Age 153 156	Age
 T13	Eq-Comparison 157 166	>75 years
 T14	Eq-Operator 157 158	>
@@ -47,27 +41,23 @@ T17	Condition 173 185	Malnutrition
 T18	Condition-Name 173 185	Malnutrition
 T19	Condition 192 214	organ system infection
 T20	Condition-Name 192 214	organ system infection
-T21	Or 186 188	or
 T22	Condition 236 247	obstruction
 T23	Condition-Name 236 247	obstruction
-T24	Condition 249 257	bleeding
-T25	Condition-Name 249 257	bleeding
+T24	Observation 249 257	bleeding
+T25	Observation-Name 249 257	bleeding
 T26	Procedure 259 276	emergency surgery
 T27	Procedure-Name 259 276	emergency surgery
 T28	Procedure 286 307	surgical intervention
 T29	Procedure-Name 286 307	surgical intervention
-T30	Or 277 279	or
 T31	Condition 313 344	Tumor with extensive metastasis
 T32	Condition-Name 313 344	Tumor with extensive metastasis
 T33	Procedure 359 366	surgery
-T34	Temporal-Connection 350 358	Prior to
 T35	Observation 380 387	fasting
 T36	Observation-Name 380 387	fasting
 T37	Procedure 399 429	gastrointestinal decompression
 T38	Procedure-Name 399 429	gastrointestinal decompression
 T39	Procedure 443 462	nutritional support
 T40	Procedure-Name 443 462	nutritional support
-T41	And 430 433	and
 T42	Procedure 488 505	abdominal surgery
 T43	Procedure-Name 488 505	abdominal surgery
 T44	Procedure-Name 359 366	surgery
@@ -85,8 +75,14 @@ A1	Eq-Operator-Value T3 LTEQ
 A2	Eq-Temporal-Unit-Value T5 year
 A3	Eq-Operator-Value T14 GT
 A4	Eq-Temporal-Unit-Value T16 year
-A5	Temporal-Connection-Type-Value E19 before
 A6	Eq-Temporal-Period-Value T48 past
 A8	Eq-Temporal-Period-Value T52 past
 A9	Eq-Temporal-Period-Value T54 past
 A10	Eq-Temporal-Period-Value T56 past
+R1	And Arg1:E3 Arg2:E5
+R2	Or Arg1:E9 Arg2:E10
+R3	Or Arg1:E14 Arg2:E15
+R4	Before Arg1:E18 Arg2:E20
+R5	And Arg1:E21 Arg2:E22
+R6	Or Arg1:E12 Arg2:E13
+R7	Or Arg1:E13 Arg2:E14

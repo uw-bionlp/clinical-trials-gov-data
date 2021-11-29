@@ -1,6 +1,6 @@
 E6	Procedure:T6 Name:T7
 E8	Procedure:T8 Name:T9
-E10	Age:T22 Eq-Comparison:E23
+E10	Age:T22 Numeric-Filter:E23
 E11	Eq-Comparison:T36 Operator:T10 Value:T24
 E12	Eq-Comparison:T37 Operator:T11 Temporal-Unit:T15 Value:T25
 E13	Eq-Comparison:T38 Operator:T12 Unit:T20 Value:T26
@@ -8,11 +8,10 @@ E14	Eq-Comparison:T39 Operator:T13 Value:T27 Unit:T48
 E15	Eq-Comparison:T40 Operator:T14 Temporal-Unit:T18 Value:T33
 E16	Eq-Comparison:T41 Operator:T23 Value:T35 Value2:T94 Unit:T95
 E1	Condition:T1 Name:T2
-E2	Age:T42 Eq-Comparison:E11 Eq-Comparison2:E12
+E2	Age:T42 Numeric-Filter:E11 Numeric-Filter:E12
 E4	Condition:T21 Name:T43 Polarity:T50
-E5	Observation:T44 Name:T45 Eq-Comparison:E13
-E7	Observation:T46 Name:T47 Eq-Comparison:E14
-E9	And:T49 Arg:E5 Arg2:E7
+E5	Observation:T44 Name:T45 Numeric-Filter:E13
+E7	Observation:T46 Name:T47 Numeric-Filter:E14
 E17	Condition:T51 Name:T52 Polarity:T53
 E18	Procedure:T54 Name:T55 Duration:E20 Temporality:E21 Acuteness:T56
 E20	Eq-Comparison:T57 Operator:T58 Temporal-Unit:T16 Value:T28
@@ -20,19 +19,16 @@ E21	Eq-Comparison:T59 Per:T60 Operator:T61 Value:T29 Value2:T30 Temporal-Unit:T6
 E22	Assertion:T63 Asserted:E10
 E23	Eq-Comparison:T64 Operator:T65 Value:T31 Temporal-Unit:T17
 E3	Observation:T66 Name:T67
-E24	And:T68 Arg2:E3 Arg:E37
-E25	Observation:T69 Name:T70 Eq-Comparison:E26
+E25	Observation:T69 Name:T70 Numeric-Filter:E26
 E26	Eq-Comparison:T5 Operator:T71 Value:T32 Unit:T72 Temporal-Unit:T73 Temporal-Unit2:T74
 E27	Condition:T75 Name:T76 Temporality:E28 Temporality2:E15
 E28	Eq-Comparison:T77 Temporal-Period:T78
 E29	Eq-Comparison:T79 Temporal-Period:T80 Value:T34 Temporal-Unit:T19
-E30	Temporal-Connection:T81 Arg:E6 Arg2:E29
 E31	Procedure:T82 Name:T83 Temporality:E35 Duration:E34
-E32	Or:T84 Arg:E31 Arg2:E8
 E33	Modifier:T85 Modifies:T9
 E34	Eq-Comparison:T86 Value:T87 Temporal-Unit:T88
 E35	Eq-Comparison:T89 Temporal-Period:T90
-E36	Observation:T91 Name:T92 Polarity:T93 Eq-Comparison:E16
+E36	Observation:T91 Name:T92 Polarity:T93 Numeric-Filter:E16
 E37	Observation:T3 Name:T4
 T6	Procedure 470 494	Pulmonary rehabilitation
 T7	Procedure-Name 470 494	Pulmonary rehabilitation
@@ -79,7 +75,6 @@ T45	Observation-Name 101 105	PaO2
 T46	Observation 120 124	SaO2
 T47	Observation-Name 120 124	SaO2
 T48	Eq-Unit 128 129	%
-T49	And 116 119	and
 T50	Polarity 91 92	-
 T51	Condition 135 139	LTOT
 T52	Condition-Name 135 139	LTOT
@@ -98,7 +93,6 @@ T64	Eq-Comparison 297 306	± 5 years
 T65	Eq-Operator 297 298	±
 T66	Observation 317 334	physical activity
 T67	Observation-Name 317 334	physical activity
-T68	And 313 316	and
 T69	Observation 348 366	GPAQ questionnaire
 T70	Observation-Name 348 366	GPAQ questionnaire
 T5	Eq-Comparison 368 387	± 15% Mets.min/week
@@ -112,10 +106,8 @@ T77	Eq-Comparison 415 421	Recent
 T78	Eq-Temporal-Period 415 421	Recent
 T79	Eq-Comparison 514 527	last 2 months
 T80	Eq-Temporal-Period 514 518	last
-T81	Temporal-Connection 503 509	during
 T82	Procedure 544 548	LTOT
 T83	Procedure-Name 544 548	LTOT
-T84	Or 560 562	or
 T85	Modifier 563 575	deambulation
 T86	Eq-Comparison 550 558	24 hours
 T87	Eq-Value 550 552	24
@@ -140,8 +132,8 @@ A8	Eq-Temporal-Unit-Value T17 year
 A9	Eq-Temporal-Unit-Value T18 week
 A10	Eq-Temporal-Unit-Value T19 month
 A11	Eq-Operator-Value T23 BETWEEN
-A12	Observation-Type-Value T45 vital
-A13	Observation-Type-Value T47 vital
+A12	Observation-Type-Value E5 vital
+A13	Observation-Type-Value E7 vital
 A14	Polarity-Value T50 negative
 A15	Polarity-Value T53 positive
 A16	Eq-Operator-Value T58 GT
@@ -150,19 +142,22 @@ A18	Eq-Operator-Value T61 BETWEEN
 A19	Eq-Temporal-Unit-Value T62 hour
 A20	Assertion-Type-Value E22 hypothetical
 A21	Eq-Operator-Value T65 PLUS-MINUS
-A22	Observation-Type-Value T67 social-habit
-A23	Observation-Type-Value T70 survey-or-questionnaire
+A22	Observation-Type-Value E3 social-habit
+A23	Observation-Type-Value E25 survey-or-questionnaire
 A24	Eq-Operator-Value T71 PLUS-MINUS
 A25	Eq-Temporal-Unit-Value T73 minute
 A26	Eq-Temporal-Unit-Value T74 week
 A27	Eq-Temporal-Period-Value T78 recent
 A28	Eq-Temporal-Period-Value T80 past
-A29	Temporal-Connection-Type-Value E30 during
 A30	Eq-Temporal-Unit-Value T88 hour
 A31	Eq-Temporal-Period-Value T90 present
-A32	Observation-Type-Value T92 lab
+A32	Observation-Type-Value E36 lab
 A33	Polarity-Value T93 abnormal
 A34	Acuteness-Type-Value T56 chronic
 R1	If-Then Arg1:E4 Arg2:E5
 R2	If-Then Arg1:E17 Arg2:E18
 R3	Equivalent-To Arg1:E34 Arg2:E35
+R4	And Arg1:E5 Arg2:E7
+R5	And Arg1:E37 Arg2:E3
+R6	During Arg1:E6 Arg2:E29
+R7	Or Arg1:E31 Arg2:E8

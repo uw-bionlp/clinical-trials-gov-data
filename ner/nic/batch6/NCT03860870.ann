@@ -1,6 +1,6 @@
 E1	Condition:T1 Name:T17
 E2	Eq-Comparison:T2 Value:T19 Operator:T20 Value:T21 Temporal-Unit:T22
-E3	Age:T3 Eq-Comparison:E2
+E3	Age:T3 Numeric-Filter:E2
 E4	Negation:T4 Negates:E5
 E5	Contraindication:T5 Contraindicates:E6
 E6	Drug:T6 Name:T23
@@ -10,10 +10,10 @@ E9	Condition:T9 Name:T26
 E10	Eq-Comparison:T10 Temporal-Period:T27
 E11	Drug:T11 Temporality:E10
 E13	Eq-Comparison:T13 Operator:T29 Value:T30 Per:T31
-E14	Condition:T14 Name:T34
+E14	Condition:T14
 E15	Risk:T15 Stability:T35
 E16	Study:T16
-E12	Observation:T12 Name:T28 Severity:T33 Eq-Comparison:E13
+E12	Observation:T12 Name:T28 Severity:T33 Numeric-Filter:E13
 T1	Condition 25 32	Healthy
 T2	Eq-Comparison 48 59	18-40 years
 T3	Age 63 66	age
@@ -56,7 +56,7 @@ A4	Eq-Temporal-Period-Value T27 present
 A5	Eq-Operator-Value T29 GT
 A6	Eq-Temporal-Unit-Value T31 week
 A7	Polarity-Value T25 abnormal
-A8	Observation-Type-Value T28 social-habit
+A8	Observation-Type-Value E12 social-habit
 A9	Severity-Value T33 severe
 A10	Stability-Value T35 change
 R1	Example-Of Arg1:E7 Arg2:E5

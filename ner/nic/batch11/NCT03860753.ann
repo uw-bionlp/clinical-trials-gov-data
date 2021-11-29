@@ -1,7 +1,7 @@
 E1	Procedure:T1
 E2	Assertion:T2 Asserted:E1
 E3	Condition:T3 Name:T4
-E6	Observation:T10 Name:T11 Polarity:T15 Temporality:E7 Eq-Comparison:E8 Eq-Comparison2:E9 Eq-Comparison3:E10 Eq-Comparison4:E11
+E6	Observation:T10 Name:T11 Polarity:T15 Temporality:E7 Numeric-Filter:E8 Numeric-Filter:E9 Numeric-Filter:E10 Numeric-Filter:E11
 E7	Eq-Comparison:T12 Temporal-Unit:T14 Operator:T13
 E8	Eq-Comparison:T16 Unit:T19 Per:T20 Value:T18 Operator:T17
 E9	Eq-Comparison:T22 Unit:T25 Per:T26 Value:T24 Operator:T23
@@ -10,26 +10,21 @@ E11	Eq-Comparison:T34 Unit:T37 Value:T36 Operator:T35 Unit2:T38
 E12	Observation:T40 Name:T41
 E13	Observation:T42 Name:T43
 E14	Observation:T44 Name:T45
-E15	Or:T46 Arg:E13 Arg2:E14
-E16	Observation:T47 Name:T48 Eq-Comparison:E19 Eq-Comparison2:E21
+E16	Observation:T47 Name:T48 Numeric-Filter:E19 Numeric-Filter:E21
 E17	Condition:T49 Name:T50 Severity:T52
-E18	Or:T53 Arg:T51 Arg2:T52
 E19	Eq-Comparison:T54 Unit:T55 Value:T57 Operator:T58 Value2:T56
 E20	Condition:T59 Name:T60 Severity:T61
 E21	Eq-Comparison:T62 Unit:T63 Value:T65 Value2:T64 Operator:T66
-E22	Or:T67 Arg:E17 Arg2:E20
 E23	Condition:T68 Name:T69 Polarity:T70
 E25	Study:T73
-E24	Temporal-Connection:T71 Arg:E23 Arg2:E25
 E26	Observation:T72 Name:T74 Severity:T77
 E27	Observation:T75 Name:T76
 E28	Condition:T78 Name:T79
 E29	Condition:T80 Name:T81
-E30	Or:T82 Arg:E27 Arg2:E28
 E31	Observation:T83 Name:T84
 E32	Condition:T85 Name:T86
 E33	Observation:T87 Name:T88
-E34	Observation:T89 Name:T90 Eq-Comparison:E36 Eq-Comparison2:E37
+E34	Observation:T89 Name:T90 Numeric-Filter:E36 Numeric-Filter:E37
 E35	Condition:T91 Name:T92 Severity:T93
 E36	Eq-Comparison:T94 Value:T96 Operator:T95
 E37	Eq-Comparison:T98 Value:T100 Operator:T99
@@ -40,7 +35,6 @@ E41	Exception:T108 From:E40 Except:E42 Except2:E43 Except3:E44
 E42	Drug:T109 Name:T110
 E43	Drug:T112 Name:T111
 E44	Drug:T113 Name:T114
-E45	And:T115 Arg:E43 Arg2:E44
 E46	Drug:T116 Name:T117
 E47	Contraindication:T118 Contraindicates:E46
 E48	Drug:T119 Name:T120
@@ -48,23 +42,18 @@ E49	Contraindication:T121 Contraindicates:E48
 E50	Condition:T122
 E52	Drug:T124
 E51	Contraindication:T123 Contraindicates:E52
-E53	Or:T125 Arg2:E51 Arg:E49
 E54	Condition:T126 Name:T127
 E55	Condition:T128 Name:T129
 E56	Condition:T130 Name:T131
 E57	Assertion:T132 Asserted:E56
-E58	Or:T133 Arg:E55 Arg2:E57
 E59	Study:T134
-E60	Temporal-Connection:T135 Arg:E56 Arg2:E59
 E61	Condition:T136
 E62	Condition:T137
 E63	Drug:T138
-E64	Or:T139 Arg:E62 Arg2:E63
 E65	Assertion:T140 Asserted:E70
 E66	Study:T141
 E67	Modifier:T142 Modifies:E66
 E68	Modifier:T143 Modifies:E66
-E69	Or:T144 Arg:E67 Arg2:E68
 E70	Negation:T145 Negates:E66
 E4	Observation:T5 Name:T6
 E71	Eq-Comparison:T146 Temporal-Period:T147
@@ -110,14 +99,12 @@ T42	Observation 330 335	HAM-A
 T43	Observation-Name 330 335	HAM-A
 T44	Observation 340 362	Perceived Stress Scale
 T45	Observation-Name 340 362	Perceived Stress Scale
-T46	Or 337 339	or
 T47	Observation 364 367	PSS
 T48	Observation-Name 364 367	PSS
 T49	Condition 405 412	anxiety
 T50	Condition-Name 405 412	anxiety
 T51	Severity 388 392	mild
 T52	Severity 396 404	moderate
-T53	Or 393 395	to
 T54	Eq-Comparison 414 427	score 8 to 23
 T55	Eq-Unit 414 419	score
 T56	Eq-Value 420 421	8
@@ -131,12 +118,10 @@ T63	Eq-Unit 449 454	score
 T64	Eq-Value 455 457	14
 T65	Eq-Value 461 463	26
 T66	Eq-Operator 458 460	to
-T67	Or 429 431	or
 T68	Condition 496 511	alcohol craving
 T69	Condition-Name 496 511	alcohol craving
 T70	Polarity 484 492	increase
 T73	Study 526 534	baseline
-T71	Temporal-Connection 512 521	following
 T72	Observation 655 660	HAM-A
 T74	Observation-Name 655 660	HAM-A
 T75	Observation 662 665	PSS
@@ -146,7 +131,6 @@ T78	Condition 670 684	post-traumatic
 T79	Condition-Name 670 684	post-traumatic
 T80	Condition 686 690	PTSD
 T81	Condition-Name 686 690	PTSD
-T82	Or 667 669	or
 T83	Observation 703 708	PCL-5
 T84	Observation-Name 703 708	PCL-5
 T85	Condition 769 790	dependence on alcohol
@@ -179,7 +163,6 @@ T111	Drug-Name 981 989	nicotine
 T112	Drug 981 989	nicotine
 T113	Drug 995 1004	marijuana
 T114	Drug-Name 995 1004	marijuana
-T115	And 991 994	and
 T116	Drug 1039 1051	pioglitazone
 T117	Drug-Name 1039 1051	pioglitazone
 T118	Contraindication 1010 1027	contraindications
@@ -189,7 +172,6 @@ T121	Contraindication 1072 1088	contraindicating
 T122	Condition 1061 1071	conditions
 T124	Drug 1144 1155	medications
 T123	Contraindication 1128 1143	contraindicated
-T125	Or 1118 1120	or
 T126	Condition 1164 1172	pregnant
 T127	Condition-Name 1164 1172	pregnant
 T128	Condition 1174 1181	nursing
@@ -197,18 +179,14 @@ T129	Condition-Name 1174 1181	nursing
 T130	Condition 1207 1215	pregnant
 T131	Condition-Name 1207 1215	pregnant
 T132	Assertion 1186 1194	planning
-T133	Or 1183 1185	or
 T134	Study 1241 1246	study
-T135	Temporal-Connection 1216 1222	during
 T136	Condition 1267 1274	illness
 T137	Condition 1276 1285	condition
 T138	Drug 1297 1308	medications
-T139	Or 1287 1289	or
 T140	Assertion 1368 1373	would
 T141	Study 1424 1429	study
 T142	Modifier 1383 1387	safe
 T143	Modifier 1395 1405	successful
-T144	Or 1388 1394	and/or
 T145	Negation 1374 1382	preclude
 T5	Observation 692 701	checklist
 T6	Observation-Name 692 701	checklist
@@ -217,7 +195,7 @@ T147	Eq-Temporal-Period 1032 1038	taking
 T148	Eq-Comparison 1121 1127	taking
 T149	Eq-Temporal-Period 1121 1127	taking
 A1	Assertion-Type-Value E2 intention
-A2	Observation-Type-Value T11 social-habit
+A2	Observation-Type-Value E6 social-habit
 A3	Eq-Operator-Value T13 LTEQ
 A4	Eq-Temporal-Unit-Value T14 month
 A5	Polarity-Value T15 high
@@ -231,15 +209,14 @@ A12	Eq-Operator-Value T29 GT
 A13	Life-Stage-And-Gender-Type T33 female
 A14	Eq-Operator-Value T35 GT
 A15	Life-Stage-And-Gender-Type T39 male
-A16	Observation-Type-Value T41 clinical-score
-A17	Observation-Type-Value T45 clinical-score
+A16	Observation-Type-Value E12 clinical-score
+A17	Observation-Type-Value E14 clinical-score
 A18	Severity-Value T51 mild
 A19	Severity-Value T52 moderate
 A20	Eq-Operator-Value T58 BETWEEN
 A21	Severity-Value T61 moderate
 A22	Eq-Operator-Value T66 BETWEEN
 A23	Polarity-Value T70 high
-A24	Temporal-Connection-Type-Value E24 after
 A25	Severity-Value T77 severe
 A26	Severity-Value T93 severe
 A27	Eq-Operator-Value T95 GTEQ
@@ -249,7 +226,6 @@ A30	Life-Stage-And-Gender-Type T101 male
 A31	Severity-Value T104 mild
 A32	Eq-Operator-Value T106 GT
 A33	Assertion-Type-Value E57 intention
-A34	Temporal-Connection-Type-Value E60 during
 A35	Assertion-Type-Value E65 hypothetical
 A36	Eq-Temporal-Period-Value T147 present
 A37	Eq-Temporal-Period-Value T149 present
@@ -271,3 +247,18 @@ R17	Using Arg1:E38 Arg2:E40
 R18	Caused-By Arg1:E49 Arg2:E50
 R19	Caused-By Arg1:E70 Arg2:E63
 R1	Equivalent-To Arg1:E31 Arg2:E4
+R2	Or Arg1:E13 Arg2:E14
+R20	Or Arg1:T51 Arg2:T52
+R21	Or Arg1:E17 Arg2:E20
+R22	After Arg1:E23 Arg2:E25
+R23	Or Arg1:E27 Arg2:E28
+R24	And Arg1:E43 Arg2:E44
+R25	Or Arg1:E49 Arg2:E51
+R26	Or Arg1:E55 Arg2:E57
+R27	During Arg1:E56 Arg2:E59
+R28	Or Arg1:E62 Arg2:E63
+R29	Or Arg1:E67 Arg2:E68
+R30	Or Arg1:E26 Arg2:E27
+R31	Or Arg1:E42 Arg2:E43
+R32	Or Arg1:E54 Arg2:E55
+R33	Or Arg1:E61 Arg2:E62

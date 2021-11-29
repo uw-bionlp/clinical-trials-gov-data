@@ -9,7 +9,7 @@ E15	Condition:T15 Name:T16
 E17	Condition:T17 Name:T18
 E19	Condition:T19 Name:T20
 E21	Condition:T21 Name:T22
-E22	Age:T25 Eq-Comparison:E23
+E22	Age:T25 Numeric-Filter:E23
 E23	Eq-Comparison:T27 Operator:T23 Temporal-Unit:T24 Value:T26
 E26	Eq-Comparison:T30 Temporal-Period:T31
 E27	Eq-Comparison:T32 Temporal-Period:T33
@@ -18,21 +18,16 @@ E29	Eq-Comparison:T36 Temporal-Period:T37
 E30	Eq-Comparison:T38 Temporal-Period:T39
 E31	Eq-Comparison:T40 Temporal-Period:T41
 E32	Eq-Comparison:T42 Temporal-Period:T43
-E2	Or:T28 Arg:E1 Arg2:E3
 E4	Condition:T44 Name:T45 Severity:T46
 E6	Drug:T29 Name:T47 Temporality:E32
 E8	Condition:T48 Name:T49
 E10	Drug:T50 Name:T51
-E12	Or:T52 Arg:E6 Arg2:E8
 E14	Drug:T53 Name:T54
 E16	Drug:T55 Name:T56
 E18	Condition:T57 Name:T58 Temporality:E27
-E20	Or:T59 Arg:E18 Arg2:E17
 E24	Condition:T60 Name:T61 Temporality:E28
 E25	Condition:T62 Name:T63
-E33	Or:T64 Arg:E25 Arg2:E21
 E34	Condition:T65 Name:T66 Temporality:E29
-E35	Or:T67 Arg:E7 Arg2:E5
 E36	Modifier:T69 Modifies:T20
 E37	Condition:T70 Name:T71
 E38	Condition:T72 Name:T73 Temporality:E30
@@ -79,7 +74,6 @@ T40	Eq-Comparison 755 762	Current
 T41	Eq-Temporal-Period 755 762	Current
 T42	Eq-Comparison 157 173	currently taking
 T43	Eq-Temporal-Period 157 173	currently taking
-T28	Or 42 44	or
 T44	Condition 108 118	spasticity
 T45	Condition-Name 108 118	spasticity
 T46	Severity 96 107	significant
@@ -89,22 +83,18 @@ T48	Condition 207 223	hypersensitivity
 T49	Condition-Name 207 223	hypersensitivity
 T50	Drug 244 262	carbidopa-levodopa
 T51	Drug-Name 244 262	carbidopa-levodopa
-T52	Or 193 195	or
 T53	Drug 312 353	non-selective monoamine oxidase inhibitor
 T54	Drug-Name 312 353	non-selective monoamine oxidase inhibitor
 T55	Drug 355 359	MAOI
 T56	Drug-Name 355 359	MAOI
 T57	Condition 377 395	malignant melanoma
 T58	Condition-Name 377 395	malignant melanoma
-T59	Or 396 398	or
 T60	Condition 439 449	depression
 T61	Condition-Name 439 449	depression
 T62	Condition 451 468	suicidal ideation
 T63	Condition-Name 451 468	suicidal ideation
-T64	Or 470 472	or
 T65	Condition 499 520	myocardial infarction
 T66	Condition-Name 499 520	myocardial infarction
-T67	Or 546 548	or
 T68	Severity 549 555	severe
 T69	Modifier 585 597	Uncontrolled
 T70	Condition 616 622	Asthma
@@ -126,3 +116,10 @@ A3	Severity-Value T46 severe
 A4	Severity-Value T68 severe
 R1	Caused-By Arg1:E8 Arg2:E10
 R2	Abbrev-Of Arg1:E16 Arg2:E14
+R3	Or Arg1:E1 Arg2:E3
+R4	Or Arg1:E6 Arg2:E8
+R5	Or Arg1:E18 Arg2:E17
+R6	Or Arg1:E25 Arg2:E21
+R7	Or Arg1:E7 Arg2:E5
+R8	Or Arg1:E24 Arg2:E25
+R9	Or Arg1:E34 Arg2:E7

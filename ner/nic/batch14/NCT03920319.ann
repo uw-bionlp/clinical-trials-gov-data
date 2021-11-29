@@ -5,14 +5,13 @@ E7	Condition:T7 Name:T8 Temporality:E22
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E2	Condition:T15 Name:T16
-E4	Procedure:T17 
+E4	Procedure:T17
 E6	Assertion:T18 Asserted:E4
 E8	Observation:T13 Name:T14 Polarity:T19
-E10	Study:T20 
-E12	Temporal-Connection:T21 Arg:E8 Arg2:E10
+E10	Study:T20
 E13	Eq-Comparison:T22 Unit:T23 Value:T24
 E14	Exception:T25 From:E1 Except:E5
-E15	Condition:T26 
+E15	Condition:T26
 E16	Observation:T27 Name:T28 Stability:T29
 E17	Assertion:T30 Asserted:T29
 E18	Eq-Comparison:T31 Temporal-Period:T32
@@ -42,7 +41,6 @@ T13	Observation 134 157	urine test for drug use
 T14	Observation-Name 134 157	urine test for drug use
 T19	Polarity 115 123	Negative
 T20	Study 165 174	screening
-T21	Temporal-Connection 158 164	during
 T22	Eq-Comparison 215 221	Axis I
 T23	Eq-Unit 215 219	Axis
 T24	Eq-Value 220 221	I
@@ -65,9 +63,8 @@ T40	Exception 441 451	other than
 T41	Eq-Comparison 200 207	History
 T42	Eq-Temporal-Period 200 207	History
 A1	Assertion-Type-Value E6 intention
-A2	Observation-Type-Value T14 lab
+A2	Observation-Type-Value E8 lab
 A3	Polarity-Value T19 negative
-A4	Temporal-Connection-Type-Value E12 during
 A5	Stability-Value T29 change
 A6	Assertion-Type-Value E17 possible
 A7	Eq-Temporal-Period-Value T32 present
@@ -78,3 +75,4 @@ A11	Eq-Temporal-Period-Value T42 past
 R1	Treatment-For Arg1:E4 Arg2:E2
 R2	Caused-By Arg1:T29 Arg2:E15
 R3	Caused-By Arg1:T36 Arg2:E19
+R4	During Arg1:E8 Arg2:E10

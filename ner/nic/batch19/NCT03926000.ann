@@ -1,22 +1,20 @@
 E1	Procedure:T1 Name:T2 Temporality:E2
 E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6
-E6	Age:T8 Eq-Comparison:E7
+E6	Age:T8 Numeric-Filter:E7
 E2	Eq-Comparison:T12 Temporal-Period:T13
 E4	Modifier:T14 Modifies:T2
 E7	Eq-Comparison:T9 Operator:T15 Value:T10 Value2:T11 Temporal-Unit:T7
-E8	Observation:T16 Name:T17 Eq-Comparison:E9
+E8	Observation:T16 Name:T17 Numeric-Filter:E9
 E9	Eq-Comparison:T18 Value:T19 Value2:T20
 E10	Allergy:T21 Name:E11
-E11	Drug:T22 
+E11	Drug:T22
 E12	Study:T23 Study-Of:E11
 E13	Drug:T24 Name:T25 Acuteness:T29
 E14	Drug:T26 Name:T27
-E15	Or:T28 Arg:E13 Arg2:E14
 E17	Condition:T30 Name:T31
 E18	Modifier:T32 Modifies:T31
 E19	Modifier:T33 Modifies:T31
-E20	Or:T34 Arg:E19 Arg2:E18
 T1	Procedure 62 73	arthroscopy
 T2	Procedure-Name 62 73	arthroscopy
 T3	Condition 372 392	sleep apnea syndrome
@@ -44,15 +42,15 @@ T24	Drug 324 334	analgesics
 T25	Drug-Name 324 334	analgesics
 T26	Drug 342 351	sedatives
 T27	Drug-Name 342 351	sedatives
-T28	Or 335 341	and/or
 T29	Acuteness 309 316	chronic
 T30	Condition 430 441	dysfunction
 T31	Condition-Name 430 441	dysfunction
 T32	Modifier 422 429	hepatic
 T33	Modifier 413 418	renal
-T34	Or 419 421	or
 A1	Eq-Temporal-Unit-Value T7 year
 A2	Eq-Temporal-Period-Value T13 future
 A3	Eq-Operator-Value T15 BETWEEN
 A4	Acuteness-Type-Value T29 chronic
-A5	Observation-Type-Value T17 clinical-score
+A5	Observation-Type-Value E8 clinical-score
+R1	Or Arg1:E13 Arg2:E14
+R2	Or Arg1:E19 Arg2:E18

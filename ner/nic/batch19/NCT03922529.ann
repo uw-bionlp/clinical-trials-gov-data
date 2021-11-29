@@ -15,25 +15,19 @@ E32	Condition:T32 Name:T33
 E34	Procedure:T34 Name:T35
 E36	Condition:T36 Name:T37
 E38	Condition:T38 Name:T39
-E39	Age:T44 Eq-Comparison:E40
+E39	Age:T44 Numeric-Filter:E40
 E40	Eq-Comparison:T51 Operator:T40 Value:T45 Temporal-Unit:T55
 E41	Eq-Comparison:T52 Operator:T41 Temporal-Unit:T42 Value:T46
-E2	Encounter:T56 Type:T57
-E4	Or:T58 Arg:E30 Arg2:E7
+E2	Encounter:T56
 E6	Modifier:T15 Modifies:T2
-E8	Or:T16 Arg:E1 Arg2:E3
 E10	Modifier:T23 Modifies:T22
 E12	Modifier:T24 Modifies:T22
-E14	Or:T60 Arg:E12 Arg2:E10
 E15	Condition:T61 Name:T62
-E16	Or:T63 Arg:E15 Arg2:E17
-E18	Or:T64 Arg:E17 Arg2:E19
 E20	Study:T65
 E22	Assertion:T66 Asserted:E20
 E23	Condition:T67 Stability:T68
 E24	Procedure:T53 Name:T54
 E25	Observation:T69 Name:T70
-E27	Or:T71 Arg:E24 Arg2:E25
 E29	Condition:T72
 E31	Exception:T73 Except2:E38 From:E29
 E33	Death:T74 Temporality:E41 Temporality2:E37
@@ -44,25 +38,20 @@ E43	Modifier:T80 Modifies:T79
 E44	Condition:T81 Name:T82 Severity:T83
 E45	Observation:T84 Name:T85 Temporality:E46
 E46	Eq-Comparison:T86 Value:T47 Operator:T87
-E47	Or:T88 Arg:E45
 E48	Procedure:T89 Name:T90
-E49	Encounter:T91 Type:T92
-E50	Temporal-Connection:T93 Arg:E48 Arg2:E49
+E49	Encounter:T91
 E51	Observation:T94 Name:T95
 E52	Assertion:T96 Asserted:E51
 E53	Negation:T97 Negates:E52
-E54	And:T98 Arg:E49 Arg2:E53
 E55	Procedure:T99 Name:T100 Temporality:E58
 E56	Negation:T101 Negates:E55
 E57	Assertion:T102 Asserted:E56
 E58	Eq-Comparison:T103 Value:T48 Value2:T49 Value3:T50 Temporal-Unit:T43
 E59	Procedure:T104 Name:T105
-E60	Encounter:T106 Type:T107
-E61	Temporal-Connection:T108 Arg:E59 Arg2:E60
+E60	Encounter:T106
 E62	Observation:T109 Name:T110
 E63	Assertion:T111 Asserted:E62
 E64	Negation:T112 Negates:E63
-E65	And:T113 Arg:E60 Arg2:E64
 T1	Procedure 228 264	Coronary artery bypass graft surgery
 T2	Procedure-Name 228 264	Coronary artery bypass graft surgery
 T3	Procedure 269 303	Percutaneous Coronary Intervention
@@ -113,18 +102,12 @@ T51	Eq-Comparison 29 37	≥70 year
 T52	Eq-Comparison 761 777	within 12 months
 T55	Eq-Temporal-Unit 33 37	year
 T56	Encounter 92 107	hospitalization
-T57	Encounter-Type 92 107	hospitalization
-T58	Or 145 146	/
 T59	Stability 178 184	stable
 T15	Modifier 210 227	revascularization
-T16	Or 265 268	and
 T23	Modifier 366 378	percutaneous
 T24	Modifier 354 362	surgical
-T60	Or 363 365	or
 T61	Condition 396 416	mitral regurgitation
 T62	Condition-Name 396 416	mitral regurgitation
-T63	Or 417 419	or
-T64	Or 438 440	or
 T65	Study 566 571	study
 T66	Assertion 534 541	able to
 T67	Condition 621 638	medical condition
@@ -133,7 +116,6 @@ T53	Procedure 664 677	physical exam
 T54	Procedure-Name 664 677	physical exam
 T69	Observation 686 705	laboratory findings
 T70	Observation-Name 686 705	laboratory findings
-T71	Or 679 685	and/or
 T72	Condition 731 741	conditions
 T73	Exception 723 726	non
 T74	Death 755 760	fatal
@@ -150,17 +132,13 @@ T84	Observation 838 861	Short Blessed screening
 T85	Observation-Name 838 861	Short Blessed screening
 T86	Eq-Comparison 878 891	13 or greater
 T87	Eq-Operator 881 891	or greater
-T88	Or 892 894	or
 T89	Procedure 948 962	Long-term care
 T90	Procedure-Name 948 962	Long-term care
 T91	Encounter 975 984	admission
-T92	Encounter-Type 975 984	admission
-T93	Temporal-Connection 972 974	at
 T94	Observation 1012 1030	independent living
 T95	Observation-Name 1012 1030	independent living
 T96	Assertion 993 998	plans
 T97	Negation 990 992	no
-T98	And 985 989	with
 T99	Procedure 1081 1094	reassessments
 T100	Procedure-Name 1081 1094	reassessments
 T101	Negation 1048 1057	inability
@@ -169,36 +147,31 @@ T103	Eq-Comparison 1098 1116	3, 6 and 12 months
 T104	Procedure 1122 1136	long-term care
 T105	Procedure-Name 1122 1136	long-term care
 T106	Encounter 1150 1159	admission
-T107	Encounter-Type 1150 1159	admission
-T108	Temporal-Connection 1147 1149	at
 T109	Observation 1187 1205	independent living
 T110	Observation-Name 1187 1205	independent living
 T111	Assertion 1168 1173	plans
 T112	Negation 1165 1167	no
-T113	And 1160 1164	with
 A1	Eq-Operator-Value T40 GTEQ
 A2	Eq-Operator-Value T41 LTEQ
 A3	Eq-Temporal-Unit-Value T42 month
 A4	Eq-Temporal-Unit-Value T43 month
 A6	Eq-Temporal-Unit-Value T55 year
-A7	Encounter-Type-Value T57 inpatient
+A7	Encounter-Type-Value E2 inpatient
 A8	Stability-Value T59 stable
 A9	Assertion-Type-Value E22 hypothetical
 A10	Stability-Value T68 change
-A5	Observation-Type-Value T70 lab
+A5	Observation-Type-Value E25 lab
 A11	Assertion-Type-Value E35 hypothetical
 A12	Eq-Temporal-Period-Value T77 future
 A13	Severity-Value T83 severe
-A14	Observation-Type-Value T85 clinical-score
+A14	Observation-Type-Value E45 clinical-score
 A15	Eq-Operator-Value T87 GTEQ
-A16	Encounter-Type-Value T92 inpatient
-A17	Temporal-Connection-Type-Value E50 during
-A18	Observation-Type-Value T95 social-habit
+A16	Encounter-Type-Value E49 inpatient
+A18	Observation-Type-Value E51 social-habit
 A19	Assertion-Type-Value E52 intention
 A20	Assertion-Type-Value E57 hypothetical
-A21	Encounter-Type-Value T107 inpatient
-A22	Temporal-Connection-Type-Value E61 during
-A23	Observation-Type-Value T110 social-habit
+A21	Encounter-Type-Value E60 inpatient
+A23	Observation-Type-Value E62 social-habit
 A24	Assertion-Type-Value E63 intention
 R1	Abbrev-Of Arg1:E28 Arg2:E9
 R2	Treatment-For Arg1:E2 Arg2:E5
@@ -222,3 +195,14 @@ R19	Found-By Arg1:E23 Arg2:E25
 R20	Caused-By Arg1:E33 Arg2:E29
 R21	Example-Of Arg1:E42 Arg2:E29
 R22	Equivalent-To Arg1:E45 Arg2:E44
+R23	Or Arg1:E30 Arg2:E7
+R24	Or Arg1:E1 Arg2:E3
+R25	Or Arg1:E12 Arg2:E10
+R26	Or Arg1:E15 Arg2:E17
+R27	Or Arg1:E17 Arg2:E19
+R28	Or Arg1:E24 Arg2:E25
+R29	During Arg1:E48 Arg2:E49
+R30	And Arg1:E49 Arg2:E53
+R31	During Arg1:E59 Arg2:E60
+R32	And Arg1:E60 Arg2:E64
+R33	Or Arg1:E26 Arg2:E34

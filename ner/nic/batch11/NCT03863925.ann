@@ -11,11 +11,9 @@ E19	Condition:T19 Name:T20
 E21	Condition:T21 Name:T22
 E27	Procedure:T27 Name:T28 Temporality:E6
 E29	Procedure:T29 Name:T30
-E30	Age:T33 Eq-Comparison:E2
+E30	Age:T33 Numeric-Filter:E2
 E2	Eq-Comparison:T39 Operator:T34 Temporal-Unit:T31 Value:T36 Value2:T37 Temporal-Unit2:T32
-E4	Or:T35 Arg:E13 Arg2:E19
 E6	Eq-Comparison:T38 Temporal-Period:T40
-E8	And:T41 Arg2:E27 Arg:E19
 E10	Condition:T42 Name:T43
 E12	Condition:T44 Name:T45
 E14	Contraindication:T46 Contraindicates:E29
@@ -23,14 +21,12 @@ E16	Condition:T47 Name:T48
 E18	Condition:T49 Name:T50
 E20	Condition:T51 Name:T52
 E22	Procedure:T53
-E24	Condition:T54 Name:T55
+E24	Observation:T54 Name:T55
 E26	Condition:T56 Name:T57
 E23	Procedure:T24
 E28	Drug:T58 Name:T59
 E31	Drug:T60 Name:T61
-E32	Or:T62 Arg:E28 Arg2:E31
 E33	Modifier:T63 Modifies:E9
-E34	And:T64 Arg:E10 Arg2:E12
 E25	Modifier:T25 Modifies:E1
 E35	Negation:T26 Negates:E23
 E36	Negation:T65 Negates:E22
@@ -67,10 +63,8 @@ T36	Eq-Value 37 39	20
 T37	Eq-Value 54 56	65
 T39	Eq-Comparison 29 66	between 20 years old and 65 years old
 T34	Eq-Operator 29 36	between
-T35	Or 130 133	and
 T38	Eq-Comparison 195 207	necessity of
 T40	Eq-Temporal-Period 195 207	necessity of
-T41	And 181 185	with
 T42	Condition 278 300	adequate visual acuity
 T43	Condition-Name 278 300	adequate visual acuity
 T44	Condition 305 320	auditory acuity
@@ -83,8 +77,8 @@ T50	Condition-Name 644 665	intracranial angiomas
 T51	Condition 677 691	bony fractures
 T52	Condition-Name 677 691	bony fractures
 T53	Procedure 667 676	untreated
-T54	Condition 693 714	cervical spine injury
-T55	Condition-Name 693 714	cervical spine injury
+T54	Observation 693 714	cervical spine injury
+T55	Observation-Name 693 714	cervical spine injury
 T56	Condition 716 732	pheochromocytoma
 T57	Condition-Name 716 732	pheochromocytoma
 T23	Severity 749 754	sever
@@ -93,9 +87,7 @@ T58	Drug 856 863	alcohol
 T59	Drug-Name 856 863	alcohol
 T60	Drug 868 881	illegal drugs
 T61	Drug-Name 868 881	illegal drugs
-T62	Or 864 867	and
 T63	Modifier 901 912	unspecified
-T64	And 301 304	and
 T25	Modifier 85 90	major
 T26	Negation 819 828	untreated
 T65	Negation 667 676	untreated
@@ -118,3 +110,16 @@ R1	Treatment-For Arg1:E23 Arg2:E17
 R12	Example-Of Arg1:E28 Arg2:E17
 R13	Example-Of Arg1:E31 Arg2:E17
 R14	Treatment-For Arg1:E22 Arg2:E20
+R15	Or Arg1:E13 Arg2:E19
+R16	And Arg1:E19 Arg2:E27
+R17	Or Arg1:E28 Arg2:E31
+R18	And Arg1:E10 Arg2:E12
+R19	Or Arg1:E1 Arg2:E13
+R20	Or Arg1:E5 Arg2:E16
+R21	Or Arg1:E7 Arg2:E5
+R22	Or Arg1:E15 Arg2:E11
+R23	Or Arg1:E16 Arg2:E18
+R24	Or Arg1:E18 Arg2:E22
+R25	Or Arg1:E20 Arg2:E24
+R26	Or Arg1:E24 Arg2:E26
+R27	Or Arg1:E26 Arg2:E21

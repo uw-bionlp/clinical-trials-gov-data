@@ -1,0 +1,154 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E7	Condition:T7 Name:T8
+E9	Condition:T9 Name:T10 Temporality:E31
+E11	Procedure:T11 Name:T12
+E13	Condition:T13 Name:T14
+E15	Procedure:T15 Name:T16 Temporality:E25
+E17	Procedure:T17 Name:T18
+E19	Condition:T19 Name:T20
+E22	Procedure:T22 Name:T23
+E24	Condition:T24 Name:T25
+E25	Eq-Comparison:T35 Operator:T26 Temporal-Unit:T29 Value:T32
+E26	Eq-Comparison:T36 Operator:T27 Temporal-Unit:T30 Value:T33
+E2	Condition:T5 Name:T6 Temporality:E4
+E4	Eq-Comparison:T37 Operator:T38 Temporal-Unit:T28 Value:T31
+E5	Study:T39 
+E6	Temporal-Connection:T40 Arg:E4 Arg2:E5
+E8	Condition:T41 Name:T45 Severity:T42
+E10	Or:T44 Arg:T42 Arg2:T43
+E12	Observation:T46 Name:T47
+E14	Observation:T48 Name:T49
+E16	Observation:T50 Name:T51
+E18	Or:T52 Arg:E14 Arg2:E16
+E20	Condition:T53 Name:T54
+E21	Condition:T55 Name:T56
+E23	Or:T57 Arg:E20 Arg2:E21
+E27	Modifier:T58 Modifies:T12
+E28	Modifier:T59 Modifies:T12
+E29	Or:T60 Arg:E28 Arg2:E27
+E30	Condition:T61 Name:T62
+E31	Eq-Comparison:T63 Temporal-Period:T64
+E32	Modifier:T65 Modifies:T14
+E33	Modifier:T66 Modifies:T14
+E34	Or:T67 Arg:E32 Arg2:E33
+E35	Or:T68 Arg:E13 Arg2:E7
+E36	Procedure:T69 Name:T70
+E37	Or:T71 Arg:E36 Arg2:E22
+E38	Procedure:T72 Name:T73 Temporality:E26
+E39	Modifier:T74 Modifies:T73
+E40	Modifier:T75 Modifies:T73
+E41	Or:T76 Arg:E39 Arg2:E40
+E42	Or:T77 Arg:E15 Arg2:E38
+E43	Study:T78 
+E44	Temporal-Connection:T79 Arg:E26 Arg2:E43
+E45	Procedure:T34 Name:T80 Temporality:E47
+E46	Assertion:T81 Asserted:E17
+E47	Eq-Comparison:T82 Temporal-Period:T83
+T1	Condition 429 468	inflammatory bowel disease-unclassified
+T2	Condition-Name 429 468	inflammatory bowel disease-unclassified
+T3	Condition 496 517	indeterminate colitis
+T4	Condition-Name 496 517	indeterminate colitis
+T7	Condition 553 573	short bowel syndrome
+T8	Condition-Name 553 573	short bowel syndrome
+T9	Condition 409 427	ulcerative colitis
+T10	Condition-Name 409 427	ulcerative colitis
+T11	Procedure 273 280	therapy
+T12	Procedure-Name 273 280	therapy
+T13	Condition 542 549	abscess
+T14	Condition-Name 542 549	abscess
+T15	Procedure 618 633	bowel resection
+T16	Procedure-Name 618 633	bowel resection
+T17	Procedure 326 339	contraception
+T18	Procedure-Name 326 339	contraception
+T19	Condition 189 200	intolerance
+T20	Condition-Name 189 200	intolerance
+T21	Life-Stage-And-Gender 296 302	female
+T22	Procedure 595 601	ostomy
+T23	Procedure-Name 595 601	ostomy
+T24	Condition 470 475	IBD-U
+T25	Condition-Name 470 475	IBD-U
+T26	Eq-Operator 634 640	within
+T27	Eq-Operator 709 715	within
+T28	Eq-Temporal-Unit 56 62	months
+T29	Eq-Temporal-Unit 643 649	months
+T30	Eq-Temporal-Unit 718 724	months
+T31	Eq-Value 54 55	3
+T32	Eq-Value 641 642	6
+T33	Eq-Value 716 717	3
+T35	Eq-Comparison 634 649	within 6 months
+T36	Eq-Comparison 709 724	within 3 months
+T5	Condition 38 40	CD
+T6	Condition-Name 38 40	CD
+T37	Eq-Comparison 45 62	at least 3 months
+T38	Eq-Operator 45 53	at least
+T39	Study 72 80	baseline
+T40	Temporal-Connection 63 71	prior to
+T41	Condition 128 130	CD
+T42	Severity 109 117	moderate
+T43	Severity 121 127	severe
+T44	Or 118 120	to
+T45	Condition-Name 128 130	CD
+T46	Observation 146 148	SF
+T47	Observation-Name 146 148	SF
+T48	Observation 150 158	AP score
+T49	Observation-Name 150 158	AP score
+T50	Observation 164 170	SES-CD
+T51	Observation-Name 164 170	SES-CD
+T52	Or 160 163	and
+T53	Condition 202 218	loss of response
+T54	Condition-Name 202 218	loss of response
+T55	Condition 222 241	inadequate response
+T56	Condition-Name 222 241	inadequate response
+T57	Or 219 221	or
+T58	Modifier 264 272	biologic
+T59	Modifier 245 257	conventional
+T60	Or 258 260	or
+T61	Condition 285 287	CD
+T62	Condition-Name 285 287	CD
+T63	Eq-Comparison 388 395	current
+T64	Eq-Temporal-Period 388 395	current
+T65	Modifier 520 529	abdominal
+T66	Modifier 533 541	perianal
+T67	Or 530 532	or
+T68	Or 550 552	or
+T69	Procedure 586 591	stoma
+T70	Procedure-Name 586 591	stoma
+T71	Or 592 594	or
+T72	Procedure 701 708	surgery
+T73	Procedure-Name 701 708	surgery
+T74	Modifier 666 681	intra-abdominal
+T75	Modifier 685 700	extra abdominal
+T76	Or 682 684	or
+T77	Or 651 653	or
+T78	Study 728 736	baseline
+T79	Temporal-Connection 725 727	of
+T34	Procedure 765 800	monoclonal antibodies binding IL-23
+T80	Procedure-Name 765 800	monoclonal antibodies binding IL-23
+T81	Assertion 340 355	recommendations
+T82	Eq-Comparison 752 760	received
+T83	Eq-Temporal-Period 752 760	received
+A1	Life-Stage-And-Gender-Type T21 female
+A2	Eq-Operator-Value T26 LTEQ
+A3	Eq-Operator-Value T27 LTEQ
+A4	Eq-Temporal-Unit-Value T28 month
+A5	Eq-Temporal-Unit-Value T29 month
+A6	Eq-Temporal-Unit-Value T30 month
+A7	Eq-Operator-Value T38 LTEQ
+A8	Temporal-Connection-Type-Value E6 before
+A9	Severity-Value T42 moderate
+A10	Severity-Value T43 severe
+A11	Eq-Temporal-Period-Value T64 present
+A12	Temporal-Connection-Type-Value E44 before
+A13	Assertion-Type-Value E46 hypothetical
+A14	Eq-Temporal-Period-Value T83 past
+R1	Found-By Arg1:E8 Arg2:E12
+R2	Found-By Arg1:E8 Arg2:E14
+R3	Found-By Arg1:E8 Arg2:E16
+R4	Treatment-For Arg1:E11 Arg2:E30
+R5	Caused-By Arg1:E21 Arg2:E11
+R6	Caused-By Arg1:E20 Arg2:E11
+R7	Caused-By Arg1:E19 Arg2:E11
+R8	If-Then Arg1:T21 Arg2:E17
+R9	Abbrev-Of Arg1:E24 Arg2:E1
+R10	Equivalent-To Arg1:E3 Arg2:E24

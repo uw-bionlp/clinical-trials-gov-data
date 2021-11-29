@@ -9,7 +9,7 @@ E15	Condition:T15 Name:T16
 E17	Condition:T17 Name:T18
 E19	Condition:T19 Name:T20
 E21	Procedure:T21 Temporality:E50
-E23	Observation:T23 Name:T24 Severity:T96 Eq-Comparison:E55
+E23	Observation:T23 Name:T24 Severity:T96 Numeric-Filter:E55
 E25	Condition:T25 Name:T26
 E27	Condition:T27 Name:T28
 E29	Condition:T29 Name:T30
@@ -28,8 +28,7 @@ E24	Observation:T49 Name:T50 Severity:T59 Polarity:T58
 E26	Observation:T51 Name:T52
 E28	Observation:T53 Name:T54
 E30	Observation:T55 Name:T56
-E31	Or:T57 Arg:E26 Arg2:E24
-E32	Condition:T60 Name:T61
+E32	Condition:T60
 E33	Procedure:T62 Temporality:E35
 E34	Modifier:T63 Modifies:E33
 E35	Eq-Comparison:T64 Temporal-Period:T65
@@ -44,17 +43,13 @@ E43	Coreference:T76 Refers-To:E39 Refers-To2:E45
 E44	Drug:T77 Name:T78
 E45	Negation:T79 Negates:E44 Negates2:E46 Negates3:E48
 E46	Drug:T80 Name:T81
-E47	Or:T82 Arg:E44 Arg2:E46
 E48	Drug:T83 Name:T84
-E49	Or:T85 Arg:E46 Arg2:E48
 E50	Eq-Comparison:T22 Temporal-Period:T86
 E51	Assertion:T87 Asserted:E21
 E52	Condition:T88 Name:T89 Severity:T90
-E53	And:T91 Arg:E11 Arg2:E18
-E54	And:T92 Arg:E21 Arg2:E52
 E55	Eq-Comparison:T93 Value:T35 Operator:T95 Value2:T94
 E56	Observation:T97 Name:T98 Severity:T100 Polarity:T99
-E57	Age:T101 Eq-Comparison:E2
+E57	Age:T101 Numeric-Filter:E2
 E58	Modifier:T102 Modifies:T2
 E59	Modifier:T103 Modifies:T14
 E60	Assertion:T104 Asserted:E41
@@ -113,7 +108,6 @@ T53	Observation 466 469	TSH
 T54	Observation-Name 466 469	TSH
 T55	Observation 462 464	SR
 T56	Observation-Name 462 464	SR
-T57	Or 474 476	or
 T58	Polarity 514 541	outside the reference range
 T59	Severity 501 513	pronouncedly
 T60	Condition 595 602	disease
@@ -138,18 +132,14 @@ T78	Drug-Name 845 858	alpha-blocker
 T79	Negation 835 838	not
 T80	Drug 862 874	beta-blocker
 T81	Drug-Name 862 874	beta-blocker
-T82	Or 859 861	or
 T83	Drug 878 895	thiazide diuretic
 T84	Drug-Name 878 895	thiazide diuretic
-T85	Or 875 877	or
 T22	Eq-Comparison 928 934	active
 T86	Eq-Temporal-Period 928 934	active
 T87	Assertion 919 927	requires
 T88	Condition 968 999	changes in the area of the skin
 T89	Condition-Name 968 999	changes in the area of the skin
 T90	Severity 956 967	significant
-T91	And 324 327	and
-T92	And 945 948	and
 T93	Eq-Comparison 1060 1072	above 140/90
 T94	Eq-Value 1070 1072	90
 T95	Eq-Operator 1060 1065	above
@@ -171,10 +161,10 @@ A6	Assertion-Type-Value E12 hypothetical
 A7	Eq-Temporal-Period-Value T10 present
 A8	Assertion-Type-Value E16 hypothetical
 A9	Severity-Value T45 severe
-A10	Observation-Type-Value T50 lab
-A11	Observation-Type-Value T52 lab
-A12	Observation-Type-Value T54 lab
-A13	Observation-Type-Value T56 lab
+A10	Observation-Type-Value E24 lab
+A11	Observation-Type-Value E26 lab
+A12	Observation-Type-Value E28 lab
+A13	Observation-Type-Value E30 lab
 A14	Polarity-Value T58 abnormal
 A15	Severity-Value T59 severe
 A16	Eq-Temporal-Period-Value T65 present
@@ -185,8 +175,8 @@ A20	Assertion-Type-Value E51 hypothetical
 A21	Severity-Value T90 severe
 A22	Eq-Operator-Value T95 GT
 A23	Severity-Value T96 severe
-A24	Observation-Type-Value T24 vital
-A25	Observation-Type-Value T98 lab
+A24	Observation-Type-Value E23 vital
+A25	Observation-Type-Value E56 lab
 A26	Polarity-Value T99 abnormal
 A27	Severity-Value T100 severe
 A28	Assertion-Type-Value E60 hypothetical
@@ -201,3 +191,10 @@ R8	Using Arg1:E40 Arg2:E39
 R9	If-Then Arg1:E25 Arg2:E60
 R10	Treatment-For Arg1:E21 Arg2:E27
 R11	Caused-By Arg1:E52 Arg2:E27
+R12	Or Arg1:E26 Arg2:E24
+R13	Or Arg1:E44 Arg2:E46
+R14	Or Arg1:E46 Arg2:E48
+R15	And Arg1:E11 Arg2:E18
+R16	And Arg1:E21 Arg2:E52
+R17	Or Arg1:E28 Arg2:E26
+R18	Or Arg1:E30 Arg2:E28

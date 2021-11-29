@@ -1,0 +1,308 @@
+E1	Condition:T1 Name:T76
+E2	Eq-Comparison:T2 Temporal-Period:T77
+E3	Eq-Comparison:T3 Temporal-Recency:T149
+E4	Procedure:T4 Name:T150 Temporality:E2 Temporality2:E3
+E5	Or:T5 Arg:E4 Arg2:E7
+E6	Eq-Comparison:T6 Value:T152
+E7	Procedure:T7 Minimum-Count:E6 Name:T81
+E8	Eq-Comparison:T8 Temporal-Recency:T153
+E9	Procedure:T9 Name:T154 Temporality:E8 Temporality2:E10 Temporality3:E11
+E10	Eq-Comparison:T10 Operator:T78 Temporal-Unit:T79
+E11	Eq-Comparison:T11 Operator:T80 Value:T82 Value:T83
+E12	Age:T12 Eq-Comparison:E13 Eq-Comparison2:E15
+E13	Eq-Comparison:T13 Operator:T84 Value:T156
+E14	And:T14 Arg:E13 Arg2:E15
+E15	Eq-Comparison:T15 Operator:T85 Value:T86 Temporal-Unit:T87
+E16	Condition:T16 Name:T88
+E17	Age:T17 Eq-Comparison:E18 Eq-Comparison2:E20
+E18	Eq-Comparison:T18 Operator:T89 Temporal-Unit:T90 Value:T158
+E19	And:T19 Arg:E18 Arg2:E20
+E20	Eq-Comparison:T20 Operator:T91 Value:T92 Temporal-Unit:T93
+E21	Assertion:T21 Asserted:E22
+E22	Study:T22
+E24	Eq-Comparison:T24 Value:T95 Temporal-Unit:T96 Operator:T159
+E25	Condition:T25 Name:T97
+E26	Condition:T26 Name:T100 Acuteness:T99
+E27	Condition:T27 Name:T101
+E28	Or:T28 Arg:E27 Arg2:E29
+E29	Condition:T29 Name:T103 Severity:T102
+E31	Or:T31 Arg:E30 Arg2:E80
+E32	Procedure:T32 Name:T104
+E33	Eq-Comparison:T33 Operator:T105 Value:T106
+E34	Condition:T34 Name:T107
+E35	Condition:T35 Name:T108 Minimum-Count:E33
+E36	Condition:T36 Name:T109
+E37	Condition:T37 Name:T110
+E38	Condition:T38 Name:T111
+E39	Condition:T39
+E40	Exception:T40 From:E39 Except:E41
+E41	Condition:T41 Name:T112
+E42	Condition:T42 Name:T114 Stability:T113
+E43	Modifier:T43 Modifies:T115
+E44	Condition:T44 Name:T115
+E45	Condition:T45 Name:T116
+E46	Condition:T46 Name:T117
+E47	Condition:T47 Name:T118
+E48	Condition:T48 Name:T119
+E49	Condition:T49 Name:T120
+E50	Condition:T50 Name:T121
+E52	Condition:T52 Name:T123 Severity:T122 Acuteness:T51
+E53	Condition:T53 Name:T124
+E54	Observation:T54 Name:T125 Eq-Comparison:E55
+E55	Eq-Comparison:T55 Operator:T126 Value:T127 Unit:T128 Per:T129
+E56	Drug:T56 Temporality:E85
+E57	Assertion:T57 Asserted:T131
+E58	Condition:T58 Name:T132 Stability:T131
+E59	Drug:T59 Name:T133
+E60	Drug:T60 Name:T134
+E61	Procedure:T61 Name:T135
+E62	Exception:T62 From:E56 Except:E63 Except2:E65
+E63	Drug:T63 Name:T136
+E64	Or:T64 Arg:E63 Arg2:E65
+E65	Drug:T65 Name:T137
+E66	Procedure:T66 Name:T138
+E67	Procedure:T67 Name:T139
+E68	Modifier:T68 Modifies:T140
+E69	Procedure:T69 Name:T140
+E70	Other:T70 Is-Other:E71
+E71	Procedure:T71 Name:T141
+E72	Observation:T72 Name:T142 Eq-Comparison:E73 Eq-Comparison2:E75
+E73	Eq-Comparison:T73 Operator:T143 Value:T144
+E74	Or:T74 Arg:E73 Arg2:E75
+E75	Eq-Comparison:T75 Operator:T145 Value:T146 Unit:T147 Per:T148
+E76	And:T151 Arg:E1 Arg2:E4
+E77	And:T155 Arg:E7 Arg2:E9
+E78	Modifier:T157 Modifies:T88
+E23	Condition:T23 Name:T94 Duration:E24
+E79	Modifier:T98 Modifies:T100
+E30	Procedure:T30 Name:T160
+E80	Condition:T161 Name:T162
+E81	And:T163 Arg:E80 Arg2:E32
+E82	Modifier:T164 Modifies:T111
+E83	Assertion:T165 Asserted:T113
+E84	Negation:T166 Negates:E43
+E85	Eq-Comparison:T167 Temporal-Period:T130
+E86	Modifier:T168 Modifies:T138
+T1	Condition 36 39	T1D
+T2	Eq-Comparison 53 61	received
+T3	Eq-Comparison 68 73	first
+T4	Procedure 74 77	PTA
+T5	Or 79 81	or
+T6	Eq-Comparison 82 88	second
+T7	Procedure 89 92	PTA
+T8	Eq-Comparison 107 112	first
+T9	Procedure 113 118	graft
+T10	Eq-Comparison 133 146	within a week
+T11	Eq-Comparison 148 191	between 2 January 2005 and 31 December 2017
+T12	Age 197 200	age
+T13	Eq-Comparison 201 204	≥18
+T14	And 205 208	and
+T15	Eq-Comparison 209 219	< 65 years
+T16	Condition 327 335	diabetes
+T17	Age 341 344	age
+T18	Eq-Comparison 345 354	≥18 years
+T19	And 355 358	and
+T20	Eq-Comparison 359 369	< 65 years
+T21	Assertion 375 389	willingness to
+T22	Study 424 429	study
+T24	Eq-Comparison 463 470	5 years
+T25	Condition 476 492	brittle diabetes
+T26	Condition 541 554	complications
+T27	Condition 556 568	ketoacidosis
+T28	Or 569 571	or
+T29	Condition 579 592	hypoglycaemic
+T31	Or 634 636	or
+T32	Procedure 682 697	insulin therapy
+T33	Eq-Comparison 716 728	at least one
+T34	Condition 729 737	diabetes
+T35	Condition 746 758	complication
+T36	Condition 767 777	neuropathy
+T37	Condition 779 790	retinopathy
+T38	Condition 804 815	nephropathy
+T39	Condition 856 866	conditions
+T40	Exception 867 877	other than
+T41	Condition 878 881	T1D
+T42	Condition 898 909	bone health
+T43	Modifier 921 932	compensated
+T44	Condition 933 947	hypothyroidism
+T45	Condition 949 964	hyperthyroidism
+T46	Condition 966 985	hyperparathyroidism
+T47	Condition 987 1013	inflammatory bowel disease
+T48	Condition 1015 1025	malignancy
+T49	Condition 1027 1047	rheumatoid arthritis
+T50	Condition 1049 1061	hypogonadism
+T51	Acuteness 1070 1077	chronic
+T52	Condition 1078 1107	obstructive pulmonary disease
+T53	Condition 1109 1130	hepatic insufficiency
+T54	Observation 1132 1146	alcohol intake
+T55	Eq-Comparison 1147 1160	≥ 3 units/day
+T56	Drug 1176 1181	drugs
+T57	Assertion 1187 1190	can
+T58	Condition 1198 1213	bone metabolism
+T59	Drug 1221 1236	bisphosphonates
+T60	Drug 1238 1253	anticonvulsants
+T61	Procedure 1255 1282	hormone replacement therapy
+T62	Exception 1284 1294	other than
+T63	Drug 1295 1310	glucocorticoids
+T64	Or 1311 1314	and
+T65	Drug 1315 1333	immunosuppressants
+T66	Procedure 1366 1397	pancreas kidney transplantation
+T67	Procedure 1399 1431	pancreatic islet transplantation
+T68	Modifier 1433 1441	multiple
+T69	Procedure 1442 1446	PTAs
+T70	Other 1448 1453	other
+T71	Procedure 1454 1465	transplants
+T72	Observation 1471 1474	BMI
+T73	Eq-Comparison 1475 1480	<18.5
+T74	Or 1481 1483	or
+T75	Eq-Comparison 1484 1494	≥ 30 kg/m2
+T76	Condition-Name 36 39	T1D
+T77	Eq-Temporal-Period 53 61	received
+T78	Eq-Operator 133 139	within
+T79	Eq-Temporal-Unit 142 146	week
+T80	Eq-Operator 148 155	between
+T82	Eq-Value 156 170	2 January 2005
+T83	Eq-Value 175 191	31 December 2017
+T84	Eq-Operator 201 202	≥
+T85	Eq-Operator 209 210	<
+T86	Eq-Value 211 213	65
+T87	Eq-Temporal-Unit 214 219	years
+T88	Condition-Name 327 335	diabetes
+T89	Eq-Operator 345 346	≥
+T90	Eq-Temporal-Unit 349 354	years
+T91	Eq-Operator 359 360	<
+T92	Eq-Value 361 363	65
+T93	Eq-Temporal-Unit 364 369	years
+T95	Eq-Value 463 464	5
+T96	Eq-Temporal-Unit 465 470	years
+T97	Condition-Name 476 492	brittle diabetes
+T99	Acuteness 535 540	acute
+T100	Condition-Name 541 554	complications
+T101	Condition-Name 556 568	ketoacidosis
+T102	Severity 572 578	severe
+T103	Condition-Name 579 592	hypoglycaemic
+T104	Procedure-Name 682 697	insulin therapy
+T105	Eq-Operator 716 724	at least
+T106	Eq-Value 725 728	one
+T107	Condition-Name 729 737	diabetes
+T108	Condition-Name 746 758	complication
+T109	Condition-Name 767 777	neuropathy
+T110	Condition-Name 779 790	retinopathy
+T111	Condition-Name 804 815	nephropathy
+T112	Condition-Name 878 881	T1D
+T113	Stability 891 897	affect
+T114	Condition-Name 898 909	bone health
+T115	Condition-Name 933 947	hypothyroidism
+T116	Condition-Name 949 964	hyperthyroidism
+T117	Condition-Name 966 985	hyperparathyroidism
+T118	Condition-Name 987 1013	inflammatory bowel disease
+T119	Condition-Name 1015 1025	malignancy
+T120	Condition-Name 1027 1047	rheumatoid arthritis
+T121	Condition-Name 1049 1061	hypogonadism
+T122	Severity 1063 1069	severe
+T123	Condition-Name 1078 1107	obstructive pulmonary disease
+T124	Condition-Name 1109 1130	hepatic insufficiency
+T125	Observation-Name 1132 1146	alcohol intake
+T126	Eq-Operator 1147 1148	≥
+T127	Eq-Value 1149 1150	3
+T128	Eq-Unit 1151 1156	units
+T129	Eq-Temporal-Unit 1157 1160	day
+T130	Eq-Temporal-Period 1169 1172	use
+T131	Stability 1191 1197	affect
+T132	Condition-Name 1198 1213	bone metabolism
+T133	Drug-Name 1221 1236	bisphosphonates
+T134	Drug-Name 1238 1253	anticonvulsants
+T135	Procedure-Name 1255 1282	hormone replacement therapy
+T136	Drug-Name 1295 1310	glucocorticoids
+T137	Drug-Name 1315 1333	immunosuppressants
+T138	Procedure-Name 1366 1397	pancreas kidney transplantation
+T139	Procedure-Name 1399 1431	pancreatic islet transplantation
+T140	Procedure-Name 1442 1446	PTAs
+T141	Procedure-Name 1454 1465	transplants
+T142	Observation-Name 1471 1474	BMI
+T143	Eq-Operator 1475 1476	<
+T144	Eq-Value 1476 1480	18.5
+T145	Eq-Operator 1484 1485	≥
+T146	Eq-Value 1486 1488	30
+T147	Eq-Unit 1489 1491	kg
+T148	Eq-Unit 1492 1494	m2
+T149	Eq-Temporal-Recency 68 73	first
+T150	Procedure-Name 74 77	PTA
+T151	And 49 52	who
+T152	Eq-Value 82 88	second
+T153	Eq-Temporal-Recency 107 112	first
+T154	Procedure-Name 113 118	graft
+T81	Procedure-Name 89 92	PTA
+T155	And 93 100	only if
+T156	Eq-Value 202 204	18
+T157	Modifier 320 326	Type 1
+T158	Eq-Value 346 348	18
+T23	Condition 443 450	disease
+T94	Condition-Name 443 450	disease
+T159	Eq-Operator 435 442	minimum
+T98	Modifier 526 534	frequent
+T30	Procedure 612 633	third-part assistance
+T160	Procedure-Name 612 633	third-part assistance
+T161	Condition 637 648	unawareness
+T162	Condition-Name 637 648	unawareness
+T163	And 649 656	despite
+T164	Modifier 792 803	subclinical
+T165	Assertion 882 890	known to
+T166	Negation 917 920	non
+T167	Eq-Comparison 1169 1172	use
+T168	Modifier 1353 1365	simultaneous
+A1	Assertion-Type-Value E21 hypothetical
+A2	Assertion-Type-Value E57 hypothetical
+A3	Eq-Temporal-Period-Value T77 past
+A4	Eq-Operator-Value T78 LTEQ
+A5	Eq-Temporal-Unit-Value T79 week
+A6	Eq-Operator-Value T80 BETWEEN
+A7	Eq-Operator-Value T84 GTEQ
+A8	Eq-Operator-Value T85 LT
+A9	Eq-Temporal-Unit-Value T87 year
+A10	Eq-Operator-Value T89 GTEQ
+A11	Eq-Temporal-Unit-Value T90 year
+A12	Eq-Operator-Value T91 LT
+A13	Eq-Temporal-Unit-Value T93 year
+A14	Eq-Temporal-Unit-Value T96 year
+A17	Severity-Value T102 severe
+A18	Eq-Operator-Value T105 GTEQ
+A19	Stability-Value T113 change
+A20	Severity-Value T122 severe
+A21	Observation-Type-Value T125 social-habit
+A22	Eq-Operator-Value T126 GTEQ
+A23	Eq-Temporal-Unit-Value T129 day
+A24	Eq-Temporal-Period-Value T130 present
+A25	Stability-Value T131 change
+A26	Observation-Type-Value T142 vital
+A27	Eq-Operator-Value T143 LT
+A28	Eq-Operator-Value T145 GTEQ
+A29	Eq-Temporal-Recency-Value T149 first-time
+A30	Eq-Temporal-Recency-Value T153 first-time
+A31	Eq-Operator-Value T159 GTEQ
+A15	Assertion-Type-Value E83 hypothetical
+A32	Acuteness-Type-Value T99 acute
+A33	Acuteness-Type-Value T51 chronic
+R1	Equivalent-To Arg1:E26 Arg2:E25
+R2	Example-Of Arg1:E27 Arg2:E26
+R3	Example-Of Arg1:E29 Arg2:E26
+R4	Treatment-For Arg1:E30 Arg2:E29
+R5	Caused-By Arg1:E35 Arg2:E34
+R6	Example-Of Arg1:E36 Arg2:E35
+R7	Example-Of Arg1:E37 Arg2:E35
+R8	Example-Of Arg1:E38 Arg2:E35
+R9	Caused-By Arg1:T113 Arg2:E39
+R10	Example-Of Arg1:E44 Arg2:E39
+R11	Example-Of Arg1:E45 Arg2:E39
+R12	Example-Of Arg1:E46 Arg2:E39
+R13	Example-Of Arg1:E47 Arg2:E39
+R14	Example-Of Arg1:E48 Arg2:E39
+R15	Example-Of Arg1:E49 Arg2:E39
+R16	Example-Of Arg1:E50 Arg2:E39
+R17	Example-Of Arg1:E52 Arg2:E39
+R18	Example-Of Arg1:E53 Arg2:E39
+R19	Example-Of Arg1:E54 Arg2:E39
+R20	Caused-By Arg1:T131 Arg2:E56
+R21	Example-Of Arg1:E59 Arg2:E56
+R22	Example-Of Arg1:E60 Arg2:E56
+R23	Example-Of Arg1:E61 Arg2:E56

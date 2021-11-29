@@ -1,41 +1,34 @@
 E1	Condition:T1 Name:T38
 E2	Condition:T2 Name:T39
-E3	Age:T3 Eq-Comparison:E4
+E3	Age:T3 Numeric-Filter:E4
 E4	Eq-Comparison:T4 Value:T40 Operator:T41
 E5	Condition:T5 Name:T42
 E6	Condition:T6 Name:T44
-E7	Or:T7 Arg:E6 Arg2:E8
 E8	Condition:T8 Name:T45
 E9	Eq-Comparison:T9 Temporal-Period:T46
 E10	Other:T10 Is-Other:E14
-E11	Modifier:T11 Modifies:T47
-E12	Or:T12 Arg:E11 Arg2:E13
-E13	Modifier:T13 Modifies:T47
-E14	Condition:T14 Name:T47 Temporality:E9
+E11	Modifier:T11 Modifies:E14
+E13	Modifier:T13 Modifies:E14
+E14	Condition:T14 Temporality:E9
 E15	Procedure:T15 Name:T48
-E16	Or:T16 Arg:E15 Arg2:E18
 E17	Other:T17 Is-Other:E18
 E18	Procedure:T18 Name:T49
 E19	Condition:T19 Name:T50
 E20	Condition:T20 Name:T51
-E23	Age:T23 Eq-Comparison:E24
+E23	Age:T23 Numeric-Filter:E24
 E24	Eq-Comparison:T24 Value:T54 Operator:T55
 E25	Condition:T25 Name:T56
-E26	Or:T26 Arg:E25 Arg2:E27
 E27	Condition:T27 Name:T57
 E28	Eq-Comparison:T28 Temporal-Period:T58
-E29	Modifier:T29 Modifies:T59
-E30	Or:T30 Arg:E29 Arg2:E31
-E31	Modifier:T31 Modifies:T59
-E32	Condition:T32 Name:T59 Temporality:E28
+E29	Modifier:T29 Modifies:E32
+E31	Modifier:T31 Modifies:E32
+E32	Condition:T32 Temporality:E28
 E33	Procedure:T33 Name:T60
-E34	Or:T34 Arg:E33 Arg2:E36
 E35	Other:T35 Is-Other:E36
 E36	Procedure:T36 Name:T61
 E37	Condition:T37 Name:T62
 E38	Assertion:T63 Asserted:E5
 E39	Modifier:T64 Modifies:T42
-E40	Or:T65 Arg:E39 Arg2:E38
 E21	Condition:T21 Name:T22
 E22	Condition:T43 Name:T52
 T1	Condition 3 22	Parkinson's Disease
@@ -44,16 +37,13 @@ T3	Age 64 68	Aged
 T4	Eq-Comparison 69 79	18 or more
 T5	Condition 126 128	PD
 T6	Condition 289 298	Pregnancy
-T7	Or 299 301	or
 T8	Condition 302 315	breastfeeding
 T9	Eq-Comparison 326 333	History
 T10	Other 337 342	other
 T11	Modifier 343 353	neurologic
-T12	Or 354 356	or
 T13	Modifier 357 368	psychiatric
 T14	Condition 369 376	disease
 T15	Procedure 387 396	Pacemaker
-T16	Or 397 399	or
 T17	Other 400 405	other
 T18	Procedure 406 434	implanted electronic devices
 T19	Condition 445 459	Claustrophobia
@@ -61,15 +51,12 @@ T20	Condition 465 472	Healthy
 T23	Age 583 587	aged
 T24	Eq-Comparison 588 598	18 or more
 T25	Condition 654 663	Pregnancy
-T26	Or 664 666	or
 T27	Condition 667 680	breastfeeding
 T28	Eq-Comparison 686 693	History
 T29	Modifier 697 707	neurologic
-T30	Or 708 710	or
 T31	Modifier 711 722	psychiatric
 T32	Condition 723 730	disease
 T33	Procedure 736 745	Pacemaker
-T34	Or 746 748	or
 T35	Other 749 754	other
 T36	Procedure 755 783	implanted electronic devices
 T37	Condition 789 803	Claustrophobia
@@ -97,7 +84,6 @@ T61	Procedure-Name 755 783	implanted electronic devices
 T62	Condition-Name 789 803	Claustrophobia
 T63	Assertion 117 125	probable
 T64	Modifier 102 113	established
-T65	Or 114 116	or
 T21	Condition 514 516	PD
 T22	Condition-Name 514 516	PD
 T43	Condition 573 575	PD
@@ -108,3 +94,10 @@ A3	Eq-Operator-Value T55 GTEQ
 A4	Eq-Temporal-Period-Value T58 past
 A5	Assertion-Type-Value E38 possible
 R1	Abbrev-Of Arg1:E2 Arg2:E1
+R2	Or Arg1:E6 Arg2:E8
+R3	Or Arg1:E11 Arg2:E13
+R4	Or Arg1:E15 Arg2:E18
+R5	Or Arg1:E25 Arg2:E27
+R6	Or Arg1:E29 Arg2:E31
+R7	Or Arg1:E33 Arg2:E36
+R8	Or Arg1:E39 Arg2:E38

@@ -5,8 +5,8 @@ E7	Procedure:T7 Name:T8
 E9	Procedure:T9 Name:T10
 E12	Condition:T12 Name:T13
 E15	Condition:T15 Name:T16
-E16	Age:T23 Eq-Comparison:E19
-E17	Age:T24 Eq-Comparison:E20
+E16	Age:T23 Numeric-Filter:E19
+E17	Age:T24 Numeric-Filter:E20
 E19	Eq-Comparison:T30 Operator:T18 Temporal-Unit:T21 Value:T26
 E20	Eq-Comparison:T31 Operator:T19 Temporal-Unit:T22 Value:T28
 E21	Eq-Comparison:T32 Operator:T20 Value:T29 Unit:T59 Per:T60 Unit2:T61
@@ -15,7 +15,6 @@ E4	Procedure:T34 Name:T35
 E6	Assertion:T36 Asserted:E4 Asserted2:E8
 E8	Procedure:T14 Name:T27
 E10	Modifier:T37 Modifies:T27
-E11	And:T38 Arg:E4 Arg2:E8
 E13	Condition:T39 Name:T40
 E14	Condition:T41 Name:T42
 E22	Procedure:T17 Name:T44
@@ -28,8 +27,7 @@ E27	Modifier:T52 Modifies:T51
 E28	Contraindication:T53 Contraindicates:E9
 E29	Allergy:T54 Name:E30
 E30	Drug:T55 Name:T56
-E31	Observation:T57 Name:T58 Eq-Comparison:E21
-E32	And:T62 Arg:E5 Arg2:E31
+E31	Observation:T57 Name:T58 Numeric-Filter:E21
 T1	Procedure 552 569	cochlear implants
 T2	Procedure-Name 552 569	cochlear implants
 T3	Condition 474 488	claustrophobia
@@ -65,7 +63,6 @@ T36	Assertion 240 249	requiring
 T14	Procedure 281 284	MRI
 T27	Procedure-Name 281 284	MRI
 T37	Modifier 278 280	2D
-T38	And 274 277	and
 T39	Condition 339 363	congenital heart disease
 T40	Condition-Name 339 363	congenital heart disease
 T41	Condition 423 431	Pregnant
@@ -91,7 +88,6 @@ T58	Observation-Name 669 672	DFG
 T59	Eq-Unit 678 680	ml
 T60	Eq-Temporal-Unit 681 684	min
 T61	Eq-Unit 685 691	1.73m²
-T62	And 664 668	with
 A2	Eq-Operator-Value T18 GTEQ
 A3	Eq-Operator-Value T19 LT
 A4	Eq-Operator-Value T20 LT
@@ -115,3 +111,8 @@ R12	Example-Of Arg1:E29 Arg2:E28
 R13	Using Arg1:E9 Arg2:E30
 R14	Example-Of Arg1:E5 Arg2:E28
 R15	Example-Of Arg1:E5 Arg2:E28
+R16	And Arg1:E4 Arg2:E8
+R17	And Arg1:E5 Arg2:E31
+R18	Or Arg1:E7 Arg2:E26
+R19	Or Arg1:E24 Arg2:E7
+R20	Or Arg1:E26 Arg2:E1

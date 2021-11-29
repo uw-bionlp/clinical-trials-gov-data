@@ -8,48 +8,42 @@ E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
 E17	Condition:T17 Name:T18
 E21	Condition:T21 Name:T22
-E22	Age:T31 Eq-Comparison:E4
+E22	Age:T31 Numeric-Filter:E4
 E23	Eq-Comparison:T39 Operator:T23 Value:T32 Unit:T45
 E24	Eq-Comparison:T40 Operator:T25 Temporal-Unit:T29 Value:T36 Temporal-Period:T86
 E25	Eq-Comparison:T41 Operator:T27 Value:T38 Unit:T102 Per:T103
 E26	Eq-Comparison:T42 Temporal-Period:T43
-E2	Observation:T44 Name:T46 Eq-Comparison:E23
+E2	Observation:T44 Name:T46 Numeric-Filter:E23
 E4	Eq-Comparison:T47 Operator:T48 Value:T33 Value2:T34 Temporal-Unit:T28
 E6	Observation:T49 Name:T50 Polarity:T52
 E8	Modifier:T51 Modifies:T50
-E10	Condition:T53 Name:T54
+E10	Condition:T53
 E12	Negation:T55 Negates:E10
 E14	Negation:T56 Negates:E16
 E16	Drug:T57
 E18	Negation:T58 Negates:E3
 E19	Condition:T60 Name:T61 Polarity:T62
-E20	Or:T63 Arg:E5 Arg2:E19
 E27	Modifier:T64 Modifies:T61
 E28	Eq-Comparison:T65 Operator:T24 Value:T35
-E29	Observation:T66 Name:T67 Eq-Comparison:E28
+E29	Observation:T66 Name:T67 Numeric-Filter:E28
 E30	Condition:T68 Name:T69 Temporality:E31
 E31	Eq-Comparison:T70 Temporal-Period:T71
 E32	Condition:T72 Name:T73
 E33	Condition:T74 Name:T75 Polarity:T76
-E34	Or:T77 Arg:E32 Arg2:E33
 E35	Negation:T79 Negates:T78
 E36	Condition:T80 Name:T81
-E37	Or:T82 Arg:E17 Arg2:E36
 E38	Procedure:T84 Name:T85 Temporality:E24
 E39	Study:T87
 E40	Other:T88 Is-Other:E39
 E41	Condition:T89 Name:T90 Acuteness:T94
 E42	Condition:T91 Name:T92 Acuteness:T94 Temporality:E44
-E43	Or:T93 Arg:E41 Arg2:E42
 E44	Eq-Comparison:T95 Operator:T26 Temporal-Period:T96 Value:T37 Temporal-Unit:T30
 E45	Modifier:T97 Modifies:T12
 E46	Modifier:T98 Modifies:T12
-E47	Or:T99 Arg:E45 Arg2:E46
-E48	Observation:T100 Name:T101 Eq-Comparison:E25
+E48	Observation:T100 Name:T101 Numeric-Filter:E25
 E49	Study:T104
-E50	Temporal-Connection:T105 Arg:E48 Arg2:E49
 E51	Allergy:T106
-E52	Condition:T107 Name:T108
+E52	Condition:T107
 E53	Drug:T109 Name:T110
 E54	Modifier:T111 Modifies:T2
 T1	Condition 1088 1104	thrombocytopenia
@@ -114,7 +108,6 @@ T59	Polarity 321 328	limited
 T60	Condition 371 394	temperature Sensitivity
 T61	Condition-Name 371 394	temperature Sensitivity
 T62	Polarity 361 370	increased
-T63	Or 352 360	and / or
 T64	Modifier 398 417	warming of the body
 T65	Eq-Comparison 502 514	greater than
 T66	Observation 515 519	NYHA
@@ -128,12 +121,10 @@ T73	Condition-Name 571 587	hearing disorder
 T74	Condition 601 627	sensitivity to loud Sounds
 T75	Condition-Name 601 627	sensitivity to loud Sounds
 T76	Polarity 591 600	increased
-T77	Or 588 590	or
 T78	Life-Stage-And-Gender 666 672	Minors
 T79	Negation 709 717	excluded
 T80	Condition 736 749	breastfeeding
 T81	Condition-Name 736 749	breastfeeding
-T82	Or 733 735	or
 T83	Life-Stage-And-Gender 750 755	women
 T84	Procedure 761 768	Surgery
 T85	Procedure-Name 761 768	Surgery
@@ -144,19 +135,16 @@ T89	Condition 867 874	illness
 T90	Condition-Name 867 874	illness
 T91	Condition 878 887	infection
 T92	Condition-Name 878 887	infection
-T93	Or 875 877	or
 T94	Acuteness 861 866	Acute
 T95	Eq-Comparison 888 911	within the last 4 weeks
 T96	Eq-Temporal-Period 899 903	last
 T97	Modifier 917 929	Neurological
 T98	Modifier 934 945	psychiatric
-T99	Or 930 933	and
 T100	Observation 975 988	hemoglobin Hb
 T101	Observation-Name 975 988	hemoglobin Hb
 T102	Eq-Unit 992 993	g
 T103	Eq-Unit 996 998	dl
 T104	Study 1003 1012	screening
-T105	Temporal-Connection 1000 1002	at
 T106	Allergy 1019 1027	Allergic
 T107	Condition 1028 1036	diseases
 T108	Condition-Name 1028 1036	diseases
@@ -174,9 +162,9 @@ A8	Eq-Temporal-Unit-Value T28 year
 A9	Eq-Temporal-Unit-Value T29 month
 A10	Eq-Temporal-Unit-Value T30 week
 A11	Eq-Temporal-Period-Value T43 past
-A12	Observation-Type-Value T46 lab
+A12	Observation-Type-Value E2 lab
 A13	Eq-Operator-Value T48 BETWEEN
-A14	Observation-Type-Value T50 lab
+A14	Observation-Type-Value E6 lab
 A15	Polarity-Value T52 normal
 A16	Polarity-Value T59 low
 A17	Polarity-Value T62 high
@@ -186,9 +174,8 @@ A20	Life-Stage-And-Gender-Type T78 child
 A21	Life-Stage-And-Gender-Type T83 female
 A22	Eq-Temporal-Period-Value T86 past
 A24	Eq-Temporal-Period-Value T96 past
-A25	Observation-Type-Value T101 lab
-A26	Temporal-Connection-Type-Value E50 during
-A27	Observation-Type-Value T67 clinical-score
+A25	Observation-Type-Value E48 lab
+A27	Observation-Type-Value E29 clinical-score
 A28	Acuteness-Type-Value T94 acute
 R1	Example-Of Arg1:E9 Arg2:E7
 R2	Example-Of Arg1:E15 Arg2:E7
@@ -198,3 +185,10 @@ R5	If-Then Arg1:T83 Arg2:E36
 R6	Caused-By Arg1:E51 Arg2:E52
 R7	Caused-By Arg1:E1 Arg2:E53
 R8	Abbrev-Of Arg1:E21 Arg2:E1
+R9	Or Arg1:E5 Arg2:E19
+R10	Or Arg1:E32 Arg2:E33
+R11	Or Arg1:E17 Arg2:E36
+R12	Or Arg1:E41 Arg2:E42
+R13	Or Arg1:E45 Arg2:E46
+R14	During Arg1:E48 Arg2:E49
+R15	Or Arg1:E9 Arg2:E15

@@ -7,7 +7,7 @@ E7	Procedure:T7 Name:T20
 E8	Procedure:T8
 E9	Drug:T9 Name:T16
 E10	Eq-Comparison:T17 Temporal-Recency:T18
-E4	Observation:T4 Name:T19 Eq-Comparison:E6
+E4	Observation:T4 Name:T19 Numeric-Filter:E6
 T1	Condition 41 64	obstructive sleep apnea
 T2	Indication 65 74	indicated
 T3	Procedure 88 111	airway pressure therapy
@@ -31,7 +31,7 @@ T20	Procedure-Name 172 193	Psychiatric treatment
 A1	Polarity-Value T11 positive
 A2	Eq-Operator-Value T14 GT
 A3	Eq-Temporal-Recency-Value T18 first-time
-A4	Observation-Type-Value T13 clinical-score
+A4	Observation-Type-Value E5 clinical-score
 R1	Treatment-For Arg1:E3 Arg2:E1
 R2	Abbrev-Of Arg1:E4 Arg2:E5
 R3	Using Arg1:E8 Arg2:E9

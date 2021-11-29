@@ -8,9 +8,9 @@ E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16 Severity:T81
 E17	Condition:T17 Name:T18 Temporality:E30
 E19	Procedure:T19 Name:T20
-E25	Age:T30 Eq-Comparison:E2
-E26	Age:T31 Eq-Comparison:E12
-E27	Age:T32 Eq-Comparison:E52
+E25	Age:T30 Numeric-Filter:E2
+E26	Age:T31 Numeric-Filter:E12
+E27	Age:T32 Numeric-Filter:E52
 E28	Eq-Comparison:T38 Operator:T26 Temporal-Unit:T28 Value:T35 Temporal-Period:T87
 E29	Eq-Comparison:T39 Operator:T27 Unit:T29 Value:T36
 E30	Eq-Comparison:T40 Temporal-Period:T41
@@ -21,34 +21,27 @@ E2	Eq-Comparison:T48 Value:T33 Operator:T49
 E4	Condition:T50 Name:T51 Polarity:T52
 E6	Condition:T53 Name:T54
 E8	Negation:T55 Negates:E6
-E10	And:T56 Arg:E4 Arg2:E8
 E12	Eq-Comparison:T57 Value:T34 Operator:T58
-E14	Or:T61 Arg:E7 Arg2:E1
 E16	Procedure:T62 Name:T63
 E18	Contraindication:T64 Contraindicates:E16
 E20	Condition:T24 Name:T25
 E22	Modifier:T65 Modifies:T25
 E23	Observation:T66 Name:T67
 E24	Modifier:T68 Modifies:T67
-E34	Or:T69 Arg:E20 Arg2:E23
 E35	Condition:T70 Name:T71
 E36	Condition:T72 Name:T73
 E37	Modifier:T74 Modifies:T73
-E38	Or:T75 Arg:E35 Arg2:E36
 E21	Observation:T21 Name:T22
 E39	Observation:T76 Name:T77
 E40	Modifier:T78 Modifies:T22
-E41	Or:T79 Arg:E21 Arg2:E39
 E42	Modifier:T80 Modifies:T77
 E43	Condition:T82 Name:T83 Temporality:E32 Temporality2:E28
 E44	Modifier:T84 Modifies:T83
 E45	Modifier:T85 Modifies:T83
-E46	Or:T86 Arg:E44 Arg2:E45
-E47	Observation:T88 Name:T89 Eq-Comparison:E29 Temporality:E33
+E47	Observation:T88 Name:T89 Numeric-Filter:E29 Temporality:E33
 E48	Eq-Comparison:T90 Value:T91 Unit:T92
 E49	Condition:T93 Name:T94
 E50	Condition:T95 Name:T96
-E51	Or:T97 Arg:E49 Arg2:E50
 E52	Eq-Comparison:T98 Operator:T99 Value:T37
 E53	Study:T100 Study-Of:E54 Temporality:E56
 E54	Procedure:T101 Name:T102
@@ -105,12 +98,10 @@ T52	Polarity 113 117	good
 T53	Condition 149 170	neurological diseases
 T54	Condition-Name 149 170	neurological diseases
 T55	Negation 146 148	no
-T56	And 141 145	with
 T57	Eq-Comparison 251 262	50 and over
 T58	Eq-Operator 254 262	and over
 T59	Location 306 310	UCSF
 T60	Severity 341 345	mild
-T61	Or 374 376	or
 T62	Procedure 476 484	MRI scan
 T63	Procedure-Name 476 484	MRI scan
 T64	Contraindication 452 469	contraindications
@@ -120,26 +111,22 @@ T65	Modifier 522 527	brain
 T66	Observation 531 538	tattoos
 T67	Observation-Name 531 538	tattoos
 T68	Modifier 539 549	above neck
-T69	Or 528 530	or
 T70	Condition 555 572	Metallic implants
 T71	Condition-Name 555 572	Metallic implants
 T72	Condition 576 584	shrapnel
 T73	Condition-Name 576 584	shrapnel
 T74	Modifier 588 592	body
-T75	Or 573 575	or
 T21	Observation 607 614	jewelry
 T22	Observation-Name 607 614	jewelry
 T76	Observation 618 627	piercings
 T77	Observation-Name 618 627	piercings
 T78	Modifier 602 606	body
-T79	Or 615 617	or
 T80	Modifier 637 650	not removable
 T81	Severity 697 702	major
 T82	Condition 779 794	substance abuse
 T83	Condition-Name 779 794	substance abuse
 T84	Modifier 796 808	prescription
 T85	Modifier 812 828	non-prescription
-T86	Or 809 811	or
 T87	Eq-Temporal-Period 841 845	past
 T88	Observation 869 875	weight
 T89	Observation-Name 869 875	weight
@@ -150,7 +137,6 @@ T93	Condition 920 943	Difficulty in urinating
 T94	Condition-Name 920 943	Difficulty in urinating
 T95	Condition 947 967	emptying the bladder
 T96	Condition-Name 947 967	emptying the bladder
-T97	Or 944 946	or
 T98	Eq-Comparison 973 985	Under age 50
 T99	Eq-Operator 973 978	Under
 T100	Study 1036 1041	study
@@ -173,10 +159,17 @@ A11	Location-Value T59 hospital
 A12	Severity-Value T60 mild
 A13	Severity-Value T81 severe
 A14	Eq-Temporal-Period-Value T87 past
-A15	Observation-Type-Value T89 vital
+A15	Observation-Type-Value E47 vital
 A16	Eq-Operator-Value T99 LT
 A17	Eq-Temporal-Period-Value T105 present
 R1	Abbrev-Of Arg1:E11 Arg2:E5
 R2	Abbrev-Of Arg1:E7 Arg2:E3
 R3	Abbrev-Of Arg1:E9 Arg2:E1
 R4	Equivalent-To Arg1:E48 Arg2:E29
+R5	And Arg1:E4 Arg2:E8
+R6	Or Arg1:E7 Arg2:E1
+R7	Or Arg1:E20 Arg2:E23
+R8	Or Arg1:E35 Arg2:E36
+R9	Or Arg1:E21 Arg2:E39
+R10	Or Arg1:E44 Arg2:E45
+R11	Or Arg1:E49 Arg2:E50

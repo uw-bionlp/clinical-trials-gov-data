@@ -1,10 +1,9 @@
 E2	Condition:T2 Name:T3
 E1	Procedure:T4 Name:T5 Temporality:E3 Location:T11
 E3	Eq-Comparison:T9 Temporal-Period:T10
-E4	Or:T13 Arg:T11 Arg2:T12
 E5	Eq-Comparison:T14 Temporal-Unit:T6 Operator:T15 Value:T7
-E6	Age:T16 Eq-Comparison:E5
-E7	Observation:T17 Name:T18 Eq-Comparison:E8
+E6	Age:T16 Numeric-Filter:E5
+E7	Observation:T17 Name:T18 Numeric-Filter:E8
 E8	Eq-Comparison:T19 Operator:T20 Value:T8 Unit:T21 Per:T22
 E9	Condition:T23 Name:T24
 E10	Negation:T25 Negates:T1
@@ -20,7 +19,6 @@ T9	Eq-Comparison 67 74	ongoing
 T10	Eq-Temporal-Period 67 74	ongoing
 T11	Location 108 116	Hvidovre
 T12	Location 121 140	Bispebjerg Hospital
-T13	Or 117 120	and
 T14	Eq-Comparison 146 159	over 18 years
 T15	Eq-Operator 146 150	over
 T16	Age 154 159	years
@@ -38,5 +36,6 @@ A2	Eq-Temporal-Period-Value T10 present
 A3	Location-Value T11 hospital
 A4	Location-Value T12 hospital
 A5	Eq-Operator-Value T15 GT
-A6	Observation-Type-Value T18 lab
+A6	Observation-Type-Value E7 lab
 A7	Eq-Operator-Value T20 GT
+R1	Or Arg1:T11 Arg2:T12

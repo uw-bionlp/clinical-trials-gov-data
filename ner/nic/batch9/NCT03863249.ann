@@ -1,7 +1,6 @@
 E1	Eq-Comparison:T1 Value:T43 Operator:T44 Value:T45 Temporal-Unit:T46
 E2	Negation:T2 Negates:E3
-E3	Condition:T3 Name:T47
-E4	Or:T4 Arg:E3 Arg2:E44
+E3	Observation:T3 Name:T47
 E6	Eq-Comparison:T6 Operator:T49 Value:T50 Unit:T51 Per:T52
 E7	Condition:T7 Name:T53 Stage:E8 Stage2:E45
 E8	Eq-Comparison:T8 Unit:T54 Value:T55 Value:T56
@@ -11,9 +10,9 @@ E11	Eq-Comparison:T11 Operator:T60 Value:T61
 E12	Condition:T12 Name:T62 Minimum-Count:E11
 E13	Eq-Comparison:T13 Operator:T63 Value:T64 Unit:T65
 E14	Eq-Comparison:T14 Operator:T66 Value:T67 Unit:T68
-E15	Observation:T15 Name:T102 Eq-Comparison:E14 Minimum-Count:E13
+E15	Observation:T15 Name:T102 Numeric-Filter:E14 Minimum-Count:E13
 E16	Condition:T16 Name:T104 Polarity:T103
-E17	Observation:T105 Eq-Comparison:E18 Name:T106
+E17	Observation:T105 Numeric-Filter:E18 Name:T106
 E18	Eq-Comparison:T18 Operator:T69 Value:T70 Unit:T71 Per:T72
 E19	Eq-Comparison:T19 Temporal-Period:T73
 E20	Procedure:T20 Name:T74 Temporality:E19 Temporality2:E21
@@ -22,14 +21,11 @@ E22	Eq-Comparison:T22 Temporal-Period:T107
 E23	Drug:T23 Name:T78 Temporality:E22 Temporality2:E24
 E24	Eq-Comparison:T24 Temporal-Period:T79 Value:T80 Temporal-Unit:T81
 E25	Drug:T25 Name:T82
-E26	Or:T26 Arg:E25
-E28	Temporal-Connection:T28 Arg:E25 Arg2:E29
 E29	Eq-Comparison:T29 Temporal-Period:T83 Value:T84 Temporal-Unit:T85
 E30	Modifier:T30 Modifies:E31
 E31	Condition:T31
 E32	Drug:T32 Name:T86
 E33	Condition:T33 Name:T88
-E34	Or:T34 Arg:E33 Arg2:E35
 E35	Condition:T35 Name:T89
 E36	Drug:T36
 E37	Assertion:T37 Asserted:T90
@@ -38,15 +34,14 @@ E39	Allergy:T39 Name:E41
 E40	Study:T40 Study-Of:E41
 E41	Drug:T41 Name:T92
 E42	Condition:T42 Name:T93
-E43	Age:T94 Eq-Comparison:E1
-E44	Observation:T95 Eq-Comparison:E6 Name:T48
+E43	Age:T94 Numeric-Filter:E1
+E44	Observation:T95 Numeric-Filter:E6 Name:T48
 E45	Eq-Comparison:T96 Unit:T57 Operator:T99 Value:T97 Value2:T98
 E46	Modifier:T100 Modifies:T59
 E47	Modifier:T101 Modifies:T62
 T1	Eq-Comparison 37 48	40-70 years
 T2	Negation 55 57	No
-T3	Condition 58 65	smokers
-T4	Or 66 68	or
+T3	Observation 58 65	smokers
 T6	Eq-Comparison 80 109	less than 10 cigarettes a day
 T7	Condition 130 143	periodontitis
 T8	Eq-Comparison 144 161	stages III and IV
@@ -66,14 +61,11 @@ T22	Eq-Comparison 511 515	used
 T23	Drug 516 527	antibiotics
 T24	Eq-Comparison 535 548	last 6 months
 T25	Drug 570 586	oral antiseptics
-T26	Or 587 595	and / or
-T28	Temporal-Connection 596 602	during
 T29	Eq-Comparison 607 624	previous 3 months
 T30	Modifier 631 639	Systemic
 T31	Condition 640 650	conditions
 T32	Drug 665 689	antibiotic premedication
 T33	Condition 702 710	pregnant
-T34	Or 711 713	or
 T35	Condition 714 721	nursing
 T36	Drug 728 739	Medications
 T37	Assertion 745 750	could
@@ -86,7 +78,7 @@ T43	Eq-Value 37 39	40
 T44	Eq-Operator 39 40	-
 T45	Eq-Value 40 42	70
 T46	Eq-Temporal-Unit 43 48	years
-T47	Condition-Name 58 65	smokers
+T47	Observation-Name 58 65	smokers
 T48	Observation-Name 69 76	smokers
 T49	Eq-Operator 80 89	less than
 T50	Eq-Value 90 92	10
@@ -147,7 +139,6 @@ T104	Condition-Name 325 339	general health
 T105	Observation 365 372	Smokers
 T106	Observation-Name 365 372	Smokers
 T107	Eq-Temporal-Period 511 515	used
-A1	Temporal-Connection-Type-Value E28 during
 A2	Assertion-Type-Value E37 hypothetical
 A3	Eq-Operator-Value T44 BETWEEN
 A4	Eq-Temporal-Unit-Value T46 year
@@ -168,11 +159,14 @@ A18	Eq-Temporal-Unit-Value T85 month
 A19	Life-Stage-And-Gender-Type T87 female
 A20	Stability-Value T90 change
 A21	Eq-Operator-Value T99 BETWEEN
-A22	Observation-Type-Value T102 measurement
+A22	Observation-Type-Value E15 measurement
 A23	Polarity-Value T103 normal
 A24	Eq-Temporal-Period-Value T107 past
-A25	Observation-Type-Value T48 social-habit
-A26	Observation-Type-Value T106 social-habit
+A25	Observation-Type-Value E44 social-habit
+A26	Observation-Type-Value E17 social-habit
 R1	Treatment-For Arg1:E32 Arg2:E31
 R2	If-Then Arg1:T87 Arg2:E33
 R3	Caused-By Arg1:T90 Arg2:E36
+R4	Or Arg1:E3 Arg2:E44
+R5	During Arg1:E25 Arg2:E29
+R6	Or Arg1:E33 Arg2:E35

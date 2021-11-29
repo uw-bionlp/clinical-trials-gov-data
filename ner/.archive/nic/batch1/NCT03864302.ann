@@ -1,0 +1,31 @@
+E1	Procedure:T1 Name:T2 Minimum-Count:E5
+E2	Eq-Comparison:T6 Operator:T3 Temporal-Unit:T4 Value:T5
+E3	Procedure:T7 Name:T8
+E4	Procedure:T9 Name:T10 Temporality:E2
+E5	Eq-Comparison:T11 Value:T12
+E6	Negation:T13 Negates:E1
+E7	Procedure:T14 Name:T15 Minimum-Count:E8
+E8	Eq-Comparison:T16 Value:T17
+E9	Provider:T18 Role:T19
+T1	Procedure 165 180	TURB procedures
+T2	Procedure-Name 165 180	TURB procedures
+T3	Eq-Operator 227 233	within
+T4	Eq-Temporal-Unit 236 242	months
+T5	Eq-Value 234 235	6
+T6	Eq-Comparison 227 242	within 6 months
+T7	Procedure 222 226	TURB
+T8	Procedure-Name 222 226	TURB
+T9	Procedure 186 211	Simulation-based training
+T10	Procedure-Name 186 211	Simulation-based training
+T11	Eq-Comparison 140 144	four
+T12	Eq-Value 140 144	four
+T13	Negation 126 129	Not
+T14	Procedure 94 99	TURBs
+T15	Procedure-Name 94 99	TURBs
+T16	Eq-Comparison 69 73	Four
+T17	Eq-Value 69 73	Four
+T18	Provider 25 32	Doctors
+T19	Provider-Role 25 32	Doctors
+A1	Eq-Operator-Value T3 LTEQ
+A2	Eq-Temporal-Unit-Value T4 month
+R1	Using Arg1:E4 Arg2:E3

@@ -11,16 +11,14 @@ E19	Condition:T19 Name:T20
 E20	Eq-Comparison:T35 Operator:T21 Temporal-Unit:T22 Value:T23
 E21	Eq-Comparison:T36 Temporal-Period:T37
 E22	Eq-Comparison:T38 Temporal-Period:T39
-E2	Age:T40 Eq-Comparison:E20
+E2	Age:T40 Numeric-Filter:E20
 E4	Procedure:T41 Name:T42
-E6	Observation:T43 Name:T44 Eq-Comparison:E8
+E6	Observation:T43 Name:T44 Numeric-Filter:E8
 E8	Eq-Comparison:T45 Unit:T46 Value:T47
-E10	And:T48 Arg:E4 Arg2:E6
-E12	And:T24 Arg:E5 Arg2:E7
 E14	Eq-Comparison:T25 Temporal-Period:T26
 E16	Condition:T27 Name:T28
 E18	Modifier:T49 Modifies:T28
-E23	Observation:T29 Name:T30 Eq-Comparison:E24
+E23	Observation:T29 Name:T30 Numeric-Filter:E24
 E24	Eq-Comparison:T31 Operator:T50 Value:T32 Unit:T51 Per:T52
 E25	Condition:T33 Name:T34
 E26	Assertion:T53 Asserted:E25
@@ -63,8 +61,6 @@ T44	Observation-Name 119 156	American Society of Anesthesiologists
 T45	Eq-Comparison 157 165	grade II
 T46	Eq-Unit 157 162	grade
 T47	Eq-Value 163 165	II
-T48	And 115 118	and
-T24	And 248 251	and
 T25	Eq-Comparison 265 276	preexisting
 T26	Eq-Temporal-Period 265 276	preexisting
 T27	Condition 355 361	cancer
@@ -87,11 +83,13 @@ A2	Eq-Temporal-Unit-Value T22 year
 A3	Eq-Temporal-Period-Value T37 past
 A4	Eq-Temporal-Period-Value T39 present
 A5	Eq-Temporal-Period-Value T26 past
-A6	Observation-Type-Value T30 lab
+A6	Observation-Type-Value E23 lab
 A7	Eq-Operator-Value T50 GT
 A8	Assertion-Type-Value E26 hypothetical
-A9	Observation-Type-Value T44 clinical-score
+A9	Observation-Type-Value E6 clinical-score
 R1	Using Arg1:E1 Arg2:E4
 R2	Abbrev-Of Arg1:E13 Arg2:E9
 R3	Example-Of Arg1:E9 Arg2:E11
 R4	Equivalent-To Arg1:E23 Arg2:E19
+R5	And Arg1:E4 Arg2:E6
+R6	And Arg1:E5 Arg2:E7

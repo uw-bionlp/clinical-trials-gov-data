@@ -1,8 +1,7 @@
 E1	Procedure:T1 Name:T83
-E2	Or:T2 Arg:E1 Arg2:E3
 E3	Procedure:T3 Name:T46
 E4	Eq-Comparison:T4 Operator:T47 Value:T48
-E5	Condition:T5 Name:T49 Minimum-Count:E4
+E5	Observation:T5 Name:T49 Minimum-Count:E4
 E6	Eq-Comparison:T6 Temporal-Period:T50
 E7	Procedure:T7 Temporality:E6
 E8	Eq-Comparison:T8 Temporal-Period:T51
@@ -14,34 +13,29 @@ E15	Drug:T15 Name:T56
 E16	Modifier:T16 Modifies:T55
 E18	Drug:T18 Name:T60
 E19	Modifier:T19
-E20	Or:T20 Arg:E18 Arg2:E21
 E21	Drug:T21 Name:T62
 E22	Drug:T22 Name:T63
 E24	Study:T24
 E25	Eq-Comparison:T25 Temporal-Period:T65
 E26	Procedure:T26 Name:T66 Temporality:E25
 E27	Procedure:T27 Name:T67
-E28	Or:T28 Arg:E27 Arg2:E30
 E29	Other:T29 Is-Other:E30
 E30	Procedure:T30
 E31	Eq-Comparison:T31 Temporal-Period:T69
 E32	Condition:T32 Name:T70 Temporality:E31
-E33	Or:T33 Arg:E32 Arg2:E35
 E34	Eq-Comparison:T34 Temporal-Period:T71
 E35	Condition:T35 Name:T72 Temporality:E34
 E36	Risk:T36 Polarity:T73 Risk-For:E37
-E37	Condition:T37 Name:T74
+E37	Observation:T37 Name:T74
 E38	Condition:T38 Name:T75 Temporality:E39
 E39	Eq-Comparison:T39 Operator:T76 Value:T77 Temporal-Unit:T78
 E40	Condition:T40 Name:T79
 E41	Condition:T41 Name:T80
-E42	Or:T42 Arg:E41 Arg2:E43
 E43	Condition:T43 Name:T81
 E44	Condition:T44 Name:T82
 E46	Negation:T84 Negates:E7
 E47	Modifier:T85 Modifies:E7
 E48	Modifier:T86 Modifies:T49
-E49	And:T87 Arg:E5 Arg2:E46
 E9	Drug:T9 Name:T58
 E13	Modifier:T13 Modifies:T62
 E17	Condition:T17 Name:T68
@@ -50,12 +44,10 @@ E50	Modifier:T52 Modifies:T75
 E51	Modifier:T57 Modifies:T80
 E52	Modifier:T59 Modifies:T79
 E53	Modifier:T61 Modifies:T81
-E54	And:T64 Arg:E43 Arg2:E44
 T1	Procedure 38 55	histopathological
-T2	Or 56 58	or
 T3	Procedure 59 82	cytological examination
 T4	Eq-Comparison 136 148	at least one
-T5	Condition 159 165	lesion
+T5	Observation 159 165	lesion
 T6	Eq-Comparison 215 223	received
 T7	Procedure 230 239	treatment
 T8	Eq-Comparison 278 297	previously received
@@ -67,34 +59,30 @@ T15	Drug 380 385	PD-L1
 T16	Modifier 387 395	antibody
 T18	Drug 429 434	PD-L2
 T19	Modifier 436 444	antibody
-T20	Or 445 447	or
 T21	Drug 448 496	anti-cytotoxic T lymphocyte-associated antigen-4
 T22	Drug 498 504	CTLA-4
 T24	Study 576 581	study
 T25	Eq-Comparison 601 620	previously received
 T26	Procedure 625 629	TACE
 T27	Procedure 631 654	radiofrequency ablation
-T28	Or 655 658	and
 T29	Other 659 664	other
 T30	Procedure 678 688	treatments
 T31	Eq-Comparison 711 718	history
 T32	Condition 722 746	gastroesophageal varices
-T33	Or 747 749	or
 T34	Eq-Comparison 750 756	active
 T35	Condition 757 770	cardia ulcers
 T36	Risk 794 798	risk
-T37	Condition 802 810	bleeding
+T37	Observation 802 810	bleeding
 T38	Condition 858 868	hemorrhage
 T39	Eq-Comparison 869 882	within 1 year
 T40	Condition 926 929	HCC
 T41	Condition 943 946	HCC
-T42	Or 947 949	or
 T43	Condition 956 974	cholangiocarcinoma
 T44	Condition 979 982	HCC
 T46	Procedure-Name 59 82	cytological examination
 T47	Eq-Operator 136 144	at least
 T48	Eq-Value 145 148	one
-T49	Condition-Name 159 165	lesion
+T49	Observation-Name 159 165	lesion
 T50	Eq-Temporal-Period 215 223	received
 T51	Eq-Temporal-Period 278 297	previously received
 T53	Drug-Name 298 330	anti-programmed death receptor-1
@@ -114,7 +102,7 @@ T70	Condition-Name 722 746	gastroesophageal varices
 T71	Eq-Temporal-Period 750 756	active
 T72	Condition-Name 757 770	cardia ulcers
 T73	Polarity 789 793	high
-T74	Condition-Name 802 810	bleeding
+T74	Observation-Name 802 810	bleeding
 T75	Condition-Name 858 868	hemorrhage
 T76	Eq-Operator 869 875	within
 T77	Eq-Value 876 877	1
@@ -127,7 +115,6 @@ T83	Procedure-Name 38 55	histopathological
 T84	Negation 211 214	not
 T85	Modifier 224 229	local
 T86	Modifier 149 158	evaluable
-T87	And 203 206	and
 T9	Drug 397 427	anti-programmed death ligand-2
 T13	Modifier 506 516	antibodies
 T17	Condition 671 677	cancer
@@ -136,7 +123,6 @@ T52	Modifier 835 857	upper gastrointestinal
 T57	Modifier 931 942	sarcomatoid
 T59	Modifier 912 925	fibrous layer
 T61	Modifier 950 955	mixed
-T64	And 975 978	and
 A1	Eq-Operator-Value T47 GTEQ
 A2	Eq-Temporal-Period-Value T50 past
 A3	Eq-Temporal-Period-Value T51 past
@@ -153,3 +139,11 @@ R4	Abbrev-Of Arg1:E19 Arg2:E9
 R5	Abbrev-Of Arg1:E22 Arg2:E21
 R6	Treatment-For Arg1:E30 Arg2:E17
 R7	Caused-By Arg1:E36 Arg2:E35
+R8	Or Arg1:E1 Arg2:E3
+R9	Or Arg1:E18 Arg2:E21
+R10	Or Arg1:E27 Arg2:E30
+R11	Or Arg1:E32 Arg2:E35
+R12	Or Arg1:E41 Arg2:E43
+R13	And Arg1:E5 Arg2:E46
+R14	And Arg1:E43 Arg2:E44
+R15	Or Arg1:E26 Arg2:E27

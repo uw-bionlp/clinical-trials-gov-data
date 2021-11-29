@@ -1,10 +1,10 @@
 E1	Condition:T1 Name:T2 Duration:E2
 E2	Eq-Comparison:T4 Operator:T7 Temporal-Unit:T6 Value:T5
-E3	Encounter:T8 Type:T9 Location:T10
+E3	Encounter:T8 Location:T10
 E4	Condition:T11 Severity:T12 Name:T13
 E5	Observation:T14 Name:T15
 E6	Eq-Comparison:T16 Value:T17 Value2:T18 Unit:T19 Operator:T20
-E7	Observation:T21 Name:T22 Eq-Comparison:E8
+E7	Observation:T21 Name:T22 Numeric-Filter:E8
 E8	Eq-Comparison:T23 Operator:T25 Value:T24
 E9	Condition:T26 Name:T27
 E10	Assertion:T28 Asserted:E11
@@ -12,14 +12,11 @@ E11	Condition:T29 Name:T30
 E12	Drug:T32 Name:T31
 E13	Assertion:T33 Asserted:E12
 E14	Eq-Comparison:T35 Operator:T36 Temporal-Unit:T38 Value:T37
-E15	And:T39 Arg:T34 Arg2:E16
-E16	Observation:T40 Name:T41 Eq-Comparison:E14
+E16	Observation:T40 Name:T41 Numeric-Filter:E14
 E17	Contraindication:T42 Contraindicates:E18
 E18	Drug:T43 Name:T44
-E19	And:T45 Arg:E16 Arg2:E17
 E20	Condition:T46 Name:T47 Severity:T48
 E21	Condition:T49 Name:T50
-E22	Or:T51 Arg:E20 Arg2:E21
 E23	Modifier:T52 Modifies:T22
 T1	Condition 20 28	pregnant
 T2	Condition-Name 20 28	pregnant
@@ -29,7 +26,6 @@ T5	Eq-Value 35 37	34
 T6	Eq-Temporal-Unit 38 43	weeks
 T7	Eq-Operator 44 51	or less
 T8	Encounter 52 60	admitted
-T9	Encounter-Type 52 60	admitted
 T10	Location 64 87	Women's Health Hospital
 T11	Condition 121 133	preeclampsia
 T12	Severity 115 120	sever
@@ -59,29 +55,26 @@ T35	Eq-Comparison 390 408	more than 34 weeks
 T36	Eq-Operator 390 399	more than
 T37	Eq-Value 400 402	34
 T38	Eq-Temporal-Unit 403 408	weeks
-T39	And 385 389	with
 T40	Observation 409 418	gestation
 T41	Observation-Name 409 418	gestation
 T42	Contraindication 432 448	contraindication
 T43	Drug 453 471	Magnesium Sulphate
 T44	Drug-Name 453 471	Magnesium Sulphate
-T45	And 419 422	and
 T46	Condition 491 507	renal impairment
 T47	Condition-Name 491 507	renal impairment
 T48	Severity 484 490	severe
 T49	Condition 511 528	myasthenia gravis
 T50	Condition-Name 511 528	myasthenia gravis
-T51	Or 508 510	or
 T52	Modifier 218 229	by dipstick
 A1	Life-Stage-And-Gender-Type T3 female
 A2	Eq-Temporal-Unit-Value T6 week
 A3	Eq-Operator-Value T7 LTEQ
-A4	Encounter-Type-Value T9 inpatient
+A4	Encounter-Type-Value E3 inpatient
 A5	Location-Value T10 hospital
 A6	Severity-Value T12 severe
-A7	Observation-Type-Value T15 vital
+A7	Observation-Type-Value E5 vital
 A8	Eq-Operator-Value T20 GTEQ
-A9	Observation-Type-Value T22 lab
+A9	Observation-Type-Value E7 lab
 A10	Eq-Operator-Value T25 GTEQ
 A11	Assertion-Type-Value E10 possible
 A12	Assertion-Type-Value E13 hypothetical
@@ -96,3 +89,6 @@ R4	Equivalent-To Arg1:E9 Arg2:E4
 R5	Treatment-For Arg1:E12 Arg2:E11
 R6	Example-Of Arg1:E20 Arg2:E17
 R7	Example-Of Arg1:E21 Arg2:E17
+R8	And Arg1:T34 Arg2:E16
+R9	And Arg1:E16 Arg2:E17
+R10	Or Arg1:E20 Arg2:E21

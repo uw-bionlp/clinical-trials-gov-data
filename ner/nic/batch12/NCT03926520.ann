@@ -10,17 +10,16 @@ E29	Condition:T29 Name:T30
 E31	Procedure:T31 Name:T32
 E35	Procedure:T35 Name:T36
 E37	Procedure:T37 Name:T38
-E38	Age:T48 Eq-Comparison:E20
+E38	Age:T48 Numeric-Filter:E20
 E40	Eq-Comparison:T58 Operator:T39 Value:T50
 E41	Eq-Comparison:T59 Operator:T40 Value:T51
 E42	Eq-Comparison:T60 Operator:T42 Temporal-Unit:T45 Value:T57 Temporal-Period:T108
-E2	Observation:T3 Name:T4 Eq-Comparison:E40
+E2	Observation:T3 Name:T4 Numeric-Filter:E40
 E3	Observation:T5 Name:T46
-E4	Observation:T47 Name:T61 Eq-Comparison:E41 Eq-Comparison2:E5 Eq-Comparison3:E6
+E4	Observation:T47 Name:T61 Numeric-Filter:E41 Numeric-Filter:E5 Numeric-Filter:E6
 E5	Eq-Comparison:T62 Operator:T63 Unit:T65 Value:T64
 E6	Eq-Comparison:T52 Unit:T68 Operator:T67 Value:T66
 E8	Eq-Comparison:T53 Unit:T71 Operator:T70 Value:T69
-E10	Or:T72 Arg:E6 Arg2:E8
 E7	Eq-Comparison:T7 Operator:T8 Unit:T73
 E12	Condition:T74 Name:T75
 E14	Drug:T76 Minimum-Count:E7
@@ -32,14 +31,11 @@ E22	Eq-Comparison:T80 Temporal-Period:T81
 E21	Observation:T21 Name:T22
 E24	Observation:T27 Name:T28
 E26	Eq-Comparison:T82 Temporal-Period:T83
-E27	Or:T84 Arg:E17 Arg2:E13
 E28	Eq-Comparison:T85 Temporal-Period:T86
-E30	Or:T87 Arg:E28 Arg2:E26
 E32	Eq-Comparison:T88 Temporal-Period:T89
 E34	Eq-Comparison:T90 Temporal-Period:T91
 E36	Eq-Comparison:T92 Operator:T41 Temporal-Unit:T44 Value:T56 Temporal-Period:T106
 E39	Procedure:T93 Name:T94 Temporality:E42
-E43	Or:T95 Arg:E35 Arg2:E39
 E33	Procedure:T33 Name:T34
 E44	Observation:T96 Name:T97
 E45	Observation:T98 Name:T99
@@ -47,7 +43,7 @@ E46	Condition:T101 Stability:T100
 E47	Condition:T102 Name:T103
 E48	Negation:T104 Negates:E47
 E49	Modifier:T105 Modifies:T12
-E50	Procedure:T107 
+E50	Procedure:T107
 T1	Condition 38 58	Alzheimer's Dementia
 T2	Condition-Name 38 58	Alzheimer's Dementia
 T6	Language 529 536	English
@@ -108,7 +104,6 @@ T53	Eq-Comparison 267 292	2 on at least three items
 T69	Eq-Value 267 268	2
 T70	Eq-Operator 272 280	at least
 T71	Eq-Unit 281 292	three items
-T72	Or 253 255	or
 T7	Eq-Comparison 299 311	At least one
 T8	Eq-Operator 299 307	At least
 T73	Eq-Unit 308 311	one
@@ -129,10 +124,8 @@ T27	Observation 776 779	CAM
 T28	Observation-Name 776 779	CAM
 T82	Eq-Comparison 858 865	current
 T83	Eq-Temporal-Period 858 865	current
-T84	Or 911 913	or
 T85	Eq-Comparison 846 854	Lifetime
 T86	Eq-Temporal-Period 846 854	Lifetime
-T87	Or 855 857	or
 T88	Eq-Comparison 944 951	Current
 T89	Eq-Temporal-Period 944 951	Current
 T90	Eq-Comparison 1000 1006	Active
@@ -140,7 +133,6 @@ T91	Eq-Temporal-Period 1000 1006	Active
 T92	Eq-Comparison 1030 1050	within past 6 months
 T93	Procedure 1084 1110	neurostimulation therapies
 T94	Procedure-Name 1084 1110	neurostimulation therapies
-T95	Or 1075 1077	or
 T33	Procedure 443 472	standard physical examination
 T34	Procedure-Name 443 472	standard physical examination
 T96	Observation 474 484	urinalysis
@@ -171,13 +163,13 @@ A12	Assertion-Type-Value E16 possible
 A13	Assertion-Type-Value E18 hypothetical
 A14	Eq-Operator-Value T79 BETWEEN
 A15	Eq-Temporal-Period-Value T81 present
-A16	Observation-Type-Value T22 measurement
+A16	Observation-Type-Value E21 measurement
 A18	Eq-Temporal-Period-Value T83 present
 A19	Eq-Temporal-Period-Value T86 past
 A20	Eq-Temporal-Period-Value T89 present
 A21	Eq-Temporal-Period-Value T91 present
-A22	Observation-Type-Value T97 lab
-A23	Observation-Type-Value T99 lab
+A22	Observation-Type-Value E44 lab
+A23	Observation-Type-Value E45 lab
 A24	Stability-Value T100 stable
 A17	Eq-Temporal-Period-Value T106 past
 A25	Eq-Temporal-Period-Value T108 past
@@ -192,3 +184,9 @@ R8	Found-By Arg1:E33 Arg2:E46
 R9	Found-By Arg1:E44 Arg2:E46
 R10	Found-By Arg1:E45 Arg2:E46
 R11	Using Arg1:E50 Arg2:E35
+R12	Or Arg1:E6 Arg2:E8
+R13	Or Arg1:E17 Arg2:E13
+R14	Or Arg1:E28 Arg2:E26
+R15	Or Arg1:E35 Arg2:E39
+R16	Or Arg1:E19 Arg2:E17
+R17	Or Arg1:E33 Arg2:E44

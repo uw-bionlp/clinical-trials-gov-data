@@ -1,15 +1,13 @@
 E1	Eq-Comparison:T1 Operator:T15 Value:T16
 E2	Procedure:T2 Name:T34 Temporality:E15
-E3	And:T3 Arg:E2 Arg2:E20
 E4	Eq-Comparison:T4 Operator:T35 Unit:T36 Value:T24
 E5	Modifier:T5 Modifies:T37
-E6	Observation:T6 Name:T37 Eq-Comparison:E4
+E6	Observation:T6 Name:T37 Numeric-Filter:E4
 E7	Condition:T7 Name:T38
 E15	Eq-Comparison:T17 Temporal-Period:T18
-E16	Age:T19 Eq-Comparison:E1
-E17	And:T20 Arg:E16 Arg2:E2
+E16	Age:T19 Numeric-Filter:E1
 E18	Negation:T21 Negates:E19
-E19	Condition:T22 
+E19	Condition:T22
 E20	Negation:T23 Negates:E18
 E21	Modifier:T25 Modifies:T37
 E22	Negation:T26 Negates:E5
@@ -17,31 +15,27 @@ E8	Modifier:T8 Modifies:T38
 E9	Assertion:T9 Asserted:E10
 E10	Condition:T10 Name:T11
 E11	Modifier:T12 Modifies:T11
-E12	Condition:T13 Name:T14
+E12	Observation:T13 Name:T14
 E13	Modifier:T28 Modifies:T14
 E14	Condition:T29 Name:T30
-E24	Or:T31 Arg:E12 Arg2:E14
 E25	Condition:T32 Name:T33
 E26	Eq-Comparison:T39 Temporal-Period:T40
 E27	Procedure:T41 Name:T42 Temporality:E26
 E28	Modifier:T43 Modifies:T42
 E29	Condition:T44 Name:T45
-E30	Observation:T46 Name:T47 Eq-Comparison:E31
+E30	Observation:T46 Name:T47 Numeric-Filter:E31
 E31	Eq-Comparison:T48 Operator:T49 Value:T50
 E32	Condition:T51 Name:T52
-E33	Observation:T53 Name:T54 Polarity:T55 Eq-Comparison:E35
-E34	And:T56 Arg:E32 Arg2:E33
+E33	Observation:T53 Name:T54 Polarity:T55 Numeric-Filter:E35
 E35	Eq-Comparison:T57 Operator:T58 Value:T59
-E36	Observation:T60 Name:T61 Eq-Comparison:E38
-E37	Or:T62 Arg:E33 Arg2:E36
+E36	Observation:T60 Name:T61 Numeric-Filter:E38
 E38	Eq-Comparison:T63 Operator:T64 Value:T65
 E39	Condition:T66 Name:T67
-E40	Observation:T68 Name:T69 Eq-Comparison:E41
+E40	Observation:T68 Name:T69 Numeric-Filter:E41
 E41	Eq-Comparison:T70 Operator:T71 Value:T72
 E42	Condition:T73 Name:T74
 T1	Eq-Comparison 37 40	≥18
 T2	Procedure 60 71	colonoscopy
-T3	And 72 75	and
 T4	Eq-Comparison 138 143	≥20mm
 T5	Modifier 148 160	pedunculated
 T6	Observation 172 177	polyp
@@ -56,7 +50,6 @@ T16	Eq-Value 38 40	18
 T17	Eq-Comparison 45 57	presents for
 T18	Eq-Temporal-Period 45 57	presents for
 T19	Age 38 40	18
-T20	And 41 44	who
 T21	Negation 107 116	exclusion
 T22	Condition 94 102	criteria
 T23	Negation 85 88	not
@@ -68,12 +61,11 @@ T9	Assertion 273 282	Suspected
 T10	Condition 283 297	adenocarcinoma
 T11	Condition-Name 283 297	adenocarcinoma
 T12	Modifier 303 327	deep submucosal invasion
-T13	Condition 367 374	lesions
-T14	Condition-Name 367 374	lesions
+T13	Observation 367 374	lesions
+T14	Observation-Name 367 374	lesions
 T28	Modifier 347 366	ulcerated depressed
 T29	Condition 434 448	adenocarcinoma
 T30	Condition-Name 434 448	adenocarcinoma
-T31	Or 421 423	or
 T32	Condition 468 494	inflammatory bowel disease
 T33	Condition-Name 468 494	inflammatory bowel disease
 T39	Eq-Comparison 517 526	receiving
@@ -93,13 +85,11 @@ T52	Condition-Name 610 622	coagulopathy
 T53	Observation 640 643	INR
 T54	Observation-Name 640 643	INR
 T55	Polarity 631 639	elevated
-T56	And 623 627	with
 T57	Eq-Comparison 644 648	≥1.5
 T58	Eq-Operator 644 645	≥
 T59	Eq-Value 645 648	1.5
 T60	Observation 653 662	platelets
 T61	Observation-Name 653 662	platelets
-T62	Or 650 652	or
 T63	Eq-Comparison 663 666	<50
 T64	Eq-Operator 663 664	<
 T65	Eq-Value 664 666	50
@@ -118,14 +108,19 @@ A4	Eq-Temporal-Period-Value T18 present
 A1	Assertion-Type-Value E9 possible
 A5	Eq-Temporal-Period-Value T40 present
 A6	Eq-Operator-Value T49 GT
-A7	Observation-Type-Value T54 lab
+A7	Observation-Type-Value E33 lab
 A8	Polarity-Value T55 high
 A9	Eq-Operator-Value T58 GTEQ
-A10	Observation-Type-Value T61 lab
+A10	Observation-Type-Value E36 lab
 A11	Eq-Operator-Value T64 LT
-A12	Observation-Type-Value T69 clinical-score
+A12	Observation-Type-Value E40 clinical-score
 A13	Eq-Operator-Value T71 LTEQ
-A14	Observation-Type-Value T37 measurement
-A15	Observation-Type-Value T47 clinical-score
+A14	Observation-Type-Value E6 measurement
+A15	Observation-Type-Value E30 clinical-score
 R1	Equivalent-To Arg1:E30 Arg2:E29
 R2	Equivalent-To Arg1:E40 Arg2:E39
+R3	And Arg1:E2 Arg2:E20
+R4	And Arg1:E16 Arg2:E2
+R5	Or Arg1:E12 Arg2:E14
+R6	And Arg1:E32 Arg2:E33
+R7	Or Arg1:E33 Arg2:E36

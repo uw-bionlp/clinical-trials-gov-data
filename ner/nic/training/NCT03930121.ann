@@ -3,7 +3,7 @@ E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8 Temporality:E55
 E12	Procedure:T12 Name:T13
 E14	Observation:T14 Name:T15
-E16	Observation:T16 Name:T17 Eq-Comparison:E27
+E16	Observation:T16 Name:T17 Numeric-Filter:E27
 E20	Condition:T20 Name:T21 Severity:T123
 E22	Condition:T22 Name:T111 Severity:T109 Temporality:E78
 E24	Condition:T24 Name:T25 Severity:T118
@@ -18,11 +18,9 @@ E2	Modifier:T48
 E4	Modifier:T49 Modifies:T6
 E8	Condition:T51 Name:T52 Temporality:E19
 E10	Eq-Comparison:T54 Operator:T53 Temporal-Unit:T39 Value:T41
-E11	Temporal-Connection:T55 Arg:E10 Arg2:E55
 E13	Observation:T57 Name:T58
 E15	Condition:T59 Name:T60 Minimum-Count:E25 Severity:T61
-E17	Observation:T62 Name:T63 Eq-Comparison:E23
-E21	Temporal-Connection:T66 Arg:E17 Arg2:E68
+E17	Observation:T62 Name:T63 Numeric-Filter:E23
 E23	Eq-Comparison:T68 Value:T43 Unit:T70 Operator:T125
 E25	Eq-Comparison:T71 Value:T42
 E27	Eq-Comparison:T72 Operator:T73 Value:T44 Unit:T74
@@ -45,31 +43,21 @@ E58	Eq-Comparison:T69 Temporal-Period:T114
 E59	Condition:T115 Name:T129
 E65	Modifier:T121 Modifies:E66
 E66	Condition:T122 Severity:T120
-E72	Temporal-Connection:T131 Arg:E37 Arg2:E67
 E73	Drug:T133 Temporality:E37 Stability:T141 Name:T142
 E74	Observation:T134 Name:T135
 E75	Observation:T136 Name:T137
-E9	Or:T50 Arg:E2 Arg2:E4
-E6	Or:T9 Arg:E33 Arg2:E29
 E29	Modifier:T76 Modifies:T111
 E33	Modifier:T23
-E39	And:T78 Arg:E5 Arg2:E8
-E42	Or:T82 Arg:E30 Arg2:E59
 E48	Modifier:T87
 E50	Modifier:T98 Modifies:T21
-E56	Or:T101 Arg:E50 Arg2:E48
-E60	Or:T110 Arg:E40 Arg2:T86
 E63	Assertion:T116 Asserted:E12
-E52	And:T124 Arg:E34 Arg2:E49
 E19	Eq-Comparison:T65 Temporal-Recency:T139
 E55	Eq-Comparison:T56 Temporal-Recency:T126
 E61	Assertion:T67 Asserted:E8
 E62	Assertion:T119 Asserted:E49
-E64	And:T127 Arg:E53 Arg2:E54
 E67	Study:T128
 E68	Study:T64
-E69	Or:T132 Arg:T130 Arg2:T61
-E18	Observation:T10 Name:T18 Eq-Comparison:E35
+E18	Observation:T10 Name:T18 Numeric-Filter:E35
 E35	Eq-Comparison:T19 Operator:T45 Value:T75 Unit:T79
 E70	Modifier:T138 Modifies:E34
 E71	Modifier:T143 Modifies:T2
@@ -121,14 +109,12 @@ T51	Condition 88 95	aphasic
 T52	Condition-Name 88 95	aphasic
 T53	Eq-Operator 110 118	at least
 T54	Eq-Comparison 110 127	at least 6 months
-T55	Temporal-Connection 128 132	post
 T57	Observation 185 204	Aachen Aphasia Test
 T58	Observation-Name 185 204	Aachen Aphasia Test
 T59	Condition 239 264	word finding difficulties
 T60	Condition-Name 239 264	word finding difficulties
 T62	Observation 300 324	computerized naming task
 T63	Observation-Name 300 324	computerized naming task
-T66	Temporal-Connection 325 327	at
 T68	Eq-Comparison 266 280	maximum of 60%
 T70	Eq-Unit 279 280	%
 T71	Eq-Comparison 217 219	13
@@ -171,23 +157,16 @@ T115	Condition 1215 1236	psychiatric condition
 T121	Modifier 1415 1427	uncontrolled
 T122	Condition 1428 1444	medical problems
 T129	Condition-Name 1215 1236	psychiatric condition
-T131	Temporal-Connection 1596 1604	prior to
 T133	Drug 1558 1580	centrally active drugs
 T134	Observation 1289 1312	Hierarchical Word Lists
 T135	Observation-Name 1289 1312	Hierarchical Word Lists
 T136	Observation 1377 1401	Corsi Block-Tapping Task
 T137	Observation-Name 1377 1401	Corsi Block-Tapping Task
 T139	Eq-Temporal-Recency 77 87	first-ever
-T50	Or 50 52	or
-T9	Or 1127 1129	or
 T76	Modifier 1130 1134	drug
 T23	Modifier 1119 1126	alcohol
-T78	And 72 76	with
-T82	Or 1197 1199	or
 T87	Modifier 1479 1486	hearing
 T98	Modifier 1469 1475	vision
-T101	Or 1476 1478	or
-T110	Or 770 772	or
 T116	Assertion 693 696	for
 T103	Severity 1013 1019	severe
 T109	Severity 1112 1118	severe
@@ -195,7 +174,6 @@ T117	Severity 1248 1254	severe
 T118	Severity 1319 1325	severe
 T120	Severity 1408 1414	severe
 T123	Severity 1451 1459	severely
-T124	And 979 983	with
 T61	Severity 232 238	severe
 T65	Eq-Comparison 77 87	first-ever
 T125	Eq-Operator 266 273	maximum
@@ -203,11 +181,9 @@ T56	Eq-Comparison 133 138	onset
 T126	Eq-Temporal-Recency 133 138	onset
 T67	Assertion 96 104	symptoms
 T119	Assertion 992 1000	symptoms
-T127	And 1072 1075	and
 T128	Study 1605 1610	study
 T64	Study 328 336	baseline
 T130	Severity 220 228	moderate
-T132	Or 229 231	to
 T10	Observation 515 546	AAT subscale Spontaneous Speech
 T18	Observation-Name 515 546	AAT subscale Spontaneous Speech
 T19	Eq-Comparison 465 481	at least 1 point
@@ -229,7 +205,7 @@ A2	Eq-Temporal-Unit-Value T39 month
 A3	Eq-Temporal-Unit-Value T40 week
 A4	Eq-Operator-Value T53 GTEQ
 A13	Eq-Operator-Value T73 GTEQ
-A15	Observation-Type-Value T17 measurement
+A15	Observation-Type-Value E16 measurement
 A17	Eq-Operator-Value T96 GT
 A18	Eq-Temporal-Period-Value T113 present
 A12	Eq-Temporal-Period-Value T114 present
@@ -241,16 +217,13 @@ A10	Severity-Value T120 severe
 A20	Severity-Value T118 severe
 A21	Severity-Value T117 severe
 A23	Severity-Value T109 severe
-A5	Temporal-Connection-Type-Value E11 after
 A24	Eq-Temporal-Recency-Value T126 first-time
-A11	Temporal-Connection-Type-Value E21 during
 A7	Assertion-Type-Value E63 hypothetical
-A19	Temporal-Connection-Type-Value E72 before
 A25	Assertion-Type-Value E61 possible
 A26	Assertion-Type-Value E62 possible
 A27	Severity-Value T130 moderate
 A28	Severity-Value T61 severe
-A14	Observation-Type-Value T18 measurement
+A14	Observation-Type-Value E18 measurement
 A16	Eq-Operator-Value T45 GTEQ
 A29	Severity-Value T140 severe
 A30	Stability-Value T141 change
@@ -268,3 +241,17 @@ R9	Found-By Arg1:E3 Arg2:E13
 R10	Found-By Arg1:E28 Arg2:E74
 R11	Found-By Arg1:E24 Arg2:E75
 R12	Found-By Arg1:E1 Arg2:E40
+R13	After Arg1:E10 Arg2:E55
+R14	During Arg1:E17 Arg2:E68
+R15	Before Arg1:E37 Arg2:E67
+R16	Or Arg1:E2 Arg2:E4
+R17	Or Arg1:E33 Arg2:E29
+R18	And Arg1:E5 Arg2:E8
+R19	Or Arg1:E30 Arg2:E59
+R20	Or Arg1:E50 Arg2:E48
+R21	Or Arg1:E40 Arg2:T86
+R22	And Arg1:E34 Arg2:E49
+R23	And Arg1:E53 Arg2:E54
+R24	Or Arg1:T130 Arg2:T61
+R25	Or Arg1:E32 Arg2:E53
+R26	Or Arg1:E45 Arg2:E46

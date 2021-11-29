@@ -1,19 +1,18 @@
 E1	Procedure:T1 Name:T2
 E3	Condition:T3 Name:T4
 E2	Modifier:T10 Modifies:T4
-E4	Observation:T6 Name:T11 Eq-Comparison:E5
+E4	Observation:T6 Name:T11 Numeric-Filter:E5
 E5	Eq-Comparison:T12 Operator:T13 Temporal-Unit:T14 Value:T7 Value2:T8 Temporal-Unit2:T5
 E6	Condition:T15 Name:T16
-E7	Observation:T17 Name:T18 Eq-Comparison:E8
+E7	Observation:T17 Name:T18 Numeric-Filter:E8
 E8	Eq-Comparison:T19 Value:T9 Operator:T20
 E9	Condition:T21 Name:T22
 E10	Negation:T23 Negates:E9
 E11	Condition:T24 Name:T25
 E12	Condition:T26 Name:T27
 E13	Contraindication:T28 Contraindicates:E1
-E14	Modifier:T29 Modifies:T2
-T1	Procedure 317 325	delivery
-T2	Procedure-Name 317 325	delivery
+T1	Procedure 309 325	vaginal delivery
+T2	Procedure-Name 309 325	vaginal delivery
 T3	Condition 47 56	pregnancy
 T4	Condition-Name 47 56	pregnancy
 T5	Eq-Temporal-Unit 100 105	weeks
@@ -40,9 +39,8 @@ T25	Condition-Name 238 257	Rupture of membrane
 T26	Condition 263 279	Vaginal bleeding
 T27	Condition-Name 263 279	Vaginal bleeding
 T28	Contraindication 289 305	contraindication
-T29	Modifier 309 316	vaginal
 A1	Eq-Temporal-Unit-Value T5 week
 A2	Eq-Operator-Value T13 BETWEEN
 A3	Eq-Temporal-Unit-Value T14 week
 A4	Eq-Operator-Value T20 LTEQ
-A5	Observation-Type-Value T18 clinical-score
+A5	Observation-Type-Value E7 clinical-score

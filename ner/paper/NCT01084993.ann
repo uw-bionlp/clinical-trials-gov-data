@@ -1,0 +1,18 @@
+T1	Eq-Comparison 0 12	At least two
+E1	Eq-Comparison:T1 Operator:T2 Value:T3
+T2	Eq-Operator 0 8	At least
+A1	Eq-Operator-Value T2 GTEQ
+T3	Eq-Value 9 12	two
+T4	Criteria-Count 16 49	the following additional criteria
+E2	Criteria-Count:T4 Min-Value:E1 Criteria:E4
+T5	Eq-Comparison 50 65	At least 70 yrs
+E3	Eq-Comparison:T5 Operator:T6 Temporal-Unit:T8 Value:T7
+T6	Eq-Operator 50 58	At least
+A2	Eq-Operator-Value T6 GTEQ
+T7	Eq-Value 59 61	70
+T8	Eq-Temporal-Unit 62 65	yrs
+A3	Eq-Temporal-Unit-Value T8 year
+T9	Age 66 69	old
+E4	Age:T9 Eq-Comparison:E3
+T10	Life-Stage-And-Gender 70 76	Female
+A4	Life-Stage-And-Gender-Type T10 female

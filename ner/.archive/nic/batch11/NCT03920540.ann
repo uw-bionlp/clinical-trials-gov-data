@@ -1,0 +1,102 @@
+E1	Condition:T1 Name:T2
+E4	Procedure:T4 Name:T5
+E6	Procedure:T6 Name:T7 Temporality:E27
+E9	Age:T14 Eq-Comparison:E10
+E10	Eq-Comparison:T20 Operator:T11 Value:T15
+E11	Eq-Comparison:T21 Operator:T12 Temporal-Unit:T13 Value:T18
+E2	And:T22 Arg:T3 Arg2:E9
+E5	Assertion:T24 Asserted:E4
+E7	Drug:T17 Name:T8
+E8	Procedure:T9 Name:T25
+E12	Procedure:T26 Name:T27
+E13	Or:T28 Arg:E8 Arg2:E12
+E14	Condition:T29 Name:T30
+E15	Drug:T31
+E16	Drug:T32 Temporality:E17
+E17	Eq-Comparison:T33 Temporal-Period:T34
+E18	Eq-Comparison:T35 Temporal-Period:T36
+E19	Or:T37 Arg:E18 Arg2:E17
+E20	Procedure:T38 Temporality:E11
+E21	Temporal-Connection:T39 Arg:E11 Arg2:E16
+E22	Drug:T40
+E23	Temporal-Connection:T42 Arg:E22 Arg2:E26
+E24	Observation:T19 Name:T43
+E25	Negation:T44 Negates:E24
+E26	Study:T41
+E27	Eq-Comparison:T45 Temporal-Period:T46
+E28	Eq-Comparison:T47 Temporal-Period:T48
+E3	Procedure:T16 Temporality:E28
+E29	Study:T23 Study-Of:E15
+E30	Study:T49 Study-Of:E16
+E31	Study:T50 Study-Of:E22
+E32	Observation:T51 Name:T52
+E33	Assertion:T53 Asserted:E25
+T1	Condition 49 64	Hunter syndrome
+T2	Condition-Name 49 64	Hunter syndrome
+T3	Life-Stage-And-Gender 70 74	Male
+T4	Procedure 296 309	contraception
+T5	Procedure-Name 296 309	contraception
+T6	Procedure 398 409	bronchotomy
+T7	Procedure-Name 398 409	bronchotomy
+T10	Life-Stage-And-Gender 768 774	Female
+T11	Eq-Operator 89 90	≥
+T12	Eq-Operator 632 638	within
+T13	Eq-Temporal-Unit 642 646	days
+T14	Age 82 85	age
+T15	Eq-Value 91 92	5
+T18	Eq-Value 639 641	30
+T20	Eq-Comparison 89 92	≥ 5
+T21	Eq-Comparison 632 646	within 30 days
+T22	And 75 77	at
+T24	Assertion 285 295	Consent to
+T17	Drug 356 381	iduronate-2-sulfatase ERT
+T8	Drug-Name 356 381	iduronate-2-sulfatase ERT
+T9	Procedure 411 436	bone marrow trasplanation
+T25	Procedure-Name 411 436	bone marrow trasplanation
+T26	Procedure 441 466	cord blood transplanation
+T27	Procedure-Name 441 466	cord blood transplanation
+T28	Or 438 440	or
+T29	Condition 479 495	hypersensitivity
+T30	Condition-Name 479 495	hypersensitivity
+T31	Drug 553 560	product
+T32	Drug 623 631	products
+T33	Eq-Comparison 575 582	planned
+T34	Eq-Temporal-Period 575 582	planned
+T35	Eq-Comparison 566 571	Prior
+T36	Eq-Temporal-Period 566 571	Prior
+T37	Or 572 574	or
+T38	Procedure 654 663	treatment
+T39	Temporal-Connection 647 653	before
+T40	Drug 689 696	product
+T42	Temporal-Connection 714 720	duirng
+T19	Observation 756 761	6-MWT
+T43	Observation-Name 756 761	6-MWT
+T44	Negation 738 744	Unable
+T41	Study 726 731	study
+T45	Eq-Comparison 387 394	History
+T46	Eq-Temporal-Period 387 394	History
+T47	Eq-Comparison 335 340	Prior
+T48	Eq-Temporal-Period 335 340	Prior
+T16	Procedure 341 350	treatment
+T23	Study 538 552	invetigational
+T49	Study 607 622	investigational
+T50	Study 673 688	investigational
+T51	Observation 128 133	6-MWT
+T52	Observation-Name 128 133	6-MWT
+T53	Assertion 738 744	Unable
+A1	Life-Stage-And-Gender-Type T3 male
+A2	Life-Stage-And-Gender-Type T10 female
+A3	Eq-Operator-Value T11 GTEQ
+A4	Eq-Operator-Value T12 LTEQ
+A5	Eq-Temporal-Unit-Value T13 day
+A6	Assertion-Type-Value E5 hypothetical
+A7	Eq-Temporal-Period-Value T34 future
+A8	Eq-Temporal-Period-Value T36 past
+A9	Temporal-Connection-Type-Value E21 before
+A10	Temporal-Connection-Type-Value E23 during
+A11	Eq-Temporal-Period-Value T46 past
+A12	Eq-Temporal-Period-Value T48 past
+A13	Assertion-Type-Value E33 hypothetical
+R2	Using Arg1:E20 Arg2:E22
+R3	Using Arg1:E3 Arg2:E7
+R1	Caused-By Arg1:E14 Arg2:E15

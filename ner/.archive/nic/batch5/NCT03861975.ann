@@ -1,0 +1,207 @@
+E1	Modifier:T1 Modifies:T58
+E2	Or:T2 Arg:E1 Arg2:E3
+E3	Procedure:T3 Name:T57
+E4	Modifier:T4 Modifies:T58
+E5	Or:T5 Arg:E4 Arg2:E6
+E6	Modifier:T6 Modifies:T58
+E7	Condition:T7 Name:T58
+E8	Modifier:T8 Modifies:T58
+E9	And:T9 Arg:E7 Arg2:E13
+E10	Eq-Comparison:T10 Temporal-Period:T59
+E11	Modifier:T11 Modifies:T85
+E12	Condition:T12 Name:T85
+E13	Procedure:T13 Name:T60 Temporality:E10
+E14	Assertion:T14 Asserted:E15
+E15	Observation:T15 Name:T61
+E16	Age:T16 Eq-Comparison:E17
+E17	Eq-Comparison:T17 Operator:T62 Value:T63 Temporal-Unit:T64
+E18	Assertion:T18 Asserted:E57
+E19	Eq-Comparison:T19 Temporal-Period:T65
+E20	Modifier:T20 Modifies:T66
+E21	Condition:T21 Name:T66 Temporality:E19
+E22	Eq-Comparison:T22 Temporal-Period:T67
+E23	Condition:T23 Name:T68 Temporality:E22
+E24	Modifier:T24 Modifies:T69
+E25	Condition:T25 Name:T69
+E26	Negation:T26 Negates:E60
+E27	And:T27 Arg:E62 Arg2:E64
+E28	Modifier:T28 Modifies:T70
+E29	Condition:T29 Name:T70
+E30	Assertion:T30 Asserted:T71
+E31	Procedure:T31 Name:T95 Stability:T71
+E32	Modifier:T32 Modifies:T94
+E33	Or:T33 Arg:E32 Arg2:E34
+E34	Other:T34 Is-Other:E63
+E35	Modifier:T35 Modifies:T72
+E36	Condition:T36 Name:T72
+E37	Eq-Comparison:T37 Temporal-Period:T73
+E38	Or:T38 Arg:E37 Arg2:E39
+E39	Eq-Comparison:T39 Temporal-Period:T74
+E40	Condition:T40 Name:T75 Temporality:E37 Temporality2:E39
+E41	Assertion:T41 Asserted:E42
+E42	Condition:T42 Name:T76
+E43	Condition:T43 Name:T78 Stability:T77
+E44	Condition:T44 Name:T79
+E45	Or:T45 Arg:E44 Arg2:E47
+E46	Modifier:T46 Modifies:E47
+E47	Condition:T47 Name:T80
+E48	Or:T48 Arg:E47 Arg2:E65
+E49	Assertion:T49 Asserted:T81
+E50	Study:T50 Stability:T81
+E51	Condition:T51 Name:T99
+E52	Modifier:T52 Modifies:T99
+E54	Or:T54 Arg:E51 Arg2:E53
+E55	Assertion:T55 Asserted:E56
+E56	Procedure:T56 Name:T84
+E57	Study:T86 
+E58	Assertion:T87 Asserted:E57
+E59	And:T88 Arg:E18 Arg2:E58
+E60	Study:T89 
+E61	Assertion:T90 Asserted:E26
+E62	Condition:T91 Name:T92
+E63	Condition:T93 Name:T94
+E64	Assertion:T96 Asserted:E29
+E65	Observation:T97 Name:T98
+E53	Observation:T53 Name:T83 Polarity:T82 Duration:E67
+E66	Negation:T100 Negates:E51 Negates2:E53
+E67	Eq-Comparison:T101 Operator:T102 Temporal-Unit:T103
+E68	Coreference:T104 Refers-To:E51 Refers-To2:E53
+T1	Modifier 48 62	histologically
+T2	Or 63 65	or
+T3	Procedure 66 79	cytologically
+T4	Modifier 90 98	invasive
+T5	Or 99 101	or
+T6	Modifier 102 109	in-situ
+T7	Condition 110 119	carcinoma
+T8	Modifier 127 133	breast
+T9	And 134 137	and
+T10	Eq-Comparison 138 150	will undergo
+T11	Modifier 151 168	unilateral breast
+T12	Condition 169 175	cancer
+T13	Procedure 176 183	surgery
+T14	Assertion 189 203	Willingness to
+T15	Observation 213 235	SEI-BCLE Questionnaire
+T16	Age 241 244	Age
+T17	Eq-Comparison 245 254	>18 years
+T18	Assertion 261 282	Ability to understand
+T19	Eq-Comparison 361 368	History
+T20	Modifier 372 379	primary
+T21	Condition 380 390	lymphedema
+T22	Eq-Comparison 416 423	current
+T23	Condition 432 442	cellulitis
+T24	Modifier 473 478	brain
+T25	Condition 479 489	metastases
+T26	Negation 500 508	excluded
+T27	And 566 569	and
+T28	Modifier 597 608	progressive
+T29	Condition 609 631	neurologic dysfunction
+T30	Assertion 637 642	would
+T31	Procedure 656 666	evaluation
+T32	Modifier 670 680	neurologic
+T33	Or 681 684	and
+T34	Other 685 690	other
+T35	Modifier 712 724	Uncontrolled
+T36	Condition 725 745	intercurrent illness
+T37	Eq-Comparison 777 784	ongoing
+T38	Or 785 787	or
+T39	Eq-Comparison 788 794	active
+T40	Condition 795 804	infection
+T41	Assertion 806 817	symptomatic
+T42	Condition 818 842	congestive heart failure
+T43	Condition 853 868	angina pectoris
+T44	Condition 870 888	cardiac arrhythmia
+T45	Or 890 892	or
+T46	Modifier 893 904	psychiatric
+T47	Condition 905 912	illness
+T48	Or 912 913	/
+T49	Assertion 936 941	would
+T50	Study 964 969	study
+T51	Condition 1012 1018	abduct
+T52	Modifier 1019 1056	upper-extremity perpendicular to body
+T54	Or 1057 1059	or
+T55	Assertion 1132 1144	necessary to
+T56	Procedure 1155 1170	LymphaTech Scan
+T57	Procedure-Name 66 79	cytologically
+T58	Condition-Name 110 119	carcinoma
+T59	Eq-Temporal-Period 138 150	will undergo
+T60	Procedure-Name 176 183	surgery
+T61	Observation-Name 213 235	SEI-BCLE Questionnaire
+T62	Eq-Operator 245 246	>
+T63	Eq-Value 246 248	18
+T64	Eq-Temporal-Unit 249 254	years
+T65	Eq-Temporal-Period 361 368	History
+T66	Condition-Name 380 390	lymphedema
+T67	Eq-Temporal-Period 416 423	current
+T68	Condition-Name 432 442	cellulitis
+T69	Condition-Name 479 489	metastases
+T70	Condition-Name 609 631	neurologic dysfunction
+T71	Stability 643 651	confound
+T72	Condition-Name 725 745	intercurrent illness
+T73	Eq-Temporal-Period 777 784	ongoing
+T74	Eq-Temporal-Period 788 794	active
+T75	Condition-Name 795 804	infection
+T76	Condition-Name 818 842	congestive heart failure
+T77	Stability 844 852	unstable
+T78	Condition-Name 853 868	angina pectoris
+T79	Condition-Name 870 888	cardiac arrhythmia
+T80	Condition-Name 905 912	illness
+T81	Stability 942 947	limit
+T83	Observation-Name 1063 1068	stand
+T84	Procedure-Name 1155 1170	LymphaTech Scan
+T85	Condition-Name 169 175	cancer
+T86	Study 330 335	trial
+T87	Assertion 291 302	willingness
+T88	And 283 286	and
+T89	Study 519 533	clinical trial
+T90	Assertion 490 499	should be
+T91	Condition 551 565	poor prognosis
+T92	Condition-Name 551 565	poor prognosis
+T93	Condition 691 705	adverse events
+T94	Condition-Name 691 705	adverse events
+T95	Procedure-Name 656 666	evaluation
+T96	Assertion 583 596	often develop
+T97	Observation 913 930	social situations
+T98	Observation-Name 913 930	social situations
+T99	Condition-Name 1012 1018	abduct
+T53	Observation 1063 1068	stand
+T82	Polarity 1069 1080	comfortably
+T100	Negation 1002 1008	unable
+T101	Eq-Comparison 1097 1112	several minutes
+T102	Eq-Operator 1097 1104	several
+T103	Eq-Temporal-Unit 1105 1112	minutes
+T104	Coreference 1114 1127	both of which
+A1	Assertion-Type-Value E14 hypothetical
+A2	Assertion-Type-Value E30 hypothetical
+A3	Assertion-Type-Value E41 possible
+A4	Assertion-Type-Value E49 hypothetical
+A5	Assertion-Type-Value E55 hypothetical
+A6	Eq-Temporal-Period-Value T59 future
+A7	Eq-Operator-Value T62 GT
+A8	Eq-Temporal-Unit-Value T64 year
+A9	Eq-Temporal-Period-Value T65 past
+A10	Eq-Temporal-Period-Value T67 present
+A11	Stability-Value T71 change
+A12	Eq-Temporal-Period-Value T73 present
+A13	Eq-Temporal-Period-Value T74 present
+A14	Stability-Value T77 change
+A15	Stability-Value T81 change
+A16	Observation-Type-Value T61 survey-or-questionnaire
+A17	Assertion-Type-Value E18 hypothetical
+A18	Assertion-Type-Value E58 hypothetical
+A19	Assertion-Type-Value E61 hypothetical
+A20	Assertion-Type-Value E64 hypothetical
+A21	Observation-Type-Value T98 social-habit
+A22	Polarity-Value T82 normal
+A23	Eq-Operator-Value T102 GT
+A24	Eq-Temporal-Unit-Value T103 minute
+R1	Found-By Arg1:E7 Arg2:E3
+R2	Treatment-For Arg1:E13 Arg2:E12
+R3	Caused-By Arg1:E26 Arg2:E25
+R4	Caused-By Arg1:E62 Arg2:E25
+R5	Treatment-For Arg1:E31 Arg2:E63
+R6	Caused-By Arg1:T71 Arg2:E29
+R7	Example-Of Arg1:E40 Arg2:E36
+R8	Example-Of Arg1:E42 Arg2:E36
+R9	Example-Of Arg1:E43 Arg2:E36
+R10	Example-Of Arg1:E44 Arg2:E36
+R11	Caused-By Arg1:T81 Arg2:E65

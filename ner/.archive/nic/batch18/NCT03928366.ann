@@ -1,0 +1,101 @@
+E1	Condition:T1 Name:T2
+E9	Observation:T9 Name:T10
+E11	Observation:T11 Name:T12 Eq-Comparison:E14 Eq-Comparison2:E15
+E13	Condition:T13 Name:T14
+E14	Eq-Comparison:T22 Operator:T16 Value:T20
+E15	Eq-Comparison:T23 Operator:T17 Unit:T18 Value:T21 Per:T18
+E16	Eq-Comparison:T24 Temporal-Period:T25
+E2	Condition:T26 Name:T27
+E4	Observation:T28 Name:T29 Eq-Comparison:E6
+E6	Eq-Comparison:T30 Value:T19
+E8	Study:T31
+E3	Modifier:T3 Modifies:T2
+E10	Modifier:T4 Modifies:T2
+E12	Modifier:T32 Modifies:T2
+E17	Or:T33 Arg:E10 Arg2:E3
+E5	Drug:T5
+E18	Condition:T6 Name:T34
+E19	Modifier:T35 Modifies:T34
+E20	Modifier:T36 Modifies:T34
+E21	Or:T37 Arg:E20 Arg2:E19
+E22	Condition:T38 Name:T39
+E23	Modifier:T40 Modifies:T39
+E24	Modifier:T41 Modifies:T39
+E25	Or:T42 Arg:E24 Arg2:E23
+E7	Drug:T7 Name:T8
+E26	Allergy:T43 Name:E7 Name2:E27
+E27	Drug:T44 Name:T45
+E28	Or:T46 Arg:E14 Arg2:E15
+E29	Condition:T47 Name:T48
+E30	Modifier:T49 Modifies:T48
+E31	Modifier:T50 Modifies:T48
+E32	Or:T51 Arg:E31 Arg2:E30
+E33	Study:T52
+E34	Family-Member:T53
+E35	Negation:T54 Negates:E34
+E36	Temporal-Connection:T55 Arg:E34 Arg2:E33
+T1	Condition 259 268	disorders
+T2	Condition-Name 259 268	disorders
+T9	Observation 437 452	Body mass index
+T10	Observation-Name 437 452	Body mass index
+T11	Observation 454 457	BMI
+T12	Observation-Name 454 457	BMI
+T13	Condition 479 488	Pregnancy
+T14	Condition-Name 479 488	Pregnancy
+T15	Life-Stage-And-Gender 33 38	adult
+T16	Eq-Operator 459 460	<
+T17	Eq-Operator 465 466	>
+T18	Eq-Unit 470 477	kg / m2
+T19	Eq-Value 55 56	1
+T20	Eq-Value 460 462	18
+T21	Eq-Value 467 469	30
+T22	Eq-Comparison 459 462	<18
+T23	Eq-Comparison 465 477	> 30 kg / m2
+T24	Eq-Comparison 124 132	previous
+T25	Eq-Temporal-Period 124 132	previous
+T26	Condition 25 32	Healthy
+T27	Condition-Name 25 32	Healthy
+T28	Observation 51 54	ASA
+T29	Observation-Name 51 54	ASA
+T30	Eq-Comparison 55 56	1
+T31	Study 117 122	study
+T3	Modifier 246 258	neurological
+T4	Modifier 231 242	psychiatric
+T32	Modifier 216 229	Psychological
+T33	Or 243 245	or
+T5	Drug 285 290	drugs
+T6	Condition 292 303	Alterations
+T34	Condition-Name 292 303	Alterations
+T35	Modifier 317 335	anatomical cranial
+T36	Modifier 304 313	cutaneous
+T37	Or 314 316	or
+T38	Condition 364 371	barrier
+T39	Condition-Name 364 371	barrier
+T40	Modifier 350 363	communication
+T41	Modifier 337 346	Idiomatic
+T42	Or 347 349	or
+T7	Drug 384 392	propofol
+T8	Drug-Name 384 392	propofol
+T43	Allergy 373 380	Allergy
+T44	Drug 394 406	remifentanil
+T45	Drug-Name 394 406	remifentanil
+T46	Or 463 465	or
+T47	Condition 521 525	hard
+T48	Condition-Name 521 525	hard
+T49	Modifier 500 511	ventilation
+T50	Modifier 490 496	Airway
+T51	Or 497 499	or
+T52	Study 575 580	study
+T53	Family-Member 551 556	adult
+T54	Negation 527 534	Absence
+T55	Temporal-Connection 557 559	at
+A1	Observation-Type-Value T10 vital
+A2	Observation-Type-Value T12 vital
+A3	Life-Stage-And-Gender-Type T15 adult
+A4	Eq-Operator-Value T16 LT
+A5	Eq-Operator-Value T17 GT
+A6	Eq-Temporal-Period-Value T25 past
+A7	Family-Member-Type E34 parent
+A8	Temporal-Connection-Type-Value E36 during
+A9	Observation-Type-Value T29 clinical-score
+R1	Abbrev-Of Arg1:E11 Arg2:E9

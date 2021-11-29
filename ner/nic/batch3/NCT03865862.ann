@@ -1,43 +1,35 @@
-E1	Temporal-Connection:T1 Arg:E2
-E2	Study:T2 
+E2	Study:T2
 E3	Eq-Comparison:T3 Operator:T18 Value:T19 Temporal-Unit:T20
-E4	Age:T4 Eq-Comparison:E3
-E5	Condition:T5 Name:T21
-E6	Or:T6 Arg:E5 Arg2:E7
+E4	Age:T4 Numeric-Filter:E3
+E5	Observation:T5 Name:T21
 E7	Condition:T7 Name:T22
 E8	Modifier:T8 Modifies:T23
-E9	Condition:T9 Name:T23 Temporality:E10
+E9	Observation:T9 Name:T23 Temporality:E10
 E10	Eq-Comparison:T10 Value:T24 Temporal-Unit:T25
-E11	Temporal-Connection:T11 Arg:E10 Arg2:E12
-E12	Study:T12 
-E13	Drug:T13 
-E14	Or:T14 Arg:E13 Arg2:E15
+E12	Study:T12
+E13	Drug:T13
 E15	Procedure:T15 Name:T26
 E16	Study:T16 Study-Of:E13 Study-Of2:E15
 E17	Observation:T17 Name:T27
 E18	Other:T29 Is-Other:E16
-T1	Temporal-Connection 64 75	at the time
 T2	Study 83 88	study
 T3	Eq-Comparison 138 151	Over 18 years
 T4	Age 152 155	old
-T5	Condition 213 219	injury
-T6	Or 220 222	or
+T5	Observation 213 219	injury
 T7	Condition 223 230	illness
 T8	Modifier 252 256	knee
-T9	Condition 257 263	injury
+T9	Observation 257 263	injury
 T10	Eq-Comparison 271 279	6 months
-T11	Temporal-Connection 280 288	prior to
 T12	Study 293 298	study
 T13	Drug 315 330	pharmacological
-T14	Or 331 333	or
 T15	Procedure 334 357	physiotherapy treatment
 T16	Study 374 379	study
 T18	Eq-Operator 138 142	Over
 T19	Eq-Value 143 145	18
 T20	Eq-Temporal-Unit 146 151	years
-T21	Condition-Name 213 219	injury
+T21	Observation-Name 213 219	injury
 T22	Condition-Name 223 230	illness
-T23	Condition-Name 257 263	injury
+T23	Observation-Name 257 263	injury
 T24	Eq-Value 271 272	6
 T25	Eq-Temporal-Unit 273 279	months
 T26	Procedure-Name 334 357	physiotherapy treatment
@@ -45,10 +37,11 @@ T17	Observation 25 43	Volleyball players
 T27	Observation-Name 25 43	Volleyball players
 T28	Location 113 132	Community of Madrid
 T29	Other 358 369	external to
-A1	Temporal-Connection-Type-Value E1 during
-A2	Temporal-Connection-Type-Value E11 before
 A4	Eq-Operator-Value T18 GT
 A5	Eq-Temporal-Unit-Value T20 year
 A6	Eq-Temporal-Unit-Value T25 month
-A3	Observation-Type-Value T27 social-habit
+A3	Observation-Type-Value E17 social-habit
 A7	Location-Value T28 residence
+R1	Or Arg1:E5 Arg2:E7
+R2	Before Arg1:E10 Arg2:E12
+R3	Or Arg1:E13 Arg2:E15

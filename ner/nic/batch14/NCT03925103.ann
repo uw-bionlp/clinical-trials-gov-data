@@ -2,13 +2,13 @@ E1	Condition:T1 Name:T2 Severity:T69
 E3	Observation:T3 Name:T4
 E5	Procedure:T5 Name:T6 Temporality:E45
 E7	Procedure:T7 Name:T8
-E15	Observation:T15 Name:T16 Eq-Comparison:E32 Eq-Comparison2:E31
+E15	Observation:T15 Name:T16 Numeric-Filter:E32 Numeric-Filter:E31
 E17	Procedure:T17 Name:T18 Temporality:E46
 E19	Procedure:T19 Name:T20
 E21	Procedure:T21 Name:T22 Temporality:E26
 E23	Procedure:T23 Name:T24
 E27	Procedure:T27 Name:T28
-E28	Age:T38 Eq-Comparison:E33
+E28	Age:T38 Numeric-Filter:E33
 E29	Eq-Comparison:T45 Operator:T29 Value:T39 Unit:T58
 E30	Eq-Comparison:T46 Operator:T30 Value:T40
 E31	Eq-Comparison:T47 Operator:T32 Value:T41
@@ -16,19 +16,15 @@ E32	Eq-Comparison:T48 Operator:T33 Value:T42
 E33	Eq-Comparison:T49 Operator:T35 Value:T43
 E34	Eq-Comparison:T50 Operator:T36 Temporal-Unit:T37 Value:T44
 E2	Observation:T11 Name:T12
-E4	Observation:T51 Name:T52 Eq-Comparison:E29
+E4	Observation:T51 Name:T52 Numeric-Filter:E29
 E6	Observation:T53 Name:T54
-E8	Observation:T55 Name:T56 Eq-Comparison:E29
-E10	And:T57 Arg:E4 Arg2:E6
+E8	Observation:T55 Name:T56 Numeric-Filter:E29
 E11	Observation:T13 Name:T14
-E12	Observation:T59 Name:T60 Eq-Comparison:E13
+E12	Observation:T59 Name:T60 Numeric-Filter:E13
 E13	Eq-Comparison:T61 Unit:T63 Operator:T31 Value:T62
 E14	Condition:T64 Name:T65 Stage:E16
 E16	Eq-Comparison:T66 Unit:T67 Value:T68 Operator:T34
 E18	Procedure:T70 Name:T71
-E9	Or:T9 Arg:E5 Arg2:E7
-E20	Or:T10 Arg:E33 Arg2:E34
-E22	Or:T72 Arg:E17 Arg2:E19
 E24	Modifier:T73 Modifies:T20
 E26	Eq-Comparison:T74 Temporal-Period:T75
 E25	Exception:T25 From:E21 Except:E23
@@ -38,18 +34,15 @@ E37	Procedure:T78 Name:T79
 E38	Procedure:T80 Name:T81
 E39	Negation:T82 Negates:E38
 E40	Negation:T83
-E41	Or:T84 Arg:E40 Arg2:E39
-E42	Or:T85 Arg:E38 Arg2:E37
 E43	Assertion:T86
 E44	Assertion:T87 Asserted:E38
 E45	Eq-Comparison:T88 Temporal-Period:T89
 E46	Eq-Comparison:T90 Temporal-Period:T91
-E47	Observation:T92 Name:T93 Eq-Comparison:E30
+E47	Observation:T92 Name:T93 Numeric-Filter:E30
 E48	Modifier:T94 Modifies:T93
 E49	Modifier:T95
-E50	Observation:T96 Name:T97 Eq-Comparison:E30
+E50	Observation:T96 Name:T97 Numeric-Filter:E30
 E51	Modifier:T98 Modifies:T97
-E52	And:T99 Arg:E47 Arg2:E50
 E53	Modifier:T100 Modifies:T79
 T1	Condition 469 486	pleural adhesions
 T2	Condition-Name 469 486	pleural adhesions
@@ -101,7 +94,6 @@ T53	Observation 126 163	diffusion capacity of carbon monoxide
 T54	Observation-Name 126 163	diffusion capacity of carbon monoxide
 T55	Observation 165 169	DLCO
 T56	Observation-Name 165 169	DLCO
-T57	And 122 125	and
 T58	Eq-Unit 173 174	%
 T13	Observation 243 273	American Society of Anesthesia
 T14	Observation-Name 243 273	American Society of Anesthesia
@@ -118,9 +110,6 @@ T68	Eq-Value 371 373	II
 T69	Severity 459 468	extensive
 T70	Procedure 436 446	Radiologic
 T71	Procedure-Name 436 446	Radiologic
-T9	Or 415 417	or
-T10	Or 501 503	or
-T72	Or 555 557	or
 T73	Modifier 577 596	affected hemithorax
 T74	Eq-Comparison 616 628	will undergo
 T75	Eq-Temporal-Period 616 628	will undergo
@@ -134,8 +123,6 @@ T80	Procedure 783 798	general surgery
 T81	Procedure-Name 783 798	general surgery
 T82	Negation 766 779	noncompliance
 T83	Negation 755 762	refusal
-T84	Or 763 765	or
-T85	Or 799 802	and
 T86	Assertion 755 762	refusal
 T87	Assertion 766 779	noncompliance
 T88	Eq-Comparison 379 386	History
@@ -149,11 +136,10 @@ T95	Modifier 210 213	PPO
 T96	Observation 228 232	DLCO
 T97	Observation-Name 228 232	DLCO
 T98	Modifier 224 227	PPO
-T99	And 220 223	and
 T100	Modifier 803 811	one-lung
 T101	Condition-Name 701 712	comorbidity
-A1	Observation-Type-Value T4 vital
-A2	Observation-Type-Value T16 vital
+A1	Observation-Type-Value E3 vital
+A2	Observation-Type-Value E15 vital
 A3	Eq-Operator-Value T29 GT
 A4	Eq-Operator-Value T30 GT
 A5	Eq-Operator-Value T31 LTEQ
@@ -163,7 +149,7 @@ A8	Eq-Operator-Value T34 GT
 A9	Eq-Operator-Value T35 LT
 A10	Eq-Operator-Value T36 GT
 A11	Eq-Temporal-Unit-Value T37 year
-A14	Observation-Type-Value T12 measurement
+A14	Observation-Type-Value E2 measurement
 A15	Severity-Value T69 severe
 A16	Eq-Temporal-Period-Value T75 future
 A17	Severity-Value T77 severe
@@ -171,12 +157,19 @@ A18	Assertion-Type-Value E43 hypothetical
 A19	Assertion-Type-Value E44 hypothetical
 A20	Eq-Temporal-Period-Value T89 past
 A21	Eq-Temporal-Period-Value T91 past
-A22	Observation-Type-Value T54 measurement
-A23	Observation-Type-Value T14 clinical-score
-A24	Observation-Type-Value T60 clinical-score
+A22	Observation-Type-Value E6 measurement
+A23	Observation-Type-Value E11 clinical-score
+A24	Observation-Type-Value E12 clinical-score
 R1	Abbrev-Of Arg1:E4 Arg2:E2
 R2	Abbrev-Of Arg1:E8 Arg2:E6
 R3	Abbrev-Of Arg1:E12 Arg2:E11
 R4	Found-By Arg1:E1 Arg2:E18
 R5	Caused-By Arg1:E36 Arg2:E35
 R6	Abbrev-Of Arg1:E49 Arg2:E48
+R7	And Arg1:E4 Arg2:E6
+R8	Or Arg1:E5 Arg2:E7
+R9	Or Arg1:E33 Arg2:E34
+R10	Or Arg1:E17 Arg2:E19
+R11	Or Arg1:E40 Arg2:E39
+R12	Or Arg1:E38 Arg2:E37
+R13	And Arg1:E47 Arg2:E50

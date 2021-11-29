@@ -1,14 +1,12 @@
 E1	Condition:T1 Name:T2
-E2	Age:T9 Eq-Comparison:E3
+E2	Age:T9 Numeric-Filter:E3
 E3	Eq-Comparison:T12 Operator:T5 Temporal-Unit:T7 Value:T10
 E4	Eq-Comparison:T13 Operator:T6 Temporal-Unit:T8 Value:T11
 E5	Condition:T14 Name:T15
 E6	Observation:T16 Name:T17
 E7	Procedure:T18 Name:T19
-E8	Or:T20 Arg:E6 Arg2:E7
 E9	Condition:T21 Name:T22
 E10	Negation:T23 Negates:E9
-E11	Or:T25 Arg:T4 Arg2:T24
 E12	Condition:T26 Name:T27
 E13	Negation:T28 Negates:E12
 E14	Study:T29 Duration:E4
@@ -16,7 +14,6 @@ E15	Assertion:T30 Asserted:E14
 E16	Drug:T31 Name:T32
 E17	Negation:T33 Negates:E16
 E18	Assertion:T34 Asserted:E16
-E19	Or:T35 Arg:E18 Arg2:E17
 T1	Condition 0 15	Cystic Fibrosis
 T2	Condition-Name 0 15	Cystic Fibrosis
 T3	Language 221 228	English
@@ -36,12 +33,10 @@ T16	Observation 88 98	sweat test
 T17	Observation-Name 88 98	sweat test
 T18	Procedure 102 119	genotype analysis
 T19	Procedure-Name 102 119	genotype analysis
-T20	Or 99 101	or
 T21	Condition 267 269	CF
 T22	Condition-Name 267 269	CF
 T23	Negation 264 266	No
 T24	Life-Stage-And-Gender 292 297	women
-T25	Or 289 291	or
 T26	Condition 306 318	osteoporosis
 T27	Condition-Name 306 318	osteoporosis
 T28	Negation 298 305	without
@@ -51,7 +46,6 @@ T31	Drug 466 475	denosumab
 T32	Drug-Name 466 475	denosumab
 T33	Negation 451 457	unable
 T34	Assertion 424 433	Unwilling
-T35	Or 434 440	and/or
 A1	Eq-Operator-Value T5 LT
 A2	Eq-Operator-Value T6 LTEQ
 A3	Eq-Temporal-Unit-Value T7 year
@@ -61,4 +55,7 @@ A6	Life-Stage-And-Gender-Type T4 male
 A7	Assertion-Type-Value E15 hypothetical
 A8	Assertion-Type-Value E18 hypothetical
 R1	Found-By Arg1:E5 Arg2:E6
-R2	Found-By Arg1:E5 Arg2:E7	
+R2	Found-By Arg1:E5 Arg2:E7
+R3	Or Arg1:E6 Arg2:E7
+R4	Or Arg1:T4 Arg2:T24
+R5	Or Arg1:E18 Arg2:E17

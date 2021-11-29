@@ -1,16 +1,15 @@
 E1	Condition:T1 Name:T2 Temporality:E6
-E2	Age:T7 Eq-Comparison:E5
-E3	Age:T8 Eq-Comparison:E4
+E2	Age:T7 Numeric-Filter:E5
+E3	Age:T8 Numeric-Filter:E4
 E4	Eq-Comparison:T11 Operator:T4 Temporal-Unit:T6 Value:T10
 E5	Eq-Comparison:T12 Operator:T3 Value:T9 Temporal-Unit:T5
 E6	Eq-Comparison:T13 Temporal-Period:T14
 E7	Condition:T15 Name:T16 Temporality:E8
 E8	Eq-Comparison:T17 Temporal-Period:T18
 E9	Eq-Comparison:T19 Temporal-Period:T20
-E10	Condition:T21 Name:T22 Temporality:E9
-E11	Modifier:T23 Modifies:T22
-E12	Modifier:T24 Modifies:T22
-E13	Or:T25 Arg:E12 Arg2:E11
+E10	Condition:T21 Temporality:E9
+E11	Modifier:T23 Modifies:E10
+E12	Modifier:T24 Modifies:E10
 E14	Assertion:T26 Asserted:E10
 T1	Condition 138 158	cognitive impairment
 T2	Condition-Name 138 158	cognitive impairment
@@ -36,7 +35,6 @@ T21	Condition 252 259	disease
 T22	Condition-Name 252 259	disease
 T23	Modifier 236 251	lower extremity
 T24	Modifier 227 232	upper
-T25	Or 233 235	or
 T26	Assertion 215 226	symptomatic
 A1	Eq-Operator-Value T3 GTEQ
 A2	Eq-Operator-Value T4 LT
@@ -46,3 +44,4 @@ A5	Eq-Temporal-Period-Value T14 past
 A6	Eq-Temporal-Period-Value T18 past
 A7	Eq-Temporal-Period-Value T20 past
 A8	Assertion-Type-Value E14 possible
+R1	Or Arg1:E12 Arg2:E11

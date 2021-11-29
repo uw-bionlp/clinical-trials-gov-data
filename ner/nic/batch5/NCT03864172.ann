@@ -1,24 +1,20 @@
 E1	Condition:T1 Name:T45
 E2	Procedure:T2 Name:T69
 E3	Modifier:T3 Modifies:T69
-E4	Or:T4 Arg:E3 Arg2:E5
 E5	Modifier:T5 Modifies:T69
 E6	Eq-Comparison:T6 Unit:T71 Value:T72
 E7	Condition:T7 Name:T73
-E8	Or:T8 Arg:T74 Arg2:T76
 E9	Condition:T9 Name:T75
 E10	Eq-Comparison:T10 Temporal-Period:T47
 E11	Condition:T11 Severity:T48 Temporality:E10
 E12	Modifier:T12 Modifies:T50
-E13	Or:T13 Arg:E12 Arg2:T49
 E14	Condition:T14 Name:T50 Severity:T49
 E15	Condition:T15 Name:T51
 E16	Condition:T16 Name:T52
-E17	Modifier:T17 Modifies:T53
-E18	Modifier:T18 Modifies:T53
-E19	Or:T19 Arg:E18 Arg2:E20
-E20	Modifier:T20 Modifies:T53
-E21	Condition:T21 Name:T53
+E17	Modifier:T17 Modifies:E21
+E18	Modifier:T18 Modifies:E21
+E20	Modifier:T20 Modifies:E21
+E21	Condition:T21
 E22	Condition:T22 Name:T54
 E23	Condition:T23 Name:T80
 E24	Condition:T24 Name:T55
@@ -26,7 +22,6 @@ E25	Condition:T25 Name:T56
 E26	Condition:T26 Name:T57 Acuteness:T81
 E27	Condition:T27 Name:T58
 E28	Eq-Comparison:T28 Temporal-Period:T59
-E29	Or:T29 Arg:E28 Arg2:E30
 E30	Eq-Comparison:T30 Temporal-Period:T60
 E31	Procedure:T31 Name:T61 Temporality:E28 Temporality2:E30
 E32	Drug:T32
@@ -35,10 +30,8 @@ E34	Drug:T34 Name:T63
 E35	Drug:T35 Name:T64
 E36	Drug:T36 Name:T65
 E37	Drug:T37 Name:T66
-E38	Or:T38 Arg:E37 Arg2:E39
 E40	Eq-Comparison:T40 Temporal-Period:T85
 E41	Drug:T41 Name:T68 Temporality:E40
-E42	And:T42 Arg:E41 Arg2:E43
 E43	Assertion:T43 Asserted:E50
 E44	Study:T44
 E45	Condition:T70 Name:T46 Stage:E6
@@ -47,26 +40,21 @@ E48	Assertion:T83 Asserted:T82
 E39	Drug:T39
 E49	Condition:T67 Name:T84
 E50	Negation:T86 Negates:E41
-E51	Temporal-Connection:T87 Arg:E50 Arg2:E44
 T1	Condition 49 56	healthy
 T2	Procedure 74 101	standard medical assessment
 T3	Modifier 105 113	physical
-T4	Or 114 117	and
 T5	Modifier 118 131	mental health
 T6	Eq-Comparison 144 151	stage 2
 T7	Condition 161 179	breast development
-T8	Or 191 194	and
 T9	Condition 195 205	pubic hair
 T10	Eq-Comparison 361 368	History
 T11	Condition 380 398	medical conditions
 T12	Modifier 407 417	intestinal
-T13	Or 418 420	or
 T14	Condition 428 446	metabolic diseases
 T15	Condition 448 457	disorders
 T16	Condition 466 474	diabetes
 T17	Modifier 476 481	renal
 T18	Modifier 483 490	hepatic
-T19	Or 491 493	or
 T20	Modifier 494 504	pancreatic
 T21	Condition 505 513	diseases
 T22	Condition 515 524	disorders
@@ -76,7 +64,6 @@ T25	Condition 550 560	malignance
 T26	Condition 570 582	malnutrition
 T27	Condition 584 591	anaemia
 T28	Eq-Comparison 597 604	History
-T29	Or 605 607	or
 T30	Eq-Comparison 608 610	on
 T31	Procedure 611 618	therapy
 T32	Drug 624 634	medication
@@ -85,10 +72,8 @@ T34	Drug 683 691	steroids
 T35	Drug 693 701	hormones
 T36	Drug 703 712	diuretics
 T37	Drug 714 723	cortisone
-T38	Or 724 726	or
 T40	Eq-Comparison 756 762	Taking
 T41	Drug 777 800	nutritional supplements
-T42	And 801 804	and
 T43	Assertion 805 814	unwilling
 T44	Study 831 836	study
 T45	Condition-Name 49 56	healthy
@@ -134,7 +119,6 @@ T67	Condition 732 739	seizure
 T84	Condition-Name 732 739	seizure
 T85	Eq-Temporal-Period 756 762	Taking
 T86	Negation 818 822	stop
-T87	Temporal-Connection 823 830	for the
 A1	Assertion-Type-Value E43 hypothetical
 A2	Eq-Temporal-Period-Value T47 past
 A3	Severity-Value T48 severe
@@ -147,7 +131,6 @@ A9	Life-Stage-And-Gender-Type T77 girl
 A10	Stability-Value T82 change
 A11	Assertion-Type-Value E48 hypothetical
 A12	Eq-Temporal-Period-Value T85 present
-A13	Temporal-Connection-Type-Value E51 during
 A14	Acuteness-Type-Value T81 chronic
 R1	Found-By Arg1:E1 Arg2:E2
 R2	If-Then Arg1:T74 Arg2:E7
@@ -173,3 +156,21 @@ R21	Example-Of Arg1:E36 Arg2:E32
 R22	Example-Of Arg1:E37 Arg2:E32
 R23	Treatment-For Arg1:E39 Arg2:E49
 R24	Example-Of Arg1:E39 Arg2:E32
+R25	Or Arg1:E3 Arg2:E5
+R26	Or Arg1:T74 Arg2:T76
+R27	Or Arg1:E12 Arg2:T49
+R28	Or Arg1:E18 Arg2:E20
+R29	Or Arg1:E28 Arg2:E30
+R30	Or Arg1:E37 Arg2:E39
+R31	And Arg1:E41 Arg2:E43
+R32	During Arg1:E50 Arg2:E44
+R33	Or Arg1:E14 Arg2:E15
+R34	Or Arg1:E17 Arg2:E18
+R35	Or Arg1:E21 Arg2:E22
+R36	Or Arg1:E22 Arg2:E23
+R37	Or Arg1:E23 Arg2:E24
+R38	Or Arg1:E24 Arg2:E25
+R39	Or Arg1:E26 Arg2:E27
+R40	Or Arg1:E34 Arg2:E35
+R41	Or Arg1:E35 Arg2:E36
+R42	Or Arg1:E36 Arg2:E37

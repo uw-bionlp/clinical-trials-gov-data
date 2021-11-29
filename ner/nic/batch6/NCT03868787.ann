@@ -1,13 +1,12 @@
 E1	Eq-Comparison:T1 Operator:T22 Value:T23 Temporal-Unit:T24
-E2	Age:T2 Eq-Comparison:E1
-E3	Observation:T3 Name:T25 Eq-Comparison:E4
+E2	Age:T2 Numeric-Filter:E1
+E3	Observation:T3 Name:T25 Numeric-Filter:E4
 E4	Eq-Comparison:T4 Operator:T26 Value:T27 Temporal-Unit:T28 Value2:T29 Temporal-Unit2:T30 Value3:T31 Temporal-Unit3:T32
 E7	Negation:T7 Negates:E8
 E8	Contraindication:T8 Contraindicates:E5
 E9	Observation:T9 Name:T34
 E10	Condition:T10 Name:T35
 E11	Modifier:T11 Modifies:T35
-E12	Or:T12 Arg:E10 Arg2:E14
 E13	Modifier:T13 Modifies:T37
 E14	Condition:T14 Name:T37
 E15	Procedure:T15 Name:T38
@@ -28,7 +27,6 @@ T8	Contraindication 176 193	contraindications
 T9	Observation 227 240	Incarceration
 T10	Condition 246 271	Preterm Premature Rupture
 T11	Modifier 275 284	Membranes
-T12	Or 285 287	or
 T13	Modifier 300 314	intra-amniotic
 T14	Condition 315 324	infection
 T15	Procedure 342 366	implanted cardiac device
@@ -71,3 +69,4 @@ A5	Eq-Temporal-Unit-Value T28 week
 A6	Eq-Temporal-Unit-Value T30 week
 A7	Eq-Temporal-Unit-Value T32 day
 A8	Eq-Temporal-Period-Value T40 past
+R1	Or Arg1:E10 Arg2:E14

@@ -1,35 +1,30 @@
 E1	Observation:T1 Name:T38
-E2	Observation:T2 Name:T39 Eq-Comparison:E3
+E2	Observation:T2 Name:T39 Numeric-Filter:E3
 E3	Eq-Comparison:T3 Value:T40 Value:T41
 E4	Observation:T4 Name:T42
-E5	Observation:T5 Name:T43 Eq-Comparison:E6
+E5	Observation:T5 Name:T43 Numeric-Filter:E6
 E6	Eq-Comparison:T6 Operator:T44 Value:T45 Unit:T46 Per:T47
-E7	Observation:T7 Name:T48 Eq-Comparison:E8
+E7	Observation:T7 Name:T48 Numeric-Filter:E8
 E8	Eq-Comparison:T8 Operator:T49 Value:T50
 E9	Condition:T9 Name:T52 Severity:T51
 E10	Modifier:T10 Modifies:T52
 E11	Modifier:T11 Modifies:T52
 E12	Modifier:T12 Modifies:T52
 E13	Modifier:T13 Modifies:T52
-E14	Or:T14 Arg:E13 Arg2:E15
 E15	Modifier:T15 Modifies:T52
 E17	Condition:T17 Name:T53 Polarity:T16
 E18	Condition:T18 Name:T54
 E19	Procedure:T19 Name:T62
 E20	Allergy:T20 Name:E23
-E21	Or:T21 Arg:E20 Arg2:E22
 E22	Contraindication:T22 Contraindicates:E23
 E23	Drug:T23
 E24	Study:T24 Study-Of:E23
 E25	Eq-Comparison:T25 Temporal-Period:T55
 E26	Condition:T26 Name:T56 Temporality:E25
-E27	Or:T27 Arg:E26 Arg2:E29
 E29	Condition:T29 Name:T57 Temporality:E25
 E30	Condition:T30 Name:T58
-E31	Or:T31 Arg:E30 Arg2:E33
 E33	Condition:T33 Name:T59
 E35	Observation:T35 Name:T61 Stability:T60
-E36	Or:T36 Arg:E35 Arg2:E32
 E16	Modifier:T63 Modifies:T62 Modifies2:T54
 E32	Procedure:T37 Name:T64 Stability:T60
 E34	Assertion:T34 Asserted:T60
@@ -46,25 +41,20 @@ T10	Modifier 230 237	cardiac
 T11	Modifier 239 250	respiratory
 T12	Modifier 252 257	renal
 T13	Modifier 259 266	hepatic
-T14	Or 267 269	or
 T15	Modifier 270 282	neurological
 T17	Condition 289 300	Coagulation
 T18	Condition 320 329	Infection
 T19	Procedure 337 346	injection
 T20	Allergy 357 364	Allergy
-T21	Or 365 367	or
 T22	Contraindication 368 385	contraindications
 T23	Drug 393 398	drugs
 T24	Study 411 416	study
 T25	Eq-Comparison 422 429	History
 T26	Condition 433 447	drug addiction
-T27	Or 448 450	or
 T29	Condition 451 464	alcohol abuse
 T30	Condition 472 491	psychiatric illness
-T31	Or 493 495	or
 T33	Condition 496 514	mental retardation
 T35	Observation 550 561	pain scores
-T36	Or 562 564	or
 T38	Observation-Name 41 77	American Society of Anesthesiologist
 T39	Observation-Name 79 82	ASA
 T40	Eq-Value 84 85	I
@@ -95,20 +85,28 @@ T63	Modifier 347 351	site
 T37	Procedure 565 577	PCA programs
 T64	Procedure-Name 565 577	PCA programs
 T34	Assertion 515 526	interfering
-A1	Observation-Type-Value T42 vital
-A2	Observation-Type-Value T43 vital
+A1	Observation-Type-Value E4 vital
+A2	Observation-Type-Value E5 vital
 A3	Eq-Operator-Value T44 GT
 A4	Eq-Operator-Value T49 GT
 A5	Severity-Value T51 severe
 A6	Eq-Temporal-Period-Value T55 past
 A7	Stability-Value T60 change
 A8	Polarity-Value T16 abnormal
-A9	Observation-Type-Value T61 measurement
+A9	Observation-Type-Value E35 measurement
 A10	Assertion-Type-Value E34 hypothetical
-A11	Observation-Type-Value T38 clinical-score
-A12	Observation-Type-Value T39 clinical-score
-A13	Observation-Type-Value T48 clinical-score
+A11	Observation-Type-Value E1 clinical-score
+A12	Observation-Type-Value E2 clinical-score
+A13	Observation-Type-Value E7 clinical-score
 R1	Abbrev-Of Arg1:E2 Arg2:E1
 R2	Abbrev-Of Arg1:E5 Arg2:E4
 R4	Caused-By Arg1:T60 Arg2:E30
 R5	Caused-By Arg1:T60 Arg2:E33
+R3	Or Arg1:E13 Arg2:E15
+R6	Or Arg1:E20 Arg2:E22
+R7	Or Arg1:E26 Arg2:E29
+R8	Or Arg1:E30 Arg2:E33
+R9	Or Arg1:E35 Arg2:E32
+R10	Or Arg1:E10 Arg2:E11
+R11	Or Arg1:E11 Arg2:E12
+R12	Or Arg1:E12 Arg2:E13
