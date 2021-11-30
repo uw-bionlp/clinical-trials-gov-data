@@ -1,4 +1,4 @@
-E3	Condition:T3 Name:T4 Duration:E6
+E3	Observation:T3 Name:T4 Duration:E6 Acuteness:T10
 E5	Condition:T5 Name:T6
 E7	Procedure:T7 Name:T8
 E8	Age:T17 Numeric-Filter:E14
@@ -21,8 +21,8 @@ E23	Eq-Comparison:T47 Temporal-Unit:T16 Value:T22
 E24	Eq-Comparison:T48 Temporal-Period:T49
 E25	Study:T50 Temporality:E24
 E26	Observation:T51 Name:T52
-T3	Condition 189 210	chronic low back pain
-T4	Condition-Name 189 210	chronic low back pain
+T3	Observation 197 210	low back pain
+T4	Observation-Name 197 210	low back pain
 T5	Condition 726 740	claustrophobia
 T6	Condition-Name 726 740	claustrophobia
 T7	Procedure 681 702	ferromagnetic implant
@@ -90,3 +90,5 @@ R6	And Arg1:E8 Arg2:E9
 R7	Or Arg1:E16 Arg2:E17
 R8	Or Arg1:E5 Arg2:E22
 R9	Or Arg1:E21 Arg2:E5
+T10	Acuteness 189 196	chronic
+A2	Acuteness-Type-Value T10 chronic

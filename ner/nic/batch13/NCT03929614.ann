@@ -1,12 +1,12 @@
 E1	Condition:T1 Name:T2
-E5	Condition:T5 Name:T6
+E5	Condition:T5 
 E7	Condition:T7 Name:T8
 E9	Condition:T9 Name:T10
 E10	Eq-Comparison:T15 Operator:T12 Value:T13 Value2:T14 Temporal-Unit:T11
 E2	Age:T16 Numeric-Filter:E10
 E3	Procedure:T17 Name:T18
-E6	Modifier:T20 Modifies:T6
-E8	Modifier:T21 Modifies:T6
+E6	Modifier:T20 Modifies:E5
+E8	Modifier:T21 Modifies:E5
 E12	Condition:T23 Name:T24
 E13	Assertion:T25 Asserted:E12
 E14	Assertion:T26 Asserted:E7
@@ -17,7 +17,6 @@ T2	Condition-Name 25 28	AIS
 T3	Language 110 117	English
 T4	Language 121 127	French
 T5	Condition 270 277	illness
-T6	Condition-Name 270 277	illness
 T7	Condition 362 383	neurological disorder
 T8	Condition-Name 362 383	neurological disorder
 T9	Condition 414 452	disorder of the musculoskeletal system

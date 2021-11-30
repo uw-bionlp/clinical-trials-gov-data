@@ -31,13 +31,12 @@ E35	Observation:T82 Name:T83 Numeric-Filter:E37
 E36	Negation:T84 Negates:E35
 E37	Eq-Comparison:T85 Operator:T86 Unit:T38 Value:T47
 E38	Procedure:T87 Name:T91
-E39	
-E40	Negation:T89 Negates:E39
+E40	Negation:T89 Negates:T88
 E42	Modifier:T92 Modifies:E4
 E43	Condition:T93 Name:T94
 E45	Eq-Comparison:T96 Temporal-Period:T97
 E46	Other:T98 Is-Other:E12
-E28	Modifier:T28
+E28	Modifier:T28 
 E47	Modifier:T29 Modifies:T79
 T1	Condition-Name 44 47	OSA
 T2	Observation 90 93	BMI
@@ -163,5 +162,8 @@ R4	Abbrev-Of Arg1:E28 Arg2:E25
 R7	Or Arg1:T57 Arg2:T55
 R8	And Arg1:E9 Arg2:E13
 R9	And Arg1:E16 Arg2:E27
-R10	After Arg1:E39 Arg2:E38
 R11	Or Arg1:E43 Arg2:E8
+T56	Assertion 672 681	Inability
+E5	Assertion:T56 Asserted:E40
+A21	Assertion-Type-Value E5 hypothetical
+R10	After Arg1:T88 Arg2:E38	

@@ -35,8 +35,7 @@ E43	Procedure:T89 Name:T90
 E44	Contraindication:T91 Contraindicates:E43
 E46	Observation:T93 Name:T94 Numeric-Filter:E37
 E47	Condition:T95 Name:T96
-E48	
-E49	Condition:T99
+E49	Condition:T99 
 E51	Condition:T101 Name:T102
 E52	Assertion:T103 Asserted:E33
 E53	Condition:T104 Name:T105
@@ -63,7 +62,7 @@ E79	Eq-Comparison:T144 Temporal-Period:T145
 E80	Eq-Comparison:T146 Temporal-Period:T147
 E81	Negation:T148 Negates:E76
 E10	Assertion:T11 Asserted:E3
-E11	Condition:T12
+E11	Condition:T12 
 E12	Observation:T72 Name:T73
 E14	Procedure:T107 Name:T108
 E7	Other:T7 Is-Other:E49
@@ -152,8 +151,6 @@ T93	Observation 841 871	international normalized ratio
 T94	Observation-Name 841 871	international normalized ratio
 T95	Condition 898 914	thrombocytopenia
 T96	Condition-Name 898 914	thrombocytopenia
-T97	Encounter 969 978	admission
-T98	Encounter-Type 969 978	admission
 T99	Condition 956 965	diagnoses
 T101	Condition 1021 1046	biliopancreatic neoplasia
 T102	Condition-Name 1021 1046	biliopancreatic neoplasia
@@ -224,7 +221,6 @@ A15	Observation-Type-Value E18 clinical-score
 A16	Assertion-Type-Value E34 hypothetical
 A17	Observation-Type-Value E23 lab
 A18	Observation-Type-Value E46 lab
-A19	Encounter-Type-Value T98 inpatient
 A21	Assertion-Type-Value E52 hypothetical
 A23	Eq-Temporal-Period-Value T143 past
 A24	Eq-Temporal-Period-Value T145 past
@@ -256,7 +252,6 @@ R20	Or Arg1:E9 Arg2:E1
 R21	Or Arg1:E15 Arg2:E13
 R22	Or Arg1:E26 Arg2:E28
 R23	And Arg1:E21 Arg2:E23
-R24	During Arg1:E49 Arg2:E48
 R25	And Arg1:E58 Arg2:E59
 R26	Or Arg1:E59 Arg2:E60
 R27	And Arg1:E69 Arg2:E70
@@ -267,3 +262,7 @@ R31	Or Arg1:E19 Arg2:E42
 R32	Or Arg1:E25 Arg2:E27
 R33	Or Arg1:E27 Arg2:E51
 R34	Or Arg1:E53 Arg2:E57
+T67	Encounter 969 978	admission
+E6	Encounter:T67 
+A19	Encounter-Type-Value E6 inpatient
+R24	During Arg1:E49 Arg2:E6	
