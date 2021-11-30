@@ -29,16 +29,15 @@ E32	Observation:T58 Name:T59
 E33	Observation:T60 Name:T61
 E34	Observation:T62 Name:T63
 E35	Eq-Comparison:T64 Operator:T65 Value:T24 Temporal-Unit:T21
-E36	Encounter:T66
+E36	Encounter:T66 
 E37	Condition:T67 Name:T68
 E38	Condition:T69 Name:T70
 E40	Modifier:T72 Modifies:T70
-E41	
 E43	Observation:T75 Name:T76
 E44	Procedure:T77 Name:T78
-E46	Procedure:T80
+E46	Procedure:T80 
 E48	Procedure:T82 Name:T83 Minimum-Count:E49
-E49	Eq-Comparison:T84
+E49	Eq-Comparison:T84 
 E51	Condition:T86 Name:T87 Temporality:E21
 E52	Condition:T88 Name:T89
 E53	Condition:T90 Name:T91
@@ -48,7 +47,7 @@ E57	Modifier:T96 Modifies:T14
 E58	Condition:T97 Name:T98
 E59	Condition:T99 Name:T100
 E60	Modifier:T101 Modifies:T100
-E61	Modifier:T102
+E61	Modifier:T102 
 E19	Condition:T19 Name:T20
 E62	Condition:T103 Name:T104
 E63	Modifier:T105 Modifies:T104
@@ -177,7 +176,6 @@ R17	Or Arg1:E14 Arg2:E16
 R18	Or Arg1:E25 Arg2:E26
 R19	And Arg1:E22 Arg2:E24
 R20	Or Arg1:E38 Arg2:E37
-R21	During Arg1:E37 Arg2:E41
 R22	Before Arg1:E1 Arg2:E44
 R23	And Arg1:E46 Arg2:E44
 R24	During Arg1:E48 Arg2:E5
@@ -189,3 +187,15 @@ R29	Or Arg1:E15 Arg2:E11
 R30	Or Arg1:E10 Arg2:E12
 R31	Or Arg1:E12 Arg2:E14
 R32	Or Arg1:E59 Arg2:E9
+T39	Observation 25 28	TNM
+E18	Observation:T39 Name:T49 Stage:E27
+T49	Observation-Name 25 28	TNM
+T52	Eq-Comparison 35 39	I-II
+E27	Eq-Comparison:T52 Value:T71 Value2:T74 Operator:T79
+T71	Eq-Value 35 36	I
+T74	Eq-Value 37 39	II
+T79	Eq-Operator 36 37	-
+A8	Eq-Operator-Value T79 BETWEEN
+R21	Equivalent-To Arg1:E20 Arg2:E27	
+R33	During Arg1:E38 Arg2:T73	
+R34	During Arg1:E37 Arg2:T73	

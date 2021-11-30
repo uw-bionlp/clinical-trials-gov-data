@@ -9,7 +9,7 @@ E8	Eq-Comparison:T15 Value:T16 Temporal-Unit:T61
 E9	Condition:T18 Name:T19
 E10	Procedure:T20 Name:T21
 E11	Procedure:T22 Name:T23 Temporality:E7
-E13	Study:T27
+E13	Study:T27 
 E14	Age:T28 Numeric-Filter:E15
 E15	Eq-Comparison:T29 Value:T30 Temporal-Unit:T31 Operator:T32 Value2:T33 Temporal-Unit2:T34
 E16	Eq-Comparison:T35 Operator:T36 Value:T37 Temporal-Unit:T38
@@ -22,9 +22,8 @@ E23	Observation:T49 Name:T50 Temporality:E2 Duration:E27 Numeric-Filter:E26
 E24	Modifier:T51 Modifies:T50
 E26	Eq-Comparison:T53 Operator:T54 Value:T55
 E27	Eq-Comparison:T56 Operator:T57 Value:T58 Temporal-Unit:T59 Per:T60
-E29	Study:T63
-E31	Assertion:T65 Asserted:E32
-E32	
+E29	Study:T63 
+E31	Assertion:T65 Asserted:E12
 E33	Condition:T67 Name:T68
 E34	Condition:T69 Name:T71
 E38	Drug:T74 Name:T75
@@ -43,7 +42,7 @@ E50	Modifier:T92 Modifies:T91
 E51	Modifier:T93 Modifies:T91
 E53	Procedure:T96 Name:T97 Stability:T98
 E54	Assertion:T99 Asserted:T98
-E55	Study:T100
+E55	Study:T100 
 E56	Assertion:T101 Asserted:E55
 E58	Condition:T103 Name:T104
 E59	Condition:T105 Name:T106
@@ -53,7 +52,7 @@ E63	Eq-Comparison:T111 Temporal-Period:T112 Value:T113 Temporal-Unit:T114
 E64	Condition:T115 Name:T116 Temporality:E3 Temporality2:E4
 E65	Modifier:T117 Modifies:T116
 E67	Condition:T119 Name:T120 Temporality:E5 Temporality2:E6
-E69	Drug:T122
+E69	Drug:T122 
 E70	Drug:T123 Name:T124 Stability:T126
 E71	Other:T125 Is-Other:E69
 E72	Drug:T127 Name:T128
@@ -120,7 +119,6 @@ T16	Eq-Value 495 496	2
 T61	Eq-Temporal-Unit 497 503	months
 T63	Study 513 518	study
 T65	Assertion 535 546	Willingness
-T66	Encounter 562 567	visit
 T67	Condition 619 627	menarche
 T68	Condition-Name 619 627	menarche
 T69	Condition 636 645	menopause
@@ -241,3 +239,6 @@ R27	Or Arg1:E43 Arg2:E44
 R28	Or Arg1:E58 Arg2:E59
 R29	Or Arg1:E72 Arg2:E73
 R30	Or Arg1:E73 Arg2:E74
+T14	Encounter 562 567	visit
+E12	Encounter:T14 
+A7	Encounter-Type-Value E12 outpatient

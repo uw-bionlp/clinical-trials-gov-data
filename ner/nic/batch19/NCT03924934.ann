@@ -8,35 +8,34 @@ E9	Eq-Comparison:T35 Operator:T15 Value:T24 Temporal-Unit:T103
 E10	Eq-Comparison:T36 Operator:T16 Temporal-Unit:T17 Value:T28
 E11	Eq-Comparison:T37 Temporal-Period:T38
 E2	Organism:T7 Name:T8
-E4	Encounter:T19
-E13	Encounter:T41
+E4	Encounter:T19 
+E13	Encounter:T41 
 E15	Organism:T44 Name:T45 Polarity:T46 Temporality:E16 Temporality2:E7
 E16	Eq-Comparison:T47 Temporal-Recency:T48
-E17	Encounter:T49
-E19	Encounter:T53
+E17	Encounter:T49 
+E19	Encounter:T53 
 E20	Organism:T9 Name:T57
-E21	Encounter:T21
-E23	Encounter:T58
+E21	Encounter:T21 
+E23	Encounter:T58 
 E25	Encounter:T61 Location:T65
 E26	Negation:T63 Negates:E25
 E28	Criteria-Count:T66 Criteria:E35 Criteria2:E32
 E30	Organism:T10 Name:T69 Polarity:T70 Temporality:E31 Temporality2:E8
 E31	Eq-Comparison:T71 Temporal-Recency:T72
 E32	Negation:T73 Negates:E30
-E33	Encounter:T74
+E33	Encounter:T74 
 E35	Encounter:T23 Location:T79
 E36	Other:T80 Is-Other:T79
 E37	Organism:T11 Name:T81
-E38	
-E40	Encounter:T85
+E40	Encounter:T85 
 E42	Encounter:T88 Location:T90
 E44	Encounter:T92 Location:T94
 E45	Other:T95 Is-Other:T94
 E46	Organism:T12 Name:T96 Polarity:T97 Temporality:E47 Temporality2:E9
 E47	Eq-Comparison:T98 Temporal-Recency:T99
 E48	Negation:T100 Negates:E46
-E49	Encounter:T101
-E51	Encounter:T105
+E49	Encounter:T101 
+E51	Encounter:T105 
 E52	Eq-Comparison:T25 Temporal-Period:T26
 E53	Eq-Comparison:T27 Temporal-Period:T29
 E54	Condition:T107 Name:T108
@@ -96,8 +95,6 @@ T79	Location 460 468	facility
 T80	Other 449 454	other
 T11	Organism 598 610	CRE isolated
 T81	Organism-Name 598 610	CRE isolated
-T82	Encounter 618 633	hospitalization
-T83	Encounter-Type 618 633	hospitalization
 T85	Encounter 637 653	outpatient visit
 T88	Encounter 662 672	discharged
 T90	Location 673 677	home
@@ -144,7 +141,6 @@ A23	Encounter-Type-Value E33 inpatient
 A24	Eq-Temporal-Unit-Value T76 hour
 A26	Encounter-Type-Value E35 inpatient
 A27	Location-Value T79 hospital
-A28	Encounter-Type-Value T83 inpatient
 A30	Encounter-Type-Value E40 outpatient
 A31	Encounter-Type-Value E42 discharge
 A32	Location-Value T90 residence
@@ -166,7 +162,16 @@ R6	And Arg1:E21 Arg2:E20
 R7	During Arg1:E20 Arg2:E23
 R8	And Arg1:E23 Arg2:E26
 R9	After Arg1:E8 Arg2:E33
-R10	During Arg1:E37 Arg2:E38
-R11	Or Arg1:E38 Arg2:E40
 R12	And Arg1:E40 Arg2:E42
 R13	After Arg1:E9 Arg2:E49
+T30	Encounter 618 633	hospitalization
+E12	Encounter:T30 
+A8	Encounter-Type-Value E12 inpatient
+R10	During Arg1:E37 Arg2:E12	
+R14	Or Arg1:E12 Arg2:E40	
+R15	During Arg1:E37 Arg2:E40	
+T31	Criteria-Count 698 720	the following criteria
+E14	Criteria-Count:T31 Criteria:E44 Criteria2:E48
+T32	Criteria-Count 67 89	the following criteria
+E18	Criteria-Count:T32 Criteria:E2 Criteria2:E15
+R11	During Arg1:E2 Arg2:E13	

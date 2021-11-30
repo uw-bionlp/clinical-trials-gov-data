@@ -1,5 +1,5 @@
-E1	Condition:T1
-E3	Condition:T3
+E1	Condition:T1 
+E3	Condition:T3 
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
 E8	Eq-Comparison:T13 Operator:T9 Value:T11 Unit:T17
@@ -8,11 +8,9 @@ E2	Observation:T15 Name:T16 Numeric-Filter:E8
 E4	Negation:T18 Negates:E6
 E6	Modifier:T19 Modifies:E1
 E10	Observation:T20 Name:T21 Numeric-Filter:E9
-E12	Modifier:T25
+E12	Modifier:T25 Modifies:E3
 T1	Condition 120 127	disease
-T2	Condition-Name 120 127	disease
 T3	Condition 235 242	disease
-T4	Condition-Name 235 242	disease
 T5	Condition 192 201	Pregnancy
 T6	Condition-Name 192 201	Pregnancy
 T7	Condition 202 211	Lactation
@@ -38,5 +36,4 @@ A2	Eq-Operator-Value T10 LT
 A3	Observation-Type-Value E2 clinical-score
 A4	Observation-Type-Value E10 social-habit
 A5	Eq-Temporal-Unit-Value T23 day
-R1	Abbrev-Of Arg1:E12 Arg2:E3
 R2	Or Arg1:E5 Arg2:E7
