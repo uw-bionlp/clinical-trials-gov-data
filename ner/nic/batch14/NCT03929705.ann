@@ -3,14 +3,13 @@ E2	Age:T4 Numeric-Filter:E21
 E3	Eq-Comparison:T5 Operator:T6 Temporal-Unit:T1 Value:T7
 E4	Eq-Comparison:T8 Value:T18 Unit:T19 Operator:T20
 E5	Assertion:T21 Asserted:E6
-E6	Observation:T22 Name:T23 Numeric-Filter:E4 Numeric-Filter:E9
-E7	
+E6	Observation:T22 Numeric-Filter:E4 Numeric-Filter:E9 Specimen:T23
 E9	Eq-Comparison:T26 Value:T27 Unit:T28
 E10	Condition:T29 Name:T30
 E11	Condition:T31 Name:T32 Polarity:T33
 E12	Observation:T34 Name:T35 Polarity:T36
 E13	Eq-Comparison:T37 Temporal-Recency:T38
-E14	Encounter:T39
+E14	Encounter:T39 Temporality:E13
 E15	Condition:T40 Name:T41
 E16	Assertion:T42 Asserted:E15
 E17	Condition:T43 Name:T44 Temporality:E18
@@ -18,9 +17,8 @@ E18	Eq-Comparison:T45 Temporal-Period:T46
 E19	Negation:T47 Negates:E17
 E21	Eq-Comparison:T9 Operator:T10 Temporal-Unit:T2 Value:T11
 E22	Eq-Comparison:T49 Operator:T50 Value:T12 Unit:T51
-E23	Observation:T52 Name:T53 Numeric-Filter:E22 Numeric-Filter:E27
+E23	Observation:T52 Numeric-Filter:E22 Numeric-Filter:E27 Specimen:T48
 E24	Assertion:T54 Asserted:E23
-E25	
 E27	Eq-Comparison:T57 Value:T58 Unit:T59
 E28	Condition:T60 Name:T61
 E29	Condition:T62 Name:T63 Polarity:T64
@@ -31,13 +29,13 @@ E33	Negation:T72 Negates:E31
 E34	Observation:T13 Name:T14 Polarity:T73
 E35	Condition:T74 Name:T75 Temporality:E37 Temporality2:E36
 E36	Eq-Comparison:T76 Temporal-Period:T77
-E37	Eq-Comparison:T78
+E37	Eq-Comparison:T78 
 E40	Eq-Comparison:T82 Temporal-Period:T83
 E41	Eq-Comparison:T84 Operator:T85 Temporal-Unit:T87 Value:T86
 E42	Observation:T16 Name:T17 Polarity:T88
 E43	Condition:T89 Name:T90 Temporality:E45 Temporality2:E44
 E44	Eq-Comparison:T91 Temporal-Period:T92
-E45	Eq-Comparison:T93
+E45	Eq-Comparison:T93 
 E47	Procedure:T96 Temporality:E48
 E48	Eq-Comparison:T98 Temporal-Period:T101
 E39	Procedure:T15 Temporality:E40 Duration:E41
@@ -61,8 +59,7 @@ T19	Eq-Unit 178 180	mL
 T20	Eq-Operator 164 171	minimum
 T21	Assertion 146 153	able to
 T22	Observation 184 195	whole blood
-T23	Observation-Name 184 195	whole blood
-T24	Encounter 204 209	visit
+T23	Specimen 184 195	whole blood
 T26	Eq-Comparison 211 215	16mL
 T27	Eq-Value 211 213	16
 T28	Eq-Unit 213 215	mL
@@ -91,9 +88,7 @@ T49	Eq-Comparison 533 549	minimum of 10 mL
 T50	Eq-Operator 533 543	minimum of
 T51	Eq-Unit 547 549	mL
 T52	Observation 553 564	whole blood
-T53	Observation-Name 553 564	whole blood
 T54	Assertion 515 522	able to
-T55	Encounter 573 578	visit
 T57	Eq-Comparison 580 584	16mL
 T58	Eq-Value 580 582	16
 T59	Eq-Unit 582 584	mL
@@ -185,8 +180,18 @@ R3	Equivalent-To Arg1:E29 Arg2:E28
 R4	If-Then Arg1:E28 Arg2:E27
 R5	Treatment-For Arg1:E39 Arg2:E49
 R6	Treatment-For Arg1:E47 Arg2:E50
-R7	During Arg1:E6 Arg2:E7
 R8	And Arg1:E15 Arg2:E19
-R9	During Arg1:E23 Arg2:E25
 R10	Or Arg1:E36 Arg2:E37
 R11	Or Arg1:E44 Arg2:E45
+T25	Encounter 573 578	visit
+E7	Encounter:T25 
+A7	Encounter-Type-Value E7 outpatient
+T48	Specimen 553 564	whole blood
+R7	During Arg1:E23 Arg2:E7	
+A16	Encounter-Type-Value E14 outpatient
+R9	During Arg1:E14 Arg2:E15	
+A35	Observation-Type-Value E23 lab
+T24	Encounter 204 209	visit
+E8	Encounter:T24 
+A36	Encounter-Type-Value E8 outpatient
+R12	During Arg1:E6 Arg2:E8	
