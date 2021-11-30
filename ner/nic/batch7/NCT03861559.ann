@@ -1,5 +1,5 @@
 E2	Eq-Comparison:T2 Temporal-Period:T99 Value:T157 Temporal-Unit:T1
-E4	Condition:T4 Name:T100 Duration:E2
+E4	Allergy:T4 Duration:E2 Name:T8
 E5	Observation:T5 Name:T102 Polarity:T101 Temporality:E7 Temporality2:E9
 E6	Drug:T6 
 E7	Eq-Comparison:T7 Temporal-Period:T103
@@ -10,7 +10,7 @@ E13	Exception:T13 From:E12 Except:E14
 E14	Condition:T14 Name:T111
 E15	Assertion:T15 Asserted:T112
 E16	Study:T16 Stability:T112 Study-Of:E18
-E18	Condition:T18 Name:T113
+E18	Allergy:T18 Name:T113
 E20	Condition:T20 Name:T115
 E22	Condition:T22 Name:T116
 E24	Condition:T24 Name:T118
@@ -36,7 +36,7 @@ E46	Modifier:T46
 E47	Modifier:T47 
 E49	Other:T49 
 E50	Condition:T50 Severity:T127 Severity2:T126
-E52	Condition:T52 Name:T128
+E52	Condition:T52 
 E53	Assertion:T53 Asserted:T129
 E54	Study:T54 Stability:T129
 E55	Procedure:T55 
@@ -57,7 +57,7 @@ E70	Modifier:T70 Modifies:T141
 E71	Condition:T71 Name:T141
 E72	Condition:T72 Name:T142
 E74	Condition:T74 Name:T143
-E75	Condition:T75 Name:T145 Stability:T144
+E75	Observation:T75 Name:T145 Stability:T144
 E76	Eq-Comparison:T76 Temporal-Period:T146
 E78	Allergy:T78 Name:E100 Minimum-Count:E77 Temporality:E76
 E80	Allergy:T80 Name:E81 Name2:E83
@@ -72,14 +72,14 @@ E92	Condition:T92 Name:T153
 E93	Eq-Comparison:T93 Temporal-Period:T154
 E95	Drug:T95 Temporality:E93 Acuteness:T94
 E96	Assertion:T96 Asserted:T155
-E98	Condition:T98 Name:T156 Stability:T155
+E98	Allergy:T98 Name:T156 Stability:T155
 E1	Negation:T3 Negates:T108
 E23	Assertion:T158 Asserted:E55
 E99	Modifier:T159 Modifies:T142
 E77	Eq-Comparison:T77 Operator:T160
 E100	Drug:T147 
 T2	Eq-Comparison 31 45	2-year history
-T4	Condition 58 75	allergic rhinitis
+T4	Allergy 58 66	allergic
 T5	Observation 96 105	skin test
 T6	Drug 135 143	allergen
 T7	Eq-Comparison 145 152	current
@@ -90,7 +90,7 @@ T13	Exception 295 305	other than
 T14	Condition 306 323	allergic rhinitis
 T15	Assertion 330 335	would
 T16	Study 355 360	study
-T18	Condition 396 413	allergic rhinitis
+T18	Allergy 396 404	allergic
 T20	Condition 453 461	pregnant
 T22	Condition 465 478	breastfeeding
 T24	Condition 493 515	childbearing potential
@@ -137,7 +137,7 @@ T70	Modifier 1208 1224	nasal structural
 T71	Condition 1225 1238	abnormalities
 T72	Condition 1256 1268	nasal polyps
 T74	Condition 1280 1296	septal deviation
-T75	Condition 1332 1346	nasal air flow
+T75	Observation 1332 1346	nasal air flow
 T76	Eq-Comparison 1358 1365	history
 T78	Allergy 1383 1392	allergies
 T80	Allergy 1399 1406	allergy
@@ -153,9 +153,8 @@ T93	Eq-Comparison 1609 1614	using
 T94	Acuteness 1622 1629	chronic
 T95	Drug 1630 1640	medication
 T96	Assertion 1647 1652	could
-T98	Condition 1683 1700	allergic rhinitis
+T98	Allergy 1683 1691	allergic
 T99	Eq-Temporal-Period 38 45	history
-T100	Condition-Name 58 75	allergic rhinitis
 T101	Polarity 87 95	positive
 T102	Observation-Name 96 105	skin test
 T103	Eq-Temporal-Period 145 152	current
@@ -165,10 +164,9 @@ T106	Eq-Temporal-Unit 208 212	year
 T107	Condition-Name 225 236	good health
 T108	Stability 253 261	unstable
 T109	Severity 274 285	significant
-T110	Condition-Name 286 293	disease
 T111	Condition-Name 306 323	allergic rhinitis
 T112	Stability 336 345	interfere
-T113	Condition-Name 396 413	allergic rhinitis
+T113	Allergy-Name 405 413	rhinitis
 T114	Life-Stage-And-Gender 439 444	Women
 T115	Condition-Name 453 461	pregnant
 T116	Condition-Name 465 478	breastfeeding
@@ -183,7 +181,6 @@ T124	Drug-Name 650 658	cromolyn
 T125	Drug-Name 663 673	nedocromil
 T126	Severity 683 694	significant
 T127	Severity 820 831	significant
-T128	Condition-Name 851 859	disorder
 T129	Stability 910 919	interfere
 T130	Stability 970 979	interfere
 T131	Eq-Temporal-Period 1003 1005	on
@@ -199,7 +196,7 @@ T141	Condition-Name 1225 1238	abnormalities
 T142	Condition-Name 1256 1268	nasal polyps
 T143	Condition-Name 1280 1296	septal deviation
 T144	Stability 1317 1326	interfere
-T145	Condition-Name 1332 1346	nasal air flow
+T145	Observation-Name 1332 1346	nasal air flow
 T146	Eq-Temporal-Period 1358 1365	history
 T148	Drug-Name 1410 1424	antihistamines
 T149	Drug-Name 1428 1438	corticoids
@@ -208,7 +205,7 @@ T152	Drug-Name 1504 1532	nasal topical antihistamines
 T153	Condition-Name 1578 1600	rhinitis medicamentosa
 T154	Eq-Temporal-Period 1609 1614	using
 T155	Stability 1653 1659	affect
-T156	Condition-Name 1683 1700	allergic rhinitis
+T156	Allergy-Name 1692 1700	rhinitis
 T1	Eq-Temporal-Unit 33 37	year
 T157	Eq-Value 31 32	2
 T3	Negation 241 248	free of
@@ -293,3 +290,4 @@ R36	Or Arg1:E44 Arg2:E45
 R37	Or Arg1:E45 Arg2:E46
 R38	Or Arg1:E46 Arg2:E47
 R39	Or Arg1:E84 Arg2:E85
+T8	Allergy-Name 67 75	rhinitis

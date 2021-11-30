@@ -46,7 +46,7 @@ E52	Condition:T102 Name:T103
 E53	Condition:T104 Severity:T106
 E54	Other:T107 Is-Other:E53
 E55	Observation:T108 Name:T109 Numeric-Filter:E25
-E57	Drug:T111 Name:T112 Numeric-Filter:E58
+E57	Drug:T111 Name:T112 Temporality:E58
 E58	Eq-Comparison:T113 Operator:T114 Value:T39 Per:T115
 E59	Drug:T40 Name:T116 Temporality:E60 Temporality2:E61
 E60	Eq-Comparison:T117 Temporal-Period:T118
@@ -148,7 +148,6 @@ T101	Assertion 715 723	possibly
 T102	Condition 752 758	cancer
 T103	Condition-Name 752 758	cancer
 T104	Condition 776 783	disease
-T105	Condition-Name 776 783	disease
 T106	Severity 768 775	serious
 T107	Other 762 767	other
 T108	Observation 789 806	expected survival
@@ -209,3 +208,4 @@ R12	Or Arg1:E31 Arg2:E32
 R13	Or Arg1:E5 Arg2:E9
 R14	Or Arg1:E19 Arg2:E17
 R15	And Arg1:E53 Arg2:E55
+R16	Treatment-For Arg1:E38 Arg2:E5	

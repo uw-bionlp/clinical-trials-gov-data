@@ -9,11 +9,11 @@ E12	Eq-Comparison:T12 Operator:T101 Value:T143
 E13	Assertion:T13 Asserted:E14
 E14	Study:T14 Study-Of:E86
 E15	Assertion:T15 Asserted:E87
-E16	Condition:T16 Name:T146
-E17	Modifier:T17 Modifies:T146
+E16	Condition:T16 
+E17	Modifier:T17 Modifies:E16
 E20	Condition:T20 Name:T102
 E22	Condition:T22 Name:T103
-E23	Condition:T23
+E23	Condition:T23 
 E25	Procedure:T25 Name:T104
 E26	Assertion:T26 Asserted:T27
 E28	Risk:T28 Stability:T27
@@ -26,7 +26,7 @@ E35	Condition:T35 Name:T109
 E36	Coreference:T36 Refers-To:E40
 E38	Coreference:T38 Refers-To:E40
 E39	Study:T39 Study-Of:E40
-E40	Drug:T40
+E40	Drug:T40 
 E41	Modifier:T41 Modifies:E44
 E43	Negation:T43 Negates:E88
 E44	Drug:T44 Temporality:E34
@@ -47,28 +47,28 @@ E58	Drug:T58 Temporality:E60
 E59	Drug:T59 Name:T125
 E60	Eq-Comparison:T60 Temporal-Period:T126 Value:T127 Temporal-Unit:T128
 E61	Other:T61 Is-Other:E62
-E62	Study:T62
+E62	Study:T62 
 E63	Study:T63 Study-Of:E64
 E64	Drug:T64 Temporality:E65
 E65	Eq-Comparison:T65 Operator:T129 Value:T130 Temporal-Unit:T131
-E67	Study:T67
+E67	Study:T67 
 E68	Eq-Comparison:T68 Temporal-Period:T132
 E69	Drug:T69 Name:T133 Temporality:E68
 E71	Other:T71 Is-Other:E72
 E72	Procedure:T72 Name:T148
 E73	Eq-Comparison:T73 Temporal-Period:T134
 E74	Drug:T74 Name:T135 Temporality:E73
-E76	Study:T76
+E76	Study:T76 
 E77	Drug:T77 Name:T137 Temporality:E90 Stability:T136
-E79	Study:T79
+E79	Study:T79 
 E81	Eq-Comparison:T81 Temporal-Period:T138
 E82	Condition:T82 Name:T139 Temporality:E81
 E83	Age:T140 Numeric-Filter:E2
 E84	Modifier:T141 Modifies:T95
 E85	Observation:T142 Numeric-Filter:E9 Name:T95 Minimum-Count:E6 Temporality:E7
-E86	Procedure:T144
+E86	Procedure:T144 
 E87	Negation:T145 Negates:E16
-E19	Modifier:T19 Modifies:T146
+E19	Modifier:T19 Modifies:E16
 E34	Eq-Comparison:T34 Temporal-Period:T110
 E88	Modifier:T108 Modifies:E44
 E90	Eq-Comparison:T149 Temporal-Period:T150
@@ -198,7 +198,6 @@ T143	Eq-Value 190 191	5
 T144	Procedure 241 251	procedures
 T145	Negation 272 277	avoid
 T19	Modifier 329 348	artificial sunlight
-T146	Condition-Name 300 308	diseased
 T27	Stability 471 475	pose
 T34	Eq-Comparison 727 730	Use
 T108	Modifier 758 770	prescription

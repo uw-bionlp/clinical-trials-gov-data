@@ -31,7 +31,7 @@ E34	Modifier:T70 Modifies:T71
 E36	Procedure:T73 Name:T74
 E2	Condition:T77 Name:T78
 E39	Modifier:T79 
-E40	Modifier:T80 
+E40	Modifier:T80 Modifies:E22
 T1	Condition 82 95	periodontitis
 T2	Condition-Name 82 95	periodontitis
 T3	Condition 498 521	cardiovascular diseases
@@ -106,7 +106,6 @@ T77	Condition 38 45	healthy
 T78	Condition-Name 38 45	healthy
 T79	Modifier 25 37	Systemically
 T80	Modifier 459 467	systemic
-T81	Condition-Name 468 476	diseases
 A1	Eq-Operator-Value T9 GTEQ
 A2	Eq-Operator-Value T10 GTEQ
 A3	Eq-Operator-Value T11 LTEQ
@@ -128,7 +127,6 @@ R7	Equivalent-To Arg1:E25 Arg2:E24
 R8	Caused-By Arg1:E27 Arg2:E25
 R9	If-Then Arg1:T65 Arg2:E29
 R10	Abbrev-Of Arg1:E39 Arg2:E2
-R11	Abbrev-Of Arg1:E40 Arg2:E22
 R12	And Arg1:E7 Arg2:E3
 R13	Or Arg1:E3 Arg2:E25
 R14	Or Arg1:E28 Arg2:E29

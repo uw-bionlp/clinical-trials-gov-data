@@ -17,7 +17,7 @@ E20	Eq-Comparison:T20 Value:T51 Unit:T52 Operator:T61 Unit2:T62
 E21	Eq-Comparison:T21 
 E22	Eq-Comparison:T22 Temporal-Period:T53
 E23	Drug:T23 Name:T54 Temporality:E22
-E24	Condition:T24 Name:T55
+E24	Condition:T24 
 E25	Condition:T25 
 E27	Condition:T27 
 E28	Assertion:T28 Asserted:T65
@@ -26,7 +26,7 @@ E30	Age:T56 Numeric-Filter:E1
 E31	Assertion:T57 Asserted:E6
 E32	Eq-Comparison:T58 Temporal-Period:T59
 E33	Modifier:T60 Modifies:T50
-E34	Modifier:T63 Modifies:T55
+E34	Modifier:T63 Modifies:E24
 E35	Study:T66 Stability:T65
 T1	Eq-Comparison 31 55	18 years of age or older
 T3	Study 59 69	enrollment
@@ -77,7 +77,6 @@ T51	Eq-Value 502 505	100
 T52	Eq-Unit 506 507	g
 T53	Eq-Temporal-Period 525 531	taking
 T54	Drug-Name 532 541	metformin
-T55	Condition-Name 582 589	illness
 T56	Age 43 46	age
 T57	Assertion 129 144	recommended for
 T58	Eq-Comparison 402 409	already
@@ -86,7 +85,6 @@ T60	Modifier 465 478	drinking oral
 T61	Eq-Operator 496 501	up to
 T62	Eq-Unit 511 516	sugar
 T63	Modifier 570 581	concomitant
-T64	Condition-Name 591 598	disease
 T65	Stability 677 684	prevent
 T66	Study 735 743	protocol
 A4	Assertion-Type-Value E28 hypothetical

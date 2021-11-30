@@ -1,7 +1,7 @@
 E1	Procedure:T1 Name:T2 Acuteness:T52
-E3	Condition:T3 Name:T4
-E5	Condition:T5 Name:T6
-E7	Condition:T7 Name:T8
+E3	Condition:T3 Name:T4 Temporality:E15
+E5	Condition:T5 Name:T6 Temporality:E15
+E7	Condition:T7 Name:T8 Temporality:E15
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E12	Eq-Comparison:T15 Operator:T13 Value:T14 Unit:T64 Per:T65
@@ -21,20 +21,19 @@ E22	Age:T42 Numeric-Filter:E21
 E23	Condition:T43 Name:T44 Stability:T48
 E24	Modifier:T45 Modifies:T44
 E25	Modifier:T46 Modifies:T44
-E27	Condition:T49 
-E29	Negation:T53 Negates:E1
+E27	Condition:T49 Acuteness:T52
+E29	Negation:T53 Negates:E1 Negates2:E27
 E30	Condition:T54 Name:T55 Temporality:E15
-E31	Condition:T56 Name:T57
-E35	Modifier:T61 Modifies:T6
+E31	Condition:T56 Name:T57 Temporality:E15
 E36	Observation:T62 Name:T63 Numeric-Filter:E12
-E37	Condition:T66 Name:T67 Stability:T73
+E37	Observation:T66 Name:T67 Stability:T73
 E38	Modifier:T68 Modifies:T67
 E39	Modifier:T69 Modifies:T67
 E40	Modifier:T70 Modifies:T67
 E41	Modifier:T71 Modifies:T67
 E43	Assertion:T74 Asserted:T73
 E17	Drug:T24 Temporality:E16
-E44	Condition:T25 Name:T75 Stability:T76
+E44	Observation:T25 Name:T75 Stability:T76
 E45	Drug:T77 Name:T78
 E46	Drug:T79 Name:T80
 E47	Drug:T81 Name:T82 Dose:T83 Dose2:E48
@@ -51,8 +50,8 @@ T1	Procedure 454 463	injection
 T2	Procedure-Name 454 463	injection
 T3	Condition 565 583	metabolic syndrome
 T4	Condition-Name 565 583	metabolic syndrome
-T5	Condition 602 613	dysfunction
-T6	Condition-Name 602 613	dysfunction
+T5	Condition 596 613	renal dysfunction
+T6	Condition-Name 596 613	renal dysfunction
 T7	Condition 588 592	gout
 T8	Condition-Name 588 592	gout
 T9	Condition 896 908	tuberculosis
@@ -92,20 +91,18 @@ T45	Modifier 427 433	mental
 T46	Modifier 414 422	physical
 T48	Stability 407 413	stable
 T49	Condition 467 475	diseases
-T50	Condition-Name 467 475	diseases
 T52	Acuteness 448 453	acute
 T53	Negation 440 447	without
 T54	Condition 520 537	diabetes mellitus
 T55	Condition-Name 520 537	diabetes mellitus
 T56	Condition 541 563	impaired blood glucose
 T57	Condition-Name 541 563	impaired blood glucose
-T61	Modifier 596 601	renal
 T62	Observation 615 625	creatinine
 T63	Observation-Name 615 625	creatinine
 T64	Eq-Unit 632 634	mg
 T65	Eq-Unit 635 637	dL
-T66	Condition 692 701	metabolic
-T67	Condition-Name 692 701	metabolic
+T66	Observation 692 701	metabolic
+T67	Observation-Name 692 701	metabolic
 T68	Modifier 709 713	body
 T69	Modifier 684 691	protein
 T70	Modifier 674 679	lipid
@@ -113,8 +110,8 @@ T71	Modifier 665 672	glucose
 T73	Stability 655 664	influence
 T74	Assertion 644 654	apparently
 T24	Drug 745 750	drugs
-T25	Condition 770 789	uric acid metabolic
-T75	Condition-Name 770 789	uric acid metabolic
+T25	Observation 770 789	uric acid metabolic
+T75	Observation-Name 770 789	uric acid metabolic
 T76	Stability 760 769	influence
 T77	Drug 805 816	suppressant
 T78	Drug-Name 805 816	suppressant
@@ -190,3 +187,6 @@ R23	Or Arg1:E41 Arg2:E40
 R24	Or Arg1:E45 Arg2:E46
 R25	Or Arg1:E51 Arg2:E52
 R26	Or Arg1:E52 Arg2:E53
+T29	Assertion 756 759	can
+E8	Assertion:T29 Asserted:T76
+A8	Assertion-Type-Value E8 hypothetical

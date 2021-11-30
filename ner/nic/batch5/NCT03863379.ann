@@ -3,7 +3,7 @@ E4	Condition:T4 Name:T31
 E6	Observation:T6 Name:T32
 E7	Condition:T7 Name:T33
 E8	Modifier:T8 Modifies:T34
-E9	Condition:T9 Name:T34
+E9	Observation:T9 Name:T34
 E10	Modifier:T10 Modifies:T35
 E11	Observation:T11 Name:T35
 E12	Condition:T12 Name:T3
@@ -20,14 +20,14 @@ E27	Condition:T27 Name:T42
 E28	Negation:T28 Negates:E16
 E29	Condition:T29 Name:T43
 E3	Condition:T16 Name:T44 Polarity:T37 Stability:T5
-E5	Modifier:T23 
+E5	Modifier:T23 Modifies:E25
 E16	Modifier:T39 Modifies:T43
 T1	Condition 38 44	stroke
 T4	Condition 47 70	cerebrovascular disease
 T6	Observation 76 98	traumatic brain injury
 T7	Condition 104 122	multiple sclerosis
 T8	Modifier 128 139	spinal cord
-T9	Condition 140 148	injuries
+T9	Observation 140 148	injuries
 T10	Modifier 160 171	spinal cord
 T11	Observation 172 179	lesions
 T12	Condition 185 197	myelopathies
@@ -49,12 +49,11 @@ T30	Condition-Name 38 44	stroke
 T31	Condition-Name 47 70	cerebrovascular disease
 T32	Observation-Name 76 98	traumatic brain injury
 T33	Condition-Name 104 122	multiple sclerosis
-T34	Condition-Name 140 148	injuries
+T34	Observation-Name 140 148	injuries
 T35	Observation-Name 172 179	lesions
 T36	Condition-Name 242 267	heterotopic ossifications
 T37	Polarity 325 333	increase
 T38	Condition-Name 401 405	loss
-T40	Condition-Name 429 437	diseases
 T41	Condition-Name 447 463	endocrinopathies
 T42	Condition-Name 465 485	muscular dystrophies
 T43	Condition-Name 501 520	fatty liver disease
@@ -74,7 +73,6 @@ R1	Example-Of Arg1:E12 Arg2:E11
 R2	Example-Of Arg1:E11 Arg2:E9
 R3	Caused-By Arg1:T5 Arg2:E15
 R4	Caused-By Arg1:T45 Arg2:E18
-R5	Abbrev-Of Arg1:E5 Arg2:E25
 R6	Example-Of Arg1:E26 Arg2:E25
 R7	Example-Of Arg1:E27 Arg2:E25
 R8	Example-Of Arg1:E29 Arg2:E25

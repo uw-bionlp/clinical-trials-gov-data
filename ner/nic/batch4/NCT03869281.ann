@@ -32,7 +32,7 @@ E38	Condition:T38 Name:T111
 E39	Condition:T39 
 E40	Exception:T40 From:E39 Except:E41
 E41	Condition:T41 Name:T112
-E42	Condition:T42 Name:T114 Stability:T113
+E42	Observation:T42 Name:T114 Stability:T113
 E43	Modifier:T43 Modifies:T115
 E44	Condition:T44 Name:T115
 E45	Condition:T45 Name:T116
@@ -47,7 +47,7 @@ E54	Observation:T54 Name:T125 Numeric-Filter:E55
 E55	Eq-Comparison:T55 Operator:T126 Value:T127 Unit:T128 Per:T129
 E56	Drug:T56 Temporality:E85
 E57	Assertion:T57 Asserted:T131
-E58	Condition:T58 Name:T132 Stability:T131
+E58	Observation:T58 Name:T132 Stability:T131
 E59	Drug:T59 Name:T133
 E60	Drug:T60 Name:T134
 E61	Procedure:T61 Name:T135
@@ -107,7 +107,7 @@ T38	Condition 804 815	nephropathy
 T39	Condition 856 866	conditions
 T40	Exception 867 877	other than
 T41	Condition 878 881	T1D
-T42	Condition 898 909	bone health
+T42	Observation 898 909	bone health
 T43	Modifier 921 932	compensated
 T44	Condition 933 947	hypothyroidism
 T45	Condition 949 964	hyperthyroidism
@@ -123,7 +123,7 @@ T54	Observation 1132 1146	alcohol intake
 T55	Eq-Comparison 1147 1160	≥ 3 units/day
 T56	Drug 1176 1181	drugs
 T57	Assertion 1187 1190	can
-T58	Condition 1198 1213	bone metabolism
+T58	Observation 1198 1213	bone metabolism
 T59	Drug 1221 1236	bisphosphonates
 T60	Drug 1238 1253	anticonvulsants
 T61	Procedure 1255 1282	hormone replacement therapy
@@ -174,7 +174,7 @@ T110	Condition-Name 779 790	retinopathy
 T111	Condition-Name 804 815	nephropathy
 T112	Condition-Name 878 881	T1D
 T113	Stability 891 897	affect
-T114	Condition-Name 898 909	bone health
+T114	Observation-Name 898 909	bone health
 T115	Condition-Name 933 947	hypothyroidism
 T116	Condition-Name 949 964	hyperthyroidism
 T117	Condition-Name 966 985	hyperparathyroidism
@@ -192,7 +192,7 @@ T128	Eq-Unit 1151 1156	units
 T129	Eq-Temporal-Unit 1157 1160	day
 T130	Eq-Temporal-Period 1169 1172	use
 T131	Stability 1191 1197	affect
-T132	Condition-Name 1198 1213	bone metabolism
+T132	Observation-Name 1198 1213	bone metabolism
 T133	Drug-Name 1221 1236	bisphosphonates
 T134	Drug-Name 1238 1253	anticonvulsants
 T135	Procedure-Name 1255 1282	hormone replacement therapy
@@ -219,7 +219,6 @@ T156	Eq-Value 202 204	18
 T157	Modifier 320 326	Type 1
 T158	Eq-Value 346 348	18
 T23	Condition 443 450	disease
-T94	Condition-Name 443 450	disease
 T159	Eq-Operator 435 442	minimum
 T98	Modifier 526 534	frequent
 T30	Procedure 612 633	third-part assistance

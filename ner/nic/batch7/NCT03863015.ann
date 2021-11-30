@@ -63,7 +63,6 @@ T23	Condition 536 545	Pregnancy
 T26	Observation 592 601	serum HCG
 T27	Assertion 602 614	can rule out
 T28	Condition 615 624	pregnancy
-T29	Encounter 674 683	admission
 T30	Eq-Comparison 684 691	< 30 °C
 T31	Condition 708 725	cardiogenic shock
 T32	Negation 735 738	not
@@ -99,7 +98,6 @@ T68	Life-Stage-And-Gender 550 557	females
 T69	Polarity 583 591	negative
 T70	Observation-Name 592 601	serum HCG
 T71	Condition-Name 615 624	pregnancy
-T72	Encounter-Type 674 683	admission
 T73	Eq-Operator 684 685	<
 T74	Eq-Value 686 688	30
 T76	Condition-Name 708 725	cardiogenic shock
@@ -129,7 +127,6 @@ T99	Eq-Unit 689 691	°C
 T75	Modifier 697 707	Persistent
 T100	Modifier 739 747	reversed
 T101	Study 759 775	inclusion window
-T103	Condition-Name 787 794	disease
 T35	Death 810 827	survival unlikely
 T104	Risk 810 827	survival unlikely
 T105	Negation 839 850	limitations
@@ -150,7 +147,6 @@ A15	Eq-Operator-Value T61 GTEQ
 A16	Life-Stage-And-Gender-Type T68 female
 A17	Polarity-Value T69 negative
 A18	Observation-Type-Value E26 lab
-A19	Encounter-Type-Value T72 inpatient
 A20	Eq-Operator-Value T73 LT
 A22	Eq-Temporal-Unit-Value T78 day
 A23	Eq-Operator-Value T82 BETWEEN
@@ -177,3 +173,7 @@ T5	Encounter 377 386	admission
 E5	Encounter:T5 
 A1	Encounter-Type-Value E5 inpatient
 R7	During Arg1:E45 Arg2:E5	
+T6	Encounter 674 683	admission
+E6	Encounter:T6 
+A4	Encounter-Type-Value E6 inpatient
+R13	During Arg1:E51 Arg2:E6	

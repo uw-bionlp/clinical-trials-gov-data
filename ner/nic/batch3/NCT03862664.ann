@@ -1,5 +1,5 @@
-E1	Modifier:T1 Modifies:T28
-E3	Condition:T3 Name:T28 Polarity:T52
+E1	Modifier:T1 Modifies:E3
+E3	Condition:T3 Polarity:T52
 E4	Condition:T4 Acuteness:T55
 E6	Eq-Comparison:T6 Temporal-Period:T30
 E7	Procedure:T7 Name:T32 Temporality:E6 Severity:T31
@@ -13,13 +13,13 @@ E15	Condition:T15 Name:T40 Polarity:T38
 E16	Condition:T16 Name:T41
 E17	Observation:T17 Name:T42 Numeric-Filter:E18
 E18	Eq-Comparison:T18 Operator:T43 Value:T44
-E19	Modifier:T19
+E19	Modifier:T19 Modifies:E22
 E21	Modifier:T21 Modifies:T46
 E22	Condition:T22 Name:T46
 E23	Condition:T23 Name:T47
 E25	Condition:T25 Name:T48
 E27	Observation:T27 Name:T51 Polarity:T62 Severity:T50
-E28	Modifier:T53 Modifies:T28
+E28	Modifier:T53 Modifies:E3
 E29	Negation:T54 Negates:E4
 E32	Modifier:T57 Modifies:T39
 E33	Observation:T45 Name:T58 Numeric-Filter:E34
@@ -45,7 +45,6 @@ T22	Condition 391 402	retardation
 T23	Condition 409 417	pregnant
 T25	Condition 422 429	nursing
 T27	Observation 470 480	laboratory
-T28	Condition-Name 63 72	condition
 T29	Condition-Name 95 102	disease
 T30	Eq-Temporal-Period 111 119	Previous
 T31	Severity 120 125	major

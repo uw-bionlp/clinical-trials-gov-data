@@ -1,5 +1,5 @@
 E1	Condition:T1 Name:T2
-E3	Condition:T3 
+E3	Condition:T3 Name:T4
 E5	Condition:T5 Name:T6 Acuteness:T25 Temporality:E8
 E7	Condition:T7 Name:T8
 E8	Eq-Comparison:T11 Temporal-Period:T12
@@ -8,20 +8,19 @@ E2	Eq-Comparison:T15 Operator:T9 Temporal-Period:T16 Value:T17 Temporal-Unit:T10
 E4	Procedure:T18 Name:T19 Temporality:E2
 E6	Negation:T20 Negates:E4
 E10	Condition:T21 Name:T22
-E12	Negation:T24 Negates:E7
-E13	Condition:T26 Name:T27
+E12	Negation:T24 Negates:E7 Negates2:E10
+E13	Condition:T26 Name:T27 Temporality:E8
 E14	Modifier:T28 Modifies:E3
 E15	Modifier:T29 Modifies:E3
-E17	Condition:T31 Name:T32 Temporality:E9
-E18	Modifier:T33 Modifies:T32
-E19	Modifier:T34 Modifies:T32
+E17	Condition:T31 Temporality:E9 Name:T23
+E18	Modifier:T33 Modifies:E17
+E19	Modifier:T34 Modifies:E17
 E21	Procedure:T36 Name:T37
 E22	Negation:T38 Negates:E21
 E23	Assertion:T39 Asserted:E22
 T1	Condition 48 56	lipedema
 T2	Condition-Name 48 56	lipedema
 T3	Condition 325 333	diseases
-T4	Condition-Name 325 333	diseases
 T5	Condition 263 272	infection
 T6	Condition-Name 263 272	infection
 T7	Condition 195 204	pregnancy
@@ -47,7 +46,6 @@ T27	Condition-Name 274 280	cancer
 T28	Modifier 282 304	inflammatory rheumatic
 T29	Modifier 307 324	connective tissue
 T31	Condition 384 392	problems
-T32	Condition-Name 384 392	problems
 T33	Modifier 368 383	musculoskeletal
 T34	Modifier 350 364	cardiovascular
 T36	Procedure 441 457	exercise program
@@ -66,3 +64,5 @@ R2	Or Arg1:E7 Arg2:E10
 R3	Or Arg1:E14 Arg2:E15
 R4	Or Arg1:E19 Arg2:E18
 R5	Or Arg1:E5 Arg2:E13
+T4	Condition-Name 325 333	diseases
+T23	Condition-Name 384 392	problems

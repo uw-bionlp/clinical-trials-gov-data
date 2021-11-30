@@ -5,8 +5,7 @@ E6	Age:T11 Numeric-Filter:E7
 E7	Eq-Comparison:T17 Operator:T7 Temporal-Unit:T9 Value:T13
 E8	Eq-Comparison:T18 Operator:T8 Value:T16 Temporal-Unit:T31 Temporal-Period:T32
 E9	Eq-Comparison:T19 Operator:T12 Value:T14 Unit:T10 Value2:T15
-E2	Condition:T20
-E4	Modifier:T21 Modifies:E2
+E2	Condition:T20 
 E10	Negation:T22 Negates:E2
 E11	Condition:T23 Name:T24
 E12	Observation:T25 Name:T26 Numeric-Filter:E9
@@ -19,7 +18,6 @@ E18	Eq-Comparison:T36 Temporal-Period:T37
 E19	Modifier:T38 Modifies:T4
 E21	Eq-Comparison:T40 Temporal-Period:T41
 T1	Condition 334 341	disease
-T2	Condition-Name 334 341	disease
 T3	Procedure 357 369	radiotherapy
 T4	Procedure-Name 357 369	radiotherapy
 T5	Procedure 400 412	Chemotherapy
@@ -38,7 +36,6 @@ T17	Eq-Comparison 136 157	younger than 25 years
 T18	Eq-Comparison 413 437	within the past 12-month
 T19	Eq-Comparison 261 269	15-20 mm
 T20	Condition 48 55	disease
-T21	Modifier 56 80	affecting bone formation
 T22	Negation 34 43	free from
 T23	Condition 204 225	hemifacial microsomia
 T24	Condition-Name 204 225	hemifacial microsomia
@@ -69,3 +66,9 @@ A8	Eq-Temporal-Period-Value T32 past
 A9	Eq-Temporal-Period-Value T37 present
 A10	Eq-Temporal-Period-Value T41 present
 R1	Or Arg1:E14 Arg2:E19
+T21	Observation 66 80	bone formation
+E4	Observation:T21 Name:T39 Stability:T2
+T39	Observation-Name 66 80	bone formation
+T2	Stability 56 65	affecting
+A11	Stability-Value T2 change
+R2	Caused-By Arg1:T2 Arg2:E2	

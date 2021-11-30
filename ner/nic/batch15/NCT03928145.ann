@@ -5,7 +5,7 @@ E8	Condition:T8 Name:T9
 E10	Condition:T10 Name:T11
 E12	Condition:T12 Name:T13
 E14	Condition:T14 Name:T15
-E16	Condition:T16 Acuteness:T122
+E16	Condition:T16 Acuteness:T122 Name:T17
 E20	Condition:T20 Name:T21
 E22	Condition:T22 Name:T23
 E23	Eq-Comparison:T46 Operator:T24 Unit:T31 Value:T39
@@ -31,7 +31,7 @@ E32	Other:T78 Is-Other:E31
 E33	Drug:T79 
 E34	Study:T80 Study-Of:E33
 E35	Contraindication:T81 Contraindicates:E33
-E38	Condition:T84 Name:T85 Polarity:T86
+E38	Observation:T84 Name:T85 Polarity:T86
 E40	Observation:T88 Name:T89 Numeric-Filter:E25
 E41	Condition:T92 Name:T93
 E42	Observation:T94 Name:T95 Numeric-Filter:E26
@@ -47,8 +47,6 @@ E18	Assertion:T18 Asserted:E22
 E53	Study:T114 
 E55	Condition:T116 Name:T117
 E56	Modifier:T119 Modifies:T15
-E57	Modifier:T120 Modifies:E16
-E58	Modifier:T121 Modifies:T85
 T1	Life-Stage-And-Gender 25 31	Adults
 T2	Condition 72 92	primary hypertension
 T3	Condition-Name 72 92	primary hypertension
@@ -64,8 +62,8 @@ T12	Condition 451 457	stroke
 T13	Condition-Name 451 457	stroke
 T14	Condition 475 487	hypertension
 T15	Condition-Name 475 487	hypertension
-T16	Condition 509 516	disease
-T17	Condition-Name 509 516	disease
+T16	Condition 502 516	kidney disease
+T17	Condition-Name 502 516	kidney disease
 T20	Condition 822 831	Pregnancy
 T21	Condition-Name 822 831	Pregnancy
 T22	Condition 847 856	pregnancy
@@ -127,8 +125,8 @@ T78	Other 280 285	Other
 T79	Drug 375 380	drugs
 T80	Study 369 374	study
 T81	Contraindication 344 361	contraindications
-T84	Condition 541 549	function
-T85	Condition-Name 541 549	function
+T84	Observation 535 549	renal function
+T85	Observation-Name 535 549	renal function
 T86	Polarity 526 534	abnormal
 T88	Observation 551 561	creatinine
 T89	Observation-Name 551 561	creatinine
@@ -161,8 +159,6 @@ T116	Condition 880 889	Lactating
 T117	Condition-Name 880 889	Lactating
 T118	Life-Stage-And-Gender 890 895	women
 T119	Modifier 465 474	Secondary
-T120	Modifier 502 508	kidney
-T121	Modifier 535 540	renal
 T122	Acuteness 494 501	Chronic
 A1	Life-Stage-And-Gender-Type T1 adult
 A2	Eq-Operator-Value T24 GTEQ

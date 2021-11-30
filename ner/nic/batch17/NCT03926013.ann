@@ -2,7 +2,7 @@ E1	Condition:T1
 E3	Condition:T3 
 E5	Observation:T5 Name:T6 Minimum-Count:E39
 E9	Procedure:T9 Name:T10
-E11	Condition:T11 Name:T12
+E11	Condition:T11 
 E15	Procedure:T15 Name:T16
 E16	Eq-Comparison:T30 Temporal-Period:T31
 E17	Eq-Comparison:T32 Temporal-Period:T33
@@ -28,7 +28,6 @@ E32	Modifier:T65 Modifies:E1
 E34	Modifier:T25 Modifies:E3
 E35	Modifier:T67 Modifies:E3
 E37	Condition:T69 Name:T70
-E38	Modifier:T71 Modifies:T70
 E39	Eq-Comparison:T26 Operator:T72 Value:T73
 E7	Procedure:T7 Name:T8 Temporality:E17
 E40	Procedure:T74 
@@ -67,15 +66,12 @@ E76	Modifier:T124 Modifies:E75
 E77	Assertion:T125 Asserted:E75
 E78	Study:T126 
 T1	Condition 485 492	disease
-T2	Condition-Name 485 492	disease
 T3	Condition 533 540	disease
-T4	Condition-Name 533 540	disease
 T5	Observation 594 600	lesion
 T6	Observation-Name 594 600	lesion
 T9	Procedure 1348 1363	transplantation
 T10	Procedure-Name 1348 1363	transplantation
 T11	Condition 638 657	disease progression
-T12	Condition-Name 638 657	disease progression
 T15	Procedure 1042 1054	radiotherapy
 T16	Procedure-Name 1042 1054	radiotherapy
 T18	Eq-Operator 1167 1169	<=
@@ -93,9 +89,9 @@ T35	Eq-Temporal-Period 1004 1009	prior
 T36	Eq-Comparison 1190 1195	Prior
 T37	Eq-Temporal-Period 1190 1195	Prior
 T38	Eq-Comparison 1508 1519	<=12 months
-T22	Condition 85 91	cancer
-T40	Condition-Name 85 91	cancer
-T41	Modifier 44 84	Metastatic castration-resistant prostate
+T22	Condition 76 91	prostate cancer
+T40	Condition-Name 76 91	prostate cancer
+T41	Modifier 44 75	Metastatic castration-resistant
 T42	Condition 93 98	mCRPC
 T43	Condition-Name 93 98	mCRPC
 T44	Condition 132 146	adenocarcinoma
@@ -121,9 +117,8 @@ T24	Modifier 475 484	evaluable
 T65	Modifier 461 471	Measurable
 T25	Modifier 523 532	evaluable
 T67	Modifier 509 519	measurable
-T69	Condition 554 560	cancer
-T70	Condition-Name 554 560	cancer
-T71	Modifier 545 553	prostate
+T69	Condition 545 560	prostate cancer
+T70	Condition-Name 545 560	prostate cancer
 T26	Eq-Comparison 570 582	At least one
 T72	Eq-Operator 570 578	At least
 T73	Eq-Value 579 582	one

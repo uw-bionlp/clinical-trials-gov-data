@@ -68,7 +68,7 @@ E80	Eq-Comparison:T174 Operator:T55 Temporal-Period:T175 Temporal-Unit:T60 Value
 E81	Study:T176 
 E84	Eq-Comparison:T179 Operator:T56 Temporal-Period:T180 Value:T80 Temporal-Unit:T61
 E85	Study:T181 
-E87	Condition:T183 
+E87	Condition:T183 Name:T184
 E88	Modifier:T185 Modifies:E87
 E89	Modifier:T186 Modifies:E87
 E91	Condition:T188 Name:T189
@@ -230,7 +230,7 @@ T162	Modifier 1032 1041	Secondary
 T163	Condition 1061 1068	Dyspnea
 T164	Condition-Name 1061 1068	Dyspnea
 T165	Condition 1088 1094	causes
-T166	Modifier 1076 1087	non-cardiac
+T166	Modifier 1080 1087	cardiac
 T167	Condition 1122 1128	anemia
 T168	Condition-Name 1122 1128	anemia
 T169	Severity 1130 1136	severe
@@ -339,3 +339,5 @@ R39	Or Arg1:E13 Arg2:E3
 R40	Or Arg1:E15 Arg2:E13
 R41	Or Arg1:E37 Arg2:E76
 R42	Or Arg1:E39 Arg2:E77
+T100	Negation 1076 1079	non
+E8	Negation:T100 Negates:E75

@@ -46,7 +46,7 @@ E46	Drug:T80 Name:T81
 E48	Drug:T83 Name:T84
 E50	Eq-Comparison:T22 Temporal-Period:T86
 E51	Assertion:T87 Asserted:E21
-E52	Condition:T88 Name:T89 Severity:T90
+E52	Observation:T88 Name:T89 Severity:T90 Stability:T57
 E55	Eq-Comparison:T93 Value:T35 Operator:T95 Value2:T94
 E56	Observation:T97 Name:T98 Severity:T100 Polarity:T99
 E57	Age:T101 Numeric-Filter:E2
@@ -111,7 +111,6 @@ T56	Observation-Name 462 464	SR
 T58	Polarity 514 541	outside the reference range
 T59	Severity 501 513	pronouncedly
 T60	Condition 595 602	disease
-T61	Condition-Name 595 602	disease
 T62	Procedure 663 672	treatment
 T63	Modifier 654 662	systemic
 T64	Eq-Comparison 643 653	continuous
@@ -137,8 +136,8 @@ T84	Drug-Name 878 895	thiazide diuretic
 T22	Eq-Comparison 928 934	active
 T86	Eq-Temporal-Period 928 934	active
 T87	Assertion 919 927	requires
-T88	Condition 968 999	changes in the area of the skin
-T89	Condition-Name 968 999	changes in the area of the skin
+T88	Observation 995 999	skin
+T89	Observation-Name 995 999	skin
 T90	Severity 956 967	significant
 T93	Eq-Comparison 1060 1072	above 140/90
 T94	Eq-Value 1070 1072	90
@@ -198,3 +197,5 @@ R15	And Arg1:E11 Arg2:E18
 R16	And Arg1:E21 Arg2:E52
 R17	Or Arg1:E28 Arg2:E26
 R18	Or Arg1:E30 Arg2:E28
+T57	Stability 968 975	changes
+A29	Stability-Value T57 change

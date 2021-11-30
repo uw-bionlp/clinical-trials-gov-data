@@ -21,15 +21,6 @@ def brat_events_to_conll(output_filepath, anns):
         for ann in anns:
             brat_rows = set()
             evs  = [ v for k,v in ann.Es.items() ]
-
-            no_good = False
-            for ev in evs:
-                if not any(ev.args):
-                    print(ann.path, ann.doc_id, ev.id)
-                    no_good
-            if no_good:
-                continue
-
             for sent in ann.sents:
                 for tok in sent:
                     t_evs  = [ v for v in evs if tok.i in v.args[0].val.tok_idxs ]
@@ -53,11 +44,13 @@ def brat_events_to_conll(output_filepath, anns):
                             else:
                                 label = ev.args[0].val.type
                             labels.append(label)
-                        label = f'{"B" if is_start else "I"}-' + '|'.join(sorted(labels))
 
-                        # For now, ignore Ages embedded in Eq-Comparisons
-                        if label[2:] == 'Age|Eq-Comparison':
-                            label = label[:2] + 'Eq-Comparison'
+                        # Ignore Ages embedded in Eq-Comparisons
+                        if sorted(labels) == ['Age','Eq-Comparison']:
+                            labels = ['Eq-Comparison']
+                            t_evs  = [ v for v in evs if tok.i in v.args[0].val.tok_idxs and v.args[0].val.type != 'Age' ]
+                            is_start = tok.i == t_evs[0].args[0].val.tok_idxs[0]
+                        label = f'{"B" if is_start else "I"}-' + '|'.join(sorted(labels))
 
                         brat_rows.add(f'{label[2:]} {t_evs[0].args[0].val.char_beg_idx} {t_evs[0].args[0].val.char_end_idx}\t{t_evs[0].args[0].val.span}')
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} {label}\n')
@@ -151,10 +144,10 @@ def main():
         if not os.path.exists(p):
             os.mkdir(p)
 
-    brat_events_to_conll(os.path.join(events_path, 'train_spacy.txt'), train)
-    brat_entities_to_conll(os.path.join(entities_path, 'train_spacy.txt'), train)
-    brat_events_to_conll(os.path.join(events_path, 'valid_spacy.txt'), test)
-    brat_entities_to_conll(os.path.join(entities_path, 'valid_spacy.txt'), test)
+    brat_events_to_conll(os.path.join(events_path, 'train.txt'), train)
+    brat_entities_to_conll(os.path.join(entities_path, 'train.txt'), train)
+    brat_events_to_conll(os.path.join(events_path, 'valid.txt'), test)
+    brat_entities_to_conll(os.path.join(entities_path, 'valid.txt'), test)
 
     
 if __name__ == '__main__':

@@ -1,14 +1,14 @@
 E1	Condition:T1 Name:T2
 E2	Eq-Comparison:T4 Temporal-Unit:T7 Value:T6 Operator:T5
 E3	Age:T8 Numeric-Filter:E2
-E4	Condition:T9 Name:T10
-E5	Condition:T11 Name:T12
-E7	Negation:T14 Negates:E4
-E8	Condition:T15 Name:T16
-E9	Modifier:T17 Modifies:T16
-E10	Modifier:T18 Modifies:T16
-E11	Modifier:T19 Modifies:T16
-E12	Modifier:T20 Modifies:T16
+E4	Condition:T9 Name:T10 Temporality:E6
+E5	Condition:T11 Name:T12 Temporality:E6
+E7	Negation:T14 Negates:E4 Negates2:E5
+E8	Condition:T15 
+E9	Modifier:T17 Modifies:E8
+E10	Modifier:T18 Modifies:E8
+E11	Modifier:T19 Modifies:E8
+E12	Other:T20 Is-Other:E8
 E14	Condition:T22 Name:T23 Duration:E18
 E15	Drug:T24 Temporality:E17 Stability:T112
 E16	Negation:T25 Negates:T112
@@ -60,17 +60,16 @@ T5	Eq-Operator 26 27	≥
 T6	Eq-Value 27 29	21
 T7	Eq-Temporal-Unit 30 35	years
 T8	Age 39 42	age
-T9	Condition 64 74	history of
+T9	Condition 75 80	HFpEF
 T10	Condition-Name 75 80	HFpEF
 T11	Condition 84 89	HFrEF
 T12	Condition-Name 84 89	HFrEF
 T14	Negation 51 58	absence
-T15	Condition 135 178	diseases affecting the neuromuscular system
-T16	Condition-Name 135 178	diseases affecting the neuromuscular system
+T15	Condition 135 143	diseases
 T17	Modifier 91 100	pulmonary
 T18	Modifier 102 112	neurologic
 T19	Modifier 114 124	orthopedic
-T20	Modifier 129 134	other
+T20	Other 129 134	other
 T22	Condition 602 607	HFpEF
 T23	Condition-Name 602 607	HFpEF
 T24	Drug 649 659	medication
@@ -215,9 +214,18 @@ R3	Equivalent-To Arg1:E32 Arg2:E27
 R4	If-Then Arg1:T88 Arg2:E41
 R5	Equivalent-To Arg1:E16 Arg2:T111
 R6	Or Arg1:E4 Arg2:E5
-R7	Or Arg1:E11 Arg2:E12
 R8	And Arg1:T54 Arg2:E27
 R9	Or Arg1:E29 Arg2:E30
 R10	Or Arg1:E36 Arg2:E38
 R11	Or Arg1:E9 Arg2:E10
 R12	Or Arg1:E10 Arg2:E11
+T13	Eq-Comparison 64 71	history
+E6	Eq-Comparison:T13 Temporal-Period:T21
+T21	Eq-Temporal-Period 64 71	history
+A19	Eq-Temporal-Period-Value T21 past
+T16	Observation 158 178	neuromuscular system
+E13	Observation:T16 Name:T57 Stability:T62
+T57	Observation-Name 158 178	neuromuscular system
+T62	Stability 144 153	affecting
+A37	Stability-Value T62 change
+R7	Caused-By Arg1:T62 Arg2:E8	
