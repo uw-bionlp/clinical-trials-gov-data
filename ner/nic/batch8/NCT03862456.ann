@@ -5,18 +5,17 @@ E5	Procedure:T5 Name:T67
 E6	Eq-Comparison:T6 Operator:T68 Value:T69
 E7	Condition:T7 Name:T4 Minimum-Count:E6
 E8	Exception:T8 From:E7 Except:E9
-E9	Modifier:T9
+E9	Modifier:T9 
 E10	Observation:T10 Name:T71
 E11	Eq-Comparison:T11 Operator:T72 Value:T73 Unit:T74
 E12	Eq-Comparison:T12 Operator:T75 Value:T76 Unit:T77
 E15	Procedure:T15 Name:T78
-E16	Eq-Comparison:T16
+E16	Eq-Comparison:T16 
 E17	Observation:T17 Name:T81 Severity:T80 Minimum-Count:E18
 E18	Eq-Comparison:T18 Operator:T82 Value:T83 Unit:T84
 E21	Organism:T21 Name:T114
-E25	Study:T25
-E27	Modifier:T27 Modifies:E28
-E28	
+E25	Study:T25 
+E27	Modifier:T27 Modifies:E20
 E29	Modifier:T29 Modifies:T85
 E30	Condition:T30 Name:T85
 E31	Condition:T31 Name:T86
@@ -46,7 +45,7 @@ E62	Drug:T62 Name:T105
 E4	Observation:T70 Name:T106 Numeric-Filter:E11
 E13	Condition:T13 Name:T107 Minimum-Count:E12
 E14	Observation:T14 Specimen:T22
-E22	Modifier:T24
+E22	Modifier:T24 Modifies:E20
 E44	Eq-Comparison:T95 Temporal-Recency:T111
 E57	Coreference:T57 Refers-To:E55
 E64	Drug:T112 Name:T113
@@ -69,7 +68,6 @@ T18	Eq-Comparison 323 335	at least 30%
 T21	Organism 372 385	P. gingivalis
 T25	Study 422 431	screening
 T27	Modifier 473 486	root planning
-T28	Encounter 487 492	visit
 T29	Modifier 524 536	Systemically
 T30	Condition 537 544	healthy
 T31	Condition 580 588	Pregnant
@@ -175,7 +173,6 @@ A2	Eq-Temporal-Recency-Value T111 first-time
 R1	Treatment-For Arg1:E5 Arg2:E1
 R2	Abbrev-Of Arg1:E4 Arg2:E10
 R3	Found-By Arg1:E17 Arg2:E15
-R5	Abbrev-Of Arg1:E22 Arg2:E28
 R6	If-Then Arg1:T88 Arg2:E33
 R7	Caused-By Arg1:T91 Arg2:E39
 R8	Equivalent-To Arg1:E50 Arg2:E49
@@ -189,5 +186,8 @@ R14	Before Arg1:E51 Arg2:E44
 R15	Or Arg1:E55 Arg2:E57
 R16	Or Arg1:E59 Arg2:E61
 R17	Or Arg1:E22 Arg2:E27
-R18	And Arg1:E25 Arg2:E28
 R19	Or Arg1:E41 Arg2:E42
+T20	Encounter 487 492	visit
+E20	Encounter:T20 
+A3	Encounter-Type-Value E20 outpatient
+R5	And Arg1:E25 Arg2:E20	

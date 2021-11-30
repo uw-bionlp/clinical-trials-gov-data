@@ -8,22 +8,21 @@ E9	Eq-Comparison:T9 Value:T30 Operator:T31
 E10	Observation:T10 Name:T37 Numeric-Filter:E9
 E11	Condition:T11 Name:T38
 E12	Eq-Comparison:T12 Temporal-Period:T32
-E13	
 E14	Study:T14 Study-Of:E28
 E15	Assertion:T15 Asserted:E16
 E16	Condition:T16 Name:T34
 E17	Condition:T17 Name:T35
 E18	Assertion:T18 Asserted:E17
-E19	Condition:T19
+E19	Condition:T19 
 E20	Modifier:T20 Modifies:E19
 E21	Modifier:T21 Modifies:E19
 E22	Assertion:T22 Asserted:T36
 E23	Assertion:T23 Asserted:E34
-E24	Study:T24
+E24	Study:T24 
 E25	Modifier:T39 Modifies:T38
 E26	Modifier:T40 Modifies:T38
-E27	Assertion:T41 Asserted:E13 Asserted2:E14
-E28	Procedure:T42
+E27	Assertion:T41 Asserted:E14
+E28	Procedure:T42 
 E30	Negation:T33 Negates:E16
 E32	Modifier:T45 Modifies:E19
 E34	Negation:T47 Negates:E24
@@ -84,11 +83,11 @@ A12	Assertion-Type-Value E7 possible
 A13	Observation-Type-Value E10 clinical-score
 A14	Assertion-Type-Value E27 hypothetical
 R1	Equivalent-To Arg1:E11 Arg2:E10
-R2	Equivalent-To Arg1:E13 Arg2:E12
 R3	Caused-By Arg1:T36 Arg2:E19
 R4	Or Arg1:T25 Arg2:T26
 R5	Or Arg1:E5 Arg2:E7
-R6	And Arg1:E13 Arg2:E14
 R7	And Arg1:E16 Arg2:E17
 R8	Or Arg1:E21 Arg2:E32
 R9	Or Arg1:E20 Arg2:E21
+E1	Encounter:T13 Temporality:E12
+R2	And Arg1:E1 Arg2:E14	

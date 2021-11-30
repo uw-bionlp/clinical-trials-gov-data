@@ -105,7 +105,7 @@ class BratDocument:
                 if getter and getter.get(pointer):
                     Es[k].args[i] = BratEArgPair(arg.type, getter[pointer])
                 else:
-                    print(f"E's pointer doesn't exist! {v}")
+                    print(f"E's pointer doesn't exist! {self.path}/{self.doc_id}: {k}")
 
         # As
         for k, v in As.items():
@@ -115,7 +115,7 @@ class BratDocument:
                 v.attr_of = getter[pointer]
                 As[k] = v
             else:
-                print(f"A's pointer doesn't exist! {v}")
+                print(f"A's pointer doesn't exist! {self.path}/{self.doc_id}: {k}")
         for k, v in Rs.items():
             pointer = v.arg1
             getter = Ts if pointer[0] == 'T' else Es if pointer[0] == 'E' else None
@@ -123,14 +123,14 @@ class BratDocument:
                 v.arg1 = getter[pointer]
                 Rs[k] = v
             else:
-                print(f"R's pointer1 doesn't exist! {v}")
+                print(f"R's pointer1 doesn't exist! {self.path}/{self.doc_id}: {k}")
             pointer = v.arg2
             getter = Ts if pointer[0] == 'T' else Es if pointer[0] == 'E' else None
             if getter and getter.get(pointer):
                 v.arg2 = getter[pointer]
                 Rs[k] = v
             else:
-                print(f"R's pointer2 doesn't exist! {v}")
+                print(f"R's pointer2 doesn't exist! {self.path}/{self.doc_id}: {k}")
 
         return Ts, Es, Rs, As
 

@@ -18,7 +18,7 @@ E20	Eq-Comparison:T20 Operator:T62 Value:T63 Temporal-Unit:T64
 E21	Modifier:T21 Modifies:T65
 E22	Procedure:T22 Name:T65 Duration:E23
 E23	Eq-Comparison:T23 Operator:T66 Value:T67 Temporal-Unit:T68
-E24	Encounter:T24
+E24	Encounter:T24 
 E25	Assertion:T25 Asserted:E26
 E26	Procedure:T26 Name:T71
 E27	Eq-Comparison:T27 Temporal-Period:T72
@@ -33,7 +33,7 @@ E37	Contraindication:T37 Contraindicates:E38
 E38	Procedure:T38 Name:T82
 E39	Procedure:T39 Name:T83
 E40	Modifier:T84 Modifies:T77
-E36	Death:T36
+E36	Death:T36 
 E41	Risk:T85 Risk-For:E36
 T1	Condition 25 34	Hypoxemia
 T2	Observation 61 131	partial pressure of arterial oxygen to the fraction of inspired oxygen
@@ -82,7 +82,6 @@ T49	Eq-Temporal-Unit 216 223	minutes
 T50	Observation-Name 230 246	Respiratory rate
 T51	Eq-Operator 247 248	>
 T52	Eq-Value 249 251	25
-T53	Observation-Name 252 259	breaths
 T54	Eq-Temporal-Unit 260 266	minute
 T55	Observation-Name 273 316	Partial pressure of arterial carbon dioxide
 T56	Observation-Name 318 323	PaCO2
@@ -99,7 +98,6 @@ T66	Eq-Operator 516 517	>
 T67	Eq-Value 518 520	48
 T68	Eq-Temporal-Unit 521 526	hours
 T69	Location 539 547	hospital
-T70	Encounter-Type 548 557	admission
 T71	Procedure-Name 582 592	intubation
 T72	Eq-Temporal-Period 599 607	Previous
 T73	Observation-Name 645 671	Systolic arterial pressure
@@ -123,7 +121,6 @@ A4	Eq-Operator-Value T47 GTEQ
 A5	Eq-Temporal-Unit-Value T49 minute
 A6	Observation-Type-Value E10 vital
 A7	Eq-Operator-Value T51 GT
-A8	Observation-Type-Value T53 measurement
 A9	Eq-Temporal-Unit-Value T54 minute
 A10	Observation-Type-Value E12 measurement
 A11	Eq-Operator-Value T57 LTEQ
@@ -133,7 +130,6 @@ A14	Eq-Temporal-Unit-Value T64 year
 A15	Eq-Operator-Value T66 GT
 A16	Eq-Temporal-Unit-Value T68 hour
 A17	Location-Value T69 hospital
-A18	Encounter-Type-Value T70 inpatient
 A19	Eq-Temporal-Period-Value T72 past
 A20	Observation-Type-Value E29 vital
 A21	Eq-Operator-Value T74 LT
@@ -150,3 +146,4 @@ R4	Abbrev-Of Arg1:E13 Arg2:E12
 R5	After Arg1:E29 Arg2:E32
 R6	During Arg1:E5 Arg2:E7
 R7	During Arg1:E22 Arg2:E24
+A2	Encounter-Type-Value E24 inpatient

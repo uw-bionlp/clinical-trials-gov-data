@@ -12,8 +12,6 @@ E12	Age:T12 Numeric-Filter:E13
 E13	Eq-Comparison:T13 Value:T71 Temporal-Unit:T72 Operator:T100
 E14	Contraindication:T14 Contraindicates:E16
 E16	Procedure:T16 Name:T73
-E17	Negation:T17 Negates:E18
-E18	
 E21	Modifier:T21 Modifies:T77
 E22	Procedure:T22 Name:T77
 E23	Condition:T23 Name:T78
@@ -64,7 +62,6 @@ T13	Eq-Comparison 141 150	18+ years
 T14	Contraindication 176 193	Contraindications
 T16	Procedure 208 228	neuraxial anesthesia
 T17	Negation 248 251	not
-T18	Encounter 255 265	outpatient
 T21	Modifier 279 283	knee
 T22	Procedure 284 293	procedure
 T23	Condition 318 321	UTI
@@ -108,7 +105,6 @@ T70	Procedure-Name 120 131	replacement
 T71	Eq-Value 141 143	18
 T72	Eq-Temporal-Unit 145 150	years
 T73	Procedure-Name 208 228	neuraxial anesthesia
-T75	Encounter-Type 255 265	outpatient
 T77	Procedure-Name 284 293	procedure
 T78	Condition-Name 318 321	UTI
 T79	Condition-Name 323 335	incontinence
@@ -147,14 +143,12 @@ A5	Observation-Type-Value E3 vital
 A6	Eq-Operator-Value T64 LT
 A7	Eq-Temporal-Period-Value T68 future
 A8	Eq-Temporal-Unit-Value T72 year
-A10	Encounter-Type-Value T75 outpatient
 A11	Eq-Temporal-Period-Value T83 present
 A13	Eq-Operator-Value T89 LTEQ
 A14	Eq-Temporal-Unit-Value T91 day
 A4	Eq-Operator-Value T100 GT
 A15	Observation-Type-Value E1 clinical-score
 R1	Using Arg1:E6 Arg2:E11
-R2	Using Arg1:E18 Arg2:E22
 R3	Treatment-For Arg1:E30 Arg2:E23
 R4	Treatment-For Arg1:E30 Arg2:E24
 R5	Treatment-For Arg1:E30 Arg2:E26
@@ -181,3 +175,8 @@ R25	Or Arg1:E23 Arg2:E24
 R26	Or Arg1:E53 Arg2:E54
 R27	Or Arg1:E54 Arg2:E55
 R28	Or Arg1:E55 Arg2:E56
+T9	Encounter 255 265	outpatient
+E9	Encounter:T9 
+A1	Encounter-Type-Value E9 outpatient
+R2	During Arg1:E9 Arg2:E22	
+E15	Negation:T17 Negates:E9

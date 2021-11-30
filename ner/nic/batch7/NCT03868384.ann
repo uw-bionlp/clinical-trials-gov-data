@@ -4,7 +4,6 @@ E4	Drug:T4 Name:T42 Temporality:E3 Duration:E6
 E6	Eq-Comparison:T6 Operator:T43 Value:T44 Temporal-Unit:T45
 E7	Condition:T7 Name:T46
 E8	Condition:T8 Name:T47
-E9	
 E11	Condition:T11 Name:T49 Severity:T48
 E12	Eq-Comparison:T12 Value:T51 Value:T52
 E13	Condition:T13 Name:T53 Temporality:E14
@@ -25,7 +24,7 @@ E28	Other:T28 Is-Other:E29
 E29	Study:T29 Study-Of:E30
 E30	Drug:T30 Temporality:E45 Temporality2:E31
 E31	Eq-Comparison:T31 Operator:T72 Temporal-Period:T73 Temporal-Unit:T74
-E32	Condition:T32
+E32	Condition:T32 
 E33	Assertion:T33 Asserted:T76
 E34	Study:T34 Stability:T76
 E35	Eq-Comparison:T35 Temporal-Period:T77
@@ -33,7 +32,7 @@ E36	Modifier:T36 Modifies:T78
 E38	Condition:T38 Name:T78 Temporality:E35 Temporality2:E39
 E39	Eq-Comparison:T39 Operator:T79 Value:T80 Temporal-Unit:T81
 E5	Modifier:T5 Modifies:T46
-E40	Encounter:T83
+E40	Encounter:T83 
 E41	Observation:T85 Name:T50 Numeric-Filter:E12
 E42	Observation:T86 Name:T87
 E43	Observation:T88 Name:T89
@@ -47,7 +46,6 @@ T4	Drug 63 85	antihypertensive drugs
 T6	Eq-Comparison 86 102	more than 1 year
 T7	Condition 138 150	hypertension
 T8	Condition 156 168	Hypertensive
-T9	Encounter 169 178	emergency
 T11	Condition 203 216	heart failure
 T12	Eq-Comparison 223 233	III and IV
 T13	Condition 240 246	Angina
@@ -110,7 +108,6 @@ T71	Eq-Temporal-Period 529 538	currently
 T72	Eq-Operator 632 638	within
 T73	Eq-Temporal-Period 643 647	past
 T74	Eq-Temporal-Unit 648 653	month
-T75	Condition-Name 732 739	disease
 T76	Stability 749 758	interfere
 T77	Eq-Temporal-Period 797 804	History
 T78	Condition-Name 824 834	dependence
@@ -118,7 +115,6 @@ T79	Eq-Operator 835 841	within
 T80	Eq-Value 842 843	6
 T81	Eq-Temporal-Unit 844 850	months
 T5	Modifier 128 137	Secondary
-T82	Encounter-Type 169 178	emergency
 T83	Encounter 183 190	urgency
 T85	Observation 218 222	NYHA
 T86	Observation 484 495	Night labor
@@ -149,12 +145,10 @@ A16	Stability-Value T76 change
 A17	Eq-Temporal-Period-Value T77 past
 A18	Eq-Operator-Value T79 LTEQ
 A19	Eq-Temporal-Unit-Value T81 month
-A20	Encounter-Type-Value T82 emergency
 A21	Encounter-Type-Value E40 emergency
 A22	Eq-Temporal-Period-Value T92 past
 A23	Assertion-Type-Value E46 possible
 A24	Observation-Type-Value E41 clinical-score
-R1	Treatment-For Arg1:E9 Arg2:E8
 R2	Treatment-For Arg1:E40 Arg2:E8
 R3	Equivalent-To Arg1:E41 Arg2:E11
 R4	Example-Of Arg1:E20 Arg2:E19
@@ -163,9 +157,13 @@ R6	Example-Of Arg1:E23 Arg2:E19
 R7	Example-Of Arg1:E24 Arg2:E19
 R8	Caused-By Arg1:T76 Arg2:E32
 R9	And Arg1:E1 Arg2:E4
-R10	Or Arg1:E9 Arg2:E40
 R11	Or Arg1:E20 Arg2:E22
 R12	Or Arg1:E36 Arg2:E47
 R13	Or Arg1:E22 Arg2:E23
 R14	Or Arg1:E23 Arg2:E24
 R15	Or Arg1:E42 Arg2:E43
+T2	Encounter 169 178	emergency
+E2	Encounter:T2 
+A20	Encounter-Type-Value E2 emergency
+R1	Treatment-For Arg1:E2 Arg2:E8	
+R10	Or Arg1:E2 Arg2:E40	

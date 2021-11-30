@@ -1,12 +1,10 @@
 E1	Encounter:T1 Provider:E2 Provider2:E3 Provider3:E4 Provider4:E5 Provider5:E6
 E10	Condition:T10 Name:T56
 E11	Observation:T11 Name:T57 Minimum-Count:E15 Numeric-Filter:E9
-E13	
 E15	Eq-Comparison:T15 Operator:T59 Value:T60 Temporal-Unit:T61
 E18	Eq-Comparison:T18 Value:T63 Unit:T64 Operator:T62
 E20	Eq-Comparison:T20 Value:T66 Unit:T67 Operator:T102
-E23	
-E25	Procedure:T25
+E25	Procedure:T25 
 E26	Drug:T26 Name:T73 Temporality:E55 Duration:E27
 E27	Eq-Comparison:T27 Operator:T74 Value:T75 Temporal-Unit:T76
 E28	Age:T28 Numeric-Filter:E29
@@ -29,29 +27,27 @@ E48	Condition:T48 Name:T94
 E50	Negation:T50 Negates:E51
 E51	Observation:T51 Name:T107
 E52	Study:T52 Temporality:E58
-E54	Study:T54
-E2	Provider:T2
-E3	Provider:T4
-E4	Provider:T6
-E5	Provider:T9
-E6	Provider:T96
-E8	Provider:T98
+E54	Study:T54 
+E2	Provider:T2 
+E3	Provider:T4 
+E4	Provider:T6 
+E5	Provider:T9 
+E6	Provider:T96 
+E8	Provider:T98 
 E9	Eq-Comparison:T14 Operator:T17 Unit:T58
 E14	Observation:T65 Name:T100 Numeric-Filter:E18
 E17	Observation:T68 Name:T101 Numeric-Filter:E20
 E21	Observation:T21 Name:T69 Polarity:T70
 E55	Eq-Comparison:T71 Temporal-Period:T72
 E56	Modifier:T103 Modifies:T84
-E38	Condition:T38
+E38	Condition:T38 
 E39	Eq-Comparison:T39 Value:T86 Unit:T104
 E43	Eq-Comparison:T43 Value:T106 Unit:T105
 E57	Assertion:T108 Asserted:E50
 E58	Eq-Comparison:T109 Temporal-Period:T110
-E59	Coreference:T111 Refers-To:E13
 T1	Encounter 25 36	Outpatients
 T10	Condition 166 178	hypertension
 T11	Observation 214 216	BP
-T13	Encounter 240 245	visit
 T15	Eq-Comparison 250 267	at least one time
 T18	Eq-Comparison 316 325	≥140 mmHg
 T20	Eq-Comparison 337 345	≥90 mmHg
@@ -80,7 +76,6 @@ T50	Negation 1146 1152	unable
 T51	Observation 1169 1182	questionnaire
 T52	Study 1229 1237	research
 T54	Study 1250 1255	study
-T55	Encounter-Type 25 36	Outpatients
 T56	Condition-Name 166 178	hypertension
 T57	Observation-Name 214 216	BP
 T59	Eq-Operator 250 258	at least
@@ -145,7 +140,6 @@ T109	Eq-Comparison 1208 1220	participated
 T110	Eq-Temporal-Period 1208 1220	participated
 T111	Coreference 275 283	that day
 A5	Assertion-Type-Value E34 hypothetical
-A7	Encounter-Type-Value T55 outpatient
 A8	Observation-Type-Value E11 vital
 A10	Eq-Operator-Value T59 GTEQ
 A11	Eq-Temporal-Unit-Value T61 minute
@@ -178,12 +172,15 @@ R8	Example-Of Arg1:E42 Arg2:E38
 R9	Equivalent-To Arg1:E14 Arg2:E11
 R10	Equivalent-To Arg1:E17 Arg2:E11
 R11	Or Arg1:E6 Arg2:E8
-R12	During Arg1:E11 Arg2:E13
-R13	Before Arg1:E15 Arg2:E59
 R14	Or Arg1:E14 Arg2:E17
-R15	During Arg1:E21 Arg2:E23
 R16	Before Arg1:E25 Arg2:E26
 R17	Or Arg1:E45 Arg2:E47
 R18	And Arg1:E48 Arg2:E50
 R19	During Arg1:E52 Arg2:E54
 R20	Or Arg1:E44 Arg2:E45
+A1	Encounter-Type-Value E1 outpatient
+T3	Encounter 240 245	visit
+E7	Encounter:T3 
+A2	Encounter-Type-Value E7 outpatient
+R12	During Arg1:E11 Arg2:E7	
+E12	Coreference:T111 Refers-To:E7

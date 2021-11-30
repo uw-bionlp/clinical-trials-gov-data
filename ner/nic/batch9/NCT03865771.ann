@@ -3,10 +3,7 @@ E2	Condition:T2 Name:T27
 E3	Condition:T3 Name:T47
 E4	Condition:T4 Name:T48
 E5	Condition:T5 Name:T49
-E6	
-E7	
 E8	Procedure:T8 Name:T31 Polarity:T30
-E10	
 E12	Condition:T12 Name:T34
 E13	Condition:T13 Name:T35
 E14	Condition:T14 Name:T36
@@ -26,10 +23,8 @@ T2	Condition 251 259	epilepsy
 T3	Condition 261 266	BECTS
 T4	Condition 268 272	ABPE
 T5	Condition 274 279	ECSWS
-T6	Encounter 310 322	hospitalized
 T7	Encounter 333 342	follow-up
 T8	Procedure 355 367	neuroimaging
-T10	Encounter 392 404	hospitalized
 T12	Condition 415 433	neurologic disease
 T13	Condition 465 484	Psychiatric trouble
 T14	Condition 493 510	Sensorial trouble
@@ -44,10 +39,8 @@ T24	Polarity 36 42	normal
 T25	Condition-Name 43 66	psychomotor development
 T27	Condition-Name 251 259	epilepsy
 T28	Life-Stage-And-Gender 301 309	children
-T29	Encounter-Type 310 322	hospitalized
 T30	Polarity 348 354	normal
 T31	Procedure-Name 355 367	neuroimaging
-T33	Encounter-Type 392 404	hospitalized
 T34	Condition-Name 415 433	neurologic disease
 T35	Condition-Name 465 484	Psychiatric trouble
 T36	Condition-Name 493 510	Sensorial trouble
@@ -71,9 +64,7 @@ T16	Polarity 663 671	abnormal
 T20	Polarity 751 759	abnormal
 A1	Polarity-Value T24 normal
 A3	Life-Stage-And-Gender-Type T28 child
-A4	Encounter-Type-Value T29 inpatient
 A5	Polarity-Value T30 normal
-A6	Encounter-Type-Value T33 inpatient
 A9	Life-Stage-And-Gender-Type T9 child
 A7	Life-Stage-And-Gender-Type T38 child
 A8	Polarity-Value T16 abnormal
@@ -81,7 +72,12 @@ A10	Polarity-Value T20 abnormal
 R1	Example-Of Arg1:E3 Arg2:E2
 R2	Example-Of Arg1:E4 Arg2:E2
 R3	Example-Of Arg1:E5 Arg2:E2
-R4	Treatment-For Arg1:E10 Arg2:E12
-R5	During Arg1:E6 Arg2:E7
 R6	Or Arg1:E3 Arg2:E4
 R7	Or Arg1:E4 Arg2:E5
+T6	Encounter 310 322	hospitalized
+E16	Encounter:T6 
+A2	Encounter-Type-Value E16 inpatient
+T10	Encounter 392 404	hospitalized
+E20	Encounter:T10 
+A4	Encounter-Type-Value E20 inpatient
+R8	Treatment-For Arg1:E20 Arg2:E12	

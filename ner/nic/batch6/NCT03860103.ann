@@ -4,8 +4,7 @@ E4	Condition:T4 Name:T24
 E5	Condition:T5 Name:T26 Polarity:T25 Temporality:E6
 E6	Eq-Comparison:T6 Operator:T27 Value:T28 Value:T29 Temporal-Unit:T30
 E8	Condition:T8 Name:T31
-E9	
-E10	Condition:T10 Name:T33
+E10	Condition:T10 Name:T33 Temporality:E14
 E13	Condition:T13 Name:T34 Temporality:E14
 E14	Eq-Comparison:T14 Operator:T35 Value:T36 Temporal-Unit:T37
 E16	Condition:T16 Name:T38
@@ -20,7 +19,6 @@ T4	Condition 163 172	pregnancy
 T5	Condition 199 208	pregnancy
 T6	Eq-Comparison 209 232	between 11 and 42 weeks
 T8	Condition 236 246	amenorrhea
-T9	Encounter 261 273	hospitalized
 T10	Condition 278 290	preeclampsia
 T13	Condition 300 331	intrauterine growth retardation
 T14	Eq-Comparison 333 348	beyond 20 weeks
@@ -39,7 +37,6 @@ T28	Eq-Value 217 219	11
 T29	Eq-Value 224 226	42
 T30	Eq-Temporal-Unit 227 232	weeks
 T31	Condition-Name 236 246	amenorrhea
-T32	Encounter-Type 261 273	hospitalized
 T33	Condition-Name 278 290	preeclampsia
 T34	Condition-Name 300 331	intrauterine growth retardation
 T35	Eq-Operator 333 339	beyond
@@ -61,15 +58,18 @@ A5	Eq-Temporal-Unit-Value T23 year
 A6	Polarity-Value T25 normal
 A7	Eq-Operator-Value T27 BETWEEN
 A8	Eq-Temporal-Unit-Value T30 week
-A9	Encounter-Type-Value T32 inpatient
 A10	Eq-Operator-Value T35 GTEQ
 A11	Eq-Temporal-Unit-Value T37 week
 A12	Life-Stage-And-Gender-Type T39 child
 A13	Life-Stage-And-Gender-Type T40 adult
 A14	Eq-Operator-Value T44 GT
-R1	Treatment-For Arg1:E9 Arg2:E10
 R2	If-Then Arg1:T40 Arg2:E17
 R3	After Arg1:E6 Arg2:E8
 R4	Or Arg1:E10 Arg2:E13
 R5	After Arg1:E14 Arg2:E16
 R6	Or Arg1:E17 Arg2:E12
+T7	Encounter 261 273	hospitalized
+E7	Encounter:T7 
+A1	Encounter-Type-Value E7 inpatient
+R1	Treatment-For Arg1:E7 Arg2:E10	
+R7	Treatment-For Arg1:E7 Arg2:E13	

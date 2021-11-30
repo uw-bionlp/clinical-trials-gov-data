@@ -15,7 +15,7 @@ E19	Condition:T19 Name:T57
 E20	Drug:T20 Stability:T58
 E21	Condition:T21 Name:T59 Stability:T58
 E23	Eq-Comparison:T23 Value:T60 Temporal-Unit:T73
-E25	Study:T25
+E25	Study:T25 
 E27	Risk:T27 Risk-For:E28
 E28	Condition:T28 Name:T61
 E29	Eq-Comparison:T29 Operator:T62 Value:T63 Per:T64
@@ -66,7 +66,6 @@ T45	Condition-Name 157 167	Amenorrhea
 T47	Eq-Value 179 180	2
 T48	Eq-Unit 180 182	kg
 T49	Observation-Name 186 198	birth weight
-T50	Encounter-Type 204 216	Hospitalized
 T51	Location 224 261	medical-surgical centre of Pediatrics
 T52	Location 269 291	hospital of Strasbourg
 T54	Observation-Name 308 320	blood sample
@@ -102,7 +101,6 @@ A6	Eq-Operator-Value T39 BETWEEN
 A8	Eq-Temporal-Unit-Value T42 day
 A9	Eq-Temporal-Unit-Value T44 week
 A10	Observation-Type-Value E14 vital
-A11	Encounter-Type-Value T50 inpatient
 A12	Location-Value T51 unit
 A13	Location-Value T52 hospital
 A15	Observation-Type-Value E16 lab
@@ -122,3 +120,4 @@ R3	During Arg1:E21 Arg2:E23
 R4	Before Arg1:E23 Arg2:E25
 R5	After Arg1:E8 Arg2:E9
 R6	After Arg1:E9 Arg2:E10
+A1	Encounter-Type-Value E15 inpatient

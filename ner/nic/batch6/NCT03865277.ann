@@ -23,7 +23,7 @@ E33	Eq-Comparison:T33 Temporal-Recency:T107
 E34	Procedure:T34 Name:T109 Temporality:E33
 E36	Condition:T36 Name:T111
 E38	Procedure:T38 Name:T113 Polarity:T140
-E40	Study:T40
+E40	Study:T40 
 E42	Modifier:T42 Modifies:T114
 E43	Observation:T43 Name:T114 Temporality:E41
 E44	Condition:T44 Name:T115 Stage:E92
@@ -33,25 +33,24 @@ E47	Modifier:T47 Modifies:T117
 E49	Modifier:T49 Modifies:T117
 E52	Condition:T52 Name:T118 Minimum-Count:E50
 E53	Assertion:T53 Asserted:E54
-E54	Procedure:T54
-E56	Study:T56
+E54	Procedure:T54 
+E56	Study:T56 
 E59	Risk:T59 Risk-For:E62 Severity:T120
 E60	Modifier:T60 Modifies:T121
 E62	Observation:T62 Name:T121
-E63	
 E64	Condition:T64 Severity:T123
-E66	Condition:T66
+E66	Condition:T66 Severity:T123
 E68	Observation:T68 Name:T125 Numeric-Filter:E69
 E69	Eq-Comparison:T69 Operator:T126 Value:T127 Temporal-Unit:T128
 E70	Study:T70 Study-Of:E71
-E71	Procedure:T71
+E71	Procedure:T71 
 E74	Procedure:T74 Name:T130
 E75	Condition:T75 Name:T131
 E77	Condition:T77 Name:T132
 E78	Negation:T78 Negates:E79
 E79	Assertion:T79 Asserted:E80
-E80	Risk:T80
-E81	Study:T81
+E80	Risk:T80 
+E81	Study:T81 
 E82	Condition:T82 Name:T135
 E51	Modifier:T51 Modifies:T92
 E83	Modifier:T136 Modifies:T91
@@ -69,7 +68,6 @@ E90	Condition:T141 Name:T142
 E41	Eq-Comparison:T41 Temporal-Period:T144
 E92	Eq-Comparison:T145 Unit:T146 Value:T147
 E50	Eq-Comparison:T50 Value:T148
-E57	
 E94	Other:T122 Is-Other:E70
 E95	Condition:T149 Name:T129
 E72	Contraindication:T72 Contraindicates:E74
@@ -160,7 +158,6 @@ T118	Condition-Name 1038 1048	malignancy
 T120	Severity 1183 1195	considerable
 T121	Observation-Name 1218 1228	metastases
 T123	Severity 1262 1269	Serious
-T124	Condition-Name 1270 1277	disease
 T125	Observation-Name 1304 1319	life expectancy
 T126	Eq-Operator 1323 1332	less than
 T127	Eq-Value 1333 1336	one
@@ -241,10 +238,9 @@ R16	And Arg1:T110 Arg2:E36
 R17	Or Arg1:E36 Arg2:T112
 R18	Or Arg1:E47 Arg2:E49
 R19	During Arg1:E54 Arg2:E56
-R20	Or Arg1:E56 Arg2:E57
 R21	Or Arg1:E60 Arg2:E62
 R22	Or Arg1:E64 Arg2:E66
 R23	And Arg1:E66 Arg2:E68
 R24	Or Arg1:E75 Arg2:E77
 R25	And Arg1:T112 Arg2:E90
-R26	During Arg1:E62 Arg2:E63
+R20	During Arg1:E62 Arg2:T63	

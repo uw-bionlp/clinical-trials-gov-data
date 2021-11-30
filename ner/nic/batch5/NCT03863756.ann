@@ -2,11 +2,9 @@ E1	Condition:T1 Name:T27
 E2	Condition:T2 Name:T28
 E4	Indication:T4 Indication-For:E5
 E5	Procedure:T5 Name:T21
-E6	
 E7	Contraindication:T7 Contraindicates:E8 Contraindicates2:E10
 E8	Procedure:T8 Name:T22
-E9	Procedure:T9 Name:T3
-E12	Condition:T12
+E12	Condition:T12 
 E13	Observation:T13 Name:T25 Stability:T24
 E14	Procedure:T14 Name:T26 Temporality:E3
 E15	Modifier:T15 Modifies:T26
@@ -17,10 +15,9 @@ T1	Condition 39 56	Spondyloarthritis
 T2	Condition 58 61	SpA
 T4	Indication 168 178	Indication
 T5	Procedure 182 202	standard radiography
-T6	Encounter 211 220	follow-up
 T7	Contraindication 281 297	contraindication
 T8	Procedure 320 344	conventional radiography
-T9	Condition 346 348	CR
+T9	Procedure-Name 346 348	CR
 T12	Condition 374 381	disease
 T13	Observation 392 401	cognition
 T14	Procedure 429 436	surgery
@@ -33,7 +30,6 @@ T25	Observation-Name 392 401	cognition
 T26	Procedure-Name 429 436	surgery
 T27	Condition-Name 39 56	Spondyloarthritis
 T28	Condition-Name 58 61	SpA
-T3	Condition-Name 346 348	CR
 T29	Eq-Comparison 425 428	had
 T30	Eq-Temporal-Period 425 428	had
 T10	Procedure 353 364	EOS imaging
@@ -41,8 +37,8 @@ T11	Procedure-Name 353 364	EOS imaging
 A1	Stability-Value T24 change
 A2	Eq-Temporal-Period-Value T30 past
 R1	Abbrev-Of Arg1:E2 Arg2:E1
-R2	Using Arg1:E6 Arg2:E5
-R3	Abbrev-Of Arg1:E9 Arg2:E8
 R4	Caused-By Arg1:T24 Arg2:E12
 R5	Or Arg1:E15 Arg2:E19
-R6	Or Arg1:E9 Arg2:E10
+T3	Procedure 346 348	CR
+E6	Procedure:T3 Name:T9
+R2	Abbrev-Of Arg1:E6 Arg2:E8	

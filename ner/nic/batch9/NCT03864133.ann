@@ -16,7 +16,7 @@ E19	Condition:T19 Name:T109
 E20	Assertion:T20 Asserted:E19
 E21	Assertion:T21 Asserted:E22
 E22	Procedure:T22 Name:T110
-E24	Study:T24
+E24	Study:T24 
 E25	Procedure:T25 Name:T111
 E26	Condition:T26 Name:T157
 E27	Drug:T27 Name:T112
@@ -41,7 +41,7 @@ E55	Assertion:T55 Asserted:E91
 E58	Modifier:T59 Modifies:T57
 E59	Procedure:T60 Name:T135
 E60	Procedure:T61 Name:T168
-E61	Condition:T62
+E61	Condition:T62 
 E63	Procedure:T64 Name:T136
 E64	Condition:T65 Name:T137
 E65	Condition:T66 Name:T138
@@ -50,22 +50,21 @@ E68	Modifier:T69 Modifies:T140
 E69	Observation:T70 Name:T140
 E70	Observation:T71 Name:T141 Numeric-Filter:E71
 E71	Eq-Comparison:T72 Operator:T142 Value:T143 Unit:T144
-E73	Study:T74
+E73	Study:T74 
 E74	Eq-Comparison:T75 Temporal-Period:T145
 E75	Drug:T76 Name:T147 Temporality:E74
 E76	Condition:T77 Name:T148
 E78	Condition:T79 Name:T149
 E80	Procedure:T81 Name:T150
 E81	Assertion:T82 Asserted:E92
-E82	
 E84	Condition:T86 Name:T152
 E85	Condition:T87 Name:T153
 E87	Assertion:T89 Asserted:E88
 E88	Condition:T90 Name:T154
-E90	Procedure:T92
+E90	Procedure:T92 
 E91	Negation:T93 Negates:E101
-E92	Negation:T94 Negates:E82
-E93	Encounter:T56
+E92	Negation:T94 Negates:E3
+E93	Encounter:T56 
 E94	Modifier:T156 Modifies:T105
 E41	Modifier:T41 Modifies:T120
 E95	Modifier:T161 Modifies:T120
@@ -138,7 +137,6 @@ T77	Condition 1378 1397	epiretinal membrane
 T79	Condition 1437 1450	lens fragment
 T81	Procedure 1456 1467	operatively
 T82	Assertion 1474 1483	Inability
-T84	Encounter 1505 1517	appointments
 T86	Condition 1547 1555	pregnant
 T87	Condition 1557 1566	lactating
 T89	Assertion 1570 1588	planning to become
@@ -302,3 +300,6 @@ R47	Or Arg1:E30 Arg2:E31
 R48	Or Arg1:E64 Arg2:E65
 R49	Or Arg1:E65 Arg2:E66
 R50	Or Arg1:E84 Arg2:E85
+T3	Encounter 1505 1517	appointments
+E3	Encounter:T3 
+A4	Encounter-Type-Value E3 outpatient

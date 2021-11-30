@@ -14,20 +14,17 @@ E14	Eq-Comparison:T36 Operator:T8 Temporal-Period:T37 Value:T20 Temporal-Unit:T1
 E15	Procedure:T38 Name:T39 Temporality:E17
 E16	Modifier:T40 Modifies:T39
 E17	Eq-Comparison:T41 Temporal-Period:T42
-E18	Study:T43 Study-Of:E20
+E18	Study:T43 Study-Of:E13
 E19	Other:T44 Is-Other:E18
-E20	Procedure:T45 Name:T46
-E22	Procedure:T48 Name:T49 Temporality:E24
-E23	Drug:T50
+E23	Drug:T50 Temporality:E24
 E24	Eq-Comparison:T51 Temporal-Period:T52
 E25	Eq-Comparison:T53 Temporal-Period:T54
 E26	Condition:T55 Name:T56
 E27	Modifier:T21 Modifies:T56
-E28	Condition:T57
-E29	Procedure:T58 Name:T59
+E28	Condition:T57 
 E30	Procedure:T60 Name:T61
 E31	Observation:T62 Name:T63
-E33	Contraindication:T65 Contraindicates:E31 Contraindicates2:E30 Contraindicates3:E29
+E33	Contraindication:T65 Contraindicates:E31 Contraindicates2:E30 Contraindicates3:E30 Contraindicates4:E21
 T1	Condition 154 161	nursing
 T2	Condition-Name 154 161	nursing
 T3	Observation 40 43	BMI
@@ -104,10 +101,12 @@ A11	Eq-Temporal-Period-Value T42 present
 A12	Eq-Temporal-Period-Value T52 present
 A13	Eq-Temporal-Period-Value T54 past
 A14	Observation-Type-Value E31 social-habit
-R1	Using Arg1:E22 Arg2:E23
 R2	Caused-By Arg1:E33 Arg2:E28
 R3	Or Arg1:E1 Arg2:E11
-R4	Or Arg1:E15 Arg2:E20
 R5	Or Arg1:E30 Arg2:E31
 R6	Or Arg1:E10 Arg2:E1
-R7	Or Arg1:E29 Arg2:E30
+E13	Observation:T45 Name:T46
+R1	Or Arg1:E15 Arg2:E13	
+E20	Observation:T48 Name:T49
+R4	Treatment-For Arg1:E23 Arg2:E20	
+E21	Observation:T58 Name:T59

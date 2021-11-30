@@ -5,7 +5,7 @@ E6	Modifier:T6 Modifies:T72
 E7	Condition:T7 Name:T72
 E8	Age:T8 Numeric-Filter:E9
 E9	Eq-Comparison:T9 Operator:T73 Value:T74 Temporal-Unit:T75
-E10	Assertion:T10 Asserted:E30 Asserted2:E69
+E10	Assertion:T10 Asserted:E30
 E11	Procedure:T11 Name:T76
 E12	Condition:T12 Name:T77
 E13	Procedure:T13 Name:T78
@@ -19,7 +19,7 @@ E20	Condition:T20 Name:T84
 E21	Condition:T21 Name:T85
 E23	Modifier:T23 Modifies:E26
 E25	Modifier:T25 Modifies:E26
-E26	Condition:T26
+E26	Condition:T26 
 E27	Condition:T27 Name:T88 Severity:T87
 E28	Condition:T28 Name:T89 Temporality:E29
 E31	Procedure:T31 Name:T90 Temporality:E33
@@ -44,8 +44,8 @@ E54	Observation:T54 Name:T107 Numeric-Filter:E55
 E55	Eq-Comparison:T55 Operator:T108 Value:T109 Temporal-Unit:T110
 E56	Other:T56 Is-Other:E57
 E57	Study:T57 Study-Of:E58 Study-Of2:E60
-E58	Procedure:T58
-E60	Drug:T60
+E58	Procedure:T58 
+E60	Drug:T60 
 E61	Condition:T61 Name:T111
 E62	Condition:T62 Name:T112
 E64	Other:T64 Is-Other:E65
@@ -55,7 +55,6 @@ E67	Procedure:T68 Name:T114
 E68	Negation:T69 Negates:E67
 E1	Modifier:T1 Modifies:T71
 E30	Procedure:T30 Name:T67
-E69	
 E71	Assertion:T116 Asserted:E13
 E72	Modifier:T117 Modifies:T78
 E73	Modifier:T118 Modifies:T83
@@ -164,7 +163,6 @@ T114	Procedure-Name 1238 1246	catheter
 T1	Modifier 25 35	paroxysmal
 T30	Procedure 238 243	tests
 T67	Procedure-Name 238 243	tests
-T70	Encounter 248 257	follow up
 T116	Assertion 343 349	should
 T117	Modifier 366 373	typical
 T118	Modifier 557 566	secondary
@@ -213,7 +211,6 @@ R15	Or Arg1:E42 Arg2:E46
 R16	Or Arg1:E46 Arg2:E48
 R17	Or Arg1:E58 Arg2:E60
 R18	Or Arg1:E62 Arg2:E65
-R19	And Arg1:E30 Arg2:E69
 R20	Or Arg1:E20 Arg2:E21
 R21	Or Arg1:E61 Arg2:E62
 R22	Or Arg1:E1 Arg2:E2

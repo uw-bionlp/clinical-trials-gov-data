@@ -4,7 +4,7 @@ E3	Procedure:T3 Name:T30 Duration:E4
 E4	Eq-Comparison:T4 Operator:T31 Value:T32 Temporal-Unit:T33
 E5	Observation:T5 Name:T34 Numeric-Filter:E6
 E6	Eq-Comparison:T6 Operator:T35 Value:T36
-E7	Encounter:T7
+E7	Encounter:T7 Temporality:E28
 E8	Condition:T8 Name:T39 Temporality:E9
 E9	Eq-Comparison:T9 Temporal-Period:T40
 E12	Modifier:T12 Modifies:T42
@@ -14,15 +14,15 @@ E16	Age:T16 Numeric-Filter:E17
 E17	Eq-Comparison:T17 Operator:T45 Value:T46 Temporal-Unit:T47
 E18	Assertion:T18 Asserted:E26
 E19	Procedure:T20 Name:T48
-E20	Death:T21
-E22	Encounter:T23
+E20	Death:T21 
+E22	Encounter:T23 
 E24	Procedure:T25 Name:T41
 E26	Negation:T27 Negates:E19
 E27	Assertion:T50 Asserted:E3
 E28	Eq-Comparison:T51 Temporal-Period:T37
 E10	Condition:T10 Name:T42
-E11	Study:T15
-E23	Study:T44
+E11	Study:T15 
+E23	Study:T44 
 T1	Age 25 28	age
 T2	Eq-Comparison 29 38	≥18 years
 T3	Procedure 44 66	mechanical ventilation
@@ -53,7 +53,6 @@ T34	Observation-Name 123 145	Clinical Frailty Score
 T35	Eq-Operator 146 151	above
 T36	Eq-Value 152 153	7
 T37	Eq-Temporal-Period 154 159	prior
-T38	Encounter-Type 160 169	admission
 T39	Condition-Name 175 196	neuromuscular disease
 T40	Eq-Temporal-Period 200 224	previous medical history
 T42	Condition-Name 230 239	amputated
@@ -77,7 +76,6 @@ A6	Eq-Temporal-Unit-Value T33 hour
 A7	Observation-Type-Value E5 clinical-score
 A8	Eq-Operator-Value T35 GT
 A9	Eq-Temporal-Period-Value T37 past
-A10	Encounter-Type-Value T38 inpatient
 A11	Eq-Temporal-Period-Value T40 past
 A13	Eq-Operator-Value T45 LT
 A14	Eq-Temporal-Unit-Value T47 year
@@ -86,3 +84,4 @@ A12	Encounter-Type-Value E22 discharge
 R1	Or Arg1:E20 Arg2:E22
 R2	Before Arg1:E24 Arg2:E23
 R3	Before Arg1:E22 Arg2:E11
+A2	Encounter-Type-Value E7 inpatient

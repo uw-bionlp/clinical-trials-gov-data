@@ -1,8 +1,6 @@
-E1	Encounter:T1
-E2	Assertion:T2 Asserted:T69
+E1	Encounter:T1 Location:T69
 E3	Age:T3 Numeric-Filter:E4
 E4	Eq-Comparison:T4 Operator:T70 Value:T71 Temporal-Unit:T72
-E7	
 E8	Condition:T8 Name:T74
 E10	Assertion:T10 Asserted:E11
 E11	Condition:T11 Name:T76
@@ -15,10 +13,10 @@ E18	Eq-Comparison:T18 Operator:T80 Temporal-Period:T81 Value:T82 Temporal-Unit:T
 E21	Assertion:T21 Asserted:E22
 E22	Study:T22 Temporality:E23
 E23	Eq-Comparison:T23 Operator:T84 Value:T85 Temporal-Unit:T86
-E26	Encounter:T26
+E26	Encounter:T26 
 E27	Study:T27 Temporality:E28
 E28	Eq-Comparison:T28 Operator:T89 Value:T90 Temporal-Unit:T91
-E31	Encounter:T31
+E31	Encounter:T31 
 E32	Assertion:T32 Asserted:E66
 E33	Modifier:T34 Modifies:T94
 E35	Procedure:T36 Name:T94
@@ -54,10 +52,8 @@ E30	Eq-Comparison:T126 Temporal-Period:T127
 E55	Modifier:T56 Modifies:T113
 E65	Observation:T66 Name:T121
 T1	Encounter 25 37	Hospitalized
-T2	Assertion 44 52	eligible
 T3	Age 70 73	Age
 T4	Eq-Comparison 74 84	≥ 18 years
-T7	Encounter 104 119	hospitalization
 T8	Condition 130 136	sepsis
 T10	Assertion 195 204	suspected
 T11	Condition 205 214	infection
@@ -100,12 +96,10 @@ T61	Observation 986 989	DNR
 T63	Observation 994 1009	Do Not Intubate
 T64	Observation 1011 1014	DNI
 T67	Negation 526 535	Inability
-T68	Encounter-Type 25 37	Hospitalized
 T69	Location 61 64	ICU
 T70	Eq-Operator 74 75	≥
 T71	Eq-Value 76 78	18
 T72	Eq-Temporal-Unit 79 84	years
-T73	Encounter-Type 104 119	hospitalization
 T74	Condition-Name 130 136	sepsis
 T76	Condition-Name 205 214	infection
 T77	Eq-Operator 236 237	≥
@@ -118,11 +112,9 @@ T83	Eq-Temporal-Unit 321 326	hours
 T84	Eq-Operator 398 404	within
 T85	Eq-Value 405 406	4
 T86	Eq-Temporal-Unit 407 412	hours
-T88	Encounter-Type 420 429	admission
 T89	Eq-Operator 469 475	within
 T90	Eq-Value 476 477	6
 T91	Eq-Temporal-Unit 478 483	hours
-T93	Encounter-Type 491 500	admission
 T94	Procedure-Name 563 569	fluids
 T95	Condition-Name 595 607	Hyponatremia
 T96	Observation-Name 609 621	serum sodium
@@ -170,15 +162,12 @@ T114	Condition-Name 939 960	intestinal strictures
 T129	Observation-Name 1011 1014	DNI
 T66	Observation 1028 1049	no escalation of care
 T121	Observation-Name 1028 1049	no escalation of care
-A1	Assertion-Type-Value E2 hypothetical
 A3	Assertion-Type-Value E10 possible
 A4	Assertion-Type-Value E21 hypothetical
 A7	Assertion-Type-Value E32 hypothetical
-A8	Encounter-Type-Value T68 inpatient
 A9	Location-Value T69 unit
 A10	Eq-Operator-Value T70 GTEQ
 A11	Eq-Temporal-Unit-Value T72 year
-A12	Encounter-Type-Value T73 inpatient
 A13	Eq-Operator-Value T77 GTEQ
 A14	Eq-Temporal-Period-Value T78 past
 A15	Eq-Operator-Value T80 LTEQ
@@ -186,10 +175,8 @@ A16	Eq-Temporal-Period-Value T81 past
 A17	Eq-Temporal-Unit-Value T83 hour
 A18	Eq-Operator-Value T84 LTEQ
 A19	Eq-Temporal-Unit-Value T86 hour
-A21	Encounter-Type-Value T88 inpatient
 A22	Eq-Operator-Value T89 LTEQ
 A23	Eq-Temporal-Unit-Value T91 hour
-A25	Encounter-Type-Value T93 inpatient
 A26	Observation-Type-Value E39 lab
 A27	Eq-Temporal-Period-Value T101 past
 A28	Eq-Temporal-Unit-Value T107 day
@@ -216,7 +203,6 @@ R9	Equivalent-To Arg1:E51 Arg2:E41
 R10	Equivalent-To Arg1:E53 Arg2:E41
 R11	Abbrev-Of Arg1:E60 Arg2:E59
 R12	Abbrev-Of Arg1:E63 Arg2:E62
-R13	During Arg1:E3 Arg2:E7
 R14	Or Arg1:E17 Arg2:E20
 R15	After Arg1:E23 Arg2:E26
 R16	After Arg1:E28 Arg2:E31
@@ -232,3 +218,10 @@ R25	Or Arg1:E45 Arg2:E46
 R26	Or Arg1:E48 Arg2:E49
 R27	Or Arg1:E49 Arg2:E50
 R28	Or Arg1:E50 Arg2:E51
+A2	Encounter-Type-Value E1 inpatient
+T2	Encounter 104 119	hospitalization
+E2	Encounter:T2 
+A1	Encounter-Type-Value E2 inpatient
+R29	During Arg1:E3 Arg2:E2	
+A5	Encounter-Type-Value E26 inpatient
+A6	Encounter-Type-Value E31 inpatient

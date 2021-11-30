@@ -6,7 +6,6 @@ E5	Assertion:T5 Asserted:E9
 E8	Assertion:T8 Asserted:E9
 E9	Condition:T9 Name:T26
 E10	Condition:T10 Name:T28 Acuteness:T27 Type:T6 Provider:E6
-E11	
 E12	Drug:T12 Name:T30
 E14	Allergy:T14 Name:E15
 E15	Drug:T15 Name:T32
@@ -14,8 +13,8 @@ E16	Condition:T16 Name:T34 Severity:T33
 E17	Eq-Comparison:T17 Per:T44 Operator:T41 Value:T42 Unit:T43
 E18	Condition:T18 Name:T35
 E20	Condition:T20 Name:T36 Stability:T45
-E6	Provider:T38
-E22	Assertion:T40 Asserted:E11
+E6	Provider:T38 
+E22	Assertion:T40 Asserted:E7
 E13	Observation:T13 Name:T31 Numeric-Filter:E17
 T1	Age 25 28	Age
 T2	Eq-Comparison 29 47	more than 18 years
@@ -25,7 +24,6 @@ T5	Assertion 102 107	signs
 T8	Assertion 115 123	symptoms
 T9	Condition 127 140	heart failure
 T10	Condition 164 178	decompensation
-T11	Encounter 217 232	hospitalization
 T12	Drug 237 249	IV diuretics
 T14	Allergy 317 324	Allergy
 T15	Drug 328 340	IV frusemide
@@ -41,7 +39,6 @@ T25	Eq-Temporal-Period 76 81	prior
 T26	Condition-Name 127 140	heart failure
 T27	Acuteness 158 163	acute
 T28	Condition-Name 164 178	decompensation
-T29	Encounter-Type 217 232	hospitalization
 T30	Drug-Name 237 249	IV diuretics
 T32	Drug-Name 328 340	IV frusemide
 T33	Severity 347 353	Severe
@@ -64,7 +61,6 @@ A2	Assertion-Type-Value E8 possible
 A3	Eq-Operator-Value T21 GT
 A4	Eq-Temporal-Unit-Value T23 year
 A5	Eq-Temporal-Period-Value T25 past
-A7	Encounter-Type-Value T29 inpatient
 A8	Severity-Value T33 severe
 A9	Condition-Type-Value T6 admitting
 A10	Assertion-Type-Value E22 hypothetical
@@ -74,8 +70,11 @@ A13	Stability-Value T45 change
 A14	Acuteness-Type-Value T27 acute
 A15	Acuteness-Type-Value T37 chronic
 R1	Found-By Arg1:E3 Arg2:E9
-R2	Using Arg1:E11 Arg2:E12
-R3	Treatment-For Arg1:E11 Arg2:E10
 R4	Equivalent-To Arg1:E13 Arg2:E16
 R5	Or Arg1:E5 Arg2:E8
 R6	Or Arg1:E18 Arg2:E20
+T7	Encounter 217 232	hospitalization
+E7	Encounter:T7 
+A6	Encounter-Type-Value E7 inpatient
+R2	Using Arg1:E7 Arg2:E12	
+R3	Treatment-For Arg1:E7 Arg2:E10	

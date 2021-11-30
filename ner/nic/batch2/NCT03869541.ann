@@ -1,4 +1,4 @@
-E1	Encounter:T1
+E1	Encounter:T1 
 E2	Eq-Comparison:T2 Temporal-Period:T30
 E3	Drug:T3 Name:T31 Temporality:E2
 E4	Age:T4 Numeric-Filter:E5
@@ -18,8 +18,8 @@ E22	Modifier:T22 Modifies:T45
 E23	Observation:T23 Name:T45
 E24	Negation:T24 Negates:T46
 E25	Encounter:T25 Location:T47
-E8	Study:T53
-E12	Death:T12
+E8	Study:T53 
+E12	Death:T12 
 E29	Modifier:T54 Modifies:E12
 E30	Procedure:T55 Name:T56
 E31	Eq-Comparison:T57 Temporal-Period:T58
@@ -48,7 +48,6 @@ T22	Modifier 609 620	spinal cord
 T23	Observation 621 627	injury
 T24	Negation 675 681	unable
 T25	Encounter 901 909	admitted
-T28	Encounter-Type 56 64	admitted
 T29	Location 72 75	ICU
 T30	Eq-Temporal-Period 84 93	receiving
 T31	Drug-Name 94 110	vasoactive drugs
@@ -68,7 +67,6 @@ T44	Observation-Name 599 605	injury
 T45	Observation-Name 621 627	injury
 T46	Language 691 698	English
 T47	Location 844 863	intensive care unit
-T48	Encounter-Type 901 909	admitted
 T8	Stability 177 183	remain
 T53	Study 231 240	enrolment
 T12	Death 298 301	die
@@ -90,7 +88,6 @@ T65	Observation-Name 1139 1181	physical rehabilitation adverse event tool
 T66	Study 1207 1212	study
 A1	Assertion-Type-Value E6 hypothetical
 A3	Assertion-Type-Value E11 hypothetical
-A4	Encounter-Type-Value T28 inpatient
 A5	Location-Value T29 hospital
 A6	Eq-Temporal-Period-Value T30 present
 A7	Eq-Operator-Value T32 GTEQ
@@ -99,7 +96,6 @@ A9	Location-Value T35 unit
 A10	Eq-Operator-Value T36 GTEQ
 A11	Eq-Temporal-Unit-Value T38 hour
 A14	Location-Value T47 unit
-A15	Encounter-Type-Value T48 inpatient
 A16	Encounter-Type-Value E7 inpatient
 A17	Stability-Value T8 stable
 A18	Eq-Temporal-Period-Value T58 present
@@ -115,3 +111,5 @@ R3	Or Arg1:E17 Arg2:E20
 R4	Or Arg1:E20 Arg2:E23
 R5	And Arg1:E1 Arg2:E3
 R6	Or Arg1:E15 Arg2:E16
+A2	Encounter-Type-Value E25 inpatient
+A4	Encounter-Type-Value E1 inpatient

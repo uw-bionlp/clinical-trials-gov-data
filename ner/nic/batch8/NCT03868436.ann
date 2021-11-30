@@ -4,11 +4,10 @@ E3	Eq-Comparison:T3 Operator:T76
 E4	Observation:T4 Name:T78 Severity:T77
 E5	Observation:T5 Name:T79
 E6	Eq-Comparison:T6 Operator:T83 Value:T84
-E7	Assertion:T7 Asserted:E8 Asserted2:E10
+E7	Assertion:T7 Asserted:E8 Asserted2:E9
 E8	Procedure:T8 Name:T85
-E10	
 E11	Modifier:T11 Modifies:T87
-E12	Condition:T12 Name:T87
+E12	Observation:T12 Name:T87
 E14	Modifier:T14 Modifies:T88
 E15	Observation:T15 Name:T88
 E16	Condition:T16 Name:T89
@@ -22,7 +21,7 @@ E25	Condition:T25 Name:T97
 E27	Condition:T27 Name:T98
 E30	Condition:T30 Name:T99
 E31	Condition:T31 Name:T100
-E32	Condition:T32
+E32	Condition:T32 
 E33	Modifier:T33 Modifies:T101
 E34	Observation:T34 Name:T101
 E35	Drug:T35 Name:T124
@@ -65,9 +64,8 @@ T5	Observation 114 120	trauma
 T6	Eq-Comparison 130 133	≥ 4
 T7	Assertion 144 155	unlikely to
 T8	Procedure 164 171	surgery
-T10	Encounter 172 187	hospitalization
 T11	Modifier 207 222	Musculoskeletal
-T12	Condition 223 231	injuries
+T12	Observation 223 231	injuries
 T14	Modifier 236 244	physical
 T15	Observation 245 251	wounds
 T16	Condition 262 271	Fractures
@@ -123,8 +121,7 @@ T80	Observation-Name 122 129	NRS0-10
 T83	Eq-Operator 130 131	≥
 T84	Eq-Value 132 133	4
 T85	Procedure-Name 164 171	surgery
-T86	Encounter-Type 172 187	hospitalization
-T87	Condition-Name 223 231	injuries
+T87	Observation-Name 223 231	injuries
 T88	Observation-Name 245 251	wounds
 T89	Condition-Name 262 271	Fractures
 T90	Condition-Name 282 293	Lacerations
@@ -183,7 +180,6 @@ A6	Severity-Value T75 moderate
 A7	Eq-Operator-Value T76 BETWEEN
 A8	Severity-Value T77 severe
 A10	Eq-Operator-Value T83 GTEQ
-A11	Encounter-Type-Value T86 inpatient
 A12	Life-Stage-And-Gender-Type T96 female
 A13	Severity-Value T102 severe
 A14	Eq-Temporal-Period-Value T104 past
@@ -202,7 +198,6 @@ A25	Acuteness-Type-Value T61 chronic
 R1	Caused-By Arg1:E4 Arg2:E5
 R2	Equivalent-To Arg1:E19 Arg2:E5
 R3	Treatment-For Arg1:E8 Arg2:E4
-R4	Treatment-For Arg1:E10 Arg2:E4
 R5	Example-Of Arg1:E12 Arg2:E5
 R6	Example-Of Arg1:E15 Arg2:E5
 R7	Caused-By Arg1:E21 Arg2:E22
@@ -214,7 +209,6 @@ R12	Example-Of Arg1:E37 Arg2:E32
 R13	Caused-By Arg1:E47 Arg2:E48
 R14	Example-Of Arg1:E62 Arg2:E60
 R15	Using Arg1:E68 Arg2:E69
-R16	Or Arg1:E8 Arg2:E10
 R17	Or Arg1:E12 Arg2:E15
 R18	And Arg1:T96 Arg2:E25
 R19	And Arg1:E25 Arg2:E27
@@ -228,3 +222,6 @@ R26	Or Arg1:E56 Arg2:E71
 R27	Or Arg1:E72 Arg2:E73
 R28	Or Arg1:E74 Arg2:E64
 R29	Or Arg1:E34 Arg2:E35
+T9	Encounter 172 187	hospitalization
+E9	Encounter:T9 
+A2	Encounter-Type-Value E9 inpatient

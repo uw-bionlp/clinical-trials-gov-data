@@ -1,10 +1,8 @@
-E1	
 E2	Eq-Comparison:T2 Value:T41 Operator:T42 Value:T43 Temporal-Unit:T44
 E3	Age:T3 Numeric-Filter:E2
 E6	Condition:T6 Name:T47
 E7	Condition:T7 Name:T48
 E9	Assertion:T9 Asserted:E40
-E10	Assertion:T10
 E11	Assertion:T11 Asserted:E12
 E14	Drug:T14 Stability:T50 Duration:E15 Duration2:E16
 E15	Eq-Comparison:T15 Operator:T51 Value:T52 Temporal-Unit:T53
@@ -15,7 +13,7 @@ E19	Negation:T19 Negates:E21
 E20	Eq-Comparison:T20 Temporal-Period:T57
 E21	Procedure:T21 Name:T74 Stability:T58 Temporality:E20
 E23	Modifier:T23 Modifies:E24
-E24	Study:T24
+E24	Study:T24 
 E25	Condition:T25 Name:T60
 E26	Condition:T26 Name:T61
 E28	Condition:T28 Name:T62
@@ -28,18 +26,16 @@ E35	Condition:T35 Name:T68 Severity:T67
 E36	Modifier:T36 Modifies:T70
 E38	Modifier:T38 Modifies:T70
 E39	Condition:T39 Name:T70 Severity:T69
-E8	Provider:T8
+E8	Provider:T8 
 E40	Encounter:T71 Location:T72 Provider:E8
-E12	Drug:T12
+E12	Drug:T12 
 E13	Modifier:T13 Modifies:E14
 E41	Study:T59 Study-Of:E30 Temporality:E29
-T1	Encounter 25 36	outpatients
 T2	Eq-Comparison 37 49	2 to 6 years
 T3	Age 53 56	age
 T6	Condition 100 107	healthy
 T7	Condition 127 151	autism spectrum disorder
 T9	Assertion 333 338	could
-T10	Assertion 380 385	could
 T11	Assertion 468 478	ability of
 T14	Drug 536 547	medications
 T15	Eq-Comparison 552 568	at least 2 weeks
@@ -63,7 +59,6 @@ T35	Condition 936 952	physical illness
 T36	Modifier 968 973	liver
 T38	Modifier 977 982	renal
 T39	Condition 983 992	pathology
-T40	Encounter-Type 25 36	outpatients
 T41	Eq-Value 37 38	2
 T42	Eq-Operator 39 41	to
 T43	Eq-Value 42 43	6
@@ -102,9 +97,7 @@ T74	Procedure-Name 634 660	psychosocial interventions
 T59	Study 842 847	trial
 T75	Stability 902 910	unstable
 A1	Assertion-Type-Value E9 hypothetical
-A2	Assertion-Type-Value E10 hypothetical
 A3	Assertion-Type-Value E11 hypothetical
-A6	Encounter-Type-Value T40 outpatient
 A7	Eq-Operator-Value T42 BETWEEN
 A8	Eq-Temporal-Unit-Value T44 year
 A9	Life-Stage-And-Gender-Type T45 male
@@ -133,3 +126,6 @@ R7	Or Arg1:E26 Arg2:E28
 R8	Or Arg1:E33 Arg2:E35
 R9	Or Arg1:E36 Arg2:E38
 R10	Or Arg1:E25 Arg2:E26
+T1	Encounter 25 36	outpatients
+E4	Encounter:T1 
+A5	Encounter-Type-Value E4 outpatient

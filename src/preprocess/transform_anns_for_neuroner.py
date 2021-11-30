@@ -8,7 +8,7 @@ from preprocess.config import Config
 from preprocess.brat_document import BratDocument
 import preprocess.utils as utils
 
-output_dir = os.path.join('data', 'ner', 'neuroner')
+output_dir = os.path.join('data', 'ner', 'conll')
 random.seed(42)
 use_cleaned = True
 
@@ -24,7 +24,7 @@ def main():
     train_desired = math.floor(total_cnt * 0.8)
 
     for ann in annotations:
-        event_types = set([ v.args[0].type for k, v in ann.Es.items() ])
+        event_types = set([ v.args[0].type for k, v in ann.Es.items() if any(v.args) ])
         seen = set()
         text = ann.pretokenized if use_cleaned else ann.raw_text
         dir = 'train' if train_cnt < train_desired else 'valid'
@@ -33,9 +33,8 @@ def main():
             train_cnt += 1
 
         for d in ['events','entities']:
-            if not os.path.exists(os.path.join(output_dir, d, dir)): 
-                os.mkdir(os.path.join(output_dir, d, dir))
-        
+            if not os.path.exists(os.path.join(output_dir, d)):      os.mkdir(os.path.join(output_dir, d))
+            if not os.path.exists(os.path.join(output_dir, d, dir)): os.mkdir(os.path.join(output_dir, d, dir))
 
         with open(os.path.join(output_dir, 'events', dir, ann.doc_id+'.txt'), 'w+') as f_ev, \
              open(os.path.join(output_dir, 'entities', dir, ann.doc_id+'.txt'), 'w+') as f_ent:

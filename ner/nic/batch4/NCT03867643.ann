@@ -1,5 +1,5 @@
 E1	Eq-Comparison:T1 Value:T70 Operator:T71 Value:T72 Temporal-Unit:T73
-E3	Birth:T3
+E3	Birth:T3 
 E4	Eq-Comparison:T4 Value:T122
 E5	Procedure:T5 Name:T74 Minimum-Count:E4 Temporality:E9
 E6	Drug:T6 Name:T75
@@ -7,9 +7,9 @@ E9	Eq-Comparison:T9 Value:T76 Value:T77 Value2:T7 Temporal-Unit:T8
 E10	Negation:T10 Negates:E11
 E11	Immunization:T11 Name:T78
 E13	Immunization:T13 Name:T123
-E15	Study:T15
-E16	Study:T16
-E18	Assertion:T18 Asserted:E70 Asserted2:E71
+E15	Study:T15 
+E16	Study:T16 
+E18	Assertion:T18 Asserted:E71
 E19	Eq-Comparison:T19 Temporal-Period:T81
 E20	Allergy:T20 Temporality:E19
 E23	Condition:T23 Name:T83
@@ -21,9 +21,9 @@ E32	Modifier:T32 Modifies:T88
 E33	Drug:T33 Name:T88
 E35	Condition:T35 Name:T89
 E36	Procedure:T36 Name:T90
-E37	Immunization:T37
+E37	Immunization:T37 
 E39	Study:T39 Study-Of:E40
-E40	Drug:T40
+E40	Drug:T40 
 E41	Immunization:T41 Temporality:E42
 E42	Eq-Comparison:T42 Temporal-Period:T92 Value:T93 Temporal-Unit:T94
 E43	Condition:T43 Acuteness:T95
@@ -48,11 +48,10 @@ E65	Condition:T65 Name:T117
 E68	Procedure:T68 Name:T119 Polarity:T86
 E69	Age:T120 Numeric-Filter:E1
 E7	Modifier:T124 Modifies:T123
-E8	Family-Member:T125
-E70	
+E8	Family-Member:T125 
 E71	Observation:T127 Specimen:T80
-E73	Immunization:T129
-E22	Immunization:T22
+E73	Immunization:T129 
+E22	Immunization:T22 
 E74	Condition:T131 Name:T130 Severity:T82
 E27	Modifier:T47 Modifies:T29
 E29	Procedure:T85 Name:T109
@@ -129,7 +128,6 @@ T92	Eq-Temporal-Period 854 858	past
 T93	Eq-Value 859 863	four
 T94	Eq-Temporal-Unit 864 869	weeks
 T95	Acuteness 880 885	acute
-T96	Condition-Name 886 893	disease
 T97	Condition-Name 903 912	infection
 T98	Drug-Name 923 933	antibiotic
 T99	Drug-Name 937 946	antiviral
@@ -160,7 +158,6 @@ T8	Eq-Temporal-Unit 179 185	months
 T123	Immunization-Name 270 286	HBV immunization
 T124	Modifier 262 269	primary
 T125	Family-Member 304 312	guardian
-T126	Encounter 354 365	Follow - up
 T127	Observation 376 392	blood collection
 T129	Immunization 399 410	vaccination
 T22	Immunization 570 577	vaccine
@@ -225,7 +222,6 @@ R25	Or Arg1:E37 Arg2:E40
 R26	Or Arg1:E43 Arg2:E46
 R27	Or Arg1:E48 Arg2:E50
 R28	Or Arg1:E47 Arg2:E60
-R29	And Arg1:E70 Arg2:E71
 R30	Or Arg1:E61 Arg2:E62
 R31	Or Arg1:E62 Arg2:E63
 R32	Or Arg1:E63 Arg2:E64

@@ -3,9 +3,7 @@ E3	Procedure:T3 Name:T4 Temporality:E11
 E4	Age:T5 Numeric-Filter:E13
 E2	Eq-Comparison:T7 Temporal-Period:T8
 E5	Procedure:T9 Name:T10 Temporality:E2
-E7	Provider:T12
-E8	Modifier:T15 Modifies:T13
-E9	Modifier:T16 Modifies:T13
+E7	Provider:T12 
 E11	Eq-Comparison:T18 Temporal-Period:T19
 E12	Negation:T20 Negates:E3
 E13	Eq-Comparison:T21 Operator:T22 Value:T6 Temporal-Unit:T23
@@ -22,8 +20,6 @@ T9	Procedure 66 87	orbital ball implants
 T10	Procedure-Name 66 87	orbital ball implants
 T12	Provider 121 144	ophthalmologist surgeon
 T14	Location 201 207	centre
-T15	Modifier 161 173	oculoplastic
-T16	Modifier 178 193	orbital surgery
 T18	Eq-Comparison 265 274	underwent
 T19	Eq-Temporal-Period 265 274	underwent
 T20	Negation 248 256	excluded
@@ -37,5 +33,4 @@ A4	Eq-Temporal-Period-Value T19 past
 A5	Eq-Operator-Value T22 LT
 A6	Eq-Temporal-Unit-Value T23 year
 R1	After Arg1:E5 Arg2:E1
-R2	And Arg1:E8 Arg2:E9
 R3	Or Arg1:E3 Arg2:E4

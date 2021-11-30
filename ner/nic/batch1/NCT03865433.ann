@@ -9,8 +9,8 @@ E17	Age:T22 Numeric-Filter:E20
 E19	Eq-Comparison:T32 Operator:T19 Value:T30 Value2:T115
 E20	Eq-Comparison:T33 Operator:T23 Value:T25 Temporal-Unit:T20 Value2:T26
 E2	Condition:T36 Name:T37 Temporality:E18 Provider:E6
-E4	Study:T38
-E6	Provider:T39
+E4	Study:T38 
+E6	Provider:T39 
 E10	Condition:T42 Name:T43 Temporality:E8
 E13	Procedure:T45 Name:T46
 E15	Condition:T47 Name:T48
@@ -29,14 +29,13 @@ E34	Drug:T72 Name:T73 Temporality:E59
 E36	Drug:T75 Name:T76
 E37	Drug:T77 Name:T78
 E5	Observation:T5 Name:T6 Numeric-Filter:E19
-E38	Risk:T79
-E39	Study:T80
-E40	Study:T81
+E38	Risk:T79 
+E39	Study:T80 
+E40	Study:T81 
 E42	Observation:T84 Name:T85
 E43	Negation:T86 Negates:E44
-E44	Study:T87
+E44	Study:T87 
 E18	Eq-Comparison:T31 Operator:T24 Value:T27 Value2:T28 Temporal-Unit:T21
-E21	
 E8	Eq-Comparison:T41 Temporal-Period:T90
 E47	Eq-Comparison:T91 Temporal-Period:T92
 E22	Observation:T49 Name:T50
@@ -200,7 +199,6 @@ R15	Caused-By Arg1:E41 Arg2:E16
 R16	Or Arg1:E10 Arg2:E11
 R17	Or Arg1:E33 Arg2:E34
 R18	And Arg1:E17 Arg2:T35
-R19	Before Arg1:E18 Arg2:E21
 R20	Or Arg1:E51 Arg2:E50
 R21	Or Arg1:E9 Arg2:E56
 R22	Or Arg1:E34 Arg2:E5
@@ -211,3 +209,5 @@ R26	Or Arg1:E7 Arg2:E13
 R27	Or Arg1:E13 Arg2:E3
 R28	Or Arg1:E32 Arg2:E33
 R29	Or Arg1:E36 Arg2:E37
+R19	Before Arg1:E18 Arg2:T34	
+R30	Or Arg1:E15 Arg2:E1	

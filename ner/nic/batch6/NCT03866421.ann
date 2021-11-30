@@ -87,7 +87,6 @@ T62	Observation 1037 1043	Weight
 T63	Eq-Comparison 1044 1052	> 130 kg
 T65	Procedure 1061 1080	Implanted pacemaker
 T66	Procedure-Name 20 39	kidney transplanted
-T67	Encounter-Type 56 66	Outpatient
 T68	Location 127 142	Herlev Hospital
 T69	Eq-Temporal-Period 143 152	scheduled
 T70	Procedure-Name 159 181	kidney transplantation
@@ -166,7 +165,6 @@ T40	Assertion 801 813	waiting list
 T117	Eq-Comparison 884 888	30 g
 T118	Eq-Value 884 886	30
 T126	Modifier 944 945	A
-A1	Encounter-Type-Value T67 inpatient
 A2	Location-Value T68 hospital
 A3	Eq-Temporal-Period-Value T69 future
 A4	Observation-Type-Value E10 lab
@@ -222,3 +220,4 @@ R23	Or Arg1:E60 Arg2:E62
 R24	Or Arg1:E62 Arg2:E65
 R25	And Arg1:E46 Arg2:E22
 R26	Or Arg1:E66 Arg2:E50
+A1	Encounter-Type-Value E2 outpatient

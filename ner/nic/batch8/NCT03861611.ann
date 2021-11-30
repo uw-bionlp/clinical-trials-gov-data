@@ -13,22 +13,21 @@ E15	Eq-Comparison:T15 Operator:T52 Value:T53 Temporal-Unit:T54
 E16	Eq-Comparison:T16 Value:T55 Temporal-Unit:T56
 E17	Modifier:T17 Modifies:T57
 E18	Condition:T18 Name:T57
-E19	Encounter:T19
+E19	Encounter:T19 Location:T59
 E20	Modifier:T20 Modifies:T60
 E21	Observation:T21 Name:T60
 E22	Observation:T22 Name:T61
 E24	Modifier:T24 Modifies:T61
 E25	Negation:T25 Negates:E26
-E26	Assertion:T26 Asserted:E27
-E27	
+E26	Assertion:T26 Asserted:T27
 E28	Condition:T28 Name:T63
 E30	Condition:T30 Name:T64 Acuteness:T29
 E31	Allergy:T31 Name:E34
 E33	Study:T33 Study-Of:E34
-E34	Drug:T34
+E34	Drug:T34 
 E37	Study:T37 Study-Of:E38
-E38	Drug:T38
-E4	Encounter:T4
+E38	Drug:T38 
+E4	Encounter:T4 
 E39	Modifier:T68 Modifies:T46
 E11	Modifier:T11 Modifies:T49
 E40	Negation:T70 Negates:E12
@@ -86,7 +85,6 @@ T54	Eq-Temporal-Unit 324 329	weeks
 T55	Eq-Value 331 334	336
 T56	Eq-Temporal-Unit 335 340	hours
 T57	Condition-Name 362 365	LBP
-T58	Encounter-Type 392 402	discharged
 T59	Location 403 407	home
 T60	Observation-Name 440 444	pain
 T61	Observation-Name 454 458	pain
@@ -111,7 +109,6 @@ A5	Eq-Operator-Value T47 GT
 A7	Eq-Operator-Value T52 LT
 A8	Eq-Temporal-Unit-Value T54 week
 A9	Eq-Temporal-Unit-Value T56 hour
-A10	Encounter-Type-Value T58 discharge
 A11	Location-Value T59 residence
 A12	Encounter-Type-Value E4 emergency
 A13	Condition-Type-Value T67 admitting
@@ -126,3 +123,4 @@ R5	Equivalent-To Arg1:E22 Arg2:E21
 R6	Caused-By Arg1:E23 Arg2:E34
 R7	Or Arg1:T39 Arg2:T40
 R8	Or Arg1:E31 Arg2:E23
+A10	Encounter-Type-Value E19 discharge

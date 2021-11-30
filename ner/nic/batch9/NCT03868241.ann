@@ -1,4 +1,4 @@
-E1	Encounter:T1
+E1	Encounter:T1 
 E2	Assertion:T2 Asserted:E3
 E3	Procedure:T3 Name:T49 Provider:E46
 E4	Procedure:T4 Name:T50
@@ -13,7 +13,7 @@ E14	Procedure:T14 Name:T63
 E15	Procedure:T15 Name:T64
 E16	Procedure:T16 Name:T65
 E18	Procedure:T18 Name:T66
-E20	Study:T20
+E20	Study:T20 
 E22	Negation:T22 Negates:E47
 E23	Eq-Comparison:T23 Temporal-Period:T67
 E24	Procedure:T24 Name:T68 Temporality:E23
@@ -22,7 +22,7 @@ E26	Eq-Comparison:T26 Operator:T69 Value:T70 Temporal-Unit:T71
 E27	Condition:T27 Name:T72
 E28	Allergy:T28 Name:T88 Name2:T29 Name3:T31
 E32	Assertion:T32 Asserted:E34
-E34	Death:T34
+E34	Death:T34 
 E35	Study:T35 Temporality:E49
 E37	Condition:T37 Name:T76 Severity:T75 Acuteness:T36
 E38	Assertion:T38 Asserted:T77
@@ -31,7 +31,7 @@ E40	Eq-Comparison:T40 Temporal-Period:T79
 E41	Procedure:T41 Name:T80 Temporality:E40
 E43	Condition:T43 Name:T81
 E45	Procedure:T45 Name:T82
-E46	Provider:T83
+E46	Provider:T83 
 E47	Assertion:T85 Asserted:T87
 E48	Coreference:T86 Refers-To:E14 Stability:T87
 E29	Modifier:T89 Modifies:E34
@@ -73,18 +73,15 @@ T40	Eq-Comparison 960 968	Previous
 T41	Procedure 969 980	irradiation
 T43	Condition 988 998	thrombosis
 T45	Procedure 1020 1038	catheter insertion
-T46	Encounter-Type 38 46	admitted
 T47	Location 54 73	intensive care unit
 T49	Procedure-Name 106 136	insertion of all three devices
 T50	Procedure-Name 138 155	endotracheal tube
 T51	Procedure-Name 157 180	central venous catheter
 T52	Procedure-Name 185 201	urinary catheter
-T53	Encounter-Type 300 308	admitted
 T54	Location 316 335	intensive care unit
 T55	Eq-Operator 340 349	more than
 T56	Eq-Value 350 352	48
 T57	Eq-Temporal-Unit 353 358	hours
-T58	Encounter-Type 362 370	admitted
 T59	Location 378 386	hospital
 T60	Eq-Operator 391 400	more than
 T61	Eq-Value 401 406	seven
@@ -124,13 +121,10 @@ T91	Modifier 1002 1006	site
 A1	Assertion-Type-Value E2 hypothetical
 A3	Assertion-Type-Value E32 possible
 A4	Assertion-Type-Value E38 hypothetical
-A5	Encounter-Type-Value T46 inpatient
 A6	Location-Value T47 unit
-A8	Encounter-Type-Value T53 inpatient
 A9	Location-Value T54 unit
 A10	Eq-Operator-Value T55 GT
 A11	Eq-Temporal-Unit-Value T57 hour
-A12	Encounter-Type-Value T58 inpatient
 A13	Location-Value T59 hospital
 A14	Eq-Operator-Value T60 GT
 A15	Eq-Temporal-Unit-Value T62 day
@@ -165,3 +159,6 @@ R16	Or Arg1:E32 Arg2:E29
 R17	Or Arg1:E41 Arg2:E43
 R18	Or Arg1:E4 Arg2:E5
 R19	Or Arg1:E15 Arg2:E16
+A2	Encounter-Type-Value E12 inpatient
+A8	Encounter-Type-Value E9 inpatient
+A5	Encounter-Type-Value E1 inpatient

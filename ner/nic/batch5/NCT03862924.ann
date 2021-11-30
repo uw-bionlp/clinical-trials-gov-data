@@ -16,10 +16,9 @@ E16	Procedure:T17 Name:T78
 E17	Procedure:T18 Name:T79 Temporality:E15
 E18	Eq-Comparison:T19 Temporal-Period:T80
 E21	Eq-Comparison:T22 Operator:T83 Value:T84 Temporal-Unit:T85 Per:T86
-E22	Modifier:T23 Modifies:T88
-E24	Modifier:T25 Modifies:T88
-E25	Condition:T26 Name:T88 Stability:T87
-E26	
+E22	Modifier:T23 Modifies:E25
+E24	Modifier:T25 Modifies:E25
+E25	Condition:T26 Stability:T87
 E27	Contraindication:T28 Contraindicates:E28
 E28	Drug:T29 Name:T90
 E29	Condition:T30 Name:T91 Stability:T82
@@ -27,7 +26,6 @@ E30	Modifier:T31 Modifies:T92
 E31	Condition:T32 Name:T92
 E33	Eq-Comparison:T34 Temporal-Period:T93
 E34	Condition:T35 Name:T94 Temporality:E33
-E35	
 E36	Condition:T37 Name:T96
 E37	Assertion:T38 Asserted:E36
 E38	Condition:T39 Name:T97
@@ -65,7 +63,6 @@ T22	Eq-Comparison 488 509	more than 2 days/week
 T23	Modifier 524 531	medical
 T25	Modifier 535 546	psychiatric
 T26	Condition 547 556	condition
-T27	Encounter 569 584	hospitalization
 T28	Contraindication 599 616	contraindications
 T29	Drug 620 628	nicotine
 T30	Condition 639 645	angina
@@ -73,7 +70,6 @@ T31	Modifier 647 659	uncontrolled
 T32	Condition 660 672	hypertension
 T34	Eq-Comparison 677 683	recent
 T35	Condition 684 704	cardiovascular event
-T36	Encounter 716 731	hospitalization
 T37	Condition 738 747	psychotic
 T38	Assertion 748 756	symptoms
 T39	Condition 762 784	substance use disorder
@@ -119,14 +115,11 @@ T84	Eq-Value 498 499	2
 T85	Eq-Temporal-Unit 500 504	days
 T86	Eq-Temporal-Unit 505 509	week
 T87	Stability 515 523	unstable
-T88	Condition-Name 547 556	condition
-T89	Encounter-Type 569 584	hospitalization
 T90	Drug-Name 620 628	nicotine
 T91	Condition-Name 639 645	angina
 T92	Condition-Name 660 672	hypertension
 T93	Eq-Temporal-Period 677 683	recent
 T94	Condition-Name 684 704	cardiovascular event
-T95	Encounter-Type 716 731	hospitalization
 T96	Condition-Name 738 747	psychotic
 T97	Condition-Name 762 784	substance use disorder
 T98	Condition-Name 796 815	nicotine dependence
@@ -168,9 +161,7 @@ A22	Eq-Operator-Value T83 GT
 A23	Eq-Temporal-Unit-Value T85 day
 A24	Eq-Temporal-Unit-Value T86 week
 A25	Stability-Value T87 change
-A26	Encounter-Type-Value T89 inpatient
 A27	Eq-Temporal-Period-Value T93 recent
-A28	Encounter-Type-Value T95 inpatient
 A29	Eq-Temporal-Period-Value T99 past
 A30	Eq-Temporal-Unit-Value T100 month
 A31	Eq-Temporal-Period-Value T102 past
@@ -183,12 +174,17 @@ A20	Observation-Type-Value E49 social-habit
 R1	Equivalent-To Arg1:E3 Arg2:E1
 R2	Abbrev-Of Arg1:E50 Arg2:E10
 R3	Using Arg1:E17 Arg2:E16
-R4	Equivalent-To Arg1:E26 Arg2:E25
 R5	Example-Of Arg1:E29 Arg2:E27
 R6	Example-Of Arg1:E31 Arg2:E27
-R7	Example-Of Arg1:E34 Arg2:E35
 R8	Example-Of Arg1:E34 Arg2:E27
 R9	Or Arg1:E22 Arg2:E24
 R10	Or Arg1:E31 Arg2:E34
 R11	Or Arg1:E42 Arg2:E45
 R12	Or Arg1:E46 Arg2:E48
+T7	Encounter 569 584	hospitalization
+E7	Encounter:T7 
+A21	Encounter-Type-Value E7 inpatient
+R4	Equivalent-To Arg1:E7 Arg2:E25	
+T24	Encounter 716 731	hospitalization
+E23	Encounter:T24 
+R7	Example-Of Arg1:E23 Arg2:E34	

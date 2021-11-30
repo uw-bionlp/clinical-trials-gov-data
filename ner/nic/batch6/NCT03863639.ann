@@ -19,7 +19,7 @@ E23	Modifier:T23 Modifies:T118
 E24	Modifier:T24 Modifies:T118
 E26	Modifier:T26 Modifies:T118
 E27	Observation:T27 Name:T118 Severity:T116
-E29	Drug:T30
+E29	Drug:T30 
 E31	Negation:T32 Negates:E28
 E33	Observation:T34 Name:T119 Numeric-Filter:E34
 E34	Eq-Comparison:T35 Operator:T120 Value:T121 Unit:T122
@@ -29,8 +29,6 @@ E38	Eq-Comparison:T39 Operator:T126 Unit:T127 Value:T117
 E40	Observation:T41 Name:T128 Minimum-Count:E35 Temporality:E42
 E41	Eq-Comparison:T42 Operator:T129 Unit:T130 Value:T178
 E42	Eq-Comparison:T43 Operator:T132 Value:T133 Temporal-Unit:T134
-E44	
-E45	Exception:T46 From:E44 Except:E47
 E47	Procedure:T48 Name:T135
 E48	Condition:T49 Name:T136
 E49	Eq-Comparison:T50 Operator:T137 Value:T138 Unit:T140
@@ -70,11 +68,11 @@ E94	Procedure:T95 Name:T177
 E1	Assertion:T1 Asserted:E3
 E96	Modifier:T100 Modifies:T101
 E13	Modifier:T13 Modifies:T112
-E28	Condition:T28
+E28	Condition:T28 
 E95	Other:T96 Is-Other:E28
 E35	Eq-Comparison:T179 Value:T131 Unit:T180
 E50	Eq-Comparison:T53 Value:T54
-E53	Study:T70
+E53	Study:T70 
 E64	Observation:T151 Name:T181 Numeric-Filter:E87
 E68	Assertion:T184 Asserted:E90
 E69	Contraindication:T94 Contraindicates:E94
@@ -109,7 +107,6 @@ T39	Eq-Comparison 672 681	≥160 mmHg
 T41	Observation 685 709	diastolic blood pressure
 T42	Eq-Comparison 710 719	≥110 mmHg
 T43	Eq-Comparison 737 762	at least four hours apart
-T45	Encounter 787 794	bedrest
 T46	Exception 796 802	unless
 T48	Procedure 821 845	antihypertensive therapy
 T49	Condition 853 869	Thrombocytopenia
@@ -246,7 +243,6 @@ T182	Condition-Name 1557 1571	unable to read
 T183	Procedure-Name 1601 1627	neuropsychological testing
 T184	Assertion 1581 1587	unable
 T94	Contraindication 1663 1669	unsafe
-T47	Observation-Name 880 889	platelets
 A3	Assertion-Type-Value E71 hypothetical
 A4	Assertion-Type-Value E74 possible
 A5	Severity-Value T97 severe
@@ -284,7 +280,6 @@ A2	Polarity-Value T36 high
 A37	Polarity-Value T52 abnormal
 A38	Location-Value T69 unit
 A39	Assertion-Type-Value E68 hypothetical
-A36	Observation-Type-Value T47 lab
 R1	Equivalent-To Arg1:E3 Arg2:E2
 R2	Equivalent-To Arg1:E7 Arg2:E3
 R3	Example-Of Arg1:E8 Arg2:E7
@@ -317,9 +312,14 @@ R29	Or Arg1:E56 Arg2:E59
 R30	Or Arg1:T156 Arg2:T69
 R31	And Arg1:E75 Arg2:E77
 R32	Or Arg1:E64 Arg2:E89
-R33	During Arg1:E40 Arg2:E44
 R34	And Arg1:E59 Arg2:E60
 R35	And Arg1:E65 Arg2:E67
 R36	Or Arg1:E8 Arg2:E9
 R37	Or Arg1:E9 Arg2:E10
 R38	Or Arg1:E10 Arg2:E11
+T6	Observation 787 794	bedrest
+E6	Observation:T6 Name:T16
+T16	Observation-Name 787 794	bedrest
+R33	During Arg1:E40 Arg2:E6	
+R39	During Arg1:E37 Arg2:E6	
+E16	Exception:T46 From:E36 Except:E47

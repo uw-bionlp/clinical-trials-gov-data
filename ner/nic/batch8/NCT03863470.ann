@@ -1,6 +1,6 @@
 E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Operator:T20 Temporal-Unit:T21 Value:T3
-E4	Encounter:T4
+E4	Encounter:T4 
 E8	Procedure:T8 Name:T27 Duration:E9
 E9	Eq-Comparison:T9 Operator:T28 Value:T29 Temporal-Unit:T30
 E10	Modifier:T10 Modifies:T27
@@ -29,7 +29,6 @@ T18	Modifier 470 478	Ischemic
 T19	Condition 479 485	stroke
 T20	Eq-Operator 29 30	≥
 T21	Eq-Temporal-Unit 33 38	years
-T22	Encounter-Type 53 62	Admission
 T27	Procedure-Name 114 136	mechanical ventilation
 T28	Eq-Operator 141 142	≥
 T29	Eq-Value 143 145	48
@@ -50,7 +49,6 @@ T26	Condition-Name 416 425	diagnosis
 T31	Condition-Type 406 415	admission
 A1	Eq-Operator-Value T20 GTEQ
 A2	Eq-Temporal-Unit-Value T21 year
-A3	Encounter-Type-Value T22 inpatient
 A5	Eq-Operator-Value T28 GTEQ
 A6	Eq-Temporal-Unit-Value T30 hour
 A4	Location-Value T5 unit
@@ -60,3 +58,4 @@ A10	Acuteness-Type-Value T34 acute
 R1	And Arg1:E4 Arg2:E8
 R2	And Arg1:E8 Arg2:E12
 R3	And Arg1:E1 Arg2:E4
+A3	Encounter-Type-Value E4 inpatient

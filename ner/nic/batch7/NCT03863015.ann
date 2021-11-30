@@ -2,12 +2,10 @@ E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Operator:T44 Value:T45 Temporal-Unit:T46
 E3	Condition:T3 Name:T47
 E4	Condition:T4 Name:T48
-E6	
 E7	Observation:T7 Name:T50 Numeric-Filter:E8
 E8	Eq-Comparison:T8 Operator:T51 Value:T52
 E9	Observation:T9 Name:T54 Severity:T53 Duration:E10
 E10	Eq-Comparison:T10 Operator:T55 Value:T56 Temporal-Unit:T57
-E11	
 E12	Observation:T12 Name:T60
 E13	Eq-Comparison:T13 Operator:T61 Value:T62
 E16	Condition:T16 Name:T91
@@ -19,28 +17,27 @@ E23	Condition:T23 Name:T67
 E26	Observation:T26 Name:T70 Polarity:T69
 E27	Assertion:T27 Asserted:E28
 E28	Condition:T28 Name:T71
-E29	
 E30	Eq-Comparison:T30 Operator:T73 Value:T74 Unit:T99
 E31	Condition:T31 Name:T76
 E32	Negation:T32 Negates:E54
-E33	Condition:T33
+E33	Condition:T33 
 E34	Eq-Comparison:T34 Value:T77 Temporal-Unit:T78
 E36	Procedure:T36 Name:T79
 E38	Observation:T38 Name:T108 Numeric-Filter:E39
 E39	Eq-Comparison:T39 Value:T81 Operator:T82 Value:T83
 E40	Eq-Comparison:T40 Operator:T84 Value:T85 Temporal-Unit:T86
-E43	Study:T43
+E43	Study:T43 
 E44	Condition:T87 Name:T88
-E45	Condition:T89 Name:T58
+E45	Observation:T89 Name:T58
 E14	Modifier:T14 Modifies:T91
 E15	Negation:T15 Negates:E14
 E47	Modifier:T63 Modifies:T65
 E25	Condition:T25 Name:T92
-E48	Study:T93
+E48	Study:T93 
 E51	Observation:T96 Name:T97 Numeric-Filter:E30
 E53	Modifier:T75 Modifies:T76
 E54	Modifier:T100 Modifies:T76
-E55	Study:T101
+E55	Study:T101 
 E35	Death:T35 Temporality:E34
 E57	Risk:T104 Risk-For:E35
 E58	Negation:T105 Negates:E36
@@ -51,12 +48,10 @@ T1	Age 104 107	Age
 T2	Eq-Comparison 108 118	≥ 18 years
 T3	Condition 143 156	cardiac cause
 T4	Condition 162 177	Unconsciousness
-T6	Encounter 183 192	admission
 T7	Observation 201 204	GCS
 T8	Eq-Comparison 205 208	< 9
 T9	Observation 224 228	ROSC
 T10	Eq-Comparison 233 253	more than 20 minutes
-T11	Encounter 377 386	admission
 T12	Observation 395 398	GCS
 T13	Eq-Comparison 399 402	≥ 9
 T16	Condition 438 444	arrest
@@ -84,7 +79,6 @@ T45	Eq-Value 110 112	18
 T46	Eq-Temporal-Unit 113 118	years
 T47	Condition-Name 143 156	cardiac cause
 T48	Condition-Name 162 177	Unconsciousness
-T49	Encounter-Type 183 192	admission
 T50	Observation-Name 201 204	GCS
 T51	Eq-Operator 205 206	<
 T52	Eq-Value 207 208	9
@@ -93,8 +87,7 @@ T54	Observation-Name 224 228	ROSC
 T55	Eq-Operator 233 242	more than
 T56	Eq-Value 243 245	20
 T57	Eq-Temporal-Unit 246 253	minutes
-T58	Condition-Name 358 371	Consciousness
-T59	Encounter-Type 377 386	admission
+T58	Observation-Name 358 371	Consciousness
 T60	Observation-Name 395 398	GCS
 T61	Eq-Operator 399 400	≥
 T62	Eq-Value 401 402	9
@@ -122,7 +115,7 @@ T85	Eq-Value 931 934	240
 T86	Eq-Temporal-Unit 935 942	minutes
 T87	Condition 124 128	OHCA
 T88	Condition-Name 124 128	OHCA
-T89	Condition 358 371	Consciousness
+T89	Observation 358 371	Consciousness
 T91	Condition-Name 438 444	arrest
 T14	Modifier 421 428	cardiac
 T15	Negation 417 420	non
@@ -149,12 +142,10 @@ A2	Assertion-Type-Value E18 possible
 A3	Assertion-Type-Value E27 hypothetical
 A7	Eq-Operator-Value T44 GTEQ
 A8	Eq-Temporal-Unit-Value T46 year
-A9	Encounter-Type-Value T49 inpatient
 A10	Eq-Operator-Value T51 LT
 A11	Severity-Value T53 severe
 A12	Eq-Operator-Value T55 GT
 A13	Eq-Temporal-Unit-Value T57 minute
-A14	Encounter-Type-Value T59 inpatient
 A15	Eq-Operator-Value T61 GTEQ
 A16	Life-Stage-And-Gender-Type T68 female
 A17	Polarity-Value T69 negative
@@ -174,14 +165,15 @@ R3	Equivalent-To Arg1:E12 Arg2:E45
 R4	If-Then Arg1:T68 Arg2:E25
 R5	Found-By Arg1:E28 Arg2:E26
 R6	Caused-By Arg1:E57 Arg2:E33
-R7	During Arg1:E4 Arg2:E6
 R8	Or Arg1:E18 Arg2:E47
 R9	Or Arg1:E20 Arg2:E22
 R10	Or Arg1:E23 Arg2:T68
 R11	Before Arg1:E60 Arg2:E38
 R12	After Arg1:E43 Arg2:E40
-R13	During Arg1:E45 Arg2:E11
 R14	During Arg1:E28 Arg2:E48
 R15	Or Arg1:E25 Arg2:E26
-R16	During Arg1:E51 Arg2:E29
 R17	During Arg1:E31 Arg2:E55
+T5	Encounter 377 386	admission
+E5	Encounter:T5 
+A1	Encounter-Type-Value E5 inpatient
+R7	During Arg1:E45 Arg2:E5	

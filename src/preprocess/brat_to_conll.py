@@ -1,7 +1,5 @@
 import os
-import re
 import sys
-import json
 import numpy as np
 from pathlib import Path
 sys.path.append(os.path.join(os.getcwd(), 'src'))
@@ -23,6 +21,15 @@ def brat_events_to_conll(output_filepath, anns):
         for ann in anns:
             brat_rows = set()
             evs  = [ v for k,v in ann.Es.items() ]
+
+            no_good = False
+            for ev in evs:
+                if not any(ev.args):
+                    print(ann.path, ann.doc_id, ev.id)
+                    no_good
+            if no_good:
+                continue
+
             for sent in ann.sents:
                 for tok in sent:
                     t_evs  = [ v for v in evs if tok.i in v.args[0].val.tok_idxs ]

@@ -3,7 +3,7 @@ E4	Eq-Comparison:T4 Operator:T16 Value:T17 Temporal-Unit:T18
 E6	Negation:T6 Negates:T20 Negates2:T5
 E7	Condition:T7 Name:T12 Acuteness:T13
 E8	Assertion:T8 Asserted:E9
-E9	Encounter:T9
+E9	Encounter:T9 
 E1	Age:T1 Numeric-Filter:E3
 E2	Age:T2 Numeric-Filter:E4
 T3	Eq-Comparison 419 432	were 18 years
@@ -20,7 +20,6 @@ T17	Eq-Value 481 483	18
 T18	Eq-Temporal-Unit 484 489	years
 T20	Location 621 650	cardiology outpatient clinics
 T21	Location 747 755	hospital
-T22	Encounter-Type 756 765	admission
 T11	Location 211 239	cardiology outpatient clinic
 T1	Age 433 436	old
 T2	Age 490 493	old
@@ -34,8 +33,8 @@ A8	Eq-Operator-Value T16 LT
 A9	Eq-Temporal-Unit-Value T18 year
 A11	Location-Value T20 clinic
 A12	Location-Value T21 hospital
-A13	Encounter-Type-Value T22 inpatient
 A4	Location-Value T11 clinic
 A1	Location-Value T5 hospital
 A5	Acuteness-Type-Value T13 acute
 R1	Treatment-For Arg1:E9 Arg2:E7
+A6	Encounter-Type-Value E9 inpatient

@@ -10,15 +10,14 @@ E12	Age:T12 Numeric-Filter:E13
 E13	Eq-Comparison:T13 Operator:T45 Temporal-Unit:T46 Value:T63
 E14	Observation:T14 Name:T64 Numeric-Filter:E15
 E15	Eq-Comparison:T15 Value:T47 Operator:T48 Value2:T49
-E16	Procedure:T16
-E18	
+E16	Procedure:T16 
 E19	Other:T19 Is-Other:E21
 E20	Eq-Comparison:T20 Temporal-Period:T50
 E21	Condition:T21 Name:T51 Temporality:E20 Temporality2:E22
 E22	Eq-Comparison:T22 Temporal-Period:T52 Value:T53 Temporal-Unit:T54
-E25	Study:T25
+E25	Study:T25 
 E26	Exception:T26 From:E21 Except:E29
-E27	Procedure:T27
+E27	Procedure:T27 
 E28	Modifier:T28 Modifies:T55
 E29	Condition:T29 Name:T55
 E30	Condition:T30 Name:T57 Severity:T56
@@ -30,11 +29,11 @@ E36	Procedure:T36 Name:T61 Temporality:E35
 E37	Modifier:T37 Modifies:T62
 E39	Modifier:T39 Modifies:T62
 E40	Condition:T40 Name:T62
-E41	Assertion:T65 Asserted:E16 Asserted2:E18
+E41	Assertion:T65 Asserted:E16 Asserted2:T18
 E24	Negation:T24 Negates:E28
 E42	Modifier:T66 Modifies:T59
 E43	Modifier:T67 Modifies:T59
-E44	Study:T68
+E44	Study:T68 
 E45	Negation:T69 Negates:E44
 E46	Assertion:T70 Asserted:E45
 T1	Assertion 40 49	suspicion
@@ -118,7 +117,6 @@ R3	Caused-By Arg1:E45 Arg2:E40
 R4	Or Arg1:E2 Arg2:E4
 R5	And Arg1:E5 Arg2:E7
 R6	Or Arg1:E9 Arg2:E11
-R7	And Arg1:E16 Arg2:E18
 R8	Before Arg1:E22 Arg2:E25
 R9	Or Arg1:E33 Arg2:E42
 R10	Or Arg1:E37 Arg2:E39

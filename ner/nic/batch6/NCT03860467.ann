@@ -13,7 +13,6 @@ T3	Condition 109 127	epileptic seizures
 T5	Procedure 159 162	EEG
 T7	Condition 225 243	epileptic seizures
 T8	Condition 262 280	Status epilepticus
-T9	Encounter-Type 25 33	admitted
 T10	Location 41 44	ICU
 T11	Location 52 77	University Hospital Basel
 T12	Eq-Value 97 100	one
@@ -28,7 +27,6 @@ T21	Location 177 180	ICU
 T22	Condition 282 284	SE
 T23	Condition-Name 282 284	SE
 T24	Stability 244 256	transforming
-A2	Encounter-Type-Value T9 inpatient
 A3	Location-Value T10 unit
 A4	Location-Value T11 hospital
 A5	Eq-Operator-Value T13 GTEQ
@@ -40,3 +38,4 @@ R2	Abbrev-Of Arg1:E11 Arg2:E8
 R3	Caused-By Arg1:T24 Arg2:E8
 R4	Or Arg1:E9 Arg2:E5
 R5	During Arg1:E3 Arg2:E10
+A1	Encounter-Type-Value E1 inpatient
