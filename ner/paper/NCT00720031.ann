@@ -10,8 +10,6 @@ T6	Modifier 39 52	loco-regional
 E4	Modifier:T6 Modifies:T5
 T7	Modifier 56 66	lymph node
 E5	Modifier:T7 Modifies:T5
-T8	Or 53 55	or
-E6	Or:T8 Arg:E4 Arg2:E5
 T9	Condition 78 93	transit nodules
 E7	Condition:T9 Name:T10
 T10	Condition-Name 78 93	transit nodules
@@ -31,8 +29,6 @@ T17	Modifier 120 140	measurable cutaneous
 E12	Modifier:T17 Modifies:T16
 T18	Modifier 144 152	visceral
 E13	Modifier:T18 Modifies:T16
-T19	Or 141 143	or
-E14	Or:T19 Arg:E12 Arg2:E13
 T20	Condition 174 179	tumor
 E15	Condition:T20 Name:T21
 T21	Condition-Name 174 179	tumor
@@ -43,8 +39,6 @@ T24	Modifier 196 202	MART-1
 E17	Modifier:T24 Modifies:T23
 T25	Modifier 188 195	Melan-A
 E18	Modifier:T25 Modifies:T23
-T26	Or 195 196	/
-E19	Or:T26 Arg:E18 Arg2:E17
 R2	Caused-By Arg1:E16 Arg2:E15	
 T27	Procedure 215 237	chemotherapy treatment
 E20	Procedure:T27 Name:T28
@@ -63,9 +57,6 @@ T35	Eq-Comparison 275 280	first
 E25	Eq-Comparison:T35 Temporal-Recency:T36
 T36	Eq-Temporal-Recency 275 280	first
 A2	Eq-Temporal-Recency-Value T36 first-time
-T37	Temporal-Connection 264 270	before
-E26	Temporal-Connection:T37 Arg:E22 Arg2:E25
-A3	Temporal-Connection-Type-Value E26 before
 T38	Eq-Comparison 259 263	used
 E27	Eq-Comparison:T38 Temporal-Period:T39
 T39	Eq-Temporal-Period 259 263	used
@@ -73,8 +64,6 @@ A4	Eq-Temporal-Period-Value T39 past
 T40	Procedure 308 320	radiotherapy
 E28	Procedure:T40 Name:T41
 T41	Procedure-Name 308 320	radiotherapy
-T42	Or 305 307	or
-E29	Or:T42 Arg:E20 Arg2:E28
 T43	Procedure 324 337	immunotherapy
 E30	Procedure:T43 Name:T44
 T44	Procedure-Name 324 337	immunotherapy
@@ -141,3 +130,8 @@ T76	Eq-Value 529 530	1
 T77	Eq-Value 534 535	2
 T78	Other 378 383	other
 E47	Other:T78 Is-Other:E39
+R4	Or Arg1:E4 Arg2:E5	
+R5	Or Arg1:E12 Arg2:E13	
+R6	Or Arg1:E18 Arg2:E17	
+R7	Before Arg1:E22 Arg2:E25	
+R8	Or Arg1:E20 Arg2:E28	

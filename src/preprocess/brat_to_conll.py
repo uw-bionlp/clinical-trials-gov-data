@@ -115,6 +115,16 @@ def quality_check(annotations):
             if a == None:
                 print(f'Data Quality Warning: Entity Attribute {x[0]} has no Attribute Value selected!')
 
+def get_doc_names_from_conll(path):
+    doc_ids = set()
+    with open(path, 'r', encoding='utf-8') as fin:
+        for l in fin.readlines():
+            if l.strip():
+                doc_id = l.split(' ')[1]
+                if doc_id not in doc_ids:
+                    doc_ids.add(doc_id)
+    return doc_ids
+
 def main():
 
     conll_path = os.path.join(Config.preprocess_dir, 'conll')
@@ -127,11 +137,15 @@ def main():
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
 
-    quality_check(annotations)
+    #quality_check(annotations)
+    train_doc_ids = get_doc_names_from_conll(os.path.join('data','ner','_events','train.txt'))
+    test_doc_ids =  get_doc_names_from_conll(os.path.join('data','ner','_events','test.txt'))
 
     ## Split 
-    np.random.seed(1)
-    _, train, test = np.split(annotations, [ 0, int(.8*len(annotations))])
+    #np.random.seed(1)
+    #_, train, test = np.split(annotations, [ 0, int(.8*len(annotations))])
+    train = [ a for a in annotations if a.doc_id in train_doc_ids ]
+    test = [ a for a in annotations if a.doc_id in test_doc_ids ]
 
     events_path = os.path.join(conll_path, 'events')
     entities_path = os.path.join(conll_path, 'entities')

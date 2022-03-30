@@ -41,7 +41,7 @@ def main():
             if a.type in As: As[a.type] += 1
             else:            As[a.type] = 1
 
-    #args = { k:v for k, v in args.items() if k not in ['Name', 'Unit', 'Value', 'Temporal-Period', 'Temporal-Recency', 'Temporal-Unit', 'Per', 'Dose', 'Operator'] }
+    args = { k:v for k, v in args.items() if k not in ['Name', 'Unit', 'Value', 'Temporal-Period', 'Temporal-Recency', 'Temporal-Unit', 'Per', 'Dose', 'Operator'] }
 
     t_sum_cnt = sum([ cnt for t, cnt in Ts.items() ])
     print('Ts', t_sum_cnt)

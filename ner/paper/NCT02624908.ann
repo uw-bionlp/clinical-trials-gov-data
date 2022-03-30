@@ -1,0 +1,13 @@
+T1	Eq-Comparison 27 32	onset
+E1	Eq-Comparison:T1 Temporal-Recency:T2
+T2	Eq-Temporal-Recency 27 32	onset
+A1	Eq-Temporal-Recency-Value T2 first-time
+T3	Condition 36 44	diabetes
+E2	Condition:T3 Name:T4 Temporality:E1
+T4	Condition-Name 36 44	diabetes
+T5	Age 51 54	age
+E3	Age:T5 Numeric-Filter:E4
+T6	Eq-Comparison 55 57	30
+E4	Eq-Comparison:T6 Value:T7
+T7	Eq-Value 55 57	30
+R1	After Arg1:E1 Arg2:E3	

@@ -1,5 +1,5 @@
 T1	Age 0 3	age
-E1	Age:T1 Eq-Comparison:E2
+E1	Age:T1 Numeric-Filter:E2
 T2	Eq-Value 4 6	35
 T3	Eq-Comparison 4 17	35 - 75 years
 E2	Eq-Comparison:T3 Operator:T4 Value:T2 Value2:T5 Value3:T5 Temporal-Unit:T6
@@ -19,9 +19,8 @@ T12	Eq-Value 62 63	3
 T13	Eq-Temporal-Unit 64 69	years
 A4	Eq-Temporal-Unit-Value T13 year
 T14	Observation 71 76	HbA1c
-E6	Observation:T14 Name:T15 Eq-Comparison:E7
+E6	Observation:T14 Name:T15 Numeric-Filter:E7
 T15	Observation-Name 71 76	HbA1c
-A5	Observation-Type-Value T15 lab
 T16	Eq-Comparison 77 82	< 10%
 E7	Eq-Comparison:T16 Operator:T17 Value:T18 Unit:T19
 T17	Eq-Operator 77 78	<
@@ -31,7 +30,6 @@ T19	Eq-Unit 81 82	%
 T20	Observation 91 105	blood pressure
 E8	Observation:T20 Name:T21 Polarity:T22
 T21	Observation-Name 91 105	blood pressure
-A7	Observation-Type-Value T21 vital
 T22	Polarity 84 90	normal
 A8	Polarity-Value T22 normal
 T23	Condition 120 132	hypertension
@@ -39,8 +37,6 @@ E9	Condition:T23 Name:T24 Stability:T25
 T24	Condition-Name 120 132	hypertension
 T25	Stability 109 119	controlled
 A9	Stability-Value T25 stable
-T26	Or 106 108	or
-E10	Or:T26 Arg:E8 Arg2:E9
 T27	Observation 134 137	BMI
 E11	Observation:T27 Name:T28 Eq-Comparison:E12
 T28	Observation-Name 134 137	BMI
@@ -50,3 +46,6 @@ E12	Eq-Comparison:T29 Operator:T30 Value:T31
 T30	Eq-Operator 138 139	<
 A11	Eq-Operator-Value T30 LT
 T31	Eq-Value 140 142	40
+A12	Observation-Type-Value E6 lab
+A5	Observation-Type-Value E8 vital
+R1	Or Arg1:E8 Arg2:E9	

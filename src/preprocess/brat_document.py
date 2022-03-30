@@ -450,6 +450,125 @@ class BratDocument:
 
         return data
 
+    def to_spert_format(self, debug=False):
+
+        output = []
+        sents = [ [ tok.text for tok in sent ] for sent in self.sents ]
+        sents_tok_idxs = [ [ tok.i for tok in sent ] for sent in self.sents ]
+        regex_trailing_num = r'[0-9]$'
+
+        # For each sentence
+        min_tok_idx, max_tok_idx = 0, 0
+        for i, sent in enumerate(sents):
+
+            sent_output = { 
+                "orig_id": f'{i}_{self.doc_id}', 
+                "tokens": sent,
+                "entities": [], 
+                "relations": []
+            }
+
+            sent_tok_idxs = sents_tok_idxs[i]
+            ent_idx = {}
+            min_tok_idx = min(sent_tok_idxs)
+            max_tok_idx = max(sent_tok_idxs)
+
+            # Entities
+            for k, v in self.Ts.items():
+                if v.tok_beg_idx >= min_tok_idx and v.tok_end_idx <= max_tok_idx:
+                    
+                    a = [ a_v for a_k, a_v in self.As.items() if a_v.attr_of == v ]
+                    tp = f'{v.type}___{a[0].val}' if len(a) else v.type
+                    ent_idx[v.id] = len(ent_idx)
+                    
+                    if not any([ x for x in sent_output['entities'] if
+                        x["type"] == tp and 
+                        x["start"] == v.tok_beg_idx - min_tok_idx and 
+                        x["end"] == v.tok_end_idx - min_tok_idx ]):
+                        sent_output['entities'].append(
+                            { "type": tp, "start": v.tok_beg_idx - min_tok_idx, "end": v.tok_end_idx - min_tok_idx + 1 }
+                        )
+
+            # Relations
+            for k, v in self.Rs.items():
+                arg1 = v.arg1.args[0].val if isinstance(v.arg1, BratE) else v.arg1
+                arg2 = v.arg2.args[0].val if isinstance(v.arg2, BratE) else v.arg2
+                if  arg1.tok_beg_idx >= min_tok_idx and arg1.tok_end_idx <= max_tok_idx and \
+                    arg2.tok_beg_idx >= min_tok_idx and arg2.tok_end_idx <= max_tok_idx:
+
+                    if not any([ x for x in sent_output['relations'] if
+                        x["type"] == v.type and 
+                        x["head"] == ent_idx[arg1.id] and 
+                        x["tail"] == ent_idx[arg2.id] ]):
+                        sent_output['relations'].append(
+                            { "type": v.type, "head": ent_idx[arg1.id], "tail": ent_idx[arg2.id] }
+                        )
+
+            # Events
+            for k, v in self.Es.items():
+                trigger = v.args[0].val
+                
+                for i, ev in enumerate(v.args[1:]):
+                    if isinstance(ev.val, BratE):
+                        ev = ev.val.args[0]
+                    min_idx = ev.val.tok_beg_idx
+                    max_idx = ev.val.tok_end_idx
+                    ev_id   = ev.val.id
+                    ev_tp   = ev.val.type
+                    if min_idx == -1 or max_idx == -1:
+                        continue
+                    if min_idx >= min_tok_idx and max_idx <= max_tok_idx:
+                        tp = ev.type
+
+                        if trigger.id not in ent_idx:
+                            ent_idx[trigger.id] = len(ent_idx)
+                            if not any([ x for x in sent_output['entities'] if
+                                x["type"] == ev.type and 
+                                x["start"] == min_idx - max_tok_idx and 
+                                x["end"] == max_tok_idx - max_tok_idx ]):
+                                sent_output['entities'].append(
+                                    { "type": ev.type, "start": min_idx - min_tok_idx, "end": max_idx - min_tok_idx + 1 }
+                                )
+
+                        if 'Arg' not in tp and any(re.findall(regex_trailing_num, tp)):
+                            tp = re.sub(regex_trailing_num, '', tp)
+
+                        if ev.val.tok_beg_idx >= trigger.tok_beg_idx and ev.val.tok_end_idx <= trigger.tok_end_idx:
+                            continue
+                        
+                        if not any([ x for x in sent_output['relations'] if
+                            x["type"] == v.args[1:][i] and 
+                            x["head"] == ent_idx[trigger.id] and 
+                            x["tail"] == ent_idx[ev_id] ]):
+                            sent_output['relations'].append({ "type": v.args[1:][i].type, "head": ent_idx[trigger.id], "tail": ent_idx[ev_id] })
+
+            output.append(sent_output)
+            min_tok_idx = max_tok_idx
+
+        if debug:
+            toks = []
+            for sent in output['sentences']:
+                for t in sent:
+                    toks.append(t)
+
+            print(output['doc_key'])
+            print(f'    \nNER:')
+            for ne in output['ner']: 
+                for x in ne:
+                    print(f'        "{" ".join([ str(toks[y]) for y in sorted(set(x[:2])) ])}" {x[2]} {x}')
+            print(f'    \nRelations:')
+            for rel in output['relations']:
+                for x in rel:
+                    print(f'        "{" ".join([ str(toks[y]) for y in sorted(set(x[:2])) ])}" "{" ".join([ str(toks[y]) for y in sorted(set(x[2:-1])) ])}"  {x[4]} {x}')
+            print(f'    \nEvents:')
+            for ev in output['events']:
+                for x in ev:
+                    print(f'        "{toks[x[0][0]]}" {x[0][1]} {x}')
+                    for y in x[1:]:
+                        print(f'            "{" ".join([ str(toks[z]) for z in sorted(set(y[:2])) ])}" {y[2]}')
+
+        return output
+
 
 class BratSentence:
     def __init__(self, idx, toks):

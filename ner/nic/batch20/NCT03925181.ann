@@ -10,7 +10,7 @@ E11	Negation:T29 Negates:E9
 E12	Encounter:T30 Location:T31
 E14	Observation:T4 Name:T34 Location:T35
 E15	Observation:T5 Name:T36 Location:T37
-E16	Encounter:T38 
+E16	Encounter:T38 Temporality:E18
 E17	Encounter:T40 Duration:E7
 E7	Eq-Comparison:T23 Value:T41
 E18	Eq-Comparison:T42 Value:T43
@@ -44,7 +44,6 @@ T5	Observation 542 547	Lives
 T36	Observation-Name 542 547	Lives
 T37	Location 570 577	Calgary
 T38	Encounter 624 632	hospital
-T39	Encounter-Type 624 632	hospital
 T40	Encounter 188 196	hospital
 T23	Eq-Comparison 197 206	long-term
 T41	Eq-Value 197 206	long-term
@@ -65,8 +64,8 @@ A15	Location-Value T31 unit
 A16	Encounter-Type-Value E12 transfer
 A2	Location-Value T35 residence
 A3	Location-Value T37 residence
-A18	Encounter-Type-Value T39 inpatient
 A13	Encounter-Type-Value E17 inpatient
 A19	Location-Value T44 unit
 R1	After Arg1:E1 Arg2:E5
 R2	During Arg1:E9 Arg2:E12
+A11	Encounter-Type-Value E16 inpatient
