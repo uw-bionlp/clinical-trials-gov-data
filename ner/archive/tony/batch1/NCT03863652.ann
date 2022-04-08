@@ -1,0 +1,36 @@
+T1	Procedure 58 61	PCI
+T2	Procedure-Name 58 61	PCI
+E1	Procedure:T1 Name:T2
+T3	Eq-Operator 34 35	≥
+A1	Eq-Operator-Value T3 GTEQ
+T4	Eq-Temporal-Unit 38 43	years
+A2	Eq-Temporal-Unit-Value T4 year
+T5	Age 44 47	old
+E2	Age:T5 Eq-Comparison:E3
+T6	Eq-Value 35 37	18
+T7	Eq-Comparison 34 43	≥18 years
+E3	Eq-Comparison:T7 Operator:T3 Temporal-Unit:T4 Value:T6
+T8	Condition 84 112	palpable distal radial arter
+E4	Condition:T8 Name:T9
+T9	Condition-Name 84 112	palpable distal radial arter
+T11	Condition 257 286	palpable distal radial artery
+E6	Condition:T11 Name:T12
+T12	Condition-Name 257 286	palpable distal radial artery
+T13	Negation 253 256	not
+E7	Negation:T13 Negates:E6
+T14	Life-Stage-And-Gender 292 298	Female
+A3	Life-Stage-And-Gender-Type T14 female
+T15	Condition 302 324	childbearing potential
+E8	Condition:T15 Name:T16
+T16	Condition-Name 302 324	childbearing potential
+T17	Condition 355 363	pregnant
+E9	Condition:T17 Name:T18
+T18	Condition-Name 355 363	pregnant
+T19	Assertion 330 344	possibly plans
+E10	Assertion:T19 Asserted:E9
+A4	Assertion-Type-Value E10 intention
+T20	Temporal-Connection 373 378	after
+E11	Temporal-Connection:T20 Arg:E9 Arg2:E12
+A5	Temporal-Connection-Type-Value E11 after
+T21	Study 400 405	study
+E12	Study:T21 

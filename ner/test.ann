@@ -1,8 +1,37 @@
-T1	Condition 2 10	diseases
-E1	Condition:T1 
-T2	Stability 16 22	affect
-A1	Stability-Value T2 change
-T3	Observation 23 43	respiratory function
-E2	Observation:T3 Name:T4 Stability:T2
-T4	Observation-Name 23 43	respiratory function
-R1	Caused-By Arg1:T2 Arg2:E1	
+T1	Condition 0 18	Kidney disfunction
+E1	Condition:T1 Name:T2
+T2	Condition-Name 0 18	Kidney disfunction
+T3	Observation 20 40	creatinine clearance
+E2	Observation:T3 Name:T4 Numeric-Filter:E3
+A1	Observation-Type-Value E2 lab
+T4	Observation-Name 20 40	creatinine clearance
+T5	Eq-Comparison 41 63	below 10 ml per minute
+E3	Eq-Comparison:T5 Operator:T6 Value:T7 Per:T8 Unit:T9
+T6	Eq-Operator 41 46	below
+A2	Eq-Operator-Value T6 LT
+T7	Eq-Value 47 49	10
+T8	Eq-Temporal-Unit 57 63	minute
+A3	Eq-Temporal-Unit-Value T8 minute
+R1	Equivalent-To Arg1:E2 Arg2:E1	
+T9	Eq-Unit 50 52	ml
+T10	Condition 68 77	condition
+E4	Condition:T10 
+T11	Negation 65 67	No
+E5	Negation:T11 Negates:E4
+T12	Contraindication 78 94	contraindicating
+E6	Contraindication:T12 Contraindicates:E7
+T13	Procedure 102 105	MRI
+E7	Procedure:T13 Name:T14
+T14	Procedure-Name 102 105	MRI
+R2	Caused-By Arg1:E6 Arg2:E4	
+T15	Polarity 106 115	Increased
+A4	Polarity-Value T15 high
+T16	Risk 116 120	risk
+E8	Risk:T16 Polarity:T15 Risk-For:E9 Risk-For2:E10
+T17	Condition 125 131	stroke
+E9	Condition:T17 Name:T18
+T18	Condition-Name 125 131	stroke
+T19	Condition 135 145	thrombosis
+E10	Condition:T19 Name:T20
+T20	Condition-Name 135 145	thrombosis
+R3	Or Arg1:E9 Arg2:E10	

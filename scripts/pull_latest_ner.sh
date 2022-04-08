@@ -1,4 +1,4 @@
-SERVER=web79
+SERVER=nlpanno
 DATA_DIR=/data/www/brat/data/clinical-trials-gov
 TAR_FILE=ner.tar.gz
 

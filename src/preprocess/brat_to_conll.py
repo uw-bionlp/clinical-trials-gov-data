@@ -1,6 +1,7 @@
 import os
 import sys
 import numpy as np
+import random
 from pathlib import Path
 sys.path.append(os.path.join(os.getcwd(), 'src'))
 
@@ -16,7 +17,8 @@ def to_brat(output_dir, doc_id, Ts, text):
         fout.write('\n'.join(Ts)) 
 
 
-def brat_events_to_conll(output_filepath, anns):
+def brat_events_to_conll(output_filepath, anns, include_values=True, write_brat=True):
+    unq_labels = []
     with open(output_filepath, 'w+') as fout:
         for ann in anns:
             brat_rows = set()
@@ -39,7 +41,7 @@ def brat_events_to_conll(output_filepath, anns):
                             types_seen.add(ev.args[0].val.type)
                             a = [ v for k,v in ann.As.items() if v.attr_of == ev ]
                             a = a[0] if len(a) else None
-                            if a:
+                            if include_values and a:
                                 label = ev.args[0].val.type + '___' + a.type + ':' + a.val
                             else:
                                 label = ev.args[0].val.type
@@ -51,19 +53,23 @@ def brat_events_to_conll(output_filepath, anns):
                             t_evs  = [ v for v in evs if tok.i in v.args[0].val.tok_idxs and v.args[0].val.type != 'Age' ]
                             is_start = tok.i == t_evs[0].args[0].val.tok_idxs[0]
                         label = f'{"B" if is_start else "I"}-' + '|'.join(sorted(labels))
+                        unq_labels.append(label)
 
                         brat_rows.add(f'{label[2:]} {t_evs[0].args[0].val.char_beg_idx} {t_evs[0].args[0].val.char_end_idx}\t{t_evs[0].args[0].val.span}')
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} {label}\n')
                 fout.write('\n')
 
-            brat_rows = [ f'T{i+1} {t}' for i,t in enumerate(brat_rows) ]
-            brat_dir = os.path.join(Path(output_filepath).parent, 'train' if 'train' in output_filepath else 'valid')
-            text = ann.pretokenized
-            to_brat(brat_dir, ann.doc_id, brat_rows, text)
+            if write_brat:
+                brat_rows = [ f'T{i+1} {t}' for i,t in enumerate(brat_rows) ]
+                brat_dir = os.path.join(Path(output_filepath).parent, 'train' if 'train' in output_filepath else 'test')
+                text = ann.pretokenized
+                to_brat(brat_dir, ann.doc_id, brat_rows, text)
+    unq_labels.append('O')
+    return list(set(unq_labels))
 
 
-
-def brat_entities_to_conll(output_filepath, anns):
+def brat_entities_to_conll(output_filepath, anns, include_values=True, write_brat=True):
+    unq_labels = []
     with open(output_filepath, 'w+') as fout:
         for ann in anns:
             brat_rows = set()
@@ -87,33 +93,26 @@ def brat_entities_to_conll(output_filepath, anns):
                             types_seen.add(ent.type)
                             a = [ v for k,v in ann.As.items() if v.attr_of == ent ]
                             a = a[0] if len(a) else None
-                            if a:
+                            if include_values and a:
                                 label = ent.type + '___' + a.type + ':' + a.val
                             else:
                                 label = ent.type
                             labels.append(label)
                         label = f'{"B" if is_start else "I"}-' + '|'.join(sorted(labels))
+                        unq_labels.append(label)
 
                         brat_rows.add(f'{label[2:]} {t_ents[0].char_beg_idx} {t_ents[0].char_end_idx}\t{t_ents[0].span}')
                         fout.write(f'{tok.text} {ann.doc_id} {tok_start} {tok_end} {label}\n')
                 fout.write('\n')
 
-            brat_rows = [ f'T{i+1} {t}' for i,t in enumerate(brat_rows) ]
-            brat_dir = os.path.join(Path(output_filepath).parent, 'train' if 'train' in output_filepath else 'valid')
-            text = ann.pretokenized
-            to_brat(brat_dir, ann.doc_id, brat_rows, text)
+            if write_brat:
+                brat_rows = [ f'T{i+1} {t}' for i,t in enumerate(brat_rows) ]
+                brat_dir = os.path.join(Path(output_filepath).parent, 'train' if 'train' in output_filepath else 'test')
+                text = ann.pretokenized
+                to_brat(brat_dir, ann.doc_id, brat_rows, text)
+    unq_labels.append('O')
+    return list(set(unq_labels))
 
-
-def quality_check(annotations):
-    t_s = [ (x,a) for a in annotations for _,x in a.Ts.items() ]
-    a_s = [ x for a in annotations for _,x in a.As.items() ]
-    for ent in [ 'Severity', 'Stability', 'Eq-Operator', 'Polarity', 'Eq-Temporal-Unit', 'Eq-Temporal-Period', 'Life-Stage-And-Gender' ]:
-        x_s = [ t for t in t_s if t[0].type == ent ]
-        for x in x_s: 
-            a = [ a for a in a_s if a.attr_of == x[0] ]
-            a = a[0] if len(a) else None
-            if a == None:
-                print(f'Data Quality Warning: Entity Attribute {x[0]} has no Attribute Value selected!')
 
 def get_doc_names_from_conll(path):
     doc_ids = set()
@@ -124,6 +123,7 @@ def get_doc_names_from_conll(path):
                 if doc_id not in doc_ids:
                     doc_ids.add(doc_id)
     return doc_ids
+
 
 def main():
 
@@ -137,31 +137,34 @@ def main():
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
 
-    #quality_check(annotations)
-    train_doc_ids = get_doc_names_from_conll(os.path.join('data','ner','_events','train.txt'))
-    test_doc_ids =  get_doc_names_from_conll(os.path.join('data','ner','_events','test.txt'))
-
     ## Split 
-    #np.random.seed(1)
-    #_, train, test = np.split(annotations, [ 0, int(.8*len(annotations))])
-    train = [ a for a in annotations if a.doc_id in train_doc_ids ]
-    test = [ a for a in annotations if a.doc_id in test_doc_ids ]
+    np.random.seed(1)
+    random.seed(1)
+    random.shuffle(annotations)
+    _, train, test = np.split(annotations, [ 0, int(.8*len(annotations))])
 
-    events_path = os.path.join(conll_path, 'events')
-    entities_path = os.path.join(conll_path, 'entities')
+    events_path = os.path.join(conll_path, 'lct_events_no_val')
+    entities_path = os.path.join(conll_path, 'lct_entities_no_val')
     events_brat_path_train = os.path.join(events_path, 'train')
     entities_brat_path_train = os.path.join(entities_path, 'train')
-    events_brat_path_valid = os.path.join(events_path, 'valid')
-    entities_brat_path_valid = os.path.join(entities_path, 'valid')
+    events_brat_path_valid = os.path.join(events_path, 'test')
+    entities_brat_path_valid = os.path.join(entities_path, 'test')
 
     for p in [ events_path, entities_path, events_brat_path_train, entities_brat_path_train, events_brat_path_valid, entities_brat_path_valid ]:
         if not os.path.exists(p):
             os.mkdir(p)
 
-    brat_events_to_conll(os.path.join(events_path, 'train.txt'), train)
-    brat_entities_to_conll(os.path.join(entities_path, 'train.txt'), train)
-    brat_events_to_conll(os.path.join(events_path, 'valid.txt'), test)
-    brat_entities_to_conll(os.path.join(entities_path, 'valid.txt'), test)
+    evt_labels =  brat_events_to_conll(os.path.join(events_path, 'train.txt'), train, False)
+    evt_labels += brat_events_to_conll(os.path.join(events_path, 'test.txt'), test, False)
+    with open(os.path.join(events_path, 'labels.txt'), 'w+', encoding='utf-8') as fout:
+        fout.write('\n'.join(sorted(list(set(evt_labels)))))
+
+    ent_labels =  brat_entities_to_conll(os.path.join(entities_path, 'train.txt'), train, False)
+    ent_labels += brat_entities_to_conll(os.path.join(entities_path, 'test.txt'), test, False)
+    with open(os.path.join(entities_path, 'labels.txt'), 'w+', encoding='utf-8') as fout:
+        fout.write('\n'.join(sorted(list(set(ent_labels)))))
+
+
 
     
 if __name__ == '__main__':

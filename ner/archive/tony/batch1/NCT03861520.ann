@@ -1,0 +1,35 @@
+T1	Condition 91 100	pregnancy
+T2	Condition-Name 91 100	pregnancy
+E1	Condition:T1 Name:T2
+T3	Eq-Temporal-Unit 56 61	weeks
+A1	Eq-Temporal-Unit-Value T3 week
+T4	Eq-Operator 51 52	-
+A2	Eq-Operator-Value T4 BETWEEN
+T5	Eq-Value 52 54	24
+T6	Eq-Comparison 40 61	between (16-24) weeks
+E2	Eq-Comparison:T6 Operator:T4 Value:T5 Value2:T10 Temporal-Unit:T3
+T7	Condition 25 33	pregnant
+E3	Condition:T7 Name:T8
+T8	Condition-Name 25 33	pregnant
+T9	Life-Stage-And-Gender 34 39	woman
+T10	Eq-Value 49 51	16
+T11	Modifier 81 90	singelton
+E4	Modifier:T11 Modifies:E1
+T12	Condition 136 147	pregnancies
+E5	Condition:T12 Name:T13
+T13	Condition-Name 136 147	pregnancies
+T14	Modifier 127 135	Multiple
+E6	Modifier:T14 Modifies:E5
+T15	Study 243 248	study
+E7	Study:T15 
+T16	Condition 194 214	unable to understand
+E8	Condition:T16 Name:T17
+T17	Condition-Name 194 214	unable to understand
+T18	Condition 154 170	Mental condition
+E9	Condition:T18 Name:T19
+T19	Condition-Name 154 170	Mental condition
+R1	Caused-By Arg1:E8 Arg2:E9	
+T20	Observation 65 74	gestation
+E10	Observation:T20 Name:T21 Eq-Comparison:E2
+T21	Observation-Name 65 74	gestation
+A3	Observation-Type-Value T21 measurement

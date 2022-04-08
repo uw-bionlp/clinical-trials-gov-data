@@ -1,0 +1,69 @@
+T1	Age 45 48	age
+E1	Age:T1 Eq-Comparison:E2
+T2	Eq-Comparison 49 52	18-
+E2	Eq-Comparison:T2 Value:T24 Operator:T25
+T3	And 55 59	with
+E3	And:T3 Arg:E1
+T4	Observation 60 75	Body Mass Index
+E4	Observation:T4 Name:T27
+T5	Observation 77 80	BMI
+E5	Observation:T5 Name:T28 Eq-Comparison:E6
+T6	Eq-Comparison 85 96	>29.9 kg/m2
+E6	Eq-Comparison:T6 Operator:T29 Value:T30 Unit:T31 Unit:T32
+T7	Modifier 122 130	Unstable
+E7	Modifier:T7 
+T8	Condition 131 143	hypertensive
+E8	Condition:T8 Name:T33
+T9	Eq-Comparison 158 165	History
+E9	Eq-Comparison:T9 Temporal-Period:T34
+T10	Modifier 169 183	cardiovascular
+E10	Modifier:T10 Modifies:T35
+T11	Modifier 185 195	neurologic
+E11	Modifier:T11 Modifies:T35
+T12	Or 197 199	or
+E12	Or:T12 Arg:E11 Arg2:E13
+T13	Modifier 200 210	orthopedic
+E13	Modifier:T13 Modifies:T35
+T14	Condition 211 219	diseases
+E14	Condition:T14 Name:T35 Temporality:E9
+T15	Procedure 238 253	knee prosthesis
+E15	Procedure:T15 Name:T36
+T16	Procedure 255 270	hip replacement
+E16	Procedure:T16 Name:T37
+T17	Modifier 276 283	Chronic
+E17	Modifier:T17 Modifies:T38
+T18	Condition 284 304	inflammatory disease
+E18	Condition:T18 Name:T38
+T19	Modifier 311 328	Anti-inflammatory
+E19	Modifier:T19 
+T20	Procedure 329 338	treatment
+E20	Procedure:T20 
+T21	Condition 344 365	Cognitive impairments
+E21	Condition:T21 Name:T39
+T22	Condition 371 380	Pregnancy
+E22	Condition:T22 Name:T40
+T23	Eq-Operator 37 44	between
+A1	Eq-Operator-Value T23 BETWEEN
+T24	Eq-Value 49 51	18
+T25	Eq-Operator 51 52	-
+A2	Eq-Operator-Value T25 BETWEEN
+T26	Eq-Value 52 54	65
+T27	Observation-Name 60 75	Body Mass Index
+A3	Observation-Type-Value T27 vital
+T28	Observation-Name 77 80	BMI
+A4	Observation-Type-Value T28 vital
+T29	Eq-Operator 85 86	>
+A5	Eq-Operator-Value T29 GT
+T30	Eq-Value 86 90	29.9
+T31	Eq-Unit 91 93	kg
+T32	Eq-Unit 94 96	m2
+T33	Condition-Name 131 143	hypertensive
+T34	Eq-Temporal-Period 158 165	History
+A6	Eq-Temporal-Period-Value T34 past
+T35	Condition-Name 211 219	diseases
+T36	Procedure-Name 243 253	prosthesis
+T37	Procedure-Name 255 270	hip replacement
+T38	Condition-Name 284 304	inflammatory disease
+T39	Condition-Name 344 365	Cognitive impairments
+T40	Condition-Name 371 380	Pregnancy
+R1	Abbrev-Of Arg1:E5 Arg2:E4	

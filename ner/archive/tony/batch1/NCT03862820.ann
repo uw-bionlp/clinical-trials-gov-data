@@ -1,0 +1,22 @@
+T1	Procedure 82 98	cesarean section
+T2	Procedure-Name 82 98	cesarean section
+E1	Procedure:T1 Name:T2 Temporality:E7
+T3	Procedure 136 152	cesarean section
+T4	Procedure-Name 136 152	cesarean section
+E3	Procedure:T3 Name:T4
+T5	Condition 20 28	Pregnant
+E2	Condition:T5 Name:T6
+T6	Condition-Name 20 28	Pregnant
+T7	Life-Stage-And-Gender 29 34	women
+A1	Life-Stage-And-Gender-Type T7 female
+T8	Condition 35 53	in third trimester
+E4	Condition:T8 Name:T9
+T9	Condition-Name 35 53	in third trimester
+T10	Modifier 119 135	Primary elective
+E5	Modifier:T10 Modifies:T4
+T11	Modifier 73 81	elective
+E6	Modifier:T11 Modifies:T2
+T12	Eq-Comparison 54 72	planned to undergo
+E7	Eq-Comparison:T12 Temporal-Period:T13
+T13	Eq-Temporal-Period 54 72	planned to undergo
+A2	Eq-Temporal-Period-Value T13 future

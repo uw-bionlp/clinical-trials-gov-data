@@ -13,13 +13,25 @@ tokenize = spacy.load('en_core_web_sm')
 
 
 def main():
-    nic_raw  = { k:v for k,v in utils.fetch_brat_files(os.path.join('ner','nic', 'training')).items() }
-    tony_raw = { k:v for k,v in utils.fetch_brat_files(os.path.join('ner','tony', 'training')).items() }
+
+    print('*** Training data ***')
+    nic_raw  = { k:v for k,v in utils.fetch_brat_files(os.path.join('ner', 'archive', 'nic', 'training')).items() }
+    tony_raw = { k:v for k,v in utils.fetch_brat_files(os.path.join('ner', 'archive', 'tony', 'training')).items() }
     nic_anns  = [ BratDocument(k, v[0], v[1], tokenize) for k,v in nic_raw.items() ]
     tony_anns = [ BratDocument(k, v[0], v[1], tokenize) for k,v in tony_raw.items() ]
-    
     f1(nic_anns, tony_anns)
-    cohens_kappa(nic_anns, tony_anns)
+    
+    print('*** First Tony 100 ***')
+    nic_raw = {}
+    for d in [ os.path.join(os.getcwd(), 'ner', 'archive', 'nic', 'batch1'), os.path.join(os.getcwd(), 'ner', 'archive', 'nic', 'batch2') ]:
+        nic_raw = {**nic_raw, **utils.fetch_brat_files(d)}
+    nic_anns = [ BratDocument(k, v[0], v[1], v[2]) for k,v in nic_raw.items() ]
+
+    tony_raw = {}
+    for d in [ os.path.join(os.getcwd(), 'ner', 'archive', 'tony', 'batch1'), os.path.join(os.getcwd(), 'ner', 'archive', 'tony', 'batch2') ]:
+        tony_raw = {**tony_raw, **utils.fetch_brat_files(d)}
+    tony_anns = [ BratDocument(k, v[0], v[1], v[2]) for k,v in tony_raw.items() ]
+    f1(nic_anns, tony_anns)
 
 def cohens_kappa(anns1, anns2):
     anns1_conll = list(itertools.chain(*[ to_conll(d).splitlines() for d in anns1 ]))
@@ -105,9 +117,9 @@ def f1(anns_gold, anns_eval):
     f1 = 2 * (precision * recall) / (precision + recall)
 
     print(f'Entities - Overall')
+    print(f'    F1: {round(f1*100,1)}')
     print(f'    Precision: {round(precision*100,1)}')
     print(f'    Recall: {round(recall*100,1)}')
-    print(f'    F1: {round(f1*100,1)}')
     print('')
 
     #for k,v in sorted(type_scores.items()):
@@ -129,7 +141,7 @@ def f1(anns_gold, anns_eval):
     for doc_gold in anns_gold:
         doc_eval = [ doc for doc in anns_eval if doc.doc_id == doc_gold.doc_id ][0]
 
-        # Precision
+        # Relations - Precision
         for k,v in doc_eval.Rs.items():
             if not type_scores.get(v.type): type_scores[v.type] = { 'tp': 0, 'tn': 0, 'fp': 0, 'fn': 0 }
             if any([ k2 for k2,v2 in doc_gold.Rs.items() if \
@@ -142,7 +154,7 @@ def f1(anns_gold, anns_eval):
                 fp += 1
                 type_scores[v.type]['fp'] += 1
 
-        # Recall
+        # Relations - Recall
         for k,v in doc_gold.Rs.items():
             if not type_scores.get(v.type): type_scores[v.type] = { 'tp': 0, 'tn': 0, 'fp': 0, 'fn': 0 }
             if not any([ k2 for k2,v2 in doc_eval.Rs.items() if \
@@ -157,9 +169,9 @@ def f1(anns_gold, anns_eval):
     f1 = 2 * (precision * recall) / (precision + recall)
 
     print(f'Relations - Overall')
+    print(f'    F1: {round(f1*100,1)}')
     print(f'    Precision: {round(precision*100,1)}')
     print(f'    Recall: {round(recall*100,1)}')
-    print(f'    F1: {round(f1*100,1)}')
     print('')
 
     #for k,v in sorted(type_scores.items()):
