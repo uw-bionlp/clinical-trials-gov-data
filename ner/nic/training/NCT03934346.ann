@@ -18,8 +18,6 @@ E21	Eq-Comparison:T37 Value:T38 Temporal-Unit:T39
 E22	Condition:T40 Name:T41
 E24	Drug:T43 Temporality:E29
 E25	Study:T44 
-E27	Negation:T46 Negates:E24
-E28	Negation:T47 Negates:E27
 E29	Eq-Comparison:T48 Temporal-Period:T49
 E30	Assertion:T50 Asserted:E15
 E31	Eq-Comparison:T51 Temporal-Period:T52
@@ -61,8 +59,6 @@ T40	Condition 408 426	unable to eat meat
 T41	Condition-Name 408 426	unable to eat meat
 T43	Drug 524 535	medications
 T44	Study 547 552	study
-T46	Negation 504 511	refrain
-T47	Negation 494 500	Unable
 T48	Eq-Comparison 517 523	taking
 T49	Eq-Temporal-Period 517 523	taking
 T9	Life-Stage-And-Gender 44 47	men
@@ -85,3 +81,8 @@ R3	Or Arg1:E13 Arg2:E16
 R4	Or Arg1:E14 Arg2:E22
 R5	During Arg1:E24 Arg2:E25
 R6	Or Arg1:E7 Arg2:E13
+T16	Assertion 494 511	Unable to refrain
+E4	Assertion:T16 Asserted:E24
+A3	Assertion-Type-Value E4 hypothetical
+R7	Or Arg1:E3 Arg2:E9	
+R8	Or Arg1:E9 Arg2:E5	

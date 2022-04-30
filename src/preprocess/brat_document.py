@@ -175,7 +175,7 @@ class BratDocument:
         toks = tokenize(self.pretokenized)
 
         # First pass, index each annotation type
-        for i,ann in enumerate(anns.splitlines()):
+        for i, ann in enumerate(anns.splitlines()):
             if not len(ann.strip()) or '\t' not in ann:
                 continue
 
@@ -238,8 +238,8 @@ class BratDocument:
 
             all_matched = " ".join([ m.text for m in matches ]).replace(' ','') == v.span.replace(' ','')
             if not all_matched:
-                #print(f'Spans did not match! {self.path}/{self.doc_id} {v}')
-                pass
+                print(f'Spans did not match! {self.path}/{self.doc_id} {v}')
+                #pass
 
             if all_matched:
                 Ts[k].tok_beg_idx  = min([ tok.i for tok in matches ])
@@ -250,8 +250,8 @@ class BratDocument:
                 Ts[k].span         = self.pretokenized[Ts[k].char_beg_idx:Ts[k].char_end_idx]
                 Ts[k].sent_idx     = min([ tok.sent_idx for tok in matches ])
             else:
-                #print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
-                pass
+                print(f"T spans didn't match! {self.path}/{self.doc_id} {v}")
+                #pass
 
         Ts, Es, Rs, As = self.set_pointers(Ts, Es, Rs, As)
         self.sents = pseudo_sents

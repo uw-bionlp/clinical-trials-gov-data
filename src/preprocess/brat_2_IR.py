@@ -1,3 +1,4 @@
+from ast import Pass
 from itertools import chain
 import os
 import re
@@ -11,6 +12,27 @@ from preprocess.brat_document import BratDocument, BratE, BratEArgPair, BratR, B
 from preprocess.config import Config
 import preprocess.utils as utils
 
+from jsbeautifier import beautify
+beautify_opts = {
+  "indent_size": "4",
+  "indent_char": " ",
+  "max_preserve_newlines": "5",
+  "preserve_newlines": True,
+  "keep_array_indentation": False,
+  "break_chained_methods": True,
+  "indent_scripts": "normal",
+  "brace_style": "collapse",
+  "space_before_conditional": False,
+  "unescape_strings": False,
+  "jslint_happy": False,
+  "end_with_newline": False,
+  "wrap_line_length": "0",
+  "indent_inner_html": False,
+  "comma_first": False,
+  "e4x": False,
+  "indent_empty_lines": False
+}
+
 regex_trailing_num = r'\d'
 
 def main():
@@ -18,32 +40,26 @@ def main():
     docs = get_base_data()
     output = []
     for doc in docs:
-        try:
-            for pair in doc.to_sequence():
-                output.append(pair)
-        except:
-            pass
+        for pair in doc.to_tree():
+            output.append(pair)
         print(len(output))
         if len(output) > 2000:
             break
 
-    _, train, test = np.split(output, [ 0, int(.8*len(output))])
+    #_, train, test = np.split(output, [ 0, int(.8*len(output))])
 
-    with open(os.path.join('data', 'seq2seq', 'train.json'), 'w+') as fout:
-        fout.write(json.dumps(list(train), indent=4))
-    with open(os.path.join('data', 'seq2seq', 'test.json'), 'w+') as fout:
-        fout.write(json.dumps(list(test), indent=4))
+    #with open(os.path.join('data', 'seq2seq', 'train.json'), 'w+') as fout:
+    #    fout.write(json.dumps(list(train), indent=4))
+    #with open(os.path.join('data', 'seq2seq', 'test.json'), 'w+') as fout:
+    #    fout.write(json.dumps(list(test), indent=4))
 
 def get_base_data():
-    
-    skip = set([ 'NCT03866512', 'NCT03863912', 'NCT03869684', 'NCT03867864', 'NCT03869164' ])
-
     brat_train_raw = {} 
     for d in Config.annotation_train_dirs:
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
-        #break
+        break
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
-    docs   = [ BaseDoc(a) for a in annotations if a.doc_id not in skip ]
+    docs   = [ BaseDoc(a) for a in annotations ]
 
     return docs
 
@@ -51,34 +67,71 @@ class BaseDoc:
     def __init__(self, ann):
         self.doc_id = ann.doc_id
         self.path   = ann.path
-        self.text   = ann.raw_text
-        self.lines  = ann.raw_text.split('\n')
+        self.text   = ann.pretokenized
+        self.lines  = ann.pretokenized.split('\n')
         self.derive_ents_and_rels(ann)
         self.node_groups = get_disjoint_node_groups(self.ents, self.rels)
 
-    def to_sequence(self):
+        self.line_offsets = []
+        offset_accum = 0
+        for line in self.lines:
+            self.line_offsets.append(offset_accum)
+            offset_accum += len(line)+1
+
+        for ent in self.ents:
+            line_offset = self.line_offsets[ent.sent_idx]
+            ent.char_sent_beg_idx = ent.char_beg_idx - line_offset
+            ent.char_sent_end_idx = ent.char_end_idx - line_offset
+            x=1
+
+    def to_tree(self):
         output = []
         seen = set()
         print(f'{self.doc_id}')
         for line in self.node_groups:
             line_text = self.lines[[ grp[0] for grp in line ][0].sent_idx]
-            #print(f'"{line_text}"')
+            print(f'\n"{line_text}"')
             codes = []
             for grp in line:
-                ordered = sorted(sorted(grp, key=lambda x: x.tok_beg_idx), key=lambda x: x.priority)
-                for node in ordered:
-                    if node in seen or not node.is_valid:
-                        continue
-                    code, used = node.to_code(), node.get_deps()
-                    codes.append(code)
-                    for ent in used:
-                        seen.add(ent)
-                    #print('\n' + code)
+                branch = self.to_branch(grp, line_text)
             if len(line_text) < 150 and any(codes):
                 code = f'or({", ".join(codes)})' if len(codes) > 1 else codes[0]
                 output.append({ "intent": line_text.strip(), "snippet": code.replace('\n','').replace('"',"'") })
             #print()
         return output
+
+    def to_branch(self, grp, line_text):
+        seen = set()
+
+        # break into levels
+        levels = []
+        ordered = sorted(sorted(grp, key=lambda x: x.tok_beg_idx), key=lambda x: x.priority)
+        for ent in ordered:
+            if ent in seen:
+                continue
+            or_ents = ent.ors()
+            and_ents = ent.ands()
+            if any(and_ents):
+                ent = AndEntity([ ent ] + and_ents)
+                for and_ent in and_ents:
+                    seen.add(and_ent)
+            for or_ent in or_ents:
+                or_ents += or_ent.ors()
+                seen.add(or_ent)
+            if any(or_ents):
+                ent = OrEntity([ ent ] + or_ents)
+            x = Level(ent, line_text)
+            transformed_text = x.transform_text()
+            code = x.to_code()
+            try:
+                try:
+                    code = beautify(code, beautify_opts)
+                except:
+                    pass
+            except:
+                pass
+            print(code)
+            levels.append(Level(ent))
 
     def derive_ents_and_rels(self, ann):
 
@@ -91,9 +144,10 @@ class BaseDoc:
             rels_e += [ BaseRelation(arg2, arg1) for arg2 in e.args[1:] ]
 
         ents = ents_e + [ t for t in ents_t if not any([ e for e in ents_e if t.type == e.type and t.tok_idxs == e.tok_idxs ]) ]
-        ents = [ x.to_precise() for x in ents if x.to_precise() is not None ]
+        ents = [ x.to_precise(self) for x in ents if x.to_precise(self) is not None ]
         rels = rels_r + rels_e
         
+        # Assign relations
         to_del = []
         for i, rel in enumerate(rels):
             subj = [ x for x in ents if rel.subj in x.id ]
@@ -120,16 +174,86 @@ class BaseDoc:
                 elif ent == rel.obj:
                     ent.rels_of.append(rel)
 
+        # Add values
         for _, a in ann.As.items():
             e = [ x for x in ents if a.attr_of.id in x.id ]
             if any(e):
                 e[0].val = a.val
-        
+
         self.ents = ents
         self.rels = [ x for i, x in enumerate(rels) if i not in to_del and x.subj.sent_idx == x.obj.sent_idx ]
 
+        for ent in self.ents:
+            ent.add_attrs()
+
+class Level:
+    def __init__(self, ent, line_text):
+        self.ent = ent
+        self.rels = []
+        self.text = line_text
+        self.entity_text = line_text
+
+    def to_code(self):
+        return self.ent.to_code()
+
+    def transform_text(self):
+        self.ent.transform_text()
+        return self.entity_text
+
+class VerbEntityAttribute:
+    def __init__(self, type, ent, multi_ent_wrapper="or"):
+        self.type = type
+        self.ents = [ ent ]
+        self.multi_ent_wrapper = multi_ent_wrapper
+
+    def to_code(self):
+        codes = [ x.to_code() for x in self.ents ]
+        codes = [ x for x in codes if x ]
+        codes = f"{self.multi_ent_wrapper}({', '.join([ x for x in codes ])})" \
+            if len(codes) > 1 else ', '.join([ x for x in codes ])
+        return f".{self.type}({codes})"
+
+class EntityAttribute:
+    def __init__(self, type, ent):
+        self.type = type
+        self.ents = [ ent ]
+
+    def to_code(self):
+        codes = [ x.to_code() for x in self.ents ]
+        codes = [ x for x in codes if x ]
+        return ', '.join([ x for x in codes ])
+
+class OrEntity:
+    def __init__(self, ents):
+        self.ents = ents
+        self.rels = []
+        self.rels_of = []
+        for ent in self.ents:
+            self.rels += ent.rels
+            self.rels_of += ent.rels_of
+
+    def to_code(self):
+        codes = [ x.to_code() for x in self.ents ]
+        codes = [ x for x in codes if x]
+        if any(codes):
+            return f'union({", ".join(codes)})'
+        return ''
+
+class AndEntity:
+    def __init__(self, ents):
+        self.ents = ents
+        self.rels = []
+        self.rels_of = []
+        for ent in self.ents:
+            self.rels += ent.rels
+            self.rels_of += ent.rels_of
+
+    def to_code(self):
+        return f'and({", ".join([ x.to_code() for x in self.ents ])})'
+
 class Entity:
-    def __init__(self, e):
+    def __init__(self, e, doc):
+        self.doc          = doc
         self.id           = e.id
         self.val          = e.val
         self.span         = e.span
@@ -144,16 +268,60 @@ class Entity:
         self.rels_of      = e.rels_of
         self.is_head      = lambda : False
         self.priority     = None
-        self.is_valid     = True
-        self.deps         = []
+        self.attrs        = {}
         self.span_as_arg  = False
+        self.executed     = False
 
         for rel in e.rels:
             rel.subj = self
         for rel in e.rels_of:   
             rel.obj = self
 
-    def to_code(self, check_conjunctives=True):
+    def add_attrs(self):
+        hoistable = set(['abbrev_of','modifies'])
+        subj_only = set(['using','found_by','treatment_for','temporality','duration','stability','severity'])
+        obj_only  = set(['modifies','equivalent_to','asserted','example_of',])
+        rename    = { 
+            'numeric_filter': 'num_filter', 'equivalent_to': 'equiv', 'temporality': 'temporal', 'minimum_count': 'min_count',
+            'example_of': 'example', 'caused_by': 'cause' }
+        no_verb   = set(['modifies','asserted'])
+        union     = set(['using'])
+
+        def to_ent_attr(tp, ent):
+            _tp = tp
+            if _tp in rename:
+                _tp = rename[_tp]
+            if tp in no_verb:
+                return EntityAttribute(_tp, ent)
+            multi_ent_wrapper = 'union' if tp in union else 'or'
+            return VerbEntityAttribute(_tp, ent, multi_ent_wrapper=multi_ent_wrapper)
+
+        for rel in self.rels_of:
+            tp = rel.type.lower().replace('-','_')
+            if tp in hoistable:
+                self.rels    += [ x for x in rel.subj.rels if x != rel ]
+                self.rels_of += [ x for x in rel.subj.rels_of if x != rel ]
+                rel.subj.rels = [ x for x in rel.subj.rels if x not in (self.rels + self.rels_of) ]
+                rel.subj.rels_of = [ x for x in rel.subj.rels_of if x not in (self.rels + self.rels_of) ]
+
+            if tp not in subj_only:
+                if tp in self.attrs: self.attrs[tp].ents.append(rel.subj)
+                else:                self.attrs[tp] = to_ent_attr(tp, rel.subj)
+
+        for rel in self.rels:
+            tp = rel.type.lower().replace('-','_')
+            if tp not in obj_only:
+                if tp in self.attrs: self.attrs[tp].ents.append(rel.obj)
+                else:                self.attrs[tp] = to_ent_attr(tp, rel.obj)
+
+        for d in ['or','and','name']:
+            if self.attrs.get(d):
+                del self.attrs[d]
+
+    def to_code(self):
+        if self.executed:
+            return ''
+        self.executed = True
         arg = '' 
         verb = self.verb
         if self.span_as_arg:
@@ -165,55 +333,20 @@ class Entity:
             verb = self.val
         return f'{verb}({arg})'
 
-    def get_deps(self):
-        return []
-
-    def invalidate_siblings(self):
-        get_connected_nodes(self, set(), 'Or', invalidate_matches=True)
-        get_connected_nodes(self, set(), 'And', invalidate_matches=True)
+    def transform_text(self):
+        pass
 
     def ors(self):
-        return [ x for x in (self.rels + self.rels_of) if x.type == 'Or' ]
+        return [ x.obj for x in self.rels if x.type == 'Or' ]
 
     def ands(self):
-        return [ x for x in (self.rels + self.rels_of) if x.type == 'And' ]
+        return [ x.obj for x in self.rels if x.type == 'And' ]
 
     def _get_rels(self, tp):
-        rels = [ x for x in self.rels if x.type == tp and x.obj.is_valid ]
-        for rel in rels: rel.obj.invalidate_siblings()
-
-        return [ x.obj for x in rels if x.obj.is_valid ]
+        return [ x.obj for x in self.rels if x.type == tp ]
 
     def _get_rels_of(self, tp):
-        return [ x.subj for x in self.rels_of if x.type == tp and x.subj.is_valid ]
-
-    def _args_to_str_if_not_none(self, args, check_conjunctives=True):
-        return ', '.join([ x if isinstance(x, str) else x.to_code(check_conjunctives) for x in args if x ])
-
-    def _chained_methods_to_str_if_not_none(self, method_strs):
-        if any(method_strs):
-            return '.' + '.'.join([ x for x in method_strs if x ])
-        return ''
-
-    def _get_rels_as_func(self, func, verb, add_newline=False):
-        ents = func()
-        #ents += list(chain(*[ x.get_deps() for x in ents ]))
-
-        nl = '\n' if add_newline else ''
-        if any(ents):
-            return f'{verb}({nl}{self._args_to_str_if_not_none(ents)}{nl})', ents
-        return '', ents
-
-    def get_func_usings(self): return self._get_rels_as_func(self.using, 'using', add_newline=True)
-    def get_func_abbrevs(self): return self._get_rels_as_func(self.abbrevs, 'abbrev')
-    def get_func_examples(self): return self._get_rels_as_func(self.examples, 'example')
-    def get_func_befores(self): return self._get_rels_as_func(self.befores, 'before', add_newline=True)
-    def get_func_durings(self): return self._get_rels_as_func(self.durings, 'during', add_newline=True)
-    def get_func_afters(self): return self._get_rels_as_func(self.afters, 'after', add_newline=True)
-    def get_func_equivs(self): return self._get_rels_as_func(self.equiv_of, 'equiv', add_newline=True)
-    def get_func_num_filters(self): return self._get_rels_as_func(self.num_filters, 'num_filter')
-    def get_func_temporal_filters(self): return self._get_rels_as_func(self.temporal_filters, 'temporal_filter')
-    def get_func_durations(self): return self._get_rels_as_func(self.durations, 'duration')
+        return [ x.subj for x in self.rels_of if x.type == tp ]
 
     def abbrevs(self): return self._get_rels_of('Abbrev-Of')
     def acuteness(self): return self._get_rels('Acuteness')
@@ -277,403 +410,335 @@ class Entity:
     def using(self): return self._get_rels('Using')
     def values(self): return self._get_rels('Value')
 
+class NameEntity(Entity):
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
+        
+    def to_code(self):
+        if self.executed:
+            return ''
+        self.executed = True
+        return f'"{self.span}"'
 
 class HeadEntity(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
+        self.doc = doc
         self.is_head = lambda: \
                        not any(self._get_rels('Example-Of')) and \
                        not any(self._get_rels('Abbrev-Of')) and \
-                       not any(self._get_rels('Equivalent-To'))
+                       not any(self._get_rels('Equivalent-To')) and \
+                       not any(self._get_rels_of('Using')) and \
+                       not any(self._get_rels('Treatment-For')) and \
+                       not any(self._get_rels('Caused-By'))
         self.priority = 3
         self.verb = 'entity'
+        self.span_as_arg = True
 
-    def get_deps(self):
-        return self.deps
-
-    def to_code(self, check_conjunctives=True):
-        methods = self.names() + self.located() + self.asserted() + \
-               self.polarities() + self.caused_by() + self.if_thens() + \
-               self.stages() + self.exceptions() + self.examples() + \
-               self.modified_by() + self.severities() + self.found_by() + \
-               self.min_counts() + self.providers() + self.negates() + \
-               self.except_from() + self.type() + self.min_counts() + \
-               self.criteria()
-
-        if check_conjunctives:
-            try:
-                ors  = get_connected_nodes(self, set(), 'Or', invalidate_matches=True)
-                ands = get_connected_nodes(self, set(), 'And', invalidate_matches=True)
-            except:
-                ors = []
-                ands = []
-        else:
-            ors  = []
-            ands = []
-        method_strs = [ x.to_code() for x in methods if x.is_valid ]
-        method_deps = list(chain(*[ x.get_deps() for x in methods ]))
-        examples, example_deps = self.get_func_examples()
-        abbrevs, abbrev_deps = self.get_func_abbrevs()
-        usings, using_deps = self.get_func_usings()
-        equiv, equiv_deps = self.get_func_equivs()
-        num_filters, num_filter_deps = self.get_func_num_filters()
-        temp_filters, temp_filter_deps = self.get_func_temporal_filters()
-        durations, duration_deps = self.get_func_durations()
-        befores, before_deps = self.get_func_befores()
-        durings, during_deps = self.get_func_durings()
-        afters, after_deps = self.get_func_afters()
-
-        self.deps = methods + method_deps + using_deps + equiv_deps + num_filter_deps + temp_filter_deps + duration_deps + \
-                    before_deps + during_deps + after_deps + example_deps + abbrev_deps
-        self.deps += list(chain(*[ x.get_deps() for x in self.deps ]))
-
-        method_strs += [ equiv, num_filters, temp_filters, durations, usings, befores, durings, afters, examples, abbrevs ]
+    def to_code(self):
+        if self.executed:
+            return ''
+        self.executed = True
+        output = ''
         verb = (self.val if self.val else self.verb).replace('-','_')
         verb_arg = '' if not self.span_as_arg else f'"{self.span}"'
-        self_output = f'{verb}({verb_arg})' + self._chained_methods_to_str_if_not_none(method_strs)
 
-        wrapper = ''
-        use_wrapper = False
-        for verb, iter in [[ 'intersect', list(ands) ], [ 'union', list(ors) ]]:
-            if any(iter):
-                if not use_wrapper:
-                    iter.insert(0, self_output)
-                    use_wrapper = True
-                wrapper += f'{verb}(\n{self._args_to_str_if_not_none(iter, False)}\n)'
+        output = f'{verb}({verb_arg})'
+        for verb, attr in self.attrs.items():
+            #output += f'.{verb}({attr.to_code()})'
+            output += attr.to_code()
+        
+        return output
 
-        if not use_wrapper:
-            return self_output
-        return wrapper
+    def transform_text(self):
+        preexec = self.executed
+        self.executed = False
+        code = self.to_code()
+        if code:
+            line = self.doc.lines[self.sent_idx]
+            line = line[:self.char_sent_beg_idx] + code + line[:self.char_sent_end_idx]
+        self.executed = preexec
 
 class Acuteness(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = self.val
 
 class Age(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)      
+    def __init__(self, e, doc):
+        super().__init__(e, doc)      
         self.verb = 'age'
+        self.span_as_arg = False
 
 class Allergy(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)    
+    def __init__(self, e, doc):
+        super().__init__(e, doc)    
         self.verb = 'allergy'
 
-class AllergyName(Entity):
-    def __init__(self, e):
-        super().__init__(e)
-        self.verb = 'name'
-        self.span_as_arg = True
+class AllergyName(NameEntity):
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
 
 class Assertion(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = self.val
 
+    def to_code(self):
+        if self.val == 'hypothetical':
+            return '.hypoth()'
+        if self.val == 'possible':
+            return '.possible()'
+        return '.intent()'
+
 class Birth(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'birth'
 
 class Code(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'code'
         self.span_as_arg = True
 
 class Condition(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'cond'
 
-class ConditionName(Entity):
-    def __init__(self, e):
-        super().__init__(e)
-        self.verb = 'name'
-        self.span_as_arg = True
+class ConditionName(NameEntity):
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
 
 class ConditionType(Entity):
-    def __init__(self, e):
-        super().__init__(e)       
+    def __init__(self, e, doc):
+        super().__init__(e, doc)       
         self.verb = 'type'
         self.span_as_arg = True
 
 class Contraindication(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)       
-
-    def get_deps(self):
-        deps = self.contraindicates()
-        return deps
-
-    def to_code(self, check_conjunctives=True):
-        contraindicated = self.contraindicates()
-        return f'contraind("{self._args_to_str_if_not_none(contraindicated)}")'
+    def __init__(self, e, doc):
+        super().__init__(e, doc)       
 
 class CriteriaCount(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)    
+    def __init__(self, e, doc):
+        super().__init__(e, doc)    
         self.verb = 'criteria'
 
 class Death(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'death'
         self.span_as_arg = True
 
 class Drug(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'drug'
 
-class DrugName(Entity):
-    def __init__(self, e):
-        super().__init__(e)        
-        self.verb = 'name'
-        self.span_as_arg = True
+class DrugName(NameEntity):
+    def __init__(self, e, doc):
+        super().__init__(e, doc) 
 
 class Encounter(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'enc'
 
+    def transform_text(self):
+        preexec = self.executed
+        self.executed = False
+        code = self.to_code()
+        if code:
+            line = self.doc.lines[self.sent_idx]
+            line = line[:self.char_sent_beg_idx] + code + line[:self.char_sent_end_idx]
+        self.executed = preexec
+
 class EqComparison(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'eq'
 
-    def get_deps(self):
-        return self.deps
-
-    def to_code(self, check_conjunctives=True):
-        methods = self.operators() + self.values() + self.units() + self.temporal_units() + \
-                  self.temporal_recencies() + self.temporal_periods() + self.per()
-
-        if check_conjunctives:
-            ors  = get_connected_nodes(self, set(), 'Or', invalidate_matches=True)
-            ands = get_connected_nodes(self, set(), 'And', invalidate_matches=True)
-        else:
-            ors  = []
-            ands = []
-        method_strs = [ x.to_code() for x in methods if x.is_valid ]
-        equiv, equiv_deps = self.get_func_equivs()
-        befores, before_deps = self.get_func_befores()
-        durings, during_deps = self.get_func_durings()
-        afters, after_deps = self.get_func_afters()
-
-        self.deps = methods + equiv_deps + before_deps + during_deps + after_deps
-
-        method_strs += [ equiv, befores, durings, afters ]
-        verb = (self.val if self.val else self.verb).replace('-','_')
-        verb_arg = '' if not self.span_as_arg else f'"{self.span}"'
-        self_output = f'{verb}({verb_arg})' + self._chained_methods_to_str_if_not_none(method_strs)
-
-        wrapper = ''
-        use_wrapper = False
-        for verb, iter in [[ 'intersect', list(ands) ], [ 'union', list(ors) ]]:
-            if any(iter):
-                if not use_wrapper:
-                    iter.insert(0, self_output)
-                    use_wrapper = True
-                wrapper += f'{verb}(\n{self._args_to_str_if_not_none(iter, False)}\n)'
-
-        if not use_wrapper:
-            return self_output
-        return wrapper
+    def to_code(self):
+        args = []
+        for _, attr in self.attrs.items():
+            for ent in attr.ents:
+                args.append(ent)
+        codes = [ x.to_code() for x in sorted(args, key=lambda y: y.tok_beg_idx) ]
+        return f'{self.verb}({", ".join([ x for x in codes if x ])})'
 
 class EqOperator(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'op'
 
 class EqTemporalPeriod(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'temporal_per'
 
 class EqTemporalRecency(Entity):
-    def __init__(self, e):
-        super().__init__(e)   
+    def __init__(self, e, doc):
+        super().__init__(e, doc)   
         self.verb = 'temporal_rec'
 
 class EqTemporalUnit(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'temporal_unit'
 
+    def to_code(self):
+        if any([ x for x in self.rels_of if x.type.lower() == 'per' ]):
+            return f'per({self.val.upper()})'
+        return f'{self.verb}({self.val.upper()})'
+
 class EqUnit(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'unit'
+        self.span_as_arg = True
 
 class EqValue(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'val'
         self.span_as_arg = True
 
 class Ethnicity(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)     
+    def __init__(self, e, doc):
+        super().__init__(e, doc)     
         self.verb = 'ethnic'
 
 class Exception(Entity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'except'
         self.span_as_arg = True
 
 class FamilyMember(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.verb = 'name'
         self.span_as_arg = self.val == None
 
 class Immunization(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)    
+    def __init__(self, e, doc):
+        super().__init__(e, doc)    
         self.verb = 'immune'
 
-class ImmunizationName(Entity):
-    def __init__(self, e):
-        super().__init__(e)      
-        self.verb = 'name'
-        self.span_as_arg = True
+class ImmunizationName(NameEntity):
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
 
 class Indication(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)    
-
-    def get_deps(self):
-        return self.indications()
-
-    def to_code(self, check_conjunctives=True):
-        indic = self.indications()
-        return f'indic("{self._args_to_str_if_not_none(indic)}")'
+    def __init__(self, e, doc):
+        super().__init__(e, doc)    
 
 class Insurance(Entity):
-    def __init__(self, e):
-        super().__init__(e) 
+    def __init__(self, e, doc):
+        super().__init__(e, doc) 
         self.verb = 'insur'
         self.span_as_arg = True
 
 class Language(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)      
+    def __init__(self, e, doc):
+        super().__init__(e, doc)      
         self.verb = 'lang'
         self.span_as_arg = True
 
 class LifeStageAndGender(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)  
+    def __init__(self, e, doc):
+        super().__init__(e, doc)  
         self.verb = 'life_gend'
 
 class Location(Entity):
-    def __init__(self, e):
-        super().__init__(e)    
+    def __init__(self, e, doc):
+        super().__init__(e, doc)    
         self.verb = 'loc' if not self.val else self.val
         self.span_as_arg = True
 
 class Modifier(Entity):
-    def __init__(self, e):
-        super().__init__(e)      
+    def __init__(self, e, doc):
+        super().__init__(e, doc)      
         self.verb = 'mod'
         self.span_as_arg = True      
 
 class Negation(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.priority = 1
         self.verb = 'neg'
 
 class Observation(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)     
+    def __init__(self, e, doc):
+        super().__init__(e, doc)     
         self.verb = 'observ'
 
-class ObservationName(Entity):
-    def __init__(self, e):
-        super().__init__(e) 
-        self.verb = 'name'
-        self.span_as_arg = True
+class ObservationName(NameEntity):
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
 
 class Organism(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)     
+    def __init__(self, e, doc):
+        super().__init__(e, doc)     
         self.verb = 'org'
 
-class OrganismName(Entity):
-    def __init__(self, e):
-        super().__init__(e)
-        self.verb = 'name'
-        self.span_as_arg = True
+class OrganismName(NameEntity):
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
 
 class Other(Entity):
-    def __init__(self, e):
-        super().__init__(e)    
-
-    def get_deps(self):
-        return self.others()
-
-    def to_code(self, check_conjunctives=True):
-        others = self.others()
-        return f'other("{self._args_to_str_if_not_none(others)}")'
+    def __init__(self, e, doc):
+        super().__init__(e, doc)    
 
 class Polarity(Entity):
-    def __init__(self, e):
-        super().__init__(e)    
+    def __init__(self, e, doc):
+        super().__init__(e, doc)    
         self.verb = 'pol'
 
 class Procedure(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)       
+    def __init__(self, e, doc):
+        super().__init__(e, doc)       
         self.verb = 'proc'
 
-class ProcedureName(Entity):
-    def __init__(self, e):
-        super().__init__(e)      
-        self.verb = 'name'
-        self.span_as_arg = True
+class ProcedureName(NameEntity):
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
 
 class Provider(Entity):
-    def __init__(self, e):
-        super().__init__(e)        
+    def __init__(self, e, doc):
+        super().__init__(e, doc)        
         self.verb = 'prov'
         self.span_as_arg = True
 
 class Risk(HeadEntity):
-    def __init__(self, e):
-        super().__init__(e)
+    def __init__(self, e, doc):
+        super().__init__(e, doc)
         self.priority = 2
 
-    def get_deps(self):
-        return self.risks_for()
-
-    def to_code(self, check_conjunctives=True):
-        risks_for = self.risks_for()
-        return f'risk({risks_for})'
-
 class Severity(Entity):
-    def __init__(self, e):
-        super().__init__(e)   
+    def __init__(self, e, doc):
+        super().__init__(e, doc)   
         self.verb = 'sev'                          
 
 class Specimen(Entity):
-    def __init__(self, e):
-        super().__init__(e)         
+    def __init__(self, e, doc):
+        super().__init__(e, doc)         
         self.verb = 'spec'
         self.span_as_arg = True
 
 class Stability(Entity):
-    def __init__(self, e):
-        super().__init__(e)         
+    def __init__(self, e, doc):
+        super().__init__(e, doc)         
         self.verb = 'stability'
 
 class Study(Entity):
-    def __init__(self, e):
-        super().__init__(e)    
+    def __init__(self, e, doc):
+        super().__init__(e, doc)    
         self.verb = 'study'
+        self.is_head = lambda: True
+        self.priority = 4
 
 class BaseEntity:
     def __init__(self, brat):
@@ -698,6 +763,8 @@ class BaseEntity:
         self.rels         = []
         self.rels_of      = []
         self.is_head      = lambda : False
+        self.sent_char_beg_idx = -1
+        self.sent_char_end_idx = -1
         self.class_map    = { 
                                 'Acuteness': Acuteness,
                                 'Age': Age,
@@ -750,9 +817,9 @@ class BaseEntity:
                                 'Study': Study
                             }
 
-    def to_precise(self):
+    def to_precise(self, doc):
         if self.type in self.class_map:
-            return self.class_map[self.type](self)
+            return self.class_map[self.type](self, doc)
         return None
 
 class BaseRelation:
@@ -842,16 +909,18 @@ def get_connected_edges(rel, accum):
 
     return set([ rel for rel_grp in recurse for rel in rel_grp ])
 
-def get_connected_nodes(ent, accum, rel_type, invalidate_matches=False):
-    try:
-        connected = list(chain(*[ r.obj.rels + r.obj.rels_of for r in ent.rels if r.type == rel_type ]))
-        connected = [ r.obj for r in connected if r.type == rel_type and r.obj not in accum and r.obj != ent and r.obj.is_head() ]
-    except:
-        return accum
+def get_connected_nodes(ent, accum, rel_type):
+    connected = []
+    for r in ent.rels:
+        if r.type != rel_type or r.obj == ent or r.obj in accum or not r.obj.is_head():
+            continue
+        for obj in (r.obj.rels + r.obj.rels_of):
+            if obj == ent or obj in accum or not obj.is_head():
+                continue
+            connected.append(obj)
 
-    if invalidate_matches:
-        for ent in connected:
-            ent.is_valid = False
+    #connected = list(chain(*[ r.obj.rels + r.obj.rels_of for r in ent.rels if r.type == rel_type ]))
+    #connected = [ r.obj for r in connected if r.type == rel_type and r.obj not in accum and r.obj != ent and r.obj.is_head() ]
 
     if not any(connected):
         return accum
@@ -861,7 +930,7 @@ def get_connected_nodes(ent, accum, rel_type, invalidate_matches=False):
     for e in connected:
         new_accum.add(e)
 
-    recurse = [ get_connected_nodes(x, new_accum, rel_type, invalidate_matches) for x in connected ]
+    recurse = [ get_connected_nodes(x, new_accum, rel_type) for x in connected ]
 
     return set(sorted([ x for grp in recurse for x in grp ], key=lambda x: x.char_beg_idx))
 

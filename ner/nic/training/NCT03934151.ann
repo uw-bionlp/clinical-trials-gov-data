@@ -1,20 +1,20 @@
 E3	Procedure:T3 Name:T2 Location:T18 Temporality:E23
 E5	Procedure:T5 Name:T6
 E7	Procedure:T7 Name:T8
-E9	Procedure:T9 Name:T10
+E9	Procedure:T9 Name:T10 Temporality:E24
 E11	Observation:T11 Name:T12 Numeric-Filter:E12
 E12	Eq-Comparison:T15 Operator:T13 Value:T14
-E8	Modifier:T20
+E8	Modifier:T20 Modifies:E5
 E13	Condition:T22 Name:T23
-E14	Modifier:T24
+E14	Modifier:T24 Modifies:E13
 E16	Procedure:T26 Name:T27 Temporality:E24
-E18	Procedure:T29
-E19	Encounter:T30
+E18	Procedure:T29 
+E19	Encounter:T30 
 E21	Condition:T34 Name:T35
 E2	Modifier:T16 Modifies:E5
 E10	Modifier:T21 Modifies:E13
 E1	Modifier:T1 Modifies:T2
-E22	Modifier:T4
+E22	Modifier:T4 Modifies:T2
 E23	Eq-Comparison:T37 Temporal-Period:T38
 E24	Eq-Comparison:T39 Temporal-Period:T40
 T2	Procedure-Name 315 334	right hemicolectomy
@@ -45,7 +45,7 @@ T36	Life-Stage-And-Gender 535 540	women
 T16	Modifier 355 363	Thoracic
 T21	Modifier 389 395	bening
 T1	Modifier 300 314	video assisted
-T4	Modifier 284 296	laparoscopic
+T4	Modifier 275 296	elective laparoscopic
 T37	Eq-Comparison 265 274	underwent
 T38	Eq-Temporal-Period 265 274	underwent
 T39	Eq-Comparison 429 434	prior

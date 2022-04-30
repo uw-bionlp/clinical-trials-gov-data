@@ -1,5 +1,5 @@
 E1	Procedure:T1 Name:T2 Minimum-Count:E5
-E3	Condition:T3 Name:T4
+E3	Condition:T3 Name:T4 Minimum-Count:E4
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14 Stability:T133
@@ -8,7 +8,7 @@ E17	Procedure:T17 Name:T18
 E19	Procedure:T19 Name:T20
 E21	Condition:T21 Name:T22
 E23	Procedure:T23 Name:T24 Temporality:E40
-E25	Procedure:T25
+E25	Procedure:T25 
 E27	Procedure:T27 Name:T28
 E29	Procedure:T29 Name:T30
 E33	Condition:T33 Name:T34
@@ -23,10 +23,8 @@ E42	Eq-Comparison:T60 Operator:T43 Value:T54 Unit:T79 Per:T147
 E2	Modifier:T31 Modifies:E3
 E4	Eq-Comparison:T5 Operator:T6 Value:T32
 E5	Eq-Comparison:T61 Operator:T62 Value:T63
-E10	Coreference:T67 Minimum-Count:E4 Refers-To:E3
-E12	Coreference:T68 Refers-To:E3
 E18	Eq-Comparison:T71 Operator:T72 Value:T73
-E24	Encounter:T76
+E24	Encounter:T76 
 E7	Condition:T7 Name:T8 Minimum-Count:E18 Severity:T75
 E20	Observation:T74 Name:T78 Numeric-Filter:E42
 E26	Observation:T80 Name:T81 Numeric-Filter:E41
@@ -40,7 +38,7 @@ E49	Condition:T106 Name:T107
 E50	Drug:T110 Name:T111 Temporality:E75
 E53	Condition:T117 Name:T118
 E54	Drug:T119 Name:T120
-E56	Condition:T122
+E56	Condition:T122 
 E57	Exception:T123 Except:E21 From:E56
 E58	Observation:T124 Name:T112 Severity:T121
 E61	Drug:T126 Name:T127
@@ -50,12 +48,12 @@ E67	Condition:T142 Name:T143
 E68	Assertion:T144 Asserted:E67
 E16	Organism:T66 Name:T87
 E44	Organism:T88 Name:T91
-E60	Study:T92
-E69	Study:T103
-E70	Study:T105
-E71	Study:T114
-E72	Study:T116
-E73	Study:T125
+E60	Study:T92 
+E69	Study:T103 
+E70	Study:T105 
+E71	Study:T114 
+E72	Study:T116 
+E73	Study:T125 
 E75	Eq-Comparison:T150 Temporal-Period:T151
 E76	Eq-Comparison:T152 Temporal-Period:T153
 E55	Assertion:T132 Asserted:E17
@@ -118,8 +116,6 @@ T32	Eq-Value 152 155	one
 T61	Eq-Comparison 209 221	at least one
 T62	Eq-Operator 209 217	at least
 T63	Eq-Value 218 221	one
-T67	Coreference 156 166	recurrence
-T68	Coreference 183 190	episode
 T71	Eq-Comparison 287 299	at least two
 T72	Eq-Operator 287 295	at least
 T73	Eq-Value 296 299	two
@@ -233,7 +229,6 @@ R12	Equivalent-To Arg1:E62 Arg2:E61
 R13	Found-By Arg1:E16 Arg2:E30
 R14	Found-By Arg1:E44 Arg2:E30
 R7	Equivalent-To Arg1:E50 Arg2:E49
-R15	After Arg1:E10 Arg2:E12
 R16	Before Arg1:E38 Arg2:E60
 R17	During Arg1:E47 Arg2:E69
 R18	During Arg1:E50 Arg2:E70
@@ -248,5 +243,5 @@ R26	And Arg1:E27 Arg2:E58
 R27	Or Arg1:E43 Arg2:E46
 R28	Or Arg1:E16 Arg2:E44
 R29	And Arg1:E53 Arg2:E54
-R30	And Arg1:E12 Arg2:E1
 R31	Or Arg1:E28 Arg2:E35
+R15	And Arg1:E3 Arg2:E1	

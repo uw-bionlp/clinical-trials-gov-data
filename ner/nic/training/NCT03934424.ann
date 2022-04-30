@@ -8,7 +8,7 @@ E14	Eq-Comparison:T25 Operator:T19 Value:T22 Unit:T16 Per:T47 Value2:T23
 E2	Condition:T26 Name:T27
 E6	Modifier:T30 Modifies:T3
 E10	Drug:T32 Temporality:E38
-E15	Drug:T33
+E15	Drug:T33 
 E5	Condition:T5 Name:T6 Stability:T64
 E18	Procedure:T13 Name:T36
 E19	Condition:T37 Name:T38
@@ -22,18 +22,17 @@ E27	Procedure:T52 Name:T46
 E29	Condition:T56 Name:T57
 E30	Condition:T58 Name:T55
 E31	Modifier:T59 Modifies:E30
-E32	Modifier:T60
+E32	Modifier:T60 
 E37	Observation:T66 Name:T67
 E38	Eq-Comparison:T69 Temporal-Period:T70
 E17	Assertion:T53 Asserted:E18
 E4	Modifier:T28 Modifies:T3
 E36	Procedure:T4 Name:T3 Temporality:E44
-E3	Assertion:T29 Asserted:E9
 E39	Negation:T65 Negates:E9
 E40	Negation:T71 Negates:E22
-E41	Risk:T72
+E41	Risk:T72 
 E42	Procedure:T73 Name:T74
-E43	Study:T75
+E43	Study:T75 
 E44	Eq-Comparison:T76 Temporal-Period:T77
 E45	Assertion:T78 Asserted:E42
 T1	Condition 263 277	claustrophobia
@@ -97,7 +96,6 @@ T64	Stability 229 235	affect
 T28	Modifier 155 166	weight-loss
 T4	Procedure 178 182	diet
 T3	Procedure-Name 178 182	diet
-T29	Assertion 319 330	self-report
 T65	Negation 340 348	excluded
 T71	Negation 735 743	excluded
 T72	Risk 775 779	risk
@@ -117,7 +115,6 @@ A11	Severity-Value T35 severe
 A7	Assertion-Type-Value E17 hypothetical
 A6	Assertion-Type-Value E24 possible
 A8	Stability-Value T64 change
-A5	Assertion-Type-Value E3 possible
 A12	Eq-Temporal-Period-Value T77 present
 A14	Assertion-Type-Value E45 hypothetical
 R2	Example-Of Arg1:E26 Arg2:E25
@@ -142,3 +139,6 @@ R19	Or Arg1:E11 Arg2:E19
 R20	Or Arg1:E19 Arg2:E29
 R21	Or Arg1:E27 Arg2:E11
 R22	Or Arg1:E29 Arg2:E20
+T31	Assertion 220 228	known to
+E8	Assertion:T31 Asserted:T64
+A13	Assertion-Type-Value E8 hypothetical

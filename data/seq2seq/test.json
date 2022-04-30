@@ -1,0 +1,1614 @@
+[
+    {
+        "intent": "4. inability to understand and/or read Danish",
+        "snippet": "neg().lang('Danish')"
+    },
+    {
+        "intent": "5. concurrent psychiatric or psychological treatment of PTSD outside of MHS-CRD.",
+        "snippet": "or(proc().mod('concurrent psychiatric').mod('psychological'), cond().name('PTSD'), proc().name('MHS - CRD'))"
+    },
+    {
+        "intent": "-  Undergoing non-elective procedure",
+        "snippet": "or(neg().mod('elective'), proc().name('procedure').mod('elective').temporal_filter(eq().temporal_per(PRESENT)))"
+    },
+    {
+        "intent": "-  Cognitive impairment precluding self-reporting of pain",
+        "snippet": "neg().hypothetical().cond().name('Cognitive impairment').observ().name('pain')"
+    },
+    {
+        "intent": "-  Hematologic/oncologic condition",
+        "snippet": "cond().name('condition').mod('Hematologic').mod('oncologic')"
+    },
+    {
+        "intent": "-  Liver of kidney conditions precluding usual analgesic prescription patters (opioid plus a non-opioid)",
+        "snippet": "neg().hypothetical().cond().name('conditions').mod('Liver of kidney').drug().name('analgesic prescription patters').equiv(drug().name('opioid'), drug().name('opioid'))"
+    },
+    {
+        "intent": "-  Use of opioids for prolonged pain pre-operatively (<2 weeks)",
+        "snippet": "or(drug().name('opioids').temporal_filter(eq().temporal_per(PRESENT), eq().op(LT).val('2').temporal_unit(WEEK)).before(proc().name('operatively')), observ().name('pain').mod('prolonged'))"
+    },
+    {
+        "intent": "-  Patients aged 18-74, receiving therapy for active ulcerative colitis confirmed by Mayo Score assessment, and evidence of colonic inflammation.",
+        "snippet": "or(age().num_filter(eq().op(BETWEEN).val('18').val('74')), intersect(cond().name('ulcerative colitis').clinical_score().name('Mayo Score assessment').temporal_filter(eq().temporal_per(PRESENT)), cond().name('colonic inflammation')))"
+    },
+    {
+        "intent": "-  Evidence of Crohn''s disease, indeterminate colitis, or presence of bacterial or parasitic infection.",
+        "snippet": "union(cond().name('Crohn''s disease'), cond().name('infection').mod('bacterial').mod('parasitic'), cond().name('indeterminate colitis'))"
+    },
+    {
+        "intent": "-  Patients receiving biologic agents and experimental agents are excluded.",
+        "snippet": "or(neg().drug().name('experimental agents'), union(drug().name('biologic agents').temporal_filter(eq().temporal_per(PRESENT)), drug().name('experimental agents')))"
+    },
+    {
+        "intent": "-  diagnosed with and engaged in care for HIV (defined as at least one HIV clinic medical appointment within the past six month period)",
+        "snippet": "cond().name('HIV').equiv(outpatient().loc(CLINIC).eq().op(GTEQ).val('one').eq().op(GTEQ).val('one').temporal_filter(eq().op(LTEQ).val('six').temporal_unit(MONTH).temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  at least 18 years of age",
+        "snippet": "age().num_filter(eq().op(GTEQ).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  smoke at least 5 cigarettes per day for longer than one year",
+        "snippet": "social_habit().name('smoke').num_filter(eq().op(GTEQ).val('5').unit().temporal_unit(DAY)).duration(eq().op(GT).val('one').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  exhaled carbon monoxide (CO) level greater than 5 at BL",
+        "snippet": "measurement().name('exhaled carbon monoxide').abbrev(observ().name('CO').num_filter(eq().op(GT).val('5')))"
+    },
+    {
+        "intent": "-  intention to quit smoking in the next 30 days",
+        "snippet": "observ().name('quit smoking').intention().temporal_filter(eq().val('30').temporal_unit(DAY).temporal_per(FUTURE))"
+    },
+    {
+        "intent": "-  currently using pharmacotherapy for smoking cessation",
+        "snippet": "or(proc().name('pharmacotherapy'), proc().name('smoking cessation').temporal_filter(eq().temporal_per(PRESENT)).using(proc().name('pharmacotherapy')))"
+    },
+    {
+        "intent": "-  currently using electronic cigarettes more than 2 days/week",
+        "snippet": "drug().name('cigarettes').mod('electronic').temporal_filter(eq().temporal_per(PRESENT), eq().op(GT).val('2').temporal_unit(DAY).temporal_unit(WEEK))"
+    },
+    {
+        "intent": "-  unstable medical or psychiatric condition (defined as hospitalization)",
+        "snippet": "cond().mod('medical').mod('psychiatric').equiv(inpatient())"
+    },
+    {
+        "intent": "-  medical contraindications to nicotine (unstable angina, uncontrolled hypertension, or recent cardiovascular event, including hospitalization)",
+        "snippet": "contraind('drug().name('nicotine')')"
+    },
+    {
+        "intent": "-  psychotic symptoms",
+        "snippet": "cond().name('psychotic').possible()"
+    },
+    {
+        "intent": "-  substance use disorder other than nicotine dependence",
+        "snippet": "or(cond().name('substance use disorder'), cond().name('nicotine dependence'))"
+    },
+    {
+        "intent": "-  past-month suicidal ideation or past-year suicide attempt",
+        "snippet": "union(cond().name('suicidal ideation').temporal_filter(eq().temporal_unit(MONTH).temporal_per(PAST)), cond().name('suicide attempt').temporal_filter(eq().temporal_unit(YEAR).temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  pregnant or nursing.",
+        "snippet": "union(cond().name('pregnant'), cond().name('nursing'))"
+    },
+    {
+        "intent": "-  Willingness to complete SEI-BCLE Questionnaire",
+        "snippet": "survey_or_questionnaire().name('SEI - BCLE Questionnaire').hypothetical()"
+    },
+    {
+        "intent": "-  Age >18 years.",
+        "snippet": "age().num_filter(eq().op(GT).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  History of primary lymphedema.",
+        "snippet": "cond().name('lymphedema').mod('primary').temporal_filter(eq().temporal_per(PAST))"
+    },
+    {
+        "intent": "-  Any patient with a current case of cellulitis.",
+        "snippet": "cond().name('cellulitis').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  adult patients of ASA physical status I and II undergoing surgery under general anaesthesia",
+        "snippet": "or(adult(), clinical_score().name('ASA').num_filter(eq().val('I').val('II').unit()), proc().name('surgery').temporal_filter(eq().temporal_per(PRESENT)).using(proc().name('general anaesthesia')))"
+    },
+    {
+        "intent": "-  anticipated difficult mask ventilation/ intubation",
+        "snippet": "union(proc().name('mask ventilation').hypothetical().mod('difficult'), proc().name('intubation').hypothetical())"
+    },
+    {
+        "intent": "-  individuals with significant cardiorespiratory or cerebrovascular disease",
+        "snippet": "cond().name('disease').mod('cardiorespiratory').mod('cerebrovascular').sev(SEVERE)"
+    },
+    {
+        "intent": "-  pregnant ladies",
+        "snippet": "cond().name('pregnant').female()"
+    },
+    {
+        "intent": "-  patient with history of epilepsy",
+        "snippet": "cond().name('epilepsy').temporal_filter(eq().temporal_per(PAST))"
+    },
+    {
+        "intent": "-  body mass index >25 kg/m2",
+        "snippet": "vital().name('body mass index').num_filter(eq().op(GT).val('25').unit().unit())"
+    },
+    {
+        "intent": "-  hemoglobin <8 gm/dL",
+        "snippet": "lab().name('hemoglobin').num_filter(eq().op(LT).val('8').unit().unit())"
+    },
+    {
+        "intent": "-  patients who were non-ambulant for >24 h, having SpO2 < 97% while breathing in room air",
+        "snippet": "or(neg().intersect(cond().name('ambulant').temporal_filter(eq().temporal_per(PAST)).duration(eq().op(GT).val('24').temporal_unit(HOUR)), vital().name('SpO 2').num_filter(eq().op(LT).val('97').unit()).during(observ().name('breathing').mod('room air'))), observ().name('breathing').mod('room air'))"
+    },
+    {
+        "intent": "-  phobia to facemask.",
+        "snippet": "cond().name('phobia').mod('facemask')"
+    },
+    {
+        "intent": "-  presence of erectile dysfunction",
+        "snippet": "cond().name('erectile dysfunction').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Presence of uncontrolled diabetes mellitus,",
+        "snippet": "cond().name('diabetes mellitus').mod('uncontrolled').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Presence of uncontrolled hypertension,",
+        "snippet": "cond().name('hypertension').mod('uncontrolled').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Presence of uncontrolled lipid metabolism disorders,",
+        "snippet": "cond().name('lipid metabolism disorders').mod('uncontrolled').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Presence of neurological diseases,",
+        "snippet": "cond().name('neurological diseases').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Presence of heamatological diseases,",
+        "snippet": "cond().name('heamatological diseases').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Urinary tract infection,",
+        "snippet": "cond().name('Urinary tract infection')"
+    },
+    {
+        "intent": "-  Diagnosis of any malignencies,",
+        "snippet": "cond().name('malignencies')"
+    },
+    {
+        "intent": "-  Chronic kidney failure,",
+        "snippet": "cond().name('kidney failure')"
+    },
+    {
+        "intent": "-  Presence of metabolic syndrome,",
+        "snippet": "cond().name('metabolic syndrome').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Presence of psychiatric diseases and/or medical treatment,",
+        "snippet": "union(cond().name('psychiatric diseases').temporal_filter(eq().temporal_per(PRESENT)), proc())"
+    },
+    {
+        "intent": "-  Smoking,",
+        "snippet": "observ().name('Smoking')"
+    },
+    {
+        "intent": "-  History of pelvic surgery, cardiac surgery and pelvic radiotherapy",
+        "snippet": "union(proc().name('pelvic surgery').temporal_filter(eq().temporal_per(PAST)), proc().name('cardiac surgery').temporal_filter(eq().temporal_per(PAST)), proc().name('radiotherapy').mod('pelvic').temporal_filter(eq().temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  Healthy children with no systemic diseases.",
+        "snippet": "or(cond().name('Healthy'), neg().cond().mod('systemic'), intersect(child(), neg().cond().mod('systemic')))"
+    },
+    {
+        "intent": "-  High caries risk children with the presence of at least one visible active WSL in primary teeth with ICDAS II score of 1,2 or 3",
+        "snippet": "or(risk([<__main__.Condition object at 0x11a8985d0>]), intersect(child(), cond().name('WSL').mod('visible').mod('primary teeth').eq().op(GTEQ).val('one').eq().op(GTEQ).val('one').temporal_filter(eq().temporal_per(PRESENT))), clinical_score().name('ICDAS II score').num_filter(eq().val('1').val('3').val('2')))"
+    },
+    {
+        "intent": "-  Selected tooth with cavitated lesion.",
+        "snippet": "cond().name('cavitated lesion').mod('Selected tooth')"
+    },
+    {
+        "intent": "-  Selected tooth with enamel defects.",
+        "snippet": "cond().name('enamel defects').mod('Selected tooth')"
+    },
+    {
+        "intent": "-  Participants allergic to milk products.",
+        "snippet": "allergy().name('milk')"
+    },
+    {
+        "intent": "-  BMI >= 25 kg/m2",
+        "snippet": "vital().name('BMI').num_filter(eq().op(GTEQ).val('25').unit().unit())"
+    },
+    {
+        "intent": "-  Adults aged 50 - 80 years old",
+        "snippet": "or(adult(), age().num_filter(eq().op(BETWEEN).val('50').val('80').temporal_unit(YEAR)))"
+    },
+    {
+        "intent": "-  Successful biochemical, haematological, and urinalysis assessment at screening",
+        "snippet": "proc().name('assessment').mod('Successful biochemical').mod('haematological').mod('urinalysis').during(study())"
+    },
+    {
+        "intent": "-  Current smokers, or ex-smokers ceasing < 6 months ago",
+        "snippet": "union(observ().name('smokers').temporal_filter(eq().temporal_per(PRESENT)), observ().name('smokers').temporal_filter(eq().temporal_per(PAST), eq().op(LT).val('6').temporal_unit(MONTH)))"
+    },
+    {
+        "intent": "-  existing or significant past medical history of vascular disease or medical conditions likely to affect the study measures",
+        "snippet": "union(cond().name('vascular disease').sev(SEVERE).temporal_filter(eq().temporal_per(PRESENT), eq().temporal_per(PAST)), cond())"
+    },
+    {
+        "intent": "-  Fructose or lactose intolerant subjects or known allergies to intervention treatments",
+        "snippet": "or(union(cond().name('intolerant').mod('Fructose').mod('lactose'), allergy().proc()), proc())"
+    },
+    {
+        "intent": "-  Those unprepared to adhere to dietary instructions",
+        "snippet": "proc().name('dietary instructions').hypothetical()"
+    },
+    {
+        "intent": "-  Parallel participation in another research project involving dietary intervention and/or sampling of biological fluids/material",
+        "snippet": "union(proc().name('dietary intervention'), proc().name('sampling').mod('biological fluids').mod('material'))"
+    },
+    {
+        "intent": "-  Those on therapeutic diets or having experienced substantial weight loss within 2 months of screening.",
+        "snippet": "union(proc().name('therapeutic diets').temporal_filter(eq()), observ().name('weight loss').sev(SEVERE).temporal_filter(eq().temporal_per(PAST), eq().op(LTEQ).val('2').temporal_unit(MONTH).before(study())))"
+    },
+    {
+        "intent": "-  Prescribed hypoglycaemic, anti-hypertensive, vasodilator or hormone replacement therapy (HRT) medication.",
+        "snippet": "or(union(drug().name('hypoglycaemic'), drug().name('anti - hypertensive'), proc().name('hormone replacement therapy').abbrev(proc().name('HRT')), drug().name('vasodilator')), drug().using(proc().name('HRT')))"
+    },
+    {
+        "intent": "-  Unsatisfactory biochemical, haematological or urinary results or measurements considered to be counter indicative for the study",
+        "snippet": "union(observ().name('results').mod('biochemical').mod('haematological').mod('urinary'), measurement().name('measurements'))"
+    },
+    {
+        "intent": "-  Pregnant women who were diagnosed with GDM from 13 to 32.6 gestational weeks",
+        "snippet": "or(cond().name('Pregnant'), intersect(female(), cond().name('GDM').during(measurement().name('gestational').num_filter(eq().op(BETWEEN).val('13').val('32.6').temporal_unit(WEEK)))), measurement().name('gestational').num_filter(eq().op(BETWEEN).val('13').val('32.6').temporal_unit(WEEK)))"
+    },
+    {
+        "intent": "-  18 years old and older",
+        "snippet": "age().num_filter(eq().op(GTEQ).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  Singleton pregnancy",
+        "snippet": "cond().name('pregnancy').mod('Singleton')"
+    },
+    {
+        "intent": "-  Women with pre-gestational diabetes mellitus",
+        "snippet": "intersect(female(), cond().name('diabetes mellitus').mod('pre - gestational'))"
+    },
+    {
+        "intent": "-  GDM diagnosed \u2265 33 gestational weeks",
+        "snippet": "or(cond().name('GDM'), measurement().name('gestational').num_filter(eq().op(GTEQ).val('33').temporal_unit(WEEK)))"
+    },
+    {
+        "intent": "-  Women using prophylactic antimicrobial treatment",
+        "snippet": "female().proc().name('prophylactic antimicrobial treatment').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Immunocompromised women",
+        "snippet": "cond().name('Immunocompromised').female()"
+    },
+    {
+        "intent": "-  Multiple pregnancy",
+        "snippet": "cond().name('pregnancy').eq().op(GT).eq().op(GT)"
+    },
+    {
+        "intent": "-  Women taking oral probiotic products who refuse to stop the consumption (food-containing probiotics is not considered an exclusion criterion).",
+        "snippet": "or(neg().hypothetical(), female().drug().name('probiotic products').mod('oral').temporal_filter(eq().temporal_per(PRESENT)), drug().name('probiotics').mod('food - containing'))"
+    },
+    {
+        "intent": "-  Patients who underwent fibula free flap for mandibular reconstruction",
+        "snippet": "proc().name('fibula free flap').temporal_filter(eq().temporal_per(PAST)).using(proc().name('mandibular reconstruction'))"
+    },
+    {
+        "intent": "-  Patient \u226518 years old",
+        "snippet": "age().num_filter(eq().op(GTEQ).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  patient alive 6 months after completion of treatment",
+        "snippet": "neg().death('alive').temporal_filter(eq().val('6').temporal_unit(MONTH).after(proc()))"
+    },
+    {
+        "intent": "-  Patient without post-operative scan evaluation",
+        "snippet": "neg().proc().name('scan evaluation').after(proc().name('operative'))"
+    },
+    {
+        "intent": "-  Patient with a chirurgical contraindication",
+        "snippet": "or(proc().name('chirurgical'), contraind('proc().name('chirurgical')'))"
+    },
+    {
+        "intent": "-  Pregnant or nursing woman",
+        "snippet": "or(union(cond().name('Pregnant'), cond().name('nursing').female()), female())"
+    },
+    {
+        "intent": "-  Adult requiring protection (guardianship, supervision)",
+        "snippet": "or(adult(), observ().name('requiring protection').observ().name('guardianship').observ().name('supervision').example(observ().name('guardianship'), observ().name('supervision')))"
+    },
+    {
+        "intent": "Adult Healthy Volunteers :",
+        "snippet": "or(adult(), cond().name('Healthy'))"
+    },
+    {
+        "intent": "- Over 18 years of age",
+        "snippet": "age().num_filter(eq().op(GT).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "Neonates:",
+        "snippet": "cond().name('Neonates')"
+    },
+    {
+        "intent": "-  Aged between 1h of life and 28 days of life",
+        "snippet": "age().num_filter(eq().op(BETWEEN).val('28').val('1').temporal_unit(DAY).temporal_unit(HOUR))"
+    },
+    {
+        "intent": "-  Born beyond 33 Week of Amenorrhea + 1day and 2kg of birth weight",
+        "snippet": "intersect(birth().temporal_filter(eq().op(GT).val('33').temporal_unit(WEEK).after(cond().name('Amenorrhea').after(eq().val('1').temporal_unit(DAY)))), vital().name('birth weight').num_filter(eq().val('2').unit()))"
+    },
+    {
+        "intent": "-  Hospitalized in the medical-surgical centre of Pediatrics of the hospital of Strasbourg",
+        "snippet": "inpatient().loc(UNIT)"
+    },
+    {
+        "intent": "-  For whom a blood sample was prescribed as part of their routine care",
+        "snippet": "lab().name('blood sample')"
+    },
+    {
+        "intent": "Adult Healthy Volunteers :",
+        "snippet": "or(adult(), cond().name('Healthy'))"
+    },
+    {
+        "intent": "-  Systemic inflammatory disease",
+        "snippet": "cond().name('inflammatory disease').mod('Systemic')"
+    },
+    {
+        "intent": "-  Transient inflammatory state",
+        "snippet": "cond().name('Transient inflammatory state')"
+    },
+    {
+        "intent": "-  Any drug that modifies the coagulation cascade during the 48h preceding the sampling",
+        "snippet": "or(drug(), cond().name('coagulation cascade').during(eq().val('48').temporal_unit(HOUR).before(study())))"
+    },
+    {
+        "intent": "Neonates:",
+        "snippet": "infant()"
+    },
+    {
+        "intent": "-  Risk of anemia < 7g/DL",
+        "snippet": "risk([<__main__.Condition object at 0x11a8f19d0>])"
+    },
+    {
+        "intent": "-  Current anticoagulant treatment",
+        "snippet": "or(drug().name('anticoagulant'), proc().temporal_filter(eq().temporal_per(PRESENT)).using(drug().name('anticoagulant')))"
+    },
+    {
+        "intent": "-  Patients with moderate to severe sleep apnoea who require CPAP as standard care (AHI >15)",
+        "snippet": "or(intersect(cond().name('sleep apnoea').sev(SEVERE), proc().using(proc().name('CPAP').hypothetical())), proc().name('CPAP').hypothetical(), observ().name('AHI').num_filter(eq().op(GT).val('15')))"
+    },
+    {
+        "intent": "-  Patients between the age of 18 and 75",
+        "snippet": "age().num_filter(eq().op(BETWEEN).val('18').val('75'))"
+    },
+    {
+        "intent": "-  Patients with a diagnosis of atrial fibrillation (AF), atrial flutter and/or ventricular tachycardia (VT)",
+        "snippet": "or(cond().name('atrial fibrillation').abbrev(cond().name('AF')), union(cond().name('atrial flutter'), cond().name('ventricular tachycardia').abbrev(cond().name('VT'))))"
+    },
+    {
+        "intent": "-  Patients with an ILR already in-situ or an established indication for ILR",
+        "snippet": "or(union(proc().name('ILR').mod('in - situ').temporal_filter(eq().temporal_per(PAST)), indic('proc().name('ILR')')), proc().name('ILR'))"
+    },
+    {
+        "intent": "-  Patients with a palliative diagnosis i.e. life expectancy less than 3 years",
+        "snippet": "cond().name('palliative').observ().name('life expectancy').num_filter(eq().op(LT).val('3').temporal_unit(YEAR)).example(observ().name('life expectancy').num_filter(eq().op(LT).val('3').temporal_unit(YEAR)))"
+    },
+    {
+        "intent": "-  Patients who lack capacity",
+        "snippet": "cond().name('lack capacity')"
+    },
+    {
+        "intent": "-  Patients with Spondyloarthritis (SpA) meeting the criteria of Amor and / or Assessement of spondyloarthritis International Society (ASAS)",
+        "snippet": "cond().name('Spondyloarthritis').abbrev(cond().name('SpA'))"
+    },
+    {
+        "intent": "-  Indication of standard radiography for the follow-up of the patients.",
+        "snippet": "indic('proc().name('standard radiography')')"
+    },
+    {
+        "intent": "-  the presence of a contraindication to the performance of conventional radiography (CR) or EOS imaging",
+        "snippet": "contraind('proc().name('conventional radiography').abbrev(proc().name('CR')), proc().name('EOS imaging')')"
+    },
+    {
+        "intent": "-  any disease affecting cognition",
+        "snippet": "or(cond(), observ().name('cognition'))"
+    },
+    {
+        "intent": "-  Patients who have had surgery on the spine and / or hip.",
+        "snippet": "proc().name('surgery').mod('spine').mod('hip').temporal_filter(eq().temporal_per(PAST))"
+    },
+    {
+        "intent": "-  Patient diagnosed with T1D > 6 months",
+        "snippet": "cond().name('T 1D').duration(eq().op(GT).val('6').temporal_unit(MONTH))"
+    },
+    {
+        "intent": "-  Patient''s age \u2265 15 years",
+        "snippet": "age().num_filter(eq().op(GTEQ).val('15').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  Patient or any one of the family member like father, mother or sibling using smart phone.",
+        "snippet": "or(name('family member'), father('father'), union(parent('mother'), sibling('sibling')))"
+    },
+    {
+        "intent": "-  Patient or any one of the family member know how to use (receive calls or read text message) a smart phone.",
+        "snippet": "name('family member')"
+    },
+    {
+        "intent": "-  Patient on insulin pump",
+        "snippet": "drug().name('insulin').mod('pump').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Pregnant females,",
+        "snippet": "cond().name('Pregnant').female()"
+    },
+    {
+        "intent": "-  Patient with neurodevelopmental delay or thalassemia",
+        "snippet": "union(cond().name('neurodevelopmental delay'), cond().name('thalassemia'))"
+    },
+    {
+        "intent": "-  Patient currently using any kind of authentic e-device for step count or physical activity.",
+        "snippet": "or(proc().name('e - device'), union(social_habit().name('step count').temporal_filter(eq().temporal_per(PRESENT)).using(proc().name('e - device')), social_habit().name('physical activity').temporal_filter(eq().temporal_per(PRESENT)).using(proc().name('e - device'))))"
+    },
+    {
+        "intent": "-  Be aged 10-18 years at the time of surgery",
+        "snippet": "age().num_filter(eq().op(BETWEEN).val('10').val('18').temporal_unit(YEAR).during(proc().name('surgery')))"
+    },
+    {
+        "intent": "-  Have a diagnosis of idiopathic scoliosis and/or kyphosis",
+        "snippet": "union(cond().name('idiopathic scoliosis'), cond().name('kyphosis'))"
+    },
+    {
+        "intent": "-  Be undergoing elective posterior spinal fusion",
+        "snippet": "proc().name('posterior spinal fusion').mod('elective').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Have only mild systemic disease",
+        "snippet": "cond().name('systemic disease').sev(MILD)"
+    },
+    {
+        "intent": "-  A diagnosis of neuromuscular scoliosis and/or kyphosis",
+        "snippet": "union(cond().name('neuromuscular scoliosis'), cond().name('kyphosis'))"
+    },
+    {
+        "intent": "-  A diagnosis of chronic pain",
+        "snippet": "observ().name('pain')"
+    },
+    {
+        "intent": "-  Used opioids in the past 6 months",
+        "snippet": "drug().name('opioids').temporal_filter(eq().temporal_per(PRESENT), eq().val('6').temporal_unit(MONTH).temporal_per(PAST))"
+    },
+    {
+        "intent": "-  Developmental delay",
+        "snippet": "cond().name('Developmental delay')"
+    },
+    {
+        "intent": "-  Liver or kidney disease",
+        "snippet": "cond().name('disease').mod('Liver').mod('kidney')"
+    },
+    {
+        "intent": "-  Obstructive sleep apnea",
+        "snippet": "cond().name('Obstructive sleep apnea')"
+    },
+    {
+        "intent": "-  Body mass index >40",
+        "snippet": "vital().name('Body mass index').num_filter(eq().op(GT).val('40'))"
+    },
+    {
+        "intent": "-  Be pregnant or breastfeeding",
+        "snippet": "union(cond().name('pregnant'), cond().name('breastfeeding'))"
+    },
+    {
+        "intent": "-  Informed consent will be obtained from the patient or the parents before any study related procedures.",
+        "snippet": "or(parent('parents').before(study()), proc())"
+    },
+    {
+        "intent": "-  Patients of both genders older than 6 months and younger than 80 years",
+        "snippet": "age().num_filter(eq().op(GT).val('6').temporal_unit(MONTH), eq().op(LT).val('80').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  The patient has a diagnosis of Wilson dis-ease",
+        "snippet": "cond().name('Wilson dis - ease')"
+    },
+    {
+        "intent": "-  No Informed consent from the patient or the parents before any study related procedures",
+        "snippet": "or(parent('parents').before(study()), proc())"
+    },
+    {
+        "intent": "-  Patients of both genders younger than 6 months and older than 80 years",
+        "snippet": "age().num_filter(eq().op(GT).val('80').temporal_unit(YEAR), eq().op(LT).val('6').temporal_unit(MONTH))"
+    },
+    {
+        "intent": "-  No diagnosis of Wilson disease",
+        "snippet": "neg().cond().name('Wilson disease')"
+    },
+    {
+        "intent": "-  Patients eligible for treatment of hamstring avulsion",
+        "snippet": "or(proc().hypothetical(), cond().name('hamstring avulsion'))"
+    },
+    {
+        "intent": "-  Conditions that contraindicate muscle strength testing e.g. cancer and neurological conditions",
+        "snippet": "or(cond().cond().name('cancer').cond().name('neurological conditions').example(cond().name('cancer'), cond().name('neurological conditions')), contraind('proc().name('muscle strength testing')'))"
+    },
+    {
+        "intent": "-  Patients that do not speak or understand Danish",
+        "snippet": "neg().lang('Danish')"
+    },
+    {
+        "intent": "-  vaginal delivery",
+        "snippet": "proc().name('vaginal delivery')"
+    },
+    {
+        "intent": "-  an infant age of 6 months (\u00b13 weeks)",
+        "snippet": "or(child('infant'), age().num_filter(eq().op(EQ).val('6').temporal_unit(MONTH), eq().op(PLUS-MINUS).val('3').temporal_unit(WEEK)))"
+    },
+    {
+        "intent": "-  mother \u226515 years of age",
+        "snippet": "or(mother('mother'), age().num_filter(eq().op(GTEQ).val('15').temporal_unit(YEAR)))"
+    },
+    {
+        "intent": "-  infant still breastfeeding",
+        "snippet": "or(infant(), cond().name('breastfeeding'))"
+    },
+    {
+        "intent": "-  hemoglobin < 70 g/L",
+        "snippet": "lab().name('hemoglobin').num_filter(eq().op(LT).val('70').unit().unit())"
+    },
+    {
+        "intent": "-  Z scores for weight-for-age (WAZ) or weight-for-height (WHZ) <3,",
+        "snippet": "measurement().name('Z scores for weight - for - age').abbrev(union(observ().name('WAZ').num_filter(eq().op(LT).val('3')), measurement().name('weight - for - height').abbrev(observ().name('WHZ').num_filter(eq().op(LT).val('3')))))"
+    },
+    {
+        "intent": "-  any maternal or infant chronic illness",
+        "snippet": "or(union(mother('maternal'), child('infant')), cond().name('illness'))"
+    },
+    {
+        "intent": "-  administration of any infant vitamin or mineral supplements for the past 2 months",
+        "snippet": "or(child('infant'), drug().name('supplements').mod('mineral').mod('vitamin').temporal_filter(eq().val('2').temporal_unit(MONTH).temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  any history of infant antibiotic treatment.",
+        "snippet": "or(child('infant'), drug().name('antibiotic'), proc().temporal_filter(eq().temporal_per(PAST)).using(drug().name('antibiotic')))"
+    },
+    {
+        "intent": "-  three months before, having been infected with a documented pathogen",
+        "snippet": "cond().name('infected').cond().name('pathogen').temporal_filter(eq().val('three').temporal_unit(MONTH).temporal_per(PAST))"
+    },
+    {
+        "intent": "-  the patient must have dental calculus",
+        "snippet": "cond().name('dental calculus')"
+    },
+    {
+        "intent": "-  to be under 18 years old",
+        "snippet": "age().num_filter(eq().op(LT).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  a tartar removal since the infection",
+        "snippet": "proc().name('tartar removal')"
+    },
+    {
+        "intent": "-  physical status American Society of Anesthesiologist (ASA) I or II",
+        "snippet": "clinical_score().name('American Society of Anesthesiologist').abbrev(clinical_score().name('ASA').num_filter(eq().val('I').val('II')))"
+    },
+    {
+        "intent": "-  A body mass index (BMI) >30 kg/m2",
+        "snippet": "vital().name('body mass index').abbrev(vital().name('BMI').num_filter(eq().op(GT).val('30').unit().unit()))"
+    },
+    {
+        "intent": "-  ASA physical status >II",
+        "snippet": "clinical_score().name('ASA').num_filter(eq().op(GT).val('II'))"
+    },
+    {
+        "intent": "-  major illnesses (e.g., cardiac, respiratory, renal, hepatic or neurological)",
+        "snippet": "cond().name('illnesses').mod('cardiac').mod('respiratory').mod('renal').mod('hepatic').mod('neurological').sev(SEVERE)"
+    },
+    {
+        "intent": "-  Coagulation abnormalities",
+        "snippet": "cond().name('Coagulation').pol(ABNORMAL)"
+    },
+    {
+        "intent": "-  Infection at the injection site",
+        "snippet": "or(cond().name('Infection').mod('site'), proc().name('injection').mod('site'))"
+    },
+    {
+        "intent": "-  Allergy or contraindications to the drugs used in the study",
+        "snippet": "union(allergy().drug(), contraind('drug()'))"
+    },
+    {
+        "intent": "-  History of drug addiction or alcohol abuse",
+        "snippet": "union(cond().name('drug addiction').temporal_filter(eq().temporal_per(PAST)), cond().name('alcohol abuse').temporal_filter(eq().temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  A psychiatric illness, or mental retardation interfering with the evaluation of pain scores or PCA programs .",
+        "snippet": "or(union(cond().name('psychiatric illness'), cond().name('mental retardation')), union(measurement().name('pain scores'), proc().name('PCA programs')))"
+    },
+    {
+        "intent": "-  \u226518 years of age",
+        "snippet": "age().num_filter(eq().op(GTEQ).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  Currently treated with peritoneal dialysis (APD or CAPD)",
+        "snippet": "proc().temporal_filter(eq().temporal_per(PRESENT)).using(proc().name('peritoneal dialysis').abbrev(proc().name('APD'), proc().name('CAPD')))"
+    },
+    {
+        "intent": "-  Serum ionized calcium between 1.10 and 1.40 mmol/L for >3 months",
+        "snippet": "lab().name('Serum ionized calcium').num_filter(eq().op(BETWEEN).val('1.10').val('1.40').unit().unit()).duration(eq().op(GT).val('3').temporal_unit(MONTH))"
+    },
+    {
+        "intent": "-  Plasma phosphate between 0.7 and 3.0 mmol/L for >3 months",
+        "snippet": "lab().name('Plasma phosphate').num_filter(eq().op(BETWEEN).val('0.7').val('3.0').unit().unit()).duration(eq().op(GT).val('3').temporal_unit(MONTH))"
+    },
+    {
+        "intent": "-  Earlier parathyroidectomized",
+        "snippet": "cond().name('parathyroidectomized').temporal_filter(eq().temporal_per(PAST))"
+    },
+    {
+        "intent": "-  Other conditions, which hinders the participation in the trial",
+        "snippet": "cond()"
+    },
+    {
+        "intent": "-  Children who are deceased prior to the family being approached for study participation",
+        "snippet": "or(child('Children'), death('deceased').before(study()))"
+    },
+    {
+        "intent": "-  Neonates that are considered non-viable, or have the potential to be non-viable",
+        "snippet": "or(risk([<__main__.Condition object at 0x11a979a10>]), child('Neonates'), union(cond().name('non - viable'), risk([<__main__.Condition object at 0x11a979a10>])))"
+    },
+    {
+        "intent": "-  Spanish-only speaking families",
+        "snippet": "lang('Spanish')"
+    },
+    {
+        "intent": "\u2022 Wards of the state",
+        "snippet": "observ().name('Wards of the state')"
+    },
+    {
+        "intent": "1. Inflammatory arthritis of ankle joint, infection in ankle joint, neoplasm around ankle joint.",
+        "snippet": "or(cond().name('Inflammatory arthritis').mod('ankle joint'), cond().name('infection').mod('ankle joint').mod('neoplasm').mod('around ankle joint'))"
+    },
+    {
+        "intent": "2. Patients with contraindications for MRI, e.g. an implanted magnetic device, pacemakers or claustrophobia.",
+        "snippet": "contraind('proc().name('MRI')')"
+    },
+    {
+        "intent": "1. Moderate-severe uni- and bipolar depression according to the International Classification of Diseases (ICD-10)",
+        "snippet": "cond().name('depression').mod('uni -').mod('bipolar').sev(SEVERE)"
+    },
+    {
+        "intent": "2. A Hamilton scale score (HDS-17) of \u2265 18 and/or a sub-scale (HDSS) score of \u2265 9 within 24-48 hours before the first treatment",
+        "snippet": "or(clinical_score().name('Hamilton scale').abbrev(union(observ().name('HDS - 17').num_filter(eq().op(GTEQ).val('18')), clinical_score().name('sub - scale').abbrev(observ().name('HDSS').num_filter(eq().op(GTEQ).val('9')).temporal_filter(eq().op(BETWEEN).op(LTEQ).val('24').val('48').temporal_unit(HOUR).before(eq().temporal_rec(FIRST-TIME)))))), proc().temporal_filter(eq().temporal_rec(FIRST-TIME)))"
+    },
+    {
+        "intent": "1. Organic brain disease.",
+        "snippet": "cond().name('brain disease').mod('Organic')"
+    },
+    {
+        "intent": "2. Epileptic seizure < 2 years",
+        "snippet": "cond().name('Epileptic seizure').temporal_filter(eq().op(LT).val('2').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "3. Patients with implanted metal parts in the brain or chest",
+        "snippet": "proc().name('implanted metal parts').mod('brain').mod('chest')"
+    },
+    {
+        "intent": "4. Patients with pacemaker",
+        "snippet": "proc().name('pacemaker')"
+    },
+    {
+        "intent": "5. Medical diseases with cerebral impact",
+        "snippet": "or(cond(), observ().name('cerebral'))"
+    },
+    {
+        "intent": "6. Serious suicidal danger",
+        "snippet": "risk([<__main__.Condition object at 0x11a997cd0>])"
+    },
+    {
+        "intent": "-  Patient presenting for primary total joint arthroplasty",
+        "snippet": "proc().name('total joint arthroplasty').mod('primary').temporal_filter(eq().temporal_per(FUTURE))"
+    },
+    {
+        "intent": "-  Major Depressive Disorder",
+        "snippet": "cond().name('Depressive Disorder').sev(SEVERE)"
+    },
+    {
+        "intent": "-  Pregnant of breastfeeding women",
+        "snippet": "or(cond().name('Pregnant'), cond().name('breastfeeding'), female().cond().name('breastfeeding'))"
+    },
+    {
+        "intent": "-  Screened to be generally healthy as determined by standard medical assessment on physical and mental health",
+        "snippet": "cond().name('healthy').proc().name('standard medical assessment').mod('physical').mod('mental health')"
+    },
+    {
+        "intent": "-  Tanner stage 2 based on breast development for girls, and pubic hair in boys. Girls will have to be premenarcheal",
+        "snippet": "or(cond().name('Tanner').eq().val('2').unit().cond().name('breast development').cond().name('pubic hair'), union(girl().cond().name('breast development'), boy().cond().name('pubic hair')), girl().cond().name('premenarcheal'))"
+    },
+    {
+        "intent": "-  Taking regularly any nutritional supplements and unwilling to stop for the study",
+        "snippet": "neg().hypothetical().drug().name('nutritional supplements').temporal_filter(eq().temporal_per(PRESENT)).during(study())"
+    },
+    {
+        "intent": "1. Subject has a diagnosis of MDD as diagnosed by SCID-5-CT, with symptoms that have been present for at least a 4-week period.",
+        "snippet": "cond().name('MDD')"
+    },
+    {
+        "intent": "1. Subject has attempted suicide associated with the current episode of MDD.",
+        "snippet": "or(cond().name('attempted suicide').during(eq().temporal_per(PRESENT)), cond().name('MDD').temporal_filter(eq().temporal_per(PRESENT)))"
+    },
+    {
+        "intent": "2. Subject has a medical history of bipolar disorder, schizophrenia, and/or schizoaffective disorder.",
+        "snippet": "union(cond().name('bipolar disorder').temporal_filter(eq().temporal_per(PAST)), cond().name('schizophrenia').temporal_filter(eq().temporal_per(PAST)), cond().name('schizoaffective disorder').temporal_filter(eq().temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  Children between 7 and 12 years old\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.",
+        "snippet": "or(child(), age().num_filter(eq().op(BETWEEN).val('7').val('12').temporal_unit(YEAR)))"
+    },
+    {
+        "intent": "-  Normal or corrected visual acuity \u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.",
+        "snippet": "observ().name('visual acuity').pol(NORMAL).mod('corrected')"
+    },
+    {
+        "intent": "-  ADHD diagnostic given by a doctor according to DSM 5 criteria (Diagnostic and Statistical Manual of Mental Disorders)",
+        "snippet": "cond().name('ADHD')"
+    },
+    {
+        "intent": "-  Free from drug treatment until 24 hours before the experiment session\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.",
+        "snippet": "neg().proc().temporal_filter(eq().val('24').temporal_unit(HOUR).temporal_per(PAST).before(study())).using(drug())"
+    },
+    {
+        "intent": "-History of neurological troubles, dysphasia, autistic spectrum disorder, intellectual disabilities",
+        "snippet": "union(cond().name('neurological troubles').temporal_filter(eq().temporal_per(PAST)), cond().name('dysphasia'), cond().name('intellectual disabilities'), cond().name('autistic spectrum disorder'))"
+    },
+    {
+        "intent": "-  Primigravida or Primipara",
+        "snippet": "union(cond().name('Primigravida'), cond().name('Primipara'))"
+    },
+    {
+        "intent": "-  Pregnancy between 36 and 42 weeks of gestation.",
+        "snippet": "or(cond().name('Pregnancy'), measurement().name('gestation').num_filter(eq().op(BETWEEN).val('36').val('42').temporal_unit(WEEK)))"
+    },
+    {
+        "intent": "-  A live singleton fetus in cephalic presentation.",
+        "snippet": "cond().name('singleton fetus').mod('cephalic presentation').mod('live')"
+    },
+    {
+        "intent": "-  No history of uterine surgery.",
+        "snippet": "neg().proc().name('uterine surgery').temporal_filter(eq().temporal_per(PAST))"
+    },
+    {
+        "intent": "-  Clinically adequate pelvis.",
+        "snippet": "cond().name('pelvis').pol(NORMAL)"
+    },
+    {
+        "intent": "-  Modified Bishop''s score <5.",
+        "snippet": "clinical_score().name('Bishop''s score').mod('Modified').num_filter(eq().op(LT).val('5'))"
+    },
+    {
+        "intent": "-  Reactive Non stress test (NST) .",
+        "snippet": "proc().name('Non stress test').pol(REACTIVE).abbrev(proc().name('NST'))"
+    },
+    {
+        "intent": "-  \u2022Known hypersensitivity or contraindications to oral misoprostol (uterine surgery).",
+        "snippet": "union(cond().name('hypersensitivity').drug().name('misoprostol').mod('oral'), contraind('drug().name('misoprostol').mod('oral')'))"
+    },
+    {
+        "intent": "-  Any antenatal medical complications.",
+        "snippet": "cond().name('complications').mod('antenatal')"
+    },
+    {
+        "intent": "-  A situation requiring LSCS (Maternal or Fetal) e.g:fetal distress",
+        "snippet": "or(cond().cond().name('fetal distress').example(cond().name('fetal distress')), proc().name('LSCS').hypothetical().mod('Maternal').mod('Fetal'))"
+    },
+    {
+        "intent": "-  Non-reactive NST.",
+        "snippet": "proc().name('NST').pol(NON-REACTIVE)"
+    },
+    {
+        "intent": "1. Between the ages of 60 and 85;",
+        "snippet": "age().num_filter(eq().op(BETWEEN).val('60').val('85'))"
+    },
+    {
+        "intent": "2. Speaks fluent English;",
+        "snippet": "lang('English')"
+    },
+    {
+        "intent": "3. Visual and auditory acuity adequate for neuropsychological and computerized testing;",
+        "snippet": "or(cond().name('acuity').mod('Visual').mod('auditory'), proc().name('testing').hypothetical().mod('neuropsychological').mod('computerized'))"
+    },
+    {
+        "intent": "4. Good general health with no disease(s) expected to interfere with the study;",
+        "snippet": "or(neg().cond(), intersect(cond().name('general health').pol(NORMAL), neg().cond()))"
+    },
+    {
+        "intent": "5. Willing and able to participate for the duration of the study and in all study procedures including MRI and PET;",
+        "snippet": "proc().hypothetical().hypothetical().proc().name('MRI').proc().name('PET').example(proc().name('PET')).example(proc().name('MRI').proc().name('PET').example(proc().name('PET')))"
+    },
+    {
+        "intent": "6. Normal cognition defined as a Clinical Dementia Rating of 0 and a Mini-Mental State Examination score of 27 or higher.",
+        "snippet": "observ().name('cognition').pol(NORMAL).equiv(clinical_score().name('Clinical Dementia Rating').num_filter(eq().val('0')), clinical_score().name('Mini - Mental State Examination').num_filter(eq().op(GTEQ).val('27').unit()))"
+    },
+    {
+        "intent": "1. Significant co-morbid neurologic disease such as Parkinson''s disease, multiple sclerosis, brain cyst, tumor or aneurysm;",
+        "snippet": "cond().name('neurologic disease').cond().name('Parkinson''s disease').cond().name('multiple sclerosis').cond().name('brain cyst').cond().name('tumor').cond().name('aneurysm').mod('co - morbid').sev(SEVERE).example(cond().name('Parkinson''s disease'), cond().name('multiple sclerosis'), cond().name('brain cyst'), cond().name('tumor'), cond().name('aneurysm'))"
+    },
+    {
+        "intent": "4. ADRC consensus diagnosis of dementia or mild cognitive impairment;",
+        "snippet": "union(cond().name('dementia'), cond().name('cognitive impairment').sev(MILD))"
+    },
+    {
+        "intent": "5. Cognitive impairment when tested at baseline (defined as a score on any neuropsychological test of 1.5 SDs or more outside the age norm);",
+        "snippet": "cond().name('Cognitive impairment').equiv(clinical_score().name('neuropsychological test').num_filter(eq().op(GTEQ).val('1.5').unit())).during(study())"
+    },
+    {
+        "intent": "6. Alcohol or substance abuse or dependence within the past 2 years (DSM-IV criteria);",
+        "snippet": "union(cond().name('abuse').mod('Alcohol').mod('substance').temporal_filter(eq().op(LTEQ).val('2').temporal_unit(YEAR).temporal_per(PAST)), cond().name('dependence').mod('Alcohol').mod('substance').temporal_filter(eq().op(LTEQ).val('2').temporal_unit(YEAR).temporal_per(PAST)))"
+    },
+    {
+        "intent": "8. PET contraindications, e.g. significant prior radiation exposure and pregnancy.",
+        "snippet": "or(proc().name('PET'), contraind('proc().name('PET')'))"
+    },
+    {
+        "intent": "1. age > 18 years;",
+        "snippet": "age().num_filter(eq().op(GT).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "2. confirmed diagnosis of prediabetes or T2D (documented A1c of \u2265 5.7%, 2-hour post-load glucose of >140, or FBG of >100);",
+        "snippet": "union(cond().name('prediabetes').equiv(lab().name('A 1c').num_filter(eq().op(GTEQ).val('5.7').unit()), lab().name('2 - hour post - load glucose').num_filter(eq().op(GT).val('140')), observ().name('FBG').num_filter(eq().op(GT).val('100'))), cond().name('T 2D'))"
+    },
+    {
+        "intent": "3. a family member or peer willing to participate and attend all sessions as a social influencer;",
+        "snippet": "or(parent('family'), proc().name('sessions').hypothetical())"
+    },
+    {
+        "intent": "4. proficiency in English of at least one member of each dyad,",
+        "snippet": "lang('English')"
+    },
+    {
+        "intent": "1. type 1 diabetes or diabetes secondary to other conditions (e.g. steroid-induced, pancreatic insufficiency, or chemotherapy-induced);",
+        "snippet": "or(union(cond().name('diabetes').mod('type 1'), cond().name('diabetes').cond().union(cond().name('insufficiency').drug().name('steroid').mod('induced').mod('pancreatic').mod('induced'), proc().name('chemotherapy')).example(union(cond().name('insufficiency').drug().name('steroid').mod('induced').mod('pancreatic').mod('induced'), proc().name('chemotherapy'))).mod('secondary')), cond().union(cond().name('insufficiency').drug().name('steroid').mod('induced').mod('pancreatic').mod('induced'), proc().name('chemotherapy')).example(union(cond().name('insufficiency').drug().name('steroid').mod('induced').mod('pancreatic').mod('induced'), proc().name('chemotherapy'))))"
+    },
+    {
+        "intent": "2. malignancy or life-threatening illness with life expectancy of <5 years;",
+        "snippet": "or(risk([<__main__.Death object at 0x11a9f9f90>]), union(cond().name('malignancy'), risk([<__main__.Death object at 0x11a9f9f90>])), intersect(cond(), observ().name('life expectancy').num_filter(eq().op(LT).val('5').temporal_unit(YEAR))))"
+    },
+    {
+        "intent": "3. end-stage disease or serious illness that prohibits participation (e.g. end-stage renal disease or class IV congestive heart failure);",
+        "snippet": "neg().hypothetical().union(cond().mod('end - stage'), cond().name('illness').union(cond().name('renal disease').mod('end - stage'), cond().name('congestive heart failure').eq().val('IV').unit()).sev(SEVERE).example(union(cond().name('renal disease').mod('end - stage'), cond().name('congestive heart failure').eq().val('IV').unit()))).study()"
+    },
+    {
+        "intent": "4. inability to perform unsupervised physical activity;",
+        "snippet": "neg().hypothetical().social_habit().name('physical activity').mod('unsupervised')"
+    },
+    {
+        "intent": "5. pregnancy;",
+        "snippet": "cond().name('pregnancy')"
+    },
+    {
+        "intent": "6. diagnosed cognitive deficits or limited decision-making capacity;",
+        "snippet": "union(cond().name('cognitive deficits'), cond().name('decision - making capacity').pol(LOW))"
+    },
+    {
+        "intent": "7. alcohol or substance abuse;",
+        "snippet": "cond().name('abuse').mod('alcohol').mod('substance')"
+    },
+    {
+        "intent": "8. homelessness or no fixed address.",
+        "snippet": "or(neg().loc(RESIDENCE), union(cond().name('homelessness'), neg().loc(RESIDENCE)))"
+    },
+    {
+        "intent": "-  stroke / cerebrovascular disease",
+        "snippet": "union(cond().name('stroke'), cond().name('cerebrovascular disease'))"
+    },
+    {
+        "intent": "-  traumatic brain injury",
+        "snippet": "observ().name('traumatic brain injury')"
+    },
+    {
+        "intent": "-  multiple sclerosis",
+        "snippet": "cond().name('multiple sclerosis')"
+    },
+    {
+        "intent": "-  spinal cord injuries (including spinal cord lesions i.e. myelopathies etc.)",
+        "snippet": "observ().name('injuries').observ().name('lesions').cond().name('myelopathies').mod('spinal cord').example(cond().name('myelopathies')).mod('spinal cord').example(observ().name('lesions').cond().name('myelopathies').mod('spinal cord').example(cond().name('myelopathies')))"
+    },
+    {
+        "intent": "-  heterotopic ossifications,",
+        "snippet": "cond().name('heterotopic ossifications')"
+    },
+    {
+        "intent": "-  chronic administration of drugs, which promote fat increase",
+        "snippet": "or(drug(), cond().name('fat').pol(HIGH))"
+    },
+    {
+        "intent": "-  chronic administration of drugs, which promote bone or muscle loss",
+        "snippet": "or(drug(), cond().name('loss').mod('bone').mod('muscle'))"
+    },
+    {
+        "intent": "-  co-existing other diseases such as: endocrinopathies, muscular dystrophies, non-alcoholic fatty liver disease.",
+        "snippet": "or(neg().mod('alcoholic'), cond().cond().name('endocrinopathies').cond().name('muscular dystrophies').cond().name('fatty liver disease').mod('alcoholic').mod('co - existing').example(cond().name('endocrinopathies'), cond().name('muscular dystrophies'), cond().name('fatty liver disease').mod('alcoholic')))"
+    },
+    {
+        "intent": "-  healthy children",
+        "snippet": "or(cond().name('healthy'), child())"
+    },
+    {
+        "intent": "-  no food allergies",
+        "snippet": "neg().allergy().name('food')"
+    },
+    {
+        "intent": "-  no medications that affect behavior/learning/appetite",
+        "snippet": "or(neg().drug(), union(cond().name('behavior'), cond().name('learning'), cond().name('appetite')))"
+    },
+    {
+        "intent": "-  1. diagnosed as HIV positive;",
+        "snippet": "cond().name('HIV').pol(POSITIVE)"
+    },
+    {
+        "intent": "-  2. initiate antiretroviral therapy on the day of recruitment;",
+        "snippet": "proc().name('antiretroviral therapy').temporal_filter(eq().temporal_rec(FIRST-TIME)).during(study())"
+    },
+    {
+        "intent": "-  3. was infected through male same-sex behavior;",
+        "snippet": "cond().name('infected').social_habit().name('male same - sex behavior')"
+    },
+    {
+        "intent": "-  1. under severe physical or mental condition which precludes study participation;",
+        "snippet": "neg().hypothetical().cond().name('condition').mod('physical').mod('mental').sev(SEVERE).study()"
+    },
+    {
+        "intent": "-  2. being an inpatient of the hospital;",
+        "snippet": "inpatient().loc(HOSPITAL).temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Confirmed diagnosis of PMM according to the 2016 Rome Consensus recommendations",
+        "snippet": "cond().name('PMM')"
+    },
+    {
+        "intent": "-  Confirmed mitochondrial mutation with evidence of myopathy",
+        "snippet": "intersect(cond().name('mitochondrial mutation'), cond().name('myopathy'))"
+    },
+    {
+        "intent": "-  Able to remain on stable medication throughout the study",
+        "snippet": "drug().hypothetical().during(study())"
+    },
+    {
+        "intent": "-  Documented evidence of ongoing rhabdomyolysis",
+        "snippet": "cond().name('rhabdomyolysis').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Subjects with motor abnormalities other than related to mitochondrial disease",
+        "snippet": "or(cond().name('motor abnormalities'), cond().name('mitochondrial disease'))"
+    },
+    {
+        "intent": "-  Treatment with an investigational drug within 3 months prior to Day 1",
+        "snippet": "proc().using(drug().temporal_filter(eq().op(LTEQ).val('3').temporal_unit(MONTH).before(study())))"
+    },
+    {
+        "intent": "-  Hospitalised within 3 months prior to screening for any major medical condition",
+        "snippet": "or(inpatient(), cond().sev(SEVERE))"
+    },
+    {
+        "intent": "-  Pregnant or nursing females",
+        "snippet": "or(union(cond().name('Pregnant'), cond().name('nursing').female()), female())"
+    },
+    {
+        "intent": "-  FOR INTERVIEWS AND FOCUS GROUPS: Caregivers: any person who has provided care to an Asian American cancer patient",
+        "snippet": "or(ethnic(), cond().name('cancer'))"
+    },
+    {
+        "intent": "-  Any medical or psychological conditions precluding informed consent",
+        "snippet": "cond().mod('medical').mod('psychological')"
+    },
+    {
+        "intent": "-  White European or black African / Caribbean heritage",
+        "snippet": "union(ethnic(), ethnic(), ethnic())"
+    },
+    {
+        "intent": "-  BMI >18 kg/m2",
+        "snippet": "vital().name('BMI').num_filter(eq().op(GT).val('18').unit().unit())"
+    },
+    {
+        "intent": "-  English speaking",
+        "snippet": "lang('English')"
+    },
+    {
+        "intent": "-  Any significant medical condition",
+        "snippet": "cond().sev(SEVERE)"
+    },
+    {
+        "intent": "-  Uncontrolled hypertension",
+        "snippet": "cond().name('hypertension').mod('Uncontrolled')"
+    },
+    {
+        "intent": "-  Alcohol consumption >14 units / week",
+        "snippet": "social_habit().name('Alcohol consumption').num_filter(eq().op(GT).val('14').unit().temporal_unit(WEEK))"
+    },
+    {
+        "intent": "-  Random blood Glucose concentration above 7.8mmol/l",
+        "snippet": "lab().name('blood Glucose concentration').mod('Random').num_filter(eq().op(GT).val('7.8').unit().unit())"
+    },
+    {
+        "intent": "-  Hemoglobin A1c (HbA1c) >47mmol/mol (>6.4%)",
+        "snippet": "lab().name('Hemoglobin A 1c').abbrev(lab().name('HbA 1c').num_filter(eq().op(GT).val('47').unit().unit().equiv(eq().op(GT).val('6.4').unit())))"
+    },
+    {
+        "intent": "-  Use of regular medication, (oral contraceptive pill or antihypertensive medication are acceptable if use has been for >6 months)",
+        "snippet": "drug().drug().name('antihypertensive medication').duration(eq().op(GT).val('6').temporal_unit(MONTH)).drug().name('oral contraceptive pill').duration(eq().op(GT).val('6').temporal_unit(MONTH)).temporal_filter(eq().temporal_per(PRESENT)).example(drug().name('antihypertensive medication').duration(eq().op(GT).val('6').temporal_unit(MONTH)), drug().name('oral contraceptive pill').duration(eq().op(GT).val('6').temporal_unit(MONTH)))"
+    },
+    {
+        "intent": "-  History of Irritable Bowel Syndrome, food intolerances or any gastrointestinal disorders",
+        "snippet": "union(cond().name('Irritable Bowel Syndrome').temporal_filter(eq().temporal_per(PAST)), cond().name('food intolerances').temporal_filter(eq().temporal_per(PAST)), cond().name('gastrointestinal disorders').temporal_filter(eq().temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  Previous bariatric surgery, or gastrointestinal surgery which may affect normal function (e.g. bowel resection)",
+        "snippet": "or(union(proc().name('bariatric surgery').temporal_filter(eq().temporal_per(PAST)), proc().name('gastrointestinal surgery').proc().name('bowel resection').temporal_filter(eq().temporal_per(PAST)).example(proc().name('bowel resection'))), cond().name('function').pol(NORMAL))"
+    },
+    {
+        "intent": "-  Patients remain their psychotropic medication at steady dosages for at least 4 weeks prior to study entry and for the duration of the trial.",
+        "snippet": "drug().name('psychotropic medication').duration(eq().op(GTEQ).val('4').temporal_unit(WEEK).before(study()).during(study()))"
+    },
+    {
+        "intent": "-  Verbal intelligence quotient > 85 as measured by using a Chinese version of the National Adult Reading Test.",
+        "snippet": "measurement().name('Verbal intelligence quotient').observ().name('National Adult Reading Test').mod('Chinese version').temporal_filter(eq().op(GT).val('85'))"
+    },
+    {
+        "intent": "-  History of significant head trauma or neurological disorders",
+        "snippet": "union(observ().name('trauma').mod('head').sev(SEVERE).temporal_filter(eq().temporal_per(PAST)), cond().name('neurological disorders').temporal_filter(eq().temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  Alcohol or drug abuse Focal brain lesions on T1- or T2-weighted fluid-attenuated inversion-recovery magnetic resonance images",
+        "snippet": "or(cond().name('abuse').mod('Alcohol').mod('drug'), cond().name('Focal brain lesions').proc().name('magnetic resonance images').mod('T 1').mod('T 2 - weighted').mod('fluid - attenuated inversion - recovery'))"
+    },
+    {
+        "intent": "-  left-handedness, pregnancy",
+        "snippet": "union(cond().name('left - handedness'), cond().name('pregnancy'))"
+    },
+    {
+        "intent": "-  estimated intelligence quotient<80",
+        "snippet": "measurement().name('estimated intelligence quotient').num_filter(eq().op(LT).val('80'))"
+    },
+    {
+        "intent": "-  current alcohol or drug abuse",
+        "snippet": "cond().name('abuse').mod('alcohol').mod('drug').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Hamilton Anxiety Rating Scale or the Hamilton Depression Rating Scale score > 10",
+        "snippet": "union(clinical_score().name('Hamilton Anxiety Rating Scale').num_filter(eq().op(GT).val('10').unit()), clinical_score().name('Hamilton Depression Rating Scale').num_filter(eq().op(GT).val('10').unit()))"
+    },
+    {
+        "intent": "-  age \u226518 years",
+        "snippet": "age().num_filter(eq().op(GTEQ).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  BMI \u226440 kg/m2",
+        "snippet": "vital().name('BMI').num_filter(eq().op(LTEQ).val('40').unit().unit())"
+    },
+    {
+        "intent": "-  indication for hysterectomy for benign disease or prophylactic surgery due to hereditary cancer",
+        "snippet": "or(indic('proc().name('hysterectomy')'), union(cond().name('benign disease').cond().name('cancer').mod('hereditary'), proc().name('prophylactic surgery')))"
+    },
+    {
+        "intent": "-  indication for radical hysterectomy and/or pelvic-/para-aortic (sentinel-node) lymphadenectomy for cervical cancer",
+        "snippet": "or(indic('union(proc().name('radical hysterectomy'), proc().name('lymphadenectomy').mod('pelvic').mod('sentinel - node').mod('para - aortic'))'), cond().name('cancer').mod('cervical'))"
+    },
+    {
+        "intent": "-  indication for modified radical hysterectomy and/or pelvic-/para-aortic (sentinel-node) lymphadenectomy for endometrial cancer",
+        "snippet": "or(indic('union(proc().name('hysterectomy').mod('modified radical'), proc().name('lymphadenectomy').mod('pelvic').mod('sentinel - node').mod('para - aortic'))'), cond().name('cancer').mod('endometrial'))"
+    },
+    {
+        "intent": "-  size of uterus and vagina allows for retrieval by the vaginal route in cancer patients",
+        "snippet": "or(measurement().name('size').mod('uterus').mod('vagina'), proc().name('retrieval').hypothetical().measurement().name('size').mod('uterus').mod('vagina').mod('vaginal route'), cond().name('cancer'))"
+    },
+    {
+        "intent": "-  known extensive intra-abdominal adhesions",
+        "snippet": "cond().name('adhesions').mod('intra - abdominal')"
+    },
+    {
+        "intent": "-  anaesthesiological contraindications to laparoscopy",
+        "snippet": "contraind('proc().name('laparoscopy')')"
+    },
+    {
+        "intent": "-  women with pacemaker or other implants where electrosurgery is to be avoided",
+        "snippet": "or(intersect(female(), proc().name('pacemaker')), intersect(proc().name('implants'), proc().name('electrosurgery')), contraind(''))"
+    },
+    {
+        "intent": "-  women with known defects of the hemostasis",
+        "snippet": "intersect(female(), cond().name('defects of the hemostasis'))"
+    },
+    {
+        "intent": "-  pregnancy",
+        "snippet": "cond().name('pregnancy')"
+    },
+    {
+        "intent": "-  other internal or anatomical criteria that preclude a minimal invasive approach",
+        "snippet": "neg().hypothetical().cond().mod('internal').mod('anatomical').proc().name('minimal invasive approach')"
+    },
+    {
+        "intent": "-  Aged at least 18 years.",
+        "snippet": "age().num_filter(eq().op(GTEQ).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  Histologically or cytologically proven diagnosis of NSCLC that is locally advanced or metastatic.",
+        "snippet": "or(proc().name('cytologically'), cond().name('NSCLC').mod('Histologically').mod('locally advanced').mod('metastatic').proc().name('cytologically'))"
+    },
+    {
+        "intent": "-  patients must also have confirmation of tumour T790M mutation status (confirmed positive) after disease progression on the prior EGFR TKI.",
+        "snippet": "or(cond().name('tumour T 790 M mutation').pol(POSITIVE).after(cond().during(eq().temporal_per(PAST))), drug().name('EGFR TKI').temporal_filter(eq().temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  Eastern cooperative oncology group performance status (ECOG PS) of 0-1.",
+        "snippet": "clinical_score().name('Eastern cooperative oncology group performance status').abbrev(observ().name('ECOG').num_filter(eq().op(BETWEEN).val('0').val('1')))"
+    },
+    {
+        "intent": "-  a minimum life expectancy of 12 weeks.",
+        "snippet": "observ().name('life expectancy').num_filter(eq().op(GTEQ).val('12').temporal_unit(WEEK))"
+    },
+    {
+        "intent": "-  Treatment with a first or second generation of EGFR-TKI within 7 days of study entry; previous treatment with a third generation of EGFR-TKI.",
+        "snippet": "or(proc().using(drug().name('EGFR - TKI').mod('first').mod('second generation').temporal_filter(eq().op(LTEQ).val('7').temporal_unit(DAY).before(study()))), proc().temporal_filter(eq().temporal_per(PAST)).using(drug().name('EGFR - TKI').mod('third generation')))"
+    },
+    {
+        "intent": "-  Unresolved toxicities from prior therapy.",
+        "snippet": "observ().name('toxicities').proc().name('therapy').temporal_filter(eq().temporal_per(PAST)).temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Unstable spinal cord compression/brain metastases.",
+        "snippet": "union(cond().name('spinal cord compression'), observ().name('metastases').mod('brain'))"
+    },
+    {
+        "intent": "-  Severe/uncontrolled systemic diseases, including uncontrolled hypertension, bleeding diatheses or infection.",
+        "snippet": "cond().cond().name('hypertension').mod('uncontrolled').cond().name('bleeding diatheses').cond().name('infection').mod('uncontrolled systemic').sev(SEVERE).example(cond().name('hypertension').mod('uncontrolled'), cond().name('bleeding diatheses'), cond().name('infection'))"
+    },
+    {
+        "intent": "-  QTcF>470 msec during the screening period.",
+        "snippet": "measurement().name('QTcF').num_filter(eq().op(GT).val('470').unit()).during(study())"
+    },
+    {
+        "intent": "-  Severe respiratory diseases such as interstitial lung disease, severe asthma, pulmonary embolism, etc.",
+        "snippet": "cond().name('respiratory diseases').cond().name('interstitial lung disease').cond().name('asthma').sev(SEVERE).cond().name('pulmonary embolism').sev(SEVERE).example(cond().name('interstitial lung disease'), cond().name('asthma').sev(SEVERE), cond().name('pulmonary embolism'))"
+    },
+    {
+        "intent": "-  previous treatment with 2 or more lines of Chemotherapy or immunotherapy.",
+        "snippet": "union(proc().name('Chemotherapy'), proc().name('immunotherapy'))"
+    },
+    {
+        "intent": "1. Skeletal maturity",
+        "snippet": "cond().name('Skeletal maturity')"
+    },
+    {
+        "intent": "2. AO/OTA 42 open tibia fractures",
+        "snippet": "cond().name('fractures').eq().val('OTA 42').val('AO').mod('open tibia')"
+    },
+    {
+        "intent": "3. Wound primarily closeable (no flap or delay in closure due to contamination needed)",
+        "snippet": "or(observ().name('Wound').mod('primarily closeable'), proc().name('closure').cond().name('contamination').mod('flap').mod('delay'))"
+    },
+    {
+        "intent": "4. Palpable pedal pulses (no vascular injury sustained)",
+        "snippet": "vital().name('pedal pulses').mod('Palpable').equiv(neg().observ().name('vascular injury'))"
+    },
+    {
+        "intent": "5. Presentation within 24 hours from injury",
+        "snippet": "observ().name('injury')"
+    },
+    {
+        "intent": "1. Current injury is a pathologic fracture",
+        "snippet": "observ().name('injury').equiv(cond().name('fracture').mod('pathologic')).temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "2. Sustained bilateral tibia fracture",
+        "snippet": "cond().name('fracture').mod('bilateral tibia')"
+    },
+    {
+        "intent": "3. Sustained comminuted femur fracture",
+        "snippet": "cond().name('fracture').mod('comminuted femur')"
+    },
+    {
+        "intent": "4. Sustained severe Traumatic Brain Injury (GCS<12) ***",
+        "snippet": "observ().name('Traumatic Brain Injury').sev(SEVERE).equiv(clinical_score().name('GCS').num_filter(eq().op(LT).val('12')))"
+    },
+    {
+        "intent": "5. Sustained severe spinal cord injury (lower extremity paresis/paralysis)",
+        "snippet": "observ().name('injury').cond().name('paresis').mod('lower extremity').cond().name('paralysis').mod('lower extremity').mod('spinal cord').sev(SEVERE).example(cond().name('paresis').mod('lower extremity'), cond().name('paralysis').mod('lower extremity'))"
+    },
+    {
+        "intent": "6. Sustained severe burns (>10% total body surface area (TBSA) or >5% TBSA with full thickness or circumferential injury)",
+        "snippet": "or(cond().name('burns').sev(SEVERE).equiv(measurement().name('total body surface area').num_filter(eq().op(GT).val('10').unit()).abbrev(union(observ().name('TBSA'), observ().name('TBSA').num_filter(eq().op(GT).val('5').unit())))), observ().name('injury').mod('full thickness').mod('circumferential'))"
+    },
+    {
+        "intent": "7. Prior ipsilateral leg injury requiring surgery",
+        "snippet": "or(observ().name('injury').mod('ipsilateral leg').temporal_filter(eq().temporal_per(PAST)), proc().name('surgery').hypothetical())"
+    },
+    {
+        "intent": "8. Prior or current lower limb deformity or abnormality",
+        "snippet": "union(cond().name('deformity').mod('lower limb').temporal_filter(eq().temporal_per(PAST), eq().temporal_per(PRESENT)), cond().name('abnormality').temporal_filter(eq().temporal_per(PAST), eq().temporal_per(PRESENT)).abbrev(mod('lower limb')))"
+    },
+    {
+        "intent": "9. Unable to complete follow-up visits",
+        "snippet": "neg().hypothetical().enc()"
+    },
+    {
+        "intent": "-  Age greater than 48 years old",
+        "snippet": "age().num_filter(eq().op(GT).val('48').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  Patient has leg or buttock pain while walking",
+        "snippet": "observ().name('pain').observ().name('walking').mod('leg').mod('buttock')"
+    },
+    {
+        "intent": "-  Patient has motor or sensory disturbance while walking",
+        "snippet": "cond().name('disturbance').observ().name('walking').mod('motor').mod('sensory')"
+    },
+    {
+        "intent": "-  Patient has normal and symmetrical foot pulses",
+        "snippet": "observ().name('foot pulses').pol(NORMAL).mod('symmetrical')"
+    },
+    {
+        "intent": "-  Patient has lower extremity weakness",
+        "snippet": "cond().name('weakness').mod('lower extremity')"
+    },
+    {
+        "intent": "-  Patient has low back pain",
+        "snippet": "observ().name('pain').mod('low back')"
+    },
+    {
+        "intent": "-  Able to stand and walk without assistive devices for at least 20 minutes",
+        "snippet": "or(neg().proc().name('assistive devices'), cond().name('Able to').mod('walk').mod('stand').duration(eq().op(GTEQ).val('20').temporal_unit(MINUTE)))"
+    },
+    {
+        "intent": "-  Able to give written informed consent and complete interviews and questionnaires in English",
+        "snippet": "lang('English')"
+    },
+    {
+        "intent": "-  Complicated spinal pain due to fracture, tumor, infection, or severe spondyloarthropathy",
+        "snippet": "observ().name('pain').union(cond().name('fracture'), cond().name('tumor'), cond().name('infection'), cond().name('spondyloarthropathy').sev(SEVERE)).mod('spinal')"
+    },
+    {
+        "intent": "-  Has other severe co-morbidities, including progressive neurological deficit",
+        "snippet": "cond().name('co - morbidities').cond().name('neurological deficit').mod('progressive').sev(SEVERE).example(cond().name('neurological deficit').mod('progressive'))"
+    },
+    {
+        "intent": "-  Other serious pathologies of the locomotor system",
+        "snippet": "cond().name('pathologies').mod('locomotor system').sev(SEVERE)"
+    },
+    {
+        "intent": "-  Inability to read/ comprehend English",
+        "snippet": "neg().lang('English')"
+    },
+    {
+        "intent": "-  Previous spinal manipulation within the past month",
+        "snippet": "proc().name('spinal manipulation').temporal_filter(eq().temporal_per(PAST), eq().op(LTEQ).temporal_unit(MONTH).temporal_per(PAST))"
+    },
+    {
+        "intent": "-  Healthy beyond pseudoachondroplasia associated complications,",
+        "snippet": "or(cond().name('Healthy'), cond().name('pseudoachondroplasia'), cond().name('complications').cond().name('pseudoachondroplasia'))"
+    },
+    {
+        "intent": "-  Current use of resveratrol",
+        "snippet": "drug().name('resveratrol').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Current use of blood thinners, lovastatin, ketoconazole, itraconazole, fexofenadine and triazolam.",
+        "snippet": "union(drug().name('blood thinners').temporal_filter(eq().temporal_per(PRESENT)), drug().name('triazolam').temporal_filter(eq().temporal_per(PRESENT)), drug().name('lovastatin').temporal_filter(eq().temporal_per(PRESENT)), drug().name('itraconazole').temporal_filter(eq().temporal_per(PRESENT)), drug().name('fexofenadine').temporal_filter(eq().temporal_per(PRESENT)), drug().name('ketoconazole').temporal_filter(eq().temporal_per(PRESENT)))"
+    },
+    {
+        "intent": "-  Other non-pseudoachondroplasia related health conditions, e.g. cancers.",
+        "snippet": "or(neg().cond().name('pseudoachondroplasia'), cond().cond().name('pseudoachondroplasia').cond().name('cancers').example(cond().name('cancers')))"
+    },
+    {
+        "intent": "-  Pregnancy or breastfeeding. Women must use adequate contraception during the study.",
+        "snippet": "or(union(cond().name('Pregnancy'), cond().name('breastfeeding')), female().proc().name('contraception').during(study()))"
+    },
+    {
+        "intent": "-  Participation in another clinical study and/or using investigational agents.",
+        "snippet": "drug().temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Use of Non-steroid anti-inflammatory (NSAIDs) or aspirin.",
+        "snippet": "drug().name('Non - steroid anti - inflammatory').temporal_filter(eq().temporal_per(PRESENT)).abbrev(union(drug().name('NSAIDs'), drug().name('aspirin').temporal_filter(eq().temporal_per(PRESENT))))"
+    },
+    {
+        "intent": "-  Baseline level of pain of 2 or higher on 10 point scale.",
+        "snippet": "observ().name('pain')"
+    },
+    {
+        "intent": "-  Platelet count below 50,000 per ul on baseline complete blood count (CBC).",
+        "snippet": "or(lab().name('Platelet count').num_filter(eq().op(LT).val('50 , 000').unit()).during(study()), lab().name('complete blood count').abbrev(observ().name('CBC')))"
+    },
+    {
+        "intent": "-  must be eligible for surgical resection",
+        "snippet": "proc().name('surgical resection').hypothetical()"
+    },
+    {
+        "intent": "-  greater than 18 years of age",
+        "snippet": "age().num_filter(eq().op(GT).val('18').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  prior immunotherapy or treatment with another anti PD-1 agent besides nivolumab",
+        "snippet": "or(proc().using(drug().name('anti PD - 1 agent')), drug().name('nivolumab'))"
+    },
+    {
+        "intent": "-  prior chemotherapy including cetuximab or radiation therapy",
+        "snippet": "proc().name('chemotherapy').drug().name('cetuximab').proc().name('radiation therapy').temporal_filter(eq().temporal_per(PAST)).example(drug().name('cetuximab'), proc().name('radiation therapy'))"
+    },
+    {
+        "intent": "-  concomitant malignancies except cutaneous squamous cell carcinoma or basal cell carcinoma",
+        "snippet": "or(cond().name('malignancies').mod('concomitant'), union(cond().name('carcinoma').mod('cutaneous squamous cell'), cond().name('carcinoma').mod('basal cell')))"
+    },
+    {
+        "intent": "-  unresectable primary tumor or regional disease or distant metastases",
+        "snippet": "union(cond().name('tumor').mod('unresectable primary'), observ().name('metastases').mod('distant'), cond().name('regional disease'))"
+    },
+    {
+        "intent": "-  Woman over 18 years old",
+        "snippet": "or(female(), age().num_filter(eq().op(GT).val('18').temporal_unit(YEAR)))"
+    },
+    {
+        "intent": "-  Mono-fetal pregnancy",
+        "snippet": "cond().name('pregnancy').mod('Mono - fetal')"
+    },
+    {
+        "intent": "-  Patients with normal pregnancy between 11 and 42 weeks of amenorrhea",
+        "snippet": "cond().name('pregnancy').pol(NORMAL).temporal_filter(eq().op(BETWEEN).val('11').val('42').temporal_unit(WEEK).after(cond().name('amenorrhea')))"
+    },
+    {
+        "intent": "-  Patients hospitalized for preeclampsia and / or intrauterine growth retardation, beyond 20 weeks of amenorrhea",
+        "snippet": "or(inpatient(), union(cond().name('preeclampsia').temporal_filter(eq().op(GTEQ).val('20').temporal_unit(WEEK).after(cond().name('amenorrhea'))), cond().name('intrauterine growth retardation').temporal_filter(eq().op(GTEQ).val('20').temporal_unit(WEEK).after(cond().name('amenorrhea')))))"
+    },
+    {
+        "intent": "-  Minors, adults under guardianship, protected persons",
+        "snippet": "or(child(), adult().union(observ().name('under guardianship'), observ().name('protected persons')))"
+    },
+    {
+        "intent": "-  Multiple pregnancy",
+        "snippet": "cond().name('pregnancy').eq().op(GT).eq().op(GT)"
+    },
+    {
+        "intent": "Lymphoma patients that under therapy. Severe scoliosis.",
+        "snippet": "or(cond().name('Lymphoma'), proc().name('therapy').temporal_filter(eq().temporal_per(PRESENT)), cond().name('scoliosis').sev(SEVERE))"
+    },
+    {
+        "intent": "-  Hoehn & Yahr Classification of Disability, stage 1-3",
+        "snippet": "cond().name('Hoehn & Yahr Classification of Disability').eq().op(BETWEEN).val('1').val('3').unit()"
+    },
+    {
+        "intent": "-  can ambulate with or without an assistive device for at least 50 feet",
+        "snippet": "intersect(observ().name('can ambulate').num_filter(eq().op(GTEQ).val('50').unit()), proc().name('assistive device'))"
+    },
+    {
+        "intent": "-  able to get up and down from the floor with minimal assistance",
+        "snippet": "observ().name('get up and down from the floor').hypothetical().mod('minimal assistance')"
+    },
+    {
+        "intent": "-  has a score of 24 or above on the Folstein Mini-Mental State Exam",
+        "snippet": "clinical_score().name('Folstein Mini - Mental State Exam').num_filter(eq().op(GTEQ).val('24'))"
+    },
+    {
+        "intent": "-  Greater than Stage 3 on the Hoehn & Yahr Classification of Disability",
+        "snippet": "cond().name('Hoehn & Yahr Classification of Disability').eq().op(GT).val('3').unit()"
+    },
+    {
+        "intent": "-  decline in immune function such as pneumonia or systemic infection",
+        "snippet": "cond().name('immune function').pol(LOW).cond().name('pneumonia').cond().name('infection').mod('systemic').example(cond().name('pneumonia'), cond().name('infection').mod('systemic'))"
+    },
+    {
+        "intent": "-  progressive degenerative disease besides PD",
+        "snippet": "or(cond().name('progressive degenerative disease'), cond().name('PD'))"
+    },
+    {
+        "intent": "-  spinal fusion or other orthopedic surgery in the past six months",
+        "snippet": "union(proc().name('spinal fusion').temporal_filter(eq().val('six').temporal_unit(MONTH).temporal_per(PAST)), proc().name('orthopedic surgery').temporal_filter(eq().val('six').temporal_unit(MONTH).temporal_per(PAST)))"
+    },
+    {
+        "intent": "-  mental disease/psychosis such as dementia",
+        "snippet": "union(cond().name('mental disease'), cond().name('psychosis').cond().name('dementia').example(cond().name('dementia')))"
+    },
+    {
+        "intent": "-  greater than minimal assistance required for gait and transfers",
+        "snippet": "observ().name('minimal assistance').hypothetical().mod('gait').mod('transfers').num_filter(eq().op(GT))"
+    },
+    {
+        "intent": "-  inability to make regular time commitments to the scheduled training sessions",
+        "snippet": "neg().hypothetical().proc().name('training sessions').temporal_filter(eq().temporal_per(FUTURE))"
+    },
+    {
+        "intent": "-  participation in resistance training on a regular basis within the past six months",
+        "snippet": "social_habit().name('resistance training').temporal_filter(eq().op(LTEQ).val('six').temporal_unit(MONTH).temporal_per(PAST))"
+    },
+    {
+        "intent": "-  pregnancy",
+        "snippet": "cond().name('pregnancy')"
+    },
+    {
+        "intent": "-  a prisoner",
+        "snippet": "observ().name('prisoner')"
+    },
+    {
+        "intent": "-  admitted to the ICU at the University Hospital Basel",
+        "snippet": "inpatient().loc(UNIT)"
+    },
+    {
+        "intent": "-  suffered from one or more epileptic seizures (detected clinically and/or by EEG) during their ICU-stay",
+        "snippet": "cond().name('epileptic seizures').mod('clinically').proc().name('EEG').eq().op(GTEQ).val('one').eq().op(GTEQ).val('one').during(inpatient().loc(UNIT))"
+    },
+    {
+        "intent": "-  patients with epileptic seizures transforming into Status epilepticus (SE)",
+        "snippet": "or(cond().name('epileptic seizures'), cond().name('Status epilepticus').abbrev(cond().name('SE')))"
+    },
+    {
+        "intent": "-  Undertake regular exercise at least 3 times a week with accumulation of 150 min per week",
+        "snippet": "social_habit().name('exercise').mod('regular').temporal_filter(eq().temporal_per(PRESENT), eq().op(GTEQ).val('3').temporal_unit(WEEK)).duration(eq().val('150').temporal_unit(MINUTE).temporal_unit(WEEK))"
+    },
+    {
+        "intent": "-  Age between 20 and 30 years old",
+        "snippet": "age().num_filter(eq().op(BETWEEN).val('20').val('30').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  History of severe neuromuscular injury",
+        "snippet": "observ().name('injury').mod('neuromuscular').sev(SEVERE).temporal_filter(eq().temporal_per(PAST))"
+    },
+    {
+        "intent": "-  Current lower extremity injury",
+        "snippet": "observ().name('injury').mod('lower extremity').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Current neurological diseases",
+        "snippet": "cond().name('neurological diseases').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Any patient \u226518 who presents for a colonoscopy and who does not have criteria for exclusion",
+        "snippet": "or(neg().neg().cond(), intersect(age().num_filter(eq().op(GTEQ).val('18')), neg().neg().cond(), proc().name('colonoscopy').temporal_filter(eq().temporal_per(PRESENT))))"
+    },
+    {
+        "intent": "-  Patients with a \u226520mm non-pedunculated colorectal polyp",
+        "snippet": "or(neg().mod('pedunculated'), measurement().name('polyp').mod('pedunculated').mod('colorectal').num_filter(eq().op(GTEQ).val('20').unit()))"
+    },
+    {
+        "intent": "-  Pedunculated polyps (as defined by Paris Classification type Ip)",
+        "snippet": "cond().name('polyps').mod('Pedunculated')"
+    },
+    {
+        "intent": "-  Suspected adenocarcinoma with deep submucosal invasion",
+        "snippet": "cond().name('adenocarcinoma').possible().mod('deep submucosal invasion')"
+    },
+    {
+        "intent": "-  Patients with ulcerated depressed lesions (as defined by Paris Classification type III) or confirmed adenocarcinoma",
+        "snippet": "union(observ().name('lesions').mod('ulcerated depressed'), cond().name('adenocarcinoma'))"
+    },
+    {
+        "intent": "-  Patients with inflammatory bowel disease",
+        "snippet": "cond().name('inflammatory bowel disease')"
+    },
+    {
+        "intent": "-  Patients who are receiving an emergency colonoscopy",
+        "snippet": "proc().name('colonoscopy').mod('emergency').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  Poor general health (ASA class>3)",
+        "snippet": "cond().name('Poor general health').equiv(clinical_score().name('ASA').num_filter(eq().op(GT).val('3')))"
+    },
+    {
+        "intent": "-  Patients with coagulopathy with an elevated INR \u22651.5, or platelets <50",
+        "snippet": "or(intersect(cond().name('coagulopathy'), lab().name('INR').pol(HIGH).num_filter(eq().op(GTEQ).val('1.5'))), lab().name('platelets').num_filter(eq().op(LT).val('50')))"
+    },
+    {
+        "intent": "-  Inadequate bowel preparation (Boston Bowel Prep Scale, total score \u22642)",
+        "snippet": "cond().name('Inadequate bowel preparation').equiv(clinical_score().name('Boston Bowel Prep Scale').num_filter(eq().op(LTEQ).val('2')))"
+    },
+    {
+        "intent": "-  Pregnancy",
+        "snippet": "cond().name('Pregnancy')"
+    },
+    {
+        "intent": "1. Males & females aged 13-17 years directly impacted by the 2017 wildfires having lost their home or been temporarily displaced",
+        "snippet": "or(union(male(), female()), age().num_filter(eq().op(BETWEEN).val('13').val('17').temporal_unit(YEAR)), union(observ().name('lost their home'), observ().name('temporarily displaced')))"
+    },
+    {
+        "intent": "2. Screen positive for PTSD (Child Trauma Screening Questionnaire = 5 or higher)",
+        "snippet": "cond().name('PTSD').pol(POSITIVE).equiv(survey_or_questionnaire().name('Child Trauma Screening Questionnaire').num_filter(eq().op(EQ).op(GTEQ).val('5')))"
+    },
+    {
+        "intent": "5. Speak and read English fluently",
+        "snippet": "lang('English')"
+    },
+    {
+        "intent": "1. A positive self-reported history of psychosis, bipolar, or schizophrenia",
+        "snippet": "union(cond().name('psychosis').pol(POSITIVE).temporal_filter(eq().temporal_per(PAST)), cond().name('bipolar').pol(POSITIVE).temporal_filter(eq().temporal_per(PAST)), cond().name('schizophrenia').pol(POSITIVE).temporal_filter(eq().temporal_per(PAST)))"
+    },
+    {
+        "intent": "2. Serious self-reported physical health concerns necessitating surgery or with prognosis <6 months",
+        "snippet": "or(cond().name('physical health concerns').sev(SEVERE), union(proc().name('surgery').hypothetical(), observ().name('prognosis').num_filter(eq().op(LT).val('6').temporal_unit(MONTH))))"
+    },
+    {
+        "intent": "3. A positive screen for a current Substance User Disorder (CRAFFT = 2 or higher)",
+        "snippet": "cond().name('Substance User Disorder').pol(POSITIVE).equiv(observ().name('CRAFFT').num_filter(eq().op(EQ).op(GTEQ).val('2'))).temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "4. Current self-reported suicidal ideation",
+        "snippet": "cond().name('suicidal ideation').temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "5. Self-reported pregnancy",
+        "snippet": "cond().name('pregnancy')"
+    },
+    {
+        "intent": "-  patients (adults and children)",
+        "snippet": "union(adult(), child())"
+    },
+    {
+        "intent": "-  patients having preserved their graft > 2 years",
+        "snippet": "proc().name('graft').duration(eq().op(GT).val('2').temporal_unit(YEAR))"
+    },
+    {
+        "intent": "-  male 18-50 years",
+        "snippet": "or(male(), age().num_filter(eq().op(BETWEEN).val('18').val('50').temporal_unit(YEAR)))"
+    },
+    {
+        "intent": "-  oligozoospermia: < 5 million spermatozoa/mL;",
+        "snippet": "cond().name('oligozoospermia')"
+    },
+    {
+        "intent": "-  asthenozoospermia: < 32% progressive motile spermatozoa;",
+        "snippet": "cond().name('asthenozoospermia').equiv(lab().name('progressive motile spermatozoa').num_filter(eq().op(LT).val('32').unit()))"
+    },
+    {
+        "intent": "-  teratozoospermia: < 4% normal forms.",
+        "snippet": "cond().name('teratozoospermia').equiv(observ().name('forms').pol(NORMAL).num_filter(eq().op(LT).val('4').unit()))"
+    },
+    {
+        "intent": "-  azoospermia",
+        "snippet": "cond().name('azoospermia')"
+    },
+    {
+        "intent": "-  smoke",
+        "snippet": "observ().name('smoke')"
+    },
+    {
+        "intent": "-  use drugs",
+        "snippet": "drug().temporal_filter(eq().temporal_per(PRESENT))"
+    },
+    {
+        "intent": "-  use drugs with proven fertility toxicity",
+        "snippet": "intersect(drug().temporal_filter(eq().temporal_per(PRESENT)), cond().name('fertility toxicity'))"
+    },
+    {
+        "intent": "-  exposition to any environmental or occupational toxic substances",
+        "snippet": "drug().name('substances').mod('environmental').mod('occupational toxic')"
+    },
+    {
+        "intent": "-  exposition to radiation or heat",
+        "snippet": "proc().name('radiation')"
+    },
+    {
+        "intent": "-  orchitis secondary to mumps",
+        "snippet": "or(cond().name('orchitis'), cond().name('mumps').mod('secondary'))"
+    },
+    {
+        "intent": "-  sexually transmitted diseases",
+        "snippet": "cond().name('sexually transmitted diseases')"
+    },
+    {
+        "intent": "-  history of cryptorchidism",
+        "snippet": "cond().name('cryptorchidism').temporal_filter(eq().temporal_per(PAST))"
+    },
+    {
+        "intent": "-  previous testicular torsion",
+        "snippet": "proc().name('testicular torsion').temporal_filter(eq().temporal_per(PAST))"
+    },
+    {
+        "intent": "-  genitourinary anomalies",
+        "snippet": "cond().name('genitourinary anomalies')"
+    },
+    {
+        "intent": "-  alterations of the epididymis or deferens",
+        "snippet": "proc().name('alterations').mod('epididymis').mod('deferens')"
+    },
+    {
+        "intent": "-  inguinal surgery",
+        "snippet": "proc().name('inguinal surgery')"
+    }
+]

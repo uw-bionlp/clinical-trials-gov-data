@@ -47,7 +47,7 @@ E56	Modifier:T121 Modifies:T13
 E57	Condition:T122 Name:T123 Temporality:E22
 E59	Observation:T125 Name:T126
 E61	Observation:T128 Name:T129 Temporality:E17 Numeric-Filter:E62
-E62	Eq-Comparison:T130 Unit:T131 Value:T132 Operator:T133 Value2:T134
+E62	Eq-Comparison:T130 Value:T132 Operator:T133 Value2:T134
 E26	Study:T39 
 E64	Condition:T63 Name:T135 Temporality:E23
 E66	Study:T64 
@@ -171,7 +171,6 @@ T126	Observation-Name 995 1021	New York Heart Association
 T128	Observation 1023 1027	NYHA
 T129	Observation-Name 1023 1027	NYHA
 T130	Eq-Comparison 1029 1041	Grade III-IV
-T131	Eq-Unit 1029 1034	Grade
 T132	Eq-Value 1035 1038	III
 T133	Eq-Operator 1038 1039	-
 T134	Eq-Value 1039 1041	IV
@@ -252,3 +251,7 @@ R19	Before Arg1:E18 Arg2:E66
 R20	Before Arg1:E19 Arg2:E28
 R21	Before Arg1:E20 Arg2:E29
 R22	Or Arg1:E70 Arg2:E8
+T41	Modifier 538 556	performance status
+E1	Modifier:T41 Modifies:E47
+T62	Modifier 1029 1034	Grade
+E11	Modifier:T62 Modifies:E59
