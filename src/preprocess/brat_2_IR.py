@@ -69,6 +69,10 @@ class BaseDoc:
         self.path   = ann.path
         self.text   = ann.pretokenized
         self.lines  = ann.pretokenized.split('\n')
+        self.lines_transformed = []
+
+        print(self.doc_id)
+
         self.derive_ents_and_rels(ann)
         self.node_groups = get_disjoint_node_groups(self.ents, self.rels)
 
@@ -82,14 +86,31 @@ class BaseDoc:
             line_offset = self.line_offsets[ent.sent_idx]
             ent.char_sent_beg_idx = ent.char_beg_idx - line_offset
             ent.char_sent_end_idx = ent.char_end_idx - line_offset
-            x=1
+        
+        for i, line in enumerate(self.lines):
+            offset = 0
+            pre_change_len = len(line)
+            for ent in sorted([ x for x in self.ents if x.sent_idx == i ], key=lambda x: x.char_sent_beg_idx):
+
+                # No overlapping if not first
+                if any([ x for x in self.ents if x.sent_idx == i and x != ent and x.text_transform and x.char_beg_idx <= ent.char_beg_idx and any(set(ent.tok_idxs).intersection(x.tok_idxs)) ]):
+                    continue
+
+                if ent.text_transform:
+                    code = ent._to_code(add_attrs=False)
+                    if code:
+                        if isinstance(ent, Modifier): code = f'mod({code})'
+                        line = line[:ent.char_sent_beg_idx+offset] + code + line[ent.char_sent_end_idx+offset:]
+                        offset = len(line) - pre_change_len
+
+            self.lines_transformed.append(line)       
 
     def to_tree(self):
         output = []
         seen = set()
         print(f'{self.doc_id}')
         for line in self.node_groups:
-            line_text = self.lines[[ grp[0] for grp in line ][0].sent_idx]
+            line_text = self.lines_transformed[[ grp[0] for grp in line ][0].sent_idx]
             print(f'\n"{line_text}"')
             codes = []
             for grp in line:
@@ -121,7 +142,6 @@ class BaseDoc:
             if any(or_ents):
                 ent = OrEntity([ ent ] + or_ents)
             x = Level(ent, line_text)
-            transformed_text = x.transform_text()
             code = x.to_code()
             try:
                 try:
@@ -196,11 +216,7 @@ class Level:
     def to_code(self):
         return self.ent.to_code()
 
-    def transform_text(self):
-        self.ent.transform_text()
-        return self.entity_text
-
-class VerbEntityAttribute:
+class EntityAttribute:
     def __init__(self, type, ent, multi_ent_wrapper="or"):
         self.type = type
         self.ents = [ ent ]
@@ -212,16 +228,6 @@ class VerbEntityAttribute:
         codes = f"{self.multi_ent_wrapper}({', '.join([ x for x in codes ])})" \
             if len(codes) > 1 else ', '.join([ x for x in codes ])
         return f".{self.type}({codes})"
-
-class EntityAttribute:
-    def __init__(self, type, ent):
-        self.type = type
-        self.ents = [ ent ]
-
-    def to_code(self):
-        codes = [ x.to_code() for x in self.ents ]
-        codes = [ x for x in codes if x ]
-        return ', '.join([ x for x in codes ])
 
 class OrEntity:
     def __init__(self, ents):
@@ -271,6 +277,7 @@ class Entity:
         self.attrs        = {}
         self.span_as_arg  = False
         self.executed     = False
+        self.text_transform = False
 
         for rel in e.rels:
             rel.subj = self
@@ -279,22 +286,20 @@ class Entity:
 
     def add_attrs(self):
         hoistable = set(['abbrev_of','modifies'])
-        subj_only = set(['using','found_by','treatment_for','temporality','duration','stability','severity'])
-        obj_only  = set(['modifies','equivalent_to','asserted','example_of',])
+        subj_only = set(['using','found_by','treatment_for','temporality','duration','stability','severity','numeric_filter','minimum_count',
+                         'before','during','after'])
+        obj_only  = set(['modifies','equivalent_to','asserted','example_of'])
         rename    = { 
             'numeric_filter': 'num_filter', 'equivalent_to': 'equiv', 'temporality': 'temporal', 'minimum_count': 'min_count',
-            'example_of': 'example', 'caused_by': 'cause' }
-        no_verb   = set(['modifies','asserted'])
-        union     = set(['using'])
+            'example_of': 'example', 'caused_by': 'causes', 'modifies': 'mod' }
+        union     = set(['using','found_by'])
 
         def to_ent_attr(tp, ent):
             _tp = tp
+            multi_ent_wrapper = 'union' if tp in union else 'or'
             if _tp in rename:
                 _tp = rename[_tp]
-            if tp in no_verb:
-                return EntityAttribute(_tp, ent)
-            multi_ent_wrapper = 'union' if tp in union else 'or'
-            return VerbEntityAttribute(_tp, ent, multi_ent_wrapper=multi_ent_wrapper)
+            return EntityAttribute(_tp, ent, multi_ent_wrapper)
 
         for rel in self.rels_of:
             tp = rel.type.lower().replace('-','_')
@@ -318,10 +323,7 @@ class Entity:
             if self.attrs.get(d):
                 del self.attrs[d]
 
-    def to_code(self):
-        if self.executed:
-            return ''
-        self.executed = True
+    def _to_code(self, add_attrs=True):
         arg = '' 
         verb = self.verb
         if self.span_as_arg:
@@ -333,8 +335,23 @@ class Entity:
             verb = self.val
         return f'{verb}({arg})'
 
-    def transform_text(self):
-        pass
+    def to_code(self, add_attrs=True):
+        if self.executed:
+            return ''
+        self.executed = True
+        return self._to_code()
+
+    def transform_text(self, offset):
+        code = self._to_code(add_attrs=False)
+        len_diff = 0
+        if code:
+            pre_change_len = len(self.doc.lines_transformed[self.sent_idx])
+            self.doc.lines_transformed[self.sent_idx] = \
+                 self.doc.lines_transformed[self.sent_idx][:self.char_sent_beg_idx+offset] + \
+                     code + \
+                     self.doc.lines_transformed[self.sent_idx][:self.char_sent_end_idx+offset]
+            len_diff = pre_change_len - len(self.doc.lines_transformed[self.sent_idx])
+        return len_diff
 
     def ors(self):
         return [ x.obj for x in self.rels if x.type == 'Or' ]
@@ -413,6 +430,7 @@ class Entity:
 class NameEntity(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
+        self.verb = None
         
     def to_code(self):
         if self.executed:
@@ -434,35 +452,43 @@ class HeadEntity(Entity):
         self.priority = 3
         self.verb = 'entity'
         self.span_as_arg = True
+        self.text_transform = True
 
     def to_code(self):
         if self.executed:
             return ''
         self.executed = True
+        return self._to_code()
+
+    def _to_code(self, add_attrs=True):
         output = ''
         verb = (self.val if self.val else self.verb).replace('-','_')
         verb_arg = '' if not self.span_as_arg else f'"{self.span}"'
 
         output = f'{verb}({verb_arg})'
-        for verb, attr in self.attrs.items():
-            #output += f'.{verb}({attr.to_code()})'
-            output += attr.to_code()
+        if add_attrs:
+            for verb, attr in self.attrs.items():
+                output += attr.to_code()
         
         return output
 
-    def transform_text(self):
-        preexec = self.executed
-        self.executed = False
-        code = self.to_code()
+    def transform_text(self, offset):
+        code = self._to_code(add_attrs=False)
+        len_diff = 0
         if code:
-            line = self.doc.lines[self.sent_idx]
-            line = line[:self.char_sent_beg_idx] + code + line[:self.char_sent_end_idx]
-        self.executed = preexec
+            pre_change_len = len(self.doc.lines_transformed[self.sent_idx])
+            self.doc.lines_transformed[self.sent_idx] = \
+                 self.doc.lines_transformed[self.sent_idx][:self.char_sent_beg_idx+offset] + \
+                     code + \
+                     self.doc.lines_transformed[self.sent_idx][:self.char_sent_end_idx+offset]
+            len_diff = pre_change_len-len(self.doc.lines_transformed[self.sent_idx])
+        return len_diff
 
 class Acuteness(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
         self.verb = self.val
+        self.text_transform = True
 
 class Age(HeadEntity):
     def __init__(self, e, doc):
@@ -483,13 +509,17 @@ class Assertion(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
         self.verb = self.val
+        self.text_transform = True
+
+    def _to_code(self, add_attrs=True):
+        if self.val == 'hypothetical':
+            return 'hypoth()'
+        if self.val == 'possible':
+            return 'possible()'
+        return 'intent()'
 
     def to_code(self):
-        if self.val == 'hypothetical':
-            return '.hypoth()'
-        if self.val == 'possible':
-            return '.possible()'
-        return '.intent()'
+        return self._to_code()
 
 class Birth(HeadEntity):
     def __init__(self, e, doc):
@@ -501,6 +531,7 @@ class Code(Entity):
         super().__init__(e, doc)
         self.verb = 'code'
         self.span_as_arg = True
+        self.text_transform = True
 
 class Condition(HeadEntity):
     def __init__(self, e, doc):
@@ -516,6 +547,7 @@ class ConditionType(Entity):
         super().__init__(e, doc)       
         self.verb = 'type'
         self.span_as_arg = True
+        self.text_transform = True
 
 class Contraindication(HeadEntity):
     def __init__(self, e, doc):
@@ -546,27 +578,27 @@ class Encounter(HeadEntity):
         super().__init__(e, doc)
         self.verb = 'enc'
 
-    def transform_text(self):
-        preexec = self.executed
-        self.executed = False
-        code = self.to_code()
-        if code:
-            line = self.doc.lines[self.sent_idx]
-            line = line[:self.char_sent_beg_idx] + code + line[:self.char_sent_end_idx]
-        self.executed = preexec
+    def to_code(self, add_attrs=True):
+        output = self._to_code(add_attrs)
+        if not self.val:
+            return f'enc({output})'
 
 class EqComparison(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
         self.verb = 'eq'
+        self.text_transform = True
 
-    def to_code(self):
+    def _to_code(self, add_attrs=True):
         args = []
         for _, attr in self.attrs.items():
             for ent in attr.ents:
                 args.append(ent)
         codes = [ x.to_code() for x in sorted(args, key=lambda y: y.tok_beg_idx) ]
         return f'{self.verb}({", ".join([ x for x in codes if x ])})'
+
+    def to_code(self, add_attrs=True):
+        return self._to_code()
 
 class EqOperator(Entity):
     def __init__(self, e, doc):
@@ -615,6 +647,7 @@ class Exception(Entity):
         super().__init__(e, doc)
         self.verb = 'except'
         self.span_as_arg = True
+        self.text_transform = True
 
 class FamilyMember(HeadEntity):
     def __init__(self, e, doc):
@@ -660,9 +693,11 @@ class Location(Entity):
 
 class Modifier(Entity):
     def __init__(self, e, doc):
-        super().__init__(e, doc)      
-        self.verb = 'mod'
-        self.span_as_arg = True      
+        super().__init__(e, doc)
+        self.text_transform = True
+
+    def _to_code(self, add_attrs=True):
+        return f'"{self.span}"'
 
 class Negation(HeadEntity):
     def __init__(self, e, doc):
@@ -691,11 +726,14 @@ class OrganismName(NameEntity):
 class Other(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)    
+        self.text_transform = True
+        self.verb = 'other'
 
 class Polarity(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)    
         self.verb = 'pol'
+        self.text_transform = True
 
 class Procedure(HeadEntity):
     def __init__(self, e, doc):
@@ -720,18 +758,21 @@ class Risk(HeadEntity):
 class Severity(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)   
-        self.verb = 'sev'                          
+        self.verb = 'sev'             
+        self.text_transform = True             
 
 class Specimen(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)         
         self.verb = 'spec'
         self.span_as_arg = True
+        self.text_transform = True
 
 class Stability(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)         
         self.verb = 'stability'
+        self.text_transform = True
 
 class Study(Entity):
     def __init__(self, e, doc):
@@ -739,6 +780,7 @@ class Study(Entity):
         self.verb = 'study'
         self.is_head = lambda: True
         self.priority = 4
+        self.text_transform = True
 
 class BaseEntity:
     def __init__(self, brat):
