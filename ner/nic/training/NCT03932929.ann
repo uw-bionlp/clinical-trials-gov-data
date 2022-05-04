@@ -6,10 +6,10 @@ E5	Eq-Comparison:T11 Operator:T12 Value:T8
 E6	Eq-Comparison:T14 Operator:T15 Value:T16
 E7	Condition:T17 Name:T18 Minimum-Count:E6
 E12	Condition:T23 Name:T24 Minimum-Count:E5
-E8	Condition:T19 Name:T22
+E8	Condition:T19 Name:T22 Polarity:T13
 E9	Modifier:T25 Modifies:T18
 E13	Negation:T26 Negates:E9
-E14	Condition:T27 Name:T28
+E14	Condition:T27 Name:T28 Polarity:T29
 T1	Condition 282 295	periodontitis
 T2	Condition-Name 282 295	periodontitis
 T3	Condition 244 258	bruxism habits
@@ -31,12 +31,12 @@ T21	Acuteness 274 281	chronic
 T23	Condition 109 130	teeth under occlusion
 T24	Condition-Name 109 130	teeth under occlusion
 T20	Severity 264 270	severe
-T19	Condition 48 65	good oral hygiene
-T22	Condition-Name 48 65	good oral hygiene
+T19	Condition 53 65	oral hygiene
+T22	Condition-Name 53 65	oral hygiene
 T25	Modifier 171 178	carious
 T26	Negation 167 170	non
-T27	Condition 221 238	poor oral hygiene
-T28	Condition-Name 221 238	poor oral hygiene
+T27	Condition 226 238	oral hygiene
+T28	Condition-Name 226 238	oral hygiene
 A1	Eq-Temporal-Unit-Value T5 year
 A2	Eq-Operator-Value T10 GT
 A3	Eq-Operator-Value T12 GTEQ
@@ -44,3 +44,7 @@ A4	Eq-Operator-Value T15 GTEQ
 A5	Severity-Value T20 severe
 A6	Acuteness-Type-Value T21 chronic
 R1	Or Arg1:T20 Arg2:T21
+T13	Polarity 48 52	good
+A7	Polarity-Value T13 normal
+T29	Polarity 221 225	poor
+A8	Polarity-Value T29 abnormal

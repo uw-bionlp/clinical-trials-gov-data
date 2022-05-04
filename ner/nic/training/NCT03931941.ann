@@ -1,8 +1,5 @@
 E1	Procedure:T1 Name:T2 Minimum-Count:E5
 E3	Condition:T3 Name:T4 Minimum-Count:E4
-E9	Condition:T9 Name:T10
-E11	Condition:T11 Name:T12
-E13	Condition:T13 Name:T14 Stability:T133
 E15	Condition:T15 Name:T16
 E17	Procedure:T17 Name:T18
 E19	Procedure:T19 Name:T20
@@ -36,7 +33,7 @@ E46	Eq-Comparison:T100 Temporal-Period:T99
 E47	Condition:T101 Name:T102
 E49	Condition:T106 Name:T107
 E50	Drug:T110 Name:T111 Temporality:E75
-E53	Condition:T117 Name:T118
+E53	Condition:T117 Name:T118 Stability:T133
 E54	Drug:T119 Name:T120
 E56	Condition:T122 
 E57	Exception:T123 Except:E21 From:E56
@@ -63,12 +60,7 @@ T2	Procedure-Name 248 271	oral antibiotic therapy
 T3	Condition 99 102	CDI
 T4	Condition-Name 99 102	CDI
 T8	Condition-Name 319 322	CDI
-T9	Condition 570 573	CDI
 T10	Condition-Name 570 573	CDI
-T11	Condition 635 638	CDI
-T12	Condition-Name 635 638	CDI
-T13	Condition 781 784	CDI
-T14	Condition-Name 781 784	CDI
 T15	Condition 850 853	CDI
 T16	Condition-Name 850 853	CDI
 T17	Procedure 888 906	antibiotic therapy
@@ -139,14 +131,14 @@ T99	Eq-Temporal-Period 531 535	just
 T100	Eq-Comparison 531 535	just
 T101	Condition 582 590	diarrhea
 T102	Condition-Name 582 590	diarrhea
-T106	Condition 639 647	diarrhea
-T107	Condition-Name 639 647	diarrhea
+T106	Condition 635 647	CDI diarrhea
+T107	Condition-Name 635 647	CDI diarrhea
 T108	Eq-Temporal-Unit 693 696	day
 T109	Eq-Unit 686 692	stools
 T110	Drug 711 722	antibiotics
 T111	Drug-Name 711 722	antibiotics
-T117	Condition 785 793	diarrhea
-T118	Condition-Name 785 793	diarrhea
+T117	Condition 781 793	CDI diarrhea
+T118	Condition-Name 781 793	CDI diarrhea
 T120	Drug-Name 823 834	antibiotics
 T119	Drug 823 834	antibiotics
 T122	Condition 913 922	condition
@@ -216,10 +208,6 @@ A36	Eq-Temporal-Period-Value T151 present
 A37	Eq-Temporal-Period-Value T153 past
 A35	Assertion-Type-Value E55 hypothetical
 R1	Caused-By Arg1:E24 Arg2:E7
-R2	Treatment-For Arg1:E34 Arg2:E9
-R3	Caused-By Arg1:E47 Arg2:E9
-R4	Caused-By Arg1:E49 Arg2:E11
-R5	Caused-By Arg1:E53 Arg2:E13
 R6	Treatment-For Arg1:E54 Arg2:E15
 R8	Treatment-For Arg1:E17 Arg2:E56
 R9	Abbrev-Of Arg1:E23 Arg2:E19
@@ -245,3 +233,7 @@ R28	Or Arg1:E16 Arg2:E44
 R29	And Arg1:E53 Arg2:E54
 R31	Or Arg1:E28 Arg2:E35
 R15	And Arg1:E3 Arg2:E1	
+T9	Condition 570 573	CDI
+E6	Condition:T9 Name:T10
+R2	Caused-By Arg1:E47 Arg2:E6	
+R3	Treatment-For Arg1:E34 Arg2:E6	

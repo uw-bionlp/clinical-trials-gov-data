@@ -1,10 +1,9 @@
-from ast import Pass
-from itertools import chain
 import os
 import re
 import sys
 import json
 import numpy as np
+from random import shuffle
 
 sys.path.append(os.path.join(os.getcwd(), 'src'))
 
@@ -37,27 +36,51 @@ regex_trailing_num = r'\d'
 
 def main():
 
+    output_dir = os.path.join('../clinical_trials_query_gen','data','seq2seq', 'annotation')
+    batch_size = 100
+    total_needed = batch_size * 10
+
     docs = get_base_data()
     output = []
     for doc in docs:
         for pair in doc.to_tree():
             output.append(pair)
-        print(len(output))
-        if len(output) > 2000:
+        
+    shuffle(output)
+    batch = 1
+
+    existing = set() 
+    for d in [ 'completed', 'reviewing' ]:
+        for b in os.listdir(os.path.join(output_dir, d)):
+            for f in os.listdir(os.path.join(output_dir, d, b)):
+                existing.add(f)
+
+    added = len(existing)
+    for rec in output:
+        filename = f'{rec["key"]}.js'
+        if filename in existing:
+            continue
+        parent_dir = os.path.join(output_dir, 'reviewing', 'batch' + str(batch))
+        if not os.path.exists(parent_dir):
+            os.mkdir(parent_dir)
+        with open(os.path.join(parent_dir, filename), 'w+') as fout:
+            fout.write("'" + rec['orig'].replace("'","''") + "'")
+            fout.write('\n\n')
+            fout.write("'" + rec['intent'].replace("'","''") + "'")
+            fout.write('\n\n')
+            fout.write(rec['snippet'])
+        added += 1
+        if len(os.listdir(parent_dir)) == batch_size:
+            batch += 1
+        if added >= total_needed:
             break
-
-    #_, train, test = np.split(output, [ 0, int(.8*len(output))])
-
-    #with open(os.path.join('data', 'seq2seq', 'train.json'), 'w+') as fout:
-    #    fout.write(json.dumps(list(train), indent=4))
-    #with open(os.path.join('data', 'seq2seq', 'test.json'), 'w+') as fout:
-    #    fout.write(json.dumps(list(test), indent=4))
+    
 
 def get_base_data():
     brat_train_raw = {} 
     for d in Config.annotation_train_dirs:
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
-        break
+        #break
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
     docs   = [ BaseDoc(a) for a in annotations ]
 
@@ -105,27 +128,37 @@ class BaseDoc:
 
             self.lines_transformed.append(line)       
 
+        for ent in self.ents:
+            ent.executed = False
+
     def to_tree(self):
         output = []
-        seen = set()
         print(f'{self.doc_id}')
         for line in self.node_groups:
-            line_text = self.lines_transformed[[ grp[0] for grp in line ][0].sent_idx]
+            line_idx = [ grp[0] for grp in line ][0].sent_idx
+            orig_line_text = self.lines[line_idx]
+            line_text = self.lines_transformed[line_idx]
             print(f'\n"{line_text}"')
             codes = []
             for grp in line:
-                branch = self.to_branch(grp, line_text)
-            if len(line_text) < 150 and any(codes):
-                code = f'or({", ".join(codes)})' if len(codes) > 1 else codes[0]
-                output.append({ "intent": line_text.strip(), "snippet": code.replace('\n','').replace('"',"'") })
-            #print()
+                code = self.to_branch(grp)
+                codes.append(code)
+            if len(line_text) < 524 and any(codes):
+                code = f'intersect({", ".join(codes)})' if len(codes) > 1 else codes[0]
+                output.append({ 
+                    "doc_id": self.doc_id,
+                    "line": line_idx,
+                    "key": f'{self.doc_id}_{line_idx}',
+                    "orig": orig_line_text.strip(), 
+                    "intent": line_text.strip(), 
+                    "snippet": code 
+                })
         return output
 
-    def to_branch(self, grp, line_text):
+    def to_branch(self, grp):
         seen = set()
 
         # break into levels
-        levels = []
         ordered = sorted(sorted(grp, key=lambda x: x.tok_beg_idx), key=lambda x: x.priority)
         for ent in ordered:
             if ent in seen:
@@ -141,17 +174,13 @@ class BaseDoc:
                 seen.add(or_ent)
             if any(or_ents):
                 ent = OrEntity([ ent ] + or_ents)
-            x = Level(ent, line_text)
+            x = Level(ent)
             code = x.to_code()
             try:
-                try:
-                    code = beautify(code, beautify_opts)
-                except:
-                    pass
+                code = beautify(code, beautify_opts)
             except:
                 pass
-            print(code)
-            levels.append(Level(ent))
+            return code
 
     def derive_ents_and_rels(self, ann):
 
@@ -207,11 +236,9 @@ class BaseDoc:
             ent.add_attrs()
 
 class Level:
-    def __init__(self, ent, line_text):
+    def __init__(self, ent):
         self.ent = ent
         self.rels = []
-        self.text = line_text
-        self.entity_text = line_text
 
     def to_code(self):
         return self.ent.to_code()
@@ -227,7 +254,15 @@ class EntityAttribute:
         codes = [ x for x in codes if x ]
         codes = f"{self.multi_ent_wrapper}({', '.join([ x for x in codes ])})" \
             if len(codes) > 1 else ', '.join([ x for x in codes ])
+
         return f".{self.type}({codes})"
+
+    def get_min_char_beg_idx(self):
+        start = 0
+        for ent in self.ents:
+            if ent.get_min_char_beg_idx() < start:
+                start = ent.get_min_char_beg_idx()
+        return start
 
 class OrEntity:
     def __init__(self, ents):
@@ -240,9 +275,12 @@ class OrEntity:
 
     def to_code(self):
         codes = [ x.to_code() for x in self.ents ]
-        codes = [ x for x in codes if x]
-        if any(codes):
+        codes = [ x for x in codes if x ]
+
+        if len(codes) > 1:
             return f'union({", ".join(codes)})'
+        if any(codes):
+            return codes[0]
         return ''
 
 class AndEntity:
@@ -255,7 +293,14 @@ class AndEntity:
             self.rels_of += ent.rels_of
 
     def to_code(self):
-        return f'and({", ".join([ x.to_code() for x in self.ents ])})'
+        codes = [ x.to_code() for x in self.ents ]
+        codes = [ x for x in codes if x ]
+        
+        if len(codes) > 1:
+            return f'intersect({", ".join(codes)})'
+        if any(codes):
+            return codes[0]
+        return ''
 
 class Entity:
     def __init__(self, e, doc):
@@ -284,15 +329,25 @@ class Entity:
         for rel in e.rels_of:   
             rel.obj = self
 
+    def get_min_char_beg_idx(self):
+        start = self.char_beg_idx
+        for verb, attr in self.attrs.items():
+            for ent in attr.ents:
+                if ent.char_beg_idx < start:
+                    start = ent.char_beg_idx
+        return start
+
     def add_attrs(self):
         hoistable = set(['abbrev_of','modifies'])
         subj_only = set(['using','found_by','treatment_for','temporality','duration','stability','severity','numeric_filter','minimum_count',
-                         'before','during','after'])
+                         'before','during','after','from','except','code','type','negates','risk-for','polarity','criteria','location','is_other',
+                         'if_then','has'])
         obj_only  = set(['modifies','equivalent_to','asserted','example_of'])
         rename    = { 
-            'numeric_filter': 'num_filter', 'equivalent_to': 'equiv', 'temporality': 'temporal', 'minimum_count': 'min_count',
-            'example_of': 'example', 'caused_by': 'causes', 'modifies': 'mod' }
-        union     = set(['using','found_by'])
+            'numeric_filter': 'num_filter', 'equivalent_to': 'equiv', 'minimum_count': 'min_count',
+            'example_of': 'example', 'caused_by': 'causes', 'modifies': 'mod', 'risk-for': 'for',
+            'abbrev_of': 'abbrev' }
+        union     = set(['using','found_by','treatment_for','example_of','caused_by'])
 
         def to_ent_attr(tp, ent):
             _tp = tp
@@ -319,7 +374,7 @@ class Entity:
                 if tp in self.attrs: self.attrs[tp].ents.append(rel.obj)
                 else:                self.attrs[tp] = to_ent_attr(tp, rel.obj)
 
-        for d in ['or','and','name']:
+        for d in ['or','and']:
             if self.attrs.get(d):
                 del self.attrs[d]
 
@@ -329,7 +384,7 @@ class Entity:
         if self.span_as_arg:
             arg = f'"{self.span}"'
         if self.val and self.verb:
-            arg = self.val.upper()
+            arg = self.val.upper().replace(' ','').replace('-','_')
             verb = self.verb
         elif not self.verb and self.val:
             verb = self.val
@@ -340,18 +395,6 @@ class Entity:
             return ''
         self.executed = True
         return self._to_code()
-
-    def transform_text(self, offset):
-        code = self._to_code(add_attrs=False)
-        len_diff = 0
-        if code:
-            pre_change_len = len(self.doc.lines_transformed[self.sent_idx])
-            self.doc.lines_transformed[self.sent_idx] = \
-                 self.doc.lines_transformed[self.sent_idx][:self.char_sent_beg_idx+offset] + \
-                     code + \
-                     self.doc.lines_transformed[self.sent_idx][:self.char_sent_end_idx+offset]
-            len_diff = pre_change_len - len(self.doc.lines_transformed[self.sent_idx])
-        return len_diff
 
     def ors(self):
         return [ x.obj for x in self.rels if x.type == 'Or' ]
@@ -463,32 +506,31 @@ class HeadEntity(Entity):
     def _to_code(self, add_attrs=True):
         output = ''
         verb = (self.val if self.val else self.verb).replace('-','_')
-        verb_arg = '' if not self.span_as_arg else f'"{self.span}"'
+        verb_arg = '' if not self.span_as_arg or not any([ x for x in self.attrs.items() if x[0] == 'name']) else f'"{self.span}"'
 
         output = f'{verb}({verb_arg})'
         if add_attrs:
-            for verb, attr in self.attrs.items():
-                output += attr.to_code()
+            for verb, attr in sorted(self.attrs.items(), key=lambda x: x[1].get_min_char_beg_idx()):
+                if verb == 'name':
+                    continue
+
+                if verb in {'before','during','after'}:
+                    output = f'seq(anchor({output}), {verb}({attr.to_code()}))'
+                else:
+                    output += attr.to_code()
         
         return output
-
-    def transform_text(self, offset):
-        code = self._to_code(add_attrs=False)
-        len_diff = 0
-        if code:
-            pre_change_len = len(self.doc.lines_transformed[self.sent_idx])
-            self.doc.lines_transformed[self.sent_idx] = \
-                 self.doc.lines_transformed[self.sent_idx][:self.char_sent_beg_idx+offset] + \
-                     code + \
-                     self.doc.lines_transformed[self.sent_idx][:self.char_sent_end_idx+offset]
-            len_diff = pre_change_len-len(self.doc.lines_transformed[self.sent_idx])
-        return len_diff
 
 class Acuteness(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
         self.verb = self.val
         self.text_transform = True
+
+    def _to_code(self, add_attrs=True):
+        if self.val == 'acute':
+            return 'acute()'
+        return 'chronic()'
 
 class Age(HeadEntity):
     def __init__(self, e, doc):
@@ -501,9 +543,13 @@ class Allergy(HeadEntity):
         super().__init__(e, doc)    
         self.verb = 'allergy'
 
-class AllergyName(NameEntity):
+    def _to_code(self, add_attrs=True):
+        return None
+
+class AllergyName(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
+        self.verb = 'allergy'
 
 class Assertion(Entity):
     def __init__(self, e, doc):
@@ -517,9 +563,6 @@ class Assertion(Entity):
         if self.val == 'possible':
             return 'possible()'
         return 'intent()'
-
-    def to_code(self):
-        return self._to_code()
 
 class Birth(HeadEntity):
     def __init__(self, e, doc):
@@ -577,11 +620,6 @@ class Encounter(HeadEntity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
         self.verb = 'enc'
-
-    def to_code(self, add_attrs=True):
-        output = self._to_code(add_attrs)
-        if not self.val:
-            return f'enc({output})'
 
 class EqComparison(Entity):
     def __init__(self, e, doc):
@@ -646,7 +684,6 @@ class Exception(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
         self.verb = 'except'
-        self.span_as_arg = True
         self.text_transform = True
 
 class FamilyMember(HeadEntity):
@@ -684,12 +721,18 @@ class LifeStageAndGender(HeadEntity):
     def __init__(self, e, doc):
         super().__init__(e, doc)  
         self.verb = 'life_gend'
+        self.span_as_arg = False
 
 class Location(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)    
-        self.verb = 'loc' if not self.val else self.val
+        self.verb = 'loc'
         self.span_as_arg = True
+
+    def _to_code(self, add_attrs=True):
+        if self.val:
+            return f'loc({self.val}("{self.span}"))'
+        return f'loc("{self.span}")'
 
 class Modifier(Entity):
     def __init__(self, e, doc):
@@ -704,11 +747,22 @@ class Negation(HeadEntity):
         super().__init__(e, doc)
         self.priority = 1
         self.verb = 'neg'
+        self.span_as_arg = False
 
 class Observation(HeadEntity):
     def __init__(self, e, doc):
         super().__init__(e, doc)     
-        self.verb = 'observ'
+        if self.val:
+            if self.val == 'survey_or_questionniare':
+                self.verb = 'survey'
+            elif self.val == 'measurement':
+                self.verb = 'meas'
+            elif self.val == 'clinical_score':
+                self.verb = 'clin_score'
+            else:
+                self.verb = self.val
+        else:
+            self.verb = 'obs'
 
 class ObservationName(NameEntity):
     def __init__(self, e, doc):
@@ -754,12 +808,13 @@ class Risk(HeadEntity):
     def __init__(self, e, doc):
         super().__init__(e, doc)
         self.priority = 2
+        self.verb = 'risk'
 
 class Severity(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)   
         self.verb = 'sev'             
-        self.text_transform = True             
+        self.text_transform = True     
 
 class Specimen(Entity):
     def __init__(self, e, doc):
@@ -773,6 +828,11 @@ class Stability(Entity):
         super().__init__(e, doc)         
         self.verb = 'stability'
         self.text_transform = True
+
+    def _to_code(self, add_attrs=True):
+        if self.val == 'change':
+            return 'change()'
+        return 'stable()'
 
 class Study(Entity):
     def __init__(self, e, doc):

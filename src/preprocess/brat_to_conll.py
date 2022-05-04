@@ -137,7 +137,7 @@ def main():
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
     annotations = [ BratDocument(k, v[0], v[1], v[2]) for k,v in brat_train_raw.items() ]
 
-    ## Split 
+    # Split 
     np.random.seed(1)
     random.seed(1)
     random.shuffle(annotations)

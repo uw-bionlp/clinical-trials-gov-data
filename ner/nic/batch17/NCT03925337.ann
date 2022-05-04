@@ -14,8 +14,6 @@ E26	Eq-Comparison:T38 Temporal-Period:T39
 E2	Age:T40 Numeric-Filter:E21
 E4	Procedure:T41 Name:T42 Temporality:E14
 E6	Modifier:T43 Modifies:E4
-E8	Procedure:T44 Name:T45
-E10	Procedure:T46 Name:T47
 E14	Eq-Comparison:T49 Temporal-Period:T50
 E16	Condition:T51 Name:T52 Minimum-Count:E18
 E18	Eq-Comparison:T53 Value:T54
@@ -83,10 +81,6 @@ T40	Age 34 37	age
 T41	Procedure 87 98	colonoscopy
 T42	Procedure-Name 87 98	colonoscopy
 T43	Modifier 79 86	routine
-T44	Procedure 103 112	screening
-T45	Procedure-Name 103 112	screening
-T46	Procedure 120 132	surveillance
-T47	Procedure-Name 120 132	surveillance
 T49	Eq-Comparison 64 74	presenting
 T50	Eq-Temporal-Period 64 74	presenting
 T51	Condition 175 186	withdrawals
@@ -150,7 +144,6 @@ A14	Assertion-Type-Value E50 possible
 A15	Observation-Type-Value E51 measurement
 A16	Encounter-Type-Value E58 referral
 A17	Acuteness-Type-Value T83 acute
-R1	Using Arg1:E8 Arg2:E4
 R2	Using Arg1:E28 Arg2:E1
 R3	Found-By Arg1:E33 Arg2:E30
 R4	Example-Of Arg1:E43 Arg2:E40
@@ -162,10 +155,14 @@ R9	Found-By Arg1:E55 Arg2:E57
 R10	Found-By Arg1:E51 Arg2:E57
 R11	Abbrev-Of Arg1:E19 Arg2:E13
 R12	Using Arg1:E58 Arg2:E13
-R13	Or Arg1:E8 Arg2:E10
 R14	During Arg1:E16 Arg2:E28
 R15	Or Arg1:E36 Arg2:E37
 R16	Or Arg1:E3 Arg2:E36
 R17	Or Arg1:E43 Arg2:E5
 R18	Or Arg1:E53 Arg2:E52
 R19	Or Arg1:E7 Arg2:E9
+T15	Modifier 103 112	screening
+E8	Modifier:T15 Modifies:E4
+T16	Modifier 120 132	surveillance
+E10	Modifier:T16 Modifies:E4
+R1	Or Arg1:E8 Arg2:E10	
