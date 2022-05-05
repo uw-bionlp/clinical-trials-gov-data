@@ -1,5 +1,5 @@
-E3	Procedure:T3 Name:T2 Location:T18 Temporality:E23
-E5	Procedure:T5 Name:T6
+E3	Procedure:T3 Name:T2 Location:T18 Temporality:E23 Provider:E5
+E5	Provider:T5 
 E7	Procedure:T7 Name:T8
 E9	Procedure:T9 Name:T10 Temporality:E24
 E11	Observation:T11 Name:T12 Numeric-Filter:E12
@@ -19,8 +19,7 @@ E23	Eq-Comparison:T37 Temporal-Period:T38
 E24	Eq-Comparison:T39 Temporal-Period:T40
 T2	Procedure-Name 315 334	right hemicolectomy
 T3	Procedure 315 334	right hemicolectomy
-T5	Procedure 364 371	Surgery
-T6	Procedure-Name 364 371	Surgery
+T5	Provider 364 371	Surgery
 T7	Procedure 546 577	Right laparotomic hemicolectomy
 T8	Procedure-Name 546 577	Right laparotomic hemicolectomy
 T9	Procedure 452 464	radiotherapy
@@ -57,7 +56,6 @@ A4	Encounter-Type-Value E19 emergency
 A6	Life-Stage-And-Gender-Type T36 female
 A7	Eq-Temporal-Period-Value T38 past
 A8	Eq-Temporal-Period-Value T40 past
-R1	Treatment-For Arg1:E5 Arg2:E13
 R2	If-Then Arg1:T36 Arg2:E21
 R3	During Arg1:E18 Arg2:E19
 R4	Or Arg1:E22 Arg2:E1

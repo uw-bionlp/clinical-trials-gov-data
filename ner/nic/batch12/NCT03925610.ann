@@ -19,7 +19,7 @@ E17	Negation:T44 Negates:E30
 E20	Modifier:T45 Modifies:T19
 E21	Modifier:T46 Modifies:T19
 E22	Modifier:T47 Modifies:T19
-E24	Condition:T50 Name:T51
+E24	Condition:T50 Name:T51 Acuteness:T38
 E25	Drug:T53 Name:T52 Temporality:E26
 E26	Eq-Comparison:T54 Temporal-Period:T55
 E27	Observation:T56 Name:T57 Numeric-Filter:E28
@@ -72,8 +72,8 @@ T45	Modifier 483 494	psychiatric
 T46	Modifier 466 481	cardiopulmonary
 T47	Modifier 452 464	neurological
 T49	Severity 445 451	Severe
-T50	Condition 532 554	Chronic pain condition
-T51	Condition-Name 532 554	Chronic pain condition
+T50	Condition 540 554	pain condition
+T51	Condition-Name 540 554	pain condition
 T52	Drug-Name 583 590	opioids
 T53	Drug 583 590	opioids
 T54	Eq-Comparison 564 569	being
@@ -93,7 +93,7 @@ A5	Eq-Temporal-Unit-Value T22 month
 A6	Eq-Operator-Value T34 BETWEEN
 A7	Eq-Temporal-Period-Value T37 future
 A8	Severity-Value T49 severe
-A9	Eq-Temporal-Period-Value T55 present
+A9	Eq-Temporal-Period-Value T55 past
 A10	Observation-Type-Value E27 lab
 A11	Eq-Operator-Value T59 LT
 A4	Eq-Temporal-Period-Value T21 past
@@ -111,3 +111,5 @@ R9	Or Arg1:E6 Arg2:E8
 R10	Or Arg1:E20 Arg2:E17
 R11	Or Arg1:E21 Arg2:E20
 R12	Or Arg1:E22 Arg2:E21
+T38	Acuteness 532 539	Chronic
+A14	Acuteness-Type-Value T38 chronic

@@ -132,3 +132,9 @@ R3	If-Then Arg1:E23 Arg2:E21
 R4	Caused-By Arg1:T73 Arg2:E26
 R5	Or Arg1:T68 Arg2:T70
 R6	Or Arg1:E14 Arg2:E16
+T11	Age 83 91	birthday
+E11	Age:T11 Numeric-Filter:E15
+T15	Eq-Comparison 78 82	12th
+E15	Eq-Comparison:T15 Value:T74
+T74	Eq-Value 78 82	12th
+R7	Equivalent-To Arg1:E11 Arg2:E29	

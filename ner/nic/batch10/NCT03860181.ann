@@ -4,7 +4,6 @@ E5	Procedure:T5 Name:T6
 E7	Procedure:T7 Name:T8
 E9	Observation:T9 Name:T10
 E11	Condition:T11 Name:T12
-E14	Eq-Comparison:T19 Operator:T15 Value:T18 Unit:T36
 E2	Eq-Comparison:T20 Value:T17 Temporal-Unit:T16 Operator:T21
 E4	Age:T22 Numeric-Filter:E2
 E6	Eq-Comparison:T23 Temporal-Period:T24
@@ -13,7 +12,6 @@ E10	Encounter:T26
 E12	Procedure:T27 Name:T28
 E16	Assertion:T30 Asserted:E10
 E17	Condition:T33 Name:T34
-E19	Modifier:T37 Modifies:T6
 E20	Condition:T38 Name:T39
 E21	Drug:T40 Name:T41
 E22	Drug:T42 Name:T43
@@ -48,11 +46,8 @@ T9	Observation 1141 1168	problems with wound healing
 T10	Observation-Name 1141 1168	problems with wound healing
 T11	Condition 445 451	tattoo
 T12	Condition-Name 445 451	tattoo
-T15	Eq-Operator 468 474	within
 T16	Eq-Temporal-Unit 47 52	years
 T17	Eq-Value 44 46	18
-T18	Eq-Value 475 476	2
-T19	Eq-Comparison 468 483	within 2 inches
 T20	Eq-Comparison 44 61	18 years or older
 T21	Eq-Operator 53 61	or older
 T22	Age 56 61	older
@@ -67,8 +62,6 @@ T31	Location 333 369	Medical University of South Carolina
 T32	Location 371 375	MUSC
 T33	Condition 455 467	skin marking
 T34	Condition-Name 455 467	skin marking
-T36	Eq-Unit 477 483	inches
-T37	Modifier 487 500	intended site
 T38	Condition 552 568	hypersensitivity
 T39	Condition-Name 552 568	hypersensitivity
 T40	Drug 572 585	cyanoacrylate
@@ -106,7 +99,6 @@ T74	Condition-Name 1102 1130	hypertrophic scar formations
 T75	Modifier 1080 1086	keloid
 T76	Severity 1090 1101	significant
 T78	Other 1135 1140	other
-A1	Eq-Operator-Value T15 LTEQ
 A2	Eq-Temporal-Unit-Value T16 year
 A3	Eq-Operator-Value T21 GTEQ
 A4	Eq-Temporal-Period-Value T24 present
@@ -135,3 +127,10 @@ R14	Or Arg1:E44 Arg2:T76
 R15	Or Arg1:E43 Arg2:E9
 R16	Or Arg1:E21 Arg2:E22
 R17	Or Arg1:E22 Arg2:E23
+T14	Modifier 468 483	within 2 inches
+E14	Modifier:T14 Modifies:E17 Modifies2:E11
+T15	Assertion 487 495	intended
+E15	Assertion:T15 Asserted:E5
+A1	Assertion-Type-Value E15 hypothetical
+T18	Modifier 496 500	site
+E18	Modifier:T18 Modifies:E5

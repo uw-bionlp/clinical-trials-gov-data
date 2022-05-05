@@ -17,7 +17,7 @@ E22	Modifier:T50 Modifies:T48
 E23	Modifier:T52 Modifies:T48
 E26	Condition:T56 Name:T57 Temporality:E28
 E27	Assertion:T58 Asserted:E26
-E28	Eq-Comparison:T59 Temporal-Unit:T16 Value:T24
+E28	Eq-Comparison:T59 Temporal-Unit:T16 Value:T24 Temporal-Period:T28
 E29	Modifier:T61 Modifies:T5
 E30	Condition:T63 Name:T64
 E31	Drug:T65 Temporality:E43
@@ -79,7 +79,7 @@ T52	Modifier 560 566	organs
 T56	Condition 618 626	pregnant
 T57	Condition-Name 618 626	pregnant
 T58	Assertion 603 611	planning
-T59	Eq-Comparison 630 638	6 months
+T59	Eq-Comparison 627 638	in 6 months
 T61	Modifier 645 649	Drug
 T63	Condition 685 706	psychiatric condition
 T64	Condition-Name 685 706	psychiatric condition
@@ -132,3 +132,5 @@ R9	Or Arg1:E29 Arg2:E41
 R10	Or Arg1:E32 Arg2:E45
 R11	Or Arg1:E38 Arg2:E10
 R12	Or Arg1:E10 Arg2:E22
+T28	Eq-Temporal-Period 627 629	in
+A8	Eq-Temporal-Period-Value T28 future

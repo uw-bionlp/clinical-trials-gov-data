@@ -3,8 +3,6 @@ E5	Eq-Comparison:T5 Operator:T50 Value:T51 Per:T52
 E6	Condition:T6 Name:T53
 E7	Condition:T7 Name:T54
 E10	Condition:T10 Name:T57
-E13	Assertion:T13 Asserted:E14
-E14	Condition:T14 Name:T58
 E16	Eq-Comparison:T16 Temporal-Period:T59
 E17	Other:T17 Is-Other:E18
 E18	Drug:T18 Name:T76 Temporality:E16
@@ -31,9 +29,6 @@ E45	Condition:T45 Name:T73
 E46	Drug:T46 
 E3	Provider:T47 
 E2	Modifier:T9 Modifies:T57
-E9	Provider:T11 
-E11	Encounter:T15 Provider:E9
-E12	Assertion:T56 Asserted:E11
 E15	Modifier:T19 Modifies:T76
 E19	Negation:T77 Negates:E18 Duration:E24
 E47	Condition:T78 Name:T79
@@ -48,8 +43,6 @@ T5	Eq-Comparison 147 178	more than three times per month
 T6	Condition 197 205	headache
 T7	Condition 209 217	migraine
 T10	Condition 252 260	headache
-T13	Assertion 366 374	symptoms
-T14	Condition 380 388	headache
 T16	Eq-Comparison 527 534	Current
 T17	Other 543 548	other
 T18	Drug 558 572	essential oils
@@ -83,7 +76,6 @@ T52	Eq-Temporal-Unit 173 178	month
 T53	Condition-Name 197 205	headache
 T54	Condition-Name 209 217	migraine
 T57	Condition-Name 252 260	headache
-T58	Condition-Name 380 388	headache
 T59	Eq-Temporal-Period 527 534	Current
 T60	Eq-Value 671 675	nine
 T61	Eq-Temporal-Unit 676 681	weeks
@@ -102,9 +94,6 @@ T47	Provider 36 42	nurses
 T2	Location 110 112	ED
 T1	Location 77 80	ICU
 T9	Modifier 221 251	frequent episodic tension-type
-T11	Provider 467 478	neurologist
-T15	Encounter 430 435	refer
-T56	Assertion 425 429	will
 T76	Drug-Name 558 572	essential oils
 T19	Modifier 614 622	sniffing
 T77	Negation 659 666	suspend
@@ -117,7 +106,6 @@ T83	Negation 847 850	nor
 T32	Modifier 851 881	frequent episodic tension-type
 T67	Provider 914 925	neurologist
 T85	Coreference 897 906	diagnosed
-A1	Assertion-Type-Value E13 possible
 A2	Assertion-Type-Value E23 hypothetical
 A3	Assertion-Type-Value E27 intention
 A6	Location-Value T48 emergency-dept
@@ -129,8 +117,6 @@ A12	Eq-Temporal-Period-Value T70 present
 A13	Location-Value T3 unit
 A5	Location-Value T2 emergency-dept
 A14	Location-Value T1 unit
-A9	Encounter-Type-Value E11 referral
-A15	Assertion-Type-Value E12 hypothetical
 A16	Acuteness-Type-Value T41 chronic
 R1	Abbrev-Of Arg1:T2 Arg2:T48
 R2	Abbrev-Of Arg1:T1 Arg2:T3
@@ -153,3 +139,4 @@ R18	Or Arg1:E20 Arg2:E15
 R19	Or Arg1:E42 Arg2:E43
 R20	Or Arg1:E43 Arg2:E44
 R21	Or Arg1:E45 Arg2:E46
+R22	Equivalent-To Arg1:E10 Arg2:E6	

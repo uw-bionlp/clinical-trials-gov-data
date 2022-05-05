@@ -36,12 +36,11 @@ E37	Condition:T71 Name:T72
 E39	Procedure:T75 Name:T76
 E40	Observation:T77 Name:T78
 E41	Observation:T79 Name:T80
-E42	Modifier:T81 Modifies:T4
 E43	Observation:T82 Name:T83
 T1	Procedure 601 626	immunosuppressive therapy
 T2	Procedure-Name 601 626	immunosuppressive therapy
-T3	Procedure 272 287	transplantation
-T4	Procedure-Name 272 287	transplantation
+T3	Procedure 265 287	kidney transplantation
+T4	Procedure-Name 265 287	kidney transplantation
 T5	Condition 84 99	lupus nephritis
 T6	Condition-Name 84 99	lupus nephritis
 T7	Condition 120 135	lupus nephritis
@@ -115,7 +114,6 @@ T77	Observation 921 939	under guardianship
 T78	Observation-Name 921 939	under guardianship
 T79	Observation 891 900	Protected
 T80	Observation-Name 891 900	Protected
-T81	Modifier 265 271	kidney
 T82	Observation 422 440	under guardianship
 T83	Observation-Name 422 440	under guardianship
 A1	Life-Stage-And-Gender-Type T19 adult
@@ -136,9 +134,13 @@ R1	Example-Of Arg1:E15 Arg2:E10
 R2	Found-By Arg1:E9 Arg2:E20
 R3	Example-Of Arg1:E32 Arg2:E1
 R4	Caused-By Arg1:E17 Arg2:E13
-R5	If-Then Arg1:T74 Arg2:E37
-R6	If-Then Arg1:T55 Arg2:E16
+R5	And Arg1:T74 Arg2:E37
+R6	And Arg1:T55 Arg2:E16
 R7	Equivalent-To Arg1:E40 Arg2:E41
 R8	Or Arg1:E14 Arg2:E16
 R9	During Arg1:E13 Arg2:E34
 R10	Or Arg1:E36 Arg2:E37
+T54	Procedure 70 76	biopsy
+E18	Procedure:T54 Name:T68
+T68	Procedure-Name 70 76	biopsy
+R11	Found-By Arg1:E5 Arg2:E18	

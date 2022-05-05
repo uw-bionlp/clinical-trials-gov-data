@@ -45,10 +45,10 @@ T13	Observation 301 305	pain
 T14	Modifier 311 322	Hematologic
 T16	Modifier 323 332	oncologic
 T17	Condition 333 342	condition
-T18	Modifier 348 363	Liver of kidney
+T18	Modifier 348 353	Liver
 T19	Condition 364 374	conditions
 T20	Negation 375 385	precluding
-T21	Drug 392 422	analgesic prescription patters
+T21	Drug 392 414	analgesic prescription
 T22	Drug 424 430	opioid
 T23	Drug 442 448	opioid
 T24	Eq-Comparison 455 458	Use
@@ -64,7 +64,7 @@ T35	Procedure-Name 236 245	procedure
 T36	Condition-Name 251 271	Cognitive impairment
 T38	Observation-Name 301 305	pain
 T40	Condition-Name 364 374	conditions
-T41	Drug-Name 392 422	analgesic prescription patters
+T41	Drug-Name 392 414	analgesic prescription
 T42	Drug-Name 424 430	opioid
 T43	Drug-Name 442 448	opioid
 T44	Eq-Temporal-Period 455 458	Use
@@ -106,4 +106,9 @@ R8	Treatment-For Arg1:E25 Arg2:E26
 R9	During Arg1:E5 Arg2:E32
 R10	Or Arg1:E14 Arg2:E16
 R11	Before Arg1:E25 Arg2:E28
-R12	And Arg1:E22 Arg2:E23
+R12	And Arg1:E22 Arg2:E15
+T7	Modifier 357 363	kidney
+E7	Modifier:T7 Modifies:T40
+R13	Or Arg1:E18 Arg2:E7	
+T15	Negation 438 441	non
+E15	Negation:T15 Negates:E23

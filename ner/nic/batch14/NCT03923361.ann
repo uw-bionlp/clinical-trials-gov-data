@@ -11,8 +11,8 @@ E19	Observation:T19 Name:T20 Numeric-Filter:E41
 E21	Condition:T21 Name:T22
 E23	Condition:T23 Name:T24
 E25	Condition:T25 Name:T26
-E27	Condition:T27 Name:T28
-E29	Condition:T29 Name:T30
+E27	Condition:T27 Name:T28 Stability:T70
+E29	Condition:T29 Name:T30 Stability:T70
 E35	Procedure:T35 Name:T36 Temporality:E43
 E37	Procedure:T37 Name:T38
 E38	Age:T50 Numeric-Filter:E45
@@ -31,14 +31,13 @@ E16	Eq-Comparison:T81 Operator:T82 Value:T83
 E18	Observation:T59 Name:T84 Numeric-Filter:E42
 E20	Drug:T85 Name:T86
 E22	Drug:T87 Name:T88
-E26	Contraindication:T90 Contraindicates:E20
+E26	Contraindication:T90 Contraindicates:E20 Contraindicates2:E22
 E28	Drug:T91 Name:T92 Temporality:E36
-E30	Drug:T93 Name:T94
-E32	Drug:T95 Name:T96
-E33	Drug:T33 Name:T34
+E30	Drug:T93 Name:T94 Temporality:E36
+E32	Drug:T95 Name:T96 Temporality:E36
+E33	Drug:T33 Name:T34 Temporality:E36
 E36	Eq-Comparison:T98 Per:T99
-E46	Assertion:T100 Asserted:E7
-E48	Modifier:T102 Modifies:E27
+E46	Assertion:T100 Asserted:E7 Asserted2:E23
 E50	Condition:T104 Name:T105 Polarity:T109
 E51	Modifier:T106 Modifies:T105
 E52	Modifier:T107 Modifies:T105
@@ -55,7 +54,7 @@ E64	Procedure:T130 Temporality:E65
 E65	Eq-Comparison:T131 Temporal-Period:T132
 E66	Procedure:T133 Name:T134 Temporality:E44
 E68	Contraindication:T136 Contraindicates:E37
-E69	Modifier:T137 Modifies:T6
+E69	Modifier:T137 Modifies:T6 Modifies2:E17
 T1	Condition 888 918	Post-traumatic stress disorder
 T2	Condition-Name 888 918	Post-traumatic stress disorder
 T3	Condition 843 872	Obsessive compulsive disorder
@@ -145,7 +144,6 @@ T33	Drug 534 548	ARB medication
 T34	Drug-Name 534 548	ARB medication
 T98	Eq-Comparison 479 484	Daily
 T100	Assertion 554 565	Symptomatic
-T102	Modifier 612 629	Poorly controlled
 T104	Condition 685 693	function
 T105	Condition-Name 685 693	function
 T106	Modifier 679 684	liver
@@ -233,3 +231,5 @@ R11	Or Arg1:E56 Arg2:E57
 R12	Or Arg1:E37 Arg2:E66
 R13	Or Arg1:E28 Arg2:E30
 R14	Or Arg1:E30 Arg2:E32
+T70	Stability 612 629	Poorly controlled
+A35	Stability-Value T70 change

@@ -1,9 +1,8 @@
 E1	Condition:T1 Name:T16 Temporality:E2
 E2	Eq-Comparison:T2 Temporal-Period:T17 Value:T18 Temporal-Unit:T19
 E3	Condition:T3 
-E4	Observation:T4 Name:T21 Stability:T20
-E6	Modifier:T6 Modifies:T22
-E7	Procedure:T7 Name:T22 Stability:T20
+E4	Observation:T4 Name:T21
+E7	Procedure:T7 Name:T22
 E9	Eq-Comparison:T9 Temporal-Period:T23
 E11	Observation:T11 Name:T27 Temporality:E9 Severity:T25 Severity2:T26
 E12	Condition:T12 Name:T28
@@ -14,8 +13,7 @@ T1	Condition 38 42	mTBI
 T2	Eq-Comparison 50 63	past 48 hours
 T3	Condition 105 115	conditions
 T4	Observation 138 155	physical activity
-T6	Modifier 159 173	neurocognitive
-T7	Procedure 174 184	assessment
+T7	Procedure 159 184	neurocognitive assessment
 T9	Eq-Comparison 221 236	History of past
 T11	Observation 253 256	TBI
 T12	Condition 263 278	Substance abuse
@@ -26,9 +24,8 @@ T16	Condition-Name 38 42	mTBI
 T17	Eq-Temporal-Period 50 54	past
 T18	Eq-Value 55 57	48
 T19	Eq-Temporal-Unit 58 63	hours
-T20	Stability 132 137	limit
 T21	Observation-Name 138 155	physical activity
-T22	Procedure-Name 174 184	assessment
+T22	Procedure-Name 159 184	neurocognitive assessment
 T23	Eq-Temporal-Period 221 236	History of past
 T25	Severity 237 245	moderate
 T26	Severity 246 252	severe
@@ -40,12 +37,16 @@ T31	Condition-Name 319 338	Vestibular disorder
 T32	Condition-Name 345 362	Cardiac condition
 A1	Eq-Temporal-Period-Value T17 past
 A2	Eq-Temporal-Unit-Value T19 hour
-A3	Stability-Value T20 change
 A4	Observation-Type-Value E4 social-habit
 A5	Eq-Temporal-Period-Value T23 past
 A7	Severity-Value T25 moderate
 A8	Severity-Value T26 severe
 A9	Severity-Value T29 severe
-R1	Caused-By Arg1:T20 Arg2:E3
 R2	Or Arg1:E4 Arg2:E7
 R3	Or Arg1:T25 Arg2:T26
+T5	Assertion 132 137	limit
+E5	Assertion:T5 Asserted:E4 Asserted2:E7
+A3	Assertion-Type-Value E5 hypothetical
+T6	Negation 132 137	limit
+E6	Negation:T6 Negates:E5
+R1	Caused-By Arg1:E6 Arg2:E3	

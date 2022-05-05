@@ -7,7 +7,7 @@ E7	Eq-Comparison:T16 Value:T8 Operator:T15
 E8	Negation:T17 Negates:E7
 E6	Provider:T18 
 E9	Procedure:T21 Location:T9
-E10	Negation:T22 Negates:E20
+E10	Condition:T22 Name:T19
 E11	Assertion:T24 Asserted:E10
 E12	Modifier:T25 Modifies:E13
 E13	Encounter:T26 Temporality:E14
@@ -15,7 +15,6 @@ E14	Eq-Comparison:T28 Temporal-Recency:T29
 E16	Death:T31 
 E17	Encounter:T32 
 E18	Eq-Comparison:T33 
-E20	Death:T23 
 T1	Condition 116 122	stroke
 T2	Condition-Name 116 122	stroke
 T3	Condition 223 229	stroke
@@ -35,7 +34,7 @@ T15	Eq-Operator 128 134	before
 T18	Provider 172 196	neuro-vascular physician
 T21	Procedure 211 218	managed
 T9	Location 261 294	hospitals of the Aquitaine region
-T22	Negation 371 376	alive
+T22	Condition 371 376	alive
 T24	Assertion 365 370	to be
 T25	Modifier 395 411	acute management
 T26	Encounter 412 425	hospital stay
@@ -45,7 +44,6 @@ T31	Death 506 510	died
 T32	Encounter 530 534	stay
 T33	Eq-Comparison 522 529	initial
 T34	Eq-Temporal-Recency 522 529	initial
-T23	Death 371 376	alive
 A1	Eq-Temporal-Unit-Value T5 year
 A2	Eq-Operator-Value T11 GT
 A3	Location-Value T12 residence
@@ -59,3 +57,4 @@ A11	Eq-Temporal-Recency-Value T34 first-time
 R1	Treatment-For Arg1:E9 Arg2:E3
 R2	During Arg1:E10 Arg2:E14
 R3	During Arg1:E16 Arg2:E18
+T19	Condition-Name 371 376	alive

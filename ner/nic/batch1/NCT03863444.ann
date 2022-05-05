@@ -1,13 +1,13 @@
 E5	Observation:T7 Numeric-Filter:E6 Name:T26
 E6	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6 Value3:T10
 E1	Condition:T12 Name:T13
-E3	Family-Member:T14
+E3	Family-Member:T14 
 E7	Encounter:T15 Temporality:E17
 E4	Birth:T4 Location:T3
 E9	Condition:T19 Name:T20 Polarity:T18
 E10	Risk:T21 Polarity:T33 Risk-For:E11
 E11	Condition:T22 Name:T23
-E12	Condition:T24
+E12	Condition:T24 
 E14	Modifier:T28 Modifies:E7
 E15	Assertion:T29 Asserted:E4
 E17	Eq-Comparison:T31 Temporal-Period:T32
@@ -51,7 +51,6 @@ T37	Assertion 439 445	cannot
 A1	Life-Stage-And-Gender-Type T1 adult
 A2	Eq-Temporal-Unit-Value T6 week
 A3	Eq-Operator-Value T8 BETWEEN
-A4	Encounter-Type-Value E7 observation
 A5	Location-Value T3 hospital
 A6	Observation-Type-Value E5 measurement
 A7	Family-Member-Type E3 spouse
@@ -65,3 +64,4 @@ R1	Caused-By Arg1:E18 Arg2:E12
 R2	And Arg1:E1 Arg2:E3
 R3	And Arg1:E7 Arg2:E15
 R4	Or Arg1:T5 Arg2:T17
+A4	Encounter-Type-Value E7 outpatient

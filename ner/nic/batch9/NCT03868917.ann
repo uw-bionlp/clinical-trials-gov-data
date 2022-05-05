@@ -22,7 +22,7 @@ E34	Study:T34 Study-Of:E33
 E35	Condition:T35 Name:T57
 E37	Modifier:T37 Modifies:T58
 E38	Procedure:T38 Name:T58
-E39	Condition:T39 Name:T59
+E39	Condition:T39 
 E40	Condition:T40 Name:T60
 E41	Condition:T41 Name:T61 Stability:T68
 E42	Condition:T42 Name:T62
@@ -56,7 +56,7 @@ T34	Study 555 560	study
 T35	Condition 575 596	Altered mental status
 T37	Modifier 600 609	emergency
 T38	Procedure 610 617	surgery
-T39	Condition 623 642	Comorbid conditions
+T39	Condition 632 642	conditions
 T40	Condition 651 657	sepsis
 T41	Condition 668 674	angina
 T42	Condition 676 700	congestive heart failure
@@ -75,7 +75,6 @@ T55	Eq-Temporal-Period 461 463	on
 T56	Drug-Name 464 490	therapeutic anticoagulants
 T57	Condition-Name 575 596	Altered mental status
 T58	Procedure-Name 610 617	surgery
-T59	Condition-Name 623 642	Comorbid conditions
 T60	Condition-Name 651 657	sepsis
 T61	Condition-Name 668 674	angina
 T62	Condition-Name 676 700	congestive heart failure
@@ -109,3 +108,5 @@ R9	Or Arg1:E35 Arg2:E38
 R10	Before Arg1:E9 Arg2:E17
 R11	After Arg1:E29 Arg2:E23
 R12	Or Arg1:E41 Arg2:E42
+T10	Modifier 623 631	Comorbid
+E10	Modifier:T10 Modifies:E39

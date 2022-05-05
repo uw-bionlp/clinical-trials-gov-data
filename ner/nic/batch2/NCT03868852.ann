@@ -18,13 +18,12 @@ E21	Procedure:T21 Name:T70
 E22	Assertion:T22 Asserted:E21
 E24	Procedure:T24 Name:T71
 E25	Condition:T25 Name:T104 Polarity:T105
-E26	Procedure:T26 Name:T72
 E27	Negation:T27 Negates:E28
 E29	Eq-Comparison:T29 Operator:T74 Value:T30 Temporal-Unit:T31
 E50	Eq-Comparison:T98 Operator:T52 Value:T53 Temporal-Unit:T54
 E52	Procedure:T62 Name:T101
 E13	Eq-Comparison:T13 Temporal-Period:T103
-E53	Criteria-Count:T106 Criteria:E26 Criteria2:E30 Criteria3:E32 Criteria4:E35
+E53	Criteria-Count:T106 Criteria2:E30 Criteria3:E32 Criteria4:E35 Criteria:E27
 E28	Procedure:T28 Name:T32 Temporality:E29
 E30	Observation:T33 Name:T34 Numeric-Filter:E31
 E31	Eq-Comparison:T35 Operator:T36 Value:T37 Unit:T38 Per:T39
@@ -32,7 +31,6 @@ E32	Observation:T40 Name:T41 Numeric-Filter:E33
 E33	Eq-Comparison:T42 Value:T44 Value2:T45 Operator:T43 Per:T46
 E34	Eq-Comparison:T47 Operator:T73 Value:T75 Value2:T76 Per:T77
 E35	Observation:T48 Name:T49 Numeric-Filter:E34
-E36	Observation:T78 Name:T79
 E37	Criteria-Count:T80 Criteria:E38 Criteria2:E40 Criteria3:E41 Criteria4:E44 Criteria5:E46
 E38	Observation:T81 Name:T82 Numeric-Filter:E39
 E39	Eq-Comparison:T83 Operator:T84 Value:T85 Unit:T86 Unit2:T87
@@ -63,7 +61,6 @@ T21	Procedure 380 398	anticancer therapy
 T22	Assertion 399 408	should be
 T24	Procedure 421 433	radiotherapy
 T25	Condition 444 455	main organs
-T26	Procedure 528 553	Blood routine examination
 T27	Negation 580 582	no
 T29	Eq-Comparison 601 615	within 14 days
 T50	Eq-Operator 42 43	≥
@@ -87,7 +84,6 @@ T68	Procedure-Name 329 341	chemotherapy
 T69	Procedure-Name 346 364	surgical treatment
 T70	Procedure-Name 380 398	anticancer therapy
 T71	Procedure-Name 421 433	radiotherapy
-T72	Procedure-Name 528 553	Blood routine examination
 T74	Eq-Operator 601 607	within
 T98	Eq-Comparison 50 60	≤ 18 years
 T100	Observation-Name 78 96	predicted survival
@@ -124,8 +120,6 @@ T73	Eq-Operator 662 663	>
 T75	Eq-Value 664 666	80
 T76	Eq-Value 669 672	109
 T77	Eq-Unit 674 675	L
-T78	Observation 686 703	Biochemical tests
-T79	Observation-Name 686 703	Biochemical tests
 T80	Criteria-Count 716 738	the following criteria
 T81	Observation 743 746	BIL
 T82	Observation-Name 743 746	BIL
@@ -175,7 +169,6 @@ A18	Observation-Type-Value E32 lab
 A19	Eq-Operator-Value T43 GT
 A20	Observation-Type-Value E35 lab
 A21	Eq-Operator-Value T73 GT
-A22	Observation-Type-Value E36 lab
 A23	Observation-Type-Value E38 lab
 A24	Eq-Operator-Value T84 LT
 A25	Eq-Unit-Value T86 ref-range-normal
@@ -191,8 +184,6 @@ A35	Observation-Type-Value E46 lab
 A36	Eq-Operator-Value T115 GT
 A37	Eq-Temporal-Unit-Value T118 minute
 R2	Equivalent-To Arg1:E53 Arg2:E25
-R3	Equivalent-To Arg1:E27 Arg2:E26
-R4	Equivalent-To Arg1:E37 Arg2:E36
 R5	Abbrev-Of Arg1:T87 Arg2:T86
 R1	After Arg1:E52 Arg2:E8
 R6	And Arg1:E10 Arg2:E15

@@ -18,22 +18,16 @@ E12	Modifier:T39 Modifies:E10
 E14	Procedure:T20 Name:T40
 E16	Procedure:T27 Name:T41
 E21	Eq-Comparison:T42 Temporal-Period:T43
-E23	Condition:T45 Name:T46
 E26	Condition:T50 Name:T51
-E27	Modifier:T52 
+E27	Modifier:T52 Modifies:E26
 E28	Modifier:T53 Modifies:E26
-E29	Condition:T54 Name:T55
-E30	Condition:T56 Name:T57
 E31	Observation:T58 Name:T59 Temporality:E35
 E32	Modifier:T60 Modifies:E31
 E33	Modifier:T61 Modifies:E31
 E35	Eq-Comparison:T63 Temporal-Period:T64
-E36	Condition:T65 Name:T66
 E37	Eq-Comparison:T67 Temporal-Period:T68
-E38	Condition:T69 Name:T70
 E39	Drug:T71 Name:T72 Minimum-Count:E40
 E40	Eq-Comparison:T73 Operator:T74 Unit:T75 Value:T30 Per:T76
-E41	Condition:T77 Name:T78
 E42	Procedure:T79 Temporality:E43
 E43	Eq-Comparison:T80 Temporal-Period:T81
 E44	Modifier:T82 Modifies:T38
@@ -83,36 +77,24 @@ T27	Procedure 240 243	TKA
 T41	Procedure-Name 240 243	TKA
 T42	Eq-Comparison 204 211	planned
 T43	Eq-Temporal-Period 204 211	planned
-T45	Condition 286 293	Healthy
-T46	Condition-Name 286 293	Healthy
 T50	Condition 535 537	OA
 T51	Condition-Name 535 537	OA
 T52	Modifier 523 526	hip
 T53	Modifier 530 534	knee
-T54	Condition 539 546	Healthy
-T55	Condition-Name 539 546	Healthy
-T56	Condition 620 627	Healthy
-T57	Condition-Name 620 627	Healthy
 T58	Observation 575 579	pain
 T59	Observation-Name 575 579	pain
 T60	Modifier 587 604	lower extremities
 T61	Modifier 608 618	lower back
 T63	Eq-Comparison 567 574	Current
 T64	Eq-Temporal-Period 567 574	Current
-T65	Condition 670 677	Healthy
-T66	Condition-Name 670 677	Healthy
 T67	Eq-Comparison 698 706	Previous
 T68	Eq-Temporal-Period 698 706	Previous
-T69	Condition 729 736	Healthy
-T70	Condition-Name 729 736	Healthy
 T71	Drug 775 790	pain medication
 T72	Drug-Name 775 790	pain medication
 T73	Eq-Comparison 792 818	more than 4 times per week
 T74	Eq-Operator 792 801	more than
 T75	Eq-Unit 804 809	times
 T76	Eq-Temporal-Unit 814 818	week
-T77	Condition 821 828	Healthy
-T78	Condition-Name 821 828	Healthy
 T79	Procedure 93 102	treatment
 T80	Eq-Comparison 76 84	received
 T81	Eq-Temporal-Period 76 84	received
@@ -139,7 +121,6 @@ A11	Eq-Temporal-Unit-Value T76 week
 A12	Eq-Temporal-Period-Value T68 past
 R3	Treatment-For Arg1:E14 Arg2:E10
 R4	Treatment-For Arg1:E16 Arg2:E10
-R7	Abbrev-Of Arg1:E27 Arg2:E26
 R1	Using Arg1:E42 Arg2:E2
 R2	Using Arg1:E42 Arg2:E4
 R8	Treatment-For Arg1:E42 Arg2:E9

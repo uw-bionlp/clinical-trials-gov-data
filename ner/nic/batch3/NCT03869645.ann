@@ -9,7 +9,6 @@ E9	Coreference:T9 Refers-To:E7 Temporality:E8 Duration:E10
 E10	Eq-Comparison:T10 Operator:T44 Value:T45 Temporal-Unit:T46
 E11	Procedure:T11 Name:T47
 E12	Procedure:T12 Name:T48
-E13	Procedure:T13 
 E14	Eq-Comparison:T14 Operator:T49 Value:T50 Temporal-Unit:T51
 E15	Age:T15 Numeric-Filter:E14
 E16	Condition:T16 Name:T52
@@ -30,8 +29,6 @@ E34	Drug:T34
 E36	Procedure:T36 
 E37	Study:T37 Study-Of:E36
 E38	Assertion:T60 Asserted:E11
-E39	Assertion:T61 Asserted:E13
-E40	Modifier:T62 Modifies:T48 Modifies2:E13
 E31	Modifier:T31 Modifies:E33 Modifies2:E37
 T1	Eq-Comparison 42 52	> 18 years
 T2	Age 56 59	age
@@ -44,7 +41,6 @@ T9	Coreference 164 172	symptoms
 T10	Eq-Comparison 173 182	< 14 days
 T11	Procedure 219 249	invasive endovenous procedures
 T12	Procedure 289 299	IVC filter
-T13	Procedure 314 321	treated
 T14	Eq-Comparison 344 354	< 18 years
 T15	Age 358 361	age
 T16	Condition 374 395	anaphylactic reaction
@@ -86,8 +82,6 @@ T56	Life-Stage-And-Gender 591 597	Female
 T57	Condition-Name 605 613	pregnant
 T58	Condition-Name 617 624	nursing
 T60	Assertion 197 218	cleared medically for
-T61	Assertion 308 313	to be
-T62	Modifier 303 307	area
 T31	Modifier 630 640	Concurrent
 A1	Assertion-Type-Value E4 possible
 A3	Assertion-Type-Value E18 hypothetical
@@ -103,7 +97,6 @@ A13	Life-Stage-And-Gender-Type T56 female
 A15	Assertion-Type-Value E3 possible
 A16	Assertion-Type-Value E6 possible
 A2	Assertion-Type-Value E38 hypothetical
-A17	Assertion-Type-Value E39 hypothetical
 A18	Acuteness-Type-Value T41 acute
 R1	Caused-By Arg1:E16 Arg2:E17
 R2	Treatment-For Arg1:E20 Arg2:E16

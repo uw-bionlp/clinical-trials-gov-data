@@ -6,7 +6,6 @@ E8	Eq-Comparison:T23 Operator:T9 Value:T17 Unit:T43
 E9	Eq-Comparison:T24 Operator:T10 Temporal-Unit:T12 Value:T21
 E2	Eq-Comparison:T25 Operator:T26 Value:T14 Value2:T15 Temporal-Unit:T11
 E4	Condition:T27 Name:T28 Polarity:T30
-E10	Modifier:T29 Modifies:T28
 E11	Modifier:T31 Modifies:T28
 E12	Procedure:T32 Name:T33
 E13	Observation:T34 Name:T35 Numeric-Filter:E7
@@ -17,7 +16,7 @@ E17	Condition:T44 Name:T45
 E18	Condition:T46 Name:T47 Polarity:T49
 E20	Observation:T50 Name:T51 Numeric-Filter:E21
 E21	Eq-Comparison:T52 Value:T18 Value2:T19 Value3:T20
-E22	Condition:T53 Name:T54
+E22	Condition:T53 Name:T54 Polarity:T55
 E23	Eq-Comparison:T7 Operator:T59 Unit:T56 Value:T57 Value2:T58
 E24	Procedure:T60 Name:T61
 E25	Assertion:T62 Asserted:E24
@@ -53,9 +52,8 @@ T23	Eq-Comparison 206 210	< 1%
 T24	Eq-Comparison 386 401	within 6 months
 T25	Eq-Comparison 29 52	between 18 and 60 years
 T26	Eq-Operator 29 36	between
-T27	Condition 139 145	cancer
-T28	Condition-Name 139 145	cancer
-T29	Modifier 132 138	breast
+T27	Condition 132 145	breast cancer
+T28	Condition-Name 132 145	breast cancer
 T30	Polarity 123 131	negative
 T31	Modifier 116 122	triple
 T32	Procedure 91 105	histologically
@@ -117,7 +115,6 @@ A17	Assertion-Type-Value E38 hypothetical
 R1	Found-By Arg1:E4 Arg2:E12
 R2	Abbrev-Of Arg1:E14 Arg2:E13
 R3	Abbrev-Of Arg1:E16 Arg2:E15
-R4	Equivalent-To Arg1:E22 Arg2:T55
 R5	Equivalent-To Arg1:E20 Arg2:E18
 R6	Or Arg1:E17 Arg2:E18
 R7	After Arg1:E24 Arg2:E3
@@ -125,3 +122,4 @@ R9	Or Arg1:E30 Arg2:E29
 R10	After Arg1:E9 Arg2:E32
 R11	Or Arg1:E36 Arg2:E34
 R8	Or Arg1:E27 Arg2:E3	
+R4	Equivalent-To Arg1:E22 Arg2:E18	
