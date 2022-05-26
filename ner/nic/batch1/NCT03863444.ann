@@ -3,13 +3,13 @@ E6	Eq-Comparison:T11 Operator:T8 Value:T9 Value2:T10 Temporal-Unit:T6 Value3:T10
 E1	Condition:T12 Name:T13
 E3	Family-Member:T14 
 E7	Encounter:T15 Temporality:E17
-E4	Birth:T4 Location:T3
+E4	Birth:T4 Location:T3 Temporality:E15
 E9	Condition:T19 Name:T20 Polarity:T18
 E10	Risk:T21 Polarity:T33 Risk-For:E11
 E11	Condition:T22 Name:T23
 E12	Condition:T24 
 E14	Modifier:T28 Modifies:E7
-E15	Assertion:T29 Asserted:E4
+E15	Eq-Comparison:T29 Temporal-Period:T2
 E17	Eq-Comparison:T31 Temporal-Period:T32
 E8	Observation:T34 Name:T35
 E18	Negation:T36 Negates:E8
@@ -38,7 +38,7 @@ T23	Condition-Name 420 429	pregnancy
 T24	Condition 471 489	medical conditions
 T26	Observation-Name 29 44	gestational age
 T28	Modifier 137 145	prenatal
-T29	Assertion 157 161	plan
+T29	Eq-Comparison 157 161	plan
 T31	Eq-Comparison 122 128	having
 T32	Eq-Temporal-Period 122 128	having
 T18	Polarity 389 400	abnormality
@@ -54,7 +54,6 @@ A3	Eq-Operator-Value T8 BETWEEN
 A5	Location-Value T3 hospital
 A6	Observation-Type-Value E5 measurement
 A7	Family-Member-Type E3 spouse
-A8	Assertion-Type-Value E15 intention
 A9	Eq-Temporal-Period-Value T32 present
 A10	Polarity-Value T18 abnormal
 A11	Polarity-Value T33 high
@@ -65,3 +64,5 @@ R2	And Arg1:E1 Arg2:E3
 R3	And Arg1:E7 Arg2:E15
 R4	Or Arg1:T5 Arg2:T17
 A4	Encounter-Type-Value E7 outpatient
+T2	Eq-Temporal-Period 157 161	plan
+A8	Eq-Temporal-Period-Value T2 future

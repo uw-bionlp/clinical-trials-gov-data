@@ -7,8 +7,7 @@ E12	Condition:T12 Name:T13
 E14	Condition:T14 Name:T15
 E16	Condition:T16 Name:T17 Acuteness:T84
 E18	Condition:T18 Name:T19
-E20	Condition:T20 Name:T21
-E22	Condition:T22 Name:T23 Temporality:E24
+E20	Condition:T20 Name:T21 Temporality:E24
 E23	Eq-Comparison:T38 Operator:T24 Unit:T30 Value:T35
 E24	Eq-Comparison:T39 Operator:T25 Temporal-Unit:T27 Value:T36
 E25	Eq-Comparison:T40 Operator:T26 Temporal-Unit:T28 Value:T37
@@ -41,14 +40,13 @@ E48	Modifier:T96 Modifies:T94
 E50	Procedure:T98 
 E51	Procedure:T99 
 E53	Exception:T101 From:E45 Except:E46
-E54	Condition:T102 Name:T103 Temporality:E2
-E55	Condition:T104 Name:T105
+E54	Condition:T102 Name:T103 Temporality:E2 Temporality2:E24
+E55	Condition:T104 Name:T105 Temporality:E24
 E59	Study:T109 
 E61	Drug:T111 Name:T112
 E62	Drug:T113 Name:T114 Temporality:E25
 E64	Observation:T116 Name:T117 Polarity:T118
 E65	Modifier:T51 Modifies:T94
-E66	Other:T119 Is-Other:E20
 T1	Observation 170 184	blood pressure
 T2	Observation-Name 170 184	blood pressure
 T3	Life-Stage-And-Gender 25 29	Male
@@ -68,10 +66,8 @@ T16	Condition 657 675	chronic infections
 T17	Condition-Name 657 675	chronic infections
 T18	Condition 565 591	Infection with hepatitis B
 T19	Condition-Name 565 591	Infection with hepatitis B
-T20	Condition 937 953	illicit drug use
-T21	Condition-Name 937 953	illicit drug use
-T22	Condition 957 967	dependence
-T23	Condition-Name 957 967	dependence
+T20	Condition 937 949	illicit drug
+T21	Condition-Name 937 949	illicit drug
 T24	Eq-Operator 341 342	>
 T25	Eq-Operator 968 974	within
 T26	Eq-Operator 1047 1053	within
@@ -152,7 +148,6 @@ T116	Observation 1091 1110	urine cotinine test
 T117	Observation-Name 1091 1110	urine cotinine test
 T118	Polarity 1082 1090	positive
 T51	Modifier 866 870	skin
-T119	Other 931 936	other
 A1	Life-Stage-And-Gender-Type T3 male
 A2	Observation-Type-Value E6 vital
 A3	Observation-Type-Value E8 vital
@@ -199,7 +194,11 @@ R20	Or Arg1:E47 Arg2:E48
 R21	Or Arg1:E50 Arg2:E51
 R22	Or Arg1:E54 Arg2:E55
 R23	Or Arg1:E55 Arg2:E20
-R24	Or Arg1:E20 Arg2:E22
 R25	Before Arg1:E24 Arg2:E59
 R26	Or Arg1:E61 Arg2:E62
 R27	Before Arg1:E25 Arg2:E64
+T22	Modifier 950 953	use
+E7	Modifier:T22 Modifies:E20
+T23	Modifier 957 967	dependence
+E15	Modifier:T23 Modifies:E20
+R24	Or Arg1:E7 Arg2:E15	

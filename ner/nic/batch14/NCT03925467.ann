@@ -1,7 +1,7 @@
 E5	Condition:T5 Name:T6
 E7	Condition:T7 Name:T8
-E9	Condition:T9 Name:T10
-E11	Condition:T11 Name:T12
+E9	Condition:T9 Name:T10 Stability:T59
+E11	Condition:T11 Name:T12 Stability:T59
 E13	Condition:T13 Name:T14
 E15	Procedure:T15 Name:T16 Temporality:E28
 E17	Condition:T17 Name:T18
@@ -23,7 +23,6 @@ E16	Negation:T52 Negates:E14
 E18	Condition:T53 Name:T54
 E20	Condition:T55 Name:T56
 E22	Condition:T57 Acuteness:T58
-E24	Modifier:T59 Modifies:E11
 E30	Condition:T61 Name:T62
 E31	Modifier:T63 Modifies:T62
 E32	Modifier:T64 Modifies:T62
@@ -39,9 +38,6 @@ E42	Modifier:T25 Modifies:T20
 E43	Modifier:T26 Modifies:T20
 E44	Modifier:T79 Modifies:T20
 E45	Condition:T80 Name:T81
-E46	Modifier:T82 Modifies:T70
-E47	Modifier:T83 Modifies:T22
-E48	Modifier:T84 Modifies:T72
 E49	Modifier:T85 Modifies:T74
 E50	Modifier:T86 Modifies:T81
 T5	Condition 544 562	Mental retardation
@@ -60,8 +56,8 @@ T17	Condition 932 957	rheumatic immune diseases
 T18	Condition-Name 932 957	rheumatic immune diseases
 T19	Condition 898 907	arthritis
 T20	Condition-Name 898 907	arthritis
-T21	Procedure 711 718	surgery
-T22	Procedure-Name 711 718	surgery
+T21	Procedure 706 718	Knee surgery
+T22	Procedure-Name 706 718	Knee surgery
 T27	Eq-Operator 136 145	less than
 T29	Eq-Temporal-Unit 110 115	years
 T30	Eq-Temporal-Unit 693 699	months
@@ -97,7 +93,6 @@ T55	Condition 341 351	Malignancy
 T56	Condition-Name 341 351	Malignancy
 T57	Condition 368 385	medical condition
 T58	Acuteness 362 367	acute
-T59	Modifier 392 409	Poorly controlled
 T61	Condition 460 472	nerve defect
 T62	Condition-Name 460 472	nerve defect
 T63	Modifier 452 459	sensory
@@ -105,10 +100,10 @@ T64	Modifier 443 448	motor
 T66	Modifier 653 668	hyaluronic acid
 T67	Modifier 628 649	intra-articular solid
 T28	Eq-Temporal-Period 686 690	past
-T69	Observation 730 736	trauma
-T70	Observation-Name 730 736	trauma
-T71	Condition 759 770	deformation
-T72	Condition-Name 759 770	deformation
+T69	Observation 725 736	Knee trauma
+T70	Observation-Name 725 736	Knee trauma
+T71	Condition 743 770	Congenital knee deformation
+T72	Condition-Name 743 770	Congenital knee deformation
 T73	Condition 789 794	varus
 T74	Condition-Name 789 794	varus
 T75	Severity 777 783	Severe
@@ -121,9 +116,6 @@ T26	Modifier 833 842	metabolic
 T79	Modifier 823 832	Endocrine
 T80	Condition 981 995	hypersensitive
 T81	Condition-Name 981 995	hypersensitive
-T82	Modifier 725 729	Knee
-T83	Modifier 706 710	Knee
-T84	Modifier 743 758	Congenital knee
 T85	Modifier 784 788	knee
 T86	Modifier 999 1006	needles
 A1	Eq-Operator-Value T27 LT
@@ -143,3 +135,9 @@ R5	Or Arg1:E39 Arg2:E40
 R6	Or Arg1:E25 Arg2:E23
 R7	Or Arg1:E42 Arg2:E25
 R8	Or Arg1:E43 Arg2:E42
+T60	Condition 479 501	Blood clotting disease
+E29	Condition:T60 
+T65	Condition-Name 479 501	Blood clotting disease
+R9	And Arg1:E29 Arg2:T65	
+T59	Stability 392 409	Poorly controlled
+A8	Stability-Value T59 change

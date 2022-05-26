@@ -5,7 +5,7 @@ E5	Condition:T9 Name:T10
 E6	Provider:T11 
 T1	Condition 92 107	color blindness
 T2	Condition-Name 92 107	color blindness
-T3	Language 139 154	German language
+T3	Language 139 145	German
 T4	Encounter 37 39	in
 T6	Encounter 45 56	outpatients
 T9	Condition 62 66	itch
@@ -15,3 +15,5 @@ A1	Encounter-Type-Value E2 inpatient
 A2	Encounter-Type-Value E3 outpatient
 R1	Or Arg1:E2 Arg2:E3
 R2	And Arg1:E3 Arg2:E5
+T5	Negation 131 135	lack
+E4	Negation:T5 Negates:T3

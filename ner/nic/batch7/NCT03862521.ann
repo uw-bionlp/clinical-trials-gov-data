@@ -1,4 +1,3 @@
-E1	Condition:T1 Name:T63
 E2	Eq-Comparison:T2 Value:T30 Operator:T31 Operator:T32 Value:T33 Temporal-Unit:T34
 E4	Condition:T4 Name:T35 Duration:E5
 E5	Eq-Comparison:T5 Operator:T36 Value:T37 Temporal-Unit:T38
@@ -28,7 +27,6 @@ E12	Observation:T12 Name:T44 Polarity:T68 Polarity2:T70 Temporality:E31
 E32	Modifier:T67 Modifies:T44
 E20	Eq-Comparison:T71 Temporal-Period:T50
 E22	Condition:T72 Name:T57 Stability:T73
-T1	Condition 24 35	Prepubertal
 T2	Eq-Comparison 45 59	2 to <12 years
 T4	Condition 105 113	diabetes
 T5	Eq-Comparison 118 135	at least 6 months
@@ -79,7 +77,6 @@ T59	Condition-Name 543 561	hypoglycemic event
 T60	Eq-Temporal-Period 565 569	past
 T61	Eq-Value 570 571	3
 T62	Eq-Temporal-Unit 572 578	months
-T63	Condition-Name 24 35	Prepubertal
 T64	Age 60 63	old
 T3	Modifier 98 104	Type 1
 T6	Observation 224 228	diet
@@ -134,7 +131,7 @@ R5	Or Arg1:T68 Arg2:T70
 R6	Or Arg1:E14 Arg2:E16
 T11	Age 83 91	birthday
 E11	Age:T11 Numeric-Filter:E15
-T15	Eq-Comparison 78 82	12th
+T15	Eq-Comparison 78 80	12
 E15	Eq-Comparison:T15 Value:T74
-T74	Eq-Value 78 82	12th
+T74	Eq-Value 78 80	12
 R7	Equivalent-To Arg1:E11 Arg2:E29	

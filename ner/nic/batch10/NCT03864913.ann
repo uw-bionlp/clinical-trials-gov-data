@@ -1,7 +1,6 @@
 E1	Procedure:T1 Name:T2 Temporality:E5 Temporality2:E6
 E2	Age:T6 Numeric-Filter:E3
 E3	Eq-Comparison:T10 Operator:T7 Value:T8 Value2:T9 Temporal-Unit:T5
-E4	Condition:T11 Name:T12
 E5	Eq-Comparison:T16 Temporal-Period:T17
 E6	Eq-Comparison:T18 Operator:T4
 T1	Procedure 148 168	testosterone therapy
@@ -14,8 +13,6 @@ T7	Eq-Operator 73 74	-
 T8	Eq-Value 71 73	14
 T9	Eq-Value 74 76	19
 T10	Eq-Comparison 71 82	14-19 years
-T11	Condition 25 43	Testosterone naive
-T12	Condition-Name 25 43	Testosterone naive
 T13	Life-Stage-And-Gender 49 60	Transgender
 T14	Life-Stage-And-Gender 61 65	male
 T15	Life-Stage-And-Gender 112 123	Transgender
@@ -31,3 +28,8 @@ A6	Life-Stage-And-Gender-Type T14 male
 A7	Life-Stage-And-Gender-Type T15 transgender
 A8	Eq-Temporal-Period-Value T17 past
 R1	And Arg1:T3 Arg2:E1
+T11	Procedure 25 37	Testosterone
+E4	Procedure:T11 Name:T12
+T12	Procedure-Name 25 37	Testosterone
+T19	Negation 38 43	naive
+E7	Negation:T19 Negates:E4

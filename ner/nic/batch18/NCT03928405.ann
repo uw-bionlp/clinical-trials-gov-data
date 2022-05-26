@@ -30,8 +30,7 @@ E32	Study:T63
 E34	Observation:T65 Name:T66
 E35	Modifier:T67 Modifies:T66
 E36	Modifier:T68 Modifies:T66
-E37	Modifier:T69 Modifies:T66
-E39	Negation:T71 Negates:E34
+E39	Negation:T71 Negates:E4
 E41	Condition:T73 Name:T74
 E42	Condition:T75 Name:T76
 E44	Condition:T78 Name:T79
@@ -105,7 +104,6 @@ T65	Observation 604 609	event
 T66	Observation-Name 604 609	event
 T67	Modifier 588 603	cerebrovascular
 T68	Modifier 576 583	cardiac
-T69	Modifier 567 574	control
 T71	Negation 555 558	not
 T73	Condition 636 663	fluid-electrolyte imbalance
 T74	Condition-Name 636 663	fluid-electrolyte imbalance
@@ -152,5 +150,7 @@ R19	Or Arg1:E7 Arg2:E41
 R20	Or Arg1:E23 Arg2:E26
 R21	Or Arg1:E28 Arg2:E29
 R22	Or Arg1:E29 Arg2:E5
-R23	Or Arg1:E37 Arg2:E36
 R24	Or Arg1:E44 Arg2:E9
+T36	Observation 567 574	control
+E4	Observation:T36 Name:T42
+T42	Observation-Name 567 574	control

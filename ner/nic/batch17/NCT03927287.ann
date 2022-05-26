@@ -15,20 +15,18 @@ E16	Observation:T31 Name:T32 Minimum-Count:E18
 E18	Eq-Comparison:T34 Operator:T35 Value:T36
 E19	Procedure:T37 
 E21	Condition:T39 Name:T40
-E22	Modifier:T41 Modifies:T40
+E22	Modifier:T41 
 E23	Eq-Comparison:T42 Operator:T43 Value:T11 Value2:T12
 E24	Observation:T44 Name:T45 Temporality:E25
 E25	Eq-Comparison:T46 Temporal-Period:T47
 E27	Age:T49 Numeric-Filter:E6
 E28	Condition:T50 Name:T51
-E29	Modifier:T52 Modifies:T51
 E30	Condition:T53 Name:T54
 E31	Exception:T55 From:E28 Except:E30
 E32	Condition:T56 Name:T57
 E33	Modifier:T58 Modifies:T57
 E34	Modifier:T59 Modifies:T57
 E36	Condition:T61 Name:T62
-E37	Modifier:T63 Modifies:T62
 E38	Condition:T64 Name:T65
 E40	Condition:T67 Name:T68
 E41	Negation:T69 Negates:E40
@@ -70,9 +68,9 @@ T34	Eq-Comparison 281 293	at least one
 T35	Eq-Operator 281 289	at least
 T36	Eq-Value 290 293	one
 T37	Procedure 299 308	treatment
-T39	Condition 439 445	cancer
-T40	Condition-Name 439 445	cancer
-T41	Modifier 420 438	localized prostate
+T39	Condition 430 445	prostate cancer
+T40	Condition-Name 430 445	prostate cancer
+T41	Modifier 420 429	localized
 T42	Eq-Comparison 446 467	between 2000 and 2017
 T43	Eq-Operator 446 453	between
 T44	Observation 476 491	biobank samples
@@ -80,9 +78,8 @@ T45	Observation-Name 476 491	biobank samples
 T46	Eq-Comparison 492 497	taken
 T47	Eq-Temporal-Period 492 497	taken
 T49	Age 582 589	younger
-T50	Condition 627 633	cancer
-T51	Condition-Name 627 633	cancer
-T52	Modifier 618 626	prostate
+T50	Condition 618 633	prostate cancer
+T51	Condition-Name 618 633	prostate cancer
 T53	Condition 645 659	adenocarcinoma
 T54	Condition-Name 645 659	adenocarcinoma
 T55	Exception 634 644	other than
@@ -90,9 +87,8 @@ T56	Condition 699 705	cancer
 T57	Condition-Name 699 705	cancer
 T58	Modifier 684 698	neuroendocrine
 T59	Modifier 669 679	small cell
-T61	Condition 734 748	adenocarcinoma
-T62	Condition-Name 734 748	adenocarcinoma
-T63	Modifier 725 733	prostate
+T61	Condition 725 748	prostate adenocarcinoma
+T62	Condition-Name 725 748	prostate adenocarcinoma
 T64	Condition 514 536	biochemical recurrence
 T65	Condition-Name 514 536	biochemical recurrence
 T67	Condition 770 792	biochemical recurrence

@@ -7,12 +7,11 @@ E6	Condition:T6 Name:T47
 E7	Condition:T7 Name:T49
 E8	Exception:T8 From:E7 Except:E9
 E9	Condition:T9 Name:T50
-E10	Modifier:T10 Modifies:E16
 E11	Modifier:T11 Modifies:E16
 E12	Modifier:T12 Modifies:E16
 E13	Modifier:T13 Modifies:E16
 E15	Modifier:T15 Modifies:E16
-E16	Condition:T16 Name:T51
+E16	Condition:T16 Name:T51 Stability:T10
 E17	Assertion:T17 Asserted:T52
 E18	Assertion:T18 Asserted:E19
 E19	Observation:T19 Name:T65 Stability:T52
@@ -42,7 +41,6 @@ T6	Condition 189 205	able to ambulate
 T7	Condition 269 289	neurological disease
 T8	Exception 300 310	other than
 T9	Condition 311 313	PD
-T10	Modifier 319 331	uncontrolled
 T11	Modifier 332 346	cardiovascular
 T12	Modifier 348 357	pulmonary
 T13	Modifier 359 371	neurological
@@ -125,3 +123,5 @@ R9	Or Arg1:E25 Arg2:E27
 R10	Or Arg1:E28 Arg2:E30
 R11	Or Arg1:E11 Arg2:E12
 R12	Or Arg1:E12 Arg2:E13
+T10	Stability 319 331	uncontrolled
+A18	Stability-Value T10 change

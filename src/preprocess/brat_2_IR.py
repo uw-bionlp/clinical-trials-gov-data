@@ -36,7 +36,7 @@ regex_trailing_num = r'\d'
 
 def main():
 
-    output_dir = os.path.join('../clinical_trials_query_gen','data','seq2seq', 'annotation')
+    output_dir = os.path.join('../clinical_trials_query_gen','data','seq2seq', 'annotation', 'main')
     batch_size = 100
     total_needed = batch_size * 10
 
@@ -47,7 +47,11 @@ def main():
             output.append(pair)
         
     shuffle(output)
-    batch = 1
+    batch = 6
+
+    contraindications = [o for o in output if 'entity' in o['intent']]
+    temporalities = [o for o in output if any(x for x in ('before','during','after') if x in o['intent'])]
+    output = contraindications + temporalities
 
     existing = set() 
     for d in [ 'completed', 'reviewing' ]:

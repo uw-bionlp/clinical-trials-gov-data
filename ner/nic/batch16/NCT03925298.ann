@@ -1,6 +1,6 @@
 E1	Condition:T1 Name:T2 Acuteness:T75 Duration:E18
 E3	Procedure:T3 Name:T4
-E5	Condition:T5 Name:T6
+E5	Condition:T5 Name:T6 Temporality:E28
 E7	Condition:T7 Name:T8 Temporality:E28
 E9	Condition:T9 Name:T10 Temporality:E41
 E11	Procedure:T11 Name:T12 Temporality:E30
@@ -176,8 +176,8 @@ T113	Eq-Temporal-Unit 739 743	week
 T114	Drug 765 772	heparin
 T115	Drug-Name 765 772	heparin
 T116	Eq-Temporal-Unit 783 788	hours
-T117	Observation 806 843	activated partial thromboplastin time
-T118	Observation-Name 806 843	activated partial thromboplastin time
+T117	Observation 816 843	partial thromboplastin time
+T118	Observation-Name 816 843	partial thromboplastin time
 T119	Eq-Comparison 844 882	greater than the upper limit of normal
 T120	Eq-Unit 861 882	upper limit of normal
 T121	Observation 889 906	systolic pressure
@@ -248,7 +248,7 @@ A30	Severity-Value T91 severe
 A31	Severity-Value T101 severe
 A32	Eq-Temporal-Unit-Value T113 week
 A33	Eq-Temporal-Unit-Value T116 hour
-A34	Observation-Type-Value E52 measurement
+A34	Observation-Type-Value E52 lab
 A35	Eq-Unit-Value T120 ref-range-high
 A36	Observation-Type-Value E54 vital
 A37	Observation-Type-Value E55 vital
@@ -283,3 +283,5 @@ R17	Or Arg1:E5 Arg2:E7
 R18	Or Arg1:E39 Arg2:E38
 R19	Or Arg1:E67 Arg2:E66
 R20	Or Arg1:E68 Arg2:E67
+T96	Modifier 806 815	activated
+E40	Modifier:T96 Modifies:E52

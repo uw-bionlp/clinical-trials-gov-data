@@ -9,8 +9,7 @@ E9	Exception:T23 From:E8 Except:E10
 E10	Drug:T24 Name:T22 Temporality:E2
 E11	Eq-Comparison:T25 Value:T11 Unit:T26
 E13	Study:T28 
-E15	Condition:T30 Severity:T33
-E16	Modifier:T32 Modifies:E15
+E15	Condition:T30 Severity:T33 Stability:T27
 E17	Condition:T34 Name:T35 Temporality:E22 Temporality2:E23
 E18	Modifier:T36 Modifies:T35
 E19	Modifier:T37 Modifies:T35
@@ -53,7 +52,6 @@ T25	Eq-Comparison 291 303	5 half-lives
 T26	Eq-Unit 293 303	half-lives
 T28	Study 363 372	screening
 T30	Condition 412 419	disease
-T32	Modifier 399 411	uncontrolled
 T33	Severity 391 398	serious
 T34	Condition 521 531	infections
 T35	Condition-Name 521 531	infections
@@ -98,3 +96,5 @@ R7	Or Arg1:E23 Arg2:E22
 R8	Or Arg1:E19 Arg2:E18
 R9	Or Arg1:E20 Arg2:E19
 R10	Or Arg1:E21 Arg2:E20
+T27	Stability 399 411	uncontrolled
+A7	Stability-Value T27 change

@@ -22,7 +22,6 @@ E25	Condition:T25 Name:T48
 E26	Contraindication:T26 Contraindicates:E27
 E27	Procedure:T27 Name:T49
 E28	Condition:T28 Name:T50
-E30	Observation:T30 Name:T51
 E32	Condition:T32 Name:T52
 E33	Condition:T33 Name:T53
 E34	Condition:T34 Name:T55 Severity:T54
@@ -57,8 +56,7 @@ T23	Condition 559 567	Pregnant
 T25	Condition 571 584	breastfeeding
 T26	Contraindication 590 607	Contraindications
 T27	Procedure 611 621	CT imaging
-T28	Condition 632 647	impaired kidney
-T30	Observation 648 662	liver function
+T28	Condition 632 640	impaired
 T32	Condition 715 723	fracture
 T33	Condition 740 748	fracture
 T34	Condition 766 774	delirium
@@ -76,8 +74,7 @@ T46	Condition-Name 545 553	fracture
 T47	Condition-Name 559 567	Pregnant
 T48	Condition-Name 571 584	breastfeeding
 T49	Procedure-Name 611 621	CT imaging
-T50	Condition-Name 632 647	impaired kidney
-T51	Observation-Name 648 662	liver function
+T50	Condition-Name 632 640	impaired
 T52	Condition-Name 715 723	fracture
 T53	Condition-Name 740 748	fracture
 T54	Severity 754 765	Significant
@@ -99,10 +96,13 @@ A5	Assertion-Type-Value E39 hypothetical
 R1	Treatment-For Arg1:E6 Arg2:E4
 R2	Equivalent-To Arg1:E10 Arg2:E9
 R3	Example-Of Arg1:E28 Arg2:E26
-R4	Example-Of Arg1:E30 Arg2:E26
 R5	Or Arg1:E1 Arg2:E3
 R6	Or Arg1:E23 Arg2:E25
-R7	Or Arg1:E28 Arg2:E30
 R8	Or Arg1:E34 Arg2:E36
 R9	Or Arg1:E39 Arg2:E37
 R10	Or Arg1:E11 Arg2:E12
+T2	Modifier 641 647	kidney
+E2	Modifier:T2 Modifies:E28
+T24	Modifier 648 662	liver function
+E16	Modifier:T24 Modifies:E28
+R4	Or Arg1:E2 Arg2:E16	

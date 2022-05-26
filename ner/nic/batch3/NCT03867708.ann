@@ -1,5 +1,4 @@
 E1	Indication:T1 Indication-For:E50
-E2	Condition:T2 Name:T50
 E3	Condition:T3 Name:T52
 E4	Modifier:T4 Modifies:T82
 E6	Modifier:T6 Modifies:T82
@@ -51,7 +50,6 @@ E59	Assertion:T98 Asserted:E29
 E60	Observation:T99 Name:T100 Numeric-Filter:E36
 E62	Condition:T103 Name:T104
 T1	Indication 48 58	indication
-T2	Condition 63 66	ASD
 T3	Condition 118 146	Impaired functional capacity
 T4	Modifier 158 170	Right atrial
 T6	Modifier 178 180	RV
@@ -89,7 +87,6 @@ T45	Modifier 789 802	bidirectional
 T47	Modifier 806 819	right-to-left
 T48	Condition 835 855	Intracardiac thrombi
 T49	Procedure 869 885	echocardiography
-T50	Condition-Name 63 66	ASD
 T52	Condition-Name 118 146	Impaired functional capacity
 T54	Condition-Name 256 276	Paradoxical embolism
 T55	Condition-Name 315 318	ASD
@@ -116,8 +113,8 @@ T76	Condition-Name 737 740	ASD
 T77	Severity 746 752	severe
 T78	Condition-Name 753 784	pulmonary arterial hypertension
 T79	Condition-Name 835 855	Intracardiac thrombi
-T80	Procedure 67 74	closure
-T81	Procedure-Name 67 74	closure
+T80	Procedure 63 74	ASD closure
+T81	Procedure-Name 63 74	ASD closure
 T51	Condition 181 192	enlargement
 T82	Condition-Name 181 192	enlargement
 T53	Condition-Name 218 223	shunt
@@ -159,7 +156,6 @@ A5	Observation-Type-Value E17 measurement
 A12	Eq-Operator-Value T97 GT
 A13	Assertion-Type-Value E59 hypothetical
 A14	Polarity-Value T101 abnormal
-R1	Treatment-For Arg1:E50 Arg2:E2
 R2	Treatment-For Arg1:E14 Arg2:E12
 R3	Equivalent-To Arg1:E10 Arg2:E8
 R4	Equivalent-To Arg1:E14 Arg2:E8

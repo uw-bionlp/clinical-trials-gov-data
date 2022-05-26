@@ -1,7 +1,6 @@
 E1	Age:T1 Numeric-Filter:E2
 E2	Eq-Comparison:T2 Operator:T39 Value:T40
 E3	Procedure:T3 Name:T41
-E4	Modifier:T4 Modifies:T42
 E5	Condition:T5 Name:T42
 E7	Observation:T7 Name:T44
 E8	Condition:T8 Name:T45
@@ -22,17 +21,15 @@ E35	Procedure:T35 Name:T61
 E38	Study:T38 Stability:T19
 E39	Indication:T62 Indication-For:E3
 E40	Procedure:T63 Name:T64
-E6	Modifier:T6 Modifies:T44
-E16	Risk:T16 Numeric-Filter:E18
+E16	Observation:T16 Numeric-Filter:E18 Name:T4 Polarity:T6
 E17	Observation:T17 Name:T59
 E12	Condition:T12 Name:T55
 E19	Modifier:T20 Modifies:T55
 T1	Age 20 23	Age
 T2	Eq-Comparison 25 29	≥ 18
 T3	Procedure 46 67	breast reconstruction
-T4	Modifier 94 100	breast
-T5	Condition 101 107	cancer
-T7	Observation 122 129	lesions
+T5	Condition 94 107	breast cancer
+T7	Observation 109 129	precancerous lesions
 T8	Condition 131 135	DCIS
 T9	Condition 137 141	LCIS
 T10	Condition 144 160	mutation carrier
@@ -52,8 +49,8 @@ T38	Study 870 875	trial
 T39	Eq-Operator 25 26	≥
 T40	Eq-Value 27 29	18
 T41	Procedure-Name 46 67	breast reconstruction
-T42	Condition-Name 101 107	cancer
-T44	Observation-Name 122 129	lesions
+T42	Condition-Name 94 107	breast cancer
+T44	Observation-Name 109 129	precancerous lesions
 T45	Condition-Name 131 135	DCIS
 T46	Condition-Name 137 141	LCIS
 T47	Condition-Name 144 160	mutation carrier
@@ -69,8 +66,7 @@ T61	Procedure-Name 785 814	reconstructive breast surgery
 T62	Indication 31 42	Indications
 T63	Procedure 69 83	histologically
 T64	Procedure-Name 69 83	histologically
-T6	Modifier 109 121	precancerous
-T16	Risk 228 232	risk
+T16	Observation 219 232	lifetime risk
 T17	Observation 649 675	institution under judicial
 T19	Stability 822 832	influences
 T12	Condition 476 489	breast cancer
@@ -93,3 +89,6 @@ R11	And Arg1:E10 Arg2:E14
 R12	Or Arg1:E26 Arg2:E28
 R13	Or Arg1:E35 Arg2:T19
 R14	Or Arg1:E8 Arg2:E9
+T4	Observation-Name 219 232	lifetime risk
+T6	Polarity 196 202	strong
+A4	Polarity-Value T6 high

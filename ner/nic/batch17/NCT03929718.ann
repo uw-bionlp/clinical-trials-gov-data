@@ -61,10 +61,9 @@ E65	Drug:T138 Name:T139
 E66	Procedure:T140 
 E67	Eq-Comparison:T29 Temporal-Period:T141
 E68	Drug:T142 Name:T143
-E69	Procedure:T37 
-E70	Assertion:T144 Asserted:E69
+E69	Indication:T37 Indication-For:E71
 E71	Drug:T145 Name:T146 Class:E74
-E72	Indication:T147 Indication-For:E69
+E72	Indication:T147 
 E73	Other:T148 Is-Other:E72
 E74	Eq-Comparison:T149 Unit:T152 Value:T150 Value2:T151
 E75	Condition:T153 Name:T154 Temporality:E45
@@ -216,8 +215,7 @@ T29	Eq-Comparison 865 872	current
 T141	Eq-Temporal-Period 865 872	current
 T142	Drug 891 913	aldosterone antagonist
 T143	Drug-Name 891 913	aldosterone antagonist
-T37	Procedure 928 937	treatment
-T144	Assertion 919 927	need for
+T37	Indication 919 937	need for treatment
 T145	Drug 960 963	AAD
 T146	Drug-Name 960 963	AAD
 T147	Indication 976 986	indication
@@ -275,7 +273,6 @@ A26	Life-Stage-And-Gender-Type T130 female
 A27	Observation-Type-Value E63 lab
 A28	Eq-Temporal-Unit-Value T134 minute
 A29	Eq-Temporal-Period-Value T141 present
-A30	Assertion-Type-Value E70 hypothetical
 A32	Assertion-Type-Value E82 hypothetical
 A33	Assertion-Type-Value E92 hypothetical
 R1	Found-By Arg1:E4 Arg2:E8

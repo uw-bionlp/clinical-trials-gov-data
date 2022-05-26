@@ -1,4 +1,3 @@
-E3	Modifier:T3 Modifies:T23
 E4	Observation:T4 Name:T23 Acuteness:T10
 E6	Assertion:T6 Asserted:E7
 E7	Condition:T7 Name:T24
@@ -13,9 +12,7 @@ E16	Procedure:T16 Name:T27
 E17	Procedure:T17 Name:T28
 E18	Procedure:T18 Name:T29
 E20	Condition:T20 Name:T30
-E1	Encounter:T1 Location:T22 Location2:T31
-T3	Modifier 127 132	ankle
-T4	Observation 133 137	pain
+T4	Observation 127 137	ankle pain
 T6	Assertion 142 151	suspected
 T7	Condition 171 191	impingement syndrome
 T8	Condition 218 240	Inflammatory arthritis
@@ -29,8 +26,7 @@ T16	Procedure 353 356	MRI
 T17	Procedure 366 391	implanted magnetic device
 T18	Procedure 393 403	pacemakers
 T20	Condition 407 421	claustrophobia
-T22	Location 85 95	orthopedic
-T23	Observation-Name 133 137	pain
+T23	Observation-Name 127 137	ankle pain
 T24	Condition-Name 171 191	impingement syndrome
 T25	Condition-Name 218 240	Inflammatory arthritis
 T26	Condition-Name 257 266	infection
@@ -38,19 +34,19 @@ T27	Procedure-Name 353 356	MRI
 T28	Procedure-Name 366 391	implanted magnetic device
 T29	Procedure-Name 393 403	pacemakers
 T30	Condition-Name 407 421	claustrophobia
-T1	Encounter 96 106	outpatient
-T31	Location 107 113	clinic
 T10	Acuteness 119 126	chronic
 A1	Assertion-Type-Value E6 possible
-A2	Encounter-Type-Value E1 outpatient
-A3	Location-Value T22 clinic
-A4	Location-Value T31 clinic
 A5	Acuteness-Type-Value T10 chronic
 R1	Example-Of Arg1:E17 Arg2:E15
 R2	Example-Of Arg1:E18 Arg2:E15
 R3	Example-Of Arg1:E20 Arg2:E15
-R4	And Arg1:E1 Arg2:E4
 R5	And Arg1:E4 Arg2:E6
 R6	Or Arg1:E18 Arg2:E20
 R7	Or Arg1:E12 Arg2:E13
 R8	Or Arg1:E17 Arg2:E18
+T1	Location 85 113	orthopedic outpatient clinic
+A2	Location-Value T1 clinic
+T2	Encounter 71 79	referred
+E1	Encounter:T2 Location:T1
+A3	Encounter-Type-Value E1 referral
+R4	And Arg1:E1 Arg2:E4	
