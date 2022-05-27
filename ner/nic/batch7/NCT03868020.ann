@@ -18,7 +18,7 @@ E23	Condition:T23 Name:T47 Severity:T46
 E24	Observation:T24 Name:T48 Temporality:E25 Numeric-Filter:E26
 E25	Eq-Comparison:T25 Operator:T49 Value:T50 Temporal-Unit:T51
 E26	Eq-Comparison:T26 Operator:T52 Value:T53
-E27	Condition:T27 Name:T54 Duration:E29
+E27	Observation:T27 Name:T54 Duration:E29
 E29	Eq-Comparison:T29 Value:T55 Temporal-Unit:T56 Operator:T28
 E30	Modifier:T57 Modifies:T33
 E8	Coreference:T8 Refers-To:E4
@@ -47,7 +47,7 @@ T23	Condition 479 496	renal dysfunction
 T24	Observation 498 522	glomerular filtrate rate
 T25	Eq-Comparison 524 538	within 30 days
 T26	Eq-Comparison 540 552	less than 30
-T27	Condition 559 593	Inability to tolerate lying supine
+T27	Observation 581 593	lying supine
 T29	Eq-Comparison 621 633	up to 1 hour
 T30	Life-Stage-And-Gender 25 31	Adults
 T31	Procedure-Name 37 43	biopsy
@@ -71,7 +71,7 @@ T50	Eq-Value 531 533	30
 T51	Eq-Temporal-Unit 534 538	days
 T52	Eq-Operator 540 549	less than
 T53	Eq-Value 550 552	30
-T54	Condition-Name 559 593	Inability to tolerate lying supine
+T54	Observation-Name 581 593	lying supine
 T55	Eq-Value 627 628	1
 T56	Eq-Temporal-Unit 629 633	hour
 T57	Modifier 126 134	contrast
@@ -105,3 +105,5 @@ R8	And Arg1:E6 Arg2:E30
 R9	Or Arg1:E19 Arg2:E22
 R10	And Arg1:E14 Arg2:E15
 R11	Or Arg1:E18 Arg2:E19
+T1	Contraindication 559 580	Inability to tolerate
+E1	Contraindication:T1 Contraindicates:E27

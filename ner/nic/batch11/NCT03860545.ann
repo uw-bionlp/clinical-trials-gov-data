@@ -1,6 +1,6 @@
 E1	Procedure:T1 Name:T2 Temporality:E2
 E3	Condition:T3 Name:T4
-E5	Procedure:T5 Name:T6
+E5	Procedure:T5 Name:T6 Temporality:E2
 E7	Drug:T7 Name:T8
 E9	Condition:T9 Name:T10
 E11	Condition:T11 Name:T12
@@ -31,8 +31,7 @@ E36	Procedure:T60
 E38	Procedure:T47 
 E40	Assertion:T62 Asserted:E9
 E41	Procedure:T67 Name:T68
-E42	Drug:T69 Name:T70
-E43	Assertion:T71 Asserted:E42
+E42	Procedure:T69 Name:T70
 T1	Procedure 48 79	coronary artery bypass grafting
 T2	Procedure-Name 48 79	coronary artery bypass grafting
 T3	Condition 739 766	acute myocardial infarction
@@ -93,9 +92,8 @@ T65	Procedure-Name 168 181	re-operations
 T66	Procedure-Name 773 782	operation
 T67	Procedure 710 719	operation
 T68	Procedure-Name 710 719	operation
-T69	Drug 676 698	blood-derived products
-T70	Drug-Name 676 698	blood-derived products
-T71	Assertion 654 664	suggesting
+T69	Procedure 676 698	blood-derived products
+T70	Procedure-Name 676 698	blood-derived products
 A1	Eq-Temporal-Period-Value T18 future
 A2	Encounter-Type-Value E14 emergency
 A5	Eq-Temporal-Period-Value T55 present
@@ -103,7 +101,6 @@ A6	Eq-Temporal-Period-Value T59 present
 A3	Assertion-Type-Value E29 hypothetical
 A9	Assertion-Type-Value E40 possible
 A10	Severity-Value T63 severe
-A11	Assertion-Type-Value E43 possible
 A13	Acuteness-Type-Value T28 chronic
 R1	Using Arg1:E1 Arg2:E5
 R2	Abbrev-Of Arg1:E19 Arg2:E18
@@ -123,3 +120,5 @@ R15	Before Arg1:E16 Arg2:E38
 R16	During Arg1:E42 Arg2:E41
 R17	Or Arg1:E13 Arg2:E15
 R18	Or Arg1:E20 Arg2:E18
+T21	Indication 654 664	suggesting
+E6	Indication:T21 Indication-For:E42

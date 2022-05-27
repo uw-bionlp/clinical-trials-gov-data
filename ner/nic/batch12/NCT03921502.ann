@@ -28,9 +28,8 @@ E20	Modifier:T48 Modifies:E18
 E22	Procedure:T77 Name:T78 Temporality:E80
 E26	Procedure:T80 Name:T81
 E28	Condition:T82 Name:T83 Temporality:E79
-E32	Negation:T85 Negates:E19
-E34	Assertion:T86 Asserted:E32
-E42	Condition:T87 Name:T88
+E32	Contraindication:T85 Contraindicates:E19 Contraindicates2:E42
+E42	Procedure:T87 Name:T88
 E43	Procedure:T89 Name:T90
 E44	Contraindication:T91 Contraindicates:E43
 E46	Observation:T93 Name:T94 Numeric-Filter:E37
@@ -140,10 +139,9 @@ T80	Procedure 614 635	Hepatobiliary surgery
 T81	Procedure-Name 614 635	Hepatobiliary surgery
 T82	Condition 648 672	superior digestive tract
 T83	Condition-Name 648 672	superior digestive tract
-T85	Negation 693 702	Inability
-T86	Assertion 706 714	tolerate
-T87	Condition 738 772	perforation of the digestive tract
-T88	Condition-Name 738 772	perforation of the digestive tract
+T85	Contraindication 693 714	Inability to tolerate
+T87	Procedure 738 772	perforation of the digestive tract
+T88	Procedure-Name 738 772	perforation of the digestive tract
 T89	Procedure 802 811	endoscopy
 T90	Procedure-Name 802 811	endoscopy
 T91	Contraindication 782 798	contraindication
@@ -218,7 +216,6 @@ A10	Eq-Temporal-Unit-Value T44 month
 A11	Assertion-Type-Value E4 possible
 A14	Polarity-Value T70 high
 A15	Observation-Type-Value E18 clinical-score
-A16	Assertion-Type-Value E34 hypothetical
 A17	Observation-Type-Value E23 lab
 A18	Observation-Type-Value E46 lab
 A21	Assertion-Type-Value E52 hypothetical
@@ -231,8 +228,6 @@ A12	Stability-Value T8 change
 A13	Stability-Value T68 stable
 R1	Found-By Arg1:E5 Arg2:E2
 R2	Equivalent-To Arg1:E5 Arg2:E3
-R4	Example-Of Arg1:E42 Arg2:E44
-R5	Example-Of Arg1:E32 Arg2:E44
 R6	Abbrev-Of Arg1:E23 Arg2:E46
 R7	Example-Of Arg1:E25 Arg2:E49
 R8	Example-Of Arg1:E27 Arg2:E49
@@ -258,7 +253,6 @@ R27	And Arg1:E69 Arg2:E70
 R28	Or Arg1:E2 Arg2:E4
 R29	Or Arg1:E12 Arg2:E14
 R30	Or Arg1:E17 Arg2:E15
-R31	Or Arg1:E19 Arg2:E42
 R32	Or Arg1:E25 Arg2:E27
 R33	Or Arg1:E27 Arg2:E51
 R34	Or Arg1:E53 Arg2:E57
@@ -266,3 +260,4 @@ T67	Encounter 969 978	admission
 E6	Encounter:T67 
 A19	Encounter-Type-Value E6 inpatient
 R24	During Arg1:E49 Arg2:E6	
+R4	Or Arg1:E32 Arg2:E44	

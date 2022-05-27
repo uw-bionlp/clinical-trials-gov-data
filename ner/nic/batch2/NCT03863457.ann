@@ -21,7 +21,7 @@ E31	Study:T31
 E32	Observation:T32 Name:T71
 E34	Condition:T34 Name:T73
 E36	Study:T36 
-E37	Negation:T37 Negates:E38
+E37	Contraindication:T37 Contraindicates:E38
 E38	Procedure:T38 Name:T74
 E40	Eq-Comparison:T40 Temporal-Period:T75
 E41	Condition:T41 Temporality:E40
@@ -33,7 +33,6 @@ E48	Study:T48 Stability:T33
 E21	Eq-Comparison:T21 Operator:T79 Value:T80
 E49	Modifier:T77 Modifies:T52
 E50	Observation:T55 Numeric-Filter:E11 Name:T78 Minimum-Count:E9
-E24	Assertion:T24 Asserted:E37
 T1	Eq-Comparison 46 56	≥ 18 years
 T2	Age 60 63	age
 T4	Assertion 78 87	suspected
@@ -57,7 +56,7 @@ T31	Study 633 642	screening
 T32	Observation 646 666	urine pregnancy test
 T34	Condition 697 720	child-bearing potential
 T36	Study 724 733	screening
-T37	Negation 740 749	Inability
+T37	Contraindication 740 761	Inability to tolerate
 T38	Procedure 762 780	imaging procedures
 T40	Eq-Comparison 847 854	current
 T41	Condition 855 872	medical condition
@@ -99,7 +98,6 @@ T80	Eq-Value 248 251	one
 T77	Modifier 69 74	Known
 T78	Observation-Name 143 149	lesion
 T55	Observation 143 149	lesion
-T24	Assertion 740 749	Inability
 T23	Condition-Name 874 881	illness
 T33	Stability 1031 1041	compromise
 A1	Assertion-Type-Value E4 possible
@@ -113,7 +111,6 @@ A14	Observation-Type-Value E32 lab
 A15	Life-Stage-And-Gender-Type T72 female
 A16	Eq-Temporal-Period-Value T75 present
 A2	Eq-Operator-Value T79 EQ
-A5	Assertion-Type-Value E24 hypothetical
 A3	Stability-Value T33 change
 A11	Observation-Type-Value E50 measurement
 R1	Example-Of Arg1:E13 Arg2:E12

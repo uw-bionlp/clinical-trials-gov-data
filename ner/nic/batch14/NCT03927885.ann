@@ -9,15 +9,13 @@ E9	Eq-Comparison:T15 Operator:T16 Value:T17 Per:T18
 E10	Condition:T19 Name:T20 Duration:E11
 E11	Eq-Comparison:T21 Operator:T22 Temporal-Unit:T24 Value:T23
 E12	Study:T25 
-E14	Observation:T27 Name:T28
-E15	Modifier:T29 Modifies:E14
-E16	Drug:T30 Name:T31 Temporality:E17 Stability:T43
+E14	Observation:T27 Name:T28 Stability:T8
+E16	Drug:T30 Name:T31 Temporality:E17 Temporality2:E21 Stability:T43
 E17	Eq-Comparison:T32 Temporal-Period:T33
 E18	Observation:T34 Name:T35
 E19	Condition:T36 Name:T37
 E20	Procedure:T38 
 E21	Eq-Comparison:T39 Operator:T40 Temporal-Unit:T42 Value:T41
-E22	Negation:T44 Negates:T43 Temporality:E21
 E25	Eq-Comparison:T47 Value:T48 Unit:T50 Operator:T49
 E24	Study:T45 
 E27	Drug:T51 Name:T52 Stability:T53
@@ -73,7 +71,6 @@ T24	Eq-Temporal-Unit 307 312	weeks
 T25	Study 322 331	screening
 T27	Observation 350 354	pain
 T28	Observation-Name 350 354	pain
-T29	Modifier 337 349	Uncontrolled
 T30	Drug 370 377	opioids
 T31	Drug-Name 370 377	opioids
 T32	Eq-Comparison 367 369	on
@@ -87,7 +84,6 @@ T39	Eq-Comparison 466 483	at least 48 hours
 T40	Eq-Operator 466 474	at least
 T41	Eq-Value 475 477	48
 T42	Eq-Temporal-Unit 478 483	hours
-T44	Negation 433 435	no
 T47	Eq-Comparison 455 460	> 25%
 T48	Eq-Value 457 459	25
 T49	Eq-Operator 455 456	>
@@ -95,7 +91,7 @@ T50	Eq-Unit 459 460	%
 T45	Study 493 498	study
 T51	Drug 516 522	opioid
 T52	Drug-Name 516 522	opioid
-T43	Stability 447 453	change
+T43	Stability 433 453	no major dose change
 T53	Stability 506 512	Change
 T54	Study 534 539	study
 T56	Assertion 549 556	allowed
@@ -159,7 +155,7 @@ A6	Eq-Temporal-Period-Value T33 present
 A7	Eq-Operator-Value T40 GTEQ
 A8	Eq-Temporal-Unit-Value T42 hour
 A10	Eq-Operator-Value T49 GT
-A9	Stability-Value T43 change
+A9	Stability-Value T43 stable
 A12	Stability-Value T53 change
 A14	Assertion-Type-Value E29 hypothetical
 A15	Observation-Type-Value E30 lab
@@ -179,7 +175,6 @@ R3	Equivalent-To Arg1:E7 Arg2:E6
 R4	Using Arg1:E20 Arg2:E16
 R5	Caused-By Arg1:E18 Arg2:E19
 R6	Treatment-For Arg1:E20 Arg2:E18
-R7	Equivalent-To Arg1:E25 Arg2:T43
 R8	Abbrev-Of Arg1:E33 Arg2:E32
 R9	Caused-By Arg1:E36 Arg2:E33
 R10	Abbrev-Of Arg1:E50 Arg2:E49
@@ -193,3 +188,6 @@ R17	After Arg1:E27 Arg2:E23
 R18	Or Arg1:E39 Arg2:E40
 R19	After Arg1:E45 Arg2:E42
 R20	Or Arg1:E42 Arg2:E43
+T8	Stability 337 349	Uncontrolled
+A5	Stability-Value T8 change
+R7	Equivalent-To Arg1:E25 Arg2:T43	

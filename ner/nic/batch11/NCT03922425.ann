@@ -1,12 +1,11 @@
 E1	Condition:T1 Name:T2
 E3	Condition:T3 Name:T4 Acuteness:T25
 E5	Condition:T5 Name:T6
-E7	Condition:T7 Name:T8 Severity:T18
+E7	Condition:T7 Name:T8 Severity:T18 Acuteness:T19
 E9	Condition:T9 Name:T10
 E10	Age:T11 Numeric-Filter:E12
 E11	Age:T12 Numeric-Filter:E13
 E12	Eq-Comparison:T17 Operator:T13 Value:T14 Value2:T15
-E2	Modifier:T19 Modifies:E7
 E6	Condition:T21 Name:T22 Severity:T23
 E13	Eq-Comparison:T26 Operator:T27 Value:T16
 E14	Study:T28 
@@ -30,7 +29,6 @@ T15	Eq-Value 32 34	65
 T16	Eq-Value 355 357	18
 T17	Eq-Comparison 29 34	18-65
 T18	Severity 68 74	severe
-T19	Modifier 79 87	enduring
 T21	Condition 117 133	Mental Illnesses
 T22	Condition-Name 117 133	Mental Illnesses
 T23	Severity 110 116	Severe
@@ -50,8 +48,9 @@ A8	Acuteness-Type-Value T25 acute
 R1	Example-Of Arg1:E5 Arg2:E6
 R2	Example-Of Arg1:E1 Arg2:E6
 R3	Example-Of Arg1:E9 Arg2:E6
-R4	And Arg1:T18 Arg2:E2
 R5	Or Arg1:E1 Arg2:E9
 R6	During Arg1:E11 Arg2:E14
 R7	And Arg1:E17 Arg2:E7
 R8	Or Arg1:E5 Arg2:E1
+T19	Acuteness 79 87	enduring
+A4	Acuteness-Type-Value T19 chronic

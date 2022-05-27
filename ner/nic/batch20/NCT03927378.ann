@@ -26,8 +26,8 @@ E29	Drug:T58 Name:T59
 E30	Contraindication:T60 Contraindicates:E29
 E31	Modifier:T61 Modifies:T63
 E32	Condition:T62 Name:T63
-E33	Condition:T65 Name:T66 Stage:E34
-E34	Eq-Comparison:T67 Unit:T68 Operator:T20 Value:T69
+E33	Observation:T65 Name:T66 Numeric-Filter:E34
+E34	Eq-Comparison:T67 Operator:T20 Value:T69
 T1	Condition 83 93	depression
 T2	Condition-Name 83 93	depression
 T3	Condition 604 626	cardiovascular disease
@@ -88,10 +88,9 @@ T61	Modifier 572 582	refractory
 T62	Condition 583 595	hypertension
 T63	Condition-Name 583 595	hypertension
 T64	Severity 597 603	severe
-T65	Condition 628 642	heart function
-T66	Condition-Name 628 642	heart function
-T67	Eq-Comparison 643 662	classification ≥III
-T68	Eq-Unit 643 657	classification
+T65	Observation 628 657	heart function classification
+T66	Observation-Name 628 657	heart function classification
+T67	Eq-Comparison 658 662	≥III
 T69	Eq-Value 659 662	III
 A1	Eq-Operator-Value T17 GTEQ
 A2	Eq-Operator-Value T18 GTEQ
@@ -114,10 +113,11 @@ R6	Example-Of Arg1:E15 Arg2:E20
 R7	Abbrev-Of Arg1:E15 Arg2:E26
 R8	Example-Of Arg1:E32 Arg2:E30
 R9	Example-Of Arg1:E3 Arg2:E30
-R10	Example-Of Arg1:E33 Arg2:E30
 R11	Or Arg1:E5 Arg2:E6
 R12	Before Arg1:E10 Arg2:E11
 R13	During Arg1:E20 Arg2:E21
 R14	Or Arg1:E24 Arg2:E15
 R15	Or Arg1:E3 Arg2:E7
 R16	Or Arg1:E23 Arg2:E24
+A9	Observation-Type-Value E33 clinical-score
+R10	Equivalent-To Arg1:E33 Arg2:E3	

@@ -1,6 +1,4 @@
 E3	Procedure:T3 Name:T4
-E2	Procedure:T2 Name:T6
-E5	Modifier:T10 Modifies:T7
 E6	Procedure:T11 Name:T12
 E8	Encounter:T14 Location:T16
 E10	Eq-Comparison:T17 Operator:T18 Value:T5 Temporal-Unit:T19
@@ -12,11 +10,8 @@ E16	Eq-Comparison:T28 Temporal-Period:T29
 T3	Procedure 25 38	Lung surgical
 T4	Procedure-Name 25 38	Lung surgical
 T5	Eq-Value 170 172	24
-T2	Procedure 78 87	operative
-T6	Procedure-Name 78 87	operative
-T7	Location 88 107	intensive care unit
+T7	Location 65 107	thoracic postoperative intensive care unit
 T8	Location 109 112	ICU
-T10	Modifier 65 73	thoracic
 T11	Procedure 131 138	surgery
 T12	Procedure-Name 131 138	surgery
 T14	Encounter 143 149	stayed
@@ -41,8 +36,8 @@ A7	Eq-Temporal-Unit-Value T19 hour
 A8	Eq-Temporal-Period-Value T24 past
 A9	Eq-Temporal-Period-Value T29 past
 R1	Abbrev-Of Arg1:T8 Arg2:T7
-R2	After Arg1:T7 Arg2:E2
 R3	And Arg1:E3 Arg2:E11
 R4	After Arg1:E11 Arg2:E6
 R5	And Arg1:E6 Arg2:E8
 R6	Or Arg1:E12 Arg2:E14
+A1	Encounter-Type-Value E11 inpatient

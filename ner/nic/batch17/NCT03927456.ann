@@ -37,7 +37,6 @@ E42	Study:T79
 E44	Condition:T81 Name:T82 Severity:T83 Stability:T84
 E47	Observation:T86 Name:T87
 E48	Observation:T88 Name:T89 Stage:E17
-E50	Assertion:T92 Asserted:E15
 E51	Procedure:T93 Name:T94
 T1	Procedure 301 313	chemotherapy
 T2	Procedure-Name 301 313	chemotherapy
@@ -119,7 +118,6 @@ T86	Observation 782 808	New York heart association
 T87	Observation-Name 782 808	New York heart association
 T88	Observation 810 814	NYHA
 T89	Observation-Name 810 814	NYHA
-T92	Assertion 860 864	need
 T93	Procedure 33 47	pathologically
 T94	Procedure-Name 33 47	pathologically
 T84	Stability 729 737	unstable
@@ -137,7 +135,6 @@ A10	Eq-Temporal-Period-Value T60 past
 A11	Severity-Value T76 severe
 A13	Severity-Value T78 severe
 A15	Severity-Value T83 severe
-A16	Assertion-Type-Value E50 hypothetical
 A17	Observation-Type-Value E33 clinical-score
 A18	Observation-Type-Value E34 clinical-score
 A19	Stability-Value T84 change
@@ -151,7 +148,6 @@ R5	Using Arg1:E24 Arg2:E35
 R6	Example-Of Arg1:E7 Arg2:E9
 R7	Equivalent-To Arg1:E47 Arg2:E11
 R8	Abbrev-Of Arg1:E48 Arg2:E47
-R9	Treatment-For Arg1:E15 Arg2:E13
 R10	Found-By Arg1:E2 Arg2:E51
 R11	Using Arg1:E24 Arg2:E36
 R12	Using Arg1:E24 Arg2:E37
@@ -168,5 +164,6 @@ R22	Or Arg1:E6 Arg2:E4
 R23	Or Arg1:E8 Arg2:E6
 R24	Or Arg1:E35 Arg2:E36
 R25	Or Arg1:E44 Arg2:E11
-T45	Modifier 816 821	class
-E12	Modifier:T45 Modifies:E47
+T52	Indication 860 864	need
+E25	Indication:T52 Indication-For:E15
+R9	Treatment-For Arg1:E15 Arg2:E13	

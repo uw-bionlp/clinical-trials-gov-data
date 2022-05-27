@@ -35,8 +35,7 @@ E43	Modifier:T82 Modifies:T80
 E44	Modifier:T83 Modifies:T80
 E45	Condition:T84 Name:T85
 E46	Modifier:T86 Modifies:T85
-E47	Condition:T87 Name:T88
-E48	Modifier:T89 Modifies:T88
+E47	Condition:T87 Name:T88 Stability:T48
 E49	Condition:T90 Name:T91 Severity:T95 Acuteness:T133
 E50	Modifier:T92 Modifies:T91
 E51	Modifier:T93 Modifies:T91
@@ -138,7 +137,6 @@ T85	Condition-Name 774 790	hypersensitivity
 T86	Modifier 794 811	ergot derivatives
 T87	Condition 826 838	hypertension
 T88	Condition-Name 826 838	hypertension
-T89	Modifier 813 825	uncontrolled
 T90	Condition 884 891	illness
 T91	Condition-Name 884 891	illness
 T92	Modifier 857 863	mental
@@ -242,3 +240,5 @@ R30	Or Arg1:E73 Arg2:E74
 T14	Encounter 562 567	visit
 E12	Encounter:T14 
 A7	Encounter-Type-Value E12 outpatient
+T48	Stability 813 825	uncontrolled
+A21	Stability-Value T48 change
