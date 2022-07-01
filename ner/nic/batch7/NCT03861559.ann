@@ -18,7 +18,6 @@ E26	Negation:T26 Negates:E28
 E27	Eq-Comparison:T27 Temporal-Period:T119
 E28	Procedure:T28 Name:T120 Temporality:E27
 E29	Condition:T29 Name:T121
-E30	Assertion:T30 Asserted:E31
 E31	Procedure:T31 Name:T122
 E32	Modifier:T32 Modifies:T123
 E34	Modifier:T34 Modifies:T123
@@ -98,7 +97,6 @@ T26	Negation 524 527	not
 T27	Eq-Comparison 528 533	using
 T28	Procedure 556 569	birth control
 T29	Condition 579 585	asthma
-T30	Assertion 591 599	requires
 T31	Procedure 600 607	therapy
 T32	Modifier 613 620	inhaled
 T34	Modifier 624 632	systemic
@@ -216,7 +214,6 @@ T77	Eq-Comparison 1369 1377	multiple
 T160	Eq-Operator 1369 1377	multiple
 T147	Drug 1378 1382	drug
 A1	Assertion-Type-Value E15 hypothetical
-A2	Assertion-Type-Value E30 hypothetical
 A3	Assertion-Type-Value E53 hypothetical
 A4	Assertion-Type-Value E56 hypothetical
 A5	Assertion-Type-Value E96 hypothetical
@@ -291,3 +288,5 @@ R37	Or Arg1:E45 Arg2:E46
 R38	Or Arg1:E46 Arg2:E47
 R39	Or Arg1:E84 Arg2:E85
 T8	Allergy-Name 67 75	rhinitis
+T11	Indication 591 599	requires
+E3	Indication:T11 Indication-For:E31

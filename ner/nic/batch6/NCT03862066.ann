@@ -1,4 +1,3 @@
-E1	Modifier:T1 Modifies:T53
 E2	Condition:T2 Name:T53 Temporality:E53
 E3	Condition:T3 Name:T54
 E4	Negation:T4 Negates:E6
@@ -33,9 +32,7 @@ E36	Drug:T36 Name:T70
 E38	Procedure:T38 Name:T71
 E39	Condition:T39 Name:T81
 E40	Exception:T40 From:E39 Except:E42 Except2:E45
-E41	Modifier:T41 Modifies:T72
 E42	Condition:T42 Name:T72
-E44	Modifier:T44 Modifies:T73
 E45	Condition:T45 Name:T73
 E46	Modifier:T46 Modifies:T74
 E47	Condition:T47 Name:T74
@@ -47,8 +44,7 @@ E54	Exception:T57 From:E32 Except:E33
 E55	Modifier:T80 Modifies:T81
 E56	Procedure:T82 Name:T83
 E57	Procedure:T84 Name:T85
-T1	Modifier 63 94	locoregional oral squamous cell
-T2	Condition 95 104	carcinoma
+T2	Condition 76 104	oral squamous cell carcinoma
 T3	Condition 106 110	OSCC
 T4	Negation 112 119	without
 T5	Modifier 132 139	distant
@@ -82,16 +78,14 @@ T36	Drug 589 598	cetuximab
 T38	Procedure 602 619	radiation therapy
 T39	Condition 637 649	malignancies
 T40	Exception 650 656	except
-T41	Modifier 657 680	cutaneous squamous cell
-T42	Condition 681 690	carcinoma
-T44	Modifier 694 704	basal cell
-T45	Condition 705 714	carcinoma
+T42	Condition 657 690	cutaneous squamous cell carcinoma
+T45	Condition 694 714	basal cell carcinoma
 T46	Modifier 720 740	unresectable primary
 T47	Condition 741 746	tumor
 T49	Condition 750 766	regional disease
 T51	Modifier 770 777	distant
 T52	Observation 778 788	metastases
-T53	Condition-Name 95 104	carcinoma
+T53	Condition-Name 76 104	oral squamous cell carcinoma
 T54	Condition-Name 106 110	OSCC
 T55	Observation-Name 140 150	metastases
 T58	Condition-Name 319 323	OSCC
@@ -108,8 +102,8 @@ T68	Eq-Temporal-Period 560 565	prior
 T69	Procedure-Name 566 578	chemotherapy
 T70	Drug-Name 589 598	cetuximab
 T71	Procedure-Name 602 619	radiation therapy
-T72	Condition-Name 681 690	carcinoma
-T73	Condition-Name 705 714	carcinoma
+T72	Condition-Name 657 690	cutaneous squamous cell carcinoma
+T73	Condition-Name 694 714	basal cell carcinoma
 T74	Condition-Name 741 746	tumor
 T75	Condition-Name 750 766	regional disease
 T76	Observation-Name 778 788	metastases
@@ -151,3 +145,5 @@ R17	Or Arg1:E49 Arg2:E52
 R18	Or Arg1:E8 Arg2:E9
 R19	Or Arg1:E9 Arg2:E10
 R20	Or Arg1:E10 Arg2:E11
+T1	Modifier 63 75	locoregional
+E1	Modifier:T1 Modifies:E2

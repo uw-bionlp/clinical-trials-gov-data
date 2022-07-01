@@ -26,7 +26,7 @@ E8	Observation:T62 Name:T63 Numeric-Filter:E37
 E10	Drug:T65 Name:T66
 E12	Procedure:T67 
 E16	Drug:T69 Name:T70
-E18	Negation:T71 Negates:E16
+E18	Contraindication:T71 Contraindicates:E16
 E22	Indication:T73 Indication-For:E9
 E26	Assertion:T75 Asserted:E17
 E24	Condition:T74 Name:T76
@@ -113,7 +113,7 @@ T66	Drug-Name 238 257	antiarrhythmic drug
 T67	Procedure 258 267	treatment
 T69	Drug 293 312	antiarrhythmic drug
 T70	Drug-Name 293 312	antiarrhythmic drug
-T71	Negation 274 277	not
+T71	Contraindication 274 289	not able to use
 T73	Indication 337 346	indicated
 T75	Assertion 380 390	prevention
 T74	Condition 481 500	atrial fibrillation
@@ -188,7 +188,6 @@ R10	And Arg1:E1 Arg2:E7
 R11	And Arg1:E35 Arg2:E36
 R12	And Arg1:E7 Arg2:E34
 R13	During Arg1:E3 Arg2:E12
-R14	Or Arg1:E12 Arg2:E18
 R15	Or Arg1:E30 Arg2:E28
 R16	Or Arg1:E43 Arg2:E33
 R17	Or Arg1:E27 Arg2:E48
@@ -197,3 +196,4 @@ R19	And Arg1:E13 Arg2:E53
 R20	Or Arg1:E60 Arg2:E61
 R21	And Arg1:E33 Arg2:E45
 R22	Or Arg1:E57 Arg2:E15
+R14	Or Arg1:E12 Arg2:E18	

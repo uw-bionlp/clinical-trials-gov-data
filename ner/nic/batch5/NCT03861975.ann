@@ -18,7 +18,6 @@ E20	Modifier:T20 Modifies:T66
 E21	Condition:T21 Name:T66 Temporality:E19
 E22	Eq-Comparison:T22 Temporal-Period:T67
 E23	Condition:T23 Name:T68 Temporality:E22
-E24	Modifier:T24 Modifies:T69
 E25	Observation:T25 Name:T69
 E26	Negation:T26 Negates:E60
 E28	Modifier:T28 Modifies:T70
@@ -47,7 +46,6 @@ E56	Procedure:T56 Name:T84
 E57	Study:T86 
 E58	Assertion:T87 Asserted:E57
 E60	Study:T89 
-E61	Assertion:T90 Asserted:E26
 E62	Condition:T91 Name:T92
 E63	Condition:T93 Name:T94
 E64	Assertion:T96 Asserted:E29
@@ -76,8 +74,7 @@ T20	Modifier 372 379	primary
 T21	Condition 380 390	lymphedema
 T22	Eq-Comparison 416 423	current
 T23	Condition 432 442	cellulitis
-T24	Modifier 473 478	brain
-T25	Observation 479 489	metastases
+T25	Observation 473 489	brain metastases
 T26	Negation 500 508	excluded
 T28	Modifier 597 608	progressive
 T29	Condition 609 631	neurologic dysfunction
@@ -114,7 +111,7 @@ T65	Eq-Temporal-Period 361 368	History
 T66	Condition-Name 380 390	lymphedema
 T67	Eq-Temporal-Period 416 423	current
 T68	Condition-Name 432 442	cellulitis
-T69	Observation-Name 479 489	metastases
+T69	Observation-Name 473 489	brain metastases
 T70	Condition-Name 609 631	neurologic dysfunction
 T71	Stability 643 651	confound
 T72	Condition-Name 725 745	intercurrent illness
@@ -133,7 +130,6 @@ T85	Condition-Name 169 175	cancer
 T86	Study 330 335	trial
 T87	Assertion 291 302	willingness
 T89	Study 519 533	clinical trial
-T90	Assertion 490 499	should be
 T91	Condition 551 565	poor prognosis
 T92	Condition-Name 551 565	poor prognosis
 T93	Condition 691 705	adverse events
@@ -168,7 +164,6 @@ A15	Stability-Value T81 change
 A16	Observation-Type-Value E15 survey-or-questionnaire
 A17	Assertion-Type-Value E18 hypothetical
 A18	Assertion-Type-Value E58 hypothetical
-A19	Assertion-Type-Value E61 hypothetical
 A20	Assertion-Type-Value E64 hypothetical
 A21	Observation-Type-Value E65 social-habit
 A22	Polarity-Value T82 normal

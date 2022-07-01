@@ -1,3 +1,4 @@
+from __future__ import annotations
 import os
 import re
 import sys
@@ -36,49 +37,90 @@ regex_trailing_num = r'\d'
 
 def main():
 
-    output_dir = os.path.join('../clinical_trials_query_gen','data','seq2seq', 'annotation', 'main')
+    output_dir = os.path.join('../clinical-trials-logical-annotation')
     batch_size = 100
-    total_needed = batch_size * 10
+    annotators = 1
+    batches_per_annotator = 10
+    total_needed = batches_per_annotator * annotators * batch_size
+
+    existing = set() 
+    root_dir = '/Users/nicdobbins/work/nlp/clinical-trials-logical-annotation/'
+    for d in os.listdir(root_dir):
+        for _, _, files in os.walk(os.path.join(root_dir, d)):
+            for file in files:
+                if not file.endswith('.js'):
+                    continue
+                existing.add(file)
 
     docs = get_base_data()
     output = []
     for doc in docs:
+        if doc.doc_id in existing:
+            continue
         for pair in doc.to_tree():
             output.append(pair)
         
     shuffle(output)
-    batch = 6
+    batch = 1
 
     contraindications = [o for o in output if 'entity' in o['intent']]
-    temporalities = [o for o in output if any(x for x in ('before','during','after') if x in o['intent'])]
-    output = contraindications + temporalities
+    risks = [o for o in output if 'risk' in o['intent']]
+    if_thens = [x for x in output if 'if_then' in x['snippet']]
+    criteria = [o for o in output if 'criteria' in o['intent']]
+    durations = [x for x in output if 'duration' in x['snippet']]
+    seqs = [o for o in output if any(x for x in ('before','during','after') if x in o['intent'])]
 
-    existing = set() 
-    for d in [ 'completed', 'reviewing' ]:
-        for b in os.listdir(os.path.join(output_dir, d)):
-            for f in os.listdir(os.path.join(output_dir, d, b)):
-                existing.add(f)
+    specific_output = {}
+    for grp in [contraindications, risks, if_thens, criteria, seqs, durations]:
+        for line in grp:
+            if line['doc_id'] not in specific_output and line['doc_id'] not in existing:
+                specific_output[line['doc_id']] = line
+    specific_output = [x for _, x in specific_output.items()]
 
-    added = len(existing)
-    for rec in output:
-        filename = f'{rec["key"]}.js'
-        if filename in existing:
-            continue
-        parent_dir = os.path.join(output_dir, 'reviewing', 'batch' + str(batch))
-        if not os.path.exists(parent_dir):
-            os.mkdir(parent_dir)
-        with open(os.path.join(parent_dir, filename), 'w+') as fout:
-            fout.write("'" + rec['orig'].replace("'","''") + "'")
-            fout.write('\n\n')
-            fout.write("'" + rec['intent'].replace("'","''") + "'")
-            fout.write('\n\n')
-            fout.write(rec['snippet'])
-        added += 1
-        if len(os.listdir(parent_dir)) == batch_size:
-            batch += 1
-        if added >= total_needed:
-            break
+    shuffle(specific_output)
+    output = [x for x in output if not any([o for o in specific_output if x['doc_id'] == o['doc_id']])]
+
+    num_specific = int(total_needed / 2)
+    specific_output = specific_output[:num_specific]
+    num_specific = len(specific_output)
+
+    num_random = total_needed - num_specific
+    output = output[:num_random]
+    output = output + specific_output
+    shuffle(output)
+
+    for annotator in ['weipeng']:
+        added = 0
+        batch = 2
+        for rec in output:
+            filename = f'{rec["key"]}.js'
+            if filename in existing:
+                continue
+            parent_dir = os.path.join(output_dir, f'clinical-trials-logical-annotation-{annotator}', 'data', 'batch' + str(batch), 'assigned')
+            if not os.path.exists(parent_dir):
+                os.mkdir(parent_dir)
+            with open(os.path.join(parent_dir, filename), 'w+') as fout:
+                fout.write("'" + rec['inc_exc'] + "'")
+                fout.write('\n\n')
+                fout.write("'" + rec['orig'].replace("'","''") + "'")
+                fout.write('\n\n')
+                fout.write("'" + rec['intent'].replace("'","''") + "'")
+                fout.write('\n\n')
+                #fout.write(rec['snippet'])
+            added += 1
+            if len(os.listdir(parent_dir)) == batch_size:
+                batch += 1
+            existing.add(filename)
+            if added >= int(total_needed / annotators):
+                break
     
+
+def get_exc_line_idx(lines):
+    for i, line in enumerate(lines):
+        if 'Exclusion' in line:
+            return i
+    return 100000
+
 
 def get_base_data():
     brat_train_raw = {} 
@@ -92,10 +134,12 @@ def get_base_data():
 
 class BaseDoc:
     def __init__(self, ann):
+        self.brat   = ann
         self.doc_id = ann.doc_id
         self.path   = ann.path
         self.text   = ann.pretokenized
         self.lines  = ann.pretokenized.split('\n')
+        self.exc_line_idx = get_exc_line_idx(self.lines)
         self.lines_transformed = []
 
         print(self.doc_id)
@@ -142,7 +186,7 @@ class BaseDoc:
             line_idx = [ grp[0] for grp in line ][0].sent_idx
             orig_line_text = self.lines[line_idx]
             line_text = self.lines_transformed[line_idx]
-            print(f'\n"{line_text}"')
+            #print(f'\n"{line_text}"')
             codes = []
             for grp in line:
                 code = self.to_branch(grp)
@@ -151,7 +195,9 @@ class BaseDoc:
                 code = f'intersect({", ".join(codes)})' if len(codes) > 1 else codes[0]
                 output.append({ 
                     "doc_id": self.doc_id,
+                    "brat": self.brat,
                     "line": line_idx,
+                    "inc_exc": 'INC' if line_idx < self.exc_line_idx else 'EXC',
                     "key": f'{self.doc_id}_{line_idx}',
                     "orig": orig_line_text.strip(), 
                     "intent": line_text.strip(), 
@@ -562,6 +608,10 @@ class Assertion(Entity):
         self.text_transform = True
 
     def _to_code(self, add_attrs=True):
+        if self.val == 'possible':
+            return 'possible()'
+        
+        return None
         if self.val == 'hypothetical':
             return 'hypoth()'
         if self.val == 'possible':
@@ -787,6 +837,9 @@ class Other(Entity):
         self.text_transform = True
         self.verb = 'other'
 
+    def _to_code(self, add_attrs=True):
+        return None
+
 class Polarity(Entity):
     def __init__(self, e, doc):
         super().__init__(e, doc)    
@@ -845,6 +898,9 @@ class Study(Entity):
         self.is_head = lambda: True
         self.priority = 4
         self.text_transform = True
+
+    def _to_code(self, add_attrs=True):
+        return None
 
 class BaseEntity:
     def __init__(self, brat):
