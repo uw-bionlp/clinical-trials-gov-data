@@ -20,7 +20,6 @@ E19	Modifier:T42 Modifies:T41
 E20	Condition:T43 Name:T44
 E21	Modifier:T45 Modifies:T44
 E22	Condition:T46 Name:T47
-E23	Assertion:T48 Asserted:E1
 T1	Procedure 460 469	reduction
 T2	Procedure-Name 460 469	reduction
 T3	Life-Stage-And-Gender 296 304	Children
@@ -68,7 +67,6 @@ T44	Condition-Name 421 430	fractures
 T45	Modifier 416 420	Open
 T46	Condition 437 446	Fractures
 T47	Condition-Name 437 446	Fractures
-T48	Assertion 452 459	require
 A1	Life-Stage-And-Gender-Type T3 child
 A2	Eq-Operator-Value T4 GT
 A3	Eq-Operator-Value T5 LT
@@ -78,6 +76,7 @@ A6	Eq-Temporal-Unit-Value T8 year
 A7	Observation-Type-Value E11 measurement
 A8	Observation-Type-Value E12 measurement
 A9	Eq-Operator-Value T36 LT
-A10	Assertion-Type-Value E23 hypothetical
 R1	Equivalent-To Arg1:E11 Arg2:E8
 R2	Treatment-For Arg1:E1 Arg2:E22
+T48	Indication 452 459	require
+E23	Indication:T48 Indication-For:E1

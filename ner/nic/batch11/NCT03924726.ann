@@ -25,7 +25,6 @@ E10	Eq-Comparison:T14 Unit:T23 Value:T24
 E13	Eq-Comparison:T25 Unit:T53 Value:T52 Operator:T51
 E14	Eq-Comparison:T54 Unit:T56 Value:T55
 E30	Condition:T58 Name:T59
-E31	Assertion:T60 Asserted:E21
 T1	Procedure 212 233	orthodontic treatment
 T2	Procedure-Name 212 233	orthodontic treatment
 T3	Procedure 157 200	Extraction of all four first premolar teeth
@@ -82,12 +81,10 @@ T55	Eq-Value 147 150	III
 T56	Eq-Unit 141 146	Class
 T58	Condition 620 637	Poor oral hygiene
 T59	Condition-Name 620 637	Poor oral hygiene
-T60	Assertion 459 468	requiring
 A1	Eq-Operator-Value T13 GTEQ
 A3	Eq-Temporal-Unit-Value T15 year
 A2	Eq-Temporal-Period-Value T48 present
 A5	Eq-Operator-Value T51 LT
-A6	Assertion-Type-Value E31 hypothetical
 R1	Using Arg1:E3 Arg2:E1
 R2	Using Arg1:E16 Arg2:E5
 R3	Treatment-For Arg1:E21 Arg2:E20
@@ -98,3 +95,7 @@ R7	Or Arg1:E11 Arg2:E22
 R8	Or Arg1:E22 Arg2:E23
 R9	Or Arg1:E23 Arg2:E24
 R10	Or Arg1:E24 Arg2:E25
+T20	Indication 459 468	requiring
+E6	Indication:T20 Indication-For:E21 Indication-For2:E11 Indication-For3:E22 Indication-For4:E23 Indication-For5:E24 Indication-For6:E25 Indication-For7:E26
+T44	Modifier 469 478	long-term
+E15	Modifier:T44 Modifies:E21

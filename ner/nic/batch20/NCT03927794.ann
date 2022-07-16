@@ -1,5 +1,5 @@
 E1	Condition:T1 Name:T2 Minimum-Count:E10 Stage:E4
-E6	Condition:T6 Name:T7 Minimum-Count:E27 Minimum-Count2:E28 Stage:E31
+E6	Condition:T6 Name:T7 Stage:E31 Minimum-Count:E27
 E8	Condition:T8 Name:T9
 E9	Age:T14 Numeric-Filter:E16
 E10	Eq-Comparison:T34 Operator:T10 Value:T20
@@ -21,8 +21,7 @@ E23	Observation:T55 Name:T56 Polarity:T57 Numeric-Filter:E14
 E24	Modifier:T58 Modifies:T56
 E25	Observation:T61 Name:T62 Polarity:T63 Numeric-Filter:E15
 E15	Eq-Comparison:T17 Value:T24 Operator:T39 Value2:T25
-E27	Eq-Comparison:T65 Value:T28
-E28	Eq-Comparison:T66 Value:T29
+E27	Eq-Comparison:T65 Value:T28 Value2:T29
 E29	Modifier:T67 Modifies:T7
 E30	Modifier:T68 Modifies:T7
 E31	Eq-Comparison:T69 Unit:T70 Value:T71
@@ -97,8 +96,7 @@ T17	Eq-Comparison 316 325	6.75-7.25
 T24	Eq-Value 316 320	6.75
 T25	Eq-Value 321 325	7.25
 T39	Eq-Operator 320 321	-
-T65	Eq-Comparison 391 403	minimum of 1
-T66	Eq-Comparison 410 423	maximum of 12
+T65	Eq-Comparison 391 423	minimum of 1 and a maximum of 12
 T67	Modifier 424 446	primary anterior teeth
 T68	Modifier 452 457	early
 T69	Eq-Comparison 474 481	Class V

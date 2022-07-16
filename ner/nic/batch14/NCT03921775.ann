@@ -21,7 +21,7 @@ E23	Condition:T52 Name:T53
 E25	Allergy:T56 Name:E26
 E26	Drug:T57 
 E27	Study:T58 
-E28	Condition:T59 Name:T60 Stage:E36
+E28	Observation:T59 Name:T60 Numeric-Filter:E36
 E29	Study:T61 Temporality:E31
 E30	Other:T62 Is-Other:E29
 E31	Eq-Comparison:T63 Temporal-Unit:T18 Operator:T15 Value:T23
@@ -83,8 +83,8 @@ T54	Life-Stage-And-Gender 609 614	women
 T56	Allergy 649 657	Allergic
 T57	Drug 661 666	drugs
 T58	Study 679 684	study
-T59	Condition 741 760	Modified Mallampati
-T60	Condition-Name 741 760	Modified Mallampati
+T59	Observation 741 760	Modified Mallampati
+T60	Observation-Name 741 760	Modified Mallampati
 T61	Study 812 826	clinical trial
 T62	Other 806 811	other
 T63	Eq-Comparison 827 846	within the 3 months
@@ -127,3 +127,4 @@ R10	Or Arg1:E14 Arg2:E5
 R11	Before Arg1:E17 Arg2:E16
 R12	Or Arg1:T54 Arg2:E11
 R13	Before Arg1:E31 Arg2:E32
+A12	Observation-Type-Value E28 clinical-score

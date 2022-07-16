@@ -4,8 +4,7 @@ E3	Eq-Comparison:T3 Temporal-Period:T61
 E4	Observation:T4 Name:T64
 E5	Observation:T5 Name:T65 Numeric-Filter:E6
 E6	Eq-Comparison:T6 Operator:T66 Value:T67
-E7	Criteria-Count:T7 Min-Value:E64 Criteria:E8 Criteria2:E9 Criteria3:E10 Criteria4:E12 Criteria5:E13
-E8	Condition:T8 Name:T114
+E7	Criteria-Count:T7 Min-Value:E64 Criteria2:E9 Criteria3:E10 Criteria4:E12 Criteria5:E13
 E9	Condition:T9 Name:T70
 E10	Condition:T10 Name:T71
 E12	Observation:T12 Name:T73 Acuteness:T11
@@ -52,7 +51,6 @@ E61	Observation:T109 Name:T63 Temporality:E3 Temporality2:E60
 E62	Observation:T110 Name:T111
 E63	Assertion:T112 Asserted:E4
 E64	Eq-Comparison:T113 Operator:T68 Value:T69
-E65	Observation:T115 Name:T116
 E23	Negation:T23 Negates:E22
 E24	Negation:T24 Negates:E23
 E66	Assertion:T117 Asserted:E24
@@ -66,7 +64,6 @@ T4	Observation 266 305	Telephone-Montreal Cognitive Assessment
 T5	Observation 307 313	T-MoCA
 T6	Eq-Comparison 324 327	>20
 T7	Criteria-Count 399 412	the following
-T8	Condition 413 435	subjective afflictions
 T9	Condition 462 488	Cardiovascular Dysfunction
 T10	Condition 493 515	Neurocognitive Disease
 T11	Acuteness 520 527	Chronic
@@ -161,9 +158,6 @@ T110	Observation 162 164	Q1
 T111	Observation-Name 162 164	Q1
 T112	Assertion 191 201	ability to
 T113	Eq-Comparison 383 395	at least one
-T114	Condition-Name 413 435	subjective afflictions
-T115	Observation 445 447	Q1
-T116	Observation-Name 445 447	Q1
 T72	Eq-Unit 724 729	score
 T23	Negation 904 911	removed
 T24	Negation 894 900	cannot
@@ -202,11 +196,6 @@ A23	Polarity-Value T124 low
 A24	Acuteness-Type-Value T11 chronic
 R1	Abbrev-Of Arg1:E62 Arg2:E61
 R2	Abbrev-Of Arg1:E5 Arg2:E4
-R3	Found-By Arg1:E8 Arg2:E65
-R4	Example-Of Arg1:E9 Arg2:E8
-R5	Example-Of Arg1:E10 Arg2:E8
-R6	Example-Of Arg1:E12 Arg2:E8
-R7	Example-Of Arg1:E13 Arg2:E8
 R8	Example-Of Arg1:E18 Arg2:E17
 R9	Example-Of Arg1:E20 Arg2:E17
 R10	Example-Of Arg1:E22 Arg2:E17

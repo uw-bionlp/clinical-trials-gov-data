@@ -26,7 +26,6 @@ E38	Eq-Comparison:T38 Temporal-Period:T90
 E39	Drug:T39 Temporality:E38
 E40	Assertion:T40 Asserted:T91
 E41	Condition:T41 Name:T92 Stability:T91
-E42	Assertion:T42 Asserted:E43
 E43	Procedure:T43 Name:T93
 E45	Eq-Comparison:T45 Temporal-Period:T94
 E46	Modifier:T46 Modifies:T44
@@ -78,7 +77,6 @@ T38	Eq-Comparison 653 659	taking
 T39	Drug 660 670	medication
 T40	Assertion 676 679	may
 T41	Condition 691 712	periodontal situation
-T42	Assertion 731 740	requiring
 T43	Procedure 741 763	antibiotic prophylaxis
 T45	Eq-Comparison 775 783	received
 T46	Modifier 784 792	systemic
@@ -153,7 +151,6 @@ T114	Organism-Name 372 385	P. gingivalis
 T19	Modifier 343 352	dentition
 A1	Assertion-Type-Value E3 hypothetical
 A7	Assertion-Type-Value E40 hypothetical
-A8	Assertion-Type-Value E42 hypothetical
 A10	Eq-Operator-Value T68 GTEQ
 A11	Observation-Type-Value E10 measurement
 A12	Eq-Operator-Value T72 GT
@@ -186,8 +183,10 @@ R14	Before Arg1:E51 Arg2:E44
 R15	Or Arg1:E55 Arg2:E57
 R16	Or Arg1:E59 Arg2:E61
 R17	Or Arg1:E22 Arg2:E27
-R19	Or Arg1:E41 Arg2:E42
 T20	Encounter 487 492	visit
 E20	Encounter:T20 
 A3	Encounter-Type-Value E20 outpatient
 R5	And Arg1:E25 Arg2:E20	
+T23	Indication 731 740	requiring
+E23	Indication:T23 Indication-For:E43
+R18	Or Arg1:E41 Arg2:E23	

@@ -86,6 +86,42 @@ def eq_value_unit(annotations):
             if rec.span not in [ 'Eq-Unit', 'Eq-Temporal-Unit'] and not (rec.char_beg_idx >= trigger_t.char_beg_idx and rec.char_end_idx <= trigger_t.char_end_idx):
                 print(f'{ann.path}/{ann.doc_id} is outside parent Eq-Comparison!')
 
+def modifiers(annotations):
+    ''' Modifiers that should be part of Condition '''
+    cnt = 0
+    for ann in annotations:
+        matched  = [ e for _,e in ann.Es.items() if e.args[0].type == 'Modifier' ]
+        conds = {}
+        for m in matched:
+            try:
+                modified = m.args[1].val.get_T()
+                if modified in conds:
+                    conds[modified].append(m.args[0].get_T())
+                else:
+                    conds[modified] = [m.args[0].get_T()]
+            except:
+                pass
+        candidates = [(x,m[0]) for x,m in conds.items() if x.type.startswith('Condition') and len(m) == 1]
+        candidates = [(x,m) for x,m in candidates if m.char_end_idx +1 == x.char_beg_idx]
+        for cond, mod in candidates:
+            path = ann.path.split('/')[-1]
+            cnt += 1
+            cond_name = [l for l in ann.raw_anns.split('\n') if f'\tCondition-Name {cond.char_beg_idx} {cond.char_end_idx}\t{cond.span}' in l][0]
+            new_raw = [l for l in ann.raw_anns.split('\n') if \
+                not l.startswith(f'{mod.id}\t') and \
+                not f':{mod.id} ' in l and \
+                not f' {cond.char_beg_idx} {cond.char_end_idx}\t' in l]
+            new_cond = f'{cond.id}\tCondition {mod.char_beg_idx} {cond.char_end_idx}\t{cond.span}'
+            new_cond_name = f'{cond_name.split()[0]}\tCondition-Name {mod.char_beg_idx} {cond.char_end_idx}\t{cond.span}'
+            new_raw += [new_cond, new_cond_name]
+
+            with open(os.path.join(ann.path, f'{ann.doc_id}.ann'), 'w+') as fout:
+                fout.write('\n'.join(new_raw))
+
+            #print(f'{path}/{ann.doc_id} unnecessary Modifier! "{mod.span}" "{cond.span}"')
+    print(f'Total unnecessary Modifiers: {cnt}')
+    
+
 def chronic(annotations):
     ''' Convert 'Chronic' Modifier -> Acuteness[chronic] '''
     for ann in annotations:
@@ -214,6 +250,8 @@ def main():
     for d in Config.annotation_train_dirs:
         brat_train_raw = {**brat_train_raw, **utils.fetch_brat_files(d)}
     annotations = [ BratDocument(k, v[0], v[1], v[2], surface_only=True) for k,v in brat_train_raw.items() ]
+
+    modifiers(annotations)
 
     As, Rs, Ts, Es, args, ents = {}, {}, {}, {}, {}, {}
     for ann in annotations:

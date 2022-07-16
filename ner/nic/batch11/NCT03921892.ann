@@ -19,7 +19,6 @@ E19	Condition:T31 Name:T32
 E21	Family-Member:T34 Has:E22
 E22	Encounter:T35 Temporality:E23
 E23	Eq-Comparison:T37 Temporal-Period:T38
-E24	Assertion:T40 Asserted:E22
 T5	Language 75 82	English
 T6	Birth 247 252	birth
 T8	Eq-Operator 212 218	within
@@ -56,7 +55,6 @@ T35	Encounter 822 837	hospitalization
 T37	Eq-Comparison 807 814	ongoing
 T38	Eq-Temporal-Period 807 814	ongoing
 T39	Eq-Operator 301 305	over
-T40	Assertion 786 795	requiring
 A1	Eq-Operator-Value T8 LTEQ
 A2	Eq-Temporal-Unit-Value T9 week
 A3	Eq-Temporal-Unit-Value T10 week
@@ -72,10 +70,11 @@ A13	Family-Member-Type E21 child
 A14	Encounter-Type-Value E22 inpatient
 A15	Eq-Temporal-Period-Value T38 present
 A16	Eq-Operator-Value T39 GT
-A17	Assertion-Type-Value E24 hypothetical
 R1	Caused-By Arg1:E17 Arg2:E12
 R2	Caused-By Arg1:E22 Arg2:E19
 R3	Example-Of Arg1:E18 Arg2:E12
 R4	Example-Of Arg1:E19 Arg2:E12
 R5	After Arg1:E2 Arg2:E6
 R6	Or Arg1:E18 Arg2:E19
+T7	Indication 786 795	requiring
+E5	Indication:T7 Indication-For:E22

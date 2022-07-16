@@ -41,8 +41,7 @@ E54	Condition:T107 Name:T108
 E57	Eq-Comparison:T112 Temporal-Period:T113
 E58	Eq-Comparison:T69 Temporal-Period:T114
 E59	Condition:T115 Name:T129
-E65	Modifier:T121 Modifies:E66
-E66	Condition:T122 Severity:T120
+E66	Condition:T122 Severity:T120 Stability:T9
 E73	Drug:T133 Temporality:E37 Stability:T141 Name:T142
 E74	Observation:T134 Name:T135
 E75	Observation:T136 Name:T137
@@ -154,7 +153,6 @@ T113	Eq-Temporal-Period 1147 1154	current
 T69	Eq-Comparison 1179 1186	current
 T114	Eq-Temporal-Period 1179 1186	current
 T115	Condition 1215 1236	psychiatric condition
-T121	Modifier 1415 1427	uncontrolled
 T122	Condition 1428 1444	medical problems
 T129	Condition-Name 1215 1236	psychiatric condition
 T133	Drug 1558 1580	centrally active drugs
@@ -255,3 +253,5 @@ R23	And Arg1:E53 Arg2:E54
 R24	Or Arg1:T130 Arg2:T61
 R25	Or Arg1:E32 Arg2:E53
 R26	Or Arg1:E45 Arg2:E46
+T9	Stability 1415 1427	uncontrolled
+A5	Stability-Value T9 change

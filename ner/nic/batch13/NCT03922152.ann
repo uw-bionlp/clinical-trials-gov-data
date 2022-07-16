@@ -6,7 +6,7 @@ E2	Condition:T13 Name:T14 Severity:T32
 E1	Coreference:T1 Refers-To:E2
 E7	Condition:T2 Name:T15 Minimum-Count:E8
 E8	Eq-Comparison:T16 Operator:T17
-E10	Condition:T19 Name:T20
+E10	Observation:T19 Name:T20 Polarity:T18
 E12	Negation:T22 Negates:E3
 E13	Observation:T23 Name:T24
 E14	Observation:T25 Name:T26 Numeric-Filter:E6
@@ -31,8 +31,8 @@ T2	Condition 163 176	comorbidities
 T15	Condition-Name 163 176	comorbidities
 T16	Eq-Comparison 154 162	multiple
 T17	Eq-Operator 154 162	multiple
-T19	Condition 184 207	poor performance status
-T20	Condition-Name 184 207	poor performance status
+T19	Observation 189 207	performance status
+T20	Observation-Name 189 207	performance status
 T22	Negation 79 87	excluded
 T23	Observation 233 267	Eastern Cooperative Oncology Group
 T24	Observation-Name 233 267	Eastern Cooperative Oncology Group
@@ -59,3 +59,5 @@ R3	Caused-By Arg1:E12 Arg2:E10
 R4	Abbrev-Of Arg1:E14 Arg2:E13
 R5	Or Arg1:E1 Arg2:E7
 R6	Or Arg1:E7 Arg2:E10
+T18	Polarity 184 188	poor
+A9	Polarity-Value T18 low

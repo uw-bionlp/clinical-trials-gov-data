@@ -8,7 +8,6 @@ E9	Procedure:T9 Name:T99 Provider:E96
 E11	Risk:T11 Polarity:T101
 E12	Eq-Comparison:T12 Operator:T102 Value:T103 Unit:T104
 E13	Risk:T13 Numeric-Filter:E12 Risk-For:E15
-E14	Modifier:T14 Modifies:T105
 E15	Condition:T15 Name:T105
 E22	Condition:T22 Name:T108
 E23	Assertion:T23 Asserted:E24
@@ -68,7 +67,7 @@ E93	Procedure:T93 Name:T151 Provider:E58 Provider2:E97 Provider3:E98
 E94	Age:T153 Numeric-Filter:E1
 E95	Modifier:T154 Modifies:T96
 E96	Provider:T155 
-E16	Observation:T16 Name:T17
+E16	Procedure:T16 Name:T17
 E17	Observation:T19 Numeric-Filter:E27 Name:T110 Severity:T18
 E19	Risk:T45 Polarity:T125 Risk-For:E46
 E20	Condition:T107 Name:T132 Minimum-Count:E52
@@ -90,8 +89,7 @@ T9	Procedure 129 137	excision
 T11	Risk 282 286	risk
 T12	Eq-Comparison 298 314	greater than 25%
 T13	Risk 324 328	risk
-T14	Modifier 332 338	breast
-T15	Condition 339 345	cancer
+T15	Condition 332 345	breast cancer
 T22	Condition 451 460	Pathology
 T23	Assertion 469 476	felt to
 T24	Procedure 496 503	imaging
@@ -158,7 +156,7 @@ T101	Polarity 277 281	high
 T102	Eq-Operator 298 310	greater than
 T103	Eq-Value 311 313	25
 T104	Eq-Unit 313 314	%
-T105	Condition-Name 339 345	cancer
+T105	Condition-Name 332 345	breast cancer
 T108	Condition-Name 451 460	Pathology
 T109	Procedure-Name 496 503	imaging
 T110	Observation-Name 519 533	calcifications
@@ -205,8 +203,8 @@ T152	Eq-Operator 31 35	over
 T153	Age 36 39	age
 T154	Modifier 50 54	core
 T155	Provider 166 173	surgeon
-T16	Observation 411 445	Breast Cancer Risk Evaluation Tool
-T17	Observation-Name 411 445	Breast Cancer Risk Evaluation Tool
+T16	Procedure 411 445	Breast Cancer Risk Evaluation Tool
+T17	Procedure-Name 411 445	Breast Cancer Risk Evaluation Tool
 T18	Severity 509 518	Extensive
 T19	Observation 519 533	calcifications
 T21	Observation-Name 567 573	masses
@@ -244,7 +242,6 @@ A15	Eq-Operator-Value T130 GT
 A16	Polarity-Value T135 high
 A17	Eq-Operator-Value T139 GT
 A18	Eq-Operator-Value T152 GT
-A19	Observation-Type-Value E16 clinical-score
 A20	Severity-Value T18 severe
 A21	Observation-Type-Value E17 measurement
 A22	Observation-Type-Value E29 measurement

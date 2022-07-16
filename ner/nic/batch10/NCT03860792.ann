@@ -21,7 +21,6 @@ E11	Negation:T52 Negates:T51
 E14	Risk:T54 Severity:T55 Stability:T56
 E16	Assertion:T57 Asserted:T56
 E20	Condition:T59 Name:T60
-E27	Assertion:T61 Asserted:E4
 E18	Drug:T58 Name:T62
 E28	Assertion:T63 Asserted:E18
 E30	Eq-Comparison:T66 Temporal-Period:T67
@@ -90,7 +89,6 @@ T56	Stability 401 412	confounding
 T57	Assertion 389 400	potentially
 T59	Condition 472 478	cancer
 T60	Condition-Name 472 478	cancer
-T61	Assertion 479 488	requiring
 T58	Drug 444 451	insulin
 T62	Drug-Name 444 451	insulin
 T63	Assertion 452 461	requiring
@@ -124,7 +122,6 @@ A13	Stability-Value T51 stable
 A14	Severity-Value T55 severe
 A15	Stability-Value T56 change
 A16	Assertion-Type-Value E16 hypothetical
-A17	Assertion-Type-Value E27 hypothetical
 A18	Assertion-Type-Value E28 hypothetical
 A19	Eq-Temporal-Period-Value T65 past
 A20	Eq-Temporal-Period-Value T67 recent
@@ -147,3 +144,5 @@ R13	Or Arg1:E36 Arg2:E21
 R14	Before Arg1:E25 Arg2:E40
 R15	Or Arg1:E10 Arg2:E20
 R16	Or Arg1:E15 Arg2:E19
+T9	Indication 479 488	requiring
+E8	Indication:T9 Indication-For:E4

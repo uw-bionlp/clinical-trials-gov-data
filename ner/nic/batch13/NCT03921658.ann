@@ -11,8 +11,7 @@ E4	Modifier:T29 Modifies:T28
 E5	Modifier:T30 Modifies:T28
 E9	Modifier:T32 Modifies:T28
 E15	Eq-Comparison:T33 Temporal-Recency:T34
-E17	Procedure:T36 
-E18	Assertion:T37 Asserted:E17
+E17	Procedure:T36 Temporality:E3
 E19	Observation:T4 Name:T19 Numeric-Filter:E14
 E20	Observation:T21 Name:T38
 E21	Observation:T39 Name:T40
@@ -47,7 +46,6 @@ T30	Modifier 121 139	primary peritoneal
 T32	Modifier 112 119	ovarian
 T33	Eq-Comparison 91 96	newly
 T36	Procedure 171 180	Treatment
-T37	Assertion 181 185	plan
 T4	Observation 552 567	Life expectancy
 T19	Observation-Name 552 567	Life expectancy
 T21	Observation 585 597	hospice care
@@ -65,13 +63,16 @@ A3	Eq-Operator-Value T14 LT
 A4	Eq-Temporal-Unit-Value T15 year
 A5	Eq-Temporal-Unit-Value T16 month
 A6	Life-Stage-And-Gender-Type T26 female
-A8	Assertion-Type-Value E18 hypothetical
 A10	Eq-Temporal-Period-Value T44 past
 A7	Eq-Temporal-Recency-Value T34 first-time
 A11	Eq-Temporal-Recency-Value T46 first-time
-R1	Example-Of Arg1:E1 Arg2:E17
+R1	Using Arg1:E1 Arg2:E17
 R2	Or Arg1:E5 Arg2:E4
 R3	And Arg1:T26 Arg2:E2
 R4	Or Arg1:E19 Arg2:E20
 R5	Or Arg1:E20 Arg2:E21
 R6	Or Arg1:E9 Arg2:E5
+T3	Eq-Comparison 181 185	plan
+E3	Eq-Comparison:T3 Temporal-Period:T31
+T31	Eq-Temporal-Period 181 185	plan
+A8	Eq-Temporal-Period-Value T31 future

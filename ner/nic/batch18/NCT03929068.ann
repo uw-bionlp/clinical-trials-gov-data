@@ -7,7 +7,7 @@ E11	Condition:T11 Name:T12
 E13	Condition:T13 Name:T14
 E15	Condition:T15 Name:T16
 E17	Condition:T17 Name:T18
-E19	Condition:T19 Name:T20
+E19	Condition:T19 Name:T20 Stability:T28
 E21	Condition:T21 Name:T22
 E22	Age:T25 Numeric-Filter:E23
 E23	Eq-Comparison:T27 Operator:T23 Temporal-Unit:T24 Value:T26
@@ -28,7 +28,6 @@ E18	Condition:T57 Name:T58 Temporality:E27
 E24	Condition:T60 Name:T61 Temporality:E28
 E25	Condition:T62 Name:T63
 E34	Condition:T65 Name:T66 Temporality:E29
-E36	Modifier:T69 Modifies:T20
 E37	Condition:T70 Name:T71
 E38	Condition:T72 Name:T73 Temporality:E30
 E39	Study:T74 Temporality:E31
@@ -96,7 +95,6 @@ T63	Condition-Name 451 468	suicidal ideation
 T65	Condition 499 520	myocardial infarction
 T66	Condition-Name 499 520	myocardial infarction
 T68	Severity 549 555	severe
-T69	Modifier 585 597	Uncontrolled
 T70	Condition 616 622	Asthma
 T71	Condition-Name 616 622	Asthma
 T72	Condition 702 714	peptic ulcer
@@ -123,3 +121,5 @@ R6	Or Arg1:E25 Arg2:E21
 R7	Or Arg1:E7 Arg2:E5
 R8	Or Arg1:E24 Arg2:E25
 R9	Or Arg1:E34 Arg2:E7
+T28	Stability 585 597	Uncontrolled
+A12	Stability-Value T28 change

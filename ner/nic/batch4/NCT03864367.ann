@@ -4,8 +4,6 @@ E3	Condition:T3 Name:T15
 E4	Observation:T4 Name:T16
 E6	Condition:T6 Name:T17
 E7	Condition:T7 Name:T18
-E8	Negation:T8 Negates:E9
-E9	Procedure:T9 Name:T19
 E11	Observation:T11 Name:T20
 E12	Procedure:T12 Name:T22
 E13	Age:T23 Numeric-Filter:E1
@@ -17,9 +15,7 @@ T2	Modifier 43 55	distal femur
 T3	Condition 56 64	fracture
 T4	Observation 70 82	able to walk
 T6	Condition 92 100	fracture
-T7	Condition 135 149	unable to walk
-T8	Negation 150 157	without
-T9	Procedure 162 179	assistive devices
+T7	Condition 135 179	unable to walk without any assistive devices
 T11	Observation 185 191	injury
 T12	Procedure 247 263	physical therapy
 T13	Eq-Value 25 27	55
@@ -27,8 +23,7 @@ T14	Eq-Operator 28 37	and older
 T15	Condition-Name 56 64	fracture
 T16	Observation-Name 70 82	able to walk
 T17	Condition-Name 92 100	fracture
-T18	Condition-Name 135 149	unable to walk
-T19	Procedure-Name 162 179	assistive devices
+T18	Condition-Name 135 179	unable to walk without any assistive devices
 T20	Observation-Name 185 191	injury
 T21	Stability 220 228	unstable
 T22	Procedure-Name 247 263	physical therapy
@@ -39,7 +34,6 @@ T26	Assertion 206 209	too
 A3	Eq-Operator-Value T14 GTEQ
 A4	Stability-Value T21 change
 A5	Assertion-Type-Value E16 hypothetical
-R1	Treatment-For Arg1:E9 Arg2:E7
 R2	Caused-By Arg1:E15 Arg2:E14
 R3	Before Arg1:E4 Arg2:E6
 R4	After Arg1:E7 Arg2:E11
